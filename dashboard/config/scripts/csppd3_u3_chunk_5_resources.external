@@ -1,0 +1,98 @@
+name 'CSPPD3-u3 chunk 5 resources'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Unit 3 Overview > Chunk 5: Introduction to Loops and Arrays > Resources
+
+Here are a few resources to help you get started with understanding these CS concepts. Please share any resources you find in the <a href=“http://forum.code.org/c/csp-unit3” target=_blank>forum!</a>
+
+#### Introduction to While Loops
+
+##### Vocabulary
+
+- **While Loop**: a looping structure that evaluates a conditional and repeats the body of the loop until the conditional is not longer true. For example, you might dig through your writing utensils until you find a blue pen. You don’t know how many pens you’ll need to look at before you find a blue one, so you will need to check pen color however many times it takes to find a blue pen. Let’s consider another example. 
+
+<img src="https://images.code.org/1d7330cc481e1094c25e830d87c3a53b-image-1446443737305.gif" width="450" style="float:right; margin-left:30px">
+<br>
+Imagine you wanted so simulate flipping a coin, and keep track of how many heads in a row you flip. You won’t know how many times you flip the coin before it comes up tails, but you want to keep flipping until that happens. 
+<br><br>
+In english: “while the coin is flip turns up to heads, continue flipping and record the number of times it comes up heads.” Check out the short program on the right, which shows how you might write a program that uses a while loop for this coin flipping simulation.
+
+
+##### Lessons in Code Studio
+
+***COMING SOON***
+
+##### External Resources 
+
+- <a href="http://www.w3schools.com/js/js_loop_while.asp" target=_blank>JavaScript While Loop- W3Schools</a>
+- <a href="https://youtu.be/F8H-41bpJ6E" target=_blank>Video: While Loop - (Code Studio video from other courses) </a> Note that this video references the block-only environment used by our Intro to Computer Science courses intended for younger students, but still describes the basic concept of a loop, which is shared across all programming languages. 
+  
+#### Introduction to Arrays
+
+##### Vocabulary
+
+- **Array**: a data type that holds a list of items. An array can be used like any other variable and gives us the ability to store information for use while the program is running. With an array we can keep track of lots of pieces of information all under one name. 
+<br><br>
+When declaring an array we need to set some initial values. for example, if we wanted to do something similar to the coin flipping simulation described above, we could start with `var coinFaces = ["heads","tails”];`
+<br><br>
+The elements stored in an array are each assigned an `index`, or numeric value related the position of the item relative to the list. Indexes start at 0. In the example above, `heads` is stored at index 0 and `tails` is at index 1. 
+<br><br>
+If we want to **retrieve the value of an element in the array**, we just need to reference the index of the item. For example, if we wanted to print the word “heads” from the array, we would include `write(coinFaces[0]);`
+<br><br>
+Let’s looks at an example in code. Imagine we’re back to flipping the coin from earlier, but now we just want to know if it comes up heads or tails: 
+<br>
+<img src="https://images.code.org/b5a8a013306d4ec5aa1ec7286ee6f369-image-1446446698823.gif" width=“550px”>
+<br><br>
+We can **reassign the value of an element of an array** by referencing a specific index and giving that index a new value. For example, `coinFaces[0]=“face of the coin”;` This line would change the value of `coinFaces[0]`from “heads” to “face of the coin” 
+<br><br>
+We can also **add elements** to the array by using the gets operator (‘=‘) with an index that is one greater than the current size of the array. For example, if we wanted to add another element to our `coinFaces` array, we might do this:`coinFaces[2] = “neither - the coin landed on its edge!”;` After adding this line of code, coinFaces would have three elements, “heads”, “tales”, “neither - the coin landed on its edge!”
+
+- **For Loop**: a looping structure that is used when you know how often you’ll loop. The `for` loop repeats statements like a `while` loop, but adds an initialization and final expression step, like this:
+<br><br>
+`for (initialization; condition; final expression) {
+    code to execute
+}`
+<br><br>
+A common usage of a for-loop in JavaScript is simply to use it as a "repeat loop" - a block of code that defines how many times you want some lines of code to repeat. This is what we saw early in the unit, but now we can control each of the statements that initialize the counter variable, define the exit condition, and define the unit of incrementation for the counter. 
+<br><br>
+Here is a breakdown of the meaning the individual statements of a `for` loop:
+
+  - **Statement 1:** “initialization” (for example, `var i = 0;` —>  "Create a variable called i and set it to 0”) -- creates the counter variable and initializes the value. This piece is executed before the loop starts
+  - **Statement 2: ** “condition” (for example, `i < 10;` —> “While i is less than 10”) -- condition for continuing to run the loop
+  - **Statement 3: ** “incrementing value” (for example, `i++` —>  "Increase (increment) i by 1”) -- increment the counter by some value. This piece is executed each time after the last line of code in the loop is run, before the condition is checked again
+
+
+
+##### Lessons in Code Studio
+
+***COMING SOON***
+
+##### External Resources 
+
+- <a href="http://www.w3schools.com/js/js_loop_for.asp" target=_blank>JavaScript For Loop- W3Schools</a>
+- <a href="http://www.w3schools.com/js/js_arrays.asp" target=_blank>JavaScript Arrays- W3Schools</a>
+- <a href="https://en.wikipedia.org/wiki/Array_data_type" target=_blank>Array data type- Wikipedia</a>
+- <a href ="https://youtu.be/G8hfAk4PfOM" target=_blank>Video: For Loops in App Lab (from the curriculum)</a>
+
+
+#### Image Data in Arrays
+
+##### Vocabulary
+
+-  **Image Data:** the meta data (dimensions) and pixel data (color values) of an image, which is stored in an array.
+
+##### Lessons in Code Studio
+
+***COMING SOON***
+
+##### External Resources 
+
+- <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas" target=_blank>Pixel Manipulation- Mozilla </a> Note that the goal here is to get an idea of how we can manipulate how an image looks by altering the the pixel data.
+
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

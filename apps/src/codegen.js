@@ -1,4 +1,4 @@
-/* global Interpreter */
+/* global Interpreter, CanvasPixelArray */
 
 var dropletUtils = require('./dropletUtils');
 
@@ -143,10 +143,18 @@ function marshalNativeToInterpreterObject(interpreter, nativeObject, maxDepth) {
   return retVal;
 }
 
+function isCanvasImageData(nativeVar) {
+  // IE 9/10 don't know about Uint8ClampedArray and call it CanvasPixelArray instead
+  if (typeof(Uint8ClampedArray) !== "undefined") {
+    return nativeVar instanceof Uint8ClampedArray;
+  }
+  return nativeVar instanceof CanvasPixelArray;
+}
+
+
 //
 // Droplet/JavaScript/Interpreter codegen functions:
 //
-
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
   if (typeof nativeVar === 'undefined') {
     return interpreter.UNDEFINED;
@@ -162,12 +170,10 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     retVal = interpreter.createObject(interpreter.ARRAY);
     for (i = 0; i < nativeVar.length; i++) {
       retVal.properties[i] = exports.marshalNativeToInterpreter(interpreter,
-                                                                nativeVar[i],
-                                                                null,
-                                                                maxDepth - 1);
+        nativeVar[i], null, maxDepth - 1);
     }
     retVal.length = nativeVar.length;
-  } else if (nativeVar instanceof Uint8ClampedArray) {
+  } else if (isCanvasImageData(nativeVar)) {
     // Special case for canvas image data - could expand to support TypedArray
     retVal = interpreter.createObject(interpreter.ARRAY);
     for (i = 0; i < nativeVar.length; i++) {
@@ -234,10 +240,8 @@ exports.makeNativeMemberFunction = function (opts) {
     return function() {
       // Just call the native function and marshal the return value:
       var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, arguments);
-      return exports.marshalNativeToInterpreter(opts.interpreter,
-                                                nativeRetVal,
-                                                null,
-                                                opts.maxDepth);
+      return exports.marshalNativeToInterpreter(opts.interpreter, nativeRetVal,
+        null, opts.maxDepth);
     };
   } else {
     return function() {
@@ -247,10 +251,8 @@ exports.makeNativeMemberFunction = function (opts) {
         nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
       }
       var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, nativeArgs);
-      return exports.marshalNativeToInterpreter(opts.interpreter,
-                                                nativeRetVal,
-                                                null,
-                                                opts.maxDepth);
+      return exports.marshalNativeToInterpreter(opts.interpreter, nativeRetVal,
+        null, opts.maxDepth);
     };
   }
 };
@@ -308,21 +310,28 @@ function populateGlobalFunctions(interpreter, blocks, scope) {
 
 function populateJSFunctions(interpreter) {
   // The interpreter is missing some basic JS functions. Add them as needed:
+  var wrapper;
 
   // Add static methods from String:
   var functions = ['fromCharCode'];
   for (var i = 0; i < functions.length; i++) {
-    var wrapper = exports.makeNativeMemberFunction({
-        interpreter: interpreter,
-        nativeFunc: String[functions[i]],
-        nativeParentObj: String,
+    wrapper = exports.makeNativeMemberFunction({
+      interpreter: interpreter,
+      nativeFunc: String[functions[i]],
+      nativeParentObj: String,
     });
-    interpreter.setProperty(interpreter.STRING,
-                            functions[i],
-                            interpreter.createNativeFunction(wrapper),
-                            false,
-                            true);
+    interpreter.setProperty(interpreter.STRING, functions[i],
+      interpreter.createNativeFunction(wrapper), false, true);
   }
+
+  // Add String.prototype.includes
+  wrapper = function(searchStr) {
+    // Polyfill based off of https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+    return interpreter.createPrimitive(
+      String.prototype.indexOf.apply(this, arguments) !== -1);
+  };
+  interpreter.setProperty(interpreter.STRING.properties.prototype, 'includes',
+    interpreter.createNativeFunction(wrapper), false, true);
 }
 
 /**
@@ -447,17 +456,55 @@ exports.aceFindRow = function (cumulativeLength, rows, rowe, pos) {
 };
 
 exports.isAceBreakpointRow = function (session, userCodeRow) {
+  if (!session) {
+    return false;
+  }
   var bps = session.getBreakpoints();
   return Boolean(bps[userCodeRow]);
 };
 
+var lastHighlightMarkerIds = {};
+
 /**
- * Selects code in droplet/ace editor.
+ * Clears all highlights that we have added in the ace editor.
+ */
+function clearAllHighlightedAceLines (aceEditor) {
+  var session = aceEditor.getSession();
+  for (var hlClass in lastHighlightMarkerIds) {
+    session.removeMarker(lastHighlightMarkerIds[hlClass]);
+  }
+  lastHighlightMarkerIds = {};
+}
+
+/**
+ * Highlights lines in the ace editor. Always moves the previous highlight with
+ * the same class to the new location.
+ *
+ * If the row parameters are not supplied, just clear the last highlight.
+ */
+function highlightAceLines (aceEditor, className, startRow, endRow) {
+  var session = aceEditor.getSession();
+  className = className || 'ace_step';
+  if (lastHighlightMarkerIds[className]) {
+    session.removeMarker(lastHighlightMarkerIds[className]);
+    lastHighlightMarkerIds[className] = null;
+  }
+  if (typeof startRow !== 'undefined') {
+    lastHighlightMarkerIds[className] = aceEditor.getSession().highlightLines(
+        startRow, endRow, className).id;
+  }
+}
+
+/**
+ * Selects and highlights code in droplet/ace editor to indicate an error.
  *
  * This function simply highlights one spot, not a range. It is typically used
  * to highlight where an error has occurred.
  */
-exports.selectEditorRowCol = function (editor, row, col) {
+exports.selectEditorRowColError = function (editor, row, col) {
+  if (!editor) {
+    return;
+  }
   if (editor.currentlyUsingBlocks) {
     var style = {color: '#FFFF22'};
     editor.clearLineMarks();
@@ -475,9 +522,33 @@ exports.selectEditorRowCol = function (editor, row, col) {
     // scrolling to the right
     selection.setSelectionRange(range, true);
   }
+  highlightAceLines(editor.aceEditor, "ace_error", row, row);
 };
 
-function createSelection (selection, cumulativeLength, start, end) {
+/**
+ * Removes highlights (for the default ace_step class) and selection in
+ * droplet and ace editors.
+ *
+ * @param {boolean} allClasses When set to true, remove all classes of
+ * highlights (including ace_step, ace_error, and anything else)
+ */
+exports.clearDropletAceHighlighting = function (editor, allClasses) {
+  if (editor.currentlyUsingBlocks) {
+    editor.clearLineMarks();
+  } else {
+    editor.aceEditor.getSelection().clearSelection();
+  }
+  if (allClasses) {
+    clearAllHighlightedAceLines(editor.aceEditor);
+  } else {
+    // when calling without a class or rows, highlightAceLines() will clear
+    // everything highlighted with the default highlight class
+    highlightAceLines(editor.aceEditor);
+  }
+};
+
+function selectAndHighlightCode (aceEditor, cumulativeLength, start, end, highlightClass) {
+  var selection = aceEditor.getSelection();
   var range = selection.getRange();
 
   range.start.row = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
@@ -488,6 +559,8 @@ function createSelection (selection, cumulativeLength, start, end) {
   // calling with the backwards parameter set to true - this prevents horizontal
   // scrolling to the right while stepping through in the debugger
   selection.setSelectionRange(range, true);
+  highlightAceLines(aceEditor, highlightClass || "ace_step", range.start.row,
+      range.end.row);
 }
 
 /**
@@ -495,12 +568,15 @@ function createSelection (selection, cumulativeLength, start, end) {
  *
  * Returns the row (line) of code highlighted. If nothing is highlighted
  * because it is outside of the userCode area, the return value is -1
+ *
+ * @param {string} highlightClass CSS class to use when highlighting in ACE
  */
 exports.selectCurrentCode = function (interpreter,
                                       cumulativeLength,
                                       userCodeStartOffset,
                                       userCodeLength,
-                                      editor) {
+                                      editor,
+                                      highlightClass) {
   var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
@@ -524,23 +600,14 @@ exports.selectCurrentCode = function (interpreter,
         //editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
         editor.markLine(userCodeRow, style);
       } else {
-        var selection = editor.aceEditor.getSelection();
-        createSelection(selection, cumulativeLength, start, end);
+        selectAndHighlightCode(editor.aceEditor, cumulativeLength, start, end,
+            highlightClass);
       }
     } else {
-      if (editor.currentlyUsingBlocks) {
-        editor.clearLineMarks();
-      } else {
-        var tempSelection = editor.aceEditor.getSelection();
-        tempSelection.clearSelection();
-      }
+      exports.clearDropletAceHighlighting(editor);
     }
   } else {
-    if (editor.currentlyUsingBlocks) {
-      editor.clearLineMarks();
-    } else {
-      editor.aceEditor.getSelection().clearSelection();
-    }
+    exports.clearDropletAceHighlighting(editor);
   }
   return userCodeRow;
 };

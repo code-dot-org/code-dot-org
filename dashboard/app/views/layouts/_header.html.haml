@@ -34,6 +34,10 @@
               - else
                 = link_to(image_tag('codeorg-studio-logo.png'), '/')
             %span.project_info
+              -# Very temporary beta notice
+              - if @script && @script.name == "starwars"
+                .beta-notice
+                  = t('beta')
           .header_middle
             - if script_level
               = render partial: 'shared/header_progress'
@@ -49,7 +53,7 @@
                 %i.fa.fa-calculator
               %a.header_status_bar.level_free_play.eval_free_play{title: t('nav.header.free_play.artist'), href: eval_project_projects_path, style: 'display: none;'}
                 %i.fa.fa-pencil
-            - if params[:controller] !~ /^sessions/
+            - if params[:controller] !~ /^sessions/ and signin_button_enabled
               = render partial: 'shared/user_header'
 
 - if script_level

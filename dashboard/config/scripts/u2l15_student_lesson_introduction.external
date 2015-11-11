@@ -1,39 +1,38 @@
 name 'U2L15 Student Lesson Introduction'
-title 'Encryption Algorithms'
-
-css 'unplugged'
-skip_dialog 'true'
-
-markdown <<MARKDOWN
-## Unit 2: Lesson 15 - Keys and Passwords
-
-# Background
-
-The more complicated a key is, the harder it is to crack. Encryption algorithms are evaluated based upon the amount of time it would take a computer to crack the key. Vigenère cipher cannot be cracked using frequency analysis; it requires a “brute force” strategy of trying every combination.
-
-# Vocabulary
-
-* **Vigenère cipher** (Vee-zha-nair): a method of encrypting text by applying a series of Caesar ciphers based on the letters of a keyword.
-
-# Lesson
-
-* Write an algorithm for a Vigenere cipher.
-* Explain the factors that ensure strong encryption and secure data.
-
-# Resources
-
-* [Reading and Activity Guide: Keys and Passwords](https://docs.google.com/document/d/11ZCb8XHSWwMrzx10ADLdfcYlB7hSSfv_RjF0JD9v420/edit)
-
-* [Blown to Bits Ch. 5](http://www.google.com/url?q=http%3A%2F%2Fwww.bitsbook.com%2Fwp-content%2Fuploads%2F2008%2F12%2Fchapter5.pdf&sa=D&sntz=1&usg=AFQjCNFlwUTQTxeZ_TyR1brGDslVNaFMCg)
-
-* [How Secure is my Password](https://www.google.com/url?q=https%3A%2F%2Fhowsecureismypassword.net%2F&sa=D&sntz=1&usg=AFQjCNHJbG8AV-IKqmbB9XNFyUzzeHixng)
-
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-* <a href="https://docs.google.com/document/d/1i11VTWePbC77xWP1Rb_fiuD14Ykky4TjBkO15BTqm7Y" target="_blank">KEY: Reading Guide for Keys and Passwords</a>
-MARKDOWN
+encrypted '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
+YSXSfJeLHe3l3DnxjFMALETJNssUH7+2wQ==
+'

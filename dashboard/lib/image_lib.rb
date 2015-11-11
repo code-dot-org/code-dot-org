@@ -33,6 +33,15 @@ module ImageLib
     fg_temp.unlink if fg_temp
   end
 
+  def self.to_png(image_blob)
+    magick_image = MiniMagick::Image.read(image_blob)
+    return image_blob if magick_image.info(:format) == 'PNG'
+
+    magick_image.format('png')
+    magick_image.to_blob
+  end
+
+
   private
 
   # If path is provided, open it as a Minimagic Image and return [image, nil]
@@ -51,5 +60,4 @@ module ImageLib
       [MiniMagick::Image.new(temp_file.path), temp_file]
     end
   end
-
 end

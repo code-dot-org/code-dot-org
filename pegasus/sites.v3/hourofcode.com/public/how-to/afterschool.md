@@ -6,14 +6,14 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-<h1>How to teach one Hour of Code in After-school</h1>
+# How to teach one Hour of Code in after-school
 
 ## 1) Sign up
 - Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
 - Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
 
 ## 2) Watch this how-to video
-<iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+<iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3) Choose a tutorial:
 We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)
@@ -37,12 +37,12 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 <img src="/images/fit-350/group_ipad.jpg">
 
 ## 5) Inspire participants to start your Hour of Code
-**Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.** 
+Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
 **Show an inspirational video:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?t=1&v=2DxWIxec6yo) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -50,7 +50,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
 - List things that use code in everyday life.
-- See tips for getting girls interested in computer science <a href="<%= resolve_url('https://code.org/girls') %>">here</a>.
+- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
@@ -92,7 +92,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 
 ## 7) Celebrate
 - [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
-- [Print "I did an Hour of Code!"](<%= resolve_url('/resources/promote#stickers') %>) stickers.
+- [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]
@@ -125,6 +125,10 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 <% end %>
 
 ## What comes after the Hour of Code?
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+- The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey: 
+
+- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+- [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

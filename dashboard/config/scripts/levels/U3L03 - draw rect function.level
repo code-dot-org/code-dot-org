@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -153,11 +152,13 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
-    "encrypted_examples": [
-
-    ],
     "submittable": "false",
-    "hide_view_data_button": "true"
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "true",
+    "debugger_disabled": "true",
+    "encrypted_examples": "lP3v8o6oIQ+pLg0QOLcUdtQ3BrqIk3aEpYIvTsV+IRmNH1+I2xeJmeEgGFr2\nTXST\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "true"
   }
 }]]></config>
   <blocks/>

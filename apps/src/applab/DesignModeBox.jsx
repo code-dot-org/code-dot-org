@@ -1,6 +1,5 @@
 /* global $ */
 
-var React = require('react');
 var DesignToolbox = require('./DesignToolbox.jsx');
 var DesignProperties = require('./designProperties.jsx');
 
@@ -51,7 +50,7 @@ module.exports = React.createClass({
     // Slightly gray everything while running
     if (this.props.isDimmed) {
       transparencyLayer = (
-        <div style={styles.transparent}/>
+        <div id={"design-mode-dimmed"} style={styles.transparent}/>
       );
     }
 

@@ -8,7 +8,7 @@ nav: about_nav
 ## What do teachers take away from Code.org professional development?
 <img src="/images/pd-2014-15.png" width="100%"/>
 
-From June 2014 through June 2015, over 11,000 teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models: 
+From June 2014 through June 2015, over 11,000* teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models: 
 
 - a day-long, face-to-face workshop delivered to K-5 teachers via our [Affiliate Program](/educate/k5-affiliates) or via our [District Partnership Program](/educate/k5-district-partnership)
 - a multi-phase, year-long blended PD experience delivered to Middle and High School teachers via our [District Partnership Program](/educate/districts)
@@ -18,7 +18,7 @@ Through our professional development efforts, we are helping a large, diverse au
 
  To study the effectiveness of our professional development, we worked with [Outlier](http://outlier.uchicago.edu) to conduct surveys and interviews studying attitudes, PD satisfaction, and classroom implementation. The results of those studies follow, broken down by grade-level band.
 
-### Table: Overall Participation and Satisfaction in Code.org Professional Development, June 1 2014 - June 15 2015
+### Table: Overall Participation and Satisfaction in Code.org Professional Development, June 1 2014 - June 15 2015, disaggregated by training model
 
 |  | Affiliate-Trained Teachers | Code.org-Trained Teachers |
 |---|--------|-----|
@@ -28,11 +28,21 @@ Through our professional development efforts, we are helping a large, diverse au
 | I feel prepared to teach CS   | 94% | 88% |
 *Source: Affiliate-trained teacher data from Code.org Survey. Code.org-trained teacher data from Outlier survey.*
 
-<br/>
-<br/>
+### Table: Overall Participation and Satisfaction in Code.org Professional Development, June 1 2014 - June 15 2015, disaggregated by grade level
+
+|  | K-5 Affiliate-Trained Teachers | K-5 Code.org-Trained Teachers | MS Science | MS Algebra | HS |
+|---|--------|-----|-------|------|------|
+| Number of teachers trained   | 9,290 | 176 | 89 | 85 | 316 |
+| I would recommend the PD to others   | 98% | 96% | 85% | 98% | 82% |
+| This was the best PD ever   | 66% | 55% | 50% | 82% | 57% |
+| I feel prepared to teach CS   | 94% | 82% | 45% | 76% | 57% |
+*Source: Affiliate-trained teacher data from Code.org Survey. Code.org-trained teacher data from Outlier survey.*
+<br><br>
+
+<em>* Note: In the 2014-15 teacher cohort, we trained approximately 10,000 teachers. We trained an additional 1,000 teachers for the 2015-16 school year.</em>
 
 ---
-
+<a id="k5"></a>
 ## Elementary School Professional Development Programs
 
 ### Approach
@@ -78,7 +88,7 @@ The main difference between the two groups being that our affiliate-trained teac
 [Full K-5 findings are available on Outlier's website.](http://outlier.uchicago.edu/evaluation_codeorg/elementary-CSfund-interviews-questionnaires/)
 
 ---
-
+<a id="ms"></a>
 ## Middle School Professional Development Programs
 
 ### Approach
@@ -101,7 +111,7 @@ Code.org offered professional development for middle school teachers through our
 - These results reflect a slight disconnect between teacher satisfaction with a professional development experience and their belief that the PD will impact or change their practice.
 
 ---
-
+<a id="ecs"></a>
 ## High School Programs: Exploring Computer Science
 
 ### Approach

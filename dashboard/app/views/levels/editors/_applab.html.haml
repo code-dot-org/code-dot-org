@@ -29,6 +29,9 @@
   = f.label :autocomplete_palette_apis_only, 'Autocomplete palette APIs only'
   = boolean_check_box f, :autocomplete_palette_apis_only
 .field
+  = f.label :execute_palette_apis_only, 'Execute palette APIs only'
+  = boolean_check_box f, :execute_palette_apis_only
+.field
   = f.label :beginner_mode, 'Beginner mode for loops'
   = boolean_check_box f, :beginner_mode
 .field
@@ -100,3 +103,11 @@
 .field
   = f.label 'Hide View Data Button'
   = boolean_check_box f, :hide_view_data_button
+
+.field
+  = f.label 'Hide Source'
+  = boolean_check_box f, :hide_source
+
+.field
+  =f.label 'Disable code debugger (Console is still enabled)'
+  = boolean_check_box f, :debugger_disabled

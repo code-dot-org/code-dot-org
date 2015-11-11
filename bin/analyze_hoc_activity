@@ -1,20 +1,24 @@
 #!/usr/bin/env ruby
 #
-# This script analyzes the activity the is launched from code.org/learn. We track outgoing clicks,
+# This script analyzes the activity that is launched from code.org/learn. We track outgoing clicks,
 # hidden image calls at the beginning and end of [3rd party] tutorials, and visits to our finish
 # page.
 #
-# There is a lot of data so, for performance, the script caches the totals for each day and only
+# There is a lot of HOC data so, for performance, the script caches the totals for each day and only
 # performs analysis on the remaining days. Deleting the cached results is an effective way to do
 # a complete re-count. EXCEPT for HourOfActivity_Totals_2014-12-05.json which is a summary of all
 # results for the year leading up to 12/05/2014.
+#
+# This script also caches values for the "about_stats" key in the Properties table. Unlike the HOC
+# data, it is computed from scratch every time.
 #
 require File.expand_path('../../pegasus/src/env', __FILE__)
 require 'cdo/hip_chat'
 require src_dir 'database'
 require 'cdo/properties'
 
-DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
+DASHBOARD_REPORTING_DB_READONLY = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
+PEGASUS_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
 
 def add_count_to_hash(hash, key, count)
   hash[key] = hash.has_key?(key) ? hash[key] + count : count
@@ -36,7 +40,7 @@ def analyze_day_fast(date)
   #HipChat.log "Analyzing by <b>tutorial</b>..." if rack_env?(:production)
   tutorials = {}
   froms.each do |from_where|
-    DB_READONLY.fetch(
+    PEGASUS_REPORTING_DB_READONLY.fetch(
       "SELECT tutorial, COUNT(id) as count #{from_where} GROUP BY tutorial ORDER BY count DESC"
     ).each do |row|
       next if row[:tutorial].nil_or_empty?
@@ -47,7 +51,7 @@ def analyze_day_fast(date)
   #HipChat.log "Analyzing by <b>country</b>..." if rack_env?(:production)
   countries = {}
   froms.each do |from_where|
-    DB_READONLY.fetch(
+    PEGASUS_REPORTING_DB_READONLY.fetch(
       "SELECT country, COUNT(id) as count #{from_where} GROUP BY country ORDER BY count DESC"
     ).each do |row|
       row[:country] = 'Other' if row[:country].nil_or_empty? || row[:country] == 'Reserved'
@@ -58,7 +62,7 @@ def analyze_day_fast(date)
   #HipChat.log 'Analyzing by <b>state</b>...' if rack_env?(:production)
   states = {}
   froms.each do |from_where|
-    DB_READONLY.fetch(
+    PEGASUS_REPORTING_DB_READONLY.fetch(
       "SELECT state, COUNT(id) as count #{from_where} GROUP BY state ORDER BY count DESC"
     ).each do |row|
       row[:state] = 'Other' if row[:state].nil_or_empty? || row[:state] == 'Reserved'
@@ -69,7 +73,7 @@ def analyze_day_fast(date)
   #HipChat.log 'Analyzing by <b>city</b>...' if rack_env?(:production)
   cities = {}
   froms.each do |from_where|
-    DB_READONLY.fetch(
+    PEGASUS_REPORTING_DB_READONLY.fetch(
       "SELECT city, COUNT(id) AS count #{from_where} GROUP BY TRIM(CONCAT(city, ' ', state)) ORDER BY count DESC"
     ).each do |row|
       row[:city] = 'Other' if row[:city].nil_or_empty? || row[:city] == 'Reserved'
@@ -80,13 +84,13 @@ def analyze_day_fast(date)
   #HipChat.log 'Calculating total started...' if rack_env?(:production)
   started = 0;
   froms.each do |from_where|
-    started += DB_READONLY.fetch("SELECT COUNT(id) as count #{from_where}").first[:count]
+    started += PEGASUS_REPORTING_DB_READONLY.fetch("SELECT COUNT(id) as count #{from_where}").first[:count]
   end
 
   #HipChat.log 'Calculating total finished...' if rack_env?(:production)
   finished = 0;
   finished_froms.each do |from_where|
-    finished += DB_READONLY.fetch("SELECT COUNT(id) as count #{from_where}").first[:count]
+    finished += PEGASUS_REPORTING_DB_READONLY.fetch("SELECT COUNT(id) as count #{from_where}").first[:count]
   end
 
   {
@@ -147,6 +151,24 @@ def main()
     day += 1
   end
 
+  # Compute the number of hoc events (the grand total and broken down by company and country).
+  hoc_country_totals = {}
+  hoc_company_totals = {}
+  unique_hoc_events = DB[:forms].where(kind: 'HocSignup2015').group(:email, :name).select(:name, :email, :processed_data, :data)
+  total_hoc_count = DB[:forms].where(kind: 'HocSignup2015').group(:email, :name).select(:email, :name).count
+
+  unique_hoc_events.each do |row|
+    data = JSON.parse(row[:data])
+    data['hoc_company_s'] = 'Other' if data['hoc_company_s'].nil_or_empty?
+    add_count_to_hash hoc_company_totals, data['hoc_company_s'], 1
+
+    unless row[:processed_data].nil?
+      processed_data = JSON.parse(row[:processed_data])
+      processed_data['location_country_code_s'] = 'Other' if processed_data['location_country_code_s'].nil_or_empty?
+      add_count_to_hash hoc_country_totals, processed_data['location_country_code_s'], 1
+    end
+  end
+
   Properties.set :hoc_metrics, {
     started: total_started,
     finished: total_finished,
@@ -154,6 +176,9 @@ def main()
     cities: total_cities,
     states: total_states,
     countries: total_countries,
+    total_hoc_count: total_hoc_count,
+    hoc_country_totals: hoc_country_totals,
+    hoc_company_totals: hoc_company_totals,
   }
 
   #HipChat.log 'Calculating lines of code...' if rack_env?(:production)
@@ -168,19 +193,18 @@ def main()
     csedweek_entire_schools:  12754,
     csedweek_students:        4875091,
     csedweek_countries:       356,
-    petition_signatures:      DB[:forms].where(kind: 'Petition').count,
+    petition_signatures:      PEGASUS_REPORTING_DB_READONLY[:forms].where(kind: 'Petition').count,
     lines_of_code:            lines_of_code, #JSON.parse(Net::HTTP.get(URI('http://archive.learn.code.org/line_data.json')))['all'],
   }
 
-  total_females = DASHBOARD_DB[:users].where(gender: 'f').count;
-  total_males = DASHBOARD_DB[:users].where(gender: 'm').count;
-  total_with_gender = total_females + total_males
-  total_with_gender = 1 if total_with_gender == 0
+  total_females = DASHBOARD_REPORTING_DB_READONLY[:users].where(gender: 'f').exclude(last_sign_in_at: nil).count
+  total_males = DASHBOARD_REPORTING_DB_READONLY[:users].where(gender: 'm').exclude(last_sign_in_at: nil).count
+  total_with_gender = [1, total_females + total_males].max
 
   Properties.set :about_stats, {
     number_served: total_started,
-    number_students: DASHBOARD_DB[:users].where(user_type: 'student').count,
-    number_teachers: DASHBOARD_DB[:users].where(user_type: 'teacher').count,
+    number_students: DASHBOARD_REPORTING_DB_READONLY[:users].where(user_type: 'student').exclude(last_sign_in_at: nil).count,
+    number_teachers: DASHBOARD_REPORTING_DB_READONLY[:users].where(user_type: 'teacher').exclude(last_sign_in_at: nil).count,
     percent_female: ((100 * total_females) / total_with_gender).to_i,
   }
 end

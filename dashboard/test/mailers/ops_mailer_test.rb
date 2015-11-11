@@ -15,6 +15,8 @@ class OpsMailerTest < ActionMailer::TestCase
     assert_match "added 1 teachers", mail.body.encoded
   end
 
+  # see also tests in WorkshopTest
+
   test "workshop_in_2_weeks_reminder" do
     # Create a workshop that starts 14 days from now. Include other segments for authenticity
     @workshop_1 = create_workshop(['abc@code.org', 'xyz@code.org'], 'facilitator_1@code.org', 'district_contact_1@code.org', Date.today + 14.day)
@@ -44,7 +46,7 @@ class OpsMailerTest < ActionMailer::TestCase
     incorrect_recipients.each do |email|
       assert_equal false, correct_recipients.include?(email)
     end
-    assert_equal [@workshop_1], Workshop.workshops_in_2_weeks
+    assert_equal [@workshop_1], Workshop.in_2_weeks
   end
 
   test "workshop_in_3_days_reminder" do
@@ -76,7 +78,7 @@ class OpsMailerTest < ActionMailer::TestCase
     incorrect_recipients.each do |email|
       assert_equal false, correct_recipients.include?(email)
     end
-    assert_equal [@workshop_1], Workshop.workshops_in_3_days
+    assert_equal [@workshop_1], Workshop.in_3_days
   end
 
   test "exit_survey_information" do
@@ -107,7 +109,7 @@ class OpsMailerTest < ActionMailer::TestCase
     incorrect_recipients.each do |email|
       assert_equal false, correct_recipients.include?(email)
     end
-    assert_equal [@workshop_1], Workshop.workshops_ending_today
+    assert_equal [@workshop_1], Workshop.ending_today
   end
 
   # Only supports two teachers as an array and one facilitator as a string.

@@ -28,7 +28,7 @@ Note: this is still a preview release, we're improving it many times a week. If 
 
 <div style="float:left; padding:10px; width:49%">
 
-<%=view :display_video_thumbnail, id: "TextCompression", video_code: "g0IDJjdBKw4", caption: "Text Compression Widget", play_button: 'center', download_path: "http://videos.code.org/2015/csp/textcompression.mp4" %>
+<%=view :display_video_thumbnail, id: "TextCompression", video_code: "LCGkcn1f-ms", caption: "Text Compression Widget", play_button: 'center', download_path: "http://videos.code.org/2015/csp/textcompression_blacc.mp4" %>
 [<button>Try Text Compression</button>](/textcompression)
 </div>
 

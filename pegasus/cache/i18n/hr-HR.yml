@@ -11,7 +11,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Jeste li učitelj Informatike? Pogledajte i druge CSEdWeek
     resurse</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>je isprobao</h3><h2>Sat Kodiranja</h2>
+  n_have_learned_an_hoc: "<h1>#</h1><h3>je isprobao</h3><h2>Sat Kodiranja</h2>"
   anybody_can_learn: Svatko može naučiti.
   learn_now: Nauči sad
   petition_message: Svi učenici u svim školama trebaju imati priliku naučiti informatiku
@@ -34,7 +34,14 @@
   hoc2014_host: Budite domaćin
   hoc2014_everyone: Svi
   hoc2014_support: Pružite podršku &#x25BE;
-  hoc2014_whatishoc: Što je Sat Kodiranja?
+  hoc2014_whatishoc: "Što je Sat Kodiranja?"
+  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Ispočetka
+  cded_sign_up: Prijava
+  cded_try_it: Isprobaj
   twentyhours_trynow: Probaj sad
   california_heading: Zatražite od škole da se uvede informatika
   california_text: Svaki učitelj može ponuditi naše <a href='http://studio.code.org/'>besplatne
@@ -55,11 +62,16 @@
     ponavljanje, "ako-onda" naredbe odlučivanja i osnovne algoritme.
   all_ages: Svi uzrasti
   beginner: Početnik
-  n_participants: '# sudionika'
+  n_participants: "# sudionika"
   go: Kreni
   thank_you_: Hvala!
-  congratulations: Čestitamo!
-  congratulations_on_completing_hoc: Čestitamo na završetku jednog Sata Kodiranja
+  congratulations: "Čestitamo!"
+  congratulations_on_completing_hoc: "Čestitamo na završetku jednog Sata Kodiranja"
+  course_name_accelerated: Ubrzani tečaj
+  course_name_course1: Tečaj 1
+  course_name_course2: Tečaj 2
+  course_name_course3: Tečaj 3
+  course_name_course4: Tečaj 4
   congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Try these tutorials next
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
@@ -96,7 +108,7 @@
   beyond_an_hour: Nakon Sata Kodiranja
   get_started: Početak
   i_agree: Slažem se
-  participant_select: '- Izaberi -'
+  participant_select: "- Izaberi -"
   participant_student: Učenik
   participant_parent: Roditelj
   participant_educator: Nastavnik
@@ -117,11 +129,13 @@
   learn_next_level: Prijeđi na sljedeći nivo
   learn_online: Isprobajte druge online tečajeve
   learn_classes: Pronađi lokalne nastave
-  hoc_is_here: '#HourOfCode je ovdje - pogledaj! @codeorg'
+  hoc_is_here: "#HourOfCode je ovdje - pogledaj! @codeorg"
   just_did_hoc: 'Upravo sam završio #HourOfCode - pogledaj! @codeorg'
   twitter_teach_cs: Zašto se informatika predaje u tako malom broju škola? Mi to možemo
     popraviti. http://youtu.be/nKIu9yen5nc. Posjetite http://code.org/ da naučite
     više.
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
   learn_hoc: Nauči Hour of Code
   beyond_hoc: Prije sat vremena
   what_gender: Koji si spol?
@@ -130,11 +144,11 @@
   help_recruit_coders: Pomogni nam zaposliti više programera u tvom timu!
   help_recruit: Pomogni nam zaposliti više programera!
   lines_of_code: Iznad <b># linija koda </b> napisanih do datuma.
-  lines_of_code_alt: <b>#</b> linija koda koje su učenici napisali
+  lines_of_code_alt: "<b>#</b> linija koda koje su učenici napisali"
   who_has_done_hoc: 'Tko je napravio #HourOfCode? @codeorg'
   hoc_leaderboards: Hour of Code ljestvica poretka
-  students_and_lines: '%{students} učenika je napravilo Hour of Code i napisali su
-    %{lines} linija koda.'
+  students_and_lines: "%{students} učenika je napravilo Hour of Code i napisali su
+    %{lines} linija koda."
   start_hoc: Kreni s Hour of Code sada
   contact_form_topic_press: Tisak/mediji (intervju ili govor)
   stats_nina: Svaki je dan donio jednak rezultat &mdash; 100% angažiranosti. Nina
@@ -162,8 +176,8 @@
   homepage_hero_text_malala: |
     &ldquo;Izazivam djevojke iz svih zemalja da se pridruže na jedan Sat kodiranja&rdquo;
     Malala, dobitnica Nobelove nagrade za mir
-  homepage_hero_text_susan: '&ldquo;Ako možeš promijeniti tehnologiju, možeš promijeniti
-    svijet.&rdquo; Susan, generalna direktorica YouTubea'
+  homepage_hero_text_susan: "&ldquo;Ako možeš promijeniti tehnologiju, možeš promijeniti
+    svijet.&rdquo; Susan, generalna direktorica YouTubea"
   homepage_hero_text_fistbump: |
     &ldquo;Nemoj se samo igrati na svome telefonu, programiraj ga.&rdquo;
     Predsjednik SAD-a, Barack Obama
@@ -183,8 +197,8 @@
   homepage_hero_text_student2: |
     &ldquo;Nikada, nikada nisam vidio svoje učenike toliko uzbuđene zbog učenja.&rdquo;
     Michael, učitelj
-  homepage_hero_text_student3: '&ldquo;Računarstvo je znanstveno područje za koje
-    ne možete znati da li ga volite dok ga ne probate&rdquo; Jackson, 6th grade'
+  homepage_hero_text_student3: "&ldquo;Računarstvo je znanstveno područje za koje
+    ne možete znati da li ga volite dok ga ne probate&rdquo; Jackson, 6th grade"
   homepage_hero_text_student4: "&ldquo;Sve što zamislite možete isprogramirati.&rdquo;
     \nMaya, 2. razred\n"
   homepage_hero_text_student5: "&ldquo;Računarstvo nije za nekog drugoga. To je za
@@ -195,8 +209,8 @@
   homepage_hero_text_teacher2: |
     &ldquo;Ovaj program je potaknuo 100% mojih učenika da se uključe i participiraju.&rdquo;
     Adam, učitelj
-  homepage_hero_text_stat_loc: '#loc linije koda napisane od učenika'
-  homepage_hero_text_stat_students: '#student_count učeničkih računa na Code Studiu'
+  homepage_hero_text_stat_loc: "#loc linije koda napisane od učenika"
+  homepage_hero_text_stat_students: "#student_count učeničkih računa na Code Studiu"
   homepage_hero_text_stat_served: 'The Hour of Code: #served održanih'
   homepage_slot_text_hoc: Sat Kodiranja
   homepage_slot_text_frozen: Snježno kraljevstvo s Anom i Elsom
@@ -211,6 +225,8 @@
   homepage_action_text_signpetition: Potpišite peticiju
   homepage_signpetition_dropdown: Slažem se &#x25BE;
   homepage_diversity_pledge: Take the diversity pledge
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org i College Board udružili su se da poboljšalju
     raznolikosti u računarstvu.
   homepage_banner_text_link: Doznaj više
@@ -221,7 +237,8 @@
   homepage_slot_text_blurb_hoc: Svatko može naučiti. Započnite danas
   homepage_slot_text_link_hoc: Isprobaj Hour of Code
   homepage_slot_text_link_host: Održite Sat kodiranja
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_hocserved: "# served"
+  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Učenici
   homepage_slot_text_blurb_students: Pregledajte naše priručnike
   homepage_slot_text_link_codestudio: Probajte Code Studio
@@ -246,7 +263,7 @@
   contact_form_topic_teacher: Ja sam učitelj
   contact_form_topic_outside_us: Ja sam izvan SAD-a
   contact_form_topic_contribution: Dobrotvorni doprinos
-  contact_form_topic_partner: Želim biti partner
+  contact_form_topic_partner: "Želim biti partner"
   contact_form_topic_other: Ostalo
   contact_form_label_topic: Tema
   contact_form_label_email: Vaša adresa elektroničke pošte
@@ -282,11 +299,77 @@
   class_submission_level_college: Fakultet
   class_submission_level_vocational: Strukovni
   class_submission_languages_other: Drugi jezik/jezici
+  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
+    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
+    have signed up."
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
+    to try an hour introduction to computer science, reaching tens of millions of
+    students in 180+ countries. Please get involved during Computer Science Education
+    Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
+    who can help in the classroom, or for somebody who can <span style="font-family:
+    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
+    breadth of possibilities with computer science (which could be done through a
+    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
+    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_signup: Please enter the following information
+    if you are a computer science student or software professional. Fields marked
+    with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_header_shared: Information shared with teachers on
+    volunteer map
+  volunteer_engineer_submission_field_name: Ime
+  volunteer_engineer_submission_field_name_placeholder: Full Name
+  volunteer_engineer_submission_field_company: Company (or University)
+  volunteer_engineer_submission_field_company_placeholder: Company (or University)
+  volunteer_engineer_submission_field_experience_level: Experience level
+  volunteer_engineer_submission_field_location: Location
+  volunteer_engineer_submission_field_location_desc: If you enter your exact address
+    we won't share it, just show you as a pin on map.
+  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
+    or street address
+  volunteer_engineer_submission_field_location_flexibility: I can help during the
+    Hour of Code by... (select all that apply)
+  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
+    after the Hour of Code
+  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
+    of Code
+  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
+  volunteer_engineer_submission_field_description: Opis
+  volunteer_engineer_submission_field_description_desc: Describe your computer science
+    experience and how you would like to participate as a volunteer for local teachers.
+  volunteer_engineer_submission_field_description_placeholder: Description of experience
+    and/or participation
+  volunteer_engineer_submission_header_private: Information kept private and never
+    shared
+  volunteer_engineer_submission_field_email: E-mail adresa
+  volunteer_engineer_submission_field_email_desc: Your email address will never be
+    shared, but we'll send you requests from teachers.
+  volunteer_engineer_submission_field_email_placeholder: E-mail adresa
+  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
+    teachers to contact you for the Hour of Code or other volunteer opportunities.
+    Your email and exact address will NEVER be shared by us. But the other information
+    (including approximate location) will be publicly viewable by local teachers.
+  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
+    me for volunteer opportunities (Note: your email address won''t be shared)'
+  volunteer_engineer_submission_submit: Pošalji
+  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
+    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
+    more here.</a>
   volunteer_engineer_submission_commitment_uncertain: Nesigurno
-  volunteer_engineer_submission_commitment_now_and_then: Svako toliko
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 sat tjedno
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 sata tjedno
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 sati tjedno
+  volunteer_engineer_submission_commitment_now_and_then: Svako toliko
+  volunteer_engineer_submission_commitment_annually: 2-3 times per year
+  volunteer_engineer_submission_commitment_monthly: A couple hours per month
+  volunteer_engineer_submission_commitment_weekly: A couple hours per week
   volunteer_engineer_submission_commitment_more: Više
   volunteer_engineer_submission_location_flexibility_onsite: Na licu mjesta u školi
   volunteer_engineer_submission_location_flexibility_remote: Mentorstvo na daljinu
@@ -322,6 +405,7 @@
   dashboard_landing_progress_title: Napredak u glavnom tečaju
   dashboard_landing_progress_biggest: Ovo je napredak u vašem najvećem odjeljenju.
   dashboard_landing_view_progress: Pogledaj napredak za %{biggest_section}
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Dostupni tečajevi
   dashboard_landing_available_courses: Ovo su tečajevi trenutno dostupni tvojim studentima.
   dashboard_landing_more_tutorials: Want to see even more tutorials?
@@ -388,6 +472,7 @@
   dashboard_navigation_section_speakers: Informatički <br/> gosti govornici
   dashboard_navigation_all_sections: Učenički računi i napredak
   dashboard_navigation_view_progress: Prikaz napretka
+  dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_add_students: Dodavanje učenika
   dashboard_navigation_manage_students: Upravljanje učenicima
   dashboard_navigation_lesson_plans_resources: Nastavni planovi i resursi
@@ -403,14 +488,14 @@
   dashboard_sections_table_grade: Razred
   dashboard_sections_table_course: Tečaj
   dashboard_sections_table_students: Učenici
-  dashboard_sections_table_code: Šifra odjeljenja
+  dashboard_sections_table_code: "Šifra odjeljenja"
   dashboard_sections_name: Ime odjeljenja
   dashboard_sections_choose_secret: Ako želite napraviti račune za svoje učenike,
     odaberite tajni tip <b>riječi</b> ili <b>slike</b> za to odjeljenje.
-  dashboard_sections_secret_word: <b>Riječ</b> vam dopušta da postavite tajnu riječ
-    za svakog učenika.
-  dashboard_sections_secret_picture: <b>Slika</b> vam dopušta da postavite tajnu sliku
-    za svakog učenika, što je idealno za mlađe učenike koji još ne znaju tipkati.
+  dashboard_sections_secret_word: "<b>Riječ</b> vam dopušta da postavite tajnu riječ
+    za svakog učenika."
+  dashboard_sections_secret_picture: "<b>Slika</b> vam dopušta da postavite tajnu
+    sliku za svakog učenika, što je idealno za mlađe učenike koji još ne znaju tipkati."
   dashboard_sections_secret_none: Ako želite da učenici sami upravljaju svojim računima,
     uključujući i odabir vlastite lozinke, odaberite tajni tip<b>ništa</b>.
   dashboard_sections_print_secrets: Možeš ispisati list s karticama koje sadrže informacije
@@ -428,7 +513,7 @@
   dashboard_students_age: Godine starosti
   dashboard_students_gender: Spol
   dashboard_students_male: Muško
-  dashboard_students_female: Žensko
+  dashboard_students_female: "Žensko"
   dashboard_students_secret: Tajna
   dashboard_students_password: Lozinka
   dashboard_students_username: 'Korisničko ime: %{student_username}'
@@ -494,12 +579,16 @@
   dashboard_login_picture: Slika
   dashboard_login_none: E-mail
   dashboard_new_password: nova lozinka
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: nije započelo
+  dashboard_progress_in_progress: u tijeku
   dashboard_progress_not_completed: nije dovršeno
   dashboard_progress_completed_too_many_blocks: dovršeno, previše blokova
   dashboard_progress_completed_perfect: dovršeno, savršeno
   dashboard_progress_furthest_level_attempted: pokušaj posljednjeg nivoa
+  dashboard_stage: Nivo
+  dashboard_puzzle: Zadatak
+  dashboard_question: Question
+  dashboard_response: Response
   stats_hoc_2013_heading: 'Nevjerojatna statistika prošlogodišnjeg Sata Kodiranja.
     U samo jednom tjednu:'
   stats_hoc_2013_image_alt: Statistika Sata Kodiranja 2013
@@ -517,8 +606,13 @@
   dashboard_sections_password_account_creation: Tekstna lozinka koju je napravio učenik
   dashboard_sections_login_type_explanation: Ova tablica pomoći objašnjava koji od
     načina prijave <b>slika, riječ ili e-mail</b> želite odabrati za odjeljenje.
-  dashboard_faq: Često postavljana pitanja
+  dashboard_faq: "Često postavljana pitanja"
   dashboard_faq_k5: K-5 Frequently Asked Questions
+  dashboard_announcements: Announcements
+  dashboard_announce_view_all: View all
+  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+    every participating organizer will receive a gift card to Amazon.com or Microsoft's
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
   code_hoc_coming: Sat Kodiranja je ovdje - 8. - 14. prosinca!
   code_sign_up: Prijavite se za sudjelovanje u Tjednu poučavanja informatike
   learn_more: Nauči više
@@ -527,6 +621,8 @@
   learn_sign_up_button: Prijava
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
+  learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
+    to teach an Hour of Code</a>
   hoc2014_try_new_tutorials: Isprobajte naše nove tutorijale Sata Kodiranja
   hoc2014_try_new_tutorial: Isprobajte naš novi tutorijal Sata Kodiranja u beta verziji
   hoc2014_try_scrat: Angry Birds, Plants vs. Zombies i Scrat
@@ -590,7 +686,7 @@
   robomindnl_name: Programiraj virtualnog robota
   flappy_name: Napravi Flappy igricu
   bitsbox_name: Bitsbox - napravi igru
-  makegameswithus_name: Napravi iPhone igru u svom pregledniku!
+  makeschool_name: Build an iPhone game in your browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Sat Kodiranja
   blockly_name: Blockly
@@ -629,7 +725,7 @@
   robomindnl_gradelevel: Dob 8-13
   flappy_gradelevel: Dob 4-104
   bitsbox_gradelevel: Osnovna škola
-  makegameswithus_gradelevel: Srednja škola
+  makeschool_gradelevel: Srednja škola
   touchdevelop_gradelevel: Srednja škola
   appinventor_gradelevel: Srednja škola +
   blockly_gradelevel: Svi uzrasti
@@ -669,7 +765,7 @@
   robomindnl_platformtext: Suvremeni preglednici, Mobilna mreža
   flappy_platformtext: Suvremeni preglednici, mobiteli, tableti
   bitsbox_platformtext: Suvremeni preglednici
-  makegameswithus_platformtext: Suvremeni preglednici
+  makeschool_platformtext: Suvremeni preglednici
   touchdevelop_platformtext: Suvremeni preglednici, pametni telefoni, svi uređaji
   appinventor_platformtext: Suvremeni preglednici + Android
   blockly_platformtext: Isključivo suvremeni preglednici
@@ -717,8 +813,8 @@
   flappy_shortdescription: Napravi svoju igru - Flappy Bird, Morskog Psa ili Podmornicu
   bitsbox_shortdescription: Kodiraj niz aplikacija za igru i dijeljenje korištenjem
     pravog JavaScripta.
-  makegameswithus_shortdescription: Napravi igricu za iPhone! Uči kodiranjem naučiti
-    svoja čudovišta nove pokrete!
+  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach
+    your monster new moves!
   touchdevelop_shortdescription: 'Rješavaj zadatke, stvaraj igre i uči programirati,
     sve na svom mobitelu. '
   appinventor_shortdescription: Napravi svoj program! (Samo za Android)
@@ -837,11 +933,10 @@
     niz aplikacija za igranje i dijeljenje. Jednostavne upute korak po korak omogućuju
     da čak i mala djeca programiraju u pravom JavaScriptu, a što si napredniji, dalje
     ćeš stići.
-  makegameswithus_longdescription: Nauči programirati kroz izradu iPhone igrice korištenjem
-    sasvim novog programskog jezika prilagođenog početnicima zvanog Swift! Napravi
-    akcijsku igru inspiriranu Pokemonima i napiši kôd da bi naučio svojeg lika novim
-    pokretima. Naučit ćeš kako koristiti varijable, metode i objekte da bi pomogao
-    svom liku da pobijedi!
+  makeschool_longdescription: Learn to code by making an iPhone game using a brand
+    new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
+    action game and write code to teach your monster new moves. You will learn how
+    to use variables, methods, and objects to help your monster win!
   touchdevelop_longdescription: 'Uređivač prilagođen dodirivanju će te voditi u stvaranju
     pikselaste slike, rješavanju medvjeđe zagonetke ili stvaranju igre sa skakutavom
     pticom. '
@@ -885,7 +980,7 @@
   groklearning_beyond_name: Nauči programirati u Pythonu
   hacketyhack_beyond_name: Nauči Ruby
   robomind_beyond_name: Programiraj virtualnog robota
-  makegameswithus_beyond_name: Napravi iPhone igru u svom pregledniku!
+  makeschool_beyond_name: Build an iPhone game in your browser!
   appinventor_beyond_name: AppInventor Sat Kodiranja
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Nauči programirati s psom Karelom
@@ -922,7 +1017,7 @@
   groklearning_beyond_gradelevel: Srednja škola +
   hacketyhack_beyond_gradelevel: Srednja škola
   robomind_beyond_gradelevel: Dob 8-13
-  makegameswithus_beyond_gradelevel: Srednja škola
+  makeschool_beyond_gradelevel: Srednja škola
   appinventor_beyond_gradelevel: Srednja škola +
   touchdevelop_beyond_gradelevel: Srednja škola
   codehs_beyond_gradelevel: Srednja škola
@@ -959,7 +1054,7 @@
   groklearning_beyond_platformtext: Suvremeni preglednici
   hacketyhack_beyond_platformtext: Instalacija na radnu površinu
   robomind_beyond_platformtext: Suvremeni preglednici, Mobilna mreža
-  makegameswithus_beyond_platformtext: Suvremeni preglednici
+  makeschool_beyond_platformtext: Suvremeni preglednici
   appinventor_beyond_platformtext: Suvemeni preglednik + Android
   touchdevelop_beyond_platformtext: Suvremeni preglednici, pametni telefoni, svi uređaji
   codehs_beyond_platformtext: Suvremeni preglednici ($$ potrebno)
@@ -1000,8 +1095,7 @@
   groklearning_beyond_shortdescription: Uvod u programiranje u Pythonu
   hacketyhack_beyond_shortdescription: Nauči Ruby od samog početka
   robomind_beyond_shortdescription: Napiši kôd za virtualnog robota
-  makegameswithus_beyond_shortdescription: Za jedan sat nauči kako napraviti igru
-    za iPhone
+  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
   appinventor_beyond_shortdescription: Napravi svoj program! (Samo za Android)
   touchdevelop_beyond_shortdescription: Programiraj mobilne aplikacije direktno na
     svom mobitelu, tabletu ili laptopu
@@ -1079,11 +1173,11 @@
     svojim vlastitim virtualnim robotom. Online tečaj je cjelina sastavljena od kratkih
     prezentacija, filmova, kvizova i automatiziranih voditelja i uputa koji pomažu
     tijekom vježbi iz programiranja. '
-  makegameswithus_beyond_longdescription: Znaš li malo ObjectiveC? Nauči kako napraviti
-    iPhone igru za sat vremena! Vodit ćemo te kroz proces da iskodiraš, testiraš i
-    igraš svoju igru, sve u pregledniku, a zatim je podijeli s prijateljima na Facebooku
-    da je isprobaju. Nije potrebno prethodno iskustvo programiranja za iPhone, no
-    trebaš znati što su varijable, metode i objekti.
+  makeschool_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
+    game in an hour! We'll guide you through the process, to code, test, and play
+    your game entirely in the browser and then share it on Facebook for friends to
+    try! No prior iPhone development experience is required. You must understand what
+    variables, methods, and objects are.
   appinventor_beyond_longdescription: Zabavni, kratki video tutorijali vode te kroz
     izradu tri jednostavne aplikacije za tvoj Android mobitel ili tablet. Dizajniran
     i za početnike i za znalce, ovaj sat kodiranja će te osposobiti da počneš stvarati
@@ -1198,3 +1292,38 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Sakrij ovo upozorenje
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: "# served"
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Sign up
+  homepage_action_text_try_it: Try it
+  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_girlvideo: Inspire a girl
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_gradelevel: Ages 6+
+  starwars_platformtext: Modern browsers + tablets
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
+  starwars_longdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.

@@ -1,4 +1,3 @@
-var React = require('react');
 var applabMsg = require('./locale');
 var CrosshairOverlay = require('./CrosshairOverlay.jsx');
 

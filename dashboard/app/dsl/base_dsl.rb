@@ -9,10 +9,11 @@ class BaseDSL
 
   def encrypted(text)
     @hash['encrypted'] = '1'
+
     begin
       instance_eval(Encryption::decrypt_object(text))
-    rescue OpenSSL::Cipher::CipherError
-      puts "warning: level #{@name} is encrypted, skipping"
+    rescue OpenSSL::Cipher::CipherError, Encryption::KeyMissingError
+      puts "warning: unable to decrypt level #{@name}, skipping"
       return
     end
   end

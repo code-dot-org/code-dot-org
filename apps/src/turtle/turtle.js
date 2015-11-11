@@ -852,7 +852,8 @@ Artist.prototype.animate = function() {
         stepped = this.interpreter.step();
       }
       catch(err) {
-        this.executionError = err;
+        // TODO (cpirich): populate lineNumber as we do for studio/applab:
+        this.executionError = { err: err, lineNumber: 1 };
         this.finishExecution_();
         return;
       }

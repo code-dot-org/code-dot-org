@@ -4,11 +4,11 @@ titlu: Termenii Serviciului
 
 ---
 
-### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
+### Limbajul juridic cu caracter obligatoriu este în limba engleză, şi pot fi găsite [aici](https://code.org/tos). Mai jos este o traducere.
 
 # Termenii serviciului
 
-Last Revised: December 5, 2014
+Revizuit ultima oara: 5 decembrie 2014
 
 Code.org este o organizaţie nonprofit("Code.org"). Misiunea noastră este de oferi fiecărui elev oportunitatea de a învăța tehnologia computerelor și programare. Ca parte a acestei misiuni, Code.org opereaza site-uri web cum ar fi <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, dar si alte site-uri, informatii, texte, curriculum, videoclipuri, grafica, fotografii, API-uri, notificări de e-mail şi alte materiale, produse conexe şi servicii ("**serviciile**"), inclusiv platforma de tutoriale pe site-ul <http://studio.code.org> ("**Codul Studio**").
 
@@ -22,25 +22,25 @@ Aceste condiţii se pot modifica. Sunteți de acord să vă conformați unor ast
 
 Unele servicii pot fi supuse unor postări suplimentare de reguli sau termeni ai serviciului ("**Termeni suplimentari**") şi utilizarea acestor servicii va fi condiţionată de acordul dumneavoastră în legătură cu termenii suplimentari. Dacă există o antiteza între aceşti termeni şi termenii suplimentari, termenii suplimentari vor controla acel serviciu, cu excepţia cazului în care este clar precizat ca acei termeni vor controla.
 
-### Children Under Age 13
+### Copiii sub vârsta de 13 ani
 
 Luăm măsuri pentru a minimiza colectarea de date cu caracter personal de la utilizatori sub vârsta de 13 cum este explicat în Code.org [politica de confidenţialitate](http://code.org/privacy). Dacă sunteţi sub vârsta de 13 ani, vă încurajam să obţineti aprobarea unui părinte sau al tutorelui legal înainte de a crea un cont pe Code.org. Code.org permite anumitor reprezentanţi ai judetelor şcolare şi şcolilor, ca profesori, administratorii, consilierii şi alte cadre didactice (o "**Educator**") sa se conecteze cu studenţii prin intermediul serviciilor pentru a oferi tutoriale, servicii de educatie şi altele. În cazul în care sunteţi un Educator, va puteţi înregistra conturile pe servicii pentru unul sau mai multi dintre studenţii dumneavoastră.
 
-If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
+Dacă sunteţi un Educator şi vă înregistraţi un cont pentru un elev care este sub vârsta de 13 (un "**copil**"), declaraţi şi garantaţi că dvs sau organizaţia educaţională la care lucraţi are permisiunea corespunzătoare pentru a înregistra copilul pentru servicii educationale, precum Code.org, care colectează informațiile personale ale copilului pentru utilizarea in beneficiul scolii şi pentru nici un scop comercial. În plus, sunteţi de acord să respectaţi aceşti termeni în numele organizării educaţionale pentru care lucraţi.
 
-### Your Account
+### Contul dumneavoastră
 
 Dacă vă creaţi un cont pentru servicii, sunteţi responsabil pentru securitatea contului dumneavoastră şi pentru păstrarea în siguranţă a parolei. Dacă utilizaţi un cont atribuite la tine de un Educator, Educatorul dumneavoastră poate accesa şi dezactiva contul dvs.
 
 Code.org va poate permite să vă înregistraţi pentru servicii cu un cont precum Facebook Connect şi Google ("**Servicii de autentificare**"). Prin înregistrarea pentru servicii folosind un serviciu de autentificare, sunteţi de acord că Code.org poate accesa informaţiile din cont la serviciul de autentificare şi sunteţi de acord cu orice termeni de utilizare a serviciului de autentificare în ceea ce priveşte utilizarea serviciilor prin serviciul de autentificare. Sunteţi singurul responsabil pentru interactiunile cu serviciul de autentificare.
 
-### Privacy
+### Confidentialitate
 
 Confidentialitatea datelor dumneavoastra este importanta pentru noi. [Politica de confidenţialitate](http://code.org/privacy) Code.org explică modul în care vom trata datele personale şi este încorporată în termenii de referinţă. Vă rugăm să citiţi Politica de confidenţialitate cu atenţie pentru informaţii referitoare la Code.org pentru colectarea, utilizarea şi divulgarea de informaţii personale.
 
 Dacă sunteţi un student care utilizează un cont inregistrat de un Profesor sau altfel conectat la un Profesor, sunteţi de acord că Code.org poate divulga informaţiile dumneavoastră pentru profesorii asociati cu contul dvs. Dacă sunteţi un Profesor, sunteţi de acord cu faptul ca nu puteti partaja informaţiile despre studenţi pe carele primiţi de la Code.org cu nimeni decât agenţii autorizaţi de clasă, judetul şcolar sau alte instituții de învățământ pe care le reprezentati.
 
-### User Generated Content - Management; License Grant; Representations and Warranties
+### Continut Generat pentru Utilizator - Management; Acordarea licenţei; Reprezentari si garantii
 
 Code.org poate acum sau în viitor permite dumneavoastra şi altor utilizatori sa postati cod de computer (inclusiv codul sursă şi obiect), informaţii, text, grafica, note, întrebări, Comentarii, rating, clienţi, imagini şi clipuri video sau alte mijloace de comunicare (colectiv, "**conţinut de utilizator**") la servicii. Ati inteles ca daca se publica sau nu conţinutul utilizatorului, Code.org nu garantează nici o confidenţialitate cu privire la orice depuneri.
 
@@ -50,27 +50,27 @@ Code.org poate, dar nu este obligat să monitorizeze sau să revizuiască orice 
 
 Utilizatorii pot include link-uri către site-uri terţă în conţinutul de utilizator, atâta timp cât conţinutul acestor site-uri nu încalcă aceşti termeni. Făcând clic pe aceste link-uri este pe riscul dumneavoastra. Code.org nu este responsabil pentru disponibilitatea sau conţinutul de site-uri legate, inclusiv publicitate, produse sau alte materiale cu privire la aceasta.
 
-By submitting or distributing User Content through the Services or directly to Code.org staff, you hereby grant to Code.org a worldwide, non-exclusive, transferable, assignable, fully paid-up, royalty-free, perpetual, irrevocable right and license to host, transfer, display, perform, reproduce, modify, distribute and re-distribute, adapt, prepare derivative works of, use, make, have made, import, and otherwise exploit your User Content, under all intellectual property rights therein, in whole or in part, in any media formats and through any media channels (now known or hereafter developed).
+Prin trimiterea sau distribuirea de conţinut de utilizator prin intermediul serviciilor sau direct personalului Code.org, acordaţi Code.org la nivel mondial, non-exclusiv, transferabil, repartizat, dreptul deplin, redevenţe-free, perpetuu, irevocabil şi licenţă pentru gazduire, transferul, afişaj, efectuare, reproducere, modificare, distribuire şi re-distribuire, adaptare, pregătirea lucrărilor derivate din, utilizaţi, face, au făcut, vinde, oferta de vânzare, de import, şi să exploateze conţinutul de utilizator, sub toate drepturile de proprietate intelectuală, în tot sau în parte, în orice formate de mass-media şi prin orice canale de mass-media ( cunoscut sau dezvoltate în continuare).
 
 În plus, trimiterea sau distribuirea de conţinut de utilizator prin intermediul serviciilor, acordaţi pentru fiecare utilizator al serviciilor o licenţă non-exclusivă pentru a accesa şi utiliza conţinut de utilizator.
 
-### User Content Representations and Warranties
+### Reprezentari si garantii pentru continutul de utilizator
 
 Sunteţi singurul responsabil pentru conţinutul de utilizator înregistrat pe care il postati şi consecinţele publicarii lor. Încărcarea, prezentarea, crearea sau publicarea continutului dumneavoastra de utilizator, sau prin intermediul serviciilor, declaraţi şi garantaţi că: (1) sunteti creatorul şi proprietarul conţinutului de utilizator şi aveti autoritatea de a-l utiliza si licenţele necesare, drepturi şi permisiunea de a publica conţinut de utilizator care va reprezinta; (2) conţinutul utilizatorului nu va: (a) încalca sau insusi orice drept al tertei, inclusiv orice drept de autor, marcă, brevet, secret comercial, dreptul moral, dreptul de confidenţialitate, dreptul de publicitate, sau orice alte proprietate intelectuală sau drept de proprietate sau (b) calomnie, defaima, calomnie sau invada dreptul de confidenţialitate, publicitate sau alte drepturi de proprietate de orice altă persoană; (3) conţinutul utilizatorului nu conţine orice virus, adware, spyware, viermi sau alte coduri malitioase.
 
-### Restrictions on Content and Use of the Services
+### Restricţii privind conţinutul şi utilizarea serviciilor
 
 Ne rezervam dreptul în orice moment (dar nu vom avea obligaţia) de a elimina sau refuza să distribuim orice conţinut de utilizator pe site şi de a suspenda sau rezilia utilizatorilor, fără răspuns catre ei. Ne rezervam de asemenea dreptul de a accesa, citi, pastra, şi dezvălui orice informaţii, aşa cum credem în mod rezonabil ca este necesar (i) respecta orice lege, regulament aplicabil, proces juridic sau solicitare guvernamentală, (ii) impune termenii, inclusiv investigarea de încălcări potenţiale ale prezentului contract, (iii) detecta, preveni, altfel adresa frauda, securitate sau probleme tehnice, (iv) răspunde la cererile de sprijin utilizatorului sau (v) pentru a proteja drepturile, proprietatea sau siguranţa Code.org, utilizatorilor şi a publicului.
 
 Nu puteti face următoarele în timp ce accesati sau utilizati serviciile noastre: (i) accesul, manipularea, sau folosirea zonele non-publice de servicii, Code.org pe sistem de calculator sau sisteme tehnice de livrare Code.org pe furnizori; (ii) sondă, scanare, sau testarea vulnerabilitatii oricarui sistem sau retea sau încălcare sau eludarea măsurilor de securitate sau autentificare; (iii) accesul sau căutarea sau încercarea de a accesa servicii prin orice mijloace (automate sau altfel) decât prin cele prezent disponibile, interfetele publicate care sunt oferite de Code.org (şi numai conform acestor termeni şi condiţii), dacă nu a fost în mod special permis să facă acest lucru în cadrul unui contract separat cu Code.org (Notă: crawling services este permis dacă este făcută în conformitate cu dispozițiile din fişierul robots.txt cu toate acestea, decopertarea serviciilor, fără acordul prealabil al Code.org este expres interzisă); (iv) forja orice antet de sub formã de pachete TCP/IP sau orice parte din informaţii de antet în orice e-mail sau postare, sau în orice mod al utilizarii serviciilor să trimită modificate, false sau înşelătoare sursă de informaţii de identificare; sau (v), interfera cu sau perturba (sau încercarea de a face acest lucru), accesul de orice utilizator, gazda sau retea, inclusiv, fără limitare, Intimidarea sau hartuirea, Trimite un virus, supraîncărcarea, inundaţii, spam-ul, mail-bombardarea servicii, sau prin crearea de conţinut într-un mod de scripting sau sa creaţi o povară nejustificată pe servicii.
 
-### Your License to Use Code.org Videos, Tutorials, Data, and APIs
+### Licenţa de utilizare Code.org Videos, tutoriale, date şi API-uri
 
 [Bibliotecă de videoclipuri](http://youtube.com/user/CodeOrg) Code.org pot fi redistribuit în mod liber în condiţiile expres că (1 videoclipuri sunt redistribuite, (folosind video player încorporat sau un link de download) cu atribuirea pentru Code.org video (2 nu sunt încorporate în orice mash-up-uri, (3 sunt utilizate în scopuri de invatare a programarii, şi (4) utilizarea de video nu constituie o aprobare a unui brand tert, serviciu sau produs și (5) accesul la astfel de continut redistribuit sau servicii este oferit gratuit.
 
 Celebrităţile şi cei care apar în videoclipurile tutorial de pe ro.code.org îşi rezervă toate drepturile pentru asemănarea şi numele lor. Permiţându-vă să redistribuiti aceste clipuri video sau tutoriale, Code.org nu acordă drepturi suplimentare de utilizare a numelor individuale.
 
-Ilustraţia folosită în tutorialele noastre este protejata de Copyright şi utilizarea acestor tutoriale nu vă acordă drepturi de utilizare a ilustraţiei în orice alt mod. Plante vs. Zombies are (c) 2014 [Electronic Arts Inc](http://www.ea.com/). Plante vs. Zombi şi PopCap sunt mărci comerciale înregistrate ale [Electronic Arts Inc](http://www.ea.com/). Angry Birds are (c) 2014 [Rovio Entertainment Ltd](http://www.rovio.com/). Angry Birds este o marcă comercială a [Rovio Entertainment Ltd](http://www.rovio.com/). Scrat şi Ice Age sunt mărci înregistrate şi © secolului XX Fox de acordare a licenţelor şi de Merchandising.
+Ilustraţia folosită în tutorialele noastre este protejata de Copyright şi utilizarea acestor tutoriale nu vă acordă drepturi de utilizare a ilustraţiei în orice alt mod. Plante vs. Zombi sunt (c) 2012 [Electronic Arts Inc](http://www.ea.com/). Plante vs. Zombi şi PopCap sunt mărci comerciale înregistrate ale [Electronic Arts Inc](http://www.ea.com/). Angry Birds sunt (c) 2013 [Rovio Entertainment Ltd](http://www.rovio.com/). Angry Birds este o marcă comercială a [Rovio Entertainment Ltd](http://www.rovio.com/). Scrat şi Ice Age sunt mărci înregistrate şi © secolului XX Fox de acordare a licenţelor şi de Merchandising.
 
 Software-ul ce alimenteaza tutorialele ro.Code.org este guvernat de o sursa deschisa de licenţă, care este postata ca parte a [depozitului de cod sursă](https://github.com/code-dot-org/).
 
@@ -80,7 +80,7 @@ Inafara de videoclipurile şi obiectele de arta menţionate mai sus, toate mater
 
 Orice date furnizate de către Consiliul de conferinţe este furnizat "ca atare" cu nici un fel de garantie, si este protejat de legile Statelor Unite şi internaţionale prin drepturile de autor. Datele afişate sunt furnizate doar pentru scopuri informationale şi pot fi accesate, revizuite, publicate, și utilizat în conformitate cu, şi cu permisiunea Consiliul de concordanţă cu termenii de utilizare afisati la [www.conference-board.org](http://www.conference-board.org). Aceste date nu pot fi extrase pentru utilizare în baza de date, folosite pentru a crea o lucrare derivată, sau altfel utilizate abuziv prin orice mijloace fără permisiunea scrisă expresă la Consiliul de conferinţă, cu excepţia faptului că puteti face utilizare non- comerciala limitata ca compatibile cu utilizarea corectă în conformitate cu secţiunea 107 din Legea drepturilor de autor din 1976. Consiliul de conferinţă ® şi Conference Board OnLine ® sunt mărci înregistrate ale Consiliul de conferinţă. Consiliul de conferinţă îşi rezervă toate drepturile asupra mărcilor sale. Mai multe informaţii cu privire la Boardul Conferinta Ajutor OnLine ® pot fi găsite [aici](https://www.conference-board.org/data/helpwantedonline.cfm).
 
-### Copyright Policy
+### Politici de drepturi de autor
 
 Code.org respectă drepturile de proprietate intelectuală ale altora şi se aşteaptă ca utilizatorii de servicii să facă acelaşi lucru. Vom răspunde la înştiinţările privind pretinsa încălcare drepturilor de autor, care respecta legea aplicabilă şi în mod corespunzător sunt furnizate pentru noi. Dacă credeţi că munca dumneavoastra a fost copiata într-un mod care constituie încălcarea drepturilor de autor, vă rugăm să ne furnizaţi următoarele informaţii: (i) o semnatura electronica sau fizica de proprietarul drepturilor de autor sau unei persoane autorizată să acţioneze în numele lor; (ii) identificarea muncii cu drepturi de autor, că au fost încălcate; (iii) identificarea materialului care se pretinde a fi contrafăcut sau să facă obiectul activităţii de íncălcare şi că este pe punctul de a fi eliminata sau accesul la acestea urmeaza să fie dezactivat, şi informaţii în mod rezonabil suficiente pentru a permite sa localizam materialul; (iv) informaţii de contact, inclusiv adresa, numărul de telefon şi o adresă de e-mail; (v) o declaraţie că aveţi convingerea de bună credinţă că utilizarea materialului în maniera plângerii nu este autorizată de deţinătorul drepturilor de autor, agentul său sau de lege; şi (vi) o declaraţie că informaţiile din notificare sunt corecte, şi, sub pedeapsa de sperjur, că sunteţi autorizat să acţionati în numele proprietarului dreptului de autor.
 
@@ -90,7 +90,7 @@ Este politica ro.Code.org pe sa răspunda la înştiinţările privind pretinsa 
 
 Ne rezervam dreptul de a elimina conţinut pretins a fi contrafăcut fără notificare prealabilă, la discreţia noastră. In anumite circumstante, ro.Code.org, de asemenea, va închide contul unui utilizator dacă utilizatorul se dovedeste a fi un repetat plagiator. Pentru a raporta o încălcarea de drepturi de autor, vă rugăm să ne contactaţi. Agentul nostru ce se ocupa cu drepturile de autor pentru aviz de creanţe de încălcarea drepturilor de autor poate fi contactat la adresa de e-mail copyright@code.org.
 
-### Code.org Intellectual Property Rights, and Your License to Use the Services
+### Drepturile de proprietate intelectuală ro.code.org, şi licenţa pentru utilizarea serviciilor
 
 Toate drepturile, titlul şi interesul în şi servicii (cu excepția conținutului furnizat de utilizatori) sunt şi rămân proprietatea exclusivă a ro.Code.org şi licenţiatorii săi. Serviciile sunt protejate prin copyright, marca inregistrata, rochie comerciala, brevete şi alte legi ale Statelor Unite. Conţinutul, informaţiile, datele, modele, cod, şi materiale asociate cu serviciile ("**conţinutul**") sunt protejate de proprietate intelectuală şi de alte legi. Trebuie să respectaţi toate aceste legi, drepturi de autori, marci inregistrate sau alte restrictii legale. Nimic din Termeni nu vă acordă dreptul să utilizati numele de ro.Code.org sau orice ro.Code.org marci, logo-uri, nume de domenii şi alte caracteristici de marcă distinctivă. Orice feedback, comentarii sau sugestii vă poate oferi ro.Code.org, sau servicii este în întregime un act voluntar şi suntem liberi sa utilizam aceste comentarii, sugestii sau feedback-ul cum credem noi de cuviinţă şi fără nici o obligaţie pentru dumnevoastra.
 
@@ -98,19 +98,19 @@ Funcţie de aceşti termeni, puteţi accesa şi utiliza serviciile numai pentru 
 
 La cerere, putem autoriza în mod expres redistribuirea un anumit conţinut pentru uz personal, non-comercial. Vom identifica în mod special conţinutul pentru care sunteti autorizati să redistribuiti şi modurile prin care o puteti face (cum ar fi prin e-mail, Bloguri, sau playerele încorporate). Putem revoca această autorizaţie în orice moment. Dacă vă redistribui conţinutul, trebuie să fiti capabil sa editati sau şterge astfel de conţinut public postat şi trebuie să editaţi sau ştergeţi cu promptitudine la cererea noastra. În plus, fara a uita cele mentionate mai sus, nu va fi permisă utilizarea conţinutului sau serviciilor în cazul în care o astfel de utilizare constituie o aprobare a unui brand terta parte, serviciul sau produsul sau dacă accesul la astfel de redistribuiri de conţinut sau servicii nu este furnizat gratuit.
 
-Design de logo codul ® este o marcă înregistrată a Code.org. Puteţi utiliza numai logo-ul ro.Code.org sau marca cu permisiunea ro.Code.org, şi numai cu referire la ro.Code.org. Mash-up-uri sau combinaţii de logo ro.Code.org sau numele cu alte logo-uri sau nume sunt specific interzise.
+Design-ul logoului CODE ® este o marcă înregistrată a Code.org. Puteţi utiliza numai logo-ul ro.Code.org sau marca cu permisiunea ro.Code.org, şi numai cu referire la ro.Code.org. Mash-up-uri sau combinaţii de logo ro.Code.org sau numele cu alte logo-uri sau nume sunt specific interzise.
 
 Code.org nu reprezintă si nu garantează că serviciile vor fi lipsite de erori, viruşi sau alte componente daunatoare, sau că defectele vor fi corectate. Noi nu reprezentam sau garantam că informaţii disponibile pe sau prin intermediul serviciilor vor fi corecte, exacte, în timp util sau altfel de încredere. Putem face modificări caracteristicilor, funcţionalitatii sau continutului serviciilor în orice moment. Ne rezervăm dreptul, la discreţia noastră de a edita sau şterge orice conţinut, informaţii sau alte materiale puse la dispoziţie ca parte a serviciilor.
 
-### Code.org Store and Support Forums
+### Code.org magazin şi forumuri de sprijin
 
 Code.org magazin şi forumuri de sprijin Code.org sunt operate de terţe părţi. Vă rugăm să citiţi Acordul privind utilizatorii și politica de confidenţialitate pentru aceste site-uri separat înainte de a cumpăra un element din magazin Code.org sau înainte de a posta o întrebare sau răspuns la Forumul de suport. Prin accesarea Code.org magazin şi suport forum, sunteti de acord sa fiti legat ca utilizator de respectivul acord şi de politica de confidenţialitate de aceste terţe părţi.
 
-### Volunteer mentors
+### Mentori de voluntari
 
 Code.org încurajează ingineri software să voluntarieze ca mentori pentru a ajuta cadrele didactice în educarea programarii. Code.org oferă informaţii despre aceşti potenţiali voluntari fara garantie, referinte, sau controale de fond. Dacă sunteţi un Educator care alege să ceară asistenţă de voluntar obţinuta prin intermediul Code.org prin baza de date, este în întregime responsabilitatea dumneavoastra de a verifica referintele bine sau de a efectua controalele necesare. Code.org nu oferă nici o garanţie sau informaţii decât capacitatea de a contacta un voluntar potenţial şi orice responsabilitate în orice utilizare de voluntari se bazează numai pe dumnevoastra. Code.org nu garantează acurateţea sau integralitatea informatiilor furnizate de voluntari şi nu vom adopta nici aproba, nici nu suntem responsabili pentru exactitatea sau fiabilitatea oricei opinie, sfat, sau declaraţie făcută de către orice parte decât ro.Code.org. În nici un caz nu este ro.Code.org responsabil pentru orice pierderi sau daune care rezultă din orice persoană care se bazează pe informaţii sau alt conţinut publicat pe serviciu sau transmis de către alţii.
 
-### Pledges, Donations and Payments
+### Angajamentele, donaţii şi plăţi
 
 A. angajamentele şi donaţii. Dacă aţi face o donaţie pe acest site, sunteţi de acord să plătiti toate angajamentele şi donaţii specificate.
 
@@ -118,7 +118,7 @@ B. Metode de plată. Code.org va percepe orice donatie autorizati, dacă este ca
 
 C. Autorizarea cardului de credit. Dacă utilizaţi un card de credit pentru a plati orice donatie legat de site, ro.Code.org va va cere sa furnizati un număr de card de credit la un emitent de card pe care il acceptam. Code.org poate solicita pre-autorizare contului de card de credit pentru a verifica validitatea cardului de credit şi/sau a fondurilor necesare sau credit disponibil să acopere donaţia dvs. Aceste pre-autorizaţii vor reduce soldul disponibil cu suma de autorizare până când este lansat sau s-a împăcat cu taxele reale. Vă rugăm să contactaţi emiţătorul cardului de credit, dacă aveţi întrebări suplimentare cu privire la când o sumă de autorizare va fi eliminata din declaraţia dumneavoastră.
 
-### Disclaimers and Limitations of Liability
+### Declinări şi limitările de răspundere
 
 Vă rugăm să citiţi această secţiune cu atenţie, deoarece ea limitează răspunderea Code.org şi părinţii, filiale, afiliatii, societăților legate, ofiţeri, directori, angajaţi, agenţi, reprezentanţii, parteneri, şi licenţiatorii (colectiv, "Code.org entităţi"). Fiecare dintre subsecţiunile mai jos se aplică numai până la nivelul maxim admis de legea aplicabilă. Unele jurisdicţii nu permit Declinarea garanţiilor implicite sau limitarea răspunderii în contracte, şi ca rezultat conţinutul acestei secţiuni nu se pot aplica pentru tine. Nimic în această secţiune nu este destinat pentru a limita drepturile pe care le aveţi care nu poate fi limitate în mod legal.
 
@@ -138,7 +138,7 @@ LA maxima măsură permisă de legea aplicabilă, entitatile CODE.ORG trebuie s�
 
 UNELE STATE SAU ALTE AUTORITĂȚI NU PERMIT ECLUDEREA GARANȚIILOR IMPLICATE, AȘA ÎNCÂT CELE DE MAI SUS POATE NU SE APLICĂ PENTRU DVS.
 
-### General Terms
+### Termeni generali
 
 #### A. Renunţarea şi Separabilitatea
 

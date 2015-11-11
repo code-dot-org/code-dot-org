@@ -1,12 +1,23 @@
+require 'dynamic_config/dcdo'
+require 'dynamic_config/gatekeeper'
+
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
 
-  before_filter :prevent_caching
+  # Default s-maxage to use for script level pages which are configured as
+  # publicly cacheable.  Used if the DCDO.public_proxy_max_age is not defined.
+  DEFAULT_PUBLIC_PROXY_MAX_AGE = 3.minutes
+
+  # Default max-age to use for script level pages which are configured as
+  # publicly cacheable. Used if the DCDO.public_max_age is not defined.
+  # This is set to twice the proxy max-age because of a bug in CloudFront.
+  DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
 
   def reset
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
+    prevent_caching
 
     # delete the client state and other session state if the user is not signed in
     # and start them at the beginning of the script.
@@ -22,14 +33,14 @@ class ScriptLevelsController < ApplicationController
   def next
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
-
+    configure_caching(@script)
     redirect_to(build_script_level_path(next_script_level)) and return
   end
 
   def show
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
-
+    configure_caching(@script)
     load_script_level
 
     if request.path != (canonical_path = build_script_level_path(@script_level))
@@ -53,6 +64,24 @@ class ScriptLevelsController < ApplicationController
   end
 
   private
+
+  # Configure http caching for the given script. Caching is disabled unless the
+  # Gatekeeper configuration for 'script' specifies that it is publicly
+  # cachable, in which case the max-age and s-maxage headers are set based the
+  # 'public-max-age' DCDO configuration value.  Because of a bug in Amazon Cloudfront,
+  # we actually set max-age to twice the value of s-maxage, to avoid Cloudfront serving
+  # stale content which has to be revalidated by the client. The details of the bug are
+  # described here:
+  # https://console.aws.amazon.com/support/home?region=us-east-1#/case/?caseId=1540449361&displayId=1540449361&language=en
+  def configure_caching(script)
+    if script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
+      max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_CLIENT_MAX_AGE)
+      proxy_max_age = DCDO.get('public_proxy_max_age', DEFAULT_PUBLIC_PROXY_MAX_AGE)
+      response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{proxy_max_age}"
+    else
+      prevent_caching
+    end
+  end
 
   def next_script_level
     user_or_session_level || @script.starting_level
@@ -103,7 +132,10 @@ class ScriptLevelsController < ApplicationController
       # load user's previous attempt at this puzzle.
       level_source = current_user.last_attempt(@level).try(:level_source)
 
-      if current_user.user_level_for(@script_level).try(:submitted?)
+      user_level = current_user.user_level_for(@script_level)
+      if user_level && user_level.submitted?
+        level_view_options(submitted: true)
+        level_view_options(unsubmit_url: url_for(user_level))
         readonly_view_options
       end
     end
@@ -146,10 +178,15 @@ class ScriptLevelsController < ApplicationController
     load_level_source
 
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level.id)
+
     view_options(
       full_width: true,
       small_footer: @game.uses_small_footer? || enable_scrolling?,
       has_i18n: @game.has_i18n?
+    )
+
+    level_view_options(
+      script_level_id: @script_level.level_id
     )
 
     @@fallback_responses ||= {}

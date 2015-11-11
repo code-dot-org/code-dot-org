@@ -10,6 +10,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   setup do
     client_state.reset
+    Gatekeeper.clear
 
     LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
     CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
@@ -32,6 +33,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @blank_image = File.read('test/fixtures/artist_image_blank.png', binmode: true)
     @good_image = File.read('test/fixtures/artist_image_1.png', binmode: true)
     @another_good_image = File.read('test/fixtures/artist_image_2.png', binmode: true)
+    @jpg_image = File.read('test/fixtures/playlab_image.jpg', binmode: true)
     @milestone_params = {user_id: @user, script_level_id: @script_level.id, lines: 20, attempt: '1', result: 'true', testResult: '100', time: '1000', app: 'test', program: '<hey>'}
   end
 
@@ -99,6 +101,26 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # created activity and userleve with the correct script
     assert_equal @script_level.script, UserLevel.last.script
+  end
+
+  test "successful milestone does not require script_level_id" do
+    params = @milestone_params
+    params[:script_level_id] = nil
+    params[:level_id] = @script_level.level.id
+    params[:result] = 'true'
+
+    post :milestone, params
+    assert_response :success
+  end
+
+  test "unsuccessful milestone does not require script_level_id" do
+    params = @milestone_params
+    params[:script_level_id] = nil
+    params[:level_id] = @script_level.level.id
+    params[:result] = 'false'
+
+    post :milestone, params
+    assert_response :success
   end
 
   test "logged in milestone with existing userlevel with script" do
@@ -218,34 +240,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 1000, Activity.last.lines
   end
 
-  test "anonymous milestone does not allow unreasonably high lines of code" do
-    sign_out(@user)
-
-    expect_controller_logs_milestone_regexp(/9999999/)
-
-    @controller.expects :slog
-
-    assert_creates(LevelSource) do
-      assert_does_not_create(Activity, UserLevel) do
-        post :milestone, @milestone_params.merge(user_id: 0, lines: 9999999)
-      end
-    end
-
-    # record activity in session
-    assert_equal 100, client_state.level_progress(@script_level.level_id)
-
-    # don't count it in session either
-    assert_equal 1000, client_state.lines
-
-    # pretend it succeeded
-    assert_response :success
-
-    expected_response = build_expected_response(
-        total_lines: 1000, # No change
-        level_source: "http://test.host/c/#{assigns(:level_source).id}")
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-  end
-
   test "logged in milestone with messed up email" do
     # use update_attribute to bypass validations
     @user.update_attribute(:email, '')
@@ -304,6 +298,32 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel, GalleryActivity, LevelSourceImage) do
       assert_difference('@user.reload.total_lines', 20) do # update total lines
         post :milestone, @milestone_params.merge(save_to_gallery: 'true', image: Base64.encode64(@good_image))
+      end
+    end
+
+    assert_response :success
+
+    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+
+    # csoreated gallery activity and activity for user
+    assert_equal @user, Activity.last.user
+    assert_equal @user, GalleryActivity.last.user
+    assert_equal Activity.last, GalleryActivity.last.activity
+  end
+
+  test "logged in milestone should save to gallery when passing an impressive level with a jpg image" do
+    # do all the logging
+    @controller.expects :log_milestone
+    @controller.expects :slog
+
+    @controller.expects(:trophy_check).with(@user)
+
+    expect_s3_upload
+
+    assert_creates(LevelSource, Activity, UserLevel, GalleryActivity, LevelSourceImage) do
+      assert_difference('@user.reload.total_lines', 20) do # update total lines
+        post :milestone, @milestone_params.merge(save_to_gallery: 'true', image: Base64.encode64(@jpg_image), image_type: 'jpg')
       end
     end
 
@@ -643,16 +663,10 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
     end
 
-    # record activity in session
-    assert_equal 100, client_state.level_progress(@script_level.level_id)
-
-    # record the total lines of code in session
-    assert_equal 20, client_state.lines
-
     assert_response :success
 
     expected_response = build_expected_response(
-        total_lines: 20,
+        total_lines: 0,
         level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -676,17 +690,10 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
     end
 
-    # record activity in session
-    assert_equal 50, client_state.level_progress(@script_level_prev.level_id)
-    assert_equal 100, client_state.level_progress(@script_level.level_id)
-
-    # record the total lines of code in session
-    assert_equal 30, client_state.lines
-
     assert_response :success
 
     expected_response = build_expected_response(
-        total_lines: 30,
+        total_lines: 10,
         level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -736,17 +743,10 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
     end
 
-    # record activity in session
-    assert_equal 50, client_state.level_progress(@script_level_prev.level_id)
-    assert_equal 100, client_state.level_progress(@script_level.level_id)
-
-    # record the total lines of code in session
-    assert_equal 30, client_state.lines
-
     assert_response :success
 
     expected_response = build_expected_response(
-        total_lines: 30,
+        total_lines: 10,
         level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -775,9 +775,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal nil, assigns(:level_source_image)
   end
 
-
   test 'sharing program with swear word returns error' do
-    return unless CDO.webpurify_key
+    unless CDO.webpurify_key
+      # stub webpurify
+      WebPurify.stubs(:find_potential_profanity).returns true
+    end
+
     assert_does_not_create(LevelSource, GalleryActivity) do
       post :milestone, user_id: @user.id, script_level_id: @script_level.id, :program => studio_program_with_text('shit')
     end
@@ -793,7 +796,11 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing program with swear word in German rejects word' do
-    return unless CDO.webpurify_key
+    unless CDO.webpurify_key
+      # stub webpurify
+      WebPurify.stubs(:find_potential_profanity).returns true
+    end
+
     with_default_locale(:de) do
       assert_does_not_create(LevelSource, GalleryActivity) do
         post :milestone, @milestone_params.merge(program: studio_program_with_text('scheiße'))
@@ -809,7 +816,24 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @controller.stubs(:find_share_failure).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
     @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
-      params[:tag] == 'share_checking_error' && params[:error] == 'something broke' && params[:level_source_id] != nil
+      params[:tag] == 'share_checking_error' && params[:error] == 'OpenURI::HTTPError: something broke' && params[:level_source_id] != nil
+    end
+    @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
+
+    assert_creates(LevelSource) do
+      post :milestone, @milestone_params.merge(program: studio_program_with_text('shit'))
+    end
+
+    assert_response :success
+  end
+
+
+  test 'sharing program with IO::EAGAINWaitReadable error slogs' do
+    WebPurify.stubs(:find_potential_profanity).raises(IO::EAGAINWaitReadable)
+    # allow sharing when there's an error, slog so it's possible to look up and review later
+
+    @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
+      params[:tag] == 'share_checking_error' && params[:error] == 'IO::EAGAINWaitReadable: Resource temporarily unavailable' && params[:level_source_id] != nil
     end
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
 
@@ -821,7 +845,11 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing program with swear word in Spanish rejects word' do
-    return unless CDO.webpurify_key
+    unless CDO.webpurify_key
+      # stub webpurify
+      WebPurify.stubs(:find_potential_profanity).returns true
+    end
+
     with_default_locale(:es) do
       assert_does_not_create(LevelSource, GalleryActivity) do
         post :milestone, @milestone_params.merge(program: studio_program_with_text('putamadre'))
@@ -847,6 +875,15 @@ class ActivitiesControllerTest < ActionController::TestCase
         }
     }
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+  end
+
+  test 'sharing when gatekeeper has disabled sharing does not work' do
+    Gatekeeper.set('sharingEnabled', where: {script_name: @script.name}, value: false)
+
+    response = post :milestone, @milestone_params
+
+    assert_nil response['share_failure']
+    assert_nil response['level_source']
   end
 
   test 'milestone changes to next stage in default script' do
@@ -888,7 +925,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     sign_out @user
     assert_equal true, new_level
-    assert_equal false, new_level
   end
 
   test 'trophy_check only on script with trophies' do
@@ -903,5 +939,4 @@ class ActivitiesControllerTest < ActionController::TestCase
     post :milestone, @milestone_params.merge(script_level_id: script_level_with_trophies.id)
     assert_response :success
   end
-
 end

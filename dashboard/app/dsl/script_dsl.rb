@@ -15,6 +15,7 @@ class ScriptDSL < BaseDSL
     @video_key_for_next_level = nil
     @hidden = true
     @login_required = false
+    @admin_required = false
     @trophies = false
     @pd = false
     @wrapup_video = nil
@@ -28,6 +29,7 @@ class ScriptDSL < BaseDSL
 
   boolean :hidden
   boolean :login_required
+  boolean :admin_required
   boolean :trophies
   boolean :pd
 
@@ -43,7 +45,7 @@ class ScriptDSL < BaseDSL
 
   def parse_output
     stage(nil)
-    {id: @id, stages: @stages, hidden: @hidden, trophies: @trophies, wrapup_video: @wrapup_video, login_required: @login_required, pd: @pd}
+    {id: @id, stages: @stages, hidden: @hidden, trophies: @trophies, wrapup_video: @wrapup_video, login_required: @login_required, admin_required: @admin_required, pd: @pd}
   end
 
   def concepts(*items)

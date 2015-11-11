@@ -11,6 +11,8 @@
   <% } %>
 </div>
 <% if (functionShortDescription) { %><div><%= functionShortDescription %></div><% } %>
-<div class="tooltip-example-link">
-  <a href="javascript:void(0);">See examples</a>
-</div>
+<% if (showExamplesLink) { %>
+  <div class="tooltip-example-link">
+    <a href="javascript:void(0);">See examples</a>
+  </div>
+<% } %>

@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,9 +126,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "Add a label and drop down box, to your app and save the data to your JSON object and add it to your table. Make sure to reset the dropdown after the data is stored.",
     "markdown_instructions": "## Data From Dropdowns\r\n\r\nYour app may need other types of user data to be saved other than just text boxes. \r\n\r\n** Add a label and drop down box to your app and save the data to your JSON object and add it to your table. **\r\n\r\nDon't forget about the user experience! How can you reset the dropdown after the user information has been stored?",

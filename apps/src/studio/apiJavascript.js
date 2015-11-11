@@ -1,11 +1,17 @@
+var constants = require('./constants');
+
 // API definitions for functions exposed for JavaScript (droplet/ace) levels:
+
+exports.endGame = function(value) {
+  Studio.queueCmd(null, 'endGame', {'value': value});
+};
 
 exports.setBackground = function (value) {
   Studio.queueCmd(null, 'setBackground', {'value': value});
 };
 
-exports.setWalls = function (value) {
-  Studio.queueCmd(null, 'setWalls', {'value': value});
+exports.setMap = function (value) {
+  Studio.queueCmd(null, 'setMap', {'value': value});
 };
 
 exports.setSprite = function (spriteIndex, value) {
@@ -29,19 +35,18 @@ exports.setSpriteSpeed = function (spriteIndex, value) {
   });
 };
 
-// setCharacter and setCharacterSpeed are wrappers to setSprite and
-// setSpriteSpeed that always pass 0 for the spriteIndex (used by hoc2015)
+// setDroid is a wrapper to setSprite that always passes 0 for the spriteIndex
+// (used by hoc2015)
 
-exports.setCharacter = function (value) {
+exports.setDroid = function (value) {
   Studio.queueCmd(null, 'setSprite', {
     'spriteIndex': 0,
     'value': value
   });
 };
 
-exports.setCharacterSpeed = function (value) {
-  Studio.queueCmd(null, 'setSpriteSpeed', {
-    'spriteIndex': 0,
+exports.setDroidSpeed = function (value) {
+  Studio.queueCmd(null, 'setDroidSpeed', {
     'value': value
   });
 };
@@ -100,44 +105,107 @@ exports.move = function(spriteIndex, dir) {
   });
 };
 
-exports.moveEast = function() {
-  Studio.queueCmd(null, 'moveEast');
+exports.moveRight = function() {
+  Studio.queueCmd(null, 'moveRight');
 };
 
-exports.moveWest = function() {
-  Studio.queueCmd(null, 'moveWest');
+exports.moveLeft = function() {
+  Studio.queueCmd(null, 'moveLeft');
 };
 
-exports.moveNorth = function() {
-  Studio.queueCmd(null, 'moveNorth');
+exports.moveUp = function() {
+  Studio.queueCmd(null, 'moveUp');
 };
 
-exports.moveSouth = function() {
-  Studio.queueCmd(null, 'moveSouth');
+exports.moveDown = function() {
+  Studio.queueCmd(null, 'moveDown');
+};
+
+// goUp/Down/LeftRight are wrappers for moveUp/Down/Left/Right (used by hoc2015)
+exports.goRight = function() {
+  Studio.queueCmd(null, 'moveRight');
+};
+
+exports.goLeft = function() {
+  Studio.queueCmd(null, 'moveLeft');
+};
+
+exports.goUp = function() {
+  Studio.queueCmd(null, 'moveUp');
+};
+
+exports.goDown = function() {
+  Studio.queueCmd(null, 'moveDown');
+};
+
+// addPoints is a wrapper for changeScore (used by hoc2015)
+
+exports.addPoints = function(value) {
+  Studio.queueCmd(null, 'changeScore', {'value': value});
+};
+
+// removePoints is a wrapper for reduceScore (used by hoc2015)
+
+exports.removePoints = function(value) {
+  Studio.queueCmd(null, 'reduceScore', {'value': value});
 };
 
 exports.changeScore = function(value) {
   Studio.queueCmd(null, 'changeScore', {'value': value});
 };
 
-exports.addItemsToScene = function(className, number) {
-  Studio.queueCmd(null, 'addItemsToScene', {
-    'className': className,
-    'number': number
+exports.addCharacter = function(className) {
+  Studio.queueCmd(null, 'addItem', {
+    'className': className
   });
 };
 
-exports.setItemActivity = function(className, type) {
+exports.setToChase = function(className) {
   Studio.queueCmd(null, 'setItemActivity', {
     'className': className,
-    'type': type
+    'type': 'chase'
   });
 };
 
-exports.setItemSpeed = function(className, speed) {
+exports.setToFlee = function(className) {
+  Studio.queueCmd(null, 'setItemActivity', {
+    'className': className,
+    'type': 'flee'
+  });
+};
+
+exports.setToRoam = function(className) {
+  Studio.queueCmd(null, 'setItemActivity', {
+    'className': className,
+    'type': 'roam'
+  });
+};
+
+exports.setToStop = function(className) {
+  Studio.queueCmd(null, 'setItemActivity', {
+    'className': className,
+    'type': 'none'
+  });
+};
+
+exports.moveFast = function(className, speed) {
   Studio.queueCmd(null, 'setItemSpeed', {
     'className': className,
-    'speed': speed
+    'speed': constants.SpriteSpeed.FAST
+  });
+};
+
+exports.moveNormal = function(className, speed) {
+  Studio.queueCmd(null, 'setItemSpeed', {
+    'className': className,
+    'speed': constants.SpriteSpeed.SLOW
+  });
+};
+
+exports.moveSlow = function(className, speed) {
+  Studio.queueCmd(null, 'setItemSpeed', {
+    'className': className,
+    'speed': constants.SpriteSpeed.VERY_SLOW
   });
 };
 

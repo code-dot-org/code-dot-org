@@ -24,7 +24,7 @@ We have gathered data from a number of sources -- internal data collected via Co
 
 ## <a name="pd" href="#pd">What do teachers take away from Code.org professional development?</a>
 
-From June 2014 through June 2015, over 11,000 teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models:
+From June 2014 through June 2015, over 11,000* teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models:
 
 - a day-long, face-to-face workshop delivered to K-5 teachers via our [Affiliate Program](/educate/k5-affiliates) or via our [District Partnership Program](/educate/k5-district-partnership)
 - a multi-phase, year-long blended PD experience delivered to Middle and High School teachers via our [District Partnership Program](/educate/districts)
@@ -45,6 +45,7 @@ Through our professional development efforts, we are helping a large, diverse au
 <br><br>
 
 [<button>Learn more</button>](/about/evaluation/pd)<br /><br/>
+* *Note: In the 2014-15 teacher cohort, we trained approximately 10,000 teachers. We trained an additional 1,000 teachers for the 2015-16 school year.*
 
 ---
 
@@ -120,3 +121,10 @@ Internally, through participant surveys and data science projects, we will conti
 
 - Workshop satisfaction (including online PD components)
 - Student outcomes measured through Code Studio
+
+---
+
+## Learn More About Our Approach
+In this recorded session, you’ll hear from [Pat Yongpradit](http://twitter.com/mryongpradit), Chief Academic Officer at [Code.org](https://code.org) and [Heather King](http://outlier.uchicago.edu/outlier/team/), program manager at [Outlier](http://outlier.uchicago.edu/), about the results of our programs over the course of the 2014-15 school year. What did teachers take away from professional development? What did students learn? What did we learn from our district partnerships? Learn from our successes and challenges as we discuss how we might work together as a CS education community to increase access to CS education for all.
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/jJfZMgvm4SU" frameborder="0" allowfullscreen></iframe>

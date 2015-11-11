@@ -2,48 +2,49 @@ name 'ECSPD U4 D 18 Intro'
 
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## Unit 4 Day 18: 
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-First, let's explore the first lesson in the curriculum. To begin, find your ECS your curriculum and open to page ???.
+## Day 18 Scratch -- Rock Paper Scissors
 
-<a href="LINK" target="_blank">Access a Digital Copy of the Lesson >></a>
+First, let's explore the eleventh lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 170-171.
 
+[Access a Digital Copy of the lesson>>](http://code.org/ecs#page=170)
 
 #### Key Concepts
 
-1. Key Concept (<i>example</i>)
-
-1. Key Concept 2 (<i>example</i>)
+- Students will use all of their skills with broadcasting, variables, conditionals to complete a Rock Paper Scissors program.
 
 #### Common Difficulties
 
-Explain common difficulties
-
-#### PD Outline
-
-The following outline lists the topics covered on each level of this stage. <i>This online PD is intended to be a companion to the ECS curriculum. Have your book open as you go through the levels of this stage.</i>
-
-1. Overview
-
-1. Companion Media Resource
-
-1. Suggested Assessment
-
-1. Additional Resources
-
-1. Teaching Strategies
-
-1. Forum
-
->**Note:** This activity was led by one of your facilitators on the first day of the workshop, but it was not planned by one of the participant teaching groups. 
+This lesson has more than one answer and students should try various approaches to solve the problem.
+<br><br>
+Students will need files: [rps .starter.sb](http://www.exploringcs.org/curriculum), [rps solution.sb](http://www.exploringcs.org/curriculum), [rps solutionb.sb](http://www.exploringcs.org/curriculum)
 
 #### All Resources for This Lesson
 
-* <a href="LINK" target="_blank">NAME</a>
+**Teacher Supports:**
 
+- [U4 Day](http://code.org/ecs#page=170) [18 Lesson](http://code.org/ecs#page=170)
+- [U4 Day 18 Resource Folder](https://drive.google.com/a/nicolescourse.com/folderview?id=0B2UNlnU_5Vg4fk5JYUt3UkZLd1NrTjNEWEEzMDZmRzNNd2FkM09FcC0yUWhnWVBMLWNEZVk&usp=drive_web&tid=0B2UNlnU_5Vg4fmFpUGlWakFZYW95Rzh3aGd6akJiWS0zUS1XR1dIcXVFM3hPSUNyNC1XRzQ)
+- [U4 Day 18 General Q and A Forum](http://forum.code.org/t/u4-day-18-general-q-a/1878/1)
+- [U4 Day 18 PD Discussion Topic Forum](http://forum.code.org/t/u4-day-18-pd-discussion-topic/1899)
+- [U4 Day 18 Lesson Resources Forum](http://forum.code.org/t/u4-day-18-lesson-resources/1854)
+- [U4 Day 18 Assessment Forum](http://forum.code.org/t/u4-day-18-assessment/1869)
 
-Let's examine some important sections of this lesson. To get started, click "Continue" below. 
+**Supplies:**
 
+- [rps starter.sb](http://www.exploringcs.org/curriculum)
+- [rps solution.sb](http://www.exploringcs.org/curriculum)
+- [rps solution b.sb](http://www.exploringcs.org/curriculum)
+- [http://scratch.mit.edu](http://scratch.mit.edu/)
+
+#### PD Discussion Forum
+
+No specific discussion prompt for today, but please head to the forum and discuss anything relevant to this PD that you like.
+
+[<button>Discuss in the forum >></button>](http://forum.code.org/t/u4-day-18-pd-discussion-topic/1899)
+<br><br>
+After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
+<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

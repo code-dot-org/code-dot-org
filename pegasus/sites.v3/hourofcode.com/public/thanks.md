@@ -6,21 +6,17 @@ nav: how_to_nav
 social:
   "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
   "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/code-video-thumbnail.jpg"
-  "og:image:width": 1705
-  "og:image:height": 949
+  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  "og:image:width": 1440
+  "og:image:height": 900
   "og:url": "http://<%=request.host%>"
-  "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
 
   "twitter:card": player
   "twitter:site": "@codeorg"
   "twitter:url": "http://<%=request.host%>"
   "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/code-video-thumbnail.jpg"
-  "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
-  "twitter:player:width": 1920
-  "twitter:player:height": 1080
+  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
 <%
   facebook = {:u=>"http://#{request.host}/us"}
@@ -40,16 +36,19 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2. Ask your whole school to offer an Hour of Code
-[Send this email](<%= resolve_url('/resources/promote#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible or [see more exciting prizes for every organizer](<%= resolve_url('/prizes/') %>). <% end %>
 
 ## 3. Ask your employer to get involved
-[Send this email](<%= resolve_url('/resources/promote#sample-emails') %>) to your manager or company's CEO. 
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO. 
 
 ## 4. Promote Hour of Code in your community
-[Recruit a local group](<%= resolve_url('/resources/promote#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/resources/promote') %>) for your own event.
+[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
 
 ## 5. Ask a local elected official to support the Hour of Code
-[Send this email](<%= resolve_url('/resources/promote#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+
+## 6. Plan your Hour of Code
+Choose an Hour of Code activity and [review this how-to guide](<%= resolve_url('/how-to') %>).
 
 
 <%= view 'popup_window.js' %>

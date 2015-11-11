@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,9 +126,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "Add a couple radio buttons or checkboxes to our app. Then find a way to collect the data from those. ",
     "markdown_instructions": "## Data Collection From Other Design Elements\r\nThere are other design elements we could use to collect data from a user. Check out radio buttons and checkboxes. Lets add a couple radio buttons or checkboxes to our app. Then find a way to collect the data from those. **Hint** This may take a few more steps than the data we have collected before. ",

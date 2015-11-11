@@ -1,5 +1,4 @@
 var path = require('path');
-var crypto = require('crypto');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
 var glob = require('glob');
@@ -31,9 +30,7 @@ if (process.env.MOOC_APP) {
 var envOptions = {
   minify: (process.env.MOOC_MINIFY === '1'),
   localize: (process.env.MOOC_LOCALIZE === '1'),
-  dev: (process.env.MOOC_DEV === '1'),
-  digest: (process.env.MOOC_DIGEST === '1')
-
+  dev: (process.env.MOOC_DEV === '1')
 };
 
 var LOCALES = (envOptions.localize ? [
@@ -98,8 +95,7 @@ if (process.env.MOOC_LOCALE) {
 }
 
 config.clean = {
-  all: ['build'],
-  digest: ['build/package/js/**/*-????????????????????????????????.js']
+  all: ['build']
 };
 
 var ace_suffix = envOptions.dev ? '' : '-min';
@@ -202,20 +198,24 @@ config.copy = {
       },
       {
         expand: true,
+        cwd: 'lib/fileupload',
+        src: [
+          'jquery.fileupload' + dotMinIfNotDev + '.js',
+          'jquery.iframe-transport' + dotMinIfNotDev + '.js'
+        ],
+        dest: 'build/package/js/fileupload/',
+        rename: function (src, dest) {
+          // dest name should be the same, whether or not minified
+          return src + dest.replace(/\.min.js$/, '.js');
+        }
+      },
+      {
+        expand: true,
         cwd: 'lib/jsinterpreter',
         src: ['*.js'],
         dest: 'build/package/js/jsinterpreter/'
       }
     ]
-  }
-};
-
-config.digest = {
-  options: {
-    out: 'build/package/js/manifest.js'
-  },
-  files: {
-    src: ['build/package/js/**/*.js', '!build/package/js/ace/**/*.js']
   }
 };
 
@@ -226,7 +226,9 @@ config.lodash = {
       'include': [
         'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
         'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'contains',
-        'last', 'clone', 'isEqual', 'find', 'sortBy', 'throttle']
+        'last', 'clone', 'cloneDeep', 'isEqual', 'find', 'sortBy', 'throttle',
+        'uniq'
+      ]
     }
   }
 };
@@ -355,7 +357,7 @@ config.concurrent = {
 
 config.watch = {
   js: {
-    files: ['src/**/*.js'],
+    files: ['src/**/*.{js,jsx}'],
     tasks: ['newer:copy:src']
   },
   style: {
@@ -396,6 +398,7 @@ config.jshint = {
     globals: {
       $: true,
       jQuery: true,
+      React: true,
       Blockly: true,
       //TODO: Eliminate the globals below here. Could at least warn about them
       // in their respective files
@@ -415,9 +418,9 @@ config.jshint = {
     'tasks/**/*.js',
     'src/**/*.js*',
     'test/**/*.js',
+    '!src/**/*.min.js*',
     '!src/hammer.js',
     '!src/lodash.js',
-    '!src/lodash.min.js',
     '!src/canvg/*.js',
     '!src/calc/js-numbers/js-numbers.js',
     '!src/ResizeSensor.js',
@@ -445,33 +448,6 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks');
   grunt.registerTask('noop', function () {});
 
-  // Add md5 digest to filenames
-  grunt.registerMultiTask('digest', function () {
-    var manifest = {};
-    var manifestFile = this.options().out;
-
-    this.filesSrc.forEach(function (file) {
-
-      // Don't add a digest to the manifest
-      if (file === manifestFile) {
-        return;
-      }
-
-      var oldName = path.relative('build/package', file);
-      var newName;
-      if (envOptions.digest) {
-        var data = grunt.file.read(file);
-        var digest = crypto.createHash('md5').update(data).digest('hex');
-        newName = oldName.replace(/\.js$/, '-' + digest + '.js');
-        fs.rename(file, file.replace(/\.js$/, '-' + digest + '.js'));
-      } else {
-        newName = oldName;
-      }
-      manifest[oldName] = newName;
-    });
-    grunt.file.write(manifestFile, 'window.digestManifest = ' + JSON.stringify(manifest));
-  });
-
   // Generate locale stub files in the build/locale/current folder
   grunt.registerTask('locales', function() {
     var current = path.resolve('build/locale/current');
@@ -482,7 +458,16 @@ module.exports = function(grunt) {
     });
   });
 
+  // Checks the size of Droplet to ensure it's built with LANGUAGE=javascript
+  grunt.registerTask('checkDropletSize', function () {
+    var bytes = fs.statSync('lib/droplet/droplet-full.min.js').size;
+    if (bytes > 500 * 1000) {
+      grunt.warn('"droplet-full.min.js" is larger than 500kb. Did you build with LANGUAGE=javascript?');
+    }
+  });
+
   grunt.registerTask('prebuild', [
+    'checkDropletSize',
     'pseudoloc',
     'newer:messages',
     'newer:copy:src',
@@ -503,9 +488,7 @@ module.exports = function(grunt) {
     'exec:browserify',
     // Skip minification in development environment.
     envOptions.dev ? 'noop' : ('concurrent:uglify'),
-    'postbuild',
-    'clean:digest',
-    'digest'
+    'postbuild'
   ]);
 
   grunt.registerTask('rebuild', ['clean', 'build']);

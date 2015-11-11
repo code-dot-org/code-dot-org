@@ -4,7 +4,7 @@ title: Privacy Policy
 
 ---
 
-### この法的文書は英語で書かれた[こちらの文書](https://code.org/privacy)の翻訳版です。
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # プライバシーポリシー
 
@@ -29,7 +29,7 @@ Webサイトにアクセスしたり利用したりする前に (“**プライ�
 
 ## 個人情報保護方針
 
-私たちは、<http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>などのウェブサイト、アプリケーションプログラミングインターフェース("API"), オンラインサービス("ウェブサイト"を含みます)において、全ての年代の学習者のために、安全でセキュアな環境構築に全力で取り組みます。 ウェブサイトへの訪問者およびユーザーは、"ユーザー"と規定されます。 501(c)(3)の非営利団体なので、受領したデータの用途は、意欲ある生徒に最良のコンピューターサイエンス教育を提供するというミッションに限定します。 私たちは非営利団体です。よって、利益を追及の動機が、信頼できる教育用リソースを提供するという我々のミッションと干渉することはありません。
+We are committed to creating a safe and secure environment for learners of all ages on our websites located at <https://code.org>, <https://studio.code.org>, <https://csedweek.org>, <http://computinginthecore.org>, <https://hourofcode.com>, other websites, application programming interface (our “API”), and online services (collectively, our “Website”). ウェブサイトへの訪問者およびユーザーは、"ユーザー"と規定されます。 501(c)(3)の非営利団体なので、受領したデータの用途は、意欲ある生徒に最良のコンピューターサイエンス教育を提供するというミッションに限定します。 私たちは非営利団体です。よって、利益を追及の動機が、信頼できる教育用リソースを提供するという我々のミッションと干渉することはありません。
 
 プライバシーポリシーは、ユーザーからどんな情報を収集するのか、その情報をどのように利用するのか、また何をどのように保護するのかを規定しています。 ウェブサイトの利用とウェブサイトで入力した任意の情報は個人情報保護方針の対象となります。これは、サービス利用規約にも反映されます。 大文字の用語が使用されている場合、本個人情報保護方針で定義されていないものは、[サービス利用規約](http://code.org/tos)での意味に準じるものとします。 私たちのウェブサイトを訪問したり利用した場合、この個人情報保護方針に明示的に同意したものとみなします。
 
@@ -93,7 +93,7 @@ Code.orgは、あなたの学校や学区で教育のパートナーシップを
 
 それぞれの認証サービスのアカウント設定を更新することで、Code.orgからあなたのアカウントへのアクセスをいつでも無効にすることができます。 それぞれの認証サービスの個人情報設定を確認して理解を深めたうえで、各認証サービスから私たちに送られる情報を設定します。 私たちのWebサイトに接続する認証サービスを利用するまえに、各認証サービスの利用条件や個人情報保護方針をしっかりと確認してください。
 
-## その他のサービス
+## Other Services
 
 私たちのWebサイトの一部を利用する場合、例えば、登録用のフォーム、Code.org支援のお願い、ワークショップへの参加、Code.orgのプログラムの学校や学区での使用、Code.orgへの寄付、Tシャツなどのアイテムの購買、オンライン調査への参加などですが、これらの場合、Code.orgはあなたの名前、メールアドレス、郵便番号、学校の住所などの個人情報の提供をお願いすることがあります。購買や寄付を行う場合は、課金・送付先情報の提供をお願いすることもあります。 この情報は、あなたが興味を持ちそうなCode.orgに関するお知らせをメールするため、関連しそうな出来事への参加を可能にするために、利用されます。 私たちからの全てのメールには"unsubscribe"リンクがあり、それによりCode.orgからのメール購読を即座に解除することができます。
 
@@ -125,17 +125,17 @@ Code.orgは、あなたの学校や学区で教育のパートナーシップを
 
 Code.orgは、Webサイトの利用状況や、ビデオを配信するためのソーシャルネットワークプラットフォームなど、いろいろなサードパーティのサービスプロバイダーを利用します。 私たちは、サードパーティのサービスプロバイダーがクッキーやWebビーコン、それに類似する技術を使って、Webサイトから情報収集することを許容するかもしれません。 これらの技術情報は、サードパーティによって自動的に直接収集されます。
 
-Code.orgはWebサイト上の広告を許可していません。また、サードパーティのWebサイトや検索エンジンによる検索履歴を収集する手段を有していません。 (Code.orgを見つけるときに検索エンジンを使った場合は、ブラウザから自動的にその検索に使った用語がCode.orgに引き渡されます)。 しかしながら、ウェブサイトの機能提供やソーシャルでの共有などに利用するサードパーティの中には、オンラインでの行動特性に応じた広告をおこなうため、個人を特定しない範囲で情報を収集することがあります。 私たちのウェブサイトはWebブラウザーから送信される”do not track”信号に応答しません。しかしながら、<http://www.networkadvertising.org/choices> や<http://www.aboutads.info/choices/>といったリンクから、オンラインの行動特性に基づいた広告を行うことにオプトアウトで同意いただくことをお勧めします。 これらのツールの利用に関してオプトアウトを行いたい場合、各デバイスのブラウザそれぞれについて、別々にオプトアウトを行う必要があるかもしれません。
+Code.org does not allow advertising on our Website, and we do not have the ability to collect your web search history across 3rd party Internet websites or search engines. (Code.orgを見つけるときに検索エンジンを使った場合は、ブラウザから自動的にその検索に使った用語がCode.orgに引き渡されます)。 しかしながら、ウェブサイトの機能提供やソーシャルでの共有などに利用するサードパーティの中には、オンラインでの行動特性に応じた広告をおこなうため、個人を特定しない範囲で情報を収集することがあります。 Our Website does not respond to “do not track” signals transmitted by web browsers, but we encourage you to visit the following links if you would like to opt out of online behavioral advertising: <http://www.networkadvertising.org/choices> or <http://www.aboutads.info/choices/>. これらのツールの利用に関してオプトアウトを行いたい場合、各デバイスのブラウザそれぞれについて、別々にオプトアウトを行う必要があるかもしれません。
 
 Code.orgのウェブサイトからのリンク先は、データを収集するサードパーティーによって実装されているかもしれません。 たとえば、Code.orgへの寄付は、データを収集するサードパーティーによって処理され、支払いに関する情報は保存されるかもしれません。 先生用のフォーラムへのポストやメッセージは、サードパーティーのサイトで処理されるかもしれません。その際、プロファイルの作成、メッセージのポスト、写真のアップロードなどが可能になっているかもしれません。 [Facebookのページ](https://www.facebook.com/Code.org) や [Twitterのページ](https://twitter.com/codeorg)といったサードパーティーのウェブサイトでは、私たちの名前やロゴと共同ブランドになっているかもしれません。 これらサードパーティーのサービスの利用はユーザーに任されており、一般的に大人用に用意されているもので、サードパーティーのプライバシーポリシーによって規定されます。 どのように個人情報を収集し、保存し、使用するか、といった詳細はサードパーティーのプライバシーポリシーを参照することを強くお勧めします。
 
-## コンテンツのアップロード
+## Uploading Custom Content
 
 生徒と先生のプロフィールは、写真によってカスタマイズすることはできません。
 
 Code Studio上で利用できるブラウザ上で動作し、13歳以上が利用できるプログラミングツール"App Lab"の一部として、生徒は任意の写真は音声、動画をアップロードし、それらをアプリの中で利用することができます。 これらのファイルは、いかなる利用目的においてもCode.orgによって利用されることはありません。
 
-## ユーザー間のメッセージ交換
+## Message Sending Between Users
 
 ["インターネットシミュレータ"](/internetsimulator)は、Code.orgによって開発された、インターネットの仕組みを高校生向けに解説するツールです。 このツールでは、生徒はテキストメッセージを他の生徒や先生に送信することができます。 これらのメッセージは、受信者によって閲覧されますが、このツール上での利用を除いてCode.orgのいかなる活動においても利用されることはありません。
 
@@ -145,11 +145,11 @@ Code Studio上で利用できるブラウザ上で動作し、13歳以上が利�
 
 上記以外のユーザー間のメッセージ交換はサポートされていません。
 
-## 私たちが収集しない情報
+## Information We Do NOT Collect
 
-Code.orgは支払に関する情報の収集や保存を直接行うことはしません。 Code.orgへの寄付や、Code.orgストアからのTシャツの購買は、サードパーティーによって処理されます。Code.orgは寄付(税金目的で)への領収書を受領するかもしれませんが、私たちは、支払いに必要な情報(クレジットカードやお財布情報など)を受領することは決してありません。
+Code.orgは支払に関する情報の収集や保存を直接行うことはしません。 Donations to Code.org or purchases from the Code.org store are processed via third parties, and although Code.org receives a receipt for donations (for tax purposes), we never receive the payment instrument (such as credit card or wallet information).
 
-## 13歳以下の子供に関して
+## Children Under the Age 13
 
 Code Studioの学習用プラットフォームは、学校での13歳以下の子供、先生、保護者、法定後見人など、全ての年齢のユーザーで使えるようにデザインされています。 任意画像やメッセージを送信可能な特定の機能は、13歳以下の生徒に対して無効化、もしくは利用できなくなっています。これは、彼らを保護するための取り組みです。
 
@@ -169,7 +169,7 @@ Code Studioで13歳以下の子供がアカウントを作成した場合、Code
 
 Code.orgの従業員、代理人、契約者は合法的で正当な理由がある場合(教育に関する業務を更に遂行する場合)に、あなたがCode.orgに提供した個人情報にアクセスします。たとえば、製品サポートなどの場合があります。 Code.orgは、当社の従業員、代理人、契約者に対して、個人情報保護方針を順守するとともに、Code.orgのユーザーのいかなる個人情報も機密情報として扱うように求めます。
 
-## データの共有方法、転送方法について
+## How We Share or Transfer Data
 
 ユーザーから収集した個人情報を売り渡したり、レンタルしたり、その他のいかなる手段で利益獲得に利用することはありません。 Code.orgは、あなたの同意なく、もしくは、オプトインによる設定可能な特定のプログラムや機能をつかうことなく、第三者に個人情報を共有することは決してありません。
 
@@ -195,7 +195,7 @@ Code.orgの従業員、代理人、契約者は合法的で正当な理由があ
 
 Code.orgは、今週の学生、今月の先生、と表彰をすることで宣伝活動を行います。 これらのプロファイルと表彰状は生徒と先生の許可のもとで、必要に応じて保護者、保護観察官、先生の許諾のもとで公開されます。この中には、名前、嗜好、写真、ビデオなどの個人情報が含まれることがあります。
 
-### 生徒の利用状況と成績に関するレポートの公開
+### Public reporting on student use and performance
 
 私たちのチュートリアルやWebサイトでの生徒の成績を匿名で公開することがあります。それらのレポートに個人情報が含まれることは決してありません。 生徒の成績に関するデータは匿名で保存されます。ただし、多数の生徒のデータを集約して、年齢、地域、性別、民族、経済状況に応じて分析した結果としてレポートされることもあります。
 
@@ -215,11 +215,11 @@ Code.orgは、詐欺行為、誹謗、非合法なユーザーから私たちを
 
 Code.orgが他者に買収、合併、吸収された場合、ユーザーから収集した個人情報を、その他者に共有するかもしれません。 ただし、ユーザーから収集した個人情報は、個人情報保護法案に記載されたものと同程度の安全性やプライバシーのもとで保護されることをお約束します。
 
-## データセキュリティに対する我々のアプローチ
+## Our Approach to Data Security
 
 ### Webサイトのセキュリティはあなたにとっても私たちにとっても重要です
 
-プライバシーとセキュリティを保護するため、アカウントへのアクセスを許可する前、もしくは、個人情報を訂正する前に、あなたの身元確認を行うために適切な手続きを行います。 学校によってはSSLで保護されたWebサイトへのアクセスを禁止しているため、学校の指示に応じて、SSLを利用して、もしくはSSLを利用しないでのアクセスを許可します。 Webサイト使用時に入力したデータを暗号化して転送したい場合は、SSLで保護されたコネクションを利用できます。その時は、https://code.org/というHTTPSプロトコルを使用してください。
+プライバシーとセキュリティを保護するため、アカウントへのアクセスを許可する前、もしくは、個人情報を訂正する前に、あなたの身元確認を行うために適切な手続きを行います。 Because some schools block SSL-secure websites, Code.org allows access with or without SSL protection, at the direction of those schools. Webサイト使用時に入力したデータを暗号化して転送したい場合は、SSLで保護されたコネクションを利用できます。その時は、https://code.org/というHTTPSプロトコルを使用してください。
 
 ### 私たちは、Webサイトや送られた情報の安全性を確保するように努めますが、完全なセキュリティは存在しません。
 
@@ -233,9 +233,9 @@ Code.orgは、Webサイトで使用する情報や個人情報のセキュリテ
 
 ### 使用条件
 
-Code.orgを利用するとき、プライバシーにかかわるいかなる争議も個人情報保護方針とサービス利用同意規約に基づくものとします。これには、責任の制限、争議の調停、ワシントン州の法律の適用、ワシントン、シアトルを所管の裁判所とすることを含みます。
+If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 
-### カルフォルニア州の住民への注意:
+### A note to California residents:
 
 マーケティング目的でいかなる個人情報もサードパーティに開示しません。 プライバシーに関する取組、一旦共有した個人情報の閲覧と削除要求に関しては、http://code.org/contactへ依頼を送ってください。
 
@@ -244,4 +244,4 @@ Code.orgを利用するとき、プライバシーにかかわるいかなる争
 個人情報保護方針、個人情報の扱い、サードパーティへの開示の内容、あなたの同意内容に関するお問い合わせ、コメントは、 <http://code.org/contact> or at 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101のCode.orgまでご連絡ください。   
   
   
-[![画像](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![画像](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

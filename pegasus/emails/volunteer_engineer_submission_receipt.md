@@ -1,22 +1,19 @@
 ---
-from: '"Hadi Partovi (Code.org)" <hadi_partovi@code.org>'
+from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
 subject: Volunteer Submission Received
 ---
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-Thank you for submitting your information to help local teachers during the Hour of Code. Over the next several weeks, we'll be hosting webinars to update volunteers about the Hour of Code and what you can expect when you volunteer during Computer Science Education Week, December 7-13. We'll send you a follow up email shortly, to announce the schedule for the webinars. So what can you do now?
+Thank you for submitting your information to help local teachers for the Hour of Code, during Computer Science Education Week December 7-13. So what can you do now?
 
 ## 1. Recruit your co-workers to volunteer
-Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteer engineers, so ask them to [sign up as a volunteer](https://code.org/volunteer/engineer).
+Over 13,000 teachers have requested a volunteer but only 4,000 have signed up. Tell your friends and co-workers about the Hour of Code and ask them to [sign up as a volunteer](https://code.org/volunteer/engineer).
 
-## 2. Ask your employer to get involved
-[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
+## 2. Join us for the Volunteer Webinar
+On November 16 (1:00pm - 1:30pm PST) and December 3 (11:00am - 11:30am PST), we'll be hosting Hangouts on Air to answer any questions you may have about volunteering for the Hour of Code. Save the date for now, and closer to the date we'll send you a reminder about how to join. If you can't make it, we'll post a link so you can watch it later at your convenience.
 
-## 3. Promote the Hour of Code in your community
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://<%= hostname %>/resources#email).
-
-## 4. Ask a local elected official to support the Hour of Code
-[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+## 3. Review the How-to Guide for Volunteers
+To get a better idea about what your volunteer experience will be like, review [this guide](https://hourofcode.com/us/how-to/volunteers). There's also some extra tips about how you can get your employer and community involved with the Hour of Code.
 
 Thanks again for your support,
 

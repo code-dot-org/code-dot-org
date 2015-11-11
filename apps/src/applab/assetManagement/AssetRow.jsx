@@ -1,45 +1,5 @@
-var React = require('react');
 var assetsApi = require('../../clientApi').assets;
-
-var defaultIcons = {
-  image: 'fa fa-picture-o',
-  audio: 'fa fa-music',
-  video: 'fa fa-video-camera',
-  unknown: 'fa fa-question'
-};
-
-/**
- * Creates a thumbnail (the image itself for images, or an icon representing the
- * filetype).
- * @param type {String} The asset type (e.g. 'audio').
- * @param name {String} The name of the asset.
- * @returns {XML}
- */
-function getThumbnail(type, name) {
-  switch (type) {
-    case 'image':
-      var src = assetsApi.basePath(name);
-      var assetThumbnailStyle = {
-        width: 'auto',
-        maxWidth: '100%',
-        height: 'auto',
-        maxHeight: '100%',
-        zoom: 2,
-        marginTop: '50%',
-        transform: 'translateY(-50%)',
-        msTransform: 'translateY(-50%)',
-        WebkitTransform: 'translateY(-50%)'
-      };
-      return <img src={src} style={assetThumbnailStyle} />;
-    default:
-      var icon = defaultIcons[type] || defaultIcons.unknown;
-      var assetIconStyle = {
-        margin: '15px 0',
-        fontSize: '32px'
-      };
-      return <i className={icon} style={assetIconStyle}></i>;
-  }
-}
+var AssetThumbnail = require('./AssetThumbnail.jsx');
 
 /**
  * A single row in the AssetManager, describing one asset.
@@ -141,18 +101,7 @@ module.exports = React.createClass({
 
     return (
       <tr className="assetRow" onDoubleClick={this.props.onChoose}>
-        <td width="80">
-          <div className="assetThumbnail" style={{
-            width: '60px',
-            height: '60px',
-            margin: '10px auto',
-            background: '#eee',
-            border: '1px solid #ccc',
-            textAlign: 'center'
-          }}>
-            {getThumbnail(this.props.type, this.props.name)}
-          </div>
-        </td>
+        <AssetThumbnail type={this.props.type} name={this.props.name}/>
         <td>{this.props.name}</td>
         {actions}
       </tr>

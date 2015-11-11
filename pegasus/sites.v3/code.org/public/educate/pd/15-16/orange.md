@@ -9,6 +9,7 @@ nav: pd2_nav
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
+- [I'm attending Counselor-Administrator PD](#counselor-admin)
 
 
 <a id="ecs"></a>
@@ -44,14 +45,14 @@ Quarter 4: Saturday, April 23, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**October 3rd Location**
+**November 7th Location**
 
-Orange County Department of Education<br/> 
-Room: Esplanade 108B<br/> 
-200 Kalmus Dr<br/> 
+Orange County Department of Education<br/>
+Building A: Board Room<br/>
+200 Kalmus Dr<br/>
 Costa Mesa, CA 92626
 
-For a campus map and parking information visit: code.org/files/OCDEmap.pdf
+Note: you will be in a different building that the 10/3/15 PD. For a campus map and parking information, [click here](code.org/files/OCDEmap.pdf)
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -156,9 +157,11 @@ Breakfast and lunch will be served.
 **October 17th Location**
 
 Ball Junior High School<br/>
-Room TBD<br/>
+Room 37<br/>
 1500 W Ball Rd<br/>
 Anaheim, CA 92802
+
+[Click here for a School Map](/images/ball-jr-high-map.JPG)
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -196,11 +199,6 @@ Orange USD<br/>
 Board Rooms 1 and 2 <br/>
 Orange, CA 92867 
 
-**What to bring**
-
-Snacks
-<br/>
-Water
 
 ### Administrators##
 
@@ -216,11 +214,6 @@ Orange USD<br/>
 Board Rooms 1 and 2 <br/>
 Orange, CA 92867 
 
-**What to bring**
-
-Snacks
-<br/>
-Water
 
 [**Back to the top**](#top)
 

@@ -45,8 +45,7 @@ class LevelSourceHintsController < ApplicationController
             end
           end
         end
-        format.js { head :no_content }
-        format.json { head :no_content }
+        format.any { head :no_content }
       else
         format.html { render action: 'edit' }
         format.json { render json: @level_source_hint.errors, status: :unprocessable_entity }

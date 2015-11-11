@@ -14,11 +14,51 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
+<% if @country == 'ac' %>
+
+# Africa Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
+
+<% end %>
+
 <% if @country == 'au' %>
 
 # Australia Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
+
+<% end %>
+
+<% if @country == 'id' %>
+
+# Indonesia Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
+
+<% end %>
+
+<% if @country == 'in' %>
+
+# India Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
+
+<% end %>
+
+<% if @country == 'jp' %>
+
+# Japan Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
+
+<% end %>
+
+<% if @country == 'nz' %>
+
+# New Zealand Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
 <% end %>
 
@@ -30,37 +70,45 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-# Major Partners and Corporate Supporters
+<% if @country == 'ca' %>
+
+# Canada Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
+
+<% end %>
+
+# मुख्य सहयात्री र Corporate सहयोगी 
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 ---
 
-# Major Promotional Partners
+# मुख्य प्रचार सहयात्री 
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 ---
 
-# International Partners
+# अन्तर्राष्ट्रिय सहयात्री
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Tutorial Partners
+# सिकारु सहयात्री
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Infrastructure partners and tools
+# भौतिक सहयात्री र औजारहरु
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 ---
 
-# Additional Partners
+# थप सहयात्रीहरु
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

@@ -26,18 +26,20 @@
   %script{src: "/js/es5-shim.min.js"}
 
 -SOLR = Solr::Server.new(host:CDO.solr_server)
-/ -num_teachers = SOLR.query(q:"kind_s:\"HocSignup2015\" && match_volunteer_flag_b:true").getResults().getNumFound();
-
-%img{src: "/images/fill-610x200/impact-hero.png"}
-%img{src: "/images/fill-295x150/sotm31.jpg", style: "margin: 10px 10px 0 0"}
-%img{src: "/images/fill-300x150/homepage/kids3_2x.jpg", style: "margin-top: 10px;"}
+-num_teachers = format_integer_with_commas(SOLR.query(q:'kind_s:"HocSignup2015" && match_volunteer_flag_b:true').count)
+-num_volunteers = format_integer_with_commas(SOLR.query(q:'kind_s:"VolunteerEngineerSubmission2015"').count)
 
 %h1= I18n.t(:volunteer_engineer_submission_title)
-%h3{style: 'color: #00adbc; font-size: 1.125em;'}
-  / = I18n.t(:volunteer_engineer_submission_num_teachers).gsub('%{num_teachers}', format_integer_with_commas(num_teachers))
 %form#volunteer-engineer-submit-form{role: "form", onsubmit: "return volunteerEngineerFormSubmit()"}
-  %p.form-intro-text= I18n.t(:volunteer_engineer_submission_intro_paragraph)
   #error-message{style: 'display: none'}
+
+  %p= I18n.t(:volunteer_engineer_submission_intro_background)
+  %p{style: 'color: #00adbc; font-size: 1.125em; padding: 20px 20px 15px 20px;'}= I18n.t(:volunteer_engineer_submission_subtitle_specific).gsub('%{num_teachers}', num_teachers).gsub('%{num_volunteers}', num_volunteers)
+  %p= I18n.t(:volunteer_engineer_submission_intro_recruit).gsub('%{url}', 'https://hourofcode.com')
+  %img{src: "/images/fill-610x200/impact-hero.png", style: "margin-top: 10px;"}
+  %img{src: "/images/fill-295x150/sotm31.jpg", style: "margin: 10px 10px 20px 0;"}
+  %img{src: "/images/fill-300x150/homepage/kids3_2x.jpg", style: "margin: 10px 0 20px 0;"}
+  %p= I18n.t(:volunteer_engineer_submission_intro_signup)
 
   %h2= I18n.t(:volunteer_engineer_submission_header_shared)
 
@@ -123,14 +125,14 @@
     %p= I18n.t(:volunteer_engineer_submission_final_paragraph)
     %div
       %label{style: 'font-weight: normal;', for: 'volunteer-allow-contact'}
-        %input#volunteer-allow-contact{name: 'allow_contact_b', type: 'checkbox', value: 1, required: true}
+        %input#volunteer-allow-contact{name: 'allow_contact_b', type: 'checkbox', value: 1, required: true, checked: true}
           = I18n.t(:volunteer_engineer_submission_checkbox_contact)
 
   .form-group
     %button#btn-submit.btn.btn-default{type: "submit"}= I18n.t(:volunteer_engineer_submission_submit)
 
 #thanks{:style=>"display: none;"}
-  %p= I18n.t(:volunteer_engineer_submission_thankyou)
+  %p= I18n.t(:volunteer_engineer_submission_thankyou).gsub('%{url}', 'https://hourofcode.com')
 
 :javascript
   $(document).ready(function() {

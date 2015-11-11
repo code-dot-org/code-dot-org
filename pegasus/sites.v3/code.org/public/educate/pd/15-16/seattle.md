@@ -54,18 +54,9 @@ Quarter 4: Saturday, April 30, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**September 26th Location**
+**December 5th Location**
 
-[Talaris Conference Center](http://www.talarisconferencecenter.com/)
-<br />
-Cedar Room
-<br />
-4000 NE 41st Street
-<br />
-Seattle, WA 98105
-<br />
-
-Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000 and let them know you are attending the Code.org's Exploring Computer Science event. Go [here](http://www.talarisconferencecenter.com/maps-directions.php) for a map and directions.
+TBD
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -118,12 +109,13 @@ Breakfast and lunch will be served.
 
 [Talaris Conference Center](http://www.talarisconferencecenter.com/)
 <br />
-Lodge Room
+Lodge Conference Room
 <br />
 4000 NE 41st Street
 <br />
 Seattle, WA 98105
 <br />
+
 
 Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000 and let them know you are attending the Code.org's CS in Algebra event. Go [here](http://www.talarisconferencecenter.com/maps-directions.php) for a map and directions.
 
@@ -168,18 +160,9 @@ Semester 2: Saturday, February 20, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**September 26th Location**
+**February 20th Location**
 
-[Talaris Conference Center](http://www.talarisconferencecenter.com/)
-<br />
-Maple Room
-<br />
-4000 NE 41st Street
-<br />
-Seattle, WA 98105
-<br />
-
-Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000and let them know you are attending the Code.org CS in Science event. Go [here](http://www.talarisconferencecenter.com/maps-directions.php) for a map and directions.
+TBD
 
 
 **What to bring to Phase 3 bi-yearly sessions:**
@@ -194,6 +177,7 @@ Water
 
 
 [**Back to the top**](#top)
+
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

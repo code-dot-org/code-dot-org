@@ -318,6 +318,16 @@ en:
         'studio_playlab_8': "Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?"
         'studio_playlab_9': "Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else"
         'studio_playlab_10': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
+        'studio_iceage_1': "Manny wants to say \"hello\" - can you help him?"
+        'studio_iceage_2': "Diego (actor 1) and Granny (actor 2) would like to say \"hello\" to each other. Can you help them by using the \"say\" block twice?"
+        'studio_iceage_3': "Can you help Scrat get to the flag?"
+        'studio_iceage_4': "Can you help Scrat (actor 1) get to Granny (actor 2) and play a sound when he gets there?"
+        'studio_iceage_5': "Can you help Sid say \"greetings\" when it is clicked? Don’t forget to click it after you click Run"
+        'studio_iceage_6': "Can you help Diego move around using the up/down/right/left arrow keys to get to all the flags?"
+        'studio_iceage_7': "The \"repeat forever\" block allows you to run code continuously. Can you attach blocks to it to help Sid move right and left repeatedly?"
+        'studio_iceage_8': "Can you add a block to score a point and a block to play a sound when Sid runs into Manny, and then move him with the arrows until you score?"
+        'studio_iceage_9': "Set the background for this ice age and help Sid get to Granny faster by changing its speed. Then move him with the arrow keys to get to Sid and alert everyone else."
+        'studio_iceage_10': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
         'studio_full_sandbox': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
         'studio_k1_1': "Can you make this dog say \"hello world\"?"
         'studio_k1_2': "Can you make the dog say something and then have the cat say something afterwards?"
@@ -453,6 +463,9 @@ en:
         'infinity_playlab_events' : 'Play Lab - Events'
         'infinity_playlab_repeat_forever' : 'Play Lab - Repeat Forever'
         'csp_applab_functions' : 'Introduction to Functions'
+        'csp_applab_functions_parameters' : 'Functions with Parameters'
+        'csp_applab_loops' : 'Loops'
+        'csp_applab_turtle' : 'Turtle Programming'
         'csp_concept_rgb' : 'A Little Bit About Pixels'
         'csp_pixelation_color_1' : 'Color pixelation widget - Part 1'
         'csp_pixelation_color_2' : 'Color pixelation widget - Part 2'
@@ -481,6 +494,13 @@ en:
         'alg_15_biggame_update_player' : 'CS in Algebra - Big Game Update Player'
         'alg_16_biggame_collision_detection' : 'CS in Algebra - Big Game Collision Detection'
         'alg_17_sambat_compound_booleans' : 'CS in Algebra - Compound Booleans'
+        'hoc2015_preview_blocks' : 'Make your own game blocks'
+        'hoc2015_preview_typing' : 'Make your own game typing'
+        'hoc2015_preview_conclusion' : 'Make your own game conclusion'
+        'starwars_intro' : 'Introduction'
+        'starwars_typing' : 'JavaScript'
+        'starwars_events' : 'Events'
+        'starwars_congrats' : 'Congratulations'
     callout:
       text:
         # Keyed by #{callout.localization_key}

@@ -35,7 +35,7 @@
 
   - else # no logged in user
     = render partial: 'home/sign_in_buttons'
-    
+
   = render partial: 'home/all_courses'
 
   - if current_user && !current_user.teacher?
@@ -92,5 +92,5 @@
         });
         return false;
     });
-    
+
   });

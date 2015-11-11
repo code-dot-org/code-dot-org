@@ -9,7 +9,14 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
     var oop = acerequire("ace/lib/oop");
     var JavaScriptMode = acerequire("ace/mode/javascript").Mode;
     var JavaScriptHighlightRules = acerequire("ace/mode/javascript_highlight_rules").JavaScriptHighlightRules;
-    var WorkerClient = acerequire("../worker/worker_client").WorkerClient;
+    var WorkerModule = acerequire("ace/worker/worker_client");
+    var WorkerClient = WorkerModule.WorkerClient;
+    if (!window.Worker) {
+      // If we don't support web workers, do everything on the UI thread
+      WorkerClient = WorkerModule.UIWorkerClient;
+      window.Worker = WorkerClient;
+    }
+
     var MatchingBraceOutdent = acerequire("./matching_brace_outdent").MatchingBraceOutdent;
     var CstyleBehaviour = acerequire("./behaviour/cstyle").CstyleBehaviour;
     var CStyleFoldMode = acerequire("./folding/cstyle").FoldMode;
@@ -26,8 +33,15 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
 
       // A set of keywords we don't want to autocomplete
       var excludedKeywords = [
+        'arguments',
         'ArrayBuffer',
         'Collator',
+        'decodeURI',
+        'decodeURIComponent',
+        'document',
+        'encodeURI',
+        'encodeURIComponent',
+        'eval',
         'EvalError',
         'Float32Array',
         'Float64Array',
@@ -36,19 +50,28 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
         'Int32Array',
         'Int8Array',
         'Iterator',
+        'isInfinite',
+        'isNaN',
+        'JSON',
+        'Math',
         'NumberFormat',
         'Object',
+        'parseFloat',
+        'parseInt',
+        'prototype',
         'QName',
         'RangeError',
         'ReferenceError',
         'StopIteration',
         'SyntaxError',
+        'this',
         'TypeError',
         'Uint16Array',
         'Uint32Array',
         'Uint8Array',
         'Uint8ClampedArra',
-        'URIError'
+        'URIError',
+        'window'
       ];
 
       // Manually create our highlight rules so that we can modify it

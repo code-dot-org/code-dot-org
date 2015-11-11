@@ -5,6 +5,12 @@ module BrowserHelpers
     text.should eq expectedText
   end
 
+  def element_has_html(selector, expectedHtml)
+    expectedHtml.gsub!('\"', '"')
+    text = @browser.execute_script("return $(\"#{selector}\").html();")
+    text.should eq expectedHtml
+  end
+
   def element_has_i18n_text(selector, language, locKey)
     locKey.gsub!('\"', '"')
     text = @browser.execute_script("return $(\"#{selector}\").text();")
@@ -15,6 +21,11 @@ module BrowserHelpers
     expectedText.gsub!('\"', '"')
     text = @browser.execute_script("return $(\"#{selector}\").text();")
     text.strip.should include expectedText
+  end
+
+  def element_value_is(selector, expectedValue)
+    value = @browser.execute_script("return $(\"#{selector}\").val();")
+    value.strip.should eq expectedValue
   end
 
   def element_has_id(selector, expectedId)

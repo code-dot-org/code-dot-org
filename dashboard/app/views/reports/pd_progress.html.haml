@@ -10,5 +10,11 @@
   var headers = #{ headers.try(:to_json)};
   var ht = new Handsontable(document.getElementById('progress'), {
       data: data,
-      colHeaders: headers
+      colHeaders: headers,
+      cells: function(row, col, prop) {
+        if([12, 19, 26, 34, 37, 45, 52, 59, 63, 73, 77, 81, 82].indexOf(col) != -1) {
+          return cellProperties = {format: '0.00'};
+        }
+        return {};
+      }
   });

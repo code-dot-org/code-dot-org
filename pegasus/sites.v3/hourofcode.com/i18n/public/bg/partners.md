@@ -1,6 +1,6 @@
 ---
 
-title: <%= hoc_s(:title_partners) %>
+Заглавие: <%= hoc_s(:title_partners) %>
 
 ---
 
@@ -8,59 +8,107 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# Партньори от Латинска Америка
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
 <% end %>
 
+<% if @country == 'ac' %>
+
+# Africa Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
+
+<% end %>
+
 <% if @country == 'au' %>
 
-# Australia Partners
+# Партньори от Австралия
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
 <% end %>
 
+<% if @country == 'id' %>
+
+# Партньори от Индонезия
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
+
+<% end %>
+
+<% if @country == 'in' %>
+
+# India Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
+
+<% end %>
+
+<% if @country == 'jp' %>
+
+# Партньори от Япония
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
+
+<% end %>
+
+<% if @country == 'nz' %>
+
+# New Zealand Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
+
+<% end %>
+
 <% if @country == 'uk' %>
 
-# United Kingdom Partners
+# Партньори от Обединеното кралство
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
 <% end %>
 
-# Major Partners and Corporate Supporters
+<% if @country == 'ca' %>
+
+# Партньори от Канада
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
+
+<% end %>
+
+# Основни партньори и корпоративни поддръжници
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 ---
 
-# Major Promotional Partners
+# Основни рекламни партньори
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 ---
 
-# International Partners
+# Международни партньори
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Tutorial Partners
+# Партньори в създаването на уроци
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Infrastructure partners and tools
+# Инфраструктурни партньори и инструменти
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 ---
 
-# Additional Partners
+# Допълнителни партньори
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 
