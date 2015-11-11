@@ -15,6 +15,7 @@
     = render partial: 'levels/editors/studio', locals: {f: f} if @level.is_a? Studio
     = render partial: 'levels/editors/maze', locals: {f: f} if @level.is_a? Maze
     = render partial: 'levels/editors/grid', locals: {f: f} if @level.is_a? Grid
+    = render partial: 'levels/editors/craft', locals: {f: f} if @level.is_a? Craft
     = render partial: 'levels/editors/karel', locals: {f: f} if @level.is_a? Karel
     = render partial: 'levels/editors/artist', locals: {f: f} if @level.is_a? Artist
     = render partial: 'levels/editors/applab', locals: {f: f} if @level.is_a? Applab

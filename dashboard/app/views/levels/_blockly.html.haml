@@ -5,6 +5,10 @@
 
 %div{style: 'display: none;'}= render partial: 'levels/reference_area'
 
+- content_for :body_scripts do
+  -# TODO(bjordan): remove, for temp. error monitoring
+  %script{src:"https://cdn.ravenjs.com/1.2.0/jquery,native/raven.min.js"}
+
 #codeApp
   .loading
   .slow_load

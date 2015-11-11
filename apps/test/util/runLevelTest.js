@@ -100,6 +100,7 @@ function ಠ_ಠ() {
   require('@cdo/apps/calc/main');
   require('@cdo/apps/bounce/main');
   require('@cdo/apps/applab/main');
+  require('@cdo/apps/craft/main');
 }
 
 function runLevel (app, skinId, level, onAttempt, testData) {
@@ -116,7 +117,7 @@ function runLevel (app, skinId, level, onAttempt, testData) {
   main({
     skinId: skinId,
     level: level,
-    baseUrl: '/', // Doesn't matter
+    baseUrl: 'http://localhost:8001/apps/build/package/',
     containerId: 'app',
     Dialog: StubDialog,
     isAdmin: true,

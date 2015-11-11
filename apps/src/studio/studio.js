@@ -38,9 +38,7 @@ var JSInterpreter = require('../JSInterpreter');
 if (typeof SVGElement !== 'undefined') {
   // Loading these modules extends SVGElement and puts canvg in the global
   // namespace
-  require('../canvg/rgbcolor.js');
-  require('../canvg/StackBlur.js');
-  require('../canvg/canvg.js');
+  require('canvg')
   require('../canvg/svg_todataurl');
 }
 

@@ -1144,3 +1144,8 @@ en:
           Welcome Back!: Welcome Back!
           The TLO: The TLO
           Prep With Your Modules: Prep With Your Modules
+        minecraft:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
