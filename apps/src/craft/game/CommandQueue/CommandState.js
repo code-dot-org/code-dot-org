@@ -4,4 +4,4 @@ export default Object.freeze({
     WORKING: 1,
     SUCCESS: 2,
     FAILURE: 3
-})
+});

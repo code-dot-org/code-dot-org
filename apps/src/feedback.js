@@ -538,8 +538,8 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
         message = msg.errorQuestionMarksInNumberField();
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
-        var messageFunction = (options.appStrings && options.appStrings.tooManyBlocksFailMsgFunction)
-            || msg.numBlocksNeeded;
+        var messageFunction = (options.appStrings && options.appStrings.tooManyBlocksFailMsgFunction) ||
+            msg.numBlocksNeeded;
         message = messageFunction({
           numBlocks: this.studioApp_.IDEAL_BLOCK_NUM,
           puzzleNumber: options.level.puzzle_number || 0
@@ -600,8 +600,8 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
                                     msg.nextStageTrophies(msgParams) :
                                     msg.nextLevelTrophies(msgParams);
         } else {
-          var nextLevelMsg = (options.appStrings && options.appStrings.nextLevelMsg)
-              || msg.nextLevel(msgParams);
+          var nextLevelMsg = (options.appStrings && options.appStrings.nextLevelMsg) ||
+              msg.nextLevel(msgParams);
           message = finalLevel ? msg.finalStage(msgParams) :
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :

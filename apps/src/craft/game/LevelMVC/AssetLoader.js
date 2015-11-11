@@ -426,7 +426,7 @@ export default class AssetLoader {
         this.game.load.atlasJSONHash(key, config.pngPath, config.jsonPath);
         break;
       default:
-        throw `Asset ${key} needs config.type set in configuration.`
+        throw `Asset ${key} needs config.type set in configuration.`;
     }
   }
 }

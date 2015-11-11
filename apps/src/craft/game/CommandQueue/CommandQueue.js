@@ -11,7 +11,7 @@ export default class CommandQueue {
 
   addCommand(command) {
     // if we're handling a while command, add to the while command's queue instead of this queue
-    if (this.whileCommandQueue != null) {
+    if (this.whileCommandQueue !== null) {
       this.whileCommandQueue.addCommand(command);
     } else {
       this.commandList_.push(command);
@@ -33,7 +33,7 @@ export default class CommandQueue {
     this.state = CommandState.NOT_STARTED;
     this.currentCommand = null;
     this.commandList_ = [];
-    if (this.whileCommandQueue != null) {
+    if (this.whileCommandQueue !== null) {
       this.whileCommandQueue.reset();
     }
     this.whileCommandQueue = null;
@@ -41,7 +41,7 @@ export default class CommandQueue {
 
   tick() {
     if (this.state === CommandState.WORKING) {
-      if (this.currentCommand == null) {
+      if (this.currentCommand === null) {
         if (this.commandList_.length === 0) {
           this.state = CommandState.SUCCESS;
           return;
@@ -63,8 +63,6 @@ export default class CommandQueue {
       }
     }
   }
-
-;
 
   /**
    * Whether the command has started working.

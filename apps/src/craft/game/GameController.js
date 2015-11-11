@@ -6,11 +6,11 @@ import TurnCommand from "./CommandQueue/TurnCommand.js";
 import WhileCommand from "./CommandQueue/WhileCommand.js";
 import IfBlockAheadCommand from "./CommandQueue/IfBlockAheadCommand.js";
 
-import LevelModel from "./LevelMVC/LevelModel.js"
-import LevelView from "./LevelMVC/LevelView.js"
-import AssetLoader from "./LevelMVC/AssetLoader.js"
+import LevelModel from "./LevelMVC/LevelModel.js";
+import LevelView from "./LevelMVC/LevelView.js";
+import AssetLoader from "./LevelMVC/AssetLoader.js";
 
-import * as CodeOrgAPI from "./API/CodeOrgAPI.js"
+import * as CodeOrgAPI from "./API/CodeOrgAPI.js";
 
 var GAME_WIDTH = 400;
 var GAME_HEIGHT = 400;
@@ -216,7 +216,7 @@ class GameController {
 
       // report back to the code.org side the pass/fail result 
       //     then clear the callback so we dont keep calling it
-      if (this.OnCompleteCallback != null) {
+      if (this.OnCompleteCallback !== null) {
           if (this.queue.isSucceeded()) {
               this.OnCompleteCallback(true, this.levelModel);
           }
@@ -358,7 +358,7 @@ class GameController {
         switch (blockType) {
           case "sheep":
             // TODO: What to do with already sheered sheep?
-            this.levelView.playShearAnimation(this.levelModel.player.position, this.levelModel.player.facing, destroyPosition, blockType, ()=>{})
+            this.levelView.playShearAnimation(this.levelModel.player.position, this.levelModel.player.facing, destroyPosition, blockType, ()=>{});
             break;
         }
       }
@@ -449,11 +449,9 @@ class GameController {
 
   checkRailBlock(blockType) {
     var checkRailBlock = this.levelModel.railMap[this.levelModel.yToIndex(this.levelModel.player.position[1]) + this.levelModel.player.position[0]];
-    if(checkRailBlock != "") {
+    if (checkRailBlock !== "") {
       blockType = checkRailBlock;
-    }
-    else
-    {
+    } else {
       blockType = "railsVertical";
     }
     return blockType;
@@ -566,8 +564,7 @@ class GameController {
             [bedPosition, doorPosition],
             () => {
               commandQueueItem.succeeded();
-            }
-            ,
+            },
             () => {
               this.levelModel.destroyBlock(bedPosition);
               this.levelModel.destroyBlock(doorPosition);

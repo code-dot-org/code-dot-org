@@ -83,5 +83,5 @@ export function get(controller) {
     getScreenshot: function() {
         return controller.getScreenshot();
     }
-  }
+  };
 }

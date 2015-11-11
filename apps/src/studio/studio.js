@@ -42,7 +42,7 @@ var paramLists = require('./paramLists.js');
 if (typeof SVGElement !== 'undefined') {
   // Loading these modules extends SVGElement and puts canvg in the global
   // namespace
-  require('canvg')
+  require('canvg');
   require('../canvg/svg_todataurl');
 }
 
