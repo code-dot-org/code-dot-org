@@ -229,7 +229,7 @@ exports.install = function (blockly, blockInstallOptions) {
     var blockType = this.getTitleValue('TYPE');
     return 'ifBlockAhead("' + blockType + '", function() {\n' +
       innerCode +
-    '}, \'block_id_' + this.id + '\');\n'
+    '}, \'block_id_' + this.id + '\');\n';
   };
 
 
@@ -250,7 +250,7 @@ exports.install = function (blockly, blockInstallOptions) {
     var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
     return 'ifLavaAhead(function() {\n' +
       innerCode +
-    '}, \'block_id_' + this.id + '\');\n'
+    '}, \'block_id_' + this.id + '\');\n';
   };
 
   blockly.Blocks.craft_placeBlock = {
