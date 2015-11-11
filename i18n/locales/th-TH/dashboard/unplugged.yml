@@ -15,7 +15,7 @@ th:
         video: Unplug2
       Unplug3:
         title: การเขียนกระดาษกราฟ
-        desc: "By programming one another to draw pictures, students will begin to understand what programming is really about. The class will begin by students instructing each other to color squares in on graph paper in an effort to reproduce an existing picture.  If there's time, the lesson can conclude with images that the students create themselves."
+        desc: "By programming one another to draw pictures, students will begin to understand what programming is really about. The class will begin by students instructing each other to color squares on graph paper in an effort to reproduce an existing picture.  If there's time, the lesson can conclude with images that the students create themselves."
         pdfs:
           - unplug3
         video: Unplug3

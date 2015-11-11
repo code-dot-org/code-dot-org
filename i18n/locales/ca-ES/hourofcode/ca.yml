@@ -1,5 +1,6 @@
 ca:
   site_name: HORA del CODI
+  hour_of_code: Hour of Code
   language: Català
   front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Properament
@@ -14,8 +15,11 @@ ca:
   header_menu_resources: Recursos
   header_menu_faq: PMFs
   header_menu_prizes: Premis
+  header_menu_how_to: How-To
+  header_menu_promote: Promote
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -49,6 +53,7 @@ ca:
   company_chelmsfordpublicschooldistrict: Chelmsford School District
   company_cheneysd: Cheney School District
   company_chesterfieldschools: Chesterfield County Public Schools
+  company_codebrooklyn: Code Brooklyn
   company_cps: Chicago Public Schools
   company_ccsd: Clark County School District
   company_cloverparkschooldistrict: Clover Park School District
@@ -72,6 +77,7 @@ ca:
   company_vadoe: "Governor's School Programs"
   company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
+  company_godaddy: Go Daddy
   company_greenupcountyschooldistrict: Greenup County Schools
   company_gwinnettcountypublicschools: Gwinnett County Public Schools
   company_HamptonCitySchools: Hampton City Schools
@@ -105,6 +111,7 @@ ca:
   company_oneclay: One Clay County School District
   company_ocps: Orange County Schools
   company_orangeusd: Orange Unified School District
+  company_pbsd: Palm Beach School District
   company_pvusd: Paradise Valley Unified School District
   company_PetersburgCityPublicSchools: Petersburg City Public Schools
   company_pylusd: Placentia-Yorba Linda Union School District
@@ -118,6 +125,7 @@ ca:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -130,6 +138,7 @@ ca:
   company_wvsd208: West Valley School District
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
+  company_yelp: Yelp
   prizes_all: Premis per a cada organitzador
   prizes_every_organizer: "Cada organitzador d'Hores de Codi rebrà crèdit a Dropbox o Skype com agraïment"
   prizes_technology: "Una escola pública a cada estat d'EUA (& Washington DC) guanyarà tecnologia per valor de 10,000 dòlars"
@@ -138,15 +147,6 @@ ca:
   prizes_brilliant: Una escola de cada província i territori rebrà $2000 per a un projecte brillant (EUA)
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
   prizes_details: Detalls
-  prizes_nav_dc: Mystery trip to Washington D.C.
-  prizes_nav_technology: $10,000 of technology for your school
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Terms and Conditions
-  prizes_nav_faq: PMFs
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -155,11 +155,30 @@ ca:
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
   how_to_nav_organizations: For organizations
+  how_to_nav_companies: For companies
+  how_to_nav_afterschool_educators: For after-school educators
+  how_to_nav_volunteers: For volunteers
+  prizes_nav_title: Premis
+  prizes_nav_home: All prizes
+  prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Terms and conditions
+  prizes_nav_faq: PMFs
+  prizes_nav_dc: Mystery trip to Washington D.C.
+  prizes_nav_technology: $10,000 of technology for your school
+  prizes_nav_video_chat: Video chat with a tech titan
+  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
+  prizes_nav_brilliant: $2,000 Brilliant Labs project
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='/resources/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='/resources'>Promote the Hour of Code</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
@@ -186,6 +205,7 @@ ca:
   front_join_us_computer_science: "Simplement t'encanta la informàtica?"
   front_join_us_spread: Corre la veu.
   front_join_us_spread_word: Spread the word in your community
+  front_join_us_spread_word_work: Spread the word in your community or workplace
   front_join_us_organize: "O organitza un esdeveniment d'Hora de Codi tu mateix."
   front_join_us_how_to_run: Aquí està com fer una Hora de Codi
   front_join_us_help_promote: "Ajuda a promoure l'Hora de Codi"
@@ -198,6 +218,7 @@ ca:
   front_join_us_support: Donar-li suport
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: For more information, please visit code.org
+  front_join_us_n_students_served: '# served'
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: El teu nom
   signup_email_label: El teu correu
@@ -227,9 +248,13 @@ ca:
   map_header: "# Esdeveniments d'Hora de Codi de tot el món"
   see_all_events: See all events
   map_header_company: '# by company organizers'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Search for Hour of Code events
   map_search_search: Cerca
   map_search_reset: Reset
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: "L'Hora de Codi és aquí"
   meta_tag_og_description: "L'Hora de Codi és un moviment mundial que arriba a desenes de milions d'estudiants en més de 180 països i més de 30 llengües. Edat 4 a 104."
   meta_tag_twitter_title: "L'Hora de Codi és aquí"
@@ -248,8 +273,12 @@ ca:
   hardware_prizes_form_school_type_option_middle_school: ESO
   hardware_prizes_form_school_type_option_high_school: Batxillerat
   hardware_prizes_form_qualifying_school_label: És una escola pública K-12
+  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
+  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
   hardware_prizes_form_number_students_label: "Nombre d'alumnes que participen"
   hardware_prizes_form_number_students_placeholder: "Nombre d'alumnes"
+  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
+  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
   hardware_prizes_form_plan_file_label: "Puja el teu pla logístic d'Hora de Codi"
   hardware_prizes_form_plan_file_description: "Envia un horari simple de com vas a organitzar cada estudiant per fer l'Hora de Codi a la teva escola. Veure un plan de mostra: #PDF # | #Word #"
   hardware_prizes_form_submit_label: Envia
@@ -262,15 +291,15 @@ ca:
   hoc_faq_why_cs_q: Per què informàtica?
   hoc_faq_why_cs_a: "<i>Cada</i> estudiant ha de tenir l'oportunitat d'aprendre informàtica. Ajuda a generar habilitats, lògica i creativitat en la resolució de problemes. Començant aviat, els alumnes tindran els fonaments per tenir èxit en qualsevol carrera del segle XXI. Veure més informes a <a href='http://code.org'> Code.org</a>."
   hoc_faq_how_participate_q: "Com participo a l'Hora de Codi?"
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: "Qui hi ha darrere l'Hora de Codi?"
   hoc_faq_behind_hoc_a: "L'Hora de Codi esta organitzat per <a href='http://code.org'> Code.org</a>, una organització pública 501c3 sense ànim de lucre dedicada a promoure la participació en informàtica fent-lo disponible a més escoles i incrementant la participació de les dones i de les minories de estudiants de color. Una <a href='http://code.org/about/partners'> coalició sense precedents de socis</a> que s'han ajuntat per donar suport a l'Hora de Codi, també &mdash; incloent-hi Microsoft, Apple, Amazon, Boys i Girls Clubs d'Amèrica i el Consell Escolar."
   hoc_faq_host_q: Jo no sé res sobre programació. Puc acollir un esdeveniment?
-  hoc_faq_host_a: "Per descomptat. Hora de Codi son activitats autoguiades. Tot el que has de fer és <a href='http://code.org/learn'> provar els tutorials actuals</a>, triar la classe que vols i escollir una hora &mdash; nosaltres ens ocupem de la resta. A més tenim opcions per a cada edat i nivell d'experiència, des de llar d'infants cap amunt. Comença a planificar el teu esdeveniment llegint els nostres <a href='/resources/how-to'> com a guia</a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Necessito ordinadors per a cada persona participant?
   hoc_faq_need_computers_a: "No. Tenim tutorials d'Hora de Codi que funcionen en PCs, smartphones, tauletes i alguns que no requereixen cap ordinador en absolut! Pots unir-te siguis on siguis, amb el que tinguis. <p><i>Aquí hi ha unes quantes opcions:</i> <br><ul><li><b>Treballar en parelles.</b>La investigació mostra que els estudiants aprenen millor la <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programació per parelles</a>, compartint un ordinador i treballant junts. Encoratja els teus estudiants a unir-se. <li><b>Utilitza una pantalla de projecció.</b> Si teniu un ordinador  connectat a la Web, amb pantalla i projector, tot el teu grup pot fer una Hora de Codi conjunta. Veieu junts fragments de vídeo i feu torns per resoldre puzles o respondre preguntes. <li><b>Sense connexió.</b> Oferim tutorials que no requereixen cap ordinador. </ul>"
   hoc_faq_international_q: 'Visc a<country>. Com puc participar internacionalment?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: "Com puc fer una classe d'Hora de Codi?"
   hoc_faq_tutorial_a: "Si estàs interessat en convertir-te en col·laborador de tutorials, <a href='target-tutorial-guidelines'> mira les nostres guies i instruccions</a>. Ens agradaria oferir una varietat d'opcions atractives, però l'objectiu principal és optimitzar l'experiència per a estudiants i professors que són nous en informàtica."
   hoc_faq_more_questions_q: Teniu encara més preguntes?
@@ -317,12 +346,19 @@ ca:
   resources_social: Social
   resources_country_resources: Country Specific Resources
   resources_stickers: Stickers
+  resources_how_to_guides: How-to guides
+  resources_promote: Promote
+  resources_nav_tutorials: Prova els tutorials
+  resources_nav_promote: Spread the word
+  resources_nav_spread_word: How to get involved
   resources_banner_promote_text: Promote
   resources_banner_promote_button: Encourage others to sign up with brochures, inspirational posters and social media banners.
   resources_banner_howto_text: How-to
   resources_banner_howto_button: Resources for educators, parents and districts to host an Hour of Code.
+  handouts_section: Share these handouts
   handouts_onepager: Spread the word with this one page handout
   handouts_brochure: Give this brochure to teachers and schools
+  handouts_participationguide: Plan your Hour of Code with this participation guide
   videos_title: Mostra aquests vídeos per animar als alumnes
   videos_what_most_schools_dont_teach: "What Most Schools Don't Teach (5 min)"
   videos_hoc_2014: 'Hour of Code is Here - Anybody Can Learn'
@@ -332,7 +368,9 @@ ca:
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: How-to guide for public officials
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
@@ -349,7 +387,7 @@ ca:
   title_signup_thanks: Gràcies per registrar-se per acollir una Hora de Codi!
   title_tutorial_guidelines: Tutorial Guidelines
   title_whole_school: Whole School Participation
-  events_title: "Tots els esdeveniments de l'Hora del Codi"
+  events_nav_title: Hour of Code Events
   events_nav_all: Tots els esdeveniments
   events_nav_whole_schools: Totes les escoles
   events_nav_special: Esdeveniments especials

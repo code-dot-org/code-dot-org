@@ -2,48 +2,65 @@ name 'ECSPD U4 D 1 Intro'
 
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## Unit 4 Day 1: 
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-First, let's explore the first lesson in the curriculum. To begin, find your ECS your curriculum and open to page ???.
+## Day 1 Scratch -- Intro
 
-<a href="LINK" target="_blank">Access a Digital Copy of the Lesson >></a>
+First, let's explore the first lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 136-138.
 
+[Access a Digital Copy of the lesson>>](http://code.org/ecs#page=136)
 
 #### Key Concepts
 
-1. Key Concept (<i>example</i>)
-
-1. Key Concept 2 (<i>example</i>)
+- Students will be introduced to the Scratch Programming Language. They will create sprites and make them do simple movements on screen.
 
 #### Common Difficulties
 
-Explain common difficulties
-
-#### PD Outline
-
-The following outline lists the topics covered on each level of this stage. <i>This online PD is intended to be a companion to the ECS curriculum. Have your book open as you go through the levels of this stage.</i>
-
-1. Overview
-
-1. Companion Media Resource
-
-1. Suggested Assessment
-
-1. Additional Resources
-
-1. Teaching Strategies
-
-1. Forum
-
->**Note:** This activity was led by one of your facilitators on the first day of the workshop, but it was not planned by one of the participant teaching groups. 
+This lesson was one that was presented at the in person workshop. It connects students back to writing algorithms, the problem solving process and storyboarding.
+<br><br>
+Many students have worked in Scratch previously or have seen it.  They may feel like it is an environment for younger students and that they are not really programming.  This is not true.  They are gaining experience writing algorithms that the computer will need to understand, with a language that is more equitable to all students, especially students new to computer science.
+<br><br>
+Remind students that using a drag and drop language allows them to shift their focus away from syntax and allows them to do more "tinkering" and modification quickly.  They are also able to have a more visual product which can be gratifying.
+<br><br>
+You will need to download the Scratch files ahead of time to demo them and make them available to your students.
+<br><br>
+For this lesson you need – [name.sb file](http://www.exploringcs.org/curriculum)
+<br><br>
+If using Scratch is new for you, there are many resources included in these online stages.
 
 #### All Resources for This Lesson
 
-* <a href="LINK" target="_blank">NAME</a>
+**Teacher Supports:**
 
+- [U4 Day 1 Lesson](http://code.org/ecs#page=136)
+- [U4 Day 1 Resource Folder](https://drive.google.com/a/nicolescourse.com/folderview?id=0B2UNlnU_5Vg4fjlpSzlZQkMtMldILW90bzhNS3o4QUMyZGNza2gzNFZvSlNsODlRV2JNekk&usp=drive_web&tid=0B2UNlnU_5Vg4fmFpUGlWakFZYW95Rzh3aGd6akJiWS0zUS1XR1dIcXVFM3hPSUNyNC1XRzQ)
+- [U4 Day 1 General Q and A Forum](http://forum.code.org/t/u4-day-1-general-q-a/1888/1)
+- [U4 Day 1 PD Discussion Topic Forum](http://forum.code.org/t/u4-day-1-pd-discussion-topic/1889)
+- [U4 Day 1 Lesson Resources Forum](http://forum.code.org/t/u4-day-1-lesson-resources/913/4)
+- [U4 Day 1 Assessment Forum](http://forum.code.org/t/u4-day-1-assessment/1859)
 
-Let's examine some important sections of this lesson. To get started, click "Continue" below. 
+**Supplies:**
 
+- [KWL Graphic Organizer Chart](https://docs.google.com/document/d/1wwZ3BAS2fHbMy9ArUOlVKdvsAs7dGjpb1xrkhzHWG00/edit)
+- [ScratchIntro.wmv (scratch.mit.edu)](https://www.youtube.com/user/ScratchEdTeam)
+- [name.sb](http://www.exploringcs.org/curriculum)
+- [Name Sample Rubric](http://code.org/ecs#page=138)
+- [http://scratch.mit.edu](http://scratch.mit.edu/)
+
+**Tutorials:** 
+
+- Creating Image Effects - [http://learnscratch.org/sc1-l6](http://learnscratch.org/sc1-l6)
+- Changing Color for a Sprite - Changing Color for a Sprite - [https://vimeo.com/79039159](https://vimeo.com/79039159)
+
+#### PD Discussion
+Take a few minutes to respond to the question below in the forum (link below).
+<br><br>
+Question:  What kind of activity could you do to help the students get familiar with the Scratch environment? Especially - the Scripts Tab (block types ), Costumes Tab, Sound Tab and Stage.
+<br><br>
+[<button>Discuss in the forum >></button>](http://forum.code.org/t/u4-day-1-pd-discussion-topic/1889)
+<br><br>
+After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
+<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
 MARKDOWN

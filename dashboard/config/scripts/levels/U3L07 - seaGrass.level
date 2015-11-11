@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -128,7 +127,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Add a parameter to drawSeaGrass that controls the number of waves in the grass. (Click to see full instructions)",
+    "instructions": "Add a parameter to drawSeagrass that controls the number of waves in the grass. (Click to see full instructions)",
     "markdown_instructions": "# Controlling loops with parameters\r\n<img src=\"https://images.code.org/37d6dbcab707f67485ab3b0cc2a1cae9-image-1443114033511.png\" style=\"width: 200px; float: right\">\r\nThis time you will modify one of the lower-level functions - `drawSeaGrass`. Notice that the current version of `drawSeaGrass` actually uses a loop. We want to modify this function so that we control the number of times it loops with **a parameter**.\r\n\r\n# Do This\r\n\r\n* **Look at** the `drawSeaGrass` function to see how it currently works.\r\n\r\n* **Add a parameter ** that will be used to indicate how many waves the sea grass makes.\r\n\r\n ![](https://images.code.org/6d3361f19e828340686557f9e185da83-image-1443113029938.gif)\r\n\r\n* **Modify the `'for` loop** so that it uses that **parameter** as the number of times to repeat\r\n\r\n ![](https://images.code.org/23e8e43ec4853c0bdbbbd50b9651300a-image-1443113032135.gif)\r\n \r\n* Finally, **modify `drawAllSeaGrass`** to call this new two-param version of `drawSeaGrass` supplying a reasonable random value for the second parameter as well.\r\n\r\n ![](https://images.code.org/322216a681082c6ba744525a8029134e-image-1443115142371.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -157,10 +156,12 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "hide_view_data_button": "true",
-    "encrypted_examples": [
-
-    ],
-    "submittable": "false"
+    "submittable": "false",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "9hk5dn17Ny7ufbY4EcQCCC8UdiY1Q30qc2WCrerzUqIT5ffvBRAwFH8Qi4uZ\nPaaz\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

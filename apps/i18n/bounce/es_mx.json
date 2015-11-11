@@ -20,7 +20,7 @@
   "incrementPlayerScoreTooltip": "Añadir uno a la puntuación actual del jugador.",
   "isWall": "¿Es esto una pared?",
   "isWallTooltip": "Devuelve verdadero si hay un muro",
-  "launchBall": "lanzar nueva pelota",
+  "launchBall": "lanzar pelota nueva",
   "launchBallTooltip": "Lanza una pelota en el juego.",
   "makeYourOwn": "Crea tu Propio Bounce Game",
   "moveDown": "Bajar",

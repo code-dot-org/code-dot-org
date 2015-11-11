@@ -3,6 +3,7 @@ Feature: Playing multi levels
 Background:
   Given I am on "http://learn.code.org/s/course1/stage/2/puzzle/2?noautoplay=true"
   Then I rotate to landscape
+  And I wait to see ".submitButton"
   And element ".submitButton" is visible
 
 Scenario: Loading the level

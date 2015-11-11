@@ -103,7 +103,7 @@ ja:
         video: C2_conditionals_with_cards
       BigEvent:
         title: The Big Event
-        desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
+        desc: ここでは「イベント」というプログラミングの基本的な考え方を生徒は学びます。それはコンピュータが常に把握している入力情報のことです。教師が紙の上のボタンを押して遠隔操作（えんかくそうさ）すると、生徒たちは押されたボタンによって違った反応をするようになります。
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: 安全な道を通って行く

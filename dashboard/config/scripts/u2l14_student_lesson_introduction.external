@@ -1,50 +1,59 @@
 name 'U2L14 Student Lesson Introduction'
-title 'Cracking the Code'
-
-css 'unplugged'
-skip_dialog 'true'
-
-markdown <<MARKDOWN
-## Unit 2: Lesson 14 - Cracking the Code
-
-# Background
-
-There are situations in which cracking a code is ethical and important.  Character frequency analysis can sometimes be used to reveal an encoded message. More difficult encryption algorithms require more elaborate heuristics to solve and sometimes cannot be solved efficiently with computers.
-
-# Vocabulary
-
-* **Character frequency analysis**: a system of decrypting letter substitution encryptions that is based  upon the likely occurrence of various letters in a message. The distribution of letters is roughly the same for almost all samples of a language. In English, ETAOIN SHRDLU are the most commonly used letters.
-
-* **Heuristic**:  technique used to find an approximate solution when typical methods fail to find an exact solution.
-
-# Lesson
-
-* Try your hand at decrypting cryptoquips. 
-* Create a decryption algorithm for a computer to follow. 
-* Explore the limitations of what computers can do in a reasonable time.
-
-# Resources
-
-* Activity Guide: <a href ="https://docs.google.com/document/d/12oIFv1zbJZgA8FeEr9KkyjYgnTNXm-AYyNMDtYebAf0/edit" target="_blank"> Cracking Random Substitution</a>
-
-* Activity Guide: <a href ="https://docs.google.com/document/d/1dfbHwojluP5NNaOqcrZPnECRP5-3sRPHN_Mwm_MQKo8/edit#heading=h.8d9n45i3q3kh" target="_blank"> The Vigenere Cipher</a>
-
-* Reading: <a href ="http://www.google.com/url?q=http%3A%2F%2Fwww.bitsbook.com%2Fwp-content%2Fuploads%2F2008%2F12%2Fchapter5.pdf&sa=D&sntz=1&usg=AFQjCNFlwUTQTxeZ_TyR1brGDslVNaFMCg" target="_blank"> Blown To Bits Ch. 5 pp. 169</a>
-
-* Widget: <a href ="https://studio.code.org/s/cspunit2/stage/14/puzzle/2" target="_blank"> Frequency Analysis </a>
-
-* Widget: <a href ="https://studio.code.org/s/cspunit2/stage/14/puzzle/3" target="_blank"> Vigenere Cipher</a>
-
-* Resource: <a href="http://crypto.interactive-maths.com/frequency-analysis-breaking-the-code.html#intro" target="_blank">Crypto Corner</a>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-* <a href="https://docs.google.com/document/d/1fOzGUsjYTRzthGYlNIMkqoOq2HMqAha8PRFzM_qx4XI" target="_blank">KEY: Cracking Random Substitution Cipher</a>
-
-* <a href="https://docs.google.com/document/d/1PnzOvWMYNwwOrN7cO1wKAn6OnX3za35llYZcC3XmZJs" target="_blank">KEY: Exploring the Vigenere Cipher</a>
-
-MARKDOWN
+encrypted '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
+'

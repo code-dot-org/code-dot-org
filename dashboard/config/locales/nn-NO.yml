@@ -354,6 +354,8 @@
       section: Seksjon
       example: Løsnigsforslag
       example_with_number: Løsningsforslag nr %{solution_number}
+      submitted_on: Sendt inn %{date}
+      unsubmit: Trekk tilbake
   user:
     email_confirm_needed: 'E-postadressa er ikkje stadfesta:'
     email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'
@@ -462,6 +464,7 @@
     tos: Vilkår
     privacy: Personvern
     secure: Sikker versjon
+    report_abuse: Rapporter misbruk
   reference_area:
     title: Trenger du hjelp?
     subtitle: Sjå desse videoane og tipsa
@@ -704,10 +707,32 @@
     view_all: Vis mine prosjekter
     remix: Remix
     click_to_remix: Klikk "Remix" til spin-off din egen versjon!
-    edit_project: Edit Project
+    edit_project: Rediger prosjekt
     abuse:
-      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
-        of Service</a> and cannot be shared with others.
-      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
-        us.</a>
-      go_to_code_studio: Go to Code Studio
+      tos: Dette prosjektet er rapportert for brudd på Code.orgs<a href='http://code.org/tos'>
+        Vilkår</a> og kan ikke deles med andre.
+      contact_us: Hvis du mener dette er en feil, vennligst <a href='https://code.org/contact'>kontakt
+        oss.</a>
+      go_to_code_studio: Gå til Kode Studio
+      report_abuse_form:
+        intro: Hvis du har møtt på støtende innhold, trusler, nettmobbing, trakassering,
+          eller en forekomst av brudd på opphavsretten for innhold du eier mens du
+          bruker apps bygget på Code Studio, vennligst fyll ut skjemaet under. Vi
+          vil ta rapporteringen svært alvorlig, undersøke forholdet og iverksette
+          nødvendige tiltak.
+        validation:
+          email: Oppgi en e-post adresse
+          age: Angi alder
+          abuse_type: Vær vennlig å svar på hvordan dette innholdet bryter med vilkårene
+          abuse_detail: Angi detaljer om innholdet du rapporterer
+        abusive_url: URL til innholdet blir rapportert
+        abuse_type:
+          question: Hvordan krenker dette innholdet %{link_start}Villkår for bruk%{link_end}?
+          harassment: Trusler, nettmobbing, trakkasering
+          offensive: Krenkende innhold
+          infringement: Opphavsrettskrenkelse
+          other: Anna
+        detail: Vennligst oppgi så mange detaljer som mulig om innholdet du rapporterer.
+        acknowledge: Ved å sende inn denne informasjonen aksepterer vil det bli håndtert
+          i henhold til vilkårene for%{link_start_privacy}Personvernerklæring%{link_end}
+          og %{link_start_tos}Bruksvillkår%{link_end}

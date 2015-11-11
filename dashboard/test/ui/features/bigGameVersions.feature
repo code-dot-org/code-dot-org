@@ -26,15 +26,7 @@ Feature: Big Game Versions
     And I click selector "#resetButton"
 
     # Reset the puzzle to the start
-    Then I click selector "#versions-header"
-    And I wait to see a dialog titled "Version History"
-    And I close the dialog
-    And I wait for 3 seconds
-    Then I click selector "#versions-header"
-    And I wait until element "button:contains(Delete Progress)" is visible
-    And I click selector "button:contains(Delete Progress)"
-    And I click selector "#confirm-button"
-    Then I wait for 15 seconds
+    Then I reset the puzzle to the starting version
     And I close the dialog
     And element "g#game_title > .blocklyText:eq(0)" contains text "title"
 

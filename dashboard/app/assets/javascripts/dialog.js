@@ -1,3 +1,5 @@
+/* globals debounce */
+
 /**
  * Adjust the maximum size of the popup's inner scroll area so that the whole popup
  * will fit within the browser viewport.
@@ -6,23 +8,25 @@
  */
 function sizeDialogToViewport(scrollableElementSelector) {
   var viewportHeight = $(window).height();
-  var modalBody = $('.modal-body').filter(':visible');
   var modalDialog = $('.auto-resize-scrollable').filter(':visible');
   var scrollableElement = modalDialog.find(scrollableElementSelector);
 
-  var popupTop =
-    parseInt(modalDialog.css('top'), 10) +
-    parseInt(modalBody.css('padding-bottom'), 10);
+  if (scrollableElement.is('iframe')) {
+    scrollableElement.css('height', '');
+  } else {
+    scrollableElement.css('max-height', '');
+  }
 
-  var scrollableAreaTop = scrollableElement.offset().top;
-  var modalDialogTop = modalDialog.offset().top;
-  var headerHeight = scrollableAreaTop - modalDialogTop;
+  var dialogSize = modalDialog.offset().top + modalDialog.height();
 
-  var popupBottom =
-    parseInt(modalDialog.css('margin-bottom'), 10) +
-    parseInt(modalBody.css('padding-bottom'), 10) +
-    parseInt(modalBody.css('margin-bottom'), 10);
-  var scrollableElementHeight = viewportHeight - (popupTop + popupBottom + headerHeight);
+  var desiredSize = viewportHeight -
+    parseInt(modalDialog.css('padding-bottom'), 10) -
+    parseInt(modalDialog.css('margin-bottom'), 10);
+
+  var overflow = dialogSize - desiredSize;
+  var scrollableElementHeight = scrollableElement.height() - overflow;
+  scrollableElement.css('max-height', scrollableElementHeight);
+
   if (scrollableElement.is('iframe')) {
     scrollableElement.css('height', scrollableElementHeight);
   } else {
@@ -65,7 +69,7 @@ function Dialog(options) {
     var modalHeader = $('<div/>').addClass('modal-header')
         .append(header);
     if (close) {
-      modalHeader.append(closeLink)
+      modalHeader.append(closeLink);
     }
     this.div.append(modalHeader);
   } else if (close) {
@@ -170,6 +174,12 @@ Dialog.prototype.hide = function() {
   $(this.div).modal('hide');
 };
 
+Dialog.prototype.focus = function() {
+  if (this.isVisible) {
+    $(this.div).focus();
+  }
+};
+
 /**
  * This processes optional hideOptions that were provided to show().
  * At the moment it will play an animation of the dialog moving and resizing to
@@ -215,7 +225,7 @@ Dialog.prototype.processHideOptions = function(options) {
   this.div.find("#x-close").animate({opacity: 0}, decorationFadeTime);
   this.div.find(".dialog-title").animate({opacity: 0}, decorationFadeTime);
   this.div.find(".aniGif").animate({opacity: 0}, decorationFadeTime);
-  this.div.find(".modal-content p").animate({"font-size": "13px"}, totalFadeTime)
+  this.div.find(".modal-content p").animate({"font-size": "13px"}, totalFadeTime);
   this.div.find(".markdown-instructions-container").animate({opacity: 0}, fastFadeTime);
 
   // Slide the instruction box from its current position to its destination.
@@ -225,4 +235,3 @@ Dialog.prototype.processHideOptions = function(options) {
   });
 
 };
-

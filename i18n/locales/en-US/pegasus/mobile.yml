@@ -27,6 +27,13 @@ en-US:
   hoc2014_everyone: crwdns20160:0crwdne20160:0
   hoc2014_support: crwdns36060:0crwdne36060:0
   hoc2014_whatishoc: crwdns20162:0crwdne20162:0
+  csedweek_map_header: crwdns50322:0crwdne50322:0
+  csedweek_map_signup: crwdns50323:0crwdne50323:0
+  csedweek_map_search_placeholder: crwdns50324:0crwdne50324:0
+  csedweek_map_search_search: crwdns50325:0crwdne50325:0
+  csedweek_map_search_reset: crwdns50326:0crwdne50326:0
+  cded_sign_up: crwdns50047:0crwdne50047:0
+  cded_try_it: crwdns50048:0crwdne50048:0
   twentyhours_trynow: crwdns4531:0crwdne4531:0
   california_heading: crwdns5133:0crwdne5133:0
   california_text: crwdns8839:0crwdne8839:0
@@ -44,6 +51,11 @@ en-US:
   thank_you_: crwdns3612:0crwdne3612:0
   congratulations: crwdns3785:0crwdne3785:0
   congratulations_on_completing_hoc: crwdns25704:0crwdne25704:0
+  course_name_accelerated: crwdns50049:0crwdne50049:0
+  course_name_course1: crwdns50050:0crwdne50050:0
+  course_name_course2: crwdns50051:0crwdne50051:0
+  course_name_course3: crwdns50052:0crwdne50052:0
+  course_name_course4: crwdns50053:0crwdne50053:0
   congratulations_on_completing_course: 'crwdns48529:0%{course}crwdne48529:0'
   congrats_next_tutorials_title: crwdns48530:0crwdne48530:0
   congrats_next_tutorials_desc: 'crwdns48531:0%{current_path}crwdne48531:0'
@@ -97,6 +109,7 @@ en-US:
   hoc_is_here: crwdns3941:0crwdne3941:0
   just_did_hoc: crwdns3942:0crwdne3942:0
   twitter_teach_cs: crwdns35452:0crwdne35452:0
+  learn_hoc_prizes: crwdns50834:0crwdne50834:0
   learn_hoc: crwdns3953:0crwdne3953:0
   beyond_hoc: crwdns3954:0crwdne3954:0
   what_gender: crwdns3955:0crwdne3955:0
@@ -159,6 +172,8 @@ en-US:
   homepage_action_text_signpetition: crwdns35465:0crwdne35465:0
   homepage_signpetition_dropdown: crwdns35466:0crwdne35466:0
   homepage_diversity_pledge: crwdns45366:0crwdne45366:0
+  homepage_banner_text_prizes: crwdns50835:0crwdne50835:0
+  homepage_banner_link_prizes: crwdns50836:0crwdne50836:0
   homepage_banner_text_main: crwdns38545:0crwdne38545:0
   homepage_banner_text_link: crwdns38546:0crwdne38546:0
   homepage_banner_privacy_main: crwdns43507:0crwdne43507:0
@@ -168,6 +183,7 @@ en-US:
   homepage_slot_text_link_hoc: crwdns35769:0crwdne35769:0
   homepage_slot_text_link_host: crwdns35770:0crwdne35770:0
   homepage_slot_text_link_hocserved: crwdns35771:0crwdne35771:0
+  homepage_solot_text_link_volunteer: crwdns50837:0crwdne50837:0
   homepage_slot_text_title_students: crwdns35772:0crwdne35772:0
   homepage_slot_text_blurb_students: crwdns35773:0crwdne35773:0
   homepage_slot_text_link_codestudio: crwdns35774:0crwdne35774:0
@@ -224,11 +240,47 @@ en-US:
   class_submission_level_college: crwdns5158:0crwdne5158:0
   class_submission_level_vocational: crwdns5159:0crwdne5159:0
   class_submission_languages_other: crwdns5160:0crwdne5160:0
+  volunteer_engineer_submission_title: crwdns50054:0crwdne50054:0
+  volunteer_engineer_submission_subtitle_generic: crwdns50838:0crwdne50838:0
+  volunteer_engineer_submission_subtitle_specific: 'crwdns50839:0%{num_teachers}crwdnd50839:0%{num_volunteers}crwdne50839:0'
+  volunteer_engineer_submission_intro_background: crwdns50840:0crwdne50840:0
+  volunteer_engineer_submission_intro_recruit: 'crwdns50841:0%{url}crwdne50841:0'
+  volunteer_engineer_submission_intro_signup: crwdns50842:0crwdne50842:0
+  volunteer_engineer_submission_header_shared: crwdns50057:0crwdne50057:0
+  volunteer_engineer_submission_field_name: crwdns50058:0crwdne50058:0
+  volunteer_engineer_submission_field_name_placeholder: crwdns50059:0crwdne50059:0
+  volunteer_engineer_submission_field_company: crwdns50060:0crwdne50060:0
+  volunteer_engineer_submission_field_company_placeholder: crwdns50061:0crwdne50061:0
+  volunteer_engineer_submission_field_experience_level: crwdns50062:0crwdne50062:0
+  volunteer_engineer_submission_field_location: crwdns50063:0crwdne50063:0
+  volunteer_engineer_submission_field_location_desc: crwdns50064:0crwdne50064:0
+  volunteer_engineer_submission_field_location_placeholder: crwdns50065:0crwdne50065:0
+  volunteer_engineer_submission_field_location_flexibility: crwdns50066:0crwdne50066:0
+  volunteer_engineer_submission_checkbox_after_hoc: crwdns50067:0crwdne50067:0
+  volunteer_engineer_submission_field_time_commitment: crwdns50068:0crwdne50068:0
+  volunteer_engineer_submission_field_linkedin: crwdns50069:0crwdne50069:0
+  volunteer_engineer_submission_field_linkedin_placeholder: crwdns50070:0crwdne50070:0
+  volunteer_engineer_submission_field_facebook: crwdns50071:0crwdne50071:0
+  volunteer_engineer_submission_field_facebook_placeholder: crwdns50072:0crwdne50072:0
+  volunteer_engineer_submission_field_description: crwdns50073:0crwdne50073:0
+  volunteer_engineer_submission_field_description_desc: crwdns50074:0crwdne50074:0
+  volunteer_engineer_submission_field_description_placeholder: crwdns50075:0crwdne50075:0
+  volunteer_engineer_submission_header_private: crwdns50076:0crwdne50076:0
+  volunteer_engineer_submission_field_email: crwdns50077:0crwdne50077:0
+  volunteer_engineer_submission_field_email_desc: crwdns50078:0crwdne50078:0
+  volunteer_engineer_submission_field_email_placeholder: crwdns50079:0crwdne50079:0
+  volunteer_engineer_submission_final_paragraph: crwdns50080:0crwdne50080:0
+  volunteer_engineer_submission_checkbox_contact: crwdns50081:0crwdne50081:0
+  volunteer_engineer_submission_submit: crwdns50082:0crwdne50082:0
+  volunteer_engineer_submission_thankyou: 'crwdns50083:0%{url}crwdne50083:0'
   volunteer_engineer_submission_commitment_uncertain: crwdns5490:0crwdne5490:0
-  volunteer_engineer_submission_commitment_now_and_then: crwdns5491:0crwdne5491:0
   volunteer_engineer_submission_commitment_one_hr_per_week: crwdns5492:0crwdne5492:0
   volunteer_engineer_submission_commitment_three_hrs_per_week: crwdns5493:0crwdne5493:0
   volunteer_engineer_submission_commitment_five_hrs_per_week: crwdns5494:0crwdne5494:0
+  volunteer_engineer_submission_commitment_now_and_then: crwdns5491:0crwdne5491:0
+  volunteer_engineer_submission_commitment_annually: crwdns50084:0crwdne50084:0
+  volunteer_engineer_submission_commitment_monthly: crwdns50085:0crwdne50085:0
+  volunteer_engineer_submission_commitment_weekly: crwdns50086:0crwdne50086:0
   volunteer_engineer_submission_commitment_more: crwdns5495:0crwdne5495:0
   volunteer_engineer_submission_location_flexibility_onsite: crwdns5496:0crwdne5496:0
   volunteer_engineer_submission_location_flexibility_remote: crwdns5497:0crwdne5497:0
@@ -256,6 +308,7 @@ en-US:
   dashboard_landing_progress_title: crwdns7779:0crwdne7779:0
   dashboard_landing_progress_biggest: crwdns7780:0crwdne7780:0
   dashboard_landing_view_progress: 'crwdns7781:0%{biggest_section}crwdne7781:0'
+  dashboard_landing_print_progress: crwdns50843:0crwdne50843:0
   dashboard_landing_available_title: crwdns7782:0crwdne7782:0
   dashboard_landing_available_courses: crwdns7783:0crwdne7783:0
   dashboard_landing_more_tutorials: crwdns42148:0crwdne42148:0
@@ -299,6 +352,7 @@ en-US:
   dashboard_navigation_section_speakers: crwdns25910:0crwdne25910:0
   dashboard_navigation_all_sections: crwdns22277:0crwdne22277:0
   dashboard_navigation_view_progress: crwdns7797:0crwdne7797:0
+  dashboard_navigation_view_text_responses: crwdns50087:0crwdne50087:0
   dashboard_navigation_add_students: crwdns7798:0crwdne7798:0
   dashboard_navigation_manage_students: crwdns7799:0crwdne7799:0
   dashboard_navigation_lesson_plans_resources: crwdns22278:0crwdne22278:0
@@ -392,6 +446,10 @@ en-US:
   dashboard_progress_completed_too_many_blocks: crwdns27940:0crwdne27940:0
   dashboard_progress_completed_perfect: crwdns27941:0crwdne27941:0
   dashboard_progress_furthest_level_attempted: crwdns27942:0crwdne27942:0
+  dashboard_stage: crwdns50088:0crwdne50088:0
+  dashboard_puzzle: crwdns50089:0crwdne50089:0
+  dashboard_question: crwdns50090:0crwdne50090:0
+  dashboard_response: crwdns50091:0crwdne50091:0
   stats_hoc_2013_heading: crwdns18198:0crwdne18198:0
   stats_hoc_2013_image_alt: crwdns18199:0crwdne18199:0
   dashboard_teacher: crwdns20754:0crwdne20754:0
@@ -408,6 +466,9 @@ en-US:
   dashboard_sections_login_type_explanation: crwdns20765:0crwdne20765:0
   dashboard_faq: crwdns23313:0crwdne23313:0
   dashboard_faq_k5: crwdns41887:0crwdne41887:0
+  dashboard_announcements: crwdns50092:0crwdne50092:0
+  dashboard_announce_view_all: crwdns50093:0crwdne50093:0
+  dashboard_announce_hoc: crwdns50094:0crwdne50094:0
   code_hoc_coming: crwdns25713:0crwdne25713:0
   code_sign_up: crwdns23315:0crwdne23315:0
   learn_more: crwdns23316:0crwdne23316:0
@@ -415,6 +476,7 @@ en-US:
   learn_sign_up_button: crwdns48534:0crwdne48534:0
   learn_educator_resources_description: crwdns48535:0crwdne48535:0
   learn_educator_resources_button: crwdns48536:0crwdne48536:0
+  learn_are_you_educator: crwdns50095:0crwdne50095:0
   hoc2014_try_new_tutorials: crwdns23440:0crwdne23440:0
   hoc2014_try_new_tutorial: crwdns23566:0crwdne23566:0
   hoc2014_try_scrat: crwdns23441:0crwdne23441:0
@@ -474,7 +536,7 @@ en-US:
   robomindnl_name: crwdns21473:0crwdne21473:0
   flappy_name: crwdns23729:0crwdne23729:0
   bitsbox_name: crwdns23343:0crwdne23343:0
-  makegameswithus_name: crwdns21474:0crwdne21474:0
+  makeschool_name: crwdns50096:0crwdne50096:0
   touchdevelop_name: crwdns21476:0crwdne21476:0
   appinventor_name: crwdns21475:0crwdne21475:0
   blockly_name: crwdns21477:0crwdne21477:0
@@ -513,7 +575,7 @@ en-US:
   robomindnl_gradelevel: crwdns21502:0crwdne21502:0
   flappy_gradelevel: crwdns23731:0crwdne23731:0
   bitsbox_gradelevel: crwdns23349:0crwdne23349:0
-  makegameswithus_gradelevel: crwdns21503:0crwdne21503:0
+  makeschool_gradelevel: crwdns50097:0crwdne50097:0
   touchdevelop_gradelevel: crwdns21505:0crwdne21505:0
   appinventor_gradelevel: crwdns21504:0crwdne21504:0
   blockly_gradelevel: crwdns21506:0crwdne21506:0
@@ -553,7 +615,7 @@ en-US:
   robomindnl_platformtext: crwdns21822:0crwdne21822:0
   flappy_platformtext: crwdns23733:0crwdne23733:0
   bitsbox_platformtext: crwdns23359:0crwdne23359:0
-  makegameswithus_platformtext: crwdns21823:0crwdne21823:0
+  makeschool_platformtext: crwdns50098:0crwdne50098:0
   touchdevelop_platformtext: crwdns21825:0crwdne21825:0
   appinventor_platformtext: crwdns23734:0crwdne23734:0
   blockly_platformtext: crwdns21826:0crwdne21826:0
@@ -593,7 +655,7 @@ en-US:
   robomindnl_shortdescription: crwdns21560:0crwdne21560:0
   flappy_shortdescription: crwdns23737:0crwdne23737:0
   bitsbox_shortdescription: crwdns25936:0crwdne25936:0
-  makegameswithus_shortdescription: crwdns23373:0crwdne23373:0
+  makeschool_shortdescription: crwdns50099:0crwdne50099:0
   touchdevelop_shortdescription: crwdns24984:0crwdne24984:0
   appinventor_shortdescription: crwdns21562:0crwdne21562:0
   blockly_shortdescription: crwdns21564:0crwdne21564:0
@@ -633,7 +695,7 @@ en-US:
   robomindnl_longdescription: crwdns21589:0crwdne21589:0
   flappy_longdescription: crwdns23740:0crwdne23740:0
   bitsbox_longdescription: crwdns25944:0crwdne25944:0
-  makegameswithus_longdescription: crwdns25945:0crwdne25945:0
+  makeschool_longdescription: crwdns50100:0crwdne50100:0
   touchdevelop_longdescription: crwdns24988:0crwdne24988:0
   appinventor_longdescription: crwdns21591:0crwdne21591:0
   blockly_longdescription: crwdns21593:0crwdne21593:0
@@ -656,7 +718,7 @@ en-US:
   groklearning_beyond_name: crwdns21611:0crwdne21611:0
   hacketyhack_beyond_name: crwdns21612:0crwdne21612:0
   robomind_beyond_name: crwdns21613:0crwdne21613:0
-  makegameswithus_beyond_name: crwdns21614:0crwdne21614:0
+  makeschool_beyond_name: crwdns50101:0crwdne50101:0
   appinventor_beyond_name: crwdns21615:0crwdne21615:0
   touchdevelop_beyond_name: crwdns21616:0crwdne21616:0
   codehs_beyond_name: crwdns21617:0crwdne21617:0
@@ -693,7 +755,7 @@ en-US:
   groklearning_beyond_gradelevel: crwdns21645:0crwdne21645:0
   hacketyhack_beyond_gradelevel: crwdns21646:0crwdne21646:0
   robomind_beyond_gradelevel: crwdns21647:0crwdne21647:0
-  makegameswithus_beyond_gradelevel: crwdns21648:0crwdne21648:0
+  makeschool_beyond_gradelevel: crwdns50102:0crwdne50102:0
   appinventor_beyond_gradelevel: crwdns21649:0crwdne21649:0
   touchdevelop_beyond_gradelevel: crwdns21650:0crwdne21650:0
   codehs_beyond_gradelevel: crwdns21651:0crwdne21651:0
@@ -730,7 +792,7 @@ en-US:
   groklearning_beyond_platformtext: crwdns21679:0crwdne21679:0
   hacketyhack_beyond_platformtext: crwdns21680:0crwdne21680:0
   robomind_beyond_platformtext: crwdns21681:0crwdne21681:0
-  makegameswithus_beyond_platformtext: crwdns21682:0crwdne21682:0
+  makeschool_beyond_platformtext: crwdns50103:0crwdne50103:0
   appinventor_beyond_platformtext: crwdns21683:0crwdne21683:0
   touchdevelop_beyond_platformtext: crwdns21684:0crwdne21684:0
   codehs_beyond_platformtext: crwdns23581:0crwdne23581:0
@@ -767,7 +829,7 @@ en-US:
   groklearning_beyond_shortdescription: crwdns21713:0crwdne21713:0
   hacketyhack_beyond_shortdescription: crwdns21714:0crwdne21714:0
   robomind_beyond_shortdescription: crwdns21715:0crwdne21715:0
-  makegameswithus_beyond_shortdescription: crwdns21716:0crwdne21716:0
+  makeschool_beyond_shortdescription: crwdns50104:0crwdne50104:0
   appinventor_beyond_shortdescription: crwdns21717:0crwdne21717:0
   touchdevelop_beyond_shortdescription: crwdns21718:0crwdne21718:0
   codehs_beyond_shortdescription: crwdns21719:0crwdne21719:0
@@ -804,7 +866,7 @@ en-US:
   groklearning_beyond_longdescription: crwdns21747:0crwdne21747:0
   hacketyhack_beyond_longdescription: crwdns21748:0crwdne21748:0
   robomind_beyond_longdescription: crwdns21749:0crwdne21749:0
-  makegameswithus_beyond_longdescription: crwdns21750:0crwdne21750:0
+  makeschool_beyond_longdescription: crwdns50105:0crwdne50105:0
   appinventor_beyond_longdescription: crwdns21751:0crwdne21751:0
   touchdevelop_beyond_longdescription: crwdns21752:0crwdne21752:0
   codehs_beyond_longdescription: crwdns21753:0crwdne21753:0

@@ -1,34 +1,41 @@
--total_count = DB[:forms].where(kind:'HocSignup2015').count
+%link{rel: "stylesheet", type: "text/css", href: "/css/map.css"}
 -if @company
-  %h2= "<a href='#{resolve_url('/events')}'>#{hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))}</a>" + ", " + "#{hoc_s(:map_header_company).gsub('#', format_integer_with_commas(company_count(@company))).gsub('company', hoc_s("company_" + @company))}"
--else
-  .mapheader{:style => "position: relative;"}
-    -if solr_country_code
-      %a{:href=>resolve_url("/events/all/#{solr_country_code}"), :style=>"float: left"}
-        %h2= hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))
-    -else
-      %a{:href=>resolve_url("/events"), :style=>"float: left"}
-        %h2= hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))
-    %a{:href=>resolve_url("/#join")}
-      %button{:class=>"signup-button", :style=>"margin: 40px 0 0 20px;"}
+  -company_name = hoc_s("company_" + @company)
+  -company_total = format_integer_with_commas(company_count)
+  %h2.mapheader
+    %a{href: resolve_url('/events/all')}
+      = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count'])) + ","
+      = hoc_s(:map_header_company).gsub('#', company_total).gsub('company', company_name)
+    %a{href: resolve_url("/#join")}
+      %button.signup-button
         = hoc_s(:signup_your_event)
-
--# Commenting out search box for now
--#.row
-  %form#workshop-search-form{role: "form", onsubmit: "event.preventDefault();"}
-    .form-section
-      .col-xs-4
-        .form-group
-          %div
-            %input#geocomplete.form-control{name: "geocomplete", placeholder: hoc_s(:map_search_placeholder), type: "text"}/
-      .col-xs-8
-        .form-group
-          %button#btn-submit.btn.btn-default{type: "submit"}= hoc_s(:map_search_search)
-          %button#btn-reset.btn.btn-link{type: "reset"}= hoc_s(:map_search_reset)
+-elsif @country != 'us'
+  -country_total = format_integer_with_commas(country_count)
+  %h2.mapheader
+    %a{href: resolve_url("/events/all")}
+      = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count'])) + ","
+    %a{href: resolve_url("/events/all/#{solr_country_code}")}
+      = hoc_s(:map_header_country).gsub('#', format_integer_with_commas(country_total)).gsub('%{country}', country_full_name)
+    %a{href: resolve_url("/#join")}
+      %button.signup-button
+        = hoc_s(:signup_your_event)
+-else
+  %h2.mapheader
+    %a{href: resolve_url("/events/all")}
+      = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
+    %a{href: resolve_url("/#join")}
+      %button.signup-button
+        = hoc_s(:signup_your_event)
 
 .row
   .col-xs-10.col-sm-12
-    #gmap{style: 'width: 100%'}
+    #gmap.full-width
+#belowmaplegend.legend{style: "display: none;"}
+  .legend-title= hoc_s(:map_legend_title)
+  .color.turquoise
+  %div= hoc_s(:map_legend_hoc_events)
+  .color.orange
+  %div= hoc_s(:map_legend_cs_tech_jam)
 
 :javascript
   var gmap;
@@ -58,22 +65,40 @@
 
     var layer = new google.maps.FusionTablesLayer({
       query: {
+        select: 'review',
         from: '164RLDWEyPij3-Z9O0791ta_a8RfuCdGUkWRFcnBD'
-        // from: '1_j3ovhuqhh_vRAiO91gOx25j7Q4I9__9hNdZLq_C'
       },
       styles: [{
+        where: "review CONTAINS 'approved'",
         markerOptions: {
-          iconName: "small_red"
+          iconName: "orange_stars"
+        }
+      }, {
+        where: "review DOES NOT CONTAIN 'approved'",
+        markerOptions: {
+          iconName: "measle_turquoise"
         }
       }],
-      map: gmap
     });
+
+    var legend = document.createElement('div');
+    legend.id = 'inmaplegend';
+    legend.className = 'legend';
+    legend.index = 1;
+    $("#belowmaplegend div").clone().appendTo(legend);
+
+    //gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+
+    layer.setMap(gmap);
 
     google.maps.event.addListener(layer, 'click', function(event) {
       enableDrag();
       event.infoWindowHtml = event.row['organization_name'].value;
       if (event.row['city'].value.length > 0) {
         event.infoWindowHtml += ' (' + event.row['city'].value + ')';
+      }
+      if (event.row['review'].value == 'approved') {
+        event.infoWindowHtml += '<br>' + event.row['description'].value;
       }
       event.infoWindowHtml += '<br>';
     });

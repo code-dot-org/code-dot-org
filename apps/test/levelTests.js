@@ -12,6 +12,7 @@
 var path = require('path');
 var assert = require('chai').assert;
 var $ = require('jquery');
+var React = require('react');
 var sinon = require('sinon');
 require('jquery-ui');
 
@@ -43,6 +44,10 @@ var example = {
       // xml to be used for startBlocks. set to string 'startBlocks' if you want
       // to use the xml from the level itself
       xml: '',
+      // Prefix to add to the names of image and sound assets in applab instead of
+      // "/v3/assets/". Set this to "//localhost:8001/apps/test/assets/" and add
+      // files to apps/test/assets if you need requests for assets to succeed.
+      assetPathPrefix: '',
       customValidator: function (assert) {
         // optional function called at puzzle finish (i.e. when BlocklyApps.report
         // is called.
@@ -81,6 +86,7 @@ describe('Level tests', function() {
 
     window.jQuery = $;
     window.$ = $;
+    window.React = React;
     window.dashboard = $.extend(window.dashboard, {
       i18n: {
         t: function (selector) { return selector; }
@@ -90,8 +96,8 @@ describe('Level tests', function() {
       // file from shared here.
       project: {
         clearHtml: function() {},
-        getCurrentId: function () { return 'fake_id'; },
         exceedsAbuseThreshold: function () { return false; },
+        getCurrentId: function () { return 'fake_id'; },
         isEditing: function () { return true; }
       }
     });
@@ -131,10 +137,8 @@ describe('Level tests', function() {
     };
 
     if (window.Studio) {
-      var Projectile = require('@cdo/apps/studio/projectile');
-      Projectile.__resetIds();
-      var Item = require('@cdo/apps/studio/Item');
-      Item.__resetIds();
+      var StudioAnimation = require('@cdo/apps/studio/StudioAnimation');
+      StudioAnimation.__resetIds();
       Studio.JSInterpreter = undefined;
     }
 
@@ -192,7 +196,7 @@ function runTestCollection (item) {
 
       // todo - maybe change the name of expected to make it clear what type of
       // test is being run, since we're using the same JSON files for these
-      // and our getMissingRequiredBlocks tests (and likely also other things
+      // and our getMissingBlocks tests (and likely also other things
       // in the future)
       if (testData.expected) {
         it(testData.description, function (done) {

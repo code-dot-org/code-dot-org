@@ -370,10 +370,12 @@
       answer_viewer: Visualizza la risposta
       student: Studente
       viewing_solution: Guarda la soluzione
-      try_it_yourself: Provate voi stessi
+      try_it_yourself: Prova da solo
       section: Classe
       example: Esempio di soluzione
       example_with_number: Esempio di soluzione %{solution_number}
+      submitted_on: Inserito il %{date}
+      unsubmit: Annulla l'invio
   user:
     email_confirm_needed: 'L''indirizzo di posta elettronica non è stato confermato:'
     email_confirm_needed_required: 'Il tuo indirizzo di posta elettronica %{email}
@@ -421,7 +423,7 @@
     student_stats: Hai guadagnato %{trophy_count} trofei su %{trophy_max} in "Padronanza
       dei concetti".
     student_left_off: 'Eri arrivato qua:'
-    student_finished: Hai completato tutti i tutorial, scegli un'altra classe %{online_link}
+    student_finished: Hai completato tutti i corsi, scegli un'altra classe %{online_link}
       o una %{local_school_link}
     local_school: scuola locale
     online: in linea
@@ -466,9 +468,8 @@
       <a href="https://code.org/about/partners"> partner</a>, il nostro <a href="https://code.org/about/team">
       team</a>, il nostro cast video e i nostri <a href="https://code.org/about/advisors">
       consulenti di formazione</a> per il loro supporto nella creazione di Code Studio.
-    help_from_html: Vogliamo soprattutto essere riconoscenti agli ingegneri di Google,
-      Microsoft, Facebook, Twitter e molti altri che hanno aiutato a creare questi
-      materiali.
+    help_from_html: Siamo particolarmente riconoscenti agli ingegneri di Google, Microsoft,
+      Facebook, Twitter, e molti altri, che hanno aiutato a creare questi corsi.
     help_from_html_old: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno
       contribuito a creare questi materiali.
     art_from_html: |
@@ -488,9 +489,10 @@
     support: Supporto
     support_url: http://programmailfuturo.it/aiuto
     tos_short: Condizioni
-    tos: Termini d'uso del servizio
+    tos: Termini di servizio
     privacy: Informativa sulla privacy
     secure: Versione sicura
+    report_abuse: Segnala un abuso
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
@@ -565,8 +567,8 @@
         fatto.
     flappy:
       title: Flappy
-      body: Vuoi creare il tuo gioco in meno di 10 minuti? Prova il corso sul Codice
-        di "Flappy"!
+      body: Vuoi creare la tua versione del gioco "Flappy" in meno di 10 minuti? Prova
+        questo corso!
     20-hour:
       title: Corso rapido
       body: Questo corso rapido in 20 lezioni introduce in modo sintetico i concetti
@@ -585,7 +587,7 @@
     frozen:
       title: Frozen
     infinity:
-      title: Il Laboratorio dell'Infinito
+      title: Disney Infinity
       body: Crea una storia o inventa un gioco con i personaggi di Disney Infinity
         come protagonisti!
   gallery:
@@ -675,8 +677,8 @@
           description: ''
         flappy:
           title: Flappy
-          description: Vuoi creare il tuo gioco in meno di 10 minuti? Prova il corso
-            sul Codice di "Flappy"!
+          description: Vuoi creare la tua versione del gioco "Flappy" in meno di 10
+            minuti? Prova questo corso!
         jigsaw:
           title: Puzzle
           description: ''
@@ -745,10 +747,34 @@
     remix: Rimescola
     click_to_remix: Clicca su 'Rimescola' per ottenere una tua copia da cambiare a
       piacere!
-    edit_project: Edit Project
+    edit_project: Modifica progetto
     abuse:
-      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
-        of Service</a> and cannot be shared with others.
-      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
-        us.</a>
-      go_to_code_studio: Go to Code Studio
+      tos: Questo progetto è stato segnalato per una violazione dei <a href='http://code.org/tos'>
+        Termini di servizio</a> di Code.org e non può essere condivisa con altri.
+      contact_us: Se credi che questo sia un errore, si prega di <a href='https://code.org/contact'>
+        contattarci.</a>
+      go_to_code_studio: Vai al Code Studio
+      report_abuse_form:
+        intro: Se hai incontrato contenuti offensivi, minacce, bullismo, molestie
+          o un'istanza di violazione del copyright per il contenuto che vi appartiene
+          mentre usate le app di Code Studio, compilate il modulo sottostante. Prenderemo
+          in seria considerazione la vostra segnalazione, indagheremo e prenderemo
+          i provvedimenti opportuni.
+        validation:
+          email: Si prega di fornire un indirizzo email
+          age: Si prega di specificare un'età
+          abuse_type: Indicate come questo contenuto violi i Termini del servizio
+          abuse_detail: Si prega di fornire i dettagli concernenti il contenuto che
+            si desidera segnalare
+        abusive_url: URL del contenuto da segnalare
+        abuse_type:
+          question: Come questo contenuto viola i %{link_start}Termini del servizio%{link_end}?
+          harassment: Minacce, cyberbullismo, molestie
+          offensive: Contenuti offensivi
+          infringement: Violazione del copyright
+          other: Altro
+        detail: Fornite quanti più dettagli possibili riguardanti il contenuto che
+          stai segnalando.
+        acknowledge: Inviando queste informazioni, l'utente riconosce che sarà gestita
+          in conformità con i termini della %{link_start_privacy}Politica della privacy%{link_end}
+          e i %{link_start_tos}Termini del servizio%{link_end}

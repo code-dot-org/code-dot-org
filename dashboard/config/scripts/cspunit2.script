@@ -107,8 +107,11 @@ assessment 'U2L11 Assessment 1'
 assessment 'U2L11 Assessment 2'
 assessment 'U2L11 Free Response'
 
-# 12
+# 12 old
 stage 'Challenges of the Internet'
+
+# 12 new
+stage 'Practice PT - The Internet and Society'
 level 'U2L12 Student Lesson Introduction'
 
 # 13
@@ -179,11 +182,11 @@ assessment 'U2L19 multichoice 13 MOD 17'
 assessment 'U2L19 Assessment'
 assessment 'U2L19 Free Response Wrap Up'
 
-# 20
+# 20 old
 stage 'Security and Hacking in the Real World'
+
+#20 new
+stage 'Practice PT - Cybersecurity Innovations'
 level 'U2L20 Student Lesson Introduction'
 level 'U2 The Internet: Cybersecurity and Crime - Video'
-assessment 'U2L20 Free Response Getting Started'
-assessment 'U2L20 - Free Response - exploited technology'
-assessment 'U2L20 Free Response Wrap Up 2'
-assessment 'U2L20 Free Response Wrap Up'
+level 'U2 Encryption and Public Keys - Video'

@@ -1,3 +1,5 @@
+/* global dashboard, appOptions */
+
 var lastAjaxRequest;
 var lastServerResponse = {};
 
@@ -5,6 +7,12 @@ var lastServerResponse = {};
  * Notify the progression system of level attempt or completion.
  * Provides a response to a callback, which can provide a video to play
  * and next/previous level URLs.
+ *
+ * The client posts the progress JSON to the URL specified by
+ * report.callback (e.g. /milestone). In the event of a failure or timeout,
+ * the client relies on report.fallbackResponse (if specified) to allow
+ * the user to progress.
+ *
  * @param {Object} report
  * @param {string} report.callback - The url where the report should be sent.
  *        For studioApp-based levels, this is provided on initialization as
@@ -33,31 +41,48 @@ var sendReport = function(report) {
   }
   var queryString = queryItems.join('&');
 
-  var thisAjax = jQuery.ajax({
-    type: 'POST',
-    url: report.callback,
-    contentType: 'application/x-www-form-urlencoded',
-    data: queryString,
-    dataType: 'json',
-    beforeSend: function(xhr) {
-      xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))
-    },
-    success: function (response) {
-      if (thisAjax !== lastAjaxRequest) {
-        return;
-      }
-      reportComplete(report, response);
-    },
-    error: function (xhr, textStatus, thrownError) {
-      if (thisAjax !== lastAjaxRequest) {
-        return;
-      }
-      report['error'] = xhr.responseText;
-      reportComplete(report, getFallbackResponse(report));
-    }
-  });
+  dashboard.clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.level.scriptLevelId);
 
-  lastAjaxRequest = thisAjax;
+  //Post milestone iff the server tells us, or if we are on the last level and have passed
+  if (appOptions.postMilestone || (appOptions.level.puzzle_number === appOptions.level.stage_total && report.pass)) {
+
+    var thisAjax = jQuery.ajax({
+      type: 'POST',
+      url: report.callback,
+      contentType: 'application/x-www-form-urlencoded',
+      // Set a timeout of fifteen seconds so the user will get the fallback
+      // response even if the server is hung and unresponsive.
+      timeout: 15000,
+      data: queryString,
+      dataType: 'json',
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+      },
+      success: function (response) {
+        if (thisAjax !== lastAjaxRequest) {
+          return;
+        }
+        reportComplete(report, response);
+      },
+      error: function (xhr, textStatus, thrownError) {
+        if (thisAjax !== lastAjaxRequest) {
+          return;
+        }
+        report.error = xhr.responseText;
+        reportComplete(report, getFallbackResponse(report));
+      }
+    });
+
+    lastAjaxRequest = thisAjax;
+  } else {
+    //There's a potential race condition here - we show the dialog after animation completion, but also after the report
+    //is done posting. There is logic that says "don't show the dialog if we are animating" but if milestone posting
+    //is disabled then we might show the dialog before the animation starts. Putting a 1-sec delay works around this
+    setTimeout(function () {
+      reportComplete(report, getFallbackResponse(report));
+    }, 1000);
+  }
+
 };
 
 var cancelReport = function() {
@@ -79,10 +104,10 @@ function getFallbackResponse(report) {
 function reportComplete(report, response) {
   lastAjaxRequest = null;
   if (response) {
-    lastServerResponse.report_error = report['error'];
-    lastServerResponse.nextRedirect = response['redirect'];
-    lastServerResponse.previousLevelRedirect = response['previous_level'];
-    lastServerResponse.videoInfo = response['video_info'];
+    lastServerResponse.report_error = report.error;
+    lastServerResponse.nextRedirect = response.redirect;
+    lastServerResponse.previousLevelRedirect = response.previous_level;
+    lastServerResponse.videoInfo = response.video_info;
   }
   if (report.onComplete) {
     report.onComplete(response);

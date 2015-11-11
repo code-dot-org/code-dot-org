@@ -8,30 +8,45 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 # ایک گھنٹے کے کوڈ کی میزبانی کے لئے شکریہ!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> آپ لاطینی امریکا کے طلبا کے لئے ایک "آور آف کوڈ" سیکھنے کوممکن بنا رہے ہیں* جو انکی آنے والی زندگی میں تبدیلی لا سکتا ہے*،اکتوبر۔ ٥ تا ١١۔ <% else %> آپ دنیا بھر کے طلبا کے لئے ایک "آور آف کوڈ" سیکھنے کوممکن بنا رہے ہیں *جو انکی آنے والی زندگی میں تبدیلی لا سکتا ہے*۔ ٧ تا ١٣۔ <% end %>
+You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13.
 
-ہم انعامات، نۓ اسباق اور دوسری دلچسپ معلومات کے تبادلے کے حوالے سے اکتوبر تا نومبر کے دوران رابطے کریں گے۔ تو ابھی آپ کیا کر سکتے ہیں؟
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [Details](https://<%= hostname %>/prizes).
+
+#### We'll be in touch about new tutorials and other exciting updates. What can you do now?
 
 ## 1. دوسروں تک بھجیں
 
-اپنے دوستوں کو #HourOfCode کے بارے میں بتائیں ۔
+We need your help to reach 100,000 organizers worldwide. اپنے دوستوں کو #HourOfCode کے بارے میں بتائیں ۔ [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
+
+<% if international == 'true' %>
 
 ## 2. آپنے پورے اسکول کو ایک گھنٹے کے کوڈ کی پیشکش دیں۔
 
-[بھیجئے یہ ای میل](http://<%= hostname %>/resources#email) اپنے پرنسپل کو۔
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). <% else %>
+
+## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
+
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup). <% end %>
 
 ## 3. اپنے ایمپلائر کو ملوث/شامل ہونے کے لئے پوچھیں/کہے۔
 
-[بھیجئے یہ ای میل](http://<%= hostname %>/resources#email) اپنے مینیجر، یا سی۔ای۔او۔ کو۔
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
 
 ## ٤۔ اپنی کمیونٹی میں" آور آف کوڈ" کو فروغ دیں
 
-ایک مقامی گروپ کو بھرتی کریں، جیسے کے لڑکے یا لڑکیوں کے سکاؤٹس کلب، چرچ، یونیورسٹی، سابق فوجیوں کے گروپ یا مزدور یونین. یا اپنے پڑوس کے لئے آور آف کوڈ "بلاک پارٹی" کی میزبانی کریں۔ [یہ ای میل بھیجئے](http://<%= hostname %>/resources#email).
+Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
 
 ## 5. کوڈ کی گھڑی کی حمایت کرنے کے لئے ایک مقامی منتخب اہلکار سے کہیں/پوچھیں۔
 
-[یہ ای میل بھیجئے](http://<%= hostname %>/resources#politicians)اپنے شہر کے ناظم، سٹی کونسل، یا اسکول بورڈ کو اور انھیں اپنے اسکول کا دورہ کرنے کے لئے مدعو کریں۔
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+
+Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
+
+Hadi Partovi  
+Founder, Code.org
 
 * * *
 
-Code.org ایک 501c3 غیر منافع بخش ہے ۔ ہمارا پتہ 1301 کے 5th یوینیو، سویٹ 1225، سیٹل، WA، 98101 ہے ۔ یہ ای میلز پسند نہیں آی؟ [رکنیت ختم](%= unsubscribe_link %).
+<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+
+![](<%= tracking_pixel %>)

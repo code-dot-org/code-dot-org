@@ -10,12 +10,16 @@ exports.random = function (values) {
   return values[key];
 };
 
+exports.endGame = function(id, value) {
+  Studio.queueCmd(id, 'endGame', {'value': value});
+};
+
 exports.setBackground = function (id, value) {
   Studio.queueCmd(id, 'setBackground', {'value': value});
 };
 
-exports.setWalls = function (id, value) {
-  Studio.queueCmd(id, 'setWalls', {'value': value});
+exports.setMap = function (id, value) {
+  Studio.queueCmd(id, 'setMap', {'value': value});
 };
 
 exports.setSprite = function (id, spriteIndex, value) {
@@ -53,6 +57,22 @@ exports.setSpriteEmotion = function (id, spriteIndex, value) {
 exports.setSpriteSpeed = function (id, spriteIndex, value) {
   Studio.queueCmd(id, 'setSpriteSpeed', {
     'spriteIndex': spriteIndex,
+    'value': value
+  });
+};
+
+// setDroid is a wrapper to setSprite that always passes 0 for the spriteIndex
+// (used by hoc2015)
+
+exports.setDroid = function (id, value) {
+  Studio.queueCmd(id, 'setSprite', {
+    'spriteIndex': 0,
+    'value': value
+  });
+};
+
+exports.setDroidSpeed = function (id, value) {
+  Studio.queueCmd(id, 'setDroidSpeed', {
     'value': value
   });
 };
@@ -117,14 +137,25 @@ exports.moveDistance = function(id, spriteIndex, dir, distance) {
   });
 };
 
+// addPoints is a wrapper for changeScore (used by hoc2015)
+
+exports.addPoints = function(id, value) {
+  Studio.queueCmd(id, 'changeScore', {'value': value});
+};
+
+// removePoints is a wrapper for reduceScore (used by hoc2015)
+
+exports.removePoints = function(id, value) {
+  Studio.queueCmd(id, 'reduceScore', {'value': value});
+};
+
 exports.changeScore = function(id, value) {
   Studio.queueCmd(id, 'changeScore', {'value': value});
 };
 
-exports.addItemsToScene = function(id, className, number) {
-  Studio.queueCmd(id, 'addItemsToScene', {
-    'className': className,
-    'number': number
+exports.addCharacter = function(id, className) {
+  Studio.queueCmd(id, 'addItem', {
+    'className': className
   });
 };
 
@@ -139,6 +170,27 @@ exports.setItemSpeed = function(id, className, speed) {
   Studio.queueCmd(id, 'setItemSpeed', {
     'className': className,
     'speed': speed
+  });
+};
+
+exports.moveFast = function(id, className) {
+  Studio.queueCmd(id, 'setItemSpeed', {
+    'className': className,
+    'speed': constants.SpriteSpeed.FAST
+  });
+};
+
+exports.moveNormal = function(id, className) {
+  Studio.queueCmd(id, 'setItemSpeed', {
+    'className': className,
+    'speed': constants.SpriteSpeed.SLOW
+  });
+};
+
+exports.moveSlow = function(id, className) {
+  Studio.queueCmd(id, 'setItemSpeed', {
+    'className': className,
+    'speed': constants.SpriteSpeed.VERY_SLOW
   });
 };
 

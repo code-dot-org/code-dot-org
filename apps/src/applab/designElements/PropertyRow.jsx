@@ -1,6 +1,7 @@
 /* global $ */
-var React = require('react');
 var rowStyle = require('./rowStyle');
+var elementUtils = require('./elementUtils');
+var utils = require('../../utils');
 
 var LockState = {
   LOCKED: 'LOCKED',
@@ -24,18 +25,39 @@ var PropertyRow = React.createClass({
 
   getInitialState: function () {
     return {
-      value: this.props.initialValue
+      value: this.props.initialValue,
+      isValidValue: true
     };
   },
 
   componentWillReceiveProps: function (newProps) {
-    this.setState({value: newProps.initialValue});
+    this.setState({
+      value: newProps.initialValue,
+      isValidValue: true
+    });
   },
 
   handleChangeInternal: function(event) {
     var value = event.target.value;
-    this.props.handleChange(value);
-    this.setState({value: value});
+    var isValidValue = !this.props.isIdRow || elementUtils.isIdAvailable(value, this.props.initialValue);
+    this.setValue(value, isValidValue);
+  },
+
+  /**
+   * Updates this component's state, and calls the change handler
+   * only if the new value is valid.
+   * @param value {string} The new value of the property row.
+   * @param isValidValue {boolean} Whether the value is valid. Default: true.
+   */
+  setValue: function (value, isValidValue) {
+    isValidValue = utils.valueOr(isValidValue, true);
+    this.setState({
+      value: value,
+      isValidValue: isValidValue
+    });
+    if (isValidValue) {
+      this.props.handleChange(value);
+    }
   },
 
   handleClickLock: function () {
@@ -46,10 +68,20 @@ var PropertyRow = React.createClass({
     }
   },
 
+  onIdRowBlur: function() {
+    if (!this.state.isValidValue) {
+      var value = this.props.initialValue;
+      this.setValue(value);
+    }
+  },
+
   render: function() {
     var idRowStyle = $.extend({}, rowStyle.container, rowStyle.maxWidth, {
       backgroundColor: '#a69bc1',
       paddingBottom: 10
+    });
+    var inputStyle = $.extend({}, rowStyle.input, {
+      backgroundColor: this.state.isValidValue ? null : "#ffcccc"
     });
 
     var inputElement;
@@ -62,7 +94,8 @@ var PropertyRow = React.createClass({
         type={this.props.isNumber ? 'number' : undefined}
         value={this.state.value}
         onChange={this.handleChangeInternal}
-        style={rowStyle.input} />;
+        onBlur={this.props.isIdRow ? this.onIdRowBlur : null}
+        style={inputStyle} />;
     }
 
     var lockStyle = {

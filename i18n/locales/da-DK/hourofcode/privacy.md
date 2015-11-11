@@ -4,7 +4,7 @@ title: Privatlivspolitik
 
 * * *
 
-### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Privatlivspolitik
 
@@ -29,7 +29,7 @@ Vores principper for databeskyttelse tager udgangspunkt i følgende principper:
 
 ## Persondatapolitik
 
-Vi er forpligtet til at skabe et sikkert miljø for elever i alle aldre på vores websteder, beliggende på <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, andre websites, application programming interface (vores "API"), og online-tjenester (kollektivt, og vores "hjemmeside"). Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. Som en non-profit, 501(c)(3) organisation, bruger vi kun de data vi modtager, i det omfang det hjælper vores mission om, at give så stor en programmerings uddannelse til alle de elever der ønsker det. Vi har etableret os som en non-profit organisation, således at profitmotivet ikke vil forstyrre vores mission om at udgive pålidelig undervisningsmidler.
+We are committed to creating a safe and secure environment for learners of all ages on our websites located at <https://code.org>, <https://studio.code.org>, <https://csedweek.org>, <http://computinginthecore.org>, <https://hourofcode.com>, other websites, application programming interface (our “API”), and online services (collectively, our “Website”). Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. Som en non-profit, 501(c)(3) organisation, bruger vi kun de data vi modtager, i det omfang det hjælper vores mission om, at give så stor en programmerings uddannelse til alle de elever der ønsker det. Vi har etableret os som en non-profit organisation, således at profitmotivet ikke vil forstyrre vores mission om at udgive pålidelig undervisningsmidler.
 
 Our Privacy Notice describes what information we gather from our Users, how we use that information, and what we do to protect it. Din brug af hjemmesiden og alle de oplysninger,du giver på webstedet er underlagt betingelserne i denne fortrolighedserklæring, som er indarbejdet i og underlagt vores Terms of Service. Alle termer brugt, men ikke defineret, i denne fortrolighed har den betydning for dem i vores [Terms of Service](http://code.org/tos). Ved at besøge eller ved hjælp af vores hjemmeside, samtykke du udtrykkeligt til oplysningerne om behandlingspraksis beskrevet i denne fortrolighedserklæring.
 
@@ -94,7 +94,7 @@ Hvis du beslutter dig til at tilmelde dig til Code Studio gennem en godkendelses
 
 Du kan tilbagekalde Code.org's adgang til din konto på alle godkendelsestjeneste når som helst, ved at opdatere de relevante indstillinger i kontoindstillinger i de respektive godkendelsestjeneste. Du bør tjekke din personlige indstillinger på hver Authentication Service for at forstå og ændre de oplysninger, der sendes til os via hver godkendelsestjeneste. Gennemse venligst hver godkendelsestjenestes vilkår for brug og privacy politikker omhyggeligt, før brug af deres tjenester og tilslutning til vores hjemmeside.
 
-## Andre tjenester
+## Other Services
 
 Når du bruger visse andre funktioner på vores hjemmeside, såsom undertegnelseformularer eller opfordinger til at hjælp med at være fortaler for Code.org, deltager i en workshop, bringe Code.org´s programmer ud til din skole eller kommune, donere til Code.org, købe t-shirts eller andre elementer, eller deltager i online-undersøgelser, Code.org beder dig om at give personlige oplysninger, herunder dit fulde navn, e-mail adresse og postnummer, eller skoleadresse, samt din fakturering og/eller leveranceoplysninger når det er nødvendigt at gennemføre et køb eller give en donation. Oplysningerne bruges til at aktivere din deltagelse i de pågældende funktion og sende dig info e-mails med oplysninger om Code.org, som vi mener kan have din interesse. Alle e-mails vi sende omfatter en "unsubscribe" linket, som straks vil afmelde dig fra alle fremtidige e-mails fra Code.org.
 
@@ -126,17 +126,17 @@ En pixel tag (også kendt som en "clear GIF" eller "web beacon") er et lille bil
 
 Code.org kan bruge en bred vifte af tredjeparts udbydere, såsom analyse virksomheder til at forstå vores hjemmesides brug, og social networking-platforme som vil være vært for vores videoer. Vi kan tillade tredjeparts udbydere at placere og læse deres egne cookies, webbeacons og lignende teknologier for at indsamle oplysninger gennem hjemmesiden. Dissee tekniske oplysninger indsamles direkte og automatisk af disse tredjeparter.
 
-Code.org tillader ikke annoncering på vores hjemmeside, og vi har ikke mulighed for at indsamle din web søge-historie på tværs af tredjeparts Internet-websteder eller søgemaskiner. (Hvis du navigere til Code.org´s websted via en websøgning, vil din webbrowser automatisk give os den web søgningsperiode du brugte for at finde Code.org). Dog kan visse tredjeparts-enheder, som vi bruger til at give vores hjemmeside funktionalitet, eller sociale deling, indsamle ikke-personlige oplysninger i forbindelse med onlineannoncering. Vores hjemmeside reagerer ikke på "ikke spor" signaler, transmitteret af web-browsere, men vi opfordrer dig til at besøge følgende links, hvis du ønsker at fravælge adfærdsmålrettet annoncering: <http://www.networkadvertising.org/choices> eller <http://www.aboutads.info/choices/>. Hvis du ønsker at fravælge, ved hjælp af disse værktøjer, skal du fravælge separat for hver af dine enheder og for hver webbrowser på hver enhed.
+Code.org does not allow advertising on our Website, and we do not have the ability to collect your web search history across 3rd party Internet websites or search engines. (Hvis du navigere til Code.org´s websted via en websøgning, vil din webbrowser automatisk give os den web søgningsperiode du brugte for at finde Code.org). Dog kan visse tredjeparts-enheder, som vi bruger til at give vores hjemmeside funktionalitet, eller sociale deling, indsamle ikke-personlige oplysninger i forbindelse med onlineannoncering. Our Website does not respond to “do not track” signals transmitted by web browsers, but we encourage you to visit the following links if you would like to opt out of online behavioral advertising: <http://www.networkadvertising.org/choices> or <http://www.aboutads.info/choices/>. Hvis du ønsker at fravælge, ved hjælp af disse værktøjer, skal du fravælge separat for hver af dine enheder og for hver webbrowser på hver enhed.
 
 Visse funktioner forbundet fra webstedet Code.org kan gennemføres af tredjeparter, der indsamler data. For eksempel, bliver donationer til Code.org behandlet via en tredje part, som indsamler og kan gemme betalingsinstrumentet. Støttemeddelelser eller indlæg til vores offentlige forum for lærere er behandlet af en tredjeparts websted, der kan tillade brugere at oprette profiler, sende meddelelser, og uploade billeder. Andre tredjepartswebsteder såsom Code.org [Facebook-side](https://www.facebook.com/Code.org) og [Twitter sider](https://twitter.com/codeorg), kan være co-branded med vores navn eller logo. Brug af disse tredjeparts-tjenester er helt valgfri for brugere, typisk kun for voksne, og underlagt vores fortrolighedspolitik af disse tredjeparter. Vi opfordrer dig til at gennemgå fortrolighedspolitikken på tredjemand for detaljer om, hvordan de kan indsamle, opbevare og bruge dine personlige oplysninger.
 
-## Uploading custom content
+## Uploading Custom Content
 
 Student and teacher profiles can NOT be customized with a photo.
 
 As part of “App Lab,” an in-browser programming tool available on Code Studio for students over the age of 13, students can upload custom photos, sound, and videos to the Code Studio platform to use within applications or “apps” that they create. These files are stored in the Code Studio platform, and are not used by Code.org for any purpose other than within the applications created by students.
 
-## Message sending between users
+## Message Sending Between Users
 
 Code.org has created a tool called the [“Internet Simulator”](/internetsimulator) for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Message contents are not accessed or used by Code.org for any purpose other than in this educational tool.
 
@@ -146,11 +146,11 @@ In addition, Users may send messages to Code.org for customer support requests.
 
 Other than the above, the Website supports no other form of messaging among Users.
 
-## Oplysninger vi IKKE indsamler
+## Information We Do NOT Collect
 
-Code.org indsamler eller opbevarer ikke betalingsoplysninger. Donationer til Code.org eller køb af t-shirts fra Code.org butik behandles via tredjemand, og selv om Code.org modtager en kvittering for donationer (skattemæssigt), så modtager vi aldrig betalingsmiddel (f.eks. kreditkort eller tegnebog oplysninger).
+Code.org indsamler eller opbevarer ikke betalingsoplysninger. Donations to Code.org or purchases from the Code.org store are processed via third parties, and although Code.org receives a receipt for donations (for tax purposes), we never receive the payment instrument (such as credit card or wallet information).
 
-## Børn under 13 år
+## Children Under the Age 13
 
 Code Studios lærinings platform er designet til at blive brugt af brugere i alle aldre, herunder børn under 13 år med deltagelse af deres skole, lærer, forælder eller værge. Certain features, especially features that involve uploading custom media files or sending messages, are disabled or inaccessible to accounts created by children under the age of 13, in order to provide greater protection to those Users.
 
@@ -170,7 +170,7 @@ For at deltage i evalueringen, bliver disse skoledistrikter bedt om aflevere ele
 
 Code.org's medarbejdere, agenter og leverandører skal have en legitim forretningsmæssig grund (relateret direkte til at fremme vores uddannelse-fokuserede mission) for at få adgang til personlige oplysninger, du giver til Code.org, for eksempel til at bistå med teknisk support. Code.org vil kræve, at vores medarbejdere, agenter og entreprenører handler i overensstemmelse med denne fortrolighedserklæring, og at de behandler enhver form for personlig Information fra Code.org brugere, som fortrolige oplysninger.
 
-## Hvordan vi deler eller overfører data
+## How We Share or Transfer Data
 
 Vi udlejer eller sælger ikke personlige oplysninger, vi indsamler fra brugere, eller udnytter personlige oplysninger til økonomisk vinding på anden måde. Code.org vil aldrig dele personlige oplysninger med andre tredjeparts-organisationer uden dit samtykke, undtagen som en del af et bestemt program eller en funktion, du har valgt at tilslutte dig.
 
@@ -196,7 +196,7 @@ Når du kontakter os med en anmodning om support, kan du angive personlige oplys
 
 Code.org vælger Ugens elev og Månedens lærer hver måned, sammen med præmier. Disse udvalgte elever og lærere og udtalelser er altid udgivet med tilladelse af deltagende elever eller underviser og, hvis det er relevant, deres forældre eller værge eller lærer, og kan omfatte personlige oplysninger som navn, billede og foto eller video af den person, der er profileret.
 
-### Public Reporting on Student Use and Performance
+### Public reporting on student use and performance
 
 Vi kan offentliggøre anonymiserede oplysninger om elevernes resultater på vores tutorials og hjemmesider, men vi vil aldrig offentligt udlevere dine personlige oplysninger i disse rapporter. Data om elevernes resultater vil forblive anonyme, men samlede og anonymiserede data fra store datasæt kan trækkes ud på demografiske kriterier som alder, generelle placering, køn, Etnicitet og socioøkonomisk status.
 
@@ -216,11 +216,11 @@ Code.org may disclose User data including Personal Information that we believe, 
 
 I tilfælde af, at Code.org bliver opkøbt, sammenlagt eller fusioneret med en anden enhed, kan vi overføre de personlige oplysninger, vi har indsamlet fra brugerne som en del af sådanne fusionen, erhvervelse, salg eller anden ændring af kontrol. Vores løfte til dig er, at personlige oplysninger vi måtte have indsamlet fra brugerne ville være sikret under det samme niveau af sikkerhed og privatliv som ydes af denne fortrolighedserklæring.
 
-## Vores tilgang til datasikkerhed
+## Our Approach to Data Security
 
 ### Website security is important to you, and to us
 
-For at beskytte dit privatliv og sikkerhed, tage vi rimelige forholdsregler for at bekræfte din identitet før ydelse du konto adgang eller foretage rettelser til dine personlige oplysninger. Da nogle skoler blokerer SSL-sikrer websteder, giver Code.org adgang med eller uden SSL beskyttelse, i retning af disse skoler. Hvis du ønsker en SSL-krypteret forbindelse på eller for at kryptere data, som du indtaster mens du bruger hjemmesiden, og bruger HTTPS-protokollen ved at besøge https://code.org/.
+For at beskytte dit privatliv og sikkerhed, tage vi rimelige forholdsregler for at bekræfte din identitet før ydelse du konto adgang eller foretage rettelser til dine personlige oplysninger. Because some schools block SSL-secure websites, Code.org allows access with or without SSL protection, at the direction of those schools. Hvis du ønsker en SSL-krypteret forbindelse på eller for at kryptere data, som du indtaster mens du bruger hjemmesiden, og bruger HTTPS-protokollen ved at besøge https://code.org/.
 
 ### We try to ensure that our Website and information sent to us are safe, but no security measures are perfect
 
@@ -234,9 +234,9 @@ Vores hjemmeside drives og administreres på servere placeret i USA. Hvis du væ
 
 ### Conditions of Use and Notices
 
-Hvis du vælger at besøge Code.org, er dit besøg og enhver stride om beskyttelse af personlige oplysninger omfattet af denne fortrolighedserklæring og vores betingelser i serviceaftalen, herunder begrænsninger ift. skader, voldgift af tvister, anvendelse af lovgivningen i staten Washington og værneting for alle tvister i Seattle, Washington.
+If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 
-### A Note to California Residents:
+### A note to California residents:
 
 Vi videregiver ikke personlige oplysninger til tredjemand til brug for markedsføringsformål. For yderligere oplysninger om vores privatlivs politik eller for indsigt i eller anmodning om at få slettet alle de personlige oplysninger, du har delt med os, bedes du sende en anmodning til http://code.org/contact.
 
@@ -245,4 +245,4 @@ Vi videregiver ikke personlige oplysninger til tredjemand til brug for markedsf�
 Hvis du har spørgsmål eller kommentarer til denne fortrolighedserklæring ift. dine personlige oplysninger, vores tredjeparts videregivelse praksis eller dit samtykke valg kan du kontakte Code.org ved at skrive til <http://code.org/contact> eller til 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.   
   
   
-[![image](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![image](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

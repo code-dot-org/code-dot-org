@@ -1,6 +1,7 @@
 ---
 
-tytuł: < % = hoc_s(:title_whole_school) %> Układ: szeroki
+title: <%= hoc_s(:title_whole_school) %>
+layout: wide
 
 ---
 

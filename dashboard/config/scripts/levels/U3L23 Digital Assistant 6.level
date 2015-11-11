@@ -35,7 +35,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -83,7 +82,12 @@
     "instructions": "When the user hits Run, display the text \"I'm a generic digital assistant. Ask me anything!\"",
     "start_blocks": "onEvent(\"text_input\", \"change\", function(event) {\r\n  var input = getText(\"text_input\");\r\n  setText(\"text_area\", \"User: \" + input + \"\\nBot: I don't know.\");\r\n  setText(\"text_input\", \"\");\r\n});",
     "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"divApplab\" class=\"appModern divApplabDesignMode\" tabindex=\"1\" style=\"width: 320px; height: 480px;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; height: 480px; background-color: rgb(255, 255, 255);\">\r\n    <input id=\"text_input\" style=\"margin: 0px; color: rgb(0, 0, 0); top: 45px; left: 15px; width: 290px; height: 35px; position: absolute; background-color: rgb(255, 255, 255);\"/>\r\n    <div contenteditable=\"true\" id=\"text_area\" style=\"font-size: 18px; color: rgb(0, 0, 0); margin: 0px; width: 290px; height: 380px; top: 90px; left: 15px; position: absolute; background-color: rgb(255, 255, 255);\"/>\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 20px; overflow: hidden; word-wrap: break-word; color: rgb(0, 0, 0); width: 235px; height: 25px; top: 10px; left: 15px; position: absolute;\" id=\"label\">Digital Assistant</label>\r\n  </div>\r\n</div>",
-    "examples_required": "false"
+    "examples_required": "false",
+    "never_autoplay_video": "false",
+    "droplet_tooltips_disabled": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

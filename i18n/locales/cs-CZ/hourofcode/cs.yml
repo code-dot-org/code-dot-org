@@ -1,5 +1,6 @@
 cs:
   site_name: Hodina kódu
+  hour_of_code: Hour of Code
   language: Čeština
   front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Bude to brzy
@@ -14,8 +15,11 @@ cs:
   header_menu_resources: Zdroje
   header_menu_faq: 'FAQ - často kladené dotazy'
   header_menu_prizes: Ceny
+  header_menu_how_to: How-To
+  header_menu_promote: Promote
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -49,6 +53,7 @@ cs:
   company_chelmsfordpublicschooldistrict: Chelmsford School District
   company_cheneysd: Cheney School District
   company_chesterfieldschools: Chesterfield County Public Schools
+  company_codebrooklyn: Code Brooklyn
   company_cps: Chicago Public Schools
   company_ccsd: Clark County School District
   company_cloverparkschooldistrict: Clover Park School District
@@ -72,6 +77,7 @@ cs:
   company_vadoe: "Governor's School Programs"
   company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
+  company_godaddy: Go Daddy
   company_greenupcountyschooldistrict: Greenup County Schools
   company_gwinnettcountypublicschools: Gwinnett County Public Schools
   company_HamptonCitySchools: Hampton City Schools
@@ -105,6 +111,7 @@ cs:
   company_oneclay: One Clay County School District
   company_ocps: Orange County Schools
   company_orangeusd: Orange Unified School District
+  company_pbsd: Palm Beach School District
   company_pvusd: Paradise Valley Unified School District
   company_PetersburgCityPublicSchools: Petersburg City Public Schools
   company_pylusd: Placentia-Yorba Linda Union School District
@@ -118,6 +125,7 @@ cs:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -130,6 +138,7 @@ cs:
   company_wvsd208: West Valley School District
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
+  company_yelp: Yelp
   prizes_all: Ocenění pro každého organizátora
   prizes_every_organizer: Každý organizátor Hodiny Kódu dostane jako poděkování kredit na Dropbox nebo Skype
   prizes_technology: 'Jedna obecná škola v každém státě USA (& Washingtonu DC) získá vybavení v hodnotě 10 000 dolarů'
@@ -138,15 +147,6 @@ cs:
   prizes_brilliant: Každá škola v každém kraji a území obdrží 2000 dolarů za skvělý projekt
   prizes_actua: 15 kanadských škol získá 2 přístupy na STEM dílny s jedným z Actua členů
   prizes_details: Podrobnosti
-  prizes_nav_dc: Mystery trip to Washington D.C.
-  prizes_nav_technology: $10,000 of technology for your school
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Podmínky
-  prizes_nav_faq: 'FAQ - často kladené dotazy'
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -155,11 +155,30 @@ cs:
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
   how_to_nav_organizations: For organizations
+  how_to_nav_companies: For companies
+  how_to_nav_afterschool_educators: For after-school educators
+  how_to_nav_volunteers: For volunteers
+  prizes_nav_title: Ceny
+  prizes_nav_home: All prizes
+  prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Podmínky
+  prizes_nav_faq: 'FAQ - často kladené dotazy'
+  prizes_nav_dc: Mystery trip to Washington D.C.
+  prizes_nav_technology: $10,000 of technology for your school
+  prizes_nav_video_chat: Video chat with a tech titan
+  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
+  prizes_nav_brilliant: $2,000 Brilliant Labs project
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Jak uspořádat Hodinu kódu</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Propagovat Hodinu kódu</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
@@ -186,6 +205,7 @@ cs:
   front_join_us_computer_science: Prostě milujete informatiku?
   front_join_us_spread: Rozšiřujte povědomí.
   front_join_us_spread_word: Spread the word in your community
+  front_join_us_spread_word_work: Spread the word in your community or workplace
   front_join_us_organize: Nebo sami uspořádejte Hodinu kódu.
   front_join_us_how_to_run: Zde je návod, jak vést Hodinu kódu
   front_join_us_help_promote: Pomozte s propagací Hodiny kódu
@@ -198,6 +218,7 @@ cs:
   front_join_us_support: Podpořte
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: For more information, please visit code.org
+  front_join_us_n_students_served: '# served'
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Vaše jméno
   signup_email_label: Váš email
@@ -227,12 +248,16 @@ cs:
   map_header: '#Akce Hodiny kódu na celém světě'
   see_all_events: See all events
   map_header_company: '# od firemních organizátorů'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Search for Hour of Code events
   map_search_search: Search
   map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
+  meta_tag_og_title: The Hour of Code is coming
   meta_tag_og_description: Hodina Kódu je celosvětové hnutí, do kterého se zapojily desítky milionů žáků z více než 180 zemí mluvících 30 jazyky, lidé ve věku od 4 do 104 let.
-  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_title: The Hour of Code is coming
   meta_tag_twitter_description: Hodina Kódu je celosvětové hnutí, do kterého se zapojily desítky milionů žáků z více než 180 zemí mluvících 30 jazyky, lidé ve věku od 4 do 104 let.
   twitter_default_text: 'Účastním se letošní akce #HodinaKodu, co ty? @codeorg'
   hardware_prizes_form_name_label: Vaše jméno
@@ -248,8 +273,12 @@ cs:
   hardware_prizes_form_school_type_option_middle_school: Střední škola
   hardware_prizes_form_school_type_option_high_school: Vysoká škola
   hardware_prizes_form_qualifying_school_label: Je to K-12 státní škola
+  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
+  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
   hardware_prizes_form_number_students_label: Počet studentů, která se zúčastní
   hardware_prizes_form_number_students_placeholder: Počet studentů
+  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
+  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
   hardware_prizes_form_plan_file_label: 'Nahrajte logistický plán akce Hodina kódu '
   hardware_prizes_form_plan_file_description: 'Předložte jednoduchý plán, jak plánujete uspořádat pro každého studenta vaší škole akci Hodinu kódu. Viz ukázkový plán: #PDF # | #Word #'
   hardware_prizes_form_submit_label: Odeslat
@@ -262,15 +291,15 @@ cs:
   hoc_faq_why_cs_q: Proč informatika?
   hoc_faq_why_cs_a: "<i>Každý</i> student by měl mít možnost se učit informatiku. Pomáhá to podporovat dovednost, logiku a tvořivost při řešení problémů. Hned na začátku studenti získají základy pro úspěch v jakékoliv profesní dráze 21.století. Více ve statistikách na <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Jak se zúčastnit akce Hodina kódu?
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: 'Kdo je  v pozadí za událostí Hodina kódu?'
   hoc_faq_behind_hoc_a: "Událost Hodina kódu organizuje <a href='http://code.org'>Code.org</a>, veřejná nezisková organizace (US § 501 c3), která se věnuje zvyšování podílu zájmu o informatiku ve společnosti, zvyšování účasti žen a nedostatečně zastoupených menšin. Je k dispozici ve více školách. <a href='http://code.org/about/partners'>Bezprecedentní koalice partnerů</a> se též spojila k podpoře akce Hodina kódu &mdash; včetně Microsoftu, Applu, Amazonu, Boys and Girls Clubs of America a College Board."
   hoc_faq_host_q: Nevím nic o kódování. Mohu hostovat akci?
-  hoc_faq_host_a: "Samozřejmě, Aktivity Hodiny kódu mají vlastního průvodce. Vše, co potřebujete, je <a href='http://code.org/learn'>vyzkoušet naše aktuální cvičení</a>, vybrat si výuku, kterou chcete, a také svoji hodinu  &mdash; o vše ostatní se postaráme. Máme nabídky pro všechny věkové skupiny a úrovně dovedností od mateřské školky. Začněte plánovat vaši událost tím, že si přečtete, <a href='target-resources-how-to'>jak na to</a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Potřebuji počítač pro každého účastníka?
   hoc_faq_need_computers_a: "Ne. Máme výukové programy akce Hodina kódu, které pracují na PC, smartfounech, tabletech a některé nevyžadují počítač vůbec! Můžete se připojit kdekoliv jste, s tím co máte. <p><i>Zde je několik možností:</i> <br> <ul> <li><b>Práce ve dvojicích.</b> Výzkumy ukazují, že studenti se učí nejlépe <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programováním ve dvojicích</a>, sdílením počítače, pracují-li společně. Povzbuzujte své studenty v práci ve dvojicích. <li><b>Používejte projektor obrazovky.</b> Pokud máte projektor a monitor počítače připojeném na Webu, celá skupina si může udělat společně událost Hodina kódu. Sledujte společně video části, střídejte se v řešení hádanek nebo odpovědí na otázky. <li><b>Bez připojení.</b> Nabízíme i kurzy, které nevyžadují počítač.</ul>"
   hoc_faq_international_q: 'Jsem v <country>. Jak se mohu mezinárodně zúčastnit?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Jak mohu udělat výukový kurz pro akci Hodina kódu?
   hoc_faq_tutorial_a: "Pokud máte zájem stát se partnerem ve výuce,  <a href='target-tutorial-guidelines'>prohlédněte si naše pokyny a instrukce</a>. Chtěli bychom hostit množství motivačních možností, ale prvním cílem je vyladit zážitek pro žáky a učitele - začátečníky v informatice."
   hoc_faq_more_questions_q: Máte ještě další otázky?
@@ -316,12 +345,19 @@ cs:
   resources_social: Sociální
   resources_country_resources: Country Specific Resources
   resources_stickers: Stickers
+  resources_how_to_guides: How-to guides
+  resources_promote: Promote
+  resources_nav_tutorials: Vyzkoušejte návody
+  resources_nav_promote: Spread the word
+  resources_nav_spread_word: How to get involved
   resources_banner_promote_text: Promote
   resources_banner_promote_button: Encourage others to sign up with brochures, inspirational posters and social media banners.
   resources_banner_howto_text: How-to
   resources_banner_howto_button: Resources for educators, parents and districts to host an Hour of Code.
+  handouts_section: Share these handouts
   handouts_onepager: Spread the word with this one page handout
   handouts_brochure: Give this brochure to teachers and schools
+  handouts_participationguide: Plan your Hour of Code with this participation guide
   videos_title: Tímto videem inspirujte studenty
   videos_what_most_schools_dont_teach: "What Most Schools Don't Teach (5 min)"
   videos_hoc_2014: 'Hour of Code is Here - Anybody Can Learn'
@@ -331,7 +367,9 @@ cs:
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: Návod jak na to pro úředníky veřejné správy
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
@@ -348,7 +386,7 @@ cs:
   title_signup_thanks: Děkujeme za přihlášení k hostování akce Hodina kódu!
   title_tutorial_guidelines: Tutorial Guidelines
   title_whole_school: Whole School Participation
-  events_title: Všechny události Hodiny kódu
+  events_nav_title: Hour of Code Events
   events_nav_all: Všechny události
   events_nav_whole_schools: Celá škola
   events_nav_special: Zvláštní události

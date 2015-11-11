@@ -4,7 +4,7 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 2 Day 15-16: 
 
-First, let's explore the lesson in the curriculum. To begin, find your ECS your curriculum and open to page 94.
+First, let's explore the lesson in the curriculum. To begin, find your ECS Version 5 curriculum and open to page 94.
 
 <a href="http://code.org/ecs#page=94" target="_blank">Access a Digital Copy of the Lesson >></a>
 
@@ -15,7 +15,8 @@ First, let's explore the lesson in the curriculum. To begin, find your ECS your 
 1. Students will look at different methods to sort items and compare the benefits of different ways of sorting.
 
 #### Common Difficulties
-MISSING
+
+Students often have a hard connecting the different pieces of this lesson in their heads. There are perfectly good solutions to weighing the bags that don't require the key step of binary search, which is to eliminate half the possibilities every time.  It may take some work on your part to make the connection to binary search in the dictionary and the work with the scales.
 
 ### All Resources for This Lesson
 

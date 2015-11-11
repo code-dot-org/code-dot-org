@@ -30,9 +30,17 @@ levels.simple = {
 levels.custom = {
   'freePlay': true,
   'editCode': true,
-  'sliderSpeed': 0.95,
+  'sliderSpeed': 1,
   'appWidth': 320,
   'appHeight': 480,
+
+  /**
+   * This is the default set of functions available to us if the levelbuilder
+   * leaves codeFunctions blank.
+   * Applab.rb self.palette serves a similar function, intially providing
+   * levelbuilders with the text for the default set of blocks.
+   * These two places shouldbe kept in sync
+   */
   'codeFunctions': {
     // UI Controls
     "onEvent": null,
@@ -54,6 +62,7 @@ levels.custom = {
     "hideElement": null,
     "deleteElement": null,
     "setPosition": null,
+    "setSize": null,
     "write": null,
     "getXPosition": null,
     "getYPosition": null,
@@ -68,7 +77,7 @@ levels.custom = {
     "setStrokeWidth": null,
     "setStrokeColor": null,
     "setFillColor": null,
-    "drawImage": null,
+    "drawImageURL": null,
     "getImageData": null,
     "putImageData": null,
     "clearCanvas": null,
@@ -91,6 +100,7 @@ levels.custom = {
     "updateRecord": null,
     "deleteRecord": null,
     "getUserId": null,
+    "drawChartFromRecords": null,
 
     // Turtle
     "moveForward": null,
@@ -113,7 +123,7 @@ levels.custom = {
     "penRGB": null,
     "show": null,
     "hide": null,
-    "speed" : null,
+    "speed": null,
 
     // Control
     "forLoop_i_0_4": null,
@@ -134,26 +144,30 @@ levels.custom = {
     "equalityOperator": null,
     "inequalityOperator": null,
     "greaterThanOperator": null,
+    "greaterThanOrEqualOperator": null,
     "lessThanOperator": null,
+    "lessThanOrEqualOperator": null,
     "andOperator": null,
     "orOperator": null,
     "notOperator": null,
-    "randomNumber_max": null,
     "randomNumber_min_max": null,
     "mathRound": null,
     "mathAbs": null,
     "mathMax": null,
     "mathMin": null,
+    "mathRandom": null,
 
     // Variables
     "declareAssign_x": null,
     "declareNoAssign_x": null,
     "assign_x": null,
     "declareAssign_x_prompt": null,
+    "declareAssign_x_promptNum": null,
     "console.log": null,
     "declareAssign_str_hello_world": null,
     "substring": null,
     "indexOf": null,
+    "includes": null,
     "length": null,
     "toUpperCase": null,
     "toLowerCase": null,
@@ -170,6 +184,8 @@ levels.custom = {
     "callMyFunction_n": null,
     "return": null,
   },
+
+  // "randomNumber_max": null, // DEPRECATED
 };
 
 levels.ec_simple = utils.extend(levels.custom, {

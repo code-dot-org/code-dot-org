@@ -1,0 +1,63 @@
+-search_location ||= nil
+-experience_s ||= nil
+-location_flexibility_ss ||= nil
+-distance ||= nil
+-num_volunteers ||= nil
+
+%h1 Find a local volunteer for the Hour of Code
+
+%p
+  Enter your address to find a local volunteer. If there aren't any local volunteers available, search for volunteers in other cities who can participate remotely through a video conference. Or you can try finding a
+  %a{href: "https://education.skype.com/computerscience"} Skype guest speaker.
+%p
+  Want to volunteer for the Hour of Code?
+  %a{href: "https://code.org/volunteer"}
+    Sign up here
+  to be included on this map.
+
+%form#volunteer-search-form{role: "form", onsubmit: "event.preventDefault();"}
+  #volunteer-search-facets.form-section.row
+    %h3.col-xs-12.top-margin Narrow your search
+    .form-section.row.no-margin
+      .form-group.col-xs-4
+        %input#location.form-control{name: "location", placeholder: "Search my location", type: "text", value: search_location}
+      .form-group.col-xs-2.submit-btn
+        %button#btn-submit.btn.btn-default{type: "submit"} Search
+
+    .form-group.col-xs-4
+      %label.control-label.small{for: "location-flexibility"} How a volunteer can help
+      %div
+        %select#location-flexibility.form-control{name: "location_flexibility_ss[]", type: "select"}
+          %option{selected: location_flexibility_ss.nil_or_empty?, value: ""}= "any"
+          -VolunteerEngineerSubmission2015.locations.each do |key, value|
+            %option{value: key, selected: (location_flexibility_ss||[]).include?(key.to_s)}= value
+    .form-group.col-xs-4
+      %label.control-label.small{for: "experience-level"} Experience level
+      %div
+        %select#experience-level.form-control{name: "experience_s", type: "select"}
+          %option{selected: experience_s.nil_or_empty?, value: ""}= "any"
+          -VolunteerEngineerSubmission2015.experiences.each do |key, value|
+            %option{value: key, selected: (experience_s||[]).include?(key.to_s)}= value
+    .form-group.col-xs-2
+      %label.control-label.small{for: "distance"} Within
+      %div
+        %select#distance.form-control{name: "distance", type: "select"}
+          %option{selected: distance.nil_or_empty?, value: ""}= "15 miles"
+          -VolunteerEngineerSubmission2015.distances.each do |key, value|
+            %option{value: key, selected: (distance||[]).include?(key.to_s)}= value
+    .form-group.col-xs-2
+      %label.control-label.small{for: "num_volunteers"} Show no more than
+      %div
+        %select#num_volunteers.form-control{name: "num_volunteers", type: "select"}
+          %option{selected: num_volunteers.nil_or_empty?, value: ""}= "10 volunteers"
+          -VolunteerEngineerSubmission2015.num_volunteers.each do |key, value|
+            %option{value: key, selected: (num_volunteers||[]).include?(key.to_s)}= value
+
+
+#volunteer-search-results.row.top-margin
+  #volunteer-search-controls.col-xs-5
+    #controls
+  #volunteer-search-map.col-xs-7
+    #gmap
+.row
+  #volunteer-search-error.col-xs-12.display-none.top-margin

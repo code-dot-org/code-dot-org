@@ -29,11 +29,11 @@ window.apps = {
       cdoSounds: CDOSounds,
       position: {blockYCoordinateInterval: 25},
       onInitialize: function() {
-        dashboard.createCallouts(this.callouts);
+        dashboard.createCallouts(this.level.callouts || this.callouts);
         if (window.dashboard.isChrome34) {
           chrome34Fix.fixup();
         }
-        if (appOptions.level.projectTemplateLevelName) {
+        if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
           $('#clear-puzzle-header').hide();
           $('#versions-header').show();
         }
@@ -49,6 +49,7 @@ window.apps = {
           delete report.program;
           delete report.image;
         }
+        report.scriptName = appOptions.scriptName;
         report.fallbackResponse = appOptions.report.fallback_response;
         report.callback = appOptions.report.callback;
         // Track puzzle attempt event
@@ -86,12 +87,10 @@ window.apps = {
         appOptions.level.aniGifURL);
 
         if (hasVideo) {
-          showVideoDialog(appOptions.autoplayVideo);
           if (hasInstructions) {
-            $('.video-modal').on('hidden.bs.modal', function() {
-              showInstructions();
-            });
+            appOptions.autoplayVideo.onClose = showInstructions;
           }
+          showVideoDialog(appOptions.autoplayVideo);
         } else if (hasInstructions) {
           showInstructions();
         }

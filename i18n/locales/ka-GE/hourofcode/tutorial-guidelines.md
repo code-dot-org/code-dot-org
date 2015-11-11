@@ -8,14 +8,14 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 # როგორ შევქმნათ ტუტორიალები კოდის ერთი საათისა™ და კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეულის ფარგლებში
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
+Code.org მრავალი სახის კოდის ერთი საათი™-ს აქტივობებს ჩაატარებს Code.org-ის, კოდის ერთი საათისა და CSEdWeek-ის ვებგვერდებზე. მიმდინარე სიები არის აქ [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 ჩვენი უმთავრესი მიზანია ოპტიმალური პირობები შევქმნათ იმ მოსწავლეებისა და მასწავლებლებისთვის, ვინც პირველად გაცენობა ინფორმატიკას. დაგეგმეთ თქვენი აქტივობები პროგრამირებასა და ინფორმატიკაში აბსოლუტურად გამოუცდელი მოსწავლეების გათვალისწინებით.
 
   
 
 
-**ამ სახელმძღვანელოს წაკითხვის შემდეგ თქვენი ტუტორიალის მოწოდება შეგიძლიათ [კოდის ერთი საათის™ აქტივობის გაზიარების გვერზე](http://goo.gl/forms/6GSklaO9Oa).**
+**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
 
 **სიხალე:** ვგეგმათ წარვადგინოთ ახალი ფორმატი კოდის ერთი საათის იმ აქტივობებისთვის, რომელთაც მასწავლებელი წარუძღვრება. ეს აქტივობები ჩამოთვლილი იქნება დამოუკიდებელი აქტივობების ბოლოს, მოსწავლეებისთვის განკუთვნილ გვერდებსა და წერილებში. დაწვრილებით – დაბლა.
 
@@ -23,7 +23,7 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
 ## სარჩევი:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [კოდის ერთი საათის™ აქტივობების შექმნის ზოგადი ინსტრუქცია](#guidelines)
   * [როგორ შეფასდება ტუტორიალის ინკლუზიურობა](#inclusion)
   * [წარდგენის წესები (ვადა: 10/15/2015)](#submit)
   * [რჩევები აქტივობებთან დაკავშირებით](#design)
@@ -34,37 +34,37 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
 <a id="guidelines"></a>
 
-## New for 2015: two formats of activites: self-guided or *lesson-plan*
+## New for 2015: two formats of activities: self-guided or *lesson-plan*
 
-Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
+რადგან უკვე ათი ათასობით მასწავლებელმა სცადა კოდის საათი, მრავალი კლასი ისეთი აქტივობებისთვისაა მზად, რომლებიც უფრო კრეატიულია, ნაკლებად ერთგანზომილებიანი და იძლევა კომპიუტერული მეცნიერების საფუძვლების შესწავლის საშუალებას. მასწავლებლებისთვის შთაგონების პოვნაში დასახმარებლად, გვსურს კოდის ერთი საათის ვეტერანებისთვის "მასწავლებლების მიერ ჩატარებული" ერთსაათიანი გაკვეთილებისა და აქტივობების გეგმების შეგროვება და კურირება. ჩვენ ასევე განვაგრძობთ "თვითშემსწავლი" ფორმატის პოპულარიზაციას.
 
-**Submit a Teacher-Led Lesson Plan, ideally for different subject areas *(NEW)***: Do you have an engaging or unique idea for an Hour of Code lesson? Some educators may prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We would love to collect **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+**გამოაგზავნეთ მასწავლებლის მიერ ჩატარებული გაკვეთილის გეგმა, საუკეთესო შემთხვევაში, სხვადასხვა საგნისთვის *(ახალი)***: გაქვთ მიმზიდველი ან უნიკალური იდეა კოდის ერთი საათის გაკვეთილისთვის? შესაძლოა ზოგიერთ მასწავლებელს კოდის ერთი საათის აქტივობების ჩატარება არა თავსატეხებსა და თამაშებზე დაფუძნებით, არამედ ტრადიციული საგაკვეთილო ფორმატით ერჩივნოს. სწორი ხელშეწყობის შემთხვევაში ღია აქტივობებით უკეთ შეიძლება კომპიუტერული მეცნიერების კრეატიული ბუნების წარმოჩენა. ჩვენ სიამოვნებით შევაგროვებთ **სხვადასხვა საგნისთვის განკუთვნილ ერთსაათიან გაკვეთილის გეგმებს**. მაგალითად, გეომეტრიის გაკვეთილზე პროგრამირების სწავლების ერთსაათიანი გაკვეთილის გეგმა. ან სიტყვიერი (Mad-lib) სავარჯიშო ინგლისურის გაკვეთილისთვის. ან ტესტირება-შემოქმედების კრეატიული აქტივობა ისტორიის გაკვეთილისთვის. ეს დაგვეხმარება სხვა საგნის მასწავლებლების აყვანაში, რომელთაც კოდის ერთი საათის უნიკალური აქტივობის ჩატარება შეეძლებათ თავიანთ სფეროში, რაც წარმოაჩენს იმას, თუ როგორ შეუძლია კომპიუტერულ მეცნიერებას იქონიოს გავლენა და განავითაროს მრავალი განსხვავებული დარგი.
 
-You can start with this [empty template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) for your lesson plan.
+თქვენი გაკვეთილის გეგმისთვა შეგიძლიათ ამ [ცარიელი თარგით](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) დაიწყოთ.
 
-Examples:
+მაგალითები:
 
-  * [Mirror Images (an activity for an art teacher)](https://csedweek.org/csteacher/mirrorimages.pdf)
-  * [An arduino activity for a physics teacher](https://csedweek.org/csteacher/arduino.pdf)
-  * [A history of technology activity for a history teacher](https://csedweek.org/csteacher/besttechnology.pdf)
+  * [სარკული ანარეკლები (აქტივობა ხელოვნების მასწავლებლისთვის)](https://csedweek.org/csteacher/mirrorimages.pdf)
+  * [არდუინოსთან დაკავშირებული აქტივობა ფიზიკის მასწავლებლისთვის](https://csedweek.org/csteacher/arduino.pdf)
+  * [ტექნოლოგიის ისტორიასთან დაკავშირებული აქტივობა ისტორიის მასწავლებლისთვის](https://csedweek.org/csteacher/besttechnology.pdf)
 
-[<button>How can I submit my own lesson plan?</button>](#submit)
+[<button>როგორ შემიძლია საკუთარი სასწავლო გეგმის გამოგზავნა?</button>](#submit)
 
   
   
-**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. იდეალურ შემთხვევაში, მითითებები და გაკვეთილები პირდაპირ პროგრამირების პლატფორმასთანაა ინტეგრირებული ტაბების ან ფანჯრების გაცვლის თავიდან ასაცილებლად გაკვეთილსა და პროგრამირების პლატფორმას შორის.
+**მოსწავლეების მიერ ჩატარებული (თვითშემსწავლი) ფორმატი**: კოდის ერთი საათი თავიდან ძირითადად თვითშემსწავლი გაკვეთილებისა და ტუტორიალების წარმატებაზე დაფუძნდა, სადაც მასწავლებელი მხოლოდ სურვილისამებრ უწყობდა ხელს მოსწავლეებს. არჩევანი მრავალფეროვანია, მაგრამ თუ გსურთ ახლის შექმნა, ეს აქტივობები სახალისო უნდა იყოს მარტო მომუშავე მოსწავლისთვის ან კლასისთვის, სადაც მასწავლებელი მინიმალურადაა მომზადებული ან თითქმის არ გააჩნია ცოდნა კომპიუტერულ მეცნიერებაში. მოსწავლეებისთვის უნდა იყოს მითითებები და არა ღია ერთსაათიანი გამოწვევა. იდეალურ შემთხვევაში, მითითებები და გაკვეთილები პირდაპირ პროგრამირების პლატფორმასთანაა ინტეგრირებული ტაბების ან ფანჯრების გაცვლის თავიდან ასაცილებლად გაკვეთილსა და პროგრამირების პლატფორმას შორის.
 
-Note: On student-facing pages we'll list teacher-led activities *below* the self-guided ones, but we'll specifically call them out on pages or emails meant for educators.
+შენიშვნა: მოსწავლეებისთვის განკუთვნილ გვერდებზე მასწავლებლების მიერ ჩატარებული აქტივობები სიაში თვითშემსწავლი აქტივობების *ქვეშ* იქნება განთავსებული, მაგრამ მასწავლებლებისთვის განკუთვნილ გვერდებსა და ელ. წერილებში მათ სპეციფიურად გამოვყოფთ.
 
 ## კოდის ერთი საათის™ აქტივობების შექმნის ზოგადი ინსტრუქცია
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming (not HTML). The tone should be that:
+კოდის ერთი საათის მიზანია საშუალება მისცეს ახალბედებს, პირველად გამოსცადონ თავი კომპიუტერულ მეცნიერებასა ან პროგრამირებაში (არა HTML). ძირითადი მოტივაცია ასეთია:
 
-  * Computer science is not just for geniuses, regardless of age, gender, race. Anybody *can* learn!
+  * კომპიუტერული მეცნიერება არაა მხოლოდ გენიოსებისთვის, მიუხედავად ასაკისა, სქესისა და რასისა. ნებისმიერს *შეუძლია* სწავლა!
   * კომპიუტერული მეცნიერება მრავალი სახის ინტერესსა და სფეროს უკავშირდება. ყველასთვის *სასურველია* სწავლა!
   * გაამხნევეთ მოსწავლეები რომ შექმნან რამე, რისი გაზიარებაც მეგობრებთან/ონლაინ შეიძლება.
 
-**Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
+**ტექნიკური მოთხოვნები**: სასკოლო და საკლასო ტექნოლოგიური მოწყობილობების სიმრავლის გამო, საუკეთესო აქტივობებად ითვლება ინტერნეტზე დაფუძნებული ან სმარტფონთან შეთავსებადი, ან, სხვა შემთხვევაში, უსადენო აქტივობები, რომლებიც კომპიუტერული მეცნიერების ცნებების შესწავლს საშუალებას კომპიუტერის გამოყენების გარეშე იძლევა (იხილეთ <http://csunplugged.com/>). აქტივობა, რომელიც საჭიროებს აპლიკაციის დაყენებას, დესკტოპის აპლიკაციას ან თამაშის კონსოლის გამოცდილებას კარგია, მაგრამ არა იდეალური.
 
 [**ზემოთ დაბრუნება**](#top)
 
@@ -105,7 +105,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
   * ასწავლის მხოლოდ HTML + CSS ვებ–დიზაინს
   * მოწოდებულია საბოლოო ვადის შემდეგ ან შეიცავს არასრულ ინფორმაციას (იხ. დაბლა)
 
-**If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
+**თუ გაკვეთილი მოსწავლის მიერაა ჩატარებული** მოსწავლეების მიერ ჩატარებული გაკვეთილები ორიენტირებული უნდა იყოს ინდივიდზე და არ უნდა საჭიროებდეს მითითებებს კომპიუტერულ მეცნიერებასთან დაკავშირებით და დახმარებას მასწავლებლისგან
 
 ჩვენი საბოლოო მიზანია გავზარდოთ მოსწავლეების და მასწავლებლების ჩართულობა კომპიუტერულ მეცნირებაში, ვაჩვენოთ მათ, რომ კომპიუტერული მეცნიერება მისაწვდომია ყველასთვის და "უფრო მარტივია, ვიდრე გგონია". ამ მიზნის მიღწევა უფრო მარტივია, თუ სფეროსთან პირველი კონტაქტისთვის ავარჩევთ მცირე რაოდენობის, მაგრამ ყველაზე ხარისხიან მასალას, რაც საგრძნობლად გაუმარტივებს მასწავლებელს არჩევანს. გახსოვდეთ, რომ 2013 და 2014 წლების კოდის ერთი საათი იყო ფანტასტიკურად წარმატებული, მასში 120 მილიონზე მეტმა მოსწავლემ მიიღო მონაწილეობა, ჩვენ კი მივიღეთ უამრავი დადებითი შეფასება მასწავლებლებისგან. შედეგად, უკვე არსებული გაკვეთილები ძალიან კარგი ხარისხისაა. კოდის საათში გაკვეთილების დამატების ჩვენი დღევანდელი მიზანი არის არა არჩევანის, არამედ ხარისხის გაზრდა მოსწავლეებისთვის, ან, 2015 წლის ღონისძიების გლობალურობის გათვალისწინებით, არჩევანის გაფართოება არაინგლისურენოვანი მოსწავლეებისთვის.
 
@@ -115,7 +115,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 ## წარდგენის წესები (ვადა: 10/15/2015)
 
-ეწვიეთ [კოდის საათი™ აქტივობების წარდგენის გვერდს](http://goo.gl/forms/6GSklaO9Oa) და მიჰყევით ნაბიჯებს რათა წარადგინოთ თქვენი გაკვეთილი.
+Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
 **რა დაგჭირდებათ:**
 
@@ -150,11 +150,11 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
   * გთხოვთ ასევე გაითვალისწინოთ კომპიუტერული მეცნიერების რეკომენდებული ცოდნა კლასის დონეებისთვის: დამწყები, საშუალო ან მოწინავე. კოდის საათის ვებგვერდი ყველაზე მკაფიოდ დამწყებების აქტივობებს გაუსვამს ხაზს. თუ გსურთ კოდის საათი™-ს საშუალო და მოწინავე აქტივობების მომზადება, გთხოვთ გაითვალისწინოთ თქვენი აქტივობისთვის საჭირო ადრეული ცოდნა.
   * ტექნიკური საჭიროებები: 
       * იმისთვის, რომ უფრო ზუსტად ვადევნოთ თვალი მონაწილეობას, გვსურს ყოველ მესამე საერთო გაკვეთილის პარტნიორს თავისი კოდის საათის პირველ და ბოლო გვერდებზე 1-პიქსელიანი სამეთვალყურეო სურათი ჰქონდეს. მოათავსეთ საწყისი პიქსელ-სურათი საწყის გვერდზე და საბოლოო პიქსელ-სურათი საბოლოო გვერდზე. არ მოათავსოთ პიქსელები შუალედურ გვერდებზე). იხილეთ სამეთვალყურეო პიქსელის სექცია ქვემოთ მეტი დეტალისთვის. 
-      * აქტივობის დასრულებისას, მომხმარებლები უნდა გადამისამართდნენ [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
+      * აქტივობის დასრულებისას, მომხმარებლები უნდა გადამისამართდნენ [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) სადაც მათ შეეძლებათ: 
           * გააზიარეთ სოციალურ მედიაზე რომ მათ დაასრულეს კოდის საათი
           * მიიღეთ სერთიფიკატი, რომ მათ დაასრულეს კოდის საათი
           * იხილეთ ლიდერთა დაფა იმის შესახებ, თუ რომელი ქვეყნებს/ქალაქებს აქვთ მონაწილეობის უმაღლესი მაჩვენებელი კოდის საათის აქტივობებში
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
+          * გთხოვთ, იმ მომხმარებლებისთვის, რომლებიც ერთ საათს დაუთმობენ თქვენს აქტივობას და ვერ დაასრულებენ მას, აქტივობას დაურთოთ ღილაკი, რომელსაც ეწერება "მე დავასრულე ჩემი კოდის ერთი საათი" და რომელიც მომხმარებელს [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %)-ზე დააბრუნებს. 
   * *(ნებაყოფლობითი)* ჩვენ განვაგრძობთ ონლაინ გამოკითხვით/ფორმით, სადაც მოთხოვნილი იქნება მომდევნო აქტივობის მეტრიკის ანგარიში ერთი კვირისთვის, 7 დეკემბრის 12:01-დან 13 დეკემბრის 1:59-მდე) 
       * ონლაინ აქტივობებისთვის (განსაკუთრებით სმარტფონების/პლანშეტების აპლიკაციებისთვის): 
           * მომხმარებლების რაოდენობა

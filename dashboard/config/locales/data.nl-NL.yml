@@ -684,6 +684,7 @@
         infinity_playlab_intro: Play Lab - Inleiding
         infinity_playlab_events: Play Lab - Gebeurtenissen
         infinity_playlab_repeat_forever: Play Lab - Oneindig Herhalen
+        csp_applab_functions: Inleiding tot Functies
         csp_concept_rgb: Iets over pixels
         csp_pixelation_color_1: Kleur pixelation widget - Deel 1
         csp_pixelation_color_2: Kleur pixelation widget - Deel 2
@@ -712,6 +713,9 @@
         alg_15_biggame_update_player: CS in de Algebra - Big Game Update speler
         alg_16_biggame_collision_detection: CS in de Algebra - Big Game botsingdetectie
         alg_17_sambat_compound_booleans: CS in de Algebra - samengestelde Booleans
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok

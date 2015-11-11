@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,12 +126,9 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
-    "instructions": "Add 50 pieces of sea grass to the image by writing drawAllSeaGrass with a loop. (Click to see full instructions)",
-    "markdown_instructions": "# Add Sea Grass\r\n<img src=\"https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42 PM.png\" style=\"width: 200px; float: right\">\r\nOur new version of `drawSeaGrass` now draws a single piece of sea grass with a random height.  Now lets use a loop in `drawAllSeaGrass` to fill the sea floor with it.\r\n\r\n# Do This\r\n\r\n* **Add a `for` loop** to `drawAllSeaGrass` that draws about **50 pieces** of sea grass using your updated `drawSeaGrass` function\r\n\r\n",
+    "instructions": "Add 50 pieces of seagrass to the image by writing drawAllSeagrass with a loop. (Click to see full instructions)",
+    "markdown_instructions": "# Add Sea Grass\r\n<img src=\"https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42 PM.png\" style=\"width: 200px; float: right\">\r\nOur new version of `drawSeagrass` now draws a single piece of seagrass with a random height.  Now let's use a loop in `drawAllSeagrass` to fill the sea floor with it.\r\n\r\n# Do This\r\n\r\n* **Add a `for` loop** to `drawAllSeagrass` that draws about **50 pieces** of sea grass using your updated `drawSeagrass` function.\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -150,8 +146,6 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "project_template_level_name": "U3L07 - underTheSeaLoopsTemplate",
-    "app_width": "320",
-    "app_height": "450",
     "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
@@ -160,7 +154,12 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "submittable": "false",
-    "hide_view_data_button": "true"
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "Ml6koQEYgTLNy4k2nzHPZD6wsEGwWG6DSB8W37mGSqmmuSI4jPXWtWq9KgeC\nuBYV\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

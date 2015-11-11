@@ -1,6 +1,9 @@
 @eyes
 Feature: Looking at a few things with Applitools Eyes
 
+Background:
+  Given I am on "http://learn.code.org/reset_session"
+
 Scenario:
   When I open my eyes to test "bounce game"
   And I am on "http://learn.code.org/2014/1?noautoplay=true"
@@ -21,7 +24,7 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "freeplay artist sharing"
-  And I am on "https://studio.code.org/s/course3/stage/21/puzzle/15?noautoplay=true"
+  And I am on "http://studio.code.org/s/course3/stage/21/puzzle/15?noautoplay=true"
   When I rotate to landscape
   And I see no difference for "initial load"
   And I wait to see "#x-close"
@@ -89,6 +92,21 @@ Scenario:
   Given I am on "http://learn.code.org/s/allthethings/stage/17/puzzle/2?noautoplay=true"
   And I rotate to landscape
   And I see no difference for "level load"
+  And I close my eyes
+
+Scenario:
+  When I open my eyes to test "maze"
+  Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
+  And I rotate to landscape
+  And I wait to see "#x-close"
+  And I press "x-close"
+  # Let close animation finish
+  And I wait for 2 seconds
+  And I wait to see "#runButton"
+  And I press "runButton"
+  And I wait to see ".congrats"
+  And element ".congrats" is visible
+  And I see no difference for "maze feedback with blocks"
   And I close my eyes
 
 @dashboard_db_access
@@ -179,5 +197,5 @@ Scenario Outline: Simple page view without instructions dialog
   And I see no difference for "initial load"
   And I close my eyes
 Examples:
-  | url                                                                | test_name                 |
-  | http://learn.code.org/p/applab                                     | new applab project        |
+  | url                                                               | test_name                 |
+  | http://learn.code.org/projects/applab/new                         | new applab project        |

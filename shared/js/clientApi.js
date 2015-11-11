@@ -136,7 +136,7 @@ var base = {
   },
 
   /**
-   * Change the contents of an asset or source file.
+   * Replace the contents of an asset or source file.
    * @param {number} id - The collection identifier.
    * @param {String} value - The new file contents.
    * @param {String} filename - The name of the file to create or update.
@@ -155,8 +155,32 @@ var base = {
       var err = new Error('status: ' + status + '; error: ' + error);
       callback(err, false);
     });
+  },
+
+  /**
+   * Modify the contents of a collection
+   * @param {number} id - The collection identifier.
+   * @param {String} queryParams - Any query parameters
+   * @param {String} value - The request body
+   * @param {NodeStyleCallback} callback - Expected result is the new collection
+   *        object.
+   */
+  patchAll: function(id, queryParams, value, callback) {
+    $.ajax({
+      url: this.api_base_url + "/" + id + "/?" + queryParams,
+      type: "patch",
+      contentType: "application/json; charset=utf-8",
+      data: value
+    }).done(function(data, text) {
+      callback(null, data);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
+    });
   }
 };
+
+
 
 module.exports = {
   /**

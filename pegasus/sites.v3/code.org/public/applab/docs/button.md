@@ -9,7 +9,6 @@ embedded_layout: simple_embedded
 
 [/name]
 
-
 [category]
 
 Category: UI controls
@@ -20,9 +19,11 @@ Category: UI controls
 
 [short_description]
 
-Creates a button that you can click on. The button will display the text provided and can be referenced by the given id.
+Creates a button on the screen displaying the *text* provided and referenced by the given *ButtonId* at default location (0,0).
 
 [/short_description]
+
+Many apps use buttons to allow the user to initiate some app action. An event handler must be created for each type of user interaction with the button using [onEvent()](/applab/docs/onEvent) and the *buttonId*.
 
 [/description]
 
@@ -31,9 +32,9 @@ ____________________________________________________
 
 [example]
 
-
 ```
-button("demo","Click Me!"); // Create a button "Click Me"
+// Create a "Click Me" button.
+button("id", "Click Me!"); 
 ```
 
 [/example]
@@ -42,59 +43,36 @@ ____________________________________________________
 
 [example]
 
-**Simple Turtle**
-A button is often used with a click event. The click event is where you write code to execute when the button is clicked.
-In this example, every time you click the button the turtle will move forward 10 pixels.
-
+**Example: Simple Turtle Control 1** Move the turtle forward on every click of the button.
 
 ```
-// Buttons
-button("move10", "Move Forward 10"); // Go 10 pixels when clicked
-
-// Attach click event for each of the buttons
-onEvent("move10", "click", function(event) {
-  // Move forward 10 pixels
-  moveForward(10);
+// Move the turtle forward on every click of the button.
+button("forward", "Move Forward");
+onEvent("forward", "click", function(event) {
+  moveForward();
 });
 ```
 
 [/example]
 ____________________________________________________
 
-
 [example]
 
-**Interactive Turtle**
-In this example, we provide a more interactive turtle. Each time you click the button, the turtle either changes direction or moves the specified number of pixels.
-
+**Example: Simple Turtle Control 2** Move the turtle forward or backward depending on the button clicked.
 
 ```
-// Display Label
-textLabel("moveAmountLabel", "How Much?", "moveAmount");
-// User-specified number of pixels to move
-textInput("moveAmount", "10");
-// Buttons
-button("move", "Go");              // Go when clicked
-button("turnLeft", "Turn Left");   // Turn left when clicked
-button("turnRight", "Turn Right"); // Turn right when clicked
-
-// Attach click event for each of the buttons
-onEvent("move", "click", function(event) {
-  // Move forward specified pixels
-  moveForward(getText("moveAmount"));
+// Move the turtle forward or backward depending on the button clicked.
+button("forward", "Move Forward");
+button("backward", "Move Backward");
+onEvent("forward", "click", function(event) {
+  moveForward();
 });
-onEvent("turnLeft", "click", function(event) {
-  // Turn left 90 degrees
-  turnLeft(90);
-});
-onEvent("turnRight", "click", function(event) {
-  // Turn right 90 degrees
-  turnRight(90);
+onEvent("backward", "click", function(event) {
+  moveBackward();
 });
 ```
 
 [/example]
-
 ____________________________________________________
 
 [syntax]
@@ -102,11 +80,10 @@ ____________________________________________________
 ### Syntax
 
 ```
-button(buttonId,text)
+button(buttonId, text)
 ```
 
 [/syntax]
-
 
 [parameters]
 
@@ -114,21 +91,25 @@ button(buttonId,text)
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| buttonId | string | yes | A unique identifier for the button. The id is used for referencing the created button. For example, to assign event handlers. |
+| buttonId | string | yes | The unique identifier for the button. The buttonId is used for referencing the button in event handlers or other UI element modification functions. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |
 | text | string | yes | The text displayed within the button. |
+
 [/parameters]
 
 [returns]
 
 ### Returns
-No Return Value
+No return value. Modifies screen only.
 
 [/returns]
 
 [tips]
 
 ### Tips
-The button can also be used in design mode.
+- If there is another UI element at location (0,0) the button is placed at the next available position to the right or below.
+- There are various UI element modification functions available: [setText()](/applab/docs/setText), [showElement()](/applab/docs/showElement), [hideElement()](/applab/docs/hideElement), [deleteElement()](/applab/docs/deleteElement), [setPosition()](/applab/docs/setPosition), [setSize()](/applab/docs/setSize). 
+- There are various UI element query functions available: [getText()](/applab/docs/getText), [getXPosition()](/applab/docs/getXPosition), [getYPosition()](/applab/docs/getYPosition).
+- Buttons can also be created and initialized in Design mode.
 
 [/tips]
 

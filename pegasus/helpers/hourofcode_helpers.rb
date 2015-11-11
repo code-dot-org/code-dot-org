@@ -111,7 +111,7 @@ def codeorg_url()
 end
 
 def chapter_partner?
-  return %w(al ar br eu italia ro sg uk za).include?(@country)
+  return CDO.partners.include?(@country)
 end
 
 def resolve_url(url)
@@ -149,17 +149,20 @@ def campaign_date(format)
   end
 end
 
-def company_count(company)
-  company_count = 0;
-  DB[:forms].where(kind: 'HocSignup2015').each do |i|
-    data = JSON.parse(i[:data])
-    if data['hoc_company_s'] == company
-      company_count += 1
-    end
-  end
-  return company_count
+def company_count
+  return fetch_hoc_metrics['hoc_company_totals'][@company]
+end
+
+def country_count
+  code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
+  return fetch_hoc_metrics['hoc_country_totals'][code.upcase]
 end
 
 def solr_country_code
-  return HOC_COUNTRIES[@country]['solr_country_code']
+  code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
+  return code
+end
+
+def country_full_name
+  return HOC_COUNTRIES[@country]['full_name']
 end

@@ -61,7 +61,12 @@ end
 
 review '/v2/forms/:kind/:secret' do |kind, secret|
   dont_cache
-  forbidden! unless dashboard_user && dashboard_user[:admin]
+  case kind
+  when "HocSignup2015"
+    forbidden! unless dashboard_user && dashboard_user[:user_type] == 'teacher'
+  else
+    forbidden! unless dashboard_user && dashboard_user[:admin]
+  end
   forbidden! if settings.read_only
   unsupported_media_type! unless payload = request.json_body
 
@@ -79,9 +84,9 @@ post '/v2/forms/:kind/:secret/review' do |kind, secret|
   call(env.merge('REQUEST_METHOD'=>'REVIEW', 'PATH_INFO'=>"/v2/forms/#{kind}/#{secret}"))
 end
 
-get '/v2/forms/:kind/:secret/status/:status' do |kind, secret, status|
+get '/v2/forms/ProfessionalDevelopmentWorkshopSignup/:secret/status/cancelled' do |secret|
 
-  def send_receipts(kind, form)
+  def send_receipts(form)
     templates = ['workshop_signup_cancel_receipt','workshop_signup_cancel_notice']
     recipient = Poste2.create_recipient(form[:email], name: form[:name], ip_address: form[:updated_ip])
     templates.each do |template|
@@ -91,14 +96,13 @@ get '/v2/forms/:kind/:secret/status/:status' do |kind, secret, status|
   end
 
   dont_cache
-  form = DB[:forms].where(kind: kind, secret: secret).first
+  form = DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshopSignup', secret: secret).first
   forbidden! if form.empty?
   data = JSON.parse(form[:data])
-  pass unless ['cancelled'].include?(status)
-  data['status_s'] = status
-  DB[:forms].where(kind: kind, secret: secret).update(data: data.to_json, indexed_at: nil)
+  data['status_s'] = 'cancelled'
+  DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshopSignup', secret: secret).update(data: data.to_json, indexed_at: nil)
 
-  send_receipts(kind, form);
+  send_receipts(form)
 
   content_type :json
   data.to_json

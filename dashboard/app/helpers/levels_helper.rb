@@ -1,4 +1,5 @@
 require 'digest/sha1'
+require 'dynamic_config/gatekeeper'
 
 module LevelsHelper
   include ApplicationHelper
@@ -28,18 +29,15 @@ module LevelsHelper
   #   using the value from the `data` param.
   def create_channel(data = {}, src = nil)
 
-    result = ChannelsApi.call(request.env.merge(
-      'REQUEST_METHOD' => 'POST',
-      'PATH_INFO' => '/v3/channels',
-      'REQUEST_PATH' => '/v3/channels',
-      'QUERY_STRING' => src ? "src=#{src}" : '',
-      'CONTENT_TYPE' => 'application/json;charset=utf-8',
-      'rack.input' => StringIO.new(data.to_json)
-    ))
-    headers = result[1]
+    storage_app = StorageApps.new(storage_id('user'))
+    if src
+      data = storage_app.get(src)
+      data['name'] = "Remix: #{data['name']}"
+      data['hidden'] = false
+    end
 
-    # Return the newly created channel ID.
-    headers['Location'].split('/').last
+    timestamp = Time.now
+    storage_app.create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
   end
 
   def readonly_view_options
@@ -123,14 +121,18 @@ module LevelsHelper
 
   # Options hash for all level types
   def app_options
+    # Unsafe to generate these twice, so use the cached version if it exists.
+    return @app_options unless @app_options.nil?
+
     set_channel if @level.channel_backed?
 
-    callouts = params[:share] ? [] : select_and_remember_callouts(params[:show_callouts])
-    # Set videos and callouts.
-    view_options(
-      autoplay_video: select_and_track_autoplay_video,
-      callouts: callouts
-    )
+    unless params[:share]
+      # Set videos and callouts.
+      view_options(
+        autoplay_video: select_and_track_autoplay_video,
+        callouts: select_and_remember_callouts(params[:show_callouts])
+      )
+    end
 
     # External project levels are any levels of type 'external' which use
     # the projects code to save and load the user's progress on that level.
@@ -138,16 +140,42 @@ module LevelsHelper
 
     view_options(is_channel_backed: true) if @level.channel_backed?
 
+    post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
+    view_options(post_milestone: post_milestone)
+
     if @level.is_a? Blockly
-      blockly_options
+      @app_options = blockly_options
     elsif @level.is_a? DSLDefined
-      dsl_defined_options
+      @app_options = dsl_defined_options
     elsif @level.is_a? Widget
-      widget_options
+      @app_options = widget_options
+    elsif @level.unplugged?
+      @app_options = unplugged_options
     else
       # currently, all levels are Blockly or DSLDefined except for Unplugged
-      view_options.camelize_keys
+      @app_options = view_options.camelize_keys
     end
+    @app_options
+  end
+
+  # Helper that renders the _apps_dependencies partial with a configuration
+  # appropriate to the level being rendered.
+  def render_app_dependencies
+    use_droplet = app_options[:droplet]
+    use_netsim = @level.game == Game.netsim
+    use_applab = @level.game == Game.applab
+    use_blockly = !use_droplet && !use_netsim
+    hide_source = app_options[:hideSource]
+    render partial: 'levels/apps_dependencies',
+           locals: {
+               app: app_options[:app],
+               use_droplet: use_droplet,
+               use_netsim: use_netsim,
+               use_blockly: use_blockly,
+               use_applab: use_applab,
+               hide_source: hide_source,
+               static_asset_base_path: app_options[:baseUrl]
+           }
   end
 
   # Options hash for Widget
@@ -155,6 +183,14 @@ module LevelsHelper
     app_options = {}
     app_options[:level] ||= {}
     app_options[:level].merge! @level.properties.camelize_keys
+    app_options.merge! view_options.camelize_keys
+    app_options
+  end
+
+  def unplugged_options
+    app_options = {}
+    app_options[:level] ||= {}
+    app_options[:level].merge! level_view_options
     app_options.merge! view_options.camelize_keys
     app_options
   end
@@ -176,7 +212,7 @@ module LevelsHelper
   # Options hash for Blockly
   def blockly_options
     l = @level
-    throw ArgumentError("#{l} is not a Blockly object") unless l.is_a? Blockly
+    raise ArgumentError.new("#{l} is not a Blockly object") unless l.is_a? Blockly
     # Level-dependent options
     app_options = l.blockly_options.dup
     level_options = app_options[:level] = app_options[:level].dup
@@ -200,6 +236,7 @@ module LevelsHelper
     # Script-dependent option
     script = @script
     app_options[:scriptId] = script.id if script
+    app_options[:scriptName] = script.name if script
 
     # ScriptLevel-dependent option
     script_level = @script_level
@@ -257,6 +294,7 @@ module LevelsHelper
     app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
     app_options[:isAdmin] = true if (@game == Game.applab && current_user && current_user.admin?)
+    app_options[:isSignedIn] = !current_user.nil?
     app_options[:pinWorkspaceToBottom] = true if enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if enable_scrolling?
     app_options[:showExampleTestButtons] = true if enable_examples?
@@ -265,6 +303,7 @@ module LevelsHelper
         fallback_response: @fallback_response,
         callback: @callback,
     }
+
     level_options[:lastAttempt] = @last_attempt
 
     if current_user.nil? || current_user.teachers.empty?
@@ -292,7 +331,7 @@ module LevelsHelper
     app_options
   end
 
-  LevelViewOptions = Struct.new *%i(
+  LevelViewOptions = Struct.new(*%i(
     success_condition
     start_blocks
     toolbox_blocks
@@ -301,7 +340,10 @@ module LevelsHelper
     embed
     share
     hide_source
-  )
+    script_level_id
+    submitted
+    unsubmit_url
+  ))
   # Sets custom level options to be used by the view layer. The option hash is frozen once read.
   def level_view_options(opts = nil)
     @level_view_options ||= LevelViewOptions.new

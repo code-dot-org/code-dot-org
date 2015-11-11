@@ -1,6 +1,5 @@
 /* global $ */
 
-var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
@@ -25,7 +24,7 @@ var ImageProperties = React.createClass({
       <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true} />
         <PropertyRow
@@ -81,7 +80,7 @@ var ImageEvents = React.createClass({
   },
 
   getClickEventCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
       '  console.log("' + id + ' clicked!");\n' +
@@ -102,7 +101,7 @@ var ImageEvents = React.createClass({
       <div id='eventRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
         <EventHeaderRow/>
@@ -128,10 +127,10 @@ module.exports = {
 
     return element;
   },
-  onDeserialize: function (element, onPropertyChange) {
+  onDeserialize: function (element, updateProperty) {
     var url = element.getAttribute('data-canonical-image-url');
     if (url) {
-      onPropertyChange(element, 'picture', url);
+      updateProperty(element, 'picture', url);
     }
   }
 };

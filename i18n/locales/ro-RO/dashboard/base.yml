@@ -2,7 +2,7 @@ ro:
   errors:
     messages:
       not_saved: 'Te rog să corectezi următoarele greșeli:'
-      too_young: This content has age restrictions in place and is not available for younger students
+      too_young: Acest conținut are restricţii de vârstă şi nu este disponibilă pentru elevi mai tineri
   activerecord:
     errors:
       messages:
@@ -307,8 +307,10 @@ ro:
       viewing_solution: Indicator soluție
       try_it_yourself: Încearcă-l și tu
       section: Secţiune
-      example: Example Solution
-      example_with_number: 'Example Solution %{solution_number}'
+      example: Exemplu soluţie
+      example_with_number: 'Exemplu soluţie %{solution_number}'
+      submitted_on: 'Înregistrat la %{date}'
+      unsubmit: Retrage
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
     email_confirm_needed_required: 'Adresa ta de e-mail %{email} nu a fost confirmată:'
@@ -370,8 +372,8 @@ ro:
     choose_next_course: Încearcă un curs la Studio-ul Code alegând unul de mai jos
     print_certificate: Tipărește certificatul
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with code.
+    title: Învață pe Code Studio
+    description: Oricine poate învăţa ştiinţa calculatoarelor. Face jocuri, aplicaţii şi artă cu cod.
   gender:
     male: De sex masculin
     female: De sex feminin
@@ -380,23 +382,24 @@ ro:
     student: elev
     teacher: Profesor
   footer:
-    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
+    thank_you: 'Mulțumim la <a href="https://code.org/about/donors">donatorii</a>,<a href="https://code.org/about/partners">partenerii</a>,<a href="https://code.org/about/team">echipa extinsă</a>,producătorilor de imagine, și<a href="https://code.org/about/advisors">consilierii educaționali</a>Pentru sprijinul lor în creearea Code Studio.'
     help_from_html: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat la crearea acestui tutorial.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
+    help_from_html_old: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat la crearea acestor materiale.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Toate Drepturile Rezervate.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html_old: 'Păsări nervoase &#8482; &amp; © 2009-%{current_year} Rovio Entertainment Ltd. Toate drepturile rezervate. < br / > plante vs Zombies &#8482; &amp; © %{current_year} Electronic Arts Inc Toate drepturile rezervate'
     powered_by_aws: Susținut de Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
-    copyright: Copyright
+    trademark: '© Code.org, %{current_year}. Code.org®, cod logo-ul şi ora de cod ® sunt mărci comerciale ale Code.org.'
+    copyright: Drept de autor
     more: Mai mult
     feedback: Oferă feedback
     translate: 'Ajută-ne să  traducem în limba ta'
     support: Suport
     support_url: http://support.code.org/
-    tos_short: Terms
-    tos: Termeni
+    tos_short: Termeni
+    tos: Termeni şi condiţii de utilizare
     privacy: Politică de confidențialitate
     secure: Versiunea Securizată
+    report_abuse: Raportează abuz
   reference_area:
     title: Ai nevoie de ajutor?
     subtitle: Vezi aceste clipuri video şi sugestii
@@ -518,7 +521,7 @@ ro:
   dialog:
     ok: OK
     startover_title: Ești sigur că dorești să reîncepi?
-    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_body: Acest lucru va reseta puzzle-ul la starea sa inițială şi va şterge tot ce ai adăugat sau modificat.
     startover_ok: Reîncepe
     startover_cancel: Anulează
   time:
@@ -603,8 +606,24 @@ ro:
     view_all: Vizualizează proiectele mele
     remix: Remix
     click_to_remix: 'Fă clic pe "Remix" pentru a-ți crea propria ta versiune!'
-    edit_project: Edit Project
+    edit_project: Editare proiect
     abuse:
-      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
-      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
-      go_to_code_studio: Go to Code Studio
+      tos: "Acest proiect a fost raportat pentru încălcarea Code.org pe <a href='http://code.org/tos'> Termenii de serviciu</a> şi nu pot fi partajate cu alţii."
+      contact_us: "Dacă credeţi că acest lucru să fie o eroare, vă rugăm să <a href='https://code.org/contact'> contact.</a>"
+      go_to_code_studio: Du-te la Code Studio
+      report_abuse_form:
+        intro: Dacă aţi întâlnit conţinut ofensator, ameninţări, ciberbullying, hărţuire sau o instanţă a încălcării drepturilor de autor pentru conţinut care vă aparține, în timpul utilizării aplicațiilor construite în Studio-ul Code, vă rugăm să completaţi formularul de mai jos. Vom lua în considerare raportul dumneavoastră în mod foarte serios, vom investiga în mod corespunzător şi vom lua măsuri corespunzătoare.
+        validation:
+          email: Vă rugăm să furnizaţi o adresă de e-mail
+          age: Vă rugăm să specificaţi o vârstă
+          abuse_type: Vă rugăm să răspundeţi cum acest conţinut încalcă termenii serviciului
+          abuse_detail: Vă rugăm să oferiți detalii cu privire la conţinutul pe care îl raportați
+        abusive_url: URL-ul conţinutului care este raportat
+        abuse_type:
+          question: 'Cum încalcă %{link_start}Termenii serviciului%{link_end} acest conținut?'
+          harassment: Ameninţări, cyberbullying, hărțuire
+          offensive: Conținut ofensiv
+          infringement: Încălcarea drepturilor de autor
+          other: Alte
+        detail: Vă rugăm să oferiți cât mai multe detalii posibil cu privire la conţinutul pe care îl raportați.
+        acknowledge: 'Prin trimiterea acestor informaţii, sunteţi de acord că acesta vor fi gestionate în conformitate cu termenii %{link_start_privacy}Politicii de confidențialitate%{link_end} și %{link_start_tos}Termenii și condițiile de utilizare a serviciilor%{link_end}'

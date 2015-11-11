@@ -1,7 +1,8 @@
 pt:
-  site_name: HORA de CÓDIGO
+  site_name: HORA do CÓDIGO
+  hour_of_code: Hora do Código
   language: Português (Brasil)
-  front_title: Junte-se ao maior evento de aprendizagem da história, do dia 7 ao dia 13 de dezembro de 2015
+  front_title: 'Junte-se ao maior evento de aprendizagem da história, %{campaign_date} 2015'
   coming_soon: Em breve
   campaign_date_start_short: 7 de dezembro
   campaign_date_start_long: 7 de dezembro
@@ -14,8 +15,11 @@ pt:
   header_menu_resources: Recursos
   header_menu_faq: Perguntas Frequentes
   header_menu_prizes: Prêmios
+  header_menu_how_to: Guia prático
+  header_menu_promote: Divulgue
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -49,6 +53,7 @@ pt:
   company_chelmsfordpublicschooldistrict: Chelmsford School District
   company_cheneysd: Cheney School District
   company_chesterfieldschools: Chesterfield County Public Schools
+  company_codebrooklyn: Code Brooklyn
   company_cps: Chicago Public Schools
   company_ccsd: Clark County School District
   company_cloverparkschooldistrict: Clover Park School District
@@ -72,6 +77,7 @@ pt:
   company_vadoe: "Governor's School Programs"
   company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
+  company_godaddy: Go Daddy
   company_greenupcountyschooldistrict: Greenup County Schools
   company_gwinnettcountypublicschools: Gwinnett County Public Schools
   company_HamptonCitySchools: Hampton City Schools
@@ -105,6 +111,7 @@ pt:
   company_oneclay: One Clay County School District
   company_ocps: Orange County Schools
   company_orangeusd: Orange Unified School District
+  company_pbsd: Palm Beach School District
   company_pvusd: Paradise Valley Unified School District
   company_PetersburgCityPublicSchools: Petersburg City Public Schools
   company_pylusd: Placentia-Yorba Linda Union School District
@@ -118,6 +125,7 @@ pt:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -130,6 +138,7 @@ pt:
   company_wvsd208: West Valley School District
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
+  company_yelp: Yelp
   prizes_all: Prêmios para os organizadores
   prizes_every_organizer: Todo organizador da Hora do Código ganhará espaço no Dropbox ou crédito no Skype como forma de agradecimento
   prizes_technology: Uma escola pública de cada Estado dos EUA (e Washington DC) ganhará US$10 mil em tecnologia
@@ -138,15 +147,6 @@ pt:
   prizes_brilliant: Uma escola de cada província e território receberá US$2.000 para um Projeto Brilhante
   prizes_actua: Dentre as escolas do Canadá, as 15 sorteadas ganharão 2 oficinas práticas de STEM de um dos membros da Actua
   prizes_details: Detalhes
-  prizes_nav_dc: Viagem misteriosa para Washington D.C.
-  prizes_nav_technology: US$10.000 em tecnologia para sua escola
-  prizes_nav_video_chat: Chat com vídeo com um dos titãs da tecnologia
-  prizes_nav_skype_dropbox: Crédito no Skype ou espaço no Dropbox para cada organizador
-  prizes_nav_brilliant: US$2.000 para o projeto Brilliant Labs
-  prizes_nav_actua: Workshop da Actua
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Termos e Condições
-  prizes_nav_faq: Perguntas Frequentes
   nav_back_to_resources: Voltar para recursos
   how_to_nav_educators: Para educadores
   how_to_nav_after_school: Para atividade extracurricular
@@ -155,11 +155,30 @@ pt:
   how_to_nav_districts: Para cidades
   how_to_nav_assemblies: Para a escola toda
   how_to_nav_organizations: Para Organizações
+  how_to_nav_companies: Para empresas
+  how_to_nav_afterschool_educators: Para educadores em atividades extracurriculares
+  how_to_nav_volunteers: Para voluntários
+  prizes_nav_title: Prêmios
+  prizes_nav_home: Todos os prêmios
+  prizes_nav_hardware: Cadastro para o prêmio de hardware
+  prizes_nav_terms: Termos e Condições
+  prizes_nav_faq: Tire suas dúvidas
+  prizes_nav_dc: Viagem misteriosa para Washington D.C.
+  prizes_nav_technology: US$10.000 em tecnologia para sua escola
+  prizes_nav_video_chat: Chat com vídeo com um dos titãs da tecnologia
+  prizes_nav_skype_dropbox: Crédito no Skype ou espaço no Dropbox para cada organizador
+  prizes_nav_brilliant: US$2.000 para o projeto Brilliant Labs
+  prizes_nav_actua: Workshop da Actua
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_header: Prêmios para todos os educadores
+  prizes_10k: Uma escola pública de cada Estado dos EUA (e Washington D.C.) ganhará US$10 mil em tecnologia
+  prizes_gift_cards: '<i>Cada</i> organizador vai receber <b>US$10,00 na Amazon.com, no iTunes ou na Windows Store</b> como presente de agradecimento!'
   whats_next_header: O que vem depois?
   whats_next_description: "Enviaremos materiais e dicas para seu evento. Novos tutoriais para 2015 estarão disponíveis em breve para qualquer navegador, smartphone ou até mesmo para fazer offline! <a href='http://code.org/learn'>Experimente nossos tutoriais</a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Como fazer uma Hora do Código</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Divulgue a Hora do Código</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>Como promover a Hora do Código</a>"
+  whats_next_how_to: "<a href='/how-to'>Como fazer uma Hora do Código</a>"
+  whats_next_promote: "<a href='/promote'>Divulgue a Hora do Código</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>Como promover a Hora do Código</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>Como promover a Hora do Código</a>"
   whats_next_try: "<a href='http://code.org/learn'>Experimente os tutoriais</a>"
   whats_next_try_button: Experimente os tutoriais
   n_have_learned_an_hoc: '<h1>Experimente uma</h1><h2>Hora de Código</h2><h3># served</h3>'
@@ -186,6 +205,7 @@ pt:
   front_join_us_computer_science: Você simplesmente é apaixonado por ciência da computação?
   front_join_us_spread: Espalhe a notícia.
   front_join_us_spread_word: Divulgue o evento em sua comunidade
+  front_join_us_spread_word_work: Divulgue em sua comunidade ou local de trabalho
   front_join_us_organize: Ou organize seu próprio evento da Hora do Código.
   front_join_us_how_to_run: Apresentamos aqui como organizar uma Hora do Código
   front_join_us_help_promote: Ajude a promover a Hora do Código
@@ -198,6 +218,7 @@ pt:
   front_join_us_support: Apoie
   front_join_us_more_info: "Para obter mais informações, visite: <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: 'Para obter mais informações, visite: code.org'
+  front_join_us_n_students_served: número de alunos atendidos
   signup_header: 'Organize uma Hora do Código durante %{campaign_date} e registre-a aqui.'
   signup_name_label: Seu nome
   signup_email_label: Seu e-mail
@@ -207,7 +228,7 @@ pt:
   signup_event_location_label: Local do evento (opcional)
   signup_special_event_flag_label: Destaque meu evento especial
   signup_special_event_details_label: Detalhes do evento especial
-  signup_send_posters_flag_label: 'Envie <a href= "/resources/promote#posters">cartazes</a> para minha escola ou organização'
+  signup_send_posters_flag_label: 'Envie <a href= "/resources/promote#posters">cartazes</a> para a minha escola ou organização (válido somente para os EUA)'
   signup_send_posters_address_label: Endereço da escola ou organização
   signup_whole_school_flag_label: Este evento é para a escola inteira
   signup_your_event: Registre seu evento
@@ -227,11 +248,15 @@ pt:
   map_header: '# Eventos da Hora do Código ao redor do mundo'
   see_all_events: Ver todos os eventos
   map_header_company: '# por empresa'
+  map_header_country: '# no(a) %{country}'
   map_search_placeholder: Pesquisar eventos da Hora do Código
   map_search_search: Pesquisar
   map_search_reset: Redefinir
+  map_legend_title: Lenda
+  map_legend_hoc_events: Evento da Hora do Código
+  map_legend_cs_tech_jam: Evento especial
   meta_tag_og_title: A Hora do Código chegou!
-  meta_tag_og_description: A Hora do Código é um movimento global que atinge dezenas de milhões de estudantes em mais de 180 países e mais de 30 idiomas. Podem participar pessoas com idades entre 4 e 104 anos.
+  meta_tag_og_description: A Hora do Código é um movimento global que atinge dezenas de milhões de estudantes em mais de 180 países e mais de 40 idiomas. Podem participar pessoas com idades entre 4 e 104 anos.
   meta_tag_twitter_title: A Hora do Código chegou!
   meta_tag_twitter_description: A Hora do Código é um movimento global que atinge dezenas de milhões de estudantes em mais de 180 países e mais de 30 idiomas. Podem participar pessoas com idades entre 4 e 104 anos.
   twitter_default_text: 'Vou participar da #HoraDoCodigo deste ano, e você? @codeorg'
@@ -248,8 +273,12 @@ pt:
   hardware_prizes_form_school_type_option_middle_school: Ensino Fundamental II
   hardware_prizes_form_school_type_option_high_school: Ensino Médio
   hardware_prizes_form_qualifying_school_label: Essa é uma escola pública de ensino fundamental e médio
+  hardware_prizes_form_title_I_school_label: Essa escola se qualifica para o financiamento Título I
+  hardware_prizes_form_title_I_school_help_text: Escolas de Título I são escolas com grande número ou altas porcentagens de crianças de famílias de baixa renda que recebem fundos federais para ajudar a garantir que todas as crianças atinjam os padrões acadêmicos do estado.
   hardware_prizes_form_number_students_label: Número de estudantes participantes
   hardware_prizes_form_number_students_placeholder: Número de estudantes
+  hardware_prizes_form_technology_plan_label: Como você vai usar a nova tecnologia para ajudar a expandir o ensino de ciência da computação na sua escola?
+  hardware_prizes_form_technology_plan_placeholder: Plano para usar a nova tecnologia
   hardware_prizes_form_plan_file_label: Faça o upload do seu plano de logística para a Hora do Código
   hardware_prizes_form_plan_file_description: 'Apresente um cronograma simples de como você planeja organizar cada aluno para fazer a Hora do Código na sua escola. Veja um exemplo de plano: #PDF # | #Word #'
   hardware_prizes_form_submit_label: Enviar
@@ -262,15 +291,15 @@ pt:
   hoc_faq_why_cs_q: Por que ciência da computação?
   hoc_faq_why_cs_a: "<i>Todo</i> aluno deveria ter a oportunidade de aprender ciência da computação, pois ela ajuda a desenvolver habilidades de resolução de problemas, lógica e criatividade. Começando cedo, os alunos terão uma base importante para serem bem-sucedidos em qualquer carreira do século 21. Veja os dados estatísticos em <a href='%{codeorg_url}'>%{partner_url}</a>."
   hoc_faq_how_participate_q: Como participar da Hora do Código?
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Comece a planejar aqui</a>, leia nosso guia prático. Você pode organizar um evento da Hora do Código na sua escola ou na sua comunidade &mdash; como em um clube de atividades extracurriculares, uma instituição sem fins lucrativos ou no trabalho. Ou, apenas experimente você mesmo quando %{campaign_date} chegar."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Comece a planejar aqui</a>, leia nosso guia prático. Você pode organizar um evento da Hora do Código na sua escola ou na sua comunidade &mdash; como em um clube de atividades extracurriculares, uma instituição sem fins lucrativos ou no trabalho. Ou, apenas experimente você mesmo quando %{campaign_date} chegar."
   hoc_faq_behind_hoc_q: De quem é a ideia da Hora do Código?
   hoc_faq_behind_hoc_a: "A Hora do Código é organizada pela <a href='https://code.org'>Code.org</a>, uma instituição pública sem fins lucrativos dedicada a promover e a tornar a ciência da computação disponível ao maior número de escolas possível e garantindo que chegue também à minorias sociais, empoderando, por exemplo, mulheres e negros à participação nesta área. Hoje, a Code.org já conta com o apoio e incentivo de um <a href='%{codeorg_url}/about/partners'>grupo de parceiros sem precedentes</a> na realização da Hora do Código &mdash; dentre eles Microsoft, Apple, Amazon, Boys and Girls Clubs of America e College Board."
   hoc_faq_host_q: Não sei nada sobre programação. Ainda assim posso sediar um evento?
-  hoc_faq_host_a: "Pode, sim! As atividades da Hora do Código são autoexplicativas. Tudo o que você precisa fazer é <a href='%{codeorg_url}/learn'>experimentar nossos tutoriais</a>, escolher um tutorial e uma hora &mdash; nós tomamos conta do resto. Também temos opções para diferentes idades e níveis de experiência - a partir do jardim de infância. Comece a planejar seu evento, leia nosso <a href='/resources/how-to'>Guia prático</a>."
+  hoc_faq_host_a: "Pode, sim! As atividades da Hora do Código são autoexplicativas. Tudo o que você precisa fazer é <a href='%{codeorg_url}/learn'>experimentar nossos tutoriais</a>, escolher um tutorial e uma hora &mdash; nós tomamos conta do resto. Também temos opções para diferentes idades e níveis de experiência - a partir do jardim de infância. Comece a planejar seu evento, leia nosso <a href='/how-to'>Guia prático</a>."
   hoc_faq_need_computers_q: É necessário um computador para cada participante?
   hoc_faq_need_computers_a: "Não. Temos tutoriais da Hora do Código que funcionam em computadores, smartphones, tablets e alguns que não exigem computador! Você pode participar independentemente de onde esteja e do que tenha. <p><i>Estas são algumas opções:</i> <br> <ul> <li><b>Trabalho em duplas.</b> Pesquisas mostram que alunos aprendem mais <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programando em duplas</a>, compartilhando um computador e trabalhando juntos. Incentive seus alunos a trabalharem em duplas. <li><b>Use uma tela projetada.</b> Se você tem um projetor e uma tela para um computador conectado à internet, o grupo inteiro pode fazer a Hora do Código junto. Assista a vídeos juntos e se revezem para resolver desafios ou para responder a perguntas. <li><b>Desconectado.</b> Oferecemos tutoriais que não exigem computador.</ul>"
   hoc_faq_international_q: 'Eu sou do <country>. Como posso participar internacionalmente?'
-  hoc_faq_international_a: "Qualquer pessoa pode organizar um evento da Hora do Código, em qualquer lugar do mundo. No ano passado, estudantes de todo o mundo se juntaram para a Hora de Código. Saiba mais <a href='/resources'>aqui</a>."
+  hoc_faq_international_a: "Qualquer pessoa pode organizar um evento da Hora do Código, em qualquer lugar do mundo. No ano passado, estudantes de todo o mundo se juntaram para a Hora de Código. Saiba mais <a href='/promote'>aqui</a>."
   hoc_faq_tutorial_q: Como posso fazer um tutorial da Hora do Código?
   hoc_faq_tutorial_a: "Se estiver interessado em se tornar um parceiro de tutorial, <a href='/tutorial-guidelines'>confira nossas diretrizes e instruções</a>. Gostaríamos de disponibilizar uma variedade de opções atrativas, mas nosso objetivo principal é melhorar a experiência de alunos e professores que são novos no campo da ciência da computação."
   hoc_faq_more_questions_q: Ainda tem mais perguntas?
@@ -278,13 +307,13 @@ pt:
   hoc_faq_account_q: Os alunos precisam acessar usando uma conta?
   hoc_faq_account_a: "Não. Não é necessário nenhum registro ou login para os alunos fazerem a Hora do Código. A maioria dos <a href='%{codeorg_url}/learn/beyond'>cursos complementares</a> exige a criação de conta para salvar o progresso do aluno."
   hoc_faq_frozen_q: Onde está o tutorial com Anna e Elsa?
-  hoc_faq_frozen_a: "Você pode encontrá-lo em <a href='http://%{codeorg_url}/learn'>Code.org/learn</a>. Esperamos que gostem!"
+  hoc_faq_frozen_a: "Você pode encontrá-lo na <a href='%{codeorg_url}/learn'>página de tutoriais</a>. Esperamos que gostem!"
   hoc_faq_high_school_q: Qual atividade devo fazer com alunos do Ensino Médio?
-  hoc_faq_high_school_a: "Independentemente da idade, recomendamos começar com um dos tutoriais para iniciantes disponíveis em <a href='http://%{codeorg_url}/learn'>%{codeorg_url}/learn</a> como o tutorial com Angry Birds ou com Anna e Elsa. Um aluno do Ensino Médio deve conseguir terminar um desses tutoriais em 30 minutos, e depois pode tentar um tutorial mais avançado em JavaScript, como Khan Academy ou CodeHS."
+  hoc_faq_high_school_a: "Independentemente da idade, recomendamos começar com um dos tutoriais para iniciantes disponíveis em <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> como o tutorial com Angry Birds ou com Anna e Elsa. Um aluno do Ensino Médio deve conseguir terminar um desses tutoriais em 30 minutos, e depois pode tentar um tutorial mais avançado em JavaScript, como Khan Academy ou CodeHS."
   hoc_faq_scratch_q: Vou usar o Scratch na Hora do Código, o que devo fazer se meus alunos tiverem iPads em vez de laptops?
-  hoc_faq_scratch_a: "O Scratch não funciona em tablets. Se seus alunos são novinhos, eles podem usar o aplicativo ScratchJR iPad (para alunos que estão começando a ler). Veja nossos tutoriais em <a href='http://%{codeorg_url}/learn'>%{codeorg_url}/learn</a>, lá você encontrará os tutoriais que funcionam em iPads - da Code.org, Tynker, Lightbot, ou CodeSpark."
+  hoc_faq_scratch_a: "O Scratch não funciona em tablets. Se seus alunos são novinhos, eles podem usar o aplicativo ScratchJR iPad (para alunos que estão começando a ler). Veja nossos tutoriais em <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, lá você encontrará os tutoriais que funcionam em iPads - da Code.org, Tynker, Lightbot, ou CodeSpark."
   hoc_faq_count_hoc_q: Como podemos contar as Horas do Código?
-  hoc_faq_count_hoc_a: "O rastreador da Hora do Código não apresenta uma medida exata de uso. Não computamos IDs únicos dos alunos ao rastrear a participação na Hora do Código, especialmente porque não exigimos que eles façam login ou se cadastrem. Consequentemente, contabilizamos participantes a menos e a mais ao mesmo tempo. Veja todos os detalhes <a href='http://%{codeorg_url}/loc'>aqui</a>."
+  hoc_faq_count_hoc_a: "O rastreador da Hora do Código não apresenta uma medida exata de uso. Não computamos IDs únicos dos alunos ao rastrear a participação na Hora do Código, especialmente porque não exigimos que eles façam login ou se cadastrem. Consequentemente, contabilizamos participantes a menos e a mais ao mesmo tempo. Veja todos os detalhes <a href='%{codeorg_url}/loc'>aqui</a>."
   stats_hoc_2013_image_alt: Estatísticas da Hora do Código de 2013
   stats_growth: Foi o mais rápido a chegar a 15 milhões de usuários.
   stats_i18n: Os alunos estão aprendendo em 40 idiomas
@@ -316,12 +345,19 @@ pt:
   resources_social: Social
   resources_country_resources: Recursos específicos do país
   resources_stickers: Adesivos
+  resources_how_to_guides: Guias práticos
+  resources_promote: Divulgue
+  resources_nav_tutorials: Experimente os tutoriais
+  resources_nav_promote: Divulgue
+  resources_nav_spread_word: Como participar
   resources_banner_promote_text: Divulgue
   resources_banner_promote_button: Incentive outras pessoas a se inscreverem divulgando folhetos, cartazes inspiradores e banners de mídia social.
   resources_banner_howto_text: Como fazer
   resources_banner_howto_button: Recursos para educadores, pais e cidades organizarem um evento da Hora do Código.
+  handouts_section: Compartilhe esses folhetos
   handouts_onepager: Divulgue o evento com este folheto de uma página
   handouts_brochure: Entregue este panfleto para professores e escolas
+  handouts_participationguide: Planeje sua Hora do Código com esse guia de participação
   videos_title: Mostre estes vídeos para inspirar os alunos
   videos_what_most_schools_dont_teach: O que a maioria das escolas não ensina (5 min)
   videos_hoc_2014: 'A Hora do Código é aqui - qualquer pessoa pode aprender'
@@ -331,7 +367,9 @@ pt:
   title_how_to_districts: Guia da Hora do Código para distritos
   title_how_to_events: Guia para fazer um evento da Hora do Código
   title_how_to_organizations: 'Como organizar um evento da Hora do Código - Organizações'
+  title_how_to_companies: 'Como organizar um evento da Hora do Código - Empresas'
   title_how_to_officials: Guia prático para funcionários públicos
+  title_how_to_volunteers: Guia prático para voluntários da Hora do Código
   title_how_to: Guia prático
   title_press_release: Comunicado de imprensa da Hora do Código para representantes políticos
   title_op_ed: Exemplo de artigo de opinião em apoio à Semana da Educação em Ciência da Computação e à Hora do Código
@@ -348,7 +386,7 @@ pt:
   title_signup_thanks: Obrigado por se inscrever para sediar a Hora do Código!
   title_tutorial_guidelines: Orientações sobre tutoriais
   title_whole_school: Participação da escola inteira
-  events_title: Todos os eventos da Hora do Código
+  events_nav_title: Eventos da Hora do Código
   events_nav_all: Todos os eventos
   events_nav_whole_schools: Toda a escola
   events_nav_special: Eventos especiais

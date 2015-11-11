@@ -12,21 +12,15 @@ Code.org hosts regular, free virtual events for our community. Here are a few hi
 
 ## Upcoming Events
 
-### Increasing Access to CS Education: What Works, What Doesn't
-#### Wednesday, October 14, 2015 from 7:00 PM to 8:00 PM (CDT) 
-Many educational initiatives focus on partnering with local- and state-level educational organizations to scale success. But engaging effectively with districts -- in the short and long-term -- can be tricky at best and downright frustrating at worst. In this interactive discussion, you’ll hear from Code.org and our evaluation partner, [Outlier](http://outlier.uchicago.edu), about the results of our programs over the course of 2014-15 school year. You’ll explore best practices -- derived from real-world successes and challenges -- and discuss how you might apply them in your work. You’ll walk away with a list of strategies you can use to improve your partnerships, no matter what your role.
-<br>
-[<button>Register Now</button>](http://www.eventbrite.com/e/increasing-access-to-cs-education-what-works-what-doesnt-tickets-18405507368)
-
 ### An Educator's Guide to the Hour of Code
 #### Wednesday, November 18, 2015 from 7:00 PM to 8:00 PM (CST) 
 In this interactive webinar, you'll hear from Melissa Jones, Community Manager at Code.org and Laura Kline, Product Manager for Hour of Code and learn the five simple steps you can take to plan and deliver an engaging, interactive coding event at your school.
 <br>
 [<button>Register Now</button>](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
-### Sneak Peak: 2015 Hour of Code Tutorials
+### Sneak Peek: 2015 Hour of Code Tutorials
 #### Wednesday, December 2, 2015 from 7:00 PM to 8:00 PM (CDT) 
-In this interactive webinar, you'll get a sneak peak of all the new tutorials for 2015. You'll get a chance to preview what's new, what's cool and what you might want to use in your classroom. This guided tour of the tutorials will be hosted by Code.org's VP of Product,  Alice Steinglass, VP of Product and will feature guest speakers from a number of the Hour of Code partners.
+In this interactive webinar, you'll get a sneak peek of all the new tutorials for 2015. You'll get a chance to preview what's new, what's cool and what you might want to use in your classroom. This guided tour of the tutorials will be hosted by Code.org's VP of Product,  Alice Steinglass, VP of Product and will feature guest speakers from a number of the Hour of Code partners.
 <br>
 [<button>Register Now</button>](http://www.eventbrite.com/e/sneak-peak-2015-hour-of-code-tutorials-tickets-17987437911)
 
@@ -37,8 +31,15 @@ In this interactive webinar, you'll get a sneak peak of all the new tutorials fo
 ### Q&A with Code.org Founder Hadi Partovi
 #### Wednesday, September 23, 2015 from 7:00 PM to 8:00 PM (CDT) 
 Join [Hadi Partovi](https://code.org/about/leadership/hadi_partovi), CEO and Founder of [Code.org](http://code.org) for a discussion of why every student should have the opportunity to shape the 21st-century.
-<br>
+<br><br>
 [<button>View Recording</button>](https://youtu.be/GBTWl5jxPb8)
+
+### Increasing Access to CS Education: What Works, What Doesn't
+#### Wednesday, October 14, 2015 from 7:00 PM to 8:00 PM (CDT) 
+In this interactive discussion, you’ll hear from Pat Yongpradit, VP of Education at Code.org and Heather King, program manager at Outlier, about the results of our programs over the course of the 2014-15 school year. What did teachers take away from professional development? What did students learn? What did we learn from our district partnerships? Learn from our successes and challenges as we discuss how we might work together as a CS education community to increase access to CS education for all. See [https://code.org/about/evaluation/summary](https://code.org/about/evaluation/summary) and [http://outlier.uchicago.edu/evaluation_codeorg/](http://outlier.uchicago.edu/evaluation_codeorg/) for the reports.
+<br><br>
+[<button>View a recording</button>](https://youtu.be/jJfZMgvm4SU)
+
 
 <br><br>
 

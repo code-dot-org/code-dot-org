@@ -1,5 +1,6 @@
 %div.resources-navigation
-  %div.nav-header= hoc_s(:resources_how_to_guides)
+  %a.nav-link{href: resolve_url('/how-to')}
+    %div.nav-header= hoc_s(:resources_how_to_guides)
   %div.nav-item
     %a.nav-link{href: resolve_url('/how-to')}
       = hoc_s(:how_to_nav_educators)
@@ -7,8 +8,8 @@
     %a.nav-link{href: resolve_url('/how-to/afterschool')}
       = hoc_s(:how_to_nav_afterschool_educators)
   %div.nav-item
-    %a.nav-link{href: resolve_url('/how-to/organizations')}
-      = hoc_s(:how_to_nav_organizations)
+    %a.nav-link{href: resolve_url('/how-to/companies')}
+      = hoc_s(:how_to_nav_companies)
   %div.nav-item
     %a.nav-link{href: resolve_url('/how-to/districts')}
       = hoc_s(:how_to_nav_districts)
@@ -18,4 +19,7 @@
   %div.nav-item
     %a.nav-link{href: resolve_url('/how-to/public-officials')}
       = hoc_s(:how_to_nav_public_officials)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/how-to/volunteers')}
+      = hoc_s(:how_to_nav_volunteers)
 = view :resources_nav

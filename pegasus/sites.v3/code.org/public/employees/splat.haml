@@ -1,23 +1,23 @@
 ---
-title: "Join the largest learning event in history, Dec 8-14, 2014"
+title: "Join the largest learning event in history, Dec 7-13, 2015"
 social:
   "twitter:card": player
   "twitter:site": "@codeorg"
   "twitter:url": "http://code.org/"
-  "twitter:title": "Join the largest learning event in history, Dec 8-14, 2014"
-  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. <strong>No experience needed. Ages 4 to 104.</strong>"
-  "twitter:image:src": 'http://csedweek.org/images/code-video-thumbnail.jpg'
-  "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
+  "twitter:title": "Join the largest learning event in history, Dec 7-13, 2015"
+  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. <strong>No experience needed. Ages 4 to 104.</strong>"
+  "twitter:image:src": 'https://hourofcode.com/images/hourofcode-2015-video-thumbnail.png'
+  "twitter:player": 'https://www.youtube.com/embed/2DxWIxec6yo?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
   "twitter:player:width": 1920
   "twitter:player:height": 1080
 max_age: 60
 ---
 
--share_link = "http://hourofcode.com/"
+-share_link = "https://hourofcode.com/"
 
 -facebook = {:u=>"#{share_link}"}
 
--twitter = {:url=>"#{share_link}", :related=>'codeorg', :hashtags=>'', :text=>'Join the largest learning event in history, Dec 8-14, 2014'}
+-twitter = {:url=>"#{share_link}", :related=>'codeorg', :hashtags=>'', :text=>'Join the largest learning event in history, Dec 7-13, 2015'}
 -twitter[:hashtags] = 'HourOfCode'
 
 -pass unless form = DB[:forms].where(kind:'CompanyProfile', name:request.splat_path_info[1..-1]).first
@@ -55,9 +55,7 @@ max_age: 60
     #companystats.col-mobile-44
       .count{:style=>"font-size: 32px; line-height: 32px; font-family: 'Gotham 5r', sans-serif;"}
         #{format_integer_with_commas(hoc_count)}
-        -if num_employees
-          of #{format_integer_with_commas(company['num_employees_i'])} 
-        #{company['display_name_s']} #{employees_string} have tried the Hour of Code.
+        #{company['display_name_s']} participants have tried the Hour of Code.
         %h4.desktop-feature{style: 'font-size: 22px;'}
           -if hoc_percent
             #{hoc_percent}% Started
@@ -68,11 +66,6 @@ max_age: 60
         %a{:href=>"/api/hour/begin_company/#{company['name_s']}"}
           %button.btn.btn-default.ee_button
             Start now
-      %br
-      %a.ee_link{:href=>"http://hourofcode.com/"} Host an Hour of Code
-      %br
-      %a.ee_link{:href=>"http://code.org/donate/#{company['name_s']}"} Support the campaign
-   
 
   #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
     -unless company['video_key_s']
@@ -82,8 +75,8 @@ max_age: 60
   -if company['intro_bottom_copy_t']
     =TextRender.safe_markdown company['intro_bottom_copy_t']
   -else
-    =view :company_profile_intro_bottom
+    =view :company_profile_additional_actions
 
 .row
   .col-xs-12
-    =view :stats_hoc_2013
+    =view :stats_hoc_2015

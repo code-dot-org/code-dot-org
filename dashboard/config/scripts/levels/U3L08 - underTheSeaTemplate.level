@@ -27,7 +27,6 @@
       "show": null,
       "hide": null,
       "speed": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "penRGB": {
         "params": [

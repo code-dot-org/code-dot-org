@@ -23,7 +23,8 @@ window.dashboard.ReportAbuseForm = (function (React) {
       age: React.PropTypes.oneOfType([
         React.PropTypes.string,
         React.PropTypes.number
-      ])
+      ]),
+      style: React.PropTypes.object
     },
 
     render: function () {

@@ -8,30 +8,45 @@
 
 # Дякуємо за реєстрацію заходу в межах Години коду!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
+You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13.
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [Details](https://<%= hostname %>/prizes).
+
+#### We'll be in touch about new tutorials and other exciting updates. What can you do now?
 
 ## 1. Поширюйте інформацію
 
-Розкажіть друзям про Годину коду #HourOfCode.
+We need your help to reach 100,000 organizers worldwide. Розкажіть друзям про Годину коду #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
+
+<% if international == 'true' %>
 
 ## 2. Запропонуйте взяти участь у Годині коду всій школі
 
-[Send this email](http://<%= hostname %>/resources#email) to your principal.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). <% else %>
+
+## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
+
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup). <% end %>
 
 ## 3. Попросіть про участь свою адміністрацію
 
-[Надішліть цей лист](http://<%= hostname %>/resources#email) керівнику Вашої організації.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
 
 ## 4. Розкажіть у своїй спільноті про Годину Програмування
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Надішліть цей лист](http://<%= hostname %>/resources#email).
+Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
 
 ## 5. Зверніться до місцевих депутатів по підтримку Години коду
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+
+Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
+
+Hadi Partovi  
+Founder, Code.org
 
 * * *
 
-Code.org є некомерційною організацією 501c3. Наша адреса 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Не хочете отримувати ці листи? [Відмовтесь від підписки](%= unsubscribe_link %).
+<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+
+![](<%= tracking_pixel %>)

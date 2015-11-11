@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,9 +126,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "Add a second screen to the sample app we have been building to capture an image from a user. Return to screen 1 after the JSON object has been stored in the table.",
     "markdown_instructions": "For your data collection app you may need to collect data over multiple screens. Add a second screen to the sample app we have been building to capture an image from a user. Return to screen 1 after the JSON object has been stored in the table.",

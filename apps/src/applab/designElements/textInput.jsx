@@ -1,6 +1,5 @@
 /* global $ */
 
-var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
@@ -25,7 +24,7 @@ var TextInputProperties = React.createClass({
       <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true} />
         <PropertyRow
@@ -84,7 +83,7 @@ var TextInputEvents = React.createClass({
   },
 
   getChangeEventCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
       '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
@@ -97,7 +96,7 @@ var TextInputEvents = React.createClass({
   },
 
   getInputEventCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "input", function(event) {\n' +
       '  console.log("' + id + ' current text: " + getText("' + id + '"));\n' +
@@ -122,7 +121,7 @@ var TextInputEvents = React.createClass({
       <div id='eventRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
         <EventHeaderRow/>

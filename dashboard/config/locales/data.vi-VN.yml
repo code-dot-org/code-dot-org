@@ -695,6 +695,7 @@
         infinity_playlab_intro: Phòng trò chơi - Giới thiệu
         infinity_playlab_events: Sự kiện Phòng Trò Chơi
         infinity_playlab_repeat_forever: Phòng Trò Chơi lặp lại mãi mãi
+        csp_applab_functions: Giới thiệu về hàm
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: Color pixelation widget - Part 1
         csp_pixelation_color_2: Color pixelation widget - Part 2
@@ -723,6 +724,9 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác
@@ -743,7 +747,7 @@
         jigsaw_click: Nhấp vào khối này!
         move_elsa_forward: Kéo một khối lệnh "Di chuyển về phía trước" và gắn nó ngay
           dưới khối "Khi chạy" để làm cho Elsa di chuyển về phía trước
-        turn_elsa: Sử dụng khối "Xoay" để Elsa xoay. Số khung bên trong khối xoay
+        turn_elsa: Sử dụng khối "rẽ" để làm Elsa rẽ. Số khung bên trong khối xoay
           sẽ xác định Elsa quay một góc bao nhiêu độ
         replace_questions: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???" với
           một số

@@ -263,7 +263,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   this.setEnableToolbox = function (enabled) {
     if (this.flyout_) {
       this.flyout_.setEnabled(enabled);
-    } else {
+    } else if (this.toolbox) {
       this.toolbox.enabled = enabled;
     }
   };

@@ -1,0 +1,264 @@
+Hour of Code:
+  id: 2
+  name: Hour of Code
+  created_at: 2015-10-16 22:36:38.000000000 Z
+  updated_at: 2015-10-16 22:36:38.000000000 Z
+  wrapup_video_id: 13
+  trophies: false
+  hidden: true
+  user_id:
+  login_required: false
+  properties: '{}'
+edit-code:
+  id: 3
+  name: edit-code
+  created_at: 2015-10-16 22:36:40.000000000 Z
+  updated_at: 2015-10-16 22:36:40.000000000 Z
+  wrapup_video_id: 13
+  trophies: false
+  hidden: true
+  user_id:
+  login_required: false
+  properties: '{}'
+events:
+  id: 4
+  name: events
+  created_at: 2015-10-16 22:36:41.000000000 Z
+  updated_at: 2015-10-16 22:36:41.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: true
+  user_id:
+  login_required: false
+  properties: '{}'
+jigsaw:
+  id: 7
+  name: jigsaw
+  created_at: 2015-10-16 22:36:43.000000000 Z
+  updated_at: 2015-10-16 22:36:43.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: true
+  user_id:
+  login_required: false
+  properties: '{}'
+hourofcode:
+  id: 63
+  name: hourofcode
+  created_at: 2015-10-16 22:39:26.000000000 Z
+  updated_at: 2015-10-16 22:39:26.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+starwars:
+  id: 62
+  name: starwars
+  created_at: 2015-10-16 22:39:24.000000000 Z
+  updated_at: 2015-10-16 22:39:24.000000000 Z
+  wrapup_video_id: 137
+  trophies: false
+  hidden: true
+  user_id:
+  login_required: true
+  properties: '{}'
+frozen:
+  id: 61
+  name: frozen
+  created_at: 2015-10-16 22:39:23.000000000 Z
+  updated_at: 2015-10-16 22:39:24.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+playlab:
+  id: 68
+  name: playlab
+  created_at: 2015-10-16 22:39:29.000000000 Z
+  updated_at: 2015-10-16 22:39:29.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+infinity:
+  id: 64
+  name: infinity
+  created_at: 2015-10-16 22:39:27.000000000 Z
+  updated_at: 2015-10-16 22:39:27.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+artist:
+  id: 46
+  name: artist
+  created_at: 2015-10-16 22:38:11.000000000 Z
+  updated_at: 2015-10-16 22:38:11.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+algebra:
+  id: 34
+  name: algebra
+  created_at: 2015-10-16 22:37:33.000000000 Z
+  updated_at: 2015-10-16 22:37:33.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: true
+  properties: '{}'
+algebraPD:
+  id: 37
+  name: algebraPD
+  created_at: 2015-10-16 22:37:44.000000000 Z
+  updated_at: 2015-10-16 22:37:44.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: true
+  user_id:
+  login_required: true
+  properties: '{"pd":true}'
+flappy:
+  id: 6
+  name: flappy
+  created_at: 2015-10-16 22:36:43.000000000 Z
+  updated_at: 2015-10-16 22:36:43.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+20-hour:
+  id: 1
+  name: 20-hour
+  created_at: 2015-10-16 22:36:26.000000000 Z
+  updated_at: 2015-10-16 22:36:26.000000000 Z
+  wrapup_video_id:
+  trophies: true
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+course1:
+  id: 48
+  name: course1
+  created_at: 2015-10-16 22:38:12.000000000 Z
+  updated_at: 2015-10-16 22:38:13.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+course2:
+  id: 49
+  name: course2
+  created_at: 2015-10-16 22:38:21.000000000 Z
+  updated_at: 2015-10-16 22:38:21.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+course3:
+  id: 50
+  name: course3
+  created_at: 2015-10-16 22:38:31.000000000 Z
+  updated_at: 2015-10-16 22:38:31.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+course4:
+  id: 51
+  name: course4
+  created_at: 2015-10-16 22:38:41.000000000 Z
+  updated_at: 2015-10-16 22:38:41.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+cspunit1:
+  id: 53
+  name: cspunit1
+  created_at: 2015-10-16 22:38:51.000000000 Z
+  updated_at: 2015-10-16 22:38:51.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: true
+  properties: '{}'
+cspunit2:
+  id: 54
+  name: cspunit2
+  created_at: 2015-10-16 22:38:55.000000000 Z
+  updated_at: 2015-10-16 22:38:55.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: true
+  properties: '{}'
+cspunit3:
+  id: 55
+  name: cspunit3
+  created_at: 2015-10-16 22:39:01.000000000 Z
+  updated_at: 2015-10-16 22:39:01.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: true
+  properties: '{}'
+ECSPD:
+  id: 16
+  name: ECSPD
+  created_at: 2015-10-16 22:37:01.000000000 Z
+  updated_at: 2015-10-16 22:37:01.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: true
+  user_id:
+  login_required: true
+  properties: '{"pd":true}'
+ECSPD-NexTech:
+  id: 14
+  name: ECSPD-NexTech
+  created_at: 2015-10-16 22:36:58.000000000 Z
+  updated_at: 2015-10-16 22:36:58.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: true
+  user_id:
+  login_required: true
+  properties: '{"pd":true}'
+allthethings:
+  id: 45
+  name: allthethings
+  created_at: 2015-10-16 22:38:08.000000000 Z
+  updated_at: 2015-10-16 22:38:08.000000000 Z
+  wrapup_video_id:
+  trophies: false
+  hidden: true
+  user_id:
+  login_required: false
+  properties: '{}'

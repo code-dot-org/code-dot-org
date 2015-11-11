@@ -1,5 +1,7 @@
 //= require client_state
 
+/* globals dashboard, trackEvent, Dialog, React, appOptions, debounce */
+
 /**
  * Dynamic header generation and event bindings for header actions.
  */
@@ -32,7 +34,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
     progressData = getSummarizedProgressForAnonymousUser();
   }
 
-  levelProgress = progressData.levels || {};
+  var levelProgress = progressData.levels || {};
 
   $('.header_text').first().text(stageData.title);
   if (stageData.finishLink) {
@@ -56,7 +58,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   stageData.levels.forEach(function(level, index, levels) {
     var status = (levelProgress[level.id] || {}).status || 'not_tried';
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
-    var href = "/s/" + stageData.script_name + "/stage/" + stageData.position + "/puzzle/" + level.position;
+    var href = level.url;
     if (userId) {
       href += '?user_id=' + userId;
     }
@@ -103,14 +105,18 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   function hideHeaderPopup() {
     $('.header_popup').hide();
     $('.header_popup_link_glyph').html('&#x25BC;');
-    $('.header_popup_link_text').text(dashboard.i18n.t('less'));
+    $('.header_popup_link_text').text(dashboard.i18n.t('more'));
     $(document).off('click', hideHeaderPopup);
     isHeaderPopupVisible = false;
   }
 
   $('.header_popup_link, .header_trophy_link').click(function (e) {
     e.stopPropagation();
-    $('.header_popup').is(':visible') ? hideHeaderPopup() : showHeaderPopup(e.target);
+    if ($('.header_popup').is(':visible')) {
+      hideHeaderPopup();
+    } else {
+      showHeaderPopup(e.target);
+    }
   });
   $('.header_popup').click(function (e) {
     e.stopPropagation(); // Clicks inside the popup shouldn't close it
@@ -232,7 +238,7 @@ function shareProject() {
         submitButton.click(function() {
           var phone = $("#project-share #phone");
           var params = jQuery.param({
-            type: dashboard.project.getCurrentApp(),
+            type: dashboard.project.getStandaloneApp(),
             channel_id: dashboard.project.getCurrentId(),
             phone: phone.val()
           });
@@ -267,7 +273,7 @@ function remixProject() {
     // yet. In both cases, copy will create a new project for us.
     var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
     dashboard.project.copy(newName, function() {
-      $(".project_name").text(newName)
+      $(".project_name").text(newName);
     });
   }
 }
@@ -309,12 +315,6 @@ dashboard.header.showProjectHeader = function () {
     $('.project_edit').replaceWith($('<div class="project_save header_button header_button_light">').text(dashboard.i18n.t('project.save')));
   }
 
-  var moreButton = dashboard.i18n.t('project.more')
-      + ' <span class="project_more_glyph">&#x25BC;</span>'
-      + '<div class="project_more_popup" style="position: absolute;">'
-      + '<a href="#" class="project_delete">' + dashboard.i18n.t('project.delete') + '</a><br>'
-      + '<a href="#" class="project_new">' + dashboard.i18n.t('project.new') + '</a></div>';
-
   var nameAndUpdated = $('<div class="project_name_wrapper header_text">') // content will be added by projectNameShow
       .append($('<div class="project_name header_text">'))
       .append($('<div class="project_updated_at header_text">'));
@@ -323,7 +323,7 @@ dashboard.header.showProjectHeader = function () {
       .append($('<div class="project_edit header_button header_button_light">').text(dashboard.i18n.t('project.rename')))
       .append($('<div class="project_share header_button header_button_light">').text(dashboard.i18n.t('project.share')))
       .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')))
-      .append($('<div class="project_more header_button header_button_light" style="position: relative;">').html(moreButton));
+      .append($('<div class="project_new header_button header_button_light">').text(dashboard.i18n.t('project.new')));
 
   // TODO: Remove this (and the related style) when Applab is no longer in beta.
   if ('applab' === appOptions.app) {
@@ -374,12 +374,12 @@ dashboard.header.showProjectHeader = function () {
 
   $('.project_delete').click(function (e) {
     e.preventDefault(); // Don't change the hash.
-    var dialog = new Dialog({body: '<img class="modal-image" src="' + appOptions.skin.staticAvatar + '">'
-        + '<div id="confirm-delete" class="modal-content">'
-        + '<p class="dialog-title">' + dashboard.i18n.t('project.delete_confirm_title') + '</p>'
-        + '<p>' + dashboard.i18n.t('project.delete_confirm_text') + '</p>'
-        + '<button id="again-button">' + dashboard.i18n.t('project.cancel') + '</button>'
-        + '<button id="continue-button" style="float: right">' + dashboard.i18n.t('project.delete') + '</button></div>'
+    var dialog = new Dialog({body: '<img class="modal-image" src="' + appOptions.skin.staticAvatar + '">' +
+        '<div id="confirm-delete" class="modal-content">' +
+        '<p class="dialog-title">' + dashboard.i18n.t('project.delete_confirm_title') + '</p>' +
+        '<p>' + dashboard.i18n.t('project.delete_confirm_text') + '</p>' +
+        '<button id="again-button">' + dashboard.i18n.t('project.cancel') + '</button>' +
+        '<button id="continue-button" style="float: right">' + dashboard.i18n.t('project.delete') + '</button></div>'
     });
     dialog.show();
     $('#confirm-delete #continue-button').click(function () {
@@ -392,17 +392,7 @@ dashboard.header.showProjectHeader = function () {
     });
   });
 
-  $('.project_new').click(function (e) {
-    e.preventDefault(); // Don't change the hash.
-    // Save the project if one exists (i.e. isn't just the default one) then navigate.
-    if (dashboard.project.getCurrentId()) {
-      dashboard.project.save(function () {
-        location.href = dashboard.project.appToProjectUrl();
-      });
-    } else {
-      location.href = dashboard.project.appToProjectUrl();
-    }
-  });
+  $('.project_new').click(dashboard.project.createNew);
 
   $(document).on('click', '.project_list', function () {
     location.href = '/projects';

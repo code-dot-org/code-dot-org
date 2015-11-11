@@ -38,7 +38,7 @@ ka:
   puzzle: თავსატეხი
   trophies: ჯილდოები
   courses: კურსები
-  of: -ის
+  of: მიეკუთვნება
   more: მეტის ნახვა
   less: ნაკლების ნახვა
   beta: ბეტა-ვერსია
@@ -102,7 +102,7 @@ ka:
   signin:
     try_heading: გინდათ, სცადოთ კოდის წერა რეგისტრაციის გარეშე?
     try_hoc: 'ჯერ "კოდის ერთი საათი" სცადეთ'
-    try_20hours: ნახეთი ჩვენი ოცსაათიანი შესავალი ინფორმატიკაში
+    try_20hours: ნახეთ ჩვენი ოცსაათიანი შესავალი ინფორმატიკაში
   signinsection:
     welcome: 'მოგესალმებით სექციაში %{section_name}'
     name: აირჩიეთ თქვენი სახელი
@@ -155,13 +155,13 @@ ka:
     title: 'პრიზების მიღება: %{name}'
     provider: 'მომწოდებელი:'
     code: 'კოდი:'
-    redeem_header: 'მოთხოვნა:'
-    donorschoose_register: დარეგისტრირდით DonorsChoose.org-ზე როგორც მასწავლებელი
+    redeem_header: 'განაღდება:'
+    donorschoose_register: დარეგისტრირდით DonorsChoose.org-ზე, როგორც მასწავლებელი
     donorschoose_project: პროექტის გამოქვეყნება
     donorschoose_how_to: როგორ შეიძლება თქვენი კოდის გამოყენება
     success: თქვენი პრიზი წარმატებითაა განაღდებული, კოდი იხილეთ ქვემოთ.
     error: თქვენი პრიზის განაღდება შუეძლებელია, სცადეთ კიდევ ერთხელ.
-    error_us_only: ეს პრიზი მხოლოდ აშშ-დან მომხმარებლებისთვის არის მისაწვდომი.
+    error_us_only: ეს პრიზი მხოლოდ აშშ-ის მომხმარებლებისთვის არის მისაწვდომი.
     error_not_earned: ეს პრიზი ჯერ არ მოგიპოვებიათ.
     error_already_redeemed: ეს პრიზი უკვე განაღდებულია.
     no_prizes_available: ვწუხვართ, მაგრამ ახლა არ გვაქვს პრიზები.
@@ -195,11 +195,11 @@ ka:
       teacher:
         earned: '15-მა ან მეტმა სტუდენტმა დააგროვა %{num_trophies}-ვე ჯილდო. თქვენ მოიგეთ მასწვლებლის პრიზი! (მხოლოდ აშშ-ის მასწავლებლებისთვს)'
         not_earned_title: 'ასწავლეთ კლასს და მიიღეთ 1,000 დოლარამდე ჯილდო ორგანიზაციისგან <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> (მხოლოდ აშშ-ის მასწავლებლებისთვის)'
-        not_earned: 'პროგრამირების ახალი მასწავლებლების წასახალისებლად<a href="http://DonorsChoose.org">DonorsChoose.org</a>  აჯილდოვებს მათ 1,000 დოლარამდე პრიზით. ამისთვის თქვენს კლასთნ ერთად შესავალი კურსი უნდა გაიაროთ. კლასში უნდა იყოს მინიმუმ 15 მოსწავლე და მინიმუმ 15-მა უნდა დაასრულოს ყველა ტუტორიალი და მიიღოს %{num_trophies}-ვე ჯილდო. თუ მათგან, ვინც ყველა ჯილდო მიიღო 7 ან მეტი არის გოგო, მაშინ თქვენ 1,000 დოლარს მიიღებთ <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> -ის კრედიტებში. სხვა შემთხვევაში თქვენი ჯილდო იქნება 750 დოლარი <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> -ის კრედიტებში.   <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>-ის კრედიტების გამოყენება შეუძლით მხოლოდ აშშ-ის საჯარო სკოლების მასწავლებლებს.'
+        not_earned: 'პროგრამირების ახალი მასწავლებლების წასახალისებლად<a href="http://DonorsChoose.org">DonorsChoose.org</a>  აჯილდოვებს მათ 1,000 დოლარამდე პრიზით. პრიზის მისაღებად თქვენს კლასთნ ერთად შესავალი კურსი უნდა გაიაროთ. კლასში უნდა იყოს მინიმუმ 15 მოსწავლე და მინიმუმ 15-მა უნდა დაასრულოს ყველა ტუტორიალი და მიიღოს %{num_trophies}-ვე ჯილდო. თუ მათგან, ვინც ყველა ჯილდო მიიღო 7 ან მეტი არის გოგო, მაშინ თქვენ 1,000 დოლარს მიიღებთ <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> -ის კრედიტებში. სხვა შემთხვევაში თქვენი ჯილდო იქნება 750 დოლარი <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> -ის კრედიტებში.   <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>-ის კრედიტების გამოყენება შეუძლით მხოლოდ აშშ-ის საჯარო სკოლების მასწავლებლებს.'
         bonus:
           not_earned_title: 'დამატებით 250 დოლარის <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> -ის კრედიტებში მოგება ჯერ კიდევ შეგიძლიათ (მხოლოდ აშშ-ის მასწავლებლებისთვის)'
           earned: 'იმ მოსწავლეებიდან, ვინც %{num_trophies}-ვე ჯილდო მოიპოვა, 7 ან მეტი არის გოგო. თქვენ მოიგეთ ბონუს-პრიზიც! (მხოლოდ აშშ-ის მასწავლებლებისთვის)'
-          not_earned: 'თუ იმ მოსწავლეებიდან, ვინც %{num_trophies}-ვე ჯილდო მოიპოვა 7 მაინც იქნება გოგო, თქვენ მიიღებთ დამატებით 250 დოლარს <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> -ის კრედიტებში.   <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>-ის კრედიტების გამოყენება შეუძლით მხოლოდ აშშ-ის საჯარო სკოლების მასწავლებლებს.'
+          not_earned: 'თუ იმ მოსწავლეებიდან, ვინც %{num_trophies}-ვე ჯილდო მოიპოვა, 7 მაინც იქნება გოგო, თქვენ მიიღებთ დამატებით 250 დოლარს <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> -ის კრედიტებში. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>-ის კრედიტების გამოყენება შეუძლით მხოლოდ აშშ-ის საჯარო სკოლების მასწავლებლებს.'
   crud:
     new_model: 'ახალი %{model}'
     show: ჩვენება
@@ -219,7 +219,7 @@ ka:
       sign_in_to_save: დარეგისტრირება და პროგრესის შენახვა
       free_play:
         playlab: აპლიკაციის შექმნა
-        artist: რამის დახატვა
+        artist: დახატეთ რამე
         calculate: Calculate Something
     user:
       classroom: მასწავლებლის მთავარი გვერდი
@@ -240,7 +240,7 @@ ka:
       mastery: ძირითადი ცნებები
       puzzle_map: ეტაპები
       prizes: 'დააგროვეთ %{total_trophies} ჯილდო და მოიგეთ პრიზები!'
-      prize_earned: 'მთელი %{total_trophies} ჯილდო დაგოროვებულია. პრიზი თქვენია!'
+      prize_earned: '%{total_trophies}–ივე ჯილდო დაგოროვებულია. პრიზი თქვენია!'
       prize_us_only: (მხოლოდ აშშ-ის სტუდენტებისთვის)
       prizes_link: მეტი ინფორმაცია
   teacher:
@@ -259,7 +259,7 @@ ka:
       perfect: დასრულებულია, იდეალურად
       completed: დასრულებულია, მაგრამ ზედმეტად ბევრი ბლოკის გამოყენებით
       tried: დაწყებულია, მაგრამ არა დასრულებული
-      not_tried: ჯერ არც კი გიცდია
+      not_tried: ჯერ არც კი გიცდიათ
       activity: 'გაჩვენებთ მოსწავლის აქტივობას ბოლო %{hours} %{plural}'
       no_section: არ არის მიკუთვნებული სექცია
       trophies: ჯილდოები
@@ -272,13 +272,13 @@ ka:
       add: მოსწავლეების დამატება
       remove: მოსწავლის წაშლა
       confirm_remove: დარწმუნებული ხართ, რომ ამ მოსწავლის წაშლა გინდათ?
-      help_reassign: კლასის სხვადასხვა სექციებად დასაყოფად აირჩიეთ სტუდენტები და გადაიყვანეთ ახალ სექციაში.
+      help_reassign: კლასის სხვადასხვა სექციებად დასაყოფად აირჩიეთ სტუდენტების ჯგუფი და გადაიყვანეთ ისინი ახალ სექციაში.
       help_register: არ დახარჯოთ დრო თქვენი მოსწავლეების მონაცემების შეყვანაზე, უბრალოდ, სთხოვეთ მათ, რომ დარეგისტრირდნენ. მათ დასჭირდებათ მომხმარებლის სახელისა და პაროლის შერჩევა, მაგრამ ელ.ფოსტის შეყვანა აუცილებელი არ არის. თუ რომელიმეს დაავიწყდება თავისი პაროლი, თქვენ შეძლებთ მის აღდგენას.
       register: სთხოვეთ მოსწავლეებს დამოუკიდებლად დარეგისტრირება
-      vist: შესთავაზეთ თქვენს მოსწავლეებს ეწვიონ საიტს
+      vist: შესთავაზეთ თქვენს მოსწავლეებს ეწვიონ
       section_code: 'და შეიყვანონ თავიანთი სექციის კოდი:'
-      first_please: 'თავდაპირველად, %{add_section}'
-      for: -სთვის
+      first_please: 'პირველ რიგში, %{add_section}'
+      for: '"მიზნისთვის"'
       enter: 'შეიყვანეთ:'
     sections:
       add: დაამატეთ სექცია
@@ -287,7 +287,7 @@ ka:
       students: მოსწვლეები
       section_code: სექციის კოდი
       add_section_code: სტუდენტებისთვის სექციის კოდის დამატება
-      secret: საიდუმლო
+      secret: საიდუმლოს ტიპი
       grade: შეფასება
       course: კურსი
       rename: სახელის შეცვლა
@@ -309,12 +309,14 @@ ka:
       section: სექცია
       example: მაგალითის ამოხსნა
       example_with_number: 'მაგალითის ამოხსნა %{solution_number}'
+      submitted_on: 'Submitted on %{date}'
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: 'ელ.ფოსტა არ არის დადასტურებული:'
     email_confirm_needed_required: 'თქვენი ელ. ფოსტა %{email} არ არის დადასტურებული:'
     email_confirm_wrong_email: (ელ. ფოსტის მისამართი არასწორია?)
     email_resend_confirm: დადასტურების ინსტრუქციების თავიდან გაგზავნა
-    new_password_hint: (დატოვეთ ცარიელი თუ შეცვლა არ გინდათ)
+    new_password_hint: (დატოვეთ ცარიელი, თუ შეცვლა არ გინდათ)
     current_password_hint: (ცვლილებების შესანახად შეიყვანეთ თქვენი მიმდინარე პაროლი)
     delete: ანგარიშის წაშლა
     delete_text: ქვემოთ ღილაკზე დაჭერა წაშლის თქვენს ანგარიშს.
@@ -322,7 +324,7 @@ ka:
     delete_confirm: დარწმუნებული ხართ, რომ თქვენი ანგარიშის წაშლა გინდათ?
   user_level:
     completed: დასრულებულია
-    tried: ნაცადია
+    tried: უკვე ნაცადია
   user_stats:
     recent_activity: უკანასკნელი აქტივობა
     show_more: მაჩვენე მეტი
@@ -343,10 +345,10 @@ ka:
     teacher_student_count: 'თქვენ გყავთ %{count} მოსწავლე.'
     teacher_averages: 'საშუალოდ  "ძირითადი ცნებების გამოწვევის" %{trophy_max} ჯილდოდან თქვენმა მოსწავლეებმა მოიპოვეს %{trophy_average}.'
     teacher_print_certificates: ამოუბეჭდეთ სერტიფიკატები იმ მოსწავლეებს, რომლებმაც დაასრულეს ეს კურსი
-    teacher_read_blog: ჩვენი ახალი ამბებისა და მასალის განახლების შესახებს წაიკითხეთ Educator ბლოგში
+    teacher_read_blog: ჩვენი ახალი ამბებისა და მასალის განახლების შესახებს წაიკითხეთ ბლოგში Educator
     classroom: თქვენი საკლასო ოთახი
     student_progress: თქვენი სასწავლო პროცესი
-    student_stats: '"ძირითადი ცნებების გამოწვევის" %{trophy_max} ჯილდოდან შენ მოიპოვე %{trophy_count}.'
+    student_stats: '"ძირითადი ცნებების გამოწვევის" %{trophy_max} ჯილდოდან თქვენ მოიპოვეთ %{trophy_count}.'
     student_left_off: 'სად გაჩერდით:'
     student_finished: 'თქვენ დაასრულეთ ყველა ტუტორიალი. აირჩიეთ სხვა კლასი აქ %{online_link} ან აქ %{local_school_link}.'
     local_school: ადგილობრივი სკოლა
@@ -355,7 +357,7 @@ ka:
     view_course: კურსის ნახვა
     prize_info: პრიზები მონაწილეობისთვის ( მხოლოდ აშშ-ის საჯარო სკოლების მასწავლებლებისთვის) 1,000 დოლარამდე თით კლასისთვის.
     tryfirst: 'ან, შეგიძლიათ ჯერ სცადოთ და მოგვიანებით დარეგისტრირდეთ:'
-    trynow: სცადე ახლა
+    trynow: სცადეთ ახლა
     add_hint_help: დაგვეხმარეთ Code.org-ის ტუტორიალებისთვის სასარგებლო მინიშნებების დამატებაში
     20hour_overview: ეს ოცსაათიანი კურსი ინფორმატიკისა და პროგრამირების ძირითად ცნებებს გაგაცნობთ. იგი შექმნილია K-8 კლასებში გამოსაყენებლად, თუმცა მისი მეშვეობით სწავლა ნებისმიერ ასაკშია სახალისო.
     test_videos_help: გატესტეთ ჩვენი ახალი ვიდეო-პლეიერი თქვენს სკოლაში
@@ -367,10 +369,10 @@ ka:
     heading_legacy: '<h2>ჩვენი დაჩქარებული კურსი</h2><h1>ნებისმიერი ასაკისთვის</h1>'
     your_gallery: გალერეა
     no_primary_course: ნახეთ კურსი კოდის სტუდიაში
-    choose_next_course: სცადე Code Studio კურსი ქვემოთ ერთის არჩევით
+    choose_next_course: სცადეთ კოდის სტუდიის კურსი, აირჩიეთ რომელიმე ვარიანტი
     print_certificate: სერტიფიკატის ამობეჭდვა
   share:
-    title: ისწავლეთ Code Studio-ზე
+    title: ისწავლეთ კოდის სტუდიაში
     description: ნებისმიერს შეუძლია კომპიუტერული მეცნერების სწავლა. შექმენით თამაშები, აპლიკაციები და ხელოვნების ნიმუშები კოდით.
   gender:
     male: მამრობითი
@@ -380,23 +382,24 @@ ka:
     student: მოსწავლე
     teacher: მასწავლებელი
   footer:
-    thank_you: 'ჩვენ მადლობას ვუხდით ჩვენს<a href="https://code.org/about/donors">დონორებს</a>, <a href="https://code.org/about/partners">პარტნიორებს</a>, our <a href="https://code.org/about/team">გავრცობილ ჯგუფს</a>, ვიდეოს გადამღებ ჯგუფსა და <a href="https://code.org/about/advisors">განათლების მრჩევლებს</a> Code Studio-ს შექმნაში დახმარებისთვის.'
+    thank_you: 'ჩვენ მადლობას ვუხდით ჩვენს<a href="https://code.org/about/donors">დონორებს</a>, <a href="https://code.org/about/partners">პარტნიორებს</a>, our <a href="https://code.org/about/team">გავრცობილ ჯგუფს</a>, ვიდეოს გადამღებ ჯგუფსა და <a href="https://code.org/about/advisors">მრჩევლებს განათლების დარგში</a> კოდის სტუდიის შექმნაში დახმარებისთვის.'
     help_from_html: 'ამ ტუტორიალის შექმნაში გვეხმარებოდნენ  Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.'
     help_from_html_old: ამ რესურსების შექმნაში გვეხმარებოდნენ Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009-2014 Rovio Entertainment Ltd. ყველა უფლება დაცულია. <br/>Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. ყველა უფლება დაცულია.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio entertainment Ltd. ყველა უფლება რეზერვირებულია.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts inc. ყველა უფლება რეზერვირებულია'
+    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია.<br /> Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია. <br/>Plants vs. Zombies&#8482; &amp; &copy;%{current_year} 2014 Electronic Arts Inc. ყველა უფლება დაცულია'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio entertainment Ltd. ყველა უფლება რეზერვირებულია.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts inc. ყველა უფლება დაცულია'
     powered_by_aws: შექმნილია Amazon Web Services დახმარებით
-    trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, CODE ლოგო და Hour of Code&reg; Code.org-ის სასაქონლო ნიშნებია.'
+    trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, CODE ლოგო და Hour of Code&reg; Code.org-ის სავაჭრო ნიშნებია.'
     copyright: საავტორო უფლება
     more: მეტი
     feedback: უკუკავშირი
-    translate: დაგვეხმარეთ, ვთარგმნოთ თქვენს ენაზე
+    translate: ვთარგმნოთ Code.org თქვენს ენაზე
     support: ტექ. მხარდაჭერა
     support_url: http://support.code.org
     tos_short: პირობები
     tos: მომსახურების პირობები
     privacy: კონფიდენციალურობის პოლიტიკა
     secure: დაცული ვერსია
+    report_abuse: Report Abuse
   reference_area:
     title: გჭირდებათ დახმარება?
     subtitle: ნახეთ ეს ვიდეოები და მინიშნებები
@@ -456,17 +459,17 @@ ka:
       body: სცადეთ პროგრამირების საფუძვლების სწავლა. ეს შანსი უკვე მილიონებმა გამოიყენეს.
     flappy:
       title: Flappy კოდი
-      body: 'გინდა, შენი საკუთარი თამაში დაწერო 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy Code"!'
+      body: 'გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy Code"!'
     20-hour:
       title: დაჩქარებული კურსი
-      body: ეს ოცსაათიანი კურსი ფარავს კომპიუტერული მეცნიერებისა და პროგრამირების ძირითად ნაწილებს კურსებიდან 2-4. კურსი შექმნილია 10-18 წლის მოსწავლეებისთვის. ნახეთ კურსები 2-4 უფრო სრული გამოცდილებისთვის!
+      body: ეს ოცსაათიანი კურსი შეიცავს კომპიუტერული მეცნიერებისა და პროგრამირების ძირითად ნაწილებს კურსებიდან 2-4. კურსი შექმნილია 10-18 წლის მოსწავლეებისთვის. სრული გამოცდილების მისაღებად გაეცანით კურსებს 2-4!
       body_short: ისწავლეთ ინფორმატიკის საფუძვლები 2-4 კურსების დაჩქარებულ ვერსიაში.
     hoc2014:
       try_new_tutorial: 'ნახეთ "კოდის ერთი საათის" ახალი ტუტორიალის ბეტა-ვერსია'
-      try_frozen: 'ხატე "გაყინულის" გმირებთან, ანასა და ელზასთან ერთად'
+      try_frozen: 'ხატეთ "გაყინულის" გმირებთან, ანასა და ელზასთან ერთად'
     gallery:
       title: გალერეა
-      body: ნახეთ ჩვენი მომხმარებლების მეირ შემქნილი აპლიკაციებისა და სურათების გალერეა
+      body: ნახეთ ჩვენი მომხმარებლების მეირ შექნილი აპლიკაციებისა და სურათების გალერეა
     frozen:
       title: '"გაყინული"'
     infinity:
@@ -517,7 +520,7 @@ ka:
     open_response_body: მადლობა პასუხისთვის!
   dialog:
     ok: OK
-    startover_title: დარწმუნებული ხარ, რომ გსურს ხელახლა დაწყება?
+    startover_title: დარწმუნებული ხართ, რომ ხელახლა დაწყება გსურთ?
     startover_body: ეს საწყის მდგომარეობაში დააბრუნებს თავსატეხს და თქვენ მიერ დამატებულ ან შეცვლილ მონაცემებს.
     startover_ok: ხელახლა დაწყება
     startover_cancel: გაუქმება
@@ -545,7 +548,7 @@ ka:
           description: ""
         flappy:
           title: Flappy კოდი
-          description: 'გინდა, შენი საკუთარი თამაში დაწერო 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy Code"!'
+          description: 'გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy Code"!'
         jigsaw:
           title: ფაზლი
           description: ""
@@ -599,12 +602,28 @@ ka:
     not_saved: არაა შენახული
     cancel: გაუქმება
     delete_confirm_title: დარწმუნებული ხართ, რომ ამ პროექტის წაშლა გინდათ?
-    delete_confirm_text: პროექტის წაშლა სამუდამოდ ამოშლის მას შენი პროექტების სიიდან. მასზე წვდომა არც იმათ ექნებათ, ვისაც ეს პროექტი ადრე გაუზიარეთ.
+    delete_confirm_text: პროექტის წაშლა სამუდამოდ ამოშლის მას თქვენი პროექტების სიიდან. მასზე წვდომა არც იმათ ექნებათ, ვისაც ეს პროექტი ადრე გაუზიარეთ.
     view_all: ჩემი პროექტების ნახვა
     remix: რემიქსი
     click_to_remix: 'დააჭირეთ "რემიქსს" და გაუშვით საკუთარი ვერსია!'
-    edit_project: Edit Project
+    edit_project: პროექტის რედაქტირება
     abuse:
-      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
-      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
-      go_to_code_studio: Go to Code Studio
+      tos: "ამ პროექტს სხვებს ვერ გაუზიარებთ, იმიტომ რომ იგი აღნიშნულია, როგორც Code.org-ის<a href='http://code.org/tos'>მომსახურების პირობების</a> დამარღვეველი."
+      contact_us: "თუ ფიქრობთ, რომ ეს შეცდომაა, <a href='https://code.org/contact'> დაგვიკავშირდით.</a>"
+      go_to_code_studio: გადადით კოდის სტუდიაში
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        validation:
+          email: Please provide an email address
+          age: Please specify an age
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
+          harassment: Threats, cyberbullying, harassement
+          offensive: Offensive content
+          infringement: Copyright Infringement
+          other: სხვა
+        detail: Please provide as much detail as possible regarding the content you are reporting.
+        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'

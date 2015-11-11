@@ -31,6 +31,7 @@
   "ifTooltip":"Ja ir ceļš noteiktā virzienā, tad darīt dažas darbības.",
   "ifelseTooltip":"Ja ir ceļš noteiktājā virzienā, tad darīt pirmā bloka darbības. Citādi, darīt otra bloka darbības.",
   "ifFlowerTooltip":"Ja noteiktajā virzienā ir zieds\/medukāre, tad darīt dažas darbības.",
+  "ifOnlyFlowerTooltip":"If there is a flower in the specified direction, then do some actions.",
   "ifelseFlowerTooltip":"Ja noteiktajā virzienā ir zieds\/medukāre, tad darīt pirmā bloka darbibas. Citādi, darīt otrā bloka darbības.",
   "insufficientHoney":"Tu izmanto visus pareizos blokus, bet tev jāpagatavo pareizo daudzumu medus.",
   "insufficientNectar":"Tu izmanto visus pareizos blokus, bet tev ir jāsavāc nepieciešamo nektāra daudzumu.",

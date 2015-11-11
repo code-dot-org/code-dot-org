@@ -452,6 +452,7 @@ id:
         infinity_playlab_intro: 'Play Lab - Pendahuluan'
         infinity_playlab_events: 'Play Lab - Kegiatan'
         infinity_playlab_repeat_forever: 'Play Lab - ulangi selamanya'
+        csp_applab_functions: Pengenalan Fungsi
         csp_concept_rgb: Sedikit tentang piksel
         csp_pixelation_color_1: 'widget pixelation Warna - Bagian 1'
         csp_pixelation_color_2: 'widget pixelation Warna - Bagian 2'
@@ -480,6 +481,9 @@ id:
         alg_15_biggame_update_player: 'CS didalam Aljabar - Perbaharui Pemain Big Game/Permainan Besar'
         alg_16_biggame_collision_detection: 'CS didalam Aljabar - Deteksi Benturan Big Game/Permainan Besar'
         alg_17_sambat_compound_booleans: 'CS didalam Aljabar - GabunganBoolean'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: 'Tarik blok "gerak" dan letakkan di bawah blok lain'

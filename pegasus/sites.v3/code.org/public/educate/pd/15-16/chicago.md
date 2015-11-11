@@ -10,6 +10,8 @@ nav: pd2_nav
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
+- [I'm attending Counselor-Administrator PD](#counselor-admin)
+
 
 <a id="csp"></a>
 ## Computer Science Principles
@@ -51,7 +53,7 @@ Breakfast and lunch will be served.
 
 Loyola University - Water Tower Campus<br/> 
 Corboy Law Center<br/> 
-Room: TBD<br/>
+Room: 205<br/>
 25 E Pearson St <br/>
 Chicago, IL 60611
 
@@ -167,6 +169,7 @@ Phase 3 is composed of bi-yearly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
+<i>Both Group 1 & 2 will attend the following dates</i><br/>
 Semester 1: Saturday, October 24, 2015 
 
 Semester 2: Saturday, April 30, 2016 
@@ -174,9 +177,22 @@ Semester 2: Saturday, April 30, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**Location**
+**October 24th Location**
 
-TBD
+<i><b>Group 1</i></b><br/>
+Loyola University - Water Tower Campus<br/> 
+Corboy Law Center <br/>
+Room CLC 205<br/>
+25 E Pearson St<br/> 
+Chicago, IL 60611
+
+<i><b>Group 2</i></b><br/>
+Loyola University - Water Tower Campus<br/> 
+Corboy Law Center <br/>
+Room CLC 301<br/>
+25 E Pearson St<br/> 
+Chicago, IL 60611
+
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -219,6 +235,7 @@ Phase 3 is composed of bi-yearly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
+<i>Both Group 1 & 2 will attend the following dates</i><br/>
 Semester 1: Saturday, October 17, 2015 
 
 Semester 2: Saturday, January 23, 2016 
@@ -228,8 +245,22 @@ Breakfast and lunch will be served.
 <br/><br/>
 **Location**
 
-TBD
-<br/><br/>
+<i><b>Group 1</i></b><br/>
+Loyola University - Water Tower Campus<br/> 
+Corboy Law Center <br/>
+Room CLC 301<br/>
+25 E Pearson St<br/> 
+Chicago, IL 60611
+
+<i><b>Group 2</i></b><br/>
+Loyola University - Water Tower Campus<br/> 
+Corboy Law Center <br/>
+Room CLC 302<br/>
+25 E Pearson St<br/> 
+Chicago, IL 60611
+
+
+
 **What to bring to Phase 3 bi-yearly sessions:**
 
 Laptop and Charger
@@ -269,12 +300,6 @@ Monday, October 20, 2015 <br/>
 23 E Illinois St<br/>
 Chicago, IL 60611
 
-**What to bring**
-
-Snacks
-<br/>
-Water
-
 ### Administrators##
 
 **Save the date**
@@ -287,11 +312,6 @@ Monday, October 20, 2015 <br/>
 23 E Illinois St<br/>
 Chicago, IL 60611
 
-**What to bring**
-
-Snacks
-<br/>
-Water
 
 [**Back to the top**](#top)
 

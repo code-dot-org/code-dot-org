@@ -1,5 +1,6 @@
 ka:
   site_name: კოდის საათი
+  hour_of_code: Hour of Code
   language: ქართული
   front_title: შემოუერთდით პროგრამირების ყველაზე დიდ ღონისძიებას, 2015 წლის 7-13 დეკემბრის განმავლობაში
   coming_soon: მალე
@@ -8,14 +9,17 @@ ka:
   campaign_date_short: დეკ. 7-13
   campaign_date_full: დეკემბრის 7-13
   front_header_banner: შემოუერთდით პროგრამირების ყველაზე დიდ ღონისძიებას, 2015 წლის 7-13 დეკემბრის განმავლობაში
-  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
+  front_intro_default: 'კოდის ერთი საათი არის გლობალური მოძრაობა რომელის აერთიანებს ათობით მილიონ სტუდენტს 180+ ქვეყნიდან. კოდის ერთი საათის ორგანიზება შეუძლია ნებისმიერ ადამიანს, ნებისმიერ ადგილას. ერთსაათიანი ტუტორიალები 40 ენაზეა მისაწვდომი. გამოცდილება საჭირო არ არის. <strong>ასაკი: 4 წლიდან 104 წლამდე.</strong>'
   front_watch_video: უყურეთ ახალ ვიდეოს
   front_watch_regular_video: უყურეთ ვიდეოს
   header_menu_resources: რესურსები
   header_menu_faq: ხშირად დასმული კითხვები
   header_menu_prizes: პრიზები
+  header_menu_how_to: How-To
+  header_menu_promote: გაუკეთეთ რეკლამა
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -49,6 +53,7 @@ ka:
   company_chelmsfordpublicschooldistrict: Chelmsford School District
   company_cheneysd: Cheney School District
   company_chesterfieldschools: Chesterfield County Public Schools
+  company_codebrooklyn: Code Brooklyn
   company_cps: Chicago Public Schools
   company_ccsd: Clark County School District
   company_cloverparkschooldistrict: Clover Park School District
@@ -72,6 +77,7 @@ ka:
   company_vadoe: "Governor's School Programs"
   company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
+  company_godaddy: Go Daddy
   company_greenupcountyschooldistrict: Greenup County Schools
   company_gwinnettcountypublicschools: Gwinnett County Public Schools
   company_HamptonCitySchools: Hampton City Schools
@@ -105,6 +111,7 @@ ka:
   company_oneclay: One Clay County School District
   company_ocps: Orange County Schools
   company_orangeusd: Orange Unified School District
+  company_pbsd: Palm Beach School District
   company_pvusd: Paradise Valley Unified School District
   company_PetersburgCityPublicSchools: Petersburg City Public Schools
   company_pylusd: Placentia-Yorba Linda Union School District
@@ -118,6 +125,7 @@ ka:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -130,6 +138,7 @@ ka:
   company_wvsd208: West Valley School District
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
+  company_yelp: Yelp
   prizes_all: პრიზები ყველა ორგანიზატორისთვის
   prizes_every_organizer: ყოველი პროგრამირებიის საათის ორგანიზატორი მიიღებს Dropbox ან Skype კრედიტს მადლობის ნიშნათ
   prizes_technology: აშშ-ის ყოველი შტატის თითო სკოლა მოიგებს 10, 000 დოლარის ღირებულების ტექნიკას
@@ -138,6 +147,22 @@ ka:
   prizes_brilliant: თითო სკოლა ყოველ ოლქში მიღღებს 2, 000 დოლარს საუკეთესო პროექტისთვის
   prizes_actua: კანადაში 15 სკოლა მიიღებს საჩუქრად ორ-ორ სემინარს Actua-ს წევრის ხელმძღვანელობით
   prizes_details: დეტალები
+  nav_back_to_resources: რესურსებში დაბრუნება
+  how_to_nav_educators: მასწავლებლებისთვის
+  how_to_nav_after_school: სკოლის შემდგომი აქტივობისთვის
+  how_to_nav_parents: მშობლებისთვის
+  how_to_nav_public_officials: საჯარო ოფიციალური პირებისთვის
+  how_to_nav_districts: რაიონებისთვის
+  how_to_nav_assemblies: სასკოლო შეკრებებისთვის
+  how_to_nav_organizations: ორგანიზატორებისთვის
+  how_to_nav_companies: For companies
+  how_to_nav_afterschool_educators: For after-school educators
+  how_to_nav_volunteers: For volunteers
+  prizes_nav_title: პრიზები
+  prizes_nav_home: All prizes
+  prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: წესები და პირობები
+  prizes_nav_faq: ხშირად დასმული კითხვები
   prizes_nav_dc: იდუმალი მოგზაურობა ვაშინგტონის ოლქში.
   prizes_nav_technology: 10,000 დოლარის ღირებულების ტექნიკა თქვენი სკოლისთვის
   prizes_nav_video_chat: ვიდეო ჩატი ტექნოლოგიების ტიტანებთან
@@ -145,23 +170,17 @@ ka:
   prizes_nav_brilliant: 2,000 დოლარი საუკეთესო პროექტებს
   prizes_nav_actua: Actua workshop
   prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: წესები და პირობები
-  prizes_nav_faq: ხშირად დასმული კითხვები
-  nav_back_to_resources: Back to Resources
-  how_to_nav_educators: For educators
-  how_to_nav_after_school: For after school
-  how_to_nav_parents: For parents
-  how_to_nav_public_officials: For public officials
-  how_to_nav_districts: For districts
-  how_to_nav_assemblies: For school assemblies
-  how_to_nav_organizations: For organizations
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
   whats_next_header: და შემდეგ?
   whats_next_description: "თქვენი ღონისძიებისთვის ჩვენ გამოგიგზავნით დამხმარე მასალებსა და სასარგებლო რჩევებს. 2015 წლის ახალი ტუტორიალები მალე დაიდება - და მათი გავლა შესაძლებელი იქნება ნებისმიერ ბრაუზერში, სმარტფონში - ან ყოველგვარი მოწყობილობის გარეშე! <a href='http://code.org/learn'>ნახეთ მიმდინარე ტუტორიალები</a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>როგორ ჩავატაროთ კოდის ერთი საათი</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>გაავრცელეთ ინფორმაცია კოდის ერთი საათის შესახებ</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
-  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
-  whats_next_try_button: Try tutorials
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>სცადეთ გაკვეთილები</a>"
+  whats_next_try_button: სცადეთ გაკვეთილები
   n_have_learned_an_hoc: '<h1>სცადეთ</h1><h2>კოდის ერთი საათი</h2><h3>#მიწოდებულია</h3>'
   anybody_can_learn: სწავლა შეუძლია ყველას.
   get_started: დაწყება
@@ -178,14 +197,15 @@ ka:
   front_join_us_teacher: მასწავლებელი ხართ?
   front_join_us_inspire: შთააგონეთ სტუდენტებს
   front_join_us_inspire_link: კოდის საათი კლასში.
-  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
+  front_join_us_teacher_link: შთააგონეთ მოსწავლეებს კლასში კოდის ერთი საათის მეშვეობით
   front_join_us_parent: მშობელი ხართ?
   front_join_us_ask_link: სთხოვეთ ადილობრივ სკოლას
   front_join_us_ask: ჩაატაროს კოდის საათი.
-  front_join_us_parent_link: Ask your local school to host an Hour of Code
+  front_join_us_parent_link: შესთავაზეთ თქვენს ადგილობრივ სკოლას კოდის ერთი საათის ჩატარება
   front_join_us_computer_science: უბრალოდ გიყვართ კომპიუტერული მეცნიერება?
   front_join_us_spread: გაავრცელეთ ინფორმაცია.
-  front_join_us_spread_word: Spread the word in your community
+  front_join_us_spread_word: გაავრცელეთ ხმა თქვენს საზოგადოებაში
+  front_join_us_spread_word_work: Spread the word in your community or workplace
   front_join_us_organize: ან მოაწყვეთ კოდის ერთი საათი თქვენით.
   front_join_us_how_to_run: როგორ ჩავატაროთ კოდის ერთი საათი
   front_join_us_help_promote: დაგვეხმარეთ კოდის ერთი საათის ამბის გავრცელებაში
@@ -196,9 +216,10 @@ ka:
   front_join_us_sign_up: რეგისტრაცია
   front_join_us_host: გახდით ორგანიზატორი
   front_join_us_support: დაუჭირეთ მხარი
-  front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  front_join_us_code_info: For more information, please visit code.org
-  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
+  front_join_us_more_info: "მეტი ინფორმაციისთვის, გთხოვთ ეწვიოთ <a href='https://code.org'>code.org</a>-ს."
+  front_join_us_code_info: მეტი ინფორმაციისთვის, გთხოვთ ეწვიოთ code.org-ს
+  front_join_us_n_students_served: '# served'
+  signup_header: 'დაგეგმეთ კოდის ერთი საათი მოცემულ ვადებში: %{campaign_date} და დაარეგისტრირეთ ის აქ.'
   signup_name_label: თქვენი სახელი
   signup_email_label: თქვენი ელ.ფოსტა
   signup_organization_name_label: სკოლის ან ორგანიზაციის სახელი
@@ -227,9 +248,13 @@ ka:
   map_header: '#კოდის ერთი საათის ღონისძიებები მთელ მსოფლიოში'
   see_all_events: ყველა ღონისძიება
   map_header_company: '# by company organizers'
+  map_header_country: '# in %{country}'
   map_search_placeholder: კოდის ერთი საათის ღონისძიებების ძიება
   map_search_search: ძებნა
   map_search_reset: გადატვირთვა
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: კოდის საათი აქაა
   meta_tag_og_description: 'კოდის ერთი საათი არის გლობალური მოძრაობა რომელის აერთიანებს ათობით მილიონ სტუდენტს 180+ ქვეყნიდან, 40 ენაზე მისაწვდომი ტუტორიალებით. ასაკი: 4-დან 104-მდე.'
   meta_tag_twitter_title: კოდის საათი აქაა
@@ -248,8 +273,12 @@ ka:
   hardware_prizes_form_school_type_option_middle_school: საბაზო
   hardware_prizes_form_school_type_option_high_school: საშუალო
   hardware_prizes_form_qualifying_school_label: ეს არის K-12 საჯარო სკოლა
+  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
+  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
   hardware_prizes_form_number_students_label: მონაწილე მოსწავლეების რაოდენობა
   hardware_prizes_form_number_students_placeholder: მოსწავლეების რაოდენობა
+  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
+  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
   hardware_prizes_form_plan_file_label: ატვირთეთ კოდის ერთი საათის ლოგისტიკის თქვენი გეგმა
   hardware_prizes_form_plan_file_description: 'გამოგვიგზავნეთ მარტივი განრიგი, რომლის მიხედვთაც გეგმავთ ჩაატაროთ კოდის ერთი საათი თქვენს სკოლაში ყველა მოსწავლის ჩართვის. ნახეთ მაგალითი: #PDF# | #Word#'
   hardware_prizes_form_submit_label: გაგზავნა
@@ -262,15 +291,15 @@ ka:
   hoc_faq_why_cs_q: რატომ კომპიუტერული მეცნიერება?
   hoc_faq_why_cs_a: "<i>ყოველ</i>მოსწავლეს უნდა ჰქონდეს შესაძლებლობა ისწავლოს ინფორმატიკა. ინფორმატიკის სწავლა ავითარებს პრობლემების გადაჭრის უნარს, ლოგიკასა და შემოქმედებით უნარს. სწავლის ადრე დაწყება უზრუნველყოფს მოსწავლეების წარმატებას 21-ე საუკუნის ნებისმიერ პროფესიაში. გაეცანით სტატისტიკას აქ <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: როგორ მივიღო მონაწილეობა კოდის ერთ საათში?
-  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>დაიწყეთ თქვენი გეგმა აქ</a> ჩვენი ინსტრუქციების გაცნობით. კოდის ერთი საათის ორგანიზება შეგიძლიათ თქვენს სკოლაში ან ნებისმიერ გაერთიანებაში&mdash; დამატებითი აქტივობის წრეში, არასამეწრამეო ორგანიზაციაში ან სამსახურში. ან სცადეთ გამოუკიდებლად 7 დეკემბერს."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: ვინ დგას კოდის ერთი საათის მიღმა?
   hoc_faq_behind_hoc_a: "კოდის ერთი საათი ორგანიზებულია <a href='http://code.org'>Code.org</a>-ის მიერ. Coge.org არის არამომგებიანი ორგანიზაცია, რომლის მიზანია ინფორმატიკის სწავლება მეტ სკოლაში გახდეს შესაძლებელი, გაიზარდოს ქალებისა და ფერადკანიანების წილი პროგრამირების მოსწავლეებს შორის. კოდის ერთი საათის ირგვლივ გაერთიანებულია <a href='http://code.org/about/partners'>უამრავი პარტნიორი</a>, მაგალითად Microsoft, Apple, Amazon, Boys and Girls Clubs of America და College Board."
   hoc_faq_host_q: პროგრამირების შესახებ არაფერი არ ვიცი. შეიძლება, რომ მაინც ვიყო ორგანიზატორი?
-  hoc_faq_host_a: "რა თქმა უნდა, კოდის ერთი საათის აქტივობების გავლა დამოუკიდებლადაც შეიძლება. ერთადერთი, რაც უნდა გააკეთოთ: <a href='http://code.org/learn'>სცადოთ მიმდინარე ტუტორიალები</a>, აირჩიოთ, რომელიც მოგეწონებათ, აირჩიოთ საათი&mdash; ჩვენ მივხედავთ ყველაფერ დანარჩენს. თვენი ღონისძიების დასასგეგმა გაეცანით ჩვენს <a href='target-resources-how-to'>ინსტრუქციებს</a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: მჭირდება თუ არა კომპიუტერი ყოველი მონაწილისთვის?
   hoc_faq_need_computers_a: "არა. ჩვენ გვაქვს კოდის ერთი საათის ისეთი ტუტორიალები, რომლებიც მუშაობენ პერსონალურ კომპიუტერებე, სმარტფონებზე, პლანშეტებზე, ზოგს კი საერთოდ არ სჭირდება არანაირი მოწყობილობა! არა აქვს მნიშვნელობა სად ხართ და რა გაქვთ. <p><i> აი, რამდენიმე იდეა: </i> <br> <ul> <li><b>იმუშავეთ წყვილებად.</b>კვლევები გვაჩვენებს, რომ მოსწავლეები უკეთ სწავლობენ <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> თუ წყვილში წერენ კოდს</a> ერთი კომპიუტერის გამოყენებით. დაყავით თქვენი მოსწავლეები ორ-ორად. <li><b>გამოიყენეთ პროექტორი.</b> თუ გაქვთ წვდომა ინტერნეტზე და პროექტორი, კოდის ერთი საათის გავლა მთელ ჯგუფს ერთად შეუძლია. უყურეთ ვიდეოებს ერთად, ამოცანები კი რიგ-რიგობით გააკეთეთ.<li><b> ისწავლეთ ოფლაინ.</b> ჩვენ გვაქვს ისეთი ტუტორიალები, რომელთა გასავლელად საერთოდ არ არის საჭირო არანაირი მოწყობილობა.</ul>"
   hoc_faq_international_q: 'მე ვარ <country>ში. როგორ მივიღო მონაწილეობა?'
-  hoc_faq_international_a: "კოდის ერთი საათის ღონისძიების ჩატარება შეუზლია ყველას და ყველგან. შარშანაც მოსწავლეები მთელი მსოფლიოს მასშტაბით გაერთიანდნენ კოდის ერთი საათის ფარგლებში. გაიგეთ მეტი <a href='/resources'>აქ</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: როგორ შევქმნა კოდის ერთი საათის ტუტორიალი?
   hoc_faq_tutorial_a: "თუ გინდათ გახდეთ ჩვენი პარტნიორი და შექმნათ ტუტორიალი,<a href='target-tutorial-guidelines'>გაეცანით ჩვენს რჩევებსა და ინსტრუქციებს</a>. ჩვენ სიამოვნებით მივიღებდით სხვადასხვა ფორმატის ტუტორიალებს, მაგრამ ჩვენი ძირითადი მიზანია მაქსიმალურად მარტივი და საინტერესო გავხადოთ სწავლა იმათთვის, ვინც პროგრამირებას პირველად კოდის ერთი საათის ფარგლებში შეეხება."
   hoc_faq_more_questions_q: კიდევ გაქვთ კითხვები?
@@ -304,34 +333,43 @@ ka:
   resources_how_to_districts: სახელმძღვანელო უბნებისთვის
   resources_how_to_officials: სახელმძღვანელო საჯარო პირებისთვის
   resources_handouts: როგორ გავავრცელოთ სიტყვა
-  resources_one_pager: One-page handout
-  resources_brochure: Brochure
+  resources_one_pager: ერთვერდიანი კონსპექტი
+  resources_brochure: ბროშურა
   resources_posters: პოსტერები
   resources_videos: ვიდეოები
   resources_banners: ბანერები
   resources_emails: ელ.ფოსტის ნიმუშები
-  resources_logo: Hour of Code logo
+  resources_logo: კოდის ერთი საათის ლოგო
   resources_stats: სასარგებლო სტატისტიკა და რეცენზიები
   resources_press_kit: პრესისთვის
   resources_social: სოციალური ქსელები
   resources_country_resources: რესურსები ქვეყნების მიხედვით
-  resources_stickers: Stickers
-  resources_banner_promote_text: Promote
-  resources_banner_promote_button: Encourage others to sign up with brochures, inspirational posters and social media banners.
-  resources_banner_howto_text: How-to
-  resources_banner_howto_button: Resources for educators, parents and districts to host an Hour of Code.
-  handouts_onepager: Spread the word with this one page handout
-  handouts_brochure: Give this brochure to teachers and schools
+  resources_stickers: სტიკერები
+  resources_how_to_guides: How-to guides
+  resources_promote: გაუკეთეთ რეკლამა
+  resources_nav_tutorials: სცადეთ ტუტორიალები
+  resources_nav_promote: Spread the word
+  resources_nav_spread_word: How to get involved
+  resources_banner_promote_text: გაუკეთეთ რეკლამა
+  resources_banner_promote_button: წაახალისეთ სხვებიც რომ დარეგისტრირდნენ ბროშურების, შთამაგონებელი პოსტერებისა და სოციალური ქსელების ბანერებისთვის.
+  resources_banner_howto_text: როგორ უნდა
+  resources_banner_howto_button: რესურსი მასწავლებლების, მშობლებისა და რაიონებისთვის კოდის ერთი საათის ჩასატარებლად.
+  handouts_section: Share these handouts
+  handouts_onepager: გაავრცელეთ ხმა ამ ერთგვერდიანი კონსპექტის საშუალებით
+  handouts_brochure: გადაეცით ეს ბროშურა მასწავლებლებსა და სკოლებს
+  handouts_participationguide: Plan your Hour of Code with this participation guide
   videos_title: შთაგონებისთვის აჩვენეთ ეს ვიდეოები სტუდენტებს
-  videos_what_most_schools_dont_teach: "What Most Schools Don't Teach (5 min)"
-  videos_hoc_2014: 'Hour of Code is Here - Anybody Can Learn'
+  videos_what_most_schools_dont_teach: რას არ ასწავლიან სკოლების უმეტესობაში (5 წთ)
+  videos_hoc_2014: 'კოდის ერთი საათი აქაა - ყველას შეუძლია სწავლა'
   videos_obama_cs: პრეზიდენტი ობამა კომპიუტერული მეცნიერებების შესახებ
-  videos_anybody_can_learn: Anybody Can Learn (1 min)
+  videos_anybody_can_learn: ნებისმიერს შეუძლია სწავლა (1 წთ)
   title_country_resources: რესურსები ქვეყნების მიხედვით
   title_how_to_districts: როგორ მოვაწყოთ კოდის ერთი საათი უბანში
   title_how_to_events: 'კოდის ერთი საათის ორგანიზება - ინსტრუქციები'
   title_how_to_organizations: 'როგორ მოვაწყოთ კოდის ერთი საათი - ორგანიზაციებს'
+  title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: სახელმძღვანელო საჯარო პირებისთვის
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: ინსტრუქციები
   title_press_release: კოდის ერთი საათის პრეს-რელიზი
   title_op_ed: კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეული და კოდის ერთი საათის მისაწვდომობის მხარდამჭერი განცხადების ტექსტი
@@ -343,12 +381,12 @@ ka:
   title_prizes_terms: პრიზების მოპოვების პირობები
   title_prizes_thanks: მადლობა
   title_prizes: პრიზები
-  title_hardware_prize_form: Sign up for Hardware Prizes
+  title_hardware_prize_form: დარეგისტრირდით კომპიუტერული ტექნიკის პრიზებისთვის
   title_resources: რესურსები
   title_signup_thanks: მადლობა კოდის საათზე დარეგისტრირებისთვის!
   title_tutorial_guidelines: ტუტორიალების ინსტრუქციები
   title_whole_school: მთელი სკოლის ჩართულობა
-  events_title: 'კოდის ერთი საათი: ყველა ღონისძიება'
+  events_nav_title: Hour of Code Events
   events_nav_all: ყველა ღონისძიება
   events_nav_whole_schools: სკოლები მთლიანად
   events_nav_special: სპეცილური ღონისძიებები

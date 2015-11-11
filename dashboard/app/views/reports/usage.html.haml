@@ -4,7 +4,7 @@
 
 %br/
 
-:scss  
+:scss
   $level_passed: rgb(159, 212, 159);
   //$level_passed: #d8d8d8;
   $level_perfect: rgb(14, 190, 14);
@@ -58,7 +58,7 @@
           %span.perfect completed
         - elsif activity.finished?
           %span.passed passed
-        - else 
+        - else
           %span.attempted attempted
       %td
         - sl = activity.level.script_levels.last

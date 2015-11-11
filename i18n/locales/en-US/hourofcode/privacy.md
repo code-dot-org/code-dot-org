@@ -4,7 +4,7 @@ crwdns44859:0crwdne44859:0
 
 * * *
 
-### crwdns47696:0crwdne47696:0
+### crwdns50423:0crwdne50423:0
 
 # crwdns44860:0crwdne44860:0
 
@@ -29,7 +29,7 @@ crwdns44866:0crwdne44866:0
 
 ## crwdns44875:0crwdne44875:0
 
-crwdns44876:0crwdne44876:0 crwdns44877:0crwdne44877:0 crwdns44878:0crwdne44878:0 crwdns44879:0crwdne44879:0
+crwdns49027:0crwdne49027:0 crwdns44877:0crwdne44877:0 crwdns44878:0crwdne44878:0 crwdns44879:0crwdne44879:0
 
 crwdns44880:0crwdne44880:0 crwdns44881:0crwdne44881:0 crwdns44882:0crwdne44882:0 crwdns44883:0crwdne44883:0
 
@@ -82,7 +82,7 @@ crwdns44969:0crwdne44969:0
 
 crwdns44970:0crwdne44970:0 crwdns44971:0crwdne44971:0 crwdns44972:0crwdne44972:0
 
-## crwdns44973:0crwdne44973:0
+## crwdns49028:0crwdne49028:0
 
 crwdns44974:0crwdne44974:0 crwdns44975:0crwdne44975:0 crwdns44976:0crwdne44976:0
 
@@ -114,17 +114,17 @@ crwdns45003:0crwdne45003:0
 
 crwdns45005:0crwdne45005:0 crwdns45006:0crwdne45006:0 crwdns45007:0crwdne45007:0
 
-crwdns45008:0crwdne45008:0 crwdns45009:0crwdne45009:0 crwdns45010:0crwdne45010:0 crwdns45011:0crwdne45011:0 crwdns45012:0crwdne45012:0
+crwdns49029:0crwdne49029:0 crwdns45009:0crwdne45009:0 crwdns45010:0crwdne45010:0 crwdns49030:0crwdne49030:0 crwdns45012:0crwdne45012:0
 
 crwdns45013:0crwdne45013:0 crwdns45014:0crwdne45014:0 crwdns45015:0crwdne45015:0 crwdns45016:0crwdne45016:0 crwdns45017:0crwdne45017:0 crwdns45018:0crwdne45018:0
 
-## crwdns45019:0crwdne45019:0
+## crwdns49031:0crwdne49031:0
 
 crwdns45020:0crwdne45020:0
 
 crwdns45021:0crwdne45021:0 crwdns45022:0crwdne45022:0
 
-## crwdns45023:0crwdne45023:0
+## crwdns49032:0crwdne49032:0
 
 crwdns45024:0crwdne45024:0 crwdns45025:0crwdne45025:0 crwdns45026:0crwdne45026:0
 
@@ -134,11 +134,11 @@ crwdns45029:0crwdne45029:0
 
 crwdns45030:0crwdne45030:0
 
-## crwdns45031:0crwdne45031:0
+## crwdns49033:0crwdne49033:0
 
-crwdns45032:0crwdne45032:0 crwdns45033:0crwdne45033:0
+crwdns45032:0crwdne45032:0 crwdns49034:0crwdne49034:0
 
-## crwdns45034:0crwdne45034:0
+## crwdns49035:0crwdne49035:0
 
 crwdns45035:0crwdne45035:0 crwdns45036:0crwdne45036:0
 
@@ -158,7 +158,7 @@ crwdns45048:0crwdne45048:0 crwdns45049:0crwdne45049:0 crwdns45050:0crwdne45050:0
 
 crwdns45055:0crwdne45055:0 crwdns45056:0crwdne45056:0
 
-## crwdns45057:0crwdne45057:0
+## crwdns49036:0crwdne49036:0
 
 crwdns45058:0crwdne45058:0 crwdns45059:0crwdne45059:0
 
@@ -184,7 +184,7 @@ crwdns45072:0crwdne45072:0 crwdns45073:0crwdne45073:0
 
 crwdns45075:0crwdne45075:0 crwdns45076:0crwdne45076:0
 
-### crwdns47702:0crwdne47702:0
+### crwdns49037:0crwdne49037:0
 
 crwdns45078:0crwdne45078:0 crwdns45079:0crwdne45079:0
 
@@ -204,11 +204,11 @@ crwdns45087:0crwdne45087:0
 
 crwdns45089:0crwdne45089:0 crwdns45090:0crwdne45090:0
 
-## crwdns45091:0crwdne45091:0
+## crwdns49038:0crwdne49038:0
 
 ### crwdns47707:0crwdne47707:0
 
-crwdns45093:0crwdne45093:0 crwdns45094:0crwdne45094:0 crwdns45095:0crwdne45095:0
+crwdns45093:0crwdne45093:0 crwdns49039:0crwdne49039:0 crwdns45095:0crwdne45095:0
 
 ### crwdns47708:0crwdne47708:0
 
@@ -222,9 +222,9 @@ crwdns45103:0crwdne45103:0 crwdns45104:0crwdne45104:0
 
 ### crwdns47710:0crwdne47710:0
 
-crwdns45106:0crwdne45106:0
+crwdns49040:0crwdne49040:0
 
-### crwdns47711:0crwdne47711:0
+### crwdns49041:0crwdne49041:0
 
 crwdns45108:0crwdne45108:0 crwdns45109:0crwdne45109:0
 
@@ -233,4 +233,4 @@ crwdns45108:0crwdne45108:0 crwdns45109:0crwdne45109:0
 crwdns45111:0crwdne45111:0   
   
   
-[![](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

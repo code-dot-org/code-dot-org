@@ -28,8 +28,8 @@ Join us to make history. We want our nation to try an introduction to computer s
 
 [resources-item]
 
-<div class="resources-logo"><a href="http://www.bigambition.co.uk"><IMG src="/images/bigambition.jpeg" /></a></div>
-Show your students where computer science can take them. BigAmbition from the employer organisation e-skills UK helps 14-19 year olds make informed choices about digital careers including cyber security. Developed with students, it is full of material from employers right across the tech sector and beyond.
+<div class="resources-logo"><a href="http://www.techfuturecareers.com"><IMG src="/images/techfuture-careers.jpg" /></a></div>
+Show your students where computer science can take them. TechFuture Careers from employer organisation the Tech Partnership helps 14 – 19 year olds make informed choices about digital careers including cyber security. Developed with students, it is full of material from employers right across the tech sector and beyond.
 
 [/resources-item]
 
@@ -64,17 +64,17 @@ Aims to build the next generation of problem solvers and digital makers. Their f
 [resources-item]
 
 
-<div class="resources-logo"><a href="http://www.behindthescreen.org.uk"><IMG src="/images/behindthescreen.jpeg" /></a></div>
+<div class="resources-logo"><a href="http://www.techfutureclassroom.com"><IMG src="/images/techfuture-classroom.jpg" /></a></div>
 
- Prepare your pupils for GCSE with a free, fully resourced computing scheme of work from e-skills UK. Developed with teachers, based on real world challenges from leading employers and cyber security professionals. No prior experience needed. 
+ Prepare your pupils for GCSE with a free, fully resourced computing scheme of work from the Tech Parntership. Developed with teachers, based on real world challenges from leading employers and cyber security professionals. No prior experience needed. 
 
 [/resources-item]
 
 [resources-item]
 
-<div class="resources-logo"><a href="http://www.cc4g.net"><IMG src="/images/cc4g.jpeg" /></a></div>
+<div class="resources-logo"><a href="http://www.techfuturegirls.com"><IMG src="/images/techfuture-girls.jpg" /></a></div>
 
-Inspire girls to take on the digital world with confidence. A fully resourced scheme of work from e-skills UK, developed with teachers, supported by role models from leading employers. No experience needed.
+Inspire girls to take on the digital world with confidence. A fully resourced scheme of work – including a specialist coding area - from the Tech Partnership, developed with teachers and supported by role models from leading employers.
 
 [/resources-item]
 

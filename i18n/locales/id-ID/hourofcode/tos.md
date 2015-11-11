@@ -8,7 +8,7 @@ Judul: Persyaratan Layanan
 
 # Persyaratan Layanan
 
-Last Revised: December 5, 2014
+Revisi terakhir : 5 Desember 2014
 
 Code.org adalah sebuah organisasi nirlaba 501(c)(3) ("Code.org"). Misi kami adalah untuk memberikan setiap siswa kesempatan untuk mempelajari ilmu komputer. Sebagai bagian dari misi, Code.org mengoperasikan situs web yang terletak di <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, situs web lainnya, informasi, teks, kurikulum, video, grafis, foto, API, email pemberitahuan dan bahan lainnya dan produk-produk terkait dan layanan ("**Layanan**"), termasuk platform pelatihan di <http://studio.code.org> ("**Code Studio**").
 
@@ -28,7 +28,7 @@ Kami mengambil langkah untuk meminimalkan pengumpulan data pribadi dari pengguna
 
 Jika Anda seorang pendidik dan Anda mendaftarkan seorang siswa di bawah usia 13 ("**anak**"), maka Anda menjamin bahwa Anda atau organisasi pendidikan dimana Anda bekerja memiliki izin untuk mendaftarkan anak untuk pelayanan pendidikan, seperti Code.org, yang mengumpulkan beberapa informasi pribadi anak untuk dimanfaatkan untuk keperluan sekolah dan tidak untuk keperluan komersial lain. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Your Account
+### Akun Anda
 
 If you create an account for Services, you are responsible for the security of your account and for keeping your own password safe. If you are using an account assigned to you by an Educator, your Educator may be able to access and disable your account.
 

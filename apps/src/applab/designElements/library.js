@@ -1,5 +1,6 @@
 var utils = require('../../utils');
 var _ = utils.getLodash();
+var elementUtils = require('./elementUtils');
 
 /**
  * A map from prefix to the next numerical suffix to try to
@@ -22,7 +23,8 @@ var ElementType = {
   TEXT_AREA: 'TEXT_AREA',
   IMAGE: 'IMAGE',
   CANVAS: 'CANVAS',
-  SCREEN: 'SCREEN'
+  SCREEN: 'SCREEN',
+  CHART: 'CHART'
 };
 
 var elements = {};
@@ -36,6 +38,7 @@ elements[ElementType.TEXT_AREA] = require('./textarea.jsx');
 elements[ElementType.IMAGE] = require('./image.jsx');
 elements[ElementType.CANVAS] = require('./canvas.jsx');
 elements[ElementType.SCREEN] = require('./screen.jsx');
+elements[ElementType.CHART] = require('./chart.jsx');
 
 module.exports = {
   ElementType: ElementType,
@@ -52,9 +55,8 @@ module.exports = {
   // Seems a little like we should always get the lowest available (as in step 3)
   // or always get the next (as in step 2)
   getUnusedElementId: function (prefix) {
-    var divApplab = $('#divApplab');
     var i = nextElementIdMap[prefix] || 1;
-    while (divApplab.find("#" + prefix + i).length !== 0) {
+    while (elementUtils.getPrefixedElementById(prefix + i)) {
       i++;
     }
     nextElementIdMap[prefix] = i + 1;
@@ -86,7 +88,7 @@ module.exports = {
 
     // Stuff that's common across all elements
     if (!withoutId) {
-      element.id = this.getUnusedElementId(elementType.toLowerCase());
+      elementUtils.setId(element, this.getUnusedElementId(elementType.toLowerCase()));
     }
 
     if (elementType !== ElementType.SCREEN) {
@@ -124,6 +126,8 @@ module.exports = {
       case 'div':
         if ($(element).hasClass('screen')) {
           return ElementType.SCREEN;
+        } else if ($(element).hasClass('chart')) {
+          return ElementType.CHART;
         }
         return ElementType.TEXT_AREA;
       case 'img':
@@ -148,10 +152,10 @@ module.exports = {
    * Code to be called after deserializing element, allowing us to attach any
    * necessary event handlers.
    */
-  onDeserialize: function (element, onPropertyChange) {
+  onDeserialize: function (element, updateProperty) {
     var elementType = this.getElementType(element);
     if (elements[elementType] && elements[elementType].onDeserialize) {
-      elements[elementType].onDeserialize(element, onPropertyChange);
+      elements[elementType].onDeserialize(element, updateProperty);
     }
   },
 

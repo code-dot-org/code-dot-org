@@ -2,6 +2,7 @@ require 'client_state'
 require 'nokogiri'
 require 'cdo/user_agent_parser'
 require 'cdo/graphics/certificate_image'
+require 'dynamic_config/gatekeeper'
 
 module ApplicationHelper
 
@@ -47,7 +48,8 @@ module ApplicationHelper
   end
 
   def activity_css_class(result)
-    if result.nil? || result <= 0
+    # For definitions of the result values, see /app/src/constants.js.
+    if result.nil? || result == 0
       'not_tried'
     elsif result >= Activity::SUBMITTED_RESULT
       'submitted'
@@ -127,7 +129,7 @@ module ApplicationHelper
     app = opts[:level_source].try(:level).try(:game).try(:app) || opts[:level].try(:game).try(:app)
 
     # playlab/studio and artist/turtle can have images
-    if opts[:level_source].try(:level_source_image).try(:image)
+    if opts[:level_source].try(:level_source_image)
       level_source = opts[:level_source]
       if level_source.level_source_image
         if app == Game::ARTIST
@@ -181,7 +183,7 @@ module ApplicationHelper
     certificate_image_url(name: user.name, course: script_name)
   end
 
-  def minifiable_shared_path(path)
+  def minifiable_asset_path(path)
     path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs
     asset_path(path)
   end
@@ -191,4 +193,19 @@ module ApplicationHelper
     @client_state ||= ClientState.new(session, cookies)
   end
 
+  # Check to see if we disabled signin from Gatekeeper
+  def signin_button_enabled
+    return true if @script.nil?
+    !Gatekeeper.allows('public_caching_for_script', where: { script_name: @script.name })
+  end
+
+  # Check to see if the tracking pixel is enabled for this script
+  def tracking_pixel_enabled
+    return true if @script.nil?
+    Gatekeeper.allows('tracking_pixel_enabled', where: { script_name: @script.name }, default: true)
+  end
+
+  def page_mode
+    PageMode.get(request)
+  end
 end

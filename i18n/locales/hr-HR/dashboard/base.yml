@@ -1,8 +1,8 @@
 hr:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
-      too_young: This content has age restrictions in place and is not available for younger students
+      not_saved: 'Molimo ispravite sljedeće pogreške:'
+      too_young: Ovaj sadržaj ima dobna ograničenja i stoga nije dostupan za mlađe učenike
   activerecord:
     errors:
       messages:
@@ -65,8 +65,8 @@ hr:
     need_confirmation: Nisi primio upute za potvrdu?
     need_unlock: Nisi primio upute za otključavanje?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} učenika se već prijavilo.'
+    teacher_count: '%{count} nastavnika se već prijavilo.'
     overview_student: 'Prijavite se za račun kako biste mogli pratiti svoj napredak. Vaša e-pošta koristi se prvenstveno kako bismo vam omogućili prijavu i ponovno dobijanje lozinke. Za više informacija pogledajte naša <a href="http://code.org/privacy">Pravila privatnosti</a>.'
     overview_teacher: 'Poučavajte informatiku u svom razredu tako što ćete se prijaviti za korisnički račun.<p/>Moći ćete dodati svoje učenike i pratiti njihov napredak.'
     no_signup_message: 'Možeš <a target="_blank" href="http://learn.code.org">pregledati razne nivoe i zadatke</a>, ali da bi tvoj napredak bio spremljen trebaš se prijaviti.'
@@ -230,7 +230,7 @@ hr:
       signup: Prijava
       already_registered: Jeste li već registrirani?
     popup:
-      progress_for_user: "%{name}'s progress"
+      progress_for_user: 'Napredak %{name}'
       progress: Tvoj napredak
       lines: 'Ukupno linija kôda: %{lines}'
       close: ZATVORI
@@ -301,22 +301,24 @@ hr:
     panel:
       answer_viewer: Answer Viewer
       student: Učenik
-      viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
+      viewing_solution: Pogledajte rješenje
+      try_it_yourself: Pokušajte sami
       section: Odjeljenje
-      example: Example Solution
-      example_with_number: 'Example Solution %{solution_number}'
+      example: Primjer rješenja
+      example_with_number: 'Primjer rješenja %{solution_number}'
+      submitted_on: 'Objavljeno %{date}'
+      unsubmit: Poništi objavu
   user:
     email_confirm_needed: 'E-mail adresa nije potvrđena:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Vaša e-mail adresa %{email} nije još potvrđena:'
+    email_confirm_wrong_email: (Kriva e-mail adresa?)
     email_resend_confirm: Ponovno slanje uputa za potvrđivanje
     new_password_hint: (ostavite prazno ako ne želite promijeniti)
     current_password_hint: (za potvrdu promjene treba nam vaša trenutna lozinka)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Izbrišite svoj račun
+    delete_text: Klikom na donji gumb izbrisati ćete svoj račun.
+    delete_text_teacher_note: 'Napomena: brisanjem računa neće se izbrisati i račune vaših učenika.'
+    delete_confirm: Jeste li sigurni da želite izbrisati svoj račun?
   user_level:
     completed: Završen
     tried: Pokušan
@@ -326,9 +328,9 @@ hr:
     classroom_activity: Izvanmrežna aktivnost
   home:
     title: Code Studio
-    description: Code Studio is home to online courses created by Code.org
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    description: Code Studio je početna stranica online tečajeva koje su stvorili Code.org
+    lines_of_code: '%{lines_count} LINIJA KODA KOJE SU NAPISALI UČENICI'
+    lines_of_code_linebreak: '%{lines_count} LINIJA KODA <br/> KOJE JE NAPISALO %{students_count} MILIJUNA UČENIKA'
     all_courses: Pregled tečajeva 1, 2 i 3
     lesson_plans: Nastavni planovi
     signin_message: 'Jeste li već registrirani? %{link}'
@@ -349,7 +351,7 @@ hr:
     local_school: lokalna škola
     online: online
     see_details: Vidi detalje
-    view_course: View Course
+    view_course: Pogledajte tečaj
     prize_info: 'Nagrade za sudjelovanje (samo za američke učitelje): do 1.000 dolara u učioničkim nagradama.'
     tryfirst: 'Ili, možete to prvo isprobati, a kasnije se prijaviti:'
     trynow: Probaj sad
@@ -363,12 +365,12 @@ hr:
     heading_apps: '<h2>Zabava za</h2><h1>sve</h1>'
     heading_legacy: '<h2>Naš općeniti tečaj za</h2><h1>sve uzraste</h1>'
     your_gallery: Galerija
-    no_primary_course: Try a Code Studio course
-    choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    no_primary_course: Probajte Code Studio tečaj
+    choose_next_course: Probajte Code Studio tečaj odabirom sljedećih opcija niže
+    print_certificate: Ispišite diplome
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with code.
+    title: Naučite o Code Studiu
+    description: Svatko može učiti računarske znanosti, te izrađivati igre, aplikacije i kodirati.
   gender:
     male: Muško
     female: Žensko
@@ -377,23 +379,24 @@ hr:
     student: Učenik
     teacher: Učitelj
   footer:
-    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
+    thank_you: 'Zahvaljujemo našim <a href="https://code.org/about/donors"> donatorima</a>, <a href="https://code.org/about/partners"> partnerima</a>, našem <a href="https://code.org/about/team"> timu</a> i našim <a href="https://code.org/about/advisors"> obrazovnim savjetnicima</a> na njihovoj podršci u stvaranju Code Studia.'
     help_from_html: Inženjeri iz Googlea, Microsofta, Facebooka i Twittera su pomogli napraviti ovaj tutorijal.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
+    help_from_html_old: Inženjeri iz Googlea, Microsofta, Facebooka i Twittera su pomogli napraviti ove materijale za učenje.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Sva prava pridržana.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Sva prava pridržana.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html_old: 'Angry Birds &#8482; &amp; © 2009-%{current_year} Rovio Entertainment Ltd. (sva prava pridržana). < br / > Plants vs Zombies &#8482; &amp; © %{current_year} Electronic Arts Inc. (sva prava pridržana).'
     powered_by_aws: Potpomognuto s Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
-    copyright: Copyright
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotip i Hour of Code&reg; su zaštitni znaci tvrtke Code.org.'
+    copyright: Autorska prava
     more: Više
     feedback: Pošaljite povratne informacije
     translate: Pomozite nam prevesti na vaš jezik
     support: Podrška
     support_url: http://support.code.org
-    tos_short: Terms
+    tos_short: Uvjeti
     tos: Uvjeti
     privacy: Pravila privatnosti
     secure: Sigurna verzija
+    report_abuse: Prijava zloupotrebe
   reference_area:
     title: Trebate pomoć?
     subtitle: Pogledajte ove videozapise i savjete
@@ -455,9 +458,9 @@ hr:
       title: Flappy kôd
       body: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš tutorijal izrade Flappy kôda!
     20-hour:
-      title: Accelerated Course
+      title: Ubrzani tečaj
       body: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne škole, ali je zabavan za učenje bez obzira na dob polaznika.
-      body_short: Learn basic computer science in an accelerated version of courses 2-4.
+      body_short: Naučite osnovne računalne znanosti ubrzanom verzijom tečajeva 2-4.
     hoc2014:
       try_new_tutorial: Isprobajte naš novi tutorijal Sata Kodiranja u beta verziji
       try_frozen: Budi umjetnik s Annom i Elsom iz Snježnog kraljevstva
@@ -502,20 +505,20 @@ hr:
     correct_body: To je točan odgovor.
   contract_match:
     wrong_title: Netočan odgovor
-    badname: Your contract has the wrong name.
-    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badname: Vaš argument ima krivo ime.
+    badname_case: Nazivi funkcija su osjetljivi na velika i mala slova. Pokušajte promijeniti veličinu slova naziva.
     badrange: Your contract has the wrong range.
     baddomainsize: "Your contract doesn't have the right number of items in the domain."
     baddomainname: One or more of your domain items has the wrong name.
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Ovdje unesite vaš odgovor
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Hvala
+    open_response_body: Hvala na vašem odgovoru!
   dialog:
     ok: U redu
     startover_title: Jeste li sigurni da želite početi iznova?
-    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_body: Ovo će vratiti zadatak na početno stanje i izbrisati sve podatke koje ste dodali ili promijenili.
     startover_ok: Počni ispočetka
     startover_cancel: Odustani
   time:
@@ -559,49 +562,65 @@ hr:
     sign_out: 'Ako ne želite unijeti svoju dob možete se<a href="%{url}">odjaviti</a>.'
   zendesk_too_young_message: 'Nažalost, mlađi korisnici se ne mogu prijaviti na našu stranicu za podršku. Možeš pregledavati <a href="http://support.code.org"> support.code.org</a> bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto tebe.'
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: nije započelo
+    in_progress: u tijeku
     completed_too_many_blocks: dovršeno, previše blokova
     completed_perfect: dovršeno, savršeno
     furthest_level_attempted: pokušaj posljednjeg nivoa
-    assessment: assessment
+    assessment: procjena
   studio:
     courses_working_on: Tečajevi na kojima radite
     completed_courses: Završeni tečajevi
     all_courses: Svi tečajevi
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Projekti
+    create: Stvaranje projekta
+    create_a_project: 'Stvaranje novog projekta:'
+    new: Kreiraj novi
+    rename: Preimenuj
     save: Spremi
     delete: izbriši
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Povratak na tečaj
+    my_projects: Moji projekti
     share: Podijeli
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Podijelite svoj projekt
+    share_copy_link: 'Kopirajte link:'
+    close: Zatvori
     more: Više
     name: Ime
-    updated: Updated
-    project_type: Project Type
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    updated: Obnovljeno
+    project_type: Tip projekta
+    help_text: 'Kliknite <strong>Napravi aplikaciju</strong> ili <strong>Nacrtaj nešto</strong> ispod da bi napravili novi Play Lab ili Artist projekt! <br/> Možete se vratiti i raditi na projektima u bilo koje vrijeme.'
+    need_help: Treba vam pomoć kako započeti?
     really_delete: Izbrisati?
     delete_yes: Da
     delete_no: Ne
-    saved: Saved
-    not_saved: Not saved
+    saved: Spremljeno
+    not_saved: Nije spremljeno
     cancel: Odustani
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Jeste li sigurni da želite obrisati ovaj projekt?
+    delete_confirm_text: Brisanje projekta trajno će ga ukloniti s popisa vaših projekata. Svatko tko ima link na njega ga više neće moći vidjeti.
+    view_all: Moji projekti
     remix: Remix
     click_to_remix: 'Click "Remix" to spin-off your own version!'
-    edit_project: Edit Project
+    edit_project: Uređivanje projekta
     abuse:
       tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
       contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
       go_to_code_studio: Go to Code Studio
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        validation:
+          email: Unesite e-mail adresu
+          age: Molimo navedite dob
+          abuse_type: Molimo vas da odgovorite kako ovaj sadržaj krši uvjete korištenja
+          abuse_detail: Molimo unesite detalje u svezi sadržaja koji prijavljujete
+        abusive_url: URL sadržaja koji prijavljujete
+        abuse_type:
+          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
+          harassment: Threats, cyberbullying, harassement
+          offensive: Uvredljiv sadržaj
+          infringement: Copyright Infringement
+          other: Ostalo
+        detail: Please provide as much detail as possible regarding the content you are reporting.
+        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'

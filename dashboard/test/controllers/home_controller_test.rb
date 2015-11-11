@@ -234,7 +234,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'index shows alert for unconfirmed email for teachers' do
-    user = create :teacher, email: 'my_email@test.xx'
+    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
 
     sign_in user
     get :index

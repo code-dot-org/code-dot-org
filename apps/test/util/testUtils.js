@@ -223,3 +223,21 @@ exports.createMouseEvent = function mouseEvent(type, clientX, clientY) {
   }
   return evt;
 };
+
+/**
+ * Append text to the ace editor
+ */
+exports.typeAceText = function (text) {
+  var aceEditor = window.__TestInterface.getDroplet().aceEditor;
+  aceEditor.textInput.focus();
+  aceEditor.onTextInput(text);
+};
+
+/**
+ * Set the Ace editor text to the given text
+ */
+exports.setAceText = function (text) {
+  var aceEditor = window.__TestInterface.getDroplet().aceEditor;
+  aceEditor.textInput.focus();
+  aceEditor.setValue(text);
+};

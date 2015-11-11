@@ -1,7 +1,7 @@
 %p
   Dear #{@recipient.ops_first_name},
 %p
-  Thanks for attending your #{@workshop.phase_info[:long_name]} in-person workshop.
+  Thanks for attending your #{@workshop.phase_long_name} in-person workshop.
   = render partial: 'exit_survey_url', locals: {workshop: @workshop, link_text: "short survey"}
 - if @workshop.phase == 2
   %p

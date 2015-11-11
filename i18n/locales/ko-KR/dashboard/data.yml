@@ -435,6 +435,7 @@ ko:
         infinity_playlab_intro: '플레이 랩 - 소개'
         infinity_playlab_events: '플레이 랩 - 이벤트'
         infinity_playlab_repeat_forever: '플레이 랩 - 무한 반복'
+        csp_applab_functions: 함수(Function) 소개
         csp_concept_rgb: 픽셀에 관해서 조금
         csp_pixelation_color_1: '픽셀 색상 위젯 - 1부'
         csp_pixelation_color_2: '픽셀 색상 위젯 - 2부'
@@ -463,6 +464,9 @@ ko:
         alg_15_biggame_update_player: '대수학 CS - 빅게임 플레이어 업데이트'
         alg_16_biggame_collision_detection: '대수학 CS - 빅게임 충돌 감지'
         alg_17_sambat_compound_booleans: '대수학 CS - 복합 부울'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

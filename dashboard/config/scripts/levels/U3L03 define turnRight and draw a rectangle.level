@@ -48,7 +48,6 @@
     "app_width": "320",
     "app_height": "480",
     "slider_speed": "0.1",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-RightTurnRectangle.gif",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
@@ -56,13 +55,17 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "encrypted_examples": "ICti52Whgu7iBiq1e2qaZvYu39KWQitYAlXVG5lHuBMEFBNGgrYee3pg6AgN\ntcyY\n",
-    "markdown_instructions": "###Challenge\r\nAs you know, in order to turn right we have to call turnLeft() three times.  **Define** a function called `right()` that turns the turtle to the right. Then **use** this function in some code to draw a rectangle, as shown below. \r\n\r\n![](https://images.code.org/2b8d21f4a31100136762274fdf517e1c-image-1441297846326.gif)",
+    "markdown_instructions": "###Challenge\r\nAs you know, in order to turn right we have to call `turnLeft()` three times.  **Define** a function called `right()` that turns the turtle to the right. Then **use** this function in some code to draw a rectangle, as shown below. \r\n\r\n![](https://images.code.org/2b8d21f4a31100136762274fdf517e1c-image-1441297846326.gif)",
     "start_blocks": "function right(){\r\n  \r\n}",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "project_template_level_name": "U3L03 - rectangle Template",
     "submittable": "false",
-    "hide_view_data_button": "true"
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "true",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "true"
   }
 }]]></config>
   <blocks/>

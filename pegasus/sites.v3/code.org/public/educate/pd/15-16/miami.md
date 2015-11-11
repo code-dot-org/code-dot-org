@@ -40,7 +40,7 @@ Quarter 4: Saturday, May 7, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**September 19th Location**
+**November 14th Location**
 
 Venture Hive<br/>
 1010 NE 2nd Ave<br/>

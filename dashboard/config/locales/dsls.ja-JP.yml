@@ -466,12 +466,10 @@
         Eating your dessert: デザートを食べる
         Multiple Choice: 複数の選択肢
         Washing your face: 顔を洗う
-        Which one of these activities would be best for practicing crowdsourcing?: Which
-          one of these activities would be best for practicing crowdsourcing?
+        Which one of these activities would be best for practicing crowdsourcing?: クラウドソーシングの実践に適した活動はどれだろうと思いますか？
       4-5 Digital Footprint Multi 1:
         Multiple Choice: 複数の選択肢
-        Which piece of information listed below is okay to share on the internet?: Which
-          piece of information listed below is okay to share on the internet?
+        Which piece of information listed below is okay to share on the internet?: インターネット上で公開や共有しても大丈夫なのは、次のうちどれでしょうか？
         Your address: あなたの住所
         Your birthday: あなたの誕生日
         Your favorite food: あなたの好きな食べ物
@@ -646,18 +644,19 @@
           lines of code should be removed so the program will work as intended? Select
           <u>two</u> answers
       K-1 Artist 1 Multi 1:
-        /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
-        /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
-        /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
-        /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
+        /script_assets/k_1_images/artist_images/E-S-S.png: /script_assets/k_1_images/artist_images/E-S-S.png
+        /script_assets/k_1_images/artist_images/E-S.png: /script_assets/k_1_images/artist_images/E-S.png
+        /script_assets/k_1_images/artist_images/S-E-E.png: /script_assets/k_1_images/artist_images/S-E-E.png
+        /script_assets/k_1_images/artist_images/W-S-S.png: /script_assets/k_1_images/artist_images/W-S-S.png
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
           500
         Multiple Choice: 複数の選択肢
         Which blocks solve this puzzle?: Which blocks solve this puzzle?
       K-1 Artist 1 Multi 2:
-        /script_assets/k_1_images/artist_images/E|S|W|N.png: /script_assets/k_1_images/artist_images/E|S|W|N.png
-        /script_assets/k_1_images/artist_images/N|E|S|W.png: /script_assets/k_1_images/artist_images/N|E|S|W.png
-        /script_assets/k_1_images/artist_images/N|W|S|E.png: /script_assets/k_1_images/artist_images/N|W|S|E.png
+        /script_assets/k_1_images/artist_images/E-S-W-N.png: /script_assets/k_1_images/artist_images/E-S-W-N.png
+        /script_assets/k_1_images/artist_images/N-E-S-W.png: /script_assets/k_1_images/artist_images/N-E-S-W.png
+        /script_assets/k_1_images/artist_images/N-S-E-W.png: /script_assets/k_1_images/artist_images/N-S-E-W.png
+        /script_assets/k_1_images/artist_images/N-W-S-E.png: /script_assets/k_1_images/artist_images/N-W-S-E.png
         /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png,
           500
         Multiple Choice: 複数の選択肢
@@ -687,7 +686,7 @@
         /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
         /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
         /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
-        How many nectars is this?: How many nectars is this?
+        How many nectars is this?: 左（ひだり）にある花（はな）のみつの数（かず）はいくつでしょうか？
         Multiple Choice: 複数の選択肢
       K-1 Bee 1 Multi 2:
         /script_assets/k_1_images/bee_images/2nectar+2nectar.png: /script_assets/k_1_images/bee_images/2nectar+2nectar.png
@@ -695,7 +694,7 @@
         /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
         /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
         /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
-        How many nectars is this?: How many nectars is this?
+        How many nectars is this?: 左（ひだり）にある花（はな）のみつの数（かず）はいくつでしょうか？
         Multiple Choice: 複数の選択肢
       K-1 Digital Footprint Multi 1:
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png

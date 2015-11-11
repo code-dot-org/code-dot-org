@@ -16,6 +16,7 @@ var dom = require('../dom');
  */
 var DropletAutocompleteParameterTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.showExamplesLink = dropletTooltipManager.dropletConfig.showExamplesLink;
   this.showParamDropdowns = dropletTooltipManager.dropletConfig.showParamDropdowns;
   this.tooltipConfig = {
     interactive: true,
@@ -29,7 +30,8 @@ var DropletAutocompleteParameterTooltipManager = function (dropletTooltipManager
     offsetY: 2,
     restoration: 'none',
     updateAnimation: false,
-    positionTracker: true
+    positionTracker: true,
+    tooltipsEnabled: true
   };
 };
 
@@ -88,7 +90,11 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
   var dropdownList;
   this.dropletTooltipManager.dropletConfig.blocks.forEach(function (block) {
     if (block.func === paramInfo.funcName && block.dropdown) {
-      dropdownList = block.dropdown[paramInfo.currentParameterIndex];
+      if (typeof block.dropdown[paramInfo.currentParameterIndex] === 'function') {
+        dropdownList = block.dropdown[paramInfo.currentParameterIndex]();
+      } else {
+        dropdownList = block.dropdown[paramInfo.currentParameterIndex];
+      }
     }
   });
 
@@ -106,9 +112,16 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
     // autocomplete only:
     var dropdownCompletions = [];
     dropdownList.forEach(function (listValue) {
+      var valString;
+      if (typeof listValue === 'string') {
+        valString = listValue;
+      } else {
+        // Support the { text: x, display: x } form, but ignore the display field
+        valString = listValue.text;
+      }
       dropdownCompletions.push({
         name: 'dropdown',
-        value: listValue
+        value: valString
       });
     });
     editor.completer.overrideCompleter = {
@@ -125,7 +138,7 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
 };
 
 DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = function (aceEditor, functionName, currentParameterIndex) {
-  if (!this.dropletTooltipManager.hasDocFor(functionName)) {
+  if (!this.tooltipConfig.tooltipsEnabled || !this.dropletTooltipManager.hasDocFor(functionName)) {
     return;
   }
   var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
@@ -139,11 +152,13 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
   cursorTooltip.tooltipster('content', this.getTooltipHTML(tooltipInfo, currentParameterIndex));
   cursorTooltip.tooltipster('show');
 
-  var seeExamplesLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-example-link > a')[0];
-  dom.addClickTouchEvent(seeExamplesLink, function (event) {
-    this.dropletTooltipManager.showDocFor(functionName);
-    event.stopPropagation();
-  }.bind(this));
+  if (this.showExamplesLink) {
+    var seeExamplesLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-example-link > a')[0];
+    dom.addClickTouchEvent(seeExamplesLink, function (event) {
+      this.dropletTooltipManager.showDocFor(functionName);
+      event.stopPropagation();
+    }.bind(this));
+  }
 
   var chooseAsset = tooltipInfo.parameterInfos[currentParameterIndex].assetTooltip;
   if (chooseAsset) {
@@ -176,7 +191,7 @@ DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL(),
+    showExamplesLink : this.showExamplesLink,
     currentParameterIndex: currentParameterIndex
   });
 };
@@ -214,6 +229,13 @@ DropletAutocompleteParameterTooltipManager.showPopup = function (editor) {
   // after each call to showPopup()
   DropletAutocompleteParameterTooltipManager.originalShowPopup.call(this, editor);
   this.overrideCompleter = null;
+};
+
+/**
+ * @param {boolean} enabled if tooltips should be enabled
+ */
+DropletAutocompleteParameterTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
+  this.tooltipConfig.tooltipsEnabled = !!enabled;
 };
 
 module.exports = DropletAutocompleteParameterTooltipManager;

@@ -521,6 +521,9 @@
         ystu marka til vinstri og hægri.'
       4-5 Artist Patterns Free Play_instruction: Frjáls æfing. Spreyttu þig á að búa
         til eigið mynstur!
+      4-5 Bee Conditionals - FC Test_instruction: Þessa stundina vill býflugan bara
+        blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT
+        SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
@@ -701,7 +704,11 @@
       4-5 While Loops Assessment 1_instruction: Nú eru margar holur og margir haugar.
         Hjálpaðu mér að fylla og fjarlægja svo yfirborðið verði slétt.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AllTheThings Applab - Turtle move with button_instruction: |
+        Add a button that
+        moves the turtle when clicked.  (Click to see full instructions)
       App Lab test_instruction: prófun
+      Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
         view full instructions.
@@ -731,6 +738,10 @@
       Artist - Nested Loops 9_instruction: Teiknaðu tennur krókódílsins!
       Artist - Nested Loops Assessment 1_instruction: Notaðu faldaða lykkju til að
         ljúka teikningunni.
+      Auto Open Function Editor_instruction: 'Þú getur kallað á föll innan úr öðrum
+        föllum! Notaðu "form" fallið þitt sem grunn og búðu til 3 hús sem byrja með
+        lengdina 50 og stækka um 20 í hvert sinn. Hér gæti verið gagnlegt að nota
+        lykkju með teljara. '
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -845,9 +856,23 @@
         "danger" (hætta) og "player" (leikmaður). Leiktu þér með allar breyturnar
         þar til þú finnur þá samsetningu sem þér líkar best við. Smelltu á "Ljúka"
         þegar þú ert búin.
+      Brad Spooky House Copy_instruction: |
+        Freeplay: Here are the functions you've
+        written, and some more for you to play with. Draw something awesome! Play
+        with the pen width to see how different your drawings look!
+      Brad Spooky House_instruction: |
+        Freeplay: Here are the functions you've written,
+        and some more for you to play with. Draw something awesome! Play with the
+        pen width to see how different your drawings look!
       Building a Foundation Assessment_instruction: Byggðu þriggja laga pýramída.
         Það eru engar aðrar leiðbeiningar svo þú verður að leika þér með kubbana  þar
         til þetta tekst!
+      Busy Bee 2_instruction: |
+        This bee has a lot of work to do! Do you notice any
+        patterns that you can use to simplify your code?
+      Busy Bee_instruction: |
+        This bee has a lot of work to do! Do you notice any
+        patterns that you can use to simplify your code?
       C3-Farmer While Loops 1_instruction: Færðu mig að holunni og notaðu "fylla"
         kubbinn til að fylla hana með tveimur skóflufyllum af mold.
       C3-Farmer While Loops 2_instruction: Færðu mig að moldarhaugnum og notaðu "fjarlægja"
@@ -898,7 +923,7 @@
         þessari formúlu.
       Calc Circles of Eval 7_instruction: Ljúktu við matskubbana svo þeir samsvari
         þessari formúlu.
-      Calc Circles of Eval 8_instruction: Ljúktu við matskubbana svo þeir samsvari
+      Calc Circles of Eval 8_instruction: Ljúktu við matskubbinn svo hann samsvari
         þessari formúlu.
       Calc Circles of Eval 9_instruction: Ljúktu við matskubbana svo þeir samsvari
         þessari formúlu.
@@ -1089,6 +1114,11 @@
         eftir myndinni og lita þá reiti svarta þar sem 1 er í strengnum en sleppa
         að lita ef það er 0. \r\n\r\nKeyrðu þennan kóða til að sjá hvernig listamaðurinn
         notar tvíundir til að teikna mynstur."
+      Course 4 Artist Binary 1a_instruction: "Hér er fall sem tekur tvíundarstreng
+        með 1 og 0 og segir listamanninum að færa sig frá vinstri til hægri niður
+        eftir myndinni og lita þá reiti svarta þar sem 1 er í strengnum en sleppa
+        að lita ef það er 0. \r\n\r\nKeyrðu þennan kóða til að sjá hvernig listamaðurinn
+        notar tvíundir til að teikna mynstur."
       Course 4 Artist Binary 2_instruction: Hvern af þessum tvíundarstrengjum gætir
         þú endurtekið 8 sinnum til að fá þessa mynd?
       Course 4 Artist Binary 3_instruction: Getur þú teiknað þetta mynstur með því
@@ -1103,8 +1133,18 @@
       Course 4 Artist Binary 7_instruction: Ljúktu við þessa teikningu.
       Course 4 Artist Binary Free Play 2_instruction: 'Frjáls æfing: Hér er teikniflötur
         með hærri upplausn - 16 x 16 bitum!'
+      Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas
+        to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we\nstart
+        to get creative with the bits?"
+      Course 4 Artist Binary Free Play 2b_instruction: Click here to see hints.
       Course 4 Artist Binary Free Play_instruction: 'Frjáls æfing: Teiknaðu hvað sem
         þú vilt með tvíundum!'
+      Course 4 Artist Binary pre1_instruction: "Binary is a way of representing information\nusing
+        only two options.  Here, we're going to use the options \"off\" (represented\nby
+        the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided
+        you with a grid of \"pixels\" that you can walk through and make\ndesigns
+        by turning on only certain squares.  Can you have the artist draw\n\"01010101\"
+        in binary in the first row?"
       Course 4 Artist For  Functions 10_instruction: 'Hér er aðeins erfiðara: Getur
         þú teiknað stjörnu með fallinu "teikna röð ferninga"? Gangi þér vel!'
       Course 4 Artist For  Functions 11_instruction: 'Hér er aðeins erfiðara: Getur
@@ -1176,11 +1216,22 @@
         að láta þríhyrninginn sitja ofan á ferningnum?
       Course 4 Artist Functions 11_instruction: Skoðaðu þennan kóða sem teiknar tening
         - geturðu sett hann í fall og kallað það "teikna tening"?
+      Course 4 Artist Functions 12.1_instruction: Nú skulum við búa til fallið "draw
+        an octagon 20" (teikna átthyrning 20) sem teiknar átthyrning með 20 díla langar
+        hliðar.
       Course 4 Artist Functions 12_instruction: Settu ferningsfall í lykkju til að
         teikna röð
+      Course 4 Artist Functions 13.1_instruction: "Nú ljúkum við mynstrinu með því
+        að búa til fallið \"jump to upper right\" (hoppa upp til hægri) sem færir
+        listamanninn upp til hægri í átthyrningnum sem þú varst að teikna.\r\n\r\nVísbending:
+        Til að komast upp í efra hægra hornið, skaltu prófa að stökkva í mynstri sem
+        myndar aðeins 3/8 af átthyrningnum."
       Course 4 Artist Functions 13_instruction: Hér er nýtt fall "teikna röð ferninga".
         Skoðaðu inn í kubb fallsins til að sjá hvernig það var forritað. Smelltu á
         "Keyra" þegar þú vilt halda áfram í næstu þraut.
+      Course 4 Artist Functions 14.1_instruction: Nú ljúkum við mynstrinu með því
+        að búa til fallið "jump to upper right" (hoppa upp til hægri) sem færir listamanninn
+        upp til hægri í átthyrningnum sem þú varst að teikna.
       Course 4 Artist Functions 14_instruction: Þér gengur vel! Notaðu nú nýja "teikna
         röð ferninga" fallið til að teikna ferningslaga form. Mundu að hver ferningur
         er 40 dílar á lengd.
@@ -1210,6 +1261,10 @@
         Mundu að "vista og loka" á eftir. '
       Course 4 Artist Functions 9_instruction: Hér færðu mestallan kóðann til að búa
         til fall. En það virðist vanta eitthvað. Geturðu klárað þennan fallkubb?
+      Course 4 Artist Functions challenge_instruction: Smelltu hér til að sjá vísbendingarnar
+        aftur.
+      Course 4 Artist Functions Inspiration_instruction: Smelltu hér til að sjá vísbendingarnar
+        aftur.
       Course 4 Artist Functions inspire_instruction: "Frjáls æfing með innblæstri:
         Þú hefur nú lært allt sem þarf til að búa til svona mynstur! Ef þessi mynd
         veitir þér innblástur, reyndu þá að búa til eitthvað líkt henni. Ef ekki,
@@ -1381,6 +1436,9 @@
         stefnunni. Kláraðu skilgreiningu fallsins og smelltu svo á "Vista og loka"
       Course 4 Bee Params 4 (copy 1)_instruction: Prófaðu að nota nýja fallið þitt
         til að safna úr öllum blómunum. Mundu að 0 = vinstri og 1 = hægri.
+      Course 4 Bee Params 4 - Two WhenRun_instruction: Prófaðu að nota nýja fallið
+        þitt til að safna úr öllum blómunum. Mundu að nota breyturnar fyrir vinstri
+        og hægri.
       Course 4 Bee Params 4 backup_instruction: Væri ekki ljúft ef við gætum safnað
         öllum þessum blómasafa með einu falli? Prófaðu að bæta nýjum stika "magn"
         við fallið til að stjórna hve miklum safa á að safna. Þú vilt ábyggilega líka
@@ -1399,6 +1457,18 @@
         til að safna öllum þessum safa.
       Course 4 Bee Params 7_instruction: Prófaðu að nota nýja fallið þitt til að safna
         öllum þessum safa.
+      Course 4 Bee Params 8 Clone 2_instruction: 'Namm, nú bætist hunang við! Hvernig
+        gætir þú uppfært fallið þitt svo það geri annaðhvort: sæki blómasafa eða búi
+        til hunang.'
+      Course 4 Bee Params 8 clone 3_instruction: 'Namm, nú bætist hunang við! Hvernig
+        gætir þú uppfært fallið þitt svo það geri annaðhvort: sæki blómasafa eða búi
+        til hunang.'
+      Course 4 Bee Params 8 Clone_instruction: 'Namm, nú bætist hunang við! Hvernig
+        gætir þú uppfært fallið þitt svo það geri annaðhvort: sæki blómasafa eða búi
+        til hunang.'
+      Course 4 Bee Params 8 new_instruction: 'Namm, nú bætist hunang við! Hvernig
+        gætir þú uppfært fallið þitt svo það geri annaðhvort: sæki blómasafa eða búi
+        til hunang.'
       Course 4 Bee Params 8_instruction: 'Áskorun: Nú er komið hunang til að fást
         við líka! Endurskrifaðu fallið svo að það taki inn bæði fjölda eininga af
         blómasafa og fjölda eininga af hunangi. Hvernig gætir þú notað þessar tölur
@@ -1536,45 +1606,60 @@
         talning breytist um, en talningin er enn línuleg (aukinn er alltaf eins).
         Hvað ef við vildum láta sjálfan aukann breytast? Getur þú haft þessa lykkju
         óbreytta, en látið hana telja 1, 4, 9, 16, 25... (teljarinn í öðru veldi)?
-      Course 4 Play Labs For Loops 4a_instruction: "Now, let's blend the variables\nfrom
-        Stage 7 together with your \"counter\" variable to make some magic happen.
-        \  \r\n\r\nIn\nthis puzzle, Dog will count from 0 to 1000 by \"increment\".
-        \ Set the \"increment\"\nvariable to 10 at the beginning of your code to see
-        what happens."
+      Course 4 Play Labs For Loops 4a_instruction: "Nú skulum við nota breyturnar
+        úr borði 7 með \"counter\" breytunni þinni til að fremja galdur. \r\n\r\nÍ
+        þessari þraut mun Hundur telja frá 0 til 1000 um \"increment\" aukann. Byrjaðu
+        á að setja 10 í \"increment\" breytuna til að sjá hvað gerist."
       Course 4 Play Labs For Loops 5_instruction: Í síðustu þraut töldum við með teljaranum
         í öðru veldi. Breyttu nú "teljari ^ 2" í "teljari ^3" til að telja með teljaranum
         í þriðja veldi (1, 8, 27, 64, 125, 216, 343...)
-      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime
-        keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable
-        will begin with a value of 1.\r\n\r\nCan you make it so that each\ntime you
-        click Dog, the increment increases by 2?  Click the forward arrow\nto run
-        the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before\neach
-        one."
+      Course 4 Play Labs For Loops 5a_instruction: "Í þessari þraut verður Hundur
+        tímavörður.\r\n\r\nHundur mun telja frá 0 til 30 um \"increment\" aukann.
+        \"Increment\" breytan byrjar með gildið 1.\r\n\r\nGetur þú hagað því svo að
+        í hvert sinn sem þú smellir á Hund þá hækki aukinn um 2? Smelltu á áfram örina
+        til að keyra frá lykkjuna.\r\n\r\nEndurtaktu nokkrum sinnum að smella á hund
+        og keyra lykkjuna."
       Course 4 Play Labs For Loops 6_instruction: Þú manst ef vill að prímtala er
         sérhver heil tala sem er deilanleg aðeins með sjálfri sér og 1. Notaðu fallið
         "er_prímtala" til að segja aðeins prímtölur frá 1 til 100.
-      Course 4 Play Labs For Loops 6a_instruction: "Dog will still keep time by counting\nwith
-        our \"for loop\" by \"increment\", but this time, we will add The Wizard\ninto
-        the mix.  Can you change the code so that \"increment\" goes up by two\neach
-        time The Wizard is clicked?\r\n\r\nWatch out!  The Wizard moves quickly!"
+      Course 4 Play Labs For Loops 6a_instruction: "Hundur mun passa tímann með því
+        að telja með \"frá\" lykkjunni um \"increment\" aukann, en í þetta sinn ætlum
+        við að bæta Vitkanum við. Getur þú breytt kóðanum svo að \"increment\" hækki
+        um 2 í hvert sinn sem smellt er á Vitkann?\r\n\r\nGættu þín! Vitkinn hreyfist
+        hratt!"
       Course 4 Play Labs For Loops 7_instruction: Gætir þú notað "frá" lykkju til
         að hjálpa mér að segja röðina 1, 4, 7, 10, 13, 16, 19, 22, 25?
-      Course 4 Play Labs For Loops 7a_instruction: "Now we're getting somewhere!  What\nif
-        we start counting how many times we can click The Wizard before Dog gets\nto
-        30?  \r\n\r\nFinish adding blocks to The Wizard so that every time he's\nclicked
-        the variable \"clicked\" increases by one. You can ignore \"increment\"\nfor
-        now.\r\n\r\nDog will start counting when you click \"Run\"."
+      Course 4 Play Labs For Loops 7a_instruction: "Nú erum við að komast áleiðis!
+        Hvernig væri að telja hve oft við getum smellt á Vitkann áður en Hundur kemst
+        upp í 30?\r\n\r\nBættu kubbum í Vitkann svo að í hvert skipti sem smellt er
+        á hann þá hækki breytan \"clicked\" um 1. Þú getur hunsað \"increment\" í
+        bili.\r\n\r\nHundur byrjar að telja þegar þú smellir á \"Keyra\"."
       Course 4 Play Labs For Loops 8_instruction: "Hjálpaðu leikmönnum að hreyfast
         um leið og þeir telja.\r\n\r\nHundur á að hreyfast og bæta 2 við (teljari
         + 2) í hvert skipti. Köttur á að hreyfast og margfalda með 2 (teljari * 2)
         í hvert skipti. Mörgæs á að hreyfast og telja í 2. veldi (teljari ^ 2) í hvert
         skipti. Hver verður fyrstur til að ná sínu flaggi?"
-      Course 4 Play Labs For Loops 8a_instruction: "To finish our game, we need to\nbring
-        back the \"increment\" variable!    Let's tie it to the level of the\ngame.\r\n\r\n1)
-        Keep track of the number of times The Wizard is clicked.\r\n2)\nIf The Wizard
-        is clicked at least 10 times before Dog counts to 30, raise\n\"increment\"
-        by 1 and start again.\r\n3) If The Wizard does not get clicked\nat least 10
-        times, the game is over."
+      Course 4 Play Labs For Loops 8a_instruction: "Til að ljúka leiknum þurfum við
+        að nota \"increment\" breytuna aftur. Við skulum tengja hana við áfanga í
+        leiknum.\r\n\r\n1) Ef smellt er á Vitkann skal telja það.\r\n2) Ef smellt
+        er að minnsta kosti 10 sinnum á Vitkann áður en Hundur telur upp í 30, skal
+        hækka \"increment\" um 1 og byrja aftur.\r\n3) Ef ekki er smellt á Vitkann
+        a.m.k. 10 sinnum er leiknum lokið."
+      Course 4 SCV 1_instruction: Click here to view the instructions again.
+      Course 4 SCV 2_instruction: Click here to view the instructions again.
+      Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.\nTag
+        Penguin to get 3 points.  Get 10 points to win!\r\nBut be careful, when\nCat
+        and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks\nnecessary
+        to make this game work the way it's been explained.  How will you\nget Dog
+        to move in all directions using the arrow keys?  How will you add\npoints
+        when Dog tags Cat or Penguin?  How will you subtract points when Cat\nand
+        Penguin touch?"
+      Course 4 SCV 4_instruction: |
+        Solve this puzzle with the fewest number of blocks
+        possible.
+      Course 4 SCV 5_instruction: |
+        Solve this puzzle with the fewest number of blocks
+        possible.
       Course 4 Variables Assessment_instruction: Getur þú búið til þessa mynd með
         því að nota breytu fyrir hliðar? Hver lína á að vera 50 díla löng.
       Course1BeePuzzle12_instruction: Sæktu þrjá blómasafa og búðu svo til tvo hunang
@@ -1582,6 +1667,16 @@
         svo í aðra, til að ég nái svíninu"
       Course1MazeAssessment2_instruction: "Þetta er próf!\r\nFærðu mig í eina átt,
         svo í aðra, til að ég nái svíninu."
+      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing
+        you can count multiple things\r\n\r\nFind out how many people like something\nother
+        than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe
+        math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom
+        this\r\n\r\nx% are dog lovers"
+      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria
+        \r\nfind the length of an array\r\n"
+      CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor
+        all records\r\n2. Way to loop through and count\r\n"
+      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1771,6 +1866,7 @@
         geisla og 175 díla ytri geisla.
       Eval Strings Images Free Play_instruction: 'Frjáls æfing: Prófaðu kubbana sem
         þú færð hér og skapaðu eitthvað áhugavert. Ekki gleyma að deila bestu sköpunarverkunum.'
+      Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: Gerum nú 20 hringi sem skarast
         og snúum um 18 gráður eftir hvern hring.
       frozen circle function with parameter_instruction: Hér er "búa til hring" kubbur
@@ -1818,68 +1914,6 @@
       frozen square snowflake_instruction: Getur þú búið til snjókorn með því að nota
         "endurtaka" kubbinn til að búa til ferning 10 sinnum og "snúa" kubbinn til
         að snúa um 36 gráður eftir hvern ferning?
-      hoc2015_event_add_items_instruction: |
-        Now you create the game. Use the addItemsToScene
-        command to choose how many items are in the game.
-      hoc2015_event_add_items_2_instruction: |
-        Add more items. This time, try using
-        code mode instead of blocks. Don’t forget to type “quotes” around the item
-        name.
-      hoc2015_event_choose_character_instruction: |
-        Customize your game by choosing
-        your character. Let’s switch back to block mode. To set a value, just click
-        the drop down on the block.
-      hoc2015_event_four_items_instruction: |
-        Now the items are all over the screen.
-        Can you make your character walk in any direction so he can collect all the
-        items?
-      hoc2015_event_free_instruction: Now you can make and share anything you like.
-      hoc2015_event_move_items_instruction: |
-        This game would be more fun if the items
-        moved. Use setItemActivity to make the items move around. Then, capture them!
-      hoc2015_event_points_instruction: |
-        Let’s add points. Give yourself some points
-        when you touch an item. Can you score 10 points?
-      hoc2015_event_random_items_instruction: |
-        We can change settings at any point.
-        Change the items to a new random movement every time you catch one.
-      hoc2015_event_two_items_instruction: |
-        Drag the move commands into the whenUp
-        and whenDown functions.  Then, click the arrows to move the character to get
-        the items.
-      hoc2015_free_instruction: Hiro er "leikmaður 1". Færðu Hiro til hægri með "færa"
-        kubbi þar til hann snertir Baymax.
-      hoc2015_intro_instruction: Hiro er "leikmaður 1". Færðu Hiro til hægri með "færa"
-        kubbi þar til hann snertir Baymax.
-      hoc2015_maze_instruction: Hiro er "leikmaður 1". Færðu Hiro til hægri með "færa"
-        kubbi þar til hann snertir Baymax.
-      hoc2015_move_cross_instruction: |
-        Type or drag the blocks to get both items
-        to the destination.
-      hoc2015_move_down_instruction: |
-        Hiro is "actor 1".  Use the Move block to
-        move Hiro right to touch Baymax.
-      hoc2015_move_item_destination_instruction: |
-        I see another item behind that
-        obstacle. Can you bring it back to the destination?
-      hoc2015_move_item_destination_2_instruction: |
-        Drag the code blocks into the
-        workspace to help the character reach the destination.
-      hoc2015_move_item_destination_3_instruction: |
-        Try typing the commands to get
-        the item to our destination. Don’t forget to end with ();
-      hoc2015_move_right_instruction: |
-        Help me program the character to get the item
-        and bring it to the destination. Stack a couple moveEast(); commands and then
-        hit Run to make him go.
-      hoc2015_move_twice_instruction: We need the items. Help me get them all!
-      hoc2015_move_two_items_instruction: We need the items. Help me get them all!
-      hoc2015_random_instruction: Hiro er "leikmaður 1". Færðu Hiro til hægri með
-        "færa" kubbi þar til hann snertir Baymax.
-      hoc2015_sandbox_instruction: Hiro er "leikmaður 1". Færðu Hiro til hægri með
-        "færa" kubbi þar til hann snertir Baymax.
-      hoc2015_square_instruction: Hiro er "leikmaður 1". Færðu Hiro til hægri með
-        "færa" kubbi þar til hann snertir Baymax.
       Infinity_catch_instruction: Getur þú látið Elsu ("leikmann 2") ná Önnu með því
         að nota örvarlyklana?
       Infinity_finale_instruction: Búðu til hvað sem þú vilt og deildu því!
@@ -2220,6 +2254,8 @@
         sem verkefni, sem þú getur haldið áfram með hvenær sem er.
       NEW Course 4 Artist Functions 1_instruction: Getur þú teiknað ferning með lengdina
         100 með því að nota lykkju?
+      NEW Course 4 Artist Functions 10.1_instruction: Notaðu föllin úr fyrri þrautum
+        til að teikna þetta mynstur.
       NEW Course 4 Artist Functions 10_instruction: Smelltu á "breyta" til að vinna
         með kubbana í skilgreiningu fallsins svo það teikni 40 díla ferning.
       NEW Course 4 Artist Functions 11_instruction: Hér er nýtt fall "teikna röð ferninga".
@@ -2393,6 +2429,43 @@
         tölvuleik og reyna að skilja hvernig hann virkar. Þú getur notað örvarlyklana
         til að færa ninjuna upp og niður - reyndu að ná einhyrningnum en forðast drekann!
         Þegar þú heldur að þú hafir skilið þetta skaltu smella á "Ljúka"
+      October15 bat_instruction: "Freeplay: Here are some functions to play with.
+        \ Can\nyou draw a bat?\r\n"
+      October15 ghost 1_instruction: |
+        Give the ghost eyes, using the "draw a circle"
+        function.
+      October15 JoL 1_instruction: |
+        Program the artist to design a face for your
+        jack-o-lantern!
+      October15 pumpkin 1_instruction: |
+        Finish this jack-o-lantern by drawing the
+        eyes and nose in any style you would like.
+      October15 stars 1_instruction: |
+        Use loops and the "random integer" block
+        to fill the night sky with stars of different shapes and sizes.
+      PDAlg 13-16 Sam Extension Puzzle_instruction: |
+        Add a second parameter to "onscreen?"
+        for Sam's y coordinate and update the function so it keeps him safe on all
+        four sides.
+      PDAlg 17-20 Luigi Extension Puzzle_instruction: |
+        Without modifying your existing
+        "cost" function, create a new "coupon" function that takes a pizza topping
+        and coupon code and returns the cost of a pizza with that topping. If the
+        coupon code is correct (you get to decide what it is), apply a 30% discount
+        to the pizza.
+      PDAlg 8-12 ex dr 1_instruction: |
+        The definition in this Design Recipe doesn't
+        match both examples. Test each example to see which is failing, and then fix
+        the definition to match.
+      PDAlg 8-12 ex dr 2_instruction: |
+        This student has created two examples for
+        the function "apples" but something's not quite right. How would you direct
+        this student to correct their mistake?
+      PDAlg 8-12 Rocket Height Puzzle_instruction: |
+        Let's write a "rocket-height"
+        function with simple acceleration. Write a function that ensures the rocket
+        is at 15 meters at 1 second, 45 meters at 2 seconds, 95 at 3 seconds, and
+        165 at 4 seconds.
       PDAlg Big Game History_instruction: |
         Now that you've played through a Big
         Game level you should see a new entry in your history. Click the Version History
@@ -2544,6 +2617,16 @@
       Play Lab Rocket Free Play_instruction: 'Frjáls æfing: Gerðu tilraunir með fallið
         "rocket-height" (hæð-flaugar) til að láta eldflaugina fljúga á mismunandi
         vegu. Smelltu svo á "Ljúka".'
+      Ryan - 4-5 Bee Conditionals 2_instruction: Þessa stundina vill býflugan bara
+        blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT
+        SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
+      Ryan Test Locked Blocks_instruction: Hér er fallið "rása". Breyttu því til að
+        kisi færist upp 400 díla og svo niður 400.
+      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse
+        an \"if\" statement to program your game to call the \"level_up\"\nfunction
+        only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample:
+        \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move
+        to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: Þetta fiðrildi heitir Sammi og leiksvæðið
         er garður Samma. Garður Samma er 400 dílar á breidd og 400 díla hár! Eins
         og þú sérð getur Sammi hreyft sig um garðinn og hnitatölurnar efst á skjánum
@@ -2639,12 +2722,18 @@
       Standalone_Artist_v2_instruction: Velkominn til listamannsins! Byrjum á að búa
         til einfaldan ferning með "snúa hægri" og "færa áfram" kubbunum. Hver hlið
         á að vera 100 díla löng.
+      template test_instruction: what up
       Test Play Lab_instruction: This is a test play lab level.
+      test_sarah_instruction: hi
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
         into the text in place of the pattern.
+      Total Artist Clone Me_instruction: |
+        Freeplay: Here are the functions you've
+        written, and some more for you to play with. Draw something awesome! Play
+        with the pen width to see how different your drawings look!
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters
@@ -2668,6 +2757,10 @@
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
+      U2 frequency caesar_instruction: Leiðbeiningar
+      U2 frequency random sub_instruction: Leiðbeiningar
+      U2 vigenere cipher_instruction: Leiðbeiningar
+      U2 Vigenere_instruction: Test
       U2L04 - NetSim Routers with Addresses_instruction: |
         Send messages with your
         classmates (Click to see full instructions)
@@ -2684,6 +2777,7 @@
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
+      U2L14 frequency random_instruction: Test
       U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship
         moves. For setup, join a Room with your group, and add ships to\nyour paper
         board for each opponent. When playing, all communication must be\ndone through
@@ -2705,13 +2799,109 @@
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
         to be dropped.
+      U3 - Design Mode - Console Log_instruction: |
+        Update the ID names and `console.log()`
+        messages to match the correct button (Click to see full instructions).
+      U3 - Design Mode - Layers and Delete_instruction: |
+        Fix the layout of the bullseye
+        game. (Click to see full instructions)
+      U3 - Design Mode - Multi Screens 2_instruction: |
+        Make a 2 screen app which
+        can switch back and forth between a black screen and a white screen using
+        buttons. (Click to see detailed instructions.)
+      U3 - Design Mode - Multi Screens_instruction: |
+        Make a 2 screen app with a black
+        screen and a white screen. (Click to see detailed instructions)
+      U3 - Design Mode - Other Events_instruction: |
+        Delete the button and make the
+        image move to a random location when you click on it. (click to see detailed
+        instructions)
+      U3 - Design Mode - WTF Console Log_instruction: |
+        Add a 3 console.log messages
+        and test them out(Click to see full instructions).
+      U3 - Design Mode -Recreate Beyond Buttons_instruction: |
+        Recreate the game from
+        the 'chaser-game' with a welcome screen and game over screen. (Click to
+        see full instructions)
+      U3 - Design Mode 1_instruction: |
+        Add a large red button to your screen using
+        Design Mode (Click for full instructions).
+      U3 - Variables - Clicker Game_instruction: |
+        Create your improved Chaser-Game
+        here. (Click to see full instructions)
+      U3 - Variables - Debug Scope_instruction: |
+        Why isn't the value of foo changing
+        correctly? Make a guess. (Click to see full instructions)
+      U3 - Variables - Debugging with Turtle_instruction: |
+        Use your new debugging
+        techniques to get the code to run correctly (Click to see full instructions)
+      U3 - Variables - Decrement_instruction: |
+        Decrement the value of the variable.
+        (Click to see full instructions)
+      U3 - Variables - Identify Variables_instruction: |
+        Identify the values printing
+        in the terminal with console.log statements. (Click to see full instructions)
+      U3 - Variables - Increment_instruction: |
+        Use the console.log debugging technique
+        to see what is happening in this example. Add another variable and increment
+        its value. (Click to see full instructions)
+      U3 - Variables - Incrementing Variables_instruction: |
+        Create a repeat loop
+        for the repeated code and use increment to recreate the original program with
+        less lines of code! (Click to see full instructions)
+      U3 - Variables - Read Using Turtle_instruction: |
+        Create a second set of variables
+        for x and y position. Move turtle to that new location. (Click to see full
+        instructions)
+      U3 - Variables - Reassigning Variables with Console.log_instruction: |
+        Add another
+        reassignment statement at the end of the code to change the value of the variable
+        at second time. (Click to see full instructions)
+      U3 - Variables - Set to Expression with Other Variables and Turtle_instruction: |
+        (click
+        to see full instructions)
+      U3 - Variables - Set to Expression with Other Variables_instruction: |
+        (click
+        to see full instructions)
+      U3 - Variables - Set to Expression with Turtle_instruction: |
+        (click to see
+        full)
+      U3 - Variables - Set to Expression_instruction: |
+        Test out the new expressions.
+        (Click to see full instructions)
+      U3- Variables - Assign Random For Turtle Draw_instruction: |
+        Try writing the
+        same code in text mode.
+      U3- Variables - Changing the Value_instruction: |
+        Update the value of 'turnAmount'
+        before each moveForward so the turtle turns a different amount each time.
+        (Click to see full instructions)
+      U3- Variables - Create And Assign_instruction: |
+        Edit the variables to be created
+        and assigned on one line. Add a third variable. Print all three in the console.
+        (Click to see full instructions)
+      U3- Variables - Text Mode_instruction: Try writing the same code in text mode.
+      U3-Design Mode-ID and Event Handler_instruction: |
+        Add an event handler for
+        the button using the "Insert and show" link in the Design Mode Events tab.
+        (Click to see full instructions).
+      U3-Design Mode-ID_instruction: |
+        Using the Design Mode Events change the button
+        ID and update the code to match. (Click to see detail instructions).
+      U3-Design Mode-Image_instruction: |
+        Recreate the 'chaser-game' from the last
+        lesson using Design Mode. (Click to see full instructions).
+      U313 drag Two Buttons_instruction: |
+        Run a program with two buttons that have
+        the same id to see the warning message in the console. Change the ids to make
+        the program run without getting a warning message.
+      U313 eventsDetails_instruction: |
+        Run a program with two buttons that have the
+        same id to see the warning message in the console. Change the ids to make
+        the program run without getting a warning message.
       U313 Two Buttons with Ids_instruction: |
-        Now you try it! We've given you some
-        starting code with two buttons and two event handlers on the screen, but we've
-        just left the default Ids of "id".  You need to change the ids to connect
-        the right event handler to the right button. (Interestingly, the incorrect
-        program does work, but exhibits some bizarre behavior.  We'll discuss this
-        more in the next lesson.  Make the buttons work correctly for now).
+        Predict what will happen. Once you've
+        made a prediction, run the code to see what happens. (Click to see full instructions)
       U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto
         see full instructions)"
       U3L03 - draw step_instruction: |
@@ -2741,7 +2931,7 @@
         mynstrinu í hreyfingunni. Þú ættir að skilgreina fallið drawStep() sem teiknar
         eitt þrep og kalla svo á það þrisvar til að ná markmiðinu.
       U3L04 - 3 by 3 with functions_instruction: |
-        Make the 3 by 3 square as efficiently
+        Make the 3x3 square as efficiently
         as you can. (Click to see full instructions)
       U3L04 - snowflake_instruction: |
         Create the design by breaking it down into
@@ -2771,9 +2961,9 @@
         Use a single command to move the
         turtle to the edge of the screen. (Click to see full instructions)
       U3L06 Challenge 1 triangle_instruction: |
-        Read the documentation for one of
-        these commands. Then use them to create a triangle with sides 100 pixels long.
-        (Click to see full instructions)
+        Use the parameterized versions of
+        the turtle commands to create a triangle with sides 100 pixels long. (Click
+        to see full instructions)
       U3L06 Challenge 2 purple square_instruction: Í þetta sinn ætlum við að læra
         aðeins um það að breyta penna skjaldbökunnar. Lestu gegnum skjölunina fyrir
         penWidth() og penColor() og teiknaðu svo fjólubláa ferninginn sem sýndur er.
@@ -2803,9 +2993,43 @@
         á vini þína að reyna að endurgera þína mynd. Við ætlum að sýna þér teikninguna
         sem við gerðum fyrir okkur. Þú getur reynt að endurgera hana ef þú vilt, annars
         skaltu bara skemmta þér við að gera þína eigin!
+      U3L07 - allSeaGrass_instruction: |
+        Add 50 pieces of seagrass to the image by
+        writing drawAllSeagrass with a loop. (Click to see full instructions)
+      U3L07 - bubbles_instruction: |
+        Add 200 bubbles to the image by writing drawAllBubbles
+        with a loop. (Click to see full instructions)
+      U3L07 - callingFunctionsInLoops_instruction: |
+        Call the function within the
+        loop to complete the figure. (Click to see full instructions)
+      U3L07 - createTriangleParam_instruction: |
+        Define a function that accepts a
+        parameter to match the function calls and complete the image. (Click to see
+        full instructions)
+      U3L07 - fish_instruction: |
+        Add 15 fish to the image by writing drawAllFish
+        with a loop. (Click to see full instructions)
       U3L07 - Free Play Loops and Random_instruction: Frjáls æfing! Notaðu það sem
         þú hefur lært um lykkjur og handahóf til að búa til eigin sviðsmynd. Góða
         skemmtun.
+      U3L07 - introSquare_instruction: |
+        Use a loop to draw a square. (Click to see
+        full instructions)
+      U3L07 - loopsWithRandom_instruction: |
+        Increase the number of iterations to
+        fill the screen with white. (Click to see full instructions)
+      U3L07 - randomDots1_instruction: |
+        Increase the number of iterations to fully
+        fill the screen with random dots. (Click to see full instructions)
+      U3L07 - randomSquare_instruction: |
+        Draw the figure using a loop. (Click to
+        see full instructions)
+      U3L07 - seaGrass_instruction: |
+        Add a parameter to drawSeagrass that controls
+        the number of waves in the grass. (Click to see full instructions)
+      U3L07 - seaStar_instruction: |
+        Add 5 sea stars to the image by writing drawAllSeaStars
+        with a loop. (Click to see full instructions)
       U3L07 - Starry Night Starter Code_instruction: 'Hér ætlar þú að nota lykkjur
         og handahófstölur til að búa til mynd af stjörnuhimni líkum þeim sem sýndur
         er. Við höfum látið þig fá kóða til að teikna landið og himininn (bara tveir
@@ -2813,15 +3037,70 @@
         og tunglið. Allt efni myndarinnar eru gerð með því að láta skjaldbökuna teikna
         punkta, línur og liti á sniðugan hátt. Þú getur komið þér af stað með því
         að fylgja leiðbeiningunum sem lagðar eru til á meðfylgjandi vinnublaði. '
+      U3L07 - sunBeams_instruction: |
+        Add 100 sunbeams to the image by writing drawAllSunbeams
+        with a loop. (Click to see full instructions)
+      U3L07 - topDownDesign_instruction: |
+        Get comfortable with the structure of this
+        program, then move on to the next exercise. (Click to see full instructions)
+      U3L08 - createTwoParamTriangle_instruction: |
+        Define a function called drawTriangle()
+        that accepts two parameters to set the size and width of the triangle. (Click
+        to see full instructions)
+      U3L08 - digitalScene_instruction: |
+        Create the functions you were assigned as
+        part of your digital scene. (Click to see full instructions)
       U3L08 - drawSquaresWithParams_instruction: |
-        Change the code at top to make
-        use of the drawSquare() command. (Click to see full instructions)
+        Write drawSmallSquare() to draw
+        a 25px square. (Click to see full instructions)
+      U3L08 - drawSquareWithParam_instruction: |
+        Use drawSquare() to recreate the
+        image of both squares, this time using parameters. (Click to see full instructions)
       U3L08 - Enchantment Under the Sea_instruction: |
         You have been provided with
         starter code for an “Under the Sea” scene which includes three functions,
         one each for the starfish, sea grass, and fish. Create versions of these functions
         which accept parameters to allow you to add more variation to your scene.  The
         student worksheet provides more details and guidance.
+      U3L08 - fish_instruction: |
+        Add a parameter to drawFish() that changes the size
+        of the fish drawn. (Click to see full instructions)
+      U3L08 - freePlay_instruction: |
+        Keep adding to your image by making more calls
+        to your new functions with parameters. (Click to see full instructions)
+      U3L08 - individualCode_instruction: |
+        Create the functions you were assigned
+        as part of your digital scene. (Click to see full instructions)
+      U3L08 - introUnderTheSea_instruction: |
+        Add an extra fish, starfish, and piece
+        of sea grass to the image. Look at, but don't change, the functions that
+        create them. (Click to see full instructions)
+      U3L08 - multiParamFish_instruction: |
+        Add three parameters to your drawFish()
+        function to accept red, green and blue values to make your fish different
+        colors. (Click to see full instructions)
+      U3L08 - multipleLayersofParams_instruction: |
+        Call drawPlusSign() to complete
+        the image. (Click to see full instructions)
+      U3L08 - paramsToStarfish_instruction: |
+        Add a parameter to drawStarfish() that
+        changes the size of the starfish drawn. (Click to see full instructions)
+      U3L08 - randomInput_instruction: |
+        Use the randomNumber() blocks to test the
+        functions you designed with random input. (Click to see full instructions)
+      U3L08 - seaGrass_instruction: |
+        Add a parameter to drawSeaGrass() that changes
+        the size of the piece of sea grass drawn. (Click to see full instructions)
+      U3L08 - squareTwoParams_instruction: |
+        Call drawSquare() to complete the drawing
+        of two squares. (Click to see full instructions)
+      U3L08 - starFish_instruction: |
+        Add an extra fish, starfish, and piece of sea
+        grass to the image. Look at, but don't change, the functions that create
+        them. (Click to see full instructions)
+      U3L08 - triangleTwoParams_instruction: |
+        Call drawSquare() to complete the drawing
+        of two squares. (Click to see full instructions)
       U3L13 - Button with ID_instruction: Dragðu hnapp út á skjáinn og settu í hann
         textann "Sæktu fram!". Keyrðu forritið til að vera viss um að hnappurinn sjáist.
       U3L13 - Debug Id plus logic problem_instruction: "Síðasta verkefni var dæmi
@@ -2836,17 +3115,28 @@
         geta hjálpað þér að finna hvað er að. Það er ekki mikill kóði svo ef til vill
         geturðu fundið út úr því bara með því að lesa hann. Gerðu breytingu svo forritið
         virki eins og til er ætlast.
+      U3L13 - Debugging 1_instruction: |
+        Debug the program by verifying your IDs are
+        being referenced properly. (Click to see full instructions)
+      U3L13 - Debugging 2_instruction: |
+        Debug the program by properly ordering your
+        button commands and event handlers. (Click to see full instructions)
+      U3L13 - Debugging 3_instruction: |
+        Debug the program by fixing the logical error
+        within the program. (Click to see full instructions)
+      U3L13 - Project_instruction: |
+        Create your Multi-screen App. (Click to see full
+        instructions)
       U3L13 - Turtle Driver Project_instruction: |
-        Challenge: Create a “turtle driver”
-        with at least three buttons on the screen to move the turtle forward, and
-        turn the turtle right and left. You can copy/paste code from a previous level
-        if you like but it will help build your coding muscles if you create this
-        small program from scratch.  If you have time, try adding additional buttons!  You
-        can also have fun changing the parameters on the turtle functions, using colors,
-        etc.
+        Create a "turtle driver" that
+        includes buttons to move the turtle forward and turn it left and right. (Click
+        to see full instructions)
       U3L13 - Turtle move with button_instruction: 'Dragðu hnapp út á skjáinn og settu
         í hann textann "Sæktu fram!". Bættu við atvikastjóra fyrir hnappinn sem lætur
         skjaldbökuna færast áfram. Keyrðu forritið til að vera viss um að það virki. '
+      U3L13 eventsDetails_instruction: |
+        Add an event handler to the button to move
+        the turtle forward. (Click to see full instructions)
       U3L14 - Unfortunate Events Free Play_instruction: |
         Follow the "Unfortunate
         Events" Worksheet and enter your code here to experiment.  We've pre-loaded
@@ -2857,6 +3147,12 @@
         hi” button when that event occurs.\r\nAdd event handler to button\nso that
         on click, it writes a hello message to the screen and hides the textInput\nand
         button."
+      U3L16 - chaserApp_instruction: |
+        Create your own "Chaser App". (Click to see
+        full instructions)
+      U3L16 - chooseImages_instruction: |
+        Replace the image in your application with
+        one of your own. (Click to see full instructions)
       U3L16 - hideAndShow_instruction: |
         Introducing textInput, getText and write.  First
         run the starter code several times.  Try to change what's written to the
@@ -2882,6 +3178,15 @@
         an event handler to it.  We've started you out with code similar\nto the result
         of the last level, you can copy your code from that level into\nhere if you
         prefer. \n"
+      U3L16 - introSetPosition_instruction: |
+        Move the buttons to the bottom of the
+        screen. (Click to see full instructions)
+      U3L16 - newEventTypes_instruction: |
+        Experiment with different event types and
+        select the one that you think is best. (Click to see full instructions)
+      U3L16 - projectTemplate_instruction: |
+        Create your own "Chaser App". (Click
+        to see full instructions)
       U3L16 - quick double click_instruction: |
         Mini-Project.  The Quick Double-Click
         game.  In this simple game an object (an image) moves around, or pops up randomly
@@ -2895,27 +3200,43 @@
         command!  Replace the moveTo in the button-click event handler to use setPosition
         to move the button itself to a random location when it's clicked.
       U3L16 - setPositionMoveButton_instruction: Use setPositon to moveButton
-      U3L16 - setupMoveToRandom_instruction: "We'll be building upon some simple\nstarting
-        code throughout this lesson.  Your first task: use moveTo and randomNumber\nto
-        get the turtle to move to a random location with each button click.  We've\ngiven
-        you starting code for our common setup: a button that moves the turtle\nwhen
-        clicked.  You should modify this code.  \n"
-      U3L16 - text labels_instruction: "Introducing textLabels.  First try replacing\nyour
-        button with a textLabel.  Will the text respond to events just like the\nbutton?
-        \ Try connecting an event handler to it.  We've started you out with\ncode
-        similar to the result of the last level, you can copy your code from\nthat
-        level into here if you prefer. \n"
+      U3L16 - setupMoveToRandom_instruction: |
+        Modify the code so that the turtle
+        moves to a random screen location when the button is clicked. (Click to see
+        full instructions)
+      U3L16 - singleSetPosition_instruction: |
+        Move the button to the middle of the
+        screen. (Click to see full instructions)
+      U3L16 - text labels_instruction: |
+        Use the textLabel command to replace the
+        button in your program with a text label. (Click to see full instructions)
       U3L16 - textInput getText write_instruction: |
         Introducing textInput, getText
         and write.  First run the starter code several times.  Try to change what's
         written to the screen when the button is clicked. Then use getText to write
         to the screen what the user entered in the text box.
       U3L16 - use images_instruction: |
-        Introducing Images.  Try replacing the textLabel
-        with an image..  Will the image respond to events just like the button?  Try
-        connecting an event handler to it.  We've started you out with code similar
-        to the result of the last level, you can copy your code from that level into
-        here if you prefer.
+        Use the image command to replace the text
+        label in your program with an image. (Click to see full instructions)
+      U3L17 - getKeyValue_instruction: |
+        Create and update your key value pairs using
+        setKeyValue. (Click to see full instructions)
+      U3L17 - introCallbacks_instruction: |
+        Run the program several times to observe
+        how the setKeyValue commands now always arrive in order. (Click to see full
+        instructions)
+      U3L17 - introKeyValue_instruction: |
+        Explore your key value pairs with the Data
+        Viewer. (Click to see full instructions)
+      U3L17 - readKeyValue_instruction: |
+        Explore your key value pairs with the Data
+        Viewer. (Click to see full instructions)
+      U3L17 - setKeyValue_instruction: |
+        Create and update your key value pairs using
+        setKeyValue. (Click to see full instructions)
+      U3L17 - twoSetKeyValue_instruction: |
+        Run the program several times to observe
+        how often setKeyValue commands arrive out of order. (Click to see full instructions)
       U3L19 - Clicker Game Freeplay Area_instruction: |
         Use this App Lab area to improve
         your clicker game.  You should start by copy/pasting the code from your old
@@ -2924,12 +3245,9 @@
         experiment if you want to.  Everything else you need should be shown.  Have
         fun!
       U3L19 - Debugging with consoleLog_instruction: |
-        This example shows how you
-        might insert console.log statements in your code to verify for yourself how
-        the values in the variables change during the running of the code.  This is
-        an important debugging technique to use when each line in your program doesn't
-        have a visual effect on the app that you can see to verify things are working
-        right.  Run the code to see the output in the console.
+        Add console.log() statements
+        to find out the value of a and b after the first reassignment statement a
+        = b; (Click to see full instructions)
       U3L19 - DEMO up down count practice app_instruction: |
         This is a demonstration
         of a simple App that uses variables, arithmetic and setText.  Play with it
@@ -2943,48 +3261,23 @@
         foo to see the string change. \r\n2. By only modifying the lines of code\nthat
         were given to you, try to get the output to say: “The value of foo is:\n9.
         \ And isn’t that fine.” \r\n"
-      U3L19 - fix the var name syntax error_instruction: "We've given you some code\nwith
-        an error.  It doesn’t recognize the variable.  Can you figure out why?  Fix\nthe
-        error and get the program to run.  Also note the error message since it\nmight
-        come up at some point later in your life.\r\n\r\n"
+      U3L19 - fix the var name syntax error_instruction: |
+        Fix the error and get it
+        to print the value of both variables (Click to see full instructions)
       U3L19 - practice with setText_instruction: |
-        We've started you out with the
-        code shown on the previous screen.  First experiment with the app.  Identify
-        where setText is being used.  CHALLENGE: modify the code to also use setText
-        to change the text on the button itself when it's clicked.  GIF: U3L19 -
-        setTextOfButton.gif
-      U3L19 - Target Clicker App_instruction: "# A motivating example\r\n\r\nHere\nis
-        an example of the kind of app we want to make.  Study this for the elements\ncontained
-        in the app rather than what it is or does.  Things to investigate:\n\r\n\r\n1.
-        what happens when you click on the Code.org logo? \r\n2. What happens\nwhen
-        you click somewhere else? \r\n3. Try the reset button.   \r\n\r\nThe\nelements
-        contained in this app appear to be simple, and they are in some ways.\nHowever,
-        the computing principles involved - controlling and keeping track\nof things
-        in memory while the program is running - get into some deeper issues\nof programming
-        and computer science in general.  There are some devilish details\nand paths
-        that can lead to misunderstanding if you're not careful.\r\n\r\nSo,\nkeep
-        this app in mind as you go through the different levels in this lesson.  It\nmight
-        seem like you need to learn a lot in order to get this simple thing\nworking.
-        \ But it's worth taking the time to understand at a deeper level\nwhat is
-        going on.  Because this one topic: controlling memory leads to many\npossible
-        misunderstandings about coding, and how computers work.  We want\nto make
-        sure you get it right from the outset.  \r\n\r\nSo take your time.  Work\nthrough
-        the issues.  Read the explanations.  You'll come out on the other\nside a
-        better programmer with much deeper knowledge and understanding of how\nthings
-        work.  \r\n\r\nAre you ready?  Click 'finish' to move to the next\npage and
-        start the lesson."
+        Add another button that changes
+        the text to the value of a new variable. (Click to see full instructions)
+      U3L19 - Target Clicker App_instruction: |
+        Investigate the new elements of the
+        'chaser-game'
       U3L19 - test reassignment of two vars_instruction: |
-        Why is this happening?
-        The code given here is the same as the example from the previous page where
-        we asked you to make a prediction about what will happen.  Run this code to
-        find out if you were right.  If you weren't, that's okay.  You might experiment  a
-        little if you want to, but bon't spend too much time here. We'll explain
-        more on the next page.
-      U3L19 - three basic ops of variables_instruction: "Do this:\r\nWe've given\nyou
-        the three lines of code shown in the previous page.  Add three lines of\ncode
-        just below the ones shown here to make your own variable, assign it a\nvalue
-        and write it to the screen.  NOTE: change the variable name from the\ndefault
-        x to something else.\r\n"
+        Predict the value of a
+        and b. Add console.log statements to find out the actual value of a and b.
+        (Click for full instructions)
+      U3L19 - three basic ops of variables_instruction: |
+        Add another variable with
+        a name of your choosing. Print the value of the variable to the console. (Click
+        to see full instructions)
       U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe
         statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).
         \ Run\nthe program and you should see the output show up in the console area
@@ -2994,12 +3287,9 @@
         output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF:
         U3L19-useconsolelog.gif"
       U3L19 - up down count practice app_instruction: |
-        This app is only SLIGHTLY
-        different from the previous one, but much more dynamic.  See if you can figure
-        out how and why the count is going up.  Once you've figured it out then you
-        should be able to DO THIS: add a button to the app that when clicked makes
-        the count go down, and updates the label.  When you're done the app should
-        work as shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
+        Set up the down button to
+        decrease the value of count by 1 each time it is clicked. (Click to see full
+        instructions)
       U3L19 - updating variables pt1_instruction: |
         This app is only SLIGHTLY different
         from the previous one, but much more dynamic.  See if you can figure out how
@@ -3008,33 +3298,21 @@
         go down, and updates the label.  When you're done the app should work as
         shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
       U3L19 - variable reassignment challenge pt2_instruction: |
-        We've given you
-        the code from the previous page.  Right now, because the code only sets the
-        values of variables, the app doesn't display anything. DO THIS: insert write
-        or console.log statements into the code to figure out what the values of a,
-        b, and c are after the code has executed.  You should have first made a prediction
-        to see if your mental model of how the computer works is correct.  We'll
-        ask for the answer on the next page.
+        Make a prediction
+        about the ending values of a,b, and c. Then use console.log to check your
+        understanding (Click to see full instructions)
       U3L19 - variable scope problem 2_instruction: |
-        First run the program to see
-        the problem.  You don't need to write code to solve any problem here.  But
-        you do need to investigate the code and come up with an explanation for WHY
-        what's happening is happening.  Why aren't 3 things being written to the
-        screen?  Why does the variable foo seem to exist once but not the other times?  If
-        you switch to code mode you'll see some warning messages next to two lines
-        of code -- why do you get those messages?  Once you think you have a good
-        answer, continue to the next page.
-      U3L19 - variable scoping problem debugging_instruction: "Here is the code from\nprevious
-        page that has a subtle problem with it.  FIRST: run the app and try\nit to
-        see the problem. NOTE: NaN stands for \"Not a Number\".   DO THIS: figure\nout
-        what's happening, where, and fix the problem.  We'll explain the issue\non
-        the next page. \n"
+        What is happening with foo?
+        Play with the level to try to figure it out. (Click to see full instructions)
+      U3L19 - variable scoping problem debugging_instruction: |
+        See if you can figure
+        out why the code is no longer work. (Click to see full instructions)
       U3L19 - write var and string with same name_instruction: |
-        Now look at this
-        example. We’ve added another write statement.  Before you run the code, see
-        if you can predict what the output will be.  Seriously, write it down. THEN
-        run the code, mess with it if you like, and continue to the next page for
-        an explanation.
+        Fix the code so that
+        the value of both variables prints to the console. (Click to see full instructions)
+      U3L2 Using Simple Commands (no tooltips)_instruction: |
+        Draw a 1x1 square above
+        and to the left of the turtle's starting position. Click to see full instructions.
       U3L2 Using Simple Commands_instruction: Teiknaðu ferning ofan við og hægra megin
         við upphafsstað skjaldbökunnar. Smelltu til að sjá ítarlegar leiðbeiningar.
       U3L23 Chatbot Conditionals 1_instruction: |
@@ -3223,4 +3501,5 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
+      Vigenere_instruction: Test
       XML Scratchpad_instruction: Nota þennan prófáfanga til að ná í xml fyrir áfangapróf

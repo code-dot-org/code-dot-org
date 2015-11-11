@@ -8,30 +8,45 @@
 
 # მადლობა კოდის საათზე დარეგისტრირებისთვის!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> თქვენ შესაძლოს ხდით ლათინოამერიკელი სტუდენტებისთვის კოდის საათში ჩართვას, რასაც შეუძლია *მათი დარჩენილი ცხოვრების შეცვლა*, ოქტომბრის განმავლობაში. 5-11. <% else %> თქვენ შესაძლოს ხდით მოსწავლეებისთვის მთელს მსოფლიოში კოდის საათში ჩართვას, რასაც შეუძლია *მათი დარჩენილი ცხოვრების შეცვლა*, დეკემბრის განმავლობაში. 7-13. <% end %>
+You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13.
 
-პრიზების, ახალი ტუტორიალებისა და სხვა საინტერესო სიახლეების შესახებ ყოველთვის შეგატყობინებთ. გაინტერესებთ, ახლა რა შეიძლება, გააკეთოთ?
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [Details](https://<%= hostname %>/prizes).
+
+#### We'll be in touch about new tutorials and other exciting updates. What can you do now?
 
 ## 1. გაავრცელეთ ხმა
 
-მოუყევით თქვენს მეგობრებს #HourOfCode-ის შესახებ.
+We need your help to reach 100,000 organizers worldwide. მოუყევით თქვენს მეგობრებს #HourOfCode-ის შესახებ. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
+
+<% if international == 'true' %>
 
 ## 2. სთხოვეთ მთელ თქვენს სკოლას კოდის საათის ჩატარება
 
-[გაუგზავნეთ ეს წერილი](http://<%= hostname %>/resources#email) თქვენს დირექტორს.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). <% else %>
+
+## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
+
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup). <% end %>
 
 ## 3. მიმართეთ თქვენს დამსაქმებელს რომ იმონაწილეოს
 
-[გაუგზავნეთ ეს წერილი ](http://<%= hostname %>/resources#email) თქვენს მენეჯერს ან აღმასრულებელ დირექტორს.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
 
 ## 4. გაუკეთეთ რეკლამა კოდის საათს თქვენს საზოგადოებაში
 
-ჩარტეთ ადგილობრივი ჯგუფი - ბიჭების/გოგოების სკაუტების კლუბი, ეკლესია, უნივერსიტეტი, ვეტერანთა ან სამუშაო გაერთიანება. ან ჩაატარეთ კოდის საათის "ბლოკის წვეულება" თქვენს მიდამოში. [გააგზავნეთ ეს წერილი](http://<%= hostname %>/resources#email).
+Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
 
 ## 5. მიმართეთ თქვენს ადგილობრივ ოფიციალური თანამდებობის პირს, მხარი დაუჭიროს კოდის საათს
 
-[გაუგზავნეთ ეს წერილი](http://<%= hostname %>/resources#politicians) თქვენს მერს, ქალაქის საკონსულოს, ან სკოლის სამეურვეო საბჭოს და დაპატიჟეთ ისინი თქვენს სკოლაში.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+
+Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
+
+Hadi Partovi  
+Founder, Code.org
 
 * * *
 
-Code.org არის 501c3 არაკომერციული ორგანიზაცია. ჩვენი მისამართია 1301 მე-5 გამზირი, ლუქსი 1225, სიეტლი, WA, 98101. არ მოგწონთ ეს წერილები? [შეაჩერეთ გამოწერა](%= unsubscribe_link %).
+<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+
+![](<%= tracking_pixel %>)

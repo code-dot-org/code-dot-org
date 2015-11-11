@@ -370,9 +370,9 @@ zh:
         C1_pair_programming: 结对编程
         C1_maze_intro_sequencing: 迷宫测序介绍
         C1_maze_debugging: 迷宫： 调试中
-        C1_bee_level_intro: 'Bee Level - Intro'
+        C1_bee_level_intro: 蜜蜂级别-简介
         C1_artist_intro: 艺术家简介
-        C1_spelling_bee_intro: Spelling Bee Intro
+        C1_spelling_bee_intro: 拼字游戏简介
         C1_zuck_repeat_loop: 迷宫循环
         C1_bee_loops: 蜜蜂循环
         C1_maze_loops: 迷宫循环
@@ -443,6 +443,7 @@ zh:
         infinity_playlab_intro: 'Play Lab - Introduction'
         infinity_playlab_events: 'Play Lab - Events'
         infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        csp_applab_functions: 函数介绍
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
@@ -471,6 +472,9 @@ zh:
         alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
         alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
         alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: '拖动一个"移动"的块和捕捉低于它的其他块'
@@ -489,7 +493,7 @@ zh:
         replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
         repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
         repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
-        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
+        repeat_blocks_2: '(2) 移动"重复"块到这里, 然后放置灰色方块到里面.'
         snowflake_dropdown: Use this drop-down to create different snowflakes!
         degrees_per_side: Divide 360 by the number of sides to get the size of each angle in degrees.
         set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
@@ -497,7 +501,7 @@ zh:
         which_equation: Which equation makes each side shorter for shapes with more sides?
         get_nectar: '使用新的"得到花蜜"块。'
         actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        draw_square_hint: '提示: 用你刚才在最后一个谜题中制作的方形回路'
         edit_function: 单击此处来编辑您的函数。
         create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
         house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
@@ -525,21 +529,21 @@ zh:
         function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
         change_here: 在这里更改
         write_draw_square_function: Drag blocks from the toolbox into here that draw a square
-        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
+        write_draw_triangle_function: 将模块从工具箱中拖动到这里画一个三角形
+        edit_add_parameter: 点击编辑，在你的函数中添加参数
+        add_and_drag_parameter: 在这里填写参数的名称，点击添加，然后将它拖动到函数定义中
+        fill_in_actor: 在??? 处填写数字，使每个演员 (1、 2 和 3) 一致
+        repeat: 在循环中放入模块来重复执行命令
+        if_bee_nectar: '使用"if"代码块来决定蜜蜂是否应该得到花蜜'
         if_else_bee: |-
           Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
+        repeat_full_circle: 输入僵尸至少需要移动多少次才能完成一个完整的循环
         place_length_variable: Drag the length variable here to replace the question marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
-        Infinity_move_collide_callout: Play a sound when this event occurs.
-        Infinity_repeat_callout: Place Move blocks inside here
+        arrows_move_actor: 使用箭头移动演员
+        right_arrow_fireball: 使用右箭头来射击火球
+        name_function: 在这里填写函数的名称
+        Infinity_move_right_runbutton: 在这里添加移动模块
+        Infinity_move_directions_callout: 当按下上箭头键时，哪个模块将会让大白向上移动？
+        Infinity_move_directions_callout_arrow: 使用这些箭头引导
+        Infinity_move_collide_callout: 发生此事件时播放声音。
+        Infinity_repeat_callout: 请移动模块到这里

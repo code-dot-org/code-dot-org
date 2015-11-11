@@ -1,21 +1,25 @@
 sv:
   site_name: HOUR of CODE
+  hour_of_code: Kodtimmen
   language: Svenska
-  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
+  front_title: 'Var med i den största utbildningshändelsen någonsin, %{campaign_date}, 2015'
   coming_soon: Kommer snart
-  campaign_date_start_short: Dec. 7
+  campaign_date_start_short: 7:e December
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Se den nya videon
-  front_watch_regular_video: Watch the video
+  front_watch_regular_video: Se filmen
   header_menu_resources: Resurser
   header_menu_faq: Vanliga Frågor
   header_menu_prizes: Priser
+  header_menu_how_to: How-To
+  header_menu_promote: Promote
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -49,6 +53,7 @@ sv:
   company_chelmsfordpublicschooldistrict: Chelmsford School District
   company_cheneysd: Cheney School District
   company_chesterfieldschools: Chesterfield County Public Schools
+  company_codebrooklyn: Code Brooklyn
   company_cps: Chicago Public Schools
   company_ccsd: Clark County School District
   company_cloverparkschooldistrict: Clover Park School District
@@ -72,6 +77,7 @@ sv:
   company_vadoe: "Governor's School Programs"
   company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
+  company_godaddy: Go Daddy
   company_greenupcountyschooldistrict: Greenup County Schools
   company_gwinnettcountypublicschools: Gwinnett County Public Schools
   company_HamptonCitySchools: Hampton City Schools
@@ -105,6 +111,7 @@ sv:
   company_oneclay: One Clay County School District
   company_ocps: Orange County Schools
   company_orangeusd: Orange Unified School District
+  company_pbsd: Palm Beach School District
   company_pvusd: Paradise Valley Unified School District
   company_PetersburgCityPublicSchools: Petersburg City Public Schools
   company_pylusd: Placentia-Yorba Linda Union School District
@@ -118,6 +125,7 @@ sv:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -130,6 +138,7 @@ sv:
   company_wvsd208: West Valley School District
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
+  company_yelp: Yelp
   prizes_all: Priser för varje arrangör
   prizes_every_organizer: 'Varje organistatör av en Hour of Code får Dropbox- eller Skype-krediter som tack'
   prizes_technology: 'En offentlig skola i varje amerikansk delstat (& Washington DC) kommer att vinna teknik till ett värde av $10.000'
@@ -138,6 +147,22 @@ sv:
   prizes_brilliant: One school in each province and territory will receive $2000 for a Brilliant Project
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
   prizes_details: Detaljer
+  nav_back_to_resources: Back to Resources
+  how_to_nav_educators: För utbildare
+  how_to_nav_after_school: For after school
+  how_to_nav_parents: För föräldrar
+  how_to_nav_public_officials: För offentliga tjänstemän
+  how_to_nav_districts: For districts
+  how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: För föreningar
+  how_to_nav_companies: För företag
+  how_to_nav_afterschool_educators: For after-school educators
+  how_to_nav_volunteers: For volunteers
+  prizes_nav_title: Priser
+  prizes_nav_home: Alla priser
+  prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Terms and conditions
+  prizes_nav_faq: Vanliga Frågor
   prizes_nav_dc: Mystery trip to Washington D.C.
   prizes_nav_technology: $10,000 of technology for your school
   prizes_nav_video_chat: Video chat with a tech titan
@@ -145,21 +170,15 @@ sv:
   prizes_nav_brilliant: $2,000 Brilliant Labs project
   prizes_nav_actua: Actua workshop
   prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Terms and Conditions
-  prizes_nav_faq: Vanliga Frågor
-  nav_back_to_resources: Back to Resources
-  how_to_nav_educators: For educators
-  how_to_nav_after_school: For after school
-  how_to_nav_parents: For parents
-  how_to_nav_public_officials: For public officials
-  how_to_nav_districts: For districts
-  how_to_nav_assemblies: For school assemblies
-  how_to_nav_organizations: For organizations
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='/resources/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='/resources'>Promote the Hour of Code</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
@@ -186,6 +205,7 @@ sv:
   front_join_us_computer_science: Älskar du datavetenskap?
   front_join_us_spread: Sprid ordet.
   front_join_us_spread_word: Spread the word in your community
+  front_join_us_spread_word_work: Spread the word in your community or workplace
   front_join_us_organize: Eller anordna en Hour of Code själv.
   front_join_us_how_to_run: Så här kan du anordna en Hour of Code
   front_join_us_help_promote: Hjälp till att främja Hour of Code
@@ -198,6 +218,7 @@ sv:
   front_join_us_support: Stöd
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: For more information, please visit code.org
+  front_join_us_n_students_served: '# served'
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Ditt namn
   signup_email_label: Din epostadress
@@ -227,12 +248,16 @@ sv:
   map_header: '# Hour of Code evenemang runt om i världen'
   see_all_events: See all events
   map_header_company: '# by company organizers'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Search for Hour of Code events
   map_search_search: Sök
   map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
+  meta_tag_og_title: The Hour of Code is coming
   meta_tag_og_description: Hour of Code är en global rörelse som når tiotals miljoner elever i 180+ länder och över 30 språk. Åldrar 4-104.
-  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_title: The Hour of Code is coming
   meta_tag_twitter_description: Hour of Code är en global rörelse som når tiotals miljoner elever i 180+ länder och över 30 språk. Åldrar 4-104.
   twitter_default_text: 'Jag deltar i årets #HourOfCode, gör du? @codeorg'
   hardware_prizes_form_name_label: Ditt namn
@@ -248,8 +273,12 @@ sv:
   hardware_prizes_form_school_type_option_middle_school: Högstadiet
   hardware_prizes_form_school_type_option_high_school: Gymnasiet
   hardware_prizes_form_qualifying_school_label: This is a K-12 US public school
+  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
+  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
   hardware_prizes_form_number_students_label: Antalet studenter som deltar
   hardware_prizes_form_number_students_placeholder: Antal studenter
+  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
+  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
   hardware_prizes_form_plan_file_label: Ladda upp en logistikplan för din Hour of Code
   hardware_prizes_form_plan_file_description: 'Lämna in en enkel plan för hur du tänker organisera så att varje elev på din skola gör Hour of Code. Exempelplan: #PDF # | #Word #'
   hardware_prizes_form_submit_label: Skicka in
@@ -262,15 +291,15 @@ sv:
   hoc_faq_why_cs_q: Varför datavetenskap?
   hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path. See more stats on <a href='%{codeorg_url}'>%{partner_url}</a>."
   hoc_faq_how_participate_q: How do I participate in the Hour of Code?
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Vem står bakom Hour of Code?
   hoc_faq_behind_hoc_a: "The Hour of Code is organized by <a href='https://code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='%{codeorg_url}/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the College Board."
   hoc_faq_host_q: "I don't know anything about coding. Can I still host an event?"
-  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/resources/how-to'>how to guide</a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Behöver jag en dator till varje deltagare?
   hoc_faq_need_computers_a: "Nej. Vi har Hour of Code övningar som fungerar på datorer, smarttelefoner, surfplattor och en del som inte kräver dator alls! Du kan gå med vart du än är, med vad du än har. <p><i>Några alternativ:</i> <br> <ul> <li><b>Arbeta i par.</b> Forskning visar att elever lär sig bäst genom <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>par-programmering</a>, att dela på en dator och arbeta tillsammans. Uppmuntra eleverna att jobba i par. <li><b>Använda storbild.</b> Om du har en projektor som du kan koppla till en uppkopplad dator, så kan hela gruppen arbeta med Hour of Code tillsammans. Se delar av instruktionsfilmer tillsammans och turas om att lösa uppgifter eller svara på frågor. <li><b>Kör utan dator.</b> Vi har övningar som inte kräver dator alls. </ul>"
   hoc_faq_international_q: 'I am in <country>. How do I participate internationally?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Hur gör jag för att skapa en Hour of Code övning?
   hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='/tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
   hoc_faq_more_questions_q: Fler frågor?
@@ -316,12 +345,19 @@ sv:
   resources_social: Sociala medier
   resources_country_resources: Country Specific Resources
   resources_stickers: Stickers
+  resources_how_to_guides: How-to guides
+  resources_promote: Promote
+  resources_nav_tutorials: Try the tutorials
+  resources_nav_promote: Spread the word
+  resources_nav_spread_word: How to get involved
   resources_banner_promote_text: Promote
   resources_banner_promote_button: Encourage others to sign up with brochures, inspirational posters and social media banners.
   resources_banner_howto_text: How-to
   resources_banner_howto_button: Resources for educators, parents and districts to host an Hour of Code.
+  handouts_section: Share these handouts
   handouts_onepager: Spread the word with this one page handout
   handouts_brochure: Give this brochure to teachers and schools
+  handouts_participationguide: Plan your Hour of Code with this participation guide
   videos_title: Show these videos to inspire students
   videos_what_most_schools_dont_teach: "What Most Schools Don't Teach (5 min)"
   videos_hoc_2014: 'Hour of Code is Here - Anybody Can Learn'
@@ -331,7 +367,9 @@ sv:
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: How-to guide for public officials
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
@@ -348,7 +386,7 @@ sv:
   title_signup_thanks: Thanks for signing up to host an Hour of Code!
   title_tutorial_guidelines: Tutorial Guidelines
   title_whole_school: Whole School Participation
-  events_title: Alla Hour of Code aktiviteter
+  events_nav_title: Hour of Code Events
   events_nav_all: Alla Aktiviteter
   events_nav_whole_schools: Hela skolor
   events_nav_special: Speciella evenemang
@@ -356,7 +394,7 @@ sv:
   events_all_old_title: All @year Hour of Code events
   events_all_title: Alla Hour of Code aktiviteter
   events_whole_school_title: Whole-school Hour of Code events
-  events_special_title: Special Hour of Code events
+  events_special_title: Computer Science Tech Jams
   events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: aktivitet
   events: evenemang

@@ -3,6 +3,7 @@ Feature: Playing match levels
 Background:
   Given I am on "http://learn.code.org/s/course1/stage/14/puzzle/13?noautoplay=true"
   Then I rotate to landscape
+  And I wait to see ".submitButton"
   And element ".submitButton" is visible
 
 Scenario: Loading the level

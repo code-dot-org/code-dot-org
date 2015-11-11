@@ -11,7 +11,6 @@
       "dot": null,
       "penUp": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "penRGB": {
         "params": [
@@ -29,11 +28,8 @@
       }
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
-    "start_blocks": "penUp();\r\nfor (var i = 0; i < 100; i++) {\r\n  penRGB(randomNumber(255),randomNumber(255),randomNumber(255),0.5);\r\n  moveTo(randomNumber(320), randomNumber(450));\r\n  dot(randomNumber(1,20));\r\n}",
+    "start_blocks": "penUp();\r\nfor (var i = 0; i < 100; i++) {\r\n  penRGB(randomNumber(0,255), randomNumber(0,255), randomNumber(0,255), 0.5);\r\n  moveTo(randomNumber(0,320), randomNumber(0,450));\r\n  dot(randomNumber(1,20));\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -60,7 +56,9 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "submittable": "false",
-    "hide_view_data_button": "true"
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "false"
   }
 }]]></config>
   <blocks/>

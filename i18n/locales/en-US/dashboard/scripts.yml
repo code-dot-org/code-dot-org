@@ -182,6 +182,7 @@ en:
           Maze and Bee: crwdns22251:0crwdne22251:0
           Artist Binary: crwdns23312:0crwdne23312:0
           description_audience: crwdns24913:0crwdne24913:0
+          Super Challenge - Variables: crwdns50702:0crwdne50702:0
         Course4pre:
           title: crwdns35290:0crwdne35290:0
           description_short: crwdns22252:0crwdne22252:0
@@ -635,6 +636,19 @@ en:
           Chained and Nested Conditionals: crwdns43505:0crwdne43505:0
           Intelligent Personal Assistant Challenge: crwdns43506:0crwdne43506:0
           Digital Assistant Challenge: crwdns43520:0crwdne43520:0
+          Creating Functions: crwdns49755:0crwdne49755:0
+          Functions and Top-Down Design: crwdns49756:0crwdne49756:0
+          Design a Digital Scene: crwdns49757:0crwdne49757:0
+          Event-Driven Programming and Debugging: crwdns50315:0crwdne50315:0
+          Introducing Design Mode: crwdns50316:0crwdne50316:0
+          Clicker Game: crwdns50317:0crwdne50317:0
+          Getting User Input: crwdns50318:0crwdne50318:0
+          Variables: crwdns50319:0crwdne50319:0
+          Looping and Random Numbers - Under the Sea: crwdns50703:0crwdne50703:0
+          Multi-screen App: crwdns50704:0crwdne50704:0
+          Variables Conceptorial Fodder: crwdns50705:0crwdne50705:0
+          "Variables: Create, Assign, and Read": crwdns50706:0crwdne50706:0
+          "Variables: Increment, Decrement, Display, and Scope": crwdns50707:0crwdne50707:0
         algebraPD3:
           title: crwdns38396:0crwdne38396:0
           description: crwdns37980:0crwdne37980:0
@@ -825,6 +839,8 @@ en:
           The Need for Encryption: crwdns45320:0crwdne45320:0
           Keys and Passwords: crwdns45321:0crwdne45321:0
           Public Key Encryption: crwdns45322:0crwdne45322:0
+          Practice PT - The Internet and Society: crwdns50320:0crwdne50320:0
+          Practice PT - Cybersecurity Innovations: crwdns50321:0crwdne50321:0
         algebraPD2a:
           title: crwdns38690:0crwdne38690:0
           description: crwdns38691:0crwdne38691:0
@@ -968,6 +984,7 @@ en:
           Equity Vs. Equality: crwdns41870:0crwdne41870:0
           Code.org Equity PD: crwdns41871:0crwdne41871:0
           Necessary Background: crwdns42119:0crwdne42119:0
+          Equity PD: crwdns49758:0crwdne49758:0
         hoc2015:
           title: crwdns41872:0crwdne41872:0
           description_short: crwdns41873:0crwdne41873:0
@@ -1162,6 +1179,13 @@ en:
           "Day 17 Minimal Spanning Trees: Muddy City": crwdns48439:0crwdne48439:0
           Day 18-21 Final Project: crwdns48440:0crwdne48440:0
           Unit 2 Challenge Planning & Creation: crwdns48441:0crwdne48441:0
+          Unit 2 Challenge Planning: crwdns49759:0crwdne49759:0
+          Unit 2 Challenge Creation: crwdns49760:0crwdne49760:0
+          Getting Started: crwdns49761:0crwdne49761:0
+          Intro to Unit 2: crwdns49762:0crwdne49762:0
+          Unit 2 Challenge Preview: crwdns49763:0crwdne49763:0
+          Unit 2 Challenge: crwdns49764:0crwdne49764:0
+          Close & Next Steps: crwdns49765:0crwdne49765:0
         ECSPD3-Unit3:
           title: crwdns48442:0crwdne48442:0
           description_short: crwdns48443:0crwdne48443:0
@@ -1207,6 +1231,8 @@ en:
           "Day 20-23 Scratch: Timing Game": crwdns48482:0crwdne48482:0
           "Day 24 Scratch: Games": crwdns48483:0crwdne48483:0
           Day 25-30 Final Project: crwdns48484:0crwdne48484:0
+          Unit 4 Challenge Planning: crwdns49766:0crwdne49766:0
+          Unit 4 Challenge Creation: crwdns49767:0crwdne49767:0
         ECSPD3-Unit5:
           title: crwdns48485:0crwdne48485:0
           description_short: crwdns48486:0crwdne48486:0
@@ -1254,3 +1280,48 @@ en:
           "Data App Part 8: Visualize Data": crwdns48526:0crwdne48526:0
           "Data App Part 9: Reflect": crwdns48527:0crwdne48527:0
           "Debate: Privacy vs Utility": crwdns48528:0crwdne48528:0
+        ScienceP3OLPT2:
+          title: crwdns49768:0crwdne49768:0
+          description_short: crwdns49769:0crwdne49769:0
+          description: crwdns49770:0crwdne49770:0
+          Welcome!: crwdns49771:0crwdne49771:0
+          Earth Science Challenges: crwdns49772:0crwdne49772:0
+          Life Science Challenges: crwdns49773:0crwdne49773:0
+          Thinking Ahead to Implementation: crwdns49774:0crwdne49774:0
+          Wrap-Up: crwdns49775:0crwdne49775:0
+          Thinking About Implementation: crwdns49776:0crwdne49776:0
+          Physical Science Challenges: crwdns49777:0crwdne49777:0
+        algebraPD3b:
+          title: crwdns49778:0crwdne49778:0
+          description_short: crwdns49779:0crwdne49779:0
+          description: crwdns49780:0crwdne49780:0
+          Teaching Support - Lessons 1-3: crwdns49781:0crwdne49781:0
+          Teaching Support - Lessons 4-7: crwdns49782:0crwdne49782:0
+          Teaching Support - Lessons 8-12: crwdns49783:0crwdne49783:0
+          Teaching Support - Lessons 13-16: crwdns49784:0crwdne49784:0
+          Teaching Support - Lessons 17-20: crwdns49785:0crwdne49785:0
+          Getting Started: crwdns49786:0crwdne49786:0
+          Close and Next Steps: crwdns49787:0crwdne49787:0
+        CSPPD3-Unit2:
+          title: crwdns49788:0crwdne49788:0
+          description_short: crwdns49789:0crwdne49789:0
+          description: crwdns49790:0crwdne49790:0
+          Welcome!: crwdns49791:0crwdne49791:0
+          Getting Started: crwdns49792:0crwdne49792:0
+          Unit 2 Overview: crwdns49793:0crwdne49793:0
+          Challenge Overview: crwdns49794:0crwdne49794:0
+          Complete the Challenge: crwdns49795:0crwdne49795:0
+          Share out and Submit: crwdns49796:0crwdne49796:0
+        duino:
+          Experimenting with Arduino stuff: crwdns50708:0crwdne50708:0
+          Basic Circuits: crwdns50709:0crwdne50709:0
+        Special Fun:
+          title: crwdns50710:0crwdne50710:0
+          description_short: crwdns50711:0crwdne50711:0
+          description_audience: crwdns50712:0crwdne50712:0
+          Halloween 2015: crwdns50713:0crwdne50713:0
+        SpecialSeries:
+          title: crwdns50714:0crwdne50714:0
+          description_short: crwdns50715:0crwdne50715:0
+          description_audience: crwdns50716:0crwdne50716:0
+          Halloween 2015: crwdns50717:0crwdne50717:0

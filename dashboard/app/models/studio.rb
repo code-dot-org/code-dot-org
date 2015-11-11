@@ -52,6 +52,7 @@ class Studio < Grid
     marker_width
     delay_completion
     floating_score
+    goal_override
   )
 
   def self.create_from_level_builder(params, level_params)

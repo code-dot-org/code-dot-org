@@ -7,8 +7,8 @@ layout: wide
 
 <%= view :signup_button %>
 
-# Implică întreaga şcoală să participe
+# Indeamna întreaga şcoală să participe
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Vor fi postate aici informaţii despre cum să implicati întreaga şcoală la evenimentul Hour of Code.
 
 <%= view :signup_button %>

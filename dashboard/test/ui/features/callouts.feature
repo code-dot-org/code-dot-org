@@ -9,7 +9,7 @@ Feature: Callouts
     And I press "x-close"
     And callout "<callout_id>" is visible
     And callout "<callout_id>" has text: <text>
-    And I click selector "<close_target>"
+    And I send click events to selector "<close_target>"
     And callout "<callout_id>" is hidden
   Examples:
     | url                                                | callout_id | text                                                                     | close_target      |

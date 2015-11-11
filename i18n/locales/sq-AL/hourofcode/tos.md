@@ -4,7 +4,7 @@ titulli: Kushtet e Përdorimit
 
 * * *
 
-### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
+### Gjuha ligjore është në anglisht, dhe mund ta gjeni [këtu](https://code.org/tos). Më poshtë keni një përkthim.
 
 # Kushtet e Shërbimit
 

@@ -32,7 +32,7 @@ def cronjob(params)
   action = params[:do].to_s
 
   notify = params[:notify].to_s
-  action = "#{bin_dir('cronjob')} #{action.shellescape} #{notify}".strip
+  action = "BUNDLE_GEMFILE=#{deploy_dir('Gemfile')} bundle exec #{bin_dir('cronjob')} #{action.shellescape} #{notify}".strip
 
   $crontab << "#{time} #{action}"
 end
@@ -43,7 +43,7 @@ end
 
 if node['cdo-apps']['daemon']
   unless node.chef_environment == 'production'
-    cronjob at:'@reboot', do:"#{deploy_dir('bin','solr-server')} 2>&1 > #{pegasus_dir('log','solr.log')}"
+    cronjob at:'@reboot', do:"#{deploy_dir('bin','solr-server')} > #{pegasus_dir('log','solr.log')} 2>&1"
   end
 
   if node.chef_environment == 'staging' && node.name == 'staging'
@@ -65,12 +65,15 @@ if node['cdo-apps']['daemon']
   end
 
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'process_forms')
-  cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'analyze_hoc_activity')
+  cronjob at:'0 * * * *', do:deploy_dir('bin', 'analyze_hoc_activity')
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'deliver_poste_messages')
-  cronjob at:'*/1 * * * *', do:"#{deploy_dir('bin', 'geocode_hoc_activity')} 2>&1 > /dev/null"
+  cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'geocode_hoc_activity')
   cronjob at:'@daily', do:deploy_dir('bin', 'cron', 'ops_data_pull')
 end
 
+# Restart at ~02:00am PST (~ 9am UTC) as workaround for Rails 4.2 memory leak.
+# We will no longer need this as soon as we complete the Ruby 2.2 upgrade.
+cronjob at:"#{rand(20)} 9 * * *", do:'service dashboard upgrade'
 cronjob at:'45 * * * *', do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
 %>
 #
@@ -79,7 +82,7 @@ cronjob at:'45 * * * *', do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard 
 # daemon: <%= !!node['cdo-apps']['daemon'] %>
 #
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-EMAIL=will+crontab@code.org
+MAILTO=dev+crontab@code.org
 HOME=<%= home_dir %>
 LC_ALL=en_US.UTF-8
 LANG=en_US.UTF-8

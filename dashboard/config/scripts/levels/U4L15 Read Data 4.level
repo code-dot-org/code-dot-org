@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,9 +126,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "\r\nUse a random record from the list of records to display your sentence.",
     "markdown_instructions": "Now instead of the first record, we want a random record from the list of records.  Can you figure out how to make this happen?\r\n\r\n**HINT**\r\n1. Find out the length of the records\r\n1. Make a variable that holds a random number\r\n1. Use it to get a random record",

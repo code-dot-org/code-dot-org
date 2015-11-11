@@ -1,4 +1,3 @@
-var React = require('react');
 var applabMsg = require('./locale');
 
 var CROSSHAIR_RADIUS = 5;
