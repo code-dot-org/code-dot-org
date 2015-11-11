@@ -1,6 +1,5 @@
 @no_mobile
 @no_ie
-# TODO (Elijah): Fix this UI test on Safari Mavericks (Pivotal #107953882)
 @no_safari
 Feature: Fun-O-Meter
 
