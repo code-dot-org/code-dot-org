@@ -15,7 +15,8 @@ var APPS = [
   'calc',
   'applab',
   'eval',
-  'netsim'
+  'netsim',
+  'craft'
 ];
 
 if (process.env.MOOC_APP) {
@@ -195,6 +196,16 @@ config.copy = {
       },
       {
         expand: true,
+        cwd: 'lib/phaser',
+        src: ['phaser' + dotMinIfNotDev + '.js'],
+        dest: 'build/package/js/phaser/',
+        rename: function (src, dest) {
+          // dest name should be the same, whether or not minified
+          return src + dest.replace(/\.min.js$/, '.js');
+        }
+      },
+      {
+        expand: true,
         cwd: 'lib/tooltipster',
         src: ['tooltipster.min.css'],
         dest: 'build/package/css/tooltipster/'
@@ -293,7 +304,7 @@ APPS.forEach(function (app) {
 // Use command-line tools to run browserify (faster/more stable this way)
 var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserifyinc ' +
   '--cachefile ' + outputDir + 'browserifyinc-cache.json ' +
-  '-t reactify --extension=.jsx ' + allFilesSrc.join(' ') +
+  ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ] -d ' + allFilesSrc.join(' ') +
   (APPS.length > 1 ? ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
   ' -o ' + allFilesDest[0]);
 

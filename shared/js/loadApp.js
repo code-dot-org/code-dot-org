@@ -59,6 +59,10 @@ module.exports = function (callback) {
     promise = promise.then(dashboard.project.load);
   }
 
+  if (appOptions.app === 'craft') {
+    promise = promise.then(loadSource('phaser/phaser'));
+  }
+
   promise.then(loadSource('common' + appOptions.pretty))
       .then(loadSource(appOptions.locale + '/common_locale'))
       .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))

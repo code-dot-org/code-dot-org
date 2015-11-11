@@ -78,22 +78,24 @@ window.apps = {
       },
       showInstructionsWrapper: function(showInstructions) {
         // Always skip all pre-level popups on share levels or when configured thus
-        if (this.share || appOptions.level.skipInstructionsPopup) {
+        if (this.share) {
           return;
         }
 
         var hasVideo = !!appOptions.autoplayVideo;
         var hasInstructions = !!(appOptions.level.instructions ||
         appOptions.level.aniGifURL);
+        var shouldShowInstructions = hasInstructions &&
+            !appOptions.level.skipInstructionsPopup;
 
         if (hasVideo) {
           showVideoDialog(appOptions.autoplayVideo);
-          if (hasInstructions) {
+          if (shouldShowInstructions) {
             $('.video-modal').on('hidden.bs.modal', function() {
               showInstructions();
             });
           }
-        } else if (hasInstructions) {
+        } else if (shouldShowInstructions) {
           showInstructions();
         }
       }
