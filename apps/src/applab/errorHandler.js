@@ -6,11 +6,11 @@ var ErrorLevel = {
 };
 
 function outputApplabConsole(output) {
-  function argToString(arg) {
-    if (typeof arg === 'string' || firstArg instanceof String) {
-      return arg;
+  function stringifyNonStrings(object) {
+    if (typeof object === 'string' || object instanceof String) {
+      return object;
     } else {
-      return JSON.stringify(arg);
+      return JSON.stringify(object);
     }
   }
 
@@ -23,9 +23,9 @@ function outputApplabConsole(output) {
   if (debugOutput) {
     if (debugOutput.textContent.length > 0) {
       debugOutput.textContent += '\n';
-    } else {
-      debugOutput.textContent = argToString(output);
     }
+    debugOutput.textContent += stringifyNonStrings(output);
+
     debugOutput.scrollTop = debugOutput.scrollHeight;
   }
 }
