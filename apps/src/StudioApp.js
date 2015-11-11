@@ -1047,6 +1047,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var visualizationColumn = document.getElementById('visualizationColumn');
   var visualizationEditor = document.getElementById('visualizationEditor');
 
+  var oldVizWidth = $(visualizationColumn).width();
   var newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
                          Math.min(MAX_VISUALIZATION_WIDTH, width));
   var newVizWidthString = newVizWidth + 'px';
@@ -1077,6 +1078,12 @@ StudioApp.prototype.resizeVisualization = function (width) {
   applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
   if (visualizationEditor) {
     visualizationEditor.style.marginLeft = newVizWidthString;
+  }
+
+  if (oldVizWidth < 230 && newVizWidth >= 230) {
+    $('#soft-buttons').removeClass('soft-buttons-compact');
+  } else if (oldVizWidth > 230 && newVizWidth <= 230) {
+    $('#soft-buttons').addClass('soft-buttons-compact');
   }
 
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
