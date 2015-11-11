@@ -1,4 +1,4 @@
-import FacingDirection from "./FacingDirection.js"
+import FacingDirection from "./FacingDirection.js";
 
 export default class LevelView {
   constructor(controller) {
@@ -368,10 +368,6 @@ export default class LevelView {
     });
   }
 
-  playCreeperAnimation(position, facing, destroyPosition, isOnBlock, completionHandler){
-      playExplosionAnimation(position, facing, destroyPosition, isOnBlock, completionHandler, false);
-  }
-
   playExplodingCreeperAnimation(position, facing, destroyPosition, isOnBlock, completionHandler) {
     let direction = this.getDirectionName(facing);
 
@@ -405,7 +401,7 @@ export default class LevelView {
 
   playMinecartTurnAnimation(position, facing, isOnBlock, completionHandler, turnDirection) {
     var animation = this.playPlayerAnimation("mineCart_turn" + turnDirection, position, FacingDirection.Down, false);
-    return animation
+    return animation;
   }
 
   playMinecartMoveForwardAnimation(position, facing, isOnBlock, completionHandler, nextPosition, speed) {
@@ -422,7 +418,7 @@ export default class LevelView {
     tween.start();
     this.playerSprite.sortOrder = this.yToIndex(nextPosition[1]) + 5;
 
-    return tween
+    return tween;
   }
 
 
@@ -460,8 +456,8 @@ export default class LevelView {
       var direction,
           arraydirection = this.track[this.i][0],
           nextPosition = this.track[this.i][1],
-          facing = this.track[this.i][2],
           speed = this.track[this.i][3];
+      facing = this.track[this.i][2];
 
       //turn
       if(arraydirection.substring(0,4) === "turn") {
@@ -588,12 +584,12 @@ export default class LevelView {
 
   playBlockSound(groundType) {
     var oreString = groundType.substring(0, 3);
-    if(groundType === "stone" || groundType === "cobblestone" || groundType === "bedrock"
-      || oreString === "ore" || groundType === "bricks") {
+    if(groundType === "stone" || groundType === "cobblestone" || groundType === "bedrock" ||
+        oreString === "ore" || groundType === "bricks") {
       this.audioPlayer.play("stepStone");
     }
-    else if(groundType === "grass" || groundType === "dirt" || groundType === "dirtCoarse"
-      || groundType == "wool_orange" || groundType == "wool") {
+    else if(groundType === "grass" || groundType === "dirt" || groundType === "dirtCoarse" ||
+        groundType == "wool_orange" || groundType == "wool") {
       this.audioPlayer.play("stepGrass");
     }
     else if(groundType === "gravel") {
@@ -646,7 +642,7 @@ export default class LevelView {
         y: [-32 + 40 * oldPosition[1], -32 + 40 * (oldPosition[1] + newPosVec[1]) - 50, -32 + 40 * position[1]]
       }, 300, Phaser.Easing.Linear.None).interpolation((v,k) => {
         return Phaser.Math.bezierInterpolation(v,k);
-      })
+      });
 
       tween.onComplete.add(() => {
         this.audioPlayer.play("fall");
@@ -705,7 +701,7 @@ export default class LevelView {
 
       jumpAnimName = "jumpUp" + direction;
 
-      if(blockTypeAtPosition != "") {
+      if(blockTypeAtPosition !== "") {
         this.playExplosionAnimation(position, facing, position, blockTypeAtPosition, (()=>{}), false);
       }
 
@@ -1191,19 +1187,19 @@ export default class LevelView {
     switch(rand)
     {
       case 1:
-      animationName = "idle"
+      animationName = "idle";
       break;
       case 2:
-      animationName = "lookLeft"
+      animationName = "lookLeft";
       break;
       case 3:
-      animationName = "lookRight"
+      animationName = "lookRight";
       break;
       case 4:
-      animationName = "lookAtCam"
+      animationName = "lookAtCam";
       break;
       default:
-    };
+    }
 
     animationName += facingName;
     this.playScaledSpeed(this.playerSprite.animations, animationName);
@@ -1363,7 +1359,7 @@ export default class LevelView {
     singlePunch = Phaser.Animation.generateFrameNames("Player_", 21, 24, "", 3);
     this.playerSprite.animations.add('punch_down', singlePunch, frameRate, false).onComplete.add(() => {
       this.audioPlayer.play("punch");
-    });;
+    });
     this.playerSprite.animations.add('punchDestroy_down', singlePunch.concat(singlePunch).concat(singlePunch), frameRate, false);
     this.playerSprite.animations.add('hurt_down', Phaser.Animation.generateFrameNames("Player_", 25, 28, "", 3), frameRate, true);
     this.playerSprite.animations.add('crouch_down', Phaser.Animation.generateFrameNames("Player_", 29, 32, "", 3), frameRate, true);
@@ -1372,7 +1368,7 @@ export default class LevelView {
     this.playerSprite.animations.add('celebrate_down', this.generatePlayerCelebrateFrames(), frameRate / 2, false);
     this.playerSprite.animations.add('bump_down', Phaser.Animation.generateFrameNames("Player_", 49, 54, "", 3), frameRate, false).onStart.add(() => {
       this.audioPlayer.play("bump");
-    });;
+    });
     this.playerSprite.animations.add('jumpDown_down', Phaser.Animation.generateFrameNames("Player_", 55, 60, "", 3), frameRate, true);
     this.playerSprite.animations.add('mine_down', Phaser.Animation.generateFrameNames("Player_", 241, 244, "", 3), frameRate, true);
     this.playerSprite.animations.add('mineCart_down', Phaser.Animation.generateFrameNames("Minecart_", 5, 5, "", 2), frameRate, false);
@@ -1421,7 +1417,7 @@ export default class LevelView {
     singlePunch = Phaser.Animation.generateFrameNames("Player_", 81, 84, "", 3);
     this.playerSprite.animations.add('punch_right', singlePunch, frameRate, false).onComplete.add(() => {
       this.audioPlayer.play("punch");
-    });;
+    });
     this.playerSprite.animations.add('punchDestroy_right', singlePunch.concat(singlePunch).concat(singlePunch), frameRate, false);
     this.playerSprite.animations.add('hurt_right', Phaser.Animation.generateFrameNames("Player_", 85, 88, "", 3), frameRate, true);
     this.playerSprite.animations.add('crouch_right', Phaser.Animation.generateFrameNames("Player_", 89, 92, "", 3), frameRate, true);
@@ -1430,7 +1426,7 @@ export default class LevelView {
     this.playerSprite.animations.add('celebrate_right', this.generatePlayerCelebrateFrames(), frameRate / 2, false);
     this.playerSprite.animations.add('bump_right', Phaser.Animation.generateFrameNames("Player_", 109, 114, "", 3), frameRate, false).onStart.add(() => {
       this.audioPlayer.play("bump");
-    });;
+    });
     this.playerSprite.animations.add('jumpDown_right', Phaser.Animation.generateFrameNames("Player_", 115, 120, "", 3), frameRate, true);
     this.playerSprite.animations.add('mine_right', Phaser.Animation.generateFrameNames("Player_", 245, 248, "", 3), frameRate, true);
     this.playerSprite.animations.add('mineCart_right', Phaser.Animation.generateFrameNames("Minecart_", 7, 7, "", 2), frameRate, false);
@@ -1477,7 +1473,7 @@ export default class LevelView {
     singlePunch = Phaser.Animation.generateFrameNames("Player_", 201, 204, "", 3);
     this.playerSprite.animations.add('punch_left', singlePunch, frameRate, false).onComplete.add(() => {
       this.audioPlayer.play("punch");
-    });;
+    });
     this.playerSprite.animations.add('punchDestroy_left', singlePunch.concat(singlePunch).concat(singlePunch), frameRate, false);
     this.playerSprite.animations.add('hurt_left', Phaser.Animation.generateFrameNames("Player_", 205, 208, "", 3), frameRate, true);
     this.playerSprite.animations.add('crouch_left', Phaser.Animation.generateFrameNames("Player_", 209, 212, "", 3), frameRate, true);
@@ -1486,7 +1482,7 @@ export default class LevelView {
     this.playerSprite.animations.add('celebrate_left', this.generatePlayerCelebrateFrames(), frameRate / 2, false);
     this.playerSprite.animations.add('bump_left', Phaser.Animation.generateFrameNames("Player_", 229, 234, "", 3), frameRate, false).onStart.add(() => {
       this.audioPlayer.play("bump");
-    });;
+    });
     this.playerSprite.animations.add('jumpDown_left', Phaser.Animation.generateFrameNames("Player_", 235, 240, "", 3), frameRate, true);
     this.playerSprite.animations.add('mine_left', Phaser.Animation.generateFrameNames("Player_", 253, 256, "", 3), frameRate, true);
     this.playerSprite.animations.add('mineCart_left', Phaser.Animation.generateFrameNames("Minecart_", 11, 11, "", 2), frameRate, false);
@@ -1532,7 +1528,7 @@ export default class LevelView {
     singlePunch = Phaser.Animation.generateFrameNames("Player_", 141, 144, "", 3);
     this.playerSprite.animations.add('punch_up', singlePunch, frameRate, false).onComplete.add(() => {
       this.audioPlayer.play("punch");
-    });;
+    });
     this.playerSprite.animations.add('punchDestroy_up', singlePunch.concat(singlePunch).concat(singlePunch), frameRate, false);
     this.playerSprite.animations.add('hurt_up', Phaser.Animation.generateFrameNames("Player_", 145, 148, "", 3), frameRate, true);
     this.playerSprite.animations.add('crouch_up', Phaser.Animation.generateFrameNames("Player_", 149, 152, "", 3), frameRate, true);
@@ -1652,6 +1648,7 @@ export default class LevelView {
       case 17:
       //cam
       sprite.play("lookAtCam");
+      break;
       case 18:
       case 19:
       //kick
@@ -1659,10 +1656,10 @@ export default class LevelView {
       break;
       case 20:
       //idlePause
-      sprite.play("idlePause")
+      sprite.play("idlePause");
       break;
       default:
-    };
+    }
   }
 
   playRandomCreeperAnimation(sprite) {
@@ -1692,7 +1689,7 @@ export default class LevelView {
       sprite.play("idle");
       break;
       default:
-    };
+    }
   }
 
   createBlock(plane, x, y, blockType) {
@@ -1741,7 +1738,7 @@ export default class LevelView {
         for (i = 0; i < sFrames; ++i) {
           frameList.push("Sheep_186");
         }
-        frameList.push("Sheep_188")
+        frameList.push("Sheep_188");
         sprite.animations.add("lookRight", frameList, 15, false).onComplete.add(() => {
           sprite.play("idlePause");
         });
@@ -1767,7 +1764,7 @@ export default class LevelView {
         for (i = 0; i < sFrames; ++i) {
           frameList.push("Sheep_485");
         }
-        frameList.push("Sheep_486")
+        frameList.push("Sheep_486");
         sprite.animations.add("lookAtCam", frameList, 15, false).onComplete.add(() => {
           sprite.play("idlePause");
         });
@@ -1867,7 +1864,7 @@ export default class LevelView {
         yOffset = this.blocks[blockType][3];
         sprite = plane.create(xOffset + 40 * x, yOffset + plane.yOffset + 40 * y, atlas, frame);
         frameList = Phaser.Animation.generateFrameNames("Wheat", 0, 2, "", 0);
-        sprite.animations.add("idle", frameList, .4, false);
+        sprite.animations.add("idle", frameList, 0.4, false);
         this.playScaledSpeed(sprite.animations, "idle");
         break;
 
@@ -1984,7 +1981,7 @@ export default class LevelView {
 
         frameList = [];
         let animationFrames = Phaser.Animation.generateFrameNames("Door", 0, 3, "", 1);
-        for(var i = 0; i < 5; ++i)
+        for(var j = 0; j < 5; ++j)
         {
           frameList.push("Door0");
         }
@@ -1997,7 +1994,7 @@ export default class LevelView {
           if(animation.frame === 1) {
             this.audioPlayer.play("doorOpen");
           }
-        })
+        });
         this.playScaledSpeed(sprite.animations, "open");
         break;
 

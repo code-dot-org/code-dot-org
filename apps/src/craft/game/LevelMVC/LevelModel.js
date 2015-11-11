@@ -1,5 +1,5 @@
-import LevelBlock from "./LevelBlock.js"
-import FacingDirection from "./FacingDirection.js"
+import LevelBlock from "./LevelBlock.js";
+import FacingDirection from "./FacingDirection.js";
 
 // for blocks on the action plane, we need an actual "block" object, so we can model
 
@@ -123,12 +123,12 @@ export default class LevelModel {
 
   getInventoryAmount(inventoryType) {
     return this.player.inventory[inventoryType] || 0;
-  };
+  }
 
 
   getInventoryTypes() {
     return Object.keys(this.player.inventory);
-  };
+  }
 
   countOfTypeOnMap(blockType) {
     var count = 0,
@@ -152,7 +152,7 @@ export default class LevelModel {
       var solutionItemType = solutionMap[i];
 
       // "" on the solution map means we dont care what's at that spot
-      if (solutionItemType != "") {
+      if (solutionItemType !== "") {
         if (solutionItemType === "empty") {
           if (!this.actionPlane[i].isEmpty) {
             return false;
@@ -234,7 +234,7 @@ export default class LevelModel {
 
     return actionIsEmpty ?
         this.isBlockOfTypeOnPlane(blockForwardPosition, blockType, this.groundPlane) :
-        this.isBlockOfTypeOnPlane(blockForwardPosition, blockType, this.actionPlane)
+        this.isBlockOfTypeOnPlane(blockForwardPosition, blockType, this.actionPlane);
   }
 
   isBlockOfType(position, blockType)  {
@@ -274,7 +274,7 @@ export default class LevelModel {
   }
 
   checkPositionForTypeAndPush(blockType, position, objectArray){
-    if ((!blockType && (this.actionPlane[this.coordinatesToIndex(position)].blockType != ""))|| this.isBlockOfType(position, blockType)) {
+    if ((!blockType && (this.actionPlane[this.coordinatesToIndex(position)].blockType !== ""))|| this.isBlockOfType(position, blockType)) {
       objectArray.push([true, position]);
       return true;
     }
@@ -323,7 +323,7 @@ export default class LevelModel {
       }
     }
 
-    if(checkActionBlock.blockType != "") {
+    if(checkActionBlock.blockType !== "") {
       return {};
     }
     else if(array.length > 0 && checkIndex === -1) {
@@ -463,7 +463,7 @@ export default class LevelModel {
       return false;
     }
 
-    return this.getPlaneToPlaceOn(this.getMoveForwardPosition()) != null;
+    return this.getPlaneToPlaceOn(this.getMoveForwardPosition()) !== null;
   }
 
   getPlaneToPlaceOn(coordinates) {
@@ -756,8 +756,8 @@ export default class LevelModel {
     }
 
     //fully lit
-    if( (botRightQuad && topLeftQuad) || (botLeftQuad && topRightQuad) || leftQuad && rightQuad || topQuad && botQuad || (rightQuad && botQuad && topLeftQuad)
-          || (botQuad && topRightQuad && topLeftQuad) || (topQuad && botRightQuad && botLeftQuad) || (leftQuad && topRightQuad && botRightQuad) || (leftQuad && botQuad && topRightQuad)) {
+    if( (botRightQuad && topLeftQuad) || (botLeftQuad && topRightQuad) || leftQuad && rightQuad || topQuad && botQuad || (rightQuad && botQuad && topLeftQuad) ||
+        (botQuad && topRightQuad && topLeftQuad) || (topQuad && botRightQuad && botLeftQuad) || (leftQuad && topRightQuad && botRightQuad) || (leftQuad && botQuad && topRightQuad)) {
       this.fowPlane[index] = "";
     }
 
@@ -816,13 +816,15 @@ export default class LevelModel {
         for (var xIndex = currentTorch[0] - 2; xIndex <= (currentTorch[0] + 2); ++xIndex) {
 
           //Ensure we're looking inside the map
-          if(!this.inBounds(xIndex, yIndex))
+          if(!this.inBounds(xIndex, yIndex)) {
             continue;
+          }
 
           //Ignore the indexes directly around us.
           //Theyre taken care of on the FOW first pass 
-          if( (yIndex >= y - 1 && yIndex <= y + 1) && (xIndex >= x - 1 && xIndex <= x + 1) )
+          if( (yIndex >= y - 1 && yIndex <= y + 1) && (xIndex >= x - 1 && xIndex <= x + 1) ) {
             continue;
+          }
 
           //we want unique copies so we use a map.
           blocksTouchedByEmissives[yIndex.toString() + xIndex.toString()] = [xIndex,yIndex];
@@ -842,12 +844,14 @@ export default class LevelModel {
       for (var xIndex = x - 2; xIndex <= (x + 2); ++xIndex) {
 
         //Ensure we're looking inside the map
-        if(!this.inBounds(xIndex, yIndex))
+        if(!this.inBounds(xIndex, yIndex)) {
           continue;
+        }
 
         //Ignore the indexes directly around us. 
-        if( (yIndex >= y - 1 && yIndex <= y + 1) && (xIndex >= x - 1 && xIndex <= x + 1) )
+        if( (yIndex >= y - 1 && yIndex <= y + 1) && (xIndex >= x - 1 && xIndex <= x + 1) ) {
           continue;
+        }
 
         for(var torch in emissives) {
           if(emissives[torch][0] === xIndex && emissives[torch][1] === yIndex) {
@@ -867,7 +871,8 @@ export default class LevelModel {
     if (this.isDaytime) {
       for (y = 0; y < this.planeHeight; ++y) {
         for (x = 0; x < this.planeWidth; ++x) {
-          this.fowPlane.push[""]; // noop TODO(bjordan) remove?
+          // this.fowPlane.push[""]; // noop as originally written
+          // TODO(bjordan) completely remove?
         }
       }
     } else {
@@ -930,19 +935,19 @@ export default class LevelModel {
       hasRight = false;
       
       if (this.actionPlane[index].isEmpty || this.actionPlane[index].isTransparent) {
-        if (y == 0) {
+        if (y === 0) {
           this.shadingPlane.push({ x: x, y: y, type: 'AOeffect_Bottom' });
         }
 
-        if (y == this.planeHeight - 1) {
+        if (y === this.planeHeight - 1) {
           this.shadingPlane.push({ x: x, y: y, type: 'AOeffect_Top' });
         }
 
-        if (x == 0) {
+        if (x === 0) {
           this.shadingPlane.push({ x: x, y: y, type: 'AOeffect_Right' });
         }
 
-        if (x == this.planeWidth - 1) {
+        if (x === this.planeWidth - 1) {
           this.shadingPlane.push({ x: x, y: y, type: 'AOeffect_Left' });
         }
 

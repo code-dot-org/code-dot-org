@@ -3,4 +3,4 @@ export default Object.freeze({
     Right: 1,
     Down: 2,
     Left: 3
-})
+});

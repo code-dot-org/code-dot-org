@@ -1,5 +1,8 @@
-'use strict';
+/*jshint -W061 */
+// We use eval in our code, this allows it.
+// @see https://jslinterrors.com/eval-is-evil
 
+'use strict';
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var craftMsg = require('./locale');
@@ -104,13 +107,9 @@ Craft.init = function (config) {
     config.level.puzzle_number = 999;
   }
 
-  // TODO(bjordan): for temp. erorr monitoring, remove
   if (config.level.isTestLevel) {
-    config.level.customSlowMotion = .1;
-  } else {
-    Raven.config('https://609101d68e504d2da9d615af273cea0c@app.getsentry.com/56182').install();
+    config.level.customSlowMotion = 0.1;
   }
-
 
   // Return the version of Internet Explorer (8+) or undefined if not IE.
   var getIEVersion = function() {
@@ -146,10 +145,10 @@ Craft.init = function (config) {
   config.skin.winAvatar = character.winAvatar;
 
   var levelConfig = config.level;
-  var specialLevelType = levelConfig['specialLevelType'];
+  var specialLevelType = levelConfig.specialLevelType;
   switch (specialLevelType) {
     case 'houseWallBuild':
-      levelConfig['blocksToStore'] = [
+      levelConfig.blocksToStore = [
         "", "", "", "", "", "", "", "", "", "",
         "", "", "", "", "", "", "", "", "", "",
         "", "", "", "", "", "", "", "", "", "",
@@ -356,21 +355,21 @@ Craft.initializeAppLevel = function (levelConfig) {
   };
 
   Craft.gameController.loadLevel({
-    isDaytime: levelConfig['isDaytime'],
-    groundPlane: levelConfig['groundPlane'],
-    groundDecorationPlane: levelConfig['groundDecorationPlane'],
-    actionPlane: levelConfig['actionPlane'],
+    isDaytime: levelConfig.isDaytime,
+    groundPlane: levelConfig.groundPlane,
+    groundDecorationPlane: levelConfig.groundDecorationPlane,
+    actionPlane: levelConfig.actionPlane,
     fluffPlane: fluffPlane,
-    playerStartPosition: levelConfig['playerStartPosition'],
-    playerStartDirection: levelConfig['playerStartDirection'],
+    playerStartPosition: levelConfig.playerStartPosition,
+    playerStartDirection: levelConfig.playerStartDirection,
     playerName: Craft.getCurrentCharacter(),
     assetPacks: levelAssetPacks,
-    specialLevelType: levelConfig['specialLevelType'],
-    houseBottomRight: levelConfig['houseBottomRight'],
-    gridDimensions: levelConfig['gridWidth'] && levelConfig['gridHeight'] ?
-        [levelConfig['gridWidth'], levelConfig['gridHeight']] :
+    specialLevelType: levelConfig.specialLevelType,
+    houseBottomRight: levelConfig.houseBottomRight,
+    gridDimensions: levelConfig.gridWidth && levelConfig.gridHeight ?
+        [levelConfig.gridWidth, levelConfig.gridHeight] :
         null,
-    verificationFunction: eval('[' + levelConfig['verificationFunction'] + ']')[0] // TODO(bjordan): add to utils
+    verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0] // TODO(bjordan): add to utils
   });
 };
 
@@ -388,7 +387,7 @@ Craft.minAssetsForLevelNumber = function (levelNumber) {
     case 3:
       return ['levelThreeAssets'];
     default:
-      return ['allAssetsMinusPlayer']
+      return ['allAssetsMinusPlayer'];
   }
 };
 
@@ -434,7 +433,7 @@ Craft.foldInArray = function (arrayA, arrayB) {
 };
 
 Craft.foldInCustomHouseBlocks = function (houseBlockMap, levelConfig) {
-  var planesToCustomize = [levelConfig['groundPlane'], levelConfig['actionPlane']];
+  var planesToCustomize = [levelConfig.groundPlane, levelConfig.actionPlane];
   planesToCustomize.forEach(function(plane) {
     for (var i = 0; i < plane.length; i++) {
       var item = plane[i];
@@ -570,7 +569,7 @@ Craft.executeUserCode = function () {
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
     this.reportResult(success);
 
-    var tileIDsToStore = Craft.initialConfig.level['blocksToStore'];
+    var tileIDsToStore = Craft.initialConfig.level.blocksToStore;
     if (success && tileIDsToStore) {
       var newHouseBlocks = JSON.parse(window.localStorage.getItem('craftHouseBlocks')) || {};
       for (var i = 0; i < levelModel.actionPlane.length; i++) {
