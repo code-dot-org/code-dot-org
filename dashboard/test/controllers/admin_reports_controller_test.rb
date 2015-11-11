@@ -11,7 +11,7 @@ class AdminReportsControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :level_completions
   generate_admin_only_tests_for :pd_progress
 
-  test 'should get admin progress' do
+  test 'should get admin progress page' do
     get :admin_progress
     assert_select 'h1', 'Admin progress'
   end
