@@ -1179,8 +1179,6 @@ Applab.reset = function(first) {
     if (pausedIcon) {
       pausedIcon.style.display = 'none';
     }
-    clearDebugOutput();
-    clearDebugInput();
   }
 
   // Reset the Globals object used to contain program variables:
@@ -1247,6 +1245,8 @@ Applab.runButtonClick = function() {
   }
   studioApp.reset(false);
   studioApp.attempts++;
+  clearDebugOutput();
+  clearDebugInput();
   Applab.execute();
 
   // Enable the Finish button if is present:
