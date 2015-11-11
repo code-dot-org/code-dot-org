@@ -1,0 +1,117 @@
+:scss
+  .feature-list {
+    width: 300px;
+    float: left;
+    margin-right: 40px;
+
+    #new-feature {
+      vertical-align: top;
+    }
+
+    ul {
+      margin: 0;
+      list-style: none;
+
+      li {
+        border-top: 1px solid #eee;
+
+        a {
+          display: block;
+          padding: 10px;
+
+          &.selected {
+            background-color: #FAF4FF;
+          }
+        }
+      }
+    }
+  }
+  .feature-details {
+    float: left;
+    width: 500px;
+    .clause {
+      border: 1px solid #eee;
+      margin: 10px 0;
+      padding: 10px;
+
+      .condition {
+        margin: 10px;
+      }
+    }
+
+    .add-rule {
+      margin-top: 40px;
+      form {
+        border: 1px solid #eee;
+        padding: 20px;
+      }
+    }
+  }
+
+.features
+  .feature-list
+    %h3 Features
+    = form_for :add, :url => {:controller => 'dynamic_config', :action => 'gatekeeper_set'} do |f|
+      %input#new-feature{:type => "text", :placeholder => "Feature name", :name => "feature"}
+      %input{:type => "hidden", :name => "value", :value => "false"}
+      %input{:type => "submit", :value => "Add", :class => "btn"}
+    %ul
+      - @gk_hsh.to_a.sort.each do |feature, clauses|
+        -unless clauses.empty?
+          %li
+            %a{:href => "?feature=#{URI.encode(feature)}", :class => ("selected" if feature == @feature)}= feature
+
+
+- if @feature_details
+  .feature-details
+    %h3= @feature
+    - @feature_details.each do |clause|
+      .clause
+        %p
+          %strong Rule
+        - if clause.key? 'where'
+          where:
+          - clause['where'].each do |k, v|
+            .condition
+              %input.where-key{:value => k, :readonly => true, :type => "text"}
+              %span :
+              %input.where-value{:value => v.to_s, :readonly => true, :type => "text"}
+        %p.value
+          %strong Enabled:
+          = clause['value']
+        .delete-form
+          = form_for :delete, :url => {:controller => 'dynamic_config', :action => 'gatekeeper_delete'} do |f|
+            %input{:type => "hidden", :name => "feature", :value => @feature }
+            %input{:type => "hidden", :name => "where", :value => clause['where'].to_json }
+            %input{:type => "submit", :value => "Delete", :class => "btn btn-danger", :onclick => "return confirm('Are you sure you want to delete this rule?');"}
+
+
+    .add-rule
+      %h4 Set/Update Rule
+      = form_for :add, :url => {:controller => 'dynamic_config', :action => 'gatekeeper_set'} do |f|
+        %input{:type => "hidden", :name => "feature", :value => @feature }
+        %p
+          %strong Where:
+          %div#where-clauses
+          %a{:onclick => "addWhereClause(); return false;", :href => "#"} + Add clause
+        %p
+          %strong Enabled:
+          %select{:name => "value"}
+            %option{:value => "true"} true
+            %option{:value => "false"} false
+
+
+        %input{:type => "submit", :value => "Set Rule", :class => "btn"}
+
+:javascript
+  var whereClauseCount = 0;
+  function addWhereClause() {
+    var where_key = $("<input/>", { name: 'where_key_' + whereClauseCount, placeholder: "Where key" });
+    var where_value = $("<input/>", { name: 'where_value_' + whereClauseCount, placeholder: "Where value" });
+    var container = $("<div/>");
+
+    container.append(where_key);
+    container.append(where_value);
+    $("#where-clauses").append(container);
+    whereClauseCount += 1;
+  }
