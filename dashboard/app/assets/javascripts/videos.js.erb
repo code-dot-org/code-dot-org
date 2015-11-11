@@ -66,6 +66,7 @@ function showVideoDialog(options, forceShowVideo) {
   $div.addClass('video-modal');
 
   $('.video-modal').on("remove", function () {
+    video.removeAttr('src');
     options.onClose();
     dashboard.clientState.recordVideoSeen(options.key);
   });
