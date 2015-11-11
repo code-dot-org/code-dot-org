@@ -15,6 +15,7 @@ class ClientState
   def reset
     cookies[:lines] = nil
     cookies[:progress] = nil
+    cookies[:puzzle_ratings] = nil
     session[:videos_seen] = nil
     session[:callouts_seen] = nil
   end
@@ -115,6 +116,19 @@ class ClientState
     session[:callouts_seen].add(callout_key)
   end
 
+  def puzzle_rating_array
+    migrate_cookies
+    puzzle_rating = cookies[:puzzle_rating]
+    puzzle_rating ? JSON.parse(puzzle_rating) : []
+  rescue JSON::ParserError
+    return []
+  end
+
+  def empty_puzzle_ratings
+    migrate_cookies
+    cookies.permanent[:puzzle_rating] = JSON.generate([])
+  end
+
   private
 
   def progress_hash
@@ -127,6 +141,10 @@ class ClientState
 
   # Migrates session state to unencrypted cookies.
   def migrate_cookies
+    if session[:puzzle_rating]
+      cookies.permanent[:puzzle_rating] = JSON.generate(session[:puzzle_rating])
+      session[:puzzle_rating] = nil
+    end
     if session[:progress]
       cookies.permanent[:progress] = JSON.generate(session[:progress])
       session[:progress] = nil

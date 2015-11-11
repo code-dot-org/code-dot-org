@@ -23,6 +23,7 @@ class HttpCache
       'hour_of_code',
       'language_',
       'progress',
+      'puzzle_rating',
       'lines',
       'scripts',
       'videos_seen',

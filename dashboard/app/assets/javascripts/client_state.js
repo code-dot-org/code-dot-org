@@ -37,8 +37,25 @@ var COOKIE_OPTIONS = {expires: dashboard.clientState.EXPIRY_DAYS, path: '/'};
 dashboard.clientState.reset = function() {
   $.removeCookie('progress', {path: '/'});
   $.removeCookie('lines', {path: '/'});
+  $.removeCookie('puzzle_rating', {path: '/'});
   localStorage.removeItem('video');
   localStorage.removeItem('callout');
+};
+
+dashboard.clientState.getPuzzleRatings = function () {
+  var puzzleRatingJson = $.cookie('puzzle_rating');
+  try {
+    return puzzleRatingJson ? JSON.parse(puzzleRatingJson) : [];
+  } catch(e) {
+    // Recover from malformed cookies.
+    return [];
+  }
+};
+
+dashboard.clientState.addPuzzleRating = function (data) {
+  var puzzleRatings = dashboard.clientState.getPuzzleRatings();
+  puzzleRatings.push(data);
+  $.cookie('puzzle_rating', JSON.stringify(puzzleRatings), COOKIE_OPTIONS);
 };
 
 /**
