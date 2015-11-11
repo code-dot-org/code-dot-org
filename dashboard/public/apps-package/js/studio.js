@@ -1666,6 +1666,14 @@ Studio.init = function(config) {
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
+  // Set focus on the run button so key events can be handled
+  // right from the start without requiring the user to adjust focus.
+  // (Required for IE11 at least, and takes focus away from text mode editor
+  // in droplet.)
+  $(window).on('run_button_pressed', function () {
+    document.getElementById('runButton').focus();
+  });
+
   Studio.projectiles = [];
   Studio.items = [];
   Studio.itemSpeed = {};
@@ -1681,6 +1689,11 @@ Studio.init = function(config) {
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
+
+  // Allow any studioMsg string to be re-mapped on a per-level basis:
+  for (var prop in level.msgStringOverrides) {
+    studioMsg[prop] = studioMsg[level.msgStringOverrides[prop]];
+  }
 
   // Initialize paramLists with skin and level data:
   paramLists.initWithSkinAndLevel(skin, level);
@@ -1778,12 +1791,25 @@ Studio.init = function(config) {
     Studio.musicController.preload();
   };
 
+  if (studioApp.cdoSounds && !studioApp.cdoSounds.isAudioUnlocked()) {
+    // Would use addClickTouchEvent, but iOS9 does not let you unlock audio
+    // on touchstart, only on touchend.
+    var removeEvent = dom.addMouseUpTouchEvent(document, function () {
+      studioApp.cdoSounds.unlockAudio();
+      removeEvent();
+    });
+  }
+
   // Play music when the instructions are shown
-  var onInstructionsShown = function () {
-    Studio.musicController.play();
-    document.removeEventListener('instructionsShown', onInstructionsShown);
+  var playOnce = function () {
+    if (studioApp.cdoSounds && studioApp.cdoSounds.isAudioUnlocked()) {
+      Studio.musicController.play();
+      document.removeEventListener('instructionsShown', playOnce);
+      document.removeEventListener('instructionsHidden', playOnce);
+    }
   };
-  document.addEventListener('instructionsShown', onInstructionsShown);
+  document.addEventListener('instructionsShown', playOnce);
+  document.addEventListener('instructionsHidden', playOnce);
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1832,14 +1858,15 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = studioApp.assetUrl('media/promo.png');
 
-  // Disable "show code" button in feedback dialog and workspace if blockly.
-  // Note - if turned back on, be sure it remains hidden when config.level.embed
-  config.enableShowCode = utils.valueOr(studioApp.editCode, false);
+  // Disable "show code" button in feedback dialog and workspace if blockly,
+  // unless the level specifically requests it
+  config.enableShowCode =
+    studioApp.editCode ? true : utils.valueOr(level.enableShowCode, false);
   config.varsInGlobals = true;
   config.dropletConfig = dropletConfig;
   config.dropIntoAceAtLineStart = true;
   config.unusedConfig = [];
-  for (var prop in skin.AutohandlerTouchItems) {
+  for (prop in skin.AutohandlerTouchItems) {
     AUTO_HANDLER_MAP[prop] =
         'whenSpriteCollided-' +
         (Studio.protagonistSpriteIndex || 0) + '-' + skin.AutohandlerTouchItems[prop];
@@ -5331,7 +5358,11 @@ var checkFinished = function () {
 
   if (progressConditionResult) {
     Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
-    Studio.message = utils.valueOr(progressConditionResult.message, null);
+    var progressMessage = progressConditionResult.message;
+    if (studioApp.isUsingBlockly()) {
+      progressMessage = progressConditionResult.blocklyMessage || progressMessage;
+    }
+    Studio.message = utils.valueOr(progressMessage, null);
     Studio.pauseInterpreter = utils.valueOr(progressConditionResult.pauseInterpreter, false);
     return true;
   }
@@ -5792,6 +5823,180 @@ var HIDDEN_VALUE = constants.HIDDEN_VALUE;
 var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
+
+function loadGumball(skin, assetUrl) {
+  skin.defaultBackground = 'dots';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'projectile_banana',
+    'projectile_dodgeball',
+    'projectile_donkey',
+    'projectile_handbag',
+    'projectile_hotdog',
+    'projectile_pompom',
+    'projectile_toaster',
+    'projectile_waterball',
+  ];
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_projectile_banana',
+    'item_projectile_dodgeball',
+    'item_projectile_donkey',
+    'item_projectile_handbag',
+    'item_projectile_hotdog',
+    'item_projectile_pompom',
+    'item_projectile_toaster',
+    'item_projectile_waterball',
+  ];
+
+  // Images
+  skin.projectile_banana = skin.assetUrl('projectile_banana.png');
+  skin.projectile_dodgeball = skin.assetUrl('projectile_dodgeball.png');
+  skin.projectile_donkey = skin.assetUrl('projectile_donkey.png');
+  skin.projectile_handbag = skin.assetUrl('projectile_handbag.png');
+  skin.projectile_hotdog = skin.assetUrl('projectile_hotdog.png');
+  skin.projectile_pompom = skin.assetUrl('projectile_pompom.png');
+  skin.projectile_toaster = skin.assetUrl('projectile_toaster.png');
+  skin.projectile_waterball = skin.assetUrl('projectile_waterball.png');
+
+  // TODO: proper item class names
+  skin.item_projectile_banana = skin.assetUrl('projectile_banana.png');
+  skin.item_projectile_dodgeball = skin.assetUrl('projectile_dodgeball.png');
+  skin.item_projectile_donkey = skin.assetUrl('projectile_donkey.png');
+  skin.item_projectile_handbag = skin.assetUrl('projectile_handbag.png');
+  skin.item_projectile_hotdog = skin.assetUrl('projectile_hotdog.png');
+  skin.item_projectile_pompom = skin.assetUrl('projectile_pompom.png');
+  skin.item_projectile_toaster = skin.assetUrl('projectile_toaster.png');
+  skin.item_projectile_waterball = skin.assetUrl('projectile_waterball.png');
+
+  skin.explosion = skin.assetUrl('explosion.png');
+  skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
+  skin.explosionFrames = 40;
+  skin.fadeExplosion = false;
+  skin.timePerExplosionFrame = 20;
+
+  skin.characters = {
+    background: skin.assetUrl('background_characters.png'),
+  };
+  skin.checkers = {
+    background: skin.assetUrl('background_checkers.png'),
+  };
+  skin.clouds = {
+    background: skin.assetUrl('background_clouds.png'),
+  };
+  skin.cornered = {
+    background: skin.assetUrl('background_cornered.png'),
+  };
+  skin.dots = {
+    background: skin.assetUrl('background_dots.png'),
+  };
+  skin.graffiti = {
+    background: skin.assetUrl('background_graffiti.png'),
+  };
+  skin.space = {
+    background: skin.assetUrl('background_space.png'),
+  };
+  skin.squares = {
+    background: skin.assetUrl('background_squares.png'),
+  };
+  skin.wood = {
+    background: skin.assetUrl('background_wood.png'),
+  };
+
+  skin.avatarList = ["anais", "antony", "bananajoe", "darwin", "gumball", "nicole", "penny", "richard"];
+  skin.walkValues = [8, 8, 8, 12, 12, 8, 10, 12];
+
+  /**
+   * Sprite thumbs generated with:
+   * `brew install graphicsmagick`
+   * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
+   */
+  skin.avatarList.forEach(function (name, i) {
+    skin[name] = {
+      sprite: skin.assetUrl('idle_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 19,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: skin.walkValues[i],
+        emotionCycles: 0,
+        extraEmotions: 3
+      },
+      timePerFrame: 100
+    };
+  });
+
+
+  skin.backgroundChoices = [
+    [msg.setBackgroundRandom(), RANDOM_VALUE],
+    [msg.setBackgroundCharacters(), '"characters"'],
+    [msg.setBackgroundCheckers(), '"checkers"'],
+    [msg.setBackgroundClouds(), '"clouds"'],
+    [msg.setBackgroundCornered(), '"cornered"'],
+    [msg.setBackgroundDots(), '"dots"'],
+    [msg.setBackgroundGraffiti(), '"graffiti"'],
+    [msg.setBackgroundSpace(), '"space"'],
+    [msg.setBackgroundSquares(), '"squares"'],
+    [msg.setBackgroundWood(), '"wood"']];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.backgroundChoicesK1 = [
+    [skin.characters.background, '"characters"'],
+    [skin.checkers.background, '"checkers"'],
+    [skin.clouds.background, '"clouds"'],
+    [skin.cornered.background, '"cornered"'],
+    [skin.dots.background, '"dots"'],
+    [skin.graffiti.background, '"graffiti"'],
+    [skin.space.background, '"space"'],
+    [skin.squares.background, '"squares"'],
+    [skin.wood.background, '"wood"'],
+    [skin.randomPurpleIcon, RANDOM_VALUE]];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteAnais(), '"anais"'],
+    [msg.setSpriteAntony(), '"antony"'],
+    [msg.setSpriteBananajoe(), '"bananajoe"'],
+    [msg.setSpriteDarwin(), '"darwin"'],
+    [msg.setSpriteGumball(), '"gumball"'],
+    [msg.setSpriteNicole(), '"nicole"'],
+    [msg.setSpritePenny(), '"penny"'],
+    [msg.setSpriteRichard(), '"richard"']];
+
+  skin.projectileChoices = [
+    [msg.projectileBanana(), '"projectile_banana"'],
+    [msg.projectileDodgeball(), '"projectile_dodgeball"'],
+    [msg.projectileDonkey(), '"projectile_donkey"'],
+    [msg.projectileHandbag(), '"projectile_handbag"'],
+    [msg.projectileHotdog(), '"projectile_hotdog"'],
+    [msg.projectilePompom(), '"projectile_pompom"'],
+    [msg.projectileToaster(), '"projectile_toaster"'],
+    [msg.projectileWaterball(), '"projectile_waterball"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.itemChoices = [
+    [msg.itemProjectileBanana(), '"item_projectile_banana"'],
+    [msg.itemProjectileDodgeball(), '"item_projectile_dodgeball"'],
+    [msg.itemProjectileDonkey(), '"item_projectile_donkey"'],
+    [msg.itemProjectileHandbag(), '"item_projectile_handbag"'],
+    [msg.itemProjectileHotdog(), '"item_projectile_hotdog"'],
+    [msg.itemProjectilePompom(), '"item_projectile_pompom"'],
+    [msg.itemProjectileToaster(), '"item_projectile_toaster"'],
+    [msg.itemProjectileWaterball(), '"item_projectile_waterball"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
+}
 
 function loadIceAge(skin, assetUrl) {
   skin.defaultBackground = 'icy';
@@ -6516,10 +6721,12 @@ function loadHoc2015(skin, assetUrl) {
     ];
 
   skin.spriteChoices = [
-    [msg.setSpriteHidden(), HIDDEN_VALUE],
-    [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteR2D2(), '"r2-d2"'],
-    [msg.setSpriteC3PO(), '"c-3po"']];
+    [msg.setDroidHidden(), HIDDEN_VALUE],
+    [msg.setDroidRandom(), RANDOM_VALUE],
+    [msg.setDroidR2D2(), '"r2-d2"'],
+    [msg.setDroidC3PO(), '"c-3po"']];
+
+  skin.setSpritePrefix = msg.setDroid();
 
   skin.projectileChoices = [];
 
@@ -6700,9 +6907,11 @@ function loadHoc2015x(skin, assetUrl) {
     ];
 
   skin.spriteChoices = [
-    [msg.setSpriteHidden(), HIDDEN_VALUE],
-    [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteBB8(), '"BB-8"']];
+    [msg.setDroidHidden(), HIDDEN_VALUE],
+    [msg.setDroidRandom(), RANDOM_VALUE],
+    [msg.setDroidBB8(), '"bb-8"']];
+
+  skin.setSpritePrefix = msg.setDroid();
 
   skin.projectileChoices = [];
 
@@ -7000,6 +7209,8 @@ exports.load = function(assetUrl, id) {
   skin.dropdownThumbnailHeight = 50;
   skin.preloadAssets = true;
 
+  skin.setSpritePrefix = msg.setSprite();
+
   skin.activityChoices = [
     [msg.setActivityRandom(), RANDOM_VALUE],
     [msg.setActivityRoam(), '"roam"'],
@@ -7010,6 +7221,9 @@ exports.load = function(assetUrl, id) {
 
   // take care of items specific to skins
   switch (skin.id) {
+    case 'gumball':
+      loadGumball(skin, assetUrl);
+      break;
     case 'iceage':
       loadIceAge(skin, assetUrl);
       break;
@@ -7282,6 +7496,10 @@ levels.iceage_1 = utils.extend(levels.playlab_1, {
   background: 'icy',
   firstSpriteIndex: 0, // manny
 });
+levels.gumball_1 = utils.extend(levels.playlab_1, {
+  background: 'dots',
+  firstSpriteIndex: 0, // manny
+});
 
 // Can you make the dog say something and then have the cat say something afterwards?
 levels.dog_and_cat_hello =  {
@@ -7364,7 +7582,10 @@ levels.iceage_2 = utils.extend(levels.playlab_2, {
   background: 'leafy',
   firstSpriteIndex: 3, // diego
 });
-
+levels.gumball_2 = utils.extend(levels.playlab_2, {
+  background: 'dots',
+  firstSpriteIndex: 3, // diego
+});
 
 // extended by: k1_3
 // Can you write a program to make this dog move to the cat?
@@ -7449,6 +7670,10 @@ levels.playlab_3 = {
 };
 levels.iceage_3 = utils.extend(levels.playlab_3, {
   background: 'grassy',
+  firstSpriteIndex: 2, // scrat
+});
+levels.gumball_3 = utils.extend(levels.playlab_3, {
+  background: 'clouds',
   firstSpriteIndex: 2, // scrat
 });
 
@@ -7573,6 +7798,10 @@ levels.iceage_4 = utils.extend(levels.playlab_4, {
   background: 'grassy',
   avatarList: ['scrat', 'granny']
 });
+levels.gumball_4 = utils.extend(levels.playlab_4, {
+  background: 'checkers',
+  avatarList: ['gumball', 'darwin']
+});
 
 // Can you write a program to make the octopus say "hello" when it is clicked?
 levels.click_hello =  {
@@ -7625,6 +7854,10 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
 });
 levels.iceage_5 = utils.extend(levels.playlab_5, {
   background: 'icy',
+  firstSpriteIndex: 1, // sid
+});
+levels.gumball_5 = utils.extend(levels.playlab_5, {
+  background: 'characters',
   firstSpriteIndex: 1, // sid
 });
 
@@ -7781,6 +8014,11 @@ levels.iceage_6 = utils.extend(levels.playlab_6, {
   firstSpriteIndex: 3, // diego
   goalOverride: {} // This prevents the override from original playlab from being used
 });
+levels.gumball_6 = utils.extend(levels.playlab_6, {
+  background: 'cornered',
+  firstSpriteIndex: 3, // diego
+  goalOverride: {} // This prevents the override from original playlab from being used
+});
 
 // The "repeat forever" block allows you to run code continuously. Can you
 // attach blocks to move this dinosaur up and down repeatedly?
@@ -7902,6 +8140,10 @@ levels.playlab_7 = {
 };
 levels.iceage_7 = utils.extend(levels.playlab_7, {
   background: 'icy',
+  firstSpriteIndex: 1, // sid
+});
+levels.gumball_7 = utils.extend(levels.playlab_7, {
+  background: 'graffiti',
   firstSpriteIndex: 1, // sid
 });
 
@@ -8128,6 +8370,10 @@ levels.playlab_8 = {
 levels.iceage_8 = utils.extend(levels.playlab_8, {
   background: 'icy',
   avatarList: ['manny', 'sid']
+});
+levels.gumball_8 = utils.extend(levels.playlab_8, {
+  background: 'wood',
+  avatarList: ['bananajoe', 'antony']
 });
 
 // Can you add blocks to change the background and the speed of the penguin, and
@@ -8371,6 +8617,65 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
       '</next>' +
     '</block>'
 });
+levels.gumball_9 = utils.extend(levels.playlab_9, {
+  background: 'space',
+  toolbox:
+    tb(
+      blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
+      blockOfType('studio_setBackground', {VALUE: '"icy"'}) +
+      blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
+      blockOfType('studio_saySprite') +
+      blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
+      blockOfType('studio_changeScore')
+    ),
+  requiredBlocks: [
+    [{test: 'setBackground',
+      type: 'studio_setBackground',
+      titles: {VALUE: '"space"'}}],
+    [{test: 'setSpriteSpeed',
+      type: 'studio_setSpriteSpeed',
+      titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
+  ],
+  avatarList: ['nicole', 'penny'],
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
+      '<statement name="DO">' +
+        blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
+          blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
+        ) +
+      '</statement>' +
+    '</block>' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="290">' +
+      '<title name="SPRITE2">0</title>' +
+      '<title name="SPRITE2">1</title>' +
+      '<next>' +
+        blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
+          blockOfType('studio_saySprite', {TEXT: msg.iceAge()})
+        ) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="410">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 8}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="510">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 2}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="610">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 1}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="710">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 4}) +
+      '</next>' +
+    '</block>'
+});
 
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
 levels.sandbox =  {
@@ -8430,6 +8735,7 @@ levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
 levels.playlab_10 = utils.extend(levels.sandbox, {});
 levels.iceage_10 = utils.extend(levels.playlab_10, {});
+levels.gumball_10 = utils.extend(levels.playlab_10, {});
 
 // Create your own story! Move around the cat and dog, and make them say things.
 levels.k1_6 = {
@@ -9097,7 +9403,12 @@ levels.js_hoc2015_event_two_items = {
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true },
-      result: { success: false, message: msg.failedTwoItemsTimeout() } }
+      result: {
+        success: false,
+        message: msg.failedTwoItemsTimeout(),
+        blocklyMessage: msg.failedTwoItemsTimeoutBlockly()
+      }
+    }
   ],
   'callouts': [
     {
@@ -9190,7 +9501,12 @@ levels.js_hoc2015_event_four_items = {
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true },
-      result: { success: false, message: msg.failedFourItemsTimeout() } }
+      result: {
+        success: false,
+        message: msg.failedFourItemsTimeout(),
+        blocklyMessage: msg.failedFourItemsTimeoutBlockly()
+      }
+    }
   ]
 };
 
@@ -9200,7 +9516,7 @@ levels.js_hoc2015_score =
   'avatarList': ['R2-D2'],
   'editCode': true,
   'background': 'hoth',
-  'music': [ 'song9' ],
+  'music': [ 'song10' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
@@ -9260,9 +9576,19 @@ levels.js_hoc2015_score =
     { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 },
       result: { success: false, message: msg.failedScoreTimeout() } },
     { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 },
-      result: { success: false, message: msg.failedScoreScore() } },
+      result: {
+        success: false,
+        message: msg.failedScoreScore(),
+        blocklyMessage: msg.failedScoreScoreBlockly()
+      }
+    },
     { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 },
-      result: { success: false, message: msg.failedScoreGoals() } },
+      result: {
+        success: false,
+        message: msg.failedScoreGoals(),
+        blocklyMessage: msg.failedScoreGoalsBlockly()
+      }
+    },
     { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 },
       result: { success: true, message: msg.successCharacter1() } }
   ],
@@ -9308,7 +9634,7 @@ levels.js_hoc2015_score =
 levels.js_hoc2015_win_lose = {
   'editCode': true,
   'background': 'endor',
-  'music': [ 'song10' ],
+  'music': [ 'song9' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -9375,9 +9701,19 @@ levels.js_hoc2015_win_lose = {
     { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 },
       result: { success: false, message: msg.failedWinLoseTimeout() } },
     { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 },
-      result: { success: false, message: msg.failedWinLoseScore() } },
+      result: {
+        success: false,
+        message: msg.failedWinLoseScore(),
+        blocklyMessage: msg.failedWinLoseScoreBlockly()
+      }
+    },
     { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 },
-      result: { success: false, message: msg.failedWinLoseGoals() } },
+      result: {
+        success: false,
+        message: msg.failedWinLoseGoals(),
+        blocklyMessage: msg.failedWinLoseGoalsBlockly()
+      }
+    },
     { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 },
       result: { success: true, message: msg.successCharacter1() } }
   ]
@@ -9463,7 +9799,12 @@ levels.js_hoc2015_add_characters = {
     { required: { 'collectedItemsAtOrAbove': 3 },
       result: { success: true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
-      result: { success: false, message: msg.failedAddCharactersTimeout() } }
+      result: {
+        success: false,
+        message: msg.failedAddCharactersTimeout(),
+        blocklyMessage: msg.failedAddCharactersTimeoutBlockly()
+      }
+    }
   ]
 };
 
@@ -9524,7 +9865,12 @@ levels.js_hoc2015_chain_characters = {
     { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 20, 'currentPointsBelow': 2000 },
       result: { success: false, message: msg.failedChainCharactersScore() } },
     { required: { 'timedOut': true, 'collectedItemsBelow': 20, 'currentPointsAtOrAbove': 2000 },
-      result: { success: false, message: msg.failedChainCharactersItems() } },
+      result: {
+        success: false,
+        message: msg.failedChainCharactersItems(),
+        blocklyMessage: msg.failedChainCharactersItemsBlockly()
+      }
+    },
     { required: { 'collectedItemsAtOrAbove': 20, 'currentPointsAtOrAbove': 2000 },
       result: { success: true, message: msg.successCharacter1() } }
   ],
@@ -9901,6 +10247,7 @@ levels.js_hoc2015_event_free = {
 
 levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
@@ -9910,6 +10257,7 @@ levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
 
 levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
@@ -9920,6 +10268,7 @@ levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
 
 levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_diagonal,  {
   editCode: false,
+  enableShowCode: true,
   callouts: null,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
@@ -9931,6 +10280,7 @@ levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_diagonal,  {
 
 levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_backtrack,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
@@ -9942,6 +10292,7 @@ levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_backtrack,  {
 
 levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_around,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
@@ -9953,6 +10304,7 @@ levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_around,  {
 
 levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_finale,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
@@ -9964,11 +10316,15 @@ levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_finale,  {
 
 levels.hoc2015_blockly_7 = utils.extend(levels.js_hoc2015_event_two_items,  {
   editCode: false,
+  enableShowCode: true,
+  msgStringOverrides: {
+    moveSprite: 'goSprite'
+  },
   startBlocks: whenUpDown,
   toolbox: tb(hocMoveNS),
   requiredBlocks: [
-    moveNorthRequiredBlock(),
-    moveSouthRequiredBlock(),
+    // Note: not listing move blocks since the error messages are already
+    // sufficient and we've renamed these blocks to goUp/goDown
   ],
   'callouts': [
     {
@@ -10008,18 +10364,24 @@ levels.hoc2015_blockly_7 = utils.extend(levels.js_hoc2015_event_two_items,  {
 
 levels.hoc2015_blockly_8 = utils.extend(levels.js_hoc2015_event_four_items,  {
   editCode: false,
+  enableShowCode: true,
+  msgStringOverrides: {
+    moveSprite: 'goSprite'
+  },
   startBlocks: whenUpDownLeftRight,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
-    moveNorthRequiredBlock(),
-    moveSouthRequiredBlock(),
-    moveEastRequiredBlock(),
-    moveWestRequiredBlock(),
+    // Note: not listing move blocks since the error messages are already
+    // sufficient and we've renamed these blocks to goUp/goDown/goLeft/goRight
   ],
 });
 
 levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   editCode: false,
+  enableShowCode: true,
+  msgStringOverrides: {
+    whenTouchGoal: 'whenGetCharacterRebelPilot'
+  },
   startBlocks:
     '<block type="studio_whenTouchGoal" deletable="false"> \
       <next><block type="studio_playSound"><title name="SOUND">R2-D2sound1</title></block> \
@@ -10063,6 +10425,7 @@ levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
 
 levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: '',
   toolbox:
     tb('<block type="studio_playSound"></block> \
@@ -10078,6 +10441,7 @@ levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
 
 levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
@@ -10131,6 +10495,7 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
 
 levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
@@ -10184,6 +10549,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
 
 levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
@@ -10252,6 +10618,7 @@ levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  
 
 levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
@@ -10318,6 +10685,10 @@ levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
 
 levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
   editCode: false,
+  enableShowCode: true,
+  msgStringOverrides: {
+    moveSprite: 'goSprite'
+  },
   markdownInstructions: null,
   markdownInstructionsWithClassicMargins: false,
   startBlocks:
@@ -12196,19 +12567,26 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSprite = {
       helpUrl: '',
       init: function() {
-        this.VALUES = skin.spriteChoices;
-        var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
-        // default to first item after random/hidden
-        dropdown.setValue(skin.spriteChoices[2][1]);
-
+        // shallow copy array:
+        this.VALUES = [].concat(skin.spriteChoices);
         this.setHSV(312, 0.32, 0.62);
         if (spriteCount > 1) {
           this.appendDummyInput()
             .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
         } else {
-          this.appendDummyInput()
-            .appendTitle(msg.setSprite());
+          // Modify the dropdownValues array to contain combined text
+          // (blockly renders this better than two adjacent text blocks)
+          var prefix = skin.setSpritePrefix + ' ';
+          for (var i = 0; i < this.VALUES.length; i++) {
+            // shallow copy this array within the larger array, then modify
+            // the string to be displayed to include the prefix:
+            this.VALUES[i] = [].concat(skin.spriteChoices[i]);
+            this.VALUES[i][0] = prefix + this.VALUES[i][0];
+          }
         }
+        var dropdown = new blockly.FieldDropdown(this.VALUES);
+        // default to first item after random/hidden
+        dropdown.setValue(skin.spriteChoices[2][1]);
         this.appendDummyInput()
           .appendTitle(dropdown, 'VALUE');
         this.setInputsInline(true);

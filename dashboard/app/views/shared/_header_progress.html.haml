@@ -1,4 +1,4 @@
-- small_text = @script && @script.name == "starwars"
+- small_text = @script && (@script.name == "starwars" || @script.name == "starwarsblocks")
 .header_level
   %div.header_level_container
     .header_text{class: ('small_font_on_tablet' if small_text)}
