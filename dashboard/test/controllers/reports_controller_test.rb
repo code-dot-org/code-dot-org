@@ -256,8 +256,6 @@ class ReportsControllerTest < ActionController::TestCase
 
   generate_admin_only_tests_for :admin_stats
 
-  generate_admin_only_tests_for :search_for_teachers
-
   generate_admin_only_tests_for :csp_pd_responses
 
   generate_admin_only_tests_for :funometer
@@ -333,29 +331,6 @@ class ReportsControllerTest < ActionController::TestCase
     sign_out @admin
     post :assume_identity, {:user_id => @admin.id}
 
-    assert_redirected_to_sign_in
-  end
-
-  test "should lookup_section" do
-    post :lookup_section, {:section_code => @teacher_section.code}
-    assert_select '#section_owner', 'Owner: ' + @teacher.email
-  end
-
-  test "should lookup_section error if not found" do
-    post :lookup_section, {:section_code => 'ZZZZ'}
-    assert_response :success
-    assert_select '.container .alert-danger', 'Section code not found'
-  end
-
-  test "should not lookup_section if not admin" do
-    sign_in @not_admin
-    post :lookup_section, {:section_code => @teacher_section.code}
-    assert_response :forbidden
-  end
-
-  test "should not lookup_section if not signed in" do
-    sign_out @admin
-    post :lookup_section, {:section_code => @teacher_section.code}
     assert_redirected_to_sign_in
   end
 
