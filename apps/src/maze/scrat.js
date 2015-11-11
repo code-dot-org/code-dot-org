@@ -2,6 +2,7 @@ var SquareType = require('./tiles').SquareType;
 var Direction = require('./tiles').Direction;
 var utils = require('../utils');
 var _ = utils.getLodash();
+var studioApp = require('../StudioApp').singleton;
 
 var TILE_SHAPES = {
   'log':             [0, 0],
@@ -108,4 +109,6 @@ module.exports.scheduleDance = function (victoryDance, timeAlloted, skin) {
 
   Maze.scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
     numFrames, timePerFrame, 'celebrate', Direction.NORTH, true);
+
+  studioApp.playAudio('win');
 };

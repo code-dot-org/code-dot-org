@@ -7,16 +7,18 @@ require_relative 'spy_pub_sub_api'
 
 ENV['RACK_ENV'] = 'test'
 
-class NetSimApiTest < Minitest::Unit::TestCase
+class NetSimApiTest < Minitest::Test
 
   TABLE_NAMES = NetSimApi::TABLE_NAMES
+  NODE_TYPES = NetSimApi::NODE_TYPES
+  VALIDATION_ERRORS = NetSimApi::VALIDATION_ERRORS
 
   def setup
     # The NetSim API does not need to share a cookie jar with the Channels API.
-    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
-    @net_sim_api = Rack::Test::Session.new(Rack::MockSession.new(NetSimApi, "studio.code.org"))
+    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, 'studio.code.org'))
+    @net_sim_api = Rack::Test::Session.new(Rack::MockSession.new(NetSimApi, 'studio.code.org'))
     @shard_id = '_testShard2'
-    @table_name = TABLE_NAMES[:node]
+    @table_name = 'test'
 
     # Never ever let tests hit the real Pusher API, even if our locals.yml says so.
     NetSimApi.override_pub_sub_api_for_test(SpyPubSubApi.new)
@@ -25,7 +27,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     NetSimApi.override_redis_for_test(FakeRedisClient.new)
 
     # Every test should start with an empty table.
-    assert read_records.first.nil?, "Table did not begin empty"
+    assert read_records.first.nil?, 'Table did not begin empty'
   end
 
   def test_create_read_update_delete
@@ -43,7 +45,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
     record_id = record_get_response['id'].to_i
 
-    assert_equal 8, update_record(record_id, {name: 'alice', id: record_id, age: 8})['age']
+    update_record_response = update_record(record_id, {name: 'alice', id: record_id, age: 8})
+    assert_equal 8, JSON.parse(update_record_response.body)['age']
     record = read_records.first
     assert_equal 8, record['age']
 
@@ -78,13 +81,13 @@ class NetSimApiTest < Minitest::Unit::TestCase
     record_create_response = create_record([{name: 'alice', age: 7, male: false}])
     assert record_create_response.is_a?(Array)
     assert_equal 1, record_create_response.length
-    assert_equal 1, read_records().length
+    assert_equal 1, read_records.length
     created_ids.push(record_create_response[0]['id'])
 
     # Sending a record as a hash should result in a hash being returned
     record_create_response = create_record({name: 'fred', age: 12, male: true})
     assert record_create_response.is_a?(Hash)
-    assert_equal 2, read_records().length
+    assert_equal 2, read_records.length
     created_ids.push(record_create_response['id'])
 
     # Sending several records should result in them all being inserted
@@ -94,7 +97,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     ])
     assert record_create_response.is_a?(Array)
     assert_equal 2, record_create_response.length
-    assert_equal 4, read_records().length
+    assert_equal 4, read_records.length
     created_ids.push(record_create_response[0]['id'])
     created_ids.push(record_create_response[1]['id'])
 
@@ -102,18 +105,19 @@ class NetSimApiTest < Minitest::Unit::TestCase
     record_create_response = create_record([])
     assert record_create_response.is_a?(Array)
     assert_equal 0, record_create_response.length
-    assert_equal 4, read_records().length
+    assert_equal 4, read_records.length
 
     # sending a value that is neither an array nor a hash should fail
     create_record(1)
     assert_equal 400, @net_sim_api.last_response.status
-    assert_equal 4, read_records().length
+    assert_equal 4, read_records.length
 
     # sending an array containing a value that is neither an array nor a
     # hash should fail
     create_record([1])
     assert_equal 400, @net_sim_api.last_response.status
-    assert_equal 4, read_records().length
+    assert_equal [VALIDATION_ERRORS[:malformed]], last_error_details
+    assert_equal 4, read_records.length
   ensure
     created_ids.each { |id| delete_record(id) }
     assert read_records.first.nil?, 'Table was not empty'
@@ -151,15 +155,29 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
     # Verify that the CREATE response is a 400 BAD REQUEST since we sent malformed JSON
     assert_equal 400, record_create_response.status
+    assert_equal VALIDATION_ERRORS[:malformed], last_error_details
 
     # Verify that no record was created
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
   def test_get_400_on_inserting_orphaned_message
     create_message({fromNodeID: 1, toNodeID: 2, simulatedBy: 2})
-    assert_equal 400, @net_sim_api.last_response.status, "Orphaned message not created"
-    assert_equal 0, read_records(TABLE_NAMES[:message]).count, "Created no messages"
+    assert_equal 400, @net_sim_api.last_response.status, 'Orphaned message not created'
+    assert_equal VALIDATION_ERRORS[:conflict], last_error_details
+    assert_equal 0, read_records(TABLE_NAMES[:message]).count, 'Created no messages'
+  end
+
+  def test_get_400_on_inserting_duplicate_wire
+    # The first one works
+    create_wire(1, 2)
+    assert_equal 201, @net_sim_api.last_response.status, 'Wire creation request failed'
+    assert_equal 1, read_records(TABLE_NAMES[:wire]).count, 'Initial wire was not created'
+
+    create_wire(1, 2)
+    assert_equal 400, @net_sim_api.last_response.status, 'Duplicate wire request did not fail'
+    assert_equal VALIDATION_ERRORS[:conflict], last_error_details
+    assert_equal 1, read_records(TABLE_NAMES[:wire]).count, 'Duplicate wire was created'
   end
 
   def test_get_400_on_bad_json_update
@@ -178,7 +196,47 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 7, record['age']
   ensure
     delete_record(record_id || 1)
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, 'Table was not empty'
+  end
+
+  def test_get_404_on_updating_missing_record
+    test_spy = SpyPubSubApi.new
+    NetSimApi.override_pub_sub_api_for_test(test_spy)
+
+    # Perform otherwise valid update on missing row
+    record_update_response = update_record(1, {id: 1, age: 8})
+
+    # Verify that the UPDATE response is a 404 NOT FOUND
+    assert_equal 404, record_update_response.status
+
+    # Verify that no invalidations were published
+    assert_equal 0, test_spy.publish_history.length
+
+    # Verify that no record was created
+    assert read_records.first.nil?, 'Table was not empty'
+  ensure
+    delete_record(1)
+    assert read_records.first.nil?, 'Table was not empty'
+  end
+
+  # Because calling delete on a missing object results in the desired
+  # state anyway, we return a success code in this case - but no invalidation
+  # should be produced.
+  def test_get_204_on_deleting_missing_record
+    test_spy = SpyPubSubApi.new
+    NetSimApi.override_pub_sub_api_for_test(test_spy)
+
+    # Perform otherwise valid update on missing row
+    record_delete_response = delete_record(1)
+
+    # Verify that the UPDATE response is a 404 NOT FOUND
+    assert_equal 204, record_delete_response.status
+
+    # Verify that no invalidations were published
+    assert_equal 0, test_spy.publish_history.length
+
+    # Verify that no record was created
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
   def test_no_publish_on_read
@@ -204,7 +262,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal record_id, test_spy.publish_history.first[:data][:id]
   ensure
     delete_record(record_id || 1)
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
   def test_publish_on_update
@@ -222,7 +280,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal record_id, test_spy.publish_history.last[:data][:id]
   ensure
     delete_record(record_id || 1)
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
   def test_publish_on_delete
@@ -240,7 +298,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 'delete', test_spy.publish_history.last[:data][:action]
     assert_equal [record_id], test_spy.publish_history.last[:data][:ids]
   ensure
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
   def test_node_delete_cascades_to_node_wires_delete_one_delete_verb
@@ -269,9 +327,9 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
   def node_delete_cascades_to_node_wires
 
-    node_a = create_node({name: 'nodeA'})
-    node_b = create_node({name: 'nodeB'})
-    node_c = create_node({name: 'nodeC'})
+    node_a = create_client_node(name: 'nodeA')
+    node_b = create_client_node(name: 'nodeB')
+    node_c = create_client_node(name: 'nodeC')
 
     wire_ab = create_wire(node_a['id'], node_b['id'])
     wire_ca = create_wire(node_c['id'], node_a['id'])
@@ -302,8 +360,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
     delete_wire(wire_ab['id'])
     delete_wire(wire_ca['id'])
     delete_wire(wire_bc['id'])
-    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
-    assert read_records(TABLE_NAMES[:wire]).first.nil?, "Wire table was not empty"
+    assert read_records(TABLE_NAMES[:node]).first.nil?, 'Node table was not empty'
+    assert read_records(TABLE_NAMES[:wire]).first.nil?, 'Wire table was not empty'
   end
 
   def test_node_delete_cascades_to_messages_delete_one_delete_verb
@@ -332,8 +390,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
   def node_delete_cascades_to_messages
 
-    node_a = create_node({name: 'nodeA'})
-    node_b = create_node({name: 'nodeB'})
+    node_a = create_client_node(name: 'nodeA')
+    node_b = create_client_node(name: 'nodeB')
 
     message_a_to_b = create_message({fromNodeID: node_a['id'], toNodeID: node_b['id'], simulatedBy: node_b['id']})
     message_b_to_a = create_message({fromNodeID: node_b['id'], toNodeID: node_a['id'], simulatedBy: node_a['id']})
@@ -359,8 +417,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
     delete_node(node_b['id'])
     delete_message(message_a_to_b['id'])
     delete_message(message_b_to_a['id'])
-    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
-    assert read_records(TABLE_NAMES[:message]).first.nil?, "Message table was not empty"
+    assert read_records(TABLE_NAMES[:node]).first.nil?, 'Node table was not empty'
+    assert read_records(TABLE_NAMES[:message]).first.nil?, 'Message table was not empty'
   end
 
   def test_many_node_delete_cascading_generates_minimum_invalidations_via_delete
@@ -378,9 +436,9 @@ class NetSimApiTest < Minitest::Unit::TestCase
   end
 
   def many_node_delete_cascading_generates_minimum_invalidations
-    node_a = create_node({name: 'nodeA'})
-    node_b = create_node({name: 'nodeB'})
-    node_c = create_node({name: 'nodeC'})
+    node_a = create_client_node(name: 'nodeA')
+    node_b = create_client_node(name: 'nodeB')
+    node_c = create_client_node(name: 'nodeC')
 
     wire_ab = create_wire(node_a['id'], node_b['id'])
     wire_ac = create_wire(node_a['id'], node_c['id'])
@@ -411,8 +469,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert record_exists(TABLE_NAMES[:node], node_c['id'])
 
     # Assert all wires and messages are gone
-    assert read_records(TABLE_NAMES[:wire]).first.nil?, "Wire table was not empty"
-    assert read_records(TABLE_NAMES[:message]).first.nil?, "Message table was not empty"
+    assert read_records(TABLE_NAMES[:wire]).first.nil?, 'Wire table was not empty'
+    assert read_records(TABLE_NAMES[:message]).first.nil?, 'Message table was not empty'
 
     # Even though we just deleted ten rows, there should only be three
     # published invalidations, because three tables were affected
@@ -460,9 +518,9 @@ class NetSimApiTest < Minitest::Unit::TestCase
     delete_message(message2_a_to_b['id'])
     delete_message(message_b_to_a['id'])
     delete_message(message2_b_to_a['id'])
-    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
-    assert read_records(TABLE_NAMES[:wire]).first.nil?, "Wire table was not empty"
-    assert read_records(TABLE_NAMES[:message]).first.nil?, "Message table was not empty"
+    assert read_records(TABLE_NAMES[:node]).first.nil?, 'Node table was not empty'
+    assert read_records(TABLE_NAMES[:wire]).first.nil?, 'Wire table was not empty'
+    assert read_records(TABLE_NAMES[:message]).first.nil?, 'Message table was not empty'
   end
 
   def test_parse_table_map_from_query_string
@@ -493,9 +551,9 @@ class NetSimApiTest < Minitest::Unit::TestCase
   end
 
   def perform_test_delete_many
-    node_a = create_node({name: 'nodeA'})
-    node_b = create_node({name: 'nodeB'})
-    node_c = create_node({name: 'nodeC'})
+    node_a = create_client_node(name: 'nodeA')
+    node_b = create_client_node(name: 'nodeB')
+    node_c = create_client_node(name: 'nodeC')
     assert_equal 3, read_records(TABLE_NAMES[:node]).count, "Didn't create 3 nodes"
 
     query_string = [node_a['id'], node_c['id']].map { |id| "id[]=#{id}" }.join('&')
@@ -510,13 +568,158 @@ class NetSimApiTest < Minitest::Unit::TestCase
     delete_node(node_a['id'])
     delete_node(node_b['id'])
     delete_node(node_c['id'])
-    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
+    assert read_records(TABLE_NAMES[:node]).first.nil?, 'Node table was not empty'
   end
 
   def test_parse_ids_from_query_string
     assert_equal([1, 3, 5], parse_ids_from_query_string('id[]=1&id[]=3&id[]=5'))
     assert_equal([2], parse_ids_from_query_string('id[]=nonsense&id[]=2'),
                  'Nonnumeric IDs should be ignored')
+  end
+
+  def test_can_only_insert_known_node_types
+    # Allow client nodes
+    create_node({}, NODE_TYPES[:client])
+    assert_equal(201, @net_sim_api.last_response.status)
+
+    # Allow router nodes
+    create_node({'routerNumber' => 1}, NODE_TYPES[:router])
+    assert_equal(201, @net_sim_api.last_response.status)
+
+    # Reject nodes with other "types"
+    create_node({}, 'some_random_type')
+    assert_equal(400, @net_sim_api.last_response.status)
+    assert_equal VALIDATION_ERRORS[:malformed], last_error_details
+
+    # Reject nodes with no type
+    create_node({})
+    assert_equal(400, @net_sim_api.last_response.status)
+    assert_equal VALIDATION_ERRORS[:malformed], last_error_details
+  end
+
+  def test_limit_shard_routers_to_max_routers
+    CDO.netsim_max_routers.times do |i|
+      create_router_node('routerNumber' => i)
+      assert_equal 201, @net_sim_api.last_response.status
+    end
+    assert_equal(CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Didn't create #{CDO.netsim_max_routers} nodes")
+
+    # We want the 21st node to fail
+    create_router_node('routerNumber' => CDO.netsim_max_routers + 1)
+    assert_equal(400, @net_sim_api.last_response.status,
+                 "Went over router limit!")
+    assert_equal(VALIDATION_ERRORS[:limit_reached], last_error_details)
+    assert_equal(CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Went over router limit!")
+  end
+
+  def test_do_not_limit_shard_clients_to_max_routers
+    CDO.netsim_max_routers.times do
+      create_client_node
+      assert_equal 201, @net_sim_api.last_response.status
+    end
+    assert_equal(CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Didn't create #{CDO.netsim_max_routers} nodes")
+
+    # We want the 21st node to succeed
+    create_client_node
+    assert_equal(201, @net_sim_api.last_response.status,
+                 "Should have allowed 21st client")
+    assert_equal(CDO.netsim_max_routers + 1,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Should have allowed 21st client")
+  end
+
+  def test_having_max_routers_should_not_limit_clients
+    CDO.netsim_max_routers.times do |i|
+      create_router_node('routerNumber' => i)
+      assert_equal 201, @net_sim_api.last_response.status
+    end
+    assert_equal CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Didn't create #{CDO.netsim_max_routers} nodes"
+
+    # We are out of router spaces, but adding a client should be okay
+    create_client_node
+    assert_equal(201, @net_sim_api.last_response.status,
+                 "Should have allowed 1st client")
+    assert_equal(CDO.netsim_max_routers + 1,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Should have allowed 1st client")
+  end
+
+  def test_having_max_routers_of_clients_should_not_limit_routers
+    CDO.netsim_max_routers.times do
+      create_client_node
+      assert_equal 201, @net_sim_api.last_response.status
+    end
+    assert_equal(CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Didn't create #{CDO.netsim_max_routers} nodes")
+
+    # We should still be able to add a router
+    create_router_node('routerNumber' => 1)
+    assert_equal(201, @net_sim_api.last_response.status,
+                 "Should have allowed 1st router")
+    assert_equal(CDO.netsim_max_routers + 1,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Should have allowed 1st router")
+  end
+
+  def test_having_max_routers_on_one_shard_does_not_limit_another
+    CDO.netsim_max_routers.times do |i|
+      create_router_node('routerNumber' => i)
+      assert_equal 201, @net_sim_api.last_response.status
+    end
+    assert_equal(CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Didn't create #{CDO.netsim_max_routers} nodes")
+
+    # We should still be able to add a router on another shard
+    @shard_id = '_testShard3'
+    create_router_node('routerNumber' => CDO.netsim_max_routers + 1)
+    assert_equal(201, @net_sim_api.last_response.status,
+                 'Should have allowed router on another shard')
+    assert_equal(1, read_records(TABLE_NAMES[:node]).count,
+                 'Should have allowed router on another shard')
+  end
+
+  def test_reject_routers_without_router_number
+    create_router_node({})
+    assert_equal(400, @net_sim_api.last_response.status, "Allowed malformed router row")
+    assert_equal(VALIDATION_ERRORS[:malformed], last_error_details)
+  end
+
+  def test_reject_routers_causing_router_number_collision
+    create_router_node('routerNumber' => 1)
+    assert_equal(201, @net_sim_api.last_response.status,
+                 'Failed to insert first router.')
+
+    # Should return 400 BAD REQUEST when a routerNumber collision is detected
+    create_router_node('routerNumber' => 1)
+    assert_equal(400, @net_sim_api.last_response.status,
+                 'Should have rejected duplicate routerNumber')
+    assert_equal(VALIDATION_ERRORS[:conflict], last_error_details)
+
+    assert_equal(1, read_records(TABLE_NAMES[:node]).count,
+                 'Expected to end up with one node.')
+  end
+
+  def test_allow_routers_with_different_router_numbers
+    create_router_node('routerNumber' => 1)
+    assert_equal(201, @net_sim_api.last_response.status,
+                 'Failed to insert first router.')
+
+    create_router_node('routerNumber' => 2)
+    assert_equal(201, @net_sim_api.last_response.status,
+                 'Failed to insert second router.')
+
+    assert_equal(2, read_records(TABLE_NAMES[:node]).count,
+                 'Expected to end up with two nodes.')
   end
 
   # Methods below this point are test utilities, not actual tests
@@ -527,8 +730,17 @@ class NetSimApiTest < Minitest::Unit::TestCase
     200 == @net_sim_api.last_response.status
   end
 
-  def create_node(record)
+  def create_node(record, node_type = nil)
+    record[:type] = node_type unless node_type.nil?
     create_record record, TABLE_NAMES[:node]
+  end
+
+  def create_client_node(record = {})
+    create_node(record, NODE_TYPES[:client])
+  end
+
+  def create_router_node(record = {})
+    create_node(record, NODE_TYPES[:router])
   end
 
   def delete_node(id)
@@ -576,7 +788,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
   def update_record(id, record)
     @net_sim_api.put "/v3/netsim/#{@shard_id}/#{@table_name}/#{id}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    JSON.parse(@net_sim_api.last_response.body)
+    @net_sim_api.last_response
   end
 
   def update_record_malformed(id, record)
@@ -587,6 +799,10 @@ class NetSimApiTest < Minitest::Unit::TestCase
   def delete_record(id, table_name = @table_name)
     @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{table_name}/#{id}"
     @net_sim_api.last_response
+  end
+
+  def last_error_details
+    JSON.parse(@net_sim_api.last_response.body)['details']
   end
 
 end

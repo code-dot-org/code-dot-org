@@ -5,6 +5,12 @@ module BrowserHelpers
     text.should eq expectedText
   end
 
+  def element_has_html(selector, expectedHtml)
+    expectedHtml.gsub!('\"', '"')
+    text = @browser.execute_script("return $(\"#{selector}\").html();")
+    text.should eq expectedHtml
+  end
+
   def element_has_i18n_text(selector, language, locKey)
     locKey.gsub!('\"', '"')
     text = @browser.execute_script("return $(\"#{selector}\").text();")
@@ -17,9 +23,20 @@ module BrowserHelpers
     text.strip.should include expectedText
   end
 
+  def element_value_is(selector, expectedValue)
+    value = @browser.execute_script("return $(\"#{selector}\").val();")
+    value.strip.should eq expectedValue
+  end
+
   def element_has_id(selector, expectedId)
     id = @browser.execute_script("return $(\"#{selector}\")[0].id;")
     id.should eq expectedId
+  end
+
+  def element_has_attribute(selector, attribute, expectedText)
+    expectedText.gsub!('\"', '"')
+    text = @browser.execute_script("return $(\"#{selector}\").attr(\"#{attribute}\");")
+    text.should eq expectedText
   end
 
   def generate_generic_drag_code(fromSelector, toSelector, target_dx, target_dy)

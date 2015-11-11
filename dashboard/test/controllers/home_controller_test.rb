@@ -68,8 +68,7 @@ class HomeControllerTest < ActionController::TestCase
     5.times do
       create :gallery_activity,
         user: @user,
-        autosaved: true,
-        activity: create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::ARTIST)))
+        autosaved: true
     end
     sign_in @user
   end
@@ -116,14 +115,14 @@ class HomeControllerTest < ActionController::TestCase
     sign_in create(:user)
 
     get :index
-    assert_select 'a[href=/admin/stats]', 0
+    assert_select 'a[href="/admin/stats"]', 0
   end
 
   test "do show admin links when admin" do
     sign_in create(:admin)
 
     get :index
-    assert_select 'a[href=/admin/stats]'
+    assert_select 'a[href="/admin/stats"]'
   end
 
   test 'logged in user without primary course does not see resume info' do
@@ -150,8 +149,8 @@ class HomeControllerTest < ActionController::TestCase
       else
         url = "http://test.host/s/#{CGI.escape(script.to_param).gsub('+', '%20')}"
       end
-      assert_select "a[href^=#{url}]" # continue link
-      assert_select 'h3',  I18n.t("data.script.name.#{script.name}.title") # script title
+      assert_select "a[href^='#{url}']" # continue link
+      assert_select 'h3', I18n.t("data.script.name.#{script.name}.title") # script title
     end
   end
 
@@ -177,7 +176,7 @@ class HomeControllerTest < ActionController::TestCase
     user = create(:user)
     user.update_attribute(:birthday, nil) # bypasses validations
     user = user.reload
-    assert !user.age
+    assert !user.age, "user should not have age, but value was #{user.age}"
 
     sign_in user
     get :index
@@ -215,7 +214,7 @@ class HomeControllerTest < ActionController::TestCase
     sign_in create(:teacher)
 
     get :index
-    assert_select 'a[href=http://test.host/redeemprizes]', 0
+    assert_select 'a[href="http://test.host/redeemprizes"]', 0
   end
 
   test "do show prize link when you already have a prize" do
@@ -224,7 +223,7 @@ class HomeControllerTest < ActionController::TestCase
     teacher.teacher_prize = TeacherPrize.create!(prize_provider_id: 8, code: 'fake')
 
     get :index
-    assert_select 'a[href=http://test.host/redeemprizes]'
+    assert_select 'a[href="http://test.host/redeemprizes"]'
   end
 
   test 'health_check sets no cookies' do
@@ -235,7 +234,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'index shows alert for unconfirmed email for teachers' do
-    user = create :teacher, email: 'my_email@test.xx'
+    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
 
     sign_in user
     get :index
@@ -272,7 +271,7 @@ class HomeControllerTest < ActionController::TestCase
     get :index
 
     assert_response :success
-    assert_select 'a[href=//test.code.org/teacher-dashboard]', 'Teacher Home Page'
+    assert_select 'a[href="//test.code.org/teacher-dashboard"]', 'Teacher Home Page'
   end
 
 
@@ -283,8 +282,8 @@ class HomeControllerTest < ActionController::TestCase
     get :index
 
     assert_response :success
-    assert_select 'a[href=//test.code.org/ops-dashboard]', 0
-    assert_select 'a[href=//test.code.org/teacher-dashboard]', 0
+    assert_select 'a[href="//test.code.org/ops-dashboard"]', 0
+    assert_select 'a[href="//test.code.org/teacher-dashboard"]', 0
   end
 
 end

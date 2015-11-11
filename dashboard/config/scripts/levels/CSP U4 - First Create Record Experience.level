@@ -1,0 +1,45 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-09-26T01:47:29.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "createRecord": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "So how can we use this?  We can use it to compose a bunch of things we want to store at once.  In Data we call this a “record”.  Let’s look at how we create records….new level:\r\n\r\nJust drag out createRecord and play with it (non-project level) — not triggered by a button. \r\n\r\nCreateRecord should populate with a default JSON object (which you can set in level builder when defining params for the blocks in the palette.)  Have it be the string version of of JSON object.\r\nJust Hit run several times.\r\nView Data.\r\nInvestigate problems.\r\n\r\n\r\n"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

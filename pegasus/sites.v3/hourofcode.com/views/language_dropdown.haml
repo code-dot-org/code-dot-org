@@ -1,3 +1,5 @@
-%select{onchange:"window.location.href = '/#{@country}/' + this.value + '#{request.path_info != '/' ? request.path_info : ''}';"}
+-path = request.path_info
+-path = path[@language.length + 1..-1] if path[0..@language.length] == "/#{@language}"
+%select{onchange:"window.location.href = '/#{@country}/' + this.value + '#{path != '/' ? path : ''}';"}
   -HOC_I18N.keys.sort.each do |language|
     %option{value:language, selected:language==@language}= HOC_I18N[language]['language']

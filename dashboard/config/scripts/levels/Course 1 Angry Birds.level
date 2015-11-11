@@ -14,7 +14,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "start_direction": "3",
-    "step_mode": "0",
+    "step_mode": 1,
     "ideal": "4"
   }
 }]]></config>

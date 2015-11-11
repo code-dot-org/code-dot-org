@@ -1,157 +1,412 @@
+require 'mocha/mini_test'
 require 'minitest/autorun'
 require 'rack/test'
 require File.expand_path '../../../deployment', __FILE__
 require File.expand_path '../../middleware/files_api', __FILE__
 require File.expand_path '../../middleware/channels_api', __FILE__
+require File.expand_path '../../middleware/helpers/asset_bucket', __FILE__
+require File.expand_path '../spy_newrelic_agent', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
-class AssetsTest < Minitest::Unit::TestCase
+class AssetsTest < Minitest::Test
 
   def setup
-    init_apis
+    @channels, @assets = init_apis
   end
 
   def test_assets
-    channel_id = create_channel
+    channel_id = create_channel(@channels)
 
     ensure_aws_credentials(channel_id)
 
-    image_filename = 'dog.jpg'
     image_body = 'stub-image-contents'
+    response, image_filename = post_file(@assets, channel_id, 'dog.jpg', image_body, 'image/jpeg')
 
-    actual_image_info = JSON.parse(put(channel_id, image_filename, image_body, 'image/jpeg'))
+    actual_image_info = JSON.parse(response)
     expected_image_info = {'filename' => image_filename, 'category' => 'image', 'size' => image_body.length}
     assert_fileinfo_equal(expected_image_info, actual_image_info)
 
-    sound_filename = 'woof.mp3'
     sound_body = 'stub-sound-contents'
+    response, sound_filename = post_file(@assets, channel_id, 'woof.mp3', sound_body, 'audio/mpeg')
 
-    actual_sound_info = JSON.parse(put(channel_id, sound_filename, sound_body, 'audio/mpeg'))
+    actual_sound_info = JSON.parse(response)
     expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
     assert_fileinfo_equal(expected_sound_info, actual_sound_info)
 
-    file_infos = JSON.parse(list(channel_id))
+    file_infos = JSON.parse(list(@assets, channel_id))
     assert_fileinfo_equal(actual_image_info, file_infos[0])
     assert_fileinfo_equal(actual_sound_info, file_infos[1])
 
-    get(channel_id, image_filename)
-    assert_equal 'public, max-age=3600', @assets.last_response['Cache-Control']
+    get(@assets, channel_id, image_filename)
+    assert_equal 'public, max-age=3600, s-maxage=1800', @assets.last_response['Cache-Control']
 
-    delete(channel_id, image_filename)
+    delete(@assets, channel_id, image_filename)
     assert @assets.last_response.successful?
 
-    delete(channel_id, sound_filename)
+    delete(@assets, channel_id, sound_filename)
     assert @assets.last_response.successful?
 
     # unsupported media type
-    put(channel_id, 'filename.exe', 'stub-contents', 'application/x-msdownload')
+    post_file(@assets, channel_id, 'filename.exe', 'stub-contents', 'application/x-msdownload')
     assert_equal 415, @assets.last_response.status
 
     # mismatched file extension and mime type
-    put(channel_id, 'filename.jpg', 'stub-contents', 'application/gif')
+    _, mismatched_filename = post_file(@assets, channel_id, 'filename.jpg', 'stub-contents', 'application/gif')
     assert @assets.last_response.successful?
-    delete(channel_id, 'filename.jpg')
+    delete(@assets, channel_id, mismatched_filename)
     assert @assets.last_response.successful?
 
-    # invalid files are not uploaded
-    file_infos = JSON.parse(list(channel_id))
+    # file extension case insensitivity
+    _, filename = post_file(@assets, channel_id, 'filename.JPG', 'stub-contents', 'application/jpeg')
+    assert @assets.last_response.successful?
+    get(@assets, channel_id, filename)
+    assert @assets.last_response.successful?
+    get(@assets, channel_id, filename.gsub(/JPG$/, 'jpg'))
+    assert @assets.last_response.not_found?
+    delete(@assets, channel_id, filename)
+    assert @assets.last_response.successful?
+
+    # invalid files are not uploaded, and other added files were deleted
+    file_infos = JSON.parse(list(@assets, channel_id))
     assert_equal 0, file_infos.length
 
-    delete(channel_id, 'nonexistent.jpg')
+    delete(@assets, channel_id, 'nonexistent.jpg')
     assert @assets.last_response.successful?
 
-    get(channel_id, 'nonexistent.jpg')
+    get(@assets, channel_id, 'nonexistent.jpg')
     assert @assets.last_response.not_found?
 
-    delete_channel(channel_id)
+    delete_channel(@channels, channel_id)
+  end
+
+  def test_set_abuse_score
+    channel_id = create_channel(@channels)
+    asset_bucket = AssetBucket.new
+
+    # create a couple assets without an abuse score
+    _, first_asset = post_file(@assets, channel_id, 'asset1.jpg', 'stub-image-contents', 'image/jpeg')
+    _, second_asset = post_file(@assets, channel_id, 'asset2.jpg', 'stub-image-contents', 'image/jpeg')
+
+    result = get(@assets, channel_id, first_asset)
+    assert_equal 'stub-image-contents', result
+
+    assert_equal 0, asset_bucket.get_abuse_score(channel_id, first_asset)
+    assert_equal 0, asset_bucket.get_abuse_score(channel_id, second_asset)
+
+    # set abuse score
+    patch_abuse(@assets, channel_id, 10)
+    assert_equal 10, asset_bucket.get_abuse_score(channel_id, first_asset)
+    assert_equal 10, asset_bucket.get_abuse_score(channel_id, second_asset)
+
+    # make sure we didnt blow away contents
+    result = get(@assets, channel_id, first_asset)
+    assert_equal 'stub-image-contents', result
+
+    # increment
+    patch_abuse(@assets, channel_id, 20)
+    assert_equal 20, asset_bucket.get_abuse_score(channel_id, first_asset)
+    assert_equal 20, asset_bucket.get_abuse_score(channel_id, second_asset)
+
+    # set to be the same
+    patch_abuse(@assets, channel_id, 20)
+    assert @assets.last_response.successful?
+    assert_equal 20, asset_bucket.get_abuse_score(channel_id, first_asset)
+    assert_equal 20, asset_bucket.get_abuse_score(channel_id, second_asset)
+
+    # non-admin can't decrement
+    patch_abuse(@assets, channel_id, 0)
+    refute @assets.last_response.successful?
+    assert_equal 20, asset_bucket.get_abuse_score(channel_id, first_asset)
+    assert_equal 20, asset_bucket.get_abuse_score(channel_id, second_asset)
+
+    # admin can decrement
+    FilesApi.any_instance.stubs(:admin?).returns(true)
+    patch_abuse(@assets, channel_id, 0)
+    assert @assets.last_response.successful?
+    assert_equal 0, asset_bucket.get_abuse_score(channel_id, first_asset)
+    assert_equal 0, asset_bucket.get_abuse_score(channel_id, second_asset)
+
+    # make sure we didnt blow away contents
+    result = get(@assets, channel_id, first_asset)
+    assert_equal 'stub-image-contents', result
+    FilesApi.any_instance.unstub(:admin?)
+
+    delete(@assets, channel_id, first_asset)
+    delete(@assets, channel_id, second_asset)
+    delete_channel(@channels, channel_id)
+  end
+
+  def test_viewing_abusive_assets
+    _, non_owner_assets = init_apis
+    channel_id = create_channel(@channels)
+
+    _, asset_name = post_file(@assets, channel_id, 'abusive_asset.jpg', 'stub-image-contents', 'image/jpeg')
+
+    # owner can view
+    get(@assets, channel_id, asset_name)
+    assert @assets.last_response.successful?
+
+    # non-owner can view
+    get(non_owner_assets, channel_id, asset_name)
+    assert non_owner_assets.last_response.successful?
+
+    # set abuse
+    patch_abuse(@assets, channel_id, 10)
+
+    # owner can view
+    get(@assets, channel_id, asset_name)
+    assert @assets.last_response.successful?
+
+    # non-owner cannot view
+    get(non_owner_assets, channel_id, asset_name)
+    refute non_owner_assets.last_response.successful?
+
+    # admin can view
+    FilesApi.any_instance.stubs(:admin?).returns(true)
+    get(@assets, channel_id, asset_name)
+    assert @assets.last_response.successful?
+    FilesApi.any_instance.unstub(:admin?)
+
+    # teacher can view
+    FilesApi.any_instance.stubs(:teaces_student?).returns(true)
+    get(@assets, channel_id, asset_name)
+    assert @assets.last_response.successful?
+    FilesApi.any_instance.unstub(:teaces_student?)
+
+    delete(@assets, channel_id, asset_name)
+    delete_channel(@channels, channel_id)
   end
 
   def test_assets_copy_all
-    src_channel_id = create_channel
-    dest_channel_id = create_channel
+    src_channel_id = create_channel(@channels)
+    dest_channel_id = create_channel(@channels)
 
-    image_filename = 'dog.jpg'
+    image_filename = 'çat.jpg'
     image_body = 'stub-image-contents'
-    expected_image_info = {'filename' =>  image_filename, 'category' =>  'image', 'size' =>  image_body.length}
+
     sound_filename = 'woof.mp3'
     sound_body = 'stub-sound-contents'
+
+    _, image_filename = post_file(@assets, src_channel_id, image_filename, image_body, 'image/jpeg')
+    _, sound_filename = post_file(@assets, src_channel_id, sound_filename, sound_body, 'audio/mpeg')
+    patch_abuse(@assets, src_channel_id, 10)
+
+    expected_image_info = {'filename' =>  image_filename, 'category' =>  'image', 'size' =>  image_body.length}
     expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
 
-    put(src_channel_id, image_filename, image_body, 'image/jpeg')
-    put(src_channel_id, sound_filename, sound_body, 'audio/mpeg')
     copy_file_infos = JSON.parse(copy_all(src_channel_id, dest_channel_id))
-    dest_file_infos = JSON.parse(list(dest_channel_id))
+    dest_file_infos = JSON.parse(list(@assets, dest_channel_id))
 
-    assert_fileinfo_equal(expected_image_info, copy_file_infos[0])
-    assert_fileinfo_equal(expected_sound_info, copy_file_infos[1])
-    assert_fileinfo_equal(expected_image_info, dest_file_infos[0])
-    assert_fileinfo_equal(expected_sound_info, dest_file_infos[1])
+    assert_fileinfo_equal(expected_image_info, copy_file_infos[1])
+    assert_fileinfo_equal(expected_sound_info, copy_file_infos[0])
+    assert_fileinfo_equal(expected_image_info, dest_file_infos[1])
+    assert_fileinfo_equal(expected_sound_info, dest_file_infos[0])
 
-    delete(src_channel_id, image_filename)
-    delete(src_channel_id, sound_filename)
-    delete(dest_channel_id, image_filename)
-    delete(dest_channel_id, sound_filename)
-    delete_channel(src_channel_id)
-    delete_channel(dest_channel_id)
+    # abuse score didn't carry over
+    assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, image_filename)
+    assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, sound_filename)
+
+    delete(@assets, src_channel_id, URI.encode(image_filename))
+    delete(@assets, src_channel_id, sound_filename)
+    delete(@assets, dest_channel_id, URI.encode(image_filename))
+    delete(@assets, dest_channel_id, sound_filename)
+    delete_channel(@channels, src_channel_id)
+    delete_channel(@channels, dest_channel_id)
   end
 
-  def test_copy_all_with_no_src
-    copy_all(nil, create_channel)
-    assert @assets.last_response.bad_request?
+  def test_assets_auth
+    owner_channel_id = create_channel(@channels)
+
+    _, non_owner_assets = init_apis
+
+    basename = 'dog.jpg'
+    body = 'stub-image-contents'
+    content_type = 'image/jpeg'
+
+    # post_file create a new file/temp filename, so we post twice using the same file here instead
+    file, filename = create_uploaded_file(basename, body, content_type)
+
+    post(@assets, owner_channel_id, file)
+    assert @assets.last_response.successful?, 'Owner can add a file'
+
+    get(non_owner_assets, owner_channel_id, filename)
+    assert non_owner_assets.last_response.successful?, 'Non-owner can read a file'
+
+    post(non_owner_assets, owner_channel_id, file)
+    assert non_owner_assets.last_response.client_error?, 'Non-owner cannot write a file'
+
+    delete(non_owner_assets, owner_channel_id, filename)
+    refute non_owner_assets.last_response.successful?, 'Non-owner cannot delete a file'
+
+    # other_channel_id isn't owned by either user of the assets API.
+    other_channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
+    other_channel_id = create_channel(other_channels)
+
+    delete(@assets, owner_channel_id, filename)
+
+    delete_channel(other_channels, other_channel_id)
+  end
+
+  def test_assets_quota
+    FilesApi.stub(:max_file_size, 5) do
+      FilesApi.stub(:max_app_size, 10) do
+        channel_id = create_channel(@channels)
+
+        post_file(@assets, channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
+        assert @assets.last_response.client_error?, "Error when file is larger than max file size."
+
+        _, added_filename1 = post_file(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
+        assert @assets.last_response.successful?, "First small file upload is successful."
+
+        _, added_filename2 = post_file(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
+        assert @assets.last_response.successful?, "Second small file upload is successful."
+
+        post_file(@assets, channel_id, "file4.jpg", "ABCD", 'image/jpeg')
+        assert @assets.last_response.client_error?, "Error when exceeding max app size."
+
+        delete(@assets, channel_id, added_filename1)
+        delete(@assets, channel_id, added_filename2)
+
+        assert (JSON.parse(list(@assets, channel_id)).length == 0), "No unexpected assets were written to storage."
+
+        delete_channel(@channels, channel_id)
+      end
+    end
+  end
+
+  def test_assets_quota_newrelic_logging
+    FilesApi.stub(:max_file_size, 5) do
+      FilesApi.stub(:max_app_size, 10) do
+        CDO.stub(:newrelic_logging, true) do
+          channel_id = create_channel(@channels)
+
+          post_file(@assets, channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
+          assert @assets.last_response.client_error?, "Error when file is larger than max file size."
+
+          assert NewRelic::Agent.metrics.length == 1, 'one custom metric recorded'
+          assert NewRelic::Agent.metrics[0].first == 'Custom/FilesApi/FileTooLarge_assets', 'FileTooLarge metric recorded'
+          assert NewRelic::Agent.metrics[0].last == 1, 'FileTooLarge metric value 1'
+
+          _, filetodelete1 = post_file(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
+          assert @assets.last_response.successful?, "First small file upload is successful."
+
+          assert NewRelic::Agent.metrics.length == 1, 'still only one custom metric recorded'
+
+          _, filetodelete2 = post_file(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
+          assert @assets.last_response.successful?, "Second small file upload is successful."
+
+          assert NewRelic::Agent.metrics.length == 2, 'two custom metrics recorded'
+          assert NewRelic::Agent.metrics[1].first == 'Custom/FilesApi/QuotaCrossedHalfUsed_assets', 'QuotaCrossedHalfUsed metric recorded'
+          assert NewRelic::Agent.metrics[1].last == 1, 'QuotaCrossedHalfUsed metric value 1'
+          assert NewRelic::Agent.events.length == 1, 'one custom event recorded'
+          assert NewRelic::Agent.events[0].first == 'FilesApiQuotaCrossedHalfUsed', 'QuotaCrossedHalfUsed event recorded'
+
+          post_file(@assets, channel_id, "file4.jpg", "ABCD", 'image/jpeg')
+          assert @assets.last_response.client_error?, "Error when exceeding max app size."
+
+          assert NewRelic::Agent.metrics.length == 3, 'three custom metrics recorded'
+          assert NewRelic::Agent.metrics[2].first == 'Custom/FilesApi/QuotaExceeded_assets', 'QuotaExceeded metric recorded'
+          assert NewRelic::Agent.metrics[2].last == 1, 'QuotaExceeded metric value 1'
+          assert NewRelic::Agent.events.length == 2, 'two custom events recorded'
+          assert NewRelic::Agent.events[1].first == 'FilesApiQuotaExceeded', 'QuotaExceeded event recorded'
+
+          delete(@assets, channel_id, filetodelete1)
+          delete(@assets, channel_id, filetodelete2)
+
+          assert (JSON.parse(list(@assets, channel_id)).length == 0), "No unexpected assets were written to storage."
+          delete_channel(@channels, channel_id)
+        end
+      end
+    end
+  end
+
+  def test_asset_last_modified
+    channel = create_channel(@channels)
+
+    file, filename = create_uploaded_file('test.png', 'version 1', 'image/png')
+
+    post @assets, channel, file
+    get @assets, channel, filename
+    v1_last_modified = @assets.last_response.headers['Last-Modified']
+
+    sleep 1
+
+    post @assets, channel, file
+    get @assets, channel, filename, '', 'HTTP_IF_MODIFIED_SINCE' => v1_last_modified
+    assert_equal 200, @assets.last_response.status
+    v2_last_modified = @assets.last_response.headers['Last-Modified']
+
+    get @assets, channel, filename, '', 'HTTP_IF_MODIFIED_SINCE' => v2_last_modified
+    assert_equal 304, @assets.last_response.status
   end
 
   # Methods below this line are test utilities, not actual tests
   private
 
   def init_apis
-    # The Assets API does not *currently* need to share a cookie jar with the Channels API,
-    # but it may once we restrict put, delete and list operations to the channel owner.
-    @channels ||= Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
-    @assets ||= Rack::Test::Session.new(Rack::MockSession.new(FilesApi, "studio.code.org"))
+    channels ||= Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
+
+    # Make sure the assets api has the same storage id cookie used by the channels api.
+    channels.get '/v3/channels'
+    cookies = channels.last_response.headers['Set-Cookie']
+    assets_mock_session = Rack::MockSession.new(FilesApi, "studio.code.org")
+    assets_mock_session.cookie_jar.merge(cookies)
+    assets ||= Rack::Test::Session.new(assets_mock_session)
+
+    [channels, assets]
   end
 
-  def create_channel
-    @channels.post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    @channels.last_response.location.split('/').last
+  def create_channel(channels)
+    channels.post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channels.last_response.location.split('/').last
   end
 
-  def delete_channel(channel_id)
-    @channels.delete "/v3/channels/#{channel_id}"
-    assert @channels.last_response.successful?
+  def delete_channel(channels, channel_id)
+    channels.delete "/v3/channels/#{channel_id}"
+    assert channels.last_response.successful?
   end
 
   def ensure_aws_credentials(channel_id)
-    list(channel_id)
-    credentials_missing =
-        !@assets.last_response.successful? &&
-            @assets.last_response.body.index('Aws::Errors::MissingCredentialsError')
-    credentials_msg =
-        "Aws::Errors::MissingCredentialsError: if you are running these tests locally,\n"\
-          "follow these instructions to configure your AWS credentials and try again:\n"\
-          "http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html"
+    list(@assets, channel_id)
+    credentials_missing = !@assets.last_response.successful? &&
+      @assets.last_response.body.index('Aws::Errors::MissingCredentialsError')
+    credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
+      Aws::Errors::MissingCredentialsError: if you are running these tests locally,
+      follow these instructions to configure your AWS credentials and try again:
+      http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html
+    TEXT
     flunk credentials_msg if credentials_missing
   end
 
-  def list(channel_id)
-    @assets.get("/v3/assets/#{channel_id}").body
+  def list(assets, channel_id)
+    assets.get("/v3/assets/#{channel_id}").body
   end
 
-  def put(channel_id, filename, body, content_type)
-    @assets.put("/v3/assets/#{channel_id}/#{filename}", body, 'CONTENT_TYPE' => content_type).body
+  def put(assets, channel_id, filename, body, content_type)
+    assets.put("/v3/assets/#{channel_id}/#{filename}", body, 'CONTENT_TYPE' => content_type).body
   end
 
-  def get(channel_id, filename)
-    @assets.get "/v3/assets/#{channel_id}/#{filename}"
-    @assets.last_response.body
+  def post(assets, channel_id, uploaded_file)
+    body = { files: [uploaded_file] }
+    assets.post("/v3/assets/#{channel_id}/", body, 'CONTENT_TYPE' => 'multipart/form-data').body
   end
 
-  def delete(channel_id, filename)
-    @assets.delete "/v3/assets/#{channel_id}/#{filename}"
+  def patch_abuse(assets, channel_id, abuse_score)
+    assets.patch("/v3/assets/#{channel_id}/?abuse_score=#{abuse_score}").body
+  end
+
+  def get(assets, channel_id, filename, body = '', headers = {})
+    assets.get "/v3/assets/#{channel_id}/#{filename}", body, headers
+    assets.last_response.body
+  end
+
+  def delete(assets, channel_id, filename)
+    assets.delete "/v3/assets/#{channel_id}/#{filename}"
   end
 
   def copy_all(src_channel_id, dest_channel_id)
-    @assets.put("/v3/assets/#{dest_channel_id}?src=#{src_channel_id}").body
+    AssetBucket.new.copy_files(src_channel_id, dest_channel_id).to_json
   end
 
   def assert_fileinfo_equal(expected, actual)
@@ -161,4 +416,17 @@ class AssetsTest < Minitest::Unit::TestCase
     assert_equal(expected['size'], actual['size'])
   end
 
+  def create_uploaded_file(filename, contents, content_type)
+    basename = [filename.split('.')[0], '.' + filename.split('.')[1]]
+    tmp = Tempfile.new(basename)
+    tmp.write(contents)
+    tmp.rewind
+    [Rack::Test::UploadedFile.new(tmp.path, content_type),  ::File.basename(tmp.path)]
+  end
+
+  def post_file(assets, channel_id, filename, contents, content_type)
+    file, tmp_filename = create_uploaded_file(filename, contents, content_type)
+    response = post(assets, channel_id, file)
+    [response, tmp_filename]
+  end
 end

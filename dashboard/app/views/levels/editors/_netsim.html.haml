@@ -31,10 +31,12 @@
         to students.
     %tr
       %td= boolean_check_box f, :show_log_browser_button
-      %td= f.label :show_log_browser_button, 'Show "Log Browser" Button'
+      %td= f.label :show_log_browser_button, 'Show "Log Browser" Button in Lobby'
       %td
-        Whether the Log Browser (which exposes logs for all routers) will be
-        availble, both from the lobby and from the Router tab.
+        Whether the Log Browser is available from the lobby.
+        <br />Opening the browser from the lobby shows logs from all routers.
+        <br />Note: The button will <em>always</em> show up on the Router tab
+        (if present) regardless of this setting.
 
 
 %h3 Simulation Configuration
@@ -98,7 +100,7 @@
   = f.label :address_format, 'Address format'
   %p
     Specify how many bits wide an address is within the simulation and how it
-    should be divided up into a hierarchy. This format will be applied to any 
+    should be divided up into a hierarchy. This format will be applied to any
     "fromAddress" or "toAddress" header fields in the packet specification.
     Default is "4".
   = f.text_field :address_format, placeholder: 'e.g. 8.8.8.8'

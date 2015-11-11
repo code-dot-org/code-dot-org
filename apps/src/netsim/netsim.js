@@ -9,13 +9,13 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
  maxstatements: 200
 */
 /* global -Blockly */
-/* global $ */
 /* global sendReport */
 /* global confirm */
 'use strict';
@@ -219,6 +219,13 @@ NetSim.prototype.init = function(config) {
   this.pusherApplicationKey = config.pusherApplicationKey;
 
   /**
+   * The strict maximum number of routers per shard.  Note the real maximum
+   * may be lower if bounded by addressable space.
+   * @type {number}
+   */
+  this.globalMaxRouters = config.netsimMaxRouters;
+
+  /**
    * Configuration for reporting level completion
    * @type {Object}
    */
@@ -247,7 +254,7 @@ NetSim.prototype.init = function(config) {
 
   // Create netsim lobby widget in page
   this.currentUser_.whenReady(function () {
-    this.initWithUserName_(this.currentUser_);
+    this.initWithUser_(this.currentUser_);
   }.bind(this));
 
   // Begin the main simulation loop
@@ -308,7 +315,7 @@ NetSim.prototype.shouldShowAnyTabs = function () {
  * @param {DashboardUser} user
  * @private
  */
-NetSim.prototype.initWithUserName_ = function (user) {
+NetSim.prototype.initWithUser_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
   // Create log panels according to level configuration
@@ -613,12 +620,13 @@ NetSim.prototype.getConnectedRouter = function () {
  * Establish a connection between the local client and the given
  * simulated router.
  * @param {number} routerID
+ * @param {NodeStyleCallback} onComplete
  */
-NetSim.prototype.connectToRouter = function (routerID) {
+NetSim.prototype.connectToRouter = function (routerID, onComplete) {
   if (this.isConnectedToRemote()) {
     // Disconnect and try to connect again when we're done.
     logger.warn("Auto-disconnecting from previous router.");
-    this.disconnectFromRemote(this.connectToRouter.bind(this, routerID));
+    this.disconnectFromRemote(this.connectToRouter.bind(this, routerID, onComplete));
     return;
   }
 
@@ -627,6 +635,7 @@ NetSim.prototype.connectToRouter = function (routerID) {
     if (err) {
       logger.warn('Failed to find router with ID ' + routerID + '; ' +
           err.message);
+      onComplete(err);
       return;
     }
 
@@ -635,6 +644,7 @@ NetSim.prototype.connectToRouter = function (routerID) {
         logger.warn('Failed to connect to ' + router.getDisplayName() + '; ' +
             err.message);
       }
+      onComplete(err, router);
     });
   });
 };
@@ -1010,28 +1020,9 @@ NetSim.prototype.debouncedResizeFooter = function () {
  * Re-render parts of the page that can be re-rendered in place.
  */
 NetSim.prototype.render = function () {
-  var isConnected, clientStatus, myHostname, myAddress, remoteNodeName,
-      shareLink;
-
-  isConnected = false;
-  clientStatus = i18n.disconnected();
-  if (this.myNode) {
-    clientStatus = 'In Lobby';
-    myHostname = this.myNode.getHostname();
-    if (this.myNode.myWire) {
-      myAddress = this.myNode.myWire.localAddress;
-    }
-  }
-
   if (this.isConnectedToRemote()) {
-    isConnected = true;
-    clientStatus = i18n.connected();
-    remoteNodeName = this.getConnectedRemoteNode().getDisplayName();
-  }
+    var myAddress = this.myNode.getAddress();
 
-  shareLink = this.lobby_.getShareLink();
-
-  if (this.isConnectedToRemote()) {
     // Swap in 'connected' div
     this.mainContainer_.find('#netsim-disconnected').hide();
     this.mainContainer_.find('#netsim-connected').show();
@@ -1042,12 +1033,10 @@ NetSim.prototype.render = function () {
     // Render left column
     if (this.statusPanel_) {
       this.statusPanel_.render({
-        isConnected: isConnected,
-        statusString: clientStatus,
-        myHostname: myHostname,
+        myHostname: this.myNode.getHostname(),
         myAddress: myAddress,
-        remoteNodeName: remoteNodeName,
-        shareLink: shareLink
+        remoteNodeName: this.getConnectedRemoteNode().getDisplayName(),
+        shareLink: this.lobby_.getShareLink()
       });
     }
   } else {

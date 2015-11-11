@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: stages
+#
+#  id         :integer          not null, primary key
+#  name       :string(255)      not null
+#  position   :integer
+#  script_id  :integer          not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 # Ordered partitioning of script levels within a script
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Game/Stage)
 class Stage < ActiveRecord::Base

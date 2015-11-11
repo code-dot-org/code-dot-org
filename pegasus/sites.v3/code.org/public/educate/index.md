@@ -1,5 +1,6 @@
 ---
 title: Educator Overview
+nav: educate_nav
 ---
 
 <br/>
@@ -14,7 +15,7 @@ title: Educator Overview
 
 The first step to introduce children to computer science is to participate in the Hour of Code, the largest learning campaign in history. In one hour, students (and teachers) can learn that computer science is fun, easy, and accessible at all ages.
 
-[<button>Learn more about Hour of Code</button>](http://hourofcode.com) &nbsp;&nbsp; [<button>How-to guide for educators</button>](http://hourofcode.com/resources/how-to)
+[<button>Learn more about Hour of Code</button>](http://hourofcode.com)
 
 [tight-heading]
 
@@ -124,7 +125,7 @@ Explore and develop complex scientific models through agent-based programming
 <br/>
 A high school course designed to broaden participation in computer science
 
-[AP Computer Science Principles](/educate/csp)
+[Computer Science Principles](/educate/csp) (upcoming AP course)
 <br/>
 A course teaching a wide range of computer science topics, including programming in JavaScript
 

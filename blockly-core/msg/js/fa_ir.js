@@ -23,7 +23,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "قرمز";
 Blockly.Msg.COLOUR_RGB_TITLE = "رنگ آمیزی با";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "یک رنگ با ترکیب مقدار مشخص شده از قرمز، سبز،و آبی ایجاد کنید. همه مقادیر باید بین 0 و 100 باشند.";
-Blockly.Msg.CONFIRM_DELETE_FUNCTION_MESSAGE = "Warning! Are you sure you want to delete %1?";
+Blockly.Msg.CONFIRM_DELETE_FUNCTION_MESSAGE = "هشدار! آیا مطمئنید می خواهید %1 را پاک کنید?";
 Blockly.Msg.CONTRACT_EDITOR_HEADER = "دستور العمل طرح";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "از حلقه خارج شو";
@@ -64,7 +64,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "تا زمانی که یک مق�
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "تا زمانی که یک مقدار صحیح است، چند عبارت را انجام بده.";
 Blockly.Msg.DEFINE_HEADER_DEFINITION = "تعریف";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "تعریف کن";
-Blockly.Msg.DEFINE_FUNCTION_FOR_EXAMPLE = "Define the function below and try again.";
+Blockly.Msg.DEFINE_FUNCTION_FOR_EXAMPLE = "تابع زیر را تعریف کنید و دوباره تلاش کنید.";
 Blockly.Msg.DELETE = "پاک کردن";
 Blockly.Msg.DELETE_BLOCK = "حذف بلوک";
 Blockly.Msg.DELETE_PARAMETER = "حذف پارامتر...";
@@ -98,7 +98,7 @@ Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "متغیر";
 Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "نوع";
 Blockly.Msg.HELP = "راهنما";
 Blockly.Msg.INLINE_INPUTS = "ورودی‌های درون خطی";
-Blockly.Msg.KEEP = "Keep";
+Blockly.Msg.KEEP = "نگه دار";
 Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL = "http://fa.wikipedia.org/wiki/لیست_پیوندی";
 Blockly.Msg.LISTS_CREATE_EMPTY_TITLE = "ایجاد فهرست خالی";
 Blockly.Msg.LISTS_CREATE_EMPTY_TOOLTIP = "فهرستی با طول 0 را بر می‌گرداند، که حاوی هیچ داده ای نیست";
@@ -175,7 +175,7 @@ Blockly.Msg.LOGIC_BOOLEAN_TOOLTIP = "بازگرداندن یکی از مقادی
 Blockly.Msg.LOGIC_BOOLEAN_TRUE = "صحیح";
 Blockly.Msg.LOGIC_COMPARE_HELPURL = "http://fa.wikipedia.org/wiki/%D9%86%D8%A7%D8%A8%D8%B1%D8%A7%D8%A8%D8%B1%DB%8C";
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_EQ = "بازگشت صحیح اگر هر دو ورودی با یکدیگر برابر باشد.";
-Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GT = "اگر مقدار اول از مقدار دوم بزرگتر باشد برگشت صحیح است.";
+Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GT = "بازگرداندن مقدار بولین true اگر ورودی اول  از ورودی دوم بزرگتر باشد.";
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GTE = "اگر ورودی اول بزرگتر یا مساوی ورودی دوم باشد، مقدار بولین true را برمی گرداند.";
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LT = "بازگرداندن مقدار بولین true، اگر ورودی اول کوچکتر از ورودی دوم باشد.";
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LTE = "اگر ورودی اول کوچکتر یا مساوی ورودی دوم باشد، مقدار بولین true را برگردان.";

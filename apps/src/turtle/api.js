@@ -159,6 +159,10 @@ ArtistAPI.prototype.turnLeft = function(angle, id) {
   this.log.push(['RT', -angle, id]);
 };
 
+ArtistAPI.prototype.globalAlpha = function (alpha, id) {
+  this.log.push(['GA', alpha, id]);
+};
+
 ArtistAPI.prototype.penUp = function(id) {
   this.log.push(['PU', id]);
 };

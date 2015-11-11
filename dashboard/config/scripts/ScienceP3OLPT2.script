@@ -1,0 +1,34 @@
+title 'Computer Science in Science PD Phase 3b'
+description "Phase 3 Academic Year Development"
+description_short "Phase 3 Academic Year Development"
+login_required 'true'
+pd 'true'
+
+stage 'Welcome!'
+level 'sciPD3OLP32 intro'
+level 'sciPD2 timeline'
+level 'ECSPD PD details'
+level 'PD check your progress'
+level 'sciPD3 mods'
+
+stage 'Earth Science Challenges'
+level 'challenges sample'
+level 'challenges sample 2'
+
+stage 'Life Science Challenges'
+level 'challenges sample 3'
+level 'challenges sample 4'
+level 'challenges sample 5'
+
+stage 'Physical Science Challenges'
+level 'challenges sample 6'
+level 'challenges sample 7'
+
+stage 'Thinking About Implementation'
+level 'sciPD3 implement1'
+level 'sciPD3 implement2'
+
+stage 'Wrap-Up'
+level 'sciPD3 thanks'
+level 'sciPD3 reflection'
+level 'sciPD3 end'

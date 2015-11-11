@@ -40,16 +40,16 @@ Urmăriți Code.org pe rețelele de socializare:
 Te rugăm ajută la promovarea tehnologiei computerelor în comunitatea ta. 5% din venituri vor fi utilizate de către Code.org pentru a aduce Tehnologia Computerelor în mai multe școli. 
 
 <a href="http://store.code.org/">
-<img src="http://www.code.org/images/swag1.jpg" width=150/>
-<img src="http://www.code.org/images/swag4.jpg" width=150/>
-<img src="http://www.code.org/images/swag2.jpg" width=150/>
-<img src="http://www.code.org/images/swag6.jpg" width=150/>
-<img src="http://www.code.org/images/swag3.jpg" width=150/>
+<img src="https://www.code.org/images/swag1.jpg" width=150/>
+<img src="https://www.code.org/images/swag4.jpg" width=150/>
+<img src="https://www.code.org/images/swag2.jpg" width=150/>
+<img src="https://www.code.org/images/swag6.jpg" width=150/>
+<img src="https://www.code.org/images/swag3.jpg" width=150/>
 </a>
 
 
 
 
 <br /><a href="http://www.guidestar.org/organizations/46-0858543/code-org.aspx" target="_blank">
-    <img src="http://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
+    <img src="https://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
 </a>

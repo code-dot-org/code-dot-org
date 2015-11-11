@@ -1,16 +1,25 @@
 require 'selenium/webdriver'
+require 'cgi'
+require 'httparty'
 
 $browser_configs = JSON.load(open("browsers.json"))
 
-if ENV['TEST_LOCAL'] == 'true'
-  # This drives a local installation of ChromeDriver running on port 9515, instead of BrowserStack.
-  browser = Selenium::WebDriver.for :chrome, :url=>"http://127.0.0.1:9515"
+MAX_CONNECT_RETRIES = 3
 
-  if ENV['MAXIMIZE_LOCAL'] == 'true'
+def local_browser
+  browser = Selenium::WebDriver.for :chrome, url: "http://127.0.0.1:9515"
+  if ENV['MAXIMIZE_LOCAL']
     max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")
     browser.manage.window.resize_to(max_width, max_height)
   end
-else
+  browser
+end
+
+def slow_browser?
+  ['iPhone', 'iPad'].include? ENV['BROWSER_CONFIG']
+end
+
+def saucelabs_browser
   if CDO.saucelabs_username.blank?
     raise "Please define CDO.saucelabs_username"
   end
@@ -32,42 +41,77 @@ else
   capabilities[:name] = ENV['TEST_RUN_NAME']
   capabilities[:build] = ENV['BUILD']
 
-  p "Capabilities: #{capabilities.inspect}"
+  puts "DEBUG: Capabilities: #{CGI::escapeHTML capabilities.inspect}"
 
-  Time.now.tap do |start_time|
-    browser = Selenium::WebDriver.for(:remote,
-                                      url: url,
-                                      desired_capabilities: capabilities,
-                                      http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
-    p "Got browser in #{Time.now - start_time}s"
+  browser = nil
+  Time.now.to_i.tap do |start_time|
+    retries = 0
+    begin
+      browser = Selenium::WebDriver.for(:remote,
+                                        url: url,
+                                        desired_capabilities: capabilities,
+                                        http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
+    rescue URI::InvalidURIError, Net::ReadTimeout
+      raise if retries >= MAX_CONNECT_RETRIES
+      retries += 1
+      retry
+    end
+    puts "DEBUG: Got browser in #{Time.now.to_i - start_time}s with #{retries} retries"
   end
 
-  p "Browser: #{browser}"
+  puts "DEBUG: Browser: #{CGI::escapeHTML browser.inspect}"
 
   # Maximize the window on desktop, as some tests require 1280px width.
   unless ENV['MOBILE']
     max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")
     browser.manage.window.resize_to(max_width, max_height)
   end
+
+  # let's allow much longer timeouts when searching for an element
+  browser.manage.timeouts.implicit_wait = 2.minutes
+  browser.send(:bridge).setScriptTimeout(1.minute * 1000)
+
+  browser
 end
 
-# let's allow much longer timeouts when searching for an element
-browser.manage.timeouts.implicit_wait = 2.minutes
-browser.send(:bridge).setScriptTimeout(1.minute * 1000)
+def get_browser
+  if ENV['TEST_LOCAL'] == 'true'
+    # This drives a local installation of ChromeDriver running on port 9515, instead of Saucelabs.
+    local_browser
+  else
+    saucelabs_browser
+  end
+end
+
+
+browser = nil
 
 Before do
-  @browser = browser
+  puts "DEBUG: @browser == #{CGI::escapeHTML @browser.inspect}"
+
+  if slow_browser?
+    browser ||= get_browser
+    p 'slow browser, using existing'
+    @browser ||= browser
+  else
+    p 'fast browser, getting a new one'
+    @browser = get_browser
+  end
   @browser.manage.delete_all_cookies
 
-  @sauce_session_id = @browser.send(:bridge).capabilities["webdriver.remote.sessionid"]
-  puts 'visual log on sauce labs: https://saucelabs.com/tests/' + @sauce_session_id
+  debug_cookies(@browser.manage.all_cookies) if @browser
+
+  unless ENV['TEST_LOCAL'] == 'true'
+    unless @sauce_session_id
+      @sauce_session_id = @browser.send(:bridge).capabilities["webdriver.remote.sessionid"]
+      visual_log_url = 'https://saucelabs.com/tests/' + @sauce_session_id
+      puts "visual log on sauce labs: <a href='#{visual_log_url}'>#{visual_log_url}</a>"
+    end
+  end
 end
 
 def log_result(result)
-  # Do something after each scenario.
-  # The +scenario+ argument is optional, but
-  # if you use it, you can inspect status with
-  # the #failed?, #passed? and #exception methods.
+  return if ENV['TEST_LOCAL'] == 'true' || @sauce_session_id.nil?
 
   url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{@sauce_session_id}"
   HTTParty.put(url,
@@ -77,11 +121,18 @@ end
 
 all_passed = true
 
+# Do something after each scenario.
+# The +scenario+ argument is optional, but
+# if you use it, you can inspect status with
+# the #failed?, #passed? and #exception methods.
+
 After do |scenario|
   all_passed = all_passed && scenario.passed?
   log_result all_passed
+
+  @browser.quit unless @browser.nil? || slow_browser?
 end
 
 at_exit do
-  browser.quit
+  browser.quit unless browser.nil?
 end

@@ -1,3 +1,25 @@
+# == Schema Information
+#
+# Table name: levels
+#
+#  id                       :integer          not null, primary key
+#  game_id                  :integer
+#  name                     :string(255)      not null
+#  created_at               :datetime
+#  updated_at               :datetime
+#  level_num                :string(255)
+#  ideal_level_source_id    :integer
+#  solution_level_source_id :integer
+#  user_id                  :integer
+#  properties               :text(65535)
+#  type                     :string(255)
+#  md5                      :string(255)
+#
+# Indexes
+#
+#  index_levels_on_game_id  (game_id)
+#
+
 class Studio < Grid
   serialized_attrs %w(
     first_sprite_index
@@ -28,6 +50,9 @@ class Studio < Grid
     slow_js_execution_factor
     marker_height
     marker_width
+    delay_completion
+    floating_score
+    goal_override
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -38,7 +63,7 @@ class Studio < Grid
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['studio', 'infinity']
+    ['studio', 'infinity', 'hoc2015']
   end
 
   def self.default_success_condition

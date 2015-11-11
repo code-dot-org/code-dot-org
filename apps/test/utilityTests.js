@@ -7,40 +7,38 @@ var utils = require('@cdo/apps/utils');
 var requiredBlockUtils = require('@cdo/apps/required_block_utils');
 var blockUtils = require('@cdo/apps/block_utils');
 var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
-var assertThrows = testUtils.assertThrows;
 var _ = require('lodash');
 var mazeUtils = require('@cdo/apps/maze/mazeUtils');
 
 describe("String.prototype.repeat", function () {
   it ("returns a string that is n copies of the original string", function () {
-    assertEqual('aaa', 'a'.repeat(3));
-    assertEqual('abcabc', 'abc'.repeat(2));
+    assert.equal('aaa', 'a'.repeat(3));
+    assert.equal('abcabc', 'abc'.repeat(2));
   });
 
   it ("uses floor of count for non-integer counts", function () {
-    assertEqual('aaa', 'a'.repeat(3.1));
-    assertEqual('aaa', 'a'.repeat(3.9));
+    assert.equal('aaa', 'a'.repeat(3.1));
+    assert.equal('aaa', 'a'.repeat(3.9));
   });
 
   it ("returns empty string when given a zero count", function () {
-    assertEqual('', 'a'.repeat(0));
+    assert.equal('', 'a'.repeat(0));
   });
 
   it ("returns empty string when repeating an empty string", function () {
-    assertEqual('', ''.repeat(20));
+    assert.equal('', ''.repeat(20));
   });
 
   it ("throws RangeError when given a negative count", function () {
-    assertThrows(RangeError, function () {
+    assert.throws(function () {
       'a'.repeat(-1);
-    });
+    }, RangeError);
   });
 
   it ("throws RangeError when given an infinity count", function () {
-    assertThrows(RangeError, function () {
+    assert.throws(function () {
       'a'.repeat(Infinity);
-    });
+    }, RangeError);
   });
 
   // Note: Was going to text maximum output string length, but implementation

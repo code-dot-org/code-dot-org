@@ -1,5 +1,5 @@
 class ScriptsController < ApplicationController
-  before_filter :can_modify?, except: :show
+  before_filter :require_levelbuilder_mode, except: :show
   before_filter :authenticate_user!, except: :show
   check_authorization
   before_action :set_script, only: [:show, :edit, :update, :destroy]
@@ -62,11 +62,6 @@ class ScriptsController < ApplicationController
   end
 
   private
-  def can_modify?
-    unless Rails.env.levelbuilder? || Rails.env.development?
-      raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
-    end
-  end
 
   def set_script_file
     Dir.chdir(Rails.root) do

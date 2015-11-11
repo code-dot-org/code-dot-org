@@ -5,11 +5,14 @@
 .field
   = f.label :app_width
   %p Integer representing the width of the app in pixel coordinates. Default is 320.
-  = f.number_field :app_width
+  = f.number_field :app_width, disabled: true
 .field
   = f.label :app_height
-  %p Integer representing the height of the app in pixel coordinates. Default is 480.
-  = f.number_field :app_height
+  %p
+    Integer representing the height of the app in pixel coordinates. Default is 480. Note:
+    this number includes 30 pixels of space reserved for the footer (i.e. if I make the
+    height 30, it will consist entirely of a footer).
+  = f.number_field :app_height, disabled: true
 .field
   = f.label :show_turtle_before_run, 'Show turtle before Run is pressed'
   = boolean_check_box f, :show_turtle_before_run
@@ -26,8 +29,19 @@
   = f.label :autocomplete_palette_apis_only, 'Autocomplete palette APIs only'
   = boolean_check_box f, :autocomplete_palette_apis_only
 .field
+  = f.label :execute_palette_apis_only, 'Execute palette APIs only'
+  = boolean_check_box f, :execute_palette_apis_only
+.field
   = f.label :beginner_mode, 'Beginner mode for loops'
   = boolean_check_box f, :beginner_mode
+.field
+  = f.label :submittable, 'Submittable'
+  %p
+    If checked, students with teachers can "submit" a solution for
+    grading. Submitting a solution means that it is marked as
+    submitted and they can no longer edit it (unless a teacher returns
+    it).
+  = boolean_check_box f, :submittable
 .field
   = f.label :start_html, 'Starting design mode html'
   %p
@@ -47,9 +61,53 @@
     Go to
     = link_to applab_project_projects_url(host: 'studio.code.org', port: 443, protocol: :https), applab_project_projects_url(host: 'studio.code.org', port: 443, protocol: :https)
     to build your example, then copy the channel token (the sequence of letters and numbers after /applab)
+    Need more help? View this
+    = link_to 'screencast', 'https://www.dropbox.com/s/zpmszi9eenvwql7/applab%20example%20screencast.mp4?dl=0', target: '_blank'
   - unless f.object.examples.blank?
     - f.object.examples.each do |example|
       - next if example.blank?
       = text_field_tag "level[examples][]", example
   - 5.times do
     = text_field_tag "level[examples][]"
+
+.field
+  = f.label 'Table Data'
+  You can copy the data array from the debug view of code.org/v3/edit-csp-table/
+  %pre
+    = preserve do
+      :escaped
+        Example:
+        {
+          "table_name": [{ "name": "Trevor", "age": 30 }, { "name": "Hadi", "age": 72}],
+          "table_name2": [{ "city": "Seattle", "state": "WA" }, { "city": "Chicago", "state": "IL"}]
+        }
+  = f.text_area 'data_tables', placeholder: 'Insert JSON Data', rows: 4, value: @level.data_tables or ''
+  :javascript
+    codeMirror('data_tables', 'javascript');
+
+.field
+  = f.label 'Key-Value Data'
+  You can copy the data array from the debug view of code.org/v3/edit-csp-properties/
+  %pre
+    = preserve do
+      :escaped
+        Example:
+        {
+          "click_count": 5,
+          "button_color": "blue"
+        }
+  = f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
+  :javascript
+    codeMirror('data_properties', 'javascript');
+
+.field
+  = f.label 'Hide View Data Button'
+  = boolean_check_box f, :hide_view_data_button
+
+.field
+  = f.label 'Hide Source'
+  = boolean_check_box f, :hide_source
+
+.field
+  =f.label 'Disable code debugger (Console is still enabled)'
+  = boolean_check_box f, :debugger_disabled

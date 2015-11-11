@@ -1,4 +1,10 @@
+---
 
+Titel: algemene gebruiksvoorwaarden
+
+---
+
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
 
 # Algemene gebruikersvoorwaarden
 
@@ -16,13 +22,13 @@ Deze voorwaarden zijn onderhevig aan verandering. U gaat akkoord u te houden aan
 
 Sommige diensten kunnen worden onderworpen aan extra richtlijnen, regels of voorwaarden ("**Aanvullende voorwaarden**") en gebruik van dergelijke diensten is verbonden met uw akkoord met de aanvullende voorwaarden. Als er een conflict is tussen deze voorwaarden is en de aanvullende voorwaarden, gelden de aanvullende voorwaarden voor die specifieke dienst, tenzij de aanvullende voorwaarden expliciet vermelden dat de algemene voorwaarden van toepassing zijn.
 
-### Kinderen jonger dan 13 jaar
+### Children Under Age 13
 
 We ondernemen stappen om het verzamelen van persoonlijke gegevens van gebruikers jonger dan 13 zo veel mogelijk te beperken zoals aangegeven in het Code.org [privacybeleid](http://code.org/privacy). Als u jonger dan 13 bent, raden we u aan om de goedkeuring te krijgen van een ouder of wettelijke voogd voordat u een account maakt op Code.org. Code.org laat toe dat bepaalde vertegenwoordigers van schooldistricten en scholen, zoals leraren, beheerders, adviseurs en andere opvoeders (een "**opvoeder** voor de") te verbinden met studenten via de diensten teneinde tutorial, educatieve en soortgelijke diensten te voorzien. Als u leraar bent kan u accounts registreren voor een of meerdere van uw leerlingen op de diensten.
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Jouw account
+### Your Account
 
 Als u een account voor diensten aanmaken, bent u verantwoordelijk voor de veiligheid van uw account en uw wachtwoord. Als u gebruik maakt van een account u toegewezen door een leraar, kan het gebeuren dat de leraar in staat is om toegang te hebben tot deze account en deze zelfs buiten gebruik kan stellen.
 
@@ -34,7 +40,7 @@ Uw privacy is belangrijk voor ons. Code.org de [Privacy-beleid](http://code.org/
 
 Als je een leerling bent die gebruik maakt van een account die geregistreerd werd door een leraar, ga je er mee akkoord dat Code.org gegevens deelt met de leraars die gekoppeld zijn aan je account. Bent u een opvoeder, u gaat ermee akkoord niet te delen student informatie die u ontvangt van Code.org met iemand anders dan de gemachtigden van de klas, school district, of andere onderwijsinstelling die u vertegenwoordigt.
 
-### Gebruiker gegenereerde inhoud - Management; Licentieverlening; Verklaringen en garanties
+### User Generated Content - Management; License Grant; Representations and Warranties
 
 Code.org kunnen nu of in de toekomst toestaan u en andere gebruikers voor het posten van computercode (inclusief zowel bron- en object code), informatie, tekst, graphics, notities, vragen, opmerkingen, beoordelingen, beoordelingen, afbeeldingen en video's of andere mededelingen (collectief, "**gebruikersinhoud**") naar de diensten. U begrijpt dat wanneer dergelijke Gebruikersinhoud gepubliceerd wordt, Code.org de vertrouwelijkheid met betrekking tot de inzendingen niet kan garanderen.
 
@@ -48,17 +54,17 @@ By submitting or distributing User Content through the Services or directly to C
 
 Bovendien verleent u, door het indienen of verspreiden van gebruikerscontent via de diensten, aan elke gebruiker van de diensten een niet exclusieve licententie tot toegang en gebruik van uw gebruikersinhoud.
 
-### Gebruikersinhoud verklaringen en garanties
+### User Content Representations and Warranties
 
 U alleen bent verantwoordelijk voor de door u geposte gebruikersinhoud op de diensten en voor de gevolgen van het posten of publiceren. Door het uploaden,indienen,maken of publiceren van uw gebruikersinhoud aan of door de diensten, verklaart en garandeert u dat : (1) u de maker en eigenaar bent van uw gebruikersinhoud en dat u de bevoegdheid hebt of de nodige vergunningen, rechten, toestemmingen en machtigingen hebt mode Gebruikersinhoud te publiceren die u indient; (2) uw Gebruikersinhoud geen recht van enige derde schendt, met inbegrip van het copyright, handelsmerk, patent, handelsgeheim, moreel recht, privacy recht, recht van publiciteit of andere intellectuele eigendommen of eigendomsrecht of (b) laster,smaad, inbreuk op de privacy, publiciteits- of andere eigendomsrechten van andere personen;(3)uw Gebruikersinhoud bevat geen virussen,adware,spyware, wormen of andere schadelijke code.
 
-### Beperkingen op inhoud en gebruik van de diensten
+### Restrictions on Content and Use of the Services
 
 Wij eigenen ons het recht toe om gelijk wanneer Gebruikersinhoud te verwijderen of te weigeren om dezete verdelen op de website(zonder verplichting van onze kant) of om gebruikers te schorsen of te verwijderen, zonder aansprakelijkheid jegens u. We also reserve the right to access, read, preserve, and disclose any information as we reasonably believe is necessary to (i) satisfy any applicable law, regulation, legal process or governmental request, (ii) enforce the Terms, including investigation of potential violations hereof, (iii) detect, prevent, or otherwise address fraud, security or technical issues, (iv) respond to user support requests, or (v) protect the rights, property or safety of Code.org, its users and the public.
 
 You may not do any of the following while accessing or using the Services: (i) access, tamper with, or use non-public areas of the Services, Code.org’s computer systems, or the technical delivery systems of Code.org’s providers; (ii) probe, scan, or test the vulnerability of any system or network or breach or circumvent any security or authentication measures; (iii) access or search or attempt to access or search the Services by any means (automated or otherwise) other than through currently available, published interfaces that are provided by Code.org (and only pursuant to those terms and conditions), unless you have been specifically allowed to do so in a separate agreement with Code.org (NOTE: crawling the Services is permissible if done in accordance with the provisions of the robots.txt file, however, scraping the Services without the prior consent of Code.org is expressly prohibited); (iv) forge any TCP/IP packet header or any part of the header information in any email or posting, or in any way use the Services to send altered, deceptive or false source-identifying information; or (v) interfere with, or disrupt, (or attempt to do so), the access of any user, host or network, including, without limitation, bullying or harassing, sending a virus, overloading, flooding, spamming, mail-bombing the Services, or by scripting the creation of Content in such a manner as to interfere with or create an undue burden on the Services.
 
-### Uw licentie voor het gebruik Code.org video's, Handleidingen, gegevens en API 's
+### Your License to Use Code.org Videos, Tutorials, Data, and APIs
 
 Code.org’s [library of videos](http://youtube.com/user/CodeOrg) may be redistributed freely on the express conditions that (1) the videos are redistributed AS-IS, (using the embedded video player provided, or download link IF provided) with attribution to Code.org (2) the videos are not incorporated into any mash-ups, (3) the videos are used for computer science education purposes, and (4) the use of the video does not constitute an endorsement of a 3rd party brand, service or product and (5) if access to such redistributed Content or Services is provided free of charge.
 
@@ -74,7 +80,7 @@ De [Code.org JSON API en de database van scholen](http://code.org/learn/find-sch
 
 Alle gegevens verstrekt door The Conference Board wordt verstrekt "as is" met geen enkele garantie, en worden beschermd door Amerikaanse en internationale auteursrechtwetten. The data displayed are provided for informational purposes only and may only be accessed, reviewed, published, and/or used in accordance with, and the permission of, The Conference Board consistent with the Terms of Use displayed at [www.conference-board.org](http://www.conference-board.org). Such data may not be extracted for use in a database, used to create a derivative work, or otherwise misused by any means without express written permission from The Conference Board, except that you may make limited non-commercial use as consistent with Fair Use under Section 107 of the Copyright Act of 1976. The Conference Board® en The Conference Board Help Wanted OnLine® zijn geregistreerde handelsmerken van The Conference Board. The Conference Board behoudt alle rechten in en op zijn handelsmerken. Verdere informatie over The Conference Board Help Wanted OnLine ® kan [hier](https://www.conference-board.org/data/helpwantedonline.cfm) worden gevonden.
 
-### Copyright beleid
+### Copyright Policy
 
 Code.org respecteert de intellectuele eigendomsrechten van anderen en verwacht dat gebruikers van de diensten hetzelfde doen. We zullen reageren op meldingen van vermeende inbreuk op auteursrechten, die voldoen aan toepasselijk recht en naar behoren worden verstrekt aan ons. If you believe that your work has been copied in a way that constitutes copyright infringement, please provide us with the following information: (i) a physical or electronic signature of the copyright owner or a person authorized to act on their behalf; (ii) identification of the copyrighted work claimed to have been infringed; (iii) identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit us to locate the material; (iv) your contact information, including your address, telephone number, and an email address; (v) a statement by you that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law; and (vi) a statement that the information in the notification is accurate, and, under penalty of perjury, that you are authorized to act on behalf of the copyright owner.
 
@@ -84,7 +90,7 @@ Het is Code.org's beleid om te reageren op kennisgevingen in verband met vermeen
 
 Wij behouden ons het recht voor om inhoud waarvan beweerd wordt dat deze een inbreuk is zonder voorafgaande kennisgeving te verwijderen, dit volgens eigen goeddunken en zonder aansprakelijkheid naar u toe. In voorkomend geval, zal Code.org een gebruikersaccount beëindigen indien de gebruiker herhaaldelijk inbreuken heeft gepleegd. Om een schending van het auteursrecht te melden, neem contact met ons op. Our copyright agent for notice of claims of copyright infringement can be reached by directing an e-mail to the copyright agent at copyright@code.org.
 
-### Code.org intellectuele-eigendomsrechten, en uw licentie om de diensten te gebruiken
+### Code.org Intellectual Property Rights, and Your License to Use the Services
 
 Alle rechten, titels en belangen in en op de diensten (met uitzondering van inhoud die door gebruikers wordt verstrekt) zijn en blijven het exclusieve eigendom van Code.org en haar licentiegevers. De diensten zijn beschermd door copyright, handelsmerk, handelsnamen, octrooi- en andere wetten van de Verenigde Staten. The content, information, data, designs, code, and materials associated with the Services (“**Content**”) are protected by intellectual property and other laws. You must comply with all such laws and applicable copyright, trademark or other legal notices or restrictions. Nothing in the Terms gives you a right to use the Code.org name or any of the Code.org trademarks, logos, domain names, and other distinctive brand features. Any feedback, comments, or suggestions you may provide regarding Code.org, or the Services is entirely voluntary and we will be free to use such feedback, comments or suggestions as we see fit and without any obligation to you.
 
@@ -96,7 +102,7 @@ Het CODE® logo ontwerp is een gedeponeerd handelsmerk van Code.org. Je mag het 
 
 Code.org does not represent or warrant that the Services will be error-free, free of viruses or other harmful components, or that defects will be corrected. We do not represent or warrant that the information available on or through the Services will be correct, accurate, timely or otherwise reliable. We may make changes to the features, functionality or content of the Services at any time. Wij behouden ons het recht voor om volgens eigen inzicht inhoud, informatie of ander materiaal te bewerken of te verwijderen dat ter beschikking werd gesteld als deel van de Diensten.
 
-### Code.org winkel en Support Forums
+### Code.org Store and Support Forums
 
 De Code.org winkel en het Code.org supportforum worden beheerd door derden. Please read the User Agreement and Privacy Policy for these sites separately before purchasing an item from the Code.org store or before posting a question or answer to the support forum. By accessing the Code.org store and support forums, you agree to be bound by the respective user agreement and privacy policy of these third parties.
 
@@ -132,7 +138,7 @@ TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE CODE.ORG ENTITIES SHALL N
 
 SOME STATES OR OTHER JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU.
 
-### Algemene voorwaarden
+### General Terms
 
 #### A. Afstandsverklaring en Verbreking
 

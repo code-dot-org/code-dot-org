@@ -1,0 +1,32 @@
+name 'U3L13 - Making Predications MC'
+title 'Make a prediction'
+description 'description here'
+type 'multi2'
+question '<h1>Make a prediction - Learning to Code Better, Faster</h1>
+<p>As you are learning to program you will encounter more and more new features of a language and be naturally curious about how things work.  Research has shown that when you encounter a new piece of code or new situation, you learn faster by simply making a prediction about what will happen before you run the program for the first time.  
+</p><p>Making a prediction forces you to study the code and use your intuitions based on what you already know. Even experienced programmers might disagree about what a piece of code would do!  So making a prediction is not like some sort of test about how smart you are.  <strong>By making a prediction first, when you run the code you learn so much more whether you were right, wrong or somewhere in between.  You construct a stronger mental model for how code works than if you just ran the program to see what happened.</strong></p>
+<p>  So let\'s try it...</p>
+<h1> What do you think will happen?</h1>
+<p><img src="https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png" align=right>Here is a piece of code with two buttons and two event handlers.  Notice that both buttons still have the default IDs of "id". You will need to fix this because we know it causes a warning message.  But it turns out the program can still run and it does do <i>something.</i></p>
+<p><strong>What do you think will happen with this code is run?</strong></p>'
+
+right 'When the forward button is clicked: The turtle will move forward and turn left'
+wrong 'When the "forward" button is clicked The turtle will only move forward'
+wrong 'When the "forward" button is clicked: The turtle will only turnLeft forward'
+wrong 'When the "forward" button is clicked: nothing will happen'
+
+right 'When the "left" button is clicked: The turtle will move forward and turn left'
+wrong 'When the "left" button is clicked: The turtle will only move forward'
+wrong 'When the "left" button is clicked: The turtle will only turnLeft forward'
+wrong 'When the "left" button is clicked: nothing will happen'
+
+
+markdown <<MARKDOWN
+# Make a prediction - Learning to Code Better, Faster
+As you are learning to program you will encounter more and more new features of a language and be naturally curious about how things work.  Research has shown that when you encounter a new piece of code or new situation, you learn faster by simply making a prediction about what will happen before you run the program for the first time.  
+
+Making a prediction forces you to study the code and use your intuitions based on what you already know. By making a prediction, whether your was right, wrong or somewhere in between, you construct a stronger mental model for how code works than if you just ran the program to see what happened.  So let's practice here.
+
+# What will happen?
+We start you out with code shown here. Notice that both buttons still have the default IDs of "id". You will need to fix this because we know it causes a warning message.  But it turns out the program can still run and it does do something.  
+MARKDOWN

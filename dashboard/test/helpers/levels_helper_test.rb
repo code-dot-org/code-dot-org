@@ -1,26 +1,32 @@
 require 'test_helper'
 
-# Mock the ChannelsApi to generate random tokens
-class ChannelsApi
-  def self.call(_)
-    [nil, {'Location' => "/#{rand}"}]
-  end
-end
-
 class LevelsHelperTest < ActionView::TestCase
   include Devise::TestHelpers
   include LocaleHelper
 
+  def sign_in(user)
+    # override the default sign_in helper because we don't actually have a request or anything here
+    self.stubs(:current_user).returns user
+  end
+
   setup do
-    @maze_data = {:game_id=>25, :user_id => 1, :name=>"__bob4", :level_num=>"custom", :skin=>"birds", :instructions=>"sdfdfs"}
-    @level = Maze.create(@maze_data)
+    @level = create(:maze, level_num: 'custom')
 
     def request
-      OpenStruct.new(env: {}, headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) ' \
-      'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36'))
+      OpenStruct.new(
+        env: {},
+        headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36')
+      )
     end
 
     self.stubs(:current_user).returns nil
+  end
+
+  test "blockly_options refuses to generate options for non-blockly levels" do
+    @level = create(:match)
+    assert_raises(ArgumentError) do
+      blockly_options
+    end
   end
 
   test "should parse maze level with non string array" do
@@ -150,8 +156,6 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'Blockly#blockly_options not modified by levels helper' do
-    self.stubs(:current_user).returns nil
-
     level = create(:level, :blockly, :with_autoplay_video)
     blockly_options = level.blockly_options
 
@@ -164,7 +168,6 @@ class LevelsHelperTest < ActionView::TestCase
   test 'app_options sets a channel' do
     user = create :user
     sign_in user
-    self.stubs(:current_user).returns user
 
     set_channel
     channel = @view_options[:channel]
@@ -181,7 +184,6 @@ class LevelsHelperTest < ActionView::TestCase
   test 'applab levels should have channels' do
     user = create :user
     sign_in user
-    self.stubs(:current_user).returns user
 
     @level = create :applab
 
@@ -193,7 +195,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'applab levels should not load channel when viewing student solution of a student without a channel' do
     # two different users
     @user = create :user
-    self.stubs(:current_user).returns create(:user)
+    sign_in create(:user)
 
     @level = create :applab
 
@@ -205,7 +207,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'applab levels should load channel when viewing student solution of a student with a channel' do
     # two different users
     @user = create :user
-    self.stubs(:current_user).returns create(:user)
+    sign_in create(:user)
 
     @level = create :applab
 
@@ -234,6 +236,35 @@ class LevelsHelperTest < ActionView::TestCase
   test 'send_to_phone_url provided when send to phone enabled' do
     stub_country 'US'
     assert_equal 'http://test.host/sms/send', app_options[:send_to_phone_url]
+  end
+
+  test 'submittable level is submittable for student with teacher' do
+    @level = create(:applab, submittable: true)
+
+    user = create(:follower).student_user
+    sign_in user
+
+    app_options = self.app_options # ha
+
+    assert_equal true, app_options[:level]['submittable']
+  end
+
+  test 'submittable level is not submittable for student without teacher' do
+    @level = create(:applab, submittable: true)
+
+    user = create :student
+    sign_in user
+
+    app_options = self.app_options # ha
+    assert_equal false, app_options[:level]['submittable']
+  end
+
+
+  test 'submittable level is not submittable for non-logged in user' do
+    @level = create(:applab, submittable: true)
+
+    app_options = self.app_options # ha
+    assert_equal false, app_options[:level]['submittable']
   end
 
 end

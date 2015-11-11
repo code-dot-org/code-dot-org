@@ -5,15 +5,16 @@
   <div id="debugResizeBar" class="fa fa-ellipsis-h"></div>
   <div id="debug-area-header">
     <span class="header-text"><%= applabMsg.debugConsoleHeader() %></span>
+    <i id="show-hide-debug-icon" class="fa fa-chevron-circle-down"></i>
     <% if (debugButtons) { %>
     <div id="debug-commands-header" class="workspace-header">
-      <i id="show-hide-debug-icon" class="fa fa-chevron-circle-down"></i>
       <i id="running-spinner" style="display: none;" class="fa fa-spinner fa-spin"></i>
       <i id="paused-icon" style="display: none;" class="fa fa-pause"></i>
       <span class="header-text"><%= applabMsg.debugCommandsHeaderWhenOpen() %></span>
     </div>
     <div id="clear-console-header" class="workspace-header workspace-header-button"><span><i class="fa fa-eraser"></i>Clear</span></div>
-    <div id="slider-cell">
+    <% } %>
+    <div id="slider-cell" style="margin-left: <%= debugButtons ? 0 : 40 %>px">
       <svg id="applab-slider"
            xmlns="http://www.w3.org/2000/svg"
            xmlns:svg="http://www.w3.org/2000/svg"
@@ -35,7 +36,6 @@
               clip-path="url(#fastClipPath)" />
       </svg>
     </div>
-    <% } %>
   </div>
 
   <% if (debugButtons) { %>
@@ -61,16 +61,11 @@
         <img src="<%= assetUrl('media/1x1.gif') %>" class="step-in-btn icon21">
         <%= applabMsg.stepIn() %>
       </button>
-      <% /* This button duplicates the one in DesignRowToggle.jsx and should be
-            removed when that component is made visible to regular users. */ %>
-      <button id="temporaryViewDataButton" class="debugger_button">
-        <%= applabMsg.viewData() %>
-      </button>
     </div>
   </div>
   <% } %>
   <% if (debugConsole) { %>
-  <div id="debug-console" class="debug-console">
+  <div id="debug-console" class="debug-console <%= debugButtons ? '' : 'full' %>">
     <div id="debug-output" class="debug-output"></div>
     <span class="debug-input-prompt">
       &gt;

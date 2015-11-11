@@ -45,8 +45,6 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "app_width": "300",
-    "app_height": "300",
     "slider_speed": "0.1",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L3-ProceduresChooseOne.png",
     "show_turtle_before_run": "false",

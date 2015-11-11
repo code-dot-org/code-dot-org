@@ -1,25 +1,28 @@
 name 'U3L07 Student Lesson Introduction'
 title 'Looping and Random Numbers'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 07 - Looping and Random Numbers
 
 # Background
 
+Even after creating functions with parameters there are still instances when our code can be repetitive because we wish to call the same function or group of functions many times. The ability to repeat a series of steps, often referred to as **iteration**, allows us to more easily solves these problems. In most programming languages a programming construct called a **loop** allows you to repeatedly call (or "loop over") a set of commands. This lesson explores the power of loops by introducing the **for loop**.
 
-The for-loop repeats statements like a while loop but adds an initialization and final expression step. There are two random number functions. One, with a single parameter returns a pseudorandom number ranging from zero to max. The other, with two parameters, returns a number ranging from the first number (min) to the second number (max).
+# Vocabulary
+
+* Iteration: the repetition of a statement, process, or procedure.
+* Loop: a programming construct that repeats a group of commands.
 
 # Lesson
 
-* Use the AppLab API to learn about the for-loop and random number functions.
-* Create programs that combine these functions to draw complex images. 
+* Introduction to the for loop.
+* Practice using loops to draw figures.
+* Use loops in conjunction with Top-Down Design and random values to complete a digital scene.
 
+# Resources
 
-# Resources 
-* Activity: <a href="https://docs.google.com/document/d/1Ald25VS1Wx5le8NVME695Ibswuk8S-KpyAcltDuyPYk" target="_blank">
-Starry Night
-</a>
-
+- Loops Video (embedded in next level)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

@@ -1,0 +1,50 @@
+name 'ECSPD U4 D 25-30 Intro'
+
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+## Day 25-30 Scratch -- Final Project
+
+First, let's explore the fifteenth lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 183-190.
+
+[Access a Digital Copy of the lesson>>](http://code.org/ecs#page=183)
+
+#### Key Concepts
+- Students are going to create a final game that will use all of the blocks they've learned so far in Unit 4.
+
+#### Common Difficulties
+
+You will want to walk through your expectations for the project.  You can use the rubric provided or create your own.
+<br><br>
+When students have the opportunity to create their own program, I'd recommend having them start small.  Have them make a storyboard of their idea and an algorithm for what they want their program to do.  They may want to have another person in the class be their peer helper to check their project at different stages, ask questions, and to be a second set of eyes on how to create the program they are thinking of.
+
+#### All Resources for This Lesson
+
+**Teacher Supports:**
+
+- [U4 D](http://code.org/ecs#page=183) [ay 25-30 Lesson](http://code.org/ecs#page=183)
+- [U4 Day 25-30 Resource Folder](https://drive.google.com/a/nicolescourse.com/folderview?id=0B2UNlnU_5Vg4fkZpd2dOS2FVVEczVXZ0YWxObHV2WVhoLTh6djBZMUhES3JrSDdNYnRMMVU&usp=drive_web&tid=0B2UNlnU_5Vg4fmFpUGlWakFZYW95Rzh3aGd6akJiWS0zUS1XR1dIcXVFM3hPSUNyNC1XRzQ)
+- [U4 Day 25-30 General Q and A Forum](http://forum.code.org/t/u4-day-25-30-general-q-a/1874)
+- [U4 Day 25-30 PD Discussion Topic Forum](http://forum.code.org/t/u4-day-25-30-pd-discussion-topic/1903)
+- [U4 Day 25-30 Lesson Resources Forum](http://forum.code.org/t/u4-day-25-30-lesson-resources/1858)
+- [U4 Day 25-30 Assessment Forum](http://forum.code.org/t/u4-day-25-30-assessment/1873)
+
+**Supplies:**
+
+- [Peer Grading](http://code.org/ecs#page=161)
+- [My Community Project Sample Rubric](http://code.org/ecs#page=187)
+- [Community Project Sample Rubric](http://code.org/ecs#page=189)
+- [Game Project Sample Rubric](http://code.org/ecs#page=190)
+- [http://scratch.mit.edu](http://scratch.mit.edu/)
+
+### PD Discussion Forum
+
+Now that you have have seen the curriculum taught from Unit 1- Unit 4, why do you think it is important for you to make connections while teaching back to Unit 1,2 and 3 or forward to an upcoming unit? What connections have you seen so far in the curriculum?  How does it benefit the student to intentionally make those connections?
+
+[<button>Discuss in the forum >></button>](http://forum.code.org/t/u4-day-25-30-pd-discussion-topic/1903)
+<br><br>
+After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

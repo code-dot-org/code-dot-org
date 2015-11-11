@@ -4,7 +4,7 @@
 .DS_Store
 .dropbox
 .idea/
-/.bundle
+**/.bundle
 /.gdrive_session
 /crontab
 /dashboard/public/blockly
@@ -24,3 +24,8 @@
 /aws/.shared-built
 /aws/.shared-commit-built
 /shared/js/node_modules/
+/apps/build
+/apps/node_modules/
+/apps/npm-debug.log
+*_temp.json
+/.ruby-version

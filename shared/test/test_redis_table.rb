@@ -6,7 +6,7 @@ require_relative '../middleware/helpers/redis_table'
 require_relative 'fake_redis_client'
 require_relative 'spy_pub_sub_api'
 
-class RedisTableTest < Minitest::Unit::TestCase
+class RedisTableTest < Minitest::Test
 
   def setup
     @redis = FakeRedisClient.new

@@ -4,7 +4,7 @@ require 'rack/test'
 require_relative '../../lib/cdo/aws/s3'
 require_relative '../../deployment'
 
-class AwsS3IntegrationTest < Minitest::Unit::TestCase
+class AwsS3IntegrationTest < Minitest::Test
   # A test bucket, only used for these tests.
   TEST_BUCKET = 'cdo-temp'
 
@@ -76,6 +76,10 @@ class AwsS3IntegrationTest < Minitest::Unit::TestCase
       grant.grantee.uri == all_users_uri && grant.permission == 'READ'
     end
     assert !allows_public_reads, 'default acl should not allow public reads'
+  end
+
+  def test_public_url
+    assert_equal "https://cdo-temp.s3.amazonaws.com/a/filename.pdf",  AWS::S3.public_url(TEST_BUCKET, 'a/filename.pdf')
   end
 
 end

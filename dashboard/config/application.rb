@@ -1,4 +1,3 @@
-require File.expand_path('../boot', __FILE__)
 require File.expand_path('../deployment', __FILE__)
 require 'cdo/poste'
 require 'rails/all'
@@ -23,6 +22,12 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
 
+    if Rails.env.development?
+      require 'cdo/rack/whitelist_cookies'
+      require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
+      config.middleware.insert_before ActionDispatch::Cookies, Rack::WhitelistCookies,
+        HttpCache.config(rack_env)[:dashboard]
+    end
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
     config.middleware.insert_after VarnishEnvironment, FilesApi
     config.middleware.insert_after FilesApi, ChannelsApi
@@ -32,7 +37,7 @@ module Dashboard
     config.middleware.insert_after SharedResources, NetSimApi
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
-      config.middleware.insert_after SharedResources, PegasusSites
+      config.middleware.insert_after VarnishEnvironment, PegasusSites
     end
 
     require 'cdo/rack/upgrade_insecure_requests'
@@ -80,11 +85,14 @@ module Dashboard
     cache_bust_path = Rails.root.join('.cache_bust')
     ::CACHE_BUST = File.read(cache_bust_path).strip.gsub('.', '_') rescue ''
 
+    config.assets.paths << Rails.root.join('./public/blockly')
     config.assets.paths << Rails.root.join('./public/shared/js')
     config.assets.paths << Rails.root.join('../shared/css')
     config.assets.paths << Rails.root.join('../shared/js')
 
     config.assets.precompile += %w(
+      js/*.js
+      css/*.css
       angularProjects.js
       shared.js
       shared.min.js
@@ -92,7 +100,6 @@ module Dashboard
       editor/blockly_editor.js
       editor/embedded_markdown_editor.js
       levels/*
-      react.js
       jquery.handsontable.full.css
       jquery.handsontable.full.js
       video/video.js video-js.css video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff
@@ -103,5 +110,15 @@ module Dashboard
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = { host: CDO.canonical_hostname('studio.code.org'), protocol: 'https' }
+
+    MAX_CACHED_BYTES = 256.megabytes
+    if CDO.memcached_hosts.present?
+      config.cache_store = :mem_cache_store, CDO.memcached_hosts, {
+          value_max_bytes: MAX_CACHED_BYTES
+      }
+    else
+      config.cache_store = :memory_store, { size: MAX_CACHED_BYTES }
+    end
+
   end
 end

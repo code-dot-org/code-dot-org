@@ -1,4 +1,10 @@
+---
 
+শিরোনামঃ সেবার শর্ত সমূহ
+
+---
+
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
 
 # সেবার শর্ত সমূহ
 

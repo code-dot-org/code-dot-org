@@ -6,6 +6,10 @@ nav: pd2_nav
 
 # Durham Professional Development
 
+- [I'm attending Exploring Computer Science PD](#ecs)
+- [I'm attending Counsleor/Administrator PD](#counselor-admin)
+
+
 
 <a id="ecs"></a>
 
@@ -17,13 +21,9 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)###
 
-#### In-person Workshop####
 
 Milestone Complete!
 
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 
 
@@ -46,11 +46,13 @@ Quarter 4: Saturday, April 30, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**September 12th Location**
+**November 14th Location**
 
-American Underground @ American Tobacco Campus<br/>Basement Level Classroom<br/>
-318 Blackwell Street<br/>
-Durham, NC 27701
+3001 Cameron Boulevard<br/>
+Forest Room<br/>
+Durham, NC 27705
+
+
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -67,6 +69,55 @@ Water
 
 More info coming soon!
 
+
+[**Back to the top**](#top)
+
+<a id="counselor-admin"></a>
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching.
+
+### Counselors##
+
+**Save the date**
+
+Wednesday, November 18, 2015 <br/>
+8:00am - 10:00am
+
+
+**Location**
+
+5001 Red Mill Rd<br/>
+Room Cybrary<br/>
+Durham, NC 27704
+
+Free parking is available in the lot in front of the building. Please only use the unmarked spots.
+
+**What to bring**
+
+Snacks
+<br/>
+Water
+
+### Administrators##
+
+**Save the date**
+
+Wednesday, November 18, 2015 <br/>
+11:00am - 1:00pm
+
+**Location**
+
+5001 Red Mill Rd<br/>
+Room 228<br/>
+Durham, NC 27704
+
+**What to bring**
+
+Snacks
+<br/>
+Water
 
 [**Back to the top**](#top)
 

@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: prizes
+#
+#  id                :integer          not null, primary key
+#  prize_provider_id :integer          not null
+#  code              :string(255)      not null
+#  user_id           :integer
+#  created_at        :datetime
+#  updated_at        :datetime
+#
+# Indexes
+#
+#  index_prizes_on_prize_provider_id  (prize_provider_id)
+#  index_prizes_on_user_id            (user_id)
+#
+
 class Prize < ActiveRecord::Base
   belongs_to :prize_provider
   belongs_to :user

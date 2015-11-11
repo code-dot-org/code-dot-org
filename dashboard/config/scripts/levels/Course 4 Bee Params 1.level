@@ -14,10 +14,10 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "start_direction": "1",
-    "step_mode": "0",
+    "step_mode": "1",
     "nectar_goal": "9",
     "flower_type": "redWithNectar",
-    "ideal": "19",
+    "ideal": "20",
     "instructions": "Use the function \"get 3 nectar\" which turns, moves to collect the nectar, and then returns to the original location. Write a sequence to collect all of the nectar using \"get 3 nectar.\"",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
@@ -29,7 +29,11 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "maze_data": null
+    "never_autoplay_video": "false",
+    "step_speed": "2",
+    "examples_required": "false",
+    "maze_data": null,
+    "fast_get_nectar_animation": "false"
   }
 }]]></config>
   <blocks>

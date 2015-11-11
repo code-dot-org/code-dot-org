@@ -44,3 +44,32 @@
 #learn-tabs .nav-tabs>li.active>a:active {
   color: #ff8b02;
 }
+.learn-hoc-banner {
+  position: relative;
+  border: 1px solid #e7e8ea;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+#hoc-sign-up {
+  margin-top: 0px;
+  font-size: 18px;
+}
+#hoc-teacher-guide {
+  font-size: 14px;
+  margin-top: 6px;
+}
+.banner-character {
+  top: -10px;
+  left: -3px;
+  position: absolute;
+}
+.banner-content {
+  padding-left: 80px;
+}
+.character-img {
+  height: 100px;
+  width: 100px;
+  background-size: 100px 100px;
+  background-image: url('/images/bee_avatar.png');
+  background-repeat: no-repeat;
+}

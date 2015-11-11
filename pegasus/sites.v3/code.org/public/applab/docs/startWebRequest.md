@@ -40,13 +40,14 @@ ____________________________________________________
 [example]
 
 This first example calls a service that provides weather information, and prints the response from the service to the debugging console.
-<pre>
+
+```
 startWebRequest("http://api.openweathermap.org/data/2.5/weather?q=Seattle,us", function(status, type, content) {
   console.log(status); //In most cases, a successful response is indicated by "200"
   console.log(type); //The type of content returned from this service is text/json
   console.log(content); //The content is a string of text in the JSON syntax
 });
-</pre>
+```
 
 [/example]
 
@@ -57,7 +58,8 @@ ____________________________________________________
 In this more advanced example, we read the response from the service and print the description of the weather in Seattle to the debugging console.
 
 **Note:** In order to write code that reads the content of the response returned by the service, we need to know the format of the response. This will often be documented online by the service, in our case the [OpenWeatherMap project](http://openweathermap.org/weather-data). We will also need to use the [JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) function, which can be used to transform the string of JSON into an object that we can use in our code.
-<pre>
+
+```
 startWebRequest("http://api.openweathermap.org/data/2.5/weather?q=Seattle,us", function(status, type, content) {
   console.log(status); //Print the request status to the console
   //Make sure that the request was successful before we continue
@@ -76,7 +78,7 @@ startWebRequest("http://api.openweathermap.org/data/2.5/weather?q=Seattle,us", f
     console.log("The weather service is not available!");
   }
 });
-</pre>
+```
 
 [/example]
 
@@ -85,7 +87,8 @@ ____________________________________________________
 [example]
 
 Finally, we continue to use the weather service and add UI controls to our example so that it is possible to get the weather from any city typed in a text box.
-<pre>
+
+```
 //Create a UI element with instructions
 textLabel("instruction", "Type a city name (for instance 'Seattle, US')", "city");
 //Create a text box where a city name can be typed
@@ -126,7 +129,7 @@ onEvent("city", "change", function() {
     }
   });
 });
-</pre>
+```
 
 [/example]
 
@@ -135,11 +138,12 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 startWebRequest(url, function(status, type, content) {
   Code to execute
 });
-</pre>
+```
 
 [/syntax]
 

@@ -15,16 +15,18 @@ social:
 
 # Resurse profesori
 
+<b> Pentru resurse traduse, postere, materiale video, suport cursuri si alte intrebari despre eveniment va rugam sa contactati echipa Hour of Code Romania la adresa de email: HOC@adfaber.org.</b>
+
 Mai jos, găsiți resursele necesare pentru a-i învăța programare și a preda tehnologia computerelor elevilor, dincolo de evenimentul Hour of Code. Există o întreagă comunitate în România, care poate interacționa și care poate face programarea distractivă și ușoară! 
 
 ## Organizați un eveniment Hour of Code pentru elevii sau studenții dumneavoastră 
 
-Hai să facem istorie împreună! Vrem ca Românii să poată încerca o introducere în tehnologia computerelor, timp de o oră, în timpul săptămânii 08-14 Decembrie. Încearcă [<a href="http://ro.code.org/learn">tutorialele noastre aici</a>].
+Hai să facem istorie împreună! Vrem ca Românii să poată încerca o introducere în tehnologia computerelor, timp de o oră, în timpul săptămânii 7-13 Decembrie. Încearcă [<a href="http://ro.code.org/learn">tutorialele noastre aici</a>].
 
 ## Este atat de simplu 
 
 1. Alegeti un tutorial
-2. Alegeti o data in perioada 8-14 Decembrie si inscrieti evenimentul pe [Hour of Code](http://hourofcode.com/ro/ro).
+2. Alegeti o data in perioada 7-13 Decembrie si inscrieti evenimentul pe [Hour of Code](http://hourofcode.com/ro/ro).
 3. Beneficiati de resursele disponibile gratuit pentru a atrage atentia presei, politicienilor si companiilor locale.
 4. Organizati Ora de Programare pentru elevii dumneavoastra.
 

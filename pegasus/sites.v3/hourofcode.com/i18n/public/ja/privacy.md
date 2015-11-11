@@ -1,8 +1,14 @@
+---
 
+title: Privacy Policy
+
+---
+
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # プライバシーポリシー
 
-Date of Last Revision: August 3, 2015
+最終改定日: 2015 年 8 月 3 日
 
 ## Code.org について
 
@@ -10,9 +16,9 @@ Code.org®は、より多くの学校へ展開することで、コンピュー�
 
 Webサイトにアクセスしたり利用したりする前に (“**プライバシーポリシー**”) を良くお読みください。
 
-## Code.org プライバシー原則
+## Code.org プライバシーポリシー
 
-私たちの個人情報保護方針は以下のプライバシー原則に基づいています。
+私たちの個人情報保護方針は以下のプライバシーポリシーに基づいています。
 
   1. 生徒や先生のために安全でセキュアな学習環境を作成することを誓約します。情報は厳重に保護します。
   2. チュートリアルを実行するために個人を特定する情報を要求することは行いません。全てのチュートリアルはユーザーアカウントなしでアクセスできるようにします。 
@@ -23,9 +29,9 @@ Webサイトにアクセスしたり利用したりする前に (“**プライ�
 
 ## 個人情報保護方針
 
-私たちは、<http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>などのウェブサイト、アプリケーションプログラミングインターフェース("API"), オンラインサービス("ウェブサイト"を含みます)において、全ての年代の学習者のために、安全でセキュアな環境構築に全力で取り組みます。 Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. 501(c)(3)の非営利団体なので、受領したデータの用途は、意欲ある生徒に最良のコンピューターサイエンス教育を提供するというミッションに限定します。 私たちは非営利団体です。よって、利益を追及の動機が、信頼できる教育用リソースを提供するという我々のミッションと干渉することはありません。
+We are committed to creating a safe and secure environment for learners of all ages on our websites located at <https://code.org>, <https://studio.code.org>, <https://csedweek.org>, <http://computinginthecore.org>, <https://hourofcode.com>, other websites, application programming interface (our “API”), and online services (collectively, our “Website”). ウェブサイトへの訪問者およびユーザーは、"ユーザー"と規定されます。 501(c)(3)の非営利団体なので、受領したデータの用途は、意欲ある生徒に最良のコンピューターサイエンス教育を提供するというミッションに限定します。 私たちは非営利団体です。よって、利益を追及の動機が、信頼できる教育用リソースを提供するという我々のミッションと干渉することはありません。
 
-Our Privacy Notice describes what information we gather from our Users, how we use that information, and what we do to protect it. ウェブサイトの利用とウェブサイトで入力した任意の情報は個人情報保護方針の対象となります。これは、サービス利用規約にも反映されます。 大文字の用語が使用されている場合、本個人情報保護方針で定義されていないものは、[サービス利用規約](http://code.org/tos)での意味に準じるものとします。 私たちのウェブサイトを訪問したり利用した場合、この個人情報保護方針に明示的に同意したものとみなします。
+プライバシーポリシーは、ユーザーからどんな情報を収集するのか、その情報をどのように利用するのか、また何をどのように保護するのかを規定しています。 ウェブサイトの利用とウェブサイトで入力した任意の情報は個人情報保護方針の対象となります。これは、サービス利用規約にも反映されます。 大文字の用語が使用されている場合、本個人情報保護方針で定義されていないものは、[サービス利用規約](http://code.org/tos)での意味に準じるものとします。 私たちのウェブサイトを訪問したり利用した場合、この個人情報保護方針に明示的に同意したものとみなします。
 
 この個人情報保護方針は時々変更されます。 Code.orgは、ウェブサイトに更新内容と更新日を掲示することで、個人情報保護方針に加えられた変更をユーザに通知します。 方針に大きな変更を加えられた場合、ウェブサイトのホームページで、修正内容に関するご連絡をさせて頂きます。 法律で必要とされる場合は、ユーザーに直接ご連絡することもあります。 我々は約束を順守し、いかなる方法でユーザーから入手した個人情報に関して、メール、ウェブサイト、その他の手段を使って通知することなしに、または、新しい利用方法の同意を得ることなく、その用途を変更することはありません。 収集した情報は責任をもって扱います。また、提供頂いた情報はできるだけ提供者の管理下に置くようにします。
 
@@ -37,28 +43,27 @@ Our Privacy Notice describes what information we gather from our Users, how we u
 
 **Code Studio**: Code.orgがCode Studioチュートリアルプラットフォームの登録ユーザーから収集する情報を以下の表に示します。 Code Studioチュートリアルの全てのコンテンツはアカウントを作らなくても実行することができますが、その場合は進捗状況に関する情報は保存されません。
 
-| Code Studioで学生アカウントを作成した際に保存されるデータ                                                                          | 必須？                                                                                                                                            | データの用途                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 表示名(“Cool Coder” や “JohnS”など)                                                                               | 必須                                                                                                                                             | ログイン時の挨拶メッセージの提示、生徒の進捗状況を先生への提示するとき、生徒が生成したコードを紹介するとき                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Code Studioで学生アカウントを作成した際に保存されるデータ                                                                          | 必須？                                                                     | データの用途                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 表示名(“Cool Coder” や “JohnS”など)                                                                               | 必須                                                                      | ログイン時の挨拶メッセージの提示、生徒の進捗状況を先生への提示するとき、生徒が生成したコードを紹介するとき                                                                                                                                                                                                                                                                                                                                                                                           |
 | コースでの進捗状況 </br>  
 1- 各ステージに取り組んだ日時  
 2- パズルを解くときの試行回数、パズルを正しく正解したか、  
-3- 生徒が提出したコード (生徒が作ったゲームやアート素材も含まれます) | 必須(自動的)                                                                                                                                        | この情報は、作成したコードを見るため、助けが必要な項目を特定するため、コースでの進捗状況を先生や生徒に提示するために表示されます。 生徒が、一旦ログアウトし、後でログインして作業を継続するためにも使われます。 [進捗レポートの例](http://code.org/files/student-progress.pdf)をご覧ください。また、詳しくは[“テクニカル情報”](#techinfo)の節をご覧ください</br>。  
+3- 生徒が提出したコード (生徒が作ったゲームやアート素材も含まれます) | 必須(自動的)                                                                 | この情報は、作成したコードを見るため、助けが必要な項目を特定するため、コースでの進捗状況を先生や生徒に提示するために表示されます。 生徒が、一旦ログアウトし、後でログインして作業を継続するためにも使われます。 [進捗レポートの例](http://code.org/files/student-progress.pdf)をご覧ください。また、詳しくは[“テクニカル情報”](#techinfo)の節をご覧ください</br>。  
 生徒による成果物(アート素材、アニメーション、アプリ)は、生徒の同意の上で、生徒の表示名とともに、友人や公のギャラリーに公開されることがあります。</br>  
-このデータはCode.orgでのコースの改良にも役立てられます。 たとえば、パズルが難しすぎる場合、Code.orgは学習プロセスを改良するために、適切な措置をとることがあります([よりよいヒントを提示するなど](http://code.org/hints))。</br>                              |
-| ログイン時間、IPアドレス、その他技術的なデータ                                                                                    | 必須(自動的)                                                                                                                                        | これらの情報は何等かの問題がおきたときに、Code.orgaその原因を解決をするときに役に立ちます。 利用パターンを理解するためにも役立ちます。全てのユーザーをサポートするためのサーバー群の構築や、サービス停止の影響を最小限に保ちつつサイトを更新するために役立ちます。 詳細は [“テクニカル情報”](#techinfo) にある節をご覧ください。                                                                                                                                                                                                                                                                                               |
-| メールアドレス                                                                                                     | Optional if account created by teacher or parent</br>  
-Mandatory if student signs up directly</br>  
-Mandatory for teacher or parent accounts | To inform the student or parent or teacher when new course-work is available. 先生や保護者が生徒のアカウントを作成したときは生徒のメールアドレスは任意です 生徒が直接アカウントを生成した場合、生徒がパスワードを忘れた際に、その生徒をCode.orgが助けられるように、メールアドレスは必須となります。</br>  
+このデータはCode.orgでのコースの改良にも役立てられます。 たとえば、パズルが難しすぎる場合、Code.orgは学習プロセスを改良するために、適切な措置をとることがあります([よりよいヒントを提示するなど](http://code.org/hints))。</br> |
+| ログイン時間、IPアドレス、その他技術的なデータ                                                                                    | 必須(自動的)                                                                 | これらの情報は何等かの問題がおきたときに、Code.orgaその原因を解決をするときに役に立ちます。 利用パターンを理解するためにも役立ちます。全てのユーザーをサポートするためのサーバー群の構築や、サービス停止の影響を最小限に保ちつつサイトを更新するために役立ちます。 詳細は [“テクニカル情報”](#techinfo) にある節をご覧ください。                                                                                                                                                                                                                                                                  |
+| メールアドレス                                                                                                     | 先生や保護者が生徒のアカウントを作成した場合は任意。</br>生徒が自らアカウントを作成した場合は必須。  
+先生や保護者のアカウントも必須。 | To inform the student or parent or teacher when new course-work is available. 先生や保護者が生徒のアカウントを作成したときは生徒のメールアドレスは任意です 生徒が直接アカウントを生成した場合、生徒がパスワードを忘れた際に、その生徒をCode.orgが助けられるように、メールアドレスは必須となります。</br>  
 メールアドレスが入力された場合、そのアドレスはCode.orgへのログイン時のユーザー名として使用することができます。</br>  
 メールアドレスが入力された場合、生徒のメールアドレスは個別に保存され、他人に共有されることはありません(先生といえども)</br>  
-注：詳細については生徒からのメールアドレスの取扱いの節を参照してください。</br>                                                                                       |
-| 性別                                                                                                          | 任意                                                                                                                                             | この情報は、コンピューターサイエンスにおいて、我々の取り組みが性別によるギャップを埋められているか、生徒の性別のパーセンテージを集計するためのみに利用されます。                                                                                                                                                                                                                                                                                                                                                                                             |
-| 年齢(誕生日では*ない*)                                                                                               | 必須                                                                                                                                             | 各生徒の年齢に応じた体験を提供できるよう、生徒の成長段階を理解するため また、13歳以下の生徒のメール情報を保存しないためにもこの情報を使用します。 私たちは誕生日(例 1998年2月13日)ではなく年齢(16歳)を収集します。                                                                                                                                                                                                                                                                                                                                                           |
-| 電話番号                                                                                                        | 任意                                                                                                                                             | 13歳もしくはそれ以上のユーザーは、アプリ、アート素材、その他のコードを携帯電話と共有するか選択することができます。 そのためには、携帯電話の電話番号を入力する必要があります(自分の携帯の番号、もしくは他の誰かの番号)。 Code.orgは、この携帯電話の番号に定型メッセージを送信するためにサードパーティのサービス([Twilio](https://www.twilio.com/))を利用します。 Code.orgはいかなる電話番号の記録も保存しませんが、電話番号とメッセージはTwilioによって、もしくは、電話のサービスプロバイダーによっても保存されるかもしれません。                                                                                                                                                                             |
-| Custom photos, sounds, and/or videos                                                                        | 任意                                                                                                                                             | Users aged 13 or older can choose to upload custom photos, sounds, and videos to the Code Studio platform to use within applications that they create. These files are not used by Code.org for any purpose other than within the applications created by such users.                                                                                                                                                                                                        |
-| Messages sent within the “Internet Simulator”                                                               | 任意                                                                                                                                             | The [“Internet Simulator”](/internetsimulator) is a tool developed by Code.org for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Contents of messages sent by students using the tool can be accessed by the recipient, and are not accessed or used by Code.org for any purpose other than in this educational tool. |
-| Written comments in response to curricular/educational prompts within the Code Studio platform              | 任意                                                                                                                                             | Within some of our courses, students in a classroom are prompted to answer a question. Their answers are shared with any teacher with whom the student is affiliated on Code Studio, and are not used by Code.org for any other purpose.                                                                                                                                                                                                                                     |
+注：詳細については生徒からのメールアドレスの取扱いの節を参照してください。</br>                                                          |
+| 性別                                                                                                          | 任意                                                                      | この情報は、コンピューターサイエンスにおいて、我々の取り組みが性別によるギャップを埋められているか、生徒の性別のパーセンテージを集計するためのみに利用されます。                                                                                                                                                                                                                                                                                                                                                                |
+| 年齢(誕生日では*ない*)                                                                                               | 必須                                                                      | 各生徒の年齢に応じた体験を提供できるよう、生徒の成長段階を理解するため また、13歳以下の生徒のメール情報を保存しないためにもこの情報を使用します。 私たちは誕生日(例 1998年2月13日)ではなく年齢(16歳)を収集します。                                                                                                                                                                                                                                                                                                                              |
+| 電話番号                                                                                                        | 任意                                                                      | 13歳もしくはそれ以上のユーザーは、アプリ、アート素材、その他のコードを携帯電話と共有するか選択することができます。 そのためには、携帯電話の電話番号を入力する必要があります(自分の携帯の番号、もしくは他の誰かの番号)。 Code.orgは、この携帯電話の番号に定型メッセージを送信するためにサードパーティのサービス([Twilio](https://www.twilio.com/))を利用します。 Code.orgはいかなる電話番号の記録も保存しませんが、電話番号とメッセージはTwilioによって、もしくは、電話のサービスプロバイダーによっても保存されるかもしれません。                                                                                                                                                |
+| 写真や音声、映像                                                                                                    | 任意                                                                      | 13歳以上のユーザーは、任意の写真や音声、映像ファイルをCode Studioで利用するためにアップロードすることができます。 これらのファイルは、Code.orgのどのような活動においても利用されることはありません。                                                                                                                                                                                                                                                                                                                                   |
+| "インターネットシミュレータ"に送信されたメッセージ                                                                                  | 任意                                                                      | ["インターネットシミュレータ"](/internetsimulator)は、Code.orgによって開発された、インターネットの仕組みを高校生向けに解説するツールです。 このツールでは、生徒はテキストメッセージを他の生徒や先生に送信することができます。 これらのメッセージは、受信者によって閲覧されますが、このツール上での利用を除いてCode.orgのいかなる活動においても利用されることはありません。                                                                                                                                                                                                                                      |
+| Code Studioにおけるコメント                                                                                         | 任意                                                                      | いくつかコース内では、生徒はなんらかの質問に回答するように求められます。 これらの回答は、Code Studioにおいて紐付けられた先生に対してのみ共有されます。Code.orgのいかなる活動においても利用されることはありません。                                                                                                                                                                                                                                                                                                                             |
 
   
 
@@ -76,9 +81,9 @@ Code.orgは、あなたの学校や学区で教育のパートナーシップを
 
 生徒や先生はCode Studioのプロファイルにある個人情報を、アカウント設定ページ(もしくは先生用の生徒管理ページ)から、いつでも、削除、修正、更新することができます。
 
-Educators can create accounts on behalf of students. When registering an account for a student who is under the age of 13 (a “Child”), the Educator represents and warrants that they or the educational organization they work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, they agree to be bound by these Terms on behalf of the educational organization they work for.
+先生は、生徒のかわりにアカウントを作成することができます。 13歳以下の生徒("子供")のアカウントを作成する場合、先生や教育組織は、彼らの個人情報を集めるCode.orgのような教育サービスにおいて、彼らのアカウントを作成する権利があることを確認する必要があります。 それに加えて、彼らはこれらの条項に同意することを彼らが働く教育組織に変わって認める必要があります。
 
-Districts that use [Clever](https://clever.com/) as an Authentication Service can permit Code.org to use existing Clever teacher and student account information to log in to Code.org sites. Districts may revoke Code.org’s access to this information in Clever at any time. Please review Clever's [terms of use](https://clever.com/about/terms) and [privacy policies](https://clever.com/about/privacy-policy) for additional information.
+[Clever](https://clever.com/)を認証システムとして利用する組織は、Clever上にすでに登録されている先生や生徒の情報をCode.org上で利用することを認めることができます。 一方で、Clever上の情報に対するCode.orgからのアクセスを、いかなる時でも中断することができます。 詳しくは、Cleverの[利用規約](https://clever.com/about/terms)と[プライバシーポリシー](https://clever.com/about/privacy-policy)をお読みください。
 
 生徒は、複数の先生を好きなだけ登録したり、それを解除することができます (先生は生徒のコース進捗状況や表示名にはアクセスできますが、メールアドレスにはアクセスできません)。 生徒の代理でユーザーアカウントを作った場合、生徒が先生にアカウントの管理を任せている間に限り、先生は、"秘密のワード"、"秘密のピクチャ"(文字が読めない幼い子供の場合)をリセットすることができます。
 
@@ -88,7 +93,7 @@ Districts that use [Clever](https://clever.com/) as an Authentication Service ca
 
 それぞれの認証サービスのアカウント設定を更新することで、Code.orgからあなたのアカウントへのアクセスをいつでも無効にすることができます。 それぞれの認証サービスの個人情報設定を確認して理解を深めたうえで、各認証サービスから私たちに送られる情報を設定します。 私たちのWebサイトに接続する認証サービスを利用するまえに、各認証サービスの利用条件や個人情報保護方針をしっかりと確認してください。
 
-## その他のサービス
+## Other Services
 
 私たちのWebサイトの一部を利用する場合、例えば、登録用のフォーム、Code.org支援のお願い、ワークショップへの参加、Code.orgのプログラムの学校や学区での使用、Code.orgへの寄付、Tシャツなどのアイテムの購買、オンライン調査への参加などですが、これらの場合、Code.orgはあなたの名前、メールアドレス、郵便番号、学校の住所などの個人情報の提供をお願いすることがあります。購買や寄付を行う場合は、課金・送付先情報の提供をお願いすることもあります。 この情報は、あなたが興味を持ちそうなCode.orgに関するお知らせをメールするため、関連しそうな出来事への参加を可能にするために、利用されます。 私たちからの全てのメールには"unsubscribe"リンクがあり、それによりCode.orgからのメール購読を即座に解除することができます。
 
@@ -120,33 +125,33 @@ Districts that use [Clever](https://clever.com/) as an Authentication Service ca
 
 Code.orgは、Webサイトの利用状況や、ビデオを配信するためのソーシャルネットワークプラットフォームなど、いろいろなサードパーティのサービスプロバイダーを利用します。 私たちは、サードパーティのサービスプロバイダーがクッキーやWebビーコン、それに類似する技術を使って、Webサイトから情報収集することを許容するかもしれません。 これらの技術情報は、サードパーティによって自動的に直接収集されます。
 
-Code.orgはWebサイト上の広告を許可していません。また、サードパーティのWebサイトや検索エンジンによる検索履歴を収集する手段を有していません。 (Code.orgを見つけるときに検索エンジンを使った場合は、ブラウザから自動的にその検索に使った用語がCode.orgに引き渡されます)。 しかしながら、ウェブサイトの機能提供やソーシャルでの共有などに利用するサードパーティの中には、オンラインでの行動特性に応じた広告をおこなうため、個人を特定しない範囲で情報を収集することがあります。 私たちのウェブサイトはWebブラウザーから送信される”do not track”信号に応答しません。しかしながら、<http://www.networkadvertising.org/choices> や<http://www.aboutads.info/choices/>といったリンクから、オンラインの行動特性に基づいた広告を行うことにオプトアウトで同意いただくことをお勧めします。 これらのツールの利用に関してオプトアウトを行いたい場合、各デバイスのブラウザそれぞれについて、別々にオプトアウトを行う必要があるかもしれません。
+Code.org does not allow advertising on our Website, and we do not have the ability to collect your web search history across 3rd party Internet websites or search engines. (Code.orgを見つけるときに検索エンジンを使った場合は、ブラウザから自動的にその検索に使った用語がCode.orgに引き渡されます)。 しかしながら、ウェブサイトの機能提供やソーシャルでの共有などに利用するサードパーティの中には、オンラインでの行動特性に応じた広告をおこなうため、個人を特定しない範囲で情報を収集することがあります。 Our Website does not respond to “do not track” signals transmitted by web browsers, but we encourage you to visit the following links if you would like to opt out of online behavioral advertising: <http://www.networkadvertising.org/choices> or <http://www.aboutads.info/choices/>. これらのツールの利用に関してオプトアウトを行いたい場合、各デバイスのブラウザそれぞれについて、別々にオプトアウトを行う必要があるかもしれません。
 
 Code.orgのウェブサイトからのリンク先は、データを収集するサードパーティーによって実装されているかもしれません。 たとえば、Code.orgへの寄付は、データを収集するサードパーティーによって処理され、支払いに関する情報は保存されるかもしれません。 先生用のフォーラムへのポストやメッセージは、サードパーティーのサイトで処理されるかもしれません。その際、プロファイルの作成、メッセージのポスト、写真のアップロードなどが可能になっているかもしれません。 [Facebookのページ](https://www.facebook.com/Code.org) や [Twitterのページ](https://twitter.com/codeorg)といったサードパーティーのウェブサイトでは、私たちの名前やロゴと共同ブランドになっているかもしれません。 これらサードパーティーのサービスの利用はユーザーに任されており、一般的に大人用に用意されているもので、サードパーティーのプライバシーポリシーによって規定されます。 どのように個人情報を収集し、保存し、使用するか、といった詳細はサードパーティーのプライバシーポリシーを参照することを強くお勧めします。
 
-## Uploading custom content
+## Uploading Custom Content
 
-Student and teacher profiles can NOT be customized with a photo.
+生徒と先生のプロフィールは、写真によってカスタマイズすることはできません。
 
-As part of “App Lab,” an in-browser programming tool available on Code Studio for students over the age of 13, students can upload custom photos, sound, and videos to the Code Studio platform to use within applications or “apps” that they create. These files are stored in the Code Studio platform, and are not used by Code.org for any purpose other than within the applications created by students.
+Code Studio上で利用できるブラウザ上で動作し、13歳以上が利用できるプログラミングツール"App Lab"の一部として、生徒は任意の写真は音声、動画をアップロードし、それらをアプリの中で利用することができます。 これらのファイルは、いかなる利用目的においてもCode.orgによって利用されることはありません。
 
-## Message sending between users
+## Message Sending Between Users
 
-Code.org has created a tool called the [“Internet Simulator”](/internetsimulator) for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Message contents are not accessed or used by Code.org for any purpose other than in this educational tool.
+["インターネットシミュレータ"](/internetsimulator)は、Code.orgによって開発された、インターネットの仕組みを高校生向けに解説するツールです。 このツールでは、生徒はテキストメッセージを他の生徒や先生に送信することができます。 これらのメッセージは、受信者によって閲覧されますが、このツール上での利用を除いてCode.orgのいかなる活動においても利用されることはありません。
 
-In some courses, students are asked to provide written responses or reflections to prompts within the Code Studio platform. These written responses are accessible by any teacher that the student is currently affiliated with on Code Studio.
+いくつかコース内では、生徒はなんらかの質問に回答するように求められます。 これらの回答は、Code Studioにおいて紐付けられた先生に対してのみ共有されます。Code.orgのいかなる活動においても利用されることはありません。
 
-In addition, Users may send messages to Code.org for customer support requests.
+それに加えて、ユーザーはCode.orgに対してサポートのリクエストを送る可能性があります。
 
-Other than the above, the Website supports no other form of messaging among Users.
+上記以外のユーザー間のメッセージ交換はサポートされていません。
 
-## 私たちが収集しない情報
+## Information We Do NOT Collect
 
-Code.orgは支払に関する情報の収集や保存を直接行うことはしません。 Code.orgへの寄付や、Code.orgストアからのTシャツの購買は、サードパーティーによって処理されます。Code.orgは寄付(税金目的で)への領収書を受領するかもしれませんが、私たちは、支払いに必要な情報(クレジットカードやお財布情報など)を受領することは決してありません。
+Code.orgは支払に関する情報の収集や保存を直接行うことはしません。 Donations to Code.org or purchases from the Code.org store are processed via third parties, and although Code.org receives a receipt for donations (for tax purposes), we never receive the payment instrument (such as credit card or wallet information).
 
-## 13歳以下の子供に関して
+## Children Under the Age 13
 
-Code Studioの学習用プラットフォームは、学校での13歳以下の子供、先生、保護者、法定後見人など、全ての年齢のユーザーで使えるようにデザインされています。 Certain features, especially features that involve uploading custom media files or sending messages, are disabled or inaccessible to accounts created by children under the age of 13, in order to provide greater protection to those Users.
+Code Studioの学習用プラットフォームは、学校での13歳以下の子供、先生、保護者、法定後見人など、全ての年齢のユーザーで使えるようにデザインされています。 任意画像やメッセージを送信可能な特定の機能は、13歳以下の生徒に対して無効化、もしくは利用できなくなっています。これは、彼らを保護するための取り組みです。
 
 Code Studioで13歳以下の子供がアカウントを作成した場合、Code.orgはユーザーが提供したメールアドレスを可読可能な形式では保存しません。 代わりに、メールアドレスのハッシュバージョン(元のアドレスに戻すことができない形式)を即時に作成し、その内容をログインとパスワードのリカバリの目的に利用します。
 
@@ -164,13 +169,13 @@ Code Studioで13歳以下の子供がアカウントを作成した場合、Code
 
 Code.orgの従業員、代理人、契約者は合法的で正当な理由がある場合(教育に関する業務を更に遂行する場合)に、あなたがCode.orgに提供した個人情報にアクセスします。たとえば、製品サポートなどの場合があります。 Code.orgは、当社の従業員、代理人、契約者に対して、個人情報保護方針を順守するとともに、Code.orgのユーザーのいかなる個人情報も機密情報として扱うように求めます。
 
-## データの共有方法、転送方法について
+## How We Share or Transfer Data
 
 ユーザーから収集した個人情報を売り渡したり、レンタルしたり、その他のいかなる手段で利益獲得に利用することはありません。 Code.orgは、あなたの同意なく、もしくは、オプトインによる設定可能な特定のプログラムや機能をつかうことなく、第三者に個人情報を共有することは決してありません。
 
 特に、寄贈者やスポンサーに、あなたの提供した個人情報を提供することはありません(以下に述べるよう匿名化した"パブリックレポート"は除きます)。
 
-### 生徒の学習度合に関するデータはあなたの学校や学区と共有します
+### 学校や地域の教育委員会へ生徒の進捗状況レポートを共有する可能性があります。
 
 学校や学区とのパートナーシップのからみでCode.orgのウェブサイトを使う場合、その学校や学校に、生徒の進捗状況レポートへのアクセスを許可することがあります。そのレポートは先生(方)と共有しているものです。
 
@@ -190,7 +195,7 @@ Code.orgの従業員、代理人、契約者は合法的で正当な理由があ
 
 Code.orgは、今週の学生、今月の先生、と表彰をすることで宣伝活動を行います。 これらのプロファイルと表彰状は生徒と先生の許可のもとで、必要に応じて保護者、保護観察官、先生の許諾のもとで公開されます。この中には、名前、嗜好、写真、ビデオなどの個人情報が含まれることがあります。
 
-### 生徒の利用状況と成績に関するレポートの公開
+### Public reporting on student use and performance
 
 私たちのチュートリアルやWebサイトでの生徒の成績を匿名で公開することがあります。それらのレポートに個人情報が含まれることは決してありません。 生徒の成績に関するデータは匿名で保存されます。ただし、多数の生徒のデータを集約して、年齢、地域、性別、民族、経済状況に応じて分析した結果としてレポートされることもあります。
 
@@ -200,21 +205,21 @@ Code.orgは、今週の学生、今月の先生、と表彰をすることで宣
 
 ### 司法に求められた場合はデータを開示します
 
-Code.org may also disclose User data including Personal Information if required to do so by law, or if we have a good-faith belief that such action is necessary to comply with local, state, federal, international, or other applicable laws or respond to a court order, judicial or other government order, subpoena, or warrant, or administrative request. 状況によっては、ユーザーへの予告なくそのような情報の開示を行うかもしれません。
+Code.orgは、司法に求められた際、ユーザーの個人情報を開示します。また、地域、州、連邦、国際、その他の法律に準拠するためや、裁判所や政府、召喚状への対応、令状などに対応するため、開示が必要があると誠実な信念をもって判断されるときも開示を行います。 状況によっては、ユーザーへの予告なくそのような情報の開示を行うかもしれません。
 
 ### Code.orgなどを保護するために、必要もしくは、適切な場合に、データを共有します
 
-Code.org may disclose User data including Personal Information that we believe, in good faith, is appropriate or necessary to take precautions against liability; to protect Code.org from fraudulent, abusive, or unlawful uses; to investigate and defend ourselves against any third-party claims or allegations; to assist government enforcement agencies; to protect the security or integrity of the Website; or to protect the rights, property, or personal safety of Code.org, our Users, or others.
+Code.orgは、詐欺行為、誹謗、非合法なユーザーから私たちを守るため、法的責任の予防措置を講じるため、適切、もしくは必要と判断されたときに、個人情報を開示することがあります。サードパーティからの苦情や申し立てから自分自身を防衛や調査したり、政府の取締局を手伝ったり、Webサイトの安全や内容を保護したり、Code.orgやユーザーの個人的な安全や財産、権利を保護するため、といった状況が含まれます。
 
 ### 企業買収などの状況に応じてデータを共有することがあります
 
 Code.orgが他者に買収、合併、吸収された場合、ユーザーから収集した個人情報を、その他者に共有するかもしれません。 ただし、ユーザーから収集した個人情報は、個人情報保護法案に記載されたものと同程度の安全性やプライバシーのもとで保護されることをお約束します。
 
-## データセキュリティに対する我々のアプローチ
+## Our Approach to Data Security
 
 ### Webサイトのセキュリティはあなたにとっても私たちにとっても重要です
 
-プライバシーとセキュリティを保護するため、アカウントへのアクセスを許可する前、もしくは、個人情報を訂正する前に、あなたの身元確認を行うために適切な手続きを行います。 学校によってはSSLで保護されたWebサイトへのアクセスを禁止しているため、学校の指示に応じて、SSLを利用して、もしくはSSLを利用しないでのアクセスを許可します。 Webサイト使用時に入力したデータを暗号化して転送したい場合は、SSLで保護されたコネクションを利用できます。その時は、https://code.org/というHTTPSプロトコルを使用してください。
+プライバシーとセキュリティを保護するため、アカウントへのアクセスを許可する前、もしくは、個人情報を訂正する前に、あなたの身元確認を行うために適切な手続きを行います。 Because some schools block SSL-secure websites, Code.org allows access with or without SSL protection, at the direction of those schools. Webサイト使用時に入力したデータを暗号化して転送したい場合は、SSLで保護されたコネクションを利用できます。その時は、https://code.org/というHTTPSプロトコルを使用してください。
 
 ### 私たちは、Webサイトや送られた情報の安全性を確保するように努めますが、完全なセキュリティは存在しません。
 
@@ -228,9 +233,9 @@ Code.orgは、Webサイトで使用する情報や個人情報のセキュリテ
 
 ### 使用条件
 
-Code.orgを利用するとき、プライバシーにかかわるいかなる争議も個人情報保護方針とサービス利用同意規約に基づくものとします。これには、責任の制限、争議の調停、ワシントン州の法律の適用、ワシントン、シアトルを所管の裁判所とすることを含みます。
+If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 
-### カルフォルニア州の住民への注意:
+### A note to California residents:
 
 マーケティング目的でいかなる個人情報もサードパーティに開示しません。 プライバシーに関する取組、一旦共有した個人情報の閲覧と削除要求に関しては、http://code.org/contactへ依頼を送ってください。
 
@@ -239,4 +244,4 @@ Code.orgを利用するとき、プライバシーにかかわるいかなる争
 個人情報保護方針、個人情報の扱い、サードパーティへの開示の内容、あなたの同意内容に関するお問い合わせ、コメントは、 <http://code.org/contact> or at 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101のCode.orgまでご連絡ください。   
   
   
-[![画像](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![画像](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

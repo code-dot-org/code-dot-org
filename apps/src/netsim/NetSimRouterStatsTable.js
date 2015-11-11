@@ -7,11 +7,11 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var markup = require('./NetSimRouterStatsTable.html.ejs');

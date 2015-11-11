@@ -34,9 +34,17 @@ title: Poste Stats
       FROM poste_clicks where message_id = #{message_id}
      ").count
 
-  %h2= params[:name]
-
-
+     first_sent_message = DB[:poste_deliveries].where(message_id: message_id).order(:id).first
+     last_sent_message = DB[:poste_deliveries].where(message_id: message_id).order(:id).last
+     if first_sent_message && last_sent_message
+       message_sent_dates = [first_sent_message[:created_at], last_sent_message[:created_at]]
+     end
+  %h2
+    = params[:name]
+    %a{href: "https://raw.githubusercontent.com/code-dot-org/code-dot-org/production/pegasus/emails/#{params[:name]}.md", target: '_blank'}
+      [Content]
+  - if message_sent_dates
+    %h3 Sent between #{message_sent_dates.first} and #{message_sent_dates.last}
   %table
     %tr
       %th

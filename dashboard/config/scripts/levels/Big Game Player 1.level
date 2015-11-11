@@ -37,8 +37,9 @@
     "custom_game_type": "Big Game",
     "disable_examples": "false",
     "video_key": "alg_15_biggame_update_player",
-    "markdown_instructions": "We're getting really close to a finished game!\r\n\r\nLast time you worked on your game, you used booleans to make your Target and Danger return to the screen once they've left. Click Run to see how your game looks right now, and then we'll get to making your Player move up and down.",
+    "markdown_instructions": "We're getting really close to a finished game!\r\n\r\nLast time you worked on your game, you used booleans to make your Target and Danger return to the screen once they've left. Click \"Run\" to see how your game looks right now, and then we'll get to making your Player move up and down.",
     "examples_required": "false",
+    "never_autoplay_video": "false",
     "maze_data": null
   }
 }]]></config>

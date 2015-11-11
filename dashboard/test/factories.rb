@@ -6,6 +6,7 @@ FactoryGirl.define do
     locale 'en-US'
     sequence(:name) { |n| "User#{n} Codeberg" }
     user_type User::TYPE_STUDENT
+    confirmed_at Time.now
 
     # Child of :user factory, since it's in the `factory :user` block
     factory :admin do
@@ -17,9 +18,15 @@ FactoryGirl.define do
       birthday Date.new(1980, 03, 14)
       factory :facilitator do
         name 'Facilitator Person'
+        after(:create) do |facilitator|
+          facilitator.permission = 'facilitator'
+          facilitator.save
+        end
       end
       factory :district_contact do
         name 'District Contact Person'
+        ops_first_name 'District'
+        ops_last_name 'Person'
       end
     end
 
@@ -29,7 +36,7 @@ FactoryGirl.define do
 
     factory :young_student do
       user_type User::TYPE_STUDENT
-      birthday Date.today - 10.years
+      birthday Time.zone.today - 10.years
     end
   end
 
@@ -44,7 +51,7 @@ FactoryGirl.define do
   end
 
   factory :level, :class => Blockly do
-    sequence(:name) { |n| "Level #{n}" }
+    sequence(:name) { |n| "Level_#{n}" }
     sequence(:level_num) {|n| "1_2_#{n}" }
 
     # User id must be non-nil for custom level
@@ -85,6 +92,10 @@ FactoryGirl.define do
         level.save!
       end
     end
+
+    trait :script do
+      create(:script_level)
+    end
   end
 
   factory :unplugged, :parent => Level, :class => Unplugged do
@@ -96,10 +107,16 @@ FactoryGirl.define do
     properties{{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text: 'test'}], options: {hide_submit: false}}}
   end
 
+  factory :text_match, :parent => Level, :class => TextMatch do
+    game {create(:game, app: "textmatch")}
+    properties{{title: 'title', questions: [{text: 'test'}], options: {hide_submit: false}}}
+  end
+
   factory :artist, :parent => Level, :class => Artist do
   end
 
   factory :maze, :parent => Level, :class => Maze do
+    skin 'birds'
   end
 
   factory :applab, :parent => Level, :class => Applab do
@@ -110,11 +127,21 @@ FactoryGirl.define do
     level
     data '<xml/>'
     md5 { Digest::MD5.hexdigest(data) }
+    trait :with_image do
+      level { create(:level, game: Game.find_by_app(Game::ARTIST))}
+      after :create do |level_source, _|
+        create :level_source_image, level_source: level_source
+      end
+    end
   end
 
   factory :level_source_image do
     level_source
-    image File.read(Rails.root.join('test/fixtures/artist_image_blank.png'), binmode: true)
+  end
+
+  factory :gallery_activity do
+    user
+    activity { create(:activity, level_source: create(:level_source, :with_image)) }
   end
 
   factory :script do
@@ -122,9 +149,10 @@ FactoryGirl.define do
   end
 
   factory :script_level do
-    stage
-    script do |script_level|
-      script_level.stage.script
+    script
+
+    stage do |script_level|
+      create(:stage, script: script_level.script)
     end
 
     trait :with_autoplay_video do
@@ -208,6 +236,7 @@ FactoryGirl.define do
 
   factory :user_level do
     user {create :student}
+    level {create :applab}
   end
 
   factory :user_script do
@@ -232,16 +261,12 @@ FactoryGirl.define do
   end
 
   factory :workshop do
-    name 'My Workshop'
+    sequence(:name) { |n| "My Workshop #{n}" }
     program_type '1'
     location 'Somewhere, USA'
     instructions 'Test workshop instructions.'
-    facilitators {[
-      create(:facilitator).tap{|f| f.permission = 'facilitator'}
-    ]}
-    cohorts {[
-        create(:cohort)
-    ]}
+    facilitators {[create(:facilitator)]}
+    cohorts {[create(:cohort)]}
     after :create do |workshop, _|
       create_list :segment, 1, workshop: workshop
     end
@@ -249,8 +274,8 @@ FactoryGirl.define do
 
   factory :segment do
     workshop
-    start DateTime.now
-    self.send(:end, DateTime.now + 1.day)
+    start DateTime.now.utc
+    self.send(:end, DateTime.now.utc + 1.day)
   end
 
   factory :attendance, class: WorkshopAttendance do

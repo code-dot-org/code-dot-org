@@ -1,1 +1,1 @@
-<% $log.debug "Mixed Content: #{JSON.parse(request.body.read)}" %>
+<% $log.debug "Mixed Content: #{JSON.parse(request.body.read) rescue nil}" %>

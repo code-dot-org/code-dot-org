@@ -2,9 +2,9 @@
 
 [
   {
-    "name": "Chrome44Win7",
+    "name": "ChromeLatestWin7",
     "browserName": "chrome",
-    "version": "44.0",
+    "version": "",
     "platform": "Windows 7"
   },
   {
@@ -30,6 +30,12 @@
     "browserName": "Internet Explorer",
     "version": "10.0",
     "platform": "Windows 7"
+  },
+  {
+    "name": "IE11Win10",
+    "browserName": "Internet Explorer",
+    "version": "11.0",
+    "platform": "Windows 10"
   },
   {
     "name": "Firefox38Yosemite",

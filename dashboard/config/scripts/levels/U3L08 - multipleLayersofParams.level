@@ -1,0 +1,54 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-09-17T22:53:57.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "moveBackward": null,
+      "moveTo": null,
+      "turnLeft": null,
+      "penUp": null,
+      "penDown": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Call drawPlusSign() to complete the image. (Click to see full instructions)",
+    "markdown_instructions": "# Multiple levels of functions\r\n\r\nIn this example pay very close attention to how the functions have been declared. `drawPlusSign()` accepts a parameter called `size`.\r\n\r\n![](https://images.code.org/aec14185c20a890db6023ebf8ee214b0-image-1442583027015.30.10 AM.png)\r\n\r\nInside of the function this value is used to make a call to `drawSingleSide()` \r\n\r\n![](https://images.code.org/d74c79f74c2f1b0721d014580f69233f-image-1442583086099.31.17 AM.png)\r\n\r\n`drawSingleSide()` is defined in the code below and also accepts a parameter called `lengthOfSide`\r\n\r\n![](https://images.code.org/52320237a7c952bafef31635a8581f7d-image-1442583208640.33.21 AM.png)\r\n\r\nNotice that these functions accept the same **value** when they're called but they give them **different names**. Each function can decide what it will call its parameters. Even if one function calls another, **each function is treated as a separate logical unit of code.** In fact, you **could name their parameters** the same, but they would still be separate blocks of code.\r\n\r\nIn programming we call these blocks of code the **scope** of the function. It is a complex concept but one that will eventually make programming a much simpler process. The benefit of each function being able to name its own parameters is that you only need to look at that function to know which parameters it is using and what they are called.\r\n\r\n**Call `drawplusSign()`** twice in the spaces provided to draw the image below.\r\n\r\n",
+    "start_blocks": "function drawPlusSign(size){\r\n  penDown();\r\n  singleSide(size);\r\n  singleSide(size);\r\n  singleSide(size);\r\n  singleSide(size);\r\n  penUp();\r\n}\r\n\r\nfunction singleSide(lengthOfSide){\r\n  moveForward(lengthOfSide);\r\n  moveBackward(lengthOfSide);\r\n  turnLeft();\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": ".9",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "app_width": "320",
+    "app_height": "480",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

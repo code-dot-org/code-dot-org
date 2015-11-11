@@ -5,7 +5,6 @@ module Ops
     API = ::OPS::API
 
     setup do
-      @request.headers['Accept'] = 'application/json'
       @admin = create :admin
       @cohorts_district = create(:cohorts_district)
       @cohort = @cohorts_district.cohort
@@ -335,7 +334,7 @@ module Ops
       assert_response :success
 
       # only the two new districts
-      assert_equal [d1, d2], @cohort.reload.districts
+      assert_equal [d1, d2], @cohort.reload.districts.to_a
     end
 
     test 'district contact cannot update cohort districts' do

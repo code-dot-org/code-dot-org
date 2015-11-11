@@ -223,6 +223,56 @@ div.droplet-palette-group-header-selected.orange {
   min-height:25px;
 }
 
+button.arrow {
+  border: 1px solid #FFA000;
+  background-color: #FFA000;
+  color: #fff;
+  margin-left: 5px;
+  margin-right: 0px;
+  display: none;
+}
+button.arrow>img {
+  opacity: 1;
+  vertical-align: text-bottom;
+}
+button.arrow:focus {
+  outline-style: none;
+}
+button.arrow:disabled {
+  border: 1px solid #C7C7C7;
+  background-color: #C7C7C7;
+}
+
+#soft-buttons {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -5px;
+  -webkit-touch-callout: none;
+  &.soft-buttons-none {
+    display: none;
+  }
+}
+.soft-buttons-1 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 51px;
+}
+.soft-buttons-2 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 102px;
+}
+.soft-buttons-3 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 153px;
+}
+.soft-buttons-4 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 204px;
+}
+
 #codeTextbox {
   position: absolute;
   left: 0px;
@@ -236,7 +286,6 @@ div.droplet-palette-group-header-selected.orange {
 
 #codeTextbox.pin_bottom {
   border: 1px solid #ddd;
-  bottom: 156px;
 }
 
 html[dir='rtl'] #codeWorkspace {
@@ -262,14 +311,26 @@ html[dir='rtl'] #codeWorkspace {
   border-top: 1px solid #ddd;
 }
 
-// #codeWorkspace.readonly is used when we are displaying a workspace but it iss not editable (like someone else project)
-#codeWorkspace.readonly {
+// #codeWorkspace.readonly is used when we are displaying a workspace but it
+// is not editable (like someone else project), or when app is running
+#codeWorkspace.readonly, #codeWorkspace.dimmed {
   // special cases for:
   .blocklySvg, // blockly
   .droplet-main-scroller, // droplet block view
   .ace_scroller, { // droplet code view
     background-color: rgba(0, 0, 0, 0.1);
   }
+  // Note: We do something similar in our DesignModeBox React component's
+  // transparency layer. These two should be kept in sync as much as possible
+}
+
+.ace-chrome .ace_marker-layer .ace_error {
+  background: rgb(232, 47, 25);
+}
+
+.ace_marker-layer .ace_error {
+  position: absolute;
+  z-index: 3;
 }
 
 .ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
@@ -679,6 +740,64 @@ input[type="radio"] {
   font-size: large;
 }
 
+#puzzleRatingButtons {
+
+  $red: #FF3014;
+  $dark-red: #7F150A;
+  $blue: #0094CA;
+  $dark-blue: #00647F;
+  $gray: #333333;
+  $dark-gray: #4D4D4D;
+  $light-gray: $light_gray;
+
+  hr {
+    border-top: 2px solid #ccc;
+  }
+
+  p {
+    float: left;
+    font-size: 16px;
+    color: $light-gray;
+    margin-right: 10px;
+  }
+
+  svg {
+    pointer-events: none;
+  }
+
+  .puzzle-rating-btn {
+    fill: $light-gray;
+    padding: 0 5px;
+    cursor: pointer;
+    display: inline-block;
+
+    &#like {
+      &:hover {
+        fill: $gray;
+      }
+      &.enabled {
+        fill: $red;
+      }
+      &.enabled:hover {
+        fill: $dark-red;
+      }
+    }
+
+    &#dislike {
+      &:hover {
+        fill: $dark-gray;
+      }
+      &.enabled {
+        fill: $blue;
+      }
+      &.enabled:hover {
+        fill: $dark-blue;
+      }
+    }
+  }
+
+}
+
 /* Instructions. */
 #bubble {
   color: $black;
@@ -702,6 +821,11 @@ input[type="radio"] {
 
 #prompt-cell {
   vertical-align: top;
+}
+
+#prompt2 {
+  font-size: 12px;
+  color: $charcoal;
 }
 
 #ani-gif-preview-wrapper {
@@ -816,8 +940,11 @@ $workspace-header-button-margin: ($workspace-headers-height -
 }
 
 
-.readonly #headers {
-  background-color: $charcoal;
+.readonly {
+  #headers,
+  #design-headers {
+    background-color: $charcoal;
+  }
 }
 
 #headers {
@@ -1142,7 +1269,7 @@ $workspace-header-button-margin: ($workspace-headers-height -
 .invisible {
   visibility: hidden;
 }
-.hide-source {
+.hide-instructions {
   #visualization {
     display: inline-block;
   }

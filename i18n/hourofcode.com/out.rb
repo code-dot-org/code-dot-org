@@ -1,5 +1,6 @@
 #! /usr/bin/env ruby
 require 'fileutils'
+require 'tempfile'
 
 # language => [locale, code, crowdincode]
 languages = {
@@ -37,6 +38,7 @@ languages = {
   'Irish' => ['ga-IE', 'ga'],
   'Italian' => ['it-IT', 'it'],
   'Japanese' => ['ja-JP', 'ja'],
+  'Kazakh' => ['kk-KZ', 'kk'],
   'Khmer' => ['km-KH', 'km'],
   'Korean' => ['ko-KR', 'ko'],
   'Kurdish' => ['ku-IQ', 'ku'],
@@ -67,6 +69,7 @@ languages = {
   'Turkish' => ['tr-TR', 'tr'],
   'Ukrainian' => ['uk-UA', 'uk'],
   'Urdu (Pakistan)' => ['ur-PK', 'ur'],
+  'Uzbek' => ['uz-UZ', 'uz'],
   'Vietnamese' => ['vi-VN', 'vi']
 }
 
@@ -125,19 +128,29 @@ languages.each_pair do |name, codes|
       FileUtils.mkdir_p(language_folder)
       FileUtils.mkdir_p(language_folder + "/files")
       FileUtils.mkdir_p(language_folder + "/images")
-      FileUtils.mkdir_p(language_folder + "/resources")
+      FileUtils.mkdir_p(language_folder + "/how-to")
+      FileUtils.mkdir_p(language_folder + "/promote")
+      FileUtils.mkdir_p(language_folder + "/prizes")
     end
 
     i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/*.md"]
     i18n_dir.each do |file|
       FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/#{File.basename(file)}")
-      puts File.basename(file)
     end
 
-    i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/resources/*.md"]
+    i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/how-to/*.md"]
     i18n_dir.each do |file|
-      FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/resources/#{File.basename(file)}")
-      puts File.basename(file)
+      FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/how-to/#{File.basename(file)}")
+    end
+
+    i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/promote/*.md"]
+    i18n_dir.each do |file|
+      FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/promote/#{File.basename(file)}")
+    end
+
+    i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/prizes/*.md"]
+    i18n_dir.each do |file|
+      FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/prizes/#{File.basename(file)}")
     end
   end
 end
@@ -151,24 +164,94 @@ end
 #########################################################################################
 
 puts "Fixing crowdin markdown errors..."
-# remove all metadata
+# replace * * * with ---
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
-  File.write(file, File.read(file).gsub(/^.*\*\s\*\s\*/m, ""))
+  File.write(file, File.read(file).gsub(/^.*\*\s\*\s\*/, "---"))
 end
 
-# remove broken social tags from thanks.md
+# fix metadata to be multiline
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
+  puts file
+  metadata_pattern = /(---.*?---)/m
+  metadata_matches = File.read(file).match metadata_pattern
+  if metadata_matches
+    original_metadata = metadata_matches.captures.first
+    fixed_metadata = original_metadata.gsub(/ ([a-z]*:)/m, "\n\\1")
+    File.write(file, File.read(file).gsub(original_metadata, fixed_metadata))
+  end
+end
+
+# fix social media buttons in promote/index
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/promote/index.md").each do |file|
+  puts file
+  string_replacement = '#{request.host}'
+  social_media_buttons = "<%
+  facebook = {:u=>\"http://#{string_replacement}/us\"}\n
+  twitter = {:url=>\"http://hourofcode.com\", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'\n%>"
+  File.write(file, File.read(file).gsub(/^<% facebook.*?%>/m, social_media_buttons))
+end
+
+# fix social media buttons in public/thanks
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
-  File.write(file, File.read(file).gsub(/<% facebook.+?\%>/m, ""))
+  puts file
+  string_replacement = '#{request.host}'
+  social_media_buttons = "<%
+  facebook = {:u=>\"http://#{string_replacement}/us\"}\n
+  twitter = {:url=>\"http://hourofcode.com\", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'\n%>"
+  File.write(file, File.read(file).gsub(/^<% facebook.*?%>/m, social_media_buttons))
 end
 
-# add social tags to thanks.md
+# fix social media metadata in public/thanks
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
-  File.write(file, '<% facebook = {:u=>"http://#{request.host}/us"}
-                      twitter = {:url=>"http://hourofcode.com", :related=>"codeorg", :hashtags=>"", :text=>hoc_s(:twitter_default_text)}
-                      twitter[:hashtags] = "HourOfCode" unless hoc_s(:twitter_default_text).include? "#HourOfCode" %>' + File.read(file))
+  puts file
+  social_media_metada = "---
+title: <%= hoc_s(:title_signup_thanks) %>
+layout: wide
+nav: how_to_nav
+
+social:
+  \"og:title\": \"<%= hoc_s(:meta_tag_og_title) %>\"
+  \"og:description\": \"<%= hoc_s(:meta_tag_og_description) %>\"
+  \"og:image\": \"http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png\"
+  \"og:image:width\": 1440
+  \"og:image:height\": 900
+  \"og:url\": \"http://<%=request.host%>\"
+
+  \"twitter:card\": player
+  \"twitter:site\": \"@codeorg\"
+  \"twitter:url\": \"http://<%=request.host%>\"
+  \"twitter:title\": \"<%= hoc_s(:meta_tag_twitter_title) %>\"
+  \"twitter:description\": \"<%= hoc_s(:meta_tag_twitter_description) %>\"
+  \"twitter:image:src\": \"http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png\"
+---"
+  if file.split('/').last(2).first.size == 2
+    File.write(file, File.read(file).gsub(/^---.*?---/m, social_media_metada))
+  end
 end
 
-# add metadata to resources.md
-Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/resources.md").each do |file|
-  File.write(file, "---\nlayout: wide\nnav: resources_nav\n---" + File.read(file))
+# fix embedded ruby in markdown
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
+  puts file
+  File.write(file, File.read(file).gsub(/\((%[^%]*%)\)/, "(<\\1>)"))
 end
+
+
+
+#########################################################################################
+##                                                                                     ##
+## check for bad translations                                                          ##
+##                                                                                     ##
+#########################################################################################
+
+def compare_files
+  Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |i18n_file|
+    pattern = /..\/..\/pegasus\/sites.v3\/hourofcode.com\/i18n\/public\/[a-z][a-z]/
+    source_file = i18n_file.gsub(pattern, "../locales/source/hourofcode")
+
+    puts "checking: " + i18n_file
+    system("./diff_code.rb", i18n_file, source_file)
+  end
+end
+compare_files

@@ -1,3 +1,25 @@
+# == Schema Information
+#
+# Table name: levels
+#
+#  id                       :integer          not null, primary key
+#  game_id                  :integer
+#  name                     :string(255)      not null
+#  created_at               :datetime
+#  updated_at               :datetime
+#  level_num                :string(255)
+#  ideal_level_source_id    :integer
+#  solution_level_source_id :integer
+#  user_id                  :integer
+#  properties               :text(65535)
+#  type                     :string(255)
+#  md5                      :string(255)
+#
+# Indexes
+#
+#  index_levels_on_game_id  (game_id)
+#
+
 class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
@@ -6,6 +28,7 @@ class Level < ActiveRecord::Base
   belongs_to :ideal_level_source, :class_name => "LevelSource" # "see the solution" link uses this
   belongs_to :user
   has_many :level_sources
+  has_many :hint_view_requests
 
   before_validation :strip_name
 
@@ -117,7 +140,7 @@ class Level < ActiveRecord::Base
   end
 
   def write_custom_level_file
-    if write_to_file?
+    if changed? && write_to_file?
       file_path = LevelLoader.level_file_path(name)
       File.write(file_path, self.to_xml)
       file_path
@@ -188,18 +211,12 @@ class Level < ActiveRecord::Base
     end
   end
 
-  # Returns true if this is a pixelation level.
-  def pixelation?
-    # TODO(dave|joshlory): Define Pixelation < DSLDefined as a new level type,
-    # eliminating this fragile test of 'href'.
-    self.is_a?(DSLDefined) && self.properties['href'] == "pixelation/pixelation.html"
-  end
-
   # Returns whether this level is backed by a channel, whose id may
   # be passed to the client, typically to save and load user progress
   # on that level.
   def channel_backed?
-    self.project_template_level || self.game == Game.applab || self.pixelation?
+    return false if self.try(:is_project_level)
+    self.project_template_level || self.game == Game.applab || self.is_a?(Pixelation)
   end
 
   def key
@@ -225,6 +242,6 @@ class Level < ActiveRecord::Base
   private
 
   def write_to_file?
-    custom? && !is_a?(DSLDefined) && Rails.env.levelbuilder? && !ENV['FORCE_CUSTOM_LEVELS']
+    custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
   end
 end

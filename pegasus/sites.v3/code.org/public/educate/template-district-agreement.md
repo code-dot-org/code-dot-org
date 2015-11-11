@@ -7,17 +7,17 @@ right: blank
 
 ## Template language governing student achievement data provided by school districts to Code.org's independent evaluator
 
-#### The language below is template language to be used in Code.org’s partnerships with school districts:
+#### The language below is template language used in Code.org’s partnerships with school districts:
 
-Each Code.org district may or may not have the language below included in their contract, depending on whether or not the district decides to participate in a research study evaluating the impact of the Code.org program.
+Each Code.org district from its 2014 and 2015 cohorts has the language below included in their agreement with Code.org.
 
 Specific district partnership documents are managed by each individual district, who may decide the process for providing public access to those documents.
 
 As stated in our privacy policy, we’re deeply committed to creating a safe and secure environment for our students and teachers. We take the protection of this information seriously.
 
 - Any student achievement data provided by Code.org school district partners will be used **solely** for the purpose of evaluating our work.
-- The data will be **anonymous / de-identified** (per standard industry practice), requested per the district’s standard process, consistent  with all relevant laws governing such data, and used solely to enable third-party studies of long-term academic outcomes for students taking our courses.
-- Most importantly: Code.org will **not** receive any student achievement data from districts  - we ask districts to deliver data to our third party evaluator, CEMSE (at University of Chicago) who has been chosen for their experience and track-record of evaluating education initiatives and education data.
+- Any student achievement data created externally to Code Studio that will be part of Code.org's evaluation will be **anonymous / de-identified** (per standard industry practice). It will be requested per the district’s standard process, consistent  with all relevant laws governing such data, and used solely to enable third-party studies of long-term academic outcomes for students taking our courses.
+- Most importantly: Code.org will **not** receive any student achievement data created externally to Code Studio courses. If we are seeking to carry out research that would utilize student achievement data, we ask districts to deliver data to our third party evaluator, CEMSE (at University of Chicago) who has been chosen for their experience and track-record of evaluating education initiatives and education data.
 
 ### LANGUAGE FOR INCLUSION IN MAIN DISTRICT CONTRACT
 
@@ -73,8 +73,6 @@ Code.org may receive other, non-student information, from the Entity from time t
 Code.org will require the Evaluator to use and maintain any data given to the Evaluator by the Entity for the purposes set forth above and only in accordance with reasonable privacy/security measures, proper professional practices, student confidentiality and applicable federal, state and local laws, including the Family Educational Records and Privacy Act (“FERPA”). The Evaluator will be prohibited from using or disclosing the student data for any commercial purpose. The Evaluator is the only party, besides the Entity, that shall have access to the de-identified student data given to the Evaluator by the Entity.
 
 The Entity will be responsible, where applicable, for implementing annual notifications, obtaining any necessary student, parent or guardian consents, record-keeping and other such privacy requirements relating to these services.
-
-
 </br></br>
 
 ===

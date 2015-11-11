@@ -571,7 +571,7 @@ class UserTest < ActiveSupport::TestCase
 
     old_password = user.encrypted_password
 
-    user.reset_password!('goodpassword', 'goodpassword')
+    user.reset_password('goodpassword', 'goodpassword')
 
     # changed password
     assert user.reload.encrypted_password != old_password
@@ -777,7 +777,7 @@ class UserTest < ActiveSupport::TestCase
     user = create :student
     assert !user.needs_to_backfill_user_scripts?
 
-    script = Script.find(1)
+    script = Script.find_by_name("course2")
 
     create :user_level, user: user, level: script.script_levels.first.level, script: script
     # now has progress
@@ -829,6 +829,14 @@ class UserTest < ActiveSupport::TestCase
     assert_equal nil, User.normalize_gender('')
     assert_equal nil, User.normalize_gender(nil)
   end
+
+  test 'can create user with same name as deleted user' do
+    deleted_user = create(:user, name: 'Same Name')
+    deleted_user.destroy
+
+    create(:user, name: 'Same Name')
+  end
+
 
   test 'generate username' do
     def create_user_with_username(username)
@@ -890,38 +898,16 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'email confirmation required for teachers' do
-    user = create :teacher, email: 'my_email@test.xx'
+    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
     assert user.confirmation_required?
     assert !user.confirmed_at
   end
 
   test 'email confirmation not required for students' do
-    user = create :student, email: 'my_email@test.xx'
+    user = create :student, email: 'my_email@test.xx', confirmed_at: nil
     assert !user.confirmation_required?
     assert !user.confirmed_at
   end
-
-
-  test 'levels_from_script does not include userlevels from other scripts' do
-    user = create :user
-
-    script = Script.find(2) # original hoc script
-    shared_level = script.script_levels.first.level
-
-    assert shared_level.script_levels.count > 1
-
-    other_script = (shared_level.script_levels.collect(&:script) - [script]).first
-    assert other_script
-
-    other_script_user_level = UserLevel.create!(script_id: other_script.id, level_id: shared_level.id, user_id: user.id)
-    user_level = UserLevel.create!(script_id: script.id, level_id: shared_level.id, user_id: user.id)
-
-    lfs = user.levels_from_script(script)
-
-    assert_not_equal other_script_user_level, lfs.first.user_level
-    assert_equal user_level, lfs.first.user_level
-  end
-
 
   test 'student and teacher relationships' do
     student = create :student

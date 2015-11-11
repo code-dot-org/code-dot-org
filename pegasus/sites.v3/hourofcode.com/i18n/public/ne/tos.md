@@ -1,4 +1,10 @@
+---
 
+शिर्षक: शर्त तथा नियमहरु
+
+---
+
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
 
 # Terms of Service
 
@@ -12,23 +18,23 @@ These Terms are a legal contract between you and Code.org regarding your use of 
 
 These Terms are subject to change. You are agreeing to be bound by such changes if you continue to use to the Services after these Terms change, so please check these Terms for changes periodically.
 
-## Additional Terms
+## थप शर्त
 
 Some Services may be subject to additional posted guidelines, rules or terms of service (“**Additional Terms**”) and your use of such Services will be conditioned on your agreement to the Additional Terms. If there is any conflict between these Terms and the Additional Terms, the Additional Terms will control for that Service, unless the Additional Terms expressly state that these Terms will control.
 
-### Children Under Age 13
+### १३ वर्ष मुनिका बालबालिका
 
 We take steps to minimize the collection of personal data from Users under the age of 13 as explained in the Code.org [privacy policy](http://code.org/privacy). If you are under the age of 13, we encourage you to get the approval of a parent or legal guardian before creating an account on Code.org. Code.org allows certain representatives of school districts and schools, such as teachers, administrators, counselors, and other educators (a “**Educator**”) to connect with students through the Services in order to provide tutorial, educational and similar services. If you are an Educator, you may register accounts on the Services for one or more of your students.
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Your Account
+### तपाइको खाता
 
 If you create an account for Services, you are responsible for the security of your account and for keeping your own password safe. If you are using an account assigned to you by an Educator, your Educator may be able to access and disable your account.
 
 Code.org may permit you to register an account for the Services through certain third party social networking services, such as Facebook Connect and Google (“**Authentication Service**”). By registering for the Services using an Authentication Service, you agree that Code.org may access your account information from the Authentication Service and you agree to any and all terms of use of the Authentication Service regarding your use of the Services via the Authentication Service. You are solely responsible for your interactions with the Authentication Service.
 
-### Privacy
+### गोपनियता
 
 Your privacy is important to us. Code.org’s [Privacy Policy](http://code.org/privacy) explains how we treat your personal data and is incorporated into these Terms by reference. Please read the Privacy Policy carefully for information relating to Code.org’s collection, use, and disclosure of your personal information.
 
@@ -74,7 +80,7 @@ The [Code.org JSON API and database of schools](http://code.org/learn/find-schoo
 
 Any data provided by The Conference Board is provided “as is” with no warranty whatsoever, and is protected by United States and International Copyright laws. The data displayed are provided for informational purposes only and may only be accessed, reviewed, published, and/or used in accordance with, and the permission of, The Conference Board consistent with the Terms of Use displayed at [www.conference-board.org](http://www.conference-board.org). Such data may not be extracted for use in a database, used to create a derivative work, or otherwise misused by any means without express written permission from The Conference Board, except that you may make limited non-commercial use as consistent with Fair Use under Section 107 of the Copyright Act of 1976. The Conference Board® and The Conference Board Help Wanted OnLine® are registered trademarks of The Conference Board. The Conference Board reserves all rights in and to its trademarks. Further information regarding The Conference Board Help Wanted OnLine® can be found [here](https://www.conference-board.org/data/helpwantedonline.cfm).
 
-### Copyright Policy
+### प्रतिलिपि नीति
 
 Code.org respects the intellectual property rights of others and expects users of the Services to do the same. We will respond to notices of alleged copyright infringement that comply with applicable law and are properly provided to us. If you believe that your work has been copied in a way that constitutes copyright infringement, please provide us with the following information: (i) a physical or electronic signature of the copyright owner or a person authorized to act on their behalf; (ii) identification of the copyrighted work claimed to have been infringed; (iii) identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit us to locate the material; (iv) your contact information, including your address, telephone number, and an email address; (v) a statement by you that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law; and (vi) a statement that the information in the notification is accurate, and, under penalty of perjury, that you are authorized to act on behalf of the copyright owner.
 
@@ -132,7 +138,7 @@ TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE CODE.ORG ENTITIES SHALL N
 
 SOME STATES OR OTHER JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU.
 
-### General Terms
+### साधारण शर्त 
 
 #### A. Waiver and Severability
 

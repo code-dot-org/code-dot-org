@@ -2,18 +2,17 @@ Feature: Projects
 
 Scenario: Save Artist Project
   Given I am on "http://learn.code.org/projects/artist"
+  And I get redirected to "/projects/artist/([^\/]*?)/edit" via "dashboard"
   And I rotate to landscape
   And I wait to see "#runButton"
   And element "#runButton" is visible
-  And element ".project_updated_at" has text "Not saved"
+  And element ".project_updated_at" contains text "Saved"
   Then I open the topmost blockly category "Color"
   And I drag block matching selector "#draw-color" to block matching selector "#when_run"
-  And I press "runButton"
-#  Then element ".project_updated_at" contains text "Saving..." # I think browserstack is too slow to catch this
-  Then I wait until element ".project_updated_at" contains text "Saved"
   Then I click selector ".project_share"
   And I wait to see "#x-close"
   And I navigate to the share URL
+  And I wait until element "#visualization" is visible
   Then element "#draw-color" is a child of element "#when_run"
 
 # dashboard_db_access for sign in
@@ -27,20 +26,22 @@ Scenario: Applab Flow
   And I am on "http://studio.code.org/users/sign_in"
   And I reload the page
   Then I am on "http://studio.code.org/projects/applab"
+  And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
   And I rotate to landscape
+  Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
   # TODO  ideally we should probably create some code and/or design elements here
   # looks like we have add_code_to_editor
   And I wait to see "#runButton"
   And element "#runButton" is visible
-  And element ".project_updated_at" has text "Not saved"
+  And element ".project_updated_at" contains text "Saved"
   Then I click selector ".project_share"
   And I wait to see "#x-close"
 
-  # now we're at /projects/applab/channel_id
   Then I navigate to the share URL
-  And I wait to see "#open-workspace"
+  And I wait to see "#footerDiv"
   And element "#codeWorkspace" is hidden
-  Then I click selector "#open-workspace"
+  And I press the first "#footerDiv .more-link" element
+  And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How It Works']"
 
   # We'll originally go to /view, then get pushStated to /edit
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "pushState"
@@ -49,9 +50,10 @@ Scenario: Applab Flow
 
   Then I am on "http://studio.code.org/users/sign_out"
   And I navigate to the last shared URL
-  And I wait to see "#open-workspace"
+  And I wait to see "#footerDiv"
   And element "#codeWorkspace" is hidden
-  Then I click selector "#open-workspace"
+  And I press the first "#footerDiv .more-link" element
+  And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How It Works']"
 
   # Don't actually get redirect this time (stay on /view)
   And I get redirected to "/projects/applab/([^\/]*?)/view" via "nothing"

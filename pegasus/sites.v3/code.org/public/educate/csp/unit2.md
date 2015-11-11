@@ -9,7 +9,7 @@ nav: educate_nav
 
 **Quick Links**
 
-[CSP Forum](http://forum.code.org/c/csp) | [CSP Unit 2 in Code Studio](https://studio.code.org/s/cspunit2)  | [Writing Team](team) 
+[General CSP Forum](http://forum.code.org/c/csp) | [Unit 2 Discussion Forum](http://forum.code.org/c/csp-unit2) | [CSP Unit 2 in Code Studio](https://studio.code.org/s/cspunit2)  | [Writing Team](team) 
 
 
 
@@ -35,6 +35,14 @@ nav: educate_nav
 		</td>
 </tr>
 </table>
+<br/>
+### Resources
+
+<ul>
+<li> You can view all of the lessons in Unit 2 through <strong><a href = "http://bit.ly/csp-unit2" target="_blank">this Google Drive folder</a></strong></li>
+<li> If you're a teacher, you can apply for Code Studio access to protected, teacher-only materials (answer keys, etc) through <strong><a href = "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong> </li>
+</ul>
+
 <br/><br/>
 
 | Lesson Description| Lesson Plan | 

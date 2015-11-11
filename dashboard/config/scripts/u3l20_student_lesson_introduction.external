@@ -1,26 +1,31 @@
 name 'U3L20 Student Lesson Introduction'
-title 'Conditional Basics'
-
-markdown <<MARKDOWN
-## Unit 3: Lesson 20 - Conditional Basics
-
-# Background
-
-Making decisions based upon accurate information is important in computer games – as well as in life! Computer decisions are based upon Boolean logic statements that very precisely compare values. These programming statements are called “conditionals” and direct the computer to react based upon the truth of the Boolean comparison.
-
-# Lesson
-
-* Translate English comparisons from English to Boolean expressions.
-* Determine the truthfulness of Boolean expressions. 
-* Add a decision to your Clicker game. 
-
-
-# Resources
-
-* Conditional Basics Worksheet 1: <a href="https://docs.google.com/document/d/1pzagY1MMYmHDYcWdw9Zi9ajY8rMPsIVxGNU-DJP-0l0" target="_blank"> How a Computer Represents Decision Making</a>
-* Conditional Basics Worksheet 2: <a href="https://docs.google.com/document/d/1eD5HiJf5TCh7EYzemFKU83K0Gb8Vsf2WNGJawhhYJ1U" target="_blank"> Boolean Expressions
-</a>
-
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
+encrypted 'Yc6sRnJHOQTIk2j8wV/4EbH0Mlnw0qQr7s2jydM3AlnpYQ2N9AztogenNtKZ
+3hxjImWop9nTo0CXie2fNlrwfLc6G8Fbb9WW0qWSwgMDMRMMMkCLhY7LDrg9
+7/YhJ67jc60CR3+R97lx7Niuo7OD2v/lnop0pGls28VqQNPQSWtQGUhAAPlx
+Wcx5L7+nS0vl9Edphvvn8fAaiOzMDXR9+kYwZExRkJjaMcCiwDNdaVRO5i/T
+HF1upmQM/N91P8sdWt0XQ+MkkDdjUce9FpbzwA91lkXiekjpTQRo1x7uC9F6
+yajCKgQf5jCABOum1vy5I49ZjzsWQ+8eabVq50rCgkaKwydns6Sd3fxIdnnY
+6OQE34Zzr3nCeD5Hvcc82t5G64nBeKpUh/+XPzlJPqbgDCQYyV8UGt5B446M
+5dQghKIPysLQiJ7ekjHbw/DqbiCw8myu/HNBRBedZys/TG4leu+0K00AY153
+hrP/TOKxEhCYmFtjpf/8f8M1A1SHjtHglb0lbIsHE9LAUJJ5Ka3TepOVaB8b
+CchPF7u/k9UZulISEG44L/cdRUZt1dqT7bFrd8Ir7nIEbNSolUnafJeM5NfE
+gzGustlSrdxW2jl9N/i+pATibmJGgrJddWuUSg/3AY871fA+JousxMbb8kaE
+iQs4XhOjliWPK/g50xkRYqwcL+2bHa3OKr3hV34AF2BjJw1fi15CMc5V3CsQ
+bOXPFkLAcm+Kq+94clqpnPu5KK+VqkFei26byj5Z7gKpeIJACt6Gf5ZBIGej
+vpESniIcNCiSPOEPi5IjgrQAotrUF9k/nZ71h+5N1ac8FEHuic7Fa5Nck66o
+X484RcxjVpfbgH7Sen63GH4prx5U2EnYnQkKUEaKjhedPoK+XNYUHH32xtPl
+NtgyP49tgkF9NU9PxYJ8kPi8XXzvOFQQ3K2bAYhMCgzbw2fi6IRK+DYNoq4Q
+TjczdvdJ6bWVMrxwattVrPrrZzCDyo8DlaK1oCAzdLDlH0mSdJwLBf+kroat
+Iiklm9Nh4qIjN0uf2EGnWu/2Uq48nBV04n9Va9v4XzjRW0Zfn9AzfAXihJgj
+HnE3WWkUQyOzNE5LkXm6sWdFRMI44wuBr5yMhDu4eiNJ0kEGtRkqJufbHhPd
+IVPplG6mm7wqkJJdCWGYqrmim1fTGwMHOHHNw+s3lQfms6VKETEvuI0Q6Aw3
+2T7rL3a9qvmjXNTg87+bPKhh27DTeeiS7izQ9sY8FvWdnUbo5R/rOwv5PL6o
+NA3x8KCdWpWswuGvmCObFAtfG+5WlSQNftklj0YjOjAUnskksTL6Bb8Of9/K
+HPEhPkfHmNlP4NAdkgYMDN3a21SJrYouahIpP0Ei2TCZZXmbhxEgwPMhM+VJ
+TuU6MKbG36njNGVW77prnOAmsIUj/CPv4yXQ29xktVEaaPRxcRf1ol8wjyUW
+7crzcJhZJO+X8esRqXyZ8DpJOyDGimatCSma046uuV3p4NUiIADPNg/PrexA
+lHp55QKSBJcSQAzGm/2YetpeU2JzcDTEg3mspcYbbIUoOTUvpp+rWN4Bz4Rn
+2KXWiiuZT3EEoxmmCL1gGcD34aFdYTKiWCUGT4YDDDUfxPbnszYKB5ceTs2A
+fXmzcVHCStgkDFy8jHEX754Gr191xLp0fkc8k8azqLpx9dm6wwUblYembJvW
+n+nN7pbCFdd4u3erIZDkDlkiQ0c+G3rGfl7mufkxPQVMgLYw
+'

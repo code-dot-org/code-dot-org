@@ -56,6 +56,78 @@ SQL
     render 'usage', formats: [:html]
   end
 
+  def funometer
+    authorize! :read, :reports
+
+    # Compute the global funometer percentage.
+    all_ratings = PuzzleRating.all
+    positive_ratings = all_ratings.where(rating: 1)
+    @global_percentage = 100.0 * positive_ratings.count / all_ratings.count
+
+    # Generate the funometer percentages, by day, for the last month.
+    percentages_by_day = all_ratings.select('100.0 * SUM(rating) / COUNT(rating)').where('created_at > ?', Time.now.prev_month).group('DATE(created_at)').order('DATE(created_at)').pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating)')
+
+    # Compute funometer percentages by script.
+    @script_headers = ['Script ID', 'Percentage', 'Count']
+    @script_ratings = all_ratings.select(:script_id, 'SUM(100.0 * rating) / COUNT(rating) AS ratio', 'COUNT(rating) AS cnt').group(:script_id).order('SUM(100.0 * rating) / COUNT(rating)').pluck(:script_id, 'SUM(100.0 * rating) / COUNT(rating)', 'COUNT(rating)')
+
+    # Compute funometer percentages by level.
+    @level_headers = ['Script ID', 'Level ID', 'Percentage', 'Count']
+    level_ratings = all_ratings.select(:script_id, :level_id, 'SUM(100.0 * rating) / COUNT(rating) AS ratio', 'COUNT(rating) AS cnt').group(:script_id, :level_id)
+    @favorite_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) desc').limit(25).pluck(:script_id, :level_id, 'SUM(100.0 * rating) / COUNT(rating)', 'COUNT(rating)')
+    @hated_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) asc').limit(25).pluck(:script_id, :level_id, 'SUM(100.0 * rating) / COUNT(rating)', 'COUNT(rating)')
+
+    render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+  end
+
+  def search_for_teachers
+    authorize! :read, :reports
+
+    email_filter = "%#{params[:emailFilter]}%"
+    address_filter = "%#{params[:addressFilter]}%"
+
+    # TODO(asher): Determine whether we should be doing an inner join or a left
+    # outer join.
+    @teachers = User.where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id')
+
+    # If requested, join with the workshop_attendance table to filter out based
+    # on PD attendance.
+    if params[:pd] == "pd"
+      @teachers = @teachers.joins("INNER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").distinct
+    elsif params[:pd] == "nopd"
+      @teachers = @teachers.joins("LEFT OUTER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").where("workshop_attendance.teacher_id IS NULL").distinct
+    end
+
+    # Prune the set of fields to those that will be displayed.
+    @teacher_limit = 100
+    @headers = ['ID', 'Name', 'Email', 'Address', 'Num Students']
+    @teachers = @teachers.limit(@teacher_limit).pluck('id', 'name', 'email', 'full_address', 'COUNT(followers.id) AS num_students')
+  end
+
+  def csp_pd_responses
+    authorize! :read, :reports
+
+    @headers = ['Level ID', 'User Email', 'Data']
+    @response_limit = 100
+    @responses = {}
+    [3911, 3909, 3910, 3907].each do |level_id|
+      # Regardless of the level type, query the DB for teacher repsonses.
+      @responses[level_id] = LevelSource.limit(@response_limit).where(level_id: level_id).joins(:activities).joins("INNER JOIN users ON activities.user_id = users.id").pluck(:level_id, :email, :data)
+
+      # If the level type is multiple choice, get the text answers and replace
+      # the numerical responses stored with the corresponding text.
+      if [3911, 3909, 3910].include? level_id
+        level_properties = Level.where(id: level_id).pluck(:properties)
+        if level_properties.length > 0
+          level_answers = level_properties[0]["answers"]
+          @responses[level_id].each do |response|
+            response[2] = level_answers[response[2].to_i]["text"]
+          end
+        end
+      end
+    end
+  end
+
   def admin_stats
     authorize! :read, :reports
 
@@ -204,10 +276,12 @@ SQL
     authorize! :read, :reports
     require 'date'
 # noinspection RubyResolve
-    require '../dashboard/scripts/archive/ga_client/ga_client'
+    require Rails.root.join('scripts/archive/ga_client/ga_client')
 
     @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
     @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
+
+    @is_sampled = false
 
     output_data = {}
     %w(Attempt Success).each do |key|
@@ -218,9 +292,8 @@ SQL
         filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
       end
       ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
-      if ga_data.data.containsSampledData
-        throw new ArgumentError 'Google Analytics response contains sampled data, aborting.'
-      end
+
+      @is_sampled ||= ga_data.data.contains_sampled_data
 
       ga_data.data.rows.each do |r|
         label = r[0]

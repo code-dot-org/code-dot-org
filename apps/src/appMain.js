@@ -37,6 +37,10 @@ module.exports = function(app, levels, options) {
       level.requiredBlocks = requiredBlockUtils.makeTestsFromBuilderRequiredBlocks(
           options.level.levelBuilderRequiredBlocks);
     }
+    if (options.level.levelBuilderRecommendedBlocks) {
+      level.recommendedBlocks = requiredBlockUtils.makeTestsFromBuilderRequiredBlocks(
+          options.level.levelBuilderRecommendedBlocks);
+    }
 
     options.level = level;
   }

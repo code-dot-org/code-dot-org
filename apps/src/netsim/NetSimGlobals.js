@@ -12,6 +12,7 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -83,6 +84,13 @@ module.exports = {
       usePusher: netsim_.usePusher,
       pusherApplicationKey: netsim_.pusherApplicationKey
     };
+  },
+
+  /**
+   * @returns {number}
+   */
+  getGlobalMaxRouters: function () {
+    return netsim_.globalMaxRouters;
   },
 
   /**

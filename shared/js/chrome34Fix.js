@@ -1,4 +1,4 @@
-/* global $, WebKitMutationObserver */
+/* global WebKitMutationObserver */
 
 /**
  * Workaround for Chrome 34 SVG bug #349701

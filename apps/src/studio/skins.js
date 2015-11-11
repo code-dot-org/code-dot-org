@@ -8,12 +8,319 @@
 var skinsBase = require('../skins');
 var msg = require('./locale');
 var constants = require('./constants');
+var studioApp = require('../StudioApp').singleton;
 
 var RANDOM_VALUE = constants.RANDOM_VALUE;
 var HIDDEN_VALUE = constants.HIDDEN_VALUE;
 var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
+
+function loadGumball(skin, assetUrl) {
+  skin.defaultBackground = 'dots';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'projectile_banana',
+    'projectile_dodgeball',
+    'projectile_donkey',
+    'projectile_handbag',
+    'projectile_hotdog',
+    'projectile_pompom',
+    'projectile_toaster',
+    'projectile_waterball',
+  ];
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_projectile_banana',
+    'item_projectile_dodgeball',
+    'item_projectile_donkey',
+    'item_projectile_handbag',
+    'item_projectile_hotdog',
+    'item_projectile_pompom',
+    'item_projectile_toaster',
+    'item_projectile_waterball',
+  ];
+
+  // Images
+  skin.projectile_banana = skin.assetUrl('projectile_banana.png');
+  skin.projectile_dodgeball = skin.assetUrl('projectile_dodgeball.png');
+  skin.projectile_donkey = skin.assetUrl('projectile_donkey.png');
+  skin.projectile_handbag = skin.assetUrl('projectile_handbag.png');
+  skin.projectile_hotdog = skin.assetUrl('projectile_hotdog.png');
+  skin.projectile_pompom = skin.assetUrl('projectile_pompom.png');
+  skin.projectile_toaster = skin.assetUrl('projectile_toaster.png');
+  skin.projectile_waterball = skin.assetUrl('projectile_waterball.png');
+
+  // TODO: proper item class names
+  skin.item_projectile_banana = skin.assetUrl('projectile_banana.png');
+  skin.item_projectile_dodgeball = skin.assetUrl('projectile_dodgeball.png');
+  skin.item_projectile_donkey = skin.assetUrl('projectile_donkey.png');
+  skin.item_projectile_handbag = skin.assetUrl('projectile_handbag.png');
+  skin.item_projectile_hotdog = skin.assetUrl('projectile_hotdog.png');
+  skin.item_projectile_pompom = skin.assetUrl('projectile_pompom.png');
+  skin.item_projectile_toaster = skin.assetUrl('projectile_toaster.png');
+  skin.item_projectile_waterball = skin.assetUrl('projectile_waterball.png');
+
+  skin.explosion = skin.assetUrl('explosion.png');
+  skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
+  skin.explosionFrames = 40;
+  skin.fadeExplosion = false;
+  skin.timePerExplosionFrame = 20;
+
+  skin.characters = {
+    background: skin.assetUrl('background_characters.png'),
+  };
+  skin.checkers = {
+    background: skin.assetUrl('background_checkers.png'),
+  };
+  skin.clouds = {
+    background: skin.assetUrl('background_clouds.png'),
+  };
+  skin.cornered = {
+    background: skin.assetUrl('background_cornered.png'),
+  };
+  skin.dots = {
+    background: skin.assetUrl('background_dots.png'),
+  };
+  skin.graffiti = {
+    background: skin.assetUrl('background_graffiti.png'),
+  };
+  skin.space = {
+    background: skin.assetUrl('background_space.png'),
+  };
+  skin.squares = {
+    background: skin.assetUrl('background_squares.png'),
+  };
+  skin.wood = {
+    background: skin.assetUrl('background_wood.png'),
+  };
+
+  skin.avatarList = ["anais", "antony", "bananajoe", "darwin", "gumball", "nicole", "penny", "richard"];
+  skin.walkValues = [8, 8, 8, 12, 12, 8, 10, 12];
+
+  /**
+   * Sprite thumbs generated with:
+   * `brew install graphicsmagick`
+   * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
+   */
+  skin.avatarList.forEach(function (name, i) {
+    skin[name] = {
+      sprite: skin.assetUrl('idle_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 19,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: skin.walkValues[i],
+        emotionCycles: 0,
+        extraEmotions: 3
+      },
+      timePerFrame: 100
+    };
+  });
+
+
+  skin.backgroundChoices = [
+    [msg.setBackgroundRandom(), RANDOM_VALUE],
+    [msg.setBackgroundCharacters(), '"characters"'],
+    [msg.setBackgroundCheckers(), '"checkers"'],
+    [msg.setBackgroundClouds(), '"clouds"'],
+    [msg.setBackgroundCornered(), '"cornered"'],
+    [msg.setBackgroundDots(), '"dots"'],
+    [msg.setBackgroundGraffiti(), '"graffiti"'],
+    [msg.setBackgroundSpace(), '"space"'],
+    [msg.setBackgroundSquares(), '"squares"'],
+    [msg.setBackgroundWood(), '"wood"']];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.backgroundChoicesK1 = [
+    [skin.characters.background, '"characters"'],
+    [skin.checkers.background, '"checkers"'],
+    [skin.clouds.background, '"clouds"'],
+    [skin.cornered.background, '"cornered"'],
+    [skin.dots.background, '"dots"'],
+    [skin.graffiti.background, '"graffiti"'],
+    [skin.space.background, '"space"'],
+    [skin.squares.background, '"squares"'],
+    [skin.wood.background, '"wood"'],
+    [skin.randomPurpleIcon, RANDOM_VALUE]];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteAnais(), '"anais"'],
+    [msg.setSpriteAntony(), '"antony"'],
+    [msg.setSpriteBananajoe(), '"bananajoe"'],
+    [msg.setSpriteDarwin(), '"darwin"'],
+    [msg.setSpriteGumball(), '"gumball"'],
+    [msg.setSpriteNicole(), '"nicole"'],
+    [msg.setSpritePenny(), '"penny"'],
+    [msg.setSpriteRichard(), '"richard"']];
+
+  skin.projectileChoices = [
+    [msg.projectileBanana(), '"projectile_banana"'],
+    [msg.projectileDodgeball(), '"projectile_dodgeball"'],
+    [msg.projectileDonkey(), '"projectile_donkey"'],
+    [msg.projectileHandbag(), '"projectile_handbag"'],
+    [msg.projectileHotdog(), '"projectile_hotdog"'],
+    [msg.projectilePompom(), '"projectile_pompom"'],
+    [msg.projectileToaster(), '"projectile_toaster"'],
+    [msg.projectileWaterball(), '"projectile_waterball"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.itemChoices = [
+    [msg.itemProjectileBanana(), '"item_projectile_banana"'],
+    [msg.itemProjectileDodgeball(), '"item_projectile_dodgeball"'],
+    [msg.itemProjectileDonkey(), '"item_projectile_donkey"'],
+    [msg.itemProjectileHandbag(), '"item_projectile_handbag"'],
+    [msg.itemProjectileHotdog(), '"item_projectile_hotdog"'],
+    [msg.itemProjectilePompom(), '"item_projectile_pompom"'],
+    [msg.itemProjectileToaster(), '"item_projectile_toaster"'],
+    [msg.itemProjectileWaterball(), '"item_projectile_waterball"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
+}
+
+function loadIceAge(skin, assetUrl) {
+  skin.defaultBackground = 'icy';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'ia_projectile_1',
+    'ia_projectile_2',
+    'ia_projectile_3',
+    'ia_projectile_4',
+    'ia_projectile_5',
+  ];
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_ia_projectile_1',
+    'item_ia_projectile_2',
+    'item_ia_projectile_3',
+    'item_ia_projectile_4',
+    'item_ia_projectile_5',
+  ];
+
+  // Images
+  skin.ia_projectile_1 = skin.assetUrl('ia_projectile_1.png');
+  skin.ia_projectile_2 = skin.assetUrl('ia_projectile_2.png');
+  skin.ia_projectile_3 = skin.assetUrl('ia_projectile_3.png');
+  skin.ia_projectile_4 = skin.assetUrl('ia_projectile_4.png');
+  skin.ia_projectile_5 = skin.assetUrl('ia_projectile_5.png');
+
+  // TODO: proper item class names
+  skin.item_ia_projectile_1 = skin.assetUrl('ia_projectile_1.png');
+  skin.item_ia_projectile_2 = skin.assetUrl('ia_projectile_2.png');
+  skin.item_ia_projectile_3 = skin.assetUrl('ia_projectile_3.png');
+  skin.item_ia_projectile_4 = skin.assetUrl('ia_projectile_4.png');
+  skin.item_ia_projectile_5 = skin.assetUrl('ia_projectile_5.png');
+
+  skin.explosion = skin.assetUrl('explosion.png');
+  skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
+  skin.explosionFrames = 17;
+  skin.fadeExplosion = false;
+  skin.timePerExplosionFrame = 40;
+
+  skin.grassy = {
+    background: skin.assetUrl('background.jpg'),
+  };
+  skin.tile = {
+    background: skin.assetUrl('background_tile.jpg'),
+  };
+  skin.leafy = {
+    background: skin.assetUrl('background_leafy.jpg'),
+  };
+  skin.icy = {
+    background: skin.assetUrl('background_icy.jpg'),
+  };
+  skin.flower = {
+    background: skin.assetUrl('background_flower.jpg'),
+  };
+
+  skin.avatarList = ["manny", "sid", "scrat", "diego", "granny"];
+
+  /**
+   * Sprite thumbs generated with:
+   * `brew install graphicsmagick`
+   * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
+   */
+  skin.avatarList.forEach(function (name) {
+    skin[name] = {
+      sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 19,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: 12,
+        emotionCycles: 0,
+        extraEmotions: 3
+      },
+      timePerFrame: 100
+    };
+  });
+
+
+  skin.backgroundChoices = [
+    [msg.setBackgroundRandom(), RANDOM_VALUE],
+    [msg.setBackgroundGrassy(), '"grassy"'],
+    [msg.setBackgroundTile(), '"tile"'],
+    [msg.setBackgroundLeafy(), '"leafy"'],
+    [msg.setBackgroundIcy(), '"icy"'],
+    [msg.setBackgroundFlower(), '"flower"']];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.backgroundChoicesK1 = [
+    [skin.grassy.background, '"grassy"'],
+    [skin.tile.background, '"tile"'],
+    [skin.leafy.background, '"leafy"'],
+    [skin.icy.background, '"icy"'],
+    [skin.flower.background, '"flower"'],
+    [skin.randomPurpleIcon, RANDOM_VALUE]];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteManny(), '"manny"'],
+    [msg.setSpriteSid(), '"sid"'],
+    [msg.setSpriteScrat(), '"scrat"'],
+    [msg.setSpriteDiego(), '"diego"'],
+    [msg.setSpriteGranny(), '"granny"']];
+
+  skin.projectileChoices = [
+    [msg.projectileIAProjectile1(), '"ia_projectile_1"'],
+    [msg.projectileIAProjectile2(), '"ia_projectile_2"'],
+    [msg.projectileIAProjectile3(), '"ia_projectile_3"'],
+    [msg.projectileIAProjectile4(), '"ia_projectile_4"'],
+    [msg.projectileIAProjectile5(), '"ia_projectile_5"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.itemChoices = [
+    [msg.itemIAProjectile1(), '"item_ia_projectile_1"'],
+    [msg.itemIAProjectile2(), '"item_ia_projectile_2"'],
+    [msg.itemIAProjectile3(), '"item_ia_projectile_3"'],
+    [msg.itemIAProjectile4(), '"item_ia_projectile_4"'],
+    [msg.itemIAProjectile5(), '"item_ia_projectile_5"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
+}
 
 function loadInfinity(skin, assetUrl) {
   skin.preloadAssets = true;
@@ -35,10 +342,10 @@ function loadInfinity(skin, assetUrl) {
     'projectile_duck'
   ];
 
-  skin.specialProjectileFrames = {
-    'projectile_cherry': 13,
-    'projectile_ice': 12,
-    'projectile_duck': 12
+  skin.specialProjectileProperties = {
+    'projectile_cherry': { frames: 13 },
+    'projectile_ice': { frames: 12 },
+    'projectile_duck': { frames: 12 }
   };
 
   // TODO: proper item class names
@@ -53,10 +360,10 @@ function loadInfinity(skin, assetUrl) {
     'item_duck'
   ];
 
-  skin.specialItemFrames = {
-    'item_cherry': 13,
-    'item_ice': 12,
-    'item_duck': 12
+  skin.specialItemProperties = {
+    'item_cherry': { frames: 13 },
+    'item_ice': { frames: 12 },
+    'item_duck': { frames: 12 }
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -142,6 +449,8 @@ function loadInfinity(skin, assetUrl) {
     [msg.setBackgroundSnowy(), '"snowy"'],
     ];
 
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
     [skin.leafy.background, '"leafy"'],
     [skin.grassy.background, '"grassy"'],
@@ -173,6 +482,8 @@ function loadInfinity(skin, assetUrl) {
     [msg.projectileRandom(), RANDOM_VALUE]];
 
   // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
     [msg.itemHiro(), '"item_hiro"'],
     [msg.itemAnna(), '"item_anna"'],
@@ -188,51 +499,94 @@ function loadInfinity(skin, assetUrl) {
 function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
-  skin.defaultBackground = 'leafy';
+  skin.hideIconInClearPuzzle = true;
+
+  skin.defaultBackground = 'endor';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
   skin.ProjectileClassNames = [
-    'projectile_hiro',
-    'projectile_anna',
-    'projectile_elsa',
-    'projectile_baymax',
-    'projectile_rapunzel',
-    'projectile_cherry',
-    'projectile_ice',
-    'projectile_duck'
   ];
 
-  skin.specialProjectileFrames = {
-    'projectile_cherry': 13,
-    'projectile_ice': 12,
-    'projectile_duck': 12
+  skin.ItemClassNames = [
+    'pufferpig',
+    'stormtrooper',
+    'tauntaun',
+    'mynock',
+    'probot',
+    'mousedroid',
+    'rebelpilot'
+  ];
+
+  skin.AutohandlerTouchItems = {
+    whenTouchPufferPig: 'pufferpig',
+    whenTouchStormtrooper: 'stormtrooper',
+    whenTouchTauntaun: 'tauntaun',
+    whenTouchMynock: 'mynock',
+    whenTouchProbot: 'probot',
+    whenTouchMouseDroid: 'mousedroid',
+    whenTouchRebelPilot: 'rebelpilot',
+    whenGetPufferPig: 'pufferpig',
+    whenGetStormtrooper: 'stormtrooper',
+    whenGetTauntaun: 'tauntaun',
+    whenGetMynock: 'mynock',
+    whenGetProbot: 'probot',
+    whenGetMouseDroid: 'mousedroid',
+    whenGetRebelPilot: 'rebelpilot',
   };
 
-  // TODO: proper item class names
-  skin.ItemClassNames = [
-    'item_walk_baymax',
-    'item_hiro',
-    'item_anna',
-    'item_elsa',
-    'item_baymax',
-    'item_rapunzel',
-    'item_cherry',
-    'item_ice',
-    'item_duck'
-  ];
+  skin.AutohandlerGetAllItems = {
+    whenGetAllPufferPigs: 'pufferpig',
+    whenGetAllStormtroopers: 'stormtrooper',
+    whenGetAllTauntauns: 'tauntaun',
+    whenGetAllMynocks: 'mynock',
+    whenGetAllProbots: 'probot',
+    whenGetAllMouseDroids: 'mousedroid',
+    whenGetAllRebelPilots: 'rebelpilot',
+  };
 
-  skin.specialItemFrames = {
-    'item_walk_baymax': 8,
-    'item_cherry': 13,
-    'item_ice': 12,
-    'item_duck': 12
+  skin.specialItemProperties = {
+    'pufferpig':       { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
+    'stormtrooper':    { frames: 12, width: 100, height: 100, scale: 1.1, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
+    'tauntaun':        { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'mynock':          { frames:  8, width: 100, height: 100, scale: 0.9, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'probot':          { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'mousedroid':      { frames:  1, width: 100, height: 100, scale: 0.5, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'rebelpilot':      { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
   skin.explosionFrames = 17;
+
+  // Spritesheet for animated goal.
+  skin.animatedGoal = skin.assetUrl('goal_idle.png');
+
+  // Dimensions of the goal sprite.
+  skin.goalSpriteWidth = 100;
+  skin.goalSpriteHeight = 100;
+
+  // How many frames in the animated goal spritesheet.
+  skin.animatedGoalFrames = 16;
+
+  // How long to show each frame of the optional goal animation.
+  skin.timePerGoalAnimationFrame = 100;
+
+  // For a smaller collision region on a goal.
+  skin.goalCollisionRectWidth = 50;
+  skin.goalCollisionRectHeight = 50;
+
+  // Whether that goal should fade out when touched.  If true, then the
+  // success image is never shown.
+  skin.fadeOutGoal = true;
+  skin.goalSuccess = null;
+
+  // Draw a goal an an offset to its usual location, useful for oversize goal
+  // images, such as a person standing taller than a single grid square whose
+  // feet should still be planted in that grid square.
+  skin.goalRenderOffsetX = -25;
+  skin.goalRenderOffsetY = -45;
 
   // Dimensions of a rectangle in collidable center from which projectiles begin.
   skin.projectileSpriteWidth  = 70;
@@ -253,7 +607,7 @@ function loadHoc2015(skin, assetUrl) {
   skin.wallCollisionRectWidth  = 30;
   skin.wallCollisionRectHeight = 20;
 
-  // When movement is grid aligned, sprites coordinates are the top-left corner
+  // When movement is grid aligned, sprite coordinates are the top-left corner
   // of the sprite, and match the top-left corner of the grid square in question.
   // When we draw the sprites bigger, this means the sprite's "feet" will usually
   // be too far to the right and below that square.  These offsets are a chance
@@ -262,125 +616,525 @@ function loadHoc2015(skin, assetUrl) {
   skin.gridSpriteRenderOffsetX = -30;
   skin.gridSpriteRenderOffsetY = -40;
 
-  skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel'];
+  skin.avatarList = ['r2-d2', 'c-3po'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 19,
+        normal: name == 'r2-d2' ? 14 : 16,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: 12
+        walk: name == 'r2-d2' ? 14 : 8
       },
       timePerFrame: 100
     };
   });
 
+  skin['r2-d2'].movementAudio = [
+    { begin: 'r2-d2_move1_start', loop: 'r2-d2_move1_loop', end: 'r2-d2_move1_end', volume: 2.2 },
+    { begin: 'r2-d2_move2_start', loop: 'r2-d2_move2_loop', end: 'r2-d2_move2_end', volume: 2.2 },
+    { begin: 'r2-d2_move3_start', loop: 'r2-d2_move3_loop', end: 'r2-d2_move3_end', volume: 2.2 }
+  ];
+  skin['c-3po'].movementAudio = [
+    { loop: 'c-3po_move_loop', end: 'c-3po_move_end', volume: 0.6 }
+  ];
+
   skin.preventProjectileLoop = function (className) {
-    return className === 'projectile_hiro';
+    return className === '';
   };
 
   skin.preventItemLoop = function (className) {
-    return className === 'item_hiro';
+    return className === '';
   };
 
-  skin.projectile_hiro = skin.assetUrl('projectile_hiro.png');
-  skin.projectile_anna = skin.assetUrl('projectile_anna.png');
-  skin.projectile_elsa = skin.assetUrl('projectile_elsa.png');
-  skin.projectile_baymax = skin.assetUrl('projectile_baymax.png');
-  skin.projectile_rapunzel = skin.assetUrl('projectile_rapunzel.png');
-  skin.projectile_cherry = skin.assetUrl('projectile_cherry.png');
-  skin.projectile_ice = skin.assetUrl('projectile_ice.png');
-  skin.projectile_duck = skin.assetUrl('projectile_duck.png');
+  // No failure avatar for this skin.
+  skin.failureAvatar = null;
 
-  // TODO: Create actual item choices
-  skin.item_walk_baymax = skin.assetUrl('walk_baymax.png');
-  skin.item_hiro = skin.assetUrl('projectile_hiro.png');
-  skin.item_anna = skin.assetUrl('projectile_anna.png');
-  skin.item_elsa = skin.assetUrl('projectile_elsa.png');
-  skin.item_baymax = skin.assetUrl('projectile_baymax.png');
-  skin.item_rapunzel = skin.assetUrl('projectile_rapunzel.png');
-  skin.item_cherry = skin.assetUrl('projectile_cherry.png');
-  skin.item_ice = skin.assetUrl('projectile_ice.png');
-  skin.item_duck = skin.assetUrl('projectile_duck.png');
+  skin.pufferpig = skin.assetUrl('walk_pufferpig.png');
+  skin.stormtrooper = skin.assetUrl('walk_stormtrooper.png');
+  skin.tauntaun = skin.assetUrl('walk_tauntaun.png');
+  skin.mynock = skin.assetUrl('walk_mynock.png');
+  skin.probot = skin.assetUrl('walk_probot.png');
+  skin.mousedroid = skin.assetUrl('walk_mousedroid.png');
+  skin.rebelpilot = skin.assetUrl('walk_rebelpilot.png');
 
-  skin.leafy = {
-    background: skin.assetUrl('background_leafy.jpg')
+  skin.endor = {
+    background: skin.assetUrl('background_endor.jpg'),
+    tiles: skin.assetUrl('tiles_endor.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_endor.png'),
+    jumboTilesAddOffset: -5,
+    jumboTilesSize: 60,
+    jumboTilesRows: 4,
+    jumboTilesCols: 4,
+    clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
   };
-  skin.grassy = {
-    background: skin.assetUrl('background_grassy.jpg')
+  skin.hoth = {
+    background: skin.assetUrl('background_hoth.jpg'),
+    tiles: skin.assetUrl('tiles_hoth.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_hoth.png'),
+    jumboTilesAddOffset: -5,
+    jumboTilesSize: 60,
+    jumboTilesRows: 4,
+    jumboTilesCols: 4,
+    clouds: [skin.assetUrl('cloud_dark.png'), skin.assetUrl('cloud_dark2.png')]
   };
-  skin.flower = {
-    background: skin.assetUrl('background_flower.jpg')
-  };
-  skin.tile = {
-    background: skin.assetUrl('background_tile.jpg')
-  };
-  skin.icy = {
-    background: skin.assetUrl('background_icy.jpg')
-  };
-  skin.snowy = {
-    background: skin.assetUrl('background_snowy.jpg')
+  skin.starship = {
+    background: skin.assetUrl('background_starship.jpg'),
+    tiles: skin.assetUrl('tiles_starship.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_starship.png'),
+    jumboTilesAddOffset: -5,
+    jumboTilesSize: 60,
+    jumboTilesRows: 4,
+    jumboTilesCols: 4
   };
 
-  skin.tiles = skin.assetUrl('tiles.png');
+  // It's possible to enlarge the rendering of some wall tiles so that they
+  // overlap each other a little.  Define a bounding rectangle for the source
+  // tiles that get this treatment.
+
+  skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
+
+  // Since we don't have jumbo tiles for our "Hoth" background, in the case
+  // of the two maps that use jumbo pieces ("circle" and "horizontal") we
+  // return a special version of the map that just uses regular tile pieces.
+
+  skin.getMap = function(background, map) {
+    if (background == "hoth" && (map == "circle" || map == "horizontal")) {
+      return map + "_nonjumbo";
+    }
+    else {
+      return map;
+    }
+  };
+
+  skin.blank =
+    [[0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0]];
+
+  skin.circle_nonjumbo =
+    [[0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00],
+     [0x00, 0x11, 0x02, 0x03,  0x00,  0x44, 0x45, 0x00],
+     [0x00, 0x04, 0x00, 0x00,  0x00,  0x00, 0x03, 0x00],
+     [0x00, 0x14, 0x00, 0x121, 0x121, 0x00, 0x05, 0x00],
+     [0x00, 0x02, 0x00, 0x121, 0x121, 0x00, 0x15, 0x00],
+     [0x00, 0x03, 0x00, 0x00,  0x00,  0x00, 0x02, 0x00],
+     [0x00, 0x24, 0x25, 0x02,  0x00,  0x34, 0x35, 0x00],
+     [0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00]];
+
+  skin.circle =
+    [[0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
+     [0x00, 0x200, 0x213, 0x213, 0x00,  0x213, 0x201, 0x00],
+     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00],
+     [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00],
+     [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00],
+     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00],
+     [0x00, 0x202, 0x213, 0x213, 0x00,  0x213, 0x203, 0x00],
+     [0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00]];
+
+  skin.horizontal_nonjumbo =
+    [[0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0, 0x02, 0x03, 0x04, 0x00, 0x24, 0x25, 0x00],
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0, 0x10, 0x00, 0x34, 0x35, 0x20, 0x23, 0x00],
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0, 0x03, 0x02, 0x22, 0x20, 0x21, 0x00, 0x00],
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]];
+
+  skin.horizontal =
+    [[0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
+     [0, 0x213, 0x213, 0x213, 0x00,  0x213, 0x213, 0x00],
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
+     [0, 0x10,  0x00,  0x213, 0x213, 0x213, 0x213, 0x00],
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
+     [0, 0x213, 0x213, 0x213, 0x213, 0x213, 0x00,  0x00],
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00]];
+
+  skin.grid =
+    [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0x00, 0x21, 0x00, 0x10, 0x00, 0x20, 0x00, 0x03],
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0x00, 0x02, 0x00, 0x11, 0x00, 0x21, 0x00, 0x02],
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0x00, 0x03, 0x00, 0x20, 0x00, 0x22, 0x00, 0x11],
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0x00, 0x10, 0x00, 0x21, 0x00, 0x23, 0x00, 0x10]];
+
+  skin.blobs =
+    [[0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00],
+     [0x00, 0x103, 0x103, 0x00,  0x00, 0x00,  0x22,  0x00],
+     [0x00, 0x103, 0x103, 0x00,  0x00, 0x110, 0x110, 0x00],
+     [0x00, 0x00,  0x00,  0x00,  0x00, 0x110, 0x110, 0x00],
+     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x00],
+     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x23],
+     [0x00, 0x00,  0x03,  0x00,  0x00, 0x00,  0x121, 0x121],
+     [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x121, 0x121]];
+
+  // Sounds.
+  skin.sounds = [
+    'R2-D2sound1', 'R2-D2sound2', 'R2-D2sound3', 'R2-D2sound4',
+    'R2-D2sound5', 'R2-D2sound6', 'R2-D2sound7', 'R2-D2sound8',
+    'R2-D2sound9',
+    'C-3POsound1', 'C-3POsound2', 'C-3POsound3', 'C-3POsound4',
+    'PufferPigSound1', 'PufferPigSound2', 'PufferPigSound3', 'PufferPigSound4',
+    'TauntaunSound1', 'TauntaunSound2', 'TauntaunSound3', 'TauntaunSound4',
+    'MynockSound1', 'MynockSound2', 'MynockSound3',
+    'ProbotSound1', 'ProbotSound2', 'ProbotSound3',
+    'MouseDroidSound1', 'MouseDroidSound2', 'MouseDroidSound3',
+    'alert1', 'alert2', 'alert3', 'alert4',
+    'applause'
+  ];
+
+  skin.soundChoices = [
+    [msg.playSoundRandom(), RANDOM_VALUE],
+    [msg.playSoundR2D2Sound1(), 'R2-D2sound1'],
+    [msg.playSoundR2D2Sound2(), 'R2-D2sound2'],
+    [msg.playSoundR2D2Sound3(), 'R2-D2sound3'],
+    [msg.playSoundR2D2Sound4(), 'R2-D2sound4'],
+    [msg.playSoundR2D2Sound5(), 'R2-D2sound5'],
+    [msg.playSoundR2D2Sound6(), 'R2-D2sound6'],
+    [msg.playSoundR2D2Sound7(), 'R2-D2sound7'],
+    [msg.playSoundR2D2Sound8(), 'R2-D2sound8'],
+    [msg.playSoundR2D2Sound9(), 'R2-D2sound9'],
+    [msg.playSoundC3POSound1(), 'C3-POsound1'],
+    [msg.playSoundC3POSound2(), 'C3-POsound2'],
+    [msg.playSoundC3POSound3(), 'C3-POsound3'],
+    [msg.playSoundC3POSound4(), 'C3-POsound4'],
+    [msg.playSoundPufferPigSound1(), 'PufferPigSound1'],
+    [msg.playSoundPufferPigSound2(), 'PufferPigSound2'],
+    [msg.playSoundPufferPigSound3(), 'PufferPigSound3'],
+    [msg.playSoundPufferPigSound4(), 'PufferPigSound4'],
+    [msg.playSoundTauntaunSound1(), 'TauntaunSound1'],
+    [msg.playSoundTauntaunSound2(), 'TauntaunSound2'],
+    [msg.playSoundTauntaunSound3(), 'TauntaunSound3'],
+    [msg.playSoundTauntaunSound4(), 'TauntaunSound4'],
+    [msg.playSoundMynockSound1(), 'MynockSound1'],
+    [msg.playSoundMynockSound2(), 'MynockSound2'],
+    [msg.playSoundMynockSound3(), 'MynockSound3'],
+    [msg.playSoundProbotSound1(), 'ProbotSound1'],
+    [msg.playSoundProbotSound2(), 'ProbotSound2'],
+    [msg.playSoundProbotSound3(), 'ProbotSound3'],
+    [msg.playSoundMouseDroidSound1(), 'MouseDroidSound1'],
+    [msg.playSoundMouseDroidSound2(), 'MouseDroidSound2'],
+    [msg.playSoundMouseDroidSound3(), 'MouseDroidSound3'],
+    [msg.playSoundAlert1(), 'alert1'],
+    [msg.playSoundAlert2(), 'alert2'],
+    [msg.playSoundAlert3(), 'alert3'],
+    [msg.playSoundAlert4(), 'alert4'],
+    [msg.playSoundApplause(), 'applause']];
+
+  skin.soundChoicesK1 = [
+  ];
+
+  skin.soundMetadata = [
+    {name: 'start', volume: 0.2},
+    {name: 'win', volume: 0.2},
+    {name: 'failure', volume: 0.2},
+    {name: 'flag', volume: 0.2},
+    {name: 'R2-D2sound1', volume: 0.2},
+    {name: 'R2-D2sound2', volume: 0.2},
+    {name: 'R2-D2sound3', volume: 0.2},
+    {name: 'R2-D2sound4', volume: 0.2},
+    {name: 'R2-D2sound5', volume: 0.2},
+    {name: 'R2-D2sound6', volume: 0.2},
+    {name: 'R2-D2sound7', volume: 0.2},
+    {name: 'R2-D2sound8', volume: 0.2},
+    {name: 'R2-D2sound9', volume: 0.2},
+    {name: 'C-3POsound1', volume: 0.2},
+    {name: 'C-3POsound2', volume: 0.2},
+    {name: 'C-3POsound3', volume: 0.2},
+    {name: 'C-3POsound4', volume: 0.2},
+    {name: 'PufferPigSound1', volume: 0.2},
+    {name: 'PufferPigSound2', volume: 0.2},
+    {name: 'PufferPigSound3', volume: 0.2},
+    {name: 'PufferPigSound4', volume: 0.2},
+    {name: 'TauntaunSound1', volume: 0.2},
+    {name: 'TauntaunSound2', volume: 0.2},
+    {name: 'TauntaunSound3', volume: 0.2},
+    {name: 'TauntaunSound4', volume: 0.2},
+    {name: 'MynockSound1', volume: 0.2},
+    {name: 'MynockSound2', volume: 0.2},
+    {name: 'MynockSound3', volume: 0.2},
+    {name: 'ProbotSound1', volume: 0.2},
+    {name: 'ProbotSound2', volume: 0.2},
+    {name: 'ProbotSound3', volume: 0.2},
+    {name: 'MouseDroidSound1', volume: 0.2},
+    {name: 'MouseDroidSound2', volume: 0.2},
+    {name: 'MouseDroidSound3', volume: 0.2},
+    {name: 'alert1', volume: 0.2},
+    {name: 'alert2', volume: 0.2},
+    {name: 'alert3', volume: 0.2},
+    {name: 'alert4', volume: 0.2},
+    {name: 'applause', volume: 0.2}
+  ];
+
+  skin.musicMetadata = HOC2015_MUSIC_METADATA;
+
+  // Normally the sound isn't played for the final goal, but this forces it
+  // to be played.
+  skin.playFinalGoalSound = true;
 
   // These are used by blocks.js to customize our dropdown blocks across skins
-  skin.backgroundChoices = [
-    [msg.setBackgroundRandom(), RANDOM_VALUE],
-    [msg.setBackgroundLeafy(), '"leafy"'],
-    [msg.setBackgroundGrassy(), '"grassy"'],
-    [msg.setBackgroundFlower(), '"flower"'],
-    [msg.setBackgroundTile(), '"tile"'],
-    [msg.setBackgroundIcy(), '"icy"'],
-    [msg.setBackgroundSnowy(), '"snowy"'],
+  // NOTE: map names must have double quotes inside single quotes
+  // NOTE: first item must be RANDOM_VALUE
+  skin.mapChoices = [
+    [msg.setMapRandom(), RANDOM_VALUE],
+    [msg.setMapBlank(), '"blank"'],
+    [msg.setMapCircle(), '"circle"'],
+    [msg.setMapHorizontal(), '"horizontal"'],
+    [msg.setMapGrid(), '"grid"'],
+    [msg.setMapBlobs(), '"blobs"']
     ];
 
+  skin.backgroundChoices = [
+    [msg.setBackgroundRandom(), RANDOM_VALUE],
+    [msg.setBackgroundEndor(), '"endor"'],
+    [msg.setBackgroundHoth(), '"hoth"'],
+    [msg.setBackgroundStarship(), '"starship"']
+    ];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
-    [skin.leafy.background, '"leafy"'],
-    [skin.grassy.background, '"grassy"'],
-    [skin.flower.background, '"flower"'],
-    [skin.tile.background, '"tile"'],
-    [skin.icy.background, '"icy"'],
-    [skin.snowy.background, '"snowy"'],
+    [skin.endor.background, '"endor"'],
+    [skin.hoth.background, '"hoth"'],
+    [skin.starship.background, '"starship"'],
     [skin.randomPurpleIcon, RANDOM_VALUE],
     ];
 
   skin.spriteChoices = [
-    [msg.setSpriteHidden(), HIDDEN_VALUE],
-    [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteAnna(), '"anna"'],
-    [msg.setSpriteElsa(), '"elsa"'],
-    [msg.setSpriteHiro(), '"hiro"'],
-    [msg.setSpriteBaymax(), '"baymax"'],
-    [msg.setSpriteRapunzel(), '"rapunzel"']];
+    [msg.setDroidHidden(), HIDDEN_VALUE],
+    [msg.setDroidRandom(), RANDOM_VALUE],
+    [msg.setDroidR2D2(), '"r2-d2"'],
+    [msg.setDroidC3PO(), '"c-3po"']];
 
-  skin.projectileChoices = [
-    [msg.projectileHiro(), '"projectile_hiro"'],
-    [msg.projectileAnna(), '"projectile_anna"'],
-    [msg.projectileElsa(), '"projectile_elsa"'],
-    [msg.projectileBaymax(), '"projectile_baymax"'],
-    [msg.projectileRapunzel(), '"projectile_rapunzel"'],
-    [msg.projectileCherry(), '"projectile_cherry"'],
-    [msg.projectileIce(), '"projectile_ice"'],
-    [msg.projectileDuck(), '"projectile_duck"'],
-    [msg.projectileRandom(), RANDOM_VALUE]];
+  skin.setSpritePrefix = msg.setDroid();
 
-  // TODO: Create actual item choices
+  skin.projectileChoices = [];
+
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
-    [msg.itemHiro(), '"item_hiro"'],
-    [msg.itemAnna(), '"item_anna"'],
-    [msg.itemElsa(), '"item_elsa"'],
-    [msg.itemBaymax(), '"item_baymax"'],
-    [msg.itemRapunzel(), '"item_rapunzel"'],
-    [msg.itemCherry(), '"item_cherry"'],
-    [msg.itemIce(), '"item_ice"'],
-    [msg.itemDuck(), '"item_duck"'],
+    [msg.itemStormtrooper(), '"stormtrooper"'],
+    [msg.itemRebelPilot(), '"rebelpilot"'],
+    [msg.itemPufferPig(), '"pufferpig"'],
+    [msg.itemMynock(), '"mynock"'],
+    [msg.itemMouseDroid(), '"mousedroid"'],
+    [msg.itemTauntaun(), '"tauntaun"'],
+    [msg.itemProbot(), '"probot"'],
     [msg.itemRandom(), RANDOM_VALUE]];
 }
+
+function loadHoc2015x(skin, assetUrl) {
+  skin.preloadAssets = true;
+
+  skin.hideIconInClearPuzzle = true;
+
+  skin.defaultBackground = 'main';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+  ];
+
+  skin.ItemClassNames = [
+    'hazard'
+  ];
+
+  skin.AutohandlerTouchItems = {
+  };
+
+  skin.AutohandlerGetAllItems = {
+  };
+
+  skin.specialItemProperties = {
+    'hazard': { frames: 13, animationRate: 5, width: 100, height: 100, scale: 1.3, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
+  };
+
+  // Spritesheet for animated goal.
+  skin.goal1 = skin.assetUrl('goal1.png');
+  skin.goal2 = skin.assetUrl('goal2.png');
+
+  // Dimensions of the goal sprite.
+  skin.goalSpriteWidth = 50;
+  skin.goalSpriteHeight = 50;
+
+  // How many frames in the animated goal spritesheet.
+  skin.animatedGoalFrames = 1;
+  skin.disableClipRectOnGoals = true;
+
+  // Special effect applied to goal sprites
+  skin.goalEffect = 'glow';
+
+  // How long to show each frame of the optional goal animation.
+  skin.timePerGoalAnimationFrame = 100;
+
+  // For a smaller collision region on a goal.
+  skin.goalCollisionRectWidth = 50;
+  skin.goalCollisionRectHeight = 50;
+
+  // Whether that goal should fade out when touched.  If true, then the
+  // success image is never shown.
+  skin.fadeOutGoal = true;
+  skin.goalSuccess = null;
+
+  // Draw a goal an an offset to its usual location, useful for oversize goal
+  // images, such as a person standing taller than a single grid square whose
+  // feet should still be planted in that grid square.
+  skin.goalRenderOffsetX = 0;
+  skin.goalRenderOffsetY = 0;
+
+  // Dimensions of a rectangle in collidable center from which projectiles begin.
+  skin.projectileSpriteWidth  = 70;
+  skin.projectileSpriteHeight = 70;
+
+  // Dimensions of a rectangle in collidable center in which item collisions occur.
+  skin.itemCollisionRectWidth  = 50;
+  skin.itemCollisionRectHeight = 50;
+
+  // Dimensions of a rectangle in sprite center in which item collisions occur.
+  skin.spriteCollisionRectWidth  = 50;
+  skin.spriteCollisionRectHeight = 50;
+
+  // Offset & dimensions of a rectangle in collidable in which wall collisions occur.
+  // For isometric-style rendering, this would normally be the feet.
+  skin.wallCollisionRectOffsetX = 0;
+  skin.wallCollisionRectOffsetY = 24;
+  skin.wallCollisionRectWidth  = 30;
+  skin.wallCollisionRectHeight = 20;
+
+  // When movement is grid aligned, sprite coordinates are the top-left corner
+  // of the sprite, and match the top-left corner of the grid square in question.
+  // When we draw the sprites bigger, this means the sprite's "feet" will usually
+  // be too far to the right and below that square.  These offsets are a chance
+  // to move the rendering of the sprite up and to the left, when negative, so
+  // that the "feet" are planted at the bottom center of the grid square.
+  skin.gridSpriteRenderOffsetX = -20;
+  skin.gridSpriteRenderOffsetY = -40;
+
+  skin.avatarList = ['bb-8'];
+  skin.avatarList.forEach(function (name) {
+    skin[name] = {
+      sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 21,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: 19
+      },
+      timePerFrame: 100
+    };
+  });
+  skin['bb-8'].movementAudio = [
+    { begin: 'move1', volume: 0.3 },
+    { begin: 'move2', volume: 0.3 },
+    { begin: 'move3', volume: 0.3 },
+    { begin: 'move4', volume: 0.3 }
+  ];
+
+  skin.preventProjectileLoop = function (className) {
+    return className === '';
+  };
+
+  skin.preventItemLoop = function (className) {
+    return className === '';
+  };
+
+  skin.hazard = skin.assetUrl('hazard_idle.png');
+
+  skin.main = {
+    background: skin.assetUrl('background_background1.jpg'),
+    tiles: skin.assetUrl('tiles_background1.png'),
+    clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
+  };
+
+  // It's possible to enlarge the rendering of some wall tiles so that they
+  // overlap each other a little.  Define a bounding rectangle for the source
+  // tiles that get this treatment.
+
+  skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
+
+  // Sounds.
+  skin.sounds = [ 'move1', 'move2', 'move3', 'move4' ];
+
+  skin.soundChoices = [
+    ];
+
+  skin.soundChoicesK1 = [
+  ];
+
+  skin.musicMetadata = HOC2015_MUSIC_METADATA;
+
+  // Normally the sound isn't played for the final goal, but this forces it
+  // to be played.
+  skin.playFinalGoalSound = true;
+
+  // These are used by blocks.js to customize our dropdown blocks across skins
+  // NOTE: map names must have double quotes inside single quotes
+  // NOTE: first item must be RANDOM_VALUE
+  skin.mapChoices = [
+    ];
+
+  skin.backgroundChoices = [
+    ];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.backgroundChoicesK1 = [
+    ];
+
+  skin.spriteChoices = [
+    [msg.setDroidHidden(), HIDDEN_VALUE],
+    [msg.setDroidRandom(), RANDOM_VALUE],
+    [msg.setDroidBB8(), '"bb-8"']];
+
+  skin.setSpritePrefix = msg.setDroid();
+
+  skin.projectileChoices = [];
+
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.itemChoices = [
+    ];
+}
+
+/**
+ * Music tracks and associated metadata for both hoc2015 and hoc2015x tutorials.
+ * Individual levels don't load all of these, only the subset they request.
+ * @const {MusicTrackDefinition[]}
+ */
+var HOC2015_MUSIC_METADATA = [
+  { name: 'song1', volume: 0.5 },
+  { name: 'song2', volume: 0.5 },
+  { name: 'song3', volume: 0.5 },
+  { name: 'song4', volume: 0.4 },
+  { name: 'song5', volume: 0.4 },
+  { name: 'song6', volume: 0.5 },
+  { name: 'song7', volume: 0.4 },
+  { name: 'song8', volume: 0.4 },
+  { name: 'song9', volume: 0.4 },
+  { name: 'song10', volume: 0.5 },
+  { name: 'song11', volume: 0.45 },
+  { name: 'song12', volume: 0.4 },
+  { name: 'song13', volume: 0.4 },
+  { name: 'song14', volume: 0.5 },
+  { name: 'song15', volume: 0.55 }
+];
 
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
@@ -477,6 +1231,8 @@ function loadStudio(skin, assetUrl) {
     [msg.setBackgroundTennis(), '"tennis"'],
     [msg.setBackgroundWinter(), '"winter"']];
 
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
     [skin.cave.background, '"cave"'],
     [skin.night.background, '"night"'],
@@ -535,6 +1291,8 @@ function loadStudio(skin, assetUrl) {
     [msg.projectileRandom(), RANDOM_VALUE]];
 
   // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
     [msg.itemBlueFireball(), '"item_blue_fireball"'],
     [msg.itemPurpleFireball(), '"item_purple_fireball"'],
@@ -597,29 +1355,43 @@ exports.load = function(assetUrl, id) {
   skin.speechBubble = skin.assetUrl('say-sprite.png');
   skin.goal = skin.assetUrl('goal.png');
   skin.goalSuccess = skin.assetUrl('goal_success.png');
+
   // Sounds
-  skin.rubberSound = [skin.assetUrl('wall.mp3'), skin.assetUrl('wall.ogg')];
-  skin.flagSound = [skin.assetUrl('win_goal.mp3'),
-                    skin.assetUrl('win_goal.ogg')];
-  skin.crunchSound = [skin.assetUrl('wall0.mp3'), skin.assetUrl('wall0.ogg')];
-  skin.winPointSound = [skin.assetUrl('1_we_win.mp3'),
-                        skin.assetUrl('1_we_win.ogg')];
-  skin.winPoint2Sound = [skin.assetUrl('2_we_win.mp3'),
-                         skin.assetUrl('2_we_win.ogg')];
-  skin.losePointSound = [skin.assetUrl('1_we_lose.mp3'),
-                         skin.assetUrl('1_we_lose.ogg')];
-  skin.losePoint2Sound = [skin.assetUrl('2_we_lose.mp3'),
-                          skin.assetUrl('2_we_lose.ogg')];
-  skin.goal1Sound = [skin.assetUrl('1_goal.mp3'), skin.assetUrl('1_goal.ogg')];
-  skin.goal2Sound = [skin.assetUrl('2_goal.mp3'), skin.assetUrl('2_goal.ogg')];
-  skin.woodSound = [skin.assetUrl('1_paddle_bounce.mp3'),
-                    skin.assetUrl('1_paddle_bounce.ogg')];
-  skin.retroSound = [skin.assetUrl('2_paddle_bounce.mp3'),
-                     skin.assetUrl('2_paddle_bounce.ogg')];
-  skin.slapSound = [skin.assetUrl('1_wall_bounce.mp3'),
-                    skin.assetUrl('1_wall_bounce.ogg')];
-  skin.hitSound = [skin.assetUrl('2_wall_bounce.mp3'),
-                   skin.assetUrl('2_wall_bounce.ogg')];
+  skin.builtinSounds = [ 'start', 'win', 'failure', 'flag' ];
+  skin.sounds = [
+    'rubber', 'crunch', 'goal1', 'goal2', 'wood', 'retro', 'slap', 'hit',
+    'winpoint', 'winpoint2', 'losepoint', 'losepoint2'
+  ];
+
+  skin.soundChoices = [
+    [msg.playSoundRandom(), RANDOM_VALUE],
+    [msg.playSoundHit(), 'hit'],
+    [msg.playSoundWood(), 'wood'],
+    [msg.playSoundRetro(), 'retro'],
+    [msg.playSoundSlap(), 'slap'],
+    [msg.playSoundRubber(), 'rubber'],
+    [msg.playSoundCrunch(), 'crunch'],
+    [msg.playSoundWinPoint(), 'winpoint'],
+    [msg.playSoundWinPoint2(), 'winpoint2'],
+    [msg.playSoundLosePoint(), 'losepoint'],
+    [msg.playSoundLosePoint2(), 'losepoint2'],
+    [msg.playSoundGoal1(), 'goal1'],
+    [msg.playSoundGoal2(), 'goal2']];
+
+  skin.soundChoicesK1 = [
+    [msg.soundRandom(), RANDOM_VALUE],
+    [msg.soundHit(), 'hit'],
+    [msg.soundWood(), 'wood'],
+    [msg.soundRetro(), 'retro'],
+    [msg.soundSlap(), 'slap'],
+    [msg.soundRubber(), 'rubber'],
+    [msg.soundCrunch(), 'crunch'],
+    [msg.soundWinPoint(), 'winpoint'],
+    [msg.soundWinPoint2(), 'winpoint2'],
+    [msg.soundLosePoint(), 'losepoint'],
+    [msg.soundLosePoint2(), 'losepoint2'],
+    [msg.soundGoal1(), 'goal1'],
+    [msg.soundGoal2(), 'goal2']];
 
   // Settings
   skin.background = skin.assetUrl('background.png');
@@ -629,13 +1401,32 @@ exports.load = function(assetUrl, id) {
   skin.dropdownThumbnailHeight = 50;
   skin.preloadAssets = true;
 
+  skin.setSpritePrefix = msg.setSprite();
+
+  skin.activityChoices = [
+    [msg.setActivityRandom(), RANDOM_VALUE],
+    [msg.setActivityRoam(), '"roam"'],
+    [msg.setActivityChase(), '"chase"'],
+    [msg.setActivityFlee(), '"flee"'],
+    [msg.setActivityNone(), '"none"'],
+    ];
+
   // take care of items specific to skins
   switch (skin.id) {
+    case 'gumball':
+      loadGumball(skin, assetUrl);
+      break;
+    case 'iceage':
+      loadIceAge(skin, assetUrl);
+      break;
     case 'infinity':
       loadInfinity(skin, assetUrl);
       break;
     case 'hoc2015':
       loadHoc2015(skin, assetUrl);
+      break;
+    case 'hoc2015x':
+      loadHoc2015x(skin, assetUrl);
       break;
     case 'studio':
       loadStudio(skin, assetUrl);

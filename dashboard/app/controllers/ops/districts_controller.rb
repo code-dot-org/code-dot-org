@@ -20,7 +20,7 @@ module Ops
 
     # PATCH/PUT /ops/districts/1
     def update
-      @district.update!(params[:district])
+      @district.update!(district_params)
       respond_with @district
     end
 

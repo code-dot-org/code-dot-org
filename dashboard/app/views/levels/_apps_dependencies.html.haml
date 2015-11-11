@@ -1,0 +1,55 @@
+-# Expected locals: app, use_blockly, use_droplet, use_netsim, use_applab, hide_source, static_asset_base_path
+-# Provide default values for some of these
+- use_blockly ||= false
+- use_droplet ||= false
+- use_netsim ||= false
+- use_applab ||= false
+- hide_source ||= false
+
+-# Common style dependencies
+%link{href: asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
+%link{href: asset_path("css/#{app}.css"), rel: 'stylesheet', type: 'text/css'}
+
+-# Droplet style dependencies (only when editor present)
+- if use_droplet && !hide_source
+  %link{href: asset_path('css/droplet/droplet.min.css'), rel: 'stylesheet', type: 'text/css'}
+  %link{href: asset_path('css/tooltipster/tooltipster.min.css'), rel: 'stylesheet', type: 'text/css'}
+
+-# Might be possible to not load this on share pages, but right now we get some
+-# weird display issues when we do that. Good news is this is < 10kb
+%link{href: asset_path('css/colpick.css'), rel: 'stylesheet', type: 'text/css'}
+
+-# Droplet script dependencies (all editCode - regardless of editor)
+- if use_droplet
+  %script{src: asset_path('js/jsinterpreter/acorn_interpreter.js')}
+-# Droplet script dependencies (only when editor present)
+- if use_droplet && !hide_source
+  %script{src: "#{static_asset_base_path}js/ace/ace.js"}
+  %script{src: "#{static_asset_base_path}js/ace/mode-javascript.js"}
+  %script{src: "#{static_asset_base_path}js/ace/ext-language_tools.js"}
+  %script{src: asset_path('js/droplet/droplet-full.js')}
+  %script{src: asset_path('js/tooltipster/jquery.tooltipster.js')}
+  %script{src: asset_path('js/fileupload/jquery.iframe-transport.js')}
+  %script{src: asset_path('js/fileupload/jquery.fileupload.js')}
+
+
+-# Blockly script dependencies
+- if use_blockly
+  %script{src: asset_path('js/blockly.js')}
+  %script{src: asset_path("js/#{js_locale}/blockly_locale.js")}
+
+-# Common script dependencies
+%script{src: asset_path('js/marked/marked.js')}
+%script{src: minifiable_asset_path('shared.js')}
+%script{src: minifiable_asset_path('js/common.js')}
+%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: asset_path("js/#{js_locale}/#{app}_locale.js")}
+%script{src: minifiable_asset_path("js/#{app}.js")}
+
+-# NetSim external script dependencies
+- if use_netsim
+  %script{src: 'https://js.pusher.com/2.2/pusher.min.js'}
+
+-# Applab external script dependencies
+- if use_applab
+  %script{src: 'https://www.google.com/jsapi'}

@@ -1,3 +1,25 @@
+# == Schema Information
+#
+# Table name: levels
+#
+#  id                       :integer          not null, primary key
+#  game_id                  :integer
+#  name                     :string(255)      not null
+#  created_at               :datetime
+#  updated_at               :datetime
+#  level_num                :string(255)
+#  ideal_level_source_id    :integer
+#  solution_level_source_id :integer
+#  user_id                  :integer
+#  properties               :text(65535)
+#  type                     :string(255)
+#  md5                      :string(255)
+#
+# Indexes
+#
+#  index_levels_on_game_id  (game_id)
+#
+
 class Applab < Blockly
   before_save :update_palette
   before_save :fix_examples
@@ -8,12 +30,19 @@ class Applab < Blockly
     free_play
     show_turtle_before_run
     autocomplete_palette_apis_only
+    execute_palette_apis_only
     text_mode_at_start
     design_mode_at_start
     hide_design_mode
     beginner_mode
     start_html
     encrypted_examples
+    submittable
+    data_tables
+    data_properties
+    hide_view_data_button
+    debugger_disabled
+    hide_source
   )
 
   # List of possible skins, the first is used as a default.
@@ -41,6 +70,9 @@ class Applab < Blockly
     if self.code_functions.present? && self.code_functions.is_a?(String)
       self.code_functions = JSON.parse(self.code_functions)
     end
+  rescue JSON::ParserError => e
+    errors.add(:code_functions, "#{e.class.name}: #{e.message}")
+    return false
   end
 
   def self.palette
@@ -66,6 +98,7 @@ class Applab < Blockly
         "hideElement": null,
         "deleteElement": null,
         "setPosition": null,
+        "setSize": null,
         "write": null,
         "getXPosition": null,
         "getYPosition": null,
@@ -80,7 +113,7 @@ class Applab < Blockly
         "setStrokeWidth": null,
         "setStrokeColor": null,
         "setFillColor": null,
-        "drawImage": null,
+        "drawImageURL": null,
         "getImageData": null,
         "putImageData": null,
         "clearCanvas": null,
@@ -103,6 +136,7 @@ class Applab < Blockly
         "updateRecord": null,
         "deleteRecord": null,
         "getUserId": null,
+        "drawChartFromRecords": null,
 
         // Turtle
         "moveForward": null,
@@ -122,6 +156,7 @@ class Applab < Blockly
         "penDown": null,
         "penWidth": null,
         "penColor": null,
+        "penRGB": null,
         "show": null,
         "hide": null,
         "speed": null,
@@ -145,25 +180,30 @@ class Applab < Blockly
         "equalityOperator": null,
         "inequalityOperator": null,
         "greaterThanOperator": null,
+        "greaterThanOrEqualOperator": null,
         "lessThanOperator": null,
+        "lessThanOrEqualOperator": null,
         "andOperator": null,
         "orOperator": null,
         "notOperator": null,
-        "randomNumber_max": null,
         "randomNumber_min_max": null,
         "mathRound": null,
         "mathAbs": null,
         "mathMax": null,
         "mathMin": null,
+        "mathRandom": null,
 
         // Variables
         "declareAssign_x": null,
+        "declareNoAssign_x": null,
         "assign_x": null,
         "declareAssign_x_prompt": null,
+        "declareAssign_x_promptNum": null,
         "console.log": null,
         "declareAssign_str_hello_world": null,
         "substring": null,
         "indexOf": null,
+        "includes": null,
         "length": null,
         "toUpperCase": null,
         "toLowerCase": null,

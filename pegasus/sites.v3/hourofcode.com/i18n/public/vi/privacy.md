@@ -1,4 +1,10 @@
+---
 
+title: Privacy Policy
+
+---
+
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Chính sách bảo mật của Code.org
 
@@ -23,7 +29,7 @@ Chính sách bảo mật của chúng tôi được xây dựng trên tinh thầ
 
 ## thông báo về quyền bảo mật thông tin cá nhân
 
-Chúng tôi cam kết để tạo ra một môi trường an toàn và bảo mật cho các học viên thuộc mọi lứa tuổi trên trang web của chúng tôi : <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, các trang web khác, ứng dụng lập trình giao diện (API ), và dịch vụ trực tuyến (gọi chung là, " trang web"). Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. Như là một chương trình phi lợi nhuận, tổ chức 501(c)(3), chúng tôi sử dụng dữ liệu chúng tôi nhận được để giúp chúng tôi cung cấp một nền giáo dục khoa học máy tính tốt hơn cho mọi học sinh. Chúng tôi được thành lập như là một tổ chức phi lợi nhuận để vì thế lợi ích sẽ không ảnh hưởng tới sứ mệnh cung cấp một nguồn tài nguyên giáo dục đáng tin cậy của chúng tôi.
+We are committed to creating a safe and secure environment for learners of all ages on our websites located at <https://code.org>, <https://studio.code.org>, <https://csedweek.org>, <http://computinginthecore.org>, <https://hourofcode.com>, other websites, application programming interface (our “API”), and online services (collectively, our “Website”). Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. Như là một chương trình phi lợi nhuận, tổ chức 501(c)(3), chúng tôi sử dụng dữ liệu chúng tôi nhận được để giúp chúng tôi cung cấp một nền giáo dục khoa học máy tính tốt hơn cho mọi học sinh. Chúng tôi được thành lập như là một tổ chức phi lợi nhuận để vì thế lợi ích sẽ không ảnh hưởng tới sứ mệnh cung cấp một nguồn tài nguyên giáo dục đáng tin cậy của chúng tôi.
 
 Our Privacy Notice describes what information we gather from our Users, how we use that information, and what we do to protect it. Bạn sử dụng trang web và bất kỳ thông tin nào bạn cung cấp trên trang web phải tuân theo điều khoản thông báo bảo mật này, được kết hợp với và tùy thuộc vào điều khoản Dịch vụ của chúng tôi. Bất kỳ điều khoản hoa được sử dụng nhưng không nằm trong thông báo bảo mật này có ý nghĩa rằng chúng nằm trong điều khoản dịch vụ [Điều khoản Dịch vụ](http://code.org/tos). Bằng cách truy cập hoặc sử dụng trang web của chúng tôi, bạn đã thể hiện sự đồng ý với thông tin được trình bày trong thông báo bảo mật này.
 
@@ -71,7 +77,7 @@ Nếu bạn quyết định đăng kí Code Studio thông qua một dịch vụ 
 
 Bạn có thể thu hồi quyền truy cập của Code.org vào tài khoản của bạn ở bất kì một dịch vụ xác thực nào tại bất cứ thời điểm nào bạn muốn bằng cách cập nhật các cài đặt thích hợp trong các lựa chọn tài khoản với dịch vụ xác thực tương ứng. Bạn nên kiểm tra các cài đặt bảo mật của mỗi dịch vụ xác thực để hiểu và thay đổi thông tin được gửi đến chúng tôi qua mỗi dịch vụ xác thực. Xin vui lòng xem lại các điều khoản sử dụng và bảo mật của dịch vụ xác thực cẩn thận trước khi sử dụng các dịch vụ đó và kết nối với trang Web của chúng tôi.
 
-## Các dịch vụ khác
+## Other Services
 
 Khi bạn sử dụng các chức năng khác của trang Web như các hình thức kí kết hay kiến nghị để giúp ủng hộ Code.org, tham gia vào một cuộc hội thảo, mang các chương trình Code.org đến trường hay thị trấn của bạn, ủng hộ cho Code.org, mua áo phông hoặc các thứ khác, hay tham gia các cuộc khảo sát online, Code.org có thể yêu cầu bạn cung cấp thông tin cá nhân bao gồm họ tên, địa chỉ email và mã bưu chính, hoặc địa chỉ trường của bạn cũng như thông tin về giao hàng và thanh toán hóa đơn của bạn khi cần thiết để hoàn thành giao dịch hoặc ủng hộ chúng tôi. Thông tin được sử dụng để cho phép bạn tham gia vào các chức năng thích hợp và để gửi cho bạn các email theo các sự kiện đặc biệt của Code.org, điều mà chúng tôi nghĩ là bạn sẽ thích. Tất cả các email chúng tôi gửi bao gồm một đường dẫn "ngừng theo dõi", nó sẽ hủy theo dõi tất cả các email sau này của Code.org ngay lập tức cho bạn.
 
@@ -103,17 +109,17 @@ Một thẻ điểm ảnh (còn được gọi là một "GIF rõ ràng" hoặc 
 
 Code,org có thể sử dụng hàng loạt các nhà cung cấp dịch vụ bên thứ ba, ví dụ các công ty phân tích để hiểu cách sử dụng trang web của chúng tôi, và nền tảng mạng xã hội để làm nguồn lưu trữ video của chúng tôi. Chúng tôi có thể cho phép nhà cung cấp dịch vụ bên thứ ba để đặt và đọc cookie, đèn hiệu web và các công nghệ tương tự để thu thập thông tin thông qua các trang web. Thông tin kỹ thuật này được thu thập trực tiếp và tự động bởi các bên thứ ba.
 
-Code.org không cho phép quảng cáo trên trang web của chúng tôi, và chúng tôi không có khả năng thu thập lịch sử tìm kiếm web của bạn thông qua các trang web Internet bên thứ 3 hoặc công cụ tìm kiếm. (Nếu bạn điều hướng đến các trang web Code.org qua tìm kiếm web, trình duyệt web của bạn có thể tự động cung cấp cho chúng tôi web tìm kiếm bạn đã sử dụng để tìm Code.org). Tuy nhiên, một số tổ chức bên thứ ba mà chúng tôi sử dụng để cung cấp chức năng trang web hoặc chia sẻ xã hội có thể thu thập thông tin phi cá nhân cho mục đích quảng cáo hành vi trực tuyến. Trang web của chúng tôi không đáp ứng với tín hiệu "không theo dõi" được truyền bởi trình duyệt web, nhưng chúng tôi khuyến khích bạn truy cập vào các liên kết sau đây nếu bạn muốn chọn không tham gia quảng cáo hành vi trực tuyến: <http://www.networkadvertising.org/choices> hoặc <http://www.aboutads.info/choices/>. Nếu bạn muốn chọn không tham gia sử dụng những công cụ này, bạn có thể cần phải chọn không tham gia một cách riêng biệt cho mỗi thiết bị của bạn và cho mỗi trình duyệt Web trên mỗi thiết bị.
+Code.org does not allow advertising on our Website, and we do not have the ability to collect your web search history across 3rd party Internet websites or search engines. (Nếu bạn điều hướng đến các trang web Code.org qua tìm kiếm web, trình duyệt web của bạn có thể tự động cung cấp cho chúng tôi web tìm kiếm bạn đã sử dụng để tìm Code.org). Tuy nhiên, một số tổ chức bên thứ ba mà chúng tôi sử dụng để cung cấp chức năng trang web hoặc chia sẻ xã hội có thể thu thập thông tin phi cá nhân cho mục đích quảng cáo hành vi trực tuyến. Our Website does not respond to “do not track” signals transmitted by web browsers, but we encourage you to visit the following links if you would like to opt out of online behavioral advertising: <http://www.networkadvertising.org/choices> or <http://www.aboutads.info/choices/>. Nếu bạn muốn chọn không tham gia sử dụng những công cụ này, bạn có thể cần phải chọn không tham gia một cách riêng biệt cho mỗi thiết bị của bạn và cho mỗi trình duyệt Web trên mỗi thiết bị.
 
 Một số khả năng liên kết nhất định từ các trang web Code.org có thể được thực hiện bởi các bên thứ ba - những người thu thập dữ liệu. Ví dụ, sự đóng góp cho Code.org được thực hiện thông qua một bên thứ ba là những người thu thập và có thể lưu trữ công cụ thanh toán. Tin nhắn hỗ trợ hoặc bài viết trên diễn đàn công cộng của chúng tôi để một trang web bên thứ ba có thể cho phép người dùng ( giáo viên) thực hiện quá trình tạo hồ sơ, đăng bài, và đăng tải hình ảnh. Các trang web bên thứ ba khác, chẳng hạn như Code.org [trang Facebook](https://www.facebook.com/Code.org) và [Twitter trang](https://twitter.com/codeorg), có thể cùng nhãn hiệu với tên hoặc logo của chúng tôi. Sử dụng các dịch vụ bên thứ ba là hoàn toàn tùy chọn của người dùng, thường chỉ dành cho người lớn, và được quản lý bởi chính sách bảo mật của các bên thứ ba. Chúng tôi khuyến khích bạn xem lại chính sách bảo mật tại các bên thứ ba để biết chi tiết về làm thế nào họ có thể thu thập, lưu trữ và sử dụng thông tin cá nhân của bạn.
 
-## Uploading custom content
+## Uploading Custom Content
 
 Student and teacher profiles can NOT be customized with a photo.
 
 As part of “App Lab,” an in-browser programming tool available on Code Studio for students over the age of 13, students can upload custom photos, sound, and videos to the Code Studio platform to use within applications or “apps” that they create. These files are stored in the Code Studio platform, and are not used by Code.org for any purpose other than within the applications created by students.
 
-## Message sending between users
+## Message Sending Between Users
 
 Code.org has created a tool called the [“Internet Simulator”](/internetsimulator) for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Message contents are not accessed or used by Code.org for any purpose other than in this educational tool.
 
@@ -123,11 +129,11 @@ In addition, Users may send messages to Code.org for customer support requests.
 
 Other than the above, the Website supports no other form of messaging among Users.
 
-## Thông tin chúng tôi không thu thập
+## Information We Do NOT Collect
 
-Code.org không trực tiếp thu thập hoặc lưu trữ công cụ thanh toán. Sự quyên góp cho Code.org hoặc mua áo thun từ các cửa hàng của Code.org được tiến hành thông qua bên thứ ba, và mặc dù Code.org nhận được hóa đơn quyên góp (thuế), Chúng tôi sẽ không nhận qua các công cụ thanh toán như (như credit card hoặc tiền mặt).
+Code.org không trực tiếp thu thập hoặc lưu trữ công cụ thanh toán. Donations to Code.org or purchases from the Code.org store are processed via third parties, and although Code.org receives a receipt for donations (for tax purposes), we never receive the payment instrument (such as credit card or wallet information).
 
-## Trẻ em dưới 13 tuổi
+## Children Under the Age 13
 
 Code Studio được thiết kế cho người học ở mọi lứa tuổi, bao gồm trẻ em dưới 13 tuổi với sự đồng tham gia của trường lớp, các thầy cô, các bậc phụ huynh hoặc người giám hộ hợp pháp của các em. Certain features, especially features that involve uploading custom media files or sending messages, are disabled or inaccessible to accounts created by children under the age of 13, in order to provide greater protection to those Users.
 
@@ -147,13 +153,13 @@ Thông thường trong các nghiên cứu giáo dục, để xem chương trình
 
 Code.org của nhân viên, đại lý và nhà thầu phải có một lý do kinh doanh hợp pháp (liên quan trực tiếp đến việc thúc đấy nhiệm vụ tập trung giáo dục) để truy cập vào thông tin cá nhân bạn cung cấp cho Code.org, ví dụ: để hỗ trợ trong hỗ trợ sản phẩm. Code.org sẽ yêu cầu nhân viên, đại lý và nhà thầu của chúng ta thực hiện theo thông báo bảo mật này, và coi bất kỳ thông tin cá nhân của người dùng Code.org như thông tin bí mật.
 
-## cách chia sẻ / chuyển dữ liệu
+## How We Share or Transfer Data
 
 Chúng tôi không cho thuê hoặc bán thông tin cá nhân chúng tôi thu thập từ người dùng, hoặc khai thác nó cho lợi ích tài chính trong bất kỳ cách nào khác. Code.org sẽ không bao giờ chia sẻ thông tin cá nhân với các tổ chức khác của bên thứ ba mà không có sự đồng ý của bạn hoặc ngoại trừ như là một phần của một chương trình cụ thể hoặc tính năng mà bạn sẽ có khả năng và sự lựa chọn để chọn không tham gia.
 
 Đặc biệt, chúng tôi không chia sẻ bất kỳ thông tin cá nhân bạn cung cấp cho các nhà tài trợ hoặc tài trợ của chúng tôi (khác hơn so với các "báo cáo cộng đồng" của các báo cáo ẩn danh như mô tả dưới đây).
 
-### Chúng tôi có thể chia sẻ dữ liệu thành tích của học sinh với trường học hay trường học địa phương.
+### We may share student achievement data with your school or school district
 
 If your use of the Code.org Website is in the context of a partnership with your school or school district, we may allow the school or school district to access the same student progress report that is also shared with your teacher(s).
 
@@ -173,7 +179,7 @@ When you contact us with a support request, you may provide Personal Information
 
 Code.org promotes a weekly Student of the Week and a monthly Teacher of the Month, along with prizes. These profiles and similar testimonials are always published with the permission of the participating student or teacher and, if applicable, their parent or legal guardian, or teacher, and may include Personal Information such as the name, likeness and photo or video of the person being profiled.
 
-### Public Reporting on Student Use and Performance
+### Public reporting on student use and performance
 
 We may publish anonymized information about student performance on our tutorials and Websites, however, we will never publicly disclose your Personal Information in these reports. Data about student performance will remain anonymized, but aggregated, anonymized data over large populations of students may be reported by demographic criteria such as age, general location, gender, ethnicity, and socioeconomic status.
 
@@ -193,11 +199,11 @@ Code.org may disclose User data including Personal Information that we believe, 
 
 In the event that Code.org is acquired by, combined or merged with another entity, we may transfer or assign the Personal Information that we have collected from Users as part of such merger, acquisition, sale, or other change of control. Our promise to you is that any Personal Information we have collected from Users would be safeguarded under the same level of safety and privacy as afforded by this Privacy Notice.
 
-## Our approach to data security
+## Our Approach to Data Security
 
 ### Website security is important to you, and to us
 
-To protect your privacy and security, we take reasonable steps to verify your identity before granting you account access or making corrections to your Personal Information. Because some schools block SSL-secures web sites, Code.org allows access with or without SSL protection, at the direction of those schools. If you would like an SSL encrypted connection in or to encrypt the data that you input while using the Website, use the HTTPS protocol by visiting https://code.org/.
+To protect your privacy and security, we take reasonable steps to verify your identity before granting you account access or making corrections to your Personal Information. Because some schools block SSL-secure websites, Code.org allows access with or without SSL protection, at the direction of those schools. If you would like an SSL encrypted connection in or to encrypt the data that you input while using the Website, use the HTTPS protocol by visiting https://code.org/.
 
 ### We try to ensure that our Website and information sent to us are safe, but no security measures are perfect
 
@@ -213,7 +219,7 @@ Our Website is operated and managed on servers located within the United States.
 
 If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 
-### A Note to California Residents:
+### A note to California residents:
 
 We do not disclose any personal information to third parties for marketing purposes. For additional information about our privacy practices, or to review and request to have deleted any personal information you have shared with us, please send a request to http://code.org/contact.
 
@@ -222,4 +228,4 @@ We do not disclose any personal information to third parties for marketing purpo
 Please contact Code.org with any questions or comments about this Privacy Notice, your Personal Information, our third-party disclosure practices, or your consent choices by writing us at <http://code.org/contact> or at 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.   
   
   
-[![hình ảnh](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![hình ảnh](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

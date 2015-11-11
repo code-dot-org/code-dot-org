@@ -1,7 +1,7 @@
 require_relative '../../lib/cdo/rack/request'
 require 'minitest/autorun'
 
-class RequestTest < Minitest::Unit::TestCase
+class RequestTest < Minitest::Test
   def test_shared_cookie_domain
     [
         ['code.org', 'code.org'],

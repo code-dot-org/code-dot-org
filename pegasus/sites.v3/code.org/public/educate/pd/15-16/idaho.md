@@ -20,13 +20,10 @@ nav: pd2_nav
 Milestone Complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)###
-#### In-person Workshop####
+
 
 Milestone Complete!
 
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -49,7 +46,13 @@ Breakfast and lunch will be served.
 
 **Location**
 
-TBD
+Boise State University<br/> 
+Micron Engineering Center <br/>
+Room 307 (3rd floor) <br/>
+1020 S. Manitou Ave. <br/>
+Boise, ID 83706
+
+The building location has changed so please carefully look at the  [BSU map here](http://code.org/files/bsu-parking.pdf). The MEC building is circled in red. All of the blue highlights indicate free street parking on Saturdays.
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -78,13 +81,9 @@ More info coming soon!
 Milestone Complete!
 ### Phase 2: Blended Summer Study  (3 days in-person & ~8 hours online)###
 
-#### In-person Workshop####
 
 Milestone Complete!
 
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
@@ -103,7 +102,13 @@ Breakfast and lunch will be served.
 
 **Location**
 
-TBD
+Boise State University<br/> 
+Micron Engineering Center <br/>
+Room 307 (3rd floor) <br/>
+1020 S. Manitou Ave. <br/>
+Boise, ID 83706
+
+<b>NOTE:</b> The building location has changed so please carefully look at the  [BSU map here](http://code.org/files/bsu-parking.pdf). The MEC building is circled in red. All of the blue highlights indicate free street parking on Saturdays.
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -128,13 +133,11 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study  (3 days in-person & ~8 hours online) ###
 
-#### In-person Workshop####
+
 
 Milestone Complete!
 
-#### Online Study####
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
@@ -151,9 +154,34 @@ Semester 2: Saturday, March 12, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**Location**
+**Main Location - Boise**
 
-TBD
+University of Idaho - Boise<br/> 
+Idaho Water Center<br/> 
+Seminar Room 348A – 3rd floor <br/>
+322 E Front St <br/>Boise, ID 83702
+
+Parking is free on Saturdays.  Please refer to parking directions [here](http://www.uidaho.edu/boise/contact-locations/hoursmapsparking).
+
+**Satellite Location - Idaho Falls**
+
+
+University of Idaho - Idaho Falls<br/>
+1776 Science Center Drive<br/>
+TAB 320<br/>
+Idaho Falls, ID  83402
+
+Parking is free on Saturdays. Please refer to parking directions [here](http://www.uidaho.edu/idahofalls/aboutus/hoursmapsparking).
+
+**Satellite Location - CDA**
+
+University of Idaho - Coeur d’Alene<br/>
+1031 N. Academic Way<br/>
+Suite 242 , Room 128<br/>
+Coeur d’Alene, ID  83814<br/>
+
+
+Parking is free on Saturdays. Please refer to parking directions [here](/files/UI-Harbor-Center.pdf).
 
 **What to bring to Phase 3 bi-yearly sessions:**
 

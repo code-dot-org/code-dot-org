@@ -19,13 +19,7 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-#### In-person Workshop####
-
-Milestone Complete!
-
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
+Milestone complete!
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -46,11 +40,13 @@ Quarter 4: Saturday, May 7, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**September 19th Location**
+**November 14th Location**
 
 Venture Hive<br/>
 1010 NE 2nd Ave<br/>
 Miami, FL 33132
+
+Free parking is available in front of the building.
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -79,13 +75,9 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-#### In-person Workshop####
 
 Milestone Complete!
 
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i> 
 
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
@@ -106,6 +98,9 @@ Breakfast and lunch will be served.
 The LAB Miami<br/>
 400 NW 26th St.<br/>
 Miami, FL 33127
+
+
+
 
 **What to bring to Phase 3 bi-yearly sessions:**
 

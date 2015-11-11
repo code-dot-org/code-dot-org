@@ -10,9 +10,10 @@ Code.org is is a non-profit dedicated to expanding participation in computer sci
 
 Code.org partners with [Outlier Research & Evaluation at the University of Chicago](http://outlier.uchicago.edu/), a third-party evaluator, to understand our impact and progress towards meeting our mission. This report summarizes our program evaluation work for June 2014 through June 2015, which focused on answering the following key questions:
 
-- [What do teachers say about Code.org professional development?](#pd)
+- [What do teachers take away from Code.org professional development?](#pd)
 - [How successful have our district partnerships been in driving short- and long-term outcomes in each region?](#partners)
 - [What learning outcomes have Code.org students achieved?](#outcomes)
+- [How much do Code.org programs cost?](#costs)
 - [How does learning Computer Science impact learning other subjects?](#learning)
 - [What next steps can Code.org take to improve our programs?](#nextsteps)
 
@@ -21,9 +22,9 @@ We have gathered data from a number of sources -- internal data collected via Co
 
 ---
 
-## <a name="pd" href="#pd">What do teachers take awy from Code.org professional development?</a>
+## <a name="pd" href="#pd">What do teachers take away from Code.org professional development?</a>
 
-From June 2014 through June 2015, over 11,000 teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models:
+From June 2014 through June 2015, over 11,000* teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models:
 
 - a day-long, face-to-face workshop delivered to K-5 teachers via our [Affiliate Program](/educate/k5-affiliates) or via our [District Partnership Program](/educate/k5-district-partnership)
 - a multi-phase, year-long blended PD experience delivered to Middle and High School teachers via our [District Partnership Program](/educate/districts)
@@ -44,12 +45,13 @@ Through our professional development efforts, we are helping a large, diverse au
 <br><br>
 
 [<button>Learn more</button>](/about/evaluation/pd)<br /><br/>
+* *Note: In the 2014-15 teacher cohort, we trained approximately 10,000 teachers. We trained an additional 1,000 teachers for the 2015-16 school year.*
 
 ---
 
 ## <a name="partners" href="#partners">How successful have our district partnerships been in driving short- and long-term outcomes in each region?</a>
 
-In 2014-15, Code.org [partnered with 35 districts](/educate/districts) across the United States to bring curriculum, professional development and support to over 1,600 new CS teachers.
+In 2014-15, Code.org [partnered with 35 districts](/educate/districts) across the United States to bring curriculum, professional development and support to over 500 new CS teachers.
 
 ## Key Finding: 
 Through our district partnerships, we are helping districts increase the priority of computer science locally in the face of some big challenges. <br /><br/>
@@ -88,6 +90,14 @@ Overall, Code Studio course participation is high, and basic measures of learnin
 
 ---
 
+## <a name="costs" href="#costs">How much do Code.org programs cost?</a>
+
+Our first cohort of teachers finished a complete 24-month cycle of district partnership and teacher professional development, allowing Code.org to calculate our all-in cost per teacher, and to estimate our cost per student impacted.
+
+[<button>Learn more</button>](/about/evaluation/costs)<br /><br/>
+
+---
+
 ## <a name="learning" href="#learning">How does learning computer science impact learning other subjects?</a>
 
 Although we are still early in terms of making a direct link between computer science course participation and learning gains in other subjects, a number of recent studies by our partners have shown interesting positive results connecting CS experience with performance in Math and other fields.<br /><br/>
@@ -111,3 +121,10 @@ Internally, through participant surveys and data science projects, we will conti
 
 - Workshop satisfaction (including online PD components)
 - Student outcomes measured through Code Studio
+
+---
+
+## Learn More About Our Approach
+In this recorded session, you’ll hear from [Pat Yongpradit](http://twitter.com/mryongpradit), Chief Academic Officer at [Code.org](https://code.org) and [Heather King](http://outlier.uchicago.edu/outlier/team/), program manager at [Outlier](http://outlier.uchicago.edu/), about the results of our programs over the course of the 2014-15 school year. What did teachers take away from professional development? What did students learn? What did we learn from our district partnerships? Learn from our successes and challenges as we discuss how we might work together as a CS education community to increase access to CS education for all.
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/jJfZMgvm4SU" frameborder="0" allowfullscreen></iframe>

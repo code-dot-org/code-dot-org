@@ -10,7 +10,8 @@
     "version": "2",
     "data": "0000 0100 0000 0100",
     "href": "pixelation/pixelation.html",
-    "video_key": "csp_pixelation_bw"
+    "video_key": "csp_pixelation_bw",
+    "skip_dialog": true
   }
 }]]></config>
 </Pixelation>

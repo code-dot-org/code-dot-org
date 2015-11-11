@@ -1,5 +1,7 @@
 require File.expand_path('../../../../config/environment.rb', __FILE__)
 
+DEFAULT_WAIT_TIMEOUT = 2.minutes
+
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
     url = url.
@@ -22,15 +24,30 @@ end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
-  wait = Selenium::WebDriver::Wait.new(timeout: 5.minutes)
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
   wait.until { @browser.find_element(selection_criteria) }
 end
 
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
   steps %q{
-    When I press "x-close"
+    When I wait to see ".x-close"
+    And I press "x-close"
     And I wait for 0.75 seconds
+  }
+end
+
+When /^I reset the puzzle to the starting version$/ do
+  steps %q{
+    Then I click selector "#versions-header"
+    And I wait to see a dialog titled "Version History"
+    And I close the dialog
+    And I wait for 3 seconds
+    Then I click selector "#versions-header"
+    And I wait until element "button:contains(Delete Progress)" is visible
+    And I click selector "button:contains(Delete Progress)"
+    And I click selector "#confirm-button"
+    Then I wait for 15 seconds
   }
 end
 
@@ -40,13 +57,19 @@ Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
 end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
-  wait = Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
   wait.until { @browser.execute_script("return $(\"#{selector}\").text();").include? text }
 end
 
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
-  wait = Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
   wait.until { @browser.execute_script("return $('#{selector}').is(':visible')") }
+end
+
+# Required for inspecting elements within an iframe
+When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |selector, parent_selector|
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until { @browser.execute_script("return $('#{selector}', $('#{parent_selector}').contents()).is(':visible')") }
 end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
@@ -54,7 +77,7 @@ Then /^check that I am on "([^"]*)"$/ do |url|
   @browser.current_url.should eq url
 end
 
-Then /^check that the URL contains "([^"]*)"$/ do |url|
+Then /^check that the URL contains "([^"]*)"$/i do |url|
   url = replace_hostname(url)
   @browser.current_url.should include url
 end
@@ -117,6 +140,11 @@ When /^I press the SVG text "([^"]*)"$/ do |name|
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
 end
 
+When /^I select the "([^"]*)" option in dropdown "([^"]*)"$/ do |option_text, element_id|
+  select = Selenium::WebDriver::Support::Select.new(@browser.find_element(:id, element_id))
+  select.select_by(:text, option_text)
+end
+
 When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   name_selector = ".blocklyTreeLabel:contains(#{name})"
   # seems we usually have two of these item, and want the second if the function
@@ -155,6 +183,12 @@ When /^I press a button with xpath "([^"]*)"$/ do |xpath|
 end
 
 When /^I click selector "([^"]*)"$/ do |jquery_selector|
+  # normal a href links can only be clicked this way
+  @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+end
+
+When /^I send click events to selector "([^"]*)"$/ do |jquery_selector|
+  # svg elements can only be clicked this way
   @browser.execute_script("$(\"#{jquery_selector}\").click();")
 end
 
@@ -191,10 +225,18 @@ Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
   @browser.execute_script("return #{expression}").should eq true
 end
 
+Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
+  @browser.execute_script("return #{expression}")
+end
+
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
 Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
   element_has_text(selector, expectedText)
+end
+
+Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expectedHtml|
+  element_has_html(selector, expectedHtml)
 end
 
 Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
@@ -212,16 +254,33 @@ Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expec
   element_contains_text(selector, expectedText)
 end
 
+Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expectedValue|
+  element_value_is(selector, expectedValue)
+end
+
+Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
+  value = @browser.execute_script("return $(\"#{selector}\").is(':checked');")
+  value.should eq negation.nil?
+end
+
+Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expectedText|
+  element_has_attribute(selector, attribute, replace_hostname(expectedText))
+end
+
 # The second regex encodes that ids should not contain spaces or quotes.
 # While this is stricter than HTML5, it is looser than HTML4.
 Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
   element_has_id(selector, id)
 end
 
-Then /^element "([^"]*)" is visible$/ do |selector|
+Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   visibility = @browser.execute_script("return $('#{selector}').css('visibility')");
   visible = @browser.execute_script("return $('#{selector}').is(':visible')") && (visibility != 'hidden');
-  visible.should eq true
+  visible.should eq (negation.nil?)
+end
+
+Then /^element "([^"]*)" does not exist/ do |selector|
+  @browser.execute_script("return $('#{selector}').length").should eq 0
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
@@ -230,16 +289,22 @@ Then /^element "([^"]*)" is hidden$/ do |selector|
   visible.should eq false
 end
 
-def has_class(selector, className)
-  @browser.execute_script("return $('#{selector}').hasClass('#{className}')")
+def has_class(selector, class_name)
+  @browser.execute_script("return $('#{selector}').hasClass('#{class_name}')")
 end
 
-Then /^element "([^"]*)" has class "([^"]*)"$/ do |selector, className|
-  has_class(selector, className).should eq true
+Then /^element "([^"]*)" has class "([^"]*)"$/ do |selector, class_name|
+  has_class(selector, class_name).should eq true
 end
 
-Then /^element "([^"]*)" (?:does not|doesn't) have class "([^"]*)"$/ do |selector, className|
-  has_class(selector, className).should eq false
+Then /^element "([^"]*)" (?:does not|doesn't) have class "([^"]*)"$/ do |selector, class_name|
+  has_class(selector, class_name).should eq false
+end
+
+Then /^SVG element "([^"]*)" within element "([^"]*)" has class "([^"]*)"$/ do |selector, parent_selector, class_name|
+  # Can't use jQuery hasClass here, due to limited SVG support
+  class_list = @browser.execute_script("return $(\"#{selector}\", $(\"#{parent_selector}\").contents())[0].getAttribute(\"class\")")
+  class_list.should include class_name
 end
 
 def is_disabled(selector)
@@ -324,11 +389,24 @@ Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
   @parent_item.should eq @actual_parent_item
 end
 
+And(/^I set the language cookie$/) do
+  params = {
+    name: "_language",
+    value: 'en'
+  }
+
+  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
+      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
+    params[:domain] = '.code.org' # top level domain cookie
+  end
+
+  @browser.manage.add_cookie params
+
+  debug_cookies(@browser.manage.all_cookies)
+end
+
 def encrypted_cookie(user)
-  key_generator = ActiveSupport::KeyGenerator.new(
-      CDO.dashboard_secret_key_base,
-      iterations: 1000
-    )
+  key_generator = ActiveSupport::KeyGenerator.new(CDO.dashboard_secret_key_base, iterations: 1000)
 
   encryptor = ActiveSupport::MessageEncryptor.new(
     key_generator.generate_key('encrypted cookie'),
@@ -354,28 +432,75 @@ def log_in_as(user)
     params[:domain] = '.code.org' # top level domain cookie
   end
 
+  puts "Setting cookie: #{CGI::escapeHTML params.inspect}"
+
   @browser.manage.delete_all_cookies
   @browser.manage.add_cookie params
+
+  debug_cookies(@browser.manage.all_cookies)
 end
 
-Given(/^I am a teacher$/) do
-  @teacher = User.find_or_create_by!(email: "teacher#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |teacher|
-    teacher.name = "TestTeacher Teacher"
-    teacher.password = SecureRandom.base64
-    teacher.user_type = 'teacher'
-    teacher.age = 40
-  end
-  log_in_as(@teacher)
+Given(/^I sign in as "([^"]*)"/) do |name|
+  log_in_as(@users[name])
 end
 
-Given(/^I am a student$/) do
-  @student = User.find_or_create_by!(email: "student#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |user|
-    user.name = "TestStudent Student"
-    user.password = SecureRandom.base64
-    user.user_type = 'student'
-    user.age = 16
+Given(/^I am a (student|teacher)$/) do |user_type|
+  random_name = "Test#{user_type.capitalize} " + SecureRandom.base64
+  steps %Q{
+    And I create a #{user_type} named "#{random_name}"
+    And I sign in as "#{random_name}"
+  }
+end
+
+And(/^I create a (student|teacher) named "([^"]*)"$/) do |user_type, name|
+  @users ||= {}
+  @users[name] = User.find_or_create_by!(email: "user#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |user|
+    user.name = name
+    user.password = name + "password" # hack
+    user.user_type = user_type
+    user.age = user_type == 'student' ? 16 : 21
+    user.confirmed_at = Time.now
   end
-  log_in_as(@student)
+end
+
+And(/I fill in username and password for "([^"]*)"$/) do |name|
+  steps %Q{
+    And I type "#{@users[name].email}" into "#user_login"
+    And I type "#{name}password" into "#user_password"
+  }
+end
+
+Given(/^I sign in as a (student|teacher)$/) do |user_type|
+  steps %Q{
+    Given I am on "http://learn.code.org/"
+    And I am a #{user_type}
+    And I am on "http://learn.code.org/users/sign_in"
+  }
+end
+
+# Signs in as name by filling in username/password fields. If name does not
+# already exist, creates a new student account for name in the db first.
+Given(/^I manually sign in as "([^"]*)"$/) do |name|
+  steps %Q{
+    Given I am on "http://studio.code.org/reset_session"
+    Then I am on "http://studio.code.org/"
+    And I set the language cookie
+    And I create a student named "#{name}"
+    Then I am on "http://studio.code.org/"
+    And I reload the page
+    Then I wait for 2 seconds
+    Then I wait to see ".header_user"
+    Then I click selector "#signin_button"
+    And I wait to see ".new_user"
+    And I fill in username and password for "#{name}"
+    And I click selector "input[type=submit][value='Sign in']"
+    And I wait to see ".header_user"
+  }
+end
+
+When(/^I debug cookies$/) do
+  puts "DEBUG: url=#{CGI::escapeHTML @browser.current_url.inspect}"
+  debug_cookies(@browser.manage.all_cookies)
 end
 
 And(/^I ctrl-([^"]*)$/) do |key|
@@ -383,9 +508,29 @@ And(/^I ctrl-([^"]*)$/) do |key|
   @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
 end
 
+def press_keys(element, key)
+  if key.start_with?(':')
+    element.send_keys(make_symbol_if_colon(key))
+  else
+    # Workaround for Firefox, see https://code.google.com/p/selenium/issues/detail?id=6822
+    key.gsub!(/([^\\])\\n/, "\\1\n") # Cucumber does not convert captured \n to newline.
+    key.gsub!(/\\\\n/, "\\n") # Fix up escaped newline
+    key.split('').each do |k|
+      if k == '('
+        element.send_keys :shift, 9
+      elsif k == ')'
+        element.send_keys :shift, 0
+      else
+        element.send_keys k
+      end
+    end
+  end
+end
+
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
-  element.send_keys(make_symbol_if_colon(key))
+  @browser.action.move_to(element).click.perform
+  press_keys(element, key)
 end
 
 def make_symbol_if_colon(key)
@@ -404,7 +549,7 @@ When /^I disable onBeforeUnload$/ do
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
-  wait = Selenium::WebDriver::Wait.new(:timeout => 30)
+  wait = Selenium::WebDriver::Wait.new(timeout: 30)
   wait.until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
 
   if redirect_source == 'pushState'
@@ -444,4 +589,26 @@ end
 
 Then /^there is no horizontal scrollbar$/ do
   @browser.execute_script('return document.documentElement.scrollWidth <= document.documentElement.clientWidth').should eq true
+end
+
+# Place files in dashboard/test/fixtures
+# Note: Safari webdriver does not support file uploads (https://code.google.com/p/selenium/issues/detail?id=4220)
+Then /^I upload the file named "(.*?)"$/ do |filename|
+  unless ENV['TEST_LOCAL'] == 'true'
+    # Needed for remote (Sauce Labs) uploads
+    @browser.file_detector = lambda do |args|
+      str = args.first.to_s
+      str if File.exist? str
+    end
+  end
+
+  filename = File.expand_path(filename, '../fixtures')
+  @browser.execute_script('$("input[type=file]").show()')
+  element = @browser.find_element :css, 'input[type=file]'
+  element.send_keys filename
+  @browser.execute_script('$("input[type=file]").hide()')
+
+  unless ENV['TEST_LOCAL'] == 'true'
+    @browser.file_detector = nil
+  end
 end

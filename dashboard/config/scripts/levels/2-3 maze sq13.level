@@ -9,7 +9,7 @@
     "skin": "pvz",
     "instructions": "Dear person. Me zombie. Must... get... to sunflower. Create loop with \"repeat until\" block.",
     "start_direction": "1",
-    "step_mode": 0
+    "step_mode": 1
   }
 }]]></config>
   <blocks>

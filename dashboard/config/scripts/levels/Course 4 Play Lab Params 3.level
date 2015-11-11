@@ -19,7 +19,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "use_modal_function_editor": "true",
-    "instructions": "Let's add another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one. Edit the \"jump\" function so that the definition includes the \"actor\" parameter. ",
+    "instructions": "We have added another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one. Edit the \"jump\" function so that it uses the \"actor\" parameter to make the correct character jump. ",
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
     "embed": "false",
@@ -27,7 +27,7 @@
     "disable_sharing": "false",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Let's add another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one. \r\n\r\n<br/>\r\nEdit the `jump` function so that the definition includes the `actor` parameter. ",
+    "markdown_instructions": "We have added another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one. \r\n\r\n<br/>\r\nEdit the `jump` function so that it uses the `actor` parameter to make the correct character jump. ",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -35,7 +35,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "maze_data": null
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
@@ -123,7 +124,7 @@
           </mutation>
           <title name="NAME">jump</title>
           <statement name="STACK">
-            <block type="studio_moveDistanceParamsSprite" inline="true">
+            <block type="studio_moveDistanceParamsSprite" inline="true" deletable="false" movable="false">
               <title name="DIR">1</title>
               <value name="SPRITE">
                 <block type="math_number">
@@ -136,7 +137,7 @@
                 </block>
               </value>
               <next>
-                <block type="studio_moveDistanceParamsSprite" inline="true">
+                <block type="studio_moveDistanceParamsSprite" inline="true" deletable="false" movable="false">
                   <title name="DIR">4</title>
                   <value name="SPRITE">
                     <block type="math_number">
@@ -162,6 +163,9 @@
             <arg name="height"/>
             <arg name="actor"/>
           </mutation>
+        </block>
+        <block type="math_number">
+          <title name="NUM">0</title>
         </block>
       </xml>
     </toolbox_blocks>

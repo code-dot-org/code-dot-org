@@ -17,6 +17,8 @@
  * limitations under the License.
  */
 
+/* global Blockly, goog */
+
 /**
  * @fileoverview XML reader and writer.
  * @author fraser@google.com (Neil Fraser)
@@ -38,7 +40,8 @@ Blockly.Xml.blockSpaceToDom = function(blockSpace) {
   var xml = Blockly.isMsie() ? document.createElementNS(null, 'xml') :
                                document.createElement("xml");
   var blocks = blockSpace.getTopBlocks(true);
-  for (var i = 0, block; block = blocks[i]; i++) {
+  for (var i = 0, block; i < blocks.length; i++) {
+    block = blocks[i];
     var element = Blockly.Xml.blockToDom(block);
     xml.appendChild(element);
   }
@@ -54,6 +57,10 @@ Blockly.Xml.blockSpaceToDom = function(blockSpace) {
  */
 Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
   var element = goog.dom.createDom('block');
+
+  var container;
+  var x, y, i, input, title;
+
   element.setAttribute('type', block.type);
   if (block.mutationToDom) {
     // Custom data for an advanced block.
@@ -72,8 +79,10 @@ Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
       element.appendChild(container);
     }
   }
-  for (var x = 0, input; input = block.inputList[x]; x++) {
-    for (var y = 0, title; title = input.titleRow[y]; y++) {
+  for (x = 0; x < block.inputList.length; x++) {
+    input = block.inputList[x];
+    for (y = 0; y < input.titleRow.length; y++) {
+      title = input.titleRow[y];
       titleToDom(title);
     }
   }
@@ -89,8 +98,8 @@ Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
   }
 
   var setInlineAttribute = false;
-  for (var i = 0, input; input = block.inputList[i]; i++) {
-    var container;
+  for (i = 0; i < block.inputList.length; i++) {
+    input = block.inputList[i];
     var empty = true;
     if (input.type == Blockly.DUMMY_INPUT) {
       continue;
@@ -150,7 +159,7 @@ Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
   if (block.nextConnection && !ignoreChildBlocks) {
     var nextBlock = block.nextConnection.targetBlock();
     if (nextBlock) {
-      var container = goog.dom.createDom('next', null,
+      container = goog.dom.createDom('next', null,
           Blockly.Xml.blockToDom(nextBlock));
       element.appendChild(container);
     }
@@ -229,16 +238,66 @@ Blockly.Xml.textToDom = function(text) {
 Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
   var metrics = blockSpace.getMetrics();
   var width = metrics ? metrics.viewWidth : 0;
-  for (var x = 0, xmlChild; xmlChild = xml.childNodes[x]; x++) {
-    if (xmlChild.nodeName.toLowerCase() == 'block') {
-      var block = Blockly.Xml.domToBlock(blockSpace, xmlChild);
-      var blockX = parseInt(xmlChild.getAttribute('x'), 10);
-      var blockY = parseInt(xmlChild.getAttribute('y'), 10);
-      if (!isNaN(blockX) && !isNaN(blockY)) {
-        block.moveBy(Blockly.RTL ? width - blockX : blockX, blockY);
-      }
+
+  // Block positioning rules are simple:
+  //  if the block has been given an absolute X coordinate, use it
+  //  (taking into account that RTL languages position from the left)
+  //  if the block has been given an absolute Y coordinate, use it
+  //  otherwise, the block "flows" with the other blocks from top to
+  //  bottom. Any block positioned absolutely with Y does not influence
+  //  the flow of the other blocks.
+  var cursor = {
+    x: Blockly.RTL ?
+        width - Blockly.BlockSpace.AUTO_LAYOUT_PADDING_LEFT :
+        Blockly.BlockSpace.AUTO_LAYOUT_PADDING_LEFT,
+    y: Blockly.BlockSpace.AUTO_LAYOUT_PADDING_TOP
+  };
+
+  var positionBlock = function (block) {
+    if (isNaN(block.x)) {
+      block.x = cursor.x;
+    } else {
+      block.x = Blockly.RTL ? width - block.x : block.x;
+    }
+
+    if (isNaN(block.y)) {
+      block.y = cursor.y;
+      cursor.y += block.blockly_block.getHeightWidth().height + Blockly.BlockSvg.SEP_SPACE_Y;
+    }
+
+    block.blockly_block.moveBy(block.x, block.y);
+  };
+
+  // To position the blocks, we first render them all to the Block Space
+  //  and parse any X or Y coordinates set in the XML. Then, we store
+  //  the rendered blocks and the coordinates in an array so that we can
+  //  position them in two passes.
+  //  In the first pass, we position the visible blocks. In the second
+  //  pass, we position the invisible blocks. We do this so that
+  //  invisible blocks don't cause the visible blocks to flow
+  //  differently, which could leave gaps between the visible blocks.
+  var blocks = [];
+  for (var i = 0, xmlChild; (xmlChild = xml.childNodes[i]); i++) {
+    if (xmlChild.nodeName.toLowerCase() === 'block') {
+      var blockly_block = Blockly.Xml.domToBlock(blockSpace, xmlChild);
+      var x = parseInt(xmlChild.getAttribute('x'), 10);
+      var y = parseInt(xmlChild.getAttribute('y'), 10);
+      blocks.push({
+        blockly_block: blockly_block,
+        x: x,
+        y: y
+      });
     }
   }
+
+  blocks.filter(function (block) {
+    return block.blockly_block.isVisible();
+  }).forEach(positionBlock);
+
+  blocks.filter(function (block) {
+    return !block.blockly_block.isVisible();
+  }).forEach(positionBlock);
+
   blockSpace.events.dispatchEvent(Blockly.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED);
 };
 
@@ -279,6 +338,10 @@ Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {
   if (editable) {
     block.setEditable(editable === 'true');
   }
+  var next_connection_disabled = xmlBlock.getAttribute('next_connection_disabled');
+  if (next_connection_disabled) {
+    block.setNextConnectionDisabled(next_connection_disabled === 'true');
+  }
   var userVisible = xmlBlock.getAttribute('uservisible');
   if (userVisible) {
     block.setUserVisible(userVisible === 'true');
@@ -289,7 +352,8 @@ Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {
   }
 
   var blockChild = null;
-  for (var x = 0, xmlChild; xmlChild = xmlBlock.childNodes[x]; x++) {
+  for (var x = 0, xmlChild; x < xmlBlock.childNodes.length; x++) {
+    xmlChild = xmlBlock.childNodes[x];
     if (xmlChild.nodeType == 3 && xmlChild.data.match(/^\s*$/)) {
       // Extra whitespace between tags does not concern us.
       continue;
@@ -298,8 +362,8 @@ Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {
 
     // Find the first 'real' grandchild node (that isn't whitespace).
     var firstRealGrandchild = null;
-    for (var y = 0, grandchildNode; grandchildNode = xmlChild.childNodes[y];
-         y++) {
+    for (var y = 0, grandchildNode; y < xmlChild.childNodes.length; y++) {
+      grandchildNode = xmlChild.childNodes[y];
       if (grandchildNode.nodeType != 3 || !grandchildNode.data.match(/^\s*$/)) {
         firstRealGrandchild = grandchildNode;
       }
@@ -395,7 +459,8 @@ Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {
  * @param {!Element} xmlBlock XML block element.
  */
 Blockly.Xml.deleteNext = function(xmlBlock) {
-  for (var x = 0, child; child = xmlBlock.childNodes[x]; x++) {
+  for (var x = 0, child; x < xmlBlock.childNodes.length; x++) {
+    child = xmlBlock.childNodes[x];
     if (child.nodeName.toLowerCase() == 'next') {
       xmlBlock.removeChild(child);
       break;

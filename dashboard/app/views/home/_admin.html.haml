@@ -5,6 +5,7 @@
       %ul
         %li= link_to 'Assume Identity', assume_identity_form_path
         %li= link_to 'Reset Password', new_user_password_path
+    %li= link_to 'Grant Permissions/Privileges', CDO.code_org_url('/private/privileges')
     %li= link_to 'Videos', videos_path
     %li= link_to 'Recent Activity', all_usage_path
     %li= link_to 'Feedback System', frequent_unsuccessful_level_sources_path
@@ -18,4 +19,5 @@
             = link_to(data_t_suffix('script.name', script.name, 'title'), script_level_path(script, ScriptLevel::NEXT))
     %li= link_to t('builder.manage'), new_level_path
     %li= link_to 'Admin Stats', admin_stats_path
+    %li= link_to 'Search for Teachers', search_for_teachers_path
     %li= link_to 'Gallery', gallery_activities_path

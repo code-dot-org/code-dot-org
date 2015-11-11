@@ -41,6 +41,8 @@
     "disable_examples": "false",
     "video_key": "alg_8_design_recipe",
     "examples_required": "true",
+    "markdown_instructions": "We've started the Design Recipe for `rocket-height` using the contract and examples you just wrote. Complete the function definition for `rocket-height` and run your animation.",
+    "never_autoplay_video": "false",
     "maze_data": null
   }
 }]]></config>

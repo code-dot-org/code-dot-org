@@ -418,6 +418,14 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   var firstBlock = xmlList && xmlList[0];
   if (firstBlock === Blockly.Variables.NAME_TYPE) {
     // Special category for variables.
+    // Allow for a mix of static + dynamic blocks. Static blocks will appear
+    // first in the category
+    for (var i = 1, xml; xml = xmlList[i]; i++) {
+      if (xml.tagName && xml.tagName.toUpperCase() === 'BLOCK') {
+        blocks.push(Blockly.Xml.domToBlock(this.blockSpace_, xml));
+        gaps.push(margin * 3);
+      }
+    }
     Blockly.Variables.flyoutCategory(blocks, gaps, margin, this.blockSpace_);
   } else if (firstBlock === Blockly.Procedures.NAME_TYPE) {
     // Special category for procedures.
@@ -440,7 +448,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
     );
   } else {
     for (var i = 0, xml; xml = xmlList[i]; i++) {
-      if (xml.tagName && xml.tagName.toUpperCase() == 'BLOCK') {
+      if (xml.tagName && xml.tagName.toUpperCase() === 'BLOCK') {
         blocks.push(Blockly.Xml.domToBlock(this.blockSpace_, xml));
         gaps.push(margin * 3);
       }

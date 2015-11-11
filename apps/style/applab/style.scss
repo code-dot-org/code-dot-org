@@ -1,5 +1,4 @@
 @import "color";
-@import "colpick.css";
 @import "style-constants";
 @import "skins/base.scss";
 @import "skins/modern.scss";
@@ -40,6 +39,9 @@ div#visualizationResizeBar {
   div#visualizationColumn.responsive.with_padding {
     max-width: $colWidth;
   }
+  .small-footer-base.responsive {
+    max-width: $width;
+  }
   div#codeWorkspace {
     left: $width;
   }
@@ -72,6 +74,9 @@ div#visualizationResizeBar {
   }
   div#visualizationColumn.responsive.with_padding {
     max-width: $colWidth;
+  }
+  .small-footer-base.responsive {
+    max-width: $width;
   }
   div#codeWorkspace {
     left: $width;
@@ -106,6 +111,9 @@ div#visualizationResizeBar {
   div#visualizationColumn.responsive.with_padding {
     max-width: $colWidth;
   }
+  .small-footer-base.responsive {
+    max-width: $width;
+  }
   div#codeWorkspace {
     left: $width;
   }
@@ -138,6 +146,9 @@ div#visualizationResizeBar {
   }
   div#visualizationColumn.responsive.with_padding {
     max-width: $colWidth;
+  }
+  .small-footer-base.responsive {
+    max-width: $width;
   }
   div#codeWorkspace {
     left: $width;
@@ -172,6 +183,9 @@ div#visualizationResizeBar {
   div#visualizationColumn.responsive.with_padding {
     max-width: $colWidth;
   }
+  .small-footer-base.responsive {
+    max-width: $width;
+  }
   div#codeWorkspace {
     left: $width;
   }
@@ -194,7 +208,32 @@ div#visualizationResizeBar {
 
 // ** END OF RULES THAT ARE MODIFIED AT RUNTIME IN adjustAppSizeStyles() **
 
-#divApplab {
+#visualizationColumn.wireframeShare {
+  background: url("#{$root}phone_wireframe.png") center center no-repeat;
+  max-width: none !important;
+  width: 352px;
+  height: 612px;
+  margin: 0 auto;
+  padding: 20px 0;
+
+  #designToggleRow, #gameButtons {
+    display: none;
+  }
+
+  #visualization {
+    top: 68px;
+    left: 16px;
+    border: 0;
+  }
+}
+
+#visualizationColumn.chromelessShare {
+  #designToggleRow, #gameButtons {
+    display: none;
+  }
+}
+
+#divApplab, #designModeViz {
   overflow: hidden;
   outline: none;
   position: relative;
@@ -208,7 +247,7 @@ div#visualizationResizeBar {
   user-select: none;
 }
 
-#divApplab canvas {
+#divApplab canvas, #designModeViz canvas {
   position: absolute;
   overflow: hidden;
   top: 0px;
@@ -275,13 +314,19 @@ img#turtleImage {
   opacity: 1;
 }
 
+$debug-area-initial-height: 120px;
 #debug-area {
   position: absolute;
   bottom: 0;
-  height: 156px;
+  height: $debug-area-initial-height;
   left: 0;
   right: 0;
   max-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+}
+
+// Make sure the workspace default lines up with the debug area default
+#codeTextbox.pin_bottom {
+  bottom: $debug-area-initial-height;
 }
 
 #debug-area-header {
@@ -317,6 +362,19 @@ img#turtleImage {
     -ms-user-select: none;
     user-select: none;
   }
+  #show-hide-debug-icon {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    margin: 0;
+    line-height: $workspace-headers-height;
+    font-size: 18px;
+
+    &:hover {
+      cursor: pointer;
+      color: white;
+    }
+  }
 }
 
 $debug-commands-column-width: 270px;
@@ -328,22 +386,6 @@ $debug-commands-column-width: 270px;
 
   .fa {
     margin: 0 0.25em;
-  }
-
-  #show-hide-debug-icon {
-    position: absolute;
-    top: 0;
-    left: 8px;
-    margin: 0;
-    line-height: $workspace-headers-height;
-  }
-
-  &.js-hover-hack {
-    cursor: pointer;
-
-    #show-hide-debug-icon {
-      color: white;
-    }
   }
 }
 
@@ -363,6 +405,9 @@ $debug-commands-column-width: 270px;
 }
 
 .debug-console {
+  &.full {
+    left: 0;
+  }
   left: $debug-commands-column-width;
   right: 0;
 }
@@ -499,56 +544,24 @@ $debug-input-height: 16px;
   margin-right: 3px;
 }
 
-button.arrow {
-  border: 1px solid #FFA000;
-  background-color: #FFA000;
-  color: #fff;
-  margin-left: 5px;
-  margin-right: 0px;
-  display: none;
-}
-button.arrow>img {
-  opacity: 1;
-  vertical-align: text-bottom;
-}
-button.arrow:focus {
-  outline-style: none;
-}
-#soft-buttons {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: -5px;
-  &.soft-buttons-none {
-    display: none;
-  }
-}
-.soft-buttons-1 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 51px;
-}
-.soft-buttons-2 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 102px;
-}
-.soft-buttons-3 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 153px;
-}
-.soft-buttons-4 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 204px;
-}
-
 #share-cell {
   display: inline-block;
   vertical-align: top;
   &.share-cell-none {
     display: none;
   }
+}
+
+#submitButton {
+  border-color: $purple;
+  background-color: $purple;
+  color: white;
+}
+
+#unsubmitButton {
+  border-color: $light_purple;
+  background-color: $light_purple;
+  color: white;
 }
 
 #manageAssetsModal {
@@ -616,4 +629,11 @@ button.arrow:focus {
 // once we are done experimenting with them.
 .design-element-image {
   width: 72px; // 60% of 120px, which is the original image width.
+}
+
+.rainbow-gradient {
+  background: -webkit-linear-gradient(to bottom right, red, orange, yellow, green, blue); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(to bottom right, red, orange, yellow, green, blue); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(to bottom right, red, orange, yellow, green, blue); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, red, orange, yellow, green, blue); /* Standard syntax */
 }

@@ -38,7 +38,7 @@
 "bs": "bs-BA"
 "bs-BA":
   english: "Bosnian"
-  native: "Босански"
+  native: "Bosanski"
   webfonts: false
 
 "ca": "ca-ES"
@@ -213,6 +213,13 @@
   native: "한국어"
   webfonts: false  
 
+"kk": "kk-KZ"
+"kk-KZ":
+  english: "Kazakh"
+  native: "Қазақ Tілі"
+  webfonts: false
+  debug: true
+
 "km": "km-KH"
 "km-KH":
   english: "Khmer"
@@ -379,6 +386,12 @@
   debug: true
   dir: 'rtl'
   webfonts: false
+
+"uz": "uz-UZ"
+"uz-UZ":
+  english: "Uzbekistan"
+  native: "Oʻzbekcha"
+  debug: true
 
 "vi": "vi-VN"
 "vi-VN":

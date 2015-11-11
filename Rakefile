@@ -5,30 +5,28 @@ require 'os'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 
-def create_database(uri)
-  db = URI.parse(uri)
-
-  command = [
-    'mysql',
-    "--user=#{db.user}",
-    "--host=#{db.host}",
-  ]
-  command << "--execute=\"CREATE DATABASE IF NOT EXISTS #{db.path[1..-1]}\""
-  command << "--password=#{db.password}" unless db.password.nil?
-
-  system command.join(' ')
-end
-
 namespace :lint do
   task :ruby do
-    RakeUtils.system 'rubocop'
+    RakeUtils.bundle_exec 'rubocop'
   end
 
   task :haml do
-    RakeUtils.system 'haml-lint dashboard pegasus'
+    RakeUtils.bundle_exec 'haml-lint dashboard pegasus'
   end
 
-  task all: [:ruby, :haml]
+  task :javascript do
+    Dir.chdir(apps_dir) do
+      # lint all js/jsx files in dashboardd/app/assets/javascript
+      RakeUtils.system 'grunt jshint:files --glob "../dashboard/app/**/*.js*(x)"'
+      # also do our standard apps lint
+      RakeUtils.system 'grunt jshint'
+    end
+    Dir.chdir(shared_js_dir) do
+      RakeUtils.system 'npm run lint'
+    end
+  end
+
+  task all: [:ruby, :haml, :javascript]
 end
 task lint: ['lint:all']
 
@@ -82,8 +80,10 @@ namespace :build do
       HipChat.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
 
-      HipChat.log 'Updating <b>apps</b> i18n strings...'
-      RakeUtils.system './sync-apps.sh'
+      if rack_env?(:staging)
+        HipChat.log 'Updating <b>apps</b> i18n strings...'
+        RakeUtils.system './sync-apps.sh'
+      end
 
       HipChat.log 'Building <b>apps</b>...'
       env_vars = ''
@@ -137,7 +137,7 @@ namespace :build do
       RakeUtils.start_service CDO.dashboard_unicorn_name unless rack_env?(:development)
 
       if rack_env?(:production)
-        RakeUtils.system 'rake', "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
+        RakeUtils.rake "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
       end
     end
   end
@@ -156,6 +156,7 @@ namespace :build do
           RakeUtils.rake 'db:migrate'
         rescue => e
           HipChat.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+          raise e
         end
 
         HipChat.log 'Seeding <b>pegasus</b>...'
@@ -163,6 +164,7 @@ namespace :build do
           RakeUtils.rake 'seed:migrate'
         rescue => e
           HipChat.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+          raise e
         end
       end
 
@@ -210,6 +212,25 @@ task :build => ['build:all']
 ##
 ##################################################################################################
 
+# Whether this is a development or adhoc environment where we should install npm and create
+# a local database.
+def local_environment?
+  (rack_env?(:development) && !CDO.chef_managed) || rack_env?(:adhoc)
+end
+
+def install_npm
+  if OS.linux?
+    RakeUtils.system 'sudo apt-get install -y nodejs npm'
+    RakeUtils.system 'sudo ln -s -f /usr/bin/nodejs /usr/bin/node'
+    RakeUtils.system 'sudo npm install -g npm@2.9.1'
+    RakeUtils.npm_install_g 'grunt-cli'
+  elsif OS.mac?
+    RakeUtils.system 'brew install node'
+    RakeUtils.system 'npm', 'update', '-g', 'npm'
+    RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
+  end
+end
+
 namespace :install do
 
   # Create a symlink in the public directory that points at the appropriate blockly
@@ -223,55 +244,52 @@ namespace :install do
     end
   end
 
+  task :hooks do
+    files = [
+        'pre-commit',
+        'post-checkout',
+        'post-merge',
+    ]
+    git_path = ".git/hooks"
+
+    files.each do |f|
+      path = File.expand_path("../tools/hooks/#{f}", __FILE__)
+      system "ln -s #{path} #{git_path}/#{f}"
+    end
+  end
+
+
   task :apps do
-    if rack_env?(:development) && !CDO.chef_managed
-      if OS.linux?
-        RakeUtils.npm_update_g 'npm'
-        RakeUtils.npm_install_g 'grunt-cli'
-      elsif OS.mac?
-        RakeUtils.system 'brew install node'
-        RakeUtils.system 'npm', 'update', '-g', 'npm'
-        RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
-      end
+    if local_environment?
+      install_npm
     end
   end
 
   task :shared do
-    if rack_env?(:development) && !CDO.chef_managed
+    if local_environment?
       Dir.chdir(shared_js_dir) do
         shared_js_build = CDO.use_my_shared_js ? shared_js_dir('build/package') : 'shared-package'
         RakeUtils.ln_s shared_js_build, dashboard_dir('public','shared')
       end
-
-      if OS.linux?
-        RakeUtils.npm_update_g 'npm'
-        RakeUtils.npm_install_g 'grunt-cli'
-      elsif OS.mac?
-        RakeUtils.system 'brew install node'
-        RakeUtils.system 'npm', 'update', '-g', 'npm'
-        RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
-      end
+      install_npm
     end
   end
 
   task :dashboard do
-    if rack_env?(:development) && !CDO.chef_managed
+    if local_environment?
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
         puts CDO.dashboard_db_writer
-        RakeUtils.rake 'db:setup_or_migrate'
-        RakeUtils.rake 'seed:all'
+        RakeUtils.rake 'dashboard:setup_db'
       end
     end
   end
 
   task :pegasus do
-    if rack_env?(:development) && !CDO.chef_managed
+    if local_environment?
       Dir.chdir(pegasus_dir) do
         RakeUtils.bundle_install
-        create_database CDO.pegasus_db_writer
-        RakeUtils.rake 'db:migrate'
-        RakeUtils.rake 'seed:migrate'
+        RakeUtils.rake 'pegasus:setup_db'
       end
     end
   end

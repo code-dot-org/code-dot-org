@@ -132,65 +132,6 @@ exports.runOnAppTick = function (app, tick, fn) {
 };
 
 /**
- * Deep equality check of two values with more useful assertion failure
- * message.  Depends on lodash isEqual.
- * @param {*} left
- * @param {*} right
- */
-exports.assertEqual = function (left, right) {
-  assert(_.isEqual(left, right),
-      JSON.stringify(left) + ' equals ' + JSON.stringify(right));
-};
-
-/**
- * Check that two numbers are close, within a given threshold.
- * @param {number} left
- * @param {number} right
- * @param {number} maxDelta
- */
-exports.assertWithinRange = function (left, right, maxDelta) {
-  assert(Math.abs(left - right) <= maxDelta, "Values " + left + " and " +
-      right + " are more than " + maxDelta + " apart.");
-};
-
-/**
- * Checks that executing certain code results in an exception of the
- * exact given type being thrown.  Produces usable output when assertions
- * fail.
- *
- * @param {function} exceptionType - constructor for the exception type you
- *        expect to be generated.  Cannot be an ancestor of the exception
- *        type; assertThrows(Error, function () { throw new TypeError(); });
- *        will fail.
- * @param {function} fn - Function expected to generate an exception. Receives
- *        no arguments, not expected to return a value.
- *
- * @example Passing assertion
- * assertThrows(Error, function () { throw new Error(); });
- *
- * @example Failing assertion
- * // Will produce output "Didn't throw!"
- * assertThrows(TypeError, function () { });
- *
- * @example Failing assertion
- * // Will produce output "Threw Error, expected TypeError; exception: {}"
- * assertThrows(TypeError, function () { throw new Error(); });
- */
-exports.assertThrows = function (exceptionType, fn) {
-  var x;
-  try {
-    fn();
-  } catch (e) {
-    x = e;
-  }
-  assert(x !== undefined, "Didn't throw!");
-  assert(x.constructor === exceptionType,
-      "Threw " + x.constructor.name +
-      ", expected " + exceptionType.name +
-      "; exception: " + x.message);
-};
-
-/**
  * Checks that an object has a property with the given name, independent
  * of its prototype.
  *
@@ -214,7 +155,7 @@ exports.debugMode = function () {
 
 /**
  * jQuery.simulate was having issues in phantom, so I decided to roll my own
- * drag simulation. May belong in a util file.
+ * drag simulation.
  * @param {string} type ElementType to be dragged in
  * @param {number} left Horizontal offset from top left of visualization to drop at
  * @param {number} top Vertical offset from top left of visualization to drop at
@@ -222,21 +163,93 @@ exports.debugMode = function () {
 exports.dragToVisualization = function (type, left, top) {
   // drag a new element in
   var element = $("[data-element-type='" + type + "']");
+
   var screenOffset = element.offset();
   var mousedown = $.Event("mousedown", {
     which: 1,
     pageX: screenOffset.left,
     pageY: screenOffset.top
   });
+  element.trigger(mousedown);
+
   var drag = $.Event("mousemove", {
     pageX: $("#visualization").offset().left + left,
     pageY: $("#visualization").offset().top + top
   });
-  var mouseup = $.Event('mouseup', {
-    pageX: $("#visualization").offset().left + left,
+  $(document).trigger(drag);
+
+  // when we start our drag, it positions the dragged element to be centered
+  // on our cursor. adjust the target drop location accordingly
+  var halfWidth = $('.draggingParent').width() / 2;
+  var drag2 = $.Event("mousemove", {
+    pageX: $("#visualization").offset().left + left + halfWidth,
     pageY: $("#visualization").offset().top + top
   });
-  element.trigger(mousedown);
-  $(document).trigger(drag);
+  $(document).trigger(drag2);
+
+  var mouseup = $.Event('mouseup', {
+    pageX: $("#visualization").offset().left + left + halfWidth,
+    pageY: $("#visualization").offset().top + top
+  });
   $(document).trigger(mouseup);
+};
+
+/**
+ * From: http://marcgrabanski.com/simulating-mouse-click-events-in-javascript
+ * Creates a mouse event of the given type with the given clientX/clientY
+ * @param {string} type
+ * @param {number} clientX
+ * @param {number} clientY
+ */
+exports.createMouseEvent = function mouseEvent(type, clientX, clientY) {
+  var evt;
+  var e = {
+    bubbles: true,
+    cancelable: (type != "mousemove"),
+    view: window,
+    detail: 0,
+    screenX: undefined,
+    screenY: undefined,
+    clientX: clientX,
+    clientY: clientY,
+    ctrlKey: false,
+    altKey: false,
+    shiftKey: false,
+    metaKey: false,
+    button: 0,
+    relatedTarget: undefined
+  };
+  if (typeof( document.createEvent ) == "function") {
+    evt = document.createEvent("MouseEvents");
+    evt.initMouseEvent(type,
+      e.bubbles, e.cancelable, e.view, e.detail,
+      e.screenX, e.screenY, e.clientX, e.clientY,
+      e.ctrlKey, e.altKey, e.shiftKey, e.metaKey,
+      e.button, document.body.parentNode);
+  } else if (document.createEventObject) {
+    evt = document.createEventObject();
+    for (var prop in e) {
+      evt[prop] = e[prop];
+    }
+    evt.button = { 0:1, 1:4, 2:2 }[evt.button] || evt.button;
+  }
+  return evt;
+};
+
+/**
+ * Append text to the ace editor
+ */
+exports.typeAceText = function (text) {
+  var aceEditor = window.__TestInterface.getDroplet().aceEditor;
+  aceEditor.textInput.focus();
+  aceEditor.onTextInput(text);
+};
+
+/**
+ * Set the Ace editor text to the given text
+ */
+exports.setAceText = function (text) {
+  var aceEditor = window.__TestInterface.getDroplet().aceEditor;
+  aceEditor.textInput.focus();
+  aceEditor.setValue(text);
 };

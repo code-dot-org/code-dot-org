@@ -1,6 +1,6 @@
 // Base styles that apply to all apps
 
-#divApplab, .draggingParent {
+#divApplab, #designModeViz, .draggingParent {
   overflow: hidden;
   outline: none;
   position: relative;
@@ -16,13 +16,14 @@
   canvas {
     position: absolute;
     overflow: hidden;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: -1;
   }
 
   img {
     opacity: 1.0;
+    max-width: none;
   }
 
   label {
@@ -31,6 +32,10 @@
 
   div {
     overflow: hidden;
+  }
+
+  div[contenteditable=true] {
+    overflow: auto;
   }
 
   button {
@@ -45,14 +50,28 @@
     margin: 5px;
   }
 
+  .chart {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+
+    .loading {
+      background: image-url("spinner-big.gif") no-repeat center center;
+    }
+  }
+
   .design-mode-hidden {
     visibility: hidden;
   }
 }
 
-#divApplab.divApplabDesignMode, .draggingParent {
+#designModeViz, .draggingParent {
 
   canvas {
+    background-color: #eee;
+  }
+
+  .chart {
     background-color: #eee;
   }
 

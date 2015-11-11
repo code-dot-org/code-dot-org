@@ -9,7 +9,6 @@ embedded_layout: simple_embedded
 
 [/name]
 
-
 [category]
 
 Category: UI controls
@@ -20,22 +19,11 @@ Category: UI controls
 
 [short_description]
 
-Execute the callbackFunction code when a specific event type occurs for the specified element.
+Executes the *callbackFunction* code when a specific event *type* occurs for the specified UI element *id*.
 
 [/short_description]
 
-**Note:** A UI control must exist before the onEvent function can be used.
-
-There are many events that can be used with this function to respond to all kinds of actions that a user can take. You can find the full list [here](https://developer.mozilla.org/en-US/docs/Web/Events) but some of the most commonly used are:
-
-| Name  | Description                   |
-|-------|-------------------------------|
-| change | The specified element has been modified.  |
-| click | The user clicked on the specified element.  |
-| mouseover | The user moved the mouse cursor over the specified element. |
-| keydown | The user pressed a keyboard key while the element was selected.  |
-
-The callback function executed in response to an event receives an event object as its parameter, which can be used to gain more information about the event.
+Interactive apps need both UI elements ([button()](/applab/docs/button), [textInput()](/applab/docs/textInput), [textLabel()](/applab/docs/textLabel), [dropDown()](/applab/docs/dropDown), [checkBox()](/applab/docs/checkBox), [radioButton()](/applab/docs/radioButton), [image()](/applab/docs/image)), and event handlers for those UI elements and each type of user interaction needed. The UI element, with unique id, must exist before the onEvent function can be used.
 
 [/description]
 
@@ -44,96 +32,114 @@ ____________________________________________________
 
 [example]
 
-In this example, we use `onEvent` to write a message to the screen every time a button is clicked.
-<pre>
-button("myButton", "Click me"); //Create a button element
-onEvent("myButton", "click", function(event){ //Register a click callback for "myButton"
-  write("You clicked the button!"); //Display text on the screen
+```
+// Move the turtle forward on every click of the button.
+button("forward", "Move Forward");
+onEvent("forward", "click", function(event) {
+  moveForward();
 });
-</pre>
+```
 
 [/example]
-
 ____________________________________________________
 
 [example]
 
-In this second example, we use `onEvent` to move an image to the coordinates specified in a textbox. Note that we declare only one function that we use for two different callback.
-<pre>
-textLabel("xLabel", "X coordinate:", "xCoordinate"); //Create a label for the X coordinate text box
-textInput("xCoordinate", "160"); //Create a text box where the X coordinate can be modified
-textLabel("yLabel", "Y coordinate:", "yCoordinate"); //Create a label for the Y coordinate text box
-textInput("yCoordinate", "240"); //Create a text box where the Y coordinate can be modified
-image("logo", "http://code.org/images/logo.png"); //Create an image element
-setPosition("logo", 160, 240, 32, 32); //Set the start location and size of the image
-function moveFromText(event) { //Define a funtion that moves the image based on the text box value
-  var x = getText("xCoordinate"); //Get the X coordinate
-  var y = getText("yCoordinate"); //Get the Y coordinate
-  setPosition("logo", x, y); //Change the position of the image
-  //Note that if the text boxes don't contain numbers, the position won't be changed!
-}
-//Set our moveFromText function as the callback whenever one of the text boxes is modified
-onEvent("xCoordinate", "change", moveFromText);
-onEvent("yCoordinate", "change", moveFromText);
-</pre>
+**Example: Two Different Types** Move the turtle forward on each click or backward on each key press. 
+
+```
+// Move the turtle forward on each click or backward on each key press.
+button("move", "Move");
+onEvent("move", "click", function(event) {
+  moveForward();
+});
+onEvent("move", "keypress", function(event) {
+  moveBackward();
+});
+```
 
 [/example]
-
 ____________________________________________________
-
 [example]
 
-We can also write a variant of the previous example, where the image can respond to different events like mouse hover and click.
+**Example: Event Details** Show the details of the callback function *event* parameter.
+
+```
+// Show the details of the callback function event parameter.
+button("data", "Show Me Event Details");
+onEvent("data", "click", function(event) {
+  console.log(JSON.stringify(event));
+});
+```
+
+[/example]
+____________________________________________________
+[example]
+
+**Example: Shrink and Grow** Grow an image on mouseover, back to normal size on mouseout.
+
+<table>
+<tr>
+<td style="border-style:none; width:90%; padding:0px">
 <pre>
-textLabel("xLabel", "X coordinate:", "xCoordinate"); //Create a label for the X coordinate text box
-textInput("xCoordinate", "160"); //Create a text box where the X coordinate can be modified
-textLabel("yLabel", "Y coordinate:", "yCoordinate"); //Create a label for the Y coordinate text box
-textInput("yCoordinate", "240"); //Create a text box where the Y coordinate can be modified
-image("logo", "http://code.org/images/logo.png"); //Create an image element
-setPosition("logo", 160, 240, 32, 32); //Set the start location and size of the image
-function moveFromText(event) { //Define a funtion that moves the image based on the text box value
-  var x = getText("xCoordinate"); //Get the X coordinate
-  var y = getText("yCoordinate"); //Get the Y coordinate
-  setPosition("logo", x, y); //Change the position of the image
-  //Note that if the text boxes don't contain numbers, the position won't be changed!
-}
-//Set our moveFromText function as the callback whenever one of the text boxes is modified
-onEvent("xCoordinate", "change", moveFromText);
-onEvent("yCoordinate", "change", moveFromText);
-//Register a callback for when the mouse comes over the image
+// Grow an image on mouseover, back to normal size on mouseout.
+image("logo", "https://code.org/images/logo.png");
+setPosition("logo", 160, 240, 32, 32);
+
 onEvent("logo", "mouseover", function(event){
-  //We will increase the size of the logo on hover by 16px
-  //Get the position of the image and adjust it by 8px in each direction to keep it centered
-  var x = getXPosition("logo") - 8;
-  var y = getYPosition("logo") - 8;
-  setPosition("logo", x, y, 48, 48); //Change the size of the image
+  setSize("logo", 48, 48);
 });
-//We also need to register a callback when the mouse moves out so we can revert our changes
+
 onEvent("logo", "mouseout", function(event){
-  //We will decrease the size of the logo on hover by 16px, back to its original size
-  //Get the position of the image and adjust it by 8px in each direction to keep it centered
-  var x = getXPosition("logo") + 8;
-  var y = getYPosition("logo") + 8;
-  setPosition("logo", x, y, 32, 32); //Change the size of the image
-});
-//Finally, we declare a callback to play a sound when the image is clicked
-onEvent("logo", "click", function(event){
-  playSound("http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3");
+  setSize("logo", 32, 32);
 });
 </pre>
+</td>
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/1d88a87cbc475a0c6cec4696d5b01e47-image-1446466358980.gif'>
+</td>
+</tr>
+</table>
 
 [/example]
+____________________________________________________
+[example]
 
+**Example: Where do you want it?** Move an image to the coordinates specified in a textboxes. Note that we declare one function that we use as callback for two different event handlers.
+
+```
+// Move an image to the coordinates specified in a textboxes.
+// Note that we declare one function that we use as callback for two different event handlers.
+textLabel("xLabel", "X coordinate:");
+textInput("xCoordinate", 160);
+textLabel("yLabel", "Y coordinate:");
+textInput("yCoordinate", 240);
+image("logo", "https://code.org/images/logo.png");
+setPosition("logo", 160, 240, 32, 32);
+
+onEvent("xCoordinate", "change", moveFromText);
+onEvent("yCoordinate", "change", moveFromText);
+
+// Define a funtion that moves the image based on the text box values
+function moveFromText() { 
+  var x = getText("xCoordinate");
+  var y = getText("yCoordinate");
+  setPosition("logo", x, y);
+}
+```
+
+[/example]
 ____________________________________________________
 
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 onEvent(id, type, function(event) {
-  Code to execute
+  // Code to execute
 });
-</pre>
+```
 
 [/syntax]
 
@@ -143,22 +149,34 @@ onEvent(id, type, function(event) {
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| id | string | Yes | The ID of the UI control to which this function applies.  |
-| type | string | Yes | The type of event to respond to.  |
-| callbackFunction | function | Yes | A function to execute.  |
+| id | string | Yes | The ID of the UI control to which this event handler applies. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _.  |
+| type | string | Yes | The type of event to respond to. There are many events that can be used with an event handler to respond to all kinds of actions that a user can take. In block mode you can choose from a dropdown list of more than 10, but some of the most commonly used are shown below. |
+| callbackFunction | function | Yes | The callback function executed in response to an event for the matching UI element *id* of the matching *type*. The function can be inline, or separately defined in your app and called from onEvent(). |
+
+
+| Event Type  | Description                   |
+|-------|-------------------------------|
+| change | The specified element has been modified and enter has been pressed.  |
+| click | The user clicked on the specified element.  |
+| mouseover | The user moved the mouse cursor over the specified element. |
+| keydown | The user pressed a keyboard key while the mouse was over the element.  |
+
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value.
+No return value, callback function executed.
 
 [/returns]
 
 [tips]
 
 ### Tips
+- The UI element must be defined in your code before the matching onEvent() event handler.
+- The callback function receives an event object as its parameter, which can be used to gain more information about the event. You can ignore the App Lab warning *event is defined but not called in your program*.
+- The preferred placement in yoru code is screen elements at the top, event handlers in middle, other code/functions at end.
 
 [/tips]
 

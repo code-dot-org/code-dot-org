@@ -35,7 +35,8 @@ ____________________________________________________
 Squash the ant!
 Clicking on the ant will squash it and remove it from the screen.
 
-<pre>
+
+```
 // create an ant and place it on the screen
 image("ant", "http://www.pdclipart.org/albums/Animals_Bugs_Insects/ant.png");
 
@@ -44,7 +45,7 @@ onEvent("ant", "click", function(event) {
   // delete the ant
   deleteElement("ant");
 });
-</pre>
+```
 
 [/example]
 
@@ -57,7 +58,8 @@ ____________________________________________________
 Squash the ant swarm!
 Ants will randomly appear on the screen every second for one minute. Click on the ant to squash it and remove it from the screen.
 
-<pre>
+
+```
 // define a function to create an ant and place it on screen.
 function createAnt() {
   var antId = "ant" + randomNumber(0, 1000); // create an id for the ant. The id is appended with a random number so only one ant is deleted at a time.
@@ -90,7 +92,7 @@ setTimeout(function() {
   // use the variable to cancel the interval and stop creating ants
   clearInterval(createAntInterval);
 }, oneMinuteInMilliseconds);
-</pre>
+```
 
 
 [/example]
@@ -100,9 +102,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 deleteElement(id);
-</pre>
+```
 
 [/syntax]
 

@@ -1,44 +1,20 @@
 #joindescription
   #calltoaction
     %h2{:style=>"margin-top: 0px"}
-      -if @country == 'uk'
-        =hoc_s(:front_join_us_header_uk)
-      -else
-        =hoc_s(:front_join_us_header)
-
-  #calltoaction
-    %ul{:style=>"line-height:28px"}
-      %li
-        %b=hoc_s(:front_join_us_teacher)
-        =hoc_s(:front_join_us_inspire)
-        %a{href:hoc_uri('/resources/how-to')}
-          =hoc_s(:front_join_us_inspire_link)
-      -if @country == 'uk'
-        %li
-          %b Are you an organisation? 
-          %a{href:hoc_uri('/resources/how-to-organizations')} Inspire your colleagues 
-          with an Hour of Code at your company
-      %li
-        %b=hoc_s(:front_join_us_parent)
-        %a{href:hoc_uri('/resources')}
-          =hoc_s(:front_join_us_ask_link)
-        =hoc_s(:front_join_us_ask)
-      %li
-        %a{href:hoc_uri('/resources')}
-          =hoc_s(:front_join_us_help_promote)
-      -if @country == 'ar'
-        %li 
-          Para más información, por favor visite
-          %a{href:'http://ar.code.org'} ar.code.org
-      -if @country == 'br'
-        %li 
-          Voce está no Brasil? Por favor, visite
-          %a{href:'http://br.code.org'} br.code.org
-      -if @country == 'it'
-        %li 
-          Sei in Italia? Visita per favore 
-          %a{href:'http://italia.code.org'} italia.code.org
-      -if @country == 'ro'
-        %li 
-          Esti din Romania? Te rugam sa vizitezi
-          %a{href:'http://ro.code.org'} ro.code.org
+      =hoc_s(:front_join_us_header)
+    %a.category-link{:href=>resolve_url('/how-to')}
+      %div.category-button.cyan-background
+        %b.category-header=hoc_s(:front_join_us_teacher)
+        %span=hoc_s(:front_join_us_teacher_link)
+    %a.category-link{:href=>resolve_url('/promote/resources#sample-emails')}
+      %div.category-button.purple-background
+        %b.category-header=hoc_s(:front_join_us_parent)
+        %span=hoc_s(:front_join_us_parent_link)
+    %a.category-link{:href=>resolve_url('/promote/resources')}
+      %div.category-button.green-background
+        %b.category-header=hoc_s(:front_join_us_computer_science)
+        %span=hoc_s(:front_join_us_spread_word_work)
+    -if chapter_partner?
+      %a.category-link{:href=>resolve_url('https://code.org')}
+        %div.category-button.teal-background
+          %span=hoc_s(:front_join_us_code_info).gsub('code.org', resolve_url('code.org'))

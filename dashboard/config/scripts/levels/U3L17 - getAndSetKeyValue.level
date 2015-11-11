@@ -1,0 +1,51 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-20T19:20:03.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "getKeyValue": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Incrementing a Key Value Pair\r\n\r\nIn order to increment a key value pair you must first know what value it contains. In other words, you will need to **first read from and then write to** the same key value pair. \r\n\r\nYou are going to build a simple app in which users can like a photo on the screen. **The number of likes the image has received** will be stored in a key value pair so that it is persistent and **multiple users can like the image**.\r\n\r\n# Do This\r\n\r\n* **Choose an image** for your app by changing the URL in design mode\r\n* A key value pair called **totalLikes** is already added to the app\r\n* **Add an event handler** to the **Like** button that increments **totalLikes**. Note you'll need to use `getKeyValue` , `setKeyValue` , and **callback functions** in order to make this properly work.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "data_properties": "{\r\n  \"totalLikes\": 0\r\n}",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true",
+    "instructions": "Create an image like app. (Click to see full instructions)",
+    "encrypted_examples": [
+
+    ]
+  }
+}]]></config>
+  <blocks/>
+</Applab>

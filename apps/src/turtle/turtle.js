@@ -719,7 +719,8 @@ Artist.prototype.execute = function() {
   // Reset the graphic.
   this.studioApp_.reset();
 
-  if (this.studioApp_.hasExtraTopBlocks()) {
+  if (this.studioApp_.hasExtraTopBlocks() ||
+      this.studioApp_.hasDuplicateVariablesInForLoops()) {
     // immediately check answer, which will fail and report top level blocks
     this.checkAnswer();
     return;
@@ -851,7 +852,8 @@ Artist.prototype.animate = function() {
         stepped = this.interpreter.step();
       }
       catch(err) {
-        this.executionError = err;
+        // TODO (cpirich): populate lineNumber as we do for studio/applab:
+        this.executionError = { err: err, lineNumber: 1 };
         this.finishExecution_();
         return;
       }
@@ -970,6 +972,12 @@ Artist.prototype.step = function(command, values, options) {
       this.ctxScratch.rotate(2 * Math.PI * (this.heading - 90) / 360);
       this.ctxScratch.fillText(values[0], 0, 0);
       this.ctxScratch.restore();
+      break;
+    case 'GA':  // Global Alpha
+      var alpha = values[0];
+      alpha = Math.max(0, alpha);
+      alpha = Math.min(100, alpha);
+      this.ctxScratch.globalAlpha = alpha / 100;
       break;
     case 'DF':  // Draw Font
       this.ctxScratch.font = values[2] + ' ' + values[1] + 'pt ' + values[0];

@@ -7,12 +7,12 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var markup = require('./NetSimEncodingControl.html.ejs');

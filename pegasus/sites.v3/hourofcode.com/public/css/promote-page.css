@@ -1,0 +1,19 @@
+.video {
+  float: left;
+  padding: 10px;
+}
+
+.handout {
+  float: left;
+  padding: 10px 10px 10px 0px;
+  overflow: hidden;
+}
+
+.handout-text {
+  padding-bottom: 8px;
+  font-size: 16px;
+}
+
+.handouts-header {
+  margin-bottom: 0px;
+}
