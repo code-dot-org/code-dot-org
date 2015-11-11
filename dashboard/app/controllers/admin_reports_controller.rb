@@ -2,8 +2,6 @@
 class AdminReportsController < ApplicationController
   before_filter :authenticate_user!, except: [:header_stats]
 
-  check_authorization except: [:header_stats, :students]
-
   before_action :set_script
   include LevelSourceHintsHelper
 
