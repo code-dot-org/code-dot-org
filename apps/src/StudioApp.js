@@ -964,7 +964,7 @@ function resizePinnedBelowVisualizationArea() {
   if (designToggleRow) {
     top += $(designToggleRow).outerHeight(true);
   }
-  
+
   if (visualization) {
     top += $(visualization).outerHeight(true);
   }
@@ -1478,7 +1478,8 @@ StudioApp.prototype.configureDom = function (config) {
     visualizationColumn.className = visualizationColumn.className + " embed_hidesource";
   }
 
-  if (!config.share) {
+  // Don't make our play area responsive if we're embedded or shared
+  if (!(config.embed || config.share)) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
