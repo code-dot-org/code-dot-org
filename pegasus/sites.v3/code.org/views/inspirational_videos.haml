@@ -16,8 +16,4 @@
 %div{style: 'clear: both'}
 %br/
 -if request.locale == 'en-US'
-  %p
-    More
-    %a{href: "https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"}
-      inspirational videos
-    by role models and celebrities
+  %p= I18n.t(:inspirational_videos_more)
