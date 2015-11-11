@@ -538,6 +538,8 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
         message = msg.errorQuestionMarksInNumberField();
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
+          // Allow apps to override the "too many blocks" failure message
+          // Passed as a msg function to allow the parameters to be passed in.
         var messageFunction = (options.appStrings && options.appStrings.tooManyBlocksFailMsgFunction) ||
             msg.numBlocksNeeded;
         message = messageFunction({
