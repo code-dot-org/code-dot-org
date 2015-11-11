@@ -1,6 +1,5 @@
 require "csv"
 require "naturally"
-require "json"
 
 EMPTY_XML = '<xml></xml>'
 
