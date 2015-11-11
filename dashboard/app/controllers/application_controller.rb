@@ -3,9 +3,6 @@ require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 
 class ApplicationController < ActionController::Base
-  # Temporarily add basic http auth TODO(bjordan): remove before merge
-  http_basic_authenticate_with :name => "thekids", :password => "loveminecraft", :realm => "Email brian@code.org for credentials"
-
   include LocaleHelper
   include ApplicationHelper
 
