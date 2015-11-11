@@ -5811,6 +5811,180 @@ var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 
+function loadGumball(skin, assetUrl) {
+  skin.defaultBackground = 'dots';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'projectile_banana',
+    'projectile_dodgeball',
+    'projectile_donkey',
+    'projectile_handbag',
+    'projectile_hotdog',
+    'projectile_pompom',
+    'projectile_toaster',
+    'projectile_waterball',
+  ];
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_projectile_banana',
+    'item_projectile_dodgeball',
+    'item_projectile_donkey',
+    'item_projectile_handbag',
+    'item_projectile_hotdog',
+    'item_projectile_pompom',
+    'item_projectile_toaster',
+    'item_projectile_waterball',
+  ];
+
+  // Images
+  skin.projectile_banana = skin.assetUrl('projectile_banana.png');
+  skin.projectile_dodgeball = skin.assetUrl('projectile_dodgeball.png');
+  skin.projectile_donkey = skin.assetUrl('projectile_donkey.png');
+  skin.projectile_handbag = skin.assetUrl('projectile_handbag.png');
+  skin.projectile_hotdog = skin.assetUrl('projectile_hotdog.png');
+  skin.projectile_pompom = skin.assetUrl('projectile_pompom.png');
+  skin.projectile_toaster = skin.assetUrl('projectile_toaster.png');
+  skin.projectile_waterball = skin.assetUrl('projectile_waterball.png');
+
+  // TODO: proper item class names
+  skin.item_projectile_banana = skin.assetUrl('projectile_banana.png');
+  skin.item_projectile_dodgeball = skin.assetUrl('projectile_dodgeball.png');
+  skin.item_projectile_donkey = skin.assetUrl('projectile_donkey.png');
+  skin.item_projectile_handbag = skin.assetUrl('projectile_handbag.png');
+  skin.item_projectile_hotdog = skin.assetUrl('projectile_hotdog.png');
+  skin.item_projectile_pompom = skin.assetUrl('projectile_pompom.png');
+  skin.item_projectile_toaster = skin.assetUrl('projectile_toaster.png');
+  skin.item_projectile_waterball = skin.assetUrl('projectile_waterball.png');
+
+  skin.explosion = skin.assetUrl('explosion.png');
+  skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
+  skin.explosionFrames = 40;
+  skin.fadeExplosion = false;
+  skin.timePerExplosionFrame = 20;
+
+  skin.characters = {
+    background: skin.assetUrl('background_characters.png'),
+  };
+  skin.checkers = {
+    background: skin.assetUrl('background_checkers.png'),
+  };
+  skin.clouds = {
+    background: skin.assetUrl('background_clouds.png'),
+  };
+  skin.cornered = {
+    background: skin.assetUrl('background_cornered.png'),
+  };
+  skin.dots = {
+    background: skin.assetUrl('background_dots.png'),
+  };
+  skin.graffiti = {
+    background: skin.assetUrl('background_graffiti.png'),
+  };
+  skin.space = {
+    background: skin.assetUrl('background_space.png'),
+  };
+  skin.squares = {
+    background: skin.assetUrl('background_squares.png'),
+  };
+  skin.wood = {
+    background: skin.assetUrl('background_wood.png'),
+  };
+
+  skin.avatarList = ["anais", "antony", "bananajoe", "darwin", "gumball", "nicole", "penny", "richard"];
+  skin.walkValues = [8, 8, 8, 12, 12, 8, 10, 12];
+
+  /**
+   * Sprite thumbs generated with:
+   * `brew install graphicsmagick`
+   * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
+   */
+  skin.avatarList.forEach(function (name, i) {
+    skin[name] = {
+      sprite: skin.assetUrl('idle_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 19,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: skin.walkValues[i],
+        emotionCycles: 0,
+        extraEmotions: 3
+      },
+      timePerFrame: 100
+    };
+  });
+
+
+  skin.backgroundChoices = [
+    [msg.setBackgroundRandom(), RANDOM_VALUE],
+    [msg.setBackgroundCharacters(), '"characters"'],
+    [msg.setBackgroundCheckers(), '"checkers"'],
+    [msg.setBackgroundClouds(), '"clouds"'],
+    [msg.setBackgroundCornered(), '"cornered"'],
+    [msg.setBackgroundDots(), '"dots"'],
+    [msg.setBackgroundGraffiti(), '"graffiti"'],
+    [msg.setBackgroundSpace(), '"space"'],
+    [msg.setBackgroundSquares(), '"squares"'],
+    [msg.setBackgroundWood(), '"wood"']];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.backgroundChoicesK1 = [
+    [skin.characters.background, '"characters"'],
+    [skin.checkers.background, '"checkers"'],
+    [skin.clouds.background, '"clouds"'],
+    [skin.cornered.background, '"cornered"'],
+    [skin.dots.background, '"dots"'],
+    [skin.graffiti.background, '"graffiti"'],
+    [skin.space.background, '"space"'],
+    [skin.squares.background, '"squares"'],
+    [skin.wood.background, '"wood"'],
+    [skin.randomPurpleIcon, RANDOM_VALUE]];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteAnais(), '"anais"'],
+    [msg.setSpriteAntony(), '"antony"'],
+    [msg.setSpriteBananajoe(), '"bananajoe"'],
+    [msg.setSpriteDarwin(), '"darwin"'],
+    [msg.setSpriteGumball(), '"gumball"'],
+    [msg.setSpriteNicole(), '"nicole"'],
+    [msg.setSpritePenny(), '"penny"'],
+    [msg.setSpriteRichard(), '"richard"']];
+
+  skin.projectileChoices = [
+    [msg.projectileBanana(), '"projectile_banana"'],
+    [msg.projectileDodgeball(), '"projectile_dodgeball"'],
+    [msg.projectileDonkey(), '"projectile_donkey"'],
+    [msg.projectileHandbag(), '"projectile_handbag"'],
+    [msg.projectileHotdog(), '"projectile_hotdog"'],
+    [msg.projectilePompom(), '"projectile_pompom"'],
+    [msg.projectileToaster(), '"projectile_toaster"'],
+    [msg.projectileWaterball(), '"projectile_waterball"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.itemChoices = [
+    [msg.itemProjectileBanana(), '"item_projectile_banana"'],
+    [msg.itemProjectileDodgeball(), '"item_projectile_dodgeball"'],
+    [msg.itemProjectileDonkey(), '"item_projectile_donkey"'],
+    [msg.itemProjectileHandbag(), '"item_projectile_handbag"'],
+    [msg.itemProjectileHotdog(), '"item_projectile_hotdog"'],
+    [msg.itemProjectilePompom(), '"item_projectile_pompom"'],
+    [msg.itemProjectileToaster(), '"item_projectile_toaster"'],
+    [msg.itemProjectileWaterball(), '"item_projectile_waterball"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
+}
+
 function loadIceAge(skin, assetUrl) {
   skin.defaultBackground = 'icy';
   skin.projectileFrames = 10;
@@ -7034,6 +7208,9 @@ exports.load = function(assetUrl, id) {
 
   // take care of items specific to skins
   switch (skin.id) {
+    case 'gumball':
+      loadGumball(skin, assetUrl);
+      break;
     case 'iceage':
       loadIceAge(skin, assetUrl);
       break;
@@ -7306,6 +7483,10 @@ levels.iceage_1 = utils.extend(levels.playlab_1, {
   background: 'icy',
   firstSpriteIndex: 0, // manny
 });
+levels.gumball_1 = utils.extend(levels.playlab_1, {
+  background: 'dots',
+  firstSpriteIndex: 0, // manny
+});
 
 // Can you make the dog say something and then have the cat say something afterwards?
 levels.dog_and_cat_hello =  {
@@ -7388,7 +7569,10 @@ levels.iceage_2 = utils.extend(levels.playlab_2, {
   background: 'leafy',
   firstSpriteIndex: 3, // diego
 });
-
+levels.gumball_2 = utils.extend(levels.playlab_2, {
+  background: 'dots',
+  firstSpriteIndex: 3, // diego
+});
 
 // extended by: k1_3
 // Can you write a program to make this dog move to the cat?
@@ -7473,6 +7657,10 @@ levels.playlab_3 = {
 };
 levels.iceage_3 = utils.extend(levels.playlab_3, {
   background: 'grassy',
+  firstSpriteIndex: 2, // scrat
+});
+levels.gumball_3 = utils.extend(levels.playlab_3, {
+  background: 'clouds',
   firstSpriteIndex: 2, // scrat
 });
 
@@ -7597,6 +7785,10 @@ levels.iceage_4 = utils.extend(levels.playlab_4, {
   background: 'grassy',
   avatarList: ['scrat', 'granny']
 });
+levels.gumball_4 = utils.extend(levels.playlab_4, {
+  background: 'checkers',
+  avatarList: ['gumball', 'darwin']
+});
 
 // Can you write a program to make the octopus say "hello" when it is clicked?
 levels.click_hello =  {
@@ -7649,6 +7841,10 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
 });
 levels.iceage_5 = utils.extend(levels.playlab_5, {
   background: 'icy',
+  firstSpriteIndex: 1, // sid
+});
+levels.gumball_5 = utils.extend(levels.playlab_5, {
+  background: 'characters',
   firstSpriteIndex: 1, // sid
 });
 
@@ -7805,6 +8001,11 @@ levels.iceage_6 = utils.extend(levels.playlab_6, {
   firstSpriteIndex: 3, // diego
   goalOverride: {} // This prevents the override from original playlab from being used
 });
+levels.gumball_6 = utils.extend(levels.playlab_6, {
+  background: 'cornered',
+  firstSpriteIndex: 3, // diego
+  goalOverride: {} // This prevents the override from original playlab from being used
+});
 
 // The "repeat forever" block allows you to run code continuously. Can you
 // attach blocks to move this dinosaur up and down repeatedly?
@@ -7926,6 +8127,10 @@ levels.playlab_7 = {
 };
 levels.iceage_7 = utils.extend(levels.playlab_7, {
   background: 'icy',
+  firstSpriteIndex: 1, // sid
+});
+levels.gumball_7 = utils.extend(levels.playlab_7, {
+  background: 'graffiti',
   firstSpriteIndex: 1, // sid
 });
 
@@ -8152,6 +8357,10 @@ levels.playlab_8 = {
 levels.iceage_8 = utils.extend(levels.playlab_8, {
   background: 'icy',
   avatarList: ['manny', 'sid']
+});
+levels.gumball_8 = utils.extend(levels.playlab_8, {
+  background: 'wood',
+  avatarList: ['bananajoe', 'antony']
 });
 
 // Can you add blocks to change the background and the speed of the penguin, and
@@ -8395,6 +8604,65 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
       '</next>' +
     '</block>'
 });
+levels.gumball_9 = utils.extend(levels.playlab_9, {
+  background: 'space',
+  toolbox:
+    tb(
+      blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
+      blockOfType('studio_setBackground', {VALUE: '"icy"'}) +
+      blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
+      blockOfType('studio_saySprite') +
+      blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
+      blockOfType('studio_changeScore')
+    ),
+  requiredBlocks: [
+    [{test: 'setBackground',
+      type: 'studio_setBackground',
+      titles: {VALUE: '"space"'}}],
+    [{test: 'setSpriteSpeed',
+      type: 'studio_setSpriteSpeed',
+      titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
+  ],
+  avatarList: ['nicole', 'penny'],
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
+      '<statement name="DO">' +
+        blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
+          blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
+        ) +
+      '</statement>' +
+    '</block>' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="290">' +
+      '<title name="SPRITE2">0</title>' +
+      '<title name="SPRITE2">1</title>' +
+      '<next>' +
+        blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
+          blockOfType('studio_saySprite', {TEXT: msg.iceAge()})
+        ) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="410">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 8}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="510">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 2}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="610">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 1}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="710">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 4}) +
+      '</next>' +
+    '</block>'
+});
 
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
 levels.sandbox =  {
@@ -8454,6 +8722,7 @@ levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
 levels.playlab_10 = utils.extend(levels.sandbox, {});
 levels.iceage_10 = utils.extend(levels.playlab_10, {});
+levels.gumball_10 = utils.extend(levels.playlab_10, {});
 
 // Create your own story! Move around the cat and dog, and make them say things.
 levels.k1_6 = {
