@@ -199,7 +199,6 @@ Dashboard::Application.routes.draw do
 
   get '/admin/assume_identity', to: 'reports#assume_identity_form', as: 'assume_identity_form'
   post '/admin/assume_identity', to: 'reports#assume_identity', as: 'assume_identity'
-  get '/admin/dynamic_config', :to => 'dynamic_config#show', as: 'dynamic_config_show'
   get '/admin/gatekeeper', :to => 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', :to => 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
