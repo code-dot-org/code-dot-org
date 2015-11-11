@@ -1838,9 +1838,10 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = studioApp.assetUrl('media/promo.png');
 
-  // Disable "show code" button in feedback dialog and workspace if blockly.
-  // Note - if turned back on, be sure it remains hidden when config.level.embed
-  config.enableShowCode = utils.valueOr(studioApp.editCode, false);
+  // Disable "show code" button in feedback dialog and workspace if blockly,
+  // unless the level specifically requests it
+  config.enableShowCode =
+    studioApp.editCode ? true : utils.valueOr(level.enableShowCode, false);
   config.varsInGlobals = true;
   config.dropletConfig = dropletConfig;
   config.dropIntoAceAtLineStart = true;
@@ -5337,7 +5338,11 @@ var checkFinished = function () {
 
   if (progressConditionResult) {
     Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
-    Studio.message = utils.valueOr(progressConditionResult.message, null);
+    var progressMessage = progressConditionResult.message;
+    if (studioApp.isUsingBlockly()) {
+      progressMessage = progressConditionResult.blocklyMessage || progressMessage;
+    }
+    Studio.message = utils.valueOr(progressMessage, null);
     Studio.pauseInterpreter = utils.valueOr(progressConditionResult.pauseInterpreter, false);
     return true;
   }
