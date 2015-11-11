@@ -20,6 +20,12 @@ Use playing cards (or dice, or sheets of paper...anything with the ability to ra
 **Ages 8-18, Sequence, Algorithms, Programming, unplugged.** 
 Make fun take-home items that "store" students' initials using only two colors.
 
+[Bomberbot Hour of Code Activities](www.bomberbot.com/hourofcode)  
+**Ages 5-18, Sequence, Algorithms, Programming, unplugged or web-based.** Students will learn a series of programming concepts and apply them to programming a robot.
+
+[STEM Projects](https://www.tynker.com/hour-of-code/tynker-stem-teacher-guide.pdf)  
+**Ages 5-18. Programming, Science (Ecology), Science (Space), web-based.** Code and animate a Solar System simulation, an interactive ecological pyramid, a working analog clock, and more.
+
 [Rock, Paper, Scissors](https://code.org/files/PGUTSRockPaperScissors.pdf)   
 **Ages 10-15, Science (Biology), unplugged.** 
 This activity builds off of the classic game of Rock/Paper/Scissors, known to most students, and relates it to a phenomenon seen in biology. 
@@ -31,17 +37,20 @@ Students create their own interactive PBS KIDS characters.
 [PBS Kids ScratchJr - Animated Scenes](https://pbs.app.box.com/s/y9y4htjhpupyapg8q4uuzlkbaj7nvojp/1/5208929949/42204150029/1)  
 **Ages 5-9, Art, Storytelling, Sequence, unplugged.** Students create their own animated scenes featuring popular PBS KIDS characters. 
 
-[STEM Projects](https://www.tynker.com/hour-of-code/tynker-stem-teacher-guide.pdf)  
-**Ages 5-18. Programming, Science (Ecology), Science (Space), web-based.** Code and animate a Solar System simulation, an interactive ecological pyramid, a working analog clock, and more.
-
-[Bomberbot Hour of Code Activities](www.bomberbot.com/hourofcode)  
-**Ages 5-18, Sequence, Algorithms, Programming, unplugged or web-based.** Students will learn a series of programming concepts and apply them to programming a robot.
-
 [Kodable fuzzFamily Frenzy](https://www.kodable.com/hour-of-code/lessons)  
 **Ages 5-9, Seqence, Algorithms, Programming, web-based.** Students will learn basic programing language and use math concepts to move a “robot” forward, spin, and jump.
 
 [High Seas](http://www.cs-first.com/clubplan/sample-activity-0)  
 **Ages 7-13, Sequence, Art, Storytelling, web-based.** Students will use Scratch to program a story about being lost at sea. 
+
+[Bitsbox Coding + Math](https://bitsbox.com/hocprint.html)  
+**Ages 5-13, Programming, Math (General, Geometry), web-based.**
+
+[Bitsbox Coding + Science](https://bitsbox.com/hocprint.html)  
+**Ages 5-9, Programming, Science (General, Biology, Chemistry, Physics), web-based.**
+
+[Bitsbox Coding + Art](https://bitsbox.com/hocprint.html)    
+**Ages 5-9, Programming, Language Arts, Visual Arts, Music, web-based.**
 
 
 ## Middle School
