@@ -13,7 +13,7 @@ export default class BaseCommand {
     }
     
     begin() {
-        if (this.HighlightCallback !== null) {
+        if (this.HighlightCallback) {
             this.HighlightCallback();
         }
         this.state = CommandState.WORKING;

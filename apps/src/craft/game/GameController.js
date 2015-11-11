@@ -216,7 +216,7 @@ class GameController {
 
       // report back to the code.org side the pass/fail result 
       //     then clear the callback so we dont keep calling it
-      if (this.OnCompleteCallback !== null) {
+      if (this.OnCompleteCallback) {
           if (this.queue.isSucceeded()) {
               this.OnCompleteCallback(true, this.levelModel);
           }
