@@ -1603,12 +1603,14 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     enableLiveAutocompletion: true
   });
 
-  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg, config.dropletConfig);
+  this.dropletTooltipManager = new DropletTooltipManager(
+    this.appMsg,
+    config.dropletConfig,
+    config.level.autocompletePaletteApisOnly && config.level.codeFunctions);
   if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);
   }
-  this.dropletTooltipManager.registerBlocksFromList(
-    dropletUtils.getAllAvailableDropletBlocks(config.dropletConfig));
+  this.dropletTooltipManager.registerBlocks();
 
   // Bind listener to palette/toolbox 'Hide' and 'Show' links
   var hideToolboxHeader = document.getElementById('toolbox-header');

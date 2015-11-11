@@ -88,15 +88,21 @@ DropletAutocompleteParameterTooltipManager.prototype.onCursorMovement_ = functio
 DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ = function (editor, paramInfo) {
   // Check the dropletConfig to see if we can find dropdown info for this parameter
   var dropdownList;
+  // TODO: Use getAllAvailableDropletBlocks() if we need dropdowns on
+  // builtinConfigBlocks or standardConfig blocks
   this.dropletTooltipManager.dropletConfig.blocks.forEach(function (block) {
-    if (block.func === paramInfo.funcName && block.dropdown) {
+    if (!block.noAutocomplete &&
+        (!this.dropletTooltipManager.blockFilter ||
+          typeof this.dropletTooltipManager.blockFilter[block.func] !== 'undefined') &&
+        block.func === paramInfo.funcName &&
+        block.dropdown) {
       if (typeof block.dropdown[paramInfo.currentParameterIndex] === 'function') {
         dropdownList = block.dropdown[paramInfo.currentParameterIndex]();
       } else {
         dropdownList = block.dropdown[paramInfo.currentParameterIndex];
       }
     }
-  });
+  }, this);
 
   if (dropdownList && !editor.completer.activated) {
     // The cursor is positioned where a parameter with a dropdown should appear
