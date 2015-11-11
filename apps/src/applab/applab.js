@@ -1179,8 +1179,6 @@ Applab.reset = function(first) {
     if (pausedIcon) {
       pausedIcon.style.display = 'none';
     }
-    clearDebugOutput();
-    clearDebugInput();
   }
 
   // Reset the Globals object used to contain program variables:
@@ -1245,8 +1243,6 @@ Applab.runButtonClick = function() {
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
-  studioApp.reset(false);
-  studioApp.attempts++;
   Applab.execute();
 
   // Enable the Finish button if is present:
@@ -1322,6 +1318,9 @@ Applab.execute = function() {
   var i;
 
   studioApp.reset(false);
+  studioApp.attempts++;
+  clearDebugOutput();
+  clearDebugInput();
 
   // Set event handlers and start the onTick timer
 
