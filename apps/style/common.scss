@@ -911,7 +911,7 @@ input[type="radio"] {
 
 #prompt2 {
   font-size: 12px;
-  color: $charcoal;
+  color: $charcoal;  
 }
 
 #ani-gif-preview-wrapper {
@@ -1355,7 +1355,7 @@ $workspace-header-button-margin: ($workspace-headers-height -
 .invisible {
   visibility: hidden;
 }
-.hide-instructions {
+.hide-source {
   #visualization {
     display: inline-block;
   }

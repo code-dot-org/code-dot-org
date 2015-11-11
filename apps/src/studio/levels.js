@@ -2155,7 +2155,12 @@ levels.js_hoc2015_event_two_items = {
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true },
-      result: { success: false, message: msg.failedTwoItemsTimeout() } }
+      result: {
+        success: false,
+        message: msg.failedTwoItemsTimeout(),
+        blocklyMessage: msg.failedTwoItemsTimeoutBlockly()
+      }
+    }
   ],
   'callouts': [
     {
@@ -2248,7 +2253,12 @@ levels.js_hoc2015_event_four_items = {
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true },
-      result: { success: false, message: msg.failedFourItemsTimeout() } }
+      result: {
+        success: false,
+        message: msg.failedFourItemsTimeout(),
+        blocklyMessage: msg.failedFourItemsTimeoutBlockly()
+      }
+    }
   ]
 };
 
@@ -2318,9 +2328,19 @@ levels.js_hoc2015_score =
     { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 },
       result: { success: false, message: msg.failedScoreTimeout() } },
     { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 },
-      result: { success: false, message: msg.failedScoreScore() } },
+      result: {
+        success: false,
+        message: msg.failedScoreScore(),
+        blocklyMessage: msg.failedScoreScoreBlockly()
+      }
+    },
     { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 },
-      result: { success: false, message: msg.failedScoreGoals() } },
+      result: {
+        success: false,
+        message: msg.failedScoreGoals(),
+        blocklyMessage: msg.failedScoreGoalsBlockly()
+      }
+    },
     { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 },
       result: { success: true, message: msg.successCharacter1() } }
   ],
@@ -2433,9 +2453,19 @@ levels.js_hoc2015_win_lose = {
     { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 },
       result: { success: false, message: msg.failedWinLoseTimeout() } },
     { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 },
-      result: { success: false, message: msg.failedWinLoseScore() } },
+      result: {
+        success: false,
+        message: msg.failedWinLoseScore(),
+        blocklyMessage: msg.failedWinLoseScoreBlockly()
+      }
+    },
     { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 },
-      result: { success: false, message: msg.failedWinLoseGoals() } },
+      result: {
+        success: false,
+        message: msg.failedWinLoseGoals(),
+        blocklyMessage: msg.failedWinLoseGoalsBlockly()
+      }
+    },
     { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 },
       result: { success: true, message: msg.successCharacter1() } }
   ]
@@ -2521,7 +2551,12 @@ levels.js_hoc2015_add_characters = {
     { required: { 'collectedItemsAtOrAbove': 3 },
       result: { success: true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
-      result: { success: false, message: msg.failedAddCharactersTimeout() } }
+      result: {
+        success: false,
+        message: msg.failedAddCharactersTimeout(),
+        blocklyMessage: msg.failedAddCharactersTimeoutBlockly()
+      }
+    }
   ]
 };
 
@@ -2582,7 +2617,12 @@ levels.js_hoc2015_chain_characters = {
     { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 20, 'currentPointsBelow': 2000 },
       result: { success: false, message: msg.failedChainCharactersScore() } },
     { required: { 'timedOut': true, 'collectedItemsBelow': 20, 'currentPointsAtOrAbove': 2000 },
-      result: { success: false, message: msg.failedChainCharactersItems() } },
+      result: {
+        success: false,
+        message: msg.failedChainCharactersItems(),
+        blocklyMessage: msg.failedChainCharactersItemsBlockly()
+      }
+    },
     { required: { 'collectedItemsAtOrAbove': 20, 'currentPointsAtOrAbove': 2000 },
       result: { success: true, message: msg.successCharacter1() } }
   ],
@@ -2959,6 +2999,7 @@ levels.js_hoc2015_event_free = {
 
 levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
@@ -2968,6 +3009,7 @@ levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
 
 levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
@@ -2978,6 +3020,7 @@ levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
 
 levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_diagonal,  {
   editCode: false,
+  enableShowCode: true,
   callouts: null,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
@@ -2989,6 +3032,7 @@ levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_diagonal,  {
 
 levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_backtrack,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
@@ -3000,6 +3044,7 @@ levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_backtrack,  {
 
 levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_around,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
@@ -3011,6 +3056,7 @@ levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_around,  {
 
 levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_finale,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
@@ -3022,11 +3068,15 @@ levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_finale,  {
 
 levels.hoc2015_blockly_7 = utils.extend(levels.js_hoc2015_event_two_items,  {
   editCode: false,
+  enableShowCode: true,
+  msgStringOverrides: {
+    moveSprite: 'goSprite'
+  },
   startBlocks: whenUpDown,
   toolbox: tb(hocMoveNS),
   requiredBlocks: [
-    moveNorthRequiredBlock(),
-    moveSouthRequiredBlock(),
+    // Note: not listing move blocks since the error messages are already
+    // sufficient and we've renamed these blocks to goUp/goDown
   ],
   'callouts': [
     {
@@ -3066,18 +3116,21 @@ levels.hoc2015_blockly_7 = utils.extend(levels.js_hoc2015_event_two_items,  {
 
 levels.hoc2015_blockly_8 = utils.extend(levels.js_hoc2015_event_four_items,  {
   editCode: false,
+  enableShowCode: true,
+  msgStringOverrides: {
+    moveSprite: 'goSprite'
+  },
   startBlocks: whenUpDownLeftRight,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
-    moveNorthRequiredBlock(),
-    moveSouthRequiredBlock(),
-    moveEastRequiredBlock(),
-    moveWestRequiredBlock(),
+    // Note: not listing move blocks since the error messages are already
+    // sufficient and we've renamed these blocks to goUp/goDown/goLeft/goRight
   ],
 });
 
 levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   editCode: false,
+  enableShowCode: true,
   msgStringOverrides: {
     whenTouchGoal: 'whenGetCharacterRebelPilot'
   },
@@ -3124,6 +3177,7 @@ levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
 
 levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: '',
   toolbox:
     tb('<block type="studio_playSound"></block> \
@@ -3139,6 +3193,7 @@ levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
 
 levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
@@ -3192,6 +3247,7 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
 
 levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
@@ -3245,6 +3301,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
 
 levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
@@ -3313,6 +3370,7 @@ levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  
 
 levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
@@ -3379,6 +3437,10 @@ levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
 
 levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
   editCode: false,
+  enableShowCode: true,
+  msgStringOverrides: {
+    moveSprite: 'goSprite'
+  },
   markdownInstructions: null,
   markdownInstructionsWithClassicMargins: false,
   startBlocks:
