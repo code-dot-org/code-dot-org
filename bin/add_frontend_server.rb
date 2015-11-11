@@ -12,6 +12,8 @@ require 'net/scp'
 require 'io/console'
 require 'json'
 require 'set'
+require 'thread'
+require 'timeout'
 
 # A map from a supported environment to the corresponding Chef role to use for
 # that environment.
@@ -24,6 +26,25 @@ ROLE_MAP = {
 # couple minutes.
 MAX_WAIT_TIME = 600
 
+# Wait another 30 minutes for provisioning the instance
+MAX_PROVISIONING_TIME = MAX_WAIT_TIME + (60 * 30)
+
+# Define a mutext to keep output blocks from different threads from getting too jumped.
+OUTPUT_MUTEX = Mutex.new
+
+class InstanceProvisioningInfo
+  attr_accessor :name, :zone, :result, :public_dns, :private_dns
+
+  def initialize(zone, name)
+    @zone = zone
+    @name = name
+    @result = ''
+    @public_dns = ''
+    @private_dns = ''
+  end
+end
+
+>>>>>>> Stashed changes
 # Executes an arbitrary command on an ssh channel, prints the output to console,
 # bails out if the command fails
 # ssh: ssh channel from Net::SSH start
@@ -128,7 +149,183 @@ def generate_instance_zone_and_name(ec2client, ssh_username, frontend_name = nil
   raise "Unable to find unique instance name"
 end
 
+<<<<<<< Updated upstream
 options = {}
+=======
+# Returns a (instance_zone, frontend_name) typle for the given
+# ec2client.  The instance_zone is the one with least capacity amongst frontend instances,
+# and the frontend_name is one that is (probably) not currently already a known name to Chef,
+# except in infrequent race conditions.
+
+# param {string} ssh_username: The ssh username to use for connecting to the gateway.
+# param {frontend_name}: The base frontend name, or nil to use an automatically generated name.
+# (If the base name is not unique, a unique suffix will be added to it to provide uniqueness)
+def generate_instance_zone_and_name(ec2client, ssh_username, frontend_name = nil)
+  instance_distribution = determine_frontend_instance_distribution
+  determined_instance_zone, instance_count = instance_distribution.min_by{|_, v| v}
+  return determined_instance_zone, determine_unique_name_for_instance_zone(ssh_username, frontend_name,
+                                                                           determined_instance_zone, instance_count)
+end
+
+# Generate and provision a new instance. This will call AWS, create the instance, name it, update the chef configuration
+# files, and bootstrap the new frontend. It will do everything up to, but not including running sudo chef-client
+# on the production host.
+
+# param {string} environment Which chef environment to update
+# param {InstanceProvisioningInfo} instance_provisioning_info Contains the name and zone to update
+# param {string} role
+# param {string} instance_type
+def generate_instance(environment, instance_provisioning_info, role, instance_type)
+  print "Generating instance named #{instance_provisioning_info.name} in zone #{instance_provisioning_info.zone}\n"
+
+  run_instance_response = @ec2client.run_instances ({
+                                                      dry_run: @options['dry_run'] || false,
+                                                      key_name: 'server_access_key',
+                                                      min_count: 1,
+                                                      max_count: 1,
+                                                      image_id: 'ami-d05e75b8',  #Image ID for ubuntu instance we use
+                                                      instance_type: instance_type,
+                                                      monitoring: {
+                                                          enabled: true
+                                                      },
+                                                      # Prevent api termination, except for adhoc instances.
+                                                      disable_api_termination: (environment != 'adhoc'),
+                                                      placement: {
+                                                          availability_zone: instance_provisioning_info.zone
+                                                      },
+                                                      block_device_mappings: [
+                                                          {
+                                                              device_name: '/dev/sda1',
+                                                              ebs: {
+                                                                  volume_size: 128,
+                                                                  delete_on_termination: true,
+                                                                  volume_type: 'gp2',
+                                                              },
+                                                          },
+                                                      ],
+                                                      security_groups: ['pegasus'],
+                                                  })
+
+  instance_id = run_instance_response.instances[0].instance_id
+
+  print "Looking for instance id #{instance_id}\n"
+
+  started_at = Time.now
+  @ec2client.wait_until(:instance_running, instance_ids: [instance_id]) do |waiting|
+    waiting.max_attempts = nil
+
+    waiting.before_wait do |attempts, response|
+      if Time.now - started_at > MAX_WAIT_TIME
+        puts "Instance #{instance_id} still not created. Giving up - check the EC2 console and see if there's an error."
+        exit(1)
+      end
+    end
+  end
+
+  print "Instance #{instance_id} is now running, waiting for status checks to complete\n"
+
+  started_at = Time.now
+
+  @ec2client.wait_until(:instance_status_ok, instance_ids: [instance_id]) do |waiting|
+    waiting.max_attempts = nil
+
+    waiting.before_wait do |attempts, response|
+      if Time.now - started_at > MAX_WAIT_TIME
+        print "Instance #{instance_id} was created but has not passed status checks. Check EC2 console.\n"
+        exit(1)
+      end
+    end
+  end
+
+  print "Instance #{instance_id} is healthy - adding to list of frontends for environment #{environment}\n"
+
+  #Tag the instance with a name.
+  @ec2client.create_tags({
+                            resources: [instance_id],
+                            tags: [
+                                {
+                                    key: 'Name',
+                                    value: instance_provisioning_info.name,
+                                },
+                            ],
+                        })
+
+  instance_info = @ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0]
+  private_dns_name = instance_info.private_dns_name
+  public_dns_name = instance_info.public_dns_name
+  instance_provisioning_info.private_dns = private_dns_name
+  instance_provisioning_info.public_dns = public_dns_name
+
+
+  OUTPUT_MUTEX.synchronize {
+    print "\nCreated instance #{instance_id} with name #{instance_provisioning_info.name}\n"
+    print "Private dns name: #{private_dns_name}\n\n"
+  }
+
+  cmd = "ssh gateway.code.org -t \"/bin/sh -c 'knife bootstrap #{private_dns_name} -x ubuntu --sudo -E #{environment} -N #{instance_provisioning_info.name} -r role[#{role}]'\""
+  print "Bootstrapping #{environment} frontend, please be patient. This takes ~15 minutes.\n"
+  print cmd + "\n"
+  bootstrap_result = `#{cmd}`
+
+  if $?.success?
+    print "Precompiling dashboard assets and upgrading.\n"
+    precompile_cmd = "cd #{environment}/dashboard; bundle exec rake assets:precompile; sudo service dashboard upgrade"
+    ssh_cmd = "ssh gateway.code.org -t \"ssh #{private_dns_name} -t '#{precompile_cmd}'\""
+    print ssh_cmd + "\n"
+    precompile_result = `#{ssh_cmd}`
+    if $?.success?
+      OUTPUT_MUTEX.synchronize {
+        print "\n--------------------------------------------------------\n"
+        print "Instance #{instance_provisioning_info.name} is now provisioned"
+        print "Dashboard listening at: http://#{public_dns_name}:8080\n"
+        print "Pegasus listening at:   http://#{public_dns_name}:8081\n"
+        print "To ssh to server:       ssh gateway.code.org -t ssh #{private_dns_name}\n"
+      }
+    else
+      print "Error precompiling assets\n"
+      print precompile_result + "\n"
+    end
+  else
+    print "Error bootstrapping server\n"
+    print bootstrap_result + "\n"
+  end
+end
+
+def add_servers_to_chef_config(instances_to_add, environment)
+  file_suffix = rand(100000000)
+
+  Net::SSH.start('gateway.code.org', @username) do |ssh|
+    ssh.exec!("knife environment show #{environment} -F json > /tmp/old_knife_config#{file_suffix}")
+  end
+
+  Net::SCP.download!('gateway.code.org', @username, "/tmp/old_knife_config#{file_suffix}",
+                     "/tmp/knife_config#{file_suffix}")
+
+  configuration_json = JSON.parse(File.read("/tmp/knife_config#{file_suffix}"))
+  configuration_json['override_attributes']['cdo-secrets']['app_servers'] ||= {}
+
+  instances_to_add.each do |instance_provisioning_info|
+    configuration_json['override_attributes']['cdo-secrets']['app_servers'][instance_provisioning_info.name] =
+        instance_provisioning_info.private_dns_name
+  end
+
+  File.open('/tmp/new_knife_config.json', 'w') do |f|
+    f.write(JSON.dump(configuration_json))
+  end
+
+  Net::SCP.upload!('gateway.code.org', @username, '/tmp/new_knife_config.json', "/tmp/new_knife_config#{file_suffix}.json")
+  print "New configuration file uploaded, now loading it.\n"
+
+  Net::SSH.start('gateway.code.org', @username) do |ssh|
+    execute_ssh_on_channel(ssh,
+                           "knife environment from file /tmp/new_knife_config#{file_suffix}.json",
+                           "Unable to update environment #{environment}")
+    ssh.exec!("rm /tmp/*#{file_suffix}*")
+  end
+end
+
+@options = {}
+>>>>>>> Stashed changes
 
 OptionParser.new do |opts|
   opts.on('-e', '--environment ENVIRONMENT', 'Environment to add frontend to') do |env|
@@ -223,10 +420,32 @@ started_at = Time.now
 ec2client.wait_until(:instance_status_ok, instance_ids: [instance_id]) do |waiting|
   waiting.max_attempts = nil
 
+<<<<<<< Updated upstream
   waiting.before_wait do |attempts, response|
     if Time.now - started_at > MAX_WAIT_TIME
       puts "Instance #{instance_id} was created but has not passed status checks. Check EC2 console."
       exit(1)
+=======
+instance_creation_threads = []
+
+instances_to_create.each do |instance_to_create|
+  instance_creation_threads << Thread.new do
+    begin
+      Timeout::timeout(MAX_PROVISIONING_TIME) {
+        generate_instance(environment, instance_to_create, role, instance_type)
+        instance_to_create.result = 'Succeeded'
+      }
+    rescue Aws::EC2::Errors::DryRunOperation
+      print "Instance creation of #{instance_to_create.name} would have succeeded but dry-run was set to true\n"
+      instance_to_create.result = 'Dry-run succeeded'
+    rescue TimeoutError
+      puts "Instance creation of #{instance_to_create.name} failed - took too long"
+      instance_to_create.result = 'Failed: Timed out'
+    rescue Exception => e
+      print "Some other exception happened when creating #{instance_to_create.name}\n"
+      print e.inspect + "\n"
+      instance_to_create.result = "Failed: #{e}"
+>>>>>>> Stashed changes
     end
   end
 end
@@ -281,6 +500,7 @@ Net::SSH.start('gateway.code.org', username) do |ssh|
   ssh.exec!("rm /tmp/*#{file_suffix}*")
 end
 
+<<<<<<< Updated upstream
 cmd = "ssh gateway.code.org -t \"/bin/sh -c 'knife bootstrap #{private_dns_name} -x ubuntu --sudo -E #{environment} -N #{instance_name} -r role[#{role}]'\""
 puts "Bootstrapping #{environment} frontend, please be patient. This takes ~15 minutes."
 puts cmd
@@ -306,6 +526,16 @@ if $?.success?
     puts 'Error precompiling assets'
     puts precompile_result
   end
+=======
+#If we've created all instances successfully, and without exceptions, it's safe to update the production daemon.
+if instances_to_create.index {|created_instance| created_instance.result != 'Succeeded'} == nil
+  add_servers_to_chef_config(instances_to_create, environment)
+
+  puts 'All instances were created successfully'
+  puts 'Updating production-daemon chef config with new node.'
+  `ssh gateway.code.org -t "ssh production-daemon -t sudo chef-client"`
+  puts 'Done'
+>>>>>>> Stashed changes
 else
   puts 'Error bootstrapping server'
   puts bootstrap_result
