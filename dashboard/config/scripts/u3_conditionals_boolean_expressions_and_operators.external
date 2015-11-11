@@ -15,12 +15,12 @@ The statements on which this decision-making process is based are called **boole
 
 |Boolean Comparison | Example |  Meaning |
 |:---:|:---:|:---:|
-| <img src="https://images.code.org/d39929abc7f1b9bd571813d36c654d12-image-1446222790758.32.39 AM.png" style="width: 100px"> | `1 < 9` | Is 1 less than 9? | 
-| <img src="https://images.code.org/d39929abc7f1b9bd571813d36c654d12-image-1446222790758.32.39 AM.png" style="width: 100px">| `1 <= 9` | Is 1 less than or equal to 9? |
-| <img src="https://images.code.org/8912357ff93a7cba05906124e82fbe01-image-1446222788661.32.21 AM.png" style="width: 100px"> | `1 > 9` | Is 1 greater than 9 ? |  
-| <img src="https://images.code.org/8912357ff93a7cba05906124e82fbe01-image-1446222788661.32.21 AM.png" style="width: 100px"> | `1 >= 9` | Is 1 greater than or equal to 9?| 
-| <img src="https://images.code.org/d86b5c46d5e18a8427e3990cf97f0cf3-image-1446222788659.32.05 AM.png" style="width: 100px">| `1 == 9` | Is 1 equal to 9?| 
-| <img src="https://images.code.org/c528e55fe32eae229faa2a4bf3287d67-image-1446222788661.32.13 AM.png" style="width: 100px"> | `1 != 9` | Is 1 not equal to 9? |
+| <img src="https://images.code.org/1a0798d75d4242715e7608d825f95101-image-1447271431312.png" style="width: 100px"> | `1 < 9` | Is 1 less than 9? | 
+| <img src="https://images.code.org/e45d99a63c7c1506446d5125b2154c8f-image-1447271204229.PNG" style="width: 100px">| `1 <= 9` | Is 1 less than or equal to 9? |
+| <img src="https://images.code.org/5ff460ac121f0ac51b569e96a4404c57-image-1447271431310.png" style="width: 100px"> | `1 > 9` | Is 1 greater than 9 ? |  
+| <img src="https://images.code.org/6bd8cabe859bcdcdc618ebd77848ec24-image-1447271204231.PNG" style="width: 100px"> | `1 >= 9` | Is 1 greater than or equal to 9?| 
+| <img src="https://images.code.org/a4daa9efccea2278e165592efe343c1a-image-1447271431308.png" style="width: 100px">| `1 == 9` | Is 1 equal to 9?| 
+| <img src="https://images.code.org/626613131395d1fa43f04547012ec173-image-1447271431305.png" style="width: 100px"> | `1 != 9` | Is 1 not equal to 9? |
 <br>
 **Note:** If you saw the statement 3 < 2 in math class, you'd think something was terribly wrong, **BUT THIS IS NOT MATH CLASS!** 
 
