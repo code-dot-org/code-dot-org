@@ -2681,6 +2681,7 @@ Studio.execute = function() {
     Studio.JSInterpreter = new JSInterpreter({
       code: codeWhenRun,
       blocks: dropletConfig.blocks,
+      blockFilter: level.executePaletteApisOnly && level.codeFunctions,
       enableEvents: true,
       studioApp: studioApp,
       shouldRunAtMaxSpeed: function() { return Studio.slowJsExecutionFactor === 1; },

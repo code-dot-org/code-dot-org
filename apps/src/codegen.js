@@ -9,7 +9,7 @@ exports.evalWith = function(code, options) {
   if (options.StudioApp && options.StudioApp.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      exports.initJSInterpreter(interpreter, null, scope, options);
+      exports.initJSInterpreter(interpreter, null, null, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -276,10 +276,11 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
   }
 }
 
-function populateGlobalFunctions(interpreter, blocks, scope) {
+function populateGlobalFunctions(interpreter, blocks, blockFilter, scope) {
   for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
-    if (block.parent) {
+    if (block.parent &&
+        (!blockFilter || typeof blockFilter[block.func] !== 'undefined')) {
       var funcScope = scope;
       var funcName = block.func;
       var funcComponents = funcName.split('.');
@@ -340,11 +341,13 @@ function populateJSFunctions(interpreter) {
  * interpreter (required): JS interpreter instance.
  * blocks (optional): blocks in dropletConfig.blocks format. If a block has
  *  a parent property, we will populate that function into the specified scope.
+ * blockFilter (optional): an object with block-name keys that should be used
+ *  to filter which blocks are populated.
  * scope (required): interpreter's global scope.
  * options (optional): objects containing functions to placed in a new scope
  *  created beneath the supplied scope.
  */
-exports.initJSInterpreter = function (interpreter, blocks, scope, options) {
+exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, options) {
   for (var optsObj in options) {
     // The options object contains objects that will be referenced
     // by the code we plan to execute. Since these objects exist in the native
@@ -356,9 +359,17 @@ exports.initJSInterpreter = function (interpreter, blocks, scope, options) {
     interpreter.setProperty(scope, optsObj.toString(), obj);
     populateFunctionsIntoScope(interpreter, obj, options[optsObj]);
   }
-  populateGlobalFunctions(interpreter, dropletUtils.dropletGlobalConfigBlocks, scope);
+  populateGlobalFunctions(
+      interpreter,
+      dropletUtils.dropletGlobalConfigBlocks,
+      blockFilter,
+      scope);
   if (blocks) {
-    populateGlobalFunctions(interpreter, blocks, scope);
+    populateGlobalFunctions(
+        interpreter,
+        blocks,
+        blockFilter,
+        scope);
   }
   populateJSFunctions(interpreter);
 };

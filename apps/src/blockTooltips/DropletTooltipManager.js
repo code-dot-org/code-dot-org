@@ -2,6 +2,7 @@ var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
 var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
 var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteParameterTooltipManager');
+var dropletUtils = require('../dropletUtils');
 
 /**
  * @fileoverview Manages a store of known blocks and tooltips
@@ -11,7 +12,7 @@ var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteP
  * Store for finding tooltips for blocks
  * @constructor
  */
-function DropletTooltipManager(appMsg, dropletConfig) {
+function DropletTooltipManager(appMsg, dropletConfig, blockFilter) {
   /**
    * App-specific strings (to override common msg)
    * @type {Object.<String, Function>}
@@ -23,6 +24,12 @@ function DropletTooltipManager(appMsg, dropletConfig) {
    * Droplet config for this app
    */
   this.dropletConfig = dropletConfig || {};
+
+  /**
+   * Block filter
+   * @type {Object.<String>} optional object with keys to filter down the total set of blocks
+   */
+  this.blockFilter = blockFilter;
 
   /**
    * Map of block types to tooltip objects
@@ -67,14 +74,18 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
 };
 
 /**
- * @param {DropletBlock[]} dropletBlocks list of Droplet block definitions for
- *    which to register documentation
+ * Registers blocks based on the dropletBlocks and blockFilter passed to the constructor
  */
-DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks) {
-  dropletBlocks.forEach(function (dropletBlockDefinition) {
-    this.blockTypeToTooltip[dropletBlockDefinition.func] =
-      new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
-  }, this);
+DropletTooltipManager.prototype.registerBlocks = function () {
+  dropletUtils.getAllAvailableDropletBlocks(this.dropletConfig).forEach(
+    function (dropletBlockDefinition) {
+      if (!dropletBlockDefinition.noAutocomplete &&
+          (!this.blockFilter || typeof this.blockFilter[dropletBlockDefinition.func] !== 'undefined')) {
+        this.blockTypeToTooltip[dropletBlockDefinition.func] =
+          new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
+      }
+    },
+    this);
 };
 
 DropletTooltipManager.prototype.hasDocFor = function (functionName) {
