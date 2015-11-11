@@ -1201,14 +1201,16 @@ Applab.reset = function(first) {
  */
 Applab.renderVisualizationOverlay = function() {
   var divApplab = document.getElementById('divApplab');
+  var designModeViz = document.getElementById('designModeViz');
   var visualizationOverlay = document.getElementById('visualizationOverlay');
-  if (!divApplab || !visualizationOverlay) {
+  if (!divApplab || !designModeViz || !visualizationOverlay) {
     return;
   }
 
   // Change cursor rule for divApplab - appropriate here because sometimes
   // the overlay is sort of a 'virtual' cursor for us.
   divApplab.style.cursor = Applab.isRunning() ? '' : 'none';
+  designModeViz.style.cursor = Applab.isRunning() ? '' : 'none';
 
   // Calculate current visualization scale to pass to the overlay component.
   var unscaledWidth = visualizationOverlay.offsetWidth;
