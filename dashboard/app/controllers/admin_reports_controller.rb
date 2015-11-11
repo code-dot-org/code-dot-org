@@ -160,7 +160,12 @@ class AdminReportsController < ApplicationController
     authorize! :read, :reports
 
     @recent_activities = Activity.all.order('id desc').includes([:user, :level_source, {level: :game}]).limit(50)
-    render 'usage', formats: [:html]
+    render 'reports/usage', formats: [:html]
+  end
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_script
+    @script = Script.get_from_cache(params[:script_id]) if params[:script_id]
   end
 
 end
