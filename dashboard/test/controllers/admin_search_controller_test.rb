@@ -17,6 +17,10 @@ class AdminSearchControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :lookup_section
   generate_admin_only_tests_for :search_for_teachers
 
+  #
+  # lookup_section tests
+  #
+
   test "should lookup_section" do
     post :lookup_section, {:section_code => @teacher_section.code}
     assert_select '#section_owner', 'Owner: ' + @teacher.email
