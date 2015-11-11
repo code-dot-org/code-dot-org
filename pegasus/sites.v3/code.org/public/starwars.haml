@@ -26,36 +26,31 @@ social:
 %div.starwars-container
   %div.img-container
     %img.starwars-img{src:"/images/sw_landingpage.jpg"}
-  %h1.starwars-heading Building a Galaxy with Code
+  %h1.starwars-heading= I18n.t(:starwars_subtitle)
 
   .col-25.starwars-tutorial{style: "right: 20px;"}
     %div.tutorial-box
-      %h2.sw-h2 JavaScript
+      %h2.sw-h2= I18n.t(:starwars_javascript_title)
       %div.sw-tutorial-info
-        %p.sw-tutorial-description
-          Use drag-drop blocks and JavaScript.
-        %p.sw-tutorial-specs
-          English only | Modern browsers | Ages 11+
+        %p.sw-tutorial-description= I18n.t(:starwars_javascript_description)
+        %p.sw-tutorial-specs= I18n.t(:starwars_javascript_specs)
       %a{:href => CDO.studio_url('/s/starwars/reset'), :target=>'_self'}
-        %button.sw-try-button Try now
+        %button.sw-try-button= I18n.t(:starwars_javascript_start_button)
 
   .col-25.starwars-tutorial{style: "right: 270px;"}
     %div.tutorial-box
-      %h2.sw-h2 Blocks
+      %h2.sw-h2= I18n.t(:starwars_blocks_title)
       %div.sw-tutorial-info
-        %p.sw-tutorial-description
-          Use drag-drop blocks.
-        %p.sw-tutorial-specs
-          Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+        %p.sw-tutorial-description= I18n.t(:starwars_blocks_description)
+        %p.sw-tutorial-specs= I18n.t(:starwars_blocks_specs)
       %a{:href => '#'}
-        %button.disabled.sw-disabled{disabled:"disabled"} Coming soon
+        %button.disabled.sw-disabled{disabled:"disabled"}= I18n.t(:starwars_blocks_start_button)
 
 %div{style: "clear:both"}
 
 %div.starwars-videos{style: "clear: both;"}
-  %h2 Before you get started, watch one of these inspirational videos
+  %h2= I18n.t(:starwars_watch_videos)
   =view :inspirational_videos
 
-Speak another language?
-%a{href: "/translate"}
-  Help us translate
+%span= I18n.t(:starwars_speak_languages)
+%a{href: "/translate"}= I18n.t(:starwars_help_translate)
