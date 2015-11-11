@@ -8158,7 +8158,7 @@ module.exports = React.createClass({displayName: "exports",
         var element = library.createElement(elementType, 0, 0, true);
         element.style.position = 'static';
 
-        var div = document.getElementById('divApplab');
+        var div = document.getElementById('designModeViz');
         var xScale = div.getBoundingClientRect().width / div.offsetWidth;
         var yScale = div.getBoundingClientRect().height / div.offsetHeight;
 
@@ -9448,6 +9448,21 @@ module.exports = {
     element.appendChild(option2);
 
     return element;
+  },
+
+  onDeserialize: function (element) {
+    // Don't interfere with focus or clicks in design mode, where the dropdown is
+    // already disabled by jQuery.draggable({cancel: false}).
+    if ($('#divApplab').find(element)[0]) {
+      $(element).on('mousedown', function(e) {
+        if (!Applab.isRunning()) {
+          // Disable dropdown menu unless running
+          e.preventDefault();
+          this.blur();
+          window.focus();
+        }
+      });
+    }
   }
 };
 
