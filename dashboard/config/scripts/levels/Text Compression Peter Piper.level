@@ -10,7 +10,8 @@
       "Peter Piper picked a peck of pickled peppers.\nA peck of pickled peppers Peter Piper picked.\nIf Peter Piper picked a peck of pickled peppers,\nWhere's the peck of pickled peppers that Peter Piper picked?"
     ],
     "href": "text-compression/text-compression.html",
-    "video_key": "csp_textcompression"
+    "video_key": "csp_textcompression",
+    "skip_dialog": true
   }
 }]]></config>
 </TextCompression>

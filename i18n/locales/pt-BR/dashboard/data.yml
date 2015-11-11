@@ -416,6 +416,8 @@ pt-BR:
         C4_variables_artist: 'Variáveis - Artista'
         C4_variables_playlab: 'Variáveis - Laboratório'
         C4_for_loops: Laços for
+        C4_for_loops_bee: Laços for
+        C4_for_loops_no_bee: Laços for
         C4_math_artist: Programação do Artista com matemática
         C4_function_edit: Editando funções
         C4_function_create: Criando funções
@@ -437,6 +439,7 @@ pt-BR:
         infinity_playlab_intro: 'Laboratório - Introdução'
         infinity_playlab_events: 'Laboratório - Eventos'
         infinity_playlab_repeat_forever: 'Laboratório - Repetir infinitamente'
+        csp_applab_functions: Introdução às Funções
         csp_concept_rgb: Um pouco sobre pixels
         csp_pixelation_color_1: 'Widget de pixelização de cores - Parte 1'
         csp_pixelation_color_2: 'Widget de pixelização de cores - Parte 2'
@@ -444,6 +447,7 @@ pt-BR:
         csp_pixelation_bw: Widget de pixelização em preto e branco
         csp_U1L14_tipstricks: 'Unidade 1 - Lição 14 - Dicas e truques de professores'
         csp_textcompression: Widget de compressão de texto
+        csp_textcompression_new: Widget de compressão de texto
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'
@@ -464,6 +468,9 @@ pt-BR:
         alg_15_biggame_update_player: 'Ciência da computação em álgebra - o grande jogo - atualizar jogador'
         alg_16_biggame_collision_detection: 'Ciência da computação em álgebra - o grande jogo - detecção de colisão'
         alg_17_sambat_compound_booleans: 'Ciência da computação em álgebra - booleanos compostos'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: 'Arraste um bloco "avance" e o encaixe embaixo do outro bloco'

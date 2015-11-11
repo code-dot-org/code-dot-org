@@ -1,0 +1,55 @@
+name 'ECSPD U4 D 10-13 Intro'
+
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+## Day 10-13 Scratch -- Broadcasting
+
+First, let's explore the seventh lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 158-161.
+
+[Access a Digital Copy of the lesson>>](http://code.org/ecs#page=158)
+
+#### Key Concepts
+
+- Students will use all of the blocks they have learned so far to create a story of their choice.
+- They will start with a storyboard and then create an algorithm for their program.
+
+#### Common Difficulties
+
+This lesson is building off of the previous lesson where they learned about broadcasting.  It may still be unclear how to use the blocks, so you may need to review through role play or do something to help students grasp the concept.
+<br><br>
+For this lesson you need – [catstory.sb](http://www.exploringcs.org/curriculum)
+
+#### All Resources for This Lesson
+
+**Teacher Supports:**
+
+- [U4 Day 10-13 Lesson](http://code.org/ecs#page=158)
+- [U4 Day 10-13 Resource Folder](https://drive.google.com/a/nicolescourse.com/folderview?id=0B2UNlnU_5Vg4fnRMek1hMlVwT2Y5NThvVEc3TWVWYlk2Mml0d0VJeGhxUld0cmF4cF8tamc&usp=drive_web&tid=0B2UNlnU_5Vg4fmFpUGlWakFZYW95Rzh3aGd6akJiWS0zUS1XR1dIcXVFM3hPSUNyNC1XRzQ)
+- [U4 Day 10-13 General Q and A Forum](http://forum.code.org/t/u4-day-10-13-general-q-a/1882)
+- [U4 Day 10-13 PD Discussion Topic Forum](http://forum.code.org/t/u4-day-10-13-pd-discussion-topic/1895)
+- [U4 Day 10-13 Lesson Resources Forum](http://forum.code.org/t/u4-day-10-13-lesson-resources/1850)
+- [U4 Day 10-13 Assessment Forum](http://forum.code.org/t/u4-day-10-13-assessment/1865)
+
+**Supplies:**
+
+- [cat story.sb](http://www.exploringcs.org/curriculum)
+- [Story Project Sample Rubric](http://code.org/ecs#page=160)
+- [Peer Grading](http://code.org/ecsf#page=161)
+- [http://scratch.mit.edu](http://scratch.mit.edu/)
+
+**Tutorials:**
+
+- Broadcasting - [http://learnscratch.org/sc2-u3/sc2-l14](http://learnscratch.org/sc2-u3/sc2-l14)
+
+#### PD Discussion Forum
+
+Collaboration is a key skill that students should be working on as computer scientists, and one way we can support collaboration in the classroom is through group presentations.  What kind of support do you give students to help them prepare for their presentation? Guiding questions, sample outline for presentation?
+
+[<button>Discuss in the forum >></button>](http://forum.code.org/t/u4-day-10-13-pd-discussion-topic/1895)
+<br><br>
+After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

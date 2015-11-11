@@ -1,6 +1,7 @@
 $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
 
 @import 'font';
+@import 'color';
 
 #svgStudio {
   overflow: hidden;
@@ -43,50 +44,6 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
   margin-right: 3px;
 }
 
-button.arrow {
-  border: 1px solid #FFA000;
-  background-color: #FFA000;
-  color: #fff;
-  margin-left: 5px;
-  margin-right: 0px;
-  display: none;
-}
-button.arrow>img {
-  opacity: 1;
-  vertical-align: text-bottom;
-}
-button.arrow:focus {
-  outline-style: none;
-}
-#soft-buttons {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: -5px;
-  &.soft-buttons-none {
-    display: none;
-  }
-}
-.soft-buttons-1 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 51px;
-}
-.soft-buttons-2 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 102px;
-}
-.soft-buttons-3 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 153px;
-}
-.soft-buttons-4 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 204px;
-}
-
 #share-cell {
   display: inline-block;
   vertical-align: top;
@@ -106,15 +63,27 @@ button.arrow:focus {
   stroke-width: 3;
   opacity: 0.9;
 }
-.studio-score {
+.studio-score,
+.studio-victory-text,
+.studio-reset-text,
+.studio-floating-score {
   text-anchor: middle;
-  font-size: xx-large;
   font-family: $gotham-extra-bold;
   fill: white;
-  stroke: black;
-  stroke-width: 2;
+  stroke: $black;
   cursor: default;
 }
+.studio-score,
+.studio-reset-text,
+.studio-floating-score {
+  font-size: x-large;
+  stroke-width: 1;
+}
+.studio-victory-text {
+  font-size: xx-large;
+  stroke-width: 2;
+}
+
 .studio-ts-title {
   text-anchor: middle;
   font-size: xx-large;
@@ -141,5 +110,39 @@ button.arrow:focus {
 .wall-letter {
   line-height: 120%;
   cursor: default;
+}
+
+.instructions-markdown {
+
+  // Optionally give markdown dialog wide left margin so it looks more like a
+  // non-markdown instructions dialog (useful if mixing markdown instructions
+  // with non-markdown instructions in one tutorial).
+  &.classic-margins {
+    padding-top: 0;
+    margin-left: 90px;
+  }
+
+  // Imitates the text style of the first line of instructions text in our
+  // classic dialogues, useful for creating that effect in markdown.
+  .character-text {
+    line-height: 27px;
+    font-size: 24px;
+    color: $purple;
+  }
+
+  details.hoc2015 {
+    & > summary {
+      margin: 1em 0;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    & > p {
+      color: $charcoal;
+      margin-left: 1em;
+    }
+  }
 }
 

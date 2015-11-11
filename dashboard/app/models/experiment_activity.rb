@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: experiment_activities
+#
+#  id              :integer          not null, primary key
+#  activity_id     :integer          not null
+#  feedback_design :string(255)
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
 class ExperimentActivity < ActiveRecord::Base
 
   belongs_to :activity

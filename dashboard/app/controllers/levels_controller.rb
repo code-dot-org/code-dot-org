@@ -8,7 +8,7 @@ class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
   before_filter :authenticate_user!, except: [:show, :embed_blocks, :embed_level]
-  before_filter :can_modify?, except: [:show, :index, :embed_blocks, :embed_level]
+  before_filter :require_levelbuilder_mode, except: [:show, :index, :embed_blocks, :embed_level]
   skip_before_filter :verify_params_before_cancan_loads_model, only: [:create, :update_blocks]
   load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_blocks, :embed_level]
   check_authorization
@@ -18,7 +18,7 @@ class LevelsController < ApplicationController
   # GET /levels
   # GET /levels.json
   def index
-    @levels = Level.order(:game_id)
+    @levels = Level.all
   end
 
   # GET /levels/1
@@ -189,7 +189,7 @@ class LevelsController < ApplicationController
         app: level.game.app,
         readonly: true,
         locale: js_locale,
-        baseUrl: "#{ActionController::Base.asset_host}/blockly/",
+        baseUrl: Blockly.base_url,
         blocks: level.blocks_to_embed(level.properties[block_type])
     }
     render :embed_blocks, layout: false, locals: options
@@ -209,12 +209,6 @@ class LevelsController < ApplicationController
   end
 
   private
-
-  def can_modify?
-    unless Rails.env.levelbuilder? || Rails.env.development?
-      raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
-    end
-  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_level
@@ -244,7 +238,6 @@ class LevelsController < ApplicationController
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
     params[:level][:soft_buttons].delete_if(&:empty?) if params[:level][:soft_buttons].is_a? Array
-
     permitted_params.concat(Level.serialized_properties.values.flatten)
     params[:level].permit(permitted_params)
   end

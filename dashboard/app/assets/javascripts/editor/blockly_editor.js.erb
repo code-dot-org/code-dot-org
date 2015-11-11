@@ -11,6 +11,8 @@
 //= require_self
 //= require jquery.handsontable.full
 
+/* global CodeMirror, inlineAttach */
+
 function codeMirror(name, mode, callback, attachments) {
   // Code mirror parses html using xml mode
   var htmlMode = false;
@@ -28,7 +30,7 @@ function codeMirror(name, mode, callback, attachments) {
     lineWrapping: true
   });
   if (callback) {
-    editor.on('change', callback)
+    editor.on('change', callback);
   }
   if (attachments) {
     inlineAttach.attachToCodeMirror(editor, {

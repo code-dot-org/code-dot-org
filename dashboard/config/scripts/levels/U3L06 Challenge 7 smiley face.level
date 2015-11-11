@@ -8,8 +8,6 @@
     "skin": "applab",
     "code_functions": {
       "moveForward": null,
-      "moveBackward": null,
-      "move": null,
       "moveTo": null,
       "dot": null,
       "turnRight": null,
@@ -21,18 +19,14 @@
       "penDown": null,
       "penWidth": null,
       "penColor": null,
-      "show": null,
-      "hide": null,
-      "speed": null,
-      "functionParams_none": null,
-      "callMyFunction": null
+      "penRGB": null
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "To make this smiley face you'll need to look at the documentation for the move() command and then use it with the others you've learned.  You can make reasonable guesses about the colors.",
+    "instructions": "Use turnTo() and moveTo() to help draw a smiley face. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "slider_speed": "0.0",
+    "slider_speed": "0.9",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -47,9 +41,22 @@
     "free_play": "true",
     "app_width": "320",
     "app_height": "480",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L06-challenge7.png",
-    "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false"
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "markdown_instructions": "# Moving Relative to the Screen\r\n\r\nThe turtle commands we've seen so far move the turtle **relative to the turtle's location and direction**. If you want to get the turtle to a specific position on the screen using only `moveForward()` or `turnLeft()`, you need to know the turtle's location beforehand.\r\n\r\nTwo new commands in the toolbox help resolve this issue. `moveTo()` moves the turtle to a location on the screen based on its X and Y coordinates. `turnTo()` turns the turtle in a specific direction. Together these commands can make many drawings easier to complete.\r\n\r\n**Read the documentation: ** Read the documentation for `moveTo()` and `turnTo()`. Pay specific attention to how the coordinate system is arranged in App Lab as it is different from what you might have seen in a math class.\r\n\r\n**Draw the smiley: ** Use these new commands to help you draw the smiley face pictured below.\r\n\r\n![](https://images.code.org/20cab2a0b3a4fdfd53d7a1876963fa10-image-1441990625064.png)",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "Lw+9Kkhyxqfvk9gjoWqa6ov3+8pLzsilAKeVlNRs9T4uPBinCbmKchk2PPdy\n1i8H\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

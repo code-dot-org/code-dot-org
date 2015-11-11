@@ -133,13 +133,13 @@ sv:
         maze_2_7: "Hjälp mig att bannlysa den här dumma grisen genom att använda så få block som möjligt. Försök att använda mer än ett 'upprepa gånger' block."
         maze_2_8: 'När ett block är grått betyder det att du inte kan ta bort det. Lös det här pusslet genom att använda "upprepa" blocket som upprepar 3 gånger. Prova att sätta dessa tre block i det grå "upprepa" blocket: flytta, flytta, sväng.'
         maze_2_9: "Ok, försök nu att använda det nya 'upprepa tills' blocket - det kommer att 'upprepa tills' jag når den irriterande grisen."
-        maze_2_10: 'Ok, en sista gång för att övning - kan du lösa den här med endast 4 block?'
-        maze_2_11: 'Kära person.  Mig zombie. Mig hungrig. Måste... komma... till solros... Kan du få mig dit med bara 5 block?'
+        maze_2_10: 'Okej, öva en gång till - kan du lösa den här med bara 4 block?'
+        maze_2_11: 'Kära människa.  Jag zombie. Jag hungrig. Måste... komma... till solros... Kan du ta mig dit med bara 5 block?'
         maze_2_12: Den här är liknande, men lite annorlunda. Kan du klara det med bara 5 block?
         maze_2_13: 'Använda det nya "om"-blocket för att låta mig avgöra när jag ka svänga. Tips: behöver du bara ett block till, men lär dig hur vi satte upp det så du kan göra det på egen hand nästa gång.'
         maze_2_14: 'Ok, detta är precis som det förra pusslet, men du måste komma ihåg hur du använder "Om"-blocket och "Upprepa"-blocket tillsammans.'
         maze_2_15: 'Jag vill ha solros! Använd ett "Om"-block för att få mig dit med minsta antalet block.'
-        maze_2_16: 'Ok, låt oss göra det igen för övningens skull - detta inte är mycket olikt, men se upp för de köttätande växterna!'
+        maze_2_16: Okej, vi tränar lite till – denna omgång är ganska lik den förra, men se upp för de köttätande växterna!
         maze_2_17: '"Om/annars"-blocket kontrollerar ett villkor, och gör sen en sak ELLER en annan. För att få mig till solrosen försök att använda det här blocket.'
         maze_2_18: 'Mer träning med "Om/annars"-blocket, kan du få det rätt på första försöket?'
         maze_2_19: Kan du lägga till bara 3 block för att hjälpa mig att lösa en svårare labyrint? Om du gör det rätt, kommer jag kunna gå vilken väg som helst oberoende av längden.
@@ -412,6 +412,8 @@ sv:
         C4_variables_artist: 'Variabler - Konstnär'
         C4_variables_playlab: 'Variabler - Play Lab'
         C4_for_loops: "'För' loopar"
+        C4_for_loops_bee: "'För' loopar"
+        C4_for_loops_no_bee: "'För' loopar"
         C4_math_artist: Programmera Konstnären med matematik
         C4_function_edit: Redigera funktioner
         C4_function_create: Skapa funktioner
@@ -433,6 +435,7 @@ sv:
         infinity_playlab_intro: 'Play Lab - introduktion'
         infinity_playlab_events: 'Play Lab - Händelser'
         infinity_playlab_repeat_forever: 'Play Lab -  Upprepa för evigt'
+        csp_applab_functions: Introduktion till funktioner
         csp_concept_rgb: Lite om pixlar
         csp_pixelation_color_1: 'Färg pixelerings widget - Del1'
         csp_pixelation_color_2: 'Färg pixelerings widget - Del2'
@@ -440,6 +443,7 @@ sv:
         csp_pixelation_bw: Svart och vit pixelerings widget
         csp_U1L14_tipstricks: 'Enhet 1 lektion 14 Lärare Tips & Tricks'
         csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'
@@ -460,13 +464,16 @@ sv:
         alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
         alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
         alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
-        drag_blocks: 'Dra ett "flytta" block och fäst det under det andra blocket'
+        drag_blocks: 'Dra ett "gå framåt" block och fäst det under det andra blocket'
         run: 'Klicka på "Kör" för att prova ditt program'
         watch_again: Klicka här för att titta på videon igen
         gray_block_explanation: Block som är grå kan inte tas bort. Kan du lösa pusslet ändå?
-        show_code_explanation: Klicka här för att se koden till programmet du gör
+        show_code_explanation: Klicka här för att se koden till programmet du skriver
         instructions_repeat_explanation: Instruktionerna för varje uppgift upprepas här
         category_explanation: Du har kvar alla block men de har nu ordnats i kategorier
         set_sprite_image: 'Bifoga en "sätt figur till bild" block till "när berättelsen börjar" blocket för att ange figur/actor i  denna berättelse'

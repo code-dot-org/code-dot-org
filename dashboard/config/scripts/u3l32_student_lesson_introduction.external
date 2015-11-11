@@ -1,5 +1,6 @@
 name 'U3L32 Student Lesson Introduction'
 title 'Images are Arrays'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 32 - Images are Arrays

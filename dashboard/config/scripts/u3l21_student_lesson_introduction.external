@@ -1,8 +1,9 @@
 name 'U3L21 Student Lesson Introduction'
 title 'More Variables'
+css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 21 - More Variables
+## Unit 3: Lesson 15 - More Variables
 
 # Background
 

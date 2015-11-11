@@ -144,6 +144,53 @@ div.droplet-palette-group-header-selected.orange {
 .share-code-spacer {
   min-height: 25px; }
 
+button.arrow {
+  border: 1px solid #FFA000;
+  background-color: #FFA000;
+  color: #fff;
+  margin-left: 5px;
+  margin-right: 0px;
+  display: none; }
+
+button.arrow > img {
+  opacity: 1;
+  vertical-align: text-bottom; }
+
+button.arrow:focus {
+  outline-style: none; }
+
+button.arrow:disabled {
+  border: 1px solid #C7C7C7;
+  background-color: #C7C7C7; }
+
+#soft-buttons {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -5px;
+  -webkit-touch-callout: none; }
+  #soft-buttons.soft-buttons-none {
+    display: none; }
+
+.soft-buttons-1 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 51px; }
+
+.soft-buttons-2 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 102px; }
+
+.soft-buttons-3 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 153px; }
+
+.soft-buttons-4 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 204px; }
+
 #codeTextbox {
   position: absolute;
   left: 0px;
@@ -155,8 +202,7 @@ div.droplet-palette-group-header-selected.orange {
   min-height: calc(50% - 16px) !important; }
 
 #codeTextbox.pin_bottom {
-  border: 1px solid #ddd;
-  bottom: 156px; }
+  border: 1px solid #ddd; }
 
 html[dir='rtl'] #codeWorkspace {
   right: 400px;
@@ -178,8 +224,19 @@ html[dir='rtl'] #codeWorkspace {
   border: none;
   border-top: 1px solid #ddd; }
 
-#codeWorkspace.readonly .blocklySvg, #codeWorkspace.readonly .droplet-main-scroller, #codeWorkspace.readonly .ace_scroller {
+#codeWorkspace.readonly .blocklySvg,
+#codeWorkspace.readonly .droplet-main-scroller,
+#codeWorkspace.readonly .ace_scroller, #codeWorkspace.dimmed .blocklySvg,
+#codeWorkspace.dimmed .droplet-main-scroller,
+#codeWorkspace.dimmed .ace_scroller {
   background-color: rgba(0, 0, 0, 0.1); }
+
+.ace-chrome .ace_marker-layer .ace_error {
+  background: #e82f19; }
+
+.ace_marker-layer .ace_error {
+  position: absolute;
+  z-index: 3; }
 
 .ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
   border-radius: 15px 0px 0px 15px;
@@ -589,6 +646,36 @@ input[type="radio"] {
   padding: 5px 1em;
   font-size: large; }
 
+#puzzleRatingButtons hr {
+  border-top: 2px solid #ccc; }
+
+#puzzleRatingButtons p {
+  float: left;
+  font-size: 16px;
+  color: #949ca2;
+  margin-right: 10px; }
+
+#puzzleRatingButtons svg {
+  pointer-events: none; }
+
+#puzzleRatingButtons .puzzle-rating-btn {
+  fill: #949ca2;
+  padding: 0 5px;
+  cursor: pointer;
+  display: inline-block; }
+  #puzzleRatingButtons .puzzle-rating-btn#like:hover {
+    fill: #333333; }
+  #puzzleRatingButtons .puzzle-rating-btn#like.enabled {
+    fill: #FF3014; }
+  #puzzleRatingButtons .puzzle-rating-btn#like.enabled:hover {
+    fill: #7F150A; }
+  #puzzleRatingButtons .puzzle-rating-btn#dislike:hover {
+    fill: #4D4D4D; }
+  #puzzleRatingButtons .puzzle-rating-btn#dislike.enabled {
+    fill: #0094CA; }
+  #puzzleRatingButtons .puzzle-rating-btn#dislike.enabled:hover {
+    fill: #00647F; }
+
 /* Instructions. */
 #bubble {
   color: black;
@@ -609,6 +696,10 @@ input[type="radio"] {
 
 #prompt-cell {
   vertical-align: top; }
+
+#prompt2 {
+  font-size: 12px;
+  color: #5b6770; }
 
 #ani-gif-preview-wrapper {
   display: inline-block;
@@ -693,7 +784,8 @@ input[type="radio"] {
   -ms-user-select: none;
   user-select: none; }
 
-.readonly #headers {
+.readonly #headers,
+.readonly #design-headers {
   background-color: #5b6770; }
 
 #headers {
@@ -965,14 +1057,14 @@ input[type="radio"] {
 .invisible {
   visibility: hidden; }
 
-.hide-source #visualization {
+.hide-instructions #visualization {
   display: inline-block; }
 
-.hide-source #belowVisualization {
+.hide-instructions #belowVisualization {
   display: inline-block;
   vertical-align: top; }
 
-.hide-source #bubble {
+.hide-instructions #bubble {
   display: none; }
 
 .sharing {

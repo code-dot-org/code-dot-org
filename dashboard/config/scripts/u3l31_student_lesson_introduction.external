@@ -1,5 +1,6 @@
 name 'U3L31 Student Lesson Introduction'
 title 'Arrays - Photo Album'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 31 - Arrays-Photo Album

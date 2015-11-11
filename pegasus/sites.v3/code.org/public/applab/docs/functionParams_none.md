@@ -5,10 +5,9 @@ embedded_layout: simple_embedded
 
 [name]
 
-## Define a function: function someFunction()
+## Define a function
 
 [/name]
-
 
 [category]
 
@@ -20,44 +19,13 @@ Category: Functions
 
 [short_description]
 
-Declares a named block of code that performs some computation and optionally returns a value.
+Gives a name to a set of actions you want the computer to perform, and optionally return a value.
 
 [/short_description]
 
-**Note**: A function that does not explicitly return a value returns the JavaScript value undefined.
+When you **define** a function you give a name to a set of actions you want the computer to perform. When you **call** a function you are telling the computer to run (or execute) that set of actions. 
 
-### The difference between *defining* a function and _calling_ it
-
-You should think of a function definition as a way to give a name or label to a group of lines of code that you wish to execute at some point in your program.  The function definition itself doesn't run at all - it's merely a definition of what *should* happen.  The function will not execute until you "call" it from some other place in your program.
-
-### Where should you define functions in your code? -- a note about order
-A function definition can be provided *anywhere* in your code - in some ways the function definition lives independently of the code around it. It actually doesn't matter where you put them. And you can call it from anywhere, either before or after the function definition.  The following three code segments all do the same thing.  The function definition is trivial, but notice how it's called.
-
-<table>
-<tr>
-<td width=33%><pre>
-moveTwice();
-moveTwice();
-function moveTwice(){
-  moveForward();
-  moveForward():
-} </pre></td>
-<td width=33%><pre>
-moveTwice();
-function moveTwice(){
-  moveForward();
-  moveForward():
-}
-moveTwice();</pre></td>
-<td width=33%><pre>
-function moveTwice(){
-  moveForward();
-  moveForward():
-}
-moveTwice();
-moveTwice();</pre></td></tr></table>
-
-
+A function definition can be provided *anywhere* in your code - in some ways the function definition lives independently of the code around it. It actually doesn't matter where you put a function definition. And you can call it from anywhere, either before or after the function definition.  We will follow the convention of always putting function definitions at the bottom of our program, and the code for calling functions at the top of our program.
 
 [/description]
 
@@ -65,89 +33,100 @@ moveTwice();</pre></td></tr></table>
 ____________________________________________________
 [example]
 
-**Turtle Example**
+```
+// Call functions to draw a dotted line of two dashes.
+dashSpace();
+dashSpace();
 
-In this example with turtles we show the main part of the program at the top.  It shows that you can provide the definition of the function, in this case the square() function, anywhere in the code regardless of where you "call it" or use it from.
-
-<pre>
-square();
-turnRight();
-square();
-
-function square(){
-	moveForward();
-	turnLeft();
-	moveForward();
-	turnLeft();
-	moveForward();
-	turnLeft();
-	moveForward();
-	turnLeft();
+function dashSpace(){ // Define a function to draw and dash and a space.
+  penDown();
+  moveForward();
+  penUp();
+  moveForward();
 }
-</pre>
+```
 [/example]
-
+____________________________________________________
 [example]
 
-The following block of code declares and invokes a function named `sayFortune`. The function returns a simple message.
+**Example: Figure Eight** Call functions to draw a figure eight using two squares.
 
+<table>
+<tr>
+<td style="border-style:none; width:90%; padding:0px">
 <pre>
-function sayFortune() {
-    return "Code wins";
-}
+// Call functions to draw a figure eight using two squares.
+square();
+turnLeft();
+turnLeft();
+square();
 
-var fortune = sayFortune();
-console.log(fortune);
+function square(){ // Define a function to draw a square using left turns.
+	moveForward();
+	turnLeft();
+	moveForward();
+	turnLeft();
+	moveForward();
+	turnLeft();
+	moveForward();
+	turnLeft();
+}
 </pre>
+</td>
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/9632aa931889133f245df1a1b85408ab-image-1445612030986.gif'>
+</td>
+</tr>
+</table>
 
 [/example]
-
 ____________________________________________________
-
 [example]
 
-The following block of code declares and invokes a function named `getRandomNumbers`. The function computes five random numbers between zero and one hundred.
+**Example: Flip a coin** Define a function that uses randomNumber(1) to randomly generate a one (heads) or zero (tails) and return the appropriate word.
 
-<pre>
-function getRandomNumbers() {
-    var count = 5; // declare how many random numbers to generate
-    var nums = new Array(count); // create an empty Array to store the random numbers
-    // use a loop to populate the Array with random numbers
-    for (var i = 0; i < count; i++) {
-        nums[i] = Math.round(Math.random()*100);
-    }
+```
+// Call a function to flip a fair coin. Display the returned value on the console.
+console.log(coinFlip());
 
-    return nums;
+function coinFlip() { // Define a function that uses randomNumber(1) to randomly generate a one (heads) or zero (tails) and return the appropriate word.
+  if (randomNumber(1)==1) return "HEADS";
+  else return "TAILS";
 }
-
-var randoms = getRandomNumbers();
-console.log(randoms);
-</pre>
+```
 
 [/example]
-
 ____________________________________________________
-
 [syntax]
 
 ### Syntax
-<pre>
-function functionName() {
-    // function body
+
+```
+function myFunction() {
+    // function body, including optional "return" command.
 }
-</pre>
+```
 
 [/syntax]
+
+[parameters]
+
+### Parameters
+function myFunction() does not take any parameters.
+
+[/parameters]
 
 [returns]
 
 ### Returns
-A function returns the value that follows the first executed return keyword within the function.
+Optional: A function can return a value by using the [return](/applab/docs/return) command.
 
 [/returns]
 
 ### Tips
-- The purpose of a function is to help you organize your code and to avoid writing the same code twice.
+- The purpose of a function is to help you organize your code and to avoid writing the same code twice. You can you define a function once, and then call the function a number of times.
+- A common error is defining a function but forgetting to call the function. A function does not automatically get executed.
+- A function that does not explicitly return a value returns the JavaScript value undefined.
 
 [bug]
 

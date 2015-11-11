@@ -1,3 +1,25 @@
+# == Schema Information
+#
+# Table name: levels
+#
+#  id                       :integer          not null, primary key
+#  game_id                  :integer
+#  name                     :string(255)      not null
+#  created_at               :datetime
+#  updated_at               :datetime
+#  level_num                :string(255)
+#  ideal_level_source_id    :integer
+#  solution_level_source_id :integer
+#  user_id                  :integer
+#  properties               :text(65535)
+#  type                     :string(255)
+#  md5                      :string(255)
+#
+# Indexes
+#
+#  index_levels_on_game_id  (game_id)
+#
+
 class Artist < Blockly
   serialized_attrs %w(
     start_direction
@@ -97,6 +119,22 @@ class Artist < Blockly
       <block id="draw-color" type="draw_colour">
         <value name="COLOUR">
           <block type="colour_random"></block>
+        </value>
+      </block>
+      <block id="draw-color" type="draw_colour">
+        <value name="COLOUR">
+          <block type="colour_rgb">
+            <value name="RED"><block type="math_number"><title name="NUM">255</title></block></value>
+            <value name="GREEN"><block type="math_number"><title name="NUM">255</title></block></value>
+            <value name="BLUE"><block type="math_number"><title name="NUM">255</title></block></value>
+          </block>
+        </value>
+      </block>
+      <block id="alpha" type="alpha">
+        <value name="VALUE">
+          <block type="math_number_dropdown">
+            <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
+          </block>
         </value>
       </block>
     </category>

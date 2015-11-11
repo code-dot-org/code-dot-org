@@ -1,4 +1,4 @@
-/* $ */
+/*jshint scripturl:true*/
 
 // This code might better live in shared eventually. doing that would
 // require adding JSX transpiling to shared, and the ability to output multiple
@@ -23,7 +23,7 @@ window.dashboard.footer = (function () {
       render: function () {
         return <p dangerouslySetInnerHTML={{
             __html: decodeURIComponent(this.props.text)
-        }}/>
+        }}/>;
       }
     });
 
@@ -46,7 +46,9 @@ window.dashboard.footer = (function () {
         menuItems: React.PropTypes.arrayOf(
           React.PropTypes.shape({
             text: React.PropTypes.string.isRequired,
-            link: React.PropTypes.string.isRequired
+            link: React.PropTypes.string.isRequired,
+            copyright: React.PropTypes.bool,
+            newWindow: React.PropTypes.bool
           })
         ).isRequired,
         className: React.PropTypes.string
@@ -90,7 +92,7 @@ window.dashboard.footer = (function () {
           // Create a window during which we can't show again, so that clicking
           // on copyright doesnt immediately hide/reshow
           setTimeout(function () {
-            this.setState({ menuState: MenuState.MINIMIZED })
+            this.setState({ menuState: MenuState.MINIMIZED });
           }.bind(this), 200);
         }.bind(this));
       },
@@ -177,7 +179,7 @@ window.dashboard.footer = (function () {
               }}/>
               <small>
                 {this.renderCopyright()}
-                <a className="more-link" href="#"
+                <a className="more-link" href="javascript:void(0)"
                   onClick={this.clickBaseMenu}>
                   {this.props.baseMoreMenuString + ' '}
                   <i className={caretIcon}/>
@@ -215,8 +217,9 @@ window.dashboard.footer = (function () {
           return (
             <li key={index} style={styles.listItem}>
             <a href={item.link}
-              ref={item.copyright ? "menuCopyright" : undefined}
-              onClick={item.copyright ? this.clickMenuCopyright : undefined}>
+                ref={item.copyright ? "menuCopyright" : undefined}
+                target={item.newWindow ? "_blank" : undefined}
+                onClick={item.copyright ? this.clickMenuCopyright : undefined}>
               {item.text}
             </a>
             </li>

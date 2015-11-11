@@ -10,6 +10,7 @@ nav: pd2_nav
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
+- [I'm attending Counsleor/Administrator PD](#counselor-admin)
 
 <a id="csp"></a>
 ## Computer Science Principles
@@ -32,13 +33,15 @@ Quarter 4: Saturday, March 12, 2016
 Breakfast and lunch will be served.
 
 
-**September 26th Location**
+**December 5th Location**
 
 
 North Point High School
 <br/>
-Room TBD<br/>
+Room 2322<br/>
 2500 Davis Rd<br/> Waldorf, MD 20603
+
+Free parking is available in front of the building, and  in the lot near the track.
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -73,13 +76,10 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)  ###
 
-#### In-person Workshop####
+
 
 Milestone Complete!
 
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 
 
@@ -101,7 +101,9 @@ Breakfast and lunch will be served.
 Davis Middle School<br/> 
 Room M106<br/>
 2495 Davis Road<br/> Waldorf, MD 20603<br/>
-<br/>
+
+Free parking is located in front of the building.
+
 **What to bring to Phase 3 bi-yearly sessions:**
 
 Laptop and Charger
@@ -124,13 +126,9 @@ Water
 Milestone Complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
-#### In-person Workshop####
 
 Milestone Complete!
 
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
@@ -150,9 +148,11 @@ Breakfast and lunch will be served.
 **Location**
 
 North Point High School<br/>
-Room 325<br/>
+Room 2322<br/>
 2500 Davis Road<br/> 
-Waldorf, MD 20603<br/><br/>
+Waldorf, MD 20603
+
+Free parking is available in front of the building, and also in the lot near the track.
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -164,6 +164,57 @@ Snacks
 <br/>
 Water
 
+
+[**Back to the top**](#top)
+
+<a id="counselor-admin"></a>
+
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
+
+
+### Counselors##
+
+**Save the date**
+
+Thursday, November 12, 2015 <br/>
+11:00am - 3:00pm
+
+
+**Location**
+
+Charles County Public Schools Central Office<br/>
+Staff Development Room<br/>
+5980 Radio Station Rd.<br/>
+La Plata MD 20646<br/>
+
+**What to bring**
+
+Snacks
+<br/>
+Water
+
+### Administrators##
+
+**Save the date**
+
+Thursday, November 12, 2015 <br/>
+8:00am - 10:00am
+
+**Location**
+
+Charles County Public Schools Central Office<br/>
+Staff Development Room<br/>
+5980 Radio Station Rd.<br/>
+La Plata MD 20646<br/>
+
+**What to bring**
+
+Snacks
+<br/>
+Water
 
 [**Back to the top**](#top)
 

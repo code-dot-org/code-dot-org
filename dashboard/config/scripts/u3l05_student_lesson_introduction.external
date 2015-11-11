@@ -1,5 +1,6 @@
 name 'U3L05 Student Lesson Introduction'
 title 'Layers of Abstraction and Programming Efficiency'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 05 - Layers of Abstraction and Programming Efficiency

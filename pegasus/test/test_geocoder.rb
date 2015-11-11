@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require_relative '../src/env'
 require_relative '../../lib/cdo/geocoder'
 
-class GeocoderTest < Minitest::Unit::TestCase
+class GeocoderTest < Minitest::Test
   def test_finding_potential_addresses
     return if CDO.rack_env == :development # Geocoder doesn't always work in development, only test on test
 

@@ -245,6 +245,7 @@ en:
       4-5 Artist Patterns 9.5_instruction: crwdns34124:0crwdne34124:0
       4-5 Artist Patterns 9_instruction: crwdns37639:0crwdne37639:0
       4-5 Artist Patterns Free Play_instruction: crwdns34126:0crwdne34126:0
+      4-5 Bee Conditionals - FC Test_instruction: crwdns50292:0crwdne50292:0
       4-5 Bee Conditionals 1 (copy 1)_instruction: crwdns34127:0crwdne34127:0
       4-5 Bee Conditionals 1_instruction: crwdns34128:0crwdne34128:0
       4-5 Bee Conditionals 2 (copy 1)_instruction: crwdns34129:0crwdne34129:0
@@ -335,7 +336,9 @@ en:
       4-5 While Loops 8_instruction: crwdns38652:0crwdne38652:0
       4-5 While Loops Assessment 1_instruction: crwdns38653:0crwdne38653:0
       AlgPD DR Free Play_instruction: crwdns43212:0crwdne43212:0
+      AllTheThings Applab - Turtle move with button_instruction: crwdns50293:0crwdne50293:0
       App Lab test_instruction: crwdns45301:0crwdne45301:0
+      Applab test_instruction: crwdns49692:0crwdne49692:0
       AppLab_test02_instruction: crwdns43312:0crwdne43312:0
       Artist - Nested Loops 1_instruction: crwdns34181:0crwdne34181:0
       Artist - Nested Loops 10_instruction: crwdns34182:0crwdne34182:0
@@ -349,6 +352,7 @@ en:
       Artist - Nested Loops 8_instruction: crwdns34192:0crwdne34192:0
       Artist - Nested Loops 9_instruction: crwdns30575:0crwdne30575:0
       Artist - Nested Loops Assessment 1_instruction: crwdns34193:0crwdne34193:0
+      Auto Open Function Editor_instruction: crwdns49693:0crwdne49693:0
       Big Game Animation 1 (copy 1)_instruction: crwdns34923:0crwdne34923:0
       Big Game Animation 1_instruction: crwdns37642:0crwdne37642:0
       Big Game Animation 2 (copy 1)_instruction: crwdns34925:0crwdne34925:0
@@ -378,7 +382,11 @@ en:
       Big Game Vars 3_instruction: crwdns34956:0crwdne34956:0
       Big Game Vars 4 (copy 1)_instruction: crwdns34957:0crwdne34957:0
       Big Game Vars 4_instruction: crwdns35737:0crwdne35737:0
+      Brad Spooky House Copy_instruction: crwdns50651:0crwdne50651:0
+      Brad Spooky House_instruction: crwdns50652:0crwdne50652:0
       Building a Foundation Assessment_instruction: crwdns34226:0crwdne34226:0
+      Busy Bee 2_instruction: crwdns50653:0crwdne50653:0
+      Busy Bee_instruction: crwdns50654:0crwdne50654:0
       C3-Farmer While Loops 1_instruction: crwdns34228:0crwdne34228:0
       C3-Farmer While Loops 2_instruction: crwdns34229:0crwdne34229:0
       C3-Farmer While Loops 3_instruction: crwdns34230:0crwdne34230:0
@@ -476,6 +484,7 @@ en:
       Course 4 Artist 8a_instruction: crwdns45302:0crwdne45302:0
       Course 4 Artist 9_instruction: crwdns34295:0crwdne34295:0
       Course 4 Artist Binary 1_instruction: crwdns34297:0crwdne34297:0
+      Course 4 Artist Binary 1a_instruction: crwdns50655:0crwdne50655:0
       Course 4 Artist Binary 2_instruction: crwdns34299:0crwdne34299:0
       Course 4 Artist Binary 3_instruction: crwdns34301:0crwdne34301:0
       Course 4 Artist Binary 4_instruction: crwdns34302:0crwdne34302:0
@@ -483,7 +492,10 @@ en:
       Course 4 Artist Binary 6_instruction: crwdns34304:0crwdne34304:0
       Course 4 Artist Binary 7_instruction: crwdns30698:0crwdne30698:0
       Course 4 Artist Binary Free Play 2_instruction: crwdns34306:0crwdne34306:0
+      Course 4 Artist Binary Free Play 2a_instruction: crwdns50656:0crwdne50656:0
+      Course 4 Artist Binary Free Play 2b_instruction: crwdns50657:0crwdne50657:0
       Course 4 Artist Binary Free Play_instruction: crwdns34307:0crwdne34307:0
+      Course 4 Artist Binary pre1_instruction: crwdns50658:0crwdne50658:0
       Course 4 Artist For  Functions 10_instruction: crwdns34308:0crwdne34308:0
       Course 4 Artist For  Functions 11_instruction: crwdns34309:0crwdne34309:0
       Course 4 Artist For Loops 1_instruction: crwdns34310:0crwdne34310:0
@@ -508,8 +520,11 @@ en:
       Course 4 Artist Functions 1_instruction: crwdns34325:0crwdne34325:0
       Course 4 Artist Functions 10_instruction: crwdns34326:0crwdne34326:0
       Course 4 Artist Functions 11_instruction: crwdns34327:0crwdne34327:0
+      Course 4 Artist Functions 12.1_instruction: crwdns49694:0crwdne49694:0
       Course 4 Artist Functions 12_instruction: crwdns30723:0crwdne30723:0
+      Course 4 Artist Functions 13.1_instruction: crwdns49695:0crwdne49695:0
       Course 4 Artist Functions 13_instruction: crwdns34328:0crwdne34328:0
+      Course 4 Artist Functions 14.1_instruction: crwdns49696:0crwdne49696:0
       Course 4 Artist Functions 14_instruction: crwdns34329:0crwdne34329:0
       Course 4 Artist Functions 15_instruction: crwdns34330:0crwdne34330:0
       Course 4 Artist Functions 2_instruction: crwdns34331:0crwdne34331:0
@@ -521,6 +536,9 @@ en:
       Course 4 Artist Functions 7_instruction: crwdns34337:0crwdne34337:0
       Course 4 Artist Functions 8_instruction: crwdns34338:0crwdne34338:0
       Course 4 Artist Functions 9_instruction: crwdns34339:0crwdne34339:0
+      Course 4 Artist Functions challenge_instruction: crwdns49697:0crwdne49697:0
+      Course 4 Artist Functions Inspiration_instruction: crwdns49698:0crwdne49698:0
+      Course 4 Artist Functions inspire_instruction: crwdns48365:0crwdne48365:0
       Course 4 Artist Inspire_instruction: crwdns43224:0crwdne43224:0
       Course 4 Artist Params 1_instruction: crwdns34340:0crwdne34340:0
       Course 4 Artist Params 10_instruction: crwdns34341:0crwdne34341:0
@@ -575,6 +593,7 @@ en:
       Course 4 Bee Params 3 (copy 1)_instruction: crwdns34385:0crwdne34385:0
       Course 4 Bee Params 3_instruction: crwdns34386:0crwdne34386:0
       Course 4 Bee Params 4 (copy 1)_instruction: crwdns34387:0crwdne34387:0
+      Course 4 Bee Params 4 - Two WhenRun_instruction: crwdns50294:0crwdne50294:0
       Course 4 Bee Params 4 backup_instruction: crwdns34388:0crwdne34388:0
       Course 4 Bee Params 4_instruction: crwdns34389:0crwdne34389:0
       Course 4 Bee Params 5_instruction: crwdns34390:0crwdne34390:0
@@ -582,6 +601,10 @@ en:
       Course 4 Bee Params 6_instruction: crwdns34392:0crwdne34392:0
       Course 4 Bee Params 7 (copy 1)_instruction: crwdns34393:0crwdne34393:0
       Course 4 Bee Params 7_instruction: crwdns34394:0crwdne34394:0
+      Course 4 Bee Params 8 Clone 2_instruction: crwdns49699:0crwdne49699:0
+      Course 4 Bee Params 8 clone 3_instruction: crwdns49700:0crwdne49700:0
+      Course 4 Bee Params 8 Clone_instruction: crwdns49701:0crwdne49701:0
+      Course 4 Bee Params 8 new_instruction: crwdns49702:0crwdne49702:0
       Course 4 Bee Params 8_instruction: crwdns34395:0crwdne34395:0
       Course 4 Bee Params Ex_instruction: crwdns45304:0crwdne45304:0
       Course 4 Binary 1_instruction: crwdns34396:0crwdne34396:0
@@ -626,14 +649,29 @@ en:
       Course 4 Play Labs For Loops 2_instruction: crwdns34437:0crwdne34437:0
       Course 4 Play Labs For Loops 3_instruction: crwdns34438:0crwdne34438:0
       Course 4 Play Labs For Loops 4_instruction: crwdns34440:0crwdne34440:0
+      Course 4 Play Labs For Loops 4a_instruction: crwdns48366:0crwdne48366:0
       Course 4 Play Labs For Loops 5_instruction: crwdns34441:0crwdne34441:0
+      Course 4 Play Labs For Loops 5a_instruction: crwdns48367:0crwdne48367:0
       Course 4 Play Labs For Loops 6_instruction: crwdns34442:0crwdne34442:0
+      Course 4 Play Labs For Loops 6a_instruction: crwdns48368:0crwdne48368:0
       Course 4 Play Labs For Loops 7_instruction: crwdns34443:0crwdne34443:0
+      Course 4 Play Labs For Loops 7a_instruction: crwdns48369:0crwdne48369:0
       Course 4 Play Labs For Loops 8_instruction: crwdns34444:0crwdne34444:0
+      Course 4 Play Labs For Loops 8a_instruction: crwdns48370:0crwdne48370:0
+      Course 4 SCV 1_instruction: crwdns50659:0crwdne50659:0
+      Course 4 SCV 2_instruction: crwdns50660:0crwdne50660:0
+      Course 4 SCV 3_instruction: crwdns50661:0crwdne50661:0
+      Course 4 SCV 4_instruction: crwdns50662:0crwdne50662:0
+      Course 4 SCV 5_instruction: crwdns50663:0crwdne50663:0
       Course 4 Variables Assessment_instruction: crwdns43226:0crwdne43226:0
       Course1BeePuzzle12_instruction: crwdns30855:0crwdne30855:0
       Course1MazeAssessment1_instruction: crwdns34446:0crwdne34446:0
       Course1MazeAssessment2_instruction: crwdns34447:0crwdne34447:0
+      CSP Data Unit - Counting Multiple Things_instruction: crwdns49703:0crwdne49703:0
+      CSP Data Unit -Counting Records - Easy Way_instruction: crwdns49704:0crwdne49704:0
+      CSP Data Unit -Counting Records - Hard Way_instruction: crwdns49705:0crwdne49705:0
+      CSP U4 - JSON Object Intro - Bad Way_instruction: crwdns49706:0crwdne49706:0
+      ECSPD Binary Odometer_instruction: crwdns48371:0crwdne48371:0
       Eval Booleans 1_instruction: crwdns35153:0crwdne35153:0
       Eval Booleans 2_instruction: crwdns34454:0crwdne34454:0
       Eval Booleans 3_instruction: crwdns34455:0crwdne34455:0
@@ -693,6 +731,7 @@ en:
       Eval Strings Images 7_instruction: crwdns38338:0crwdne38338:0
       Eval Strings Images 8_instruction: crwdns36009:0crwdne36009:0
       Eval Strings Images Free Play_instruction: crwdns36446:0crwdne36446:0
+      Frequency Analysis_instruction: crwdns49707:0crwdne49707:0
       frozen circle function in circle_instruction: crwdns34503:0crwdne34503:0
       frozen circle function with parameter_instruction: crwdns34504:0crwdne34504:0
       frozen circle function_instruction: crwdns34505:0crwdne34505:0
@@ -713,12 +752,6 @@ en:
       frozen square loop 3x_instruction: crwdns34526:0crwdne34526:0
       frozen square loop_instruction: crwdns34527:0crwdne34527:0
       frozen square snowflake_instruction: crwdns34528:0crwdne34528:0
-      hoc2015_free_instruction: crwdns45306:0crwdne45306:0
-      hoc2015_intro_instruction: crwdns41844:0crwdne41844:0
-      hoc2015_maze_instruction: crwdns45307:0crwdne45307:0
-      hoc2015_random_instruction: crwdns45308:0crwdne45308:0
-      hoc2015_sandbox_instruction: crwdns41845:0crwdne41845:0
-      hoc2015_square_instruction: crwdns45309:0crwdne45309:0
       Infinity_catch_instruction: crwdns35156:0crwdne35156:0
       Infinity_finale_instruction: crwdns34535:0crwdne34535:0
       Infinity_move_collide_instruction: crwdns35157:0crwdne35157:0
@@ -893,6 +926,7 @@ en:
       NetSim_Variant3_instruction: crwdns36453:0crwdne36453:0
       New Artist Project_instruction: crwdns38741:0crwdne38741:0
       NEW Course 4 Artist Functions 1_instruction: crwdns34593:0crwdne34593:0
+      NEW Course 4 Artist Functions 10.1_instruction: crwdns49714:0crwdne49714:0
       NEW Course 4 Artist Functions 10_instruction: crwdns34594:0crwdne34594:0
       NEW Course 4 Artist Functions 11_instruction: crwdns34595:0crwdne34595:0
       NEW Course 4 Artist Functions 12_instruction: crwdns34596:0crwdne34596:0
@@ -957,6 +991,16 @@ en:
       Ninjacat Demo B (copy 1)_instruction: crwdns34647:0crwdne34647:0
       Ninjacat Demo B_instruction: crwdns35750:0crwdne35750:0
       Ninjacat Demo No Animate_instruction: crwdns39002:0crwdne39002:0
+      October15 bat_instruction: crwdns50664:0crwdne50664:0
+      October15 ghost 1_instruction: crwdns50665:0crwdne50665:0
+      October15 JoL 1_instruction: crwdns50666:0crwdne50666:0
+      October15 pumpkin 1_instruction: crwdns50667:0crwdne50667:0
+      October15 stars 1_instruction: crwdns50668:0crwdne50668:0
+      PDAlg 13-16 Sam Extension Puzzle_instruction: crwdns49715:0crwdne49715:0
+      PDAlg 17-20 Luigi Extension Puzzle_instruction: crwdns49716:0crwdne49716:0
+      PDAlg 8-12 ex dr 1_instruction: crwdns49717:0crwdne49717:0
+      PDAlg 8-12 ex dr 2_instruction: crwdns49718:0crwdne49718:0
+      PDAlg 8-12 Rocket Height Puzzle_instruction: crwdns49719:0crwdne49719:0
       PDAlg Big Game History_instruction: crwdns45351:0crwdne45351:0
       PDAlg Big Game Remix_instruction: crwdns45352:0crwdne45352:0
       PDAlg Design Recipe Delete_instruction: crwdns45353:0crwdne45353:0
@@ -994,6 +1038,9 @@ en:
       Play Lab Rocket 4_instruction: crwdns35189:0crwdne35189:0
       Play Lab Rocket 5_instruction: crwdns35190:0crwdne35190:0
       Play Lab Rocket Free Play_instruction: crwdns35191:0crwdne35191:0
+      Ryan - 4-5 Bee Conditionals 2_instruction: crwdns50295:0crwdne50295:0
+      Ryan Test Locked Blocks_instruction: crwdns50669:0crwdne50669:0
+      Ryan's clone of C4S15P10_instruction: crwdns49720:0crwdne49720:0
       Sam the Butterfly 1 (copy 1)_instruction: crwdns34665:0crwdne34665:0
       Sam the Butterfly 1_instruction: crwdns37651:0crwdne37651:0
       Sam the Butterfly 2_instruction: crwdns35192:0crwdne35192:0
@@ -1024,21 +1071,64 @@ en:
       Standalone_Artist_8_instruction: crwdns34699:0crwdne34699:0
       Standalone_Artist_9_instruction: crwdns34700:0crwdne34700:0
       Standalone_Artist_v2_instruction: crwdns35014:0crwdne35014:0
+      template test_instruction: crwdns50670:0crwdne50670:0
       Test Play Lab_instruction: crwdns43227:0crwdne43227:0
+      test_sarah_instruction: crwdns50671:0crwdne50671:0
+      Text Compression 1_instruction: crwdns48389:0crwdne48389:0
+      Total Artist Clone Me_instruction: crwdns50672:0crwdne50672:0
       U1L10 NetSim numbers with decimal_instruction: crwdns41846:0crwdne41846:0
       U1L11 NetSim numbers with Ascii_instruction: crwdns41847:0crwdne41847:0
+      U1L13 Text Compression_instruction: crwdns48390:0crwdne48390:0
       U1L4 NetSim SendAB_instruction: crwdns38964:0crwdne38964:0
       U1L8 NetSim numbers no decimal_instruction: crwdns41622:0crwdne41622:0
       U1L8 NetSim numbers with decimal_instruction: crwdns41848:0crwdne41848:0
+      U2 frequency caesar_instruction: crwdns49721:0crwdne49721:0
+      U2 frequency random sub_instruction: crwdns49722:0crwdne49722:0
+      U2 vigenere cipher_instruction: crwdns49723:0crwdne49723:0
+      U2 Vigenere_instruction: crwdns49724:0crwdne49724:0
+      U2L04 - NetSim Routers with Addresses_instruction: crwdns48391:0crwdne48391:0
       U2L05 - NetSim - Packets and Building TCP_instruction: crwdns42113:0crwdne42113:0
       U2L10 NetSim Automatic DNS_instruction: 'crwdns38742:0[hostname]crwdne38742:0'
       U2L10 NetSim Manual DNS_instruction: crwdns38743:0crwdne38743:0
+      U2L14 frequency random_instruction: crwdns49725:0crwdne49725:0
       U2L2 NetSim Hub Mode_instruction: crwdns38744:0crwdne38744:0
       U2L3 NetSim Hub Mode_instruction: crwdns38745:0crwdne38745:0
       U2L4 NetSim Routers Addresses_instruction: crwdns38746:0crwdne38746:0
       U2L5 NetSim Classroom Internet_instruction: crwdns38747:0crwdne38747:0
       U2L7 NetSim Need for Packets_instruction: crwdns38748:0crwdne38748:0
+      U3 - Design Mode - Console Log_instruction: crwdns50673:0crwdne50673:0
+      U3 - Design Mode - Layers and Delete_instruction: crwdns50674:0crwdne50674:0
+      U3 - Design Mode - Multi Screens 2_instruction: crwdns50296:0crwdne50296:0
+      U3 - Design Mode - Multi Screens_instruction: crwdns50297:0crwdne50297:0
+      U3 - Design Mode - Other Events_instruction: crwdns50298:0crwdne50298:0
+      U3 - Design Mode - WTF Console Log_instruction: crwdns50675:0crwdne50675:0
+      U3 - Design Mode -Recreate Beyond Buttons_instruction: crwdns50299:0crwdne50299:0
+      U3 - Design Mode 1_instruction: crwdns50300:0crwdne50300:0
+      U3 - Variables - Clicker Game_instruction: crwdns50676:0crwdne50676:0
+      U3 - Variables - Debug Scope_instruction: crwdns50677:0crwdne50677:0
+      U3 - Variables - Debugging with Turtle_instruction: crwdns50678:0crwdne50678:0
+      U3 - Variables - Decrement_instruction: crwdns50679:0crwdne50679:0
+      U3 - Variables - Identify Variables_instruction: crwdns50680:0crwdne50680:0
+      U3 - Variables - Increment_instruction: crwdns50681:0crwdne50681:0
+      U3 - Variables - Incrementing Variables_instruction: crwdns50682:0crwdne50682:0
+      U3 - Variables - Read Using Turtle_instruction: crwdns50683:0crwdne50683:0
+      U3 - Variables - Reassigning Variables with Console.log_instruction: crwdns50684:0crwdne50684:0
+      U3 - Variables - Set to Expression with Other Variables and Turtle_instruction: crwdns50685:0crwdne50685:0
+      U3 - Variables - Set to Expression with Other Variables_instruction: crwdns50686:0crwdne50686:0
+      U3 - Variables - Set to Expression with Turtle_instruction: crwdns50687:0crwdne50687:0
+      U3 - Variables - Set to Expression_instruction: crwdns50688:0crwdne50688:0
+      U3- Variables - Assign Random For Turtle Draw_instruction: crwdns50689:0crwdne50689:0
+      U3- Variables - Changing the Value_instruction: crwdns50690:0crwdne50690:0
+      U3- Variables - Create And Assign_instruction: crwdns50691:0crwdne50691:0
+      U3- Variables - Text Mode_instruction: crwdns50692:0crwdne50692:0
+      U3-Design Mode-ID and Event Handler_instruction: crwdns50301:0crwdne50301:0
+      U3-Design Mode-ID_instruction: crwdns50302:0crwdne50302:0
+      U3-Design Mode-Image_instruction: crwdns50303:0crwdne50303:0
+      U313 drag Two Buttons_instruction: crwdns50304:0crwdne50304:0
+      U313 eventsDetails_instruction: crwdns50305:0crwdne50305:0
       U313 Two Buttons with Ids_instruction: crwdns38341:0crwdne38341:0
+      U3L03 - draw rect function_instruction: crwdns48392:0crwdne48392:0
+      U3L03 - draw step_instruction: crwdns48393:0crwdne48393:0
       U3L03 choose your own drawing_instruction: crwdns37655:0crwdne37655:0
       U3L03 Creating Procedures 1_instruction: crwdns37656:0crwdne37656:0
       U3L03 Define and use turnAround_instruction: crwdns37657:0crwdne37657:0
@@ -1046,10 +1136,13 @@ en:
       U3L03 Draw a T using turnAround_instruction: crwdns37659:0crwdne37659:0
       U3L03 draw diamond_instruction: crwdns37660:0crwdne37660:0
       U3L03 Three Steps_instruction: crwdns37661:0crwdne37661:0
+      U3L04 - 3 by 3 with functions_instruction: crwdns48394:0crwdne48394:0
+      U3L04 - snowflake_instruction: crwdns48395:0crwdne48395:0
       U3L04 choose your own drawing_instruction: crwdns37662:0crwdne37662:0
       U3L04 diamond solution_instruction: crwdns37663:0crwdne37663:0
       U3L05_3x3GridEfficiencyChallenge_instruction: crwdns37664:0crwdne37664:0
       U3L05_draw3x3GridEfficiently_instruction: crwdns37665:0crwdne37665:0
+      U3L06 - moveForwardwithParams_instruction: crwdns48396:0crwdne48396:0
       U3L06 Challenge 1 triangle_instruction: crwdns38750:0crwdne38750:0
       U3L06 Challenge 2 purple square_instruction: crwdns37667:0crwdne37667:0
       U3L06 Challenge 3 fill pink_instruction: crwdns37668:0crwdne37668:0
@@ -1058,28 +1151,74 @@ en:
       U3L06 Challenge 6 squiggles_instruction: crwdns37671:0crwdne37671:0
       U3L06 Challenge 7 smiley face_instruction: crwdns37672:0crwdne37672:0
       U3L06 Challenge 8 make your own_instruction: crwdns37673:0crwdne37673:0
+      U3L07 - allSeaGrass_instruction: crwdns49726:0crwdne49726:0
+      U3L07 - bubbles_instruction: crwdns49727:0crwdne49727:0
+      U3L07 - callingFunctionsInLoops_instruction: crwdns49728:0crwdne49728:0
+      U3L07 - createTriangleParam_instruction: crwdns49729:0crwdne49729:0
+      U3L07 - fish_instruction: crwdns49730:0crwdne49730:0
       U3L07 - Free Play Loops and Random_instruction: crwdns37674:0crwdne37674:0
+      U3L07 - introSquare_instruction: crwdns49731:0crwdne49731:0
+      U3L07 - loopsWithRandom_instruction: crwdns49732:0crwdne49732:0
+      U3L07 - randomDots1_instruction: crwdns49733:0crwdne49733:0
+      U3L07 - randomSquare_instruction: crwdns49734:0crwdne49734:0
+      U3L07 - seaGrass_instruction: crwdns49735:0crwdne49735:0
+      U3L07 - seaStar_instruction: crwdns49736:0crwdne49736:0
       U3L07 - Starry Night Starter Code_instruction: crwdns37675:0crwdne37675:0
+      U3L07 - sunBeams_instruction: crwdns49737:0crwdne49737:0
+      U3L07 - topDownDesign_instruction: crwdns49738:0crwdne49738:0
+      U3L08 - createTwoParamTriangle_instruction: crwdns49739:0crwdne49739:0
+      U3L08 - digitalScene_instruction: crwdns49740:0crwdne49740:0
+      U3L08 - drawSquaresWithParams_instruction: crwdns48397:0crwdne48397:0
+      U3L08 - drawSquareWithParam_instruction: crwdns49741:0crwdne49741:0
       U3L08 - Enchantment Under the Sea_instruction: crwdns38751:0crwdne38751:0
+      U3L08 - fish_instruction: crwdns49742:0crwdne49742:0
+      U3L08 - freePlay_instruction: crwdns49743:0crwdne49743:0
+      U3L08 - individualCode_instruction: crwdns49744:0crwdne49744:0
+      U3L08 - introUnderTheSea_instruction: crwdns49745:0crwdne49745:0
+      U3L08 - multiParamFish_instruction: crwdns49746:0crwdne49746:0
+      U3L08 - multipleLayersofParams_instruction: crwdns49747:0crwdne49747:0
+      U3L08 - paramsToStarfish_instruction: crwdns49748:0crwdne49748:0
+      U3L08 - randomInput_instruction: crwdns49749:0crwdne49749:0
+      U3L08 - seaGrass_instruction: crwdns49750:0crwdne49750:0
+      U3L08 - squareTwoParams_instruction: crwdns49751:0crwdne49751:0
+      U3L08 - starFish_instruction: crwdns49752:0crwdne49752:0
+      U3L08 - triangleTwoParams_instruction: crwdns49753:0crwdne49753:0
       U3L13 - Button with ID_instruction: crwdns37676:0crwdne37676:0
       U3L13 - Debug Id plus logic problem_instruction: crwdns37677:0crwdne37677:0
       U3L13 - Debug Id Problem_instruction: crwdns37678:0crwdne37678:0
+      U3L13 - Debugging 1_instruction: crwdns50306:0crwdne50306:0
+      U3L13 - Debugging 2_instruction: crwdns50307:0crwdne50307:0
+      U3L13 - Debugging 3_instruction: crwdns50308:0crwdne50308:0
+      U3L13 - Project_instruction: crwdns50693:0crwdne50693:0
       U3L13 - Turtle Driver Project_instruction: crwdns38343:0crwdne38343:0
       U3L13 - Turtle move with button_instruction: crwdns37680:0crwdne37680:0
+      U3L13 eventsDetails_instruction: crwdns50309:0crwdne50309:0
       U3L14 - Unfortunate Events Free Play_instruction: crwdns38344:0crwdne38344:0
       U3L16 - challenge say hi app_instruction: crwdns38752:0crwdne38752:0
+      U3L16 - chaserApp_instruction: crwdns50310:0crwdne50310:0
+      U3L16 - chooseImages_instruction: crwdns50311:0crwdne50311:0
       U3L16 - hideAndShow_instruction: crwdns38346:0crwdne38346:0
       U3L16 - hideAndShowPractice_instruction: crwdns38753:0crwdne38753:0
       U3L16 - image and text labels_instruction: crwdns38348:0crwdne38348:0
       U3L16 - images and text labels_instruction: crwdns38349:0crwdne38349:0
       U3L16 - images_instruction: crwdns38350:0crwdne38350:0
+      U3L16 - introSetPosition_instruction: crwdns50312:0crwdne50312:0
+      U3L16 - newEventTypes_instruction: crwdns50313:0crwdne50313:0
+      U3L16 - projectTemplate_instruction: crwdns50314:0crwdne50314:0
       U3L16 - quick double click_instruction: crwdns38754:0crwdne38754:0
       U3L16 - setPosition to move button_instruction: crwdns38352:0crwdne38352:0
       U3L16 - setPositionMoveButton_instruction: crwdns38353:0crwdne38353:0
       U3L16 - setupMoveToRandom_instruction: crwdns38354:0crwdne38354:0
+      U3L16 - singleSetPosition_instruction: crwdns50694:0crwdne50694:0
       U3L16 - text labels_instruction: crwdns38355:0crwdne38355:0
       U3L16 - textInput getText write_instruction: crwdns38356:0crwdne38356:0
       U3L16 - use images_instruction: crwdns38755:0crwdne38755:0
+      U3L17 - getKeyValue_instruction: crwdns50695:0crwdne50695:0
+      U3L17 - introCallbacks_instruction: crwdns50696:0crwdne50696:0
+      U3L17 - introKeyValue_instruction: crwdns50697:0crwdne50697:0
+      U3L17 - readKeyValue_instruction: crwdns50698:0crwdne50698:0
+      U3L17 - setKeyValue_instruction: crwdns50699:0crwdne50699:0
+      U3L17 - twoSetKeyValue_instruction: crwdns50700:0crwdne50700:0
       U3L19 - Clicker Game Freeplay Area_instruction: crwdns38965:0crwdne38965:0
       U3L19 - Debugging with consoleLog_instruction: crwdns38756:0crwdne38756:0
       U3L19 - DEMO up down count practice app_instruction: crwdns38757:0crwdne38757:0
@@ -1096,6 +1235,7 @@ en:
       U3L19 - variable scope problem 2_instruction: crwdns38763:0crwdne38763:0
       U3L19 - variable scoping problem debugging_instruction: crwdns38764:0crwdne38764:0
       U3L19 - write var and string with same name_instruction: crwdns38459:0crwdne38459:0
+      U3L2 Using Simple Commands (no tooltips)_instruction: crwdns50701:0crwdne50701:0
       U3L2 Using Simple Commands_instruction: crwdns37681:0crwdne37681:0
       U3L23 Chatbot Conditionals 1_instruction: crwdns43362:0crwdne43362:0
       U3L23 Chatbot Intro 1a_instruction: crwdns43465:0crwdne43465:0
@@ -1138,4 +1278,16 @@ en:
       U3L27 Chatbot Final_instruction: crwdns43514:0crwdne43514:0
       U3L2_Turtle3by3Grid_instruction: crwdns37682:0crwdne37682:0
       U3L2_TurtleSquare_right_instruction: crwdns37683:0crwdne37683:0
+      U4L06 Data Storage 1_instruction: crwdns48398:0crwdne48398:0
+      U4L06 Data Storage 2_instruction: crwdns48399:0crwdne48399:0
+      U4L06 Data Storage 3_instruction: crwdns48400:0crwdne48400:0
+      U4L06 Data Storage 4_instruction: crwdns48401:0crwdne48401:0
+      U4L06 Data Storage 5_instruction: crwdns48402:0crwdne48402:0
+      U4L06 Data Storage 6_instruction: crwdns48403:0crwdne48403:0
+      U4L06 Data Storage 7_instruction: crwdns48404:0crwdne48404:0
+      U4L15 Read Data 1_instruction: crwdns48405:0crwdne48405:0
+      U4L15 Read Data 2_instruction: crwdns48406:0crwdne48406:0
+      U4L15 Read Data 3_instruction: crwdns48407:0crwdne48407:0
+      U4L15 Read Data 4_instruction: crwdns48408:0crwdne48408:0
+      Vigenere_instruction: crwdns49754:0crwdne49754:0
       XML Scratchpad_instruction: crwdns31218:0crwdne31218:0

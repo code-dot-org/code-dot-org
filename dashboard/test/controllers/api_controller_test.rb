@@ -15,6 +15,105 @@ class ApiControllerTest < ActionController::TestCase
     @student_3 = create(:follower, section: @flappy_section).student_user
     @student_4 = create(:follower, section: @flappy_section).student_user
     @student_3.backfill_user_scripts
+    @student_3.reload
+  end
+
+  def make_progress_in_section(script)
+    text_response_script_levels = script.script_levels.includes(:level).where('levels.type' => TextMatch)
+
+    level = text_response_script_levels.first.level
+    UserLevel.create(level_id: level.id, user_id: @student_1.id, script_id: script.id)
+  end
+
+  test "should get text_responses for section with default script" do
+    get :section_text_responses, section_id: @section.id
+    assert_response :success
+
+    assert_equal Script.twenty_hour_script, assigns(:script)
+  end
+
+  test "should get text_responses for section with section script" do
+    get :section_text_responses, section_id: @flappy_section.id
+    assert_response :success
+
+    assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
+  end
+
+  test "should get text_responses for section with specific script" do
+    script = Script.find_by_name('algebra')
+
+    get :section_text_responses, section_id: @section.id, script_id: script.id
+    assert_response :success
+
+    assert_equal script, assigns(:script)
+  end
+
+  test "should get text_responses for section with script with text response" do
+    script = create :script
+
+    # create 2 text_match levels
+    level1 = create :text_match
+    level1.properties['title'] =  'Text Match 1'
+    level1.save!
+    create :script_level, script: script, level: level1
+
+    level2 = create :text_match
+    level2.properties['title'] =  'Text Match 2'
+    level2.save!
+    create :script_level, script: script, level: level2
+    # create some other random levels
+    5.times do
+      create :script_level, script: script
+    end
+
+    # student_1 has two answers
+    create(:activity, user: @student_1, level: level1,
+           level_source: create(:level_source, level: level1, data: 'Here is the answer'))
+    create(:activity, user: @student_1, level: level2,
+           level_source: create(:level_source, level: level2, data: 'another answer'))
+
+    # student_2 has one answer
+    create(:activity, user: @student_2, level: level1,
+           level_source: create(:level_source, level: level1, data: 'answer for student 2'))
+
+    get :section_text_responses, section_id: @section.id, script_id: script.id
+    assert_response :success
+
+    assert_equal script, assigns(:script)
+
+    # all these are translation missing because we don't actually generate i18n files in tests
+
+    expected_response =
+      [
+       {'student' => {'id' => @student_1.id, 'name' => @student_1.name},
+        'stage' => "Stage 1: translation missing: en-us.data.script.name.#{script.name}.#{script.stages[0].name}",
+        'puzzle' => 1,
+        'question' => 'Text Match 1',
+        'response' => 'Here is the answer',
+        'url' => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}"},
+       {'student' => {'id' => @student_1.id, 'name' => @student_1.name},
+        'stage' => "Stage 2: translation missing: en-us.data.script.name.#{script.name}.#{script.stages[1].name}",
+        'puzzle' => 1,
+        'question' => 'Text Match 2',
+        'response' => 'another answer',
+        'url' => "http://test.host/s/#{script.name}/stage/2/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}"},
+       {'student' => {'id' => @student_2.id, 'name' => @student_2.name},
+        'stage' => "Stage 1: translation missing: en-us.data.script.name.#{script.name}.#{script.stages[0].name}",
+        'puzzle' => 1,
+        'question' => 'Text Match 1',
+        'response' => 'answer for student 2',
+        'url' => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_2.id}"},
+      ]
+    assert_equal expected_response, JSON.parse(@response.body)
+  end
+
+  test "should get text_responses for section with script without text response" do
+    script = Script.find_by_name('course1')
+
+    get :section_text_responses, section_id: @section.id, script_id: script.id
+    assert_response :success
+
+    assert_equal script, assigns(:script)
   end
 
   test "should get progress for section with default script" do
@@ -85,11 +184,13 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get user_hero for student with script" do
-    sign_in @student_3
+    user_script = create(:user_script, script: Script.get_from_cache(Script::FLAPPY_NAME))
+    sign_in user_script.user
+
     get :user_hero
 
     assert_select '#welcome.student'
-    assert_select '#currentprogress'
+    assert_select '#currentprogress', true, "Response was: #{@response.body}"
   end
 
   test "should get user_hero for student with no script" do
@@ -104,7 +205,8 @@ class ApiControllerTest < ActionController::TestCase
     sign_in @student_4
     advertised_scripts = [Script.hoc_2014_script, Script.frozen_script, Script.infinity_script,
       Script.flappy_script, Script.playlab_script, Script.artist_script, Script.course1_script,
-      Script.course2_script, Script.course3_script, Script.course4_script, Script.twenty_hour_script]
+      Script.course2_script, Script.course3_script, Script.course4_script, Script.twenty_hour_script,
+      Script.starwars_script]
     advertised_scripts.each do |script|
       UserScript.create!(user_id: @student_4.id, script_id: script.id, completed_at: Time.now)
     end

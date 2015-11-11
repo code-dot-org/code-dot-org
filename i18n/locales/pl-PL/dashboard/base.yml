@@ -307,8 +307,10 @@ pl:
       viewing_solution: Podgląd rozwiązania
       try_it_yourself: Wypróbuj
       section: Sekcja
-      example: Example Solution
-      example_with_number: 'Example Solution %{solution_number}'
+      example: Przykładowe rozwiązanie
+      example_with_number: 'Przykładowe rozwiązanie %{solution_number}'
+      submitted_on: 'Przesłane dnia %{date}'
+      unsubmit: Nieprzesłane
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
@@ -397,6 +399,7 @@ pl:
     tos: Regulamin
     privacy: Polityka prywatności
     secure: Bezpieczna wersja
+    report_abuse: Zgłoś nadużycie
   reference_area:
     title: Czy potrzebujesz pomocy?
     subtitle: Zobacz te filmiki i wskazówki
@@ -602,4 +605,25 @@ pl:
     delete_confirm_text: Usunięcie projektu spowoduje trwałe usunięcie go z twojej listy Moje Projekty. Nikt, komu udostępniłeś link do tego projektu, nie będzie już mógł zobaczyć tego projektu.
     view_all: Zobacz Moje Projekty
     remix: Remix
-    click_to_remix: "Kliknij 'Remix', żeby utworzyć swoją wersję!"
+    click_to_remix: "Kliknij 'Remix', aby utworzyć swoją własną wersję!"
+    edit_project: Edytuj projekt
+    abuse:
+      tos: "Zgłoszono, że ten projekt narusza <a href='http://code.org/tos'> Warunki korzystania</a> z Code.org i nie może być udostępniony innym."
+      contact_us: "Jeśli uważasz to za błąd, to prosimy <a href='https://code.org/contact'> skontaktować się z nami.</a>"
+      go_to_code_studio: Przejdź do Code Studio
+      report_abuse_form:
+        intro: W razie napotkania obraźliwych treści, zagrożeń, cyberprzemocy, molestowania lub naruszenia praw autorskich do treści, które posiadasz, utworzonych przy użyciu aplikacji zbudowanej w Studio Kodowania, prosimy o wypełnienie poniższego formularza. Potraktujemy Twój raport bardzo poważnie, zbadamy tę sytuację i podejmiemy odpowiednie działania.
+        validation:
+          email: Proszę podać adres e-mail
+          age: Proszę określić wiek
+          abuse_type: Proszę odpowiedzieć, jak ta treść narusza regulamin
+          abuse_detail: Proszę podać szczegóły dotyczące treści, które zgłaszasz
+        abusive_url: Adres URL zgłaszanych treści
+        abuse_type:
+          question: 'Jak te treści naruszają %{link_start}Terms of Service%{link_end}?'
+          harassment: Zagrożenia, cyberprzemoc, molestowanie
+          offensive: Obraźliwe treści
+          infringement: Naruszenie praw autorskich
+          other: Inni/inne
+        detail: Proszę podać jak najwięcej szczegółów dotyczących treści, które zgłaszasz.
+        acknowledge: 'Przesyłając te informacje, potwierdzasz, że będą one wykorzystane zgodnie z warunkami %{link_start_privacy}Privacy Policy%{link_end} i %{link_start_tos}Terms of Service%{link_end}'

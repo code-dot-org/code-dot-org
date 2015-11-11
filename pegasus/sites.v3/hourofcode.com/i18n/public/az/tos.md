@@ -1,4 +1,10 @@
+---
 
+title: Xidmətin şərtləri
+
+---
+
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
 
 # Xidmət şərtləri
 
@@ -22,7 +28,7 @@ We take steps to minimize the collection of personal data from Users under the a
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Hesabınız
+### Your Account
 
 If you create an account for Services, you are responsible for the security of your account and for keeping your own password safe. If you are using an account assigned to you by an Educator, your Educator may be able to access and disable your account.
 

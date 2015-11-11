@@ -11,7 +11,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ikaw ba ay isang CS teacher? Tingnan ang ibang mga resource
     para sa CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>ay nakasubok na ng</h3><h2>Hour of Code</h2>
+  n_have_learned_an_hoc: "<h1>#</h1><h3>ay nakasubok na ng</h3><h2>Hour of Code</h2>"
   anybody_can_learn: Lahat ay puwedeng matuto.
   learn_now: Matuto Ngayon
   petition_message: Ang bawat estudyante sa bawat paaralan ay dapat may pagkakataon
@@ -36,6 +36,13 @@
   hoc2014_everyone: Lahat
   hoc2014_support: Suportahan ito &#x25BE;
   hoc2014_whatishoc: Ano ba ang Hour of Code?
+  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Ulitin
+  cded_sign_up: Sign up
+  cded_try_it: Subukan mo
   twentyhours_trynow: Subukan ngayon
   california_heading: Tanungin ang iyong guro sa eskwelahan na magturo ng computer
     science
@@ -57,13 +64,22 @@
     Matuto ng repeat-loops, if-then statements, at basic na mga algorithm.
   all_ages: Lahat ng edad
   beginner: Baguhan
-  n_participants: '# na mga kalahok'
+  n_participants: "# na mga kalahok"
   go: Pumunta
   thank_you_: Maraming salamat!
   congratulations: Maligayang pagbati!
   congratulations_on_completing_hoc: |
     Pagbati
     sa pagkumpleto ng isang Oras ng Code
+  course_name_accelerated: Accelerated Course
+  course_name_course1: Kurso 1
+  course_name_course2: Course 2
+  course_name_course3: Course 3
+  course_name_course4: Course 4
+  congratulations_on_completing_course: Congratulations on completing %{course}
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
+    tutorial</a>.
   get_a_certificate_of_achievement: Kumuha ng certificate of achievement
   enter_valid_age: Please select a valid age
   enter_valid_email: Paki-pasok ng valid na email address
@@ -98,7 +114,7 @@
   beyond_an_hour: Higit pa sa isang Hour of Code
   get_started: Panimula
   i_agree: Ako ay sumasang-ayon
-  participant_select: '- Pumili -'
+  participant_select: "- Pumili -"
   participant_student: Estudyante
   participant_parent: Magulang
   participant_educator: Tagapagturo
@@ -123,6 +139,8 @@
   just_did_hoc: 'Sinubukan ko ang #HourOfCode - subukan ito! @codeorg'
   twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
     http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
   learn_hoc: Matuto ng Hour of Code
   beyond_hoc: Sobra sa Isang Oras
   what_gender: Ano ang iyong kasarian?
@@ -132,11 +150,11 @@
     koponan!
   help_recruit: Tumulong sa pag regruit ng marami pang mga coder!
   lines_of_code: HIGIT SA <b># LINES OF CODE</b> NAKASULAT AYON SA PETSA.
-  lines_of_code_alt: <b>#</b> MGA LINYA NG CODE NA ISINULAT NG MGA ESTUDYANTE
+  lines_of_code_alt: "<b>#</b> MGA LINYA NG CODE NA ISINULAT NG MGA ESTUDYANTE"
   who_has_done_hoc: 'Sino na ang nakasubok ng #HourOfCode? @codeorg'
   hoc_leaderboards: Ang mga Leaderboard ng Hour of Code
-  students_and_lines: '%{students} na mga estudyante ang natapos ang Hour of Code
-    at nakapagsulat ng %{lines} linya ng code.'
+  students_and_lines: "%{students} na mga estudyante ang natapos ang Hour of Code
+    at nakapagsulat ng %{lines} linya ng code."
   start_hoc: Umpisahan ang Hour of Code ngayon
   contact_form_topic_press: Press/media (interview o speaking engagement)
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
@@ -206,7 +224,7 @@
     engaged, involved and participating.&rdquo;
     Adam, teacher
   homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Ang Hour of Code
   homepage_slot_text_frozen: Frozen kasama sina Anna at Elsa
@@ -221,17 +239,20 @@
   homepage_action_text_signpetition: Mag-sign sa petisyon
   homepage_signpetition_dropdown: 'Mag-sign sa aming petisyon & # x25BE;'
   homepage_diversity_pledge: Take the diversity pledge
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in computer science.
   homepage_banner_text_link: Matuto nang higit pa
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Matuto nang higit pa
+  homepage_banner_privacy_link: Dagdagan ang Kaalaman
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Subukan ang Hour of Code
   homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_hocserved: "# served"
+  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Mga mag-aaral
   homepage_slot_text_blurb_students: Galugarin ang lahat ng aming mga tutorial
   homepage_slot_text_link_codestudio: Try Code Studio
@@ -290,11 +311,77 @@
   class_submission_level_college: Kolehiyo
   class_submission_level_vocational: Vocational
   class_submission_languages_other: Ibang (mga) wika
+  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
+    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
+    have signed up."
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
+    to try an hour introduction to computer science, reaching tens of millions of
+    students in 180+ countries. Please get involved during Computer Science Education
+    Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
+    who can help in the classroom, or for somebody who can <span style="font-family:
+    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
+    breadth of possibilities with computer science (which could be done through a
+    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
+    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_signup: Please enter the following information
+    if you are a computer science student or software professional. Fields marked
+    with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_header_shared: Information shared with teachers on
+    volunteer map
+  volunteer_engineer_submission_field_name: Pangalan
+  volunteer_engineer_submission_field_name_placeholder: Full Name
+  volunteer_engineer_submission_field_company: Company (or University)
+  volunteer_engineer_submission_field_company_placeholder: Company (or University)
+  volunteer_engineer_submission_field_experience_level: Experience level
+  volunteer_engineer_submission_field_location: Location
+  volunteer_engineer_submission_field_location_desc: If you enter your exact address
+    we won't share it, just show you as a pin on map.
+  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
+    or street address
+  volunteer_engineer_submission_field_location_flexibility: I can help during the
+    Hour of Code by... (select all that apply)
+  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
+    after the Hour of Code
+  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
+    of Code
+  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
+  volunteer_engineer_submission_field_description: Deskripsyon
+  volunteer_engineer_submission_field_description_desc: Describe your computer science
+    experience and how you would like to participate as a volunteer for local teachers.
+  volunteer_engineer_submission_field_description_placeholder: Description of experience
+    and/or participation
+  volunteer_engineer_submission_header_private: Information kept private and never
+    shared
+  volunteer_engineer_submission_field_email: Email address
+  volunteer_engineer_submission_field_email_desc: Your email address will never be
+    shared, but we'll send you requests from teachers.
+  volunteer_engineer_submission_field_email_placeholder: Email address
+  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
+    teachers to contact you for the Hour of Code or other volunteer opportunities.
+    Your email and exact address will NEVER be shared by us. But the other information
+    (including approximate location) will be publicly viewable by local teachers.
+  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
+    me for volunteer opportunities (Note: your email address won''t be shared)'
+  volunteer_engineer_submission_submit: Ipasa
+  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
+    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
+    more here.</a>
   volunteer_engineer_submission_commitment_uncertain: Walang kasiguraduhan
-  volunteer_engineer_submission_commitment_now_and_then: Ngayon at magpakailanman
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 oras kada linggo
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 oras kada linggo
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 oras kada linggo
+  volunteer_engineer_submission_commitment_now_and_then: Ngayon at magpakailanman
+  volunteer_engineer_submission_commitment_annually: 2-3 times per year
+  volunteer_engineer_submission_commitment_monthly: A couple hours per month
+  volunteer_engineer_submission_commitment_weekly: A couple hours per week
   volunteer_engineer_submission_commitment_more: More
   volunteer_engineer_submission_location_flexibility_onsite: On-site sa paaralan
   volunteer_engineer_submission_location_flexibility_remote: Tinuturuan ng magkalayo
@@ -330,6 +417,7 @@
   dashboard_landing_progress_title: Progress ng pangunahing klase
   dashboard_landing_progress_biggest: Ito ang progress ng iyong pinakamalaking section.
   dashboard_landing_view_progress: Tingnan ang Progress para sa %{biggest_section}
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Available na mga kurso
   dashboard_landing_available_courses: Ito ang mga kurso na kasalukuyang available
     para sa iyo at iyong mga estudyante.
@@ -340,6 +428,9 @@
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
     students!
+  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
+    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
+    during Computer Science Education Week.
   dashboard_k5_courses: 20-Hour Courses for K-5
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
@@ -394,6 +485,7 @@
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Mga Account at Progress ng mga Estudyante
   dashboard_navigation_view_progress: Tingnan ang Progress
+  dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_add_students: Magdagdag ng Estudyante
   dashboard_navigation_manage_students: I-manage ang mga Estudyante
   dashboard_navigation_lesson_plans_resources: Mga Lesson Plan at mga Resource
@@ -515,6 +607,10 @@
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_stage: Yugto
+  dashboard_puzzle: Palaisipan
+  dashboard_question: Question
+  dashboard_response: Response
   stats_hoc_2013_heading: 'Mga di kapani-paniwalang numero mula sa Hour of Code nung
     isang taon. Sa isang linggo lang ay:'
   stats_hoc_2013_image_alt: Mga stat mula sa 2013 Hour of Code
@@ -537,9 +633,21 @@
     mong piliin sa isang seksyon.
   dashboard_faq: Mga Madalas Itanong
   dashboard_faq_k5: K-5 Frequently Asked Questions
+  dashboard_announcements: Announcements
+  dashboard_announce_view_all: View all
+  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+    every participating organizer will receive a gift card to Amazon.com or Microsoft's
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
   code_hoc_coming: Ang Hour of Code ay andito na - Disyembre 08-14!
   code_sign_up: Mag-sign up upang lumahok sa CS Edukasyon Week
   learn_more: Dagdagan ang Kaalaman
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS
+    Education Week
+  learn_sign_up_button: Sign up
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
+  learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
+    to teach an Hour of Code</a>
   hoc2014_try_new_tutorials: Subukan ang aming bagong Hour of Code na mga tutorial
   hoc2014_try_new_tutorial: Subukan ang aming bagong Oras ng Code tutorial nasa beta
   hoc2014_try_scrat: Angry Birds, PvZ, at Scrat
@@ -603,7 +711,7 @@
   robomindnl_name: Mag-program ng virtual robot
   flappy_name: Gumawa ng Flappy na laro
   bitsbox_name: Bitsbox - gumawa ng laro
-  makegameswithus_name: Bumuo ng larong pang-Iphone sa iyong panginain (browser)!
+  makeschool_name: Build an iPhone game in your browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hour of Code
   blockly_name: Blockly
@@ -642,7 +750,7 @@
   robomindnl_gradelevel: Edad 8-13
   flappy_gradelevel: Edad 4-104
   bitsbox_gradelevel: Elementarya
-  makegameswithus_gradelevel: High school
+  makeschool_gradelevel: High school
   touchdevelop_gradelevel: High school
   appinventor_gradelevel: Middle school
   blockly_gradelevel: Lahat ng edad
@@ -682,7 +790,7 @@
   robomindnl_platformtext: Modern web browsers, Mobile web
   flappy_platformtext: Makabagong mga browser, smartphone, at mga tablet
   bitsbox_platformtext: Modern web browsers
-  makegameswithus_platformtext: Modern Web browsers
+  makeschool_platformtext: Modern Web browsers
   touchdevelop_platformtext: Modern browsers, smartphones, all devices
   appinventor_platformtext: Makabagong mga browser + Android
   blockly_platformtext: Mga modernong panginain (browser) lamang
@@ -730,8 +838,8 @@
   robomindnl_shortdescription: Sumulat ng code para sa isang virtual robot
   flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
   bitsbox_shortdescription: Code a series of apps to play and share, using real JavaScript.
-  makegameswithus_shortdescription: Make an iPhone game! Learn by writing code to
-    teach your monster new moves!
+  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach
+    your monster new moves!
   touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all
     on your phone. '
   appinventor_shortdescription: Make your own app! (Android-only)
@@ -848,8 +956,8 @@
     of apps to play and share. Simple walkthroughs make it possible for even young
     kids to program real JavaScript, and the more advanced you are the further you'll
     go.
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a
-    brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
+  makeschool_longdescription: Learn to code by making an iPhone game using a brand
+    new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
     action game and write code to teach your monster new moves. You will learn how
     to use variables, methods, and objects to help your monster win!
   touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating
@@ -894,7 +1002,7 @@
   groklearning_beyond_name: Matuto ng Phyton
   hacketyhack_beyond_name: Matuto ng Ruby
   robomind_beyond_name: Mag-program ng virtual robot
-  makegameswithus_beyond_name: Bumuo ng larong pang-Iphone sa iyong panginain (browser)!
+  makeschool_beyond_name: Build an iPhone game in your browser!
   appinventor_beyond_name: AppInventor Hour of Code
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Learn to Code With Karel the Dog
@@ -931,7 +1039,7 @@
   groklearning_beyond_gradelevel: Middle school
   hacketyhack_beyond_gradelevel: High school
   robomind_beyond_gradelevel: Edad 8-13
-  makegameswithus_beyond_gradelevel: High school
+  makeschool_beyond_gradelevel: High school
   appinventor_beyond_gradelevel: Middle school
   touchdevelop_beyond_gradelevel: High school
   codehs_beyond_gradelevel: High school
@@ -968,7 +1076,7 @@
   groklearning_beyond_platformtext: Modern web browsers
   hacketyhack_beyond_platformtext: Desktop install
   robomind_beyond_platformtext: Modern web browsers, Mobile web
-  makegameswithus_beyond_platformtext: Modern Web browsers
+  makeschool_beyond_platformtext: Modern Web browsers
   appinventor_beyond_platformtext: Modern browser + Android
   touchdevelop_beyond_platformtext: Modern browsers, smartphones, all devices
   codehs_beyond_platformtext: Modern browsers ($$ required)
@@ -1007,8 +1115,7 @@
   groklearning_beyond_shortdescription: Basic intro to python programming
   hacketyhack_beyond_shortdescription: Matuto ng Ruby mula sa simula
   robomind_beyond_shortdescription: Sumulat ng code para sa isang virtual robot
-  makegameswithus_beyond_shortdescription: Matutong gumawa ng laro sa iPhone sa isang
-    oras
+  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
   appinventor_beyond_shortdescription: Make your own app! (Android-only)
   touchdevelop_beyond_shortdescription: Code mobile apps directly on your phone, tablet
     or laptop
@@ -1087,7 +1194,7 @@
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
     exercises. '
-  makegameswithus_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
+  makeschool_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
     game in an hour! We'll guide you through the process, to code, test, and play
     your game entirely in the browser and then share it on Facebook for friends to
     try! No prior iPhone development experience is required. You must understand what
@@ -1202,3 +1309,38 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Itago ang babalang ito
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: "# served"
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Sign up
+  homepage_action_text_try_it: Try it
+  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_girlvideo: Inspire a girl
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_gradelevel: Ages 6+
+  starwars_platformtext: Modern browsers + tablets
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
+  starwars_longdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.

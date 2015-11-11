@@ -28,5 +28,10 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+      </xml>
+    </required_blocks>
   </blocks>
 </Maze>

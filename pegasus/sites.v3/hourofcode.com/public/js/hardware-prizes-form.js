@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 function signupFormComplete()
 {
-  window.location = 'prizes-thanks';
+  window.location = 'thanks';
 }
 
 function signupFormError(data)

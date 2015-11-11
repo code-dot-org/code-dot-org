@@ -7,6 +7,7 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -45,7 +46,7 @@ exports.easeOutElastic = function (t, b, c, d) {
   if (t===0) {
     return b;
   }
-  if ((t/=d)==1) {
+  if ((t/=d)===1) {
     return b+c;
   }
   if (!p) {

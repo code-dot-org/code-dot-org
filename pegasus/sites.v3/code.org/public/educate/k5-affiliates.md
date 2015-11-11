@@ -11,7 +11,7 @@ The ideal K-5 Affiliate is an experienced Computer Science teacher at the elemen
 
 **NOTE: Applications for the 2015-2016 school year are now closed. We will begin reviewing new applications in the Spring of 2016.**
 
-[<button>Appy now</button>](https://docs.google.com/a/code.org/forms/d/1VURjBVOspP0H1ylwX1koYJ0YQdRxmp2JVWlWcslwosk/viewform)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/a/code.org/document/d/1Aylbn_ZNROiEUJzRVz8JsqEkEwDXElxMLrgw9fVm55U/pub)
+[<button>Apply now</button>](https://docs.google.com/a/code.org/forms/d/1VURjBVOspP0H1ylwX1koYJ0YQdRxmp2JVWlWcslwosk/viewform)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/a/code.org/document/d/1Aylbn_ZNROiEUJzRVz8JsqEkEwDXElxMLrgw9fVm55U/pub)
 <br />
 <br />
 

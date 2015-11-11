@@ -7,11 +7,11 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var utils = require('../utils');
@@ -273,8 +273,8 @@ NetSimVisualization.prototype.onRemoteChange_ = function () {
 NetSimVisualization.prototype.getElementByEntityID = function (elementType, entityID) {
   return _.find(this.elements_, function (element) {
     return element instanceof elementType &&
-        element.getCorrespondingEntityID &&
-        element.getCorrespondingEntityID() === entityID;
+        element.getCorrespondingEntityId &&
+        element.getCorrespondingEntityId() === entityID;
   });
 };
 
@@ -513,8 +513,7 @@ NetSimVisualization.prototype.killVizEntitiesOfTypeMissingMatch_ = function (
   this.elements_.forEach(function (vizElement) {
     var isCorrectType = (vizElement instanceof vizElementType);
     var foundMatch = entityCollection.some(function (entity) {
-      return vizElement.getCorrespondingEntityID &&
-          entity.entityID === vizElement.getCorrespondingEntityID();
+      return vizElement.representsEntity && vizElement.representsEntity(entity);
     });
 
     if (isCorrectType && !foundMatch) {
@@ -881,7 +880,7 @@ NetSimVisualization.prototype.destroyAutoDnsNode = function () {
 NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
   this.elements_.forEach(function (vizElement) {
     if (vizElement instanceof NetSimVizSimulationNode) {
-      vizElement.setIsDnsNode(vizElement.getCorrespondingEntityID() === dnsNodeID);
+      vizElement.setIsDnsNode(vizElement.getCorrespondingEntityId() === dnsNodeID);
     }
   });
 };

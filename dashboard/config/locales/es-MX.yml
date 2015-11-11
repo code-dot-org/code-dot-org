@@ -364,8 +364,10 @@
       viewing_solution: Visualizando la Solución
       try_it_yourself: Inténtalo tu mismo
       section: Sección
-      example: Example Solution
+      example: Solución de ejemplo
       example_with_number: Example Solution %{solution_number}
+      submitted_on: Submitted on %{date}
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
     email_confirm_needed_required: 'Tu dirección de email %{email} no ha sido confirmada:'
@@ -418,7 +420,7 @@
     local_school: escuela local
     online: en línea
     see_details: Ver detalles
-    view_course: Ver curso
+    view_course: Ver el curso
     prize_info: 'Premio por participación (solo maestros de escuelas públicas de Estados
       Unidos): hasta 1000 dólares en material escolar.'
     tryfirst: 'O, puedes probarlo primero y registrarte más adelante:'
@@ -443,8 +445,8 @@
     print_certificate: Imprimir Certificado
   share:
     title: Aprender en Código Studio
-    description: Cualquier persona puede aprender informática. Hacer juegos, aplicaciones
-      y arte con el código.
+    description: Cualquier persona puede aprender informática. Crear juegos, aplicaciones
+      y arte con código.
   gender:
     male: Varón
     female: Mujer
@@ -456,7 +458,7 @@
     thank_you: Agradecemos a nuestros <a href="https://code.org/about/donors">donantes</a>,
       <a href="https://code.org/about/partners">aliados</a>, nuestro <a href="https://code.org/about/team">equipo
       extendido</a> nuestro elenco de video y nuestros <a href="https://code.org/about/advisors">asesores
-      academicos</a> por su apoyo creando Codigo Studio.
+      académicos</a> por su apoyo a la creación de Codigo Studio.
     help_from_html: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado
       a crear este tutorial.
     help_from_html_old: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado
@@ -480,6 +482,7 @@
     tos: Términos
     privacy: Política de Privacidad
     secure: Versión Segura
+    report_abuse: Report Abuse
   reference_area:
     title: ¿Necesitas ayuda?
     subtitle: Ver estos videos y sugerencias
@@ -729,3 +732,32 @@
     view_all: Ver Mis Proyectos
     remix: Remezclar
     click_to_remix: ¡Haz clic en 'Remix' para obtener tu propia versión!
+    edit_project: Editar proyecto
+    abuse:
+      tos: Este proyecto ha sido denunciado por violar los <a href='http://code.org/tos'>Términos
+        de Uso</a> y no puede ser compartido con otros.
+      contact_us: Si cree que esto es un error, por favor <a href='https://code.org/contact'>contáctenos.</a>
+      go_to_code_studio: Ve a Code Studio
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying,
+          harassment, or an instance of copyright infringement for content you own
+          while using apps built on Code Studio, please fill out the form below. We
+          will take your report very seriously, investigate accordingly, and take
+          appropriate action.
+        validation:
+          email: Please provide an email address
+          age: Please specify an age
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
+          harassment: Threats, cyberbullying, harassement
+          offensive: Offensive content
+          infringement: Copyright Infringement
+          other: Otros
+        detail: Please provide as much detail as possible regarding the content you
+          are reporting.
+        acknowledge: By submitting this information, you acknowledge it will be handled
+          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
+          and the %{link_start_tos}Terms of Service%{link_end}

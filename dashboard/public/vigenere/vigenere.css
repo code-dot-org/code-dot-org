@@ -1,0 +1,81 @@
+textarea, input, .textarea {
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.btn-group .btn {
+  margin-right: 0;
+}
+
+#left-column fieldset {
+  margin-bottom: 5px;
+  margin-left: 0px;
+}
+
+#inputs {
+  margin-top: -10px;
+}
+
+.legend {
+  border-bottom: 1px solid #5b6770;
+}
+
+form {
+  margin-bottom: 0;
+}
+
+p.textarea {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  border: 1px solid black;
+  padding: 4px 6px;
+  background-color: #e7e8ea;
+  color: black;
+}
+
+#keyword-display mark, .highlight.key {
+  background-color: #59b9dc;
+}
+#input-display mark, .highlight.plaintext {
+  background-color: #ffc459;
+}
+#output-display mark, .highlight.ciphertext {
+  background-color: #d1d567;
+}
+
+td.highlight {
+  background-color: #AAAAFF;
+}
+
+input[type=range] {
+  width: 100%;
+  margin-top: 10px;
+}
+
+table{
+  height: 560px;
+  max-width: 560px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+
+th, td {
+  text-align: center;
+  vertical-align: middle;
+  font-family: monospace;
+  font-size: 12px;
+  padding: 0px;
+}
+
+th {
+  color: black;
+  background-color: #949ca2;
+  font-weight: bold;
+}
+td {
+  border: solid 1px #FFFFFF;
+  background-color: #e7e8ea;
+}
+

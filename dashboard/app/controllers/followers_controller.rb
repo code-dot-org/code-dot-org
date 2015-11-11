@@ -52,7 +52,7 @@ class FollowersController < ApplicationController
 
     authorize! :destroy, f
     f.delete
-    FollowerMailer.student_disassociated_notify_teacher(@teacher, @user).deliver if @teacher.email.present?
+    FollowerMailer.student_disassociated_notify_teacher(@teacher, @user).deliver_now if @teacher.email.present?
     redirect_to root_path, notice: t('teacher.student_teacher_disassociated', teacher_name: @teacher.name, student_name: @user.name)
   end
 

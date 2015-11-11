@@ -1,9 +1,13 @@
 * * *
 
-layout: wide
+title: <%= hoc_s(:title_whole_school) %> layout: wide
 
 * * *
 
+<%= view :signup_button %>
+
 # Neka vaša škola učestvuje
 
-Informacije o sudjelovanju cijele škole u Satu programiranja će ići ovdje.
+Information about getting whole schools to participate in the Hour of Code will go here.
+
+<%= view :signup_button %>

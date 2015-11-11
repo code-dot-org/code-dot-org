@@ -8,30 +8,45 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 # Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. Anda membantu siswa di seluruh dunia untuk belajar satu Jam Kode yang dapat mengubah seluruh hidup mereka selama bulan Desember. 7-13. <% end %>
+You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13.
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [Details](https://<%= hostname %>/prizes).
+
+#### We'll be in touch about new tutorials and other exciting updates. What can you do now?
 
 ## 1. Sebarkan berita
 
-Beritahu temanmu mengenai #HourOfCode.
+We need your help to reach 100,000 organizers worldwide. Beritahu temanmu mengenai #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
+
+<% if international == 'true' %>
 
 ## 2. Tawarkan pada seluruh isi sekolah anda untuk mengikuti Hour of Code
 
-[Kirim email ini](http://<%= hostname %>/resources#email) kepada Kepala Sekolah Anda.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). <% else %>
+
+## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
+
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup). <% end %>
 
 ## 3. Tanyakanlah kepada bos anda untuk terlibat
 
-[Kirim emai inil](http://<%= hostname %>/resources#email) kepada atasan Anda atau, Pemimpin Perusahaan.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
 
-## 4. Promosikan Jam Kode di komunitas Anda
+## 4. Promosikan Hour of Code di komunitas Anda
 
-Ajak kelompok masayarakat — Pramuka, kelompok pengajian/gereja, unit mahasiswa, pensiunan atau serikat pekerja. Atau selenggarakan "hajatan" Jam Kode untuk masyarakat di lingkunganmu. [Kirim email ini](http://<%= hostname %>/resources#email).
+Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
 
 ## 5. Tanyakan seorang pejabat terpilih setempat untuk mendukung Hour of Code
 
-[Kirim email ini](http://<%= hostname %>/resources#politicians) ke pimpinan daerah Anda, Dewan Kota, atau Dewan Pendidikan dan undang mereka untuk mengunjungi sekolah Anda.
+[Kirim email ini](https://<%= hostname %>/resources#politicians) ke pimpinan daerah Anda, Dewan Kota, atau Dewan Pendidikan dan undang mereka untuk mengunjungi sekolah Anda.
+
+Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
+
+Hadi Partovi  
+Founder, Code.org
 
 * * *
 
-Code.org adalah organisasi nirlaba 501c 3. Alamat kami adalah 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Tidak suka email ini? [Berhenti berlangganan](%= unsubscribe_link %).
+<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+
+![](<%= tracking_pixel %>)

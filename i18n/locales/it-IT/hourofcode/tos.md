@@ -4,6 +4,8 @@ title: Termini di Servizio
 
 * * *
 
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
+
 # Termini di Servizio
 
 Last Revised: December 5, 2014
@@ -20,13 +22,13 @@ Queste condizioni sono soggette a modifiche. Se si continuano a utilizzare i ser
 
 Alcuni Servizi potrebbero essere soggetti a linee guida, regole, o termini di servizio aggiuntivi (“**Termini Aggiuntivi**”), e nel caso il tuo utilizzo di questi Servizi sarà condizionato dall'accettazione di questi Termini Aggiuntivi. Se dovesse esserci un qualche conflitto tra questi Termini e i Termini Aggiuntivi, i Termini Aggiuntivi faranno fede per l'utilizzo di quel Servizio, a meno che i Termini Aggiuntivi non dichiarino espressamente che siano questi Termini a fare fede.
 
-### Bambini di Età Inferiore ai 13 Anni
+### Children Under Age 13
 
 Noi ci impegnamo nel ridurre al massimo la raccolta dei dati personali degli Utenti di età inferiore ai 13 anni, così come spiegato nella Code.org [privacy policy](http://code.org/privacy). Se hai meno di 13 anni ti chiediamo di chiedere l'approvazione dei tuoi genitori o dei tuoi tutori legali prima di creare un account su Code.org. Code.org permette ad alcuni responsabili dei distretti scolastici e delle scuole, ad esempio insegnanti, amministratori, counselors, e altri educatori (un “**Educatore**”), di entrare in contatti con gli studenti attraverso i Servizi, così da poter fornire servizi di tutoraggio, educativi, e simili. Se sei un Educatore, puoi registrare ai Servizi gli accounts di uno o più di uno dei tuoi studenti.
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Il tuo Account
+### Your Account
 
 Se registri un account per i Servizi, diventi responsabile della sicurezza del tuo account e della tua password. Se utilizzi un account che ti è stato dato da un Educatore, questi potrebbe essere capace di accedere al e di disabilitare il tuo account.
 
@@ -34,7 +36,7 @@ Code.org ti permette di registrare un account per i Servizi tramite l'utilizzo d
 
 ### Privacy
 
-La tua privacy per noi è importante. La [Privacy Policy](http://code.org/privacy) di Code.org spiega come trattiamo i tuoi dati personali, ed è inclusa in questi Termini per mezzo di questo riferimento ad essa. Ti preghiamo di leggere attentamente la nostra Privacy Policy, per essere informato su quanto fa capo alla raccolta, all'uso, ed alla trasmissione dei tuoi dati personali da parte di Code.org.
+La tua privacy per noi è importante. L' [Informativa sulla Privacy](http://code.org/privacy) di Code.org spiega come trattiamo i tuoi dati personali, ed è integrata in questi Termini di riferimento. Ti preghiamo di leggere attentamente la nostra Privacy Policy, per essere informato su quanto fa capo alla raccolta, all'uso, ed alla trasmissione dei tuoi dati personali da parte di Code.org.
 
 Se sei uno studente che utilizza un account registrato per te da un Educatore, o collegato in altro modo ad un Educatore, acconsenti che Code.org possa trasmettere i tuoi dati agli Educatori associati al tuo account. Se sei un Educatore, acconsenti a non condividere i dati dello studente che ricevi da Code.org con nessuno che non sia autorizzato dalla scuola, o dal distretto scolastico, o da qualche altra istituzione educativa che tu rappresenti.
 

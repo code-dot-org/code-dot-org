@@ -1,0 +1,2 @@
+class AbortEmailError < StandardError
+end

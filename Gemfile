@@ -1,13 +1,16 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.3'
+gem 'rails', '~> 4.2.4'
 
-gem 'sinatra', '1.4.4', require: 'sinatra/base'
+# provide `respond_to` methods
+# (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
+gem 'responders', '~> 2.0'
+
+gem 'sinatra', require: 'sinatra/base'
 gem 'rack-contrib', '~> 1.1'
 
-gem 'mysql2', '0.3.13'
+gem 'mysql2', '~> 0.3.13'
 gem 'seamless_database_pool'
 
 gem 'le', '~> 2.2'
@@ -20,39 +23,46 @@ gem 'parallel'
 gem 'google-api-client'
 
 group :development do
+  gem 'annotate', '~> 2.6.6'
+  gem 'rack-mini-profiler'
   gem 'rerun', '~> 0.10.0'
   gem 'shotgun'
   gem 'thin', '~> 1.6.2'
+  gem 'web-console', '~> 2.0'
 end
 
 group :development, :test do
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
+  gem 'konacha'  # Mocha + Chai JS testing in Rails
+  gem 'poltergeist'  # Headless JS tests.p
+
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'ruby-prof'
   gem 'quiet_assets'
   gem 'active_record_query_trace'
-
   # for unit testing
   gem 'factory_girl_rails'
   gem 'fakeweb'
-  gem 'simplecov', require: false
+  gem 'simplecov', '~> 0.9', require: false
   gem 'mocha', require: false
   gem "codeclimate-test-reporter", require: false
+  gem 'sqlite3'
   gem 'timecop'
 
   # for ui testing
   gem 'cucumber'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '~> 2.41.0'
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
   gem 'spring'
   gem 'spring-commands-testunit'
+  gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
-  gem 'eyes_selenium'
+  gem 'eyes_selenium', '~> 2.5.0'
 end
 
 group :doc do
@@ -71,7 +81,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 3.1.0'
 
 gem 'phantomjs', '~> 1.9.7.1'
 
@@ -80,7 +90,7 @@ gem 'jbuilder', '~> 1.2'
 
 # authentication and permissions
 gem 'devise'
-gem 'devise_invitable', '~> 1.3.4'
+gem 'devise_invitable', '~> 1.5.2'
 gem 'cancancan', '~> 1.10' #CanCan is dead, long live CanCanCan
 
 gem 'omniauth-facebook'
@@ -93,11 +103,11 @@ gem 'haml'
 
 gem 'jquery-ui-rails', '~> 5.0.3'
 
-gem 'nokogiri', '1.6.1'
+gem 'nokogiri', '~> 1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger', '~> 1.11.2',  group: [:staging, :production] # error monitoring
+gem 'honeybadger', '~> 1.11' # error monitoring
 
 gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
@@ -106,6 +116,7 @@ gem 'redcarpet', '~> 3.2.3'
 gem 'geocoder'
 
 gem 'rmagick'
+gem 'mini_magick'
 
 gem 'acts_as_list'
 
@@ -122,7 +133,6 @@ gem 'retryable' # retry code blocks when they throw exceptions
 # Used by a build script.
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
-gem 'i18nema', group: :fast_loc  # faster locale backend (active in dev environment or FAST_LOC=true)
 
 gem 'jwt' # single signon for zendesk
 
@@ -134,7 +144,9 @@ gem 'twilio-ruby' # SMS API for send-to-phone feature
 gem 'font-awesome-rails'
 gem 'sequel', '~> 4.10.0'
 gem 'user_agent_parser'
-gem 'heroku_rails_deflate' # gzip rails content and static assets
+
+gem 'heroku_rails_deflate', group: [:staging, :production, :test, :levelbuilder] # gzip rails content and static assets
+# We don't use this gem in development because it doesn't work with rack-mini-profiler.
 
 gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at column instead of deleting the row
 
@@ -143,17 +155,22 @@ gem 'react-rails', '~> 1.0'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
 gem 'aws-sdk', '~> 2'
 
-gem 'rubocop', require: false, group: [:development, :staging]
+gem 'rubocop', '0.34.2', require: false, group: [:development, :staging]
 gem 'haml_lint', require: false, group: [:development, :staging]
 
 # Reduce volume of production logs
 gem 'lograge'
 
 # Enforce SSL
-gem 'rack-ssl-enforcer', group: [:development, :staging, :test, :levelbuilder]
+gem 'rack-ssl-enforcer'
 
 # PubSub for NetSim
 gem 'pusher', '~> 0.14.5'
 
 gem 'viddl-rb', group: [:development, :staging, :levelbuilder]
-gem 'httparty', group: [:development, :staging, :levelbuilder]
+
+gem 'net-ssh'
+gem 'net-scp'
+gem 'httparty'
+gem 'jquery-cookie-rails'
+gem 'oj'

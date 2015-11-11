@@ -33,7 +33,8 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 var x = 5;
 if(x > 3)
 {
@@ -44,7 +45,7 @@ else
   console.log("not bigger")
 }
 
-</pre>
+```
 
 [/example]
 
@@ -52,7 +53,8 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 var x = 5;
 if(x > 5)
 {
@@ -63,14 +65,15 @@ else
   console.log("not bigger")
 }
 
-</pre>
+```
 
 [/example]
 
 ____________________________________________________
 [example]
 
-<pre>
+
+```
 var x = 5;
 var y = 7;
 if(x > y)
@@ -81,14 +84,15 @@ else
 {
   console.log("not bigger")
 }
-</pre>
+```
 
 [/example]
 
 ____________________________________________________
 [example]
 
-<pre>
+
+```
 var x = "2";
 var y = "12";
 if(x > y)
@@ -99,7 +103,7 @@ else
 {
   console.log("not bigger")
 }
-</pre>
+```
 
 [/example]
 
@@ -108,9 +112,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 x > y
-</pre>
+```
 
 [/syntax]
 

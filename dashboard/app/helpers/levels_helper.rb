@@ -1,7 +1,10 @@
 require 'digest/sha1'
+require 'dynamic_config/gatekeeper'
 
 module LevelsHelper
   include ApplicationHelper
+  include UsersHelper
+
   def build_script_level_path(script_level, params = {})
     if script_level.script.name == Script::HOC_NAME
       hoc_chapter_path(script_level.chapter, params)
@@ -26,18 +29,21 @@ module LevelsHelper
   #   using the value from the `data` param.
   def create_channel(data = {}, src = nil)
 
-    result = ChannelsApi.call(request.env.merge(
-      'REQUEST_METHOD' => 'POST',
-      'PATH_INFO' => '/v3/channels',
-      'REQUEST_PATH' => '/v3/channels',
-      'QUERY_STRING' => src ? "src=#{src}" : '',
-      'CONTENT_TYPE' => 'application/json;charset=utf-8',
-      'rack.input' => StringIO.new(data.to_json)
-    ))
-    headers = result[1]
+    storage_app = StorageApps.new(storage_id('user'))
+    if src
+      data = storage_app.get(src)
+      data['name'] = "Remix: #{data['name']}"
+      data['hidden'] = false
+    end
 
-    # Return the newly created channel ID.
-    headers['Location'].split('/').last
+    timestamp = Time.now
+    storage_app.create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
+  end
+
+  def readonly_view_options
+    level_view_options skip_instructions_popup: true
+    view_options readonly_workspace: true
+    view_options callouts: []
   end
 
   def set_channel
@@ -55,7 +61,7 @@ module LevelsHelper
       # we have to load the channel here.
 
       channel_token = ChannelToken.find_by(level: host_level, user: @user)
-      view_options readonly_workspace: true, callouts: []
+      readonly_view_options
     else
       # If `create` fails because it was beat by a competing request, a second
       # `find_by` should succeed.
@@ -76,38 +82,35 @@ module LevelsHelper
   def select_and_track_autoplay_video
     return if @level.try(:autoplay_blocked_by_level?)
 
-    seen_videos = session[:videos_seen] || Set.new
     autoplay_video = nil
 
     is_legacy_level = @script_level && @script_level.script.legacy_curriculum?
 
     if is_legacy_level
-      autoplay_video = @level.related_videos.find { |video| !seen_videos.include?(video.key) }
+      autoplay_video = @level.related_videos.find { |video| !client_state.video_seen?(video.key) }
     elsif @level.specified_autoplay_video
-      unless seen_videos.include?(@level.specified_autoplay_video.key)
+      unless client_state.video_seen?(@level.specified_autoplay_video.key)
         autoplay_video = @level.specified_autoplay_video
       end
     end
 
     return unless autoplay_video
 
-    seen_videos.add(autoplay_video.key)
-    session[:videos_seen] = seen_videos
+    client_state.add_video_seen(autoplay_video.key)
     autoplay_video.summarize unless params[:noautoplay]
   end
 
   def select_and_remember_callouts(always_show = false)
-    session[:callouts_seen] ||= Set.new
     # Filter if already seen (unless always_show)
     callouts_to_show = @level.available_callouts(@script_level).
-      reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }.
-      each { |c| session[:callouts_seen].add(c.localization_key) }
+      reject { |c| !always_show && client_state.callout_seen?(c.localization_key) }.
+      each { |c| client_state.add_callout_seen(c.localization_key) }
     # Localize
     callouts_to_show.map do |callout|
       callout_hash = callout.attributes
       callout_hash.delete('localization_key')
       callout_text = data_t('callout.text', callout.localization_key)
-      if I18n.locale == 'en-us' || callout_text.nil?
+      if callout_text.nil?
         callout_hash['localized_text'] = callout.callout_text
       else
         callout_hash['localized_text'] = callout_text
@@ -118,31 +121,61 @@ module LevelsHelper
 
   # Options hash for all level types
   def app_options
+    # Unsafe to generate these twice, so use the cached version if it exists.
+    return @app_options unless @app_options.nil?
+
     set_channel if @level.channel_backed?
 
-    callouts = params[:share] ? [] : select_and_remember_callouts(params[:show_callouts])
-    # Set videos and callouts.
-    view_options(
-      autoplay_video: select_and_track_autoplay_video,
-      callouts: callouts
-    )
+    unless params[:share]
+      # Set videos and callouts.
+      view_options(
+        autoplay_video: select_and_track_autoplay_video,
+        callouts: select_and_remember_callouts(params[:show_callouts])
+      )
+    end
 
     # External project levels are any levels of type 'external' which use
     # the projects code to save and load the user's progress on that level.
-    view_options(is_external_project_level: true) if @level.pixelation?
+    view_options(is_external_project_level: true) if @level.is_a? Pixelation
 
     view_options(is_channel_backed: true) if @level.channel_backed?
 
+    post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
+    view_options(post_milestone: post_milestone)
+
     if @level.is_a? Blockly
-      blockly_options
+      @app_options = blockly_options
     elsif @level.is_a? DSLDefined
-      dsl_defined_options
+      @app_options = dsl_defined_options
     elsif @level.is_a? Widget
-      widget_options
+      @app_options = widget_options
+    elsif @level.unplugged?
+      @app_options = unplugged_options
     else
       # currently, all levels are Blockly or DSLDefined except for Unplugged
-      view_options.camelize_keys
+      @app_options = view_options.camelize_keys
     end
+    @app_options
+  end
+
+  # Helper that renders the _apps_dependencies partial with a configuration
+  # appropriate to the level being rendered.
+  def render_app_dependencies
+    use_droplet = app_options[:droplet]
+    use_netsim = @level.game == Game.netsim
+    use_applab = @level.game == Game.applab
+    use_blockly = !use_droplet && !use_netsim
+    hide_source = app_options[:hideSource]
+    render partial: 'levels/apps_dependencies',
+           locals: {
+               app: app_options[:app],
+               use_droplet: use_droplet,
+               use_netsim: use_netsim,
+               use_blockly: use_blockly,
+               use_applab: use_applab,
+               hide_source: hide_source,
+               static_asset_base_path: app_options[:baseUrl]
+           }
   end
 
   # Options hash for Widget
@@ -150,6 +183,14 @@ module LevelsHelper
     app_options = {}
     app_options[:level] ||= {}
     app_options[:level].merge! @level.properties.camelize_keys
+    app_options.merge! view_options.camelize_keys
+    app_options
+  end
+
+  def unplugged_options
+    app_options = {}
+    app_options[:level] ||= {}
+    app_options[:level].merge! level_view_options
     app_options.merge! view_options.camelize_keys
     app_options
   end
@@ -171,7 +212,7 @@ module LevelsHelper
   # Options hash for Blockly
   def blockly_options
     l = @level
-    throw ArgumentError("#{l} is not a Blockly object") unless l.is_a? Blockly
+    raise ArgumentError.new("#{l} is not a Blockly object") unless l.is_a? Blockly
     # Level-dependent options
     app_options = l.blockly_options.dup
     level_options = app_options[:level] = app_options[:level].dup
@@ -180,7 +221,7 @@ module LevelsHelper
     # Fetch localized strings
     if l.custom?
       loc_val = data_t("instructions", "#{l.name}_instruction")
-      unless I18n.locale.to_s == 'en-us' || loc_val.nil?
+      unless I18n.en? || loc_val.nil?
         level_options['instructions'] = loc_val
       end
     else
@@ -195,6 +236,7 @@ module LevelsHelper
     # Script-dependent option
     script = @script
     app_options[:scriptId] = script.id if script
+    app_options[:scriptName] = script.name if script
 
     # ScriptLevel-dependent option
     script_level = @script_level
@@ -217,6 +259,10 @@ module LevelsHelper
     if @level.game.uses_pusher?
       app_options['usePusher'] = CDO.use_pusher
       app_options['pusherApplicationKey'] = CDO.pusher_application_key
+    end
+
+    if @level.is_a? NetSim
+      app_options['netsimMaxRouters'] = CDO.netsim_max_routers
     end
 
     # Process level view options
@@ -248,6 +294,7 @@ module LevelsHelper
     app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
     app_options[:isAdmin] = true if (@game == Game.applab && current_user && current_user.admin?)
+    app_options[:isSignedIn] = !current_user.nil?
     app_options[:pinWorkspaceToBottom] = true if enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if enable_scrolling?
     app_options[:showExampleTestButtons] = true if enable_examples?
@@ -256,7 +303,13 @@ module LevelsHelper
         fallback_response: @fallback_response,
         callback: @callback,
     }
+
     level_options[:lastAttempt] = @last_attempt
+
+    if current_user.nil? || current_user.teachers.empty?
+      # only students with teachers should be able to submit
+      level_options['submittable'] = false
+    end
 
     # Request-dependent option
     app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
@@ -264,6 +317,8 @@ module LevelsHelper
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
     if @game and @game.owns_footer_for_share?
+      # TODO (brent) - these would ideally also go in _javascript_strings.html right now, but it can't
+      # deal with params
       app_options[:copyrightStrings] = {
         :thank_you => URI.escape(I18n.t('footer.thank_you')),
         :help_from_html => I18n.t('footer.help_from_html'),
@@ -276,7 +331,7 @@ module LevelsHelper
     app_options
   end
 
-  LevelViewOptions = Struct.new *%i(
+  LevelViewOptions = Struct.new(*%i(
     success_condition
     start_blocks
     toolbox_blocks
@@ -285,9 +340,10 @@ module LevelsHelper
     embed
     share
     hide_source
-    hide_design_mode
-    hide_view_data_button
-  )
+    script_level_id
+    submitted
+    unsubmit_url
+  ))
   # Sets custom level options to be used by the view layer. The option hash is frozen once read.
   def level_view_options(opts = nil)
     @level_view_options ||= LevelViewOptions.new

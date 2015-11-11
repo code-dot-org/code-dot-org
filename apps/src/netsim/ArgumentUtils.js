@@ -7,12 +7,12 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 4,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 /**
@@ -143,5 +143,3 @@ exports.isArray = function (arg) {
 exports.isArrayOfStrings = function (arg) {
   return Array.isArray(arg) && arg.every(exports.isString);
 };
-
-

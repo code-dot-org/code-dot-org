@@ -52,7 +52,19 @@
       = view :header, variant: "mobile"
 
   #caption_container.container_responsive
-    .col-66{style: "position:relative;"}
+    .col-66.desktop-feature{style: "position:relative;"}
+
+      -# begin temporary for hoc2015:
+      .captionarea{id: "captionarea_special;", style: "cursor: pointer",  onclick:"location.href='/starwars'", class: "homepage-caption-bottom"}
+        %div{style: "left: 50px; top: 50px; text-align:left; padding-left:100px;"}
+          %img{src: "/images/fit-160/starwars_logo.png"}
+          %div{style: "font-size: 18px; text-shadow: 1px 1px 1px #000000;"}
+            = I18n.t(:starwars_subtitle)
+            %br/
+            %br/
+            %br/
+      -# end temporary
+
       - heroes_arranged.each_with_index do |entry, index|
         -# note: this gsheet display parameter unused due to IE8 fix.
         - display = entry[:active_s] == "hide" ? "none" : "block"
@@ -80,28 +92,37 @@
 
       &nbsp;
 
+      -# Temporary for hoc2015:
       -# Maintains a large empty chunk so that the hero image remains large and visible at all browser sizes.
-      #blankspaceleftdesktop.desktop-feature
-      #blankspaceleftmobile.mobile-feature
+      #blankspaceleftdesktop.desktop-feature{style: "cursor: pointer", onclick:"location.href='/starwars'"}
 
-    #actions.col-33  
+      -# Original:
+      -#blankspaceleftdesktop.desktop-feature
+
+    #actions.col-33
       - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
       - actions.each_with_index do |entry, index|
         - display = entry[:active_s] == "hide" ? "none" : "block"
         .action{style: "display: #{display}; opacity: 0"}
-          - if entry[:param1_s] == "video"
-            %img#playimage{src: "/shared/images/play-button.png", width:"40", onclick: "return showVideo_mainvideo();"}
-            %span#playtext{onclick: "return showVideo_mainvideo();"}
-              = I18n.t(entry[:text1_s])
-          - elsif entry[:param1_s] == "learn"
-            %a#herolearnlink{href: "/learn"}
-              %button#herolearnbutton
-                = I18n.t(entry[:text1_s])
-          -# elsif entry[:param1_s] == "petition"
-            %span#petitionaction{onclick: "expandPetition(); adjustScroll('petitionblock');"}
-              = I18n.t(entry[:text1_s])
-          .actiongap
-            &nbsp;
+          - if entry[:param1_s] == "hoc_title"
+            #title= I18n.t(entry[:text1_s])
+          - elsif entry[:param1_s] == "num_served"
+            #subtitle.students-served= I18n.t(entry[:text1_s]).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+          - elsif entry[:param1_s] == "hoc_buttons"
+            .buttongroup
+              %a{href: entry[:param3_s]}
+                %button.herohocbutton= I18n.t(entry[:text1_s])
+              %a{href: entry[:param4_s]}
+                %button.herohocbutton= I18n.t(entry[:param2_s])
+            %div{style: "clear: both;"}
+          - elsif entry[:param1_s] == "video"
+            %img#playimage{src: "/shared/images/play-button.png", width:"25", onclick: "return showVideo_mainvideo();"}
+            %span#playtext{onclick: "return showVideo_mainvideo();"}= I18n.t(entry[:text1_s])
+          - elsif entry[:param1_s] == "volunteers"
+            #volunteeraction
+              %a{href: "/volunteer"}= I18n.t(entry[:text1_s])
+
+    #blankspaceleftmobile.mobile-feature
 
 :javascript
   var petition;
@@ -140,7 +161,7 @@
       $(lastImageId + " .caption3").animate({opacity:0}, { duration: 2000 });
     }
 
-    if (nextImageId !== null) 
+    if (nextImageId !== null)
     {
       var nextImageId = "#captionarea" + nextImage;
       //console.log("showing", nextImageId);
@@ -178,5 +199,9 @@
 
   $.ready()
   {
-    timerId = setInterval(cycleImage, #{hero_display_time});
+    var numWideHeroes = $(".widehero").length;
+
+    if (numWideHeroes > 1) {
+      timerId = setInterval(cycleImage, #{hero_display_time});
+    }
   }

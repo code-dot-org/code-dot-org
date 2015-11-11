@@ -2,8 +2,8 @@
   errors:
     messages:
       not_saved: 'Ver snill og endre fylgjande feil:'
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      too_young: Det er aldersgrense på dette innholdet og det er ikke tilgjengelig
+        for yngre elever
   activerecord:
     errors:
       messages:
@@ -352,8 +352,10 @@
       viewing_solution: Viser løsning
       try_it_yourself: Prøv selv
       section: Seksjon
-      example: Example Solution
-      example_with_number: Example Solution %{solution_number}
+      example: Løsnigsforslag
+      example_with_number: Løsningsforslag nr %{solution_number}
+      submitted_on: Sendt inn %{date}
+      unsubmit: Trekk tilbake
   user:
     email_confirm_needed: 'E-postadressa er ikkje stadfesta:'
     email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'
@@ -361,11 +363,11 @@
     email_resend_confirm: Send ny stadfesting
     new_password_hint: (la stå tomt dersom du ikkje vil forandre det)
     current_password_hint: (vi treng passordet ditt for å stadfeste endringane dine)
-    delete: Slett kontoen
-    delete_text: Klikk på knappen under for å slette kontoen din.
+    delete: Slett kontoen din
+    delete_text: Klikk på knappen under for å sletta kontoen din.
     delete_text_teacher_note: 'NB: Hvis du sletter din konto, slettes ikke dine elevers
       kontoer.'
-    delete_confirm: Er du sikker på at du vil slette denne kontoen?
+    delete_confirm: Er du sikker på at du vil sletta kontoen din?
   user_level:
     completed: Fullført
     tried: Forsøkt
@@ -403,7 +405,7 @@
     local_school: den lokale skulen
     online: på nett
     see_details: Se detaljar
-    view_course: View Course
+    view_course: Start kurset
     prize_info: 'Premier for deltaking (gjeld berre offentleg lærerarar i USA): opp
       til $1000 i klasseromsmidler.'
     tryfirst: 'Eller du kan prøve først og registrere deg seinare:'
@@ -421,12 +423,12 @@
     heading_legacy: <h2>Våre generelle kurs for</h2><h1>Alle aldrar</h1>
     your_gallery: Galleri
     no_primary_course: Prøv et kurs på Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Prøv et av Code Studio kursene ved å velge nedenfor
     print_certificate: Utskrivingssertifikat
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with
-      code.
+    title: Lære i Code Studio
+    description: Alle kan lære programmering. Lag egne spill, programmer og tegninger
+      ved å kode.
   gender:
     male: Mann
     female: Kvinne
@@ -435,33 +437,34 @@
     student: Elev
     teacher: Lærar
   footer:
-    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
-      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
-      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
-      advisors</a> for their support in creating Code Studio.
+    thank_you: Vi takker våre <a href="https://code.org/about/donors"> sponsorer</a>,
+      <a href="https://code.org/about/partners"> samarbeidspartnere</a>, <a href="https://code.org/about/team">
+      medhjelpere</a>, våre skuespillere og våre <a href="https://code.org/about/advisors">rådgivere</a>
+      for deres hjelp med å lage Code Studio.
     help_from_html: Ingeniørar frå Google, Microsoft, Facebook og Twitter hjelpte
       til med å lage denne guiden.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
-      create these materials.
+    help_from_html_old: Utviklere fra Google, Microsoft, Facebook og Twitter hjelpte
+      til med å lage disse kursene.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
       Alle rettigheter reservert.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. Alle rettigheter reservert.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Alle rettigheter
+      tilhører Rovio Entertainment Ltd.<br />Plants vs. Zombies&#8482; &amp; &copy;
+      %{current_year} Alle rettigheter tilhører Electronic Arts Inc.
     powered_by_aws: Drive av Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
-      Hour of Code&reg; are trademarks of Code.org.'
-    copyright: Copyright
+    trademark: © Code.org, %{current_year}. Code.org®, CODE-logoen og Hour of Code
+      (Kodetimen) ® er varemerker tilhørende Code.org.
+    copyright: Opphavsrett
     more: Meir
     feedback: Gi tilbakemelding
     translate: Hjelpe oss med å omsetje til ditt språk
     support: Brukarstøtte
     support_url: http://support.code.org/
-    tos_short: Terms
+    tos_short: Vilkår
     tos: Vilkår
     privacy: Personvern
     secure: Sikker versjon
+    report_abuse: Rapporter misbruk
   reference_area:
     title: Trenger du hjelp?
     subtitle: Sjå desse videoane og tipsa
@@ -607,8 +610,8 @@
   dialog:
     ok: OK
     startover_title: Er du sikker på at du vil byrje på nytt?
-    startover_body: This will reset the puzzle to its start state and reset all the
-      data you've added or changed.
+    startover_body: Dette nullstiller oppgaven og sletter alle blokkene du har lagt
+      til eller endret.
     startover_ok: Byrj på nytt
     startover_cancel: Avbryt
   time:
@@ -703,4 +706,33 @@
       prosjekter. De du har delt lenken med vil ikke lenger kunne se prosjektet.
     view_all: Vis mine prosjekter
     remix: Remix
-    click_to_remix: Klikk 'Remix"til spin-off din egen versjon!
+    click_to_remix: Klikk "Remix" til spin-off din egen versjon!
+    edit_project: Rediger prosjekt
+    abuse:
+      tos: Dette prosjektet er rapportert for brudd på Code.orgs<a href='http://code.org/tos'>
+        Vilkår</a> og kan ikke deles med andre.
+      contact_us: Hvis du mener dette er en feil, vennligst <a href='https://code.org/contact'>kontakt
+        oss.</a>
+      go_to_code_studio: Gå til Kode Studio
+      report_abuse_form:
+        intro: Hvis du har møtt på støtende innhold, trusler, nettmobbing, trakassering,
+          eller en forekomst av brudd på opphavsretten for innhold du eier mens du
+          bruker apps bygget på Code Studio, vennligst fyll ut skjemaet under. Vi
+          vil ta rapporteringen svært alvorlig, undersøke forholdet og iverksette
+          nødvendige tiltak.
+        validation:
+          email: Oppgi en e-post adresse
+          age: Angi alder
+          abuse_type: Vær vennlig å svar på hvordan dette innholdet bryter med vilkårene
+          abuse_detail: Angi detaljer om innholdet du rapporterer
+        abusive_url: URL til innholdet blir rapportert
+        abuse_type:
+          question: Hvordan krenker dette innholdet %{link_start}Villkår for bruk%{link_end}?
+          harassment: Trusler, nettmobbing, trakkasering
+          offensive: Krenkende innhold
+          infringement: Opphavsrettskrenkelse
+          other: Anna
+        detail: Vennligst oppgi så mange detaljer som mulig om innholdet du rapporterer.
+        acknowledge: Ved å sende inn denne informasjonen aksepterer vil det bli håndtert
+          i henhold til vilkårene for%{link_start_privacy}Personvernerklæring%{link_end}
+          og %{link_start_tos}Bruksvillkår%{link_end}

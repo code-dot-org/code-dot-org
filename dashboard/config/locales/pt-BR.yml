@@ -363,8 +363,10 @@
       viewing_solution: Visualizando solução
       try_it_yourself: Tente você mesmo
       section: Turma
-      example: Example Solution
-      example_with_number: Example Solution %{solution_number}
+      example: Solução do Exemplo
+      example_with_number: Solução do Exemplo %{solution_number}
+      submitted_on: Enviado em %{date}
+      unsubmit: Cancelar envio
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -479,6 +481,7 @@
     tos: Termos de Serviço
     privacy: Política de Privacidade
     secure: Versão Segura
+    report_abuse: Reportar abuso
   reference_area:
     title: Precisa de ajuda?
     subtitle: Veja os vídeos e as dicas
@@ -729,3 +732,32 @@
     view_all: Visualizar meus projetos
     remix: Remix
     click_to_remix: Clique em "Remix" para fazer sua própria versão!
+    edit_project: Editar projeto
+    abuse:
+      tos: Esse projeto foi denunciado por violar os <a href='http://code.org/tos'>Termos
+        de Serviço</a> da Code.org e não pode ser compartilhado com outras pessoas.
+      contact_us: Se você acha que isso é um erro, <a href='https://code.org/contact'>contate-nos.</a>
+      go_to_code_studio: Ir para o Code Studio
+      report_abuse_form:
+        intro: Se você encontrou conteúdo ofensivo, ameaças, bullying cibernético,
+          assédio ou algum exemplo de violação dos direitos autorais de conteúdos
+          que você possui enquanto usava os aplicativos feitos no Code Studio, preencha
+          o formulário abaixo. Vamos levar seu relatório muito a sério, investigar
+          e tomar a ação adequada.
+        validation:
+          email: Forneça um endereço de e-mail
+          age: Especifique uma idade
+          abuse_type: Diga como esse conteúdo viola os Termos de Serviço
+          abuse_detail: Forneça detalhes sobre o conteúdo que você está reportando
+        abusive_url: URL do conteúdo reportado
+        abuse_type:
+          question: Como esse conteúdo viola os%{link_start}Termos de Serviço%{link_end}?
+          harassment: Ameaças, bullying cibernético, assédio
+          offensive: Conteúdo ofensivo
+          infringement: Violação de direitos autorais
+          other: Outros
+        detail: Forneça o maior número de detalhes possível sobre o conteúdo que você
+          está reportando.
+        acknowledge: Ao enviar essas informações você reconhece que elas serão tratadas
+          de acordo com a %{link_start_privacy}Política de Privacidade%{link_end}
+          e os %{link_start_tos}Termos de Serviço%{link_end}

@@ -1,252 +1,267 @@
 * * *
 
-layout: wide
+title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-# Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
+<%= view :signup_button %>
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <https://code.org/learn>.
+# როგორ შევქმნათ ტუტორიალები კოდის ერთი საათისა™ და კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეულის ფარგლებში
 
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+Code.org მრავალი სახის კოდის ერთი საათი™-ს აქტივობებს ჩაატარებს Code.org-ის, კოდის ერთი საათისა და CSEdWeek-ის ვებგვერდებზე. მიმდინარე სიები არის აქ [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
+
+ჩვენი უმთავრესი მიზანია ოპტიმალური პირობები შევქმნათ იმ მოსწავლეებისა და მასწავლებლებისთვის, ვინც პირველად გაცენობა ინფორმატიკას. დაგეგმეთ თქვენი აქტივობები პროგრამირებასა და ინფორმატიკაში აბსოლუტურად გამოუცდელი მოსწავლეების გათვალისწინებით.
 
   
 
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa).**
+**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
 
-**NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
+**სიხალე:** ვგეგმათ წარვადგინოთ ახალი ფორმატი კოდის ერთი საათის იმ აქტივობებისთვის, რომელთაც მასწავლებელი წარუძღვრება. ეს აქტივობები ჩამოთვლილი იქნება დამოუკიდებელი აქტივობების ბოლოს, მოსწავლეებისთვის განკუთვნილ გვერდებსა და წერილებში. დაწვრილებით – დაბლა.
 
 <a id="top"></a>
 
-## Index:
+## სარჩევი:
 
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
-    
-  * [How to submit (Due 10/31/2015)](#submit)  
-    
-  * [Suggestions for designing your activity](#design)  
-    
-  * [Trademark Guidelines](#tm)  
-    
-  * [Tracking Pixel](#pixel)  
-    
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
-    
-  * [A note for students with disabilities](#disabilities)
-
-<a id="inclusion"></a>
-
-## How tutorials will be evaluated for inclusion
-
-A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
-
-**Tutorials will be listed higher if they are:**
-
-  * high quality
-  * self-directed, don’t require any instruction
-  * designed for beginners - among students AND teachers
-  * designed as a ~ 1 hour activity
-  * require no sign up
-  * require no payment
-  * require no installation
-  * work across many OS/device platforms, including mobile and tablets
-  * work across multiple languages
-  * promote learning by all demographic groups (esp. under-represented groups)
-  * not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
-
-**Tutorials will be listed lower if they are:**
-
-  * lower quality
-  * more advanced level of teaching (not for beginners)
-  * require a high degree of involvement by a teacher with lots of prep (i.e. not self-guided for students)(see below)
-  * have a limited number of supported OS/device platforms - for Web-based platforms you should aim to support all of the following: IE9+, and the latest Chrome, Firefox, and Safari
-  * work only in English
-  * reinforce stereotypes that hinder participation by under-represented student groups
-  * serve as an upsell to a learning platform that charges tuition
-
-**Tutorials will NOT be listed if they:**
-
-  * are not designed to be a (roughly) one-hour activity
-  * require sign up 
-  * require payment
-  * require installation (other than mobile apps)
-  * focus only on HTML + CSS web design
-  * are submitted after the submission deadline, or with incomplete information (see below)
-
-Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
-
-[**Back to the top**](#top)
+  * [კოდის ერთი საათის™ აქტივობების შექმნის ზოგადი ინსტრუქცია](#guidelines)
+  * [როგორ შეფასდება ტუტორიალის ინკლუზიურობა](#inclusion)
+  * [წარდგენის წესები (ვადა: 10/15/2015)](#submit)
+  * [რჩევები აქტივობებთან დაკავშირებით](#design)
+  * [სავაჭრო ნიშნის გამოყენების წესები](#tm)
+  * [პიქსელ–კონტროლი](#pixel)
+  * [თქვენი ტუტორიალების, CSEd კვირეულისა და კოდის ერთი საათის პოპულარიზაცია](#promote)
+  * [მინიშნებები შშმ მოსწავლეებისთვის](#disabilities)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## New for 2015: two formats of activities: self-guided or *lesson-plan*
 
-  * **Subject:** Introductory computer science or programming (not HTML).
-  * **Goal:** Give beginners an accessible first taste of programming.
-  * **Tone:** 
-      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody *can* learn!
-      * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
-      * Encourage students to create something that can be shared with friends/online.
-  * **Technical requirements**: 
-      * Best: Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>).
-      * Okay, but not preferred: app-install, desktop app, or game-console experiences
-  * **Self-Guided Format**: Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
-  * **Teacher-Led Format *(NEW)***: This year, we will be adding a new format for tutorials that are follow a traditional lesson plan form rather than a guided-puzzle game experience. We’re doing this mainly because with tens of thousands of educators who have tried the Hour of Code more than once, we believe a good number will invest the time to prepare a more creative, less one-dimensional activity with their students. While these types of activities are difficult without a teacher facilitating them, more open-ended activities if facilitated properly can better showcase the creative nature of computer science. On student-facing pages we will still list teacher-led activities below the self-guided ones, but we will specifically call them out on pages or emails meant for educators. 
+რადგან უკვე ათი ათასობით მასწავლებელმა სცადა კოდის საათი, მრავალი კლასი ისეთი აქტივობებისთვისაა მზად, რომლებიც უფრო კრეატიულია, ნაკლებად ერთგანზომილებიანი და იძლევა კომპიუტერული მეცნიერების საფუძვლების შესწავლის საშუალებას. მასწავლებლებისთვის შთაგონების პოვნაში დასახმარებლად, გვსურს კოდის ერთი საათის ვეტერანებისთვის "მასწავლებლების მიერ ჩატარებული" ერთსაათიანი გაკვეთილებისა და აქტივობების გეგმების შეგროვება და კურირება. ჩვენ ასევე განვაგრძობთ "თვითშემსწავლი" ფორმატის პოპულარიზაციას.
 
-[**Back to the top**](#top)
+**გამოაგზავნეთ მასწავლებლის მიერ ჩატარებული გაკვეთილის გეგმა, საუკეთესო შემთხვევაში, სხვადასხვა საგნისთვის *(ახალი)***: გაქვთ მიმზიდველი ან უნიკალური იდეა კოდის ერთი საათის გაკვეთილისთვის? შესაძლოა ზოგიერთ მასწავლებელს კოდის ერთი საათის აქტივობების ჩატარება არა თავსატეხებსა და თამაშებზე დაფუძნებით, არამედ ტრადიციული საგაკვეთილო ფორმატით ერჩივნოს. სწორი ხელშეწყობის შემთხვევაში ღია აქტივობებით უკეთ შეიძლება კომპიუტერული მეცნიერების კრეატიული ბუნების წარმოჩენა. ჩვენ სიამოვნებით შევაგროვებთ **სხვადასხვა საგნისთვის განკუთვნილ ერთსაათიან გაკვეთილის გეგმებს**. მაგალითად, გეომეტრიის გაკვეთილზე პროგრამირების სწავლების ერთსაათიანი გაკვეთილის გეგმა. ან სიტყვიერი (Mad-lib) სავარჯიშო ინგლისურის გაკვეთილისთვის. ან ტესტირება-შემოქმედების კრეატიული აქტივობა ისტორიის გაკვეთილისთვის. ეს დაგვეხმარება სხვა საგნის მასწავლებლების აყვანაში, რომელთაც კოდის ერთი საათის უნიკალური აქტივობის ჩატარება შეეძლებათ თავიანთ სფეროში, რაც წარმოაჩენს იმას, თუ როგორ შეუძლია კომპიუტერულ მეცნიერებას იქონიოს გავლენა და განავითაროს მრავალი განსხვავებული დარგი.
+
+თქვენი გაკვეთილის გეგმისთვა შეგიძლიათ ამ [ცარიელი თარგით](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) დაიწყოთ.
+
+მაგალითები:
+
+  * [სარკული ანარეკლები (აქტივობა ხელოვნების მასწავლებლისთვის)](https://csedweek.org/csteacher/mirrorimages.pdf)
+  * [არდუინოსთან დაკავშირებული აქტივობა ფიზიკის მასწავლებლისთვის](https://csedweek.org/csteacher/arduino.pdf)
+  * [ტექნოლოგიის ისტორიასთან დაკავშირებული აქტივობა ისტორიის მასწავლებლისთვის](https://csedweek.org/csteacher/besttechnology.pdf)
+
+[<button>როგორ შემიძლია საკუთარი სასწავლო გეგმის გამოგზავნა?</button>](#submit)
+
+  
+  
+**მოსწავლეების მიერ ჩატარებული (თვითშემსწავლი) ფორმატი**: კოდის ერთი საათი თავიდან ძირითადად თვითშემსწავლი გაკვეთილებისა და ტუტორიალების წარმატებაზე დაფუძნდა, სადაც მასწავლებელი მხოლოდ სურვილისამებრ უწყობდა ხელს მოსწავლეებს. არჩევანი მრავალფეროვანია, მაგრამ თუ გსურთ ახლის შექმნა, ეს აქტივობები სახალისო უნდა იყოს მარტო მომუშავე მოსწავლისთვის ან კლასისთვის, სადაც მასწავლებელი მინიმალურადაა მომზადებული ან თითქმის არ გააჩნია ცოდნა კომპიუტერულ მეცნიერებაში. მოსწავლეებისთვის უნდა იყოს მითითებები და არა ღია ერთსაათიანი გამოწვევა. იდეალურ შემთხვევაში, მითითებები და გაკვეთილები პირდაპირ პროგრამირების პლატფორმასთანაა ინტეგრირებული ტაბების ან ფანჯრების გაცვლის თავიდან ასაცილებლად გაკვეთილსა და პროგრამირების პლატფორმას შორის.
+
+შენიშვნა: მოსწავლეებისთვის განკუთვნილ გვერდებზე მასწავლებლების მიერ ჩატარებული აქტივობები სიაში თვითშემსწავლი აქტივობების *ქვეშ* იქნება განთავსებული, მაგრამ მასწავლებლებისთვის განკუთვნილ გვერდებსა და ელ. წერილებში მათ სპეციფიურად გამოვყოფთ.
+
+## კოდის ერთი საათის™ აქტივობების შექმნის ზოგადი ინსტრუქცია
+
+კოდის ერთი საათის მიზანია საშუალება მისცეს ახალბედებს, პირველად გამოსცადონ თავი კომპიუტერულ მეცნიერებასა ან პროგრამირებაში (არა HTML). ძირითადი მოტივაცია ასეთია:
+
+  * კომპიუტერული მეცნიერება არაა მხოლოდ გენიოსებისთვის, მიუხედავად ასაკისა, სქესისა და რასისა. ნებისმიერს *შეუძლია* სწავლა!
+  * კომპიუტერული მეცნიერება მრავალი სახის ინტერესსა და სფეროს უკავშირდება. ყველასთვის *სასურველია* სწავლა!
+  * გაამხნევეთ მოსწავლეები რომ შექმნან რამე, რისი გაზიარებაც მეგობრებთან/ონლაინ შეიძლება.
+
+**ტექნიკური მოთხოვნები**: სასკოლო და საკლასო ტექნოლოგიური მოწყობილობების სიმრავლის გამო, საუკეთესო აქტივობებად ითვლება ინტერნეტზე დაფუძნებული ან სმარტფონთან შეთავსებადი, ან, სხვა შემთხვევაში, უსადენო აქტივობები, რომლებიც კომპიუტერული მეცნიერების ცნებების შესწავლს საშუალებას კომპიუტერის გამოყენების გარეშე იძლევა (იხილეთ <http://csunplugged.com/>). აქტივობა, რომელიც საჭიროებს აპლიკაციის დაყენებას, დესკტოპის აპლიკაციას ან თამაშის კონსოლის გამოცდილებას კარგია, მაგრამ არა იდეალური.
+
+[**ზემოთ დაბრუნება**](#top)
+
+<a id="inclusion"></a>
+
+## როგორ შეფასდება ტუტორიალის ინკლუზიურობა
+
+კომპიუტერული მეცნიერების მასწავლებლების კომიტეტი შეაფასებს წარდგენილ გაკვეთილებს ხარისხობრივი და რაოდენობრივი მაჩვენებლების მიხედვით, მათ შორის სხვა მასწავლებლების გამოკითხვის საფუძველზეც.
+
+**გაკვეთილის შეფასება გაიზრდება, თუ ის:**
+
+  * მაღალი ხარისხისაა
+  * გათვლილია დამწყებებ მოსწავლეებსა და მასწავლებლებზე
+  * წარმოადგენს დაახლოებით ერთსაათიან აქტივობას
+  * არ მოითხოვს რეგისტრაციას
+  * უფასოა
+  * არ მოითხოვს პროგრამული უზრუნველყოფის დაყენებას
+  * მუშაობს სხვადასხვა ოპერაციულ სისტემებსა და მოწყობილობებზე, მათ შორის მობილურებსა და პლანშეტებზე
+  * მისაწვდომია რამდენიმე ენაზე
+  * ხელს უწყობს სწავლას ნებისმიერ დემოგრაფიულ ჯგუფში
+  * არ არის გათვლილი მხოლოდ HTML+CSS ვებ დიზაინზე (ჩვენი მიზანია კომპიუტერული მეცნიერება და არა მხოლოდ გვერდების შექმნა)
+
+**გაკვეთილის შეფასება დაიწევს, თუ ის:**
+
+  * დაბალი ხარისხისაა
+  * გათვლილია გამოცდილ მოსწავლეებზე (არა დამწყებებზე)
+  * მუშაობს ოპერაციული სისტემებისა და მოწყობილობების შეზღუდულ შერჩევაზე – ვებ–ტუტორიალისთვის სასურველია მუშაობდეს შემდეგ ბრაუზერებში: IE9+, და Chrome, Firefox, Safari უკანასკნელ ვერსიებში
+  * მხოლოდ ინგლისურადაა
+  * რამე სახით გამოხატავს დემოგრაფიულ სტერეოტიპებს მოსწავლეების მიმართ
+  * შედგენილია ისე, რომ გულისხმობს სწავლის გაგრძელებას ფასიან პლატფორმაზე
+
+**გაკვეთილი არ შეფასება, თუ ის:**
+
+  * არ არის დაახლოებით ერთსაათიანი აქტივობის გეგმა
+  * საჭიროებს რეგისტრაციას 
+  * ფასიანია
+  * მოითხოვს პროგრამული უზრუნველყოფის დაყენებას (მობ. აპლიკაციის გარდა)
+  * ასწავლის მხოლოდ HTML + CSS ვებ–დიზაინს
+  * მოწოდებულია საბოლოო ვადის შემდეგ ან შეიცავს არასრულ ინფორმაციას (იხ. დაბლა)
+
+**თუ გაკვეთილი მოსწავლის მიერაა ჩატარებული** მოსწავლეების მიერ ჩატარებული გაკვეთილები ორიენტირებული უნდა იყოს ინდივიდზე და არ უნდა საჭიროებდეს მითითებებს კომპიუტერულ მეცნიერებასთან დაკავშირებით და დახმარებას მასწავლებლისგან
+
+ჩვენი საბოლოო მიზანია გავზარდოთ მოსწავლეების და მასწავლებლების ჩართულობა კომპიუტერულ მეცნირებაში, ვაჩვენოთ მათ, რომ კომპიუტერული მეცნიერება მისაწვდომია ყველასთვის და "უფრო მარტივია, ვიდრე გგონია". ამ მიზნის მიღწევა უფრო მარტივია, თუ სფეროსთან პირველი კონტაქტისთვის ავარჩევთ მცირე რაოდენობის, მაგრამ ყველაზე ხარისხიან მასალას, რაც საგრძნობლად გაუმარტივებს მასწავლებელს არჩევანს. გახსოვდეთ, რომ 2013 და 2014 წლების კოდის ერთი საათი იყო ფანტასტიკურად წარმატებული, მასში 120 მილიონზე მეტმა მოსწავლემ მიიღო მონაწილეობა, ჩვენ კი მივიღეთ უამრავი დადებითი შეფასება მასწავლებლებისგან. შედეგად, უკვე არსებული გაკვეთილები ძალიან კარგი ხარისხისაა. კოდის საათში გაკვეთილების დამატების ჩვენი დღევანდელი მიზანი არის არა არჩევანის, არამედ ხარისხის გაზრდა მოსწავლეებისთვის, ან, 2015 წლის ღონისძიების გლობალურობის გათვალისწინებით, არჩევანის გაფართოება არაინგლისურენოვანი მოსწავლეებისთვის.
+
+[**ზემოთ დაბრუნება**](#top)
 
 <a id="submit"></a>
 
-## How to submit (Due 10/31/2015)
+## წარდგენის წესები (ვადა: 10/15/2015)
 
-Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
+Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
-**What you’ll need:**
+**რა დაგჭირდებათ:**
 
-  * Your name, logo (jpg, png, etc.)
-  * URL for a screenshot or marketing image of the HoC activity. Images/screenshots should be 446 x 335 resolution exactly. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it.
-  * URL Link for the logo
-  * Name of the activity
-  * URL Link to the activity
-  * URL Link to teacher notes (optional, see details below)
-  * Description of the activity (both desktop-view and mobile-view) 
-      * **Max character count for desktop-view:** 384
-      * **Max character count for mobile-view:** 74
-      * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-  * A list of tested/compatible platforms: 
-      * Web based: Which platforms have you tested 
-          * OS - Mac, Win, and versions
-          * Browsers - IE8, IE9, IE10, Firefox, Chrome, Safari
-          * iOS mobile Safari (mobile-optimized)
-          * Android Chrome (mobile-optimized)
-      * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-      * Unplugged
-  * A list of supported languages and appropriate format: 
-      * Tutorials should specify which languages they support using 2-character language codes, e.g. en - English; ja - Japanese
-      * If more specificity is necessary, using dashes, e.g. fr-be - French (Belgium) or fr-ca - French (Canada)
-      * ***Note: Language-detection is the job of the tutorial provider, we will redirect all users to the single URL provided.*** 
-  * If you submit an online tutorial, we need to know whether it is [COPPA compliant](http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act) or not.
-  * Recommended grade level(s) for intended users. You may refer to the [Computer Science Teachers’ Association’s K-12 Standards](http://csta.acm.org/Curriculum/sub/K12Standards.html) for grade-appropriate computer science concepts. Example grade levels include: 
-      * Elementary school: grades K-2 or 3-5
-      * Middle School: grades 6-8
-      * High School: grades 9-12
-      * All ages
-  * Please also include recommended computer science knowledge within grade level: Beginner, Intermediate, or Advanced. The Hour of Code website will highlight activities for Beginners most prominently. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-  * Technical requirements: 
-      * In order to more accurately track participation we want every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials. Place a starting pixel-image on the start page and a final pixel-image on the end page. Do not place pixels on interim pages). See the Tracking Pixel section below for more details. 
-      * Upon finishing your activity, users should be directed to <http://code.org/api/hour/finish> where they will be able to: 
-          * Share on social media that they completed the Hour of Code
-          * Receive a certificate that they completed the Hour of Code
-          * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to <http://code.org/api/hour/finish> as well. 
-  * *(Optional)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
-      * For online activities (especially smartphone/tablet apps): 
-          * Number of users
-          * How many completed the task
-          * Average time on task
-          * Number of total lines of code written over all users
-          * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-      * For offline activities 
-          * Number of downloads of paper version of activity (if applicable)
+  * თქვენი სახელი, ლოგო (jpg, png, etc.)
+  * URL screenshot-ის ან HoC აქტივობის მარკეტინგის ფოტოსთვის. სურათები/screenshot-ები უნდა იყოს ზუსტად 446 x 335 გაფართოების. თუ ადეკვატური სურათი მოწოდებული არ იქნა, შესაძლოა თქვენი გაკვეთილის screenshot ჩვენ თვითონ გავაკეთოთ, ან არ მოვათავსოთ ის სიაში.
+  * URL ბმული ლოგოსთვის
+  * აქტივობის სახელი
+  * URL ბმული აქტივობისთვის
+  * მასწავლებლის შენიშვნების URL ბმული (ნებაყოფლობითი, დეტალები იხილეთ ქვემოთ)
+  * აქტივობის აღწერილობა (desktop და მობილური ვერსიაც) 
+      * **ასოების მაქსიმალური რაოდენობა desktop ვერსიისთვის:** 384
+      * **ასოების მაქსიმალური რაოდენობა მობილური ვერსიისთვის:** 74
+      * გთხოვთ მოგვაწოდოთ აღწერილობაც, მიუხედავად იმისა, მოსწავლეების მიერ იქნება ის წაყვანილი თუ მასწავლებლის მიერ. დამატებით, ზოგიერთი სკოლა დაინტერესებულია იმით, თუ რომელ სტანდარტებს იყენებს კოდის საათი, Common Core-ს თუ Next Generation Science-ს. თუ აქტივობა სპეციფიურ სტანდარტებს ეხება, სჯობს ეს ინფორმაციაც მოგვაწოდოთ.
+  * შემოწმებული/შეთავსებადი პლატფორმების სია: 
+      * ინტერნეტზე დაფუძნებული: რომელი პლატფორმები შეამოწმეთ 
+          * OS - Mac, Win და ვერსიები
+          * ბრაუზერები - IE8, IE9, IE10, Firefox, Chrome, Safari
+          * iOS მობილური Safari (ოპტიმიზებული მობილურისთვის)
+          * ანდროიდის Chrome (ოპტიმიზებული მობილურისთვის)
+      * არა ინტერნეტზე დაფუძნებული: დააკონკრეტეთ პლატფორმა ადგილობრივი კოდისთვის (Mac, Win, iOS, Android, xBox, other)
+      * უსადენო
+  * მხარდაჭერილი ენებისა და ადეკვატური ფორმატების სია: 
+      * გაკვეთილებში დაკონკრეტებული უნდა იყოს თუ რომელი ენებია მხარდაჭერილი, ენების ორასოიანი კოდების გამოყენებით, მაგალითად en - English; ja - Japanese
+      * თუ საჭირო იქნა მეტი სპეციფიურობა, გამოიყენეთ დეფისი, მაგალითად fr-be - French (Belgium) ან fr-ca - French (Canada)
+      * ***შენიშვნა: ენის აღმოჩენა გაკვეთილის მომწოდებლის მოვალეობაა, ჩვენ ყოველ მომხმარებელს ერთ მოწოდებულ URL-ზე გადავამისამართებთ.*** 
+  * თუ წარადგენთ ონლაინ გაკვეთილს, დაგვჭირდება იმისი ცოდნა, არის თუ არა ის [COPPA-სთან თავსებადი](http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act).
+  * რეკომენდებული დონეები სასურველი მომხმარებლებისთვის. შეგიძლიათ მიმართოთ [კომპიუტერული მეცნიერების მასწავლებლების ასოციაციის K-12 სტანდარტები](http://csta.acm.org/Curriculum/sub/K12Standards.html) კომპიუტერული მეცნიერების ასაკთან შესაბამისი კონცეფციებისთვის. სამაგალითო კლასის დონეებში შედის: 
+      * ელემენტარული სკოლა: კლასები K-2 ან 3-5
+      * საშუალო სკოლა: კლასები 6-8
+      * მაღალი სკოლ: კლასები 9-12
+      * ყველა ასაკი
+  * გთხოვთ ასევე გაითვალისწინოთ კომპიუტერული მეცნიერების რეკომენდებული ცოდნა კლასის დონეებისთვის: დამწყები, საშუალო ან მოწინავე. კოდის საათის ვებგვერდი ყველაზე მკაფიოდ დამწყებების აქტივობებს გაუსვამს ხაზს. თუ გსურთ კოდის საათი™-ს საშუალო და მოწინავე აქტივობების მომზადება, გთხოვთ გაითვალისწინოთ თქვენი აქტივობისთვის საჭირო ადრეული ცოდნა.
+  * ტექნიკური საჭიროებები: 
+      * იმისთვის, რომ უფრო ზუსტად ვადევნოთ თვალი მონაწილეობას, გვსურს ყოველ მესამე საერთო გაკვეთილის პარტნიორს თავისი კოდის საათის პირველ და ბოლო გვერდებზე 1-პიქსელიანი სამეთვალყურეო სურათი ჰქონდეს. მოათავსეთ საწყისი პიქსელ-სურათი საწყის გვერდზე და საბოლოო პიქსელ-სურათი საბოლოო გვერდზე. არ მოათავსოთ პიქსელები შუალედურ გვერდებზე). იხილეთ სამეთვალყურეო პიქსელის სექცია ქვემოთ მეტი დეტალისთვის. 
+      * აქტივობის დასრულებისას, მომხმარებლები უნდა გადამისამართდნენ [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) სადაც მათ შეეძლებათ: 
+          * გააზიარეთ სოციალურ მედიაზე რომ მათ დაასრულეს კოდის საათი
+          * მიიღეთ სერთიფიკატი, რომ მათ დაასრულეს კოდის საათი
+          * იხილეთ ლიდერთა დაფა იმის შესახებ, თუ რომელი ქვეყნებს/ქალაქებს აქვთ მონაწილეობის უმაღლესი მაჩვენებელი კოდის საათის აქტივობებში
+          * გთხოვთ, იმ მომხმარებლებისთვის, რომლებიც ერთ საათს დაუთმობენ თქვენს აქტივობას და ვერ დაასრულებენ მას, აქტივობას დაურთოთ ღილაკი, რომელსაც ეწერება "მე დავასრულე ჩემი კოდის ერთი საათი" და რომელიც მომხმარებელს [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %)-ზე დააბრუნებს. 
+  * *(ნებაყოფლობითი)* ჩვენ განვაგრძობთ ონლაინ გამოკითხვით/ფორმით, სადაც მოთხოვნილი იქნება მომდევნო აქტივობის მეტრიკის ანგარიში ერთი კვირისთვის, 7 დეკემბრის 12:01-დან 13 დეკემბრის 1:59-მდე) 
+      * ონლაინ აქტივობებისთვის (განსაკუთრებით სმარტფონების/პლანშეტების აპლიკაციებისთვის): 
+          * მომხმარებლების რაოდენობა
+          * რამდენმა დაასრულა დავალება
+          * საშუალო დრო დავალებაზე
+          * ყველა მომხმარებლის მიერ დაწერილი კოდის ხაზების რაოდენობა
+          * რამდენმა განაგრძო სწავლა (იგულისხმებიან მოსწავლეები, რომლებიც დაამთავრებენ დავალებას და განაგრძობენ დამატებითი დავალებებით თქვენს საიტზე)
+      * ოფლაინ აქტივობებისთვის 
+          * აქტივობის ქაღალდის ვერსიის გადმოწერების რაოდენობა (თუ ადეკვატურია)
 
-[**Back to the top**](#top)
+[**ზემოთ დაბრუნება**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing your activity
+## რჩევები აქტივობებთან დაკავშირებით
 
-You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+შეგიძლიათ ჩასვათ ან CSEdWeek-ის ლოგო ([პატარა](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) ან [დიდი](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) ან [კოდის საათის ლოგო](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) თქვენს გაკვეთილში, თუმცა ეს აუცილებელი არაა. თუ გამოიყენებთ კოდის საათის ლოგოს, იხილეთ სასაქონლო ნიშნის სახელმძღვანელო ქვემოთ. Code.org-ის ლოგოსა და სახელის გამოყენება არავითარ შემთხვევაში არ შეიძლება. ორივე სასაქონლო ნიშანია და არ შეიძლება მესამე პირის ბრენდის სახელთან წერილობითი ნებართვის გარეშე იქნეს გამოყენებული.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**დარწმუნდით, რომ საშუალო მონაცემების სტუდენტს კომფორტულად შეეძლება კოდის საათის დასრულება.** განიხილეთ ღია აქტივობის დამატება ბოლოში იმ მოსწავლეთათვის, რომლებიც მალე გაივლიან გაკვეთილს. გახსოვდეთ რომ ბავშვების უმეტესობა კოდის წერასა და კომპიუტერულ მეცნიერებაში აბსოლუტური დამწყები იქნება.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**ჩასვით მასწავლებლის შენიშვნებიც.** აქტივობების უმეტესობა სასურველია მოსწავლეების მიერ იქნეს წაყვანილი, მაგრამ თუ აქტივობას ხელს შეუწყობს ან გააკონტროლებს მასწავლებელი, გთხოვთ ჩასვათ ნათელი და უბრალო მითითებები მასწავლებლისთვის მასწავლებლის შენიშვნების ფორმაში ცალკე URL-ზე, რომელიც თქვენს აქტივობასთან ერთად იქნება წარდგენილი. არა მხოლოდ მოსწავლეები, არამედ ზოგიერთი მასწავლებელიც ახალბედაა. ჩართეთ ინფორმაცია, როგორიცაა:
 
-  * Our tutorial works best on the following platforms and browsers
-  * Does it work on smartphones? Tablets?
-  * Do you recommend pair programming? 
-  * Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+  * ჩვენი გაკვეთილები საუკეთესოდ მუშაობს შემდეგ პლატფორმებსა და ბრაუზერებზე
+  * მუშაობს თუ არა სმარტფონებზე? პლანშეტებზე?
+  * გვაძლევთ თუ არა წყვილებში პროგრამირების რეკომენდაციას? 
+  * მოსაზრებები საკლასო ოთახში გამოყენებაზე? მაგალითად, თუ არის ვიდეოები, ურჩიეთ მასწავლებლებს ვიდეოები პროექტორის საშუალებით აჩვენონ რათა მთელ კლასს ერთად შეეძლოს მათი ნახვა
 
-**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
+**განათავსეთ უკუკავშირი აქტივობის ბოლოს.** (მაგალითად: "თქვენ დაასრულეთ 10 დონე და ისწავლეთ ციკლები! ყოჩაღ!")
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**წაახალისეთ მოსწავლეები, დაპოსტონ სოციალურ მედიაზე (სადაც ადეკვატურია) როცა დაასრულებენ.** მაგალითად "მე გავაკეთე კოდის საათი ________-სთან, შენ? #HourOfCode” ან "მე გავაკეთე #HourofCode როგორც #CSEdWeek-ის ნაწილი. შენ? @Scratch.” გამოიყენე hashtag **#HourOfCode** (დიდი ასოებით H, O, C)
 
-**Create your activity in Spanish or in other languages besides English.** ]
+**შექმენი შენი აქტივობა ესპანურ ან სხვა ენაზე გარდა ინგლისურისა.** ]
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**ახსენით ან დააკავშირეთ აქტივობა სოციალურად მკაფიო კონტექსტთან.** კომპიუტერული პროგრამირება სუპერძალა ხდება როცა მოსწავლეები იაზრებენ თუ როგორ შეიძლება მისი გამოყენება მსოფლიოს უკეთესობისკენ შესაცვლელად!
 
-**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
+**არ მოითხოვოთ რეგისტრაცია ან ფულის გადახდა სანამ მოსწავლეებს არ შეეძლებათ თქვენი გაკვეთილის ცდა.** გაკვეთლები, რომლებიც მოითხოვენ რეგისტრაციას ან ფულის გადახდას, სიაში არ იქნება
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** The three rules of pair programming in a school setting are:
+**დარწმუნდით რომ თქვენი გაკვეთილის გამოყენება შესაძლებელი იქნება [წყვილებში პროგრამირების](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) პარადიგმაში.** სკოლის გარემოში წყვილებში პროგრამირების სამი წესია:
 
-  * The driver controls the mouse and keyboard.
-  * The Navigator makes suggestions, points out errors, and asks questions. 
-  * Students should switch roles at least two times a session.
+  * მძღოლი აკონტროლებს მაუსსა და კლავიატურას.
+  * ნავიგატორი იძლევა შემოთავაზებებს, ხაზს უსვამს შეცდომებს და სვამს კითხვებს. 
+  * მოსწავლეებმა სასურველია ორჯერ მაინც გაცვალონ როლები ერთ სესიაზე.
 
-Benefits of Pair Programming:
+წყვილებში პროგრამირების დადებითი მხარეები:
 
-  * Students can help one another instead of relying on the teacher
-  * Show that coding is not a solo activity, but one involving social interaction
-  * Not all classrooms or labs have enough computers for a 1:1 experience
+  * მოსწავლეებს შეუძლიათ ერთმანეთს დაეხმარონ და არ იყონ დამოკიდებული მასწავლებელზე
+  * აჩვენეთ, რომ კოდის წერა არა მხოლოდ ინდივიდუალური აქტივობაა, არამედ მოიცავს საზოგადოებრივ ურთიერთობას
+  * ყველა კლასს ან ლაბორატორიას არ გააჩნია საკმარისი რაოდნეობა კომპიუტერებისა 1:1 გამოცდილებისთვის
 
-[**Back to the top**](#top)
+[**ზემოთ დაბრუნება**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## სავაჭრო ნიშნის გამოყენების წესები
 
-After the success of the 2013 campaign, we took steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
+2013 წლის კამპანიის წარმატების შემდეგ, ჩვენ გადავდგით ნაბიჯები იმაში დასარწმუნებლად, რომ კოდის საათი გაგვემართა როგორც მოძრაობა, რომელსაც ყოველწლიურად შეუძლია დიდი ერთგულებით, ყოველგვარი დაბნეულობის გარეშე გამეორება.
 
-One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
+ამისი ერთი ნაწილია "კოდის საათი"-ს სასაქონლო ნიშნის დაცვა დამატებითი დაბნეულობის თავიდან ასარიდებლად. ჩვენი გაკვეთილების პარტნიორების უმეტესობას "კოდის საათი" ჩვენს ვებ გვერდებზე გამოუყენებია. ჩვენ არ გვსურს ამ მოხმარების შეკავება, მაგრამ გვინდა დარწმუნებულები ვიყოთ, რომ ეს გარკვეულ საზღვრებს შეესაბამება:
 
-  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp"
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions
-  3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
+  1. ნებისმიერი მითითება "კოდის საათზე" უნდა გამოყენებულ იქნეს ისე, რომ გამოჩნდეს არა როგორც თქვენი ბრენდის სახელი, არამედ როგორც მითითება კოდის საათზე როგორც grassroots-ის მოძრაობაზე. კარგი მაგალითი: "იმონაწილევეთ კოდის საათი™-ში ACMECorp.com-ზე". ცუდი მაგალითი: "სცადეთ კოდის საათი ACME Corp-ის მეშვეობით"
+  2. გამოიყენეთ "TM" ზედა ინდექსი ყველაზე გამოსაჩენ ადგილებში სადაც ახსენებთ "კოდის საათს", თქვენს ვებგვერდზეც და აპლიკაციის აღწერილობაშიც
+  3. ჩასვით ენა თქვენს გვერდზე (ან footer-ში), CSEdWeek-ის ბმულებისა და Code.org-ის ვებგვერდების ჩათვლით, რომელშიც შემდეგი რამ იქნება გადმოცემული:
     
-    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+    *"'კოდის საათი™' არის ქვეყნის მასშტაბის ინიციატივა კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის[csedweek.org] და Code.org-ის[code.org] მიერ, წარვუდგნოთ მილიონობით მოსწავლეს კომპიუტერული მეცნიერების და კომპიუტერული პროგრამირების ერთი საათი."*
 
-  4. No use of "Hour of Code" in app names
+  4. არ შეიძლება "კოდის საათი"-ს გამოყენება აპლიკაციის სახელებში
 
-[**Back to the top**](#top)
+[**ზემოთ დაბრუნება**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## პიქსელ–კონტროლი
 
-In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
+იმისთვის, რომ უფრო ზუსტად ვადევნოთ თვალყური მონაწილეობას, გაკვეთილის ყოველ მესამე პარტნიორს ვთხოვთ განათავსოს ერთპიქსელიანი სამეთვალყურეო კოდის საათის თავიანთი გაკვეთილების სურათი პირველ და ბოლო გვერდებზე (საწყისი პიქსელ-სურათი საწყის გვერდზე და საბოლოო პიქსელ-სურათი - საბოლოოზე. და არა შუალედურ გვერდებზე).
 
-This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
+ეს იმ მომხმარებლების რაოდენობის დათვლის საშუალებას მოგვცემს, რომლებსაც უშუალოდ თქვენ მოიყვანთ ჩვენს ვებგვერდზე თავიანთი კოდის საათის შესასრულებლად, ან იმ მომხმარებლების რომლებიც გვეწვევიან როცა მასწავლებელი დაფაზე თქვენს URL-ს დაუწერს მათ. ეს გამოიწვევს მონაწილეობის უფრო ეფექტურ ანგარიშს თქვენს გაკვეთილებზე, რაც მომხმარებლების მოზიდვაში დაგეხმარებათ. თუ პიქსელს ბოლოში დაურთავთ, ეს ჩვენ გაკვეთილების დასრულების სიხშირის გაზომვაში დაგვეხმარება.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+თუ თქვენი გაკვეთილი დადასტურდება და გაკვეთილების საბოლოო გვერდზე განთავსდება, Code.org მოგაწვდით თქვენს უნიკალურ სამეთვალყურეო პიქსელს თქვენს გაკვეთილში განსათავსებლად. მაგალითი იხილეთ ქვემოთ.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+შენიშვნა: ეს არაა აუცილებელი დაინსტალირებადი აპლიკაციებისთვის (iOS/Android აპლიკაციები, ან დესკტოპზე დაინსტალირებადი აპლიკაციები)
 
-Example tracking pixels for AppInventor:
+სამეთვალყურეო პიქსელების მაგალითი AppInventor-ისთვის:
 
 IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
 IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
-[**Back to the top**](#top)
+[**ზემოთ დაბრუნება**](#top)
 
 <a id="promote"></a>
 
-## Promoting your tutorials, CSEdWeek, and Hour of Code
+## თქვენი ტუტორიალების, CSEd კვირეულისა და კოდის ერთი საათის პოპულარიზაცია
 
-We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to ***your*** Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
+ჩვენ ყველას ვთხოვთ თავიანთი ერთსაათიანი გაკვეთილების მიწოდებას თქვენი მომხმარებლებისთვის. გთხოვთ გადაამისამართოთ ისინი ***თქვენს*** კოდის საათის გვერდზე. გაცილებით მეტი შანსია რომ თქვენმა მომხმარებლებმა თქვენი გაკვეთილის შესახებ თქვენს წერილზე მოახდინონ რეაგირება. გამოიყენეთ საერთაშორისო კოდის საათის კამპანია კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულისთვის როგორც გამართლება, რათა უბიძგოთ მომხმარებლებს სხვების მოსაწვევად, რათა მივაღწიოთ 100 მილიონ მომხმარებელს.
 
-  * Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-  * Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag **#HourOfCode** (with capital letters H, O, C)
-  * Host a local event or ask your employees to host an event at local schools or community groups.
-  * See our resource kit for further information (coming soon).
+  * განათავსეთ კოდის საათი და CSEdWeek თქვენს ვებგვერდზე. მაგალითად: <http://www.tynker.com/hour-of-code>
+  * შეუწყვეთ ხელი კოდის საათს სოციალური მედიის, ტრადიციული მედიის, საფოსტო სიების და ა. შ.-ს გამოყენებით. გამოიყენეთ hashtag **#HourOfCode** (დიდი ასოებით H, O, C)
+  * უმასპინძლეთ ადგილობრივ ღონისძიებას ან სთხოვეთ თქვენს თანამშრომლებს რომ ჩაატარონ ღონისძიება ადგილობრივ სკოლებში ან საზოგადოებრივ ჯგუფებში.
+  * იხილეთ ჩვენი რესურსების კრებული შემდგომი ინფორმაციისთვის (მალე).
 
-[**Back to the top**](#top)
+[**ზემოთ დაბრუნება**](#top)
 
 <a id="disabilities"></a>
 
-## A special note for students with disabilities
+## მინიშნებები შშმ მოსწავლეებისთვის
 
-If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
+თუ შექმნით გაკვეთილს, მხედველობაშეზღუდული ადამიანებისთვის, ჩვენ დიდი სიამოვნებით აღვნიშნავთ ამას ეკრანის წამკითხველიანი მომხმარებლებისთვის. ჩვენ ჯერ ასეთი გაკვეთილი არ მიგვიღია და დიდი სურვილი გვაქვს შეგველძოს მსგავსი გაკვეთილების შეთავაზება ჩვენი მოსწავლეებისთვის.
 
-[**Back to the top**](#top)
+[**ზემოთ დაბრუნება**](#top)
+
+<%= view :signup_button %>

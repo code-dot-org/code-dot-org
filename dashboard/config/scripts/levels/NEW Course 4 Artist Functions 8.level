@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "We have given you most of the code to create a function, but there seems to be something missing. Can you edit the function definition to draw the triangle?",
+    "instructions": "We have created a new function for you called \"draw a triangle\".  Can you edit the function definition to draw a triangle with 100 pixel sides?",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -30,54 +30,25 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "We have given you most of the code to create a function, but there seems to be something missing. Can you edit the function definition to draw the triangle?\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "We have created a new function for you called `draw a triangle`.  Can you edit the function definition to draw a triangle with 100 pixel sides?\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
     "examples_required": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="procedures_callnoreturn" id="edit_function_qtip">
-              <mutation name="draw a triangle"/>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn" editable="false">
           <mutation>
             <description>draws a triangle that is 100 pixels in size</description>
           </mutation>
           <title name="NAME">draw a triangle</title>
-          <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true" uservisible="false">
-              <value name="TIMES">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">???</title>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="draw_move" inline="true" uservisible="false">
-                  <title name="DIR">moveForward</title>
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">100</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn" inline="true" uservisible="false">
-                      <title name="DIR">turnLeft</title>
-                      <value name="VALUE">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">120</title>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </statement>
+        </block>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn" id="edit_function_qtip" deletable="false" movable="false">
+              <mutation name="draw a triangle"/>
             </block>
-          </statement>
+          </next>
         </block>
       </xml>
     </start_blocks>

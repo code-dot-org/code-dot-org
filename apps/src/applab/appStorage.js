@@ -1,23 +1,11 @@
 'use strict';
 
-/* global dashboard */
+/* global Applab */
 
 /**
  * Namespace for app storage.
  */
 var AppStorage = module.exports;
-
-// TODO(dave): remove once all applab data levels are associated with
-// a project.
-AppStorage.tempChannelId =
-    window.location.hostname.split('.')[0] === 'localhost' ?
-        "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
-
-AppStorage.getChannelId = function() {
-  // TODO(dave): pull channel id directly from appOptions once available.
-  var id = dashboard && dashboard.project.getCurrentId();
-  return id || AppStorage.tempChannelId;
-};
 
 /**
  * Reads the value associated with the key, accessible to all users of the app.
@@ -29,7 +17,7 @@ AppStorage.getChannelId = function() {
 AppStorage.getKeyValue = function(key, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleGetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
+  var url = '/v3/shared-properties/' + Applab.channelId + '/' + key;
   req.open('GET', url, true);
   req.send();
 };
@@ -61,7 +49,7 @@ var handleGetKeyValue = function(onSuccess, onError) {
 AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleSetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
+  var url = '/v3/shared-properties/' + Applab.channelId + '/' + key;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   req.send(JSON.stringify(value));
@@ -99,7 +87,7 @@ AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleCreateRecord.bind(req, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
@@ -138,7 +126,7 @@ AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleReadRecords.bind(req,
       searchParams, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' + tableName;
   req.open('GET', url, true);
   req.send();
 
@@ -187,7 +175,7 @@ AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' +
       tableName + '/' + recordId;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -232,7 +220,7 @@ AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' +
       tableName + '/' + recordId + '/delete';
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -254,4 +242,94 @@ var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
     return;
   }
   onSuccess();
+};
+
+/**
+ * Populates a channel with table data for one or more tables
+ * @param {string} jsonData The json data that represents the tables in the format of:
+ *   {
+ *     "table_name": [{ "name": "Trevor", "age": 30 }, { "name": "Hadi", "age": 72}],
+ *     "table_name2": [{ "city": "Seattle", "state": "WA" }, { "city": "Chicago", "state": "IL"}]
+ *   }
+ * @param {bool} overwrite Whether to overwrite a table if it already exists.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call with an error message
+ *    in case of failure.
+ */
+AppStorage.populateTable = function (jsonData, overwrite, onSuccess, onError) {
+  if (!jsonData || !jsonData.length) {
+    return;
+  }
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handlePopulateTable.bind(req, onSuccess, onError);
+  var url = '/v3/shared-tables/' + Applab.channelId;
+  if (overwrite) {
+    url += "?overwrite=1";
+  }
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(jsonData);
+};
+
+var handlePopulateTable = function (onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+
+  if (this.status != 200) {
+    if (onError) {
+      onError('error populating tables: unexpected http status ' + this.status);
+    }
+    return;
+  }
+  if (onSuccess) {
+    onSuccess();
+  }
+};
+
+/**
+ * Populates the key/value store with initial data
+ * @param {string} jsonData The json data that represents the tables in the format of:
+ *   {
+ *     "click_count": 5,
+ *     "button_color": "blue"
+ *   }
+ * @param {bool} overwrite Whether to overwrite a table if it already exists.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call with an error message
+ *    in case of failure.
+ */
+AppStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onError) {
+  if (!jsonData || !jsonData.length) {
+    return;
+  }
+  var req = new XMLHttpRequest();
+
+  req.onreadystatechange = handlePopulateKeyValue.bind(req, onSuccess, onError);
+  var url = '/v3/shared-properties/' + Applab.channelId;
+
+  if (overwrite) {
+    url += "?overwrite=1";
+  }
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(jsonData);
+};
+
+var handlePopulateKeyValue = function (onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+
+  if (this.status != 200) {
+    if (onError) {
+      onError('error populating kv: unexpected http status ' + this.status);
+    }
+    return;
+  }
+  if (onSuccess) {
+    onSuccess();
+  }
 };

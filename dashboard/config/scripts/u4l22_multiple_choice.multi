@@ -1,0 +1,16 @@
+name 'U4L22 Multiple Choice'
+title 'Multiple Choice: simple description here'
+wrong 'wrong1'
+wrong 'wrong2'
+right 'right'
+wrong 'wrong3'
+wrong 'wrong4'
+
+markdown <<MARKDOWN
+Optional markdown area. Delete me if you don't need it.
+
+**A:** Option A here  
+**B:** Option B here  
+**C:** Option C here  
+**D:** Option D here  
+MARKDOWN

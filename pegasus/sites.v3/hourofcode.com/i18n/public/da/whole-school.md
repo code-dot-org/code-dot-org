@@ -1,5 +1,14 @@
+---
 
+title: <%= hoc_s(:title_whole_school) %>
+layout: wide
+
+---
+
+<%= view :signup_button %>
 
 # Få hele din skole til at deltage
 
-Oplysninger om at få hele skoler til at deltage i Hour of Code vil vises her.
+Information about getting whole schools to participate in the Hour of Code will go here.
+
+<%= view :signup_button %>

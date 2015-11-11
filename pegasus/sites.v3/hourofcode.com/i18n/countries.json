@@ -46,12 +46,12 @@
   },
   "ar": {
     "full_name": "Argentina",
-    "default_language": "es",
+    "default_language": "la",
     "partner_page": "ar.code.org",
-    "campaign_date_start_short": "5 de oct",
-    "campaign_date_start_long": "5 de octubre",
-    "campaign_date_short": "5-11 de oct",
-    "campaign_date_full": "5-11 de octubre"
+    "campaign_date_start_short": "7 de dic",
+    "campaign_date_start_long": "7 de diciembre",
+    "campaign_date_short": "7-13 de dic",
+    "campaign_date_full": "7-13 de diciembre"
   },
   "au": {
     "full_name": "Australia",
@@ -84,10 +84,10 @@
     "full_name": "Brazil",
     "default_language": "pt",
     "partner_page": "br.code.org",
-    "campaign_date_start_short": "5 de out",
-    "campaign_date_start_long": "5 de outubro",
-    "campaign_date_short": "5-11 de out",
-    "campaign_date_full": "5-11 de outubro"
+    "campaign_date_start_short": "7 de dez",
+    "campaign_date_start_long": "7 de dezembro",
+    "campaign_date_short": "7-13 de dez",
+    "campaign_date_full": "7-13 de dezembro"
   },
   "ca": {
     "full_name": "Canada",
@@ -174,10 +174,10 @@
     "full_name": "France",
     "default_language": "fr",
     "partner_page": "code.org",
-    "campaign_date_start_short": "Dec. 7",
-    "campaign_date_start_long": "December 7",
-    "campaign_date_short": "Dec. 7-13",
-    "campaign_date_full": "December 7-13"
+    "campaign_date_start_short": "7 déc",
+    "campaign_date_start_long": "7 décembre",
+    "campaign_date_short": "7 au 13 déc",
+    "campaign_date_full": "7 au 13 décembre"
   },
   "gr": {
     "full_name": "Greece",
@@ -264,10 +264,10 @@
     "full_name": "Japan",
     "default_language": "ja",
     "partner_page": "code.org",
-    "campaign_date_start_short": "Dec. 7",
-    "campaign_date_start_long": "December 7",
-    "campaign_date_short": "Dec. 7-13",
-    "campaign_date_full": "December 7-13"
+    "campaign_date_start_short": "12月7日",
+    "campaign_date_start_long": "12月7日",
+    "campaign_date_short": "12月7−13日",
+    "campaign_date_full": "12月7−13日"
   },
   "kr": {
     "full_name": "Korea",
@@ -282,10 +282,10 @@
     "full_name": "Latin America",
     "default_language": "la",
     "partner_page": "code.org",
-    "campaign_date_start_short": "5 de oct",
-    "campaign_date_start_long": "5 de octubre",
-    "campaign_date_short": "5-11 de oct",
-    "campaign_date_full": "5-11 de octubre"
+    "campaign_date_start_short": "7 de dic",
+    "campaign_date_start_long": "7 de diciembre",
+    "campaign_date_short": "7-13 de dic",
+    "campaign_date_full": "7-13 de diciembre"
   },
   "lv": {
     "full_name": "Latvia",
@@ -443,6 +443,7 @@
   "uk": {
     "full_name": "United Kingdom",
     "default_language": "gb",
+    "solr_country_code": "gb",
     "partner_page": "uk.code.org",
     "campaign_date_start_short": "Dec. 7",
     "campaign_date_start_long": "December 7",

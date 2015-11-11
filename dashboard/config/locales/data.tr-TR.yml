@@ -98,7 +98,7 @@
         Flappy: Flappy Bird
         Jigsaw: Yapboz
         MazeStep: Labirent Adım Modu
-        Wordsearch: Kelime arama
+        Wordsearch: Kelime Arama
         Webapp: Uygulama Laboratuvarı
         ArtistEC: Sanatçı
         TextMatch: Metin Eşleştirmesi
@@ -649,6 +649,8 @@
         C4_variables_artist: Değişkenler - Sanatçı
         C4_variables_playlab: Değişkenler - Oyun laboratuarı
         C4_for_loops: For Döngüleri
+        C4_for_loops_bee: For Döngüleri
+        C4_for_loops_no_bee: For Döngüleri
         C4_math_artist: Matematik ile Sanatçı'yı programla
         C4_function_edit: Düzenleme fonksiyonları
         C4_function_create: Oluşturma Fonksiyonları
@@ -667,9 +669,10 @@
         playlab_events: Laboratuvar Olaylarını Oynatın
         playlab_repeat_forever: Play Lab Sonsuza Dek Tekrarla
         tutorial_puzzle_challenge: YapBoz Mücadelesi Konu Anlatımı
-        infinity_playlab_intro: Play Lab - Introduction
-        infinity_playlab_events: Play Lab - Events
-        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        infinity_playlab_intro: Oyun Laboratuvarı - Giriş
+        infinity_playlab_events: Oyun Laboratuvarı - Olaylar
+        infinity_playlab_repeat_forever: Oyun Laboratuvarı - Sonsuz Döngü
+        csp_applab_functions: Fonksiyonlara Giriş
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: Color pixelation widget - Part 1
         csp_pixelation_color_2: Color pixelation widget - Part 2
@@ -677,6 +680,7 @@
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
         csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3
@@ -697,6 +701,9 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
@@ -792,9 +799,9 @@
         arrows_move_actor: Karakteri hareket ettirmek için okları kullan
         right_arrow_fireball: Ateştoplarını fırlatmak için sağ ok tuşunu kullan
         name_function: Fonksiyonunun ismini buraya yaz
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when
-          the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_right_runbutton: '"İlerle" bloğunu ekle'
+        Infinity_move_directions_callout: Hangi blok yukarı tuşuna basıldığında Baymax'ı
+          yukarı doğru ilerletir?
+        Infinity_move_directions_callout_arrow: Yönlendirmek için bu okları kullanın
         Infinity_move_collide_callout: Bu olay gerçekleştiğinde ses çal.
-        Infinity_repeat_callout: Place Move blocks inside here
+        Infinity_repeat_callout: '"İlerle" bloklarının buraya yerleştir'

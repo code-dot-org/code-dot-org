@@ -42,5 +42,5 @@ También podés seguir a Code.org:
 
 
 <br /><a href="http://www.guidestar.org/organizations/46-0858543/code-org.aspx" target="_blank">
-    <img src="http://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
+    <img src="https://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
 </a>

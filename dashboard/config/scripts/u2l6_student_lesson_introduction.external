@@ -1,39 +1,44 @@
 name 'U2L6 Student Lesson Introduction'
-title 'Algorithm detour - Minimum Spanning Tree'
-
-css 'unplugged'
-skip_dialog 'true'
-
-markdown <<MARKDOWN
-## Unit 2: Lesson 6 - Algorithms Detour - Minimum Spanning Tree
-
-# Background
-
-One of the more common (and interesting) fields investigated in computer science is graph theory. Graph theory investigates connections - between people, locations, computers, ideas, information, or anything else. The Minimum Spanning Tree (MST) is a problem in the field of graph theory. The MST problem is especially interesting because it might have multiple “best” solutions.
-
-# Vocabulary
-
-* <b>Graph</b>: a diagram that shows the nodes and edges of a problem
-* <b>Node</b>: sometimes called a vertex; typically represented as a labeled circle
-* <b>Edge</b>: a line connecting two nodes
-* <b>Cost</b>: sometimes called the weight; the number associated with an edge that indicates distance, time, or economic cost 
-* <b>Cycle</b>: a set of edges that, begin at one node and can be followed through other nodes back where you started
-* <b>Tree</b>: a set of edges that connects nodes together in a way that does not form a cycle
-
-
-# Lesson
-
-* Investigate graph problems
-* Create an algorithm for solving a minimum spanning tree problem
-* Compare your algorithm to Kruskal’s algorithm
-
-
-# Resources
-
-* Handout: <a href="https://docs.google.com/document/d/13jOKoR3Tbz67innI1g7V-AjKpwM8esW_HwRDICDFEwE" target="_blank">Algorithms, graphs, and the MST problem</a>
-
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
-MARKDOWN
+encrypted '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
+rFfNQhKG8/qnNjU=
+'

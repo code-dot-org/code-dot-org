@@ -72,7 +72,7 @@
         other: '%{count} hiba tiltja a %{resource} mentését :'
     invitations:
       send_instructions: 'A meghívót elküldtük az alábbi email címre: %{email}.'
-      invitation_token_invalid: The invitation token provided is not valid!
+      invitation_token_invalid: A megadott token nem érvényes!
       updated: A jelszavadat sikeresen beállítottad. Most már be vagy jelentkezve.
       no_invitations_remaining: Nincs fel nem használt meghívód
       invitation_removed: A meghívód törölve lett.
@@ -86,8 +86,8 @@
       invitation_instructions:
         subject: Meghívási instrukciók
         hello: Üdv %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
+        someone_invited_you: '%{url} meghívásod érkezett, elfogadhatod az alábbi linkre
+          kattintva.'
         accept: Meghívó elfogadása
         ignore: Ha nem akarod elfogadni a meghívást, kérlek hagyd figyelmen kívül
           ezt az emailt. <br /> A fiókod addig nem készül el, amíg nem kattintasz

@@ -182,6 +182,7 @@ bg:
           Maze and Bee: Лабиринт и Пчела
           Artist Binary: 'Художник: Бинарен код'
           description_audience: Възраст 10 + (след курс 3)
+          Super Challenge - Variables: 'Super Challenge - Variables'
         Course4pre:
           title: Курс 4 предпоставка (необходимо условие)
           description_short: Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.
@@ -461,11 +462,11 @@ bg:
           Personal Innovations: Personal Innovations
           Sending Complex Messages: Sending Complex Messages
           Sending Binary Messages with the Internet Simulator: Sending Binary Messages with the Internet Simulator
-          Encode a Complex Thing: Encode a Complex Thing
+          Encode a Complex Thing: Encode an Experience
         algebraPD:
           title: Компютърни науки в алгебрата
-          description: Научете функционалното програмиране чрез алгебра
-          description_short: Научете функционалното програмиране чрез алгебра
+          description: 'Фаза 1: Представяне онлайн'
+          description_short: 'Фаза 1: Представяне онлайн'
           "Unplugged: Video Games and Coordinate Planes": 'Ънплъгд: видео игрите и координатните системи'
           "Calc: Evaluation Blocks": 'Калколиране: Оценка блокове'
           "Eval: Strings and Images": 'Оценка: Низове и изображения'
@@ -530,8 +531,8 @@ bg:
           new stage: нов етап
           Introduction to PD: Въведение в PD
           title: ' PD принципите на Компютърни науки'
-          description: Онлайн въведение в ECP
-          description_short: Онлайн въведение в ECP
+          description: 'Фаза 1: Онлайн въведение в ECP'
+          description_short: 'Фаза 1: Онлайн въведение в ECP'
           What is CSP?: Какво е CSP?
           Exploring CSP Instructional Materials: Проучване на CSP учебни материали
           Impact of Computer Science: Въздействието на компютърните науки
@@ -553,18 +554,18 @@ bg:
           reference: препратка
           title: Проучване на компютърни науки PD
           description: Онлайн въведение в ECS
-          description_short: Научете функционалното програмиране чрез алгебра
+          description_short: 'Фаза 1: Представяне онлайн'
           Impact of Computer Science: Въздействието на компютърните науки
         sciencePD:
           Introduction to PD: Въведение в PD
           title: Компютърни науки в науката PD
-          description: В партньорство с проект КУРАЖ
-          description_short: Научете функционалното програмиране чрез алгебра
+          description: 'Фаза 1: Представяне онлайн'
+          description_short: 'Фаза 1: Представяне онлайн'
           Pre-Workshop Online Component: 'Предварителен онлайн семинар: компонент'
           Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
           Introduction to Computational Science: Въведение в компютърната наука
           What to Expect: Какво да очаквате
-          Agent Based Modeling of Complex Adaptive Systems: Моделиране на базата насложни адаптивни системи
+          Agent Based Modeling of Complex Adaptive Systems: Моделиране на базата на сложни адаптивни системи
           Using Computer Models in Science: Използване на компютърни модели в науката
           Using Models in the Classroom: Използване на модели в класната стая
           Dispositions and Classroom Culture: Мерки и култура в класната стая
@@ -585,7 +586,7 @@ bg:
         cspunit3:
           title: 'CSP блок 3 - програмиране'
           description_short: Програмиране
-          description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхващат всички езици за програмиране и инструменти.
+          description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
           Getting to know AppLab: Запознаване с AppLab
           Functions: Функции
           Using Simple Commands: Използване на прости команди
@@ -635,6 +636,19 @@ bg:
           Chained and Nested Conditionals: Chained and Nested Conditionals
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
           Digital Assistant Challenge: Digital Assistant Challenge
+          Creating Functions: Създаване на функции
+          Functions and Top-Down Design: Functions and Top-Down Design
+          Design a Digital Scene: 'Дизайн на сцена: част 1 - план'
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Introducing Design Mode: Introducing Design Mode
+          Clicker Game: Clicker Game
+          Getting User Input: Getting User Input
+          Variables: Променливи
+          Looping and Random Numbers - Under the Sea: 'Looping and Random Numbers - Under the Sea'
+          Multi-screen App: Multi-screen App
+          Variables Conceptorial Fodder: Variables Conceptorial Fodder
+          "Variables: Create, Assign, and Read": 'Variables: Create, Assign, and Read'
+          "Variables: Increment, Decrement, Display, and Scope": 'Variables: Increment, Decrement, Display, and Scope'
         algebraPD3:
           title: Фаза 3 PD
           description: Научи алгебра чрез блок базирано функционално програмиране
@@ -650,14 +664,14 @@ bg:
           Next Steps: Следващи стъпки
         sciPD complex adaptive 2:
           title: Компютърни науки в науката PD
-          description: Научете функционалното програмиране чрез алгебра
-          description_short: Научете функционалното програмиране чрез алгебра
+          description: 'Фаза 1: Представяне онлайн'
+          description_short: 'Фаза 1: Представяне онлайн'
           Introduction to PD: Въведение в PD
           Pre-Workshop Online Component: 'Предварителен онлайн семинар: компонент'
         sciPD complex adaptive forum:
           title: Компютърни науки в науката PD
-          description: Научете функционалното програмиране чрез алгебра
-          description_short: Научете функционалното програмиране чрез алгебра
+          description: 'Фаза 1: Представяне онлайн'
+          description_short: 'Фаза 1: Представяне онлайн'
           Introduction to PD: Въведение в PD
           Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
         Glenallan Career Day Demo:
@@ -674,8 +688,8 @@ bg:
           Preparing for in-person PD: Подготовка за лично PD
           logo_image: nextech_logo.png
           title: Проучване на компютърни науки PD
-          description: Научете функционалното програмиране чрез алгебра
-          description_short: Научете функционалното програмиране чрез алгебра
+          description: 'Фаза 1: Представяне онлайн'
+          description_short: 'Фаза 1: Представяне онлайн'
           Impact of Computer Science: Въздействието на компютърните науки
         ECSPD-iZone:
           Introduction to PD: Въведение в PD
@@ -685,13 +699,13 @@ bg:
           Preparing for in-person PD: Подготовка за лично PD
           logo_image: izone_logo.png
           title: Проучване на компютърни науки PD
-          description: Научете функционалното програмиране чрез алгебра
-          description_short: Научете функционалното програмиране чрез алгебра
+          description: 'Фаза 1: Представяне онлайн'
+          description_short: 'Фаза 1: Представяне онлайн'
           Impact of Computer Science: Въздействието на компютърните науки
         algebraPD-NexTech:
           title: Компютърни науки в алгебрата
-          description: Научете функционалното програмиране чрез алгебра
-          description_short: Научете функционалното програмиране чрез алгебра
+          description: 'Фаза 1: Представяне онлайн'
+          description_short: 'Фаза 1: Представяне онлайн'
           Introduction to PD: Въведение в PD
           Evaluation Blocks: Блокове за оценка
           logo_image: nextech_logo.png
@@ -702,8 +716,8 @@ bg:
           Preparing for in-person PD: Подготовка за лично PD
         algebraPD-iZone:
           title: Компютърни науки в алгебрата
-          description: Научете функционалното програмиране чрез алгебра
-          description_short: Научете функционалното програмиране чрез алгебра
+          description: 'Фаза 1: Представяне онлайн'
+          description_short: 'Фаза 1: Представяне онлайн'
           Introduction to PD: Въведение в PD
           Evaluation Blocks: Блокове за оценка
           logo_image: izone_logo.png
@@ -716,12 +730,12 @@ bg:
           Introduction to PD: Въведение в PD
           logo_image: nextech_logo.png
           title: Компютърни науки в науката PD
-          description: Научете функционалното програмиране чрез алгебра
-          description_short: Научете функционалното програмиране чрез алгебра
+          description: 'Фаза 1: Представяне онлайн'
+          description_short: 'Фаза 1: Представяне онлайн'
           What to Expect: Какво да очаквате
           Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
           Introduction to Computational Science: Въведение в компютърната наука
-          Agent Based Modeling of Complex Adaptive Systems: Моделиране на базата насложни адаптивни системи
+          Agent Based Modeling of Complex Adaptive Systems: Моделиране на базата на сложни адаптивни системи
           Using Computer Models in Science: Използване на компютърни модели в науката
           Using Models in the Classroom: Използване на модели в класната стая
           Dispositions and Classroom Culture: Мерки и култура в класната стая
@@ -733,12 +747,12 @@ bg:
           Introduction to PD: Въведение в PD
           logo_image: izone_logo.png
           title: Компютърни науки в науката PD
-          description: Научете функционалното програмиране чрез алгебра
-          description_short: Научете функционалното програмиране чрез алгебра
+          description: 'Фаза 1: Представяне онлайн'
+          description_short: 'Фаза 1: Представяне онлайн'
           What to Expect: Какво да очаквате
           Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
           Introduction to Computational Science: Въведение в компютърната наука
-          Agent Based Modeling of Complex Adaptive Systems: Моделиране на базата насложни адаптивни системи
+          Agent Based Modeling of Complex Adaptive Systems: Моделиране на базата на сложни адаптивни системи
           Using Computer Models in Science: Използване на компютърни модели в науката
           Using Models in the Classroom: Използване на модели в класната стая
           Dispositions and Classroom Culture: Мерки и култура в класната стая
@@ -757,8 +771,8 @@ bg:
           new stage: нов етап
         sciencePD2:
           title: Компютърни науки в науката PD
-          description: Научете функционалното програмиране чрез алгебра
-          description_short: Научете функционалното програмиране чрез алгебра
+          description: 'Фаза 2 онлайн: Смесено лятно учене'
+          description_short: 'Фаза 2 онлайн: Смесено лятно учене'
           Phase 2 Summer Workshop: 'Фаза 2: Летен семинар'
           Welcome: Welcome
           Resources: Resources
@@ -830,10 +844,12 @@ bg:
           The Need for Encryption: The Need for Encryption
           Keys and Passwords: Keys and Passwords
           Public Key Encryption: Public Key Encryption
+          Practice PT - The Internet and Society: 'Practice PT - The Internet and Society'
+          Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
         algebraPD2a:
           title: Компютърни науки в алгебрата
-          description: Научете функционалното програмиране чрез алгебра
-          description_short: Научете функционалното програмиране чрез алгебра
+          description: 'Фаза 2 онлайн: Смесено лятно учене'
+          description_short: 'Фаза 2 онлайн: Смесено лятно учене'
           Evaluation Blocks: Блокове за оценка
           Strings and Images: Стрингове и изображения
           Defining Variables: Дефиниране на променливите
@@ -872,14 +888,16 @@ bg:
           description: Всички типове нива за тестване на потребителски интерфейс
           description_short: Всички типове нива за тестване на потребителски интерфейс
           Odometer: Километраж
+          Vigenere: Vigenere
+          Frequency: Frequency
           Text Compression: Компресия на текста
           Pixelation: Пикселизация
           Multi2: Multi2
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Компютърни науки в алгебрата
-          description: Научете функционалното програмиране чрез алгебра
-          description_short: Научете функционалното програмиране чрез алгебра
+          description: 'Фаза 2 онлайн: Смесено лятно учене'
+          description_short: 'Фаза 2 онлайн: Смесено лятно учене'
           Course Overview: Преглед на курса
           Computer Science Pedagogy: Педагогика на Компютърните науки
           Teacher Dashboard: Учителско табло
@@ -932,8 +950,8 @@ bg:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Научете функционалното програмиране чрез алгебра
-          description_short: Научете функционалното програмиране чрез алгебра
+          description: 'Фаза 2 онлайн: Смесено лятно учене'
+          description_short: 'Фаза 2 онлайн: Смесено лятно учене'
           Welcome!: Добре дошли!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -975,15 +993,17 @@ bg:
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
           Necessary Background: Necessary Background
+          Equity PD: Equity PD
         hoc2015:
           title: Часът на кодирането 2015
           description_short: Използвайте Игралната лаборатория, за да създадете история или игра.
           description: Използвайте Игралната лаборатория, за да създадете история или игра.
           Hour of Code: Час на Кодирането
+          Hour of Code 2015: Часът на кодирането 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: Научете функционалното програмиране чрез алгебра
-          description_short: Научете функционалното програмиране чрез алгебра
+          description: 'Фаза 2 онлайн: Смесено лятно учене'
+          description_short: 'Фаза 2 онлайн: Смесено лятно учене'
           Course Overview: Преглед на курса
           Computer Science Pedagogy: Педагогика на Компютърните науки
           Teacher Dashboard: Учителско табло
@@ -1004,8 +1024,8 @@ bg:
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: Научете функционалното програмиране чрез алгебра
-          description: Научете функционалното програмиране чрез алгебра
+          description_short: 'Фаза 2 онлайн: Смесено лятно учене'
+          description: 'Фаза 2 онлайн: Смесено лятно учене'
           Welcome!: Добре дошли!
           Wrap-Up: Заключение
           Review StarLogo Nova: Review StarLogo Nova
@@ -1021,8 +1041,8 @@ bg:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: Научете функционалното програмиране чрез алгебра
-          description: Научете функционалното програмиране чрез алгебра
+          description_short: 'Фаза 2 онлайн: Смесено лятно учене'
+          description: 'Фаза 2 онлайн: Смесено лятно учене'
           Welcome!: Добре дошли!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1041,8 +1061,8 @@ bg:
         sciencePD2b-iZone:
           Welcome!: Добре дошли!
           title: Computer Science in Science PD Phase 2b
-          description_short: Научете функционалното програмиране чрез алгебра
-          description: Научете функционалното програмиране чрез алгебра
+          description_short: 'Фаза 2 онлайн: Смесено лятно учене'
+          description: 'Фаза 2 онлайн: Смесено лятно учене'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1051,8 +1071,8 @@ bg:
           Wrap-Up: Заключение
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: Научете функционалното програмиране чрез алгебра
-          description: Научете функционалното програмиране чрез алгебра
+          description_short: 'Фаза 2 онлайн: Смесено лятно учене'
+          description: 'Фаза 2 онлайн: Смесено лятно учене'
           Welcome!: Добре дошли!
           0: |
             Unit 1, Days 1-2
@@ -1070,8 +1090,8 @@ bg:
           Wrap-up: Заключение
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: Научете функционалното програмиране чрез алгебра
-          description: Научете функционалното програмиране чрез алгебра
+          description_short: 'Фаза 2 онлайн: Смесено лятно учене'
+          description: 'Фаза 2 онлайн: Смесено лятно учене'
           Welcome!: Добре дошли!
           0: |
             Unit 1, Days 1-2
@@ -1127,6 +1147,16 @@ bg:
           description_short: Short course designed for informal learning
           description: Afterschool 1 is designed to for informal classrooms where students vary in age and assessment is not required. This course focuses on learning through entertainment, with varying options for implementation, all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended for grades 3-8.
           description_audience: Ages 7-13
+        vigenere:
+          title: Vigenere Cipher Widget
+          description_short: Vigenere Cipher Widget
+          description: Use the Vigenere Cipher Widget to explore encrypting and decrypting messages using a Vigenere Cipher
+          Vigenere: Vigenere
+        frequency:
+          title: Frequency Analysis Widget
+          description_short: Frequency Analysis Widget
+          description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
+          Frequency Analysis: Frequency Analysis
         algebraPD3a:
           title: Компютърни науки в алгебрата
           description_short: CS in Algebra blended online school year study
@@ -1142,3 +1172,176 @@ bg:
           Welcome Back!: Welcome Back!
           The TLO: The TLO
           Prep With Your Modules: Prep With Your Modules
+        frequency_analysis:
+          title: Frequency Analysis Widget
+          description_short: Frequency Analysis Widget
+          description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
+          Frequency Analysis: Frequency Analysis
+        ECSPD3-Unit2:
+          title: 'Exploring Computer Science: Unit 2'
+          description_short: Unit 2 of the Exploring Computer Science curriculum
+          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the version 5 Exploring Computer Science curriculum.
+          Welcome!: Добре дошли!
+          Teaching Strategies: Стратегии за преподаване
+          Unit 2 Overview: Unit 2 Overview
+          Problem Solving: Problem Solving
+          Introduction to the Unit 2 Challenge: Introduction to the Unit 2 Challenge
+          Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community Problems with Data
+          "Day 3 Intro To Problem Solving: Candy Bar Activity": 'Day 3 Intro To Problem Solving: Candy Bar Activity'
+          "Day 4-6 Strategies in Problem Solving: Handshake Activity": 'Day 4-6 Strategies in Problem Solving: Handshake Activity'
+          "Day 7-9 Problem Solving: Cornrow Curves": 'Day 7-9 Problem Solving: Cornrow Curves'
+          Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
+          "Day 13-14 Linear and Binary Search: Tower Building Activity": 'Day 13-14 Linear and Binary Search: Tower Building Activity'
+          Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
+          "Day 17 Minimal Spanning Trees: Muddy City": 'Day 17 Minimal Spanning Trees: Muddy City'
+          Day 18-21 Final Project: Day 18-21 Final Project
+          Unit 2 Challenge Planning & Creation: 'Unit 2 Challenge Planning & Creation'
+          Unit 2 Challenge Planning: Unit 2 Challenge Planning
+          Unit 2 Challenge Creation: Unit 2 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: 'Close & Next Steps'
+        ECSPD3-Unit3:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: Добре дошли!
+          Teaching Strategies: Стратегии за преподаване
+          Unit 3 Overview: Unit 3 Overview
+          Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
+          Unit 3 Challenge Planning & Creation: 'Unit 3 Challenge Planning & Creation'
+          Day 1-2 Online Experiences: Day 1-2 Online Experiences
+          Day 3-4 HTML- Paragraph and Header Tags: 'Day 3-4 HTML- Paragraph and Header Tags'
+          Day 5 HTML - Strong and EM Tags: 'Day 5 HTML - Strong and EM Tags'
+          Day 6-7 HTML -Images: Day 6-7 HTML -Images
+          Day 8-10 Introduction to CSS: Day 8-10 Introduction to CSS
+          Day 11-13 Separating HTML and CSS: Day 11-13 Separating HTML and CSS
+          "Day 14 HTML: Links": 'Day 14 HTML: Links'
+          "Day 15-16 HTML and CSS: Tables, Lists,  Menus": 'Day 15-16 HTML and CSS: Tables, Lists,  Menus'
+          "Day 17-19 HTML and CSS: Create own webpage": 'Day 17-19 HTML and CSS: Create own webpage'
+          "Day 20-21 HTML and CSS: Adding Enhancements to Site": 'Day 20-21 HTML and CSS: Adding Enhancements to Site'
+          Day 22-25 Final Project: Day 22-25 Final Project
+          "Day 15-16 HTML and CSS: Tables, Lists, Menus": 'Day 15-16 HTML and CSS: Tables, Lists, Menus'
+        ECSPD3-Unit4:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: Добре дошли!
+          Teaching Strategies: Стратегии за преподаване
+          Unit 4 Overview: Unit 4 Overview
+          Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
+          Unit 4 Challenge Planning & Creation: 'Unit 4 Challenge Planning & Creation'
+          "Day 1 Scratch: Intro": 'Day 1 Scratch: Intro'
+          "Day 2-3 Scratch: Name Project": 'Day 2-3 Scratch: Name Project'
+          "Day 4 Scratch: Creating Dialogue": 'Day 4 Scratch: Creating Dialogue'
+          "Day 5-6 Scratch: Moving Sprites": 'Day 5-6 Scratch: Moving Sprites'
+          "Day 7-8 Scratch: Event Driven Programming": 'Day 7-8 Scratch: Event Driven Programming'
+          Day 9 Broadcasting Role Play: Day 9 Broadcasting Role Play
+          "Day 10-13 Scratch: Broadcasting": 'Day 10-13 Scratch: Broadcasting'
+          "Day 14 Scratch: Variables": 'Day 14 Scratch: Variables'
+          "Day 15 Scratch: Conditionals": 'Day 15 Scratch: Conditionals'
+          "Day 16-17 Scratch: AND OR and Randomness": 'Day 16-17 Scratch: AND OR and Randomness'
+          "Day 18 Scratch: Rock Paper Scissors": 'Day 18 Scratch: Rock Paper Scissors'
+          "Day 19 Scratch: Timer": 'Day 19 Scratch: Timer'
+          "Day 20-23 Scratch: Timing Game": 'Day 20-23 Scratch: Timing Game'
+          "Day 24 Scratch: Games": 'Day 24 Scratch: Games'
+          Day 25-30 Final Project: Day 25-30 Final Project
+          Unit 4 Challenge Planning: Unit 4 Challenge Planning
+          Unit 4 Challenge Creation: Unit 4 Challenge Creation
+        ECSPD3-Unit5:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: Добре дошли!
+          Teaching Strategies: Стратегии за преподаване
+          Unit 5 Overview: Unit 5 Overview
+          Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
+          Unit 5 Challenge Planning & Creation: 'Unit 5 Challenge Planning & Creation'
+        ECSPD3-Unit6:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: Добре дошли!
+          Teaching Strategies: Стратегии за преподаване
+          Unit 6 Overview: Unit 6 Overview
+          Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
+          Unit 6 Challenge Planning & Creation: 'Unit 6 Challenge Planning & Creation'
+        cspunit4draft:
+          title: 'CS Principles Unit 4 - Data'
+          description_short: Data
+          description: |
+            Collect, analyze, and extract knowledge from data by programming and
+            building apps. Process data imported from other sources and also pull
+            data from live data APIs.
+          Data is the Secret Ingredient: Data is the Secret Ingredient
+          Finding Data: Finding Data
+          Building Apps Using Structured Data: Building Apps Using Structured Data
+          "Data App Part 1: Brainstorm": 'Data App Part 1: Brainstorm'
+          APIs and Access to Large Data Sets: APIs and Access to Large Data Sets
+          Structuring Data with JSON: Structuring Data with JSON
+          "Data App Part 2: Data Design": 'Data App Part 2: Data Design'
+          "Data App Part 3: Code": 'Data App Part 3: Code'
+          Identifying People with Data: Identifying People with Data
+          Collecting Personal Information: Collecting Personal Information
+          Privacy Policy: Защита на личните данни
+          "Debate: Privacy vs. Utility": 'Debate: Privacy vs. Utility'
+          "Data App Part 4: App Permissions": 'Data App Part 4: App Permissions'
+          "Data App Part 5: Clean Data": 'Data App Part 5: Clean Data'
+          Reading Data: Reading Data
+          Sorting: Sorting
+          Searching: Searching
+          "Data App Part 6: Sort and Search": 'Data App Part 6: Sort and Search'
+          "Data App Part 7: Read Data": 'Data App Part 7: Read Data'
+          What Data Can Tell Us: What Data Can Tell Us
+          Interpreting Data from Different Perspectives: Interpreting Data from Different Perspectives
+          Visualizations in the Real World: Visualizations in the Real World
+          "Data App Part 8: Visualize Data": 'Data App Part 8: Visualize Data'
+          "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
+          "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
+        ScienceP3OLPT2:
+          title: Computer Science in Science PD Phase 3b
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Добре дошли!
+          Earth Science Challenges: Earth Science Challenges
+          Life Science Challenges: Life Science Challenges
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Заключение
+          Thinking About Implementation: Thinking About Implementation
+          Physical Science Challenges: Physical Science Challenges
+        algebraPD3b:
+          title: Компютърни науки в алгебрата
+          description_short: CS in Algebra mid year lesson support
+          description: CS in Algebra mid year lesson support
+          Teaching Support - Lessons 1-3: 'Teaching Support - Lessons 1-3'
+          Teaching Support - Lessons 4-7: 'Teaching Support - Lessons 4-7'
+          Teaching Support - Lessons 8-12: 'Teaching Support - Lessons 8-12'
+          Teaching Support - Lessons 13-16: 'Teaching Support - Lessons 13-16'
+          Teaching Support - Lessons 17-20: 'Teaching Support - Lessons 17-20'
+          Getting Started: Getting Started
+          Close and Next Steps: Close and Next Steps
+        CSPPD3-Unit2:
+          title: 'Computer Science Principles: Unit 2 PD'
+          description_short: Online Exploration of CSP Unit 2
+          description: Online Exploration of CSP Unit 2
+          Welcome!: Добре дошли!
+          Getting Started: Getting Started
+          Unit 2 Overview: Unit 2 Overview
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        duino:
+          Experimenting with Arduino stuff: Experimenting with Arduino stuff
+          Basic Circuits: Basic Circuits
+        Special Fun:
+          title: Special Fun
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: Възраст 10 + (след курс 3)
+          Halloween 2015: Halloween 2015
+        SpecialSeries:
+          title: Special Levels
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: Възраст 10 + (след курс 3)
+          Halloween 2015: Halloween 2015

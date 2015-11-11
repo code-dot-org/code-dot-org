@@ -65,6 +65,7 @@
   "penTooltip":"Levanta o baja el lápiz, para empezar o dejar de dibujar.",
   "penUp":"levantar lápiz",
   "reinfFeedbackMsg":"¡Aquí está tu dibujo! Sigue trabajando en él o continúa al siguiente Puzzle.",
+  "setAlpha":"establece alpha",
   "setColour":"definir color",
   "setPattern":"establecer patrón",
   "setWidth":"definir ancho",

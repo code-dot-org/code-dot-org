@@ -1,8 +1,8 @@
 -# English only for now
 - if language == "en"
 
-  -# 1 in 1 chance of showing: that is, always show.
-  - if rand(1..1) == 1
+  -# Never show the survey.
+  - if false
 
     -# If signed in, and user hasn't already filled out this survey
     - if current_user && !current_user.survey2015_value

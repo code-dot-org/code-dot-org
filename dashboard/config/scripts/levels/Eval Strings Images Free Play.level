@@ -23,7 +23,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "Free Play: Explore the blocks available to create something interesting. Make sure to share your favorite creations.",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
@@ -59,7 +62,6 @@
           <block type="functional_polygon" inline="false"/>
           <block type="place_image" inline="false"/>
           <block type="overlay" inline="false"/>
-          <block type="underlay" inline="false"/>
           <block type="rotate" inline="false"/>
           <block type="scale" inline="false"/>
           <block type="functional_text" inline="false"/>

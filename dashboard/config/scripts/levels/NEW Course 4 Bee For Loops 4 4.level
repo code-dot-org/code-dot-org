@@ -29,7 +29,6 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "ideal": "11",
-    "maze_data": null,
     "markdown_instructions": "Now we need to `move forward` `counter` times, then `get nectar` `counter` times.  Can you use two `repeat` loops to solve this challenge?"
   }
 }]]></config>
@@ -70,7 +69,6 @@
             </block>
           </next>
         </block>
-        <block type="controls_repeat_ext" inline="true"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

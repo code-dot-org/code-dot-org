@@ -3,7 +3,7 @@ title: Where computer science counts
 nav: blank
 rightbar: blank
 social:
-  "og:description": "Only 26 US states count computer science towards high school graduation. Is yours on the list?"
+  "og:description": "Only 27 US states count computer science towards high school graduation. Is yours on the list?"
   "og:image": "/images/map-image.png"
   "og:image:width": 600
   "og:image:height": 331
@@ -34,7 +34,8 @@ social:
 | -------- | ----------- |
 | Alabama | Math |
 | Arizona | Math |
-| California | Math |
+| Arkansas | Math |
+| California | Math, Science |
 | District of Columbia    | Math |
 | Florida | Math, Science |
 | Georgia   | Science |

@@ -12,8 +12,7 @@ module Ops
 
     test 'just return json whatever you ask for' do
       @request.headers['Accept'] = 'text/html'
-
-      get :index
+      get :index, format: :html
       assert_response :success
 
       # it's a json list

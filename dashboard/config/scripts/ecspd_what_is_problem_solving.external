@@ -1,0 +1,31 @@
+name 'ECSPD What Is Problem Solving'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+## Teaching Strategies > The Problem Solving Process
+
+Unit 2 is all about problem solving. The ECS version 5 curriculum suggests you teach students an explicit problem solving process, which has four main steps:
+
+### PROBLEM SOLVING STEPS
+
+1. **Understand the problem** - read or listen to the problem statement.
+
+2. **Make a plan to solve the problem** - use pictures, charts, graphs, systematic lists, objects, or act out the solution to help you devise a plan to solve the problem. In Computer Science we call this plan an algorithm.
+
+3. **Carry out the plan** — once the plan is conceived and understood, follow the plan. If you have planned well, this is the easy part. 
+
+4. **Review and reflect** - once the problem is solved, reflect on the plan that was used.
+
+### Share your problem solving strategies
+We have all learned different problem solving strategies throughout our lives. Some work all the time and others only in certain situations. Make a list of all the problem solving strategies you can think of. You will continue to add to this list over the course of this unit PD. You can also share strategies or find new strategies on the forum.
+<br><br>
+<a href="http://forum.code.org/t/pd-discussion-topic-problem-solving-strategies/2086/1"><button>
+Post in the forums</button></a>
+<br><br>
+Then, return to this page and click "Continue" to move on.
+
+<br><br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

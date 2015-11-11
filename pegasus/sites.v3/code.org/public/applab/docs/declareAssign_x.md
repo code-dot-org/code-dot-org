@@ -37,12 +37,13 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // Famous people
 var firstName = "Barbara"
 var lastName = "Liskov"
 console.log("Hi " + firstName + " " + lastName)
-</pre>
+```
 
 [/example]
 
@@ -50,7 +51,8 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // The unbeatable coin flip
 var myRandomNumber = randomNumber(2)
 if(myRandomNumber == 1){
@@ -60,7 +62,7 @@ else
 {
   console.log("Tails, you lose!")
 }
-</pre>
+```
 
 
 [/example]
@@ -69,7 +71,8 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 //Water drop rings
 var canvasWidth = 320
 var canvasHeight = 480
@@ -82,12 +85,12 @@ var numberOfCircles = 10
 
 createCanvas("myCanvas", canvasWidth, canvasHeight)
 setStrokeColor(strokeColor)
-for(var i=0; i&lt;numberOfCircles; i++)
+for(var i=0; i<numberOfCircles; i++)
 {
   circle(centerX, centerY, radius + i*growthFactor)
 }
 console.log("radius was " + radius + ", growthFactor was " + growthFactor)
-</pre>
+```
 
 [/example]
 
@@ -96,9 +99,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 var x = 0
-</pre>
+```
 
 [/syntax]
 

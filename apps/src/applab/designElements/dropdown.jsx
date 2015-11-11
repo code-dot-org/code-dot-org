@@ -1,5 +1,4 @@
 /* global $ */
-var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
@@ -8,6 +7,7 @@ var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
 var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
+var colors = require('../../sharedJsxStyles').colors;
 
 var elementUtils = require('./elementUtils');
 
@@ -25,7 +25,7 @@ var DropdownProperties = React.createClass({
       <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true} />
         <OptionsSelectRow
@@ -89,7 +89,7 @@ var DropdownEvents = React.createClass({
   },
 
   getChangeEventCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
       '  console.log("Selected option: " + getText("' + id + '"));\n' +
@@ -110,7 +110,7 @@ var DropdownEvents = React.createClass({
       <div id='eventRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
         <EventHeaderRow/>
@@ -133,8 +133,8 @@ module.exports = {
     element.style.height = '30px';
     element.style.fontSize = '14px';
     element.style.margin = '0';
-    element.style.color = '#fff';
-    element.style.backgroundColor = '#1abc9c';
+    element.style.color = colors.white;
+    element.style.backgroundColor = colors.teal;
 
     var option1 = document.createElement('option');
     option1.innerHTML = 'Option 1';
@@ -145,5 +145,20 @@ module.exports = {
     element.appendChild(option2);
 
     return element;
+  },
+
+  onDeserialize: function (element) {
+    // Don't interfere with focus or clicks in design mode, where the dropdown is
+    // already disabled by jQuery.draggable({cancel: false}).
+    if ($('#divApplab').find(element)[0]) {
+      $(element).on('mousedown', function(e) {
+        if (!Applab.isRunning()) {
+          // Disable dropdown menu unless running
+          e.preventDefault();
+          this.blur();
+          window.focus();
+        }
+      });
+    }
   }
 };

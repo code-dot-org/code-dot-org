@@ -27,6 +27,24 @@
                 - else
                   %span.puzzle-number
                     = @script_level.position
+              - if @user_level.submitted?
+                #submitted
+                  %div= t('teacher.panel.submitted_on')
+                  .timestamp= @user_level.updated_at.iso8601
+                  %button.btn.btn-info#unsubmit{"data-user-level-url" => url_for(@user_level)}
+                    = t('teacher.panel.unsubmit')
+                  :javascript
+                    $(function() {
+                      var submittedTimestamp = $('#submitted .timestamp');
+                      submittedTimestamp.text((new Date(submittedTimestamp.text())).toLocaleString());
+                    });
+                    $('#unsubmit').click(function(ev) {
+                      $.post($(ev.target).attr('data-user-level-url'), {"_method": 'PUT', user_level: {best_result: 1}}, function( data ) {
+                        $('.teacher-panel .user_level .level_link').removeClass('submitted').addClass('attempted');
+                        $('#submitted').hide();
+                      });
+                    });
+
         .level
           - if @level && @level.ideal_level_source_id && @script # 'solutions' for blockly-type levels
             - if @ideal_level_source
@@ -36,7 +54,7 @@
                 %button.btn.btn-info= t('reference_area.teacher')
           - if @level.try(:examples).present? # 'solutions' for applab-type levels
             - @level.examples.each_with_index do |example, index|
-              = link_to applab_project_view_projects_url(channel_id: example, host: 'studio.code.org', port: 443, protocol: :https) do
+              = link_to applab_project_view_projects_url(channel_id: example, host: 'studio.code.org', port: 443, protocol: :https), target: "_blank" do
                 %button.btn.btn-info
                   - if @level.examples.many?
                     = t('teacher.panel.example_with_number', solution_number: index + 1)

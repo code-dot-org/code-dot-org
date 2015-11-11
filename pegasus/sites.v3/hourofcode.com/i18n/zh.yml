@@ -1,21 +1,25 @@
 zh:
   site_name: 一小時程式設計
+  hour_of_code: Hour of Code
   language: 繁體字
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: 敬請期待
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: '一小時程式設計是一個全球性的活動，觸及數千萬個來自180 多個國家的學生。任何人，在任何地方都可以舉行一小時編程活動。一小時的教程可用於超過 30 種語言。不需要任何經驗。 <strong>由 4 歲到 104 歲 </strong>。'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: 觀看新的影片
   front_watch_regular_video: Watch the video
   header_menu_resources: 資源
   header_menu_faq: 常見問題與解答
   header_menu_prizes: 獎勵
+  header_menu_how_to: How-To
+  header_menu_promote: Promote
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -49,6 +53,7 @@ zh:
   company_chelmsfordpublicschooldistrict: Chelmsford School District
   company_cheneysd: Cheney School District
   company_chesterfieldschools: Chesterfield County Public Schools
+  company_codebrooklyn: Code Brooklyn
   company_cps: Chicago Public Schools
   company_ccsd: Clark County School District
   company_cloverparkschooldistrict: Clover Park School District
@@ -72,6 +77,7 @@ zh:
   company_vadoe: "Governor's School Programs"
   company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
+  company_godaddy: Go Daddy
   company_greenupcountyschooldistrict: Greenup County Schools
   company_gwinnettcountypublicschools: Gwinnett County Public Schools
   company_HamptonCitySchools: Hampton City Schools
@@ -105,6 +111,7 @@ zh:
   company_oneclay: One Clay County School District
   company_ocps: Orange County Schools
   company_orangeusd: Orange Unified School District
+  company_pbsd: Palm Beach School District
   company_pvusd: Paradise Valley Unified School District
   company_PetersburgCityPublicSchools: Petersburg City Public Schools
   company_pylusd: Placentia-Yorba Linda Union School District
@@ -118,6 +125,7 @@ zh:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -130,6 +138,7 @@ zh:
   company_wvsd208: West Valley School District
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
+  company_yelp: Yelp
   prizes_all: 給所有組織者的獎勵
   prizes_every_organizer: 所有舉辦Hour of Code的組織都將會收到 Dropbox 或 Skype 點數作為謝禮
   prizes_technology: '在美國各州（& 華盛頓特區）各會有一所公立學校贏得價值 10,000 美元的技術'
@@ -138,6 +147,22 @@ zh:
   prizes_brilliant: 在每個省和地區將各會有一所學校收到 $2000 作為輝煌的專案
   prizes_actua: 加拿大內會 15 所學校，由通過Actua的成員主持 2場動手做工作坊。
   prizes_details: 詳細資訊
+  nav_back_to_resources: Back to Resources
+  how_to_nav_educators: For educators
+  how_to_nav_after_school: For after school
+  how_to_nav_parents: For parents
+  how_to_nav_public_officials: For public officials
+  how_to_nav_districts: For districts
+  how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
+  how_to_nav_companies: For companies
+  how_to_nav_afterschool_educators: For after-school educators
+  how_to_nav_volunteers: For volunteers
+  prizes_nav_title: 獎勵
+  prizes_nav_home: All prizes
+  prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: 條款和條件
+  prizes_nav_faq: 常見問題與解答
   prizes_nav_dc: 去華盛頓特區的神秘之旅
   prizes_nav_technology: 給予你的學校價值$10,000的科技資金
   prizes_nav_video_chat: 與科技鉅子進行視頻聊天
@@ -145,12 +170,17 @@ zh:
   prizes_nav_brilliant: 2000元的輝煌實驗室項目
   prizes_nav_actua: 實際的工作坊
   prizes_nav_kids_code: 小孩子們的代碼新青年
-  prizes_nav_terms: 條款和條件
-  prizes_nav_faq: 常見問題與解答
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>如何辦一場 Hour of Code 活動</a>"
-  whats_next_promote: "<a href='HTTP://hourofcode.com/resources'> 推廣Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>嘗試</h1><h2>小時的代碼</h2><h3>#服務</h3>'
   anybody_can_learn: 任何人皆可學習。
   get_started: 開始
@@ -167,11 +197,15 @@ zh:
   front_join_us_teacher: 您是老師嗎？
   front_join_us_inspire: 激勵學生用
   front_join_us_inspire_link: 教室裡的一個Hour of Code活動。
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: 您是家長嗎？
   front_join_us_ask_link: 詢問你當地的學校
   front_join_us_ask: 舉辦一場Hour of Code活動
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: 只是喜愛電腦科學嗎？
   front_join_us_spread: 傳播訊息。
+  front_join_us_spread_word: Spread the word in your community
+  front_join_us_spread_word_work: Spread the word in your community or workplace
   front_join_us_organize: 或是自己組織一個ㄧ小時程式設計活動。
   front_join_us_how_to_run: 下面將教你如何主持一場Hour of Code活動
   front_join_us_help_promote: 幫忙宣傳Hour of Code
@@ -179,9 +213,13 @@ zh:
   front_join_us_teachers: 教師
   front_join_us_everyone: 所有人
   front_join_us_try: 試一試
+  front_join_us_sign_up: 註冊
   front_join_us_host: 舉辦教學
   front_join_us_support: 支援
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
+  front_join_us_code_info: For more information, please visit code.org
+  front_join_us_n_students_served: '# served'
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: 您的姓名
   signup_email_label: 您的電子信箱
   signup_organization_name_label: 學校或組織名稱
@@ -210,9 +248,13 @@ zh:
   map_header: '# 小時的編碼活動在世界各地'
   see_all_events: 查看所有事件
   map_header_company: '# 由公司主辦'
+  map_header_country: '# in %{country}'
   map_search_placeholder: 搜尋Hour of Code活動
   map_search_search: 搜尋
   map_search_reset: 清除
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Hour of Code在此處
   meta_tag_og_description: 一小時程式設計是一個全球性的活動，觸及數千萬個來自180多個國家，30多種語言，由4歲到104 歲的學生。
   meta_tag_twitter_title: Hour of Code在此處
@@ -231,8 +273,12 @@ zh:
   hardware_prizes_form_school_type_option_middle_school: 中學
   hardware_prizes_form_school_type_option_high_school: 高中
   hardware_prizes_form_qualifying_school_label: 這是 K 12 美國公立學校
+  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
+  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
   hardware_prizes_form_number_students_label: 參加的學生人數
   hardware_prizes_form_number_students_placeholder: 學生人數
+  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
+  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
   hardware_prizes_form_plan_file_label: 上載您的Hour of Code物流計畫
   hardware_prizes_form_plan_file_description: '交出您如何計畫來組織每個學生在你們學校做Hour of Code簡單日程的安排。請參閱計畫樣本： #PDF# | #Word#'
   hardware_prizes_form_submit_label: 送出
@@ -241,31 +287,31 @@ zh:
   hoc_faq_what_is_hoc_a: "Hour of Code 是一個一小時介紹電腦科學的活動，旨在揭秘程式設計並說明它是任何人都可以學習的基礎知識。<a href='http://code.org/learn'>查看教學課程</a>。"
   hoc_faq_last_year: 試試看教學課程
   hoc_faq_when_is_hoc_q: 什麼時候舉辦 Hour of Code活動？
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
   hoc_faq_why_cs_q: 為何是電腦科學？
   hoc_faq_why_cs_a: "<i>每個</i> 學生都應該有機會學習電腦科學。它有助於培養解決問題的技能、 邏輯和創造力。提早開始，學生將有在任何一個 21 世紀的職業生涯成功的基礎。在 <a href='HTTP://code.org'> Code.org</a> 上觀看更多的統計資料。"
   hoc_faq_how_participate_q: 我怎樣才能參加Hour of Code活動？
-  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Hour of Code活動是由誰支持的？
   hoc_faq_behind_hoc_a: "Hour of Code活動的組織是 <a href='http://code.org'> Code.org</a>，它是一個公眾的501c3 非營利組織，致力於更多學校推廣電腦科學教育，並為增加女性和較弱勢的有色人種學生學習電腦的機會。同時，這是一個<a href='HTTP://code.org/about/partners'> 前所未有的夥伴聯盟</a>&mdash; 包含了微軟、 蘋果、 亞馬遜、 美國男孩和女孩俱樂部和各大學理事會，都共同來支持Hour of Code一小時程式設計活動 。"
   hoc_faq_host_q: 我對寫程式一無所知。我仍然可以舉辦這活動嗎？
-  hoc_faq_host_a: "答案是肯定的。一小時程式設計活動是能夠自我引導的。你要做的就是 <a href='HTTP://code.org/learn'> 嘗試我們目前的教學課程</a>，挑選你想要的教程並選一個小時 &mdash; 其餘部分由我們來照顧。我們提供了適合從幼稚園到了成人，各個年齡和經驗程度的不同選擇。閱讀我們的 <a href='target-resources-how-to'> 如何引導</a> 文件，並開始規劃您的活動。"
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: 我需要為所有學生準備電腦嗎？
   hoc_faq_need_computers_a: "不需要，一小時程式設計活動可以在個人電腦、 智慧手機、 平板電腦上執行，有些活動甚至根本不需要電腦！無論你在哪裡，無論有什麼設備，你都可以參加。<p><i>這裡有幾個選項：</i> <br><ul><li><b>夥伴合作。</b>研究顯示，學生在共用一台電腦一起工作 <a href='HTTP://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> 夥伴寫程式</a>時的學習效果最好。鼓勵你的學生兩兩合作。<li><b>使用投影螢幕。</b>如果你有一部投影機和有連結網路的電腦與螢幕，你的整個團體可以一起進行一小時的程式設計。一起看影片的部分，輪流解決謎題或回答問題。<li><b>不插電活動。</b>我們有提供不需要電腦的教學內容。</ul>"
   hoc_faq_international_q: '我在 <country>。我如何參與國際性活動？'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: 我該如何製作一小時程式設計的教程？
   hoc_faq_tutorial_a: "如果你有興趣成為教程的合作夥伴，<a href='target-tutorial-guidelines'> 請參閱我們的指導方針和指示</a>。我們想要有各種引人入勝的選擇，但主要目標是為學生和電腦科學的新教師們優化體驗。"
   hoc_faq_more_questions_q: 還有更多的問題嗎？
   hoc_faq_more_questions_a: "試看看在我們的 <a href='HTTP://support.code.org'> 支援論壇</a> 中找到答案。"
-  hoc_faq_scratch_q: 我正用 Scratch 辦Hour of Code活動，但是如果我的學生有 iPad而不是筆記型電腦，怎麼辦呢？
-  hoc_faq_scratch_a: "Scratch無法在平板電腦上執行。如果你的學生年紀小，他們可以使用 ScratchJR--它是iPad應用程式。如果你有看一下<a href='http://code.org/learn'> Code.org/learn</a>的教學課程，你會在Code.org找到其他在iPad可行的教學，例如Tynker、Lightbot或CodeSpark。"
   hoc_faq_account_q: 學生們需要使用帳號登入嗎？
   hoc_faq_account_a: "不，學生嘗試Hour of Code活動時，完全不需要註冊或登入。大多數<a href='http://code.org/learn/beyond'>後續課程</a>才需要建立帳戶以保存學生的學習進度。"
   hoc_faq_frozen_q: 安娜和艾爾莎的教學課程在哪裡？
   hoc_faq_frozen_a: "它現在公佈在<a href='http://code.org/learn'> Code.org/learn</a>。我們希望你會喜歡！"
   hoc_faq_high_school_q: 哪些活動適合高中生？
   hoc_faq_high_school_a: "跨越所有年齡，我們建議你在<a href='http://code.org/learn'> Code.org/learn</a>從初學者課程開始嘗試，如憤怒鳥或安娜和艾爾莎課程。一名高中學生應該能夠在30分鐘內完成其中之一，然後可以在JavaScript中嘗試更進階的教學課程，如可汗學院(Khan Academy)或CodeHS。"
+  hoc_faq_scratch_q: 我正用 Scratch 辦Hour of Code活動，但是如果我的學生有 iPad而不是筆記型電腦，怎麼辦呢？
+  hoc_faq_scratch_a: "Scratch無法在平板電腦上執行。如果你的學生年紀小，他們可以使用 ScratchJR--它是iPad應用程式。如果你有看一下<a href='http://code.org/learn'> Code.org/learn</a>的教學課程，你會在Code.org找到其他在iPad可行的教學，例如Tynker、Lightbot或CodeSpark。"
   hoc_faq_count_hoc_q: 你怎樣計算一小時的代碼?
   hoc_faq_count_hoc_a: "小時的代碼的跟蹤器不是使用精確測量。我們不會計算特定學生的詳細Id當我們正在跟蹤代碼小時的參與，特別是因為我們不要求學生登錄或註冊。作為一個結果，我們過度計數和不足計數的參與者，在同一時間。閱讀所有的細節 <a href='HTTP://code.org/loc'> 在這裡</a>。"
   stats_hoc_2013_image_alt: 統計來自2013的Hour of Code
@@ -287,15 +333,60 @@ zh:
   resources_how_to_districts: 分區操作指引
   resources_how_to_officials: 公務部門的操作指南
   resources_handouts: 宣傳講義
-  resources_videos: 影片
+  resources_one_pager: One-page handout
+  resources_brochure: Brochure
   resources_posters: 海報
-  resources_social: 社交
+  resources_videos: 影片
   resources_banners: 橫幅
   resources_emails: 電子郵件範例
+  resources_logo: Hour of Code logo
   resources_stats: 有用的統計及引導語
   resources_press_kit: 新聞資料袋
+  resources_social: 社交
   resources_country_resources: Country Specific Resources
-  events_title: 所有 Hour of Code 的事件
+  resources_stickers: Stickers
+  resources_how_to_guides: How-to guides
+  resources_promote: Promote
+  resources_nav_tutorials: 試試看教學課程
+  resources_nav_promote: Spread the word
+  resources_nav_spread_word: How to get involved
+  resources_banner_promote_text: Promote
+  resources_banner_promote_button: Encourage others to sign up with brochures, inspirational posters and social media banners.
+  resources_banner_howto_text: How-to
+  resources_banner_howto_button: Resources for educators, parents and districts to host an Hour of Code.
+  handouts_section: Share these handouts
+  handouts_onepager: Spread the word with this one page handout
+  handouts_brochure: Give this brochure to teachers and schools
+  handouts_participationguide: Plan your Hour of Code with this participation guide
+  videos_title: 播放這些影片來啟發學生
+  videos_what_most_schools_dont_teach: "What Most Schools Don't Teach (5 min)"
+  videos_hoc_2014: 'Hour of Code is Here - Anybody Can Learn'
+  videos_obama_cs: 美國歐巴馬總統談資訊科學
+  videos_anybody_can_learn: Anybody Can Learn (1 min)
+  title_country_resources: Country Specific Resources
+  title_how_to_districts: Hour of Code How-To for Districts
+  title_how_to_events: Hour of Code Event How-To
+  title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_companies: 'How to host an Hour of Code - Companies'
+  title_how_to_officials: 公務部門的操作指南
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
+  title_how_to: How-to Guide
+  title_press_release: Hour of Code Press Release for Elected Officials
+  title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
+  title_press_kit: 新聞資料袋
+  title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+  title_stats: Blurbs and Stats
+  title_partners: 合作夥伴
+  title_prizes_faq: Prizes FAQ
+  title_prizes_terms: Prizes Terms
+  title_prizes_thanks: 謝謝
+  title_prizes: 獎勵
+  title_hardware_prize_form: Sign up for Hardware Prizes
+  title_resources: 資源
+  title_signup_thanks: 謝謝您報名舉辦Hour of Code!
+  title_tutorial_guidelines: Tutorial Guidelines
+  title_whole_school: Whole School Participation
+  events_nav_title: Hour of Code Events
   events_nav_all: 所有活動
   events_nav_whole_schools: 整個學校
   events_nav_special: 特別活動

@@ -1,6 +1,6 @@
 * * *
 
-nga: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" tema: "Faleminderit që u regjistruat që të marrësh pjesë tek Ora e Kodimit!" litmus_tracking_id: "5g5lyi1a"
+nga: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" tema: "Faleminderit që u regjistruat që të merrni pjesë në Orën e Kodimit!" litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
@@ -8,30 +8,45 @@ nga: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&
 
 # Faleminderit që u regjistruat si organizator në Orën e Kodimit!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
+Ju jeni duke e bërë të mundur për të gjithë studentët rreth gjithë botës të mësojnë një Orë Kodim, gjatë 7-13 Dhjetor, që mund të u ndryshojë gjithë jetën e tyre.
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+*Çdo* organizator i Orës së Kodimit në të gjithë botën do të pranoj një kartë dhuratë nga Amazon, iTunes, apo nga Windows store, si një dhuratë falemderuese. [Detajet](https://<%= hostname %>/prizes).
+
+#### Ne do të jemi në kontakt rreth udhëzimeve të reja dhe përditësimeve të tjera emocionuese. Çfarë mund të bëni ju tani?
 
 ## 1. Përhap fjalën
 
-Thuaji shokëve të tu për #HourOfCode.
+Ne kemi nevojë për ndihmën tuaj të arrijmë 100.000 organizatorë në të gjithë botën. Thuaji shokëve të tu për #HourOfCode. [Përdor këto burime ndihmuese](https://<%= hostname %>/promovojë/burimet)të promovosh ngjarjen tuaj.
+
+<% if international == 'true' %>
 
 ## 2. Pyesni gjithë shkollën që të ofrojë një Orë Kodimi
 
-[Send this email](http://<%= hostname %>/resources#email) to your principal.
+[Dërgo këtë email](https://<%= hostname %>/promovojë/burime#shembuj-emaile) te drejtori juaj apo[ shpërndaj këto materiale njoftuese](https://<%= hostname %>/promovojë/burimet). <% else %>
+
+## 2. Anëtarso të gjithë shkollën tënde për Orën e Kodimit dhe kualifikohu të fitosh 10.000$
+
+[Dërgo këtë email ](https://<%= hostname %>/promovojë/burimet#shembull-emailet) te drejtori juaj apo [shpërndajë këto materiale njoftuese](https://<%= hostname %>/promovojë/burimet). Plaifiko për çdo student të marrë pjesë në shkollën tuaj dhe ju mund të fitoni 10.000$ të vlefshme në teknologji për shkollën tuaj. [Kompleto këtë formë për t'u kyçur](https://<%= hostname %>/çmimet/harduer-regjistrohu). <% end %>
 
 ## 3. Pyesni punëdhënsin tuaj, që të arrish të përfshihesh
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Dërgo këtë email](https://<%= hostname %>/promovojë/burimet#shembull-emaile) te menaxheri, apo shefi juaj ekzekutiv.
 
-## 4. Promote the Hour of Code in your community
+## 4. Promovoni Orën e Kodimit në komunitetin tuaj
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
+Anëtarëso një grup lokal apo edhe disa shokë. [Dërgo këtë email](https://<%= hostname %>/burimet#shembull-emaile).
 
 ## 5. Pyet një zyrtar të zgjedhur për të përkrahur Orën e Kodimit
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Dërgo këtë email](https://<%= hostname %>burimet#politikan) te kryetari juaj, këshilli apo bordi i shkollës dhe ftoji ata të vizitojnë shkollën tuaj.
+
+Ju falenderojë për udhëheqjen e lëvizjes për ti dhënë çdo studenti mundësinë të mësojë aftësitë themelore në shkenca kompjuterike.
+
+Hadi Partovi  
+Themelues, Code.org
 
 * * *
 
-Code.org është një 501c3 jofitimprurëse. Adresa jonë është 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Nuk i pëlqeni këto emaile? [Unsubscribe](%= unsubscribe_link %).
+<small> Ju po pranoni këtë email sepse ju jeni regjistruar për Orën e Kodimit, e përkrahur nga më shume se 200 partnerë dhe organizatorë nga Code.org. Core.org është një 501c3 jo-përfituese. Adresa jonë është 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Nuk i dëshironi këto emaile? <a href="%= unsubscribe_link %">Anulo abonimin</a>. </small>
+
+![](<%= tracking_pixel %>)

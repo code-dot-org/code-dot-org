@@ -1,36 +1,52 @@
 name 'U2L3 Student Lesson Introduction'
-title 'Lesson 3 - Invent an addressing protocol'
-css 'unplugged'
-
-markdown <<MARKDOWN
-## Unit 2: Lesson 3 - Invent an Addressing Protocol
-
-# Background
-
-What kinds of information do you need to send when you send a message over the internet? You would probably want to include some control information, such as sender and receiver addresses, along with the message itself. How long should this control information be and how long should the message be? More importantly, if a message and its control information are sent as a string of bits, how does the receiver know where the information ends and where the actual message begins? In computing, the control information and its message are called a "packet" and the rules that define where the control information ends and the message begins are part of a "protocol." For this lesson, you will implement an addressing protocol for the battleship game.
-
-# Vocabulary
-* **Protocol:** A well-known set of rules and standards used to communicate between machines
-* **Packet:** A message of data that includes information to route the message from the source to the destination computer. Also known as a datagram 
-* **Internet Protocol:** The communication protocol that dictates of the specific format and structure of a packet in order for it to be routed properly on the internet   
-
-# Lesson
-
-* Learn about the requirements of an internet addressing protocol
-* Invent an efficient and flexible addressing protocol for the battleship
-
-# Resources
-
-* Worksheet: <a href="https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing” target="_blank">IP/DNS video questions</a>
-* Worksheet: <a href="https://docs.google.com/document/d/1sFmHWCY-jSKs40jvTnfkbjO61xZEZp_UyTolmGt_zjw/edit” target="_blank">Inventing a protocol for Battleship</a>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-* <a href="https://docs.google.com/document/d/161gy9ZP_n90uUbVnzUzN6_huP8BimOlPMFjY9NwSXMc/edit" target="_blank">KEY: Video Guide for “IP Addresses and DNS"</a>
-
-
-MARKDOWN
+encrypted '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
+1+Zu
+'

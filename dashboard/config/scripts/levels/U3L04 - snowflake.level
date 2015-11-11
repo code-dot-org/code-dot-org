@@ -1,0 +1,70 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-09-09T18:02:14.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": {
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "turnLeft": {
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "penUp": null,
+      "penDown": null,
+      "functionParams_none": null,
+      "callMyFunction": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "PUo+2/dKmiUZYqBWNLocpY5RzPOLuRv3spooQHKOxbKqIO8iJl+Kvu8a0Jg3\nY4Cs\n",
+    "embed": "false",
+    "instructions": "Create the design by breaking it down into layers of functions. (Click to see full instructions)",
+    "markdown_instructions": "###Challenge\r\n\r\nYou should have already worked with a partner to break down the design below into its multiple layers of functions. Now you'll have an opportunity to program your solution. Here are a few things to keep in mind:\r\n\r\n* Identify useful patterns that can be reused and give them **their own functions**.\r\n* Remember: The functions you design **can call one another**. This is how you create layers of abstraction.\r\n* Functions should be given names that are **descriptive and meaningful**.\r\n* Your program should be kicked off with a single call to a function that makes calls to subsequent functions.\r\n\r\n\r\n![](https://images.code.org/afed66de9dc3cdb10f627a176139c58f-image-1441822234028.09.33 PM.png)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": ".9",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "app_width": "320",
+    "app_height": "480",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "true",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "true"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

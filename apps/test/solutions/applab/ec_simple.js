@@ -25,79 +25,88 @@ module.exports = {
         testResult: TestResults.FREE_PLAY
       },
     },
-    {
-      description: "getText and setText on text labels.",
-      editCode: true,
-      xml:
-          "textLabel('idTxt1', '');" +
-          "textLabel('idTxt2', '');" +
-          "setText('idTxt1', 'test-value');" +
-          "setText('idTxt2', getText('idTxt1'));",
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
-          assert(document.getElementById('idTxt2').innerText === 'test-value');
-          Applab.onPuzzleComplete();
-        });
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      },
-    },
 
-    {
-      description: "button",
-      editCode: true,
-      xml: "button('my_button_id', 'my_button_text');",
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
-          var button = document.getElementById('my_button_id');
-          assert(button);
-          assert.equal(button.textContent, 'my_button_text');
-          assert.equal(button.parentNode.id, 'screen1');
+    // Missing coverage of the data category here.
+    // Most data blocks make network calls and modify data records. To get
+    // test coverage of these here, we would probably need to mock portions of that.
+    // We do have UI test coverage of data apis in dataBlocks.feature
 
-          Applab.onPuzzleComplete();
-        });
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      },
-    },
-
-    // These exercise all of the blocks in UI controls (other than get/setText).
+    // These exercise all of the blocks in Control category
     // It does not validate that they behave correctly, just that we don't end
-    // up with an errors
+    // up with any errors
     {
-      description: "UI controls",
+      description: "Control",
       editCode: true,
       xml:
-          'button("id1", "text");\n' +
-          // These two are currently having issues that appear to be specific
-          // to the test rig. I validated them manually in the browser
-          // 'getXPosition("id1");\n' +
-          // 'getYPosition("id1");\n' +
-          'onEvent("id1", "click", function(event) {\n' +
-          '  \n' +
-          '});\n' +
-          'textInput("id2", "text");\n' +
-          'textLabel("id3", "text");\n' +
-          'dropdown("id4", "option1", "etc");\n' +
-          'checkbox("id5", false);\n' +
-          'getChecked("id5")\n' +
-          'setChecked("id5", true);\n' +
-          'radioButton("id6", false, "group");\n' +
-          'image("id7", "https://code.org/images/logo.png");\n' +
-          'setImageURL("id7", "https://code.org/images/logo.png");\n' +
-          'getImageURL("id7");\n' +
-          'playSound("https://studio.code.org/blockly/media/skins/studio/1_goal.mp3");\n' +
-          'setPosition("id7", 0, 0, 100, 100);\n' +
-          'showElement("id7");\n' +
-          'hideElement("id7");\n' +
-          'deleteElement("id7");\n' +
-          'write("text")\n;',
+        'var count = 0;' +
+        'for (var i = 0; i < 4; i++) {' +
+        '  count++;' +
+        '}' +
+        'i = 5;' +
+        'while(i > 0) {' +
+        '  count++;' +
+        '  i--;' +
+        '}' +
+        'if (count > 0) {' +
+        '  count++;' +
+        '}' +
+        'if (count < 0) {' +
+        '  count++;' +
+        '} else {' +
+        '  count--;' +
+        '}' +
+        'getTime();' +
+        'var interval = setInterval(function() {' +
+        '  count++;' +
+        '}, 100);' +
+        'clearInterval(interval);' +
+        'var timeout = setTimeout(function() {' +
+        '  console.log(count);' +
+        '  clearTimeout(timeout);' +
+        '}, 200);',
+
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 200, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "9");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    // These exercise all of the blocks in Control category
+    // It does not validate that they behave correctly, just that we don't end
+    // up with any errors
+    {
+      description: "Variables",
+      editCode: true,
+      xml:
+        // prompt and promptNum are covered in dropletUtilsTest
+        'var x = 1;\n' +
+        'var y;\n' +
+        'y = 2;\n' +
+        'console.log("message");\n' +
+        'var str = "Hello World";\n' +
+        'var a = str.substring(6, 11);\n' +
+        'var b = str.indexOf("World");\n' +
+        'var c = str.includes("World");\n' +
+        'var d = str.length;\n' +
+        'var e = str.toUpperCase();\n' +
+        'var f = str.toLowerCase();\n' +
+        'var list = ["a", "b", "d"];\n' +
+        'var g = list.length;\n' +
+        'insertItem(list, 2, "c");\n' +
+        'appendItem(list, "f");\n' +
+        'removeItem(list, 0);\n',
 
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
@@ -108,7 +117,7 @@ module.exports = {
       customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        assert.equal(debugOutput.textContent, "message");
         return true;
       },
       expected: {
@@ -119,7 +128,7 @@ module.exports = {
 
     // These exercise all of the blocks in canvas category
     // It does not validate that they behave correctly, just that we don't end
-    // up with an errors
+    // up with any errors
     {
       description: "Canvas",
       editCode: true,
@@ -157,12 +166,16 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, "");
         return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
       }
     },
 
     // These exercise all of the blocks in Turtle category
     // It does not validate that they behave correctly, just that we don't end
-    // up with an errors
+    // up with any errors
     {
       description: "Turtle",
       editCode: true,
@@ -188,6 +201,40 @@ module.exports = {
         'show();\n' +
         'hide();\n' +
         'speed(50);\n',
+
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    // These exercise all of the blocks in Turtle category
+    // It does not validate that they behave correctly, just that we don't end
+    // up with any errors
+    {
+      description: "Functions",
+      editCode: true,
+      xml:
+        'function myFunction() {\n' +
+        '  \n' +
+        '}\n' +
+        'function myFunction2(n) {\n' +
+        '  return n;\n' +
+        '}\n' +
+        'myFunction();\n' +
+        'myFunction2(1);\n',
 
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level

@@ -358,8 +358,10 @@
       viewing_solution: Skoðun lausnar
       try_it_yourself: Prófaðu þetta
       section: Hópur
-      example: Example Solution
-      example_with_number: Example Solution %{solution_number}
+      example: Dæmi um lausn
+      example_with_number: Dæmi %{solution_number} um lausn
+      submitted_on: Sent inn dags. %{date}
+      unsubmit: Afturkalla innsendingu
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
     email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'
@@ -472,6 +474,7 @@
     tos: Skilmálar
     privacy: Persónuvernd
     secure: Örugg útgáfa
+    report_abuse: Tilkynna misnotkun
   reference_area:
     title: Vantar þig aðstoð?
     subtitle: Skoðaðu þessi myndbönd og vísbendingar
@@ -715,3 +718,33 @@
     view_all: Sýna verkefnin mín
     remix: Endurblanda
     click_to_remix: Smelltu á "Endurblanda" til að stofna afleidda útgáfu!
+    edit_project: Breyta verkefni
+    abuse:
+      tos: Þetta verkefni hefur verið tilkynnt fyrir brot á <a href='http://code.org/tos'>Þjónustuskilmálum</a>
+        Code.org og þess vegna er ekki hægt að deila því.
+      contact_us: Ef þú telur þetta vera rangt, hafðu þá <a href='https://code.org/contact'>samband
+        við okkur.</a>
+      go_to_code_studio: Fara í Kóðastúdíó
+      report_abuse_form:
+        intro: Ef þú hefur rekist á ósæmilegt efni eða orðið fyrir hótunum, neteinelti,
+          áreitni eða broti á höfundarrétti hvað varðar efni sem þú átt við notkun
+          appa sem gerð eru í Kóðastúdíóinu, biðjum við þig vinsamlegast að fylla
+          út formið hér fyrir neðan. Við munum taka kvörtun þina alvarlega, rannsaka
+          málið í samræmi við það og gera viðeigandi ráðstafanir.
+        validation:
+          email: Vinsamlegast gefðu upp tölvupóstfang
+          age: Vinsamlegast tilgreindu aldur
+          abuse_type: Vinsamlegast tilgreindu hvernig þetta innihald brýtur gegn Þjónustuskilmálunum
+          abuse_detail: Vinsamlegast lýstu því efni sem þú ert að tilkynna
+        abusive_url: Vefslóð (URL) efnisins sem tilkynnt er
+        abuse_type:
+          question: Á hvaða hátt brýtur þetta efni gegn %{link_start}Þjónustuskilmálunum%{link_end}?
+          harassment: Hótar, neteinelti, áreitni
+          offensive: Ósæmilegt efni
+          infringement: Brot á höfundarrétti
+          other: Annað
+        detail: Vinsamlegast lýstu efninu sem þú ert að tilkynna eins nákvæmlega og
+          unnt er.
+        acknowledge: Með því að senda inn þessar upplýsingar, staðfestir þú að þær
+          megi nota í samræmi við %{link_start_privacy}Persónuverndarstefnu%{link_end}
+          og %{link_start_tos}Þjónustuskilmála%{link_end}

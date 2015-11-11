@@ -9,7 +9,7 @@
     "skin": "pvz",
     "instructions": "Get me to the sunflower! (Where is that \"repeat times\" block when I need it?)",
     "start_direction": "1",
-    "step_mode": "0",
+    "step_mode": 1,
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "11"

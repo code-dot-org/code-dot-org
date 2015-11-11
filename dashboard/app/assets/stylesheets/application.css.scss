@@ -182,6 +182,12 @@ img.video_thumbnail {
   color: $header_text;
   a:link {color:$header_text;}
   a:visited {color:$header_text;}
+
+  .small_font_on_tablet {
+    @media screen and (max-width: 1024px) {
+      font-size: 13px;
+    }
+  }
 }
 
 .header.hide_on_mobile,
@@ -1498,7 +1504,7 @@ a.download-video {
     background-color: white;
     border-color: $lighter_cyan;
   }
-  .answer:hover {
+  .answer.ui-draggable:hover {
     border-color: $light_green;
     cursor: move;
   }
@@ -1552,12 +1558,15 @@ a.download-video {
 }
 
 .external,
-.text-match {
+.text-match,
+.multi,
+.match {
   #markdown.teacher {
     max-width: 800px;
     border: 5px solid $cyan;
     background-color: $lightest_cyan;
     border-radius: 5px;
+    margin: 10px auto;
     .content {
       padding: 10px;
     }
@@ -1572,12 +1581,14 @@ a.download-video {
   }
 }
 
-.text-match #markdown.teacher {
-  margin: 10px 0;
+.multi #markdown.teacher {
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.external #markdown.teacher {
-  margin: 10px auto;
+.text-match #markdown.teacher {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 #current-script-levels, #all-levels {
@@ -1796,6 +1807,11 @@ $modal-no-icon-gap: 22px;
     margin-bottom: 15px;
   }
 
+  .instructions2 {
+    font-size: 18px;
+    color: $charcoal;
+  }
+
   .aniGif {
     display: block;
     margin: 0px auto 6px;
@@ -1804,9 +1820,9 @@ $modal-no-icon-gap: 22px;
   }
 
   .feedback-image {
-    width: 40%;
+    width: 180px;
     height: auto;
-    margin: 15px;
+    margin: 0 15px 0 0;
     float: left;
     border: lightgrey;
     border-style: solid
@@ -1914,8 +1930,8 @@ $modal-no-icon-gap: 22px;
   padding-top: 19px;
   p {
     line-height: 25px;
-    font-size: initial;
-    color: initial;
+    font-size: 16px;
+    color: $black;
   }
 }
 
@@ -1947,6 +1963,13 @@ $modal-no-icon-gap: 22px;
   text-align: right;
   html[dir=rtl] & {
     text-align: left;
+  }
+}
+
+.exclamation-abuse {
+  a, a:hover {
+    color: white;
+    text-decoration: underline;
   }
 }
 
@@ -2019,4 +2042,61 @@ button.notext {
 .example-image {
   @include bottom-shadow;
   @include rounded-border;
+}
+
+/*
+ * The following responsive styles are designed to match behavior
+ * with the vizualizationColumn and visualizationEditor styles
+ * defined in apps/style/common.scss, so that the columns in the
+ * header line up with the columns below them.
+ */
+
+$width: 400px;
+#visualizationColumnHeader {
+  max-width: $width;
+  float: left;
+}
+#visualizationEditorHeader {
+  margin-left: $width;
+  padding-left: 15px;
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1150px) {
+  $width: 350px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1100px) {
+  $width: 300px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1050px) {
+  $width: 250px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  $width: 200px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
 }

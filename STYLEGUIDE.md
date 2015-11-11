@@ -46,7 +46,7 @@ Fallback: https://github.com/styleguide/ruby
   # good
   'Single quotes for normal strings'
   ```
-  
+
 * <a name="ruby-trailing-dot"></a>
   When breaking lines while method chaining, prefer trailing dot on first line
   to leading dot on second line.
@@ -151,7 +151,6 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
   ```
 
 * <a name="js-avoid-inlinejs"></a>
-
   Avoid inline Javacript in HAML and ERB views. Inline Javascript is
   hard to lint, test, and reuse, and tends to build in lots of global
   interdependencies between code and views.

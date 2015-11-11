@@ -1,21 +1,25 @@
 sr:
   site_name: HOUR of CODE
-  language: Енглески
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  hour_of_code: Hour of Code
+  language: Српски
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Стиже ускоро
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'Hour of Code је глобални покрет који броји на десетине милиона ученика у преко 180 земаља. Свако и свагде може организовати окупљање Hour of Code. Једносатни курсеви су доступни на преко 30 језика. Није потребно никакво искуство. <strong>За оне од 4 до 104 године.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Погледајте нов снимак
   front_watch_regular_video: Watch the video
   header_menu_resources: Ресурси
   header_menu_faq: FAQ
   header_menu_prizes: Награде
+  header_menu_how_to: How-To
+  header_menu_promote: Promote
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -49,6 +53,7 @@ sr:
   company_chelmsfordpublicschooldistrict: Chelmsford School District
   company_cheneysd: Cheney School District
   company_chesterfieldschools: Chesterfield County Public Schools
+  company_codebrooklyn: Code Brooklyn
   company_cps: Chicago Public Schools
   company_ccsd: Clark County School District
   company_cloverparkschooldistrict: Clover Park School District
@@ -72,6 +77,7 @@ sr:
   company_vadoe: "Governor's School Programs"
   company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
+  company_godaddy: Go Daddy
   company_greenupcountyschooldistrict: Greenup County Schools
   company_gwinnettcountypublicschools: Gwinnett County Public Schools
   company_HamptonCitySchools: Hampton City Schools
@@ -105,6 +111,7 @@ sr:
   company_oneclay: One Clay County School District
   company_ocps: Orange County Schools
   company_orangeusd: Orange Unified School District
+  company_pbsd: Palm Beach School District
   company_pvusd: Paradise Valley Unified School District
   company_PetersburgCityPublicSchools: Petersburg City Public Schools
   company_pylusd: Placentia-Yorba Linda Union School District
@@ -118,6 +125,7 @@ sr:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -130,6 +138,7 @@ sr:
   company_wvsd208: West Valley School District
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
+  company_yelp: Yelp
   prizes_all: Награде за све организаторе
   prizes_every_organizer: Сваки Hour of Code организатор ће добити Дропбокс или Скајп кредит као знак захвалности
   prizes_technology: По једна државна школа у свакој САД држави (и у округу Вашингтон) ће освојити технологију у вредности $10.000
@@ -138,6 +147,22 @@ sr:
   prizes_brilliant: Једна школа у свакој провинцији или територији ће добити по $2000 за Brilliant Project
   prizes_actua: 15 школа широм Канаде ће добити по две STEM радионоце од једног од чланова Actua-е
   prizes_details: Детаљи
+  nav_back_to_resources: Back to Resources
+  how_to_nav_educators: For educators
+  how_to_nav_after_school: For after school
+  how_to_nav_parents: For parents
+  how_to_nav_public_officials: For public officials
+  how_to_nav_districts: For districts
+  how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
+  how_to_nav_companies: For companies
+  how_to_nav_afterschool_educators: For after-school educators
+  how_to_nav_volunteers: For volunteers
+  prizes_nav_title: Награде
+  prizes_nav_home: All prizes
+  prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Terms and conditions
+  prizes_nav_faq: FAQ
   prizes_nav_dc: Mystery trip to Washington D.C.
   prizes_nav_technology: $10,000 of technology for your school
   prizes_nav_video_chat: Video chat with a tech titan
@@ -145,12 +170,17 @@ sr:
   prizes_nav_brilliant: $2,000 Brilliant Labs project
   prizes_nav_actua: Actua workshop
   prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Terms and Conditions
-  prizes_nav_faq: FAQ
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Како да водите Hour of Code</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Промовишите Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Било ко може да научи.
   get_started: Start
@@ -167,11 +197,15 @@ sr:
   front_join_us_teacher: Да ли сте Ви наставник?
   front_join_us_inspire: Инспиришите ученике са
   front_join_us_inspire_link: Hour of Code у учионици.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Да ли сте Ви родитељ?
   front_join_us_ask_link: Питајте своју локалну школу
   front_join_us_ask: да буде домаћин за Hour of Code.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Просто волите рачунарске науке?
   front_join_us_spread: Разгласи.
+  front_join_us_spread_word: Spread the word in your community
+  front_join_us_spread_word_work: Spread the word in your community or workplace
   front_join_us_organize: Или организујте Hour of Code догађај лично.
   front_join_us_how_to_run: Ево како можете спровести Hour of Code
   front_join_us_help_promote: Помозите у Hour of Code промоцији
@@ -179,9 +213,13 @@ sr:
   front_join_us_teachers: Наставници
   front_join_us_everyone: Сви
   front_join_us_try: Пробајте
+  front_join_us_sign_up: Региструј се
   front_join_us_host: Одржите
   front_join_us_support: Подржите
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
+  front_join_us_code_info: For more information, please visit code.org
+  front_join_us_n_students_served: '# served'
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Ваш име
   signup_email_label: Ваш и-мејл
   signup_organization_name_label: Школа или име организације
@@ -210,9 +248,13 @@ sr:
   map_header: '# Hour of Code догађаји широм света'
   see_all_events: See all events
   map_header_company: '# организовано од стране фирме'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Претражи Hour of Code окупљања
   map_search_search: Тражи
   map_search_reset: Поново покрени
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Hour of Code је стигао
   meta_tag_og_description: Hour of Code је глобални покрет који досеже милионе ученика у 180+ земаља и на преко 30 језика. Узраста од 4 до 104.
   meta_tag_twitter_title: Hour of Code је стигао
@@ -231,8 +273,12 @@ sr:
   hardware_prizes_form_school_type_option_middle_school: Виша основна школа
   hardware_prizes_form_school_type_option_high_school: Средња школа
   hardware_prizes_form_qualifying_school_label: Ово је K-12 САД државна школа
+  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
+  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
   hardware_prizes_form_number_students_label: Број ученика који учествују
   hardware_prizes_form_number_students_placeholder: Број ученика
+  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
+  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
   hardware_prizes_form_plan_file_label: Поставите логистички план за свој Hour of Code
   hardware_prizes_form_plan_file_description: 'Пошаљите једноставан распоред којим планирате да организујете сваког ученика да учествује у Hour of Code у Вашој школи. Погледајте пример плана: #PDF# | #Word#'
   hardware_prizes_form_submit_label: Пошаљи
@@ -241,33 +287,33 @@ sr:
   hoc_faq_what_is_hoc_a: "Hour of Code је једносатни увод у рачунарску науку, који ће демистификовати програмирање и показати да свако може научити основе. <a href='http://code.org/learn'>Погледај курсеве</a>."
   hoc_faq_last_year: Испробај курсеве
   hoc_faq_when_is_hoc_q: Када је Hour of Code?
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
   hoc_faq_why_cs_q: Зашто рачунарске науке?
   hoc_faq_why_cs_a: "<i>Сваки</i> ученик би требао имати прилику да научи информатику. То негује вештине решавања проблема, логике и креативности. Ако почну рано, ученици ће имати темељ за успешну каријеру у 21-ом веку. Погледајте додатне статистике на <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Како могу учествовати у Hour of Code?
-  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Ко стоји иза Hour of Code?
   hoc_faq_behind_hoc_a: "Hour of Code је организован од стране <a href='http://code.org'>Code.org</a>, јавне 501c3 непрофитне организације посвећене ширењу информатике тако што омогућава доступност у све више школа и повећано учешће жена и деце припадника мањина. <a href='http://code.org/about/partners'>Јединствени скуп партнера</a> се окупио у подршци Hour of Code-а &mdash; укључијући Microsoft, Apple, Amazon, Boys and Girls Clubs of America и College Board."
   hoc_faq_host_q: Не знам ништа о програмиранју. Да ли ипак могу бити домаћин догађаја?
-  hoc_faq_host_a: "Наравно. Hour of Code ативности имају упутства. Све што треба да урадите је да <a href='http://code.org/learn'>пробате наш актуелни водич</a>, одаберете лекцију коју желите и сат свог времена &mdash; ми ћемо се побринути за остало. Такође имамо опцију са сваку старосну доб и ниво искуства, од вртића па навише. Почните планирати свој догађај читајући <a href='target-resources-how-to'>како водити</a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Да ли ми је потребан рачунар за сваког полазника?
   hoc_faq_need_computers_a: "Не. Ми имамо упутства за Hour of Code која раде на рачунарима, паметним телефонима, таблетима, као и нека за која уопште нису потребни рачунари! Можете се прикључити где год били, са било чиме што имате.<p><i>Ево неколико могућности: </i><br><ul><li><b>Радите у паровима.</b>Истраживања полазују да ученици најбоље уче <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>програмирањем у паровима</a>, дељењен рачунара и заједничким радом. Охрабрите своје ученике да деле. <li><b>Користите пројектор.</b> Ако имате платно, пројектор и рачунар повезан на интернет, цела група може учити заједно. Погледајте видео снимке заједно и наизменично решавајте задатке или одговарајте на питања. <li><b>Учите без електронике.</b>Нудимо упутсва за која нису потребни рачунари.</ul>"
   hoc_faq_international_q: 'Ја сам у <country>. Како учествовати на међународном нивоу?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Како да направим Hour of Code упутство?
   hoc_faq_tutorial_a: "Ако сте заинтересовани да постанете партнер у изради упутстава,<a href='target-tutorial-guidelines'>погледајте наше смернице и упутства</a>. Желимо омогућити разне опције, али примарни циљ је прилагодити искуство за ученике и учитеље којима је информатика непозната."
   hoc_faq_more_questions_q: И даље имате још питања?
   hoc_faq_more_questions_a: "Покушајте да пронађете одговор у нашим <a href='http://support.code.org'>форумима за подршку</a>."
-  hoc_faq_scratch_q: Користим Scratch за Hour of Code, али шта ако моји ученици имају iPad-ове а не лаптопове?
-  hoc_faq_scratch_a: "Scratch не ради на таблетима. Ако су вам ученици млади, могу користити апликацију ScratchJR за iPad (за почетнике у читању). Ако сте тражили упутства на <a href='http://code.org/learn'>Code.org/learn</a>, можете наћи друга упутства која раде на iPad-овима на Code.org, Tynker, Lightbot или CodeSpark."
   hoc_faq_account_q: Да ли се ученици морају пријавити на налог?
   hoc_faq_account_a: "Не. Апсолутно није потребан налог или пријављивање ученика који желе пробати Hour of Code. Већина <a href='http://code.org/learn/beyond'>курсева</a> захтева креирање налога како би се омогућило праћење напретка ученика."
   hoc_faq_frozen_q: Где је упутство са Аном и Елсом?
   hoc_faq_frozen_a: "Објављено је на <a href='http://code.org/learn'>Code.org/learn</a>. Надамо се да ћете уживати!"
   hoc_faq_high_school_q: Које активности бих требао/ла радити да средњошколцима?
   hoc_faq_high_school_a: "Без обзира на старост, препоручујемо прво почетничке курсеве на <a href='http://code.org/learn'>Code.org/learn</a>, као на пример Angry Birds или Ана и Елса. Средњошколци би требало да заврше један од ових курсева за око 30 минута, а затим могу пробати напредније курсеве JavaScript-а као на пример Khan Academy или CodeHS."
+  hoc_faq_scratch_q: Користим Scratch за Hour of Code, али шта ако моји ученици имају iPad-ове а не лаптопове?
+  hoc_faq_scratch_a: "Scratch не ради на таблетима. Ако су вам ученици млади, могу користити апликацију ScratchJR за iPad (за почетнике у читању). Ако сте тражили упутства на <a href='http://code.org/learn'>Code.org/learn</a>, можете наћи друга упутства која раде на iPad-овима на Code.org, Tynker, Lightbot или CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://code.org/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: Статистика за 2013 Hour of Code
   stats_growth: Он је био најбржи у достизању 15 милиона корисника.
   stats_i18n: Students are learning in 40 languages
@@ -287,15 +333,60 @@ sr:
   resources_how_to_districts: Како-да водич за округе
   resources_how_to_officials: Како-да за јавне личности
   resources_handouts: Брошуре за ширење приче
-  resources_videos: Снимци
+  resources_one_pager: One-page handout
+  resources_brochure: Brochure
   resources_posters: Постери
-  resources_social: Друштвене
+  resources_videos: Снимци
   resources_banners: Банери
   resources_emails: Примери и-мејлова
+  resources_logo: Hour of Code logo
   resources_stats: Корисне статистике и похвале
   resources_press_kit: Материјал за новинаре
+  resources_social: Друштвене
   resources_country_resources: Country Specific Resources
-  events_title: Сви Hour of Code догађаји
+  resources_stickers: Stickers
+  resources_how_to_guides: How-to guides
+  resources_promote: Promote
+  resources_nav_tutorials: Испробај курсеве
+  resources_nav_promote: Spread the word
+  resources_nav_spread_word: How to get involved
+  resources_banner_promote_text: Promote
+  resources_banner_promote_button: Encourage others to sign up with brochures, inspirational posters and social media banners.
+  resources_banner_howto_text: How-to
+  resources_banner_howto_button: Resources for educators, parents and districts to host an Hour of Code.
+  handouts_section: Share these handouts
+  handouts_onepager: Spread the word with this one page handout
+  handouts_brochure: Give this brochure to teachers and schools
+  handouts_participationguide: Plan your Hour of Code with this participation guide
+  videos_title: Инспиришите ученике помоћу ових снимака
+  videos_what_most_schools_dont_teach: "What Most Schools Don't Teach (5 min)"
+  videos_hoc_2014: 'Hour of Code is Here - Anybody Can Learn'
+  videos_obama_cs: Председник Обама о информатици
+  videos_anybody_can_learn: Anybody Can Learn (1 min)
+  title_country_resources: Country Specific Resources
+  title_how_to_districts: Hour of Code How-To for Districts
+  title_how_to_events: Hour of Code Event How-To
+  title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_companies: 'How to host an Hour of Code - Companies'
+  title_how_to_officials: Како-да за јавне личности
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
+  title_how_to: How-to Guide
+  title_press_release: Hour of Code Press Release for Elected Officials
+  title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
+  title_press_kit: Материјал за новинаре
+  title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+  title_stats: Blurbs and Stats
+  title_partners: Партнери
+  title_prizes_faq: Prizes FAQ
+  title_prizes_terms: Prizes Terms
+  title_prizes_thanks: Thank you
+  title_prizes: Награде
+  title_hardware_prize_form: Sign up for Hardware Prizes
+  title_resources: Ресурси
+  title_signup_thanks: Thanks for signing up to host an Hour of Code!
+  title_tutorial_guidelines: Tutorial Guidelines
+  title_whole_school: Whole School Participation
+  events_nav_title: Hour of Code Events
   events_nav_all: Сви догађаји
   events_nav_whole_schools: Целе школе
   events_nav_special: Посебни догађаји

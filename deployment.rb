@@ -1,5 +1,10 @@
 $:.unshift File.expand_path('../lib', __FILE__)
 $:.unshift File.expand_path('../shared/middleware', __FILE__)
+
+# Set up gems listed in the Gemfile.
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __FILE__)
+require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
+
 require 'csv'
 require 'yaml'
 require 'cdo/erb'
@@ -34,28 +39,38 @@ def load_configuration()
 
   {
     'app_servers'                 => {},
+    'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
     'build_blockly_core'          => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
-    'build_shared_js'             => [:development, :staging].include?(rack_env),
+    'build_shared_js'             => [:development, :adhoc, :staging].include?(rack_env),
+    'dcdo_table_name'             => "dcdo_#{rack_env}",
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
     'dashboard_secret_key_base'   => 'not a secret',
     'dashboard_honeybadger_api_key' =>'00000000',
+    'dashboard_host'              => 'localhost',
     'dashboard_port'              => 3000,
     'dashboard_unicorn_name'      => 'dashboard',
     'dashboard_enable_pegasus'    => rack_env == :development,
     'dashboard_workers'           => 8,
     'db_reader'                   => 'mysql://root@localhost/',
     'db_writer'                   => 'mysql://root@localhost/',
+    'reporting_db_reader'         => 'mysql://root@localhost/',
+    'reporting_db_writer'         => 'mysql://root@localhost/',
+    'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
     'hip_chat_log_room'           => rack_env.to_s,
     'hip_chat_logging'            => false,
     'home_dir'                    => File.expand_path('~'),
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
     'localize_apps'               => false,
     'name'                        => hostname,
+    'newrelic_logging'            => rack_env == :production,
+    'netsim_max_routers'          => 20,
+    'netsim_shard_expiry_seconds' => 7200,
     'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
+    'partners'                    => %w(al ar br eu italia ro sg uk za),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
@@ -67,22 +82,21 @@ def load_configuration()
     'poste_secret'                => 'not a real secret',
     'proxy'                       => false, # If true, generated URLs will not include explicit port numbers in development
     'rack_env'                    => rack_env,
-    'rack_envs'                   => [:development, :production, :staging, :test, :levelbuilder],
+    'rack_envs'                   => [:development, :production, :adhoc, :staging, :test, :levelbuilder, :integration],
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
-    'use_dynamo_tables'           => [:staging, :test, :production].include?(rack_env),
-    'use_dynamo_properties'       => [:staging, :test, :production].include?(rack_env),
+    'use_dynamo_tables'           => [:staging, :adhoc, :test, :production].include?(rack_env),
+    #'use_dynamo_properties'       => [:staging, :adhoc, :test, :production].include?(rack_env),
     'dynamo_tables_table'         => "#{rack_env}_tables",
     'dynamo_tables_index'         => "channel_id-table_name-index",
     'use_dynamo_properties'       => false,
     'dynamo_properties_table'     => "#{rack_env}_properties",
-    'lint'                        => rack_env == :staging || rack_env == :development,
+    'lint'                        => rack_env == :adhoc || rack_env == :staging || rack_env == :development,
     'assets_s3_bucket'            => 'cdo-v3-assets',
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
     'sources_s3_bucket'           => 'cdo-v3-sources',
     'sources_s3_directory'        => rack_env == :production ? 'sources' : "sources_#{rack_env}",
-    'netsim_shard_expiry_seconds' => 7200,
     'use_pusher'                  => false,
     'pusher_app_id'               => 'fake_app_id',
     'pusher_application_key'      => 'fake_application_key',
@@ -103,8 +117,17 @@ def load_configuration()
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'production-daemon'
     config['dashboard_db_reader'] ||= config['db_reader'] + config['dashboard_db_name']
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']
+    config['dashboard_reporting_db_reader'] ||= config['reporting_db_reader'] + config['dashboard_db_name']
+    config['dashboard_reporting_db_writer'] ||= config['reporting_db_writer'] + config['dashboard_db_name']
     config['pegasus_db_reader']   ||= config['db_reader'] + config['pegasus_db_name']
     config['pegasus_db_writer']   ||= config['db_writer'] + config['pegasus_db_name']
+    config['pegasus_reporting_db_reader'] ||= config['reporting_db_reader'] + config['pegasus_db_name']
+    config['pegasus_reporting_db_writer'] ||= config['reporting_db_writer'] + config['pegasus_db_name']
+
+    # Set AWS SDK environment variables from provided config.
+    ENV['AWS_ACCESS_KEY_ID'] ||= config['aws_access_key'] || config['s3_access_key_id']
+    ENV['AWS_SECRET_ACCESS_KEY'] ||= config['aws_secret_key'] || config['s3_secret_access_key']
+    ENV['AWS_DEFAULT_REGION'] ||= config['aws_region']
   end
 end
 
@@ -133,6 +156,14 @@ class CDOImpl < OpenStruct
     return "localhost#{sep}#{domain}" if rack_env?(:development)
     return "translate#{sep}#{domain}" if self.name == 'crowdin'
     "#{rack_env}#{sep}#{domain}"
+  end
+
+  def dashboard_hostname
+    canonical_hostname('studio.code.org')
+  end
+
+  def pegasus_hostname
+    canonical_hostname('code.org')
   end
 
   def site_url(domain, path = '', scheme = '')
@@ -215,6 +246,23 @@ class CDOImpl < OpenStruct
     backtrace.join("\n")
   end
 
+  class DelegateWithDefault < SimpleDelegator
+    def initialize(target, default_value)
+      @default_value = default_value
+      super(target)
+    end
+
+    def method_missing(*args)
+      return @default_value if !__getobj__.respond_to? args.first
+      value = super
+      return @default_value if value.nil?
+      value
+    end
+  end
+
+  def with_default(default_value)
+    DelegateWithDefault.new(self, default_value)
+  end
 end
 
 CDO ||= CDOImpl.new
@@ -248,6 +296,10 @@ end
 
 def blockly_core_dir(*dirs)
   deploy_dir('blockly-core', *dirs)
+end
+
+def cookbooks_dir(*dirs)
+  deploy_dir('cookbooks', *dirs)
 end
 
 def dashboard_dir(*dirs)

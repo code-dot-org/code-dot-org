@@ -69,10 +69,21 @@
         <block type="procedures_callnoreturn">
           <mutation name="check purple flower"/>
         </block>
-        <block type="bee_ifelseNectarAmount">
-          <title name="ARG1">nectarRemaining</title>
-          <title name="OP">==</title>
-          <title name="ARG2">3</title>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="bee_ifelseNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">==</title>
+              <title name="ARG2">1</title>
+              <next>
+                <block type="bee_ifelseNectarAmount">
+                  <title name="ARG1">nectarRemaining</title>
+                  <title name="OP">==</title>
+                  <title name="ARG2">3</title>
+                </block>
+              </next>
+            </block>
+          </statement>
         </block>
         <block type="maze_nectar"/>
       </xml>

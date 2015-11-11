@@ -36,16 +36,18 @@ ____________________________________________________
 **Example 1**
 
 Turtle Example
-<pre>
+
+```
 dot(randomNumber(100));
-</pre>
+```
 
 
 Console Example
-<pre>
+
+```
 console.log(randomNumber(3));     // generates a pseudorandom number in the range of 0 to 3 and then prints
                                   //    it to the console
-</pre>
+```
 
 [/example]
 
@@ -57,21 +59,23 @@ ____________________________________________________
 
 Turtle Example -- move forward 25 times, turning right a random number of degrees between 0 and 45.
 
-<pre>
+
+```
 for (var i = 0; i < 25; i++) {
   moveForward();
   turnRight(randomNumber(45));
 }
-</pre>
+```
 
 This example prints out 10 pseudorandom numbers (in the range 0 to 10) to the console.
 
-<pre>
+
+```
 for (var i = 0; i < 10; i++) {        // repeats the code inside of this block 10 times
   console.log(randomNumber(10));      // calculates a pseudorandom number in the range 0 to 10
                                       //    and then prints it to the console
 }
-</pre>
+```
 
 [/example]
 
@@ -83,7 +87,8 @@ ____________________________________________________
 
 This example calculates 500 pseudorandom numbers in the range 0 to 5 and then creates a bar graph illustrating the occurrences of each number.
 
-<pre>
+
+```
 textLabel("zero", "zero: ", "forId");       // creates a "zero" text label
 textLabel("one", "one: ", "forId");         // creates a "one" text label
 textLabel("two", "two: ", "forId");         // creates a "two" text label
@@ -108,7 +113,7 @@ for (var i = 0; i < 6; i++) {               // repeats the code in this block 6 
   penDown();                                // starts leaving a trail behind the turtle as it moves
   moveForward(values[i]);                   // moves the turtle forward the corresponding value in the array
 }
-</pre>
+```
 
 
 [/example]
@@ -118,9 +123,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 randomNumber(max);
-</pre>
+```
 
 [/syntax]
 

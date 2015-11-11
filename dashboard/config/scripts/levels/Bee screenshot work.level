@@ -6,7 +6,7 @@
   "user_id": 4,
   "properties": {
     "skin": "bee",
-    "step_mode": "0",
+    "step_mode": 1,
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "start_direction": "1",

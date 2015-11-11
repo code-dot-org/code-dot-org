@@ -38,7 +38,7 @@
   "CONTROLS_FOREACH_INPUT_ITEM":"per a cada element",
   "CONTROLS_FOREACH_TOOLTIP":"Per a cada element d'una llista, defineix la variable '%1' amb l'element, i després fes algunes ordres.",
   "CONTROLS_FOR_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#count_with",
-  "CONTROLS_FOR_INPUT_FROM_TO_BY":"des de %1 fins a %2 cada %3",
+  "CONTROLS_FOR_INPUT_FROM_TO_BY":"des de %1 fins a %2 de %3 en %3",
   "CONTROLS_FOR_INPUT_WITH":"compte amb",
   "CONTROLS_FOR_TOOLTIP":"Fes que la variable %1 tingui els valors del nombre inicial fins al nombre final, comptant en l'interval especificat, i fes els blocs de dintre.",
   "CONTROLS_IF_ELSEIF_TOOLTIP":"Afegeix una condició al bloc \"si\".",

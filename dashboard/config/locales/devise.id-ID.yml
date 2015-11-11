@@ -92,6 +92,6 @@
         someone_invited_you: Seseorang telah mengundang Anda untuk %{url}, Anda dapat
           menerimanya melalui link di bawah ini.
         accept: Terima undangan
-        ignore: Jika Anda tidak ingin menerima undangan, harap Abaikan email ini.
-          < br / Akun Anda tidak dapat dibuat sampai Anda mengakses link di atas dan
+        ignore: Jika Anda tidak ingin menerima undangan, harap abaikan email ini.
+          <br /> Akun Anda tidak akan dibuat sampai Anda mengakses link di atas dan
           mengatur sandi Anda.

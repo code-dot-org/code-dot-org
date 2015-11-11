@@ -1,3 +1,25 @@
+# == Schema Information
+#
+# Table name: levels
+#
+#  id                       :integer          not null, primary key
+#  game_id                  :integer
+#  name                     :string(255)      not null
+#  created_at               :datetime
+#  updated_at               :datetime
+#  level_num                :string(255)
+#  ideal_level_source_id    :integer
+#  solution_level_source_id :integer
+#  user_id                  :integer
+#  properties               :text(65535)
+#  type                     :string(255)
+#  md5                      :string(255)
+#
+# Indexes
+#
+#  index_levels_on_game_id  (game_id)
+#
+
 # Levels defined using a text-based ruby DSL syntax.
 # See #BaseDSL for the DSL format implementation.
 class DSLDefined < Level
@@ -46,8 +68,10 @@ class DSLDefined < Level
       level = setup data
 
       # Save updated level data to external files
-      File.write(level.file_path, (level.encrypted ? level.encrypted_dsl_text(text) : text))
-      self.rewrite_i18n_file(i18n)
+      if Rails.application.config.levelbuilder_mode
+        File.write(level.file_path, (level.encrypted ? level.encrypted_dsl_text(text) : text))
+        self.rewrite_i18n_file(i18n)
+      end
 
       level
     end
@@ -118,3 +142,7 @@ class DSLDefined < Level
   end
 
 end
+
+# The following capitalization variant is needed so that annotate_models
+# is able to find the model class.
+DslDefined = DSLDefined

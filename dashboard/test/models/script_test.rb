@@ -12,6 +12,7 @@ class ScriptTest < ActiveSupport::TestCase
     file = File.join(self.class.fixture_path, "login_required.script")
 
     scripts, _ = Script.setup([file])
+
     script = scripts[0]
     assert script.login_required?
     assert_equal 'Level 1', script.levels[0].name
@@ -119,6 +120,7 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'script_levels are in order' do
     script = create(:script)
+
     s1 = create(:stage, script: script, position: 1)
     last = create(:script_level, script: script, stage: s1, chapter: 3)
     second = create(:script_level, script: script, stage: s1, chapter: 2)
@@ -142,8 +144,9 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'calling next_level on last script_level points to next stage' do
-    script = create(:script)
+    script = create(:script, name: 'test2')
     first_stage = create(:stage, script: script, position: 1)
+
     first_stage_last_level = create(:script_level, script: script, stage: first_stage, position: 1)
     second_stage = create(:stage, script: script, position: 2)
     second_stage_first_level = create(:script_level, script: script, stage: second_stage, position: 1)
@@ -203,7 +206,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'scripts are hidden or not' do
-    visible_scripts = %w{20-hour flappy playlab infinity artist course1 course2 course3 course4 frozen hourofcode algebra cspunit1 cspunit2}.
+    visible_scripts = %w{20-hour flappy playlab infinity artist course1 course2 course3 course4 frozen hourofcode algebra cspunit1 cspunit2 cspunit3}.
       map{|s| Script.find_by_name(s)}
 
     visible_scripts.each do |s|

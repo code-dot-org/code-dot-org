@@ -1,13 +1,10 @@
 name 'U2L3 Assessment 2'
-title 'Invent an Addressing Protocol: Question 1'
-question 'How many users would a fixed-length IP address system using 6 bits support?'
-wrong '6 users'
-wrong '12 users'
-wrong '32 users'
-right '64 users'
-
-teacher_markdown <<MARKDOWN
-Answer:
-
-- 64 users
-MARKDOWN
+encrypted 'JyBPz7rr3Ae4rPMNnoSxjXXDg5LtpVTNjpWTpqMd87yWMWKC4mt6FCOgwgmt
++AbiWDraaoe/cmXAb4jyIJ+upGG3VOMK/6ICcEREpmZotu5HuFZGhHo6/lEn
+spMcT883dcI0158dzM02bAIwFfHhxu4zUaMj+AE1b6RX4ekpGCEGUz1fKx1z
+bttRREk4vtwkMa1u/nC6+5CPX4lLXve2N2gJlJQNySDe5BkoRsXDcsR6wYi4
+/IoLWHfZXTCD57X/Lek64NKUUt/yDghDM+/nEP6ZdgyU1sBTo2ac7Sf9uJQJ
+H7UGJkLst7RFHdy84oh1z4+obz/UmHxIj91xlkWD/iYIh9ZD3mTdxUZdnMv2
+tJNRBI2/N88Ypt3xuW1P60iEwS6t4D5daYmRQV4o1TCy8bCgEXa/ab1DeXBa
+ZEAYPAg=
+'

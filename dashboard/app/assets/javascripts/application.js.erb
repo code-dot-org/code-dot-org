@@ -32,9 +32,12 @@
 
 // Application assets
 //= require namespace
-//= require utils.js.erb
+//= require utils
 //= require_directory .
 //= require_self
+
+//= require react
+//= require_tree ./components
 
 <% environment.context_class.instance_eval { include ApplicationHelper } %>
 

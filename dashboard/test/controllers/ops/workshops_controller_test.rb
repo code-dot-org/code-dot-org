@@ -5,7 +5,6 @@ module Ops
     API = ::OPS::API
 
     setup do
-      @request.headers['Accept'] = 'application/json'
       @admin = create(:admin)
       sign_in @admin
       @workshop = create(:workshop)
@@ -64,7 +63,7 @@ module Ops
 
     test 'Ops team can add multiple cohorts to a workshop' do
       another_cohort = create(:cohort)
-      workshop_params = {"id"=>@workshop.id, "name"=>@workshop.name, "program_type"=>"5", "location"=>@workshop.location, "instructions"=>nil, "cohorts"=>[{"id"=>@cohort.id}, {"id"=>another_cohort.id}], "segments"=>nil, "facilitators"=>nil, "teachers"=>nil}
+      workshop_params = {"id"=>@workshop.id, "name"=>@workshop.name, "program_type"=>"5", "location"=>@workshop.location, "instructions"=>nil, "cohorts"=>[{"id"=>@cohort.id}, {"id"=>another_cohort.id}], "facilitators"=>nil, "teachers"=>nil}
       patch :update, id: @workshop.id, workshop: workshop_params
       assert_response :success
       @workshop.reload
@@ -97,12 +96,12 @@ module Ops
                          {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'fac@email.xx'}]
 
       assert_creates(Workshop, User) do
-        post :create, workshop: {name: 'test workshop', program_type: '1', cohorts: [@cohort], facilitators: facilitator_params}
+        post :create, workshop: {name: 'test workshop', program_type: '1', cohorts: [{id: @cohort.id}], facilitators: facilitator_params}
       end
       assert_response :success
 
       # created a facilitator
-      workshop = Workshop.last
+      workshop = Workshop.last.reload
       user = User.last
       assert user.facilitator?
       assert_equal [user], workshop.facilitators

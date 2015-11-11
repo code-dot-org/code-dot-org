@@ -19,3 +19,8 @@
   / Load the external file through ActionView templates.
   - href = asset_path(@level.properties['href'])
   = ActionView::Base.new('public', {}, ActionController::Base.new).render(file: href)
+
+:javascript
+  $('#bubble').click(dashboard.dialog.showInstructionsDialog);
+
+.clear

@@ -33,10 +33,11 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 var a = Math.min(5, -2); //Get the smaller of two values and store it in variable a
 console.log(a); //Display the result, in this case "-2"
-</pre>
+```
 
 [/example]
 
@@ -45,10 +46,11 @@ ____________________________________________________
 [example]
 
 We can also use `Math.min` with multiple parameters.
-<pre>
+
+```
 var a = Math.min(5, 0, 21.5, 13, -2); //Get the minimum of five values and store it in variable a
 console.log(a); //Print the value of variable a to the debugging console, in this case "-2"
-</pre>
+```
 
 [/example]
 
@@ -57,7 +59,8 @@ ____________________________________________________
 [example]
 
 In this more advanced example, we generate random values between 0 and 100 and keep track of the lowest of them.
-<pre>
+
+```
 var minimum = 100; //Initialize the minimum at the highest possible value
 for (var i = 0; i < 4; i++) { //Generate four random values
   var y = randomNumber(0, 100); //Get a random number between 0 and 100 and store it in variable y
@@ -65,7 +68,7 @@ for (var i = 0; i < 4; i++) { //Generate four random values
   minimum = Math.min(minimum, y); //If the number is smaller than our current minimum, it's the new minimum
   console.log("The current minimum is " + minimum); //Print the value of minimum to the debugging console
 }
-</pre>
+```
 
 
 [/example]
@@ -75,9 +78,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 Math.min(n1, n2,..., nX);
-</pre>
+```
 
 [/syntax]
 

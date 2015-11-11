@@ -4,6 +4,8 @@ title: Terms of Service
 
 * * *
 
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
+
 # Terms of Service(서비스 약관)
 
 Last Revised: December 5, 2014

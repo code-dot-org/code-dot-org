@@ -8,6 +8,8 @@ Dashboard::Application.routes.draw do
     redirect CDO.code_org_url('/teacher-dashboard')
   end
 
+  resources :user_levels, only: [:update]
+
   resources :gallery_activities, path: '/gallery' do
     collection do
       get 'art', to: 'gallery_activities#index', app: Game::ARTIST
@@ -15,6 +17,8 @@ Dashboard::Application.routes.draw do
     end
   end
   resources :activity_hints, only: [:update]
+  resources :hint_view_requests, only: [:create]
+  resources :puzzle_ratings, only: [:create]
   resources :callouts
   resources :videos do
     collection do
@@ -95,7 +99,8 @@ Dashboard::Application.routes.draw do
   resources :projects, path: '/projects/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, _|
-        get "/#{key}", to: 'projects#edit', key: key.to_s, as: "#{key}_project"
+        get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
+        get "/#{key}/new", to: 'projects#create_new', key: key.to_s, as: "#{key}_project_create_new"
         get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
         get "/#{key}/:channel_id/edit", to: 'projects#edit', key: key.to_s, as: "#{key}_project_edit"
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
@@ -139,7 +144,7 @@ Dashboard::Application.routes.draw do
     get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
 
     # /s/xxx/stage/yyy/puzzle/zzz
-    resources :stages, only: [:show], path: "/stage", format: false do
+    resources :stages, only: [], path: "/stage", format: false do
       resources :script_levels, only: [:show], path: "/puzzle", format: false
     end
   end
@@ -170,17 +175,22 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
+  # one-off internal reports
+  get '/admin/brook/csppd', to: 'reports#csp_pd_responses', as: 'csp_pd_responses'
+
+  get '/admin/funometer', to: 'reports#funometer', as: 'funometer'
   get '/admin/pd_progress(/:script)', to: 'reports#pd_progress', as: 'pd_progress'
   get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'reports#level_completions', as: 'level_completions'
+  get 'admin/search_for_teachers', to: 'reports#search_for_teachers', as: 'search_for_teachers'
   get '/admin/usage', to: 'reports#all_usage', as: 'all_usage'
   get '/admin/stats', to: 'reports#admin_stats', as: 'admin_stats'
   get '/admin/progress', to: 'reports#admin_progress', as: 'admin_progress'
   get '/admin/concepts', to: 'reports#admin_concepts', as: 'admin_concepts'
-  get '/admin/gallery', to: 'reports#admin_gallery', as: 'admin_gallery'
   get '/admin/assume_identity', to: 'reports#assume_identity_form', as: 'assume_identity_form'
   post '/admin/assume_identity', to: 'reports#assume_identity', as: 'assume_identity'
   get '/admin/lookup_section', to: 'reports#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'reports#lookup_section'
+  get '/admin/dynamic_config', :to => 'dynamic_config#show', as: 'dynamic_config_state'
   get '/admin/:action', controller: 'reports', as: 'reports'
 
   get '/stats/usage/:user_id', to: 'reports#usage', as: 'usage'
@@ -193,6 +203,12 @@ Dashboard::Application.routes.draw do
   get '/notes/:key', to: 'notes#index'
 
   resources :zendesk_session, only: [:index]
+
+
+  post '/report_abuse', :to => 'report_abuse#report_abuse'
+  get '/report_abuse', :to => 'report_abuse#report_abuse_form'
+
+  get '/too_young', :to => redirect { |p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
@@ -235,6 +251,7 @@ Dashboard::Application.routes.draw do
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
+  get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
 

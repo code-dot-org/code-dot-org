@@ -33,9 +33,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "false",
-    "app_width": "200",
-    "app_height": "350"
+    "free_play": "false"
   }
 }]]></config>
   <blocks/>

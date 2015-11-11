@@ -25,10 +25,12 @@
   - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
 
-- elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME, Script::HOC_NAME, Script::FROZEN_NAME, Script::INFINITY_NAME].include? id
+- elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME, Script::HOC_NAME, Script::FROZEN_NAME, Script::INFINITY_NAME, Script::STARWARS_NAME].include? id
   - url = script_reset_url(id)
   - if id == 'frozen'
     - title = t('upsell.frozen.title')
+  - elsif id == 'starwars'
+    - title = t('upsell.starwars.title')
   - elsif id == 'infinity'
     - title = t('upsell.infinity.title')
   - else
@@ -37,7 +39,7 @@
 
 - if %w(course1 course2 course3 course4).include?(id)
   - audience = data_t_suffix('script.name', id, 'description_audience')
-  
+
 - block_class = 'courseblock-tall'
 
 - if ! (current_user && showState)

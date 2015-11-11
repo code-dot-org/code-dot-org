@@ -1,0 +1,13 @@
+- @page_title = "Report Abuse"
+
+#report-abuse-form
+
+:javascript
+  $(document).ready(function () {
+    var props = #{@react_props.to_json};
+    props.abuseUrl = document.referrer;
+    props.i18n = window.dashboard.i18n;
+    React.render(
+      React.createElement(window.dashboard.ReportAbuseForm, props),
+      document.getElementById('report-abuse-form'));
+  });

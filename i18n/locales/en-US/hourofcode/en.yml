@@ -1,21 +1,25 @@
 en-US:
   site_name: crwdns43528:0crwdne43528:0
+  hour_of_code: crwdns49001:0crwdne49001:0
   language: crwdns43529:0crwdne43529:0
-  front_title: crwdns43530:0crwdne43530:0
+  front_title: 'crwdns48581:0%{campaign_date}crwdne48581:0'
   coming_soon: crwdns43531:0crwdne43531:0
   campaign_date_start_short: crwdns43532:0crwdne43532:0
   campaign_date_start_long: crwdns43533:0crwdne43533:0
   campaign_date_short: crwdns43534:0crwdne43534:0
   campaign_date_full: crwdns43535:0crwdne43535:0
   front_header_banner: crwdns43536:0crwdne43536:0
-  front_intro_default: crwdns43537:0crwdne43537:0
+  front_intro_default: crwdns48582:0crwdne48582:0
   front_watch_video: crwdns43538:0crwdne43538:0
   front_watch_regular_video: crwdns43539:0crwdne43539:0
   header_menu_resources: crwdns43540:0crwdne43540:0
   header_menu_faq: crwdns43541:0crwdne43541:0
   header_menu_prizes: crwdns43542:0crwdne43542:0
+  header_menu_how_to: crwdns49002:0crwdne49002:0
+  header_menu_promote: crwdns49003:0crwdne49003:0
   company_4-H: crwdns43543:0crwdne43543:0
   company_asa: crwdns43544:0crwdne43544:0
+  company_asos: crwdns50589:0crwdne50589:0
   company_bgca: crwdns43545:0crwdne43545:0
   company_bsusa: crwdns43546:0crwdne43546:0
   company_cgcs: crwdns43547:0crwdne43547:0
@@ -49,6 +53,7 @@ en-US:
   company_chelmsfordpublicschooldistrict: crwdns43575:0crwdne43575:0
   company_cheneysd: crwdns43576:0crwdne43576:0
   company_chesterfieldschools: crwdns43577:0crwdne43577:0
+  company_codebrooklyn: crwdns49004:0crwdne49004:0
   company_cps: crwdns43578:0crwdne43578:0
   company_ccsd: crwdns43579:0crwdne43579:0
   company_cloverparkschooldistrict: crwdns43580:0crwdne43580:0
@@ -72,6 +77,7 @@ en-US:
   company_vadoe: crwdns43598:0crwdne43598:0
   company_gcs: crwdns43599:0crwdne43599:0
   company_gcisd: crwdns43600:0crwdne43600:0
+  company_godaddy: crwdns49005:0crwdne49005:0
   company_greenupcountyschooldistrict: crwdns43601:0crwdne43601:0
   company_gwinnettcountypublicschools: crwdns43602:0crwdne43602:0
   company_HamptonCitySchools: crwdns43603:0crwdne43603:0
@@ -105,6 +111,7 @@ en-US:
   company_oneclay: crwdns43631:0crwdne43631:0
   company_ocps: crwdns43632:0crwdne43632:0
   company_orangeusd: crwdns43633:0crwdne43633:0
+  company_pbsd: crwdns49006:0crwdne49006:0
   company_pvusd: crwdns43634:0crwdne43634:0
   company_PetersburgCityPublicSchools: crwdns43635:0crwdne43635:0
   company_pylusd: crwdns43636:0crwdne43636:0
@@ -118,6 +125,7 @@ en-US:
   company_sfusd: crwdns43644:0crwdne43644:0
   company_ShenandoahCountyPublicSchools: crwdns43645:0crwdne43645:0
   company_shorelineschools: crwdns43646:0crwdne43646:0
+  company_sky: crwdns50590:0crwdne50590:0
   company_spokaneschools: crwdns43647:0crwdne43647:0
   company_StaffordCountyPublicSchools: crwdns43648:0crwdne43648:0
   company_strongnet: crwdns43649:0crwdne43649:0
@@ -130,6 +138,7 @@ en-US:
   company_wvsd208: crwdns43656:0crwdne43656:0
   company_wuhsd: crwdns43657:0crwdne43657:0
   company_wcschools: crwdns43658:0crwdne43658:0
+  company_yelp: crwdns49007:0crwdne49007:0
   prizes_all: crwdns43659:0crwdne43659:0
   prizes_every_organizer: crwdns43660:0crwdne43660:0
   prizes_technology: crwdns43661:0crwdne43661:0
@@ -138,6 +147,22 @@ en-US:
   prizes_brilliant: crwdns43664:0crwdne43664:0
   prizes_actua: crwdns43665:0crwdne43665:0
   prizes_details: crwdns43666:0crwdne43666:0
+  nav_back_to_resources: crwdns47859:0crwdne47859:0
+  how_to_nav_educators: crwdns47860:0crwdne47860:0
+  how_to_nav_after_school: crwdns47861:0crwdne47861:0
+  how_to_nav_parents: crwdns47862:0crwdne47862:0
+  how_to_nav_public_officials: crwdns47863:0crwdne47863:0
+  how_to_nav_districts: crwdns47864:0crwdne47864:0
+  how_to_nav_assemblies: crwdns47865:0crwdne47865:0
+  how_to_nav_organizations: crwdns48794:0crwdne48794:0
+  how_to_nav_companies: crwdns50148:0crwdne50148:0
+  how_to_nav_afterschool_educators: crwdns49008:0crwdne49008:0
+  how_to_nav_volunteers: crwdns50591:0crwdne50591:0
+  prizes_nav_title: crwdns49009:0crwdne49009:0
+  prizes_nav_home: crwdns49010:0crwdne49010:0
+  prizes_nav_hardware: crwdns49011:0crwdne49011:0
+  prizes_nav_terms: crwdns43674:0crwdne43674:0
+  prizes_nav_faq: crwdns43675:0crwdne43675:0
   prizes_nav_dc: crwdns43667:0crwdne43667:0
   prizes_nav_technology: crwdns43668:0crwdne43668:0
   prizes_nav_video_chat: crwdns43669:0crwdne43669:0
@@ -145,12 +170,17 @@ en-US:
   prizes_nav_brilliant: crwdns43671:0crwdne43671:0
   prizes_nav_actua: crwdns43672:0crwdne43672:0
   prizes_nav_kids_code: crwdns43673:0crwdne43673:0
-  prizes_nav_terms: crwdns43674:0crwdne43674:0
-  prizes_nav_faq: crwdns43675:0crwdne43675:0
+  prizes_header: crwdns50537:0crwdne50537:0
+  prizes_10k: crwdns50425:0crwdne50425:0
+  prizes_gift_cards: crwdns50538:0crwdne50538:0
   whats_next_header: crwdns43676:0crwdne43676:0
   whats_next_description: crwdns43677:0crwdne43677:0
-  whats_next_how_to: crwdns43678:0crwdne43678:0
-  whats_next_promote: crwdns43679:0crwdne43679:0
+  whats_next_how_to: crwdns50243:0crwdne50243:0
+  whats_next_promote: crwdns50244:0crwdne50244:0
+  whats_next_how_to_promote: crwdns50245:0crwdne50245:0
+  whats_next_how_to_promote_link: crwdns49012:0crwdne49012:0
+  whats_next_try: crwdns48585:0crwdne48585:0
+  whats_next_try_button: crwdns48586:0crwdne48586:0
   n_have_learned_an_hoc: crwdns43680:0crwdne43680:0
   anybody_can_learn: crwdns43681:0crwdne43681:0
   get_started: crwdns43682:0crwdne43682:0
@@ -167,11 +197,15 @@ en-US:
   front_join_us_teacher: crwdns43693:0crwdne43693:0
   front_join_us_inspire: crwdns43694:0crwdne43694:0
   front_join_us_inspire_link: crwdns43695:0crwdne43695:0
+  front_join_us_teacher_link: crwdns48587:0crwdne48587:0
   front_join_us_parent: crwdns43696:0crwdne43696:0
   front_join_us_ask_link: crwdns43697:0crwdne43697:0
   front_join_us_ask: crwdns43698:0crwdne43698:0
+  front_join_us_parent_link: crwdns48588:0crwdne48588:0
   front_join_us_computer_science: crwdns43699:0crwdne43699:0
   front_join_us_spread: crwdns43700:0crwdne43700:0
+  front_join_us_spread_word: crwdns48589:0crwdne48589:0
+  front_join_us_spread_word_work: crwdns49013:0crwdne49013:0
   front_join_us_organize: crwdns43701:0crwdne43701:0
   front_join_us_how_to_run: crwdns43702:0crwdne43702:0
   front_join_us_help_promote: crwdns43703:0crwdne43703:0
@@ -179,9 +213,13 @@ en-US:
   front_join_us_teachers: crwdns43705:0crwdne43705:0
   front_join_us_everyone: crwdns43706:0crwdne43706:0
   front_join_us_try: crwdns43707:0crwdne43707:0
+  front_join_us_sign_up: crwdns47866:0crwdne47866:0
   front_join_us_host: crwdns43708:0crwdne43708:0
   front_join_us_support: crwdns43709:0crwdne43709:0
-  signup_header: crwdns43710:0crwdne43710:0
+  front_join_us_more_info: crwdns47867:0crwdne47867:0
+  front_join_us_code_info: crwdns48590:0crwdne48590:0
+  front_join_us_n_students_served: crwdns49014:0crwdne49014:0
+  signup_header: 'crwdns48583:0%{campaign_date}crwdne48583:0'
   signup_name_label: crwdns43711:0crwdne43711:0
   signup_email_label: crwdns43712:0crwdne43712:0
   signup_organization_name_label: crwdns43713:0crwdne43713:0
@@ -210,9 +248,13 @@ en-US:
   map_header: crwdns43736:0crwdne43736:0
   see_all_events: crwdns43737:0crwdne43737:0
   map_header_company: crwdns43738:0crwdne43738:0
+  map_header_country: 'crwdns50242:0%{country}crwdne50242:0'
   map_search_placeholder: crwdns43739:0crwdne43739:0
   map_search_search: crwdns43740:0crwdne43740:0
   map_search_reset: crwdns43741:0crwdne43741:0
+  map_legend_title: crwdns50975:0crwdne50975:0
+  map_legend_hoc_events: crwdns50976:0crwdne50976:0
+  map_legend_cs_tech_jam: crwdns50977:0crwdne50977:0
   meta_tag_og_title: crwdns43742:0crwdne43742:0
   meta_tag_og_description: crwdns43743:0crwdne43743:0
   meta_tag_twitter_title: crwdns43744:0crwdne43744:0
@@ -231,43 +273,47 @@ en-US:
   hardware_prizes_form_school_type_option_middle_school: crwdns43757:0crwdne43757:0
   hardware_prizes_form_school_type_option_high_school: crwdns43758:0crwdne43758:0
   hardware_prizes_form_qualifying_school_label: crwdns43759:0crwdne43759:0
+  hardware_prizes_form_title_I_school_label: crwdns49015:0crwdne49015:0
+  hardware_prizes_form_title_I_school_help_text: crwdns49016:0crwdne49016:0
   hardware_prizes_form_number_students_label: crwdns43760:0crwdne43760:0
   hardware_prizes_form_number_students_placeholder: crwdns43761:0crwdne43761:0
+  hardware_prizes_form_technology_plan_label: crwdns49017:0crwdne49017:0
+  hardware_prizes_form_technology_plan_placeholder: crwdns49018:0crwdne49018:0
   hardware_prizes_form_plan_file_label: crwdns43762:0crwdne43762:0
   hardware_prizes_form_plan_file_description: crwdns43763:0crwdne43763:0
   hardware_prizes_form_submit_label: crwdns43764:0crwdne43764:0
   hoc_faq_title: crwdns43765:0crwdne43765:0
   hoc_faq_what_is_hoc_q: crwdns43766:0crwdne43766:0
-  hoc_faq_what_is_hoc_a: crwdns43767:0crwdne43767:0
+  hoc_faq_what_is_hoc_a: 'crwdns43767:0%{codeorg_url}crwdne43767:0'
   hoc_faq_last_year: crwdns43768:0crwdne43768:0
   hoc_faq_when_is_hoc_q: crwdns43769:0crwdne43769:0
-  hoc_faq_when_is_hoc_a: crwdns43770:0crwdne43770:0
+  hoc_faq_when_is_hoc_a: 'crwdns43770:0%{campaign_date}crwdne43770:0'
   hoc_faq_why_cs_q: crwdns43771:0crwdne43771:0
-  hoc_faq_why_cs_a: crwdns43772:0crwdne43772:0
+  hoc_faq_why_cs_a: 'crwdns43772:0%{codeorg_url}crwdnd43772:0%{partner_url}crwdne43772:0'
   hoc_faq_how_participate_q: crwdns43773:0crwdne43773:0
-  hoc_faq_how_participate_a: crwdns43774:0crwdne43774:0
+  hoc_faq_how_participate_a: 'crwdns50246:0%{campaign_date}crwdne50246:0'
   hoc_faq_behind_hoc_q: crwdns43775:0crwdne43775:0
-  hoc_faq_behind_hoc_a: crwdns43776:0crwdne43776:0
+  hoc_faq_behind_hoc_a: 'crwdns43776:0%{codeorg_url}crwdne43776:0'
   hoc_faq_host_q: crwdns43777:0crwdne43777:0
-  hoc_faq_host_a: crwdns43778:0crwdne43778:0
+  hoc_faq_host_a: 'crwdns50247:0%{codeorg_url}crwdne50247:0'
   hoc_faq_need_computers_q: crwdns43779:0crwdne43779:0
   hoc_faq_need_computers_a: crwdns43780:0crwdne43780:0
   hoc_faq_international_q: crwdns43781:0crwdne43781:0
-  hoc_faq_international_a: crwdns43782:0crwdne43782:0
+  hoc_faq_international_a: crwdns50248:0crwdne50248:0
   hoc_faq_tutorial_q: crwdns43783:0crwdne43783:0
   hoc_faq_tutorial_a: crwdns43784:0crwdne43784:0
   hoc_faq_more_questions_q: crwdns43785:0crwdne43785:0
   hoc_faq_more_questions_a: crwdns43786:0crwdne43786:0
-  hoc_faq_scratch_q: crwdns43787:0crwdne43787:0
-  hoc_faq_scratch_a: crwdns43788:0crwdne43788:0
   hoc_faq_account_q: crwdns43789:0crwdne43789:0
-  hoc_faq_account_a: crwdns43790:0crwdne43790:0
+  hoc_faq_account_a: 'crwdns43790:0%{codeorg_url}crwdne43790:0'
   hoc_faq_frozen_q: crwdns43791:0crwdne43791:0
-  hoc_faq_frozen_a: crwdns43792:0crwdne43792:0
+  hoc_faq_frozen_a: 'crwdns43792:0%{codeorg_url}crwdne43792:0'
   hoc_faq_high_school_q: crwdns43793:0crwdne43793:0
-  hoc_faq_high_school_a: crwdns43794:0crwdne43794:0
+  hoc_faq_high_school_a: 'crwdns43794:0%{codeorg_url}crwdnd43794:0%{partner_url}crwdne43794:0'
+  hoc_faq_scratch_q: crwdns43787:0crwdne43787:0
+  hoc_faq_scratch_a: 'crwdns43788:0%{codeorg_url}crwdnd43788:0%{partner_url}crwdne43788:0'
   hoc_faq_count_hoc_q: crwdns43795:0crwdne43795:0
-  hoc_faq_count_hoc_a: crwdns43796:0crwdne43796:0
+  hoc_faq_count_hoc_a: 'crwdns43796:0%{codeorg_url}crwdne43796:0'
   stats_hoc_2013_image_alt: crwdns43797:0crwdne43797:0
   stats_growth: crwdns43798:0crwdne43798:0
   stats_i18n: crwdns43799:0crwdne43799:0
@@ -287,15 +333,60 @@ en-US:
   resources_how_to_districts: crwdns43813:0crwdne43813:0
   resources_how_to_officials: crwdns43814:0crwdne43814:0
   resources_handouts: crwdns43815:0crwdne43815:0
-  resources_videos: crwdns43816:0crwdne43816:0
+  resources_one_pager: crwdns47868:0crwdne47868:0
+  resources_brochure: crwdns47869:0crwdne47869:0
   resources_posters: crwdns43817:0crwdne43817:0
-  resources_social: crwdns43818:0crwdne43818:0
+  resources_videos: crwdns43816:0crwdne43816:0
   resources_banners: crwdns43819:0crwdne43819:0
   resources_emails: crwdns43820:0crwdne43820:0
+  resources_logo: crwdns47870:0crwdne47870:0
   resources_stats: crwdns43821:0crwdne43821:0
   resources_press_kit: crwdns43822:0crwdne43822:0
+  resources_social: crwdns43818:0crwdne43818:0
   resources_country_resources: crwdns43823:0crwdne43823:0
-  events_title: crwdns43824:0crwdne43824:0
+  resources_stickers: crwdns47871:0crwdne47871:0
+  resources_how_to_guides: crwdns49019:0crwdne49019:0
+  resources_promote: crwdns49020:0crwdne49020:0
+  resources_nav_tutorials: crwdns49021:0crwdne49021:0
+  resources_nav_promote: crwdns49022:0crwdne49022:0
+  resources_nav_spread_word: crwdns49023:0crwdne49023:0
+  resources_banner_promote_text: crwdns47872:0crwdne47872:0
+  resources_banner_promote_button: crwdns47873:0crwdne47873:0
+  resources_banner_howto_text: crwdns47874:0crwdne47874:0
+  resources_banner_howto_button: crwdns47875:0crwdne47875:0
+  handouts_section: crwdns49024:0crwdne49024:0
+  handouts_onepager: crwdns47876:0crwdne47876:0
+  handouts_brochure: crwdns47877:0crwdne47877:0
+  handouts_participationguide: crwdns49025:0crwdne49025:0
+  videos_title: crwdns47878:0crwdne47878:0
+  videos_what_most_schools_dont_teach: crwdns47879:0crwdne47879:0
+  videos_hoc_2014: crwdns47880:0crwdne47880:0
+  videos_obama_cs: crwdns47881:0crwdne47881:0
+  videos_anybody_can_learn: crwdns47882:0crwdne47882:0
+  title_country_resources: crwdns45391:0crwdne45391:0
+  title_how_to_districts: crwdns45392:0crwdne45392:0
+  title_how_to_events: crwdns45393:0crwdne45393:0
+  title_how_to_organizations: crwdns45394:0crwdne45394:0
+  title_how_to_companies: crwdns50149:0crwdne50149:0
+  title_how_to_officials: crwdns45395:0crwdne45395:0
+  title_how_to_volunteers: crwdns50592:0crwdne50592:0
+  title_how_to: crwdns45396:0crwdne45396:0
+  title_press_release: crwdns45397:0crwdne45397:0
+  title_op_ed: crwdns45398:0crwdne45398:0
+  title_press_kit: crwdns45399:0crwdne45399:0
+  title_proclamation: crwdns45400:0crwdne45400:0
+  title_stats: crwdns45401:0crwdne45401:0
+  title_partners: crwdns45402:0crwdne45402:0
+  title_prizes_faq: crwdns45403:0crwdne45403:0
+  title_prizes_terms: crwdns45404:0crwdne45404:0
+  title_prizes_thanks: crwdns45405:0crwdne45405:0
+  title_prizes: crwdns45406:0crwdne45406:0
+  title_hardware_prize_form: crwdns48813:0crwdne48813:0
+  title_resources: crwdns45407:0crwdne45407:0
+  title_signup_thanks: crwdns45408:0crwdne45408:0
+  title_tutorial_guidelines: crwdns45409:0crwdne45409:0
+  title_whole_school: crwdns45410:0crwdne45410:0
+  events_nav_title: crwdns49026:0crwdne49026:0
   events_nav_all: crwdns43825:0crwdne43825:0
   events_nav_whole_schools: crwdns43826:0crwdne43826:0
   events_nav_special: crwdns43827:0crwdne43827:0

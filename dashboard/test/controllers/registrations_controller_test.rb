@@ -14,10 +14,11 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test "create retries on Duplicate exception" do
     # some Mocha shenanigans to simulate throwing a duplicate entry
-    # error and then succeeding by returning the existing userlevel
+    # error and then succeeding by returning the existing user
 
     exception = ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry 'coder1234574782' for key 'index_users_on_username'"))
     User.any_instance.stubs(:save).raises(exception).then.returns(true)
+    User.any_instance.stubs(:persisted?).returns(true)
 
     student_params = {name: "A name",
                       password: "apassword",
@@ -151,7 +152,8 @@ class RegistrationsControllerTest < ActionController::TestCase
 
       sign_in student
 
-      post :update, user: {age: 9}
+      post :update, format: :js, user: {age: 9}
+      assert_response :no_content
 
       assert_equal Date.today - 9.years, assigns(:user).birthday
     end
@@ -166,7 +168,8 @@ class RegistrationsControllerTest < ActionController::TestCase
 
       sign_in student
 
-      post :update, user: {age: {"Pr" => nil}}
+      post :update, format: :js, user: {age: {"Pr" => nil}}
+      assert_response :no_content
 
       # did not change
       assert_equal '1981-03-24', assigns(:user).birthday.to_s
@@ -229,7 +232,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     # no age dropdown, yes age hidden field
     assert_select 'select[name*="age"]', 0
-    assert_select 'input[type="hidden"][name*="age"][value=21]'
+    assert_select 'input[type="hidden"][name*="age"][value="21"]'
   end
 
   test 'sign up as student' do
@@ -250,20 +253,20 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test 'edit shows alert for unconfirmed email for teachers' do
-    user = create :teacher, email: 'my_email@test.xx'
+    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
 
     sign_in user
     get :edit
 
     assert_response :success
     assert_select '.alert span', /Your email address my_email@test.xx has not been confirmed:/
-    assert_select '.alert input[value=my_email@test.xx]'
+    assert_select '.alert input[value="my_email@test.xx"]'
     assert_select '.alert .btn[value="Resend confirmation instructions"]'
   end
 
 
   test 'edit does not show alert for unconfirmed email for students' do
-    user = create :student, email: 'my_email@test.xx'
+    user = create :student, email: 'my_email@test.xx', confirmed_at: nil
 
     sign_in user
     get :edit

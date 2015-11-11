@@ -8,30 +8,45 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 # Thanks for signing up to host an Hour of Code!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
+You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13.
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [Details](https://<%= hostname %>/prizes).
 
-## 1. Spread the word
+#### We'll be in touch about new tutorials and other exciting updates. What can you do now?
 
-Tell your friends about the #HourOfCode.
+## ১. এই যুক্তশব্দকে ছড়িয়ে দাও
 
-## 2. Ask your whole school to offer an Hour of Code
+We need your help to reach 100,000 organizers worldwide. তোমার বন্ধুবান্ধবদের সাথে #HourOfCode নিয়ে কথা বলো। [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-[Send this email](http://<%= hostname %>/resources#email) to your principal.
+<% if international == 'true' %>
 
-## 3. Ask your employer to get involved
+## ২. তোমার বিদ্যালয় জুড়ে Hour of Code শেখাতে বলো
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). <% else %>
 
-## 4. Promote the Hour of Code in your community
+## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup). <% end %>
 
-## 5. Ask a local elected official to support the Hour of Code
+## ৩. তোমার উর্ধতন কর্মকর্তাকে এতে অংশ নেবার জন্য তাঁকে অবহিত করো
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
+
+## ৪. তোমার সমাজে Hour of Code কে ছড়িয়ে দাও
+
+Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
+
+## ৫. স্থানীয় কোনো নির্বাচিত official কর্মকর্তাকে বলো যেন তারা Hour of Code কে সমর্থন করেন
+
+তোমাদের মেয়র, নগর পরিষদ, বা বিদ্যালয় বোর্ড কর্তৃপক্ষ বরাবর [email পাঠিয়ে দাও](https://<%= hostname %>/resources#politicians) এবং তাদেরকে তোমাদের বিদ্যালয় পরিদর্শন করতে আমন্ত্রণ জানাও।
+
+Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
+
+Hadi Partovi  
+Founder, Code.org
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+
+![](<%= tracking_pixel %>)

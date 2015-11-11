@@ -1,11 +1,11 @@
-/* global $ */
-
 var studioApp = require('../StudioApp').singleton;
 var AppStorage = require('./appStorage');
 var apiTimeoutList = require('../timeoutList');
+var ChartApi = require('./ChartApi');
 var RGBColor = require('./rgbcolor.js');
 var codegen = require('../codegen');
 var keyEvent = require('./keyEvent');
+var utils = require('../utils');
 
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
@@ -13,6 +13,7 @@ var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var applabTurtle = require('./applabTurtle');
 var ChangeEventHandler = require('./ChangeEventHandler');
+var colors = require('../sharedJsxStyles').colors;
 
 var OPTIONAL = true;
 
@@ -155,14 +156,7 @@ applabCommands.setScreen = function (opts) {
     return;
   }
 
-  // toggle all screens to be visible if equal to given id, hidden otherwise
-  $('.screen').each(function () {
-    $(this).toggle(this.id === opts.screenId);
-    if (this.id === opts.screenId) {
-      // Allow the active screen to receive keyboard events.
-      this.focus();
-    }
-  });
+  Applab.changeScreen(opts.screenId);
 };
 
 applabCommands.container = function (opts) {
@@ -190,6 +184,8 @@ applabCommands.button = function (opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
+  newButton.style.color = colors.white;
+  newButton.style.backgroundColor = colors.teal;
 
   return Boolean(newButton.appendChild(textNode) &&
     Applab.activeScreen().appendChild(newButton));
@@ -614,6 +610,10 @@ applabCommands.clearCanvas = function (opts) {
   return false;
 };
 
+/**
+ * Semi-deprecated. We still support this API, but no longer expose it in the
+ * toolbox. Replaced by drawImageURL
+ */
 applabCommands.drawImage = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // PARAMNAME: drawImage: imageId vs. id
@@ -641,6 +641,68 @@ applabCommands.drawImage = function (opts) {
     return true;
   }
   return false;
+};
+
+/**
+ * We support a couple different version of this API
+ * drawImageURL(url, [callback])
+ * drawImaegURL(url, x, y, width, height, [calback])
+ */
+applabCommands.drawImageURL = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+
+  apiValidateActiveCanvas(opts, 'drawImageURL');
+  apiValidateType(opts, 'drawImageURL', 'url', opts.url, 'string');
+  apiValidateType(opts, 'drawImageURL', 'x', opts.x, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'y', opts.y, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'width', opts.width, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'height', opts.height, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'callback', opts.callback, 'function', OPTIONAL);
+
+  var jsInterpreter = Applab.JSInterpreter;
+  var callback = function (success) {
+    if (opts.callback) {
+      queueCallback(jsInterpreter, opts.callback, [success]);
+    }
+  };
+
+  var image = new Image();
+  image.src = Applab.maybeAddAssetPathPrefix(opts.url);
+  image.onload = function () {
+    var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+    if (!ctx) {
+      return;
+    }
+    var x = utils.valueOr(opts.x, 0);
+    var y = utils.valueOr(opts.y, 0);
+
+    // if given a width/height use that
+    var renderWidth = utils.valueOr(opts.width, image.width);
+    var renderHeight = utils.valueOr(opts.height, image.height);
+
+    // if undefined, extra width/height from image and potentially resize to
+    // fit
+    if (opts.width === undefined || opts.height === undefined) {
+      var aspectRatio = image.width / image.height;
+      if (aspectRatio > 1) {
+        renderWidth = Math.min(Applab.activeCanvas.width, image.width);
+        renderHeight = renderWidth * aspectRatio;
+      } else {
+        renderHeight = Math.min(Applab.activeCanvas.height, image.height);
+        renderWidth = renderHeight / aspectRatio;
+      }
+    }
+
+    ctx.save();
+    ctx.setTransform(renderWidth / image.width, 0, 0, renderHeight / image.height, opts.x, opts.y);
+    ctx.drawImage(image, 0, 0);
+    ctx.restore();
+
+    callback(true);
+  };
+  image.onerror = function () {
+    callback(false);
+  };
 };
 
 applabCommands.getImageData = function (opts) {
@@ -684,6 +746,8 @@ applabCommands.textInput = function (opts) {
   newInput.value = opts.text;
   newInput.id = opts.elementId;
   newInput.style.position = 'relative';
+  newInput.style.height = '30px';
+  newInput.style.width = '200px';
 
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };
@@ -754,6 +818,8 @@ applabCommands.dropdown = function (opts) {
   }
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
+  newSelect.style.color = colors.white;
+  newSelect.style.backgroundColor = colors.teal;
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
@@ -792,7 +858,7 @@ applabCommands.getText = function (opts) {
     } else if (element.tagName === 'IMG') {
       return String(element.alt);
     } else {
-      return element.innerText;
+      return applabCommands.getElementInnerText_(element);
     }
   }
   return false;
@@ -810,11 +876,72 @@ applabCommands.setText = function (opts) {
     } else if (element.tagName === 'IMG') {
       element.alt = opts.text;
     } else {
-      element.innerText = opts.text;
+      applabCommands.setElementInnerText_(element, opts.text);
     }
     return true;
   }
   return false;
+};
+
+/**
+ * Attempts to emulate Chrome's version of innerText by way of innerHTML, only
+ * for the simplified case of plain text content (in, for example, a
+ * contentEditable div).
+ * @param {Element} element
+ * @private
+ */
+applabCommands.getElementInnerText_ = function (element) {
+  var cleanedText = element.innerHTML;
+  cleanedText = cleanedText.replace(/<div>/gi, '\n'); // Divs generate newlines
+  cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
+
+  // This next step requires some explanation
+  // In multiline text it's possible for the first line to render wrapped or unwrapped.
+  //     Line 1
+  //     Line 2
+  //   Can render as either of:
+  //     Line 1<div>Line 2</div>
+  //     <div>Line 1</div><div>Line 2</div>
+  //
+  // But leading blank lines will always render wrapped and should be preserved
+  //
+  //     Line 2
+  //     Line 3
+  //   Renders as
+  //    <div><br></div><div>Line 2</div><div>Line 3</div>
+  //
+  // To handle this behavior we strip leading newlines UNLESS they are followed
+  // by another newline, using a negative lookahead (?!)
+  cleanedText = cleanedText.replace(/^\n(?!\n)/, ''); // Strip leading nondoubled newline
+
+  cleanedText = cleanedText.replace(/&nbsp;/gi, ' '); // Unescape nonbreaking spaces
+  cleanedText = cleanedText.replace(/&gt;/gi, '>');   // Unescape >
+  cleanedText = cleanedText.replace(/&lt;/gi, '<');   // Unescape <
+  cleanedText = cleanedText.replace(/&amp;/gi, '&');  // Unescape & (must happen last!)
+  return cleanedText;
+};
+
+/**
+ * Attempts to emulate Chrome's version of innerText by way of innerHTML, only
+ * for the simplified case of plain text content (in, for example, a
+ * contentEditable div).
+ * @param {Element} element
+ * @param {string} newText
+ * @private
+ */
+applabCommands.setElementInnerText_ = function (element, newText) {
+  var escapedText = newText.toString();
+  escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
+  escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
+  escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >
+  escapedText = escapedText.replace(/  /g,' &nbsp;'); // Escape doubled spaces
+
+  // Now wrap each line except the first line in a <div>,
+  // replacing blank lines with <div><br><div>
+  var lines = escapedText.split('\n');
+  element.innerHTML = lines[0] + lines.slice(1).map(function (line) {
+    return '<div>' + (line.length ? line : '<br>') + '</div>';
+  }).join('');
 };
 
 applabCommands.getChecked = function (opts) {
@@ -980,22 +1107,41 @@ applabCommands.setPosition = function (opts) {
     // (2) width/height already specified OR IMG element with width/height attributes
     if ((el.style.width.length > 0 && el.style.height.length > 0) ||
         (el.tagName === 'IMG' && el.width > 0 && el.height > 0)) {
-        if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
-            setWidthHeight = true;
-        }
-    } else {
+      if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
         setWidthHeight = true;
+      }
+    } else {
+      setWidthHeight = true;
     }
     if (setWidthHeight) {
-        apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
-        apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
-        el.style.width = opts.width + 'px';
-        el.style.height = opts.height + 'px';
+      apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
+      apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+      setSize_(opts.elementId, opts.width, opts.height);
     }
     return true;
   }
   return false;
 };
+
+applabCommands.setSize = function (opts) {
+  apiValidateType(opts, 'setSize', 'width', opts.width, 'number');
+  apiValidateType(opts, 'setSize', 'height', opts.height, 'number');
+  setSize_(opts.elementId, opts.width, opts.height);
+
+  return true;
+};
+
+/**
+ * Logic shared between setPosition and setSize for setting the size
+ */
+function setSize_(elementId, width, height) {
+  var element = document.getElementById(elementId);
+  var divApplab = document.getElementById('divApplab');
+  if (divApplab.contains(element)) {
+    element.style.width = width + 'px';
+    element.style.height = height + 'px';
+  }
+}
 
 applabCommands.getXPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
@@ -1004,8 +1150,8 @@ applabCommands.getXPosition = function (opts) {
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     var x = div.offsetLeft;
-    while (div !== divApplab) {
-      // TODO (brent) using offsetParent may be ill advised:
+    while (div && div !== divApplab) {
+      // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent
       // This property will return null on Webkit if the element is hidden
       // (the style.display of this element or any ancestor is "none") or if the
       // style.position of the element itself is set to "fixed".
@@ -1013,7 +1159,9 @@ applabCommands.getXPosition = function (opts) {
       // style.position of the element itself is set to "fixed".
       // (Having display:none does not affect this browser.)
       div = div.offsetParent;
-      x += div.offsetLeft;
+      if (div) {
+        x += div.offsetLeft;
+      }
     }
     return x;
   }
@@ -1027,9 +1175,11 @@ applabCommands.getYPosition = function (opts) {
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     var y = div.offsetTop;
-    while (div !== divApplab) {
+    while (div && div !== divApplab) {
       div = div.offsetParent;
-      y += div.offsetTop;
+      if (div) {
+        y += div.offsetTop;
+      }
     }
     return y;
   }
@@ -1387,4 +1537,134 @@ applabCommands.getUserId = function (opts) {
     throw new Error("User ID failed to load.");
   }
   return Applab.user.applabUserId;
+};
+
+/**
+ * How to execute the 'drawChartFromRecords' function.
+ * Delegates most work to ChartApi.drawChartFromRecords, but a few things are
+ * handled directly at this layer:
+ *   - Type validation (before execution)
+ *   - Queueing callbacks (after execution)
+ *   - Reporting errors and warnings (after execution)
+ * @see {ChartApi}
+ * @param {Object} opts
+ * @param {string} opts.chartId
+ * @param {ChartType} opts.chartType
+ * @param {string} opts.tableName
+ * @param {string[]} opts.columns
+ * @param {Object} opts.options
+ * @param {function} opts.callback
+ */
+applabCommands.drawChartFromRecords = function (opts) {
+  apiValidateType(opts, 'drawChartFromRecords', 'chartId', opts.chartId, 'string');
+  apiValidateType(opts, 'drawChartFromRecords', 'chartType', opts.chartType, 'string');
+  apiValidateType(opts, 'drawChartFromRecords', 'tableName', opts.tableName, 'string');
+  apiValidateType(opts, 'drawChartFromRecords', 'columns', opts.columns, 'array');
+  apiValidateType(opts, 'drawChartFromRecords', 'options', opts.options, 'object', OPTIONAL);
+  apiValidateType(opts, 'drawChartFromRecords', 'callback', opts.callback, 'function', OPTIONAL);
+  apiValidateDomIdExistence(opts, 'drawChartFromRecords', 'chartId', opts.chartId, true);
+
+  // Bind a reference to the current interpreter so we can later make sure we're
+  // not doing anything asynchronous across re-runs.
+  var jsInterpreter = Applab.JSInterpreter;
+
+  var currentLineNumber = getCurrentLineNumber(jsInterpreter);
+
+  var chartApi = new ChartApi();
+
+  /**
+   * What to do after drawing the chart succeeds/completes:
+   *   1. Report any warnings, attributed to the current line.
+   *   2. Queue the user-provided success callback.
+   *
+   * @param {Error[]} warnings - Any non-terminal errors generated by the
+   *        drawChartFromRecords call, which we will report on after the fact
+   *        without halting execution.
+   */
+  var onSuccess = function () {
+    stopLoadingSpinnerFor(opts.chartId);
+    chartApi.warnings.forEach(function (warning) {
+      outputError(warning.message, ErrorLevel.WARNING, currentLineNumber);
+    });
+    queueCallback(jsInterpreter, opts.callback);
+  };
+
+  /**
+   * What to do if something goes wrong:
+   *   1. Report the error.
+   *
+   * @param {Error} error - A rejected promise usually passes an error.
+   */
+  var onError = function (error) {
+    stopLoadingSpinnerFor(opts.chartId);
+    outputError(error.message, ErrorLevel.ERROR, currentLineNumber);
+  };
+
+  startLoadingSpinnerFor(opts.chartId);
+  chartApi.drawChartFromRecords(
+      opts.chartId,
+      opts.chartType,
+      opts.tableName,
+      opts.columns,
+      opts.options
+  ).then(onSuccess, onError);
+};
+
+/**
+ * If the element is found, add the 'loading' class to it so that it
+ * displays the loading spinner.
+ * @param {string} elementId
+ */
+function startLoadingSpinnerFor(elementId) {
+  var element = document.getElementById(elementId);
+  if (!element) {
+    return;
+  }
+
+  // Add 'loading' class
+  element.className += ' loading';
+}
+
+/**
+ * If the element is found, make sure to remove the 'loading' class from it
+ * so that it hides the loading spinner.
+ * @param {string} elementId
+ */
+function stopLoadingSpinnerFor(elementId) {
+  var element = document.getElementById(elementId);
+  if (!element) {
+    return;
+  }
+
+  // Remove 'loading' class
+  element.className = element.className.split(/\s+/).filter(function (x) {
+    return !(/loading/i.test(x));
+  }).join(' ');
+}
+
+/**
+ * Queue the given callback in the given interpreter IF the callback exists
+ * AND the interpreter is still the active interpreter for Applab.
+ * @param {JSInterpreter} jsInterpreter
+ * @param {function} callback
+ * @param {Object[]} args
+ */
+var queueCallback = function (jsInterpreter, callback, args) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active, so we don't queue callbacks for slow async events
+  // from past executions of the app.
+  // (We use a different interpreter instance for every run.)
+  if (callback && jsInterpreter === Applab.JSInterpreter) {
+    Applab.JSInterpreter.queueEvent(callback, args);
+  }
+};
+
+/**
+ * For the provided interpreter, get the nearest line number in user code
+ * up the stack from the last executed command.
+ * @param {JSInterpreter} jsInterpreter
+ * @returns {number}
+ */
+var getCurrentLineNumber = function (jsInterpreter) {
+  return 1 + jsInterpreter.getNearestUserCodeLine();
 };

@@ -22,5 +22,5 @@
       -zebra = (i % 2 == 0) ? 'even' : 'odd'
       .other-video{:class=>"other-video-#{zebra}"}
         %a{:href=>"http://www.youtube.com/watch?v=#{video[:code_s]}"}
-          %img{:src=>"http://img.youtube.com/vi/#{video[:code_s]}/mqdefault.jpg"}
+          %img{:src=>"https://img.youtube.com/vi/#{video[:code_s]}/mqdefault.jpg"}
           .other-video-caption= video[:title_s]

@@ -14,6 +14,8 @@ require 'cgi'
 require 'json'
 require 'uri'
 require 'cdo/rack/upgrade_insecure_requests'
+require_relative 'helper_modules/dashboard'
+require 'dynamic_config/dcdo'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -62,22 +64,32 @@ class Documents < Sinatra::Base
   use Rack::CdoDeflater
   use Rack::UpgradeInsecureRequests
 
+  # Use dynamic config for max_age settings, with the provided default as fallback.
+  def self.set_max_age(type, default)
+    set "#{type}_max_age", Proc.new { DCDO.get("pegasus_#{type}_max_age", rack_env?(:staging) ? 60 : default) }
+  end
+
+  ONE_HOUR = 3600
+
   configure do
     dir = pegasus_dir('sites.v3')
     set :launched_at, Time.now
     set :configs, load_configs_in(dir)
     set :views, dir
-    set :document_max_age, rack_env?(:staging) ? 0 : 3600
     set :image_extnames, ['.png','.jpeg','.jpg','.gif']
     set :exclude_extnames, ['.collate']
-    set :image_max_age, rack_env?(:staging) ? 0 : 36000
-    set :static_max_age, rack_env?(:staging) ? 0 : 36000
+    set_max_age :document, ONE_HOUR * 4
+    set_max_age :document_proxy, ONE_HOUR * 2
+    set_max_age :image, ONE_HOUR * 10
+    set_max_age :image_proxy, ONE_HOUR * 5
+    set_max_age :static, ONE_HOUR * 10
+    set_max_age :static_proxy, ONE_HOUR * 5
     set :read_only, CDO.read_only
     set :not_found_extnames, ['.not_found','.404']
     set :redirect_extnames, ['.redirect','.moved','.found','.301','.302']
     set :template_extnames, ['.erb','.fetch','.haml','.html','.md','.txt']
     set :non_static_extnames, settings.not_found_extnames + settings.redirect_extnames + settings.template_extnames + settings.exclude_extnames
-    set :markdown, {autolink: true, tables: true, space_after_headers: true}
+    set :markdown, {autolink: true, tables: true, space_after_headers: true, fenced_code_blocks: true}
 
     if rack_env?(:production)
       Honeybadger.configure do |config|
@@ -96,7 +108,8 @@ class Documents < Sinatra::Base
                  '/teacher-dashboard/sections',
                  '/teacher-dashboard/signin_cards',
                  '/teacher-dashboard/student',
-                 '/language_test']
+                 '/language_test',
+                 '/starwars']
     set :vary, { 'X-Varnish-Accept-Language'=>vary_uris, 'Cookie'=>vary_uris }
   end
 
@@ -120,7 +133,13 @@ class Documents < Sinatra::Base
     @config = settings.configs[request.site]
     @header = {}
 
-    @dirs = [request.site]
+    @dirs = []
+
+    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
+      @dirs << [File.join(request.site, 'i18n')]
+    end
+
+    @dirs << request.site
 
     if @config
       base = @config[:base]
@@ -130,10 +149,6 @@ class Documents < Sinatra::Base
       end
     end
 
-    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
-      @dirs << File.join(request.site, 'i18n')
-    end
-
     @locals = {header: {}}
   end
 
@@ -141,7 +156,7 @@ class Documents < Sinatra::Base
   get %r{^/lang/([^/]+)/?(.*)?$} do
     lang, path = params[:captures]
     pass unless DB[:cdo_languages].first(code_s: lang)
-    cache_control :private, :must_revalidate, max_age: 0
+    dont_cache
     response.set_cookie('language_', {value: lang, domain: ".#{request.site}", path: '/', expires: Time.now + (365*24*3600)})
     redirect "/#{path}"
   end
@@ -150,12 +165,35 @@ class Documents < Sinatra::Base
   ['/private', '/private/*'].each do |uri|
     get_head_or_post uri do
       unless rack_env?(:development)
-        not_authorized! unless dashboard_user
-        forbidden! unless dashboard_user[:admin]
+        not_authorized! unless dashboard_user_helper
+        forbidden! unless dashboard_user_helper.admin?
       end
       pass
     end
   end
+
+  # Static files
+  get '*' do |uri|
+    pass unless path = resolve_static('public', uri)
+    cache :static
+    send_file(path)
+  end
+
+  get '/style.css' do
+    content_type :css
+    css_last_modified = Time.at(0)
+    css = Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map do |i|
+      css_last_modified = [css_last_modified, File.mtime(i)].max
+      IO.read(i)
+    end.join("\n\n")
+    last_modified(css_last_modified) if css_last_modified > Time.at(0)
+    cache :static
+    css
+  end
+
+  # rubocop:disable Lint/Eval
+  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path))}
+  # rubocop:enable Lint/Eval
 
   # Manipulated images
   get "/images/*" do |path|
@@ -177,7 +215,11 @@ class Documents < Sinatra::Base
     # Assume we are returning the same resolution as we're reading.
     retina_in = retina_out = basename[-3..-1] == '_2x'
 
-    path = resolve_image File.join(dirname, basename)
+    path = nil
+    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
+      path = resolve_image File.join(@language, dirname, basename)
+    end
+    path ||= resolve_image File.join(dirname, basename)
     unless path
       # Didn't find a match at this resolution, look for a match at the other resolution.
       if retina_out
@@ -195,7 +237,7 @@ class Documents < Sinatra::Base
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
       content_type image_format.to_sym
-      cache_control :public, :must_revalidate, max_age: settings.image_max_age
+      cache :image
       send_file(path)
     else
       image = Magick::Image.read(path).first
@@ -244,32 +286,9 @@ class Documents < Sinatra::Base
     image.format = image_format
 
     content_type image_format.to_sym
-    cache_control :public, :must_revalidate, max_age: settings.image_max_age
+    cache :image
     image.to_blob
   end
-
-  # Static files
-  get '*' do |uri|
-    pass unless path = resolve_static('public', uri)
-    cache_control :public, :must_revalidate, max_age: settings.static_max_age
-    send_file(path)
-  end
-
-  get '/style.css' do
-    content_type :css
-    css_last_modified = Time.at(0)
-    css = Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map do |i|
-      css_last_modified = [css_last_modified, File.mtime(i)].max
-      IO.read(i)
-    end.join("\n\n")
-    last_modified(css_last_modified) if css_last_modified > Time.at(0)
-    cache_control :public, :must_revalidate, max_age: settings.static_max_age
-    css
-  end
-
-  # rubocop:disable Lint/Eval
-  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path))}
-  # rubocop:enable Lint/Eval
 
   # Documents
   get_head_or_post '*' do |uri|
@@ -288,6 +307,9 @@ class Documents < Sinatra::Base
       response.headers['X-Frame-Options'] = 'ALLOWALL'
     end
 
+    if @locals[:header]['content-type']
+      response.headers['Content-Type'] = @locals[:header]['content-type']
+    end
     layout = @locals[:header]['layout']||'default'
     unless ['', 'none'].include?(layout)
       template = resolve_template('layouts', settings.template_extnames, layout)
@@ -306,13 +328,36 @@ class Documents < Sinatra::Base
   not_found do
     status 404
     path = resolve_template('views', settings.template_extnames, '/404')
-    document path
+    document(path).tap{dont_cache}
   end
 
-  helpers do
+  helpers(Dashboard) do
     def content_dir(*paths)
       File.join(settings.views, *paths)
     end
+
+    # Get the current dashboard user record
+    # @returns [Hash]
+    #
+    # TODO: Switch to using `dashboard_user_helper` everywhere and remove this
+    def dashboard_user
+      @dashboard_user ||= Dashboard::db[:users][id: dashboard_user_id]
+    end
+
+    # Get the current dashboard user wrapped in a helper
+    # @returns [Dashboard::User] or nil if not signed in
+    #
+    # TODO: When we are using this everywhere, rename to just `dashboard_user`
+    def dashboard_user_helper
+      @dashboard_user_helper ||= Dashboard::User.get(dashboard_user_id)
+    end
+
+    # Get the current dashboard user ID
+    # @returns [Integer]
+    def dashboard_user_id
+      request.user_id
+    end
+
 
     def document(path)
       content = IO.read(path)
@@ -331,9 +376,9 @@ class Documents < Sinatra::Base
       end
 
       if @header['max_age']
-        cache_control :public, :must_revalidate, max_age: @header['max_age']
+        cache_for @header['max_age']
       else
-        cache_control :public, :must_revalidate, max_age: settings.document_max_age
+        cache :document
       end
 
       response.headers['X-Pegasus-Version'] = '3'
@@ -346,6 +391,10 @@ class Documents < Sinatra::Base
         end
         raise e
       end
+    end
+
+    def preprocess_markdown(markdown_content)
+      markdown_content.gsub(/```/, "```\n")
     end
 
     def post_process_html_from_markdown(full_document)
@@ -446,10 +495,11 @@ class Documents < Sinatra::Base
         end
         pass unless File.file?(cache_file)
 
-        cache_control :public, :must_revalidate, max_age: settings.static_max_age
+        cache :static
         send_file(cache_file)
       when '.md', '.txt'
         preprocessed = erb body, locals: locals
+        preprocessed = preprocess_markdown preprocessed
         html = markdown preprocessed, locals: locals
         post_process_html_from_markdown html
       when '.redirect', '.moved', '.301'

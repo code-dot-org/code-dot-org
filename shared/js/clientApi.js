@@ -1,7 +1,6 @@
 /**
  * @file Helper API object that wraps asynchronous calls to our data APIs.
  */
-/* global $ */
 
 /**
  * Standard callback form for asynchronous operations, popularized by Node.
@@ -60,12 +59,12 @@ var base = {
 
   /**
    * Remove a collection.
-   * @param {number} id - The collection identifier.
+   * @param {string} childPath The path underneath api_base_url
    * @param {NodeStyleCallback} callback - Expected result is TRUE.
    */
-  delete: function(id, callback) {
+  delete: function(childPath, callback) {
     $.ajax({
-      url: this.api_base_url + "/" + id + "/delete",
+      url: this.api_base_url + "/" + childPath + "/delete",
       type: "post",
       dataType: "json"
     }).done(function(data, text) {
@@ -78,13 +77,13 @@ var base = {
 
   /**
    * Retrieve a collection.
-   * @param {number} id - The collection identifier.
+   * @param {string} childPath The path underneath api_base_url
    * @param {NodeStyleCallback} callback - Expected result is the requested
    *        collection object.
    */
-  fetch: function(id, callback) {
+  fetch: function(childPath, callback) {
     $.ajax({
-      url: this.api_base_url + "/" + id,
+      url: this.api_base_url + "/" + childPath,
       type: "get",
       dataType: "json",
     }).done(function(data, text) {
@@ -97,14 +96,14 @@ var base = {
 
   /**
    * Change the contents of a collection.
-   * @param {number} id - The collection identifier.
+   * @param {string} childPath The path underneath api_base_url
    * @param {Object} value - The new collection contents.
    * @param {NodeStyleCallback} callback - Expected result is the new collection
    *        object.
    */
-  update: function(id, value, callback) {
+  update: function(childPath, value, callback) {
     $.ajax({
-      url: this.api_base_url + "/" + id,
+      url: this.api_base_url + "/" + childPath,
       type: "post",
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(value)
@@ -137,7 +136,7 @@ var base = {
   },
 
   /**
-   * Change the contents of an asset or source file.
+   * Replace the contents of an asset or source file.
    * @param {number} id - The collection identifier.
    * @param {String} value - The new file contents.
    * @param {String} filename - The name of the file to create or update.
@@ -156,8 +155,32 @@ var base = {
       var err = new Error('status: ' + status + '; error: ' + error);
       callback(err, false);
     });
+  },
+
+  /**
+   * Modify the contents of a collection
+   * @param {number} id - The collection identifier.
+   * @param {String} queryParams - Any query parameters
+   * @param {String} value - The request body
+   * @param {NodeStyleCallback} callback - Expected result is the new collection
+   *        object.
+   */
+  patchAll: function(id, queryParams, value, callback) {
+    $.ajax({
+      url: this.api_base_url + "/" + id + "/?" + queryParams,
+      type: "patch",
+      contentType: "application/json; charset=utf-8",
+      data: value
+    }).done(function(data, text) {
+      callback(null, data);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
+    });
   }
 };
+
+
 
 module.exports = {
   /**

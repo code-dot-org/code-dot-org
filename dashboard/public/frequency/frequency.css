@@ -1,0 +1,179 @@
+/* 
+ * D3 Stuff
+ */
+
+#d3chart {
+  width: 100%;
+  height: 445px;
+}
+
+.axis .graphlabel {
+  text-anchor: end;
+}
+
+/* Legend */
+.legend {
+  text-anchor: end;
+}
+
+/* Bars */
+
+.letter .english, .legend .english {
+  fill: #2f96b4;
+}
+.letter:hover .english {
+  fill: #1f6377;
+}
+.letter .message, .legend .message {
+  fill: #ffa400;
+}
+.letter:hover .message {
+  fill: #b37300;
+}
+
+.letter rect {
+  transition-property: height, y;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+.dragging .letter rect {
+  transition-property: none;
+}
+
+/* Letter Labels */
+
+/* set some reasonable defaults */
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis .message {
+  fill: #ffa400;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+/* hide a few elements that D3 creates that I don't want to see */
+.x.axis path, .x.axis line {
+  display: none;
+}
+
+.axis .dragletter {
+  cursor: move;
+}
+
+.axis .dragletter .dragtarget {
+  fill: #0094ca;
+  stroke: #002F40;
+}
+.axis .dragletter:hover .dragtarget {
+  fill: #002F40;
+}
+.axis .dragletter .substitution {
+  fill: white;
+  font-size: 12px;
+}
+.axis .dragletter line {
+  stroke: #002F40;
+}
+.axis .dragletter:hover line {
+  stroke: #0094ca;
+}
+
+.outline {
+  fill: none;
+  stroke: #2f96b4;
+  stroke-dasharray: 5;
+}
+
+/* Locks */
+
+.axis .dragletter text {
+  text-anchor: middle;
+}
+
+.axis .dragletter .hoverblock {
+  fill: none;
+  pointer-events: all;
+}
+.axis .dragletter text.lockicon {
+  font-size: 16px;
+  font-family: FontAwesome;
+  display: none;
+  cursor: pointer;
+  fill: #999999;
+}
+
+/* show when hovering */
+.axis .dragletter:hover text.lockicon {
+  display: inline-block;
+}
+
+/* hide when dragging */
+.dragging .axis .dragletter text.lockicon {
+  display: none;
+}
+
+/* 
+ * Global Stuff
+ */
+
+.btn-group .btn {
+  margin-right: 0;
+}
+
+#top-buttons {
+  margin-bottom: 10px;
+}
+
+.text-container {
+  font-family: monospace;
+  font-size: 12px;
+  width: 100%;
+  height: 477px;
+  background-color: #fff2d9
+}
+
+.text-container#output {
+  border: 1px solid #ccc;
+  overflow: auto;
+  white-space: normal;
+  word-wrap: normal;
+  background-color: #d9eff7;
+}
+.text-container#output span {
+  color: rgb(85, 85, 85);
+}
+.text-container#output span.unlocked {
+  background-color: #ffe0a6;
+}
+
+.nav-tabs {
+  background-color: #59b9dc;
+  padding: 5px;
+  padding-bottom: 0;
+  border-bottom: 0;
+  margin-bottom: 0;
+  border-radius: 4px 4px 0 0;
+}
+
+.tab-content {
+  border: 5px solid #59b9dc;
+  border-top: 0;
+  padding: 10px 10px 5px 15px;
+  border-radius: 0 0 4px 4px;
+}
+
+.nav-tabs > li > a {
+  color: white;
+}
+.nav-tabs > li > a:hover {
+  color: #555555;
+}

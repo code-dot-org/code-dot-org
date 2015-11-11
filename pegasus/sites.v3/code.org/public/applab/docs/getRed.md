@@ -37,7 +37,8 @@ ____________________________________________________
 
 **Print the red value of a single pixel**
 
-<pre>
+
+```
 //Setup the canvas, draw a red rectangle, and capture the image data of the whole canvas
 createCanvas('canvas1', 320, 480); //Make a canvas element with the name 'canvas1' and size 320x480 pixels
 setFillColor('red'); //Set the fill color of future drawn shapes
@@ -49,7 +50,7 @@ var redValue = getRed(imageData, 50, 50);
 
 //Print redValue to the debugging console. We will see 255 in the console.
 console.log(redValue);
-</pre>
+```
 
 [/example]
 
@@ -59,7 +60,8 @@ ____________________________________________________
 
 **Change the red value of a single pixel to zero**
 
-<pre>
+
+```
 //Setup the canvas, draw a red rectangle, and capture the image data of the whole canvas
 createCanvas('canvas1', 320, 480);
 setFillColor('red');
@@ -75,7 +77,7 @@ putImageData(imageData, 0, 0); //Update the canvas with modified image data star
 
 //Print red value at x:50 y:50 from imageData to the console again. We will see 0 in the console.
 console.log(getRed(imageData, 50, 50));
-</pre>
+```
 
 [/example]
 
@@ -85,7 +87,8 @@ ____________________________________________________
 
 **Change the red value of a single pixel to half of its current value**
 
-<pre>
+
+```
 //Setup the canvas, draw a red rectangle, and capture the image data of the whole canvas
 createCanvas('canvas1', 320, 480);
 setFillColor('red');
@@ -98,7 +101,7 @@ var newRed = (getRed(imageData, 50, 50) / 2);
 //First modify the red value at x:50 y:50 in the image data using 'newRed' then update the canvas
 setRed(imageData, 50, 50, newRed);
 putImageData(imageData, 0, 0);
-</pre>
+```
 
 [/example]
 
@@ -110,7 +113,8 @@ ____________________________________________________
 
 In this more detailed example, we move through each pixel of the canvas and halve the red value in each. To do this, the function `halveRed(imageData)` is defined and called after a canvas element has been created with a rectangle drawn and image data captured.
 
-<pre>
+
+```
 //Define the halveRed function (which accepts image data to work on as variable 'thisImageData')
 function halveRed(thisImageData){
     for(var y=0; y < thisImageData.height; y++) { //Loop over each pixel in y axis
@@ -130,7 +134,7 @@ var imageData = getImageData(0, 0, 320, 480);
 
 //Then we will call our function to halve the red values from the canvas one pixel at a time
 halveRed(imageData);
-</pre>
+```
 
 [/example]
 
@@ -139,9 +143,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 getRed(imageData, x, y);
-</pre>
+```
 
 [/syntax]
 

@@ -1,37 +1,52 @@
 * * *
 
-de la: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subiect: Vă mulţumim pentru înscrierea ca organizator al unui eveniment Hour of Code litmus_tracking_id: "5g5lyi1a"
+de la: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subiect: Vă mulţumim pentru înscrierea dvs. ca organizator al unui eveniment Hour of Code litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
+# Vă mulţumim ca v-ați înscris pentru organizarea unui eveniment Hour of Code!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
+Faceti posibila pentru elevii din toata lumea participarea la o Ora de Programare in perioada 7-13 decembrie ce le poate schimba restul vietii.
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+*Fiecare*organizator Hour of Code din toata lumea va primi un card cadou pentru Amazon, iTunes sau Windows Store ca un cadou de multumire.[Detalii](https://<%= hostname %>/premii).
+
+#### Va vom tine la curent in legatura cu noile tutoriale si alte noutati. Ce puteti face acum?
 
 ## 1. Răspândește vestea
 
-Spune prietenilor tai despre #HourOfCode.
+Avem nevoie de ajutorul tau pentru a ajunge la 100.000 de organizatori din toata lumea. Spune-le prietenilor tai despre #HourOfCode. [Utilizeaza aceste resurse](https://<%= hostname %>/promote/resources) pentru a-ti promova evenimentul.
 
-## 2. Solicită întregii şcoli sa susțină o Oră de Programare
+<% if international == 'true' %>
 
-[Send this email](http://<%= hostname %>/resources#email) to your principal.
+## 2. Solicită întregii şcoli sa ofere o Oră de Programare
+
+[Trimite acest e-mail](https://<%= hostname %>/promote/resources#sample-emails)directorului scolii sau[imparte aceste materiale imprimate](https://<%= hostname %>/promote/resources). <% else %>
+
+## 2. Recruteaza-ti intreaga scoala pentru evenimentul Hour of Code cu scopul de a va califica in cursa pentru 10.000 de dolari
+
+[Trimite acest e-mail](https://<%= hostname %>/promote/resources#sample-emails)directorului scolii sau[imparte aceste materiale imprimate](https://<%= hostname %>/promote/resources). Planuieste pentru fiecare elev al scolii tale sa participe si puteti castiga echipamente tehnologice in valoare de 10.000 de dolari pentru scoala ta. [Completeaza acest formular pentru a te inscrie](https://<%= hostname %>/prizes/hardware-signup). <% end %>
 
 ## 3. Solicită angajatorului tău să se implice
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Trimite acest e-mail](https://<%= hostname %>/promote/resources#sample-emails) manager-ului sau CEO-ului.
 
-## 4. Promote the Hour of Code in your community
+## 4. Promoveaza Hour of Code în comunitatea ta
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
+Recrutati un grup local sau chiar prietenii. [Trimiteti acest e-mail](https://<%= hostname %>/resources#sample-emails).
 
-## 5. Solicită unui oficial, ales local, sprijinul pentru organizarea Hour of Code
+## 5. Solicită unui oficial ales local sprijinul pentru organizarea Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Trimiteti acest e-mail](https://<%= hostname %>/resources#politicians) primarului, consiliului local sau inspectorilor si invita-i sa va viziteze scoala.
+
+Va multumim deoarece conduceti aceasta miscare si daruiti fiecarui elev sansa sa invete competente fundamentale in tehnologia computerelor si programare.
+
+Hadi Partovi  
+Fondator, Code.org
 
 * * *
 
-Code.org e o organizatie non-profit. Adresa noastra este Strada 1301 5th Ave, Apartamentul 1225, Seattle, WA, 98101. Nu iti plac aceste e-mailuri? [Unsubscribe](%= unsubscribe_link %).
+<small> Primiti acest e-mail pentru ca sunteti abonat la Hour of Code, sustinut de peste 200 de parteneri si organizat de Code.org. Code.org este o organizatie non-profit. Adresa noastra este Strada 5th numarul 1301, apartamentul 1225, Seattle, WA, 98101. Nu vrei sa primesti aceste e-mail-uri? <a href="%= unsubscribe_link %">Dezabonare</a>. </small>
+
+![](<%= tracking_pixel %>)

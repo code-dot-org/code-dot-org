@@ -217,17 +217,17 @@ sq:
         maze_karel_debug_while: Si mund të ndryshosh këtë program për të më ndihmuar mua të mbush gropën?
         maze_karel_debug_if: Ndihmë! Rregullo programin, që fusha ime të jetë totalisht e sheshtë.
         maze_karel_debug_if_else: Rregullo këtë program në mënyrë që të mbush gropat dhe të heq gjithë grumbujt.
-        maze_karel_debug_function_1: Çfarë duhet të ndryshosh për këtë program që të më ndihmosh mua të heq gjithë grumbujt?
+        maze_karel_debug_function_1: Çfarë duhet të ndryshosh në këtë program që të më ndihmosh të heq gjithë grumbujt?
         maze_karel_debug_function_2: A mund të rregullosh këtë program për mua që ta bëj fushën time të sheshtë?
-        maze_karel_debug_function_3: 'Redakto këtë program që të heq gjithë grumbujt nga fusha. '
-        turtle_5_1: Përpiqu ta ekzekutosh këtë program dhe bëj ndryshime për të parë se çfarë ndodh. A mund ta imagjinosh se si punon? (Ose fshije atë dhe zëvëndësoje atë me diçka komplet ndryshe)
+        maze_karel_debug_function_3: 'Modifiko këtë program që të heq gjithë grumbujt nga fusha. '
+        turtle_5_1: Provo ta ekzekutosh këtë program dhe bëj ndryshime për të parë se çfarë ndodh. A mund ta kuptosh se si punon? (Ose fshije atë dhe zëvëndësoje me diçka komplet ndryshe)
         turtle_5_2: Përpiqu ta ekzekutosh këtë program dhe bëj ndryshime për të parë se çfarë ndodh. A mund ta imagjinosh se si punon? (Ose fshije atë dhe zëvëndësoje atë me diçka komplet ndryshe)
         turtle_5_3: Përpiqu ta ekzekutosh këtë program dhe bëj ndryshime për të parë se çfarë ndodh. A mund ta imagjinosh se si punon? (Ose fshije atë dhe zëvëndësoje atë me diçka komplet ndryshe)
         turtle_5_4: Përpiqu ta ekzekutosh këtë program dhe bëj ndryshime për të parë se çfarë ndodh. A mund ta imagjinosh se si punon? (Ose fshije atë dhe zëvëndësoje atë me diçka komplet ndryshe)
         turtle_5_5: Përpiqu ta ekzekutosh këtë program dhe bëj ndryshime për të parë se çfarë ndodh. A mund ta imagjinosh se si punon? (Ose fshije atë dhe zëvëndësoje atë me diçka komplet ndryshe)
         turtle_5_6: Përpiqu ta ekzekutosh këtë program dhe bëj ndryshime për të parë se çfarë ndodh. A mund ta imagjinosh se si punon? (Ose fshije atë dhe zëvëndësoje atë me diçka komplet ndryshe)
         maze_3_1: Unë kam nevojë të arrij tek ai derrkuc! Shkruaj disa thirrje për të lëvizur(); që unë të marr mbrapsht vezët e mia.
-        maze_3_2: Më shkruaj një program që unë të shkoj tek ai derrkuc me çdo kusht.
+        maze_3_2: Më shkruaj një program që unë të shkoj tek ai derrkuc.
         maze_3_3: Si të shkoj te derrkuci? Sigurohu që unë nuk vrapoj brenda kutisë së TNT!
         maze_3_4: Argh! Më shkruaj një program që më nxjerr nga TNT dhe më çon drejt derrkucit.
         bounce_1: 'Bashkangjit një bllok me bllokun "when left arrow" dhe shtyp "Run". Lëviz lopatën duke përodrur shigjetën e majtë për të arritur në objektivin e fundit.'
@@ -237,7 +237,7 @@ sq:
         bounce_5: 'Ne jemi duke dërguar një top fluturues poshtë drejt lopatës. Bashkangjit një bllok tek blloku "when ball hits paddle" për tu siguruar që topi arrin objektivin final.'
         bounce_6: 'Tani, objektivi final është në majë.Ti duhe të bashkangjitësh blloqe tek të dy blloqet "when ball hits" për të zgjidhur këtë puzzle.'
         bounce_7: 'Bashkangjit blloqe tek çdo bllok "when". Hidh topin derisa të godasë objektivin final.'
-        bounce_10: 'Tani është një objektiv në majë. Bashkangjit blloqet "score point" dhe "score opponent point" tek blloqet "when ball in goal" dhe "when ball misses paddle" për të bërë një lojë. Shih se sa shumë pikë mund të realizosh përpara se kundërshtari yt të shënojë dy herë.'
+        bounce_10: 'Tani është kemi një objektiv. Bashkangjit blloqet "shëno pikë" dhe "shëno pikë kundërshtari" tek blloqet "kur topi është brenda" dhe "kur topi nuk futet në rrjetë" për të bërë një lojë. Shih se sa shumë pikë mund të realizosh përpara se kundërshtari yt të shënojë dy herë.'
         bounce_11: 'Ti, tani, mund të bashkangjitësh blloqe tek blloku "when run". Ti duhet të bashkangjitësh bllokun e ri "launch new ball" në më shumë se një vend. Gjithashtu, përpiqu të ndryshosh vendngjarjen ose shpejtësinë e lopatës dhe topit dhe shiko se sa shumë pikë mund të shënosh përpara se kundërshtari jot të shënojë dy herë.'
         bounce_12: Krijo lojën tënde Bounce. Ti mund të ndryshosh të gjithë pamjet dhe rregullat. Kur të mbarosh, kliko Përfundova për të lejuar shokët të provojnë lojën tënde në telefonat e tyre.
         Custom_builder: 'Lëviz blloqet nga toolboxi tek vendi i punës për të vizatuar nivelin që dëshiron të krijosh. Shtyp "Run" kur të jesh gati.'
@@ -248,7 +248,7 @@ sq:
         flappy_4: |-
           Flappy do të fluturojë nëpër pengesa, vetëm nëse ti shkruan në kod që ta përplasësh atë. Bashko një bllok me bllokun "when hit an obstacle". Kodi jot duhet të 'PËRFUNDOJE LOJËN' kur Flappy rrëzohet në grupin e parë të tubave.
         flappy_5: 'Le të shtojmë një tabelë pikësh dhe të numërojmë pikët kur Flappy i kalon pengesat. Shtoje tek blloku "when pass an obstacle" dhe pastaj shëno një pikë duke bërë Flappyn të fluturojë nëpër grupin e parë të tubave.'
-        flappy_6: Shih nëse ti mund të shënosh ende një pikë pasi ke bërë Flappyn të fluturojë edhe në sasi të vogla edhe të mëdha.
+        flappy_6: Shiko nëse mund të shënosh një pikë edhe pasi ke bërë Flappyn të fluturojë si në sasi të vogël ashtu edhe në të madhe.
         flappy_7: 'Më pas, përpiqu të ndryshosh pamjen duke bashkuar një bllok tjetër me bllokun "when run".'
         flappy_8: Ti mund të vendosësh pamje në çdo kohë, jo vetëm kur fillon loja. Provo vendosjen e një pamjeje të RASTËSISHME kur ndodhin evente të tjera, për shembull, kur je duke kaluar një pengesë.
         flappy_9: Për ti përzierë gjërat, kur je duke gjuajtur një pengesë, në vend të mbaroni lojën provoni të vendosni pikët përsëri 0.
@@ -306,13 +306,14 @@ sq:
         studio_c3_game_5: A mund të shtoni një bllok për të shënuar një pikë kur pinguini përplaset me oktapodin dhe më pas lëvize atë me shigjetat derisa të shënojë?
         studio_c3_game_6: A mund të shtoni blloqe për të ndryshuar sfondin dhe shpejtësinë e pinguinit dhe më pas lëvize atë me shigjetat derisa të shënosh?
         studio_c3_game_7: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që të lejosh shokët e tu ta provojnë atë në telefonat e tyre.
-        studio_playlab_1: 'Pinguini dëshiron të thotë "përshëndetje" - mund ta ndihmoni atë?'
+        studio_playlab_1: |-
+          Pinguini dëshiron të thotë "përshëndetje" - mund t'a ndihmoni atë?
         studio_playlab_2: 'Djali i Shpellës (pjesëmarrësi 1) dhe Vajza Shpellës (pjesëmarrësi 2) dëshirojnë ti thonë "përshëndetje" njëri tjetrit. A mund ti ndihmoni ata duke përdorur bllokun "say" dy herë?'
         studio_playlab_3: A mund ta ndihmosh Vajzën Teniste të arrijë tek flamuri?
         studio_playlab_4: A mund ta ndihmosh Djalin Tenist (pjesëmarrësi 1) të shkojë tek Vajaz Teniste (pjesëmarrësja 2) dhe të vendosësh një tingull kur ai arrin atje?
         studio_playlab_5: 'A mund ta ndihmosh Alienin të thotë "përshëndetje tokësorë" kur klikohet? Mos harro ta klikosh atë pasi ke klikuar Run'
         studio_playlab_6: A mund ta ndihmosh Magjistaren të lëvizë rreth e rrotull duke përdorur tastat lart/poshtë/djathtas/majtas të marrë të gjithë topat e zjarrtë magjikë?
-        studio_playlab_7: 'Blloku "repeat forever" të lejon ty të ekzekutosh kodin në mënyrë të vazhdueshme. A mund të bashkoni blloqe tek ai bllok, për të ndihmuar magjistaren të lëvizë djathas dhe majtas në mënyrë të vazhdueshme?'
+        studio_playlab_7: 'Blloku "përsërit përgjithmonë" të lejon të ekzekutosh kodin në mënyrë të vazhdueshme. A mund të shtoni blloqe tek ai bllok për të ndihmuar magjistaren të lëvizë djathas dhe majtas në mënyrë të vazhdueshme?'
         studio_playlab_8: A mund të shtosh një bllok për të shënar një pikë dhe një bllok për të luajtur një tingull kur njëbrirëshi has magjistaren, dhe më pas ta lëvizësh atë me shigjeta derisa të shënosh pikë?
         studio_playlab_9: Vendos sfondin për këtë invasion alienësh dhe ndihmo Anijen kozmike të shkojë tek alieni më shpejt duke ndryshuar shpejtësinë e tij. Më pas lëvize atë me shigjeta të arrijë tek Anija kozmike dhe të lajmërojë gjithë të tjerët
         studio_playlab_10: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që të lejosh shokët e tu ta provojnë atë në telefonat e tyre.
@@ -416,11 +417,13 @@ sq:
         C3_functional_suncatchers: Suncatchers Funksionalë
         C3_songwriting_with_parameters: Të shkruarit këngë me Parametra
         C4_intro: Hyrja
-        C4_loops_zombie: perseritje
+        C4_loops_zombie: përsëritje
         C4_bee_conditional: Kushtet e Bletëve
         C4_variables_artist: 'Variablat - Artist'
         C4_variables_playlab: 'Variablat - Play Lab'
         C4_for_loops: Për Ciklet
+        C4_for_loops_bee: Ciklet For
+        C4_for_loops_no_bee: Ciklet For
         C4_math_artist: Të programosh Artistin me Matematikën
         C4_function_edit: Redaktimi i Funksioneve
         C4_function_create: Krijimi i Funksioneve
@@ -442,13 +445,15 @@ sq:
         infinity_playlab_intro: 'Hyrja- Laboratori i Lojrave'
         infinity_playlab_events: 'Eventet- Laboratori i Lojrave'
         infinity_playlab_repeat_forever: 'Përsërit përgjithmonë- Laboratorti i Lojrave'
-        csp_concept_rgb: A Little Bit About Pixels
+        csp_applab_functions: Hyrja në Funksione
+        csp_concept_rgb: Disa të dhëna rreth Piksel-ave
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
         csp_pixelation_color_3: 'Color pixelation widget - Part 3'
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
         csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'
@@ -469,6 +474,9 @@ sq:
         alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
         alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
         alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: 'Lëviz një bllok "move" dhe vendose atë poshtë blloku tjetër'
@@ -508,12 +516,12 @@ sq:
         frozen_circle_function_with_parameter_circle: 'Përdor bllokun "create a circle" dhe ndrysho madhësinë.'
         frozen_snowflake_branch: 'Përdor bllokun "create a snowflake"'
         frozen_create_square: Bashko më shumë blloqe këtu për të krijuar një katror
-        playlab_drag_say: 'Zhvendos bllokun "say" këtu dhe shtyp "hello"'
+        playlab_drag_say: 'Zhvendos bllokun "thuaj" këtu dhe shtyp "çkemi"'
         playlab_use_twice: Përdor këtë bllok dy herë dhe kujtohu të ndryshosh numrin e pjesmarrësit
         playlab_move_girl: 'Përdor bllokun "move right" të lëvizësh Vajzën Teniste'
         playlab_play_sound: 'Shto bllokun "play sound" këtu'
         playlab_arrow_keys: Kujtohu që ti përdorësh këto për të lëvizur magjistaren pasi ke klikuar Run
-        playlab_add_move: 'Shto blloqet "move" brënda këtij blloku repeat'
+        playlab_add_move: 'Shto blloqet "lëviz" brenda këtij blloku "përsërit"'
         playlab_add_score: Shto blloqe pikësh këtu
         playlab_add_blocks: Shto blloqet e tua këtu
         set_variable: Zhvendos një bllok numri këtu që të vendosësh ndryshoret e tua

@@ -21,7 +21,12 @@ module Rack
           skip_if: lambda(&method(:not_ssl?)),
           xpath: %w(img script embed iframe).map{|x|"//#{x}[@src[starts-with(.,'http://')]]"}.join(' | ')
       ) do |nodes|
-        nodes.each{|node|process(node)}
+        nodes.each do |node|
+          # Output the urls we're rewriting so we can update them to https
+          # in our codebase.
+          puts "REWRITING: #{node}"
+          process(node)
+        end
       end
     end
 
@@ -31,9 +36,11 @@ module Rack
         # See 'recommendations' and 'reporting upgrades':
         # http://www.w3.org/TR/upgrade-insecure-requests/#recommendations
         # http://www.w3.org/TR/upgrade-insecure-requests/#reporting-upgrades
+
+        policies = []
         if ssl?(env)
           # headers['Content-Security-Policy'] = 'upgrade-insecure-requests'
-          headers['Content-Security-Policy'] = [
+          policies += [
               "default-src 'self' https:",
               "script-src 'self' https: 'unsafe-inline' 'unsafe-eval'",
               "style-src 'self' https: 'unsafe-inline'",
@@ -41,7 +48,26 @@ module Rack
               "font-src 'self' https: data:",
               "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com",
               "report-uri #{CDO.code_org_url('https/mixed-content')}"
-          ].join('; ')
+          ]
+        end
+
+        # If the CDO.allowed_iframe_ancestors configuration variable is
+        # defined, override the default SAMEORIGIN policy to allow the
+        # specified source list (as described in
+        # http://w3c.github.io/webappsec-csp/#source-lists) to frame our
+        # content.
+        if CDO.allowed_iframe_ancestors
+          policies << "frame-ancestors 'self' #{CDO.allowed_iframe_ancestors}"
+
+          # Clear the older X-Frame-Options header because it doesn't support
+          # multiple domains. We need to clear this because on Chrome,
+          # contrary to the spec, on Chrome the X-Frame-Options header takes
+          # priority over Content-Security-Policy.)
+          headers['X-Frame-Options'] = ''
+        end
+
+        unless policies.empty?
+          headers['Content-Security-Policy'] = policies.join('; ')
         end
       end
     end

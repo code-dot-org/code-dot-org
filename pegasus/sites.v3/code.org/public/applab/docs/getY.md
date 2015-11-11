@@ -33,10 +33,11 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 var yLocation = getY(); //Get y coordinate of the turtle and store it in variable 'yLocation'
 console.log(yLocation); //Print value of the variable to the debugging console
-</pre>
+```
 
 [/example]
 
@@ -44,11 +45,12 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 var newX = getX() * 0.75; // Move a bit closer to the top left
 var newY = getY() * 0.75;
 moveTo(newX, newY);
-</pre>
+```
 
 [/example]
 
@@ -56,7 +58,8 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // Keep getting closer to the top left
 for (var i = 0; i < 6; i++) {
   dot(5);                       // Draw a dot where we are
@@ -64,7 +67,7 @@ for (var i = 0; i < 6; i++) {
   var newY = getY() * 0.75;
   moveTo(newX, newY);
 }
-</pre>
+```
 
 [/example]
 
@@ -73,7 +76,8 @@ ____________________________________________________
 [example]
 
 **Bounce the Turtle** Have the turtle keep moving, but bounce off trhe walls so it stays on the screen.
-<pre>
+
+```
 var speedX = 10;    // Start moving down and to the right
 var speedY = 10;
 while (true) {                  // Don't stop. Ever!
@@ -95,7 +99,7 @@ while (true) {                  // Don't stop. Ever!
   }
   moveTo(newX, newY);           // Actually move the turtle
 }
-</pre>
+```
 
 [/example]
 
@@ -104,9 +108,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 getY();
-</pre>
+```
 
 [/syntax]
 

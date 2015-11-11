@@ -415,6 +415,8 @@ pl:
         C4_variables_artist: 'Zmienne - Artysta'
         C4_variables_playlab: 'Zmienne - Play Lab'
         C4_for_loops: Pętle dla (for)
+        C4_for_loops_bee: 'Pętle "dla" (for)'
+        C4_for_loops_no_bee: 'Pętle "dla" (for)'
         C4_math_artist: Programowanie Artysty z pomocą matematyki
         C4_function_edit: Edytowanie Funkcji
         C4_function_create: Tworzenie Funkcji
@@ -436,6 +438,7 @@ pl:
         infinity_playlab_intro: 'Play Lab - Wprowadzenie'
         infinity_playlab_events: 'Play Lab - Zdarzenia'
         infinity_playlab_repeat_forever: 'Play Lab - Powtarzaj w nieskończoność'
+        csp_applab_functions: Wprowadzenie do Funkcji
         csp_concept_rgb: Trochę o pikselach
         csp_pixelation_color_1: 'Pokoloruj pikselowy gadżet - część 1'
         csp_pixelation_color_2: 'Pokoloruj pikselowy gadżet - część 2'
@@ -443,6 +446,7 @@ pl:
         csp_pixelation_bw: Czarno-biały pikselowy gadżet
         csp_U1L14_tipstricks: 'Jednostka 1 lekcja 14 Porady & Sztuczki Nauczycieli'
         csp_textcompression: Gadżet do kompresji tekstu
+        csp_textcompression_new: Gadżet do kompresji tekstu
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'
@@ -463,6 +467,9 @@ pl:
         alg_15_biggame_update_player: 'Informatyka w Algebrze - uaktualniony gracz Wielkiej Gry (Big Game)'
         alg_16_biggame_collision_detection: 'Informatyka w Algebrze - wykrywanie kolizji w Wielkiej Grze (Big Game)'
         alg_17_sambat_compound_booleans: 'Informatyka w Algebrze - złożone wartości logiczne'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: 'Przeciągnij blok "idź" i przypnij go poniżej innego bloku'

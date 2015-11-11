@@ -14,9 +14,7 @@
  * limitations under the License.
  */
 
- /* global $*/
-
-'use strict';
+ 'use strict';
 
 var Calc = module.exports;
 
@@ -241,7 +239,7 @@ function getCalcExampleFailure(exampleBlock, evaluateInPlayspace) {
     var expectedEquation = EquationSet.getEquationFromBlock(expectedBlock);
     var expected = entireSet.evaluateWithExpression(expectedEquation.expression);
 
-    var areEqual = expected.result.equals(actual.result);
+    var areEqual = jsnums.equals(expected.result, actual.result);
 
     if (evaluateInPlayspace) {
       var tokenList = constructTokenList(expectedEquation, null);

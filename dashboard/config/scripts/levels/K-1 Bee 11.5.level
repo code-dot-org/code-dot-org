@@ -7,7 +7,7 @@
   "properties": {
     "skin": "bee",
     "instructions": "Get four nectar to make four honey!",
-    "step_mode": "0",
+    "step_mode": 1,
     "is_k1": "true",
     "start_direction": "2",
     "nectar_goal": "4",

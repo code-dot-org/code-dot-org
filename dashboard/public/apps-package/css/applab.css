@@ -1,5 +1,4 @@
-@import url(colpick.css);
-#divApplab, .draggingParent {
+#divApplab, #designModeViz, .draggingParent {
   overflow: hidden;
   outline: none;
   position: relative;
@@ -11,51 +10,63 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  #divApplab canvas, .draggingParent canvas {
+  #divApplab canvas, #designModeViz canvas, .draggingParent canvas {
     position: absolute;
     overflow: hidden;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: -1; }
-  #divApplab img, .draggingParent img {
-    opacity: 1.0; }
-  #divApplab label, .draggingParent label {
+  #divApplab img, #designModeViz img, .draggingParent img {
+    opacity: 1.0;
+    max-width: none; }
+  #divApplab label, #designModeViz label, .draggingParent label {
     display: inline-block; }
-  #divApplab div, .draggingParent div {
+  #divApplab div, #designModeViz div, .draggingParent div {
     overflow: hidden; }
-  #divApplab button, .draggingParent button {
+  #divApplab div[contenteditable=true], #designModeViz div[contenteditable=true], .draggingParent div[contenteditable=true] {
+    overflow: auto; }
+  #divApplab button, #designModeViz button, .draggingParent button {
     padding: 7px 12px;
     margin: 2px;
     font-size: 14px; }
-  #divApplab input, #divApplab div[contenteditable=true], #divApplab button, #divApplab select, #divApplab img, #divApplab label, .draggingParent input, .draggingParent div[contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent img, .draggingParent label {
+  #divApplab input, #divApplab div[contenteditable=true], #divApplab button, #divApplab select, #divApplab img, #divApplab label, #designModeViz input, #designModeViz div[contenteditable=true], #designModeViz button, #designModeViz select, #designModeViz img, #designModeViz label, .draggingParent input, .draggingParent div[contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent img, .draggingParent label {
     box-sizing: border-box;
     line-height: 1.2em;
     margin: 5px; }
-  #divApplab .design-mode-hidden, .draggingParent .design-mode-hidden {
+  #divApplab .chart, #designModeViz .chart, .draggingParent .chart {
+    position: absolute;
+    display: block;
+    overflow: hidden; }
+    #divApplab .chart .loading, #designModeViz .chart .loading, .draggingParent .chart .loading {
+      background: image-url("spinner-big.gif") no-repeat center center; }
+  #divApplab .design-mode-hidden, #designModeViz .design-mode-hidden, .draggingParent .design-mode-hidden {
     visibility: hidden; }
 
-#divApplab.divApplabDesignMode canvas, .draggingParent canvas {
+#designModeViz canvas, .draggingParent canvas {
   background-color: #eee; }
 
-#divApplab.divApplabDesignMode .design-mode-hidden, .draggingParent .design-mode-hidden {
+#designModeViz .chart, .draggingParent .chart {
+  background-color: #eee; }
+
+#designModeViz .design-mode-hidden, .draggingParent .design-mode-hidden {
   visibility: visible;
   opacity: 0.3; }
 
-#divApplab.appModern, .draggingParent {
+#divApplab.appModern, #designModeViz.appModern, .draggingParent {
   color: #333; }
-  #divApplab.appModern button, .draggingParent button {
+  #divApplab.appModern button, #designModeViz.appModern button, .draggingParent button {
     border: 0;
     border-radius: 0; }
-    #divApplab.appModern button:hover, .draggingParent button:hover {
+    #divApplab.appModern button:hover, #designModeViz.appModern button:hover, .draggingParent button:hover {
       background-image: url("/blockly/media/applab/brighter.png");
       box-shadow: none; }
-    #divApplab.appModern button:active, .draggingParent button:active {
+    #divApplab.appModern button:active, #designModeViz.appModern button:active, .draggingParent button:active {
       background-image: url("/blockly/media/applab/darker.png");
       border: 0 !important; }
-  #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div[contenteditable=true], .draggingParent input[type=text], .draggingParent input:not([type]), .draggingParent div[contenteditable=true] {
+  #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div[contenteditable=true], #designModeViz.appModern input[type=text], #designModeViz.appModern input:not([type]), #designModeViz.appModern div[contenteditable=true], .draggingParent input[type=text], .draggingParent input:not([type]), .draggingParent div[contenteditable=true] {
     border: 1px solid #999;
     padding: 10px; }
-  #divApplab.appModern select, .draggingParent select {
+  #divApplab.appModern select, #designModeViz.appModern select, .draggingParent select {
     -webkit-appearance: none;
     -moz-appearance: none;
     border: 0;
@@ -63,23 +74,31 @@
     padding: 0 30px 0 10px;
     color: #fff;
     background: url("/blockly/media/applab/dropdown.png") no-repeat center right; }
-    #divApplab.appModern select::-ms-expand, .draggingParent select::-ms-expand {
+    #divApplab.appModern select::-ms-expand, #designModeViz.appModern select::-ms-expand, .draggingParent select::-ms-expand {
       display: none; }
-    #divApplab.appModern select:hover, .draggingParent select:hover {
+    #divApplab.appModern select:hover, #designModeViz.appModern select:hover, .draggingParent select:hover {
       background: url("/blockly/media/applab/dropdown.png") no-repeat center right, url("/blockly/media/applab/brighter.png"); }
-  #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern [contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent [contenteditable=true] {
+  #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern [contenteditable=true], #designModeViz.appModern button, #designModeViz.appModern select, #designModeViz.appModern input, #designModeViz.appModern [contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent [contenteditable=true] {
+    outline: 0; }
+  #divApplab.appModern img[src=''], #designModeViz.appModern img[src=''], .draggingParent img[src=''] {
+    display: none; }
+  #divApplab.appModern .screen, #designModeViz.appModern .screen, .draggingParent .screen {
     outline: 0; }
 
-#divApplab.appModern.divApplabDesignMode img[src=''], #divApplab.appModern.divApplabDesignMode canvas, .draggingParent img[src=''], .draggingParent canvas {
+#designModeViz.appModern img[src=''], #designModeViz.appModern canvas, #designModeViz.appModern .chart, .draggingParent img[src=''], .draggingParent canvas, .draggingParent .chart {
   border: 5px solid #fff;
   outline: 1px solid #bdc3c7;
   outline-offset: -1px; }
 
-#divApplab.appModern.divApplabDesignMode img[src=''], .draggingParent img[src=''] {
+#designModeViz.appModern img[src=''], .draggingParent img[src=''] {
+  display: block;
   background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat; }
 
-#divApplab.appModern.divApplabDesignMode canvas, .draggingParent canvas {
+#designModeViz.appModern canvas, .draggingParent canvas {
   background: #bdc3c7 url("/blockly/media/applab/placeholder_canvas.png") center center no-repeat; }
+
+#designModeViz.appModern .chart, .draggingParent .chart {
+  background: #bdc3c7 url("/blockly/media/applab/placeholder_chart.png") center center no-repeat; }
 
 div#visualization {
   height: 400px;
@@ -103,6 +122,8 @@ div#visualizationResizeBar {
     max-width: 400px; }
   div#visualizationColumn.responsive.with_padding {
     max-width: 402px; }
+  .small-footer-base.responsive {
+    max-width: 400px; }
   div#codeWorkspace {
     left: 400px; }
   html[dir='rtl'] div#codeWorkspace {
@@ -125,6 +146,8 @@ div#visualizationResizeBar {
     max-width: 350px; }
   div#visualizationColumn.responsive.with_padding {
     max-width: 352px; }
+  .small-footer-base.responsive {
+    max-width: 350px; }
   div#codeWorkspace {
     left: 350px; }
   html[dir='rtl'] div#codeWorkspace {
@@ -147,6 +170,8 @@ div#visualizationResizeBar {
     max-width: 300px; }
   div#visualizationColumn.responsive.with_padding {
     max-width: 302px; }
+  .small-footer-base.responsive {
+    max-width: 300px; }
   div#codeWorkspace {
     left: 300px; }
   html[dir='rtl'] div#codeWorkspace {
@@ -169,6 +194,8 @@ div#visualizationResizeBar {
     max-width: 250px; }
   div#visualizationColumn.responsive.with_padding {
     max-width: 252px; }
+  .small-footer-base.responsive {
+    max-width: 250px; }
   div#codeWorkspace {
     left: 250px; }
   html[dir='rtl'] div#codeWorkspace {
@@ -191,6 +218,8 @@ div#visualizationResizeBar {
     max-width: 200px; }
   div#visualizationColumn.responsive.with_padding {
     max-width: 202px; }
+  .small-footer-base.responsive {
+    max-width: 200px; }
   div#codeWorkspace {
     left: 200px; }
   html[dir='rtl'] div#codeWorkspace {
@@ -205,7 +234,24 @@ div#visualizationResizeBar {
     -ms-transform: scale(0.5);
     transform: scale(0.5); } }
 
-#divApplab {
+#visualizationColumn.wireframeShare {
+  background: url("/blockly/media/applab/phone_wireframe.png") center center no-repeat;
+  max-width: none !important;
+  width: 352px;
+  height: 612px;
+  margin: 0 auto;
+  padding: 20px 0; }
+  #visualizationColumn.wireframeShare #designToggleRow, #visualizationColumn.wireframeShare #gameButtons {
+    display: none; }
+  #visualizationColumn.wireframeShare #visualization {
+    top: 68px;
+    left: 16px;
+    border: 0; }
+
+#visualizationColumn.chromelessShare #designToggleRow, #visualizationColumn.chromelessShare #gameButtons {
+  display: none; }
+
+#divApplab, #designModeViz {
   overflow: hidden;
   outline: none;
   position: relative;
@@ -218,7 +264,7 @@ div#visualizationResizeBar {
   -ms-user-select: none;
   user-select: none; }
 
-#divApplab canvas {
+#divApplab canvas, #designModeViz canvas {
   position: absolute;
   overflow: hidden;
   top: 0px;
@@ -276,10 +322,13 @@ img#turtleImage {
 #debug-area {
   position: absolute;
   bottom: 0;
-  height: 156px;
+  height: 120px;
   left: 0;
   right: 0;
   max-height: calc(50% - 16px) !important; }
+
+#codeTextbox.pin_bottom {
+  bottom: 120px; }
 
 #debug-area-header {
   position: absolute;
@@ -304,6 +353,16 @@ img#turtleImage {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+  #debug-area-header #show-hide-debug-icon {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    margin: 0;
+    line-height: 30px;
+    font-size: 18px; }
+    #debug-area-header #show-hide-debug-icon:hover {
+      cursor: pointer;
+      color: white; }
 
 #debug-commands-header {
   width: 270px;
@@ -311,16 +370,6 @@ img#turtleImage {
   border-right: 1px solid gray; }
   #debug-commands-header .fa {
     margin: 0 0.25em; }
-  #debug-commands-header #show-hide-debug-icon {
-    position: absolute;
-    top: 0;
-    left: 8px;
-    margin: 0;
-    line-height: 30px; }
-  #debug-commands-header.js-hover-hack {
-    cursor: pointer; }
-    #debug-commands-header.js-hover-hack #show-hide-debug-icon {
-      color: white; }
 
 .debug-commands, .debug-console {
   display: block;
@@ -338,6 +387,8 @@ img#turtleImage {
 .debug-console {
   left: 270px;
   right: 0; }
+  .debug-console.full {
+    left: 0; }
 
 .debug-console * {
   font-family: monospace;
@@ -459,53 +510,21 @@ img#turtleImage {
   background-position: 0px 21px;
   margin-right: 3px; }
 
-button.arrow {
-  border: 1px solid #FFA000;
-  background-color: #FFA000;
-  color: #fff;
-  margin-left: 5px;
-  margin-right: 0px;
-  display: none; }
-
-button.arrow > img {
-  opacity: 1;
-  vertical-align: text-bottom; }
-
-button.arrow:focus {
-  outline-style: none; }
-
-#soft-buttons {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: -5px; }
-  #soft-buttons.soft-buttons-none {
-    display: none; }
-
-.soft-buttons-1 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 51px; }
-
-.soft-buttons-2 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 102px; }
-
-.soft-buttons-3 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 153px; }
-
-.soft-buttons-4 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 204px; }
-
 #share-cell {
   display: inline-block;
   vertical-align: top; }
   #share-cell.share-cell-none {
     display: none; }
+
+#submitButton {
+  border-color: #7665a0;
+  background-color: #7665a0;
+  color: white; }
+
+#unsubmitButton {
+  border-color: #a69bc1;
+  background-color: #a69bc1;
+  color: white; }
 
 #manageAssetsModal {
   width: 800px;
@@ -554,3 +573,13 @@ button.arrow:focus {
 
 .design-element-image {
   width: 72px; }
+
+.rainbow-gradient {
+  background: -webkit-linear-gradient(to bottom right, red, orange, yellow, green, blue);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(to bottom right, red, orange, yellow, green, blue);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(to bottom right, red, orange, yellow, green, blue);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, red, orange, yellow, green, blue);
+  /* Standard syntax */ }

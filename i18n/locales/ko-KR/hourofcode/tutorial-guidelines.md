@@ -1,19 +1,21 @@
 * * *
 
-layout: wide
+title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
+<%= view :signup_button %>
+
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <https://code.org/learn>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 우리는 다양하면서도 매력적인 활동들을 제공하고 싶습니다만, 가장 중요한 목표는 컴퓨터과학(정보과학)을 처음 배우게 되는 학생들과 선생님들의 학습경험과 효과를 최대화 하는 것입니다. 이 문서를 활용하세요. 코딩, 컴퓨터프로그래밍, 컴퓨터과학(정보과학)에 대해 전혀 알지 못하는 사람들을 대상으로하는 여러가지 활동들을 만들어내는 가이드로서 활용하면 됩니다.
 
   
 
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa).**
+**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
 
 **NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
 
@@ -21,21 +23,50 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
 ## 목차:
 
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
-    
-  * [How to submit (Due 10/31/2015)](#submit)  
-    
-  * [Suggestions for designing your activity](#design)  
-    
-  * [Trademark Guidelines](#tm)  
-    
-  * [Tracking Pixel](#pixel)  
-    
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
-    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [최종적으로 완성되어 포함될 튜토리얼은 어떻게 평가 되는가?](#inclusion)
+  * [How to submit (Due 10/15/2015)](#submit)
+  * [활동을 설계하는데 도움이되는 제안사항들](#design)
+  * [트레이드마크(상표) 가이드라인](#tm)
+  * [트랙킹 픽셀(Tracking Pixel)](#pixel)
+  * [자신이 만든 튜토리얼, CSEdWeek, Hour of Code 활성화하기](#promote)
   * [장애를 가진 학생을 위한 참고사항](#disabilities)
+
+<a id="guidelines"></a>
+
+## New for 2015: two formats of activities: self-guided or *lesson-plan*
+
+Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
+
+**Submit a Teacher-Led Lesson Plan, ideally for different subject areas *(NEW)***: Do you have an engaging or unique idea for an Hour of Code lesson? Some educators may prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We would love to collect **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+
+You can start with this [empty template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) for your lesson plan.
+
+Examples:
+
+  * [Mirror Images (an activity for an art teacher)](https://csedweek.org/csteacher/mirrorimages.pdf)
+  * [An arduino activity for a physics teacher](https://csedweek.org/csteacher/arduino.pdf)
+  * [A history of technology activity for a history teacher](https://csedweek.org/csteacher/besttechnology.pdf)
+
+[<button>How can I submit my own lesson plan?</button>](#submit)
+
+  
+  
+**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. 이상적으로는, 교재나 튜토리얼들이 프로그래밍 플랫폼/도구에 집약/모두 포함 되도록 함으로서, 튜토리얼과 프로그래밍 플랫폼/도구 창을 반복적으로 왔다갔다 하지 않도록 해야함.
+
+Note: On student-facing pages we'll list teacher-led activities *below* the self-guided ones, but we'll specifically call them out on pages or emails meant for educators.
+
+## Hour of Code 활동을 만들어내는 일반적 가이드라인들
+
+The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming (not HTML). The tone should be that:
+
+  * Computer science is not just for geniuses, regardless of age, gender, race. Anybody *can* learn!
+  * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
+  * 친구들 또는 온라인으로 함께 나누고 공유할 수 있는 새로운 것들을 만들어 낼 수 있도록 학생들을 격려해야한다.
+
+**Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
+
+[**맨 위로**](#top)
 
 <a id="inclusion"></a>
 
@@ -46,7 +77,6 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 **다음과 같은 사항들을 포함하고 있는 튜토리얼들은 더 높은 평가를 받을 것입니다.:**
 
   * 질적으로 수준이 높은 것
-  * 추가적인 설명이 필요없으며 자기 스스로 할 수 있는 것
   * designed for beginners - among students AND teachers
   * 1시간 이내의 활동으로 설계된 것
   * require no sign up
@@ -61,7 +91,6 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
   * 질적으로 수준이 낮은 것
   * 높은 수준의 학습자를 대상으로 하는 것(초보자를 위한 것이 아닌)
-  * require a high degree of involvement by a teacher with lots of prep (i.e. not self-guided for students)(see below)
   * 다양한 운영체제/장비를 지원하지 못하는 것 - 웹을 기반으로 하는 경우 모든 웹브라우져에서 제대로 동작하도록 해야합니다.: IE9 이상 및 최신 버전의 Chrome, Firefox, Safari
   * 영어로만 가능한 것
   * reinforce stereotypes that hinder participation by under-represented student groups
@@ -76,33 +105,17 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
   * 오로지 HTML+CSS 웹 디자인에만 포커스를 맞추는 경우
   * 제출 기한을 넘겨서 제출하거나, 미완성(다음 참조)으로 제출하는 경우
 
+**If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
+
 궁극적으로, Hour of Code 행사와 캠페인의 목표는 학생들과 선생님들에 의해, 더 많이 컴퓨터과학(정보과학) 교육을 할 수 있도록 하는데 있으며, 컴퓨터과학(정보과학)은 누구나 쉽게 배울 수 있다는 것을 보여주기 위한 것이고, 많은 사람들이 생각하는 것보다 "더 쉽습니다." 이러한 목표는 처음 접하는 초보자를 위해 준비한 질 높은 선택사항들과 함께, 여러 가지 방법으로 학생들과 선생님들에게 보다 적은 시간으로 단순한 방법과 선택으로 쉽게 달성될 수 있습니다. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
-
-[**맨 위로**](#top)
-
-<a id="guidelines"></a>
-
-## Hour of Code 활동을 만들어내는 일반적 가이드라인들
-
-  * **제목:** 컴퓨터과학(정보과학) 또는 프로그래밍 소개(HTML 아님).
-  * **목표:** 처음 접해보는 초보자가 프로그래밍의 재미를 이해하고 느낄 수 있도록 
-  * **방향:** 
-      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody *can* learn!
-      * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
-      * 친구들 또는 온라인으로 함께 나누고 공유할 수 있는 새로운 것들을 만들어 낼 수 있도록 학생들을 격려해야한다.
-  * **Technical requirements**: 
-      * Best: Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>).
-      * Okay, but not preferred: app-install, desktop app, or game-console experiences
-  * **Self-Guided Format**: Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour-long challenge. 이상적으로는, 교재나 튜토리얼들이 프로그래밍 플랫폼/도구에 집약/모두 포함 되도록 함으로서, 튜토리얼과 프로그래밍 플랫폼/도구 창을 반복적으로 왔다갔다 하지 않도록 해야함.
-  * **Teacher-Led Format *(NEW)***: This year, we will be adding a new format for tutorials that are follow a traditional lesson plan form rather than a guided-puzzle game experience. We’re doing this mainly because with tens of thousands of educators who have tried the Hour of Code more than once, we believe a good number will invest the time to prepare a more creative, less one-dimensional activity with their students. While these types of activities are difficult without a teacher facilitating them, more open-ended activities if facilitated properly can better showcase the creative nature of computer science. On student-facing pages we will still list teacher-led activities below the self-guided ones, but we will specifically call them out on pages or emails meant for educators. 
 
 [**맨 위로**](#top)
 
 <a id="submit"></a>
 
-## How to submit (Due 10/31/2015)
+## How to submit (Due 10/15/2015)
 
-Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
+Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
 **필요한 사항:**
 
@@ -137,11 +150,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * 학년 수준과 함께 권장되는 컴퓨터과학(정보과학) 수준도 포함시켜주세요: 초급, 중급, 고급 Hour of Code 웹사이트는 초보자를 위한 활동들을 가장 두드러지게 강조하여 보여줄 것입니다. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * 기술적 요구사항들: 
       * 참여상황을 보다 정확하게 추적할 수 있도록 모든 서드파티 튜토리얼 파트너들은 Hour of Code 튜토리얼의 첫페이지와 마지막 페이지에 1픽셀짜리 트랙킹 이미지들을 포함시켜줄 것을 당부합니다. 시작 픽셀이미지를 첫페이지에 삽입하고, 마지막페이지에 마지막 픽셀이미지를 삽입해주세요. 중간페이지에 픽셀이미지를 삽입하지 말아 주세요. 보다 자세한 사항들은 아래의 트랙킹 픽셀 부분을 살펴보세요. 
-      * 튜토리얼의 과정을 모두 끝내고 나서 모든 사용자들은 다음의 URL 주소로 안내되어야 합니다. <http://code.org/api/hour/finish> 이 페이지를 통해서: 
+      * 튜토리얼의 과정을 모두 끝내고 나서 모든 사용자들은 다음의 URL 주소로 안내되어야 합니다. [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
           * Hour of Code를 완료한 상황을 소셜네트워크로 공유할 수 있습니다.
           * Hour of Code 완료 인증서를 받을 수 있습니다.
           * Hour of Code 활동을 가장 많이 참여하는 순의 지역/도시 랭킹을 볼 수 있습니다.
-          * 여러분의 활동에 1시간 참여하였지만 완료하지 못한 사람들을 위해, "나는 Hour of Code 활동을 완료했습니다." 버튼을 넣어주시기 바랍니다. 이 버튼의 연결 링크는 마찬가지로 <http://code.org/api/hour/finish> 이어야 합니다. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
   * *(선택 사항)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * 온라인 활동과 관련하여(특히 스마트폰/태블릿 앱): 
           * 참여자 수
@@ -250,3 +263,5 @@ IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 시각 장애인을 위한 튜토리얼을 만들어주신다면, 잘 보이는 위치에 강조하여 배치하여 안내할 것입니다. 아직 그러한 튜토리얼을 받지는 못했지만, 그렇게 몸이 불편한 학생들을 위한 튜토리얼이 있으면 매우 좋을 것 같습니다.
 
 [**맨 위로**](#top)
+
+<%= view :signup_button %>

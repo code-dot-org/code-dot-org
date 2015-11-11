@@ -2,7 +2,7 @@ ja:
   errors:
     messages:
       not_saved: 次の間違い（エラー）を正しく直してください。
-      too_young: このコンテンツは、年齢制限に寄り若い学生には使用できません。
+      too_young: このコンテンツには、年齢制限があるため、対象年齢に達していない生徒には使用できません。
   activerecord:
     errors:
       messages:
@@ -307,8 +307,10 @@ ja:
       viewing_solution: 回答を表示
       try_it_yourself: 試しにやってみてください。
       section: セクション
-      example: Example Solution
-      example_with_number: 'Example Solution %{solution_number}'
+      example: 解答例
+      example_with_number: '解答例 %{solution_number}'
+      submitted_on: 'Submitted on %{date}'
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: Eメール アドレスが確認されていません
     email_confirm_needed_required: 'あなたのメール アドレス %{email} はまだ確認されていません。'
@@ -384,7 +386,7 @@ ja:
   footer:
     thank_you: '私たちの <a href="https://code.org/about/donors"> ドナー</a>、<a href="https://code.org/about/partners"> パートナー</a>、 <a href="https://code.org/about/team"> チーム</a>、ビデオ キャスト、<a href="https://code.org/about/advisors"> アドバイザー</a> にコード スタジオのサポートを感謝しています。'
     help_from_html: このチュートリアルの作成には Google, Microsoft, Facebook, Twitter のエンジニアが協力しています。
-    help_from_html_old: Google・Microsoft・Facebook・Twitterのエンジニアがこのチュートリアルを作るのに手伝いました。
+    help_from_html_old: Google・Microsoft・Facebook・Twitterのエンジニアがこのチュートリアルを作るのを手伝いました。
     art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Powered by Amazon Web Services
@@ -399,6 +401,7 @@ ja:
     tos: 利用規約
     privacy: プライバシー ポリシー
     secure: 保護されたバージョン
+    report_abuse: Report Abuse
   reference_area:
     title: 助けが必要ですか？
     subtitle: ビデオやヒントを見る
@@ -605,3 +608,24 @@ ja:
     view_all: マイプロジェクトを見る
     remix: リミックス
     click_to_remix: '"Remix" をクリックしてあなただけのバージョンを作成しましょう'
+    edit_project: Edit Project
+    abuse:
+      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
+      go_to_code_studio: Go to Code Studio
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        validation:
+          email: Please provide an email address
+          age: Please specify an age
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
+          harassment: Threats, cyberbullying, harassement
+          offensive: Offensive content
+          infringement: Copyright Infringement
+          other: その他
+        detail: Please provide as much detail as possible regarding the content you are reporting.
+        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'

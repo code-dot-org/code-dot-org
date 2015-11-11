@@ -27,6 +27,13 @@ sk-SK:
   hoc2014_everyone: Ktokoľvek
   hoc2014_support: 'Podporte ju &#x25BE;'
   hoc2014_whatishoc: Čo je to Hodina programovania?
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Obnoviť
+  cded_sign_up: Zaregistrovať sa
+  cded_try_it: Skúste to
   twentyhours_trynow: Skús teraz
   california_heading: Požiadajte svoju školu, aby vyučovala informatiku
   california_text: "Každý učiteľ môže ponúknuť naše <a href='http://studio.code.org/'> bezplatné kurzy</a>.  Každá základná škola môže <a href='http://code.org/educate/k5'> vyučovať informatiku</a>. Požiadajte stredné školy, aby <a href = 'http://code.org/educate/districts' > sa k nám pripojili."
@@ -44,6 +51,14 @@ sk-SK:
   thank_you_: Ďakujeme!
   congratulations: Gratulujem!
   congratulations_on_completing_hoc: Gratulujeme k absolvovaniu jednej Hodiny programovania
+  course_name_accelerated: Accelerated Course
+  course_name_course1: Course 1
+  course_name_course2: Course 2
+  course_name_course3: Course 3
+  course_name_course4: Course 4
+  congratulations_on_completing_course: 'Congratulations on completing %{course}'
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
   get_a_certificate_of_achievement: Získaj osvedčenie o dokončení
   enter_valid_age: Zvoľte prosím platný vek
   enter_valid_email: Prosím, zadajte platnú e-mailovú adresu
@@ -94,6 +109,7 @@ sk-SK:
   hoc_is_here: '#HourOfCode je tu - pozri na to! @codeorg'
   just_did_hoc: 'Prave som spravil #HourOfCode - Pozri sa na to! @codeorg'
   twitter_teach_cs: Prečo sa viac škôl nevenuje výučbe informatiky? Môžeme to napraviť. http://youtu.be/nKIu9yen5nc. Navštívte http://code.org/ a zistíte viac.
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: Nauč sa Hour of Code
   beyond_hoc: Viac ako Jedna Hodina
   what_gender: Akého ste pohlavia?
@@ -191,15 +207,18 @@ sk-SK:
   homepage_action_text_signpetition: Podpísať petíciu
   homepage_signpetition_dropdown: 'Súhlasím &#x25BE;'
   homepage_diversity_pledge: Take the diversity pledge
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org a College Board vytvorili alianciu s cieľom zlepšiť rozmanitosť v programovaní.
   homepage_banner_text_link: Dozvedieť sa viac
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
-  homepage_banner_privacy_link: Dozvedieť sa viac
+  homepage_banner_privacy_link: Ďalšie informácie
   homepage_slot_text_title_hoc: Hodina kódovania
   homepage_slot_text_blurb_hoc: Učiť sa môže každý. Začni dnes
   homepage_slot_text_link_hoc: Vyskúšaj Hodinu Kódu
   homepage_slot_text_link_host: Usporiadajte u vás Hour of Code
   homepage_slot_text_link_hocserved: '# účastníkov'
+  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Študenti
   homepage_slot_text_blurb_students: Preskúmajte všetky naše tutoriály
   homepage_slot_text_link_codestudio: Skúsiť Code Studio
@@ -256,11 +275,48 @@ sk-SK:
   class_submission_level_college: Vysoká škola
   class_submission_level_vocational: Odborné
   class_submission_languages_other: Ostatné jazyky
+  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: |-
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
+  volunteer_engineer_submission_field_name: Meno
+  volunteer_engineer_submission_field_name_placeholder: Full Name
+  volunteer_engineer_submission_field_company: Company (or University)
+  volunteer_engineer_submission_field_company_placeholder: Company (or University)
+  volunteer_engineer_submission_field_experience_level: Experience level
+  volunteer_engineer_submission_field_location: Location
+  volunteer_engineer_submission_field_location_desc: "If you enter your exact address we won't share it, just show you as a pin on map."
+  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country, or street address
+  volunteer_engineer_submission_field_location_flexibility: I can help during the Hour of Code by... (select all that apply)
+  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering after the Hour of Code
+  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
+  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
+  volunteer_engineer_submission_field_description: Popis
+  volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
+  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation
+  volunteer_engineer_submission_header_private: Information kept private and never shared
+  volunteer_engineer_submission_field_email: E-mailová adresa
+  volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
+  volunteer_engineer_submission_field_email_placeholder: E-mailová adresa
+  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
+  volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
+  volunteer_engineer_submission_submit: Odoslať
+  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn more here.</a>'
   volunteer_engineer_submission_commitment_uncertain: Nejasné
-  volunteer_engineer_submission_commitment_now_and_then: Občas
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 hodina týždenne
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hodiny týždenne
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 hodín týždenne
+  volunteer_engineer_submission_commitment_now_and_then: Občas
+  volunteer_engineer_submission_commitment_annually: 2-3 times per year
+  volunteer_engineer_submission_commitment_monthly: A couple hours per month
+  volunteer_engineer_submission_commitment_weekly: A couple hours per week
   volunteer_engineer_submission_commitment_more: Viac
   volunteer_engineer_submission_location_flexibility_onsite: Na mieste (on-site) v škole
   volunteer_engineer_submission_location_flexibility_remote: Vzdialený mentoring (učitelia alebo študenti)
@@ -288,12 +344,14 @@ sk-SK:
   dashboard_landing_progress_title: Pokrok vašich študentov
   dashboard_landing_progress_biggest: Pokrok pre vašu najväčšiu sekciu.
   dashboard_landing_view_progress: 'Zobraziť pokrok pre %{biggest_section}'
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Dostupné kurzy
   dashboard_landing_available_courses: Tu sú aktuálne dostupné kurzy pre vás a vašich študentov.
   dashboard_landing_more_tutorials: Chcete vidieť ešte viac návodov?
   dashboard_landing_more_tutorials_desc: '<a href="/learn/beyond">Naši partneri vám ponúkajú</a> ďalšie návody. Naučte sa programovať s robotmi, vyrábajte webstránky, urobte si vlastnú appku či objavujte ďalšie jazyky – C++, Ruby alebo Python!'
   dashboard_hoc_courses: Hodina kódu pre všetky vekové kategórie
   dashboard_hoc_courses_desc: Skúste s vašimi študentmi niektorý z týchto hodinových návodov!
+  dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
   dashboard_k5_courses: 20-hodinové kurzy pre K-5
   dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
   dashboard_middle_courses: 20-Hour Middle School Courses
@@ -330,6 +388,7 @@ sk-SK:
   dashboard_navigation_section_speakers: 'Informatici ako <br/> hostia-rečníci'
   dashboard_navigation_all_sections: Študentské účty a pokrok
   dashboard_navigation_view_progress: Zobraziť pokrok
+  dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_add_students: Pridať Študentov
   dashboard_navigation_manage_students: Správa Študentov
   dashboard_navigation_lesson_plans_resources: Plány hodín a Materiály
@@ -423,6 +482,10 @@ sk-SK:
   dashboard_progress_completed_too_many_blocks: dokončené, príliš veľa blokov
   dashboard_progress_completed_perfect: dokončené, super
   dashboard_progress_furthest_level_attempted: najvyššia dosiahnutá úroveň
+  dashboard_stage: Etapa
+  dashboard_puzzle: Úloha
+  dashboard_question: Question
+  dashboard_response: Response
   stats_hoc_2013_heading: 'Neuveriteľná štatistika z minuloročnej Hodiny Kódu. Behom jediného týždňa:'
   stats_hoc_2013_image_alt: Štatistika z Hodiny Kódu 2013
   dashboard_teacher: Učiteľ
@@ -439,9 +502,17 @@ sk-SK:
   dashboard_sections_login_type_explanation: 'Táto tabuľka pomáha vysvetliť, ktoré z týchto typov prihlásenia <b>obrázok, slovo alebo e-mail</b> budete chcieť vybrať pre vašu skupinu.'
   dashboard_faq: Často kladené otázky
   dashboard_faq_k5: Často kladené otázky – prvý stupeň
+  dashboard_announcements: Announcements
+  dashboard_announce_view_all: View all
+  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
   code_hoc_coming: 'Hodina kódu je tu - 8.-14. december!'
   code_sign_up: 'Prihláste sa k účasti počas "CS Education Week"'
   learn_more: Ďalšie informácie
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
+  learn_sign_up_button: Zaregistrovať sa
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
+  learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
   hoc2014_try_new_tutorials: Vyskúšajte naše nové návody pre Hodinu Kódu
   hoc2014_try_new_tutorial: Skúste náš nový kurz Hodina Kódu, v betaverzii
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
@@ -501,7 +572,7 @@ sk-SK:
   robomindnl_name: Naprogramujte virtuálneho robota
   flappy_name: Vytvor si hru Flappy
   bitsbox_name: 'Bitsbox - vytvor si hru'
-  makegameswithus_name: Vytvor si hru pre iPhone vo svojom prehliadači!
+  makeschool_name: Build an iPhone game in your browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hodina Kódu
   blockly_name: Blockly
@@ -540,7 +611,7 @@ sk-SK:
   robomindnl_gradelevel: Vek 8-13
   flappy_gradelevel: Vek 4-104
   bitsbox_gradelevel: Základná
-  makegameswithus_gradelevel: Stredná škola
+  makeschool_gradelevel: Stredná škola
   touchdevelop_gradelevel: Stredná škola
   appinventor_gradelevel: Druhý stupeň a starší
   blockly_gradelevel: Všetky vekové kategórie
@@ -580,7 +651,7 @@ sk-SK:
   robomindnl_platformtext: Moderné prehliadače, mobilný web
   flappy_platformtext: Moderné prehliadače, smartfóny, tablety
   bitsbox_platformtext: Moderné prehliadače
-  makegameswithus_platformtext: Moderné webové prehliadače
+  makeschool_platformtext: Moderné webové prehliadače
   touchdevelop_platformtext: Moderné prehliadače, smartfóny, všetky zariadenia
   appinventor_platformtext: Moderné prehliadače + Android
   blockly_platformtext: Iba moderné prehliadače
@@ -620,7 +691,7 @@ sk-SK:
   robomindnl_shortdescription: Napíš kód pre virtuálneho robota
   flappy_shortdescription: 'Vytvor si vlastnú hru - Flappy Bird, Žralok alebo Ponorka'
   bitsbox_shortdescription: S použitím skutočného JavaScriptu nakóduj sériu aplikácií na hranie a zdieľaj.
-  makegameswithus_shortdescription: Vytvor hru pre iPhone! Skús napísaním kódu naučiť tvoje monštrum novým pohybom!
+  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach your monster new moves!
   touchdevelop_shortdescription: 'Vyrieš hlavolamy, vytvor hry a nauč sa kódovať; to všetko na svojom telefóne. '
   appinventor_shortdescription: Vytvor si vlastnú aplikáciu! (Iba pre Android)
   blockly_shortdescription: Stiahnite si ZIP súbor pre offline výuku
@@ -660,7 +731,7 @@ sk-SK:
   robomindnl_longdescription: 'Žiaci sa naučia základy programovania riadením vlastného virtuálneho robota. Online kurz je plne sebestačný s krátkymi prezentáciami, filmami, kvízmi a automatickým vedením a tipmi na pomoc pri programovacích cvičeniach. '
   flappy_longdescription: 'Vytvorte vlastnú hru Flappy Bird pomocou drag & drop programovania, ktorú si môžete prispôsobiť nech vypadá inak (Flappy žralok, Flappy Santa, čokoľvek). Hru do telefónu pridáte jedným klikom.'
   bitsbox_longdescription: Prispôsobte si svoj vlastný virtuálny tablet a potom nakódujte sadu hier na hranie a zdieľanie. Vďaka jednoduchým návodom môžu aj malé deti programovať v reálnom JavaScripte a čím ste pokročilejší, tým ďalej zájdete.
-  makegameswithus_longdescription: Nauč sa programovať tým, že vytvoríš hru pre iPhone s novým programovacím jazykom Swift, ktorý je vhodný aj pre začiatočníkov! Vytvor akčnú hru inšpirovanú Pokémonmi a napíš program, ktorý príšerky naučí pohybovať sa. Naučíš sa používať premenné, metódy, objekty, ktoré pomôžu tvojím príšerkám vyhrať!
+  makeschool_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
   touchdevelop_longdescription: 'Grafický editor na dotykové ovládanie Ťa prevedie vytváraním umeia v pixeloch, riešením medvedích hádaniek a tvorbou vašej vlastnej hry so skákajúcim vtáčikom. '
   appinventor_longdescription: Zábavné, rýchle video tutoriály ťa prevedú cez vybudovanie troch jednoduchých aplikácií pre tvoj telefón či tablet s Androidom. Určený pre začiatočníkov i expertov, táto hodina kódu ťa pripraví na budovanie tvojich vlastných aplikácií, tak ako ich poznáš. Predstav si ako zdieľaš s priateľmi svoje vlastnoručne vytvorené aplikácie! Tieto aktivity sú vhodné pre jednotlivcov a pre učiteľov vedúcich triedy.
   blockly_longdescription: 'Máš PC s pomalým (alebo žiadnym) internetom? Stiahni si Blocky tutoriály ktoré boli predchodcom Code.org tutorálov - jednoduchý 3MB ZIP si môžeš nahrať na ľubovoľný počítač alebo usb kľúč'
@@ -683,7 +754,7 @@ sk-SK:
   groklearning_beyond_name: Naučiť sa programovať v Pythone
   hacketyhack_beyond_name: Naučiť sa Ruby
   robomind_beyond_name: Naprogramujte virtuálneho robota
-  makegameswithus_beyond_name: Vytvor si hru pre iPhone vo svojom prehliadači!
+  makeschool_beyond_name: Build an iPhone game in your browser!
   appinventor_beyond_name: AppInventor Hodina Kódu
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Naučte sa programovať so psom Karlom
@@ -720,7 +791,7 @@ sk-SK:
   groklearning_beyond_gradelevel: Druhý stupeň a starší
   hacketyhack_beyond_gradelevel: Stredná škola
   robomind_beyond_gradelevel: Vek 8-13
-  makegameswithus_beyond_gradelevel: Stredná škola
+  makeschool_beyond_gradelevel: Stredná škola
   appinventor_beyond_gradelevel: Druhý stupeň a starší
   touchdevelop_beyond_gradelevel: Stredná škola
   codehs_beyond_gradelevel: Stredná škola
@@ -757,7 +828,7 @@ sk-SK:
   groklearning_beyond_platformtext: Moderné prehliadače
   hacketyhack_beyond_platformtext: Inštalácia na počítači
   robomind_beyond_platformtext: Moderné prehliadače, mobilný web
-  makegameswithus_beyond_platformtext: Moderné webové prehliadače
+  makeschool_beyond_platformtext: Moderné webové prehliadače
   appinventor_beyond_platformtext: Moderný prehliadač + Android
   touchdevelop_beyond_platformtext: Moderné prehliadače, smartfóny, všetky zariadenia
   codehs_beyond_platformtext: Moderné prehliadače (potrebné $$)
@@ -794,7 +865,7 @@ sk-SK:
   groklearning_beyond_shortdescription: Základný úvod do programovania v Pythone
   hacketyhack_beyond_shortdescription: Nauč sa Ruby od základov
   robomind_beyond_shortdescription: Napíš kód pre virtuálneho robota
-  makegameswithus_beyond_shortdescription: Nauč sa vytvoriť hru pre iPhone za hodinu
+  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
   appinventor_beyond_shortdescription: Vytvor si vlastnú aplikáciu! (Iba pre Android)
   touchdevelop_beyond_shortdescription: Naprogramuj mobilné aplikácie priamo vo svojom telefóne, tablete alebo notebooku
   codehs_beyond_shortdescription: Nauč sa programovať v JavaScripte pomocou zábavného vizuálneho prostredia
@@ -831,7 +902,7 @@ sk-SK:
   groklearning_beyond_longdescription: "An introductory course using the programming language Python for people with no programming experience. Our unique mix of introductory content and challenges will bring you to a thorough understanding of Python and programming itself. We've taught this content to students of varying ages from diverse backgrounds and we're sure it'll suit you too."
   hacketyhack_beyond_longdescription: "Hackety Hack will teach you the absolute basics of programming from the ground up. No previous programming experience is needed! With Hackety Hack, you'll learn the Ruby programming language. Ruby is used for all kinds of programs, including desktop applications and websites. [Note: Desktop install required]"
   robomind_beyond_longdescription: 'Students learn the basics of programming by controling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
-  makegameswithus_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
+  makeschool_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
   appinventor_beyond_longdescription: Zábavné, rýchle video tutoriály ťa prevedú cez vybudovanie troch jednoduchých aplikácií pre tvoj telefón či tablet s Androidom. Určený pre začiatočníkov i expertov, táto hodina kódu ťa pripraví na budovanie tvojich vlastných aplikácií, tak ako ich poznáš. Predstav si ako zdieľaš s priateľmi svoje vlastnoručne vytvorené aplikácie! Tieto aktivity sú vhodné pre jednotlivcov a pre učiteľov vedúcich triedy.
   touchdevelop_beyond_longdescription: TouchDevelop lets you create apps on iPad, iPhone, Android, PC, Mac, Windows Phone. Our touch-friendly editor makes coding fun, even on your phone or tablet!
   codehs_beyond_longdescription: 'Learn the basics of programming with Karel the Dog, a fun, accessible and visual introduction to coding, where giving commands to a computer is just like giving commands to a dog. This tutorial is great if led by a teacher, but can also be done independently. [Note: payment is required]'

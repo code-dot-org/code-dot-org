@@ -6,6 +6,7 @@ def format_email_address(email, name='')
 end
 
   workshop_row = DB[:forms].first(id:form.parent_id)
+  raise AbortEmailError, 'workshop has been deleted' unless workshop_row
   workshop = JSON.parse(workshop_row[:data]).merge(JSON.parse(workshop_row[:processed_data]))
 
   affiliate = DASHBOARD_DB[:users].where(id: workshop_row[:user_id]).first

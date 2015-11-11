@@ -29,7 +29,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "examples_required": "false"
+    "examples_required": "false",
+    "never_autoplay_video": "false",
+    "ideal": "17"
   }
 }]]></config>
   <blocks>
@@ -160,28 +162,7 @@
         </category>
         <category name="Functions" custom="PROCEDURE"/>
         <category name="Loops">
-          <block type="controls_for_counter" inline="true">
-            <mutation counter="counter"/>
-            <value name="FROM">
-              <block type="math_number">
-                <title name="NUM">1</title>
-              </block>
-            </value>
-            <value name="TO">
-              <block type="math_number">
-                <title name="NUM">100</title>
-              </block>
-            </value>
-            <value name="BY">
-              <block type="math_number">
-                <title name="NUM">10</title>
-              </block>
-            </value>
-          </block>
           <block type="controls_repeat_ext" inline="true"/>
-          <block type="variables_get">
-            <title name="VAR">counter</title>
-          </block>
         </category>
         <category name="Math">
           <block type="math_arithmetic" inline="true">
@@ -189,14 +170,6 @@
           </block>
           <block type="math_number">
             <title name="NUM">0</title>
-          </block>
-        </category>
-        <category name="Variables" custom="VARIABLE">
-          <block type="variables_set" inline="false">
-            <title name="VAR">i</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">i</title>
           </block>
           <block type="procedures_defnoreturn" uservisible="false">
             <mutation>

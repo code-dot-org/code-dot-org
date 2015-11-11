@@ -124,7 +124,7 @@ vi:
         if: 'khối lệnh "nếu"'
         if_else: 'khối lệnh "nếu-ngoài ra"'
         loop_times: 'khối lệnh "lập lại số lần"'
-        loop_until: 'khối lệnh "lặp lại-đến khi"'
+        loop_until: Lặp lại cho đến khi bị khóa
         loop_while: 'khối lệnh "khi mà"'
         loop_for: 'khối lệnh "trái ngược"'
         function: Các hàm
@@ -136,28 +136,28 @@ vi:
         maze_2_2_5: Lần theo con đường và dẫn tôi tới chú heo ngốc. Nhớ tránh TNT không thì bay mất xác!
         maze_2_3: Hãy dẫn dắt tôi tới chỗ chú heo màu xanh lá cây! (Nhớ coi chừng thuốc nổ)
         maze_2_4: Giữ bình tĩnh và giúp mình tìm những chú lợn xấu xa. Hoặc là mình giận đó!
-        maze_2_5: Có một cách mà tôi có thể đến chỗ heo ngốc chỉ bằng hai khối. Bạn có làm được không?
-        maze_2_6: Hãy đưa mình đến chỗ heo ngốc chỉ trong ba khối.
-        maze_2_7: 'Giúp mình đuổi chú lợn xấu xí này đi bằng cách sử dụng các khối ít nhất có thể. Bạn thử dùng các khối  lặp lại nhiều hơn một lần.'
-        maze_2_8: 'Khi một khối màu xám, thì có nghĩa rằng bạn không thể xóa nó. Giải quyết câu đố này bằng cách sử dụng "lặp lại" khối lặp đi lặp lại 3 lần. Cố gắng đưa 3 khối bên trong "lặp lại" khối màu xám: di chuyển, di chuyển, lần lượt.'
-        maze_2_9: 'Ok, hãy thử khối mới " lặp lại cho đến khi" nó sẽ lặp lại hành động cho đến khi gặp được những chú lợn phiền toái.'
+        maze_2_5: Có một cách mà tôi có thể đến chỗ heo ngốc chỉ bằng hai khối lệnh. Bạn có làm được không?
+        maze_2_6: Hãy đưa mình đến chỗ heo ngốc chỉ trong ba khối lệnh.
+        maze_2_7: Giúp mình đuổi chú lợn xấu xí này đi bằng cách sử dụng các khối lệnh ít nhất có thể. Bạn thử dùng các khối lệnh lặp lại nhiều hơn một lần.
+        maze_2_8: 'Khi một khối lệnh có màu xám, thì có nghĩa rằng bạn không thể xóa nó. Giải quyết câu đố này bằng cách sử dụng khối lệnh "lặp lại"lặp đi lặp lại 3 lần. Cố gắng đưa 3 khối bên trong "lặp lại" khối màu xám: di chuyển, di chuyển, lần lượt.'
+        maze_2_9: 'Ok, hãy thử khối lệnh mới " lặp lại cho đến khi" nó sẽ lặp lại hành động cho đến khi gặp được những chú lợn phiền toái.'
         maze_2_10: 'Được rồi, lần cuối để luyện tập nhé - Bạn có thể giải quyết trò này chỉ bằng 4 khối được không?'
-        maze_2_11: Bạn thân mến. Tôi zombie đây... Tôi đói quá... Tôi cần tới chỗ có hoa hướng dương. Bạn có thể giúp tôi tới nơi mà chỉ cần sử dụng 5 khối không?
+        maze_2_11: Bạn thân mến. Là tôi zombie đây... Tôi đói quá... Tôi cần tới chỗ có hoa hướng dương. Bạn có thể giúp tôi tới nơi mà chỉ cần sử dụng 5 khối lệnh không?
         maze_2_12: Được rồi, nó cũng tương tự nhưng chỉ hơi khác một chút. Liệu bạn có thể thực hiện chỉ với 5 khối không?
-        maze_2_13: 'Sử dụng khối "nếu" mới cho tôi quyết định khi nào thì chuyển/vòng lại. Gợi ý: bạn chỉ cần nhiều hơn 1 khối, nhưng để tìm hiểu chúng tôi thiết lập nó như thế nào thì bạn có thể thực hiện như vậy vào lần tới.'
+        maze_2_13: 'Sử dụng khối lệnh mới "nếu như" cho tôi quyết định khi nào thì chuyển/vòng lại. Gợi ý: bạn chỉ cần nhiều hơn 1 khối, nhưng để tìm hiểu chúng tôi thiết lập nó như thế nào thì bạn có thể thực hiện như vậy vào lần tới.'
         maze_2_14: 'OK, đây là những câu đố cuối cùng, nhưng bạn cần phải nhớ làm thế nào bạn sử dụng khối "nếu" và khối "lặp lại" cùng với nhau.'
-        maze_2_15: 'Tôi muốn hoa hướng dương! Sử dụng một khối "nếu" để làm cho tôi có thể có hoa hướng dương với số khối ít nhất.'
-        maze_2_16: 'OK. Hãy luyện tập nó thêm lần nữa nào - Có thể đây sẽ rất khác, nhưng hãy coi chừng những chompers!'
+        maze_2_15: 'Tôi muốn hoa hướng dương! Sử dụng một khối lệnh "nếu như" để làm cho tôi có thể có hoa hướng dương với số khối ít nhất.'
+        maze_2_16: 'Ok. Hãy luyện tập nó thêm lần nữa nào - Có thể đây sẽ rất khác, nhưng hãy coi chừng những con Chomper!'
         maze_2_17: 'Các khối "Nếu-khác" kiểm tra một điều kiện, để làm một việc này hay một việc khác. Để tôi có được hoa hướng dương, hãy thử sử dụng khối mới.'
         maze_2_18: 'Thêm một bài thực hành nữa với khối "nếu-khác" nào, bạn có thể sử dụng khối "nếu-khác" ngay được không?'
         maze_2_19: Bạn có thể thêm chỉ 3 khối để giúp tôi giải quyết một mê cung phức tạp hơn được không? Nếu bạn làm điều đó đúng, tôi có thể đi bộ trên con đường cong và không có vấn đề với chiều dài.
-        turtle_1_1: Xin chào, tôi là một nghệ sĩ/ hoạ sĩ. Bạn có thể viết mã lập trình code để khiến tôi vẽ hầu hết mọi thứ bạn lập trình. Hãy sử dụng một vài blocks/ khối để giúp tôi vẽ qua đường màu xám trong hình.
+        turtle_1_1: Xin chào, tôi là một nghệ sĩ/ hoạ sĩ. Bạn có thể viết mã lập trình code để khiến tôi vẽ hầu hết mọi thứ bạn lập trình. Hãy sử dụng một vài khối để giúp tôi vẽ qua đường màu xám trong hình.
         turtle_1_2: 'Bây giờ, vẽ một hình vuông. Lưu ý: sử dụng màu sắc yêu thích của bạn bằng cách chọn nó trong khối mới "thiết lập màu".'
         turtle_1_3: Vẽ một hình vuông, chỉ sử dụng 3 khối.
         turtle_1_4: 'Hãy vẽ một tam giác có các cạnh/ mặt khác màu nhau, sử dụng lựa chọn "màu ngẫu nhiên" để chọn một màu khác nhau cho mỗi thời điểm. Gợi ý: bạn sẽ phải tìm ra khoảng cách bao xa để chuyển/ vòng lại bằng cách click vào số trong những turn block.'
         turtle_1_5: Bây giờ, để thực hành, vẽ một hình tam giác và sau đó là một hình vuông để vẽ một phong bì.
-        turtle_1_6: 'Bạn có thể tìm ra cách vẽ những hình tam giác, hình vuông này không? Gợi ý: Hãy làm hình tam giác trước, sau đó bạn hãy tìm khoảng bao nhiêu turn trước khi thực hiện vẽ hình vuông.'
-        turtle_1_7: 'OK, chúng ta hãy làm cho nó khó khăn hơn một chút - xem nếu bạn có thể vẽ các ô kính màu xanh lá cây. Các ô vuông độ dài là 100 điểm ảnh mỗi cạnh, và khoảng cách giữa chúng là 50 pixel. Đừng quên vẽ màu xanh lá cây!'
+        turtle_1_6: 'Bạn có thể tìm ra cách vẽ những hình tam giác, hình vuông này không? Gợi ý: Hãy làm hình tam giác trước, sau đó bạn hãy tìm khoảng bao nhiêu góc trước khi thực hiện vẽ hình vuông.'
+        turtle_1_7: 'Ok, chúng ta hãy làm cho nó khó khăn hơn một chút - xem nếu bạn có thể vẽ các ô kính màu xanh lá cây. Các ô vuông độ dài là 100 điểm ảnh mỗi cạnh, và khoảng cách giữa chúng là 50 pixel. Đừng quên vẽ màu xanh lá cây!'
         turtle_1_8: 'Được rồi, cố gắng nhìn xem những gì sẽ xảy ra nếu bạn chạy mã này (hoặc nhấn "Chạy" để thử nó). Sau đó, lặp lại nó đủ số lần để hoàn tất bản vẽ. Các màu sắc sẽ khác nhau mỗi lần.'
         turtle_1_9: Bạn hãy tìm ra số để thay thế các ký hiệu chấm hỏi để vẽ một vòng tròn?
         turtle_1_10: 'Bạn đã làm nó! Bây giờ, vẽ bất cứ cái gì bạn muốn. Một số thú vị ý tưởng: một nhân vật dính, bông tuyết hoặc xoắn ốc. Cũng thử khối mới "thiết lập chiều rộng". Chúc vui vẻ!'
@@ -173,7 +173,7 @@ vi:
         turtle_4_10: Đây là lời giải của câu đố vừa rồi. Bạn cần phải lặp lại bao nhiêu lần để hoàn thành hình vẽ?
         turtle_4_11: 'Hãy thử đổi những số trong những khối "xoay" và "lặp lai" để tạo những mô hình khác nhau. Ngoài ra, có thể thử thay đổi phần còn lại của lệnh để vẽ bất kỳ thứ gì bạn muốn.'
         maze_karel_1_1: 'Chào. Tôi là nông dân. Tôi cần bạn xới phẳng ruộng để tôi có thể sẵn sàng trồng cây. Xoay tôi đến chỗ bùn bẩn và dùng khối lệnh "xóa" để xới phẳng chỗ ruộng ấy.'
-        maze_karel_1_2: 'Tiếp đó, hãy di chuyển tôi đến cái hố và lấp đầy nó bằng HAI xẻng đất, bằng cách sử dụng khối lệnh "fill".'
+        maze_karel_1_2: 'Tiếp đó, hãy di chuyển tôi đến cái hố và lấp đầy nó bằng hai xẻng đất, bằng cách sử dụng khối lệnh "lấp đầy".'
         maze_karel_1_3: Di chuyển tôi đến đống đất bẩn và nói cho tôi biết tôi cần xúc bao nhiêu xẻng mới xúc hết được đống đất này. Lưu ý, dùng càng ít khối lệnh càng tốt.
         maze_karel_1_4: |
           Hãy giúp tôi xúc hết đất bẩn đi.
@@ -199,11 +199,11 @@ vi:
         turtle_2_4: 'Bây giờ, chúng ta sẽ vẽ những thứ ảo diệu hơn. Thay đổi khối lệnh để vẽ 36 hình vuông, cạnh dài 100 pixels, mỗi hình lệch nhau 10 độ. Gợi ý: kéo thanh tốc độ chạy của chương trình sang phải để vẽ nhanh hơn.'
         turtle_2_5: 'Vẽ hình vuông với cạnh là 50, 60, 70, 80 và 90 pixel.  Bạn sẽ cần phải sử dụng chức năng "vẽ một hình vuông" năm lần.'
         turtle_2_6: 'Ok, chương trình này sẽ sử dụng một biến đếm, để vẽ những hình vuông giống như lần trước. Bạn muốn kích thước của hình vuông giống như giá trị của biến đếm, nên hãy dùng khối "biến đếm". Gợi ý: Khối này nằm trong mục "Biến số".'
-        turtle_2_7: 'Đây là một chương trình để vẽ hình xoắn ốc, nhưng các khối đã bị vô hiệu hóa nên chúng không chạy. Hãy lập một chương trình sử dụng khối "count with" (trong mục Lặp) và khối "counter" (Trong mục Biến) để vẽ hình xoắn ốc tương tự.'
+        turtle_2_7: 'Đây là một chương trình để vẽ hình xoắn ốc, nhưng các khối đã bị vô hiệu hóa nên chúng không chạy. Hãy lập một chương trình sử dụng khối "đếm với" (trong mục Lặp) và khối "ngược lại" (Trong mục Biến) để vẽ hình xoắn ốc tương tự.'
         turtle_2_7_5: 'Có một hàm mới tên là "Vẽ một người tuyết" trong (nhóm "Hàm"). Vẽ hai người tuyết có chiều cao lần lượt là 250 và 100.'
         turtle_2_8: 'Màn này tương đối khó. Dùng hàm "Vẽ một người tuyết" và "Nhảy về phía trước" (trong nhóm "Action") để vẽ 3 người tuyết trong 3 màu khác nhau, mỗi người tuyết cách nhau 100 pixels.'
-        turtle_2_9: 'Use a "count with" loop to draw a family of snowmen with heights of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart.'
-        turtle_2_10: "Here's some code to try experimenting with different spirals.  What happens if you change the turn amount? Or set a random color in the loop?  Draw anything you like."
+        turtle_2_9: 'Sử dụng vòng lặp "thuật đếm" để vẽ nên một gia đình người tuyết với chiều cao là 110, 100, 90, 80 và 70. Tất cả người tuyết đều lớn hơn 60 điểm ảnh.'
+        turtle_2_10: Đây là một vài đoạn mã khác nhau để thử nghiệm với các độ khó khác nhau. Điều gì sẽ xảy ra nếu bạn thay đổi thứ tự tất cả? Hoặc chọn một màu ngẫu nhiên trong vòng lặp? Vẽ bất cứ điều gì bạn muốn.
         maze_karel_2_1: Thử dùng các khối lệnh để giúp tôi san phẳng các ụ đất và lấp đầy các hố đất. Sử dụng vòng lặp để giảm số khối lệnh phải viết. Gợi ý, bạn có thể đặt một vòng lặp ở trong một vòng lặp.
         maze_karel_2_2: 'Chúng ta đã viết định nghĩa khối "Lấp 5 lần", trong nhóm "Hàm". Dùng nó để giúp tôi lấp hố đất này.'
         maze_karel_2_3: 'Dùng hàm "Lấp 5 lần" để giúp tôi lấp đầy các hố đất này. Bạn sẽ phải kéo nó ra từ nhóm "Hàm".'
@@ -212,21 +212,21 @@ vi:
         maze_karel_2_6: 'Dùng hai hàm mới là "Lấp 8 lần" và "San phẳng 8 lần" để giúp tôi san bằng các ụ đất và lấp đầy các hố đất.'
         maze_karel_2_7: Có một con bò trong ruộng của tôi! Viết một hàm mới để giúp tôi tránh còn bò và san phẳng các ụ đất. Đặt tất cả các khối lệnh trong hàm mới đó.
         maze_karel_2_8: 'Dùng hàm mới "tránh con bò và san phẳng 1 lần" để giúp tôi san phẳng mọi ụ đất.'
-        maze_karel_2_9: "Ok, here's a function that removes 4 different piles of dirt in a vertical column. Try putting this function inside a loop, so that you remove all the piles of dirt using only a few new blocks."
-        maze_karel_2_10: Move me across the field, and use these two functions to help me remove all the piles and fill all the holes.
-        turtle_3_1: 'Đây là câu đố giúp bạn hiểu được cách viết định nghĩa cho các hàm "vẽ một hình vuông" và "vẽ một vòng tròn". Khi bạn viết định nghĩa cho hàm, chưa có nghĩa là nó có thể chạy ngay. Bạn phải kéo khối "draw a square" vào cụm lệnh chính để thực sự vẽ hình vuông.'
+        maze_karel_2_9: Ok, đây là một chức năng loại bỏ 4 ụ đất bẩn trong cùng 1 hàng dọc. Cố gắng đưa chức năng này vào một vòng lặp, do đó bạn loại bỏ tất cả các ụ bẩn bằng cách sử dụng chỉ có một vài khối lệnh mới.
+        maze_karel_2_10: Di chuyển tôi qua ruộng, và sứ dụng hai chức năng để giúp tôi loại bỏ tất cả các ụ và điền vào tất cả chỗ trống.
+        turtle_3_1: 'Đây là câu đố giúp bạn hiểu được cách viết định nghĩa cho các hàm "vẽ một hình vuông" và "vẽ một vòng tròn". Khi bạn viết định nghĩa cho hàm, chưa có nghĩa là nó có thể chạy ngay. Bạn phải kéo khối "Vẽ một hình vuông" vào cụm lệnh chính để thực sự vẽ hình vuông.'
         turtle_3_2: 'Tương tự hàm "vẽ một hình vuông", tạo một hàm "vẽ một tam giác" để vẽ một tam giác và dùng nó.'
         turtle_3_3: Vẽ một hàng rào hình tam giác xung quanh những chú mèo và một hàng rào hình vuông quanh những chú bò.
         turtle_3_4: 'Bạn có thể tìm cách vẽ một ngôi nhà cho chú sư tử bằng cách sử dụng hai hàm "vẽ một hình vuông" và "vẽ một hình tam giác" không?'
         turtle_3_5: |
           Bây giờ, hãy tạo một hàm "vẽ ngôi nhà" và sử dụng nó để vẽ nhà cho hai con mèo.
           Gợi ý: tạo hàm mới bằng cách sử dụng khối lệnh "làm gì đó", và gõ lệnh của bạn vào bên trong khối lệnh.
-        turtle_3_6: 'Using "draw a square" as an example, add an input named "length" to "draw a triangle". Then, draw triangles in different sizes. (Hint: click the star to add an input to a function)'
-        turtle_3_7: 'Add an input named "length" to "draw a house" and build a big house for the elephant (with edges 150 pixels long)'
-        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
-        turtle_3_9: 'Can you re-create the "draw a house" function without help? Try it, and then draw a row of houses.'
-        turtle_3_10: "You've learned a lot! Now use it to draw whatever you want. Try to draw a star, or a spiral, or a fancy snowflake."
-        maze_karel_debug_seq_1: "Welcome to debugging! My code doesn't work right. Can you spot the problem and fix it so that I can get my field flat and ready for planting?"
+        turtle_3_6: 'Sử dụng "vẽ hình vuông" như là một ví dụ, thêm một đầu tên là "chiều dài" để "vẽ hình tam giác". Sau đó vẽ những hình tam giác kích cỡ khác nhau. (Gợi ý: nhấp vào ngôi sao để thêm đầu tên hướng tới chức năng)'
+        turtle_3_7: 'Thêm một đầu tên "chiều dài" để "vẽ một ngôi nhà" và xây một ngôi nhà lớn cho chú voi (với cạnh dài 150 điểm ảnh)'
+        turtle_3_8: 'Sửa "vẽ một ngôi nhà" sau khi vẽ một ngôi nhà mới tôi sẽ kết thúc ở góc phải dưới cùng. Sử dụng chức năng chỉnh sửa này để vẻ 3 ngôi nhà mới.'
+        turtle_3_9: 'Bạn có thể tái tạo chức năng "vẽ một ngôi nhà" mà không cần sự trợ giúp? Hãy thử, và sau đó vẽ một dãy nhà.'
+        turtle_3_10: Bạn đã học được rất nhiều! Bây giờ sử dụng nó để vẽ bất cứ điều gì bạn muốn. Cố gắng để vẽ một ngôi sao, hoặc một xoắn ốc, hoặc một bông tuyết ưa thích.
+        maze_karel_debug_seq_1: Chào mừng bạn để gỡ lỗi! Mã của tôi không hoạt động đúng. Bạn có thể phát hiện vấn đề và sửa chữa nó như vậy tôi có thể nhận được hoàn toàn bãi của tôi và sẵn sàng để trồng?
         maze_karel_debug_seq_2: Không biết chương trình này sai ở đâu vậy? Bạn sẽ sửa chương trình này thế nào để tôi có thể san bằng hết các ụ đất nhỉ?
         maze_karel_debug_repeat: Sửa các lỗi của chương trình này để làm cho ruộng của tôi thật phẳng và đẹp!
         maze_karel_debug_while: Bạn sẽ chỉnh lại chương trình này như thế nào để giúp tôi lấp đầy các hố đất?
@@ -243,46 +243,39 @@ vi:
         turtle_5_4: Thử chạy chương trình này, và tạo vài thay đổi để xem điều gì sẽ xảy ra. Bạn có thể tìm ra cách mà nó hoạt động? (Hoặc xóa nó và thay thế nó bằng một cái gì đó hoàn toàn khác)
         turtle_5_5: Thử chạy chương trình này, và tạo vài thay đổi để xem điều gì sẽ xảy ra. Bạn có thể tìm ra cách mà nó hoạt động? (Hoặc xóa nó và thay thế nó bằng một cái gì đó hoàn toàn khác)
         turtle_5_6: Thử chạy chương trình này, và tạo vài thay đổi để xem điều gì sẽ xảy ra. Bạn có thể tìm ra cách mà nó hoạt động? (Hoặc xóa nó và thay thế nó bằng một cái gì đó hoàn toàn khác)
-        maze_3_1: I need to get to that pig! Type in a couple of calls to move(); so I can get my eggs back.
-        maze_3_2: Write me a program, so I can make it all the way to the pig.
-        maze_3_3: "How should I get to the pig? Make sure I don't run into the box of TNT!"
-        maze_3_4: Argh! Write me a program that gets me around the TNT and to the pig.
-        bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
-        bounce_2: 'Attach a block to the "when right arrow" and "when left arrow" blocks. Move the paddle to reach both finish targets.'
-        bounce_3: 'Now try something similar with the "when up arrow" block. Move the paddle to the finish target at the top.'
-        bounce_4: This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle.
-        bounce_5: |-
-          We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
-        bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
-        bounce_7: 'Attach blocks to each of the "when" blocks. Bounce the ball until it hits the finish target.'
-        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
-        bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
-        bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
-        Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
-        flappy_1: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
-        flappy_2: |-
-          Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_3: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
-        flappy_4: |-
-          Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_5: |-
-          Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either a smaller or larger amount.
-        flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
-        flappy_8: You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
-        flappy_11: 'Tạo trò chơi Flappy riêng của bạn. Bạn có thể thay đổi hình ảnh, luật chơi, thậm chí là trọng lực của trò chơi. Sau khí hoàn thành, nhấp vào "Hoàn thành" để giúp bạn của bạn có thể chơi thử trò chơi bạn vừa làm ra.'
+        maze_3_1: Tôi cần nhận được để cho chú lợn này! nhập vào một cặp để kêu gọi di chuyển; như vậy tôi có thể nhận trở lại trứng của tôi.
+        maze_3_2: Viết một chương trình, như vậy tôi có thể làm mọi thứ cho chú lợn.
+        maze_3_3: Tôi phải làm gì để đến chỗ chú lợn? Đảm bảo rằng tôi không chạy vào hộp TNT!
+        maze_3_4: Ah! Viết cho tôi một chương trình để đưa tôi vong quan TNT và đến với chú lợn.
+        bounce_1: 'Đính kèm một khối với khối "mũi tên trái" và bấm "chạy". Di chuyển chân vịt sử dụng mũi tên để đến mục tiêu kết thúc.'
+        bounce_2: 'Đính kèm với khối "mũi tên phải" và bấm "chạy" và "mũi tên trái. Di chuyển chân vịt đển tìm mục tiêu kết thúc của cả hai.'
+        bounce_3: 'Bây giờ thử một cái gì đó tương tự khối "mũi tên trái". Di chuyển chân vịt để đạt mục thiêu kết thúc hàng đầu.'
+        bounce_4: Lúc này bạn cần thêm bốn khổi. Di chuyển chân vịt đến cả bốn mục tiêu kết thúc để hoàn thành câu đố.
+        bounce_5: 'chúng tôi sẽ gửi quả bóng bay xuống hướng tới các chân vịt. Đính kèm khối "khi quả bóng chạm chân vịt" để đảm bảo quả bóng tìm thấy mục tiêu kết thúc.'
+        bounce_6: 'Bây giờ mục tiêu kết thúc là ở hàng đầu. Bạn cần đính kèm khối cùng với khối "khi quả bóng chạm" để giải quyết câu đố này.'
+        bounce_7: 'Đính kèm khối với mỗi khối "khi". Trả bóng cho đến khi quả bóng chạm mục tiêu kết thúc.'
+        bounce_10: 'Đó là một mục tiêu hàng đầu. Đính kèm khối "điểm số" và "điểm đối thủ" với khối "khi quả bóng vào goal" và "khi quả bóng lỡ chân vịt" để chơi trò chơi. Xem xem bạn cần có bao nhiêu điểm để đứng trước đối thủ của mình hai lần.'
+        bounce_11: 'Bạn không thể đính kèm khối với khối "khi chạy". Bạn có thể đính kèm khối mới "bắn quả bóng mới" ở nhiều nơi. Ngoài ra, thử thay đổi cảnh phông hoặc tối độ của quả bóng và chận vịt và nhìn xem bạn cầu bao nhiêu điểm để có thể đứng trước đối thủ của bạn 2 lần.'
+        bounce_12: Tạo cho bạn trò chơi di chuyển bóng riêng. Bạn có thể thay đổi tất cả cá hình ảnh và quy tắc. Khi bạn đã làm xong, nhấp vào Kết thúc để bạn vè có thể dùng thử trò chơi trên điện thoại của họ.
+        Custom_builder: 'Kéo khổi từ hộp công cụ không gian làm việc đê vẻ cấp độ bạn muốn tạo. Bấm "Chạy" khi bạn đã sẵn sàng.'
+        flappy_1: 'Đính kèm khối "khi nhấp vào" sau đó bấm "chạy". Nhấp hoặc chạm vào màn hình để di chuyển Flappy đến mục tiêu.'
+        flappy_2: 'Bây giờ chúng ta thêm một vài vị trí. Đính kèm khối lệnh "khi quả bóng chạm vị trí". Mã của bạn cần để "kết thúc" khi Flappy rơi xuống đất.'
+        flappy_3: 'Khối "khi chạy" cho phép bạn chạy mã khi bạn bắt đầu trò chơi. Cố gắng thiết lập tốc độ cấp và bay đến mục tiêu.'
+        flappy_4: 'Flappy sẽ bay qua những trở ngại trừ khi bạn viết mã để làm nó vỡ ra. Bắt lấy khối "khi gặp chướng ngại". Đoạn mã của bạn cần là "kết thúc" khi chú Flappy đâm vào cột đầu tiên.'
+        flappy_5: 'Hãy thêm một bảng điểm, và đến điểm khi Flappy vượt qua các chướng ngại. Thêm khối "khi vượt qua các chướng ngại", và sau đó ghi số điểm khi Flappy bay qua cột đầu tiên.'
+        flappy_6: Xem nếu bạn cần còn ghi điểm sau khi Flappy bay một số lượng nhỏ hơn hoặc lớn hơn.
+        flappy_7: 'Sau đó, thử thay đổi bối cảnh bằng cách bắt lấy khối "khi chạy" khác.'
+        flappy_8: Bạn có thể đặt hình ảnh bất cứ lúc nào, không chri khi trò chơi bắt đầu. Thử để ngẫu nhiên khi các sự kiện khác xảy ra, ví dụ, khi vượt chướng ngại vật.
+        flappy_9: Để kết hợp chúng, khi gặp một chướng ngại, thay vì kết thíc trò chơi hoặc thiết lập chi trở lại từ số 0.
+        flappy_11: 'Tạo trò chơi Flappy của riêng bạn. Bạn có thể thay đổi hình ảnh, luật chơi, thậm chí là trọng lực của trò chơi. Sau khí hoàn thành, nhấp vào "Hoàn thành" để giúp bạn của bạn có thể chơi thử trò chơi bạn vừa làm ra.'
         flappy_k1_1: Chơi Plappy
-        flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
-        flappy_k1_3: |-
-          Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_k1_4: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
-        flappy_k1_5: |-
-          Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_k1_6: |-
-          Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
+        flappy_k1_2: 'Đính kèm khối "khi nhấp vào" sau đó bấm "chạy". Nhấp hoặc chạm vào màn hình để di chuyển Flappy đến mục tiêu.'
+        flappy_k1_3: 'Bây giờ chúng ta thêm một vài vị trí. Đính kèm khối lệnh "khi quả bóng chạm vị trí". Mã của bạn cần để "kết thúc" khi Flappy rơi xuống đất.'
+        flappy_k1_4: 'Khối "khi chạy" cho phép bạn chạy mã khi bạn bắt đầu trò chơi. Cố gắng thiết lập tốc độ cấp và bay đến mục tiêu.'
+        flappy_k1_5: 'Flappy sẽ bay qua những trở ngại trừ khi bạn viết mã để làm nó vỡ ra. Bắt lấy khối "khi gặp chướng ngại". Đoạn mã của bạn cần là "kết thúc" khi chú Flappy đâm vào cột đầu tiên.'
+        flappy_k1_6: 'Hãy thêm một bảng điểm, và đến điểm khi Flappy vượt qua các chướng ngại. Thêm khối "khi vượt qua các chướng ngại", và sau đó ghi số điểm khi Flappy bay qua cột đầu tiên.'
+        flappy_k1_7: Xem nếu bạn có thể ghi nhiều điểm kép để vượt chướng ngại vật
+        flappy_k1_8: 'Sau đó, thử thay đổi bối cảnh bằng cách bắt lấy khối "khi chạy" khác.'
         flappy_k1_9: 'Hãy thử thay đổi người chơi bằng cách gắn một khối "chọn người chơi" vào khối "khi chạy".'
         jigsaw_1: Nhấp vào khối
         jigsaw_2: Kéo các khối vào các vị trí cho sẵn
@@ -307,11 +300,11 @@ vi:
         studio_c2_3: Bạn có thể viết một chương trình để làm cho con chó này di chuyển đến con mèo không?
         studio_c2_4: 'Bạn có thể viết một chương trình mà làm cho con chó di chuyển đến mèo, và làm con mèo nói "Xin chào" khi con chó đến nó không?'
         studio_c2_5: 'Bạn có thể viết một chương trình giúp chú bạch tuộc nói "Xin chào" khi nó bị nhấp chuột vào không?'
-        studio_c2_6: Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?
-        studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c2_8: 'Can you have Waddles say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
+        studio_c2_6: Bạn có thể viết một chương trình để làm Waddles di chuyển xung quanh bằng các phím lên / xuống / trái / phải để đạt mục tiêu?
+        studio_c2_7: 'Khối "lặp lại mãi mãi" cho phép bạn chạy mã liên tục. Bạn có thể dùng khối này để di chuyển con khủng long lên và xuống nhiều lần không?'
+        studio_c2_8: 'Bạn có khiến Waddles nói "ouch!" và phát âm thanh "hit" khi chú chạy vào chỗ những con khủng long, và sau đó di chuyển chú cùng với các mũi tên nếu điều đó xảy ra không?'
+        studio_c2_9: Bạn có thể thêm các khối để ghi điểm khi Waddles chạy vào chỗ bạch tuộc và sau đó di chuyển chú ta cùng mũi tên sau khi bạn ghi điểm không?
+        studio_c2_10: Bạn có thể thêm khối để thay đổi hình nền và tốc độ của Waddles, sau đó di chuyển chú ta cùng với mũi tên sau khi bạn ghi điểm không?
         studio_c2_11: 'Tạo câu chuyện của chính bạn. Khi bạn đã viết xong câu chuyện đó, nhấn "Hoàn thành" để gửi cho bạn của bạn xem câu chuyện bạn vừa làm ra!'
         studio_c3_story_1: 'Bạn có thể làm chú chó nói "hello world" không?'
         studio_c3_story_2: Bạn có thể làm chú chó nói vài điều, sau đó chú mèo nói tiếp vài điều không?
@@ -320,21 +313,21 @@ vi:
         studio_c3_story_5: Bạn có thể thêm khối lệnh làm cho bạch tuộc trở nên vui vẻ không?
         studio_c3_story_6: 'Tạo câu chuyện của chính bạn. Khi bạn đã viết xong câu chuyện đó, nhấn "Hoàn thành" để gửi cho bạn của bạn xem câu chuyện bạn vừa làm ra!'
         studio_c3_game_1: 'Bạn có thể viết một chương trình giúp chú bạch tuộc nói "Xin chào" khi nó bị nhấp chuột vào không?'
-        studio_c3_game_2: Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c3_game_4: 'Can you have Waddles say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
+        studio_c3_game_2: Bạn có thể viết một chương trình để làm Waddles di chuyển xung quanh bằng các phím lên / xuống / trái / phải để đạt mục tiêu?
+        studio_c3_game_3: 'Khối "lặp lại mãi mãi" cho phép bạn chạy mã liên tục. Bạn có thể dùng khối này để di chuyển con khủng long lên và xuống nhiều lần không?'
+        studio_c3_game_4: 'Bạn có khiến Waddles nói "ouch!" và phát âm thanh "hit" khi chú chạy vào chỗ những con khủng long, và sau đó di chuyển chú cùng với các mũi tên nếu điều đó xảy ra không?'
+        studio_c3_game_5: Bạn có thể thêm các khối để ghi điểm khi Waddles chạy vào chỗ bạch tuộc và sau đó di chuyển chú ta cùng mũi tên sau khi bạn ghi điểm không?
+        studio_c3_game_6: Bạn có thể thêm khối để thay đổi hình nền và tốc độ của Waddles, sau đó di chuyển chú ta cùng với mũi tên sau khi bạn ghi điểm không?
         studio_c3_game_7: 'Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại của họ.'
         studio_playlab_1: 'Bạn có thể giúp Waddles nói "Xin chào" không?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Jasmine (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
-        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
-        studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
+        studio_playlab_2: 'Cậu bé Hang Động (người 1) và Jasmine (người 2) muốn nói "xin chào" với nhau. Bạn có thể giúp họ bằng cách sử dụng khối "nói chuyện" 2 lần không?'
+        studio_playlab_3: Bạn có thể giúp cô gái Tennis nhận được cờ không?
+        studio_playlab_4: Bạn có thể giúp cậu bé Tennisa ( người 1) đến chỗ Cô gái Tennis và phát âm thanh khi cậu đến đó không?
+        studio_playlab_5: 'Bạn có thể giúp Spacebot nói "chúc mừng trần gian" khi nó được nhấp vào? Đừng quên bấm vào đó sau khi bạn bấm Chạy'
+        studio_playlab_6: Bạn có thể giúp Cô Phù thủy đi chuyển xung quanh bằng các phím lên/xuống/phải/trái để có được tất cả các quả cầu ma thuật không?
+        studio_playlab_7: 'Khối "Lặp lại mãi mãi" cho phép bạn chạy mã liên tục. Bạn có thể đính kèm khối để giúp thuật sĩ di chuyển bên phải và trái nhiều lần không?'
+        studio_playlab_8: Bạn có thể thêm một khối để ghi thêm điểm và một khối để phát ra âm thanh khi con Kì lân chạy xung quanh Thật sĩ, và sau đó di chuyển ông ấy cùng mũi tên cho đến khi bạn ghi điểm không?
+        studio_playlab_9: Thiết lập hình nền cho các cuộc xâm lược ngoài hành tinh và giúp Spacebot bắt được người ngoài hành tinh nhanh hơn bằng cách thay đổi tốc độ của nó. Sau đó di chuyển anh ấy với các phím mũi tên để giúp Spacebot và cảnh báo những người khác
         studio_playlab_10: 'Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại của họ.'
         studio_full_sandbox: 'Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại của họ.'
         studio_k1_1: 'Bạn có thể làm chú chó nói "hello world" không?'
@@ -363,8 +356,8 @@ vi:
         artist_intro: Giới thiệu về nghệ sĩ
         farmer_intro: Giới thiệu về nông dân
         flappy_intro: Giới thiệu về Flappy Bird
-        loop_times: Repeat Times Block
-        loop_until: Repeat Until Block
+        loop_times: Lặp lại khối Thời gian
+        loop_until: Lặp lại khối Cho đến khi
         if: 'Khối lệnh "nếu"'
         if_else: 'Khối lệnh "nếu/thì"'
         if_else_scrat: 'Khối lệnh "nếu/thì"'
@@ -391,7 +384,7 @@ vi:
         C1_pair_programming: Lập trình đôi
         C1_maze_intro_sequencing: Giới thiệu về mê cung và chuỗi
         C1_maze_debugging: 'Mê cung: gỡ lỗi'
-        C1_bee_level_intro: 'Bee Level - Intro'
+        C1_bee_level_intro: 'Bee Level - giới thiệu'
         C1_artist_intro: Giới thiệu về nghệ sĩ
         C1_spelling_bee_intro: Giới thiệu Ong Đánh Vần
         C1_zuck_repeat_loop: Vòng lặp mê cung
@@ -441,6 +434,8 @@ vi:
         C4_variables_artist: 'Biến - nghệ sĩ'
         C4_variables_playlab: 'Biến - Play Lab'
         C4_for_loops: Cho vòng lặp
+        C4_for_loops_bee: Cho vòng lặp
+        C4_for_loops_no_bee: Cho vòng lặp
         C4_math_artist: Lập trình các nghệ sĩ bằng toán
         C4_function_edit: Chỉnh sửa hàm
         C4_function_create: Tạo ra hàm
@@ -448,7 +443,7 @@ vi:
         C4_conditionals: Điều kiện
         C4_unplugged_algorithms: Các thuật toán với Tangrams
         C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_variables: Biến trong bao bọc
         C4_unplugged_forloops: Cho vòng lặp
         C4_unplugged_parameters: Sáng tác với tham số
         C4_unplugged_binary: Nhị phân
@@ -462,6 +457,7 @@ vi:
         infinity_playlab_intro: 'Phòng trò chơi - Giới thiệu'
         infinity_playlab_events: Sự kiện Phòng Trò Chơi
         infinity_playlab_repeat_forever: Phòng Trò Chơi lặp lại mãi mãi
+        csp_applab_functions: Giới thiệu về hàm
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
@@ -469,6 +465,7 @@ vi:
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
         csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'
@@ -489,6 +486,9 @@ vi:
         alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
         alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
         alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: 'Kéo một khối "di chuyển" và gán nó bên dưới khối khác'
@@ -502,26 +502,26 @@ vi:
         studio_say_text: Gõ những gì bạn muốn diễn viên của bạn nói trong các dấu ngoặc kép
         jigsaw_click: Nhấp vào khối này!
         move_elsa_forward: 'Kéo một khối lệnh "Di chuyển về phía trước" và gắn nó ngay dưới khối "Khi chạy" để làm cho Elsa di chuyển về phía trước'
-        turn_elsa: 'Sử dụng khối "Xoay" để Elsa xoay. Số khung bên trong khối xoay sẽ xác định Elsa quay một góc bao nhiêu độ'
+        turn_elsa: 'Sử dụng khối "rẽ" để làm Elsa rẽ. Số khung bên trong khối xoay sẽ xác định Elsa quay một góc bao nhiêu độ'
         replace_questions: 'Sử dụng tùy chọn ở trong khối lệnh để thay thế "???" với một số'
         replace_questions_degree: 'Sử dụng tùy chọn ở trong khối lệnh để thay thế "???" với góc cần thiết'
-        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        repeat_blocks: 'Sử dụng khối "Lặp lại" và đè nó xung quanh các khối trong vùng không gian làm việc'
         repeat_blocks_1: (1) sử dụng khối này và đặt nó bao quanh các khối màu xám
         repeat_blocks_2: '(2) di chuyển các khối "Lặp lại" ở đây, và đặt các khối màu xám bên trong'
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        snowflake_dropdown: Sử dụng cái này để thả xuống tạo các bông tuyết khác nhau!
         degrees_per_side: Chia 360 độ cho số cạnh để suy ra số độ của mỗi góc.
         set_sides: 'Sử dụng khối này để đặt "số cạnh" với số lượng cần thiết để hoàn thành câu đố.'
         set_length: 'Sử dụng khối này để đặt "chiều dài" về giá trị chính xác.'
-        which_equation: Which equation makes each side shorter for shapes with more sides?
+        which_equation: Cân bằng như thế nào để mỗi bên ngẵn hơn so với hình dạng bên?
         get_nectar: 'Sử dụng các khối mới tên là "lấy mật hoa".'
-        actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
+        actions_category: 'Hộp công cụ có một cái nhìn mới! Các khối "hành động" đã ở đây.'
         draw_square_hint: 'Gợi ý: Sử dụng các vòng lặp vuông bạn vừa tạo ra trong màn trước.'
         edit_function: Click vào đây để chỉnh sửa hàm của bạn.
-        create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
+        create_function: 'Nhấp vào đâu để mở hộp "chức năng", sau đó nhấp vào "tạo một chức năng mới".'
         house_hint: Có thể tạm thời chấp nhận hình vừa vẽ chưa giống nhà thật. Chúng ta sẽ sửa lại ở màn tiếp theo.
         edit_draw_square: Sử dụng nút này để chỉnh sửa các hàm và thêm vòng lặp.
         edit_get_nectar: Sử dụng nút này để chỉnh sửa các hàm và thay đổi hướng của ong để nó rẽ và lấy mật hoa.
-        logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
+        logic_category: 'Mở hộp "Logic" để tìm các khối "nếu/khác".'
         length_parameter: 'Bạn có thể viết lại hàm này để nó sử dụng tham số "chiều dài" không?'
         frozen_diamond_repeat: Sử dụng các khối lặp lại để vẽ ra hình này.
         frozen_circle_function_in_circle_turn: Đừng quên xoay một góc thích hợp sau khi tạo mỗi vòng tròn.

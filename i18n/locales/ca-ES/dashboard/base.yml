@@ -2,7 +2,7 @@ ca:
   errors:
     messages:
       not_saved: 'Si us plau corregeixi els errors següents:'
-      too_young: This content has age restrictions in place and is not available for younger students
+      too_young: "Aquest contingut té restriccions d'edat en el lloc i no està disponible per als estudiants més joves"
   activerecord:
     errors:
       messages:
@@ -312,8 +312,10 @@ ca:
       viewing_solution: Mostra la solució
       try_it_yourself: Prova-ho tu
       section: Secció
-      example: Example Solution
-      example_with_number: 'Example Solution %{solution_number}'
+      example: Exemple de solució
+      example_with_number: 'Exemple de solució %{solution_number}'
+      submitted_on: 'Submitted on %{date}'
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: "L'adreça de correu electrònic no ha estat confirmada:"
     email_confirm_needed_required: 'La seva adreça de correu electrònic %{email} no ha estat confirmada:'
@@ -377,7 +379,7 @@ ca:
     choose_next_course: Intenta un curs Code Studio triant-ne un a continuació
     print_certificate: Imprimeix el certificat
   share:
-    title: Learn on Code Studio
+    title: Aprendre sobre Code Studio
     description: Tothom pot aprendre programació. Crea jocs, apps i art amb codi.
   gender:
     male: Home
@@ -404,6 +406,7 @@ ca:
     tos: "Condicions d'ús"
     privacy: Política de Privacitat
     secure: Versió segura
+    report_abuse: Report Abuse
   reference_area:
     title: Necessites ajuda?
     subtitle: Mira aquests vídeos i consells
@@ -610,3 +613,24 @@ ca:
     view_all: Mostra els meus projectes
     remix: Remescla
     click_to_remix: 'Feu clic a "Remix" per iniciar la teva pròpia versió!'
+    edit_project: Edit Project
+    abuse:
+      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
+      go_to_code_studio: Go to Code Studio
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        validation:
+          email: Please provide an email address
+          age: Please specify an age
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
+          harassment: Threats, cyberbullying, harassement
+          offensive: Offensive content
+          infringement: Copyright Infringement
+          other: Altres
+        detail: Please provide as much detail as possible regarding the content you are reporting.
+        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'

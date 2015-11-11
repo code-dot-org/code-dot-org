@@ -7,7 +7,7 @@
 
 .row
   .col-xs-12.col-sm-8.col-md-6
-    %form#hoc-prizes-form{role: "form", onsubmit: "event.preventDefault();", enctype:'multipart/form-data', method: 'post', action: '/forms/HocHardwarePrizes2014'}
+    %form#hoc-prizes-form{role: "form", onsubmit: "event.preventDefault();", enctype:'multipart/form-data', method: 'post', action: '/forms/HocHardwarePrizes2015'}
       #error-message
 
       .form-group
@@ -41,8 +41,15 @@
       .form-group
         .checkbox
           %label{style: "font-weight: bold"}
-            %input#hoc-prizes-qualifying-school{name: "qualifying_school_b", type: "checkbox", value: "1"}/
-            =hoc_s(:hardware_prizes_form_qualifying_school_label)
+            %input#hoc-prizes-qualifying-school{name: "qualifying_school_b", type: "checkbox", value: "1", required: true}/
+            = hoc_s(:hardware_prizes_form_qualifying_school_label)
+
+      .form-group
+        .checkbox
+          %label{style: "font-weight: bold"}
+            %input#hoc-prizes-title-I-school{name: "title_I_school_b", type: "checkbox", value: "1", required: false}/
+            = hoc_s(:hardware_prizes_form_title_I_school_label)
+          %p= hoc_s(:hardware_prizes_form_title_I_school_help_text)
 
       .form-group
         %label.control-label{for: "hoc-prizes-number-students"}= hoc_s(:hardware_prizes_form_number_students_label)
@@ -50,10 +57,15 @@
           %input#hoc-prizes-number-students.form-control{name: "number_students_s", placeholder: hoc_s(:hardware_prizes_form_number_students_placeholder), type: "text", required: true}/
 
       .form-group
+        %label.control-label{for: "hoc-prizes-technology-plan"}= hoc_s(:hardware_prizes_form_technology_plan_label)
+        %div
+          %textarea#hoc-prizes-technology-plan.form-control{name: "technology_plan_s", placeholder: hoc_s(:hardware_prizes_form_technology_plan_placeholder), style: "height: 5em;", required: true, maxlength: 675}
+
+      .form-group
         %label.control-label{for: "hoc-prizes-plan-file"}= hoc_s(:hardware_prizes_form_plan_file_label)
         %div
-          %p= hoc_s(:hardware_prizes_form_plan_file_description).sub(/#([^#]+)# \| #([^#]+)#/, '<a href="/files/HOC_Logistics_plan.pdf">\1</a> | <a href="/files/HOC_Logistics_plan.doc">\2</a>')
-          %input#hoc-prizes-plan-file.form-control{name:'logistics_plan', type:'file'}
+          %p= hoc_s(:hardware_prizes_form_plan_file_description).sub(/#([^#]+)# \| #([^#]+)#/, '<a href="/files/HOC_Logistics_plan.pdf" target="_blank">\1</a> | <a href="/files/HOC_Logistics_plan.doc">\2</a>')
+          %input#hoc-prizes-plan-file.form-control{name:'logistics_plan', type:'file', required: true}
 
       %input{name:'hoc_country_s', type:'hidden', value:@country}
       %input{name:'hoc_company_s', type:'hidden', value:@country}

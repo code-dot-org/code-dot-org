@@ -692,7 +692,9 @@
         C4_bee_conditional: Biene Bedingungen
         C4_variables_artist: Variablen - Künstler
         C4_variables_playlab: Variablen - Spiele Labor
-        C4_for_loops: '"For"-Schleifen'
+        C4_for_loops: '"Für"-Schleifen'
+        C4_for_loops_bee: '"Für"-Schleifen'
+        C4_for_loops_no_bee: '"Für"-Schleifen'
         C4_math_artist: Programmiere den Künstler mit Mathematik
         C4_function_edit: Funktionen bearbeiten
         C4_function_create: Funktionen erstellen
@@ -701,7 +703,7 @@
         C4_unplugged_algorithms: Algorithmen mit Tangrammen
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variablen in Briefumschlägen
-        C4_unplugged_forloops: '"For"-Schleifen'
+        C4_unplugged_forloops: '"Für"-Schleifen'
         C4_unplugged_parameters: Komponieren mit Parametern
         C4_unplugged_binary: Binärdatei
         frozen_intro: Hour of Code Einführung
@@ -714,6 +716,7 @@
         infinity_playlab_intro: Play Lab - Einführung
         infinity_playlab_events: Play Lab - Ereignisse
         infinity_playlab_repeat_forever: Play Lab - Wiederhole ohne Ende
+        csp_applab_functions: Einführung in Funktionen
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: Color pixelation widget - Part 1
         csp_pixelation_color_2: Color pixelation widget - Part 2
@@ -721,6 +724,7 @@
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
         csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3
@@ -741,6 +745,9 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den

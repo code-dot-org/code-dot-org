@@ -93,7 +93,7 @@ sv:
         video: C2_relay_programming
       Conditionals:
         title: Villkor
-        desc: "För att lära om villkors-satser får eleverna spela ett kortspel och skapa regler som 'om jag darra ett rött kort får jag en poäng' och 'om jag drar ett svart kort får du en poäng'."
+        desc: "För att lära om villkors-satser får eleverna spela ett kortspel och skapa regler som 'om jag drar ett rött kort får jag en poäng' och 'om jag drar ett svart kort får du en poäng'."
         video: C2_conditionals_with_cards
       BigEvent:
         title: Den stora händelsen

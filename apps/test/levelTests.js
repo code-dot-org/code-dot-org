@@ -12,8 +12,56 @@
 var path = require('path');
 var assert = require('chai').assert;
 var $ = require('jquery');
+var React = require('react');
 var sinon = require('sinon');
 require('jquery-ui');
+
+window.React = React;
+
+// Anatomy of a level test collection. The example itself is uncommented so
+// that you get the benefits of editor syntax highlighting
+var example = {
+  // app name
+  app: "turtle",
+  // name of the level file within the app directory. will almost always be levels
+  levelFile: "levels",
+  // id of the level within the levels file
+  levelId: "5_5",
+  // a complete level defintion, can be used instead of levelFile/levelId
+  levelDefinition: {},
+  // a set of tests
+  tests: [
+    {
+      description: 'Text describing this test',
+      // this is passed to report
+      expected: {
+        result: true, // expected result value
+        testResult: 10 // expected testResult value
+      },
+      // a function that returns a level definition on demand. this allows for
+      // per test level definitions (dont need a collection levelId/levelDefinition
+      // if taking this approach)
+      delayLoadLevelDefinition: function () {},
+
+      // xml to be used for startBlocks. set to string 'startBlocks' if you want
+      // to use the xml from the level itself
+      xml: '',
+      // Prefix to add to the names of image and sound assets in applab instead of
+      // "/v3/assets/". Set this to "//localhost:8001/apps/test/assets/" and add
+      // files to apps/test/assets if you need requests for assets to succeed.
+      assetPathPrefix: '',
+      customValidator: function (assert) {
+        // optional function called at puzzle finish (i.e. when BlocklyApps.report
+        // is called.
+        return true; // test fails if it returns false
+      },
+      runBeforeClick: function (assert) {
+        // optional function called after puzzle loads, but before execution
+        // starts
+      }
+    }
+  ]
+};
 
 var testUtils = require('./util/testUtils');
 testUtils.setupLocales();
@@ -40,6 +88,20 @@ describe('Level tests', function() {
 
     window.jQuery = $;
     window.$ = $;
+    window.dashboard = $.extend(window.dashboard, {
+      i18n: {
+        t: function (selector) { return selector; }
+      },
+      // Right now we're just faking some of our dashboard project interactions.
+      // If this becomes insufficient, we might be able to require the project.js
+      // file from shared here.
+      project: {
+        clearHtml: function() {},
+        exceedsAbuseThreshold: function () { return false; },
+        getCurrentId: function () { return 'fake_id'; },
+        isEditing: function () { return true; }
+      }
+    });
 
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
@@ -77,10 +139,8 @@ describe('Level tests', function() {
     };
 
     if (window.Studio) {
-      var Projectile = require('@cdo/apps/studio/projectile');
-      Projectile.__resetIds();
-      var Item = require('@cdo/apps/studio/Item');
-      Item.__resetIds();
+      var StudioAnimation = require('@cdo/apps/studio/StudioAnimation');
+      StudioAnimation.__resetIds();
       Studio.JSInterpreter = undefined;
     }
 
@@ -138,7 +198,7 @@ function runTestCollection (item) {
 
       // todo - maybe change the name of expected to make it clear what type of
       // test is being run, since we're using the same JSON files for these
-      // and our getMissingRequiredBlocks tests (and likely also other things
+      // and our getMissingBlocks tests (and likely also other things
       // in the future)
       if (testData.expected) {
         it(testData.description, function (done) {

@@ -1,5 +1,6 @@
 name 'U3L18 Student Lesson Introduction'
 title 'Controlling Memory and Program Flow'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 18 - Improving the Clicker Game

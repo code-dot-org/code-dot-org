@@ -1,6 +1,17 @@
-# uncomment the below if you want to see code coverage
-#  require 'simplecov'
-#  SimpleCov.start :rails
+if ENV['COVERAGE'] # set this environment variable when running tests if you want to see test coverage
+  require 'simplecov'
+  SimpleCov.start :rails
+  module SimpleCov::Configuration
+    def clean_filters
+      @filters = []
+    end
+  end
+
+  SimpleCov.configure do
+    clean_filters
+    load_profile 'test_frameworks'
+  end
+end
 
 require 'minitest/reporters'
 MiniTest::Reporters.use!($stdout.tty? ? Minitest::Reporters::ProgressReporter.new : Minitest::Reporters::DefaultReporter.new)
@@ -25,18 +36,21 @@ Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.
 
 require 'rails/test_help'
 
-require "mocha/test_unit"
+require 'mocha/mini_test'
 
 # Raise exceptions instead of rendering exception templates.
-Dashboard::Application.config.action_dispatch.show_exceptions = false#
+Dashboard::Application.config.action_dispatch.show_exceptions = false
+
+require 'dynamic_config/gatekeeper'
+require 'dynamic_config/dcdo'
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
   setup do
-
     # sponsor message calls PEGASUS_DB, stub it so we don't have to deal with this in test
     UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
+    AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
 
     set_env :test
 
@@ -45,10 +59,11 @@ class ActiveSupport::TestCase
     # as in, I still need to clear the cache even though we are not 'performing' caching
     Rails.cache.clear
 
-    AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
-
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
+
+    Gatekeeper.clear
+    DCDO.clear
   end
 
   teardown do
@@ -59,19 +74,12 @@ class ActiveSupport::TestCase
   def set_env(env)
     Rails.env = env.to_s
     CDO.rack_env = env
-    # Prevent custom levels from being written out to files when emulating 'levelbuilder' environment in this test class
-    if Rails.env.levelbuilder?
-      ENV['FORCE_CUSTOM_LEVELS'] = '1'
-    else
-      ENV.delete 'FORCE_CUSTOM_LEVELS'
-    end
   end
-
 
   # some s3 helpers/mocks
   def expect_s3_upload
     CDO.disable_s3_image_uploads = false
-    AWS::S3.expects(:upload_to_bucket).returns(true).twice
+    AWS::S3.expects(:upload_to_bucket).returns(true)
   end
 
   def expect_s3_upload_failure
@@ -170,10 +178,11 @@ class ActionController::TestCase
 
   # override default html document to ask it to raise errors on invalid html
   def html_document
-    strict = true
-    xml = (@response.content_type =~ /xml$/)
-
-    @html_document ||= HTML::Document.new(@response.body, strict, xml)
+    @html_document ||= if @response.content_type === Mime::XML
+                         Nokogiri::XML::Document.parse(@response.body) { |config| config.strict }
+                       else
+                         Nokogiri::HTML::Document.parse(@response.body) { |config| config.strict }
+                       end
   end
 
   def assert_redirected_to_sign_in
@@ -277,4 +286,31 @@ class ActionDispatch::IntegrationTest
   setup do
     https!
   end
+end
+
+# Evaluates the given block temporarily setting the global locale to the specified locale.
+def with_locale(locale)
+  old_locale = I18n.locale
+  begin
+    I18n.locale = locale
+    yield
+  ensure
+    I18n.locale = old_locale
+  end
+end
+
+# Mock StorageApps to generate random tokens
+class StorageApps
+  def initialize(_); end
+  def create(_, _)
+    SecureRandom.base64 18
+  end
+  def most_recent(_)
+    create(nil, nil)
+  end
+end
+
+# Mock storage_id to generate random IDs
+def storage_id(_)
+  SecureRandom.hex
 end

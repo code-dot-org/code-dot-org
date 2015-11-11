@@ -99,11 +99,11 @@ id:
         Jigsaw: Teka-teki
         MazeStep: Mode tahapan labirin
         Wordsearch: Carikata
-        Webapp: Aplikasi Lab
+        Webapp: Laboratorium Aplikasi
         ArtistEC: Artis
         TextMatch: Cocok Teks
         StudioEC: Lab Permainan
-        Applab: Aplikasi Lab
+        Applab: Laboratorium Aplikasi
         NetSim: Simulator Internet
     trophy:
       name:
@@ -203,7 +203,7 @@ id:
         turtle_3_5: 'Sekarang buatlah fungsi baru "gambar sebuah rumah" dan gunakan untuk membuat rumah untuk dua kucing. Tips: membuat fungsi baru menggunakan blok "lakukan sesuatu", dan ketik teks Anda sendiri untuk memberi nama blok tersebut.'
         turtle_3_6: 'Gunakan "gambar persegi" sebagai contoh, tambahkan input bernama "panjang" untuk "gambar segitiga". Kemudian, gambar segitiga dalam berbagai ukuran. (Tips: Klik bintang untuk menambahkan masukan ke fungsi)'
         turtle_3_7: 'Tambahkan input bernama "tinggi" untuk "gambar rumah" dan membangun sebuah rumah yang besar untuk gajah (panjang 150 pixel)'
-        turtle_3_8: 'Memodifikasi "menggambar rumah" jadi saya berakhir di sudut kanan bawah setelah menggambar sebuah rumah baru. Gunakan fungsi memodifikasi ini untuk menggambar tiga rumah.'
+        turtle_3_8: 'Modifikasi "menggambar rumah" jadi sehingga saya berakhir di sudut kanan bawah setelah menggambar sebuah rumah baru. Gunakan fungsi yang telah dimodifikasi ini untuk menggambar tiga rumah.'
         turtle_3_9: 'Dapatkah Anda kembali membuat fungsi "gambar sebuah rumah" tanpa bantuan? Cobalah, dan kemudian gambarlah sederetan rumah.'
         turtle_3_10: Anda telah banyak belajar! Sekarang cobalah untuk menggambar apapun yang anda mau. Misalnya cobalah untuk menggambar sebuah bintang, sebuah spiral, atau kepingan salju.
         maze_karel_debug_seq_1: Selamat datang di debugging! Kode saya tidak bekerja dengan benar. Bisakah anda menemukan masalah dan memperbaikinya sehingga saya bisa mendapat lapangan datar dan siap tanam?
@@ -248,7 +248,7 @@ id:
         flappy_6: Perhatikan apakah Anda masih bisa mendapat Skor setelah mengubah Flappy mengepak sayap lebih banyak atau lebih sedikit.
         flappy_7: 'Selanjutnya, cobalah mengubah adegan dengan melampirkan blok yang lain ke blok "ketika menjalankan".'
         flappy_8: Kamu dapat mengatur visual kapan saja, tidak perlu hanya ketika permainan dimulai. Cobalah membuat latar belakang berubah secara acak ketika event berganti, misalnya ketika melewati penghalang.
-        flappy_9: Untuk mencampurkan hal-hal, ketika memukul sebuah benda, daripada mengakhiri permainan cobalah mengatur nilai kembali ke 0.
+        flappy_9: Untuk mencampurkan berbagai hal, ketika mengenai sebuah rintangan, daripada mengakhiri permainan cobalah atur nilai kembali ke 0.
         flappy_11: Butalah game Flappy anda. Anda dapat merubah semua visualisasi dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda agar ia mencoba pada ponselnya.
         flappy_k1_1: Mainkan Flappy
         flappy_k1_2: 'Tempatkan satu blok pada blok "Ketika klik", kemudian tekan "Jalankan Program". Klik atau sentuh layar untuk mengerakkan Flappy menuju target.'
@@ -258,7 +258,7 @@ id:
         flappy_k1_5: |-
           Flappy akan terbang melalui hambatan kecuali Anda menulis kode untuk membuatnya menabrak. Lampirkan blok ke blok "ketika mengenai hambatan". Kode Anda perlu 'Permainan berakhir' ketika Flappy menghantam set pipa pertama.
         flappy_k1_6: 'Mari kita tambahkan scoreboard, dan menghitung poin saat Flappy melewati hambatan. Tambahkan ke blok "ketika melewati hambatan", dan kemudian raihlah Skor lebih dengan membuat Flappy terbang melalui set pipa pertama.'
-        flappy_k1_7: Lihat jika Anda dapat Skor beberapa poin untuk melewati hambatan
+        flappy_k1_7: Lihat jika Anda dapat mencetak nilai beberapa poin karena melewati hambatan
         flappy_k1_8: 'Selanjutnya, cobalah mengubah adegan dengan melampirkan blok yang lain ke blok "ketika menjalankan".'
         flappy_k1_9: 'Cobalah mengubah pemain dengan menempatkan "mengatur pemain" blok ke blok "ketika menjalankan".'
         jigsaw_1: Klik blok
@@ -331,7 +331,7 @@ id:
         studio_k1_4: 'Membuat anjing bergerak menuju kucing dan kucing mengatakan "hello" ketika ia sampai disitu.'
         studio_k1_5: Bisakah kamu menambahkan sebuah blok untuk membuat si gurita senang?
         studio_k1_6: Buat cerita Anda sendiri! Gerakan kucing dan anjing, dan buat mereka mengatakan berbagai hal-hal.
-        maze_wordsearch_k_1: Pindahkan saya untuk mengeja kata Timur
+        maze_wordsearch_k_1: Pindahkan saya untuk mengeja kata EAST (Timur)
         maze_wordsearch_k_2: Pindahkan saya untuk mengeja kata Selatan
         maze_wordsearch_k_3: Pindahkan saya untuk mengeja kata Barat
         maze_wordsearch_k_4: Pindahkan saya untuk mengeja kata Utara
@@ -361,13 +361,13 @@ id:
         loop_for: Blok konter (Counter)
         parameters: Fungsi dengan parameter
         hoc_wrapup: Penutupan Jam kode
-        Unplug1: Apa itu CS?
+        Unplug1: Apa itu Ilmu Komputer?
         Unplug2: Berpikir secara komputasi
         Unplug3: Pemrograman grafis diatas kertas
         Unplug4: Algoritma
         Unplug5: Fungsi
         Unplug6: Kondisi
-        Unplug7: Penulis lagu
+        Unplug7: Menulis lagu
         Unplug8: Abstraksi
         Unplug9: Pemrograman relay
         Unplug10: Internet
@@ -378,14 +378,14 @@ id:
         C1_getting_loopy: Dapat berulang-ulang
         C1_pair_programming: Pemrograman berpasangan
         C1_maze_intro_sequencing: Introduksi Sekuensi Labirin
-        C1_maze_debugging: Labirin Debugging
-        C1_bee_level_intro: 'Tingkat Lebah - Introduksi'
+        C1_maze_debugging: Pengawakutuan labirin
+        C1_bee_level_intro: 'Tingkat Lebah - Pengenalan'
         C1_artist_intro: Apa itu Artis?
-        C1_spelling_bee_intro: Intro Spelling Bee
+        C1_spelling_bee_intro: Introduksi Mengeja
         C1_zuck_repeat_loop: Pengulangan labirin
         C1_bee_loops: Pengulangan lebah
         C1_maze_loops: Pengulangan labirin
-        C1_playlab_storytelling: 'Mainkan Lab - Buat sebuah Cerita'
+        C1_playlab_storytelling: 'Play Lab - Buat sebuah Cerita'
         C1_planting_seed: Penanaman benih
         C1_building_foundation: Membangun dasar
         C1_going_places_safely: Pergi ke tempat dengan aman
@@ -411,8 +411,8 @@ id:
         C3_bee_functions: Fungsi lebah
         C3_bee_conditionals: kondisi lebah
         C3_maze_conditionals: Kondisional labirin
-        C3_artist_nested_loops: Perulangan bercabang
-        C3_farmer_while: Perulangan While
+        C3_artist_nested_loops: Perulangan bertingkat
+        C3_farmer_while: Perulangan Selagi
         C3_bee_nested_loops: Perulangan bercabang
         C3_bee_debugging: Lebah Debugging
         C3_bounce: Terpental
@@ -429,27 +429,30 @@ id:
         C4_variables_artist: 'Variabel - artis'
         C4_variables_playlab: 'Variabel - permainan Lab'
         C4_for_loops: Untuk Pengulangan
+        C4_for_loops_bee: Untuk Pengulangan
+        C4_for_loops_no_bee: Untuk Pengulangan
         C4_math_artist: Pemrograman artis dengan matematika
         C4_function_edit: Fungsi menyunting
         C4_function_create: Fungsi membuat
         C4_function_parameters: Fungsi dengan parameter
         C4_conditionals: Kondisi
-        C4_unplugged_algorithms: Algoritma dengan Tangrams
+        C4_unplugged_algorithms: Algoritma dengan Tangram
         C4_unplugged_madlibs: Mad libs
         C4_unplugged_variables: Variabel dalam amplop
         C4_unplugged_forloops: Untuk Pengulangan
         C4_unplugged_parameters: Penulisan lagu dengan Parameter
         C4_unplugged_binary: Biner
         frozen_intro: Perkenalan Hour of Code
-        frozen_loops: Pengantar loop
+        frozen_loops: Pengenalan pengulangan
         frozen_functions: Pengenalan Fungsi
-        playlab_intro: Pengantar Lab Permainan
-        playlab_events: 'Lab Permainan Event '
-        playlab_repeat_forever: Lab Permainan Ulangi Selamanya
+        playlab_intro: Pengantar Play Lab
+        playlab_events: Acara Play Lab
+        playlab_repeat_forever: Pllay Lab Ulangi Selamanya
         tutorial_puzzle_challenge: Tutorial tantangan teka-teki
         infinity_playlab_intro: 'Play Lab - Pendahuluan'
         infinity_playlab_events: 'Play Lab - Kegiatan'
         infinity_playlab_repeat_forever: 'Play Lab - ulangi selamanya'
+        csp_applab_functions: Pengenalan Fungsi
         csp_concept_rgb: Sedikit tentang piksel
         csp_pixelation_color_1: 'widget pixelation Warna - Bagian 1'
         csp_pixelation_color_2: 'widget pixelation Warna - Bagian 2'
@@ -457,6 +460,7 @@ id:
         csp_pixelation_bw: 'widget pixelation Hitam dan Putih - Bagian 1'
         csp_U1L14_tipstricks: 'Unit 1 pelajaran 14 Tips & Trik guru'
         csp_textcompression: widget Teks kompresi
+        csp_textcompression_new: widget Teks kompresi
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'
@@ -477,6 +481,9 @@ id:
         alg_15_biggame_update_player: 'CS didalam Aljabar - Perbaharui Pemain Big Game/Permainan Besar'
         alg_16_biggame_collision_detection: 'CS didalam Aljabar - Deteksi Benturan Big Game/Permainan Besar'
         alg_17_sambat_compound_booleans: 'CS didalam Aljabar - GabunganBoolean'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: 'Tarik blok "gerak" dan letakkan di bawah blok lain'

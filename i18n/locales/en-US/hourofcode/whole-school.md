@@ -1,9 +1,13 @@
 * * *
 
-crwdns44305:0crwdne44305:0
+crwdns47205:0crwdne47205:0
 
 * * *
 
+<%= view :signup_button %>
+
 # crwdns44306:0crwdne44306:0
 
-crwdns44307:0crwdne44307:0
+crwdns47206:0crwdne47206:0
+
+<%= view :signup_button %>

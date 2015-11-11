@@ -2,8 +2,8 @@ require 'test_helper'
 
 class ScriptLevelsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
-
-  include LevelsHelper # test the levels helper stuff here because it has to do w/ routes...
+  include UsersHelper  # For user session state accessors.
+  include LevelsHelper  # Test the levels helper stuff here because it has to do w/ routes...
   include ScriptLevelsHelper
 
   setup do
@@ -25,15 +25,82 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                            stage: @custom_stage_2, :position => 1)
     @custom_s2_l2 = create(:script_level, script: @custom_script,
                            stage: @custom_stage_2, :position => 2)
+    client_state.reset
+
+    Gatekeeper.clear
   end
 
   test 'should show script level for twenty hour' do
     @controller.expects :slog
 
-    get :show, script_id: @script, stage_id: @script_level.stage.position, id: @script_level.position
+    get_show_script_level_page(@script_level)
     assert_response :success
 
     assert_equal @script_level, assigns(:script_level)
+  end
+
+  test 'should make script level pages uncachable by default' do
+    get_show_script_level_page(@script_level)
+
+    # Make sure the content is not cachable by default
+    assert_response :success
+
+    assert_caching_disabled response.headers['Cache-Control']
+  end
+
+  test 'should allow public caching for script level pages with default lifetime' do
+    Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
+
+    # Verify the default max age is used if none is specifically configured.
+    get_show_script_level_page(@script_level)
+    assert_caching_enabled response.headers['Cache-Control'],
+                           ScriptLevelsController::DEFAULT_PUBLIC_CLIENT_MAX_AGE,
+                           ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE
+  end
+
+  test 'should allow public caching for script level pages with dynamic lifetime' do
+    Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
+    DCDO.set('public_max_age', 3600)
+    DCDO.set('public_proxy_max_age', 7200)
+    get_show_script_level_page(@script_level)
+    assert_caching_enabled response.headers['Cache-Control'], 3600, 7200
+  end
+
+  test 'should make script level pages uncachable if disabled' do
+    # Enable and disable public caching and make sure we're back to uncached.
+    Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
+    Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: false)
+    get_show_script_level_page(@script_level)
+    assert_caching_disabled response.headers['Cache-Control']
+  end
+
+  def get_show_script_level_page(script_level)
+    get :show, script_id: script_level.script, stage_id: script_level.stage.position, id: script_level.position
+  end
+
+  # Asserts that each expected directive is contained in the cache-control header,
+  # delimited by commas and optional whitespace
+  def assert_cache_control_match(expected_directives, cache_control_header)
+    expected_directives.each do |directive|
+      assert_match(/(^|,)\s*#{directive}\s*(,|$)/, cache_control_header)
+    end
+  end
+
+  def assert_caching_disabled(cache_control_header)
+    expected_directives = [
+        'no-cache',
+        'no-store',
+        'must-revalidate',
+        'max-age=0']
+    assert_cache_control_match expected_directives, cache_control_header
+  end
+
+  def assert_caching_enabled(cache_control_header, max_age, proxy_max_age)
+    expected_directives = [
+        'public',
+        "max-age=#{max_age}",
+        "s-maxage=#{proxy_max_age}"]
+    assert_cache_control_match expected_directives, cache_control_header
   end
 
   test 'should not log an activity monitor start for netsim' do
@@ -77,6 +144,27 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     app_options = assigns(:level).blockly_options
     assert_equal '<xml/>', app_options[:level]['startBlocks']
   end
+
+  test 'project template level sets start html' do
+    template_level = create :applab
+    template_level.start_html = '<div><label id="label1">expected html</label></div>'
+    template_level.save!
+
+    real_level = create :applab
+    real_level.project_template_level_name = template_level.name
+    real_level.start_html = '<div><label id="label1">wrong html</label></div>'
+    real_level.save!
+
+    sl = create :script_level, level: real_level
+    get :show, script_id: sl.script, stage_id: '1', id: '1'
+
+    assert_response :success
+    # start html comes from project_level not real_level
+    app_options = assigns(:level).blockly_options
+    assert_equal '<div><label id="label1">expected html</label></div>', app_options[:level]['startHtml']
+  end
+
+
 
   test 'project template level sets toolbox blocks' do
     template_level = create :level
@@ -154,11 +242,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script = create(:script)
     stage = create(:stage, script: script, name: 'Testing Stage 1', position: 1)
     level_with_autoplay_video = create(:script_level, :with_autoplay_video, script: script, stage: stage, :position => 1)
-    assert_nil session[:videos_seen]
+    assert !client_state.videos_seen_for_test?
 
     get :show, script_id: level_with_autoplay_video.script, stage_id: stage.position, id: '1', noautoplay: 'true'
     assert_nil assigns(:view_options)[:autoplay_video]
-    assert_not_empty session[:videos_seen]
+    assert client_state.videos_seen_for_test?
 
     @controller = ScriptLevelsController.new
     get :show, script_id: level_with_autoplay_video.script, stage_id: stage.position, id: '1'
@@ -167,9 +255,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "shouldn't show autoplay video when already seen" do
     non_legacy_script_level = create(:script_level, :with_autoplay_video)
-    seen = Set.new
-    seen.add(non_legacy_script_level.level.video_key)
-    session[:videos_seen] = seen
+    client_state.add_video_seen(non_legacy_script_level.level.video_key)
     get :show, script_id: non_legacy_script_level.script, stage_id: '1', id: '1'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
@@ -204,7 +290,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
     assert_equal '/s/20-hour/stage/2/puzzle/2', build_script_level_path(sl)
     assert_routing({method: "get", path: build_script_level_path(sl)},
-        {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, stage_id: sl.stage.id.to_s, id: sl.position.to_s})
+        {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, stage_id: sl.stage.to_param, id: sl.to_param})
   end
 
   test "chapter based routing" do
@@ -361,7 +447,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     unplugged_curriculum_path_start = "curriculum/#{script_level.script.name}/#{script_level.stage.position}"
     assert_select '.pdf-button' do
-      assert_select "[href=?]", /.*#{unplugged_curriculum_path_start}.*/
+      assert_select ":match('href', ?)", /.*#{unplugged_curriculum_path_start}.*/
     end
 
     assert_equal script_level, assigns(:script_level)
@@ -375,13 +461,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show with the reset param should reset session when not logged in" do
-    session[:progress] = {5 => 10}
+    client_state.set_level_progress(5, 10)
 
     get :reset, script_id: Script::HOC_NAME
 
     assert_redirected_to hoc_chapter_path(chapter: 1)
 
-    assert !session[:progress]
+    assert client_state.level_progress_is_empty_for_test
     assert !session['warden.user.user.key']
   end
 
@@ -401,12 +487,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "reset resets for custom scripts" do
-    session[:progress] = {5 => 10}
+    client_state.set_level_progress(5, 10)
 
     get :reset, script_id: 'laurel'
     assert_redirected_to "/s/laurel/stage/1/puzzle/1"
 
-    assert !session[:progress]
+    assert client_state.level_progress_is_empty_for_test
     assert !session['warden.user.user.key']
   end
 
@@ -462,10 +548,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Script.find_by_name(Script::HOC_NAME)))
   end
 
-
   test 'post script redirect is frozen endpoint' do
     self.stubs(:current_user).returns(nil)
     assert_equal('//test.code.org/api/hour/finish/frozen', script_completion_redirect(Script.find_by_name(Script::FROZEN_NAME)))
+  end
+
+  test 'post script redirect is starwars endpoint' do
+    self.stubs(:current_user).returns(nil)
+    assert_equal('//test.code.org/api/hour/finish/starwars', script_completion_redirect(Script.find_by_name(Script::STARWARS_NAME)))
   end
 
   test 'end of HoC for logged in user works' do
@@ -501,25 +591,25 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     set_env :production
     get :show, script_id: Script::HOC_NAME, chapter: 1
 
-    assert_select 'img[src=//code.org/api/hour/begin_hourofcode.png]'
+    assert_select 'img[src="//code.org/api/hour/begin_hourofcode.png"]'
   end
 
   test 'should show tracking pixel for frozen chapter 1 in prod' do
     set_env :production
     get :show, script_id: Script::FROZEN_NAME, stage_id: 1, id: 1
-    assert_select 'img[src=//code.org/api/hour/begin_frozen.png]'
+    assert_select 'img[src="//code.org/api/hour/begin_frozen.png"]'
   end
 
   test 'should show tracking pixel for flappy chapter 1 in prod' do
     set_env :production
     get :show, script_id: Script::FLAPPY_NAME, chapter: 1
-    assert_select 'img[src=//code.org/api/hour/begin_flappy.png]'
+    assert_select 'img[src="//code.org/api/hour/begin_flappy.png"]'
   end
 
   test 'should show tracking pixel for playlab chapter 1 in prod' do
     set_env :production
     get :show, script_id: Script::PLAYLAB_NAME, stage_id: 1, id: 1
-    assert_select 'img[src=//code.org/api/hour/begin_playlab.png]'
+    assert_select 'img[src="//code.org/api/hour/begin_playlab.png"]'
   end
 
   test 'no report bug link for 20 hour' do
@@ -592,6 +682,34 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal last_attempt_data, assigns(:last_attempt)
   end
 
+  test 'loads applab if you are a teacher viewing your student and they have a channel id' do
+    sign_in @teacher
+
+    level = create :applab
+    script_level = create :script_level, level: level
+    ChannelToken.create!(level: level, user: @student) do |ct|
+      ct.channel = 'test_channel_id'
+    end
+
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @student.id, section_id: @section.id
+
+    assert_select '#codeApp'
+    assert_select '#notStarted', 0
+
+  end
+
+  test 'does not load applab if you are a teacher viewing your student and they do not have a channel id' do
+    sign_in @teacher
+
+    level = create :applab
+    script_level = create :script_level, level: level
+
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @student.id, section_id: @section.id
+
+    assert_select '#notStarted'
+    assert_select '#codeApp', 0
+  end
+
   test 'shows expanded teacher panel when student is chosen' do
     sign_in @teacher
 
@@ -606,6 +724,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_equal @section, assigns(:section)
     assert_equal @student, assigns(:user)
+
+    assert_equal true, assigns(:view_options)[:readonly_workspace]
+    assert_equal true, assigns(:level_view_options)[:skip_instructions_popup]
+    assert_equal [], assigns(:view_options)[:callouts]
   end
 
   test 'shows expanded teacher panel when section is chosen but student is not' do
@@ -672,6 +794,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '.teacher-panel' # showing teacher panel
     assert_select '.teacher-panel.hidden', 0 # not hidden
+
+    assert_equal true, assigns(:view_options)[:readonly_workspace]
+    assert_equal true, assigns(:level_view_options)[:skip_instructions_popup]
+    assert_equal [], assigns(:view_options)[:callouts]
   end
 
 
@@ -703,6 +829,63 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: sl.script, stage_id: sl.stage, id: sl
 
     assert_response :success
+  end
+
+  test 'submitted view option if submitted' do
+    sign_in @student
+
+    last_attempt_data = 'test'
+    level = create(:applab, submittable: true)
+    script_level = create(:script_level, level: level)
+    Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
+    ul = UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::SUBMITTED_RESULT)
+
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level
+    assert_response :success
+
+    assert_equal true, assigns(:level_view_options)[:submitted]
+    assert_equal "http://test.host/user_levels/#{ul.id}", assigns(:level_view_options)[:unsubmit_url]
+  end
+
+  def create_admin_script
+    create(:script, admin_required: true).tap do |script|
+      create :script_level, script: script
+    end
+  end
+
+  test "should not get show of admin script if not signed in" do
+    admin_script = create_admin_script
+
+    get :show, script_id: admin_script.name, stage_id: 1, id: 1
+    assert_redirected_to_sign_in
+  end
+
+  test "should not get show of admin script if signed in as not admin" do
+    admin_script = create_admin_script
+
+    sign_in create(:student)
+    get :show, script_id: admin_script.name, stage_id: 1, id: 1
+    assert_response :forbidden
+  end
+
+  test "should get show of admin script if signed in as admin" do
+    admin_script = create_admin_script
+
+    sign_in create(:admin)
+    get :show, script_id: admin_script.name, stage_id: 1, id: 1
+    assert_response :success
+  end
+
+  test "should have milestone posting disabled if Milestone is set" do
+    Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
+    get_show_script_level_page @script_level
+    assert_equal false, assigns(:view_options)[:post_milestone]
+  end
+
+  test "should not have milestone posting disabled if Milestone is not set" do
+    Gatekeeper.set('postMilestone', where: {script_name: 'Some other level'}, value: false)
+    get_show_script_level_page(@script_level)
+    assert_equal true, assigns(:view_options)[:post_milestone]
   end
 
 end
