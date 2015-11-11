@@ -1,5 +1,6 @@
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
+require 'cdo/hip_chat'
 
 class DynamicConfigController < ApplicationController
   before_filter :authenticate_user!
@@ -27,7 +28,8 @@ class DynamicConfigController < ApplicationController
     feature = params[:feature]
     where = JSON.load(params[:where]) or {}
     where = {} if where.nil?
-
+    log_msg = "<b>Gatekeeper - #{feature}</b> #{current_user.name} deleted rule where #{where}"
+    HipChat.log log_msg
     Gatekeeper.delete(feature, where: where)
     flash[:notice] = "Deleted successfully! Remember your changes take 30 seconds to go into effect, so don't expect to see the changes immediately on this page."
     redirect_to action: :gatekeeper_show, feature: feature
@@ -51,6 +53,9 @@ class DynamicConfigController < ApplicationController
 
     value = JSONValue.value(params[:value])
     Gatekeeper.set(feature, where: where, value: value)
+
+    log_msg = "<b>Gatekeeper - #{feature}</b> #{current_user.name} set #{where} to #{value}"
+    HipChat.log log_msg
 
     flash[:notice] = "Updated successfully! Remember your changes take 30 seconds to go into effect, so don't expect to see the changes immediately on this page."
     redirect_to action: :gatekeeper_show, feature: feature
