@@ -7,7 +7,13 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "onEvent": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
       "button": null,
       "textInput": null,
       "textLabel": null,
@@ -107,7 +113,9 @@
     "debugger_disabled": "true",
     "encrypted_examples": [
 
-    ]
+    ],
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

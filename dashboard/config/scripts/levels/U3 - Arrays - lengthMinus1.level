@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-11-10T19:16:55.000Z",
+  "created_at": "2015-11-11T14:19:41.000Z",
   "level_num": "custom",
   "user_id": 106,
   "properties": {
@@ -47,13 +47,13 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Calculate the sum of three values stored in an array. (Click to see full instructions)",
-    "markdown_instructions": "# Array Values: Arithmetic\r\n\r\nYou can reference locations in arrays in arithmetic expressions, just like you might a variable.\r\n\r\n![](https://images.code.org/a7d11342d8c72b34f2268e4104e43fbd-image-1447189790574.09.32 PM.png)\r\n\r\nThe starter code **creates an empty array and adds three random values to it**. You will be adding code to the program that calculates the sum of these values.\r\n\r\n![](https://images.code.org/51b7c713ae398299a85ee8c0b9ee04f3-image-1447190702799.23.46 PM.png)\r\n# Do This\r\n\r\n* Add code to the program that **calculates the sum of these three values**\r\n* Use `console.log` to confirm that you have correctly calculated the sum of the values. Below is sample output from one run of the program.\r\n\r\n| Result |\r\n| --- |\r\n| <img src=\"https://images.code.org/a9ca48808e8e833d92b3bcdebc7b0bd4-image-1447189975738.12.31 PM.png\" style=\"width: 200px; float: right; border: solid 1px black\"> |",
-    "start_blocks": "var myNumbers = [];\r\nappendItem(myNumbers,randomNumber(1,10));\r\nappendItem(myNumbers,randomNumber(1,10));\r\nappendItem(myNumbers,randomNumber(1,10));\r\n\r\n// Add your code here\r\n\r\nconsole.log(\"My numbers: \" + myNumbers);",
+    "instructions": "Use list.length - 1 to log the last item in the array to the console. (Click to see full instructions)",
+    "markdown_instructions": "# Expressions as Indexes: list.length - 1\r\n\r\nWe have been accessing information in an array by using numbers, but we can actually use **any expression that evaluates to a number as an index in our array**. The first example of this we will explore is accessing the last item in our array.\r\n\r\nArrays are **zero-indexed**, which means that the first index is 0. Therefore an array with a length of 3 will have indexes 0, 1, and 2. Notice that **the last index is 1 less than the length**. This will always be the case and so we can use this expression to access the last element in any array.\r\n\r\n![](https://images.code.org/4b9d62e451188ea00a58102110e447f6-image-1447267224677.28.31 PM.png)\r\n\r\n# Do This\r\n\r\n* **Starter code** has been provided that which creates an array of colors.\r\n* Use the syntax provided above and `console.log` to display the final item in the list.\r\n",
     "slider_speed": "1",
     "encrypted_examples": [
 
-    ]
+    ],
+    "start_blocks": "var colors = [\"red\",\"orange\",\"yellow\",\"green\",\"blue\",\"indigo\",\"violet\"];\r\n\r\n// Use list.length - 1 syntax to access the last element in this array and log it to the console"
   }
 }]]></config>
   <blocks/>
