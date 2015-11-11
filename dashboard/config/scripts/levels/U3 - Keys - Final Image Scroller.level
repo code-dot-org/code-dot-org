@@ -136,7 +136,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Final Image Scroller\r\n\r\nNow you've got some experience with handling keystrokes. Lets update your image scroller to respond to buttons and keys. \r\n\r\n**Remember:**  Use functions to keep from copying code from one location to another.\r\n\r\n# Do This\r\n\r\n* Make the images scroller **respond to both buttons and keys.**\r\n\r\n* **Add a secret key which when pressed plays a sound.**\r\n",
+    "markdown_instructions": "# Final Image Scroller\r\n\r\nNow you've got some experience with handling keystrokes. Lets update your image scroller to respond to buttons and keys. \r\n\r\n**Remember:**  Use functions to keep from copying repeated code.\r\n\r\n# Do This\r\n\r\n* Make the images scroller **respond to both buttons and keys.**\r\n\r\n* **Add a secret key which when pressed plays a sound.**\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

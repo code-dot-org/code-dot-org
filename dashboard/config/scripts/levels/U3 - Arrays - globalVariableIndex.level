@@ -1,12 +1,17 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-11-09T22:36:14.000Z",
+  "created_at": "2015-11-11T14:27:57.000Z",
   "level_num": "custom",
   "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
+      "addOperator": null,
+      "randomNumber": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
       "console.log": null,
       "declareAssign_x_array_1_4": {
         "block": "var list = [1,2,3];"
@@ -14,12 +19,9 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Write the contents of the array to the screen in order. (Click to see full instructions)",
-    "markdown_instructions": "# Index Practice\r\n\r\nIt will take some practice to get comfortable using array indexes. We'll do a couple of exercises to build your confidence. In this exercise you have been given an array called `myNumbers` which contains several values. Use array indexes to write the values contained in the array to the console in order from smallest to largest.\r\n\r\n# Do This\r\n\r\n* Use `console.log` and array indexes to write the contents of `myNumbers` to the screen in order, as shown below.\r\n* **Note:** to get you started we've done the first one for you.\r\n\r\n| Result |\r\n| --- |\r\n|<img src=\"https://images.code.org/a8e5241a654868cdfc48b60676bfe864-image-1447109178646.46.08 PM.png\" style=\"width: 75px; border: solid 1px black\"> |\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
-    "slider_speed": "1",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -45,7 +47,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "var myNumbers = [3, 2, 5, 7, 4];\r\nconsole.log(myNumbers[1]);",
+    "instructions": "Write a sentence word by word by adding strings to an array. (Click to see full instructions)",
+    "markdown_instructions": "# Inserting Items: String Indexes\r\n\r\nSo far we have been adding elements to the end of our array, but there are many times you'll want to add them to somewhere in the middle. In order to do so you'll need to specify the **index** at which the item should be inserted.\r\n\r\n# Do This\r\n\r\n* Create an **empty array**\r\n* Use `appendItem` to **individually add strings to your array**, forming a sentence.\r\n* Use `console.log` to confirm you succesfully created your sentence.",
+    "slider_speed": "1",
     "encrypted_examples": [
 
     ]
