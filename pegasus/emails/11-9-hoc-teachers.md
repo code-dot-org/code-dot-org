@@ -19,7 +19,7 @@ Students will learn to write JavaScript to power their games. A tablet-friendly,
 
 <% if international == 'false' %>
 #### Prizes for every educator — and a behind-the-scenes “Making of Star Wars” experience
-There are 75,000 Hour of Code events signed up worldwide. Help your students join in on this record-breaking event! One Hour of Code can be enough to inspire the course of their lives. [**Join in**](https://hourofcode.com). 
+There are 80,000 Hour of Code events signed up worldwide. Help your students join in on this record-breaking event! One Hour of Code can be enough to inspire the course of their lives. [**Join in**](https://hourofcode.com). 
 
 - *Every* organizer worldwide will receive a gift card to Amazon, iTunes or Windows Store.
 - One school in every US state will win $10,000 worth of technology for your school.
@@ -27,7 +27,7 @@ There are 75,000 Hour of Code events signed up worldwide. Help your students joi
 - 100 participating classrooms will win a BB-8 droid robots that students can program.
 <% else %>
 #### Prizes for every educator
-There are 77,000 Hour of Code events signed up worldwide. Help your students join in on this record-breaking event! Every organizer will receive a gift card to Amazon, iTunes or Windows Store. [**Join in**](https://hourofcode.com).
+There are 80,000 Hour of Code events signed up worldwide. Help your students join in on this record-breaking event! Every organizer will receive a gift card to Amazon, iTunes or Windows Store. [**Join in**](https://hourofcode.com).
 <% end %>
 
 I couldn’t be more excited to share [*Star Wars*: Building a Galaxy with Code](https://code.org/starwars) with you today. Code your own game, share it, and tell us what you think. 
