@@ -704,22 +704,35 @@ en:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
         TLO in Practice: TLO in Practice
-      Test External Markdown: {}
+      Test External Markdown:
+        Test External Markdown: Test External Markdown
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
-      U1L1 Innovation - Video: {}
-      U1L1 Student Lesson Introduction: {}
+      U1L1 Innovation - Video:
+        Impact of Innovation - Video: Impact of Innovation - Video
+        description here: description here
+      U1L1 Student Lesson Introduction:
+        Impact of Innovation: Impact of Innovation
+        description here: description here
       U1L10 Student Lesson Introduction:
         description here: description here
         title: title
       U1L11 Student Lesson Introduction:
         description here: description here
         title: title
-      U1L12 Student Lesson Introduction: {}
-      U1L13 Student Lesson Summary: {}
-      U1L14 Student Lesson Summary: {}
-      U1L15 Student Lesson Summary: {}
+      U1L12 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U1L13 Student Lesson Summary:
+        description here: description here
+        title: title
+      U1L14 Student Lesson Summary:
+        description here: description here
+        title: title
+      U1L15 Student Lesson Summary:
+        description here: description here
+        title: title
       U1L16 Student Lesson Introduction:
         Lossy Compression and File Formats: Lossy Compression and File Formats
         description here: description here
@@ -738,8 +751,12 @@ en:
       U1L4 Widget Demo - Video:
         Widget Demonstration - Video: Widget Demonstration - Video
         description here: description here
-      U1L5 How the Internet Works - Video: {}
-      U1L5 Student Lesson Introduction: {}
+      U1L5 How the Internet Works - Video:
+        How the Internet Works - Video: How the Internet Works - Video
+        description here: description here
+      U1L5 Student Lesson Introduction:
+        description here: description here
+        title: title
       U1L6 Student Lesson Introduction:
         description here: description here
         title: title
@@ -749,7 +766,9 @@ en:
       U1L8 Student Lesson Introduction:
         Sending Numbers: Sending Numbers
         description here: description here
-      U1L9 Student Lesson Introduction: {}
+      U1L9 Student Lesson Introduction:
+        description here: description here
+        title: title
       U2 Encryption and Public Keys - Video:
         'The Internet: Encryption and Public Keys - Video': 'The Internet: Encryption and Public Keys - Video'
         description here: description here
@@ -769,21 +788,27 @@ en:
       U2L12 Student Lesson Introduction:
         description here: description here
         title: title
-      U2L13 Student Lesson Introduction: {}
-      U2L14 Student Lesson Introduction: {}
-      U2L15 Student Lesson Introduction: {}
+      U2L13 Student Lesson Introduction:
+        Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
+      U2L14 Student Lesson Introduction:
+        Cracking the Code: Cracking the Code
+      U2L15 Student Lesson Introduction:
+        Encryption Algorithms: Encryption Algorithms
       U2L16 Student Lesson Introduction:
         Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
       U2L17 Student Lesson Introduction:
         Algorithms Detour - Hard Problems TSP: Algorithms Detour - Hard Problems TSP
         description here: description here
-      U2L18 Student Lesson Introduction: {}
+      U2L18 Student Lesson Introduction:
+        One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
       U2L19 Student Lesson Introduction:
         Public Key Encryption: Public Key Encryption
       U2L2 Student Lesson Introduction:
         The Need for Addressing: The Need for Addressing
-      U2L20 Student Lesson Introduction: {}
-      U2L3 Student Lesson Introduction: {}
+      U2L20 Student Lesson Introduction:
+        Security and Hacking in the Real World: Security and Hacking in the Real World
+      U2L3 Student Lesson Introduction:
+        Lesson 3 - Invent an addressing protocol: Lesson 3 - Invent an addressing protocol
       'U2L3: IP DNS Video':
         IP/DNS Video: IP/DNS Video
         'Internet: IP/DNS': 'Internet: IP/DNS'
@@ -794,8 +819,11 @@ en:
         description here: description here
       U2L5 Student Lesson Introduction:
         Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
-      U2L6 Student Lesson Introduction: {}
-      U2L7 Student Lesson Introduction: {}
+      U2L6 Student Lesson Introduction:
+        Algorithm detour - Minimum Spanning Tree: Algorithm detour - Minimum Spanning Tree
+      U2L7 Student Lesson Introduction:
+        description here: description here
+        title: title
       U2L8 Student Lesson Introduction:
         description here: description here
         title: title
@@ -928,7 +956,8 @@ en:
       U3L20 - combining And and Or explanation:
         description here: description here
         title: title
-      U3L20 Student Lesson Introduction: {}
+      U3L20 Student Lesson Introduction:
+        Conditional Basics: Conditional Basics
       U3L21 Student Lesson Introduction:
         More Variables: More Variables
       U3L22 Student Lesson Introduction:
@@ -940,11 +969,14 @@ en:
       U3L24 Return Statements Lecture: {}
       U3L24 Student Lesson Introduction:
         Chained Conditionals: Chained Conditionals
-      U3L25 Student Lesson Introduction: {}
+      U3L25 Student Lesson Introduction:
+        Compound Conditionals: Compound Conditionals
       U3L26 Student Lesson Introduction:
         Strings and Substrings: Strings and Substrings
-      U3L27 Student Lesson Introduction: {}
-      U3L28 Student Lesson Introduction: {}
+      U3L27 Student Lesson Introduction:
+        Digital Assistant Challenge: Digital Assistant Challenge
+      U3L28 Student Lesson Introduction:
+        While Loop Basics: While Loop Basics
       U3L29 Student Lesson Introduction:
         While Loops and Counting: While Loops and Counting
       U3L30 Student Lesson Introduction:
@@ -1032,7 +1064,9 @@ en:
         description here: description here
         title: title
       Unit 3 Survey 2: {}
-      a bit about pixels: {}
+      a bit about pixels:
+        kevin systrom pixel video: kevin systrom pixel video
+        pixel video: pixel video
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try
@@ -1831,12 +1865,79 @@ en:
         Match the bit sending technology with the underlying system: Match the bit sending technology with the underlying system
         'Matching Assessment: Sending Bits in the Real World': 'Matching Assessment: Sending Bits in the Real World'
         Radio Wave: Radio Wave
-      'U2L06 - Matching: Label the Diagram': {}
-      U2L14 Assessment: {}
-      U2L14 Assessment4: {}
-      U2L17 - Vocabulary matching: {}
-      U2L18 Match terms to cups and beans analogy: {}
-      U2L3 Assessment: {}
+      'U2L06 - Matching: Label the Diagram':
+        A: A
+        B: B
+        C: C
+        Cycle: Cycle
+        D: D
+        E: E
+        Edge: Edge
+        Graph: Graph
+        Graph Terminology: Graph Terminology
+        Look at the diagram below and then match the proper term with what each label is pointing to.: Look at the diagram below and then match the proper term with what each label is pointing to.
+        Node: Node
+        Weight: Weight
+      U2L14 Assessment:
+        'Assessment: Question 1': 'Assessment: Question 1'
+        Caesar cipher: Caesar cipher
+        another term for encrypted message: another term for encrypted message
+        character frequency: character frequency
+        cipher: cipher
+        decrypt: decrypt
+        encrypt: encrypt
+        encryption based upon the alphabetical order of letters: encryption based upon the alphabetical order of letters
+        encryption in which arbitrary symbols replace letters: encryption in which arbitrary symbols replace letters
+        heuristic: heuristic
+        random substitution cipher: random substitution cipher
+        technique used to find an approximate solution: technique used to find an approximate solution
+        the distribution of letters in a language: the distribution of letters in a language
+        use an algorithm to decode a message: use an algorithm to decode a message
+        use an algorithm to encode a message: use an algorithm to encode a message
+      U2L14 Assessment4:
+        AMKZMB UMAAIOM APPPP: AMKZMB UMAAIOM APPPP
+        'Assessment: Question 5': 'Assessment: Question 5'
+        Caesar Shift Cipher(of 18): Caesar Shift Cipher(of 18)
+        GBRXBN MBGGEFB GTTTT: GBRXBN MBGGEFB GTTTT
+        ? |-
+          Given the original plaintext: “SECRET MESSAGE SHHHH”
+          Match the encryption method to the output:
+        : |-
+          Given the original plaintext: “SECRET MESSAGE SHHHH”
+          Match the encryption method to the output:
+        Random Substitution Cipher: Random Substitution Cipher
+        TEMVVU WIITAQIQTHRLY: TEMVVU WIITAQIQTHRLY
+        Vigenere Cipher: Vigenere Cipher
+      U2L17 - Vocabulary matching:
+        " <br>Brute force": " <br>Brute force"
+        "<br>Computationally hard": "<br>Computationally hard"
+        "<br>Heuristic": "<br>Heuristic"
+        "<br>One Way Function": "<br>One Way Function"
+        A problem that requires an unreasonable amount of time to solve, even for many computers: A problem that requires an unreasonable amount of time to solve, even for many computers
+        An algorithm that is easy to run but results in output that is hard or impossible to reverse: An algorithm that is easy to run but results in output that is hard or impossible to reverse
+        Assessment 2 - Matching: Assessment 2 - Matching
+        Rules or an algorithm for finding an approximate solution: Rules or an algorithm for finding an approximate solution
+        Trying every possible solution to a problem to find the answer<br><br><br>: Trying every possible solution to a problem to find the answer<br><br><br>
+      U2L18 Match terms to cups and beans analogy:
+        A sealed cup of beans that Alice puts on the table: A sealed cup of beans that Alice puts on the table
+        Alice dumping the beans out of the cup and counting off her original number: Alice dumping the beans out of the cup and counting off her original number
+        Asymmetric Encryption Assessment 2 - Match the terms to their counterpart in the Cups and Beans Activity: Asymmetric Encryption Assessment 2 - Match the terms to their counterpart in the Cups and Beans Activity
+        Bob adding beans to the cup: Bob adding beans to the cup
+        Decrypting a message: Decrypting a message
+        Encrypting a message: Encrypting a message
+        Private key: Private key
+        Public key: Public key
+        The number of beans Alice chooses to put in the cup initially: The number of beans Alice chooses to put in the cup initially
+      U2L3 Assessment:
+        A chunk of information that gets sent on the internet: A chunk of information that gets sent on the internet
+        A packet of data that uses 32-bit addresses: A packet of data that uses 32-bit addresses
+        A well-known set of rules and standards used to communicate: A well-known set of rules and standards used to communicate
+        IPv4 packet: IPv4 packet
+        Internet Protocol: Internet Protocol
+        'Invent an Addressing Protocol: Question 1': 'Invent an Addressing Protocol: Question 1'
+        The required structure of a packet to be sent on the internet: The required structure of a packet to be sent on the internet
+        packet: packet
+        protocol: protocol
       U3L05 Assessment1:
         Effort: Effort
         Programming Efficiency Question 1: Programming Efficiency Question 1
@@ -2799,7 +2900,14 @@ en:
         rocket-height(seconds) = seconds * 10 - 3: rocket-height(seconds) = seconds * 10 - 3
         rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds * 7 + 10
         rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds * 7 + 3
-      U1L07 Assessment 1: {}
+      U1L07 Assessment 1:
+        A: A
+        B: B
+        C: C
+        D: D
+        E: E
+        Single Source Shortest Path Assessment: Single Source Shortest Path Assessment
+        Which one is the shortest path tree from the source node indicated?: Which one is the shortest path tree from the source node indicated?
       U1L10 Assessment 1:
         2 bits: 2 bits
         3 bits: 3 bits
@@ -2824,7 +2932,13 @@ en:
           The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
 
           How many bits would you need to encode everything that could be typed on this keyboard?
-      U1L11 Assessment 1: {}
+      U1L11 Assessment 1:
+        16 bits: 16 bits
+        24 bits: 24 bits
+        3 bits: 3 bits
+        32 bits: 32 bits
+        8 bits: 8 bits
+        'Assessment: Sending Numbers': 'Assessment: Sending Numbers'
       U1L11 Assessment 2:
         041 108 108 111 119: 041 108 108 111 119
         065 110 110 105 101: 065 110 110 105 101
@@ -2849,7 +2963,13 @@ en:
         'Multiple Choice: Sending Complex Messages': 'Multiple Choice: Sending Complex Messages'
         ? When sending a response to a question with four possible answers, the most efficient method will require no more than what number of bits?
         : When sending a response to a question with four possible answers, the most efficient method will require no more than what number of bits?
-      U1L4 Multiple Choice: {}
+      U1L4 Multiple Choice:
+        AAAA: AAAA
+        AABB: AABB
+        ABAB: ABAB
+        ABBB: ABBB
+        BBBB: BBBB
+        'Multiple Choice: Coordination and Binary Messages': 'Multiple Choice: Coordination and Binary Messages'
       U1L6 Assessment multiple choice:
         '10': '10'
         '12': '12'
@@ -2883,30 +3003,190 @@ en:
         Restricted Fiduciary Contract: Restricted Fiduciary Contract
         'The Internet is for Everyone: Assessment 2': 'The Internet is for Everyone: Assessment 2'
         What is an RFC?: What is an RFC?
-      U2L01 Assessment 3: {}
-      U2L02 Assessment 3: {}
-      U2L02 Assessment 4: {}
-      U2L04 Assessment1: {}
-      U2L04 Assessment4: {}
-      U2L04 Assessment5: {}
-      U2L05 Assessment 1: {}
-      U2L05 Assessment 2: {}
-      'U2L06 - MC: Which is an MST?': {}
-      'U2L06- MC: what is an MST?': {}
-      U2L07 Assessment2: {}
-      U2L07 Assessment3: {}
-      U2L08 Assessment 1: {}
-      U2L09 Assessment1: {}
-      U2L10 Assessment1: {}
-      U2L10 Assessment2: {}
-      U2L11 Assessment 1: {}
-      U2L11 Assessment 2: {}
-      U2L13 Assessment3: {}
-      U2L13 Assessment4: {}
-      U2L14 Assessment3: {}
-      U2L15 Assessment1: {}
-      U2L15 Assessment3: {}
-      U2L15 Assessment4: {}
+      U2L01 Assessment 3:
+        'Choose the two best answers to complete the sentence: If I understand how the internet works then I will be able to:': 'Choose the two best answers to complete the sentence: If I understand how the internet works then I will be able to:'
+        'The Internet is for Everyone: Assessment 3': 'The Internet is for Everyone: Assessment 3'
+        connect the latest devices to the internet.: connect the latest devices to the internet.
+        get the best price for my cell phone plan.: get the best price for my cell phone plan.
+        make informed choices about my privacy on the internet.: make informed choices about my privacy on the internet.
+        'make informed choices to support or oppose decisions my government makes about access to the internet. ': 'make informed choices to support or oppose decisions my government makes about access to the internet. '
+        speed up my downloads of movies I purchase.: speed up my downloads of movies I purchase.
+      U2L02 Assessment 3:
+        'The Need For Addressing: Assessment 1': 'The Need For Addressing: Assessment 1'
+        'To improve communication in playing battleship on the Internet Simulator your group invented a(n):': 'To improve communication in playing battleship on the Internet Simulator your group invented a(n):'
+        algorithm: algorithm
+        encoding: encoding
+        heuristic: heuristic
+        protocol: protocol
+      U2L02 Assessment 4:
+        From: From
+        Grid Coordinates: Grid Coordinates
+        'The Need For Addressing: Assessment 2': 'The Need For Addressing: Assessment 2'
+        Time: Time
+        To: To
+        Which of the following information is not necessary in your protocol to play battleship?: Which of the following information is not necessary in your protocol to play battleship?
+      U2L04 Assessment1:
+        Everyone is on the same router.: Everyone is on the same router.
+        'In the Internet Simulator, your router knows to send your message to a different router because:': 'In the Internet Simulator, your router knows to send your message to a different router because:'
+        Messages are routed over different paths.: Messages are routed over different paths.
+        'Routers and Redundancy: Question 1': 'Routers and Redundancy: Question 1'
+        The first 4 bits of the address specify the router number that your friend is on.: The first 4 bits of the address specify the router number that your friend is on.
+        You set the “other router” bit in the message.: You set the “other router” bit in the message.
+      U2L04 Assessment4:
+        ? If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?
+        : If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?
+        Letters would be written on the outside of envelopes for all to read instead of letters put inside envelopes.: Letters would be written on the outside of envelopes for all to read instead of letters put inside envelopes.
+        One mailman would be responsible for delivering a letter from sender to receiver.: One mailman would be responsible for delivering a letter from sender to receiver.
+        'Routers and Redundancy: Question 2': 'Routers and Redundancy: Question 2'
+        The mailman would sometimes take a different path to deliver each letter to your home.: The mailman would sometimes take a different path to deliver each letter to your home.
+        Your mail could not be delivered if a road your mailman was planning to take were under construction.: Your mail could not be delivered if a road your mailman was planning to take were under construction.
+      U2L04 Assessment5:
+        ? A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.
+        : A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.
+        A packet travelling between two computers on the Internet may be rerouted many times along the way.: A packet travelling between two computers on the Internet may be rerouted many times along the way.
+        Information travelling between two computers over the Internet will always take the same path.: Information travelling between two computers over the Internet will always take the same path.
+        'Routers and Redundancy: Question 3': 'Routers and Redundancy: Question 3'
+        There is one router which receives and redirects all the traffic of the Internet.: There is one router which receives and redirects all the traffic of the Internet.
+        Which two of the following statements are true about routing on the Internet.: Which two of the following statements are true about routing on the Internet.
+        Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.: Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.
+      U2L05 Assessment 1:
+        'Packets and Making a Reliable Internet: Question 1': 'Packets and Making a Reliable Internet: Question 1'
+        ? Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
+        : Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
+        'Pick Two: Pick the two statements about packets and routing on the Internet which are true.': 'Pick Two: Pick the two statements about packets and routing on the Internet which are true.'
+        TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission: TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission
+        TCP ensures messages can be reliably transmitted across the Internet: TCP ensures messages can be reliably transmitted across the Internet
+        TCP must account for the fact that packets may not arrive at a destination computer in the intended order: TCP must account for the fact that packets may not arrive at a destination computer in the intended order
+      U2L05 Assessment 2:
+        A message sent across the Internet can always be contained in a single packet: A message sent across the Internet can always be contained in a single packet
+        'Packets and Making a Reliable Internet: Question 2': 'Packets and Making a Reliable Internet: Question 2'
+        Packets are numbered so if they arrive out of order the message can be reassembled.: Packets are numbered so if they arrive out of order the message can be reassembled.
+        Packets are routed on different paths from sender to receiver.: Packets are routed on different paths from sender to receiver.
+        The receiver computer must confirm to the sending computer that each packet was received.: The receiver computer must confirm to the sending computer that each packet was received.
+        Which of the following is NOT true about packets?: Which of the following is NOT true about packets?
+      'U2L06 - MC: Which is an MST?':
+        ? "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
+        : "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
+        A: A
+        B: B
+        C: C
+        D: D
+        E: E
+        Which one is the MST?: Which one is the MST?
+      'U2L06- MC: what is an MST?':
+        Minimum Spanning Trees: Minimum Spanning Trees
+        The fewest number and smallest total distance of connections necessary to connect all points in a graph: The fewest number and smallest total distance of connections necessary to connect all points in a graph
+        ? The fewest number and smallest total distance of connections necessary to travel from one point to all the other points without having to visit a point twice
+        : The fewest number and smallest total distance of connections necessary to travel from one point to all the other points without having to visit a point twice
+        The shortest path between any two points for all points in the graph: The shortest path between any two points for all points in the graph
+        The shortest path from a particular point in the graph to another point in the graph: The shortest path from a particular point in the graph to another point in the graph
+        What does a minimum spanning tree tell you about a graph?: What does a minimum spanning tree tell you about a graph?
+        Whether or not the graph represents a network: Whether or not the graph represents a network
+      U2L07 Assessment2:
+        A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.: A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.
+        ? |-
+          Both the minimum spanning tree algorithm you learned and the
+          shortest path algorithm you learned used a “greedy” approach,
+          choosing the smallest edge first or vertex with the smallest distance value first.
+        : |-
+          Both the minimum spanning tree algorithm you learned and the
+          shortest path algorithm you learned used a “greedy” approach,
+          choosing the smallest edge first or vertex with the smallest distance value first.
+        Question 2: Question 2
+        The minimum spanning tree algorithm you learned does not necessarily need to try every edge.: The minimum spanning tree algorithm you learned does not necessarily need to try every edge.
+        The shortest path algorithm you learned visits each vertex and edge once.: The shortest path algorithm you learned visits each vertex and edge once.
+        'Which of the following statements is FALSE about minimum spanning trees (from the previous lesson) and shortest path trees:': 'Which of the following statements is FALSE about minimum spanning trees (from the previous lesson) and shortest path trees:'
+      U2L07 Assessment3:
+        Question 3: Question 3
+        The algorithm is correct.: The algorithm is correct.
+        The algorithm is efficient.: The algorithm is efficient.
+        The algorithm is short.: The algorithm is short.
+        The algorithm is understandable.: The algorithm is understandable.
+        Which of the following is NOT something we are concerned with when we write an algorithm?: Which of the following is NOT something we are concerned with when we write an algorithm?
+      U2L08 Assessment 1:
+        '11': '11'
+        '5': '5'
+        '6': '6'
+        '8': '8'
+        '9': '9'
+        'Router Table: Assessment': 'Router Table: Assessment'
+      U2L09 Assessment1:
+        ? A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
+        : A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
+        A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.
+        B. There are too few IP addresses to meet the current demand.: B. There are too few IP addresses to meet the current demand.
+        C. When someone new joins the Internet they must inform everyone else of the new IP address: C. When someone new joins the Internet they must inform everyone else of the new IP address
+        D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.: D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.
+        'The Need for DNS: Question 1': 'The Need for DNS: Question 1'
+      U2L10 Assessment1:
+        A. Redundancy: A. Redundancy
+        Assessment Question 1: Assessment Question 1
+        B. Hierarchy: B. Hierarchy
+        C. Multiple servers: C. Multiple servers
+        D. Government control: D. Government control
+        What feature of DNS and IP allow the internet to scale?: What feature of DNS and IP allow the internet to scale?
+      U2L10 Assessment2:
+        Assessment Question 2: Assessment Question 2
+        Censorship: Censorship
+        Hierarchy: Hierarchy
+        Redundancy: Redundancy
+        Spoofing: Spoofing
+        What is a disadvantage of the open standard of addressing used by the internet? (Pick 2): What is a disadvantage of the open standard of addressing used by the internet? (Pick 2)
+      U2L11 Assessment 1:
+        'HTTP and Abstraction on the Internet: Question 1': 'HTTP and Abstraction on the Internet: Question 1'
+        'HTTP is considered to be a high level protocol because:': 'HTTP is considered to be a high level protocol because:'
+        HTTP messages can be either requests or responses.: HTTP messages can be either requests or responses.
+        HTTP requests are encoded using higher frequency radio waves.: HTTP requests are encoded using higher frequency radio waves.
+        HTTP requests are given higher priority for fast delivery when being routed on the Internet.: HTTP requests are given higher priority for fast delivery when being routed on the Internet.
+        HTTP requests make use of abstractions provided by lower level protocols.: HTTP requests make use of abstractions provided by lower level protocols.
+      U2L11 Assessment 2:
+        An HTTP request is sent from a client to request access to data stored on a server.: An HTTP request is sent from a client to request access to data stored on a server.
+        An HTTP response code is only used when a server could not fulfill a request.: An HTTP response code is only used when a server could not fulfill a request.
+        'Choose Two: Identify the two true statements about HTTP.': 'Choose Two: Identify the two true statements about HTTP.'
+        Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.: Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.
+        'HTTP and Abstraction on the Internet: Question 2': 'HTTP and Abstraction on the Internet: Question 2'
+        HTTP requests and responses have identical formats.: HTTP requests and responses have identical formats.
+      U2L13 Assessment3:
+        A secret word only know by Caesar.: A secret word only know by Caesar.
+        'Assessment: Question 2': 'Assessment: Question 2'
+        The day of the month that the encrypted message was sent.: The day of the month that the encrypted message was sent.
+        The letter that occurs most often in the encrypted message.: The letter that occurs most often in the encrypted message.
+        The number of characters to shift each letter in the alphabet.: The number of characters to shift each letter in the alphabet.
+        What is the “key” to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?: What is the “key” to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?
+      U2L13 Assessment4:
+        '26': '26'
+        26 x 25: 26 x 25
+        26 × 25 × 24 ×···× 3 × 2 x 1: 26 × 25 × 24 ×···× 3 × 2 x 1
+        26^26: 26^26
+        'Assessment: Question 3': 'Assessment: Question 3'
+        The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?: The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?
+      U2L14 Assessment3:
+        'Assessment: Question 4': 'Assessment: Question 4'
+        True or false? The Vigenere Cipher is like using multiple Caesar ciphers.: True or false? The Vigenere Cipher is like using multiple Caesar ciphers.
+        'false': 'false'
+        'true': 'true'
+      U2L15 Assessment1:
+        A Vigenere cipher relies upon an "alphabet shift" algorithm.: A Vigenere cipher relies upon an "alphabet shift" algorithm.
+        'Assessment: Question 1': 'Assessment: Question 1'
+        Long keys create exponential growth possibilities.: Long keys create exponential growth possibilities.
+        One cannot solve using frequency analysis directly.: One cannot solve using frequency analysis directly.
+        The key is always secret to both the sender and receiver of the message.: The key is always secret to both the sender and receiver of the message.
+        Why is the Vigenere cipher hard to crack? (select 2): Why is the Vigenere cipher hard to crack? (select 2)
+      U2L15 Assessment3:
+        'Assessment: Question 3': 'Assessment: Question 3'
+        Computers are faster than humans.: Computers are faster than humans.
+        Computers are smarter than humans.: Computers are smarter than humans.
+        The Vigenere was originally designed by a computer.: The Vigenere was originally designed by a computer.
+        They are not - humans are better at breaking Vigenere encryptions than computers.: They are not - humans are better at breaking Vigenere encryptions than computers.
+        Why are computers better than humans at breaking encryptions such as the Vigenere?: Why are computers better than humans at breaking encryptions such as the Vigenere?
+      U2L15 Assessment4:
+        8 random characters that include numbers and punctuation: 8 random characters that include numbers and punctuation
+        A 150 character password that is all the same character.: A 150 character password that is all the same character.
+        A 16 character password that is all letters of the alphabet: A 16 character password that is all letters of the alphabet
+        A 32 character password that is all letters of the alphabet: A 32 character password that is all letters of the alphabet
+        A word from the dictionary: A word from the dictionary
+        'Assessment: Question 4': 'Assessment: Question 4'
+        'Which makes for a password that is harder to crack:': 'Which makes for a password that is harder to crack:'
       U2L17 - One Way functions Def MC:
         Easy to create and easy to solve: Easy to create and easy to solve
         Easy to create and hard to solve: Easy to create and hard to solve
@@ -2914,8 +3194,22 @@ en:
         Hard to create and hard to solve: Hard to create and hard to solve
         One-Way Functions: One-Way Functions
         Which of the following correctly defines a one-way function?: Which of the following correctly defines a one-way function?
-      U2L17 Free Responses Assessment 1: {}
-      U2L19 multichoice 13 MOD 17: {}
+      U2L17 Free Responses Assessment 1:
+        Assessment 1: Assessment 1
+        Easy to create and easy to solve: Easy to create and easy to solve
+        Easy to create and hard to solve: Easy to create and hard to solve
+        Hard to create and easy to solve: Hard to create and easy to solve
+        Hard to create and hard to solve: Hard to create and hard to solve
+        Select the best answer.: Select the best answer.
+        Which of the following correctly defines a one-way function?: Which of the following correctly defines a one-way function?
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        1 4/13: 1 4/13
+        '13': '13'
+        '17': '17'
+        '4': '4'
+        Modulo Multiple Choice: Modulo Multiple Choice
+        'What is 13 MOD 17? ': 'What is 13 MOD 17? '
       'U2L19 mutlichoice ':
         '0': '0'
         '1.5': '1.5'
@@ -2924,9 +3218,29 @@ en:
         '5': '5'
         Modulo Multiple Choice: Modulo Multiple Choice
         What is 20 MOD 15?: What is 20 MOD 15?
-      U2L19 mutlichoice 20 mod 15: {}
-      U2L3 Assessment 2: {}
-      U2L3 Assessment 3: {}
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+        Modulo Multiple Choice: Modulo Multiple Choice
+        What is 20 MOD 15?: What is 20 MOD 15?
+      U2L3 Assessment 2:
+        12 users: 12 users
+        32 users: 32 users
+        6 users: 6 users
+        64 users: 64 users
+        How many users would a fixed-length IP address system using 6 bits support?: How many users would a fixed-length IP address system using 6 bits support?
+        'Invent an Addressing Protocol: Question 1': 'Invent an Addressing Protocol: Question 1'
+      U2L3 Assessment 3:
+        ? 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
+        : 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
+        'Invent an Addressing Protocol: Question 2': 'Invent an Addressing Protocol: Question 2'
+        abstraction: abstraction
+        hierarchy: hierarchy
+        packet: packet
+        protocol: protocol
       U3L01 Assessment2:
         ? "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
         : "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
@@ -2936,12 +3250,50 @@ en:
         Spread 1 slice with jelly: Spread 1 slice with jelly
         Spread 1 slice with peanut butter: Spread 1 slice with peanut butter
         Why Programming? Question 2: Why Programming? Question 2
-      U3L03 - multiselect - properties of functions: {}
-      U3L03 Assessment: {}
-      U3L04 Assessment2: {}
-      U3L06 Assessment2: {}
-      U3L06-API-multichoice: {}
-      U3L07 - MC remove line of code loops: {}
+      U3L03 - multiselect - properties of functions:
+        Choose Two - True statements about functions: Choose Two - True statements about functions
+        Choose the two (2) statements that are true about functions: Choose the two (2) statements that are true about functions
+        Functions in programming are named groupings of programming instructions.: Functions in programming are named groupings of programming instructions.
+        Functions in programming are useful mathematical tools for doing complex computations.: Functions in programming are useful mathematical tools for doing complex computations.
+        Meaningful function names help <em>computers</em> better understand programs.: Meaningful function names help <em>computers</em> better understand programs.
+        Meaningful function names help <em>people</em> better understand programs.: Meaningful function names help <em>people</em> better understand programs.
+      U3L03 Assessment:
+        Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
+        Functions cannot make calls to other functions written by the same programmer.: Functions cannot make calls to other functions written by the same programmer.
+        Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
+        Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
+        Multiple Choice - False statements about functions: Multiple Choice - False statements about functions
+        Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
+        Which of the following is NOT a true statement about functions?: Which of the following is NOT a true statement about functions?
+      U3L04 Assessment2:
+        'Multiple Choice: Functions and Top-Down Design': 'Multiple Choice: Functions and Top-Down Design'
+        Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.: Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.
+        Top-Down Design leads to programs which feature multiple layers of abstraction.: Top-Down Design leads to programs which feature multiple layers of abstraction.
+        Top-Down Design relies upon identifying sub-problems of a larger problem.: Top-Down Design relies upon identifying sub-problems of a larger problem.
+        Two programmers solving the same problem using Top-Down Design should arrive at identical programs.: Two programmers solving the same problem using Top-Down Design should arrive at identical programs.
+        Which of the following statements about writing functions and Top-Down Design is NOT true?: Which of the following statements about writing functions and Top-Down Design is NOT true?
+        Writing functions helps manage complexity in a program.: Writing functions helps manage complexity in a program.
+      U3L06 Assessment2:
+        A collection of commands that can be used in a programming language.: A collection of commands that can be used in a programming language.
+        A named memory location.: A named memory location.
+        A way to give input to a function that controls how the function runs.: A way to give input to a function that controls how the function runs.
+        Another name for the purpose of a function.: Another name for the purpose of a function.
+        'Multiple Choice: What is a function parameter?': 'Multiple Choice: What is a function parameter?'
+        para-meter -- a measure of the distance between a function\’s conception and implementation.: para-meter -- a measure of the distance between a function\’s conception and implementation.
+      U3L06-API-multichoice:
+        Abstract Parameter Interface: Abstract Parameter Interface
+        Abstract Programming Inheritance: Abstract Programming Inheritance
+        Application Program Interface: Application Program Interface
+        Applied Power Implementation: Applied Power Implementation
+        Artificial Parameter Intelligence: Artificial Parameter Intelligence
+        'Multiple Choice: What is an API?': 'Multiple Choice: What is an API?'
+      U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+        Which line of code should be removed to make the program do what it's supposed to?: Which line of code should be removed to make the program do what it's supposed to?
       U3L07 Assessment2:
         APIs and Parameters Question 3: APIs and Parameters Question 3
         Left(45): Left(45)
@@ -2951,7 +3303,13 @@ en:
         forward100( ): forward100( )
         forward283( ): forward283( )
         forward50( ): forward50( )
-      U3L08 Assessment1: {}
+      U3L08 Assessment1:
+        'Choose Two: Functions with Parameters': 'Choose Two: Functions with Parameters'
+        Functions with parameters can be used to prevent the creation of duplicated code.: Functions with parameters can be used to prevent the creation of duplicated code.
+        Parameters can only be used once within the body of a function.: Parameters can only be used once within the body of a function.
+        Parameters help generalize the solution of a specific problem.: Parameters help generalize the solution of a specific problem.
+        Select the two true statements about functions with parameters: Select the two true statements about functions with parameters
+        Values do not need to be provided to a function with parameters in any particular order.: Values do not need to be provided to a function with parameters in any particular order.
       U3L08 Assessment3:
         'Functions with Parameters: Question 3': 'Functions with Parameters: Question 3'
         There is an error in one line of the following code. What line is it in?: There is an error in one line of the following code. What line is it in?
@@ -2975,7 +3333,14 @@ en:
         'When the "left" button is clicked: nothing will happen': 'When the "left" button is clicked: nothing will happen'
         'When the forward button is clicked: The turtle will move forward and turn left': 'When the forward button is clicked: The turtle will move forward and turn left'
         description here: description here
-      U3L13 debugging Multi: {}
+      U3L13 debugging Multi:
+        A program that does not generate any error messages will run as intended.: A program that does not generate any error messages will run as intended.
+        Debugging is the process of locating and correcting errors in a program.: Debugging is the process of locating and correcting errors in a program.
+        Error messages help programmers identify problems in their code.: Error messages help programmers identify problems in their code.
+        It is common for programs to contain errors the first time they are written.: It is common for programs to contain errors the first time they are written.
+        Multiple Choice - Debugging and Error Messages: Multiple Choice - Debugging and Error Messages
+        Not all errors in a program will generate an error message.: Not all errors in a program will generate an error message.
+        Which of the following statements about debugging and program errors is FALSE?: Which of the following statements about debugging and program errors is FALSE?
       U3L14 - MC Duplicate Ids:
         A warning message will appear for the second button that that ID is already in use.: A warning message will appear for the second button that that ID is already in use.
         Buttons and IDs: Buttons and IDs
@@ -3820,7 +4185,13 @@ en:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
-      Blocks to Math 1: {}
+      Blocks to Math 1:
+        "(4+5)": "(4+5)"
+        4 + 5: 4 + 5
+        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks, 200
+        Convert Blocks to Math: Convert Blocks to Math
+        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
+        Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Math 2:
         "(7 * 6)": "(7 * 6)"
         7 * 6: 7 * 6
@@ -4039,8 +4410,12 @@ en:
       U1L12 Reflection Free Response:
         'Reflection: Data Storage': 'Reflection: Data Storage'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
-      U1L13 - Assess Text Compression reverse process: {}
-      U1L13 Assess Text Compression amount: {}
+      U1L13 - Assess Text Compression reverse process:
+        Act as the computer!: Act as the computer!
+        the big bug bit the bull but the bull bit the big bug back: the big bug bit the bull but the bull bit the big bug back
+        the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
+      U1L13 Assess Text Compression amount:
+        Is this a good compression rate?: Is this a good compression rate?
       U1L13 Assessment 1:
         Why Compress?: Why Compress?
       U1L13 Assessment 2:
@@ -4056,7 +4431,9 @@ en:
         'If you send a compressed segment of text would your friend will be able to read it?  ': 'If you send a compressed segment of text would your friend will be able to read it?  '
       U1L14 - Assessment 2:
         'Assessment: Encoding B&W Images': 'Assessment: Encoding B&W Images'
-      U1L14 Assessment 1: {}
+      U1L14 Assessment 1:
+        'Assessment: Encoding B&W Images': 'Assessment: Encoding B&W Images'
+        'What are the largest dimensions (width and height) of an image we can make with the pixelation widget? ': 'What are the largest dimensions (width and height) of an image we can make with the pixelation widget? '
       U1L16 Reflection Free Response:
         'Reflection: Encoding Complex data': 'Reflection: Encoding Complex data'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
@@ -4075,7 +4452,9 @@ en:
         Complete the Lesson 3 Rubric.: Complete the Lesson 3 Rubric.
         Enter your reflection here.: Enter your reflection here.
         'Reflection: Sending Complex Messages': 'Reflection: Sending Complex Messages'
-      U1L4 Free Response Reflection: {}
+      U1L4 Free Response Reflection:
+        Enter your reflection here.: Enter your reflection here.
+        Reflect on this lesson: Reflect on this lesson
       U1L4 Free response reflection question:
         'Assessment: Coordination and Binary Messages': 'Assessment: Coordination and Binary Messages'
         Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
@@ -4106,72 +4485,124 @@ en:
       U1L9 Free Response Assessment:
         'Reflection: Real-World Numbers ': 'Reflection: Real-World Numbers '
       U2L01 Assessment 4: {}
-      U2L02 Assessment 5: {}
+      U2L02 Assessment 5:
+        Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?: Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?
+        'The Need For Addressing: Assessment 3': 'The Need For Addressing: Assessment 3'
       U2L02 Assessment1:
         'The Need for Addressing: Question 1': 'The Need for Addressing: Question 1'
       U2L02 Assessment2:
         'The Need for Addressing: Security Concerns': 'The Need for Addressing: Security Concerns'
       U2L02 Free Response Getting Started:
         'The Need for Addressing: Getting Started': 'The Need for Addressing: Getting Started'
-      U2L02 Free Response Reflection: {}
-      U2L04 Assessment2: {}
-      U2L04 Assessment3: {}
+      U2L02 Free Response Reflection:
+        'The Need for Addressing: Reflection': 'The Need for Addressing: Reflection'
+      U2L04 Assessment2:
+        'Routers and Redundancy: Question 4': 'Routers and Redundancy: Question 4'
+      U2L04 Assessment3:
+        'Routers and Redundancy: Question 5': 'Routers and Redundancy: Question 5'
       U2L04 Free Response Wrap Up:
         'Routers and Addresses: Wrap Up': 'Routers and Addresses: Wrap Up'
-      U2L05 Reflection 1: {}
-      U2L07 Assessment4: {}
-      U2L07 Assessment5: {}
+      U2L05 Reflection 1:
+        Enter your reflection here.: Enter your reflection here.
+        'Packets: Reflection': 'Packets: Reflection'
+      U2L07 Assessment4:
+        '43': '43'
+        Question 4: Question 4
+      U2L07 Assessment5:
+        Question 5: Question 5
       U2L08 Assessment 0: {}
-      U2L08 Free Response 1: {}
-      U2L08 Free Response 2: {}
-      U2L08 Free Response 3: {}
-      U2L09 Assessment2: {}
-      U2L09 Free Response Wrap Up: {}
-      U2L10 Assessment3: {}
-      U2L10 Free Response Getting Started: {}
-      U2L10 Free Response Wrap Up: {}
-      U2L11 Free Response: {}
-      U2L13 Assessment1: {}
+      U2L08 Free Response 1:
+        'Router Table: Reflection': 'Router Table: Reflection'
+      U2L08 Free Response 2:
+        'Router Table: Reflection': 'Router Table: Reflection'
+      U2L08 Free Response 3:
+        'Router Table: Reflection': 'Router Table: Reflection'
+      U2L09 Assessment2:
+        'Assessment: Question 2': 'Assessment: Question 2'
+      U2L09 Free Response Wrap Up:
+        'The Need for DNS: Wrap Up': 'The Need for DNS: Wrap Up'
+      U2L10 Assessment3:
+        Assessment Question 3: Assessment Question 3
+      U2L10 Free Response Getting Started:
+        'DNS in the Real World: Getting Started': 'DNS in the Real World: Getting Started'
+      U2L10 Free Response Wrap Up:
+        'DNS in the Real World: Wrap Up': 'DNS in the Real World: Wrap Up'
+      U2L11 Free Response:
+        'HTTP and Abstraction on the Internet: Free Response': 'HTTP and Abstraction on the Internet: Free Response'
+      U2L13 Assessment1:
+        'Assessment: Question 1': 'Assessment: Question 1'
       U2L13 Assessment2:
         'Assessment: Question 2': 'Assessment: Question 2'
-      U2L13 Free Response Getting Started: {}
-      U2L13 Free Response Wrap Up: {}
-      U2L14 Assessment2: {}
-      U2L14 Free Response Getting Started: {}
-      U2L14 Free Response Wrap Up: {}
-      U2L15 Assessment2: {}
+      U2L13 Free Response Getting Started:
+        'Tell Me a Secret: Getting Started': 'Tell Me a Secret: Getting Started'
+      U2L13 Free Response Wrap Up:
+        'Tell Me a Secret: Wrap Up': 'Tell Me a Secret: Wrap Up'
+      U2L14 Assessment2:
+        'Assessment: Question 3': 'Assessment: Question 3'
+        ? "Using the Vigenere cipher, does the length of the key matter? \nFor example, if one key is length 5 and another is 20, does one produce a “better” encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning."
+        : "Using the Vigenere cipher, does the length of the key matter? \nFor example, if one key is length 5 and another is 20, does one produce a “better” encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning."
+      U2L14 Free Response Getting Started:
+        'Cracking the Code: Getting Started': 'Cracking the Code: Getting Started'
+      U2L14 Free Response Wrap Up:
+        'Assessment: Question 2': 'Assessment: Question 2'
+      U2L15 Assessment2:
+        'Assessment: Question 2': 'Assessment: Question 2'
       U2L15 Free Response Getting Started:
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
       U2L15 Free Response Wrap Up:
         'Encryption Algorithms: Wrap Up': 'Encryption Algorithms: Wrap Up'
-      U2L16 Free Response Assessment 3: {}
+      U2L16 Free Response Assessment 3:
+        Assessment 3: Assessment 3
+        Enter answer here: Enter answer here
+        Why are computationally-hard problems important in encryption strategies?: Why are computationally-hard problems important in encryption strategies?
       U2L16 Free Response assessment 2:
         Lesson 16 - Assessment 2: Lesson 16 - Assessment 2
         What do people do who need solutions to large computationally-hard problems?: What do people do who need solutions to large computationally-hard problems?
       U2L16 Free response assessment 1:
         Lesson 16 - Assessment 1: Lesson 16 - Assessment 1
         What does "computationally hard" mean?: What does "computationally hard" mean?
-      U2L17 Assessment 1: {}
-      U2L17 Assessment 2: {}
-      U2L17 Free Response Getting Started: {}
-      U2L17 Free Response Wrap Up: {}
-      U2L18 Assessment: {}
+      U2L17 Assessment 1:
+        Assessment Question 1: Assessment Question 1
+        Describe what it means for a problem to be “computationally hard.”: Describe what it means for a problem to be “computationally hard.”
+      U2L17 Assessment 2:
+        Assessment Question 2: Assessment Question 2
+        What strategies do people use to solve large computationally-hard problems?: What strategies do people use to solve large computationally-hard problems?
+      U2L17 Free Response Getting Started:
+        'Hard Problems: Getting Started': 'Hard Problems: Getting Started'
+        What kinds of problems do you think are “computationally hard"?: What kinds of problems do you think are “computationally hard"?
+      U2L17 Free Response Wrap Up:
+        'Hard Problems: Wrap Up': 'Hard Problems: Wrap Up'
+        ? If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?
+        : If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?
+      U2L18 Assessment:
+        Reflection: Reflection
       U2L18 FR why is asymmetric encryption useful:
         Asymmetric Encryption - why is it useful?: Asymmetric Encryption - why is it useful?
-      U2L18 Free Response Assessment 1: {}
-      U2L18 Free Response Assessment 3: {}
-      U2L18 Free Response Getting Started: {}
+      U2L18 Free Response Assessment 1:
+        Asymmetric Encryption Assessment 1: Asymmetric Encryption Assessment 1
+        ? In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why asymmetric encryption is useful
+        : In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why asymmetric encryption is useful
+      U2L18 Free Response Assessment 3:
+        Asymmetric Encryption Assessment 3: Asymmetric Encryption Assessment 3
+        List other examples of one-way functions. Can you think of a one-way function in real life?: List other examples of one-way functions. Can you think of a one-way function in real life?
+      U2L18 Free Response Getting Started:
+        Assessment 3: Assessment 3
       U2L18 Free Response Wrap Up:
         'One Way Functions: Wrap Up': 'One Way Functions: Wrap Up'
-      U2L19 Assessment: {}
-      U2L19 Free Response Getting Started: {}
-      U2L19 Free Response Wrap Up: {}
+      U2L19 Assessment:
+        'Assessment: Modulo and one-way functions': 'Assessment: Modulo and one-way functions'
+      U2L19 Free Response Getting Started:
+        'Public Key Crypto: The Modulo Operation': 'Public Key Crypto: The Modulo Operation'
+      U2L19 Free Response Wrap Up:
+        'Public Key Crypto: Why is it safe?': 'Public Key Crypto: Why is it safe?'
       U2L20 - Free Response - exploited technology: {}
       U2L20 Free Response Getting Started:
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
       U2L20 Free Response Wrap Up: {}
       U2L20 Free Response Wrap Up 2: {}
-      U2L3 Assessment 4: {}
+      U2L3 Assessment 4:
+        'Inventing an Addressing Protocol: Question 3': 'Inventing an Addressing Protocol: Question 3'
+        Why does it not make sense for users to be identified by their real names on the Internet?: Why does it not make sense for users to be identified by their real names on the Internet?
       U2L3 Free Response Getting Started:
         'Invent an Addressing Protocol: Getting Started': 'Invent an Addressing Protocol: Getting Started'
       U2L3 Free Response Wrap Up:
@@ -4180,26 +4611,34 @@ en:
         'Routers and Addresses: Getting Started': 'Routers and Addresses: Getting Started'
       U2L9 Free Response Getting Started:
         'The Need for DNS: Getting Started': 'The Need for DNS: Getting Started'
-      U3L01 Assessment1: {}
-      U3L01 Assessment3: {}
+      U3L01 Assessment1:
+        'Free Response: Interpreting Instructions': 'Free Response: Interpreting Instructions'
+      U3L01 Assessment3:
+        'Free Response: Programming Language Features': 'Free Response: Programming Language Features'
       U3L01 Free Response Getting Started:
         Why Programming and Programming Languages?: Why Programming and Programming Languages?
       U3L01 Free Response Wrap Up:
         Why Programming? Wrap Up: Why Programming? Wrap Up
-      U3L02 Assessment: {}
-      U3L02 Free Response Getting Started: {}
-      U3L02 Free Response Wrap Up: {}
+      U3L02 Assessment:
+        'Free Response: What is efficiency in programming?': 'Free Response: What is efficiency in programming?'
+      U3L02 Free Response Getting Started:
+        'Free Response: Why limit to 4?': 'Free Response: Why limit to 4?'
+      U3L02 Free Response Wrap Up:
+        'Reflection: Programming with Simple Commands': 'Reflection: Programming with Simple Commands'
       U3L03 Free Response Getting Started:
         'Creating Procedures Part 1: Getting Started': 'Creating Procedures Part 1: Getting Started'
       U3L03 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
-      U3L03 Free Response Wrap Up: {}
-      U3L04 Assessment1: {}
+      U3L03 Free Response Wrap Up:
+        'Reflection: Why functions?': 'Reflection: Why functions?'
+      U3L04 Assessment1:
+        'Free Response: Top-Down Design': 'Free Response: Top-Down Design'
       U3L04 Free Response Getting Started:
         'Creating Procedures Part 2: Getting Started': 'Creating Procedures Part 2: Getting Started'
       U3L04 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
-      U3L04 Free Response Wrap Up: {}
+      U3L04 Free Response Wrap Up:
+        'Free Response: Abstraction to Manage Complexity': 'Free Response: Abstraction to Manage Complexity'
       U3L05 Assessment2:
         Programming Efficiency Question 2: Programming Efficiency Question 2
       U3L05 Assessment3:
@@ -4210,7 +4649,8 @@ en:
         'Programming Efficiency: Getting Started': 'Programming Efficiency: Getting Started'
       U3L05 Free Response Reflection:
         'Programming Efficiency: Reflection': 'Programming Efficiency: Reflection'
-      U3L06 Assessment: {}
+      U3L06 Assessment:
+        'Free Response: Function Parameters': 'Free Response: Function Parameters'
       U3L06 Free Response Getting Started:
         APIs and Function Parameters: APIs and Function Parameters
       U3L06 Free Response Reflection:
@@ -4219,8 +4659,10 @@ en:
         APIs and Function Parameters Wrap Up: APIs and Function Parameters Wrap Up
       U3L07 Free Response Getting Started:
         'Looping and Random Numbers: Getting Started': 'Looping and Random Numbers: Getting Started'
-      U3L07 Free Response Reflection: {}
-      U3L08 Assessment2: {}
+      U3L07 Free Response Reflection:
+        'Reflection: Looping and Random Numbers': 'Reflection: Looping and Random Numbers'
+      U3L08 Assessment2:
+        'Free Response: Functions with Parameters': 'Free Response: Functions with Parameters'
       U3L08 Free Response Getting Started:
         'Functions with Parameters: Getting Started': 'Functions with Parameters: Getting Started'
       U3L08 Free Response Wrap Up:
@@ -4247,11 +4689,13 @@ en:
         'Reflection: Mission Unsortable': 'Reflection: Mission Unsortable'
       U3L13 Free Response Getting Started:
         Buttons on the Screen - Getting Started: Buttons on the Screen - Getting Started
-      U3L13 Free Response Reflection: {}
+      U3L13 Free Response Reflection:
+        Event-Driven Programming Wrap-Up: Event-Driven Programming Wrap-Up
       U3L14 - Journal Favorite Event:
         Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.
         'Reflection: Events': 'Reflection: Events'
-      U3L15 spot the difference variable debugging: {}
+      U3L15 spot the difference variable debugging:
+        'Free response: Spot and fix the bug': 'Free response: Spot and fix the bug'
       U3L16 Assessment Free Response:
         'Beyond Buttons: Assessment': 'Beyond Buttons: Assessment'
       U3L16 Free Response Getting Started:
@@ -4311,10 +4755,14 @@ en:
         'String and Substring: Getting Started': 'String and Substring: Getting Started'
       U3L26 Free Response Wrap Up:
         'String and Substring: Assessment 1': 'String and Substring: Assessment 1'
-      U3L27 Assessment1: {}
-      U3L27 Assessment2: {}
-      U3L27 Assessment3: {}
-      U3L27 Free Response Getting Started: {}
+      U3L27 Assessment1:
+        Digital Assistant Reflection 1: Digital Assistant Reflection 1
+      U3L27 Assessment2:
+        Digital Assistant Reflection 2: Digital Assistant Reflection 2
+      U3L27 Assessment3:
+        'Digital Assistant Reflection 3 ': 'Digital Assistant Reflection 3 '
+      U3L27 Free Response Getting Started:
+        'Digital Assistant: Getting Started': 'Digital Assistant: Getting Started'
       U3L28 Free Response Getting Started:
         'While Loops Basics: Getting Started': 'While Loops Basics: Getting Started'
       U3L28 Free Response Wrap Up:

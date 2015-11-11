@@ -59,9 +59,9 @@ def complete_tutorial(tutorial={})
     destination = "http://#{row[:referer]}/congrats?i=#{row[:session]}"
     destination += "&co=#{row[:company]}" unless row[:company].blank?
   end
-  dont_cache
 
-  redirect (destination || "/congrats?s=#{Base64.urlsafe_encode64(tutorial[:code])}")
+  dont_cache
+  redirect destination || "/congrats?s=#{Base64.urlsafe_encode64(tutorial[:code])}"
 end
 
 def complete_tutorial_pixel(tutorial={})
