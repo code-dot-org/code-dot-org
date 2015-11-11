@@ -101,6 +101,12 @@ def fetch_hoc_metrics()
     'total_hoc_count'=>71132,
     'hoc_country_totals'=>{},
     'hoc_company_totals'=>{},
+    'hoc_company_participants'=>{
+      "GoDaddy"=>0,
+      "Rackspace"=>0,
+      "TCS"=>0,
+      "Workday"=>0,
+      },
   }
   # Increase the 'started' metric by 409K to reflect participant count from surveys, circa
   # February 2014.
