@@ -1243,10 +1243,6 @@ Applab.runButtonClick = function() {
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
-  studioApp.reset(false);
-  studioApp.attempts++;
-  clearDebugOutput();
-  clearDebugInput();
   Applab.execute();
 
   // Enable the Finish button if is present:
@@ -1322,6 +1318,9 @@ Applab.execute = function() {
   var i;
 
   studioApp.reset(false);
+  studioApp.attempts++;
+  clearDebugOutput();
+  clearDebugInput();
 
   // Set event handlers and start the onTick timer
 
