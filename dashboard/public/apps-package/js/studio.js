@@ -9501,7 +9501,7 @@ levels.js_hoc2015_score =
   'avatarList': ['R2-D2'],
   'editCode': true,
   'background': 'hoth',
-  'music': [ 'song9' ],
+  'music': [ 'song10' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
@@ -9609,7 +9609,7 @@ levels.js_hoc2015_score =
 levels.js_hoc2015_win_lose = {
   'editCode': true,
   'background': 'endor',
-  'music': [ 'song10' ],
+  'music': [ 'song9' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
