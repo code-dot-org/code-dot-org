@@ -699,7 +699,7 @@ $height-to-width: 434 / 477;
     color: $lighter_gray;
   }
 
-  #show-code, #feedbackButtons {
+  #show-code, #feedbackButtons, #puzzleRatingButtons {
     margin-left: -100px;
   }
 
@@ -707,6 +707,10 @@ $height-to-width: 434 / 477;
     //margin-left: 110px; // TODO(bjordan): needed?
   }
 
+  #puzzleRatingButtons a:hover.puzzle-rating-btn {
+    background: none !important;
+    fill: white !important;
+  }
 
   p {
     line-height: 27px;
