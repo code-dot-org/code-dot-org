@@ -406,11 +406,13 @@ config.jshint = {
     mocha: true,
     browser: true,
     undef: true,
+    esnext: true,
     globals: {
       $: true,
       jQuery: true,
       React: true,
       Blockly: true,
+      Phaser: true,
       //TODO: Eliminate the globals below here. Could at least warn about them
       // in their respective files
       Studio: true,
