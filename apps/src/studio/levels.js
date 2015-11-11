@@ -1724,7 +1724,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
     "setBackground": { 'category': 'Play Lab' },
     "move": { 'category': 'Play Lab' },
     "playSound": { 'category': 'Play Lab' },
-    "changeScore": { 'category': 'Play Lab' },
+    "changeScore": { 'category': 'Play Lab', dontAutocomplete: false },
     "setSpritePosition": { 'category': 'Play Lab' },
     "setSpriteSpeed": { 'category': 'Play Lab' },
     "setSpriteEmotion": { 'category': 'Play Lab' },
