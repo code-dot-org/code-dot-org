@@ -1646,6 +1646,14 @@ Studio.init = function(config) {
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
+  // Set focus on the run button so key events can be handled
+  // right from the start without requiring the user to adjust focus.
+  // (Required for IE11 at least, and takes focus away from text mode editor
+  // in droplet.)
+  $(window).on('run_button_pressed', function () {
+    document.getElementById('runButton').focus();
+  });
+
   Studio.projectiles = [];
   Studio.items = [];
   Studio.itemSpeed = {};
@@ -1661,6 +1669,11 @@ Studio.init = function(config) {
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
+
+  // Allow any studioMsg string to be re-mapped on a per-level basis:
+  for (var prop in level.msgStringOverrides) {
+    studioMsg[prop] = studioMsg[level.msgStringOverrides[prop]];
+  }
 
   // Initialize paramLists with skin and level data:
   paramLists.initWithSkinAndLevel(skin, level);
@@ -1758,12 +1771,25 @@ Studio.init = function(config) {
     Studio.musicController.preload();
   };
 
+  if (studioApp.cdoSounds && !studioApp.cdoSounds.isAudioUnlocked()) {
+    // Would use addClickTouchEvent, but iOS9 does not let you unlock audio
+    // on touchstart, only on touchend.
+    var removeEvent = dom.addMouseUpTouchEvent(document, function () {
+      studioApp.cdoSounds.unlockAudio();
+      removeEvent();
+    });
+  }
+
   // Play music when the instructions are shown
-  var onInstructionsShown = function () {
-    Studio.musicController.play();
-    document.removeEventListener('instructionsShown', onInstructionsShown);
+  var playOnce = function () {
+    if (studioApp.cdoSounds && studioApp.cdoSounds.isAudioUnlocked()) {
+      Studio.musicController.play();
+      document.removeEventListener('instructionsShown', playOnce);
+      document.removeEventListener('instructionsHidden', playOnce);
+    }
   };
-  document.addEventListener('instructionsShown', onInstructionsShown);
+  document.addEventListener('instructionsShown', playOnce);
+  document.addEventListener('instructionsHidden', playOnce);
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1819,7 +1845,7 @@ Studio.init = function(config) {
   config.dropletConfig = dropletConfig;
   config.dropIntoAceAtLineStart = true;
   config.unusedConfig = [];
-  for (var prop in skin.AutohandlerTouchItems) {
+  for (prop in skin.AutohandlerTouchItems) {
     AUTO_HANDLER_MAP[prop] =
         'whenSpriteCollided-' +
         (Studio.protagonistSpriteIndex || 0) + '-' + skin.AutohandlerTouchItems[prop];

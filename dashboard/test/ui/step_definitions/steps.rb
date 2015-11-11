@@ -529,6 +529,7 @@ end
 
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
+  @browser.action.move_to(element).click.perform
   press_keys(element, key)
 end
 

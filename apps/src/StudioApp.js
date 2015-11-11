@@ -873,6 +873,12 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
       this.editor.aceEditor.focus();
     }
+
+    // Fire a custom event on the document so that other code can respond
+    // to instructions being closed.
+    var event = document.createEvent('Event');
+    event.initEvent('instructionsHidden', true, true);
+    document.dispatchEvent(event);
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
@@ -1472,7 +1478,7 @@ StudioApp.prototype.configureDom = function (config) {
     visualizationColumn.className = visualizationColumn.className + " embed_hidesource";
   }
 
-  if (!config.embed && !config.hideSource) {
+  if (!config.share) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
@@ -1490,8 +1496,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   var container = document.getElementById(options.containerId);
   this.hideSource = true;
   var workspaceDiv = document.getElementById('codeWorkspace');
-  if (!options.embed || options.level.skipInstructionsPopup) {
-    container.className = 'hide-source';
+  if (this.share || options.level.skipInstructionsPopup) {
+    container.className = 'hide-instructions';
   }
   workspaceDiv.style.display = 'none';
   document.getElementById('visualizationResizeBar').style.display = 'none';
@@ -1506,7 +1512,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     }
     document.body.style.backgroundColor = '#202B34';
   // For share page on mobile, do not show this part.
-  } else if (!options.embed && !(this.share && dom.isMobile())) {
+} else if (this.share && !(dom.isMobile())) {
     var runButton = document.getElementById('runButton');
     var buttonRow = runButton.parentElement;
     var openWorkspace = document.createElement('button');
