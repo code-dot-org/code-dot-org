@@ -6,6 +6,14 @@ var outputApplabConsole = errorHandler.outputApplabConsole;
 var consoleApi = module.exports;
 
 consoleApi.log = function() {
+  function argToString(arg) {
+    if (typeof arg === 'string' || firstArg instanceof String) {
+      return arg;
+    } else {
+      return JSON.stringify(arg);
+    }
+  }
+
   var nativeArgs = Array.prototype.map.call(arguments, function (item) {
     if (item === null || item === undefined) {
       return item;
@@ -18,10 +26,10 @@ consoleApi.log = function() {
   if (typeof firstArg === 'string' || firstArg instanceof String) {
     output = vsprintf(firstArg, nativeArgs.slice(1));
   } else if (nativeArgs.length === 1) {
-    output = firstArg;
+    output = JSON.stringify(firstArg);
   } else {
     for (var i = 0; i < nativeArgs.length; i++) {
-      output += nativeArgs[i].toString();
+      output += argToString(nativeArgs[i]);
       if (i < nativeArgs.length - 1) {
         output += '\n';
       }
