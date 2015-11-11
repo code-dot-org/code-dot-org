@@ -251,6 +251,12 @@ button.arrow:disabled {
   &.soft-buttons-none {
     display: none;
   }
+  &.soft-buttons-compact {
+    margin-left: 0;
+    button {
+      margin: 0;
+    }
+  }
 }
 .soft-buttons-1 {
   display: table-cell;
