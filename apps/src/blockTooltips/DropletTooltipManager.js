@@ -12,7 +12,7 @@ var dropletUtils = require('../dropletUtils');
  * Store for finding tooltips for blocks
  * @constructor
  */
-function DropletTooltipManager(appMsg, dropletConfig, blockFilter) {
+function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocompletePaletteApisOnly) {
   /**
    * App-specific strings (to override common msg)
    * @type {Object.<String, Function>}
@@ -26,10 +26,15 @@ function DropletTooltipManager(appMsg, dropletConfig, blockFilter) {
   this.dropletConfig = dropletConfig || {};
 
   /**
-   * Block filter
-   * @type {Object.<String>} optional object with keys to filter down the total set of blocks
+   * Code functions
+   * @type {Object.<String>} optional object with keys to modify the blocks
    */
-  this.blockFilter = blockFilter;
+  this.codeFunctions = codeFunctions;
+
+  /**
+   * Flag to limit the number of APIs that see autocomplete behavior
+   */
+  this.autocompletePaletteApisOnly = autocompletePaletteApisOnly;
 
   /**
    * Map of block types to tooltip objects
@@ -74,16 +79,23 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
 };
 
 /**
- * Registers blocks based on the dropletBlocks and blockFilter passed to the constructor
+ * Registers blocks based on the dropletBlocks and codeFunctions passed to the constructor
  */
 DropletTooltipManager.prototype.registerBlocks = function () {
-  dropletUtils.getAllAvailableDropletBlocks(this.dropletConfig).forEach(
+  dropletUtils.getAllAvailableDropletBlocks(this.dropletConfig, this.codeFunctions).forEach(
     function (dropletBlockDefinition) {
-      if (!dropletBlockDefinition.noAutocomplete &&
-          (!this.blockFilter || typeof this.blockFilter[dropletBlockDefinition.func] !== 'undefined')) {
-        this.blockTypeToTooltip[dropletBlockDefinition.func] =
-          new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
+      if (dropletBlockDefinition.noAutocomplete) {
+        // Ignore blocks with noAutcomplete set:
+        return;
       }
+      if (this.autocompletePaletteApisOnly &&
+          this.codeFunctions &&
+          typeof this.codeFunctions[dropletBlockDefinition.func] === 'undefined') {
+        // autocompletePaletteApisOnly mode enabled and block is not in palette:
+        return;
+      }
+      this.blockTypeToTooltip[dropletBlockDefinition.func] =
+        new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
     },
     this);
 };

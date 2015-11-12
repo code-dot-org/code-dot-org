@@ -1720,17 +1720,17 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   ],
   'codeFunctions': {
     // Play Lab
-    "setSprite": { 'category': 'Play Lab' },
-    "setBackground": { 'category': 'Play Lab' },
-    "move": { 'category': 'Play Lab' },
+    "setSprite": { 'category': 'Play Lab', noAutocomplete: false },
+    "setBackground": { 'category': 'Play Lab'  },
+    "move": { 'category': 'Play Lab', noAutocomplete: false  },
     "playSound": { 'category': 'Play Lab' },
-    "changeScore": { 'category': 'Play Lab', dontAutocomplete: false },
-    "setSpritePosition": { 'category': 'Play Lab' },
-    "setSpriteSpeed": { 'category': 'Play Lab' },
-    "setSpriteEmotion": { 'category': 'Play Lab' },
-    "throwProjectile": { 'category': 'Play Lab' },
-    "vanish": { 'category': 'Play Lab' },
-    "onEvent": { 'category': 'Play Lab' },
+    "changeScore": { 'category': 'Play Lab', noAutocomplete: false },
+    "setSpritePosition": { 'category': 'Play Lab', noAutocomplete: false  },
+    "setSpriteSpeed": { 'category': 'Play Lab', noAutocomplete: false  },
+    "setSpriteEmotion": { 'category': 'Play Lab', noAutocomplete: false  },
+    "throwProjectile": { 'category': 'Play Lab', noAutocomplete: false  },
+    "vanish": { 'category': 'Play Lab', noAutocomplete: false  },
+    "onEvent": { 'category': 'Play Lab', noAutocomplete: false  },
 
     // Control
     "forLoop_i_0_4": null,
