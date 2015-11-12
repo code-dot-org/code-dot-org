@@ -2058,6 +2058,9 @@ Studio.reset = function(first) {
   Studio.message = null;
   Studio.pauseInterpreter = false;
 
+   // True if we have set testResults using level progressConditions
+  Studio.progressConditionTestResult = false;
+
   // Reset the score and title screen.
   Studio.playerScore = 0;
   Studio.scoreText = null;
@@ -2710,6 +2713,7 @@ Studio.execute = function() {
     Studio.JSInterpreter = new JSInterpreter({
       code: codeWhenRun,
       blocks: dropletConfig.blocks,
+      blockFilter: level.executePaletteApisOnly && level.codeFunctions,
       enableEvents: true,
       studioApp: studioApp,
       onExecutionError: handleExecutionError,
@@ -2759,8 +2763,9 @@ Studio.onPuzzleComplete = function() {
   // If we know they succeeded, mark levelComplete true
   var levelComplete = (Studio.result === ResultType.SUCCESS);
 
-  // If preExecutionFailure testResults should already be set
-  if (!Studio.preExecutionFailure) {
+  // If preExecutionFailure or progressConditionTestResult, then testResults
+  // should already be set
+  if (!Studio.preExecutionFailure && ! Studio.progressConditionTestResult) {
     // If the current level is a free play, always return the free play
     // result type
     Studio.testResults = level.freePlay ? TestResults.FREE_PLAY :
@@ -5377,6 +5382,10 @@ var checkFinished = function () {
 
   if (progressConditionResult) {
     Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
+    if (!progressConditionResult.success && progressConditionResult.canPass) {
+      Studio.testResults = TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+      Studio.progressConditionTestResult = true;
+    }
     var progressMessage = progressConditionResult.message;
     if (studioApp.isUsingBlockly()) {
       progressMessage = progressConditionResult.blocklyMessage || progressMessage;
@@ -8987,17 +8996,17 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   ],
   'codeFunctions': {
     // Play Lab
-    "setSprite": { 'category': 'Play Lab' },
-    "setBackground": { 'category': 'Play Lab' },
-    "move": { 'category': 'Play Lab' },
+    "setSprite": { 'category': 'Play Lab', noAutocomplete: false },
+    "setBackground": { 'category': 'Play Lab'  },
+    "move": { 'category': 'Play Lab', noAutocomplete: false  },
     "playSound": { 'category': 'Play Lab' },
-    "changeScore": { 'category': 'Play Lab' },
-    "setSpritePosition": { 'category': 'Play Lab' },
-    "setSpriteSpeed": { 'category': 'Play Lab' },
-    "setSpriteEmotion": { 'category': 'Play Lab' },
-    "throwProjectile": { 'category': 'Play Lab' },
-    "vanish": { 'category': 'Play Lab' },
-    "onEvent": { 'category': 'Play Lab' },
+    "changeScore": { 'category': 'Play Lab', noAutocomplete: false },
+    "setSpritePosition": { 'category': 'Play Lab', noAutocomplete: false  },
+    "setSpriteSpeed": { 'category': 'Play Lab', noAutocomplete: false  },
+    "setSpriteEmotion": { 'category': 'Play Lab', noAutocomplete: false  },
+    "throwProjectile": { 'category': 'Play Lab', noAutocomplete: false  },
+    "vanish": { 'category': 'Play Lab', noAutocomplete: false  },
+    "onEvent": { 'category': 'Play Lab', noAutocomplete: false  },
 
     // Control
     "forLoop_i_0_4": null,
@@ -9043,6 +9052,8 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
 
 levels.js_hoc2015_move_right = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song1' ],
   'codeFunctions': {
@@ -9110,6 +9121,8 @@ levels.js_hoc2015_move_right = {
 
 levels.js_hoc2015_move_right_down = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song2' ],
   'codeFunctions': {
@@ -9157,6 +9170,8 @@ levels.js_hoc2015_move_right_down = {
 
 levels.js_hoc2015_move_diagonal = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'textModeAtStart': true,
   'background': 'main',
   'music': [ 'song3' ],
@@ -9227,6 +9242,8 @@ levels.js_hoc2015_move_diagonal = {
 
 levels.js_hoc2015_move_backtrack = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song4' ],
   'codeFunctions': {
@@ -9275,6 +9292,8 @@ levels.js_hoc2015_move_backtrack = {
 
 levels.js_hoc2015_move_around = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song5' ],
   'codeFunctions': {
@@ -9325,6 +9344,8 @@ levels.js_hoc2015_move_around = {
 
 levels.js_hoc2015_move_finale = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song6' ],
   'codeFunctions': {
@@ -9377,6 +9398,8 @@ levels.js_hoc2015_move_finale = {
 
 levels.js_hoc2015_event_two_items = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'hoth',
   'music': [ 'song7' ],
   'wallMap': 'blank',
@@ -9472,6 +9495,8 @@ levels.js_hoc2015_event_two_items = {
 
 levels.js_hoc2015_event_four_items = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'hoth',
   'music': [ 'song8' ],
   'wallMap': 'blobs',
@@ -9535,6 +9560,8 @@ levels.js_hoc2015_event_four_items = {
 levels.js_hoc2015_score =
 {
   'avatarList': ['R2-D2'],
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'editCode': true,
   'background': 'hoth',
   'music': [ 'song10' ],
@@ -9596,9 +9623,10 @@ levels.js_hoc2015_score =
   'progressConditions' : [
     { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 },
       result: { success: false, message: msg.failedScoreTimeout() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 },
+    { required: { 'timedOut': false, 'allGoalsVisited': true, 'currentPointsBelow': 300 },
       result: {
         success: false,
+        canPass: true,
         message: msg.failedScoreScore(),
         blocklyMessage: msg.failedScoreScoreBlockly()
       }
@@ -9654,6 +9682,8 @@ levels.js_hoc2015_score =
 
 levels.js_hoc2015_win_lose = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'endor',
   'music': [ 'song9' ],
   'wallMap': 'blobs',
@@ -9743,6 +9773,8 @@ levels.js_hoc2015_win_lose = {
 
 levels.js_hoc2015_add_characters = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'endor',
   'music': [ 'song11' ],
   'wallMap': 'circle',
@@ -9832,6 +9864,8 @@ levels.js_hoc2015_add_characters = {
 
 levels.js_hoc2015_chain_characters = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'starship',
   'music': [ 'song12' ],
   'wallMap': 'grid',
@@ -9922,6 +9956,8 @@ levels.js_hoc2015_chain_characters = {
 
 levels.js_hoc2015_chain_characters_2 = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'starship',
   'music': [ 'song13' ],
   'wallMap': 'horizontal',
@@ -10008,6 +10044,8 @@ levels.js_hoc2015_chain_characters_2 = {
 
 levels.js_hoc2015_change_setting = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'starship',
   'music': [ 'song14' ],
   'wallMap': 'blobs',
@@ -10806,19 +10844,11 @@ module.exports.blocks = [
   {func: 'endGame', parent: api, category: '', params: ['"win"'], dropdown: { 0: ['"win"', '"lose"' ] } },
   {func: 'addPoints', parent: api, category: '', params: ["100"] },
   {func: 'removePoints', parent: api, category: '', params: ["100"] },
-  {func: 'changeScore', parent: api, category: '', params: ["1"] },
   {func: 'addCharacter', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
-  {func: 'setToChase', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
-  {func: 'setToFlee', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
-  {func: 'setToRoam', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
-  {func: 'setToStop', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
   {func: 'moveFast', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
   {func: 'moveNormal', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
   {func: 'moveSlow', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
 
-  {func: 'whenTouchGoal', block: 'function whenTouchGoal() {}', expansion: 'function whenTouchGoal() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllGoals', block: 'function whenTouchAllGoals() {}', expansion: 'function whenTouchAllGoals() {\n  __;\n}', category: '' },
-  {func: 'whenScore1000', block: 'function whenScore1000() {}', expansion: 'function whenScore1000() {\n  __;\n}', category: '' },
 
   {func: 'whenLeft', block: 'function whenLeft() {}', expansion: 'function whenLeft() {\n  __;\n}', category: '' },
   {func: 'whenRight', block: 'function whenRight() {}', expansion: 'function whenRight() {\n  __;\n}', category: '' },
@@ -10827,7 +10857,6 @@ module.exports.blocks = [
   {func: 'whenTouchObstacle', block: 'function whenTouchObstacle() {}', expansion: 'function whenTouchObstacle() {\n  __;\n}', category: '' },
 
   {func: 'whenGetCharacter', block: 'function whenGetCharacter() {}', expansion: 'function whenGetCharacter() {\n  __;\n}', category: '' },
-  {func: 'whenTouchCharacter', block: 'function whenTouchCharacter() {}', expansion: 'function whenTouchCharacter() {\n  __;\n}', category: '' },
 
   {func: 'whenGetStormtrooper', block: 'function whenGetStormtrooper() {}', expansion: 'function whenGetStormtrooper() {\n  __;\n}', category: '' },
   {func: 'whenGetRebelPilot', block: 'function whenGetRebelPilot() {}', expansion: 'function whenGetRebelPilot() {\n  __;\n}', category: '' },
@@ -10836,14 +10865,6 @@ module.exports.blocks = [
   {func: 'whenGetMouseDroid', block: 'function whenGetMouseDroid() {}', expansion: 'function whenGetMouseDroid() {\n  __;\n}', category: '' },
   {func: 'whenGetTauntaun', block: 'function whenGetTauntaun() {}', expansion: 'function whenGetTauntaun() {\n  __;\n}', category: '' },
   {func: 'whenGetProbot', block: 'function whenGetProbot() {}', expansion: 'function whenGetProbot() {\n  __;\n}', category: '' },
-
-  {func: 'whenTouchStormtrooper', block: 'function whenTouchStormtrooper() {}', expansion: 'function whenTouchStormtrooper() {\n  __;\n}', category: '' },
-  {func: 'whenTouchRebelPilot', block: 'function whenTouchRebelPilot() {}', expansion: 'function whenTouchRebelPilot() {\n  __;\n}', category: '' },
-  {func: 'whenTouchPufferPig', block: 'function whenTouchPufferPig() {}', expansion: 'function whenTouchPufferPig() {\n  __;\n}', category: '' },
-  {func: 'whenTouchMynock', block: 'function whenTouchMynock() {}', expansion: 'function whenTouchMynock() {\n  __;\n}', category: '' },
-  {func: 'whenTouchMouseDroid', block: 'function whenTouchMouseDroid() {}', expansion: 'function whenTouchMouseDroid() {\n  __;\n}', category: '' },
-  {func: 'whenTouchTauntaun', block: 'function whenTouchTauntaun() {}', expansion: 'function whenTouchTauntaun() {\n  __;\n}', category: '' },
-  {func: 'whenTouchProbot', block: 'function whenTouchProbot() {}', expansion: 'function whenTouchProbot() {\n  __;\n}', category: '' },
 
   {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
 
@@ -10856,7 +10877,23 @@ module.exports.blocks = [
   {func: 'whenGetAllProbots', block: 'function whenGetAllProbots() {}', expansion: 'function whenGetAllProbots() {\n  __;\n}', category: '' },
 
   // Functions hidden from autocomplete - not used in hoc2015:
-  {func: 'setSprite', parent: api, category: '', params: ['0', '"R2-D2"'], dropdown: { 1: [ '"random"', '"R2-D2"', '"C-3PO"' ] } },
+  {func: 'whenTouchStormtrooper', block: 'function whenTouchStormtrooper() {}', expansion: 'function whenTouchStormtrooper() {\n  __;\n}', category: '', noAutocomplete: true },
+  {func: 'whenTouchRebelPilot', block: 'function whenTouchRebelPilot() {}', expansion: 'function whenTouchRebelPilot() {\n  __;\n}', category: '', noAutocomplete: true },
+  {func: 'whenTouchPufferPig', block: 'function whenTouchPufferPig() {}', expansion: 'function whenTouchPufferPig() {\n  __;\n}', category: '', noAutocomplete: true },
+  {func: 'whenTouchMynock', block: 'function whenTouchMynock() {}', expansion: 'function whenTouchMynock() {\n  __;\n}', category: '', noAutocomplete: true },
+  {func: 'whenTouchMouseDroid', block: 'function whenTouchMouseDroid() {}', expansion: 'function whenTouchMouseDroid() {\n  __;\n}', category: '', noAutocomplete: true },
+  {func: 'whenTouchTauntaun', block: 'function whenTouchTauntaun() {}', expansion: 'function whenTouchTauntaun() {\n  __;\n}', category: '', noAutocomplete: true },
+  {func: 'whenTouchProbot', block: 'function whenTouchProbot() {}', expansion: 'function whenTouchProbot() {\n  __;\n}', category: '', noAutocomplete: true },
+  {func: 'whenTouchCharacter', block: 'function whenTouchCharacter() {}', expansion: 'function whenTouchCharacter() {\n  __;\n}', category: '', noAutocomplete: true },
+  {func: 'changeScore', parent: api, category: '', params: ["1"], noAutocomplete: true },
+  {func: 'whenTouchGoal', block: 'function whenTouchGoal() {}', expansion: 'function whenTouchGoal() {\n  __;\n}', category: '', noAutocomplete: true },
+  {func: 'whenTouchAllGoals', block: 'function whenTouchAllGoals() {}', expansion: 'function whenTouchAllGoals() {\n  __;\n}', category: '', noAutocomplete: true },
+  {func: 'whenScore1000', block: 'function whenScore1000() {}', expansion: 'function whenScore1000() {\n  __;\n}', category: '', noAutocomplete: true },
+  {func: 'setToChase', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] }, noAutocomplete: true },
+  {func: 'setToFlee', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] }, noAutocomplete: true },
+  {func: 'setToRoam', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] }, noAutocomplete: true },
+  {func: 'setToStop', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] }, noAutocomplete: true },
+  {func: 'setSprite', parent: api, category: '', params: ['0', '"R2-D2"'], dropdown: { 1: [ '"random"', '"R2-D2"', '"C-3PO"' ] }, noAutocomplete: true },
   {func: 'setSpritePosition', parent: api, category: '', params: ["0", "7"], noAutocomplete: true },
   {func: 'setSpriteSpeed', parent: api, category: '', params: ["0", "8"], noAutocomplete: true },
   {func: 'setSpriteEmotion', parent: api, category: '', params: ["0", "1"], noAutocomplete: true },
@@ -10886,8 +10923,8 @@ module.exports.categories = {
   },
 };
 
+module.exports.dontHighlightKeywords = true;
 module.exports.autocompleteFunctionsWithParens = true;
-
 module.exports.showParamDropdowns = true;
 
 

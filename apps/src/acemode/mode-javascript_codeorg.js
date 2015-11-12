@@ -77,12 +77,16 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
       // Manually create our highlight rules so that we can modify it
       this.$highlightRules = new JavaScriptHighlightRules();
 
-      excludedKeywords.forEach(function (keywordToRemove) {
-        var keywordIndex = this.$highlightRules.$keywordList.indexOf(keywordToRemove);
-        if (keywordIndex > 0) {
-          this.$highlightRules.$keywordList.splice(keywordIndex);
-        }
-      }, this);
+      if (dropletConfig.dontHighlightKeywords) {
+        this.$highlightRules.$keywordList = [];
+      } else {
+        excludedKeywords.forEach(function (keywordToRemove) {
+          var keywordIndex = this.$highlightRules.$keywordList.indexOf(keywordToRemove);
+          if (keywordIndex >= 0) {
+            this.$highlightRules.$keywordList.splice(keywordIndex, 1);
+          }
+        }, this);
+      }
 
       this.createWorker = function(session) {
         var worker = new WorkerClient(["ace"], "ace/mode/javascript_worker", "JavaScriptWorker");

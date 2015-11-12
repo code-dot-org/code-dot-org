@@ -405,7 +405,6 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var level;
 var skin;
 var copyrightStrings;
-var dropletConfigBlocks;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -1154,16 +1153,7 @@ Applab.init = function(config) {
   config.varsInGlobals = true;
   config.noButtonsBelowOnMobileShare = true;
 
-  // filter blocks to exclude anything that isn't in code functions if
-  // autocompletePaletteApisOnly is true
-  dropletConfigBlocks = dropletConfig.blocks.filter(function (block) {
-    return !(config.level.executePaletteApisOnly &&
-      config.level.codeFunctions[block.func] === undefined);
-  });
-
-  config.dropletConfig = $.extend({}, dropletConfig, {
-    blocks: dropletConfigBlocks
-  });
+  config.dropletConfig = dropletConfig;
 
   config.pinWorkspaceToBottom = true;
 
@@ -1682,7 +1672,8 @@ Applab.execute = function() {
       // Use JS interpreter on editCode levels
       Applab.JSInterpreter = new JSInterpreter({
         code: codeWhenRun,
-        blocks: dropletConfigBlocks,
+        blocks: dropletConfig.blocks,
+        blockFilter: level.executePaletteApisOnly && level.codeFunctions,
         enableEvents: true,
         studioApp: studioApp,
         shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
@@ -2673,7 +2664,7 @@ consoleApi.log = function() {
     output = firstArg;
   } else {
     for (var i = 0; i < nativeArgs.length; i++) {
-      output += nativeArgs[i].toString();
+      output += JSON.stringify(nativeArgs[i]);
       if (i < nativeArgs.length - 1) {
         output += '\n';
       }
@@ -6122,6 +6113,14 @@ var ErrorLevel = {
 };
 
 function outputApplabConsole(output) {
+  function stringifyNonStrings(object) {
+    if (typeof object === 'string' || object instanceof String) {
+      return object;
+    } else {
+      return JSON.stringify(object);
+    }
+  }
+
   // first pass through to the real browser console log if available:
   if (console.log) {
     console.log(output);
@@ -6130,10 +6129,10 @@ function outputApplabConsole(output) {
   var debugOutput = document.getElementById('debug-output');
   if (debugOutput) {
     if (debugOutput.textContent.length > 0) {
-      debugOutput.textContent += '\n' + output;
-    } else {
-      debugOutput.textContent = String(output);
+      debugOutput.textContent += '\n';
     }
+    debugOutput.textContent += stringifyNonStrings(output);
+
     debugOutput.scrollTop = debugOutput.scrollHeight;
   }
 }
