@@ -69,7 +69,10 @@ module.exports = React.createClass({
   render: function() {
     var overlayComponent;
     if (this.shouldShowCrosshair()) {
-      overlayComponent = <CrosshairOverlay x={this.state.mouseX} y={this.state.mouseY} />;
+      overlayComponent = <CrosshairOverlay x={this.state.mouseX}
+                                           y={this.state.mouseY}
+                                           appWidth={this.props.appWidth}
+                                           appHeight={this.props.appHeight} />;
     }
 
     var viewBox = "0 0 " + this.props.appWidth + " " + this.props.appHeight;
