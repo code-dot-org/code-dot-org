@@ -224,7 +224,11 @@ html[dir='rtl'] #codeWorkspace {
   border: none;
   border-top: 1px solid #ddd; }
 
-#codeWorkspace.readonly .blocklySvg, #codeWorkspace.readonly .droplet-main-scroller, #codeWorkspace.readonly .ace_scroller, #codeWorkspace.dimmed .blocklySvg, #codeWorkspace.dimmed .droplet-main-scroller, #codeWorkspace.dimmed .ace_scroller {
+#codeWorkspace.readonly .blocklySvg,
+#codeWorkspace.readonly .droplet-main-scroller,
+#codeWorkspace.readonly .ace_scroller, #codeWorkspace.dimmed .blocklySvg,
+#codeWorkspace.dimmed .droplet-main-scroller,
+#codeWorkspace.dimmed .ace_scroller {
   background-color: rgba(0, 0, 0, 0.1); }
 
 .ace-chrome .ace_marker-layer .ace_error {
@@ -1219,6 +1223,8 @@ body {
 
 #codeApp {
   top: 100px !important; }
+  #codeApp.hide-source {
+    top: 0 !important; }
   @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
     #codeApp {
       top: 10px !important; } }
