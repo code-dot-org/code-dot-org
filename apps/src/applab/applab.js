@@ -1209,8 +1209,10 @@ Applab.renderVisualizationOverlay = function() {
 
   // Change cursor rule for divApplab - appropriate here because sometimes
   // the overlay is sort of a 'virtual' cursor for us.
-  divApplab.style.cursor = Applab.isRunning() ? '' : 'none';
-  designModeViz.style.cursor = Applab.isRunning() ? '' : 'none';
+  [divApplab, designModeViz].forEach(function (div) {
+    div.style.cursor = Applab.isRunning() ? '' : 'crosshair';
+  });
+
 
   // Calculate current visualization scale to pass to the overlay component.
   var unscaledWidth = visualizationOverlay.offsetWidth;
