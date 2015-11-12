@@ -1,6 +1,7 @@
 var applabMsg = require('./locale');
 
 var CROSSHAIR_MARGIN = 6;
+var EDGE_MARGIN = 5;
 var TEXT_RECT_WIDTH = 104;
 var TEXT_RECT_HEIGHT = 21;
 var TEXT_RECT_RADIUS = TEXT_RECT_HEIGHT / 3;
@@ -52,12 +53,15 @@ module.exports = React.createClass({
   render: function() {
     var coordinateText = this.getCoordinateText();
     var rectX = this.props.x + CROSSHAIR_MARGIN;
-    if (rectX + TEXT_RECT_WIDTH > this.props.appWidth) {
-      rectX = this.props.x - CROSSHAIR_MARGIN - TEXT_RECT_WIDTH;
+    if (rectX + TEXT_RECT_WIDTH + EDGE_MARGIN > this.props.appWidth) {
+      // This response gives a smooth horizontal reposition when near the edge
+      rectX -= (rectX + TEXT_RECT_WIDTH + EDGE_MARGIN - this.props.appWidth);
+      // This response snaps the text to the other side when near the edge
+      //rectX = this.props.x - CROSSHAIR_MARGIN - TEXT_RECT_WIDTH;
     }
 
     var rectY = this.props.y + CROSSHAIR_MARGIN;
-    if (rectY + TEXT_RECT_HEIGHT > this.props.appHeight) {
+    if (rectY + TEXT_RECT_HEIGHT + EDGE_MARGIN > this.props.appHeight) {
       rectY = this.props.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
     }
 
