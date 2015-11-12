@@ -23,6 +23,7 @@
     = render partial: 'levels/category', locals: {f: f, category: 'maze', partial: 'levels/editors/maze'} if @level.is_a? Maze
     = render partial: 'levels/category', locals: {f: f, category: 'grid', partial: 'levels/editors/grid'} if @level.is_a? Grid
     = render partial: 'levels/category', locals: {f: f, category: 'bee', partial: 'levels/editors/karel'} if @level.is_a? Karel
+    = render partial: 'levels/category', locals: {f: f, category: 'craft', partial: 'levels/editors/craft'} if @level.is_a? Craft
     = render partial: 'levels/category', locals: {f: f, category: 'artist', partial: 'levels/editors/artist'} if @level.is_a? Artist
     = render partial: 'levels/category', locals: {f: f, category: 'applab', partial: 'levels/editors/applab'} if @level.is_a? Applab
     = render partial: 'levels/category', locals: {f: f, category: 'dsl', partial: 'levels/editors/dsl'} if @level.is_a? DSLDefined
