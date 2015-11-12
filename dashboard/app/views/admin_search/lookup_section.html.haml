@@ -1,0 +1,14 @@
+%h1 Lookup section
+
+= form_tag(lookup_section_url, method: :post) do
+  Enter the 6-letter section code:
+  %br/
+  = text_field_tag 'section_code'
+  %br/
+  = submit_tag 'Go!'
+
+- if @section
+  %p= "Section code: #{@section.code}"
+  %p{id: 'section_owner'}= "Owner: #{@section.user.email}"
+  %a{href: teacher_dashboard_section_progress_url(@section)}
+    %p View this section

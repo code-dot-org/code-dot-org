@@ -77,7 +77,6 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var level;
 var skin;
 var copyrightStrings;
-var dropletConfigBlocks;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -825,16 +824,7 @@ Applab.init = function(config) {
   config.varsInGlobals = true;
   config.noButtonsBelowOnMobileShare = true;
 
-  // filter blocks to exclude anything that isn't in code functions if
-  // autocompletePaletteApisOnly is true
-  dropletConfigBlocks = dropletConfig.blocks.filter(function (block) {
-    return !(config.level.executePaletteApisOnly &&
-      config.level.codeFunctions[block.func] === undefined);
-  });
-
-  config.dropletConfig = $.extend({}, dropletConfig, {
-    blocks: dropletConfigBlocks
-  });
+  config.dropletConfig = dropletConfig;
 
   config.pinWorkspaceToBottom = true;
 
@@ -1184,8 +1174,6 @@ Applab.reset = function(first) {
     if (pausedIcon) {
       pausedIcon.style.display = 'none';
     }
-    clearDebugOutput();
-    clearDebugInput();
   }
 
   // Reset the Globals object used to contain program variables:
@@ -1283,8 +1271,6 @@ Applab.runButtonClick = function() {
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
-  studioApp.reset(false);
-  studioApp.attempts++;
   Applab.execute();
 
   // Re-render overlay to update cursor rules.
@@ -1363,6 +1349,9 @@ Applab.execute = function() {
   var i;
 
   studioApp.reset(false);
+  studioApp.attempts++;
+  clearDebugOutput();
+  clearDebugInput();
 
   // Set event handlers and start the onTick timer
 
@@ -1395,7 +1384,8 @@ Applab.execute = function() {
       // Use JS interpreter on editCode levels
       Applab.JSInterpreter = new JSInterpreter({
         code: codeWhenRun,
-        blocks: dropletConfigBlocks,
+        blocks: dropletConfig.blocks,
+        blockFilter: level.executePaletteApisOnly && level.codeFunctions,
         enableEvents: true,
         studioApp: studioApp,
         shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },

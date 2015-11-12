@@ -1,0 +1,88 @@
+%h1 Admin stats
+
+%h3 Users with accounts
+
+%strong Total users
+#{@user_count}
+%br/
+%strong Students
+#{@student_count}
+%br/
+%strong Teachers
+#{@teacher_count}
+%br/
+%strong Gender (when specified):
+- if @girls + @boys > 0
+  Girls #{@girls * 100 / (@girls + @boys)}% /
+  Boys #{@boys * 100 / (@girls + @boys)}%
+- else
+  0 users with specified gender
+%br/
+%strong Users linked to a teacher
+- if @user_count > 0
+  #{@users_with_teachers} (#{@users_with_teachers * 100 / @user_count}%)
+- else
+  0
+%br/
+%strong Users with an email address
+- if @user_count > 0
+  #{@users_with_email} (#{@users_with_email * 100 / @user_count}%)
+- else
+  0
+%br/
+%strong Teachers with a confirmed email address
+- if @teacher_count > 0
+  #{@users_with_confirmed_email} (#{@users_with_confirmed_email * 100 / @teacher_count}%)
+- else
+  0
+%br/
+%br/
+
+%h3= link_to 'View Level Progress (slow query) >>', admin_progress_path
+
+%h3= link_to 'View Concept Completions (slow query) >>', admin_concepts_path
+
+%h3= link_to 'View Level Completion stats >>', level_completions_path
+
+%h3= link_to 'View Monthly Metrics >>', reports_path(action: 'monthly_metrics')
+
+%h3 Prizes
+
+%strong Total student prizes earned
+#{@student_prizes_earned}
+%br/
+%strong Total student prizes redeemed
+#{@student_prizes_redeemed}
+%br/
+- @prizes_redeemed.each do |key, value|
+  #{key.name} #{value}
+  %br/
+%strong Student prizes available to be redeemed
+#{@student_prizes_available}
+%br/
+- @prizes_available.each do |key, value|
+  #{key.name} #{value}
+  %br/
+%br/
+
+%strong Total teacher prizes earned
+#{@teacher_prizes_earned}
+%br/
+%strong Total teacher prizes redeemed
+#{@teacher_prizes_redeemed}
+%br/
+%strong Teacher prizes available to be redeemed
+#{@teacher_prizes_available}
+%br/
+%br/
+
+%strong Total bonus teacher prizes earned
+#{@teacher_bonus_prizes_earned}
+%br/
+%strong Total teacher bonus prizes redeemed
+#{@teacher_bonus_prizes_redeemed}
+%br/
+%strong Teacher bonus prizes available to be redeemed
+#{@teacher_bonus_prizes_available}
+%br/
+%br/

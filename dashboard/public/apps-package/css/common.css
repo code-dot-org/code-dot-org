@@ -1057,14 +1057,14 @@ input[type="radio"] {
 .invisible {
   visibility: hidden; }
 
-.hide-instructions #visualization {
+.hide-source #visualization {
   display: inline-block; }
 
-.hide-instructions #belowVisualization {
+.hide-source #belowVisualization {
   display: inline-block;
   vertical-align: top; }
 
-.hide-instructions #bubble {
+.hide-source #bubble {
   display: none; }
 
 .sharing {

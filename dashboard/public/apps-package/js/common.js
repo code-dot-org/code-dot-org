@@ -7196,7 +7196,7 @@ StudioApp.prototype.configureDom = function (config) {
     visualizationColumn.className = visualizationColumn.className + " embed_hidesource";
   }
 
-  if (!config.share) {
+  if (!config.embed && !config.hideSource) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
@@ -7214,8 +7214,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   var container = document.getElementById(options.containerId);
   this.hideSource = true;
   var workspaceDiv = document.getElementById('codeWorkspace');
-  if (this.share || options.level.skipInstructionsPopup) {
-    container.className = 'hide-instructions';
+  if (!options.embed || options.level.skipInstructionsPopup) {
+    container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
   document.getElementById('visualizationResizeBar').style.display = 'none';
@@ -7230,7 +7230,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     }
     document.body.style.backgroundColor = '#202B34';
   // For share page on mobile, do not show this part.
-} else if (this.share && !(dom.isMobile())) {
+  } else if (!options.embed && !(this.share && dom.isMobile())) {
     var runButton = document.getElementById('runButton');
     var buttonRow = runButton.parentElement;
     var openWorkspace = document.createElement('button');
@@ -7321,12 +7321,15 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     enableLiveAutocompletion: true
   });
 
-  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg, config.dropletConfig);
+  this.dropletTooltipManager = new DropletTooltipManager(
+    this.appMsg,
+    config.dropletConfig,
+    config.level.codeFunctions,
+    config.level.autocompletePaletteApisOnly);
   if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);
   }
-  this.dropletTooltipManager.registerBlocksFromList(
-    dropletUtils.getAllAvailableDropletBlocks(config.dropletConfig));
+  this.dropletTooltipManager.registerBlocks();
 
   // Bind listener to palette/toolbox 'Hide' and 'Show' links
   var hideToolboxHeader = document.getElementById('toolbox-header');
@@ -31518,6 +31521,7 @@ var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
 var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
 var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteParameterTooltipManager');
+var dropletUtils = require('../dropletUtils');
 
 /**
  * @fileoverview Manages a store of known blocks and tooltips
@@ -31527,7 +31531,7 @@ var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteP
  * Store for finding tooltips for blocks
  * @constructor
  */
-function DropletTooltipManager(appMsg, dropletConfig) {
+function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocompletePaletteApisOnly) {
   /**
    * App-specific strings (to override common msg)
    * @type {Object.<String, Function>}
@@ -31539,6 +31543,17 @@ function DropletTooltipManager(appMsg, dropletConfig) {
    * Droplet config for this app
    */
   this.dropletConfig = dropletConfig || {};
+
+  /**
+   * Code functions
+   * @type {Object.<String>} optional object with keys to modify the blocks
+   */
+  this.codeFunctions = codeFunctions;
+
+  /**
+   * Flag to limit the number of APIs that see autocomplete behavior
+   */
+  this.autocompletePaletteApisOnly = autocompletePaletteApisOnly;
 
   /**
    * Map of block types to tooltip objects
@@ -31583,14 +31598,25 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
 };
 
 /**
- * @param {DropletBlock[]} dropletBlocks list of Droplet block definitions for
- *    which to register documentation
+ * Registers blocks based on the dropletBlocks and codeFunctions passed to the constructor
  */
-DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks) {
-  dropletBlocks.forEach(function (dropletBlockDefinition) {
-    this.blockTypeToTooltip[dropletBlockDefinition.func] =
-      new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
-  }, this);
+DropletTooltipManager.prototype.registerBlocks = function () {
+  dropletUtils.getAllAvailableDropletBlocks(this.dropletConfig, this.codeFunctions).forEach(
+    function (dropletBlockDefinition) {
+      if (dropletBlockDefinition.noAutocomplete) {
+        // Ignore blocks with noAutcomplete set:
+        return;
+      }
+      if (this.autocompletePaletteApisOnly &&
+          this.codeFunctions &&
+          typeof this.codeFunctions[dropletBlockDefinition.func] === 'undefined') {
+        // autocompletePaletteApisOnly mode enabled and block is not in palette:
+        return;
+      }
+      this.blockTypeToTooltip[dropletBlockDefinition.func] =
+        new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
+    },
+    this);
 };
 
 DropletTooltipManager.prototype.hasDocFor = function (functionName) {
@@ -31637,7 +31663,7 @@ DropletTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
 
 module.exports = DropletTooltipManager;
 
-},{"./DropletAutocompleteParameterTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompleteParameterTooltipManager.js","./DropletAutocompletePopupTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompletePopupTooltipManager.js","./DropletBlockTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletBlockTooltipManager.js","./DropletFunctionTooltip":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletFunctionTooltip.js"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletBlockTooltipManager.js":[function(require,module,exports){
+},{"../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","./DropletAutocompleteParameterTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompleteParameterTooltipManager.js","./DropletAutocompletePopupTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompletePopupTooltipManager.js","./DropletBlockTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletBlockTooltipManager.js","./DropletFunctionTooltip":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletFunctionTooltip.js"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletBlockTooltipManager.js":[function(require,module,exports){
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
 var dom = require('../dom');
@@ -32093,6 +32119,7 @@ return buf.join('');
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
 var tooltipUtils = require('./tooltipUtils.js');
 var dom = require('../dom');
+var dropletUtils = require('../dropletUtils');
 
 /**
  * @fileoverview Displays tooltips for Droplet blocks
@@ -32180,15 +32207,30 @@ DropletAutocompleteParameterTooltipManager.prototype.onCursorMovement_ = functio
 DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ = function (editor, paramInfo) {
   // Check the dropletConfig to see if we can find dropdown info for this parameter
   var dropdownList;
-  this.dropletTooltipManager.dropletConfig.blocks.forEach(function (block) {
-    if (block.func === paramInfo.funcName && block.dropdown) {
+  dropletUtils.getAllAvailableDropletBlocks(
+    this.dropletTooltipManager.dropletConfig,
+    this.dropletTooltipManager.codeFunctions).forEach(function (block) {
+      if (block.func !== paramInfo.funcName || !block.dropdown) {
+        // Not the right block or no dropdown specified
+        return;
+      }
+      if (block.noAutocomplete) {
+        // Block doesn't want autocomplete, so ignore
+        return;
+      }
+      if (this.dropletTooltipManager.autocompletePaletteApisOnly &&
+          this.dropletTooltipManager.codeFunctions &&
+          typeof this.dropletTooltipManager.codeFunctions[block.func] === 'undefined') {
+        // In autocompletePaletteApisOnly mode and block is not in the palette:
+        return;
+      }
       if (typeof block.dropdown[paramInfo.currentParameterIndex] === 'function') {
         dropdownList = block.dropdown[paramInfo.currentParameterIndex]();
       } else {
         dropdownList = block.dropdown[paramInfo.currentParameterIndex];
       }
-    }
-  });
+    },
+    this);
 
   if (dropdownList && !editor.completer.activated) {
     // The cursor is positioned where a parameter with a dropdown should appear
@@ -32332,7 +32374,7 @@ DropletAutocompleteParameterTooltipManager.prototype.setTooltipsEnabled = functi
 
 module.exports = DropletAutocompleteParameterTooltipManager;
 
-},{"../dom":"/home/ubuntu/staging/apps/build/js/dom.js","./DropletParameterTooltip.html.ejs":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletParameterTooltip.html.ejs","./tooltipUtils.js":"/home/ubuntu/staging/apps/build/js/blockTooltips/tooltipUtils.js"}],"/home/ubuntu/staging/apps/build/js/dom.js":[function(require,module,exports){
+},{"../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","./DropletParameterTooltip.html.ejs":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletParameterTooltip.html.ejs","./tooltipUtils.js":"/home/ubuntu/staging/apps/build/js/blockTooltips/tooltipUtils.js"}],"/home/ubuntu/staging/apps/build/js/dom.js":[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -33609,12 +33651,16 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
       // Manually create our highlight rules so that we can modify it
       this.$highlightRules = new JavaScriptHighlightRules();
 
-      excludedKeywords.forEach(function (keywordToRemove) {
-        var keywordIndex = this.$highlightRules.$keywordList.indexOf(keywordToRemove);
-        if (keywordIndex > 0) {
-          this.$highlightRules.$keywordList.splice(keywordIndex);
-        }
-      }, this);
+      if (dropletConfig.dontHighlightKeywords) {
+        this.$highlightRules.$keywordList = [];
+      } else {
+        excludedKeywords.forEach(function (keywordToRemove) {
+          var keywordIndex = this.$highlightRules.$keywordList.indexOf(keywordToRemove);
+          if (keywordIndex >= 0) {
+            this.$highlightRules.$keywordList.splice(keywordIndex, 1);
+          }
+        }, this);
+      }
 
       this.createWorker = function(session) {
         var worker = new WorkerClient(["ace"], "ace/mode/javascript_worker", "JavaScriptWorker");
@@ -33968,7 +34014,11 @@ var JSInterpreter = module.exports = function (options) {
   var self = this;
   var initFunc = function (interpreter, scope) {
     self.globalScope = scope;
-    codegen.initJSInterpreter(interpreter, options.blocks, scope);
+    codegen.initJSInterpreter(
+        interpreter,
+        options.blocks,
+        options.blockFilter,
+        scope);
 
     // Only allow five levels of depth when marshalling the return value
     // since we will occasionally return DOM Event objects which contain
@@ -34418,7 +34468,7 @@ exports.evalWith = function(code, options) {
   if (options.StudioApp && options.StudioApp.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      exports.initJSInterpreter(interpreter, null, scope, options);
+      exports.initJSInterpreter(interpreter, null, null, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -34685,10 +34735,11 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
   }
 }
 
-function populateGlobalFunctions(interpreter, blocks, scope) {
+function populateGlobalFunctions(interpreter, blocks, blockFilter, scope) {
   for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
-    if (block.parent) {
+    if (block.parent &&
+        (!blockFilter || typeof blockFilter[block.func] !== 'undefined')) {
       var funcScope = scope;
       var funcName = block.func;
       var funcComponents = funcName.split('.');
@@ -34749,11 +34800,13 @@ function populateJSFunctions(interpreter) {
  * interpreter (required): JS interpreter instance.
  * blocks (optional): blocks in dropletConfig.blocks format. If a block has
  *  a parent property, we will populate that function into the specified scope.
+ * blockFilter (optional): an object with block-name keys that should be used
+ *  to filter which blocks are populated.
  * scope (required): interpreter's global scope.
  * options (optional): objects containing functions to placed in a new scope
  *  created beneath the supplied scope.
  */
-exports.initJSInterpreter = function (interpreter, blocks, scope, options) {
+exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, options) {
   for (var optsObj in options) {
     // The options object contains objects that will be referenced
     // by the code we plan to execute. Since these objects exist in the native
@@ -34765,9 +34818,17 @@ exports.initJSInterpreter = function (interpreter, blocks, scope, options) {
     interpreter.setProperty(scope, optsObj.toString(), obj);
     populateFunctionsIntoScope(interpreter, obj, options[optsObj]);
   }
-  populateGlobalFunctions(interpreter, dropletUtils.dropletGlobalConfigBlocks, scope);
+  populateGlobalFunctions(
+      interpreter,
+      dropletUtils.dropletGlobalConfigBlocks,
+      blockFilter,
+      scope);
   if (blocks) {
-    populateGlobalFunctions(interpreter, blocks, scope);
+    populateGlobalFunctions(
+        interpreter,
+        blocks,
+        blockFilter,
+        scope);
   }
   populateJSFunctions(interpreter);
 };
@@ -35473,12 +35534,16 @@ exports.generateDropletModeOptions = function (config) {
 /**
  * Returns a set of all blocks
  * @param {DropletConfig|null} dropletConfig custom configuration, may be null
+ * @param {codeFunctions|null} codeFunctions with block overrides, may be null
  * @returns {DropletBlock[]} a list of all available Droplet blocks,
  *      including the given config's blocks
  */
-exports.getAllAvailableDropletBlocks = function (dropletConfig) {
+exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions) {
   var hasConfiguredBlocks = dropletConfig && dropletConfig.blocks;
   var configuredBlocks = hasConfiguredBlocks ? dropletConfig.blocks : [];
+  if (codeFunctions && hasConfiguredBlocks) {
+    configuredBlocks = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+  }
   return exports.dropletGlobalConfigBlocks
     .concat(exports.dropletBuiltinConfigBlocks)
     .concat(standardConfig.blocks)
