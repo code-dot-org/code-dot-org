@@ -43,8 +43,8 @@ social:
       %div.sw-tutorial-info
         %p.sw-tutorial-description= I18n.t(:starwars_blocks_description)
         %p.sw-tutorial-specs= I18n.t(:starwars_blocks_specs)
-      %a{:href => '#'}
-        %button.disabled.sw-disabled{disabled:"disabled"}= I18n.t(:starwars_blocks_start_button)
+      %a{:href => CDO.studio_url('/s/starwarsblocks/reset'), :target=>'_self'}
+        %button.sw-try-button= I18n.t(:starwars_javascript_start_button)
 
 %div{style: "clear:both"}
 
