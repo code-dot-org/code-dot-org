@@ -248,6 +248,10 @@ levels.iceage_1 = utils.extend(levels.playlab_1, {
   background: 'icy',
   firstSpriteIndex: 0, // manny
 });
+levels.gumball_1 = utils.extend(levels.playlab_1, {
+  background: 'dots',
+  firstSpriteIndex: 0, // manny
+});
 
 // Can you make the dog say something and then have the cat say something afterwards?
 levels.dog_and_cat_hello =  {
@@ -330,7 +334,10 @@ levels.iceage_2 = utils.extend(levels.playlab_2, {
   background: 'leafy',
   firstSpriteIndex: 3, // diego
 });
-
+levels.gumball_2 = utils.extend(levels.playlab_2, {
+  background: 'dots',
+  firstSpriteIndex: 3, // diego
+});
 
 // extended by: k1_3
 // Can you write a program to make this dog move to the cat?
@@ -415,6 +422,10 @@ levels.playlab_3 = {
 };
 levels.iceage_3 = utils.extend(levels.playlab_3, {
   background: 'grassy',
+  firstSpriteIndex: 2, // scrat
+});
+levels.gumball_3 = utils.extend(levels.playlab_3, {
+  background: 'clouds',
   firstSpriteIndex: 2, // scrat
 });
 
@@ -539,6 +550,10 @@ levels.iceage_4 = utils.extend(levels.playlab_4, {
   background: 'grassy',
   avatarList: ['scrat', 'granny']
 });
+levels.gumball_4 = utils.extend(levels.playlab_4, {
+  background: 'checkers',
+  avatarList: ['gumball', 'darwin']
+});
 
 // Can you write a program to make the octopus say "hello" when it is clicked?
 levels.click_hello =  {
@@ -591,6 +606,10 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
 });
 levels.iceage_5 = utils.extend(levels.playlab_5, {
   background: 'icy',
+  firstSpriteIndex: 1, // sid
+});
+levels.gumball_5 = utils.extend(levels.playlab_5, {
+  background: 'characters',
   firstSpriteIndex: 1, // sid
 });
 
@@ -747,6 +766,11 @@ levels.iceage_6 = utils.extend(levels.playlab_6, {
   firstSpriteIndex: 3, // diego
   goalOverride: {} // This prevents the override from original playlab from being used
 });
+levels.gumball_6 = utils.extend(levels.playlab_6, {
+  background: 'cornered',
+  firstSpriteIndex: 3, // diego
+  goalOverride: {} // This prevents the override from original playlab from being used
+});
 
 // The "repeat forever" block allows you to run code continuously. Can you
 // attach blocks to move this dinosaur up and down repeatedly?
@@ -868,6 +892,10 @@ levels.playlab_7 = {
 };
 levels.iceage_7 = utils.extend(levels.playlab_7, {
   background: 'icy',
+  firstSpriteIndex: 1, // sid
+});
+levels.gumball_7 = utils.extend(levels.playlab_7, {
+  background: 'graffiti',
   firstSpriteIndex: 1, // sid
 });
 
@@ -1094,6 +1122,10 @@ levels.playlab_8 = {
 levels.iceage_8 = utils.extend(levels.playlab_8, {
   background: 'icy',
   avatarList: ['manny', 'sid']
+});
+levels.gumball_8 = utils.extend(levels.playlab_8, {
+  background: 'wood',
+  avatarList: ['bananajoe', 'antony']
 });
 
 // Can you add blocks to change the background and the speed of the penguin, and
@@ -1337,6 +1369,65 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
       '</next>' +
     '</block>'
 });
+levels.gumball_9 = utils.extend(levels.playlab_9, {
+  background: 'space',
+  toolbox:
+    tb(
+      blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
+      blockOfType('studio_setBackground', {VALUE: '"icy"'}) +
+      blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
+      blockOfType('studio_saySprite') +
+      blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
+      blockOfType('studio_changeScore')
+    ),
+  requiredBlocks: [
+    [{test: 'setBackground',
+      type: 'studio_setBackground',
+      titles: {VALUE: '"space"'}}],
+    [{test: 'setSpriteSpeed',
+      type: 'studio_setSpriteSpeed',
+      titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
+  ],
+  avatarList: ['nicole', 'penny'],
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
+      '<statement name="DO">' +
+        blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
+          blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
+        ) +
+      '</statement>' +
+    '</block>' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="290">' +
+      '<title name="SPRITE2">0</title>' +
+      '<title name="SPRITE2">1</title>' +
+      '<next>' +
+        blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
+          blockOfType('studio_saySprite', {TEXT: msg.iceAge()})
+        ) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="410">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 8}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="510">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 2}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="610">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 1}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="710">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 4}) +
+      '</next>' +
+    '</block>'
+});
 
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
 levels.sandbox =  {
@@ -1396,6 +1487,7 @@ levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
 levels.playlab_10 = utils.extend(levels.sandbox, {});
 levels.iceage_10 = utils.extend(levels.playlab_10, {});
+levels.gumball_10 = utils.extend(levels.playlab_10, {});
 
 // Create your own story! Move around the cat and dog, and make them say things.
 levels.k1_6 = {
@@ -1628,17 +1720,17 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   ],
   'codeFunctions': {
     // Play Lab
-    "setSprite": { 'category': 'Play Lab' },
-    "setBackground": { 'category': 'Play Lab' },
-    "move": { 'category': 'Play Lab' },
+    "setSprite": { 'category': 'Play Lab', noAutocomplete: false },
+    "setBackground": { 'category': 'Play Lab'  },
+    "move": { 'category': 'Play Lab', noAutocomplete: false  },
     "playSound": { 'category': 'Play Lab' },
-    "changeScore": { 'category': 'Play Lab' },
-    "setSpritePosition": { 'category': 'Play Lab' },
-    "setSpriteSpeed": { 'category': 'Play Lab' },
-    "setSpriteEmotion": { 'category': 'Play Lab' },
-    "throwProjectile": { 'category': 'Play Lab' },
-    "vanish": { 'category': 'Play Lab' },
-    "onEvent": { 'category': 'Play Lab' },
+    "changeScore": { 'category': 'Play Lab', noAutocomplete: false },
+    "setSpritePosition": { 'category': 'Play Lab', noAutocomplete: false  },
+    "setSpriteSpeed": { 'category': 'Play Lab', noAutocomplete: false  },
+    "setSpriteEmotion": { 'category': 'Play Lab', noAutocomplete: false  },
+    "throwProjectile": { 'category': 'Play Lab', noAutocomplete: false  },
+    "vanish": { 'category': 'Play Lab', noAutocomplete: false  },
+    "onEvent": { 'category': 'Play Lab', noAutocomplete: false  },
 
     // Control
     "forLoop_i_0_4": null,
@@ -1684,6 +1776,8 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
 
 levels.js_hoc2015_move_right = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song1' ],
   'codeFunctions': {
@@ -1699,8 +1793,9 @@ levels.js_hoc2015_move_right = {
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
+  gridAlignedExtraPauseSteps: 1,
   'itemGridAlignedMovement': true,
-  'slowJsExecutionFactor': 10,
+  'slowExecutionFactor': 10,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
@@ -1750,6 +1845,8 @@ levels.js_hoc2015_move_right = {
 
 levels.js_hoc2015_move_right_down = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song2' ],
   'codeFunctions': {
@@ -1765,8 +1862,9 @@ levels.js_hoc2015_move_right_down = {
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
+  gridAlignedExtraPauseSteps: 1,
   'itemGridAlignedMovement': true,
-  'slowJsExecutionFactor': 10,
+  'slowExecutionFactor': 10,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
@@ -1796,6 +1894,8 @@ levels.js_hoc2015_move_right_down = {
 
 levels.js_hoc2015_move_diagonal = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'textModeAtStart': true,
   'background': 'main',
   'music': [ 'song3' ],
@@ -1812,8 +1912,9 @@ levels.js_hoc2015_move_diagonal = {
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
+  gridAlignedExtraPauseSteps: 1,
   'itemGridAlignedMovement': true,
-  'slowJsExecutionFactor': 10,
+  'slowExecutionFactor': 10,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
@@ -1845,13 +1946,9 @@ levels.js_hoc2015_move_diagonal = {
     {
       'id': 'playlab:js_hoc2015_move_diagonal:showCodeToggle',
       'element_id': '#show-code-header',
-      'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content': {
           'text': msg.calloutShowCodeToggle(),
-        },
-        'hide': {
-          'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top right',
@@ -1869,6 +1966,8 @@ levels.js_hoc2015_move_diagonal = {
 
 levels.js_hoc2015_move_backtrack = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song4' ],
   'codeFunctions': {
@@ -1884,8 +1983,9 @@ levels.js_hoc2015_move_backtrack = {
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
+  gridAlignedExtraPauseSteps: 1,
   'itemGridAlignedMovement': true,
-  'slowJsExecutionFactor': 10,
+  'slowExecutionFactor': 10,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
@@ -1916,6 +2016,8 @@ levels.js_hoc2015_move_backtrack = {
 
 levels.js_hoc2015_move_around = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song5' ],
   'codeFunctions': {
@@ -1931,8 +2033,9 @@ levels.js_hoc2015_move_around = {
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
+  gridAlignedExtraPauseSteps: 1,
   'itemGridAlignedMovement': true,
-  'slowJsExecutionFactor': 10,
+  'slowExecutionFactor': 10,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
@@ -1965,6 +2068,8 @@ levels.js_hoc2015_move_around = {
 
 levels.js_hoc2015_move_finale = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song6' ],
   'codeFunctions': {
@@ -1980,8 +2085,9 @@ levels.js_hoc2015_move_finale = {
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
+  gridAlignedExtraPauseSteps: 1,
   'itemGridAlignedMovement': true,
-  'slowJsExecutionFactor': 10,
+  'slowExecutionFactor': 10,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
@@ -2016,6 +2122,8 @@ levels.js_hoc2015_move_finale = {
 
 levels.js_hoc2015_event_two_items = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'hoth',
   'music': [ 'song7' ],
   'wallMap': 'blank',
@@ -2063,7 +2171,12 @@ levels.js_hoc2015_event_two_items = {
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true },
-      result: { success: false, message: msg.failedTwoItemsTimeout() } }
+      result: {
+        success: false,
+        message: msg.failedTwoItemsTimeout(),
+        blocklyMessage: msg.failedTwoItemsTimeoutBlockly()
+      }
+    }
   ],
   'callouts': [
     {
@@ -2106,6 +2219,8 @@ levels.js_hoc2015_event_two_items = {
 
 levels.js_hoc2015_event_four_items = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'hoth',
   'music': [ 'song8' ],
   'wallMap': 'blobs',
@@ -2156,7 +2271,12 @@ levels.js_hoc2015_event_four_items = {
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true },
-      result: { success: false, message: msg.failedFourItemsTimeout() } }
+      result: {
+        success: false,
+        message: msg.failedFourItemsTimeout(),
+        blocklyMessage: msg.failedFourItemsTimeoutBlockly()
+      }
+    }
   ]
 };
 
@@ -2164,9 +2284,11 @@ levels.js_hoc2015_event_four_items = {
 levels.js_hoc2015_score =
 {
   'avatarList': ['R2-D2'],
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'editCode': true,
   'background': 'hoth',
-  'music': [ 'song9' ],
+  'music': [ 'song10' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
@@ -2225,10 +2347,21 @@ levels.js_hoc2015_score =
   'progressConditions' : [
     { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 },
       result: { success: false, message: msg.failedScoreTimeout() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 },
-      result: { success: false, message: msg.failedScoreScore() } },
+    { required: { 'timedOut': false, 'allGoalsVisited': true, 'currentPointsBelow': 300 },
+      result: {
+        success: false,
+        canPass: true,
+        message: msg.failedScoreScore(),
+        blocklyMessage: msg.failedScoreScoreBlockly()
+      }
+    },
     { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 },
-      result: { success: false, message: msg.failedScoreGoals() } },
+      result: {
+        success: false,
+        message: msg.failedScoreGoals(),
+        blocklyMessage: msg.failedScoreGoalsBlockly()
+      }
+    },
     { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 },
       result: { success: true, message: msg.successCharacter1() } }
   ],
@@ -2273,8 +2406,10 @@ levels.js_hoc2015_score =
 
 levels.js_hoc2015_win_lose = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'endor',
-  'music': [ 'song10' ],
+  'music': [ 'song9' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -2341,9 +2476,19 @@ levels.js_hoc2015_win_lose = {
     { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 },
       result: { success: false, message: msg.failedWinLoseTimeout() } },
     { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 },
-      result: { success: false, message: msg.failedWinLoseScore() } },
+      result: {
+        success: false,
+        message: msg.failedWinLoseScore(),
+        blocklyMessage: msg.failedWinLoseScoreBlockly()
+      }
+    },
     { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 },
-      result: { success: false, message: msg.failedWinLoseGoals() } },
+      result: {
+        success: false,
+        message: msg.failedWinLoseGoals(),
+        blocklyMessage: msg.failedWinLoseGoalsBlockly()
+      }
+    },
     { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 },
       result: { success: true, message: msg.successCharacter1() } }
   ]
@@ -2352,6 +2497,8 @@ levels.js_hoc2015_win_lose = {
 
 levels.js_hoc2015_add_characters = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'endor',
   'music': [ 'song11' ],
   'wallMap': 'circle',
@@ -2429,13 +2576,20 @@ levels.js_hoc2015_add_characters = {
     { required: { 'collectedItemsAtOrAbove': 3 },
       result: { success: true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
-      result: { success: false, message: msg.failedAddCharactersTimeout() } }
+      result: {
+        success: false,
+        message: msg.failedAddCharactersTimeout(),
+        blocklyMessage: msg.failedAddCharactersTimeoutBlockly()
+      }
+    }
   ]
 };
 
 
 levels.js_hoc2015_chain_characters = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'starship',
   'music': [ 'song12' ],
   'wallMap': 'grid',
@@ -2490,7 +2644,12 @@ levels.js_hoc2015_chain_characters = {
     { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 20, 'currentPointsBelow': 2000 },
       result: { success: false, message: msg.failedChainCharactersScore() } },
     { required: { 'timedOut': true, 'collectedItemsBelow': 20, 'currentPointsAtOrAbove': 2000 },
-      result: { success: false, message: msg.failedChainCharactersItems() } },
+      result: {
+        success: false,
+        message: msg.failedChainCharactersItems(),
+        blocklyMessage: msg.failedChainCharactersItemsBlockly()
+      }
+    },
     { required: { 'collectedItemsAtOrAbove': 20, 'currentPointsAtOrAbove': 2000 },
       result: { success: true, message: msg.successCharacter1() } }
   ],
@@ -2521,6 +2680,8 @@ levels.js_hoc2015_chain_characters = {
 
 levels.js_hoc2015_chain_characters_2 = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'starship',
   'music': [ 'song13' ],
   'wallMap': 'horizontal',
@@ -2607,6 +2768,8 @@ levels.js_hoc2015_chain_characters_2 = {
 
 levels.js_hoc2015_change_setting = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'starship',
   'music': [ 'song14' ],
   'wallMap': 'blobs',
@@ -2867,6 +3030,7 @@ levels.js_hoc2015_event_free = {
 
 levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
@@ -2876,6 +3040,7 @@ levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
 
 levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
@@ -2886,6 +3051,7 @@ levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
 
 levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_diagonal,  {
   editCode: false,
+  enableShowCode: true,
   callouts: null,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
@@ -2897,6 +3063,7 @@ levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_diagonal,  {
 
 levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_backtrack,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
@@ -2908,6 +3075,7 @@ levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_backtrack,  {
 
 levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_around,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
@@ -2919,22 +3087,27 @@ levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_around,  {
 
 levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_finale,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
     moveNorthRequiredBlock(),
     moveSouthRequiredBlock(),
-    moveWestRequiredBlock(),
+    moveEastRequiredBlock(),
   ],
 });
 
 levels.hoc2015_blockly_7 = utils.extend(levels.js_hoc2015_event_two_items,  {
   editCode: false,
+  enableShowCode: true,
+  msgStringOverrides: {
+    moveSprite: 'goSprite'
+  },
   startBlocks: whenUpDown,
   toolbox: tb(hocMoveNS),
   requiredBlocks: [
-    moveNorthRequiredBlock(),
-    moveSouthRequiredBlock(),
+    // Note: not listing move blocks since the error messages are already
+    // sufficient and we've renamed these blocks to goUp/goDown
   ],
   'callouts': [
     {
@@ -2974,18 +3147,21 @@ levels.hoc2015_blockly_7 = utils.extend(levels.js_hoc2015_event_two_items,  {
 
 levels.hoc2015_blockly_8 = utils.extend(levels.js_hoc2015_event_four_items,  {
   editCode: false,
+  enableShowCode: true,
+  msgStringOverrides: {
+    moveSprite: 'goSprite'
+  },
   startBlocks: whenUpDownLeftRight,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
-    moveNorthRequiredBlock(),
-    moveSouthRequiredBlock(),
-    moveEastRequiredBlock(),
-    moveWestRequiredBlock(),
+    // Note: not listing move blocks since the error messages are already
+    // sufficient and we've renamed these blocks to goUp/goDown/goLeft/goRight
   ],
 });
 
 levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   editCode: false,
+  enableShowCode: true,
   msgStringOverrides: {
     whenTouchGoal: 'whenGetCharacterRebelPilot'
   },
@@ -3032,6 +3208,7 @@ levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
 
 levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks: '',
   toolbox:
     tb('<block type="studio_playSound"></block> \
@@ -3047,6 +3224,7 @@ levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
 
 levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
@@ -3100,6 +3278,7 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
 
 levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
@@ -3153,6 +3332,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
 
 levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
@@ -3221,6 +3401,7 @@ levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  
 
 levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
   editCode: false,
+  enableShowCode: true,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
@@ -3287,6 +3468,10 @@ levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
 
 levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
   editCode: false,
+  enableShowCode: true,
+  msgStringOverrides: {
+    moveSprite: 'goSprite'
+  },
   markdownInstructions: null,
   markdownInstructionsWithClassicMargins: false,
   startBlocks:

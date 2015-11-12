@@ -154,20 +154,23 @@
     "disable_examples": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
-    "free_play": "false",
+    "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
-    "hide_design_mode": "false",
+    "hide_design_mode": "true",
     "beginner_mode": "false",
     "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"designModeViz\" class=\"appModern\" style=\"display: none; width: 320px; height: 450px;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\">\r\n    <button id=\"lastButton\" style=\"padding: 0px; margin: 0px; height: 70px; width: 150px; font-size: 30px; color: rgb(255, 255, 255); position: absolute; left: 5px; top: 375px; background-color: rgb(0, 0, 0);\">Last</button>\r\n    <button id=\"nextButton\" style=\"padding: 0px; margin: 0px; height: 70px; width: 150px; font-size: 30px; color: rgb(255, 255, 255); position: absolute; left: 165px; top: 375px; background-color: rgb(0, 0, 0);\">Next</button>\r\n    <input id=\"urlInput\" style=\"margin: 0px; width: 245px; height: 25px; color: rgb(0, 0, 0); position: absolute; left: 5px; top: 345px; font-size: 10px;\" placeholder=\"&lt;enter image URL here&gt;\"/>\r\n    <button id=\"addButton\" style=\"padding: 0px; margin: 0px; height: 25px; width: 60px; font-size: 16px; color: rgb(255, 255, 255); position: absolute; left: 255px; top: 345px; background-color: rgb(0, 0, 0);\">Add</button>\r\n    <img src=\"/blockly/media/1x1.gif\" id=\"myImage\" style=\"height: 320px; width: 320px; position: absolute; left: 0px; top: 20px; margin: 0px;\" data-canonical-image-url=\"\"/>\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; word-wrap: break-word; color: rgb(0, 173, 188); max-width: 320px; width: 70px; height: 20px; position: absolute; left: 250px; top: 0px;\" id=\"currentIndexLabel\">0 of 0</label>\r\n  </div>\r\n</div>",
     "submittable": "false",
-    "hide_view_data_button": "false",
+    "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Play with the image scroller. Try out the new way of interacting with the app: keystrokes. You can press the left and right arrow keys to scroll through the images in addition to clicking on the buttons!",
-    "markdown_instructions": "# Image URLs and Keystrokes\r\n\r\nCheck out the updated scroller. \r\n\r\n1. You can now scroll through a bunch of images.  \r\n2. Try out the new way of interacting with the app: **keystrokes**. You can **press the left and right arrow keys** to scroll through the images in addition to clicking on the buttons!"
+    "instructions": "Play with the image scroller. Press the left and right arrows to progress through the images.",
+    "markdown_instructions": "# Image Scroller Demo\r\n\r\nTry out the updated scroller. \r\n\r\n1. You can now scroll through a collection of images.  \r\n2. There is a new way of interacting with the app. **Press the left and right arrow keys** to scroll through the images. (**Note:** Make sure to click on the screen first)\r\n    ",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>

@@ -125,7 +125,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
       facet: true,
       'facet.field'=>['location_flexibility_ss', 'experience_s'],
       rows: rows,
-      sort: "name_s asc"
+      sort: "random_#{SecureRandom.random_number(10**8)} asc"
     }
   end
 end

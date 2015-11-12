@@ -61,6 +61,58 @@ var isHidden = function (selector) {
   return rootEl.is(':visible') && element.hasClass('design-mode-hidden');
 };
 
+/**
+ * Mouseover the bottom right of the element, than click and drag the resizer
+ * by xAmount/yAmount to make the element bigger.
+ */
+function resizeElement(element, xAmount, yAmount) {
+  var resizer = $(element).parent().find('.ui-icon-gripsmall-diagonal-se');
+
+  var start = {
+    x: resizer.offset().left + resizer.width(),
+    y: resizer.offset().top + resizer.height()
+  };
+  var end = {
+    x: start.x + xAmount,
+    y: start.y + yAmount
+  };
+
+  // need to mouseover so that it sets up some internal state property
+  var mouseover = testUtils.createMouseEvent('mouseover', start.x, start.y);
+  var mousedown = testUtils.createMouseEvent('mousedown', start.x, start.y);
+  var drag = testUtils.createMouseEvent('mousemove', end.x, end.y);
+  var mouseup = testUtils.createMouseEvent('mouseup', end.x, end.y);
+
+  resizer[0].dispatchEvent(mouseover);
+  resizer[0].dispatchEvent(mousedown);
+  resizer[0].dispatchEvent(drag);
+  resizer[0].dispatchEvent(mouseup);
+}
+
+/**
+ * Click and drag the element by xAmount/yAmount to move it.
+ */
+function dragElement(element, xAmount, yAmount) {
+  var $element = $(element);
+  var start = {
+    x: $element.offset().left + 5,
+    y: $element.offset().top + 5
+  };
+  var end = {
+    x: start.x + xAmount,
+    y: start.y + yAmount
+  };
+
+  // need to mouseover so that it sets up some internal state property
+  var mousedown = testUtils.createMouseEvent('mousedown', start.x, start.y);
+  var drag = testUtils.createMouseEvent('mousemove', end.x, end.y);
+  var mouseup = testUtils.createMouseEvent('mouseup', end.x, end.y);
+
+  element.dispatchEvent(mousedown);
+  element.dispatchEvent(drag);
+  element.dispatchEvent(mouseup);
+}
+
 module.exports = {
   app: "applab",
   skinId: "applab",
@@ -74,9 +126,10 @@ module.exports = {
       runBeforeClick: function (assert) {
         $("#designModeButton").click();
 
-        testUtils.dragToVisualization('BUTTON', 10, 10);
+        testUtils.dragToVisualization('BUTTON', 10, 20);
 
         assertPropertyRowValue(0, 'id', 'button1', assert);
+        assertPropertyRowValue(4, 'x position (px)', 10, assert);
 
         // take advantage of the fact that we expose the filesystem via
         // localhost:8001
@@ -117,7 +170,7 @@ module.exports = {
       },
     },
     {
-      description: "resizing",
+      description: "resizability",
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
@@ -159,8 +212,7 @@ module.exports = {
         };
 
         $("#designModeButton").click();
-        testUtils.dragToVisualization('BUTTON', 10, 10);
-        assertPropertyRowValue(0, 'id', 'button1', assert);
+        testUtils.dragToVisualization('BUTTON', 10, 20);
         shouldBeResizable();
 
         $("#codeModeButton").click();
@@ -183,6 +235,65 @@ module.exports = {
         testResult: TestResults.FREE_PLAY
       },
     },
+
+    {
+      description: "resizing button",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        $("#designModeButton").click();
+        testUtils.dragToVisualization('BUTTON', 10, 20);
+        assertPropertyRowValue(0, 'id', 'button1', assert);
+        assertPropertyRowValue(2, 'width (px)', 80, assert);
+        assertPropertyRowValue(3, 'height (px)', 30, assert);
+        assertPropertyRowValue(4, 'x position (px)', 10, assert);
+        assertPropertyRowValue(5, 'y position (px)', 20, assert);
+
+        resizeElement(document.getElementById('design_button1'), 20, 0);
+        assertPropertyRowValue(2, 'width (px)', 100, assert);
+        assertPropertyRowValue(3, 'height (px)', 30, assert);
+
+        resizeElement(document.getElementById('design_button1'), 0, 20);
+        assertPropertyRowValue(2, 'width (px)', 100, assert);
+        assertPropertyRowValue(3, 'height (px)', 50, assert);
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "dragging button",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        $("#designModeButton").click();
+        testUtils.dragToVisualization('BUTTON', 10, 20);
+        assertPropertyRowValue(0, 'id', 'button1', assert);
+        assertPropertyRowValue(2, 'width (px)', 80, assert);
+        assertPropertyRowValue(3, 'height (px)', 30, assert);
+        assertPropertyRowValue(4, 'x position (px)', 10, assert);
+        assertPropertyRowValue(5, 'y position (px)', 20, assert);
+
+        dragElement(document.getElementById('design_button1'), 20, 0);
+        assertPropertyRowValue(4, 'x position (px)', 30, assert);
+        assertPropertyRowValue(5, 'y position (px)', 20, assert);
+
+        dragElement(document.getElementById('design_button1'), 0, 20);
+        assertPropertyRowValue(4, 'x position (px)', 30, assert);
+        assertPropertyRowValue(5, 'y position (px)', 40, assert);
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
 
     {
       description: "hidden items",

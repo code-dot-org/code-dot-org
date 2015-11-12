@@ -35,7 +35,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 <img src="/images/fit-350/group_ipad.jpg">
 
 ## 5) Inspire students to start your Hour of Code
-**Kick off your Hour of Code by inspiring students and discussing how computer science impacts every part of our lives.** 
+**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities with computer science.** 
 
 **Show an inspirational video:**
 
@@ -91,6 +91,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 ## 7) Celebrate
 - [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
 - [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
+- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]

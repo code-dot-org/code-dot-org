@@ -16,6 +16,8 @@ var React = require('react');
 var sinon = require('sinon');
 require('jquery-ui');
 
+window.React = React;
+
 // Anatomy of a level test collection. The example itself is uncommented so
 // that you get the benefits of editor syntax highlighting
 var example = {
@@ -86,7 +88,6 @@ describe('Level tests', function() {
 
     window.jQuery = $;
     window.$ = $;
-    window.React = React;
     window.dashboard = $.extend(window.dashboard, {
       i18n: {
         t: function (selector) { return selector; }
