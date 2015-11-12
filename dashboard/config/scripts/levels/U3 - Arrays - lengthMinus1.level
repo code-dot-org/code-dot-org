@@ -53,7 +53,7 @@
     "encrypted_examples": [
 
     ],
-    "start_blocks": "var colors = [\"red\",\"orange\",\"yellow\",\"green\",\"blue\",\"indigo\",\"violet\"];\r\n\r\n// Use list.length - 1 syntax to access the last element in this array and log it to the console"
+    "start_blocks": "var colors = [\"red\",\"orange\",\"yellow\",\"green\",\"blue\",\"indigo\",\"violet\"];\r\n\r\n// Use list.length - 1 syntax to access the last \r\n// element in this array and log it to the console"
   }
 }]]></config>
   <blocks/>
