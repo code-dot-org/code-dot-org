@@ -75,6 +75,17 @@ starwarsblocks:
   user_id:
   login_required: false
   properties: '{}'
+mc:
+  id: 70
+  name: mc
+  created_at: 2015-10-16 22:39:24.000000000 Z
+  updated_at: 2015-10-16 22:39:24.000000000 Z
+  wrapup_video_id: 137
+  trophies: false
+  hidden: true
+  user_id:
+  login_required: false
+  properties: '{}'
 frozen:
   id: 61
   name: frozen
