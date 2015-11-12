@@ -10,7 +10,7 @@ class ServerTools
 
   # Returns the Chef json hash for all of the servers matching `name_glob`.
   def self.find_frontends(name_glob)
-    rows = JSON.parse(
+    JSON.parse(
       `knife search node "roles:front-end AND chef_environment:production AND name:#{name_glob}" --format json`)['rows']
   end
 
