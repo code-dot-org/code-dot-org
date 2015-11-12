@@ -41,8 +41,18 @@ class ServerTools
 
   # Deregister the frontend instances matching `name_glob` from the production elbs.
   def self.deregister_frontend_instances(name_glob)
+    approved, names = prompt_for_action('deregister', name_glob)
+    return unless approved
+
     instance_ids = find_frontend_instance_ids(name_glob)
     if instance_ids.length > 0
+      all_instance_ids = find_frontend_instance_ids('*')
+
+      if instance_ids.length == all_instance_ids.length
+        puts "Refusing to remove all instances from load balancer"
+        return
+      end
+
       %w{production-dashboard production-pegasus production-redirects}.each do |elb_name|
         puts `aws elb deregister-instances-from-load-balancer --load-balancer-name #{elb_name} --instances #{instance_ids.join(' ')}`
       end
@@ -51,13 +61,21 @@ class ServerTools
     end
   end
 
+  # Displays a prompt asking if the user wants to `verb` all of the
+  # servers matching `name_glob`. Returns [true, matching_names] if the
+  # user selects yes and [false, nil] otherwise.
+  def self.prompt_for_action(verb, name_glob)
+    names = find_frontend_names(name_glob).map {|n| n[0]}
+    print "Are you sure you want to #{verb} #{names.join(', ')}? (y/n) "
+    input = gets
+    (input.strip == 'y') ? [true, names] : nil
+  end
+
   # Terminates the frontend instances matching `name_glob`. The instances must allow automatic
   # termination.
   def self.terminate_frontend_instances(name_glob)
-    names = find_frontend_names(name_glob).map {|n| n[0]}
-    print "Are you sure you want to terminate #{names.join(', ')}? (y/n) "
-    input = gets
-    return unless input.strip == 'y'
+    approved, names = prompt_for_action('terminate', name_glob)
+    return unless approved
 
     instance_ids = find_frontend_instance_ids(name_glob)
 
