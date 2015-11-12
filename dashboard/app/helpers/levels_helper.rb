@@ -143,6 +143,10 @@ module LevelsHelper
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
 
+    if PuzzleRating.enabled?
+      view_options(puzzle_ratings_url: puzzle_ratings_path)
+    end
+
     if @level.is_a? Blockly
       @app_options = blockly_options
     elsif @level.is_a? DSLDefined

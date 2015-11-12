@@ -29,6 +29,7 @@ var FeedbackUtils = require('./feedback');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
 var codegen = require('./codegen');
+var PuzzleRatingUtils = require('./puzzleRatingUtils');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -261,6 +262,11 @@ StudioApp.prototype.init = function(config) {
       makeImage: config.makeImage,
       makeYourOwn: config.makeYourOwn
     });
+  }
+
+  console.log(config);
+  if (config.puzzleRatingsUrl) {
+    PuzzleRatingUtils.submitCachedPuzzleRatings(config.puzzleRatingsUrl);
   }
 
   // Record time at initialization.
