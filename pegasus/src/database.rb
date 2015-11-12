@@ -60,10 +60,10 @@ def country_name_from_code(code)
   country[:name_s]
 end
 def no_credit_count
-  DB[:cdo_state_promote].where(cs_counts_t: 'No').exclude(state_code_s: 'DC').count
+  DB[:cdo_state_promote].where(cs_counts_t: 'No').count
 end
 def credit_count
-  DB[:cdo_state_promote].where(cs_counts_t: 'Yes').exclude(state_code_s: 'DC').count
+  DB[:cdo_state_promote].where(cs_counts_t: 'Yes').count
 end
 def jobs_nationwide
   DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_jobs_i]
