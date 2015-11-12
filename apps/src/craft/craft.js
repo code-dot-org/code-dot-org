@@ -148,7 +148,6 @@ Craft.init = function (config) {
       }
     };
   }
-  //config.level.skipInstructionsPopup = !!config.level.showPopupOnLoad;
 
   if (config.level.puzzle_number && levelbuilderOverrides[config.level.puzzle_number]) {
     $.extend(config.level, levelbuilderOverrides[config.level.puzzle_number]);
