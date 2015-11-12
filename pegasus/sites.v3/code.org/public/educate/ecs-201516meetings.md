@@ -16,7 +16,7 @@ ECS Monthly Meetings take place on the first Tuesday of every month at 7:00 pm C
 
 <br />
 
-A calendar of all future monthly meetings is available at [http://cs10kcommunity.org](http://cs10kcommunity.org)
+A calendar of all future monthly meetings is available at [http://cs10kcommunity.org](https://cs10kcommunity.org/calendar/month)
 <br />
 
 [<button>View Full Schedule of Code.org Live Events</button>](http://www.eventbrite.com/o/codeorg-teacher-community-8317327577)
