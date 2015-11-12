@@ -546,6 +546,12 @@ html[dir='rtl'] #codeWorkspace {
   #visualizationColumn.responsive {
     max-width: $width;
   }
+  #soft-buttons {
+    margin-left: 0;
+    button {
+      margin: 0;
+    }
+  }
   .small-footer-base.responsive {
     max-width: $width;
     small {
