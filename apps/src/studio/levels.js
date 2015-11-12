@@ -1720,17 +1720,17 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   ],
   'codeFunctions': {
     // Play Lab
-    "setSprite": { 'category': 'Play Lab' },
-    "setBackground": { 'category': 'Play Lab' },
-    "move": { 'category': 'Play Lab' },
+    "setSprite": { 'category': 'Play Lab', noAutocomplete: false },
+    "setBackground": { 'category': 'Play Lab'  },
+    "move": { 'category': 'Play Lab', noAutocomplete: false  },
     "playSound": { 'category': 'Play Lab' },
-    "changeScore": { 'category': 'Play Lab' },
-    "setSpritePosition": { 'category': 'Play Lab' },
-    "setSpriteSpeed": { 'category': 'Play Lab' },
-    "setSpriteEmotion": { 'category': 'Play Lab' },
-    "throwProjectile": { 'category': 'Play Lab' },
-    "vanish": { 'category': 'Play Lab' },
-    "onEvent": { 'category': 'Play Lab' },
+    "changeScore": { 'category': 'Play Lab', noAutocomplete: false },
+    "setSpritePosition": { 'category': 'Play Lab', noAutocomplete: false  },
+    "setSpriteSpeed": { 'category': 'Play Lab', noAutocomplete: false  },
+    "setSpriteEmotion": { 'category': 'Play Lab', noAutocomplete: false  },
+    "throwProjectile": { 'category': 'Play Lab', noAutocomplete: false  },
+    "vanish": { 'category': 'Play Lab', noAutocomplete: false  },
+    "onEvent": { 'category': 'Play Lab', noAutocomplete: false  },
 
     // Control
     "forLoop_i_0_4": null,
@@ -1776,6 +1776,8 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
 
 levels.js_hoc2015_move_right = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song1' ],
   'codeFunctions': {
@@ -1843,6 +1845,8 @@ levels.js_hoc2015_move_right = {
 
 levels.js_hoc2015_move_right_down = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song2' ],
   'codeFunctions': {
@@ -1890,6 +1894,8 @@ levels.js_hoc2015_move_right_down = {
 
 levels.js_hoc2015_move_diagonal = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'textModeAtStart': true,
   'background': 'main',
   'music': [ 'song3' ],
@@ -1960,6 +1966,8 @@ levels.js_hoc2015_move_diagonal = {
 
 levels.js_hoc2015_move_backtrack = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song4' ],
   'codeFunctions': {
@@ -2008,6 +2016,8 @@ levels.js_hoc2015_move_backtrack = {
 
 levels.js_hoc2015_move_around = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song5' ],
   'codeFunctions': {
@@ -2058,6 +2068,8 @@ levels.js_hoc2015_move_around = {
 
 levels.js_hoc2015_move_finale = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song6' ],
   'codeFunctions': {
@@ -2110,6 +2122,8 @@ levels.js_hoc2015_move_finale = {
 
 levels.js_hoc2015_event_two_items = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'hoth',
   'music': [ 'song7' ],
   'wallMap': 'blank',
@@ -2205,6 +2219,8 @@ levels.js_hoc2015_event_two_items = {
 
 levels.js_hoc2015_event_four_items = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'hoth',
   'music': [ 'song8' ],
   'wallMap': 'blobs',
@@ -2268,6 +2284,8 @@ levels.js_hoc2015_event_four_items = {
 levels.js_hoc2015_score =
 {
   'avatarList': ['R2-D2'],
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'editCode': true,
   'background': 'hoth',
   'music': [ 'song10' ],
@@ -2387,6 +2405,8 @@ levels.js_hoc2015_score =
 
 levels.js_hoc2015_win_lose = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'endor',
   'music': [ 'song9' ],
   'wallMap': 'blobs',
@@ -2476,6 +2496,8 @@ levels.js_hoc2015_win_lose = {
 
 levels.js_hoc2015_add_characters = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'endor',
   'music': [ 'song11' ],
   'wallMap': 'circle',
@@ -2565,6 +2587,8 @@ levels.js_hoc2015_add_characters = {
 
 levels.js_hoc2015_chain_characters = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'starship',
   'music': [ 'song12' ],
   'wallMap': 'grid',
@@ -2655,6 +2679,8 @@ levels.js_hoc2015_chain_characters = {
 
 levels.js_hoc2015_chain_characters_2 = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'starship',
   'music': [ 'song13' ],
   'wallMap': 'horizontal',
@@ -2741,6 +2767,8 @@ levels.js_hoc2015_chain_characters_2 = {
 
 levels.js_hoc2015_change_setting = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'starship',
   'music': [ 'song14' ],
   'wallMap': 'blobs',
