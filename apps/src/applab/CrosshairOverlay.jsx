@@ -12,16 +12,6 @@ module.exports = React.createClass({
   },
 
   getDefaultProps: function () {
-    var cursorStyle = {
-      stroke: '#333',
-      strokeWidth: 2
-    };
-
-    var cursorOutlineStyle = {
-      stroke: '#ddd',
-      strokeWidth: 4
-    };
-
     var guideStyle = {
       stroke: '#aaa',
       strokeWidth: 1.8,
@@ -41,8 +31,6 @@ module.exports = React.createClass({
     });
 
     return {
-      cursorStyle: cursorStyle,
-      cursorOutlineStyle: cursorOutlineStyle,
       guideStyle: guideStyle,
       textStyle: textStyle,
       textOutlineStyle: textOutlineStyle
@@ -66,33 +54,13 @@ module.exports = React.createClass({
     return <g>
       <line style={this.props.guideStyle}
             x1={this.props.x}
-            y1="0"
+            y1={this.props.y - (CROSSHAIR_RADIUS + CROSSHAIR_MARGIN)}
             x2={this.props.x}
-            y2={this.props.y - (CROSSHAIR_RADIUS + CROSSHAIR_MARGIN)}/>
+            y2="0"/>
       <line style={this.props.guideStyle}
-            x1="0"
+            x1={this.props.x - (CROSSHAIR_RADIUS + CROSSHAIR_MARGIN)}
             y1={this.props.y}
-            x2={this.props.x - (CROSSHAIR_RADIUS + CROSSHAIR_MARGIN)}
-            y2={this.props.y}/>
-      <line style={this.props.cursorOutlineStyle}
-            x1={this.props.x}
-            y1={this.props.y - CROSSHAIR_RADIUS - 1}
-            x2={this.props.x}
-            y2={this.props.y + CROSSHAIR_RADIUS + 1}/>
-      <line style={this.props.cursorOutlineStyle}
-            x1={this.props.x - CROSSHAIR_RADIUS - 1}
-            y1={this.props.y}
-            x2={this.props.x + CROSSHAIR_RADIUS + 1}
-            y2={this.props.y}/>
-      <line style={this.props.cursorStyle}
-            x1={this.props.x}
-            y1={this.props.y - CROSSHAIR_RADIUS}
-            x2={this.props.x}
-            y2={this.props.y + CROSSHAIR_RADIUS}/>
-      <line style={this.props.cursorStyle}
-            x1={this.props.x - CROSSHAIR_RADIUS}
-            y1={this.props.y}
-            x2={this.props.x + CROSSHAIR_RADIUS}
+            x2="0"
             y2={this.props.y}/>
       <text style={this.props.textOutlineStyle}
             x={this.props.x + COORDINATE_TEXT_X_MARGIN}
