@@ -159,6 +159,9 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
     elementSeen[visualElementId] = true;
     localStorage.setItem(visualElementType, JSON.stringify(elementSeen));
   } catch (e) {
+    if (e.name === "QuotaExceededError") {
+      return ;
+    }
     //Something went wrong parsing the json. Blow it up and just put in the new callout
     var elementSeen = {};
     elementSeen[visualElementId] = true;
