@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-11-10T15:39:38.000Z",
+  "created_at": "2015-11-11T22:16:47.076Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -136,7 +136,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Adding Image URLs\r\n\r\nYou are going to be creating your own image scroller! The starter code is very similar to what you created for the word scroller. We just have to make a couple updates. First lets set up the array of image URLs. There are a couple different ways to set up an array but we are going to use `appendItem` to add all the image URLs. You will also have to change updateDisplay to set the image instead of text.\r\n\r\n**Note:** At this point you should have collected image URLs to use for your image scroller. If you have not collected your image URLs yet, go do that now. \r\n\r\n# Do This\r\n\r\n*  ** Add your image URLs to the images array.**  Pull out an `appendItem` command. Change the array name to match the array. Change the item parameter to your image URL.\r\n\r\n<img src=\"https://images.code.org/91fcb850da2f4b2f4cad24d094135867-image-1447174515231.gif\" style=\"width: 350px\">\r\n\r\n* **Change the updateDisplay function** to set the image(ID:'myImage') instead of textLabel using `setImageURL`.\r\n\r\n<img src=\"https://images.code.org/9f7f4aeeb9b1a84ae781043602166865-image-1447337890448.gif\" style=\"width: 350px\">\r\n\r\n* ** Test the the 'Add' button** to check that it adds a new image at the current index of the array.\r\n\r\n<img src=\"https://images.code.org/0388145b2221da0255ad98005d749a0e-image-1447174724522.gif\" style=\"width: 200px\">\r\n\r\n* ** Set the colors and theme **of your app to personalize it. ** Note: ** You can change the way the screen looks but make sure to keep all the elements currently on the screen or your app might not work.",
+    "markdown_instructions": "# Adding Image URLs\r\n\r\nYou are going to be creating your own image scroller! Lets set up the array of image URLs. There are a couple different ways to set up an array but we are going to use `appendItem` to add all the image URLs. \r\n\r\n**Note:** At this point you should have collected image URLs to use for your image scroller. If you have not collected your image URLs yet, go do that now. \r\n\r\n# Do This\r\n\r\n*  ** Add your image URLs to the images array.**  Pull out an `appendItem` command. Change the array name to match the array. Change the item parameter to your image URL.\r\n\r\n<img src=\"https://images.code.org/91fcb850da2f4b2f4cad24d094135867-image-1447174515231.gif\" style=\"width: 350px\">\r\n\r\n* ** Test the the 'Add' button** to check that it adds a new image at the current index of the array.\r\n\r\n<img src=\"https://images.code.org/0388145b2221da0255ad98005d749a0e-image-1447174724522.gif\" style=\"width: 200px\">\r\n\r\n* ** Set the colors and theme **of your app to personalize it. ** Note: ** You can change the way the screen looks but make sure to keep all the elements currently on the screen or your app might not work.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -167,10 +167,7 @@
     "debugger_disabled": "false",
     "slider_speed": "1.0",
     "project_template_level_name": "U3 - Keys - Image Scroller Template",
-    "instructions": "Add image URLs to your image array. Set up the display to rotate images. Test out the add button. Style your image scroller. (Click to see full instructions)",
-    "encrypted_examples": [
-
-    ]
+    "instructions": "Add image URLs to your image array. Test out the add button. Style your image scroller. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

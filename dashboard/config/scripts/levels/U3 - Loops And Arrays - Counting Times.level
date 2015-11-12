@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-11-10T15:39:38.000Z",
+  "created_at": "2015-11-12T17:26:21.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -39,7 +39,7 @@
       "setStrokeWidth": null,
       "setStrokeColor": null,
       "setFillColor": null,
-      "drawImageURL": null,
+      "drawImage": null,
       "getImageData": null,
       "putImageData": null,
       "clearCanvas": null,
@@ -98,9 +98,7 @@
       "equalityOperator": null,
       "inequalityOperator": null,
       "greaterThanOperator": null,
-      "greaterThanOrEqualOperator": null,
       "lessThanOperator": null,
-      "lessThanOrEqualOperator": null,
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
@@ -136,10 +134,12 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Adding Image URLs\r\n\r\nYou are going to be creating your own image scroller! The starter code is very similar to what you created for the word scroller. We just have to make a couple updates. First lets set up the array of image URLs. There are a couple different ways to set up an array but we are going to use `appendItem` to add all the image URLs. You will also have to change updateDisplay to set the image instead of text.\r\n\r\n**Note:** At this point you should have collected image URLs to use for your image scroller. If you have not collected your image URLs yet, go do that now. \r\n\r\n# Do This\r\n\r\n*  ** Add your image URLs to the images array.**  Pull out an `appendItem` command. Change the array name to match the array. Change the item parameter to your image URL.\r\n\r\n<img src=\"https://images.code.org/91fcb850da2f4b2f4cad24d094135867-image-1447174515231.gif\" style=\"width: 350px\">\r\n\r\n* **Change the updateDisplay function** to set the image(ID:'myImage') instead of textLabel using `setImageURL`.\r\n\r\n<img src=\"https://images.code.org/9f7f4aeeb9b1a84ae781043602166865-image-1447337890448.gif\" style=\"width: 350px\">\r\n\r\n* ** Test the the 'Add' button** to check that it adds a new image at the current index of the array.\r\n\r\n<img src=\"https://images.code.org/0388145b2221da0255ad98005d749a0e-image-1447174724522.gif\" style=\"width: 200px\">\r\n\r\n* ** Set the colors and theme **of your app to personalize it. ** Note: ** You can change the way the screen looks but make sure to keep all the elements currently on the screen or your app might not work.",
+    "instructions": "Count the number of times 5 appears in an array. (Click to see full instructions)",
+    "markdown_instructions": "# Counting Occurances of a Value\r\n\r\nWhen we do a search for a particular value we usually just want to know, yes or no (true or false) that the list contains the value we're looking for - we don't want a long listing of true/false for EVERY value in the list. So instead let's count.  Create a variable outside the loop to serve as your counter.  Loop over all the values and if the value is 5, add one to the count.  After the loop display the value.   The output should show the list, and a single value which is the count of the number of elements. \r\n\r\nWe have added a very large array as another test case. Notice that it's useful to test out your code on a small example that you can visually verify to give you.\r\n\r\n# Do This\r\n\r\n* Create a variable to count the number of 5s.\r\n\r\n* Update an `if` statement inside the `for` loop to increment count if the value is equal to 5. Remove the `else`.\r\n\r\n* After the `for` loop print the value of count.\r\n\r\n* Test your `for` loop with all four arrays to see if it works.\r\n\r\n| justFive | noFive | testArray | bigArray |\r\n| ---| --- | --- | --- |\r\n|<img src=\"https://images.code.org/3a2e3cfb21ee0afecc710b4da59ea248-image-1447352404607.17.54 PM.png\" style=\"width: 150px\">|<img src=\"https://images.code.org/971b4893a74d7cc2c6549f4da62a6c76-image-1447352402246.18.29 PM.png\" style=\"width: 150px\"> |<img src=\"https://images.code.org/3f5e51cf65a5337330ce264569a5321d-image-1447352407143.16.51 PM.png\" style=\"width: 150px\"> | <img src=\"https://images.code.org/b3ea51d4612a46feb67a8f8ba34cfb93-image-1447349856873.png\" style=\"width: 100px\"> |",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
+    "slider_speed": "1",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -158,19 +158,17 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "execute_palette_apis_only": "false",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "true",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "slider_speed": "1.0",
-    "project_template_level_name": "U3 - Keys - Image Scroller Template",
-    "instructions": "Add image URLs to your image array. Set up the display to rotate images. Test out the add button. Style your image scroller. (Click to see full instructions)",
     "encrypted_examples": [
 
-    ]
+    ],
+    "project_template_level_name": "U3 - Loops And Arrays - Linear Search Template"
   }
 }]]></config>
   <blocks/>
