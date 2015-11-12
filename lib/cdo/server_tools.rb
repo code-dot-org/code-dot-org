@@ -41,7 +41,7 @@ class ServerTools
 
   # Deregister the frontend instances matching `name_glob` from the production elbs.
   def self.deregister_frontend_instances(name_glob)
-    approved, names = prompt_for_action('deregister', name_glob)
+    approved, _names = prompt_for_action('deregister', name_glob)
     return unless approved
 
     instance_ids = find_frontend_instance_ids(name_glob)
