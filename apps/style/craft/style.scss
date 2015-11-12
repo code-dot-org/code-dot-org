@@ -86,6 +86,11 @@ body {
 
 #codeApp {
   top: 100px !important;
+
+  &.hide-source {
+    top: 0 !important;
+  }
+
   @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
     top: 10px !important;
   }
