@@ -50,9 +50,6 @@
     "debugger_disabled": "true",
     "instructions": "On one line add a variable called \"lives\" and assign it the value 3. Print it to the console. (Click to see full instructions)",
     "start_blocks": "var score = 0;\r\nconsole.log(\"The value of score is: \");\r\nconsole.log(score);",
-    "encrypted_examples": [
-
-    ],
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false"
   }

@@ -49,9 +49,6 @@
     "instructions": "Write an expression that calculates the players total score as: score times lives divided by total time and set it in a variable. (click to see full instructions)",
     "start_blocks": "var points = 1023;\r\nvar lives = 3;\r\nvar totalTime = 45;\r\nwrite(\"Points: \"+points);\r\nwrite(\"Lives: \"+lives);\r\nwrite(\"Total Time: \"+totalTime+\" secs\");\r\nwrite(\"---------------------------\");\r\nvar totalScore = 0;\r\nwrite(\"Your Total Score is: \"+totalScore);\r\n",
     "execute_palette_apis_only": "false",
-    "encrypted_examples": [
-
-    ],
     "lock_zero_param_functions": "false"
   }
 }]]></config>
