@@ -1,5 +1,5 @@
 ---
-title: Teacher Community and Support
+title: Teacher led Hour of Code lesson plans - by grade and subject
 nav: educate_nav
 ---
 # Teacher Led Hour of Code Lesson Plans
@@ -139,4 +139,7 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 **Ages 12-18, History, Language Arts, Storytelling, unplugged** Students will research Grace Hopper and learn the story of the first "bug".
 
 
+<br/><br/>
+<hr/>
 
+Want to submit a teacher-led activity for inclusion on this list? See the guidelines and process and submission form [here](https://hourofcode.com/tutorial-guidelines).
