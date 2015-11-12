@@ -145,11 +145,14 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   if (options.appDiv) {
     feedback.appendChild(options.appDiv);
   }
+  
+  feedback.className += canContinue ? " win-feedback" : " failure-feedback";
 
   feedback.appendChild(
     this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
       tryAgainText: options.tryAgainText,
+      keepPlayingText: options.keepPlayingText,
       continueText: options.continueText,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
@@ -411,6 +414,9 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
   if (options.feedbackType !== TestResults.ALL_PASS) {
     tryAgainText = utils.valueOr(options.tryAgainText, msg.tryAgain());
   }
+  if (options.keepPlayingText) {
+    tryAgainText = options.keepPlayingText;
+  }
 
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
@@ -532,7 +538,11 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
         message = msg.errorQuestionMarksInNumberField();
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
-        message = msg.numBlocksNeeded({
+          // Allow apps to override the "too many blocks" failure message
+          // Passed as a msg function to allow the parameters to be passed in.
+        var messageFunction = (options.appStrings && options.appStrings.tooManyBlocksFailMsgFunction) ||
+            msg.numBlocksNeeded;
+        message = messageFunction({
           numBlocks: this.studioApp_.IDEAL_BLOCK_NUM,
           puzzleNumber: options.level.puzzle_number || 0
         });
@@ -592,10 +602,12 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
                                     msg.nextStageTrophies(msgParams) :
                                     msg.nextLevelTrophies(msgParams);
         } else {
+          var nextLevelMsg = (options.appStrings && options.appStrings.nextLevelMsg) ||
+              msg.nextLevel(msgParams);
           message = finalLevel ? msg.finalStage(msgParams) :
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
-                                     msg.nextLevel(msgParams);
+                                     nextLevelMsg;
         }
         break;
     }
