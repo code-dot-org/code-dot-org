@@ -1147,10 +1147,6 @@ Applab.reset = function(first) {
     applabTurtle.turtleSetVisibility(true);
   }
 
-  if (!Applab.visualizationOverlay_) {
-    Applab.visualizationOverlay_ = new VisualizationOverlay(
-        document.getElementById('visualizationOverlay'));
-  }
   Applab.renderVisualizationOverlay();
 
   // Reset goal successState:
@@ -1208,13 +1204,18 @@ Applab.renderVisualizationOverlay = function() {
     div.style.cursor = Applab.isRunning() ? '' : 'crosshair';
   });
 
+  if (!Applab.visualizationOverlay_) {
+    Applab.visualizationOverlay_ = new VisualizationOverlay();
+  }
 
   // Calculate current visualization scale to pass to the overlay component.
   var unscaledWidth = parseInt(visualizationOverlay.getAttribute('width'));
   var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
-  Applab.visualizationOverlay_.setScale(scaledWidth / unscaledWidth);
-  Applab.visualizationOverlay_.setIsApplabRunning(Applab.isRunning());
-  Applab.visualizationOverlay_.render();
+
+  Applab.visualizationOverlay_.render(visualizationOverlay, {
+    isApplabRunning: Applab.isRunning(),
+    scale: scaledWidth / unscaledWidth
+  });
 };
 
 /**
