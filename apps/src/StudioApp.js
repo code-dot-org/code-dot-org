@@ -264,7 +264,6 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
-  console.log(config);
   if (config.puzzleRatingsUrl) {
     PuzzleRatingUtils.submitCachedPuzzleRatings(config.puzzleRatingsUrl);
   }
