@@ -1,0 +1,48 @@
+.highlights-content {
+  width: 100%;
+}
+
+.highlight-item {
+  width: 300px;
+  overflow: hidden;
+  padding: 20px;
+  float: left;
+  position: relative;
+}
+
+.higlight-img {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.highlight-caption {
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  line-height: 24px;
+  top: 0px;
+  left: 0px;
+  margin: 20px;
+  padding: 15px;
+  height: 260px;
+  display: none;
+}
+
+.caption-headline {
+  color: white;
+  text-transform: uppercase;
+}
+
+.learn-button {
+  width: 100%;
+  background-color: #7665a0;
+  height: 30px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 3px;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
