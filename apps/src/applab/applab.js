@@ -839,6 +839,10 @@ Applab.init = function(config) {
 
   config.enableShowLinesCount = false;
 
+  // In Applab, we want our embedded levels to look the same as regular levels,
+  // just without the editor
+  config.centerEmbedded = false;
+
   // Applab.initMinimal();
 
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
@@ -857,7 +861,7 @@ Applab.init = function(config) {
   if (config.embed || config.hideSource) {
     // no responsive styles active in embed or hideSource mode, so set sizes:
     viz.style.width = Applab.appWidth + 'px';
-    viz.style.height = Applab.appHeight + 'px';
+    viz.style.height = Applab.footerlessAppHeight + 'px';
     // Use offsetWidth of viz so we can include any possible border width:
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
