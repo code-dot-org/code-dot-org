@@ -2038,6 +2038,9 @@ Studio.reset = function(first) {
   Studio.message = null;
   Studio.pauseInterpreter = false;
 
+   // True if we have set testResults using level progressConditions
+  Studio.progressConditionTestResult = false;
+
   // Reset the score and title screen.
   Studio.playerScore = 0;
   Studio.scoreText = null;
@@ -2740,8 +2743,9 @@ Studio.onPuzzleComplete = function() {
   // If we know they succeeded, mark levelComplete true
   var levelComplete = (Studio.result === ResultType.SUCCESS);
 
-  // If preExecutionFailure testResults should already be set
-  if (!Studio.preExecutionFailure) {
+  // If preExecutionFailure or progressConditionTestResult, then testResults
+  // should already be set
+  if (!Studio.preExecutionFailure && ! Studio.progressConditionTestResult) {
     // If the current level is a free play, always return the free play
     // result type
     Studio.testResults = level.freePlay ? TestResults.FREE_PLAY :
@@ -5358,6 +5362,10 @@ var checkFinished = function () {
 
   if (progressConditionResult) {
     Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
+    if (!progressConditionResult.success && progressConditionResult.canPass) {
+      Studio.testResults = TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+      Studio.progressConditionTestResult = true;
+    }
     var progressMessage = progressConditionResult.message;
     if (studioApp.isUsingBlockly()) {
       progressMessage = progressConditionResult.blocklyMessage || progressMessage;
