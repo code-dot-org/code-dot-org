@@ -449,12 +449,16 @@ exports.generateDropletModeOptions = function (config) {
 /**
  * Returns a set of all blocks
  * @param {DropletConfig|null} dropletConfig custom configuration, may be null
+ * @param {codeFunctions|null} codeFunctions with block overrides, may be null
  * @returns {DropletBlock[]} a list of all available Droplet blocks,
  *      including the given config's blocks
  */
-exports.getAllAvailableDropletBlocks = function (dropletConfig) {
+exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions) {
   var hasConfiguredBlocks = dropletConfig && dropletConfig.blocks;
   var configuredBlocks = hasConfiguredBlocks ? dropletConfig.blocks : [];
+  if (codeFunctions && hasConfiguredBlocks) {
+    configuredBlocks = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+  }
   return exports.dropletGlobalConfigBlocks
     .concat(exports.dropletBuiltinConfigBlocks)
     .concat(standardConfig.blocks)
