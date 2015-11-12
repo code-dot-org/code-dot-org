@@ -22,12 +22,16 @@ class ScriptLevelsController < ApplicationController
     # delete the client state and other session state if the user is not signed in
     # and start them at the beginning of the script.
     # If the user is signed in, continue normally.
-    unless current_user
+    redirect_url = build_script_level_path(@script.starting_level)
+
+    if current_user
+      redirect_to(redirect_url) and return
+    else
       client_state.reset
       reset_session
-    end
 
-    redirect_to(build_script_level_path(@script.starting_level)) and return
+      render text: "<script>localStorage.clear(); window.location = '#{redirect_url}'</script>" and return
+    end
   end
 
   def next
