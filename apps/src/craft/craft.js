@@ -226,7 +226,7 @@ Craft.init = function (config) {
       });
 
       if (!config.level.showPopupOnLoad) {
-        Craft.initializeAppLevel(config.level)
+        Craft.initializeAppLevel(config.level);
       }
     },
     twitter: {
