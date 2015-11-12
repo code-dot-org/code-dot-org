@@ -59,9 +59,6 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ],
     "start_blocks": "var myArray = [];\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));"
   }
 }]]></config>
