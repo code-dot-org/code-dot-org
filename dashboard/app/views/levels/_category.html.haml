@@ -1,0 +1,7 @@
+- label = (label) ? label : category.capitalize
+- category = "#{category}_category"
+.field
+  = f.label category, label, data: { toggle: "collapse", target: "##{category}" }, class: "collapsed"
+  .collapse{id: category}
+    = render partial: partial, locals: {f: f}
+
