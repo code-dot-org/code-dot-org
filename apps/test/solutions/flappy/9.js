@@ -1,5 +1,5 @@
 var setScoreRequiredBlock = {
-  test: function (block) {
+  test: function test(block) {
     return block.type === 'flappy_setScore';
   },
   type: 'flappy_setScore'
