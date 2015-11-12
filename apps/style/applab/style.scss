@@ -258,7 +258,7 @@ div#visualizationResizeBar {
 /* When not running, show default arrow cursor for all UI elements
    so that they do not look active. */
 #divApplab.notRunning {
-  & button, & label, & select, & input, & img, & div.chart, & canvas, & div[contenteditable=true] {
+  button, label, select, input, img, div.chart, canvas, div[contenteditable=true] {
     cursor: default;
   }
 }
@@ -266,7 +266,7 @@ div#visualizationResizeBar {
 /* In design mode, show grab/grabbing cursor for all UI elements
  * so that they look draggable. */
 #designModeViz {
-  & button, & label, & select, & input, & img, & div.chart, & canvas, & div[contenteditable=true] {
+  button, label, select, input, img, div.chart, canvas, div[contenteditable=true] {
     cursor: move; /* fallback if grab cursor is unsupported */
     cursor: grab;
     cursor: -moz-grab;
