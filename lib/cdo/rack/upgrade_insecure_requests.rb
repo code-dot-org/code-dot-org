@@ -44,7 +44,7 @@ module Rack
               "default-src 'self' https:",
               "script-src 'self' https: 'unsafe-inline' 'unsafe-eval'",
               "style-src 'self' https: 'unsafe-inline'",
-              "img-src 'self' https: data:",
+              "img-src 'self' https: data: blob:",
               "font-src 'self' https: data:",
               "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com",
               "report-uri #{CDO.code_org_url('https/mixed-content')}"
