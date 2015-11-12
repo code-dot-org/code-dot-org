@@ -1453,3 +1453,8 @@ en:
           description_short: Use code to survive in a Minecraft world!
           description: Use code to survive in a Minecraft world!
           Craft: Craft
+        mc:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world.
+          description: Use code to survive in a Minecraft world.
+          Hour of Code 2015: Hour of Code 2015
