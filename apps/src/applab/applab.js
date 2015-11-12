@@ -42,7 +42,7 @@ var assetsApi = require('../clientApi').assets;
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
 var DebugArea = require('./DebugArea');
-var VisualizationOverlay = require('./VisualizationOverlay.jsx');
+var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 
 var applabConstants = require('./constants');
@@ -729,7 +729,10 @@ Applab.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html.ejs')(),
+      visualization: require('./visualization.html.ejs')({
+        appWidth: Applab.appWidth,
+        appHeight: Applab.footerlessAppHeight
+      }),
       controls: firstControlsRow,
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
@@ -1144,6 +1147,10 @@ Applab.reset = function(first) {
     applabTurtle.turtleSetVisibility(true);
   }
 
+  if (!Applab.visualizationOverlay_) {
+    Applab.visualizationOverlay_ = new VisualizationOverlay(
+        document.getElementById('visualizationOverlay'));
+  }
   Applab.renderVisualizationOverlay();
 
   // Reset goal successState:
@@ -1203,16 +1210,11 @@ Applab.renderVisualizationOverlay = function() {
 
 
   // Calculate current visualization scale to pass to the overlay component.
-  var unscaledWidth = visualizationOverlay.offsetWidth;
+  var unscaledWidth = parseInt(visualizationOverlay.getAttribute('width'));
   var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
-
-  var props = {
-    appWidth: Applab.appWidth,
-    appHeight: Applab.footerlessAppHeight,
-    scale: scaledWidth / unscaledWidth,
-    isApplabRunning: Applab.isRunning()
-  };
-  React.render(React.createElement(VisualizationOverlay, props), visualizationOverlay);
+  Applab.visualizationOverlay_.setScale(scaledWidth / unscaledWidth);
+  Applab.visualizationOverlay_.setIsApplabRunning(Applab.isRunning());
+  Applab.visualizationOverlay_.render();
 };
 
 /**
