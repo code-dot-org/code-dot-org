@@ -148,6 +148,10 @@ class GatekeeperBase
     YAML.dump(to_hash)
   end
 
+  def refresh
+    @datastore_cache.update_cache
+  end
+
   private
 
   def stringify_keys(hsh)
