@@ -71,9 +71,9 @@ var interfaceImages = {
     characters.Steve.failureAvatar,
   ],
   6: [
-    MEDIA_URL + "House_Option_A_v3.png",
-    MEDIA_URL + "House_Option_B_v3.png",
-    MEDIA_URL + "House_Option_C_v3.png",
+    MEDIA_URL + "Sliced_Parts/House_Option_A_v3.png",
+    MEDIA_URL + "Sliced_Parts/House_Option_B_v3.png",
+    MEDIA_URL + "Sliced_Parts/House_Option_C_v3.png",
   ]
 };
 
@@ -124,7 +124,31 @@ Craft.init = function (config) {
   var bodyElement = document.body;
   bodyElement.className = bodyElement.className + " minecraft";
 
-  config.level.skipInstructionsPopup = !!config.level.showPopupOnLoad;
+  if (config.level.showPopupOnLoad) {
+    config.level.afterVideoBeforeInstructionsFn = (showInstructions) => {
+      if (config.level.showPopupOnLoad === 'playerSelection') {
+        Craft.showPlayerSelectionPopup(function (selectedPlayer) {
+          Craft.clearPlayerState();
+          trySetLocalStorageItem('craftSelectedPlayer', selectedPlayer);
+          Craft.updateUIForCharacter(selectedPlayer);
+          Craft.initializeAppLevel(config.level);
+          showInstructions();
+        });
+      } else if (config.level.showPopupOnLoad === 'houseLayoutSelection') {
+        Craft.showHouseSelectionPopup(function(selectedHouse) {
+          if (!levelConfig.edit_blocks) {
+            $.extend(config.level, houseLevels[selectedHouse]);
+
+            Blockly.mainBlockSpace.clear();
+            studioApp.setStartBlocks_(config, true);
+          }
+          Craft.initializeAppLevel(config.level);
+          showInstructions();
+        });
+      }
+    };
+  }
+  //config.level.skipInstructionsPopup = !!config.level.showPopupOnLoad;
 
   if (config.level.puzzle_number && levelbuilderOverrides[config.level.puzzle_number]) {
     $.extend(config.level, levelbuilderOverrides[config.level.puzzle_number]);
@@ -202,30 +226,8 @@ Craft.init = function (config) {
         earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
       });
 
-      var initializeAppLevel = function () {
-        Craft.initializeAppLevel(config.level);
-      };
-
-      if (config.level.showPopupOnLoad === 'playerSelection') {
-        Craft.showPlayerSelectionPopup(function (selectedPlayer) {
-          Craft.clearPlayerState();
-          trySetLocalStorageItem('craftSelectedPlayer', selectedPlayer);
-          Craft.updateUIForCharacter(selectedPlayer);
-          initializeAppLevel();
-          studioApp.showInstructions();
-        });
-      } else if (config.level.showPopupOnLoad === 'houseLayoutSelection') {
-        Craft.showHouseSelectionPopup(function(selectedHouse) {
-          if (!levelConfig.edit_blocks) {
-            $.extend(config.level, houseLevels[selectedHouse]);
-
-            Blockly.mainBlockSpace.clear();
-            studioApp.setStartBlocks_(config, true);
-          }
-          initializeAppLevel();
-        });
-      } else {
-        initializeAppLevel();
+      if (!config.level.showPopupOnLoad) {
+        Craft.initializeAppLevel(config.level)
       }
     },
     twitter: {
@@ -303,7 +305,6 @@ Craft.showHouseSelectionPopup = function (onSelectedCallback) {
     defaultBtnSelector: '#choose-house-a',
     onHidden: function () {
       onSelectedCallback(selectedHouse);
-      studioApp.showInstructions();
     },
     id: 'craft-popup-house-selection',
     icon: characters[Craft.getCurrentCharacter()].staticAvatar
