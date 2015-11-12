@@ -54,8 +54,26 @@ class ServerTools
   # Terminates the frontend instances matching `name_glob`. The instances must allow automatic
   # termination.
   def self.terminate_frontend_instances(name_glob)
+    names = find_frontend_names(name_glob).map {|n| n[0]}
+    print "Are you sure you want to terminate #{names.join(', ')}? (y/n) "
+    input = gets
+    return unless input.strip == 'y'
+
     instance_ids = find_frontend_instance_ids(name_glob)
+
+    if instance_ids.length != names.length
+      raise 'Unexpected error. Instance id length should equal name length.'
+    end
+
+    all_instance_ids = find_frontend_instance_ids('*')
+
+    if instance_ids.length == all_instance_ids.length
+      puts "Refusing to terminate all instances"
+      return
+    end
+
     if instance_ids.length > 0
+      puts "Terminating #{instance_ids.join(' ')}"
       puts `aws ec2 terminate-instances --instance-ids #{instance_ids.join(' ')}`
     else
       puts 'No matching instances'
