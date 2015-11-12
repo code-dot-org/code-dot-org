@@ -1,3 +1,4 @@
+@dashboard_db_access
 Feature: Recommended/Required Blocks Feedback
 
 Background:
