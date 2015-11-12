@@ -56,6 +56,23 @@ class GatekeeperBase
     @datastore_cache.set(feature, rule_map)
   end
 
+  # Deletes a specific where clause
+  # @param feature [String]
+  # @param where [Hash]
+  # @returns [Bool] whether or not something was deleted
+  def delete(feature, where: {})
+    raise ArgumentError, "feature must be a string" unless feature.is_a? String
+
+    rule_map = get_rule_map(feature)
+    key = where_key(where)
+    if rule_map.key? key
+      rule_map.delete key
+      @datastore_cache.set(feature, rule_map)
+      return true
+    end
+    false
+  end
+
   # Returns the mapping of conditions to bool for the given feature
   # @param feature [String]
   # @returns [Hash]
@@ -102,9 +119,8 @@ class GatekeeperBase
     @datastore_cache.after_fork
   end
 
-  # Converts the current config state to a yaml string
-  # @returns [String]
-  def to_yaml
+  # Returns the hash version of gatekeeper
+  def to_hash
     gatekeeper = {}
 
     @datastore_cache.all.each do |feature, rules|
@@ -124,7 +140,16 @@ class GatekeeperBase
         feature_details << rule
       end
     end
-    YAML.dump(gatekeeper)
+    gatekeeper
+  end
+  # Converts the current config state to a yaml string
+  # @returns [String]
+  def to_yaml
+    YAML.dump(to_hash)
+  end
+
+  def refresh
+    @datastore_cache.update_cache
   end
 
   private

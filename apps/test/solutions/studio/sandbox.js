@@ -147,7 +147,7 @@ module.exports = {
           assert(Studio.projectiles.length === 1);
           assert(Studio.projectiles[0].dir === Direction.EAST);
           var proj = document.getElementById('studioanimation_clippath_0').nextSibling;
-          assert(proj.getAttribute('xlink:href') === '/media/skins/studio/blue_fireball.png',
+          assert(proj.getAttribute('xlink:href').indexOf('/media/skins/studio/blue_fireball.png') > -1,
             "We have the right image: " + proj.getAttribute('xlink:href'));
           assert(proj.getAttribute('visibility') !== 'hidden',
             "The image isn't hidden");
@@ -771,7 +771,6 @@ module.exports = {
     },
     {
       description: 'random background/avatar',
-      timeout: 15000,
       xml: '<xml>' +
         blockUtils.blockWithNext('when_run', {},
           blockUtils.blockWithNext('studio_setSprite', {
