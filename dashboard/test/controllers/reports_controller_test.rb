@@ -252,13 +252,7 @@ class ReportsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  generate_admin_only_tests_for :all_usage
-
-  generate_admin_only_tests_for :admin_stats
-
   generate_admin_only_tests_for :csp_pd_responses
-
-  generate_admin_only_tests_for :funometer
 
   test "should get level_stats" do
     get :level_stats, {:level_id => create(:level).id}
@@ -342,11 +336,6 @@ class ReportsControllerTest < ActionController::TestCase
     # render string from test translation data
     assert_select 'div.stage', 2
     assert_select 'div.stage', 'Stage 1: report-stage-1'
-  end
-
-  test 'should get admin progress' do
-    get :admin_progress
-    assert_select 'h1', 'Admin progress'
   end
 
 end
