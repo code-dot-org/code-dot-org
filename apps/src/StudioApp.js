@@ -1400,6 +1400,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
+  this.enableShowLinesCount = (config.enableShowLinesCount !== false);
 
   // If the level has no ideal block count, don't show a block count. If it does
   // have an ideal, show block count unless explicitly configured not to.
