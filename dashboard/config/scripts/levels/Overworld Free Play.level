@@ -1,0 +1,68 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2015-10-01T23:14:36.000Z",
+  "level_num": "custom",
+  "user_id": 9,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"water\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"water\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"oreDiamond\",\"oreCoal\",\"stone\",\"\",\"\",\"\",\"stone\",\"oreIron\",\"oreIron\",\"\",\"oreCoal\",\"oreCoal\",\"stone\",\"\",\"sheep\",\"\",\"\",\"stone\",\"stone\",\"\",\"oreCoal\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeBirch\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"sheep\",\"\",\"\",\"treeSpruce\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "player_start_position": "[4, 5]",
+    "available_blocks": "[\"bedrock\", \"bricks\", \"oreCoal\", \"dirtCoarse\", \"cobblestone\", \"oreDiamond\", \"dirt\", \"oreEmerald\", \"farmlandWet\", \"glass\", \"oreGold\", \"grass\", \"gravel\", \"oreIron\", \"oreLapis\", \"logAcacia\", \"logBirch\", \"logJungle\", \"logOak\", \"logSpruce\", \"planksAcacia\", \"planksBirch\", \"planksJungle\", \"planksOak\", \"planksSpruce\", \"oreRedstone\", \"sand\", \"sandstone\", \"stone\", \"tnt\", \"wool\"]",
+    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return true;\r\n}",
+    "instructions": "This landscape is yours to play with. You choose what to build.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "player_start_direction": "0",
+    "is_daytime": "true",
+    "embed": "false",
+    "free_play": "true",
+    "if_block_options": "[\"water\", \"lava\", \"\"]",
+    "special_level_type": "freeplay"
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_moveForward"/>
+        <block type="craft_turn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_turn">
+          <title name="DIR">right</title>
+        </block>
+        <block type="craft_destroyBlock"/>
+        <block type="craft_shear"/>
+        <block type="craft_placeBlock">
+          <title name="TYPE">bedrock</title>
+        </block>
+        <block type="craft_placeTorch"/>
+        <block type="craft_plantCrop"/>
+        <block type="craft_placeBlockAhead">
+          <title name="TYPE">bedrock</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">3</title>
+        </block>
+        <block type="craft_ifBlockAhead">
+          <title name="TYPE"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Craft>

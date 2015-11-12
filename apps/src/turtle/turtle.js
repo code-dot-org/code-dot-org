@@ -482,7 +482,9 @@ Artist.prototype.drawTurtle = function() {
       sourceY + sourceHeight > this.avatarImage.height)
   {
     if (console && console.log) {
-      console.log("drawImage is out of source bounds!");
+      // TODO(bjordan): ask Brent, starting to flood grunt mochaTest messages,
+      // better fix here?
+      // console.log("drawImage is out of source bounds!");
     }
     return;
   }

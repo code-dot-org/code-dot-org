@@ -1,0 +1,90 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2015-10-01T23:13:20.000Z",
+  "level_num": "custom",
+  "user_id": 9,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"grass\",\"grass\",\"houseLeftA\",\"grass\",\"grass\",\"houseRightA\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"houseBottomA\",\"houseBottomB\",\"houseBottomC\",\"houseBottomD\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"water\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"water\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"water\",\"water\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"\",\"\",\"houseLeftA\",\"\",\"\",\"houseRightA\",\"\",\"\",\"\",\"\",\"\",\"\",\"houseBottomA\",\"\",\"houseBottomC\",\"houseBottomD\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"treeOak\",\"\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\"]",
+    "player_start_position": "[3, 2]",
+    "available_blocks": "[\"bedrock\", \"bricks\", \"clay\", \"oreCoal\", \"dirtCoarse\", \"cobblestone\", \"oreDiamond\", \"dirt\", \"oreEmerald\", \"farmlandWet\", \"glass\", \"oreGold\", \"grass\", \"gravel\", \"clayHardened\", \"oreIron\", \"oreLapis\", \"lava\", \"leavesAcacia\", \"leavesBirch\", \"leavesJungle\", \"leavesOak\", \"leavesSpruce\", \"logAcacia\", \"logBirch\", \"logJungle\", \"logOak\", \"logSpruce\", \"obsidian\", \"planksAcacia\", \"planksBirch\", \"planksJungle\", \"planksOak\", \"planksSpruce\", \"oreRedstone\", \"sand\", \"sandstone\", \"stone\", \"tnt\", \"water\", \"wool\"]",
+    "verification_function": "function (verificationAPI) {\r\n      // the map has the given block layout.\r\n      // \"\" means ignore, \"empty\" means nothing there, \"any\" means something there\r\n      return verificationAPI.solutionMapMatchesResultMap(\r\n            [\r\n              \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",\r\n  \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",\r\n  \"\", \"\", \"\", \"empty\", \"\", \"\", \"\", \"\", \"\", \"\",\r\n  \"\", \"\", \"\", \"empty\", \"\", \"\", \"\", \"\", \"\", \"\",\r\n  \"\", \"\", \"\", \"empty\", \"\", \"\", \"\", \"\", \"\", \"\",\r\n  \"\", \"\", \"\", \"empty\", \"empty\", \"empty\", \"empty\", \"\", \"\", \"\",\r\n  \"\", \"\", \"\", \"\", \"\", \"\", \"empty\", \"\", \"\", \"\",\r\n  \"\", \"\", \"\", \"\", \"\", \"\", \"empty\", \"\", \"\", \"\",\r\n  \"\", \"\", \"\", \"\", \"\", \"\", \"empty\", \"empty\", \"empty\", \"empty\",\r\n  \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"\r\n            ]);\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "player_start_direction": "2",
+    "instructions": "You’re back on the surface with lots of underground resources. Now, we're going to build a track along the dirt path from your house. The first step is clearing the path. Follow the path and clear the trees.",
+    "is_daytime": "true",
+    "if_block_options": "[\"tree\"]",
+    "ideal": "14"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="craft_moveForward">
+                      <next>
+                        <block type="craft_ifBlockAhead">
+                          <title name="TYPE">tree</title>
+                          <statement name="DO">
+                            <block type="craft_destroyBlock"/>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="craft_turn">
+                      <title name="DIR">left</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_moveForward"/>
+        <block type="craft_turn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_turn">
+          <title name="DIR">right</title>
+        </block>
+        <block type="craft_destroyBlock"/>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">3</title>
+        </block>
+        <block type="craft_ifBlockAhead">
+          <title name="TYPE">tree</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Craft>
