@@ -1720,17 +1720,17 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   ],
   'codeFunctions': {
     // Play Lab
-    "setSprite": { 'category': 'Play Lab' },
-    "setBackground": { 'category': 'Play Lab' },
-    "move": { 'category': 'Play Lab' },
+    "setSprite": { 'category': 'Play Lab', noAutocomplete: false },
+    "setBackground": { 'category': 'Play Lab'  },
+    "move": { 'category': 'Play Lab', noAutocomplete: false  },
     "playSound": { 'category': 'Play Lab' },
-    "changeScore": { 'category': 'Play Lab' },
-    "setSpritePosition": { 'category': 'Play Lab' },
-    "setSpriteSpeed": { 'category': 'Play Lab' },
-    "setSpriteEmotion": { 'category': 'Play Lab' },
-    "throwProjectile": { 'category': 'Play Lab' },
-    "vanish": { 'category': 'Play Lab' },
-    "onEvent": { 'category': 'Play Lab' },
+    "changeScore": { 'category': 'Play Lab', noAutocomplete: false },
+    "setSpritePosition": { 'category': 'Play Lab', noAutocomplete: false  },
+    "setSpriteSpeed": { 'category': 'Play Lab', noAutocomplete: false  },
+    "setSpriteEmotion": { 'category': 'Play Lab', noAutocomplete: false  },
+    "throwProjectile": { 'category': 'Play Lab', noAutocomplete: false  },
+    "vanish": { 'category': 'Play Lab', noAutocomplete: false  },
+    "onEvent": { 'category': 'Play Lab', noAutocomplete: false  },
 
     // Control
     "forLoop_i_0_4": null,
@@ -1776,6 +1776,8 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
 
 levels.js_hoc2015_move_right = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song1' ],
   'codeFunctions': {
@@ -1791,8 +1793,9 @@ levels.js_hoc2015_move_right = {
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
+  gridAlignedExtraPauseSteps: 1,
   'itemGridAlignedMovement': true,
-  'slowJsExecutionFactor': 10,
+  'slowExecutionFactor': 10,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
@@ -1842,6 +1845,8 @@ levels.js_hoc2015_move_right = {
 
 levels.js_hoc2015_move_right_down = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song2' ],
   'codeFunctions': {
@@ -1857,8 +1862,9 @@ levels.js_hoc2015_move_right_down = {
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
+  gridAlignedExtraPauseSteps: 1,
   'itemGridAlignedMovement': true,
-  'slowJsExecutionFactor': 10,
+  'slowExecutionFactor': 10,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
@@ -1888,6 +1894,8 @@ levels.js_hoc2015_move_right_down = {
 
 levels.js_hoc2015_move_diagonal = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'textModeAtStart': true,
   'background': 'main',
   'music': [ 'song3' ],
@@ -1904,8 +1912,9 @@ levels.js_hoc2015_move_diagonal = {
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
+  gridAlignedExtraPauseSteps: 1,
   'itemGridAlignedMovement': true,
-  'slowJsExecutionFactor': 10,
+  'slowExecutionFactor': 10,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
@@ -1937,13 +1946,9 @@ levels.js_hoc2015_move_diagonal = {
     {
       'id': 'playlab:js_hoc2015_move_diagonal:showCodeToggle',
       'element_id': '#show-code-header',
-      'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content': {
           'text': msg.calloutShowCodeToggle(),
-        },
-        'hide': {
-          'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top right',
@@ -1961,6 +1966,8 @@ levels.js_hoc2015_move_diagonal = {
 
 levels.js_hoc2015_move_backtrack = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song4' ],
   'codeFunctions': {
@@ -1976,8 +1983,9 @@ levels.js_hoc2015_move_backtrack = {
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
+  gridAlignedExtraPauseSteps: 1,
   'itemGridAlignedMovement': true,
-  'slowJsExecutionFactor': 10,
+  'slowExecutionFactor': 10,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
@@ -2008,6 +2016,8 @@ levels.js_hoc2015_move_backtrack = {
 
 levels.js_hoc2015_move_around = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song5' ],
   'codeFunctions': {
@@ -2023,8 +2033,9 @@ levels.js_hoc2015_move_around = {
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
+  gridAlignedExtraPauseSteps: 1,
   'itemGridAlignedMovement': true,
-  'slowJsExecutionFactor': 10,
+  'slowExecutionFactor': 10,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
@@ -2057,6 +2068,8 @@ levels.js_hoc2015_move_around = {
 
 levels.js_hoc2015_move_finale = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'main',
   'music': [ 'song6' ],
   'codeFunctions': {
@@ -2072,8 +2085,9 @@ levels.js_hoc2015_move_finale = {
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
+  gridAlignedExtraPauseSteps: 1,
   'itemGridAlignedMovement': true,
-  'slowJsExecutionFactor': 10,
+  'slowExecutionFactor': 10,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
@@ -2108,6 +2122,8 @@ levels.js_hoc2015_move_finale = {
 
 levels.js_hoc2015_event_two_items = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'hoth',
   'music': [ 'song7' ],
   'wallMap': 'blank',
@@ -2203,6 +2219,8 @@ levels.js_hoc2015_event_two_items = {
 
 levels.js_hoc2015_event_four_items = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'hoth',
   'music': [ 'song8' ],
   'wallMap': 'blobs',
@@ -2266,6 +2284,8 @@ levels.js_hoc2015_event_four_items = {
 levels.js_hoc2015_score =
 {
   'avatarList': ['R2-D2'],
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'editCode': true,
   'background': 'hoth',
   'music': [ 'song10' ],
@@ -2327,9 +2347,10 @@ levels.js_hoc2015_score =
   'progressConditions' : [
     { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 },
       result: { success: false, message: msg.failedScoreTimeout() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 },
+    { required: { 'timedOut': false, 'allGoalsVisited': true, 'currentPointsBelow': 300 },
       result: {
         success: false,
+        canPass: true,
         message: msg.failedScoreScore(),
         blocklyMessage: msg.failedScoreScoreBlockly()
       }
@@ -2385,6 +2406,8 @@ levels.js_hoc2015_score =
 
 levels.js_hoc2015_win_lose = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'endor',
   'music': [ 'song9' ],
   'wallMap': 'blobs',
@@ -2474,6 +2497,8 @@ levels.js_hoc2015_win_lose = {
 
 levels.js_hoc2015_add_characters = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'endor',
   'music': [ 'song11' ],
   'wallMap': 'circle',
@@ -2563,6 +2588,8 @@ levels.js_hoc2015_add_characters = {
 
 levels.js_hoc2015_chain_characters = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'starship',
   'music': [ 'song12' ],
   'wallMap': 'grid',
@@ -2653,6 +2680,8 @@ levels.js_hoc2015_chain_characters = {
 
 levels.js_hoc2015_chain_characters_2 = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'starship',
   'music': [ 'song13' ],
   'wallMap': 'horizontal',
@@ -2739,6 +2768,8 @@ levels.js_hoc2015_chain_characters_2 = {
 
 levels.js_hoc2015_change_setting = {
   'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
   'background': 'starship',
   'music': [ 'song14' ],
   'wallMap': 'blobs',
@@ -3062,7 +3093,7 @@ levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_finale,  {
   requiredBlocks: [
     moveNorthRequiredBlock(),
     moveSouthRequiredBlock(),
-    moveWestRequiredBlock(),
+    moveEastRequiredBlock(),
   ],
 });
 

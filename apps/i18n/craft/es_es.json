@@ -1,0 +1,5 @@
+{
+  "reinfFeedbackMsg": "You can press \"Keep Playing\" to go back to playing your game.",
+  "nextLevelMsg": "Success: Puzzle {puzzleNumber} completed. Congratulations!",
+  "tooManyBlocksFail": "Puzzle {puzzleNumber} completed. Congratulations! It is also possible to complete it with {numBlocks, plural, one {1 block} other {# blocks}}."
+}
