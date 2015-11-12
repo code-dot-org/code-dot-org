@@ -45,7 +45,11 @@ var JSInterpreter = module.exports = function (options) {
   var self = this;
   var initFunc = function (interpreter, scope) {
     self.globalScope = scope;
-    codegen.initJSInterpreter(interpreter, options.blocks, scope);
+    codegen.initJSInterpreter(
+        interpreter,
+        options.blocks,
+        options.blockFilter,
+        scope);
 
     // Only allow five levels of depth when marshalling the return value
     // since we will occasionally return DOM Event objects which contain

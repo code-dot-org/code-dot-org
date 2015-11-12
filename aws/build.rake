@@ -14,6 +14,7 @@ require 'cdo/rake_utils'
 require 'cdo/hip_chat'
 require 'cdo/only_one'
 require 'shellwords'
+require 'cdo/aws/cloudfront'
 
 #
 # build_task - BUILDS a TASK that uses a hidden (.dotfile) to keep build steps idempotent. The file
@@ -274,6 +275,19 @@ task :chef_update do
   end
 end
 
+# Deploy updates to CloudFront in parallel with the local build to optimize total CI build time.
+multitask build_with_cloudfront: [:build, :cloudfront]
+
+# Update CloudFront distribution with any changes to the http cache configuration.
+# If there are changes to be applied, the update can take 15 minutes to complete.
+task :cloudfront do
+  if CDO.daemon && CDO.chef_managed
+    with_hipchat_logging('Update CloudFront') do
+      AWS::CloudFront.create_or_update
+    end
+  end
+end
+
 # Perform a normal local build by calling the top-level Rakefile.
 # Additionally run the lint task if specified for the environment.
 task build: [:chef_update] do
@@ -302,7 +316,7 @@ task :deploy do
   end
 end
 
-$websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, APPS_COMMIT_TASK, :build, :deploy])
+$websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, APPS_COMMIT_TASK, :build_with_cloudfront, :deploy])
 task 'websites' => [$websites] {}
 
 task :pegasus_unit_tests do
@@ -400,6 +414,6 @@ end
 # do the eyes and browserstack ui tests in parallel
 multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack_ui_tests]
 
-$websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
+$websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
 
 task 'test-websites' => [$websites_test]

@@ -49,10 +49,7 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Play a different sound when the down arrow is pressed. (Click to see full instructions)",
-    "start_blocks": "playSound(\"https://studio.code.org/v3/assets/13v2AdelOqxDhJ32C1fnAw/DownSound.mp3\");\r\n\r\nonEvent(\"screen1\", \"keydown\", function(event){\r\n  console.log('key is: '+event.key); \r\n  if(event.key == \"Up\"){\r\n \tplaySound(\"https://studio.code.org/v3/assets/R3xt1BXO0VuQve0HdwClFg/cartoonButton.mp3\");\r\n  }\r\n});",
-    "encrypted_examples": [
-
-    ]
+    "start_blocks": "playSound(\"https://studio.code.org/v3/assets/13v2AdelOqxDhJ32C1fnAw/DownSound.mp3\");\r\n\r\nonEvent(\"screen1\", \"keydown\", function(event){\r\n  console.log('key is: '+event.key); \r\n  if(event.key == \"Up\"){\r\n \tplaySound(\"https://studio.code.org/v3/assets/R3xt1BXO0VuQve0HdwClFg/cartoonButton.mp3\");\r\n  }\r\n});"
   }
 }]]></config>
   <blocks/>
