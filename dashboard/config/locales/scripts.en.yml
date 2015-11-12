@@ -1448,3 +1448,8 @@ en:
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           Hour of Code 2015: Hour of Code 2015
+        minecraft:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
