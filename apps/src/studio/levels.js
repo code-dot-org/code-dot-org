@@ -2347,9 +2347,10 @@ levels.js_hoc2015_score =
   'progressConditions' : [
     { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 },
       result: { success: false, message: msg.failedScoreTimeout() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 },
+    { required: { 'timedOut': false, 'allGoalsVisited': true, 'currentPointsBelow': 300 },
       result: {
         success: false,
+        canPass: true,
         message: msg.failedScoreScore(),
         blocklyMessage: msg.failedScoreScoreBlockly()
       }

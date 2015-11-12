@@ -49,15 +49,6 @@ class DatastoreCache
     @update_thread = spawn_update_thread unless @update_thread && @update_thread.alive?
   end
 
-  private
-
-  # Sets the given value for the key in the local cache
-  # @param key [String]
-  # @param value [String]
-  def set_local(key, value)
-    @cache[key] = value
-  end
-
   # Pulls all values from the datastore and populates the local cache
   def update_cache
     @datastore.all.each do |k, v|
@@ -65,6 +56,15 @@ class DatastoreCache
     end
   rescue => exc
     Honeybadger.notify(exc)
+  end
+
+  private
+
+  # Sets the given value for the key in the local cache
+  # @param key [String]
+  # @param value [String]
+  def set_local(key, value)
+    @cache[key] = value
   end
 
   # Spawns a background thread that periodically updates the cached
