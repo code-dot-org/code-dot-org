@@ -82,7 +82,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var showingSharing = options.showingSharing && !hadShareFailure;
 
   var canContinue = this.canContinueToNextLevel(options.feedbackType);
-  var displayShowCode = this.studioApp_.enableShowCode && canContinue && !showingSharing;
+  var displayShowCode = this.studioApp_.enableShowCode && this.studioApp_.enableShowLinesCount && canContinue && !showingSharing;
   var feedback = document.createElement('div');
   var sharingDiv = (canContinue && showingSharing) ? this.createSharingDiv(options) : null;
   var showCode = displayShowCode ? this.getShowCodeElement_(options) : null;
