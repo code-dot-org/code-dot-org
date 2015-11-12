@@ -224,11 +224,7 @@ html[dir='rtl'] #codeWorkspace {
   border: none;
   border-top: 1px solid #ddd; }
 
-#codeWorkspace.readonly .blocklySvg,
-#codeWorkspace.readonly .droplet-main-scroller,
-#codeWorkspace.readonly .ace_scroller, #codeWorkspace.dimmed .blocklySvg,
-#codeWorkspace.dimmed .droplet-main-scroller,
-#codeWorkspace.dimmed .ace_scroller {
+#codeWorkspace.readonly .blocklySvg, #codeWorkspace.readonly .droplet-main-scroller, #codeWorkspace.readonly .ace_scroller, #codeWorkspace.dimmed .blocklySvg, #codeWorkspace.dimmed .droplet-main-scroller, #codeWorkspace.dimmed .ace_scroller {
   background-color: rgba(0, 0, 0, 0.1); }
 
 .ace-chrome .ace_marker-layer .ace_error {
@@ -395,8 +391,6 @@ html[dir='rtl'] #codeWorkspace {
     max-width: 200px; }
   .small-footer-base.responsive {
     max-width: 200px; }
-    .small-footer-base.responsive small {
-      float: left; }
   #codeWorkspace {
     left: 200px; }
   html[dir='rtl'] #codeWorkspace {
@@ -414,7 +408,9 @@ html[dir='rtl'] #codeWorkspace {
     transform: scale(0.5); }
   .bee-counter-text {
     font-size: 32px;
-    stroke-width: 2px; } }
+    stroke-width: 2px; }
+  .small-footer-base.responsive small {
+    float: left; } }
 
 /* Buttons */
 button, label.img-upload {
