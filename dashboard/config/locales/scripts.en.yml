@@ -1419,6 +1419,7 @@ en:
           Images are Arrays: Images are Arrays
           Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
           Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          Key Events with Image Scroller: Key Events with Image Scroller
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1441,4 +1442,19 @@ en:
           title: 'Star Wars: Building a Galaxy with Code'
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          Hour of Code 2015: Hour of Code 2015
+        starwarsblocks:
+          title: 'Star Wars: Building a Galaxy with Code'
+          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          Hour of Code 2015: Hour of Code 2015
+        minecraft:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
+        mc:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world.
+          description: Use code to survive in a Minecraft world.
           Hour of Code 2015: Hour of Code 2015

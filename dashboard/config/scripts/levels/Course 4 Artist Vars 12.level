@@ -182,7 +182,7 @@
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="variables_get">
-              <title name="VAR">sides</title>
+              <title name="VAR">???</title>
             </block>
           </value>
         </block>
@@ -200,7 +200,7 @@
                   </value>
                   <value name="B">
                     <block type="variables_get">
-                      <title name="VAR">sides</title>
+                      <title name="VAR">???</title>
                     </block>
                   </value>
                 </block>
@@ -218,7 +218,7 @@
                       </value>
                       <value name="B">
                         <block type="variables_get">
-                          <title name="VAR">sides</title>
+                          <title name="VAR">???</title>
                         </block>
                       </value>
                     </block>
@@ -234,7 +234,7 @@
               <title name="DIR">moveForward</title>
               <value name="VALUE">
                 <block type="variables_get">
-                  <title name="VAR">length</title>
+                  <title name="VAR">???</title>
                 </block>
               </value>
               <next>
@@ -242,7 +242,7 @@
                   <title name="DIR">moveBackward</title>
                   <value name="VALUE">
                     <block type="variables_get">
-                      <title name="VAR">length</title>
+                      <title name="VAR">???</title>
                     </block>
                   </value>
                 </block>

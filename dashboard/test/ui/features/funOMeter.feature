@@ -1,5 +1,6 @@
 @no_mobile
 @no_ie
+@no_safari
 Feature: Fun-O-Meter
 
 Background:
