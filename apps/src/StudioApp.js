@@ -1606,7 +1606,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   this.dropletTooltipManager = new DropletTooltipManager(
     this.appMsg,
     config.dropletConfig,
-    config.level.autocompletePaletteApisOnly && config.level.codeFunctions);
+    config.level.codeFunctions,
+    config.level.autocompletePaletteApisOnly);
   if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);
   }
