@@ -1,6 +1,6 @@
 title 'Minecraft'
-description_short "Use code to survive in a Minecraft world."
-description "Use code to survive in a Minecraft world."
+description_short "Code your world."
+description "Explore your Minecraft world by dragging and dropping blocks of code."
 hidden 'true'
 
 stage 'Hour of Code 2015'
