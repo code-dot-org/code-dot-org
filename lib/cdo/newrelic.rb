@@ -34,20 +34,17 @@ class NewRelicClient
   # param [Array<String>] server_names A list of new relic server names (not ids).
   def assign_alert_policy(policy_id, server_names)
     policy = alert_policy(policy_id)
-    puts policy
-
     map = server_name_to_id_map
 
     server_names.each do |name|
       server_id = map[name]
       if server_id
         policy['links']['servers'] << server_id
-        puts "Adding server #{server_id}"
       else
-        puts "Unknown server name #{name}"
         next
       end
     end
+
     body = {'alert_policy': policy}.to_json
     call_newrelic_rest("alert_policies/#{policy_id}.json", 'PUT', body)
   end
