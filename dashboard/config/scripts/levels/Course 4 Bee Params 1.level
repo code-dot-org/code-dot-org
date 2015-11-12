@@ -17,7 +17,7 @@
     "step_mode": "1",
     "nectar_goal": "9",
     "flower_type": "redWithNectar",
-    "ideal": "20",
+    "ideal": "19",
     "instructions": "Use the function \"get 3 nectar\" which turns, moves to collect the nectar, and then returns to the original location. Write a sequence to collect all of the nectar using \"get 3 nectar.\"",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
@@ -32,7 +32,6 @@
     "never_autoplay_video": "false",
     "step_speed": "2",
     "examples_required": "false",
-    "maze_data": null,
     "fast_get_nectar_animation": "false"
   }
 }]]></config>
@@ -111,5 +110,12 @@
         </category>
       </xml>
     </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">3</title>
+        </block>
+      </xml>
+    </recommended_blocks>
   </blocks>
 </Karel>

@@ -221,5 +221,12 @@
         </category>
       </xml>
     </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">2</title>
+        </block>
+      </xml>
+    </recommended_blocks>
   </blocks>
 </Karel>

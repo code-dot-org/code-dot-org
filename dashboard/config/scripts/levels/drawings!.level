@@ -66,6 +66,9 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
+        <block type="controls_repeat">
+          <title name="TIMES">4</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

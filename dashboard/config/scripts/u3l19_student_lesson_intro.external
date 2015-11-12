@@ -6,13 +6,13 @@ markdown <<MARKDOWN
 ## Unit 3: Lesson 14
 
 # Background
-This lesson gets into the basic mechanics of controlling the computers memory, by working with variables in programs.  
+This lesson gets into the basic mechanics of controlling the computer's memory, by working with variables in programs.  
 
-To keep things simple we're going to on some bare-bones examples so you get the basic ideas behind **creating and using variables.** We'll primarily just be displaying text in the console rather than enhancing an app for now.
+To keep things simple we're going to do some bare-bones examples so you get the basic ideas behind **creating and using variables.** We'll primarily just be displaying text in the console rather than enhancing an app for now.
 
 We all want to make cool apps, but having **a good mental model** before you get in too deep will allow you to go further and faster later on.
 
-**Understanding the typical pitfalls of learning variables for the first time** combined with establishing a good mental model will make working with memory and variables in the future much easier.
+**Understanding the typical pitfalls of learning variables for the first time**, combined with establishing a good mental model, will make working with memory and variables in the future much easier.
 
 # Vocab
 
