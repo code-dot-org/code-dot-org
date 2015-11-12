@@ -4,33 +4,20 @@ require "net/http"
 require "pp"
 
 class NewRelicClient
-  public
 
   attr_reader :api_key
 
+  # Base URL for the NewRelic V2 REST API
   NEWRELIC_URL = 'https://api.newrelic.com/v2'
 
   # The alert policy id for Code.org servers with disabled alerts
   DISABLED_ALERT_POLICY_ID = 355700
 
+  # The alert policy id for Code.org servers with disabled alerts
+  PRODUCTION_ALERT_POLICY_ID = 368270
+
   def initialize(api_key = ENV['NEWRELIC_API_KEY'])
     @api_key = api_key
-  end
-
-  # Returning a map from NewRelic server id to server hash as described at
-  # https://rpm.newrelic.com/api/explore/servers/list
-  def get_server_map
-    servers = call_newrelic_rest('servers.json')['servers']
-    index(servers, 'id')
-  end
-
-  # Return a map from server names to new relic ids.
-  def server_name_to_id_map
-    {}.tap do |hash|
-      get_server_map.each do |id, value|
-        hash[value['name']] = id
-      end
-    end
   end
 
   # Disables alerts to the given server names.
@@ -38,14 +25,28 @@ class NewRelicClient
     assign_alert_policy(DISABLED_ALERT_POLICY_ID, server_names)
   end
 
+  # Disables alerts to the given server names.
+  def enable_alerts(server_names)
+    assign_alert_policy(PRODUCTION_ALERT_POLICY_ID, server_names)
+  end
+
   # Disables alerts for the given servers
   # param [Array<String>] server_names A list of new relic server names (not ids).
   def assign_alert_policy(policy_id, server_names)
-    policy= alert_policy(policy_id)
+    policy = alert_policy(policy_id)
+    puts policy
+
+    map = server_name_to_id_map
+
     server_names.each do |name|
-      server_id = server_name_to_id_map[name]
-      raise "Unknown server name #{name}" unless server_id
-      policy['links']['servers'] << server_id
+      server_id = map[name]
+      if server_id
+        policy['links']['servers'] << server_id
+        puts "Adding server #{server_id}"
+      else
+        puts "Unknown server name #{name}"
+        next
+      end
     end
     body = {'alert_policy': policy}.to_json
     call_newrelic_rest("alert_policies/#{policy_id}.json", 'PUT', body)
@@ -69,19 +70,15 @@ class NewRelicClient
     alert_policy(DISABLED_ALERT_POLICY_ID)
   end
 
-  # Returns the names of the disabled servers.
-  def disabled_server_names
-    server_map = get_server_map
-    disabled_alert_policy['links']['servers'].map do |server_id|
-      server_map[server_id]['name']
-    end
+  # Returns a hash describing the production server alert policy.
+  def production_alert_policy
+    alert_policy(PRODUCTION_ALERT_POLICY_ID)
   end
 
   # Invokes a NewRelic REST action, parsing the JSON result and returning a hash.
   # @throws a runtime exception if an HTTP or JSON parsing error occurs
   def call_newrelic_rest(path, method = 'GET', body = nil)
     uri = newrelic_uri(path)
-    puts uri
 
     case method.upcase
     when 'GET'
@@ -100,7 +97,6 @@ class NewRelicClient
     req.body = body if body
 
     http = Net::HTTP.new(uri.hostname, uri.port)
-    http.set_debug_output $stderr
     http.use_ssl = true
 
     response = http.start { http.request(req) }
@@ -123,6 +119,22 @@ class NewRelicClient
       array.each do |item|
         raise "#{field} is not unique" unless result[item[field]].nil?
         result[item[field]] = item
+      end
+    end
+  end
+
+  # Returning a map from NewRelic server id to server hash as described at
+  # https://rpm.newrelic.com/api/explore/servers/list
+  def get_server_map
+    servers = call_newrelic_rest('servers.json')['servers']
+    index(servers, 'id')
+  end
+
+  # Return a map from server names to new relic ids.
+  def server_name_to_id_map
+    {}.tap do |hash|
+      get_server_map.each do |id, value|
+        hash["#{value['host']}.ec2.internal"] = id
       end
     end
   end
