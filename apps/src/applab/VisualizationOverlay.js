@@ -19,43 +19,58 @@ var SVG_NS = constants.SVG_NS;
 
 /**
  * Creates and controls an SVG overlay on the app visualization.
- * @param {SVGElement} rootSvg - An SVG element to render within.
  * @constructor
  */
-var VisualizationOverlay = function (rootSvg) {
-  /** @private {SVGElement} */
-  this.rootSvg_ = rootSvg;
-
+var VisualizationOverlay = function () {
   /** @private {SVGGElement} */
   this.ownElement_ = null;
+
+  /** @private {Object} */
+  this.props_ = {
+    isApplabRunning: false,
+    scale: 1
+  };
 
   /** @private {function} */
   this.mouseMoveListener_ = null;
 
-  /** @private {boolean} */
-  this.isApplabRunning_ = false;
+  /** @private {SVGPoint} */
+  this.mousePos_ = null;
 
   /** @private {SVGPoint} */
-  this.mousePos_ = rootSvg.createSVGPoint();
-
-  /** @private {SVGPoint} */
-  this.appSize_ = rootSvg.createSVGPoint();
-  this.appSize_.x = parseInt(rootSvg.getAttribute('width'));
-  this.appSize_.y = parseInt(rootSvg.getAttribute('height'));
+  this.appSize_ = null;
 
   /** @private {SVGMatrix} */
   this.screenSpaceToAppSpaceTransform_ = null;
 
   /** @private {CrosshairOverlay} */
   this.crosshairOverlay_ = new CrosshairOverlay();
-
-  this.recalculateTransformAtScale_(1);
 };
 module.exports = VisualizationOverlay;
 
-VisualizationOverlay.prototype.render = function () {
+/**
+ * @param {SVGSVGElement} intoElement - where this component should be rendered
+ * @param {Object} props
+ * @param {boolean} props.isApplabRunning
+ * @param {number} props.scale
+ */
+VisualizationOverlay.prototype.render = function (intoElement, props) {
+  // Create element if necessary
   if (!this.ownElement_) {
     this.create_();
+  }
+
+  // Put element in correct parent
+  if (this.ownElement_.parentNode !== intoElement) {
+    this.moveToParent_(intoElement);
+  }
+
+  // Record any new/updated properties
+  var oldProps = $.extend({}, this.props_);
+  $.extend(this.props_, props);
+
+  if (this.props_.scale !== oldProps.scale) {
+    this.recalculateTransformAtScale_(this.props_.scale);
   }
 
   if (this.shouldShowCrosshair_()) {
@@ -76,17 +91,8 @@ VisualizationOverlay.prototype.unrender = function () {
   }
 };
 
-VisualizationOverlay.prototype.setScale = function (newScale) {
-   this.recalculateTransformAtScale_(newScale);
-};
-
-VisualizationOverlay.prototype.setIsApplabRunning = function (isApplabRunning) {
-  this.isApplabRunning_ = isApplabRunning;
-};
-
 VisualizationOverlay.prototype.create_ = function () {
   this.ownElement_ = document.createElementNS(SVG_NS, 'g');
-  this.rootSvg_.appendChild(this.ownElement_);
 
   this.mouseMoveListener_ = this.onSvgMouseMove_.bind(this);
   document.addEventListener('mousemove', this.mouseMoveListener_);
@@ -96,23 +102,46 @@ VisualizationOverlay.prototype.destroy_ = function () {
   document.removeEventListener('mousemove', this.mouseMoveListener_);
   this.mouseMoveListener_ = null;
 
-  if (this.crosshairOverlay_) {
-    this.crosshairOverlay_.unrender();
-    this.crosshairOverlay_ = null;
+  if (this.ownElement_ && this.ownElement_.parentNode) {
+    this.ownElement_.parentNode.removeChild(this.ownElement_);
   }
-  this.rootSvg_.removeChild(this.ownElement_);
-  this.ownElement_ = null;
+};
+
+VisualizationOverlay.prototype.moveToParent_ = function (newParent) {
+  if (this.ownElement_.parentNode) {
+    this.ownElement_.parentNode.removeChild(this.ownElement_);
+  }
+  if (newParent) {
+    newParent.appendChild(this.ownElement_);
+
+    // Make a reusable mouse position point if we haven't yet.
+    if (!this.mousePos_) {
+      this.mousePos_ = newParent.createSVGPoint();
+    }
+
+    // Update the app size to match the parent
+    this.appSize_ = newParent.createSVGPoint();
+    this.appSize_.x = parseInt(newParent.getAttribute('width'));
+    this.appSize_.y = parseInt(newParent.getAttribute('height'));
+  }
 };
 
 VisualizationOverlay.prototype.onSvgMouseMove_ = function (event) {
+  if (!this.ownElement_ || !this.mousePos_) {
+    return;
+  }
+
   this.mousePos_.x = event.clientX;
   this.mousePos_.y = event.clientY;
   this.mousePos_ = this.mousePos_.matrixTransform(this.screenSpaceToAppSpaceTransform_);
-  this.render();
+
+  if (this.ownElement_.parentNode) {
+    this.render(this.ownElement_.parentNode, this.props_);
+  }
 };
 
 VisualizationOverlay.prototype.shouldShowCrosshair_ = function () {
-  return !this.isApplabRunning_ && this.isMouseInVisualization_();
+  return !this.props_.isApplabRunning && this.isMouseInVisualization_();
 };
 
 VisualizationOverlay.prototype.isMouseInVisualization_ = function () {
@@ -123,7 +152,11 @@ VisualizationOverlay.prototype.isMouseInVisualization_ = function () {
 };
 
 VisualizationOverlay.prototype.recalculateTransformAtScale_ = function (scale) {
-  var svg = this.rootSvg_;
+  var svg = this.ownElement_.parentNode;
+  if (!svg) {
+    return;
+  }
+
   var svgRect = svg.getBoundingClientRect();
   var newTransform = svg.createSVGMatrix()
       .scale(1 / scale)
