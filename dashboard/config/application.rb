@@ -23,9 +23,15 @@ module Dashboard
   class Application < Rails::Application
 
     if Rails.env.development?
-      require 'cdo/rack/whitelist_cookies'
+      require 'cdo/rack/whitelist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
-      config.middleware.insert_before ActionDispatch::Cookies, Rack::WhitelistCookies,
+      config.middleware.insert_before ActionDispatch::Cookies, Rack::Whitelist::Downstream,
+        HttpCache.config(rack_env)[:dashboard]
+
+      require 'rack/cache'
+      config.middleware.insert_before ActionDispatch::Cookies, Rack::Cache
+
+      config.middleware.insert_after Rack::Cache, Rack::Whitelist::Upstream,
         HttpCache.config(rack_env)[:dashboard]
     end
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment

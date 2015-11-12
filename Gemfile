@@ -29,6 +29,7 @@ group :development do
   gem 'shotgun'
   gem 'thin', '~> 1.6.2'
   gem 'web-console', '~> 2.0'
+  gem 'rack-cache'
 end
 
 group :development, :test do
