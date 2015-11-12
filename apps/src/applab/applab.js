@@ -1139,6 +1139,9 @@ Applab.reset = function(first) {
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
+  var newClass = Applab.isRunning() ? 'running' : 'notRunning';
+  $('#divApplab').removeClass('running notRunning').addClass(newClass);
+
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
   Applab.toggleDivApplab(!isDesigning);
   designMode.parseFromLevelHtml(newDivApplab, false);
