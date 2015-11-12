@@ -7,7 +7,6 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "write": null,
       "console.log": null,
       "declareAssign_x_array_1_4": {
         "block": "var list = [1,2,3];"
@@ -44,9 +43,12 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Use indexes to change the values in this array from 1 to 0. (Click to see full instructions)",
-    "markdown_instructions": "# Setting Values by Index\r\n\r\nEach location in an array can be treated like its own variable. We've already seen how we can use bracket notation to reference values stored at specific locations in an array. Just like with variables, **we can assign the value at a specific location in an array using `=`** (the assignment operator).\r\n\r\n**Example:** The value at index 0 of this array is set to 10.\r\n\r\n![](https://images.code.org/d0bf9901deeffb1cd6553c27c38046a4-image-1447172887059.27.25 AM.png)\r\n\r\n# Do This\r\n\r\nThe program you are about to see creates an array of 0s and 1s. **We're going to set all the values in this array to be 0**. \r\n\r\n![](https://images.code.org/b1c005094a47a15c8883a44cf649573a-image-1447174543321.50.38 AM.png)\r\n\r\n* Use **indexes** and the **assignment operator** `=` to **set all the 1s to be 0**.\r\n* Write the array to the screen to confirm **the array only contains 0s**\r\n\r\n![](https://images.code.org/8a1b357b3e71c511b29971f4792253be-image-1447174054570.47.22 AM.png)",
-    "start_blocks": "var arrayOfBits = [1,0,0,1,0,0,0,0,1,0];\r\n\r\n//Place your assignment commands here\r\n\r\n\r\nwrite(arrayOfBits);",
-    "slider_speed": "1"
+    "markdown_instructions": "# Setting Values by Index\r\n\r\nEach location in an array can be treated like its own variable. We've already seen how we can use bracket notation to reference values stored at specific locations in an array. Just like with variables, **we can assign the value at a specific location in an array using `=`** (the assignment operator).\r\n\r\n**Example:** The value at index 0 of this array is set to 10.\r\n\r\n![](https://images.code.org/d0bf9901deeffb1cd6553c27c38046a4-image-1447172887059.27.25 AM.png)\r\n\r\n# Do This\r\n\r\nThe program you are about to see creates an array of 0s and 1s. **We're going to set all the values in this array to be 0**. \r\n\r\n* Use **indexes** and the **assignment operator** `=` to **set all the 1s to be 0**.\r\n* Write the array to the screen to confirm **the array only contains 0s**\r\n\r\n| Result |\r\n| --- |\r\n| <img src=\"https://images.code.org/8a1b357b3e71c511b29971f4792253be-image-1447174054570.47.22 AM.png\" style=\"width: 250px; float: right; border: solid 1px black\">|",
+    "start_blocks": "var arrayOfBits = [1,0,0,1,0,0,0,0,1,0];\r\n\r\n//Place your assignment commands here\r\n\r\n\r\nconsole.log(arrayOfBits);",
+    "slider_speed": "1",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>

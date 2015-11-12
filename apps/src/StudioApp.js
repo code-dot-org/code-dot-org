@@ -1500,7 +1500,7 @@ StudioApp.prototype.configureDom = function (config) {
     visualizationColumn.className = visualizationColumn.className + " embed_hidesource";
   }
 
-  if (!config.share) {
+  if (!config.embed && !config.hideSource) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
@@ -1518,8 +1518,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   var container = document.getElementById(options.containerId);
   this.hideSource = true;
   var workspaceDiv = document.getElementById('codeWorkspace');
-  if (this.share || options.level.skipInstructionsPopup) {
-    container.className = 'hide-instructions';
+  if (!options.embed || options.level.skipInstructionsPopup) {
+    container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
   document.getElementById('visualizationResizeBar').style.display = 'none';
@@ -1534,7 +1534,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     }
     document.body.style.backgroundColor = '#202B34';
   // For share page on mobile, do not show this part.
-} else if (this.share && !(dom.isMobile())) {
+  } else if (!options.embed && !(this.share && dom.isMobile())) {
     var runButton = document.getElementById('runButton');
     var buttonRow = runButton.parentElement;
     var openWorkspace = document.createElement('button');
@@ -1625,12 +1625,15 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     enableLiveAutocompletion: true
   });
 
-  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg, config.dropletConfig);
+  this.dropletTooltipManager = new DropletTooltipManager(
+    this.appMsg,
+    config.dropletConfig,
+    config.level.codeFunctions,
+    config.level.autocompletePaletteApisOnly);
   if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);
   }
-  this.dropletTooltipManager.registerBlocksFromList(
-    dropletUtils.getAllAvailableDropletBlocks(config.dropletConfig));
+  this.dropletTooltipManager.registerBlocks();
 
   // Bind listener to palette/toolbox 'Hide' and 'Show' links
   var hideToolboxHeader = document.getElementById('toolbox-header');

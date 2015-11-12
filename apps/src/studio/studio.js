@@ -184,8 +184,9 @@ function loadLevel() {
   Studio.wallMap = null;  // The map name actually being used.
   Studio.wallMapRequested = null; // The map name requested by the caller.
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
-  Studio.slowJsExecutionFactor = level.slowJsExecutionFactor || 1;
-  Studio.ticksBeforeFaceSouth = Studio.slowJsExecutionFactor +
+  Studio.slowExecutionFactor = level.slowExecutionFactor || 1;
+  Studio.gridAlignedExtraPauseSteps = level.gridAlignedExtraPauseSteps || 0;
+  Studio.ticksBeforeFaceSouth = Studio.slowExecutionFactor +
                                   utils.valueOr(level.ticksBeforeFaceSouth, IDLE_TICKS_BEFORE_FACE_SOUTH);
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
@@ -914,8 +915,11 @@ Studio.onTick = function() {
   Studio.clearDebugElements();
 
   var animationOnlyFrame = Studio.pauseInterpreter ||
-      (0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor);
-  Studio.yieldThisTick = false;
+      (0 !== (Studio.tickCount - 1) % Studio.slowExecutionFactor);
+
+  if (!animationOnlyFrame && Studio.yieldExecutionTicks > 0) {
+    Studio.yieldExecutionTicks--;
+  }
 
   if (Studio.customLogic) {
     Studio.customLogic.onTick();
@@ -1006,7 +1010,9 @@ Studio.onTick = function() {
     checkForCollisions();
   }
 
-  if (Studio.JSInterpreter && !animationOnlyFrame) {
+  if (Studio.JSInterpreter &&
+      !animationOnlyFrame &&
+      Studio.yieldExecutionTicks === 0) {
     Studio.JSInterpreter.executeInterpreter(Studio.tickCount === 1);
   }
 
@@ -1644,6 +1650,14 @@ Studio.init = function(config) {
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
+  // Set focus on the run button so key events can be handled
+  // right from the start without requiring the user to adjust focus.
+  // (Required for IE11 at least, and takes focus away from text mode editor
+  // in droplet.)
+  $(window).on('run_button_pressed', function () {
+    document.getElementById('runButton').focus();
+  });
+
   Studio.projectiles = [];
   Studio.items = [];
   Studio.itemSpeed = {};
@@ -1828,9 +1842,10 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = studioApp.assetUrl('media/promo.png');
 
-  // Disable "show code" button in feedback dialog and workspace if blockly.
-  // Note - if turned back on, be sure it remains hidden when config.level.embed
-  config.enableShowCode = utils.valueOr(studioApp.editCode, false);
+  // Disable "show code" button in feedback dialog and workspace if blockly,
+  // unless the level specifically requests it
+  config.enableShowCode =
+    studioApp.editCode ? true : utils.valueOr(level.enableShowCode, false);
   config.varsInGlobals = true;
   config.dropletConfig = dropletConfig;
   config.dropIntoAceAtLineStart = true;
@@ -2082,6 +2097,9 @@ Studio.reset = function(first) {
 
   // Reset the Globals object used to contain program variables:
   Studio.Globals = {};
+
+  // Reset execution state:
+  Studio.yieldExecutionTicks = 0;
   if (studioApp.editCode) {
     Studio.executionError = null;
     Studio.JSInterpreter = null;
@@ -2670,9 +2688,9 @@ Studio.execute = function() {
     Studio.JSInterpreter = new JSInterpreter({
       code: codeWhenRun,
       blocks: dropletConfig.blocks,
+      blockFilter: level.executePaletteApisOnly && level.codeFunctions,
       enableEvents: true,
       studioApp: studioApp,
-      shouldRunAtMaxSpeed: function() { return Studio.slowJsExecutionFactor === 1; },
       onExecutionError: handleExecutionError,
     });
     if (!Studio.JSInterpreter.initialized()) {
@@ -2710,6 +2728,12 @@ Studio.onPuzzleComplete = function() {
   // Stop everything on screen
   Studio.clearEventHandlersKillTickLoop();
   Studio.movementAudioOff();
+
+  if (level.gridAlignedMovement && Studio.JSInterpreter) {
+    // If we've been selecting code as we run, we need to call selectCurrentCode()
+    // one last time to remove the highlight on the last line of code:
+    Studio.JSInterpreter.selectCurrentCode();
+  }
 
   // If we know they succeeded, mark levelComplete true
   var levelComplete = (Studio.result === ResultType.SUCCESS);
@@ -3514,12 +3538,12 @@ Studio.queueCmd = function (id, name, opts) {
 //
 // Execute an entire command queue (specified with the name parameter)
 //
-// If Studio.yieldThisTick is true, execution of commands will stop
+// If Studio.yieldExecutionTicks is positive, execution of commands will stop
 //
 
 Studio.executeQueue = function (name, oneOnly) {
   Studio.eventHandlers.forEach(function (handler) {
-    if (Studio.yieldThisTick) {
+    if (Studio.yieldExecutionTicks > 0) {
       return;
     }
     if (handler.name === name && handler.cmdQueue.length) {
@@ -3530,7 +3554,7 @@ Studio.executeQueue = function (name, oneOnly) {
         } else {
           break;
         }
-        if (Studio.yieldThisTick) {
+        if (Studio.yieldExecutionTicks > 0) {
           break;
         }
       }
@@ -5036,15 +5060,20 @@ Studio.moveSingle = function (opts) {
   if (level.gridAlignedMovement) {
     if (wallCollision || playspaceEdgeCollision) {
       sprite.addAction(new spriteActions.GridMoveAndCancel(
-          deltaX, deltaY, level.slowJsExecutionFactor));
+          deltaX, deltaY, level.slowExecutionFactor));
     } else {
       sprite.addAction(new spriteActions.GridMove(
-          deltaX, deltaY, level.slowJsExecutionFactor));
+          deltaX, deltaY, level.slowExecutionFactor));
     }
 
-    Studio.yieldThisTick = true;
+    Studio.yieldExecutionTicks += (1 + Studio.gridAlignedExtraPauseSteps);
     if (Studio.JSInterpreter) {
+      // Stop executing the interpreter in a tight loop and yield the current
+      // execution tick:
       Studio.JSInterpreter.yield();
+      // Highlight the code in the editor so the student can see the progress
+      // of their program:
+      Studio.JSInterpreter.selectCurrentCode();
     }
 
     Studio.movementAudioOn();
@@ -5327,7 +5356,11 @@ var checkFinished = function () {
 
   if (progressConditionResult) {
     Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
-    Studio.message = utils.valueOr(progressConditionResult.message, null);
+    var progressMessage = progressConditionResult.message;
+    if (studioApp.isUsingBlockly()) {
+      progressMessage = progressConditionResult.blocklyMessage || progressMessage;
+    }
+    Studio.message = utils.valueOr(progressMessage, null);
     Studio.pauseInterpreter = utils.valueOr(progressConditionResult.pauseInterpreter, false);
     return true;
   }
