@@ -30,7 +30,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Use an if statement to only print the values in the array that are greater than 5. (Click to see full instructions)",
-    "markdown_instructions": "# For Loop with If\r\n\r\nSometimes we only want to process values in an array that meet certain conditions. In those cases we can add an if statement inside the for loop to check something about the value of the array at the current index.\r\n\r\nUse an if statement to only print the values in the array that are greater than 5.\r\n\r\n# Do This\r\n\r\n* Set up a `for` loop that loops over every index in the array.\r\n\r\n* Add an if statement inside the for loop with a boolean condition that checks if the value at the current index in the array is greater than 5.",
+    "markdown_instructions": "# For Loop with If\r\n\r\nSometimes we only want to process values in an array that meet certain conditions. In those cases we can add an if statement inside the for loop to check something about the value of the array at the current index.\r\n\r\nUse an if statement to only print the values in the array that are greater than 5.\r\n\r\n# Do This\r\n\r\n* Set up a `for` loop that loops over every index in the array.\r\n\r\n* Add an if statement inside the for loop with a boolean condition that checks if the value at the current index in the array is greater than 5.\r\n\r\n![](https://images.code.org/969077ff23232e410ce17520b0a71e1e-image-1447390972867.gif)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

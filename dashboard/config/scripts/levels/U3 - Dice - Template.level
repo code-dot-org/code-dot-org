@@ -34,7 +34,9 @@
       "equalityOperator": null,
       "inequalityOperator": null,
       "greaterThanOperator": null,
+      "greaterThanOrEqualOperator": null,
       "lessThanOperator": null,
+      "lessThanOrEqualOperator": null,
       "randomNumber_min_max": null,
       "declareAssign_x": null,
       "declareNoAssign_x": null,
@@ -51,9 +53,6 @@
       "callMyFunction_n": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -81,7 +80,10 @@
     "beginner_mode": "true",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "start_blocks": "setImageURL(\"dice_image\", \"https://code.org/images/dice/1.png\");",
+    "lock_zero_param_functions": "false",
+    "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"designModeViz\" class=\"appModern\" style=\"width: 320px; height: 450px; display: none;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\">\r\n    <button id=\"roll_button\" style=\"padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 110px; top: 25px; background-color: rgb(26, 188, 156);\">Roll!</button>\r\n    <img src=\"https://code.org/images/dice/5.png\" id=\"dice_image\" style=\"height: 100px; width: 100px; position: absolute; left: 100px; top: 175px; margin: 0px;\"/>\r\n  </div>\r\n</div>"
   }
 }]]></config>
   <blocks/>
