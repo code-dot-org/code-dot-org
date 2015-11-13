@@ -878,15 +878,8 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function(options) {
     harvardLink: "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>"
   };
 
-  var infoMessage = "";
-  if (this.studioApp_.editCode) {
-    infoMessage = ""
-  } else if (options.generatedCodeDescription) {
-    infoMessage = options.generatedCodeDescription;
-  } else {
-    infoMessage = msg.generatedCodeInfo(codeInfoMsgParams);
-  }
-
+  var infoMessage = this.getGeneratedCodeDescription(codeInfoMsgParams,
+      options.generatedCodeDescription);
   var code = this.getGeneratedCodeString_();
 
   var codeDiv = document.createElement('div');
@@ -896,6 +889,25 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function(options) {
   });
 
   return codeDiv;
+};
+
+/**
+ * Generates explanation of what code is.
+ * @param {Object} codeInfoMsgParams - params for generatedCodeInfo msg function
+ * @param {String} [generatedCodeDescription] - optional description to use
+ *        instead of the default
+ * @returns {string}
+ */
+FeedbackUtils.prototype.getGeneratedCodeDescription = function (codeInfoMsgParams, generatedCodeDescription) {
+  if (this.studioApp_.editCode) {
+    return '';
+  }
+
+  if (generatedCodeDescription) {
+    return generatedCodeDescription;
+  }
+
+  return msg.generatedCodeInfo(codeInfoMsgParams);
 };
 
 /**
