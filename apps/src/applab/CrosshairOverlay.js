@@ -43,13 +43,13 @@ module.exports = CrosshairOverlay;
 
 /**
  * @param {SVGElement} intoElement
- * @param {Object} props
- * @param {number} props.x
- * @param {number} props.y
- * @param {number} props.appWidth
- * @param {number} props.appHeight
+ * @param {Object} nextProps
+ * @param {number} nextProps.x
+ * @param {number} nextProps.y
+ * @param {number} nextProps.appWidth
+ * @param {number} nextProps.appHeight
  */
-CrosshairOverlay.prototype.render = function (intoElement, props) {
+CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
   // Create element if necessary
   if (!this.ownElement_) {
     this.create_();
@@ -61,7 +61,7 @@ CrosshairOverlay.prototype.render = function (intoElement, props) {
   }
 
   // Record any new/updated properties
-  $.extend(this.props_, props);
+  $.extend(this.props_, nextProps);
 
   var rectX = this.props_.x + CROSSHAIR_MARGIN;
   if (rectX + TEXT_RECT_WIDTH + EDGE_MARGIN > this.props_.appWidth) {

@@ -50,11 +50,11 @@ module.exports = VisualizationOverlay;
 
 /**
  * @param {SVGSVGElement} intoElement - where this component should be rendered
- * @param {Object} props
- * @param {boolean} props.isApplabRunning
- * @param {number} props.scale
+ * @param {Object} nextProps
+ * @param {boolean} nextProps.isApplabRunning
+ * @param {number} nextProps.scale
  */
-VisualizationOverlay.prototype.render = function (intoElement, props) {
+VisualizationOverlay.prototype.render = function (intoElement, nextProps) {
   // Create element if necessary
   if (!this.ownElement_) {
     this.create_();
@@ -67,7 +67,7 @@ VisualizationOverlay.prototype.render = function (intoElement, props) {
 
   // Record any new/updated properties
   var oldProps = $.extend({}, this.props_);
-  $.extend(this.props_, props);
+  $.extend(this.props_, nextProps);
 
   if (this.props_.scale !== oldProps.scale) {
     this.recalculateTransformAtScale_(this.props_.scale);
