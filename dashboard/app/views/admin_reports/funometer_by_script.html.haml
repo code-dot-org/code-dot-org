@@ -4,12 +4,12 @@
   Fun-O-Meter Stats
 
 %h2
-  Script: 
+  Script:
   = @script_name
 
 %h3
   Overall Percentage:
-  = @overall_percentage
+  = number_to_percentage(@overall_percentage, precision: 2)
 
 #percentages_by_day
 

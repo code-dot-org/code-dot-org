@@ -4,8 +4,8 @@
   Fun-O-Meter Stats
 
 %h2
-  Global Percentage:
-  %span= number_to_percentage(@global_percentage, precision: 2)
+  Overall Percentage:
+  %span= number_to_percentage(@overall_percentage, precision: 2)
 
 %br
 
@@ -23,9 +23,12 @@
         %span= header
   - @script_ratings.each do |script|
     %tr
-      - script.each do |field|
-        %td
-          %span= field
+      %td
+        %span= script.script_id
+      %td
+        %span= number_to_percentage(script.percentage, precision: 2)
+      %td
+        %span= script.cnt
 
 %h2
   Favorite Levels
@@ -37,9 +40,14 @@
         %span= header
   - @favorite_level_ratings.each do |level|
     %tr
-      - level.each do |field|
-        %td
-          %span= field
+      %td
+        %span= level.script_id
+      %td
+        %span= level.level_id
+      %td
+        %span= number_to_percentage(level.percentage, precision: 2)
+      %td
+        %span= level.cnt
 
 %h2
   Hated Levels
@@ -51,9 +59,14 @@
         %span= header
   - @hated_level_ratings.each do |level|
     %tr
-      - level.each do |field|
-        %td
-          %span= field
+      %td
+        %span= level.script_id
+      %td
+        %span= level.level_id
+      %td
+        %span= number_to_percentage(level.percentage, precision: 2)
+      %td
+        %span= level.cnt
 
 - content_for :body_scripts do
   :javascript
