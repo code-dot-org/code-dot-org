@@ -82,19 +82,13 @@ CrosshairOverlay.prototype.render = function (intoElement, props) {
   this.vGuide_.setAttribute('x1', this.props_.x);
   this.vGuide_.setAttribute('y1', this.props_.y - CROSSHAIR_MARGIN);
   this.vGuide_.setAttribute('x2', this.props_.x);
-  this.vGuide_.setAttribute('y2', 0);
 
   this.hGuide_.setAttribute('x1', this.props_.x - CROSSHAIR_MARGIN);
   this.hGuide_.setAttribute('y1', this.props_.y);
-  this.hGuide_.setAttribute('x2', 0);
   this.hGuide_.setAttribute('y2', this.props_.y);
 
   this.bubble_.setAttribute('x', rectX);
   this.bubble_.setAttribute('y', rectY);
-  this.bubble_.setAttribute('width', TEXT_RECT_WIDTH);
-  this.bubble_.setAttribute('height', TEXT_RECT_HEIGHT);
-  this.bubble_.setAttribute('rx', TEXT_RECT_RADIUS);
-  this.bubble_.setAttribute('ry', TEXT_RECT_RADIUS);
 
   this.text_.setAttribute('x', textX);
   this.text_.setAttribute('y', textY);
@@ -112,12 +106,18 @@ CrosshairOverlay.prototype.create_ = function () {
   this.ownElement_.setAttribute('class', 'crosshair-overlay');
 
   this.vGuide_ = document.createElementNS(SVG_NS, 'line');
+  this.vGuide_.setAttribute('y2', 0);
   this.ownElement_.appendChild(this.vGuide_);
 
   this.hGuide_ = document.createElementNS(SVG_NS, 'line');
+  this.hGuide_.setAttribute('x2', 0);
   this.ownElement_.appendChild(this.hGuide_);
 
   this.bubble_ = document.createElementNS(SVG_NS, 'rect');
+  this.bubble_.setAttribute('width', TEXT_RECT_WIDTH);
+  this.bubble_.setAttribute('height', TEXT_RECT_HEIGHT);
+  this.bubble_.setAttribute('rx', TEXT_RECT_RADIUS);
+  this.bubble_.setAttribute('ry', TEXT_RECT_RADIUS);
   this.ownElement_.appendChild(this.bubble_);
 
   this.text_ = document.createElementNS(SVG_NS, 'text');
