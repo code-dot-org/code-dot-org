@@ -81,7 +81,7 @@ VisualizationOverlay.prototype.render = function (intoElement, nextProps) {
       appHeight: this.appSize_.y
     });
   } else {
-    this.crosshairOverlay_.unrender();
+    this.crosshairOverlay_.destroy();
   }
 };
 
