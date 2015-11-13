@@ -206,11 +206,12 @@ describe 'http proxy cache' do
   end
 
   it 'Handles Accept-Language behaviors' do
-    url = build_url 3
+    # URL contains whitelisted 'Accept-Language' header
+    url = build_url 's/starwars/stage/1/puzzle'
     text_en = 'Hello World!'
     text_fr = 'Bonjour le Monde!'
-    mock_response url, text_en, {'X-Varnish-Accept-Language' => 'en'}, {vary: 'X-Varnish-Accept-Language'}
-    mock_response url, text_fr, {'X-Varnish-Accept-Language' => 'fr'}, {vary: 'X-Varnish-Accept-Language'}
+    mock_response url, text_en, {'X-Varnish-Accept-Language' => 'en'}
+    mock_response url, text_fr, {'X-Varnish-Accept-Language' => 'fr'}
     en = {'Accept-Language' => 'en'}
     response = proxy_request url, en
     assert_miss response
@@ -330,8 +331,8 @@ describe 'http proxy cache' do
   end
 
   it 'Does not strip cookies from uncached PUT or POST asset requests' do
-    # Varnish only; CloudFront will strip cookies from PUT/POST
-    skip 'Not implemented in CloudFront' if $cloudfront
+    # Skip because CloudFront does not support this functionality.
+    skip 'Disabled, not supported by CloudFront'
 
     url = build_url 8, 'image.png'
     cookie = 'random_cookie'
@@ -370,6 +371,31 @@ describe 'http proxy cache' do
     refute_nil /Cookie: [^\s]+/.match(response)
   end
 
+  it 'caches individually on whitelisted cookie values' do
+    url = build_url 10
+    cookie = 'hour_of_code' # whitelisted for this path
+    cookie2 = 'bad_cookie' # not whitelisted for this path
+    text = 'Hello World!'
+    text_cookie = 'Hello Cookie!'
+    mock_response url, text, {}
+    mock_response url, text_cookie, {'Cookie' => "#{cookie}=123;"}
+
+    response = proxy_request url, {}, {"#{cookie}" => '123'}
+    assert_equal text_cookie, last_line(response)
+    assert_miss response
+
+    # Changed cookie string matching all whitelisted headers will return cached result
+    response = proxy_request url, {}, {"#{cookie}" => '123', "#{cookie2}" => '456'}
+    assert_equal text_cookie, last_line(response)
+    assert_hit response
+  end
+
+  it 'returns 403 error on unsupported HTTP methods' do
+    url = build_url 11
+    mock_response url, 'Hello World!', {}
+    response = proxy_request url, {}, {}, 'FOO'
+    assert_equal 403, code(response)
+  end
 end
 
 output = MiniTest::Unit.new.run
