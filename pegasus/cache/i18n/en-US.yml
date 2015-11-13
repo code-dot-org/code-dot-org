@@ -291,11 +291,12 @@
   starwars_watch_videos: "Before you get started, watch one of these inspirational videos"
   starwars_speak_languages: "Speak another language?"
   starwars_help_translate: "Help us translate"
-  mc_name: 'Minecraft: Code Your World'
-  mc_longdescription: "Explore your Minecraft world by dragging and dropping blocks of code."
+  mc_name: "Minecraft Hour of Code"
+  mc_longdescription: "Use blocks of code to take Steve or Alex on an adventure through this Minecraft world."
+  mc_shortdescription: "Use blocks of code to take Steve or Alex on an adventure through this Minecraft world."
   mc_gradelevel: "Ages 4-104"
   mc_platformtext: "Modern browsers, smartphones, tablets"
-  minecraft_subtitle: "Code Your World"
+  minecraft_subtitle: "Minecraft Hour of Code"
   volunteer_engineer_submission_title: "Are you technical? Inspire students and volunteer for the Hour of Code."
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers want technical volunteers to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them."
