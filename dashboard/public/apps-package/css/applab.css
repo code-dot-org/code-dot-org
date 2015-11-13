@@ -1,3 +1,4 @@
+@import url(colpick.css);
 #divApplab, #designModeViz, .draggingParent {
   overflow: hidden;
   outline: none;
@@ -255,18 +256,41 @@ div#visualizationResizeBar {
 #visualizationColumn.chromelessShare #designToggleRow, #visualizationColumn.chromelessShare #gameButtons {
   display: none; }
 
-#divApplab, #designModeViz {
+#divApplab, #designModeViz, #visualizationOverlay {
   overflow: hidden;
   outline: none;
-  position: relative;
-  z-index: 1;
-  background-color: white;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
+
+#divApplab {
+  position: relative;
+  z-index: 1;
+  background-color: white; }
+
+#visualizationOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius=0); }
+
+.crosshair-overlay line {
+  stroke: #aaa;
+  stroke-width: 1.8px;
+  stroke-dasharray: 6.5px; }
+
+.crosshair-overlay rect {
+  stroke: #bdc3c7;
+  stroke-width: 2px;
+  fill: rgba(255, 255, 255, 0.8); }
+
+.crosshair-overlay text {
+  text-anchor: middle; }
 
 #divApplab canvas, #designModeViz canvas {
   position: absolute;
