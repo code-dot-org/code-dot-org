@@ -49,7 +49,10 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "start_blocks": "onEvent(\"screen1\", \"keypress\", function(event){\r\n console.log('key is: '+event.key); \r\n});",
-    "instructions": "Try out the keyup and keydown events to see how they are different from keypress. (Click to see full instructions)"
+    "instructions": "Try out the keyup and keydown events to see how they are different from keypress. (Click to see full instructions)",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>
