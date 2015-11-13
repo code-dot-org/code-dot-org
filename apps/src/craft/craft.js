@@ -206,8 +206,8 @@ Craft.init = function (config) {
       document.removeEventListener('instructionsShown', playOnce);
       document.removeEventListener('instructionsHidden', playOnce);
 
-      var hasSongInlevel = Craft.level.songs && Craft.level.songs.length > 1;
-      var songToPlayFirst = hasSongInlevel ? Craft.level.songs[0] : null;
+      var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
+      var songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
       Craft.musicController.play(songToPlayFirst);
     }
   };
