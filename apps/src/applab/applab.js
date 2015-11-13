@@ -1208,7 +1208,7 @@ Applab.renderVisualizationOverlay = function() {
   // Change cursor rule for divApplab - appropriate here because sometimes
   // the overlay is sort of a 'virtual' cursor for us.
   [divApplab, designModeViz].forEach(function (div) {
-    div.style.cursor = Applab.isRunning() ? '' : 'crosshair';
+    $(div).toggleClass('withCrosshair', !Applab.isRunning());
   });
 
   if (!Applab.visualizationOverlay_) {
