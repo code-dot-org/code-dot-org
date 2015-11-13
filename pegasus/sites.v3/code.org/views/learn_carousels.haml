@@ -31,7 +31,6 @@
       = I18n.t(:carousel_heading_domestic)
 
 #all-tutorials{:style=>'visibility:hidden; overflow:hidden'}
-  -# TODO: when minecraft mode, add the starwars tutorial to this carousel
   - categories.each do |category|
     - id = "collection-" + category[:tag]
     = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
