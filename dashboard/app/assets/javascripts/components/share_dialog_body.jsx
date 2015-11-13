@@ -95,15 +95,7 @@ window.dashboard.ShareDialogBody = (function (React) {
                 <i className="fa fa-mobile-phone" style={{fontSize: 28}}></i>
               </a>
             </div>
-            <div id="send-to-phone" className="sharing" style={{display: 'none'}}>
-              <label htmlFor="phone">Enter a US phone number:</label>
-              <input type="text" id="phone" name="phone"></input>
-              <button id="phone-submit">Send</button>
-              <div id="phone-charges">
-                A text message will be sent via <a href="http://twilio.com">Twilio</a>.
-                Charges may apply to the recipient.
-              </div>
-            </div>
+            <window.dashboard.SendToPhone/>
           </div>
         </div>
       );
