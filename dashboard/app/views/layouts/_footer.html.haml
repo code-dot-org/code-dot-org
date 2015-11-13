@@ -38,19 +38,4 @@
           %br/
           !="&copy; Code.org, #{Time.now.year}"
 
-- is_not_cached_script = !@script || !Gatekeeper.allows('public_caching_for_script', where: {script_name: @script.name})
-- if DCDO.get('hoc_secret', nil) && is_not_cached_script
-
-  // Set secret
-  - # If enabled, set a client-side secret that allows admins to access the HOC 2015 levels.
-  - # This is a temporary measure that will be removed shortly.
-  - if current_user && current_user.admin?
-    :javascript
-      //<![CDATA[
-      localStorage.setItem('hoc_secret', '#{DCDO.get("hoc_secret", nil)}');
-      //]]>
-  - else
-    :javascript
-      //<![CDATA[
-      localStorage.removeItem('hoc_secret');
-      //]]>
+= render partial: 'shared/maybe_set_hoc_secret'

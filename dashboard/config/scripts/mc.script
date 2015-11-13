@@ -1,0 +1,20 @@
+title 'Minecraft'
+description_short "Code your world."
+description "Explore your Minecraft world by dragging and dropping blocks of code."
+hidden 'true'
+
+stage 'Hour of Code 2015'
+level 'Overworld Move to Sheep'
+level 'Overworld Chop Tree'
+level 'Overworld Shear Sheep'
+level 'Overworld Chop Trees'
+level 'Overworld Place Wall'
+level 'Overworld House Frame Chosen'
+level 'Overworld Plant Crops'
+level 'Overworld Avoid Monsters'
+level 'Underground Mining Coal'
+level 'Underground Iron'
+level 'Underground Avoiding Lava'
+level 'Underground If Statements'
+level 'Overworld Powered Minecart'
+level 'Overworld Free Play 20x20'
