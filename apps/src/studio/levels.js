@@ -1898,7 +1898,7 @@ levels.js_hoc2015_move_diagonal = {
   executePaletteApisOnly: true,
   'textModeAtStart': true,
   'background': 'main',
-  'music': [ 'song3' ],
+  'music': [ 'song4' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -1969,7 +1969,7 @@ levels.js_hoc2015_move_backtrack = {
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
   'background': 'main',
-  'music': [ 'song4' ],
+  'music': [ 'song3' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -2019,7 +2019,7 @@ levels.js_hoc2015_move_around = {
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
   'background': 'main',
-  'music': [ 'song5' ],
+  'music': [ 'song9' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -2090,7 +2090,7 @@ levels.js_hoc2015_move_finale = {
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
   'background': 'main',
-  'music': [ 'song6' ],
+  'music': [ 'song8' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -2241,7 +2241,7 @@ levels.js_hoc2015_event_four_items = {
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
   'background': 'hoth',
-  'music': [ 'song8' ],
+  'music': [ 'song5' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -2307,7 +2307,7 @@ levels.js_hoc2015_score =
   executePaletteApisOnly: true,
   'editCode': true,
   'background': 'hoth',
-  'music': [ 'song10' ],
+  'music': [ 'song6' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
