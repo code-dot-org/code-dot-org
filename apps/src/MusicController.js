@@ -29,6 +29,8 @@ function debug(msg) {
  *
  * @property {string} name - corresponds to music filenames
  * @property {number} volume - on a 0..1 scale
+ * @property {boolean} hasOgg - whether a .ogg version of the file should also
+ *           available in addition to the .mp3
  */
 
 /**

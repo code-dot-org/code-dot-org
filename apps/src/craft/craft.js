@@ -201,16 +201,16 @@ Craft.init = function (config) {
   // Play music when the instructions are shown
   var playOnce = function () {
     if (studioApp.cdoSounds && studioApp.cdoSounds.isAudioUnlocked()) {
-      $(window).off('run_button_pressed', playOnce);
+      document.removeEventListener('instructionsShown', playOnce);
+      document.removeEventListener('instructionsHidden', playOnce);
 
-      window.setTimeout(() => {
-        var hasSongInlevel = Craft.level.songs && Craft.level.songs.length > 1;
-        var songToPlayFirst = hasSongInlevel ? Craft.level.songs[0] : null;
-        Craft.musicController.play(songToPlayFirst);
-      }, Craft.level.songDelay || 1500);
+      var hasSongInlevel = Craft.level.songs && Craft.level.songs.length > 1;
+      var songToPlayFirst = hasSongInlevel ? Craft.level.songs[0] : null;
+      Craft.musicController.play(songToPlayFirst);
     }
   };
-  $(window).on('run_button_pressed', playOnce);
+  document.addEventListener('instructionsShown', playOnce);
+  document.addEventListener('instructionsHidden', playOnce);
 
   var character = characters[Craft.getCurrentCharacter()];
   config.skin.staticAvatar = character.staticAvatar;
