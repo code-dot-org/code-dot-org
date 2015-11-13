@@ -26,9 +26,10 @@ class AdminReportsController < ApplicationController
     @script_headers = ['Script ID', 'Script Name', 'Percentage', 'Count']
     @script_ratings = all_ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").group(:script_id).order('SUM(100.0 * rating) / COUNT(rating)').select('script_id', 'name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
 
-    # Compute funometer percentages by level.
+    # Compute funometer percentages by level, saving the most-favored and
+    # least-favored with over one hundred ratings.
     @level_headers = ['Script ID', 'Level ID', 'Script Name', 'Level Name', 'Percentage', 'Count']
-    level_ratings = all_ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").joins("INNER JOIN levels ON levels.id = puzzle_ratings.level_id").group(:script_id, :level_id).select(:script_id, :level_id, 'scripts.name AS script_name', 'levels.name AS level_name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+    level_ratings = all_ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").joins("INNER JOIN levels ON levels.id = puzzle_ratings.level_id").group(:script_id, :level_id).select(:script_id, :level_id, 'scripts.name AS script_name', 'levels.name AS level_name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt').having('cnt > ?', 100)
     @favorite_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) desc').limit(25)
     @hated_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) asc').limit(25)
 
@@ -41,11 +42,20 @@ class AdminReportsController < ApplicationController
     @script_id = params[:script_id]
     @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
 
-    # Generate the funometer percentages for the level, by day.
+    # Compute the global funometer percentage for the script.
     ratings = PuzzleRating.where('script_id = ?', @script_id)
+    @overall_percentage = 100.0 * ratings.where(rating: 1).count / ratings.count
+
+    # Generate the funometer percentages for the script, by day.
     ratings_by_day = ratings.group('DATE(created_at)').order('DATE(created_at)')
     percentages_by_day = ratings_by_day.pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating) AS percentage')
-    @overall_percentage = ratings.pluck('SUM(rating) / COUNT(rating) AS percentage')[0]
+    @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
+    @ratings_by_day = ratings_by_day.select('DATE(created_at) AS day', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+
+    # Generate the funometer percentages for the script, by level.
+    ratings_by_level = ratings.group(:level_id).order(:level_id)
+    @ratings_by_level_headers = ['Level ID', 'Percentage', 'Count']
+    @ratings_by_level = ratings_by_level.select('level_id', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
 
     render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
   end
@@ -54,16 +64,16 @@ class AdminReportsController < ApplicationController
     authorize! :read, :reports
 
     @script_id = params[:script_id]
-    @level_id = params[:level_id]
-
     @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
+    @level_id = params[:level_id]
     @level_name = Level.where('id = ?', @level_id).pluck(:name)[0]
 
     # Generate the funometer percentages for the level, by day.
     ratings = PuzzleRating.where('script_id = ?', @script_id).where('level_id = ?', @level_id)
     ratings_by_day = ratings.group('DATE(created_at)').order('DATE(created_at)')
     percentages_by_day = ratings_by_day.pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating) AS percentage')
-    @ratings_by_day = ratings_by_day.pluck('DATE(created_at) AS day', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+    @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
+    @ratings_by_day = ratings_by_day.select('DATE(created_at) AS day', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
 
     render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
   end

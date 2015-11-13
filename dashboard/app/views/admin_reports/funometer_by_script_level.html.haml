@@ -4,15 +4,25 @@
   Fun-O-Meter Stats
 
 %h2
-  Script:
-  = @script_name
-  %br
-  Level:
-  = @level_name
+  = 'Script: ' + @script_name + ', Level: ' + @level_name
 
-#percentages_by_day
-
-= @ratings_by_day
+.by_day
+  %h3 
+    Percentages by Day
+  #chart_by_day
+  %table
+    %tr
+      - @ratings_by_day_headers.each do |header|
+        %th
+          %span= header
+    - @ratings_by_day.each do |day|
+      %tr
+        %td
+          %span= day.day
+        %td
+          %span= number_to_percentage(day.percentage, precision: 2)
+        %td
+          %span= day.cnt
 
 
 - content_for :body_scripts do
@@ -33,6 +43,6 @@
 
       // Instantiate and draw our chart, passing in some options.
       var options = {'title': 'Fun-O-Meter By Day', 'width':400, 'height':300};
-      var chart = new google.visualization.LineChart(document.getElementById('percentages_by_day'));
+      var chart = new google.visualization.LineChart(document.getElementById('chart_by_day'));
       chart.draw(data, options);
     }
