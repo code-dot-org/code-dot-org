@@ -23,14 +23,14 @@ class AdminReportsController < ApplicationController
     percentages_by_day = all_ratings.where('created_at > ?', Time.now.prev_month).group('DATE(created_at)').order('DATE(created_at)').pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating)')
 
     # Compute funometer percentages by script.
-    @script_headers = ['Script ID', 'Percentage', 'Count']
-    @script_ratings = all_ratings.group(:script_id).order('SUM(100.0 * rating) / COUNT(rating)').select('script_id', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+    @script_headers = ['Script ID', 'Script Name', 'Percentage', 'Count']
+    @script_ratings = all_ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").group(:script_id).order('SUM(100.0 * rating) / COUNT(rating)').select('script_id', 'name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
 
     # Compute funometer percentages by level.
-    @level_headers = ['Script ID', 'Level ID', 'Percentage', 'Count']
-    level_ratings = all_ratings.select(:script_id, :level_id, 'SUM(100.0 * rating) / COUNT(rating) AS ratio', 'COUNT(rating) AS cnt').group(:script_id, :level_id)
-    @favorite_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) desc').limit(25).select(:script_id, :level_id, 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
-    @hated_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) asc').limit(25).select(:script_id, :level_id, 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+    @level_headers = ['Script ID', 'Level ID', 'Script Name', 'Level Name', 'Percentage', 'Count']
+    level_ratings = all_ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").joins("INNER JOIN levels ON levels.id = puzzle_ratings.level_id").group(:script_id, :level_id).select(:script_id, :level_id, 'scripts.name AS script_name', 'levels.name AS level_name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+    @favorite_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) desc').limit(25)
+    @hated_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) asc').limit(25)
 
     render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
   end

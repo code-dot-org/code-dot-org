@@ -14,7 +14,7 @@
 %br
 
 %h2
-  Script Ratings
+  Fun-O-Meter by Script
 
 %table
   %tr
@@ -25,6 +25,8 @@
     %tr
       %td
         %span= script.script_id
+      %td
+        %span= script.name
       %td
         %span= number_to_percentage(script.percentage, precision: 2)
       %td
@@ -45,6 +47,10 @@
       %td
         %span= level.level_id
       %td
+        %span= level.script_name
+      %td
+        %span= level.level_name
+      %td
         %span= number_to_percentage(level.percentage, precision: 2)
       %td
         %span= level.cnt
@@ -63,6 +69,10 @@
         %span= level.script_id
       %td
         %span= level.level_id
+      %td
+        %span= level.script_name
+      %td
+        %span= level.level_name
       %td
         %span= number_to_percentage(level.percentage, precision: 2)
       %td
