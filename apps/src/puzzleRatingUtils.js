@@ -12,7 +12,7 @@ var dom = require('./dom');
 /**
  * Construct the puzzle rating buttons themselves
  *
- * @returns {jQuery} div containing puzzle ratng buttons with attached
+ * @returns {Element} div containing puzzle ratng buttons with attached
  *          click handlers
  */
 PuzzleRatingUtils.buildPuzzleRatingButtons = function () {
@@ -37,8 +37,17 @@ PuzzleRatingUtils.buildPuzzleRatingButtons = function () {
 };
 
 /**
+ * @typedef {Object} PuzzleRating
+ *
+ * @property {number} script_id
+ * @property {number} level_id
+ * @property {number|string} rating - can be a number or an
+ *           integer-parseable string
+ */
+
+/**
  * Private getter/localStorage proxy
- * @returns {Array} - ratings
+ * @returns {PuzzleRating[]} - ratings
  */
 PuzzleRatingUtils.getPuzzleRatings_ = function () {
   var ratings = localStorage.getItem('puzzleRatings');
@@ -51,15 +60,22 @@ PuzzleRatingUtils.getPuzzleRatings_ = function () {
 
 /**
  * Private setter/localStorage proxy
- * @param {Array} ratings
+ * @param {PuzzleRating[]} ratings
  */
 PuzzleRatingUtils.setPuzzleRatings_ = function (ratings) {
   localStorage.setItem('puzzleRatings', JSON.stringify(ratings));
 };
 
+/**
+ * Private deleter/localStorage proxy
+ * @param {PuzzleRating} rating
+ */
 PuzzleRatingUtils.removePuzzleRating_ = function (rating) {
-  var ratings = PuzzleRatingUtils.getPuzzleRatings_().filter(function(r){
-    return !(r.level_id == rating.level_id && r.script_id == rating.script_id);
+  var ratings = PuzzleRatingUtils.getPuzzleRatings_().filter(function (other) {
+    var otherEqualsRating = (rating.level_id == other.level_id &&
+      rating.script_id == other.script_id &&
+      rating.rating == other.rating);
+    return !otherEqualsRating;
   });
   PuzzleRatingUtils.setPuzzleRatings_(ratings);
 };
@@ -71,7 +87,6 @@ PuzzleRatingUtils.removePuzzleRating_ = function (rating) {
  * @param {jQuery} container - some element that contains the buttons
  * @param {Object} options - other data to be submitted along with the
  *        rating. Usually script_id and level_id
- *
  */
 PuzzleRatingUtils.cachePuzzleRating = function (container, options) {
   var selectedButton = container.querySelector('.puzzle-rating-btn.enabled');
@@ -85,7 +100,6 @@ PuzzleRatingUtils.cachePuzzleRating = function (container, options) {
 
 /**
  * POST the cached ratings to the given URL and clear the cache
- *
  * @param {string} url 
  */
 PuzzleRatingUtils.submitCachedPuzzleRatings = function (url) {
