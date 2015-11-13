@@ -31,67 +31,63 @@ var CrosshairOverlay = function () {
   /** @private {SVGGElement} */
   this.ownElement_ = null;
 
-  /** @private {number} */
-  this.x_ = 100;
-
-  /** @private {number} */
-  this.y_ = 100;
-
-  // TODO: pass these in properly
-  this.appWidth_ = 320;
-  this.appHeight_ = 450;
+  /** @private {Object} */
+  this.props_ = {
+    x: 0,
+    y: 0,
+    appWidth: 0,
+    appHeight: 0
+  };
 };
 module.exports = CrosshairOverlay;
 
 /**
- *
  * @param {SVGElement} intoElement
  * @param {Object} props
+ * @param {number} props.x
+ * @param {number} props.y
+ * @param {number} props.appWidth
+ * @param {number} props.appHeight
  */
 CrosshairOverlay.prototype.render = function (intoElement, props) {
-  // Transfer new properties
-  this.x_ = props.x;
-  this.y_ = props.y;
-  this.appWidth_ = props.appWidth;
-  this.appHeight_ = props.appHeight;
-
-  // If we're moving, destroy so we'll be recreated
-  if (this.ownElement_ && this.ownElement_.parentNode !== intoElement) {
-    this.destroy_();
-  }
-
-  // If we don't exist, recreate
+  // Create element if necessary
   if (!this.ownElement_) {
-    this.create_(intoElement);
+    this.create_();
   }
 
-  var rectX = this.x_ + CROSSHAIR_MARGIN;
-  if (rectX + TEXT_RECT_WIDTH + EDGE_MARGIN > this.appWidth_) {
+  // Put element in correct parent
+  if (this.ownElement_.parentNode !== intoElement) {
+    this.moveToParent_(intoElement);
+  }
+
+  // Record any new/updated properties
+  $.extend(this.props_, props);
+
+  var rectX = this.props_.x + CROSSHAIR_MARGIN;
+  if (rectX + TEXT_RECT_WIDTH + EDGE_MARGIN > this.props_.appWidth) {
     // This response gives a smooth horizontal reposition when near the edge
-    rectX -= (rectX + TEXT_RECT_WIDTH + EDGE_MARGIN - this.appWidth_);
+    rectX -= (rectX + TEXT_RECT_WIDTH + EDGE_MARGIN - this.props_.appWidth);
     // This response snaps the text to the other side when near the edge
-    //rectX = this.props.x - CROSSHAIR_MARGIN - TEXT_RECT_WIDTH;
+    //rectX = this.props_.x - CROSSHAIR_MARGIN - TEXT_RECT_WIDTH;
   }
 
-  var rectY = this.y_ + CROSSHAIR_MARGIN;
-  if (rectY + TEXT_RECT_HEIGHT + EDGE_MARGIN > this.appHeight_) {
-    rectY = this.y_ - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
+  var rectY = this.props_.y + CROSSHAIR_MARGIN;
+  if (rectY + TEXT_RECT_HEIGHT + EDGE_MARGIN > this.props_.appHeight) {
+    rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
   }
 
   var textX = rectX + TEXT_RECT_WIDTH / 2;
   var textY = rectY + TEXT_RECT_HEIGHT + TEXT_Y_OFFSET;
 
-  this.vGuide_.setAttribute('x1', this.x_);
-  this.vGuide_.setAttribute('y1', this.y_ - CROSSHAIR_MARGIN);
-  this.vGuide_.setAttribute('x2', this.x_);
+  this.vGuide_.setAttribute('x1', this.props_.x);
+  this.vGuide_.setAttribute('y1', this.props_.y - CROSSHAIR_MARGIN);
+  this.vGuide_.setAttribute('x2', this.props_.x);
   this.vGuide_.setAttribute('y2', 0);
 
-
-  this.hGuide_.setAttribute('x1', this.x_ - CROSSHAIR_MARGIN);
-  this.hGuide_.setAttribute('y1', this.y_);
+  this.hGuide_.setAttribute('x1', this.props_.x - CROSSHAIR_MARGIN);
+  this.hGuide_.setAttribute('y1', this.props_.y);
   this.hGuide_.setAttribute('x2', 0);
-  this.hGuide_.setAttribute('y2', this.y_);
-
+  this.hGuide_.setAttribute('y2', this.props_.y);
 
   this.bubble_.setAttribute('x', rectX);
   this.bubble_.setAttribute('y', rectY);
@@ -111,7 +107,7 @@ CrosshairOverlay.prototype.unrender = function () {
   }
 };
 
-CrosshairOverlay.prototype.create_ = function (intoElement) {
+CrosshairOverlay.prototype.create_ = function () {
   this.ownElement_ = document.createElementNS(SVG_NS, 'g');
   this.ownElement_.setAttribute('class', 'crosshair-overlay');
 
@@ -126,22 +122,23 @@ CrosshairOverlay.prototype.create_ = function (intoElement) {
 
   this.text_ = document.createElementNS(SVG_NS, 'text');
   this.ownElement_.appendChild(this.text_);
+};
 
-  intoElement.appendChild(this.ownElement_);
+CrosshairOverlay.prototype.moveToParent_ = function (newParent) {
+  if (this.ownElement_.parentNode) {
+    this.ownElement_.parentNode.removeChild(this.ownElement_);
+  }
+  if (newParent) {
+    newParent.appendChild(this.ownElement_);
+  }
 };
 
 CrosshairOverlay.prototype.destroy_ = function () {
-  if (this.ownElement_ && this.ownElement_.parentNode) {
-    this.ownElement_.parentNode.removeChild(this.ownElement_);
-  }
-  this.text_ = null;
-  this.bubble_ = null;
-  this.hGuide_ = null;
-  this.vGuide_ = null;
+  this.moveToParent_(null);
   this.ownElement_ = null;
 };
 
 CrosshairOverlay.prototype.getCoordinateText = function () {
-  return "x: " + Math.floor(this.x_) +
-      ", y: " + Math.floor(this.y_);
+  return "x: " + Math.floor(this.props_.x) +
+      ", y: " + Math.floor(this.props_.y);
 };

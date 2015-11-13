@@ -85,26 +85,11 @@ VisualizationOverlay.prototype.render = function (intoElement, props) {
   }
 };
 
-VisualizationOverlay.prototype.unrender = function () {
-  if (this.ownElement_) {
-    this.destroy_();
-  }
-};
-
 VisualizationOverlay.prototype.create_ = function () {
   this.ownElement_ = document.createElementNS(SVG_NS, 'g');
 
   this.mouseMoveListener_ = this.onSvgMouseMove_.bind(this);
   document.addEventListener('mousemove', this.mouseMoveListener_);
-};
-
-VisualizationOverlay.prototype.destroy_ = function () {
-  document.removeEventListener('mousemove', this.mouseMoveListener_);
-  this.mouseMoveListener_ = null;
-
-  if (this.ownElement_ && this.ownElement_.parentNode) {
-    this.ownElement_.parentNode.removeChild(this.ownElement_);
-  }
 };
 
 VisualizationOverlay.prototype.moveToParent_ = function (newParent) {
