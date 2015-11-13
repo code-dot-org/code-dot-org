@@ -65,10 +65,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "console.log(findMin(1,2));\r\nconsole.log(findMin(2,1));\r\nconsole.log(findMin(100,188));\r\n\r\nfunction findMin(num1, num2){\r\n\r\n}",
-    "encrypted_examples": [
-
-    ]
+    "start_blocks": "console.log(findMin(1,2));\r\nconsole.log(findMin(2,1));\r\nconsole.log(findMin(100,188));\r\n\r\nfunction findMin(num1, num2){\r\n\r\n}"
   }
 }]]></config>
   <blocks/>
