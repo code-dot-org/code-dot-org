@@ -13,6 +13,7 @@ var GameController = require('./game/GameController');
 var dom = require('../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
+var MusicController = require('../MusicController');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -77,6 +78,16 @@ var interfaceImages = {
   ]
 };
 
+var MUSIC_METADATA = [
+  {volume: 1, hasOgg: true, name: "vignette1"},
+  {volume: 1, hasOgg: true, name: "vignette2-quiet"},
+  {volume: 1, hasOgg: true, name: "vignette3"},
+  {volume: 1, hasOgg: true, name: "vignette4-intro"},
+  {volume: 1, hasOgg: true, name: "vignette5-shortpiano"},
+  {volume: 1, hasOgg: true, name: "vignette7-funky-chirps-short"},
+  {volume: 1, hasOgg: true, name: "vignette8-free-play"},
+];
+
 var CHARACTER_STEVE = 'Steve';
 var CHARACTER_ALEX = 'Alex';
 var DEFAULT_CHARACTER = CHARACTER_STEVE;
@@ -126,6 +137,10 @@ Craft.init = function (config) {
 
   if (config.level.showPopupOnLoad) {
     config.level.afterVideoBeforeInstructionsFn = (showInstructions) => {
+      var event = document.createEvent('Event');
+      event.initEvent('instructionsShown', true, true);
+      document.dispatchEvent(event);
+
       if (config.level.showPopupOnLoad === 'playerSelection') {
         Craft.showPlayerSelectionPopup(function (selectedPlayer) {
           Craft.clearPlayerState();
@@ -160,6 +175,44 @@ Craft.init = function (config) {
 
   Craft.level = config.level;
   Craft.skin = config.skin;
+
+  var levelTracks = [];
+  if (Craft.level.songs && MUSIC_METADATA) {
+    levelTracks = MUSIC_METADATA.filter(function(trackMetadata) {
+      return Craft.level.songs.indexOf(trackMetadata.name) !== -1;
+    });
+  }
+
+  Craft.musicController = new MusicController(
+      studioApp.cdoSounds,
+      function (filename) {
+        return config.skin.assetUrl(`music/${filename}`);
+      },
+      levelTracks,
+      levelTracks.length > 1 ? 7500 : null
+  );
+  if (studioApp.cdoSounds && !studioApp.cdoSounds.isAudioUnlocked()) {
+    // Would use addClickTouchEvent, but iOS9 does not let you unlock audio
+    // on touchstart, only on touchend.
+    var removeEvent = dom.addMouseUpTouchEvent(document, function () {
+      studioApp.cdoSounds.unlockAudio();
+      removeEvent();
+    });
+  }
+
+  // Play music when the instructions are shown
+  var playOnce = function () {
+    if (studioApp.cdoSounds && studioApp.cdoSounds.isAudioUnlocked()) {
+      document.removeEventListener('instructionsShown', playOnce);
+      document.removeEventListener('instructionsHidden', playOnce);
+
+      var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
+      var songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
+      Craft.musicController.play(songToPlayFirst);
+    }
+  };
+  document.addEventListener('instructionsShown', playOnce);
+  document.addEventListener('instructionsHidden', playOnce);
 
   var character = characters[Craft.getCurrentCharacter()];
   config.skin.staticAvatar = character.staticAvatar;
@@ -228,6 +281,9 @@ Craft.init = function (config) {
       if (!config.level.showPopupOnLoad) {
         Craft.initializeAppLevel(config.level);
       }
+
+      // preload music after essential game initialization assets kicked off loading
+      Craft.musicController.preload();
     },
     twitter: {
       text: "Share on Twitter",

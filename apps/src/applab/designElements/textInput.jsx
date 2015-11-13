@@ -151,5 +151,21 @@ module.exports = {
     element.style.backgroundColor = '';
 
     return element;
+  },
+
+  onDeserialize: function(element) {
+    $(element).on('mousedown', function(e) {
+      if (!Applab.isRunning()) {
+        // Disable clicking into text input unless running
+        e.preventDefault();
+      }
+    });
+
+    // swallow keydown unless we're running
+    $(element).on('keydown', function (e) {
+      if (!Applab.isRunning()) {
+        e.preventDefault();
+      }
+    });
   }
 };
