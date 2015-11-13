@@ -505,6 +505,19 @@ function loadHoc2015(skin, assetUrl) {
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
+  skin.instructions2ImageSubstitutions = {
+/*scrap_metal
+bandit
+rebel_pilot
+stormtrooper
+puffer_pig
+mouse_droid
+tauntaun
+mynock*/
+    "puffer_pig": skin.assetUrl('instruction_puffer_pig.png'),
+    "mynock": skin.assetUrl('instruction_mynock.png'),
+  };
+
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
   skin.ProjectileClassNames = [

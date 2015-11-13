@@ -367,7 +367,14 @@ StudioApp.prototype.init = function(config) {
     $(promptDiv).text(config.level.instructions);
   }
   if (config.level.instructions2) {
-    $(prompt2Div).text(config.level.instructions2);
+    var instructions2Html = config.level.instructions2;
+    for (var prop in config.skin.instructions2ImageSubstitutions) {
+      var value = config.skin.instructions2ImageSubstitutions[prop];
+      var substitutionHtml = '<img src="' + value + '" class="instructionsImage"/>';
+      instructions2Html.replace('[' + prop + ']', substitutionHtml);
+    }
+
+    $(prompt2Div).html(config.level.instructions2);
     $(prompt2Div).show();
   }
 
@@ -985,7 +992,7 @@ function resizePinnedBelowVisualizationArea() {
   if (designToggleRow) {
     top += $(designToggleRow).outerHeight(true);
   }
-  
+
   if (visualization) {
     top += $(visualization).outerHeight(true);
   }
