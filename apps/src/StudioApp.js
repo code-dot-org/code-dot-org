@@ -1533,12 +1533,12 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
       document.getElementById('visualizationColumn').className = 'wireframeShare';
 
-      function wireframeSendToPhoneClick() {
+      var wireframeSendToPhoneClick = function() {
         $(this).html(React.renderToStaticMarkup(React.createElement(dashboard.SendToPhone)))
             .off('click', wireframeSendToPhoneClick);
         dashboard.initSendToPhone('#wireframeSendToPhone');
         $('#send-to-phone').show();
-      }
+      };
 
       var wireframeSendToPhone = $('<div id="wireframeSendToPhone">');
       wireframeSendToPhone.html('<i class="fa fa-mobile"></i> See this app on your phone');
