@@ -76,11 +76,38 @@ var MusicController = function (audioPlayer, assetUrl, trackDefinitions,
   /** @private {string} Name of track to play on load */
   this.playOnLoad_ = null;
 
+
+  /** @private {number} */
   this.loopRandomWithDelay_ = loopRandomWithDelay;
+
+  /**
+   * @private {boolean} whether we stopped playing music due to video being
+   *          shown
+   */
+  this.wasPlayingWhenVideoShown_ = false;
+
+  /** @private {number} setTimeout callback identifier for un-binding repeat */
+  this.betweenTrackTimeout_ = null;
 
   // If the video player gets pulled up, make sure we stop the music.
   document.addEventListener('videoShown', function () {
-    this.fadeOut();
+    if (this.nowPlaying_ || this.betweenTrackTimeout_) {
+      this.wasPlayingWhenVideoShown_ = true;
+
+      if (this.betweenTrackTimeout_) {
+        window.clearTimeout(this.betweenTrackTimeout_);
+        this.betweenTrackTimeout_ = null;
+      }
+      this.fadeOut();
+    }
+  }.bind(this));
+
+  // If the video player gets closed, make sure we re-start the music.
+  document.addEventListener('videoHidden', function () {
+    if (this.wasPlayingWhenVideoShown_ && this.loopRandomWithDelay_) {
+      this.play();
+    }
+    this.wasPlayingWhenVideoShown_ = false;
   }.bind(this));
 
   debug('constructed');
@@ -200,7 +227,7 @@ MusicController.prototype.fadeOut = function (durationSeconds) {
 
   // Stop the audio after the fade.
   // Add a small margin due to poor fade granularity on fallback player.
-  setTimeout(function () {
+  window.setTimeout(function () {
     this.stop();
   }.bind(this), 1000 * durationSeconds + 100);
 };
@@ -216,7 +243,8 @@ MusicController.prototype.whenMusicStopped_ = function (musicName) {
     this.nowPlaying_ = null;
   }
   if (this.loopRandomWithDelay_) {
-    setTimeout(function () {
+    this.betweenTrackTimeout_ = window.setTimeout(function () {
+      this.betweenTrackTimeout_ = null;
       this.play();
     }.bind(this), this.loopRandomWithDelay_);
   }
