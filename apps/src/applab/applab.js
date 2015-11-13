@@ -906,7 +906,6 @@ Applab.init = function(config) {
 
   window.addEventListener('resize', Applab.renderVisualizationOverlay);
 
-
   var finishButton = document.getElementById('finishButton');
   if (finishButton) {
     dom.addClickTouchEvent(finishButton, Applab.onPuzzleFinish);
@@ -1189,9 +1188,8 @@ Applab.reset = function(first) {
 };
 
 /**
- * Manually re-render React-driven visualization SVG overlay.
+ * Manually re-render visualization SVG overlay.
  * Should call whenever its state/props would change.
- * Maybe this can go away if we roll it under other React stuff.
  */
 Applab.renderVisualizationOverlay = function() {
   var divApplab = document.getElementById('divApplab');
