@@ -1539,15 +1539,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         $('#send-to-phone').show();
       }
 
-      var wireframeSendToPhone = $('<div>')
-          .css('position', 'absolute')
-          .css('bottom', 10).css('right', 10)
-          .css('text-align', 'right')
-          .css('font', '12pt "Gotham 5r", sans-serif')
-          .css('color', '#8F9499')
-          .css('text-shadow', '#000 -1px -1px 0');
-      wireframeSendToPhone.html('<i class="fa fa-mobile" ' +
-          'style="font-size: 1.5em"></i> See this app on your phone');
+      var wireframeSendToPhone = $('<div id="wireframeSendToPhone">');
+      wireframeSendToPhone.html('<i class="fa fa-mobile"></i> See this app on your phone');
       wireframeSendToPhone.click(wireframeSendToPhoneClick);
       $('body').append(wireframeSendToPhone);
     }
