@@ -57,7 +57,8 @@ function debug(msg) {
  *        completed, will play a random track after given duration (in ms).
  * @constructor
  */
-var MusicController = function (audioPlayer, assetUrl, trackDefinitions, loopRandomWithDelay) {
+var MusicController = function (audioPlayer, assetUrl, trackDefinitions,
+    loopRandomWithDelay) {
   /** @private {AudioPlayer} */
   this.audioPlayer_ = audioPlayer;
 
