@@ -19,7 +19,7 @@ var _ = utils.getLodash();
 var debugLogging = false;
 function debug(msg) {
   if (debugLogging && console && console.info) {
-    console.info('MusicController: ' + msg);
+    console.info((new Date()).getTime() + ': MusicController: ' + msg);
   }
 }
 
@@ -91,6 +91,7 @@ var MusicController = function (audioPlayer, assetUrl, trackDefinitions,
 
   // If the video player gets pulled up, make sure we stop the music.
   document.addEventListener('videoShown', function () {
+    debug("video shown");
     if (this.nowPlaying_ || this.betweenTrackTimeout_) {
       this.wasPlayingWhenVideoShown_ = true;
 
@@ -104,7 +105,9 @@ var MusicController = function (audioPlayer, assetUrl, trackDefinitions,
 
   // If the video player gets closed, make sure we re-start the music.
   document.addEventListener('videoHidden', function () {
-    if (this.wasPlayingWhenVideoShown_ && this.loopRandomWithDelay_) {
+    if (this.wasPlayingWhenVideoShown_ &&
+        this.loopRandomWithDelay_ &&
+        !this.nowPlaying_) {
       this.play();
     }
     this.wasPlayingWhenVideoShown_ = false;
@@ -245,7 +248,9 @@ MusicController.prototype.whenMusicStopped_ = function (musicName) {
   if (this.loopRandomWithDelay_ && !this.wasPlayingWhenVideoShown_) {
     this.betweenTrackTimeout_ = window.setTimeout(function () {
       this.betweenTrackTimeout_ = null;
-      this.play();
+      if (!this.nowPlaying_ && !this.wasPlayingWhenVideoShown_) {
+        this.play();
+      }
     }.bind(this), this.loopRandomWithDelay_);
   }
 };
