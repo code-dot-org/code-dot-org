@@ -254,6 +254,9 @@ div#visualizationResizeBar {
   left: 0;
   z-index: 2;
   pointer-events: none;
+  // This is a hack that enables pointer-events: none on this absolutely-
+  // positioned SVG element in IE9.
+  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius=0);
 }
 
 .crosshair-overlay {
