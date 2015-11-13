@@ -514,8 +514,8 @@ puffer_pig
 mouse_droid
 tauntaun
 mynock*/
-    "puffer_pig": skin.assetUrl('instruction_puffer_pig.png'),
-    "mynock": skin.assetUrl('instruction_mynock.png'),
+    "puffer_pig": skin.assetUrl('instructions_puffer_pig.png'),
+    "mynock": skin.assetUrl('instructions_mynock.png'),
   };
 
   // NOTE: all class names should be unique.  eventhandler naming won't work

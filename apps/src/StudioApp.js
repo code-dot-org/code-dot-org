@@ -367,14 +367,8 @@ StudioApp.prototype.init = function(config) {
     $(promptDiv).text(config.level.instructions);
   }
   if (config.level.instructions2) {
-    var instructions2Html = config.level.instructions2;
-    for (var prop in config.skin.instructions2ImageSubstitutions) {
-      var value = config.skin.instructions2ImageSubstitutions[prop];
-      var substitutionHtml = '<img src="' + value + '" class="instructionsImage"/>';
-      instructions2Html.replace('[' + prop + ']', substitutionHtml);
-    }
-
-    $(prompt2Div).html(config.level.instructions2);
+    var instructions2Html = this.substituteInstructionImages(config.level.instructions2);
+    $(prompt2Div).html(instructions2Html);
     $(prompt2Div).show();
   }
 
@@ -494,6 +488,16 @@ StudioApp.prototype.init = function(config) {
       return true;
     }.bind(this));
   }
+};
+
+StudioApp.prototype.substituteInstructionImages = function(htmlText) {
+  for (var prop in this.skin.instructions2ImageSubstitutions) {
+    var value = this.skin.instructions2ImageSubstitutions[prop];
+    var substitutionHtml = '<img src="' + value + '" class="instructionsImage"/>';
+    htmlText = htmlText.replace('[' + prop + ']', substitutionHtml);
+  }
+
+  return htmlText;
 };
 
 StudioApp.prototype.getCode = function () {
@@ -864,7 +868,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
     puzzleTitle: puzzleTitle,
     instructions: level.instructions,
-    instructions2: level.instructions2,
+    instructions2: this.substituteInstructionImages(level.instructions2),
     renderedMarkdown: renderedMarkdown,
     markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
     aniGifURL: level.aniGifURL
@@ -1424,6 +1428,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
                         config.onInitialize.bind(config) : function () {};
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
+  this.skin = config.skin;
   this.showInstructions = this.showInstructions_.bind(this, config.level);
 };
 
