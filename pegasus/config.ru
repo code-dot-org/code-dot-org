@@ -20,7 +20,7 @@ if rack_env?(:development)
     HttpCache.config(rack_env)[:pegasus]
 
   require 'rack/cache'
-  use Rack::Cache
+  use Rack::Cache, ignore_headers: []
 
   use Rack::Whitelist::Upstream,
     HttpCache.config(rack_env)[:pegasus]

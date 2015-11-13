@@ -29,11 +29,12 @@ module Dashboard
         HttpCache.config(rack_env)[:dashboard]
 
       require 'rack/cache'
-      config.middleware.insert_before ActionDispatch::Cookies, Rack::Cache
+      config.middleware.insert_before ActionDispatch::Cookies, Rack::Cache, ignore_headers: []
 
       config.middleware.insert_after Rack::Cache, Rack::Whitelist::Upstream,
         HttpCache.config(rack_env)[:dashboard]
     end
+
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
     config.middleware.insert_after VarnishEnvironment, FilesApi
     config.middleware.insert_after FilesApi, ChannelsApi

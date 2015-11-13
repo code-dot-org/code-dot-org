@@ -29,10 +29,10 @@ group :development do
   gem 'shotgun'
   gem 'thin', '~> 1.6.2'
   gem 'web-console', '~> 2.0'
-  gem 'rack-cache'
 end
 
 group :development, :test do
+  gem 'rack-cache'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
   gem 'konacha'  # Mocha + Chai JS testing in Rails
