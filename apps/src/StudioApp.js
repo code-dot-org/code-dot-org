@@ -364,7 +364,8 @@ StudioApp.prototype.init = function(config) {
   var promptDiv = document.getElementById('prompt');
   var prompt2Div = document.getElementById('prompt2');
   if (config.level.instructions) {
-    $(promptDiv).text(config.level.instructions);
+    var instructionsHtml = this.substituteInstructionImages(config.level.instructions);
+    $(promptDiv).html(instructionsHtml);
   }
   if (config.level.instructions2) {
     var instructions2Html = this.substituteInstructionImages(config.level.instructions2);
@@ -867,7 +868,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 
   instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
     puzzleTitle: puzzleTitle,
-    instructions: level.instructions,
+    instructions: this.substituteInstructionImages(level.instructions),
     instructions2: this.substituteInstructionImages(level.instructions2),
     renderedMarkdown: renderedMarkdown,
     markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
