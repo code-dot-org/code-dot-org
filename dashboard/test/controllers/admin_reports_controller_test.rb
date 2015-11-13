@@ -29,8 +29,8 @@ class AdminReportsControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :admin_progress
   generate_admin_only_tests_for :admin_stats
   generate_admin_only_tests_for :funometer
-  generate_admin_only_tests_for :funometer_by_script
-  generate_admin_only_tests_for :funometer_by_script_level
+  generate_admin_only_tests_for :funometer_by_script, {script: 1}
+  generate_admin_only_tests_for :funometer_by_script_level, {script:1, level:2}
 
   test 'should get admin progress page' do
     get :admin_progress
