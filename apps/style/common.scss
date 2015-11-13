@@ -828,8 +828,26 @@ input[type="radio"] {
   color: $charcoal;
 }
 
-.instructionsImage {
-  height: 18px;
+.modal-content {
+  .instructionsImage {
+    height: 35px;
+  }
+  .instructions2 {
+    .instructionsImage {
+      height: 24px;
+    }
+  }
+}
+
+#prompt-table {
+  .instructionsImage {
+    height: 35px;
+  }
+  #prompt2 {
+    .instructionsImage {
+      height: 20px;
+    }
+  }
 }
 
 #ani-gif-preview-wrapper {
