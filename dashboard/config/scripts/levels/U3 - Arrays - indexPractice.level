@@ -45,10 +45,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "var myNumbers = [3, 2, 5, 7, 4];\r\nconsole.log(myNumbers[1]);",
-    "encrypted_examples": [
-
-    ]
+    "start_blocks": "var myNumbers = [3, 2, 5, 7, 4];\r\nconsole.log(myNumbers[1]);"
   }
 }]]></config>
   <blocks/>
