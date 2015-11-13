@@ -52,8 +52,8 @@
         <block type="craft_placeBlockAhead">
           <title name="TYPE">cobblestone</title>
         </block>
-        <block type="controls_repeat">
-          <title name="TIMES">2</title>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">2</title>
         </block>
       </xml>
     </toolbox_blocks>
