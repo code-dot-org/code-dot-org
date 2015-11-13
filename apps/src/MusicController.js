@@ -53,7 +53,7 @@ function debug(msg) {
  * @param {MusicTrackDefinition[]} [trackDefinitions] - List of music assets and
  *        general info about how they should be played. Can be omitted or empty
  *        if no music should be played.
- * @param {Number} [loopWithDelay] - if specified, after a song is
+ * @param {Number} [loopRandomWithDelay] - if specified, after a song is
  *        completed, will play a random track after given duration (in ms).
  * @constructor
  */
