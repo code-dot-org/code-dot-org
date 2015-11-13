@@ -112,7 +112,7 @@ VisualizationOverlay.prototype.moveToParent_ = function (newParent) {
 };
 
 VisualizationOverlay.prototype.onSvgMouseMove_ = function (event) {
-  if (!this.ownElement_ || !this.mousePos_) {
+  if (!(this.ownElement_ && this.mousePos_ && this.screenSpaceToAppSpaceTransform_)) {
     return;
   }
 
