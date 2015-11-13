@@ -16,7 +16,7 @@
 var utils = require('./utils');
 var _ = utils.getLodash();
 
-var debugLogging = false;
+var debugLogging = true;
 function debug(msg) {
   if (debugLogging && console && console.info) {
     console.info('MusicController: ' + msg);
@@ -242,7 +242,7 @@ MusicController.prototype.whenMusicStopped_ = function (musicName) {
   if (this.nowPlaying_ === musicName) {
     this.nowPlaying_ = null;
   }
-  if (this.loopRandomWithDelay_) {
+  if (this.loopRandomWithDelay_ && !this.wasPlayingWhenVideoShown_) {
     this.betweenTrackTimeout_ = window.setTimeout(function () {
       this.betweenTrackTimeout_ = null;
       this.play();
