@@ -16,7 +16,7 @@
 var utils = require('./utils');
 var _ = utils.getLodash();
 
-var debugLogging = true;
+var debugLogging = false;
 function debug(msg) {
   if (debugLogging && console && console.info) {
     console.info('MusicController: ' + msg);
@@ -266,5 +266,6 @@ MusicController.prototype.getTrackByName_ = function (name) {
  * @private
  */
 MusicController.prototype.getRandomTrack_ = function () {
-  return this.trackList_[Math.floor(Math.random(this.trackList_.length))];
+  var trackIndex = Math.floor(Math.random() * this.trackList_.length);
+  return this.trackList_[trackIndex];
 };
