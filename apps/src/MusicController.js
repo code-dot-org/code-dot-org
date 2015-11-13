@@ -13,7 +13,7 @@
  */
 'use strict';
 
-var utils = require('../utils');
+var utils = require('./utils');
 var _ = utils.getLodash();
 
 var debugLogging = false;
@@ -45,7 +45,7 @@ function debug(msg) {
 
 /**
  * A helper class that handles loading, choosing, playing and stopping
- * background music for Playlab.
+ * background music for certain studio apps (e.g. playlab, craft).
  *
  * @param {AudioPlayer} audioPlayer - Reference to the Sounds object.
  * @param {function} assetUrl - Function for generating paths to static assets
@@ -53,9 +53,11 @@ function debug(msg) {
  * @param {MusicTrackDefinition[]} [trackDefinitions] - List of music assets and
  *        general info about how they should be played. Can be omitted or empty
  *        if no music should be played.
+ * @param {Number} [loopWithDelay] - if specified, after a song is
+ *        completed, will play a random track after given duration (in ms).
  * @constructor
  */
-var MusicController = function (audioPlayer, assetUrl, trackDefinitions) {
+var MusicController = function (audioPlayer, assetUrl, trackDefinitions, loopRandomWithDelay) {
   /** @private {AudioPlayer} */
   this.audioPlayer_ = audioPlayer;
 
@@ -70,6 +72,8 @@ var MusicController = function (audioPlayer, assetUrl, trackDefinitions) {
 
   /** @private {string} Name of track to play on load */
   this.playOnLoad_ = null;
+
+  this.loopRandomWithDelay_ = loopRandomWithDelay;
 
   // If the video player gets pulled up, make sure we stop the music.
   document.addEventListener('videoShown', function () {
@@ -89,9 +93,16 @@ module.exports = MusicController;
 function buildTrackData(trackDefinitions, assetUrl) {
   trackDefinitions = utils.valueOr(trackDefinitions, []);
   return trackDefinitions.map(function (trackDef) {
+
+    var assetUrls = [];
+    assetUrls.push(assetUrl(trackDef.name + '.mp3'));
+    if (trackDef.hasOgg) {
+      assetUrls.push(assetUrl(trackDef.name + '.ogg'));
+    }
+
     return {
       name: trackDef.name,
-      assetUrls: [ assetUrl(trackDef.name + '.mp3') ],
+      assetUrls: assetUrls,
       volume: utils.valueOr(trackDef.volume, 1),
       sound: null,
       isLoaded: false
@@ -200,6 +211,11 @@ MusicController.prototype.fadeOut = function (durationSeconds) {
 MusicController.prototype.whenMusicStopped_ = function (musicName) {
   if (this.nowPlaying_ === musicName) {
     this.nowPlaying_ = null;
+  }
+  if (this.loopRandomWithDelay_) {
+    setTimeout(function () {
+      this.play();
+    }.bind(this), this.loopRandomWithDelay_);
   }
 };
 
