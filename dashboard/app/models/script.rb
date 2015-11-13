@@ -43,6 +43,7 @@ class Script < ActiveRecord::Base
   JIGSAW_NAME = 'jigsaw'
   HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
   STARWARS_NAME = 'starwars'
+  MINECRAFT_NAME = 'mc'
   STARWARS_BLOCKS_NAME = 'starwarsblocks'
   FROZEN_NAME = 'frozen'
   PLAYLAB_NAME = 'playlab'
@@ -66,6 +67,10 @@ class Script < ActiveRecord::Base
 
   def Script.starwars_script
     Script.get_from_cache(Script::STARWARS_NAME)
+  end
+
+  def Script.minecraft_script
+    Script.get_from_cache(Script::MINECRAFT_NAME)
   end
 
   def Script.starwars_blocks_script
@@ -213,7 +218,8 @@ class Script < ActiveRecord::Base
 
   def hoc?
     # Note that now multiple scripts can be an 'hour of code' script.
-    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME, STARWARS_NAME, STARWARS_BLOCKS_NAME].include? self.name
+    # If adding a script here, you must also update the Data_HocTutorials gsheet so the end of script API works
+    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME, STARWARS_NAME, STARWARS_BLOCKS_NAME, MINECRAFT_NAME].include? self.name
   end
 
   def flappy?

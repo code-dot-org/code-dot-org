@@ -167,10 +167,7 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Play with the image scroller. Press the left and right arrows to progress through the images.",
-    "markdown_instructions": "# Image Scroller Demo\r\n\r\nTry out the updated scroller. \r\n\r\n1. You can now scroll through a collection of images.  \r\n2. There is a new way of interacting with the app. **Press the left and right arrow keys** to scroll through the images. (**Note:** Make sure to click on the screen first)\r\n    ",
-    "encrypted_examples": [
-
-    ]
+    "markdown_instructions": "# Image Scroller Demo\r\n\r\nTry out the updated scroller. \r\n\r\n1. You can now scroll through a collection of images.  \r\n2. There is a new way of interacting with the app. **Press the left and right arrow keys** to scroll through the images. (**Note:** Make sure to click on the screen first)\r\n    "
   }
 }]]></config>
   <blocks/>

@@ -12,7 +12,6 @@
 var assert = require('./util/testUtils').assert;
 var ChartApi = require('@cdo/apps/applab/ChartApi');
 var GoogleChart = require('@cdo/apps/applab/GoogleChart');
-var Promise = require('es6-promise').Promise;
 
 var fakeDiv = document.createElement('div');
 var fakeImg = document.createElement('img');
