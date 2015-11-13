@@ -24,7 +24,10 @@
   #divApplab div, #designModeViz div, .draggingParent div {
     overflow: hidden; }
   #divApplab div[contenteditable=true], #designModeViz div[contenteditable=true], .draggingParent div[contenteditable=true] {
-    overflow: auto; }
+    overflow: auto;
+    word-wrap: break-word;
+    /* needed by Firefox */
+    -moz-user-select: text; }
   #divApplab button, #designModeViz button, .draggingParent button {
     padding: 7px 12px;
     margin: 2px;
@@ -65,7 +68,8 @@
       border: 0 !important; }
   #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div[contenteditable=true], #designModeViz.appModern input[type=text], #designModeViz.appModern input:not([type]), #designModeViz.appModern div[contenteditable=true], .draggingParent input[type=text], .draggingParent input:not([type]), .draggingParent div[contenteditable=true] {
     border: 1px solid #999;
-    padding: 10px; }
+    padding: 5px;
+    /* padding clips text in text inputs in Firefox */ }
   #divApplab.appModern select, #designModeViz.appModern select, .draggingParent select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -270,6 +274,24 @@ div#visualizationResizeBar {
   top: 0px;
   left: 0px;
   z-index: -1; }
+
+/* When not running, show default arrow cursor for all UI elements
+   so that they do not look active. */
+#divApplab.notRunning button, #divApplab.notRunning label, #divApplab.notRunning select, #divApplab.notRunning input, #divApplab.notRunning img, #divApplab.notRunning div.chart, #divApplab.notRunning canvas, #divApplab.notRunning div[contenteditable=true] {
+  cursor: default; }
+
+/* In design mode, show grab/grabbing cursor for all UI elements
+ * so that they look draggable. */
+#designModeViz button, #designModeViz label, #designModeViz select, #designModeViz input, #designModeViz img, #designModeViz div.chart, #designModeViz canvas, #designModeViz div[contenteditable=true] {
+  cursor: move;
+  /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab; }
+  #designModeViz button:active, #designModeViz label:active, #designModeViz select:active, #designModeViz input:active, #designModeViz img:active, #designModeViz div.chart:active, #designModeViz canvas:active, #designModeViz div[contenteditable=true]:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing; }
 
 #visualizationResizeBar {
   margin-left: 2px;
