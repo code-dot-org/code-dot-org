@@ -1,11 +1,9 @@
-//= require ./abuse_error
-
 /* global React */
 
 window.dashboard = window.dashboard || {};
 
 /**
- * The body of our share project dialog.
+ * Send-to-phone component used by share project dialog.
  */
 window.dashboard.SendToPhone = (function (React) {
   return React.createClass({

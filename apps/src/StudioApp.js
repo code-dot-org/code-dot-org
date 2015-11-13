@@ -1536,6 +1536,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       function wireframeSendToPhoneClick() {
         $(this).html(React.renderToStaticMarkup(React.createElement(dashboard.SendToPhone)))
             .off('click', wireframeSendToPhoneClick);
+        dashboard.initSendToPhone('#wireframeSendToPhone');
         $('#send-to-phone').show();
       }
 

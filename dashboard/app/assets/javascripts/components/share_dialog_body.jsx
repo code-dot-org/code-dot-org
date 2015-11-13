@@ -92,7 +92,7 @@ window.dashboard.ShareDialogBody = (function (React) {
                 <i className="fa fa-twitter"></i>
               </a>
               <a id="sharing-phone" href="" style={horzPadding}>
-                <i className="fa fa-mobile-phone" style={{fontSize: 28}}></i>
+                <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
               </a>
             </div>
             <window.dashboard.SendToPhone/>
