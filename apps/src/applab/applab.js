@@ -1074,11 +1074,14 @@ Applab.clearEventHandlersKillTickLoop = function() {
   }
 };
 
+/**
+ * @returns {boolean}
+ */
 Applab.isRunning = function () {
   // We are _always_ running in share mode.
   // TODO: (bbuchanan) Needs a better condition. Tracked in bug:
   //      https://www.pivotaltracker.com/story/show/105022102
-  return $('#resetButton').is(':visible') || studioApp.share;
+  return !!($('#resetButton').is(':visible') || studioApp.share);
 };
 
 /**
@@ -1131,6 +1134,9 @@ Applab.reset = function(first) {
   // Clone and replace divApplab (this removes all attached event listeners):
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
+
+  $('#divApplab').toggleClass('running', Applab.isRunning());
+  $('#divApplab').toggleClass('notRunning', !Applab.isRunning());
 
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
   Applab.toggleDivApplab(!isDesigning);
