@@ -1,0 +1,25 @@
+name 'U3 - Arrays and Loops - Explain Functions with Returns'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Functions with Return Values
+
+On the last level you wrote your first function that returned a value! Let's learn a little bit more about how functions with returns work. It's often the case that as part of generalizing behavior, you want a function to compute something and give a value back rather than just altering the the state of the program. You have used many functions that return values: randomNumber(), includes(), promptNum(), getText(), toUpperCase(), toLowerCase(). etc. 
+
+A function that returns a value is sort of like an expression that evaluates to some value in that, you often want to store the result in a variable, or use the expression directly within some other code. So functions that return values are useful because you can use them in place of another number. 
+
+You have seen this before:  
+
+![](https://images.code.org/77ef2afba0d8030dfb3b4253dd8a6314-image-1447434530061.05.32 PM.png)
+
+We can also write this:
+
+![](https://images.code.org/3a1844ffdae4260f94533d32790c2305-image-1447434532555.05.52 PM.png)
+
+Rules For Writing Functions that Return Values:
+
+* A function can **only return a single value.**
+* You **must use the word `return`** in the code, it is a command that makes the computer return control back to the place in the code where the function was called from in the first place. **Note:** All of the functions we've written so far have an implied return statement - when the execution hits the last curly brace it returns back to where it left off
+* **When the function returns you can also send a value along with it,** when you did this you say the function returns a value
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
