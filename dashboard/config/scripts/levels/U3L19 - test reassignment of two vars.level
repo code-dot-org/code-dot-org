@@ -43,9 +43,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "encrypted_examples": [
-
-    ]
+    "video_key": "csp_applab_variables_2",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

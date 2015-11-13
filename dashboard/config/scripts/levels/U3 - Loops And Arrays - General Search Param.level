@@ -134,8 +134,8 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Create a function that takes a list parameter and prints if the list contains a 5. (Click to see full instructions)",
-    "markdown_instructions": "# General Search\r\n\r\nWe might not always want to search for the number 5. In order to make a general function for searching we want to be able to search for anything.  We can do this by making the search value a parameter. So add a parameter that is the value you want to look for in the list.  Write search(list, val) so it displays true or false in the console if the list contains val\r\n\r\nadd param...write: function search(list, val) that displays true/false to the console\r\n\r\n# Do This\r\n\r\n* Rename the function **search**. \r\n\r\n* Add a second param for the item to search for. \r\n\r\n* **Move the code that checks for a 5 inside the the function.** **Note:** You must move the boolean variable inside the function as well or it won't reset each time you call the function!\r\n\r\n\r\n| justFive | noFive | testArray | bigArray |\r\n| ---| --- | --- | --- |\r\n|<img src=\"https://images.code.org/b13b5ad2803f2b3f12772eb7eeed422d-image-1447353059345.30.42 PM.png\" style=\"width: 150px\">|<img src=\"https://images.code.org/14539578632587660282450dce952190-image-1447356095684.19.45 PM.png\" style=\"width: 150px\"> |<img src=\"https://images.code.org/b13b5ad2803f2b3f12772eb7eeed422d-image-1447353059345.30.42 PM.png\" style=\"width: 150px\"> | <img src=\"https://images.code.org/b3ea51d4612a46feb67a8f8ba34cfb93-image-1447349856873.png\" style=\"width: 100px\"> |",
+    "instructions": "Add a parameter for the search value to make the function more general. (Click to see full instructions)",
+    "markdown_instructions": "# General Search\r\n\r\nIn order to make a general search function, we should be able to search for anything not just 5.  We can do this by making the search value a parameter. \r\n\r\n# Do This\r\n\r\n* **Add a second parameter** for the item to search for. Name the parameter something like **searchValue**.\r\n\r\n* **Update the code inside the function to check for searchValue instead of 5.** \r\n\r\n* **Update the function call to include the search value** of 5\r\n\r\n* **Add a second function call to search for a different number**.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -165,7 +165,10 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "project_template_level_name": "U3 - Loops And Arrays - Linear Search Template"
+    "project_template_level_name": "U3 - Loops And Arrays - Linear Search Template",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>

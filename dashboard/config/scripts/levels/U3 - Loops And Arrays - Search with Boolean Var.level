@@ -135,7 +135,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Make a boolean variable to keep track of if there is a 5 in the array. (Click to see full instructions)",
-    "markdown_instructions": "# Boolean Variable\r\n\r\nAlright you may or may not have gotten the clever way on the last level. Let's walk through it together.\r\n\r\n# Do This\r\n\r\n* Make a variable that serves as a flag. Name it hasFive. This variable will hold the boolean value true or false.  Set it's value to false to start with.  \r\n\r\n* In the loop if you encounter a 5 set it to true.  \r\n\r\n* After the loop `console.log` the value of the flag.  It will be false if no 5 exists in the array because it means it went through the loop without setting it to true.  In addition it doesn't matter if there is more than one 5 because the flag will just be reset to true.\r\n\r\n* Make the program **`console.log` either true or false just once depending if their is a 5 in the array.**\r\n\r\n* Test out the algorithm on the different arrays to make sure it is working.\r\n\r\n| justFive | noFive | testArray | bigArray |\r\n| ---| --- | --- | --- |\r\n|<img src=\"https://images.code.org/b13b5ad2803f2b3f12772eb7eeed422d-image-1447353059345.30.42 PM.png\" style=\"width: 150px\">|<img src=\"https://images.code.org/14539578632587660282450dce952190-image-1447356095684.19.45 PM.png\" style=\"width: 150px\"> |<img src=\"https://images.code.org/b13b5ad2803f2b3f12772eb7eeed422d-image-1447353059345.30.42 PM.png\" style=\"width: 150px\"> | <img src=\"https://images.code.org/b3ea51d4612a46feb67a8f8ba34cfb93-image-1447349856873.png\" style=\"width: 100px\"> |",
+    "markdown_instructions": "# Boolean Variable\r\n\r\nYou may or may not have gotten the clever way on the last level. Let's walk through it together to make sure we have the correct algorithm.\r\n\r\n# Do This\r\n\r\n* **Make a variable** that serves as a flag. Name it hasFive. **This variable will hold the boolean value** - true or false.  **Set it's value to false to start with. ** \r\n\r\n* **In the loop if you encounter a 5 set the variable value to true.  **\r\n\r\n* ** After the loop `console.log` the value of the flag.**  It will be false if no 5 exists in the array because it means it went through the loop without setting it to true.  In addition it doesn't matter if there is more than one 5 because the flag will just be reset to true.\r\n\r\n* Test out the algorithm on the different arrays to make sure it is working. The expected output is in the table below.\r\n\r\n| justFive | noFive | testArray | bigArray |\r\n| ---| --- | --- | --- |\r\n|<img src=\"https://images.code.org/b13b5ad2803f2b3f12772eb7eeed422d-image-1447353059345.30.42 PM.png\" style=\"width: 150px\">|<img src=\"https://images.code.org/14539578632587660282450dce952190-image-1447356095684.19.45 PM.png\" style=\"width: 150px\"> |<img src=\"https://images.code.org/b13b5ad2803f2b3f12772eb7eeed422d-image-1447353059345.30.42 PM.png\" style=\"width: 150px\"> | <img src=\"https://images.code.org/b3ea51d4612a46feb67a8f8ba34cfb93-image-1447349856873.png\" style=\"width: 100px\"> |",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -165,7 +165,10 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "project_template_level_name": "U3 - Loops And Arrays - Linear Search Template"
+    "project_template_level_name": "U3 - Loops And Arrays - Linear Search Template",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>
