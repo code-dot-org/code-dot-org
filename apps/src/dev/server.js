@@ -64,6 +64,10 @@ app.get('/flappy', function(req, res) {
   renderApp('flappy', req, res);
 });
 
+app.get('/craft', function(req, res) {
+  renderApp('craft', req, res);
+});
+
 app.get('/studio', function(req, res) {
   renderApp('studio', req, res);
 });

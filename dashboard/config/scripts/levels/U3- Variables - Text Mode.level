@@ -51,9 +51,6 @@
     "instructions": "1. switch to text mode and type instructions; 2. drag blocks out into text mode; 3. experiment with code completion",
     "start_blocks": "var score = 0;\r\nconsole.log(\"The value of score is: \");\r\nconsole.log(score);",
     "execute_palette_apis_only": "false",
-    "encrypted_examples": [
-
-    ],
     "lock_zero_param_functions": "false"
   }
 }]]></config>

@@ -840,10 +840,13 @@ Applab.init = function(config) {
   // ensure that the viewport is set up properly for scaling it up/down
   config.mobileNoPaddingShareWidth = config.level.appWidth;
 
+  config.enableShowLinesCount = false;
+
   // Applab.initMinimal();
 
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
+
   studioApp.init(config);
 
   var viz = document.getElementById('visualization');

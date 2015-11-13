@@ -42,9 +42,6 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "instructions": "Fix the code so that the value of both variables prints to the console. (Click to see full instructions)",
-    "encrypted_examples": [
-
-    ],
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false"
   }
