@@ -95,9 +95,10 @@ CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
   this.text_.textContent = this.getCoordinateText();
 };
 
-CrosshairOverlay.prototype.unrender = function () {
+CrosshairOverlay.prototype.destroy = function () {
   if (this.ownElement_) {
-    this.destroy_();
+    this.moveToParent_(null);
+    this.ownElement_ = null;
   }
 };
 
@@ -131,11 +132,6 @@ CrosshairOverlay.prototype.moveToParent_ = function (newParent) {
   if (newParent) {
     newParent.appendChild(this.ownElement_);
   }
-};
-
-CrosshairOverlay.prototype.destroy_ = function () {
-  this.moveToParent_(null);
-  this.ownElement_ = null;
 };
 
 CrosshairOverlay.prototype.getCoordinateText = function () {
