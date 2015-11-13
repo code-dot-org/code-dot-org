@@ -147,6 +147,7 @@ module.exports = {
   },
 
   resizeToFitText: function (element) {
+    // Resize the label to fit the text, unless there is no text in which case make it 15 x 15 so the user has something to drag around
     if (element.textContent) {
       var clone = $(element).clone().css({
         position: 'absolute',
