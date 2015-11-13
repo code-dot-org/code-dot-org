@@ -462,8 +462,6 @@ s:function(d,k,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_textLabel_param0_description":function(d){return "A unique identifier for the label control. The id is used for referencing the created label. For example, to assign event handlers."},
 "dropletBlock_textLabel_param1":function(d){return "text"},
 "dropletBlock_textLabel_param1_description":function(d){return "The value to display for the label."},
-"dropletBlock_textLabel_param2":function(d){return "forId"},
-"dropletBlock_textLabel_param2_description":function(d){return "The id to associate the label with. Clicking the label is the same as clicking on the control."},
 "dropletBlock_toLowerCase_description":function(d){return "Converts the original string to use all lowercase letters and returns it as a new string"},
 "dropletBlock_toLowerCase_signatureOverride":function(d){return "[string].toLowerCase()"},
 "dropletBlock_toUpperCase_description":function(d){return "Converts the original string to use all uppercase letters and returns it as a new string"},

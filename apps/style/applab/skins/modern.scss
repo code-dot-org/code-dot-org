@@ -20,7 +20,7 @@
 
   input[type=text], input:not([type]), div[contenteditable=true] {
     border: 1px solid #999;
-    padding: 10px;
+    padding: 5px; /* padding clips text in text inputs in Firefox */
   }
 
   select {

@@ -42,6 +42,7 @@ var assetsApi = require('../clientApi').assets;
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
 var DebugArea = require('./DebugArea');
+var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 
 var applabConstants = require('./constants');
@@ -320,12 +321,11 @@ function adjustAppSizeStyles(container) {
 }
 
 var drawDiv = function () {
-  var divApplab = document.getElementById('divApplab');
-  divApplab.style.width = Applab.appWidth + "px";
-  divApplab.style.height = Applab.footerlessAppHeight + "px";
-  var designModeViz = document.getElementById('designModeViz');
-  designModeViz.style.width = Applab.appWidth + "px";
-  designModeViz.style.height = Applab.footerlessAppHeight + "px";
+  ['divApplab', 'visualizationOverlay', 'designModeViz'].forEach(function (divId) {
+    var div = document.getElementById(divId);
+    div.style.width = Applab.appWidth + "px";
+    div.style.height = Applab.footerlessAppHeight + "px";
+  });
 
   if (studioApp.share) {
     renderFooterInSharedGame();
@@ -729,7 +729,10 @@ Applab.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html.ejs')(),
+      visualization: require('./visualization.html.ejs')({
+        appWidth: Applab.appWidth,
+        appHeight: Applab.footerlessAppHeight
+      }),
       controls: firstControlsRow,
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
@@ -900,6 +903,8 @@ Applab.init = function(config) {
                                      Applab.onMouseUpDebugResizeBar);
     }
   }
+
+  window.addEventListener('resize', Applab.renderVisualizationOverlay);
 
   var finishButton = document.getElementById('finishButton');
   if (finishButton) {
@@ -1074,11 +1079,14 @@ Applab.clearEventHandlersKillTickLoop = function() {
   }
 };
 
+/**
+ * @returns {boolean}
+ */
 Applab.isRunning = function () {
   // We are _always_ running in share mode.
   // TODO: (bbuchanan) Needs a better condition. Tracked in bug:
   //      https://www.pivotaltracker.com/story/show/105022102
-  return $('#resetButton').is(':visible') || studioApp.share;
+  return !!($('#resetButton').is(':visible') || studioApp.share);
 };
 
 /**
@@ -1132,6 +1140,9 @@ Applab.reset = function(first) {
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
+  $('#divApplab').toggleClass('running', Applab.isRunning());
+  $('#divApplab').toggleClass('notRunning', !Applab.isRunning());
+
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
   Applab.toggleDivApplab(!isDesigning);
   designMode.parseFromLevelHtml(newDivApplab, false);
@@ -1143,6 +1154,8 @@ Applab.reset = function(first) {
   if (level.showTurtleBeforeRun) {
     applabTurtle.turtleSetVisibility(true);
   }
+
+  Applab.renderVisualizationOverlay();
 
   // Reset goal successState:
   if (level.goal) {
@@ -1178,6 +1191,38 @@ Applab.reset = function(first) {
   Applab.Globals = {};
   Applab.executionError = null;
   Applab.JSInterpreter = null;
+};
+
+/**
+ * Manually re-render visualization SVG overlay.
+ * Should call whenever its state/props would change.
+ */
+Applab.renderVisualizationOverlay = function() {
+  var divApplab = document.getElementById('divApplab');
+  var designModeViz = document.getElementById('designModeViz');
+  var visualizationOverlay = document.getElementById('visualizationOverlay');
+  if (!divApplab || !designModeViz || !visualizationOverlay) {
+    return;
+  }
+
+  // Change cursor rule for divApplab - appropriate here because sometimes
+  // the overlay is sort of a 'virtual' cursor for us.
+  [divApplab, designModeViz].forEach(function (div) {
+    div.style.cursor = Applab.isRunning() ? '' : 'crosshair';
+  });
+
+  if (!Applab.visualizationOverlay_) {
+    Applab.visualizationOverlay_ = new VisualizationOverlay();
+  }
+
+  // Calculate current visualization scale to pass to the overlay component.
+  var unscaledWidth = parseInt(visualizationOverlay.getAttribute('width'));
+  var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
+
+  Applab.visualizationOverlay_.render(visualizationOverlay, {
+    isApplabRunning: Applab.isRunning(),
+    scale: scaledWidth / unscaledWidth
+  });
 };
 
 /**
@@ -1237,6 +1282,9 @@ Applab.runButtonClick = function() {
     Blockly.mainBlockSpace.traceOn(true);
   }
   Applab.execute();
+
+  // Re-render overlay to update cursor rules.
+  Applab.renderVisualizationOverlay();
 
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');
