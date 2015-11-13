@@ -78,7 +78,7 @@ var interfaceImages = {
   ]
 };
 
-var musicMetadata = [
+var MUSIC_METADATA = [
   {volume: 1, hasOgg: true, name: "vignette1"},
   {volume: 1, hasOgg: true, name: "vignette2-quiet"},
   {volume: 1, hasOgg: true, name: "vignette3"},
@@ -177,15 +177,17 @@ Craft.init = function (config) {
   Craft.skin = config.skin;
 
   var levelTracks = [];
-  if (Craft.level.songs && musicMetadata) {
-    levelTracks = musicMetadata.filter(function(trackMetadata) {
+  if (Craft.level.songs && MUSIC_METADATA) {
+    levelTracks = MUSIC_METADATA.filter(function(trackMetadata) {
       return Craft.level.songs.indexOf(trackMetadata.name) !== -1;
     });
   }
 
   Craft.musicController = new MusicController(
       studioApp.cdoSounds,
-      (filename) => config.skin.assetUrl(`music/${filename}`),
+      function (filename) {
+        return config.skin.assetUrl(`music/${filename}`);
+      },
       levelTracks,
       levelTracks.length > 1 ? 7500 : null
   );
