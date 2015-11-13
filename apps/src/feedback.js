@@ -813,7 +813,10 @@ FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
 
   var showCodeButton = showCodeDiv.querySelector('#show-code-button');
   showCodeButton.addEventListener('click', _.bind(function () {
-    showCodeDiv.appendChild(this.getGeneratedCodeElement_());
+    var generatedCodeElement = this.getGeneratedCodeElement_({
+      generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
+    });
+    showCodeDiv.appendChild(generatedCodeElement);
     showCodeButton.style.display = 'none';
   }, this));
 
@@ -860,15 +863,30 @@ FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
 };
 
 /**
- *
+ * Generates a "show code" div with a description of what code is.
+ * @param {Object} [options] - optional
+ * @param {string} [options.generatedCodeDescription] - optional description
+ *        of code to put in place instead of the default
+ * @returns {Element}
+ * @private
  */
-FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
+FeedbackUtils.prototype.getGeneratedCodeElement_ = function(options) {
+  options = options || {};
+
   var codeInfoMsgParams = {
     berkeleyLink: "<a href='http://bjc.berkeley.edu/' target='_blank'>Berkeley</a>",
     harvardLink: "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>"
   };
 
-  var infoMessage = this.studioApp_.editCode ?  "" : msg.generatedCodeInfo(codeInfoMsgParams);
+  var infoMessage = "";
+  if (this.studioApp_.editCode) {
+    infoMessage = ""
+  } else if (options.generatedCodeDescription) {
+    infoMessage = options.generatedCodeDescription;
+  } else {
+    infoMessage = msg.generatedCodeInfo(codeInfoMsgParams);
+  }
+
   var code = this.getGeneratedCodeString_();
 
   var codeDiv = document.createElement('div');
@@ -882,9 +900,15 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
 
 /**
  * Display the 'Show Code' modal dialog.
+ * @param {Dialog} Dialog
+ * @param {Object} [appStrings] - optional app strings to override
+ * @param {string} [appStrings.generatedCodeDescription] - string
+ *        to display instead of the usual show code description
  */
-FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
-  var codeDiv = this.getGeneratedCodeElement_();
+FeedbackUtils.prototype.showGeneratedCode = function(Dialog, appStrings) {
+  var codeDiv = this.getGeneratedCodeElement_({
+    generatedCodeDescription: appStrings && appStrings.generatedCodeDescription
+  });
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
