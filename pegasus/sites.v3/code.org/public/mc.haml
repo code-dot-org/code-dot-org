@@ -43,7 +43,7 @@ social:
 
 %div.mc-videos{style: "clear: both;"}
   %h2= I18n.t(:starwars_watch_videos)
-  =view :inspirational_videos
+  =view :inspirational_videos, :mc=>true
 
 %span= I18n.t(:starwars_speak_languages)
 %a{href: "/translate"}= I18n.t(:starwars_help_translate)
