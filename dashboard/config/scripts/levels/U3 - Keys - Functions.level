@@ -167,10 +167,7 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "project_template_level_name": "U3 - Keys - Template",
-    "instructions": "Write a doUpArrow and doDownArrow function and call the functions instead of duplicating the code. (Click to see full instructions)",
-    "encrypted_examples": [
-
-    ]
+    "instructions": "Write a doUpArrow and doDownArrow function and call the functions instead of duplicating the code. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

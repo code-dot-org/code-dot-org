@@ -65,10 +65,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "var testArray = [1,5,3,6,7,5,2,0,7];\r\n",
-    "encrypted_examples": [
-
-    ]
+    "start_blocks": "var testArray = [1,5,3,6,7,5,2,0,7];\r\n"
   }
 }]]></config>
   <blocks/>
