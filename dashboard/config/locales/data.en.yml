@@ -509,10 +509,13 @@ en:
         'hoc2015_preview_blocks' : 'Make your own game blocks'
         'hoc2015_preview_typing' : 'Make your own game typing'
         'hoc2015_preview_conclusion' : 'Make your own game conclusion'
-        'starwars_intro' : 'Introduction'
-        'starwars_typing' : 'JavaScript'
-        'starwars_events' : 'Events'
-        'starwars_congrats' : 'Congratulations'
+        'starwars_intro' : 'Star Wars Hour of Code - Introduction'
+        'starwars_typing' : 'Star Wars Hour of Code - JavaScript'
+        'starwars_events' : 'Star Wars Hour of Code - Events'
+        'starwars_congrats' : 'Star Wars Hour of Code - Congratulations'
+        'starwars_blocks_intro' : 'Star Wars Hour of Code - Introduction'
+        'starwars_blocks_events' : 'Star Wars Hour of Code - Events'
+        'starwars_blocks_congrats' : 'Star Wars Hour of Code - Congratulations'
     callout:
       text:
         # Keyed by #{callout.localization_key}
