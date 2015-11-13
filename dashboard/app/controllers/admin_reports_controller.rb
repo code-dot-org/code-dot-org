@@ -36,6 +36,39 @@ class AdminReportsController < ApplicationController
     render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
   end
 
+  def funometer_by_script
+    authorize! :read, :reports
+
+    @script_id = params[:script_id]
+    @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
+
+    # Generate the funometer percentages for the level, by day.
+    ratings = PuzzleRating.where('script_id = ?', @script_id)
+    ratings_by_day = ratings.group('DATE(created_at)').order('DATE(created_at)')
+    percentages_by_day = ratings_by_day.pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating) AS percentage')
+    @overall_percentage = ratings.pluck('SUM(rating) / COUNT(rating) AS percentage')[0]
+
+    render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+  end
+
+  def funometer_by_script_level
+    authorize! :read, :reports
+
+    @script_id = params[:script_id]
+    @level_id = params[:level_id]
+
+    @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
+    @level_name = Level.where('id = ?', @level_id).pluck(:name)[0]
+
+    # Generate the funometer percentages for the level, by day.
+    ratings = PuzzleRating.where('script_id = ?', @script_id).where('level_id = ?', @level_id)
+    ratings_by_day = ratings.group('DATE(created_at)').order('DATE(created_at)')
+    percentages_by_day = ratings_by_day.pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating) AS percentage')
+    @ratings_by_day = ratings_by_day.pluck('DATE(created_at) AS day', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+
+    render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+  end
+
   def level_completions
     authorize! :read, :reports
     require 'date'
