@@ -3,9 +3,9 @@
  * Ratings, aka the Fun-O-Meter.
  */
 
-var PuzzleRatingUtils = {};
+var puzzleRatingUtils = {};
 
-module.exports = PuzzleRatingUtils;
+module.exports = puzzleRatingUtils;
 
 var dom = require('./dom');
 
@@ -15,7 +15,7 @@ var dom = require('./dom');
  * @returns {Element} div containing puzzle ratng buttons with attached
  *          click handlers
  */
-PuzzleRatingUtils.buildPuzzleRatingButtons = function () {
+puzzleRatingUtils.buildPuzzleRatingButtons = function () {
   var buttonContainer = document.createElement('div');
   buttonContainer.id = 'puzzleRatingButtons';
   buttonContainer.innerHTML = require('./templates/puzzleRating.html.ejs')();
@@ -49,7 +49,7 @@ PuzzleRatingUtils.buildPuzzleRatingButtons = function () {
  * Private getter/localStorage proxy
  * @returns {PuzzleRating[]} - ratings
  */
-PuzzleRatingUtils.getPuzzleRatings_ = function () {
+puzzleRatingUtils.getPuzzleRatings_ = function () {
   var ratings = localStorage.getItem('puzzleRatings');
   try {
     return ratings ? JSON.parse(ratings) : [];
@@ -62,7 +62,7 @@ PuzzleRatingUtils.getPuzzleRatings_ = function () {
  * Private setter/localStorage proxy
  * @param {PuzzleRating[]} ratings
  */
-PuzzleRatingUtils.setPuzzleRatings_ = function (ratings) {
+puzzleRatingUtils.setPuzzleRatings_ = function (ratings) {
   localStorage.setItem('puzzleRatings', JSON.stringify(ratings));
 };
 
@@ -70,14 +70,14 @@ PuzzleRatingUtils.setPuzzleRatings_ = function (ratings) {
  * Private deleter/localStorage proxy
  * @param {PuzzleRating} rating
  */
-PuzzleRatingUtils.removePuzzleRating_ = function (rating) {
-  var ratings = PuzzleRatingUtils.getPuzzleRatings_().filter(function (other) {
-    var otherEqualsRating = (rating.level_id == other.level_id &&
-      rating.script_id == other.script_id &&
-      rating.rating == other.rating);
+puzzleRatingUtils.removePuzzleRating_ = function (rating) {
+  var ratings = puzzleRatingUtils.getPuzzleRatings_().filter(function (other) {
+    var otherEqualsRating = (rating.level_id === other.level_id &&
+      rating.script_id === other.script_id &&
+      rating.rating === other.rating);
     return !otherEqualsRating;
   });
-  PuzzleRatingUtils.setPuzzleRatings_(ratings);
+  puzzleRatingUtils.setPuzzleRatings_(ratings);
 };
 
 /**
@@ -88,13 +88,13 @@ PuzzleRatingUtils.removePuzzleRating_ = function (rating) {
  * @param {Object} options - other data to be submitted along with the
  *        rating. Usually script_id and level_id
  */
-PuzzleRatingUtils.cachePuzzleRating = function (container, options) {
+puzzleRatingUtils.cachePuzzleRating = function (container, options) {
   var selectedButton = container.querySelector('.puzzle-rating-btn.enabled');
   if (selectedButton) {
-    options.rating = selectedButton.getAttribute('data-value');
-    var ratings = PuzzleRatingUtils.getPuzzleRatings_();
-    ratings.push(options);
-    PuzzleRatingUtils.setPuzzleRatings_(ratings);
+    var rating = $.extend({}, options, { rating: selectedButton.getAttribute('data-value') });
+    var ratings = puzzleRatingUtils.getPuzzleRatings_();
+    ratings.push(rating);
+    puzzleRatingUtils.setPuzzleRatings_(ratings);
   }
 };
 
@@ -102,15 +102,15 @@ PuzzleRatingUtils.cachePuzzleRating = function (container, options) {
  * POST the cached ratings to the given URL and clear the cache
  * @param {string} url 
  */
-PuzzleRatingUtils.submitCachedPuzzleRatings = function (url) {
-  var ratings = PuzzleRatingUtils.getPuzzleRatings_();
+puzzleRatingUtils.submitCachedPuzzleRatings = function (url) {
+  var ratings = puzzleRatingUtils.getPuzzleRatings_();
   ratings.forEach(function (rating) {
     $.ajax({
       url: url,
       type: 'POST',
       data: rating,
       complete: function () {
-        PuzzleRatingUtils.removePuzzleRating_(rating);
+        puzzleRatingUtils.removePuzzleRating_(rating);
       }
     });
   });

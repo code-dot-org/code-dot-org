@@ -1,7 +1,7 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 
-var PuzzleRatingUtils = require('@cdo/apps/puzzleRatingUtils');
+var puzzleRatingUtils = require('@cdo/apps/puzzleRatingUtils');
 
 describe("Puzzle Rating Utils", function () {
   var sampleRatings = [];
@@ -30,20 +30,11 @@ describe("Puzzle Rating Utils", function () {
     });
   });
 
-  describe('buildPuzzleRatingButtons', function () {
-  });
-
-  describe('getPuzzleRatings', function () {
-  });
-
-  describe('setPuzzleRatings', function () {
-  });
-
   describe('removePuzzleRating', function () {
     it('only removes the specified rating', function () {
-      PuzzleRatingUtils.setPuzzleRatings_(sampleRatings);
+      puzzleRatingUtils.setPuzzleRatings_(sampleRatings);
       for (var i = 0; i < sampleRatings.length; i++) {
-        PuzzleRatingUtils.removePuzzleRating_(sampleRatings[i]);
+        puzzleRatingUtils.removePuzzleRating_(sampleRatings[i]);
         assert.equal(localStorage.getItem('puzzleRatings'), JSON.stringify(sampleRatings.slice(i + 1)));
       }
     });
@@ -52,24 +43,24 @@ describe("Puzzle Rating Utils", function () {
   describe('cachePuzzleRating', function () {
     var container;
     beforeEach(function () {
-      container = PuzzleRatingUtils.buildPuzzleRatingButtons();
+      container = puzzleRatingUtils.buildPuzzleRatingButtons();
     });
 
     it('does nothing if no button is enabled', function () {
-      PuzzleRatingUtils.cachePuzzleRating(container, {});
+      puzzleRatingUtils.cachePuzzleRating(container, {});
       assert.equal(localStorage.getItem('puzzleRatings'), null);
     });
 
     it('saves the rating if a button is enabled', function () {
       container.querySelectorAll('.puzzle-rating-btn')[0].classList.add('enabled');
-      PuzzleRatingUtils.cachePuzzleRating(container, {});
+      puzzleRatingUtils.cachePuzzleRating(container, {});
       assert.equal(localStorage.getItem('puzzleRatings'), JSON.stringify([{rating: "1"}]));
     });
 
     it('doesn\' squash existing ratings', function () {
-      PuzzleRatingUtils.setPuzzleRatings_(sampleRatings);
+      puzzleRatingUtils.setPuzzleRatings_(sampleRatings);
       container.querySelectorAll('.puzzle-rating-btn')[0].classList.add('enabled');
-      PuzzleRatingUtils.cachePuzzleRating(container, {});
+      puzzleRatingUtils.cachePuzzleRating(container, {});
       assert.equal(localStorage.getItem('puzzleRatings'), JSON.stringify(sampleRatings.concat([{rating: "1"}])));
     });
   });
@@ -85,10 +76,10 @@ describe("Puzzle Rating Utils", function () {
         postCount++;
         opts.complete();
       };
-      PuzzleRatingUtils.setPuzzleRatings_(sampleRatings);
+      puzzleRatingUtils.setPuzzleRatings_(sampleRatings);
       assert.equal(localStorage.getItem('puzzleRatings'), JSON.stringify(sampleRatings));
 
-      PuzzleRatingUtils.submitCachedPuzzleRatings("/");
+      puzzleRatingUtils.submitCachedPuzzleRatings("/");
       assert.equal(localStorage.getItem('puzzleRatings'), "[]");
       assert.equal(postCount, sampleRatings.length);
     });
@@ -99,11 +90,11 @@ describe("Puzzle Rating Utils", function () {
         postCount++;
         complete = opts.complete;
       };
-      PuzzleRatingUtils.setPuzzleRatings_(sampleRatings.slice(0, 1));
+      puzzleRatingUtils.setPuzzleRatings_(sampleRatings.slice(0, 1));
       assert.equal(localStorage.getItem('puzzleRatings'), JSON.stringify(sampleRatings.slice(0, 1)));
-      PuzzleRatingUtils.submitCachedPuzzleRatings("/");
+      puzzleRatingUtils.submitCachedPuzzleRatings("/");
       assert.equal(localStorage.getItem('puzzleRatings'), JSON.stringify(sampleRatings.slice(0, 1)));
-      PuzzleRatingUtils.setPuzzleRatings_(sampleRatings.slice(0, 2));
+      puzzleRatingUtils.setPuzzleRatings_(sampleRatings.slice(0, 2));
       assert.equal(localStorage.getItem('puzzleRatings'), JSON.stringify(sampleRatings.slice(0, 2)));
 
       complete();
