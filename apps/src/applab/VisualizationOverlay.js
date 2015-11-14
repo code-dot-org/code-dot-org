@@ -102,6 +102,9 @@ VisualizationOverlay.prototype.moveToParent_ = function (newParent) {
     // Make a reusable mouse position point if we haven't yet.
     if (!this.mousePos_) {
       this.mousePos_ = newParent.createSVGPoint();
+      // Default cursor position should be offscreen until we get a mouse event.
+      this.mousePos_.x = -1;
+      this.mousePos_.y = -1;
     }
 
     // Update the app size to match the parent
