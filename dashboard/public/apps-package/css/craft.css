@@ -1657,23 +1657,23 @@ a.video_link {
         width: 56px;
         height: 55.5px;
         margin-top: 20.25px; } }
-  #craft-popup-house-selection #house-b-picture {
+  #craft-popup-house-selection #house-c-picture {
     background-image: url("/blockly/media/craft/Sliced_Parts/House_Option_B_v3.png");
     width: 127px;
     height: 129px;
     margin-top: 31.5px; }
     @media screen and (max-height: 630px) {
-      #craft-popup-house-selection #house-b-picture {
+      #craft-popup-house-selection #house-c-picture {
         width: 63.5px;
         height: 64.5px;
         margin-top: 15.75px; } }
-  #craft-popup-house-selection #house-c-picture {
+  #craft-popup-house-selection #house-b-picture {
     background-image: url("/blockly/media/craft/Sliced_Parts/House_Option_C_v3.png");
     width: 98px;
     height: 152px;
     margin-top: 20px; }
     @media screen and (max-height: 630px) {
-      #craft-popup-house-selection #house-c-picture {
+      #craft-popup-house-selection #house-b-picture {
         width: 49px;
         height: 76px;
         margin-top: 10px; } }

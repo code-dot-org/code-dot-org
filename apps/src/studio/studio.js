@@ -35,7 +35,7 @@ var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
 var ImageFilterFactory = require('./ImageFilterFactory');
 var ThreeSliceAudio = require('./ThreeSliceAudio');
-var MusicController = require('./MusicController');
+var MusicController = require('../MusicController');
 var paramLists = require('./paramLists.js');
 
 // tests don't have svgelement
@@ -3501,9 +3501,9 @@ Studio.updateFloatingScore = function() {
   if (opacity > 0) {
     opacity += constants.floatingScoreChangeOpacity;
     floatingScore.setAttribute('opacity', opacity);
+    y += constants.floatingScoreChangeY;
+    floatingScore.setAttribute('y', y);
   }
-  y += constants.floatingScoreChangeY;
-  floatingScore.setAttribute('y', y);
 };
 
 Studio.showCoordinates = function() {
