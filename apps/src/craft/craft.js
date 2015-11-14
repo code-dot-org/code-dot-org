@@ -255,6 +255,9 @@ Craft.init = function (config) {
         readonlyWorkspace: config.readonlyWorkspace
       }
     }),
+    appStrings: {
+      generatedCodeDescription: craftMsg.generatedCodeDescription(),
+    },
     loadAudio: function () {
     },
     afterInject: function () {
@@ -690,7 +693,8 @@ Craft.reportResult = function (success) {
           nextLevelMsg: craftMsg.nextLevelMsg({
             puzzleNumber: Craft.initialConfig.level.puzzle_number
           }),
-          tooManyBlocksFailMsgFunction: craftMsg.tooManyBlocksFail
+          tooManyBlocksFailMsgFunction: craftMsg.tooManyBlocksFail,
+          generatedCodeDescription: craftMsg.generatedCodeDescription()
         },
         feedbackImage: Craft.initialConfig.level.freePlay ? Craft.gameController.getScreenshot() : null,
         showingSharing: Craft.initialConfig.level.freePlay

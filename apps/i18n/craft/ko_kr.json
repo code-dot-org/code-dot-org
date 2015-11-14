@@ -1,5 +1,6 @@
 {
   "reinfFeedbackMsg": "You can press \"Keep Playing\" to go back to playing your game.",
-  "nextLevelMsg": "Success: Puzzle {puzzleNumber} completed. Congratulations!",
+  "nextLevelMsg": "Puzzle {puzzleNumber} completed. Congratulations!",
+  "generatedCodeDescription": "By dragging and placing blocks in this puzzle, you've created a set of instructions in a computer language called Javascript. This code tells computers what to display on the screen. Everything you see and do in Minecraft also starts with lines of computer code like these.",
   "tooManyBlocksFail": "Puzzle {puzzleNumber} completed. Congratulations! It is also possible to complete it with {numBlocks, plural, one {1 block} other {# blocks}}."
 }
