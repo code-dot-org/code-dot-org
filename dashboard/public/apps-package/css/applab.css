@@ -260,10 +260,10 @@ div#visualizationResizeBar {
   overflow: hidden;
   outline: none;
   -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
+  -webkit-user-select: none;
   -ms-user-select: none;
+  -khtml-user-select: none;
   user-select: none; }
 
 #divApplab {
@@ -304,6 +304,11 @@ div#visualizationResizeBar {
 #divApplab.notRunning button, #divApplab.notRunning label, #divApplab.notRunning select, #divApplab.notRunning input, #divApplab.notRunning img, #divApplab.notRunning div.chart, #divApplab.notRunning canvas, #divApplab.notRunning div[contenteditable=true] {
   cursor: default; }
 
+#divApplab.notRunning.withCrosshair {
+  cursor: crosshair; }
+  #divApplab.notRunning.withCrosshair button, #divApplab.notRunning.withCrosshair label, #divApplab.notRunning.withCrosshair select, #divApplab.notRunning.withCrosshair input, #divApplab.notRunning.withCrosshair img, #divApplab.notRunning.withCrosshair div.chart, #divApplab.notRunning.withCrosshair canvas, #divApplab.notRunning.withCrosshair div[contenteditable=true] {
+    cursor: crosshair; }
+
 /* In design mode, show grab/grabbing cursor for all UI elements
  * so that they look draggable. */
 #designModeViz button, #designModeViz label, #designModeViz select, #designModeViz input, #designModeViz img, #designModeViz div.chart, #designModeViz canvas, #designModeViz div[contenteditable=true] {
@@ -316,6 +321,9 @@ div#visualizationResizeBar {
     cursor: grabbing;
     cursor: -moz-grabbing;
     cursor: -webkit-grabbing; }
+
+#designModeViz.withCrosshair {
+  cursor: crosshair; }
 
 #visualizationResizeBar {
   margin-left: 2px;

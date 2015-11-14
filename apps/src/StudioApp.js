@@ -292,7 +292,7 @@ StudioApp.prototype.init = function(config) {
         }
         this.onDropletToggle_();
       } else {
-        this.feedback_.showGeneratedCode(this.Dialog);
+        this.feedback_.showGeneratedCode(this.Dialog, config.appStrings);
       }
     }, this));
   }
