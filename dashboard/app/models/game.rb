@@ -115,7 +115,7 @@ class Game < ActiveRecord::Base
   end
 
   def share_mobile_fullscreen?
-    app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
+    true
   end
 
   def flappy?

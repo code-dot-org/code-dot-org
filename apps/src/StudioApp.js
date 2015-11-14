@@ -258,7 +258,7 @@ StudioApp.prototype.init = function(config) {
 
   if (config.share) {
     this.handleSharing_({
-      noButtonsBelowOnMobileShare: config.noButtonsBelowOnMobileShare,
+      noButtonsBelowOnMobileShare: true,
       makeUrl: config.makeUrl,
       makeString: config.makeString,
       makeImage: config.makeImage,
