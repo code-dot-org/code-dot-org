@@ -8,9 +8,7 @@ class HttpCache
 
   # Language header and cookie are needed to separately cache language-specific pages.
   LANGUAGE_HEADER = %w(Accept-Language)
-  LANGUAGE_COOKIE = %w(language_)
-
-  PAGE_MODE_COOKIE = 'pm'
+  LANGUAGE_COOKIES = %w(language_ pm)
 
   # HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
 # Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.
@@ -29,7 +27,7 @@ class HttpCache
       'scripts',
       'videos_seen',
       'callouts_seen',
-      PAGE_MODE_COOKIE,
+      'pm',
       session_key,
       storage_id,
     ]
@@ -80,7 +78,7 @@ class HttpCache
               /congrats
             ),
             headers: LANGUAGE_HEADER,
-            cookies: [LANGUAGE_COOKIE, PAGE_MODE_COOKIE],
+            cookies: LANGUAGE_COOKIES,
           }
         ],
         # Remaining Pegasus paths are English-only and don't require any extra headers or cookies.
@@ -103,7 +101,7 @@ class HttpCache
           # {
           # path: "/s/starwars/stage/1/puzzle/*",
           # headers: LANGUAGE_HEADER,
-          # cookies: LANGUAGE_COOKIE
+          # cookies: LANGUAGE_COOKIES
           # },
           {
             path: '/api/*',
