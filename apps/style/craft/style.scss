@@ -720,6 +720,11 @@ $height-to-width: 434 / 477;
     //margin-left: 110px; // TODO(bjordan): needed?
   }
 
+  .social-buttons a:hover {
+    background: none !important;
+    fill: white !important;
+  }
+
   #puzzleRatingButtons a:hover.puzzle-rating-btn {
     background: none !important;
     fill: white !important;
