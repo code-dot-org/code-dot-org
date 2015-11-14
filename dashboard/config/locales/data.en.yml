@@ -516,6 +516,11 @@ en:
         'starwars_blocks_intro' : 'Star Wars: Building a Galaxy with Code - Introduction'
         'starwars_blocks_events' : 'Star Wars: Building a Galaxy with Code - Events'
         'starwars_blocks_congrats' : 'Star Wars: Building a Galaxy with Code - Congratulations'
+        'mc_intro' : 'Minecraft - Introduction'
+        'mc_repeat' : 'Minecraft - Repeat'
+        'mc_if_statements' : 'Minecraft - If statements'
+        'mc_congrats_share' : 'Minecraft - Congratulations'
+        'mc_congrats_no_share' : 'Minecraft - Congratulations'
     callout:
       text:
         # Keyed by #{callout.localization_key}
