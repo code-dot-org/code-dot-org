@@ -293,6 +293,13 @@ div#visualizationResizeBar {
   }
 }
 
+#divApplab.notRunning.withCrosshair {
+  cursor: crosshair;
+  button, label, select, input, img, div.chart, canvas, div[contenteditable=true] {
+    cursor: crosshair;
+  }
+}
+
 /* In design mode, show grab/grabbing cursor for all UI elements
  * so that they look draggable. */
 #designModeViz {
@@ -306,6 +313,10 @@ div#visualizationResizeBar {
       cursor: -moz-grabbing;
       cursor: -webkit-grabbing;
     }
+  }
+
+  &.withCrosshair {
+    cursor: crosshair;
   }
 }
 
