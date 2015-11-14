@@ -1391,10 +1391,61 @@ en:
     starwars_congrats:
       1:
         image: 'notes/starwars_congrats_1.png'
-        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now. You just made it to the last level--congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. "
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now. You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
       2:
         image: 'notes/starwars_congrats_2.png'
-        text: "You can make your own game and you choose how it works! One more thing: you've unlocked new sounds and new commands to do even more. In my game when R2-D2 gets all the characters, then you win the game. My game makes a different sound every time R2-D2 gets somewhere. My high score so far is 322 points!"
+        text: "[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Eventually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win."
       3:
         image: 'notes/starwars_congrats_3.png'
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you click right, your character goes left. It's really hard! Sometimes you just get an advantage, an inherent advantage if you're the developer of the game. Did I get it? Yay!"
+      4:
+        image: 'notes/starwars_congrats_4.png'
+        text: "When you're done making your game, choose share to get a link you can share with friends or play your  game on your phone. Have fun!"
+    starwars_blocks_intro:
+      1:
+        image: 'notes/starwars_blocks_intro_1.png'
+        text: "Hi I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+      2:
+        image: 'notes/starwars_blocks_intro_2.png'
+        text: "Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artist develop rigs, which are the parts of the character that move that allow the character to look very believable in a galaxy far, far away."
+      3:
+        image: 'notes/starwars_blocks_intro_3.png'
+        text: "In the next hour, we're going to build our own Star Wars game that will teach you the basic concepts of programming. Usually programming is all text but we're going to use blocks here so we can drag and drop to write the programs. To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts."
+      4:
+        image: 'notes/starwars_blocks_intro_4.png'
+        text: "Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space. This middle area is the toolbox and each of these blocks is a command that BB-8 can understand. The white space on the right is called the work space and this is where we're going to build our program."
+      5:
+        image: 'notes/starwars_blocks_intro_5.png'
+        text: "If I drag the moveLeft block to our workspace, what happens? BB-8 moves left one block on the grid. And what if I want BB-8 to do something after the move left block? I can add another block to our program. I'm going to choose the moveUp block and I'll drag it under my moveLeft block until the highlight appears. Then I'll drop it and the two blocks will snap together."
+      6:
+        image: 'notes/starwars_blocks_intro_6.png'
+        text: "When I press run again, BB-8 will perform the commands that are stacked top to bottom on our workspace. If you ever want to delete a block, just remove it from the stack and drag it back into the toolbox. After you hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+    starwars_blocks_events:
+      1:
+        image: 'notes/starwars_blocks_events_1.png'
+        text: "Well, hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+      2:
+        image: 'notes/starwars_blocks_events_2.png'
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO. To make a game, we need to learn about something that game programmers use every day: they're called events."
+      3:
+        image: 'notes/starwars_blocks_events_3.png'
+        text: "Events tell your program to listen or wait for when something happens and then when it does, it performs an action. Some examples of events are listening for a mouse click, an arrow button or a tap on the screen. Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot."
+      4:
+        image: 'notes/starwars_blocks_events_4.png'
+        text: "We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons. We use the when up event block and attach the go up block to it. When the player presses the up arrow key, the code attached to the when up block is run. And we'll do the same thing to make R2-D2 move down."
+      5:
+        image: 'notes/starwars_blocks_events_5.png'
+        text: "Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen. Step by step, your game is getting more interactive."
+    starwars_blocks_congrats:
+      1:
+        image: 'notes/starwars_blocks_congrats_1.png'
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now. You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+      2:
+        image: 'notes/starwars_blocks_congrats_2.png'
+        text: "[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Eventually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win."
+      3:
+        image: 'notes/starwars_blocks_congrats_3.png'
+        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you click right, your character goes left. It's really hard! Sometimes you just get an advantage, an inherent advantage if you're the developer of the game. Did I get it? Yay!"
+      4:
+        image: 'notes/starwars_blocks_congrats_4.png'
+        text: "When you're done making your game, choose share to get a link you can share with friends or play your  game on your phone. Have fun!"

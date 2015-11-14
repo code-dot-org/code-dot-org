@@ -19,31 +19,34 @@ social:
   "og:video:type": ""
 ---
 
+- page_mode = PageMode.get(request)
+
 %link{href: "/css/mc.css", rel: "stylesheet"}
 
 %div{style: "clear:both"}
 
-%div.mc-container
-  %div.img-container
-    %img.mc-img{src:"/images/mc/MC_Wide_V2.jpg"}
-  %div.mc-heading
-    %img.mc-logo{src: "/images/mc/MC_Logo_Small.png"}
-  %h1.mc-h1 Hour of Code
+- if page_mode == 'minecraft'
+  %div.mc-container
+    %div.img-container
+      %img.mc-img{src:"/images/mc/MC_Wide_V2.jpg"}
+    %div.mc-heading
+      %img.mc-logo{src: "/images/mc/MC_Logo_Small.png"}
+    %h1.mc-h1 Hour of Code
 
-  .mc-tutorial{style: "left: 430px;"}
-    %div.tutorial-box
-      %div.mc-tutorial-info
-        %h1.mc-h1-second-box Minecraft Hour of Code
-        %p.mc-tutorial-description Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
-        %p.mc-tutorial-specs Major languages | Modern browsers and tablets | Ages 6+
-      %a{:href => CDO.studio_url('/s/mc/reset'), :target=>'_self'}
-        %button= I18n.t(:starwars_javascript_start_button)
+    .mc-tutorial{style: "left: 430px;"}
+      %div.tutorial-box
+        %div.mc-tutorial-info
+          %h1.mc-h1-second-box Minecraft Hour of Code
+          %p.mc-tutorial-description Explore a Minecraft world through code.
+          %p.mc-tutorial-specs Major languages | Modern browsers and tablets | Ages 6+
+        %a{:href => CDO.studio_url('/s/mc/reset'), :target=>'_self'}
+          %button= I18n.t(:starwars_javascript_start_button)
 
-%div{style: "clear:both"}
+  %div{style: "clear:both"}
 
-%div.mc-videos{style: "clear: both;"}
-  %h2= I18n.t(:starwars_watch_videos)
-  =view :inspirational_videos, :mc=>true
+  %div.mc-videos{style: "clear: both;"}
+    %h2= I18n.t(:starwars_watch_videos)
+    =view :inspirational_videos, :mc=>true
 
-%span= I18n.t(:starwars_speak_languages)
-%a{href: "/translate"}= I18n.t(:starwars_help_translate)
+  %span= I18n.t(:starwars_speak_languages)
+  %a{href: "/translate"}= I18n.t(:starwars_help_translate)
