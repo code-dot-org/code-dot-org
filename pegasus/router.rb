@@ -145,6 +145,13 @@ class Documents < Sinatra::Base
     redirect "/#{path}"
   end
 
+  # Page mode selection
+  get '/private/pm/*' do |page_mode|
+    dont_cache
+    response.set_cookie('pm', {value: page_mode, domain: ".#{request.site}", path: '/', expires: Time.now + (365*24*3600)})
+    redirect "/learn?r=#{rand(100000)}"
+  end
+
   # /private (protected area)
   ['/private', '/private/*'].each do |uri|
     get_head_or_post uri do

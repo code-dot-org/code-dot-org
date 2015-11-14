@@ -10,7 +10,9 @@ class HttpCache
   LANGUAGE_HEADER = %w(Accept-Language)
   LANGUAGE_COOKIE = %w(language_)
 
-# HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
+  PAGE_MODE_COOKIE = 'pm'
+
+  # HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
 # Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.
 # This hash provides extra application-specific configuration for whitelisting specific request headers and
 # cookies based on the request path.
@@ -27,6 +29,7 @@ class HttpCache
       'scripts',
       'videos_seen',
       'callouts_seen',
+      PAGE_MODE_COOKIE,
       session_key,
       storage_id,
     ]
@@ -77,7 +80,7 @@ class HttpCache
               /congrats
             ),
             headers: LANGUAGE_HEADER,
-            cookies: LANGUAGE_COOKIE
+            cookies: [LANGUAGE_COOKIE, PAGE_MODE_COOKIE],
           }
         ],
         # Remaining Pegasus paths are English-only and don't require any extra headers or cookies.
