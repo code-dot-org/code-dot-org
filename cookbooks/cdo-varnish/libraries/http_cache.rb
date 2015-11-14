@@ -69,12 +69,21 @@ class HttpCache
             proxy: 'dashboard',
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
+          },
+          {
+            path: %w(
+              /
+              /learn*
+              /congrats
+            ),
+            headers: LANGUAGE_HEADER,
+            cookies: LANGUAGE_COOKIE
           }
         ],
-        # Default Pegasus paths are cached but language-specific, whitelist only language cookie/header.
+        # Remaining Pegasus paths are English-only and don't require any extra headers or cookies.
         default: {
-          headers: LANGUAGE_HEADER,
-          cookies: LANGUAGE_COOKIE
+          headers: [],
+          cookies: 'none'
         }
       },
       dashboard: {
