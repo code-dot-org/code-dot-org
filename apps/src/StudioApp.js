@@ -29,7 +29,7 @@ var FeedbackUtils = require('./feedback');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
 var codegen = require('./codegen');
-var PuzzleRatingUtils = require('./puzzleRatingUtils');
+var puzzleRatingUtils = require('./puzzleRatingUtils');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -268,7 +268,7 @@ StudioApp.prototype.init = function(config) {
   }
 
   if (config.puzzleRatingsUrl) {
-    PuzzleRatingUtils.submitCachedPuzzleRatings(config.puzzleRatingsUrl);
+    puzzleRatingUtils.submitCachedPuzzleRatings(config.puzzleRatingsUrl);
   }
 
   // Record time at initialization.

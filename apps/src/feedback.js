@@ -33,7 +33,7 @@ var FeedbackBlocks = require('./feedbackBlocks');
 var constants = require('./constants');
 var TestResults = constants.TestResults;
 var KeyCodes = constants.KeyCodes;
-var PuzzleRatingUtils = require('./puzzleRatingUtils');
+var puzzleRatingUtils = require('./puzzleRatingUtils');
 
 /**
  * @typedef {Object} TestableBlock
@@ -281,14 +281,14 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   if (continueButton) {
 
     if (options.response && options.response.puzzle_ratings_enabled) {
-      feedback.appendChild(PuzzleRatingUtils.buildPuzzleRatingButtons());
+      feedback.appendChild(puzzleRatingUtils.buildPuzzleRatingButtons());
     }
 
     dom.addClickTouchEvent(continueButton, function () {
       feedbackDialog.hide();
 
       if (options.response && options.response.puzzle_ratings_enabled) {
-        PuzzleRatingUtils.cachePuzzleRating(feedback, {
+        puzzleRatingUtils.cachePuzzleRating(feedback, {
           script_id: options.response.script_id,
           level_id: options.response.level_id
         });
