@@ -30,12 +30,13 @@
     "special_level_type": "houseBuild",
     "instructions": "Build the rest of your house from any material you'd like. The \"repeat\" command will come in handy.",
     "is_daytime": "true",
-    "available_blocks": "[\"planksBirch\"]",
+    "available_blocks": "[\"planksBirch\", \"planksOak\"]",
     "embed": "false",
     "free_play": "false",
     "show_popup_on_load": "houseLayoutSelection",
     "grid_width": "10",
-    "grid_height": "10"
+    "grid_height": "10",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"craft_callout_preplaced_house\",\r\n  \"callout_text\": \"This code will start building your house. Can you finish it?\",\r\n  \"element_id\": \"[block-id=\\\"12\\\"]\",\r\n  \"on\": \"instructionsHidden\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
   }
 }]]></config>
   <blocks>
