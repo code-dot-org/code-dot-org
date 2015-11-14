@@ -7,6 +7,7 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
+      "appendItem": null,
       "addOperator": null,
       "randomNumber": null,
       "declareAssign_x": null,
