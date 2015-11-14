@@ -6,6 +6,7 @@ var RGBColor = require('./rgbcolor.js');
 var codegen = require('../codegen');
 var keyEvent = require('./keyEvent');
 var utils = require('../utils');
+var dom = require('../dom');
 
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
@@ -1199,6 +1200,20 @@ applabCommands.onEventFired = function (opts, e) {
       div = div.offsetParent;
     }
 
+    // For touch events, simply pull the coordinates of the first
+    // touch over onto the main event.
+    // This makes multi-touch a nonentity, and also means we don't get
+    // event coordinates on mouseup events.
+    // Ideally we'd wrap individual touches to act like independent mouse cursors.
+    if (e.touches && e.touches.length > 0) {
+      e.clientX = e.touches[0].clientX;
+      e.clientY = e.touches[0].clientY;
+      e.pageX = e.touches[0].pageX;
+      e.pageY = e.touches[0].pageY;
+      e.x = e.touches[0].x;
+      e.y = e.touches[0].y;
+    }
+
     var applabEvent = {};
     // Pass these properties through to applabEvent:
     ['altKey', 'button', 'charCode', 'ctrlKey', 'keyCode', 'keyIdentifier',
@@ -1312,13 +1327,9 @@ applabCommands.onEvent = function (opts) {
                          applabCommands.onEventFired.bind(this, opts));
         break;
       */
-      case 'click':
       case 'change':
       case 'keyup':
-      case 'mousemove':
       case 'dblclick':
-      case 'mousedown':
-      case 'mouseup':
       case 'mouseover':
       case 'mouseout':
       case 'keydown':
@@ -1331,6 +1342,31 @@ applabCommands.onEvent = function (opts) {
             opts.eventName,
             applabCommands.onEventFired.bind(this, opts));
         break;
+
+      // TODO: On desktop click fires after mouseup like you would expect.
+      //       On touch, it's firing with/after mousedown.
+      //       We ought to make touch fire after mouseup like desktop does,
+      //       and probably only if we're over the element in question.
+      case 'click':
+        dom.addClickTouchEvent(domElement,
+            applabCommands.onEventFired.bind(this, opts));
+        break;
+
+      case 'mousedown':
+        dom.addMouseDownTouchEvent(domElement,
+            applabCommands.onEventFired.bind(this, opts));
+        break;
+
+      case 'mousemove':
+        dom.addMouseMoveTouchEvent(domElement,
+            applabCommands.onEventFired.bind(this, opts));
+        break;
+
+      case 'mouseup':
+        dom.addMouseUpTouchEvent(domElement,
+            applabCommands.onEventFired.bind(this, opts));
+        break;
+
       default:
         return false;
     }
