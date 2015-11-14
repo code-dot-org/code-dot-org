@@ -1,6 +1,6 @@
 @import "color";
 @import "colpick.css";
-@import "mixins";
+//@import "mixins"; TODO(bjordan/bbuchanan): fix sprockets?
 @import "style-constants";
 @import "skins/base.scss";
 @import "skins/modern.scss";
@@ -239,7 +239,13 @@ div#visualizationResizeBar {
   overflow: hidden;
   outline: none;
   -webkit-touch-callout: none;
-  @include user-select(none);
+
+  // was: @include user-select(none); TODO(bjordan/bbuchanan): fix sprockets?
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 
 #divApplab {
