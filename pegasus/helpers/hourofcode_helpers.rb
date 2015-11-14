@@ -79,6 +79,7 @@ def hoc_detect_country()
   return 'us' unless location
 
   country_code = location.country_code.to_s.downcase
+  country_code = 'uk' if country_code == 'gb'
   return 'us' unless HOC_COUNTRIES[country_code]
 
   country_code
