@@ -26,16 +26,14 @@ social:
 %div{style: "clear:both"}
 
 - if page_mode == 'minecraft'
-  %div.mc-container
-    %div.img-container
-      %img.mc-img{src:"/images/mc/MC_Wide_V2.jpg"}
-    %div.mc-heading
-      %img.mc-logo{src: "/images/mc/MC_Logo_Small.png"}
+  .mc-container
+    .img-container
+      %img.mc-img{src:"/images/mc/MC_Wide_V4.jpg"}
     %h1.mc-h1 Hour of Code
 
     .mc-tutorial{style: "left: 430px;"}
-      %div.tutorial-box
-        %div.mc-tutorial-info
+      .tutorial-box
+        .mc-tutorial-info
           %h1.mc-h1-second-box Minecraft Hour of Code
           %p.mc-tutorial-description Explore a Minecraft world through code.
           %p.mc-tutorial-specs Major languages | Modern browsers and tablets | Ages 6+
@@ -44,7 +42,7 @@ social:
 
   %div{style: "clear:both"}
 
-  %div.mc-videos{style: "clear: both;"}
+  .mc-videos{style: "clear: both;"}
     %h2= I18n.t(:starwars_watch_videos)
     =view :inspirational_videos, :mc=>true
 

@@ -26,7 +26,7 @@
   font-size: 30px;
   position: absolute;
   top: 10px;
-  left: 620px;
+  left: 430px;
 }
 
 .mc-h1-second-box {
@@ -96,6 +96,10 @@
   }
 
   .mc-1 {
+    display: none;
+  }
+
+  .mc-h1 {
     display: none;
   }
 
