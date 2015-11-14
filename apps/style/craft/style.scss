@@ -193,16 +193,20 @@ $height-to-width: 434 / 477;
   @include visualization-width-height-original($height-to-width * 200px, 200px, 434px);
 }
 
-@media screen and (min-height: 541px) {
-  @include visualization-width-height-original($height-to-width * 225px, 225px, 434px);
+@media screen and (min-height: 560px) {
+  @include visualization-width-height-original($height-to-width * 277px, 277px, 434px);
 }
 
-@media screen and (min-width: 850px) and (min-height: 626px) {
-  @include visualization-width-height-original($height-to-width * 300px, 300px, 434px);
+@media screen and (min-width: 850px) and (min-height: 642px) {
+  @include visualization-width-height-original($height-to-width * 377px, 377px, 434px);
 }
 
 @media screen and (min-width: 1050px) and (min-height: 732px) {
   @include visualization-width-height-original($height-to-width * 450px, 450px, 434px);
+}
+
+@media screen and (min-width: 1150px) and (min-height: 832px) {
+  @include visualization-width-height-original($height-to-width * 515px, 515px, 434px);
 }
 
 #visualization {
