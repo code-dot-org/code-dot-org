@@ -52,7 +52,44 @@ One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 wo
 
 Lucky classrooms will have the opportunity to talk with guest speakers who will share how computer science has impacted their lives and careers. 
 
-<%= view :video_chat_speakers %>
+[col-33]
+
+![image](/images/fit-120/Kevin_Systrom.jpg)<br/>
+Kevin Systrom <br/> (co-founder and CEO of Instagram)
+
+[/col-33]
+
+[col-33]
+
+![image](/images/fit-120/Dao_Nguyen.jpg)<br/>
+Dao Nguyen <br/> (Publisher, Buzzeed)
+
+[/col-33]
+
+[col-33]
+
+![image](/images/fit-120/Aloe_Blacc.jpg)<br/>
+Aloe Blacc <br/> (Recording artist)
+
+[/col-33]
+
+<br/>
+
+[col-33]
+
+![image](/images/fit-120/Julie_Larson-Green.jpg)<br/>
+Julie Larson-Green <br/> (Chief Experience Officer, Microsoft)
+
+[/col-33]
+
+[col-33]
+
+![image](/images/fit-120/Hadi-Partovi.jpg)<br/>
+Hadi Partovi <br/> (Code.org co-founder)
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
 
 <% end %>
 
