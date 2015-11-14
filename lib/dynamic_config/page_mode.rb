@@ -15,7 +15,9 @@ class PageModeBase
   # @param {ActionDispatch::Request} request
   # @return {string}
   def get(request)
-    (request && request.params[PAGE_MODE_KEY]) ||
+    # If a session page mode is set the 'pm' parameter or cookie, return that,
+    # otherwise return the default page mode from DCDO.
+    (request && (request.params[PAGE_MODE_KEY] || request.cookies[PAGE_MODE_KEY])) ||
         DCDO.get('page_mode', DEFAULT_PAGE_MODE)
   end
 
