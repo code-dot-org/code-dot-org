@@ -30,6 +30,21 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  before_action :create_puzzle_ratings_from_client
+
+  def create_puzzle_ratings_from_client
+    if PuzzleRating.enabled?
+      user_ratings = client_state.puzzle_rating_array.map do |rating|
+        rating[:user] = current_user
+        rating.symbolize_keys
+      end
+      retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+        PuzzleRating.create(user_ratings)
+      end
+      client_state.empty_puzzle_ratings
+    end
+  end
+
   # Configure development only filters.
   if Rails.env.development?
     # Enable or disable the rack mini-profiler if the 'pp' query string parameter is set.

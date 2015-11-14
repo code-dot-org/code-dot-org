@@ -1,4 +1,4 @@
-/* global trackEvent */
+/* global trackEvent, dashboard */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
@@ -289,15 +289,10 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       // Submit Puzzle Rating
       var selectedRating = feedback.querySelector('.puzzle-rating-btn.enabled');
       if (options.response && options.response.puzzle_rating_url && selectedRating) {
-        $.ajax({
-          url: options.response.puzzle_rating_url,
-          type: 'POST',
-          data: {
-            script_id: options.response.script_id,
-            level_id: options.response.level_id,
-            level_source_id: options.response.level_source_id,
-            rating: selectedRating.getAttribute('data-value')
-          },
+        dashboard.clientState.addPuzzleRating({
+          script_id: options.response.script_id,
+          level_id: options.response.level_id,
+          rating: selectedRating.getAttribute('data-value')
         });
       }
       // onContinue will fire already if there was only a continue button
