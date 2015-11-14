@@ -44,6 +44,18 @@ One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 wo
 
 <% end %>
 
+<% if @country == 'us' || @country == 'ca'  %>
+
+
+
+## 30 classrooms will win a video chat with a guest speaker
+
+Lucky classrooms will have the opportunity to talk with guest speakers who will share how computer science has impacted their lives and careers. 
+
+<%= view :video_chat_speakers %>
+
+<% end %>
+
 <% if @country == 'us' %>
 
 
@@ -119,6 +131,13 @@ To qualify, you must complete the [Hardware Application form](<%= resolve_url('/
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (<%= campaign_date('short') %>), can I still qualify for prizes?
 Yes, in the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup') %>) include the dates that your whole school is participating.
+
+<% end %>
+
+<% if @country == 'us' || @country == 'ca' %>
+
+## Video chat with a guest speaker:
+Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligible to win.
 
 <% end %>
 
