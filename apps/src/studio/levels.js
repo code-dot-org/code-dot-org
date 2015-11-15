@@ -2315,7 +2315,7 @@ levels.js_hoc2015_score =
   },
   'codeFunctions': {
     'playSound': null,
-    'addPoints': { params: ["100"] },
+    'addPoints': { params: ["300"] },
 
     'whenGetRebelPilot': null
   },
@@ -2364,24 +2364,31 @@ levels.js_hoc2015_score =
     successCondition: function () { return false; }
   },
   'progressConditions' : [
-    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 },
+    // complete success
+    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 900 },
+      result: { success: true, message: msg.successCharacter1() } },
+
+    // timed out: not enough goals
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedScoreTimeout() } },
-    { required: { 'timedOut': false, 'allGoalsVisited': true, 'currentPointsBelow': 300 },
+
+    // got all of the goals, and at least one point
+    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 1 },
+      result: {
+        success: false,
+        message: msg.failedScoreGoals(),  // JS: points done in wrong place
+        blocklyMessage: msg.failedScoreScoreBlockly()
+      }
+    },
+
+    // got all the goals, but 0 points
+    { required: { 'allGoalsVisited': true },
       result: {
         success: false,
         message: msg.failedScoreScore(),
         blocklyMessage: msg.failedScoreScoreBlockly()
       }
     },
-    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 },
-      result: {
-        success: false,
-        message: msg.failedScoreGoals(),
-        blocklyMessage: msg.failedScoreGoalsBlockly()
-      }
-    },
-    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 },
-      result: { success: true, message: msg.successCharacter1() } }
   ],
   'completeOnSuccessConditionNotGoals': true,
   'callouts': [
@@ -2494,8 +2501,11 @@ levels.js_hoc2015_win_lose = {
   ],
 
   'progressConditions' : [
+    // Timed out: not enough items, not enough points
     { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 },
       result: { success: false, message: msg.failedWinLoseTimeout() } },
+
+    // Timed out: enough items, not enough points
     { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 },
       result: {
         success: false,
@@ -2503,6 +2513,8 @@ levels.js_hoc2015_win_lose = {
         blocklyMessage: msg.failedWinLoseScoreBlockly()
       }
     },
+
+    // Timed out: not enough items, enough points
     { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 },
       result: {
         success: false,
@@ -2510,6 +2522,8 @@ levels.js_hoc2015_win_lose = {
         blocklyMessage: msg.failedWinLoseGoalsBlockly()
       }
     },
+
+    // Success: enough itmes, enough points
     { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 },
       result: { success: true, message: msg.successCharacter1() } }
   ]
@@ -2743,9 +2757,9 @@ levels.js_hoc2015_multiply_characters = {
     { required: { 'collectedItemsAtOrAbove': 20 },
       result: { success: true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2},
-      result: { success: false, canPass: true, message: msg.failedMultiplyCharactersTimoutGotSome() } },
+      result: { success: false, canPass: true, message: msg.failedMultiplyCharactersTimeoutGotSome() } },
     { required: { 'timedOut': true },
-      result: { success: false, message: msg.failedChainCharactersTimeout() } },
+      result: { success: false, message: msg.failedMultiplyCharactersTimeout() } },
   ],
   'callouts': [
     {
@@ -3072,8 +3086,7 @@ levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_backtrack,  {
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
     moveEastRequiredBlock(),
-    moveNorthRequiredBlock(),
-    moveSouthRequiredBlock(),
+    moveNorthRequiredBlock()
   ],
 });
 
