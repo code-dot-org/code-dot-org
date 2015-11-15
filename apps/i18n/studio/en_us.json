@@ -703,7 +703,6 @@
   "failedScoreScore": "You got the Rebel Pilots, but you need at least 900 points to pass the puzzle. Use the addPoints command to add lots of points when you get a Rebel Pilot.",
   "failedScoreScoreBlockly": "You got the Rebel Pilots, but you need at least 900 points to pass the puzzle. Use the \"add points\" block to add lots of points when you get a Rebel Pilot.",
   "failedScoreGoals": "You used the addPoints command, but not in the right place. Can you put it inside the whenGetRebelPilot function so R2-D2 can't get points until he gets a Rebel Pilot?",
-  "failedScoreGoalsBlockly": "You used the \"add points\" block, but not in the right place. Can you attach it to the \"when get Rebel Pilot\" block so R2-D2 can't get points until he gets a Rebel Pilot?",
   "failedWinLoseTimeout": "Try to reach all the Rebel Pilots before time runs out. To move faster, press and hold the arrow keys on your keyboard (or screen).",
   "failedWinLoseScore": "You need 200 points to pass the puzzle. Try adding more points with the addPoints command. You can use the Mynock to make it easier. To move faster, press and hold the arrow keys on your keyboard (or screen).",
   "failedWinLoseScoreBlockly": "You need 200 points to pass the puzzle. Try adding more points with the \"add points\" block. You can use the Mynock to make it easier. To move faster, press and hold the arrow keys on your keyboard (or screen).",
@@ -713,8 +712,8 @@
   "failedAddCharactersTimeoutBlockly": "Use three \"add a Puffer Pig\" blocks at the top of your program to add Puffer Pigs when you hit run. Now go get them.",
   "failedChainCharactersTimeout": "You need to get 8 Mynocks. Can you make two (or more) of them appear every time you get a Tauntaun? Make it easier by adding more Mynocks.",
   "failedChainCharactersTimeoutGotSome": "Congratulations, you added code to make Mynocks. You can go to the next puzzle or try again to get 8 of them.",
-  "failedMultiplyCharactersTimout": "You need to get 20 Mouse Droids.  Make sure you add two or more Mouse Droids every time you get one.",
-  "failedMultiplyCharactersTimoutGotSome": "Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)",
+  "failedMultiplyCharactersTimeout": "You need to get 20 Mouse Droids.  Make sure you add two or more Mouse Droids every time you get one.",
+  "failedMultiplyCharactersTimeoutGotSome": "Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)",
   "failedChangeSettingTimeout": "Get three Rebel Pilots to move on.",
   "failedChangeSettingSettings": "Make the game your own. To pass this puzzle, you need to change your droid and set the speed."
 }

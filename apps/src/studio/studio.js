@@ -1086,6 +1086,15 @@ Studio.onTick = function() {
       (!level.delayCompletion || currentTime > Studio.succeededTime + level.delayCompletion)) {
     Studio.onPuzzleComplete();
   }
+
+  // We want to make sure any queued event code related to all goals being visited is executed
+  // before we evaluate conditions related to this event.  For example, if score is incremented
+  // as a result of all goals being visited, recording allGoalsVisited here allows the score
+  // to be incremented before we check for a completion condition that looks for both all
+  // all goals visited, and the incremented score, on the next tick.
+  if (Studio.allGoalsVisited()) {
+    Studio.trackedBehavior.allGoalsVisited = true;
+  }
 };
 
 /**
@@ -2087,7 +2096,8 @@ Studio.reset = function(first) {
     hasSetMap: false,
     hasAddedItem: false,
     hasWonGame: false,
-    hasLostGame: false
+    hasLostGame: false,
+    allGoalsVisited: false
   };
 
   // Reset the record of the last direction that the user moved the sprite.
@@ -5301,7 +5311,7 @@ Studio.conditionSatisfied = function(required) {
       return false;
     }
 
-    if (valueName === 'allGoalsVisited' && Studio.allGoalsVisited() !== value) {
+    if (valueName === 'allGoalsVisited' && tracked.allGoalsVisited !== value) {
       return false;
     }
 
