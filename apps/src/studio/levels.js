@@ -1826,7 +1826,7 @@ levels.js_hoc2015_move_right = {
         },
         'position': {
           'my': 'bottom left',
-          'at': 'bottom center',
+          'at': 'top center',
           'adjust': {
             'x': 0,
             'y': 0
@@ -2075,7 +2075,7 @@ levels.js_hoc2015_move_around = {
           'my': 'top right',
           'at': 'bottom left',
           'adjust': {
-            'x': 0,
+            'x': 15,
             'y': 0
           }
         }
@@ -2210,7 +2210,7 @@ levels.js_hoc2015_event_two_items = {
           'event': 'mouseup touchend',
         },
         'position': {
-          'my': 'bottom left',
+          'my': 'top left',
           'at': 'bottom right',
           'adjust': {
             'x': 30,
@@ -2228,8 +2228,8 @@ levels.js_hoc2015_event_two_items = {
           'text': msg.calloutUseArrowButtons(),
         },
         'position': {
-          'my': 'top left',
-          'at': 'bottom center',
+          'my': 'bottom left',
+          'at': 'top center',
         }
       }
     }
@@ -2395,17 +2395,20 @@ levels.js_hoc2015_score =
         },
         'position': {
           'my': 'bottom left',
-          'at': 'bottom center',
+          'at': 'top center',
         }
       }
     },
     {
       'id': 'playlab:js_hoc2015_score:placeCommandsAtTop',
       'element_id': '.droplet-gutter-line:nth-of-type(2)',
-      'hide_target_selector': '.droplet-main-scroller',
+      'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content': {
           'text': msg.calloutShowPlaySound(),
+        },
+        'hide': {
+          'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top center',
@@ -2603,96 +2606,7 @@ levels.js_hoc2015_add_characters = {
   ]
 };
 
-
 levels.js_hoc2015_chain_characters = {
-  'editCode': true,
-  autocompletePaletteApisOnly: true,
-  executePaletteApisOnly: true,
-  'background': 'starship',
-  'music': [ 'song12' ],
-  'wallMap': 'grid',
-  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
-  'codeFunctions': {
-    'addCharacter': { params: ['"MouseDroid"'] },
-    'playSound': null,
-    'addPoints': null,
-    'removePoints': null,
-
-    'whenGetMouseDroid': null,
-  },
-  'startBlocks': [
-    'addCharacter("MouseDroid");',
-    'playSound("R2-D2sound3");',
-    ].join('\n'),
-  paramRestrictions: {
-    playSound: {
-      'random': true,
-      'R2-D2sound1': true,
-      'R2-D2sound2': true,
-      'R2-D2sound3': true,
-      'R2-D2sound4': true,
-      'MouseDroidSound1': true,
-      'MouseDroidSound2': true,
-      'MouseDroidSound3': true
-    }
-  },
-  'sortDrawOrder': true,
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
-  'itemGridAlignedMovement': true,
-  'removeItemsWhenActorCollides': true,
-  'delayCompletion': 2000,
-  'floatingScore': true,
-  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  'embed': 'false',
-  instructions: msg.hoc2015_chain_characters_instructions(),
-  instructions2: msg.hoc2015_chain_characters_instructions2(),
-  'autoArrowSteer': true,
-  'timeoutFailureTick': 2250, // 75 seconds
-  'showTimeoutRect': true,
-  'progressConditions' : [
-    { required: { 'timedOut': true, 'collectedItemsAbove': 2},
-      result: { success: false, canPass: true, message: msg.failedChainCharactersTimoutGotSome() } },
-    { required: { 'timedOut': true, 'collectedItemsBelow': 20, 'currentPointsBelow': 2000 },
-      result: { success: false, message: msg.failedChainCharactersTimeout() } },
-    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 20, 'currentPointsBelow': 2000 },
-      result: { success: false, message: msg.failedChainCharactersScore() } },
-    { required: { 'timedOut': true, 'collectedItemsBelow': 20, 'currentPointsAtOrAbove': 2000 },
-      result: {
-        success: false,
-        message: msg.failedChainCharactersItems(),
-        blocklyMessage: msg.failedChainCharactersItemsBlockly()
-      }
-    },
-    { required: { 'collectedItemsAtOrAbove': 20, 'currentPointsAtOrAbove': 2000 },
-      result: { success: true, message: msg.successCharacter1() } }
-  ],
-  'callouts': [
-    {
-      'id': 'playlab:js_hoc2015_chain_characters:calloutPlaceTwo',
-      'element_id': '#droplet_palette_block_whenGetMynock',
-      'hide_target_selector': '.droplet-drag-cover',
-      'qtip_config': {
-        'content' : {
-          'text': msg.calloutPlaceTwo(),
-        },
-        'hide': {
-          'event': 'mouseup touchend',
-        },
-        'position': {
-          'my': 'top left',
-          'at': 'center right',
-          'adjust': {
-            'x': 40,
-            'y': 10
-          }
-        }
-      }
-    }
-  ]
-};
-
-levels.js_hoc2015_chain_characters_2 = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2751,20 +2665,99 @@ levels.js_hoc2015_chain_characters_2 = {
   'timeoutFailureTick': 1800, // 60 seconds
   'showTimeoutRect': true,
   'progressConditions' : [
+    { required: { 'collectedItemsAtOrAbove': 8 },
+      result: { success: true, message: msg.successCharacter1() } },
     { required: {'timedOut': true, collectedItemsAtOrAbove: 5 },
-      result: { success: false, canPass: true, message: msg.failedChainCharacters2TimeoutGotSome() } },
+      result: { success: false, canPass: true, message: msg.failedChainCharactersTimeoutGotSome() } },
     { required: { 'timedOut': true },
-      result: { success: false, message: msg.failedChainCharacters2Timeout() } },
-    { required: { 'collectedItemsAtOrAbove': 14 },
-      result: { success: true, message: msg.successCharacter1() } }
+      result: { success: false, message: msg.failedChainCharactersTimeout() } },
   ],
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwoWhenTauntaun',
+      'id': 'playlab:js_hoc2015_chain_characters:calloutPlaceTwoWhenTauntaun',
       'element_id': '.droplet-gutter-line:nth-of-type(9)',
       'qtip_config': {
         'content' : {
           'text': msg.calloutPlaceTwoWhenTauntaun(),
+        },
+        'position': {
+          'my': 'top left',
+          'at': 'bottom center',
+          'adjust': {
+            'x': 65,
+            'y': 0
+          }
+        },
+      }
+    }
+  ]
+};
+
+levels.js_hoc2015_multiply_characters = {
+  'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
+  'background': 'starship',
+  'music': [ 'song12' ],
+  'wallMap': 'grid',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'addCharacter': { params: ['"MouseDroid"'] },
+    'playSound': null,
+    'addPoints': null,
+    'removePoints': null,
+
+    'whenGetMouseDroid': null,
+  },
+  'startBlocks': [
+    'addCharacter("MouseDroid");',
+    'playSound("R2-D2sound3");',
+    ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true
+    }
+  },
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  instructions: msg.hoc2015_multiply_characters_instructions(),
+  instructions2: msg.hoc2015_multiply_characters_instructions2(),
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 2250, // 75 seconds
+  'showTimeoutRect': true,
+  'progressConditions' : [
+    { required: { 'collectedItemsAtOrAbove': 20 },
+      result: { success: true, message: msg.successCharacter1() } },
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2},
+      result: { success: false, canPass: true, message: msg.failedMultiplyCharactersTimoutGotSome() } },
+    { required: { 'timedOut': true },
+      result: { success: false, message: msg.failedChainCharactersTimeout() } },
+  ],
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_multiply_characters:calloutPlaceTwo',
+      'element_id': '#droplet_palette_block_whenGetMouseDroid',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutPlaceTwo(),
+        },
+        'hide': {
+          'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top left',
@@ -2800,7 +2793,7 @@ levels.js_hoc2015_change_setting = {
     'addCharacter("RebelPilot");',
     'addCharacter("RebelPilot");',
     '',
-    'playBackground("random");',
+    'setBackground("random");',
     'setMap("random");',
     ''].join('\n'),
   paramRestrictions: {
@@ -2889,7 +2882,7 @@ var js_hoc2015_event_free_markdown = [
   '<br />Add ten Stormtroopers to chase C-3PO. See if you can outrun them by running at high speed.</p>',
   '',
   '<p>**Example 3**',
-  '<br />Add five Puffer Pigs that are running away from R2-D2. Make him scream each time he catches one.</p>',
+  '<br />Make your droid move faster when he touches a Mouse Droid and slower when he touches a Stormtrooper.</p>',
   '',
   '</details>',
   '<details class="hoc2015">',
@@ -3050,7 +3043,7 @@ levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
         },
         'position': {
           'my': 'bottom left',
-          'at': 'bottom center',
+          'at': 'top center',
           'adjust': {
             'x': 0,
             'y': 0
@@ -3072,19 +3065,7 @@ levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
   ],
 });
 
-levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_diagonal,  {
-  editCode: false,
-  enableShowCode: true,
-  callouts: null,
-  startBlocks: whenRunMoveSouth,
-  toolbox: tb(hocMoveNSEW),
-  requiredBlocks: [
-    moveSouthRequiredBlock(),
-    moveWestRequiredBlock(),
-  ],
-});
-
-levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_backtrack,  {
+levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_backtrack,  {
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveEast,
@@ -3093,6 +3074,18 @@ levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_backtrack,  {
     moveEastRequiredBlock(),
     moveNorthRequiredBlock(),
     moveSouthRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_diagonal,  {
+  editCode: false,
+  enableShowCode: true,
+  callouts: null,
+  startBlocks: whenRunMoveSouth,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveSouthRequiredBlock(),
+    moveWestRequiredBlock(),
   ],
 });
 
@@ -3106,6 +3099,7 @@ levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_around,  {
     moveSouthRequiredBlock(),
     moveWestRequiredBlock(),
   ],
+  callouts: []
 });
 
 levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_finale,  {
@@ -3142,7 +3136,7 @@ levels.hoc2015_blockly_7 = utils.extend(levels.js_hoc2015_event_two_items,  {
           text: msg.calloutBlocklyPlaceGoUpHere(),
         },
         position: {
-          my: 'bottom left',
+          my: 'top left',
           at: 'bottom left',
           adjust: {
             x: 22,
@@ -3160,8 +3154,8 @@ levels.hoc2015_blockly_7 = utils.extend(levels.js_hoc2015_event_two_items,  {
           'text': msg.calloutUseArrowButtons(),
         },
         'position': {
-          'my': 'top left',
-          'at': 'bottom center',
+          'my': 'bottom left',
+          'at': 'top center',
         }
       }
     }
@@ -3194,7 +3188,7 @@ levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
       </next></block>',
   toolbox:
     tb('<block type="studio_playSound"></block> \
-        <block type="studio_addPoints"><title name="VALUE">100</title></block>'),
+        <block type="studio_addPoints"><title name="VALUE">300</title></block>'),
   requiredBlocks: [
     // TODO: addPoints
   ],
@@ -3209,19 +3203,20 @@ levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
         },
         'position': {
           'my': 'bottom left',
-          'at': 'bottom center',
+          'at': 'top center',
         }
       }
     },
     {
       id: 'playlab:hoc2015_blockly_9:placeCommandsAtTop',
       element_id: '[block-id="4"]',
+      hide_target_selector: '.blocklyDraggable',
       qtip_config: {
         content: {
           text: msg.calloutShowPlaySound(),
         },
         position: {
-          my: 'top center',
+          my: 'top left',
           at: 'bottom center',
         }
       }
@@ -3305,64 +3300,22 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
-       <block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title> \
-        <next> \
-         <block type="studio_playSound"><title name="SOUND">R2-D2sound3</title></block> \
-        </next> \
-       </block> \
-      </next> \
-     </block>',
-  toolbox:
-    tb('<block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
-        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
-        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
-        <block type="studio_playSound"></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">mousedroid</title></block>'),
-  requiredBlocks: [
-    // TODO: addCharacter, addPoints
-  ],
-  callouts: [
-    {
-      id: 'playlab:hoc2015_blockly_12:calloutPlaceTwo',
-      element_id: '[block-id="7"]',
-      hide_target_selector: '.blocklyDraggable',
-      qtip_config: {
-        content: {
-          text: msg.calloutPlaceTwo(),
-        },
-        position: {
-          my: 'top left',
-          at: 'bottom left',
-          adjust: {
-            x: 22,
-            y: 0
-          }
-        }
-      }
-    }
-  ]
-});
-
-levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  {
-  editCode: false,
-  enableShowCode: true,
-  startBlocks:
-    '<block type="when_run" deletable="false" x="20" y="20"> \
-      <next> \
        <block type="studio_addCharacter"><title name="VALUE">"tauntaun"</title> \
         <next> \
-         <block type="studio_addCharacter"><title name="VALUE">"tauntaun"</title></block> \
+         <block type="studio_addCharacter"><title name="VALUE">"tauntaun"</title> \
           <next> \
-           <block type="studio_addCharacter"><title name="VALUE">"tauntaun"</title></block> \
+           <block type="studio_addCharacter"><title name="VALUE">"tauntaun"</title> \
             <next> \
              <block type="studio_addCharacter"><title name="VALUE">"tauntaun"</title></block> \
             </next> \
+           </block> \
           </next> \
+         </block> \
         </next> \
        </block> \
       </next> \
      </block> \
-     <block type="studio_whenGetCharacter" deletable="false" x="20" y="130"> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="180"> \
       <title name="VALUE">tauntaun</title> \
       <next> \
        <block type="studio_playSound"><title name="SOUND">TauntaunSound4</title> \
@@ -3383,8 +3336,8 @@ levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  
   ],
   callouts: [
     {
-      id: 'playlab:hoc2015_blockly_13:calloutPlaceTwoWhenTauntaun',
-      element_id: '[block-id="13"]',
+      id: 'playlab:hoc2015_blockly_12:calloutPlaceTwoWhenTauntaun',
+      element_id: '[block-id="11"]',
       qtip_config: {
         content: {
           text: msg.calloutPlaceTwoWhenTauntaun(),
@@ -3392,6 +3345,50 @@ levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  
         position: {
           my: 'top left',
           at: 'bottom center',
+          'adjust': {
+            'x': 0,
+            'y': 0
+          }
+        }
+      }
+    }
+  ]
+});
+
+levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_multiply_characters,  {
+  editCode: false,
+  enableShowCode: true,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title> \
+        <next> \
+         <block type="studio_playSound"><title name="SOUND">R2-D2sound3</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>',
+  toolbox:
+    tb('<block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_playSound"></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">mousedroid</title></block>'),
+  requiredBlocks: [
+    // TODO: addCharacter, addPoints
+  ],
+  callouts: [
+    {
+      id: 'playlab:hoc2015_blockly_13:calloutPlaceTwo',
+      element_id: '[block-id="5"]',
+      hide_target_selector: '.blocklyDraggable',
+      qtip_config: {
+        content: {
+          text: msg.calloutPlaceTwo(),
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom center'
         }
       }
     }
