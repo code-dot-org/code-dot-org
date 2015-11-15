@@ -24,9 +24,6 @@
   margin-bottom: 10px;
   color: white;
   font-size: 30px;
-  position: absolute;
-  top: 10px;
-  left: 620px;
 }
 
 .mc-h1-second-box {
@@ -71,6 +68,15 @@
   height:40px;
 }
 
+@media screen and (min-width: 971px) {
+  .mc-tutorial {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+}
+
 @media screen and (min-width: 0px) and (max-width: 970px) {
   .mc-tutorial {
     width: 100%;
@@ -96,6 +102,10 @@
   }
 
   .mc-1 {
+    display: none;
+  }
+
+  .mc-h1 {
     display: none;
   }
 

@@ -1200,7 +1200,7 @@ body {
 
 .workspace-header-button {
   background-color: #606060 !important;
-  color: #8B8B8B;
+  color: #BFBFBF;
   border: none; }
   .workspace-header-button:hover {
     color: white; }
@@ -1350,53 +1350,53 @@ a.video_link {
     -ms-transform: scale(0.4192872117);
     transform: scale(0.4192872117); } }
 
-@media screen and (min-height: 541px) {
+@media screen and (min-height: 560px) {
   #visualization.responsive {
-    max-height: 225px;
-    max-width: 204.716981132px; }
+    max-height: 277px;
+    max-width: 252.029350105px; }
   #visualizationColumn.responsive {
-    max-width: 204.716981132px; }
+    max-width: 252.029350105px; }
   .small-footer-base.responsive {
-    max-width: 204.716981132px; }
+    max-width: 252.029350105px; }
   #codeWorkspace {
-    left: 204.716981132px; }
+    left: 252.029350105px; }
   html[dir='rtl'] #codeWorkspace {
-    right: 204.716981132px; }
+    right: 252.029350105px; }
   div#visualizationResizeBar {
-    left: 204.716981132px;
-    line-height: 225px; }
+    left: 252.029350105px;
+    line-height: 277px; }
   html[dir='rtl'] div#visualizationResizeBar {
-    right: 204.716981132px; }
+    right: 252.029350105px; }
   #visualizationEditor.responsive {
-    margin-left: 204.716981132px; }
+    margin-left: 252.029350105px; }
   #visualization.responsive > * {
-    -webkit-transform: scale(0.4716981132);
-    -ms-transform: scale(0.4716981132);
-    transform: scale(0.4716981132); } }
+    -webkit-transform: scale(0.5807127883);
+    -ms-transform: scale(0.5807127883);
+    transform: scale(0.5807127883); } }
 
-@media screen and (min-width: 850px) and (min-height: 626px) {
+@media screen and (min-width: 850px) and (min-height: 642px) {
   #visualization.responsive {
-    max-height: 300px;
-    max-width: 272.955974843px; }
+    max-height: 377px;
+    max-width: 343.014675052px; }
   #visualizationColumn.responsive {
-    max-width: 272.955974843px; }
+    max-width: 343.014675052px; }
   .small-footer-base.responsive {
-    max-width: 272.955974843px; }
+    max-width: 343.014675052px; }
   #codeWorkspace {
-    left: 272.955974843px; }
+    left: 343.014675052px; }
   html[dir='rtl'] #codeWorkspace {
-    right: 272.955974843px; }
+    right: 343.014675052px; }
   div#visualizationResizeBar {
-    left: 272.955974843px;
-    line-height: 300px; }
+    left: 343.014675052px;
+    line-height: 377px; }
   html[dir='rtl'] div#visualizationResizeBar {
-    right: 272.955974843px; }
+    right: 343.014675052px; }
   #visualizationEditor.responsive {
-    margin-left: 272.955974843px; }
+    margin-left: 343.014675052px; }
   #visualization.responsive > * {
-    -webkit-transform: scale(0.6289308176);
-    -ms-transform: scale(0.6289308176);
-    transform: scale(0.6289308176); } }
+    -webkit-transform: scale(0.7903563941);
+    -ms-transform: scale(0.7903563941);
+    transform: scale(0.7903563941); } }
 
 @media screen and (min-width: 1050px) and (min-height: 732px) {
   #visualization.responsive {
@@ -1421,6 +1421,30 @@ a.video_link {
     -webkit-transform: scale(0.9433962264);
     -ms-transform: scale(0.9433962264);
     transform: scale(0.9433962264); } }
+
+@media screen and (min-width: 1150px) and (min-height: 832px) {
+  #visualization.responsive {
+    max-height: 515px;
+    max-width: 468.57442348px; }
+  #visualizationColumn.responsive {
+    max-width: 468.57442348px; }
+  .small-footer-base.responsive {
+    max-width: 468.57442348px; }
+  #codeWorkspace {
+    left: 468.57442348px; }
+  html[dir='rtl'] #codeWorkspace {
+    right: 468.57442348px; }
+  div#visualizationResizeBar {
+    left: 468.57442348px;
+    line-height: 515px; }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: 468.57442348px; }
+  #visualizationEditor.responsive {
+    margin-left: 468.57442348px; }
+  #visualization.responsive > * {
+    -webkit-transform: scale(1.0796645702);
+    -ms-transform: scale(1.0796645702);
+    transform: scale(1.0796645702); } }
 
 #visualization {
   height: 677px !important; }
@@ -1997,6 +2021,9 @@ a.video_link {
     color: #c6cacd; }
   .dash_modal #show-code, .dash_modal #feedbackButtons, .dash_modal #puzzleRatingButtons {
     margin-left: -100px; }
+  .dash_modal .social-buttons a:hover {
+    background: none !important;
+    fill: white !important; }
   .dash_modal #puzzleRatingButtons a:hover.puzzle-rating-btn {
     background: none !important;
     fill: white !important; }
@@ -2004,6 +2031,10 @@ a.video_link {
     line-height: 27px;
     font-size: 24px;
     color: #e7e8ea; }
+  .dash_modal p.congrats {
+    margin-left: 69px; }
+  .dash_modal .failure-feedback p.congrats {
+    margin-left: 0px; }
   .dash_modal #notes .note p {
     color: #4d575f; }
   .dash_modal .generated-code-container .generatedCodeMessage {
