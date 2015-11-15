@@ -45,7 +45,7 @@ var characters = {
 var interfaceImages = {
   1: [
     MEDIA_URL + "Sliced_Parts/MC_Loading_Spinner.gif",
-    MEDIA_URL + "Sliced_Parts/Game_Window_BG_Frame.png",
+    MEDIA_URL + "Sliced_Parts/Frame_Large_Plus_Logo.png",
     MEDIA_URL + "Sliced_Parts/Pop_Up_Slice.png",
     MEDIA_URL + "Sliced_Parts/Steve_Character_Select.png",
     MEDIA_URL + "Sliced_Parts/Alex_Character_Select.png",
@@ -278,15 +278,16 @@ Craft.init = function (config) {
          * (due to e.g. character / house select popups).
          */
         earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
+        afterAssetsLoaded: function () {
+          // preload music after essential game initialization assets kicked off loading
+          Craft.musicController.preload();
+        },
         earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
       });
 
       if (!config.level.showPopupOnLoad) {
         Craft.initializeAppLevel(config.level);
       }
-
-      // preload music after essential game initialization assets kicked off loading
-      Craft.musicController.preload();
     },
     twitter: {
       text: "Share on Twitter",
