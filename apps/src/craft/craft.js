@@ -43,12 +43,10 @@ var characters = {
 };
 
 var interfaceImages = {
-  1: [
+  DEFAULT: [
     MEDIA_URL + "Sliced_Parts/MC_Loading_Spinner.gif",
-    MEDIA_URL + "Sliced_Parts/Game_Window_BG_Frame.png",
+    MEDIA_URL + "Sliced_Parts/Frame_Large_Plus_Logo.png",
     MEDIA_URL + "Sliced_Parts/Pop_Up_Slice.png",
-    MEDIA_URL + "Sliced_Parts/Steve_Character_Select.png",
-    MEDIA_URL + "Sliced_Parts/Alex_Character_Select.png",
     MEDIA_URL + "Sliced_Parts/X_Button.png",
     MEDIA_URL + "Sliced_Parts/Button_Grey_Slice.png",
     MEDIA_URL + "Sliced_Parts/Run_Button_Up_Slice.png",
@@ -58,6 +56,10 @@ var interfaceImages = {
     MEDIA_URL + "Sliced_Parts/MC_Reset_Arrow_Icon.png",
     MEDIA_URL + "Sliced_Parts/Reset_Button_Down_Slice.png",
     MEDIA_URL + "Sliced_Parts/Callout_Tail.png",
+  ],
+  1: [
+    MEDIA_URL + "Sliced_Parts/Steve_Character_Select.png",
+    MEDIA_URL + "Sliced_Parts/Alex_Character_Select.png",
     characters.Steve.staticAvatar,
     characters.Steve.smallStaticAvatar,
     characters.Alex.staticAvatar,
@@ -278,15 +280,16 @@ Craft.init = function (config) {
          * (due to e.g. character / house select popups).
          */
         earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
+        afterAssetsLoaded: function () {
+          // preload music after essential game asset downloads completely finished
+          Craft.musicController.preload();
+        },
         earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
       });
 
       if (!config.level.showPopupOnLoad) {
         Craft.initializeAppLevel(config.level);
       }
-
-      // preload music after essential game initialization assets kicked off loading
-      Craft.musicController.preload();
     },
     twitter: {
       text: "Share on Twitter",
@@ -294,11 +297,17 @@ Craft.init = function (config) {
     }
   }));
 
+  var interfaceImagesToLoad = [];
+  interfaceImagesToLoad = interfaceImagesToLoad.concat(interfaceImages.DEFAULT);
+
   if (config.level.puzzle_number && interfaceImages[config.level.puzzle_number]) {
-    interfaceImages[config.level.puzzle_number].forEach(function(url) {
-      preloadImage(url);
-    });
+    interfaceImagesToLoad =
+        interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
   }
+
+  interfaceImagesToLoad.forEach(function(url) {
+    preloadImage(url);
+  });
 };
 
 var preloadImage = function(url) {
