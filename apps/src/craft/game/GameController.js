@@ -63,6 +63,7 @@ class GameController {
     this.assetRoot = gameControllerConfig.assetRoot;
 
     this.audioPlayer = gameControllerConfig.audioPlayer;
+    this.afterAssetsLoaded = gameControllerConfig.afterAssetsLoaded;
     this.assetLoader = new AssetLoader(this);
     this.earlyLoadAssetPacks =
         gameControllerConfig.earlyLoadAssetPacks || [];
@@ -130,6 +131,11 @@ class GameController {
     this.game.time.slowMotion = this.initialSlowMotion;
     this.addCheatKeys();
     this.assetLoader.loadPacks(this.levelData.assetPacks.afterLoad);
+    this.game.load.onLoadComplete.addOnce(() => {
+      if (this.afterAssetsLoaded) {
+        this.afterAssetsLoaded();
+      }
+    });
     this.game.load.start();
   }
 
