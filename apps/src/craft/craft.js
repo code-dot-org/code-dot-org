@@ -279,7 +279,7 @@ Craft.init = function (config) {
          */
         earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
         afterAssetsLoaded: function () {
-          // preload music after essential game initialization assets kicked off loading
+          // preload music after essential game asset downloads completely finished
           Craft.musicController.preload();
         },
         earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
