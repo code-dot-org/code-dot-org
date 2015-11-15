@@ -26,8 +26,8 @@ level 'blockly:StudioEC:js_hoc2015_score'
 level 'blockly:StudioEC:js_hoc2015_win_lose'
 
 level 'blockly:StudioEC:js_hoc2015_add_characters'
-level 'blockly:StudioEC:js_hoc2015_chain_characters_2'
 level 'blockly:StudioEC:js_hoc2015_chain_characters'
+level 'blockly:StudioEC:js_hoc2015_multiply_characters'
 level 'blockly:StudioEC:js_hoc2015_change_setting'
 
 video_key_for_next_level 'starwars_congrats'
