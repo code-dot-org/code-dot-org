@@ -1,12 +1,9 @@
-require 'minitest/autorun'
-require 'rack/test'
-require File.expand_path '../../../deployment', __FILE__
-require File.expand_path '../../middleware/channels_api', __FILE__
-require File.expand_path '../../middleware/tables_api', __FILE__
-
-ENV['RACK_ENV'] = 'test'
+require_relative 'test_helper'
+require 'channels_api'
+require 'tables_api'
 
 class TablesTest < Minitest::Test
+  include SetupTest
 
   def test_create_read_update_delete
     init_apis

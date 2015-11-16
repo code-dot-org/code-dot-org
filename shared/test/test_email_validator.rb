@@ -1,8 +1,7 @@
 # coding: utf-8
-require 'minitest/autorun'
-require 'rack/test'
+require_relative 'test_helper'
 
-require_relative '../../lib/cdo/email_validator'
+require 'cdo/email_validator'
 
 class EmailValidatorTest < Minitest::Test
 
