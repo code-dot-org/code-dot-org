@@ -1091,7 +1091,7 @@ Studio.onTick = function() {
   // before we evaluate conditions related to this event.  For example, if score is incremented
   // as a result of all goals being visited, recording allGoalsVisited here allows the score
   // to be incremented before we check for a completion condition that looks for both all
-  // all goals visited, and the incremented score, on the next tick.
+  // goals visited, and the incremented score, on the next tick.
   if (Studio.allGoalsVisited()) {
     Studio.trackedBehavior.allGoalsVisited = true;
   }
@@ -5295,7 +5295,7 @@ Studio.conditionSatisfied = function(required) {
     var valueName = valueNames[k];
     var value = required[valueName];
 
-    if (valueName === 'timedOut' && tracked.timedOut  != value) {
+    if (valueName === 'timedOut' && tracked.timedOut != value) {
       return false;
     }
 
