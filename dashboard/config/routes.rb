@@ -179,6 +179,7 @@ Dashboard::Application.routes.draw do
 
   # one-off internal reports
   get '/admin/brook/csppd', to: 'reports#csp_pd_responses', as: 'csp_pd_responses'
+  get '/admin/roxanne/hoc_signups', to: 'admin_reports#hoc_signups', as: 'hoc_signups'
 
   # internal report dashboards
   get '/admin/concepts', to: 'admin_reports#admin_concepts', as: 'admin_concepts'

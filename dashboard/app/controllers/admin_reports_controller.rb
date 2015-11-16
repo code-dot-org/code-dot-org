@@ -202,6 +202,14 @@ class AdminReportsController < ApplicationController
     render 'reports/usage', formats: [:html]
   end
 
+  def hoc_signups
+    authorize! :read, :reports
+
+    # Get the HOC 2015 signup counts by day, deduped by email and name.
+    signups_by_day = DB[:forms].where(kind: 'HocSignup2015').group(:name, :email).group_and_count(:created_at).all.map{|row| [row[:created_at].to_date.to_s, row[:count].to_i]}
+    render locals: {signups_by_day: signups_by_day}
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_script
     @script = Script.get_from_cache(params[:script_id]) if params[:script_id]
