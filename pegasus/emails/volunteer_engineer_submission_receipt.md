@@ -3,6 +3,7 @@ from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
 subject: Volunteer Submission Received
 ---
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
+<% update_preferences = "http://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{form.secret}/" %>
 
 Thank you for submitting your information to help local teachers for the Hour of Code, during Computer Science Education Week December 7-13. So what can you do now?
 
