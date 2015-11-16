@@ -6,6 +6,7 @@
 
 -tutorials = Tutorials.new(variation=='learn' ? :tutorials : :beyond_tutorials)
 
+- @variation = variation
 - if page_mode == 'minecraft'
   #carousel-mc{:style=>''}
     = view :learn_carousel_special, :tag=>'minecraft', :tutorials=>tutorials, :id=>'collection-mc', :second_panel_image=>'/images/mc/fit-520/MC_Panorama_Stack_V2_background.jpg'
