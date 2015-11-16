@@ -77,7 +77,8 @@ exec(command, function (err, stdout, stderr) {
     transform: 'ejsify',
     'web-security': false
   })
- .on('error', function () {
+ .on('error', function (e) {
+   console.log(e.stack);
    process.exit(1);
   })
   .bundle()
