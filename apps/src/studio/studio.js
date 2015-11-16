@@ -35,7 +35,7 @@ var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
 var ImageFilterFactory = require('./ImageFilterFactory');
 var ThreeSliceAudio = require('./ThreeSliceAudio');
-var MusicController = require('./MusicController');
+var MusicController = require('../MusicController');
 var paramLists = require('./paramLists.js');
 
 // tests don't have svgelement

@@ -6,15 +6,15 @@ class VarnishHelperTest < Minitest::Test
 
   def test_paths_to_regex
     ext_regex = paths_to_regex('/*.jpg')
-    assert_equal 'req.url ~ "(\.jpg)(\?.*)?$"', ext_regex
+    assert_equal "req.url ~ \"^.*\\.jpg#{END_URL_REGEX}\"", ext_regex
 
     assert_equal ext_regex, paths_to_regex(['/*.jpg'])
 
     exts_regex = paths_to_regex(%w(/*.jpg /*.png))
-    assert_equal 'req.url ~ "(\.jpg|\.png)(\?.*)?$"', exts_regex
+    assert_equal "req.url ~ \"^.*\\.jpg#{END_URL_REGEX}\" || req.url ~ \"^.*\\.png#{END_URL_REGEX}\"", exts_regex
 
     path_regex = paths_to_regex(%w(/path1/* /path2/*))
-    assert_equal 'req.url ~ "^/path1/" || req.url ~ "^/path2/"',  path_regex
+    assert_equal "req.url ~ \"^/path1/.*#{END_URL_REGEX}\" || req.url ~ \"^/path2/.*#{END_URL_REGEX}\"",  path_regex
   end
 
   def test_invalid_path_patterns
@@ -37,7 +37,7 @@ class VarnishHelperTest < Minitest::Test
       '/[]/*',
       '/()/*',
     ].map do |path|
-      assert_raises(ArgumentError) { paths_to_regex path }
+      assert_raises(ArgumentError, "Path did not raise error: #{path}") { paths_to_regex path }
     end
   end
 
@@ -71,40 +71,55 @@ if (a == true) {
 }
 STR
   end
-
+  HEADERS = REMOVED_HEADERS.map{|x|x.split(':')[0]}
   BEHAVIOR = {
     dashboard: {
       behaviors: [],
-      default: {cookies: 'all'}
+      default: {cookies: 'all', headers: HEADERS}
     },
     pegasus: {
-      behaviors: [{
+      behaviors: [
+        {
           path: '/api/*',
+          headers: HEADERS,
           cookies: 'all'
-        }],
-      default: {cookies: 'none'}
+        },
+        {
+          path: '/',
+          headers: HEADERS,
+          cookies: ['1']
+        }
+      ],
+      default: {cookies: 'none', headers: HEADERS}
     }
   }
 
   def test_setup_behavior
-    output = setup_behavior BEHAVIOR
+    output = setup_behavior(BEHAVIOR, 'req', &method(:process_request))
     assert_equal <<STR.strip, output
 if (req.http.host ~ "(dashboard|studio).code.org$") {
   # Allow all request cookies.
 } else {
-  if (req.url ~ "^/api/") {
+  if (req.url ~ "^/api/.*#{END_URL_REGEX}") {
     # Allow all request cookies.
+  } else if (req.url ~ "^/#{END_URL_REGEX}") {
+    if(cookie.isset("1")) {
+      set req.http.X-COOKIE-1 = cookie.get("1");
+    }
+    cookie.filter_except("1");
   } else {
     cookie.filter_except("NO_CACHE");
   }
 }
 STR
-    output = setup_behavior BEHAVIOR, 'response'
+    output = setup_behavior(BEHAVIOR, 'bereq', &method(:process_response))
     assert_equal <<STR.strip, output
 if (bereq.http.host ~ "(dashboard|studio).code.org$") {
   # Allow set-cookie responses.
 } else {
-  if (bereq.url ~ "^/api/") {
+  if (bereq.url ~ "^/api/.*#{END_URL_REGEX}") {
+    # Allow set-cookie responses.
+  } else if (bereq.url ~ "^/#{END_URL_REGEX}") {
     # Allow set-cookie responses.
   } else {
     unset beresp.http.set-cookie;
@@ -122,10 +137,13 @@ STR
     pegasus = BEHAVIOR[:pegasus]
     assert_equal 'all', ruby_behavior(dashboard, '/api/')[:cookies]
     assert_equal 'all', ruby_behavior(pegasus, '/api/')[:cookies]
-    assert_equal 'none', ruby_behavior(pegasus, '/')[:cookies]
+    assert_equal ['1'], ruby_behavior(pegasus, '/')[:cookies]
+    assert_equal 'none', ruby_behavior(pegasus, '/something')[:cookies]
 
     assert_equal '/api/*', ruby_behavior(pegasus, '/api/1')[:path]
     assert_nil ruby_behavior(pegasus, 'api/1')[:path]
+    assert_nil ruby_behavior(pegasus, '/test/api/1')[:path]
+
     assert_nil ruby_behavior(pegasus, '/test/api/1')[:path]
   end
 end

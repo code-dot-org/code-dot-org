@@ -829,6 +829,7 @@ en:
         title: title
       U2L9 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
+      U3 - Arrays and Loops - Explain Functions with Returns: {}
       U3 - Conditionals - Boolean Expressions and Operators: {}
       U3 - Conditionals - Introducing Else: {}
       U3 - Conditionals - Translating Flowcharts - Chained: {}
@@ -1089,12 +1090,20 @@ en:
       challenges sample 7:
         Give these a try: Give these a try
         Life Science Challenges: Life Science Challenges
+      duino auduino:
+        duino auduino: duino auduino
       duino battery led:
         duino battery led: duino battery led
       duino button led:
         duino button led: duino button led
+      duino junkbot build:
+        duino junkbot build: duino junkbot build
+      duino junkbot software:
+        duino junkbot software: duino junkbot software
       duino multi leds:
         duino multi leds: duino multi leds
+      duino music:
+        duino music: duino music
       duino pov:
         duino pov: duino pov
       equity Intro:

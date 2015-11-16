@@ -10,7 +10,7 @@
     font-weight:bold"> planlæg din Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Underviser du i programmering? Se andre CSEdWeek ressourcer</a>'
-  n_have_learned_an_hoc: "<h1>Prøv en</h1><h2>Hour of Code</h2><h3># leveret</h3>"
+  n_have_learned_an_hoc: <h1>Prøv en</h1><h2>Hour of Code</h2><h3># leveret</h3>
   anybody_can_learn: Alle kan lære.
   learn_now: Lær Nu
   petition_message: Alle elever i alle skoler burde have muligheden for at lære programmering
@@ -34,7 +34,7 @@
   hoc2014_everyone: Alle
   hoc2014_support: Støt &#x25BE;
   hoc2014_whatishoc: Hvad er "Hour of Code"?
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
@@ -61,7 +61,7 @@
     gentag-loops, hvis-så præmisser og grundlæggende algoritmer.
   all_ages: Alle aldre
   beginner: Nybegynder
-  n_participants: "# deltagere"
+  n_participants: '# deltagere'
   go: Start
   thank_you_: Tak!
   congratulations: Tillykke!
@@ -107,7 +107,7 @@
   beyond_an_hour: Lær mere når du har gennemført Hour of Code
   get_started: Start
   i_agree: Jeg er enig
-  participant_select: "- Vælg -"
+  participant_select: '- Vælg -'
   participant_student: Elev
   participant_parent: Forældre
   participant_educator: Underviser
@@ -128,7 +128,7 @@
   learn_next_level: Fortsæt til det næste niveau
   learn_online: Prøv andre online kurser
   learn_classes: Find lokale klasser
-  hoc_is_here: "#HourOfCode er her - tjek det ud! @codeorg"
+  hoc_is_here: '#HourOfCode er her - tjek det ud! @codeorg'
   just_did_hoc: 'Jeg har lige taget en #HourOfCode - tjek det ud! @codeorg'
   twitter_teach_cs: Hvorfor underviser så få skoler i programmering? Lad os hjælpe
     dem i gang. http://youtu.be/nKIu9yen5nc. Besøg http://code.org/ for at lære mere.
@@ -142,11 +142,11 @@
   help_recruit_coders: Hjælpe os med at rekruttere flere programmører til dit hold!
   help_recruit: Hjælp os med at rekruttere flere programmører!
   lines_of_code: OVER <b># LINJER KODE</b> SKREVET TIL DATO.
-  lines_of_code_alt: "<b>#</b> LINJER AF KODE SKREVET AF ELEVER"
+  lines_of_code_alt: <b>#</b> LINJER AF KODE SKREVET AF ELEVER
   who_has_done_hoc: 'Hvem har lavet #HourOfCode @codeorg'
   hoc_leaderboards: Rangelisten for Hour Of Code
-  students_and_lines: "%{students} elever har gennemført Hour of Code og skrevet %{lines}
-    linjer kode."
+  students_and_lines: '%{students} elever har gennemført Hour of Code og skrevet %{lines}
+    linjer kode.'
   start_hoc: Start Hour of Code nu
   contact_form_topic_press: Pressen/medierne (interview eller taler-arrangementer)
   stats_nina: '"Hver eneste dag gav de samme resultater&mdash; 100% engagement." -
@@ -211,8 +211,8 @@
   homepage_hero_text_teacher2: |
     &ldquo;Det fik 100% af mine elever engagerede, involverede og til at deltage.&rdquo;
     Adam, lærer
-  homepage_hero_text_stat_loc: "#loc linjer kode skrevet af elever"
-  homepage_hero_text_stat_students: "#student_count elever oprettet på Code Studio"
+  homepage_hero_text_stat_loc: '#loc linjer kode skrevet af elever'
+  homepage_hero_text_stat_students: '#student_count elever oprettet på Code Studio'
   homepage_hero_text_stat_served: 'Hour of Code: #served leveret'
   homepage_slot_text_hoc: Kodetimen
   homepage_slot_text_frozen: Frozen med Anna og Elsa
@@ -239,7 +239,7 @@
   homepage_slot_text_blurb_hoc: Alle kan lære det. Start i dag
   homepage_slot_text_link_hoc: Prøv Hour of Code
   homepage_slot_text_link_host: Hold selv en Hour of Code
-  homepage_slot_text_link_hocserved: "# leveret"
+  homepage_slot_text_link_hocserved: '# leveret'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Studerende
   homepage_slot_text_blurb_students: Gå på opdagelse i vores øvelser
@@ -301,9 +301,9 @@
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up."
+    have signed up.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
@@ -610,9 +610,9 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: Hour of Code er her - 8.-14. december!
   code_sign_up: Tilmeld dig til at deltage i CS Education Week
   learn_more: Lær mere
@@ -630,7 +630,7 @@
   carousel_heading_international: Vejledninger på dit sprog
   carousel_heading_domestic: Tutorials på engelsk
   carousel_heading_beginners: Tutorials for begyndere
-  carousel_heading_javascript: "Øvelser, hvor du lærer Javascript"
+  carousel_heading_javascript: Øvelser, hvor du lærer Javascript
   carousel_heading_unplugged: Ingen enhed eller internettet? Prøv "unplugged" kodning
   carousel_heading_devices: Tutorial apps for mobiler og tablets
   carousel_heading_languages: Tutorials i andre programmeringssprog
@@ -1292,12 +1292,36 @@
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
     help students learn an Hour of Code!'
   homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: "# served"
+  homepage_action_text_num_served: '# served'
   homepage_action_text_join_us: Join us
   homepage_action_text_sign_up: Sign up
   homepage_action_text_try_it: Try it
   homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_girlvideo: Inspire a girl
+  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
+    videos</a> by role models and celebrities
+  starwars_subtitle: Building a Galaxy With Code
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: Try now
+  starwars_blocks_title: Blocks
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
+  starwars_blocks_start_button: Try now
+  starwars_watch_videos: Before you get started, watch one of these inspirational
+    videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_gradelevel: Ages 4-104
+  mc_platformtext: Modern browsers, smartphones, tablets
+  minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_distance_8: 5 miles
   volunteer_engineer_submission_distance_16: 10 miles
@@ -1313,6 +1337,7 @@
     to say a few words of inspiration to the kids
   volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
     prepare me for coding with my students
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   starwars_name: 'Star Wars: Building a Galaxy with Code'
   starwars_gradelevel: Ages 6+
   starwars_platformtext: Modern browsers + tablets
