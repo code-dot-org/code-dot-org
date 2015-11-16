@@ -46,10 +46,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "var myArray = [1,2,3,4,5,6,7,8,9,10];\r\n\r\n// Use console.log to display the \r\n// first item, last item, and the \r\n// number 5 from this array",
-    "encrypted_examples": [
-
-    ]
+    "start_blocks": "var myArray = [1,2,3,4,5,6,7,8,9,10];\r\n\r\n// Use console.log to display the \r\n// first item, last item, and the \r\n// number 5 from this array"
   }
 }]]></config>
   <blocks/>
