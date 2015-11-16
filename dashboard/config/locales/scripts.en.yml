@@ -1380,6 +1380,7 @@ en:
           description: Testing some tools for teaching with Arduinos
           Blinky Lights: Blinky Lights
           Making Music: Making Music
+          JunkBot: JunkBot
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
@@ -1421,6 +1422,8 @@ en:
           Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
           Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
           Key Events with Image Scroller: Key Events with Image Scroller
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
