@@ -15,7 +15,7 @@
       "assign_x": null,
       "console.log": null,
       "declareAssign_x_array_1_4": {
-        "block": "var list = [1,2,3];"
+        "block": "var list = [];"
       }
     },
     "edit_code": true,
