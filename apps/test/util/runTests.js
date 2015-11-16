@@ -77,7 +77,7 @@ exec(command, function (err, stdout, stderr) {
     transform: 'ejsify',
     'web-security': false
   })
- .on('error', function (e) {
+ .on('error', function () {
    console.trace();
    process.exit(1);
   })
