@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+# The starwarsblocks script had a video showing before level 3, but we no longer want it.
+# It turns out that removing a video_key_for_next_level entry from a .script file doesn't
+# actually remove the video from that level in the database.  This script does that.
+
+require_relative '../../config/environment'
+
+level = Script.find_by_name('starwarsblocks').script_levels[2].level
+level.video_key = nil
+level.save!
