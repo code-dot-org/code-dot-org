@@ -25,11 +25,14 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "console.log": null
+      "console.log": null,
+      "declareAssign_x_array_1_4": {
+        "block": "var list = [1,2,3];"
+      }
     },
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "var justFive = [5];\r\nvar noFive = [1,2,3];\r\nvar testArray = [1,5,3,6,7,5,2,7];\r\nvar bigArray = [ randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10),randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10), randomNumber(1,10)];\r\n\r\nfor (var i = 0; i < testArray.length; i++) {\r\n  if (testArray[i] == 5) {\r\n    console.log(\"true\");\r\n  }\r\n  else{\r\n    console.log(\"false\");\r\n  }\r\n}",
+    "start_blocks": "// Fill an array with some random values\r\nvar testArray = [];\r\nfor (var i = 0; i < 10; i++) {\r\n  appendItem(testArray, randomNumber(0,10));\r\n}\r\nconsole.log(\"Original: \"+testArray);\r\n\r\n// Process the array\r\nvar fiveCount = 0;\r\n\r\nfor (var i = 0; i < testArray.length; i++) {\r\n  \r\n  //your code here\r\n\r\n}\r\n\r\nconsole.log(\"Number of Fives: \"+fiveCount);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -57,7 +60,10 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>

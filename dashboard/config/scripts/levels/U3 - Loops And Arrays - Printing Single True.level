@@ -135,7 +135,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Count the number of times 5 appears in an array. (Click to see full instructions)",
-    "markdown_instructions": "# Print Single True Value\r\n\r\nLet's keep refining our algorithm to check if there is a 5 in the array. Sometimes we don't care about the count and just want to know if the array contains a 5 or not. **Let's try to print a single statement (true or false) that the list contains a 5.** The technique for doing this is to **use a variable in some fashion,** but you need to be clever about how to use the variable.  \r\n\r\nThere are two cases to consider: \r\n\r\n1. The list does not contain any 5, you need to display false.  \r\n1. The list contains at least one 5 anywhere in the list, you need to display true.\r\n\r\n**Hint:** There is a clever way to do it without counting. Take a minute to see if you can think of a way to do it without counting. If you can't just get it to work with counting for now.\r\n\r\n\r\n# Do This\r\n\r\n* Make the program **`console.log` either true or false just once depending if their is a 5 in the array.**\r\n\r\n| justFive | noFive | testArray | bigArray |\r\n| ---| --- | --- | --- |\r\n|<img src=\"https://images.code.org/b13b5ad2803f2b3f12772eb7eeed422d-image-1447353059345.30.42 PM.png\" style=\"width: 150px\">|<img src=\"https://images.code.org/14539578632587660282450dce952190-image-1447356095684.19.45 PM.png\" style=\"width: 150px\"> |<img src=\"https://images.code.org/b13b5ad2803f2b3f12772eb7eeed422d-image-1447353059345.30.42 PM.png\" style=\"width: 150px\"> | <img src=\"https://images.code.org/b3ea51d4612a46feb67a8f8ba34cfb93-image-1447349856873.png\" style=\"width: 100px\"> |",
+    "markdown_instructions": "# Print Single True/False Value\r\n\r\nSometimes we don't care about the count and just want to know if the array contains a 5 or not. **Let's try to print a single true/false indicating whether the list contains a 5.** There are two cases to consider: \r\n\r\n1. The list **does not contain any 5s**, you need to display **false**.  \r\n2. The list **contains at least one 5**, you need to display **true**.\r\n\r\nYou'll need to use an `if` statement and will likely want to reference your counter variable `fiveCount`\r\n\r\n# Do This\r\n**We've pulled you code from the previous level so you can continue to add to it**\r\n\r\n* Add a **`console.log` statement to display a single true or false** indicating whether there is a 5 anywhere in the array.\r\n\r\n| Example output 1: One or more 5s | Example output 2: No 5s |\r\n| --- | --- |\r\n|![](https://images.code.org/15ed45d471e9279a8739bad5f31c3a4d-image-1447452726753.06.31 PM.png) | ![](https://images.code.org/ed19957449c6b68cb19326a6f430edec-image-1447452740979.06.46 PM.png)|",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -165,7 +165,10 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "project_template_level_name": "U3 - Loops And Arrays - Linear Search Template"
+    "project_template_level_name": "U3 - Loops And Arrays - Linear Search Template",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>
