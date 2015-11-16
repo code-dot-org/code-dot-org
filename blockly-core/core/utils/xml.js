@@ -254,7 +254,9 @@ Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
   };
 
   var positionBlock = function (block) {
-    var padding = block.blockly_block.getSvgPadding();
+    var padding = block.blockly_block.getSvgPadding() ||
+        {top: 0, right: 0, bottom: 0, left: 0};
+
     var heightWidth = block.blockly_block.getHeightWidth();
 
     if (isNaN(block.x)) {
