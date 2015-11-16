@@ -46,10 +46,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "var myNumbers = [3, 2, 5, 7, 4];\r\n\r\n// Use console.log to display the contents of this array in order from smallest to largest",
-    "encrypted_examples": [
-
-    ]
+    "start_blocks": "var myNumbers = [3, 2, 5, 7, 4];\r\n\r\n// Use console.log to display the contents of this array in order from smallest to largest"
   }
 }]]></config>
   <blocks/>
