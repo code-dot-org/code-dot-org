@@ -33,6 +33,7 @@ var FeedbackBlocks = require('./feedbackBlocks');
 var constants = require('./constants');
 var TestResults = constants.TestResults;
 var KeyCodes = constants.KeyCodes;
+var puzzleRatingUtils = require('./puzzleRatingUtils');
 
 /**
  * @typedef {Object} TestableBlock
@@ -279,27 +280,20 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
   if (continueButton) {
 
-    if (options.response && options.response.puzzle_rating_url) {
-      feedback.appendChild(this.buildPuzzleRatingButtons_());
+    if (options.response && options.response.puzzle_ratings_enabled) {
+      feedback.appendChild(puzzleRatingUtils.buildPuzzleRatingButtons());
     }
 
     dom.addClickTouchEvent(continueButton, function () {
       feedbackDialog.hide();
 
-      // Submit Puzzle Rating
-      var selectedRating = feedback.querySelector('.puzzle-rating-btn.enabled');
-      if (options.response && options.response.puzzle_rating_url && selectedRating) {
-        $.ajax({
-          url: options.response.puzzle_rating_url,
-          type: 'POST',
-          data: {
-            script_id: options.response.script_id,
-            level_id: options.response.level_id,
-            level_source_id: options.response.level_source_id,
-            rating: selectedRating.getAttribute('data-value')
-          },
+      if (options.response && options.response.puzzle_ratings_enabled) {
+        puzzleRatingUtils.cachePuzzleRating(feedback, {
+          script_id: options.response.script_id,
+          level_id: options.response.level_id
         });
       }
+
       // onContinue will fire already if there was only a continue button
       if (!onlyContinue) {
         options.onContinue();
@@ -380,27 +374,6 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
     return codeLines;
   }
   return this.getCountableBlocks_().length;
-};
-
-FeedbackUtils.prototype.buildPuzzleRatingButtons_ = function () {
-  var buttonContainer = document.createElement('div');
-  buttonContainer.id = 'puzzleRatingButtons';
-  buttonContainer.innerHTML = require('./templates/puzzleRating.html.ejs')();
-
-  var buttons = buttonContainer.querySelectorAll('.puzzle-rating-btn');
-  var buttonClickHandler = function () {
-    for (var i = 0, button; (button = buttons[i]); i++) {
-      if (button != this) {
-        $(button).removeClass('enabled');
-      }
-    }
-    $(this).toggleClass('enabled');
-  };
-  for (var i = 0, button; (button = buttons[i]); i++) {
-    dom.addClickTouchEvent(button, buttonClickHandler);
-  }
-
-  return buttonContainer;
 };
 
 /**

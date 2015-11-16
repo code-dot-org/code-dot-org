@@ -91,12 +91,9 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**Octoboer 17th Location**
+**December 12th Location**
 
-Alliance College-Ready Public Schools<br/>
-515 Columbia Ave<br/>
-Room TBD<br/>
-Los Angeles, CA 90017<br/>
+TBD
 
 **What to bring to Phase 3 quarterly sessions:**
 
