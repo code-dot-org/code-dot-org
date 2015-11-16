@@ -18,7 +18,7 @@
       "callMyFunction_n": null
     },
     "edit_code": true,
-    "encrypted_examples": "FLRaoJcBsm4Q7YrRxUJaQXcvJNFCD7rj/CO0do4fCxGaXuc9RLYMb5ObCodz\n2kRj\n",
+    "encrypted_examples": "XqDmNbuRBi8Sq4/gi4i3QW7Q/zaoEm8Ey+7wjy6L+XDnGU+DDz8E2niNXN0Y\nFrCWb7iCw3ePud6PGAQCvhSDHg==\n",
     "embed": "false",
     "instructions": "Define a function that accepts a parameter to match the function calls and complete the image. (Click to see full instructions)",
     "markdown_instructions": "# Defining functions with parameters\r\n\r\nThis time you're going to write your own function with parameters to complete an image. Two function calls to `drawTriangle` have been placed at the top of the program but the function itself needs to be defined.  The program should draw this:\r\n\r\n![](https://images.code.org/4a96eff03ba79b881b98137048140953-image-1442523578705.59.20 PM.png)\r\n\r\n# Do This\r\n**Complete** the function definition for `drawTriangle(sideLength)` . Notice that you have already been given a **descriptive and meaningful parameter name**, `sideLength`, but you can change it if you wish.\r\n\r\nAs a reminder of how to use a parameter within the function here is a correct version of `drawSquare(size)` for reference.\r\n\r\n![](https://images.code.org/ead2720df19b117cae753c4397dd832d-image-1442868072299.png)",
@@ -51,7 +51,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

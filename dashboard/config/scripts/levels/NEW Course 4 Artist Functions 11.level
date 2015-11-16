@@ -17,7 +17,7 @@
     "free_play": "false",
     "impressive": "false",
     "slider_speed": ".5",
-    "ideal": "14",
+    "ideal": "16",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "embed": "false",
@@ -37,14 +37,13 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="procedures_callnoreturn" movable="false">
-              <mutation name="draw a line of  squares"/>
-            </block>
-          </next>
+        <block type="procedures_defnoreturn" editable="false">
+          <mutation>
+            <description>draw a 6 squares next to one another 6 squares long</description>
+          </mutation>
+          <title name="NAME">draw a line of  squares</title>
         </block>
-        <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false" usercreated="true">
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation>
             <description>Draw a square with sides 20 pixels long</description>
           </mutation>
@@ -60,13 +59,21 @@
                 <block type="controls_repeat">
                   <title name="TIMES">4</title>
                   <statement name="DO">
-                    <block type="draw_move_by_constant">
+                    <block type="draw_move" inline="true">
                       <title name="DIR">moveForward</title>
-                      <title name="VALUE">20</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">20</title>
+                        </block>
+                      </value>
                       <next>
-                        <block type="draw_turn_by_constant">
+                        <block type="draw_turn" inline="true">
                           <title name="DIR">turnLeft</title>
-                          <title name="VALUE">90</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">90</title>
+                            </block>
+                          </value>
                         </block>
                       </next>
                     </block>
@@ -76,11 +83,12 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" editable="false">
-          <mutation>
-            <description>draw a 6 squares next to one another 6 squares long</description>
-          </mutation>
-          <title name="NAME">draw a line of  squares</title>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn" movable="false">
+              <mutation name="draw a line of  squares"/>
+            </block>
+          </next>
         </block>
       </xml>
     </start_blocks>

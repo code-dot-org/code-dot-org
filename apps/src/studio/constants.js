@@ -369,12 +369,21 @@ exports.DEFAULT_ANIMATION_RATE = 20;
 exports.GOAL_FADE_TIME = 200;
 exports.ITEM_FADE_TIME = 200;
 exports.DEFAULT_ACTOR_FADE_TIME = 1000;
-exports.TOUCH_HAZARD_FADE_TIME = 2000;
+exports.TOUCH_HAZARD_EFFECT_TIME = 1500;
 
 // Other defaults for actions
 exports.SHAKE_DEFAULT_DURATION = 1000;
-exports.SHAKE_DEFAULT_CYCLES = 8;
+exports.SHAKE_DEFAULT_CYCLES = 6;
 exports.SHAKE_DEFAULT_DISTANCE = 5;
 
-// How many clouds to display.
-exports.NUM_CLOUDS = 2;
+// Maximum number of clouds that can be displayed.
+exports.MAX_NUM_CLOUDS = 2;
+
+// Width & height of a cloud.
+exports.CLOUD_SIZE = 300;
+
+// The opacity of a cloud.
+exports.CLOUD_OPACITY = 0.7;
+
+// How many milliseconds to throttle between playing sounds.
+exports.SOUND_THROTTLE_TIME = 200;

@@ -156,5 +156,23 @@ describe("clientState#trackProgress", function() {
     state.recordCalloutSeen('someCallout');
     state.hasSeenCallout('someCallout').should.equal(true);
   });
+
+  it("Resetting client state actually resets everything", function () {
+    state.recordCalloutSeen('someCallout');
+    state.recordVideoSeen('someVideo');
+    state.trackProgress(true, 5, 100, 1);
+
+    state.hasSeenCallout('someCallout').should.equal(true);
+    state.hasSeenVideo('someVideo').should.equal(true);
+    state.levelProgress(1).should.equal(100);
+    state.lines().should.equal(5);
+
+    state.reset();
+
+    state.hasSeenCallout('someCallout').should.equal(false);
+    state.hasSeenVideo('someVideo').should.equal(false);
+    state.levelProgress(1).should.equal(0);
+    state.lines().should.equal(0);
+  })
 });
 

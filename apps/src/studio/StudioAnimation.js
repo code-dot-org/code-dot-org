@@ -128,6 +128,13 @@ StudioAnimation.prototype.removeElement = function() {
     this.clipPath_ = null;
   }
 
+  this.stopAnimator();
+};
+
+/**
+ * Stop the animator (used when we freeze in onPuzzleComplete)
+ */
+StudioAnimation.prototype.stopAnimator = function() {
   if (this.animator_) {
     window.clearInterval(this.animator_);
     this.animator_ = null;

@@ -1,21 +1,15 @@
+-type_task_ss ||=nil
+
 %h1 Contact a Volunteer
 
 #addressees
   #before-contact
     %p You are contacting the following volunteer:
-  #after-contact{:style=>"display: none;"}
-    %p You've successfully contacted this volunteer:
-  #name{:style=>"display: none;"}
-  #allnames{:style=>"display: none;"}
-  %br
-    Want to contact different volunteers?
-    %a{href: "/private/volunteer/local"}
-      Search here
-    for volunteers near your school.
+  #name{style: "display: none; font-family: 'Gotham 5r', sans-serif;"}
+  #allnames{style: "display: none;"}
 
 %br
 %form#contact-volunteer-form{role: "form", onsubmit: "return sendEmail()"}
-  #error_message{style: 'display: none'}
 
   .form-group
     %label.control-label{for: "teacher-name"} Your name
@@ -39,11 +33,11 @@
       %input#volunteer-contact-school-location.form-control{name: "school_location_s", placeholder: "School address", required: true, type: "text"}
 
   .form-group
-    %label.control-label{for: "email-message"} Your message
-    %p Describe your Hour of Code event and how the volunteer can participate.
-    %div
-      %textarea#volunteer-contact-email-message.form-control{name: "email_message_s", placeholder: "I would like to invite you to our Hour of Code event...  [If your school/district has background check requirements that need to be completed before a potential volunteer can attend an event, be sure to let the volunteer know by telling them about it here.]", required: true, style: "height: 10em;"}
-
+    %label.control-label{for: "type-task"} Select all of the following ways that you'd like this volunteer to help you.
+    #volunteer-type-task{style: "margin-left: 20px;"}
+      -VolunteerContact2015.type_tasks.each_pair do |key,label|
+        .checkbox
+          %input{name: "type_task_#{key}_b", type: "checkbox", value: "1", required: false}= label
 
   %p{style: 'color: #00adbc; font-size: 1.125em;'} IMPORTANT: Code.org has performed no references or background checks on these potential volunteers and neither recommends nor certifies any volunteer.
   %p It is entirely your responsibility to thoroughly check references or perform any background checks required by your school or district. Code.org provides no warranty, guarantees of suitability, or information other than the ability to contact these potential volunteers, and all liability in any use of volunteers rests only with you. Under no circumstances is Code.org responsible for any loss or damage resulting from any person's reliance on this potential volunteer.
@@ -58,3 +52,11 @@
 
   .form-group#contact-submit-btn
     %button{type: "submit"} Send
+
+  #error-message{style: "display: none;"}
+  #success-message{style: "display: none; color: #00adbc;"}
+    %p 
+      You've successfully contacted this volunteer. 
+      %a{onclick: "adjustScroll('volunteer-map');"} 
+        Scroll to the top
+      to contact another volunteer. 

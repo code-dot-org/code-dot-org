@@ -2,6 +2,7 @@ title 'CSP Unit 3 - Programming'
 description 'This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.'
 description_short 'Programming'
 login_required 'true'
+hidden 'false'
 
 #1
 stage 'The Need For Programming Languages'
@@ -143,9 +144,9 @@ level 'U3-Design Mode-ID and Event Handler'
 level 'U3 - Design Mode - WTF Console Log'
 level 'U3 - Design Mode - Console Log'
 level 'U3 - Design Mode - Layers and Delete'
-level 'U3-Design Mode-Image'
 level 'U3 - Design Mode - Multi Screens'
 level 'U3 - Design Mode - Multi Screens 2'
+level 'U3-Design Mode-Image'
 level 'U3 - Design Mode -Recreate Beyond Buttons'
 
 # 13
@@ -158,8 +159,8 @@ stage 'Controlling Memory with Variables'
 level 'U3L19 Student Lesson Intro'
 level 'U3L14 - Message - basic mechanics of variables'
 level 'U3L19 - three basic ops of variables’
-level 'U3L19 - fix the var name syntax error’
-level 'U3L19 - write var and string with same name’
+level 'U3L19 - fix the var name syntax error v2’
+level 'U3L19 - write var and string with same name v2’
 level 'U3- Variables - Create And Assign'
 level 'U3- Variables - Text Mode'
 level 'U3L14 - Message - Other ways to assign values'
@@ -240,29 +241,19 @@ level 'U3L20 Student Lesson Introduction'
 level 'U3 - Conditionals - Boolean Expressions and Operators'
 level 'U3L18 comparison operators'
 assessment 'U3L18 Matching'
+level 'U3 - Conditionals - Translating Flowcharts - If Statement'
 level 'U3 - High Low - If'
 level 'U3 - High Low - Dropdown'
 level 'U3 - Conditional Basics - 6'
 level 'U3 - Conditionals - Introducing Else'
 level 'U3 - High Low - Else'
+level 'U3 - Conditionals - Translating Flowcharts - Chained'
 level 'U3 - High Low - Else if'
 level 'U3 - High Low - Debug'
 level 'U3 - Dice - If'
 level 'U3 - Dice - Dropdown and Score'
 level 'U3 - Dice - Dropdown with Strings'
 level 'U3 - Dice - Nested'
-level 'U3L24 Nested Conditionals Bugs'
-assessment 'U3L20 Free Response Getting Started'
-assessment 'U3L20 Assessment1'
-assessment 'U3L20 Assessment2'
-assessment 'U3L20 Assessment3'
-assessment 'U3L20 Assessment4'
-assessment 'U3L20 Assessment5'
-assessment 'U3L20 Assessment6'
-assessment 'U3L20 Assessment7'
-assessment 'U3L20 Assessment8'
-assessment 'U3L20 Assessment9'
-assessment 'U3L20 Free Response Wrap Up' 
 
 #19
 stage 'Introduction to Conditional Logic'
@@ -286,15 +277,12 @@ level 'U3L26 OR operator'
 level 'U3 - Movie Bot - Multiple If Sequences'
 level 'U3L26 AND operator'
 level 'U3 - Movie Bot - When Multiple If Statements'
-level 'U3L24 Nested Conditionals Bugs 2'
+
 
 # 21
 stage 'Digital Assistant Project'
 level 'U3L27 Student Lesson Introduction'
 level 'U3L24 Chatbot Basic Conditionals'
-level 'U3L27 Assessment1'
-level 'U3L27 Assessment2'
-level 'U3L27 Assessment3'
 
 ##TURDS DO NOT USE##
 stage 'Creating Procedures - Part 1'

@@ -28,3 +28,4 @@
 /apps/node_modules/
 /apps/npm-debug.log
 *_temp.json
+/.ruby-version

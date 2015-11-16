@@ -158,7 +158,10 @@
     "submittable": "false",
     "instructions": "Add 200 bubbles to the image by writing drawAllBubbles with a loop. (Click to see full instructions)",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "encrypted_examples": "7uj3V2UtF4+l+kiwHdwp5diDc49I21ixmbYZ1YccA/qgAgT6GRlHiumryjw0\nl4wK\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

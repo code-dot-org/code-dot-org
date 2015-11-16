@@ -73,7 +73,10 @@
     "instructions": "Add an event handler to the button to move the turtle forward. (Click to see full instructions)",
     "start_blocks": "button(\"moveForwardButton\", \"Move Forward\");",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "encrypted_examples": "xuBZs3VCxgZAfHtaAgKtF7eohRGFz+lfAhKJ29t5yW2TP6FOQdNiM6558YmO\ncbi1\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

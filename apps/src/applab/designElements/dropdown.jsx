@@ -7,6 +7,7 @@ var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
 var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
+var colors = require('../../sharedJsxStyles').colors;
 
 var elementUtils = require('./elementUtils');
 
@@ -132,8 +133,8 @@ module.exports = {
     element.style.height = '30px';
     element.style.fontSize = '14px';
     element.style.margin = '0';
-    element.style.color = '#fff';
-    element.style.backgroundColor = '#1abc9c';
+    element.style.color = colors.white;
+    element.style.backgroundColor = colors.teal;
 
     var option1 = document.createElement('option');
     option1.innerHTML = 'Option 1';
@@ -144,5 +145,17 @@ module.exports = {
     element.appendChild(option2);
 
     return element;
+  },
+
+  onDeserialize: function (element) {
+    // In the future we may want to trigger this on focus events as well.
+    $(element).on('mousedown', function (e) {
+      if (!Applab.isRunning()) {
+        // Disable dropdown menu unless running
+        e.preventDefault();
+        this.blur();
+        window.focus();
+      }
+    });
   }
 };

@@ -13,6 +13,12 @@ title: Review Hour of Code special events
 
 %h1 Review Hour of Code special events
 
+%h3
+  Please read
+  %a{href: "https://docs.google.com/document/d/1cwUdqdPW7CF0d7DfWTqmCkMjjylfZ5sdrLS6-jGgPzY/edit?usp=sharing"}
+    this rubric
+  for event approval before reviewing.
+
 -SOLR = Solr::Server.new(host:CDO.solr_server)
 
 -by_country = {}
@@ -43,8 +49,6 @@ title: Review Hour of Code special events
           %li{class: "hoc-event-state"}
             %a{href: "/teacher-dashboard/review-hociyskvuwa/us/#{state_code.downcase}"}
               = state_code
-              = surround "(", ")" do
-                = events.count
 
 %ul
   -by_country.each_pair do |country_code, events|
@@ -52,5 +56,3 @@ title: Review Hour of Code special events
       %li{class: "hoc-event-country"}
         %a{href: "/teacher-dashboard/review-hociyskvuwa/#{country_code.downcase}"}
           = events[0]["location_country_s"]
-          = surround "(", ")" do
-            = events.count

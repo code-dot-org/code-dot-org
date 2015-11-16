@@ -1,4 +1,6 @@
 - @page_title = level_title
+
+= render partial: 'shared/check_admin'
 = render partial: 'shared/sharing_meta_tags'
 
 - if params[:share] && @game.share_mobile_fullscreen? && browser.safari?
@@ -22,6 +24,9 @@
   :javascript
     var appOptions = #{app_options.to_json};
   = render partial: 'levels/unplug', locals: {app: @game.app}
+- elsif @level.is_a?(Applab) && app_options['readonlyWorkspace'] && !app_options['channel']
+  -# A teacher is trying to view a student's progress on a level they have not started.
+  = render partial: 'levels/not_started'
 - elsif @level.is_a?(Blockly) && @level.embed == 'true' && !@edit_blocks
   #title
     - if @level.properties['instructions'].present?

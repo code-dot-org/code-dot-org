@@ -29,6 +29,7 @@ var FeedbackUtils = require('./feedback');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
 var codegen = require('./codegen');
+var puzzleRatingUtils = require('./puzzleRatingUtils');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -222,6 +223,9 @@ StudioApp.prototype.configure = function (options) {
   // Bind assetUrl to the instance so that we don't need to depend on callers
   // binding correctly as they pass this function around.
   this.assetUrl = _.bind(this.assetUrl_, this);
+
+  this.maxVisualizationWidth = options.maxVisualizationWidth || MAX_VISUALIZATION_WIDTH;
+  this.minVisualizationWidth = options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
 };
 
 StudioApp.prototype.hasInstructionsToShow = function (config) {
@@ -263,6 +267,10 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
+  if (config.puzzleRatingsUrl) {
+    puzzleRatingUtils.submitCachedPuzzleRatings(config.puzzleRatingsUrl);
+  }
+
   // Record time at initialization.
   this.initTime = new Date().getTime();
 
@@ -289,7 +297,7 @@ StudioApp.prototype.init = function(config) {
         }
         this.onDropletToggle_();
       } else {
-        this.feedback_.showGeneratedCode(this.Dialog);
+        this.feedback_.showGeneratedCode(this.Dialog, config.appStrings);
       }
     }, this));
   }
@@ -299,10 +307,7 @@ StudioApp.prototype.init = function(config) {
     blockCount.style.display = 'none';
   }
 
-  this.icon = config.skin.staticAvatar;
-  this.smallIcon = config.skin.smallStaticAvatar;
-  this.winIcon = config.skin.winAvatar;
-  this.failureIcon = config.skin.failureAvatar;
+  this.setIconsFromSkin(config.skin);
 
   if (config.level.instructionsIcon) {
     this.icon = config.skin[config.level.instructionsIcon];
@@ -500,6 +505,18 @@ StudioApp.prototype.getCode = function () {
   }
 };
 
+StudioApp.prototype.setIconsFromSkin = function (skin) {
+  this.icon = skin.staticAvatar;
+  this.smallIcon = skin.smallStaticAvatar;
+  this.winIcon = skin.winAvatar;
+  this.failureIcon = skin.failureAvatar;
+};
+
+/**
+ * Reset the puzzle back to its initial state.
+ * Search aliases: "Start Over", startOver
+ * @param {Object} config - same config object passed to studioApp.init().
+ */
 StudioApp.prototype.handleClearPuzzle = function (config) {
   if (this.isUsingBlockly()) {
     if (Blockly.functionEditor) {
@@ -516,6 +533,12 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
       resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
     }
+    // TODO (bbuchanan): This getValue() call is a workaround for a Droplet bug,
+    // See https://github.com/droplet-editor/droplet/issues/137
+    // Calling getValue() updates the cached ace editor value, which can be
+    // out-of-date in droplet and cause an incorrect early-out.
+    // Remove this line once that bug is fixed and our Droplet lib is updated.
+    this.editor.getValue();
     this.editor.setValue(resetValue);
   }
   if (config.afterClearPuzzle) {
@@ -637,6 +660,20 @@ StudioApp.prototype.toggleRunReset = function(button) {
 
   // Toggle soft-buttons (all have the 'arrow' class set):
   $('.arrow').prop("disabled", showRun);
+};
+
+/**
+ * Attempts to associate a set of audio files to a given name
+ * Handles the case where cdoSounds does not exist, e.g. in tests
+ * and grunt dev preview mode
+ * @param {Object} audioConfig sound configuration
+ */
+StudioApp.prototype.registerAudio = function(audioConfig) {
+  if (!this.cdoSounds) {
+    return;
+  }
+
+  this.cdoSounds.register(audioConfig);
 };
 
 /**
@@ -862,6 +899,12 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
       this.editor.aceEditor.focus();
     }
+
+    // Fire a custom event on the document so that other code can respond
+    // to instructions being closed.
+    var event = document.createEvent('Event');
+    event.initEvent('instructionsHidden', true, true);
+    document.dispatchEvent(event);
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
@@ -938,11 +981,16 @@ function resizePinnedBelowVisualizationArea() {
     return;
   }
 
+  var designToggleRow = document.getElementById('designToggleRow');
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
+  if (designToggleRow) {
+    top += $(designToggleRow).outerHeight(true);
+  }
+  
   if (visualization) {
     top += $(visualization).outerHeight(true);
   }
@@ -1031,8 +1079,8 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var visualizationColumn = document.getElementById('visualizationColumn');
   var visualizationEditor = document.getElementById('visualizationEditor');
 
-  var newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
-                         Math.min(MAX_VISUALIZATION_WIDTH, width));
+  var newVizWidth = Math.max(this.minVisualizationWidth,
+                         Math.min(this.maxVisualizationWidth, width));
   var newVizWidthString = newVizWidth + 'px';
   var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
@@ -1353,10 +1401,11 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
   this.startBlocks_ = config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
-  this.nativeVizWidth = config.nativeVizWidth || MAX_VISUALIZATION_WIDTH;
+  this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
+  this.enableShowLinesCount = (config.enableShowLinesCount !== false);
 
   // If the level has no ideal block count, don't show a block count. If it does
   // have an ideal, show block count unless explicitly configured not to.
@@ -1373,6 +1422,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
                         config.onInitialize.bind(config) : function () {};
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
+  this.showInstructions = this.showInstructions_.bind(this, config.level);
 };
 
 // Overwritten by applab.
@@ -1581,12 +1631,15 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     enableLiveAutocompletion: true
   });
 
-  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg, config.dropletConfig);
+  this.dropletTooltipManager = new DropletTooltipManager(
+    this.appMsg,
+    config.dropletConfig,
+    config.level.codeFunctions,
+    config.level.autocompletePaletteApisOnly);
   if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);
   }
-  this.dropletTooltipManager.registerBlocksFromList(
-    dropletUtils.getAllAvailableDropletBlocks(config.dropletConfig));
+  this.dropletTooltipManager.registerBlocks();
 
   // Bind listener to palette/toolbox 'Hide' and 'Show' links
   var hideToolboxHeader = document.getElementById('toolbox-header');

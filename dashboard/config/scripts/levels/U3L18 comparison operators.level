@@ -14,18 +14,17 @@
       "equalityOperator": null,
       "inequalityOperator": null,
       "greaterThanOperator": null,
+      "greaterThanOrEqualOperator": null,
       "lessThanOperator": null,
+      "lessThanOrEqualOperator": null,
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
-    "markdown_instructions": "<style>\r\ntd{\r\n border: solid 1px black;\r\n}\r\n</style>\r\n\r\n# Explore Comparison Operators\r\n\r\nTrue/false decisions are made using boolean expressions. A __boolean expression__ is an expression that only evaluates to TRUE or FALSE, and you can use __conditional operators__ to craft boolean expressions.  \r\n\r\n# Do This\r\n\r\nUse `console.log` to **print out the different boolean expressions below to see what information they return**.\r\n\r\n| Boolean Expressions |\r\n| --- |\r\n| 3 > 2 |\r\n| 2 > 3 |\r\n| 5 + 3 < 10 |\r\n| ‘a’ < ‘b’ |\r\n| ‘j’ > ‘c’ |\r\n| 2 == 2 |\r\n| 2 != 2 |\r\n| true == false |\r\n| \"blue\" == blue |\r\n| \"Blue\" == \"blue\" |\r\n| x < 10 |",
+    "markdown_instructions": "<style>\r\ntd{\r\n border: solid 1px black;\r\n}\r\n</style>\r\n\r\n# Explore Comparison Operators\r\n\r\nTrue/false decisions are made using boolean expressions. A __boolean expression__ is an expression that only evaluates to TRUE or FALSE, and you can use __comparison operators__ to craft boolean expressions.  \r\n\r\n# Do This\r\n\r\nUse `console.log` to **print out the different boolean expressions below to see what information they return**.\r\n\r\n| Boolean Expressions |\r\n| --- |\r\n| 3 > 2 |\r\n| 2 > 3 |\r\n| 5 + 3 < 10 |\r\n| ‘a’ < ‘b’ |\r\n| ‘j’ > ‘c’ |\r\n| 2 == 2 |\r\n| 2 != 2 |\r\n| true == false |\r\n| \"blue\" == blue |\r\n| \"Blue\" == \"blue\" |\r\n| x < 10 |",
     "start_blocks": "var x = 8;\r\nconsole.log(3<2);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -54,7 +53,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "Use `console.log` to print out the different boolean expressions below to see what information they return. (Click to see full instructions)"
+    "instructions": "Use `console.log` to print out the different boolean expressions below to see what information they return. (Click to see full instructions)",
+    "lock_zero_param_functions": "false"
   }
 }]]></config>
   <blocks/>

@@ -38,3 +38,57 @@ Scenario: App Lab UI elements from initial code and html
   And I wait until element "#runButton" is visible
   Then I see no difference for "design mode elements in design mode"
   And I close my eyes
+
+Scenario: Text area with multiple lines, radio button, checkbox
+  Given I manually sign in as "ApplabStudent"
+  And I start a new Applab project
+  And I rotate to landscape
+  And I switch to design mode
+  And I open my eyes to test "applab design mode"
+
+  Then I drag a TEXT_AREA into the app
+  And I press keys "This is a lot of text that should wrap onto a second line" for element "#design-properties textarea"
+  And I set input "xpos" to "0"
+  And I set input "ypos" to "0"
+  Then I see no difference for "text area in upper left"
+  Then I delete the current design mode element
+
+  Then I drag a RADIO_BUTTON into the app
+  And I set groupable input "xpos" to "0"
+  And I set groupable input "ypos" to "0"
+  Then I see no difference for "radio button in upper left"
+  Then I delete the current design mode element
+
+  Then I drag a CHECKBOX into the app
+  And I set input "xpos" to "0"
+  And I set input "ypos" to "0"
+  Then I see no difference for "checkbox in upper left"
+  Then I delete the current design mode element
+
+Scenario: Applab visualization scaling
+  Given I am on "http://learn.code.org/"
+  And I am a student
+  When I open my eyes to test "Applab visualization scaling"
+  And I am on "http://learn.code.org/projects/applab/new"
+  And I rotate to landscape
+  And I wait to see "#runButton"
+  And I switch to design mode
+
+  Then I drag a TEXT_AREA into the app
+  And I press keys "Here is a bunch of text" for element "#design-properties textarea"
+  And I set input "xpos" to "100"
+  And I set input "ypos" to "100"
+
+  Then I switch to code mode
+  And I press "show-code-header"
+  And I add code for a canvas and a button
+  And I press "runButton"
+  And I see no difference for "medium scaling"
+
+  Then I drag the grippy by 100 pixels
+  And I see no difference for "large scaling"
+
+  Then I drag the grippy by -400 pixels
+  And I see no difference for "small scaling"
+
+  Then I close my eyes

@@ -142,6 +142,13 @@ module.exports = {
   },
 
   onDeserialize: function (element) {
+    $(element).on('mousedown', function (e) {
+      if (!Applab.isRunning()) {
+        // Disable clicking into text area unless running
+        e.preventDefault();
+      }
+    });
+
     // swallow keydown unless we're running
     $(element).on('keydown', function (e) {
       if (!Applab.isRunning()) {

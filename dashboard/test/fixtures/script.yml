@@ -6,7 +6,7 @@ Hour of Code:
   wrapup_video_id: 13
   trophies: false
   hidden: true
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'
 edit-code:
@@ -17,7 +17,7 @@ edit-code:
   wrapup_video_id: 13
   trophies: false
   hidden: true
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'
 events:
@@ -25,10 +25,10 @@ events:
   name: events
   created_at: 2015-10-16 22:36:41.000000000 Z
   updated_at: 2015-10-16 22:36:41.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: true
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'
 jigsaw:
@@ -36,10 +36,10 @@ jigsaw:
   name: jigsaw
   created_at: 2015-10-16 22:36:43.000000000 Z
   updated_at: 2015-10-16 22:36:43.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: true
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'
 hourofcode:
@@ -47,32 +47,54 @@ hourofcode:
   name: hourofcode
   created_at: 2015-10-16 22:39:26.000000000 Z
   updated_at: 2015-10-16 22:39:26.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'
-hoc2015:
+starwars:
   id: 62
-  name: hoc2015
+  name: starwars
   created_at: 2015-10-16 22:39:24.000000000 Z
   updated_at: 2015-10-16 22:39:24.000000000 Z
   wrapup_video_id: 137
   trophies: false
   hidden: true
-  user_id: 
+  user_id:
   login_required: true
+  properties: '{}'
+starwarsblocks:
+  id: 69
+  name: starwarsblocks
+  created_at: 2015-10-16 22:39:24.000000000 Z
+  updated_at: 2015-10-16 22:39:24.000000000 Z
+  wrapup_video_id: 137
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+mc:
+  id: 70
+  name: mc
+  created_at: 2015-10-16 22:39:24.000000000 Z
+  updated_at: 2015-10-16 22:39:24.000000000 Z
+  wrapup_video_id: 137
+  trophies: false
+  hidden: true
+  user_id:
+  login_required: false
   properties: '{}'
 frozen:
   id: 61
   name: frozen
   created_at: 2015-10-16 22:39:23.000000000 Z
   updated_at: 2015-10-16 22:39:24.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'
 playlab:
@@ -80,10 +102,10 @@ playlab:
   name: playlab
   created_at: 2015-10-16 22:39:29.000000000 Z
   updated_at: 2015-10-16 22:39:29.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'
 infinity:
@@ -91,10 +113,10 @@ infinity:
   name: infinity
   created_at: 2015-10-16 22:39:27.000000000 Z
   updated_at: 2015-10-16 22:39:27.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'
 artist:
@@ -102,10 +124,10 @@ artist:
   name: artist
   created_at: 2015-10-16 22:38:11.000000000 Z
   updated_at: 2015-10-16 22:38:11.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'
 algebra:
@@ -113,10 +135,10 @@ algebra:
   name: algebra
   created_at: 2015-10-16 22:37:33.000000000 Z
   updated_at: 2015-10-16 22:37:33.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: false
-  user_id: 
+  user_id:
   login_required: true
   properties: '{}'
 algebraPD:
@@ -124,10 +146,10 @@ algebraPD:
   name: algebraPD
   created_at: 2015-10-16 22:37:44.000000000 Z
   updated_at: 2015-10-16 22:37:44.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: true
-  user_id: 
+  user_id:
   login_required: true
   properties: '{"pd":true}'
 flappy:
@@ -135,10 +157,10 @@ flappy:
   name: flappy
   created_at: 2015-10-16 22:36:43.000000000 Z
   updated_at: 2015-10-16 22:36:43.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'
 20-hour:
@@ -146,10 +168,10 @@ flappy:
   name: 20-hour
   created_at: 2015-10-16 22:36:26.000000000 Z
   updated_at: 2015-10-16 22:36:26.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: true
   hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'
 course1:
@@ -157,10 +179,10 @@ course1:
   name: course1
   created_at: 2015-10-16 22:38:12.000000000 Z
   updated_at: 2015-10-16 22:38:13.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'
 course2:
@@ -168,10 +190,10 @@ course2:
   name: course2
   created_at: 2015-10-16 22:38:21.000000000 Z
   updated_at: 2015-10-16 22:38:21.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'
 course3:
@@ -179,10 +201,10 @@ course3:
   name: course3
   created_at: 2015-10-16 22:38:31.000000000 Z
   updated_at: 2015-10-16 22:38:31.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'
 course4:
@@ -190,10 +212,10 @@ course4:
   name: course4
   created_at: 2015-10-16 22:38:41.000000000 Z
   updated_at: 2015-10-16 22:38:41.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'
 cspunit1:
@@ -201,10 +223,10 @@ cspunit1:
   name: cspunit1
   created_at: 2015-10-16 22:38:51.000000000 Z
   updated_at: 2015-10-16 22:38:51.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: false
-  user_id: 
+  user_id:
   login_required: true
   properties: '{}'
 cspunit2:
@@ -212,10 +234,10 @@ cspunit2:
   name: cspunit2
   created_at: 2015-10-16 22:38:55.000000000 Z
   updated_at: 2015-10-16 22:38:55.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: false
-  user_id: 
+  user_id:
   login_required: true
   properties: '{}'
 cspunit3:
@@ -223,10 +245,10 @@ cspunit3:
   name: cspunit3
   created_at: 2015-10-16 22:39:01.000000000 Z
   updated_at: 2015-10-16 22:39:01.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
-  hidden: true
-  user_id: 
+  hidden: false
+  user_id:
   login_required: true
   properties: '{}'
 ECSPD:
@@ -234,10 +256,10 @@ ECSPD:
   name: ECSPD
   created_at: 2015-10-16 22:37:01.000000000 Z
   updated_at: 2015-10-16 22:37:01.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: true
-  user_id: 
+  user_id:
   login_required: true
   properties: '{"pd":true}'
 ECSPD-NexTech:
@@ -245,10 +267,10 @@ ECSPD-NexTech:
   name: ECSPD-NexTech
   created_at: 2015-10-16 22:36:58.000000000 Z
   updated_at: 2015-10-16 22:36:58.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: true
-  user_id: 
+  user_id:
   login_required: true
   properties: '{"pd":true}'
 allthethings:
@@ -256,9 +278,9 @@ allthethings:
   name: allthethings
   created_at: 2015-10-16 22:38:08.000000000 Z
   updated_at: 2015-10-16 22:38:08.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   trophies: false
   hidden: true
-  user_id: 
+  user_id:
   login_required: false
   properties: '{}'

@@ -37,9 +37,14 @@ html, body, #map-canvas {
   background: #eee;
 }
 
+#volunteer-search-controls {
+  height: 400px;
+  overflow-y: auto;
+}
+
 #gmap {
   width: 553px;
-  height: 640px;
+  height: 400px;
   padding: 10px;
   padding: 3px;
   border: 3px
@@ -75,4 +80,8 @@ html, body, #map-canvas {
 
 .top-margin {
   margin-top: 5px;
+}
+
+.no-margin {
+  margin: 0;
 }

@@ -7,12 +7,9 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "ifElseBlock": null
+      "appendItem": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -40,7 +37,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "lock_zero_param_functions": "false"
   }
 }]]></config>
   <blocks/>

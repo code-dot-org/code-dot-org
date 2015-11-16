@@ -21,7 +21,7 @@ Dashboard::Application.configure do
 
   # Serve static resources - these will be cached by Varnish (or a CDN)
   config.serve_static_files = true
-  config.static_cache_control = "public, max-age=3600"
+  config.static_cache_control = "public, max-age=3600, s-maxage=1800"
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -51,9 +51,6 @@ Dashboard::Application.configure do
 
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
-
-  # Use a different cache store in production.
-  # config.cache_store = :mem_cache_store
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.

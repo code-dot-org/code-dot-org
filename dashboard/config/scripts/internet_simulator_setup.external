@@ -38,7 +38,15 @@ The Internet Simulator was designed to be used in a *classroom* with students wo
 
 ### What Can The Internet Simulator be Configured To Do?
 
-At its most basic, the Internet Simulator can communicate a single bit of information via a single share wire, to what protocols are needed to ensure reliable delivery of messages, to experimenting with sophisticated text-based protocols such as HTTP or HTML.
+At its most basic, the Internet Simulator can communicate a single bit of information via a single shared wire with no coordination or synchronization.  At it's most advanced it can simulate unreliable connections over multiple routers, using IP addresses, a DNS, and fixed sized packets requiring the creation of protocols similar to TCP/IP or HTTP. 
+
+We have set up the Internet Simulator in a variety of configurations that are conducive to teaching certain topics.  But if using the Internet Simulator for class you should be aware of some user interface settings that you may wish to control or tell your students to setup in a particular way.  
+
+For example: one of the features of the Internet Simulator is that you can show the binary, decimal, hex and ASCII representations of any data you send around.  In some configurations the user can also set the "chunk size" to dictate how bits are interpreted.  For a lesson of your own design, you might choose one of the configurations we have provided, but might need to mandate that students only show a particular representation of the bits, or maybe you want the chunk size to be set to a particular value.
+
+The larger point is that the configurations provided here are meant to be a starting point for teaching a particular topic.  You might need to employ some ingenuity and teaching strategies to further refine the use of the Simulator to fit your needs.
+
+
  <br><br>
 <img src="https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png" width="600px" hspace="100px"/>
 <br><br>

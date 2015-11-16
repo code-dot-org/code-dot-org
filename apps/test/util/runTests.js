@@ -74,7 +74,8 @@ exec(command, function (err, stdout, stderr) {
     reporter : 'spec',
     timeout: 14000,
     phantomjs: which('phantomjs'),
-    transform: 'ejsify'
+    transform: 'ejsify',
+    'web-security': false
   })
  .on('error', function () {
    process.exit(1);

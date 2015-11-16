@@ -8,14 +8,6 @@ nav: prizes_nav
 
 # 2015 Hour of Code prizes
 
-<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize1.jpg"/>
-
-<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize3.png"/>
-
-<img styel="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize4.png"/>
-
-<p style="clear:both; height: 0px;">&nbsp;</p>
-
 <% if @country == 'la' %>
 
 # Prizes for every organizer
@@ -41,6 +33,106 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
 ## 51 schools will win a class-set of laptops (or $10,000 for other technology)
 
 One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners).
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize1.jpg"/>
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize3.png"/>
+
+<img styel="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize4.png"/>
+
+<p style="clear:both; height: 0px;">&nbsp;</p>
+
+<% end %>
+
+<% if @country == 'us' || @country == 'ca'  %>
+
+
+
+## 30 classrooms will win a video chat with a guest speaker
+
+Lucky classrooms will have the opportunity to talk with guest speakers who will share how computer science has impacted their lives and careers. 
+
+[col-33]
+
+![image](/images/fit-120/Kevin_Systrom.jpg)<br/>
+Kevin Systrom <br/> (co-founder and CEO of Instagram)
+
+[/col-33]
+
+[col-33]
+
+![image](/images/fit-120/Dao_Nguyen.jpg)<br/>
+Dao Nguyen <br/> (Publisher, Buzzeed)
+
+[/col-33]
+
+[col-33]
+
+![image](/images/fit-120/Aloe_Blacc.jpg)<br/>
+Aloe Blacc <br/> (Recording artist)
+
+[/col-33]
+
+<br/>
+
+[col-33]
+
+![image](/images/fit-120/Julie_Larson-Green.jpg)<br/>
+Julie Larson-Green <br/> (Chief Experience Officer, Microsoft)
+
+[/col-33]
+
+[col-33]
+
+![image](/images/fit-120/Hadi-Partovi.jpg)<br/>
+Hadi Partovi <br/> (Code.org co-founder)
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
+<% end %>
+
+<% if @country == 'us' %>
+
+
+## One lucky classroom will win an exclusive, behind-the-scenes “Making of Star Wars” experience in San Francisco with Disney and Lucasfilm
+One lucky classroom will win the grand prize – a trip to San Francisco, CA for an exclusive, behind-the-scenes “Making of Star Wars” experience with the visual effects team who worked on Star Wars: The Force Awakens. The grand prize is courtesy of [ILMxLAB](http://www.ilmxlab.com/), a new laboratory for immersive entertainment, combining the talents of Lucasfilm, Industrial Light & Magic and Skywalker Sound.
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/star-wars-prize1.jpg"/>
+
+<img style="float: left; padding-right: 25px; padding-bottom: 10px;" src="/images/fill-260x200/star-wars-prize2.png"/>
+
+<p style="clear:both; height: 0px;">&nbsp;</p>
+
+<% end %>
+
+<% if @country == 'us' %>
+
+
+
+## 100 classrooms will win a programmable BB-8 droid robot by Sphero
+In honor of Hour of Code tutorial "Star Wars: Building a Galaxy with Code," 100 participating classrooms in the United States or Canada will a BB-8™ App-enabled Droid that students can program. Sign up your Hour of Code event to qualify. [Learn more about BB-8 from Sphero](http://sphero.com/starwars).
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-220x160/bb8.png"/>
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-200x160/bb8-girl.jpg"/>
+
+<p style="clear:both; height: 0px;">&nbsp;</p>
+
+## 100 classrooms will win a set of programmable robots by Sphero
+100 participating classrooms in the United States or Canada will win a set of Sphero 2.0 robots (each set includes four) that students can program. Sign up your Hour of Code event to qualify. [Learn more about Sphero education](http://sphero.com/education). 
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-300x160/sphero-robot.png"/>
+
+<p style="clear:both; height: 0px;">&nbsp;</p>
+
+<% end %>
+
+
+<% if @country == 'ro' %>
+
+Organizatorii evenimentelor Hour of Code în România vor beneficia de un premiu din partea Bitdefender România, constand intr-o solutie de securitate online.
 
 <% end %>
 
@@ -76,6 +168,13 @@ To qualify, you must complete the [Hardware Application form](<%= resolve_url('/
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (<%= campaign_date('short') %>), can I still qualify for prizes?
 Yes, in the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup') %>) include the dates that your whole school is participating.
+
+<% end %>
+
+<% if @country == 'us' || @country == 'ca' %>
+
+## Video chat with a guest speaker:
+Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligible to win.
 
 <% end %>
 

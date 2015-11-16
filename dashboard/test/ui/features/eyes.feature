@@ -3,7 +3,6 @@ Feature: Looking at a few things with Applitools Eyes
 
 Background:
   Given I am on "http://learn.code.org/reset_session"
-  And execute JavaScript expression "window.localStorage.clear()"
 
 Scenario:
   When I open my eyes to test "bounce game"

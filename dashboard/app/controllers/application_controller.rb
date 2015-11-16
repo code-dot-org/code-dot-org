@@ -1,3 +1,7 @@
+require 'dynamic_config/dcdo'
+require 'dynamic_config/gatekeeper'
+require 'dynamic_config/page_mode'
+
 class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
@@ -52,7 +56,7 @@ class ApplicationController < ActionController::Base
   def reset_session_endpoint
     client_state.reset
     reset_session
-    render text: "OK"
+    render text: 'OK <script>localStorage.clear()</script>'
   end
 
   rescue_from CanCan::AccessDenied do
@@ -155,9 +159,7 @@ class ApplicationController < ActionController::Base
     end
 
     if PuzzleRating.enabled?
-      if script_level && PuzzleRating.can_rate?(script_level.script, script_level.level, current_user)
-        response[:puzzle_rating_url] = puzzle_ratings_path
-      end
+      response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, script_level.level, current_user)
     end
 
     # logged in users can:

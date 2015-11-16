@@ -8,6 +8,7 @@ require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
 require 'cdo/properties'
+require 'dynamic_config/page_mode'
 require 'active_support'
 require 'base64'
 require 'cgi'
@@ -15,6 +16,7 @@ require 'json'
 require 'uri'
 require 'cdo/rack/upgrade_insecure_requests'
 require_relative 'helper_modules/dashboard'
+require 'dynamic_config/dcdo'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -63,16 +65,26 @@ class Documents < Sinatra::Base
   use Rack::CdoDeflater
   use Rack::UpgradeInsecureRequests
 
+  # Use dynamic config for max_age settings, with the provided default as fallback.
+  def self.set_max_age(type, default)
+    set "#{type}_max_age", Proc.new { DCDO.get("pegasus_#{type}_max_age", rack_env?(:staging) ? 60 : default) }
+  end
+
+  ONE_HOUR = 3600
+
   configure do
     dir = pegasus_dir('sites.v3')
     set :launched_at, Time.now
     set :configs, load_configs_in(dir)
     set :views, dir
-    set :document_max_age, rack_env?(:staging) ? 0 : 3600
     set :image_extnames, ['.png','.jpeg','.jpg','.gif']
     set :exclude_extnames, ['.collate']
-    set :image_max_age, rack_env?(:staging) ? 0 : 36000
-    set :static_max_age, rack_env?(:staging) ? 0 : 36000
+    set_max_age :document, ONE_HOUR * 4
+    set_max_age :document_proxy, ONE_HOUR * 2
+    set_max_age :image, ONE_HOUR * 10
+    set_max_age :image_proxy, ONE_HOUR * 5
+    set_max_age :static, ONE_HOUR * 10
+    set_max_age :static_proxy, ONE_HOUR * 5
     set :read_only, CDO.read_only
     set :not_found_extnames, ['.not_found','.404']
     set :redirect_extnames, ['.redirect','.moved','.found','.301','.302']
@@ -87,18 +99,6 @@ class Documents < Sinatra::Base
         config.ignore << 'Table::NotFound'
       end
     end
-
-    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats',
-                 '/teacher-dashboard',
-                 '/teacher-dashboard/landing',
-                 '/teacher-dashboard/nav',
-                 '/teacher-dashboard/section_manage',
-                 '/teacher-dashboard/section_progress',
-                 '/teacher-dashboard/sections',
-                 '/teacher-dashboard/signin_cards',
-                 '/teacher-dashboard/student',
-                 '/language_test']
-    set :vary, { 'X-Varnish-Accept-Language'=>vary_uris, 'Cookie'=>vary_uris }
   end
 
   before do
@@ -107,11 +107,7 @@ class Documents < Sinatra::Base
     uri = request.path_info.chomp('/')
     redirect uri unless uri.empty? || request.path_info == uri
 
-    settings.vary.each_pair do |header,pages|
-      headers['Vary'] = http_vary_add_type(headers['Vary'], header) if pages.include?(request.path_info)
-    end
-
-    locale = settings.vary['X-Varnish-Accept-Language'].include?(request.path_info) ? request.locale : 'en-US'
+    locale = request.locale
     locale = 'it-IT' if request.site == 'italia.code.org'
     locale = 'es-ES' if request.site == 'ar.code.org'
     locale = 'ro-RO' if request.site == 'ro.code.org'
@@ -144,7 +140,7 @@ class Documents < Sinatra::Base
   get %r{^/lang/([^/]+)/?(.*)?$} do
     lang, path = params[:captures]
     pass unless DB[:cdo_languages].first(code_s: lang)
-    cache_control :private, :must_revalidate, max_age: 0
+    dont_cache
     response.set_cookie('language_', {value: lang, domain: ".#{request.site}", path: '/', expires: Time.now + (365*24*3600)})
     redirect "/#{path}"
   end
@@ -163,7 +159,7 @@ class Documents < Sinatra::Base
   # Static files
   get '*' do |uri|
     pass unless path = resolve_static('public', uri)
-    cache_control :public, :must_revalidate, max_age: settings.static_max_age
+    cache :static
     send_file(path)
   end
 
@@ -175,7 +171,7 @@ class Documents < Sinatra::Base
       IO.read(i)
     end.join("\n\n")
     last_modified(css_last_modified) if css_last_modified > Time.at(0)
-    cache_control :public, :must_revalidate, max_age: settings.static_max_age
+    cache :static
     css
   end
 
@@ -225,7 +221,7 @@ class Documents < Sinatra::Base
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
       content_type image_format.to_sym
-      cache_control :public, :must_revalidate, max_age: settings.image_max_age
+      cache :image
       send_file(path)
     else
       image = Magick::Image.read(path).first
@@ -274,7 +270,7 @@ class Documents < Sinatra::Base
     image.format = image_format
 
     content_type image_format.to_sym
-    cache_control :public, :must_revalidate, max_age: settings.image_max_age
+    cache :image
     image.to_blob
   end
 
@@ -364,9 +360,9 @@ class Documents < Sinatra::Base
       end
 
       if @header['max_age']
-        cache_control :public, :must_revalidate, max_age: @header['max_age']
+        cache_for @header['max_age']
       else
-        cache_control :public, :must_revalidate, max_age: settings.document_max_age
+        cache :document
       end
 
       response.headers['X-Pegasus-Version'] = '3'
@@ -483,7 +479,7 @@ class Documents < Sinatra::Base
         end
         pass unless File.file?(cache_file)
 
-        cache_control :public, :must_revalidate, max_age: settings.static_max_age
+        cache :static
         send_file(cache_file)
       when '.md', '.txt'
         preprocessed = erb body, locals: locals

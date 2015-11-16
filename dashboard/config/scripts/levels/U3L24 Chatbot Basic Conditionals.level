@@ -141,25 +141,23 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "project_template_level_name": "U3 Digital Assistant Template",
-    "free_play": "false",
+    "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "true",
-    "instructions": "Add chained, nested and compound conditionals to your Digital Assistant Project. Refer to the rubric for guidance. (Click to see full instructions.)",
-    "markdown_instructions": "# Adding Conditionals to your Digital Assistant\r\n\r\nThe moment you have been waiting for! \r\n\r\n**Your Digital Assistant Project is back!**\r\n\r\nUse the chained, nested and compound conditionals you have learned about during Movie Bot to make your Digital Assitant more helpful. It would probably be wise to plan out the keywords you want your bot to respond to before you begin programming.\r\n\r\n# Do This\r\n\r\n* **Make a plan for your digital assistant**. Flow charts could be very helpful when you are programming.\r\n\r\n* **Improve your digital assistant.** See rubric for details about the digital assistant project",
+    "instructions": "Check out the project description for instructions. (Click to see full instructions.)",
+    "markdown_instructions": "# Digital Assistant Project\r\n\r\n**Your Digital Assistant Project is back!**\r\n\r\n# Do This\r\n\r\n* **Use the flowchart you have developed to implement the logic that will be used for your digital assistant to \"intelligently\" respond to user input.**\r\n* Once you're done, **submit your project!**\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",
-    "submittable": "false",
+    "submittable": "true",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "encrypted_examples": [
-
-    ],
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "lock_zero_param_functions": "false"
   }
 }]]></config>
   <blocks/>

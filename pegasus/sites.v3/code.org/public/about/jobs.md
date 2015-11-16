@@ -9,7 +9,7 @@ nav: about_nav
 
 - [CS Curriculum Writer](#curric)
 - [Engineering Manager / Chief Architect](#eng)
-- [Technical Product Manager](#techpm)
+- [Integrated Curriculum Coordinator] (#int)
 
 **No current positions, but always accepting great resumes:**
 
@@ -89,27 +89,36 @@ In addition, candidates:
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="techpm"href="#techpm">Technical Product Manager (Seattle)</a>
+## <a name="int"href="#int">Integrated Curriculum Coordinator (Seattle, WA or Chicago, IL preferred, but flexible)</a>
 
 **Job Summary:**
 
-Code.org is recruiting for an experienced Product Manager who can help us identify and implement solutions that use crowd-sourcing to build a strong community of teachers, volunteers, students and donors. This is a full-time, salaried. 
+Code.org is looking for an experienced secondary educator to work with and support the goals of Code.org’s Education team through the maintenance and support of our content area (math and science) integrated curricula. We are looking for someone to help maintain and support teachers using these curricula as a full-time, short-term assignment (9 month contract). While each Education team member takes ownership of large parts of projects, we share work and tasks across projects to make sure all of our projects are aligned under the same philosophical model and contribute to a cohesive K-12 CS pathway.
 
-Responsibilities of the position include:
+Responsibilities of the position include: 
 
-- Defining the scope of these projects
-- Designing user experience and working with engineers, education experts and others at Code.org to implement them
+- Designing, testing, revising, executing, managing, and evaluating a highly-scalable professional development model for the middle school programs.
+- Working closely with the Education team to iterate upon existing curricular materials (lesson plans, formative/summative assessments, and videos).
+- Working closely with the Operations team to develop facilitator capacity and refine PD.
+Collaborating with the Product team to develop curriculum-specific technology tools and using the tools to create tutorials and projects.
+- Collaborating with external partners to improve existing curriculum and professional development materials
+- Ability to travel occasionally for work
+Collaborating with remote Education team members 
 
-This person must be able to work in a fast paced environment with continuous release to customers.
 
 **Skills and Qualifications:**
 
-The ideal candidate has the following qualifications:
+The ideal candidate has 2-3 years of experience teaching secondary math or science (Algebra knowledge required); has strong leadership, project management, writing and communications skills; is a tech-savvy self-starter who is able to multi-task and excel under pressure. Professional Development experience is a plus.
 
-- Bachelors degree in Computer Science
-- Minimum of 3 years of experience as a technical program manager or product manager building web-centric products/services
-- Experience in designing user experience for non-tech savvy customers
-- Strong technical background
+The candidate should also have: 
+
+- Basic knowledge knowledge of computer science (required) 
+- Prior curriculum writing experience / activity design (required)
+- A Bachelor’s degree or higher in Education or Computer Science 
+- Recent computer science or STEM teaching experience in middle or high school field 
+Experience using the Understanding by Design curriculum framework  
+- Proficiency in working with Microsoft Office and Google Docs (required) 
+
 
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.

@@ -1,5 +1,6 @@
 var assetsApi = require('../../clientApi').assets;
 var AssetRow = require('./AssetRow.jsx');
+var AssetUploader = require('./AssetUploader.jsx');
 var assetListStore = require('./assetListStore');
 
 var errorMessages = {
@@ -24,6 +25,7 @@ module.exports = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
     typeFilter: React.PropTypes.string,
+    channelId: React.PropTypes.string.isRequired,
     uploadsEnabled: React.PropTypes.bool.isRequired
   },
 
@@ -56,46 +58,24 @@ module.exports = React.createClass({
    */
   onAssetListFailure: function (xhr) {
     this.setState({statusMessage: 'Error loading asset list: ' +
-        getErrorMessage(xhr.status)});
+      getErrorMessage(xhr.status)});
   },
 
-  /**
-   * We've hidden the <input type="file"/> and replaced it with a big button.
-   * Forward clicks on the button to the hidden file input.
-   */
-  fileUploadClicked: function () {
-    var uploader = React.findDOMNode(this.refs.uploader);
-    uploader.click();
-  },
-
-  /**
-   * Uploads the current file selected by the user.
-   * TODO: HTML5 File API isn't available in IE9, need a fallback.
-   */
-  upload: function () {
-    var file = React.findDOMNode(this.refs.uploader).files[0];
-    if (file.type && this.props.typeFilter) {
-      var type = file.type.split('/')[0];
-      if (type !== this.props.typeFilter) {
-        this.setState({statusMessage: 'Only ' + this.props.typeFilter +
-          ' assets can be used here.'});
-        return;
-      }
-    }
-
-    // TODO: Use Dave's client api when it's finished.
-    assetsApi.ajax('PUT', file.name, function (xhr) {
-      assetListStore.add(JSON.parse(xhr.responseText));
-      this.setState({
-        assets: assetListStore.list(this.props.typeFilter),
-        statusMessage: 'File "' + file.name + '" successfully uploaded!'
-      });
-    }.bind(this), function (xhr) {
-      this.setState({statusMessage: 'Error uploading file: ' +
-          getErrorMessage(xhr.status)});
-    }.bind(this), file);
-
+  onUploadStart: function () {
     this.setState({statusMessage: 'Uploading...'});
+  },
+
+  onUploadDone: function (result) {
+    assetListStore.add(result);
+    this.setState({
+      assets: assetListStore.list(this.props.typeFilter),
+      statusMessage: 'File "' + result.filename + '" successfully uploaded!'
+    });
+  },
+
+  onUploadError: function (status) {
+    this.setState({statusMessage: 'Error uploading file: ' +
+      getErrorMessage(status)});
   },
 
   deleteAssetRow: function (name) {
@@ -106,27 +86,18 @@ module.exports = React.createClass({
   },
 
   render: function () {
-    var uploadButton = (
-      <div>
-        <input
-            ref="uploader"
-            type="file"
-            accept={(this.props.typeFilter || '*') + '/*'}
-            style={{display: 'none'}}
-            onChange={this.upload} />
-        <button
-            onClick={this.fileUploadClicked}
-            className="share"
-            id="upload-asset"
-            disabled={!this.props.uploadsEnabled}>
-          <i className="fa fa-upload"></i>
-          &nbsp;Upload File
-        </button>
-        <span style={{margin: '0 10px'}} id="manage-asset-status">
-          {this.state.statusMessage}
-        </span>
-      </div>
-    );
+    var uploadButton = <div>
+      <AssetUploader
+        uploadsEnabled={this.props.uploadsEnabled}
+        typeFilter={this.props.typeFilter}
+        channelId={this.props.channelId}
+        onUploadStart={this.onUploadStart}
+        onUploadDone={this.onUploadDone}
+        onUploadError={this.onUploadError}/>
+      <span style={{margin: '0 10px'}} id="manage-asset-status">
+        {this.state.statusMessage}
+      </span>
+    </div>;
 
     var assetList;
     // If `this.state.assets` is null, the asset list is still loading. If it's
