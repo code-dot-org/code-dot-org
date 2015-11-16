@@ -3520,5 +3520,20 @@ levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
                     blockOfType('studio_whenGetAllCharacters') +
                     blockOfType('studio_whenGetAllCharacterClass') +
                     blockOfType('studio_whenTouchObstacle'))),
-
+ callouts: [
+    {
+      id: 'playlab:hoc2015_blockly_15:finishButton',
+      element_id: '#finishButton',
+      on: 'finishButtonShown',
+      qtip_config: {
+        content: {
+          text: msg.calloutFinishButton(),
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom right',
+        }
+      }
+    }
+  ]
 });
