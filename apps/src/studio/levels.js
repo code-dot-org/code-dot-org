@@ -2523,7 +2523,7 @@ levels.js_hoc2015_win_lose = {
       }
     },
 
-    // Success: enough itmes, enough points
+    // Success: enough items, enough points
     { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 },
       result: { success: true, message: msg.successCharacter1() } }
   ]
