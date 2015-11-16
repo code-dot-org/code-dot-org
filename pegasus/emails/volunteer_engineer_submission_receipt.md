@@ -15,6 +15,10 @@ On November 16 (1:00pm - 1:30pm PST) and December 3 (11:00am - 11:30am PST), we'
 ## 3. Review the How-to Guide for Volunteers
 To get a better idea about what your volunteer experience will be like, review [this guide](https://hourofcode.com/us/how-to/volunteers). There's also some extra tips about how you can get your employer and community involved with the Hour of Code.
 
+If you need to update your information or want to unsubscribe from teacher requests, use this link:
+
+<%= "https://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{form.secret}/" %>
+
 Thanks again for your support,
 
 Hadi Partovi,<br/>

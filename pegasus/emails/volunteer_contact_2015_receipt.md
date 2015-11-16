@@ -11,7 +11,7 @@ reply-to: <%= format_email_address(email_s, name_s).inspect %>
 subject: "A teacher is requesting your help for the Hour of Code"
 ---
 
-<% update_preferences = "http://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{volunteer_secret_s}/" %>
+<% update_preferences = "https://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{volunteer_secret_s}/" %>
 
 Hi <%= volunteer_name_s %>,
 
