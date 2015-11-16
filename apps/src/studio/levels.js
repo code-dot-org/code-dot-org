@@ -1370,11 +1370,11 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
     '</block>'
 });
 levels.gumball_9 = utils.extend(levels.playlab_9, {
-  background: 'space',
+  background: 'dots',
   toolbox:
     tb(
       blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
-      blockOfType('studio_setBackground', {VALUE: '"icy"'}) +
+      blockOfType('studio_setBackground', {VALUE: '"space"'}) +
       blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
       blockOfType('studio_saySprite') +
       blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
@@ -1383,7 +1383,7 @@ levels.gumball_9 = utils.extend(levels.playlab_9, {
   requiredBlocks: [
     [{test: 'setBackground',
       type: 'studio_setBackground',
-      titles: {VALUE: '"space"'}}],
+      titles: {VALUE: '"dots"'}}],
     [{test: 'setSpriteSpeed',
       type: 'studio_setSpriteSpeed',
       titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
@@ -1403,7 +1403,7 @@ levels.gumball_9 = utils.extend(levels.playlab_9, {
       '<title name="SPRITE2">1</title>' +
       '<next>' +
         blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
-          blockOfType('studio_saySprite', {TEXT: msg.iceAge()})
+          blockOfType('studio_saySprite', {TEXT: msg.spaceInvasion()})
         ) +
       '</next>' +
     '</block>' +
