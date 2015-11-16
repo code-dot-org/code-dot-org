@@ -228,7 +228,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_select 'a[href="//test.code.org/teacher-dashboard"]', 'Teacher Home Page'
   end
 
-
   test "do not show prize link if you don't have a prize" do
     sign_in create(:teacher)
 
