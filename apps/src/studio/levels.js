@@ -2591,7 +2591,7 @@ levels.js_hoc2015_add_characters = {
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_add_characters:calloutPutCommandsHereRunStart',
-      'element_id': '.droplet-gutter-line:nth-of-type(2)',
+      'element_id': '.droplet-gutter-line:nth-of-type(3)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content' : {
@@ -3351,6 +3351,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
     {
       id: 'playlab:hoc2015_blockly_12:calloutPlaceTwoWhenTauntaun',
       element_id: '[block-id="11"]',
+      hide_target_selector: '.blocklyDraggable',
       qtip_config: {
         content: {
           text: msg.calloutPlaceTwoWhenTauntaun(),
