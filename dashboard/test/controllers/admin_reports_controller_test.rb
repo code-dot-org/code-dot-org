@@ -30,6 +30,7 @@ class AdminReportsControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :admin_stats
   generate_admin_only_tests_for :funometer
   # TODO(asher): Add :funometer_by_script and :funometer_by_script_level after fixing routing.
+  generate_admin_only_tests_for :hoc_signups
 
   test 'should get admin progress page' do
     get :admin_progress
