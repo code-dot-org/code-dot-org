@@ -29,6 +29,7 @@ class Blockly < Level
     toolbox_blocks
     required_blocks
     recommended_blocks
+    authored_hints
     ani_gif_url
     is_k1
     skip_instructions_popup
@@ -182,6 +183,7 @@ class Blockly < Level
       overrides = {
         required_blocks: 'levelBuilderRequiredBlocks',
         recommended_blocks: 'levelBuilderRecommendedBlocks',
+        authored_hints: 'levelBuilderAuthoredHints',
         toolbox_blocks: 'toolbox',
         x: 'initialX',
         y: 'initialY',
