@@ -111,17 +111,12 @@ One lucky classroom will win the grand prize – a trip to San Francisco, CA for
 
 
 
-## 100 classrooms will win a programmable BB-8 droid robot by Sphero
-In honor of Hour of Code tutorial "Star Wars: Building a Galaxy with Code," 100 participating classrooms in the United States or Canada will a BB-8™ App-enabled Droid that students can program. Sign up your Hour of Code event to qualify. [Learn more about BB-8 from Sphero](http://sphero.com/starwars).
+## 100 classrooms will win programmable robots including a BB-8 droid robot by Sphero
+In honor of Hour of Code tutorial "Star Wars: Building a Galaxy with Code," 100 participating classrooms in the United States or Canada will a set of four Sphero 2.0 robots plus a BB-8™ App-enabled Droid that students can program. Sign up your Hour of Code event to qualify. [Learn more about BB-8 from Sphero](http://sphero.com/starwars) and [about Sphero education](http://sphero.com/education).
 
 <img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-220x160/bb8.png"/>
 
 <img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-200x160/bb8-girl.jpg"/>
-
-<p style="clear:both; height: 0px;">&nbsp;</p>
-
-## 100 classrooms will win a set of programmable robots by Sphero
-100 participating classrooms in the United States or Canada will win a set of Sphero 2.0 robots (each set includes four) that students can program. Sign up your Hour of Code event to qualify. [Learn more about Sphero education](http://sphero.com/education). 
 
 <img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-300x160/sphero-robot.png"/>
 

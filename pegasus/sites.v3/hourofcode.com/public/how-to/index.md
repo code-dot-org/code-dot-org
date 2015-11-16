@@ -14,12 +14,19 @@ nav: how_to_nav
 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3) Choose a tutorial:
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* 
 
-**All Hour of Code tutorials:**
+**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
 
 - Require minimal prep-time for teachers
 - Are self-guided - allowing students to work at their own pace and skill-level
+
+**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+
+- Are lesson plans that require some advance teacher preparation
+- Are categorized by grade level *and* by subject area (eg Math, English, etc)
+
+
 
 [<img src="/images/fit-700/tutorials.png">](<%= resolve_url('https://code.org/learn') %>)
 
