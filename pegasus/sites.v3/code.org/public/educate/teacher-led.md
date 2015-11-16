@@ -20,7 +20,7 @@ Use playing cards (or dice, or sheets of paper...anything with the ability to ra
 **Ages 8-18, Sequence, Algorithms, Programming, unplugged.** 
 Make fun take-home items that "store" students' initials using only two colors.
 
-[Bomberbot Hour of Code Activities](www.bomberbot.com/hourofcode)  
+[Bomberbot Hour of Code Activities](http://www.bomberbot.com/hourofcode)  
 **Ages 5-18, Sequence, Algorithms, Programming, unplugged or web-based.** Students will learn a series of programming concepts and apply them to programming a robot.
 
 [STEM Projects](https://www.tynker.com/hour-of-code/tynker-stem-teacher-guide.pdf)  

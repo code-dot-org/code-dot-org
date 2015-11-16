@@ -36,6 +36,8 @@
 
   div[contenteditable=true] {
     overflow: auto;
+    word-wrap: break-word; /* needed by Firefox */
+    -moz-user-select: text;
   }
 
   button {

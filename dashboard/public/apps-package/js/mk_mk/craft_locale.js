@@ -155,5 +155,6 @@ p:function(d,k,o,l,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:(k=craft_loca
 s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).craft_locale = {
 "reinfFeedbackMsg":function(d){return "You can press \"Keep Playing\" to go back to playing your game."},
-"nextLevelMsg":function(d){return "Success: Puzzle "+craft_locale.v(d,"puzzleNumber")+" completed. Congratulations!"},
+"nextLevelMsg":function(d){return "Puzzle "+craft_locale.v(d,"puzzleNumber")+" completed. Congratulations!"},
+"generatedCodeDescription":function(d){return "By dragging and placing blocks in this puzzle, you've created a set of instructions in a computer language called Javascript. This code tells computers what to display on the screen. Everything you see and do in Minecraft also starts with lines of computer code like these."},
 "tooManyBlocksFail":function(d){return "Puzzle "+craft_locale.v(d,"puzzleNumber")+" completed. Congratulations! It is also possible to complete it with "+craft_locale.p(d,"numBlocks",0,"mk",{"one":"1 block","other":craft_locale.n(d,"numBlocks")+" blocks"})+"."}};

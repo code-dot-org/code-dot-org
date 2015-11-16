@@ -28,7 +28,7 @@ Today's apps play sounds to make them more engaging. You can add sounds to your 
 **1. Copy the URL of a sound on the web.**
 In most browsers you can simply *right-click (ctrl+click on a Mac)* on a sound file and you'll see a menu with a few option. One will be to copy the URL of the sound.
 
-**2. Upload your own spunds file to App Lab.**
+**2. Upload your own sound file to App Lab.**
 You can upload sound files saved on your computer to your app in App Lab.
 
 - Click the pulldown arrow in the image URL field and then click "Choose..."![](https://images.code.org/fd732bd6408f4b057f25b1dad946cb13-image-1447331874346.jpg)
@@ -74,6 +74,37 @@ while ((count <= 3)) {
 
 ____________________________________________________
 
+[example]
+
+**Animal Piano** Play an animal sound when each animal image is clicked.
+
+```
+// Play an animal sound when each animal image is clicked. 
+image("dog", "http://animalia-life.com/data_images/dog/dog7.jpg");
+setPosition("dog", 50, 100, 100, 100);
+image("cat", "http://animalia-life.com/data_images/cat/cat1.jpg");
+setPosition("cat", 150, 100, 100, 100);
+image("pig", "http://animalia-life.com/data_images/pig/pig1.jpg");
+setPosition("pig", 50, 200, 100, 100);
+image("owl", "http://animalia-life.com/data_images/owl/owl1.jpg");
+setPosition("owl", 150, 200, 100, 100);
+onEvent("dog", "click", function(event) {
+  playSound("http://static1.grsites.com/archive/sounds/animals/animals079.mp3");
+});
+onEvent("cat", "click", function(event) {
+  playSound("http://static1.grsites.com/archive/sounds/animals/animals021.mp3");
+});
+onEvent("pig", "click", function(event) {
+  playSound("http://static1.grsites.com/archive/sounds/animals/animals025.mp3");
+});
+onEvent("owl", "click", function(event) {
+  playSound("http://static1.grsites.com/archive/sounds/animals/animals074.mp3");
+});
+```
+
+[/example]
+____________________________________________________
+
 
 [syntax]
 
@@ -106,9 +137,7 @@ No return value. Plays a sound only.
 
 ### Tips
 
-- bulleted list
-- of related APIs/documentation (use relative urls) or information and where to find it.
-
+- The sound URL requires the full http:// prefix.
 
 [/tips]
 
