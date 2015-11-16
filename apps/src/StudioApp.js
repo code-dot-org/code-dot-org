@@ -333,6 +333,10 @@ StudioApp.prototype.init = function(config) {
   if(config.embed) {
     var resized = false;
     var resize = function() {
+      if (options.app === 'applab') {
+        return ;
+      }
+
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
