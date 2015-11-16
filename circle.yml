@@ -11,13 +11,16 @@ dependencies:
     - sudo apt-get install libicu-dev
     - bundle install
     - rake install:pegasus
-    - "printf \"assets_s3_directory: assets_circle/$RANDOM\nsources_s3_directory: sources_circle/$RANDOM\n\" > locals.yml"
+    - "printf \"assets_s3_directory: assets_circle/$RANDOM\nsources_s3_directory: sources_circle/$RANDOM\nsaucelabs_username: '$SAUCE_USERNAME'\nsaucelabs_authkey: '$SAUCE_ACCESS_KEY'\n\" > locals.yml"
     - npm install:
         pwd:
             apps
     - bash build_with_core.sh:
         pwd:
             apps
+    - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
+    - tar -xzf sc-latest-linux.tar.gz
+
 database:
     override:
       - bundle exec rake db:create:
@@ -26,20 +29,33 @@ database:
       - bundle exec rake db:schema:load:
           pwd:
               dashboard
+      - bundle exec rake seed:all:
+          pwd:
+              dashboard
 test:
     override:
-        - bundle exec rake test:
-            pwd:
-                pegasus
-        - bundle exec rake test:
-            pwd:
-                shared
-        - for i in 1 2; do grunt test && break; done:
-            pwd:
-                apps
-        - bundle exec rake konacha:run:
-            pwd:
-                dashboard
-        - ./test.sh:
-            pwd:
-                cookbooks
+        # - bundle exec rake test:
+        #     pwd:
+        #         pegasus
+        # - bundle exec rake test:
+        #     pwd:
+        #         shared
+        # - for i in 1 2; do grunt test && break; done:
+        #     pwd:
+        #         apps
+        # - bundle exec rake konacha:run:
+        #     pwd:
+        #         dashboard
+        # - ./test.sh:
+        #     pwd:
+        #         cookbooks
+        - cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY --readyfile ~/sauce_is_ready:
+            background: true
+        - bin/dashboard-server:
+            background: true
+        # Wait for tunnel to be ready
+        - while [ ! -e ~/sauce_is_ready ]; do sleep 1; done
+        # Wait for app to be ready
+        - curl --retry 10 --retry-delay 2 -v http://localhost:3000
+        - bundle exec ./runner.rb --dashboard localhost.studio.code.org:3000 -c ChromeLatestWin7 --auto_retry --html -V:
+            pwd: dashboard/test/ui
