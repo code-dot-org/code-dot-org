@@ -49,7 +49,7 @@ Here's what you do.  You know that the code involves two variables (or two chunk
 	
     <td style="border: solid 1px black">
     <img src="https://images.code.org/738fff341d21e2b4235271ea137a1016-image-1445007370615.png" style="width: 130px">
-    <br><em>Take the current value of <strong>b</strong> and put it in <strong>a</strong> </em>
+    <br><em>Copy the current value of <strong>b</strong> into <strong>a</strong> </em>
     </td>
     <td style="border: solid 1px black">
     <img src="https://images.code.org/93595f90f756bf2cd701aa99ae31f4da-image-1445958640960.png" style="width: 100px; ">
@@ -60,12 +60,12 @@ Here's what you do.  You know that the code involves two variables (or two chunk
 	
     <td style="border: solid 1px black">
     <img src="https://images.code.org/4b0faa246754583696c4c0132277bda8-image-1445007372291.png" style="width: 130px">
-    <br><em>Take the current value of <strong>a</strong> (which is now 7) and put it in <strong>b</strong> </em> 
+    <br><em>Copy the current value of <strong>a</strong> (which is now 7) into <strong>b</strong> </em> 
     </td>
     <td style="border: solid 1px black">
     <img src="https://images.code.org/6d1b2018cf280c0d4a000cf397f7815a-image-1445958664958.png" style="width: 100px;">
     <br>
-    NOTE: the value of <strong>a</strong> changed on the last line! So you must use the value that's currently in a for this line.  Also note that even though it's the same value (7) you're still instructing the computer to put a value into memory, and the computer will just follow whatever instructions you give.
+    NOTE: the value of <strong>a</strong> changed on the last line! So you must use the value that's currently in <strong>a</strong> for this line.  Also note that even though it's the same value (7) you're still instructing the computer to put a value into memory, and the computer will just follow whatever instructions you give.
     
     </td>
 </tr>
