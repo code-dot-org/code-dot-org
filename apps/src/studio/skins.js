@@ -21,6 +21,12 @@ function loadGumball(skin, assetUrl) {
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
+  skin.spriteHeight = 110;
+  skin.spriteWidth = 110;
+
+  skin.spriteCollisionRectWidth  = 50;
+  skin.spriteCollisionRectHeight = 50;
+
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
   skin.ProjectileClassNames = [
@@ -95,6 +101,9 @@ function loadGumball(skin, assetUrl) {
   skin.squares = {
     background: skin.assetUrl('background_squares.png'),
   };
+  skin.stripes = {
+    background: skin.assetUrl('background_stripes.png'),
+  };
   skin.wood = {
     background: skin.assetUrl('background_wood.png'),
   };
@@ -136,6 +145,7 @@ function loadGumball(skin, assetUrl) {
     [msg.setBackgroundGraffiti(), '"graffiti"'],
     [msg.setBackgroundSpace(), '"space"'],
     [msg.setBackgroundSquares(), '"squares"'],
+    [msg.setBackgroundStripes(), '"stripes"'],
     [msg.setBackgroundWood(), '"wood"']];
 
   // NOTE: background names must have double quotes inside single quotes
@@ -149,6 +159,7 @@ function loadGumball(skin, assetUrl) {
     [skin.graffiti.background, '"graffiti"'],
     [skin.space.background, '"space"'],
     [skin.squares.background, '"squares"'],
+    [skin.stripes.background, '"stripes"'],
     [skin.wood.background, '"wood"'],
     [skin.randomPurpleIcon, RANDOM_VALUE]];
 
