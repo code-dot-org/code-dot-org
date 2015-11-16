@@ -35,7 +35,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Write a function that returns the smaller of two numbers.  (Click to see full instructions)",
-    "markdown_instructions": "# Find Min\r\n\r\nIts your turn to try writing a function that returns again. **Create a findMin function that will return the smaller of two values.** \r\n\r\n**Best practice when writing Functions with Returns:** \r\n\r\n* Calculate whatever you need\r\n* Store it in a variable\r\n* Return it at the end of the function. \r\n\r\n# Do This\r\n\r\n* **Starter Code: ** We have given you the function outline for findMin and a couple function calls. \r\n\r\n* **Use conditionals** to check which value is smaller. **Save that smaller value in a variable.**\r\n\r\n* **Return the variable** holding the smaller value at the end of the function. ",
+    "markdown_instructions": "# Find Min\r\n\r\nIts your turn to try writing a function that returns again. **Create a findMin function that will return the smaller of two values.** \r\n\r\n**Best practices when writing Functions with Returns:** \r\n\r\n* Calculate whatever you need\r\n* Store it in a variable\r\n* Return it at the end of the function. \r\n\r\n# Do This\r\n\r\n* **Starter code** is provided which gives the outline for findMin and a couple of calls to that function\r\n* **Use conditionals** to check which value is smaller. **Save that smaller value in a variable.**\r\n* **Return the variable holding the smaller value** at the end of the function. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -65,7 +65,10 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "console.log(findMin(1,2));\r\nconsole.log(findMin(2,1));\r\nconsole.log(findMin(100,188));\r\n\r\nfunction findMin(num1, num2){\r\n\r\n}"
+    "start_blocks": "console.log(\"The smaller between 1 and 2 is \"+ findMin(1,2));\r\nconsole.log(\"The smaller between 2 and 1 is \"+findMin(2,1));\r\nconsole.log(\"The smaller between 100 and 150 is \"+findMin(100,150));\r\nconsole.log(\"The smaller between 100 and 100 is \"+ findMin(100,100));\r\n\r\nfunction findMin(num1, num2){\r\n\r\n}",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>
