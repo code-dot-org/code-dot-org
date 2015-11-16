@@ -3,26 +3,17 @@ title 'Arrays - Photo Album'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 31 - Arrays-Photo Album
+## Unit 3: Lesson 25 - Using Arrays in Apps
 
 # Background
 
-Data – including images – can be stored and manipulated in an array. An array is the perfect form for creating a cloud-based photo collection that will enable the user to add new images, access individual images, and navigate through the collection.
+When designing programs you will often discover new pieces of functionality you wish to add once you have completed a working prototype. Incorporating these new features will of course require writing new code, but it can also often require redesigning the parts of your program you have already written. In this lesson you will extend the "My Favorite Things" app you built in the previous lesson, continuing to practice using arrays in apps while learning how to approach the process of refactoring code.
 
 # Lesson
 
-* Write a program to create an array to store images.
-* Employ a variety of array processing techniques to manipulate the array. 
-
-# Resources
-* Activity: <a href="https://docs.google.com/document/d/1LZnUHVum37l0_RzXvWJ9IfeADIjl2GlFU27kRSWJe9Q" target="_blank">
- Photo Album Project
-</a>
-
-* Rubric: <a href="https://docs.google.com/document/d/13sCGYxu4Wsn-0UUoDaRuvpUb6GTy4z3aIUkC8tTb6GI" target="_blank">
- Photo Album Project
-</a>
-
+* Introduction to key events
+* Improve the "My Favorite Things" app to store and display images
+* Refactor code in order to incorporate new functionality
   
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

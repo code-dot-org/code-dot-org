@@ -68,31 +68,15 @@ def process_command_line(argv=ARGV)
 end
 
 @contacts_lock = Mutex.new
-@contacts_cache = nil
+IP_ADDRESS = '127.0.0.1'
 def send_message(template, item)
-  @contacts_lock.synchronize do
-    unless @contacts_cache
-      puts "Loading contacts..."
-      @contacts_cache = load_contacts
-      puts "#{@contacts_cache.length} contact(s) loaded."
-    end
+  recipient = @contacts_lock.synchronize do
+    Poste2.ensure_recipient(item['email'], name: item['name'].to_s, ip_address: IP_ADDRESS)
   end
 
-  begin
-    ip_address = '127.0.0.1'
-
-    recipient_id = @contacts_cache[item['email']] if @contacts_cache
-    if recipient_id
-      recipient = {id: recipient_id, email: item['email'], name: item['name'].to_s, ip_address: ip_address}
-    else
-      recipient = Poste2.ensure_recipient(item['email'], name: item['name'].to_s, ip_address: ip_address)
-      @contacts_cache[item['email']] = recipient[:id] if @contacts_cache
-    end
-
-    Poste2.send_message template, recipient, item.to_hash.except('email', 'name')
-  rescue => e
-    puts "Couldn't send to '#{item['email']}': #{e.message}"
-  end
+  Poste2.send_message template, recipient, item.to_hash.except('email', 'name')
+rescue => e
+  puts "Couldn't send to '#{item['email']}': #{e.message}"
 end
 
 USAGE = <<EOS

@@ -12,15 +12,15 @@ Here are a few resources to help you get started with understanding these CS con
 ##### Vocabulary
 
 - **Event-driven program**:  A program designed to run blocks of code or functions in response to specified events (e.g. a mouse click)
-- **Event:** A user action or other occurrence that can be detected by a program. Events can be used to trigger execution of specified blocks of code
+- **Event:** A user action or other occurrence that can be detected by a program. Events can be used to trigger execution of specific blocks of code
 - **Event Handler:** Indicates which commands should run when a specified event occurs
 - **Element ID:** A unique ID given to a UI element (such as a button) so that an event handler can be attached to that specific element only
 
 
 ##### Lessons in Code Studio
 
-- [Stage 9: Events Unplugged](studio.code.org/s/cspunit3/stage/9/puzzle/1)
-- [Stage 10: Event-Driven Programming and Debugging](studio.code.org/s/cspunit3/stage/10/puzzle/1)
+- [Stage 9: Events Unplugged](https://studio.code.org/s/cspunit3/stage/9/puzzle/1)
+- [Stage 10: Event-Driven Programming and Debugging](https://studio.code.org/s/cspunit3/stage/10/puzzle/1)
 
 ##### External Resources 
 
@@ -33,8 +33,8 @@ Here are a few resources to help you get started with understanding these CS con
 
 - **Design Mode:** Specific to the App Lab programming environment, "Design Mode" refers to the area of the environment where students can simply drag and drag UI elements into their app, and set certain properties like color, size, text, etc. With Design Mode, the process of app development in App Lab changes slightly, as prior to the introduction of design mode, students could only use functions in code such as  `button()` to create a button on the screen:
      - First, students will drag and drop UI elements in Design Mode to create the visual layout of their app.
-     - As they are creating the layout, they should give design elements (such as buttons) unique and descriptive **IDs**
-     -  Students then return to "Code Mode" for their app to program event-handlers for many of those UI elements to respond to user input.
+     - As they are creating the layout, they should give design elements (such as buttons) unique and descriptive **IDs**.
+     -  Students then return to "Code Mode" for their app to program event handlers for many of those UI elements to respond to user input.
      
 <img src="https://images.code.org/0de10d7ed39725856a38f07cad4de79b-image-1446419972230.gif" style="width:500px;margin-left:100px;">
      
@@ -44,9 +44,9 @@ Here are a few resources to help you get started with understanding these CS con
 
 ##### Lessons in Code Studio
 
-- [Stage 11: Beyond Buttons Toward Apps](studio.code.org/s/cspunit3/stage/11/puzzle/1)
-- [Stage 12: Introducing Design Mode](studio.code.org/s/cspunit3/stage/12/puzzle/1)
-- [Stage 13: Multi-screen Apps](studio.code.org/s/cspunit3/stage/13/puzzle/1)
+- [Stage 11: Beyond Buttons Toward Apps](https://studio.code.org/s/cspunit3/stage/11/puzzle/1)
+- [Stage 12: Introducing Design Mode](https://studio.code.org/s/cspunit3/stage/12/puzzle/1)
+- [Stage 13: Multi-screen Apps](https://studio.code.org/s/cspunit3/stage/13/puzzle/1)
 
 ##### External Resources 
 

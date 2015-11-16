@@ -166,7 +166,8 @@ button.arrow:disabled {
 #soft-buttons {
   display: inline-block;
   vertical-align: top;
-  margin-left: -5px; }
+  margin-left: -5px;
+  -webkit-touch-callout: none; }
   #soft-buttons.soft-buttons-none {
     display: none; }
 
@@ -394,8 +395,6 @@ html[dir='rtl'] #codeWorkspace {
     max-width: 200px; }
   .small-footer-base.responsive {
     max-width: 200px; }
-    .small-footer-base.responsive small {
-      float: left; }
   #codeWorkspace {
     left: 200px; }
   html[dir='rtl'] #codeWorkspace {
@@ -413,7 +412,9 @@ html[dir='rtl'] #codeWorkspace {
     transform: scale(0.5); }
   .bee-counter-text {
     font-size: 32px;
-    stroke-width: 2px; } }
+    stroke-width: 2px; }
+  .small-footer-base.responsive small {
+    float: left; } }
 
 /* Buttons */
 button, label.img-upload {

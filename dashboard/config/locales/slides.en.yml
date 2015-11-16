@@ -353,10 +353,10 @@ en:
         text: "To start off, you'll need to link your blocks to the orange \"when run\" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together."
       5:
         image: 'notes/playlab_intro_5.png'
-        text: "In this first puzzle, our actor is a penguin and we'll be making it say \"Hello!\" by dragging the say block out, linking it to the when run block, and typing in \"Hello.\" We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed." 
+        text: "In this first puzzle, our actor is a penguin and we'll be making it say \"Hello!\" by dragging the say block out, linking it to the when run block, and typing in \"Hello.\" We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed."
       6:
         image: 'notes/playlab_intro_6.png'
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make." 
+        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
     playlab_events:
       1:
         image: 'notes/playlab_events_1.png'
@@ -377,7 +377,7 @@ en:
       2:
         image: 'notes/playlab_repeat_forever_2.png'
         text: "If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the \"repeat forever\" block."
-      3: 
+      3:
         image: 'notes/playlab_repeat_forever_3.png'
         text: "In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game."
     C1_artist_intro:
@@ -422,7 +422,7 @@ en:
         text: "In video games, there's an event called \"Update\" and it happens 30 or 60 times a second. For videogame programmers that's almost more important as an event than the buttons or the joystick."
       6:
         image: 'notes/C1_bigevent_unplugged_6.png'
-        text: "The main event we're watching for is that \"Update\" tick happening. And then we check the joystick in the tick. So we say, \"Oh, has somebody pushed the button this frame? Yes or no?\" Without events, the player couldn't move, you couldn't jump, you wouldn't be able to control what's going on. The videogame wouldn't be able to animate anything."    
+        text: "The main event we're watching for is that \"Update\" tick happening. And then we check the joystick in the tick. So we say, \"Oh, has somebody pushed the button this frame? Yes or no?\" Without events, the player couldn't move, you couldn't jump, you wouldn't be able to control what's going on. The videogame wouldn't be able to animate anything."
     C1_building_foundation:
       1:
         image: 'notes/C1_building_foundation_1.jpg'
@@ -438,7 +438,7 @@ en:
         text: "Persistence is all about hanging in there when you really want to give up. If you want to create something new and different, there's going to be a lot of failures along the way."
       5:
         image: 'notes/C1_building_foundation_5.jpg'
-        text: "The trick to persistence is choosing to keep on going and learn from your failures instead of quitting because you're frustrated. Frustration actually just means there's something wonderful around the corner. So don't quit before you get to it. Wooo!" 
+        text: "The trick to persistence is choosing to keep on going and learn from your failures instead of quitting because you're frustrated. Frustration actually just means there's something wonderful around the corner. So don't quit before you get to it. Wooo!"
     C1_getting_loopy:
       1:
         image: 'notes/C1_getting_loopy_1.png'
@@ -490,7 +490,7 @@ en:
         text: "For this puzzle, you need to get the bird to the pig. Look at the puzzle and see what directions it needs to take."
       2:
         image: 'notes/C1_maze_intro_sequencing_2.png'
-        text: "You need to drag the blocks over from the toolbox to the workspace. Make sure it's under the \"when run\" block and when you think you've got the right solution, then you can click \"Run\" and watch the bird go to the pig."    
+        text: "You need to drag the blocks over from the toolbox to the workspace. Make sure it's under the \"when run\" block and when you think you've got the right solution, then you can click \"Run\" and watch the bird go to the pig."
     C1_maze_loops:
       1:
         image: 'notes/C1_maze_loops_1.png'
@@ -510,7 +510,7 @@ en:
         text: "But the smiley is face down and only one person knows how to get there. Let's get this program started."
       3:
         image: 'notes/C1_moveitmoveit_unplugged_3.png'
-        text: "A program is an algorithm that has been coded into something that can be run by a machine. Most of us think of a program as something that we write for a computer. Programs are really good for that but they're also helpful in other places. You can make your own game or even program a robot to do things for you."    
+        text: "A program is an algorithm that has been coded into something that can be run by a machine. Most of us think of a program as something that we write for a computer. Programs are really good for that but they're also helpful in other places. You can make your own game or even program a robot to do things for you."
     C1_going_places_safely:
       1:
         image: 'notes/C1_going_places_safely_1.png'
@@ -636,7 +636,7 @@ en:
         text: "Hi, I'm Orion and I program robots here at Play-im. All computer and robot brains at their most fundamental level are little electronic gates. When the gate is open, electricity can flow through and when it's closed, electricity can't."
       4:
         image: 'notes/C2_binary_bracelets_4.png'
-        text: "An example of binary on the robot is the robot's eyes. The robot's eyes are LEDs and those are lights that are either on or off. It's a binary system, one or the other. We can use the lights to represent binary numbers. If we have a set of robots, we can say that the first robot is the 1s place and the second robot is the 2s place, the third robot is the 4s place and so on. That's how you represent a binary number. The robots will do it with their binary eyes and count it out for you."     
+        text: "An example of binary on the robot is the robot's eyes. The robot's eyes are LEDs and those are lights that are either on or off. It's a binary system, one or the other. We can use the lights to represent binary numbers. If we have a set of robots, we can say that the first robot is the 1s place and the second robot is the 2s place, the third robot is the 4s place and so on. That's how you represent a binary number. The robots will do it with their binary eyes and count it out for you."
     C2_conditionals_with_cards:
       1:
         image: 'notes/C2_conditionals_with_cards_1.png'
@@ -1210,7 +1210,7 @@ en:
     infinity_playlab_repeat_forever:
       1:
         image: 'notes/infinity_playlab_repeat_forever_1.png'
-        text: "Can you imagine if you had to repeat something forever and ever? Hopefully you'll never have to because computers are really good at repeating things. This is the repeat forever block. Anything inside this block will happen forever in the game." 
+        text: "Can you imagine if you had to repeat something forever and ever? Hopefully you'll never have to because computers are really good at repeating things. This is the repeat forever block. Anything inside this block will happen forever in the game."
       2:
         image: 'notes/infinity_playlab_repeat_forever_2.png'
         text: "So if we wanted an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block. In this next puzzle, our goal is to help Anna walk up and down continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game."
@@ -1218,7 +1218,7 @@ en:
       1:
         image: 'notes/tutorial_puzzle_challenge_1.png'
         text: "What do you want to be when you grow up Olivia? An astronaut. Do you happen to know what a computer programmer is? Yeah um no. Ummm wait what? I'm not really sure how to explain it computer programming is pretty simple. It's a set of instructions like a recipe, you have to follow them step-by-step to get the end result you want."
-      2:  
+      2:
         image: 'notes/tutorial_puzzle_challenge_2.png'
         text: "I can change the number of pixels, the length of the line, using this dropdown. How long was it again? You can see the instructions again by looking under the run button. Here I used the move forward block and I'm going to select 100 pixels. I can delete a block by dragging it into the toolbox or the trash can. Let's put it back."
       3:
@@ -1236,10 +1236,10 @@ en:
     unplug1:
       1:
         image: 'notes/unplug1_1.png'
-        text: "What do you want to be when you grow up Olivia? Umm, an astronaut! Do you happen to know what a computer programmer is? Yeahh, umm, no. Umm, what what? I'm not really sure how to explain it. Computer programming is pretty simple. It's a set of instructions, like a recipe. You have to follow them step by step to get the end result you want."     
+        text: "What do you want to be when you grow up Olivia? Umm, an astronaut! Do you happen to know what a computer programmer is? Yeahh, umm, no. Umm, what what? I'm not really sure how to explain it. Computer programming is pretty simple. It's a set of instructions, like a recipe. You have to follow them step by step to get the end result you want."
       2:
         image: 'notes/unplug1_2.png'
-        text: "Computer science is a way to impact the world. It can be music videos, it can be games, detect whether or not someone is related to someone else. Find you know, people's friends. You can do all sorts of other crazy things that actually save lives. You do have to have a drive I think. It is to me like a paintbrush. I think great programming is not all that dissimilar from great art."      
+        text: "Computer science is a way to impact the world. It can be music videos, it can be games, detect whether or not someone is related to someone else. Find you know, people's friends. You can do all sorts of other crazy things that actually save lives. You do have to have a drive I think. It is to me like a paintbrush. I think great programming is not all that dissimilar from great art."
       3:
         image: 'notes/unplug1_3.png'
         text: "When I finally learned a little bit of programming, that blank wall resolved into a bunch of doors and you open them and of course then you find behind them is another hallway filled with a bunch of doors. Programming is fun and easy. You can do anything your mind wants to do. Finally you start to open enough doors the light comes in. To me a finished program is like a structure filled with light. All the corners are illuminated. The number of people that you can touch and interact with is something the world has never seen before."
@@ -1337,3 +1337,171 @@ en:
       3:
         image: 'notes/unplug11_3.png'
         text: "From everyone here at Code.org, we hope you've had a TON of fun during this course. And whether your dream is to create the best new app, use programming to help cure diseases, or you just want to be a stellar problem-solver, this course was the first step in achieving those dreams."
+    starwars_intro:
+      1:
+        image: 'notes/starwars_intro_1.png'
+        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+      2:
+        image: 'notes/starwars_intro_2.png'
+        text: "Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artists develop rigs which are the parts of the character that move that allow the character to look very believable in a galaxy far far away."
+      3:
+        image: 'notes/starwars_intro_3.png'
+        text: "In the next hour, we're going to build our own Star Wars game. We'll teach you the basic concepts of programming. Usually programming is all text but we're going to use blocks here so that we can drag and drop to write the programs. Under the hood, you're still creating code. After you try the basics with blocks, we'll switch you to JavaScript, one of the most popular programming languages on the web."
+      4:
+        image: 'notes/starwars_intro_4.png'
+        text: "To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts. Your screen is split into three parts. On the left is the Star Wars game space, where code will run. The instructions for each level are written below the game space.This middle area is the toolbox and each of these blocks is a command that BB-8 can understand. The white space on the right is called the workspace and this is where we are going to build our program."
+      5:
+        image: 'notes/starwars_intro_5.png'
+        text: "If I drag the move left block to our workspace and press run, what happens? BB-8 moves left one block on the grid. And what if I want BB-8 to do something after the move left block? I can add another block to our program. I'm going to choose the move up block and I'll drag it under my move left block until the highlight appears. Then I'll drop it and the two blocks will snap together."
+      6:
+        image: 'notes/starwars_intro_6.png'
+        text: "When I press run again, BB-8 will perform the commands that are stacked from top to bottom on our workspace. If you ever want to delete a block, just remove it from the stack and drag it back into the tool box. After you've hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+    starwars_typing:
+      1:
+        image: 'notes/starwars_typing_1.png'
+        text: "Inside the blocks we've been using are JavaScript commands. JavaScript is the most popular programming language for professional developers today. Blocks are a great way to get started learning to code and in fact, top universities like Harvard and Berkeley start teaching this way. But once we learn the basics, engineers write code by typing because it allows us to go faster."
+      2:
+        image: 'notes/starwars_typing_2.png'
+        text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try. In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text."
+      3:
+        image: 'notes/starwars_typing_3.png'
+        text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
+      4:
+        image: 'notes/starwars_typing_4.png'
+        text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move. When you make an error on the line, the editor highlights it for you so that you can try changing your text to fix it."
+      5:
+        image: 'notes/starwars_typing_5.png'
+        text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
+    starwars_events:
+      1:
+        image: 'notes/starwars_events_1.png'
+        text: "Well hello, my name is Charita Carter and I am a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+      2:
+        image: 'notes/starwars_events_2.png'
+        text: "Congratulations! You did it. You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to go back in time to build your own game, starring R2-D2 and C-3PO. To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action. Some examples of events are listening for a mouse click, an arrow button or a tap on the screen."
+      3:
+        image: 'notes/starwars_events_3.png'
+        text: "Here, we're going to make R2-D2 move up to deliver a message to a Rebel Pilot and then move down to the other Rebel Pilot. We'll use events to make him move. When the player uses the up/down arrow keys or the up/down buttons, we use the when event block and attach the go up block to it. When the player presses the up arrow key, the code attached to the when up block is run. And we'll do the same thing to make R2-D2 move down."
+      4:
+        image: 'notes/starwars_events_4.png'
+        text: "To do this, we'll use a command called when up. When you drag the command out of the toolbox, you'll see that it starts and ends with a curly bracket instead of a semi-colon. This gives us space to put other commands in the middle. Every command that we place inside these brackets will run when the player presses the up arrow. We want R2-D2 to go up so let's put a go up block inside the command. And we'll do the same thing to make R2-D2 go down."
+      5:
+        image: 'notes/starwars_events_5.png'
+        text: "Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events to move him around the screen. Step by step, your game is getting more interactive."
+    starwars_congrats:
+      1:
+        image: 'notes/starwars_congrats_1.png'
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now. You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+      2:
+        image: 'notes/starwars_congrats_2.png'
+        text: "[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Eventually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win."
+      3:
+        image: 'notes/starwars_congrats_3.png'
+        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you click right, your character goes left. It's really hard! Sometimes you just get an advantage, an inherent advantage if you're the developer of the game. Did I get it? Yay!"
+      4:
+        image: 'notes/starwars_congrats_4.png'
+        text: "When you're done making your game, choose share to get a link you can share with friends or play your  game on your phone. Have fun!"
+    starwars_blocks_intro:
+      1:
+        image: 'notes/starwars_blocks_intro_1.png'
+        text: "Hi I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+      2:
+        image: 'notes/starwars_blocks_intro_2.png'
+        text: "Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artist develop rigs, which are the parts of the character that move that allow the character to look very believable in a galaxy far, far away."
+      3:
+        image: 'notes/starwars_blocks_intro_3.png'
+        text: "In the next hour, we're going to build our own Star Wars game that will teach you the basic concepts of programming. Usually programming is all text but we're going to use blocks here so we can drag and drop to write the programs. To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts."
+      4:
+        image: 'notes/starwars_blocks_intro_4.png'
+        text: "Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space. This middle area is the toolbox and each of these blocks is a command that BB-8 can understand. The white space on the right is called the work space and this is where we're going to build our program."
+      5:
+        image: 'notes/starwars_blocks_intro_5.png'
+        text: "If I drag the moveLeft block to our workspace, what happens? BB-8 moves left one block on the grid. And what if I want BB-8 to do something after the move left block? I can add another block to our program. I'm going to choose the moveUp block and I'll drag it under my moveLeft block until the highlight appears. Then I'll drop it and the two blocks will snap together."
+      6:
+        image: 'notes/starwars_blocks_intro_6.png'
+        text: "When I press run again, BB-8 will perform the commands that are stacked top to bottom on our workspace. If you ever want to delete a block, just remove it from the stack and drag it back into the toolbox. After you hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+    starwars_blocks_events:
+      1:
+        image: 'notes/starwars_blocks_events_1.png'
+        text: "Well, hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+      2:
+        image: 'notes/starwars_blocks_events_2.png'
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO. To make a game, we need to learn about something that game programmers use every day: they're called events."
+      3:
+        image: 'notes/starwars_blocks_events_3.png'
+        text: "Events tell your program to listen or wait for when something happens and then when it does, it performs an action. Some examples of events are listening for a mouse click, an arrow button or a tap on the screen. Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot."
+      4:
+        image: 'notes/starwars_blocks_events_4.png'
+        text: "We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons. We use the when up event block and attach the go up block to it. When the player presses the up arrow key, the code attached to the when up block is run. And we'll do the same thing to make R2-D2 move down."
+      5:
+        image: 'notes/starwars_blocks_events_5.png'
+        text: "Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen. Step by step, your game is getting more interactive."
+    starwars_blocks_congrats:
+      1:
+        image: 'notes/starwars_blocks_congrats_1.png'
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now. You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+      2:
+        image: 'notes/starwars_blocks_congrats_2.png'
+        text: "[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Eventually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win."
+      3:
+        image: 'notes/starwars_blocks_congrats_3.png'
+        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you click right, your character goes left. It's really hard! Sometimes you just get an advantage, an inherent advantage if you're the developer of the game. Did I get it? Yay!"
+      4:
+        image: 'notes/starwars_blocks_congrats_4.png'
+        text: "When you're done making your game, choose share to get a link you can share with friends or play your  game on your phone. Have fun!"
+    mc_intro:
+      1:
+        image: 'notes/mc_intro_1.jpg'
+        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like."
+      2:
+        image: 'notes/mc_intro_2.jpg'
+        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world. Traditional programming is usually in text but today we'll use Blockly, a system which uses blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+      3:
+        image: 'notes/mc_intro_3.jpg'
+        text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work. Before you start, you'll pick your character. Let's build code for a program that will help her move around the screen."
+      4:
+        image: 'notes/mc_intro_4.jpg'
+        text: "Your screen is split into three main parts. On the left is the Minecraft playspace where your program will run. The instructions for each level are written below. This middle area is the toolbox and each of these blocks is a command that directs Alex's actions. The white space on the right is called the work space and this is where we'll build our program."
+      5:
+        image: 'notes/mc_intro_5.jpg'
+        text: "If we drag the move forward block to our workspace and then click run, what happens? Alex moves forward one space on the grid. And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the turn right block and I'll drag it underneath my move block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+      6:
+        image: 'notes/mc_intro_6.jpg'
+        text: "If you ever want to delete a block, just drag it from the stack back to the toolbox. To undo your changes and get back to how the level started, use the Start Over button in the top right corner of the workspace. One more thing: you see the little triangle on the turn blocks? Anytime you see these triangles, it means that you can pick a different option. Let's start coding!"
+    mc_repeat:
+      1:
+        image: 'notes/mc_repeat_1.jpg'
+        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft. My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+      2:
+        image: 'notes/mc_repeat_2.jpg'
+        text: "The last level needed lots of move forward blocks. It would be easier if we could just tell the computer to perform the move forward command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops. When building Minecraft, we use repeat loops to place all the initial materials for creating a new world. That's thousands and thousands of blocks. We also use loops in little ways, for example to make Alex's feet move back and forth as she walks. Repeat loops are a powerful part of programming."
+      3:
+        image: 'notes/mc_repeat_3.jpg'
+        text: "Night is coming so in the next couple of levels, we're going to build a house to stay safe. We're going to use the repeat block to do this very easily. To build a wall of our house, we can either tell Alex to move forward and place planks four times or we can tell her to move forward and place one plank, then take this command and use the repeat block to have her perform the action multiple times. Now we'll click on the repeat block and tell her how many times we want her to perform this action. Now let's build our house before night falls! Have fun."
+    mc_if_statements:
+      1:
+        image: 'notes/mc_if_statements_1.jpg'
+        text: "Now we're going to learn about if statements. If statements are a fundamental part of learning to program. They help a computer make decisions. All computers use if statements, including my phone. For example, when I unlock my phone, it runs some code that says if I enter the password correctly, then unlock the phone. Otherwise, it shows an error message."
+      2:
+        image: 'notes/mc_if_statements_2.jpg'
+        text: "You can use if statements in your code to make Steve and Alice react to what they see in the world. For example, if there is a rock in front of them, they can turn left. Or turn right if they run into a tree. In this case, we don't want to follow in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
+      3:
+        image: 'notes/mc_if_statements_3.jpg'
+        text: "After we mine the stone, we'll have to check if there's any lava in that place before moving forward. If there is lava there, we want to place a stone in front of our character before we move forward. That way we can safely move on. Time for more mining! And remember to use the if statement to watch your step."
+    mc_congrats_share:
+      1:
+        image: 'notes/mc_congrats_share_1.jpg'
+        text: "Congratulations! You just learned the basic building blocks of computer science. Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose."
+      2:
+        image: 'notes/mc_congrats_share_2.jpg'
+        text: "[students talking]It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+      3:
+        image: 'notes/mc_congrats_share_3.jpg'
+        text: "When you're done making your creation, choose share to get a link to share with your friends. Have fun!"
+    mc_congrats_no_share:
+      1:
+        image: 'notes/mc_congrats_no_share_1.jpg'
+        text: "Congratulations! You just learned the basic building blocks of computer science. Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose."
+      2:
+        image: 'notes/mc_congrats_no_share_2.jpg'
+        text: "[students talking]It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool! Now you can build whatever you want. Have fun!"

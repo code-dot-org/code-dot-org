@@ -340,6 +340,7 @@ window.apps = {
           delete report.program;
           delete report.image;
         }
+        report.scriptName = appOptions.scriptName;
         report.fallbackResponse = appOptions.report.fallback_response;
         report.callback = appOptions.report.callback;
         // Track puzzle attempt event
@@ -372,19 +373,24 @@ window.apps = {
           return;
         }
 
+        var afterVideoCallback = showInstructions;
+        if (appOptions.level.afterVideoBeforeInstructionsFn) {
+          afterVideoCallback = function () {
+            appOptions.level.afterVideoBeforeInstructionsFn(showInstructions);
+          };
+        }
+
         var hasVideo = !!appOptions.autoplayVideo;
         var hasInstructions = !!(appOptions.level.instructions ||
         appOptions.level.aniGifURL);
 
         if (hasVideo) {
-          showVideoDialog(appOptions.autoplayVideo);
           if (hasInstructions) {
-            $('.video-modal').on('hidden.bs.modal', function() {
-              showInstructions();
-            });
+            appOptions.autoplayVideo.onClose = afterVideoCallback;
           }
+          showVideoDialog(appOptions.autoplayVideo);
         } else if (hasInstructions) {
-          showInstructions();
+          afterVideoCallback();
         }
       }
     };
@@ -772,7 +778,7 @@ var projects = module.exports = {
         this.sourceHandler.setInitialLevelSource(current.levelSource);
         this.showMinimalProjectHeader();
       }
-    } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
+    } else if (appOptions.isLegacyShare && this.getStandaloneApp()) {
       current = {
         name: 'Untitled Project'
       };
@@ -787,7 +793,7 @@ var projects = module.exports = {
   projectChanged: function() {
     hasProjectChanged = true;
   },
-  getCurrentApp: function () {
+  getStandaloneApp: function () {
     switch (appOptions.app) {
       case 'applab':
         return 'applab';
@@ -800,12 +806,14 @@ var projects = module.exports = {
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
+        } else if (appOptions.skinId === 'hoc2015' || appOptions.skinId === 'infinity') {
+          return null;
         }
         return 'playlab';
     }
   },
   appToProjectUrl: function () {
-    return '/projects/' + projects.getCurrentApp();
+    return '/projects/' + projects.getStandaloneApp();
   },
   /**
    * Explicitly clear the HTML, circumventing safety measures which prevent it from

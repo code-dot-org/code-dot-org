@@ -18,6 +18,19 @@ def dont_cache()
   cache_control(:private, :must_revalidate, max_age: 0)
 end
 
+def cache_for(seconds, proxy_seconds=nil)
+  proxy_seconds ||= seconds / 2
+  cache_control(:public, :must_revalidate, max_age: seconds, s_maxage: proxy_seconds)
+end
+
+# Sets caching headers based on the document type,
+# based on the :x_max_age and :x_proxy_max_age Sinatra settings.
+def cache(type)
+  max_age = settings.method("#{type}_max_age").call
+  proxy_max_age = settings.method("#{type}_proxy_max_age").call
+  cache_for(max_age, proxy_max_age)
+end
+
 def canonical_hostname(domain)
   CDO.canonical_hostname(domain)
 end

@@ -4,20 +4,21 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-## Day 18 Scratch – Rock Paper Scissors
+## Day 18 Scratch -- Rock Paper Scissors
 
-First, let's explore the first lesson in the curriculum. To begin, find your ECS Version 5 curriculum and open to page 170-171.
+First, let's explore the eleventh lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 170-171.
 
 [Access a Digital Copy of the lesson>>](http://code.org/ecs#page=170)
 
 #### Key Concepts
 
 - Students will use all of their skills with broadcasting, variables, conditionals to complete a Rock Paper Scissors program.
-- Students will need files: [rps .starter.sb](http://www.exploringcs.org/curriculum), [rps solution.sb](http://www.exploringcs.org/curriculum), [rps solutionb.sb](http://www.exploringcs.org/curriculum)
 
 #### Common Difficulties
 
 This lesson has more than one answer and students should try various approaches to solve the problem.
+<br><br>
+Students will need files: [rps .starter.sb](http://www.exploringcs.org/curriculum), [rps solution.sb](http://www.exploringcs.org/curriculum), [rps solutionb.sb](http://www.exploringcs.org/curriculum)
 
 #### All Resources for This Lesson
 
@@ -39,11 +40,11 @@ This lesson has more than one answer and students should try various approaches 
 
 #### PD Discussion Forum
 
-No discussion prompt for today. Discuss anything relevant to this PD that you like, or skip it for today.
+No specific discussion prompt for today, but please head to the forum and discuss anything relevant to this PD that you like.
 
 [<button>Discuss in the forum >></button>](http://forum.code.org/t/u4-day-18-pd-discussion-topic/1899)
-
+<br><br>
 After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
-
+<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

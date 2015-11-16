@@ -3,10 +3,12 @@ from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
 subject: "Your thank-you gift"
 ---
 
-Thank you for hosting an Hour of Code! There were over 3500 organizers who participated in Latin America, introducing thousands of students to skills that can change the rest of their lives.
+Thank you for hosting an Hour of Code! There were over 3,500 organizers who participated in Latin America, introducing thousands of students to skills that can change the rest of their lives.
 
 **Your Gift:**
-Of course, we promised 10 GB of Dropbox space as a thank you. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* Dropbox account.
+Of course, we promised 10 GB of Dropbox space as a thank you. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* Dropbox account. 
+
+Your Dropbox code: <%= dropbox_code %>
 
 **Beyond an Hour of Code**
 If you enjoyed your Hour of Code, participate in the global Hour of Code celebration in December! Exciting new tutorials are coming soon.

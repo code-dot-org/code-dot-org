@@ -79,6 +79,7 @@ def hoc_detect_country()
   return 'us' unless location
 
   country_code = location.country_code.to_s.downcase
+  country_code = 'uk' if country_code == 'gb'
   return 'us' unless HOC_COUNTRIES[country_code]
 
   country_code
@@ -149,33 +150,13 @@ def campaign_date(format)
   end
 end
 
-def all_unique_events
-  DB[:forms].where(kind: 'HocSignup2015').group(:name, :email).select(:name, :email, :processed_data, :data)
-end
-
 def company_count
-  company_count = 0;
-  all_unique_events.each do |i|
-    data = JSON.parse(i[:data])
-    if data['hoc_company_s'] == @company
-      company_count += 1
-    end
-  end
-  return company_count
+  return fetch_hoc_metrics['hoc_company_totals'][@company]
 end
 
 def country_count
-  country_count = 0;
-  all_unique_events.each do |i|
-    unless i[:processed_data].nil?
-      data = JSON.parse(i[:processed_data])
-      code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
-      if data['location_country_code_s'] == code.upcase
-        country_count += 1
-      end
-    end
-  end
-  return country_count
+  code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
+  return fetch_hoc_metrics['hoc_country_totals'][code.upcase]
 end
 
 def solr_country_code
@@ -185,8 +166,4 @@ end
 
 def country_full_name
   return HOC_COUNTRIES[@country]['full_name']
-end
-
-def total_hoc_count
-  all_unique_events.count
 end

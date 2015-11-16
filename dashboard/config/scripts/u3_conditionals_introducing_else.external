@@ -1,11 +1,11 @@
 name 'U3 - Conditionals - Introducing Else'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Else
+# Translating Flowcharts: Else 
 
 On the last level we were trying to figure out what happens after an if statement. You may have noticed that the program executes the code after the if statement whether the if condition was true or false. So what if we want to tell the user they were wrong? How can we do that? 
 
-<table>
+<table >
   <tr>
     <th> What Happened</th>
     <th>What We Want</th>
@@ -16,10 +16,15 @@ On the last level we were trying to figure out what happens after an if statemen
   </tr>
 </table>
 
-We can use an `else` statement. An `else` statement executes when the boolean condition in the if statement is false. Sometimes its easier to think of else as meaning 'otherwise'. You could read an if and else statement as "if the guess is the secret number say you got it, otherwise say you got it wrong". 
+We can use an `else` statement to fix the program. An `else` statement executes when the boolean condition in the if statement is false. Sometimes its easier to think of else as meaning 'otherwise'. You could read an if and else statement as "if the guess is the secret number say you got it, otherwise say you got it wrong". 
 
 
-<img src="https://images.code.org/b7942d778a54465ad6f9f19fbab8d1ef-image-1446237289306.34.23 PM.png" style="width: 150px; float: right">
+| Component | Code |
+| --- | --- |
+| <img src="https://images.code.org/9d05dec5582e13242f8ee41826f95f47-image-1446521472672.png" style="width: 350px; height: 350px; float: right"> | <img src="https://images.code.org/937a5de6657e761d528bba3a45d378c2-image-1446521590755.33.00 PM.png" style="width: 350px; height: 350px; float: left">
 
-You can create an `else` statement by hitting the <img src="https://images.code.org/f762344bc839dd8385730bb7d909657f-image-1446237096776.31.12 PM.png" style="width: 40px"> at the bottom of an if statement.  There is also an if - else block in the toolbox. 
+Click continue to head to the next level to try out else statements.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

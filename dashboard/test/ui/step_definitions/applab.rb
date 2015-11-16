@@ -79,11 +79,11 @@ When /^I drag a (\w+) into the app$/ do |element_type|
       pageY: screenOffset.top
     });
     var drag = $.Event("mousemove", {
-      pageX: $("#visualization").offset().left,
+      pageX: $("#visualization").offset().left + 15,
       pageY: $("#visualization").offset().top
     });
     var mouseup = $.Event('mouseup', {
-      pageX: $("#visualization").offset().left,
+      pageX: $("#visualization").offset().left + 15,
       pageY: $("#visualization").offset().top
     });
     element.trigger(mousedown);
@@ -116,5 +116,101 @@ And /^I append text to droplet "([^"]*)"$/ do |text|
     aceEditor.textInput.focus();
     aceEditor.onTextInput("#{text}");
   }
+  @browser.execute_script(script)
+end
+
+def set_nth_input(n, value)
+  elements = @browser.find_elements(:css, '#design-properties input')
+  press_keys(elements[n], ":delete")
+  press_keys(elements[n], ":delete")
+  press_keys(elements[n], ":delete")
+  press_keys(elements[n], ":delete")
+  press_keys(elements[n], value)
+end
+
+And /^I set input "([^"]*)" to "([^"]*)"$/ do |type, value|
+  case type
+  when 'xpos'
+    # first key press will just clear the current value
+    set_nth_input(3, value)
+  when 'ypos'
+    set_nth_input(4, value)
+  else
+    raise 'Unknown type'
+  end
+end
+
+And /^I set groupable input "([^"]*)" to "([^"]*)"$/ do |type, value|
+  case type
+  when 'xpos'
+    # first key press will just clear the current value
+    set_nth_input(4, value)
+  when 'ypos'
+    set_nth_input(5, value)
+  else
+    raise 'Unknown type'
+  end
+end
+
+And /^I delete the current design mode element$/ do
+  elements = @browser.find_elements(:css, '#design-properties button')
+  elements[-1].click
+end
+
+And /^I drag the grippy by ([-|\d]+) pixels$/ do |delta|
+  script = %Q{
+    function createMouseEvent(type, clientX, clientY) {
+      var evt;
+      var e = {
+        bubbles: true,
+        cancelable: (type != "mousemove"),
+        view: window,
+        detail: 0,
+        screenX: undefined,
+        screenY: undefined,
+        clientX: clientX,
+        clientY: clientY,
+        ctrlKey: false,
+        altKey: false,
+        shiftKey: false,
+        metaKey: false,
+        button: 0,
+        relatedTarget: undefined
+      };
+      if (typeof( document.createEvent ) == "function") {
+        evt = document.createEvent("MouseEvents");
+        evt.initMouseEvent(type,
+          e.bubbles, e.cancelable, e.view, e.detail,
+          e.screenX, e.screenY, e.clientX, e.clientY,
+          e.ctrlKey, e.altKey, e.shiftKey, e.metaKey,
+          e.button, document.body.parentNode);
+      } else if (document.createEventObject) {
+        evt = document.createEventObject();
+        for (var prop in e) {
+          evt[prop] = e[prop];
+        }
+        evt.button = { 0:1, 1:4, 2:2 }[evt.button] || evt.button;
+      }
+      return evt;
+    };
+
+    var element = $("#visualizationResizeBar");
+    var start = {
+      x: element.offset().left,
+      y: element.offset().top
+    };
+    var end = {
+      x: start.x + #{delta},
+      y: start.y
+    }
+    var mousedown = createMouseEvent('mousedown', start.x, start.y);
+    var drag = createMouseEvent('mousemove', end.x, end.y);
+    var mouseup = createMouseEvent('mouseup', end.x, end.y);
+
+    element[0].dispatchEvent(mousedown);
+    element[0].dispatchEvent(drag);
+    element[0].dispatchEvent(mouseup);
+  }
+
   @browser.execute_script(script)
 end

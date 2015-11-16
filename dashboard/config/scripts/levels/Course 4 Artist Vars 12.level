@@ -164,6 +164,17 @@
         <block type="variables_get">
           <title name="VAR">sides</title>
         </block>
+        <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="variables_get">
+          <title name="VAR">length</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>
@@ -171,7 +182,7 @@
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="variables_get">
-              <title name="VAR">sides</title>
+              <title name="VAR">???</title>
             </block>
           </value>
         </block>
@@ -189,7 +200,7 @@
                   </value>
                   <value name="B">
                     <block type="variables_get">
-                      <title name="VAR">sides</title>
+                      <title name="VAR">???</title>
                     </block>
                   </value>
                 </block>
@@ -207,7 +218,7 @@
                       </value>
                       <value name="B">
                         <block type="variables_get">
-                          <title name="VAR">sides</title>
+                          <title name="VAR">???</title>
                         </block>
                       </value>
                     </block>
@@ -223,7 +234,7 @@
               <title name="DIR">moveForward</title>
               <value name="VALUE">
                 <block type="variables_get">
-                  <title name="VAR">length</title>
+                  <title name="VAR">???</title>
                 </block>
               </value>
               <next>
@@ -231,7 +242,7 @@
                   <title name="DIR">moveBackward</title>
                   <value name="VALUE">
                     <block type="variables_get">
-                      <title name="VAR">length</title>
+                      <title name="VAR">???</title>
                     </block>
                   </value>
                 </block>

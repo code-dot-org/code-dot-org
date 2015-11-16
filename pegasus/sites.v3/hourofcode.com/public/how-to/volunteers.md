@@ -20,7 +20,7 @@ We'll be hosting two webinars to explain what a typical volunteer experience wil
 Try the Hour of Code tutorials at [code.org/learn](https://code.org/learn).  Pick a few of the most popular tutorials and spend some time to get familiar with each of them. It will take you about 5-10 minutes per tutorial to get a sense of how it works.
 
 ## 4. Recruit your co-workers to volunteer
-Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteer engineers, so ask them to [sign up as a volunteer](https://code.org/volunteer/engineer).
+Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
 **Sample email:**
 

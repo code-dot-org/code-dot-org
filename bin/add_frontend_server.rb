@@ -182,8 +182,8 @@ run_instance_response = ec2client.run_instances ({
                                                     monitoring: {
                                                         enabled: true
                                                     },
-                                                    # Prevent api termination, except for adhoc instances.
-                                                    disable_api_termination: (environment != 'adhoc'),
+                                                    # Don't disable api termination.
+                                                    disable_api_termination: false,
                                                     placement: {
                                                       availability_zone: determined_instance_zone
                                                     },

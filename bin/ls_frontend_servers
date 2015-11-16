@@ -15,7 +15,7 @@ require_relative '../deployment'
 # Returns an array of [name, private_dns, public_url] tuples for the
 # currently running Code.org EC2 instances whose name starts with
 # "frontend".
-def describe_frontends(path = nil)
+def describe_frontends(path = nil, json_format = false)
   ec2client = Aws::EC2::Client.new
   instances = ec2client.describe_instances
   [].tap do |result|
@@ -23,9 +23,15 @@ def describe_frontends(path = nil)
       reservation.instances.each do |instance|
         name = instance.tags.detect{|tag| tag.key == 'Name'}
         next unless name && name.value.start_with?('frontend')
-        result <<  [(name ? name.value : '').ljust(16),
-                    instance.private_dns_name,
-                    "http://#{instance.public_dns_name}:8080/#{path || ''}"]
+        if json_format
+          # Format output as json.
+          result << %Q{"#{name.value}": "#{instance.private_dns_name}",}
+        else
+          # Format output as tab separated values.
+          result << [(name ? name.value : '').ljust(16),
+                     instance.private_dns_name,
+                     "http://#{instance.public_dns_name}:8080/#{path || ''}"]
+        end
       end
     end
   end
@@ -33,10 +39,19 @@ end
 
 if __FILE__ == $0
   path = nil
+  json_format = false
   OptionParser.new do |opts|
-    opts.on('-p', '--path path', 'Environment to add frontend to') { |p| path = p }
+    opts.on('-p', '--path path', 'Path to append to example server URLs') { |p| path = p }
+    opts.on('-j', '--json', 'Format output as Json') { json_format = true }
     opts.on('-h', '--help', 'Print this') { puts opts; exit }
   end.parse!
 
-  describe_frontends(path).each { |t| puts t.join("\t") }
+  lines = describe_frontends(path, json_format)
+  if json_format
+    puts '{'
+    lines.each { |entry| puts entry }
+    puts '}'
+  else
+    lines.each { |t| puts t.join("\t") }
+  end
 end

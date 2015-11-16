@@ -90,6 +90,18 @@
   width: 100%;
 }
 
+#volunteer-signup {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+#volunteer-signup a {
+  color: white;
+  font-family: 'Gotham 4r', sans-serif;
+  text-decoration: none;
+}
+
 .watch-video-small {
   color: white;
   cursor: pointer;

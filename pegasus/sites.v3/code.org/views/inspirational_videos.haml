@@ -1,0 +1,25 @@
+- mc ||= false
+
+- videos = []
+
+- if mc
+  - videos << { id: 'girlpower', code: 'laZZEcL44sc', text: 'Inspire a girl', duration: '2 min', download: 'http://videos.code.org/2015/social/hour_of_code_change_the_world_mc.mp4'}
+- else
+  - videos << { id: 'girlpower', code: 'BvRvluhfzf0', text: 'Inspire a girl', duration: '2 min', download: 'http://videos.code.org/2015/social/hour_of_code_change_the_world.mp4'}
+- videos << { id: 'csintro',   code: '_IiPLtP-jm8', text: 'Computer Science intro', duration: '1 min', download: 'http://videos.code.org/2015/social/hour_of_code_cs_matters.mp4'}
+- videos << { id: 'dontteach', code: 'nKIu9yen5nc', text: "What Most Schools Don't Teach", duration: '5 min', download: 'https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1'}
+- videos << { id: 'obama',     code: '6XvmhE1J9PY', text: 'President Obama on computer science', duration: '1 min', download: 'http://videos.code.org/2015/social/president_obama_asks_america.mp4'}
+- videos << { id: 'hochere',   code: 'FC5FbmsH4fw', text: 'Hour of Code is Here - Anybody Can Learn', duration: '2 min', download: 'http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4'}
+- videos << { id: 'learn', code: 'qYZF6oIZtfc', text: 'Anybody Can Learn', duration: '1 min', download: 'https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1'}
+
+- videos.each do |video|
+  .col-50{style: "float:left; padding:10px"}
+    - url = "https://www.youtube.com/watch?v=#{video[:code]}"
+    - facebook = {u: url}
+    - twitter = {url: url, related: 'codeorg', text: "#{video[:text]} @codeorg"}
+    =view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download]
+
+%div{style: 'clear: both'}
+%br/
+-if request.locale == 'en-US'
+  %p= I18n.t(:inspirational_videos_more)

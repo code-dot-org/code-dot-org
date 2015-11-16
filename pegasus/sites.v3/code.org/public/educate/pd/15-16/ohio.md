@@ -56,6 +56,7 @@ Room 407<br/>
 315 Cleveland Avenue<br/>
 Columbus, OH 43215
 
+Review the [campus map](http://www.cscc.edu/about/columbus/) (the Conference Center is listed as WD on the corner of Cleveland Ave and Grove Street) and [building map](http://www.cscc.edu/community/conference-center/floor-plans-pricing.shtml). 
 
 **What to bring to Phase 3 quarterly sessions:**
 

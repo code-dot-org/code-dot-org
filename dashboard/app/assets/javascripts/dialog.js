@@ -24,14 +24,13 @@ function sizeDialogToViewport(scrollableElementSelector) {
     parseInt(modalDialog.css('margin-bottom'), 10);
 
   var overflow = dialogSize - desiredSize;
+  var scrollableElementHeight = scrollableElement.height() - overflow;
+  scrollableElement.css('max-height', scrollableElementHeight);
 
-  if (overflow > 0) {
-    var scrollableElementHeight = scrollableElement.height() - overflow;
-    if (scrollableElement.is('iframe')) {
-      scrollableElement.css('height', scrollableElementHeight);
-    } else {
-      scrollableElement.css('max-height', scrollableElementHeight);
-    }
+  if (scrollableElement.is('iframe')) {
+    scrollableElement.css('height', scrollableElementHeight);
+  } else {
+    scrollableElement.css('max-height', scrollableElementHeight);
   }
 }
 

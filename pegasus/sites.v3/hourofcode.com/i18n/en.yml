@@ -13,6 +13,7 @@
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: 'Watch the new video'
   front_watch_regular_video: 'Watch the video'
+  front_volunteers: 'Technical volunteers wanted'
 
   header_menu_resources: 'Resources'
   header_menu_faq: 'FAQ'

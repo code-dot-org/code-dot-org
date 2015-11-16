@@ -1,11 +1,22 @@
+- page_mode = PageMode.get(request)
+
 - categories = [{tag:"Beginner", name: I18n.t(:carousel_heading_beginners)}, {tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}, {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}, {tag:"Apps", name: I18n.t(:carousel_heading_devices)}, {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}, {tag:"MakeApps", name: I18n.t(:carousel_heading_apps_games)}, {tag: "Univ", name: I18n.t(:carousel_heading_university)}, {tag: "Web", name: I18n.t(:carousel_heading_webpages)}, {tag: "Robot", name: I18n.t(:carousel_heading_robots)}, {tag: "IDE", name: I18n.t(:carousel_heading_ide)}]
 
 %div{style: "clear:both"}
 
 -tutorials = Tutorials.new(variation=='learn' ? :tutorials : :beyond_tutorials)
 
+- @variation = variation
+- if page_mode == 'minecraft'
+  #carousel-mc{:style=>''}
+    = view :learn_carousel_special, :tag=>'minecraft', :tutorials=>tutorials, :id=>'collection-mc', :second_panel_image=>'/images/mc/fit-520/MC_Panorama_Stack_V2_background.jpg'
+
+- if page_mode == 'starwars'
+  #carousel-starwars{:style=>'display:none'}
+    = view :learn_carousel_special, :tag=>'starwars', :tutorials=>tutorials, :id=>'collection-starwars', :second_panel_image=>'/images/fit-520/starwars_carousel_background.jpg'
+
 #carousel-frozen{:style=>'display:none'}
-  = view :learn_carousel_frozen, :tag=>'frozen', :tutorials=>tutorials, :id=>'collection-frozen'
+  = view :learn_carousel_special, :tag=>'frozen', :tutorials=>tutorials, :id=>'collection-frozen', :second_panel_image=>'/images/fit-520/frozen_carousel_background.jpg'
 
 #carousel-ie8{:style=>'display:none'}
   = view :learn_carousel, :heading=>I18n.t(:older_systems), :subheading=>I18n.t(:older_systems_subheading), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8', :check_language=>true
@@ -19,7 +30,7 @@
   %br
   %a{:id=>"englishtutorials", :href=>"#", :onclick=>"toggle_visibility();return false;"}
     %button{:style=>"font-size:20px;"}
-      = I18n.t(:carousel_heading_domestic) 
+      = I18n.t(:carousel_heading_domestic)
 
 #all-tutorials{:style=>'visibility:hidden; overflow:hidden'}
   - categories.each do |category|
@@ -30,9 +41,9 @@
 %br
 
 -if variation == 'learn'
-  %h1 
-    %a{:href=>"http://hourofcode.com/resources/how-to"}
-      = I18n.t(:how_to_teach_hoc)
+  %h1
+    %a{:href=>"/teacher-led"}
+      = I18n.t(:teach_led_lesson_plans)
 
 -if variation == 'beyond'
   %a{:href=>"/educate"}
@@ -74,32 +85,40 @@
   // International
   var pegasusLocale = "#{request.locale}";
 
-  // Special Frozen entry, English only right now, and not shown for mobile or IE8
+  /* Disable Frozen carousel
+  // Special Frozen entry, not shown for mobile or IE8
   if (!window.mobilecheck() && !is_ie8)
   {
     $('#carousel-frozen').show();
   }
+  */
 
-  if (pegasusLocale.substring(0,2) == "en") 
+  // Special Star Wars entry, not shown for IE8
+  if (!is_ie8)
+  {
+    $('#carousel-starwars').show();
+  }
+
+  if (pegasusLocale.substring(0,2) == "en")
   {
     $('#all-tutorials').show();
     $('#all-tutorials').css('visibility', 'visible');
   }
-  else 
+  else
   {
     $('#carousel-international').show();
     $('#all-tutorials').css('height', '0');
   }
 
-  function toggle_visibility() 
+  function toggle_visibility()
   {
     var e = document.getElementById('all-tutorials');
-    if ( e.style.visibility == 'visible' ) 
+    if ( e.style.visibility == 'visible' )
     {
       $('#all-tutorials').css('height', '0');
       $('#all-tutorials').css('visibility', 'hidden');
     }
-    else 
+    else
     {
       $('#all-tutorials').css('height', '100%');
       $('#all-tutorials').css('visibility', 'visible');

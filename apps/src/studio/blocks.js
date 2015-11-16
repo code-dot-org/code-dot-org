@@ -15,6 +15,7 @@ var codegen = require('../codegen');
 var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
+var paramLists = require('./paramLists');
 
 var Direction = constants.Direction;
 var Position = constants.Position;
@@ -305,35 +306,117 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.studio_whenSpriteClicked = generator.studio_eventHandlerPrologue;
 
-  blockly.Blocks.studio_whenTouchItem = {
-    // Block to handle event when sprite touches item.
+  blockly.Blocks.studio_whenTouchCharacter = {
+    // Block to handle event when sprite touches an item.
     helpUrl: '',
     init: function() {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
-        .appendTitle(msg.whenTouchItem());
+        .appendTitle(msg.whenTouchCharacter());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
-      this.setTooltip(msg.whenTouchItemTooltip());
+      this.setTooltip(msg.whenTouchCharacterTooltip());
     }
   };
 
-  generator.studio_whenTouchItem = generator.studio_eventHandlerPrologue;
+  generator.studio_whenTouchCharacter = generator.studio_eventHandlerPrologue;
 
-  blockly.Blocks.studio_whenTouchWall = {
-    // Block to handle event when sprite touches wall.
+  blockly.Blocks.studio_whenTouchObstacle = {
+    // Block to handle event when sprite touches a wall.
     helpUrl: '',
     init: function() {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
-        .appendTitle(msg.whenTouchWall());
+        .appendTitle(msg.whenTouchObstacle());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
-      this.setTooltip(msg.whenTouchWallTooltip());
+      this.setTooltip(msg.whenTouchObstacleTooltip());
     }
   };
 
-  generator.studio_whenTouchWall = generator.studio_eventHandlerPrologue;
+  generator.studio_whenTouchObstacle = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenTouchGoal = {
+    // Block to handle event when sprite touches a goal.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.whenTouchGoal());
+      this.setPreviousStatement(false);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenTouchGoalTooltip());
+    }
+  };
+
+  generator.studio_whenTouchGoal = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenGetCharacter = {
+    // Block to handle event when the primary sprite gets a character.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      this.setPreviousStatement(false);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenGetCharacterTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_whenGetCharacter.VALUES =
+      [[msg.whenGetCharacterAnyItem(),      'any_item'],
+       [msg.whenGetCharacterPufferPig(),    'pufferpig'],
+       [msg.whenGetCharacterStormtrooper(), 'stormtrooper'],
+       [msg.whenGetCharacterTauntaun(),     'tauntaun'],
+       [msg.whenGetCharacterMynock(),       'mynock'],
+       [msg.whenGetCharacterProbot(),       'probot'],
+       [msg.whenGetCharacterMouseDroid(),   'mousedroid'],
+       [msg.whenGetCharacterRebelPilot(),   'rebelpilot']];
+
+  generator.studio_whenGetCharacter = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenGetAllCharacters = {
+    // Block to handle event when the primary sprite gets all characters.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.whenGetAllCharacters());
+      this.setPreviousStatement(false);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenGetAllCharactersTooltip());
+    }
+  };
+
+  generator.studio_whenGetAllCharacters = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenGetAllCharacterClass = {
+    // Block to handle event when the primary sprite gets all characters of a class.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      this.setPreviousStatement(false);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenGetAllCharacterClassTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_whenGetAllCharacterClass.VALUES =
+      [[msg.whenGetAllCharacterPufferPig(),    'pufferpig'],
+       [msg.whenGetAllCharacterStormtrooper(), 'stormtrooper'],
+       [msg.whenGetAllCharacterTauntaun(),     'tauntaun'],
+       [msg.whenGetAllCharacterMynock(),       'mynock'],
+       [msg.whenGetAllCharacterProbot(),       'probot'],
+       [msg.whenGetAllCharacterMouseDroid(),   'mousedroid'],
+       [msg.whenGetAllCharacterRebelPilot(),   'rebelpilot']];
+
+  generator.studio_whenGetAllCharacterClass = generator.studio_eventHandlerPrologue;
 
   blockly.Blocks.studio_whenSpriteCollided = {
     // Block to handle event when sprite collides with another sprite.
@@ -479,7 +562,7 @@ exports.install = function(blockly, blockInstallOptions) {
       valParam = 'Studio.random([' + allValues + '])';
     }
 
-    return 'Studio.addItem(\'block_id_' + this.id + '\', ' + valParam + ');\n';
+    return 'Studio.addCharacter(\'block_id_' + this.id + '\', ' + valParam + ');\n';
   };
 
   blockly.Blocks.studio_setItemActivity = {
@@ -532,7 +615,7 @@ exports.install = function(blockly, blockInstallOptions) {
         .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'CLASS');
 
       var dropdown = new blockly.FieldDropdown(this.VALUES);
-      dropdown.setValue(this.VALUES[2][1]); // default to slow
+      dropdown.setValue(this.VALUES[1][1]); // default to slow
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
 
       this.setInputsInline(true);
@@ -544,11 +627,9 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.studio_setItemSpeed.VALUES =
       [[msg.setSpriteSpeedRandom(), RANDOM_VALUE],
-       [msg.setSpriteSpeedVerySlow(), 'Studio.SpriteSpeed.VERY_SLOW'],
-       [msg.setSpriteSpeedSlow(), 'Studio.SpriteSpeed.SLOW'],
-       [msg.setSpriteSpeedNormal(), 'Studio.SpriteSpeed.NORMAL'],
-       [msg.setSpriteSpeedFast(), 'Studio.SpriteSpeed.FAST'],
-       [msg.setSpriteSpeedVeryFast(), 'Studio.SpriteSpeed.VERY_FAST']];
+       [msg.setSpriteSpeedSlow(), 'Studio.SpriteSpeed.VERY_SLOW'],
+       [msg.setSpriteSpeedNormal(), 'Studio.SpriteSpeed.SLOW'],
+       [msg.setSpriteSpeedFast(), 'Studio.SpriteSpeed.FAST']];
 
   generator.studio_setItemSpeed = function () {
     return generateSetterCode({
@@ -1079,10 +1160,10 @@ exports.install = function(blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendTitle(commonMsg.play())
           .appendTitle(new blockly.FieldImage(skin.soundIcon))
-          .appendTitle(new blockly.FieldDropdown(this.K1_SOUNDS, onSoundSelected), 'SOUND');
+          .appendTitle(new blockly.FieldDropdown(this.soundChoices(), onSoundSelected), 'SOUND');
       } else {
         this.appendDummyInput()
-          .appendTitle(new blockly.FieldDropdown(this.SOUNDS, onSoundSelected), 'SOUND');
+          .appendTitle(new blockly.FieldDropdown(this.soundChoices(), onSoundSelected), 'SOUND');
       }
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -1090,33 +1171,18 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.studio_playSound.K1_SOUNDS =
-      [[msg.soundHit(), 'hit'],
-       [msg.soundWood(), 'wood'],
-       [msg.soundRetro(), 'retro'],
-       [msg.soundSlap(), 'slap'],
-       [msg.soundRubber(), 'rubber'],
-       [msg.soundCrunch(), 'crunch'],
-       [msg.soundWinPoint(), 'winpoint'],
-       [msg.soundWinPoint2(), 'winpoint2'],
-       [msg.soundLosePoint(), 'losepoint'],
-       [msg.soundLosePoint2(), 'losepoint2'],
-       [msg.soundGoal1(), 'goal1'],
-       [msg.soundGoal2(), 'goal2']];
-
-  blockly.Blocks.studio_playSound.SOUNDS =
-      [[msg.playSoundHit(), 'hit'],
-       [msg.playSoundWood(), 'wood'],
-       [msg.playSoundRetro(), 'retro'],
-       [msg.playSoundSlap(), 'slap'],
-       [msg.playSoundRubber(), 'rubber'],
-       [msg.playSoundCrunch(), 'crunch'],
-       [msg.playSoundWinPoint(), 'winpoint'],
-       [msg.playSoundWinPoint2(), 'winpoint2'],
-       [msg.playSoundLosePoint(), 'losepoint'],
-       [msg.playSoundLosePoint2(), 'losepoint2'],
-       [msg.playSoundGoal1(), 'goal1'],
-       [msg.playSoundGoal2(), 'goal2']];
+  blockly.Blocks.studio_playSound.soundChoices = function () {
+    var fullChoices = isK1 ? skin.soundChoicesK1 : skin.soundChoices;
+    var permittedValues = paramLists.getPlaySoundValues(true);
+    return fullChoices.filter(function (choice) {
+      for (var i = 0; i < permittedValues.length; i++) {
+        if (choice[1] === permittedValues[i]) {
+          return true;
+        }
+      }
+      return false;
+    });
+  };
 
   generator.studio_playSound = function() {
     // Generate JavaScript for playing a sound.
@@ -1152,6 +1218,58 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.studio_changeScore = function() {
     // Generate JavaScript for changing the score.
     return 'Studio.changeScore(\'block_id_' + this.id + '\', \'' +
+                (this.getTitleValue('VALUE') || '1') + '\');\n';
+  };
+
+  blockly.Blocks.studio_addPoints = {
+    // Block for adding points.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.addPointsTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_addPoints.VALUES =
+      [[msg.addPoints10(),   '10'],
+       [msg.addPoints50(),   '50'],
+       [msg.addPoints100(),  '100'],
+       [msg.addPoints400(),  '400'],
+       [msg.addPoints1000(), '1000']];
+
+  generator.studio_addPoints = function() {
+    // Generate JavaScript for adding points.
+    return 'Studio.addPoints(\'block_id_' + this.id + '\', \'' +
+                (this.getTitleValue('VALUE') || '1') + '\');\n';
+  };
+
+  blockly.Blocks.studio_removePoints = {
+    // Block for removing points.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.removePointsTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_removePoints.VALUES =
+      [[msg.removePoints10(),   '10'],
+       [msg.removePoints50(),   '50'],
+       [msg.removePoints100(),  '100'],
+       [msg.removePoints400(),  '400'],
+       [msg.removePoints1000(), '1000']];
+
+  generator.studio_removePoints = function() {
+    // Generate JavaScript for removing points.
+    return 'Studio.removePoints(\'block_id_' + this.id + '\', \'' +
                 (this.getTitleValue('VALUE') || '1') + '\');\n';
   };
 
@@ -1192,6 +1310,32 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.studio_showCoordinates = function() {
     // Generate JavaScript for showing the protagonist's coordinates.
     return 'Studio.showCoordinates(\'block_id_' + this.id + '\');\n';
+  };
+
+  blockly.Blocks.studio_setDroidSpeed = {
+    // Block for setting droid speed
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      dropdown.setValue(this.VALUES[2][1]); // default to normal
+      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setDroidSpeedTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_setDroidSpeed.VALUES =
+      [[msg.setDroidSpeedRandom(), 'random'],
+       [msg.setDroidSpeedSlow(), 'slow'],
+       [msg.setDroidSpeedNormal(), 'normal'],
+       [msg.setDroidSpeedFast(), 'fast']];
+
+  generator.studio_setDroidSpeed = function () {
+    return 'Studio.setDroidSpeed(\'block_id_' + this.id + '\', "' +
+      this.getTitleValue('VALUE') + '");\n';
   };
 
   blockly.Blocks.studio_setSpriteSpeed = {
@@ -1415,7 +1559,8 @@ exports.install = function(blockly, blockInstallOptions) {
 
       var dropdown = new blockly.FieldDropdown(skin.mapChoices);
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
-      dropdown.setValue('"' + skin.defaultWallMap + '"');
+      // default to first item after random
+      dropdown.setValue(skin.mapChoices[1][1]);
       
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -1528,19 +1673,26 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSprite = {
       helpUrl: '',
       init: function() {
-        this.VALUES = skin.spriteChoices;
-        var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
-        // default to first item after random/hidden
-        dropdown.setValue(skin.spriteChoices[2][1]);
-
+        // shallow copy array:
+        this.VALUES = [].concat(skin.spriteChoices);
         this.setHSV(312, 0.32, 0.62);
         if (spriteCount > 1) {
           this.appendDummyInput()
             .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
         } else {
-          this.appendDummyInput()
-            .appendTitle(msg.setSprite());
+          // Modify the dropdownValues array to contain combined text
+          // (blockly renders this better than two adjacent text blocks)
+          var prefix = skin.setSpritePrefix + ' ';
+          for (var i = 0; i < this.VALUES.length; i++) {
+            // shallow copy this array within the larger array, then modify
+            // the string to be displayed to include the prefix:
+            this.VALUES[i] = [].concat(skin.spriteChoices[i]);
+            this.VALUES[i][0] = prefix + this.VALUES[i][0];
+          }
         }
+        var dropdown = new blockly.FieldDropdown(this.VALUES);
+        // default to first item after random/hidden
+        dropdown.setValue(skin.spriteChoices[2][1]);
         this.appendDummyInput()
           .appendTitle(dropdown, 'VALUE');
         this.setInputsInline(true);
@@ -1860,6 +2012,30 @@ exports.install = function(blockly, blockInstallOptions) {
         Blockly.JavaScript.ORDER_NONE) || '0';
     return 'Studio.wait(\'block_id_' + this.id +
         '\', (' + valueParam + ' * 1000));\n';
+  };
+
+  blockly.Blocks.studio_endGame = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      dropdown.setValue(this.VALUES[0][1]); // default to win
+      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.endGameTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_endGame.VALUES =
+    [[msg.endGameWin(), 'win'],
+     [msg.endGameLose(), 'lose']];
+
+  generator.studio_endGame = function() {
+    // Generate JavaScript for ending the game.
+    return 'Studio.endGame(\'block_id_' + this.id + '\',\'' +
+      this.getTitleValue('VALUE') + '\');\n';
   };
 
   //

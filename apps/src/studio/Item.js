@@ -301,6 +301,12 @@ Item.prototype.removeElement = function() {
   Studio.trackedBehavior.removedItemCount++;
 };
 
+/**
+ * Stop our animations
+ */
+Item.prototype.stopAnimations = function() {
+  this.animation_.stopAnimator();
+};
 
 /**
  * Returns true if the item is currently fading away.
@@ -377,6 +383,10 @@ Item.prototype.startCollision = function (key) {
   if (newCollisionStarted) {
     if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
       Studio.trackedBehavior.touchedHazardCount++;
+      var actor = Studio.sprite[key];
+      if (actor) {
+        actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_EFFECT_TIME));
+      }
     }
   }
   return newCollisionStarted;

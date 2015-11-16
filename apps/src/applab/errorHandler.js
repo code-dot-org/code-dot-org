@@ -6,6 +6,14 @@ var ErrorLevel = {
 };
 
 function outputApplabConsole(output) {
+  function stringifyNonStrings(object) {
+    if (typeof object === 'string' || object instanceof String) {
+      return object;
+    } else {
+      return JSON.stringify(object);
+    }
+  }
+
   // first pass through to the real browser console log if available:
   if (console.log) {
     console.log(output);
@@ -14,10 +22,10 @@ function outputApplabConsole(output) {
   var debugOutput = document.getElementById('debug-output');
   if (debugOutput) {
     if (debugOutput.textContent.length > 0) {
-      debugOutput.textContent += '\n' + output;
-    } else {
-      debugOutput.textContent = String(output);
+      debugOutput.textContent += '\n';
     }
+    debugOutput.textContent += stringifyNonStrings(output);
+
     debugOutput.scrollTop = debugOutput.scrollHeight;
   }
 }

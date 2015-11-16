@@ -6,42 +6,10 @@
   "user_id": 155,
   "properties": {
     "skin": "applab",
-    "code_functions": {
-      "onEvent": null,
-      "button": null,
-      "textLabel": null,
-      "dropdown": null,
-      "getText": null,
-      "setText": null,
-      "image": null,
-      "getImageURL": null,
-      "setImageURL": null,
-      "setPosition": null,
-      "setSize": null,
-      "write": null,
-      "getXPosition": null,
-      "getYPosition": null,
-      "setScreen": null,
-      "ifBlock": null,
-      "ifElseBlock": null,
-      "addOperator": null,
-      "subtractOperator": null,
-      "multiplyOperator": null,
-      "divideOperator": null,
-      "equalityOperator": null,
-      "inequalityOperator": null,
-      "greaterThanOperator": null,
-      "lessThanOperator": null,
-      "randomNumber_min_max": null,
-      "declareAssign_x": null,
-      "declareNoAssign_x": null,
-      "assign_x": null,
-      "console.log": null
-    },
     "edit_code": true,
     "embed": "false",
     "instructions": "Use nested if statements to making the scoring different for the different game levels. (Click to see full instructions)",
-    "markdown_instructions": "# Nested If Statements\r\n\r\n<img src=\"https://images.code.org/1774efb17571d3370662e34b705dde47-image-1446485939643.37.11 PM.png\" style=\"width: 150px; float: right\">\r\n\r\n\r\nNow that you know you can determine the difficult level lets change the scoring of the game to match the difficult level. On Easy the user should get ten points for a right guess and lose 1 for a wrong guess. On Hard the user should get 1 point for right and lose 1 for wrong. \r\n\r\nAlright but how do we check both the difficulty level and if the users guess was correct? We can actually put if statements inside of other if statements! So we first want to check what the difficult level is then check if the user was right or wrong to determine the score.\r\n\r\n** Note: ** The flow chart below outlines the logic you are trying to implement.\r\n\r\n# Do This\r\n\r\n* Move a copy of the score if statement inside of the difficult levels. Be careful with indenting. All of the if statements for score need to be inside of the diffculty if statment (i.e. indented 1 level more than the difficulty if statment)\r\n\r\n<img src=\"https://images.code.org/2125a027997aeca75d18b8423058063d-image-1446485524945.gif\" style=\"width: 350px\">\r\n\r\n\r\n* Edit the if statements to give the correct scores\r\n\t* easy level (+10 right, -1 wrong)\r\n    * hard level (+1 right, -1 wrong)\r\n\r\n<img src=\"https://images.code.org/3b95a9f5cca60fc0ffbf7c2fb174d737-image-1446175290414.png\" style=\"width: 100%\">",
+    "markdown_instructions": "# Nested If Statements\r\n\r\n<img src=\"https://images.code.org/1774efb17571d3370662e34b705dde47-image-1446485939643.37.11 PM.png\" style=\"width: 150px; float: right\">\r\n\r\n**Let's change the scoring of the game to match the difficulty level.** \r\n\r\nNew scoring rules:\r\n* _Easy: +10 points right answer / -1 point for wrong answer_\r\n* _Hard: +1 point right answer / -1 point for wrong answer_\r\n\r\nHow do we check _both_ the difficulty level and if the user's guess was correct? **We can actually put if statements inside of other if statements!** So we first want to check what the difficulty level is and then check if the user was right or wrong to determine the score.\r\n\r\n** Note: ** The flow chart below outlines the logic you are trying to implement.\r\n\r\n# Do This\r\n\r\n* Move a copy of the score if statement inside of the difficulty levels. Be careful with indenting. All of the if statements for score need to be inside of the difficulty if statement (i.e. indented 1 level more than the difficulty if statement)\r\n\r\n<img src=\"https://images.code.org/2125a027997aeca75d18b8423058063d-image-1446485524945.gif\" style=\"width: 350px\">\r\n\r\n\r\n* Edit the if statements to give the correct scores\r\n\t* easy level (+10 right, -1 wrong)\r\n    * hard level (+1 right, -1 wrong)\r\n\r\n<img src=\"https://images.code.org/3b95a9f5cca60fc0ffbf7c2fb174d737-image-1446175290414.png\" style=\"width: 100%\">",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -69,7 +37,8 @@
     "beginner_mode": "true",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false"
   }
 }]]></config>
   <blocks/>

@@ -20,7 +20,7 @@ Category: Turtle
 
 [short_description]
 
-Move the turtle forward and to the left in a smooth, circular arc.
+Moves the turtle forward and to the left in a smooth, circular arc.
 
 [/short_description]
 

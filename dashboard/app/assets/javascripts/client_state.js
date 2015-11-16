@@ -37,7 +37,8 @@ var COOKIE_OPTIONS = {expires: dashboard.clientState.EXPIRY_DAYS, path: '/'};
 dashboard.clientState.reset = function() {
   $.removeCookie('progress', {path: '/'});
   $.removeCookie('lines', {path: '/'});
-  $.removeCookie('videosSeen', {path: '/'});
+  localStorage.removeItem('video');
+  localStorage.removeItem('callout');
 };
 
 /**
@@ -158,6 +159,9 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
     elementSeen[visualElementId] = true;
     localStorage.setItem(visualElementType, JSON.stringify(elementSeen));
   } catch (e) {
+    if (e.name === "QuotaExceededError") {
+      return ;
+    }
     //Something went wrong parsing the json. Blow it up and just put in the new callout
     var elementSeen = {};
     elementSeen[visualElementId] = true;

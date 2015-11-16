@@ -74,23 +74,21 @@
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "true",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "instructions": "Update the genre and rating if statements to only give one movie suggestion at a time. (Click to see full instructions)",
-    "markdown_instructions": "# AND Operator in Movie Bot\r\n\r\nOn the last level you added in keywords for ratings. Try typing the question \"What is a r rated comedy movie?\" It gives two movie suggestions! It would make more sense for it to give one suggestion.\r\n\r\nWe could use nested if statements to do this by nesting ratings if statements inside of genre if statements. However that could become a lot of nested if statements quickly. **Instead we can use the AND operator (`&&`) to check for a genre and a rating at the same time.** \r\n\r\n<img src=\"https://images.code.org/a9307ead3b147e0a8016f2054f47f5f2-image-1446153610104.png\" style=\"width: 150px; float:right\">\r\n\r\nBe careful about the order of the if statments. You still want to detect ratings and genres by themselves. You will need to **check for the case where both are included FIRST** because the case where one is included in the user input contains the condition where both are in the string (see diagram). Try them in the reserve order if you intersted.\r\n\r\n\r\n**Note: ** Check out the flow chart below to see the logic we are trying to add.\r\n\r\n# Do This\r\n\r\n* **Try the question \"What is a R rated comedy movie?** to see the result.\r\n\r\n* **Update the genre and rating if statements to only give one movie suggestion.**\r\n\t* Make one set of if, else if, and else statements for your current if statements about genre and rating\r\n    * Add conditional statements to check for when someone enters a comedy movie and a rating. You could do this for all the genres but stick to one for now.\r\n\r\n* **Test out a couple sentences with your keywords** to make sure the change worked.\r\n\r\n<img src=\"https://images.code.org/04d562ed3fe21bc64478618a44c0b5da-image-1446138642563.png\" style=\"width: 100%\">\r\n\r\n<a src=\"https://images.code.org/04d562ed3fe21bc64478618a44c0b5da-image-1446138642563.png\" target=\"_blank\">Click to open in separate window.</a>",
+    "markdown_instructions": "# AND Operator in Movie Bot\r\n\r\nOn the last level you may have noticed that if you typed in a question like \"What is a R rated comedy movie?\" It gives two movie suggestions! It would make more sense for it to give one suggestion.\r\n\r\nWe could use nested if statements to do this by nesting if statements about ratings inside of if statements about genre. However, you might be getting a sinking feeling that this could become a lot of nested if statements very quickly! \r\n\r\n**Instead let's use the AND operator (`&&`) to check for a genre and a rating at the same time.** \r\n\r\n<img src=\"https://images.code.org/a9307ead3b147e0a8016f2054f47f5f2-image-1446153610104.png\" style=\"width: 200px; float:right\">\r\n\r\nBe careful about the order of the if statements. As a general principle you want to check the most specific conditions before checking more general ones.  For example, you want to have an if statement that checks for rating AND genre evaluated before on that just checks for genre on its own. Having a more general if statement checked first might cut off or prevent more specific conditions from being reached.\r\n\r\nYou still want your app to give suggestions when just a rating or just a genre is detected, so keep this principle of ordering in mind. (Try them in the reserve order if you're interested in seeing what happens :))\r\n\r\n**Note: ** Check out the flow chart below to see the logic we are trying to add.\r\n\r\n# Do This\r\n\r\n* **Try the question \"What is a R rated comedy movie?** to see the result.\r\n\r\n* **Update the code to only give one movie suggestion when a genre and a rating are detected in the input.**\r\n\t* Make one set of if, else-if, and else statements about genre and rating\r\n    * Add conditional statements to check for a comedy movie AND a rating. You could do this for all the genres but stick to one for now.\r\n\r\n* **Test out a couple sentences with your keywords** to make sure the change worked.\r\n\r\n<img src=\"https://images.code.org/622b3a2bc3d5e00579ecd7d4d3724a51-image-1446504521837.png\" style=\"width: 100%\">\r\n\r\n<a src=\"https://images.code.org/622b3a2bc3d5e00579ecd7d4d3724a51-image-1446504521837.png\" target=\"_blank\">Click to open in separate window.</a>",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "droplet_tooltips_disabled": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "encrypted_examples": [
-
-    ],
     "project_template_level_name": "U3 - Movie Bot - Template",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "lock_zero_param_functions": "false"
   }
 }]]></config>
   <blocks/>

@@ -19,7 +19,7 @@ Category: UI controls
 
 [short_description]
 
-Create a button on the screen displaying the *text* provided and referenced by the given *ButtonId* at default location (0,0).
+Creates a button on the screen displaying the *text* provided and referenced by the given *ButtonId* at default location (0,0).
 
 [/short_description]
 

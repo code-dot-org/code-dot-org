@@ -37,7 +37,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false">
+        <block type="when_run" deletable="false" movable="false" uservisible="false" y="0">
           <next>
             <block type="variables_set" inline="false" uservisible="false">
               <title name="VAR">left</title>
@@ -54,21 +54,6 @@
                       <title name="NUM">1</title>
                     </block>
                   </value>
-                  <next>
-                    <block type="controls_repeat">
-                      <title name="TIMES">5</title>
-                      <statement name="DO">
-                        <block type="maze_move">
-                          <title name="DIR">moveForward</title>
-                          <next>
-                            <block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
-                    </block>
-                  </next>
                 </block>
               </next>
             </block>
@@ -236,5 +221,12 @@
         </category>
       </xml>
     </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">2</title>
+        </block>
+      </xml>
+    </recommended_blocks>
   </blocks>
 </Karel>

@@ -134,8 +134,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def self.cache_find(id)
-    @@script_level_map ||= ScriptLevel.includes([{level: [:game, :concepts]}, :script]).index_by(&:id)
-    @@script_level_map[id]
+    Script.cache_find_script_level(id)
   end
 
   def to_param

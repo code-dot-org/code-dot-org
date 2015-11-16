@@ -4,6 +4,8 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
 
   UNSUBSCRIBE_2016 = "until2016"
   UNSUBSCRIBE_FOREVER = "forever"
+  DEFAULT_DISTANCE = 24 # kilometers
+  DEFAULT_NUM_VOLUNTEERS = 10
 
   def self.normalize(data)
     result = {}
@@ -50,10 +52,45 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     )
   end
 
+  def self.distances()
+    # distance is in km
+    @distances ||= distances_with_i18n_labels(
+      '8',
+      '16',
+      '24',
+      '32',
+    )
+  end
+
+  def self.num_volunteers()
+    @num_volunteers ||= num_volunteers_with_i18n_labels(
+      '5',
+      '10',
+      '25',
+      '50',
+    )
+  end
+
   def self.locations_with_i18n_labels(*locations)
     results = {}
     locations.each do |location|
       results[location] = I18n.t("volunteer_engineer_submission_location_flexibility_#{location}")
+    end
+    results
+  end
+
+  def self.distances_with_i18n_labels(*distances)
+    results = {}
+    distances.each do |distance|
+      results[distance] = I18n.t("volunteer_engineer_submission_distance_#{distance}")
+    end
+    results
+  end
+
+  def self.num_volunteers_with_i18n_labels(*num_volunteers)
+    results = {}
+    num_volunteers.each do |num_volunteer|
+      results[num_volunteer] = I18n.t("volunteer_engineer_submission_num_volunteers_#{num_volunteer}")
     end
     results
   end
@@ -69,8 +106,8 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     query = "kind_s:\"#{self.name}\" && allow_contact_b:true && -unsubscribed_s:\"#{UNSUBSCRIBE_2016}\" && -unsubscribed_s:\"#{UNSUBSCRIBE_FOREVER}\""
 
     coordinates = params['coordinates']
-    distance = 500
-    rows = 500
+    distance = params['distance'] || DEFAULT_DISTANCE
+    rows = params['num_volunteers'] || DEFAULT_NUM_VOLUNTEERS
 
     fq = ["{!geofilt pt=#{coordinates} sfield=location_p d=#{distance}}"]
 
@@ -88,7 +125,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
       facet: true,
       'facet.field'=>['location_flexibility_ss', 'experience_s'],
       rows: rows,
-      sort: "name_s asc"
+      sort: "random_#{SecureRandom.random_number(10**8)} asc"
     }
   end
 end

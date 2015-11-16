@@ -11,7 +11,7 @@ Here are a few resources to help you get started with understanding these CS con
 
 ##### Vocabulary
 
-- **Variable:** In JavaScript (and most programming languages) the most primitive type of memory you can use is called a variable. It's called a variable because it's a piece of memory in which you can change what's stored - its value can vary. Being able to control memory in a program is important because it lets the programmer keep track of things throughout a program. A common example for needing a variable is to keep track of something like a high score, or number of lives in a game, though the applications of variables are much, much, broader than just tracking things in a game. There are __three things__ students need to know how to do with variables:
+- **Variable:** In JavaScript (and most programming languages) the most primitive type of memory you can use is called a variable. It's called a variable because it's a piece of memory in which you can change what's stored - its value can vary. Being able to control memory in a program is important because it lets the programmer keep track of things throughout a program. Common use cases for variables are keeping track of a high score or the number of lives left in a game, but the applications of variables are much, much, broader than just tracking things in games. There are __three things__ students need to know how to do with variables:
      - __Create a variable__
      - __Put a piece of data into it.__ This is called "Setting the value" or "assigning a value" to the variable
      - __Read or use the data__ in their program. This is called "Getting the value"
@@ -26,8 +26,8 @@ Here are a few resources to help you get started with understanding these CS con
 
 ##### Lessons in Code Studio
 
-- [Stage 14: Controlling Memory with Variables](studio.code.org/s/cspunit3/stage/14/puzzle/1)
-- [Stage 15: Using Variables in Apps](studio.code.org/s/cspunit3/stage/15/puzzle/1)
+- [Stage 14: Controlling Memory with Variables](https://studio.code.org/s/cspunit3/stage/14/puzzle/1)
+- [Stage 15: Using Variables in Apps](https://studio.code.org/s/cspunit3/stage/15/puzzle/1)
 
 ##### External Resources 
 
@@ -48,12 +48,12 @@ Here are a few resources to help you get started with understanding these CS con
 - **String:** an arbitrary-length sequence of ASCII characters. The characters used to indicate the beginning and end of a string are quotes: `""`. Example strings: `"hello"`, `"hello world!"`, `"This is a string"` The quotes are important to distinguish strings from things like variable names. So the variable name `blue` is different from the string `"blue"`
 - **Concatenate:** to link together or join
 - **String Concatenation**: In code, the act of bringing together multiple strings into one.
-     - This is often used to join a default string to something the user provided, such as `"hello " + username + "!"`, where the value of the variable `username` is a string. If the user provided the text "Molly" then the full string after concatenation would be `"hello Molly!`
+     - This is often used to join a default string to something the user provided, such as `"hello " + username + "!"`, where the value of the variable `username` is a string. If the user provided the text "Molly" then the full string after concatenation would be `"hello Molly!"`
 
 
 ##### Lessons in Code Studio
 
-- [Stage 16: User Input and Strings](studio.code.org/s/cspunit3/stage/16/puzzle/1)
+- [Stage 16: User Input and Strings](https://studio.code.org/s/cspunit3/stage/16/puzzle/1)
 
 ##### External Resources 
 

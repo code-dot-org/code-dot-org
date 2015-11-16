@@ -273,10 +273,10 @@ Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
   element_has_id(selector, id)
 end
 
-Then /^element "([^"]*)" is visible$/ do |selector|
+Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   visibility = @browser.execute_script("return $('#{selector}').css('visibility')");
   visible = @browser.execute_script("return $('#{selector}').is(':visible')") && (visibility != 'hidden');
-  visible.should eq true
+  visible.should eq (negation.nil?)
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
@@ -483,7 +483,6 @@ end
 Given(/^I manually sign in as "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
-    And execute JavaScript expression "window.localStorage.clear()"
     Then I am on "http://studio.code.org/"
     And I set the language cookie
     And I create a student named "#{name}"
@@ -509,8 +508,7 @@ And(/^I ctrl-([^"]*)$/) do |key|
   @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
 end
 
-And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
-  element = @browser.find_element(:css, selector)
+def press_keys(element, key)
   if key.start_with?(':')
     element.send_keys(make_symbol_if_colon(key))
   else
@@ -527,6 +525,11 @@ And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
       end
     end
   end
+end
+
+And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
+  element = @browser.find_element(:css, selector)
+  press_keys(element, key)
 end
 
 def make_symbol_if_colon(key)

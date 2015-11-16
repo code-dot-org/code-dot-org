@@ -68,7 +68,7 @@ Several documents describe the overarching themes and direction of the course.
 | :------------------:|-----------|
 |  [![binary magic](csp/images/thumb_binaryMagic.png "Unit 1")](/educate/csp/unit1) [Unit 1](/educate/csp/unit1) | **Digital Information** What can be represented with a single bit and how do we get a single bit of information from one place to another? This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. Topics include: the digital representation of information - numbers, text, images, and communication protocols |
 |  [![Internet Simulator](csp/images/thumb_netsim.png "Unit 2")](/educate/csp/unit2) [Unit 2](/educate/csp/unit2)  | **The Internet** Students continue to work together to invent solutions and protocols to many of the problems that arise in the structure and function of the Internet. Topics include the Internet Protocol, DNS, TCP/IP, cryptography, computationally hard problems, and other security and hacking concerns.
-|*Coming Soon*| **Programming** Students learn the fundamentals programming constructs of JavaScript by solving problems with “turtle graphics.”  Then move on to programming simple event driven apps.  An emphasis is placed on enabling students to solve problems and write code in teams. |
+|[![App Lab](csp/images/thumb_applab.png "Unit 3")](/educate/csp/unit3) [Unit 3](/educate/csp/unit3) | **Programming** Students learn the fundamentals programming constructs of JavaScript by solving problems with “turtle graphics.”  Then move on to programming simple event driven apps.  An emphasis is placed on enabling students to solve problems and write code in teams. |
 |*Coming Soon*| **Data** Students continue programming and building web apps, now with a view towards data: processing it with algorithms, and the implications of storing data collected from and by others on the web.  Students explore “big data” by making queries against a data analysis api.|
 |*Coming Soon*| **Explore and Create** Class time devoted to preparation and execution of the AP® Performance Tasks: Explore and Create.|
 
@@ -81,16 +81,16 @@ Several documents describe the overarching themes and direction of the course.
 
 **Summer 2015**
 
-Unit completion is driven primarily by our professional development schedule. Units 1 and 2 are complete for professional development sessions this summer.  Units 3 and 4 are undergoing revisions for delivery in the fall for ongoing professional development sessions.
+Unit completion is driven primarily by our professional development schedule. Units 1 and 2 are complete for professional development sessions this summer.  Units 3 and 4 are undergoing revisions for delivery in the fall and winter for ongoing professional development sessions.
 
 **Target Dates for publishing unit drafts online**
 
 As the units undergo revisions we hope to publish them on an ongoing basis leading up to and through the beginning of the school year. These are our targets.
 
-* Unit 1 - Target July 1 - **done!** see [Unit 1](/educate/csp/unit1)
-* Unit 2 - Target Aug. 31 - **done!** see [Unit 2](/educate/csp/unit2)
-* Unit 3 - Target Early Fall (Sept/Oct)
-* Unit 4 - Target Mid Fall (Oct/Nov)
+* Unit 1 - Target July 1 -  see [Unit 1](/educate/csp/unit1)
+* Unit 2 - Target Aug. 31 - see [Unit 2](/educate/csp/unit2)
+* Unit 3 - Target Early Fall (Sept/Oct) - see [Unit 3](/educate/csp/unit3)
+* Unit 4 - Target Late Jan
 
 <br />
 
