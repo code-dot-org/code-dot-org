@@ -147,7 +147,7 @@ Blockly.bindEvent_ = function(element, name, thisObject, func, useCapture) {
  * in conjunction with mouse events.
  *
  * Note that this order is important; if pointer events are available,
- * we always want to prever them. In some cases such as Windows 8.1
+ * we always want to prefer them. In some cases such as Windows 8.1
  * phones, both pointer and touch events are available.
  *
  * @type {Object}
