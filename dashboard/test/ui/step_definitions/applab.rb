@@ -156,3 +156,61 @@ And /^I delete the current design mode element$/ do
   elements = @browser.find_elements(:css, '#design-properties button')
   elements[-1].click
 end
+
+And /^I drag the grippy by ([-|\d]+) pixels$/ do |delta|
+  script = %Q{
+    function createMouseEvent(type, clientX, clientY) {
+      var evt;
+      var e = {
+        bubbles: true,
+        cancelable: (type != "mousemove"),
+        view: window,
+        detail: 0,
+        screenX: undefined,
+        screenY: undefined,
+        clientX: clientX,
+        clientY: clientY,
+        ctrlKey: false,
+        altKey: false,
+        shiftKey: false,
+        metaKey: false,
+        button: 0,
+        relatedTarget: undefined
+      };
+      if (typeof( document.createEvent ) == "function") {
+        evt = document.createEvent("MouseEvents");
+        evt.initMouseEvent(type,
+          e.bubbles, e.cancelable, e.view, e.detail,
+          e.screenX, e.screenY, e.clientX, e.clientY,
+          e.ctrlKey, e.altKey, e.shiftKey, e.metaKey,
+          e.button, document.body.parentNode);
+      } else if (document.createEventObject) {
+        evt = document.createEventObject();
+        for (var prop in e) {
+          evt[prop] = e[prop];
+        }
+        evt.button = { 0:1, 1:4, 2:2 }[evt.button] || evt.button;
+      }
+      return evt;
+    };
+
+    var element = $("#visualizationResizeBar");
+    var start = {
+      x: element.offset().left,
+      y: element.offset().top
+    };
+    var end = {
+      x: start.x + #{delta},
+      y: start.y
+    }
+    var mousedown = createMouseEvent('mousedown', start.x, start.y);
+    var drag = createMouseEvent('mousemove', end.x, end.y);
+    var mouseup = createMouseEvent('mouseup', end.x, end.y);
+
+    element[0].dispatchEvent(mousedown);
+    element[0].dispatchEvent(drag);
+    element[0].dispatchEvent(mouseup);
+  }
+
+  @browser.execute_script(script)
+end

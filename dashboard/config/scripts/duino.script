@@ -12,3 +12,7 @@ level 'duino pov'
 stage 'Making Music'
 level 'duino music'
 level 'duino auduino'
+
+stage 'JunkBot'
+level 'duino junkbot build'
+level 'duino junkbot software'

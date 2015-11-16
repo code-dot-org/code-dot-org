@@ -24,12 +24,20 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "console.log": null
+      "insertItem": null,
+      "appendItem": null,
+      "removeItem": null,
+      "listLength": null,
+      "randomNumber": null,
+      "console.log": null,
+      "declareAssign_x_array_1_4": {
+        "block": "var list = [1,2,3];"
+      }
     },
     "edit_code": true,
     "embed": "false",
     "instructions": "Add 5 to all the values in an array (Click to see full instructions)",
-    "markdown_instructions": "# Updating Values in Array with For Loop\r\n\r\nThe `for` loop you set up on the last level is actually so common we will rarely deviate from this `for` loop setup.\r\n\r\n<img src=\"https://images.code.org/fba4d95636869c1c1c1a539fe81ded72-image-1447346793054.45.50 AM.png\" style=\"width: 350px\">\r\n\r\nThis for loop basically means 'for every index in a list'. Since we can access every value in an array it allows us to begin thinking about ways to process arrays. We can read all the values, we can change them, we can add them all up, we can compare elements that are next to each other, we can search for values, we can re-order things, etc.  \r\n\r\nYou already read all the values. Let's try changing the value in each index. Add 5 to the value at every location in the array.\r\n\r\n# Do This\r\n\r\n* Set up a `for` loop that loops over every index in the array.\r\n\r\n* Add 5 to the value at every location in the array. ** Remember: ** When looping myArray[i] refers to the spot in the array at the current value of i.\r\n\r\n* Add a `console.log` before and after the array has been changed to show the whole array.",
+    "markdown_instructions": "# Updating Values in Array with For Loop\r\n\r\nThe `for` loop you set up on the last level is actually so common we will rarely deviate from this `for` loop setup.\r\n\r\n<img src=\"https://images.code.org/fba4d95636869c1c1c1a539fe81ded72-image-1447346793054.45.50 AM.png\" style=\"width: 350px\">\r\n\r\nThis `for` loop basically means \"for every possible index in `myArray`...\" and we use it as a basic building block for processing arrays all the time. \r\n\r\nWith a basic structure that allows us to visit every element in an array we can begin thinking about ways to process arrays. We can display all the values, we can change them, we can add them all up, we can compare elements that are next to each other, we can search for values, we can re-order things, etc.  \r\n\r\nYou already displayed all the values. Let's try changing every element.  \r\n\r\n# Do This\r\n\r\n**Add 5 to each value in the array.**\r\n\r\n**Starting code:** We've given you some starting code that adds a bunch of random values to an array, displays the array, and set up a `for` loop that loops over every index in the array.\r\n\r\n* You should **add code inside the loop** to add 5 to the value at every location in the array. ** Remember: ** myArray[i] refers to the spot in the array at the current value of i.\r\n\r\n* Verify that it works by inspecting the before and after messages in the console.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -59,7 +67,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "var myArray = [];\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));"
+    "start_blocks": "var myArray = [];\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\n\r\nconsole.log(\"Before: \" + myArray);\r\n\r\nfor( var i=0; i<myArray.length; i++){\r\n  \r\n}\r\n\r\nconsole.log(\"After: \" + myArray);"
   }
 }]]></config>
   <blocks/>

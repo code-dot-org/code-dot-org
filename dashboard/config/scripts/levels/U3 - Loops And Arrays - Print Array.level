@@ -24,12 +24,20 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "console.log": null
+      "insertItem": null,
+      "appendItem": null,
+      "removeItem": null,
+      "listLength": null,
+      "randomNumber": null,
+      "console.log": null,
+      "declareAssign_x_array_1_4": {
+        "block": "var list = [1,2,3];"
+      }
     },
     "edit_code": true,
     "embed": "false",
     "instructions": "Use a for loop to print out all the values in an array. (Click to see full instructions)",
-    "markdown_instructions": "# Print Array with For Loop\r\n\r\nAs you know you can use variables, whose values are numbers, as indexes in an array.  We can take advantage of this fact to create a `for` loop in which the counting variable('i') starts at 0 and goes up by 1 everytime. **The counting variable will be the current index in the array.**  Of course we want the counting to stop when there are no more indexes left in the array, so we also need a boolean expression of `i < list.length`. \r\n\r\nYou are going to print out the values in the array one-by-one using a loop. You could do this by writing a bunch of individual `console.log` statements but that would be poor programming practice. What if the size of your array changed? You would have to go in and change your code. **If you use a `for` loop with the correct conditions it will always print all the values.**\r\n\r\n# Do This\r\n\r\n* **Starter Code: ** We've given you some code that fills an array with 10 random values between 1, and 10.\r\n\r\n* Drag out the `for` loop.\r\n\r\n* Change the boolean condition so that it stops looping once its reached the last value in the array.\r\n\r\n<img src=\"https://images.code.org/930b40b3e3f204605a0fd27fee9d8b8f-image-1447346008842.gif\" style=\"width: 350px\">\r\n\r\n\r\n* Inset a `console.log` statement inside the for loop to print out the value in the array at the current index.\r\n\r\n<img src=\"https://images.code.org/43431613ea0c045411499dd0e68e7feb-image-1447345996258.gif\" style=\"width: 350px\">\r\n\r\n",
+    "markdown_instructions": "# Print Array with For Loop\r\n\r\nAs you know we can use variables as indexes in an array.  We can take advantage of this fact to create a `for` **loop which visits every index in an array**.\r\n\r\n![](https://images.code.org/5aeb9986535424b1d737b8221685196f-image-1447446416081.26.01 PM.png)\r\n\r\nIn this for loop the `i` eventually takes the value of every index in the array. You are going to use a loop of this kind to display all the values in an array.\r\n\r\n# Do This\r\n\r\n* **Starter code** is provided that adds several random values to an array.\r\n* Create a `for` loop that uses the syntax shown above to print out every value in the array.\r\n<img src=\"https://images.code.org/930b40b3e3f204605a0fd27fee9d8b8f-image-1447346008842.gif\" style=\"width: 350px\">\r\n* Insert a `console.log` statement inside the for loop to print out the value in the array at the current index.\r\n<img src=\"https://images.code.org/43431613ea0c045411499dd0e68e7feb-image-1447345996258.gif\" style=\"width: 350px\">\r\n* Run the program to confirm it is displaying all the values.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
