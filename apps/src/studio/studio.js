@@ -1095,6 +1095,13 @@ Studio.onTick = function() {
   if (Studio.allGoalsVisited()) {
     Studio.trackedBehavior.allGoalsVisited = true;
   }
+
+  // And we don't want a timeout to be used in evaluating conditions before the all goals visited
+  // events are processed (as described above), so also record that here.  This is particularly
+  // relevant to levels which "time out" immediately when all when_run code is complete.
+  if (Studio.timedOut()) {
+    Studio.trackedBehavior.timedOut = true;
+  }
 };
 
 /**
@@ -2097,7 +2104,8 @@ Studio.reset = function(first) {
     hasAddedItem: false,
     hasWonGame: false,
     hasLostGame: false,
-    allGoalsVisited: false
+    allGoalsVisited: false,
+    timedOut: false
   };
 
   // Reset the record of the last direction that the user moved the sprite.
@@ -5287,7 +5295,7 @@ Studio.conditionSatisfied = function(required) {
     var valueName = valueNames[k];
     var value = required[valueName];
 
-    if (valueName === 'timedOut' && Studio.timedOut() != value) {
+    if (valueName === 'timedOut' && tracked.timedOut  != value) {
       return false;
     }
 
@@ -5403,9 +5411,14 @@ var checkFinished = function () {
     return true;
   }
 
-  if (Studio.timedOut()) {
-    Studio.result = ResultType.FAILURE;
-    return true;
+  // Don't process timedOut condition here if we have progressConditions to take care of
+  // things, which can include a timedOut.  This avoids having this condition kick in earlier
+  // than level.progressConditions can take care of a timedOut.
+  if (!level.progressConditions) {
+    if (Studio.timedOut()) {
+      Studio.result = ResultType.FAILURE;
+      return true;
+    }
   }
 
   return false;
