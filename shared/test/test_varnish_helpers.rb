@@ -1,4 +1,4 @@
-require 'minitest/autorun'
+require_relative 'test_helper'
 require_relative '../../cookbooks/cdo-varnish/libraries/helpers'
 
 # Unit tests for cdo-varnish/libraries/helpers.rb

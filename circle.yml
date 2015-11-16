@@ -1,6 +1,8 @@
 machine:
   ruby:
     version: 2.2.3
+  environment:
+    RAILS_ENV: test
   services:
     - docker
 dependencies:
@@ -9,9 +11,8 @@ dependencies:
     - "~/.rvm/gems/ruby-2.2.3"
   override:
     - sudo apt-get install libicu-dev
-    - bundle install
+    - "printf \"use_dynamo_tables: false\nbundler_use_sudo: false\n\" > locals.yml"
     - rake install:pegasus
-    - "printf \"assets_s3_directory: assets_circle/$RANDOM\nsources_s3_directory: sources_circle/$RANDOM\n\" > locals.yml"
     - npm install:
         pwd:
             apps
