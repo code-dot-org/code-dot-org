@@ -78,7 +78,7 @@ exec(command, function (err, stdout, stderr) {
     'web-security': false
   })
  .on('error', function (e) {
-   console.log(e.stack);
+   console.trace();
    process.exit(1);
   })
   .bundle()
