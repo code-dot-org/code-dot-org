@@ -57,9 +57,9 @@ class AdminReportsController < ApplicationController
     @ratings_by_stage = ratings_by_stage.select('stage_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
 
     # Generate the funometer percentages for the script, by level.
-    ratings_by_level = ratings.group(:level_id).order(:level_id)
-    @ratings_by_level_headers = ['Level ID', 'Percentage', 'Count']
-    @ratings_by_level = ratings_by_level.select('level_id', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+    ratings_by_level = ratings.joins(:level).group(:level_id).order(:level_id)
+    @ratings_by_level_headers = ['Level ID', 'Level Name', 'Percentage', 'Count']
+    @ratings_by_level = ratings_by_level.select('level_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
 
     render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
   end
