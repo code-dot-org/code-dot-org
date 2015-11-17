@@ -2317,7 +2317,7 @@ levels.js_hoc2015_score =
   },
   'codeFunctions': {
     'playSound': null,
-    'addPoints': { params: ["300"] },
+    'addPoints': { params: ["100"] },
 
     'whenGetRebelPilot': null
   },
@@ -2374,16 +2374,7 @@ levels.js_hoc2015_score =
     { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedScoreTimeout() } },
 
-    // got all of the goals, and at least one point
-    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 1 },
-      result: {
-        success: false,
-        message: msg.failedScoreGoals(),  // JS: points done in wrong place
-        blocklyMessage: msg.failedScoreScoreBlockly()
-      }
-    },
-
-    // got all the goals, but 0 points
+    // got all the goals, but not enough points
     { required: { 'allGoalsVisited': true },
       result: {
         success: false,
@@ -2637,6 +2628,7 @@ levels.js_hoc2015_chain_characters = {
     'playSound': null,
 
     'whenGetTauntaun': null,
+    'whenGetMynock': null,
   },
   'startBlocks': [
     'addCharacter("Tauntaun");',
@@ -2681,10 +2673,15 @@ levels.js_hoc2015_chain_characters = {
   'timeoutFailureTick': 1800, // 60 seconds
   'showTimeoutRect': true,
   'progressConditions' : [
-    { required: { 'collectedItemsAtOrAbove': 8 },
+    { required: { 'collectedSpecificItemsAtOrAbove': { className: "mynock", count: 8 } },
       result: { success: true, message: msg.successCharacter1() } },
-    { required: {'timedOut': true, collectedItemsAtOrAbove: 5 },
+    { required: {'timedOut': true, collectedSpecificItemsAtOrAbove: { className: "mynock", count: 5 } },
       result: { success: false, canPass: true, message: msg.failedChainCharactersTimeoutGotSome() } },
+    { required: {
+        'collectedSpecificItemsAtOrAbove': { className: "tauntaun", count: 4 },
+        'createdSpecificItemsBelow': { className: "mynock", count: 5 }
+      },
+      result: { success: false, message: msg.failedChainCharactersTimeout() } },
     { required: { 'timedOut': true },
       result: { success: false, message: msg.failedChainCharactersTimeout() } },
   ],
@@ -2761,7 +2758,12 @@ levels.js_hoc2015_multiply_characters = {
     { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2},
       result: { success: false, canPass: true, message: msg.failedMultiplyCharactersTimeoutGotSome() } },
     { required: { 'timedOut': true },
-      result: { success: false, message: msg.failedMultiplyCharactersTimeout() } },
+      result: {
+        success: false,
+        message: msg.failedMultiplyCharactersTimeout(),
+        blocklyMessage: msg.failedMultiplyCharactersTimeoutBlockly()
+      }
+    },
   ],
   'callouts': [
     {
@@ -3203,7 +3205,7 @@ levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
       </next></block>',
   toolbox:
     tb('<block type="studio_playSound"></block> \
-        <block type="studio_addPoints"><title name="VALUE">300</title></block>'),
+        <block type="studio_addPoints"><title name="VALUE">100</title></block>'),
   requiredBlocks: [
     // TODO: addPoints
   ],
@@ -3345,7 +3347,8 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
         <block type="studio_playSound"></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">tauntaun</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">tauntaun</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">mynock</title></block>'),
   requiredBlocks: [
     // TODO: addCharacter (check for mouse param?), addPoints
   ],
@@ -3536,6 +3539,23 @@ levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
           at: 'bottom right',
         }
       }
-    }
+    },
+    {
+      id: 'playlab:hoc2015_blockly_15:categories',
+      element_id: '.blocklyTreeRoot',
+      qtip_config: {
+        content: {
+          text: msg.calloutBlocklyCategories(),
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom right',
+          'adjust': {
+            'x': 0,
+            'y': -10
+          }
+        }
+      }
+    },
   ]
 });
