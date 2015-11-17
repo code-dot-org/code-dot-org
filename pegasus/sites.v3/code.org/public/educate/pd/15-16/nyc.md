@@ -46,9 +46,9 @@ Breakfast and lunch will be served.
 
 **December 5th Location**
 
-I/O Spaces<br/>
+[I/O Spaces<br/>
 8120 Fenton St, Ste 202<br/>
-Silver Spring, MD  20910
+Silver Spring, MD  20910](https://www.google.com/maps/place/I%2FO+Spaces/@38.9913503,-77.0257067,17z/data=!4m2!3m1!1s0x0:0xfc5f74bf8966ff84)
 
 
 **What to bring to Phase 3 quarterly sessions:**
@@ -81,7 +81,7 @@ Milestone Complete!
 
 **Save the dates:**<br/>
 
-<i>Both Group 1 & 2 will attend the following dates</i><br/>
+<i>Due to low attendance, all attendees will now be in one group.</i><br/>
 Quarter 1: Saturday, October 3, 2015
  
 Quarter 2: Saturday, November 14, 2015
@@ -94,18 +94,13 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**November 14th Location**<br/>
-<i><b>Group 1</i></b><br/>
-Microsoft<br/>
-Music Box 5411<br/>
-Eleven Times Square<br/>
-NY, NY 10036
+**November 14th Location**
 
-<i><b>Group 2</i></b><br/>
-Microsoft<br/>
-Winter Garden 5412<br/>
-Eleven Times Square<br/>
-NY, NY 10036
+[Microsoft<br/>
+Music Box 5411<br/>
+11 Times Square<br/>
+NY, NY 10036](https://www.google.com/maps/search/Microsoft,+11+Times+Square,+New+York,+NY+10036/@40.7567826,-73.9906628,18z)
+
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -156,14 +151,13 @@ Semester 2: Saturday, February 6, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**October 3rd Location**
+**February 6th Location**
 
-Executive Conference Center<br/>
-8th Floor<br/>
-1601 Broadway<br/>
-New York, NY 10019<br/>
+[Microsoft<br/>
+Central Park East 6501A<br/>
+11 Times Square<br/>
+New York, NY 10036](https://www.google.com/maps/search/Microsoft,+11+Times+Square,+New+York,+NY+10036/@40.7567826,-73.9906628,18z)
 
-The entrance to the building is on 48th street, to the left of the Hersey's Store in Times Square. For more details, [click here](http://www.amaconferencecenter.org/new-york-directions-maps.htm).
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -196,10 +190,10 @@ Thursday, November 5th, 2015  <br/>
 
 **Location**
 
-Yotel <br/>
+[Yotel <br/>
 Studio - Fourth Floor<br/>
 570 10th Ave<br/>
-New York, NY 10036<br/>
+New York, NY 10036<br/>](https://www.google.com/maps/place/YOTEL+New+York/@40.7591199,-73.9956249,15z/data=!4m2!3m1!1s0x0:0x9aaeb9042dabf0a)
 
 
 ### Counselors
@@ -211,10 +205,10 @@ Thursday, November 5th, 2015 <br/>
 
 **Location**
 
-Yotel <br/>
+[Yotel <br/>
 Studio - Fourth Floor<br/>
 570 10th Ave<br/>
-New York, NY 10036<br/>
+New York, NY 10036<br/>](https://www.google.com/maps/place/YOTEL+New+York/@40.7591199,-73.9956249,15z/data=!4m2!3m1!1s0x0:0x9aaeb9042dabf0a)
 
 [**Back to the top**](#top)
 
