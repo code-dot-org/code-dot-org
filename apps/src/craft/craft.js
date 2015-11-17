@@ -714,11 +714,11 @@ Craft.reportResult = function (success) {
 
 Craft.replayTextForResult = function (testResultType) {
   if (testResultType === TestResults.FREE_PLAY) {
-    return "Keep Playing";
+    return craftMsg.keepPlayingButton();
   } else if (testResultType <= TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL) {
     return commonMsg.tryAgain();
   } else {
-    return "Replay";
+    return craftMsg.replayButton();
   }
 };
 

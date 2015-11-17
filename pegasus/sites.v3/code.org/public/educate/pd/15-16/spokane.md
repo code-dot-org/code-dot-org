@@ -13,9 +13,6 @@ nav: pd2_nav
 Milestone Complete!
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-
-
-
 Milestone Complete!
 
 
@@ -42,12 +39,12 @@ Breakfast and lunch will be served.
 
 **November 21st Location**
 
-Gonzaga University<br/>
+[Gonzaga University<br/>
 PACCAR 107<br/>
 502 E. Boone Avenue<br/>
-Spokane WA 99258
+Spokane WA 99258](https://www.google.com/maps/place/Gonzaga+University/@47.6681035,-117.4112584,14z/data=!4m2!3m1!1s0x0:0xdb160d1679b907e7)
 
-Free parking is located on level 3 and 4 of the BARC parking garage on Hamilton and Boone Ave. See a campus map [here](/files/GU-campus-fall-2015-16.pdf).
+Free parking is located on level 3 and 4 of the BARC parking garage on Hamilton and Boone Ave. See a [campus map here](/files/GU-campus-fall-2015-16.pdf).
 <br/>
 <br/>
 _Agendas_ for our frist Phase 3 in-person workshop can be found [here](/files/CSPFirstQuarterWorkshop-teachers.pdf). 
