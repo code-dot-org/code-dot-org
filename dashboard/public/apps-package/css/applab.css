@@ -37,6 +37,8 @@
     box-sizing: border-box;
     line-height: 1.2em;
     margin: 5px; }
+    #divApplab input p, #divApplab div[contenteditable=true] p, #divApplab button p, #divApplab select p, #divApplab img p, #divApplab label p, #designModeViz input p, #designModeViz div[contenteditable=true] p, #designModeViz button p, #designModeViz select p, #designModeViz img p, #designModeViz label p, .draggingParent input p, .draggingParent div[contenteditable=true] p, .draggingParent button p, .draggingParent select p, .draggingParent img p, .draggingParent label p {
+      line-height: inherit; }
   #divApplab .chart, #designModeViz .chart, .draggingParent .chart {
     position: absolute;
     display: block;
