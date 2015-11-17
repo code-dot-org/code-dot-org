@@ -24,9 +24,6 @@ function loadGumball(skin, assetUrl) {
   skin.spriteHeight = 110;
   skin.spriteWidth = 110;
 
-  skin.spriteCollisionRectWidth  = 50;
-  skin.spriteCollisionRectHeight = 50;
-
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
   skin.ProjectileClassNames = [
