@@ -58,7 +58,7 @@ function Sounds() {
   if (window.AudioContext) {
     try {
       this.audioContext = new AudioContext();
-      this.unlockAudio(); // Attempt immediately, for correct status on desktop
+      this.initializeAudioUnlockState_();
     } catch (e) {
       /**
        * Chrome occasionally chokes on creating singleton AudioContext instances in separate tabs
@@ -73,6 +73,29 @@ function Sounds() {
 
   this.soundsById = {};
 }
+
+/**
+ * Plays a silent sound to check whether audio is unlocked (usable) in the
+ * current browser.
+ * On mobile, our initial audio unlock will fail because unlocking audio
+ * requires user interaction.  In that case, we add a handler to catch
+ * the first user interaction and try unlocking audio again.
+ * @private
+ */
+Sounds.prototype.initializeAudioUnlockState_ = function () {
+  this.unlockAudio();
+  if (!this.isAudioUnlocked()) {
+    var unlockHandler = function () {
+      this.unlockAudio();
+      if (this.isAudioUnlocked()) {
+        document.removeEventListener("mousedown", unlockHandler, true);
+        document.removeEventListener("touchend", unlockHandler, true);
+      }
+    }.bind(this);
+    document.addEventListener("mousedown", unlockHandler, true);
+    document.addEventListener("touchend", unlockHandler, true);
+  }
+};
 
 /**
  * Whether we're allowed to play audio by the browser yet.
@@ -90,6 +113,8 @@ Sounds.prototype.isAudioUnlocked = function () {
  *
  * Special thanks to this article for the general approach:
  * https://paulbakaus.com/tutorials/html5/web-audio-on-ios/
+ * and to SoundJS for another approach to checking whether the unlock succeeded.
+ * https://github.com/CreateJS/SoundJS/blob/d748f02a0c2a2f1a626efcb86ae3773d7aab1ec6/src/soundjs/webaudio/WebAudioPlugin.js#L367
  */
 Sounds.prototype.unlockAudio = function () {
   if (this.isAudioUnlocked()) {
@@ -107,13 +132,9 @@ Sounds.prototype.unlockAudio = function () {
     source.noteOn(0);
   }
 
-  // by checking the play state after some time, we know if we're really unlocked
-  setTimeout(function() {
-    if (source.playbackState === source.PLAYING_STATE ||
-        source.playbackState === source.FINISHED_STATE) {
-      this.audioUnlocked_ = true;
-    }
-  }.bind(this), 0);
+  if (this.audioContext.state === "running") {
+    this.audioUnlocked_ = true;
+  }
 };
 
 /**
