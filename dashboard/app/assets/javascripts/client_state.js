@@ -42,6 +42,43 @@ dashboard.clientState.reset = function() {
 };
 
 /**
+ * Returns the client-cached copy of the level source for the given
+ * scriptLevelId, if it's newer than the given timestamp.
+ * @param {number} scriptLevelId
+ * @param {number} timestamp
+ */
+dashboard.clientState.sourceForLevel = function (scriptLevelId, timestamp) {
+  var data = localStorage.getItem('source' + scriptLevelId);
+  if (data) {
+    var parsed = JSON.parse(data);
+    if (parsed.timestamp > timestamp) {
+      return parsed.source;
+    }
+  }
+};
+
+/**
+ * Cache a copy of the level source along with a timestamp. Posts to /milestone
+ * get queued, so save the data in localStorage to present a consistent client
+ * view.
+ * @param scriptLevelId
+ * @param timestamp
+ * @param source
+ */
+dashboard.clientState.writeSourceForLevel = function (scriptLevelId, timestamp, source) {
+  try {
+    localStorage.setItem('source' + scriptLevelId, JSON.stringify({
+      source: source,
+      timestamp: timestamp
+    }));
+  } catch (e) {
+    if (e.name !== "QuotaExceededError") {
+      throw e;
+    }
+  }
+};
+
+/**
  * Returns the progress attained for the given level from the cookie.
  * @param {number} level The id of the level
  * @returns {number}
