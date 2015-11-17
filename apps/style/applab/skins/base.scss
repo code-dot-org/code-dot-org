@@ -50,6 +50,10 @@
     box-sizing: border-box;
     line-height: 1.2em;
     margin: 5px;
+
+    p {
+      line-height: inherit
+    }
   }
 
   .chart {
