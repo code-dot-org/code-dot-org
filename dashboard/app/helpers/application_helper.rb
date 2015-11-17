@@ -195,8 +195,7 @@ module ApplicationHelper
 
   # Check to see if we disabled signin from Gatekeeper
   def signin_button_enabled
-    return true if @script.nil?
-    !Gatekeeper.allows('public_caching_for_script', where: { script_name: @script.name })
+    Gatekeeper.allows('show_signin_button', where: { script_name: @script.try(:name) }, default: true)
   end
 
   # Check to see if the tracking pixel is enabled for this script
