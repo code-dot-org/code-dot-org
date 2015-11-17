@@ -133,14 +133,25 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
   apiValidateType(opts, funcName, varName, id, 'string');
   if (opts[validatedTypeKey] && typeof opts[validatedDomKey] === 'undefined') {
     var element = document.getElementById(id);
-    var exists = Boolean(element && divApplab.contains(element));
-    var valid = exists == shouldExist;
+
+    var existsInApplab = Boolean(element && divApplab.contains(element));
+    var existsOutsideApplab = Boolean(element && !divApplab.contains(element));
+
+    var valid = !existsOutsideApplab && (shouldExist == existsInApplab);
+
     if (!valid) {
       var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
-      var errorString = funcName + "() " + varName +
-        " parameter refers to an id (" +id + ") which " +
-        (exists ? "already exists." : "does not exist.");
-      outputError(errorString, ErrorLevel.WARNING, line);
+
+      if (existsOutsideApplab) {
+        var errorString = funcName + "() " + varName + " parameter refers to an id (" + id +
+            ") which is already in use outside of Applab. Choose a different id.";
+        outputError(errorString, ErrorLevel.ERROR, line);
+      } else {
+        var errorString = funcName + "() " + varName +
+            " parameter refers to an id (" + id + ") which " +
+            (existsInApplab ? "already exists." : "does not exist.");
+        outputError(errorString, ErrorLevel.WARNING, line);
+      }
     }
     opts[validatedDomKey] = valid;
   }
