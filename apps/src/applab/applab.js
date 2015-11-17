@@ -842,6 +842,7 @@ Applab.init = function(config) {
   // In Applab, we want our embedded levels to look the same as regular levels,
   // just without the editor
   config.centerEmbedded = false;
+  config.wireframeShare = true;
 
   // Applab.initMinimal();
 
