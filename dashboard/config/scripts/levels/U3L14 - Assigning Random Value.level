@@ -48,9 +48,10 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "(click to see full instructions)",
+    "instructions": "Write a program that simulates the rolling of two dice and reports their individual values as well as the sum. (click to see full instructions)",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "encrypted_examples": "YBxoDtBqXI72z7KcaN5Ds+sIZK88W0qaAcrhEcHmnD+yqGGot2irVlqPzxX+\nIp+w\n"
   }
 }]]></config>
   <blocks/>
