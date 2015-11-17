@@ -116,9 +116,13 @@ designMode.resetElementTray = function (allowEditing) {
  * Given an input value produce a valid css value that is
  * either in pixels or empty.
  */
-var appendPx = function (inp) {
-  return inp ? inp + 'px' : '';
-};
+function appendPx (input) {
+  // Don't append if we already have a px
+  if (/px/.test(input)) {
+    return input;
+  }
+  return input ? input + 'px' : '';
+}
 
 /**
  * Handle a change from our properties table.
