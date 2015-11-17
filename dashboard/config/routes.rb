@@ -178,8 +178,8 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
   # one-off internal reports
-  get '/admin/brook/csppd', to: 'reports#csp_pd_responses', as: 'csp_pd_responses'
-  get '/admin/roxanne/hoc_signups', to: 'admin_reports#hoc_signups', as: 'hoc_signups'
+  get '/admin/temp/csppd', to: 'reports#csp_pd_responses', as: 'csp_pd_responses'
+  get '/admin/temp/hoc_signups', to: 'admin_reports#hoc_signups', as: 'hoc_signups'
 
   # internal report dashboards
   get '/admin/concepts', to: 'admin_reports#admin_concepts', as: 'admin_concepts'
