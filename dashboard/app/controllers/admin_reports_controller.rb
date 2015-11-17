@@ -44,12 +44,17 @@ class AdminReportsController < ApplicationController
     @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
 
     # Compute the global funometer percentage for the script.
-    ratings = PuzzleRating.where('script_id = ?', @script_id)
+    ratings = PuzzleRating.where('puzzle_ratings.script_id = ?', @script_id)
     @overall_percentage = get_percentage_positive(ratings)
 
     # Generate the funometer percentages for the script, by day, for the last month.
     @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
     @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
+
+    # Generate the funometer percentages for the script, by stage.
+    ratings_by_stage = ratings.joins("INNER JOIN script_levels ON puzzle_ratings.script_id = script_levels.script_id AND puzzle_ratings.level_id = script_levels.level_id").joins("INNER JOIN stages ON stages.id = script_levels.stage_id").group('script_levels.stage_id').order('script_levels.stage_id')
+    @ratings_by_stage_headers = ['Stage ID', 'Stage Name', 'Percentage', 'Count']
+    @ratings_by_stage = ratings_by_stage.select('stage_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
 
     # Generate the funometer percentages for the script, by level.
     ratings_by_level = ratings.group(:level_id).order(:level_id)
