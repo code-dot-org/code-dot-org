@@ -518,6 +518,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForever":function(d){return "!!-repeat forever-!!"},
 "repeatDo":function(d){return "!!-do-!!"},
 "repeatForeverTooltip":function(d){return "!!-Execute the actions in this block repeatedly while the story is running.-!!"},
+"spaceInvasion":function(d){return "!!-Space invasion!-!!"},
 "saySprite":function(d){return "!!-say-!!"},
 "saySpriteN":function(d){return "!!-actor "+studio_locale.v(d,"spriteIndex")+" say-!!"},
 "saySpriteTooltip":function(d){return "!!-Pop up a speech bubble with the associated text from the specified actor.-!!"},

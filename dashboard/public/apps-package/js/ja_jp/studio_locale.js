@@ -812,6 +812,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "removePoints300":function(d){return "remove 300 points"},
 "removePoints1000":function(d){return "remove 1000 points"},
 "removePointsTooltip":function(d){return "Remove points from the score."},
+"spaceInvasion":function(d){return "Space invasion!"},
 "setBackgroundEndor":function(d){return "set Endor background"},
 "setBackgroundHoth":function(d){return "set Hoth background"},
 "setBackgroundStarship":function(d){return "set Starship background"},
