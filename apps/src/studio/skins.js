@@ -956,7 +956,8 @@ function loadHoc2015x(skin, assetUrl) {
   skin.instructions2ImageSubstitutions = {
     "bb8": skin.assetUrl('instructions_bb8.png'),
     "hazard": skin.assetUrl('instructions_hazard.png'),
-    "scrapmetal": skin.assetUrl('goal1.png')
+    "scrapmetal1": skin.assetUrl('goal1.png'),
+    "scrapmetal2": skin.assetUrl('goal2.png'),
   };
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
