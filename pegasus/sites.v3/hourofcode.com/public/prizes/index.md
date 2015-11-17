@@ -54,21 +54,21 @@ Lucky classrooms will have the opportunity to talk with guest speakers who will 
 
 [col-33]
 
-![image](/images/fit-120/Kevin_Systrom.jpg)<br/>
+![image](/images/fit-175/Kevin_Systrom.jpg)<br/>
 Kevin Systrom <br/> (co-founder and CEO of Instagram)
 
 [/col-33]
 
 [col-33]
 
-![image](/images/fit-120/Dao_Nguyen.jpg)<br/>
+![image](/images/fit-175/Dao_Nguyen.jpg)<br/>
 Dao Nguyen <br/> (Publisher, Buzzeed)
 
 [/col-33]
 
 [col-33]
 
-![image](/images/fit-120/Aloe_Blacc.jpg)<br/>
+![image](/images/fit-175/Aloe_Blacc.jpg)<br/>
 Aloe Blacc <br/> (Recording artist)
 
 [/col-33]
@@ -77,14 +77,14 @@ Aloe Blacc <br/> (Recording artist)
 
 [col-33]
 
-![image](/images/fit-120/Julie_Larson-Green.jpg)<br/>
+![image](/images/fit-175/Julie_Larson-Green.jpg)<br/>
 Julie Larson-Green <br/> (Chief Experience Officer, Microsoft)
 
 [/col-33]
 
 [col-33]
 
-![image](/images/fit-120/Hadi-Partovi.jpg)<br/>
+![image](/images/fit-175/Hadi-Partovi.jpg)<br/>
 Hadi Partovi <br/> (Code.org co-founder)
 
 [/col-33]

@@ -7,21 +7,22 @@
  */
 
 var utils = require('../utils');
+var i18n = require('./locale');
 
 module.exports = {
   1: {
-    appSpecificFailError: "You need to use commands to walk to the sheep.",
-    tooFewBlocksMsg: "Try using more commands to walk to the sheep.",
+    appSpecificFailError: i18n.level1FailureMessage(),
+    tooFewBlocksMsg: i18n.level1TooFewBlocksMessage(),
     songs: ['vignette4-intro'],
   },
   2: {
-    appSpecificFailError: "To chop down a tree, walk to its trunk and use the \"destroy block\" command.",
-    tooFewBlocksMsg: "Try using more commands to chop down the tree. Walk to its trunk and use the \"destroy block\" command.",
+    appSpecificFailError: i18n.level2FailureMessage(),
+    tooFewBlocksMsg: i18n.level2TooFewBlocksMessage(),
     songs: ['vignette5-shortpiano'],
   },
   3: {
-    appSpecificFailError: "To gather wool from both sheep, walk to each one and use the \"shear\" command. Remember to use turn commands to reach the sheep.",
-    tooFewBlocksMsg: "Try using more commands to gather wool from both sheep. Walk to each one and use the \"shear\" command.",
+    appSpecificFailError: i18n.level3FailureMessage(),
+    tooFewBlocksMsg: i18n.level3TooFewBlocksMessage(),
     songs: [
       'vignette2-quiet',
       'vignette5-shortpiano',
@@ -29,8 +30,8 @@ module.exports = {
     ],
   },
   4: {
-    appSpecificFailError: "You must use the \"destroy block\" command on each of the three tree trunks.",
-    tooFewBlocksMsg: "You must use the \"destroy block\" command on each of the three tree trunks.",
+    appSpecificFailError: i18n.level4FailureMessage(),
+    tooFewBlocksMsg: i18n.level4FailureMessage(),
     songs: [
       'vignette3',
       'vignette2-quiet',
@@ -40,8 +41,8 @@ module.exports = {
     songDelay: 4000,
   },
   5: {
-    appSpecificFailError: "Place your blocks on the dirt outline to build a wall. The pink \"repeat\" command will run commands placed inside it, like \"place block\" and \"move forward\".",
-    tooFewBlocksMsg: "Place your blocks on the dirt outline to build a wall. The pink \"repeat\" command will run commands placed inside it, like \"place block\" and \"move forward\".",
+    appSpecificFailError: i18n.level5FailureMessage(),
+    tooFewBlocksMsg: i18n.level5FailureMessage(),
     songs: [
       'vignette7-funky-chirps-short',
       'vignette2-quiet',
@@ -50,8 +51,8 @@ module.exports = {
     ],
   },
   6: {
-    appSpecificFailError: "Place blocks on the dirt outline of the house to complete the puzzle.",
-    tooFewBlocksMsg: "Place blocks on the dirt outline of the house to complete the puzzle.",
+    appSpecificFailError: i18n.level6FailureMessage(),
+    tooFewBlocksMsg: i18n.level6FailureMessage(),
     songs: [
       'vignette1',
       'vignette2-quiet',
@@ -61,8 +62,8 @@ module.exports = {
     songDelay: 4000,
   },
   7: {
-    appSpecificFailError: "Use the \"plant\" command to place crops on each patch of dark tilled soil.",
-    tooFewBlocksMsg: "Use the \"plant\" command to place crops on each patch of dark tilled soil.",
+    appSpecificFailError: i18n.level7FailureMessage(),
+    tooFewBlocksMsg: i18n.level7FailureMessage(),
     songs: [
       'vignette2-quiet',
       'vignette7-funky-chirps-short',
@@ -72,8 +73,8 @@ module.exports = {
     ],
   },
   8: {
-    appSpecificFailError: "If you touch a creeper it will explode. Sneak around them and enter your house.",
-    tooFewBlocksMsg: "If you touch a creeper it will explode. Sneak around them and enter your house.",
+    appSpecificFailError: i18n.level8FailureMessage(),
+    tooFewBlocksMsg: i18n.level8FailureMessage(),
     songs: [
       'vignette5-shortpiano',
       'vignette2-quiet',
@@ -83,8 +84,8 @@ module.exports = {
     ],
   },
   9: {
-    appSpecificFailError: "Don't forget to place at least 2 torches to light your way AND mine at least 2 coal.",
-    tooFewBlocksMsg: "Don't forget to place at least 2 torches to light your way AND mine at least 2 coal.",
+    appSpecificFailError: i18n.level9FailureMessage(),
+    tooFewBlocksMsg: i18n.level9FailureMessage(),
     songs: [
       'vignette3',
       'vignette5-shortpiano',
@@ -96,8 +97,8 @@ module.exports = {
 
   },
   10: {
-    appSpecificFailError: "Cover up the lava to walk across, then mine two of the iron blocks on the other side.",
-    tooFewBlocksMsg: "Cover up the lava to walk across, then mine two of the iron blocks on the other side.",
+    appSpecificFailError: i18n.level10FailureMessage(),
+    tooFewBlocksMsg:  i18n.level10FailureMessage(),
     songs: [
       'vignette4-intro',
       'vignette3',
@@ -107,8 +108,8 @@ module.exports = {
     ],
   },
   11: {
-    appSpecificFailError: "Make sure to place cobblestone ahead if there is lava ahead. This will let you safely mine this row of resources.",
-    tooFewBlocksMsg: "Make sure to place cobblestone ahead if there is lava ahead. This will let you safely mine this row of resources.",
+    appSpecificFailError: i18n.level11FailureMessage(),
+    tooFewBlocksMsg: i18n.level11FailureMessage(),
     songs: [
       'vignette7-funky-chirps-short',
       'vignette3',
@@ -116,8 +117,8 @@ module.exports = {
     ],
   },
   12: {
-    appSpecificFailError: "Be sure to mine 3 redstone blocks. This combines what you learned from building your house and using \"if\" statements to avoid falling in lava.",
-    tooFewBlocksMsg: "Be sure to mine 3 redstone blocks. This combines what you learned from building your house and using \"if\" statements to avoid falling in lava.",
+    appSpecificFailError: i18n.level12FailureMessage(),
+    tooFewBlocksMsg: i18n.level12FailureMessage(),
     songs: [
       'vignette5-shortpiano',
       'vignette2-quiet',
@@ -126,8 +127,8 @@ module.exports = {
     ],
   },
   13: {
-    appSpecificFailError: "Place \"rail\" along the dirt path leading from your door to the edge of the map.",
-    tooFewBlocksMsg: "Place \"rail\" along the dirt path leading from your door to the edge of the map.",
+    appSpecificFailError: i18n.level13FailureMessage(),
+    tooFewBlocksMsg: i18n.level13FailureMessage(),
     songs: [
       'vignette1',
       'vignette3',
