@@ -686,15 +686,15 @@ applabCommands.drawImageURL = function (opts) {
       var aspectRatio = image.width / image.height;
       if (aspectRatio > 1) {
         renderWidth = Math.min(Applab.activeCanvas.width, image.width);
-        renderHeight = renderWidth * aspectRatio;
+        renderHeight = renderWidth / aspectRatio;
       } else {
         renderHeight = Math.min(Applab.activeCanvas.height, image.height);
-        renderWidth = renderHeight / aspectRatio;
+        renderWidth = renderHeight * aspectRatio;
       }
     }
 
     ctx.save();
-    ctx.setTransform(renderWidth / image.width, 0, 0, renderHeight / image.height, opts.x, opts.y);
+    ctx.setTransform(renderWidth / image.width, 0, 0, renderHeight / image.height, x, y);
     ctx.drawImage(image, 0, 0);
     ctx.restore();
 
