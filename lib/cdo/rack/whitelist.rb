@@ -3,6 +3,7 @@
 require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
 require 'active_support/core_ext/hash/slice'
 require 'cdo/rack/response'
+require 'cdo/aws/cloudfront'
 
 module Rack
   module Whitelist
@@ -16,10 +17,8 @@ module Rack
         @config = config
       end
 
-      REQUEST_METHODS = %w(HEAD DELETE POST GET OPTIONS PUT PATCH)
-
       def call(env)
-        return [403, {}, ['Unsupported method.']] unless REQUEST_METHODS.include?(env['REQUEST_METHOD'].upcase)
+        return [403, {}, ['Unsupported method.']] unless AWS::CloudFront::ALLOWED_METHODS.include?(env['REQUEST_METHOD'].upcase)
         request = Rack::Request.new(env)
         path     = request.path
         behavior = behavior_for_path((config[:behaviors] + [config[:default]]), path)

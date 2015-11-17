@@ -1,10 +1,10 @@
 require 'minitest/autorun'
 require 'rack/test'
-require File.expand_path '../../../deployment', __FILE__
-require 'cdo/rack/whitelist'
-require File.expand_path('../../../cookbooks/cdo-varnish/libraries/http_cache', __FILE__)
-
 ENV['RACK_ENV'] = 'test'
+require_relative '../../deployment'
+require 'cdo/rack/whitelist'
+
+require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
 
 class HttpCacheTest < Minitest::Test
   module RackTest
@@ -18,11 +18,7 @@ class HttpCacheTest < Minitest::Test
         @request = Rack::Request.new(env)
         @request_cookies = @request.cookies
         @request_env = env
-        match = @mock_responses.select do |mock_response|
-          @request.path_info == mock_response[:url] &&
-            @request.request_method == mock_response[:method] &&
-            mock_response[:request].all?{|name, value| env["HTTP_#{name.upcase.tr('-', '_')}"] == value }
-        end.sort_by{|mock_response| mock_response[:request].length}.last
+        match = best_response(@request, env)
         if match
           url = match[:url]
           (@origin_requests ||= {})[url] = (@origin_requests[url] || 0) + 1
@@ -34,6 +30,17 @@ class HttpCacheTest < Minitest::Test
           [404, {'Content-Type' => 'text/plain'}, ['Not found']]
         end
       end
+    end
+
+    # Returns a mock response with matching url, method
+    # and greatest number of matching request headers.
+    def best_response(request, env)
+      responses = @mock_responses.select do |response|
+        request.path_info == response[:url] &&
+          request.request_method == response[:method] &&
+          response[:request].all?{|name, value| env["HTTP_#{name.upcase.tr('-', '_')}"] == value }
+      end
+      responses.max_by{|r| r[:request].length}
     end
 
     def app
