@@ -47,11 +47,11 @@ Breakfast and lunch will be served.
 
 **Location**
 
-Gwinnett Technical College<br/>
+[Gwinnett Technical College<br/>
 Building 100<br/>
 Room 705 <br/>
 5150 Sugarloaf Parkway<br/>
-Lawrenceville, GA 30043<br/>
+Lawrenceville, GA 30043<br/>](https://www.google.com/maps/place/5150+Sugarloaf+Pkwy,+Lawrenceville,+GA+30043/@33.9624268,-84.069873,17z/data=!3m1!4b1!4m2!3m1!1s0x88f5bcfcf19da851:0xcf6e02aaf2ac5976)
 
 Free parking is located in front of the main building. See  a [Campus Map here.](/images/gwinnett-tech-campus-map.pdf)
 
@@ -103,11 +103,11 @@ Breakfast and lunch will be served.
 
 **Location**
 
-Gwinnett Technical College<br/>
+[Gwinnett Technical College<br/>
 Building 100<br/>
 Room 106 <br/>
 5150 Sugarloaf Parkway<br/>
-Lawrenceville, GA 30043
+Lawrenceville, GA 30043](https://www.google.com/maps/place/5150+Sugarloaf+Pkwy,+Lawrenceville,+GA+30043/@33.9624268,-84.069873,17z/data=!3m1!4b1!4m2!3m1!1s0x88f5bcfcf19da851:0xcf6e02aaf2ac5976)
 
 Free parking is located in front of the main building. See  a [Campus Map here.](/images/gwinnett-tech-campus-map.pdf)
 
@@ -156,11 +156,11 @@ Breakfast and lunch will be served.
 
 **Location**
 
-Gwinnett Technical College<br/>
+[Gwinnett Technical College<br/>
 Building 100<br/>
 Room 701<br/>
 5150 Sugarloaf Parkway<br/>
-Lawrenceville, GA 30043<br/>
+Lawrenceville, GA 30043<br/>](https://www.google.com/maps/place/5150+Sugarloaf+Pkwy,+Lawrenceville,+GA+30043/@33.9624268,-84.069873,17z/data=!3m1!4b1!4m2!3m1!1s0x88f5bcfcf19da851:0xcf6e02aaf2ac5976)
 
 Free parking is located in front of the main building. See  a [Campus Map here.](/images/gwinnett-tech-campus-map.pdf)
 

@@ -8,6 +8,15 @@ Now that tens of thousands of educators have tried the Hour of Code, many classr
 
 ## Elementary School
 
+[Scratch Animate Your Name](https://scratch.mit.edu/scratchr2/static/pdfs/help/AnimateYourNameGuide.pdf)  
+**Ages 8 to 16, Programming, Creativity, Web-based.** Students will animate the letters of their name, initials, or favorite word using Scratch!
+
+[Scratch Hide and Seek Game](https://scratch.mit.edu/scratchr2/static/pdfs/help/Hide-and-Seek-Guide.pdf)  
+**Ages 8 to 16, Programming, Creativity, Web-based. Students will gain experience with coding as they make a hide-and-seek game.**
+
+[Scratch Dance, Dance, Dance](https://scratch.mit.edu/scratchr2/static/pdfs/help/DanceGuide.pdf)  
+**Ages 8 to 16, Programming, Creativity, Web-based. Participants will create and code an animated dance scene.**
+
 [My Robotic Friend](https://csedweek.org/unplugged/thinkersmith)  
 **Ages 5-18, Sequence, Algorithms, Programming, unplugged.** 
 Students use paper and pencils to create programs to teach their "Robotic Friends" how to stack plastic cups into a specific design.
@@ -55,6 +64,15 @@ Students create their own interactive PBS KIDS characters.
 
 ## Middle School
 
+[Scratch Animate Your Name](https://scratch.mit.edu/scratchr2/static/pdfs/help/AnimateYourNameGuide.pdf)  
+**Ages 8 to 16, Programming, Creativity, Web-based.** Students will animate the letters of their name, initials, or favorite word using Scratch!
+
+[Scratch Hide and Seek Game](https://scratch.mit.edu/scratchr2/static/pdfs/help/Hide-and-Seek-Guide.pdf)  
+**Ages 8 to 16, Programming, Creativity, Web-based. Students will gain experience with coding as they make a hide-and-seek game.**
+
+[Scratch Dance, Dance, Dance](https://scratch.mit.edu/scratchr2/static/pdfs/help/DanceGuide.pdf)  
+**Ages 8 to 16, Programming, Creativity, Web-based. Participants will create and code an animated dance scene.**
+
 [STEM Projects](https://www.tynker.com/hour-of-code/tynker-stem-teacher-guide.pdf)   
 **Ages 5-18. Programming, Science (Ecology), Science (Space), web-based.** Code and animate a Solar System simulation, an interactive ecological pyramid, a working analog clock, and more. 
 
@@ -99,6 +117,15 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 
 [10 Minutes of Code using a T.I. Calculator](https://education.ti.com/ticodes)  
 **Ages 13-18, Math (Algebra), Math (Functions), Programming, unplugged, TI-84™ Plus graphing calculator required.**
+
+[Scratch Animate Your Name](https://scratch.mit.edu/scratchr2/static/pdfs/help/AnimateYourNameGuide.pdf)  
+**Ages 8 to 16, Programming, Creativity, Web-based.** Students will animate the letters of their name, initials, or favorite word using Scratch!
+
+[Scratch Hide and Seek Game](https://scratch.mit.edu/scratchr2/static/pdfs/help/Hide-and-Seek-Guide.pdf)  
+**Ages 8 to 16, Programming, Creativity, Web-based. Students will gain experience with coding as they make a hide-and-seek game.**
+
+[Scratch Dance, Dance, Dance](https://scratch.mit.edu/scratchr2/static/pdfs/help/DanceGuide.pdf)  
+**Ages 8 to 16, Programming, Creativity, Web-based. Participants will create and code an animated dance scene.**
 
 [Looking at Data with Splunk](https://www.dropbox.com/s/46ed5ilhvsam8ci/SplunkLessonPlan.pdf?dl=1)  
 **Ages 14-18 Math (data analysis), web-based.** Students will analyze the data from a theoretical game to find levels which are too easy of difficult.
