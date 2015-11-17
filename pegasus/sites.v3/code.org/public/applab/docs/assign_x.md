@@ -5,10 +5,9 @@ embedded_layout: simple_embedded
 
 [name]
 
-## x = 0
+## Assign a value to a variable
 
 [/name]
-
 
 [category]
 
@@ -20,9 +19,10 @@ Category: Variables
 
 [short_description]
 
-Assigns a value to a variable.
+Assigns a value to a previously declared variable.
 
 [/short_description]
+
 
 **Note**: The variable must be declared using "var x" before it can be assigned another value.  Variables can be assigned to a static value or the result of a function or expression.
 
