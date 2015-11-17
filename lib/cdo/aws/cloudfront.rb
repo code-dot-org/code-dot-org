@@ -7,6 +7,10 @@ require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
 # Manages application-specific configuration and deployment of AWS CloudFront distributions.
 module AWS
   class CloudFront
+
+    ALLOWED_METHODS = %w(HEAD DELETE POST GET OPTIONS PUT PATCH)
+    CACHED_METHODS = %w(HEAD GET OPTIONS)
+
     # Use the same HTTP Cache configuration as cdo-varnish
     HTTP_CACHE = HttpCache.config(rack_env)
 
@@ -234,10 +238,10 @@ module AWS
         min_ttl: 0, # required
         allowed_methods: {
           quantity: 7, # required
-          items: %w(HEAD DELETE POST GET OPTIONS PUT PATCH), # required, accepts GET, HEAD, POST, PUT, PATCH, OPTIONS, DELETE
+          items: ALLOWED_METHODS, # required, accepts GET, HEAD, POST, PUT, PATCH, OPTIONS, DELETE
           cached_methods: {
             quantity: 3, # required
-            items: %w(HEAD GET OPTIONS), # required, accepts GET, HEAD, POST, PUT, PATCH, OPTIONS, DELETE
+            items: CACHED_METHODS, # required, accepts GET, HEAD, POST, PUT, PATCH, OPTIONS, DELETE
           },
         },
         smooth_streaming: false,
