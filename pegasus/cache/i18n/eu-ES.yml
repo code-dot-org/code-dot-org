@@ -9,14 +9,14 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Informatika irakaslea zara? Informatika Irakaskuntza Asteko
     (CSEdWeek) beste baliabideak ikusi </a>'
-  n_have_learned_an_hoc: "<h1>Kode ordua</h1><h2>probatu dutenak</h2><h3># kopurua</h3>"
+  n_have_learned_an_hoc: <h1>Kode ordua</h1><h2>probatu dutenak</h2><h3># kopurua</h3>
   anybody_can_learn: Edozeinek ikasi dezake.
   learn_now: Ikasi orain
   petition_message: Edozein eskoletako edozein ikaslek konputazio zientziak ikasteko
     aukera eduki beharko luke
   petition_sign_message: 'Ados bazaude, idatzi zure izena. Batu beste # hauek.'
   petition_sign_message_support: 'Babesten bagaituzu, izena eman. # besteak gonbidatu.'
-  petition_join_others: "# batu"
+  petition_join_others: '# batu'
   name: Izena
   email: E-posta
   zipcode: Posta kodea edo herrialdea
@@ -33,7 +33,7 @@
   hoc2014_everyone: Guztiok
   hoc2014_support: Babestu &#x25BE;
   hoc2014_whatishoc: Zer da kode ordua?
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
@@ -59,7 +59,7 @@
     baldin-orduan aginduak, eta oinarrizko algoritmoak.
   all_ages: Adin guztiak
   beginner: Hasierako maila
-  n_participants: "# parte hartzaile"
+  n_participants: '# parte hartzaile'
   go: Joan
   thank_you_: Eskerrik asko!
   congratulations: Zorionak!
@@ -107,7 +107,7 @@
   beyond_an_hour: Kode ordutik harago
   get_started: Hasiera
   i_agree: Ados
-  participant_select: "- Aukeratu -"
+  participant_select: '- Aukeratu -'
   participant_student: Ikaslea
   participant_parent: Gurasoa
   participant_educator: Hezitzailea
@@ -128,7 +128,7 @@
   learn_next_level: Jarraitu hurrengo mailara
   learn_online: Probatu beste online kurtsoak
   learn_classes: Bilatu gertuko klaseak
-  hoc_is_here: "#KodeOrdua hemen dago - probatu! @codeorg"
+  hoc_is_here: '#KodeOrdua hemen dago - probatu! @codeorg'
   just_did_hoc: 'Oraintxe #KodeOrdua egin dut - Probatu! @codeorg'
   twitter_teach_cs: Zergatik ez dute ikastetxe gehiago informatika erakusten? Hau
     konpondu dezakegu. http://youtu.be/nKIu9yen5nc. Gehiago ikasteko ikusi http://code.org/.
@@ -141,12 +141,12 @@
   boy: Mutila
   help_recruit_coders: Lagundu kodegiel gehiago zure talderako biltzen!
   help_recruit: Kodegile gehaigo biltzen lagundu!
-  lines_of_code: "<b># KODE LERRO</b> BAINO GEHIAGO IDATZIAK GAUR ARTE."
-  lines_of_code_alt: "<b>#</b> KODE LERRO IKASLEEK IDATZIAK"
+  lines_of_code: <b># KODE LERRO</b> BAINO GEHIAGO IDATZIAK GAUR ARTE.
+  lines_of_code_alt: <b>#</b> KODE LERRO IKASLEEK IDATZIAK
   who_has_done_hoc: 'Zeinek egin du #KodeOrdua? @codeorg'
   hoc_leaderboards: Kode orduko buruak
-  students_and_lines: "%{students} ikaslek egin dute ordubete kode eta students have
-    done the Hour of  %{lines} kode lerro idatzi dituzte."
+  students_and_lines: '%{students} ikaslek egin dute ordubete kode eta students have
+    done the Hour of  %{lines} kode lerro idatzi dituzte.'
   start_hoc: Hasi Kode Ordua orain
   contact_form_topic_press: Sakatu/media (elkarrizketa edo ahozko adostasuna)
   stats_nina: Egunez egun emaitza berdinak lortu ziren&mdash; %100 konpromisoa." -
@@ -158,7 +158,7 @@
   studiobar_title: Ikertu <a href='http://studio.code.org'>Code Studio</a>
   studiobar_title_nolink: Code Studio miatu
   studiobar_elementary_title: Oinarrizko ikastaroak
-  studiobar_elementary_body: "&#8209;rentzako gure hiru ikastaro berriak"
+  studiobar_elementary_body: '&#8209;rentzako gure hiru ikastaro berriak'
   studiobar_hoc_title: Programatzeko ordua
   studiobar_hoc_body: Angry Birds-ekin programatzen ikasi
   studiobar_flappy_title: Flappy Code
@@ -184,14 +184,14 @@
     &ldquo;Gure txikiak &mdash; neskak barne &mdash;
     informatika ikasteko aukera behar dute.&rdquo;
     Sheryl, Facebook-eko COO-a
-  homepage_hero_text_satya: "&ldquo;Informatikak munduko aukera hoberenerak eskura
-    jartzen dizkizu.&rdquo; Satya, CEO of Microsoft"
-  homepage_hero_text_bosh: "&ldquo;Programatzen baduzu zure bizitzaren norabidea aukeratu
-    ahalko duzu.&rdquo; Chris Bosh"
-  homepage_hero_text_student1: "&ldquo;Gaitasun hauek nire etorkizuna aldatu dute.
-    Horrez gain, oso dibertigarria da.&rdquo;Luna, 7. maila"
-  homepage_hero_text_student2: "&ldquo;Ikusi gabe nengoen nire umeak horren pozik
-    ikasteagatik.&rdquo; Michael, irakaslea"
+  homepage_hero_text_satya: '&ldquo;Informatikak munduko aukera hoberenerak eskura
+    jartzen dizkizu.&rdquo; Satya, CEO of Microsoft'
+  homepage_hero_text_bosh: '&ldquo;Programatzen baduzu zure bizitzaren norabidea aukeratu
+    ahalko duzu.&rdquo; Chris Bosh'
+  homepage_hero_text_student1: '&ldquo;Gaitasun hauek nire etorkizuna aldatu dute.
+    Horrez gain, oso dibertigarria da.&rdquo;Luna, 7. maila'
+  homepage_hero_text_student2: '&ldquo;Ikusi gabe nengoen nire umeak horren pozik
+    ikasteagatik.&rdquo; Michael, irakaslea'
   homepage_hero_text_student3: |
     &ldquo;Computer science is a field you can't
     know if you like or not before you try it.&rdquo;
@@ -207,7 +207,7 @@
     engaged, involved and participating.&rdquo;
     Adam, teacher
   homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
-  homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Programatzeko ordua
   homepage_slot_text_frozen: Frozen Anna eta Elsarekin
@@ -234,7 +234,7 @@
   homepage_slot_text_blurb_hoc: Edonork ikasi dezake. Gaurtik hasi
   homepage_slot_text_link_hoc: Probatu Kode Ordua
   homepage_slot_text_link_host: Bultzatu ezazu "kodigoaren ordua"
-  homepage_slot_text_link_hocserved: "# served"
+  homepage_slot_text_link_hocserved: '# served'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Ikasleak
   homepage_slot_text_blurb_students: Aztertu gure gida-liburu guztiak
@@ -298,9 +298,9 @@
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up."
+    have signed up.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
@@ -604,9 +604,9 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Gehiago ikasi
@@ -1280,12 +1280,36 @@
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
     help students learn an Hour of Code!'
   homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: "# served"
+  homepage_action_text_num_served: '# served'
   homepage_action_text_join_us: Join us
   homepage_action_text_sign_up: Sign up
   homepage_action_text_try_it: Try it
   homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_girlvideo: Inspire a girl
+  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
+    videos</a> by role models and celebrities
+  starwars_subtitle: Building a Galaxy With Code
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: Try now
+  starwars_blocks_title: Blocks
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
+  starwars_blocks_start_button: Try now
+  starwars_watch_videos: Before you get started, watch one of these inspirational
+    videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_gradelevel: Ages 4-104
+  mc_platformtext: Modern browsers, smartphones, tablets
+  minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_distance_8: 5 miles
   volunteer_engineer_submission_distance_16: 10 miles
@@ -1301,6 +1325,7 @@
     to say a few words of inspiration to the kids
   volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
     prepare me for coding with my students
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   starwars_name: 'Star Wars: Building a Galaxy with Code'
   starwars_gradelevel: Ages 6+
   starwars_platformtext: Modern browsers + tablets

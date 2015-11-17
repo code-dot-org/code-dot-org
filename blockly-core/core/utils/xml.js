@@ -254,18 +254,27 @@ Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
   };
 
   var positionBlock = function (block) {
+    var padding = block.blockly_block.getSvgPadding() ||
+        {top: 0, right: 0, bottom: 0, left: 0};
+
+    var heightWidth = block.blockly_block.getHeightWidth();
+
     if (isNaN(block.x)) {
       block.x = cursor.x;
+      block.x += Blockly.RTL ? -padding.right : padding.left;
     } else {
       block.x = Blockly.RTL ? width - block.x : block.x;
     }
 
     if (isNaN(block.y)) {
-      block.y = cursor.y;
-      cursor.y += block.blockly_block.getHeightWidth().height + Blockly.BlockSvg.SEP_SPACE_Y;
+      block.y = cursor.y + padding.top;
+      cursor.y += heightWidth.height +
+          Blockly.BlockSvg.SEP_SPACE_Y +
+          padding.bottom +
+          padding.top;
     }
 
-    block.blockly_block.moveBy(block.x, block.y);
+    block.blockly_block.moveTo(block.x, block.y);
   };
 
   // To position the blocks, we first render them all to the Block Space

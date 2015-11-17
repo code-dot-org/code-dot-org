@@ -67,45 +67,69 @@ level 'U3 - Arrays - Demo App'
 level 'U3 - Arrays - favThings giveIDs'
 level 'U3 - Arrays - favThings createArray'
 level 'U3 - Arrays - favThings firstOutput'
+level 'U3 - Arrays - favThings Counting Variable'
 level 'U3 - Arrays - favThings Next'
 level 'U3 - Arrays - favThings Prev'
 level 'U3 - Arrays - favThings addItem'
 level 'U3 - Arrays - favThings bounds'
 level 'U3 - Arrays - favThings keepPlaying'
-assessment 'U3L30 Assessment1'
-assessment 'U3L30 Assessment2'
-assessment 'U3L30 Assessment3'
-assessment 'U3L30 Free Response Wrap Up'
+level 'U3 - Arrays - Wrap Up 1'
+level 'U3 - Arrays - Wrap Up 2'
 
 #25
 stage 'Key Events with Image Scroller'
 level 'U3L31 Student Lesson Introduction'
 level 'U3 - Keys - Demo App'
-level 'U3 - Keys - Add Image URLs'
 level 'U3L25 - drag out key event'
 level 'U3 - Keys - Key Up and Down'
 level 'U3L25 - play sound when up key'
 level 'U3 - Keys - Multiple Keys'
 level 'U3 - Keys - Buttons and Keys'
 level 'U3 - Keys - Functions'
+level 'U3 - Keys - Add Image URLs'
 level 'U3 - Keys - Final Image Scroller'
 assessment 'U3- Keys - Code Refactoring Exit Ticket'
 
 #26
-stage 'Images are Arrays'
+stage 'Processing Arrays'
 level 'U3L32 Student Lesson Introduction'
-assessment 'U3L32 Free Response Getting Started'
+level 'U3 - Loops And Arrays - Intro For Loop'
+level 'U3 - Loops And Arrays - Print Array'
+level 'U3 - Loops And Arrays - Add 5'
+level 'U3 - Loops And Arrays - Divid by 2'
+level 'U3 - Loops And Arrays - Loop Array If'
+level 'U3 - Loops And Arrays - Linear Search'
 
 #27
+stage 'Functions with Return Values'
+level 'U3L27 Student Lesson Introduction'
+level 'U3 - Loops And Arrays - Counting Times'
+level 'U3 - Loops And Arrays - Printing Single True'
+level 'U3 - Loops And Arrays - Search with Boolean Var'
+level 'U3 - Loops And Arrays - Make it a Function'
+level 'U3 - Loops And Arrays - Make it a Function - add list parameter'
+level 'U3 - Loops And Arrays - General Search Param'
+level 'U3 - Arrays and Loops - Explain Functions with Returns'
+level 'U3 - Loops And Arrays - Return Value'
+level 'U3 - Loops And Arrays - Functions that Return Value'
+level 'U3 - Loops And Arrays - Multiple Returns'
+level 'U3 - Loops And Arrays - Find Min'
+level 'U3 - Loops And Arrays - Return Index'
+level 'U3 - Loops And Arrays - Search and Remove'
+level 'U3 - Loops And Arrays - Challenge 1'
+level 'U3 - Loops And Arrays - Challenge 2'
+
+#28
 stage 'Arrays and Loops_ Altering Images'
 level 'U3L33 Student Lesson Introduction'
 assessment 'U3L33 Free Response Getting Started'
 
-#28
+#29
 stage 'Arrays and Loops_ Hidden Images'
 level 'U3L34 Student Lesson Introduction'
 assessment 'U3L34 Free Response Getting Started'
 
 
-# Not Using
+# Not Using (turds)
 stage 'Arrays_ Photo Album'
+stage 'Images are Arrays'

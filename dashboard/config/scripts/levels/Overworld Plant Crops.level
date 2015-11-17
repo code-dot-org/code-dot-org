@@ -51,8 +51,8 @@
         <block type="craft_turn">
           <title name="DIR">right</title>
         </block>
-        <block type="controls_repeat">
-          <title name="TIMES">6</title>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">6</title>
         </block>
       </xml>
     </toolbox_blocks>

@@ -1,20 +1,21 @@
-%script{src:'https://www.google.com/jsapi'}
+- content_for :head do
+  %script{src:'https://www.google.com/jsapi'}
 
 %h1
   Fun-O-Meter Stats
 
 %h2
-  Global Percentage:
-  %span= number_to_percentage(@global_percentage, precision: 2)
+  Overall Percentage:
+  %span= number_to_percentage(@overall_percentage, precision: 2)
 
 %br
 
-#percentages_by_day
+= render 'funometer_percentages_by_day', :percentages_by_day => percentages_by_day
 
 %br
 
 %h2
-  Script Ratings
+  Fun-O-Meter by Script
 
 %table
   %tr
@@ -23,9 +24,16 @@
         %span= header
   - @script_ratings.each do |script|
     %tr
-      - script.each do |field|
-        %td
-          %span= field
+      %td
+        %span= script.script_id
+      %td
+        %span
+          = link_to script_url(script.script_id) do
+            = script.name
+      %td
+        %span= number_to_percentage(script.percentage, precision: 2)
+      %td
+        %span= script.cnt
 
 %h2
   Favorite Levels
@@ -37,9 +45,22 @@
         %span= header
   - @favorite_level_ratings.each do |level|
     %tr
-      - level.each do |field|
-        %td
-          %span= field
+      %td
+        %span= level.script_id
+      %td
+        %span= level.level_id
+      %td
+        %span
+          = link_to script_url(level.script_id) do
+            = level.script_name
+      %td
+        %span
+          = link_to level_url(level.level_id) do
+            = level.level_name
+      %td
+        %span= number_to_percentage(level.percentage, precision: 2)
+      %td
+        %span= level.cnt
 
 %h2
   Hated Levels
@@ -51,28 +72,19 @@
         %span= header
   - @hated_level_ratings.each do |level|
     %tr
-      - level.each do |field|
-        %td
-          %span= field
-
-- content_for :body_scripts do
-  :javascript
-    // Load the Visualization API and the appropriate packages, setting a callback
-    // to run when the API is loaded.
-    google.load('visualization', '1.0', {'packages':['corechart']});
-    google.setOnLoadCallback(drawChart);
-    var percentages_by_day = #{percentages_by_day.try(:to_json)}
-
-    // The callback that creates and populates the data table, instantiates the
-    // chart, and draws it.
-    function drawChart() {
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Date');
-      data.addColumn('number', 'Percentage');
-      data.addRows(percentages_by_day);
-
-      // Instantiate and draw our chart, passing in some options.
-      var options = {'title': 'Fun-O-Meter By Day', 'width':400, 'height':300};
-      var chart = new google.visualization.LineChart(document.getElementById('percentages_by_day'));
-      chart.draw(data, options);
-    }
+      %td
+        %span= level.script_id
+      %td
+        %span= level.level_id
+      %td
+        %span
+          = link_to script_url(level.script_id) do
+            = level.script_name
+      %td
+        %span
+          = link_to level_url(level.level_id) do
+            = level.level_name
+      %td
+        %span= number_to_percentage(level.percentage, precision: 2)
+      %td
+        %span= level.cnt

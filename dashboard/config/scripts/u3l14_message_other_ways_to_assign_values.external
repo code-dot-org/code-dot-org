@@ -5,9 +5,9 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Controlling Memory - Other ways to store values
 
-## Tip: Stop staying "equal" and start saying "gets"
+## Tip: Say "gets" instead of "equals"
 
-We know that the `=` sign, and a JavaScript statement like a = b **isn't** a statement of mathematical equality. It's an instruction to move memory around. We'll talk about how to do mathematical equalities in JavaScript soon, but for now we'll just focus on the meaning of `=`.
+We know that the `=` sign, in a JavaScript statement like a = b, **isn't** a statement of mathematical equality. It's an instruction to move memory around. We'll talk about how to do mathematical equalities in JavaScript soon, but for now we'll just focus on the meaning of `=`.
 
 One tip is to read a statement like: var score = 0 as: **"The variable score *gets* the value 0"** or maybe just **"score *gets* 0"** to be brief.  Another example: a=b+7 should be read as **"a gets b plus 7"**
 
