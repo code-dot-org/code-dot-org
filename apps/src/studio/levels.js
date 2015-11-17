@@ -2755,6 +2755,11 @@ levels.js_hoc2015_multiply_characters = {
   'progressConditions' : [
     { required: { 'collectedItemsAtOrAbove': 20 },
       result: { success: true, message: msg.successCharacter1() } },
+    { required: {
+        'collectedSpecificItemsAtOrAbove': { className: "mousedroid", count: 1 },
+        'createdSpecificItemsBelow': { className: "mousedroid", count: 2 }
+      },
+      result: { success: false, message: msg.failedMultiplyCharactersTimeout() } },
     { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2},
       result: { success: false, canPass: true, message: msg.failedMultiplyCharactersTimeoutGotSome() } },
     { required: { 'timedOut': true },
