@@ -13,7 +13,7 @@ GRAPH
   ark (0.9.0)
     7-zip (>= 0.0.0)
     windows (>= 0.0.0)
-  cdo-varnish (0.2.6)
+  cdo-varnish (0.3.2)
     apt (>= 0.0.0)
   chef_handler (1.2.0)
   varnish_test (0.1.0)

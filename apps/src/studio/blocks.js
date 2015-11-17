@@ -1238,7 +1238,7 @@ exports.install = function(blockly, blockInstallOptions) {
       [[msg.addPoints10(),   '10'],
        [msg.addPoints50(),   '50'],
        [msg.addPoints100(),  '100'],
-       [msg.addPoints400(),  '400'],
+       [msg.addPoints300(),  '300'],
        [msg.addPoints1000(), '1000']];
 
   generator.studio_addPoints = function() {
@@ -1264,7 +1264,7 @@ exports.install = function(blockly, blockInstallOptions) {
       [[msg.removePoints10(),   '10'],
        [msg.removePoints50(),   '50'],
        [msg.removePoints100(),  '100'],
-       [msg.removePoints400(),  '400'],
+       [msg.removePoints300(),  '300'],
        [msg.removePoints1000(), '1000']];
 
   generator.studio_removePoints = function() {
@@ -1561,7 +1561,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       // default to first item after random
       dropdown.setValue(skin.mapChoices[1][1]);
-      
+
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);

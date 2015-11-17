@@ -263,7 +263,7 @@ export default class LevelView {
     this.controller.delayBy(500, () => {
       this.audioPlayer.play("failure");
       this.onAnimationEnd(this.playPlayerAnimation("fail", position, facing, isOnBlock), () => {
-        this.controller.delayBy(1400, completionHandler);
+        this.controller.delayBy(800, completionHandler);
       });
     });
   }
@@ -732,7 +732,7 @@ export default class LevelView {
   playPlaceBlockInFrontAnimation(playerPosition, facing, blockPosition, plane, blockType, completionHandler) {
     this.setSelectionIndicatorPosition(blockPosition[0], blockPosition[1]);
 
-    this.playPlayerAnimation("punch", playerPosition, facing, false).onComplete.add(() => {
+    this.playPlayerAnimation("punch", playerPosition, facing, false).onComplete.addOnce(() => {
       if (plane === this.controller.levelModel.actionPlane) {
         this.createActionPlaneBlock(blockPosition, blockType);
       } else {
@@ -1233,57 +1233,43 @@ export default class LevelView {
     }
     //Crouch Left
     //frameList = frameList.concat(Phaser.Animation.generateFrameNames("Player_", 209, 212, "", 3));
-    frameList = frameList.concat("Player_209");
-    frameList = frameList.concat("Player_209");
-    frameList = frameList.concat("Player_211");
-    frameList = frameList.concat("Player_211");
-    frameList = frameList.concat("Player_211");
-    frameList = frameList.concat("Player_211");
-    frameList = frameList.concat("Player_209");
-    frameList = frameList.concat("Player_209");
-    frameList = frameList.concat("Player_209");
-    //Crouch Left
-    frameList = frameList.concat("Player_211");
-    frameList = frameList.concat("Player_211");
-    frameList = frameList.concat("Player_211");
-    frameList = frameList.concat("Player_211");
-    frameList = frameList.concat("Player_209");
-    frameList = frameList.concat("Player_209");
-    frameList = frameList.concat("Player_209");
-    //Crouch Right
-    //frameList = frameList.concat(Phaser.Animation.generateFrameNames("Player_", 89, 92, "", 3));
-    frameList = frameList.concat("Player_089");
-    frameList = frameList.concat("Player_089");
-    frameList = frameList.concat("Player_091");
-    frameList = frameList.concat("Player_091");
-    frameList = frameList.concat("Player_091");
-    frameList = frameList.concat("Player_091");
-    frameList = frameList.concat("Player_089");
-    frameList = frameList.concat("Player_089");
-    frameList = frameList.concat("Player_089");
-    //Crouch Right
-    frameList = frameList.concat("Player_091");
-    frameList = frameList.concat("Player_091");
-    frameList = frameList.concat("Player_091");
-    frameList = frameList.concat("Player_091");
-    frameList = frameList.concat("Player_089");
-    frameList = frameList.concat("Player_089");
-    frameList = frameList.concat("Player_089");
-    //Face Down (for pause)
-     for (i = 0; i < 3; ++i) {
-      frameList.push("Player_001");
-    }
-//////////////////////////////////////////////////////////////////
+    frameList = frameList.concat("Player_259");
+    frameList = frameList.concat("Player_260");
 
-    //Jump success
-    /*frameList = frameList.concat(Phaser.Animation.generateFrameNames("Player_", 285, 296, "", 3));
-    //frolick celebrate
-    frameList = frameList.concat(Phaser.Animation.generateFrameNames("Player_", 37, 44, "", 3));*/
-    //look at cam
-    frameList = frameList.concat(Phaser.Animation.generateFrameNames("Player_", 263, 262, "", 3));
-    for (i = 0; i < 5; ++i) {
-      frameList.push("Player_262");
-    }
+    //Jump
+    frameList.push("Player_261");
+    frameList.push("Player_297");
+    frameList.push("Player_298");
+    frameList.push("Player_297");
+    frameList.push("Player_261");
+    //Jump
+    frameList.push("Player_261");
+    frameList.push("Player_297");
+    frameList.push("Player_298");
+    frameList.push("Player_297");
+    frameList.push("Player_261");
+    //Pause
+    frameList.push("Player_001");
+    frameList.push("Player_001");
+    frameList.push("Player_001");
+    frameList.push("Player_001");
+    frameList.push("Player_001");
+    //Jump
+    frameList.push("Player_261");
+    frameList.push("Player_297");
+    frameList.push("Player_298");
+    frameList.push("Player_297");
+    frameList.push("Player_261");
+    //Jump
+    frameList.push("Player_261");
+    frameList.push("Player_297");
+    frameList.push("Player_298");
+    frameList.push("Player_297");
+    frameList.push("Player_261");
+
+    //for (i = 0; i < 5; ++i) {
+    //  frameList.push("Player_262");
+    //
     return frameList;
   }
 

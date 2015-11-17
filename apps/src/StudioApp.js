@@ -29,6 +29,7 @@ var FeedbackUtils = require('./feedback');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
 var codegen = require('./codegen');
+var puzzleRatingUtils = require('./puzzleRatingUtils');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -266,6 +267,10 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
+  if (config.puzzleRatingsUrl) {
+    puzzleRatingUtils.submitCachedPuzzleRatings(config.puzzleRatingsUrl);
+  }
+
   // Record time at initialization.
   this.initTime = new Date().getTime();
 
@@ -292,7 +297,7 @@ StudioApp.prototype.init = function(config) {
         }
         this.onDropletToggle_();
       } else {
-        this.feedback_.showGeneratedCode(this.Dialog);
+        this.feedback_.showGeneratedCode(this.Dialog, config.appStrings);
       }
     }, this));
   }

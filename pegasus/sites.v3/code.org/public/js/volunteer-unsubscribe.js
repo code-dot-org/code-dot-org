@@ -1,10 +1,11 @@
-function processResponse(data)
+function processVolunteerUnsubscribeResponse(data)
 {
-  $('#unsubscribe-volunteer-form').hide();
-  $('#thanks').show();
+  $('h1').hide();
+  $('form').hide();
+  $('#unsubscribe-volunteer-thanks').show();
 }
 
-function processError(data)
+function processVolunteerUnsubscribeError(data)
 {
   $('#error-message').text('An error occurred. Please try again or contact us if you continue to receive this error.').show();
   $('body').scrollTop(0);
@@ -19,7 +20,7 @@ function unsubscribeVolunteerList()
 
   var secret = $('#volunteer-secret').text();
   var formResults = $('#unsubscribe-volunteer-form').serializeArray();
-  
+
   var data = {};
   $(formResults).each(function(index, obj){
     data[obj.name] = obj.value;
@@ -30,7 +31,7 @@ function unsubscribeVolunteerList()
     method: "post",
     contentType: "application/json; charset=utf-8",
     data: JSON.stringify(data)
-  }).done(processResponse).fail(processError);
+  }).done(processVolunteerUnsubscribeResponse).fail(processVolunteerUnsubscribeError);
 
   return false;
 }

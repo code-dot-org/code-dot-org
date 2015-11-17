@@ -218,6 +218,61 @@ class ApiControllerTest < ActionController::TestCase
       local_school_link: I18n.t('home.local_school'))
   end
 
+  test 'should show teacher-dashboard link when a teacher' do
+    teacher = create :teacher
+    sign_in teacher
+
+    get :user_menu
+
+    assert_response :success
+    assert_select 'a[href="//test.code.org/teacher-dashboard"]', 'Teacher Home Page'
+  end
+
+  test "do not show prize link if you don't have a prize" do
+    sign_in create(:teacher)
+
+    get :user_menu
+    assert_select 'a[href="http://test.host/redeemprizes"]', 0
+  end
+
+  test "do show prize link when you already have a prize" do
+    teacher = create(:teacher)
+    sign_in teacher
+    teacher.teacher_prize = TeacherPrize.create!(prize_provider_id: 8, code: 'fake')
+
+    get :user_menu
+    assert_select 'a[href="http://test.host/redeemprizes"]'
+  end
+
+  test 'student does not see links to ops dashboard or teacher dashboard' do
+    student = create :student
+    sign_in student
+
+    get :user_menu
+
+    assert_response :success
+    assert_select 'a[href="//test.code.org/ops-dashboard"]', 0
+    assert_select 'a[href="//test.code.org/teacher-dashboard"]', 0
+  end
+
+  test 'should show sign in link for signed out user' do
+    sign_out :user
+    get :user_menu
+
+    assert_response :success
+    assert_select 'a[href="http://test.host/users/sign_in"]', 'Sign in'
+  end
+
+  test 'should show sign out link for signed in user' do
+    student = create :student
+    sign_in student
+
+    get :user_menu
+
+    assert_response :success
+    assert_select 'a[href="http://test.host/users/sign_out"]', 'Sign out'
+  end
+
   test 'api routing' do
     # /dashboardapi urls
     assert_routing({method: "get", path: "/dashboardapi/user_menu"},

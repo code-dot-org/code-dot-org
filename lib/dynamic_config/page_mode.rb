@@ -9,11 +9,16 @@ class PageModeBase
   # been explicitly set.
   DEFAULT_PAGE_MODE = 'starwars'
 
+  PAGE_MODE_KEY = 'pm'
+
   # Returns the page mode to use for rendering the given request.
   # @param {ActionDispatch::Request} request
   # @return {string}
   def get(request)
-    return DCDO.get('page_mode', DEFAULT_PAGE_MODE)
+    # If a session page mode is set the 'pm' cookie, return that,
+    # otherwise return the default page mode from DCDO.
+    (request && request.cookies[PAGE_MODE_KEY]) ||
+        DCDO.get('page_mode', DEFAULT_PAGE_MODE)
   end
 
   # Sets the default page mode for all requests.
