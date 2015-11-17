@@ -1206,6 +1206,7 @@ function handleActorCollisionsWithCollidableList (
 
             if (list.length === 1) {
               callHandler('whenGetAllItems');
+              Studio.trackedBehavior.gotAllItems = true;
             }
 
             var className = collidable.className;
@@ -2105,7 +2106,10 @@ Studio.reset = function(first) {
     hasWonGame: false,
     hasLostGame: false,
     allGoalsVisited: false,
-    timedOut: false
+    timedOut: false,
+    gotAllItems: false,
+    removedItems: {},
+    createdItems: {}
   };
 
   // Reset the record of the last direction that the user moved the sprite.
@@ -5304,6 +5308,34 @@ Studio.conditionSatisfied = function(required) {
     }
 
     if (valueName === 'collectedItemsBelow' && tracked.removedItemCount >= value) {
+      return false;
+    }
+
+    if (valueName === 'collectedSpecificItemsAtOrAbove' &&
+        (tracked.removedItems[value.className] === undefined ||
+         tracked.removedItems[value.className] < value.count)) {
+      return false;
+    }
+
+    if (valueName == 'collectedSpecificItemsBelow' &&
+        tracked.removedItems[value.className] !== undefined &&
+        tracked.removedItems[value.className] >= value.count) {
+      return false;
+    }
+
+    if (valueName === 'createdSpecificItemsAtOrAbove' &&
+        (tracked.createdItems[value.className] === undefined ||
+         tracked.createdItems[value.className] < value.count)) {
+      return false;
+    }
+
+    if (valueName == 'createdSpecificItemsBelow' &&
+        tracked.createdItems[value.className] !== undefined &&
+        tracked.createdItems[value.className] >= value.count) {
+      return false;
+    }
+
+    if (valueName == 'gotAllItems' && tracked.gotAllItems !== value) {
       return false;
     }
 
