@@ -1125,7 +1125,8 @@ levels.iceage_8 = utils.extend(levels.playlab_8, {
 });
 levels.gumball_8 = utils.extend(levels.playlab_8, {
   background: 'wood',
-  avatarList: ['bananajoe', 'antony']
+  avatarList: ['bananajoe', 'antony'],
+  'delayCompletion': 500,
 });
 
 // Can you add blocks to change the background and the speed of the penguin, and
@@ -1370,11 +1371,12 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
     '</block>'
 });
 levels.gumball_9 = utils.extend(levels.playlab_9, {
-  background: 'space',
+  background: 'dots',
+  'delayCompletion': 500,
   toolbox:
     tb(
       blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
-      blockOfType('studio_setBackground', {VALUE: '"icy"'}) +
+      blockOfType('studio_setBackground', {VALUE: '"space"'}) +
       blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
       blockOfType('studio_saySprite') +
       blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
@@ -1403,7 +1405,7 @@ levels.gumball_9 = utils.extend(levels.playlab_9, {
       '<title name="SPRITE2">1</title>' +
       '<next>' +
         blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
-          blockOfType('studio_saySprite', {TEXT: msg.iceAge()})
+          blockOfType('studio_saySprite', {TEXT: msg.spaceInvasion()})
         ) +
       '</next>' +
     '</block>' +
