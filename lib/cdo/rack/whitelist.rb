@@ -57,7 +57,7 @@ module Rack
               env_key = "HTTP_X_COOKIE_#{key.upcase.tr('-', '_')}"
               env[env_key] = value
               Rack::Utils.escape(key) + '=' + Rack::Utils.escape(value)
-            end.join('; ')
+            end.join('; ') + ';'
             env['HTTP_COOKIE'] = cookie_str
             @app.call(env)
         end
