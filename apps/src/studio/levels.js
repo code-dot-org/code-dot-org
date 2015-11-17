@@ -3360,7 +3360,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
   callouts: [
     {
       id: 'playlab:hoc2015_blockly_12:calloutPlaceTwoWhenTauntaun',
-      element_id: '[block-id="11"]',
+      element_id: '[block-id="12"]',
       hide_target_selector: '.blocklyDraggable',
       qtip_config: {
         content: {
@@ -3556,8 +3556,8 @@ levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
           my: 'top left',
           at: 'bottom right',
           'adjust': {
-            'x': 0,
-            'y': -10
+            'x': -10,
+            'y': 0
           }
         }
       }
