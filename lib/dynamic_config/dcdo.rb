@@ -58,7 +58,7 @@ class DCDOBase
     env = Rails.env.to_s if defined? Rails
 
     cache_expiration = 5
-    if env == 'test'
+    if env == 'test' && File.basename($0) == 'rake'
       adapter = MemoryAdapter.new
     elsif env == 'production'
       cache_expiration = 30
