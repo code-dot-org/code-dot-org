@@ -1125,7 +1125,8 @@ levels.iceage_8 = utils.extend(levels.playlab_8, {
 });
 levels.gumball_8 = utils.extend(levels.playlab_8, {
   background: 'wood',
-  avatarList: ['bananajoe', 'antony']
+  avatarList: ['bananajoe', 'antony'],
+  'delayCompletion': 500,
 });
 
 // Can you add blocks to change the background and the speed of the penguin, and
@@ -1371,6 +1372,7 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
 });
 levels.gumball_9 = utils.extend(levels.playlab_9, {
   background: 'dots',
+  'delayCompletion': 500,
   toolbox:
     tb(
       blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
