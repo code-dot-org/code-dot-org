@@ -1570,7 +1570,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   this.hideSource = true;
   var workspaceDiv = document.getElementById('codeWorkspace');
   if (!options.embed || options.level.skipInstructionsPopup) {
-    container.className = 'hide-source'; // TODO - change to hide-instructions?
+    container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
   document.getElementById('visualizationResizeBar').style.display = 'none';
