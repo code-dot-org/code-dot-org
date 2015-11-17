@@ -193,6 +193,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "calloutPlaceTwoWhenTauntaun":function(d){return "!!-Can you make two Mynocks appear when you get a Tauntaun?-!!"},
 "calloutSetDroidAndSpeed":function(d){return "!!-Set your droid and its speed-!!"},
 "calloutFinishButton":function(d){return "!!-Click here when you are ready to share your game-!!"},
+"calloutBlocklyCategories":function(d){return "!!-You can click on Commands to see all your commands and Events to see all the events-!!"},
 "catActions":function(d){return "!!-Actions-!!"},
 "catCommands":function(d){return "!!-Commands-!!"},
 "catControl":function(d){return "!!-Loops-!!"},
@@ -328,7 +329,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hoc2015_add_characters_instructions":function(d){return "!!-\"I'm seeing signs of increased activity on this planet.\"-!!"},
 "hoc2015_add_characters_instructions2":function(d){return "!!-Add three Puffer Pigs to the planet. Then, go get them.-!!"},
 "hoc2015_multiply_characters_instructions":function(d){return "!!-\"They're multiplying!\"-!!"},
-"hoc2015_multiply_characters_instructions2":function(d){return "!!-Can you make two or more Mouse Droids appear every time R2-D2 gets one Mouse Droid?  Get 20 Mouse Droids and score 2000 points.-!!"},
+"hoc2015_multiply_characters_instructions2":function(d){return "!!-Can you make two or more Mouse Droids appear every time R2-D2 gets one Mouse Droid?  Get 20 Mouse Droids.-!!"},
 "hoc2015_chain_characters2_instructions":function(d){return "!!-\"It's up to you, R2-D2!\"-!!"},
 "hoc2015_chain_characters2_instructions2":function(d){return "!!-When you get a Tauntaun, make two or more Mynocks appear.  Get 8 Mynocks.-!!"},
 "hoc2015_change_setting_instructions":function(d){return "!!-\"Time to visit another planet.\"-!!"},
@@ -868,6 +869,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedChainCharactersTimeout":function(d){return "!!-You need to get 8 Mynocks. Can you make two (or more) of them appear every time you get a Tauntaun? Make it easier by adding more Mynocks.-!!"},
 "failedChainCharactersTimeoutGotSome":function(d){return "!!-Congratulations, you added code to make Mynocks. You can go to the next puzzle or try again to get 8 of them.-!!"},
 "failedMultiplyCharactersTimeout":function(d){return "!!-You need to get 20 Mouse Droids.  Make sure you add two or more Mouse Droids every time you get one.-!!"},
+"failedMultiplyCharactersTimeoutBlockly":function(d){return "!!-You need to get 20 Mouse Droids. Use the \"add a Mouse Droid\" command inside the \"when get Mouse Droid\" event to add two or more Mouse Droids every time you get one.-!!"},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "!!-Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)-!!"},
 "failedChangeSettingTimeout":function(d){return "!!-Get three Rebel Pilots to move on.-!!"},
-"failedChangeSettingSettings":function(d){return "!!-Make the game your own. To pass this puzzle, you need to change your droid and set the speed.-!!"}};
+"failedChangeSettingSettings":function(d){return "!!-Make the game your own. To pass this puzzle, you need to change your droid and set its speed.-!!"}};
