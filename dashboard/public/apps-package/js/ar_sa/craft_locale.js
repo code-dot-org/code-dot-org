@@ -231,6 +231,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "level7FailureMessage":function(d){return "Use the \"plant\" command to place crops on each patch of dark tilled soil."},
 "level8FailureMessage":function(d){return "If you touch a creeper it will explode. Sneak around them and enter your house."},
 "level9FailureMessage":function(d){return "Don't forget to place at least 2 torches to light your way AND mine at least 2 coal."},
+"minecraftBlock":function(d){return "block"},
 "nextLevelMsg":function(d){return "Puzzle "+craft_locale.v(d,"puzzleNumber")+" completed. Congratulations!"},
 "playerSelectChooseCharacter":function(d){return "Choose your character."},
 "playerSelectChooseSelectButton":function(d){return "Select"},
