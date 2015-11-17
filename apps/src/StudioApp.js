@@ -189,6 +189,11 @@ var StudioApp = function () {
    */
   this.centerEmbedded = true;
 
+  /**
+   * If set to true, we use our wireframe share (or chromeless share on mobile)
+   */
+  this.wireframeShare = false;
+
   this.onAttempt = undefined;
   this.onContinue = undefined;
   this.onResetPressed = undefined;
@@ -1418,6 +1423,7 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
 StudioApp.prototype.setConfigValues_ = function (config) {
   this.share = config.share;
   this.centerEmbedded = utils.valueOr(config.centerEmbedded, this.centerEmbedded);
+  this.wireframeShare = utils.valueOr(config.wireframeShare, this.wireframeShare);
 
   // if true, dont provide links to share on fb/twitter
   this.disableSocialShare = config.disableSocialShare;
@@ -1570,7 +1576,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   document.getElementById('visualizationResizeBar').style.display = 'none';
 
   // Chrome-less share page.
-  if (this.share && this.centerEmbedded) {
+  if (this.share && this.wireframeShare) {
     if (dom.isMobile()) {
       document.getElementById('visualizationColumn').className = 'chromelessShare';
     } else {
