@@ -1086,6 +1086,22 @@ Studio.onTick = function() {
       (!level.delayCompletion || currentTime > Studio.succeededTime + level.delayCompletion)) {
     Studio.onPuzzleComplete();
   }
+
+  // We want to make sure any queued event code related to all goals being visited is executed
+  // before we evaluate conditions related to this event.  For example, if score is incremented
+  // as a result of all goals being visited, recording allGoalsVisited here allows the score
+  // to be incremented before we check for a completion condition that looks for both all
+  // goals visited, and the incremented score, on the next tick.
+  if (Studio.allGoalsVisited()) {
+    Studio.trackedBehavior.allGoalsVisited = true;
+  }
+
+  // And we don't want a timeout to be used in evaluating conditions before the all goals visited
+  // events are processed (as described above), so also record that here.  This is particularly
+  // relevant to levels which "time out" immediately when all when_run code is complete.
+  if (Studio.timedOut()) {
+    Studio.trackedBehavior.timedOut = true;
+  }
 };
 
 /**
@@ -1190,6 +1206,7 @@ function handleActorCollisionsWithCollidableList (
 
             if (list.length === 1) {
               callHandler('whenGetAllItems');
+              Studio.trackedBehavior.gotAllItems = true;
             }
 
             var className = collidable.className;
@@ -2087,7 +2104,12 @@ Studio.reset = function(first) {
     hasSetMap: false,
     hasAddedItem: false,
     hasWonGame: false,
-    hasLostGame: false
+    hasLostGame: false,
+    allGoalsVisited: false,
+    timedOut: false,
+    gotAllItems: false,
+    removedItems: {},
+    createdItems: {}
   };
 
   // Reset the record of the last direction that the user moved the sprite.
@@ -5277,7 +5299,7 @@ Studio.conditionSatisfied = function(required) {
     var valueName = valueNames[k];
     var value = required[valueName];
 
-    if (valueName === 'timedOut' && Studio.timedOut() != value) {
+    if (valueName === 'timedOut' && tracked.timedOut != value) {
       return false;
     }
 
@@ -5286,6 +5308,34 @@ Studio.conditionSatisfied = function(required) {
     }
 
     if (valueName === 'collectedItemsBelow' && tracked.removedItemCount >= value) {
+      return false;
+    }
+
+    if (valueName === 'collectedSpecificItemsAtOrAbove' &&
+        (tracked.removedItems[value.className] === undefined ||
+         tracked.removedItems[value.className] < value.count)) {
+      return false;
+    }
+
+    if (valueName == 'collectedSpecificItemsBelow' &&
+        tracked.removedItems[value.className] !== undefined &&
+        tracked.removedItems[value.className] >= value.count) {
+      return false;
+    }
+
+    if (valueName === 'createdSpecificItemsAtOrAbove' &&
+        (tracked.createdItems[value.className] === undefined ||
+         tracked.createdItems[value.className] < value.count)) {
+      return false;
+    }
+
+    if (valueName == 'createdSpecificItemsBelow' &&
+        tracked.createdItems[value.className] !== undefined &&
+        tracked.createdItems[value.className] >= value.count) {
+      return false;
+    }
+
+    if (valueName == 'gotAllItems' && tracked.gotAllItems !== value) {
       return false;
     }
 
@@ -5301,7 +5351,7 @@ Studio.conditionSatisfied = function(required) {
       return false;
     }
 
-    if (valueName === 'allGoalsVisited' && Studio.allGoalsVisited() !== value) {
+    if (valueName === 'allGoalsVisited' && tracked.allGoalsVisited !== value) {
       return false;
     }
 
@@ -5393,9 +5443,14 @@ var checkFinished = function () {
     return true;
   }
 
-  if (Studio.timedOut()) {
-    Studio.result = ResultType.FAILURE;
-    return true;
+  // Don't process timedOut condition here if we have progressConditions to take care of
+  // things, which can include a timedOut.  This avoids having this condition kick in earlier
+  // than level.progressConditions can take care of a timedOut.
+  if (!level.progressConditions) {
+    if (Studio.timedOut()) {
+      Studio.result = ResultType.FAILURE;
+      return true;
+    }
   }
 
   return false;

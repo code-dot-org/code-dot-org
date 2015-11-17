@@ -11,7 +11,7 @@ reply-to: <%= format_email_address(email_s, name_s).inspect %>
 subject: "A teacher is requesting your help for the Hour of Code"
 ---
 
-<% update_preferences = "http://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{volunteer_secret_s}/" %>
+<% update_preferences = "https://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{volunteer_secret_s}/" %>
 
 Hi <%= volunteer_name_s %>,
 
@@ -31,7 +31,14 @@ Hi <%= volunteer_name_s %>,
 
 We won't release your email directly to a teacher, so s/he's waiting for you to write back.
 
-Most schools still don’t teach computer science. Most students don’t know that it’s about solving big problems and connecting us all closer together. This is your chance to inspire at least one young person in your area. If you are available to volunteer with this teacher, **please contact the teacher directly at [<%= email_s %>](<%= "mailto:" + email_s %>)**.
+Most schools still don’t teach computer science. Most students don’t know that it’s about solving big problems and connecting us all closer together. This is your chance to inspire at least one young person in your area. If you are available to volunteer with this teacher, **please contact <%= name_s %> directly at [<%= email_s %>](<%= "mailto:" + email_s %>)**.
+
+In your email to <%= name_s %>, please be sure to share the following information:
+
+- Your name, company, and job description
+- Days and times you are available to volunteer
+- Why you chose to volunteer to inspire students
+- Ask if there is any paperwork you need to fill out before volunteering
 
 Tanya Parker<br>
 Product Manager, Code.org

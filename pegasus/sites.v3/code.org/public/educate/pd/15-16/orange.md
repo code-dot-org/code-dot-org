@@ -47,10 +47,10 @@ Breakfast and lunch will be served.
 
 **November 7th Location**
 
-Orange County Department of Education<br/>
+[Orange County Department of Education<br/>
 Building A: Board Room<br/>
 200 Kalmus Dr<br/>
-Costa Mesa, CA 92626
+Costa Mesa, CA 92626](https://www.google.com/maps/place/Orange+County+Department+of+Education/@33.6729962,-117.8832766,17z/data=!4m7!1m4!3m3!1s0x80dcdf02d89983eb:0xade5c39a8aba012d!2s200+Kalmus+Dr,+Costa+Mesa,+CA+92626!3b1!3m1!1s0x0000000000000000:0x4d5cc9efa1e6739a)
 
 Note: you will be in a different building that the 10/3/15 PD. For a campus map and parking information, [click here](code.org/files/OCDEmap.pdf)
 
@@ -105,9 +105,9 @@ Breakfast and lunch will be served.
 
 **Location**
 
-Columbia Memorial Space Center<br/> 
+[Columbia Memorial Space Center<br/> 
 12400 Columbia Way<br/> 
-Downey, CA 90242
+Downey, CA 90242](https://www.google.com/maps/place/Columbia+Memorial+Space+Center/@33.9198421,-118.1335994,15z/data=!4m2!3m1!1s0x0:0xd6cb5baba4c4a1d2)
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -156,10 +156,10 @@ Breakfast and lunch will be served.
 
 **October 17th Location**
 
-Ball Junior High School<br/>
+[Ball Junior High School<br/>
 Room 37<br/>
 1500 W Ball Rd<br/>
-Anaheim, CA 92802
+Anaheim, CA 92802](https://www.google.com/maps/place/Ball+Junior+High+School/@33.81769,-117.93384,15z/data=!4m2!3m1!1s0x0:0xbe44bc07473540a3)
 
 [Click here for a School Map](/images/ball-jr-high-map.JPG)
 

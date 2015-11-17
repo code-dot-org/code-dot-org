@@ -136,7 +136,7 @@ For usage and examples: colpick.com/plugin
 				};
 				$(document).on('mouseup touchend',current,upHue);
 				$(document).on('mousemove touchmove',current,moveHue);
-				
+
 				var pageY = ((ev.type == 'touchstart') ? ev.originalEvent.changedTouches[0].pageY : ev.pageY );
 				change.apply(
 					current.cal.data('colpick')
@@ -171,11 +171,11 @@ For usage and examples: colpick.com/plugin
 					pos: $(this).offset()
 				};
 				current.preview = current.cal.data('colpick').livePreview;
-				
+
 				$(document).on('mouseup touchend',current,upSelector);
 				$(document).on('mousemove touchmove',current,moveSelector);
 
-				var payeX,pageY;
+				var pageX,pageY;
 				if(ev.type == 'touchstart') {
 					pageX = ev.originalEvent.changedTouches[0].pageX,
 					pageY = ev.originalEvent.changedTouches[0].pageY;
@@ -194,7 +194,7 @@ For usage and examples: colpick.com/plugin
 				return false;
 			},
 			moveSelector = function (ev) {
-				var payeX,pageY;
+				var pageX,pageY;
 				if(ev.type == 'touchmove') {
 					pageX = ev.originalEvent.changedTouches[0].pageX,
 					pageY = ev.originalEvent.changedTouches[0].pageY;
@@ -269,7 +269,7 @@ For usage and examples: colpick.com/plugin
 					s: Math.min(100, Math.max(0, hsb.s)),
 					b: Math.min(100, Math.max(0, hsb.b))
 				};
-			}, 
+			},
 			fixRGB = function (rgb) {
 				return {
 					r: Math.min(255, Math.max(0, rgb.r)),
@@ -313,7 +313,7 @@ For usage and examples: colpick.com/plugin
 				} else {
 					return this;
 				}
-				
+
 				//For each selected DOM element
 				return this.each(function () {
 					//If the element does not have an ID
@@ -426,7 +426,7 @@ For usage and examples: colpick.com/plugin
 						fillHexFields(col, cal.get(0));
 						setHue(col, cal.get(0));
 						setSelector(col, cal.get(0));
-						
+
 						setNewColor(col, cal.get(0));
 						cal.data('colpick').onChange.apply(cal.parent(), [col, hsbToHex(col), hsbToRgb(col), cal.data('colpick').el, 1]);
 						if(setCurrent) {
@@ -508,7 +508,7 @@ For usage and examples: colpick.com/plugin
 		colpickSetColor: colpick.setColor
 	});
 	$.extend({
-		colpick:{ 
+		colpick:{
 			rgbToHex: rgbToHex,
 			rgbToHsb: rgbToHsb,
 			hsbToHex: hsbToHex,
