@@ -43,7 +43,8 @@
     "debugger_disabled": "true",
     "instructions": "Fix the error and get it to print the value of both variables (Click to see full instructions)",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "encrypted_examples": "PVHxAwodKS6/GRw1BQ7myvS8+zS8EjpMhLPqXyINI3bFL1F6NG6eHOmcTjdo\nVJdD\n"
   }
 }]]></config>
   <blocks/>
