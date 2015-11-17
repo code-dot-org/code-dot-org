@@ -121,3 +121,12 @@ module.exports.isIdAvailable = function(newId, originalId) {
 
   return true;
 };
+
+module.exports.isContentEditable = function (element) {
+  return element && element.tagName.toUpperCase() === 'DIV' && element.contentEditable;
+};
+
+module.exports.isTextInput = function (element) {
+  return element && element.tagName.toUpperCase() === 'INPUT' &&
+    (!element.type || element.type.toUpperCase() === 'TEXT');
+};

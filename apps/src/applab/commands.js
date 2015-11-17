@@ -6,6 +6,7 @@ var RGBColor = require('./rgbcolor.js');
 var codegen = require('../codegen');
 var keyEvent = require('./keyEvent');
 var utils = require('../utils');
+var elementUtils = require('./designElements/elementUtils');
 
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
@@ -1291,9 +1292,12 @@ applabCommands.onEvent = function (opts) {
   apiValidateType(opts, 'onEvent', 'callback', opts.func, 'function');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
-    if (domElement.tagName.toUpperCase() === 'DIV' && domElement.contentEditable && opts.eventName === 'change') {
-      // contentEditable divs don't generate a change event, so
-      // synthesize one here.
+    if ((elementUtils.isContentEditable(domElement) ||
+         elementUtils.isTextInput(domElement)) &&
+        opts.eventName === 'change') {
+      // contentEditable divs don't generate a change event, and change events
+      // on text inputs behave differently across browsers, so synthesize a
+      // change event here.
       var callback = applabCommands.onEventFired.bind(this, opts);
       ChangeEventHandler.addChangeEventHandler(domElement, callback);
       return true;
