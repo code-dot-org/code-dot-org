@@ -517,14 +517,8 @@ function handleExecutionError(err, lineNumber) {
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = { err: err, lineNumber: lineNumber };
 
-  // NOTE: We call onPuzzleComplete() here only when we hit syntax errors,
-  // because we can't enter the onTick loop when the interpreter didn't
-  // parse the program and instantiate properly.
-  // In the future, we may want to call it on non freeplay-levels to handle
-  // runtime errors (as part of level validation):
-  if (err instanceof SyntaxError) {
-    Applab.onPuzzleComplete();
-  }
+  // complete puzzle, which will prevent further execution
+  Applab.onPuzzleComplete();
 }
 
 Applab.getCode = function () {
