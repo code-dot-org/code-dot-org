@@ -1385,7 +1385,7 @@ levels.gumball_9 = utils.extend(levels.playlab_9, {
   requiredBlocks: [
     [{test: 'setBackground',
       type: 'studio_setBackground',
-      titles: {VALUE: '"dots"'}}],
+      titles: {VALUE: '"space"'}}],
     [{test: 'setSpriteSpeed',
       type: 'studio_setSpriteSpeed',
       titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
