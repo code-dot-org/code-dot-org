@@ -363,6 +363,7 @@
   "repeatForever": "repeat forever",
   "repeatDo": "do",
   "repeatForeverTooltip": "Execute the actions in this block repeatedly while the story is running.",
+  "spaceInvasion": "Space invasion!",
   "saySprite": "say",
   "saySpriteN": "actor {spriteIndex} say",
   "saySpriteTooltip": "Pop up a speech bubble with the associated text from the specified actor.",
