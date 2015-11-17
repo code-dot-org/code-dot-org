@@ -714,10 +714,8 @@
   "failedAddCharactersTimeoutBlockly": "Use three \"add a Puffer Pig\" blocks at the top of your program to add Puffer Pigs when you hit run. Now go get them.",
   "failedChainCharactersTimeout": "You need to get 8 Mynocks. Can you make two (or more) of them appear every time you get a Tauntaun? Make it easier by adding more Mynocks.",
   "failedChainCharactersTimeoutGotSome": "Congratulations, you added code to make Mynocks. You can go to the next puzzle or try again to get 8 of them.",
-
   "failedMultiplyCharactersTimeout": "You need to get 20 Mouse Droids.  Make sure you add two or more Mouse Droids every time you get one.",
   "failedMultiplyCharactersTimeoutBlockly": "You need to get 20 Mouse Droids. Use the \"add a Mouse Droid\" command inside the \"when get Mouse Droid\" event to add two or more Mouse Droids every time you get one.",
-
   "failedMultiplyCharactersTimeoutGotSome": "Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)",
   "failedChangeSettingTimeout": "Get three Rebel Pilots to move on.",
   "failedChangeSettingSettings": "Make the game your own. To pass this puzzle, you need to change your droid and set its speed."
