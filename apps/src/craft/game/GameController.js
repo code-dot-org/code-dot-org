@@ -31,6 +31,7 @@ class GameController {
     // Phaser pre-initialization config
     window.PhaserGlobal = {
       disableAudio: true,
+      disableWebAudio: true,
       hideBanner: !this.DEBUG
     };
 
