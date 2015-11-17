@@ -209,7 +209,6 @@ class AdminReportsController < ApplicationController
     # Get the HOC 2015 signup counts by day, deduped by email and name.
     # TODO(asher): Is this clumsy notation really necessary? Is Sequel really this stupid?
     signups_by_day = DB[:forms].where(kind: 'HocSignup2015').group(:name, :email).group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).all.map{|row| [row[:created_at_day].to_s, row[:count].to_i]}
-#    b= a
     render locals: {signups_by_day: signups_by_day}
   end
 
