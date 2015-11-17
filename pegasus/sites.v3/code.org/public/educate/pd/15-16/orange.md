@@ -194,10 +194,10 @@ Wednesday, October 21st, 2015 <br/>
 
 **Location**
 
-Orange USD<br/> 
+[Orange USD<br/> 
 1401 N. Handy Street<br/>
 Board Rooms 1 and 2 <br/>
-Orange, CA 92867 
+Orange, CA 92867](https://www.google.com/maps/place/Orange+Unified+School+District/@33.8111924,-117.8275697,17z/data=!3m1!4b1!4m2!3m1!1s0x80dcd0adfdbed09f:0x1f2d121d62eb2653) 
 
 
 ### Administrators##
