@@ -497,10 +497,13 @@ StudioApp.prototype.init = function(config) {
 };
 
 StudioApp.prototype.substituteInstructionImages = function(htmlText) {
-  for (var prop in this.skin.instructions2ImageSubstitutions) {
-    var value = this.skin.instructions2ImageSubstitutions[prop];
-    var substitutionHtml = '<img src="' + value + '" class="instructionsImage"/>';
-    htmlText = htmlText.replace('[' + prop + ']', substitutionHtml);
+  if (htmlText) {
+    for (var prop in this.skin.instructions2ImageSubstitutions) {
+      var value = this.skin.instructions2ImageSubstitutions[prop];
+      var substitutionHtml = '<img src="' + value + '" class="instructionsImage"/>';
+      var re = new RegExp('\\[' + prop + '\\]', 'g');
+      htmlText = htmlText.replace(re, substitutionHtml);
+    }
   }
 
   return htmlText;
