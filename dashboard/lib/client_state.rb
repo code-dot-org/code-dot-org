@@ -99,7 +99,7 @@ class ClientState
   # For testing only
   # @return Boolean
   def videos_seen_for_test?
-    session && session[:videos_seen].nil?
+    session && !session[:videos_seen].nil?
   end
 
   # Returns true if the video with the given key has been seen by the
