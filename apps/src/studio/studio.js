@@ -1794,14 +1794,14 @@ Studio.init = function(config) {
 
   // Play music when the instructions are shown
   var playOnce = function () {
-    if (studioApp.cdoSounds && studioApp.cdoSounds.isAudioUnlocked()) {
-      Studio.musicController.play();
-      document.removeEventListener('instructionsShown', playOnce);
-      document.removeEventListener('instructionsHidden', playOnce);
+    document.removeEventListener('instructionsShown', playOnce);
+    if (studioApp.cdoSounds) {
+      studioApp.cdoSounds.whenAudioUnlocked(function () {
+        Studio.musicController.play();
+      });
     }
   };
   document.addEventListener('instructionsShown', playOnce);
-  document.addEventListener('instructionsHidden', playOnce);
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
