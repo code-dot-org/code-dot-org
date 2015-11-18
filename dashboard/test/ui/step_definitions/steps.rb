@@ -498,6 +498,10 @@ Given(/^I manually sign in as "([^"]*)"$/) do |name|
   }
 end
 
+When(/^I sign out$/) do
+  steps 'When I am on "http://studio.code.org/users/sign_out"'
+end
+
 When(/^I debug cookies$/) do
   puts "DEBUG: url=#{CGI::escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
