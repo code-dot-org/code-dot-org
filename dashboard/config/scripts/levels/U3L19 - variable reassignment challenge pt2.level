@@ -41,10 +41,7 @@
     "debugger_disabled": "true",
     "instructions": "Make a prediction about the ending values of a,b, and c. Then use console.log to check your understanding (Click to see full instructions)",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false",
-    "encrypted_examples": [
-
-    ]
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>
