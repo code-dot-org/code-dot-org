@@ -4,7 +4,7 @@
 Feature: App Lab Scenarios
 
   Background:
-    And I start a new Applab project
+    Given I start a new Applab project
 
   Scenario: App Lab Http Image
     # Create an app with an http image.
