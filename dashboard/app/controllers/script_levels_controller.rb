@@ -212,7 +212,8 @@ class ScriptLevelsController < ApplicationController
     render 'levels/show', formats: [:html]
   end
 
-protected
+  protected
+
   # Don't try to generate the CSRF token for forms on this page.
   def protect_against_forgery?
     return false
