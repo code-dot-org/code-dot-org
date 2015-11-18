@@ -1,8 +1,5 @@
+@as_student
 Feature: Recommended/Required Blocks Feedback
-
-Background:
-  Given I am on "http://learn.code.org/"
-  And I am a student
 
 Scenario: Attempt 2-3 Maze 1
   Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/3?noautoplay=true"
