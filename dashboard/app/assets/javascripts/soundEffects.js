@@ -72,6 +72,9 @@ function Sounds() {
   }
 
   this.soundsById = {};
+
+  /** @private {function[]} */
+  this.whenAudioUnlockedCallbacks_ = [];
 }
 
 /**
@@ -110,6 +113,20 @@ Sounds.prototype.isAudioUnlocked = function () {
 };
 
 /**
+ * Ensure that a callback occurs with the audio system unlocked.
+ * If the audio system is already unlocked, the callback will occur immediately.
+ * Otherwise it will occur after audio is successfully unlocked.
+ * @param {function} callback
+ */
+Sounds.prototype.whenAudioUnlocked = function (callback) {
+  if (this.isAudioUnlocked()) {
+    callback();
+  } else {
+    this.whenAudioUnlockedCallbacks_.push(callback);
+  }
+};
+
+/**
  * Mobile browsers disable audio until a sound is triggered by user interaction.
  * This method tries to play a brief silent clip to test whether audio is
  * unlocked, and/or trigger an unlock if called inside a user interaction.
@@ -140,6 +157,10 @@ Sounds.prototype.unlockAudio = function (onComplete) {
     if (source.playbackState === source.PLAYING_STATE ||
         source.playbackState === source.FINISHED_STATE) {
       this.audioUnlocked_ = true;
+      this.whenAudioUnlockedCallbacks_.forEach(function (cb) {
+        cb();
+      });
+      this.whenAudioUnlockedCallbacks_.length = 0;
     }
     if (onComplete) {
       onComplete();
