@@ -44,7 +44,7 @@ var showAssetManager = require('./assetManagement/show.js');
 var DebugArea = require('./DebugArea');
 var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
-var newrelic = require('../newrelic');
+var logToCloud = require('../logToCloud');
 
 var applabConstants = require('./constants');
 
@@ -668,7 +668,7 @@ Applab.init = function(config) {
 
   Applab.channelId = config.channel;
   // inlcude channel id in any new relic actions we generate
-  newrelic.setCustomAttribute('channelId', Applab.channelId);
+  logToCloud.setCustomAttribute('channelId', Applab.channelId);
   if (config.assetPathPrefix) {
     Applab.assetPathPrefix = config.assetPathPrefix;
   }
