@@ -99,6 +99,5 @@ module.exports.categories = {
   },
 };
 
-module.exports.dontHighlightKeywords = true;
 module.exports.autocompleteFunctionsWithParens = true;
 module.exports.showParamDropdowns = true;

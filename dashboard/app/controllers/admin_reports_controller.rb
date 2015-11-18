@@ -16,22 +16,68 @@ class AdminReportsController < ApplicationController
     authorize! :read, :reports
 
     # Compute the global funometer percentage.
-    all_ratings = PuzzleRating.all
-    positive_ratings = all_ratings.where(rating: 1)
-    @global_percentage = 100.0 * positive_ratings.count / all_ratings.count
+    ratings = PuzzleRating.all
+    @overall_percentage = get_percentage_positive(ratings)
 
     # Generate the funometer percentages, by day, for the last month.
-    percentages_by_day = all_ratings.select('100.0 * SUM(rating) / COUNT(rating)').where('created_at > ?', Time.now.prev_month).group('DATE(created_at)').order('DATE(created_at)').pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating)')
+    @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
+    @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
 
     # Compute funometer percentages by script.
-    @script_headers = ['Script ID', 'Percentage', 'Count']
-    @script_ratings = all_ratings.select(:script_id, 'SUM(100.0 * rating) / COUNT(rating) AS ratio', 'COUNT(rating) AS cnt').group(:script_id).order('SUM(100.0 * rating) / COUNT(rating)').pluck(:script_id, 'SUM(100.0 * rating) / COUNT(rating)', 'COUNT(rating)')
+    @script_headers = ['Script ID', 'Script Name', 'Percentage', 'Count']
+    @script_ratings = ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").group(:script_id).order('SUM(100.0 * rating) / COUNT(rating)').select('script_id', 'name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
 
-    # Compute funometer percentages by level.
-    @level_headers = ['Script ID', 'Level ID', 'Percentage', 'Count']
-    level_ratings = all_ratings.select(:script_id, :level_id, 'SUM(100.0 * rating) / COUNT(rating) AS ratio', 'COUNT(rating) AS cnt').group(:script_id, :level_id)
-    @favorite_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) desc').limit(25).pluck(:script_id, :level_id, 'SUM(100.0 * rating) / COUNT(rating)', 'COUNT(rating)')
-    @hated_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) asc').limit(25).pluck(:script_id, :level_id, 'SUM(100.0 * rating) / COUNT(rating)', 'COUNT(rating)')
+    # Compute funometer percentages by level, saving the most-favored and
+    # least-favored with over one hundred ratings.
+    @level_headers = ['Script ID', 'Level ID', 'Script Name', 'Level Name', 'Percentage', 'Count']
+    level_ratings = ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").joins("INNER JOIN levels ON levels.id = puzzle_ratings.level_id").group(:script_id, :level_id).select(:script_id, :level_id, 'scripts.name AS script_name', 'levels.name AS level_name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt').having('cnt > ?', 100)
+    @favorite_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) desc').limit(25)
+    @hated_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) asc').limit(25)
+
+    render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+  end
+
+  def funometer_by_script
+    authorize! :read, :reports
+
+    @script_id = params[:script_id]
+    @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
+
+    # Compute the global funometer percentage for the script.
+    ratings = PuzzleRating.where('puzzle_ratings.script_id = ?', @script_id)
+    @overall_percentage = get_percentage_positive(ratings)
+
+    # Generate the funometer percentages for the script, by day, for the last month.
+    @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
+    @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
+
+    # Generate the funometer percentages for the script, by stage.
+    ratings_by_stage = ratings.joins("INNER JOIN script_levels ON puzzle_ratings.script_id = script_levels.script_id AND puzzle_ratings.level_id = script_levels.level_id").joins("INNER JOIN stages ON stages.id = script_levels.stage_id").group('script_levels.stage_id').order('script_levels.stage_id')
+    @ratings_by_stage_headers = ['Stage ID', 'Stage Name', 'Percentage', 'Count']
+    @ratings_by_stage = ratings_by_stage.select('stage_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+
+    # Generate the funometer percentages for the script, by level.
+    ratings_by_level = ratings.joins(:level).group(:level_id).order(:level_id)
+    @ratings_by_level_headers = ['Level ID', 'Level Name', 'Percentage', 'Count']
+    @ratings_by_level = ratings_by_level.select('level_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+
+    render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+  end
+
+  def funometer_by_script_level
+    authorize! :read, :reports
+
+    @script_id = params[:script_id]
+    @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
+    @level_id = params[:level_id]
+    @level_name = Level.where('id = ?', @level_id).pluck(:name)[0]
+
+    ratings = PuzzleRating.where('script_id = ?', @script_id).where('level_id = ?', @level_id)
+    @overall_percentage = get_percentage_positive(ratings)
+
+    # Generate the funometer percentages for the level, by day, for the last month.
+    @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
+    @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
 
     render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
   end
@@ -161,9 +207,29 @@ class AdminReportsController < ApplicationController
     render 'reports/usage', formats: [:html]
   end
 
+  def hoc_signups
+    # Requested by Roxanne on 16 November 2015 to track HOC 2015 signups by day.
+    authorize! :read, :reports
+
+    # Get the HOC 2015 signup counts by day, deduped by email and name.
+    # TODO(asher): Is this clumsy notation really necessary? Is Sequel really this stupid?
+    signups_by_day = DB[:forms].where(kind: 'HocSignup2015').group(:name, :email).group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).all.map{|row| [row[:created_at_day].to_s, row[:count].to_i]}
+    render locals: {signups_by_day: signups_by_day}
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_script
     @script = Script.get_from_cache(params[:script_id]) if params[:script_id]
+  end
+
+  private
+  def get_ratings_by_day(ratings_to_process)
+    ratings_by_day = ratings_to_process.where('created_at > ?', Time.now.prev_month).group('DATE(created_at)').order('DATE(created_at)')
+    return ratings_by_day.select('DATE(created_at) AS day', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt'), ratings_by_day.pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating)')
+  end
+
+  def get_percentage_positive(ratings_to_process)
+    return 100.0 * ratings_to_process.where(rating: 1).count / ratings_to_process.count
   end
 
 end

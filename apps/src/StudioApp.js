@@ -30,6 +30,8 @@ var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
 var codegen = require('./codegen');
 var authoredHintUtils = require('./authoredHintUtils');
+var puzzleRatingUtils = require('./puzzleRatingUtils');
+var logToCloud = require('./logToCloud');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -277,8 +279,12 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
-  if (true) {
-    authoredHintUtils.submitHints('/asdf');
+  if (config.authoredHintViewRequestsUrl) {
+    authoredHintUtils.submitHints(config.authoredHintViewRequestsUrl);
+  }
+
+  if (config.puzzleRatingsUrl) {
+    puzzleRatingUtils.submitCachedPuzzleRatings(config.puzzleRatingsUrl);
   }
 
   // Record time at initialization.
@@ -295,19 +301,25 @@ StudioApp.prototype.init = function(config) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
         var result;
+        var nonDropletError = false;
+        // are we trying to toggle from blocks to text (or the opposite)
+        var fromBlocks = this.editor.currentlyUsingBlocks;
         try {
           result = this.editor.toggleBlocks();
         } catch (err) {
+          nonDropletError = true;
           result = {error: err};
         }
         if (result && result.error) {
-          // TODO (cpirich) We could extract error.loc to determine where the
-          // error occurred and highlight that error
+          logToCloud.addPageAction(logToCloud.PageAction.DropletTransitionError, {
+            dropletError: !nonDropletError,
+            fromBlocks: fromBlocks
+          });
           this.feedback_.showToggleBlocksError(this.Dialog);
         }
         this.onDropletToggle_();
       } else {
-        this.feedback_.showGeneratedCode(this.Dialog);
+        this.feedback_.showGeneratedCode(this.Dialog, config.appStrings);
       }
     }, this));
   }
@@ -1093,7 +1105,7 @@ function resizePinnedBelowVisualizationArea() {
   if (designToggleRow) {
     top += $(designToggleRow).outerHeight(true);
   }
-  
+
   if (visualization) {
     top += $(visualization).outerHeight(true);
   }

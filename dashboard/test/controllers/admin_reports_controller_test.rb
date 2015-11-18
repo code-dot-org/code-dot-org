@@ -29,6 +29,8 @@ class AdminReportsControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :admin_progress
   generate_admin_only_tests_for :admin_stats
   generate_admin_only_tests_for :funometer
+  # TODO(asher): Add :funometer_by_script and :funometer_by_script_level after fixing routing.
+  # TODO(asher): Add :hoc_signups after fixing the pegasus-test DB issue.
 
   test 'should get admin progress page' do
     get :admin_progress

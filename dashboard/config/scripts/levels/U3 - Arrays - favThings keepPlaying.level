@@ -91,7 +91,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "submittable": "false",
+    "submittable": "true",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Make any other improvements you want! (Click to see full instructions)",

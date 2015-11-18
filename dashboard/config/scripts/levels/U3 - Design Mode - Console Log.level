@@ -86,7 +86,8 @@
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "encrypted_examples": "LZuHj8gSXW6i9yCPvcIaL/a+ZQLqbpnu3pYXw0wf+/4GJxKedZN7kHCTFPkS\nx7+s\n"
   }
 }]]></config>
   <blocks/>

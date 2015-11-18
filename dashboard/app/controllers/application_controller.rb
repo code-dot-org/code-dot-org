@@ -159,9 +159,7 @@ class ApplicationController < ActionController::Base
     end
 
     if PuzzleRating.enabled?
-      if script_level && PuzzleRating.can_rate?(script_level.script, script_level.level, current_user)
-        response[:puzzle_rating_url] = puzzle_ratings_path
-      end
+      response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, script_level.level, current_user)
     end
 
     # logged in users can:
