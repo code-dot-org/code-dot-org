@@ -45,7 +45,8 @@
     "debugger_disabled": "true",
     "instructions": "Using only the variables provided, assignment (=) and arithmetic (+ - * /) re-assign the values to make the console.log statement display the correct value(s).  (Click to see full instructions)",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "encrypted_examples": "hTdkXJ6GfxVOSdlnnNuVRrd6eHaiSf6qJlWF9/ZHjVY5s8/b81+MIF9dn2s7\nABeb\n"
   }
 }]]></config>
   <blocks/>

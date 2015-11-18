@@ -40,11 +40,11 @@ Quarter 4: Saturday, May 7, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**November 14th Location**
+**Location**
 
-Venture Hive<br/>
+[Venture Hive<br/>
 1010 NE 2nd Ave<br/>
-Miami, FL 33132
+Miami, FL 33132](https://www.google.com/maps/place/Venture+Hive/@25.7841796,-80.1911146,15z/data=!4m2!3m1!1s0x0:0x1f3f68bb617468c0?sa=X&ved=0CGwQ_BIwC2oVChMIo925hqKYyQIVAzSICh2SiQ9f)
 
 Free parking is available in front of the building.
 
@@ -93,14 +93,9 @@ Semester 2: Saturday, January 30, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**September 19th Location**
+**January 30th Location**
 
-The LAB Miami<br/>
-400 NW 26th St.<br/>
-Miami, FL 33127
-
-
-
+TBD
 
 **What to bring to Phase 3 bi-yearly sessions:**
 

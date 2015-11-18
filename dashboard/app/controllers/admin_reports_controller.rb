@@ -202,6 +202,16 @@ class AdminReportsController < ApplicationController
     render 'reports/usage', formats: [:html]
   end
 
+  def hoc_signups
+    # Requested by Roxanne on 16 November 2015 to track HOC 2015 signups by day.
+    authorize! :read, :reports
+
+    # Get the HOC 2015 signup counts by day, deduped by email and name.
+    # TODO(asher): Is this clumsy notation really necessary? Is Sequel really this stupid?
+    signups_by_day = DB[:forms].where(kind: 'HocSignup2015').group(:name, :email).group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).all.map{|row| [row[:created_at_day].to_s, row[:count].to_i]}
+    render locals: {signups_by_day: signups_by_day}
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_script
     @script = Script.get_from_cache(params[:script_id]) if params[:script_id]
