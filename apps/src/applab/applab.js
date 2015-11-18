@@ -44,6 +44,7 @@ var showAssetManager = require('./assetManagement/show.js');
 var DebugArea = require('./DebugArea');
 var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
+var newrelic = require('../newrelic');
 
 var applabConstants = require('./constants');
 
@@ -666,6 +667,8 @@ Applab.init = function(config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   Applab.channelId = config.channel;
+  // inlcude channel id in any new relic actions we generate
+  newrelic.setCustomAttribute('channelId', Applab.channelId);
   if (config.assetPathPrefix) {
     Applab.assetPathPrefix = config.assetPathPrefix;
   }
