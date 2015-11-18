@@ -35,7 +35,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Write a function that returns the smaller of two numbers.  (Click to see full instructions)",
-    "markdown_instructions": "# Find Min\r\n\r\nIts your turn to try writing a function that returns again. **Create a findMin function that will return the smaller of two values.** \r\n\r\n**Best practices when writing Functions with Returns:** \r\n\r\n* Calculate whatever you need\r\n* Store it in a variable\r\n* Return it at the end of the function. \r\n\r\n# Do This\r\n\r\n* **Starter code** is provided which gives the outline for findMin and a couple of calls to that function\r\n* **Use conditionals** to check which value is smaller. **Save that smaller value in a variable.**\r\n* **Return the variable holding the smaller value** at the end of the function. ",
+    "markdown_instructions": "# Find Min\r\n\r\nNice work, you've just created a general purpose function that determines if a value is inside of an array!\r\n\r\n**Best practices when writing Functions with Returns:** \r\n\r\n* Calculate whatever you need\r\n* Store it in a variable\r\n* Return it at the end of the function. \r\n\r\n# Do This\r\n\r\n* **Starter code** is provided which gives the outline for findMin and a couple of calls to that function\r\n* **Use conditionals** to check which value is smaller. **Save that smaller value in a variable.**\r\n* **Return the variable holding the smaller value** at the end of the function. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
