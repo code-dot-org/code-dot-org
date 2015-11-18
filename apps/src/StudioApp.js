@@ -296,7 +296,7 @@ StudioApp.prototype.init = function(config) {
           result = {error: err};
         }
         if (result && result.error) {
-          newrelic.addPageAction(newrelic.PageAction.BlockToCodeError, {
+          newrelic.addPageAction(newrelic.PageAction.DropletTransitionError, {
             dropletError: !nonDropletError,
             fromBlocks: fromBlocks
           });

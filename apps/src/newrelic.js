@@ -1,5 +1,5 @@
 var PageAction = {
-  BlockToCodeError: 'BlockToCodeError'
+  DropletTransitionError: 'DropletTransitionError'
 };
 
 /**
