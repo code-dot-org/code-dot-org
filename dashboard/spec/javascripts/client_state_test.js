@@ -15,6 +15,11 @@ describe("clientState#trackProgress", function() {
     state.sourceForLevel(1, 100).should.equal('abc');
   });
 
+  it("returns cached levelSource if no timestamp given", function () {
+    state.writeSourceForLevel(1, 300, 'abc');
+    state.sourceForLevel(1, null).should.equal('abc');
+  });
+
   it("returns `undefined` if timestamp is older", function () {
     state.writeSourceForLevel(2, 100, 'abc');
     assert(state.sourceForLevel(2, 200) === undefined);
