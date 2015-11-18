@@ -44,6 +44,37 @@ Feature: App Lab Scenarios
     And I wait until element "#divApplab > .screen > div#text_area1" is visible
     Then element "div#text_area1" has html "Line 1<div>Line 2</div><div><br></div><div>Line3</div>"
 
+  Scenario: Change event works in text input and text area
+    Given I switch to design mode
+    And I drag a TEXT_INPUT into the app
+    And I drag a TEXT_AREA into the app
+    And I switch to code mode
+    And I switch to text mode
+    And I append text to droplet "onEvent('text_input1', 'change', function(event) {console.log('text_input1: ' + getText('text_input1'));});"
+    And I append text to droplet "onEvent('text_area1', 'change', function(event) {console.log('text_area1: ' + getText('text_area1'));});"
+
+    # in text input, blur produces a change event
+    When I press "runButton"
+    And I wait until element "#divApplab > .screen > div#text_area1" is visible
+    And I press keys "123" for element "#text_input1"
+    And I focus selector "#screen1"
+    Then element "#debug-output" has escaped text "text_input1: 123"
+
+    # in a text input, enter produces a change event but then blur does not
+    When I press keys "456\n" for element "#text_input1"
+    Then element "#debug-output" has escaped text "text_input1: 123\ntext_input1: 123456"
+    And I focus selector "#screen1"
+    Then element "#debug-output" has escaped text "text_input1: 123\ntext_input1: 123456"
+
+    # in a text area, enter does not produce a change event but then blur does
+    When I press "resetButton"
+    And I wait until element "#runButton" is visible
+    And I press "runButton"
+    And I wait until element "#divApplab > .screen > div#text_area1" is visible
+    And I press keys "abc\ndef" for element "#text_area1"
+    And I focus selector "#screen1"
+    Then element "#debug-output" has escaped text "text_area1: abc\ndef"
+
   @no_safari
   @no_ie9
   Scenario: Upload Image Asset

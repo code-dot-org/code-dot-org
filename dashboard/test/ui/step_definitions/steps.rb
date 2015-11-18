@@ -187,6 +187,10 @@ When /^I click selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
 end
 
+When /^I focus selector "([^"]*)"$/ do |jquery_selector|
+  @browser.execute_script("$(\"#{jquery_selector}\")[0].focus();")
+end
+
 When /^I send click events to selector "([^"]*)"$/ do |jquery_selector|
   # svg elements can only be clicked this way
   @browser.execute_script("$(\"#{jquery_selector}\").click();")
@@ -232,6 +236,12 @@ end
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
 Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
+  element_has_text(selector, expectedText)
+end
+
+Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
+  # Add more unescaping rules here as needed.
+  expectedText.gsub!(/\\n/, "\n")
   element_has_text(selector, expectedText)
 end
 
