@@ -9,17 +9,11 @@ class AuthoredHintViewRequestsController < ApplicationController
     end
 
     objects = AuthoredHintViewRequest.create(hints)
-    valid_request = objects.all? do |object|
+    all_valid = objects.all? do |object|
       object.valid?
     end
 
-    unless valid_request
-      objects.each do |object|
-        puts object.errors.full_messages
-      end
-    end
-
-    status_code = valid_request ? :created : :bad_request
+    status_code = all_valid ? :created : :bad_request
     head status_code
   end
 end
