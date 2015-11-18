@@ -58,6 +58,8 @@
 
   img[src=''], canvas, .chart {
     border: 5px solid #fff;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
     outline: 1px solid #bdc3c7;
     outline-offset: -1px;
   }

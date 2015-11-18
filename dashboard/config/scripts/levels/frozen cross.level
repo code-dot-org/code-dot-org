@@ -15,7 +15,7 @@
     "disable_variable_editing": "false",
     "free_play": "false",
     "slider_speed": "0.2",
-    "instructions": "Use the “Repeat” block to create a plus sign. Did you notice Elsa can move forward and backward?",
+    "instructions": "Wrap a “Repeat” block around these commands to create a plus sign. Did you notice Elsa can move forward and backward?",
     "impressive": "false",
     "use_modal_function_editor": "false",
     "ideal": "5",
@@ -24,7 +24,7 @@
     "embed": "false",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "markdown_instructions": "Use the “Repeat” block to create a plus sign. Did you notice Elsa can move forward and backward?\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/8ac71bed65fe0a472a6cc7629e8fdac9-image-1442593741401.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Wrap a “Repeat” block around these commands to create a plus sign. Did you notice Elsa can move forward and backward?  \r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/8ac71bed65fe0a472a6cc7629e8fdac9-image-1442593741401.png)\r\n</details>\r\n</h4>",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -41,15 +41,15 @@
       <xml>
         <block type="when_run" deletable="false" movable="false" id="repeat_toolbox_qtip2">
           <next>
-            <block type="draw_move_by_constant_dropdown" deletable="false" editable="false">
+            <block type="draw_move_by_constant_dropdown">
               <title name="DIR">moveForward</title>
               <title name="VALUE" config="50,100,150,200,300">100</title>
               <next>
-                <block type="draw_move_by_constant_dropdown" deletable="false" editable="false">
+                <block type="draw_move_by_constant_dropdown">
                   <title name="DIR">moveBackward</title>
                   <title name="VALUE" config="50,100,150,200,300">100</title>
                   <next>
-                    <block type="draw_turn_by_constant_dropdown" deletable="false" editable="false">
+                    <block type="draw_turn_by_constant_dropdown">
                       <title name="DIR">turnRight</title>
                       <title name="VALUE" config="45,60,90,120,180">90</title>
                     </block>

@@ -170,6 +170,10 @@ button.arrow:disabled {
   -webkit-touch-callout: none; }
   #soft-buttons.soft-buttons-none {
     display: none; }
+  #soft-buttons.soft-buttons-compact {
+    margin-left: 0; }
+    #soft-buttons.soft-buttons-compact button {
+      margin: 0; }
 
 .soft-buttons-1 {
   display: table-cell;
@@ -413,6 +417,10 @@ html[dir='rtl'] #codeWorkspace {
   .bee-counter-text {
     font-size: 32px;
     stroke-width: 2px; }
+  #soft-buttons {
+    margin-left: 0; }
+    #soft-buttons button {
+      margin: 0; }
   .small-footer-base.responsive small {
     float: left; } }
 
