@@ -251,6 +251,12 @@ button.arrow:disabled {
   &.soft-buttons-none {
     display: none;
   }
+  &.soft-buttons-compact {
+    margin-left: 0;
+    button {
+      margin: 0;
+    }
+  }
 }
 .soft-buttons-1 {
   display: table-cell;
@@ -480,6 +486,12 @@ html[dir='rtl'] #codeWorkspace {
   @include visualization-width(200px);
   @include bee-counter(32px, 2px);
 
+  #soft-buttons {
+    margin-left: 0;
+    button {
+      margin: 0;
+    }
+  }
   .small-footer-base.responsive {
     small {
       float: left;

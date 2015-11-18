@@ -44,6 +44,10 @@ social:
                     </div>
                   </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.ibm.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/ibmlogo.jpg”></a>
+                    </div>
+                  </div><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.intel.com" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/intSFT_rgb-175x160.png"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3">
@@ -143,6 +147,11 @@ social:
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://techsoup.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo_techsoup_fundal_tranparent-285x160.png"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.aries.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logoaries.png"></a>
+                    </div>
+                  </div>
+<div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.upir.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/upir.png"></a>
                     </div>

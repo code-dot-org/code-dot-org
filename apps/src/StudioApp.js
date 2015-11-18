@@ -30,6 +30,7 @@ var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
 var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
+var logToCloud = require('./logToCloud');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -285,14 +286,20 @@ StudioApp.prototype.init = function(config) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
         var result;
+        var nonDropletError = false;
+        // are we trying to toggle from blocks to text (or the opposite)
+        var fromBlocks = this.editor.currentlyUsingBlocks;
         try {
           result = this.editor.toggleBlocks();
         } catch (err) {
+          nonDropletError = true;
           result = {error: err};
         }
         if (result && result.error) {
-          // TODO (cpirich) We could extract error.loc to determine where the
-          // error occurred and highlight that error
+          logToCloud.addPageAction(logToCloud.PageAction.DropletTransitionError, {
+            dropletError: !nonDropletError,
+            fromBlocks: fromBlocks
+          });
           this.feedback_.showToggleBlocksError(this.Dialog);
         }
         this.onDropletToggle_();
@@ -1094,6 +1101,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var visualizationColumn = document.getElementById('visualizationColumn');
   var visualizationEditor = document.getElementById('visualizationEditor');
 
+  var oldVizWidth = $(visualizationColumn).width();
   var newVizWidth = Math.max(this.minVisualizationWidth,
                          Math.min(this.maxVisualizationWidth, width));
   var newVizWidthString = newVizWidth + 'px';
@@ -1124,6 +1132,12 @@ StudioApp.prototype.resizeVisualization = function (width) {
   applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
   if (visualizationEditor) {
     visualizationEditor.style.marginLeft = newVizWidthString;
+  }
+
+  if (oldVizWidth < 230 && newVizWidth >= 230) {
+    $('#soft-buttons').removeClass('soft-buttons-compact');
+  } else if (oldVizWidth > 230 && newVizWidth <= 230) {
+    $('#soft-buttons').addClass('soft-buttons-compact');
   }
 
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');

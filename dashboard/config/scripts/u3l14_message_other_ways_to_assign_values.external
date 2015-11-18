@@ -13,7 +13,7 @@ One tip is to read a statement like: var score = 0 as: **"The variable score *ge
 
 When you read the = sign as "gets", and say it out loud that way, you'll prevent confusing yourself, and other programmers will know what you're talking about.
 
-As we're about to see there are other ways to store values in variables besides just hard-coding single numbers.  But in all cases even when it's more complicated **using the word "gets"** when you see a single `=` sign will help your mental model of what's happening.
+As we're about to see there are other ways to store values in variables besides just hard-coding single numbers.  But in all cases, even when it's more complicated, **using the word "gets"** when you see a single `=` sign will help your mental model of what's happening.
 
 In the next several levels we're going to see how to:
 

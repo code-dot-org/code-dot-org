@@ -55,7 +55,8 @@
     "debugger_disabled": "true",
     "slider_speed": "1.0",
     "execute_palette_apis_only": "false",
-    "lock_zero_param_functions": "false"
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "8jeHTxuOXqZXZiyMsuTJB13Q5rN+M7t1ZRk1+FmHQ+28CQ5rg6vp3q8kxiOe\nfbVR\n"
   }
 }]]></config>
   <blocks/>

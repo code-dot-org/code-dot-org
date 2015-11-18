@@ -13,7 +13,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "var score = 7;\r\nwrite(\"The value of score is:\");\r\nwrite(\"score\")\r\nvar lives = 20;\r\nwrite(The value of lives is);\r\nwrite(\"lives\");",
+    "start_blocks": "var score = 7;\r\nwrite(\"The value of score is:\");\r\nwrite(\"score\");\r\nvar lives = 20;\r\nwrite(The value of lives is);\r\nwrite(\"lives\");",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -43,7 +43,8 @@
     "debugger_disabled": "true",
     "instructions": "Fix the code so that the values of both variables print to the console. (Click to see full instructions)",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "encrypted_examples": "sI9lgrunYUg0l1Ne67xUC/B/rfVSaj2P/bU9svj8xzqfDCWmx+BvfjkoFPE2\nj29r\n"
   }
 }]]></config>
   <blocks/>

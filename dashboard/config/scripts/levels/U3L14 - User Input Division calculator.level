@@ -49,7 +49,8 @@
     "debugger_disabled": "true",
     "instructions": "Write a program that acts as a simple calculator. (click to see full instructions)",
     "execute_palette_apis_only": "false",
-    "lock_zero_param_functions": "false"
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "MP/YOMwLz+qucDD873TBeMtbKJk4RCR20mxhXp98p2H1S/xCC+JlkWAY7y6v\nMcfU\n"
   }
 }]]></config>
   <blocks/>
