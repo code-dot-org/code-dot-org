@@ -2,7 +2,11 @@
   Dear #{@recipient.ops_first_name},
 %p
   Thanks for attending your #{@workshop.phase_long_name} in-person workshop.
-  = render partial: 'exit_survey_url', locals: {workshop: @workshop, link_text: "short survey"}
+  - if @workshop.exit_survey_url
+    %p
+      We appreciate any feedback you have. Please take a moment to complete this
+      = link_to "short survey", @workshop.exit_survey_url
+      about your Code.org workshop experience.
 - if @workshop.phase_short_name == 'Phase 2'
   %p
     %strong

@@ -68,6 +68,14 @@ class Workshop < ActiveRecord::Base
     WorkshopConstants::PROGRAM_TYPES[self.program_type.to_i]
   end
 
+  def exit_survey_url
+    program_ids = WorkshopConstants::EXIT_SURVEY_IDS[program_type_short_name]
+    return nil unless program_ids
+    survey_id = program_ids[phase_short_name]
+    return nil unless survey_id
+    "https://docs.google.com/a/code.org/forms/d/#{survey_id}/viewform"
+  end
+
   def phase_short_name
     return nil unless phase_info
     phase_info[:short_name]
@@ -125,4 +133,5 @@ class Workshop < ActiveRecord::Base
     send_3_day_reminders
     send_exit_surveys
   end
+
 end
