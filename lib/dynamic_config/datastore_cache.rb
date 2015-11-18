@@ -1,3 +1,5 @@
+require 'honeybadger'
+
 # A caching layer that sits in front of a datastore that
 # implements get and set
 
@@ -49,6 +51,17 @@ class DatastoreCache
     @update_thread = spawn_update_thread unless @update_thread && @update_thread.alive?
   end
 
+  # Pulls all values from the datastore and populates the local cache
+  def update_cache
+    tries ||= 3
+    @datastore.all.each do |k, v|
+      set_local(k, v)
+    end
+  rescue => exc
+    retry unless (tries -= 1).zero?
+    Honeybadger.notify(exc)
+  end
+
   private
 
   # Sets the given value for the key in the local cache
@@ -56,15 +69,6 @@ class DatastoreCache
   # @param value [String]
   def set_local(key, value)
     @cache[key] = value
-  end
-
-  # Pulls all values from the datastore and populates the local cache
-  def update_cache
-    @datastore.all.each do |k, v|
-      set_local(k, v)
-    end
-  rescue => exc
-    Honeybadger.notify(exc)
   end
 
   # Spawns a background thread that periodically updates the cached

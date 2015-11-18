@@ -3,7 +3,7 @@ css 'unplugged'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 ### Getting Started > About the PD
-<img src="https://images.code.org/cd3c4d96a6b2a287db6cd1394cd314c4-image-1446480287872.png" width="450" style="float:right; margin-left:30px">
+<img src="https://images.code.org/6b8e8371c89449351e841e1bcbeeb0b0-image-1447772137098.png" width="450" style="float:right; margin-left:30px">
 
 <br>
 This Online PD is designed to help you ramp up for Unit 3 of the Code.org CSP curriculum. The lessons and activities here complement the one day in-person workshops that pilot teachers are completing throughout November and December. 
@@ -66,6 +66,5 @@ Each of the 5 units in the CSP curriculum has a corresponding online module. You
 <br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 
 MARKDOWN

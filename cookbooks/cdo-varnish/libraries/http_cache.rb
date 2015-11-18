@@ -8,9 +8,9 @@ class HttpCache
 
   # Language header and cookie are needed to separately cache language-specific pages.
   LANGUAGE_HEADER = %w(Accept-Language)
-  LANGUAGE_COOKIE = %w(language_)
+  LANGUAGE_COOKIES = %w(language_ pm)
 
-# HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
+  # HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
 # Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.
 # This hash provides extra application-specific configuration for whitelisting specific request headers and
 # cookies based on the request path.
@@ -27,6 +27,7 @@ class HttpCache
       'scripts',
       'videos_seen',
       'callouts_seen',
+      'pm',
       session_key,
       storage_id,
     ]
@@ -69,12 +70,21 @@ class HttpCache
             proxy: 'dashboard',
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
+          },
+          {
+            path: %w(
+              /
+              /learn*
+              /congrats
+            ),
+            headers: LANGUAGE_HEADER,
+            cookies: LANGUAGE_COOKIES,
           }
         ],
-        # Default Pegasus paths are cached but language-specific, whitelist only language cookie/header.
+        # Remaining Pegasus paths are English-only and don't require any extra headers or cookies.
         default: {
-          headers: LANGUAGE_HEADER,
-          cookies: LANGUAGE_COOKIE
+          headers: [],
+          cookies: 'none'
         }
       },
       dashboard: {
@@ -84,17 +94,15 @@ class HttpCache
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
-          # Ignore all cookies on publicly cachable hour of code levels.
-          {
-            path: "/s/hoc2015/stage/1/puzzle/*",
-            headers: LANGUAGE_HEADER,
-            cookies: LANGUAGE_COOKIE
-          },
-          {
-            path: "/s/starwars/stage/1/puzzle/*",
-            headers: LANGUAGE_HEADER,
-            cookies: LANGUAGE_COOKIE
-          },
+          # Turn off cookie stripping for the starwars script until we fix the bug where users are
+          # logged out after visiting this level. This must be re-enable before HOC 2015 to get
+          # the benefits of the CDN.
+          #
+          # {
+          # path: "/s/starwars/stage/1/puzzle/*",
+          # headers: LANGUAGE_HEADER,
+          # cookies: LANGUAGE_COOKIES
+          # },
           {
             path: '/api/*',
             headers: LANGUAGE_HEADER,

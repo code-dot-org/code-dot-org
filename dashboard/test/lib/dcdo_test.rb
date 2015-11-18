@@ -1,7 +1,6 @@
 require 'test_helper'
 require 'dynamic_config/dcdo'
 
-
 class DCDOTest < ActiveSupport::TestCase
   test 'basic set and get' do
     DCDO.set('key', 'okay')

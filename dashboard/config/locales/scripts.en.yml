@@ -1377,6 +1377,10 @@ en:
         duino:
           Experimenting with Arduino stuff: Experimenting with Arduino stuff
           Basic Circuits: Basic Circuits
+          description: Testing some tools for teaching with Arduinos
+          Blinky Lights: Blinky Lights
+          Making Music: Making Music
+          JunkBot: JunkBot
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
@@ -1417,6 +1421,9 @@ en:
           Images are Arrays: Images are Arrays
           Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
           Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          Key Events with Image Scroller: Key Events with Image Scroller
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1430,8 +1437,28 @@ en:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+        gumball:
+          title: Gumball Play Lab
+          description_short: Create a story or make a game with Gumball Play Lab!
+          description: Create a story or make a game with Gumball Play Lab!
+          Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy with Code'
+          title: 'Star Wars: Building a Galaxy With Code'
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          Hour of Code 2015: Hour of Code 2015
+        starwarsblocks:
+          title: 'Star Wars: Building a Galaxy With Code'
+          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          Hour of Code 2015: Hour of Code 2015
+        minecraft:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
+        mc:
+          title: Minecraft Hour of Code
+          description_short: Explore a Minecraft world through code
+          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
           Hour of Code 2015: Hour of Code 2015

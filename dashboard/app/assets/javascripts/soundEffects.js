@@ -48,9 +48,17 @@ function Sounds() {
 
   this.audioContext = null;
 
+  /**
+   * Detect whether audio system is "unlocked" - it usually works immediately
+   * on dekstop, but mobile usually restricts audio until triggered by user.
+   * @private {boolean}
+   */
+  this.audioUnlocked_ = false;
+
   if (window.AudioContext) {
     try {
       this.audioContext = new AudioContext();
+      this.unlockAudio(); // Attempt immediately, for correct status on desktop
     } catch (e) {
       /**
        * Chrome occasionally chokes on creating singleton AudioContext instances in separate tabs
@@ -65,6 +73,48 @@ function Sounds() {
 
   this.soundsById = {};
 }
+
+/**
+ * Whether we're allowed to play audio by the browser yet.
+ * @returns {boolean}
+ */
+Sounds.prototype.isAudioUnlocked = function () {
+  // Audio unlock doesn't make sense for the fallback player as used here.
+  return this.audioUnlocked_ || !this.audioContext;
+};
+
+/**
+ * Mobile browsers disable audio until a sound is triggered by user interaction.
+ * This method tries to play a brief silent clip to test whether audio is
+ * unlocked, and/or trigger an unlock if called inside a user interaction.
+ *
+ * Special thanks to this article for the general approach:
+ * https://paulbakaus.com/tutorials/html5/web-audio-on-ios/
+ */
+Sounds.prototype.unlockAudio = function () {
+  if (this.isAudioUnlocked()) {
+    return;
+  }
+
+  // create empty buffer and play it
+  var buffer = this.audioContext.createBuffer(1, 1, 22050);
+  var source = this.audioContext.createBufferSource();
+  source.buffer = buffer;
+  source.connect(this.audioContext.destination);
+  if (source.start) {
+    source.start(0);
+  } else {
+    source.noteOn(0);
+  }
+
+  // by checking the play state after some time, we know if we're really unlocked
+  setTimeout(function() {
+    if (source.playbackState === source.PLAYING_STATE ||
+        source.playbackState === source.FINISHED_STATE) {
+      this.audioUnlocked_ = true;
+    }
+  }.bind(this), 0);
+};
 
 /**
  * Registers a sound from a list of sound URL paths.

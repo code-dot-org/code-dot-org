@@ -5,6 +5,7 @@
 - use_netsim ||= false
 - use_applab ||= false
 - hide_source ||= false
+- use_phaser ||= false
 
 -# Common style dependencies
 %link{href: asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
@@ -29,6 +30,11 @@
   %script{src: "#{static_asset_base_path}js/ace/ext-language_tools.js"}
   %script{src: asset_path('js/droplet/droplet-full.js')}
   %script{src: asset_path('js/tooltipster/jquery.tooltipster.js')}
+  %script{src: asset_path('js/fileupload/jquery.iframe-transport.js')}
+  %script{src: asset_path('js/fileupload/jquery.fileupload.js')}
+
+- if use_phaser
+  %script{src: asset_path('js/phaser/phaser.js')}
 
 -# Blockly script dependencies
 - if use_blockly

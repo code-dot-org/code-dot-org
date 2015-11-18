@@ -82,19 +82,24 @@ window.apps = {
           return;
         }
 
+        var afterVideoCallback = showInstructions;
+        if (appOptions.level.afterVideoBeforeInstructionsFn) {
+          afterVideoCallback = function () {
+            appOptions.level.afterVideoBeforeInstructionsFn(showInstructions);
+          };
+        }
+
         var hasVideo = !!appOptions.autoplayVideo;
         var hasInstructions = !!(appOptions.level.instructions ||
         appOptions.level.aniGifURL);
 
         if (hasVideo) {
-          showVideoDialog(appOptions.autoplayVideo);
           if (hasInstructions) {
-            $('.video-modal').on('hidden.bs.modal', function() {
-              showInstructions();
-            });
+            appOptions.autoplayVideo.onClose = afterVideoCallback;
           }
+          showVideoDialog(appOptions.autoplayVideo);
         } else if (hasInstructions) {
-          showInstructions();
+          afterVideoCallback();
         }
       }
     };

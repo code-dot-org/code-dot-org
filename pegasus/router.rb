@@ -8,6 +8,7 @@ require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
 require 'cdo/properties'
+require 'dynamic_config/page_mode'
 require 'active_support'
 require 'base64'
 require 'cgi'
@@ -98,19 +99,6 @@ class Documents < Sinatra::Base
         config.ignore << 'Table::NotFound'
       end
     end
-
-    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats',
-                 '/teacher-dashboard',
-                 '/teacher-dashboard/landing',
-                 '/teacher-dashboard/nav',
-                 '/teacher-dashboard/section_manage',
-                 '/teacher-dashboard/section_progress',
-                 '/teacher-dashboard/sections',
-                 '/teacher-dashboard/signin_cards',
-                 '/teacher-dashboard/student',
-                 '/language_test',
-                 '/starwars']
-    set :vary, { 'X-Varnish-Accept-Language'=>vary_uris, 'Cookie'=>vary_uris }
   end
 
   before do
@@ -119,11 +107,7 @@ class Documents < Sinatra::Base
     uri = request.path_info.chomp('/')
     redirect uri unless uri.empty? || request.path_info == uri
 
-    settings.vary.each_pair do |header,pages|
-      headers['Vary'] = http_vary_add_type(headers['Vary'], header) if pages.include?(request.path_info)
-    end
-
-    locale = settings.vary['X-Varnish-Accept-Language'].include?(request.path_info) ? request.locale : 'en-US'
+    locale = request.locale
     locale = 'it-IT' if request.site == 'italia.code.org'
     locale = 'es-ES' if request.site == 'ar.code.org'
     locale = 'ro-RO' if request.site == 'ro.code.org'
@@ -159,6 +143,13 @@ class Documents < Sinatra::Base
     dont_cache
     response.set_cookie('language_', {value: lang, domain: ".#{request.site}", path: '/', expires: Time.now + (365*24*3600)})
     redirect "/#{path}"
+  end
+
+  # Page mode selection
+  get '/private/pm/*' do |page_mode|
+    dont_cache
+    response.set_cookie('pm', {value: page_mode, domain: ".#{request.site}", path: '/'})
+    redirect "/learn?r=#{rand(100000)}"
   end
 
   # /private (protected area)
