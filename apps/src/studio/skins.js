@@ -547,6 +547,15 @@ function loadHoc2015(skin, assetUrl) {
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
+  skin.instructions2ImageSubstitutions = {
+    "pufferpig": skin.assetUrl('instructions_pufferpig.png'),
+    "mynock": skin.assetUrl('instructions_mynock.png'),
+    "rebelpilot": skin.assetUrl('instructions_rebelpilot.png'),
+    "stormtrooper": skin.assetUrl('instructions_stormtrooper.png'),
+    "mousedroid": skin.assetUrl('instructions_mousedroid.png'),
+    "tauntaun": skin.assetUrl('instructions_tauntaun.png')
+  };
+
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
   skin.ProjectileClassNames = [
@@ -985,6 +994,13 @@ function loadHoc2015x(skin, assetUrl) {
   skin.defaultBackground = 'main';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
+
+  skin.instructions2ImageSubstitutions = {
+    "bb8": skin.assetUrl('instructions_bb8.png'),
+    "hazard": skin.assetUrl('instructions_hazard.png'),
+    "scrapmetal1": skin.assetUrl('goal1.png'),
+    "scrapmetal2": skin.assetUrl('goal2.png'),
+  };
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.

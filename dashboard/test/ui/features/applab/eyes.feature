@@ -61,6 +61,7 @@ Scenario: Text area with multiple lines, radio button, checkbox
   And I set input "ypos" to "0"
   Then I see no difference for "checkbox in upper left"
   Then I delete the current design mode element
+  And I close my eyes
 
 Scenario: Applab visualization scaling
   When I open my eyes to test "Applab visualization scaling"
