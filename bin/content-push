@@ -14,7 +14,7 @@ end
 
 def check_changes
   puts `git status`
-  print "Should I push all of these files? [Y/n] "
+  print "Should I commit and push all of these unstaged and untracked files? [Y/n] "
   input = gets
   if input == '' || input[0].downcase == 'y'
     puts "Cool!"
