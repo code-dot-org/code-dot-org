@@ -18,6 +18,9 @@ dependencies:
     - bash build_with_core.sh:
         pwd:
             apps
+    - bundle exec rake assets:precompile:
+        pwd:
+            dashboard
 database:
     override:
       - bundle exec rake db:create:
@@ -38,9 +41,6 @@ test:
             pwd:
                 apps
         - bundle exec rake konacha:run:
-            pwd:
-                dashboard
-        - bundle exec rake assets:precompile:
             pwd:
                 dashboard
         - ./test.sh:
