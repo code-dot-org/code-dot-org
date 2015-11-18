@@ -2670,8 +2670,8 @@ levels.js_hoc2015_chain_characters = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  instructions: msg.hoc2015_chain_characters2_instructions(),
-  instructions2: msg.hoc2015_chain_characters2_instructions2(),
+  instructions: msg.hoc2015_chain_characters_instructions(),
+  instructions2: msg.hoc2015_chain_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1800, // 60 seconds
   'showTimeoutRect': true,
