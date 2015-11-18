@@ -1992,10 +1992,18 @@ en:
         mouseup: mouseup
       U3L18 Matching:
         "'Blue' == 'blue'": "'Blue' == 'blue'"
+        Is the string 'Blue' equal to the string 'blue'?: Is the string 'Blue' equal to the string 'blue'?
         Is the string Blue equal to the string blue?: Is the string Blue equal to the string blue?
         Is the value of the variable 'blue' equal to the string blue?: Is the value of the variable 'blue' equal to the string blue?
         Is the value of the variable 'dice' equal to 5?: Is the value of the variable 'dice' equal to 5?
         Is the value of the variable 'dice' not equal to 5?: Is the value of the variable 'dice' not equal to 5?
+        Is the value of the variable blue equal to the string 'blue'?: Is the value of the variable blue equal to the string 'blue'?
+        Is the value of the variable dice equal to 5?: Is the value of the variable dice equal to 5?
+        Is the value of the variable dice not equal to 5?: Is the value of the variable dice not equal to 5?
+        Is the value of the variable x greater than 3?: Is the value of the variable x greater than 3?
+        Is the value of the variable x greater than or equal to 3?: Is the value of the variable x greater than or equal to 3?
+        Is the value of the variable x less than 3?: Is the value of the variable x less than 3?
+        Is the value of the variable x less than or equal to 3?: Is the value of the variable x less than or equal to 3?
         Is x greater than 3?: Is x greater than 3?
         Is x greater than or equal to 3?: Is x greater than or equal to 3?
         Is x less than 3?: Is x less than 3?
