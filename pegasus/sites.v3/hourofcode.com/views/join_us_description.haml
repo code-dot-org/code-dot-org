@@ -1,20 +1,12 @@
 #joindescription
   #calltoaction
     %h2{:style=>"margin-top: 0px"}
-      =hoc_s(:front_join_us_header)
-    %a.category-link{:href=>resolve_url('/how-to')}
+      =hoc_s(:front_join_us_volunteer_header)
+    %a.category-link{:href=>resolve_url('https://code.org/volunteer/local')}
       %div.category-button.cyan-background
         %b.category-header=hoc_s(:front_join_us_teacher)
-        %span=hoc_s(:front_join_us_teacher_link)
-    %a.category-link{:href=>resolve_url('/promote/resources#sample-emails')}
-      %div.category-button.purple-background
-        %b.category-header=hoc_s(:front_join_us_parent)
-        %span=hoc_s(:front_join_us_parent_link)
-    %a.category-link{:href=>resolve_url('/promote/resources')}
+        %span=hoc_s(:front_join_us_teacher_volunteer)
+    %a.category-link{:href=>resolve_url('https://code.org/volunteer')}
       %div.category-button.green-background
-        %b.category-header=hoc_s(:front_join_us_computer_science)
-        %span=hoc_s(:front_join_us_spread_word_work)
-    -if chapter_partner?
-      %a.category-link{:href=>resolve_url('https://code.org')}
-        %div.category-button.teal-background
-          %span=hoc_s(:front_join_us_code_info).gsub('code.org', resolve_url('code.org'))
+        %b.category-header=hoc_s(:front_join_us_cs_volunteer)
+        %span=hoc_s(:front_join_us_sign_up_volunteer)
