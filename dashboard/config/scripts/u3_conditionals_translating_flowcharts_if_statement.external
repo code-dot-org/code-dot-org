@@ -7,7 +7,7 @@ In the unplugged part of the lesson you practiced making flowcharts. As you go t
 
 | Component | Code Translation |
 |--- |--- |
-|<img src="https://images.code.org/0b77b1f3816185d9e5ffa51db56232b4-image-1446520923327.png" style="width: 350px; float: middle"> | When we want to ask a question in a program we use an **if statement**. <br> The question is created using the boolean operators you learned <br> about on the last couple levels! <br> <br> <img src="https://images.code.org/34aa20c916a9f2a8d8ad1a62e2bb01f6-image-1446520872646.20.40 PM.png" style="width: 350px; float: center; border: solid 1px black">|
+|<img src="https://images.code.org/0b77b1f3816185d9e5ffa51db56232b4-image-1446520923327.png" style="width: 200px; float: middle"> | When we want to ask a question in a program we use an **if statement**. <br> The question is created using the boolean operators you learned <br> about on the last couple levels! <br> <br> <img src="https://images.code.org/34aa20c916a9f2a8d8ad1a62e2bb01f6-image-1446520872646.20.40 PM.png" style="width: 200px; float: center; border: solid 1px black">|
 
 On the next level you will get the chance to try creating if statements.
 
