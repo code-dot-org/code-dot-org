@@ -206,6 +206,7 @@ var displayFeedback = function() {
 Jigsaw.onReportComplete = function(response) {
   Jigsaw.response = response;
   Jigsaw.waitingForReport = false;
+  studioApp.onReportComplete(response);
   displayFeedback();
 };
 

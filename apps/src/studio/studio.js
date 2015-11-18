@@ -2354,6 +2354,7 @@ var displayFeedback = function() {
 Studio.onReportComplete = function(response) {
   Studio.response = response;
   Studio.waitingForReport = false;
+  studioApp.onReportComplete(response);
   displayFeedback();
 };
 
