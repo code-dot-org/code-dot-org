@@ -19,17 +19,4 @@ module WorkshopConstants
     8 => {id: 8, short_name: 'Phase 4', long_name: 'Phase 4: Summer Wrap Up'}
   }
 
-  # find first match by fields mapped to their expected values, i.e. short_name: 'CS in Science'
-  def find_program_type(match_fields)
-    WorkshopConstants::PROGRAM_TYPES.values.find do |program_type|
-      program_type.values_at(*match_fields.keys) == match_fields.values
-    end
-  end
-
-  # find first match by fields mapped to their expected values, i.e. short_name: 'Phase 2'
-  def find_phase(match_fields)
-    WorkshopConstants::PHASES.values.find do |phase|
-      phase.values_at(*match_fields.keys) == match_fields.values
-    end
-  end
 end
