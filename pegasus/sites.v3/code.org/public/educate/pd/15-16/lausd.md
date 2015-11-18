@@ -195,12 +195,11 @@ Semester 2: Saturday, February 20, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**October 17th Location**
+**February 20th Location**
 
-[Ball Junior High School<br/>
-Room 37<br/>
-1500 W Ball Rd<br/>
-Anaheim, CA 92802](https://www.google.com/maps/place/Ball+Junior+High+School/@33.81769,-117.93384,15z/data=!4m2!3m1!1s0x0:0xbe44bc07473540a3)
+[Columbia Memorial Space Center<br/> 
+12400 Columbia Way <br/>
+Downey, CA 90242](https://www.google.com/maps/place/Columbia+Memorial+Space+Center/@33.9198421,-118.1335994,15z/data=!4m2!3m1!1s0x0:0xd6cb5baba4c4a1d2)
 
 
 **What to bring to Phase 3 bi-yearly sessions:**
