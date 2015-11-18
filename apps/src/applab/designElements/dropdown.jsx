@@ -145,5 +145,17 @@ module.exports = {
     element.appendChild(option2);
 
     return element;
+  },
+
+  onDeserialize: function (element) {
+    // In the future we may want to trigger this on focus events as well.
+    $(element).on('mousedown', function (e) {
+      if (!Applab.isRunning()) {
+        // Disable dropdown menu unless running
+        e.preventDefault();
+        this.blur();
+        window.focus();
+      }
+    });
   }
 };

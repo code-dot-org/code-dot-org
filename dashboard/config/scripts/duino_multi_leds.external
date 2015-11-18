@@ -1,0 +1,9 @@
+name 'duino multi leds'
+title 'duino multi leds'
+markdown <<MARKDOWN
+### Wiring up Multiple LEDs
+
+Now that you've created some circuits that blink one LED, it's really easy to expand that code to multiple LEDs. Just like before, we need to choose whether we are going to use our digital pins as ground (so the LED turns on when the pin goes low) or as power (so the LED turns on when the pin goes high. In this case we'll wire our LEDs so that they turn on when their pin goes high. You may use any digital pins you wish, but make sure to update your code accordingly.
+
+<iframe frameborder='0' style="width: 100%; height: 450px;" marginheight='0' marginwidth='0' scrolling='no' src='https://123d.circuits.io/circuits/1216278/embed#breadboard'></iframe>
+MARKDOWN

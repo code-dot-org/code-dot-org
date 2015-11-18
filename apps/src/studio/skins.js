@@ -16,6 +16,188 @@ var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 
+function loadGumball(skin, assetUrl) {
+  skin.defaultBackground = 'dots';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  skin.spriteHeight = 110;
+  skin.spriteWidth = 110;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'projectile_banana',
+    'projectile_dodgeball',
+    'projectile_donkey',
+    'projectile_handbag',
+    'projectile_hotdog',
+    'projectile_pompom',
+    'projectile_toaster',
+    'projectile_waterball',
+  ];
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_projectile_banana',
+    'item_projectile_dodgeball',
+    'item_projectile_donkey',
+    'item_projectile_handbag',
+    'item_projectile_hotdog',
+    'item_projectile_pompom',
+    'item_projectile_toaster',
+    'item_projectile_waterball',
+  ];
+
+  // Images
+  skin.projectile_banana = skin.assetUrl('projectile_banana.png');
+  skin.projectile_dodgeball = skin.assetUrl('projectile_dodgeball.png');
+  skin.projectile_donkey = skin.assetUrl('projectile_donkey.png');
+  skin.projectile_handbag = skin.assetUrl('projectile_handbag.png');
+  skin.projectile_hotdog = skin.assetUrl('projectile_hotdog.png');
+  skin.projectile_pompom = skin.assetUrl('projectile_pompom.png');
+  skin.projectile_toaster = skin.assetUrl('projectile_toaster.png');
+  skin.projectile_waterball = skin.assetUrl('projectile_waterball.png');
+
+  // TODO: proper item class names
+  skin.item_projectile_banana = skin.assetUrl('projectile_banana.png');
+  skin.item_projectile_dodgeball = skin.assetUrl('projectile_dodgeball.png');
+  skin.item_projectile_donkey = skin.assetUrl('projectile_donkey.png');
+  skin.item_projectile_handbag = skin.assetUrl('projectile_handbag.png');
+  skin.item_projectile_hotdog = skin.assetUrl('projectile_hotdog.png');
+  skin.item_projectile_pompom = skin.assetUrl('projectile_pompom.png');
+  skin.item_projectile_toaster = skin.assetUrl('projectile_toaster.png');
+  skin.item_projectile_waterball = skin.assetUrl('projectile_waterball.png');
+
+  skin.explosion = skin.assetUrl('explosion.png');
+  skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
+  skin.explosionFrames = 40;
+  skin.fadeExplosion = false;
+  skin.timePerExplosionFrame = 20;
+
+  skin.characters = {
+    background: skin.assetUrl('background_characters.png'),
+  };
+  skin.checkers = {
+    background: skin.assetUrl('background_checkers.png'),
+  };
+  skin.clouds = {
+    background: skin.assetUrl('background_clouds.png'),
+  };
+  skin.cornered = {
+    background: skin.assetUrl('background_cornered.png'),
+  };
+  skin.dots = {
+    background: skin.assetUrl('background_dots.png'),
+  };
+  skin.graffiti = {
+    background: skin.assetUrl('background_graffiti.png'),
+  };
+  skin.space = {
+    background: skin.assetUrl('background_space.png'),
+  };
+  skin.squares = {
+    background: skin.assetUrl('background_squares.png'),
+  };
+  skin.stripes = {
+    background: skin.assetUrl('background_stripes.png'),
+  };
+  skin.wood = {
+    background: skin.assetUrl('background_wood.png'),
+  };
+
+  skin.avatarList = ["anais", "antony", "bananajoe", "darwin", "gumball", "nicole", "penny", "richard"];
+  skin.walkValues = [8, 8, 8, 12, 12, 8, 10, 12];
+
+  /**
+   * Sprite thumbs generated with:
+   * `brew install graphicsmagick`
+   * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
+   */
+  skin.avatarList.forEach(function (name, i) {
+    skin[name] = {
+      sprite: skin.assetUrl('idle_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 19,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: skin.walkValues[i],
+        emotionCycles: 0,
+        extraEmotions: 3
+      },
+      timePerFrame: 100
+    };
+  });
+
+
+  skin.backgroundChoices = [
+    [msg.setBackgroundRandom(), RANDOM_VALUE],
+    [msg.setBackgroundCharacters(), '"characters"'],
+    [msg.setBackgroundCheckers(), '"checkers"'],
+    [msg.setBackgroundClouds(), '"clouds"'],
+    [msg.setBackgroundCornered(), '"cornered"'],
+    [msg.setBackgroundDots(), '"dots"'],
+    [msg.setBackgroundGraffiti(), '"graffiti"'],
+    [msg.setBackgroundSpace(), '"space"'],
+    [msg.setBackgroundSquares(), '"squares"'],
+    [msg.setBackgroundStripes(), '"stripes"'],
+    [msg.setBackgroundWood(), '"wood"']];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.backgroundChoicesK1 = [
+    [skin.characters.background, '"characters"'],
+    [skin.checkers.background, '"checkers"'],
+    [skin.clouds.background, '"clouds"'],
+    [skin.cornered.background, '"cornered"'],
+    [skin.dots.background, '"dots"'],
+    [skin.graffiti.background, '"graffiti"'],
+    [skin.space.background, '"space"'],
+    [skin.squares.background, '"squares"'],
+    [skin.stripes.background, '"stripes"'],
+    [skin.wood.background, '"wood"'],
+    [skin.randomPurpleIcon, RANDOM_VALUE]];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteAnais(), '"anais"'],
+    [msg.setSpriteAntony(), '"antony"'],
+    [msg.setSpriteBananajoe(), '"bananajoe"'],
+    [msg.setSpriteDarwin(), '"darwin"'],
+    [msg.setSpriteGumball(), '"gumball"'],
+    [msg.setSpriteNicole(), '"nicole"'],
+    [msg.setSpritePenny(), '"penny"'],
+    [msg.setSpriteRichard(), '"richard"']];
+
+  skin.projectileChoices = [
+    [msg.projectileBanana(), '"projectile_banana"'],
+    [msg.projectileDodgeball(), '"projectile_dodgeball"'],
+    [msg.projectileDonkey(), '"projectile_donkey"'],
+    [msg.projectileHandbag(), '"projectile_handbag"'],
+    [msg.projectileHotdog(), '"projectile_hotdog"'],
+    [msg.projectilePompom(), '"projectile_pompom"'],
+    [msg.projectileToaster(), '"projectile_toaster"'],
+    [msg.projectileWaterball(), '"projectile_waterball"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.itemChoices = [
+    [msg.itemProjectileBanana(), '"item_projectile_banana"'],
+    [msg.itemProjectileDodgeball(), '"item_projectile_dodgeball"'],
+    [msg.itemProjectileDonkey(), '"item_projectile_donkey"'],
+    [msg.itemProjectileHandbag(), '"item_projectile_handbag"'],
+    [msg.itemProjectileHotdog(), '"item_projectile_hotdog"'],
+    [msg.itemProjectilePompom(), '"item_projectile_pompom"'],
+    [msg.itemProjectileToaster(), '"item_projectile_toaster"'],
+    [msg.itemProjectileWaterball(), '"item_projectile_waterball"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
+}
+
 function loadIceAge(skin, assetUrl) {
   skin.defaultBackground = 'icy';
   skin.projectileFrames = 10;
@@ -632,10 +814,10 @@ function loadHoc2015(skin, assetUrl) {
     [msg.playSoundR2D2Sound7(), 'R2-D2sound7'],
     [msg.playSoundR2D2Sound8(), 'R2-D2sound8'],
     [msg.playSoundR2D2Sound9(), 'R2-D2sound9'],
-    [msg.playSoundC3POSound1(), 'C3-POsound1'],
-    [msg.playSoundC3POSound2(), 'C3-POsound2'],
-    [msg.playSoundC3POSound3(), 'C3-POsound3'],
-    [msg.playSoundC3POSound4(), 'C3-POsound4'],
+    [msg.playSoundC3POSound1(), 'C-3POsound1'],
+    [msg.playSoundC3POSound2(), 'C-3POsound2'],
+    [msg.playSoundC3POSound3(), 'C-3POsound3'],
+    [msg.playSoundC3POSound4(), 'C-3POsound4'],
     [msg.playSoundPufferPigSound1(), 'PufferPigSound1'],
     [msg.playSoundPufferPigSound2(), 'PufferPigSound2'],
     [msg.playSoundPufferPigSound3(), 'PufferPigSound3'],
@@ -739,10 +921,12 @@ function loadHoc2015(skin, assetUrl) {
     ];
 
   skin.spriteChoices = [
-    [msg.setSpriteHidden(), HIDDEN_VALUE],
-    [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteR2D2(), '"r2-d2"'],
-    [msg.setSpriteC3PO(), '"c-3po"']];
+    [msg.setDroidHidden(), HIDDEN_VALUE],
+    [msg.setDroidRandom(), RANDOM_VALUE],
+    [msg.setDroidR2D2(), '"r2-d2"'],
+    [msg.setDroidC3PO(), '"c-3po"']];
+
+  skin.setSpritePrefix = msg.setDroid();
 
   skin.projectileChoices = [];
 
@@ -923,9 +1107,11 @@ function loadHoc2015x(skin, assetUrl) {
     ];
 
   skin.spriteChoices = [
-    [msg.setSpriteHidden(), HIDDEN_VALUE],
-    [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteBB8(), '"BB-8"']];
+    [msg.setDroidHidden(), HIDDEN_VALUE],
+    [msg.setDroidRandom(), RANDOM_VALUE],
+    [msg.setDroidBB8(), '"bb-8"']];
+
+  skin.setSpritePrefix = msg.setDroid();
 
   skin.projectileChoices = [];
 
@@ -1223,6 +1409,8 @@ exports.load = function(assetUrl, id) {
   skin.dropdownThumbnailHeight = 50;
   skin.preloadAssets = true;
 
+  skin.setSpritePrefix = msg.setSprite();
+
   skin.activityChoices = [
     [msg.setActivityRandom(), RANDOM_VALUE],
     [msg.setActivityRoam(), '"roam"'],
@@ -1233,6 +1421,9 @@ exports.load = function(assetUrl, id) {
 
   // take care of items specific to skins
   switch (skin.id) {
+    case 'gumball':
+      loadGumball(skin, assetUrl);
+      break;
     case 'iceage':
       loadIceAge(skin, assetUrl);
       break;

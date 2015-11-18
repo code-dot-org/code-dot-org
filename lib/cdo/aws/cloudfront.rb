@@ -48,6 +48,20 @@ module AWS
       puts "CONFIG: #{CONFIG}"
     end
 
+    # Manually sorts the array-types in the distribution config object,
+    # so we can compare against the existing config to detect whether an update is needed.
+    def self.sort_config!(config)
+      config[:cache_behaviors][:items].sort_by!{|item| item[:path_pattern]}
+      config[:cache_behaviors][:items].each do |item|
+        item[:forwarded_values][:headers][:items].sort!
+        name = item[:forwarded_values][:cookies][:whitelisted_names]
+        name[:items].sort! if name
+      end
+      config[:aliases][:items].sort!
+      config[:origins][:items].sort!
+      config[:custom_error_responses][:items].sort_by!{|e| e[:error_code]}
+    end
+
     # Creates or updates the CloudFront distribution based on the current configuration.
     # Calls to this method should be idempotent, however CloudFront distribution updates can take ~15 minutes to finish.
     #
@@ -65,12 +79,20 @@ module AWS
         if distribution
           id = distribution.id
           distribution_config = cloudfront.get_distribution_config(id: id)
-          cloudfront.update_distribution(
-            id: id,
-            if_match: distribution_config.etag,
-            distribution_config: config(app, distribution_config.distribution_config.caller_reference)
-          )
-          puts "#{app} distribution updated!"
+          old_config = distribution_config.distribution_config.to_hash
+          new_config = config(app, distribution_config.distribution_config.caller_reference)
+          sort_config! old_config
+          sort_config! new_config
+          if old_config == new_config
+            puts "#{app} distribution not modified."
+          else
+            cloudfront.update_distribution(
+              id: id,
+              if_match: distribution_config.etag,
+              distribution_config: config(app, distribution_config.distribution_config.caller_reference)
+            )
+            puts "#{app} distribution updated!"
+          end
         else
           resp = cloudfront.create_distribution(
             distribution_config: config(app)
@@ -159,8 +181,7 @@ module AWS
             get_server_certificate(server_certificate_name: ssl_cert).
             server_certificate.server_certificate_metadata.server_certificate_id,
           ssl_support_method: 'vip', # accepts sni-only, vip
-          minimum_protocol_version: 'TLSv1', # accepts SSLv3, TLSv1
-          cloud_front_default_certificate: false
+          minimum_protocol_version: 'TLSv1' # accepts SSLv3, TLSv1
         } : {
           cloud_front_default_certificate: true,
           minimum_protocol_version: 'TLSv1' # accepts SSLv3, TLSv1

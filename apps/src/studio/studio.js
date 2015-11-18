@@ -35,16 +35,14 @@ var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
 var ImageFilterFactory = require('./ImageFilterFactory');
 var ThreeSliceAudio = require('./ThreeSliceAudio');
-var MusicController = require('./MusicController');
+var MusicController = require('../MusicController');
 var paramLists = require('./paramLists.js');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
   // Loading these modules extends SVGElement and puts canvg in the global
   // namespace
-  require('../canvg/rgbcolor.js');
-  require('../canvg/StackBlur.js');
-  require('../canvg/canvg.js');
+  require('canvg');
   require('../canvg/svg_todataurl');
 }
 
@@ -186,8 +184,9 @@ function loadLevel() {
   Studio.wallMap = null;  // The map name actually being used.
   Studio.wallMapRequested = null; // The map name requested by the caller.
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
-  Studio.slowJsExecutionFactor = level.slowJsExecutionFactor || 1;
-  Studio.ticksBeforeFaceSouth = Studio.slowJsExecutionFactor +
+  Studio.slowExecutionFactor = level.slowExecutionFactor || 1;
+  Studio.gridAlignedExtraPauseSteps = level.gridAlignedExtraPauseSteps || 0;
+  Studio.ticksBeforeFaceSouth = Studio.slowExecutionFactor +
                                   utils.valueOr(level.ticksBeforeFaceSouth, IDLE_TICKS_BEFORE_FACE_SOUTH);
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
@@ -916,8 +915,11 @@ Studio.onTick = function() {
   Studio.clearDebugElements();
 
   var animationOnlyFrame = Studio.pauseInterpreter ||
-      (0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor);
-  Studio.yieldThisTick = false;
+      (0 !== (Studio.tickCount - 1) % Studio.slowExecutionFactor);
+
+  if (!animationOnlyFrame && Studio.yieldExecutionTicks > 0) {
+    Studio.yieldExecutionTicks--;
+  }
 
   if (Studio.customLogic) {
     Studio.customLogic.onTick();
@@ -1008,7 +1010,9 @@ Studio.onTick = function() {
     checkForCollisions();
   }
 
-  if (Studio.JSInterpreter && !animationOnlyFrame) {
+  if (Studio.JSInterpreter &&
+      !animationOnlyFrame &&
+      Studio.yieldExecutionTicks === 0) {
     Studio.JSInterpreter.executeInterpreter(Studio.tickCount === 1);
   }
 
@@ -1081,6 +1085,22 @@ Studio.onTick = function() {
       !spritesNeedMoreAnimationFrames &&
       (!level.delayCompletion || currentTime > Studio.succeededTime + level.delayCompletion)) {
     Studio.onPuzzleComplete();
+  }
+
+  // We want to make sure any queued event code related to all goals being visited is executed
+  // before we evaluate conditions related to this event.  For example, if score is incremented
+  // as a result of all goals being visited, recording allGoalsVisited here allows the score
+  // to be incremented before we check for a completion condition that looks for both all
+  // goals visited, and the incremented score, on the next tick.
+  if (Studio.allGoalsVisited()) {
+    Studio.trackedBehavior.allGoalsVisited = true;
+  }
+
+  // And we don't want a timeout to be used in evaluating conditions before the all goals visited
+  // events are processed (as described above), so also record that here.  This is particularly
+  // relevant to levels which "time out" immediately when all when_run code is complete.
+  if (Studio.timedOut()) {
+    Studio.trackedBehavior.timedOut = true;
   }
 };
 
@@ -1186,6 +1206,7 @@ function handleActorCollisionsWithCollidableList (
 
             if (list.length === 1) {
               callHandler('whenGetAllItems');
+              Studio.trackedBehavior.gotAllItems = true;
             }
 
             var className = collidable.className;
@@ -1646,6 +1667,14 @@ Studio.init = function(config) {
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
+  // Set focus on the run button so key events can be handled
+  // right from the start without requiring the user to adjust focus.
+  // (Required for IE11 at least, and takes focus away from text mode editor
+  // in droplet.)
+  $(window).on('run_button_pressed', function () {
+    document.getElementById('runButton').focus();
+  });
+
   Studio.projectiles = [];
   Studio.items = [];
   Studio.itemSpeed = {};
@@ -1661,6 +1690,11 @@ Studio.init = function(config) {
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
+
+  // Allow any studioMsg string to be re-mapped on a per-level basis:
+  for (var prop in level.msgStringOverrides) {
+    studioMsg[prop] = studioMsg[level.msgStringOverrides[prop]];
+  }
 
   // Initialize paramLists with skin and level data:
   paramLists.initWithSkinAndLevel(skin, level);
@@ -1758,12 +1792,25 @@ Studio.init = function(config) {
     Studio.musicController.preload();
   };
 
+  if (studioApp.cdoSounds && !studioApp.cdoSounds.isAudioUnlocked()) {
+    // Would use addClickTouchEvent, but iOS9 does not let you unlock audio
+    // on touchstart, only on touchend.
+    var removeEvent = dom.addMouseUpTouchEvent(document, function () {
+      studioApp.cdoSounds.unlockAudio();
+      removeEvent();
+    });
+  }
+
   // Play music when the instructions are shown
-  var onInstructionsShown = function () {
-    Studio.musicController.play();
-    document.removeEventListener('instructionsShown', onInstructionsShown);
+  var playOnce = function () {
+    if (studioApp.cdoSounds && studioApp.cdoSounds.isAudioUnlocked()) {
+      Studio.musicController.play();
+      document.removeEventListener('instructionsShown', playOnce);
+      document.removeEventListener('instructionsHidden', playOnce);
+    }
   };
-  document.addEventListener('instructionsShown', onInstructionsShown);
+  document.addEventListener('instructionsShown', playOnce);
+  document.addEventListener('instructionsHidden', playOnce);
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1812,14 +1859,15 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = studioApp.assetUrl('media/promo.png');
 
-  // Disable "show code" button in feedback dialog and workspace if blockly.
-  // Note - if turned back on, be sure it remains hidden when config.level.embed
-  config.enableShowCode = utils.valueOr(studioApp.editCode, false);
+  // Disable "show code" button in feedback dialog and workspace if blockly,
+  // unless the level specifically requests it
+  config.enableShowCode =
+    studioApp.editCode ? true : utils.valueOr(level.enableShowCode, false);
   config.varsInGlobals = true;
   config.dropletConfig = dropletConfig;
   config.dropIntoAceAtLineStart = true;
   config.unusedConfig = [];
-  for (var prop in skin.AutohandlerTouchItems) {
+  for (prop in skin.AutohandlerTouchItems) {
     AUTO_HANDLER_MAP[prop] =
         'whenSpriteCollided-' +
         (Studio.protagonistSpriteIndex || 0) + '-' + skin.AutohandlerTouchItems[prop];
@@ -2004,6 +2052,9 @@ Studio.reset = function(first) {
   Studio.message = null;
   Studio.pauseInterpreter = false;
 
+   // True if we have set testResults using level progressConditions
+  Studio.progressConditionTestResult = false;
+
   // Reset the score and title screen.
   Studio.playerScore = 0;
   Studio.scoreText = null;
@@ -2052,7 +2103,12 @@ Studio.reset = function(first) {
     hasSetMap: false,
     hasAddedItem: false,
     hasWonGame: false,
-    hasLostGame: false
+    hasLostGame: false,
+    allGoalsVisited: false,
+    timedOut: false,
+    gotAllItems: false,
+    removedItems: {},
+    createdItems: {}
   };
 
   // Reset the record of the last direction that the user moved the sprite.
@@ -2065,6 +2121,9 @@ Studio.reset = function(first) {
 
   // Reset the Globals object used to contain program variables:
   Studio.Globals = {};
+
+  // Reset execution state:
+  Studio.yieldExecutionTicks = 0;
   if (studioApp.editCode) {
     Studio.executionError = null;
     Studio.JSInterpreter = null;
@@ -2653,9 +2712,9 @@ Studio.execute = function() {
     Studio.JSInterpreter = new JSInterpreter({
       code: codeWhenRun,
       blocks: dropletConfig.blocks,
+      blockFilter: level.executePaletteApisOnly && level.codeFunctions,
       enableEvents: true,
       studioApp: studioApp,
-      shouldRunAtMaxSpeed: function() { return Studio.slowJsExecutionFactor === 1; },
       onExecutionError: handleExecutionError,
     });
     if (!Studio.JSInterpreter.initialized()) {
@@ -2694,11 +2753,18 @@ Studio.onPuzzleComplete = function() {
   Studio.clearEventHandlersKillTickLoop();
   Studio.movementAudioOff();
 
+  if (level.gridAlignedMovement && Studio.JSInterpreter) {
+    // If we've been selecting code as we run, we need to call selectCurrentCode()
+    // one last time to remove the highlight on the last line of code:
+    Studio.JSInterpreter.selectCurrentCode();
+  }
+
   // If we know they succeeded, mark levelComplete true
   var levelComplete = (Studio.result === ResultType.SUCCESS);
 
-  // If preExecutionFailure testResults should already be set
-  if (!Studio.preExecutionFailure) {
+  // If preExecutionFailure or progressConditionTestResult, then testResults
+  // should already be set
+  if (!Studio.preExecutionFailure && ! Studio.progressConditionTestResult) {
     // If the current level is a free play, always return the free play
     // result type
     Studio.testResults = level.freePlay ? TestResults.FREE_PLAY :
@@ -3456,9 +3522,9 @@ Studio.updateFloatingScore = function() {
   if (opacity > 0) {
     opacity += constants.floatingScoreChangeOpacity;
     floatingScore.setAttribute('opacity', opacity);
+    y += constants.floatingScoreChangeY;
+    floatingScore.setAttribute('y', y);
   }
-  y += constants.floatingScoreChangeY;
-  floatingScore.setAttribute('y', y);
 };
 
 Studio.showCoordinates = function() {
@@ -3497,12 +3563,12 @@ Studio.queueCmd = function (id, name, opts) {
 //
 // Execute an entire command queue (specified with the name parameter)
 //
-// If Studio.yieldThisTick is true, execution of commands will stop
+// If Studio.yieldExecutionTicks is positive, execution of commands will stop
 //
 
 Studio.executeQueue = function (name, oneOnly) {
   Studio.eventHandlers.forEach(function (handler) {
-    if (Studio.yieldThisTick) {
+    if (Studio.yieldExecutionTicks > 0) {
       return;
     }
     if (handler.name === name && handler.cmdQueue.length) {
@@ -3513,7 +3579,7 @@ Studio.executeQueue = function (name, oneOnly) {
         } else {
           break;
         }
-        if (Studio.yieldThisTick) {
+        if (Studio.yieldExecutionTicks > 0) {
           break;
         }
       }
@@ -5019,15 +5085,20 @@ Studio.moveSingle = function (opts) {
   if (level.gridAlignedMovement) {
     if (wallCollision || playspaceEdgeCollision) {
       sprite.addAction(new spriteActions.GridMoveAndCancel(
-          deltaX, deltaY, level.slowJsExecutionFactor));
+          deltaX, deltaY, level.slowExecutionFactor));
     } else {
       sprite.addAction(new spriteActions.GridMove(
-          deltaX, deltaY, level.slowJsExecutionFactor));
+          deltaX, deltaY, level.slowExecutionFactor));
     }
 
-    Studio.yieldThisTick = true;
+    Studio.yieldExecutionTicks += (1 + Studio.gridAlignedExtraPauseSteps);
     if (Studio.JSInterpreter) {
+      // Stop executing the interpreter in a tight loop and yield the current
+      // execution tick:
       Studio.JSInterpreter.yield();
+      // Highlight the code in the editor so the student can see the progress
+      // of their program:
+      Studio.JSInterpreter.selectCurrentCode();
     }
 
     Studio.movementAudioOn();
@@ -5227,7 +5298,7 @@ Studio.conditionSatisfied = function(required) {
     var valueName = valueNames[k];
     var value = required[valueName];
 
-    if (valueName === 'timedOut' && Studio.timedOut() != value) {
+    if (valueName === 'timedOut' && tracked.timedOut != value) {
       return false;
     }
 
@@ -5236,6 +5307,34 @@ Studio.conditionSatisfied = function(required) {
     }
 
     if (valueName === 'collectedItemsBelow' && tracked.removedItemCount >= value) {
+      return false;
+    }
+
+    if (valueName === 'collectedSpecificItemsAtOrAbove' &&
+        (tracked.removedItems[value.className] === undefined ||
+         tracked.removedItems[value.className] < value.count)) {
+      return false;
+    }
+
+    if (valueName == 'collectedSpecificItemsBelow' &&
+        tracked.removedItems[value.className] !== undefined &&
+        tracked.removedItems[value.className] >= value.count) {
+      return false;
+    }
+
+    if (valueName === 'createdSpecificItemsAtOrAbove' &&
+        (tracked.createdItems[value.className] === undefined ||
+         tracked.createdItems[value.className] < value.count)) {
+      return false;
+    }
+
+    if (valueName == 'createdSpecificItemsBelow' &&
+        tracked.createdItems[value.className] !== undefined &&
+        tracked.createdItems[value.className] >= value.count) {
+      return false;
+    }
+
+    if (valueName == 'gotAllItems' && tracked.gotAllItems !== value) {
       return false;
     }
 
@@ -5251,7 +5350,7 @@ Studio.conditionSatisfied = function(required) {
       return false;
     }
 
-    if (valueName === 'allGoalsVisited' && Studio.allGoalsVisited() !== value) {
+    if (valueName === 'allGoalsVisited' && tracked.allGoalsVisited !== value) {
       return false;
     }
 
@@ -5310,7 +5409,15 @@ var checkFinished = function () {
 
   if (progressConditionResult) {
     Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
-    Studio.message = utils.valueOr(progressConditionResult.message, null);
+    if (!progressConditionResult.success && progressConditionResult.canPass) {
+      Studio.testResults = TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+      Studio.progressConditionTestResult = true;
+    }
+    var progressMessage = progressConditionResult.message;
+    if (studioApp.isUsingBlockly()) {
+      progressMessage = progressConditionResult.blocklyMessage || progressMessage;
+    }
+    Studio.message = utils.valueOr(progressMessage, null);
     Studio.pauseInterpreter = utils.valueOr(progressConditionResult.pauseInterpreter, false);
     return true;
   }
@@ -5335,9 +5442,14 @@ var checkFinished = function () {
     return true;
   }
 
-  if (Studio.timedOut()) {
-    Studio.result = ResultType.FAILURE;
-    return true;
+  // Don't process timedOut condition here if we have progressConditions to take care of
+  // things, which can include a timedOut.  This avoids having this condition kick in earlier
+  // than level.progressConditions can take care of a timedOut.
+  if (!level.progressConditions) {
+    if (Studio.timedOut()) {
+      Studio.result = ResultType.FAILURE;
+      return true;
+    }
   }
 
   return false;

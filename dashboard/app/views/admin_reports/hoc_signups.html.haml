@@ -1,0 +1,39 @@
+- content_for :head do
+  %script{src:'https://www.google.com/jsapi'}
+
+%h1
+  Hour of Code 2015 Signups
+
+.by_day
+  #chart_by_day
+  %table
+    %tr
+      %th Day
+      %th Count
+    - signups_by_day.each do |day|
+      %tr
+        %td
+          %span= day[0]
+        %td
+          %span= day[1]
+
+- content_for :body_scripts do
+  :javascript
+    // Load the Visualization API and the appropriate packages, setting a callback
+    // to run when the API is loaded.
+    google.load('visualization', '1.0', {'packages':['corechart']});
+    google.setOnLoadCallback(drawChart);
+    var signups_by_day = #{signups_by_day.try(:to_json)}
+    // The callback that creates and populates the data table, instantiates the
+    // chart, and draws it.
+    function drawChart() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Date');
+      data.addColumn('number', 'Count');
+      data.addRows(signups_by_day);
+
+      // Instantiate and draw our chart, passing in some options.
+      var options = {'title': 'HOC 2015 Signups By Day', 'width':400, 'height':300};
+      var chart = new google.visualization.LineChart(document.getElementById('chart_by_day'));
+      chart.draw(data, options);
+    }

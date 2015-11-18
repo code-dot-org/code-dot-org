@@ -143,6 +143,10 @@ module LevelsHelper
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
 
+    if PuzzleRating.enabled?
+      view_options(puzzle_ratings_url: puzzle_ratings_path)
+    end
+
     if @level.is_a? Blockly
       @app_options = blockly_options
     elsif @level.is_a? DSLDefined
@@ -164,6 +168,7 @@ module LevelsHelper
     use_droplet = app_options[:droplet]
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
+    use_phaser = @level.game == Game.craft
     use_blockly = !use_droplet && !use_netsim
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
@@ -173,6 +178,7 @@ module LevelsHelper
                use_netsim: use_netsim,
                use_blockly: use_blockly,
                use_applab: use_applab,
+               use_phaser: use_phaser,
                hide_source: hide_source,
                static_asset_base_path: app_options[:baseUrl]
            }

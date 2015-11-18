@@ -7,15 +7,32 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
       "dropdown": null,
       "getText": null,
       "textLabel": null,
       "setText": null,
       "declareAssign_x_promptNum": null,
       "ifBlock": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null,
       "equalityOperator": null,
+      "inequalityOperator": null,
+      "greaterThanOperator": null,
+      "greaterThanOrEqualOperator": null,
+      "lessThanOperator": null,
+      "lessThanOrEqualOperator": null,
       "declareAssign_x": null,
-      "declareAssign_str_hello_world": null
+      "declareAssign_str_hello_world": null,
+      "console.log": null
     },
     "edit_code": true,
     "embed": "false",
