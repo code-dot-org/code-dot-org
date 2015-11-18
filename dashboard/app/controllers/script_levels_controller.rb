@@ -5,6 +5,10 @@ class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
 
+  # Disable the session if this a cachable request.
+  session :off, :if =>
+    Proc.new {|request| ScriptLevelsController.is_cachable_request?(request)}
+
   # Default s-maxage to use for script level pages which are configured as
   # publicly cacheable.  Used if the DCDO.public_proxy_max_age is not defined.
   DEFAULT_PUBLIC_PROXY_MAX_AGE = 3.minutes
@@ -13,6 +17,13 @@ class ScriptLevelsController < ApplicationController
   # publicly cacheable. Used if the DCDO.public_max_age is not defined.
   # This is set to twice the proxy max-age because of a bug in CloudFront.
   DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
+
+  # Return true if request is one that can be publicly cached.
+  def self.is_cachable_request?(request)
+    script_id = request.params[:script_id]
+    script = Script.get_from_cache(script_id) if script_id
+    script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
+  end
 
   def reset
     authorize! :read, ScriptLevel
@@ -199,5 +210,11 @@ class ScriptLevelsController < ApplicationController
       failure: milestone_response(script_level: @script_level, solved?: false)
     }
     render 'levels/show', formats: [:html]
+  end
+
+protected
+  # Don't try to generate the CSRF token for forms on this page.
+  def protect_against_forgery?
+    return false
   end
 end
