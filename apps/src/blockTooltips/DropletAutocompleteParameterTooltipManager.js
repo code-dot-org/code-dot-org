@@ -129,16 +129,19 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
     // autocomplete only:
     var dropdownCompletions = [];
     dropdownList.forEach(function (listValue) {
-      var valString;
+      var valString, valClick;
       if (typeof listValue === 'string') {
         valString = listValue;
       } else {
         // Support the { text: x, display: x } form, but ignore the display field
         valString = listValue.text;
+        // Tack on the special click handler if present
+        valClick = listValue.click;
       }
       dropdownCompletions.push({
         name: 'dropdown',
-        value: valString
+        value: valString,
+        click: valClick
       });
     });
     editor.completer.overrideCompleter = {
@@ -226,6 +229,10 @@ DropletAutocompleteParameterTooltipManager.installAceCompleterHooks_ = function 
     DropletAutocompleteParameterTooltipManager.originalGatherCompletions = editor.completer.gatherCompletions;
     editor.completer.gatherCompletions = DropletAutocompleteParameterTooltipManager.gatherCompletions;
   }
+  if (editor.completer.insertMatch !== DropletAutocompleteParameterTooltipManager.insertMatch) {
+    DropletAutocompleteParameterTooltipManager.originalInsertMatch = editor.completer.insertMatch;
+    editor.completer.insertMatch = DropletAutocompleteParameterTooltipManager.insertMatch;
+  }
 };
 
 DropletAutocompleteParameterTooltipManager.gatherCompletions = function (editor, callback) {
@@ -247,6 +254,26 @@ DropletAutocompleteParameterTooltipManager.showPopup = function (editor) {
   DropletAutocompleteParameterTooltipManager.originalShowPopup.call(this, editor);
   this.overrideCompleter = null;
 };
+
+DropletAutocompleteParameterTooltipManager.insertMatch = function (data) {
+  // Modify normal ace AutoComplete behavior by calling our special 'click' handler when supplied
+  // and passing it the default implementation of insertMatch() to be called within
+  if (!data) {
+    data = this.popup.getData(this.popup.getRow());
+  }
+  if (!data) {
+    return false;
+  }
+
+  if (data.click) {
+    // Note: we drop the data parameter supplied. The click function will pass a string to
+    // our bound default implementation of insertMatch() instead of the data object
+    data.click(DropletAutocompleteParameterTooltipManager.originalInsertMatch.bind(this));
+  } else {
+    DropletAutocompleteParameterTooltipManager.originalInsertMatch.call(this, data);
+  }
+};
+
 
 /**
  * @param {boolean} enabled if tooltips should be enabled
