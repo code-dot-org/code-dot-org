@@ -146,6 +146,7 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
         errorString = funcName + "() " + varName + " parameter refers to an id (" + id +
             ") which is already in use outside of Applab. Choose a different id.";
         outputError(errorString, ErrorLevel.ERROR, line);
+        throw new Error("Cannot create element - element ID is in use outside of applab");
       } else {
         errorString = funcName + "() " + varName +
             " parameter refers to an id (" + id + ") which " +
@@ -203,6 +204,7 @@ applabCommands.button = function (opts) {
 };
 
 applabCommands.image = function (opts) {
+  apiValidateDomIdExistence(opts, 'image', 'id', opts.elementId, false);
   apiValidateType(opts, 'image', 'id', opts.elementId, 'string');
   apiValidateType(opts, 'image', 'url', opts.src, 'string');
 

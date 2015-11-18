@@ -155,13 +155,16 @@ module.exports = {
       runBeforeClick: function (assert) {
         testUtils.runOnAppTick(Applab, 2, function () {
           var debugOutput = document.getElementById('debug-output');
-          assert.equal(debugOutput.textContent, "ERROR: Line: 1: button() id parameter refers to an id (runButton) which is already in use outside of Applab. Choose a different id.");
+          assert.equal(debugOutput.textContent, "ERROR: Line: 1: button() id parameter refers to an id (runButton) " +
+              "which is already in use outside of Applab. Choose a different id.\nERROR: Line: 1: Error: Cannot " +
+              "create element - element ID is in use outside of applab");
+          assert(!$('#divApplab #runButton')[0], 'No button named runButton should appear in applab');
           Applab.onPuzzleComplete();
         });
       },
       expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
+        result: false,
+        testResult: TestResults.RUNTIME_ERROR_FAIL
       },
     },
     {
