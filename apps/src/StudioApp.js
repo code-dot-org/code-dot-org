@@ -29,6 +29,7 @@ var FeedbackUtils = require('./feedback');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
 var codegen = require('./codegen');
+var authoredHintUtils = require('./authoredHintUtils');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -150,6 +151,16 @@ var StudioApp = function () {
   this.maxRecommendedBlocksToFlag_ = 1;
 
   /**
+   * @typedef {Object} AuthoredHint
+   * @property {string} content
+   * @property {boolean} alreadySeen
+   */
+  /**
+  * @type {!AuthoredHint[]}
+  */
+  this.authoredHints_ = [];
+
+  /**
   * The number of attempts (how many times the run button has been pressed)
   * @type {?number}
   */
@@ -266,6 +277,10 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
+  if (true) {
+    authoredHintUtils.submitHints('/asdf');
+  }
+
   // Record time at initialization.
   this.initTime = new Date().getTime();
 
@@ -379,7 +394,14 @@ StudioApp.prototype.init = function(config) {
     }
     var bubble = document.getElementById('bubble');
     dom.addClickTouchEvent(bubble, _.bind(function() {
-      this.showInstructions_(config.level, false);
+      var hintsToShow = this.authoredHints_.filter(function(hint){
+        return hint.alreadySeen === false;
+      });
+      if (hintsToShow.length > 0) {
+        this.showHint_(hintsToShow[0], config);
+      } else {
+        this.showInstructions_(config.level, false);
+      }
     }, this));
   }
 
@@ -831,16 +853,101 @@ StudioApp.prototype.createModalDialog = function(options) {
   return this.feedback_.createModalDialog(options);
 };
 
+StudioApp.prototype.recordUserViewedHint_ = function (hint, config) {
+  hint.alreadySeen = true;
+
+  authoredHintUtils.recordUnfinishedHint({
+    // level info
+    script_id: config.scriptId,
+    level_id: config.level.scriptLevelId,
+
+    // hint info
+    hint_id: hint.hintId,
+    hint_class: hint.hintClass,
+    hint_type: hint.hintType,
+
+    // attempt info
+    time: ((new Date().getTime()) - this.initTime),
+    attempt: this.attempts,
+    test_result: this.lastTestResult,
+    activity_id: this.response && this.response.activity_id
+  });
+};
+
+StudioApp.prototype.onReportComplete = function (response) {
+  this.response = response;
+  authoredHintUtils.finishHints({
+    time: ((new Date().getTime()) - this.initTime),
+    attempt: this.attempts,
+    test_result: this.lastTestResult,
+    activity_id: response.activity_id
+  });
+};
+
+StudioApp.prototype.showHint_ = function (hint, config) {
+
+  $('#prompt-icon').qtip({
+    content: {
+      text: function(html, api) {
+        var container = document.createElement('div');
+        container.innerHTML = require('./templates/hintSelect.html.ejs')();
+
+        var instructionsButton = container.querySelector('#inst');
+        dom.addClickTouchEvent(instructionsButton, function () {
+          this.showInstructions_(config.level, false);
+          api.destroy();
+        }.bind(this));
+
+        var hintButton = container.querySelector('#newhint');
+        dom.addClickTouchEvent(hintButton, function () {
+          api.set('content.text', hint.content);
+          this.recordUserViewedHint_(hint, config);
+        }.bind(this));
+
+        return container;
+      }.bind(this),
+      title: {
+        button: $('<div class="tooltip-x-close"/>')
+      }
+    },
+    style: {
+      classes: "cdo-qtips",
+      tip: {
+        width: 20,
+        height: 20
+      }
+    },
+    position: {
+      my: "bottom left",
+      at: "top right"
+    },
+    hide: {
+      event: 'click mousedown touchstart unfocus'
+    },
+    show: false // don't show on mouseover
+  }).qtip('show');
+
+};
+
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
   var renderedMarkdown;
   var scrollableSelector;
   var headerElement;
+  var authoredHints;
 
   var puzzleTitle = msg.puzzleTitle({
     stage_total: level.stage_total,
     puzzle_number: level.puzzle_number
   });
+
+  if (level.authoredHints) {
+    authoredHints = this.authoredHints_.filter(function(hint){
+      return hint.alreadySeen;
+    }).map(function(hint){
+      return hint.content;
+    });
+  }
 
   if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
     renderedMarkdown = marked(level.markdownInstructions);
@@ -859,6 +966,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     instructions: level.instructions,
     instructions2: level.instructions2,
     renderedMarkdown: renderedMarkdown,
+    authoredHints: authoredHints,
     markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
     aniGifURL: level.aniGifURL
   });
@@ -1254,11 +1362,15 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
 */
 StudioApp.prototype.report = function(options) {
   // copy from options: app, level, result, testResult, program, onComplete
-  var report = options;
-  report.pass = this.feedback_.canContinueToNextLevel(options.testResult);
-  report.time = ((new Date().getTime()) - this.initTime);
-  report.attempt = this.attempts;
-  report.lines = this.feedback_.getNumBlocksUsed();
+  var report = $.extend({}, options, {
+    pass: this.feedback_.canContinueToNextLevel(options.testResult),
+    time: ((new Date().getTime()) - this.initTime),
+    attempt: this.attempts,
+    lines: this.feedback_.getNumBlocksUsed(),
+  });
+
+  this.lastTestResult = options.testResult;
+
 
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
@@ -1394,6 +1506,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
+  this.authoredHints_ = config.level.authoredHints || [];
   this.startBlocks_ = config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;

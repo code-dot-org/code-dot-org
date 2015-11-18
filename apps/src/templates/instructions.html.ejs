@@ -2,7 +2,9 @@
   <p class='dialog-title'><%= locals.puzzleTitle %></p>
 <% } -%>
 <% if (locals.renderedMarkdown) { -%>
-  <div class='instructions-markdown<% if (locals.markdownClassicMargins) { -%> classic-margins<% } -%>'><%- locals.renderedMarkdown %></div>
+  <div class='instructions-markdown<% if (locals.markdownClassicMargins) { -%> classic-margins<% } -%>'>
+    <%- locals.renderedMarkdown %>
+  </div>
 <% } else { -%>
   <% if (locals.instructions) { -%>
     <p><%= locals.instructions %></p>
@@ -14,3 +16,19 @@
 <% if (locals.aniGifURL) { -%>
   <img class="aniGif example-image" src='<%= locals.aniGifURL %>'/>
 <% } -%>
+
+<% if (locals.authoredHints && locals.authoredHints.length) { -%>
+<h4 class="hint">
+  <details>
+    <summary role="button" aria-expanded="true"><b>Hints</b></summary>
+    <% for (var i = 0; i < locals.authoredHints.length; i++) { %>
+      <h5 class="hintInner">
+        <details>
+          <summary role="button" aria-expanded="false"><b>Hint #<%- i %></b></summary>
+          <%- locals.authoredHints[i] %>
+        </details>
+      </h5>
+    <% } %>
+  </details>
+</h4>
+<% } %>

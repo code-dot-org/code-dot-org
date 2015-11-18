@@ -1,3 +1,5 @@
+/* global marked */
+
 var utils = require('./utils');
 var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
@@ -40,6 +42,24 @@ module.exports = function(app, levels, options) {
     if (options.level.levelBuilderRecommendedBlocks) {
       level.recommendedBlocks = requiredBlockUtils.makeTestsFromBuilderRequiredBlocks(
           options.level.levelBuilderRecommendedBlocks);
+    }
+
+    if (marked && options.level.levelBuilderAuthoredHints) {
+      var hints;
+      try {
+        hints = JSON.parse(level.levelBuilderAuthoredHints);
+      } catch (e) {
+        hints = [];
+      }
+      level.authoredHints = hints.map(function (hint) {
+        return {
+          content: marked(hint.hint_markdown),
+          hintId: hint.hint_id,
+          hintClass: hint.hint_class,
+          hintType: hint.hint_type,
+          alreadySeen: false
+        };
+      });
     }
 
     options.level = level;
