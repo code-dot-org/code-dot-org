@@ -2,6 +2,7 @@ name 'U3L20 - combining And and Or explanation'
 title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
+css 'unplugged'
 markdown <<MARKDOWN
 # Combining AND and OR
 
@@ -29,14 +30,13 @@ Even more unfortunately, <code>(day == "Tuesday" || "Thursday")</code> **doesn't
 <p></p>
 <details>
 <summary><strong>(optional) Read more about using single values in if statements</strong> (click to expand)</summary>
-
 In JavaScript a value on its own, when used in an if statement is *always true*.  For example: <code>if("Thursday")</code> is true. <code>if(15)</code>...<code>if(23423)</code> both true.  This means that <code>if( day=="Tuesday" || "Thursday")</code> is also always true.  
-<p></p>
+<br>
 Some single values such as <code>0</code> and the empty string <code>""</code> evaluate to <strong>false</strong> inside an if statement.
-<p></p>
+<br>
 There are other examples of bizarre expressions that evaluate to true or false when used inside an if statement but almost none of them are used intentionally.
 </details>
-<p></p>
+<br>
 
 <img src="https://images.code.org/addc9f770e5f25d3be4d656acabfd1f8-image-1446485780702.png" style="width: 200px; float: right">
 
@@ -48,5 +48,5 @@ Most of the time you're going to use an expression that uses one of the comparis
 
 Let's now try using an **AND** and an **OR** in one combined expression... 
 
-
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
