@@ -30,6 +30,7 @@ var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
 var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
+var logToCloud = require('./logToCloud');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -285,14 +286,20 @@ StudioApp.prototype.init = function(config) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
         var result;
+        var nonDropletError = false;
+        // are we trying to toggle from blocks to text (or the opposite)
+        var fromBlocks = this.editor.currentlyUsingBlocks;
         try {
           result = this.editor.toggleBlocks();
         } catch (err) {
+          nonDropletError = true;
           result = {error: err};
         }
         if (result && result.error) {
-          // TODO (cpirich) We could extract error.loc to determine where the
-          // error occurred and highlight that error
+          logToCloud.addPageAction(logToCloud.PageAction.DropletTransitionError, {
+            dropletError: !nonDropletError,
+            fromBlocks: fromBlocks
+          });
           this.feedback_.showToggleBlocksError(this.Dialog);
         }
         this.onDropletToggle_();
@@ -990,7 +997,7 @@ function resizePinnedBelowVisualizationArea() {
   if (designToggleRow) {
     top += $(designToggleRow).outerHeight(true);
   }
-  
+
   if (visualization) {
     top += $(visualization).outerHeight(true);
   }
