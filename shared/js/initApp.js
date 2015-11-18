@@ -55,7 +55,7 @@ window.apps = {
           // timestamp initially (it will be updated with a timestamp from the server
           // if we get a response.
           lastSavedProgram = report.program;
-          dashboard.clientState.writeSourceForLevel(appOptions.level.scriptLevelId, +new Date, lastSavedProgram);
+          dashboard.clientState.writeSourceForLevel(appOptions.level.scriptLevelId, +new Date(), lastSavedProgram);
         }
         report.scriptName = appOptions.scriptName;
         report.fallbackResponse = appOptions.report.fallback_response;
@@ -122,7 +122,7 @@ window.apps = {
     // Load locally cached version if it's newer than the version from the server.
     var cachedProgram = dashboard.clientState.sourceForLevel(
         appOptions.level.scriptLevelId, appOptions.level.lastAttemptTimestamp);
-    if (cachedProgram !== null) {
+    if (cachedProgram !== undefined) {
       appOptions.level.lastAttempt = cachedProgram;
     }
 

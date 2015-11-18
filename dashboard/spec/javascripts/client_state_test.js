@@ -10,6 +10,16 @@ describe("clientState#trackProgress", function() {
     state.reset();
   });
 
+  it("returns cached levelSource if timestamp is newer", function () {
+    state.writeSourceForLevel(1, 200, 'abc');
+    state.sourceForLevel(1, 100).should.equal('abc');
+  });
+
+  it("returns `undefined` if timestamp is older", function () {
+    state.writeSourceForLevel(2, 100, 'abc');
+    assert(state.sourceForLevel(2, 200) === undefined);
+  });
+
   it("records level progress and line counts when level is completed", function() {
     state.levelProgress(1).should.equal(0);
     state.levelProgress(2).should.equal(0);
