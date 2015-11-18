@@ -45,7 +45,7 @@
         signups_by_day.push([data_by_day[i][0], data_by_day[i][1][0], data_by_day[i][1][1]]);
         cumulatives_by_day.push([data_by_day[i][0], cumulatives_by_day[i-1][1] + data_by_day[i][1][0], cumulatives_by_day[i-1][2] + data_by_day[i][1][1]]);
       }
-  
+ 
       // Load the Visualization API and the appropriate packages, setting a callback
       // to run to create the charts when the API is loaded.
       google.load('visualization', '1.0', {'packages':['corechart']});
@@ -61,7 +61,7 @@
         data_table.addColumn('number', 'Count 2014');
         data_table.addColumn('number', 'Count 2015');
         data_table.addRows(chart_data);
-  
+ 
         // Instantiate and draw our chart, passing in some options.
         var options = {'title': chart_title, 'width': 500, 'height': 300};
         var chart = new google.visualization.LineChart(document.getElementById(chart_dom_element));
