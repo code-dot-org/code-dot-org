@@ -10,7 +10,7 @@
   }
 
 %h1
-  Hour of Code 2015 Signups
+  Hour of Code Signups
 
 .by_day
   %table
@@ -43,7 +43,7 @@
       cumulatives_by_day = [[data_by_day[0][0], data_by_day[0][1][0], data_by_day[0][1][1]]];
       for (var i = 1; i < data_by_day.length; i++) {
         signups_by_day.push([data_by_day[i][0], data_by_day[i][1][0], data_by_day[i][1][1]]);
-        cumulates_by_day.push([data_by_day[i][0], cumulatives_by_day[i-1][1] + data_by_day[i][1][0], cumulatives_by_day[i-1][2] + data_by_day[i][1][1]]);
+        cumulatives_by_day.push([data_by_day[i][0], cumulatives_by_day[i-1][1] + data_by_day[i][1][0], cumulatives_by_day[i-1][2] + data_by_day[i][1][1]]);
       }
   
       // Load the Visualization API and the appropriate packages, setting a callback

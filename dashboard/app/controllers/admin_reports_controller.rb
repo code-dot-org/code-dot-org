@@ -209,7 +209,7 @@ class AdminReportsController < ApplicationController
     # Get the HOC 2014 and HOC 2015 signup counts by day, deduped by email and name.
     # We restrict by dates to avoid long trails of (inappropriate?) signups.
     data_2014 = DB[:forms].
-        where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2014', '2014-07-31', '2014-12-31').
+        where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2014', '2014-08-01', '2015-01-01').
         group(:name, :email).
         # TODO(asher): Is this clumsy notation really necessary? Is Sequel
         # really this stupid? Also below.
@@ -218,14 +218,14 @@ class AdminReportsController < ApplicationController
         all.
         map{|row| [row[:created_at_day].to_s, row[:count].to_i]}
     data_2015 = DB[:forms].
-        where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2015', '2015-07-31', '2015-12-31').
+        where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2015', '2015-08-01', '2016-01-01').
         group(:name, :email).
         group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
         order(:created_at_day).
         all.
         map{|row| [row[:created_at_day].to_s, row[:count].to_i]}
 
-    # Construct the a hash of MM-DD dates having data to [count2015, count2014].
+    # Construct the hash {MM-DD => [count2014, count2015]}.
     # Start by constructing the key space as the union of the MM-DD dates for
     # data_2014 and data_2015.
     require 'set'
