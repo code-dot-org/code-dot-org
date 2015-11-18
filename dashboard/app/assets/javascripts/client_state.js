@@ -51,7 +51,7 @@ dashboard.clientState.sourceForLevel = function (scriptLevelId, timestamp) {
   var data = localStorage.getItem('source' + scriptLevelId);
   if (data) {
     var parsed = JSON.parse(data);
-    if (parsed.timestamp > timestamp) {
+    if (!timestamp || parsed.timestamp > timestamp) {
       return parsed.source;
     }
   }
