@@ -1,3 +1,4 @@
+@import url(colpick.css);
 #divApplab, #designModeViz, .draggingParent {
   overflow: hidden;
   outline: none;
@@ -24,15 +25,21 @@
   #divApplab div, #designModeViz div, .draggingParent div {
     overflow: hidden; }
   #divApplab div[contenteditable=true], #designModeViz div[contenteditable=true], .draggingParent div[contenteditable=true] {
-    overflow: auto; }
+    overflow: auto;
+    word-wrap: break-word;
+    /* needed by Firefox */
+    -moz-user-select: text; }
   #divApplab button, #designModeViz button, .draggingParent button {
     padding: 7px 12px;
     margin: 2px;
     font-size: 14px; }
   #divApplab input, #divApplab div[contenteditable=true], #divApplab button, #divApplab select, #divApplab img, #divApplab label, #designModeViz input, #designModeViz div[contenteditable=true], #designModeViz button, #designModeViz select, #designModeViz img, #designModeViz label, .draggingParent input, .draggingParent div[contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent img, .draggingParent label {
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
     line-height: 1.2em;
     margin: 5px; }
+    #divApplab input p, #divApplab div[contenteditable=true] p, #divApplab button p, #divApplab select p, #divApplab img p, #divApplab label p, #designModeViz input p, #designModeViz div[contenteditable=true] p, #designModeViz button p, #designModeViz select p, #designModeViz img p, #designModeViz label p, .draggingParent input p, .draggingParent div[contenteditable=true] p, .draggingParent button p, .draggingParent select p, .draggingParent img p, .draggingParent label p {
+      line-height: inherit; }
   #divApplab .chart, #designModeViz .chart, .draggingParent .chart {
     position: absolute;
     display: block;
@@ -65,7 +72,8 @@
       border: 0 !important; }
   #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div[contenteditable=true], #designModeViz.appModern input[type=text], #designModeViz.appModern input:not([type]), #designModeViz.appModern div[contenteditable=true], .draggingParent input[type=text], .draggingParent input:not([type]), .draggingParent div[contenteditable=true] {
     border: 1px solid #999;
-    padding: 10px; }
+    padding: 5px;
+    /* padding clips text in text inputs in Firefox */ }
   #divApplab.appModern select, #designModeViz.appModern select, .draggingParent select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -87,6 +95,8 @@
 
 #designModeViz.appModern img[src=''], #designModeViz.appModern canvas, #designModeViz.appModern .chart, .draggingParent img[src=''], .draggingParent canvas, .draggingParent .chart {
   border: 5px solid #fff;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   outline: 1px solid #bdc3c7;
   outline-offset: -1px; }
 
@@ -251,18 +261,41 @@ div#visualizationResizeBar {
 #visualizationColumn.chromelessShare #designToggleRow, #visualizationColumn.chromelessShare #gameButtons {
   display: none; }
 
-#divApplab, #designModeViz {
+#divApplab, #designModeViz, #visualizationOverlay {
   overflow: hidden;
   outline: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none; }
+
+#divApplab {
   position: relative;
   z-index: 1;
-  background-color: white;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
+  background-color: white; }
+
+#visualizationOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius=0); }
+
+.crosshair-overlay line {
+  stroke: #aaa;
+  stroke-width: 1.8px;
+  stroke-dasharray: 6.5px; }
+
+.crosshair-overlay rect {
+  stroke: #bdc3c7;
+  stroke-width: 2px;
+  fill: rgba(255, 255, 255, 0.8); }
+
+.crosshair-overlay text {
+  text-anchor: middle; }
 
 #divApplab canvas, #designModeViz canvas {
   position: absolute;
@@ -270,6 +303,32 @@ div#visualizationResizeBar {
   top: 0px;
   left: 0px;
   z-index: -1; }
+
+/* When not running, show default arrow cursor for all UI elements
+   so that they do not look active. */
+#divApplab.notRunning button, #divApplab.notRunning label, #divApplab.notRunning select, #divApplab.notRunning input, #divApplab.notRunning img, #divApplab.notRunning div.chart, #divApplab.notRunning canvas, #divApplab.notRunning div[contenteditable=true] {
+  cursor: default; }
+
+#divApplab.notRunning.withCrosshair {
+  cursor: crosshair; }
+  #divApplab.notRunning.withCrosshair button, #divApplab.notRunning.withCrosshair label, #divApplab.notRunning.withCrosshair select, #divApplab.notRunning.withCrosshair input, #divApplab.notRunning.withCrosshair img, #divApplab.notRunning.withCrosshair div.chart, #divApplab.notRunning.withCrosshair canvas, #divApplab.notRunning.withCrosshair div[contenteditable=true] {
+    cursor: crosshair; }
+
+/* In design mode, show grab/grabbing cursor for all UI elements
+ * so that they look draggable. */
+#designModeViz button, #designModeViz label, #designModeViz select, #designModeViz input, #designModeViz img, #designModeViz div.chart, #designModeViz canvas, #designModeViz div[contenteditable=true] {
+  cursor: move;
+  /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab; }
+  #designModeViz button:active, #designModeViz label:active, #designModeViz select:active, #designModeViz input:active, #designModeViz img:active, #designModeViz div.chart:active, #designModeViz canvas:active, #designModeViz div[contenteditable=true]:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing; }
+
+#designModeViz.withCrosshair {
+  cursor: crosshair; }
 
 #visualizationResizeBar {
   margin-left: 2px;

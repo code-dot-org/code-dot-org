@@ -45,6 +45,9 @@ title: Review Hour of Code special events
 -if country == 'us' && state_code
   -results.each do |result|
     -events << result if (result['special_event_flag_b'] == "1" && !result['special_event_details_s'].nil_or_empty? && events.count < 100 && result['location_state_code_s'] == state_code.upcase)
+-if country == 'all'
+  -results.each do |result|
+    -events << result if (result['special_event_flag_b'] == "1" && !result['special_event_details_s'].nil_or_empty? && events.count < 100)
 -else
   -results.each do |result|
     -events << result if (result['special_event_flag_b'] == "1" && !result['special_event_details_s'].nil_or_empty? && events.count < 100 && result['location_country_code_s'] == country.upcase)

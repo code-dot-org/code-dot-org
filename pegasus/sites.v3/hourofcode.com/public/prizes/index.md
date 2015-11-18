@@ -44,6 +44,55 @@ One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 wo
 
 <% end %>
 
+<% if @country == 'us' || @country == 'ca'  %>
+
+
+
+## 30 classrooms will win a video chat with a guest speaker
+
+Lucky classrooms will have the opportunity to talk with guest speakers who will share how computer science has impacted their lives and careers. 
+
+[col-33]
+
+![image](/images/fit-175/Kevin_Systrom.jpg)<br/>
+Kevin Systrom <br/> (co-founder and CEO of Instagram)
+
+[/col-33]
+
+[col-33]
+
+![image](/images/fit-175/Dao_Nguyen.jpg)<br/>
+Dao Nguyen <br/> (Publisher, Buzzeed)
+
+[/col-33]
+
+[col-33]
+
+![image](/images/fit-175/Aloe_Blacc.jpg)<br/>
+Aloe Blacc <br/> (Recording artist)
+
+[/col-33]
+
+<br/>
+
+[col-33]
+
+![image](/images/fit-175/Julie_Larson-Green.jpg)<br/>
+Julie Larson-Green <br/> (Chief Experience Officer, Microsoft)
+
+[/col-33]
+
+[col-33]
+
+![image](/images/fit-175/Hadi-Partovi.jpg)<br/>
+Hadi Partovi <br/> (Code.org co-founder)
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
+<% end %>
+
 <% if @country == 'us' %>
 
 
@@ -62,17 +111,12 @@ One lucky classroom will win the grand prize – a trip to San Francisco, CA for
 
 
 
-## 100 classrooms will win a programmable BB-8 droid robot by Sphero
-In honor of Hour of Code tutorial "Star Wars: Building a Galaxy with Code," 100 participating classrooms in the United States or Canada will a BB-8™ App-enabled Droid that students can program. Sign up your Hour of Code event to qualify. [Learn more about BB-8 from Sphero](http://sphero.com/starwars).
+## 100 classrooms will win programmable robots including a BB-8 droid robot by Sphero
+In honor of Hour of Code tutorial "Star Wars: Building a Galaxy with Code," 100 participating classrooms in the United States or Canada will a set of four Sphero 2.0 robots plus a BB-8™ App-enabled Droid that students can program. Sign up your Hour of Code event to qualify. [Learn more about BB-8 from Sphero](http://sphero.com/starwars) and [about Sphero education](http://sphero.com/education).
 
 <img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-220x160/bb8.png"/>
 
 <img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-200x160/bb8-girl.jpg"/>
-
-<p style="clear:both; height: 0px;">&nbsp;</p>
-
-## 100 classrooms will win a set of programmable robots by Sphero
-100 participating classrooms in the United States or Canada will win a set of Sphero 2.0 robots (each set includes four) that students can program. Sign up your Hour of Code event to qualify. [Learn more about Sphero education](http://sphero.com/education). 
 
 <img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-300x160/sphero-robot.png"/>
 
@@ -119,6 +163,13 @@ To qualify, you must complete the [Hardware Application form](<%= resolve_url('/
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (<%= campaign_date('short') %>), can I still qualify for prizes?
 Yes, in the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup') %>) include the dates that your whole school is participating.
+
+<% end %>
+
+<% if @country == 'us' || @country == 'ca' %>
+
+## Video chat with a guest speaker:
+Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligible to win.
 
 <% end %>
 

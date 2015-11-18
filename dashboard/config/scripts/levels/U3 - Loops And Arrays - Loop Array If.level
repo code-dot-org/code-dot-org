@@ -8,7 +8,6 @@
     "skin": "applab",
     "code_functions": {
       "forLoop_i_0_4": null,
-      "ifBlock": null,
       "addOperator": null,
       "subtractOperator": null,
       "multiplyOperator": null,
@@ -25,12 +24,20 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "console.log": null
+      "insertItem": null,
+      "appendItem": null,
+      "removeItem": null,
+      "listLength": null,
+      "randomNumber": null,
+      "console.log": null,
+      "declareAssign_x_array_1_4": {
+        "block": "var list = [1,2,3];"
+      }
     },
     "edit_code": true,
     "embed": "false",
     "instructions": "Use an if statement to only print the values in the array that are greater than 5. (Click to see full instructions)",
-    "markdown_instructions": "# For Loop with If\r\n\r\nSometimes we only want to process values in an array that meet certain conditions. In those cases we can add an if statement inside the for loop to check something about the value of the array at the current index.\r\n\r\nUse an if statement to only print the values in the array that are greater than 5.\r\n\r\n# Do This\r\n\r\n* Set up a `for` loop that loops over every index in the array.\r\n\r\n* Add an if statement inside the for loop with a boolean condition that checks if the value at the current index in the array is greater than 5.",
+    "markdown_instructions": "# For Loop with If\r\n\r\nSometimes we want to find values in an array that meet certain conditions.  We can add an if statement inside the for loop to check each value in the array.\r\n\r\n# Do This\r\n\r\n**Use an if statement to only print the values in the array that are greater than 5.**\r\n\r\n* Set up a `for` loop that loops over every index in the array.\r\n\r\n* Add an `if` statement inside the for loop with a boolean condition that checks if the value at the current index in the array is greater than 5.\r\n\r\n* **NOTE**: because the original array is being constructed with random values it's *possible* that it might not have any values greater than 5.  Just run the program a few times to make sure it works.\r\n\r\n![](https://images.code.org/969077ff23232e410ce17520b0a71e1e-image-1447390972867.gif)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -60,7 +67,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "var myArray = [];\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));"
+    "start_blocks": "var myArray = [];\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\n\r\nconsole.log(\"Original: \"+myArray);"
   }
 }]]></config>
   <blocks/>
