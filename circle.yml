@@ -40,6 +40,9 @@ test:
         - bundle exec rake konacha:run:
             pwd:
                 dashboard
+        - bundle exec rake assets:precompile:
+            pwd:
+                dashboard
         - ./test.sh:
             pwd:
                 cookbooks
