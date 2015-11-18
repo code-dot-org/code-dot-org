@@ -172,6 +172,7 @@ applabCommands.setScreen = function (opts) {
 };
 
 applabCommands.container = function (opts) {
+  apiValidateDomIdExistence(opts, 'container', 'id', opts.elementId, false);
   var newDiv = document.createElement("div");
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
@@ -217,6 +218,7 @@ applabCommands.image = function (opts) {
 };
 
 applabCommands.imageUploadButton = function (opts) {
+  apiValidateDomIdExistence(opts, 'imageUploadButton', 'id', opts.elementId, false);
   // To avoid showing the ugly fileupload input element, we create a label
   // element with an img-upload class that will ensure it looks like a button
   var newLabel = document.createElement("label");
