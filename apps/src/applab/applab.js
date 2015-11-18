@@ -822,7 +822,6 @@ Applab.init = function(config) {
   config.makeYourOwn = false;
 
   config.varsInGlobals = true;
-  config.noButtonsBelowOnMobileShare = true;
 
   config.dropletConfig = dropletConfig;
 
