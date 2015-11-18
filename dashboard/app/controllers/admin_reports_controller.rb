@@ -206,10 +206,50 @@ class AdminReportsController < ApplicationController
     # Requested by Roxanne on 16 November 2015 to track HOC 2015 signups by day.
     authorize! :read, :reports
 
-    # Get the HOC 2015 signup counts by day, deduped by email and name.
-    # TODO(asher): Is this clumsy notation really necessary? Is Sequel really this stupid?
-    signups_by_day = DB[:forms].where(kind: 'HocSignup2015').group(:name, :email).group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).all.map{|row| [row[:created_at_day].to_s, row[:count].to_i]}
-    render locals: {signups_by_day: signups_by_day}
+    # Get the HOC 2014 and HOC 2015 signup counts by day, deduped by email and name.
+    # We restrict by dates to avoid long trails of (inappropriate?) signups.
+    data_2014 = DB[:forms].
+        where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2014', '2014-07-31', '2014-12-31').
+        group(:name, :email).
+        # TODO(asher): Is this clumsy notation really necessary? Is Sequel
+        # really this stupid? Also below.
+        group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
+        order(:created_at_day).
+        all.
+        map{|row| [row[:created_at_day].to_s, row[:count].to_i]}
+    data_2015 = DB[:forms].
+        where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2015', '2015-07-31', '2015-12-31').
+        group(:name, :email).
+        group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
+        order(:created_at_day).
+        all.
+        map{|row| [row[:created_at_day].to_s, row[:count].to_i]}
+
+    # Construct the a hash of MM-DD dates having data to [count2015, count2014].
+    # Start by constructing the key space as the union of the MM-DD dates for
+    # data_2014 and data_2015.
+    require 'set'
+    dates = SortedSet.new []
+    data_2014.each do |day|
+      dates.add(day[0][5..11])
+    end
+    data_2015.each do |day|
+      dates.add(day[0][5..11])
+    end
+    # Then populate the keys of our hash {date=>[count2014,count2015], ..., date=>[...]} with dates.
+    data_by_day = {}
+    dates.each do |date|
+      data_by_day[date] = [0, 0]
+    end
+    # Finally populate the values of our hash.
+    data_2014.each do |day|
+      data_by_day[day[0][5..11]] = [day[1], 0]
+    end
+    data_2015.each do |day|
+      data_by_day[day[0][5..11]] = [data_by_day[day[0][5..11]][0], day[1]]
+    end
+
+    render locals: {data_by_day: data_by_day.sort}
   end
 
   # Use callbacks to share common setup or constraints between actions.
