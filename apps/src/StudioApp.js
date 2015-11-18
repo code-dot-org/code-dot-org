@@ -30,7 +30,7 @@ var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
 var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
-var newrelic = require('./newrelic');
+var logToCloud = require('./logToCloud');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -296,7 +296,7 @@ StudioApp.prototype.init = function(config) {
           result = {error: err};
         }
         if (result && result.error) {
-          newrelic.addPageAction(newrelic.PageAction.DropletTransitionError, {
+          logToCloud.addPageAction(logToCloud.PageAction.DropletTransitionError, {
             dropletError: !nonDropletError,
             fromBlocks: fromBlocks
           });
