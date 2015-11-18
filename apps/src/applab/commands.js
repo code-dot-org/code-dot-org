@@ -145,8 +145,7 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
       if (existsOutsideApplab) {
         errorString = funcName + "() " + varName + " parameter refers to an id (" + id +
             ") which is already in use outside of Applab. Choose a different id.";
-        outputError(errorString, ErrorLevel.ERROR, line);
-        throw new Error("Cannot create element - element ID is in use outside of applab");
+        throw new Error(errorString);
       } else {
         errorString = funcName + "() " + varName +
             " parameter refers to an id (" + id + ") which " +
@@ -190,7 +189,7 @@ applabCommands.write = function (opts) {
 
 applabCommands.button = function (opts) {
   // PARAMNAME: button: id vs. buttonId
-  apiValidateDomIdExistence(opts, 'button', 'id', opts.elementId, false);
+  apiValidateDomIdExistence(opts, 'button', 'id', opts.elementId || '', false);
   apiValidateType(opts, 'button', 'text', opts.text, 'uistring');
 
   var newButton = document.createElement("button");
