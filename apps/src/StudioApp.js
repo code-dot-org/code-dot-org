@@ -877,22 +877,16 @@ StudioApp.prototype.recordUserViewedHint_ = function (hint, config) {
     hint_id: hint.hintId,
     hint_class: hint.hintClass,
     hint_type: hint.hintType,
-
-    // attempt info
-    time: ((new Date().getTime()) - this.initTime),
-    attempt: this.attempts,
-    test_result: this.lastTestResult,
-    activity_id: this.response && this.response.activity_id
   });
 };
 
 StudioApp.prototype.onReportComplete = function (response) {
-  this.response = response;
   authoredHintUtils.finishHints({
     time: ((new Date().getTime()) - this.initTime),
     attempt: this.attempts,
     test_result: this.lastTestResult,
-    activity_id: response.activity_id
+    activity_id: response.activity_id,
+    level_source_id: response.level_source_id,
   });
 };
 
