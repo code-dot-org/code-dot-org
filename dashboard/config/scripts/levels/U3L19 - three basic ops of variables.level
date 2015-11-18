@@ -51,7 +51,8 @@
     "instructions": "Add another variable called \"lives\" and set the value to 3. Print the value of the variable to the console. (Click to see full instructions)",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "video_key": "csp_applab_variables_1"
+    "video_key": "csp_applab_variables_1",
+    "encrypted_examples": "V2c8ARZV5yEDk0wj1lBPB5J70Ay70xQ6TrCgcHZydJYasLC1VtRgoEIB8And\nVAOI\n"
   }
 }]]></config>
   <blocks/>

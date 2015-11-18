@@ -21,6 +21,9 @@ function loadGumball(skin, assetUrl) {
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
+  skin.spriteHeight = 110;
+  skin.spriteWidth = 110;
+
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
   skin.ProjectileClassNames = [
@@ -95,6 +98,9 @@ function loadGumball(skin, assetUrl) {
   skin.squares = {
     background: skin.assetUrl('background_squares.png'),
   };
+  skin.stripes = {
+    background: skin.assetUrl('background_stripes.png'),
+  };
   skin.wood = {
     background: skin.assetUrl('background_wood.png'),
   };
@@ -136,6 +142,7 @@ function loadGumball(skin, assetUrl) {
     [msg.setBackgroundGraffiti(), '"graffiti"'],
     [msg.setBackgroundSpace(), '"space"'],
     [msg.setBackgroundSquares(), '"squares"'],
+    [msg.setBackgroundStripes(), '"stripes"'],
     [msg.setBackgroundWood(), '"wood"']];
 
   // NOTE: background names must have double quotes inside single quotes
@@ -149,6 +156,7 @@ function loadGumball(skin, assetUrl) {
     [skin.graffiti.background, '"graffiti"'],
     [skin.space.background, '"space"'],
     [skin.squares.background, '"squares"'],
+    [skin.stripes.background, '"stripes"'],
     [skin.wood.background, '"wood"'],
     [skin.randomPurpleIcon, RANDOM_VALUE]];
 
@@ -806,10 +814,10 @@ function loadHoc2015(skin, assetUrl) {
     [msg.playSoundR2D2Sound7(), 'R2-D2sound7'],
     [msg.playSoundR2D2Sound8(), 'R2-D2sound8'],
     [msg.playSoundR2D2Sound9(), 'R2-D2sound9'],
-    [msg.playSoundC3POSound1(), 'C3-POsound1'],
-    [msg.playSoundC3POSound2(), 'C3-POsound2'],
-    [msg.playSoundC3POSound3(), 'C3-POsound3'],
-    [msg.playSoundC3POSound4(), 'C3-POsound4'],
+    [msg.playSoundC3POSound1(), 'C-3POsound1'],
+    [msg.playSoundC3POSound2(), 'C-3POsound2'],
+    [msg.playSoundC3POSound3(), 'C-3POsound3'],
+    [msg.playSoundC3POSound4(), 'C-3POsound4'],
     [msg.playSoundPufferPigSound1(), 'PufferPigSound1'],
     [msg.playSoundPufferPigSound2(), 'PufferPigSound2'],
     [msg.playSoundPufferPigSound3(), 'PufferPigSound3'],
