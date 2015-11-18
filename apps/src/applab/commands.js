@@ -171,7 +171,9 @@ applabCommands.setScreen = function (opts) {
 };
 
 applabCommands.container = function (opts) {
-  apiValidateDomIdExistence(opts, 'container', 'id', opts.elementId, false);
+  if (opts.elementId) {
+    apiValidateDomIdExistence(opts, 'container', 'id', opts.elementId, false);
+  }
   var newDiv = document.createElement("div");
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
@@ -189,7 +191,7 @@ applabCommands.write = function (opts) {
 
 applabCommands.button = function (opts) {
   // PARAMNAME: button: id vs. buttonId
-  apiValidateDomIdExistence(opts, 'button', 'id', opts.elementId || '', false);
+  apiValidateDomIdExistence(opts, 'button', 'id', opts.elementId, false);
   apiValidateType(opts, 'button', 'text', opts.text, 'uistring');
 
   var newButton = document.createElement("button");
