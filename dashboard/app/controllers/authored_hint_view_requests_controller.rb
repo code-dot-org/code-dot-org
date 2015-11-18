@@ -1,7 +1,7 @@
 class AuthoredHintViewRequestsController < ApplicationController
   def create
     return head :unauthorized unless AuthoredHintViewRequest.enabled?
-    return head :bad_request unless params.key?("hints") and params["hints"].respond_to?(:to_a)
+    return head :bad_request unless params.key?("hints") && params["hints"].respond_to?(:to_a)
 
     hints = params["hints"].to_a.map do |hint|
       hint[:user] = current_user

@@ -44,10 +44,10 @@ module.exports = function(app, levels, options) {
           options.level.levelBuilderRecommendedBlocks);
     }
 
-    if (marked && options.level.levelBuilderAuthoredHints) {
+    if (marked && options.level.authoredHints) {
       var hints;
       try {
-        hints = JSON.parse(level.levelBuilderAuthoredHints);
+        hints = JSON.parse(options.level.authoredHints);
       } catch (e) {
         hints = [];
       }
