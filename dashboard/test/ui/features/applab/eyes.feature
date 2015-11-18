@@ -64,10 +64,11 @@ Scenario: Text area with multiple lines, radio button, checkbox
   And I set input "ypos" to "0"
   Then I see no difference for "checkbox in upper left"
   Then I delete the current design mode element
+  And I close my eyes
 
 Scenario: Applab visualization scaling
   Given I am on "http://learn.code.org/"
-  And I am a student
+  And I manually sign in as "ApplabStudent"
   When I open my eyes to test "Applab visualization scaling"
   And I am on "http://learn.code.org/projects/applab/new"
   And I rotate to landscape
