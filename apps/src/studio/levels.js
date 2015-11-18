@@ -1845,6 +1845,7 @@ levels.js_hoc2015_move_right = {
   ]
 };
 
+
 levels.js_hoc2015_move_right_down = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
@@ -1886,6 +1887,57 @@ levels.js_hoc2015_move_right_down = {
     'goalImage': 'goal2'
   },
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
+};
+
+
+levels.js_hoc2015_move_backtrack = {
+  'editCode': true,
+  autocompletePaletteApisOnly: true,
+  executePaletteApisOnly: true,
+  'background': 'main',
+  'music': [ 'song3' ],
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
+  },
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  gridAlignedExtraPauseSteps: 1,
+  'itemGridAlignedMovement': true,
+  'slowExecutionFactor': 10,
+  'removeItemsWhenActorCollides': false,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map':
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
+  instructions: msg.hoc2015_move_backtrack_instructions(),
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal1'
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false },
@@ -1966,60 +2018,11 @@ levels.js_hoc2015_move_diagonal = {
 };
 
 
-levels.js_hoc2015_move_backtrack = {
-  'editCode': true,
-  autocompletePaletteApisOnly: true,
-  executePaletteApisOnly: true,
-  'background': 'main',
-  'music': [ 'song3' ],
-  'codeFunctions': {
-    'moveRight': null,
-    'moveLeft': null,
-    'moveUp': null,
-    'moveDown': null,
-  },
-  'startBlocks': [
-    'moveRight();',
-    ''].join('\n'),
-  'sortDrawOrder': true,
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
-  'gridAlignedMovement': true,
-  gridAlignedExtraPauseSteps: 1,
-  'itemGridAlignedMovement': true,
-  'slowExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
-  'delayCompletion': 2000,
-  'floatingScore': true,
-  'map':
-    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
-     [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00],
-     [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
-     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
-     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
-     [0x00, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
-  instructions: msg.hoc2015_move_backtrack_instructions(),
-  'ticksBeforeFaceSouth': 9,
-  'timeoutAfterWhenRun': true,
-  'goalOverride': {
-    'goalImage': 'goal1'
-  },
-  'progressConditions' : [
-    { required: { 'touchedHazardsAtOrAbove': 1 },
-      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
-    { required: { 'allGoalsVisited': true },
-      result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false },
-      result: { success: false, message: msg.failedHasAllGoals() } }
-  ]
-};
-
 levels.js_hoc2015_move_around = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  'textModeAtStart': true,
   'background': 'main',
   'music': [ 'song9' ],
   'codeFunctions': {
@@ -2064,25 +2067,6 @@ levels.js_hoc2015_move_around = {
       result: { success: true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
-  ],
-  "callouts": [
-    {
-      'id': 'playlab:js_hoc2015_move_around:showCodeToggle',
-      'element_id': '#show-code-header',
-      'qtip_config': {
-        'content': {
-          'text': msg.calloutShowCodeCanToggle(),
-        },
-        'position': {
-          'my': 'top right',
-          'at': 'bottom left',
-          'adjust': {
-            'x': 15,
-            'y': 0
-          }
-        }
-      }
-    }
   ]
 };
 
@@ -2135,6 +2119,25 @@ levels.js_hoc2015_move_finale = {
       result: { success: true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
+  ],
+  "callouts": [
+    {
+      'id': 'playlab:js_hoc2015_move_finale:showCodeToggle',
+      'element_id': '#show-code-header',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutShowCodeCanToggle(),
+        },
+        'position': {
+          'my': 'top right',
+          'at': 'bottom left',
+          'adjust': {
+            'x': 15,
+            'y': 0
+          }
+        }
+      }
+    }
   ]
 };
 
@@ -2667,8 +2670,8 @@ levels.js_hoc2015_chain_characters = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  instructions: msg.hoc2015_chain_characters2_instructions(),
-  instructions2: msg.hoc2015_chain_characters2_instructions2(),
+  instructions: msg.hoc2015_chain_characters_instructions(),
+  instructions2: msg.hoc2015_chain_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1800, // 60 seconds
   'showTimeoutRect': true,
@@ -3538,7 +3541,7 @@ levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
     },
     {
       id: 'playlab:hoc2015_blockly_15:categories',
-      element_id: '.blocklyTreeRoot',
+      element_id: '.blocklyTreeRoot:visible',
       qtip_config: {
         content: {
           text: msg.calloutBlocklyCategories(),
