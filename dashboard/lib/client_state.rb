@@ -91,7 +91,7 @@ class ClientState
   # @param [String] video_key
   # @return Boolean
   def video_seen?(video_key)
-    s = session[videos_seen] if session
+    s = session[:videos_seen] if session
     s && s.include?(video_key)
   end
 
