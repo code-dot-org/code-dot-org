@@ -229,12 +229,13 @@ class AdminReportsController < ApplicationController
     # Start by constructing the key space as the union of the MM-DD dates for
     # data_2014 and data_2015.
     require 'set'
-    dates = SortedSet.new []
+    dates = Set.new []
     data_2014.each do |day|
-      dates.add(day[0][5..11])
+      # Here and below, we use [5..9] to extract 'MM-DD' from 'YYYY-MM-DD'.
+      dates.add(day[0][5..9])
     end
     data_2015.each do |day|
-      dates.add(day[0][5..11])
+      dates.add(day[0][5..9])
     end
     # Then populate the keys of our hash {date=>[count2014,count2015], ..., date=>[...]} with dates.
     data_by_day = {}
@@ -243,10 +244,10 @@ class AdminReportsController < ApplicationController
     end
     # Finally populate the values of our hash.
     data_2014.each do |day|
-      data_by_day[day[0][5..11]] = [day[1], 0]
+      data_by_day[day[0][5..9]][0] = day[1]
     end
     data_2015.each do |day|
-      data_by_day[day[0][5..11]] = [data_by_day[day[0][5..11]][0], day[1]]
+      data_by_day[day[0][5..9]][1] = day[1]
     end
 
     render locals: {data_by_day: data_by_day.sort}
