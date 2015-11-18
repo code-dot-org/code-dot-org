@@ -30,6 +30,7 @@ var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
 var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
+var logToCloud = require('./logToCloud');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -285,14 +286,20 @@ StudioApp.prototype.init = function(config) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
         var result;
+        var nonDropletError = false;
+        // are we trying to toggle from blocks to text (or the opposite)
+        var fromBlocks = this.editor.currentlyUsingBlocks;
         try {
           result = this.editor.toggleBlocks();
         } catch (err) {
+          nonDropletError = true;
           result = {error: err};
         }
         if (result && result.error) {
-          // TODO (cpirich) We could extract error.loc to determine where the
-          // error occurred and highlight that error
+          logToCloud.addPageAction(logToCloud.PageAction.DropletTransitionError, {
+            dropletError: !nonDropletError,
+            fromBlocks: fromBlocks
+          });
           this.feedback_.showToggleBlocksError(this.Dialog);
         }
         this.onDropletToggle_();
@@ -369,10 +376,12 @@ StudioApp.prototype.init = function(config) {
   var promptDiv = document.getElementById('prompt');
   var prompt2Div = document.getElementById('prompt2');
   if (config.level.instructions) {
-    $(promptDiv).text(config.level.instructions);
+    var instructionsHtml = this.substituteInstructionImages(config.level.instructions);
+    $(promptDiv).html(instructionsHtml);
   }
   if (config.level.instructions2) {
-    $(prompt2Div).text(config.level.instructions2);
+    var instructions2Html = this.substituteInstructionImages(config.level.instructions2);
+    $(prompt2Div).html(instructions2Html);
     $(prompt2Div).show();
   }
 
@@ -492,6 +501,19 @@ StudioApp.prototype.init = function(config) {
       return true;
     }.bind(this));
   }
+};
+
+StudioApp.prototype.substituteInstructionImages = function(htmlText) {
+  if (htmlText) {
+    for (var prop in this.skin.instructions2ImageSubstitutions) {
+      var value = this.skin.instructions2ImageSubstitutions[prop];
+      var substitutionHtml = '<img src="' + value + '" class="instructionsImage"/>';
+      var re = new RegExp('\\[' + prop + '\\]', 'g');
+      htmlText = htmlText.replace(re, substitutionHtml);
+    }
+  }
+
+  return htmlText;
 };
 
 StudioApp.prototype.getCode = function () {
@@ -861,8 +883,8 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 
   instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
     puzzleTitle: puzzleTitle,
-    instructions: level.instructions,
-    instructions2: level.instructions2,
+    instructions: this.substituteInstructionImages(level.instructions),
+    instructions2: this.substituteInstructionImages(level.instructions2),
     renderedMarkdown: renderedMarkdown,
     markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
     aniGifURL: level.aniGifURL
@@ -990,7 +1012,7 @@ function resizePinnedBelowVisualizationArea() {
   if (designToggleRow) {
     top += $(designToggleRow).outerHeight(true);
   }
-  
+
   if (visualization) {
     top += $(visualization).outerHeight(true);
   }
@@ -1079,6 +1101,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var visualizationColumn = document.getElementById('visualizationColumn');
   var visualizationEditor = document.getElementById('visualizationEditor');
 
+  var oldVizWidth = $(visualizationColumn).width();
   var newVizWidth = Math.max(this.minVisualizationWidth,
                          Math.min(this.maxVisualizationWidth, width));
   var newVizWidthString = newVizWidth + 'px';
@@ -1109,6 +1132,12 @@ StudioApp.prototype.resizeVisualization = function (width) {
   applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
   if (visualizationEditor) {
     visualizationEditor.style.marginLeft = newVizWidthString;
+  }
+
+  if (oldVizWidth < 230 && newVizWidth >= 230) {
+    $('#soft-buttons').removeClass('soft-buttons-compact');
+  } else if (oldVizWidth > 230 && newVizWidth <= 230) {
+    $('#soft-buttons').addClass('soft-buttons-compact');
   }
 
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
@@ -1422,6 +1451,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
                         config.onInitialize.bind(config) : function () {};
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
+  this.skin = config.skin;
   this.showInstructions = this.showInstructions_.bind(this, config.level);
 };
 

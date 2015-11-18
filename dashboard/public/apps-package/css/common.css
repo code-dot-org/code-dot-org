@@ -170,6 +170,10 @@ button.arrow:disabled {
   -webkit-touch-callout: none; }
   #soft-buttons.soft-buttons-none {
     display: none; }
+  #soft-buttons.soft-buttons-compact {
+    margin-left: 0; }
+    #soft-buttons.soft-buttons-compact button {
+      margin: 0; }
 
 .soft-buttons-1 {
   display: table-cell;
@@ -413,6 +417,10 @@ html[dir='rtl'] #codeWorkspace {
   .bee-counter-text {
     font-size: 32px;
     stroke-width: 2px; }
+  #soft-buttons {
+    margin-left: 0; }
+    #soft-buttons button {
+      margin: 0; }
   .small-footer-base.responsive small {
     float: left; } }
 
@@ -700,6 +708,22 @@ input[type="radio"] {
 #prompt2 {
   font-size: 12px;
   color: #5b6770; }
+
+.modal-content .instructionsImage {
+  height: 35px;
+  vertical-align: text-bottom; }
+
+.modal-content .instructions2 .instructionsImage {
+  height: 24px;
+  vertical-align: text-bottom; }
+
+#prompt-table .instructionsImage {
+  height: 35px;
+  vertical-align: text-bottom; }
+
+#prompt-table #prompt2 .instructionsImage {
+  height: 20px;
+  vertical-align: text-bottom; }
 
 #ani-gif-preview-wrapper {
   display: inline-block;
