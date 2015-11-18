@@ -1,5 +1,6 @@
 @no_ie9
 @dashboard_db_access
+@as_student
 Feature: App Lab Data Blocks
 
   Background:
@@ -10,7 +11,6 @@ Feature: App Lab Data Blocks
     And I wait to see "#runButton"
     And element "#runButton" is visible
 
-  @as_student
   Scenario: Evaluate Data Blocks
     Then I press "runButton"
     And I wait until element "#successLabel" is visible within element "#divApplab"
