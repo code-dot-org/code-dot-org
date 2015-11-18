@@ -723,6 +723,7 @@ var displayFeedback = function() {
 Flappy.onReportComplete = function(response) {
   Flappy.response = response;
   Flappy.waitingForReport = false;
+  studioApp.onReportComplete(response);
   displayFeedback();
 };
 
