@@ -83,18 +83,21 @@ function Sounds() {
  * @private
  */
 Sounds.prototype.initializeAudioUnlockState_ = function () {
-  this.unlockAudio();
-  if (!this.isAudioUnlocked()) {
+  this.unlockAudio(function () {
+    if (this.isAudioUnlocked()) {
+      return;
+    }
     var unlockHandler = function () {
-      this.unlockAudio();
-      if (this.isAudioUnlocked()) {
-        document.removeEventListener("mousedown", unlockHandler, true);
-        document.removeEventListener("touchend", unlockHandler, true);
-      }
+      this.unlockAudio(function () {
+        if (this.isAudioUnlocked()) {
+          document.removeEventListener("mousedown", unlockHandler, true);
+          document.removeEventListener("touchend", unlockHandler, true);
+        }
+      }.bind(this));
     }.bind(this);
     document.addEventListener("mousedown", unlockHandler, true);
     document.addEventListener("touchend", unlockHandler, true);
-  }
+  }.bind(this));
 };
 
 /**
@@ -113,10 +116,11 @@ Sounds.prototype.isAudioUnlocked = function () {
  *
  * Special thanks to this article for the general approach:
  * https://paulbakaus.com/tutorials/html5/web-audio-on-ios/
- * and to SoundJS for another approach to checking whether the unlock succeeded.
- * https://github.com/CreateJS/SoundJS/blob/d748f02a0c2a2f1a626efcb86ae3773d7aab1ec6/src/soundjs/webaudio/WebAudioPlugin.js#L367
+ *
+ * @param {function} [onComplete] callback for after we've checked whether
+ *        audio was unlocked successfully.
  */
-Sounds.prototype.unlockAudio = function () {
+Sounds.prototype.unlockAudio = function (onComplete) {
   if (this.isAudioUnlocked()) {
     return;
   }
@@ -132,9 +136,15 @@ Sounds.prototype.unlockAudio = function () {
     source.noteOn(0);
   }
 
-  if (this.audioContext.state === "running") {
-    this.audioUnlocked_ = true;
-  }
+  setTimeout(function () {
+    if (source.playbackState === source.PLAYING_STATE ||
+        source.playbackState === source.FINISHED_STATE) {
+      this.audioUnlocked_ = true;
+    }
+    if (onComplete) {
+      onComplete();
+    }
+  }.bind(this), 0);
 };
 
 /**
