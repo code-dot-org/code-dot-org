@@ -41,10 +41,7 @@
     "debugger_disabled": "true",
     "start_blocks": "var someNum = 7;\r\n\r\nsomeNum = someNum + 1;\r\nconsole.log(\"The value of someNum is now: \" + someNum);\r\n\r\nsomeNum = someNum + 1;\r\nconsole.log(\"The value of someNum is now: \" + someNum);\r\n\r\nsomeNum = someNum + 1;\r\nconsole.log(\"The value of someNum is now: \" + someNum);\r\n\r\nsomeNum = someNum * someNum;\r\n\r\n",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false",
-    "encrypted_examples": [
-
-    ]
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

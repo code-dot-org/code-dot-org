@@ -34,8 +34,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "instructions": ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n",
-    "markdown_instructions": ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n",
-    "maze_data": null
+    "markdown_instructions": ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
   }
 }]]></config>
   <blocks>

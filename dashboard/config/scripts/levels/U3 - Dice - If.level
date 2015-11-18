@@ -38,10 +38,7 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "instructions": "Show different dice images for the random number generated. (Click to see full instructions)",
-    "lock_zero_param_functions": "false",
-    "encrypted_examples": [
-
-    ]
+    "lock_zero_param_functions": "false"
   }
 }]]></config>
   <blocks/>
