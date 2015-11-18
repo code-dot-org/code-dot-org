@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "Did you know every snowflake is a different shape? Let's create a new snowflake by using the “Repeat\" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram.",
+    "instructions": "Did you know every snowflake is a different shape? Let's create a new snowflake by using another “Repeat\" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram.",
     "x": "200",
     "y": "200",
     "start_direction": "180",
@@ -23,7 +23,7 @@
     "embed": "false",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "markdown_instructions": "Did you know every snowflake is a different shape? Let's create a new snowflake by using the “Repeat\" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/8ac71bed65fe0a472a6cc7629e8fdac9-image-1442593741401.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Did you know every snowflake is a different shape? Let's create a new snowflake by using another “Repeat\" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/8ac71bed65fe0a472a6cc7629e8fdac9-image-1442593741401.png)\r\n</details>\r\n</h4>",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -38,45 +38,37 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="controls_repeat_dropdown" movable="false">
-              <title name="TIMES" config="3-10">???</title>
-              <statement name="DO">
-                <block type="controls_repeat_dropdown" deletable="false" editable="false" movable="false">
-                  <title name="TIMES" config="2-10">2</title>
-                  <statement name="DO">
-                    <block type="draw_move_by_constant_dropdown" deletable="false" editable="false" movable="false">
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">2</title>
+          <statement name="DO">
+            <block type="draw_move_by_constant_dropdown" deletable="false" editable="false">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE" config="50,100,150,200,300">100</title>
+              <next>
+                <block type="draw_turn_by_constant_dropdown" deletable="false" editable="false">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE" config="45,60,90,120,180">60</title>
+                  <next>
+                    <block type="draw_move_by_constant_dropdown" deletable="false" editable="false">
                       <title name="DIR">moveForward</title>
                       <title name="VALUE" config="50,100,150,200,300">100</title>
                       <next>
-                        <block type="draw_turn_by_constant_dropdown" deletable="false" editable="false" movable="false">
+                        <block type="draw_turn_by_constant_dropdown" deletable="false" editable="false">
                           <title name="DIR">turnRight</title>
-                          <title name="VALUE" config="45,60,90,120,180">60</title>
-                          <next>
-                            <block type="draw_move_by_constant_dropdown" deletable="false" editable="false" movable="false">
-                              <title name="DIR">moveForward</title>
-                              <title name="VALUE" config="50,100,150,200,300">100</title>
-                              <next>
-                                <block type="draw_turn_by_constant_dropdown" deletable="false" editable="false" movable="false">
-                                  <title name="DIR">turnRight</title>
-                                  <title name="VALUE" config="45,60,90,120,180">120</title>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
+                          <title name="VALUE" config="45,60,90,120,180">120</title>
                         </block>
                       </next>
                     </block>
-                  </statement>
-                  <next>
-                    <block type="draw_turn_by_constant_dropdown" movable="false">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE" config="45,60,90,120,180">???</title>
-                    </block>
                   </next>
                 </block>
-              </statement>
+              </next>
+            </block>
+          </statement>
+          <next>
+            <block type="draw_turn_by_constant_dropdown">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE" config="45,60,90,120,180">???</title>
             </block>
           </next>
         </block>
@@ -95,6 +87,9 @@
           <value name="COLOUR">
             <block type="colour_random"/>
           </value>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">???</title>
         </block>
       </xml>
     </toolbox_blocks>

@@ -21,7 +21,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Add code so that clicking the start over button will reset the game and send you back to the main screen. (Click to see full instructions)",
+    "instructions": "Run the app, and click the up or down button until you get to the gameOverScreen. Click 'Start Over' and try the app again. Find and fix the issue in the code. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
