@@ -33,7 +33,8 @@
       <div class="arrow-text"><%= data.tryAgain %></div>
     </div>
   <% } else { -%>
-    <% if (data.shouldPromptForHint) { -%>
+    <% if (data.shouldPromptForHint && false) { -%>
+      <!-- STATIC DISABLED -->
       <button id="hint-request-button" class="launch">
         <%= msg.hintRequest() %>
       </button>
