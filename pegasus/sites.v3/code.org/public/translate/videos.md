@@ -14,6 +14,23 @@ If they are not completed, go ahead and Add a New Language and complete translat
 
 Watch the [demo video](/files/amara.swf) in full screen.
 
+## Star Wars: Building a Galaxy with Code
+* [Introduction](https://amara.org/en/videos/MAPGRpEu3h0k/info/star-wars-with-blockly-hour-of-code-introduction/)
+* [Events](https://amara.org/en/videos/BUt4bT1vkTwZ/info/star-wars-with-blockly-hour-of-code-events/)
+* [Congrats](https://amara.org/en/videos/MTpUmI9XcUUW/info/star-wars-with-blockly-hour-of-code-closing/)
+
+## Minecraft Hour of Code
+* [Introduction](https://amara.org/en/videos/hM6XN1YgrcnZ/info/minecraft-hour-of-code-intro/)
+* [Repeat loops](https://amara.org/en/videos/9db4OJsugkRs/info/minecraft-hour-of-code-repeat-loops/)
+* [If statements](https://amara.org/en/videos/6VTTd8ZDTW5j/info/minecraft-hour-of-code-if-statements/)
+* [Congrats](https://amara.org/en/videos/qTYN8blMcwOQ/info/minecraft-hour-of-code-build-your-own/)
+* [Congrats with share](https://amara.org/en/videos/YOo9ipbbkmzG/info/minecraft-hour-of-code-build-your-own-share/)
+
+## Frozen (w/ Anna and Elsa)
+* [Introduction](http://amara.org/en/videos/WXMIcXbsmkXJ/info/frozen-hour-of-code-introduction/)
+* [Introduction to loops](http://amara.org/en/videos/WxHFpeBLk2RB/info/frozen-hour-of-code-introduction-to-loops/)
+* [Introduction to functions](http://amara.org/en/videos/azkfStUQ1EqG/info/frozen-hour-of-code-introduction-to-functions/)
+
 ## Hour of Code (w/ Angry Birds, Plants vs. Zombies, and Scrat the squirrel from Ice Age)
 * [Introduction](http://amara.org/en/videos/SZoroOUK8zkp/info/hour-of-code-introduction/)
 * [Mark Zuckerburg teaches repeat loops](http://amara.org/en/videos/vKJqKVtk9Zti/info/hour-of-code-mark-zuckerburg-teaches-repeat-loops/)
@@ -21,11 +38,6 @@ Watch the [demo video](/files/amara.swf) in full screen.
 * [Bill Gates explains if statements](http://amara.org/en/videos/dHRkYK1yaFOt/info/hour-of-code-bill-gates-explains-if-statements/)
 * [Saloni teaches if-else statements with Scrat](http://amara.org/en/videos/4vaO5wAciqSV/info/saloni-teaches-if-else-statements-with-scrat-the-squirrel-from-ice-age/)
 * [Wrap Up](http://amara.org/en/videos/ocU9lQ4CIZel/info/hour-of-code-wrap-up/)
-
-## Frozen (w/ Anna and Elsa)
-* [Introduction](http://amara.org/en/videos/WXMIcXbsmkXJ/info/frozen-hour-of-code-introduction/)
-* [Introduction to loops](http://amara.org/en/videos/WxHFpeBLk2RB/info/frozen-hour-of-code-introduction-to-loops/)
-* [Introduction to functions](http://amara.org/en/videos/azkfStUQ1EqG/info/frozen-hour-of-code-introduction-to-functions/)
 
 ## Social
 * [Change the World - Hour of Code 2015](https://amara.org/en/videos/yOXuiXs9lWrn/info/change-the-world-hour-of-code-2015/)
