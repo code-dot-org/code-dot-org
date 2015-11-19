@@ -51,7 +51,7 @@ dashboard.clientState.reset = function() {
  *   the cached copy is missing/stale.
  */
 dashboard.clientState.sourceForLevel = function (scriptName, levelKey, timestamp) {
-  var data = localStorage.getItem('source_' + scriptName + '_' + levelKey);
+  var data = localStorage.getItem(createKey(scriptName, levelKey, 'source'));
   if (data) {
     try {
       var parsed = JSON.parse(data);
@@ -75,7 +75,7 @@ dashboard.clientState.sourceForLevel = function (scriptName, levelKey, timestamp
  */
 dashboard.clientState.writeSourceForLevel = function (scriptName, levelKey, timestamp, source) {
   try {
-    localStorage.setItem('source_' + scriptName + '_' + levelKey, JSON.stringify({
+    localStorage.setItem(createKey(scriptName, levelKey, 'source'), JSON.stringify({
       source: source,
       timestamp: timestamp
     }));
@@ -94,7 +94,7 @@ dashboard.clientState.writeSourceForLevel = function (scriptName, levelKey, time
  */
 dashboard.clientState.levelProgress = function(scriptName, levelKey) {
   var progressMap = dashboard.clientState.allLevelsProgress();
-  return progressMap[scriptName + '_' + levelKey] || 0;
+  return progressMap[createKey(scriptName, levelKey)] || 0;
 };
 
 /**
@@ -124,7 +124,7 @@ dashboard.clientState.trackProgress = function(result, lines, testResult, script
  */
 function setLevelProgress(scriptName, levelKey, progress) {
   var progressMap = dashboard.clientState.allLevelsProgress();
-  progressMap[scriptName + '_' + levelKey] = progress;
+  progressMap[createKey(scriptName, levelKey)] = progress;
   $.cookie('progress', JSON.stringify(progressMap), COOKIE_OPTIONS);
 }
 
@@ -231,6 +231,17 @@ function hasSeenVisualElement(visualElementType, visualElementId) {
   } catch (e) {
     return false;
   }
+}
+
+/**
+ * Creates standardized keys for storing values in localStorage.
+ * @param {string} scriptName
+ * @param {string} levelKey
+ * @param {string=} prefix
+ * @return {string}
+ */
+function createKey(scriptName, levelKey, prefix) {
+  return (prefix ? prefix + '_' : '') + scriptName + '_' + levelKey;
 }
 
 })(window, $);
