@@ -134,21 +134,21 @@ Dashboard::Application.routes.draw do
 
   post 'level_assets/upload', to: 'level_assets#upload'
 
-  resources :scripts, path: '/s/' do
+  resources :scripts, path: '/s/', format: "html" do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
 
 
     # /s/xxx/level/yyy
-    resources :script_levels, as: :levels, only: [:show], path: "/level", format: false
+    resources :script_levels, as: :levels, only: [:show], path: "/level", format: "html"
 
     # /s/xxx/puzzle/yyy
-    get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
+    get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: "html"
 
     # /s/xxx/stage/yyy/puzzle/zzz
-    resources :stages, only: [], path: "/stage", format: false do
-      resources :script_levels, only: [:show], path: "/puzzle", format: false
+    resources :stages, only: [], path: "/stage", format: "html" do
+      resources :script_levels, only: [:show], path: "/puzzle", format: "html"
     end
   end
 
