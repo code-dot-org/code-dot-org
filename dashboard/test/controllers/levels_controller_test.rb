@@ -4,13 +4,15 @@ class LevelsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    Level.any_instance.stubs(:write_to_file?).returns(false) # don't write to level files
+
     @level = create(:level)
     @user = create(:admin)
     sign_in(@user)
     @program = '<hey/>'
 
     @not_admin = create(:user)
-    set_env :levelbuilder
   end
 
   test "should get index" do
@@ -170,7 +172,8 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should create and destroy custom level with level file" do
     # Enable writing custom level to file for this specific test only
-    old_env = ENV.delete 'FORCE_CUSTOM_LEVELS'
+    Level.any_instance.stubs(:write_to_file?).returns(true)
+
     level_name = 'TestCustomLevel'
     begin
       post :create, :level => { :name => level_name, :type => 'Artist' }, :game_id => Game.find_by_name("Custom").id, :program => @program
@@ -180,7 +183,6 @@ class LevelsControllerTest < ActionController::TestCase
       delete :destroy, id: level
       assert_equal false, file_path && File.exist?(file_path)
     ensure
-      ENV['FORCE_CUSTOM_LEVELS'] = old_env
       file_path = LevelLoader.level_file_path(level_name)
       File.delete(file_path) if file_path && File.exist?(file_path)
     end
@@ -226,8 +228,9 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   # This should represent the behavior on production.
-  test "should not modify level if on test env" do
-    Rails.env = "test"
+  test "should not modify level if not in levelbuilder mode" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
     post :create, :name => "NewCustomLevel", :program => @program
     assert_response :forbidden
   end
@@ -255,10 +258,14 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should load file contents when editing a dsl defined level" do
+    level_path = 'config/scripts/test_demo_level.external'
+    data, _ = External.parse_file level_path
+    External.setup data
+
     level = Level.find_by_name 'Test Demo Level'
     get :edit, id: level.id
 
-    assert_equal 'config/scripts/test_demo_level.external', assigns(:level).filename
+    assert_equal level_path, assigns(:level).filename
     assert_equal "name 'test demo level'", assigns(:level).dsl_text.split("\n").first
   end
 
@@ -276,6 +283,17 @@ class LevelsControllerTest < ActionController::TestCase
     patch :update, id: @level, level: {  }
     # Level update now uses AJAX callback, returns a 200 JSON response instead of redirect
     assert_response :success
+  end
+
+  test "update sends JSON::ParserError to user" do
+    level = create(:applab)
+    invalid_json = "{,}"
+    patch :update, id: level, level: {"code_functions" => invalid_json}
+    # Level update now uses AJAX callback, returns a 200 JSON response instead of redirect
+    assert_response :unprocessable_entity
+
+    expected = {'code_functions' => ["JSON::ParserError: 757: unexpected token at '{,}'"]}
+    assert_equal expected, JSON.parse(@response.body)
   end
 
   test "should destroy level" do

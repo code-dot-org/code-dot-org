@@ -43,7 +43,6 @@
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "functionParams_none": null,
       "functionParams_n": null,
@@ -68,11 +67,21 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "start_blocks": "button(\"moveBtn\", \"move me\");\r\nonEvent(\"moveBtn\", \"mouseover\", function(){\r\n  setPosition(\"moveBtn\",randomNumber(320), randomNumber(480), 100, 100);\r\n});\r\n",
+    "start_blocks": "button(\"moveBtn\", \"move me\");\r\nonEvent(\"moveBtn\", \"mouseover\", function(){\r\n  setPosition(\"moveBtn\",randomNumber(0, 320), randomNumber(0, 480), 100, 100);\r\n});\r\n",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "app_width": "320",
-    "app_height": "480"
+    "app_height": "480",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false"
   }
 }]]></config>
   <blocks/>

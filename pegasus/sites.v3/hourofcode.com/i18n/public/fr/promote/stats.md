@@ -10,13 +10,13 @@ nav: promote_nav
 
 # Présentation et statistiques utiles
 
-## Utiliser ce court texte de présentation dans vos lettres d'information électronique
+## Utiliser ce court texte de présentation dans vos newsletters
 
-### Encourager l'informatique à votre école. Commencer avec Une Heure de Code
+### Demandez plus d'informatique dans votre école. Commencez avec Une Heure de Code
 
-Les ordinateurs sont partout, mais les écoles enseignent moins l'informatique qu'il y a 10 ans. Good news is, we’re on our way to change this. If you heard about the [Hour of Code](<%= resolve_url('/') %>) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](<%= resolve_url('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= resolve_url('/') %>) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
+Les ordinateurs sont partout, mais les écoles enseignent moins l'informatique qu'il y a 10 ans. La bonne nouvelle, c'est nous sommes sur le point de changer cela. Si vous avez entendu parler de l'évènement [Une Heures de Code](<%= resolve_url('/') %>) l'année dernière, vous savez peut-être qu'il a marqué l'histoire. Dès la première édition d'Une Heure de Code, 15 millions d'étudiants ont essayé l'informatique et la programmation. L'an dernier, ce nombre a augmenté et est passé à 60 millions d'élèves ! [Une Heure de Code](<%= resolve_url('/') %>) est une introduction d'une heure à l'informatique. Elle est conçue pour démystifier le code et montrer que n'importe qui peut en apprendre les rudiments. [Inscrivez-vous](<%= resolve_url('/') %>) pour organiser Une heure de Code <%= campaign_date('full') %> au cours de la semaine de l'éducation des sciences informatiques. Pour ajoutez votre école à la carte des évènements, rendez-vous sur https://hourofcode.com/<%= @country %>
 
-## Infographics
+## Infographies
 
 <%= view :stats_carousel %>
 

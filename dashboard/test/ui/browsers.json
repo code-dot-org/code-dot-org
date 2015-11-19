@@ -32,6 +32,12 @@
     "platform": "Windows 7"
   },
   {
+    "name": "IE11Win10",
+    "browserName": "Internet Explorer",
+    "version": "11.0",
+    "platform": "Windows 10"
+  },
+  {
     "name": "Firefox38Yosemite",
     "browserName": "firefox",
     "version": "38.0",

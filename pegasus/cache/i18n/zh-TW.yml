@@ -120,6 +120,8 @@
   just_did_hoc: '我已經完成了 #HourOfCode - 快來看看吧！ @codeorg'
   twitter_teach_cs: 為什麼沒有更多的學校教計算機科學？我們可以解決這個問題。HTTP://youtu.be/nKIu9yen5nc。請瀏覽 http://code.org/
     了解更多。
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
   learn_hoc: 學習一小時的程式設計
   beyond_hoc: 一小時後的學習課程
   what_gender: 您的性別是？
@@ -184,6 +186,8 @@
   homepage_action_text_signpetition: 意願書上簽名
   homepage_signpetition_dropdown: 我同意 &#x25BE;
   homepage_diversity_pledge: Take the diversity pledge
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org 和美國大學理事會形成一個以提高在電腦科學中的多樣性為宗旨的聯盟。
   homepage_banner_text_link: 瞭解更多資訊
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
@@ -194,6 +198,7 @@
   homepage_slot_text_link_hoc: 試試一小時的程式設計課程
   homepage_slot_text_link_host: 舉辦一個小時的程式設計活動。
   homepage_slot_text_link_hocserved: '#服務。'
+  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: 學生
   homepage_slot_text_blurb_students: 瀏覽所有教案
   homepage_slot_text_link_codestudio: 嘗試程式設計工作室
@@ -251,12 +256,25 @@
   class_submission_level_vocational: 職業
   class_submission_languages_other: 其他語言
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} teachers have signed
-    up for the Hour of Code and would like a volunteer to help them.'
-  volunteer_engineer_submission_intro_paragraph: Please enter the following information
-    if you are a computer science student or software professional, and you’re interested
-    in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span>
-    are required.
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
+    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
+    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
+    have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
+    to try an hour introduction to computer science, reaching tens of millions of
+    students in 180+ countries. Please get involved during Computer Science Education
+    Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
+    who can help in the classroom, or for somebody who can <span style="font-family:
+    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
+    breadth of possibilities with computer science (which could be done through a
+    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
+    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_signup: Please enter the following information
+    if you are a computer science student or software professional. Fields marked
+    with a <span class="form-required-field">*</span> are required.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: 你的名字
@@ -297,7 +315,9 @@
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: 送出
-  volunteer_engineer_submission_thankyou: Thank you for submitting your information.
+  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
+    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
+    more here.</a>
   volunteer_engineer_submission_commitment_uncertain: 不確定
   volunteer_engineer_submission_commitment_one_hr_per_week: 每星期１小時
   volunteer_engineer_submission_commitment_three_hrs_per_week: 每星期３小時
@@ -333,6 +353,7 @@
   dashboard_landing_progress_title: 主要課程進度
   dashboard_landing_progress_biggest: 這是您最大的分區進度
   dashboard_landing_view_progress: 查看%{biggest_section}的進度
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: 可用課程
   dashboard_landing_available_courses: 這是目前可供您及您的學生們的課程。
   dashboard_landing_more_tutorials: 想看更多教程嗎?
@@ -518,8 +539,9 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: <b>September 30, 2015</b> - The Hour of Code 2015 is coming!
-    Join classrooms worldwide for the largest learning event in history.
+  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+    every participating organizer will receive a gift card to Amazon.com or Microsoft's
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: 代碼小時就在這裡 — — 12 月 8-14 ！
   code_sign_up: 註冊參與電腦科學教育週
   learn_more: 瞭解更多資訊
@@ -1007,3 +1029,63 @@
   compatibility_https_message: 為了提高安全性，我們在 %{https_date} 切換到 HTTPS。你將不能在此日期後訪問 Code.org。<a
     href='%{it_requirements_url}'> 按一下此處</a> 瞭解如何對Code.org啟用 HTTPS。
   compatibility_https_hide_this_warning: 隱藏此警告
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: '# served'
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Sign up
+  homepage_action_text_try_it: Try it
+  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_girlvideo: Inspire a girl
+  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
+    videos</a> by role models and celebrities
+  starwars_subtitle: Building a Galaxy With Code
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: Try now
+  starwars_blocks_title: Blocks
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
+  starwars_blocks_start_button: Try now
+  starwars_watch_videos: Before you get started, watch one of these inspirational
+    videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_gradelevel: Ages 4-104
+  mc_platformtext: Modern browsers, smartphones, tablets
+  minecraft_subtitle: Minecraft Hour of Code
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_gradelevel: Ages 6+
+  starwars_platformtext: Modern browsers + tablets
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
+  starwars_longdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.

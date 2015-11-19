@@ -12,6 +12,13 @@
   <link rel="stylesheet" type="text/css" href="../css/common.css">
   <link rel="stylesheet" type="text/css" href="../css/<%= app %>.css">
 
+  <!--
+    Get jquery from our node_modules. Unfortuantely, the jquery-ui in our node_modules
+    is not browser friendly. Instead, we'll grab a local version that is the
+    same as what's currently on dashboard
+   -->
+  <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/dev/jquery-ui.min.js"></script>
 <% if ((app === "maze" && options.levelId.indexOf('3_') === 0) ||
        (app === "applab" && options.levelId.indexOf('ec_') === 0) ||
        (app === "studio" && options.levelId.indexOf('ec_') === 0) ||
@@ -24,13 +31,6 @@
   <% } else { -%>
     <script type="text/javascript" src="../js/jsinterpreter/acorn_interpreter.js"></script>
   <% } -%>
-  <!--
-    Get jquery from our node_modules. Unfortuantely, the jquery-ui in our node_modules
-    is not browser friendly. Instead, we'll grab a version from the CDN that is the
-    same as what's currently on dashboard
-   -->
-  <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
   <script type="text/javascript" src="../js/ace/ace.js"></script>
   <script type="text/javascript" src="../js/ace/ext-language_tools.js"></script>
   <script type="text/javascript" src="../js/droplet/droplet-full.js"></script>
@@ -38,8 +38,11 @@
   <script type="text/javascript" src="../js/tooltipster/jquery.tooltipster.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/droplet/droplet.min.css">
 <% } else { -%>
+  <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
   <script type="text/javascript" src="../js/blockly.js"></script>
   <script type="text/javascript" src="../js/<%= options.locale %>/blockly_locale.js"></script>
+  <script type="text/javascript" src="../js/phaser/phaser.js"></script>
 <% } -%>
   <script src="https://fb.me/react-0.13.3.js"></script>
   <script type="text/javascript" src="../js/common.js"></script>

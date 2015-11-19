@@ -13,6 +13,8 @@ module ViewOptionsHelper
     readonly_workspace
     is_external_project_level
     is_channel_backed
+    post_milestone
+    puzzle_ratings_url
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

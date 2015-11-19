@@ -245,4 +245,4 @@ Nós não divulgamos nenhuma informação pessoal para terceiros com finalidades
 Entre em contato com a Code.org se tiver quaisquer dúvidas ou comentários sobre este Aviso de privacidade, suas Informações pessoais, práticas de divulgação de terceiros ou sobre suas opções de consentimento, escrevendo para nós por meio do site <http://code.org/contact> ou para o endereço 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.   
   
   
-[![image](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![image](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

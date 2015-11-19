@@ -20,15 +20,18 @@ var JSInterpreter = module.exports = function (options) {
 
   this.paused = false;
   this.yieldExecution = false;
+  this.startedHandlingEvents = false;
   this.nextStep = StepType.RUN;
   this.maxValidCallExpressionDepth = 0;
   this.callExpressionSeenAtDepth = [];
 
-  this.codeInfo = {};
-  this.codeInfo.userCodeStartOffset = 0;
-  this.codeInfo.userCodeLength = options.code.length;
-  var session = this.studioApp.editor.aceEditor.getSession();
-  this.codeInfo.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+  if (!this.studioApp.hideSource) {
+    this.codeInfo = {};
+    this.codeInfo.userCodeStartOffset = 0;
+    this.codeInfo.userCodeLength = options.code.length;
+    var session = this.studioApp.editor.aceEditor.getSession();
+    this.codeInfo.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+  }
 
   if (options.enableEvents) {
     this.eventQueue = [];
@@ -42,7 +45,11 @@ var JSInterpreter = module.exports = function (options) {
   var self = this;
   var initFunc = function (interpreter, scope) {
     self.globalScope = scope;
-    codegen.initJSInterpreter(interpreter, options.blocks, scope);
+    codegen.initJSInterpreter(
+        interpreter,
+        options.blocks,
+        options.blockFilter,
+        scope);
 
     // Only allow five levels of depth when marshalling the return value
     // since we will occasionally return DOM Event objects which contain
@@ -74,6 +81,15 @@ var JSInterpreter = module.exports = function (options) {
 
 };
 
+/**
+ * Returns true if the JSInterpreter instance initialized successfully. This
+ * would typically fail when the program contains a syntax error.
+ */
+JSInterpreter.prototype.initialized = function () {
+  return !!this.interpreter;
+};
+
+
 JSInterpreter.StepType = {
   RUN:  0,
   IN:   1,
@@ -89,6 +105,7 @@ JSInterpreter.StepType = {
  * optionally, callback arguments (stored in "arguments")
  */
 JSInterpreter.prototype.nativeGetCallback = function () {
+  this.startedHandlingEvents = true;
   var retVal = this.eventQueue.shift();
   if (typeof retVal === "undefined") {
     this.yield();
@@ -197,7 +214,10 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
   var unwindingAfterStep = false;
   var inUserCode;
   var userCodeRow;
-  var session = this.studioApp.editor.aceEditor.getSession();
+  var session;
+  if (!this.studioApp.hideSource) {
+    session = this.studioApp.editor.aceEditor.getSession();
+  }
 
   // In each tick, we will step the interpreter multiple times in a tight
   // loop as long as we are interpreting code that the user can't see
@@ -384,6 +404,9 @@ JSInterpreter.prototype.createPrimitive = function (data) {
  * because it is outside of the userCode area, the return value is -1
  */
 JSInterpreter.prototype.selectCurrentCode = function (highlightClass) {
+  if (this.studioApp.hideSource) {
+    return -1;
+  }
   return codegen.selectCurrentCode(this.interpreter,
                                    this.codeInfo.cumulativeLength,
                                    this.codeInfo.userCodeStartOffset,
@@ -399,6 +422,9 @@ JSInterpreter.prototype.selectCurrentCode = function (highlightClass) {
  * of the userCode area, the return value is -1
  */
 JSInterpreter.prototype.getUserCodeLine = function () {
+  if (this.studioApp.hideSource) {
+    return -1;
+  }
   var userCodeRow = -1;
   if (this.interpreter.stateStack[0]) {
     var node = this.interpreter.stateStack[0].node;
@@ -425,6 +451,9 @@ JSInterpreter.prototype.getUserCodeLine = function () {
  * not currently in the user code area.
  */
 JSInterpreter.prototype.getNearestUserCodeLine = function () {
+  if (this.studioApp.hideSource) {
+    return -1;
+  }
   var userCodeRow = -1;
   for (var i = 0; i < this.interpreter.stateStack.length; i++) {
     var node = this.interpreter.stateStack[i].node;

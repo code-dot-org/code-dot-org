@@ -15,127 +15,179 @@ social:
 
 # Sponsori Hour of Code România
 
-<div class="container main-content">
-
-    <div class="row">
+<div class="container-wrap">
 
 
-        <h2 class="text-align-center">Sponsori corporate</h2><div class="row"><div class="col-sm-3 col span_3 one-fourths clear-both">
+
+	<div class="container main-content">
+
+
+
+		<div class="row">
+
+
+
+			
+
+				<h1 class="text-align-center">Organizatori</h1><div class="row"><div class="col-sm-3 col span_3">
+                    
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.intel.com" target="_blank"><img style="max-width: 100%" src="/images/adfaber/intSFT_rgb-175x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.adfaber.org" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/adfaber-logo.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths right-edge">
+                  </div></div><h1 class="text-align-center">Sponsori Corporate</h1><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <img style="max-width: 100%" src="/images/adfaber/upc-logo-cmyk-lo-e1417814082326-156x160.png">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.bitdefender.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/Bitdefender-Logo-Black-259x160.png"></a>
+                    </div>
+                  </div></div><h1 class="text-align-center">Parteneri</h1><div class="row"><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.gameloft.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/ok_black_1_cleanfinalcs5-e1415645270641-228x160.png"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.king.com" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/11/king_logo_plainOrange_onWhite_600x412-233x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.ibm.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/ibmlogo.jpg”></a>
                     </div>
-                  </div></div><h2 class="text-align-center">Parteneri</h2><div class="row"><div class="col-sm-3 col span_3 one-fourths clear-both">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.samsung.com/ro/home" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/12/Logo-Samsung-e1417774718690.jpg"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.intel.com" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/intSFT_rgb-175x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths right-edge">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.ibm.com/ro/ro/" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/12/ibm_logo-434x160.jpg"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://strategad.com" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/strategad-163x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths clear-both">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.mcdonalds.ro" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/12/McD-Logo_fundal-alb_AI9-culori-noi-alta-varianta-141x160.jpg"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.upc.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/upc-logo-cmyk-lo-e1417814082326-157x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths right-edge">
+                  </div></div><h1 class="text-align-center">Suporteri</h1><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/12/HERO_DC_ALL_BLACK_RGB-e1417465165157-189x160.png">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://acdcromania.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo.jpg"></a>
                     </div>
-                  </div></div><div class="row"><div class="col-sm-3 col span_3 one-fourths clear-both">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.gameloft.ro" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/11/ok_black_1_cleanfinalcs5-e1415645270641-227x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.anbpr.org.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/LogoANBPR1-213x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths right-edge">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://strategad.com" target="_blank"><img style="max-width: 100%" src="/images/adfaber/strategad-162x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.anis.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo-ANIS-L-full-RO-326x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths clear-both">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.facebook.com/GirlsWhoCodeRO" target="_blank"><img style="max-width: 100%" src="/images/adfaber/GWCR_logo_300-160x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://acs.pub.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/ACS_logo_digit-1-365x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths right-edge">
+                    </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.facebook.com/GITRomania" target="_blank"><img style="max-width: 100%" src="/images/adfaber/romania_GIT-336x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.britishcouncil.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/British-Council-stacked-Corporate-rgb-e1415722280172-558x160.jpg"></a>
+                    </div>
+                  </div><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.devicehub.net/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo-simplu-696x160.png"></a>
+                    </div>
+                  </div><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://digitalkids.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo-digital-kids-210x160.png"></a>
+                    </div>
+		</div><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.hahahaproduction.com" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/hahaha.png"></a>
                     </div>
                   </div></div><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://cinemacity.ro/" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/11/CC_png-348x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.geyc.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo_geyc-2-280x160.jpg"></a>
                     </div>
-                  </div></div><h2 class="text-align-center">Suporteri</h2><div class="row"><div class="col-sm-3 col span_3 one-fourths clear-both">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://scoaladevalori.ro/" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/12/Logo-Scoala-de-Valori-color-e1417547444856-164x160.jpg"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.facebook.com/GITRomania" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/romania_GIT-337x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths right-edge">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://lse.org.ro/" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/12/LSE-160x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.facebook.com/GirlsWhoCodeRO" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/GWCR_logo_300-160x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths clear-both">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://mobilpro.lse.org.ro/" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/12/MP_2015-392x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://hyc.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/Logo-HYC-patrat-160x160.jpg"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths right-edge">
+                  </div></div><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.jaromania.org" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/11/JA-YE-ROMANIA_vf-e1416154651265-293x160.jpg"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://inventeaza.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo_inventeaza_extended-140x160.png"></a>
                     </div>
-                  </div></div><div class="row"><div class="col-sm-3 col span_3 one-fourths clear-both">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.britishcouncil.ro" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/11/British-Council-stacked-Corporate-rgb-e1415722280172-558x160.jpg"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.ipp.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/IPP-163x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths right-edge">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.biblionet.ro" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/11/biblionet2-393x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.jaromania.org" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/JA-YE-ROMANIA_vf-e1416154651265-293x160.jpg"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths clear-both">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.anbpr.org.ro/" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/11/LogoANBPR1-213x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.lsacbucuresti.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/sigla_LSAC_vectorial_72dpi-1-453x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths right-edge">
+                  </div></div><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://techsoup.ro/" target="_blank"><img style="max-width: 100%" src="/images/adfaber/logo_techsoup_fundal_tranparent-285x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://lse.org.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/LSE-160x160.png"></a>
                     </div>
-                  </div></div><div class="row"><div class="col-sm-3 col span_3 one-fourths clear-both">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.rgda.ro" target="_blank"><img style="max-width: 100%" src="/images/adfaber/RGDA-new-logo-336x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://mobilpro.lse.org.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/MP_2015-392x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths right-edge">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.anis.ro" target="_blank"><img style="max-width: 100%" src="/images/adfaber/logo-ANIS-L-full-RO-326x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.upb.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/Sigla_UPB_color-1-e1414702368515-160x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths clear-both">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.femei-in-afaceri.ro/ro/index" target="_blank"><img style="max-width: 100%" src="/images/adfaber/FIA_negru-382x160.jpg"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.rgda.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/RGDA-new-logo-337x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths right-edge">
+                  </div></div><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.lsacbucuresti.ro/" target="_blank"><img style="max-width: 100%" src="/images/adfaber/sigla_LSAC_vectorial_72dpi-1-452x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://scoaladevalori.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/Logo-Scoala-de-Valori-color-e1417547444856-164x160.jpg"></a>
                     </div>
-                  </div></div><div class="row"><div class="col-sm-3 col span_3 one-fourths clear-both">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://acs.pub.ro/" target="_blank"><img style="max-width: 100%" src="/images/adfaber/ACS_logo_digit-1-364x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://techsoup.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo_techsoup_fundal_tranparent-285x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths right-edge">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.upb.ro/" target="_blank"><img style="max-width: 100%" src="/images/adfaber/Sigla_UPB_color-1-e1414702368515-160x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.aries.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logoaries.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths clear-both">
+                  </div>
+<div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.geyc.ro/" target="_blank"><img style="max-width: 100%" src="/images/adfaber/logo_geyc-2-279x160.jpg"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.upir.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/upir.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3 one-fourths right-edge">
+                  </div></div><h1 class="text-align-center">Parteneri Media</h1><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.ipp.ro/" target="_blank"><img style="max-width: 100%" src="/images/adfaber/IPP-163x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.agora.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo_AGORA-511x160.png"></a>
+                    </div>
+                  </div><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.femei-in-afaceri.ro/ro/index" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/FIA_negru-382x160.jpg"></a>
+                    </div>
+                  </div></div><h1 class="text-align-center">PR</h1><div class="row"><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.mslgroup.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/Screen-Shot-2014-12-17-at-22.29.54-290x160.png"></a>
+                    </div>
+                  </div><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <img style="max-width: 100%" src="">
                     </div>
                   </div></div>
 
 
-  </div><!--/row-->
+
+			
+
+
+
+
+		</div><!--/row-->
+
+
+
+	</div><!--/container-->
+
+
+
 </div>
 ---
 

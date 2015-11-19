@@ -49,26 +49,30 @@
         = t('pdf_download')
 
 :javascript
-  var clickedNext = false;
   $('a.next-stage').click(function() {
-    if (!clickedNext) {
-      clickedNext = true;
-      sendReport({
-        fallbackResponse: '#{@fallback_response.to_json}',
-        callback: '#{@callback}',
-        app: 'unplug',
-        level: '#{@level.level_num}',
-        result: true,
-        testResult: 100,
-        onComplete: function() {
-          if (lastServerResponse.videoInfo) {
-            showVideoDialog(lastServerResponse.videoInfo);
-          } else if (lastServerResponse.nextRedirect) {
-            window.location.href = lastServerResponse.nextRedirect;
-          }
-        }
-      });
+    var finishedButton = $(this);
+
+    if (finishedButton.hasClass("disabled")) {
+      return;
     }
+
+    finishedButton.addClass("disabled");
+    sendReport({
+      fallbackResponse: '#{@fallback_response.to_json}',
+      callback: '#{@callback}',
+      app: 'unplug',
+      level: '#{@level.level_num}',
+      result: true,
+      testResult: 100,
+      onComplete: function() {
+        if (lastServerResponse.videoInfo) {
+          showVideoDialog(lastServerResponse.videoInfo);
+          finishedButton.removeClass("disabled");
+        } else if (lastServerResponse.nextRedirect) {
+          window.location.href = lastServerResponse.nextRedirect;
+        }
+      }
+    });
   });
 
 - if video

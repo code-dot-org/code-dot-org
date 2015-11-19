@@ -99,9 +99,7 @@ namespace :seed do
 
   # Generate the database entry from the custom levels json file
   task custom_levels: :environment do
-    if !Rails.env.levelbuilder? || ENV["FORCE_CUSTOM_LEVELS"]
-      LevelLoader.load_custom_levels
-    end
+    LevelLoader.load_custom_levels
   end
 
   task callouts: :environment do
@@ -257,10 +255,8 @@ namespace :seed do
     SecretPicture.setup
   end
 
-  task all: [:videos, :concepts, :scripts, :script_cache_to_cache, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
-  task incremental: [:videos, :concepts, :scripts_incremental, :script_cache_to_cache, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task incremental: [:videos, :concepts, :scripts_incremental, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
 
-  task script_cache_to_cache: :environment do
-    Script.script_cache_to_cache
-  end
+  task test: [:videos, :games, :concepts, :trophies, :prize_providers, :secret_words, :secret_pictures]
 end

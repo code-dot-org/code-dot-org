@@ -23,7 +23,7 @@ var TextAreaProperties = React.createClass({
       <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true} />
         <PropertyRow
@@ -66,6 +66,10 @@ var TextAreaProperties = React.createClass({
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
         <BooleanPropertyRow
+          desc={'read only'}
+          initialValue={!element.isContentEditable}
+          handleChange={this.props.handleChange.bind(this, 'readonly')} />
+        <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')} />
@@ -89,7 +93,7 @@ var TextAreaEvents = React.createClass({
   },
 
   getChangeEventCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
       '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
@@ -110,7 +114,7 @@ var TextAreaEvents = React.createClass({
       <div id='eventRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
         <EventHeaderRow/>
@@ -142,6 +146,13 @@ module.exports = {
   },
 
   onDeserialize: function (element) {
+    $(element).on('mousedown', function (e) {
+      if (!Applab.isRunning()) {
+        // Disable clicking into text area unless running
+        e.preventDefault();
+      }
+    });
+
     // swallow keydown unless we're running
     $(element).on('keydown', function (e) {
       if (!Applab.isRunning()) {

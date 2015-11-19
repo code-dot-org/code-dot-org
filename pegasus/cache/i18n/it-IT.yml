@@ -39,9 +39,9 @@
   hoc2014_support: Sostienilo &#x25BE;
   hoc2014_whatishoc: Cosa è l'Ora del Codice?
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_signup: Iscrivi il tuo evento
+  csedweek_map_search_placeholder: Cerca eventi per l'ora di codice
+  csedweek_map_search_search: Cerca
   csedweek_map_search_reset: Ricomincia
   cded_sign_up: Iscriviti
   cded_try_it: Prova
@@ -83,19 +83,17 @@
   enter_valid_age: Si prega di indicare una età valida
   enter_valid_email: Per favore inserisci un indirizzo valido di posta elettronica
   get_a_certificate_message: Ti manderemo un certificato e le informazioni su come
-    <a href='/learn/beyond'>continuare ad imparare dopo altro oltre l'Ora del Codice</a>
+    <a href='/learn/beyond'>continuare ad imparare dopo la prima Ora del Codice</a>
   get_a_certificate_message_after: Clicca sul certificato per scaricarlo o stamparlo.
-    Continua, quindi, con gli <a href='http://studio.code.org'>altri corsi</a> o vedi
-    altre possibilità per <a href='/learn/beyond'> imparare altro oltre l'Ora del
-    Codice</a>.
+    Poi, continua con <a href='http://studio.code.org'>altri corsi</a>, o vedi altre
+    possibilità per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>.
   thanks_for_submitting: Grazie per l'invio!
   if_you_enjoyed: Se ti è piaciuto imparare, chiedi anche ai tuoi amici di provare!  Vogliamo
     che tutto il mondo impari.
   personalize_certificate: Personalizza il tuo certificato
   share_achievement: Condividi il tuo successo
   beyond_hour_message: Vai avanti con <a href='http://studio.code.org'>altri corsi</a>,
-    o vedi altre opzioni per <a href='/learn/beyond'>imparare altro oltre l'Ora del
-    Codice</a>.
+    o vedi altre opzioni per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>.
   leaderboards_for_hoc: Classifiche per l'Ora del Codice.
   support_url: http://programmailfuturo.it/aiuto
   country: Nazione
@@ -117,7 +115,7 @@
   participant_student: Studente
   participant_parent: Genitore
   participant_educator: Insegnante
-  participant_engineer: Ingegnere del Software
+  participant_engineer: Informatico
   participant_other: Nessuna delle precedenti
   print_all: Stampa tutto
   print_ice_art: Stampa la tua arte di ghiaccio
@@ -128,10 +126,10 @@
   used_infrequent_updates: Utilizzato solo per aggiornamenti poco frequenti
   privacy_practices_children: Vedi la nostra informativa sulla privacy per i bambini
   petition_thankyou: Grazie per aver firmato la petizione
-  continue_learning_header: Prosegui l'apprendimento oltre l'Ora del Codice
+  continue_learning_header: Continua ad imparare dopo l'Ora del Codice
   continue_learning_body: Ci sono molte opzioni.  Puoi imparare online, o presso una
     scuola locale, o presso un campo estivo.
-  learn_next_level: Prosegui al livello successivo
+  learn_next_level: Prova un altro corso di Code Studio
   learn_online: Prova altri corsi on-line
   learn_classes: Trova le scuole locali
   hoc_is_here: 'L''Ora del Codice #HourOfCode è qua - provala! @codeorg @programmafuturo'
@@ -140,6 +138,8 @@
   twitter_teach_cs: Perchè molte scuole non insegnano informatica? Possiamo migliorare
     questa situazione.  http://youtu.be/nKIu9yen5nc. Visita http://code.org/  per
     saperne di più.
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
   learn_hoc: Fai l'Ora del Codice
   beyond_hoc: Dopo la prima ora
   what_gender: Di che sesso sei?
@@ -238,6 +238,8 @@
   homepage_action_text_signpetition: Firma la petizione
   homepage_signpetition_dropdown: Firma la nostra petizione &#x25BE;
   homepage_diversity_pledge: Abbraccia una causa in favore della diversità
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org e College Board lavorano insieme per migliorare
     la diversità nella computer science.
   homepage_banner_text_link: Ulteriori informazioni
@@ -249,6 +251,7 @@
   homepage_slot_text_link_hoc: Prova l'Ora del Codice
   homepage_slot_text_link_host: Ospita un'Ora di Codice
   homepage_slot_text_link_hocserved: '# servito'
+  homepage_solot_text_link_volunteer: Volontario per l'ora del codice
   homepage_slot_text_title_students: Studenti
   homepage_slot_text_blurb_students: Scopri tutto sui nostri tutorial
   homepage_slot_text_link_codestudio: Prova Code Studio
@@ -310,12 +313,25 @@
   class_submission_level_vocational: Formazione professionale
   class_submission_languages_other: Altre lingue
   volunteer_engineer_submission_title: Volontario per l'ora del codice
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} insegnanti hanno aderito
-    all''ora di codice e vorrebbero un volontario per aiutarli.'
-  volunteer_engineer_submission_intro_paragraph: Inserisci le seguenti informazioni
-    indicando se sei uno studente di informatica o professionista informatico e sei
-    interessato a aiutare gli insegnanti locali per l'ora del codice. I campi contrassegnati
-    con un <span class="form-required-field"> *</span> sono obbligatori.
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
+    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
+    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
+    have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
+    to try an hour introduction to computer science, reaching tens of millions of
+    students in 180+ countries. Please get involved during Computer Science Education
+    Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
+    who can help in the classroom, or for somebody who can <span style="font-family:
+    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
+    breadth of possibilities with computer science (which could be done through a
+    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
+    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_signup: Please enter the following information
+    if you are a computer science student or software professional. Fields marked
+    with a <span class="form-required-field">*</span> are required.
   volunteer_engineer_submission_header_shared: Informazioni condivise con gli insegnanti
     sulla mappa dei volontari
   volunteer_engineer_submission_field_name: Nome
@@ -339,24 +355,26 @@
   volunteer_engineer_submission_field_facebook: Profilo Facebook
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Descrizione
-  volunteer_engineer_submission_field_description_desc: Describe your computer science
-    experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never
-    shared
+  volunteer_engineer_submission_field_description_desc: Descrivete il vostro livello
+    di esperienza in inormatica e come si desidera partecipare come volontario a supporto
+    degli insegnanti.
+  volunteer_engineer_submission_field_description_placeholder: Descrizione dell'esperienza
+    e/o partecipazione
+  volunteer_engineer_submission_header_private: Le informazioni sono mantenute private
+    e mai condivise
   volunteer_engineer_submission_field_email: Indirizzo di posta elettronica
-  volunteer_engineer_submission_field_email_desc: Your email address will never be
-    shared, but we'll send you requests from teachers.
+  volunteer_engineer_submission_field_email_desc: Il tuo indirizzo email non sarà
+    mai condiviso. Ti invieremo le richieste da parte degli insegnanti.
   volunteer_engineer_submission_field_email_placeholder: Indirizzo di posta elettronica
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
     teachers to contact you for the Hour of Code or other volunteer opportunities.
     Your email and exact address will NEVER be shared by us. But the other information
     (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
-    me for volunteer opportunities (Note: your email address won''t be shared)'
+  volunteer_engineer_submission_checkbox_contact: 'Sono d''accordo che gli insegnanti
+    possono contattarmi per opportunità di volontariato (Nota: il tuo indirizzo email
+    non sarà condivisa)'
   volunteer_engineer_submission_submit: Invia
-  volunteer_engineer_submission_thankyou: Thank you for submitting your information.
+  volunteer_engineer_submission_thankyou: Grazie per aver inviato i tuoi dati.
   volunteer_engineer_submission_commitment_uncertain: Incerto
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 ora alla settimana
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ore alla settimana
@@ -366,12 +384,12 @@
   volunteer_engineer_submission_commitment_monthly: Un paio d'ore al mese
   volunteer_engineer_submission_commitment_weekly: Un paio d'ore a settimana
   volunteer_engineer_submission_commitment_more: Di più
-  volunteer_engineer_submission_location_flexibility_onsite: visitando in loco presso
-    una scuola (1-2 ore in aula o conferenza presso la scuola)
-  volunteer_engineer_submission_location_flexibility_remote: avendo un Q&A con gli
-    studenti in remoto (tramite breve video conferenza)
-  volunteer_engineer_submission_location_flexibility_curriculum: disposto a contribuire
-    a progetti open source
+  volunteer_engineer_submission_location_flexibility_onsite: visitando direttamente
+    una scuola (1-2 ore in aula presso la scuola)
+  volunteer_engineer_submission_location_flexibility_remote: avendo una breve sessione
+    di domande e risposte con gli studenti in video conferenza
+  volunteer_engineer_submission_location_flexibility_curriculum: Disposto a contribuire
+    a progetti "open source" di formazione all'informatica
   volunteer_engineer_submission_experience_unspecified: Non specificata
   volunteer_engineer_submission_experience_university_student_or_researcher: Studente
     universitario di informatica
@@ -403,6 +421,7 @@
   dashboard_landing_progress_title: Progressi della classe principale
   dashboard_landing_progress_biggest: Questo è la situazione per la tua classe principale.
   dashboard_landing_view_progress: Controlla i progressi della classe %{biggest_section}
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Corsi disponibili
   dashboard_landing_available_courses: Ecco i corsi attualmente disponibili per te
     e i tuoi studenti.
@@ -476,7 +495,7 @@
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Gestione delle classi e degli studenti
   dashboard_navigation_view_progress: Controlla i progressi
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: Visualizza il testo delle risposte
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -535,16 +554,19 @@
   dashboard_students_print_info: Stampa le schede con le informazioni di login dei
     tuoi studenti.
   dashboard_students_secret_picture_title: Immagine segreta
-  dashboard_students_secret_picture: Questa sezione utilizza una <b>immagine</b> come
-    informazione segreta.  Vuol dire che ognuno dei vostri studenti ha un'immagine
-    segreta utilizzata al posto di una password per accedere.  Gli studenti dovrebbero
-    usare l'indirizzo web indicato in precedenza per l'accesso.
+  dashboard_students_secret_picture: Questa sezione utilizza un'<b>immagine</b> come
+    informazione segreta.  Vuol dire che ognuno dei tuoi studenti ha un'immagine segreta,
+    che usa come password per accedere.  Gli studenti dovrebbero usare l'indirizzo
+    web indicato in precedenza per l'accesso.
   dashboard_students_reset_picture: Puoi reimpostare l'immagine segreta di uno studente
     in qualsiasi momento scegliendo <b>Mostra la password</b> e quindi <b>Reimposta
     la password</b>. Una nuova immagine segreta verrà generata come password per quello
     studente, da usare per l'accesso.
   dashboard_students_secret_word_title: Parola segreta
-  dashboard_students_secret_word: Parola segreta
+  dashboard_students_secret_word: Questa sezione utilizza una <b>parola</b> come informazione
+    segreta.  Vuol dire che ognuno dei tuoi studenti ha una parola segreta, che usa
+    come password per accedere.  Gli studenti dovrebbero usare l'indirizzo web indicato
+    in precedenza per l'accesso.
   dashboard_students_reset_word: 'Puoi reimpostare la parola segreta di uno studente
     in qualsiasi momento scegliendo <b>Mostra la password</b> e quindi <b>Reimposta
     la password</b>. Una nuova parola segreta verrà generata come password per quello
@@ -764,7 +786,7 @@
   scratch_platformtext: Browser web solo per computer da tavolo (non per tablet)
   lightbot_platformtext: Tutti i browser, sistemi iOS o Android, console di gioco
   thinkersmith_platformtext: '"Senza Rete"'
-  condcards_platformtext: '"Senza Rete"'
+  condcards_platformtext: Tradizionali
   lightbotintl_platformtext: iOS, Android (o browser web)
   codehs_platformtext: Browser moderni. (Il proseguimento del corso è a pagamento)
   codecademy_platformtext: Browser web moderni. iOS, applicazioni Android
@@ -1354,3 +1376,63 @@
     href='%{it_requirements_url}'> Clicca qui</a> per informazioni su come abilitare
     HTTPS per accedere a Code.org.
   compatibility_https_hide_this_warning: Nascondi questo avviso
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: '# served'
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Sign up
+  homepage_action_text_try_it: Try it
+  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_girlvideo: Inspire a girl
+  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
+    videos</a> by role models and celebrities
+  starwars_subtitle: Building a Galaxy With Code
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: Try now
+  starwars_blocks_title: Blocks
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
+  starwars_blocks_start_button: Try now
+  starwars_watch_videos: Before you get started, watch one of these inspirational
+    videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_gradelevel: Ages 4-104
+  mc_platformtext: Modern browsers, smartphones, tablets
+  minecraft_subtitle: Minecraft Hour of Code
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_gradelevel: Ages 6+
+  starwars_platformtext: Modern browsers + tablets
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
+  starwars_longdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.

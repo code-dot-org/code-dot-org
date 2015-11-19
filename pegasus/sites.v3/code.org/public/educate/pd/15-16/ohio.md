@@ -9,6 +9,7 @@ nav: pd2_nav
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
+- [I'm attending Administrator or Counselor PD](#counselor-admin)
 
 
 <a id="ecs"></a>
@@ -22,13 +23,11 @@ Milestone complete!
 ### Phase 2: Blended Summer Study  (5 days in-person & ~8 hours online) ###
 
 
-#### In-person Workshop####
+
 
 Milestone Complete!
 
-#### Online Study####
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -49,15 +48,15 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**September 12th Location**
+**Location**
 
-Columbus State Community College<br/>
+[Columbus State Community College<br/>
 Conference Center<br/>
 Room 407<br/>
 315 Cleveland Avenue<br/>
-Columbus, OH 43215
+Columbus, OH 43215](https://www.google.com/maps/place/Columbus+State+Child+Development+Center/@39.969909,-82.9919726,16z/data=!4m2!3m1!1s0x0:0xb426e07cbf2840c5)
 
-[Free Parking Pass](/files/Ohio-parking-pass.pdf) is available in the [lots adjacent](/files/ohio-lot27-s.pdf) to the conference center.
+Review the [campus map](http://www.cscc.edu/about/columbus/) (the Conference Center is listed as WD on the corner of Cleveland Ave and Grove Street) and [building map](http://www.cscc.edu/community/conference-center/floor-plans-pricing.shtml). 
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -112,11 +111,11 @@ Breakfast and lunch will be served.
 
 **September 12th Location**
 
-Columbus State Community College<br/>
+[Columbus State Community College<br/>
 Conference Center<br/>
 Room 415<br/>
 315 Cleveland Avenue<br/>
-Columbus, OH 43215
+Columbus, OH 43215](https://www.google.com/maps/place/Columbus+State+Child+Development+Center/@39.969909,-82.9919726,16z/data=!4m2!3m1!1s0x0:0xb426e07cbf2840c5)
 
 [Free Parking Pass](/files/Ohio-parking-pass.pdf) is available in the [lots adjacent](/files/ohio-lot27-s.pdf) to the conference center.
 
@@ -166,11 +165,11 @@ Breakfast and lunch will be served.
 
 **Location**
 
-Columbus State Community College<br/>
+[Columbus State Community College<br/>
 Conference Center<br/>
 Room 402<br/>
 315 Cleveland Avenue<br/>
-Columbus, OH 43215
+Columbus, OH 43215](https://www.google.com/maps/place/Columbus+State+Child+Development+Center/@39.969909,-82.9919726,16z/data=!4m2!3m1!1s0x0:0xb426e07cbf2840c5)
 
 [Free Parking Pass](/files/Ohio-parking-pass.pdf) is available in the [lots adjacent](/files/ohio-lot27-s.pdf) to the conference center.
 
@@ -205,10 +204,10 @@ Tuesday, November 10, 2015 <br/>
 
 **Location**
 
-Microsoft Corporation<br/> 
+[Microsoft Corporation<br/> 
 Scarlet Room<br/>
 8800 Lyra Drive, Suite 400<br/>
-Columbus, OH 43240
+Columbus, OH 43240](https://www.google.com/maps/place/Microsoft+Corporation/@40.1445251,-82.9729873,15z/data=!4m2!3m1!1s0x0:0x4d85ce7a6fec2b0e?sa=X&ved=0CGoQ_BIwC2oVChMIjfKP8JqYyQIVRimICh2FvwBf)
 
 Free parking is available in three lots surrounding the building.
 
@@ -223,14 +222,14 @@ Water
 **Save the date**
 
 Tuesday, November 10, 2015 <br/>
-8:30am - 10:00am
+8:00am - 10:00am
 
 **Location**
 
-Microsoft Corporation<br/> 
+[Microsoft Corporation<br/> 
 Scarlet Room<br/>
 8800 Lyra Drive, Suite 400<br/>
-Columbus, OH 43240
+Columbus, OH 43240](https://www.google.com/maps/place/Microsoft+Corporation/@40.1445251,-82.9729873,15z/data=!4m2!3m1!1s0x0:0x4d85ce7a6fec2b0e?sa=X&ved=0CGoQ_BIwC2oVChMIjfKP8JqYyQIVRimICh2FvwBf)
 
 Free parking is available in three lots surrounding the building.
 

@@ -46,7 +46,7 @@ group :development, :test do
   # for unit testing
   gem 'factory_girl_rails'
   gem 'fakeweb'
-  gem 'simplecov', require: false
+  gem 'simplecov', '~> 0.9', require: false
   gem 'mocha', require: false
   gem "codeclimate-test-reporter", require: false
   gem 'sqlite3'
@@ -60,7 +60,6 @@ group :development, :test do
   gem 'colorize'
   gem 'spring'
   gem 'spring-commands-testunit'
-  gem "test-unit", "~> 3.0"
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
   gem 'eyes_selenium', '~> 2.5.0'
@@ -108,7 +107,7 @@ gem 'nokogiri', '~> 1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger', '~> 1.11.2' # error monitoring
+gem 'honeybadger', '~> 1.11' # error monitoring
 
 gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
@@ -163,7 +162,7 @@ gem 'haml_lint', require: false, group: [:development, :staging]
 gem 'lograge'
 
 # Enforce SSL
-gem 'rack-ssl-enforcer', group: [:development, :staging, :test, :levelbuilder]
+gem 'rack-ssl-enforcer'
 
 # PubSub for NetSim
 gem 'pusher', '~> 0.14.5'
@@ -174,3 +173,4 @@ gem 'net-ssh'
 gem 'net-scp'
 gem 'httparty'
 gem 'jquery-cookie-rails'
+gem 'oj'

@@ -1,6 +1,9 @@
 @eyes
 Feature: Looking at a few things with Applitools Eyes
 
+Background:
+  Given I am on "http://learn.code.org/reset_session"
+
 Scenario:
   When I open my eyes to test "bounce game"
   And I am on "http://learn.code.org/2014/1?noautoplay=true"
@@ -21,7 +24,7 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "freeplay artist sharing"
-  And I am on "https://studio.code.org/s/course3/stage/21/puzzle/15?noautoplay=true"
+  And I am on "http://studio.code.org/s/course3/stage/21/puzzle/15?noautoplay=true"
   When I rotate to landscape
   And I see no difference for "initial load"
   And I wait to see "#x-close"
@@ -194,5 +197,5 @@ Scenario Outline: Simple page view without instructions dialog
   And I see no difference for "initial load"
   And I close my eyes
 Examples:
-  | url                                                                | test_name                 |
-  | http://learn.code.org/p/applab                                     | new applab project        |
+  | url                                                               | test_name                 |
+  | http://learn.code.org/projects/applab/new                         | new applab project        |

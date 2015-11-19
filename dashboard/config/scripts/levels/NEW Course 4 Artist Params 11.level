@@ -76,7 +76,7 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" editable="false">
+        <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
           <mutation>
             <arg name="sides"/>
             <arg name="length"/>
@@ -86,7 +86,7 @@
             <block type="controls_repeat_ext" inline="true">
               <value name="TIMES">
                 <block type="math_number">
-                  <title name="NUM">???</title>
+                  <title name="NUM">7</title>
                 </block>
               </value>
               <statement name="DO">
@@ -110,7 +110,7 @@
                           </value>
                           <value name="B">
                             <block type="math_number">
-                              <title name="NUM">???</title>
+                              <title name="NUM">7</title>
                             </block>
                           </value>
                         </block>

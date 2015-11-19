@@ -42,7 +42,8 @@ Here are our deadlines for Applications. Applications received earlier will rece
 
 - <del>Window 1  -- Applications need to be in by June 30th.</del>
 - <del>Window 2  -- Applications need to be in by August 31st.</del>
-- **Window 3**  -- Applications need to be in by October 31st.
+- <del>Window 3  -- Applications need to be in by October 31st.</del>
+- **Window 4** --  Applications will be considered on a case by case basis, please [fill out our interest form](/educate/interesteddistrict) and our Outreach Team will be in touch.
 
 ## Information on Curriculum and PD
 
@@ -70,7 +71,7 @@ CAMERON DOC NEEDED
 - Broward County Public Schools (FL)
 - Houston Independent School District (TX)
 - Montgomery County Public Schools (MD)
-- [See all 70+ partner districts](/educate/partner-districts)
+- [See all 90 partner districts](/educate/partner-districts)
 
 [/col-50]
 

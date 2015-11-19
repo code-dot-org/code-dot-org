@@ -33,7 +33,7 @@ nav: promote_nav
 
 [![imagen](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![imagen](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+<%= view :social_posters %>
 
 <a id="logo"></a>
 
@@ -106,7 +106,7 @@ Nuestra hora de código es una declaración que [nombre de la escuela] está lis
 
 Esta es una oportunidad para cambiar el futuro de la educación en [nombre de la ciudad].
 
-Ver http://hourofcode.com/ < % = @country %> para más detalles y ayudar a difundir la palabra.
+Ver http://hourofcode.com/ <%= @country %> para más detalles y ayudar a difundir la palabra.
 
 Atentamente,
 

@@ -6,40 +6,42 @@ nav: promote_nav
 
 ---
 
-<% facebook = {:u=>"http://#{request.host}/us"}
+<%
+  facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
+  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+%>
 
-# How to get involved
+# Hvernig á að taka þátt
 
-## 1. Sign up to host an Hour of Code
+## 1. Skráðu þig til að halda Klukkustund kóðunar
 
-Anyone, anywhere can host an Hour of Code. [Sign up](<%= resolve_url('/') %>) to receive updates and qualify for prizes.   
+Allir, alls staðar geta haldið Klukkustund kóðunar. [Skráðu þig](<%= resolve_url('/') %>) til að fá tilkynningar og eiga rétt á verðlaunum.   
 
 
 [<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
 
-## 2. Spread the word
+## 2. Láttu aðra vita
 
-Tell your friends about the **#HourOfCode**!
+Segðu vinum þínum frá **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 3. Ask your whole school to offer an Hour of Code
+## 3. Biddu skólann þinn að bjóða Klukkustund kóðunar
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Sendu þennan tölvupóst](<%= resolve_url('/promote/resources#sample-emails') %>) til skólastjórans og skoraðu á hvern bekk í skólanum að skrá sig. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
 
-## 4. Ask your employer to get involved
+## 4. Biddu vinnuveitanda þinn að taka þátt
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
+[Sendu þennan tölvupóst](<%= resolve_url('/promote/resources#sample-emails') %>) til yfirmanns þíns eða forstjóra.
 
-## 5. Promote Hour of Code in your community
+## 5. Kynntu Klukkustund kóðunar í samfélaginu
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+[Skráðu hóp í nágrenninu](<%= resolve_url('/promote/resources#sample-emails') %>)— skátaflokk, kirkjuhóp, háskóla, eldri borgara, stéttarfélag eða bara vinahóp. You don't have to be in school to learn new skills. Notaðu þessi [veggspjöld, borða, límmiða, myndbönd og fleira](<%= resolve_url('/promote/resources') %>) fyrir þinn eigin viðburð.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 6. Fáðu kjörinn fulltrúa á svæðinu til að styðja Klukkustund kóðunar
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Sendu þennan tölvupóst](<%= resolve_url('/promote/resources#sample-emails') %>) til þingmanna, bæjarfulltrúa eða menntamálanefndar og bjóddu þeim að heimsækja skólann þinn á Klukkustund kóðunar. It can help build support for computer science in your area beyond one hour.
 
 <%= view :signup_button %>

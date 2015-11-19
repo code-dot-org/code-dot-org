@@ -42,8 +42,7 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false",
-    "maze_data": null
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
@@ -467,69 +466,7 @@
           </block>
         </category>
         <category name="Variables" custom="VARIABLE">
-          <block type="variables_set" inline="false">
-            <title name="VAR">points</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">points</title>
-          </block>
-          <block type="variables_set" inline="false">
-            <title name="VAR">actor</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">actor</title>
-          </block>
-          <block type="variables_set" inline="false">
-            <title name="VAR">speed</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">speed</title>
-          </block>
-          <block type="variables_set" inline="false">
-            <title name="VAR">i</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">i</title>
-          </block>
-          <block type="procedures_defnoreturn" uservisible="false">
-            <mutation>
-              <arg name="height"/>
-              <arg name="actor"/>
-              <description>jump function block with height and actor parameter</description>
-            </mutation>
-            <title name="NAME">jump</title>
-            <statement name="STACK">
-              <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
-                <title name="DIR">1</title>
-                <value name="SPRITE">
-                  <block type="parameters_get" uservisible="false">
-                    <title name="VAR">actor</title>
-                  </block>
-                </value>
-                <value name="DISTANCE">
-                  <block type="parameters_get" uservisible="false">
-                    <title name="VAR">height</title>
-                  </block>
-                </value>
-                <next>
-                  <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
-                    <title name="DIR">4</title>
-                    <value name="SPRITE">
-                      <block type="parameters_get" uservisible="false">
-                        <title name="VAR">actor</title>
-                      </block>
-                    </value>
-                    <value name="DISTANCE">
-                      <block type="parameters_get" uservisible="false">
-                        <title name="VAR">height</title>
-                      </block>
-                    </value>
-                  </block>
-                </next>
-              </block>
-            </statement>
-          </block>
-        </category>
+</category>
       </xml>
     </toolbox_blocks>
   </blocks>

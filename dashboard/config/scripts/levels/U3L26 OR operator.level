@@ -35,7 +35,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -74,15 +73,21 @@
     "disable_examples": "false",
     "free_play": "true",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false",
-    "text_mode_at_start": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "true",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
-    "beginner_mode": "false",
-    "instructions": "Inside the isBest function, write a conditional statement that detects if a command contains at least one of the phrases \"all time\" \"all-time\" \"overall\" or \"millennium.\" The function should return true if the above conditions are met and return false otherwise",
-    "markdown_instructions": "## OR Operator\r\n\r\nThe OR operator can be used to combine two Boolean statements. If either or both statements are true, the OR operator will evaluate to true. If both are false, the OR operator will evaluate to false. You can chain multiple OR operators together in one conditional statement. The OR operator looks like \"||\" in JavaScript.\r\n\r\n<details>\r\n<summary>**Example**</summary>\r\n<pre><code>if (contains(sentence, \"word1\") || contains(sentence, \"word2\") || contains(sentence, \"word3\")) {\r\n\tsetText(\"text_area\", \"At least one of word 1, 2, and 3 are in the sentence!\");\r\n} else {\r\n\tsetText(\"text_area\", \"None of the worda are in the sentence.\");\r\n}</code></pre>\r\n</details>\r\n\r\n<details>\r\n<summary>**Where is the OR block?**</summary>\r\n![](https://images.code.org/13dc826e64a9b54b3f7821f09bc3af79-image-1438875720551.gif)\r\n</details>\r\n\r\n### Instructions\r\n\r\nMovie Bot helps people find the most popular movies.\r\n\r\n* Inside the isBest function, write a conditional statement that detects if a command contains at least one of the phrases \"all time\" \"all-time\" \"overall\" or \"millennium\"\r\n* The function should return true if the above conditions are met and return false otherwise",
-    "start_blocks": "var name = \"Movie Bot: \";\r\nvar conversation = name + \"Ask me about famous movies.\";\r\nvar userInput = \"\";\r\nvar defaultResponse = \"I don't know that one.\";\r\n\r\nsetText(\"text_area\", conversation);\r\n\r\nfunction isBest(sentence) {\r\n  // your code here\r\n}\r\n\r\nfunction generateResponse() {\r\n  console.log(\"generating response\");\r\n  userInput = getText(\"text_input\");\r\n  conversation = \"User: \" + userInput + '\\n' + name;\r\n\r\n  if (isBest(userInput)) {\r\n    conversation += \"Adjusted for inflation and ticket prices, \";\r\n    conversation += \"the highest grossing film ever released is \";\r\n    conversation += \"Gone with the Wind from 1939.\";\r\n  } else {\r\n    conversation += defaultResponse;\r\n  }\r\n\r\n  setText(\"text_area\", conversation);\r\n}\r\n\r\nfunction contains(sentence, word) {\r\n  return sentence.toLowerCase().indexOf(word.toLowerCase()) >= 0;\r\n}\r\n\r\nonEvent(\"text_input\", \"change\", function(event) {\r\n  generateResponse();\r\n  setText(\"text_input\", \"\");\r\n});",
-    "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"divApplab\" class=\"appModern\" tabindex=\"1\" style=\"width: 320px; height: 480px;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; height: 480px;\">\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 22px; overflow: hidden; word-wrap: break-word; color: rgb(0, 0, 0); width: 153px; height: 27px; left: 15px; top: 10px; position: absolute;\" id=\"label1\">Movie Bot</label>\r\n    <input id=\"text_input\" style=\"margin: 0px; color: rgb(0, 0, 0); left: 20px; top: 45px; font-size: 18px; width: 275px; height: 35px; position: absolute;\"/>\r\n    <div contenteditable=\"true\" id=\"text_area\" style=\"font-size: 18px; color: rgb(0, 0, 0); left: 20px; top: 95px; margin: 0px; width: 275px; height: 355px; position: absolute;\"/>\r\n  </div>\r\n</div>"
+    "beginner_mode": "true",
+    "markdown_instructions": "# OR Operator in Movie Bot\r\n\r\nLet's try to check for the keywords realated to questions (\"who\", \"what\", \"where\", \"when\", \"why\", \"how\", and \"?\") to decide if the user asked a question. You could do this with a chain of if-else-if statements, but it would not be very efficient. \r\n\r\nInstead let's use a **series of OR operators (`||`)** to check whether \"who\", \"what\", \"where\", \"when\", \"why\", \"how\" or \"?\" show up in the user input. \r\n\r\n**Note: ** We've updated the the flow chart below to show the logic we are trying to add to the initial question.\r\n\r\n# Do This\r\n\r\n* **Update the if statement** to check if **\"who\" OR \"what\" OR \"where\" OR \"when\" OR \"why\" OR \"how\" OR \"?\"** have been typed in by the user.\r\n\r\n* **Test out a couple sentences with your keywords** to make sure the change worked.\r\n\r\n<img src=\"https://images.code.org/6104c7fd0ecd31010d12be79bc350831-image-1446495141539.png\" style=\"width: 500px\">\r\n",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "project_template_level_name": "U3 - Movie Bot - Template",
+    "execute_palette_apis_only": "false",
+    "instructions": "Update the if statement to use an OR to check for a '?' as well as who, what, where, when, why, in the user input. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

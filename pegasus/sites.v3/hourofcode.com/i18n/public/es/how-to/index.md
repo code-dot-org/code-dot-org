@@ -21,7 +21,7 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
 **Todos los tutoriales de la Hora de Código:**
 
   * Requieren un tiempo de preparación mínimo para los profesores
-  * Son de auto aprendizaje, lo que permite a los estudiantes trabajar a su propio ritmo y habilidad
+  * Son de auto aprendizaje, lo que permite a los estudiantes trabajar a su propio ritmo y según su habilidad
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
@@ -31,8 +31,8 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
   * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
   * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Cuando los estudiantes trabajan en pares, se ayudan el uno al otro y dependen menos del profesor. Además se dan cuenta que en las ciencias computacionales se puede ser sociable y trabajar en equipo.
-  * **¿Tiene un ancho de banda limitado?** Muestre los videos al frente del salón de clase, para evitar que cada estudiante descargue el video. O pruebe con los tutoriales desconectados/fuera de línea.
+  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Cuando los estudiantes trabajan en pares, se ayudan el uno al otro y dependen menos del profesor. Además se dan cuenta que en las ciencias de la computación es una actividad social y colaborativa.
+  * **¿Tiene un ancho de banda limitado?** Muestre los videos con el proyector de clase, para evitar que cada estudiante descargue el video. O pruebe con los tutoriales sin conexión/fuera de línea.
 
 ![](/images/fit-350/group_ipad.jpg)
 
@@ -44,7 +44,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
   * El vídeo original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [El llamado del presidente Obama a que todos los estudiantes aprendan Ciencias de la Computación](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * [El presidente Obama pide a todos los estudiantes aprendan Ciencias de la Computación](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**

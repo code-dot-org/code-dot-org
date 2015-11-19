@@ -74,6 +74,15 @@ exports.setPosition = function (blockId, elementId, left, top, width, height) {
                            'height': height });
 };
 
+exports.setSize = function (blockId, elementId, width, height) {
+  return Applab.executeCmd(blockId,
+                          'setSize',
+                          {'elementId': elementId,
+                           'width': width,
+                           'height': height });
+};
+
+
 exports.getXPosition = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
                           'getXPosition',

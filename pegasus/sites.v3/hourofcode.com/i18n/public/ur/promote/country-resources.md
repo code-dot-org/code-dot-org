@@ -30,13 +30,28 @@ p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6
 
 p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
 
+<% elsif @country == 'id' %>
+
+Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Desember 2015, kami mengetahui bahwa banyak siswa-siswi Indonesia yang menjalankan prosesi ujian. Untuk alasan ini kami memutuskan untuk menjalankan masa kampanye Hour of Code di Indonesia pada 12 hingga 20 Desember 2015. Kita tetap akan merasakan kemeriahan yang sama dan dengan tujuan yang sama namun dengan kebersamaan yang lebih besar karena akan ada lebih banyak siswa-siswi yang dapat mengikutinya.
+
+Mari bersama kita dukung gerakan Hour of Code di Indonesia!
+
+<% elsif @country == 'jp' %>
+
+## Hour of Code(アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
+
+[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
 
 ## Use this handout to recruit corporations
 
-[<img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
+[<%= localized_image('/images/fit-500x300/corporations.png') %>](<%= localized_file('/files/corporations.pdf') %>)
 
 ## 1) Try the tutorials:
 
@@ -70,7 +85,7 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**اپنے طالب علموں کی حوصلہ افزائی کریں - ان کو ایک مختصر انٹرو دے**
+**Get your students excited - give them a short intro**
 
 <% else %>
 

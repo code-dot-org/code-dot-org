@@ -146,8 +146,8 @@ module.exports = {
         testUtils.runOnStudioTick(5, function () {
           assert(Studio.projectiles.length === 1);
           assert(Studio.projectiles[0].dir === Direction.EAST);
-          var proj = document.getElementById('projectile_clippath_0').nextSibling;
-          assert(proj.getAttribute('xlink:href') === '/media/skins/studio/blue_fireball.png',
+          var proj = document.getElementById('studioanimation_clippath_0').nextSibling;
+          assert(proj.getAttribute('xlink:href').indexOf('/media/skins/studio/blue_fireball.png') > -1,
             "We have the right image: " + proj.getAttribute('xlink:href'));
           assert(proj.getAttribute('visibility') !== 'hidden',
             "The image isn't hidden");

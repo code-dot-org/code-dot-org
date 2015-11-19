@@ -1,6 +1,6 @@
 - if current_user && showState
   .clear
-  - script = Script.find_by_name(id)
+  - script = Script.get_from_cache(id)
   - if current_user.completed_scripts.include?(script)
     = link_to script_certificate_image_url(current_user, script), class: 'whitelink' do
       .bottombar.smalltext.printcertificate

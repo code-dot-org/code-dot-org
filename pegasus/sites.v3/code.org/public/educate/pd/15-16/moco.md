@@ -8,7 +8,7 @@ nav: pd2_nav
 
 ## Computer Science Principles
 
-Montgomery County teachers enrolled in the Computer Science Principles program will attend PD in New York City, NY. Please visit the [NYC CSP](/educate/pd/15-16/nyc#csp) page for all  workshop details
+Montgomery County teachers enrolled in the Computer Science Principles program will be part of the New York CSP cohort. Please visit the [NYC CSP](/educate/pd/15-16/nyc#csp) page for all  workshop details.
 
 ## Exploring Computer Science
 
@@ -33,9 +33,10 @@ Friday, December 4, 2015 <br/>
 
 **Location**
 
-Center for Technology Innovation<br/>
-4 Choke Cherry Road, Suite 120<br/>
-Rockville, Maryland 20850
+[Center for Technology Innovation<br/>
+Suite 120<br/>
+4 Choke Cherry Road<br/>
+Rockville, Maryland 20850](https://www.google.com/maps/place/Montgomery+County+Public+Schools+-+Center+for+Technology+Innovation/@39.1146577,-77.1842873,15z/data=!4m2!3m1!1s0x0:0x5157037954c2940e)
 
 **What to bring**
 
@@ -52,9 +53,10 @@ Friday, December 4, 2015 <br/>
 
 **Location**
 
-Center for Technology Innovation<br/>
-4 Choke Cherry Road, Suite 120<br/>
-Rockville, Maryland 20850
+[Center for Technology Innovation<br/>
+Suite 120<br/>
+4 Choke Cherry Road<br/>
+Rockville, Maryland 20850](https://www.google.com/maps/place/Montgomery+County+Public+Schools+-+Center+for+Technology+Innovation/@39.1146577,-77.1842873,15z/data=!4m2!3m1!1s0x0:0x5157037954c2940e)
 
 **What to bring**
 

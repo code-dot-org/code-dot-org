@@ -1,13 +1,13 @@
 name 'U3L14 - Matching Events to Description'
-question 'Triggers whenever the mouses moves'
+question 'Triggers whenever the mouse moves'
 answer 'mousemove'
-question 'Triggers once, the instant mouse hovers over the button'
+question 'Triggers once, the instant the mouse hovers over the button'
 answer 'mouseover'
-question 'Triggers when mouse the button is clicked once'
+question 'Triggers when the mouse button is clicked once'
 answer 'click'
-question 'Triggers when mouse button is released'
+question 'Triggers when the mouse button is released'
 answer 'mouseup'
-question 'Triggers when mouse button is pressed'
+question 'Triggers when the mouse button is pressed'
 answer 'mousedown'
 
 markdown <<MARKDOWN

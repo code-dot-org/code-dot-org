@@ -9,9 +9,9 @@ nav: promote_nav
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
-# Promote the Hour of Code
+# Promoveaza evenimentul Hour of Code
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Organizezi o Ora de Programare? [Iata ghidul cu indrumari](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -33,21 +33,21 @@ nav: promote_nav
 
 [![imagine](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![imagine](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+<%= view :social_posters %>
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Utilizati logo-ul Hour of Code pentru a răspândi vestea
 
 [![imagine](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Descarcati variantele cu rezoluție mare](http://images.code.org/share/hour-of-code-logo.zip)
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## Imprima aceste autocolante pentru le imparti elevilor
 
-(Stickers are 1" diameter, 63 per sheet)  
+(Autocolante sunt 1" diametru, 63 pe foaie)  
 [![imagine](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
@@ -56,29 +56,29 @@ nav: promote_nav
 
 <a id="email"></a>
 
-## Cereți școlii, engajaților sau prietenilor să se înscrie:
+## Cereți școlii, angajaților sau prietenilor să se înscrie:
 
-Computerele sunt peste tot, dar predau informatica mai puţine şcoli decât acum 10 ani. Vestea bună e că suntem pe cale să schimbăm acest lucru. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Computerele sunt peste tot, dar predau informatica mai puţine şcoli decât acum 10 ani. Vestea bună e că suntem pe cale să schimbăm acest lucru. Daca ati auzit şi inainte de Hour of Code, atunci stiti ca a facut istorie. Mai mult de 100 de milioane de studenţi au încercat o Ora de Programare.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! și Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
+In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima pagina a site-urilor Google, MSN sau Yahoo! și Disney. S-au adunat peste 100 de parteneri pentru a susține această mișcare. Anul trecut, fiecare magazin Apple din lume gazduit o Ora de Programare şi chiar Preşedintele Obama a scris prima lui linie de cod, alaturandu-se campaniei.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+În acest an, haideți sa il facem si mai mare. Va rog sa va alaturati evenimentului Hour of Codr 2015. Implicati-va cu evenimentul dvs Hour of Code in timpul Saptamanii educatiei in tehnologia computerelor <%= campaign_date('full') %>.
 
 Împăștiați vestea. Găzduiți un eveniment. Cereți unei școli locale să se înscrie. Sau încercați chiar dvs. Ora de Programare -- oricine poate beneficia din învățarea noțiunilor de bază.
 
-Get started at http://hourofcode.com/<%= @country %>
+Începeți la http://hourofcode.com/<%= @country %>
 
 <a id="media-pitch"></a>
 
 ## Invitați mass-media la evenimentul dvs.:
 
-**Subject line:** Local school joins mission to introduce students to computer science
+**Linia de titlu:** O școală se alătură misiunii de a iniția 100 milioane de elevi în Informatică
 
 Computerele sunt peste tot, dar tot mai puţine şcoli predau acum programarea în raport cu 10 ani în urmă. Fetele şi minorităţile sunt foarte slab reprezentate. Vestea bună este că suntem pe cale să schimbăm acest lucru.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! și Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
+In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima pagina a site-urilor Google, MSN sau Yahoo! și Disney. S-au adunat peste 100 de parteneri pentru a susține această mișcare. Anul trecut, fiecare magazin Apple din lume gazduit o Ora de Programare şi chiar Preşedintele Obama a scris prima lui linie de cod, alaturandu-se campaniei.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 7-13.
+De aceea, fiecare dintre cei [X] elevi de la [numele şcolii] ne alaturăm celui mai mare eveniment educativ în istorie: Ora de Programare, în săptămâna 7-13 Decembrie 2015.
 
 Vă scriu pentru a vă invita să participați la reuniunea noastră de impact și să vedeți cum încep copiii această activitate pe data de [DATA].
 
@@ -86,9 +86,9 @@ Vă scriu pentru a vă invita să participați la reuniunea noastră de impact �
 
 **Contact:** [NUMELE DVS.], [TITLE], telefon: (212) 555-5555
 
-**Când:** [DATE și TIME pentru evenimentul dvs.]
+**Când:** [DATA şi TIMPUL pentru evenimentul dvs.]
 
-**Unde:** [ADDRESS și DIRECTIONS]
+**Unde:** [ADDRESA și DIRECTII]
 
 Aştept cu nerăbdare să comunicăm.
 
@@ -100,9 +100,9 @@ Dragi părinți,
 
 Trăim într-o lume a tehnologiei. Şi noi ştim că oricare ar fi domeniul pe care elevii noştri aleg să continue ca adulţi, capacitatea lor de a reuşi va depinde tot mai mult de înţelegerea modului în care funcţionează tehnologia. Dar numai o mică parte dintre noi învăţăm informatică şi tot mai puţin elevi o studiază față de un deceniu în urmă.
 
-Acesta este motivul pentru care întraga noastră școală se alătură celui mai amplu eveniment educațional din istorie: Ora de Programare, pe parcursul Săptămânii Informaticii în Educație 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+Acesta este motivul pentru care întraga noastră școală se alătură celui mai amplu eveniment educațional din istorie: Ora de Programare, pe parcursul Săptămânii Informaticii în Educație 7-13). Peste 100 milioane de elevi din toata lumea au încercat deja o Ora de Programare.
 
-Ora noastră de Programare este o declaraţie că [numele şcolii] este gata să ne formeze aceste abilităţi fundamentale ale secolului 21. Pentru a continua aducerea unor activități de programare pentru elevi, vrem să avem propriul nostru eveniment uriaș Ora de Programare. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+Ora noastră de Programare este o declaraţie că [numele şcolii] este gata să ne formeze aceste abilităţi fundamentale ale secolului 21. Pentru a continua aducerea unor activități de programare pentru elevi, vrem să avem propriul nostru eveniment uriaș Ora de Programare. Vă incurajez sa fiți voluntari, să ajungeți catre mass-media locală si sa distribuiti veştile pe canalrle social media. Luați in considerare si organizarea unor evenimente adiționale în comunitate.
 
 Aceasta este o şansă de a schimba viitorul educaţiei în [nume oraş/oraş].
 
@@ -118,11 +118,11 @@ Cu stimă,
 
 Stimate [numele primarului/consilierului/senatorului]:
 
-Ştiaţi că în economia de astăzi, numărul locurilor de muncă din programare este mai mare de 3-la-1 decât numărul absolvenților în domeniu ? Şi informatica este fundamentală pentru *fiecare* industrie de astăzi. Yet most of schools don’t teach it. La [numele şcolii], încercăm să schimbăm asta.
+Ştiaţi că în economia de astăzi, numărul locurilor de muncă din programare este mai mare de 3-la-1 decât numărul absolvenților în domeniu ? Şi tehnologia computerului este fundamentală pentru *fiecare* industrie de astăzi. Dar cele mai multe dintre şcoli nu o predau. La [numele şcolii], încercăm să schimbăm asta.
 
-Acesta este motivul pentru care întraga noastră școală se alătură celui mai amplu eveniment educațional din istorie: Ora de Programare, pe parcursul Săptămânii Informaticii în Educație 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+Acesta este motivul pentru care întraga noastră școală se alătură celui mai amplu eveniment educațional din istorie: Ora de Programare, pe parcursul Săptămânii Educatiei in Tehnologia Computerelor. 7-13). Peste 100 milioane de elevi din toata lumea au încercat deja o Ora de Programare.
 
-Vă scriu pentru a vă invita să luați parte la evenimentul nostru Ora de Programare și pentru a vorbi despre impactul acestei reuniuni. Acesta va avea loc pe [data, ora, locul] şi va face o declaraţie puternică, că [nume de stat sau un oraş] este gata să le formeze elevilor noştri abilităţi esențiale pentru secolul 21. Vrem să se asigură că elevii noştri sunt în primul plan prvind crearea tehnologiei de viitor--nu doar consumatorii ei.
+Vă scriu pentru a vă invita să luați parte la evenimentul nostru Ora de Programare și pentru a vorbi despre impactul acestei reuniuni. Acesta va avea loc pe [data, ora, locul] şi va face o declaraţie puternică, că [nume de stat sau un oraş] este gata să le formeze elevilor noştri abilităţi esențiale pentru secolul 21. Vrem să ne asiguram că elevii noştri sunt în primul plan prvind crearea tehnologiei de viitor--nu doar consumatorii ei.
 
 Vă rugăm să mă contactaţi la [telefon număr sau adresă de E-mail]. Aştept cu nerăbdare răspunsul dumneavoastră.
 

@@ -252,9 +252,7 @@ class ReportsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  generate_admin_only_tests_for :all_usage
-
-  generate_admin_only_tests_for :admin_stats
+  generate_admin_only_tests_for :csp_pd_responses
 
   test "should get level_stats" do
     get :level_stats, {:level_id => create(:level).id}
@@ -330,29 +328,6 @@ class ReportsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  test "should lookup_section" do
-    post :lookup_section, {:section_code => @teacher_section.code}
-    assert_select '#section_owner', 'Owner: ' + @teacher.email
-  end
-
-  test "should lookup_section error if not found" do
-    post :lookup_section, {:section_code => 'ZZZZ'}
-    assert_response :success
-    assert_select '.container .alert-danger', 'Section code not found'
-  end
-
-  test "should not lookup_section if not admin" do
-    sign_in @not_admin
-    post :lookup_section, {:section_code => @teacher_section.code}
-    assert_response :forbidden
-  end
-
-  test "should not lookup_section if not signed in" do
-    sign_out @admin
-    post :lookup_section, {:section_code => @teacher_section.code}
-    assert_redirected_to_sign_in
-  end
-
   # 'report-stage-1' instead of 'report-stage-1: Report Stage 1'
   test "should render single stage name for custom script" do
     # first script has 1 stage, second script has 2 stages
@@ -361,11 +336,6 @@ class ReportsControllerTest < ActionController::TestCase
     # render string from test translation data
     assert_select 'div.stage', 2
     assert_select 'div.stage', 'Stage 1: report-stage-1'
-  end
-
-  test 'should get admin progress' do
-    get :admin_progress
-    assert_select 'h1', 'Admin progress'
   end
 
 end

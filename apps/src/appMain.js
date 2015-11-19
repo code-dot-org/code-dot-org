@@ -37,6 +37,10 @@ module.exports = function(app, levels, options) {
       level.requiredBlocks = requiredBlockUtils.makeTestsFromBuilderRequiredBlocks(
           options.level.levelBuilderRequiredBlocks);
     }
+    if (options.level.levelBuilderRecommendedBlocks) {
+      level.recommendedBlocks = requiredBlockUtils.makeTestsFromBuilderRequiredBlocks(
+          options.level.levelBuilderRecommendedBlocks);
+    }
 
     options.level = level;
   }
@@ -48,7 +52,8 @@ module.exports = function(app, levels, options) {
   if (studioApp.isUsingBlockly()) {
     var blockInstallOptions = {
       skin: options.skin,
-      isK1: options.level && options.level.isK1
+      isK1: options.level && options.level.isK1,
+      level: options.level
     };
 
     if (options.level && options.level.edit_blocks) {

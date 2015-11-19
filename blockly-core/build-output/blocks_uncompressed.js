@@ -19,7 +19,7 @@ Blockly.Blocks.colour_random = {init:function() {
 }};
 Blockly.Blocks.colour_rgb = {init:function() {
   this.setHelpUrl(Blockly.Msg.COLOUR_RGB_HELPURL);
-  this.setHSV(42, 0.89, 0.99);
+  this.setHSV(196, 1, 0.79);
   this.appendValueInput("RED").setCheck(Blockly.BlockValueType.NUMBER).setAlign(Blockly.ALIGN_RIGHT).appendTitle(Blockly.Msg.COLOUR_RGB_TITLE).appendTitle(Blockly.Msg.COLOUR_RGB_RED);
   this.appendValueInput("GREEN").setCheck(Blockly.BlockValueType.NUMBER).setAlign(Blockly.ALIGN_RIGHT).appendTitle(Blockly.Msg.COLOUR_RGB_GREEN);
   this.appendValueInput("BLUE").setCheck(Blockly.BlockValueType.NUMBER).setAlign(Blockly.ALIGN_RIGHT).appendTitle(Blockly.Msg.COLOUR_RGB_BLUE);

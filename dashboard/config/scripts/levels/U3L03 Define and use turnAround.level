@@ -45,10 +45,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "app_width": "300",
-    "app_height": "300",
     "slider_speed": "0.1",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-turnAndDown.gif",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
@@ -58,10 +55,14 @@
     "encrypted_examples": "Zh3nyAa1UKqAsQPzzZ3N1mjD79CuHcnWv6mQpkQzmTqiwCZlNlNwCD54Kume\n32n2\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "markdown_instructions": "###Challenge\r\n**Define** a function called `turnAround` which turns the turtle around and moves the turtle forward, as shown below. Once you've defined the function **call** it to make sure it works as you expect.\r\n\r\n![](https://levelbuilder-studio.code.org/script_assets/k_1_images/instruction_gifs/csp/U3L03-turnAndDown.gif)",
+    "markdown_instructions": "###Challenge\r\n**Define** a function called `turnAround` which turns the turtle around. Once you've defined the function **call** it to make sure it works as you expect then moves the turtle forward, as shown below. \r\n\r\n![](https://images.code.org/f7a03b073ea60c45280313e2d7c25ff8-image-1445301080308.gif)",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "video_key": "csp_applab_functions"
+    "video_key": "csp_applab_functions",
+    "droplet_tooltips_disabled": "true",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "true"
   }
 }]]></config>
   <blocks/>

@@ -38,7 +38,6 @@
       "setStrokeWidth": null,
       "setStrokeColor": null,
       "setFillColor": null,
-      "drawImage": null,
       "getImageData": null,
       "putImageData": null,
       "clearCanvas": null,
@@ -99,7 +98,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -124,7 +122,8 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "drawImageURL": null
     },
     "edit_code": true,
     "embed": "false",
@@ -151,10 +150,7 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "submittable": "false",
-    "hide_view_data_button": "false",
-    "encrypted_examples": [
-
-    ]
+    "hide_view_data_button": "false"
   }
 }]]></config>
   <blocks/>

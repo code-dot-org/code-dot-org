@@ -13,8 +13,8 @@ nav: how_to_nav
   * Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
   * Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
 
-## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Choose a tutorial:
+## 2) Se denne øvelses video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 3) vælge en øvelse:
 
 We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)
 
@@ -25,13 +25,13 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 4) Plan your technology needs - computers are optional
+## 4) Planlæg hvad du har brug for af udstyr - computere er valgfri
 
-The best Hour of Code experience will be with Internet-connected computers. You **don’t** need a computer for every child, and can even do the Hour of Code without a computer at all.
+Den bedste Hour of Code oplevelse får man, med computere der har adgang til internettet. Men du **behøver** ikke en computer til hvert barn og kan endda afholde Hour of Code uden en eneste computer.
 
   * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
   * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når eleverne arbejder sammen, hjælper de hinanden og har mindre brug for hjælp fra læreren. De vil også opleve, at kodning også kan være social og kollaborative.
+  * **Har du ikke nok enheder?** Brug [par programmering](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når eleverne arbejder sammen, hjælper de hinanden og har mindre brug for hjælp fra læreren. De vil også opleve, at kodning også kan være social og kollaborative.
   * **Har du lav båndbredde?** Planlæg at vise videoerne i klassen først, så hver elev ikke behøver at downloade deres egne videoer. Eller prøv de unplugged / offline tutorials.
 
 ![](/images/fit-350/group_ipad.jpg)
@@ -40,12 +40,12 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 **Kick off your Hour of Code by inspiring students and discussing how computer science impacts every part of our lives.**
 
-**Show an inspirational video:**
+**Vis en inspirerende video:**
 
   * Den oprindelige Code.org indlednings video med Bill Gates, Mark Zuckerberg og NBA stjerne Chris Bosh (der er [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutters](https://www.youtube.com/watch?v=nKIu9yen5nc), og [9 minutters](https://www.youtube.com/watch?v=dU1xS07N-FA) versioner)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * [Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) indlednings videoen, eller <% if @country == 'uk' %> [Hour of Code 2015 videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Præsident Obama opfordring til alle elever om til at lære at kode](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Find flere inspirerende videoer [her](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
@@ -65,9 +65,9 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 **When your students come across difficulties it's okay to respond:**
 
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
+  * "Det ved jeg ikke. Lad os se om vi kan finde ud af det sammen."
+  * "Det er ikke altid teknologien opføre sig helt som vi ønsker."
+  * "At lærer at programmere er som at lære et nyt sprog. Kun øvelse gør mester."
 
 **Hvad kan du gøre, hvis en elev bliver hurtigt færdig?**
 

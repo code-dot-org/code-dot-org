@@ -26,3 +26,10 @@ module.exports.maxWidth = {
 module.exports.description = {
   paddingLeft: 2
 };
+
+module.exports.checkbox = {
+  width: 20,
+  height: 20,
+  fontSize: 20,
+  paddingLeft: 2
+};

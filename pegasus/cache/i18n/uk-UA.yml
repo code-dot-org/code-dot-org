@@ -35,10 +35,10 @@
   hoc2014_everyone: Усі
   hoc2014_support: Підтримайте &#x25BE;
   hoc2014_whatishoc: Що таке Година коду?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_header: 'Події # CSEdWeek та Години коду по всьому світу'
+  csedweek_map_signup: Зареєструйте свій захід
+  csedweek_map_search_placeholder: Пошук заходів Години коду
+  csedweek_map_search_search: Пошук
   csedweek_map_search_reset: Скидання
   cded_sign_up: Зареєструватися
   cded_try_it: Спробуйте
@@ -135,6 +135,8 @@
   just_did_hoc: 'Я щойно завершив #HourOfCode - подивіться, що це! @codeorg'
   twitter_teach_cs: Чому більше шкіл не викладають інформатику? Ми можемо це виправити.
     http://youtu.be/nKIu9yen5nc. Відвідайте http://code.org/ щоб дізнатися більше.
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
   learn_hoc: Вивчати Годину Коду
   beyond_hoc: Поза Годиною коду
   what_gender: Якої ви статі?
@@ -234,6 +236,8 @@
   homepage_action_text_signpetition: Підписати петицію
   homepage_signpetition_dropdown: Підписати нашу петицію &#x25BE;
   homepage_diversity_pledge: Приєднатись до петиції про різноманіття
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org та Рада коледжів утворили альянс для посилення
     різноманітності в інформатиці.
   homepage_banner_text_link: Дізнайтеся більше
@@ -245,6 +249,7 @@
   homepage_slot_text_link_hoc: Спробуйте годину коду
   homepage_slot_text_link_host: Провести Годину Коду
   homepage_slot_text_link_hocserved: '# спробували'
+  homepage_solot_text_link_volunteer: Волонтер для Години коду
   homepage_slot_text_title_students: Учні
   homepage_slot_text_blurb_students: Пройдіть всі наші навчальні курси
   homepage_slot_text_link_codestudio: Спробуйте Студію Коду
@@ -304,12 +309,25 @@
   class_submission_level_vocational: Професійна освіта
   class_submission_languages_other: Інші мови
   volunteer_engineer_submission_title: Волонтер для Години коду
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} вчителів підписались
-    на Годину коду і потребують волонтера для допомоги.'
-  volunteer_engineer_submission_intro_paragraph: Будь ласка, вкажіть наступну інформацію,
-    якщо ви є студентом або фахівцем з інформатики, і бажаєте допомогти місцевим вчителям
-    провести Годину коду. Поля, позначені <span class="form-required-field">*</span>
-    є обов'язковими.
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
+    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
+    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
+    have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
+    to try an hour introduction to computer science, reaching tens of millions of
+    students in 180+ countries. Please get involved during Computer Science Education
+    Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
+    who can help in the classroom, or for somebody who can <span style="font-family:
+    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
+    breadth of possibilities with computer science (which could be done through a
+    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
+    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_signup: Please enter the following information
+    if you are a computer science student or software professional. Fields marked
+    with a <span class="form-required-field">*</span> are required.
   volunteer_engineer_submission_header_shared: Інформація доступна вчителям та волонтерам
     на карті
   volunteer_engineer_submission_field_name: Ім’я
@@ -398,6 +416,7 @@
   dashboard_landing_progress_title: Прогрес класу
   dashboard_landing_progress_biggest: Це прогрес Вашої найбільшої групи.
   dashboard_landing_view_progress: Переглянути прогрес для %{biggest_section}
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Доступні курси
   dashboard_landing_available_courses: Перелік курсів, які на даний момент доступні
     для Вас і Ваших учнів.
@@ -1281,3 +1300,63 @@
     Ви не зможете отримати доступ до Code.org після цієї дати. <a href='%{it_requirements_url}'>
     натисніть тут</a>, щоб дізнатися, як увімкнути HTTPS для Code.org.
   compatibility_https_hide_this_warning: Сховати попередження
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: '# served'
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Sign up
+  homepage_action_text_try_it: Try it
+  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_girlvideo: Inspire a girl
+  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
+    videos</a> by role models and celebrities
+  starwars_subtitle: Building a Galaxy With Code
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: Try now
+  starwars_blocks_title: Blocks
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
+  starwars_blocks_start_button: Try now
+  starwars_watch_videos: Before you get started, watch one of these inspirational
+    videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_gradelevel: Ages 4-104
+  mc_platformtext: Modern browsers, smartphones, tablets
+  minecraft_subtitle: Minecraft Hour of Code
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_gradelevel: Ages 6+
+  starwars_platformtext: Modern browsers + tablets
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
+  starwars_longdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.

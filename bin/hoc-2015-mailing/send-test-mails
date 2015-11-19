@@ -5,5 +5,3 @@
 ./send-to-mailing-list 9-28-hoc-past-organizers-3 hoc-2015-mailing/test-params.csv
 ./send-to-mailing-list 09-29-brazil-hoc hoc-2015-mailing/test-params.csv
 ./send-to-mailing-list 09-29-latam-hoc hoc-2015-mailing/test-params.csv
-
-

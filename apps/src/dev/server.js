@@ -18,6 +18,8 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
+app.use('/dev', express.static(__dirname));
+
 app.use('/node_modules', express.static(__dirname + '/../../node_modules'));
 
 var renderApp = function(app, req, res) {
@@ -60,6 +62,10 @@ app.get('/bounce', function(req, res) {
 
 app.get('/flappy', function(req, res) {
   renderApp('flappy', req, res);
+});
+
+app.get('/craft', function(req, res) {
+  renderApp('craft', req, res);
 });
 
 app.get('/studio', function(req, res) {

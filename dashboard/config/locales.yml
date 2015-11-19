@@ -103,7 +103,6 @@
 "eu-ES":
   english: "Basque"
   native: "Euskara"
-  debug: true
 
 "fa": "fa-AF"
 "fa-AF":
@@ -212,6 +211,13 @@
   english: "Korean"
   native: "한국어"
   webfonts: false  
+
+"kk": "kk-KZ"
+"kk-KZ":
+  english: "Kazakh"
+  native: "Қазақ Tілі"
+  webfonts: false
+  debug: true
 
 "km": "km-KH"
 "km-KH":
@@ -379,6 +385,12 @@
   debug: true
   dir: 'rtl'
   webfonts: false
+
+"uz": "uz-UZ"
+"uz-UZ":
+  english: "Uzbekistan"
+  native: "Oʻzbekcha"
+  debug: true
 
 "vi": "vi-VN"
 "vi-VN":

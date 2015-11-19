@@ -59,7 +59,11 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "submittable": "false",
-    "hide_view_data_button": "true"
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "true",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "true"
   }
 }]]></config>
   <blocks/>

@@ -38,7 +38,6 @@
       "setStrokeWidth": null,
       "setStrokeColor": null,
       "setFillColor": null,
-      "drawImage": null,
       "getImageData": null,
       "putImageData": null,
       "clearCanvas": null,
@@ -99,7 +98,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -124,12 +122,10 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "drawImageURL": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "You can create a new table by importing a CSV file. CSV stands for comma separated values and is a standard way to move data between different applications. CSV files usually have multiple columns with the first row containing the label for each column. AppLab will use this first row to create the column names in the table. \r\n\r\nIn AppLab you can create a new table in an app by clicking the “View Data” button(a new browser tab opens) and type in a new, descriptive table name (the table name does not have to match the app name, and an app can have more than one table), then click the “Add” button next to the table name(another new browser tab opens). Click the “Import” button, then the “Choose File” button and select the RottenTomatoes2015.csv file (see below). Finally click the “Overwrite & Import” button. Note the unique “Id” field created for each record.",
     "is_k1": "false",

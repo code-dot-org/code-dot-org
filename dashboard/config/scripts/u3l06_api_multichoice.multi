@@ -1,32 +1,29 @@
 name 'U3L06-API-multichoice'
-title 'Multiple Choice: What is an API?'
-wrong 'Abstract Programming Inheritance'
-wrong 'Artificial Parameter Intelligence'
-right 'Application Program Interface'
-wrong 'Applied Power Implementation'
-wrong 'Abstract Parameter Interface'
-
-markdown <<MARKDOWN
-Read the definitions provided below and then choose the best answer.
-
-- **Abstract Programming Inheritance** --  The idea that abstractions in languages get "passed down" in newer versions
-
-- **Artificial Parameter Intelligence** -- The idea that function parameters should be intelligent enough to "know" what you want as a programmer
-
-- **Application Program Interface** -- A well-documented library of functions provided in a programming language that helps to simplify complex programming tasks.
-
-- **Applied Power Implementation** -- A process by which functions are given extra override power related to parameters.
-
-- **Abstract Parameter Interface** -- A programming construct in which parameters are passed down through levels of abstraction.
-
-
-
-
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-Correct answer:
-
-Application Program Interface
-
-MARKDOWN
+encrypted 'jD+Xb8Fi94+D8Vr/94okO41DBDhjzY8PcKAl+rqxOFTCHfd/8GxXRrmH3+aS
+S8hghm3VCyHwfpU5fBSoQEPz/msuJOgFi5oLWhgpxayOnNonjHjPohWJMF0D
+wHcCtgSrruPzObqYTIayG1WI0nR6RdPdsMLVl5lzTBMiMSeJGgI+92VCNDWL
+a5T7CCwMZkd/FhIYZgfq1NrIU3dMRTS8dPEM9YunRN9jXV5TV9RbzLMTN+9y
+QFW8RqSOesEhjh0a3V564aaGn6zx6BiV981000NAWbwP83cQvckKAn3lmt3o
+ellUIrwWn3yzMD/tdMZBxQHIeCEZ86k6zFrYtxy2mmwgg1SPSpnFfiXsby6z
+rwWxMje1IwPYURicUEu4ZsKbU/AsUo29dqXHSA2ioLcplZtqwTHLNbosw0gb
+pykybs7kqsOlh/Jyi5IqjHSD4DLXbaLoNa7kCuFWzBs9IVIe+OKqmbq95QDf
+Tf3pkhKdNbvyYyVJIGutAamnbM9vlb6IdLBxpXTei4+fuVkiFTy8fW9eOCAj
+t63TTfpD2qcyo30x7CGTXRgRWrF346012eYGmnmxt9E2PqiS44zyTjxZmgmT
+zeoHdN72awlU8+4dvSiWPDwviQinJXVeeeWSFD55Fb3nqBGKTe3e3gsi+SQ2
+A7i2iv3eP+2fBttdTxfxXkIGwav/2dXM1LwTWQDnMrg9HHuMKL+5NDC7Hng6
+R9TOxU3CyVa38hBNMjdCxR7K1Tidg+4jiaXSf8671yGFo0mO97PiROtWp92G
+uTbkkf/oVrqzmTAv0ZGvI8a/qYQaWBb46l5rl+qI+Php8DvLNXjCm0NA1IWZ
+v1cIbXCJdDBMUzsXzDuNochGpS1fjWbItB3gOkyYFqEfik59Y2it2EEhKiky
+eyi1nalJz7tvrfdnfcanUdn61DqTsTSkHOgu9nav9bBNZY2YY1zYsDMq23n3
+uHmOwWKpH5heOK0z0tWq7fgUPHvihWjo49IounRSfzK/vg+OSW8D5Hjn6He9
+H6e9ss9JWnPdPpp8n5ani1HUe0HDBJq7sXebMhk2Gnm2+qy6/SBNU4fvk/EX
+bYn8GPdkHwjr58daS2Eg+BbW4bLZolvTug0MMT/9cppyqkjumWJa3ecHH0M7
+6zaLDUNttf5MvoPWdoE3xIGka96y+tVtxTXPrUPEHEWI+xfhzqVg3LBV3ixp
+F2FJ3dOnr4pgOWjnZaoz4KW/MosJ9GO9aB+b1g9utMzylm2ikJbQ83F9oSuc
+/GGldEbBuH0ueBeUyUG8rZEBPCEh0VCTSA8dNUj/M3nX2MRjoqFLVdCYcsEB
+tqh/KnRNO0RsQBxPUxbk/gHax0mcSsCPFGVUDeqSMXU0X97XEhfS8R4ZYpn7
+Yg2FiUs8mj4rNwHTDUyUEq4q1FQf188FU3bl9gTfhNttlGJchjudRziNt5/D
+popYGP8m6wQ0PHDVvFXaH0LT+aJkUGe5DGU90bNN5q6o25RJ5wdJGJBU/BEZ
+j6Obp7d/SUL/LEpnMrJlToSDXsZr3Rx57ecJGXymMSt6VkjanZHaVso76q+u
+fY1zxdADU/e/5kHrEDU=
+'

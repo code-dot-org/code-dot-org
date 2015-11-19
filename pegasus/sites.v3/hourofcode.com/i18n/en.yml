@@ -13,6 +13,7 @@
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: 'Watch the new video'
   front_watch_regular_video: 'Watch the video'
+  front_volunteers: 'Technical volunteers wanted'
 
   header_menu_resources: 'Resources'
   header_menu_faq: 'FAQ'
@@ -22,6 +23,7 @@
 
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -128,6 +130,8 @@
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sjusd: San Juan Unified School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -151,16 +155,6 @@
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
   prizes_details: 'Details'
 
-  prizes_nav_dc: "Mystery trip to Washington D.C."
-  prizes_nav_technology: "$10,000 of technology for your school"
-  prizes_nav_video_chat: "Video chat with a tech titan"
-  prizes_nav_skype_dropbox: "Skype credit or Dropbox space for every organizer"
-  prizes_nav_brilliant: "$2,000 Brilliant Labs project"
-  prizes_nav_actua: "Actua workshop"
-  prizes_nav_kids_code: "Kids Code Jeunesse"
-  prizes_nav_terms: "Terms and Conditions"
-  prizes_nav_faq: "FAQ"
-
   nav_back_to_resources: "Back to Resources"
 
   how_to_nav_educators: "For educators"
@@ -172,12 +166,24 @@
   how_to_nav_organizations: "For organizations"
   how_to_nav_companies: "For companies"
   how_to_nav_afterschool_educators: "For after-school educators"
+  how_to_nav_volunteers: "For volunteers"
 
   prizes_nav_title: "Prizes"
   prizes_nav_home: "All prizes"
   prizes_nav_hardware: "Hardware prize signup"
   prizes_nav_terms: "Terms and conditions"
   prizes_nav_faq: "Frequently asked questions"
+  prizes_nav_dc: "Mystery trip to Washington D.C."
+  prizes_nav_technology: "$10,000 of technology for your school"
+  prizes_nav_video_chat: "Video chat with a tech titan"
+  prizes_nav_skype_dropbox: "Skype credit or Dropbox space for every organizer"
+  prizes_nav_brilliant: "$2,000 Brilliant Labs project"
+  prizes_nav_actua: "Actua workshop"
+  prizes_nav_kids_code: "Kids Code Jeunesse"
+
+  prizes_header: "Prizes for every educator"
+  prizes_10k: "One public school in every US state (and Washington D.C.) will win $10,000 worth of technology"
+  prizes_gift_cards: "<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!"
 
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
@@ -202,18 +208,22 @@
   front_join_us_button: 'Join us'
   front_what_is_hoc: 'What is the Hour of Code?'
   front_join_us_header: 'Anyone can learn the basics, and have fun doing it!'
+  front_join_us_volunteer_header: 'Volunteers for the Hour of Code'
   front_join_us_teacher: 'Are you a teacher?'
   front_join_us_inspire: 'Inspire students with'
   front_join_us_inspire_link: 'an Hour of Code in the classroom.'
   front_join_us_teacher_link: "Inspire students with an Hour of Code in the classroom"
+  front_join_us_teacher_volunteer: "Search for local volunteers who can visit your classroom or inspire your students remotely"
   front_join_us_parent: 'Are you a parent?'
   front_join_us_ask_link: 'Ask your local school'
   front_join_us_ask: 'to host an Hour of Code.'
   front_join_us_parent_link: "Ask your local school to host an Hour of Code"
   front_join_us_computer_science: 'Just love computer science?'
+  front_join_us_cs_volunteer: 'Passionate about computer science education?'
   front_join_us_spread: 'Spread the word.'
   front_join_us_spread_word: "Spread the word in your community"
   front_join_us_spread_word_work: "Spread the word in your community or workplace"
+  front_join_us_sign_up_volunteer: 'Sign up to volunteer at a local classroom or through a video chat'
   front_join_us_organize: 'Or organize an Hour of Code event yourself.'
   front_join_us_how_to_run: "Here's how to run an Hour of Code"
   front_join_us_help_promote: "Help promote the Hour of Code"
@@ -237,11 +247,12 @@
   signup_event_location_label: 'Event location (optional)'
   signup_special_event_flag_label: 'Highlight my special event'
   signup_special_event_details_label: 'Special event details'
-  signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization'
+  signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization (US only)'
   signup_send_posters_address_label: 'Address of school or organization'
   signup_whole_school_flag_label: 'This event is for a whole school'
   signup_your_event: 'Sign up your event'
   signup_match_volunteer: 'Help me find a local software engineer to inspire my students'
+  signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
 
   signup_name_placeholder: 'Your Name'
   signup_email_placeholder: 'you@example.com'
@@ -266,6 +277,9 @@
   map_search_placeholder: 'Search for Hour of Code events'
   map_search_search: 'Search'
   map_search_reset: 'Reset'
+  map_legend_title: 'Legend'
+  map_legend_hoc_events: 'Hour of Code Event'
+  map_legend_cs_tech_jam: 'CS Tech Jam'
 
   meta_tag_og_title: 'The Hour of Code is coming'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
@@ -321,14 +335,16 @@
   hoc_faq_more_questions_a: "Try finding an answer in our <a href='http://support.code.org'>support forum</a>."
   hoc_faq_account_q: "Do students need to log on using an account?"
   hoc_faq_account_a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href='%{codeorg_url}/learn/beyond'>follow-on courses</a> require account creation to save student progress."
-  hoc_faq_frozen_q: "Where is the tutorial with Anna and Elsa?"
-  hoc_faq_frozen_a: "It is now published on <a href='%{codeorg_url}/learn'>the tutorials page</a>. We hope you enjoy it!"
+  hoc_faq_frozen_q: "Where can I find new tutorials featuring Star Wars, Minecraft and Anna and Elsa from Frozen?"
+  hoc_faq_frozen_a: "They are now published on <a href='%{codeorg_url}/learn'>the tutorials page</a>. We hope you enjoy them!"
   hoc_faq_high_school_q: "Which activity should I do with high school students?"
   hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_scratch_q: "I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?"
   hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
   hoc_faq_count_hoc_q: "How do you count Hours of Code?"
   hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
+  hoc_faq_one_hour_q: "How much can one learn in an hour?"
+  hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/> Above all, what all participants can learn in an hour is that we can do this.'
 
   stats_hoc_2013_image_alt: 'Stats from 2013 Hour of Code'
   stats_growth: "It was the fastest to reach 15 million users."
@@ -390,6 +406,7 @@
   title_how_to_organizations: How to host an Hour of Code - Organizations
   title_how_to_companies: How to host an Hour of Code - Companies
   title_how_to_officials: How-to guide for public officials
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials 
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
@@ -411,12 +428,12 @@
   events_nav_title: Hour of Code Events
   events_nav_all: All Events
   events_nav_whole_schools: Whole Schools
-  events_nav_special: Special Events
+  events_nav_special: CS Tech Jams
   events_nav_orgs: Organizations
   events_all_old_title: "All @year Hour of Code events"
   events_all_title: All Hour of Code events
   events_whole_school_title: Whole-school Hour of Code events
-  events_special_title: Special Hour of Code events
+  events_special_title: Computer Science Tech Jams
   events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: event
   events: events

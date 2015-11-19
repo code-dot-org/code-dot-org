@@ -8,6 +8,7 @@ var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
 var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
+var colors = require('../../sharedJsxStyles').colors;
 
 var elementUtils = require('./elementUtils');
 
@@ -25,7 +26,7 @@ var ButtonProperties = React.createClass({
       <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true} />
         <PropertyRow
@@ -94,7 +95,7 @@ var ButtonEvents = React.createClass({
   },
 
   getClickEventCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
       '  console.log("' + id + ' clicked!");\n' +
@@ -115,7 +116,7 @@ var ButtonEvents = React.createClass({
       <div id='eventRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
         <EventHeaderRow/>
@@ -139,15 +140,15 @@ module.exports = {
     element.style.height = '30px';
     element.style.width = '80px';
     element.style.fontSize = '14px';
-    element.style.color = '#fff';
-    element.style.backgroundColor = '#1abc9c';
+    element.style.color = colors.white;
+    element.style.backgroundColor = colors.teal;
 
     return element;
   },
-  onDeserialize: function (element, onPropertyChange) {
+  onDeserialize: function (element, updateProperty) {
     var url = element.getAttribute('data-canonical-image-url');
     if (url) {
-      onPropertyChange(element, 'image', url);
+      updateProperty(element, 'image', url);
     }
   }
 };

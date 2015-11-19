@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+require_relative '../deployment.rb'
+require 'cdo/only_one'
+
+def ask_for_name
+  name = ''
+  until name != ''
+    print "Who are you? "
+    name = gets.chomp
+  end
+  puts "Hi #{name}!"
+  name
+end
+
+def check_changes
+  puts `git status`
+  print "Should I commit and push all of these unstaged and untracked files? [Y/n] "
+  input = gets
+  if input == '' || input[0].downcase == 'y'
+    puts "Cool!"
+    true
+  else
+    puts "Ok, not doing anything."
+    false
+  end
+end
+
+def commit_changes(name)
+  puts `git add -A .`
+  puts `git commit -m "content changes (-#{name})"`
+  puts `git push`
+end
+
+Dir.chdir(deploy_dir) do
+  name = ask_for_name
+
+  if check_changes
+    commit_changes(name)
+  end
+end

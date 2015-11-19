@@ -51,7 +51,7 @@ var TurnDirection = tiles.TurnDirection;
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
-var SVG_NS = "http://www.w3.org/2000/svg";
+var SVG_NS = require('../constants').SVG_NS;
 
 /**
  * Create a namespace for the application.
@@ -705,8 +705,7 @@ var createPegmanAnimation = function(options) {
   clip.appendChild(rect);
   svg.appendChild(clip);
   // Create image.
-  // Add a random number to force it to reload everytime.
-  var imgSrc = options.pegmanImage + '?time=' + (new Date()).getTime();
+  var imgSrc = options.pegmanImage;
   var img = document.createElementNS(SVG_NS, 'image');
   img.setAttributeNS(
       'http://www.w3.org/1999/xlink', 'xlink:href', imgSrc);

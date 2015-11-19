@@ -7,7 +7,7 @@ embedded_layout: simple_embedded
 
 ## penUp()
 
-[/name
+[/name]
 
 
 [category]
@@ -20,11 +20,11 @@ Category: Turtle
 
 [short_description]
 
-Stops the turtle from drawing a trail behind it as it moves.
+Picks the pen up so the turtle does not draw a line as it moves.
 
 [/short_description]
 
-Just like you lift your pen sometimes when drawing, the turtle pen can be lifted using penUp so the turtle will not leave a drawing trail behind it as it moves.
+Just like you sometimes lift your pen when drawing, the turtle pen can be lifted using penUp so the turtle will not draw a line as it moves.
 
 [/description]
 
@@ -34,10 +34,9 @@ ____________________________________________________
 [example]
 
 ```
-// Move the turtle without drawing a line.
-speed(20);
+// Move the turtle up from the turtle starting postion at the center of the screen without drawing a line.
 penUp();
-moveForward(100);
+moveForward();
 ```
 
 [/example]
@@ -46,23 +45,32 @@ ____________________________________________________
 
 [example]
 
-**Example: Dotted Line** Use penUp and penDown to have the turtle draw a thick, dotted line. [Watch it run!](https://images.code.org/702651fbafa3b4c9f46b004449f29eb1-image-1444224244090.gif)
+**Example: Dotted Line** Use penUp and penDown to have the turtle draw a thick, dotted line.
 
-```
+<table>
+<tr>
+<td style="border-style:none; width:90%; padding:0px">
+<pre>
 // Use penUp and penDown to have the turtle draw a thick, dotted line.
-speed(20);
 penWidth(3);
 penDown();
-moveForward(25);
+moveForward();
 penUp();
-moveForward(25);
+moveForward();
 penDown();
-moveForward(25);
+moveForward();
 penUp();
-moveForward(25);
+moveForward();
 penDown();
-moveForward(25);
-```
+moveForward();
+</pre>
+</td>
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/89e8224609867d151d327efedefe84fc-image-1445476963436.gif'>
+	
+</td>
+</tr>
+</table>
 
 [/example]
 
@@ -74,7 +82,6 @@ ____________________________________________________
 
 ```
 // Draw a picture that has disconnected parts (a pair of eyes) using penUp to move between parts.
-speed(20);
 hide();
 // first eye
 penDown();          
@@ -126,7 +133,8 @@ No return value. Modifies turtle drawing only.
 ### Tips
 - [penDown()](/applab/docs/penDown) is often used with penUp. The default starting configuration for the turtle is with the pen down.
 - [dot()](/applab/docs/dot) is not effected by penUp.
-- If you are not seeing the turtle's movement, slow the program execution down by adjusting the slider bar under the blue reset button or by using the [speed()](/applab/docs/speed) command.
+- Turtle drawing commands are not effected by the [show()](/applab/docs/show) and [hide()](/applab/docs/hide) commands, which control if the turtle icon is displayed or not.
+- If you are not seeing the turtle's movement, slow the program execution down by adjusting the tortoise/hare slider bar in the Debug Console or by using the [speed()](/applab/docs/speed) command.
 
 [/tips]
 

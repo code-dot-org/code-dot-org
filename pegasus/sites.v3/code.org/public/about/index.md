@@ -13,7 +13,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 [col-25]
 
-# Diversity across 7M students in our courses
+# Diversity across 5M students in our courses
 
 [/col-25]
 
@@ -23,7 +23,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 [/col-75]
 
-Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning.
+Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Read  about [our efforts to increase diversity in computer science](/diversity).
 
 <br />
 
@@ -54,8 +54,8 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 | Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(stats['number_served']) %> served. 48% female) |
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org). |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled. |
-| Prep new CS teachers | We've prepared 15,000 new teachers to teach CS across grades K-12. Learn about our [professional development programs](/educate/professional-development).|
-| Change school district curriculum | We've partnered with [70+ of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a district partner](/educate/districts).|
+| Prep new CS teachers | We've prepared 16,000 new teachers to teach CS across grades K-12. Learn about our [professional development programs](/educate/professional-development).|
+| Change school district curriculum | We've partnered with [90 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a district partner](/educate/districts).|
 | Set up policies to support CS | Policy changed in [16 states](/action) including CA, NY, FL, IL, OH.|
 | Go global | Our courses are available in 40+ languages, used in all 180+ countries. |
 
@@ -127,5 +127,5 @@ Receive [quarterly updates from Code.org by email](http://eepurl.com/wL0XL), or 
 
 <a href="http://www.guidestar.org/organizations/46-0858543/code-org.aspx" target="_blank">
     <img src="https://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
-</a> [![image](/images/fit-100/privacy.jpg)](http://studentprivacypledge.org/)
+</a> [![image](/images/fit-150/student_privacy_pledge.png)](http://studentprivacypledge.org/)
 

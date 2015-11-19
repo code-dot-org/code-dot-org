@@ -2,48 +2,55 @@ name 'ECSPD U4 D 14 Intro'
 
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## Unit 4 Day 14: 
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-First, let's explore the first lesson in the curriculum. To begin, find your ECS your curriculum and open to page ???.
+## Day 14 Scratch -- Variables
 
-<a href="LINK" target="_blank">Access a Digital Copy of the Lesson >></a>
+First, let's explore the eighth lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 162-163.
 
+[Access a Digital Copy of the lesson>>](http://code.org/ecs#page=162)
 
 #### Key Concepts
 
-1. Key Concept (<i>example</i>)
-
-1. Key Concept 2 (<i>example</i>)
+- Students will be introduced to variables and explore how to use variables in a game they create where they will earn points for picking healthy foods and lose points for picking unhealthy foods. They will be using the "change\_by\_" block , if\_then" block, a variable block and an operator block.
+- Students will also learn the concept of iteration and the importance of initialization. Some examples are here: [https://scratch.mit.edu/projects/84788156/#editor](https://scratch.mit.edu/projects/84788156/#editor)
 
 #### Common Difficulties
 
-Explain common difficulties
-
-#### PD Outline
-
-The following outline lists the topics covered on each level of this stage. <i>This online PD is intended to be a companion to the ECS curriculum. Have your book open as you go through the levels of this stage.</i>
-
-1. Overview
-
-1. Companion Media Resource
-
-1. Suggested Assessment
-
-1. Additional Resources
-
-1. Teaching Strategies
-
-1. Forum
-
->**Note:** This activity was led by one of your facilitators on the first day of the workshop, but it was not planned by one of the participant teaching groups. 
+Variables are a tricky topic but they are an important concept to master in Computer Science. Part of what can make variables a challenge is that they are different than the variables you use in math class.  Working to solidify variables will be a worthwhile concept to focus on.
+<br><br>
+You could even play a few rounds of a simple game in class where the students earn or lose points. The goal of playing this game will be to motivate variables with the idea of needing to store some information (in this case the score). After playing the game for a while (and giving students a chance to have their scores change) talk as a group about how you might create that same game in Scratch. 
+<br><br>
+If you are not comfortable with variables yourself, take some time to work through the lesson.
 
 #### All Resources for This Lesson
 
-* <a href="LINK" target="_blank">NAME</a>
+**Teacher Supports:**
 
+- [U4 Day 14 Lesson](http://code.org/ecs#page=162)
+- [U4 Day 14 Resource Folder](https://drive.google.com/a/nicolescourse.com/folderview?id=0B2UNlnU_5Vg4fm9YM3NEbWRnR2l6MEdzT1ZvRWtYd0VieVlNWFZWRkNzSHVuX2lkeGhLX0E&usp=drive_web&tid=0B2UNlnU_5Vg4fmFpUGlWakFZYW95Rzh3aGd6akJiWS0zUS1XR1dIcXVFM3hPSUNyNC1XRzQ)
+- [U4 Day 14 General Q and A Forum](http://forum.code.org/t/u4-day-14-general-q-a/1881)
+- [U4 Day 14 PD Discussion Topic Forum](http://forum.code.org/t/u4-day-14-pd-discussion-topic/1896)
+- [U4 Day 14 Lesson Resources Forum](http://forum.code.org/t/u4-day-14-lesson-resources/1851)
+- [U4 Day 14 Assessment Forum](http://forum.code.org/t/u4-day-14-assessment/1866)
 
-Let's examine some important sections of this lesson. To get started, click "Continue" below. 
+**Supplies:**
 
+- [Peer Grading](http://code.org/ecs#page=161)
+- [variable example.sb](http://www.exploringcs.org/curriculum)
+- [http://scratch.mit.edu](http://scratch.mit.edu/)
+
+**Tutorials:**
+
+- Variables - [http://learnscratch.org/sc2-u4/sc2-l20](http://learnscratch.org/sc2-u4/sc2-l20)
+
+#### PD Discussion Forum
+
+What are some real life scenarios that demonstrate the concept of variables well?  How might real life scenarios help students better understand how variables work?
+
+[<button>Discuss in the forum >></button>](http://forum.code.org/t/u4-day-14-pd-discussion-topic/1896)
+<br><br>
+After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
+<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

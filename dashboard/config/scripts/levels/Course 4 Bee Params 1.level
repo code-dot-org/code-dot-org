@@ -32,7 +32,6 @@
     "never_autoplay_video": "false",
     "step_speed": "2",
     "examples_required": "false",
-    "maze_data": null,
     "fast_get_nectar_animation": "false"
   }
 }]]></config>
@@ -111,5 +110,12 @@
         </category>
       </xml>
     </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">3</title>
+        </block>
+      </xml>
+    </recommended_blocks>
   </blocks>
 </Karel>

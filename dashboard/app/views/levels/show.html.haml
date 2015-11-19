@@ -1,5 +1,15 @@
 - @page_title = level_title
+
+= render partial: 'shared/check_admin'
 = render partial: 'shared/sharing_meta_tags'
+
+- if params[:share] && @game.share_mobile_fullscreen? && browser.safari?
+  :javascript
+    if (!window.navigator.standalone) {
+      window.addEventListener("load", function() {
+        addToHome.show(true);
+      }, false);
+    }
 
 #notes-content{style: 'display: none;'}
   %ul
@@ -11,7 +21,12 @@
       %a{href: '#notes-outer'}= I18n.t('video.notes')
 
 - if @game.unplugged?
+  :javascript
+    var appOptions = #{app_options.to_json};
   = render partial: 'levels/unplug', locals: {app: @game.app}
+- elsif @level.is_a?(Applab) && app_options['readonlyWorkspace'] && !app_options['channel']
+  -# A teacher is trying to view a student's progress on a level they have not started.
+  = render partial: 'levels/not_started'
 - elsif @level.is_a?(Blockly) && @level.embed == 'true' && !@edit_blocks
   #title
     - if @level.properties['instructions'].present?
@@ -19,7 +34,7 @@
   - # Pass special parameters to Blockly partial for embedded level type.
   = render partial: 'levels/blockly'
 - elsif @level.is_a?(DSLDefined) || @level.is_a?(Widget)
-  %script{src: minifiable_shared_path('shared.js')}
+  %script{src: minifiable_asset_path('shared.js')}
   :javascript
     var appOptions = #{app_options.to_json};
     dashboard.createCallouts(appOptions.callouts);
@@ -31,11 +46,13 @@
 - else
   = render partial: 'levels/blockly'
 
-- if @script.try(:hoc?) && (@script_level.try(:chapter) == 1 || @script_level.try(:position) == 1)
+- if tracking_pixel_enabled && @script.try(:hoc?) && (@script_level.try(:chapter) == 1 || @script_level.try(:position) == 1)
   -# special tracking image to make sure a cookie is set when hoc starts (/hoc/1)
   = image_tag(tracking_pixel_url(@script))
 
 = render partial: 'levels/admin'
 
-- if @script && !@script.pd? && current_user.try(:teacher?)
+- # HACKHACK: The respond_to? test below is to workaround a bug where  a server instance
+- # will sometimes fail to define that method.
+- if @script && current_user.try(:teacher?) && (!@script.respond_to?('pd?') || !@script.pd?)
   = render partial: 'levels/teacher'
