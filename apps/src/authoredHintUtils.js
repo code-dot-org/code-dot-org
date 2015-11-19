@@ -87,7 +87,7 @@ authoredHintUtils.getUnfinishedHints_ = function () {
 /**
  * @return {FinishedHint[]}
  */
-authoredHintUtils.getFinishedHints = function () {
+authoredHintUtils.getFinishedHints_ = function () {
   return authoredHintUtils.getFromLocalStorage_('finished_authored_hint_views', []);
 };
 
@@ -103,7 +103,7 @@ authoredHintUtils.getLastAttemptRecord_ = function () {
  * @param {FinishedHint[]} hints
  */
 authoredHintUtils.recordFinishedHints_ = function (hints) {
-  var finishedHintViews = authoredHintUtils.getFinishedHints();
+  var finishedHintViews = authoredHintUtils.getFinishedHints_();
   finishedHintViews = finishedHintViews.concat(hints);
   localStorage.setItem('finished_authored_hint_views', JSON.stringify(finishedHintViews));
 };
@@ -122,7 +122,7 @@ authoredHintUtils.clearFinishedHints_ = function () {
 authoredHintUtils.finalizeHints_ = function () {
   var finalAttemptRecord = authoredHintUtils.getLastAttemptRecord_();
   localStorage.removeItem('last_attempt_record');
-  var hints = authoredHintUtils.getFinishedHints();
+  var hints = authoredHintUtils.getFinishedHints_();
   if (finalAttemptRecord) {
     hints = hints.map(function(hint){
       hint = $.extend({
