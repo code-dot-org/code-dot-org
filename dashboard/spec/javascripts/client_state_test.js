@@ -11,23 +11,24 @@ describe("clientState#trackProgress", function() {
   });
 
   it("returns cached levelSource if timestamp is newer", function () {
-    state.writeSourceForLevel(1, 200, 'abc');
-    state.sourceForLevel(1, 100).should.equal('abc');
+    state.writeSourceForLevel('sample', 'a', 200, 'abc');
+    state.sourceForLevel('sample', 'a', 100).should.equal('abc');
   });
 
   it("returns cached levelSource if no timestamp given", function () {
-    state.writeSourceForLevel(2, 300, 'abc');
-    state.sourceForLevel(2, null).should.equal('abc');
+    state.writeSourceForLevel('sample', 'b', 300, 'zzz');
+    state.sourceForLevel('sample', 'b', null).should.equal('zzz');
   });
 
   it("returns `undefined` if timestamp is older", function () {
-    state.writeSourceForLevel(3, 100, 'abc');
-    assert(state.sourceForLevel(3, 200) === undefined);
+    state.writeSourceForLevel('sample', 'c', 100, 'abc');
+    assert(state.sourceForLevel('sample', 'c', 200) === undefined);
   });
 
   it("returns `undefined` if cache can't be parsed", function () {
-    localStorage.setItem('source4', 'bad data');
-    assert(state.sourceForLevel(4, 200) === undefined);
+    state.writeSourceForLevel('sample', 'd', 100, 'abc');
+    localStorage.setItem('source_sample_d', 'bad data');
+    assert(state.sourceForLevel('sample', 'd', null) === undefined);
   });
 
   it("records level progress and line counts when level is completed", function() {
