@@ -3,6 +3,35 @@
 //= require client_state
 //= require jquery.cookie
 
+describe("clientState#sourceForLevel", function() {
+  var state = dashboard.clientState;
+
+  beforeEach(function () {
+    state.reset();
+  });
+
+  it("returns cached levelSource if timestamp is newer", function () {
+    state.writeSourceForLevel('sample', 'a', 200, 'abc');
+    state.sourceForLevel('sample', 'a', 100).should.equal('abc');
+  });
+
+  it("returns cached levelSource if no timestamp given", function () {
+    state.writeSourceForLevel('sample', 'b', 300, 'zzz');
+    state.sourceForLevel('sample', 'b', null).should.equal('zzz');
+  });
+
+  it("returns `undefined` if timestamp is older", function () {
+    state.writeSourceForLevel('sample', 'c', 100, 'abc');
+    assert(state.sourceForLevel('sample', 'c', 200) === undefined);
+  });
+
+  it("returns `undefined` if cache can't be parsed", function () {
+    state.writeSourceForLevel('sample', 'd', 100, 'abc');
+    localStorage.setItem('source_sample_d', 'bad data');
+    assert(state.sourceForLevel('sample', 'd', null) === undefined);
+  });
+});
+
 describe("clientState#trackProgress", function() {
   var state = dashboard.clientState;
 
@@ -10,101 +39,89 @@ describe("clientState#trackProgress", function() {
     state.reset();
   });
 
-  it("returns cached levelSource if timestamp is newer", function () {
-    state.writeSourceForLevel(1, 200, 'abc');
-    state.sourceForLevel(1, 100).should.equal('abc');
-  });
-
-  it("returns cached levelSource if no timestamp given", function () {
-    state.writeSourceForLevel(2, 300, 'abc');
-    state.sourceForLevel(2, null).should.equal('abc');
-  });
-
-  it("returns `undefined` if timestamp is older", function () {
-    state.writeSourceForLevel(3, 100, 'abc');
-    assert(state.sourceForLevel(3, 200) === undefined);
-  });
-
-  it("returns `undefined` if cache can't be parsed", function () {
-    localStorage.setItem('source4', 'bad data');
-    assert(state.sourceForLevel(4, 200) === undefined);
-  });
-
   it("records level progress and line counts when level is completed", function() {
-    state.levelProgress(1).should.equal(0);
-    state.levelProgress(2).should.equal(0);
+    state.levelProgress('sample', 'a').should.equal(0);
+    state.levelProgress('sample', 'b').should.equal(0);
     state.lines().should.equal(0);
 
     //User has passed a level with optimal solution
-    state.trackProgress(true, 5, 100, 1);
-    state.levelProgress(1).should.equal(100);
-    state.levelProgress(2).should.equal(0);
+    state.trackProgress(true, 5, 100, 'sample', 'a');
+    state.levelProgress('sample', 'a').should.equal(100);
+    state.levelProgress('sample', 'b').should.equal(0);
     state.lines().should.equal(5);
 
     //User has passed another level but with suboptimal solution
-    state.trackProgress(true, 10, 20, 2);
-    state.levelProgress(1).should.equal(100);
-    state.levelProgress(2).should.equal(20);
+    state.trackProgress(true, 10, 20, 'sample', 'b');
+    state.levelProgress('sample', 'a').should.equal(100);
+    state.levelProgress('sample', 'b').should.equal(20);
     state.lines().should.equal(15);
 
     //User passes the the same level but with a better solution
-    state.trackProgress(true, 5, 100, 2);
-    state.levelProgress(1).should.equal(100);
-    state.levelProgress(2).should.equal(100);
+    state.trackProgress(true, 5, 100, 'sample', 'b');
+    state.levelProgress('sample', 'a').should.equal(100);
+    state.levelProgress('sample', 'b').should.equal(100);
     state.lines().should.equal(20);
   });
 
   it("records level progress but not line counts when level is failed", function() {
-    state.levelProgress(1).should.equal(0);
-    state.levelProgress(2).should.equal(0);
+    state.levelProgress('sample', 'a').should.equal(0);
+    state.levelProgress('sample', 'b').should.equal(0);
     state.lines().should.equal(0);
 
     //User has failed a level
-    state.trackProgress(false, 5, 3, 1);
-    state.levelProgress(1).should.equal(3);
-    state.levelProgress(2).should.equal(0);
+    state.trackProgress(false, 5, 3, 'sample', 'a');
+    state.levelProgress('sample', 'a').should.equal(3);
+    state.levelProgress('sample', 'b').should.equal(0);
     state.lines().should.equal(0);
 
     //User failed a different level
-    state.trackProgress(false, 5, 3, 2);
-    state.levelProgress(1).should.equal(3);
-    state.levelProgress(2).should.equal(3);
+    state.trackProgress(false, 5, 3, 'sample', 'b');
+    state.levelProgress('sample', 'a').should.equal(3);
+    state.levelProgress('sample', 'b').should.equal(3);
     state.lines().should.equal(0);
   });
 
   it("records level progress truncates line count at a certain level", function () {
-    state.trackProgress(true, 999, 20, 1);
-    state.levelProgress(1).should.equal(20);
+    state.trackProgress(true, 999, 20, 'sample', 'a');
+    state.levelProgress('sample', 'a').should.equal(20);
     state.lines().should.equal(999);
 
-    state.trackProgress(true, 5, 100, 2);
-    state.levelProgress(2).should.equal(100);
+    state.trackProgress(true, 5, 100, 'sample', 'b');
+    state.levelProgress('sample', 'b').should.equal(100);
     state.lines().should.equal(1000);
 
-    state.trackProgress(true, 1, 100, 1);
+    state.trackProgress(true, 1, 100, 'sample', 'a');
     state.lines().should.equal(1000);
   });
 
   it("records level progress does not allow negative line counts", function () {
-    state.trackProgress(true, 10, 100, 1);
-    state.levelProgress(1).should.equal(100);
+    state.trackProgress(true, 10, 100, 'sample', 'a');
+    state.levelProgress('sample', 'a').should.equal(100);
     state.lines().should.equal(10);
 
-    state.trackProgress(true, -10, 100, 1);
-    state.levelProgress(1).should.equal(100);
+    state.trackProgress(true, -10, 100, 'sample', 'a');
+    state.levelProgress('sample', 'a').should.equal(100);
     state.lines().should.equal(10);
   });
 
   it("handles malformed cookies for level progress", function () {
     $.cookie('progress', null, {expires: 365, path: '/'});
-    state.levelProgress(1).should.equal(0);
+    state.levelProgress('sample', 'a').should.equal(0);
 
     $.cookie('progress', '', {expires: 365, path: '/'});
-    state.levelProgress(1).should.equal(0);
+    state.levelProgress('sample', 'a').should.equal(0);
 
     $.cookie('progress', '{\'malformed_json\':true', {expires: 365, path: '/'});
-    state.levelProgress(1).should.equal(0);
+    state.levelProgress('sample', 'a').should.equal(0);
 
+  });
+});
+
+describe("clientState#hasSeenVideo/hasSeenCallout", function() {
+  var state = dashboard.clientState;
+
+  beforeEach(function() {
+    state.reset();
   });
 
   it("records video progress", function () {
@@ -176,23 +193,30 @@ describe("clientState#trackProgress", function() {
     state.recordCalloutSeen('someCallout');
     state.hasSeenCallout('someCallout').should.equal(true);
   });
+});
+
+describe("clientState#reset", function() {
+  var state = dashboard.clientState;
+
+  beforeEach(function() {
+    state.reset();
+  });
 
   it("Resetting client state actually resets everything", function () {
     state.recordCalloutSeen('someCallout');
     state.recordVideoSeen('someVideo');
-    state.trackProgress(true, 5, 100, 1);
+    state.trackProgress(true, 5, 100, 'sample', 'a');
 
     state.hasSeenCallout('someCallout').should.equal(true);
     state.hasSeenVideo('someVideo').should.equal(true);
-    state.levelProgress(1).should.equal(100);
+    state.levelProgress('sample', 'a').should.equal(100);
     state.lines().should.equal(5);
 
     state.reset();
 
     state.hasSeenCallout('someCallout').should.equal(false);
     state.hasSeenVideo('someVideo').should.equal(false);
-    state.levelProgress(1).should.equal(0);
+    state.levelProgress('sample', 'a').should.equal(0);
     state.lines().should.equal(0);
   })
 });
-

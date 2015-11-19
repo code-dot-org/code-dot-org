@@ -54,8 +54,8 @@ window.apps = {
           // Only locally cache non-channel-backed levels. Use a client-generated
           // timestamp initially (it will be updated with a timestamp from the server
           // if we get a response.
-          lastSavedProgram = report.program;
-          dashboard.clientState.writeSourceForLevel(appOptions.level.scriptLevelId, +new Date(), lastSavedProgram);
+          lastSavedProgram = decodeURIComponent(report.program);
+          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.levelKey, +new Date(), lastSavedProgram);
         }
         report.scriptName = appOptions.scriptName;
         report.fallbackResponse = appOptions.report.fallback_response;
@@ -72,7 +72,7 @@ window.apps = {
       onComplete: function (response) {
         if (!appOptions.channel) {
           // Update the cache timestamp with the (more accurate) value from the server.
-          dashboard.clientState.writeSourceForLevel(appOptions.level.scriptLevelId, response.timestamp, lastSavedProgram);
+          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.levelKey, response.timestamp, lastSavedProgram);
         }
       },
       onResetPressed: function() {
@@ -121,9 +121,9 @@ window.apps = {
 
     // Load locally cached version if it's newer than the version from the server.
     var cachedProgram = dashboard.clientState.sourceForLevel(
-        appOptions.level.scriptLevelId, appOptions.level.lastAttemptTimestamp);
+        appOptions.scriptName, appOptions.levelKey, appOptions.level.lastAttemptTimestamp);
     if (cachedProgram !== undefined) {
-      appOptions.level.lastAttempt = decodeURIComponent(cachedProgram);
+      appOptions.level.lastAttempt = cachedProgram;
     }
 
     // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
