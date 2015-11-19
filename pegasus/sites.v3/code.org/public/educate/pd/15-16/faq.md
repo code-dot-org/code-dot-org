@@ -8,51 +8,117 @@ nav: pd2_nav
 
 ## Welcome Kits
 
-Thank you for participating in Code.org Computer Science Professional Development! If you have not done so already, please read your Code.org Teacher Welcome Kit for all program expectations, commitments, and information. Feel free to download, save, and/or print this Welcome Kit so you have all the answers at your fingertips. 
+Please reference your Code.org Teacher Welcome Kit for program expectations, commitments, and information. 
 
-[Computer Science Principles Teacher Welcome Kit](http://code.org/welcome-csp)
-<br/>
-[Exploring Computer Science Teacher Welcome Kit](http://code.org/welcome-ecs)
-<br/>
-[Computer Science in Algebra Teacher Welcome Kit](http://code.org/welcome-algebra)
-<br/>
-[Computer Science in Science Teacher Welcome Kit](http://code.org/welcome-science)
+[CS Principles](http://code.org/welcome-csp) | [ECS](http://code.org/welcome-ecs) | [CS in Algebra](http://code.org/welcome-algebra) | [CS in Science](http://code.org/welcome-science)
 
 
 ----------
-
 ## FAQs
-
 Still have questions? See below for answers to commonly asked questions or email [pd@code.org](pd@code.org).
-<br/>
+<br/><br/>
+**Questions about in-person PD workshops:**<br/>
 
-- [Who do I inform if I have a schedule conflict?](#sched)
-- [What is the payment process?](#pay)
-- [What are the major program deadlines?](#deadline)
-- [What if my bank account changes?](#acct)	
-- [Are parking fees reimbursable?](#park)
-- [What if I am no longer teaching the course in the Fall, can I still attend PD?](#fall)
-- [How do I navigate my Online PD? How do I check my progress?](#progress)
+- [I have a schedule conflict with my workshop date. What should I do?](#sched)
+- [I am no longer teaching the course. Can I still attend PD?](#attend)
+- [Winter weather policy](#winter)
+
+**Questions about online PD:**<br/>
+
+- [When is my online PD due?](#deadlines)
+- [How do I navigate my online PD? How do I check my progress?](#progress)
 - [I completed my online PD. Why does it still say I haven't finished?](#complete)
 
+**Questions about payment:**<br/>
 
-### Who do I inform if I have a schedule conflict?
+- [What is the payment process?](#pay)
+- [What if my bank account changes?](#acct)	
+- [Are parking fees reimbursable?](#park)
 
-Please email pd@code.org *and* your district contact if you have a conflict with an in-person PD date. Unfortunately, you can't make up the workshop. We recommend that you connect with a colleague to catch up on important concepts. You can do this locally or through your nation-wide forum of CS teachers. Visit your program's forum below: 
+_________________________________
 
-[Computer Science Principles](forum.code.org/c/csp)
-| 
-[Exploring Computer Science](forum.code.org/c/ecs)
-| 
-[Computer Science in Algebra](forum.code.org/c/cs-in-algebra)
-| 
-[Computer Science in Science](forum.code.org/c/cs-in-science)
+<a id="sched"></a>
+### **I have a schedule conflict with my workshop date. What should I do?**
+
+Please email pd@code.org *and* your district contact with the workshop date and the reason you cannot attend. <br/><br/>
+Unfortunately, you can't make up the workshop. Here are some recommendations for how you can connect with a colleague to catch up on important concepts:<br/> 
+1) Locally: Connect with a colleague from your local cohort<br/>
+2) Virtually: Connect to your nationwide network of CS teachers through your program's forum: <br/>
+[CS Principles](forum.code.org/c/csp) | 
+[ECS](forum.code.org/c/ecs) | 
+[CS in Algebra](forum.code.org/c/cs-in-algebra) | [CS in Science](forum.code.org/c/cs-in-science)
 <br/>
 
-The Code.org attendance policy can be found in your program welcome kit.
 
 [**Back to the top**](#top)
 <br/>
+______________________________
+<a id="attend"></a>
+<br/>
+<br/>
+
+### **I am no longer teaching the course. Can I still attend PD?**
+
+Our general rule: We do not pay a stipend to teachers who are not teaching the course.  However, you are welcome to attend the PD, unpaid, as a guest. Please contact you district if you have specific questions about this. 
+
+[**Back to the top**](#top)
+<br/>
+__________________________________
+<a id="winter"></a>
+<br/>
+<br/>
+### **Winter Weather Policy**
+If a workshop is cancelled due to weather or an unexpected event, Code.org will notify you via email by 10pm the night before PD. If PD is cancelled and not rescheduled for a later date, teachers will still receive the PD stipend. <br/>
+
+Code.org’s goal is to ensure your safety in an emergency situation. Please remember to update [pd@code.org](pd@code.org) with any email or phone changes you may have.
+
+[**Back to the top**](#top)
+<br/>
+___________________________________________
+<a id="deadlines"></a>
+<br/>
+<br/>
+### **When is my online PD due?**
+#### Phase 1 and Phase 2 online PD
+**Phase 1 and Phase 2 online PD** 
+<br /> 
+Due: 9/7/2015 
+<br />
+Use [this tutorial](#complete) to make sure you completed both Phase 1 and Phase 2. 
+<br />
+  
+**Phase 3 online PD**
+<br />
+Due dates vary by program (see below). Add these launch dates and due dates to your calendar to best coordinate your online professional development and classroom implementation.<br /><br />
+We recommend that you complete Phase 3: Academic Year Development online PD courses before you implement the respective curriculum. Payments for Phase 3: Academic Year Development online PD will be pulled twice during the year - February 1st (for work completed before January 31st) and July 1st (for work completed before June 30th). 
+<br /><br />
+
+**High School online PD details**<br />
+
+|  ECS | 
+| :---------- | 
+| Due: All units are due before your Phase 4: Summer Wrap-up, and no later than June 30th. <br />Launches:<br />• Unit 2: October 6th<br />• Units 3 & 4: November 3rd<br />• Unit 5: February 2nd<br />• Unit 6: March 1st|
+
+| CS Principles | 
+|:---------- |
+| Due: All units are due before your Phase 4: Summer Wrap-up, and no later than June 30th. <br />Launches: <br />• Unit 2: October 6th<br />• Unit 3: Part 1 on November 3rd, Part 2 on November 24th<br />• Unit 4: Early February<br />• Unit 5: Early March |
+
+<br />
+**Middle School online PD details**<br />
+
+| CS in Algebra |
+|:---------------- |
+| *Part 1: Phase 3A pre-work* <br />• Launch: 2-4 weeks before your Phase 3A in-person workshop <br />• Due: Before your Phase 3A in-person workshop <br /><br />*Part 2: Phase 3 development work* <br />• Launch: Monday following your Phase 3A in-person workshop <br />• Due: June 30th <br /><br />*Part 3: Reflection*<br />• Launch: May (exact date TBD) <br />• Due: June 30th |
+
+| CS in Science |
+|:------------- |
+|*Part 1: Phase 3A pre-work* <br />• Launch: 2-4 weeks before your Phase 3A in-person workshop <br />• Due: Before your Phase 3A in-person workshop <br /><br />*Part 2: Phase 3A post-work* <br />• Launch: Monday following your Phase 3A in-person workshop <br />• Due: June 30th <br /><br />*Part 3: Phase 3B pre-work* <br />• Launch: 2-4 weeks before your Phase 3B in-person workshop <br />• Due: Before your Phase 3B in-person workshop
+
+
+
+[**Back to the top**](#top)
+<br/>
+____________________________________
 <br/>
 <br/>
 <a id="pay"></a>
@@ -102,48 +168,7 @@ Teachers being **paid directly by Code.org** can select from the following payme
 <br/>
 <br/>
 <br/>
-<a id="deadline"></a>
-### What are the deadlines for online PD?
 
-**Phase 1 and Phase 2 online PD** 
-<br /> 
-Due: 9/7/2015 
-<br />
-Use [this tutorial](#complete) to make sure you completed both Phase 1 and Phase 2. 
-<br />
-  
-**Phase 3 online PD**
-<br />
-We recommend that you complete Phase 3: Academic Year Development online PD courses before you implement the respective curriculum. Payments for Phase 3: Academic Year Development online PD will be pulled twice during the year - February 1st (for work completed before January 31st) and July 1st (for work completed before June 30th). 
-<br /><br />
-Due dates vary by program (see below). Add these launch dates and due dates to your calendar to best coordinate your online professional development and classroom implementation.<br /><br />
-**High School online PD details**<br />
-
-|  ECS | 
-| :---------- | 
-| Due: All units are due before your Phase 4: Summer Wrap-up, and no later than June 30th. <br />Launches:<br />• Unit 2: October 6th<br />• Units 3 & 4: November 3rd<br />• Unit 5: February 2nd<br />• Unit 6: March 1st|
-
-| CS Principles | 
-|:---------- |
-| Due: All units are due before your Phase 4: Summer Wrap-up, and no later than June 30th. <br />Launches: <br />• Unit 2: October 6th<br />• Unit 3: Part 1 on November 3rd, Part 2 on November 24th<br />• Unit 4: Early February<br />• Unit 5: Early March |
-
-<br />
-**Middle School online PD details**<br />
-
-| CS in Algebra |
-|:---------------- |
-| *Part 1: Phase 3A pre-work* <br />• Launch: 2-4 weeks before your Phase 3A in-person workshop <br />• Due: Before your Phase 3A in-person workshop <br /><br />*Part 2: Phase 3 development work* <br />• Launch: Monday following your Phase 3A in-person workshop <br />• Due: June 30th <br /><br />*Part 3: Reflection*<br />• Launch: May (exact date TBD) <br />• Due: June 30th |
-
-| CS in Science |
-|:------------- |
-|*Part 1: Phase 3A pre-work* <br />• Launch: 2-4 weeks before your Phase 3A in-person workshop <br />• Due: Before your Phase 3A in-person workshop <br /><br />*Part 2: Phase 3A post-work* <br />• Launch: Monday following your Phase 3A in-person workshop <br />• Due: June 30th <br /><br />*Part 3: Phase 3B pre-work* <br />• Launch: 2-4 weeks before your Phase 3B in-person workshop <br />• Due: Before your Phase 3B in-person workshop
-
-
-
-[**Back to the top**](#top)
-<br/>
-<br/>
-<br/>
 <a id="acct"></a>
 ### I need to update bank account information, where do I go?
 
@@ -164,19 +189,9 @@ No, Code.org does not cover parking expenses and encourages participants to use 
 <br/>
 <br/>
 <br/>
-<a id="fall"></a>
-
-### What if I am no longer teaching the course in the Fall, can I still attend PD?
-
-Our general rule is you will not go through PD unless you are teaching the course, but please contact your district to discuss further.
-
-[**Back to the top**](#top)
-<br/>
-<br/>
-<br/>
 <a id="progress"></a>
 
-### How do I navigate my Online PD? How do I check my progress?
+### How do I navigate my online PD? How do I check my progress?
 
 Your Online PD courses live in Code Studio, our learning platform (see image 1 below). To get to this page, click on the orange button in the top right corner. Select Code Studio from the dropdown. Select your online PD course - that brings you to your progress page (see image 2). Pay attention to the name of the course you are completing!
 
@@ -204,6 +219,3 @@ Make sure you’ve clicked the orange continue button at the bottom of every lev
 
 [**Back to the top**](#top)
 <br/>
-<br/>
-<br/>
-
