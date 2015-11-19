@@ -239,4 +239,4 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "reinfFeedbackMsg":function(d){return "You can press \"Keep Playing\" to go back to playing your game."},
 "replayButton":function(d){return "Replay"},
 "selectChooseButton":function(d){return "Select"},
-"tooManyBlocksFail":function(d){return "Zagonetka "+craft_locale.v(d,"puzzleNumber")+" je dovršena. Čestitam! Također je moguće završiti ju sa "+craft_locale.p(d,"numBlocks",0,"hr",{"one":"jednom kockom","other":craft_locale.n(d,"numBlocks")+" kocki"})+"."}};
+"tooManyBlocksFail":function(d){return "Zagonetka "+craft_locale.v(d,"puzzleNumber")+" je dovršena. Čestitam! Također je moguće završiti ju sa "+craft_locale.p(d,"numBlocks",0,"hr",{"jedna":"jednom kockom","other":craft_locale.n(d,"numBlocks")+" kocki"})+"."}};

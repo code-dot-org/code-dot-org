@@ -160,7 +160,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "addPoints10":function(d){return "tilføj 10 point"},
 "addPoints50":function(d){return "tilføj 50 point"},
 "addPoints100":function(d){return "tilføj 10 point"},
-"addPoints300":function(d){return "add 300 points"},
+"addPoints300":function(d){return "tilføj 300 point"},
 "addPoints1000":function(d){return "tilføj 1000 point"},
 "addPointsTooltip":function(d){return "Tilføj eller fjern et point til scoren."},
 "alienInvasion":function(d){return "Invasion af fremmede!"},

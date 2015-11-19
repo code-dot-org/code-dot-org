@@ -212,7 +212,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playSoundWinPoint2":function(d){return "play win point 2 sound"},
 "playSoundWood":function(d){return "play wood sound"},
 "putdownTower":function(d){return "put down tower"},
-"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to playing your game."},
+"reinfFeedbackMsg":function(d){return "o'yinga qaytish uchun siz \"Takrorlash\" tugmasini bosishingiz mumkin."},
 "removeSquare":function(d){return "remove square"},
 "repeatUntil":function(d){return "repeat until"},
 "repeatUntilBlocked":function(d){return "while path ahead"},

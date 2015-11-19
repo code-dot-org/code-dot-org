@@ -212,7 +212,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "houseSelectChooseFloorPlan":function(d){return "Choose the floor plan for your house."},
 "houseSelectEasy":function(d){return "Easy"},
 "houseSelectHard":function(d){return "Hard"},
-"houseSelectLetsBuild":function(d){return "Let's build a house."},
+"houseSelectLetsBuild":function(d){return "Allons construire une maison."},
 "houseSelectMedium":function(d){return "Medium"},
 "keepPlayingButton":function(d){return "Keep Playing"},
 "level10FailureMessage":function(d){return "Cover up the lava to walk across, then mine two of the iron blocks on the other side."},
