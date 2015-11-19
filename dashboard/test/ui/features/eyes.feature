@@ -110,11 +110,10 @@ Scenario:
   And I close my eyes
 
 @dashboard_db_access
+@as_student
 Scenario:
-  Given I am on "http://learn.code.org/"
-  And I am a student
-  When I open my eyes to test "embedded ninjacat"
-  Given I am on "http://learn.code.org/s/algebra/stage/1/puzzle/2?noautoplay=true"
+  Given I open my eyes to test "embedded ninjacat"
+  When I am on "http://learn.code.org/s/algebra/stage/1/puzzle/2?noautoplay=true"
   And I rotate to landscape
   Then element "#runButton" is visible
   And I see no difference for "level load"
@@ -129,39 +128,37 @@ Scenario:
   And I close my eyes
 
 @dashboard_db_access
+@as_student
 Scenario:
-  Given I am on "http://learn.code.org/"
-  And I am a student
-  When I open my eyes to test "calc expression evaluation"
-  Given I am on "http://learn.code.org/s/algebra/stage/2/puzzle/6?noautoplay=true"
+  Given I open my eyes to test "calc expression evaluation"
+  When I am on "http://learn.code.org/s/algebra/stage/2/puzzle/6?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
   And I press "x-close"
   And I press ".tooltip-x-close" using jQuery
   And I've initialized the workspace with the solution blocks
-  And I see no difference for "level load, closed dialog"
+  Then I see no difference for "level load, closed dialog"
 
-  Then I press "runButton"
+  When I press "runButton"
   And I wait to see "#x-close"
-  And I see no difference for "evaluated expression"
+  Then I see no difference for "evaluated expression"
   And I close my eyes
 
 @dashboard_db_access
+@as_student
 Scenario:
-  Given I am on "http://learn.code.org/"
-  And I am a student
-  When I open my eyes to test "calc variable"
-  Given I am on "http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true"
+  Given I open my eyes to test "calc variable"
+  When I am on "http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
   And I press "x-close"
   And I press "modalEditorClose"
   And I've initialized the workspace with the solution blocks
-  And I see no difference for "level load, closed dialog"
+  Then I see no difference for "level load, closed dialog"
 
-  Then I press "runButton"
+  When I press "runButton"
   And I wait to see "#x-close"
-  And I see no difference for "evaluated expression"
+  Then I see no difference for "evaluated expression"
   And I close my eyes
 
 @dashboard_db_access
@@ -188,13 +185,12 @@ Examples:
   | http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true      | auto open variable editor |
 
 @dashboard_db_access
+@as_student
 Scenario Outline: Simple page view without instructions dialog
-  Given I am on "http://learn.code.org/"
-  And I am a student
-  When I open my eyes to test "<test_name>"
+  Given I open my eyes to test "<test_name>"
   And I am on "<url>"
   When I rotate to landscape
-  And I see no difference for "initial load"
+  Then I see no difference for "initial load"
   And I close my eyes
 Examples:
   | url                                                               | test_name                 |
