@@ -8,37 +8,37 @@ litmus_tracking_id: 'sfgaovfs'
 
 [<button>Like us on Facebook](https://facebook/Code.org)[<button>Follow us on Twitter](https://twitter.com/codeorg)
 
-### Here's what you can do now to help the world learn to code:
+#### Here's what you can do now to help the world learn to code:
 
-## Learn yourself (or for your child)
+## 1) Learn yourself (or for your child)
 
 [Learn online](https://code.org/learn) or [find local schools, camps, or workshops](https://code.org/learn/local) that teach coding.
 
 <% if ['educator'].include? role_s %>
 
-## Teach computer science
+## 2) Teach computer science
 
 You can teach these self-serve [intro courses](https://studio.code.org), with professional development included, inspire students with [these videos](https://code.org/educate/inspire), or partner with us to bring computer science [to your entire district](https://code.org/educate/districts). 
 
 <% else %>
 
-## 1) Ask your local school to [teach computer science](https://code.org/educate)
+## 2) Ask your local school to [teach computer science](https://code.org/educate)
 
 Here's a [sample letter](https://code.org/promote/letter) you can send. Your local school can teach these [intro courses](https://studio.code.org), partner with us to bring computer science [to your entire district](https://code.org/educate/districts), and inspire students with [these videos](https://code.org/educate/inspire). Check [our map](https://code.org/learn/local) to see if your school teaches computer science. If not, ask them to.
 
-<% else %>
+<% end %>
 
-<<% if ['educator'].include? role_s %>
-## 2) [Host an Hour of Code](https://hourofcode.com) and win prizes for your school
+<% if ['educator'].include? role_s %>
+## 3) [Host an Hour of Code](https://hourofcode.com) and win prizes for your school
 
 Help students worldwide learn their first Hour of Code, to show that anyone can learn the basics. [Sign up your school](https://hourofcode.com).
 <% else %>
-## 2) [Host an Hour of Code](https://hourofcode.com) — at work, in your community, or local school
+## 3) [Host an Hour of Code](https://hourofcode.com) — at work, in your community, or local school
 
 Help students worldwide learn their first Hour of Code, to show that anyone can learn the basics. [Get involved](https://hourofcode.com) or [try it yourself](https://code.org/learn). If you're technical, [volunteer to help a teacher in your community](https://code.org/volunteer).
 <% end %>
 
-## 3) Support our work
+## 4) Support our work
 
 [Make a generous donation](https://code.org/donate) or [buy a t-shirt or hat](https://store.code.org). We're working to give every student the opportunity to learn computer science. One child learns for every dollar you donate.
 
