@@ -4,6 +4,6 @@ class DateTime
   end
 
   def to_milliseconds
-    self.to_datetime.strftime('%Q').to_i
+    self.strftime('%Q').to_i
   end
 end
