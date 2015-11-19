@@ -77,9 +77,6 @@
     "submittable": "false",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ],
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false"
   }

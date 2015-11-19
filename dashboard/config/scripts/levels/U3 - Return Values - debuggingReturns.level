@@ -65,10 +65,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "console.log(\"The maximum of 2 and 3 is \" + maxVal(2,3));\r\nconsole.log(\"The maximum of 5 and 1 is \" + maxVal(5,1));\r\nconsole.log(\"The maximum of 8 and 8 is \" + maxVal(8,8));\r\n\r\nfunction maxVal(num1, num2){\r\n  if(num1 > num2){\r\n    return num1;\r\n  }\r\n  else if (num1 < num2){\r\n    return num2;\r\n  }\r\n}",
-    "encrypted_examples": [
-
-    ]
+    "start_blocks": "console.log(\"The maximum of 2 and 3 is \" + maxVal(2,3));\r\nconsole.log(\"The maximum of 5 and 1 is \" + maxVal(5,1));\r\nconsole.log(\"The maximum of 8 and 8 is \" + maxVal(8,8));\r\n\r\nfunction maxVal(num1, num2){\r\n  if(num1 > num2){\r\n    return num1;\r\n  }\r\n  else if (num1 < num2){\r\n    return num2;\r\n  }\r\n}"
   }
 }]]></config>
   <blocks/>
