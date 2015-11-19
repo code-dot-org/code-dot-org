@@ -290,9 +290,11 @@ ___________________________
 ### **I don't know which online PD course to complete for Phase 3.**
 Here's a summary of the online PD courses that appear in your Code Studio: <br/>
 
-|**Phase**|**Script(s)**|
+|**Phase**|**Course Name(s)**|
 |:--------|:------------|
-
+|**Phase 1**|**Computer Science in Algebra** <br/>Phase 1: Online Introduction|
+|**Phase 2**|**Computer Science in Algebra PD Phase 2** <br/>Phase 2 Online: Blended Summer Study|
+|**Student Learning**|** <br/>Note: this is not part of your PD. This course is what your students complete in your classroom. You will not be paid for your progress in this course. 
 
 
 
@@ -304,7 +306,7 @@ ___________________________
 <a id="science"></a>
 
 ## Computer Science in Science FAQs
-
+FAQs coming soon! 
 
 [**Back to the top**](#top)
 <br/>
