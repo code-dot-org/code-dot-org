@@ -14,12 +14,19 @@ nav: how_to_nav
 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3) Choose a tutorial:
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* 
 
-**All Hour of Code tutorials:**
+**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
 
 - Require minimal prep-time for teachers
 - Are self-guided - allowing students to work at their own pace and skill-level
+
+**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+
+- Are lesson plans that require some advance teacher preparation
+- Are categorized by grade level *and* by subject area (eg Math, English, etc)
+
+
 
 [<img src="/images/fit-700/tutorials.png">](<%= resolve_url('https://code.org/learn') %>)
 
@@ -35,7 +42,9 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 <img src="/images/fit-350/group_ipad.jpg">
 
 ## 5) Inspire students to start your Hour of Code
-**Kick off your Hour of Code by inspiring students and discussing how computer science impacts every part of our lives.** 
+**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities with computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
+
+[<img src="/images/fit-300/volunteer-map.png">](<%= resolve_url('https://code.org/volunteer/local') %>)
 
 **Show an inspirational video:**
 
@@ -48,7 +57,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - As a class, list things that use code in everyday life.
-- See tips for getting girls interested in computer science <a href="<%= resolve_url('https://code.org/girls') %>">here</a>.
+- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 **Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
@@ -91,6 +100,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 ## 7) Celebrate
 - [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
 - [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
+- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]
@@ -123,6 +133,9 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 <% end %>
 
 ## What comes after the Hour of Code?
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey: 
+
+- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+- [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

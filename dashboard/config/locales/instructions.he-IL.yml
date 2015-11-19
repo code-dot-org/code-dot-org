@@ -995,10 +995,24 @@
         your Player, Target, and Danger. Feel free to play with all of the variables
         at this point to make your game look like you'd like it to. Click "Finish"
         when you're done.
+      Brad Spooky House Copy_instruction: |
+        Freeplay: Here are the functions you've
+        written, and some more for you to play with. Draw something awesome! Play
+        with the pen width to see how different your drawings look!
+      Brad Spooky House_instruction: |
+        Freeplay: Here are the functions you've written,
+        and some more for you to play with. Draw something awesome! Play with the
+        pen width to see how different your drawings look!
       Building a Foundation Assessment_instruction: |
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
         it!
+      Busy Bee 2_instruction: |
+        This bee has a lot of work to do! Do you notice any
+        patterns that you can use to simplify your code?
+      Busy Bee_instruction: |
+        This bee has a lot of work to do! Do you notice any
+        patterns that you can use to simplify your code?
       C3-Farmer While Loops 1_instruction: |
         Move me to the hole and fill it with
         two shovelfuls of dirt, using the "fill" block.
@@ -1326,6 +1340,11 @@
         top to bottom.  The artist will fill-in the squares when it sees\na 1 and
         ignore the square when it sees a 0. \r\n\r\nRun this code to see how\nthe
         artist uses binary to draw this pattern."
+      Course 4 Artist Binary 1a_instruction: "Here's a function that takes a binary\nstring
+        of 1's and 0's and instructs the artist to follow them from left\nto right,
+        top to bottom.  The artist will fill-in the squares when it sees\na 1 and
+        ignore the square when it sees a 0. \r\n\r\nRun this code to see how\nthe
+        artist uses binary to draw this pattern."
       Course 4 Artist Binary 2_instruction: |
         Which of these binary strings could
         you loop 8 times to draw this image?
@@ -1344,11 +1363,21 @@
         you can repeat to draw this image?
       Course 4 Artist Binary 7_instruction: Finish this drawing.
       Course 4 Artist Binary Free Play 2_instruction: |
-        Free Play: Here's a higher
-        resolution canvas to draw on - 16 bits by 16 bits!
+        Free Play: Here's a blank
+        canvas for you to draw on.  Have fun!
+      Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas
+        to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we\nstart
+        to get creative with the bits?"
+      Course 4 Artist Binary Free Play 2b_instruction: Click here to see hints.
       Course 4 Artist Binary Free Play_instruction: |
         Free Play: Draw whatever you
         like with binary!
+      Course 4 Artist Binary pre1_instruction: "Binary is a way of representing information\nusing
+        only two options.  Here, we're going to use the options \"off\" (represented\nby
+        the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided
+        you with a grid of \"pixels\" that you can walk through and make\ndesigns
+        by turning on only certain squares.  Can you have the artist draw\n\"01010101\"
+        in binary in the first row?"
       Course 4 Artist For  Functions 10_instruction: |
         Let's Step it up a little,
         can you draw a Star shape using the "Draw a Square Line" function? Good
@@ -1981,6 +2010,21 @@
         is clicked at least 10 times before Dog counts to 30, raise\n\"increment\"
         by 1 and start again.\r\n3) If The Wizard does not get clicked\nat least 10
         times, the game is over."
+      Course 4 SCV 1_instruction: Click here to view the instructions again.
+      Course 4 SCV 2_instruction: Click here to view the instructions again.
+      Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.\nTag
+        Penguin to get 3 points.  Get 10 points to win!\r\nBut be careful, when\nCat
+        and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks\nnecessary
+        to make this game work the way it's been explained.  How will you\nget Dog
+        to move in all directions using the arrow keys?  How will you add\npoints
+        when Dog tags Cat or Penguin?  How will you subtract points when Cat\nand
+        Penguin touch?"
+      Course 4 SCV 4_instruction: |
+        Solve this puzzle with the fewest number of blocks
+        possible.
+      Course 4 SCV 5_instruction: |
+        Solve this puzzle with the fewest number of blocks
+        possible.
       Course 4 Variables Assessment_instruction: |
         Can you create this image using
         a variable for sides? Each line should be 50 pixels long.
@@ -2920,6 +2964,20 @@
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      October15 bat_instruction: "Freeplay: Here are some functions to play with.
+        \ Can\nyou draw a bat?\r\n"
+      October15 ghost 1_instruction: |
+        Give the ghost eyes, using the "draw a circle"
+        function.
+      October15 JoL 1_instruction: |
+        Program the artist to design a face for your
+        jack-o-lantern!
+      October15 pumpkin 1_instruction: |
+        Finish this jack-o-lantern by drawing the
+        eyes and nose in any style you would like.
+      October15 stars 1_instruction: |
+        Use loops and the "random integer" block
+        to fill the night sky with stars of different shapes and sizes.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -3106,6 +3164,9 @@
         The bee only wants nectar right
         now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
         it is hiding a flower. If it is, then you can gather nectar.
+      Ryan Test Locked Blocks_instruction: |
+        Here's a function called "patrol."
+        Edit it to move Cat up 400 pixels and then down 400 pixels.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse
         an \"if\" statement to program your game to call the \"level_up\"\nfunction
         only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample:
@@ -3226,12 +3287,18 @@
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
+      template test_instruction: what up
       Test Play Lab_instruction: This is a test play lab level.
+      test_sarah_instruction: hi
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
         into the text in place of the pattern.
+      Total Artist Clone Me_instruction: |
+        Freeplay: Here are the functions you've
+        written, and some more for you to play with. Draw something awesome! Play
+        with the pen width to see how different your drawings look!
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters
@@ -3297,34 +3364,98 @@
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
         to be dropped.
+      U3 - Design Mode - Console Log_instruction: |
+        Update the ID names and `console.log()`
+        messages to match the correct button (Click to see full instructions).
+      U3 - Design Mode - Layers and Delete_instruction: |
+        Fix the layout of the bullseye
+        game. (Click to see full instructions)
       U3 - Design Mode - Multi Screens 2_instruction: |
         Make a 2 screen app which
         can switch back and forth between a black screen and a white screen using
-        buttons.
+        buttons. (Click to see detailed instructions.)
       U3 - Design Mode - Multi Screens_instruction: |
-        Make a 2 screen app with black
-        screen and a white screen.
+        Make a 2 screen app with a black
+        screen and a white screen. (Click to see detailed instructions)
       U3 - Design Mode - Other Events_instruction: |
         Delete the button and make the
         image move to a random location when you click on it. (click to see detailed
         instructions)
+      U3 - Design Mode - WTF Console Log_instruction: |
+        Add a 3 console.log messages
+        and test them out(Click to see full instructions).
       U3 - Design Mode -Recreate Beyond Buttons_instruction: |
         Recreate the game from
-        the last lesson with an extra welcome screen for the user to start on. (Click
-        for detailed instructions)
+        the 'chaser-game' with a welcome screen and game over screen. (Click to
+        see full instructions)
       U3 - Design Mode 1_instruction: |
-        Add a button to your screen using design mode.
-        Change the style to look like the picture (click for instructions).
+        Add a large red button to your screen using
+        Design Mode (Click for full instructions).
+      U3 - Variables - Clicker Game_instruction: |
+        Create your improved Chaser-Game
+        here. (Click to see full instructions)
+      U3 - Variables - Debug Scope_instruction: |
+        Why isn't the value of foo changing
+        correctly? Make a guess. (Click to see full instructions)
+      U3 - Variables - Debugging with Turtle_instruction: |
+        Use your new debugging
+        techniques to get the code to run correctly (Click to see full instructions)
+      U3 - Variables - Decrement_instruction: |
+        Decrement the value of the variable.
+        (Click to see full instructions)
+      U3 - Variables - Identify Variables_instruction: |
+        Identify the values printing
+        in the terminal with console.log statements. (Click to see full instructions)
+      U3 - Variables - Increment_instruction: |
+        Use the console.log debugging technique
+        to see what is happening in this example. Add another variable and increment
+        its value. (Click to see full instructions)
+      U3 - Variables - Incrementing Variables_instruction: |
+        Create a repeat loop
+        for the repeated code and use increment to recreate the original program with
+        less lines of code! (Click to see full instructions)
+      U3 - Variables - Read Using Turtle_instruction: |
+        Create a second set of variables
+        for x and y position. Move turtle to that new location. (Click to see full
+        instructions)
+      U3 - Variables - Reassigning Variables with Console.log_instruction: |
+        Add another
+        reassignment statement at the end of the code to change the value of the variable
+        at second time. (Click to see full instructions)
+      U3 - Variables - Set to Expression with Other Variables and Turtle_instruction: |
+        (click
+        to see full instructions)
+      U3 - Variables - Set to Expression with Other Variables_instruction: |
+        (click
+        to see full instructions)
+      U3 - Variables - Set to Expression with Turtle_instruction: |
+        (click to see
+        full)
+      U3 - Variables - Set to Expression_instruction: |
+        Test out the new expressions.
+        (Click to see full instructions)
+      U3- Variables - Assign Random For Turtle Draw_instruction: |
+        Try writing the
+        same code in text mode.
+      U3- Variables - Changing the Value_instruction: |
+        Update the value of 'turnAmount'
+        before each moveForward so the turtle turns a different amount each time.
+        (Click to see full instructions)
+      U3- Variables - Create And Assign_instruction: |
+        Edit the variables to be created
+        and assigned on one line. Add a third variable. Print all three in the console.
+        (Click to see full instructions)
+      U3- Variables - Text Mode_instruction: Try writing the same code in text mode.
       U3-Design Mode-ID and Event Handler_instruction: |
-        Using the Design Mode Events
-        tab add in code that when the button is clicked causes something to print
-        in the console. (Click to see detail instructions).
+        Add an event handler for
+        the button using the "Insert and show" link in the Design Mode Events tab.
+        (Click to see full instructions).
       U3-Design Mode-ID_instruction: |
         Using the Design Mode Events change the button
         ID and update the code to match. (Click to see detail instructions).
       U3-Design Mode-Image_instruction: |
-        Add an image to your app which moves to
-        a random position whenever the button is clicked. (Click to see detailed instructions).
+        Recreate the 'chaser-game' from the last
+        lesson using Design Mode. (Click to see full instructions).
       U313 drag Two Buttons_instruction: |
         Run a program with two buttons that have
         the same id to see the warning message in the console. Change the ids to make
@@ -3428,8 +3559,8 @@
         Create a drawing of your own.
         (Click to see full instructions)
       U3L07 - allSeaGrass_instruction: |
-        Add 50 pieces of sea grass to the image by
-        writing drawAllSeaGrass with a loop. (Click to see full instructions)
+        Add 50 pieces of seagrass to the image by
+        writing drawAllSeagrass with a loop. (Click to see full instructions)
       U3L07 - bubbles_instruction: |
         Add 200 bubbles to the image by writing drawAllBubbles
         with a loop. (Click to see full instructions)
@@ -3451,7 +3582,7 @@
         full instructions)
       U3L07 - loopsWithRandom_instruction: |
         Increase the number of iterations to
-        fill the screen with black. (Click to see full instructions)
+        fill the screen with white. (Click to see full instructions)
       U3L07 - randomDots1_instruction: |
         Increase the number of iterations to fully
         fill the screen with random dots. (Click to see full instructions)
@@ -3459,7 +3590,7 @@
         Draw the figure using a loop. (Click to
         see full instructions)
       U3L07 - seaGrass_instruction: |
-        Add a parameter to drawSeaGrass that controls
+        Add a parameter to drawSeagrass that controls
         the number of waves in the grass. (Click to see full instructions)
       U3L07 - seaStar_instruction: |
         Add 5 sea stars to the image by writing drawAllSeaStars
@@ -3472,13 +3603,13 @@
         and colors.  To get started, follow the series of steps suggested in\nthe
         accompanying worksheet. \n"
       U3L07 - sunBeams_instruction: |
-        Add 100 sun beams to the image by writing drawAllSunBeams
+        Add 100 sunbeams to the image by writing drawAllSunbeams
         with a loop. (Click to see full instructions)
       U3L07 - topDownDesign_instruction: |
         Get comfortable with the structure of this
         program, then move on to the next exercise. (Click to see full instructions)
       U3L08 - createTwoParamTriangle_instruction: |
-        Define a function called drawTriange()
+        Define a function called drawTriangle()
         that accepts two parameters to set the size and width of the triangle. (Click
         to see full instructions)
       U3L08 - digitalScene_instruction: |
@@ -3558,6 +3689,9 @@
       U3L13 - Debugging 3_instruction: |
         Debug the program by fixing the logical error
         within the program. (Click to see full instructions)
+      U3L13 - Project_instruction: |
+        Create your Multi-screen App. (Click to see full
+        instructions)
       U3L13 - Turtle Driver Project_instruction: |
         Create a "turtle driver" that
         includes buttons to move the turtle forward and turn it left and right. (Click
@@ -3635,6 +3769,9 @@
         Modify the code so that the turtle
         moves to a random screen location when the button is clicked. (Click to see
         full instructions)
+      U3L16 - singleSetPosition_instruction: |
+        Move the button to the middle of the
+        screen. (Click to see full instructions)
       U3L16 - text labels_instruction: |
         Use the textLabel command to replace the
         button in your program with a text label. (Click to see full instructions)
@@ -3646,6 +3783,25 @@
       U3L16 - use images_instruction: |
         Use the image command to replace the text
         label in your program with an image. (Click to see full instructions)
+      U3L17 - getKeyValue_instruction: |
+        Create and update your key value pairs using
+        setKeyValue. (Click to see full instructions)
+      U3L17 - introCallbacks_instruction: |
+        Run the program several times to observe
+        how the setKeyValue commands now always arrive in order. (Click to see full
+        instructions)
+      U3L17 - introKeyValue_instruction: |
+        Explore your key value pairs with the Data
+        Viewer. (Click to see full instructions)
+      U3L17 - readKeyValue_instruction: |
+        Explore your key value pairs with the Data
+        Viewer. (Click to see full instructions)
+      U3L17 - setKeyValue_instruction: |
+        Create and update your key value pairs using
+        setKeyValue. (Click to see full instructions)
+      U3L17 - twoSetKeyValue_instruction: |
+        Run the program several times to observe
+        how often setKeyValue commands arrive out of order. (Click to see full instructions)
       U3L19 - Clicker Game Freeplay Area_instruction: |
         Use this App Lab area to improve
         your clicker game.  You should start by copy/pasting the code from your old
@@ -3654,12 +3810,9 @@
         experiment if you want to.  Everything else you need should be shown.  Have
         fun!
       U3L19 - Debugging with consoleLog_instruction: |
-        This example shows how you
-        might insert console.log statements in your code to verify for yourself how
-        the values in the variables change during the running of the code.  This is
-        an important debugging technique to use when each line in your program doesn't
-        have a visual effect on the app that you can see to verify things are working
-        right.  Run the code to see the output in the console.
+        Add console.log() statements
+        to find out the value of a and b after the first reassignment statement a
+        = b; (Click to see full instructions)
       U3L19 - DEMO up down count practice app_instruction: |
         This is a demonstration
         of a simple App that uses variables, arithmetic and setText.  Play with it
@@ -3673,48 +3826,23 @@
         foo to see the string change. \r\n2. By only modifying the lines of code\nthat
         were given to you, try to get the output to say: “The value of foo is:\n9.
         \ And isn’t that fine.” \r\n"
-      U3L19 - fix the var name syntax error_instruction: "We've given you some code\nwith
-        an error.  It doesn’t recognize the variable.  Can you figure out why?  Fix\nthe
-        error and get the program to run.  Also note the error message since it\nmight
-        come up at some point later in your life.\r\n\r\n"
+      U3L19 - fix the var name syntax error_instruction: |
+        Fix the error and get it
+        to print the value of both variables (Click to see full instructions)
       U3L19 - practice with setText_instruction: |
-        We've started you out with the
-        code shown on the previous screen.  First experiment with the app.  Identify
-        where setText is being used.  CHALLENGE: modify the code to also use setText
-        to change the text on the button itself when it's clicked.  GIF: U3L19 -
-        setTextOfButton.gif
-      U3L19 - Target Clicker App_instruction: "# A motivating example\r\n\r\nHere\nis
-        an example of the kind of app we want to make.  Study this for the elements\ncontained
-        in the app rather than what it is or does.  Things to investigate:\n\r\n\r\n1.
-        what happens when you click on the Code.org logo? \r\n2. What happens\nwhen
-        you click somewhere else? \r\n3. Try the reset button.   \r\n\r\nThe\nelements
-        contained in this app appear to be simple, and they are in some ways.\nHowever,
-        the computing principles involved - controlling and keeping track\nof things
-        in memory while the program is running - get into some deeper issues\nof programming
-        and computer science in general.  There are some devilish details\nand paths
-        that can lead to misunderstanding if you're not careful.\r\n\r\nSo,\nkeep
-        this app in mind as you go through the different levels in this lesson.  It\nmight
-        seem like you need to learn a lot in order to get this simple thing\nworking.
-        \ But it's worth taking the time to understand at a deeper level\nwhat is
-        going on.  Because this one topic: controlling memory leads to many\npossible
-        misunderstandings about coding, and how computers work.  We want\nto make
-        sure you get it right from the outset.  \r\n\r\nSo take your time.  Work\nthrough
-        the issues.  Read the explanations.  You'll come out on the other\nside a
-        better programmer with much deeper knowledge and understanding of how\nthings
-        work.  \r\n\r\nAre you ready?  Click 'finish' to move to the next\npage and
-        start the lesson."
+        Add another button that changes
+        the text to the value of a new variable. (Click to see full instructions)
+      U3L19 - Target Clicker App_instruction: |
+        Investigate the new elements of the
+        'chaser-game'
       U3L19 - test reassignment of two vars_instruction: |
-        Why is this happening?
-        The code given here is the same as the example from the previous page where
-        we asked you to make a prediction about what will happen.  Run this code to
-        find out if you were right.  If you weren't, that's okay.  You might experiment  a
-        little if you want to, but bon't spend too much time here. We'll explain
-        more on the next page.
-      U3L19 - three basic ops of variables_instruction: "Do this:\r\nWe've given\nyou
-        the three lines of code shown in the previous page.  Add three lines of\ncode
-        just below the ones shown here to make your own variable, assign it a\nvalue
-        and write it to the screen.  NOTE: change the variable name from the\ndefault
-        x to something else.\r\n"
+        Predict the value of a
+        and b. Add console.log statements to find out the actual value of a and b.
+        (Click for full instructions)
+      U3L19 - three basic ops of variables_instruction: |
+        Add another variable with
+        a name of your choosing. Print the value of the variable to the console. (Click
+        to see full instructions)
       U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe
         statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).
         \ Run\nthe program and you should see the output show up in the console area
@@ -3724,12 +3852,9 @@
         output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF:
         U3L19-useconsolelog.gif"
       U3L19 - up down count practice app_instruction: |
-        This app is only SLIGHTLY
-        different from the previous one, but much more dynamic.  See if you can figure
-        out how and why the count is going up.  Once you've figured it out then you
-        should be able to DO THIS: add a button to the app that when clicked makes
-        the count go down, and updates the label.  When you're done the app should
-        work as shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
+        Set up the down button to
+        decrease the value of count by 1 each time it is clicked. (Click to see full
+        instructions)
       U3L19 - updating variables pt1_instruction: |
         This app is only SLIGHTLY different
         from the previous one, but much more dynamic.  See if you can figure out how
@@ -3738,33 +3863,21 @@
         go down, and updates the label.  When you're done the app should work as
         shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
       U3L19 - variable reassignment challenge pt2_instruction: |
-        We've given you
-        the code from the previous page.  Right now, because the code only sets the
-        values of variables, the app doesn't display anything. DO THIS: insert write
-        or console.log statements into the code to figure out what the values of a,
-        b, and c are after the code has executed.  You should have first made a prediction
-        to see if your mental model of how the computer works is correct.  We'll
-        ask for the answer on the next page.
+        Make a prediction
+        about the ending values of a,b, and c. Then use console.log to check your
+        understanding (Click to see full instructions)
       U3L19 - variable scope problem 2_instruction: |
-        First run the program to see
-        the problem.  You don't need to write code to solve any problem here.  But
-        you do need to investigate the code and come up with an explanation for WHY
-        what's happening is happening.  Why aren't 3 things being written to the
-        screen?  Why does the variable foo seem to exist once but not the other times?  If
-        you switch to code mode you'll see some warning messages next to two lines
-        of code -- why do you get those messages?  Once you think you have a good
-        answer, continue to the next page.
-      U3L19 - variable scoping problem debugging_instruction: "Here is the code from\nprevious
-        page that has a subtle problem with it.  FIRST: run the app and try\nit to
-        see the problem. NOTE: NaN stands for \"Not a Number\".   DO THIS: figure\nout
-        what's happening, where, and fix the problem.  We'll explain the issue\non
-        the next page. \n"
+        What is happening with foo?
+        Play with the level to try to figure it out. (Click to see full instructions)
+      U3L19 - variable scoping problem debugging_instruction: |
+        See if you can figure
+        out why the code is no longer work. (Click to see full instructions)
       U3L19 - write var and string with same name_instruction: |
-        Now look at this
-        example. We’ve added another write statement.  Before you run the code, see
-        if you can predict what the output will be.  Seriously, write it down. THEN
-        run the code, mess with it if you like, and continue to the next page for
-        an explanation.
+        Fix the code so that
+        the value of both variables prints to the console. (Click to see full instructions)
+      U3L2 Using Simple Commands (no tooltips)_instruction: |
+        Draw a 1x1 square above
+        and to the left of the turtle's starting position. Click to see full instructions.
       U3L2 Using Simple Commands_instruction: |
         Draw a 1x1 square above and to the
         left of the turtle's starting position. Click to see full instructions.

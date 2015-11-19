@@ -1,3 +1,5 @@
+# For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
+
 module OPS
   API = 'api' unless defined? API
   DASHBOARDAPI = 'dashboardapi' unless defined? DASHBOARDAPI
@@ -17,6 +19,8 @@ Dashboard::Application.routes.draw do
     end
   end
   resources :activity_hints, only: [:update]
+  resources :hint_view_requests, only: [:create]
+  resources :puzzle_ratings, only: [:create]
   resources :callouts
   resources :videos do
     collection do
@@ -97,7 +101,8 @@ Dashboard::Application.routes.draw do
   resources :projects, path: '/projects/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, _|
-        get "/#{key}", to: 'projects#edit', key: key.to_s, as: "#{key}_project"
+        get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
+        get "/#{key}/new", to: 'projects#create_new', key: key.to_s, as: "#{key}_project_create_new"
         get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
         get "/#{key}/:channel_id/edit", to: 'projects#edit', key: key.to_s, as: "#{key}_project_edit"
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
@@ -141,7 +146,7 @@ Dashboard::Application.routes.draw do
     get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
 
     # /s/xxx/stage/yyy/puzzle/zzz
-    resources :stages, only: [:show], path: "/stage", format: false do
+    resources :stages, only: [], path: "/stage", format: false do
       resources :script_levels, only: [:show], path: "/puzzle", format: false
     end
   end
@@ -172,16 +177,34 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
-  get '/admin/pd_progress(/:script)', to: 'reports#pd_progress', as: 'pd_progress'
-  get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'reports#level_completions', as: 'level_completions'
-  get '/admin/usage', to: 'reports#all_usage', as: 'all_usage'
-  get '/admin/stats', to: 'reports#admin_stats', as: 'admin_stats'
-  get '/admin/progress', to: 'reports#admin_progress', as: 'admin_progress'
-  get '/admin/concepts', to: 'reports#admin_concepts', as: 'admin_concepts'
+  # one-off internal reports
+  get '/admin/temp/csppd', to: 'reports#csp_pd_responses', as: 'csp_pd_responses'
+  get '/admin/temp/hoc_signups', to: 'admin_reports#hoc_signups', as: 'hoc_signups'
+
+  # internal report dashboards
+  get '/admin/concepts', to: 'admin_reports#admin_concepts', as: 'admin_concepts'
+  get '/admin/funometer', to: 'admin_reports#funometer', as: 'funometer'
+  get '/admin/funometer/script/:script_id', to: 'admin_reports#funometer_by_script', as: 'funometer_by_script'
+  get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_reports#funometer_by_script_level', as: 'funometer_by_script_level'
+  get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'admin_reports#level_completions', as: 'level_completions'
+  get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
+  get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
+  get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
+  get '/admin/usage', to: 'admin_reports#all_usage', as: 'all_usage'
+
+  # internal search tools
+  get 'admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
+  get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
+  post '/admin/lookup_section', to: 'admin_search#lookup_section'
+
+  # internal engineering dashboards
+  get '/admin/dynamic_config', :to => 'dynamic_config#show', as: 'dynamic_config_state'
+
   get '/admin/assume_identity', to: 'reports#assume_identity_form', as: 'assume_identity_form'
   post '/admin/assume_identity', to: 'reports#assume_identity', as: 'assume_identity'
-  get '/admin/lookup_section', to: 'reports#lookup_section', as: 'lookup_section'
-  post '/admin/lookup_section', to: 'reports#lookup_section'
+  get '/admin/gatekeeper', :to => 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
+  post '/admin/gatekeeper/delete', :to => 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
+  post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
   get '/admin/:action', controller: 'reports', as: 'reports'
 
   get '/stats/usage/:user_id', to: 'reports#usage', as: 'usage'
@@ -195,8 +218,11 @@ Dashboard::Application.routes.draw do
 
   resources :zendesk_session, only: [:index]
 
+
   post '/report_abuse', :to => 'report_abuse#report_abuse'
   get '/report_abuse', :to => 'report_abuse#report_abuse_form'
+
+  get '/too_young', :to => redirect { |p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
@@ -239,65 +265,11 @@ Dashboard::Application.routes.draw do
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
+  get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
 
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
   get '/api/:action', controller: 'api'
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
 end

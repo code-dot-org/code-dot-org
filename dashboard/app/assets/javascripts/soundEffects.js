@@ -23,8 +23,11 @@ function AudioPlayer() {}
  *
  * @function
  * @name AudioPlayer#play
- * @param {Object} options
- * @param {number} volume volume for sound playback (between 0.0 and 1.0)
+ * @param {string} soundId - Name of the sound to play
+ * @param {Object} [options]
+ * @param {number} [options.volume] default 1.0, which is "no change"
+ * @param {boolean} [options.loop] default false
+ * @param {function} [options.onEnded]
  */
 
 /**
@@ -45,9 +48,17 @@ function Sounds() {
 
   this.audioContext = null;
 
+  /**
+   * Detect whether audio system is "unlocked" - it usually works immediately
+   * on dekstop, but mobile usually restricts audio until triggered by user.
+   * @private {boolean}
+   */
+  this.audioUnlocked_ = false;
+
   if (window.AudioContext) {
     try {
       this.audioContext = new AudioContext();
+      this.unlockAudio(); // Attempt immediately, for correct status on desktop
     } catch (e) {
       /**
        * Chrome occasionally chokes on creating singleton AudioContext instances in separate tabs
@@ -64,11 +75,54 @@ function Sounds() {
 }
 
 /**
+ * Whether we're allowed to play audio by the browser yet.
+ * @returns {boolean}
+ */
+Sounds.prototype.isAudioUnlocked = function () {
+  // Audio unlock doesn't make sense for the fallback player as used here.
+  return this.audioUnlocked_ || !this.audioContext;
+};
+
+/**
+ * Mobile browsers disable audio until a sound is triggered by user interaction.
+ * This method tries to play a brief silent clip to test whether audio is
+ * unlocked, and/or trigger an unlock if called inside a user interaction.
+ *
+ * Special thanks to this article for the general approach:
+ * https://paulbakaus.com/tutorials/html5/web-audio-on-ios/
+ */
+Sounds.prototype.unlockAudio = function () {
+  if (this.isAudioUnlocked()) {
+    return;
+  }
+
+  // create empty buffer and play it
+  var buffer = this.audioContext.createBuffer(1, 1, 22050);
+  var source = this.audioContext.createBufferSource();
+  source.buffer = buffer;
+  source.connect(this.audioContext.destination);
+  if (source.start) {
+    source.start(0);
+  } else {
+    source.noteOn(0);
+  }
+
+  // by checking the play state after some time, we know if we're really unlocked
+  setTimeout(function() {
+    if (source.playbackState === source.PLAYING_STATE ||
+        source.playbackState === source.FINISHED_STATE) {
+      this.audioUnlocked_ = true;
+    }
+  }.bind(this), 0);
+};
+
+/**
  * Registers a sound from a list of sound URL paths.
  * Note: you can only register one sound resource per file type
  * @param {Array.<string>} soundPaths list of sound file URLs ending in their
  *                                   file format (.mp3|.ogg|.wav)
  * @param {string} soundID ID for sound
+ * @returns {Sound}
  */
 Sounds.prototype.registerByFilenamesAndID = function (soundPaths, soundID) {
   var soundRegistrationConfig = { id: soundID };
@@ -83,15 +137,27 @@ Sounds.prototype.registerByFilenamesAndID = function (soundPaths, soundID) {
       soundRegistrationConfig[extension] = soundFilePath;
     }
   }
-  this.register(soundRegistrationConfig);
+  return this.register(soundRegistrationConfig);
 };
 
+/**
+ * @param {Object} config
+ * @returns {Sound}
+ */
 Sounds.prototype.register = function (config) {
   var sound = new Sound(config, this.audioContext);
   this.soundsById[config.id] = sound;
   sound.preload();
+  return sound;
 };
 
+/**
+ * @param {string} soundId - Name of the sound to play
+ * @param {Object} [options]
+ * @param {number} [options.volume] default 1.0, which is "no change"
+ * @param {boolean} [options.loop] default false
+ * @param {function} [options.onEnded]
+ */
 Sounds.prototype.play = function (soundId, options) {
   var sound = this.soundsById[soundId];
   if (sound) {
@@ -150,6 +216,12 @@ function Sound(config, audioContext) {
   this.playableBuffer = null; // if Web Audio
 }
 
+/**
+ * @param {Object} [options]
+ * @param {number} [options.volume] default 1.0, which is "no change"
+ * @param {boolean} [options.loop] default false
+ * @param {function} [options.onEnded]
+ */
 Sound.prototype.play = function (options) {
   options = options || {};
   if (!this.audioElement && !this.reusableBuffer) {
@@ -158,6 +230,13 @@ Sound.prototype.play = function (options) {
 
   if (this.reusableBuffer) {
     this.playableBuffer = this.newPlayableBufferSource(this.reusableBuffer, options);
+
+    // Hook up on-ended callback, although browser support may be limited.
+    // Don't make anything depend on this callback happening.
+    if (options.onEnded) {
+      this.playableBuffer.onended = options.onEnded;
+    }
+
     // Play sound, supporting older versions of the Web Audio API which used noteOn(Off).
     if (this.playableBuffer.start) {
       this.playableBuffer.start(0);
@@ -172,8 +251,21 @@ Sound.prototype.play = function (options) {
     return;
   }
 
-  this.audioElement.volume = typeof options.volume === "undefined" ? 1 : options.volume;
+  var volume = (typeof options.volume === "undefined") ? 1 : 
+      Math.max(0, Math.min(1, options.volume));
+  this.audioElement.volume = volume;
   this.audioElement.loop = !!options.loop;
+  if (options.onEnded) {
+    var unregisterAndCallback = function () {
+      this.audioElement.removeEventListener('abort', unregisterAndCallback);
+      this.audioElement.removeEventListener('ended', unregisterAndCallback);
+      this.audioElement.removeEventListener('pause', unregisterAndCallback);
+      options.onEnded();
+    }.bind(this);
+    this.audioElement.addEventListener('abort', unregisterAndCallback);
+    this.audioElement.addEventListener('ended', unregisterAndCallback);
+    this.audioElement.addEventListener('pause', unregisterAndCallback);
+  }
   this.audioElement.play();
 };
 
@@ -202,22 +294,100 @@ Sound.prototype.newPlayableBufferSource = function(buffer, options) {
   var newSound = this.audioContext.createBufferSource();
 
   // Older versions of chrome call this createGainNode instead of createGain
-  var gainNode;
   if (this.audioContext.createGain) {
-    gainNode = this.audioContext.createGain();
+    this.gainNode = this.audioContext.createGain();
   } else if (this.audioContext.createGainNode) {
-    gainNode = this.audioContext.createGainNode();
+    this.gainNode = this.audioContext.createGainNode();
   } else {
     return null;
   }
 
   newSound.buffer = buffer;
   newSound.loop = !!options.loop;
-  newSound.connect(gainNode);
-  gainNode.connect(this.audioContext.destination);
-  gainNode.gain.value = typeof options.volume === "undefined" ? 1 : options.volume;
-
+  newSound.connect(this.gainNode);
+  this.gainNode.connect(this.audioContext.destination);
+  var startingVolume = typeof options.volume === "undefined" ? 1 : options.volume;
+  this.gainNode.gain.value = startingVolume;
   return newSound;
+};
+
+/**
+ * Do an exponential fade from the current gain to a new given value, over the
+ * given number of seconds.
+ * @param {number} gain - desired final gain value
+ * @param {number} durationSeconds
+ */
+Sound.prototype.fadeToGain = function (gain, durationSeconds) {
+  if (this.gainNode) {
+    this.fadeToGainWebAudio_(gain, durationSeconds);
+  } else if (this.audioElement) {
+    this.fadeToGainHtml5Audio_(gain, durationSeconds);
+  }
+};
+
+/**
+ * Do an exponential fade from the current gain to a new given value, over the
+ * given number of seconds.
+ * Using Web Audio (preferred, but not supported in IE)
+ * @param {number} gain - desired final gain value
+ * @param {number} durationSeconds
+ * @private
+ */
+Sound.prototype.fadeToGainWebAudio_ = function (gain, durationSeconds) {
+  if (!this.gainNode) {
+    return;
+  }
+
+  // Can't exponential ramp to zero, simulate by getting close.
+  if (gain === 0) {
+    gain = 0.01;
+  }
+
+  var currTime = this.audioContext.currentTime;
+  this.gainNode.gain.setValueAtTime(this.gainNode.gain.value, currTime);
+  this.gainNode.gain.exponentialRampToValueAtTime(gain, currTime + durationSeconds);
+};
+
+/**
+ * Do an exponential fade from the current gain to a new given value, over the
+ * given number of seconds.
+ * Using HTML5 Audio (fallback player)
+ * @param {number} gain - desired final gain value
+ * @param {number} durationSeconds
+ * @private
+ */
+Sound.prototype.fadeToGainHtml5Audio_ = function (gain, durationSeconds) {
+  if (!this.audioElement) {
+    return;
+  }
+
+  var startVolume = this.audioElement.volume || 1;
+  var finalVolume = Math.max(0, Math.min(1, gain));
+  var deltaVolume = finalVolume - startVolume;
+  var durationMillis = durationSeconds * 1000;
+  var t0 = new Date().getTime();
+  var fadeInterval = setInterval(function () {
+    var t = new Date().getTime() - t0;
+
+    // Base condition - after duration has elapsed, snap volume to final and
+    // clear interval
+    if (t >= durationMillis) {
+      this.audioElement.volume = finalVolume;
+      clearInterval(fadeInterval);
+      return;
+    }
+
+    // TODO: Probably ought to use ease out quad if delta is positive,
+    // TODO: so that cross-fades automatically work as expected.
+    // Ease in quad - the ear hears this as a "linear" fade
+    // y = c * (t/d)^2 + b
+    //   b: initial value
+    //   c: final delta
+    //   d: duration
+    //   t: time
+    var newVolume = deltaVolume * Math.pow(t / durationMillis, 2) + startVolume;
+    this.audioElement.volume = Math.max(0, Math.min(1, newVolume));
+  }.bind(this), 100);
 };
 
 function isMobile() {
@@ -286,13 +456,24 @@ Sound.prototype.preload = function () {
       audioElement.pause();
     }
     this.audioElement = audioElement;
-    this.onSoundLoaded();
+
+    // Fire onLoad as soon as enough of the sound is loaded to play it
+    // all the way through.
+    var loadEventName = 'canplaythrough';
+    var eventListener = function () {
+      this.onSoundLoaded();
+      audioElement.removeEventListener(loadEventName, eventListener);
+    }.bind(this);
+    audioElement.addEventListener(loadEventName, eventListener);
   }
 };
 
 Sound.prototype.onSoundLoaded = function () {
   if (this.config.playAfterLoad) {
     this.play(this.config.playAfterLoadOptions);
+  }
+  if (this.onLoad) {
+    this.onLoad();
   }
 };
 

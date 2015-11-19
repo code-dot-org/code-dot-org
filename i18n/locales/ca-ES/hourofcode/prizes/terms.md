@@ -8,19 +8,15 @@ title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: prizes_nav
 
 # Premis - termes i condicions
 
-## Espai de Dropbox o crèdit de Skype:
+## Amazon.com, iTunes and Windows Store credit:
 
-Les 10 GB d'espai Dropbox o 10 dòlars de crèdit Skype es limiten a professors de K-12, educadors de clubs extraescolars, i entitats d'educació. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Límit d'un reemborsament per organitzador. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Límit d'un reemborsament per organitzador.
 
-Cada organitzador s'haurà d'inscriure per a l'Hora de Codi per a rebre l'espai del Dropbox o el crèdit de Skype. Si la teva escola sencera participa a l'Hora de Codi, cada educador s'ha de registrar individualment com a organitzador per qualificar-se.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Si la teva escola sencera participa a l'Hora de Codi, cada educador s'ha de registrar individualment com a organitzador per qualificar-se.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
-
-## Vídeo xat amb un orador convidat:
-
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Conjunt d'ordinadors portàtils per a l'aula (o 10,000 dòlars per altres tecnologies):
 

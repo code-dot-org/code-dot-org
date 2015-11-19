@@ -1,6 +1,6 @@
 // Base styles that apply to all apps
 
-#divApplab, .draggingParent {
+#divApplab, #designModeViz, .draggingParent {
   overflow: hidden;
   outline: none;
   position: relative;
@@ -23,6 +23,7 @@
 
   img {
     opacity: 1.0;
+    max-width: none;
   }
 
   label {
@@ -33,8 +34,10 @@
     overflow: hidden;
   }
 
-  div[contenteditable=true] {
+  div[contenteditable] {
     overflow: auto;
+    word-wrap: break-word; /* needed by Firefox */
+    -moz-user-select: text;
   }
 
   button {
@@ -43,10 +46,15 @@
     font-size: 14px;
   }
 
-  input, div[contenteditable=true], button, select, img, label {
+  input, div[contenteditable], button, select, img, label {
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
     line-height: 1.2em;
     margin: 5px;
+
+    p {
+      line-height: inherit
+    }
   }
 
   .chart {
@@ -64,7 +72,7 @@
   }
 }
 
-#divApplab.divApplabDesignMode, .draggingParent {
+#designModeViz, .draggingParent {
 
   canvas {
     background-color: #eee;

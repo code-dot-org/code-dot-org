@@ -1,10 +1,4 @@
 stage 'Stage1'
 level 'Level 1'
-level 'Unplug1'
-level 'Level 2'
-level 'Unplug2'
-level 'Level 3'
+level 'UnplugHappyMaps'
 
-stage 'Stage2'
-level 'Level 4'
-level 'Level 5'

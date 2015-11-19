@@ -1,5 +1,6 @@
 #! /usr/bin/env ruby
 require 'fileutils'
+require 'tempfile'
 
 # language => [locale, code, crowdincode]
 languages = {
@@ -37,6 +38,7 @@ languages = {
   'Irish' => ['ga-IE', 'ga'],
   'Italian' => ['it-IT', 'it'],
   'Japanese' => ['ja-JP', 'ja'],
+  'Kazakh' => ['kk-KZ', 'kk'],
   'Khmer' => ['km-KH', 'km'],
   'Korean' => ['ko-KR', 'ko'],
   'Kurdish' => ['ku-IQ', 'ku'],
@@ -67,6 +69,7 @@ languages = {
   'Turkish' => ['tr-TR', 'tr'],
   'Ukrainian' => ['uk-UA', 'uk'],
   'Urdu (Pakistan)' => ['ur-PK', 'ur'],
+  'Uzbek' => ['uz-UZ', 'uz'],
   'Vietnamese' => ['vi-VN', 'vi']
 }
 
@@ -178,29 +181,54 @@ Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |f
   end
 end
 
-# fix twitter tags
+# fix social media buttons in promote/index
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/promote/index.md").each do |file|
   puts file
-  File.write(file, File.read(file).gsub(/\stwitter\[:hashtags\]/, "\ntwitter[:hashtags]"))
+  string_replacement = '#{request.host}'
+  social_media_buttons = "<%
+  facebook = {:u=>\"http://#{string_replacement}/us\"}\n
+  twitter = {:url=>\"http://hourofcode.com\", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'\n%>"
+  File.write(file, File.read(file).gsub(/^<% facebook.*?%>/m, social_media_buttons))
 end
 
+# fix social media buttons in public/thanks
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
   puts file
-  File.write(file, File.read(file).gsub(/\stwitter\[:hashtags\]/, "\ntwitter[:hashtags]"))
+  string_replacement = '#{request.host}'
+  social_media_buttons = "<%
+  facebook = {:u=>\"http://#{string_replacement}/us\"}\n
+  twitter = {:url=>\"http://hourofcode.com\", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'\n%>"
+  File.write(file, File.read(file).gsub(/^<% facebook.*?%>/m, social_media_buttons))
 end
 
-# fix social media metadata
+# fix social media metadata in public/thanks
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
   puts file
-  social_media_metada = "---\ntitle: <%= hoc_s(:title_signup_thanks) %>\nlayout: wide\nsocial:
-'og:title': '<%= hoc_s(:meta_tag_og_title) %>'\n'og:description': '<%= hoc_s(:meta_tag_og_description) %>'
-'og:image': 'http://<%=request.host%>/images/code-video-thumbnail.jpg'\n'og:image:width': 1705\n'og:image:height': 949
-'og:url': 'http://<%=request.host%>'\n'og:video': 'https://youtube.googleapis.com/v/rH7AjDMz_dc'\n'twitter:card': player
-'twitter:site': '@codeorg'\n'twitter:url': 'http://<%=request.host%>'\n'twitter:title': '<%= hoc_s(:meta_tag_twitter_title) %>'
-'twitter:description': '<%= hoc_s(:meta_tag_twitter_description) %>'\n'twitter:image:src': 'http://<%=request.host%>/images/code-video-thumbnail.jpg'
-'twitter:player': 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
-'twitter:player:width': 1920\n'twitter:player:height': 1080\n---"
-  File.write(file, File.read(file).gsub(/^---.*?---/m, social_media_metada))
+  social_media_metada = "---
+title: <%= hoc_s(:title_signup_thanks) %>
+layout: wide
+nav: how_to_nav
+
+social:
+  \"og:title\": \"<%= hoc_s(:meta_tag_og_title) %>\"
+  \"og:description\": \"<%= hoc_s(:meta_tag_og_description) %>\"
+  \"og:image\": \"http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png\"
+  \"og:image:width\": 1440
+  \"og:image:height\": 900
+  \"og:url\": \"http://<%=request.host%>\"
+
+  \"twitter:card\": player
+  \"twitter:site\": \"@codeorg\"
+  \"twitter:url\": \"http://<%=request.host%>\"
+  \"twitter:title\": \"<%= hoc_s(:meta_tag_twitter_title) %>\"
+  \"twitter:description\": \"<%= hoc_s(:meta_tag_twitter_description) %>\"
+  \"twitter:image:src\": \"http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png\"
+---"
+  if file.split('/').last(2).first.size == 2
+    File.write(file, File.read(file).gsub(/^---.*?---/m, social_media_metada))
+  end
 end
 
 # fix embedded ruby in markdown
@@ -208,3 +236,22 @@ Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |f
   puts file
   File.write(file, File.read(file).gsub(/\((%[^%]*%)\)/, "(<\\1>)"))
 end
+
+
+
+#########################################################################################
+##                                                                                     ##
+## check for bad translations                                                          ##
+##                                                                                     ##
+#########################################################################################
+
+def compare_files
+  Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |i18n_file|
+    pattern = /..\/..\/pegasus\/sites.v3\/hourofcode.com\/i18n\/public\/[a-z][a-z]/
+    source_file = i18n_file.gsub(pattern, "../locales/source/hourofcode")
+
+    puts "checking: " + i18n_file
+    system("./diff_code.rb", i18n_file, source_file)
+  end
+end
+compare_files

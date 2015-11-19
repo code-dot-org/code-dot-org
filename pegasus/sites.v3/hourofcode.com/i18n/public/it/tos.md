@@ -36,7 +36,7 @@ Code.org ti permette di registrare un account per i Servizi tramite l'utilizzo d
 
 ### Privacy
 
-La tua privacy per noi è importante. La [Privacy Policy](http://code.org/privacy) di Code.org spiega come trattiamo i tuoi dati personali, ed è inclusa in questi Termini per mezzo di questo riferimento ad essa. Ti preghiamo di leggere attentamente la nostra Privacy Policy, per essere informato su quanto fa capo alla raccolta, all'uso, ed alla trasmissione dei tuoi dati personali da parte di Code.org.
+La tua privacy per noi è importante. L' [Informativa sulla Privacy](http://code.org/privacy) di Code.org spiega come trattiamo i tuoi dati personali, ed è integrata in questi Termini di riferimento. Ti preghiamo di leggere attentamente la nostra Privacy Policy, per essere informato su quanto fa capo alla raccolta, all'uso, ed alla trasmissione dei tuoi dati personali da parte di Code.org.
 
 Se sei uno studente che utilizza un account registrato per te da un Educatore, o collegato in altro modo ad un Educatore, acconsenti che Code.org possa trasmettere i tuoi dati agli Educatori associati al tuo account. Se sei un Educatore, acconsenti a non condividere i dati dello studente che ricevi da Code.org con nessuno che non sia autorizzato dalla scuola, o dal distretto scolastico, o da qualche altra istituzione educativa che tu rappresenti.
 

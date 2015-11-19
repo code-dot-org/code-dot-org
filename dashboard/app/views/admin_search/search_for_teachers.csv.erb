@@ -1,0 +1,8 @@
+<%=
+CSV.generate do |csv|
+  csv << @headers
+  @teachers.each do |teacher|
+    csv << teacher
+  end
+end
+%>

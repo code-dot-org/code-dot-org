@@ -6,11 +6,11 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire school district.
+# तपाइको पुरै बिद्यालयमा Hour of Code लाई कसरि ल्याउने.
 
-## Get every school participating, every student learning!
+## सबै विद्याथी, सबै सहभागीले ,
 
-  1. **Recruit local schools.** Share [this email](%= resolve_url('/promote/resources#sample-emails') %) and [teacher how to guide](%= resolve_url('/how-to') %), or include a [short blurb](%= resolve_url('/promote/stats') %) in newsletters/district communications.
+  1. **स्थानीय बिद्यालय .** Share [this email](%= resolve_url('/promote/resources#sample-emails') %) and [teacher how to guide](%= resolve_url('/how-to') %), or include a [short blurb](%= resolve_url('/promote/stats') %) in newsletters/district communications.
 
   2. **Provide a sample logistics plan for schools.** Share this sample logistics plan with schools to give them ideas of how to organize whole school participation. It’s as easy as doing it in every math class, homeroom period, or rotating throughout the week through the computer lab. They can submit their own plan for a chance to win $10,000 in hardware at [http://hourofcode.com/prizes](%= resolve_url('/prizes/hardware-signup') %).
 

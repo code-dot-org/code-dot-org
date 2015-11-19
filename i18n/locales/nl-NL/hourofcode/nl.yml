@@ -19,6 +19,7 @@ nl:
   header_menu_promote: Promote
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -124,6 +125,7 @@ nl:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -145,15 +147,6 @@ nl:
   prizes_brilliant: Een school per provincie ontvangt $2000 voor een briljant project
   prizes_actua: "15 scholen over Canada zullen  2 hands-on STEM workshops ontvangen van een Atua's leden"
   prizes_details: Details
-  prizes_nav_dc: Mystery trip naar Washington D.C.
-  prizes_nav_technology: Voor 10.000 dollar aan technologie voor uw school
-  prizes_nav_video_chat: Video-chat met een IT-held
-  prizes_nav_skype_dropbox: Skypetegoed of Dropbox ruimte voor elke organisator
-  prizes_nav_brilliant: Een Brilliant Labs project van 2000 dollar
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Algemene voorwaarden
-  prizes_nav_faq: Veelgestelde Vragen
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -164,9 +157,22 @@ nl:
   how_to_nav_organizations: For organizations
   how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
+  how_to_nav_volunteers: For volunteers
   prizes_nav_title: Prijzen
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Algemene voorwaarden
+  prizes_nav_faq: Veelgestelde Vragen
+  prizes_nav_dc: Mystery trip naar Washington D.C.
+  prizes_nav_technology: Voor 10.000 dollar aan technologie voor uw school
+  prizes_nav_video_chat: Video-chat met een IT-held
+  prizes_nav_skype_dropbox: Skypetegoed of Dropbox ruimte voor elke organisator
+  prizes_nav_brilliant: Een Brilliant Labs project van 2000 dollar
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
@@ -246,6 +252,9 @@ nl:
   map_search_placeholder: Zoek Uur Code events
   map_search_search: Zoek
   map_search_reset: Resetten
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Het Uur Code is hier
   meta_tag_og_description: 'Het Uur Code is een wereldwijde beweging die tientallen miljoenen leerlingen wil bereiken in 180+ landen en in meer dan 30 talen. Leeftijd: 4 t/m 104.'
   meta_tag_twitter_title: Het Uur Code is hier
@@ -360,6 +369,7 @@ nl:
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
   title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: How-to guide voor overheidsfunctionarissen
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code

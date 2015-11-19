@@ -1,9 +1,8 @@
 #hocmap
   %link{rel: "stylesheet", type: "text/css", href: "/css/map.css"}
-  -total_count = DB[:forms].where(kind:'HocSignup2015').count
-  .mapheader
-    %a.float-left{:href=> "https://hourofcode.com/events"}
-      %h2= I18n.t(:csedweek_map_header).gsub('#', format_integer_with_commas(total_count))
+  %h2.mapheader
+    %a{:href=> "https://hourofcode.com/events"}
+      = I18n.t(:csedweek_map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
     %a{:href=> "https://hourofcode.com/#join"}
       %button.signup-button
         = I18n.t(:csedweek_map_signup)
@@ -11,6 +10,12 @@
   .row
     .col-xs-10.col-sm-12
       #gmap.full-width
+  #belowmaplegend.legend{style: "display: none;"}
+    .legend-title= I18n.t(:csedweek_map_legend_title)
+    .color.blue
+    = I18n.t(:csedweek_map_legend_event)
+    .color.red
+    = I18n.t(:csedweek_map_legend_cs_tech_jam)
 
 :javascript
   var gmap;
@@ -40,22 +45,45 @@
 
     var layer = new google.maps.FusionTablesLayer({
       query: {
+        select: 'review',
         from: '164RLDWEyPij3-Z9O0791ta_a8RfuCdGUkWRFcnBD'
-        // from: '1_j3ovhuqhh_vRAiO91gOx25j7Q4I9__9hNdZLq_C'
       },
       styles: [{
+        where: "review CONTAINS 'approved'",
+        markerOptions: {
+          iconName: "blu_circle"
+        }
+      }, {
+        where: "review DOES NOT CONTAIN 'approved'",
         markerOptions: {
           iconName: "small_red"
         }
       }],
-      map: gmap
     });
+
+    var legend = document.createElement('div');
+    legend.id = 'inmaplegend';
+    legend.className = 'legend'
+
+    var content = [];
+    content.push('<div class="legend-title">#{I18n.t(:csedweek_map_legend_title)}</div>');
+    content.push('<div class="color red"></div>#{I18n.t(:csedweek_map_legend_event)}');
+    content.push('<br><div class="color blue"></div>#{I18n.t(:csedweek_map_legend_cs_tech_jam)}');
+    legend.innerHTML = content.join('');
+    legend.index = 1;
+
+    // gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+
+    layer.setMap(gmap);
 
     google.maps.event.addListener(layer, 'click', function(event) {
       enableDrag();
       event.infoWindowHtml = event.row['organization_name'].value;
       if (event.row['city'].value.length > 0) {
         event.infoWindowHtml += ' (' + event.row['city'].value + ')';
+      }
+      if (event.row['review'].value == 'approved') {
+        event.infoWindowHtml += '<br>' + event.row['description'].value;
       }
       event.infoWindowHtml += '<br>';
     });

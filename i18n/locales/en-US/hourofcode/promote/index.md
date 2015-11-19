@@ -15,7 +15,7 @@ crwdns49412:0crwdne49412:0 crwdns49413:0crwdne49413:0
 crwdns50402:0crwdne50402:0   
 
 
-[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
+[<button><%= hoc_s(:signup_your_event) %></button>](%= resolve_url('/') %)
 
 ## crwdns49417:0crwdne49417:0
 

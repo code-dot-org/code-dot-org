@@ -467,6 +467,9 @@ pl:
         alg_15_biggame_update_player: 'Informatyka w Algebrze - uaktualniony gracz Wielkiej Gry (Big Game)'
         alg_16_biggame_collision_detection: 'Informatyka w Algebrze - wykrywanie kolizji w Wielkiej Grze (Big Game)'
         alg_17_sambat_compound_booleans: 'Informatyka w Algebrze - złożone wartości logiczne'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: 'Przeciągnij blok "idź" i przypnij go poniżej innego bloku'

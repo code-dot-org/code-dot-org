@@ -1,39 +1,50 @@
 name 'U2L7 Student Lesson Introduction'
-title 'title'
-description 'description here'
-css 'unplugged'
-skip_dialog 'true'
-
-markdown <<MARKDOWN
-## Unit 2: Lesson 7 - Algorithms Detour - Shortest Path
-
-# Background
-
-Do you know the quickest route from your home to the most common place you go? How closely related are protein A, which is found in blueberries, and protein B, which is known to prevent cancer? How are these two questions related? Both involve the shortest path problem and graph theory. Finding the shortest path can save you a lot of time and can help you find meaningful connections in information. Because computer scientists often work with large amounts of information, we care about finding the shortest path <i>efficiently</i>, no matter how much information we are working with. In this lesson, you will investigate the shortest path problem, as well as a famous shortest path algorithm. As you go, pay attention to the number of steps required for a computer to find an answer.
-
-# Vocabulary
-
-* **Shortest Path:** the lowest weighted path between two nodes
-* **Efficiency:** a measure of the number of steps per input size needed to complete an algorithm
-
-# Lesson
-
-* Investigate and create an algorithm for the shortest path problem
-* Follow Dijsktra's algorithm for the SSSP
-* Analyze an algorithm for efficiency
-
-# Resources
-
-* Intro Worksheet: <a href="https://docs.google.com/document/d/19CUlhBLjr7D9M5gh5cHWIJij5Yeopb9gh4JHRgV_fRk/edit">Intro to the shortest path problem</a>
-* Worksheet:  <a href="https://docs.google.com/document/d/15N7aHAoWG1_9VIcDHNZRygzFK0hle-EHlmHu0PZI8D4/edit#heading=h.dqtndjj0z9yh">Dijsktra's Shortest Path Algrothm</a>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-* <a href="https://docs.google.com/document/d/10j9l23FqEBR6-Y_52TacbpLNr5uvi1aedF9H9T7fJuE" target="_blank">KEY: Intro to the Shortest Path Problem</a>
-* <a href="https://docs.google.com/document/d/1_uJD_YEJYIoRZ-8vaRFq2IC9YjPGPgKzrx1-OyqdpQ4" target="_blank">KEY: Dijsktra’s Shortest Path Algorithm</a>
-
-MARKDOWN
+encrypted 'IJxEQ+SMQ3dtkgcPV/s+qTCF+dPBHoagidWd+b6ZFgL+nNxUpU8w5fauwecY
+0PytyVFdYre6VlUFK3Snflh8i9wkwNvqz9GQkgxaeA24lgFHcyZtUBmt/R+I
+3QDlaDxMpB6nY7xW5GD+aTiX0eYirzXRY1OUQ7LLrYFZfXuFlbi5OPSINi/7
+fWqeyhgVOGAiySBkGmJ42OXxF2L9t0GJaj9oHct/d+itXc3KIsv2bVVcFbVC
+smpXQKb4hNc1REcWQFZWDxc/X1XScupaHO/vmp4TNVIJwGh6Koltx5fBDW9M
+XybgqYyjSxqLtMckK7OvFv5kpKZ7iArWP5RSTyBEp+zSX7Die4eh0Fhgj1Bz
+vpycLGVLUklr2kdnwHDisS52zFl0U8mcvA2Mk6ZbFXKSbUOqsCMDM4nWRuil
+apwi9OMz7eR4SQLbR2DOzdE0DejXfZTpbb7SI6+vJ4kWYy05rcW2rTOke42l
+Yv1e6junlxDVFVspXu8XNi/0Upr+pmLV1t5a8EAZU+FLG5M/kIwNdz+LUCiK
+jcjf40GybsFn6Kx93W/XKTMq7jw+fMNTXIb5E2tleGbNcD9xalLTdaaWnCzg
+Gta2diU5khV3AGaIKQuNyjJXpljG+oIA7+W9MLZDLp3yNaFUkSgPhmSu2uZ9
+zYMwzBb25Fd6yYE51nroVS2JYSrRIFpOVbSZt572LoF8RG9E0Xdq4EDDXvgX
+eopbE0bFnyoEScRZbzmbc6uIYPg7hPsv74c514GcP3ifto2AUqyOIYDCCd6U
+dxxk8Ufq1ajalVmxJCYxf8ZJWygIc6Nkczn0LYB8mpibavExybKhetAhfALY
+V3yY8UirZVYSifL98oLJMUgVUwNIk8LwZo3TPvCQTGfoG9f+cG8dpqEHOaD7
+5ldJEeYmUR26CWE2XdVHKr7mL+rvX5N1XK6jYkjbC6iWQohxw1ikny3GdcnU
+Q1tEimuB7uQdRbKbcnQ2kexposnWVXBm3UHj3vzAq+5RODx2q7gKbuYFHrWg
+NsoUsbPfLAPnaf4C2LJtkxc1Gbj19PkIRK0fdPYixlHip/fmslcSGQamnFFx
+nGJJsfZwlqm9Hf9Qn+5tlqqaFKzJWWA1RQSsfr1rI+c5ci2ePFMpUiU2LmNs
+6U7aXPWvO6EvPYEVTKnMJnR1vhglS1iF8gD85TkRvlMUMbmg819ZeXg4y/kP
+IkGlF1Qj2EN1GTy8+0qS5OkTxEUKF/aXaob1UCznk3firc2oEh5Oqf8ExtqC
+mIRFQGKrIXCYaysj90Ytw5CywR/XTC9MREq3nSKkXIMNUTLGGzLL5b1WES2D
+NzVzy7klHWDCscYwsJIqtoZZST3GcU9mtgz1GrpVpoA7sY9xoFt5Jj22g5bG
+TmXJd7Pw++kmOatbLPpzO4ey1nk7CS+UhbphoDHkJeMUCz6zZpjoWdxDJXjW
+bP93G3qSM6yYAQqWV3uSJ3kGgdOZ5S39LRddSFfdjybbHhu9EpGZfO1kcJtT
+d+teemObdpB+a3umI3EDTMEdo4UMwVo1F+BgxGCHkNwjdZ7f9BwiQOZxg52H
+/IkU0MdHxlNUx/xqCvsChQd9zIUYRHB6rid2uwX/cNIXeNOHG3rVaJ5klZW/
+Zo0qDIjlf3fa22VKqAlxHBVCkXbO9/lmnziewQ1Ur7VtSAFdG9Z/1G8jUT+8
+DSnVTua9vZ4aAeMfFK1uyINvgdhqLvv4kD9o4bFB7G6YrSJu1VUvy2EzHRzq
+2emSo7cpZoXbCpH1CRQmdWTX592/HlnFPbmWZAopuZaxW5GcYCR4UyRAUWFa
+HTAexP0Hq0fjeHXGp/bFP1kjktn66yP5Ggj7KZbXnG7NANqwzptCUbEfKBCg
+lg9isTIApDvQzfUlf3sliIOiAZs9xcD7YLGXmeO4ACuLhiuG/fTQTJdGghcy
+0J038t4fwV76RIBCcqUaLZaMcuGM7LGvTkNQeYtTfM7TUfLlm0RMYvOmAuOd
+yQBSPf6MvYOilOtZqixQkLd33xOEUlrwxrr1n/OwzLkspSPxdSKyypFB4Wc0
+blywQf5n5UXXdbVTpkq1swrClfI86iG4jIAOtxTvORu4ovWbcC+/xOHTMqWB
+NO96KW1CZyMSVxOD9RwEMmEzkTymEG+Lmhp4yU69Cd8dEwoM8oGPoyBKwqp6
+RoSAYKFhgxwvJgsvkRBly/wv/+Wa4FSxoMifG9Q7Lpr4hw06FTQErn/QapX9
+9/slZZuP1Y21FugXS0SwL6C/D3H5ebkdfarL46CvLEDfkbqFAju0pE2fAFWy
+PpBo01wXMon/ddMupFLGZ2dC6+9CxNCvveoGCFmQVYYbfAg1NsMhAaiZltLm
++qIcpTg7dgBH0CP2nml8k5rzSvQG5O2AvVPSeCh5upRInNFqqXNyoAzbwxUf
+2nCPgk3WWjpGpyWmJlN5NYKRCmO94P67tEQ5Hga8MQh0bvdYbpqrEPm1mO7b
+qU55WOVK+tm0lR5ow52Kfz7cdr4i9WRrH+WGRRPq188cKajjGsDfZyixk9Rw
+I7N40y8CFLwNQUbNBfSNxVW36l7TFMdykay6d7haGTw9nkNyVM9feQtCh87f
+tA+y2ZQUGO31brX+/LNOnl2UyGpkV+RIOzHiJN6n71qlXELNZEsRW/1BGpxN
+HhS8fmMkD1Nqs1uZhzglwMe/Km32DTQHE5SoHP2iUUarNwyirioEtPvtjDRm
+fExJ1ALYSew7eOm48LcgGbwDxfXAgcxKxTnCaLT+Y/YmWqgpPcecDZ2hs+By
+LaiG1BzWjysRsCcwwkzDkU7m8MlB6AiG5T8CHGYZGeQPz4pvaYCeZ9dH1+Y7
+LqjE69FzUAiHidWPvNzeI2ddqCVyLDlWPh/GnJ3fXgT6R3ZfNxyTXCT4UabO
+'

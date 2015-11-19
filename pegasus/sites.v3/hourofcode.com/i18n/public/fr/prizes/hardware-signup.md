@@ -6,8 +6,8 @@ nav: prizes_nav
 
 ---
 
-# Enter to win $10,000 worth of technology for your school
+# Participez pour gagner 10 000 $ de materiels technologiques pour votre école
 
-If you plan for every student at your school to learn an Hour of Code, you can qualify to win $10,000 worth of technology to keep learning beyond one hour! One public, K-12 school will win in every US state. Complete the form below to be eligible.
+Si vous prévoyez d'organiser un évènement Une Heure de Code pour tous les étudiants de votre école, vous pouvez vous qualifier pour gagner 10 000 $ de matériels technologies pour continuer à enseigner le code au-delà d'une heure ! Une école élémentaire dans chaque état américain aura une chance de gagner. Remplir le formulaire ci-dessous pour être admissible.
 
 <%= view :hardware_prizes_form %>

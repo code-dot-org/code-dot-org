@@ -777,7 +777,7 @@ class UserTest < ActiveSupport::TestCase
     user = create :student
     assert !user.needs_to_backfill_user_scripts?
 
-    script = Script.find(1)
+    script = Script.find_by_name("course2")
 
     create :user_level, user: user, level: script.script_levels.first.level, script: script
     # now has progress
@@ -829,6 +829,14 @@ class UserTest < ActiveSupport::TestCase
     assert_equal nil, User.normalize_gender('')
     assert_equal nil, User.normalize_gender(nil)
   end
+
+  test 'can create user with same name as deleted user' do
+    deleted_user = create(:user, name: 'Same Name')
+    deleted_user.destroy
+
+    create(:user, name: 'Same Name')
+  end
+
 
   test 'generate username' do
     def create_user_with_username(username)
@@ -890,13 +898,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'email confirmation required for teachers' do
-    user = create :teacher, email: 'my_email@test.xx'
+    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
     assert user.confirmation_required?
     assert !user.confirmed_at
   end
 
   test 'email confirmation not required for students' do
-    user = create :student, email: 'my_email@test.xx'
+    user = create :student, email: 'my_email@test.xx', confirmed_at: nil
     assert !user.confirmation_required?
     assert !user.confirmed_at
   end

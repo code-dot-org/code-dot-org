@@ -5,7 +5,9 @@ class PegasusSites
   def initialize(app=nil, params={})
     @app = app
 
-    @pegasus_app = Documents.new
+    config_ru_filename = File.dirname(__FILE__) + '/../../pegasus/config.ru'
+    config_ru = File.read(config_ru_filename)
+    @pegasus_app = instance_eval("Rack::Builder.new {(#{config_ru}\n)}", config_ru_filename)
     @pegasus_hosts = [
       'code.org',
       'csedweek.org',

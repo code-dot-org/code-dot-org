@@ -38,7 +38,6 @@
       "setStrokeWidth": null,
       "setStrokeColor": null,
       "setFillColor": null,
-      "drawImage": null,
       "getImageData": null,
       "putImageData": null,
       "clearCanvas": null,
@@ -99,7 +98,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -124,12 +122,10 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "drawImageURL": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "If you can count one thing you can count multiple things\r\n\r\nFind out how many people like something other than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo the math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents from this\r\n\r\nx% are dog lovers",
     "markdown_instructions": "If you can count one thing you can count multiple things\r\n\r\nFind out how many people like something other than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo the math\r\n\r\nblank/ blank total\r\n\r\nCan also use this to find percents from this\r\n\r\nx% are dog lovers",

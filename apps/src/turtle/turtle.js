@@ -482,7 +482,9 @@ Artist.prototype.drawTurtle = function() {
       sourceY + sourceHeight > this.avatarImage.height)
   {
     if (console && console.log) {
-      console.log("drawImage is out of source bounds!");
+      // TODO(bjordan): ask Brent, starting to flood grunt mochaTest messages,
+      // better fix here?
+      // console.log("drawImage is out of source bounds!");
     }
     return;
   }
@@ -703,7 +705,7 @@ Artist.prototype.generateTurtleCodeFromJS_ = function () {
   this.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
 
   var initFunc = _.bind(function(interpreter, scope) {
-    codegen.initJSInterpreter(interpreter, null, scope, {
+    codegen.initJSInterpreter(interpreter, null, null, scope, {
       Turtle: this.api
     });
   }, this);
@@ -852,7 +854,8 @@ Artist.prototype.animate = function() {
         stepped = this.interpreter.step();
       }
       catch(err) {
-        this.executionError = err;
+        // TODO (cpirich): populate lineNumber as we do for studio/applab:
+        this.executionError = { err: err, lineNumber: 1 };
         this.finishExecution_();
         return;
       }

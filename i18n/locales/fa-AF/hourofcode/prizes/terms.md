@@ -8,19 +8,15 @@ title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: prizes_nav
 
 # جوایز - شرایط و ضوابط
 
-## فضایی در دراپ باکس و یا اعتبار اسکایپ :
+## Amazon.com, iTunes and Windows Store credit:
 
-The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limit one redemption per organizer. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Limit one redemption per organizer.
 
-Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
-
-## چت تصویری با مهمان سخنران :
-
-محدودیت جایزه تنها به K-12 کلاس درس در ایالات متحده و کانادا داده میشود. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## کلاس مجموعه ای از لپ تاپ ها (یا 10.000 دلار برای فن آوری دیگر):
 

@@ -58,8 +58,6 @@ social:
 
   #fullwidth4{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/homepage_4.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 10%;"}
 
-  #fullwidth5{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/homepage_5.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 30% 40%"}
-
   #fullwidth{style: "width: 100%;"}
 
     .thegap{style: "height: 1px;"}
@@ -98,6 +96,9 @@ social:
               %div.watch-video-small{onclick: "return startVideo();"}
                 =hoc_s(:front_watch_regular_video)
                 %img{src: "/images/play-button.png", width: "25", onclick: "return startVideo();", style: "cursor: pointer;"}
+            -if @country == 'us'
+              %div#volunteer-signup
+                %a{href: "https://code.org/volunteer"}= hoc_s('front_volunteers')
 
           %br/
           %br/
@@ -126,11 +127,6 @@ social:
   -# Highlights
 
   %br/
-
-  .row
-    .col-xs-12
-      %div{style: 'text-align: center; margin: 3em 0;'}
-        %h2=hoc_s(:highlights_hoc_2014_heading)
 
   .row
     .col-xs-6.col-sm-4
@@ -197,7 +193,7 @@ social:
         .col-md-1
         .col-md-5
           =view :join_us_description
-          =view :whats_next
+          =view :prizes_announce
 
   -# FAQ
 
@@ -225,7 +221,7 @@ social:
 
   function cycleImage()
   {
-    var nextImage = (currentImage + 1) % 6;
+    var nextImage = (currentImage + 1) % 5;
     $("#fullwidth" + currentImage).fadeTo(2000, 0);
     $("#fullwidth" + nextImage ).fadeTo(2000, videoStarted ? 0.3 : 1);
     currentImage = nextImage;

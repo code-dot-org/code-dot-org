@@ -77,6 +77,14 @@
   :javascript
     codeMirror('required_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
 .field
+  - if @level.game.uses_droplet?
+    = f.label :recommended_blocks, 'Edit Recommended Blocks'
+  - else
+    = link_to 'Edit Recommended Blocks', level_edit_blocks_path(@level, :recommended_blocks) unless @level.new_record?
+  = f.text_area :recommended_blocks, placeholder: 'Recommended Blocks', rows: 4, value: @level.pretty_block('recommended')
+  :javascript
+    codeMirror('recommended_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+.field
   = f.label :ideal, 'Ideal block number'
   = f.number_field :ideal
 .field
@@ -134,3 +142,10 @@
     = f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
     :javascript
       codeMirror('solution_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+-if @level.game.uses_droplet?
+  .field
+    = f.label :droplet_tooltips_disabled, "Hide droplet documentation tooltips"
+    = boolean_check_box f, :droplet_tooltips_disabled
+  .field
+    = f.label :lock_zero_param_functions, "Don't allow parameters to be added to user-defined functions with no parameters"
+    = boolean_check_box f, :lock_zero_param_functions

@@ -10,19 +10,15 @@ nav: prizes_nav
 
 # 獎品-條款及條件
 
-## Dropbox 空間或 Skype 信用：
+## Amazon.com, iTunes and Windows Store credit:
 
-10 GB 的 Dropbox 空間或 Skype 信貸 10 美元僅限於 k-12 教員、 教育家課外俱樂部和教育組織。 The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. 限制每主辦一個救贖。 Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. 限制每主辦一個救贖。
 
-每個管理器代碼小時必須註冊，才能接收的 Dropbox 空間或 Skype 信用。 如果你整個的學校參與代碼小時，每個教育工作者必須單獨註冊作為召集人的資格。
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. 如果你整個的學校參與代碼小時，每個教育工作者必須單獨註冊作為召集人的資格。
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
-
-## 視頻聊天的特邀演講者：
-
-K 12 間教室在美國和加拿大只限于獎。 To qualify, sign up your classroom by November 2, 2015. Code.org 將選擇獲獎教室、 網路聊天，為提供一段時間和工作適當的教師，以設置的技術詳細資訊。 你整個的學校不需要申請領取這一獎項。 公立和私立學校都是 eligbile 要贏。
 
 ## 一套筆記型電腦 （或者 10000 美元購買其他技術）：
 

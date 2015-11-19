@@ -1,24 +1,24 @@
 ---
 
-titlu: < % = hoc_s(:title_tutorial_guidelines) %>
-aspect: largă
+title: <%= hoc_s(:title_tutorial_guidelines) %>
+layout: wide
 
 ---
 
 <%= view :signup_button %>
 
-# Recomandări si explicații pentru Hour of Code și Saptamana Educatiei
+# Recomandări si explicații pentru Hour of Code și Saptamana Educatiei in Tehnologia computer-ului si programare
 
-Code.org va gazdui o varietate de activităţi Hour of Code pe Code.org, Hour of Code, şi CSEdWeek site(urile) Web. Lista curentă este la [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
+Code.org va gazdui o varietate de activităţi site(urile) Web Hour of Code pe Code.org, Hour of Code, şi CSEdWeek. Lista curentă este la [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
-Ne dorim sa găzduim o varietate de elemente interactive, dar obiectivul principal este de a optimiza experienţa pentru elevi şi profesori care sunt începători în ceea ce priveste tehnologia computerelor si programarea. Vă rugăm să folosiţi acest document ca și ghid pentru organizarea activității, orientată către utilizatorul care nu are nici o experiență în informatică, programare sau tehnologia calculatorului.
+Ne dorim sa găzduim o varietate de elemente interactive, dar obiectivul principal este de a optimiza experienţa pentru elevi şi profesori care sunt începători în ceea ce priveste tehnologia computerelor si programarea. Vă rugăm să folosiţi acest document ca și ghid pentru organizarea activității, orientat către utilizatorul care nu are nicio experiență în informatică, programare sau tehnologia calculatorului.
 
   
 
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
+**Dupa citirea ghidului, iti poti inscrie tutorialul in cadrul paginii [Hour of Code™ Prezentarea Activitatii](https://goo.gl/kNrV3l).**
 
-**NOU:** Spre deosebire de ultimii ani, avem de gând să introducem un nou format pentru activităţi Hour of Code "conduse de profesor". Acestea vor fi listate mai jos de activităţile auto-didacte orientate spre pagini şi e-mailuri pentru elevi. Detaliile mai jos.
+**NOU:** Spre deosebire de ultimii ani, avem de gând să introducem un nou format pentru activităţi Hour of Code "conduse de profesor". Acestea vor fi listate mai jos de activităţile autodidacte orientate spre pagini şi e-mailuri pentru elevi. Detaliile mai jos.
 
 <a id="top"></a>
 
@@ -35,7 +35,7 @@ Ne dorim sa găzduim o varietate de elemente interactive, dar obiectivul princip
 
 <a id="guidelines"></a>
 
-## New for 2015: two formats of activities: self-guided or *lesson-plan*
+## Noi pentru 2015: două formate de activităţi: autodidact sau *plan de lecţie*
 
 Acum, că zeci de mii de cadre didactice au încercat Ora de Programare, multe săli de clasă sunt gata pentru activităţi mai creative, mai puţin atotcuprinzatoare, care invata elementele de bază din informatică separat. Pentru a ajuta profesorii sa-si gaseasca inspiratia, vrem sa colectam cateva lectii si activitati de o ora "Conduse de catre profesor" planuite de catre veteranii Hour of Code. Vom continua si promovarea formatul de "Auto-ghidat".
 
@@ -116,7 +116,7 @@ Un comitet de profesori din domeniul informaticii vor nota tutorialele, pe baza 
 
 ## Cum să trimiteți (Termen limită 10/15/2015)
 
-Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
+Vizitaţi [pagina Hour of Code™ Prezentarea Activitatii](https://goo.gl/kNrV3l) şi urmaţi paşii pentru a trimite tutorialul dvs.
 
 **De ce aveţi nevoie:**
 
@@ -154,8 +154,8 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
       * La terminarea activității, utilizatorii ar trebui să fie direcționați către [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) unde vor putea să: 
           * Share-uiasca pe rețelele sociale că au finalizat Hour of Code
           * Primească un certificat de participare/finalizare a Hour of Code
-          * Vadă clasamentele cu țările/orașele cea mai mare rată de participare în activităţi Hour of Code
-          * Pentru utilizatorii care petrece o oră activitatea şi nu vor termina, vă rugăm să includeţi un buton activitatea care spune că "Am terminat Ora mea Programare" care leagă înapoi la [< % = resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>), de asemenea. 
+          * Vezi clasamentele cu țările/orașele cea mai mare rată de participare în activităţi Hour of Code
+          * Pentru utilizatorii care petrece o oră activitatea şi nu vor termina, vă rugăm să includeţi un buton activitatea care spune că "Am terminat Ora mea Programare" care leagă înapoi la [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>), de asemenea. 
   * *(Opţional)* Vom face un follow-up cu un formular/sondaj online solicitând un raport de activitate pentru săptămâna 8 decembrie, 12:01 am pana pe 14 decembrie, 11:59 pm) 
       * Pentru activităţile online (în special aplicații smartphone/tablete): 
           * Numărul de utilizatori
@@ -187,7 +187,7 @@ Puteţi include logo-ul CSEdWeek ([mari](https://www.dropbox.com/s/yolheibpxapzp
 
 **Încurajati studenţii să posteze pe Social Media (după caz), atunci când le-au terminat.** De exemplu "Am realizat o Ora de Programare cu________ Tu ai participat? #HourOfCode" sau "Am terminat #HourofCode ca parte a #CSEdWeek. Tu? @Scratch." Utilizează hashtag-ul **#HourOfCode** (cu litere mari H, O, C)
 
-**Crea activitatea dumneavoastră în spaniolă sau în alte limbi în afară de engleză.** ]
+**Creati activitatea dumneavoastră în spaniolă sau în alte limbi în afară de engleză.** ]
 
 **Explicați sau conectaţi activitatea cu un context social important.** Programarea pe computer devine o superputere atunci când elevii văd cum se poate schimba lumea în bine!
 
@@ -202,7 +202,7 @@ Puteţi include logo-ul CSEdWeek ([mari](https://www.dropbox.com/s/yolheibpxapzp
 Beneficiile programarii în perechi:
 
   * Elevii se pot ajuta unul pe altul în loc să se bazeze pe profesor
-  * Arată că programarea nu este o activitate solo, ci una care implică interacţiunea socială
+  * Arată că programarea nu este o activitate singuratica, ci una care implică interacţiunea socială
   * Nu toate sălile de clasă sau laboratoarele au suficiente calculatoare pentru o experienţă de 1:1
 
 [**La începutul paginii**](#top)
@@ -213,7 +213,7 @@ Beneficiile programarii în perechi:
 
 După succesul campaniei 2013, am luat măsuri pentru a face sigur că am înfiinţat Hour of Code ca o mişcare care se poate repeta anual cu mai mare fidelitate şi fără confuzie.
 
-O parte din acest lucru este de a proteja marca "Oră de cod" pentru a preveni confuzii. Mulţi dintre partenerii noştri au realizat tutoriale sau au folosit "Hour of Code" pe site-urile web. Nu vrem să prevenim acest lucru, dar vrem să ne asigurăm că se încadrează în câteva limite:
+O parte din acest lucru este de a proteja marca "Hour of Code" pentru a preveni confuzii. Mulţi dintre partenerii noştri au realizat tutoriale sau au folosit "Hour of Code" pe site-urile web. Nu vrem să prevenim acest lucru, dar vrem să ne asigurăm că se încadrează în câteva limite:
 
   1. Orice trimitere la "Hour of Code" trebuie facută într-un mod care nu sugerează că este propriul dumneavoastră brand, ci mai degrabă recomandă Hour of Code ca o mişcare/ identitate de bază. Exemplu corect: "Participa la Hour of Code la ACMECorp.com". Exemplu negativ: "Încercaţi Hour of Code scris de ACME Corp"
   2. Utilizaţi un exponent "TM" în locurile cele mai proeminente în care menționați "Hour of Code", atât pe site-ul web cât şi în descrierea aplicației

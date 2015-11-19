@@ -22,6 +22,6 @@ nav: how_to_nav
 
   5. **Host a district Hour of Code event.** See our [event how to guide](<%= resolve_url('/how-to/events') %>) for a sample run of show, media outreach kit and other supports.
 
-  6. **Më shumë[shpërblime](<%= hoc_uri('/prizes') %>) për ÇDO organizator.**Çdo mësues pjesmarrës do të marrë dhurata falenderimi. Dhe në çdo shtet, një shkollë pjesmarrëse mund të fitojë $10,000 në teknologji për shkollën e tyre!
+  6. **Më shumë [shpërblime](<%= resolve_url('/prizes') %>) për ÇDO organizator.**Çdo mësues pjesmarrës do të marrë dhurata falenderimi. Dhe në çdo shtet, një shkollë pjesmarrëse mund të fitojë $10,000 në teknologji për shkollën e tyre!
 
 <%= view :signup_button %>

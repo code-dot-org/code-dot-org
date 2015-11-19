@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -147,8 +146,6 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "project_template_level_name": "U3L07 - underTheSeaLoopsTemplate",
-    "app_width": "320",
-    "app_height": "450",
     "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
@@ -158,9 +155,11 @@
     "beginner_mode": "true",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "encrypted_examples": [
-
-    ]
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "Ml6koQEYgTLNy4k2nzHPZD6wsEGwWG6DSB8W37mGSqmmuSI4jPXWtWq9KgeC\nuBYV\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

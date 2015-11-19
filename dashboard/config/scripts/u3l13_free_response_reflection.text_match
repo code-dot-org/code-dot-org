@@ -1,11 +1,15 @@
 name 'U3L13 Free Response Reflection'
-title 'Buttons on the Screen Wrap Up'
-
-markdown <<MARKDOWN
-Elements in your app are required to have **unique IDs**. Given what you now know about how event handlers work, why is it important for the IDs of page elements to be unique?
-
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-Event handlers are attached to page elements based on their ID. If multiple elements have the same ID then an event handler will not be able to tell which page element it is supposed to be listening to.
-MARKDOWN
+encrypted 'Ka3c9FCq285HoD+vJ1wojcqnhLY8V8b/dVdN4U16wyEPY2DgRbSKS7qZkwgf
+r0x2Z2iS8Q9UyvHHtBirCVn8PTNqOlwRbtIP5RlWaqSNSbRFR7un6Oje+ZH2
+QWOA2Pl9FJnyz1yzGv1YjdkX/ja+LHwMSxyVvVtEVIXviKO7+6G2QGuIkwRq
+muhxVQl/7+yO8cMT2NZ6D/ThMrLYuOEpIn4Xm1USFM5ivC3DKpB3fDNEALI/
+pMaJZk+Cgd68c/cxjTAXPWoiYKpnH2Poo62ooGKIJlh/9qKi8dX2aG2uHYh9
+EhR42s1aXxGlfTwII2ptDN6mB1CzU0rIQDcoILflyP3myzT/qoREGXHFNAPb
+gaXec7mkKrsg6sv/up+T4z1IepUkSwPTfe02B4vrswRrLqM7BnGmlY0U2YYH
++JJjMw0EPFDMrh4WmtEH7jsVuSNz9YxQhg/8AD7qlPP+BO2Mm4cUo8wWYsvM
+UYSUta0JKDDp/NJturo1jHnpAKFTvjXuxc2TJQzFTsMlJFooQxgMPzb0+CDK
+2f4qfzWq153yPbONX8/2E7isChvYDyC6dWMToEESD2q7Y1Z43T/5TauHYNbO
+OFadJchuYBOYwRYT2UMazW6MaMl35kHEQwCJKe6aD2V8fyLMispHYX/TwdX5
+8mGk4skZ+DuoCz+TFj6tD5i1RDrFypfF9SAKRXGENpbMugldi84Z6ZJrJb16
+IYg8NzrBkGn+lxCFqNhaEviGcrI=
+'

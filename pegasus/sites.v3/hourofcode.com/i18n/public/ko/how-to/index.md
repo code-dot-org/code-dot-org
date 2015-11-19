@@ -6,7 +6,7 @@ nav: how_to_nav
 
 ---
 
-# 1시간짜리 Hour of Code 교육 방법
+# 1시간의 Hour of Code 교육 방법
 
 ## 1) Sign up
 
@@ -16,7 +16,7 @@ nav: how_to_nav
 ## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Choose a tutorial:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)
+다양한 참여자들이, 다양한 연령대를 대상으로 만든 1시간 분량의 [재미있는 튜토리얼](<%= resolve_url('https://code.org/learn') %>)을 제공합니다. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)
 
 **모든 Hour of Code 튜토리얼들은:**
 
@@ -29,8 +29,8 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
 
 The best Hour of Code experience will be with Internet-connected computers. You **don’t** need a computer for every child, and can even do the Hour of Code without a computer at all.
 
-  * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * 학생의 컴퓨터에서 튜토리얼을 테스트합니다. 웹브라우저에서 소리와 영상이 적절하게 나오는지 확인하십시오.
+  * 소리와 관련된 튜토리얼을 수월하게 하기 위해서 학생들에게 헤드폰을 제공하거나, 그들이 가지고 있는 헤드폰을 가져오도록 요청하셔도 좋습니다.
   * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). 학생들을 짝 지어주면, 선생님보다 서로 서로 도움을 주고 받을 수 있도록 할 수 있습니다. 그렇게 함으로서 컴퓨터과학(정보과학)은 사회적이며 협동적이다라는 것을 알게 될 수 있습니다.
   * **통신 속도가 느리다면?** 교실 앞에서 비디오를 보여주면, 학생들 모두가 비디오를 다운로드 받으면서 보지 않아도 됩니다. 아니면, 오프라인용 언플러그드 활동을 활용해 보세요. 
 

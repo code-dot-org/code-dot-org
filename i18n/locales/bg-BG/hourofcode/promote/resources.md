@@ -9,19 +9,19 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 # Насърчаване на Часът на кода
 
-## Домакинли сте на часът на кода? <a href = "< % = resolve_url('/how-to') % >" > Вижте помощното ръководство</a>
+## Домакинли сте на часът на кода? <a
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
 <a id="posters"></a>
 
-## Окачете тези плакати във вашето училище
+## Окачете тези плакати във Вашето училище
 
 <%= view :promote_posters %>
 
 <a id="banners"></a>
 
-## Поставете тези банери на вашия сайт
+## Поставете тези банери на Вашия сайт
 
 [![изображение](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -31,7 +31,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 [![изображение](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![изображение](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+<%= view :social_posters %>
 
 <a id="logo"></a>
 
@@ -54,13 +54,13 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <a id="email"></a>
 
-## Попитайте вашето училище, работодател или приятели дали може се регистрирате:
+## Попитайте Вашето училище, работодател или приятели дали може се регистрирате:
 
 Компютрите са навсякъде, но в малко училища се изучават компютърни науки. Добрата новина е, че ние сме на път да променим това. Ако сте чували за часът на кода преди, може би знаете че той влезе в историята. Повече от 100 милиона ученици са пробвали Часът на кода.
 
-С часа на кода, компютърните науки бяха на началните страници на Google, MSN, Yahoo! и Дисни. Над 100 партньори се събраха в подкрепа на това движение. Миналата година, всеки Apple Магазин в света стана домакин на Часът на кода и дори президента Обама написа своята първа линия код като част от кампанията.
+С часа на кода, компютърните науки бяха на началните страници на Google, MSN, Yahoo! и Дисни. Над 100 партньора се събраха в подкрепа на това движение. Миналата година, всеки Apple Магазин в света стана домакин на Часът на кода и дори президента Обама написа своята първа линия код като част от кампанията.
 
-Тази година, нека го направим още по-голямо. Аз имам молба да се включат в за Часа на кода 2015. Моля да се включат с Часа на кода събитие, <%= campaign_date('full') %>.
+Тази година, нека го направим още по-голямо. Аз Ви моля да се включите в Часа на кода 2015 <%= campaign_date('full') %>.
 
 Вземете думата. Организирайте събитие. Помогнете на местното училище да се регистрира. Или пробвайте сами - всеки може да се възползва от изучаването на основите.
 
@@ -92,7 +92,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <a id="parents"></a>
 
-## Разкажете на родителите за вашето училищно събитие:
+## Разкажете на родителите за Вашето училищно събитие:
 
 Уважаеми родители,
 
@@ -106,7 +106,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 Вижте http://hourofcode.com/<%= @country %> за подробности, както и за помощ в разпространяването на събитието.
 
-Искрено ваш
+Искрено Ваш
 
 Директор
 

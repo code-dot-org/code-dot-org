@@ -43,7 +43,7 @@ Spesso il miglior modo di entrare in contatto con i media è l'email. Scrivi una
 
 *Perché la vostra scuola organizza un'Ora del Codice?*
 
-Mentre tutti noi sappiamo come sia importante per gli studenti imparare a muoversi nel mondo di oggi saturato dalla tecnologia, molti insegnanti non sono esperti in informatica e non sanno da dove iniziare. Questo evento costituisce una possibilità per tutti noi per capire di cosa si occupi l'informatica.
+Mentre tutti noi sappiamo quanto sia importante per gli studenti imparare a muoversi nel mondo di oggi che è saturo di tecnologia, molti insegnanti non sono esperti in informatica e non sanno da dove iniziare. Questo evento costituisce una possibilità per tutti noi per capire di cosa si occupi l'informatica.
 
 Speriamo che stimoli l'interesse degli studenti a continuare ad imparare. Le ricerche mostrano anche che i ragazzi afferrano i concetti alla base della programmazione anche prima di saper leggere e scrivere. Infatti i loro cervelli sono più ricettivi ai linguaggi di programmazione in giovane età, proprio come avviene con le lingue straniere.
 
@@ -53,7 +53,7 @@ In Cina, ogni studenti delle superiori per potersi diplomare deve studiare infor
 
 **Maggiori dettagli e una citazione che puoi usare nei tuoi materiali**
 
-"L'ora del Codice è stata progettata per rimuovere l'alone di mistero che spesso avvolge la programmazione dei computer e per mostrare che l'informatica non è affatto difficile da capire, chiunque può impararne le basi," ha affermato Hadi Partovi, fondatore e CEO di Code.org. "Più di 100 milioni di studenti in tutto il mondo hanno provato l'Ora del Codice. La richiesta di una rilevante educazione informatica nel XXI secolo attraversa tutti i confini e non conosce limiti."
+"L'Ora del Codice è stata progettata per rimuovere l'alone di mistero che spesso avvolge la programmazione dei computer e per mostrare che l'informatica non è affatto difficile da capire, chiunque può impararne le basi," ha affermato Hadi Partovi, fondatore e CEO di Code.org. "Più di 100 milioni di studenti in tutto il mondo hanno provato l'Ora del Codice. La richiesta di una rilevante educazione informatica nel XXI secolo attraversa tutti i confini e non conosce limiti."
 
 **Chi siamo**
 

@@ -6,13 +6,35 @@ crwdns49274:0crwdne49274:0
 
 <%= view :signup_button %>
 
-## crwdns49275:0crwdne49275:0
+# crwdns50405:0crwdne50405:0
 
-### crwdns49276:0crwdne49276:0
+crwdns50406:0[col-33]crwdne50406:0
 
-  1. crwdns50283:0crwdne50283:0 crwdns49278:0crwdne49278:0!
+![](/images/fit-275/highlight-obama.png)
 
-  2. crwdns49279:0crwdne49279:0 crwdns49280:0crwdne49280:0
+crwdns50407:0[/col-33]crwdne50407:0
+
+crwdns50408:0[col-33]crwdne50408:0
+
+&nbsp;&nbsp;&nbsp;&nbsp;![](/images/fit-258/checkprize.jpg)
+
+crwdns50409:0[/col-33]crwdne50409:0
+
+crwdns50410:0[col-33]crwdne50410:0
+
+&nbsp;&nbsp;&nbsp;&nbsp;![](/images/fit-248/dan.jpg)
+
+crwdns50411:0[/col-33]crwdne50411:0
+
+<p style="clear:both">
+  &nbsp;
+</p>
+
+## crwdns50412:0crwdne50412:0
+
+  1. crwdns50283:0crwdne50283:0 crwdns50413:0crwdne50413:0!
+
+  2. crwdns50990:0crwdne50990:0 crwdns49280:0crwdne49280:0
 
   3. crwdns49281:0crwdne49281:0
 

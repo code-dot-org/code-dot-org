@@ -1,14 +1,20 @@
 name 'U3L06 Assessment'
-title 'Free Response: Function Parameters'
-
-
-markdown <<MARKDOWN
-It is said that *functions with parameters generalize the behavior of a more specific command and allow a function to be used instead of duplicated code.* Explain what this means to you using the difference between turnLeft() and turnLeft(angle) as an example.
-
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-Sample response:
-
-Using the turnLeft function I could only turn 90 degrees at a time. Without parameters, if I wanted to turn left 270 degrees I would have to write `turnLeft()` three times. But with parameters, I can turn any angle I want. Now I can just make one call to the leftTurn function (`turnLeft(270)`) that includes the correct number of degrees I want to turn.
-MARKDOWN
+encrypted 'MrUe8sqIBLybvMVr6RAjm6JfbxMtqQO+Ti0tAJrajl60yPvfSyy9QCHjdW7M
+iLOb0QVucrTAixLTqC4Chbedf+ouUNNZe1R7Vj4CCCPQ9fSiNd9oPHsHfYTg
+ttEam5nZVZMLrC+1CrlSI0diwtTEsg5URCFW6L/iw5OHMByzpHt6TM96tjYa
+I90T5P71yF1ucDWHCtucVLGcR+TjQ0cQ1z76Hi5EFCKEKE3ON+yV2OdSe9XB
+C2HpA0t+CnKExcrXzWDkinGb99kjv+hsGXKiz+mSDBJZ2kDccQGFtpV9lMol
+r4FG7ckQZZ3ER8Cjf4zr7RtdcdNXUwoFvhb14lNog7/GmlE2E8ro7JglCORx
+dOuLj5VtCEEbm+rhHN4CPZlsq7vV0enV9TaoCvlSyIzZnjvSL+AzGvceTiPb
+dZYDQr5hsb3MvC/3lNyLlA7EhwAXzw2mSD7P+mnLnTyguHVYsuJZH8TD7JGl
+ro2iAFRvIi95lX6kPwqN/IjccgxfnC97agu8itiM0qceWpXOuCCuUD72EReS
+y2zeL8axrOlRa1rw+3SAcARgoFEvoh9RLTnTsMXgE6HVfBMaZJwyGKZyEe12
+iA/aEG2u/NEpKsqAKjTGFyKknJp6kKEazj8gwrHp7YDKPM0rSwFXpdZ1jyfF
+vInSc/dL9O/KPnimStNuUjmXIuKSwnYyR7Fe/tvbcV9XERLS6CJ2NwlLgIGo
+hyiNHmI6LgdXiGvQtTeb3uuoWpJtr4QSq153MYA2AT9+sr7j0o4Fws2GY2BO
+HXz1XeKnPPq6z5Q8+9rStq3DGvjSdD/Eu/WVS2KAjEzzkCjH1XBz4w+VYhZo
+Gos888imQLb+bYGyU/H+RIAECMzFynQvtpLntPJoApcH/vMqiAoMIpFjjISl
+qWOAqeirsYYlIIg9/vHcMU50w+a770F8CosIpHW4q+V7HHGiovKOLV4yEmXB
+gIqL7mfaqJAHaPZQSAcPlPBt6pSBUp7RWjhZCDjsHyZGoaDPT+RY0OuBwkaa
+Mxdd7j7IIHseHJ2uDs+PH14RgtxPc+zUjUsDqK42kXAn2zE=
+'

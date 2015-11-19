@@ -6,20 +6,20 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire school district.
+# Comment lancer Une Heure de Code dans votre académie ?
 
-## Faites participer chacune des écoles, permettez à tout étudiant d'apprendre !
+## Faites participer chaque école, permettez à tout étudiant d'apprendre !
 
-  1. **Recruit local schools.** Share [this email](%= resolve_url('/promote/resources#sample-emails') %) and [teacher how to guide](%= resolve_url('/how-to') %), or include a [short blurb](%= resolve_url('/promote/stats') %) in newsletters/district communications.
+  1. **Recrutez des écoles.** Partagez [cet email](%= resolve_url('/promote/resources#sample-emails') %) et [expliquer comment se lancer](%= resolve_url('/how-to') %), ou inclure un [court texte de présentation](%= resolve_url('/promote/stats') %) dans vos communications, bulletins ou au sein de l'académie.
 
-  2. **Fournissez un plan de logistiques pour les écoles.** Partagez cet exemple de plan de logistiques avec les écoles pour leur donner quelques idées sur la façon d'organiser la participation de toute l'école. Cela peut passer par les cours de mathématiques, les ateliers du midi ou bien l'utilisation alternative de la salle informatique. They can submit their own plan for a chance to win $10,000 in hardware at [http://hourofcode.com/prizes](%= resolve_url('/prizes/hardware-signup') %).
+  2. **Fournissez un plan logistique aux écoles.** Partagez cette proposition de plan logistique avec les écoles pour leur donner des idées sur la façon dont elles peuvent participer. Il est possible d'organiser Une Heure de Code durant les cours de mathématiques, les ateliers du midi ou bien dans une salle informatique. Ils peuvent soumettre leur propre plan d'actions pour avoir une chance de remporter 10 000 $ en matériel via [http://hourofcode.com/prizes](%= resolve_url('/prizes/hardware-signup') %).
 
-  3. **Partagez sur les médias sociaux.** Postez sur [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) ou [Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Or share one of these inspirational [pictures and quotes](%= resolve_url('/promote/resources#social') %) from world leaders, or [stats](%= resolve_url('/promote/stats') %).
+  3. **Partagez les informations sur votre évènement sur les médias sociaux.** Postez sur [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) ou [Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Partagez des citations aspirationelles, [photos et citations, ](%= resolve_url('/promote/resources#social') %) de leaders mondiaux ou [des statistiques](%= resolve_url('/promote/stats') %).
 
-  4. **Promote on your district’s homepage.** Add one of these [banners](%= resolve_url('/promote/resources#banners') %) to your district’s website to let visitors know about your participation. Link it to [Hour of Code](%= resolve_url('/') %).
+  4. **Promouvoir l'opération sur la page d'accueil de votre académie.** Ajoutez l'une de ces [bannières](%= resolve_url('/promote/resources#banners') %) sur le site internet de votre académie pour permettre aux visiteurs de savoir que vous participez. Liez-le au site [Une Heure de Code](%= resolve_url('/') %).
 
-  5. **Host a district Hour of Code event.** See our [event how to guide](%= resolve_url('/how-to/events') %) for a sample run of show, media outreach kit and other supports.
+  5. **Organisez un événement Hour of Code dans votre Académie.** Lisez notre [Guide pratique](%= resolve_url('/how-to/events') %) pour avoir un exemple de déroulé d'évènement, un kit de sensibilisation ou d'autres contenus utiles.
 
-  6. **More [prizes](%= resolve_url('/prizes') %) for EVERY organizer.** Every participating educator will receive thank you gifts. Et dans chaque état, une école participante gagnera 10.000$ de matériel technologique au profit de son école !
+  6. **Plus de [prix](%= resolve_url('/prizes') %) pour CHAQUE organisateur.** Chaque éducateur participant recevra des cadeaux de remerciements. Dans chaque état, une école participante gagnera 10.000$ de matériel technologique au profit de son école !
 
 <%= view :signup_button %>

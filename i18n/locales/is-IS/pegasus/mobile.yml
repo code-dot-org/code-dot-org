@@ -27,10 +27,10 @@ is-IS:
   hoc2014_everyone: Allir
   hoc2014_support: 'Styðjið þetta &#x25BE;'
   hoc2014_whatishoc: Hvað er Klukkustund kóðunar?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_header: '# CSEdWeek / Klukkustundir kóðunar um allan heim'
+  csedweek_map_signup: Skráðu þinn viðburð
+  csedweek_map_search_placeholder: Leita að Klukkustundum kóðunar
+  csedweek_map_search_search: Leit
   csedweek_map_search_reset: Endurstilla
   cded_sign_up: Skráning
   cded_try_it: Prófið hana
@@ -111,6 +111,7 @@ is-IS:
   hoc_is_here: '#HourOfCode er hér - kíktu á það! @codeorg'
   just_did_hoc: 'Ég var að klára #HourOfCode - kíktu á það! @codeorg'
   twitter_teach_cs: Af hverju kenna ekki fleiri skólar tölvunarfræði? Við getum bætt úr því. http://youtu.be/nKIu9yen5nc. Heimsæktu http://code.org/ til að fræðast nánar.
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: Lærðu í Klukkustund kóðunar
   beyond_hoc: Umfram Klukkustund
   what_gender: Ertu stelpa eða strákur?
@@ -202,6 +203,8 @@ is-IS:
   homepage_action_text_signpetition: Skrifaðu undir áskorunina
   homepage_signpetition_dropdown: 'Skrifaðu undir áskorun okkar &#x25BE;'
   homepage_diversity_pledge: Vinna fjölbreytniheitið
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org og College Board vinna saman að því að auka fjölbreytni í tölvunarfræði.
   homepage_banner_text_link: Læra meira
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -211,6 +214,7 @@ is-IS:
   homepage_slot_text_link_hoc: Prófa Klukkustund kóðunar
   homepage_slot_text_link_host: Haltu Klukkustund kóðunar
   homepage_slot_text_link_hocserved: '# þjónað'
+  homepage_solot_text_link_volunteer: Hjálpaðu við Klukkustund kóðunar
   homepage_slot_text_title_students: Nemendur
   homepage_slot_text_blurb_students: Skoða allt kennsluefni okkar
   homepage_slot_text_link_codestudio: Prófa Kóðastúdíóið
@@ -268,8 +272,12 @@ is-IS:
   class_submission_level_vocational: Starfsmenntun
   class_submission_languages_other: Önnur tungumál
   volunteer_engineer_submission_title: Hjálpaðu við Klukkustund kóðunar
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} kennarar hafa skráð sig fyrir Klukkustund kóðunar og vantar sjálfboðaliða til að aðstoða.'
-  volunteer_engineer_submission_intro_paragraph: 'Vinsamlegast færðu inn eftirfarandi upplýsingar ef þú ert tölvunarfræðinemi eða hugbúnaðarsérfræðingur og hefur áhuga á að hjálpa kennurum við að halda Klukkustund kóðunar. Reiti sem merktir eru <span class="form-required-field">*</span> verður að fylla út.'
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: |-
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
   volunteer_engineer_submission_header_shared: Upplýsingar sem deildar eru með kennurum á korti sjálfboðaliða
   volunteer_engineer_submission_field_name: Nafn
   volunteer_engineer_submission_field_name_placeholder: Fullt nafn
@@ -332,6 +340,7 @@ is-IS:
   dashboard_landing_progress_title: Framvinda aðalhóps
   dashboard_landing_progress_biggest: Þetta er framvinda stærsta hópsins þíns.
   dashboard_landing_view_progress: 'Skoða framvindu fyrir %{biggest_section}'
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Tiltæk námskeið
   dashboard_landing_available_courses: Þetta eru námskeiðin sem eru nú tiltæk fyrir þig og nemendur þína.
   dashboard_landing_more_tutorials: Viltu sjá enn meira kennsluefni?

@@ -473,6 +473,9 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块和捕捉低于它的其他块
@@ -498,8 +501,7 @@
           workspace
         repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
           workspace
-        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
-          inside
+        repeat_blocks_2: (2) 移动"重复"块到这里, 然后放置灰色方块到里面.
         snowflake_dropdown: Use this drop-down to create different snowflakes!
         degrees_per_side: Divide 360 by the number of sides to get the size of each
           angle in degrees.
@@ -511,7 +513,7 @@
         get_nectar: 使用新的"得到花蜜"块。
         actions_category: The tool box got a new look! The "Actions" blocks are in
           here now.
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        draw_square_hint: '提示: 用你刚才在最后一个谜题中制作的方形回路'
         edit_function: 单击此处来编辑您的函数。
         create_function: Click here to open the "Functions" flyout, then click the
           "Create a Function" button.

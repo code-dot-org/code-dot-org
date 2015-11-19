@@ -464,6 +464,9 @@ is:
         alg_15_biggame_update_player: 'TF í Algebru - Stórleikur, uppfæra leikmann'
         alg_16_biggame_collision_detection: 'TF í Algebru - Stórleikur, skynjun árekstra'
         alg_17_sambat_compound_booleans: 'TF í Algebru - Stórleikur, samsett Bool gildi'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: 'Dragðu "færa" kubb og festu hann neðan í hinn kubbinn'

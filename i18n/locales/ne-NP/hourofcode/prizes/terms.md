@@ -8,19 +8,15 @@ title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: prizes_nav
 
 # पुरस्कार - नियम र शर्तहरू
 
-## Dropbox space अथवा Skype credit:
+## Amazon.com, iTunes and Windows Store credit:
 
-१० GB Dropbox space र $१० Skype credit K-12 संकाय, afterschool क्लबका शिक्षकहरू, र शिक्षा संगठनहरूकालागि सीमित छन्. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. आयोजक प्रति एक छुटकारा सिमित छ. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. आयोजक प्रति एक छुटकारा सिमित छ.
 
-हरेक आयोजकले Dropbox space या Skype credit प्राप्त गर्न Hour of Code को लागि दर्ता गर्नैपर्छ. यदि सम्पूर्ण स्कूल Hour of Code को बेला मा सहभागी हुन्छभने, प्रत्येक शिक्षाविद्ले व्यक्तिगत आयोजकको रूपमा दर्ता गर्नै पर्छ.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. यदि सम्पूर्ण स्कूल Hour of Code को बेला मा सहभागी हुन्छभने, प्रत्येक शिक्षाविद्ले व्यक्तिगत आयोजकको रूपमा दर्ता गर्नै पर्छ.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
-
-## अतिथि वक्ता सँग भिडियो च्याट् :
-
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## ल्याप्टपहरुका क्लास-सेट (वा $१०,००० बराबर को अरु प्रविधिक समान):
 

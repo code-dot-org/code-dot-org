@@ -1,5 +1,6 @@
 name 'U3L07 Student Lesson Introduction'
 title 'Looping and Random Numbers'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 07 - Looping and Random Numbers
@@ -10,7 +11,7 @@ Even after creating functions with parameters there are still instances when our
 
 # Vocabulary
 
-* Iteration: the repetion of a process or procedure.
+* Iteration: the repetition of a statement, process, or procedure.
 * Loop: a programming construct that repeats a group of commands.
 
 # Lesson
@@ -18,6 +19,10 @@ Even after creating functions with parameters there are still instances when our
 * Introduction to the for loop.
 * Practice using loops to draw figures.
 * Use loops in conjunction with Top-Down Design and random values to complete a digital scene.
+
+# Resources
+
+- Loops Video (embedded in next level)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

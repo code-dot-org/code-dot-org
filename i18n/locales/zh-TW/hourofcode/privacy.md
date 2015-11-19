@@ -1,10 +1,10 @@
 * * *
 
-title： 隱私權原則
+title: 隱私權原則
 
 * * *
 
-### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # 隱私政策
 
@@ -238,4 +238,4 @@ If you choose to visit Code.org, your visit and any dispute over privacy is subj
 請聯繫 Code.org 有任何疑問或意見本隱私權聲明，您的個人資訊，我們協力廠商披露做法或你同意選擇通過編寫我們在 [HTTP://code.org/contact](http://code.org/contact) 或 1301 第五大道，套房 1225，西雅圖，華盛頓州 98101。   
   
   
-[![圖片](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![圖片](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

@@ -8,17 +8,39 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-## How to bring the Hour of Code to your entire community.
+# How to bring the Hour of Code to your entire community.
 
-### Bëj çdo shkollë te marrë pjesë, çdo student të mësojë!
+[col-33]
 
-  1. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/how-to') %>) and in **each state**, one participating school will win **$10,000 in technology**!
+![](/images/fit-275/highlight-obama.png)
 
-  2. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/how-to-event') %>) for a sample run of show, media outreach kit and other event-planning resources. Organizimi i një eventi është një mënyrë e mirë për të reklamuar Orën e Kodimit dhe rritur numrin e pjesmarrësve.
+[/col-33]
+
+[col-33]
+
+&nbsp;&nbsp;&nbsp;&nbsp;![](/images/fit-258/checkprize.jpg)
+
+[/col-33]
+
+[col-33]
+
+&nbsp;&nbsp;&nbsp;&nbsp;![](/images/fit-248/dan.jpg)
+
+[/col-33]
+
+<p style="clear:both">
+  &nbsp;
+</p>
+
+## Bëj çdo shkollë te marrë pjesë, çdo student të mësojë!
+
+  1. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/prizes') %>) and in **each state**, one participating school will win **$10,000 in technology**!
+
+  2. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/event') %>) for a sample run of show, media outreach kit and other event-planning resources. Organizimi i një eventi është një mënyrë e mirë për të reklamuar Orën e Kodimit dhe rritur numrin e pjesmarrësve.
 
   3. **Ndiq një event gjatë Javës Edukative të Shkencave Kompjuterike (<%= campaign_date('short') %>).** [Gjej klasa dhe shkolla](<%= resolve_url('/events') %>) pjesmarrëse në rrethin e qytetit ose në vendin tuaj.
 
-  4. **Nxirr një dekret apo rezolutë.**Shiko këtë [shembull rezolute](<%= hoc_uri('resources/proclamation') %>) mbështetëse për Javën Edukative të Shkencave Kompjuterike dhe qëllimet që mund të përdoren nga ligjvënësit lokal dhe shtetëror.
+  4. **Nxirr një dekret apo rezolutë.**Shiko këtë [shembull rezolute](<%= resolve_url('resources/proclamation') %>) mbështetëse për Javën Edukative të Shkencave Kompjuterike dhe qëllimet që mund të përdoren nga ligjvënësit lokal dhe shtetëror.
 
   5. **Draft an op-end**. Konsideroni publikimin e një shkrimi të llojit opinion, në gazetën tuaj lokale. See this [sample op-ed](<%= resolve_url('/promote/op-ed') %>) supporting comupter supportive of Computer Science Education Week and its goals.
 

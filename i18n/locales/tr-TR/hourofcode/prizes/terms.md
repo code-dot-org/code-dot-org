@@ -8,19 +8,15 @@ title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: prizes_nav
 
 # Ödüller - Şartlar ve Koşullar
 
-## Dropbox alanı veya Skype kredisi:
+## Amazon.com, iTunes and Windows Store credit:
 
-10 GB'lık Dropbox alanı ve 10$'lık Skype kredisi K-12 okul öğretmenlerini, okul sonrası eğitimcilerini ve eğitim organizasyonlarını kapsar. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Organizatör başına 1 ödeme ile sınırlıdır. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Organizatör başına 1 ödeme ile sınırlıdır.
 
-Her organizatör Dropbox alanı ve Skype kredisi almak için Kodlama Saatine üye olmalıdır. Okulunuzdaki herkes Kodlama Saatine katılacaksa, her bir eğitimci yetkilendirme için bireysel olarak üye olmalıdır.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Okulunuzdaki herkes Kodlama Saatine katılacaksa, her bir eğitimci yetkilendirme için bireysel olarak üye olmalıdır.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
-
-## Bir konuk konuşmacıyla video sohbeti:
-
-Para ödülü Amerika ve Kanada'daki K-12 derslikleri ile sınırlıdır. To qualify, sign up your classroom by November 2, 2015. Code.org kazanan sınıfları seçecek, web görüşmesi için bir zaman aralığı belirleyecek ve uygun öğretmenle işbirliği içinde teknoloji detaylarını ayarlayacaktır. Ödüle hak kazanmak için bütün okulun katılması zorunlu değildir. Bütün devlet okulları ve özel okullar katılma hakkına sahiptir.
 
 ## Tüm sınıfa dizüstü bilgisayar (veya 10.000$ değerinde başka bir teknoloji):
 

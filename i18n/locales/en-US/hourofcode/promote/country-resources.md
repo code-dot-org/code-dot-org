@@ -28,47 +28,62 @@ crwdns50223:0crwdne50223:0
 
 crwdns50224:0crwdne50224:0
 
+<% elsif @country == 'id' %>
+
+crwdns50414:0crwdne50414:0 crwdns50415:0crwdne50415:0 crwdns50416:0crwdne50416:0
+
+crwdns50417:0crwdne50417:0
+
+<% elsif @country == 'jp' %>
+
+## crwdns50514:0crwdne50514:0 <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen></iframe>
+crwdns50515:0crwdne50515:0
+
+crwdns50516:0crwdne50516:0
+
+[crwdns50517:0crwdne50517:0](/files/HourofCodeLessonGuideJapan.pdf)
+
 <% elsif @country == 'uk' %>
 
 # crwdns49387:0crwdne49387:0
 
-## crwdns50225:0crwdne50225:0
+## crwdns50518:0crwdne50518:0
 
-[<img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
+[<%= localized_image('/images/fit-500x300/corporations.png') %>](%= localized_file('/files/corporations.pdf') %)
 
-## crwdns50226:0crwdne50226:0
+## crwdns50519:0crwdne50519:0
 
-crwdns50227:0crwdne50227:0<%= campaign_date('full') %>.
+crwdns50520:0crwdne50520:0<%= campaign_date('full') %>.
 
-**crwdns50228:0crwdne50228:0**
+**crwdns50521:0crwdne50521:0**
 
   * crwdns49392:0crwdne49392:0
   * crwdns49393:0crwdne49393:0
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## crwdns50229:0crwdne50229:0
+## crwdns50522:0crwdne50522:0
 
-crwdns50230:0crwdne50230:0
+crwdns50523:0crwdne50523:0
 
   * crwdns49396:0crwdne49396:0
   * crwdns49397:0crwdne49397:0 
   * crwdns49398:0crwdne49398:0
 
-## crwdns50231:0crwdne50231:0
+## crwdns50524:0crwdne50524:0
 
   * crwdns49400:0crwdne49400:0 crwdns49401:0crwdne49401:0
   * crwdns49402:0crwdne49402:0
 
-## crwdns50232:0crwdne50232:0
+## crwdns50525:0crwdne50525:0
 
-crwdns50233:0crwdne50233:0
+crwdns50526:0crwdne50526:0
 
   * crwdns49405:0crwdne49405:0
   * crwdns49406:0crwdne49406:0
   * [crwdns49407:0crwdne49407:0](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**crwdns50234:0crwdne50234:0**
+**crwdns50527:0crwdne50527:0**
 
 <% else %>
 

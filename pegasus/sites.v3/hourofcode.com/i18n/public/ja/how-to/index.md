@@ -11,7 +11,7 @@ nav: how_to_nav
 ## 1) 登録
 
   * 以下の期間に[Hour of Code](<%= resolve_url('/') %>)のイベントを開催するために、登録を行う: <%= campaign_date('short') %>.
-  * Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
+  * あなたの[Hour of Codeのイベント](<%= resolve_url('/promote') %>)を宣伝して、他の人を巻き込む。
 
 ## 2) 以下の、ビデオを視聴する <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) チュートリアルを選択する:
@@ -43,7 +43,7 @@ Hour of Codeは、インターネットに接続されたコンピュータで�
 **以下の映像を見せることも非常に効果的です:**
 
   * オリジナルのCode.orgはビル・ゲイツ、マーク・ザッカーバーグ、NBAスターのクリス・ボッシュが出演されているビデオをリリースしています。 (それらは [1 分](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 分](https://www.youtube.com/watch?v=nKIu9yen5nc), そして[9分](https://www.youtube.com/watch?v=dU1xS07N-FA) バージョンがあります。)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * [Hour of Code 2015年度版のビデオ](https://www.youtube.com/watch?v=7L97YMYqLHc)か、<% if @country == 'uk' %> [2013年度版のビデオ](https://www.youtube.com/watch?v=FC5FbmsH4fw)をみる。 <% else %> <% end %>
   * [アメリカのオバマ大統領が生徒たちにコンピュータサイエンスを学ぶよう呼びかけてる映像もあります。](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * その他の映像は[こちら](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -51,9 +51,9 @@ Hour of Codeは、インターネットに接続されたコンピュータで�
 
   * なぜ、コンピュータが我々の生活に大きなインパクトを与えているのか、男の子も女の子も興味を持つ分野の実例を交えて（例えば、コンピュータが医療の分野でどの様に使われているのか、人々を助けるためにどんな役割を担っているのか、もしくは人々を国境を超えてつなげるためにどんなアプリケーションが使われているのか）説明してみましょう。
   * 普段のクラスで、コンピュータが使われているシーンをリストアップしてみましょう。
-  * 女の子にコンピュータサイエンスに対する興味を持たせる方法を、<a
+  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
-**Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
+**もう少し詳しく知りたいですか？**[こちらのレッスンプラン](/files/EducatorHourofCodeLessonPlanOutline.docx)をダウンロードすることをお勧めします。.
 
 **もっと多くのアイデアがほしい？** 経験豊富な先生達の[ベストプラクティス](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)を見てみましょう。
 
@@ -93,7 +93,7 @@ Hour of Codeは、インターネットに接続されたコンピュータで�
 ## 7) 祝う
 
   * [認定書](<%= resolve_url('https://code.org/certificates') %>)を印刷して、配布しましょう。
-  * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
+  * [Hour of Codeをやったよ！](<%= resolve_url('/promote/resources#stickers') %>)のステッカーを印刷して配布する。
   * Hour of Codeのイベントの様子を撮影した写真や映像をソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグを使って、 @codeorgに連絡をすれば、あなたの取り組みをハイライトすることができます！
 
 [col-33]
@@ -120,7 +120,7 @@ Hour of Codeは、インターネットに接続されたコンピュータで�
 
 ## Hour of Codeに関する先生向けのその他の資料:
 
-  * Use this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx) to organize your Hour of Code.
+  * まずは、[こちらのレッスンプラン](/files/EducatorHourofCodeLessonPlanOutline.docx)をダウンロードしてみることをお勧めします。
   * 過去にHour of Codeを開催した先生方の[ベストプラクティス](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)を見てみましょう。 
   * [先生方向けのオンラインレッスン](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)に出席してみましょう。.
   * [Hour of Codeの先生向け掲示板](http://forum.code.org/c/plc/hour-of-code)で、アドバイスをもらったり、他の先生からのサポートを得ることができます。 <% if @country == 'us' %>

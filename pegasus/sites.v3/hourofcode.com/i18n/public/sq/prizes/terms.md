@@ -10,19 +10,15 @@ nav: prizes_nav
 
 # Shpërblime - termat dhe kushtet
 
-## Hapësira per Dropbox apo Skype
+## Amazon.com, iTunes and Windows Store credit:
 
-Hapësira 10GB e Dropbox apo vlera 10$ ne Skype është e kufizuar për shkollat deri ne klase te 12-të, mësimdhënësit, grupet rinore të shkolles dhe organizatat shkollore. 10 GB hapësirë në llogarinë e Dropbox, dhe haoësirat shtësë skadojnë 1 vit pasi përdoruesi aplikon kreditet në Dropbox. Organizatori ka vetëm një mundësi për rikthim të krediteve. Shënim: nëse ti ke rikthyer kreditet e 10 GB Dropbox, ti mund të aplikosh kodin e ri në një llogari të *re * ose të zgjedhësh kreditet e Skype si dhuratë.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Organizatori ka vetëm një mundësi për rikthim të krediteve.
 
-Çdo organizator duhet të regjistrohet në Orën e Kodimit për të siguruar hapësirë në DropBox ose në Skype. Nëse shkolla juaj është pjesëmarrëse e Orës së Kodimit, çdo institucion mësimor duhet të regjistrohet për tu kualifikuar si organizator.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Nëse shkolla juaj është pjesëmarrëse e Orës së Kodimit, çdo institucion mësimor duhet të regjistrohet për tu kualifikuar si organizator.
 
-Code.org do të kontaktoj çdo organizator pas seancave të Orës së Kodimit (Dhjetor 8-14) me udhëzimet rikuperimin e hapësires në Dropbox dhe Skype.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
-
-## Komunikim përmes videos me mysafirin e ftuar:
-
-Shpërblime të dedikuara vetëm për nxënësit deri në klasë të 12-të në Shba dhe Kanada. Për t'u kualifikuar, regjistro klasën tuaj jo më larg se 2 nëntor, 2015. Code.org do të përzgjedh klasën fituese, përcaktoje kohën kur të realizohet komunikim përmes web-it, dhe do të koordinojë mësimdhënësit për të përcaktuar detajet tjera teknologjike. Jo e gjithë shkolla juaj duhet të aplikoje për të kandiduar për shpërblim. Si shkollat publike dhe ato private kualifikohen për të fituar shpërblim.
 
 ## Set laptopësh për klasën (ose $10,000 për mjete tjera teknologjike):
 

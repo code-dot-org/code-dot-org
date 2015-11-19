@@ -105,21 +105,39 @@ Teachers being **paid directly by Code.org** can select from the following payme
 <a id="deadline"></a>
 ### What are the deadlines for online PD?
 
-**Phase 1 and Phase 2** online PDs are due on **9/7/2015**. Use this tutorial to make sure you have [completed both Phase 1 and Phase 2](#complete) before Monday, September, 7th 2015. 
-  
+**Phase 1 and Phase 2 online PD** 
+<br /> 
+Due: 9/7/2015 
 <br />
-**Phase 3** online PD due dates vary by program. We recommend that you complete these academic year online PDs before/while you are implementing the respective curriculum. Payments for the Phase 3: Academic Year Development online work will be pulled twice during the year - February 1st (for work completed before January 31st) and July 1st (for work completed before June 30th). 
+Use [this tutorial](#complete) to make sure you completed both Phase 1 and Phase 2. 
+<br />
+  
+**Phase 3 online PD**
+<br />
+We recommend that you complete Phase 3: Academic Year Development online PD courses before you implement the respective curriculum. Payments for Phase 3: Academic Year Development online PD will be pulled twice during the year - February 1st (for work completed before January 31st) and July 1st (for work completed before June 30th). 
 <br /><br />
-See the table below for your online PD details: 
-<br /> <br />
+Due dates vary by program (see below). Add these launch dates and due dates to your calendar to best coordinate your online professional development and classroom implementation.<br /><br />
+**High School online PD details**<br />
 
-|Program |  Part 1  |  Part 2  |  Part 3    |  Part 4    |  Part 5    |
-| ------------ | :---------- | :--------------- | :--------------- | :------------- | :-------------- |
-|**CS in Algebra** | **Launch**: 2-4 weeks prior to Phase 3A in-person workshop <br /> **Due**: Prior to Phase 3A in-person workshop | **Launch**: The week after Phase 3A in-person workshop <br /> **Due**: June 30th | **Launch**: May (date TBD) <br /> **Due**: June 30th |
-|**CS in Science** | **Launch**: 2-4 weeks prior to Phase 3A in-person workshop <br /> **Due**: Prior to Phase 3A in-person workshop | **Launch**: The week following your Phase 3A in-person workshop <br /> **Due**: June 30th | **Launch**: 2-4 weeks prior to Phase 3B <br /> **Due**: Prior to Phase 3B in-person workshop |
-|**CSP** | **Launch**: October 6th <br /> **Due**: Prior to Phase 4: Summer Wrap-up | **Launch**: November 3rd <br /> **Due**: Prior to Phase 4: Summer Wrap-up | **Launch**: December 1st <br /> **Due**: Prior to Phase 4: Summer Wrap-up | 
-|**ECS** | **Unit 2 Launch**: October 6th <br /> **Due**: June 30th | **Unit 3 Launch**: November 3rd <br /> **Due**: Prior to Phase 4: Summer Wrap-up | **Unit 4 Launch**: December 1st <br /> **Due**: Prior to Phase 4: Summer Wrap-up | **Unit 5 Launch**: February 2nd <br /> **Due**: Prior to Phase 4: Summer Wrap-up | **Unit 6 Launch**: March 1st <br /> **Due**: Prior to Phase 4: Summer Wrap-up |
- 
+|  ECS | 
+| :---------- | 
+| Due: All units are due before your Phase 4: Summer Wrap-up, and no later than June 30th. <br />Launches:<br />• Unit 2: October 6th<br />• Units 3 & 4: November 3rd<br />• Unit 5: February 2nd<br />• Unit 6: March 1st|
+
+| CS Principles | 
+|:---------- |
+| Due: All units are due before your Phase 4: Summer Wrap-up, and no later than June 30th. <br />Launches: <br />• Unit 2: October 6th<br />• Unit 3: Part 1 on November 3rd, Part 2 on November 24th<br />• Unit 4: Early February<br />• Unit 5: Early March |
+
+<br />
+**Middle School online PD details**<br />
+
+| CS in Algebra |
+|:---------------- |
+| *Part 1: Phase 3A pre-work* <br />• Launch: 2-4 weeks before your Phase 3A in-person workshop <br />• Due: Before your Phase 3A in-person workshop <br /><br />*Part 2: Phase 3 development work* <br />• Launch: Monday following your Phase 3A in-person workshop <br />• Due: June 30th <br /><br />*Part 3: Reflection*<br />• Launch: May (exact date TBD) <br />• Due: June 30th |
+
+| CS in Science |
+|:------------- |
+|*Part 1: Phase 3A pre-work* <br />• Launch: 2-4 weeks before your Phase 3A in-person workshop <br />• Due: Before your Phase 3A in-person workshop <br /><br />*Part 2: Phase 3A post-work* <br />• Launch: Monday following your Phase 3A in-person workshop <br />• Due: June 30th <br /><br />*Part 3: Phase 3B pre-work* <br />• Launch: 2-4 weeks before your Phase 3B in-person workshop <br />• Due: Before your Phase 3B in-person workshop
+
 
 
 [**Back to the top**](#top)
@@ -160,7 +178,7 @@ Our general rule is you will not go through PD unless you are teaching the cours
 
 ### How do I navigate my Online PD? How do I check my progress?
 
-Your Online PD course appears in your Code Studio (see image 1). To get to this page, click on the orange button in the top right corner. Select Code Studio from the dropdown. Select your online PD course - that brings you to your progress page (see image 2). Pay attention to the name of the course you are completing!
+Your Online PD courses live in Code Studio, our learning platform (see image 1 below). To get to this page, click on the orange button in the top right corner. Select Code Studio from the dropdown. Select your online PD course - that brings you to your progress page (see image 2). Pay attention to the name of the course you are completing!
 
 [**Back to the top**](#top)
 <br/>

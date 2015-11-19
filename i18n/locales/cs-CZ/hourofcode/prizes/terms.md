@@ -8,19 +8,15 @@ title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: prizes_nav
 
 # Ceny - podmínky
 
-## Dropbox prostor nebo kredit na Skypu:
+## Amazon.com, iTunes and Windows Store credit:
 
-10 GB místa na Dropboxu nebo 10 dolarů Skype kreditu vyhrazené pro K-12 učitelský sbor, pedagogy mimoškolních klubů a vzdělávacích organizací. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Omezení na jednu odměnu na organizátora. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Omezení na jednu odměnu na organizátora.
 
-Každý pořadatel se musí zaregistrovat na akci Hodina kódu, aby získal místo na Dropboxu nebo Skype kredit. Jestli-li se vaše celá škola zúčastní Hodiny kódu, každý pedagog se musí jednotlivě zaregistrovat jako organizátor, aby získal právo na cenu.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Jestli-li se vaše celá škola zúčastní Hodiny kódu, každý pedagog se musí jednotlivě zaregistrovat jako organizátor, aby získal právo na cenu.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
-
-## Video chat s pozvaným řečníkem:
-
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Sada notebooků (nebo pro jiné technologie za 10 000 dolarů) pro třídu:
 

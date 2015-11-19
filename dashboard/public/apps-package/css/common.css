@@ -144,6 +144,57 @@ div.droplet-palette-group-header-selected.orange {
 .share-code-spacer {
   min-height: 25px; }
 
+button.arrow {
+  border: 1px solid #FFA000;
+  background-color: #FFA000;
+  color: #fff;
+  margin-left: 5px;
+  margin-right: 0px;
+  display: none; }
+
+button.arrow > img {
+  opacity: 1;
+  vertical-align: text-bottom; }
+
+button.arrow:focus {
+  outline-style: none; }
+
+button.arrow:disabled {
+  border: 1px solid #C7C7C7;
+  background-color: #C7C7C7; }
+
+#soft-buttons {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -5px;
+  -webkit-touch-callout: none; }
+  #soft-buttons.soft-buttons-none {
+    display: none; }
+  #soft-buttons.soft-buttons-compact {
+    margin-left: 0; }
+    #soft-buttons.soft-buttons-compact button {
+      margin: 0; }
+
+.soft-buttons-1 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 51px; }
+
+.soft-buttons-2 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 102px; }
+
+.soft-buttons-3 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 153px; }
+
+.soft-buttons-4 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 204px; }
+
 #codeTextbox {
   position: absolute;
   left: 0px;
@@ -177,7 +228,11 @@ html[dir='rtl'] #codeWorkspace {
   border: none;
   border-top: 1px solid #ddd; }
 
-#codeWorkspace.readonly .blocklySvg, #codeWorkspace.readonly .droplet-main-scroller, #codeWorkspace.readonly .ace_scroller, #codeWorkspace.dimmed .blocklySvg, #codeWorkspace.dimmed .droplet-main-scroller, #codeWorkspace.dimmed .ace_scroller {
+#codeWorkspace.readonly .blocklySvg,
+#codeWorkspace.readonly .droplet-main-scroller,
+#codeWorkspace.readonly .ace_scroller, #codeWorkspace.dimmed .blocklySvg,
+#codeWorkspace.dimmed .droplet-main-scroller,
+#codeWorkspace.dimmed .ace_scroller {
   background-color: rgba(0, 0, 0, 0.1); }
 
 .ace-chrome .ace_marker-layer .ace_error {
@@ -344,8 +399,6 @@ html[dir='rtl'] #codeWorkspace {
     max-width: 200px; }
   .small-footer-base.responsive {
     max-width: 200px; }
-    .small-footer-base.responsive small {
-      float: left; }
   #codeWorkspace {
     left: 200px; }
   html[dir='rtl'] #codeWorkspace {
@@ -363,7 +416,13 @@ html[dir='rtl'] #codeWorkspace {
     transform: scale(0.5); }
   .bee-counter-text {
     font-size: 32px;
-    stroke-width: 2px; } }
+    stroke-width: 2px; }
+  #soft-buttons {
+    margin-left: 0; }
+    #soft-buttons button {
+      margin: 0; }
+  .small-footer-base.responsive small {
+    float: left; } }
 
 /* Buttons */
 button, label.img-upload {
@@ -595,6 +654,36 @@ input[type="radio"] {
   padding: 5px 1em;
   font-size: large; }
 
+#puzzleRatingButtons hr {
+  border-top: 2px solid #ccc; }
+
+#puzzleRatingButtons p {
+  float: left;
+  font-size: 16px;
+  color: #949ca2;
+  margin-right: 10px; }
+
+#puzzleRatingButtons svg {
+  pointer-events: none; }
+
+#puzzleRatingButtons .puzzle-rating-btn {
+  fill: #949ca2;
+  padding: 0 5px;
+  cursor: pointer;
+  display: inline-block; }
+  #puzzleRatingButtons .puzzle-rating-btn#like:hover {
+    fill: #333333; }
+  #puzzleRatingButtons .puzzle-rating-btn#like.enabled {
+    fill: #FF3014; }
+  #puzzleRatingButtons .puzzle-rating-btn#like.enabled:hover {
+    fill: #7F150A; }
+  #puzzleRatingButtons .puzzle-rating-btn#dislike:hover {
+    fill: #4D4D4D; }
+  #puzzleRatingButtons .puzzle-rating-btn#dislike.enabled {
+    fill: #0094CA; }
+  #puzzleRatingButtons .puzzle-rating-btn#dislike.enabled:hover {
+    fill: #00647F; }
+
 /* Instructions. */
 #bubble {
   color: black;
@@ -615,6 +704,26 @@ input[type="radio"] {
 
 #prompt-cell {
   vertical-align: top; }
+
+#prompt2 {
+  font-size: 12px;
+  color: #5b6770; }
+
+.modal-content .instructionsImage {
+  height: 35px;
+  vertical-align: text-bottom; }
+
+.modal-content .instructions2 .instructionsImage {
+  height: 24px;
+  vertical-align: text-bottom; }
+
+#prompt-table .instructionsImage {
+  height: 35px;
+  vertical-align: text-bottom; }
+
+#prompt-table #prompt2 .instructionsImage {
+  height: 20px;
+  vertical-align: text-bottom; }
 
 #ani-gif-preview-wrapper {
   display: inline-block;
@@ -1014,7 +1123,7 @@ input[type="radio"] {
   .sharing div#phone-charges {
     font-size: 10px;
     margin-top: 0px;
-    color: red; }
+    color: #c00; }
 
 .run26 {
   width: 26px;

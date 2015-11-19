@@ -6,6 +6,10 @@ nav: pd2_nav
 
 # Durham Professional Development
 
+- [I'm attending Exploring Computer Science PD](#ecs)
+- [I'm attending Counsleor/Administrator PD](#counselor-admin)
+
+
 
 <a id="ecs"></a>
 
@@ -42,13 +46,14 @@ Quarter 4: Saturday, April 30, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**September 12th Location**
+**November 14th Location**
 
-American Underground @ American Tobacco Campus<br/>Basement Level Classroom<br/>
-318 Blackwell Street<br/>
-Durham, NC 27701
+[Washington Duke Inn & Golf Club <br/>
+Forest Room<br/>
+3001 Cameron Boulevard<br/>
+Durham, NC 27705](https://www.google.com/maps/place/Washington+Duke+Inn+%26+Golf+Club/@35.9928247,-78.9496342,17z/data=!3m1!4b1!4m2!3m1!1s0x89ace6bee019e98d:0x35f41a712441051c)
 
-Click [here](/images/au-parking.png) for parking instructions
+
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -65,6 +70,57 @@ Water
 
 More info coming soon!
 
+
+[**Back to the top**](#top)
+
+<a id="counselor-admin"></a>
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching.
+
+### Counselors##
+
+**Save the date**
+
+Wednesday, November 18, 2015 <br/>
+8:00am - 10:00am
+
+
+**Location**
+
+[The School for Creative Studies<br/>
+Room Cybrary<br/>
+5001 Red Mill Rd<br/>
+Durham, NC 27704](https://www.google.com/maps/place/The+School+for+Creative+Studies/@36.0721,-78.8244797,17z/data=!4m7!1m4!3m3!1s0x89acfd446210acb7:0xe5de373b53919c77!2s5001+Red+Mill+Rd,+Durham,+NC+27704!3b1!3m1!1s0x0000000000000000:0xbd5ab883c5216002)
+
+Free parking is available in the lot in front of the building. Please only use the unmarked spots.
+
+**What to bring**
+
+Snacks
+<br/>
+Water
+
+### Administrators##
+
+**Save the date**
+
+Wednesday, November 18, 2015 <br/>
+11:00am - 1:00pm
+
+**Location**
+
+[The School for Creative Studies<br/>
+Room 228<br/>
+5001 Red Mill Rd<br/>
+Durham, NC 27704](https://www.google.com/maps/place/The+School+for+Creative+Studies/@36.0721,-78.8244797,17z/data=!4m7!1m4!3m3!1s0x89acfd446210acb7:0xe5de373b53919c77!2s5001+Red+Mill+Rd,+Durham,+NC+27704!3b1!3m1!1s0x0000000000000000:0xbd5ab883c5216002)
+
+**What to bring**
+
+Snacks
+<br/>
+Water
 
 [**Back to the top**](#top)
 

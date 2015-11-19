@@ -19,6 +19,7 @@ ja:
   header_menu_promote: 宣伝する
   company_4-H: 4-H 青少年クラブ
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: ボーイズ・アンド・ガールズ・クラブ・オブ・アメリカ
   company_bsusa: ボーイスカウトオブアメリカ
   company_cgcs: Council of the Great City Schools
@@ -124,6 +125,7 @@ ja:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -145,6 +147,22 @@ ja:
   prizes_brilliant: 素晴らしいプロジェクト用に 2000 ドルが各県と各郡一校ずつに贈られます
   prizes_actua: カナダ全土15 の学校には、Actuaメンバーの一人によるSTEM ハンズオンワーク ショップ 2回分の権利が手に入ります。
   prizes_details: 詳細
+  nav_back_to_resources: 資料に戻る
+  how_to_nav_educators: 教育関係者向け
+  how_to_nav_after_school: 課外活動関係者向け
+  how_to_nav_parents: 保護者向け
+  how_to_nav_public_officials: 公的関係者向け
+  how_to_nav_districts: 地域の方向け
+  how_to_nav_assemblies: 全校でのイベント向け
+  how_to_nav_organizations: 企業・その他組織の方向け
+  how_to_nav_companies: 企業の方向け
+  how_to_nav_afterschool_educators: 放課後・課外教育関係者向け
+  how_to_nav_volunteers: ボランティアの方向け
+  prizes_nav_title: 粗品
+  prizes_nav_home: 全ての粗品
+  prizes_nav_hardware: ハードウェア系の粗品への申し込み
+  prizes_nav_terms: 利用規約
+  prizes_nav_faq: FAQ
   prizes_nav_dc: 謎のワシントン DC 旅行
   prizes_nav_technology: あなたの学校のための 10,000 ドル分の製品やサービス
   prizes_nav_video_chat: スーパーハッカーとのビデオチャット
@@ -152,26 +170,14 @@ ja:
   prizes_nav_brilliant: $2,000 の華麗な研究プロジェクト
   prizes_nav_actua: Actua ワーク ショップ
   prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: 利用規約
-  prizes_nav_faq: FAQ
-  nav_back_to_resources: 資料に戻る
-  how_to_nav_educators: 教育関係者向け
-  how_to_nav_after_school: 課外活動関係者向け
-  how_to_nav_parents: 保護者向け
-  how_to_nav_public_officials: 公的関係者向け
-  how_to_nav_districts: 地域の方向け
-  how_to_nav_assemblies: 全校集会向け
-  how_to_nav_organizations: 企業・その他組織の方向け
-  how_to_nav_companies: For companies
-  how_to_nav_afterschool_educators: 放課後・課外教育関係者向け
-  prizes_nav_title: 粗品
-  prizes_nav_home: 全ての粗品
-  prizes_nav_hardware: Hardware prize signup
+  prizes_header: すべてのイベント主催者への粗品
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>全ての</i>イベント開催者へは粗品として、<b>10ドル相当のAmazon.comか、iTunes、Windowsストア</b>のギフトカードが贈られます。'
   whats_next_header: 次はどうすれば良い？
   whats_next_description: "イベントの運営を助ける資料をお送りします。2015年バージョンの新しいチュートリアルは、もうすぐ公開されますので、今しばらくお待ちください。どんなブラウザでも、どんなスマートフォンでも、またはコンピュータすら必要ありません！<a href='http://code.org/learn'>今のチュートリアルはこちら</a>"
-  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
-  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>Hour of Codeのイベント開催ガイド</a>"
+  whats_next_promote: "<a href='/promote'>Hour of Codeを宣伝</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>Hour of Codeの宣伝方法</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>どうやって宣伝すれば良い？</a>"
   whats_next_try: "<a href='http://code.org/learn'>まずはチュートリアルを試してみる</a>"
   whats_next_try_button: チュートリアルを試してみる
@@ -244,10 +250,13 @@ ja:
   map_header: '世界中で、#個ものHour of Codeが行われています'
   see_all_events: すべてのイベントを見る
   map_header_company: '# 会社主催'
-  map_header_country: '# in %{country}'
+  map_header_country: 'そのうち # 個は%{country} で行われています。'
   map_search_placeholder: Hour of Codeのイベントを検索する
   map_search_search: 検索
   map_search_reset: リセット
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Hour of Codeがやってきます
   meta_tag_og_description: Hour of Codeは、すでに180 以上の国々及び30 以上の言語で数千万人の生徒を対象に行われた、世界的な運動です。
   meta_tag_twitter_title: Hour of Codeがやってきました
@@ -274,8 +283,8 @@ ja:
   hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
   hardware_prizes_form_number_students_label: 参加した生徒数
   hardware_prizes_form_number_students_placeholder: 生徒数
-  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
-  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
+  hardware_prizes_form_technology_plan_label: コンピュータサイエンスの授業を学校中で広めるために、どのようにテクノロジーを使いますか？
+  hardware_prizes_form_technology_plan_placeholder: 新しいテクノロジーを利用するプランを建てる
   hardware_prizes_form_plan_file_label: Hour of Codeの物流計画をアップロードします。
   hardware_prizes_form_plan_file_description: 'あなたの学校において、Hour of Codeを行う為にどのように生徒達をまとめるか計画している簡単なスケジュールを提出してください。サンプルプランの参照： #PDF ＃ |#Word ＃'
   hardware_prizes_form_submit_label: 提出
@@ -289,16 +298,16 @@ ja:
     何か決まった<i>時間</i>にやる必要があるのですか？違います。あなたは、この期間の間にいつでもHour of Codeを行うことができます。(もしこの期間にやることが難しい場合、前後の期間にやっていただいても問題ありません。)
   hoc_faq_why_cs_q: なぜコンピュータサイエンスなのですか？
   hoc_faq_why_cs_a: "<i>すべての</i> 生徒にコンピュータサイエンスを学ぶ機会があるべきです。それはなぜなら、問題解決のスキルや、論理的思考、そして創造性の育成に役立つからです。早く始める事により生徒には、21 世紀で成功するための能力が備われます。<a href='%{codeorg_url}'>%{partner_url}</a> ここで、もっと詳しい統計を参照してください。"
-  hoc_faq_how_participate_q: どうすればHour of Codeに参加できますか?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_q: どうすればHour of Codeの運動に参加できますか?
+  hoc_faq_how_participate_a: "<a href='/how-to'>イベント開催ガイド</a>を見て、プランを立て始めましょう。Hour of Codeのイベントは、学校や地域コミュニティー、学校での課外活動等様々な場所で簡単に開催することができます。もしくは、%{campaign_date} の期間内にご自分で試していただいても問題ありません！"
   hoc_faq_behind_hoc_q: Hour of Codeは誰が運営しているのですか?
   hoc_faq_behind_hoc_a: "Hour of Codeは<a href='http://code.org'>Code.org</a>により運営されています。この非営利団体は、より多くの学校がHour of Codeに参加する事、女性の参加を増やす事そして、マイノリティーの学生にコンピュータサイエンスへの参加を拡大させることに専念しています。 <a href='%{codeorg_url}/about/partners'>前例にないパートナー達</a>が一緒になってHour of Codeを支援してくれています。 &mdash; マイクロソフト, アップル、アマゾン、そして、大学の理事会などを含みます。"
   hoc_faq_host_q: プログラミングについて知らなくても、イベントを開催できますか？
-  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
+  hoc_faq_host_a: "もちろんです。Hour of Codeのチュートリアルは、生徒が自分のペースで一人で進められるようになっています。イベントを開催するにあたってあなたがやるべきことは<a href='%{codeorg_url}/learn'> 現在のチュートリアルを試してみる</a>ことだけです。後は私たちのチュートリアルに任せてください。それではいますぐ、<a href='/resources/how-to'> How to ガイド</a> を読んでイベントを計画しましょう！"
   hoc_faq_need_computers_q: 参加者の人数分のコンピュータが必要ですか？
   hoc_faq_need_computers_a: "いいえ、必ずしもそうではありません。Hour of CodeのチュートリアルはPC、スマートフォン、タブレットで動きますし、そもそもいくつかの章はこれらが一切不要です。<p><i>ここでは、参加者の人数分のコンピュータがない場合のいくつかのオプションを紹介します：</i> <br><ul><li><b>ペアでの作業: </b>ある研究では、コンピュータを共有して一緒に複数の生徒が勉強する <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> ペア ・ プログラミング</a>は、一人で学ぶよりも学習効果が高いことがわかっています。これで、同じコンピュータの台数でも生徒の数を倍にできますね。<li><b>プロジェクタを使用: </b>もし、インターネットに接続された一台のコンピューターと、プロジェクターがあればグループ全体で一緒にHour of Codeを行うことができます。ビデオの部分は一緒に見て、プログラミングをする部分は交代でやってみましょう。<li><b>アンプラグド: </b>コンピュータが一台もない？安心してください。先ほども述べたとおり、いくつかの章ではコンピュータが一切不要です。</ul>"
   hoc_faq_international_q: 日本でHour of Codeに参加もしくはイベントを開催するにはどうしたら良いでしょう？
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
+  hoc_faq_international_a: "誰でも、どこでもHour of Codeのイベントを開催することができます。昨年も、世界中の生徒がHour of Codeの取り組みに参加しました。2015年は、あなたの番です。<a href='/promote'>もっと知る</a>。"
   hoc_faq_tutorial_q: Hour of Codeのチュートリアルを作成するにはどうしたら良いですか？
   hoc_faq_tutorial_a: "もしあなた自身がチュートリアルを提供する「チュートリアルパートナー」になる事に興味がありましたら、<a href='/tutorial-guidelines'> 当社のガイドラインと手順を参照してください</a> 。現在提供しているチュートリアルより多くの、より魅力的でバラエティに富んだチュートリアルを提供したいと思っています。"
   hoc_faq_more_questions_q: それでもまだ疑問がありますか?
@@ -311,7 +320,7 @@ ja:
   hoc_faq_high_school_a: "年齢は関係なしに、アングリーバードまたはアナと雪の女王などの <a href='%{codeorg_url}/learn'> %{partner_url}/learn </a> にある初心者用チュートリアルから始めることををお勧めします。高校生だとこれらを１つを30 分程で終了することができるはずです。その後で、そしてカーンアカデミーやCodeHSなどのJavaScript で行うより高度なチュートリアルを試すことをお勧めしています。"
   hoc_faq_scratch_q: Hour of CodeでScratchをやりたいと思っています。もし生徒がノートパソコンでなくiPadを持っていたらどうしたら良いでしょう？
   hoc_faq_scratch_a: "タブレットではScratchは実行できません。もし生徒が小さいのならScratchJr iPadアプリを試してみることをお勧めします。もしくは<a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>で、Code.org、Tynker、LightbotやCodeSparkから提供されているiPadでできるチュートリアルを探すことをお勧めします。"
-  hoc_faq_count_hoc_q: Hours of Codeの参加者の数はどうやって測っていますか？
+  hoc_faq_count_hoc_q: Hour of Codeの参加者の数はどうやって測っていますか？
   hoc_faq_count_hoc_a: "Hour of Code の記録システムでは使用者数は正確に測定されていません。というのも、Hour of Code の参加者の記録時に、固有の生徒の使用者名を正確には数えていないからです。これは、特に、生徒がログインしたり登録しなくても使えるよう配慮されているからです。結果的に、参加者を多めに数えたり、少なめに数えたりしています。 <a href='http://code.org/loc'>詳細はこちら</a>。"
   stats_hoc_2013_image_alt: Hour of Codeの 2013 の統計情報
   stats_growth: 1500 万ユーザーに到達する最速記録でした。
@@ -366,8 +375,9 @@ ja:
   title_how_to_districts: 地域向けのイベント開催ガイド
   title_how_to_events: Hour of Codeのイベント開催ガイド
   title_how_to_organizations: Hour of Codeを組織で開催する方法
-  title_how_to_companies: 'How to host an Hour of Code - Companies'
+  title_how_to_companies: 企業でHour of Codeを開催する方法
   title_how_to_officials: 公的関係者のためのイベント開催ガイド
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: イベント開催ガイド
   title_press_release: 議員向けのHour of Codeのプレスリリース
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code

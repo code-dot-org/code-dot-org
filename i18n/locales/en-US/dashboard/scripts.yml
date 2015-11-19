@@ -182,6 +182,7 @@ en:
           Maze and Bee: crwdns22251:0crwdne22251:0
           Artist Binary: crwdns23312:0crwdne23312:0
           description_audience: crwdns24913:0crwdne24913:0
+          Super Challenge - Variables: crwdns50702:0crwdne50702:0
         Course4pre:
           title: crwdns35290:0crwdne35290:0
           description_short: crwdns22252:0crwdne22252:0
@@ -643,6 +644,11 @@ en:
           Clicker Game: crwdns50317:0crwdne50317:0
           Getting User Input: crwdns50318:0crwdne50318:0
           Variables: crwdns50319:0crwdne50319:0
+          Looping and Random Numbers - Under the Sea: crwdns50703:0crwdne50703:0
+          Multi-screen App: crwdns50704:0crwdne50704:0
+          Variables Conceptorial Fodder: crwdns50705:0crwdne50705:0
+          "Variables: Create, Assign, and Read": crwdns50706:0crwdne50706:0
+          "Variables: Increment, Decrement, Display, and Scope": crwdns50707:0crwdne50707:0
         algebraPD3:
           title: crwdns38396:0crwdne38396:0
           description: crwdns37980:0crwdne37980:0
@@ -1306,3 +1312,16 @@ en:
           Challenge Overview: crwdns49794:0crwdne49794:0
           Complete the Challenge: crwdns49795:0crwdne49795:0
           Share out and Submit: crwdns49796:0crwdne49796:0
+        duino:
+          Experimenting with Arduino stuff: crwdns50708:0crwdne50708:0
+          Basic Circuits: crwdns50709:0crwdne50709:0
+        Special Fun:
+          title: crwdns50710:0crwdne50710:0
+          description_short: crwdns50711:0crwdne50711:0
+          description_audience: crwdns50712:0crwdne50712:0
+          Halloween 2015: crwdns50713:0crwdne50713:0
+        SpecialSeries:
+          title: crwdns50714:0crwdne50714:0
+          description_short: crwdns50715:0crwdne50715:0
+          description_audience: crwdns50716:0crwdne50716:0
+          Halloween 2015: crwdns50717:0crwdne50717:0

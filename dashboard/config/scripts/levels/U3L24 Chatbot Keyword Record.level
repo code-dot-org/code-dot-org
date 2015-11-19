@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -150,7 +149,13 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "instructions": "Use the next level to record your digital assistant's keywords/phrases.",
-    "markdown_instructions": "Now it's time to catch the bugs in your own digital assistant. Your code might be working correctly right now, but you have to be able to **prove** it. Use the next level to record the keywords/phrases that your digital assistant responds to. \r\n\r\nYou will have many chances to add to this record over the next few days. Remember, you will not be able to earn full credit on the digital assistant project without a comprehensive record of your keywords."
+    "markdown_instructions": "Now it's time to catch the bugs in your own digital assistant. Your code might be working correctly right now, but you have to be able to **prove** it. Use the next level to record the keywords/phrases that your digital assistant responds to. \r\n\r\nYou will have many chances to add to this record over the next few days. Remember, you will not be able to earn full credit on the digital assistant project without a comprehensive record of your keywords.",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

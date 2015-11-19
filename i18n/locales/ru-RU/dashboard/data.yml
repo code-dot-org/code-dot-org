@@ -466,6 +466,9 @@ ru:
         alg_15_biggame_update_player: 'Информатика в Алгебре - Большая Игра: Обновление Игрока'
         alg_16_biggame_collision_detection: 'Информатика в Алгебре - Большая Игра: Обнаружение Конфликтов'
         alg_17_sambat_compound_booleans: 'Информатика в Алгебре - Составные Логические значения'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

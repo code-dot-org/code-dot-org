@@ -51,7 +51,7 @@ Eksperienca më e mirë e Orës së Kodimit do të ishte me kompjutera të lidhu
 
   * Shpjego menyrat se si teknologjia ka inpakt në jetën tonë, me shembujt do merren djemtë si dhe vajzat (Flisni rreth aplikacioneve dhe për teknologjit që përdoren për të shpëtuar jetëm që ndryshojnë botën, bashkojnë njerzit, etj).
   * Si klasë, listoni gjëra që përdorin kod në jetë e përditshme.
-  * Shiko [këtu](<%= resolve_url('https://code.org/girls') %>) mënyra se si ta bësh shkencën kompjuterike interesante te vajzat.
+  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 **Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
 

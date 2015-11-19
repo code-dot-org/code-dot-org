@@ -37,6 +37,8 @@ var COOKIE_OPTIONS = {expires: dashboard.clientState.EXPIRY_DAYS, path: '/'};
 dashboard.clientState.reset = function() {
   $.removeCookie('progress', {path: '/'});
   $.removeCookie('lines', {path: '/'});
+  localStorage.removeItem('video');
+  localStorage.removeItem('callout');
 };
 
 /**
@@ -109,4 +111,77 @@ function addLines(addedLines) {
 
   $.cookie('lines', String(newLines), COOKIE_OPTIONS);
 }
+
+/**
+ * Returns whether or not the user has seen a given video based on contents of the local storage
+ * @param videoId
+ * @returns {*}
+ */
+dashboard.clientState.hasSeenVideo = function(videoId) {
+  return hasSeenVisualElement('video', videoId);
+};
+
+/**
+ * Records that a user has seen a given video in local storage
+ * @param videoId
+ */
+dashboard.clientState.recordVideoSeen = function (videoId) {
+  recordVisualElementSeen('video', videoId);
+};
+
+/**
+ * Returns whether or not the user has seen the given callout based on contents of the local storage
+ * @param calloutId
+ * @returns {boolean}
+ */
+dashboard.clientState.hasSeenCallout = function(calloutId) {
+  return hasSeenVisualElement('callout', calloutId);
+};
+
+/**
+ * Records that a user has seen a given callout in local storage
+ * @param calloutId
+ */
+dashboard.clientState.recordCalloutSeen = function (calloutId) {
+  recordVisualElementSeen('callout', calloutId);
+};
+
+/**
+ * Private helper for videos and callouts - persists info in the local storage that a given element has been seen
+ * @param visualElementType
+ * @param visualElementId
+ */
+function recordVisualElementSeen(visualElementType, visualElementId) {
+  var elementSeenJson = localStorage.getItem(visualElementType) || '{}';
+
+  try {
+    var elementSeen = JSON.parse(elementSeenJson);
+    elementSeen[visualElementId] = true;
+    localStorage.setItem(visualElementType, JSON.stringify(elementSeen));
+  } catch (e) {
+    if (e.name === "QuotaExceededError") {
+      return ;
+    }
+    //Something went wrong parsing the json. Blow it up and just put in the new callout
+    var elementSeen = {};
+    elementSeen[visualElementId] = true;
+    localStorage.setItem(visualElementType, JSON.stringify(elementSeen));
+  }
+}
+
+/**
+ * Private helper for videos and callouts - looks in local storage to see if the element has been seen
+ * @param visualElementType
+ * @param visualElementId
+ */
+function hasSeenVisualElement(visualElementType, visualElementId) {
+  var elementSeenJson = localStorage.getItem(visualElementType) || '{}';
+  try {
+    var elementSeen = JSON.parse(elementSeenJson);
+    return elementSeen[visualElementId] === true;
+  } catch (e) {
+    return false;
+  }
+}
+
 })(window, $);

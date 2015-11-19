@@ -14,28 +14,28 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about prizes, new tutorials and other exciting updates. What can you do now?
+Tu faci posibil pentru toti elevii din intreaga lume sa invete o Ora de Programare ce le poate *chimba tot resul vietii*, in timpul campaniei <%= campaign_date('full') %>. Vom afia in curand premiile, noile tutoriale si alte noutati distractive. Ce poti face acum?
 
 ## 1. Răspândește vestea
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Doar ce te-ai alaturat miscarii Hour of Code. Spune-le si prietenilor cu **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Solicită întregii şcoli sa susțină o Oră de Programare
+## 2. Solicită întregii şcoli sa ofere o Oră de Programare
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](%= resolve_url('/prizes/hardware-signup') %) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Trimiteți acest e-mail](%= resolve_url('/promote/resources#sample-emails') %)directorului scolii dvs si astfel provocati fiecare clasa sa se inscrie. <% if @country == 'us' %> O scoala norocoasa din *fiecare* stat U.S. (si Washington D.C.) vor castiga echipamente tehnologice in valoare de 10 000 de dolari. [Inregistreaza-te aici](%= resolve_url('/prizes/hardware-signup') %) pentru a fi eligibil si [**vezi castigatorii de anul trecut.**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
 
 ## 3. Solicită angajatorului tău să se implice
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your manager or company's CEO.
+[Trimite acest e-mail](%= resolve_url('/promote/resources#sample-emails') %)catre manager-ul sau CEO-ul companiei la care lucrați.
 
-## 4. Promote Hour of Code in your community
+## 4. Promovează Hour of Code în comunitatea ta
 
-[Recruit a local group](%= resolve_url('/promote/resources#sample-emails') %)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
+[Recruteaza un grup local](%= resolve_url('/promote/resources#sample-emails') %)- cluburi de fete/baieti, biserici, universitati, grupuri de veterani, sindicatele sau chiar câțiva prieteni. Nu trebuie să fii in şcoală ca să înveţi noi competenţe. Foloseşte aceste [ postere, bannere, stickere, videoclipuri si multe altele](%= resolve_url('/promote/resources') %) pentru evenimentul tau.
 
-## 5. Solicită unui oficial, ales local, sprijinul pentru organizarea Hour of Code
+## 5. Solicită unui oficial ales local sprijinul pentru organizarea Hour of Code
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Trimite acest e-mail](%= resolve_url('/promote/resources#sample-emails') %) catre reprezentantii locali, consiliului local, inspectorilor scolari si invita-i sa iti viziteze scoala in timpul unui eveniment Hour of Code. Acestea te pot ajuta in construirea unei sustineri pentru tehnologia computerelor si programare si dincolo de tutorialele de o ora.
 
 <%= view 'popup_window.js' %>

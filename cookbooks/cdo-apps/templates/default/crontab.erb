@@ -65,15 +65,15 @@ if node['cdo-apps']['daemon']
   end
 
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'process_forms')
-  cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'analyze_hoc_activity')
+  cronjob at:'0 * * * *', do:deploy_dir('bin', 'analyze_hoc_activity')
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'deliver_poste_messages')
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'geocode_hoc_activity')
   cronjob at:'@daily', do:deploy_dir('bin', 'cron', 'ops_data_pull')
 end
 
-# Restart at ~10:00pm PST (~ 5am UTC) as workaround for Rails 4.2 memory leak.
-# We hope to get rid of this with the Ruby 2.2 upgrade.
-cronjob at:"#{rand(5)} 5 * * *", do:'service dashboard upgrade'
+# Restart at ~02:00am PST (~ 9am UTC) as workaround for Rails 4.2 memory leak.
+# We will no longer need this as soon as we complete the Ruby 2.2 upgrade.
+cronjob at:"#{rand(20)} 9 * * *", do:'service dashboard upgrade'
 cronjob at:'45 * * * *', do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
 %>
 #

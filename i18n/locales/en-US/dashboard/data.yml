@@ -464,6 +464,9 @@ en:
         alg_15_biggame_update_player: crwdns36318:0crwdne36318:0
         alg_16_biggame_collision_detection: crwdns36319:0crwdne36319:0
         alg_17_sambat_compound_booleans: crwdns36320:0crwdne36320:0
+        hoc2015_preview_blocks: crwdns50648:0crwdne50648:0
+        hoc2015_preview_typing: crwdns50649:0crwdne50649:0
+        hoc2015_preview_conclusion: crwdns50650:0crwdne50650:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

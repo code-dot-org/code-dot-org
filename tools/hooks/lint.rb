@@ -12,13 +12,16 @@ def filter_grunt_jshint(modified_files)
   modified_files.select { |f| f.end_with?(".js") || f.end_with?(".jsx") }
 end
 
+RUBY_EXTENSIONS = ['.rake', '.rb', 'Rakefile']
 def filter_rubocop(modified_files)
-  modified_rb_files = modified_files.select { |f| f.end_with?(".rb") }
+  modified_rb_rake_files = modified_files.select do |f|
+    RUBY_EXTENSIONS.any? {|ext| f.end_with? ext }
+  end
   modified_ruby_scripts = modified_files.select do |f|
     first_line = File.open(f).first
-    first_line.ascii_only? && first_line.match(/#!.*ruby/)
+    first_line && first_line.ascii_only? && first_line.match(/#!.*ruby/)
   end
-  modified_ruby_scripts + modified_rb_files
+  modified_ruby_scripts + modified_rb_rake_files
 end
 
 def filter_haml(modified_files)

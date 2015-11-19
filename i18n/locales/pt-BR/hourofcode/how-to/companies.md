@@ -10,10 +10,12 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 **Há muitas maneiras de as empresas participarem da Hora do Código e ajudarem a expandir o ensino da ciência da computação. Considere:**
 
-  * Pedir ao seu CEO para enviar um e-mail para toda a empresa enfatizando a importância da ciência da computação e incentivando os funcionários a divulgar. [Veja este e-mail](%= resolve_url('/promote/resources#sample-emails') %)..
+  * Use nosso [kit de ferramentas de marketing](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %) para criar um cronograma de comunicações e compartilhar conteúdos promocionais.
+  * Pedir ao seu CEO para enviar um e-mail para toda a empresa enfatizando a importância da ciência da computação e incentivando os funcionários a divulgar. [Veja este e-mail](%= resolve_url('/promote/resources#sample-emails') %).
   * Organizar um Happy Hour da Hora do Código com seus colegas de trabalho para experimentar os [tutoriais](%= resolve_url('https://code.org/learn') %).
   * Convidar uma turma de alunos ou de outros parceiros sem fins lucrativos para realizar uma Hora do Código no escritório da empresa.
-  * Encouraging **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= resolve_url('https://code.org/volunteer/engineer') %) to be connected with a classroom.
+  * Incentivar os **engenheiros de software** da sua empresa a visitar uma sala de aula local para ajudar a conduzir uma Hora do Código e inspirar os alunos a estudar ciência da computação. Eles podem se [cadastrar](%= resolve_url('https://code.org/volunteer/engineer') %) para se conectar com uma sala de aula.
+  * Para mais instruções sobre como conectar seus funcionários com salas de aula, use nosso [guia para parceiros corporativos](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %)
 
 ## Como sediar um evento da Hora do Código
 
@@ -21,7 +23,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
   * Registre sua [Hora do Código](%= resolve_url('/') %) durante o evento em <%= campaign_date('short') %>.
   * Promova seu evento da [Hora do Código](%= resolve_url('/promote') %) e incentive outras pessoas a organizarem eventos também.
-  * Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= resolve_url('https://code.org/volunteer/engineer') %) to be connected with a classroom.
+  * Incentive os **engenheiros de software** da sua empresa a visitar uma sala de aula local para ajudar a conduzir uma Hora do Código e inspirar os alunos a estudar ciência da computação. Eles podem se [cadastrar](%= resolve_url('https://code.org/volunteer/engineer') %) para se conectar com uma sala de aula.
 
 ## 2) Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Escolha um tutorial:
@@ -57,7 +59,7 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
   * [O vídeo do presidente Obama convidando todos os alunos a aprender ciência da computação](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Encontre outros vídeos inspiradores [aqui](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideias para introduzir sua atividade da Hora do Código:** - Explique de que maneiras a tecnologia interfere em nossas vidas, com exemplos relevantes para meninos e meninas (fale sobre a tecnologia para salvar vidas, ajudar e conectar as pessoas). - Se você trabalha em uma empresa de tecnologia, demonstre produtos divertidos e inovadores nos quais sua empresa está trabalhando. - Se você não trabalha em uma empresa de tecnologia, discuta formas de usar a tecnologia para resolver problemas e atingir objetivos. - Convide engenheiros de software da sua empresa para falar sobre o motivo de terem escolhido estudar ciência da computação e sobre os projetos nos quais eles trabalham. - Veja algumas dicas para deixar as meninas interessadas em ciência da computação [aqui](<%= resolve_url('https://code.org/girls') %>).
+**Ideias para introduzir sua atividade da Hora do Código:** - Explique de que maneiras a tecnologia interfere em nossas vidas, com exemplos relevantes para meninos e meninas (fale sobre a tecnologia para salvar vidas, ajudar e conectar as pessoas). - Se você trabalha em uma empresa de tecnologia, demonstre produtos divertidos e inovadores nos quais sua empresa está trabalhando. - Se você não trabalha em uma empresa de tecnologia, discuta formas de usar a tecnologia para resolver problemas e atingir objetivos. - Convide engenheiros de software da sua empresa para falar sobre o motivo de terem escolhido estudar ciência da computação e sobre os projetos nos quais eles trabalham. - Veja algumas dicas para deixar as meninas interessadas em ciência da computação [aqui](%= resolve_url('https://code.org/girls') %).
 
 ## 6) É hora de programar!
 

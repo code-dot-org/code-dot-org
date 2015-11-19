@@ -4,7 +4,7 @@ title: Privacy Policy
 
 * * *
 
-### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # गोपनीयता नीति
 
@@ -27,7 +27,7 @@ Our Privacy Notice is fueled by our commitment to the following Privacy Principl
   5. Any student academic data provided by school district partners to 3rd party evaluators for the purpose of evaluating our courses in meeting our mission will be anonymous / de-identified (per standard industry practice). 
   6. We strive to provide you with access to and control over the information you give us (as detailed below), and we take the protection of your information very seriously.
 
-## Privacy Notice
+## गोपनीय सूचना 
 
 We are committed to creating a safe and secure environment for learners of all ages on our websites located at <https://code.org>, <https://studio.code.org>, <https://csedweek.org>, <http://computinginthecore.org>, <https://hourofcode.com>, other websites, application programming interface (our “API”), and online services (collectively, our “Website”). Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. As a not-for-profit, 501(c)(3) organization, we use the data we receive only insofar as it helps our mission of providing a great computer science education for every student who wants it. We established ourselves as a not-for-profit organization so that a for-profit motive will not interfere with our mission of providing a trusted educational resource.
 
@@ -245,4 +245,4 @@ We do not disclose any personal information to third parties for marketing purpo
 Please contact Code.org with any questions or comments about this Privacy Notice, your Personal Information, our third-party disclosure practices, or your consent choices by writing us at <http://code.org/contact> or at 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.   
   
   
-[![छवि](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![छवि](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

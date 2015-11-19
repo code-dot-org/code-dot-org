@@ -21,26 +21,41 @@ p > [ **¿Por qué todos града que aprender programar? Participá де ла
  <iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen></iframe>
 <
 
-p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6Wpb-WyQ)
+p > [ **ла Hora del Código en Чили (2 мин)**](https://www.youtube.com/watch?v=vq6Wpb-WyQ)
 
 <% elsif @country == 'ca' %>
 
 ## Видео <iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen></iframe>
 <
 
-p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
+p > [ **се присъедини Нова Скотия за час на код (3 мин)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
+
+<% elsif @country == 'id' %>
+
+Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Desember 2015, kami mengetahui bahwa banyak siswa-siswi Indonesia yang menjalankan prosesi ujian. Untuk alasan ini kami memutuskan untuk menjalankan masa kampanye Hour of Code di Indonesia pada 12 hingga 20 Desember 2015. Kita tetap akan merasakan kemeriahan yang sama dan dengan tujuan yang sama namun dengan kebersamaan yang lebih besar karena akan ada lebih banyak siswa-siswi yang dapat mengikutinya.
+
+Mari bersama kita dukung gerakan Hour of Code di Indonesia!
+
+<% elsif @country == 'jp' %>
+
+## Hour of Code(アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
+
+[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
 
-## Use this handout to recruit corporations
+## Използвайте това изложение, за да ангажирате корпорациите
 
-[<img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
+[<%= localized_image('/images/fit-500x300/corporations.png') %>](<%= localized_file('/files/corporations.pdf') %>)
 
 ## 1) Опитайте уроците:
 
-We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
+Ние ще предложим разнообразие от забавни, дълги около час уроци, създадени от различни партньори. Нови уроци идват за началото на Часът на кодирането преди <%= campaign_date('full') %>.
 
 **Всички уроци на Часът на кодирането:**
 
@@ -53,7 +68,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 Най-добре е Часът на кодирането да се проведе със свързани към Интернет компютри. Но вие не се нуждаете от компютър за всяко дете и дори можете да проведете Часът на кодирането и без компютър.
 
-  * **Преди да започнете урока по програмиране проверете да ли програмата работи.** Уверете се, че звукът и видеото работят.
+  * **Преди да започнете урока по програмиране, проверете дали програмата работи.** Уверете се, че звукът и видеото работят.
   * **Пуснете поздравителната страница, за** да видите какво ще виждат учениците, когато приключат уроците. 
   * **Осигурете слушалки за класа си**, или помолете учениците да си донесат собствени, ако изберете уроци за начинаещи- работете най-добре със звук.
 
@@ -67,7 +82,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 Покажете на учениците вдъхновяващи видео филми за старта на часът на кодирането. Примери:
 
   * Оригиналният стартиращ Code.org клип, с участието на Бил Гейтс, Марк Зукерберг и НБА звезда Крис Бош (има версии за [ 1 минута](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5 минути](https://www.youtube.com/watch?v=nKIu9yen5nc) и [ 9 минути](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
+  * [ Hour of Code 2013 стартиращо видео](https://www.youtube.com/watch?v=FC5FbmsH4fw), или [ Hour of Code 2014 видео](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [Президентът Обама призовава всички ученици да учат компютърни науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Ентусиазирайте учениците си - представете им това интро**

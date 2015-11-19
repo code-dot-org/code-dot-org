@@ -29,7 +29,7 @@ var DesignProperties = module.exports = React.createClass({
   },
 
   render: function() {
-    if (!this.props.element) {
+    if (!this.props.element || !this.props.element.parentNode) {
       return <p>{applabMsg.designWorkspaceDescription()}</p>;
     }
 

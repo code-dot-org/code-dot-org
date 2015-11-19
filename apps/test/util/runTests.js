@@ -72,11 +72,13 @@ exec(command, function (err, stdout, stderr) {
     debug: process.env.mocha_debug,
     invert: process.env.mocha_invert,
     reporter : 'spec',
-    timeout: 10000,
+    timeout: 14000,
     phantomjs: which('phantomjs'),
-    transform: 'ejsify'
+    transform: 'ejsify',
+    'web-security': false
   })
  .on('error', function () {
+   console.trace();
    process.exit(1);
   })
   .bundle()

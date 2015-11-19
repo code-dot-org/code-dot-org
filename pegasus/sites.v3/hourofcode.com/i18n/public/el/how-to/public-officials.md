@@ -8,13 +8,35 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-## How to bring the Hour of Code to your entire community.
+# How to bring the Hour of Code to your entire community.
 
-### Φέρε κάθε σχολείο να συμμετάσχει, κάθε σπουδαστή να μάθει!
+[col-33]
 
-  1. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/how-to') %>) and in **each state**, one participating school will win **$10,000 in technology**!
+![](/images/fit-275/highlight-obama.png)
 
-  2. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/how-to-event') %>) for a sample run of show, media outreach kit and other event-planning resources. Η διοργάνωση μιας εκδήλωσης είναι ένας πολύ καλός τρόπος για την προώθηση της Ώρας του Κώδικα και την αύξηση της συμμετοχής.
+[/col-33]
+
+[col-33]
+
+&nbsp;&nbsp;&nbsp;&nbsp;![](/images/fit-258/checkprize.jpg)
+
+[/col-33]
+
+[col-33]
+
+&nbsp;&nbsp;&nbsp;&nbsp;![](/images/fit-248/dan.jpg)
+
+[/col-33]
+
+<p style="clear:both">
+  &nbsp;
+</p>
+
+## Φέρε κάθε σχολείο να συμμετάσχει, κάθε σπουδαστή να μάθει!
+
+  1. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/prizes') %>) and in **each state**, one participating school will win **$10,000 in technology**!
+
+  2. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/event') %>) for a sample run of show, media outreach kit and other event-planning resources. Η διοργάνωση μιας εκδήλωσης είναι ένας πολύ καλός τρόπος για την προώθηση της Ώρας του Κώδικα και την αύξηση της συμμετοχής.
 
   3. **Attend an event during Computer Science Education Week (<%= campaign_date('short') %>).** [Find classrooms and schools](<%= resolve_url('/events') %>) participating in your district, city or state.
 

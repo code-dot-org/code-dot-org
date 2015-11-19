@@ -19,6 +19,7 @@ ur:
   header_menu_promote: فروغ دیں
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -124,6 +125,7 @@ ur:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -145,15 +147,6 @@ ur:
   prizes_brilliant: ہر صوبے اور علاقہ کا ایک اسکول، ایک شاندار پروجیکٹ پیش کرنے پر 2000 $ بطور انعام وصول کرے گا
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
   prizes_details: تفصیلات
-  prizes_nav_dc: واشنگٹن ڈی سی کا ایک مسٹری ٹرپ (مہماتی سفر)۔
-  prizes_nav_technology: آپ کے اسکول کیلئے 10,000 $ ڈالرز مالیت کی ٹیکنالوجی
-  prizes_nav_video_chat: ایک ٹیک ٹائٹن (ٹیکنالوجی ماہر) کے ساتھ ویڈیو چیٹنگ
-  prizes_nav_skype_dropbox: ہر آرگنائزر کے لیے ڈراپ باکس اسپیس یا اسکائپ کریڈٹ
-  prizes_nav_brilliant: $2,000 قدر کے مساوی شاندار لیب پروجیکٹس
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: شرائط و ضوابط
-  prizes_nav_faq: عمومی سوالات
   nav_back_to_resources: بیک ٹو ریسورسز
   how_to_nav_educators: برائے ایجوکیٹرز
   how_to_nav_after_school: برائے بعد از اسکول
@@ -164,9 +157,22 @@ ur:
   how_to_nav_organizations: آرگنائزیشن کیلئے
   how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
+  how_to_nav_volunteers: For volunteers
   prizes_nav_title: انعامات
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: شرائط و ضوابط
+  prizes_nav_faq: عمومی سوالات
+  prizes_nav_dc: واشنگٹن ڈی سی کا ایک مسٹری ٹرپ (مہماتی سفر)۔
+  prizes_nav_technology: آپ کے اسکول کیلئے 10,000 $ ڈالرز مالیت کی ٹیکنالوجی
+  prizes_nav_video_chat: ایک ٹیک ٹائٹن (ٹیکنالوجی ماہر) کے ساتھ ویڈیو چیٹنگ
+  prizes_nav_skype_dropbox: ہر آرگنائزر کے لیے ڈراپ باکس اسپیس یا اسکائپ کریڈٹ
+  prizes_nav_brilliant: $2,000 قدر کے مساوی شاندار لیب پروجیکٹس
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
   whats_next_header: آگے کیا ہے؟
   whats_next_description: "ہم آپ کے ایونٹ کے لیے آپ کو مٹیریئل اور مددگار تجاویز بھیجیں گے۔ 2015 کے نئے ٹیٹوریئل جلد آ رہے ہیں، کسی بھی براؤز، اسمارٹ فون – یا بغیر کسی کمپیوٹر کے! <a href='http://code.org/learn'> موجودہ ٹیٹوریئل آزمائیں </a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
@@ -186,7 +192,7 @@ ur:
   front_join_us_description: کمپیوٹر سائنس ہر اسٹوڈینٹ کے لئے ایک بنیاد ہے۔ 100 ملین اسٹوڈینٹس کو متعارف کرانے میں ہماری مدد کریں۔
   front_join_us_description_short: کمپیوٹر سائنس ہر اسٹوڈینٹ کے لئے ایک بنیاد ہے.
   front_join_us_button: ہمارے ساتھ شامل ہو
-  front_what_is_hoc: کوڈ کی گهڑی کیا ہے؟
+  front_what_is_hoc: آور-آف-کوڈ کیا ہے؟
   front_join_us_header: ہر کوئی بیسکس (بنیادی علم) سیکھ سکتا ہے، اور وہ بھی کھیل ہی کھیل میں!
   front_join_us_teacher: کیا آپ ایک ٹیچر ہیں؟
   front_join_us_inspire: اسٹوڈینٹس کو متاثر کریں
@@ -222,7 +228,7 @@ ur:
   signup_event_location_label: Event location (optional)
   signup_special_event_flag_label: Highlight my special event
   signup_special_event_details_label: Special event details
-  signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization'
+  signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization (US only)'
   signup_send_posters_address_label: Address of school or organization
   signup_whole_school_flag_label: This event is for a whole school
   signup_your_event: Sign up your event
@@ -246,6 +252,9 @@ ur:
   map_search_placeholder: Search for Hour of Code events
   map_search_search: Search
   map_search_reset: Reset
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: The Hour of Code is coming
   meta_tag_og_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.
   meta_tag_twitter_title: The Hour of Code is coming
@@ -316,7 +325,7 @@ ur:
   stats_pinterest: 'پانٹیریسٹ: دو سال'
   stats_instagram: 'انسٹاگرام: 14 ماہ'
   stats_hoc: 'The Hour of Code: 5 days'
-  stats_global: 100M سے زائد اسٹوڈینٹس نے آور-آف-کوڈ کو ٹرائی کیا
+  stats_global: ١٠٠ ملین سے زائد اسٹوڈینٹس نے آور-آف-کوڈ کو ٹرائی کیا
   stats_girls_more: گزشتہ 70 برسوں کے مقابلے میں نسبتاً زیادہ لڑکیوں نے کمپیوٹر سائنس میں کوشش کی
   stats_nina: '"ہر روز ایک جیسے بہتر ہوتے ہوئے نتائج mdash; 100% & فیصد مصروفیت " نینا نیکولس پیری، ایک ٹیچر'
   stats_student: '"مجھے پتہ تھا کہ یہ <b> زندگی-میں-ایکبار </b> والا موقع ہے۔" – میریآنا ایلزٹ، 5 گریڈر'
@@ -362,6 +371,7 @@ ur:
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
   title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: رہنمائی کیسے کریں – برائے عوامی-نمائندگان
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
@@ -381,12 +391,12 @@ ur:
   events_nav_title: Hour of Code Events
   events_nav_all: All Events
   events_nav_whole_schools: Whole Schools
-  events_nav_special: Special Events
+  events_nav_special: CS Tech Jams
   events_nav_orgs: Organizations
   events_all_old_title: All @year Hour of Code events
   events_all_title: All Hour of Code events
   events_whole_school_title: Whole-school Hour of Code events
-  events_special_title: Special Hour of Code events
+  events_special_title: Computer Science Tech Jams
   events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: event
   events: events

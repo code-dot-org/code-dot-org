@@ -9,9 +9,9 @@ nav: promote_nav
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
-# Promote the Hour of Code
+# Promosikan Hour of Code
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Menyelenggarakan Hour of Code? [ Lihat panduan](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -33,21 +33,21 @@ nav: promote_nav
 
 [![gambar](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![gambar](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![gambar](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![gambar](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![gambar](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![gambar](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![gambar](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![gambar](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![gambar](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+<%= view :social_posters %>
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Gunakan logo Hour of Code untuk menyebarkan berita
 
 [![gambar](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Download versi hi-res](http://images.code.org/share/hour-of-code-logo.zip)
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## Cetak stiker ini untuk diberikan kepada siswa Anda
 
-(Stickers are 1" diameter, 63 per sheet)  
+(Stiker berdiameter 1", 63 per lembar)  
 [![gambar](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
@@ -58,27 +58,27 @@ nav: promote_nav
 
 ## Tanyakan di sekolah, bos di tempat kerja atau teman anda untuk mendaftar:
 
-Komputer ada dimana-mana, tetapi sedikit sekolah yang mengajar ilmu komputer dari 10 tahun yang lalu. Kabar baiknya, kita berada pada jalur yang tepat untuk merubah itu. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Komputer ada dimana-mana, tetapi sedikit sekolah yang mengajar ilmu komputer dari 10 tahun yang lalu. Kabar baiknya, kita berada pada jalur yang tepat untuk merubah itu. Jika Anda pernah mendengar tentang Hour of Code sebelumnya, Anda mungkin tahu bahwa itu membuat sejarah. Lebih dari 100 juta siswa telah mencoba Hour of Code.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! dan Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
+Dengan Hour of Code, ilmu komputer telah muncul pada homepage dari Google, MSN, Yahoo! dan Disney. Lebih dari 100 mitra bergabung bersama-sama untuk mendukung gerakan ini. Tahun lalu, setiap Apple Store di dunia menyelenggarakan Hour of Code dan bahkan Presiden Obama menulis baris kode nya pertama sebagai bagian dari kampanye.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+Tahun ini, mari kita membuatnya bahkan lebih besar. Saya meminta Anda untuk bergabung dalam Hour of Code 2015. Silakan terlibat dengan acara Hour of Code selama Pekan Edukasi Ilmu Komputer, <%= campaign_date('full') %>.
 
 Sebarkan brita. Adakan kegiatan. Tanyakan pada sekolah lokal untuk mendaftar. Atau anda coba Hour of Code sendiri -- setiap orang dapat mempelajari dasarnya.
 
-Get started at http://hourofcode.com/<%= @country %>
+Memulai dari http://hourofcode.com/<%= @country %>
 
 <a id="media-pitch"></a>
 
 ## Undanglah media untuk menghadiri kegiatan anda:
 
-**Subject line:** Local school joins mission to introduce students to computer science
+**Subjek:** Sekolah lokal bergabung dalam misi untuk memperkenalkan 100 juta pelajar mengenai ilmu komputer
 
 Komputer ada dimana-mana, tetapi sedikit sekolah yang mengajar ilmu komputer daripada 10 tahun yang lalu. Perempuan dan minoritas sangat kurang terwakili mengenai hal ini. Berita baiknya, kita dalam jalur yang tepat untuk merubahnya.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! dan Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
+Dengan Hour of Code, ilmu komputer telah muncul pada homepage dari Google, MSN, Yahoo! dan Disney. Lebih dari 100 mitra bergabung bersama-sama untuk mendukung gerakan ini. Tahun lalu, setiap Apple Store di dunia menyelenggarakan Hour of Code dan bahkan Presiden Obama menulis baris kode nya pertama sebagai bagian dari kampanye.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 7-13.
+Itulah sebabnya setiap pelajar dari [X number] pelajar pada [SCHOOL NAME] akan bergabung dalam kegiatan belajar terbesar dalam sejarah: Hour of Code pada Desember tanggal 7-13.
 
 Saya menulis ini untuk mengundang anda untuk menhadiri acara pembukaan, dan untuk melihat anak-anak memulai aktivitas pada [DATE].
 
@@ -100,13 +100,13 @@ Orang tua yang terhormat,
 
 Kita hidup di dunia yang dikelilingi dengan teknologi. Dan sekarang kita tahu apa pun bidang yang dipilih pelajar kita untuk menuju kedewasaan, kemampuan mereka untuk sukses akan mulai bergantung pada pemahaman bagaiman teknologi bekerja. Tetapi hanya sebagian kecil dari kita yang mempelajari ilmu komputer, dan lebih sedikit pelajar yang mempelajarinya dari satu dekade yang lalu.
 
-Itulah mengapa sekolah kami bergabung dalam kegiatan belajar terbesar dalam sejarah: Hour of Code, pada saat Computer Science Education Week (Des. 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+Itulah mengapa sekolah kami bergabung dalam kegiatan belajar terbesar dalam sejarah: Hour of Code, pada saat Computer Science Education Week (Des. 7-13). Lebih dari 100 juta siswa di seluruh dunia telah mencoba Hour of Code.
 
-Hour of Code kami adalah pernyataan bahwa [nama sekolah] sudah siap untuk mengajar keterampilan dasar abad ke-21 ini. Untuk membawa kegiatan pemrograman untuk pelajar Anda, kami ingin membuat acara Hour of Code kami besar. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+Hour of Code kami adalah pernyataan bahwa [nama sekolah] sudah siap untuk mengajar keterampilan dasar abad ke-21 ini. Untuk membawa kegiatan pemrograman untuk pelajar Anda, kami ingin membuat acara Hour of Code kami besar. Saya meendukung Anda untuk menjadi sukarelawan, menjangkau media lokal, berbagi berita di saluran media sosial anda dan mempertimbangkan menyelenggarakan Hour of Code di komunitas.
 
 Ini adalah kesempatan untuk mengubah masa depan pendidikan di [TOWN/CITY NAME].
 
-Lihat http://hourofcode.com/ < % = @country %> untuk rincian, dan bantuan untuk menyebarkan berita.
+Lihat http://hourofcode.com/<%= @country %> untuk rincian, dan bantuan untuk menyebarkan berita.
 
 Dengan Hormat,
 
@@ -118,9 +118,9 @@ Kepala sekolah
 
 Yang terhormat [nama terakhir Mayor/Gubernur/wakil/Senator]:
 
-Apakah Anda tahu bahwa dalam perekonomian saat ini, pekerjaan komputasi melebihi jumlah pelajar yang lulus dengan perbandingan 3-ke-1? Dan, ilmu komputer adalah dasar untuk *setiap* industri hari ini. Yet most of schools don’t teach it. Di [nama sekolah], kami berusaha untuk mengubah itu.
+Apakah Anda tahu bahwa dalam perekonomian saat ini, pekerjaan komputasi melebihi jumlah pelajar yang lulus dengan perbandingan 3-ke-1? Dan, ilmu komputer adalah dasar untuk *setiap* industri hari ini. Namun kebanyakan sekolah tidak mengajarkan hal itu. Di [nama sekolah], kami berusaha untuk mengubah itu.
 
-Itulah mengapa sekolah kami bergabung dalam kegiatan belajar terbesar dalam sejarah: Hour of Code, pada saat Computer Science Education Week (Des. 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+Itulah mengapa sekolah kami bergabung dalam kegiatan belajar terbesar dalam sejarah: Hour of Code, pada saat Computer Science Education Week (Des. 7-13). Lebih dari 100 juta siswa di seluruh dunia telah mencoba Hour of Code.
 
 Saya menulis untuk mengundang Anda untuk mengambil bagian dalam kegiatan Hour of Code kami dan berbicara di Majelis kickoff kami. Ini akan berlangsung pada [tanggal, waktu, tempat], dan membuat pernyataan yang kuat bahwa [nama negara atau kota] sudah siap untuk mengajarkan siswa kami keterampilan kritis abad ke-21. Kami ingin memastikan bahwa pelajar kami berada di garis depan menciptakan teknologi masa depan--bukan hanya menjadi konsumen.
 

@@ -4,7 +4,7 @@ title: Ochrana osobních údajů
 
 * * *
 
-### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Zásady ochrany osobních údajů
 
@@ -245,4 +245,4 @@ We do not disclose any personal information to third parties for marketing purpo
 Kontaktujte prosím Code.org s případnými dotazy či připomínkami k tomuto oznámení o ochraně soukromí, vašich osobních údajů, našich postupech zpřístupnění třetí straně nebo o vašich možnostech souhlasu. Napište nám na <http://code.org/contact> nebo na 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.   
   
   
-[![obrázek](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![obrázek](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

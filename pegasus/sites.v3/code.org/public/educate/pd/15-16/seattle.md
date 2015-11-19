@@ -54,18 +54,14 @@ Quarter 4: Saturday, April 30, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**September 26th Location**
+**December 5th Location**
 
-[Talaris Conference Center](http://www.talarisconferencecenter.com/)
-<br />
-Cedar Room
-<br />
-4000 NE 41st Street
-<br />
-Seattle, WA 98105
-<br />
+[Rainier Tower<br/>
+30th Floor Conference Room<br/>
+1301 Fifth Ave.<br/>
+Seattle, WA 98101](https://www.google.com/maps/place/1301+5th+Ave,+Seattle,+WA+98101/@47.6088445,-122.3365763,523m/data=!3m2!1e3!4b1!4m2!3m1!1s0x54906ab475734df5:0x9da092b2067513ae!6m1!1e1)
 
-Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000 and let them know you are attending the Code.org's Exploring Computer Science event. Go [here](http://www.talarisconferencecenter.com/maps-directions.php) for a map and directions.
+[Please click here for parking rates.](/files/rainier-tower-parking.pdf)
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -114,19 +110,9 @@ Semester 2: Saturday, April 30, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**November 7th Location**
+**April 30th Location**
 
-[Talaris Conference Center](http://www.talarisconferencecenter.com/)
-<br />
-Lodge Conference Room
-<br />
-4000 NE 41st Street
-<br />
-Seattle, WA 98105
-<br />
-
-
-Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000 and let them know you are attending the Code.org's CS in Algebra event. Go [here](http://www.talarisconferencecenter.com/maps-directions.php) for a map and directions.
+TBD
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -169,18 +155,9 @@ Semester 2: Saturday, February 20, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**September 26th Location**
+**February 20th Location**
 
-[Talaris Conference Center](http://www.talarisconferencecenter.com/)
-<br />
-Maple Room
-<br />
-4000 NE 41st Street
-<br />
-Seattle, WA 98105
-<br />
-
-Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000and let them know you are attending the Code.org CS in Science event. Go [here](http://www.talarisconferencecenter.com/maps-directions.php) for a map and directions.
+TBD
 
 
 **What to bring to Phase 3 bi-yearly sessions:**
@@ -196,36 +173,6 @@ Water
 
 [**Back to the top**](#top)
 
-<a id="counselor-admin"></a>
-
-
-## Counselors & Administrators
-
-Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
-
-
-### Counselors##
-
-**Save the date**
-
-Thursday, November 5th, 2015 <br/>
-8:00am - 10:00am
-
-**Location**
-
-TBD 
-
-
-### Administrators##
-
-**Save the date**
-
-Thursday, November 5th, 2015  <br/>
-11:00am - 3:00pm
-
-**Location**
-
-TBD
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

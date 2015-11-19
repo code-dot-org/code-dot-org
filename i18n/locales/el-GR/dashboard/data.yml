@@ -468,6 +468,9 @@ el:
         alg_15_biggame_update_player: 'Πληροφορική στην Άλγεβρα - Ανανέωση παίκτη μεγάλου παιχνιδιού'
         alg_16_biggame_collision_detection: 'Πληροφορική στην Άλγεβρα - Ανίχνευση σύγκρουσης μεγάλου παιχνιδιού'
         alg_17_sambat_compound_booleans: 'Πληροφορική στην Άλγεβρα - Σύνθετες λογικές τιμές'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: |-

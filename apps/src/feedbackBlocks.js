@@ -4,14 +4,16 @@ var readonly = require('./templates/readonly.html.ejs');
 var TestResults = constants.TestResults;
 
 // TODO (br-pair): can we not pass in the studioApp
-var FeedbackBlocks = function(options, missingRequiredBlocks, studioApp) {
+var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommendedBlocks, studioApp) {
   // Check whether blocks are embedded in the hint returned from dashboard.
   // See below comment for format.
   var embeddedBlocks = options.response && options.response.hint &&
       options.response.hint.indexOf("[{") !== 0;
   if (!embeddedBlocks &&
       options.feedbackType !== TestResults.MISSING_BLOCK_UNFINISHED &&
-      options.feedbackType !== TestResults.MISSING_BLOCK_FINISHED) {
+      options.feedbackType !== TestResults.MISSING_BLOCK_FINISHED &&
+      options.feedbackType !== TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED &&
+      options.feedbackType !== TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED) {
     return;
   }
 
@@ -31,16 +33,24 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, studioApp) {
       // The blocks could not be parsed.  Ignore them.
       return;
     }
+  } else if (missingRequiredBlocks.blocksToDisplay.length) {
+    handleMissingBlocks(missingRequiredBlocks);
   } else {
-    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
-    if (missingRequiredBlocks.message) {
-      options.message = missingRequiredBlocks.message;
+    handleMissingBlocks(missingRecommendedBlocks);
+  }
+
+  function handleMissingBlocks(blocks) {
+    blocksToDisplay = blocks.blocksToDisplay;
+    if (blocks.message) {
+      options.message = blocks.message;
     }
   }
 
   if (blocksToDisplay.length === 0) {
     return;
   }
+
+  this.xml = this.generateXMLForBlocks_(blocksToDisplay);
 
   this.div = document.createElement('div');
   this.html = readonly({
@@ -54,7 +64,7 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, studioApp) {
       cacheBust: studioApp.CACHE_BUST,
       skinId: options.skin,
       level: options.level,
-      blocks: this.generateXMLForBlocks_(blocksToDisplay)
+      blocks: this.xml
     }
   });
   this.iframe = document.createElement('iframe');

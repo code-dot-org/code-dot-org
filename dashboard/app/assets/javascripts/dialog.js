@@ -8,23 +8,25 @@
  */
 function sizeDialogToViewport(scrollableElementSelector) {
   var viewportHeight = $(window).height();
-  var modalBody = $('.modal-body').filter(':visible');
   var modalDialog = $('.auto-resize-scrollable').filter(':visible');
   var scrollableElement = modalDialog.find(scrollableElementSelector);
 
-  var popupTop =
-    parseInt(modalDialog.css('top'), 10) +
-    parseInt(modalBody.css('padding-bottom'), 10);
+  if (scrollableElement.is('iframe')) {
+    scrollableElement.css('height', '');
+  } else {
+    scrollableElement.css('max-height', '');
+  }
 
-  var scrollableAreaTop = scrollableElement.offset().top;
-  var modalDialogTop = modalDialog.offset().top;
-  var headerHeight = scrollableAreaTop - modalDialogTop;
+  var dialogSize = modalDialog.offset().top + modalDialog.height();
 
-  var popupBottom =
-    parseInt(modalDialog.css('margin-bottom'), 10) +
-    parseInt(modalBody.css('padding-bottom'), 10) +
-    parseInt(modalBody.css('margin-bottom'), 10);
-  var scrollableElementHeight = viewportHeight - (popupTop + popupBottom + headerHeight);
+  var desiredSize = viewportHeight -
+    parseInt(modalDialog.css('padding-bottom'), 10) -
+    parseInt(modalDialog.css('margin-bottom'), 10);
+
+  var overflow = dialogSize - desiredSize;
+  var scrollableElementHeight = scrollableElement.height() - overflow;
+  scrollableElement.css('max-height', scrollableElementHeight);
+
   if (scrollableElement.is('iframe')) {
     scrollableElement.css('height', scrollableElementHeight);
   } else {
@@ -170,6 +172,12 @@ Dialog.prototype.show = function(options) {
 
 Dialog.prototype.hide = function() {
   $(this.div).modal('hide');
+};
+
+Dialog.prototype.focus = function() {
+  if (this.isVisible) {
+    $(this.div).focus();
+  }
 };
 
 /**

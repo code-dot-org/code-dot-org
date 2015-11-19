@@ -31,7 +31,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 [![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![image](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+<%= view :social_posters %>
 
 <a id="logo"></a>
 
@@ -62,7 +62,7 @@ With the Hour of Code, computer science has been on homepages of Google, MSN, Ya
 
 This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-Spargi la voce. Ospita un evento. Chiedi ad una scuola locale di iscriversi. O provare l'Ora del Codice tu stesso..--tutti possono beneficiare dell'apprendimento delle basi dell'informatica.
+Spargi la voce. Organizza un evento. Chiedi ad una scuola di iscriversi. O prova tu stesso l'Ora del Codice -- Chiunque può trarre beneficio dell'apprendimento dei concetti fondamentali dell'informatica.
 
 Get started at http://hourofcode.com/<%= @country %>
 
@@ -104,7 +104,7 @@ L'Ora del codice è una dichiarazione che la scuola [NOME SCUOLA] è pronta ad i
 
 Questa è una possibilità di cambiare il futuro dell'istruzione a [NOME CITTA'].
 
-Andata alla pagina http://hourofcode.com/< % = @country %> per i dettagli e contribuirt a diffondere la notizia.
+Andata alla pagina http://hourofcode.com/<%= @country %> per i dettagli e contribuirt a diffondere la notizia.
 
 Cordiali saluti,
 

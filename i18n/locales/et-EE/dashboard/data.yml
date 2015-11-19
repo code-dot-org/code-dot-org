@@ -25,7 +25,7 @@ et:
           Artist5: Etapp 19
           Unplug11: Etapp 20
         Hour of Code:
-          desc: Koodi Tund
+          desc: KoodiTund
           Maze: Etapp 1
         Edit Code:
           desc: Muuda koodi (beeta)
@@ -68,15 +68,15 @@ et:
           desc: Labürint (beeta)
           MazeStep: Etapi samm
         wordsearch:
-          desc: Spelling Bee (beta)
+          desc: Õigekirjavõistlus (beta)
           WordSearch: Etapp 1
     game:
       name:
         Unplug1: Sissejuhatus arvutiõpetusse
         Maze: Labürint
-        Multi: Multiple Choice Stuffs
+        Multi: Mitmik-valiku asjad
         Unplug2: Arvutuslik mõtlemine
-        Unplug3: Graph Paper Programming
+        Unplug3: Millimeetripaberi programmeerimine
         Artist: Kunstnik
         Unplug4: Algoritmid
         Artist2: Kunstnik tase 2
@@ -86,24 +86,24 @@ et:
         Artist3: Kunstnik tase 3
         Unplug7: Laulu kirjutamine
         Farmer2: Talunik tase 2
-        Unplug8: Abstraction
-        Artist4: Artist 4
-        Unplug9: Relay Programming
-        Farmer3: The Farmer 3
+        Unplug8: Abstraktsus
+        Artist4: Kunstnik tase 4
+        Unplug9: Relee Programmeerimine
+        Farmer3: Talunik tase 3
         Unplug10: Internet
-        Artist5: Artist 5
+        Artist5: Kunstnik tase 5
         Unplug11: Kokkuvõte
         MazeEC: Labürint
         Bounce: Põrkama
         Flappy: Flappy Bird
         Jigsaw: Pusle
-        MazeStep: Maze Step Mode
+        MazeStep: Labürindi sammu režiim
         Wordsearch: Sõnaotsing
-        Webapp: Rakenduste labor
+        Webapp: App Lab
         ArtistEC: Kunstnik
         TextMatch: Teksti vaste
         StudioEC: Play Lab
-        Applab: Rakenduste labor
+        Applab: App Lab
         NetSim: Interneti simulaator
     trophy:
       name:
@@ -112,50 +112,49 @@ et:
         Gold: Kuld
     concept:
       description:
-        sequence: Sequence
+        sequence: Jada
         if: '"kui" plokk'
-        if_else: If-else block
-        loop_times: Repeat times block
-        loop_until: Korda kuni plokk
-        loop_while: While block
-        loop_for: Counter block
+        if_else: '"kui teine" plokk'
+        loop_times: '"korduste arvu" plokk'
+        loop_until: '"Korda kuni" plokk'
+        loop_while: '"kuni" plokk'
+        loop_for: Loenduri plokk
         function: Funktsioonid
-        parameters: Functions with parameters
+        parameters: Parameetritega funktsioonid
     level:
       instructions:
-        maze_2_2: 'Kas sa saad aidata mul ulakas siga kinni püüda? Sea paar "liigu edasi" plokki kokku ja vajuta "Käivita" et mind sinna aidata. '
+        maze_2_2: 'Kas sa oskad mind aidata ulaka sea kinnipüüdmisel? Sea paar "liigu edasi" plokki kokku ja vajuta "Käivita", et mind sinna aidata. '
         maze_2_1: See siga ajab mu suled turri. Aita mul ta leida!
-        maze_2_2_5: Jälgi rada ja juhi mind rumala sea juurde. Väldi dünamiiti või suled lendavad!
+        maze_2_2_5: Jälgi rada ja juhi mind tobeda sea juurde. Väldi dünamiiti või suled lendavad!
         maze_2_3: Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)
-        maze_2_4: Ole rahulik ja aita mul paha siga leida. Muidu ma võin vihaseks saada!
-        maze_2_5: On viis, kasutades ainult 2 plokki, jõudmiseks sea juurde. Kas saad sellele pihta?
-        maze_2_6: Püüa mind aidata rohelise sissetungija juurde, kasutades ainult kolme plokki.
-        maze_2_7: 'Aita mul see paha siga pagendada, kasutades miinimum arv plokke. Proovi kasutada "korda" plokki rohkem kui üks kord.'
-        maze_2_8: 'Kui plokk on hall, tähendab see seda, et sa ei saa seda kustutada. Lahenda see pusle kasutades "korda" plokki mis kordab 3 korda. Proovi asetada need 3 plokki: liigu, liigu, keera,  halli "korda" ploki sisse.'
-        maze_2_9: 'Hea küll, proovi uut "korda kuni" plokki - see jätkab kordamist kuni ma jõuan tüütu seani.'
-        maze_2_10: 'Hea küll, viimane kord harjutada - kas sa saad lahendada selle kasutades ainult 4 plokki?'
+        maze_2_4: Ole rahulik ja aita mul paha siga leida. Vastasel korral võin ma vihaseks saada!
+        maze_2_5: On viis, kuidas ainult 2 plokki kasutades sea juurde jõuda. Kas saad sellele pihta?
+        maze_2_6: Püüa mind aidata rohelise sissetungija juurde, kasutades ainult 3 plokki.
+        maze_2_7: 'Aita mul see paha siga pagendada, kasutades võimalikult vähe plokke. Proovi kasutada "korduste arvu" plokki rohkem kui üks kord.'
+        maze_2_8: 'Halli värvi plokki ei saa kustutada. Pusle lahendamiseks kasuta "korduste arvu" plokki, mis kordub 3 korda. Proovi asetada need 3 plokki: "liigu", "liigu", "keera" halli "korduste arvu" ploki sisse.'
+        maze_2_9: 'Hea küll, proovi uut "korda kuni" plokki - see jätkab kordamist, kuni ma jõuan tüütu seani.'
+        maze_2_10: 'Hea küll, viimane kord harjutada - kas sa saad selle lahendada, kasutades ainult 4 plokki?'
         maze_2_11: Kallis inimene. Mina zombi. Mina näljane. Pean... saama... päevalillele...Kas sa saad mind sinna ainult 5 plokiga?
         maze_2_12: Hea küll, see on sarnane, kuid siiski veidike erinev. Kas sa saad seda teha ainult 5 plokiga?
-        maze_2_13: 'Kasuta uut "kui" plokki, et lasta mul otsustada kuna keerama peab. Vihje: sa vajad ainult ühte lisaplokki agaõpi kuidas me selle sätime, nii et sa suudad seda järgmine kord ise teha.'
-        maze_2_14: 'Hea küll, see on nagu viimane mõistatus aga sa pead meelde jätma kuidas sa kasutasid "kui" plokki ja "korda" plokki koos.'
-        maze_2_15: 'Ma tahtma päevalille! Kasuta "kui" plokki et saada mind vähima plokkide arvuga sinna.'
-        maze_2_16: 'Hea küll, teeme seda harjutamiseks uuesti - see ei ole väga erinev, kuid taimede eest!'
-        maze_2_17: '"Kui-teine" plokid kontrollivad tingimust ja siis teeb vastavalt ühte või teist asja. Et saada mind päevalilleni kasuta seda uut plokki.'
-        maze_2_18: 'Üks harjutamine veel "kui-teine" plokiga, kas sa saad esimese korraga õigesti?'
-        maze_2_19: Kas sa saad lisada 3 plokki et aidata mul lahendada veel keerulisem labürint? Kui sa teed seda õigesti, saan ma läbida erinevaid kurvilisi radu, ükskõik kui pikk see on.
-        turtle_1_1: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
-        turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "set color" block.'
-        turtle_1_3: Make a square using only 3 blocks.
-        turtle_1_4: |-
-          Draw a triangle whose sides are all in different colors, using the "random color" option that picks a different color each time. Hint: you'll have to figure out how far to turn by clicking on the number in the turn block.
-        turtle_1_5: Now, for practice, draw a triangle and then a square to draw an envelope.
-        turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do the triangle first, then figure out how much to turn before drawing the square.'
-        turtle_1_7: "Ok, let's make it a bit harder - see if you can draw these green glasses. The squares are 100 pixels on each side, and they're 50 pixels apart. Don't forget to draw in green!"
-        turtle_1_8: 'Ok, try to figure out what happens if you run this code (or press "Run" to try it). Then, repeat it enough times to complete the drawing. The colors will be different every time.'
-        turtle_1_9: Can you figure out what number to replace the question marks with to draw a circle?
+        maze_2_13: 'Kasuta uut "kui" plokki, et lasta mul otsustada kuna keerama peab. Vihje: sa vajad ainult ühte lisaplokki aga õpi, kuidas me selle sätime, nii et sa suudad seda järgmine kord ise teha.'
+        maze_2_14: 'Hea küll, see on nagu viimane pulse, aga sa pead meelde jätma kuidas sa kasutasid "kui" plokki ja "korda" plokki koos.'
+        maze_2_15: 'Ma tahan päevalille! Kasuta "kui" plokki, et saada mind vähima plokkide arvuga sinna.'
+        maze_2_16: 'Hea küll, teeme seda harjutamiseks uuesti - see ei ole väga erinev, kuid hoidu taimede eest!'
+        maze_2_17: '"Kui-teine" plokid kontrollivad tingimust ja teeb vastavalt ühte või teist asja. Et saada mind päevalilleni, kasuta seda uut plokki.'
+        maze_2_18: 'Üks harjutamine veel "kui-teine" plokiga, kas saad esimese korraga õigesti?'
+        maze_2_19: Kas sa saad lisada 3 plokki, et aidata mul lahendada veel keerulisem labürint? Kui sa teed seda õigesti, saan ma läbida erinevaid kurvilisi radu, ükskõik kui pikk see on.
+        turtle_1_1: Tere, mina olen kunstnik. Koodi kirjutades saate mind panna joonistama peaaegu kõike. Kasutades paari plokki ja pane mind üle joonistama pildil olevad hallid jooned.
+        turtle_1_2: 'Nüüd joonista ruut. MÄRKUS: kasuta enda lemmikvärvi, valides see "vali värv" plokist.'
+        turtle_1_3: Joonista ruut, kasutades ainult kolme plokki.
+        turtle_1_4: 'Joonista kolmnurk mille kõik küljed on erinevat värvi. Selleks kasuta "juhuslik värv" valikut, mis iga kord valib erineva värvi, Vihje: Klõpsates pöörde plokil olevale numbrile, pead välja mõtlem, a kui kaugele pöörata.'
+        turtle_1_5: Harjutamiseks joonista kolmnurk ja ruut, et joonistada ümbrik.
+        turtle_1_6: 'Kas mõtled välja, kuidas joonistada seda kolmnurka ja ruutu? Vihje: Joonista kolmnurk enne ja siis mõtle kui palju pead pöörama, et joonistada ruutu.'
+        turtle_1_7: 'Nüüd natukene raskem ülesanne - kas oskad joonistada neid rohelisi prille. Ruudud on küljepikkusega 100 pikslit ja ruutude kaugus on 50 pikslit. Ära unusta prille roheliseks värvida!'
+        turtle_1_8: 'Proovi aru saada, mis juhtub antud koodi käivitamisel (või vajuta "Käivita", et proovida). Seejärel käivita nii mitu korda, et lõpetada joonistus. Värvid muutuvad igal käivitamisel.'
+        turtle_1_9: Nuputa välja, mis numbriga asendada küsimärki, et joonistada ring.
         turtle_1_10: 'Sa said sellega hakkama. Nüüd võid joonistada mida ise tahad. Mõned lahedad ideed: kriipsujuku, lumehelves või spiraal. Proovi kasutada uut "määra laius" plokki. Lõbutsege!'
         turtle_4_1: 'Kas sa saad joonistada kolmnurga, (külgedega 100 pikslit) kasutades ainult kolme plokki? Vihje: kasuta "korda" plokki.'
-        turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
+        turtle_4_2: 'Lisa "pööra 90 kraadi" plokk kuhugi töölaual olevale programmile, et joonistada need kolmnurgad.'
         turtle_4_3: 'Okei, siin on kood mille sa kirjutasid ühe kolmnurga joonistamiseks. Kas sa saad ilusa lille joonistamiseks lisada "korda" ja "pööra" ploki?'
         turtle_4_4: "Here's the same code from the previous puzzle, but turning only 36 degrees after drawing each triangle. How many times does this need to repeat? (Hint: after 360 degrees of turning the drawing will come full circle)"
         turtle_4_5: "Here's the same code from the previous puzzle, but repeating the turns 36 times. How many degrees should the turns be? (Hint: after 360 degrees of turning the drawing will come full circle)"
@@ -292,7 +291,7 @@ et:
         mazestep_3: Maze step description here
         mazestep_4: Maze step description here
         mazestep_5: Maze step description here
-        studio_c2_1: 'Can you make this dog say "hello world"?'
+        studio_c2_1: 'Kas oskad panna koera ütlema "tere maailm"?'
         studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
         studio_c2_3: Can you write a program to make this dog move to the cat?
         studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
@@ -303,7 +302,7 @@ et:
         studio_c2_9: Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?
         studio_c2_10: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
         studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_story_1: 'Can you make this dog say "hello world"?'
+        studio_c3_story_1: 'Kas oskad panna koera ütlema "tere maailm"?'
         studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
         studio_c3_story_3: Can you write a program to make this dog move to the cat?
         studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
@@ -327,7 +326,7 @@ et:
         studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
         studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_k1_1: 'Can you make this dog say "hello world"?'
+        studio_k1_1: 'Kas oskad panna koera ütlema "tere maailm"?'
         studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
         studio_k1_3: Can you write a program to make this dog move to the cat?
         studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
@@ -365,74 +364,74 @@ et:
         hoc_wrapup: Hour of Code Wrapup
         Unplug1: What is CS?
         Unplug2: Arvutuslik mõtlemine
-        Unplug3: Graph Paper Programming
+        Unplug3: Millimeetripaberi programmeerimine
         Unplug4: Algoritmid
         Unplug5: Funktsioonid
         Unplug6: Tingimuslaused
         Unplug7: Songwriting
-        Unplug8: Abstraction
-        Unplug9: Relay programming
+        Unplug8: Abstraktsus
+        Unplug9: Relee programmeerimine
         Unplug10: Internet
         Unplug11: Kokkuvõte
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: '"Happy Maps"'
         C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loopy: Getting Loopy
+        C1_bigevent_unplugged: Suursündmus
+        C1_getting_loopy: muutub tsükliliseks
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
         C1_bee_level_intro: 'Bee Level - Intro'
         C1_artist_intro: Artist Intro
         C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
+        C1_zuck_repeat_loop: Labürint Tsüklid
+        C1_bee_loops: Mesilane Tsüklid
+        C1_maze_loops: Labürint Tsüklid
         C1_playlab_storytelling: 'Play Lab - Create a Story'
         C1_planting_seed: Planting a Seed
-        C1_building_foundation: Building a Foundation
-        C1_going_places_safely: Going Places Safely
+        C1_building_foundation: Vundamendi ehitus
+        C1_going_places_safely: Läheb asukohta turvaliselt
         C2_maze_intro: Maze Intro
         C2_artist_intro: Artist Intro
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_artist_debugging: Artist Debugging
-        C2_bee_loops: Bee Loops
-        C2_bee_debugging: Bee Debugging
-        C2_bee_conditionals: Bee Conditionals
+        C2_zuck_repeat_loop: Labürint Tsüklid
+        C2_artist_loops: Kunstnik Tsüklid
+        C2_artist_debugging: Kunstnik Silumine
+        C2_bee_loops: Mesilane Tsüklid
+        C2_bee_debugging: Mesilane Silumine
+        C2_bee_conditionals: Mesilane Tingimuslaused
         C2_playlab_createstory: 'Play Lab - Create a Story'
-        C2_graph_paper: Graph Paper Programming
+        C2_graph_paper: Millimeetripaberi programmeerimine
         C2_conditionals_with_cards: Tingimuslaused
-        C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: Relay Programming
+        C2_binary_bracelets: Binaarsed käevõrud
+        C2_relay_programming: Relee Programmeerimine
         C2_paper_airplanes: Paper Airplanes
-        C2_digital_footprint: Your Digital Footprint
-        C2_digital_footprint_v2: Your Digital Footprint
-        C3_maze_level_4: Maze Loops
+        C2_digital_footprint: Teie digitaalne jalajälg
+        C2_digital_footprint_v2: Teie digitaalne jalajälg
+        C3_maze_level_4: Labürint Tsüklid
         C3_artist_intro: Artist Intro
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
+        C3_artist_functions: Kunstink Funktsioonid
+        C3_bee_functions: Mesilane Funktsioonid
+        C3_bee_conditionals: Mesilane Tingimuslaused
+        C3_maze_conditionals: Labürint Tingimuslause
         C3_artist_nested_loops: Nested Loops
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
+        C3_bee_debugging: Mesilane Silumine
         C3_bounce: Põrkama
         C3_playlab_create_game: 'Play Lab - Create a Game'
         C3_computational_thinking: Arvutuslik mõtlemine
-        C3_dice_race: Dice Race
+        C3_dice_race: Täringu ralli
         C3_internet: Internet
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
+        C3_crowdsourcing: Ühistegevused
+        C3_functional_suncatchers: Funktsionaalsed päikesepüüdjad
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
         C4_loops_zombie: Tsüklid
-        C4_bee_conditional: Bee Conditionals
+        C4_bee_conditional: Mesilane Tingimuslaused
         C4_variables_artist: 'Variables - Artist'
         C4_variables_playlab: 'Variables - Play Lab'
-        C4_for_loops: For Loops
-        C4_for_loops_bee: For Loops
-        C4_for_loops_no_bee: For Loops
+        C4_for_loops: For tsükkel
+        C4_for_loops_bee: For tsükkel
+        C4_for_loops_no_bee: For tsükkel
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
@@ -441,7 +440,7 @@ et:
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: For Loops
+        C4_unplugged_forloops: For tsükkel
         C4_unplugged_parameters: Songwriting with Parameters
         C4_unplugged_binary: Binary
         frozen_intro: Kooditunni sissejuhatus
@@ -483,6 +482,9 @@ et:
         alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
         alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
         alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'

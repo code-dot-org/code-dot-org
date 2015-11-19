@@ -61,7 +61,7 @@ angular: professionalDevelopmentWorkshop
       //  'save':   {method:'POST'},
       //  'query':  {method:'GET', isArray:true},
       //  'remove': {method:'DELETE'},
-      //  'delete': {method:'DELETE'} 
+      //  'delete': {method:'DELETE'}
          update: {method:'POST', url: '/v2/forms/ProfessionalDevelopmentWorkshop/:secret/update'},
       });
 
@@ -69,7 +69,7 @@ angular: professionalDevelopmentWorkshop
         if (this.dates && this.dates[0] && this.dates[0].date_s && this.location_name_s) {
           return 'Workshop on ' + this.dates[0].date_s +  ' at ' + this.location_name_s;
         } else {
-          return 'Workshop'; 
+          return 'Workshop';
         }
       };
 
@@ -126,7 +126,7 @@ angular: professionalDevelopmentWorkshop
       //  'save':   {method:'POST'},
       //  'query':  {method:'GET', isArray:true},
       //  'remove': {method:'DELETE'},
-      //  'delete': {method:'DELETE'} 
+      //  'delete': {method:'DELETE'}
          update: {method:'POST', url: 'v2/sections/:id/update'},
          addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
@@ -144,7 +144,7 @@ angular: professionalDevelopmentWorkshop
               login_type: 'none'
             };
             var result_section = sectionsService.save(section);
- 
+
             var result_workshop = result_section.$promise.then(
               function(result_section) {
                 // update the workshop with the section id

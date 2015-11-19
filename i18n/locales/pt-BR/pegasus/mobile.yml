@@ -27,7 +27,7 @@ pt-BR:
   hoc2014_everyone: Todos
   hoc2014_support: 'Apoie &#x25BE;'
   hoc2014_whatishoc: O que é a Hora do Código?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_header: '# Semana de Educação em Ciência da Computação / Hora do Código ao redor do mundo'
   csedweek_map_signup: Registre seu evento
   csedweek_map_search_placeholder: Pesquisar eventos da Hora do Código
   csedweek_map_search_search: Pesquisar
@@ -109,6 +109,7 @@ pt-BR:
   hoc_is_here: 'A #HourOfCode é aqui - Confira! @codeorg'
   just_did_hoc: 'Acabei de concluir a #HourOfCode - Confira! @codeorg'
   twitter_teach_cs: Por que mais escolas não ensinam ciência da computação? Podemos dar um jeito nisso. http://youtu.be/nKIu9yen5nc. Acesse http://code.org/ para saber mais.
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: Aprenda programação com a Hora do Código
   beyond_hoc: Além da Hora do Código
   what_gender: Você é menino ou menina?
@@ -209,6 +210,8 @@ pt-BR:
   homepage_action_text_signpetition: Assine a petição
   homepage_signpetition_dropdown: 'Assinar nossa petição &#x25BE;'
   homepage_diversity_pledge: Abrace a causa em favor da diversidade
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: A Code.org e a College Board formam uma aliança para aumentar a diversidade na ciência da computação.
   homepage_banner_text_link: Saiba mais
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -218,6 +221,7 @@ pt-BR:
   homepage_slot_text_link_hoc: Tente a Hora do Código
   homepage_slot_text_link_host: Organize um evento da Hora do Código
   homepage_slot_text_link_hocserved: '# served'
+  homepage_solot_text_link_volunteer: Voluntário da Hora do Código
   homepage_slot_text_title_students: Alunos
   homepage_slot_text_blurb_students: Explore todos os nossos tutoriais
   homepage_slot_text_link_codestudio: Experimente o Code Studio
@@ -275,8 +279,12 @@ pt-BR:
   class_submission_level_vocational: Profissional
   class_submission_languages_other: Outro(s) idioma(s)
   volunteer_engineer_submission_title: Voluntário da Hora do Código
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} professores se inscreveram para a Hora do Código e gostariam de um voluntário para ajudá-los.'
-  volunteer_engineer_submission_intro_paragraph: 'Insira as seguintes informações se você é um aluno de ciência da computação ou profissional na área de software e está interessado em ajudar os professores da região na Hora do Código. Campos marcados com <span class="form-required-field">*</span> são obrigatórios.'
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: |-
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
   volunteer_engineer_submission_header_shared: Informações compartilhadas com professores no mapa de voluntários
   volunteer_engineer_submission_field_name: Nome
   volunteer_engineer_submission_field_name_placeholder: Nome completo
@@ -339,6 +347,7 @@ pt-BR:
   dashboard_landing_progress_title: Progresso da turma principal
   dashboard_landing_progress_biggest: Esse é o progresso para sua maior turma.
   dashboard_landing_view_progress: 'Visualizar progresso de %{biggest_section}'
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Cursos disponíveis
   dashboard_landing_available_courses: Estes são os cursos atualmente disponíveis para você e seus alunos.
   dashboard_landing_more_tutorials: Quer ver ainda mais tutoriais?

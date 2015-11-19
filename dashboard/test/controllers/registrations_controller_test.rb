@@ -152,7 +152,8 @@ class RegistrationsControllerTest < ActionController::TestCase
 
       sign_in student
 
-      post :update, user: {age: 9}
+      post :update, format: :js, user: {age: 9}
+      assert_response :no_content
 
       assert_equal Date.today - 9.years, assigns(:user).birthday
     end
@@ -167,7 +168,8 @@ class RegistrationsControllerTest < ActionController::TestCase
 
       sign_in student
 
-      post :update, user: {age: {"Pr" => nil}}
+      post :update, format: :js, user: {age: {"Pr" => nil}}
+      assert_response :no_content
 
       # did not change
       assert_equal '1981-03-24', assigns(:user).birthday.to_s
@@ -251,7 +253,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test 'edit shows alert for unconfirmed email for teachers' do
-    user = create :teacher, email: 'my_email@test.xx'
+    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
 
     sign_in user
     get :edit
@@ -264,7 +266,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
 
   test 'edit does not show alert for unconfirmed email for students' do
-    user = create :student, email: 'my_email@test.xx'
+    user = create :student, email: 'my_email@test.xx', confirmed_at: nil
 
     sign_in user
     get :edit

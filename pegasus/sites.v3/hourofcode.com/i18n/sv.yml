@@ -1,17 +1,17 @@
 sv:
   site_name: HOUR of CODE
-  hour_of_code: Hour of Code
+  hour_of_code: Kodtimmen
   language: Svenska
-  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
+  front_title: 'Var med i den största utbildningshändelsen någonsin, %{campaign_date}, 2015'
   coming_soon: Kommer snart
-  campaign_date_start_short: Dec. 7
+  campaign_date_start_short: 7:e December
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Se den nya videon
-  front_watch_regular_video: Watch the video
+  front_watch_regular_video: Se filmen
   header_menu_resources: Resurser
   header_menu_faq: Vanliga Frågor
   header_menu_prizes: Priser
@@ -19,6 +19,7 @@ sv:
   header_menu_promote: Promote
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -124,6 +125,7 @@ sv:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -145,6 +147,22 @@ sv:
   prizes_brilliant: One school in each province and territory will receive $2000 for a Brilliant Project
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
   prizes_details: Detaljer
+  nav_back_to_resources: Back to Resources
+  how_to_nav_educators: För utbildare
+  how_to_nav_after_school: For after school
+  how_to_nav_parents: För föräldrar
+  how_to_nav_public_officials: För offentliga tjänstemän
+  how_to_nav_districts: For districts
+  how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: För föreningar
+  how_to_nav_companies: För företag
+  how_to_nav_afterschool_educators: For after-school educators
+  how_to_nav_volunteers: For volunteers
+  prizes_nav_title: Priser
+  prizes_nav_home: Alla priser
+  prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Terms and conditions
+  prizes_nav_faq: Vanliga Frågor
   prizes_nav_dc: Mystery trip to Washington D.C.
   prizes_nav_technology: $10,000 of technology for your school
   prizes_nav_video_chat: Video chat with a tech titan
@@ -152,21 +170,9 @@ sv:
   prizes_nav_brilliant: $2,000 Brilliant Labs project
   prizes_nav_actua: Actua workshop
   prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Terms and conditions
-  prizes_nav_faq: Vanliga Frågor
-  nav_back_to_resources: Back to Resources
-  how_to_nav_educators: For educators
-  how_to_nav_after_school: For after school
-  how_to_nav_parents: For parents
-  how_to_nav_public_officials: For public officials
-  how_to_nav_districts: For districts
-  how_to_nav_assemblies: For school assemblies
-  how_to_nav_organizations: For organizations
-  how_to_nav_companies: For companies
-  how_to_nav_afterschool_educators: For after-school educators
-  prizes_nav_title: Priser
-  prizes_nav_home: All prizes
-  prizes_nav_hardware: Hardware prize signup
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
@@ -246,6 +252,9 @@ sv:
   map_search_placeholder: Search for Hour of Code events
   map_search_search: Sök
   map_search_reset: Reset
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: The Hour of Code is coming
   meta_tag_og_description: Hour of Code är en global rörelse som når tiotals miljoner elever i 180+ länder och över 30 språk. Åldrar 4-104.
   meta_tag_twitter_title: The Hour of Code is coming
@@ -360,6 +369,7 @@ sv:
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
   title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: How-to guide for public officials
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
@@ -384,7 +394,7 @@ sv:
   events_all_old_title: All @year Hour of Code events
   events_all_title: Alla Hour of Code aktiviteter
   events_whole_school_title: Whole-school Hour of Code events
-  events_special_title: Special Hour of Code events
+  events_special_title: Computer Science Tech Jams
   events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: aktivitet
   events: evenemang

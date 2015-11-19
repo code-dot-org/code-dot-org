@@ -4,7 +4,7 @@ title: Politika e Privatësisë
 
 * * *
 
-### Gjuha detyruese ligjore është në EN, dhe mund të gjenden [ këtu ](https://code.org/privacy). Më poshtë është një përkthim.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Politika e Privatësisë
 
@@ -245,4 +245,4 @@ Ne nuk zbulojmë ndonjë informacion personale për palët e treta për qëllime
 Ju lutem kontaktoni Code.org për çdo pyetje ose komente për Njoftimet e Privatësisë, Informacionet tuaja Personale, apo zgjidhjet tuaja duke na shkruar në <http://code.org/contact>ose në 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.   
   
   
-[![Foto](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![Foto](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

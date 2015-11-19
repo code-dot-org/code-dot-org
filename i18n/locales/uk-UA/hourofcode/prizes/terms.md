@@ -8,19 +8,15 @@ title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: prizes_nav
 
 # Призи - умови отримання
 
-## Простір Dropbox або кредити Skype:
+## Amazon.com, iTunes and Windows Store credit:
 
-10 Гб простору Dropbox або кредит $10 у Skype призначені для вчителів, вихователів для позашкільних клубів та освітніх організацій. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Організатор може отримати лише один такий приз. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Організатор може отримати лише один такий приз.
 
-Кожен організатор повинен зареєструвати Годину коду для того, щоб отримати призовий простір Dropbox або кредит Skype. Якщо участь братиме уся школа, кожному вчителю потрібно реєструватись окремо.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Якщо участь братиме уся школа, кожному вчителю потрібно реєструватись окремо.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
-
-## Відео-чат із запрошеним оратором:
-
-Приз призначено для шкіл США та Канади. To qualify, sign up your classroom by November 2, 2015. Code.org випадковим чином обере школи-переможці, надасть часові інтервали для веб-чату та узгодить технологічні деталі з відповідним вчителем. Щоб претендувати на приз, не потрібно реєструвати всю школу. Приз можуть отримати як для державні, так і приватні школи.
 
 ## Клас ноутбуків (або іншої техніки вартістю $10,000):
 

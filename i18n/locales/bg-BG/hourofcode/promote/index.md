@@ -8,35 +8,35 @@ title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# How to get involved
+# Как да се включите
 
-## 1. Sign up to host an Hour of Code
+## 1. Регистрирайте се, за да бъдете домакин на Hour of Code
 
-Anyone, anywhere can host an Hour of Code. [Sign up](%= resolve_url('/') %) to receive updates and qualify for prizes.   
+Всеки, навсякъде може да бъде домакин на Hour of Code. [ Регистрирайте се,](%= resolve_url('/') %) за да получите актуализации и да се класирате за награди.   
 
 
-[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
+[<button><%= hoc_s(:signup_your_event) %></button>](%= resolve_url('/') %)
 
-## 2. Spread the word
+## Разпространете новината
 
-Tell your friends about the **#HourOfCode**!
+Кажете на приятелите си за **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 3. Ask your whole school to offer an Hour of Code
+## 2. Попитайте във Вашето училище, дали се предлага участие в Hour of Code
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](%= resolve_url('/prizes/hardware-signup') %) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[ Изпратете този имейл](%= resolve_url('/promote/resources#sample-emails') %) на директора и предизвикайте всяка класна стая в училището да се регистрира. <% if @country == 'us' %> Едно училище от *всеки* щат на Сащ (и Вашингтон) ще спечели $10,000 за технологии. [ Регистрирайте се тук](%= resolve_url('/prizes/hardware-signup') %) да бъдете класирани и [ **вижте победителите от миналата година**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
 
-## 3. Посъветвайте се с вашия работодател за възможно включване
+## 3. Посъветвайте се с Вашия работодател за възможно включване
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your manager or company's CEO.
+[ Изпратете този имейл](%= resolve_url('/promote/resources#sample-emails') %) на вашия ръководител или изпълнителен директор на компанията.
 
-## 5. Promote Hour of Code in your community
+## Рекламирайте "Hour of Code" във вашата Община
 
-[Recruit a local group](%= resolve_url('/promote/resources#sample-emails') %)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
+[ Ангажирайте локална група](%= resolve_url('/promote/resources#sample-emails') %) — момчешки/момичешки скаутски клуб, църква, университет, ветерани, синдикат или дори и някои приятели. Не е задължително да си в училище, за да придобиеш нови умения. Използвайте тези [ плакати, банери, стикери, видео клипове и др.](%= resolve_url('/promote/resources') %) за собственото си събитие.
 
 ## 5 Ангажирайте местната власт в подкрепа на Часът на Кодирането
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[ Изпратете този имейл](%= resolve_url('/promote/resources#sample-emails') %) на вашия местен представител, градския съвет или училищното настоятелство и ги поканете да посетят Вашето училище за Часът на кода. Те може да помогнат за изграждане на подкрепа за компютърни науки във Вашия район и след Hour of Code.
 
 <%= view :signup_button %>

@@ -19,6 +19,7 @@ zh:
   header_menu_promote: Promote
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -124,6 +125,7 @@ zh:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -145,15 +147,6 @@ zh:
   prizes_brilliant: 在每個省和地區將各會有一所學校收到 $2000 作為輝煌的專案
   prizes_actua: 加拿大內會 15 所學校，由通過Actua的成員主持 2場動手做工作坊。
   prizes_details: 詳細資訊
-  prizes_nav_dc: 去華盛頓特區的神秘之旅
-  prizes_nav_technology: 給予你的學校價值$10,000的科技資金
-  prizes_nav_video_chat: 與科技鉅子進行視頻聊天
-  prizes_nav_skype_dropbox: 提供Skype credit和Dropbox space給每一個組織者
-  prizes_nav_brilliant: 2000元的輝煌實驗室項目
-  prizes_nav_actua: 實際的工作坊
-  prizes_nav_kids_code: 小孩子們的代碼新青年
-  prizes_nav_terms: 條款和條件
-  prizes_nav_faq: 常見問題與解答
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -164,9 +157,22 @@ zh:
   how_to_nav_organizations: For organizations
   how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
+  how_to_nav_volunteers: For volunteers
   prizes_nav_title: 獎勵
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: 條款和條件
+  prizes_nav_faq: 常見問題與解答
+  prizes_nav_dc: 去華盛頓特區的神秘之旅
+  prizes_nav_technology: 給予你的學校價值$10,000的科技資金
+  prizes_nav_video_chat: 與科技鉅子進行視頻聊天
+  prizes_nav_skype_dropbox: 提供Skype credit和Dropbox space給每一個組織者
+  prizes_nav_brilliant: 2000元的輝煌實驗室項目
+  prizes_nav_actua: 實際的工作坊
+  prizes_nav_kids_code: 小孩子們的代碼新青年
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
@@ -246,6 +252,9 @@ zh:
   map_search_placeholder: 搜尋Hour of Code活動
   map_search_search: 搜尋
   map_search_reset: 清除
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Hour of Code在此處
   meta_tag_og_description: 一小時程式設計是一個全球性的活動，觸及數千萬個來自180多個國家，30多種語言，由4歲到104 歲的學生。
   meta_tag_twitter_title: Hour of Code在此處
@@ -360,6 +369,7 @@ zh:
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
   title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: 公務部門的操作指南
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code

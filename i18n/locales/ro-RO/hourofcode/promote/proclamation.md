@@ -39,11 +39,11 @@ Intrucat stiinta caclculatorului si programarea are provocarea de a se adresa, i
 
 Întrucât Grace Murray Hopper, una dintre primele femei în domeniul IT, a realizat noi limbaje de programare şi standardele pentru sisteme de calcul, care a pus bazele pentru multe progrese în informatică; şi
 
-Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Întrucât săptămâna <%= campaign_date('start-long') %>, în onoarea zilei de nastere a lui Grace Hopper, este desemnata ca "Saptamana educatiei in tehnologia computerelor si programare
 
 Rezolvat, ca [casa sau Senatului, stat, JUDEŢ, oraş sau şcoală bord]--
 
-(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
+(1) sustine desemnarea Saptamanii educatiei in tehnologia computerelor (<%= campaign_date('full') %>);
 
 (2) încurajează şcoli, cadre didactice, părinţi şi factorii de decizie politică să participe la Saptamana Educatiei Mondiale permiţându-le elevilor să participe la Ore de Programare;
 

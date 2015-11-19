@@ -333,16 +333,6 @@ bg:
       7:
         image: notes/frozen3_7.jpg
         text: 'Много от простите форми може да се използват за създаване на по-сложни модели. В следващия пъзел кода, който наскоро написахме да  направи един кръг е достъпен за вас като нова функция, която може да направи кръгове с различни размери. Можете ли да използвате това, за да помогнете на Елза да създаде сложен и красив модел в снега?'
-    C3_playlab_create_game:
-      1:
-        image: notes/playlab_1.png
-        text: Досега сте създавали анимация или история, която прави точно същото нещо всеки път, когато го стартирате. Сега можете да направите една интерактивна игра, която да играете.
-      2:
-        image: notes/playlab_2.png
-        text: 'Там е "когато стрелка" блок и блок "премести актьор". Можете да поставите тези блокове заедно, за да движите актьорите с клавишите със стрелки.'
-      3:
-        image: notes/playlab_3.png
-        text: И има някои блокове, които правят неща, когато участниците се сблъскат или е кликнато върху им. Проверете ги и се забавлявайте!
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
@@ -418,122 +408,117 @@ bg:
         text: За този урок, Вие ще бъдете контролирани с хартиено дистанционно управление. Това е точно като жива видео игра.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: Събитие е действие, което предизвиква нещо да се случи. Това е като, когато щракнете върху бутона на мишката и уеб страницата се зарежда. Това е събитие. Когато докоснете екрана на таблета, за да превъртите, това е събитие, също. Събитията са чудесен начин потребителя директно да си взаимодейства с Вашата програма всеки път.
+        text: Събитието е действие, което предизвиква нещо да се случи. Това е като, когато щракнете върху бутона на мишката и уеб страницата се зарежда. Това е събитие. Когато докоснете екрана на таблета, за да превъртите, това е събитие, също. Събитията са чудесен начин потребителя директно да си взаимодейства с Вашата програма всеки път.
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: 'Things happen that we all respond to. We feel hungry and we go to the fridge. We hear the mailman come and he puts our mail in the mailbox  and then we go get our mail. Those are just like the events of pushing a button or moving a joystick. They are something that happens that triggers us to do something.'
+        text: 'Нещата се случват, когато ние ги предизвикаме. Ако се чувстваме гладни -отиваме до хладилника. Ние чуваме когато пощальонът дойде и ни остави писма в пощенската кутия и отиваме да ги вземем от там. Това е точно като събитията от натискане на бутон или преместване на джойстик. Те са нещо, което се случва и  кара да се направи нещо.'
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: |-
-          In video games, there's an event called "Update" and it happens 30 or 60 times a second. For videogame programmers that's almost more important as an event than the buttons or the joystick.
+        text: 'Във видео игрите има събитие, което се нарича "Update". То се случва 30 или 60 пъти в секунда. За програмистите на видеоигри, това е почти толкова важно колкото събитието от бутоните или джойстика.'
       6:
         image: notes/C1_bigevent_unplugged_6.png
-        text: |-
-          The main event we're watching for is that "Update" tick happening. And then we check the joystick in the tick. So we say, "Oh, has somebody pushed the button this frame? Yes or no?" Without events, the player couldn't move, you couldn't jump, you wouldn't be able to control what's going on. The videogame wouldn't be able to animate anything.
+        text: 'Основното събитие, за което ще следим дали ще се случи, се нарича "Update". Ако се случи, ние ще проверим за движение с джойстика "Оо, дали някой не е тласнал джойстика? Да или не?" Без събития играчът не може да се движи, не може да скочи, а Вие не бихте могли да контролирате какво се случва, а видеоигрите нямаше да интересни.'
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: "In sand sculpture you've got to know that failure is part of the program. But if you persist, it's just going to get nothing but better and more exciting for you. Persistence is the name of the game. Stay with it, you'll love it."
+        text: В пясъчната скулптура, вие трябва да знаете, че провалът е част от програмата. Но ако продължите да опитвате, нещата ще се получават по-добре и по-вълнуващо. Постоянството е името на играта. Опитайте и ще се влюбите в него.
       2:
         image: notes/C1_building_foundation_2.jpg
-        text: "This lesson is called building a foundation. In this lesson, we'll work on a task that is meant to be really difficult. You will figure out how to make a structure at least as tall as one of these cups and it's got to be strong enough to hold the weight of a book."
+        text: Този урок се нарича изграждане на основа. В този урок ние ще работим за решаване на трудна задача. Вие ще трябва да разберете как да се направите основа с определена височина, колкото чаша за кафе и да трябва да е достатъчно стабилна, за да задържи теглото на една книга.
       3:
         image: notes/C1_building_foundation_3.jpg
-        text: "There might be times that our creation doesn't work out. There might be times that we get frusrated and want to give up. There might be a lot of those moments. But if we keep on trying, give it our best shot over and over again, then we're sure to get it before long."
+        text: Може да има моменти, в които нашите основи няма да издържат. Може да има моменти, в които ние ще сме на път да се откажем. Може да има много от тези моменти. Но ако ние продължаваме да се опитваме отново и отново, тогава ще успеем.
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: "Persistence is all about hanging in there when you really want to give up. If you want to create something new and different, there's going to be a lot of failures along the way."
+        text: Постоянството е това, което ни спира да се откажем. Ако искате да създадете нещо ново и различно, по пътя ще има много неуспехи.
       5:
         image: notes/C1_building_foundation_5.jpg
-        text: "The trick to persistence is choosing to keep on going and learn from your failures instead of quitting because you're frustrated. Frustration actually just means there's something wonderful around the corner. So don't quit before you get to it. Wooo!"
+        text: Номерът за постигане на устойчивост е да продължавате и да се учите от своите грешки и да не се отказвате, ако сте разочаровани. Wooo!
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: "Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work, there is something we use in both dances and in programming lightsuits. And that is loops! Loops are repeating an action over and over."
+        text: Здравейте моето име е Miral Kotb и аз съм създател на Iluminate. В моята работа има нещо, което ние използваме в танците и програмирането на светещи костюми. И това са циклите! Циклите повтарят едно действие отново и отново.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: "When you repeat something multiple times, like my actions to keep the hula hoop spinning, I'm performing a loop of that action. This is a loop. This is a loop. And this is a loop."
+        text: Когато се повтаря нещо няколко пъти, като моите действия да запазя обръча да се върти, аз използвам цикъл за това действие. Това е един цикъл. Това е един цикъл. И това е един цикъл.
       3:
         image: notes/C1_getting_loopy_3.png
-        text: "Today we're going to have a dance party. We'll act out loops with a new dance. The Iteration. We're going to learn about loops using a dance. You will learn a couple of easy steps and repeat them over and over to complete the dance."
+        text: Днес ние ще имаме денс парти. Ние ще повтаряме и разучаваме нов танц. Повторение. Ние ще научим за циклите, които се използват в танците. Ще научим няколко лесни стъпки и ще ги повтаряме отново и отново до края на танца.
       4:
         image: notes/C1_getting_loopy_4.png
-        text: Here are the steps you need to learn. Clap your hands. Put your hands behind your head. Put your hands on your waist. Lift your left hand up. Lift your right hand up. Pretty simple, right? You will discover that you can shorten the directions by putting some dance steps in loops.
+        text: Тук са стъпките, които трябва да научите. Ръкопляскане с ръцете. Поставете ръцете зад главата си. Поставете ръцете си на кръста. Вдигнете лявата ръка нагоре. Повдигнете дясната ръка. Доста лесно, нали? Вие ще откриете, че можете да съкратите указанията от поставянето на някои танцови стъпки в цикли.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: "We actually do use loops in our dancing. The dancers are wearing computers, all in the same network. I might loop the lights through to the same dancers over and over again. In the loop I might have an iteration where I'll say you want to go loop through these six dancers over and over again and then within the loop you want to increase the speed of the light. And that's all created through loops. Loops are important in computer science because they make our work shorter and easier."
+        text: Ние действително използваме повторения в нашите танци. Танцьорите, както и компютрите, са свързани в мрежа. Аз може да повтарям светлините през дрехите на танцьорите отново и отново. В цикъла, в рамките на едно повторение, аз бих могъл да накарам едни и същи елементи да преминават през танцьорите отново и отново и след това, в рамките на цикъла, да поискам да увелича скоростта на светлината. И всичко това се създава чрез цикли. Циклите са важни за програмирането, защото те правят работата ни по-лесна.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
-        text: "This lesson is called Happy Maps. Today we're gonna help our furry little friend Flurb get to her fruit."
+        text: Този урок се нарича щастливи карти. Днес ние ще помогнем на нашия малък приятел Flurb се да си намери плодове.
       2:
         image: notes/C1_happy_maps_unplugged_2.png
-        text: "Make your Flurb go to your fruit. To do this you'll need to figure out which way the Flurb needs to go and direct her with arrows. In order for the Flurb to get to the apple, what direction does the Flurb have to go? Line to make it go up."
+        text: 'Накарай Flurb да отиде до плода. За да направите това трябва да разберете накъде Flurb трябва да отиде и да го упътвате със стрелките. Например: за да стигне Flurb до ябълката, в каква посока Flurb трябва да тръгне.'
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: To get it there you circle the direction that it has to go.
+        text: За да го заведете там, очертайте в кръг посоката, в която трябва да си отиде.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
-        text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."
+        text: Създайте свой алгоритъм като залепите стрелките до картата, която се опитвате да разрешите. Втората е подобна, но посоката ще е надолу.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: "It's like programming with paper. And that's it!"
+        text: Това е като програмиране с хартия!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: "Debugging is finding and fixing problems. There are lots of ways to debug problems. One of the easiest is to move step by step until where you find where something goes wrong. Here I'm trying to do a back handspring on the beam but I keep falling off."
+        text: Дебъгване е намиране и отстраняване на проблеми. Има много начини да се търсят проблеми. Един от най-лесните е да се движите стъпка по стъпка до там, където нещо се е объркало. Тук аз се опитвам да направя кълбо назад на греда, но без да падам.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: "I walked through each part step by step and realized where my mistake was. I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position and I got it. I was really glad I debugged my back handspring."
+        text: Аз преминах през всяка част стъпка по стъпка и разбрах къде е моята грешка. Аз не пускам ръцете си от гредата правилно. Така че, аз опитах друго кълбо назад на греда с моята нова позиция на ръцете и аз го направих. Бях наистина радостна, отстраних грешките си в правенето на кълбо назад.
       3:
         image: notes/C1_maze_debugging_3.png
-        text: "To learn about debugging, we start with a set of blocks already on the stage. You'll notice that these blocks won't get you to the goal. We need to debug the solution and fix it. What went wrong? You'll notice that you needed to keep going west one more block."
+        text: За да научим повече за отстраняване на грешките, ние ще започнем с набор от блокове вече в сцената. Ще забележите, че с тези блокове няма да се стигнете до целта. Ние трябва да ги проследите блоковете и да ги оправите. Какво се е объркало? Ще забележите, че имате нужда да продължите на запад с един блок повече.
       4:
         image: notes/C1_maze_debugging_4.png
-        text: "Let's fix this by adding another west block and hitting run to see if you got it right. Yay, you got it!"
+        text: Нека да се определим това чрез добавяне на друг блок на запад и натиснете Старт,, за да видим дали е правилно. Уау, направил си го!
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle and see what directions it needs to take.
+        text: За този пъзел трябва да доведете птицата до прасето. Погледнете пъзела и вижте какви посоки трябва да се поставят.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: |-
-          You need to drag the blocks over from the toolbox to the workspace. Make sure it's under the "when run" block and when you think you've got the right solution, then you can click "Run" and watch the bird go to the pig.
+        text: 'Трябва да плъзнете блоковете от кутията с инструменти към работната област. Уверете се, че са под "при стартиране" блока и когато прецените, че сте готови с правилното решение - щракнете върху бутона "Старт" и вижте дали птица стига до прасето.'
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: Едно от нещата, в които компютрите са наистина добри е повтарянето на команди. Като човек, за Вас е наистина скучно, ако трябва да направите едно и също нещо много и много пъти. Но компютърът може да прави едно и също нещо милиони или дори милиарди пъти и да не се отегчава, а дори ще изпълнява това винаги наистина добре.
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: Например, ако исках да пожелая на всички от Facebook Честит рожден ден като им изпратя имейл, това можеше да ми отнеме повече от век, ако пишех всички тези имейли по отделно. Но само с няколко линии код, може да имам система, която ще изпрати имейл до всички във Facebook, които имат рожден ден днес.
       3:
         image: notes/C1_maze_loops_3.png
-        text: 'To get the bird to the pig in this level... rather than drag three North blocks on to the workspace, you will use the "repeat" block. Drag the "repeat" block on to the workspace and enter the number 3. Then drag the "move North" block into the "repeat" block and hit "Run" to see if you got it right. Congratulations, you got it!'
+        text: 'За да придвижим птицата към прасето в това ниво..., вместо да плъзнете три С блокове към работната област, ще използвате "повтори" блок. Плъзнете "повтори" блок към работната област и въведете 3 на мястото на???. След това плъзнете С блок в "повтори" блока и натиснете "Старт. Честито! Готово!'
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
-        text: "This lesson is called move it, move it. Together we're going to write a program to get our friends from the starting with the compass rose to the smiley face goal."
+        text: Този урок се нарича я премести го, премести го. Заедно, ние ще напишем програма, за да преведем съучениците си от компаса до усмихнатия емотикон.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: "But the smiley is face down and only one person knows how to get there. Let's get this program started."
+        text: Но усмихнатия емотикон е с лицето надолу и само един човек знае как се стига до него. Нека да стартираме програмата.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: "A program is an algorithm that has been coded into something that can be run by a machine. Most of us think of a program as something that we write for a computer. Programs are really good for that but they're also helpful in other places. You can make your own game or even program a robot to do things for you."
+        text: Програма е алгоритъм, който е кодиран в нещо, което може да се стартира от една машина. Повечето от нас мислят за програма като нещо, което пишем за компютър. Програми са наистина добри за това, но те също са полезни и в други места. Можете да направите своя собствена програма, игра или дори да програмирате робот да прави неща за Вас.
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: |-
-          My name is Jeremiah. Hi! I am seven years old. I love playing on my mom's computer but I always get permission first. "Mom, can I go on the computer? Sure honey!"
+        text: 'Моето име е Джеремая. Здравей! Аз съм на седем години. Обичам да играя на компютъра на майка ми, но аз винаги първо я питам. "Мамо, може ли да отида на компютъра? Разбира се скъпи!"'
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: Обичам компютъра на майка ми, защото мога да вляза в интернет. Интернет е като вашия квартал. Можете да посетите готини места, можете да говорите със семейство и приятели и можете да научите много нови неща.
       3:
         image: notes/C1_going_places_safely_3.png
-        text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
+        text: Вчера посетих една зоологическа градина, която е близо до къщата ми. Видях бебе зебра. Аз ѝ направих снимка и ѝ промених цвета на ивиците, след това добавих шапка и добавих снимката към моята колекция на чалнати животни. Жестоко! По-късно отидох на място, много далеч. Посетих Кения. Това е държава в Африка. Много зебри живеят там.
       4:
         image: notes/C1_going_places_safely_4.png
-        text: |-
-          Sometimes on the Internet I talk to people I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. "Yummy, I wish the Internet had smellorama!" I can talk to different people on the Internet, like my cousin but I only talk to people I know.
+        text: 'Понякога в интернет аз говоря с хора, които познавам, като баба ми, която живее в друг град. Здравей, бабо! Тя ми прави "бисквитки", които ще ми изпрати за моя рожден ден. "Сладко, искам интернет да има миризмограф!" Мога да говоря с различни хора в интернет, като братовчед ми, но говоря само с хора, които познавам.'
       5:
         image: notes/C1_going_places_safely_5.png
         text: What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!
@@ -596,10 +581,10 @@ bg:
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: Едно от нещата, в които компютрите са наистина добри е повтарянето на команди. Като човек, за Вас е наистина скучно, ако трябва да направите едно и също нещо много и много пъти. Но компютърът може да прави едно и също нещо милиони или дори милиарди пъти и да не се отегчава, а дори ще изпълнява това винаги наистина добре.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: Например, ако исках да пожелая на всички от Facebook Честит рожден ден като им изпратя имейл, това можеше да ми отнеме повече от век, ако пишех всички тези имейли по отделно. Но само с няколко линии код, може да имам система, която ще изпрати имейл до всички във Facebook, които имат рожден ден днес.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
         text: "In this example, your goal is going to be to move the bird to get the pig. Now, we're going to be able to use the repeat block in order to be able to do this very easily. You can either do this by giving the computer a move forward command five times in order to advance the bird one step each time to the pig or you can just tell the computer to move forward once, and then tell it to repeat that five times and it'll do the same thing."
@@ -772,8 +757,7 @@ bg:
         text: Досега сте създавали анимация или история, която прави точно същото нещо всеки път, когато го стартирате. Сега можете да направите една интерактивна игра, която да играете.
       2:
         image: notes/C2_playlab_createastory_2.png
-        text: |-
-          There are some new blocks to try out. There's the "when arrow" block and the "move actor" block. You can put these blocks together to move the actors around with the arrow keys. And there are some blocks that do stuff when actors collide or are clicked. Check them out and have fun!
+        text: 'Там е "когато стрелка" блок и блок "премести актьор". Можете да поставите тези блокове заедно, за да движите актьорите с клавишите със стрелки.'
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
@@ -805,3 +789,201 @@ bg:
         image: notes/C2_zuck_repeat_loop_5.png
         text: |-
           Now one more thing is you can put as many commands as you want inside the "repeat" block. So in this example you're telling it to move forward and turn left, which it will do five times. All right good job and have fun!
+    C3_artist_functions:
+      1:
+        image: notes/C3_artist_functions_1.png
+        text: "One of the great things in computer programming is once you've taught a computer how to do an action, you can call that function again. You give it a name and then you can call it. That's really like extending the language."
+      2:
+        image: notes/C3_artist_functions_2.png
+        text: "In the program we built, we learned how to draw a square by moving and turning four times. We can take that function and give it a name, draw a square, so that any time we want to do that, we simply say draw a square and it will go back and invoke that function, that code. It will get done for us. We've added that concept to our programming language."
+    C3_artist_intro:
+      1:
+        image: notes/C3_artist_intro_1.png
+        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+      2:
+        image: notes/C3_artist_intro_2.png
+        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+      3:
+        image: notes/C3_artist_intro_3.png
+        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+      4:
+        image: notes/C3_artist_intro_4.png
+        text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
+      5:
+        image: notes/C3_artist_intro_5.png
+        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+    C3_artist_nested_loops:
+      1:
+        image: notes/C3_artist_nested_loops_1.png
+        text: "When you put a loop inside of another loop, we call that a nested loop. For example, here we're given the code already to draw one triangle with sides of length 100 pixels using the repeat times block set to three, once for each side of a triangle."
+      2:
+        image: notes/C3_artist_nested_loops_2.png
+        text: "But we want to draw six triangles. In order to do that, we're going to take that loop and place it inside of another repeat times block. Pretty cool!"
+    C3_bee_conditionals:
+      1:
+        image: notes/C3_bee_conditionals_1.png
+        text: This is the conditional block. It says IF there is nectar or honey that is less than, equal to or greater than a number, THEN do something.
+      2:
+        image: notes/C3_bee_conditionals_2.png
+        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+      3:
+        image: notes/C3_bee_conditionals_3.png
+        text: "In this example, we're going to say IF the purple flower has nectar greater than 0, get nectar. That will tell our bee to keep getting nectar as long as it's there. Ta-dah!"
+    C3_debugging_bee:
+      1:
+        image: notes/C3_debugging_bee_1.png
+        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+      2:
+        image: notes/C3_debugging_bee_2.png
+        text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
+      3:
+        image: notes/C3_debugging_bee_3.png
+        text: "Looks like there's our problem! We need one more move forward block. The step button helps us debug our problem by identifying where the error is so we can fix it."
+    C3_bee_functions:
+      1:
+        image: notes/C3_bee_functions_1.png
+        text: One of the most important concepts in computer science is how to define new commands, how to add your own words to a computer language. Most computer languages have only about one hundred words or commands. The art and magic is in defining your own new words out of these building blocks.
+      2:
+        image: notes/C3_bee_functions_2.png
+        text: "We do this all the time in sports. For example, in basketball, you start by learning how to dribble, how to do a lay-up, how to rebound. Once you've learned these really basic moves, you learn new moves and put together these building blocks, like a pick and roll or give and go. You can then go from there to do more complex plays. Once you learn that play and give it a name, everybody on the team knows how to do it."
+      3:
+        image: notes/C3_bee_functions_3.png
+        text: "Similarly once you've taught a computer how to do an action once using these sequences of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function. Now we're going to use functions to help the bee."
+      4:
+        image: notes/C3_bee_functions_4.png
+        text: "In this example, our function is called get 2 nectar, this green block right here. We know what get 2 nectar does by looking at this grey box which is the function definition. If we look inside there, the get 2 nectar is going to get nectar and then get nectar again. Always look at what's inside the grey box so that you know what these green function blocks can do."
+    C3_bee_nested_loops:
+      1:
+        image: notes/C3_bee_nested_loops_1.png
+        text: "Now we're going to use nested loops with the bee. We're given some starter code which tells the bee to move forward and get nectar three times and then turn right. Let's take that whole piece of code and nest it inside another repeat block and set to repeat three times. Done!"
+    C3_bounce:
+      1:
+        image: notes/C3_bounce_1.png
+        text: "You're going to be creating your very own bounce game that you'll be able to share with your friends! How cool!"
+      2:
+        image: notes/C3_bounce_2.png
+        text: To get started, we have to link up the paddle controls to the arrow keys on our keyboard.
+      3:
+        image: notes/C3_bounce_3.png
+        text: "We can do this by linking the when left arrow block to the move left block and the when right arrow block to the move right block. Give it a go and you'll be programming your own bounce game in no time!"
+    C3_computational_thinking:
+      1:
+        image: notes/C3_computational_thinking_1.png
+        text: "This lesson is computational thinking. Sometimes learning a new game can be tough, right? At first it might seem really confusing and sometimes, there's no one there to teach you the rules, so you have to figure it out on your own."
+      2:
+        image: notes/C3_computational_thinking_2.png
+        text: "The good news is that you can get better at figuring things out on your own when you know a few thinking tricks. These tricks are unique ways for looking at and solving problems. In this lesson, you'll learn about four tricks and practice them with your friends to figure out the rules to a game."
+      3:
+        image: notes/C3_computational_thinking_3.png
+        text: "When you break down a big problem into smaller pieces, you're using your brain to decompose the big problem. Once we've decomposed the big problem into several smaller problems, we can go on to our next trick, which is called pattern match."
+      4:
+        image: notes/C3_computational_thinking_4.png
+        text: "That's when we look for similarities between things. Once I find the things that are the same, I can figure out what things are different. When I remove those differences, that's called abstraction."
+      5:
+        image: notes/C3_computational_thinking_5.png
+        text: "After I have figured out the steps to solving a problem, I can put those steps in a specific order called an algorithm so that anyone can use my directions to solve that problem. We're going to use these four steps to figure out how to play the game with no rules. By the end of the game, you'll be able to play something that looks like this!"
+    C3_crowdsourcing:
+      1:
+        image: notes/C3_crowdsourcing_1.png
+        text: "This lesson is called crowdsourcing. In this lesson we'll use a deck of cards to learn about how much easier some things can be to do in groups instead of trying to do them all alone. So grab some friends and make something awesome. Crowdsourcing is getting help from a large group of people to finish something faster."
+      2:
+        image: notes/C3_crowdsourcing_2.png
+        text: In computer science, we use crowdsourcing all the time. Thousands of amateurs and professionals link their computers together to search through billions and billions of pieces of information. Looking for things like the next Marsenne prime number, or even possible alien communications.
+      3:
+        image: notes/C3_crowdsourcing_3.png
+        text: "When you see a movie, each second of the movie is 24 individual pictures, we call those frames. So every one of those pictures needs to be created and rendered and put all together. My team and I, we're all software developers. We all work together to create a piece of software that actually creates an image, creates the final image that you see on screen. That's a tool that artists and other developers can use as part of their teamwork and their process to be able to create the images that they want on screen."
+      4:
+        image: notes/C3_crowdsourcing_4.png
+        text: "For example, in Finding Nemo, when Crush and Squirt and all their friends are flying through the East Australian Current. You're seeing images of water flowing by, you're seeing the colors on the back of the turtle, you're seeing the sides of the fish. All of those things are generated through math and computer programs that we write, that we then give to the artist and they take that to create that final image and tweak it and make it look beautiful and look fun."
+    C3_dice_race:
+      1:
+        image: notes/C3_dice_race_1.png
+        text: This lesson is called dice race. Almost everyone likes to play computer games. Have you ever thought about how computer programmers turn the steps of a game into a program? The first step in creating computer games and in solving any problem requires thinking and planning.
+      2:
+        image: notes/C3_dice_race_2.png
+        text: "The thinking step of problem solving produces an algorithm, which is a step by step plan for solving a problem or finishing a task. In this lesson, you'll create an algorithm for a dice race game. Then you'll ask your friends to try out your plan to see if they can follow the steps to play the game. After the programmer is sure the steps are correct, it's time to translate the algorithm into a program with language that the computer can understand."
+      3:
+        image: notes/C3_dice_race_3.png
+        text: "Almost everything we do every day requires an algorithm, a list of steps you can follow to finish a task. Think about getting ready for school or planning a fun day with your friends or fixing a snack. To complete any of those tasks, you'll need to break it down into smaller steps and sometimes the steps must be in a specific order."
+      4:
+        image: notes/C3_dice_race_4.png
+        text: "Think about making a sandwich. It doesn't matter which ingredient you get out of the cabinet first. But you can't spread the peanut butter until you open the jar. Computers need algorithms and programs to show them how to do even simple things that we can do without thinking about it."
+      5:
+        image: notes/C3_dice_race_5.png
+        text: An algorithm is the thinking behind what needs to happen while the program is the actual instructions given to the computer to make it happen. An algorithm has to be translated into a program before a computer can run it. Breaking a task into steps called an algorithm is sometimes difficult. But like any new skill, it gets easier and easier with practice.
+    C3_farmer_while:
+      1:
+        image: notes/C3_farmer_while_1.png
+        text: "While loops are pretty similar to what you do in everyday life. Imagine you are washing your car, you'll keep scrubbing until it's clean. While it's not clean, continue to scrub. You're evaluating these things all the time."
+      2:
+        image: notes/C3_farmer_while_2.png
+        text: "We've got a new look to help your farmer out. It's called a while-block. It's pretty simple actually. While a statement at the top is true, do something. For example, while there's a pile move one hayful. Go ahead and give it a try with your farmer."
+    C3_functional_suncatchers:
+      1:
+        image: notes/C3_functional_suncatchers_1.png
+        text: "This lesson is functional suncatchers. You'll be creating these pretty suncatchers using functions. There are several steps in creating one of these suncatchers. Some of the steps you have to repeat many times."
+      2:
+        image: notes/C3_functional_suncatchers_2.png
+        text: The first step in simplifying the process of making a suncatcher is figure out what we have to repeat over and over again. We can group these steps into what we call a function.
+      3:
+        image: notes/C3_functional_suncatchers_3.png
+        text: "But there is more to creating a beautiful suncatcher than following precise steps. Sometimes we want to be creative and change the color of the beads we're using. We can make every suncatcher unique if we use different colored beads."
+      4:
+        image: notes/C3_functional_suncatchers_4.png
+        text: Your suncatcher will be uniquely yours when you learn to think of the beads as variables which is a word that means a placeholder for information that can change. Have fun creating beautiful suncatchers using functions and variables!
+    C3_internet:
+      1:
+        image: notes/C3_internet_1.png
+        text: This lesson is all about the internet. The internet is a very busy place and similar to this busy road. Messages like cars are zooming along to get to their destinations. Messages move through the internet very quickly.
+      2:
+        image: notes/C3_internet_2.png
+        text: "Acting out how the internet works will help you understand what's happening when you use the internet. You'll learn how messages get from your computer to a favorite website or from a friend to an email inbox. Just like it's easier to navigate busy roads when you know the roads and can read the signs, traveling the internet is not so complicated when you know what goes on behind the scenes."
+      3:
+        image: notes/C3_internet_3.png
+        text: "Sending messages on the internet is a little bit like sending messages in the mail but with a few differences. I'm here at Google.com. The IP address for this website is this number. You can think of an IP address as your return address in the mail. Let's imagine that I want to send a message in the mail to someone in the office down the there. Do you see URL and the IP address on that door? I've written this message and hit send."
+      4:
+        image: notes/C3_internet_4.png
+        text: "Unlike the Postal Service, the first thing that happens is that the internet breaks the message into smaller parts so it can be sent more easily. These small parts are called packets. Each packet of the message is delivered to the destination one at a time. These packets are all put together in the right order so that the receiver can read the message correctly. Of course, there are many more things to learn about how the internet works but this is a great start. You're on your way to becoming a savvy internet user! Be sure to tell your family and friends what you've learned!"
+      5:
+        image: notes/C3_internet_5.png
+        text: "My name is Amanda Camp and I'm a software engineer at Google. I work on a team that works on a backend server that stores profiles and contacts. In my job, we think a lot about how contacts can be sent to other devices, such as your phone. Most people have a lot of contacts, you might have say, 1000 contacts and we don't want to send all of those contacts at once to your phone because it's too large of a message. Similar to the way the internet breaks large messages down into packets, we use a concept called paging where we might only send your phone 100 contacts at a time and let your phone respond to us and ask for the next 100."
+      6:
+        image: notes/C3_internet_6.png
+        text: "The most exciting thing about software is the fact that it can impact the entire world. I first learned to program when I was about nineteen. I think I was already a sophomore or a junior in college. The first program I remember writing is something that converted Celsius to Fahrenheit. I like programming because I like helping people. I can write programs at Google that help people all over the world and that's really mind-boggling and exciting."
+    C3_maze_conditionals:
+      1:
+        image: notes/C3_maze_conditionals_1.png
+        text: "People make decisions everyday. For example, before you go outside, you have an if statement that says if it's raining, then I need to get my jacket. Computers are amazing once you decide those kinds of statements that they can reliably execute those things and unbelievable speed. A computer program really is a little bit of math and some if statements where the decision gets made."
+      2:
+        image: notes/C3_maze_conditionals_2.png
+        text: "The if block helps the zombie make a decision. It checks something. For example, let's use the block that says if there's a path to the left, and put a turn left command inside it. We're telling the zombie to check its surroundings, see if there's a path on the left and if so, make that turn."
+      3:
+        image: notes/C3_maze_conditionals_3.png
+        text: "Then we use the move forward block inside this repeat to get it to keep moving forward as long as it just wants to go straight. Then when there's a turn, the if block will tell it to make that turn to the left. You can see that if we do that, if we take the turn to the left and otherwise moving forward, we'll achieve our goal."
+      4:
+        image: notes/C3_maze_conditionals_4.png
+        text: "It's an example of using an if statement which is really a fundamental concept in computer programming. One of the first things I learned was how to write a program that played tic-tac-toe. I had if statements to say, ok, if the other person is about to win, go ahead and block that spot. Have fun learning how to use if statements, it's a key concept."
+    C3_maze_level_4:
+      1:
+        image: notes/C3_maze_level_4_1.png
+        text: In this example, your goal is to get zombie to the sunflower. We could use five move forward blocks or we could tell the computer to move forward and repeat five times using the one repeat block.
+      2:
+        image: notes/C3_maze_level_4_2.png
+        text: This saves time and makes it way easier. To use it, just put the move forward block inside the repeat block. Hit run and the zombie will move forward five times to the yummy sunflower.
+    C3_playlab_create_game:
+      1:
+        image: notes/C3_playlab_create_game_1.png
+        text: Досега сте създавали анимация или история, която прави точно същото нещо всеки път, когато го стартирате. Сега можете да направите една интерактивна игра, която да играете.
+      2:
+        image: notes/C3_playlab_create_game_2.png
+        text: 'Там е "когато стрелка" блок и блок "премести актьор". Можете да поставите тези блокове заедно, за да движите актьорите с клавишите със стрелки.'
+    C3_songwriting_with_parameters:
+      1:
+        image: notes/C3_songwriting_with_parameters_1.png
+        text: This is the song writing lesson. Music is a lot like a computer program. The written notes and words tell the singer exactly what to do. Some parts of music are used over and over again.
+      2:
+        image: notes/C3_songwriting_with_parameters_2.png
+        text: We call this the chorus. In a computer program, the parts of the program that are used over and over again are called functions. When you read song lyrics and it says the word chorus, do you sing the word chorus? No, you look at the top of the page to see what words make up the chorus.
+      3:
+        image: notes/C3_songwriting_with_parameters_3.png
+        text: "In this lesson, you'll learn a silly little song called little bunny foo foo. The song has a chorus that you will sing several times over and over again. A function is a piece of code that you can call and use over and over again. It makes programming easier and more efficient so you don't have to write out the steps of your function over and over again. You can just write it once!"

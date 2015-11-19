@@ -12,30 +12,30 @@ social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= ho
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# Благодаря за регистрирането ви като домакин на Часът на кодрането събитие!
+# Благодаря за регистрирането ви като домакин на Hour of Code събитие!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about prizes, new tutorials and other exciting updates. What can you do now?
+Вие давате възможност на учениците по целия свят да учат с Hour of Code, който може да *промени останалата част от живота им*, по време на <%= campaign_date('full') %>. Ние ще се свържем с Вас за награди, нови уроци и други вълнуващи актуализации. Какво можете да направите?
 
 ## Разпространете новината
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Вие току-що се присъединихте към движението на Hour of Code. Кажете на приятелите си за**#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Попитайте във вашето училище, дали се предлага участие в Часът на кодирането
+## 2. Попитайте във Вашето училище, дали се предлага участие в Часът на кодирането
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](%= resolve_url('/prizes/hardware-signup') %) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[ Изпратете този имейл](%= resolve_url('/promote/resources#sample-emails') %), на директора и предизвикайте всяка класна стая в училището да се регистрира. <% if @country == 'us' %> Едно училище от *всеки* щат на Сащ (и Вашингтон) ще спечели $10,000 за технологии. [ Регистрирайте се тук](%= resolve_url('/prizes/hardware-signup') %) да бъдете класирани и [ **вижте победителите от миналата година**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
 
-## Предложете на вашия работодател да се включи в инициативата
+## 3. Предложете на Вашия работодател да се включи в инициативата
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your manager or company's CEO.
+[ Изпратете този имейл](%= resolve_url('/promote/resources#sample-emails') %) на вашия ръководител или изпълнителен директор на компанията.
 
-## 4. Promote Hour of Code in your community
+## 4. Рекламирайте Hour of Code във Вашата Община
 
-[Recruit a local group](%= resolve_url('/promote/resources#sample-emails') %)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
+[ Ангажирайте локална група](%= resolve_url('/promote/resources#sample-emails') %) — момчешки/момичешки скаутски клуб, църква, университет, ветерани, синдикат или дори и някои приятели. Не е задължително да си в училище, за да придобиеш нови умения. Използвайте тези [ плакати, банери, стикери, видео клипове и др.](%= resolve_url('/promote/resources') %) за собственото си събитие.
 
-## 5 Предложете на Общинската Администрация да подкрепи програмата "Един Час Програмиране"
+## 5 Ангажирайте местната власт в подкрепа на Часът на Кодирането
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[ Изпратете този имейл](%= resolve_url('/promote/resources#sample-emails') %) на вашия местен представител, градския съвет или училищното настоятелство и ги поканете да посетят Вашето училище за Часът на кода. То може да помогне за изграждане на подкрепа за компютърни науки във вашия район и след Часа на кода.
 
 <%= view 'popup_window.js' %>

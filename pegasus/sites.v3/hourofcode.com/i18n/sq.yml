@@ -19,6 +19,7 @@ sq:
   header_menu_promote: Promovo
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -124,6 +125,7 @@ sq:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -145,15 +147,6 @@ sq:
   prizes_brilliant: Një shkollë në secilën zonë apo territor do të fitojë $2000 për një Projekt Brilant
   prizes_actua: 15 shkolla nga Kanadaja do të fitojnë 2 ndihmës për STEM punëtoritë nga një prej anëtarëve Actua
   prizes_details: Detajet
-  prizes_nav_dc: Udhëtimi i mistershëm në Washington D.C.
-  prizes_nav_technology: 10.000$ teknologji për shkollën tënde
-  prizes_nav_video_chat: Bisedë me video me një gjigand të teknologjisë
-  prizes_nav_skype_dropbox: Kredit në Skype ose Dropbox për secilin organizator
-  prizes_nav_brilliant: 2.000$ projekt për Laboratorë të shkëlqyera
-  prizes_nav_actua: Workshop aktual
-  prizes_nav_kids_code: Kodim për Fëmijët dhe të Rinjtë
-  prizes_nav_terms: Termat dhe Kushtet
-  prizes_nav_faq: PESH (pyetje të shpeshta)
   nav_back_to_resources: Kthehu tek Resurset
   how_to_nav_educators: Për mësuesit
   how_to_nav_after_school: Për aktivitet pas mësimit
@@ -164,9 +157,22 @@ sq:
   how_to_nav_organizations: Për organizatat
   how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
+  how_to_nav_volunteers: For volunteers
   prizes_nav_title: Shpërblime
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Termat dhe Kushtet
+  prizes_nav_faq: PESH (pyetje të shpeshta)
+  prizes_nav_dc: Udhëtimi i mistershëm në Washington D.C.
+  prizes_nav_technology: 10.000$ teknologji për shkollën tënde
+  prizes_nav_video_chat: Bisedë me video me një gjigand të teknologjisë
+  prizes_nav_skype_dropbox: Kredit në Skype ose Dropbox për secilin organizator
+  prizes_nav_brilliant: 2.000$ projekt për Laboratorë të shkëlqyera
+  prizes_nav_actua: Workshop aktual
+  prizes_nav_kids_code: Kodim për Fëmijët dhe të Rinjtë
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
   whats_next_header: çfarë tutje?
   whats_next_description: "Do ju dergojmë materiale dhe këshilla të dobishme për eventin tuaj. Tutorialet e reja të 2015 së shpejti do të arrijnë për çfarëdo browser-i, smartphone -apo edhe pa kompjuter! <a href='http://code.org/learn'>provo tutorialet aktual</a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
@@ -246,6 +252,9 @@ sq:
   map_search_placeholder: Kërko për eventet e Orës së Kodimit
   map_search_search: Kërko
   map_search_reset: Rivendos
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Ora e Kodimit është këtu
   meta_tag_og_description: Ora e Kodimit është lëvizje globale që i përfshin dhjetëra miliona studentë në mbi 180 shtete dhe mbi 30 gjuhë. Mosha 4 deri 104.
   meta_tag_twitter_title: Ora e Kodimit është këtu
@@ -360,6 +369,7 @@ sq:
   title_how_to_organizations: 'Si të behemi nikoqir të Orës së Kodimit- Organizatat'
   title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: Udhëzuesit për zyrtarët publikë
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: Si të Drejtojmë
   title_press_release: Deklarata për Shtyp e Orës së Kodimit për zyrtarët e zgjedhur
   title_op_ed: Shëmbull Kundër dhe Pro Mbështetëse të Javës së Arsimit në Shkencat Kompjuterike dhe Orës së Kodimit

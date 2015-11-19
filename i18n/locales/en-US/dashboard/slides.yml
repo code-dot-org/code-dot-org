@@ -333,16 +333,6 @@ en:
       7:
         image: crwdns24969:0crwdne24969:0
         text: crwdns24970:0crwdne24970:0
-    C3_playlab_create_game:
-      1:
-        image: crwdns24971:0crwdne24971:0
-        text: crwdns24972:0crwdne24972:0
-      2:
-        image: crwdns24973:0crwdne24973:0
-        text: crwdns24974:0crwdne24974:0
-      3:
-        image: crwdns24975:0crwdne24975:0
-        text: crwdns24976:0crwdne24976:0
     playlab_intro:
       1:
         image: crwdns25678:0crwdne25678:0
@@ -793,3 +783,201 @@ en:
       5:
         image: crwdns50045:0crwdne50045:0
         text: crwdns50046:0crwdne50046:0
+    C3_artist_functions:
+      1:
+        image: crwdns50718:0crwdne50718:0
+        text: crwdns50719:0crwdne50719:0
+      2:
+        image: crwdns50720:0crwdne50720:0
+        text: crwdns50721:0crwdne50721:0
+    C3_artist_intro:
+      1:
+        image: crwdns50722:0crwdne50722:0
+        text: crwdns50723:0crwdne50723:0
+      2:
+        image: crwdns50724:0crwdne50724:0
+        text: crwdns50725:0crwdne50725:0
+      3:
+        image: crwdns50726:0crwdne50726:0
+        text: crwdns50727:0crwdne50727:0
+      4:
+        image: crwdns50728:0crwdne50728:0
+        text: crwdns50729:0crwdne50729:0
+      5:
+        image: crwdns50730:0crwdne50730:0
+        text: crwdns50731:0crwdne50731:0
+    C3_artist_nested_loops:
+      1:
+        image: crwdns50732:0crwdne50732:0
+        text: crwdns50733:0crwdne50733:0
+      2:
+        image: crwdns50734:0crwdne50734:0
+        text: crwdns50735:0crwdne50735:0
+    C3_bee_conditionals:
+      1:
+        image: crwdns50736:0crwdne50736:0
+        text: crwdns50737:0crwdne50737:0
+      2:
+        image: crwdns50738:0crwdne50738:0
+        text: crwdns50739:0crwdne50739:0
+      3:
+        image: crwdns50740:0crwdne50740:0
+        text: crwdns50741:0crwdne50741:0
+    C3_debugging_bee:
+      1:
+        image: crwdns50742:0crwdne50742:0
+        text: crwdns50743:0crwdne50743:0
+      2:
+        image: crwdns50744:0crwdne50744:0
+        text: crwdns50745:0crwdne50745:0
+      3:
+        image: crwdns50746:0crwdne50746:0
+        text: crwdns50747:0crwdne50747:0
+    C3_bee_functions:
+      1:
+        image: crwdns50748:0crwdne50748:0
+        text: crwdns50749:0crwdne50749:0
+      2:
+        image: crwdns50750:0crwdne50750:0
+        text: crwdns50751:0crwdne50751:0
+      3:
+        image: crwdns50752:0crwdne50752:0
+        text: crwdns50753:0crwdne50753:0
+      4:
+        image: crwdns50754:0crwdne50754:0
+        text: crwdns50755:0crwdne50755:0
+    C3_bee_nested_loops:
+      1:
+        image: crwdns50756:0crwdne50756:0
+        text: crwdns50757:0crwdne50757:0
+    C3_bounce:
+      1:
+        image: crwdns50758:0crwdne50758:0
+        text: crwdns50759:0crwdne50759:0
+      2:
+        image: crwdns50760:0crwdne50760:0
+        text: crwdns50761:0crwdne50761:0
+      3:
+        image: crwdns50762:0crwdne50762:0
+        text: crwdns50763:0crwdne50763:0
+    C3_computational_thinking:
+      1:
+        image: crwdns50764:0crwdne50764:0
+        text: crwdns50765:0crwdne50765:0
+      2:
+        image: crwdns50766:0crwdne50766:0
+        text: crwdns50767:0crwdne50767:0
+      3:
+        image: crwdns50768:0crwdne50768:0
+        text: crwdns50769:0crwdne50769:0
+      4:
+        image: crwdns50770:0crwdne50770:0
+        text: crwdns50771:0crwdne50771:0
+      5:
+        image: crwdns50772:0crwdne50772:0
+        text: crwdns50773:0crwdne50773:0
+    C3_crowdsourcing:
+      1:
+        image: crwdns50774:0crwdne50774:0
+        text: crwdns50775:0crwdne50775:0
+      2:
+        image: crwdns50776:0crwdne50776:0
+        text: crwdns50777:0crwdne50777:0
+      3:
+        image: crwdns50778:0crwdne50778:0
+        text: crwdns50779:0crwdne50779:0
+      4:
+        image: crwdns50780:0crwdne50780:0
+        text: crwdns50781:0crwdne50781:0
+    C3_dice_race:
+      1:
+        image: crwdns50782:0crwdne50782:0
+        text: crwdns50783:0crwdne50783:0
+      2:
+        image: crwdns50784:0crwdne50784:0
+        text: crwdns50785:0crwdne50785:0
+      3:
+        image: crwdns50786:0crwdne50786:0
+        text: crwdns50787:0crwdne50787:0
+      4:
+        image: crwdns50788:0crwdne50788:0
+        text: crwdns50789:0crwdne50789:0
+      5:
+        image: crwdns50790:0crwdne50790:0
+        text: crwdns50791:0crwdne50791:0
+    C3_farmer_while:
+      1:
+        image: crwdns50792:0crwdne50792:0
+        text: crwdns50793:0crwdne50793:0
+      2:
+        image: crwdns50794:0crwdne50794:0
+        text: crwdns50795:0crwdne50795:0
+    C3_functional_suncatchers:
+      1:
+        image: crwdns50796:0crwdne50796:0
+        text: crwdns50797:0crwdne50797:0
+      2:
+        image: crwdns50798:0crwdne50798:0
+        text: crwdns50799:0crwdne50799:0
+      3:
+        image: crwdns50800:0crwdne50800:0
+        text: crwdns50801:0crwdne50801:0
+      4:
+        image: crwdns50802:0crwdne50802:0
+        text: crwdns50803:0crwdne50803:0
+    C3_internet:
+      1:
+        image: crwdns50804:0crwdne50804:0
+        text: crwdns50805:0crwdne50805:0
+      2:
+        image: crwdns50806:0crwdne50806:0
+        text: crwdns50807:0crwdne50807:0
+      3:
+        image: crwdns50808:0crwdne50808:0
+        text: crwdns50809:0crwdne50809:0
+      4:
+        image: crwdns50810:0crwdne50810:0
+        text: crwdns50811:0crwdne50811:0
+      5:
+        image: crwdns50812:0crwdne50812:0
+        text: crwdns50813:0crwdne50813:0
+      6:
+        image: crwdns50814:0crwdne50814:0
+        text: crwdns50815:0crwdne50815:0
+    C3_maze_conditionals:
+      1:
+        image: crwdns50816:0crwdne50816:0
+        text: crwdns50817:0crwdne50817:0
+      2:
+        image: crwdns50818:0crwdne50818:0
+        text: crwdns50819:0crwdne50819:0
+      3:
+        image: crwdns50820:0crwdne50820:0
+        text: crwdns50821:0crwdne50821:0
+      4:
+        image: crwdns50822:0crwdne50822:0
+        text: crwdns50823:0crwdne50823:0
+    C3_maze_level_4:
+      1:
+        image: crwdns50824:0crwdne50824:0
+        text: crwdns50825:0crwdne50825:0
+      2:
+        image: crwdns50826:0crwdne50826:0
+        text: crwdns50827:0crwdne50827:0
+    C3_playlab_create_game:
+      1:
+        image: crwdns24971:0crwdne24971:0
+        text: crwdns24972:0crwdne24972:0
+      2:
+        image: crwdns24973:0crwdne24973:0
+        text: crwdns24974:0crwdne24974:0
+    C3_songwriting_with_parameters:
+      1:
+        image: crwdns50828:0crwdne50828:0
+        text: crwdns50829:0crwdne50829:0
+      2:
+        image: crwdns50830:0crwdne50830:0
+        text: crwdns50831:0crwdne50831:0
+      3:
+        image: crwdns50832:0crwdne50832:0
+        text: crwdns50833:0crwdne50833:0

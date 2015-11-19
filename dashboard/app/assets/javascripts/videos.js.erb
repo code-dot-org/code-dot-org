@@ -23,7 +23,27 @@ function createVideo(options) {
 //   key - an uid.
 //   name - a string.
 //   redirect - the redirect page after the video is dismissed.
-function showVideoDialog(options) {
+//   onClose - actions to take after closing the video dialog, or immediately
+//             if the video isn't shown.
+function showVideoDialog(options, forceShowVideo) {
+  if (forceShowVideo === undefined) {
+    forceShowVideo = false;
+  }
+
+  if (options.onClose === undefined) {
+    options.onClose = function () {};
+  }
+
+  if (dashboard.clientState.hasSeenVideo(options.key) && forceShowVideo === false) {
+    // Anything we were going to do when the video closed, we ought to do
+    // right now.
+    options.onClose();
+    if (options.redirect) {
+      window.location.href = options.redirect;
+    }
+    return;
+  }
+
   upgradeInsecureOptions(options);
   var widthRatio = .8;
   var heightRatio = .8;
@@ -44,6 +64,21 @@ function showVideoDialog(options) {
   var dialog = new Dialog({ body: body, redirect : options.redirect });
   $div = $(dialog.div);
   $div.addClass('video-modal');
+
+  $('.video-modal').on("remove", function () {
+    // Manually removing src to fix a continual playback bug in IE9
+    // https://github.com/code-dot-org/code-dot-org/pull/5277#issue-116253168
+    video.removeAttr('src');
+    options.onClose();
+    dashboard.clientState.recordVideoSeen(options.key);
+    // Raise an event that the dialog has been hidden, in case anything needs to
+    // play/respond to it.
+    var event = document.createEvent('Event');
+    event.initEvent('videoHidden', true, true);
+    document.dispatchEvent(event);
+  });
+
+
 
   var tabHandler = function(event, ui) {
     var tab = ui.tab || ui.newTab;  // Depends on event.
@@ -104,6 +139,12 @@ function showVideoDialog(options) {
   notesDiv.height(divHeight);
 
   dialog.show();
+
+  // Raise an event that the dialog has been shown, in case anything needs to
+  // pause/respond to it.
+  var event = document.createEvent('Event');
+  event.initEvent('videoShown', true, true);
+  document.dispatchEvent(event);
 
   // Don't add fallback player if a video modal has closed
   var shouldStillAdd = true;

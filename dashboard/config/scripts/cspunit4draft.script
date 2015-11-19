@@ -5,6 +5,18 @@ data from live data APIs.'
 description_short 'Data'
 login_required 'true'
 
+# From U3
+stage 'Permanent Data Storage and Clicker Completion'
+level 'U3L22 Student Lesson Introduction'
+level 'U3L17 - introKeyValue'
+level 'U3L17 - setKeyValue'
+level 'U3L17 - twoSetKeyValue'
+level 'U3L17 - introCallbacks'
+level 'U3L17 - getKeyValue'
+assessment 'U3L22 Free Response Getting Started'
+assessment 'U3L22 Assessment'
+assessment 'U3L22 Reflection'
+
 stage 'Data is the Secret Ingredient'
 level 'U4L01 Student Lesson Introduction'
 assessment 'U4L01 Free Response'

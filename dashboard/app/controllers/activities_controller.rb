@@ -5,9 +5,11 @@ require 'cdo/web_purify'
 class ActivitiesController < ApplicationController
   include LevelsHelper
 
-  # TODO: milestone is the only action so the below lines essentially do nothing. commenting out bc
-  # the TODO is to figure out why (forgery protection is useful -- why can't we use it? blockly?)
-  # protect_from_forgery except: :milestone
+  # The action below disables the default request forgery protection from
+  # application controller. We don't do request forgery protection on the
+  # milestone action to permit the aggressive public caching we plan to do
+  # for some script level pages.
+  protect_from_forgery except: :milestone
 
   MAX_INT_MILESTONE = 2147483647
   USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"']
@@ -26,16 +28,18 @@ class ActivitiesController < ApplicationController
       @level = Level.find(params[:level_id].to_i)
     end
 
-    if params[:program]
+    @sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: params[:scriptName]}, default: true)
+
+    if params[:program] && @sharing_allowed
       begin
         share_failure = find_share_failure(params[:program])
-      rescue OpenURI::HTTPError => share_checking_error
+      rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
         # If WebPurify fails, the program will be allowed
       end
 
       unless share_failure
         @level_source = LevelSource.find_identical_or_create(@level, params[:program])
-        slog(tag: 'share_checking_error', error: "#{share_checking_error}", level_source_id: @level_source.id) if share_checking_error
+        slog(tag: 'share_checking_error', error: "#{share_checking_error.class.name}: #{share_checking_error}", level_source_id: @level_source.id) if share_checking_error
       end
     end
 

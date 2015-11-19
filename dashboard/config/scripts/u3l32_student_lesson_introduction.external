@@ -1,22 +1,18 @@
 name 'U3L32 Student Lesson Introduction'
 title 'Images are Arrays'
+css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 32 - Images are Arrays
+## Unit 3: Lesson 26 - Looping Through Arrays
 
 # Background
 
-An image can be modified by modifying elements stored in the array representing the RGBA values of a rectangle of pixels on the canvas. Using a for-loop will streamline the process of moving from one array element to the next.
+Loops are a powerful way or finding out information about arrays. We can loop through all the elements in an array easily using a for loop. 
 
 # Lesson
 
-* Create a program to modify portions of the image canvas by changing the RGB values in the array.
-
-# Resources
-* Lesson needs a student activity document
-* Lesson needs a rubric or checklist
-
-
+* Create functions with different types of return values.
+* Loop through all the elements of an array using a for loop.
   
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

@@ -16,6 +16,13 @@
   "backgroundSpace":"うちゅう",
   "backgroundTennis":"テニス",
   "backgroundWinter":"ふゆ",
+  "calloutPlaceCommandsHere":"Place commands here",
+  "calloutPlaceCommandsAtTop":"Place commands to set up your game at the top",
+  "calloutTypeCommandsHere":"Type your commands here",
+  "calloutCharactersMove":"These new commands let you control how the characters move",
+  "calloutPutCommandsTouchCharacter":"Put a command here to have it happen when you touch a character",
+  "calloutClickCategory":"Click a category header to see commands in each category",
+  "calloutTryOutNewCommands":"Try out all the new commands you’ve unlocked",
   "catActions":"操作",
   "catControl":"ループ",
   "catEvents":"イベント",
@@ -476,5 +483,11 @@
   "whenTouchWallTooltip":"Execute the actions below when the actor touches an obstacle.",
   "whenUp":"上向き矢印キーが押されたとき",
   "whenUpTooltip":"上向きの矢印キーが押されたとき以下のアクションを実行します。",
-  "yes":"はい"
+  "yes":"はい",
+  "failedHasSetSprite":"Next time, set a character.",
+  "failedHasSetBotSpeed":"Next time, set a bot speed.",
+  "failedTouchAllItems":"Next time, get all the items.",
+  "failedScoreMinimum":"Next time, reach the minimum score.",
+  "failedRemovedItemCount":"Next time, get the right number of items.",
+  "failedSetActivity":"Next time, set the correct character activity."
 }

@@ -1,5 +1,5 @@
 var setRandomBackgroundRequiredBlock = {
-  test: function (block) {
+  test: function test(block) {
     return (block.type === 'flappy_setBackground' ||
       block.type === 'flappy_setPlayer') &&
       block.getTitleValue('VALUE') === 'random';

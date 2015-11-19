@@ -4,7 +4,7 @@ title: Privacy Policy
 
 * * *
 
-### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Privacybeleid
 
@@ -245,4 +245,4 @@ We do not disclose any personal information to third parties for marketing purpo
 Neem contact op met Code.org met vragen of opmerkingen over deze privacyverklaring, uw persoonsgegevens, onze derde-partij openbaarmaking praktijken of uw toestemming keuzes door ons te schrijven op <http://code.org/contact> of bij 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.   
   
   
-[![afbeelding](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![afbeelding](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

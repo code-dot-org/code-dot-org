@@ -8,13 +8,35 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-## Como levar a Hora do Código para toda a sua comunidade.
+# Como levar a Hora do Código para toda a sua comunidade.
 
-### Faça com que todas as escolas participem e todos os alunos possam aprender!
+[col-33]
 
-  1. **Recrute escolas e distritos locais.** Use [este e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) ou [este material de divulgação](<%= resolve_url('/promote/stats') %>) como ponto de partida e veja este [guia](<%= resolve_url('/how-to') %>) para escolas e distritos. Diga a eles que **todos** os educadores participantes vão receber um [presente de agradecimento](<%= resolve_url('/how-to') %>) e que em **cada Estado** uma escola participante vai ganhar **US$10.000 em recursos tecnológicos**!
+![](/images/fit-275/highlight-obama.png)
 
-  2. **Sedie um evento da Hora do Código.** Consulte nosso [guia do evento](<%= resolve_url('/how-to/how-to-event') %>) para ver um exemplo de programação, kit de divulgação na mídia e outros recursos de planejamento do evento. Sediar um evento é uma excelente maneira de promover a Hora do Código e aumentar o número de participantes.
+[/col-33]
+
+[col-33]
+
+&nbsp;&nbsp;&nbsp;&nbsp;![](/images/fit-258/checkprize.jpg)
+
+[/col-33]
+
+[col-33]
+
+&nbsp;&nbsp;&nbsp;&nbsp;![](/images/fit-248/dan.jpg)
+
+[/col-33]
+
+<p style="clear:both">
+  &nbsp;
+</p>
+
+## Faça com que todas as escolas participem e todos os alunos possam aprender!
+
+  1. **Recrute escolas e distritos locais.** Use [este e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) ou [este material de divulgação](<%= resolve_url('/promote/stats') %>) como ponto de partida e veja este [guia](<%= resolve_url('/how-to') %>) para escolas e distritos. Diga a eles que **todos** os educadores participantes vão receber um [presente de agradecimento](<%= resolve_url('/prizes') %>) e que em **cada Estado** uma escola participante vai ganhar **US$10.000 em recursos tecnológicos**!
+
+  2. **Sedie um evento da Hora do Código.** Consulte nosso [guia do evento](<%= resolve_url('/how-to/event') %>) para ver um exemplo de programação, kit de divulgação na mídia e outros recursos de planejamento do evento. Sediar um evento é uma excelente maneira de promover a Hora do Código e aumentar o número de participantes.
 
   3. **Participe de um evento durante a Semana da Educação em Ciência da Computação (<%= campaign_date('short') %>).** [Encontre salas de aula e escolas](<%= resolve_url('/events') %>) participantes no seu distrito, cidade ou Estado.
 
@@ -31,6 +53,6 @@ nav: how_to_nav
 
   7. **Publique um comunicado de imprensa.** [Use este exemplo](<%= resolve_url('/promote/official-press-release') %>) como guia.
 
-  8. **Conecte-se localmente.** Acesse <<%= resolve_url('https://code.org/promote') %>> para saber mais sobre a educação em ciência da computação em seu Estado. Assine a petição que está no site para receber atualizações da Code.org sobre seus esforços locais, estaduais e nacionais.
+  8. **Conecte-se localmente.** Acesse [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) para saber mais sobre a educação em ciência da computação em seu Estado.
 
 <%= view :signup_button %>

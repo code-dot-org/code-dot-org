@@ -51,7 +51,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
   * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
   * Listo gjërat që përdorin kod në jetën e përditëshme.
-  * Shiko [këtu](<%= resolve_url('https://code.org/girls') %>) mënyra se si ta bësh shkencën kompjuterike interesante te vajzat.
+  * See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 

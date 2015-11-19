@@ -4,7 +4,7 @@ crwdns44859:0crwdne44859:0
 
 * * *
 
-### crwdns47696:0crwdne47696:0
+### crwdns50423:0crwdne50423:0
 
 # crwdns44860:0crwdne44860:0
 
@@ -233,4 +233,4 @@ crwdns45108:0crwdne45108:0 crwdns45109:0crwdne45109:0
 crwdns45111:0crwdne45111:0   
   
   
-[![](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

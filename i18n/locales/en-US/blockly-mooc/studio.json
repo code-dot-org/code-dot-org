@@ -16,6 +16,13 @@
   "backgroundSpace":"crwdns22309:0crwdne22309:0",
   "backgroundTennis":"crwdns22310:0crwdne22310:0",
   "backgroundWinter":"crwdns22311:0crwdne22311:0",
+  "calloutPlaceCommandsHere":"crwdns50855:0crwdne50855:0",
+  "calloutPlaceCommandsAtTop":"crwdns50856:0crwdne50856:0",
+  "calloutTypeCommandsHere":"crwdns50857:0crwdne50857:0",
+  "calloutCharactersMove":"crwdns50858:0crwdne50858:0",
+  "calloutPutCommandsTouchCharacter":"crwdns50859:0crwdne50859:0",
+  "calloutClickCategory":"crwdns50860:0crwdne50860:0",
+  "calloutTryOutNewCommands":"crwdns50861:0crwdne50861:0",
   "catActions":"crwdns5172:0crwdne5172:0",
   "catControl":"crwdns5173:0crwdne5173:0",
   "catEvents":"crwdns5174:0crwdne5174:0",
@@ -476,5 +483,11 @@
   "whenTouchWallTooltip":"crwdns50147:0crwdne50147:0",
   "whenUp":"crwdns5086:0crwdne5086:0",
   "whenUpTooltip":"crwdns5087:0crwdne5087:0",
-  "yes":"crwdns5088:0crwdne5088:0"
+  "yes":"crwdns5088:0crwdne5088:0",
+  "failedHasSetSprite":"crwdns50862:0crwdne50862:0",
+  "failedHasSetBotSpeed":"crwdns50863:0crwdne50863:0",
+  "failedTouchAllItems":"crwdns50864:0crwdne50864:0",
+  "failedScoreMinimum":"crwdns50865:0crwdne50865:0",
+  "failedRemovedItemCount":"crwdns50866:0crwdne50866:0",
+  "failedSetActivity":"crwdns50867:0crwdne50867:0"
 }
