@@ -358,6 +358,7 @@
   "dropletBlock_setRed_param3_description": "The amount of red (from 0 to 255) to set in the pixel.",
   "dropletBlock_setScreen_description": "Sets the screen to the given screenId",
   "dropletBlock_setScreen_param0": "screenId",
+  "dropletBlock_setScreen_param0_description": "The unique identifier for the screen. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _.",
   "dropletBlock_setSize_description": "Sets the width and height for the UI element.",
   "dropletBlock_setStrokeColor_description": "Set the stroke color for the active canvas",
   "dropletBlock_setStrokeColor_param0": "color",
