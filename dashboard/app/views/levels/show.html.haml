@@ -3,7 +3,7 @@
 = render partial: 'shared/check_admin'
 = render partial: 'shared/sharing_meta_tags'
 
-- if params[:share] && @game.share_mobile_fullscreen? && browser.safari?
+- if params[:share] && browser.safari?
   :javascript
     if (!window.navigator.standalone) {
       window.addEventListener("load", function() {
