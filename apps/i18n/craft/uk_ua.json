@@ -84,5 +84,5 @@
   "reinfFeedbackMsg": "Можеш натиснути \"Грати далі\", щоб повернутись до своєї гри.",
   "replayButton": "Replay",
   "selectChooseButton": "Select",
-  "tooManyBlocksFail": "Завдання {puzzleNumber} виконано. Вітаємо! Це завдання можна виконати {numBlocks, кількома, одним {1 block} іншими {# blocks}}."
+  "tooManyBlocksFail": "Завдання {puzzleNumber} виконано. Вітаємо! Це завдання можна виконати {numBlocks, plural, one {1 block} other {# blocks}}."
 }

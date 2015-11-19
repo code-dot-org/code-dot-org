@@ -84,5 +84,5 @@
   "reinfFeedbackMsg":"Spied \"Turpināt spēli\" lai atgrieztos pie spēles.",
   "replayButton":"Replay",
   "selectChooseButton":"Select",
-  "tooManyBlocksFail":"Uzdevums {puzzleNumber} ir pabeigts. Apsveicam! Šo uzdevumu ir iespējams izpildīt arī ar {numBlocks, daudzskaitlī, one {1 block} cits {# blocks}}."
+  "tooManyBlocksFail":"Uzdevums {puzzleNumber} ir pabeigts. Apsveicam! Šo uzdevumu ir iespējams izpildīt arī ar {numBlocks, plural, one {1 block} other {# blocks}}."
 }

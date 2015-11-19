@@ -84,5 +84,5 @@
   "reinfFeedbackMsg": "您可以按\"继续玩\"继续游戏。",
   "replayButton": "Replay",
   "selectChooseButton": "Select",
-  "tooManyBlocksFail": "谜团 {puzzleNumber} 解出。祝贺您!这也可能与 {numBlocks，复数，一个 {1 block} 其他 {# blocks}}一起完成。"
+  "tooManyBlocksFail": "谜团 {puzzleNumber} 解出。祝贺您!这也可能与 {numBlocks，plural, one {1 block} other {# blocks}}一起完成。"
 }

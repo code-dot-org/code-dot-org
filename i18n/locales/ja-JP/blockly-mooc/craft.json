@@ -84,5 +84,5 @@
   "reinfFeedbackMsg":"「続ける」を押してゲームに戻ることが出来ます。",
   "replayButton":"Replay",
   "selectChooseButton":"えらぶ",
-  "tooManyBlocksFail":"パズル {puzzleNumber} を解きました。おめでとうございます! ちなみにブロック {numBlocks, plural, one {1 つ} other {# 個}} でも解くことができます。"
+  "tooManyBlocksFail":"パズル{puzzleNumber}クリア。おめでとうございます！{numBlocks, plural, one {1 ブロック} other {# ブロック}}でクリアすることもできるよ"
 }

@@ -84,5 +84,5 @@
   "reinfFeedbackMsg": "\"Oynamaya Devam Et\" butonuna basarak oyununuzu oynamaya devam edebilirsiniz.",
   "replayButton": "Replay",
   "selectChooseButton": "Select",
-  "tooManyBlocksFail": "{puzzleNumber} numaralı bulmaca tamamlandı. Tebrikler! Bunu aynı zamanda şu şekilde tamamlamak da mümkün: {numBlocks, çoğul, bir {1 block} diğer {# blocks}}."
+  "tooManyBlocksFail": "{puzzleNumber} numaralı bulmaca tamamlandı. Tebrikler! Bunu aynı zamanda şu şekilde tamamlamak da mümkün: {numBlocks, plural, one {1 block} other {# blocks}}."
 }

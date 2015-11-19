@@ -84,5 +84,5 @@
   "reinfFeedbackMsg":"Poți apăsa \"Joacă în continuare\" pentru a reveni la jocul tău.",
   "replayButton":"Replay",
   "selectChooseButton":"Select",
-  "tooManyBlocksFail":"Puzzle-ul {puzzleNumber} finalizat. Felicitări! De asemenea, este posibil să îl completezi cu {numBlocks, plural, un {1 block} alte {# blocks}}."
+  "tooManyBlocksFail":"Puzzle-ul {puzzleNumber} finalizat. Felicitări! De asemenea, este posibil să îl completezi cu {numBlocks, plural, one {1 block} other {# blocks}}."
 }

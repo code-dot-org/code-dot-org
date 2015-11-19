@@ -84,5 +84,5 @@
   "reinfFeedbackMsg": "Μπορείς να πατήσεις \"Συνέχισε το παιχνίδι\" για να επιστρέψεις στο παιχνίδι σου.",
   "replayButton": "Replay",
   "selectChooseButton": "Select",
-  "tooManyBlocksFail": "Το Παζλ ολοκληρώθηκε. Συγχαρητήρια! Επίσης, είναι δυνατό να το ολοκληρώσετε με κάποιο άλλο δομικό στοιχείο (μπλοκ)."
+  "tooManyBlocksFail": "Το Παζλ {puzzleNumber} ολοκληρώθηκε. Συγχαρητήρια! Είναι επίσης δυνατό να ολοκληρωθεί με {numBlocks, plural, one {1 block} other {# blocks}}."
 }

@@ -84,5 +84,5 @@
   "reinfFeedbackMsg":"Du kannst \"Weiter spielen\" drücken, um zurück zu deinem Spiel zu kommen.",
   "replayButton":"Replay",
   "selectChooseButton":"Select",
-  "tooManyBlocksFail":"Puzzle {puzzleNumber} abgeschlossen. Herzlichen Glückwunsch! Es ist auch möglich das Puzzle mit {numBlocks, plural, ein {1 block} andere {# blocks}} zu vervollständigen."
+  "tooManyBlocksFail":"Puzzle {puzzleNumber} abgeschlossen. Herzlichen Glückwunsch! Es ist auch möglich das Puzzle mit {numBlocks, plural, one {1 block} other {# blocks}} zu vervollständigen."
 }

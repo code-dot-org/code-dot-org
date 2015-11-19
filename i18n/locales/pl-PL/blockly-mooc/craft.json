@@ -84,5 +84,5 @@
   "reinfFeedbackMsg":"Możesz nacisnąć przycisk \"Graj\" (Keep Playing), by wrócić do swojej gry.",
   "replayButton":"Replay",
   "selectChooseButton":"Select",
-  "tooManyBlocksFail":"Łamigłówka {puzzleNumber} ukończona. Gratulacje! Można ją również ukończyć z {numBlocks, liczba mnoga, jednym {1 block} wieloma {# blocks}}."
+  "tooManyBlocksFail":"Łamigłówka {puzzleNumber} ukończona. Gratulacje! Można ją również ukończyć z {numBlocks, plural, one {1 block} other {# blocks}}."
 }

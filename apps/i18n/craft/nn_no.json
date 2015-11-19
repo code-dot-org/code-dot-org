@@ -84,5 +84,5 @@
   "reinfFeedbackMsg": "Du kan trykke \"Fortsett å spele\" for å gå tilbake til spelet ditt.",
   "replayButton": "Replay",
   "selectChooseButton": "Select",
-  "tooManyBlocksFail": "Oppgåve {puzzleNumber} er fullført. Gratulerer! Det er og mulig å fullføre den med {numBlocks, plural, one{1 block} other {# blocks}}."
+  "tooManyBlocksFail": "Oppgåve {puzzleNumber} er fullført. Gratulerer! Det er og mulig å fullføre den med {numBlocks, plural, one {1 block} other {# blocks}}."
 }
