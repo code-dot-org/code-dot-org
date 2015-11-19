@@ -42,7 +42,9 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 <img src="/images/fit-350/group_ipad.jpg">
 
 ## 5) Inspire students to start your Hour of Code
-**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities with computer science.** 
+**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities with computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
+
+[<img src="/images/fit-300/volunteer-map.png">](<%= resolve_url('https://code.org/volunteer/local') %>)
 
 **Show an inspirational video:**
 

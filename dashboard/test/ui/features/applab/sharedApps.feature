@@ -1,10 +1,10 @@
 @no_mobile
 @dashboard_db_access
+@as_student
 Feature: App Lab Scenarios
 
   Background:
-    Given I manually sign in as "ApplabStudent"
-    And I start a new Applab project
+    Given I start a new Applab project
 
   Scenario: App Lab Share
     Given I switch to text mode

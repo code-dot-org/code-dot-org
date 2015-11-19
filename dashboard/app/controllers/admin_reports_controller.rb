@@ -44,17 +44,22 @@ class AdminReportsController < ApplicationController
     @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
 
     # Compute the global funometer percentage for the script.
-    ratings = PuzzleRating.where('script_id = ?', @script_id)
+    ratings = PuzzleRating.where('puzzle_ratings.script_id = ?', @script_id)
     @overall_percentage = get_percentage_positive(ratings)
 
     # Generate the funometer percentages for the script, by day, for the last month.
     @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
     @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
 
+    # Generate the funometer percentages for the script, by stage.
+    ratings_by_stage = ratings.joins("INNER JOIN script_levels ON puzzle_ratings.script_id = script_levels.script_id AND puzzle_ratings.level_id = script_levels.level_id").joins("INNER JOIN stages ON stages.id = script_levels.stage_id").group('script_levels.stage_id').order('script_levels.stage_id')
+    @ratings_by_stage_headers = ['Stage ID', 'Stage Name', 'Percentage', 'Count']
+    @ratings_by_stage = ratings_by_stage.select('stage_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+
     # Generate the funometer percentages for the script, by level.
-    ratings_by_level = ratings.group(:level_id).order(:level_id)
-    @ratings_by_level_headers = ['Level ID', 'Percentage', 'Count']
-    @ratings_by_level = ratings_by_level.select('level_id', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+    ratings_by_level = ratings.joins(:level).group(:level_id).order(:level_id)
+    @ratings_by_level_headers = ['Level ID', 'Level Name', 'Percentage', 'Count']
+    @ratings_by_level = ratings_by_level.select('level_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
 
     render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
   end
@@ -200,6 +205,16 @@ class AdminReportsController < ApplicationController
 
     @recent_activities = Activity.all.order('id desc').includes([:user, :level_source, {level: :game}]).limit(50)
     render 'reports/usage', formats: [:html]
+  end
+
+  def hoc_signups
+    # Requested by Roxanne on 16 November 2015 to track HOC 2015 signups by day.
+    authorize! :read, :reports
+
+    # Get the HOC 2015 signup counts by day, deduped by email and name.
+    # TODO(asher): Is this clumsy notation really necessary? Is Sequel really this stupid?
+    signups_by_day = DB[:forms].where(kind: 'HocSignup2015').group(:name, :email).group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).all.map{|row| [row[:created_at_day].to_s, row[:count].to_i]}
+    render locals: {signups_by_day: signups_by_day}
   end
 
   # Use callbacks to share common setup or constraints between actions.

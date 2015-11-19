@@ -21,7 +21,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Add an if statement so that the app changes screens when the count reaches -5. (Click to see full instructions)",
+    "instructions": "Run the app, and click the up button. Then restart and run it again, and click the down button. Find and fix the issue in the code. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

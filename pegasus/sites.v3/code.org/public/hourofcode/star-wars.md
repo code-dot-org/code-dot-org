@@ -38,6 +38,6 @@ Learn to program droids, and create your own Star Wars game in a galaxy far, far
 
 **Technology Requirements:** Modern browsers + tablets
 
-<a href="http://studio.code.org/s/frozen/reset"><button>Try the tutorial</button></a>
+<a href="/starwars"><button>Try the tutorial</button></a>
 
 [/col-50]
