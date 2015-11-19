@@ -67,10 +67,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "// Add calls to increase with some input value to each of these function calls\r\nmoveForward( );\r\nwrite( );\r\nconsole.log( );\r\n\r\nfunction increase(inputNum){\r\n  var output = inputNum * 2;\r\n  return output;\r\n}",
-    "encrypted_examples": [
-
-    ]
+    "start_blocks": "// Add calls to increase with some input value to each of these function calls\r\nmoveForward( );\r\nwrite( );\r\nconsole.log( );\r\n\r\nfunction increase(inputNum){\r\n  var output = inputNum * 2;\r\n  return output;\r\n}"
   }
 }]]></config>
   <blocks/>

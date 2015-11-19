@@ -92,10 +92,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "penUp();\r\nvar xloc = 160;\r\nvar yloc = 240;\r\n\r\nonEvent(\"screen1\", \"keydown\", function(event) {\r\n  if(event.key == \"Left\"){\r\n    xloc = xloc - 10;\r\n  } else if (event.key == \"Right\"){\r\n    xloc = xloc + 10;\r\n  } else if (event.key == \"Up\"){\r\n    yloc = yloc - 10;\r\n  } else if (event.key == \"Down\"){\r\n    yloc = yloc + 10;\r\n  }\r\n  \r\n  updateTurtle();\r\n});\r\n\r\nfunction updateTurtle(){\r\n  moveTo(xloc, yloc);\r\n}\r\n\r\nfunction constrain(input, low, high){\r\n  var output;\r\n  if(input < low){\r\n    output = low;\r\n  } else if (input > high){\r\n    output = high;\r\n  } else {\r\n    output = input;\r\n  }\r\n  return output;\r\n}",
-    "encrypted_examples": [
-
-    ]
+    "start_blocks": "penUp();\r\nvar xloc = 160;\r\nvar yloc = 240;\r\n\r\nonEvent(\"screen1\", \"keydown\", function(event) {\r\n  if(event.key == \"Left\"){\r\n    xloc = xloc - 10;\r\n  } else if (event.key == \"Right\"){\r\n    xloc = xloc + 10;\r\n  } else if (event.key == \"Up\"){\r\n    yloc = yloc - 10;\r\n  } else if (event.key == \"Down\"){\r\n    yloc = yloc + 10;\r\n  }\r\n  \r\n  updateTurtle();\r\n});\r\n\r\nfunction updateTurtle(){\r\n  moveTo(xloc, yloc);\r\n}\r\n\r\nfunction constrain(input, low, high){\r\n  var output;\r\n  if(input < low){\r\n    output = low;\r\n  } else if (input > high){\r\n    output = high;\r\n  } else {\r\n    output = input;\r\n  }\r\n  return output;\r\n}"
   }
 }]]></config>
   <blocks/>
