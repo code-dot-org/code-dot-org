@@ -3,10 +3,10 @@
 //= require client_state
 //= require jquery.cookie
 
-describe("clientState#trackProgress", function() {
+describe("clientState#sourceForLevel", function() {
   var state = dashboard.clientState;
 
-  beforeEach(function() {
+  beforeEach(function () {
     state.reset();
   });
 
@@ -29,6 +29,14 @@ describe("clientState#trackProgress", function() {
     state.writeSourceForLevel('sample', 'd', 100, 'abc');
     localStorage.setItem('source_sample_d', 'bad data');
     assert(state.sourceForLevel('sample', 'd', null) === undefined);
+  });
+});
+
+describe("clientState#trackProgress", function() {
+  var state = dashboard.clientState;
+
+  beforeEach(function() {
+    state.reset();
   });
 
   it("records level progress and line counts when level is completed", function() {
@@ -107,6 +115,14 @@ describe("clientState#trackProgress", function() {
     state.levelProgress('sample', 'a').should.equal(0);
 
   });
+});
+
+describe("clientState#hasSeenVideo/hasSeenCallout", function() {
+  var state = dashboard.clientState;
+
+  beforeEach(function() {
+    state.reset();
+  });
 
   it("records video progress", function () {
     state.hasSeenVideo('video1').should.equal(false);
@@ -177,6 +193,14 @@ describe("clientState#trackProgress", function() {
     state.recordCalloutSeen('someCallout');
     state.hasSeenCallout('someCallout').should.equal(true);
   });
+});
+
+describe("clientState#reset", function() {
+  var state = dashboard.clientState;
+
+  beforeEach(function() {
+    state.reset();
+  });
 
   it("Resetting client state actually resets everything", function () {
     state.recordCalloutSeen('someCallout');
@@ -196,4 +220,3 @@ describe("clientState#trackProgress", function() {
     state.lines().should.equal(0);
   })
 });
-
