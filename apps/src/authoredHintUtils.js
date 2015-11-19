@@ -125,13 +125,13 @@ authoredHintUtils.finalizeHints_ = function () {
   var hints = authoredHintUtils.getFinishedHints();
   if (finalAttemptRecord) {
     hints = hints.map(function(hint){
-      hint = $.extend(hint, {
+      hint = $.extend({
         final_time: finalAttemptRecord.time,
         final_attempt: finalAttemptRecord.attempt,
         final_test_result: finalAttemptRecord.test_result,
         final_activity_id: finalAttemptRecord.activity_id,
         final_level_source_id: finalAttemptRecord.level_source_id,
-      });
+      }, hint);
       return hint;
     });
   }
@@ -149,13 +149,13 @@ authoredHintUtils.finalizeHints_ = function () {
 authoredHintUtils.recordUnfinishedHint = function (hint) {
   var lastAttemptRecord = authoredHintUtils.getLastAttemptRecord_();
   if (lastAttemptRecord) {
-    hint = $.extend(hint, {
+    hint = $.extend({
       prev_time: lastAttemptRecord.time,
       prev_attempt: lastAttemptRecord.attempt,
       prev_test_result: lastAttemptRecord.test_result,
       prev_activity_id: lastAttemptRecord.activity_id,
       prev_level_source_id: lastAttemptRecord.level_source_id,
-    });
+    }, hint);
   }
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   unfinishedHintViews.push(hint);
@@ -173,13 +173,13 @@ authoredHintUtils.finishHints = function (nextAttemptRecord) {
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   authoredHintUtils.clearUnfinishedHints();
   var finishedHintViews = unfinishedHintViews.map(function(hint){
-    hint = $.extend(hint, {
+    hint = $.extend({
       next_time: nextAttemptRecord.time,
       next_attempt: nextAttemptRecord.attempt,
       next_test_result: nextAttemptRecord.test_result,
       next_activity_id: nextAttemptRecord.activity_id,
       next_level_source_id: nextAttemptRecord.level_source_id,
-    });
+    }, hint);
     return hint;
   });
   authoredHintUtils.recordFinishedHints_(finishedHintViews);
@@ -206,15 +206,16 @@ authoredHintUtils.submitHints = function (url) {
   var hints = authoredHintUtils.finalizeHints_();
 
   // now, all hints should be finished and finalized. So submit them all
-  // if (hints && hints.length) {
-  $.ajax({
-    url: url,
-    method: 'POST',
-    contentType: 'application/json',
-    data: JSON.stringify({hints: hints}),
-    complete: function () {
-      authoredHintUtils.clearFinishedHints_();
-    }
-  });
+  if (hints && hints.length) {
+    $.ajax({
+      url: url,
+      method: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify({hints: hints}),
+      complete: function () {
+        authoredHintUtils.clearFinishedHints_();
+      }
+    });
+  }
 };
 
