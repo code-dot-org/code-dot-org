@@ -2794,69 +2794,46 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
-      Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
-      Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
-      Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
-      Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
-      Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
-      Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
-      Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+      Overworld Avoid Monsters_instruction: Tegen een Creeper aanlopen is een slecht
+        idee. Beweeg voorzichtig om de Creepers hen om je veilige huis te bereiken.
+      Overworld Chop Tree_instruction: Hout is een erg belangrijke grondstof. Veel
+        dingen worden er mee gemaakt. Loop naar een boom en gebruik het "vernietig
+        blok" commando op de boom om te hakken.
+      Overworld Chop Trees_instruction: We moeten een huis bouwen voor de zon onder
+        gaat. Voor een huis hebben we veel hout nodig. Zaag alle 3 de bomen om.
+      Overworld Free Play 20x20_instruction: Gefeliciteerd! Je hebt alle puzzels opgelost!
+        Graaf, bouw en maak iets unieks en gebruik alles wat tot nu toe geleerd hebt.
+      Overworld Free Play_instruction: Dit landschap is speciaal voor jou om mee te
+        spelen. Jij mag kiezen wat je wilt bouwen.
+      Overworld House Frame - A_instruction: Laten we ons eigen huis bouwen! Deze
+        plek ziet er goed uit. Bouw een basis op deze aarde blokken.
+      Overworld House Frame - C_instruction: Laten we ons eigen huis bouwen! Deze
+        plek ziet er goed uit. Bouw een basis op deze aarde blokken.
+      Overworld House Frame B_instruction: één muur is af, laten we nu de rest van
+        het huis bouwen volgens jouw plattegrond! Je moet hier vaak hetzelfde herhalen.
+      Overworld House Frame B2_instruction: één muur is af, laten we nu de rest van
+        het huis bouwen volgens jouw plattegrond! Je moet hier vaak hetzelfde herhalen.
+      Overworld House Frame C_instruction: één muur is af, laten we nu de rest van
+        het huis bouwen volgens jouw plattegrond! Je moet hier vaak hetzelfde herhalen.
+      Overworld House Frame Chosen_instruction: Bouw de rest van je huis met welk
+        materiaal je zelf wilt. Het commando "herhalen" komt hier handig van pas.
+      Overworld House Frame_instruction: Laten we ons huis gaan maken! Deze plek ziet
+        er goed uit. Bouw een basis op de aarde blokken.
+      Overworld Minecart Track_instruction: Je bent terug op de oppervlakte met veel
+        ondergrondse grondstoffen. We gaan we een spoor maken langs het pad naar je
+        huis. De eerste stap is het pad vrij maken. Volg het pad en verwijder de bomen.
+      Overworld Move to Sheep_instruction: Voeg een tweede "vooruit" commando toe
+        om bij de schapen te komen.
+      Overworld Place Wall_instruction: Ieder huis start met een muur. Bouw het eerste
+        deel van je huis door "plaats" en "vooruit" commando's in het "herhaal" commando
+        te plaatsen.
+      Overworld Plant Crops_instruction: Het is goed om vooruit te plannen. Plant
+        gewassen aan beide zijden van het water zodat je later geen honger krijgt.
+      Overworld Powered Minecart_instruction: Goed gedaan! Je hebt veel grondstoffen
+        verzameld en een mooi huis gebouwd. Leg nu een spoor aan van de rand van de
+        kaart naar de deur van uw huis.
+      Overworld Shear Sheep_instruction: Schaap scheertijd! gebruik het "scheer" commando
+        om wol te verzamelen van beide schapen.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -4507,25 +4484,21 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
-      Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
-      Underground If Statements_instruction: |
-        Now things are getting tricky. Mine
-        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
-        over any lava you uncover.
-      Underground Iron_instruction: |
-        Walking into molten lava is a bad idea. Place
-        cobblestone to create a bridge, then mine at least two of the iron blocks.
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7
-        redstone! Try using a repeat command inside a repeat command to walk in\na
-        square.\r\n"
-      Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
-      Underground Test Level_instruction: Collect all of the minerals!
+      Underground Avoiding Lava_instruction: Lava is verborgen onder sommige van deze
+        blokken, Deze moet je bedekken voordat je vooruit beweegt. een "als" commando
+        is hier handig. Voeg een "vooruit" commando toe op de juiste plaats om de
+        blokken te graven.
+      Underground If Statements_instruction: Nu wordt het lastiger. Graaf 3 redstone
+        blokken maar val niet in de lava. Gebruik een "als" commando om een keisteen
+        te plaatsen op ieder blok lava dat je ontdekt.
+      Underground Iron_instruction: Lopen in gesmolten lava is een slecht idea. Plaats
+        een keisteen om een brug te maken. Graaf daarna minimaal 2 blokken ijzer.
+      Underground Mine in a Circle_instruction: Vind een manier om 5 blokken diamant
+        en 7 blokken redstone te graven! Probeer een herhaal commando om in een vierkant
+        te lopen.
+      Underground Mining Coal_instruction: Je vind de meest waardevolle grondstoffen
+        onder de grond, Maar het kan donker worden. Plaats minimaal 2 fakkels en graaf
+        minimaal 2 kolen blokken.
+      Underground Test Level_instruction: Verzamel alle mineralen!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

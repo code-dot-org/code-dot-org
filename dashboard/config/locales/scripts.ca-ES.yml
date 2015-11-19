@@ -1600,18 +1600,18 @@
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
+          title: 'Star Wars: Construcció d''una galàxia amb codi'
+          description_short: Aprèn a programar droides i a crear el teu propi joc
+            d'Star Wars en una galàxia molt, molt llunyana.
+          description: Aprèn a programar droides i a crear el teu propi joc d'Star
+            Wars en una galàxia molt, molt llunyana.
           Hour of Code 2015: Hora del codi 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
+          title: 'Star Wars: Construcció d''una galàxia amb codi'
+          description_short: Aprèn a programar droides i a crear el teu propi joc
+            d'Star Wars en una galàxia molt, molt llunyana.
+          description: Aprèn a programar droides i a crear el teu propi joc d'Star
+            Wars en una galàxia molt, molt llunyana.
           Hour of Code 2015: Hora del codi 2015
         minecraft:
           title: Minecraft

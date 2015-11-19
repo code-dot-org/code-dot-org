@@ -610,32 +610,33 @@
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
-        text: This lesson is called the big event. It's all about how we can control
-          our programs and actually change the way a program runs on the fly using
-          events, like the push of a button or the click of a mouse.
+        text: Deze les noemen we de grote gebeurtenis. In deze les leer je alles over
+          hoe we programeren dat het programma moet werken en hoe een programma draait
+          wanneer we een actie ondernemen, zoals een klik op de muis of het aanklikken
+          van een knop.
       2:
         image: notes/C1_bigevent_unplugged_2.png
-        text: For this lesson, you'll be controlled with a paper remote control. It's
-          just like a real-live video game.
+        text: Voor deze les gebruiken we een papieren afstandsbediening. Het is dus
+          net als een levensechte videospel.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: An event is an action  that causes something to happen. It's like when
-          you click the button on a mouse and a webpage loads. That's an event. When
-          you touch your screen on a tablet to scroll, that's an event also. Events
-          are a great way of letting the user direct your program whenever they need
-          or want to.
+        text: Een gebeurtenis is een actie die ervoor zorgt dat er iets gebeurt. Bijvoorbeeld
+          wanneer je op je muisknop klikt en een webpagina laadt, dat is een gebeurtenis.
+          Maar ook het aanraken van je Tablet scherm om te scrollen is een gebeurtenis.
+          Gebeurtenissen zijn de manier om de gebruiker direct controle over een programma
+          te geven.
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: Things happen that we all respond to. We feel hungry and we go to the
-          fridge. We hear the mailman come and he puts our mail in the mailbox  and
-          then we go get our mail. Those are just like the events of pushing a button
-          or moving a joystick. They are something that happens that triggers us to
-          do something.
+        text: We reageren allemaal op gebeurtenissen. Wanneer honger hebben pakken
+          we eten uit de koelkast. Als we de postbode een brief horen bezorgen in
+          onze brievenbus halen we onze post op. Dit zijn vergelijkbare gebeurtenissen
+          zoals bij het drukken op een knop of het bewegen van een joystick. Het zijn
+          gebeurtenissen die ons uitlokken om actie te ondernemen.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: In video games, there's an event called "Update" and it happens 30 or
-          60 times a second. For videogame programmers that's almost more important
-          as an event than the buttons or the joystick.
+        text: In computer spellen is er een gebeurtenis genaamd "Update" en dit gebeurt
+          30 tot 60 keer per seconde. Voor computerspel programmeurs is zo'n gebeurtenis
+          vele malen belangrijker dan de klik op een knop of beweging van een joystick.
       6:
         image: notes/C1_bigevent_unplugged_6.png
         text: The main event we're watching for is that "Update" tick happening. And

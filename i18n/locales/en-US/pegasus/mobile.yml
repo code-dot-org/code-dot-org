@@ -1,4 +1,5 @@
 en-US:
+  hour_of_code: crwdns54655:0crwdne54655:0
   hello: crwdns3593:0crwdne3593:0
   select_language: crwdns21806:0crwdne21806:0
   en: crwdns43305:0crwdne43305:0
@@ -264,11 +265,13 @@ en-US:
   starwars_watch_videos: crwdns51626:0crwdne51626:0
   starwars_speak_languages: crwdns51627:0crwdne51627:0
   starwars_help_translate: crwdns51628:0crwdne51628:0
+  starwars_platform_text: crwdns54656:0crwdne54656:0
   mc_name: crwdns51629:0crwdne51629:0
   mc_longdescription: crwdns51630:0crwdne51630:0
   mc_shortdescription: crwdns51631:0crwdne51631:0
   mc_gradelevel: crwdns54485:0crwdne54485:0
   mc_platformtext: crwdns51633:0crwdne51633:0
+  mc_specs: crwdns54657:0crwdne54657:0
   minecraft_subtitle: crwdns51634:0crwdne51634:0
   volunteer_engineer_submission_title: crwdns54486:0crwdne54486:0
   volunteer_engineer_submission_subtitle_generic: crwdns50838:0crwdne50838:0

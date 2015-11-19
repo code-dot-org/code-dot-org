@@ -761,11 +761,11 @@
         starwars_blocks_intro: 'Star Wars: Bygg en galax med kod - introduktion'
         starwars_blocks_events: 'Star Wars: Bygg en galax med kod - händelser'
         starwars_blocks_congrats: 'Star Wars: Bygg en galax med kod - Grattis'
-        mc_intro: Minecraft - Introduction
-        mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        mc_intro: Minecraft - introduktion
+        mc_repeat: Minecraft - Upprepa
+        mc_if_statements: Minecraft - omuttalanden
+        mc_congrats_share: Minecraft - Grattis
+        mc_congrats_no_share: Minecraft - Grattis
     callout:
       text:
         drag_blocks: Dra ett "gå framåt" block och fäst det under det andra blocket
@@ -868,12 +868,13 @@
         Infinity_move_collide_callout: Spela upp ett ljud när händelsen inträffar.
         Infinity_repeat_callout: Placera flytta - block  här inne
         craft_run_button_callout: Klicka på "Kör" för att prova ditt program
-        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
-          the other block
-        craft_callout_preplaced: We've put some blocks here to get you started
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can
-          you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command
-          to move forward?
+        craft_drag_block_callout: 'Dra ett #gå framåt()", block och fäst det under
+          det andra blocket'
+        craft_callout_preplaced: Vi har lagt några block här för så attdu kan komma
+          igång
+        craft_inside_repeat: Upprepa åtgärderna genom att placera block härinne
+        craft_callout_preplaced_house: Denna kod kommer att börja bygga ditt hus.
+          Kan du avsluta det?
+        craft_what_is_iron: Gräv upp detta järn!
+        craft_callout_moveforward: Denna kod kommer att kontrollera om det finns lava,
+          kan du lägga till ett kommando för att gå framåt?

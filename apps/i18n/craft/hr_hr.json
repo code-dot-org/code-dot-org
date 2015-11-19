@@ -84,5 +84,5 @@
   "reinfFeedbackMsg": "You can press \"Keep Playing\" to go back to playing your game.",
   "replayButton": "Replay",
   "selectChooseButton": "Select",
-  "tooManyBlocksFail": "Zagonetka {puzzleNumber} je dovršena. Čestitam! Također je moguće završiti ju sa {numBlocks, plural, one {jednom kockom} other {# kocki}}."
+  "tooManyBlocksFail": "Zagonetka {puzzleNumber} je dovršena. Čestitam! Također je moguće završiti ju sa {numBlocks, plural, jedna {jednom kockom} other {# kocki}}."
 }

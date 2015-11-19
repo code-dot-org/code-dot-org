@@ -595,11 +595,11 @@
         starwars_blocks_intro: '스타워즈: 코드로 은하계 건설하기 - 소개'
         starwars_blocks_events: '스타워즈: 코드로 은하계 건설하기 - 이벤트'
         starwars_blocks_congrats: '스타워즈: 코드로 은하계 건설하기 - 축하'
-        mc_intro: Minecraft - Introduction
-        mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        mc_intro: 마인크래프트 - 소개
+        mc_repeat: 마인크래프트 - 반복
+        mc_if_statements: 마인크래프트 - 반복문
+        mc_congrats_share: 마인크래프트 - 축하
+        mc_congrats_no_share: 마인크래프트 - 축하
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'
@@ -676,12 +676,9 @@
         Infinity_move_collide_callout: 이 이벤트가 발생하면 소리를 재생 합니다.
         Infinity_repeat_callout: 여기로 '이동 블록'을 이동 시키세요
         craft_run_button_callout: 만든 프로그램을 "실행하기"를 눌러 실행시켜보세요.
-        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
-          the other block
-        craft_callout_preplaced: We've put some blocks here to get you started
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can
-          you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command
-          to move forward?
+        craft_drag_block_callout: '"moveForward();" 블록을 드래그해 다른 블록의 아래에 붙이세요.'
+        craft_callout_preplaced: 여러분이 시작하기 전에 몇 개의 블록들을 붙여두었습니다.
+        craft_inside_repeat: 블록들을 여기에 놓아서 작업들을 반복시키세요.
+        craft_callout_preplaced_house: 이 코드는 여러분의 집을 짓습니다. 끝낼 수 있겠어요?
+        craft_what_is_iron: 이 철 광석을 캐내자!
+        craft_callout_moveforward: 이 코드는 용암을 체크할 것입니다. 앞으로 움직이기 위한 명령을 추가해 주실 수 있나요?

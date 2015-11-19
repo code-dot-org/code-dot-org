@@ -2621,12 +2621,13 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+        text: 'Ciao, sono Kathleen Kennedy e sono la produttrice di Guerre Stellari:
+          Episodio VII - Il Risveglio della Forza. Oggi lavoreremo con una delle nostre
+          celebrità, BB-8. BB-8 è un droide sferico. Tutto ciò che fa e ogni movimento
+          che fa è controllato da un software. L''informatica influisce su ogni settore
+          industriale, dal marketing alle cure sanitarie e perfino nel cinema. Infatti,
+          per realizzare un film come Il Risveglio della Forza, hanno lavorato insieme
+          centinaia di ingegneri informatici.'
       2:
         image: notes/starwars_intro_2.JPG
         text: Ciao, sono Rachel Rose, un ingegnere senior nel settore Ricerca e Sviluppo
@@ -2645,37 +2646,41 @@
           per il web.
       4:
         image: notes/starwars_intro_4.JPG
-        text: To start off, we're going to work with Rey to program BB-8 to walk to
-          collect all of the scrap parts. Your screen is split into three parts. On
-          the left is the Star Wars game space, where code will run. The instructions
-          for each level are written below the game space.
+        text: Per cominciare, lavoreremo con Ray per programmare BB-8 in modo tale
+          da farlo andare a raccogliere tutti i rottami metallici. Il tuo schermo
+          e suddiviso in tre parti. Sulla sinistra c'è lo spazio per il gioco di Star
+          Wars, in cui viene eseguito il codice. Le istruzioni di ogni livello sono
+          scritte sotto l'area del gioco.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: Al centro dello schermo c'è la cassetta degli attrezzi che contiene
+          i blocchi. Ogni blocco è un'istruzione che BB-8 può capire.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
+        text: Lo spazio bianco sulla destra è il tuo spazio di lavoro ed è il posto
+          in cui costruirai il tuo programma.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what
-          happens? BB-8 moves left one block on the grid.
+        text: Se trascino il blocco "moveLeft();" (spostati a sinistra) sull'area
+          di lavoro e premo il pulsante "Esegui", cosa succede? BB-8 si sposta di
+          una casella a sinistra sulla griglia.
       8:
         image: notes/starwars_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together.
+        text: E cosa posso fare se voglio che BB-8 faccia qualcosa dopo essersi spostato
+          a sinistra? Posso aggiungere un altro blocco al programma. Io sto per scegliere
+          il blocco "moveUp();" (spostati verso l'alto) e trascinarlo sotto il blocco
+          "moveLeft();" che ho aggiunto prima. Non appena appare una linea gialla
+          sul contorno posso rilasciarlo e i due blocchi si agganceranno.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked
-          from top to bottom on our workspace. If you ever want to delete a block,
-          just remove it from the stack and drag it back into the tool box.
+        text: Se premo nuovamente "Esegui", BB-8 eseguirà le istruzioni associate
+          ai blocchi presenti nell'area di lavoro, procedendo dall'alto verso il basso.
+          Se vuoi cancellare un blocco, basta rimuoverlo dalla tua area di lavoro
+          e rimetterlo nella cassetta degli attrezzi.
       10:
         image: notes/starwars_intro_10.JPG
-        text: After you've hit run, you can always hit the reset button to get BB-8
-          back to the start. Now let's get rolling!
+        text: Dopo aver mandato in esecuzione il programma, puoi sempre premere il
+          pulsante "Ricomincia" per riportare BB-8 al punto di partenza. E ora, cominciamo!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
@@ -2688,117 +2693,135 @@
           perché gli permette di essere più veloci.
       2:
         image: notes/starwars_typing_2.JPG
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
+        text: Possiamo scrivere centinaia di istruzioni senza doverle ritrovare nella
+          cassetta degli attrezzi e trascinarle fuori. Per te che stai imparando,
+          scrivere le istruzioni in maniera testuale potrà richiederti più tempo all'inizio,
+          ma abbiamo voluto fare un tentativo.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show
-          text button on any puzzle to switch from blocks to typing code as text.
+        text: Nell'angolo in alto a destra della tua area di lavoro, puoi cliccare
+          il pulsante "visualizza testo" per passare dalla modalità a blocchi a quella
+          testuale.
       4:
         image: notes/starwars_typing_4.JPG
-        text: In the next lesson, we'll start you out in typing mode. Here you can
-          still drag the block from the toolbox or you can type the command name.
-          As you start to type, you'll see names of possible commands show below where
-          you're typing. Instead of typing the whole command name, you can select
-          one of these to move faster. In my job, I use this auto-complete feature
-          all the time when writing code.
+        text: Nella prossima lezione, inizieremo in modalità testuale. In questa modalità
+          puoi sempre trascinare i blocchi dalla tua cassetta degli attrezzi, però
+          puoi anche scrivere tu il nome dell'istruzione. Non appena inizi a scrivere
+          il nome dell'istruzione, vedrai apparire, sotto a ciò che stai scrivendo,
+          i nomi delle istruzioni che puoi selezionare. Invece di digitare tutto il
+          nome dell'istruzione, puoi selezionare una di quelle che ti vengono suggerite,
+          per essere più veloce. Nel mio lavoro uso sempre questa funzionalità di
+          "auto-completamento" quando scrivo del codice.
       5:
         image: notes/starwars_typing_5.JPG
-        text: When you're typing code, the computer needs you to be very precise.
-          You need to spell and capitalize the command name exactly correctly, including
-          the parentheses and the semi-colon. Even with a small typing mistake, BB-8
-          cannot understand the code and won't be able to move.
+        text: Quando scrivi del codice, devi essere estremamente preciso, altrimenti
+          il computer non potrà capirti. E' necessario scrivere l'istruzione esattamente
+          com'è, stando attenti alle maiuscole e includendo anche le parentesi e i
+          punti e virgola. Se c'è anche un solo piccolo errore di battitura, BB-8
+          non potrà comprendere il codice e non sarà in grado di muoversi.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
+        text: Se commetti un errore su una riga, l'editor di testo la evidenzierà
+          in modo tale che tu possa modificare la tua istruzione e risolvere il problema.
       7:
         image: notes/starwars_typing_7.JPG
-        text: If you get stuck, you can always start over with the start over button
-          and you can switch back to block mode at any time by clicking in the top-right
-          corner. Ok, let's give typing a try! And if you make mistakes, don't get
-          frustrated. It takes everybody a few tries to get it right.
+        text: Se ti blocchi, puoi sempre ricominciare premendo il pulsante “Ricomincia”
+          e puoi passare alla modalità a blocchi ogni volta che vuoi, cliccando sull'angolo
+          in alto a destra dell'area di lavoro. Ok, facciamo un tentativo! E se sbagli,
+          non scoraggiarti. Tutti hanno bisogno di un paio di tentativi per farlo
+          bene.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Ciao, il mio nome è Charita Carter e sono un produttore creativo senior
+          qui alla Walt Disney Imagineering. Io sono a capo dei gruppi che producono
+          le attrazioni che i nostri ospiti vengono a provare. Siamo sempre alla ricerca
+          di nuovi modi per migliorare e rendere più piacevoli le esperienze che vivono
+          i nostri ospiti e la tecnologia è al centro di tutto ciò.
       2:
         image: notes/starwars_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Complimenti, ce l'hai fatta! Hai programmato BB-8. Ora penso che siamo
+          pronti per qualcosa di un po' più difficile. Facciamola. Ora che hai imparato
+          i concetti fondamentali della programmazione, torniamo indietro e ricominciamo
+          a costruire il nostro gioco con R2-D2 e C-3PO.
       3:
         image: notes/starwars_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Per costruire un gioco, abbiamo bisogno di imparare qualcosa che i
+          programmatori di giochi utilizzano ogni giorno: gli Eventi. Gli Eventi dicono
+          al programma di ascoltare o aspettare qualcosa che succederà e quando avviene,
+          il programma esegue un''azione.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Alcuni esempi di eventi sono quelli rappresentati da un clic del mouse,
+          dall'uso di un tasto freccia o dalla pressione di un dito sullo sullo schermo.
       5:
         image: notes/starwars_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: In questo esempio, vogliamo far spostare R2-D2 verso l'alto per consegnare
+          un messaggio a un pilota dell'Alleanza Ribelle e poi verso il basso per
+          andare all'altro pilota dell'Alleanza Ribelle. Useremo gli eventi per farlo
+          muovere quando il giocatore usa i pulsanti freccia verso l'alto o verso
+          il basso.
       6:
         image: notes/starwars_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down.
+        text: Usiamo il blocco evento "whenUp()" (quando si preme sulla la freccia
+          verso l'alto) e attacchiamo al suo interno un blocco "goUp()" (vai in alto).
+          In questo modo, quando il giocatore preme sul tasto freccia verso l'alto,
+          verrà eseguito il codice associato al blocco "whenUp()" (quando si preme
+          sulla la freccia verso l'alto). E faremo la stessa cosa per far muovere
+          R2-D2 verso il basso.
       7:
         image: notes/starwars_events_7.JPG
-        text: To do this, we'll use a command called whenUp(). When you drag the command
-          out of the toolbox, you'll see that it starts and ends with a curly bracket
-          instead of a semi-colon. This gives us space to put other commands in the
-          middle. Every command that we place inside these brackets will run when
-          the player presses the up arrow.
+        text: Per fare ciò, useremo un'istruzione chiamata "whenUp()" (quando si preme
+          sulla freccia verso l'alto). Quando la trascini fuori dalla cassetta degli
+          attrezzi, vedrai che l'istruzione termina con delle parentesi graffe aperta
+          e chiusa invece che con un punto e virgola. Questa istruzione ha lo spazio
+          necessario a contenere altre istruzioni al suo interno. Ogni istruzione
+          che poniamo all'interno di queste parentesi graffe verrà eseguita quando
+          il giocatore userà la freccia verso l'alto.
       8:
         image: notes/starwars_events_8.JPG
-        text: We want R2-D2 to go up so let's put a goUp(); block inside the command.
-          And we'll do the same thing to make R2-D2 go down.
+        text: Noi vogliamo che R2-D2 vada verso l'alto e quindi andremo a mettere
+          un blocco "goUp();" (vai in alto) all'interno dell'istruzione. Poi faremo
+          la stessa cosa per far andare R2-D2 verso il basso.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance,
-          we can let R2-D2 react to button press events that move him around the screen.
-          Step by step, your game is getting more interactive.
+        text: Ora, invece di dover scrivere in anticipo tutto il codice necessario
+          a controllare il nostro droide, possiamo lasciare che R2-D2 reagisca agli
+          eventi legati alla pressione dei pulsanti per farlo spostare all'interno
+          dello schermo. Passo dopo passo, il nostro gioco è sempre più interattivo.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Ciao, mi chiamo Alice e gestisco i gruppi di ingegneria e produzione
+          qui a Code.org. Ho lavorato su questo corso che stai finendo di fare proprio
+          ora.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: 'Sei già arrivato all''ultimo livello. Complimenti! Hai già imparato
+          tutto quello che ti serve per creare la tua versione personale del gioco
+          di Star Wars. Non ci sono più istruzioni, né enigmi da risolvere. Puoi creare
+          il tuo gioco personale e decidere come funzionerà! Un''ultima cosa: hai
+          sbloccato nuovi suoni e nuove istruzioni per fare ancora di più.'
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[parlano gli studenti] Abbiamo fatto un gioco in cui fondamentalmente
+          si ottengono punti quando raggiungi i Porco-Palla. Il colpo di scena è che
+          ogni volta che si raggiunge un Porco-Palla viene visualizzato uno Stormtrooper.
+          Alla fine l''intero schermo è pieno di Porco-Palla e quando ne tocchi 10.000,
+          vinci.'
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[parlano gli studenti] Abbiamo fatto un gioco in cui non si può perdere
+          e tutto ciò che uccidi ti dà punti. Per il mio programma, ho invertito i
+          tasti in modo che ogni volta che si preme la freccia verso l''alto, il personaggio
+          va giù e quando si preme la freccia verso destra, il tuo personaggio va
+          a sinistra. È molto difficile! A volte basta avere un vantaggio, un vantaggio
+          sleale se sei lo sviluppatore del gioco. Ce l''ho fatta? Sìì!'
       5:
         image: notes/starwars_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Quando hai finito di creare la tua versione del gioco, clicca su condividi
+          per ottenere un collegamento che puoi condividere con i tuoi amici o per
+          giocare alla tua versione del gioco sul tuo telefono. Buon divertimento!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
@@ -2827,106 +2850,117 @@
           modo tale da andare a raccogliere tutti i rottami metallici.
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars
-          game space where code will run. The instructions for each level are written
-          below the game space.
+        text: Il tuo schermo e suddiviso in tre parti. Sulla sinistra c'è lo spazio
+          per il gioco di Star Wars, in cui viene eseguito il codice. Le istruzioni
+          di ogni livello sono scritte sotto l'area del gioco.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: Al centro dello schermo c'è la cassetta degli attrezzi che contiene
+          i blocchi. Ogni blocco è un'istruzione che BB-8 può capire.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we're going to build our program.
+        text: Lo spazio bianco sulla destra è il tuo spazio di lavoro ed è il posto
+          in cui costruirai il tuo programma.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8
-          moves left one block on the grid.
+        text: Se trascino il blocco "moveLeft();" (spostati a sinistra) sull'area
+          di lavoro, cosa succede? BB-8 si sposta di una casella a sinistra sulla
+          griglia.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together. When I press run
-          again, BB-8 will perform the commands that are stacked top to bottom on
-          our workspace.
+        text: E cosa posso fare se voglio che BB-8 faccia qualcosa dopo essersi spostato
+          a sinistra? Posso aggiungere un altro blocco al programma. Io sto per scegliere
+          il blocco "moveUp();" (spostati verso l'alto) e trascinarlo sotto il blocco
+          "moveLeft();" che ho aggiunto prima. Non appena appare una linea gialla
+          sul contorno posso rilasciarlo e i due blocchi si agganceranno. Se premo
+          nuovamente "Esegui", BB-8 eseguirà le istruzioni associate ai blocchi presenti
+          nell'area di lavoro, procedendo dall'alto verso il basso.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back into the toolbox.
+        text: Se vuoi cancellare un blocco, basta rimuoverlo dalla tua area di lavoro
+          e rimetterlo nella cassetta degli attrezzi.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: After you hit run, you can always hit the reset button to get BB-8 back
-          to the start. Now let's get rolling!
+        text: Dopo aver mandato in esecuzione il programma, puoi sempre premere il
+          pulsante "Ricomincia" per riportare BB-8 al punto di partenza. E ora, cominciamo!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Ciao, il mio nome è Charita Carter e sono un produttore creativo senior
+          qui alla Walt Disney Imagineering. Io sono a capo dei gruppi che producono
+          le attrazioni che i nostri ospiti vengono a provare. Siamo sempre alla ricerca
+          di nuovi modi per migliorare e rendere più piacevoli le esperienze che vivono
+          i nostri ospiti e la tecnologia è al centro di tutto ciò.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Complimenti, ce l'hai fatta! Hai programmato BB-8. Ora penso che siamo
+          pronti per qualcosa di un po' più difficile. Facciamola. Ora che hai imparato
+          i concetti fondamentali della programmazione, torniamo indietro e ricominciamo
+          a costruire il nostro gioco con R2-D2 e C-3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Per costruire un gioco, abbiamo bisogno di imparare qualcosa che i
+          programmatori di giochi utilizzano ogni giorno: gli Eventi. Gli Eventi dicono
+          al programma di ascoltare o aspettare qualcosa che succederà e quando avviene,
+          il programma esegue un''azione.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Alcuni esempi di eventi sono quelli rappresentati da un clic del mouse,
+          dall'uso di un tasto freccia o dalla pressione di un dito sullo sullo schermo.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: In questo esempio, vogliamo far spostare R2-D2 verso l'alto per consegnare
+          un messaggio a un pilota dell'Alleanza Ribelle e poi verso il basso per
+          andare all'altro pilota dell'Alleanza Ribelle. Useremo gli eventi per farlo
+          muovere quando il giocatore usa i pulsanti freccia verso l'alto o verso
+          il basso.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down. Now instead
-          of writing all the code to control our droid in advance, we can let R2-D2
-          react to button press events that move him around the screen.
+        text: Usiamo il blocco evento "whenUp()" (quando si preme sulla la freccia
+          verso l'alto) e attacchiamo al suo interno un blocco "goUp()" (vai in alto).
+          In questo modo, quando il giocatore preme sul tasto freccia verso l'alto,
+          verrà eseguito il codice associato al blocco "whenUp()" (quando si preme
+          sulla la freccia verso l'alto). E faremo la stessa cosa per far muovere
+          R2-D2 verso il basso. Ora, invece di dover scrivere in anticipo tutto il
+          codice necessario a controllare il nostro droide, possiamo lasciare che
+          R2-D2 reagisca agli eventi legati alla pressione dei pulsanti per farlo
+          spostare all'interno dello schermo.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Passo dopo passo, il nostro gioco è sempre più interattivo.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Ciao, mi chiamo Alice e gestisco i gruppi di ingegneria e produzione
+          qui a Code.org. Ho lavorato su questo corso che stai finendo di fare proprio
+          ora.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: 'Sei già arrivato all''ultimo livello. Complimenti! Hai già imparato
+          tutto quello che ti serve per creare la tua versione personale del gioco
+          di Star Wars. Non ci sono più istruzioni, né enigmi da risolvere. Puoi creare
+          il tuo gioco personale e decidere come funzionerà! Un''ultima cosa: hai
+          sbloccato nuovi suoni e nuove istruzioni per fare ancora di più.'
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[parlano gli studenti] Abbiamo fatto un gioco in cui fondamentalmente
+          si ottengono punti quando raggiungi i Porco-Palla. Il colpo di scena è che
+          ogni volta che si raggiunge un Porco-Palla viene visualizzato uno Stormtrooper.
+          Alla fine l''intero schermo è pieno di Porco-Palla e quando ne tocchi 10.000,
+          vinci.'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[parlano gli studenti] Abbiamo fatto un gioco in cui non si può perdere
+          e tutto ciò che uccidi ti dà punti. Per il mio programma, ho invertito i
+          tasti in modo che ogni volta che si preme la freccia verso l''alto, il personaggio
+          va giù e quando si preme la freccia verso destra, il tuo personaggio va
+          a sinistra. È molto difficile! A volte basta avere un vantaggio, un vantaggio
+          sleale se sei lo sviluppatore del gioco. Ce l''ho fatta? Sìì!'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Quando hai finito di creare la tua versione del gioco, clicca su condividi
+          per ottenere un collegamento che puoi condividere con i tuoi amici o per
+          giocare alla tua versione del gioco sul tuo telefono. Buon divertimento!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG

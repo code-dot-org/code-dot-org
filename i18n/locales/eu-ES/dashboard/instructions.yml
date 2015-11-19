@@ -410,11 +410,7 @@ eu:
       Artist - Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
       Artist - Nested Loops Assessment 1_instruction: Erabili kabiatutako begizta bat diseinua osatzeko.
       Auto Open Function Editor_instruction: 'Funtzioen barrenetik beste funtzio batzuk deitu ditzakezu! Zure "forma" funtzioa oinarri moduan erabiliz, 3 etxe irudi edo forma sortu, bakoitza aurrekoa baino 20 pixel luzeagoa eta 50 pixeleko luzerarekin hasiz. Kontagailu begizta bat erabiltzea lagungarria izan liteke. '
-      Bee Recommended Blocks test_instruction: |
-        Purple flowers may have either 1
-        or 0 nectar, but you don't know which one! Be careful not to collect nectar
-        from a purple flower if it doesn't have any. Check if the nectar is equal
-        to 1 by using the if block.
+      Bee Recommended Blocks test_instruction: 'Lore moreek 1 edo 0 nektar izan dezakete, baina ez dakizu zenbat duen lore bakoitzak! Kontuz ibili ez saiatzeko nektarra hartzen nektarrik ez duen lore more batetik. Begiratu ea nektar 1 den "baldin" blokea erabiliz.'
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -884,9 +880,7 @@ eu:
       Course 4 Artist For Loops 4_instruction: 'Nola aldatuko zenuke ikasi duzuna karratu hauek marrazteko? 15 pixeleko luzerarekin hasten dira, eta handiena 300 pixelekoa da. Karratu bakoitza aurrekoa baino 15 pixel handiagoa da. '
       Course 4 Artist For Loops 5_instruction: 'Lan ona egin duzu azken ariketan! Goazen berriro ere "kontagailua" aldagai hori erabiltzera irudi polit hau marrazteko. '
       Course 4 Artist For Loops 6_instruction: Joko librea! Saia zaitez begizta bat erabiltzen zuk zeuk diseinatutako patroi-forma hazkorra marrazteko.
-      Course 4 Artist For Loops 6a_instruction: |
-        Make three small changes to the
-        code from the last level to get this!
+      Course 4 Artist For Loops 6a_instruction: Egin hiru aldaketatxo azken mailako kodean hau lortzeko!
       Course 4 Artist For Loops 7_instruction: 'Ze gertatzen da algoritmo honetatik "Errepikatu 3" kentzen badugu, "mugitu" eta "biratu" blokeak bigiztaren barnean mantenduz? espiral moduko triangelu honetan, alde bakoitzaren luzera azkenekoarena baino 20 pixel handiagoa da.'
       Course 4 Artist For Loops 8_instruction: "Azken irudiko kodeari aldaketa txiki bat eginez  marrazki hau sor dezakezu. Asma dezakezu zein den aldaketa?\r\n\r\nPista: zerbait ezabatu behar duzu!"
       Course 4 Artist For Loops 8a_instruction: Azken irudiko kodeari aldaketa txiki bat eginez marrazki hau sor dezakezu. Asma dezakezu zein den aldaketa?
@@ -954,7 +948,7 @@ eu:
       Course 4 Artist Vars 10_instruction: 'Hona hemen beste triangelu txikiago batzuetan oinarrituz triangelu bat marrazten duen algoritmoa. Berau alda al dezakezu triangelu bakoitza marrazteko "aldeak" aldagaia erabil dezan? Kodea behatu, eta 3 zenbakia ikusten duzun bakoitzean, zure "aldeak" aldagaiarekin ordezkatu. Gogoratu "aldeak ezarri" blokea erabiltzea.'
       Course 4 Artist Vars 11_instruction: 'Hona hemen kode konplikatuago bat, azkeneko puzzlearen kontzeptu berdinak erabiliz - laukiz osatutako irudi hau marrazteko, zer ezarri beharko zenukeen "aldeak" aldagaian?'
       Course 4 Artist Vars 12_instruction: '"aldeak" aldagaian 5 balioa ezar dezagun. Algoritmo honetan zenbat eta alde gehiago gehitu, patroi osoa are handiagoa izango da! "luzera" izeneko beste aldagai bat dagoela kontuan har ezazu. Orain hori erabil dezakegu "aurrera mugitu" daukagun toki guztietan. Forma honentzat "luzera" aldagaian 75 balioa ezarri.'
-      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the \"length\" variable, let's use a math block with the\n\"sides\" variable inside to make sure that each shape fits correctly. The\nperimeter of each polygon is 300 pixels.\r\nNeed some hints?  Click here."
+      Course 4 Artist Vars 13_instruction: "Irudi geometriko batek alde asko dituenean, alde bakoitzaren luzerak txikiagoa izan beharko du irudi osoa pantailan sartzea nahi baduzu. \r Berregin dezagun irudi zoragarri hau sortzeko algoritmoa, baina, \"luzera\" aldagaiaren balioa eskuz aldatu beharrean, erabil dezagun matematikako bloke bat, \"aldeak\" aldagaia barruan duena, ziur egoteko irudi bakoitza ondo sartzen dela. Poligono bakoitzaren perimetroa 300 pixel da.\r Laguntzarik behar? Klikatu hemen."
       Course 4 Artist Vars 14_instruction: "Joko librea: Probatu! Orain zure algoritmoa kabiatuta dago begizta baten edo gehiagoren barnean. Zure bi aldagaien balioak aldatu, patroi politak marrazteko.\r\n\r\nEfektu handiagoa lortzeko, jolastu kolorearekin! Erabili  ausazko koloreak begizten barnean zure diseinua nola aldatzen den ikusteko."
       Course 4 Artist Vars 2_instruction: '"Mugitu aurrera 150" ordez, oraingoan "mugitu" blokeak "luzera" izeneko aldagaiari egiten dio erreferentzia. Eman diezaiokezu "luzera" aldagaiari 150 balioa triangelu berri hau marrazteko?'
       Course 4 Artist Vars 3_instruction: 'Hemen duzu karratu bat marrazten duen begizta, baina zerbait falta du. Zuzendu dezakezu eta "luzera" aldagaia erabili alde bakoitzaren luzera zein izan behar den admatzeko? '
@@ -1012,24 +1006,13 @@ eu:
       Course 4 Binary 6_instruction: Zein kate bitarrek, 10 aldiz errepikatuta, marraztuko du irudi hau?
       Course 4 Binary 7_instruction: Zein kate bitarrek, 10 aldiz errepikatuta, marraztuko du irudi hau?
       Course 4 Binary 8_instruction: 'Irudi honen gehiengoa 5 biteko zenbaki bitar bat errepikatuz osa dezakezu - ondoren, 4 biteko beste zenbaki bat beharko duzu beheko eskuineko erpina lortzeko.'
-      Course 4 EC 1a_instruction: No rules. No clues. Just the challenge!
-      Course 4 EC 1b_instruction: No rules. No clues. Just the challenge!
-      Course 4 EC 2a_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 2b_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 2c_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 3_instruction: |
-        Use what you learned in the previous level to draw
-        an image like this. Note: The code becomes more simple if you incorporate
-        parameters. 
-      Course 4 EC 3a_instruction: |
-        Extreme Challenge: No rules. No clues. Just the
-        challenge!
+      Course 4 EC 1a_instruction: Araurik ez. Pistarik ez. Lehiaketa besterik ez!
+      Course 4 EC 1b_instruction: Araurik ez. Pistarik ez. Lehiaketa besterik ez!
+      Course 4 EC 2a_instruction: '**Sekulako Lehiaketa:** Araurik ez. Pistarik ez. Lehiaketa besterik ez!'
+      Course 4 EC 2b_instruction: '**Sekulako Lehiaketa:** Araurik ez. Pistarik ez. Lehiaketa besterik ez!'
+      Course 4 EC 2c_instruction: '**Sekulako Lehiaketa:** Araurik ez. Pistarik ez. Lehiaketa besterik ez!'
+      Course 4 EC 3_instruction: 'Erabil ezazu aurreko mailan ikasi duzuna hau bezalako irudi bat marrazteko. Oharra: Kodea sinpleagoa izango da parametroak erabiltzen badituzu.'
+      Course 4 EC 3a_instruction: 'Sekulako Lehiaketa: Araurik ez. Pistarik ez. Lehiaketa besterik ez!'
       Course 4 Maze 1_instruction: Bidali txori haserrea zerriarengana!
       Course 4 Maze 2_instruction: Saihestu TNTa!
       Course 4 Maze 3_instruction: 'Programatu txori haserrea zerriarengana iris dadin. '
@@ -1045,14 +1028,10 @@ eu:
         Hemen "patruila" izeneko funtzioa dago. 
         Aldatu katua 400 pixel gora mugitzeko eta gero 400 pixel behera.
       Course 4 Play Lab Params 5_instruction: 'Aldatu "patruila" funtzioa "aktore" aldagaia gehitzeko, pantailako aktore bakoitzeko dei ahal diezaiogun. Gogoratu, atoreek 1, 2 eta 3 zenbakiak dituzte.'
-      Course 4 Play Lab Params 6_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Try using a "set speed" block with the new "speed"
-        parameter to help Penguin get both flags before the other sprites even get
-        one.
+      Course 4 Play Lab Params 6_instruction: 'Gehitu beste parametro bat, "abiadura" izenekoa, "patruila" funtzioari. Saia zaitez "ezarri abiadura" blokea erabiltzen "abiadura" parametro berriarekin, pinguinoari laguntzeko bi banderak harrapatzen iratxoek bandera bat eskuratu baino lehen.'
       Course 4 Play Lab Params 7_instruction: "Ondo pasa dezagun! Begiratu emandako kodea ikusteko ea bloke bakoitzak egiten duena asmatu dezakezun. \r\r Bukatutakoan, erabili gezi teklak txakurra kontrolatzeko eta bandera guztiak biltzeko."
       Course 4 Play Lab Params 8_instruction: 'Erabili "aktoreak ikutzen duenean" blokea txakurra goi-ezker eskinera atzera bueltatzeko BAKARRIK txakurrak beste aktoreetako bat ikutzen badu.'
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit\nthe function so that a \"points\" parameter is added to the \"player_score\"\nvariable. \r\n\r\nThe variable \"player_score\" should increase each time\nDog tags Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Hona hemen aurreko urrats bateko jokoa, baina kode gehiena ezkutatuta dago. Funtzio berri bat dago, \"gehitu_puntuak\".\"\r \r Editatu funtzioa \"puntuak\" parametroa gehitzeko \"jokalariaren_puntuazioa\" aldagaiari. \r \r \"jokalariaren_puntuazioa\" aldagaiaren balioa eguneratu behar da gora (inkrementatu) Txakurrak Katuaren gainean bihotzak marrazten dituenean, eta behera (dekrementatu) Katuak Txakurraren gainean bihotzak marrazten dituenean.\r \r Oharra:\nHori guztia egin ondoren, klikatu \"Hasi\" jolasteko. Txakurrak 6 puntu eskuratzen dituenena, hurrengo ariketara pasatuko zara."
       Course 4 Play Lab Vars 1_instruction: 'Oraingoan ez duzu koderik idatzi behar, sakatu "Exekutatu" joko honetan aritzeko! Jokoan, katuak baino bandera gehiago biltzen saiatzen ari den zakurra zara zu. Erabili gezia behera zakurra kontrolatzeko. Sakatu "Amaitu" jokatzeari uzteko.'
       Course 4 Play Lab Vars 2_instruction: 'Azkeneko puzleko lasterketa ez da oso justua izan! Aldatu "zakurraren_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago bil ditzakezula. 10 bandera biltzen dituen lehenengoak irabazten du!'
       Course 4 Play Lab Vars 3_instruction: Joko mota berri bat duzu hemen! Erabili ezker eta eskuin geziak mugitzeko, eta gora gezia salto egiteko. Saiatu bandera guztiak biltzen.

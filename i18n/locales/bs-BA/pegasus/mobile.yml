@@ -1,4 +1,5 @@
 bs-BA:
+  hour_of_code: Hour of Code
   hello: Pozdrav svijete
   select_language: Odaberi svoj jezik
   en: Računarstvo
@@ -288,11 +289,13 @@ bs-BA:
   starwars_watch_videos: Prije nego počneš, pogledaj jedan od ovih inspirativnih klipova
   starwars_speak_languages: Govoriš li neki drugi jezik?
   starwars_help_translate: Pomozi nam da prevedemo
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Sata Kodiranja Minecraft-a
   mc_longdescription: Iskoristi blokove koda da bi poveo Steve ili Alex u avanturu kroz Minecraft svijet.
   mc_shortdescription: Iskoristi blokove koda da bi poveo Steve ili Alex u avanturu kroz Minecraft svijet.
   mc_gradelevel: Uzrast 6+
   mc_platformtext: Savremeni browser-i, mobiteli, tableti
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Sata Kodiranja Minecraft-a
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 nastavnika će ugostiti Sat Kodiranja u njihovoj učionici ove godine, Dec 7-13, 2015. Oni žele tvoju pomoć! '

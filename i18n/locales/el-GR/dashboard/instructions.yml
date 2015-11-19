@@ -209,38 +209,25 @@ el:
       2-3 Maze sq5_instruction: Πήγαινε με στο γουρούνι! Πόσες φορές πρέπει να επαναλάβεις ένα μπλοκ;
       2-3 Maze sq6_instruction: 'Μπορείς να αντικαταστήσεις την προηγούμενη απάντηση με μόνο δύο μπλοκ; (Υπόδειξη: Δημιούργησε ενα βρόχο, χρησιμοποιώντας το μπλοκ "φορές επανάληψης".)'
       2-3 Maze sq7_instruction: Πήγαινε με στον πράσινο εισβολέα χρησιμοποιώντας μόνο τρία μπλοκ.
-      2-3 Maze sq8_instruction: |
-        Get me to the pig! (Where is that "repeat times"
-        block when I need it?)
-      2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
+      2-3 Maze sq8_instruction: 'Πήγαινέ με στο γουρούνι! (Που είναι το μπλοκ "Επανέλαβε φορές" όταν το χρειάζομαι;)'
+      2-3 Maze sq9_instruction: Δημιούργησε βρόχους για να πας στο γουρούνι χρησιμοποιώντας λιγότερα μπλοκ.
       2-3_instruction: |
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
-      2-3level1_instruction: Help the bird catch the naughty pig by moving it forward
-      4-5 Artist 1_instruction: |
-        Help me finish drawing my box. (Each line is 300
-        pixels long) 
-      4-5 Artist 10_instruction: |
-        Press "Run" to try the code. Then, repeat it
-        enough times to complete the drawing. The colors will be different every time.
-      4-5 Artist 11_instruction: |
-        Complete the green lines. The lines are 300 pixels
-        long and 15 pixels apart.
-      4-5 Artist 2_instruction: Can you loop this code to complete the square?
-      4-5 Artist 3.5_instruction: |
-        Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
-        the drawing. The colors will (most likely) be different every time.
+      2-3level1_instruction: Βοήθησε το πουλί να πιάσει το άτακτο γουρούνι κάνοντάς το να προχωρήσει μπροστά
+      4-5 Artist 1_instruction: 'Βοήθησέ με να τελειώσω το σχεδιασμό του κουτιού μου. (Κάθε γραμμή έχει μήκος 300 εικονοστοιχεία) '
+      4-5 Artist 10_instruction: 'Πάτησε "Εκτέλεση"για να δοκιμάσεις τον κώδικα. Μετά, επανέλαβέ το όσες φορές χρειάζεται για να ολοκληρώσεις το σχέδιο. Τα χρώματα θα είναι διαφορετικά κάθε φορά.'
+      4-5 Artist 11_instruction: Ολοκλήρωσε τις πράσινες γραμμές. Οι γραμμές έχουν μήκος 300 εικονοστοιχεία και απόσταση 15 εικονοστοιχεία.
+      4-5 Artist 2_instruction: Μπορείς να επαναλάβεις αυτόν τον κώδικα για να ολοκληρώσεις το τετράγωνο;
+      4-5 Artist 3.5_instruction: 'Εντάξει, προσπάθησε να καταλάβεις τι θα συμβεί όταν εκτελέσεις τον κώδικα (ή πατήσεις "Εκτέλεση" για να τον δοκιμάσεις. Μετά, επανέλαβέ το όσες φορές χρειάζεται για να ολοκληρώσεις το σχέδιο. Τα χρώματα, πολύ πιθανόν, θα είναι διαφορετικά κάθε φορά.'
       4-5 Artist 3_instruction: |
         This rectangular flower bed has a perimeter of 600.
         The long side has a length of 200. Draw the rectangle.
       4-5 Artist 4_instruction: |
         How many degrees are in a circle?  Loop the blocks
         to create a circle of colors.
-      4-5 Artist 5_instruction: What angle do you use?
-      4-5 Artist 6_instruction: |
-        This equilateral triangle has angles of 60, 60,
-        and 60 degrees. Each side is 200 pixels. Complete the drawing.
+      4-5 Artist 5_instruction: Τι γωνία χρησιμοποιείς;
+      4-5 Artist 6_instruction: Αυτό το ισόπλευρο τρίγωνο έχει γωνίες 60, 60, και 60 μοίρες. Κάθε πλευρά είναι 200 εικονοστοιχεία. Ολοκλήρωσε το σχέδιο.
       4-5 Artist 7_instruction: |
         This right triangle has angles of 30, 60, and 90
         degrees. The slanted side's length is double the height of 100 pixels. Complete

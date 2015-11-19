@@ -2,8 +2,8 @@
   errors:
     messages:
       not_saved: 'Por favor corrije los siguientes errores:'
-      too_young: Este conetnido tiene restricciones de edad y no esta disoonible para
-        estudiantes jovenes
+      too_young: Este contenido tiene restricciones de edad y no esta disponible para
+        alumnos jóvenes
   activerecord:
     errors:
       messages:
@@ -12,8 +12,8 @@
       user:
         name: Nombre a mostrar
         email: Correo electrónico
-        username: nombre de usuario
-        password: contraseña
+        username: Nombre de usuario
+        password: Contraseña
         password_confirmation: Confirmación de la contraseña
         current_password: Contraseña actual
         locale: Idioma
@@ -111,7 +111,7 @@
   signin_form:
     title: ¿Ya tienes una cuenta? Inicia sesión
     login: Correo electrónico o nombre de usuario
-    password: contraseña
+    password: Contraseña
     remember: Recordarme
     submit: Iniciar Sesión
   signin:
@@ -316,8 +316,8 @@
       trophies: trofeos
     students:
       name: Nombre
-      username: nombre de usuario
-      password: contraseña
+      username: Nombre de usuario
+      password: Contraseña
       manage: Administrar los alumnos
       dashboard: Ir a el panel del maestro
       add: Añadir alumnos/as
@@ -525,7 +525,7 @@
   pdf_download: Descargar PDF
   download_coming_soon: Actividad descargable próximamente.
   video_coming_soon: Video próximamente!
-  not_started: El alumno no a intentado este nivel.
+  not_started: El alumno no ha intentado este nivel.
   share_code:
     title: Haz clic en "Ejecutar" para ver el programa en acción
     bounce_og_title: Revisa mi juego Bounce
@@ -576,14 +576,14 @@
     frozen:
       title: Congelado
     starwars:
-      title: Star Wars
+      title: Guerra de las Galaxias
     infinity:
       title: Laboratorio de Juego Infinity
       body: Utilice el laboratorio de juegos para crear una historia o juego protagonizados
         por personajes de Disney Infinity.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Explora un mundo de Minecraft a través de código.
   gallery:
     students_drew_these_with_code: ¡Los estudiantes dibujaron esto con código!
     students_made_these_with_code: ¡Los estudiantes hicieron éstos con código!
@@ -744,22 +744,24 @@
       tos: Este proyecto ha sido denunciado por violar los <a href='http://code.org/tos'>Términos
         de Uso</a> y no puede ser compartido con otros.
       contact_us: Si cree que esto es un error, por favor <a href='https://code.org/contact'>contáctenos.</a>
-      go_to_code_studio: Ve a Code Studio
+      go_to_code_studio: Ir a Code Studio
       report_abuse_form:
-        intro: Si usted ha encontrado contenido ofensivo, amenazas, intimidación,
-          acoso o alguna instancia de infracción de sus Derechos de Autor por medio
-          del uso de aplicaciones hechas en Code Studio por favor llene el siguiente
-          formulario. Tomaremos muy en serio su informe, investigaremos y tomaremos
-          las medidas correspondientes.
+        intro: Si has encontrado contenido ofensivo, amenazas, acoso cibernético,
+          intimidación, o alguna instancia de infracción de derechos de autor sobre
+          contenido de tu pertenencia al utilizar alguna aplicación construida con
+          Code Studio, por favor llena el siguiente formulario. Tomaremos tu reporte
+          seriamente, investigando y tomando las acciones adecuadas.
         validation:
           email: Por favor proporcione una direccion de correo electronico
           age: Por favor especifique edad
-          abuse_type: Por favor describa cómo este contenido viola los términos del
-            servicio
-          abuse_detail: Proporcione detalles sobre el contenido que está informando
+          abuse_type: Por favor responde como infringe este contenido los términos
+            del servicio
+          abuse_detail: Por favor proporciona detalles referentes al contenido que
+            estás reportando
         abusive_url: URL del contenido que está reportando
         abuse_type:
-          question: ¿Cómo este contenido viola la %{link_start}Term de Servicio%{link_end}?
+          question: ¿De que manera este contenido infringe los %{link_start}términos
+            del servicio%{link_end}?
           harassment: Amenazas ciberacoso acoso
           offensive: Contenido ofensivo
           infringement: Infraccion de derechos de autor

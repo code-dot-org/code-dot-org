@@ -1,4 +1,5 @@
 de-DE:
+  hour_of_code: Hour of Code
   hello: Hallo Welt
   select_language: Bitte wähle deine Sprache
   en: Informatik
@@ -286,14 +287,16 @@ de-DE:
   starwars_blocks_description: 'Verwende Drag & Drop Blöcke.'
   starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
   starwars_blocks_start_button: Probiere es jetzt aus
-  starwars_watch_videos: Before you get started, watch one of these inspirational videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+  starwars_watch_videos: Bevor Sie loslegen, sehen Sie eines dieser inspirierende Videos an
+  starwars_speak_languages: Sprechen eine andere Sprache?
+  starwars_help_translate: Helfen Sie beim übersetzen
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_gradelevel: Ages 6+
   mc_platformtext: Moderne Browser, Smartphones, Tablets
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 Lehrer machen eine Hour of Code mit ihren Klassen, dieses Jahr vom 7. bis 13. Dezember 2015. Sie brauchen deine Hilfe! '
@@ -334,9 +337,9 @@ de-DE:
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 Stunden pro Woche
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 Stunden pro Woche
   volunteer_engineer_submission_commitment_now_and_then: Hin und wieder
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: 2-3 Mal pro Jahr
+  volunteer_engineer_submission_commitment_monthly: Ein paar Stunden pro Monat
+  volunteer_engineer_submission_commitment_weekly: Ein paar Stunden pro Woche
   volunteer_engineer_submission_commitment_more: Mehr
   volunteer_engineer_submission_location_flexibility_onsite: Bei einer Schule vor Ort
   volunteer_engineer_submission_location_flexibility_remote: Betreuung aus der Ferne (Lehrer oder Schüler)
@@ -352,7 +355,7 @@ de-DE:
   volunteer_engineer_submission_num_volunteers_5: 5 Freiwillige
   volunteer_engineer_submission_num_volunteers_10: 10 Freiwillige
   volunteer_engineer_submission_num_volunteers_25: 25 Freiwillige
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 Freiwillige
   volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom for technical help and inspiration
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom to say a few words of inspiration to the kids
   volunteer_engineer_submission_type_task_mentor: "I'm looking for a mentor to help prepare me for coding with my students"
@@ -516,8 +519,8 @@ de-DE:
   dashboard_progress_furthest_level_attempted: Höchste Ebene versucht
   dashboard_stage: Teil
   dashboard_puzzle: Aufgabe
-  dashboard_question: Question
-  dashboard_response: Response
+  dashboard_question: Frage
+  dashboard_response: Antwort
   stats_hoc_2013_heading: 'Fantastische Ergebnisse der Hour of Code aus dem Vorjahr. Allein in einer Woche:'
   stats_hoc_2013_image_alt: Ergebnisse der Hour of Code 2013
   dashboard_teacher: Lehrer
@@ -534,8 +537,8 @@ de-DE:
   dashboard_sections_login_type_explanation: 'Diese Tabelle hilft dir bei der Loginwahl für einen Bereich, <b>Bild, Wort oder E-Mail</b>.'
   dashboard_faq: Häufig gestellte Fragen
   dashboard_faq_k5: Häufig gestellte Fragen zur Grundschule
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
+  dashboard_announcements: Ankündigungen
+  dashboard_announce_view_all: Alle anzeigen
   dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
   code_sign_up: Melde dich an, um an der Woche der Informatik teilzunehmen
@@ -552,7 +555,7 @@ de-DE:
   hoc2014_try_new_tutorial: Probiere unsere neue Testversion der Programmierstunde aus
   hoc2014_try_scrat: Angry Birds, PvZ und Scrat
   hoc2014_try_frozen: Künstler mit Anna und Elsa, aus Die Eiskönigin
-  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg: Tutorials von Code.org
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Anleitungen in deiner Sprache

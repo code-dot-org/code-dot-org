@@ -732,13 +732,13 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
-        starwars_typing: 'Star Wars: Building a Galaxy with Code - JavaScript'
-        starwars_events: 'Star Wars: Building a Galaxy with Code - Events'
-        starwars_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
-        starwars_blocks_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
-        starwars_blocks_events: 'Star Wars: Building a Galaxy with Code - Events'
-        starwars_blocks_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
+        starwars_intro: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით - შესავალი'
+        starwars_typing: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით - JavaScript'
+        starwars_events: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით - მოვლენები'
+        starwars_congrats: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით - გილოცავთ'
+        starwars_blocks_intro: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით - შესავალი'
+        starwars_blocks_events: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით - მოვლენები'
+        starwars_blocks_congrats: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით - გილოცავთ'
         mc_intro: Minecraft - Introduction
         mc_repeat: Minecraft - Repeat
         mc_if_statements: Minecraft - If statements

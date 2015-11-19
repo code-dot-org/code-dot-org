@@ -1,7 +1,7 @@
 ko:
   errors:
     messages:
-      not_saved: '다음 오류를 수정하시기 바랍니다:'
+      not_saved: '다음 오류를 수정해주세요:'
       too_young: 이 내용은 연령 제한이 있어서 사용할 수 없습니다.
   activerecord:
     errors:
@@ -476,13 +476,13 @@ ko:
     frozen:
       title: 겨울왕국
     starwars:
-      title: Star Wars
+      title: 스타워즈
     infinity:
       title: 무한 Play Lab
       body: 플레이 랩을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 스토리나 게임을 만드세요
     minecraft:
-      title: Minecraft
-      body: Explore a Minecraft world through code.
+      title: 마인크래프트
+      body: 코드를 이용해 마인크래프트 월드를 탐험해보세요.
   gallery:
     students_drew_these_with_code: 학생들이 코드로 그려낸 것들!
     students_made_these_with_code: 학생들이 만든 작품

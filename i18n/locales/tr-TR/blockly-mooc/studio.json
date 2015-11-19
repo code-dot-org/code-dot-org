@@ -715,7 +715,7 @@
   "failedRemovedItemCount":"Sonraki denemede öğelerin gerçek adedini getir.",
   "failedSetActivity":"Sonraki denemede doğru karakter etkinliğini ayarlayın.",
   "failedHasWonGame":"Next time, win the game.",
-  "failedHasLostGame":"Next time, lose the game",
+  "failedHasLostGame":"Next time, lose the game.",
   "failedAddItem":"Next time, add a character.",
   "failedAvoidHazard":"\"Uh oh, a Bandit got you!  Try again.\"",
   "failedHasAllGoals":"\"Try again, BB-8.  Get all the scrap metal.\"",

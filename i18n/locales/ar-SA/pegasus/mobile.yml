@@ -1,4 +1,5 @@
 ar-SA:
+  hour_of_code: Hour of Code
   hello: مرحباً بالعالم
   select_language: من فضلك اختر لغتك
   en: علوم الكمبيوتر
@@ -268,11 +269,13 @@ ar-SA:
   starwars_watch_videos: قبل البدء، شاهد أحد هذه المقاطع الملهمة
   starwars_speak_languages: تتكلم لغة أخرى؟
   starwars_help_translate: ساعدنا على الترجمة
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: ساعة البرمجة ماين كرافت
   mc_longdescription: استخدم القطع البرمجية لاخذ ستبف و ألكس في مغامرة من خلال عالم ماين كرافت.
   mc_shortdescription: استخدم القطع البرمجية لاخذ ستبف و ألكس في مغامرة من خلال عالم ماين كرافت.
   mc_gradelevel: الاعمار 6 +
   mc_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: ساعة البرمجة ماين كرافت
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 مدرس سيقدمون فعالية "ساعة برمجة" في أقسامهم هذه السنة، من 07 إلى 13 ديسمبر 2015. إنهم يحتاجون ساعدتكم'

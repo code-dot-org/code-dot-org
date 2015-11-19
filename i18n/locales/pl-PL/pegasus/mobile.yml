@@ -1,4 +1,5 @@
 pl-PL:
+  hour_of_code: Hour of Code
   hello: Witaj świecie
   select_language: Wybierz język
   en: Informatyka
@@ -292,11 +293,13 @@ pl-PL:
   starwars_watch_videos: Zanim zaczniesz, obejrzyj jeden z tych inspirujących filmów
   starwars_speak_languages: Czy mówisz w innym języku?
   starwars_help_translate: Pomóż nam tłumaczyć
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraftowa Godzina Kodowania
   mc_longdescription: Użyj bloków kodu, by dołączyć do przygody ze Steve lub Alex poprzez świat Minecrafta.
   mc_shortdescription: Użyj bloków kodu, by dołączyć do przygody ze Steve lub Alex poprzez świat Minecrafta.
   mc_gradelevel: Wiek 6 +
   mc_platformtext: Nowoczesne przeglądarki, smartfony, tablety
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraftowa Godzina Kodowania
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100 000 nauczycieli będzie gościć Godzinę Kodowanie w swoich klasach w tym roku między 7 a 13 grudnia. Potrzebują Twojej pomocy! '

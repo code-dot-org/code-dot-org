@@ -1741,32 +1741,32 @@
       1:
         image: notes/C4_bee_conditional_1.png
         text: Este é um bloco condicional. Ele diz se você está em uma flor ou em
-          um favo de mel, então faça alguma coisa. É útil quando nós não sabemos quanto
-          mel ou néctar pegar, como nós vemos aqui neste ponto de interrogação.
+          uma colmeia, e então faz alguma coisa. É útil quando não sabemos quanto
+          mel ou néctar pegar, como vemos aqui neste ponto de interrogação.
       2:
         image: notes/C4_bee_conditional_2.png
-        text: Neste exemplo, nós vamos dizer se isto é uma flor, pegar todo o néctar
-          e então usar outro para dizer se é um favo de mel e fazer mel. Ta-dan!
+        text: Neste exemplo, vamos dizer se isto é uma flor, pegar todo o néctar e
+          então usar outro para dizer se é uma colmeia e fazer mel. Tcharanz!
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
-        text: Nós temos um novo bloco chamado de se/então. É uma declaração condicional
-          como o bloco if que você usou nos quebra cabeças anteriores. Mas agora há
-          uma nova parte embaixo que diz else. O bloco se/então faz a abelha tomar
-          a decisão entre dois tipos de ação. Se a abelha está na flor, a abelha irá
-          fazer o conjunto de ações que você colocou na primeira parte que diz faça.
-          Se a abelha não está na flor, a abelha fará o conjunto de ações que você
-          colocou na parte onde diz então.
+        text: Temos um novo bloco chamado de se/então. Ele é uma instrução condicional
+          como o bloco se que você usou nos desafios anteriores. Mas agora há uma
+          nova parte embaixo que diz senão. O bloco se/então faz a abelha tomar a
+          decisão entre dois tipos de ação. Se a abelha estiver em uma flor, ela fará
+          o conjunto de ações que você colocou na primeira parte que diz faça. Se
+          a abelha não estiver na flor, ela fará o conjunto de ações que você colocou
+          na parte que diz senão.
       2:
         image: notes/C4_conditionals_2.png
-        text: As instruções se são como os computadores conseguem tomar decisões.
-          Os humanos estabelecem condições para o computador que dizem que, se o computador
-          encontrar certa situação, ele deve fazer uma coisa, senão, ele deve fazer
-          outra coisa. O começo do nosso bloco se/senão diz "se na flor". Mas poderia
-          dizer outras coisas, como "se néctar igual a 2" ou "se houver um caminho
-          à frente", e o bloco se comportaria do mesmo modo. Se a afirmação for verdadeira,
-          ele executará o primeiro conjunto de ações, mas se for falsa, ele executará
-          o segundo conjunto de ações.
+        text: É a partir das instruções se que os computadores são capazes de tomar
+          decisões. Os humanos estabelecem condições para o computador que dizem que,
+          se o computador encontrar certa situação, ele deve fazer uma coisa, senão,
+          ele deve fazer outra coisa. O começo do nosso bloco se/senão diz "se na
+          flor". Mas poderia dizer outras coisas, como "se néctar igual a 2" ou "se
+          houver um caminho à frente", e o bloco se comportaria do mesmo modo. Se
+          a instrução for verdadeira, ele executará o primeiro conjunto de ações,
+          mas se for falsa, ele executará o segundo conjunto de ações.
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
@@ -1777,24 +1777,24 @@
       2:
         image: notes/C4_for_loops_2.png
         text: Por exemplo, um bloco "repita três" conta de 1 até 3, de 1 em 1. Sempre
-          que ele conta, executa o código dentro do laço. O laço for sabe quantas
-          vezes foi executado usando uma variável contadora que começa o laço igual
-          ao valor inicial, e é somada ao incremento sempre que o laço é executado.
-          Assim que a variável contadora for maior que o valor final, o laço pára
-          de ser escutado.
+          que ele conta, executa o código dentro do laço. O laço "para" sabe quantas
+          vezes foi executado usando uma variável contadora que é definida com o valor
+          inicial do começo do laço e é incrementada sempre que o laço é executado.
+          Assim que a variável contadora for maior que o valor final, o laço para
+          de ser executado.
       3:
         image: notes/C4_for_loops_3.png
-        text: A vantagem de usar um laço for real em vez do bloco repita é que você
-          pode ver a variável contadora, e usá-la no laço. Por exemplo, se eu tiver
-          uma fileira de flores e a primeira tiver um néctar, a segunda tiver dois
-          e a terceira tiver três, posso usar o laço for para dizer à abelha para
-          coletar "contadora" néctares por vez, o que seria um na primeira flor, dois
-          na segunda e três na terceira.
+        text: A vantagem de usar um laço "para" real em vez do bloco repita é que
+          você pode ver a variável contadora, e usá-la no laço. Por exemplo, se eu
+          tiver uma fileira de flores e a primeira tiver um néctar, a segunda tiver
+          dois e a terceira tiver três, posso usar o laço "para" para dizer à abelha
+          para coletar "contador" néctares por vez, o que seria um na primeira flor,
+          dois na segunda e três na terceira.
       4:
         image: notes/C4_for_loops_4.png
         text: Você também pode incrementar o contador por um número diferente de um
-          em um laço for. Você pode contar de 2 em 2, de 4 em 4, ou até mesmo um valor
-          que mude a cada vez.
+          em um laço "para". Você pode contar de 2 em 2, de 4 em 4, ou até mesmo um
+          valor que varie toda vez.
     C4_for_loops_bee:
       1:
         image: notes/C4_for_loops_bee_1.png
@@ -1805,24 +1805,24 @@
       2:
         image: notes/C4_for_loops_bee_2.png
         text: Por exemplo, um bloco "repita três" conta de 1 até 3, de 1 em 1. Sempre
-          que ele conta, executa o código dentro do laço. O laço for sabe quantas
-          vezes foi executado usando uma variável contadora que começa o laço igual
-          ao valor inicial, e é somada ao incremento sempre que o laço é executado.
-          Assim que a variável contadora for maior que o valor final, o laço pára
-          de ser escutado.
+          que ele conta, executa o código dentro do laço. O laço "para" sabe quantas
+          vezes foi executado usando uma variável contadora que é definida com o valor
+          inicial do começo do laço e é incrementada sempre que o laço é executado.
+          Assim que a variável contadora for maior que o valor final, o laço para
+          de ser executado.
       3:
         image: notes/C4_for_loops_bee_3.png
-        text: A vantagem de usar um laço for real em vez do bloco repita é que você
-          pode ver a variável contadora, e usá-la no laço. Por exemplo, se eu tiver
-          uma fileira de flores e a primeira tiver um néctar, a segunda tiver dois
-          e a terceira tiver três, posso usar o laço for para dizer à abelha para
-          coletar "contadora" néctares por vez, o que seria um na primeira flor, dois
-          na segunda e três na terceira.
+        text: A vantagem de usar um laço "para" real em vez do bloco repita é que
+          você pode ver a variável contadora, e usá-la no laço. Por exemplo, se eu
+          tiver uma fileira de flores e a primeira tiver um néctar, a segunda tiver
+          dois e a terceira tiver três, posso usar o laço "para" para dizer à abelha
+          para coletar "contador" néctares por vez, o que seria um na primeira flor,
+          dois na segunda e três na terceira.
       4:
         image: notes/C4_for_loops_bee_4.png
         text: Você também pode incrementar o contador por um número diferente de um
-          em um laço for. Você pode contar de 2 em 2, de 4 em 4, ou até mesmo um valor
-          que mude a cada vez.
+          em um laço "para". Você pode contar de 2 em 2, de 4 em 4, ou até mesmo um
+          valor que varie toda vez.
     C4_for_loops_no_bee:
       1:
         image: notes/C4_for_loops_no_bee_1.png
@@ -1833,12 +1833,12 @@
       2:
         image: notes/C4_for_loops_no_bee_2.png
         text: Por exemplo, um bloco "repita três" conta de 1 até 3, de 1 em 1. Sempre
-          que ele conta, executa o código dentro do laço. O laço for sabe quantas
-          vezes foi executado usando uma variável contadora que começa o laço igual
-          ao valor inicial, e é somada ao incremento sempre que o laço é executado.
-          Assim que a variável contadora for maior que o valor final, o laço pára
-          de ser escutado. A vantagem de usar um laço for real em vez do bloco repita
-          é que você pode ver a variável contadora e usá-la no laço.
+          que ele conta, executa o código dentro do laço. O laço "para" sabe quantas
+          vezes foi executado usando uma variável contadora que é definida com o valor
+          inicial do começo do laço e é incrementada sempre que o laço é executado.
+          Assim que a variável contadora for maior que o valor final, o laço para
+          de ser executado. A vantagem de usar um laço "para" real em vez do bloco
+          repita é que você pode ver a variável contadora e usá-la no laço.
     C4_function_create:
       1:
         image: notes/C4_function_create_1.png
@@ -1857,10 +1857,10 @@
       3:
         image: notes/C4_function_create_3.png
         text: Quando tiver terminado, clique em "salvar e sair". Isso o levará de
-          volta à área de trabalho principal dos quebra-cabeças. A nova função que
-          você criou vai aparecer como um bloco verde na categoria "funções" da sua
-          caixa de ferramentas. Arraste-o e solte-o na área de trabalho principal
-          e use-o como qualquer outro bloco para resolver o quebra-cabeça.
+          volta à área de trabalho principal dos desafios. A nova função que você
+          criou vai aparecer como um bloco verde na categoria "funções" da sua caixa
+          de ferramentas. Arraste-o e solte-o na área de trabalho principal e use-o
+          como qualquer outro bloco para resolver o desafio.
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
@@ -1876,14 +1876,14 @@
           nós. Adicionamos esse conceito à nossa linguagem de programação.
       3:
         image: notes/C4_function_edit_3.png
-        text: Nesse quebra-cabeça, já criamos uma função "desenhe um quadrado" para
-          você. Você a verá na caixa de ferramentas como um bloco verde. O que você
-          precisa fazer é escrever o mesmo código que escreveu antes para desenhar
-          um quadrado e colocá-lo dentro dessa função. Para fazer isso, clique na
-          opção editar no bloco verde "desenhe um quadrado". Isso vai abrir o editor
-          de funções. O editor de funções tem três partes. Um lugar onde você dá um
-          nome à sua função. Ele vai aparecer no bloco verde antes da função. Depois,
-          escreva uma descrição curta do que sua função deve fazer.
+        text: Nesse desafio, já criamos uma função "desenhe um quadrado" para você.
+          Você a verá na caixa de ferramentas como um bloco verde. O que você precisa
+          fazer é escrever o mesmo código que escreveu antes para desenhar um quadrado
+          e colocá-lo dentro dessa função. Para fazer isso, clique na opção editar
+          no bloco verde "desenhe um quadrado". Isso vai abrir o editor de funções.
+          O editor tem três partes. Um lugar no qual você dá um nome para a sua função.
+          Ele vai aparecer no bloco verde antes da função. Depois, escreva uma descrição
+          curta do que sua função deve fazer.
       4:
         image: notes/C4_function_edit_4.png
         text: Nesse caso, ela deve desenhar um quadrado. A área em branco abaixo disso
@@ -1891,16 +1891,16 @@
           e solte blocos da caixa de ferramentas na área de trabalho. Lembre-se de
           colocar os blocos que criam um quadrado dentro do bloco verde da função.
           Quando tiver terminado, clique em "salvar e sair". Isso vai levá-lo de volta
-          à área de trabalho principal do quebra-cabeça. Agora, você pode usar o bloco
-          "desenhe um quadrado" como qualquer outro bloco para resolver o quebra-cabeça.
+          à área de trabalho principal do desafio. Agora, você pode usar o bloco "desenhe
+          um quadrado" como qualquer outro bloco para resolver o desafio.
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
         text: Aqui está uma função que desenha um quadrado com lados de 50 pixels.
           Ótimo, mas e se eu quisesse desenhar um quadrado com lados de 50 pixels
           e outro com lados de 100 pixels? Não precisamos fazer duas funções separadas
-          para fazer quase que exatamente a mesma coisa. Em vez disso, podemos usar
-          uma função com um parâmetro.
+          para fazer praticamente a mesma coisa. Em vez disso, podemos usar uma função
+          com um parâmetro.
       2:
         image: notes/C4_function_parameters_2.png
         text: Os parâmetros nos permitem atribuir valores para uma função que são
@@ -1914,12 +1914,13 @@
           para que ele avance o comprimento desejado.
       3:
         image: notes/C4_function_parameters_3.png
-        text: Clique em salvar e fechar e arraste seu novo bloco crie um quadrado
+        text: Clique em salvar e fechar e arraste seu novo bloco "crie um quadrado"
           da categoria funções na caixa de ferramentas. Você vai perceber que há um
-          espaço vazio perto de comprimento, porque a função quer saber que valor
-          o parâmetro comprimento dever ter. Arraste bloco numérico da categoria matemática
-          e coloque-o nesse espaço. Vê como você pode usar a função várias vezes com
-          comprimentos diferentes para criar quadrados de tamanhos diferentes? Experimente!
+          espaço vazio perto de comprimento, porque a função quer saber qual deve
+          ser o valor do parâmetro comprimento. Arraste um bloco numérico da categoria
+          matemática e coloque-o nesse espaço. Vê como você pode usar a função várias
+          vezes com comprimentos diferentes para criar quadrados de tamanhos diferentes?
+          Experimente!
     C4_intro:
       1:
         image: notes/C4_intro_1.png
@@ -1975,8 +1976,8 @@
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
-        text: Essa lição é chamada Algoritmos do tangram. Tangram é um quebra-cabeça
-          com sete peças que se encaixar para criar outras formas. Você vai usar um
+        text: Essa lição é chamada Algoritmos de Tangram. Tangram é um quebra-cabeça
+          com sete peças que se encaixam para criar outras formas. Você vai usar um
           algoritmo para explicar para seu parceiro como montar o quebra-cabeça.
       2:
         image: notes/C4_unplugged_algorithms_2.png
@@ -1992,7 +1993,7 @@
           tentar pintar alguns lobos, mas não sou o melhor pintor do mundo. Felizmente
           para pessoas como eu, alguém inventou a pintura por números. Temos quarenta
           cores e pequenas letras e números que dizem com que cor pintar cada seção.
-          A pintura por números me diz exatamente que cor usar e onde.
+          A pintura por números me diz exatamente qual cor usar e onde.
       4:
         image: notes/C4_unplugged_algorithms_4.png
         text: Ela é muito específica, então posso seguir as instruções e a pintura
@@ -2012,9 +2013,9 @@
         image: notes/C4_unplugged_binary_2.png
         text: O modo mais comum de usar binários é em uma instrução se. É um clássico
           da programação. O programa é executado e, se algo for verdadeiro, faz uma
-          coisa, ou, se não, faz outra coisa. E se você quiser fazer algo um pouco
-          mais complicado? Em vez de uma instrução se, você quer trabalhar com algo
-          como uma imagem ou um som em um computador.
+          coisa, ou, senão, faz outra coisa. E se você quiser fazer algo um pouco
+          mais complicado? Em vez de uma instrução se, você pode querer trabalhar
+          com algo como uma imagem ou um som em um computador.
       3:
         image: notes/C4_unplugged_binary_3.png
         text: 'O computador só conhece binário, mas uma imagem não é binária. Ela
@@ -2027,13 +2028,13 @@
         text: Imagine que vamos colocar um quadriculado sobre esse urso panda e decidir
           se cada quadrado é mais preto ou mais branco, e então, vamos colorir assim.
           Agora, cada célula do quadriculado é preta ou branca, e dizemos que os quadrados
-          pretos são zeros (dígito binário), e os quadrados pretos são brancos, o
-          outro dígito binário. No final, o que você terá é um monte de uns e zeros.
-          É assim que você representa essa imagem em binário.
+          pretos são zeros (dígito binário), e os quadrados brancos são um, o outro
+          dígito binário. No final, o que você terá é um monte de uns e zeros. É assim
+          que você representa essa imagem em binário.
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png
-        text: Esta lição é chamada diversão com o laço para. Nesta lição. vamos apender
+        text: Esta lição é chamada diversão com o laço para. Nesta lição. vamos aprender
           a usar a reta numérica para jogar um jogo de dados. Cada jogador vai jogar
           três vezes para definir um valor inicial, um valor final, e um intervalo.
           Em cada turno, circulamos o valor inicial, e todos os valores que estejam
@@ -2051,10 +2052,10 @@
         image: notes/C4_unplugged_forloops_3.png
         text: Estamos tentando entender a força dos ventos lá, para que saibamos quanta
           energia será gerada. Fornecemos essas informações aos negociantes de energia
-          em tempo real. Eles compram e vendem energia bom base em quanta energia
+          em tempo real. Eles compram e vendem energia com base em quanta energia
           dizemos que será gerada, para garantir que a malha energética permaneça
-          equilibrada, as luzes da sua casa continuem acesas, e que maximizemos a
-          energia que obtemos dos nossos parques.
+          equilibrada, que as luzes da sua casa continuem acesas, e que maximizemos
+          a energia que obtemos dos nossos parques.
       4:
         image: notes/C4_unplugged_forloops_4.png
         text: Estamos no centro nacional de controle da EverPower Renewables, aqui
@@ -2089,7 +2090,7 @@
     C4_unplugged_parameters:
       1:
         image: notes/C4_unplugged_parameters_1.png
-        text: Essa lição é chamada composição de música com parâmetros. Vamos escrever
+        text: Essa lição é chamada Escrevendo uma canção com parâmetros. Vamos escrever
           algumas músicas. Às vezes, o refrão é um pouquinho diferente a cada vez
           que você o canta. Você conhece a música "Old Macdonald Had a Farm"? O refrão
           é um pouco diferente para cada animal. E naquela fazenda, ele tinha uma
@@ -2098,8 +2099,8 @@
       2:
         image: notes/C4_unplugged_parameters_2.png
         text: Às vezes uma função precisa de um parâmetro. Um parâmetro é uma informação
-          adicional que você pode passar para um função para personalizá-la para uma
-          necessidade especial. Quando você faz sundaes com seus amigos, está usando
+          adicional que você pode passar para uma função e personalizá-la para uma
+          necessidade especial. Quando você faz sorvete com seus amigos, está usando
           um processo similar aos parâmetros em um programa de computador.
       3:
         image: notes/C4_unplugged_parameters_3.png
@@ -2153,9 +2154,9 @@
           os anos.
       3:
         image: notes/C4_variables_artist_3.png
-        text: Nesse quebra-cabeça, vamos usar uma variável que vai definir o comprimento
+        text: Nesse desafio, vamos usar uma variável que vai definir o comprimento
           da linha que nosso artista vai traçar. Mais à frente em nosso código, o
-          bloco avance vai ler essa variável comprimento para ver qual seu valor.
+          bloco avance vai ler essa variável comprimento para ver qual é o seu valor.
     C4_variables_playlab:
       1:
         image: notes/C4_variables_playlab_1.png
@@ -2165,7 +2166,7 @@
           se comportam de modo diferente dependendo do valor armazenado na variável.
       2:
         image: notes/C4_variables_playlab_2.png
-        text: Agora, você vai tentar o laboratório, onde receberá jogos diferentes,
+        text: Agora, você vai experimentar o laboratório, onde receberá jogos diferentes
           e poderá mudar os valores de variáveis como velocidade, altura e pontuação
           para mudar o jogo. Você não terá que mudar o algoritmo do jogo para mudar
           como ele é jogado, apenas as variáveis.
@@ -2188,12 +2189,13 @@
       2:
         image: notes/infinity_playlab_events_2.png
         text: Aqui, vamos fazer Baymax se mover para cima para tocar Hiro, e para
-          baixo para tocar Rapunzel quando o jogador usar as teclas das setas para
-          cima/para baixo ou os botões para cima/para baixo. Vamos usar o bloco quando
-          seta para cima e ligar o bloco ator para cima a ele, para que quando o jogador
-          pressionar a tecla seta para cima, tudo que esteja ligado ao bloco "quando
-          seta para cima" seja executado. Faremos o mesmo para mover Baymax para baixo.
-          Passo a passo, seu jogo está ficando mais interativo.
+          baixo para tocar Rapunzel quando o jogador usar as setas para cima/para
+          baixo ou os botões para cima/para baixo. Vamos usar o bloco "quando a seta
+          para cima estiver pressionada" e ligar o bloco "mova um personagem para
+          cima" a ele, para que quando o jogador pressionar a seta para cima, tudo
+          que esteja ligado ao bloco "quando a seta para cima estiver pressionada"
+          seja executado. Faremos o mesmo para mover Baymax para baixo. Passo a passo,
+          seu jogo está ficando mais interativo.
     infinity_playlab_intro:
       1:
         image: notes/infinity_playlab_intro_1.png
@@ -2209,10 +2211,10 @@
           Gosto de programar porque gosto de ajudar as pessoas. Tenho a oportunidade
           de criar algo que tornará a vida das pessoas mais fácil. Acho que é o mais
           próximo que tenho de um superpoder. Começar é a parte mais importante. Eu
-          mesmo sou uma iniciante, e quero que você aprenda comigo.
+          me considero uma iniciante, e quero que você aprenda comigo.
       3:
         image: notes/infinity_playlab_intro_3.png
-        text: Eu sou John Vechey, um dos co-fundadores da PopCap Games. Fazemos jogos
+        text: Eu sou John Vechey, um dos cofundadores da PopCap Games. Fazemos jogos
           como Plants vs. Zombies, Bejeweled, e Peggle. O importante sobre os jogos
           não é como seu código é perfeito, nem como sua arte é perfeita, e sim como
           ele faz você se sentir e como ele é divertido. Você só consegue perceber
@@ -2220,12 +2222,12 @@
           na criação de jogos.
       4:
         image: notes/infinity_playlab_intro_4.png
-        text: Você tem um video game favorito? Bem, vamos dar um passo para a criação
-          de jogos como esse usando o laboratório. Bons jogos têm uma história, e
-          toda história tem atores. Os atores fazem coisas como falar, se mover e
-          interagir uns com os outros. Talvez até mesmo marcar pontos com base nas
+        text: Você tem um jogo favorito? Bem, vamos dar um passo para a criação de
+          jogos como esse usando o laboratório. Bons jogos têm uma história, e toda
+          história tem personagens. Os personagens fazem coisas como falar, se mover
+          e interagir uns com os outros. Talvez até mesmo marcar pontos com base nas
           regras do jogo. Hoje, vamos aprender como fazer todas essas coisas, uma
-          a uma, com personagens Disney como Anna, Elsa, Hiro, Baymax, e Rapunzel.
+          a uma, com personagens da Disney como Anna, Elsa, Hiro, Baymax, e Rapunzel.
           Vamos criar um jogo do zero, que pode ser compartilhado e jogado em um celular.
       5:
         image: notes/infinity_playlab_intro_5.png
@@ -2236,13 +2238,13 @@
           é chamado de área de trabalho, e é onde vamos criar nosso programa.
       6:
         image: notes/infinity_playlab_intro_6.png
-        text: Para começar, você vai precisar vincular seus blocos ao bloco laranja
-          "quando executar". Você pode vincular múltiplos blocos arrastando-os até
-          ver o contorno amarelo, e então eles vão se encaixar. Nesse primeiro quebra-cabeça,
-          Hiro é o Ator 1 e Baymax é o Ator 2. Precisamos mover Hiro para chegar a
-          Baymax, arrastando o bloco "mover para a direita" e vinculando-o ao bloco
-          "quando executar". Quando os blocos estiverem no lugar, clique no botão
-          "Executar" para ver o que você programou.
+        text: Para começar, você vai precisar encaixar seus blocos ao bloco laranja
+          "quando executar". Você pode encaixar vários blocos arrastando-os até ver
+          o contorno amarelo, e então eles vão se encaixar. Nesse primeiro desafio,
+          Hiro é o personagem 1 e Baymax é o personagem 2. Precisamos mover Hiro para
+          chegar até Baymax, arrastando o bloco "mover para a direita" e encaixando-o
+          ao bloco "quando executar". Quando os blocos estiverem no lugar, clique
+          no botão "Executar" para ver o que você programou.
       7:
         image: notes/infinity_playlab_intro_7.png
         text: Vamos começar e, quando terminarmos, você poderá criar seu próprio jogo
@@ -2254,107 +2256,108 @@
         image: notes/infinity_playlab_repeat_forever_1.png
         text: Você consegue imaginar se tivesse que repetir alguma coisa para todo
           o sempre? Com sorte, você nunca terá que fazer isso, porque os computadores
-          são muito bons em repetir as coisas. Este é o bloco repetir para sempre.
+          são muito bons em repetir as coisas. Este é o bloco "repita infinitamente".
           Qualquer coisa dentro desse bloco vai acontecer para sempre no jogo.
       2:
         image: notes/infinity_playlab_repeat_forever_2.png
         text: Então, se quisermos que um ator faça algo repetidamente, sem que o jogador
-          tenha que fazer nada, vamos colocar esses blocos dentro do bloco repete
-          para sempre. Nesse próximo quebra-cabeça, seu objetivo é ajudar Anna a andar
-          continuamente para cima e para baixo. Aprender como os comandos repete funcionam
-          vai poupar muito tempo mais tarde, quando você for criar seu próprio jogo.
+          tenha que fazer nada, vamos colocar esses blocos dentro do bloco "repita
+          infinitamente". Nesse próximo desafio, seu objetivo é ajudar Anna a andar
+          continuamente para cima e para baixo. Aprender como os comandos de repetição
+          funcionam vai poupar muito tempo mais tarde, quando você for criar seu próprio
+          jogo.
     tutorial_puzzle_challenge:
       1:
         image: notes/tutorial_puzzle_challenge_1.png
         text: O que você quer ser quando crescer, Olivia? Astronauta. Você sabe o
-          que é um programador de computador? Sim um, não. Ummm o quê? Não sei bem
-          como explicar, a programação de computadores é muito simples. É um conjunto
-          de instruções, como uma receita, que você tem que seguir passo a passo para
-          obter o resultado que quer.
+          que é um programador de computador? Hmm não. Hmm o quê? Não sei bem como
+          explicar, a programação de computadores é muito simples. É um conjunto de
+          instruções, como uma receita, que você tem que seguir passo a passo para
+          obter o resultado desejado.
       2:
         image: notes/tutorial_puzzle_challenge_2.png
-        text: Eu posso mudar o número de pixels, o comprimento da linha, usando este
-          menu dropdown. Qual era mesmo o comprimento? Você pode ver as instruções
-          de novo procurando em baixo do botão executar. Aqui, eu usei o bloco avance
-          e vou selecionar 100 pixels. Posso apagar um bloco arrastando-o para a caixa
+        text: Eu posso alterar o número de pixels ou o comprimento da linha usando
+          esse menu. Qual era mesmo o comprimento? Você pode ver as instruções de
+          novo procurando abaixo do botão executar. Aqui, eu usei o bloco avance e
+          vou selecionar 100 pixels. Posso apagar um bloco arrastando-o para a caixa
           de ferramentas ou para a lixeira. Vamos colocá-lo de volta.
       3:
         image: notes/tutorial_puzzle_challenge_3.png
         text: Execute o código pressionando executar. Bem, não funcionou! Vou apertar
-          reiniciar e descobrir o que está errado. Você pode tentar fazer um quebra-cabeça
-          quantas vezes quiser, e pular quebra-cabeças e voltar a eles mais tarde.
-          Só tenha certeza de fazer o seu melhor, e não desista. Vamos adicionar outro
-          avance. Ainda não funcionou. Posso colocar um bloco entre outros blocos.
+          reiniciar e descobrir o que está errado. Você pode tentar fazer um desafio
+          quantas vezes quiser, e pular desafios e voltar a eles mais tarde. Só tenha
+          certeza de fazer o seu melhor, e não desista. Vamos adicionar outro avance.
+          Ainda não funcionou. Posso colocar um bloco entre outros blocos.
       4:
         image: notes/tutorial_puzzle_challenge_4.png
-        text: Vamos pegar um bloco vire à e colocá-lo entre os avances. Vire à esquerda
-          45 graus. Vamos executar de novo. Reiniciar, executar, legal! Aqui está
-          outro quebra-cabeça. Às vezes, você tem um código inicial para completar.
+        text: Vamos pegar um bloco vire e colocá-lo entre os blocos avance. Vire à
+          esquerda 45 graus. Vamos executar de novo. Reiniciar, executar, legal! Aqui
+          está outro desafio. Às vezes, você tem um código inicial para completar.
           Aqui, eu preciso adicionar os comprimentos e graus apropriados.
       5:
         image: notes/tutorial_puzzle_challenge_5.png
         text: Às vezes, você pode acidentalmente estragar o código inicial. O que
-          pode fazer nesse caso? Você pode pressionar limpar quebra-cabeça e começar
-          de novo. Vou arrastar esse bloco numérico para as diferentes áreas de pixels.
-          Selecione 100 para pixels, 45 para graus e 100 para pixels de novo. Legal!
-          Aqui está a abelha do Code Studio. Eu preciso mover a abelha para cada uma
-          das flores e coletar néctar.
+          fazer nesse caso? Você pode pressionar limpar desafio e começar de novo.
+          Vou arrastar esse bloco numérico para as diferentes áreas de pixels. Selecione
+          100 para pixels, 45 para graus e 100 para pixels de novo. Legal! Aqui está
+          a abelha do Code Studio. Eu preciso mover a abelha para cada uma das flores
+          e coletar néctar.
       6:
         image: notes/tutorial_puzzle_challenge_6.png
         text: A primeira flor está a três blocos de distância, então eu preciso de
           três blocos avance. 1, 2, 3. Então, um obtenha néctar, depois outro obtenha
           néctar. Bem, isso não funcionou! Vou colocar outro avance entre os obtenha
           néctar e executar o programa de novo. Oba, funcionou! Você acaba de aprender
-          como usar os quebra-cabeças do artista e da abelha do Code Studio. Boa sorte
-          com o desafio do Code Studio.
+          como usar os desafios do artista e da abelha do Code Studio. Boa sorte com
+          o desafio do Code Studio.
     unplug1:
       1:
         image: notes/unplug1_1.png
-        text: O que você quer ser quando crescer, Olivia? Umm, astronauta. Você sabe
-          o que é um programador de computador? Siiim umm, não. Ummm, quê, o quê?
-          Não sei bem como explicar. A programação de computadores é muito simples.
-          É um conjunto de instruções, como uma receita. Você tem que segui-la passo
-          a passo para obter o resultado que quer.
+        text: O que você quer ser quando crescer, Olivia? Hmm, astronauta. Você sabe
+          o que é um programador de computador? Hmm, não. Hmmm, o quê? Não sei bem
+          como explicar. A programação de computadores é muito simples. É um conjunto
+          de instruções, como uma receita. Você tem que segui-la passo a passo para
+          obter o resultado desejado.
       2:
         image: notes/unplug1_2.png
-        text: Computer science is a way to impact the world. It can be music videos,
-          it can be games, detect whether or not someone is related to someone else.
-          Find you know, people's friends. You can do all sorts of other crazy things
-          that actually save lives. You do have to have a drive I think. It is to
-          me like a paintbrush. I think great programming is not all that dissimilar
-          from great art.
+        text: A ciência da computação é um modo de termos impacto no mundo. Podem
+          ser vídeos de música, jogos ou descobrir se alguém é ou não parente de alguém.
+          Descobrir os amigos das pessoas. Você pode fazer todo tipo de coisas malucas
+          que na verdade salvam vidas. Eu acho que você deve tentar. Para mim, é como
+          um pincel. Eu acho que boa programação não é tão diferente de boa arte.
       3:
         image: notes/unplug1_3.png
-        text: When I finally learned a little bit of programming, that blank wall
-          resolved into a bunch of doors and you open them and of course then you
-          find behind them is another hallway filled with a bunch of doors. Programming
-          is fun and easy. You can do anything your mind wants to do. Finally you
-          start to open enough doors the light comes in. To me a finished program
-          is like a structure filled with light. All the corners are illuminated.
-          The number of people that you can touch and interact with is something the
-          world has never seen before.
+        text: Quando eu finalmente aprendi um pouco de programação, aquela parede
+          vazia se transformou em várias portas que podiam ser abertas, e, é claro,
+          o que você encontrar atrás delas é outro corredor cheio de portas. Programar
+          é fácil e divertido. Você pode fazer qualquer coisa que quiser. Finalmente,
+          você começa a abrir portas o bastante para que a luz entre. Para mim, um
+          programa acabado é como uma estrutura cheia de luz. Todos os cantos estão
+          iluminados. O número de pessoas que você pode tocar e interagir é algo que
+          o mundo nunca viu antes.
       4:
         image: notes/unplug1_4.png
-        text: Our first lesson in this series is all about what computer science is,
-          what a computer scientist does and how you can be more responsible in your
-          use of technology. It's a very important lesson but it is a little text-heavy.
-          At the end, you get to make your very own customized encoding using your
-          initials. It's a fun activity and it's very empowering because binary is
-          one of those things that feels very technical but once you understand it,
-          it's like you speak a secret language.
+        text: Nossa primeira lição nessa série é sobre o que é a ciência da computação,
+          o que um cientista da computação faz, e como você pode ser mais responsável
+          em como usa a tecnologia. É uma lição muito importante, mas um pouco pesada
+          no texto. Quando acabarmos, você poderá fazer seu próprio código personalizado
+          usando suas iniciais. É uma atividade divertida, e muito estimulante, porque
+          o binário é uma daquelas coisas que parecem ser muito técnicas, mas que,
+          quando você entende, é como se falasse uma língua secreta.
     unplug2:
       1:
         image: notes/unplug2_1.png
-        text: The lesson on computational thinking is intended to teach you how to
-          take a big difficult problem and break it down into several simpler problems.
-          The goal of this lesson is to write a set of instructions that someone can
-          follow to draw one of the monsters included in the lesson plan.
+        text: A lição sobre pensamento computacional tem o objetivo de ensinar a você
+          como pegar um problema grande e difícil e dividi-lo em vários problemas
+          mais fáceis. O objetivo dessa lição é escrever um conjunto de instruções
+          que alguém possa seguir para desenhar um dos monstros incluídos no plano
+          de aula.
       2:
         image: notes/unplug2_2.png
-        text: 'Students will break into groups to write instructions and then they''ll
-          switch them with another group that will have to draw the monster. Groups
-          will write instructions using the four steps of computational thinking:
-          decomposition, pattern location, abstraction and algorithms.'
+        text: 'Os alunos vão se dividir em grupos para escrever instruções e então
+          vão trocá-las pelas de outro grupo, que terá que desenhar o monstro. Os
+          grupos vão escrever instruções usando as quatro etapas do pensamento computacional:
+          decomposição, identificação de padrões, abstração e algoritmos.'
       3:
         image: notes/unplug2_3.png
         text: First groups will decompose the task which means make a game plan. Then
@@ -2533,307 +2536,319 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+        text: Oi, sou Kathleen Kennedy, produtora de Star Wars, O Despertar da Força.
+          Hoje, você vai trabalhar com um dos nossos astros, BB-8. BB-8 é um androide
+          esférico. Tudo o que ele faz e todos os seus movimentos são controlados
+          por softwares de computador. A ciência da computação tem impacto sobre todas
+          as indústrias, do marketing à saúde, aos filmes. De fato, centenas de engenheiros
+          da computação trabalham juntos para criar um filme como O Despertar da Força.
       2:
         image: notes/starwars_intro_2.JPG
-        text: Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artists develop rigs which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far
-          far away.
+        text: Oi, sou Rachel Rose, engenheira sênior de P&D na ILM, e lidero a equipe
+          de animação e desenvolvimento de criaturas. Em O Despertar da Força, sou
+          responsável por ajudar os artistas a desenvolver equipamentos que são as
+          partes do personagem que se movem e permitem a ele parecer muito real em
+          uma galáxia muito, muito distante.
       3:
         image: notes/starwars_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game. We'll
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so that we can drag and drop to
-          write the programs. Under the hood, you're still creating code. After you
-          try the basics with blocks, we'll switch you to JavaScript, one of the most
-          popular programming languages on the web.
+        text: Durante a próxima hora, vamos criar nosso próprio jogo do Star Wars.
+          Vamos ensinar a você os conceitos básicos da programação. Geralmente, a
+          programação é toda feita com texto, mas aqui vamos usar blocos, para que
+          você possa arrastar e soltar para escrever os programas. Por trás disso,
+          você ainda vai estar criando código. Depois que você testar os conceitos
+          básicos com os blocos, vamos mudar para JavaScript, uma das linguagens de
+          programação mais poupares na web.
       4:
         image: notes/starwars_intro_4.JPG
-        text: To start off, we're going to work with Rey to program BB-8 to walk to
-          collect all of the scrap parts. Your screen is split into three parts. On
-          the left is the Star Wars game space, where code will run. The instructions
-          for each level are written below the game space.
+        text: Para começar, vamos trabalhar com Rey para programar o BB-8 para andar
+          e coletar toda a sucata. Sua tela está dividida em três partes. À esquerda,
+          temos a área do jogo de Star Wars, onde o código será executado. As instruções
+          para cada nível estão abaixo da área de jogo.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: A parte do meio é onde fica a caixa de ferramentas, e cada um desses
+          blocos é um comando que BB-8 pode entender.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
+        text: O espaço em branco à direita é chamada área de trabalho, e é onde vamos
+          criar nosso programa.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what
-          happens? BB-8 moves left one block on the grid.
+        text: Se eu arrastar o bloco movaParaEsquerda(); para nossa área de trabalho
+          e pressionar Executar, o que acontece? O BB-8 se move um bloco para a esquerda.
       8:
         image: notes/starwars_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together.
+        text: E se eu quiser que BB-8 faça algo depois do movaParaEsquerda();? Posso
+          adicionar outro bloco ao nosso programa. Vou escolher o bloco movaParacima();
+          e arrastá-lo para debaixo do bloco movaParaEsquerda(); até que ele fique
+          em destaque. Então, vou soltá-lo, e os dois blocos vão se encaixar.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked
-          from top to bottom on our workspace. If you ever want to delete a block,
-          just remove it from the stack and drag it back into the tool box.
+        text: Quando pressiono Executar de novo, BB-8 vai obedecer aos comandos empilhados
+          de cima para baixo em nossa área de trabalho. Se você quiser apagar um bloco,
+          simplesmente remova-o da pilha e arraste-o de volta para a caixa de ferramentas.
       10:
         image: notes/starwars_intro_10.JPG
-        text: After you've hit run, you can always hit the reset button to get BB-8
-          back to the start. Now let's get rolling!
+        text: Depois que pressionar Executar, você sempre pode pressionar o botão
+          Recomeçar para levar BB-8 de volta ao início. Vamos começar!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: Inside the blocks we've been using are JavaScript commands. JavaScript
-          is the most popular programming language for professional developers today.
-          Blocks are a great way to get started learning to code and in fact, top
-          universities like Harvard and Berkeley start teaching this way. But once
-          we learn the basics, engineers write code by typing because it allows us
-          to go faster.
+        text: Dentro dos blocos que temos usado existem comandos JavaScript. Atualmente,
+          JavaScript é a linguagem de programação mais popular entre os desenvolvedores
+          profissionais. Blocos são um ótimo modo de começar a aprender a programar,
+          e, na verdade, as melhores universidades, como Harvard e Berkeley, começam
+          a ensinar assim. Mas depois que aprendermos o básico, vamos escrever os
+          códigos digitando, porque isso nos torna mais rápidos.
       2:
         image: notes/starwars_typing_2.JPG
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
+        text: Podemos digitar centenas de comandos sem ter que encontrá-los na caixa
+          de ferramentas e arrastá-los para a área de trabalho. Como você está aprendendo,
+          digitar pode ser mais lento no começo, mas queremos que você experimente.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show
-          text button on any puzzle to switch from blocks to typing code as text.
+        text: No canto superior direito da sua área de trabalho, você pode clicar
+          no botão "Mostrar texto" em qualquer desafio para alterar do modo de blocos
+          para o modo de programação na forma de texto.
       4:
         image: notes/starwars_typing_4.JPG
-        text: In the next lesson, we'll start you out in typing mode. Here you can
-          still drag the block from the toolbox or you can type the command name.
-          As you start to type, you'll see names of possible commands show below where
-          you're typing. Instead of typing the whole command name, you can select
-          one of these to move faster. In my job, I use this auto-complete feature
-          all the time when writing code.
+        text: Na próxima lição, vamos apresentá-lo ao modo de digitação. Aqui, você
+          ainda pode arrastar o bloco da caixa de ferramentas ou pode digitar o nome
+          do comando. Conforme for digitando, você vai ver nomes de comandos possíveis
+          abaixo de onde está digitando. Em vez de digitar o nome inteiro do comando,
+          você pode selecionar um deles para ser mais rápido. No meu trabalho, eu
+          uso esse recurso de preenchimento automático o tempo todo quando estou escrevendo
+          código.
       5:
         image: notes/starwars_typing_5.JPG
-        text: When you're typing code, the computer needs you to be very precise.
-          You need to spell and capitalize the command name exactly correctly, including
-          the parentheses and the semi-colon. Even with a small typing mistake, BB-8
-          cannot understand the code and won't be able to move.
+        text: Quando estiver digitando código, o computador precisa que você seja
+          muito preciso. A grafia e o uso de letras maiúsculas e minúsculas no nome
+          do comando devem ser exatamente corretas, incluindo os parênteses e o ponto
+          e vírgula. Mesmo se houver apenas um pequeno erro de digitação, o BB-8 não
+          vai entender o código e não poderá se mover.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
+        text: Quando você cometer um erro na linha, o editor vai destacá-lo para que
+          você possa tentar modificar o texto e corrigi-lo.
       7:
         image: notes/starwars_typing_7.JPG
-        text: If you get stuck, you can always start over with the start over button
-          and you can switch back to block mode at any time by clicking in the top-right
-          corner. Ok, let's give typing a try! And if you make mistakes, don't get
-          frustrated. It takes everybody a few tries to get it right.
+        text: Se tiver problemas, você sempre pode recomeçar com o botão "Começar
+          do início", e pode voltar ao modo de blocos a qualquer momento, clicando
+          no canto superior direito. Ok, vamos tentar digitar! E se cometer algum
+          erro, não fique frustrado. Todo mundo tem que tentar algumas vezes antes
+          de acertar.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Olá, meu nome é Charita Carter. Sou produtora criativa sênior aqui na
+          Walt Disney Imagineering. Sou responsável por liderar as equipes que produzem
+          as atrações que nossos convidados experimentam. Estamos sempre procurando
+          modos de melhorar e tornar a experiência dos nossos convidados mais agradável,
+          e a tecnologia é essencial para isso.
       2:
         image: notes/starwars_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Parabéns, você conseguiu! Você programou BB-8. Agora, acho que estamos
+          prontos para algo mais difícil. Vamos tentar. Agora que você aprendeu os
+          conceitos básicos da programação, vamos voltar no tempo para você criar
+          seu próprio jogo, estrelando R2-D2 e C3PO.
       3:
         image: notes/starwars_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Para fazer um jogo, precisamos aprender sobre algo que os programadores
+          de jogos usam todos os dias: os eventos. Os eventos dizem ao seu programa
+          que ele deve prestar atenção para quando algo acontece, e, quando acontecer,
+          realizar uma ação.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: 'Alguns exemplos de eventos são: detectar um clique do mouse, o toque
+          de uma tecla de direção ou um toque na tela.'
       5:
         image: notes/starwars_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Aqui, vamos fazer R2-D2 se mover para cima para entregar uma mensagem
+          para um piloto rebelde, e então se mover para baixo até o outro piloto rebelde.
+          Vamos usar eventos para fazê-lo se mover quando o jogador usar as teclas
+          de direção para cima/para baixo ou os botões para cima/para baixo.
       6:
         image: notes/starwars_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down.
+        text: Usamos o bloco de evento quandoParaCima() e encaixamos o bloco movaParaCima()
+          a ele. Quando o jogador pressionar a tecla de direção para cima, o código
+          vinculado ao bloco quandoParaCima() é executado. Faremos a mesma coisa para
+          o R2-D2 se mover para baixo.
       7:
         image: notes/starwars_events_7.JPG
-        text: To do this, we'll use a command called whenUp(). When you drag the command
-          out of the toolbox, you'll see that it starts and ends with a curly bracket
-          instead of a semi-colon. This gives us space to put other commands in the
-          middle. Every command that we place inside these brackets will run when
-          the player presses the up arrow.
+        text: Para fazer isso, usamos um comando chamado quandoParaCima(). Quando
+          você arrastar o comando para fora da caixa de ferramentas, vai ver que ele
+          começa e termina com chaves em vez de ponto e vírgula. Isso nos dá espaço
+          para colocar outros comandos entre as chaves. Todos os comandos que colocarmos
+          entre essas chaves serão executados quando o jogador pressionar a seta para
+          cima.
       8:
         image: notes/starwars_events_8.JPG
-        text: We want R2-D2 to go up so let's put a goUp(); block inside the command.
-          And we'll do the same thing to make R2-D2 go down.
+        text: Queremos que o R2-D2 vá para cima, então vamos colocar um bloco movaParaCima();
+          dentro do comando. E vamos fazer a mesma coisa para o R2-D2 ir para baixo.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance,
-          we can let R2-D2 react to button press events that move him around the screen.
-          Step by step, your game is getting more interactive.
+        text: Agora, em vez de escrever antecipadamente todo o código para controlar
+          nosso androide, podemos deixar R2-D2 reagir a eventos de botões sendo pressionados
+          que o fazem se mover pela tela.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Oi, meu nome é Alice, e eu gerencio o projeto e equipes de engenharia
+          aqui na Code.org, e trabalhei nesse tutorial que você está vendo agora.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: Você acaba de chegar ao último nível. Parabéns! Você aprendeu tudo o
+          que precisa saber para criar seu próprio jogo de Star Wars. Agora, não há
+          mais instruções nem desafios para resolver. Você pode criar seu próprio
+          jogo e escolher como ele vai funcionar. Mais uma coisa, você desbloqueou
+          novos sons e comandos para poder fazer ainda mais.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[alunos falando] Então, fizemos um jogo em que, basicamente, você marca
+          pontos quando pega puffer pigs. O truque é que sempre que você pega um puffer
+          pig, um Stormtrooper aparece. Na verdade, a tela está cheia de puffer pigs
+          e, quando tocar 10.000 deles, você vence.'
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[alunos falando] Fizemos um jogo em que você não pode perder, e tudo
+          que você mata lhe dá pontos. No meu programa, eu inverti os botões, então
+          sempre que você clica para cima, seu personagem vai para baixo, e quando
+          clica para a direita, ele vai para a esquerda. É bem difícil! Às vezes você
+          tem uma vantagem, uma vantagem injusta quando é o desenvolvedor do jogo.
+          Eu consegui? Sim!'
       5:
         image: notes/starwars_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Quando tiver terminado seu jogo, selecione compartilhar para receber
+          um link que você poderá compartilhar com seus amigos ou abrir para jogar
+          seu jogo no seu celular. Divirta-se!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: 'Hi I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
-          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.'
+        text: 'Oi, sou Kathleen Kennedy, produtora de Star Wars: O Despertar da Força.
+          Hoje, você vai trabalhar com um dos nossos astros, o BB-8. BB-8 é um androide
+          esférico. Tudo o que ele faz e cada movimento que ele faz são controlados
+          por softwares de computador. A ciência da computação tem impacto sobre todas
+          as indústrias, do marketing à saúde, aos filmes. De fato, centenas de engenheiros
+          da computação trabalham juntos para criar um filme como O Despertar da Força.'
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artist develop rigs, which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far,
-          far away.
+        text: Oi, sou Rachel Rose, engenheira sênior de P&D na ILM, e lidero a equipe
+          de animação e desenvolvimento de criaturas. Em O Despertar da Força, sou
+          responsável por ajudar o artista a desenvolver equipamentos que são as partes
+          do personagem que se movem e permitem a ele parecer muito real em uma galáxia
+          muito, muito distante.
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game that will
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so we can drag and drop to write
-          the programs. To start off, we're going to work with Rey to program BB-8
-          to walk to collect all of the scrap parts.
+        text: Durante a próxima hora, vamos criar nosso próprio jogo do Star Wars,
+          que vai ensinar a você os conceitos básicos da programação. Geralmente,
+          a programação é toda feita com texto, mas aqui vamos usar blocos, para que
+          você possa arrastar e soltar para escrever os programas. Para começar, vamos
+          trabalhar com Rey para programar BB-8 para se mover e coletar toda a sucata.
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars
-          game space where code will run. The instructions for each level are written
-          below the game space.
+        text: Sua tela está dividida em três partes principais. À esquerda está a
+          área do jogo, onde seu programa será executado. As instruções para cada
+          nível estão escritas abaixo da área do jogo.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: A parte do meio é onde fica a caixa de ferramentas, e cada um desses
+          blocos é um comando que BB-8 pode entender.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we're going to build our program.
+        text: O espaço em branco à direita é chamado de área de trabalho, e é onde
+          vamos criar nosso programa.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8
-          moves left one block on the grid.
+        text: Se eu arrastar o bloco movaParaEsquerda(); para nossa área de trabalho,
+          o que acontece? BB-89 se move um bloco para a esquerda.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together. When I press run
-          again, BB-8 will perform the commands that are stacked top to bottom on
-          our workspace.
+        text: E se eu quiser que BB-8 faça algo depois do movaParaEsquerda();? Posso
+          adicionar outro bloco ao nosso programa. Vou escolher o bloco movaParaCima();
+          e arrastá-lo para debaixo do bloco movaParaEsquerda(); até que ele fique
+          em destaque. Então, vou soltá-lo, e os dois blocos vão se encaixar. Quando
+          eu pressionar Executar de novo, BB-8 vai seguir os comandos que estão empilhados
+          em nossa área de trabalho de cima para baixo.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back into the toolbox.
+        text: Se você quiser apagar um bloco, simplesmente remova-o da pilha e arraste-o
+          de volta para a caixa de ferramentas.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: After you hit run, you can always hit the reset button to get BB-8 back
-          to the start. Now let's get rolling!
+        text: Depois que pressionar Executar, você sempre pode pressionar o botão
+          Recomeçar para levar BB-8 de volta ao início. Vamos começar!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Olá, meu nome é Charita Carter. Sou produtora criativa sênior aqui na
+          Walt Disney Imagineering. Sou responsável por liderar as equipes que produzem
+          as atrações que nossos convidados experimentam. Estamos sempre procurando
+          modos de melhorar e tornar a experiência dos nossos convidados mais agradável,
+          e a tecnologia é essencial para isso.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Parabéns, você conseguiu! Você programou BB-8. Agora, acho que estamos
+          prontos para algo mais difícil. Vamos tentar. Agora que você aprendeu os
+          conceitos básicos da programação, vamos voltar no tempo para você criar
+          seu próprio jogo, estrelando R2-D2 e C3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Para fazer um jogo, precisamos aprender sobre algo que os programadores
+          de jogos usam todos os dias: os eventos. Os eventos dizem ao seu programa
+          que ele deve prestar atenção para quando algo acontece, e, quando acontecer,
+          realizar uma ação.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: 'Alguns exemplos de eventos são: detectar um clique do mouse, o toque
+          de uma tecla de direção ou um toque na tela.'
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Aqui, vamos fazer R2-D2 se mover para cima para entregar uma mensagem
+          para um piloto rebelde, e então se mover para baixo até o outro piloto rebelde.
+          Vamos usar eventos para fazê-lo se mover quando o jogador usar as teclas
+          de direção para cima/para baixo ou os botões para cima/para baixo.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down. Now instead
-          of writing all the code to control our droid in advance, we can let R2-D2
-          react to button press events that move him around the screen.
+        text: Usamos o bloco de evento quandoParaCima() e encaixamos o bloco movaParaCima()
+          nele. Quando o jogador pressionar a tecla de direção para cima, o código
+          do bloco quandoParaCima() é executado. Faremos a mesma coisa para fazer
+          R2-D2 se mover para baixo. Agora, em vez de escrever antecipadamente todo
+          o código para controlar nosso androide, podemos deixar R2-D2 reagir a eventos
+          de botões sendo pressionados que o fazem se mover pela tela.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Passo a passo, seu jogo está ficando mais interativo.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Oi, meu nome é Alice, e eu gerencio o projeto e equipes de engenharia
+          aqui na Code.org, e trabalhei nesse tutorial que você está vendo agora.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: Você acaba de chegar ao último nível. Parabéns! Você aprendeu tudo o
+          que precisa saber para criar seu próprio jogo de Star Wars. Agora, não há
+          mais instruções nem desafios para resolver. Você pode criar seu próprio
+          jogo e escolher como ele vai funcionar. Mais uma coisa, você desbloqueou
+          novos sons e comandos para poder fazer ainda mais.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[alunos falando] Então, fizemos um jogo em que, basicamente, você marca
+          pontos quando pega puffer pigs. O truque é que sempre que você pega um puffer
+          pig, um Stormtrooper aparece. Na verdade, a tela está cheia de puffer pigs
+          e, quando tocar 10.000 deles, você vence.'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[alunos falando] Fizemos um jogo em que você não pode perder, e tudo
+          que você mata lhe dá pontos. No meu programa, eu inverti os botões, então
+          sempre que você clica para cima, seu personagem vai para baixo, e quando
+          clica para a direita, ele vai para a esquerda. É bem difícil! Às vezes você
+          tem uma vantagem, uma vantagem injusta quando é o desenvolvedor do jogo.
+          Eu consegui? Sim!'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Quando tiver terminado seu jogo, selecione compartilhar para receber
+          um link que você poderá compartilhar com seus amigos ou abrir para jogar
+          seu jogo no seu celular. Divirta-se!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG

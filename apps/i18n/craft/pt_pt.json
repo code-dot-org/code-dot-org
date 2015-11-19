@@ -84,5 +84,5 @@
   "reinfFeedbackMsg": "Podes pressionar \"Continuar\" para voltar a jogar o teu jogo.",
   "replayButton": "Replay",
   "selectChooseButton": "Select",
-  "tooManyBlocksFail": "Quebra-cabeça {puzzleNumber} concluído. Parabéns! Também é possível completá-lo com {numBlocks, plural, one {1 block} other {# blocks}}."
+  "tooManyBlocksFail": "Quebra-cabeça {puzzleNumber} concluído. Parabéns! Também é possível completá-lo com {numBlocks, plural, um {1 block} other {# blocks}}."
 }
