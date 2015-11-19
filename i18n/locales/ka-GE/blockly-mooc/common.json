@@ -19,7 +19,7 @@
   "clearPuzzleConfirmHeader":"დარწმუნებული ხართ, რომ ხელახლა დაწყება გსურთ?",
   "codeMode":"კოდი",
   "codeTooltip":"შექმნილი JavaScript კოდის ნახვა.",
-  "completedWithoutRecommendedBlock":"Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
+  "completedWithoutRecommendedBlock":"გილოცავთ! თქვენ დასრულეთ თავსატეხი {puzzleNumber}. (მაგრამ უფრო კარგი კოდი გამოვიდოდა, თუ სხვა ბლოკს გამოიყენებდით)",
   "continue":"გაგრძელება",
   "defaultTwitterText":"ნახეთ, რა გავაკეთე",
   "designMode":"დიზაინი",

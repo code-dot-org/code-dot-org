@@ -1,4 +1,5 @@
 nl-NL:
+  hour_of_code: Hour of Code
   hello: Hallo wereld
   select_language: Kies de gewenste taal
   en: informatica
@@ -290,11 +291,13 @@ nl-NL:
   starwars_watch_videos: "Bekijk voor je begint deze inspiratie-video's"
   starwars_speak_languages: Spreek je een andere taal?
   starwars_help_translate: Help ons met vertalen
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Uur Code
   mc_longdescription: Gebruik blokken code om Steve of Alex te helpen op hun avontuur door deze Minecraft-wereld.
   mc_shortdescription: Gebruik blokken code om Steve of Alex te helpen op hun avontuur door deze Minecraft-wereld.
   mc_gradelevel: Leeftijd 6+
   mc_platformtext: Moderne browsers, smartphones, tablets
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Uur Code
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 leerkrachten geven dit jaar een Uur Code in hun klaslokaal, 7-13 dec 2015. Ze willen jouw hulp! '

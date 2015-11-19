@@ -1,4 +1,5 @@
 bg-BG:
+  hour_of_code: Hour of Code
   hello: Здравей, свят
   select_language: Моля, изберете вашия език
   en: Компютърни науки
@@ -264,11 +265,13 @@ bg-BG:
   starwars_watch_videos: Преди да започнете, гледайте едно от тези вдъхновяващи видеа
   starwars_speak_languages: Говорите друг език?
   starwars_help_translate: Помогнете ни с превода
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Използвайте блокове с код, за да въведете Steve или Alex в приключението чрез този Minecraft свят.
   mc_shortdescription: Използвайте блокове с код, за да въведете Steve или Alex в приключението чрез този Minecraft свят.
   mc_gradelevel: Възраст 6 +
   mc_platformtext: Съвременни браузъри, смартфони, таблети
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100 000 учители ще бъдат домакини на Hour of Code в техния клас тази година, 7-13 декември 2015. Те искат вашата помощ! '

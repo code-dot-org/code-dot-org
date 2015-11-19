@@ -1498,7 +1498,7 @@ ka:
         text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: ნაბიჯ-ნაბიჯ, თქვენი თამაში უფრო ინტერაქტიული ხდება.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG

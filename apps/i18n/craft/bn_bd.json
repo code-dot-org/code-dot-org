@@ -84,5 +84,5 @@
   "reinfFeedbackMsg": "আপনি খেলায় ফিরে যেতে \"খেলতে থাকুন\" টিপতে পারেন।",
   "replayButton": "Replay",
   "selectChooseButton": "Select",
-  "tooManyBlocksFail": "ধাঁধা {puzzleNumber} সম্পন্ন. অভিনন্দন! এটা {numBlocks, plural, one {1 block} other {# ব্লক}} দিয়ে তা সম্পন্ন করা সম্ভব।"
+  "tooManyBlocksFail": "ধাঁধা {puzzleNumber} সম্পন্ন. অভিনন্দন! এটা {numBlocks, plural, one {1} other {# ব্লক}} দিয়ে তা সম্পন্ন করা সম্ভব।"
 }

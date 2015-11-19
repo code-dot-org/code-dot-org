@@ -715,7 +715,7 @@
   "failedRemovedItemCount":"Da próxima vez, recolhe o número de itens correto.",
   "failedSetActivity":"Da próxima vez, define a atividade correta para a personagem.",
   "failedHasWonGame":"Next time, win the game.",
-  "failedHasLostGame":"Next time, lose the game",
+  "failedHasLostGame":"Next time, lose the game.",
   "failedAddItem":"Next time, add a character.",
   "failedAvoidHazard":"\"Uh oh, a Bandit got you!  Try again.\"",
   "failedHasAllGoals":"\"Try again, BB-8.  Get all the scrap metal.\"",

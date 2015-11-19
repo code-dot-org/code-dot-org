@@ -1,4 +1,5 @@
 uz-UZ:
+  hour_of_code: Dasturlash soati
   hello: Salom Dunyo
   select_language: Iltimos, tilni tanlang
   en: Informatika
@@ -34,8 +35,8 @@ uz-UZ:
   csedweek_map_search_search: Qidiruv
   csedweek_map_search_reset: Reset
   csedweek_map_legend_title: Afsona
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_event: Dasturlash soati tadbiri
+  csedweek_map_legend_cs_tech_jam: Texnik studiya
   cded_sign_up: Sign up
   cded_try_it: Sinab ko‘ring
   twentyhours_trynow: Hoziroq sinang
@@ -55,7 +56,7 @@ uz-UZ:
   thank_you_: Rahmat!
   congratulations: Tabriklaymiz!
   congratulations_on_completing_hoc: Dasturlash soatini tugatganingiz bilan tabriklaymiz
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code, <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and help students learn an Hour of Code!'
+  congratulations_volunteer: 'Tabriklaymiz: siz Dasturlash soatini sinab ko‘rdingiz, <a href="https://code.org/volunteer">ko‘ngilli bo‘lib ro‘yxatdan o‘ting</a> va o‘quvchilarga dasturlash soatini o‘rganishiga yordam bering!'
   course_name_accelerated: Accelerated Course
   course_name_course1: Course 1
   course_name_course2: Course 2
@@ -209,15 +210,15 @@ uz-UZ:
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Xarid
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_hoc: Har bir o‘quvchi uchun Dasturlash soati.
   homepage_action_text_num_served: '# kishi sinab ko‘rdi'
   homepage_action_text_join_us: "Bizga qo'shiling"
   homepage_action_text_sign_up: Sign up
   homepage_action_text_try_it: Sinab ko‘ring
-  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_volunteers: Texnik ko‘ngillilarni taklif qilamiz
   homepage_action_text_codevideo: Videoni ko‘ring
   homepage_action_text_teachervideo: Videoni ko‘ring
-  homepage_action_text_girlvideo: Inspire a girl
+  homepage_action_text_girlvideo: Qizlarni ruhlantiring
   homepage_action_text_learn: O‘rganishni boshlang
   homepage_action_text_signpetition: Murojaatni imzolang
   homepage_signpetition_dropdown: 'Roziman: &#x25BE;'
@@ -225,9 +226,9 @@ uz-UZ:
   homepage_banner_text_prizes: Dasturlash soati 7-13 dekabr kunlari yana kelmoqda.
   homepage_banner_link_prizes: 'Tarixdagi eng katta o‘quv tadbiriga qo‘shiling. '
   homepage_banner_text_main: Code.org hamda College Board informatikada turli qatlamdagi o‘rganuvchilarni oshirish uchun hamkorlik qiladi.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_link: Ko‘proq bilish
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
-  homepage_banner_privacy_link: Learn more
+  homepage_banner_privacy_link: Ko‘proq bilish
   homepage_slot_text_title_hoc: Dasturlash soati
   homepage_slot_text_blurb_hoc: Har kim o‘rganishi mumkin. Bugundan boshlang.
   homepage_slot_text_link_hoc: Try the Hour of Code
@@ -290,31 +291,33 @@ uz-UZ:
   class_submission_level_college: Kollej
   class_submission_level_vocational: Kasbiy
   class_submission_languages_other: Boshqa til(lar)
-  inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
-  starwars_subtitle: Building a Galaxy With Code
+  inspirational_videos_more: 'Rol modeli va mashxurlardan ko‘roq <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">ilhomlantiruvchi videolar</a>'
+  starwars_subtitle: Dasturlash bilan galaktika quring
   starwars_javascript_title: JavaScript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_description: Ko‘chuvchi blok va JavaScriptdan foydalaning.
+  starwars_javascript_specs: 'Faqat inglizcha | Zamonaviy brauzerlar | Yosh: 11+'
   starwars_javascript_start_button: Hoziroq sinang
-  starwars_blocks_title: Blocks
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_title: Bloklar
+  starwars_blocks_description: Ko‘chuvchi bloklardan foydalaning.
+  starwars_blocks_specs: 'Ko‘p tillar (tez orada) | Zamonaviy brazerlar, smartfonlar, planshetlar | Yosh: 6-10'
   starwars_blocks_start_button: Hoziroq sinang
-  starwars_watch_videos: Before you get started, watch one of these inspirational videos
-  starwars_speak_languages: Speak another language?
+  starwars_watch_videos: Boshlashdan avval ilhomlantiruvchi videolardan birortasini ko‘ring
+  starwars_speak_languages: Boshqa tilda so‘zlashasizmi?
   starwars_help_translate: "Bizga o'girishga yordam"
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+  starwars_platform_text: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  mc_name: Maynkraft Dasturlash soati
+  mc_longdescription: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod bloklaridan foydalaning.
+  mc_shortdescription: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod bloklaridan foydalaning.
   mc_gradelevel: Ages 6+
   mc_platformtext: Modern browsers, smartphones, tablets
-  minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
+  mc_specs: 'Ko‘p tillar (tez orada) | Zamonaviy brauzerlar | Yosh: 6+'
+  minecraft_subtitle: Maynkraft Dasturlash soati
+  volunteer_engineer_submission_title: O‘quvchi va ko‘ngillilarni Dasturlash soatiga jalb qiling.
   volunteer_engineer_submission_subtitle_generic: 'Bu yil (7-13 dekabr, 2015) 100 000 o‘qituvchi o‘z sinflarida Dasturlash soatini o‘tishmoqchi. Ularga yordamingiz kerak! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} ta o‘qituvchilar ko‘ngillilarni shu dekabrda bo‘ladigan Informatika haftaligida Dasturlash soatiga yordam berishga chaqiradi. <br>%{num_volunteers} ta ko‘ngillilar ro‘yxatdan o‘tishgan. Ularga qo‘shiling.'
   volunteer_engineer_submission_intro_background: "Dasturlash soati — Informatikaga kirish soatini o‘tishni maqsad qilgan umumbashariy harakat. U 180 dan oshiq mamlakatda o‘n millionlab o‘quvchilarni qamrab olishni maqsad qilgan. 7-13 Dekabr kunlari Informatika ta'limi haftaligiga qo‘shiling."
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    Bu o‘qituvchilar darslariga yordami tegadigan, <span style="font-family: 'Gotham 7r', sans-serif;">informatikani o‘qitishga qiziqqan</span> yoki o‘quvchilarini Informatika ilmi imkoniyatlari haqida so‘zlab (buni videochat orqali ham amalga oshirish mumkin) <span style="font-family: 'Gotham 7r', sans-serif;">ilhomlantira oladigan</span> insonlarni qo‘shilishidan bag‘oyatda minnatdor. Agar siz ko‘ngilli qidirmayotgan bo‘lsangiz, Dasturlash soatini tashkillashtirish haqida <a href="%{url}">batafsil o‘rganing</a>.
   volunteer_engineer_submission_intro_signup: |-
     Informatika talabasi yoki dasturchi bo‘lsangiz, iltimos, quyidagi ma'lumotlarni kiriting. <span class="form-required-field">*</span> belgili sohalarni to‘ldirish majburiy.
   volunteer_engineer_submission_header_shared: "Ko‘ngillilar xaritasida o‘qituvchilar tomonidan keltirilgan ma'lumot"
@@ -328,7 +331,7 @@ uz-UZ:
   volunteer_engineer_submission_field_location_placeholder: Pochta indeksi, shahar va shtat/mamlakat toki ko‘cha manzili
   volunteer_engineer_submission_field_location_flexibility: 'Men Dasturlash soati mobaynida qayidagilar bilan yordam berolaman (barcha tegishlilarni belgilang):'
   volunteer_engineer_submission_checkbox_after_hoc: Men Dasturlash soatidan so‘ng ko‘ngilli bo‘lish ishtiyoqidaman
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
+  volunteer_engineer_submission_field_time_commitment: Dasturlash soatidan keyin unga ketqizilgan vaqt
   volunteer_engineer_submission_field_linkedin: Linkedin hisobingiz
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/ismingiz
   volunteer_engineer_submission_field_facebook: Facebook hisobingiz
@@ -340,8 +343,8 @@ uz-UZ:
   volunteer_engineer_submission_field_email: Email address
   volunteer_engineer_submission_field_email_desc: Elektron pochtangiz hech qachon tarqatilmaydi, ammo sizga o‘qituvchilardan takliflarni jo‘natamiz.
   volunteer_engineer_submission_field_email_placeholder: Email address
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
+  volunteer_engineer_submission_final_paragraph: Dasturlash soati uchun o‘qituvchilar yoki boshqa ko‘ngillilar bog‘lanishi uchun siz xaritada ko‘rsatilasiz. Sizning elektron pochtangiz va manzilingiz hech qachon tarqatilmaydi. Ammo boshqa ma‘lumotlar (taxminiy joylashgan o‘rningiz ham) mahalliy o‘qituvchilar uchun ko‘rinadi.
+  volunteer_engineer_submission_checkbox_contact: 'Men o‘qituvchilar ko‘ngillilik uchun bog‘lanishlariga roziman (Eslatma: sizning elektron pochtangiz tarqatilmaydi)'
   volunteer_engineer_submission_submit: Tasdiqlash
   volunteer_engineer_submission_thankyou: 'Dasturlash soatiga ko‘ngilli bo‘lganingiz uchun tashakkur. Dasturlash soatiga tayyorlanish va boshqalarni jalb qilish uchun <a href="%{url}">batafsil tanishing.</a>'
   volunteer_engineer_submission_commitment_uncertain: Noaniq
@@ -357,16 +360,16 @@ uz-UZ:
   volunteer_engineer_submission_location_flexibility_remote: masofaviy savol-javob o‘tkazish (qisqa videokonferensiyalar orqali)
   volunteer_engineer_submission_location_flexibility_curriculum: ochiq kodli o‘quv loyihalariga hissa qo‘shish
   volunteer_engineer_submission_experience_unspecified: Ko‘rsatilmagan
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_experience_tech_company: Texnik kopaniyadagi texnikaga aloqasiz ishchi
   volunteer_engineer_submission_experience_university_student_or_researcher: Universitet informatika talabasi
   volunteer_engineer_submission_experience_software_professional: Dasturchi
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_distance_8: 5 mil
+  volunteer_engineer_submission_distance_16: 10 mil
+  volunteer_engineer_submission_distance_24: 15 mil
+  volunteer_engineer_submission_distance_32: 20 mil
+  volunteer_engineer_submission_num_volunteers_5: 5 ta ko‘ngilli
+  volunteer_engineer_submission_num_volunteers_10: 10 ta ko‘ngilli
+  volunteer_engineer_submission_num_volunteers_25: 25 ta ko‘ngilli
   volunteer_engineer_submission_num_volunteers_50: 50 volunteers
   volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom for technical help and inspiration
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom to say a few words of inspiration to the kids

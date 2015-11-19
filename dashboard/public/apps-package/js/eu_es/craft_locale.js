@@ -154,7 +154,7 @@ v:function(d,k){craft_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:(k=craft_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).craft_locale = {
-"blockDestroyBlock":function(d){return "destroy block"},
+"blockDestroyBlock":function(d){return "deuseztatu blokea"},
 "blockIf":function(d){return "baldin"},
 "blockIfLavaAhead":function(d){return "if lava ahead"},
 "blockMoveForward":function(d){return "mugitu aurrera"},

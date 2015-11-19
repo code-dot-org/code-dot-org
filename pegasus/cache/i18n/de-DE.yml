@@ -1,4 +1,5 @@
 "de-DE":
+  hour_of_code: Hour of Code
   hello: Hallo Welt
   select_language: Bitte wähle deine Sprache
   en: Informatik
@@ -327,10 +328,11 @@
   starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
     Ages 6-10
   starwars_blocks_start_button: Probiere es jetzt aus
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+  starwars_watch_videos: Bevor Sie loslegen, sehen Sie eines dieser inspirierende
+    Videos an
+  starwars_speak_languages: Sprechen eine andere Sprache?
+  starwars_help_translate: Helfen Sie beim übersetzen
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
@@ -338,6 +340,7 @@
     this Minecraft world.
   mc_gradelevel: Ages 4-104
   mc_platformtext: Moderne Browser, Smartphones, Tablets
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100.000 Lehrer machen eine Hour
@@ -408,9 +411,9 @@
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 Stunden pro Woche
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 Stunden pro Woche
   volunteer_engineer_submission_commitment_now_and_then: Hin und wieder
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: 2-3 Mal pro Jahr
+  volunteer_engineer_submission_commitment_monthly: Ein paar Stunden pro Monat
+  volunteer_engineer_submission_commitment_weekly: Ein paar Stunden pro Woche
   volunteer_engineer_submission_commitment_more: Mehr
   volunteer_engineer_submission_location_flexibility_onsite: Bei einer Schule vor
     Ort
@@ -430,7 +433,7 @@
   volunteer_engineer_submission_num_volunteers_5: 5 Freiwillige
   volunteer_engineer_submission_num_volunteers_10: 10 Freiwillige
   volunteer_engineer_submission_num_volunteers_25: 25 Freiwillige
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 Freiwillige
   volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
     for technical help and inspiration
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
@@ -653,8 +656,8 @@
   dashboard_progress_furthest_level_attempted: Höchste Ebene versucht
   dashboard_stage: Teil
   dashboard_puzzle: Aufgabe
-  dashboard_question: Question
-  dashboard_response: Response
+  dashboard_question: Frage
+  dashboard_response: Antwort
   stats_hoc_2013_heading: 'Fantastische Ergebnisse der Hour of Code aus dem Vorjahr.
     Allein in einer Woche:'
   stats_hoc_2013_image_alt: Ergebnisse der Hour of Code 2013
@@ -675,8 +678,8 @@
     für einen Bereich, <b>Bild, Wort oder E-Mail</b>.
   dashboard_faq: Häufig gestellte Fragen
   dashboard_faq_k5: Häufig gestellte Fragen zur Grundschule
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
+  dashboard_announcements: Ankündigungen
+  dashboard_announce_view_all: Alle anzeigen
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -699,7 +702,7 @@
     aus
   hoc2014_try_scrat: Angry Birds, PvZ und Scrat
   hoc2014_try_frozen: Künstler mit Anna und Elsa, aus Die Eiskönigin
-  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg: Tutorials von Code.org
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Anleitungen in deiner Sprache

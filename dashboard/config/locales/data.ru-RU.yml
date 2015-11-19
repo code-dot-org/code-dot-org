@@ -890,6 +890,6 @@
         craft_inside_repeat: Repeat actions by placing blocks in here
         craft_callout_preplaced_house: This code will start building your house. Can
           you finish it?
-        craft_what_is_iron: Mine this iron!
+        craft_what_is_iron: Это железо принадлежит мне!
         craft_callout_moveforward: This code will check for lava, can you add a command
           to move forward?

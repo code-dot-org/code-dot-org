@@ -805,38 +805,38 @@
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
-        text: This lesson is called move it, move it. Together we're going to write
-          a program to get our friends from the starting with the compass rose to
-          the smiley face goal.
+        text: Aceasta lectie se numeste misca-te, misca-te. Impreuna o sa scriem un
+          program care sa-i faca pe prietenii nostri sa ajunga la fata zambitoare.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: But the smiley is face down and only one person knows how to get there.
-          Let's get this program started.
+        text: Dar fata zambitoare este jos si o singura persoana stie sa ajunga acolo.
+          Sa incepem acest program.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: A program is an algorithm that has been coded into something that can
-          be run by a machine. Most of us think of a program as something that we
-          write for a computer. Programs are really good for that but they're also
-          helpful in other places. You can make your own game or even program a robot
-          to do things for you.
+        text: Un program este un algoritm care a fost codificat in ceva ce poate fi
+          rulat de o masina. Cei mai multi dintre noi se gandesc la un program ca
+          la ceva ce scriem pentru un calculator. Programele sunt foarte bune pentru
+          asta dar sunt de asemenea utile si in alte locuri. Poti sa faci propriul
+          tau joc si chiar sa programezi un robot sa faca lucruri pentru tine.
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: My name is Jeremiah. Hi! I am seven years old. I love playing on my
-          mom's computer but I always get permission first. "Mom, can I go on the
-          computer? Sure honey!"
+        text: Numele meu este Jeremiah. Salut! Am sapte ani. Ador sa ma joc pe calculatorul
+          mamei mele dar intotdeauna ii cer permisiunea prima data. "Mama, pot sa
+          folosesc calculatorul? Sigur draga!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: I love my mom's computer because I can go on the internet. The internet
-          is kind of like your neighborhood. You can visit cool places, you can talk
-          to family and friends and you can learn lots of new things.
+        text: Ador calculatorul mamei mele deoarece pot sa intru pe internet. Internetul
+          este asemenea cartierului tau. Poti vizita locuri cool, poti sa vorbesti
+          cu familia si cu prietenii tai si poti invata o multime de lucruri noi.
       3:
         image: notes/C1_going_places_safely_3.png
-        text: Yesterday, I visited a zoo that's near my house. I saw a baby zebra.
-          I took her picture and changed the color of her stripes, then added a hat
-          and added it to my collection of wacky animals. Awesome! Later, I went to
-          a place far far away. I visited Kenya. That's a country in Africa. Lots
-          of zebras live there.
+        text: Ieri, am vizitat gradina zoologica care se afla in apropierea casei
+          mele. Am vazut un pui de zebra. I-am facut o poza si i-am schimbat culoare
+          dungilor, apoi i-am adaugat o palarie si am salvat fotografia in colectia
+          mea de animale traznite. Grozav! Mai tarziu am plecat intr-un loc foarte
+          indepartat. Am vizitat Kenya. Aceasta este o tara din Africa. Multe zebre
+          locuiesc aici.
       4:
         image: notes/C1_going_places_safely_4.png
         text: Sometimes on the internet I talk to peeople I know, like my grandma
@@ -2520,60 +2520,55 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+        text: |
+          Buna! Sunt Kathleen Kennedy - producator al Star Wars: The Force Awakens. Azi vei lucra cu unul din star-urile noastre, BB-8. BB-8 este un droid sferic. Orice face si orice miscare a sa este controlata de un program. Informatica are influenta asupra fiecatui domeniu, de la marketing
+          la sanatate si film. Sute de ingineri lucreaza impreuna pentru a face un film ca The Force Awakens.
       2:
         image: notes/starwars_intro_2.JPG
-        text: Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artists develop rigs which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far
-          far away.
+        text: Buna! Sunt Rachel Rose, inginer R&D senior la IM si coordonez echipa
+          de dezvoltare a personajelor si animatiei. In The Force Awakens, ajut la
+          dezvoltarea artistica a instalatiilor, care sunt componente ale pesonajului
+          care se misca si il fac sa arate real intr-o galaxie indepartata.
       3:
         image: notes/starwars_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game. We'll
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so that we can drag and drop to
-          write the programs. Under the hood, you're still creating code. After you
-          try the basics with blocks, we'll switch you to JavaScript, one of the most
-          popular programming languages on the web.
+        text: |
+          In urmatoarea ora vom realiza propriul joc Star Wars cu care vei invata conceptele
+          de baza ale programarii. De obicei, programarea se face prin text, dar noi
+          vom folosi aici blocuri pentru a scrie programe. In spatele acestora, tu chiar creezi programe. Dupa ce incerci bazele programarii cu blocuri, vom trece la JavaScript, unul dintre cele mai populare limbaje de programare pentru web.
       4:
         image: notes/starwars_intro_4.JPG
-        text: To start off, we're going to work with Rey to program BB-8 to walk to
-          collect all of the scrap parts. Your screen is split into three parts. On
-          the left is the Star Wars game space, where code will run. The instructions
-          for each level are written below the game space.
+        text: Pentru inceput, vom lucra cu Rey pentru a-l programa pe BB-8 sa mearga
+          si sa colecteze toate reziduurile. Ecranul este impartit in trei zone. In
+          stanga este spatiul jocului Star Wars unde se va rula codul. Instructiunile
+          pentru fiecare nivel se scriu sub spatiul jocului.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: |
+          Aceasta zona din mijloc se numeste toolbox si fiecare din aceste blocuri este o comanda pe care
+          BB-8 o poate intelege.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
+        text: Spatiul alb din dreapta se numeste spatiul de lucru si aici vom construi
+          programul nostru.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what
-          happens? BB-8 moves left one block on the grid.
+        text: Daca aduc blocul moveLeft(); in spatiul de lucru, ce se intampla? BB-8
+          se misca spre stanga un bloc pe grid.
       8:
         image: notes/starwars_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together.
+        text: Si daca vreau ca BB-8 sa mai faca altceva dupa blocul moveLeft();? Pot
+          adauga alt bloc la programul nostru. Voi alege blocul moveUp(); si il aduc
+          sub blocul meu moveLeft(); pana cand se lumineaza. Apoi ii dau drumul si
+          cele doua blocuri se vor lipi.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked
-          from top to bottom on our workspace. If you ever want to delete a block,
-          just remove it from the stack and drag it back into the tool box.
+        text: Cand apas iar run, BB-8 va executa toate comenzile stivuite din spatiul
+          de lucru, de sus in jos. Daca vei vrea sa stergi un bloc, scoate-l din stiva
+          si trage-l inapoi in toolbox.
       10:
         image: notes/starwars_intro_10.JPG
-        text: After you've hit run, you can always hit the reset button to get BB-8
-          back to the start. Now let's get rolling!
+        text: Dupa ce ai apasat run, poti sa apesi butonul reset ca sa il aduci pe
+          BB-8 inapoi la start. Acum sa incepem!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
@@ -2726,8 +2721,9 @@
           below the game space.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: |
+          Aceasta zona din mijloc se numeste toolbox si fiecare din aceste blocuri este o comanda pe care
+          BB-8 o poate intelege.
       6:
         image: notes/starwars_blocks_intro_6.JPG
         text: The white space on the right is called the work space and this is where

@@ -1076,11 +1076,12 @@
           reaccionar frente al usuario y cambiar su curso de acción.
       5:
         image: notes/C2_conditionals_with_cards_5.png
-        text: Think about your favorite video game. Do you earn more points for some
-          actions than you do for others? This occurs because the computer is using
-          conditionals. It's the way a computer makes a decision. How about, if you
-          hit the target, you earn ten points. Else, you lose three. When you know
-          how conditionals work, you can create all kinds of exciting games.
+        text: Pikirkan tentang permainan kesukaan kamu. Apakah kamu mendapatkan poin
+          karena melakukan suatu hal dibandingkan melakukan hal lainnya? Ini terjadi
+          karena komputer menggunakan persyaratan. Inilah cara komputer membuat keputusan.
+          Bagaimana kalau kamu mendapatkan sepuluh poin jika kamu mengenai target.
+          Lain daripada itu, kamu kehilangan tiga. Apabila kamu tahu cara persyaratan
+          bekerja, kamu bisa menciptakan berbagai permainan yang menarik.
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
@@ -2520,12 +2521,9 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+        text: |
+          Salut! Sunt Kathleen Kennedy - producator al Star Wars: The Force Awakens. Azi vei lucra cu unul din star-urile noastre, BB-8. BB-8 este un droid sferic. Orice face si orice miscare a sa este controlata de un program. Informatica are influenta asupra fiecatui domeniu, de la marketing
+          la sanatate si film. Sute de ingineri lucreaza impreuna pentru a face un film ca The Force Awakens.
       2:
         image: notes/starwars_intro_2.JPG
         text: Здравейте, Аз съм Рейчъл Роуз Глaвен Инженер в отдела за Разработки

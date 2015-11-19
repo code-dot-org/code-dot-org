@@ -239,4 +239,4 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "reinfFeedbackMsg":function(d){return "আপনি খেলায় ফিরে যেতে \"খেলতে থাকুন\" টিপতে পারেন।"},
 "replayButton":function(d){return "Replay"},
 "selectChooseButton":function(d){return "Select"},
-"tooManyBlocksFail":function(d){return "ধাঁধা "+craft_locale.v(d,"puzzleNumber")+" সম্পন্ন. অভিনন্দন! এটা "+craft_locale.p(d,"numBlocks",0,"bn",{"one":"1 block","other":craft_locale.n(d,"numBlocks")+" ব্লক"})+" দিয়ে তা সম্পন্ন করা সম্ভব।"}};
+"tooManyBlocksFail":function(d){return "ধাঁধা "+craft_locale.v(d,"puzzleNumber")+" সম্পন্ন. অভিনন্দন! এটা "+craft_locale.p(d,"numBlocks",0,"bn",{"one":"1","other":craft_locale.n(d,"numBlocks")+" ব্লক"})+" দিয়ে তা সম্পন্ন করা সম্ভব।"}};

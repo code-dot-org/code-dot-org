@@ -297,9 +297,9 @@
       stages: 'Nivå å vise:'
       show_past: 'Vis elev-aktivitetar (%{bullet_html}) frå tidlegare:'
       levels_key: Nivånøklar
-      perfect: Perfekt fulført
-      completed: Fulført, men brukte for mange blokker
-      tried: Prøvde, men fulførte ikkje
+      perfect: Perfekt fullført
+      completed: Fullført, men brukte for mange blokker
+      tried: Prøvde, men fullførte ikkje
       not_tried: Ikkje prøvd enno
       activity: Viser elevens aktivitet i dei siste %{hours} %{plural}
       no_section: Ikkje tilordna ein seksjon
@@ -318,7 +318,7 @@
       help_register: I staden for å bruke mykje tid på å legge informasjon om kvar
         elev, kan du be klassa din om registrere seg sjølve. Elevane dine vil trenge
         brukarnamn og passord, men dei trenger ikkje å oppgi epost-adressa si. Viss
-        ei elev gløymer passordet sitt, kan du sette det på nytt for dei.
+        ein elev gløymer passordet sitt, kan du sette det på nytt for dei.
       register: Be elevane om å registrere seg sjølve
       vist: Be elevane om å besøke
       section_code: 'og oppgi seksjonskoden deira:'
@@ -332,10 +332,10 @@
       students: Elevar
       section_code: Seksjonskode
       add_section_code: Legg til elevenes seksjonskode
-      secret: Hemmelighet
-      grade: Karakter
+      secret: Hemmelegheit
+      grade: Trinn
       course: Leksjon
-      rename: gi nytt namn
+      rename: gje nytt namn
       edit: rediger
       delete: slett
       confirm_delete: Er du sikker på at du vil slette denne seksjonen?
@@ -560,7 +560,7 @@
       body: Bruk Spill-Lab for å lage ei historie eller spel med Disney Infinity figurar.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Utforsk ei Minecraft-verd gjennom kode.
   gallery:
     students_drew_these_with_code: Elevar teikna desse ved å kode!
     students_made_these_with_code: Elever laga desse ved å kode!

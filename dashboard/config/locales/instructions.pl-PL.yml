@@ -1872,23 +1872,21 @@
       Course 4 SCF 2_instruction: "Use what you learned in the previous level to\ndraw
         an image like this. Note: The code becomes more simple if you incorporate\nparameters.
         \n"
-      Course 4 SCF 3 Fail 1_instruction: Can you figure out how to...
-      Course 4 SCF 3 Fail 2_instruction: Can you figure out how to...
+      Course 4 SCF 3 Fail 1_instruction: Czy potrafisz wymyślić jak...
+      Course 4 SCF 3 Fail 2_instruction: Czy potrafisz wymyślić jak...
       Course 4 SCF 3_instruction: "Use what you learned in the previous level to\ndraw
         an image like this. Note: The code becomes more simple if you incorporate\nparameters.
         \n"
-      Course 4 SCFL 1_instruction: |
-        Solve this puzzle using the fewest number of
-        blocks possible.
+      Course 4 SCFL 1_instruction: Rozwiąż tę łamigłówkę używając jak najmniejszej
+        liczby bloków.
       Course 4 SCFL 1a_instruction: |
         Can you get Skrat to his acorn using as few
         blocks as possible?
       Course 4 SCFL 1b_instruction: |
         Can you get Skrat to his acorn using as few
         blocks as possible?
-      Course 4 SCFL 2_instruction: |
-        Solve this puzzle using the fewest number of
-        blocks possible.
+      Course 4 SCFL 2_instruction: Rozwiąż tę łamigłówkę używając jak najmniejszej
+        liczby bloków.
       Course 4 SCFL 3_instruction: Can you figure out how to re-create this drawing?
       Course 4 SCFL 4_instruction: Can you figure out how to re-create this drawing?
       Course 4 SCFL 5_instruction: Can you figure out how to re-create this drawing?

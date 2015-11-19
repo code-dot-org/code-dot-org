@@ -2531,307 +2531,332 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+        text: Γεια σας, είμαι η Kathleen Kennedy και είμαι η παραγωγός του Πολέμου
+          των Άστρων, Η Δύναμη Ξυπνά. Σήμερα θα εργαστείτε με ένα από τα αστέρια μας,
+          το BB-8. Το BB-8 είναι ένα σφαιρικό ανδροειδές. Ό,τι κάνει και όποια κίνηση
+          κάνει ελέγχεται από πρόγραμμα υπολογιστή. Η επιστήμη των υπολογιστών επηρεάζει
+          κάθε βιομηχανία, από το marketing μέχρι τους κλάδους υγείας και τον κινηματογράφο.
+          Για την ακρίβεια, εκατοντάδες μηχανικοί υπολογιστών εργάστηκαν μαζί για
+          να φτιάξουν μία ταινία όπως την "Η Δύναμη Ξυπνά".
       2:
         image: notes/starwars_intro_2.JPG
-        text: Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artists develop rigs which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far
-          far away.
+        text: Γεια σας, είμαι η Rachel Rose και είμαι μηχανικός R&D στην ILM και οδηγώ
+          τις ομάδες κίνησης και πλασμάτων. Στην ταινία Η Δύναμη Ξυπνά, είμαι υπεύθυνη
+          για να βοηθώ τους καλλιτέχνες να κατασκευάζουν ρουχισμό, που είναι μέρος
+          του χαρακτήρα που κινείται και επιτρέπουν στο χαρακτήρα να δείχνει αληθοφανής
+          σε έναν γαλαξία πολύ, πολύ μακρυά.
       3:
         image: notes/starwars_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game. We'll
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so that we can drag and drop to
-          write the programs. Under the hood, you're still creating code. After you
-          try the basics with blocks, we'll switch you to JavaScript, one of the most
-          popular programming languages on the web.
+        text: Στην επόμενη ώρα, θα φτιάξουμε το δικό μας παιχνίδι Πολέμου των Άστρων.
+          Θα σας μάθουμε τις βασικές αρχές του προγραμματισμού. Συνήθως ο προγραμματισμός
+          είναι μόνο κείμενο, αλλά θα χρησιμοποιήσουμε εδώ μπλοκ, ώστε να μπορούμε
+          να τα σύρουμε και να τα εναποθέσουμε ώστε να γράψουμε προγράμματα. Στην
+          πραγματικότητα θα δημιουργείτε κώδικα. Όταν δοκιμάσετε τα βασικά με τα μπλοκ,
+          θα σας γυρίσουμε στην JavaScript, μια από τις πιο δημοφιλείς γλώσσες προγραμματισμού
+          στο Internet.
       4:
         image: notes/starwars_intro_4.JPG
-        text: To start off, we're going to work with Rey to program BB-8 to walk to
-          collect all of the scrap parts. Your screen is split into three parts. On
-          the left is the Star Wars game space, where code will run. The instructions
-          for each level are written below the game space.
+        text: Για να ξεκινήσουμε, θα εργασθούμε με τον Rey, για να προγραμματίσουμε
+          το BB-8 για να περπατά και να μαζεύει όλα τα άχρηστα μέταλλα. Η οθόνη σας
+          είναι χωρισμένη σε τρία μέρη. Στα αριστερά βρίσκεται ο χώρος του παιχνιδιού
+          του Πολέμου των Άστρων, όπου θα εκτελείται ο κώδικάς σας. Οι οδηγίες για
+          κάθε επίπεδο είναι γραμμένες κάτω από το χώρου του παιχνιδιού.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: Σε αυτή τη μεσαία περιοχή βρίσκεται η εργαλειοθήκη και κάθε ένα από
+          αυτά τα μπλοκ είναι μία εντολή που καταλαβαίνει το BB-8.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
+        text: Ο λευκός χώρος στα αριστερά ονομάζεται χώρος εργασίας και είναι το μέρος
+          όπου θα κατασκευάσουμε το πρόγραμμά μας.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what
-          happens? BB-8 moves left one block on the grid.
+        text: Αν μετακινήσω το μπλοκ moveLeft() (πήγαινε αριστερά) στο χώρο εργασίας
+          και πατήσω εκτέλεση, τι συμβαίνει; Το BB-8 μετακινείται αριστερά κατά ένα
+          μπλοκ στο πλέγμα.
       8:
         image: notes/starwars_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together.
+        text: Και τι γίνεται αν θέλω να κάνει κάτι το BB-8 μετά το μπλοκ moveLeft();
+          Μπορώ να βάλω ένα ακόμη μπλοκ στο πρόγραμμά μας. Θα επιλέξω το μπλοκ moveUp();
+          (πήγαινε επάνω) και θα το σύρω κάτω από το μπλοκ moveLeft() μέχρι να εμφανιστεί
+          η φωτεινή ένδειξη. Τότε θα το αφήσω και τα δύο μπλοκ θα ενωθούν μεταξύ τους.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked
-          from top to bottom on our workspace. If you ever want to delete a block,
-          just remove it from the stack and drag it back into the tool box.
+        text: Και αν πατήσω εκτέλεση ξανά, το BB-8 θα εκτελέσει τις εντολές που έχουν
+          στοιβαχθεί από πάνω προς τα κάτω στο χώρο εργασίας μας. Αν θελήσετε να διαγράψετε
+          ένα μπλοκ, απλά αφαιρέστε το από τη στοίβα και σύρετέ το πίσω στην εργαλειοθήκη.
       10:
         image: notes/starwars_intro_10.JPG
-        text: After you've hit run, you can always hit the reset button to get BB-8
-          back to the start. Now let's get rolling!
+        text: Αφού πατήσετε την εκτέλεση, μπορείτε να πατήσετε το πλήκτρο επαναφοράς
+          για να φέρετε το BB-8 στην αρχική του θέση. Ας ξεκινήσουμε!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: Inside the blocks we've been using are JavaScript commands. JavaScript
-          is the most popular programming language for professional developers today.
-          Blocks are a great way to get started learning to code and in fact, top
-          universities like Harvard and Berkeley start teaching this way. But once
-          we learn the basics, engineers write code by typing because it allows us
-          to go faster.
+        text: Μέσα στα μπλοκ που χρησιμοποιήσαμε υπάρχουν εντολές JavaScript. Η JavaScript
+          είναι η πιο δημοφιλής γλώσσα προγραμματισμού για επαγγελματίες προγραμματιστές
+          σήμερα. Τα μπλοκ είναι ένας περίφημος τρόπος για να ξεκινήσουμε να μάθουμε
+          να προγραμματίζουμε και για την ακρίβεια, μεγάλα πανεπιστήμια όπως το Harvard
+          και το Berkeley ξεκινούν την εκμάθηση με αυτόν τον τρόπο. Αλλά, μόλις μάθουν
+          τα βασικά, οι μηχανικοί λογισμικού γράφουν κώδικα πληκτρολογώντας, γιατί
+          τους επιτρέπει να εργάζονται ταχύτερα.
       2:
         image: notes/starwars_typing_2.JPG
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
+        text: Μπορούμε να πληκτρολογούμε εκατοντάδες εντολές χωρίς να χρειάζεται να
+          τις βρούμε στην εργαλειοθήκη ή να τις σέρνουμε. Επειδή μαθαίνετε, η πληκτρολόγηση
+          μπορεί να είναι πιο αργή στην αρχή, αλλά θέλουμε να την δοκιμάσετε.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show
-          text button on any puzzle to switch from blocks to typing code as text.
+        text: Στην πάνω δεξιά γωνία του χώρου εργασίας σας, μπορείτε να πατήσετε το
+          πλήκτρο εμφάνισης κειμένου σε οποιοδήποτε παζλ για να αλλάξετε από μπλοκ
+          σε εγγραφή κώδικα ως κείμενο.
       4:
         image: notes/starwars_typing_4.JPG
-        text: In the next lesson, we'll start you out in typing mode. Here you can
-          still drag the block from the toolbox or you can type the command name.
-          As you start to type, you'll see names of possible commands show below where
-          you're typing. Instead of typing the whole command name, you can select
-          one of these to move faster. In my job, I use this auto-complete feature
-          all the time when writing code.
+        text: Στο επόμενο μάθημα, θα ξεκινήσουμε σε λειτουργία πληκτρολόγησης. Εδώ
+          μπορείτε ακόμη να σέρνετε τα μπλοκ από την εργαλειοθήκη ή να πληκτρολογείτε
+          το όνομα της εντολής. Καθώς ξεκινάτε να πληκτρολογείτε, θα δείτε ονόματα
+          από πιθανές εντολές να εμφανίζονται κάτω από το μέρος που πληκτρολογείτε.
+          Αντί να πληκτρολογήσετε όλο το όνομα της εντολής, μπορείτε να επιλέξετε
+          κάποια από αυτές για να κινείστε ταχύτερα. Στην εργασία μου χρησιμοποιώ
+          το χαρακτηριστικό της αυτόματης συμπλήρωσης συνεχώς όταν γράφω κώδικα.
       5:
         image: notes/starwars_typing_5.JPG
-        text: When you're typing code, the computer needs you to be very precise.
-          You need to spell and capitalize the command name exactly correctly, including
-          the parentheses and the semi-colon. Even with a small typing mistake, BB-8
-          cannot understand the code and won't be able to move.
+        text: Όταν πληκτρολογείτε κώδικα, ο υπολογιστής απαιτεί να είστε εξαιρετικά
+          ακριβής. Χρειάζεται να γράφετε την εντολή με σωστή ορθογραφία και κεφαλαία
+          όπου απαιτείται, μαζί με τις παρενθέσεις και το ελληνικό ερωτηματικό. Ακόμη
+          κι αν κάνετε ένα μικρό λάθος στην πληκτρολόγηση, το BB-8 δεν μπορεί να καταλάβει
+          των κώδικα και δε θα μπορεί να κινηθεί.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
+        text: Αν κάνετε ένα λάθος στη γραμμή, το πρόγραμμα επεξεργασίας θα σας το
+          επισημάνει ώστε να μπορέσετε να δοκιμάσετε να αλλάξετε το κείμενό σας για
+          να το διορθώσετε.
       7:
         image: notes/starwars_typing_7.JPG
-        text: If you get stuck, you can always start over with the start over button
-          and you can switch back to block mode at any time by clicking in the top-right
-          corner. Ok, let's give typing a try! And if you make mistakes, don't get
-          frustrated. It takes everybody a few tries to get it right.
+        text: Αν κολλήσετε, μπορείτε πάντα να ξεκινήσετε από την αρχή πατώντας το
+          αντίστοιχο πλήκτρο και μπορείτε να αλλάξετε σε μπλοκ οποιαδήποτε στιγμή,
+          πατώντας στην πάνω δεξιά γωνία. Λοιπόν, ας δοκιμάσουμε την πληκτρολόγηση!
+          Και αν κάνετε λάθη, μην απογοητευτείτε. Όλοι χρειάζονται μερικές προσπάθειες
+          μέχρι να το κάνουν σωστά.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Γεια σας, ονομάζομαι Charita Carter. Είμαι παραγωγός δημιουργίας εδώ
+          στην Walt Disney Imagineering. Είμαι υπεύθυνη καθοδήγησης ομάδων που παράγουν
+          τα θεάματα που βιώνουν οι επισκέπτες μας. Ψάχνουμε πάντα για τρόπους βελτίωσης
+          της εμπειρίας που βιώνουν οι επισκέπτες μας και η τεχνολογία είναι στο επίκεντρο
+          αυτής της αναζήτησης.
       2:
         image: notes/starwars_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Συγχαρητήρια, τα καταφέρατε! Προγραμματίσατε το BB-8. Τώρα εκτιμώ ότι
+          είστε έτοιμοι για κάτι πιο δύσκολο. Ας το δοκιμάσουμε. Τώρα που μάθατε τα
+          βασικά του προγραμματισμού, θα πάμε πίσω στο χρόνο για να φτιάξετε το δικό
+          σας παιχνίδι, με ήρωες το R2-D2 και το C3PO.
       3:
         image: notes/starwars_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Για να φτιάξουμε ένα παιχνίδι, θα μάθουμε για κάτι που οι προγραμματιστές
+          παιχνιδιών χρησιμοποιούν καθημερινά: ονομάζονται γεγονότα. Τα γεγονότα ζητούν
+          από το πρόγραμμά σας να ακούει ή να περιμένει κάτι να συμβεί και, όταν αυτό
+          γίνει, να κάνει κάποια ενέργεια.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Παραδείγματα γεγονότων είναι η αναμονή για κλικ από το ποντίκι, το πάτημα
+          ενός βέλους ή η αφή της οθόνης.
       5:
         image: notes/starwars_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Θα κάνουμε το R2-D2 να μετακινηθεί επάνω και να παραδώσει ένα μήνυμα
+          σε έναν αντάρτη πιλότο και μετά να μετακινηθεί κάτω στον άλλο αντάρτη πιλότο.
+          Θα χρησιμοποιήσουμε γεγονότα για να το κάνουμε να μετακινηθεί. Όταν ο παίκτης
+          χρησιμοποιεί τα βέλη πάνω/κάτω ή τα πλήκτρα πάνω/κάτω.
       6:
         image: notes/starwars_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down.
+        text: Θα χρησιμοποιήσουμε το μπλοκ γεγονότος whenUp() (όταν επάνω) και θα
+          κολλήσουμε σε αυτό το goUp() (πήγαινε επάνω). Όταν ο παίκτης πατάει το επάνω
+          βέλος, ο κώδικας που βάλαμε στο μπλοκ whenUp() εκτελείται. Και θα κάνουμε
+          το ίδιο πράγμα για να κάνουμε το R2-D2 να πάει κάτω.
       7:
         image: notes/starwars_events_7.JPG
-        text: To do this, we'll use a command called whenUp(). When you drag the command
-          out of the toolbox, you'll see that it starts and ends with a curly bracket
-          instead of a semi-colon. This gives us space to put other commands in the
-          middle. Every command that we place inside these brackets will run when
-          the player presses the up arrow.
+        text: Για να το κάνουμε αυτό, θα χρησιμοποιήσουμε μία εντολή που ονομάζεται
+          whenUp() (όταν επάνω). Αν σύρετε αυτή τη εντολή από την εργαλειοθήκη, θα
+          δείτε ότι ξεκινά και τελειώνει με άγκιστρα αντί για ερωτηματικό. Αυτό μας
+          δίνει χώρο για να βάλουμε άλλες εντολές στη μέση. Κάθε εντολή που βάζουμε
+          μέσα σε αυτά τα άγκιστρα εκτελείται όταν ο παίκτης πατάει το επάνω βέλος.
       8:
         image: notes/starwars_events_8.JPG
-        text: We want R2-D2 to go up so let's put a goUp(); block inside the command.
-          And we'll do the same thing to make R2-D2 go down.
+        text: Θέλουμε να κάνουμε το R2-D2 να πάει επάνω, γι αυτό ας βάλουμε ένα μπλοκ
+          goUp(); (πήγαινε επάνω) μέσα στην εντολή. Και θέλουμε να κάνουμε το ίδιο
+          πράγμα για να κάνουμε το R2-D2 να πάει κάτω.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance,
-          we can let R2-D2 react to button press events that move him around the screen.
-          Step by step, your game is getting more interactive.
+        text: Τώρα, αντί να γράψουμε όλο τον κώδικα για τον έλεγχο του ανδροειδούς
+          από πριν, μπορούμε να αφήσουμε το R2-D2 να αντιδρά σε γεγονότα πίεσης πλήκτρων
+          που το οδηγούν τριγύρω στην οθόνη. Βήμα προς βήμα, το παιχνίδι σας γίνεται
+          πιο διαδραστικό.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Γεια σας, ονομάζομαι Alice και καθοδηγώ τις ομάδες σχεδιασμού και προγραμματιστών
+          εδώ στο Code.org και εργάστηκα σε αυτό τον οδηγό που παίζετε αυτή τη στιγμή.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: Φτάσατε στο τελευταίο επίπεδο. Συγχαρητήρια! Μόλις μάθατε ό,τι χρειάζεστε
+          για να φτιάξετε το δικό σας παιχνίδι του Πολέμου των Άστρων. Δεν υπάρχουν
+          άλλες οδηγίες ή άλλα παζλ να λύσετε. Μπορείτε να φτιάξετε το δικό σας παιχνίδι
+          και να επιλέξετε πώς λειτουργεί. Επίσης, ξεκλειδώσατε νέους ήχους και νέες
+          εντολές για να κάνετε ακόμη περισσότερα.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[ομιλούν μαθητές] Λοιπόν φτιάξαμε ένα παιχνίδι βασικά όπου κερδίζεις
+          πόντους όταν παίρνεις γουρούνια puffer. Το κόλπο είναι ότι κάθε φορά που
+          παίρνεις ένα γουρούνι puffer, εμφανίζεται ένας άστρο στρατιώτης. Τελικά
+          όλη η οθόνη γεμίζει με γουρούνια puffer και μετά, όταν ακουμπήσεις 10.000
+          γουρούνια, κερδίζεις.'
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[ομιλούν μαθητές] Φτιάξαμε ένα παιχνίδι όπου δεν μπορείς να χάσεις
+          και ό,τι σκοτώσεις σου δίνει πόντους. Για το πρόγραμμά μου, έβαλα ανάποδα
+          τα πλήκτρα και όταν πατάς το επάνω, ο χαρακτήρας σου πάει κάτω και όταν
+          πας δεξιά, ο χαρακτήρας σου πάει αριστερά. Είναι πραγματικά δύσκολο! Κάποιες
+          φορές κερδίζεις ένα πλεονέκτημα, ένα εγγενές πλεονέκτημα, αν είσαι ο προγραμματιστής
+          του παιχνιδιού. Τα κατάφερα; Ζήτω!'
       5:
         image: notes/starwars_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Όταν τελειώσετε την κατασκευή του παιχνιδιού σας, επιλέξτε διαμοιρασμό
+          για να πάρετε ένα σύνδεσμο και να το μοιραστείτε με τους φίλους σας ή να
+          παίξετε το παιχνίδι στο κινητό σας. Καλή διασκέδαση!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: 'Hi I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
-          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.'
+        text: Γεια σας, είμαι η Kathleen Kennedy και είμαι η παραγωγός του Πολέμου
+          των Άστρων, Η Δύναμη Ξυπνά. Σήμερα θα εργαστείτε με ένα από τα αστέρια μας,
+          το BB-8. Το BB-8 είναι ένα σφαιρικό ανδροειδές. Ό,τι κάνει και όποια κίνηση
+          κάνει ελέγχεται από πρόγραμμα υπολογιστή. Η επιστήμη των υπολογιστών επηρεάζει
+          κάθε βιομηχανία, από το marketing μέχρι τους κλάδους υγείας και τον κινηματογράφο.
+          Για την ακρίβεια, εκατοντάδες μηχανικοί υπολογιστών εργάστηκαν μαζί για
+          να φτιάξουν μία ταινία όπως την "Η Δύναμη Ξυπνά".
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artist develop rigs, which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far,
-          far away.
+        text: Γεια σας, είμαι η Rachel Rose και είμαι μηχανικός R&D στην ILM και οδηγώ
+          τις ομάδες κίνησης και πλασμάτων. Στην ταινία Η Δύναμη Ξυπνά, είμαι υπεύθυνη
+          για να βοηθώ τους καλλιτέχνες να κατασκευάζουν ρουχισμό, που είναι μέρος
+          του χαρακτήρα που κινείται και επιτρέπουν στο χαρακτήρα να δείχνει αληθοφανής
+          σε έναν γαλαξία πολύ, πολύ μακρυά.
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game that will
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so we can drag and drop to write
-          the programs. To start off, we're going to work with Rey to program BB-8
-          to walk to collect all of the scrap parts.
+        text: Στην επόμενη ώρα, θα φτιάξουμε το δικό μας παιχνίδι Πολέμου των Άστρων.
+          Θα σας μάθουμε τις βασικές αρχές του προγραμματισμού. Συνήθως ο προγραμματισμός
+          είναι μόνο κείμενο, αλλά θα χρησιμοποιήσουμε εδώ μπλοκ, ώστε να μπορούμε
+          να τα σύρουμε και να τα εναποθέσουμε ώστε να γράψουμε προγράμματα. Στην
+          πραγματικότητα θα δημιουργείτε κώδικα. Όταν δοκιμάσετε τα βασικά με τα μπλοκ,
+          θα σας γυρίσουμε στην JavaScript, μια από τις πιο δημοφιλείς γλώσσες προγραμματισμού
+          στο Internet.
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars
-          game space where code will run. The instructions for each level are written
-          below the game space.
+        text: Η οθόνη σας είναι χωρισμένη σε τρία μέρη. Στα αριστερά βρίσκεται ο χώρος
+          του παιχνιδιού του Πολέμου των Άστρων, όπου θα εκτελείται ο κώδικάς σας.
+          Οι οδηγίες για κάθε επίπεδο είναι γραμμένες κάτω από το χώρου του παιχνιδιού.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: Σε αυτή τη μεσαία περιοχή βρίσκεται η εργαλειοθήκη και κάθε ένα από
+          αυτά τα μπλοκ είναι μία εντολή που καταλαβαίνει το BB-8.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we're going to build our program.
+        text: Ο λευκός χώρος στα αριστερά ονομάζεται χώρος εργασίας και είναι το μέρος
+          όπου θα κατασκευάσουμε το πρόγραμμά μας.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8
-          moves left one block on the grid.
+        text: Αν μετακινήσω το μπλοκ moveLeft() (πήγαινε αριστερά) στο χώρο εργασίας
+          και πατήσω εκτέλεση, τι συμβαίνει; Το BB-8 μετακινείται αριστερά κατά ένα
+          μπλοκ στο πλέγμα.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together. When I press run
-          again, BB-8 will perform the commands that are stacked top to bottom on
-          our workspace.
+        text: Και τι γίνεται αν θέλω να κάνει κάτι το BB-8 μετά το μπλοκ moveLeft();
+          Μπορώ να βάλω ένα ακόμη μπλοκ στο πρόγραμμά μας. Θα επιλέξω το μπλοκ moveUp();
+          (πήγαινε επάνω) και θα το σύρω κάτω από το μπλοκ moveLeft() μέχρι να εμφανιστεί
+          η φωτεινή ένδειξη. Τότε θα το αφήσω και τα δύο μπλοκ θα ενωθούν μεταξύ τους.
+          Όταν πατήσω εκτέλεση ξανά, το BB-8 θα εκτελέσει τις εντολές που έχουν στοιβαχθεί
+          από πάνω προς τα κάτω στο χώρο εργασίας μας.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back into the toolbox.
+        text: Αν θελήσετε να διαγράψετε ένα μπλοκ, απλά αφαιρέστε το από τη στοίβα
+          και σύρετέ το πίσω στην εργαλειοθήκη.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: After you hit run, you can always hit the reset button to get BB-8 back
-          to the start. Now let's get rolling!
+        text: Αφού πατήσετε την εκτέλεση, μπορείτε να πατήσετε το πλήκτρο επαναφοράς
+          για να φέρετε το BB-8 στην αρχική του θέση. Ας ξεκινήσουμε!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Γεια σας, ονομάζομαι Charita Carter. Είμαι παραγωγός δημιουργίας εδώ
+          στην Walt Disney Imagineering. Είμαι υπεύθυνη καθοδήγησης ομάδων που παράγουν
+          τα θεάματα που βιώνουν οι επισκέπτες μας. Ψάχνουμε πάντα για τρόπους βελτίωσης
+          της εμπειρίας που βιώνουν οι επισκέπτες μας και η τεχνολογία είναι στο επίκεντρο
+          αυτής της αναζήτησης.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Συγχαρητήρια, τα καταφέρατε! Προγραμματίσατε το BB-8. Τώρα εκτιμώ ότι
+          είστε έτοιμοι για κάτι πιο δύσκολο. Ας το δοκιμάσουμε. Τώρα που μάθατε τα
+          βασικά του προγραμματισμού, θα πάμε πίσω στο χρόνο για να φτιάξετε το δικό
+          σας παιχνίδι, με ήρωες το R2-D2 και το C3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Για να φτιάξουμε ένα παιχνίδι, θα μάθουμε για κάτι που οι προγραμματιστές
+          παιχνιδιών χρησιμοποιούν καθημερινά: ονομάζονται γεγονότα. Τα γεγονότα ζητούν
+          από το πρόγραμμά σας να ακούει ή να περιμένει κάτι να συμβεί και, όταν αυτό
+          γίνει, να κάνει κάποια ενέργεια.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Παραδείγματα γεγονότων είναι η αναμονή για κλικ από το ποντίκι, το πάτημα
+          ενός βέλους ή η αφή της οθόνης.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Θα κάνουμε το R2-D2 να μετακινηθεί επάνω και να παραδώσει ένα μήνυμα
+          σε έναν αντάρτη πιλότο και μετά να μετακινηθεί κάτω στον άλλο αντάρτη πιλότο.
+          Θα χρησιμοποιήσουμε γεγονότα για να το κάνουμε να μετακινηθεί. Όταν ο παίκτης
+          χρησιμοποιεί τα βέλη πάνω/κάτω ή τα πλήκτρα πάνω/κάτω.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down. Now instead
-          of writing all the code to control our droid in advance, we can let R2-D2
-          react to button press events that move him around the screen.
+        text: Χρησιμοποιούμε το μπλοκ γεγονότος whenUp() (όταν επάνω) και κολλάμε
+          σε αυτό το μπλοκ goUp() (πήγαινε επάνω). Όταν ο παίκτης πατάει το επάνω
+          βέλος, ο κώδικας που βρίσκεται στο μπλοκ whenUp() εκτελείται. Και θα κάνουμε
+          το ίδιο πράγμα για να κάνουμε το R2-D2 να πάει κάτω. Τώρα, αντί να γράψουμε
+          όλο τον κώδικα για τον έλεγχο του ανδροειδούς από πριν, μπορούμε να αφήσουμε
+          το R2-D2 να αντιδρά σε γεγονότα πίεσης πλήκτρων που το οδηγούν τριγύρω στην
+          οθόνη.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Βήμα προς βήμα, το παιχνίδι σας γίνεται πιο διαδραστικό.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Γεια σας, ονομάζομαι Alice και καθοδηγώ τις ομάδες σχεδιασμού και προγραμματιστών
+          εδώ στο Code.org και εργάστηκα σε αυτό τον οδηγό που παίζετε αυτή τη στιγμή.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: Φτάσατε στο τελευταίο επίπεδο. Συγχαρητήρια! Μόλις μάθατε ό,τι χρειάζεστε
+          για να φτιάξετε το δικό σας παιχνίδι του Πολέμου των Άστρων. Δεν υπάρχουν
+          άλλες οδηγίες ή άλλα παζλ να λύσετε. Μπορείτε να φτιάξετε το δικό σας παιχνίδι
+          και να επιλέξετε πώς λειτουργεί. Επίσης, ξεκλειδώσατε νέους ήχους και νέες
+          εντολές για να κάνετε ακόμη περισσότερα.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[ομιλούν μαθητές] Λοιπόν φτιάξαμε ένα παιχνίδι βασικά όπου κερδίζεις
+          πόντους όταν παίρνεις γουρούνια puffer. Το κόλπο είναι ότι κάθε φορά που
+          παίρνεις ένα γουρούνι puffer, εμφανίζεται ένας άστρο στρατιώτης. Τελικά
+          όλη η οθόνη γεμίζει με γουρούνια puffer και μετά, όταν ακουμπήσεις 10.000
+          γουρούνια, κερδίζεις.'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[ομιλούν μαθητές] Φτιάξαμε ένα παιχνίδι όπου δεν μπορείς να χάσεις
+          και ό,τι σκοτώσεις σου δίνει πόντους. Για το πρόγραμμά μου, έβαλα ανάποδα
+          τα πλήκτρα και όταν πατάς το επάνω, ο χαρακτήρας σου πάει κάτω και όταν
+          πας δεξιά, ο χαρακτήρας σου πάει αριστερά. Είναι πραγματικά δύσκολο! Κάποιες
+          φορές κερδίζεις ένα πλεονέκτημα, ένα εγγενές πλεονέκτημα, αν είσαι ο προγραμματιστής
+          του παιχνιδιού. Τα κατάφερα; Ζήτω!'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Όταν τελειώσετε την κατασκευή του παιχνιδιού σας, επιλέξτε διαμοιρασμό
+          για να πάρετε ένα σύνδεσμο και να το μοιραστείτε με τους φίλους σας ή να
+          παίξετε το παιχνίδι στο κινητό σας. Καλή διασκέδαση!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG

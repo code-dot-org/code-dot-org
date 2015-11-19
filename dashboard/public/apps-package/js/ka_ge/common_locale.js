@@ -174,7 +174,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "clearPuzzleConfirmHeader":function(d){return "დარწმუნებული ხართ, რომ ხელახლა დაწყება გსურთ?"},
 "codeMode":function(d){return "კოდი"},
 "codeTooltip":function(d){return "შექმნილი JavaScript კოდის ნახვა."},
-"completedWithoutRecommendedBlock":function(d){return "Congratulations! You completed Puzzle "+common_locale.v(d,"puzzleNumber")+". (But you could use a different block for stronger code.)"},
+"completedWithoutRecommendedBlock":function(d){return "გილოცავთ! თქვენ დასრულეთ თავსატეხი "+common_locale.v(d,"puzzleNumber")+". (მაგრამ უფრო კარგი კოდი გამოვიდოდა, თუ სხვა ბლოკს გამოიყენებდით)"},
 "continue":function(d){return "გაგრძელება"},
 "defaultTwitterText":function(d){return "ნახეთ, რა გავაკეთე"},
 "designMode":function(d){return "დიზაინი"},

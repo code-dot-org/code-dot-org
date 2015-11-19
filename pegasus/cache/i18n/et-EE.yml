@@ -1,4 +1,5 @@
 "et-EE":
+  hour_of_code: Hour of Code
   hello: Tere maailm
   select_language: Palun vali oma keel
   en: Arvutiteadus
@@ -318,6 +319,7 @@
     videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
@@ -325,6 +327,7 @@
     this Minecraft world.
   mc_gradelevel: Ages 4-104
   mc_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Ole KoodiTund vabatahtlik
   volunteer_engineer_submission_subtitle_generic: '100,000 õpetajat korraldavad sel

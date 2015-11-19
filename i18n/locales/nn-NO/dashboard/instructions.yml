@@ -95,16 +95,16 @@ nn:
       2-3 Bee Conditionals 8_instruction: Dette jordet har raude og lilla blomar. Raude blomar har ei gitt mengde nektar, medan lilla har ei ukjend mengde nektar. Samle inn all nektaren.
       2-3 Bee Conditionals 9_instruction: Samla inn all nektar frå kvar blome.
       2-3 Bee Conditionals Assessment 1_instruction: 'Lekse: Samle all nektaren. Vær forsiktig så du ikkje samlar nektar frå ein lilla blome om den ikkje har noko.'
-      2-3 Bee Debugging 1_instruction: 'Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. '
-      2-3 Bee Debugging 10_instruction: 'Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. '
-      2-3 Bee Debugging 2_instruction: 'Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. '
-      2-3 Bee Debugging 3_instruction: 'Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. '
-      2-3 Bee Debugging 4_instruction: 'Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. '
-      2-3 Bee Debugging 5_instruction: 'Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. Du kan nå bruke "Kjør" og "Trinn".'
+      2-3 Bee Debugging 1_instruction: Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
+      2-3 Bee Debugging 10_instruction: Desse blokkane plagar meg. Fiks feila og samle inn all nektaren for å lage all honningen.
+      2-3 Bee Debugging 2_instruction: Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
+      2-3 Bee Debugging 3_instruction: Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
+      2-3 Bee Debugging 4_instruction: Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
+      2-3 Bee Debugging 5_instruction: 'Desse blokkane plagar meg. Fiks feila og samle inn nektaren for å lage all honningen. No kan du bruke "kjør" og "steg".'
       2-3 Bee Debugging 6_instruction: 'Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. '
-      2-3 Bee Debugging 7_instruction: 'Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. '
-      2-3 Bee Debugging 8_instruction: 'Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. '
-      2-3 Bee Debugging 9_instruction: 'Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. '
+      2-3 Bee Debugging 7_instruction: Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
+      2-3 Bee Debugging 8_instruction: Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
+      2-3 Bee Debugging 9_instruction: Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
       2-3 Bee Debugging Assessment 1_instruction: 'Lekse: Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. '
       2-3 Bee Functions 1_instruction: 'Funksjoner er kodeblokker som utfører en bestemt oppgave. Bruk blokken "hent 2 nektar" til å samle inn nektar fra hver blomst.'
       2-3 Bee Functions 10_instruction: Lilla blomster har enten 1 eller 0 nektar. Lag en funksjon som samler bare samler inn nektar fra de blomstene som har nektar i seg.

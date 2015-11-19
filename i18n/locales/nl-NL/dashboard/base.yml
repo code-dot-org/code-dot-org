@@ -12,7 +12,7 @@ nl:
         name: Weergegeven naam
         email: Email
         username: gebruikersnaam
-        password: wachtwoord
+        password: Wachtwoord
         password_confirmation: Wachtwoord bevestiging
         current_password: Huidig wachtwoord
         locale: Taal

@@ -558,14 +558,14 @@
     frozen:
       title: Крижане серце
     starwars:
-      title: Star Wars
+      title: Зоряні війни
     infinity:
       title: Ігрова лабораторія Infiinty
       body: За допомогою Ігрової лабораторії створіть гру або історію за участі персонажів
         Діснея Infiinty.
     minecraft:
-      title: Minecraft
-      body: Explore a Minecraft world through code.
+      title: Майнкрафт
+      body: Дослідимо світ Майнкрафту через код.
   gallery:
     students_drew_these_with_code: Ці малюнки запрограмували учні!
     students_made_these_with_code: Це запрограмували учні!

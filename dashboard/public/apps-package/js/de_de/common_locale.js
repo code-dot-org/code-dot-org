@@ -395,5 +395,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "wantToLearn":function(d){return "Möchtest du programmieren lernen?"},
 "watchVideo":function(d){return "Video anschauen"},
 "when":function(d){return "wenn"},
-"whenRun":function(d){return "Programmstart"},
+"whenRun":function(d){return "beim Ausführen"},
 "workspaceHeaderShort":function(d){return "Arbeitsbereich: "}};

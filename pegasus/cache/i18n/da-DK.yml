@@ -1,4 +1,5 @@
 "da-DK":
+  hour_of_code: Hour of Code
   hello: Hej verden
   select_language: Vælg dit sprog
   en: Computer Science
@@ -327,6 +328,7 @@
     videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Hjælp os med at oversætte
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
@@ -334,6 +336,7 @@
     this Minecraft world.
   mc_gradelevel: Alder 6+
   mc_platformtext: Moderne browsere, smartphones, tabletter
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host

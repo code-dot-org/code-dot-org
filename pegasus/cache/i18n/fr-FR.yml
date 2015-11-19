@@ -1,4 +1,5 @@
 "fr-FR":
+  hour_of_code: Hour of Code
   hello: Bonjour tout le monde
   select_language: Veuillez sélectionner votre langue
   en: Informatique
@@ -331,6 +332,7 @@
   starwars_watch_videos: Avant de commencer, regarde une de ces vidéos inspirantes
   starwars_speak_languages: Tu parles une autre langue ?
   starwars_help_translate: Aidez-nous à traduire
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Une Heure de Code Minecraft
   mc_longdescription: Utilise des blocs de code pour emmener Steve ou Alex dans une
     aventure dans le monde de Minecraft.
@@ -338,6 +340,7 @@
     aventure dans le monde de Minecraft.
   mc_gradelevel: 6 ans et plus
   mc_platformtext: Navigateurs modernes, smartphones, tablettes
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Une Heure de Code Minecraft
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100 000 enseignants vont accueillir

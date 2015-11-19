@@ -2332,10 +2332,7 @@ ja:
       Overworld Avoid Monsters_instruction: |
         Running into a Creeper is a bad idea.
         Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
+      Overworld Chop Tree_instruction: 木は何かを作るのにとても役に立ちます。木まで歩いて、「ブロックをこわす」コマンドを使ってそれを切り倒しましょう。
       Overworld Chop Trees_instruction: |
         We need to build a house before the sun
         goes down. Houses require a lot of wood. Cut down all 3 trees.
@@ -2375,9 +2372,7 @@ ja:
         of underground resources. Now, we're going to build a track along the dirt
         path from your house. The first step is clearing the path. Follow the path
         and clear the trees.
-      Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
+      Overworld Move to Sheep_instruction: ２つ目の「前に進む」コマンドを追加（ついか）して、ヒツジに触りましょう。
       Overworld Place Wall_instruction: |
         Every house starts with a wall. Build the
         first part of your house by putting the "place" and "move forward" commands
@@ -2389,9 +2384,7 @@ ja:
         Great job! You’ve gathered lots of
         resources and built a modest home. Now lay rail from the edge of the map to
         the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+      Overworld Shear Sheep_instruction: ヒツジの毛を刈（か）る時間です。「刈る」コマンドを使って、２匹のヒツジから羊毛（ようもう）を収穫（しゅうかく）しましょう。
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all

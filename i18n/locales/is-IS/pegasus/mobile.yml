@@ -1,4 +1,5 @@
 is-IS:
+  hour_of_code: Hour of Code
   hello: Halló heimur
   select_language: Vinsamlegast veldu tungumál þitt
   en: Tölvunarfræði
@@ -295,11 +296,13 @@ is-IS:
   starwars_watch_videos: Horfðu á eitt af þessum hvatningarmyndböndum áður en þú byrjar
   starwars_speak_languages: Talarðu annað tungumál?
   starwars_help_translate: Hjálpaðu að þýða
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Klukkustund kóðunar með Minecraft
   mc_longdescription: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim.
   mc_shortdescription: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim.
   mc_gradelevel: Aldur 6+
   mc_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Klukkustund kóðunar með Minecraft
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 kennarar ætla að halda Klukkustund kóðunar í skólastofunni 7.-13. des. 2015. Þeir þurfa aðstoð þína! '

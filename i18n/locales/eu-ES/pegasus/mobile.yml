@@ -1,4 +1,5 @@
 eu-ES:
+  hour_of_code: Kode ordua
   hello: Kaixo mundua
   select_language: Aukera ezazu zure hizkuntza, mesedez
   en: Informatika
@@ -9,7 +10,7 @@ eu-ES:
   n_have_learned_an_hoc: '<h1>Kode ordua</h1><h2>probatu dutenak</h2><h3># kopurua</h3>'
   anybody_can_learn: Edozeinek ikasi dezake.
   learn_now: Ikasi orain
-  petition_message: Edozein eskoletako edozein ikaslek konputazio zientziak ikasteko aukera eduki beharko luke
+  petition_message: Edozein eskoletako edozein ikaslek konputazio zientziak ikasteko aukera izan beharko luke
   petition_sign_message: 'Ados bazaude, idatzi zure izena. Batu beste # hauek.'
   petition_sign_message_support: 'Babesten bagaituzu, izena eman. # besteak gonbidatu.'
   petition_join_others: '# batu'
@@ -280,11 +281,13 @@ eu-ES:
   starwars_watch_videos: Before you get started, watch one of these inspirational videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_gradelevel: Ages 6+
   mc_platformtext: Nabigatzaile modernoak, smatphoneak, tabletak
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 irakaslek beren ikasgeletan Kode orduan parte hartuko dute aurten, 2015, Abe 7-13 artean. Zure laguntza behar dute! '

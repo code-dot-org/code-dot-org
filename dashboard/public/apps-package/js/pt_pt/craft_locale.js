@@ -239,4 +239,4 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "reinfFeedbackMsg":function(d){return "Podes pressionar \"Continuar\" para voltar a jogar o teu jogo."},
 "replayButton":function(d){return "Replay"},
 "selectChooseButton":function(d){return "Select"},
-"tooManyBlocksFail":function(d){return "Quebra-cabeça "+craft_locale.v(d,"puzzleNumber")+" concluído. Parabéns! Também é possível completá-lo com "+craft_locale.p(d,"numBlocks",0,"pt",{"one":"1 block","other":craft_locale.n(d,"numBlocks")+" blocks"})+"."}};
+"tooManyBlocksFail":function(d){return "Quebra-cabeça "+craft_locale.v(d,"puzzleNumber")+" concluído. Parabéns! Também é possível completá-lo com "+craft_locale.p(d,"numBlocks",0,"pt",{"um":"1 block","other":craft_locale.n(d,"numBlocks")+" blocks"})+"."}};
