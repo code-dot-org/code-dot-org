@@ -37,7 +37,7 @@ module ScriptLevelsHelper
       end
 
     next_level ?
-        build_script_level_path(next_level) :
+        build_script_level_path(next_level) + ".html" :
         script_completion_redirect(script_level.script)
   end
 
