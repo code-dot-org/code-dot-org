@@ -28,10 +28,13 @@ hu-HU:
   hoc2014_support: 'Támogasd &#x25BE;'
   hoc2014_whatishoc: Mi az a Kódolás Órája?
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
+  csedweek_map_signup: Feliratkozás az eseményre
   csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_search_search: Keresés
   csedweek_map_search_reset: Visszaállítás
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Regisztrálás
   cded_try_it: Próbáld ki
   twentyhours_trynow: Próbálja ki most
@@ -51,13 +54,14 @@ hu-HU:
   thank_you_: Köszönjük!
   congratulations: Gratulálok!
   congratulations_on_completing_hoc: Gratulálunk egy Kód Órája befejezéséhez
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code, <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and help students learn an Hour of Code!'
   course_name_accelerated: Gyorsított tanfolyam
   course_name_course1: 1. tanfolyam
   course_name_course2: 2. tanfolyam
   course_name_course3: 3. tanfolyam
   course_name_course4: 4. tanfolyam
-  congratulations_on_completing_course: 'Congratulations on completing %{course}'
-  congrats_next_tutorials_title: Try these tutorials next
+  congratulations_on_completing_course: 'Gratulálok a %{course} befejezéséhez!'
+  congrats_next_tutorials_title: Ezután próbálja meg ezeket a tanfolyamokat
   congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
   get_a_certificate_of_achievement: Kapjon egy bízonyítványt teljesítményéért
   enter_valid_age: Kérlek válassz egy érvényes életkort
@@ -196,8 +200,15 @@ hu-HU:
   homepage_slot_text_course4: 4. tanfolyam
   homepage_slot_text_shop: Áruház
   homepage_slot_text_flappy: Flappy kód
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: '# fő már kipróbálta'
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Regisztrálás
+  homepage_action_text_try_it: Próbáld ki
+  homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_codevideo: Nézd meg a videót
   homepage_action_text_teachervideo: Nézd meg a videót
+  homepage_action_text_girlvideo: Inspire a girl
   homepage_action_text_learn: Kezdj tanulni
   homepage_action_text_signpetition: Írd alá a petíciót
   homepage_signpetition_dropdown: 'Írd alá a petíciót &#x25BE;'
@@ -213,7 +224,7 @@ hu-HU:
   homepage_slot_text_link_hoc: Próbáld ki a Kódolás Óráját
   homepage_slot_text_link_host: Tarts egy Kódolás óráját
   homepage_slot_text_link_hocserved: '# fő már kipróbálta'
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_solot_text_link_volunteer: Önkéntes az kódolás órájához
   homepage_slot_text_title_students: Diákok
   homepage_slot_text_blurb_students: Tekintsd meg az összes gyakorlatunkat
   homepage_slot_text_link_codestudio: Próbáld ki a Kód stúdiót
@@ -270,55 +281,86 @@ hu-HU:
   class_submission_level_college: Főiskola
   class_submission_level_vocational: Szakmai
   class_submission_languages_other: Egyéb nyelv(ek)
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  starwars_subtitle: Building a Galaxy With Code
+  starwars_javascript_title: JavaScript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: Próbálja ki most
+  starwars_blocks_title: blokkok
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_start_button: Próbálja ki most
+  starwars_watch_videos: Before you get started, watch one of these inspirational videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+  mc_gradelevel: Ages 6+
+  mc_platformtext: Modern böngészők, okostelefonok, tabletek
+  minecraft_subtitle: Minecraft Hour of Code
+  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
+  volunteer_engineer_submission_header_shared: Az információ meg lett osztva az önkéntes tanárok térképén
   volunteer_engineer_submission_field_name: Név
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: "If you enter your exact address we won't share it, just show you as a pin on map."
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country, or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the Hour of Code by... (select all that apply)
+  volunteer_engineer_submission_field_name_placeholder: Teljes név
+  volunteer_engineer_submission_field_company: Cég (vagy Egyetem)
+  volunteer_engineer_submission_field_company_placeholder: Cég (vagy Egyetem)
+  volunteer_engineer_submission_field_experience_level: Tapasztalat szint
+  volunteer_engineer_submission_field_location: Helyszín
+  volunteer_engineer_submission_field_location_desc: Your location will be used to allow teachers to search for nearby volunteers and will be shown as a pin on the map. If you are concerned about privacy, please use your work/school address or your city only.
+  volunteer_engineer_submission_field_location_placeholder: Irányítószám, város és állam/ország vagy utca
+  volunteer_engineer_submission_field_location_flexibility: Tudok segíteni a kódolás órája alatt a... (jelölje ki az összes vállalni kívánt tevékenységet)
   volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering after the Hour of Code
   volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_field_linkedin: LinkedIn adatlap
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook: Facebook adatlap
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Leírás
   volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never shared
+  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here.
+  volunteer_engineer_submission_header_private: Az információt bizalmasan kezeljük és nem adjuk tovább harmadik személyeknek
   volunteer_engineer_submission_field_email: E-mail cím
   volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
   volunteer_engineer_submission_field_email_placeholder: E-mail cím
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
   volunteer_engineer_submission_submit: Elküldés
-  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn more here.</a>'
+  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn more here.</a>'
   volunteer_engineer_submission_commitment_uncertain: Bizonytalan
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 óra hetente
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 óra hetente
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 óra hetente
   volunteer_engineer_submission_commitment_now_and_then: Néha napján
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: évente 2-3 alkalommal
+  volunteer_engineer_submission_commitment_monthly: Egy pár óra havonta
+  volunteer_engineer_submission_commitment_weekly: Egy pár óra hetente
   volunteer_engineer_submission_commitment_more: Mégtöbb
   volunteer_engineer_submission_location_flexibility_onsite: Az iskolában a helyszínen
   volunteer_engineer_submission_location_flexibility_remote: Távoli mentorálás (tanárok vagy diákok)
   volunteer_engineer_submission_location_flexibility_curriculum: Segítene a nyílt forrású tananyag projektekben
   volunteer_engineer_submission_experience_unspecified: Nem meghatározott
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: Jelenleg egyetemi hallgató (vagy kutató)
   volunteer_engineer_submission_experience_software_professional: Szoftverfeljesztő
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: "I'm looking for a mentor to help prepare me for coding with my students"
   petition_age: Kor
   dashboard_landing_title: Tanári kezdőlap
   dashboard_landing_welcome: Üdvözlünk az új és továbbfejlesztett tanári felületen.
@@ -339,7 +381,7 @@ hu-HU:
   dashboard_landing_progress_title: Az elsődleges osztály fejlődése
   dashboard_landing_progress_biggest: Így fejlődik a legnagyobb szekciód.
   dashboard_landing_view_progress: 'Nézd meg a fejlődést a(z) %{biggest_section}'
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_print_progress: A haladás kinyomtatása
   dashboard_landing_available_title: Elérhető kurzusok
   dashboard_landing_available_courses: Ezek a jelenleg elérhető kurzusok Neked és diákjaid számára.
   dashboard_landing_more_tutorials: Szeretnél még több gyakorlatot megnézni?
@@ -383,7 +425,7 @@ hu-HU:
   dashboard_navigation_section_speakers: 'Számítógép-tudomány <br/> vendég előadók'
   dashboard_navigation_all_sections: Diákok fiókja és haladása
   dashboard_navigation_view_progress: Fejlődés megtekintése
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: Szöveges válaszok megtekintése
   dashboard_navigation_add_students: Diákok hozzáadása
   dashboard_navigation_manage_students: Diákok kezelése
   dashboard_navigation_lesson_plans_resources: Óravázlatok és erőforrások
@@ -479,8 +521,8 @@ hu-HU:
   dashboard_progress_furthest_level_attempted: a legmagasabb szint megpróbálva
   dashboard_stage: szakasz
   dashboard_puzzle: Kirakós
-  dashboard_question: Question
-  dashboard_response: Response
+  dashboard_question: Kérdés
+  dashboard_response: Válasz
   stats_hoc_2013_heading: 'Szédületes statisztika a tavalyi Kódolás Órája programról. Egyetlen hét alatt:'
   stats_hoc_2013_image_alt: Statisztika a 2013-as Kódolás Órája programról
   dashboard_teacher: Tanár
@@ -497,14 +539,17 @@ hu-HU:
   dashboard_sections_login_type_explanation: 'Ez a táblázat segít kiválasztani a szekciódnak megfelelőt a <b>kép, szó vagy e-mail</b> azonosítási típusok közül.'
   dashboard_faq: Gyakran ismételt kérdések
   dashboard_faq_k5: K-5 Gyakran Ismételt Kérdések
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+  dashboard_announcements: Közlemények
+  dashboard_announce_view_all: Összes megtekintése
+  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
   code_hoc_coming: 'Megkezdődött a Kódolás Órája - December 8-14.'
   code_sign_up: Jelentkezz, hogy részt vehess a programon a számítástechnika-oktatás hete keretében
   learn_more: Tudj meg többet
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
   learn_sign_up_button: Regisztrálás
+  learn_videos_watch: Watch this inspirational video with your classroom
+  learn_videos_show: Show this inspirational video to your class
+  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
@@ -512,6 +557,9 @@ hu-HU:
   hoc2014_try_new_tutorial: Próbáld ki az új Hour of Code oktató anyagunk béta változatát
   hoc2014_try_scrat: Angry Birds, PvZ és Scrat
   hoc2014_try_frozen: 'Művészkedj Annával és  Elzával a Jégvarázsból'
+  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_3rd_party: Tutorials by 3rd parties
+  carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Oktatóanyagok az anyanyelveden
   carousel_heading_domestic: Az angolul elérhető oktatóanyagok
   carousel_heading_beginners: Oktatóanyagok kezdőknek
@@ -525,6 +573,7 @@ hu-HU:
   carousel_heading_robots: Tanulj robotprogramozást
   carousel_heading_ide: A tanárok közt népszerű platformok
   educator_notes: Oktatói jegyzetek
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   how_to_teach_hoc: Hogyan tarthatsz Kódolás óráját
   more_resources_educators: További segédletek tanárok és oktatók részére
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
@@ -537,6 +586,7 @@ hu-HU:
   older_systems_subheading: 'Ezek régebbi böngészőkön is működnek. Az összes oktatóanyag eléréséhez frissíts  <a href="http://browsehappy.com/" target="_blank">modern webböngészőre.</a>'
   mobile_devices: Oktatóanyagok mobile eszközökre
   frozen_name: Kódolás Annával és Elsával
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
   codeorg_name: Írd meg az első számítógépes programod
   codeintl_name: Írd meg az első számítógépes programod
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -615,6 +665,7 @@ hu-HU:
   projguts_gradelevel: 10-től 13 éves korig
   hourofcode_gradelevel: 4-től 104 éves korig
   frozen_gradelevel: 8 éves kortól
+  starwars_gradelevel: Ages 6+
   playlab_gradelevel: 4-től 104 éves korig
   codeorg_platformtext: Modern böngészők, okostelefonok, tabletek
   codeintl_platformtext: Modern böngészők, okostelefonok, tabletek
@@ -655,6 +706,7 @@ hu-HU:
   projguts_platformtext: Offline
   hourofcode_platformtext: Modern böngészők, okostelefonok, tabletek
   frozen_platformtext: Modern böngészők és tabletek
+  starwars_platformtext: Modern böngészők és tabletek
   playlab_platformtext: Modern böngészők, okostelefonok, tabletek
   codeorg_shortdescription: 'Tanulj programozni Mark Zuckerbergel  és Angry Birds-el!'
   codeintl_shortdescription: 'Tanulj programozni Mark Zuckerbergel  és Angry Birds-el!'
@@ -695,6 +747,7 @@ hu-HU:
   projguts_shortdescription: Próbáld ki a modellezést és a szimulációt a kő-papír-ollóval
   hourofcode_shortdescription: Az új code.org/hoc helyőrzője
   frozen_shortdescription: Használj kódot, és csatlakozz Annához és Elsához, akik felfedezik a jég varázslatos és szépséges világát.
+  starwars_shortdescription: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
   playlab_shortdescription: Hozz létre egy történetet vagy készíts egy játékot a Játéklaborral!
   codeorg_longdescription: 'Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven.'
   codeintl_longdescription: 'Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven.'
@@ -735,6 +788,7 @@ hu-HU:
   projguts_longdescription: Ez az offline tevékenység bemutatja, hogy miként működik a modellezés és a szimulálás. A gyerekek egy csoportja a kő, papír, olló különböző verzióit játssza, majd megfigyeli a különböző modellkísérletek eredményeit.
   hourofcode_longdescription: Az új code.org/hoc helyőrzője
   frozen_longdescription: Használjuk a programozást, hogy csatlakozzunk Annához és Elsához, ahogy felfedezik a jég varázsát és szépségét. Hópihéket fogsz készíteni és mintákat ahogy jégkorcsolyázol, és így egy téli csodaországot készítesz, amelyet majd megoszthatsz a barátaiddal!
+  starwars_longdescription: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
   playlab_longdescription: Hozz létre egy történetet, vagy készíts egy játékot a Play Lab-bal! Hozd mozgásba az állatokat, a kalózokat, a zombikat, nindzsákat, és a többi karaktert, adj hozzá hangot, pontozd az eredményt, és még dobálj tűzgolyókat is!
   codeorg_beyond_name: Bevezetés a számítástechnikába (általános iskolai évfolyamok)
   khan_beyond_name: Tanulj programozni

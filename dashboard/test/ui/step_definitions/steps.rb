@@ -187,6 +187,10 @@ When /^I click selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
 end
 
+When /^I focus selector "([^"]*)"$/ do |jquery_selector|
+  @browser.execute_script("$(\"#{jquery_selector}\")[0].focus();")
+end
+
 When /^I send click events to selector "([^"]*)"$/ do |jquery_selector|
   # svg elements can only be clicked this way
   @browser.execute_script("$(\"#{jquery_selector}\").click();")
@@ -232,6 +236,16 @@ end
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
 Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
+  element_has_text(selector, expectedText)
+end
+
+Then /^I set selector "([^"]*)" text to "([^"]*)"$/ do |selector, text|
+  @browser.execute_script("$(\"#{selector}\").text(\"#{text}\");")
+end
+
+Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
+  # Add more unescaping rules here as needed.
+  expectedText.gsub!(/\\n/, "\n")
   element_has_text(selector, expectedText)
 end
 
@@ -498,9 +512,17 @@ Given(/^I manually sign in as "([^"]*)"$/) do |name|
   }
 end
 
+When(/^I sign out$/) do
+  steps 'When I am on "http://studio.code.org/users/sign_out"'
+end
+
 When(/^I debug cookies$/) do
   puts "DEBUG: url=#{CGI::escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
+end
+
+When(/^I debug focus$/) do
+  puts "Focused element id: #{@browser.execute_script("return document.activeElement.id")}"
 end
 
 And(/^I ctrl-([^"]*)$/) do |key|

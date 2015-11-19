@@ -522,6 +522,48 @@
           til geimverunnar svo hann geti varað alla við innrásinni
         studio_playlab_10: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er
           tilbúinn svo vinir þínir geti prófað hann á sínum símum.
+        studio_iceage_1: Manny vill segja "hæ" - getur þú hjálpað honum?
+        studio_iceage_2: Diego (leikari 1) og Granny (leikari 2) vilja segja "hæ"
+          við hvort annað. Getur þú hjálpað þeim með því að nota "segja" kubbinn tvisvar?
+        studio_iceage_3: Getur þú hjálpað Scrat að ná til flaggsins?
+        studio_iceage_4: Getur þú hjálpað Scrat (leikara 1) að ná til til Granny (leikara
+          2) og spilað hljóð þegar hann nær þangað?
+        studio_iceage_5: Getur þú látið Sid segja "greetings" þegar smellt er á hann?
+          Ekki gleyma að smella á hann eftir að þú smellir á Keyra
+        studio_iceage_6: Getur þú látið Diego hreyfast með upp/niður/hægri/vinstri
+          örvarlyklunum svo hann nái til allra flagganna?
+        studio_iceage_7: '"Endurtaka endalaust" kubburinn lætur kóða keyra án enda.
+          Getur þú fest kubba við hann til að hjálpa Sid að hreyfast stöðugt til hægri
+          og vinstri?'
+        studio_iceage_8: Getur þú bætt við kubbi til að skora stig og kubbi til að
+          spila hljóð þegar Sid rekst á Manny, og síðan fært hann með örvarlyklunum
+          þar til þú skorar?
+        studio_iceage_9: Stilltu bakgrunninn fyrir þessa ísöld og hjálpaðu Sid að
+          ná til Granny hraðar með þvi að breyta hraða hans. Færðu hann svo með örvarlyklunum
+          til Sid og varaðu alla aðra við.
+        studio_iceage_10: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er
+          tilbúinn svo vinir þínir geti prófað hann á sínum símum.
+        studio_gumball_1: Anais vill segja "hæ" - getur þú hjálpað henni?
+        studio_gumball_2: Darwin (leikari 1) og Gumball (leikari 2) vilja segja "hæ"
+          við hvorn annan. Getur þú hjálpað þeim með því að nota "segja" kubbinn tvisvar?
+        studio_gumball_3: Getur þú hjálpað Banana Joe að ná til flaggsins?
+        studio_gumball_4: Getur þú hjálpað Gumball (leikara 1) að ná til til Darwin
+          (leikara 2) og spilað hljóð þegar hann nær þangað?
+        studio_gumball_5: Getur þú hjálpað Antony að segja "greetings" þegar smellt
+          er á hann? Ekki gleyma að smella á hann eftir að þú smellir á Keyra
+        studio_gumball_6: Getur þú látið Darwin hreyfast með upp/niður/hægri/vinstri
+          örvarlyklunum svo hann nái til allra flagganna?
+        studio_gumball_7: '"Endurtaka endalaust" kubburinn lætur kóða keyra án enda.
+          Getur þú fest kubba við hann til að hjálpa Antony að hreyfast stöðugt til
+          hægri og vinstri?'
+        studio_gumball_8: Getur þú bætt við kubbi til að skora stig og kubbi til að
+          spila hljóð þegar Banana Joe rekst á Antony, og síðan fært hann með örvarlyklunum
+          þar til þú skorar?
+        studio_gumball_9: Stilltu bakgrunninn fyrir þessa geiminnrás og hjálpaðu Nicole
+          að ná til Penny hraðar með þvi að breyta hraðanum. Færðu hann svo með örvarlyklunum
+          til Nicole og varaðu alla aðra við.
+        studio_gumball_10: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er
+          tilbúinn svo vinir þínir geti prófað hann á sínum símum.
         studio_full_sandbox: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann
           er tilbúinn svo vinir þínir geti prófað hann á sínum símum.
         studio_k1_1: Getur þú látið hundinn segja "Halló heimur"?
@@ -659,7 +701,13 @@
         infinity_playlab_intro: Leikjasmiðja - kynning
         infinity_playlab_events: Leikjasmiðja - Atvik
         infinity_playlab_repeat_forever: Leikjasmiðja - Endurtaka endalaust
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Kynning á föllum
+        csp_applab_functions_parameters: Föll með stikum
+        csp_applab_loops: Lykkjur
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Svolítið bitastætt um díla
         csp_pixelation_color_1: Litadílamynstursgræja - 1. hluti
         csp_pixelation_color_2: Litadílamynstursgræja - 2. hluti
@@ -692,6 +740,18 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: Gerð Vetrarbrautar með Kóða - Kynning'
+        starwars_typing: 'Star Wars: Gerð Vetrarbrautar með Kóða - JavaScript'
+        starwars_events: 'Star Wars: Gerð Vetrarbrautar með Kóða - Atvik'
+        starwars_congrats: 'Star Wars: Gerð Vetrarbrautar með Kóða - Hamingjuóskir'
+        starwars_blocks_intro: 'Star Wars: Gerð Vetrarbrautar með Kóða - Kynning'
+        starwars_blocks_events: 'Star Wars: Gerð Vetrarbrautar með Kóða - Atvik'
+        starwars_blocks_congrats: 'Star Wars: Gerð Vetrarbrautar með Kóða - Hamingjuóskir'
+        mc_intro: Minecraft - Introduction
+        mc_repeat: Minecraft - Repeat
+        mc_if_statements: Minecraft - If statements
+        mc_congrats_share: Minecraft - Congratulations
+        mc_congrats_no_share: Minecraft - Congratulations
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn
@@ -795,3 +855,13 @@
         Infinity_move_directions_callout_arrow: Notaðu þessar örvar til að stýra
         Infinity_move_collide_callout: Spila hljóð þegar þetta atvik á sér stað.
         Infinity_repeat_callout: Setja "færa" kubba hér innan í
+        craft_run_button_callout: Smelltu á "Keyra" til að prófa forritið þitt
+        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
+          the other block
+        craft_callout_preplaced: We've put some blocks here to get you started
+        craft_inside_repeat: Repeat actions by placing blocks in here
+        craft_callout_preplaced_house: This code will start building your house. Can
+          you finish it?
+        craft_what_is_iron: Mine this iron!
+        craft_callout_moveforward: This code will check for lava, can you add a command
+          to move forward?

@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Om det finns en sökväg i den angivna riktningen, utför ett antal åtgärder."},
 "ifelseTooltip":function(d){return "Om det finns en väg i den angivna riktningen, gör i så fall det första blocket av handlingar. Annars, gör den andra blocket av handlingar."},
 "ifFlowerTooltip":function(d){return "Om det finns en blomma/honungskaka i angiven riktning, utför vissa åtgärder."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Om det finns en blomma åt det angivna hållet så gör vissa saker."},
 "ifelseFlowerTooltip":function(d){return "Om det finns en blomma/honungskaka i angiven riktning, utför då det första blocket av åtgärder. Annars, utför det andra blocket av åtgärder."},
 "insufficientHoney":function(d){return "Du använder alla de rätta blocken, men du måste göra rätt mängd honung."},
 "insufficientNectar":function(d){return "Du använder alla de rätta blocken, men du behöver samla in rätt mängd av nektar."},

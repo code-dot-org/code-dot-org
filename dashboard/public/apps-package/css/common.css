@@ -44,7 +44,7 @@ html[dir='rtl'] #visualizationColumn {
   left: 0px;
   overflow-x: hidden; }
 
-#visualizationColumn.embed_hidesource {
+#visualizationColumn.centered_embed {
   margin: 0 auto; }
 
 #visualizationColumn.pin_bottom {
@@ -54,7 +54,7 @@ html[dir='rtl'] #visualizationColumn {
   #visualizationColumn.pin_bottom #belowVisualization {
     position: absolute;
     overflow: auto; }
-  #visualizationColumn.pin_bottom.embed_hidesource {
+  #visualizationColumn.pin_bottom.centered_embed {
     position: relative; }
 
 div.droplet-palette-group-header {
@@ -1123,7 +1123,7 @@ input[type="radio"] {
   .sharing div#phone-charges {
     font-size: 10px;
     margin-top: 0px;
-    color: red; }
+    color: #c00; }
 
 .run26 {
   width: 26px;

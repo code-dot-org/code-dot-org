@@ -95,7 +95,7 @@
   "turnRight":"gira a destra",
   "turnTooltip":"Gira a sinistra o a destra di 90 gradi.",
   "whenBallInGoal":"quando la palla va in rete",
-  "whenBallInGoalTooltip":"Esegue le azioni qua sotto quando la palla va in rete.",
+  "whenBallInGoalTooltip":"Esegue le azioni attaccate a questo blocco quando la palla va in rete.",
   "whenBallMissesPaddle":"quando la palla manca la racchetta",
   "whenBallMissesPaddleTooltip":"Esegue le azioni attaccate a questo blocco quando la palla manca la racchetta.",
   "whenDown":"quando si preme sulla freccia verso il basso",

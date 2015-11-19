@@ -186,10 +186,10 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Se c'è strada nella direzione specificata, allora esegue alcune azioni."},
 "ifelseTooltip":function(d){return "Se c'è strada nella direzione specificata, allora esegue il primo blocco di azioni. Altrimenti, esegue il secondo."},
 "ifFlowerTooltip":function(d){return "Se c'è un fiore o un favo nella casella corrente, allora esegue alcune azioni."},
-"ifOnlyFlowerTooltip":function(d){return "Se c'è un fiore nella direzione indicata allora fai alcune azioni."},
+"ifOnlyFlowerTooltip":function(d){return "Se c'è un fiore nella casella corrente, allora esegue alcune azioni."},
 "ifelseFlowerTooltip":function(d){return "Se c'è un fiore o un favo nella casella corrente, allora esegue il primo blocco di azioni. Altrimenti, esegue il secondo."},
-"insufficientHoney":function(d){return "Stai utilizzando i tutti i blocchi necessari, ma la quantità di miele è insufficiente."},
-"insufficientNectar":function(d){return "Stai utilizzando i tutti i blocchi necessari, ma devi raccogliere la giusta quantità di nettare.\n"},
+"insufficientHoney":function(d){return "Stai utilizzando tutti i blocchi necessari, ma la quantità di miele raccolto è ancora insufficiente."},
+"insufficientNectar":function(d){return "Stai utilizzando tutti i blocchi necessari, ma la quantità di miele raccolto è ancora insufficiente."},
 "make":function(d){return "fai"},
 "moveBackward":function(d){return "vai indietro"},
 "moveEastTooltip":function(d){return "Sposta di una casella verso est."},
@@ -234,6 +234,6 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "uncheckedPurpleError":function(d){return "Assicurati di controllare tutti i fiori viola per vedere se hanno il nettare"},
 "whileMsg":function(d){return "mentre"},
 "whileTooltip":function(d){return "Ripete le azioni incluse, smettendo quando diventa vera la condizione di arresto."},
-"word":function(d){return "Trova la parola"},
+"word":function(d){return "Scrivi la parola"},
 "yes":function(d){return "Sì"},
-"youSpelled":function(d){return "Hai trovato finora"}};
+"youSpelled":function(d){return "Hai scritto finora"}};

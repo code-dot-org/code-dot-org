@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Optillen of laten zakken van het potlood, om te starten of stoppen met tekenen."},
 "penUp":function(d){return "potlood optillen"},
 "reinfFeedbackMsg":function(d){return "Hier is je tekening! Blijf er aan werken of ga verder naar de volgende puzzel."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "zet doorzichtigheid"},
 "setColour":function(d){return "kleur instellen"},
 "setPattern":function(d){return "patroon instellen"},
 "setWidth":function(d){return "dikte instellen"},

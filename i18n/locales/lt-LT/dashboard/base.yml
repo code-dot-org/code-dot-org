@@ -246,6 +246,8 @@ lt:
       prize_us_only: (Tik JAV mokiniams)
       prizes_link: daugiau informacijos
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Tavo mokytojas:'
       other: 'Tavo mokytojai:'
@@ -311,7 +313,7 @@ lt:
       section: Grupė
       example: Example Solution
       example_with_number: 'Example Solution %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
+      submitted_on: 'Submitted on:'
       unsubmit: Unsubmit
   user:
     email_confirm_needed: 'El. pašto adresas nebuvo patvirtintas:'
@@ -433,6 +435,7 @@ lt:
   pdf_download: Parsisiųsti PDF
   download_coming_soon: Jau netrukus bus galima parsisiųsti įvairias veiklas.
   video_coming_soon: Vaizdo įrašas bus jau netrukus!
+  not_started: The student has not attempted this level.
   share_code:
     title: Nuspausk „Paleisti“, kad programa būtų įvykdyta
     bounce_og_title: Peržiūrėk mano Bounce žaidimą
@@ -474,9 +477,14 @@ lt:
       body: Peržiūrėkite su menininku sukurtų piešinių galeriją
     frozen:
       title: Ledo šalis
+    starwars:
+      title: Star Wars
     infinity:
       title: Žaidimų laboratorija Infinity
       body: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje bus Disnėjaus Infinity personažai.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Mokiniai nupiešė juos parašę kodą!
     students_made_these_with_code: Mokinių sukurti pavyzdžiai.

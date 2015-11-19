@@ -8,6 +8,6 @@
           %div
             - project_url = "http://crowdin.com/project/codeorg/#{code}"
             - image_url = "/images/flags/#{code}.png"
-            %a{:href=>project_url, :style=>'display: table-cell;'}
+            %a{:href=>project_url, :style=>'display: table-cell; text-decoration: none;'}
               %img{:src=>image_url, :style=>'max-width: 130px; max-height: 130px;'}
               %br{:style=>'clear: both;'}= name

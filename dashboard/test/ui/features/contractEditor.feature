@@ -1,10 +1,7 @@
 @dashboard_db_access
+@as_student
 @eyes
 Feature: Opening the contract editor
-
-Background:
-  Given I am on "http://learn.code.org/"
-  And I am a student
 
 Scenario: Testing the contract variable editor
   When I open my eyes to test "contract variable editor"
