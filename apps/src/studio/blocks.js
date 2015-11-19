@@ -1132,10 +1132,19 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   function onSoundSelected(soundValue) {
-    if (soundValue === RANDOM_VALUE) {
+    var lowercaseSound = utils.stripQuotes(soundValue).toLowerCase().trim();
+
+    if (lowercaseSound === RANDOM_VALUE) {
       return;
     }
-    studioApp.playAudio(utils.stripQuotes(soundValue), {volume: 1.0});
+    var skinSoundMetadata = utils.valueOr(skin.soundMetadata, []);
+    var playbackOptions = $.extend({
+      volume: 1.0
+    }, _.find(skinSoundMetadata, function (metadata) {
+      return metadata.name.toLowerCase().trim() === lowercaseSound;
+    }));
+
+    studioApp.playAudio(lowercaseSound, playbackOptions);
   }
 
   blockly.Blocks.studio_playSound = {
