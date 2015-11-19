@@ -134,6 +134,18 @@ module.exports = React.createClass({
         return <option key={item}>{item}</option>;
       });
 
+      var defaultScreenId = $('#divApplab [class=screen][is-default=true]').first().attr('id') || '';
+
+      options.sort(function (a, b) {
+        if (a.key === defaultScreenId) {
+          return -1;
+        } else if (b.key === defaultScreenId) {
+          return 1;
+        } else {
+          return a.key.localeCompare(b.key);
+        }
+      });
+
       selectDropdown = (
         <select
           id="screenSelector"
