@@ -95,11 +95,9 @@
     valid_password: סיסמה תקינה!
     invalid_password: הסיסמא חייבת להכיל לפחות 6 תווים
     mismatch_password: שתי הסיסמאות שהזנת אינן תואמות
-    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
-      of service</a>. If I am under 13 years of age, I confirm by submitting this
-      form that I have my parent or legal guardian's permission to use the Code.org
-      services.<br/>For users under 13, email addresses are not stored in a form that
-      allows us to contact them.
+    student_terms: ' ידי הגשת טופס זה שהורי הרשו לי להשתמש בשירותים Code.org. <br/>
+      עבור משתמשים מתחת לגיל 13, כתובות איי מייל אינן שמורות בצורה שתאפשר יצירת קשר
+      להם.'
     teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
       of service</a>.
     additional_information: יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך.
@@ -277,6 +275,8 @@
       prize_us_only: (תלמידי ארצות-הברית בלבד!)
       prizes_link: מידע נוסף
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'המורה שלך :'
       other: 'המורים שלך:'
@@ -498,6 +498,7 @@
   pdf_download: הורדת PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: וידאו בקרוב!
+  not_started: The student has not attempted this level.
   share_code:
     title: לחץ'ריצה' כדי לראות את התקדמותי בזמן פעולה
     bounce_og_title: תראה את המשחק קפיצה שלי
@@ -544,9 +545,14 @@
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: תלמידים ציירו את אלה בעזרת קוד!
     students_made_these_with_code: Students made these with code!

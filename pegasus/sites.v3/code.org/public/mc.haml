@@ -35,20 +35,21 @@ social:
 
 
     .mc-tutorial{style: "left: 470px;"}
-      %h1.mc-h1 Hour of Code
+      %h1.mc-h1= I18n.t(:hour_of_code)
       .tutorial-box
         .mc-tutorial-info
-          %h1.mc-h1-second-box Minecraft Hour of Code
-          %p.mc-tutorial-description Explore a Minecraft world through code.
-          %p.mc-tutorial-specs Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+          %h1.mc-h1-second-box= I18n.t(:mc_name)
+          %p.mc-tutorial-description= I18n.t(:mc_longdescription)
+          %p.mc-tutorial-specs= I18n.t(:mc_specs)
         %a{:href => CDO.studio_url('/s/mc/reset'), :target=>'_self'}
           %button= I18n.t(:starwars_javascript_start_button)
 
   %div{style: "clear:both"}
 
+  %h2
+    = I18n.t(:starwars_speak_languages)
+    %a{href: "/translate/mc"}= I18n.t(:starwars_help_translate)
+
   .mc-videos{style: "clear: both;"}
     %h2= I18n.t(:starwars_watch_videos)
     =view :inspirational_videos
-
-  %span= I18n.t(:starwars_speak_languages)
-  %a{href: "/translate"}= I18n.t(:starwars_help_translate)
