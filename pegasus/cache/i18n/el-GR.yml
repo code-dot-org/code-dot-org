@@ -1,4 +1,5 @@
 "el-GR":
+  hour_of_code: Ώρα του Κώδικα
   hello: Γεια σου κόσμε
   select_language: Παρακαλώ επιλέξτε τη γλώσσα σας
   en: Επιστήμη των Υπολογιστών
@@ -325,12 +326,13 @@
   starwars_javascript_start_button: Δοκιμάστε τώρα
   starwars_blocks_title: μπλοκ
   starwars_blocks_description: Χρησιμοποιήστε μπλοκ με «σύρε και άφησε».
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: Πολλές γλώσσες (προσεχώς) | Σύγχρονα προγράμματα περιήγησης,
+    έξυπνα τηλέφωνα, tablet | Ηλικίες 6-10
   starwars_blocks_start_button: Δοκιμάστε τώρα
   starwars_watch_videos: Πριν ξεκινήσετε, δείτε ένα βίντεο παρακίνησης
   starwars_speak_languages: Μιλάτε άλλη γλώσσα;
   starwars_help_translate: Βοηθήστε μας να μεταφράσουμε
+  starwars_platform_text: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
   mc_name: Ώρα του Κώδικα με το Minecraft
   mc_longdescription: Χρησιμοποιήστε μπλοκ κώδικα για να οδηγήσετε τον Στιβ ή τον
     Άλεξ σε μια περιπέτεια μέσα σε αυτόν τον Minecraft κόσμο.
@@ -338,26 +340,31 @@
     Άλεξ σε μια περιπέτεια μέσα σε αυτόν τον Minecraft κόσμο.
   mc_gradelevel: Ηλικίες 6+
   mc_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
+  mc_specs: Πολλές γλώσσες (προσεχώς) | Σύγχρονα προγράμματα περιήγησης και tablets
+    | Ηλικιών 6 +
   minecraft_subtitle: Ώρα του Κώδικα με το Minecraft
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  volunteer_engineer_submission_title: Εμπνεύστε μαθητές και προσφέρετε εθελοντική
+    εργασία για την Ώρα του Κώδικα.
   volunteer_engineer_submission_subtitle_generic: '100.000 εκπαιδευτικοί πρόκειται
     να φιλοξενήσουν μια ώρα του κώδικα στην τάξη τους φέτος, 7-13 Δεκεμβρίου, 2015.
     Θέλουν τη βοήθειά σας! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} δάσκαλοι ζητούν
+    εθελοντές παθιασμένους με την εκπαίδευση στην επιστήμη των υπολογιστών για να
+    τους βοηθήσουν με την Ώρα του Κώδικα αυτόν τον Δεκέμβριο.<br>%{num_volunteers}
+    εθελοντές έχουν εγγραφεί. Ελάτε μαζί τους.'
   volunteer_engineer_submission_intro_background: Η Ώρα του Κώδικα είναι ένα παγκόσμιο
     κίνημα για να δοκιμάσετε μια ωριαία εισαγωγή στην επιστήμη των υπολογιστών, φθάνοντας
     τα δεκάδες εκατομμύρια μαθητών σε 180+ χώρες. Σας παρακαλούμε να λάβετε μέρος
     κατά τη διάρκεια της Εκπαιδευτικής Εβδομάδας στην Επιστήμη των Υπολογιστών, 7-13
     Δεκεμβρίου.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_recruit: 'Αυτοί οι δάσκαλοι θα ήθελαν πολύ να
+    έχουν κάποιον <span style="font-family: ''Gotham 7r'', sans-serif;">παθιασμένο
+    με την εκπαίδευση στην επιστήμη των υπολογιστών</span> που μπορεί να βοηθήσει
+    μέσα στην τάξη ή κάποιον που μπορεί να <span style="font-family: ''Gotham 7r'',
+    sans-serif;">εμπνεύσει</span> τους μαθητές τους μιλώντας για το εύρος των δυνατοτήτων
+    με την επιστήμη των υπολογιστών (κάτι που μπορεί να γίνει και μέσω βίντεο ομιλία).
+    Αν δε θέλετε να δηλώσετε εθελοντής, <a href="%{url}">μάθετε περισσότερα</a> για
+    τη διοργάνωση της δικής σας εκδήλωσης για την Ώρα του Κώδικα.'
   volunteer_engineer_submission_intro_signup: Παρακαλούμε εισάγετε τις ακόλουθες πληροφορίες,
     αν είστε φοιτητής επιστήμης υπολογιστών ή επαγγελματίας λογισμικού. Τα πεδία με
     <span class="form-required-field"> *</span> είναι υποχρεωτικά.
@@ -712,9 +719,10 @@
   learn_sign_up_description: Εγγραφείτε για να συμμετάσχετε στην Ώρα του Κώδικα κατά
     τη διάρκεια της Εκπαιδευτικής Εβδομάδας στην Επιστήμη Υπολογιστών
   learn_sign_up_button: Εγγραφή
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Παρακολουθήστε αυτό το εμπνευσμένο βίντεο με την τάξη σας
+  learn_videos_show: Δείξτε αυτό το εμπνευσμένο βίντεο στην τάξη σας
+  learn_videos_before_hoc: Παρακολουθήστε ένα εμπνευσμένο βίντεο πριν από τη δική
+    σας Ώρα του Κώδικα
   learn_educator_resources_description: Μάθετε πώς να διδάξετε μια Ώρα του Κώδικα
   learn_educator_resources_button: Πόροι για τους επιμορφωτές
   learn_are_you_educator: Είστε επιμορφωτἠς; Μάθετε <a href="http://hourofcode.com/resources/how-to">
@@ -725,9 +733,9 @@
     δοκιμαστική μορφή
   hoc2014_try_scrat: Angry Birds, PvZ και Scrat
   hoc2014_try_frozen: Καλλιτέχνης με την Άννα και την Έλσα, από το Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Οδηγοί από το Code.org
+  carousel_heading_3rd_party: Οδηγοί από τρίτα μέρη
+  carousel_heading_third_party: Οδηγοί από τρίτους
   carousel_heading_international: Σεμινάρια στη γλώσσα σας
   carousel_heading_domestic: Βοηθήματα εκμάθησης που είναι διαθέσιμα στα αγγλικά
   carousel_heading_beginners: Βοηθήματα εκμάθησης για αρχάριους
@@ -945,8 +953,8 @@
   hourofcode_shortdescription: Σύμβολο κράτησης θέσης για το νέο code.org/hoc
   frozen_shortdescription: Ας χρησιμοποιήσουμε τον Κώδικα να πάμε μαζί με την Άννα
     και την Έλσα, καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου.
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortdescription: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το
+    δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
   playlab_shortdescription: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο
     Παιχνιδιού!
   codeorg_longdescription: Μάθετε τις βασικές έννοιες της Επιστήμης των Υπολογιστών
@@ -1106,8 +1114,8 @@
     Άννα και την Έλσα καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου. Θα δημιουργήσετε
     νιφάδες χιονιού και σχέδια όπως αυτά του πατινάζ και θα φτιάξετε υπέροχα χειμωνιάτικα
     τοπία τα οποία μπορείτε να μοιραστείτε με τους φίλους σας!
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_longdescription: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό
+    σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
   playlab_longdescription: Δημιούργησε μια ιστορία ή φτιάξε ένα παιχνίδι με το Play
     Lab! Κάνε ζώα, πειρατές, ζόμπι, νίτζα και πολλούς περισσότερους χαρακτήρες να
     κουνηθούν, να βγάλουν ήχους, να συγκεντρώσουν πόντους, ακόμη και να ρίξουν μπάλες

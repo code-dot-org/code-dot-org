@@ -1,4 +1,5 @@
 "tr-TR":
+  hour_of_code: Hour of Code
   hello: Merhaba dünya
   select_language: Lütfen dilinizi seçiniz
   en: Bilgisayar Bilimi
@@ -329,6 +330,7 @@
     videos
   starwars_speak_languages: Farklı bir dili mi konuşuyorsunuz?
   starwars_help_translate: Çevirmemize yardım edin
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Kod Saati
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
@@ -336,6 +338,7 @@
     this Minecraft world.
   mc_gradelevel: Ages 4-104
   mc_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Kod Saati
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: 'Bu sene 7-13 Aralık''ta 100,000

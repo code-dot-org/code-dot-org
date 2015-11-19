@@ -1,4 +1,5 @@
 "nn-NO":
+  hour_of_code: Hour of Code
   hello: Hallo, verda
   select_language: Vel språk
   en: Informatikk
@@ -323,6 +324,7 @@
   starwars_watch_videos: Før du begynnar kan du sjå ein av desse inspirerande filmane
   starwars_speak_languages: Snakkar du eit anna språk?
   starwars_help_translate: Hjelp oss med å oversetja
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Kodetimen med Minecraft
   mc_longdescription: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr
     gjennom denne Minecraft-verda.
@@ -330,6 +332,7 @@
     gjennom denne Minecraft-verda.
   mc_gradelevel: Alder 6 +
   mc_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Kodetimen med Minecraft
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100 000 lærarar skal ha ein Kodetime
@@ -539,7 +542,7 @@
     spore framdrifta og administrere kontoane.
   dashboard_sections_table_section: Seksjon
   dashboard_sections_table_secret: Logg inn
-  dashboard_sections_table_grade: Karakter
+  dashboard_sections_table_grade: Trinn
   dashboard_sections_table_course: Leksjon
   dashboard_sections_table_students: Elevar
   dashboard_sections_table_code: Seksjonskode

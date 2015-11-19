@@ -1,4 +1,5 @@
 "zh-CN":
+  hour_of_code: Hour of Code
   hello: 世界你好
   select_language: 请选择您的语言
   en: 计算机科学
@@ -281,6 +282,7 @@
     videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
@@ -288,6 +290,7 @@
     this Minecraft world.
   mc_gradelevel: Ages 4-104
   mc_platformtext: 最新的浏览器，智能手机，平板电脑
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
