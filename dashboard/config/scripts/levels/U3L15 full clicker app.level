@@ -93,7 +93,8 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "slider_speed": "1.0",
-    "lock_zero_param_functions": "false"
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "DebtxaKrC/hG8gBSawW+8moiiXVQlLTu/qShg32qbWE71x/YzaeYSBjA00Xb\nUw4orbIqMh8yr7pdepEf4SGPvQ==\n"
   }
 }]]></config>
   <blocks/>

@@ -185,9 +185,10 @@ Examples:
   | http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true      | auto open variable editor |
 
 @dashboard_db_access
-@as_student
 Scenario Outline: Simple page view without instructions dialog
-  Given I open my eyes to test "<test_name>"
+  Given I am on "http://learn.code.org/"
+  And I am a student
+  When I open my eyes to test "<test_name>"
   And I am on "<url>"
   When I rotate to landscape
   Then I see no difference for "initial load"
