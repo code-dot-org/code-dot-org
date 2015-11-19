@@ -310,7 +310,7 @@
   "PROCEDURES_MUTATORCONTAINER_TITLE": "улазне вредности",
   "REMOVE_COMMENT": "Уклони коментар",
   "RENAME_PARAMETER": "Преименуј параметар...",
-  "RENAME_PARAMETER_TITLE": "Преименуј све %1 параметре:",
+  "RENAME_PARAMETER_TITLE": "Преименуј све '%1' параметре у:",
   "RENAME_VARIABLE": "Преименовати варијаблу...",
   "RENAME_VARIABLE_TITLE": "Преименовати све '%1' варијабле у:",
   "TEXT_APPEND_APPENDTEXT": "закачити текст",
