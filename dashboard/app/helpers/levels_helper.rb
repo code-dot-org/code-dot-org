@@ -11,7 +11,14 @@ module LevelsHelper
     elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
     else
-      "#{script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)}.html"
+      url_for(
+        controller: 'script_levels',
+        action: 'show',
+        id: script_level.position,
+        script_id: script_level.script.name,
+        stage_id: script_level.stage.position,
+        locale: I18n.locale,
+      ) + ".html"
     end
   end
 

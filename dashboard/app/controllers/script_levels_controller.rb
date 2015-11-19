@@ -62,12 +62,11 @@ class ScriptLevelsController < ApplicationController
     @script = Script.get_from_cache(params[:script_id])
     configure_caching(@script)
     load_script_level
-
-    if request.path != (canonical_path = build_script_level_path(@script_level))
-      canonical_path << "?#{request.query_string}" unless request.query_string.empty?
-      redirect_to canonical_path, status: :moved_permanently
-      return
-    end
+    #if request.path != (canonical_path = build_script_level_path(@script_level))
+      #canonical_path << "?#{request.query_string}" unless request.query_string.empty?
+      #redirect_to canonical_path, status: :moved_permanently
+      #return
+    #end
 
     load_user
     return if performed?
