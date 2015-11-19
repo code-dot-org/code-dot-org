@@ -370,7 +370,7 @@
   resources_brochure: Brochure
   resources_posters: Posters
   resources_videos: Videos
-  resources_banners: Social media banners
+  resources_banners: Social media
   resources_emails: Sample emails
   resources_logo: Hour of Code logo
   resources_stats: Stats and blurbs
@@ -402,13 +402,13 @@
 
   title_country_resources: Country Specific Resources
   title_how_to_districts: Hour of Code How-To for Districts
-  title_how_to_events: Hour of Code Event How-To 
+  title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: How to host an Hour of Code - Organizations
   title_how_to_companies: How to host an Hour of Code - Companies
   title_how_to_officials: How-to guide for public officials
   title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: How-to Guide
-  title_press_release: Hour of Code Press Release for Elected Officials 
+  title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
   title_press_kit: Press Kit
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
