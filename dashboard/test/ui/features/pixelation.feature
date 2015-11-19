@@ -32,7 +32,7 @@ Feature: Pixelation levels
 
     When I click selector "input[value='hex']"
     And pixelation data has text "04 02 03 1E23B8"
-    And I press keys "e1" for element "#pixel_data
+    And I press keys "e1" for element "#pixel_data"
     And I save pixelation data and reload
     Then pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110 111 000 111 000 01"
 
