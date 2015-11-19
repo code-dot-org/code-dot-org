@@ -14,7 +14,7 @@ get '/v2/hoc/tutorial-metrics.json' do
   JSON.pretty_generate(fetch_hoc_metrics['tutorials'])
 end
 
-# Employee engagement
+# Link from Hour of Code 2014 employee engagement pages
 get '/api/hour/begin_company/:company' do |company|
   redirect "/learn?company=#{company}"
 end
