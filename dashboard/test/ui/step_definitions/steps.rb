@@ -260,6 +260,16 @@ Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
   }
 end
 
+# pixelation and other dashboard levels pull a bunch of hidden dialog elements
+# into the dom, so we have to check for the dialog more carefully.
+Then /^I wait to see a visible dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+  steps %{
+    And I wait to see ".modal-body"
+    And element ".modal-body .dialog-title" is visible
+    And element ".modal-body .dialog-title" contains text "#{expectedText}"
+  }
+end
+
 Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, locKey|
   element_has_i18n_text(selector, language, locKey)
 end
@@ -567,6 +577,11 @@ end
 
 When /^I disable onBeforeUnload$/ do
   @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
+end
+
+Then /^I get redirected away from "([^"]*)"$/ do |old_path|
+  wait = Selenium::WebDriver::Wait.new(timeout: 30)
+  wait.until { !/#{old_path}/.match(@browser.execute_script("return location.pathname")) }
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
