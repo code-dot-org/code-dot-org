@@ -316,8 +316,10 @@ task :deploy do
         thread_count = (CDO.app_servers.keys.length * 0.20).ceil
         threaded_each CDO.app_servers.keys, thread_count do |name|
           succeeded = upgrade_frontend name, CDO.app_servers[name]
-          should_abort = !succeeded && (num_failures += 1) > MAX_FRONTEND_UPGRADE_FAILURES
-          raise 'too many frontend upgrade failures, aborting deploy' if should_abort
+          if !succeeded
+            num_failures += 1
+            raise 'too many frontend upgrade failures, aborting deploy' if num_failures > MAX_FRONTEND_UPGRADE_FAILURES
+          end
         end
       end
     end
