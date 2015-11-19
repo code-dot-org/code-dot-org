@@ -3,7 +3,8 @@
   %head
     = javascript_include_tag 'soundEffects'
     :javascript
-      var sounds = new Sounds();
+      var enableDiagnostics = true;
+      var sounds = new Sounds(enableDiagnostics);
       sounds.register({
         id: 'intro',
         ogg: '/blockly/media/skins/craft/music/vignette4-intro.ogg',
@@ -40,8 +41,10 @@
       var s = document.getElementById('status');
 
       setTimeout(function () {
-          sounds.play('intro');
-          s.innerHTML = (new Date().getTime()) + ' Starting to autoplay music';
+          sounds.whenAudioUnlocked(function () {
+            sounds.play('intro');
+            s.innerHTML = (new Date().getTime()) + ' Starting to autoplay music';
+          });
         }, 200);
 
       document.getElementById('play-now').addEventListener('click', function (e) {

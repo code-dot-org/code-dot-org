@@ -42,11 +42,20 @@ function AudioPlayer() {}
  *   mySounds.play('myFirstSound');
  * @constructor
  * @implements AudioPlayer
+ * @param {boolean} [enableDiagnostics] default false
  */
-function Sounds() {
+function Sounds(enableDiagnostics) {
   window.AudioContext = window.AudioContext || window.webkitAudioContext;
 
   this.audioContext = null;
+
+  /**
+   * Whether to perform console logging and onscreen diagnostics of the audio
+   * system.
+   * @type {boolean}
+   * @private
+   */
+  this.enableDiagnostics_ = !!enableDiagnostics;
 
   /**
    * Detect whether audio system is "unlocked" - it usually works immediately
@@ -153,19 +162,88 @@ Sounds.prototype.unlockAudio = function (onComplete) {
     source.noteOn(0);
   }
 
-  setTimeout(function () {
-    if (source.playbackState === source.PLAYING_STATE ||
-        source.playbackState === source.FINISHED_STATE) {
+  this.checkDidSourcePlay_(source, this.audioContext, function (didPlay) {
+    if (didPlay) {
       this.audioUnlocked_ = true;
       this.whenAudioUnlockedCallbacks_.forEach(function (cb) {
         cb();
       });
       this.whenAudioUnlockedCallbacks_.length = 0;
     }
+
     if (onComplete) {
       onComplete();
     }
-  }.bind(this), 0);
+  }.bind(this));
+};
+
+/**
+ * Performs an asynchronous check for whether the given source and context
+ * actually played audio.  When finished, calls provided callback passing
+ * success/failure as a boolean argument.
+ * @param {!AudioBufferSourceNode} source
+ * @param {!AudioContext} context
+ * @param {!function(boolean)} onComplete
+ * @private
+ */
+Sounds.prototype.checkDidSourcePlay_ = function (source, context, onComplete) {
+  var diagnosticMessage = "Audio unlock diagnostic\n\nInitial values" +
+      "\n context.state: " + context.state +
+      "\n context.currentTime: " + context.currentTime +
+      "\n source.playbackState: " + source.playbackState;
+
+  // Approach 1: Although AudioBufferSourceNode.playbackState is supposedly
+  //             deprecated, it's still the most reliable way to check whether
+  //             playback occurred on iOS devices through iOS9, and requires
+  //             only a 0ms timeout to work.
+  //             We feature-check this approach by seeing if the related enums
+  //             exist first.
+  if (source.PLAYING_STATE !== undefined && source.FINISHED_STATE !== undefined) {
+    setTimeout(function () {
+      diagnosticMessage += "\n\nUsing playbackState:" +
+          "\n source.playbackState: " + source.playbackState +
+          "\n PLAYING_STATE: " + source.PLAYING_STATE +
+          "\n FINISHED_STATE: " + source.FINISHED_STATE;
+      this.showDiagnostic_(diagnosticMessage);
+
+      onComplete(source.playbackState === source.PLAYING_STATE ||
+          source.playbackState === source.FINISHED_STATE);
+    }.bind(this), 0);
+    return;
+  }
+
+  // Approach 2: Platforms that have removed playbackState can be checked most
+  //             reliably with a longer delay and a check against the
+  //             AudioContext.currentTime, which should be greater than the
+  //             time passed to source.start() (in this case, zero).
+  setTimeout(function () {
+    diagnosticMessage += "\n\nUsing currentTime:" +
+        "\n context.currentTime: " + context.currentTime;
+    this.showDiagnostic_(diagnosticMessage);
+    onComplete('number' === typeof context.currentTime && context.currentTime > 0);
+  }.bind(this), 50);
+};
+
+Sounds.prototype.showDiagnostic_ = function (msg) {
+  if (!this.enableDiagnostics_) {
+    return;
+  }
+  console.log(msg);
+  var hover = document.getElementById('audio-diagnostic-box');
+  if (!hover) {
+    hover = document.createElement('div');
+    hover.id = 'audio-diagnostic-box';
+    hover.style.position = 'absolute';
+    hover.style.top = '10px';
+    hover.style.left = '10px';
+    hover.style.padding = '1em';
+    hover.style.zIndex = 999;
+    hover.style.textAlign = 'left';
+    hover.style.border = 'solid black thin';
+    hover.style.backgroundColor = 'white';
+    document.body.appendChild(hover);
+  }
+  hover.innerHTML = msg.replace(/\n/g,'<br>&nbsp;');
 };
 
 /**
