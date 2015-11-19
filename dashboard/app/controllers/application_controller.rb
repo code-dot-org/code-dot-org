@@ -116,7 +116,7 @@ class ApplicationController < ActionController::Base
 
   def milestone_response(options)
     response = {
-      timestamp: DateTime.now.strftime('%Q').to_i
+      timestamp: DateTime.now.to_milliseconds
     }
     script_level = options[:script_level]
 
