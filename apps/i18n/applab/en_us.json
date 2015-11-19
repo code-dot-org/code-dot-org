@@ -428,7 +428,7 @@
   "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
   "pause": "Break",
   "privacyPolicy": "Privacy Policy",
-  "reinfFeedbackMsg": "You can press the \"Try again\" button to go back to running your app.",
+  "reinfFeedbackMsg": "You're finished! Click \"Continue\" to move on to the next level.",
   "repeatForever": "repeat forever",
   "repeatDo": "do",
   "repeatForeverTooltip": "Execute the actions in this block repeatedly while the app is running.",
@@ -438,6 +438,7 @@
   "stepIn": "Step in",
   "stepOver": "Step over",
   "stepOut": "Step out",
+  "tryAgainText": "Keep working",
   "viewData": "View Data",
   "yes": "Yes"
 }
