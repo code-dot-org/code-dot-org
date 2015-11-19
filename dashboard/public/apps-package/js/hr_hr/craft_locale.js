@@ -155,9 +155,9 @@ p:function(d,k,o,l,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:(k=craft_loca
 s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).craft_locale = {
 "blockDestroyBlock":function(d){return "destroy block"},
-"blockIf":function(d){return "if"},
+"blockIf":function(d){return "ako"},
 "blockIfLavaAhead":function(d){return "if lava ahead"},
-"blockMoveForward":function(d){return "move forward"},
+"blockMoveForward":function(d){return "idi naprijed"},
 "blockPlaceTorch":function(d){return "place torch"},
 "blockPlaceXAheadAhead":function(d){return "ahead"},
 "blockPlaceXAheadPlace":function(d){return "place"},
@@ -165,8 +165,8 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockPlantCrop":function(d){return "plant crop"},
 "blockShear":function(d){return "shear"},
 "blockTillSoil":function(d){return "till soil"},
-"blockTurnLeft":function(d){return "turn left"},
-"blockTurnRight":function(d){return "turn right"},
+"blockTurnLeft":function(d){return "okreni lijevo"},
+"blockTurnRight":function(d){return "okreni desno"},
 "blockTypeBedrock":function(d){return "bedrock"},
 "blockTypeBricks":function(d){return "bricks"},
 "blockTypeClay":function(d){return "clay"},
@@ -206,9 +206,9 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockTypeWater":function(d){return "water"},
 "blockTypeWool":function(d){return "wool"},
 "blockWhileXAheadAhead":function(d){return "ahead"},
-"blockWhileXAheadDo":function(d){return "do"},
-"blockWhileXAheadWhile":function(d){return "while"},
-"generatedCodeDescription":function(d){return "By dragging and placing blocks in this puzzle, you've created a set of instructions in a computer language called Javascript. This code tells computers what to display on the screen. Everything you see and do in Minecraft also starts with lines of computer code like these."},
+"blockWhileXAheadDo":function(d){return "napravi"},
+"blockWhileXAheadWhile":function(d){return "dok"},
+"generatedCodeDescription":function(d){return "Povlačenjem i postavljanjem blokova u ovoj zagonetki, stvorit ćete skup uputa u računalnom jeziku Javascript. Ovaj kod govori računalu što će prikazati na zaslonu. Sve što vidite i radite u Minecraftu također počinje sa linijama računalnog koda poput ovih."},
 "houseSelectChooseFloorPlan":function(d){return "Choose the floor plan for your house."},
 "houseSelectEasy":function(d){return "Easy"},
 "houseSelectHard":function(d){return "Hard"},
@@ -239,4 +239,4 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "reinfFeedbackMsg":function(d){return "You can press \"Keep Playing\" to go back to playing your game."},
 "replayButton":function(d){return "Replay"},
 "selectChooseButton":function(d){return "Select"},
-"tooManyBlocksFail":function(d){return "Puzzle "+craft_locale.v(d,"puzzleNumber")+" completed. Congratulations! It is also possible to complete it with "+craft_locale.p(d,"numBlocks",0,"hr",{"one":"1 block","other":craft_locale.n(d,"numBlocks")+" blocks"})+"."}};
+"tooManyBlocksFail":function(d){return "Zagonetka "+craft_locale.v(d,"puzzleNumber")+" je dovršena. Čestitam! Također je moguće završiti ju sa "+craft_locale.p(d,"numBlocks",0,"hr",{"one":"jednom kockom","other":craft_locale.n(d,"numBlocks")+" kocki"})+"."}};

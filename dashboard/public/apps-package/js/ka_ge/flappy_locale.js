@@ -277,7 +277,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenClickTooltip":function(d){return "შეასრულე მოქმედებები ქვემოთ, როცა ხდება დაჭერის მოვლენა."},
 "whenCollideGround":function(d){return "მიწაზე დაცემისას"},
 "whenCollideGroundTooltip":function(d){return "შეასრულეთ ქვემოთ მითითებული მოქმედებები, როცა Flappy მიწაზე დაეცემა."},
-"whenCollideObstacle":function(d){return "წინაღაბაზე შეჯახებისას"},
+"whenCollideObstacle":function(d){return "წინაღობაზე შეჯახებისას"},
 "whenCollideObstacleTooltip":function(d){return "შეასრულე ქვემოთ მითითებული მოქმედებები, როცა Flappy წინაღობას დაეჯახება."},
 "whenEnterObstacle":function(d){return "წინააღმდეგობას გაცდენისას"},
 "whenEnterObstacleTooltip":function(d){return "შეასრულე ქვემოთ მითითებული მოქმედებები, როცა Flappy წინაღობას გაივლის."},
