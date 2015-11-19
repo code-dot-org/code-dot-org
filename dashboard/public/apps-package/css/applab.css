@@ -44,7 +44,7 @@
     display: block;
     overflow: hidden; }
     #divApplab .chart .loading, #designModeViz .chart .loading, .draggingParent .chart .loading {
-      background: image-url("spinner-big.gif") no-repeat center center; }
+      background: url("/blockly/media/applab/spinner-big.gif") no-repeat center center; }
   #divApplab .design-mode-hidden, #designModeViz .design-mode-hidden, .draggingParent .design-mode-hidden {
     visibility: hidden; }
 
