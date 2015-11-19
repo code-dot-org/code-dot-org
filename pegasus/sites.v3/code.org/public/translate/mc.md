@@ -18,9 +18,10 @@ Translations for the tutorial progression are down on Crowdin and translations f
 ## Translating the tutorial progression
 The following links all lead directly to the Spanish tutorial. Replace the "es" in the URL with the language code you got earlier. Your translations will be updated on the site at the end of each week. You can watch this [demo video](/files/crowdin.swf) for how to use Crowdin.
 
-1. [blocks and instructions](https://crowdin.com/translate/codeorg/527/enus-es)
 1. [tutorial title](https://crowdin.com/translate/codeorg/63/enus-es#54318)
 1. [tutorial description](https://crowdin.com/translate/codeorg/63/enus-es#54319)
+1. [tutorial blocks and failure messages](https://crowdin.com/translate/codeorg/527/enus-es)
+1. tutorial instructions [here](https://crowdin.com/translate/codeorg/318/enus-es#q=Overworld) and [here](https://crowdin.com/translate/codeorg/318/enus-es#q=underground)
 1. [hints in callout bubbles](https://crowdin.com/translate/codeorg/41/enus-es#q=callout+craft)
 1. [strings about Minecraft on Code.org](https://crowdin.com/translate/codeorg/56/enus-es#q=minecraft)
 1. [video titles](https://crowdin.com/translate/codeorg/41/enus-es#q=video+minecraft)
