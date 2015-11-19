@@ -1,7 +1,7 @@
 "fr":
   devise:
     confirmations:
-      confirmed: Votre adresse courriel a été confirmée avec succès.
+      confirmed: Votre adresse de messagerie a été confirmée avec succès.
       send_instructions: Dans quelques minutes, vous allez recevoir un courriel contenant
         les instructions à suivre pour valider votre compte.
       send_paranoid_instructions: Si votre adresse e-mail existe déjà dans notre base
@@ -86,8 +86,8 @@
         header: Envoyer l'invitation
         submit_button: Envoyer une invitation
       edit:
-        header: Entrer votre mot de passe
-        submit_button: Valider mon mot de passe
+        header: Définir votre mot de passe
+        submit_button: Définir mon mot de passe
     mailer:
       invitation_instructions:
         subject: Instructions d'invitation

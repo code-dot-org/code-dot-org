@@ -274,12 +274,18 @@
           tekemään.
         video: alg_11_coordinate_plane
       Contracts:
-        title: Sopimukset
-        desc: 'Sopimukset: tietokoneettoman tekemisen oppitunnin kuvaus'
+        title: Sopimukset, lähtöjoukko ja maalijoukko
+        desc: Sopimukset tarjoavat meille tavan ymmärtää funktioita ja keskustella
+          niistä. Tässä oppitunnissa katsomme kuinka sopimukset auttavat meitä hahmottamaan
+          uuden ohjelmointikielen tai funktion.
         video: alg_5_contracts
       DesignRecipe:
         title: Suunnitteluresepti
-        desc: Suunnitteluresepti-oppitunnin kuvaus
+        desc: Viimeisessä vaiheessa opiskelijat kirjoittivat joitain hyvin yksinkertaisia
+          funktioita - kehittyneemmät funktiot vaativat syvällisempää lähestymistapaa.
+          Suunnitteluresepti on rakenteellinen lähestymistapa funktioiden kirjoittamiseen.
+          Se sisältää myös testitapausten kirjoittamista, joilla voidaan tutkia toimiiko
+          funktio joillakin arvoilla odotetusti.
         video: alg_8_design_recipe
       Booleans:
         title: Totuusarvot ja logiikka
@@ -289,7 +295,10 @@
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Ehtolauseet ja paloittaiset funktiot
-        desc: Ehtolauseet ja osittaiset funktiot -oppitunnin kuvaus
+        desc: Parametrit, joita välitämme funktiolle, aiheuttavat muutoksia saatavaan
+          tulokseen, jotka riippuvat käytettävästä mallista. Oletetaan että haluamme
+          joidenkin parametrin arvojen luovan tuloksen käyttäen yhtä mallia mutta
+          muut arvot käyttävät toista mallia. Tämän aikaansamiseksi tarvitaan ehtolauseita...
         video: alg_10_conditionals
       CollisionDetection:
         title: Törmäyksentunnistus ja Pythagoraan lause

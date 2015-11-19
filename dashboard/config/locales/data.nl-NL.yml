@@ -543,6 +543,51 @@
           te waarschuwen
         studio_playlab_10: Maak je eigen spel. Wanneer je klaar bent klik op Finish
           om je vrienden toe te laten je spel te proberen op hun telefoons.
+        studio_iceage_1: Manny wil "hallo" zeggen - kan jij hem helpen?
+        studio_iceage_2: Diego (acteur 1) en Granny (acteur 2) willen "hallo" tegen
+          elkaar zeggen. Kan je hen helpen door het "zeggen" (say) blok twee keer
+          te gebruiken?
+        studio_iceage_3: Kan je Scrat helpen bij de vlag te komen?
+        studio_iceage_4: Kan je Scrat (acteur 1) helpen bij Granny (acteur 2) te komen
+          en een geluid laten afspelen als hij daar aankomt?
+        studio_iceage_5: Kan je Sid helpen om "gegroet" te zeggen wanneer er op geklikt
+          wordt? Vergeet niet om er op te klikken nadat je op de "Run" knop hebt gedrukt
+        studio_iceage_6: Kan je Diego helpen met rondlopen door de omhoog/omlaag/rechts/links
+          pijltoetsen te gebruiken en zo alle vlaggen op te pakken?
+        studio_iceage_7: Het "herhaal eindeloos" (repeat forever) blok zorgt ervoor
+          dat je code steeds door blijft gaan. Kan je daar blokken aan toevoegen zodat
+          Sid steeds weer naar rechts en links blijft bewegen?
+        studio_iceage_8: Kan je een blok toevoegen zodat je een punt scoort en een
+          blok dat een geluid afspeelt wanneer Sid tegen Manny aanbeweegt, en daarna
+          Sid met de pijltoetsen bewegen tot je gescoord hebt?
+        studio_iceage_9: Stel de achtergrond in voor deze ijstijd en help Sid om sneller
+          bij Granny te komen door z'n snelheid te veranderen. Beweeg hem daarna met
+          de pijltoetsen om er te komen en iedereen te waarschuwen.
+        studio_iceage_10: Maak je eigen spel. Wanneer je klaar bent klik op Finish
+          om je vrienden toe te laten je spel te proberen op hun telefoons.
+        studio_gumball_1: Anais wil "hallo" zeggen - kan je haar helpen?
+        studio_gumball_2: Darwin (acteur 1) en Gumball (acteur 2) willen "hallo" tegen
+          elkaar zeggen. Kan je hen helpen door het "zeggen" (say) blok twee keer
+          te gebruiken?
+        studio_gumball_3: Kan je Banana Joe helpen bij de vlag te komen?
+        studio_gumball_4: Kan je Gumball (acteur 1) helpen bij Darwin (acteur 2) te
+          komen en een geluid laten afspelen als hij daar aankomt?
+        studio_gumball_5: Kan je Antony helpen om "gegroet" te zeggen wanneer er op
+          geklikt wordt? Vergeet niet om er op te klikken nadat je op de "Run" knop
+          hebt gedrukt
+        studio_gumball_6: Kan je Darwin helpen met rondlopen door de omhoog/omlaag/rechts/links
+          pijltoetsen te gebruiken en zo alle vlaggen op te pakken?
+        studio_gumball_7: Het "herhaal eindeloos" (repeat forever) blok zorgt ervoor
+          dat je code steeds door blijft gaan. Kan je daar blokken aan toevoegen zodat
+          Antony steeds weer naar rechts en links blijft bewegen?
+        studio_gumball_8: Kan je een blok toevoegen zodat je een punt scoort en een
+          blok dat een geluid afspeelt wanneer Banana Joe tegen Antony aanbeweegt,
+          en daarna Banana Joe met de pijltoetsen bewegen tot je gescoord hebt?
+        studio_gumball_9: Stel de achtergrond in voor deze ruimte-invasie en help
+          Nicole om sneller bij Penny te komen door haar snelheid te veranderen. Beweeg
+          haar daarna met de pijltoetsen om er te komen en iedereen te waarschuwen.
+        studio_gumball_10: Maak je eigen spel. Wanneer je klaar bent klik op Finish
+          om je vrienden toe te laten je spel te proberen op hun telefoons.
         studio_full_sandbox: Maak je eigen spel. Wanneer je klaar bent klik op Finish
           om je vrienden toe te laten je spel te proberen op hun telefoons.
         studio_k1_1: Kan je deze hond "hallo wereld" laten zeggen?
@@ -684,7 +729,13 @@
         infinity_playlab_intro: Play Lab - Inleiding
         infinity_playlab_events: Play Lab - Gebeurtenissen
         infinity_playlab_repeat_forever: Play Lab - Oneindig Herhalen
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Inleiding tot Functies
+        csp_applab_functions_parameters: Functies met Parameters
+        csp_applab_loops: Lussen
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Iets over pixels
         csp_pixelation_color_1: Kleur pixelation widget - Deel 1
         csp_pixelation_color_2: Kleur pixelation widget - Deel 2
@@ -716,6 +767,18 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: Bouw een Heelal met Code - Inleiding'
+        starwars_typing: 'Star Wars: Bouw een Heelal met Code - JavaScript'
+        starwars_events: 'Star Wars: Bouw een Heelal met Code - Gebeurtenissen'
+        starwars_congrats: 'Star Wars: Bouw een sterrenstelsel met Code - Gefeliciteerd'
+        starwars_blocks_intro: 'Star Wars: Bouw een Heelal met Code - Inleiding'
+        starwars_blocks_events: 'Star Wars: Bouw een Heelal met Code - Gebeurtenissen'
+        starwars_blocks_congrats: 'Star Wars: Bouw een sterrenstelsel met Code - Gefeliciteerd'
+        mc_intro: Minecraft - Introduction
+        mc_repeat: Minecraft - Repeat
+        mc_if_statements: Minecraft - If statements
+        mc_congrats_share: Minecraft - Congratulations
+        mc_congrats_no_share: Minecraft - Congratulations
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok
@@ -825,3 +888,13 @@
         Infinity_move_collide_callout: Speel een geluid af wanneer deze gebeurtenis
           plaatsvindt.
         Infinity_repeat_callout: Zet hierin verplaats blokken
+        craft_run_button_callout: Druk op "Uitvoeren" om het programma uit te proberen
+        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
+          the other block
+        craft_callout_preplaced: We've put some blocks here to get you started
+        craft_inside_repeat: Repeat actions by placing blocks in here
+        craft_callout_preplaced_house: This code will start building your house. Can
+          you finish it?
+        craft_what_is_iron: Mine this iron!
+        craft_callout_moveforward: This code will check for lava, can you add a command
+          to move forward?

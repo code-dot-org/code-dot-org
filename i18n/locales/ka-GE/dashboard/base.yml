@@ -244,6 +244,8 @@ ka:
       prize_us_only: (მხოლოდ აშშ-ის სტუდენტებისთვის)
       prizes_link: მეტი ინფორმაცია
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'თქვენი მასწავლებელი:'
       other: 'თქვენი მასწავლებლები:'
@@ -309,7 +311,7 @@ ka:
       section: სექცია
       example: მაგალითის ამოხსნა
       example_with_number: 'მაგალითის ამოხსნა %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
+      submitted_on: 'Submitted on:'
       unsubmit: Unsubmit
   user:
     email_confirm_needed: 'ელ.ფოსტა არ არის დადასტურებული:'
@@ -431,6 +433,7 @@ ka:
   pdf_download: გადმოიწერეთ PDF
   download_coming_soon: მალე ჩამოტვირთვაც შესაძლებელი გახდება.
   video_coming_soon: ვიდეო მალე დაემატება!
+  not_started: The student has not attempted this level.
   share_code:
     title: 'დააჭირეთ "გაშვებას" და ნახეთ, როგორ მუშაობს ჩემი პროგრამა'
     bounce_og_title: ნახეთ ჩემი Bounce თამაში
@@ -472,9 +475,14 @@ ka:
       body: ნახეთ ჩვენი მომხმარებლების მეირ შექნილი აპლიკაციებისა და სურათების გალერეა
     frozen:
       title: '"გაყინული"'
+    starwars:
+      title: Star Wars
     infinity:
       title: თამაშების ლაბორატორია Infinity
       body: გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად დისნეის Infinity-ს პერსონაჟების მონაწილეობით.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: მოსწავლეებმა ეს კოდით დახატეს!
     students_made_these_with_code: მოსწავლეებმა ეს კოდის მეშვეობით შექმნეს!
