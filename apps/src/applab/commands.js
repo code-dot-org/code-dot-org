@@ -921,6 +921,7 @@ applabCommands.setValue = function (opts) {
   apiValidateElementIdTagAndType('setValue', opts.elementId, 'INPUT', 'range', 'slider');
   apiValidateType(opts, 'setValue', 'value', opts.text, 'number');
   return applabCommands.setText(opts);
+};
 
 /**
  * Attempts to emulate Chrome's version of innerText by way of innerHTML, only
