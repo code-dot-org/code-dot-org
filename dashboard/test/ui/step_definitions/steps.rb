@@ -37,6 +37,11 @@ When /^I close the dialog$/ do
   }
 end
 
+When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until { @browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';") }
+end
+
 When /^I reset the puzzle to the starting version$/ do
   steps %q{
     Then I click selector "#versions-header"
