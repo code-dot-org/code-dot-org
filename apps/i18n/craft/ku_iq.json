@@ -1,6 +1,6 @@
 {
   "blockDestroyBlock": "destroy block",
-  "blockIf": "if",
+  "blockIf": "ئەگەر",
   "blockIfLavaAhead": "if lava ahead",
   "blockMoveForward": "move forward",
   "blockPlaceTorch": "place torch",
@@ -76,6 +76,7 @@
   "level7FailureMessage": "Use the \"plant\" command to place crops on each patch of dark tilled soil.",
   "level8FailureMessage": "If you touch a creeper it will explode. Sneak around them and enter your house.",
   "level9FailureMessage": "Don't forget to place at least 2 torches to light your way AND mine at least 2 coal.",
+  "minecraftBlock": "block",
   "nextLevelMsg": "Puzzle {puzzleNumber} completed. Congratulations!",
   "playerSelectChooseCharacter": "Choose your character.",
   "playerSelectChooseSelectButton": "Select",

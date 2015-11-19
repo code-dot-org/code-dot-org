@@ -115,7 +115,7 @@ No return value. Variable created in memory.
 ### Tips
 - If you do not assign a value to declared variable, the variable value is "undefined" or "null" and you can get unpredictable results.
 - Variables can store numbers, strings, arrays or objects.
-- The block of code where you declare the variable defines the variable's *scope*.  Scope refers to which blocks of code can access that variable by name.  For instance, if you declare a variable inside a function, that variable name can only be accessed inside that function. Variables decalred at the top of your program are *global* and can b e accessed anywhere in your program.
+- The block of code where you declare the variable defines the variable's *scope*.  Scope refers to which blocks of code can access that variable by name.  For instance, if you declare a variable inside a function, that variable name can only be accessed inside that function. Variables decalred at the top of your program are *global* and can be accessed anywhere in your program.
 
 [/tips]
 

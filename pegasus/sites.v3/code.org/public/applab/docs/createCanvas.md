@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## createCanvas(canvasId, width, height);
+## createCanvas(id, width, height);
 
 [/name]
 
@@ -105,7 +105,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-createCanvas(canvasId, width, height);
+createCanvas(id, width, height);
 ```
 
 [/syntax]
@@ -116,7 +116,7 @@ createCanvas(canvasId, width, height);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| [canvasId] | string | No | The id of the new canvas element.  |
+| [id] | string | No | The id of the new canvas element.  |
 | [width] | number | No | The horizontal width in pixels of the rectangle.  |
 | [height] | number | No | The vertical height in pixels of the rectangle.  |
 

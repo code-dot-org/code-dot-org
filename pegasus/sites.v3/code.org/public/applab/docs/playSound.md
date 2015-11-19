@@ -19,7 +19,7 @@ Category: UI controls
 
 [short_description]
 
-Plays the MP3, OGG or WAV sound file from the specified URL.
+Plays the MP3 sound file from the specified URL.
 
 [/short_description]
 
@@ -122,7 +122,7 @@ playSound(url)
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| url | string | Yes | The source URL (or filename for an uploaded file) of the MP3, OGG or WAV sound file to be played. |
+| url | string | Yes | The source URL (or filename for an uploaded file) of the MP3 sound file to be played. |
 
 [/parameters]
 

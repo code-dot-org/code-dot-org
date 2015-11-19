@@ -1,8 +1,5 @@
+@as_student
 Feature: Fun-O-Meter
-
-Background:
-  Given I am on "http://learn.code.org/"
-  And I am a student
 
 Scenario: Rate a Puzzle
   Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/3?noautoplay=true"
