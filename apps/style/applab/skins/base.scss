@@ -34,7 +34,7 @@
     overflow: hidden;
   }
 
-  div[contenteditable] {
+  div.textArea {
     overflow: auto;
     word-wrap: break-word; /* needed by Firefox */
     -moz-user-select: text;
@@ -46,7 +46,7 @@
     font-size: 14px;
   }
 
-  input, div[contenteditable], button, select, img, label {
+  input, div.textArea, button, select, img, label {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     line-height: 1.2em;
