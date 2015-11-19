@@ -11,7 +11,7 @@ Translations for the tutorial progression are down on Crowdin and translations f
 1. [Click here](https://amara.org/en/auth/login/?next=/) to create an Amara account.
 1. [Click here to join our Code.org project](https://crowdin.com/project/codeorg/invite) on Crowdin.
 1. From the [main project page](https://crowdin.com/project/codeorg), select your language.
-1. Note your language code in the URL, you'll need this for later.
+1. Note your language code in the URL, you'll need this for later. If it's a 4 letter code like "zh-TW" note that the code you'll use later will be in the format "zhTW".
 
 <img src="/images/fit-500/translate-find-code.jpg"> 
 
