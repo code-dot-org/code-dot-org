@@ -1,6 +1,6 @@
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
-var elementUtils = require('./designElements/elementUtils');
+var elementLibrary = require('./designElements/library');
 
 /**
  * Helper class for generating a synthetic change event when an element's
@@ -55,12 +55,14 @@ ChangeEventHandler.prototype.onBlur = function () {
  * @returns {string}
  */
 ChangeEventHandler.prototype.getValue = function () {
-  if (elementUtils.isTextInput(this.element_)) {
-    return this.element_.value;
-  } else if (elementUtils.isContentEditable(this.element_)) {
-    return this.element_.textContent;
-  } else {
-    throw new Error('Unsupported element type: ' + this.element_);
+  var elementType = elementLibrary.getElementType(this.element_);
+  switch(elementType) {
+    case elementLibrary.ElementType.TEXT_INPUT:
+      return this.element_.value;
+    case elementLibrary.ElementType.TEXT_AREA:
+      return this.element_.textContent;
+    default:
+      throw new Error('ChangeEventHandler: unsupported element type ' + elementType);
   }
 };
 
@@ -74,7 +76,8 @@ ChangeEventHandler.addChangeEventHandler = function(element, callback) {
   var handler = new ChangeEventHandler(element, callback);
   element.addEventListener("focus", handler.onFocus.bind(handler));
   // Handle enter key for text inputs, which cannot contain newlines.
-  if (elementUtils.isTextInput(element)) {
+  var elementType = elementLibrary.getElementType(element);
+  if (elementType === elementLibrary.ElementType.TEXT_INPUT) {
     element.addEventListener("keydown", function(event) {
       if (event.keyCode === KeyCodes.ENTER) {
         this.onEnter();

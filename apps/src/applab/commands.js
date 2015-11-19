@@ -6,7 +6,7 @@ var RGBColor = require('./rgbcolor.js');
 var codegen = require('../codegen');
 var keyEvent = require('./keyEvent');
 var utils = require('../utils');
-var elementUtils = require('./designElements/elementUtils');
+var elementLibrary = require('./designElements/library');
 
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
@@ -1292,8 +1292,9 @@ applabCommands.onEvent = function (opts) {
   apiValidateType(opts, 'onEvent', 'callback', opts.func, 'function');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
-    if ((elementUtils.isContentEditable(domElement) ||
-         elementUtils.isTextInput(domElement)) &&
+    var elementType = elementLibrary.getElementType(domElement);
+    if ((elementType === elementLibrary.ElementType.TEXT_INPUT ||
+        elementType === elementLibrary.ElementType.TEXT_AREA ) &&
         opts.eventName === 'change') {
       // contentEditable divs don't generate a change event, and change events
       // on text inputs behave differently across browsers, so synthesize a
