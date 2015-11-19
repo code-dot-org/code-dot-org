@@ -123,7 +123,7 @@ window.apps = {
     var cachedProgram = dashboard.clientState.sourceForLevel(
         appOptions.level.scriptLevelId, appOptions.level.lastAttemptTimestamp);
     if (cachedProgram !== undefined) {
-      appOptions.level.lastAttempt = cachedProgram;
+      appOptions.level.lastAttempt = decodeURIComponent(cachedProgram);
     }
 
     // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
