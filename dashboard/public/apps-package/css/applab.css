@@ -1,4 +1,3 @@
-@import url(colpick.css);
 #divApplab, #designModeViz, .draggingParent {
   overflow: hidden;
   outline: none;
@@ -257,6 +256,20 @@ div#visualizationResizeBar {
     top: 68px;
     left: 16px;
     border: 0; }
+
+#wireframeSendToPhone {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+  text-shadow: #000 -1px -1px 0; }
+  #wireframeSendToPhone, #wireframeSendToPhone .sharing label {
+    font: 12pt "Gotham 5r", sans-serif;
+    color: #8F9499; }
+  #wireframeSendToPhone i {
+    font-size: 1.5em; }
+  #wireframeSendToPhone .sharing div {
+    margin: 0; }
 
 #visualizationColumn.chromelessShare #designToggleRow, #visualizationColumn.chromelessShare #gameButtons {
   display: none; }

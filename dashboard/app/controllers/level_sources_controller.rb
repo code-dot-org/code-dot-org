@@ -86,7 +86,7 @@ class LevelSourcesController < ApplicationController
       full_width: true,
       small_footer: @game.uses_small_footer? || enable_scrolling?,
       has_i18n: @game.has_i18n?,
-      no_padding: browser.mobile? && @game.share_mobile_fullscreen?
+      no_padding: browser.mobile?
     )
     @callback = milestone_level_url(user_id: current_user.try(:id) || 0, level_id: @level.id)
     level_view_options(
