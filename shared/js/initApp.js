@@ -121,7 +121,7 @@ window.apps = {
 
     // Load locally cached version if it's newer than the version from the server.
     var cachedProgram = dashboard.clientState.sourceForLevel(
-        appOptions.level.scriptLevelId, appOptions.level.lastAttemptTimestamp);
+        appOptions.scriptName, appOptions.levelKey, appOptions.level.lastAttemptTimestamp);
     if (cachedProgram !== undefined) {
       appOptions.level.lastAttempt = cachedProgram;
     }
