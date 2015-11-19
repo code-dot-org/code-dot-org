@@ -114,10 +114,6 @@ class Game < ActiveRecord::Base
     app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
   end
 
-  def share_mobile_fullscreen?
-    app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
-  end
-
   def flappy?
     app == FLAPPY
   end

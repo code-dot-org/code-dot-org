@@ -1,0 +1,76 @@
+name 'CSPPD3-u3 do the challenge'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Complete the Challenge > Get into the Lesson 
+<br/>
+
+It's time to go read the lesson plan and complete the activies related to your lesson! 
+<br><br>
+>#### What to do 
+
+>-  **Read through** the entire lesson plan. (linked below)
+-  **Do the levels in Code Studio for the lesson**. Save whatever artifact you create while doing the levels. 
+- While you review the lesson plan and do the levels, make sure to **jot down your thoughts** about: 
+    - ahha! moments during the activity
+    - what was difficult about this activity?
+    - what did you enjoy about this lesson?
+    - what additional resources might be useful for teaching this lesson? 
+
+#### Reminder of Challenges
+
+
+##### Lesson 
+<a href=”” target =_blank>Lesson Plan>></a>
+<br>
+<a href="" target =_blank>Code Studio>></a>
+<br><br>
+
+**Consider doing if:** 
+
+- Do
+
+##### Lesson 
+<a href=”” target =_blank>Lesson Plan>></a>
+<br>
+<a href="" target =_blank>Code Studio>></a>
+<br><br>
+
+**Consider doing if:** 
+
+- Do ...
+
+##### Lesson 
+<a href=”” target =_blank>Lesson Plan>></a>
+<br>
+<a href="" target =_blank>Code Studio>></a>
+<br><br>
+**consider doing if:** 
+
+- Do ...
+
+##### Lesson 
+<a href=”” target =_blank>Lesson Plan>></a>
+<br>
+<a href="" target =_blank>Code Studio>></a>
+<br><br>
+**Consider doing if:** 
+
+- Do...
+
+##### Practice Performance Task 
+<a href=”” target =_blank>Lesson Plan>></a>
+<br>
+<a href="" target =_blank>Code Studio>></a>
+<br><br>
+**Consider doing if:** ...
+
+- Do..
+
+<br/><br/>
+>When you're finsihed reading your lesson plan and completing the levels, come back and hit 'Continue'!
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

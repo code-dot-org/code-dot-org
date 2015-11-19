@@ -51,11 +51,10 @@ Breakfast and lunch will be served.
 <br/><br/>
 **Location**
 
-[Loyola University - Water Tower Campus<br/> 
-Corboy Law Center<br/> 
-Room: CLC 205<br/>
-25 E Pearson St <br/>
+[23 E Illinois St<br/>
 Chicago, IL 60611](https://www.google.com/maps/place/Philip+H.+Corboy+Law+Center/@41.8973803,-87.6271242,15z/data=!4m2!3m1!1s0x0:0x45b3bb60ee4f6313)
+
+Please enter through After-Words bookstore found on E Illinois St. 
 
 **What to bring to Phase 3 quarterly sessions:**
 

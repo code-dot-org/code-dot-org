@@ -8,6 +8,10 @@ nav: about_nav
 
 <%= view :about_headshots, people:DB[:cdo_leaders].where(kind_s:'director'), columns:3 %>
 
+## Leadership Team
+
+<%= view :about_people, people:DB[:cdo_leaders].where(kind_s:'LT'), columns:3 %>
+
 ## Advisory Board
 
 <%= view :about_people, people:DB[:cdo_leaders].where(kind_s:'advisor') %>

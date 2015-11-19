@@ -344,8 +344,8 @@
   hoc_faq_count_hoc_q: "How do you count Hours of Code?"
   hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   hoc_faq_one_hour_q: "How much can one learn in an hour?"
-  hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/> Above all, what all participants can learn in an hour is that we can do this.'
-
+  hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
+ 
   stats_hoc_2013_image_alt: 'Stats from 2013 Hour of Code'
   stats_growth: "It was the fastest to reach 15 million users."
   stats_i18n: "Students are learning in 40 languages"
@@ -370,7 +370,7 @@
   resources_brochure: Brochure
   resources_posters: Posters
   resources_videos: Videos
-  resources_banners: Social media banners
+  resources_banners: Social media
   resources_emails: Sample emails
   resources_logo: Hour of Code logo
   resources_stats: Stats and blurbs
@@ -402,13 +402,13 @@
 
   title_country_resources: Country Specific Resources
   title_how_to_districts: Hour of Code How-To for Districts
-  title_how_to_events: Hour of Code Event How-To 
+  title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: How to host an Hour of Code - Organizations
   title_how_to_companies: How to host an Hour of Code - Companies
   title_how_to_officials: How-to guide for public officials
   title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: How-to Guide
-  title_press_release: Hour of Code Press Release for Elected Officials 
+  title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
   title_press_kit: Press Kit
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
