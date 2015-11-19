@@ -21,7 +21,7 @@ We need your help to reach 100,000 organizers worldwide. Tell your friends about
 [Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). 
 <% else %>
 ## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup).
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 <% end %>
 
 ## 3. Ask your employer to get involved

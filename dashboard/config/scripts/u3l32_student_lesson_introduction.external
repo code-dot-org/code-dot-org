@@ -7,11 +7,10 @@ markdown <<MARKDOWN
 
 # Background
 
-Loops are a powerful way or finding out information about arrays. We can loop through all the elements in an array easily using a for loop. 
+There are many situations where we want to repeat a loop a set number of times. Although this can be done with a while loop there are many small pieces to keep track of. As a result a for loop is used to consolidate all of those pieces - counter variable, incrementing, and boolean condition- onto one line. One of the most common uses of for loops in programming is processing arrays.  For loops allow programmers to easily step through all the elements in an array and process information about arrays.
 
 # Lesson
 
-* Create functions with different types of return values.
 * Loop through all the elements of an array using a for loop.
   
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
