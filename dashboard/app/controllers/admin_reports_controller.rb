@@ -216,14 +216,14 @@ class AdminReportsController < ApplicationController
         group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
         order(:created_at_day).
         all.
-        map{|row| [row[:created_at_day].to_s, row[:count].to_i]}
+        map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
     data_2015 = DB[:forms].
         where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2015', '2015-08-01', '2016-01-01').
         group(:name, :email).
         group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
         order(:created_at_day).
         all.
-        map{|row| [row[:created_at_day].to_s, row[:count].to_i]}
+        map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
 
     # Construct the hash {MM-DD => [count2014, count2015]}.
     # Start by constructing the key space as the union of the MM-DD dates for
@@ -231,11 +231,10 @@ class AdminReportsController < ApplicationController
     require 'set'
     dates = Set.new []
     data_2014.each do |day|
-      # Here and below, we use [5..9] to extract 'MM-DD' from 'YYYY-MM-DD'.
-      dates.add(day[0][5..9])
+      dates.add(day[0])
     end
     data_2015.each do |day|
-      dates.add(day[0][5..9])
+      dates.add(day[0])
     end
     # Then populate the keys of our hash {date=>[count2014,count2015], ..., date=>[...]} with dates.
     data_by_day = {}
@@ -244,10 +243,10 @@ class AdminReportsController < ApplicationController
     end
     # Finally populate the values of our hash.
     data_2014.each do |day|
-      data_by_day[day[0][5..9]][0] = day[1]
+      data_by_day[day[0]][0] = day[1]
     end
     data_2015.each do |day|
-      data_by_day[day[0][5..9]][1] = day[1]
+      data_by_day[day[0]][1] = day[1]
     end
 
     render locals: {data_by_day: data_by_day.sort}
