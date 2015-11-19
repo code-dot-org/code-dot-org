@@ -27,7 +27,7 @@ describe("clientState#sourceForLevel", function() {
 
   it("returns `undefined` if cache can't be parsed", function () {
     state.writeSourceForLevel('sample', 'd', 100, 'abc');
-    localStorage.setItem('source_sample_d', 'bad data');
+    sessionStorage.setItem('source_sample_d', 'bad data');
     assert(state.sourceForLevel('sample', 'd', null) === undefined);
   });
 });
@@ -143,17 +143,17 @@ describe("clientState#hasSeenVideo/hasSeenCallout", function() {
   });
 
   it("handles malformed storage for video progress", function () {
-    localStorage.setItem('video', null);
+    sessionStorage.setItem('video', null);
     state.hasSeenVideo('someVideo').should.equal(false);
     state.recordVideoSeen('someVideo');
     state.hasSeenVideo('someVideo').should.equal(true);
 
-    localStorage.setItem('video', '');
+    sessionStorage.setItem('video', '');
     state.hasSeenVideo('someVideo').should.equal(false);
     state.recordVideoSeen('someVideo');
     state.hasSeenVideo('someVideo').should.equal(true);
 
-    localStorage.setItem('video', '{\'malformed_json\': true');
+    sessionStorage.setItem('video', '{\'malformed_json\': true');
     state.hasSeenVideo('someVideo').should.equal(false);
     state.recordVideoSeen('someVideo');
     state.hasSeenVideo('someVideo').should.equal(true);
@@ -178,17 +178,17 @@ describe("clientState#hasSeenVideo/hasSeenCallout", function() {
   });
 
   it("handles malformed storage for callouts seen", function () {
-    localStorage.setItem('callout', null);
+    sessionStorage.setItem('callout', null);
     state.hasSeenCallout('someCallout').should.equal(false);
     state.recordCalloutSeen('someCallout');
     state.hasSeenCallout('someCallout').should.equal(true);
 
-    localStorage.setItem('callout', '');
+    sessionStorage.setItem('callout', '');
     state.hasSeenCallout('someCallout').should.equal(false);
     state.recordCalloutSeen('someCallout');
     state.hasSeenCallout('someCallout').should.equal(true);
 
-    localStorage.setItem('callout', '{\'malformed_json\': true');
+    sessionStorage.setItem('callout', '{\'malformed_json\': true');
     state.hasSeenCallout('someCallout').should.equal(false);
     state.recordCalloutSeen('someCallout');
     state.hasSeenCallout('someCallout').should.equal(true);

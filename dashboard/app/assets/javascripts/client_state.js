@@ -37,7 +37,7 @@ var COOKIE_OPTIONS = {expires: dashboard.clientState.EXPIRY_DAYS, path: '/'};
 dashboard.clientState.reset = function() {
   $.removeCookie('progress', {path: '/'});
   $.removeCookie('lines', {path: '/'});
-  localStorage.clear();
+  sessionStorage.clear();
 };
 
 /**
@@ -50,7 +50,7 @@ dashboard.clientState.reset = function() {
  *   the cached copy is missing/stale.
  */
 dashboard.clientState.sourceForLevel = function (scriptName, levelKey, timestamp) {
-  var data = localStorage.getItem(createKey(scriptName, levelKey, 'source'));
+  var data = sessionStorage.getItem(createKey(scriptName, levelKey, 'source'));
   if (data) {
     try {
       var parsed = JSON.parse(data);
@@ -65,7 +65,7 @@ dashboard.clientState.sourceForLevel = function (scriptName, levelKey, timestamp
 
 /**
  * Cache a copy of the level source along with a timestamp. Posts to /milestone
- * may be queued, so save the data in localStorage to present a consistent
+ * may be queued, so save the data in sessionStorage to present a consistent
  * client view.
  * @param {string} scriptName
  * @param {string} levelKey
@@ -74,7 +74,7 @@ dashboard.clientState.sourceForLevel = function (scriptName, levelKey, timestamp
  */
 dashboard.clientState.writeSourceForLevel = function (scriptName, levelKey, timestamp, source) {
   try {
-    localStorage.setItem(createKey(scriptName, levelKey, 'source'), JSON.stringify({
+    sessionStorage.setItem(createKey(scriptName, levelKey, 'source'), JSON.stringify({
       source: source,
       timestamp: timestamp
     }));
@@ -200,12 +200,12 @@ dashboard.clientState.recordCalloutSeen = function (calloutId) {
  * @param visualElementId
  */
 function recordVisualElementSeen(visualElementType, visualElementId) {
-  var elementSeenJson = localStorage.getItem(visualElementType) || '{}';
+  var elementSeenJson = sessionStorage.getItem(visualElementType) || '{}';
 
   try {
     var elementSeen = JSON.parse(elementSeenJson);
     elementSeen[visualElementId] = true;
-    localStorage.setItem(visualElementType, JSON.stringify(elementSeen));
+    sessionStorage.setItem(visualElementType, JSON.stringify(elementSeen));
   } catch (e) {
     if (e.name === "QuotaExceededError") {
       return ;
@@ -213,7 +213,7 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
     //Something went wrong parsing the json. Blow it up and just put in the new callout
     var elementSeen = {};
     elementSeen[visualElementId] = true;
-    localStorage.setItem(visualElementType, JSON.stringify(elementSeen));
+    sessionStorage.setItem(visualElementType, JSON.stringify(elementSeen));
   }
 }
 
@@ -223,7 +223,7 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
  * @param visualElementId
  */
 function hasSeenVisualElement(visualElementType, visualElementId) {
-  var elementSeenJson = localStorage.getItem(visualElementType) || '{}';
+  var elementSeenJson = sessionStorage.getItem(visualElementType) || '{}';
   try {
     var elementSeen = JSON.parse(elementSeenJson);
     return elementSeen[visualElementId] === true;
@@ -233,7 +233,7 @@ function hasSeenVisualElement(visualElementType, visualElementId) {
 }
 
 /**
- * Creates standardized keys for storing values in localStorage.
+ * Creates standardized keys for storing values in sessionStorage.
  * @param {string} scriptName
  * @param {string} levelKey
  * @param {string=} prefix
