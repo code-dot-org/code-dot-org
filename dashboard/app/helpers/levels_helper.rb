@@ -126,6 +126,8 @@ module LevelsHelper
 
     set_channel if @level.channel_backed?
 
+    view_options level_key: @level.key
+
     unless params[:share]
       # Set videos and callouts.
       view_options(
