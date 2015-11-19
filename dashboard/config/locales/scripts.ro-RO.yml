@@ -1607,18 +1607,18 @@
           description: Creează o poveste sau un joc cu Laboratorul de Joacă Gumball!
           Gumball Play Lab: Laborator de Joacă Gumball
         starwars:
-          title: 'Star Wars: Construirea unei galaxii cu cod'
-          description_short: Învață să programezi roboți şi a creează-ți propriul
-            joc Star Wars într-o galaxie de departe, departe de tot.
-          description: Învață să programezi roboți şi a creează-ți propriul joc Star
-            Wars într-o galaxie de departe, departe de tot.
+          title: 'Star Wars: Programarea unei galaxii'
+          description_short: Invata sa programezi droizi si creeaza-ti propriul joc
+            Star Wars intr-o galaxie foarte indepartata.
+          description: Invata sa programezi droizi si creeaza-ti propriul joc Star
+            Wars intr-o galaxie foarte indepartata.
           Hour of Code 2015: Ora de cod 2015
         starwarsblocks:
-          title: 'Star Wars: Construirea unei galaxii cu cod'
-          description_short: Învață să programezi roboți şi a creează-ți propriul
-            joc Star Wars într-o galaxie de departe, departe de tot.
-          description: Învață să programezi roboți şi a creează-ți propriul joc Star
-            Wars într-o galaxie de departe, departe de tot.
+          title: 'Star Wars: Programarea unei galaxii'
+          description_short: Invata sa programezi droizi si creeaza-ti propriul joc
+            Star Wars intr-o galaxie foarte indepartata.
+          description: Invata sa programezi droizi si creeaza-ti propriul joc Star
+            Wars intr-o galaxie foarte indepartata.
           Hour of Code 2015: Ora de cod 2015
         minecraft:
           title: Minecraft

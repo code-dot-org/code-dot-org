@@ -1,4 +1,5 @@
 uk-UA:
+  hour_of_code: Година коду
   hello: Привіт, світ!
   select_language: Будь ласка, виберіть мову
   en: Інформатика
@@ -298,23 +299,25 @@ uk-UA:
   starwars_javascript_start_button: Спробувати
   starwars_blocks_title: блоки
   starwars_blocks_description: На основі рухомих блоків.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Багато мов (скоро) | Сучасні браузери, смартфони, планшети| Вік 6-10
   starwars_blocks_start_button: Спробувати
   starwars_watch_videos: Перед початком роботи перегляньте ці відео для натхнення
   starwars_speak_languages: Інша мова?
   starwars_help_translate: Допоможіть нам з перекладом
+  starwars_platform_text: Сучасні браузери, смартфони, планшети
   mc_name: Година коду від Minecraft
   mc_longdescription: Використайте блоки коду, щоб допомогти Стіву чи Алексу в їхніх пригодах у світі Minecraft.
   mc_shortdescription: Використайте блоки коду, щоб допомогти Стіву чи Алексу в їхніх пригодах у світі Minecraft.
   mc_gradelevel: Вік 6+
   mc_platformtext: Сучасні браузери, смартфони, планшети
+  mc_specs: Багато мов (скоро) | Сучасні браузери та планшети| Вік 6+
   minecraft_subtitle: Година коду від Minecraft
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
+  volunteer_engineer_submission_title: Надихайте учнів та волонтерів на Годину коду.
   volunteer_engineer_submission_subtitle_generic: '100000 вчителів збираються провести Годину коду в своїх класах цьогоріч 7-13 грудня 2015 року. Їм потрібна допомога! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} вчителів потребують волонтерів, натхненних інформатичною освітою для допомоги у проведенні Години коду цього грудня.<br>%{num_volunteers} волонтерів вже підписались. Приєднуйтесь.'
   volunteer_engineer_submission_intro_background: 'Година коду - це глобальний рух годинного вступу до програмування, що охоплює десятки мільйонів учнів у більш, як 180 країнах. Залучайтесь до тижня інформатики 7-13 грудня.'
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    Ці вчителі хочуть, щоб хтось, <span style="font-family: 'Gotham 7r', sans-serif;">захоплений інформатичною освітою</span> допоміг їм у класі, або <span style="font-family: 'Gotham 7r', sans-serif;">надихнув</span> їхніх учнів, розповідаючи про широкі можливості інформатики (можна через відео-чат). Якщо Ви не шукаєте волонтера, <a href="%{url}">дізнайтесь більше</a> про організацію власного заходу Години коду.
   volunteer_engineer_submission_intro_signup: |-
     Вкажіть наступну інформацію, якщо ви студент галузі комп'ютерних наук чи професійний програміст. Поля, позначені <span class="form-required-field">*</span> є обов'язковими для заповнення.
   volunteer_engineer_submission_header_shared: Інформація доступна вчителям та волонтерам на карті
@@ -559,9 +562,9 @@ uk-UA:
   learn_more: Спробувати зараз
   learn_sign_up_description: Зареєструйтесь для участі в Годині коду протягом тижня інформатики
   learn_sign_up_button: Зареєструватися
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Перегляньте у класі ці відео для натхнення
+  learn_videos_show: Покажіть ці відео своєму класу для натхнення
+  learn_videos_before_hoc: Перегляньте у класі ці відео для натхнення перед Годиною коду
   learn_educator_resources_description: Дізнайтесь як викладати Годину коду
   learn_educator_resources_button: Ресурси для вчителів
   learn_are_you_educator: 'Ви педагог? Дізнайтеся, <a href="http://hourofcode.com/resources/how-to">як провести Годину коду</a>'
@@ -569,9 +572,9 @@ uk-UA:
   hoc2014_try_new_tutorial: Спробуйте новий підручник Години коду в бета-версії
   hoc2014_try_scrat: Angry Birds, PvZ та Scrat
   hoc2014_try_frozen: Художник з Анною та Ельзою, із Крижаного серця
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Підручники від Code.org
+  carousel_heading_3rd_party: Підручники від інших учасників
+  carousel_heading_third_party: Підручники від інших учасників
   carousel_heading_international: Підручники вашою мовою
   carousel_heading_domestic: Підручники англійською мовою
   carousel_heading_beginners: Посібники для початківців

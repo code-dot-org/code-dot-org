@@ -2658,67 +2658,44 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: 私はイェンス・ベリゲンスタン。みんなから Jeb とよばれています。ここストックホルムにある Mojang で、マインクラフトの開発責任者をしています。たしか11か12さいのころに、ゲームがつくりたくてプログラムをはじめました。父の友人に「ゲームがつくりたいならプログラムのしかたを勉強しないとね」といわれたのがきっかけです。ゲームの仕組みをかんがえたり、デザインしたりするのが好きです。そこが私がマインクラフトで気に入っているところなんです。
       2:
         image: notes/mc_intro_2.JPG
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
+        text: これからあなたは、アレックス（かスティーブのどちらか）をプログラムして、マインクラフトの一部を切りとった世界で動かすことで、コンピューター・サイエンスの基本を勉強していきます。
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: ふつうプログラムは文字をつかってしますが、ここではブロッキーをつかってすることにします。ブロッキーをつかうとドラッグ・アンド・ドロップだけでプログラムを書くことができるのです（じつは見えないところで
+          JavaScript のコードがつくられています）。
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: これから勉強する考えかたは、プロのコンピューター・プログラマーが毎日のようにつかっているもので、コンピューター・サイエンスのきほん的な考えかたです。わたしたち
+          Mojang も、おなじ考えかたをつかってマインクラフトがうまく動くようにつくっているのです。
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: はじめるまえに、まずはキャラクターをえらびましょう。私はアレックスをえらぶことにします。さっそくプログラムして、アレックスが画面中を動きまわれるようにしましょう。
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: 画面は主に3 つに分けられています。左は マインクラフト・プレイスペース で、ここであなたのプログラムが実行されます。それぞれのレベルでなにをしたらいいのかの目ひょうが書かれたインストラクションは、下のほうに書いてあります。
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: まん中はツールボックス。この中に置かれたブロック（マインクラフトのゲームに出てくるブロックとはちがいます）が、それぞれアレックスにアクションを指示するコマンドになっています。
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: 右はしの白いスペースは ワークスペース です。ここでプログラムを組み立てていきます。
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: それでは、「前に進む」ブロックをワークスペースまでドラッグして、「実行」をクリックするとどうなるでしょう？ アレックスが1マス（一歩）前に進みましたね。
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: もしアレックスが一歩進んだあとになにかさせたいときにはどうすればいいでしょうか。あなたのプログラムにべつのブロックを足してあげるのです。「右に回転」をえらび、「前に進む」ブロックの下までドラッグして、オレンジ色の目じるしが見えるようになるまで動かします。そうしてからドロップすると、ふたつのブロックがひっつくのです。ここでもういちど「実行」をおすと、アレックスが
+          ワークスペース で組まれているコマンドを、上から下までしてくれるはずです。
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: ブロックを消したくなったら、消したいブロックを ツールボックス までドラッグしてもどしてあげるといいです。
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: 途中までした作業をなかったことにして、レベルがはじまったときのようにもどしたいときは、ワークスペースの右上にある「はじめからやりなおす」ボタンをつかってください。さいごにもうひとつ：「回転」ブロックにある小さな
+          さんかく形 には気がつきましたか？ おなじような さんかく形 を見つけたら、それは今えらんでいるものとはちがうものをそこからえらぶことができる、ということです。ではさっそくコーディングしましょう！
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG

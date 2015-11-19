@@ -1,7 +1,8 @@
 ta-IN:
+  hour_of_code: Hour of Code
   hello: ஹலோ உலகம்
   select_language: உங்கள் மொழியை தேர்ந்தெடுக்கவும்
-  en: Computer Science
+  en: கணினி அறிவியல்
   computer_science_edweek: கணினி அறிவியல் கல்வி வாரம்
   csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ஒரு மணியில் குறியீடு </a> இதோ வருகிறது. அனைத்து ஆசிரியர்கள் மற்றும் அமைப்பாளர்களுக்கு, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> திட்டமிடுங்கள் உங்கள் ஒரு மணியில் குறியீட்டை</a> '
@@ -30,7 +31,7 @@ ta-IN:
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_search_search: தேடு
   csedweek_map_search_reset: மீட்டமை
   csedweek_map_legend_title: Legend
   csedweek_map_legend_event: Hour of Code Event
@@ -38,9 +39,9 @@ ta-IN:
   cded_sign_up: Sign up
   cded_try_it: இதை முயற்சிக்கவும்
   twentyhours_trynow: இப்பொழுது முயற்சிக்கவும்
-  california_heading: Ask your school to teach computer science
+  california_heading: உங்கள் பள்ளி கூடத்தில் கணினி அறிவியலை கற்றுக்கொடுக்க கேட்டுக்கொள்ளவும்
   california_text: "Any teacher can offer our <a href='http://studio.code.org/'>free courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner with us."
-  california_button: Learn More
+  california_button: மேலும் அறிய
   flappy_heading: Flappy Birthday to Code.org
   flappy_text: 'Code.org just turned 1 year old.<br/><br/> Celebrate with us by making your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!'
   view_english_site: ஆங்கில தளத்தை பார்க்க
@@ -64,7 +65,7 @@ ta-IN:
   congrats_next_tutorials_title: Try these tutorials next
   congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
   get_a_certificate_of_achievement: சாதனைக்கு ஓர் சான்றிதழை பெறுக
-  enter_valid_age: Please select a valid age
+  enter_valid_age: ஒரு செல்லுபடியாகும் வயது தேர்ந்தெடுக்கவும்
   enter_valid_email: தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்
   get_a_certificate_message: "We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond an Hour</a>"
   get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
@@ -83,7 +84,7 @@ ta-IN:
   give_my_hour: 'Give my Hour to:'
   girls_team: பெண்களின் அணி
   boys_team: "Boys' Team"
-  tell_the_world: Tell the world!
+  tell_the_world: உலகத்திடம் சொல்லுங்கள்!
   thanks_for_voting: வாக்களித்ததற்கு நன்றிகள்!
   share_on_facebook: பேஸ்புக்கில் பகிரவும்
   share_on_twitter: ட்விட்டரில் பகிரவும்
@@ -104,7 +105,7 @@ ta-IN:
   enter_country: அமெரிக்காவுக்கு வெளியே இருந்தால் உங்கள் நாட்டை உள்ளிடவும்
   used_infrequent_updates: Only used for infrequent updates
   privacy_practices_children: See our privacy practices for children
-  petition_thankyou: Thank you for signing the petition
+  petition_thankyou: மனுவில் கையெழுத்திட்டமைக்கி நன்றி
   continue_learning_header: Continue learning beyond an Hour
   continue_learning_body: 'There are lots of options.  You can learn online, or at a local school, or summer camp.'
   learn_next_level: Try another Code Studio course
@@ -303,11 +304,13 @@ ta-IN:
   starwars_watch_videos: Before you get started, watch one of these inspirational videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_gradelevel: Ages 6+
   mc_platformtext: Modern browsers, smartphones, tablets
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '

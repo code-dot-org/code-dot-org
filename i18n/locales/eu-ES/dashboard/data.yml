@@ -245,10 +245,10 @@ eu:
         flappy_4: 'Flappyk oztopoak zeharkatuko ditu, oztopo baten kontra talka egitean hil dadin beharrezko kodea idazten ez duzun bitartean. Gehitu bloke bat "oztopo bat jotzen duenean" blokeari. Zure kodeak, "JOKOA AMAITU" behar du, Flappyk lehenengoko tutu multzoarekin talka egiten duenean.'
         flappy_5: 'Orain markatzailea gehituko dugu; horrela, Flappyk oztopoak gainditzen dituenean, puntuak zenbatuko ditugu. Aldatu "oztopoa gainditzean" blokea Flappyk lehenengoko tutu multzoan zehar hegan egiten duenean puntu bat markatzeko.'
         flappy_6: Saiatu puntu bat lortzen Flappyri arinago edo motelago hegan eginaraziz.
-        flappy_7: 'Jarraian, atzekaldean aldatzen saia zaitez "egitean" blokeari beste bloke bat erantsiz'
-        flappy_8: Edozein unetan alda ditzakezu irudiak, ez bakarrik jokoa hasten denean. Saia zaitez eszena berri bat ezartzen AUSAZ beste gertaera batzuk jazotzen direnean, oztopo bat gainditzean, adibidez.
-        flappy_9: Gauzak nahasteko, oztopo batekin topo egiten, jokua bukatu beharrean, markatzailea berriro 0-an jartzen saiatu.
-        flappy_11: Zure Plappy jokua sortu. Ikus-efektuak eta arauak alda ditzakezu, baita ere grabitatea. Bukatzean klik egin Amaiera-n, zure lagunen euren telefonoetan proba dezaten.
+        flappy_7: 'Jarraian, saia zaitez atzealdea aldatzen "martxan dagoenean" blokeari beste bloke bat erantsiz.'
+        flappy_8: Edozein unetan alda ditzakezu irudiak, ez bakarrik jokoa hasten denean. Saia zaitez atzealde berri bat AUSAZ ezartzen beste gertaera batzuk jazotzen direnean, oztopo bat gainditzean, adibidez.
+        flappy_9: Gauzak nahasteko, oztopo batekin topo egitean, jokoa bukatu beharrean, saiatu markatzailea berriro 0-an jartzen.
+        flappy_11: Sortu zure Flappy jokoa. Ikus-efektuak eta arauak alda ditzakezu, baita grabitatea ere. Bukatzean, klik egin Amaiera-n, zure lagunek euren telefonoetan proba dezaten.
         flappy_k1_1: Jolastu Flappy
         flappy_k1_2: 'Itsatsi bloke bat "klikatzean" blokeari; ondoren, sakatu "Hasi". Klikatu edo ukitu pantaila Flappy mugiarazteko helbururaino.'
         flappy_k1_3: |-
@@ -257,8 +257,8 @@ eu:
         flappy_k1_5: 'Flappyk oztopoak zeharkatuko ditu, oztopo baten kontra talka egitean hil dadin beharrezko kodea idazten ez duzun bitartean. Gehitu bloke bat "oztopo bat jotzen duenean" blokeari. Zure kodeak, "JOKOA AMAITU" behar du, Flappyk lehenengoko tutu multzoarekin talka egiten duenean.'
         flappy_k1_6: 'Orain markatzailea gehituko dugu; horrela, Flappyk oztopoak gainditzen dituenean, puntuak zenbatuko ditugu. Aldatu "oztopoa gainditzean" blokea Flappyk lehenengoko tutu multzoan zehar hegan egiten duenean puntu bat markatzeko.'
         flappy_k1_7: Saiatu puntu anitzak lortzen traba bat gainditzean.
-        flappy_k1_8: 'Jarraian, atzekaldean aldatzen saia zaitez "egitean" blokeari beste bloke bat erantsiz'
-        flappy_k1_9: 'Saiatu jokalaria aldatzen. Horretarako "jokalaria ipini" blokea gehitu "egitean" blokeari'
+        flappy_k1_8: 'Jarraian, saia zaitez atzealdea aldatzen "martxan dagoenean" blokeari beste bloke bat erantsiz.'
+        flappy_k1_9: 'Saiatu jokalaria aldatzen. Horretarako "jokalaria ipini" blokea gehitu "martxan dagoenean" blokeari.'
         jigsaw_1: Klikatu blokea
         jigsaw_2: Arrastatu blokea helburura
         jigsaw_3: Antolatu blokeak irudia osatzeko
@@ -278,62 +278,62 @@ eu:
         mazestep_4: Labirinto pausuaren deskribapena hemen
         mazestep_5: Labirinto pausuaren deskribapena hemen
         studio_c2_1: 'Esanarazi diezaiokezu txakurrari "Kaixo mundua"?'
-        studio_c2_2: Lor dezakezu, txakurrak zerbait esan eta katuak erantzutea?
+        studio_c2_2: Lor dezakezu txakurrak zerbait esan eta katuak erantzutea?
         studio_c2_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
         studio_c2_4: 'Sor dezakezu programa bat, txakurra katuarengana mugiarazteko eta katuak "kaixo" esan dezala txakurra hurbiltzen denean?'
         studio_c2_5: 'Sor dezakezu programa bat, olagarroak "kaixo" esan dezan bere gainean klik egitean?'
         studio_c2_6: Idatz al dezakezu programa bat pinguino hau mugiarazteko gora / behera / ezker / eskuin gezi-teklen bidez helburu guztiak lortzeko?
         studio_c2_7: '"Errepikatu betirako" blokeak ahalbidetzen du kodea modu jarraituan exekutatzea. Elkartu al ditzakezu blokeak dinosauro hau etengabe mugitzeko gora eta behera?'
-        studio_c2_8: 'Lor dezakezu pinguinoak Ene! esan eta kolpe baten soinua sortzea dinosauruarekin topo egitean? Gezidun teklekin mugiarazi behar da  guzti hau gertatzeko.'
+        studio_c2_8: 'Lor dezakezu pinguinoak "Ene!" esan eta kolpe baten soinua sortzea dinosauroarekin topo egitean? Geziekin mugiarazi behar da, guzti hau gertatzeko.'
         studio_c2_9: Gehitu al dezakezu bloke bat puntu bat eskuratzeko pinguinoak olagarroa harrapatzen duenean? Mugi ezazu pinguinoa gezien bidez puntua lortu arte
         studio_c2_10: Gehitu al ditzakezu blokeak atzealdea eta pinguinoaren abiadura aldatzeko? Mugi ezazu pinguinoa gezien bidez puntu bat lortu arte
-        studio_c2_11: Zure istorioa sortu. Bukatzean egin klik amaieran zure lagunek euren telefonoetan froga dezaten.
+        studio_c2_11: Sortu zure istorioa. Bukatzean, egin klik Amaieran, zure lagunek euren telefonoetan froga dezaten.
         studio_c3_story_1: 'Esanarazi diezaiokezu txakurrari "Kaixo mundua"?'
-        studio_c3_story_2: Lor dezakezu, txakurrak zerbait esan eta katuak erantzutea?
+        studio_c3_story_2: Lor dezakezu txakurrak zerbait esan eta katuak erantzutea?
         studio_c3_story_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
         studio_c3_story_4: 'Sor dezakezu programa bat, txakurra katuarengana mugiarazteko eta katuak "kaixo" esan dezala txakurra hurbiltzen denean?'
         studio_c3_story_5: Erants dezakezu bloke bat, olagarroa pozik egon dadin?
-        studio_c3_story_6: Zure istorioa sortu. Bukatzean egin klik amaieran zure lagunek euren telefonoetan froga dezaten.
+        studio_c3_story_6: Sortu zure istorioa. Bukatzean, egin klik Amaieran, zure lagunek euren telefonoetan froga dezaten.
         studio_c3_game_1: 'Sor dezakezu programa bat, olagarroak "kaixo" esan dezan bere gainean klik egitean?'
         studio_c3_game_2: Idatz al dezakezu programa bat pinguino hau mugiarazteko gora / behera / ezker / eskuin gezi-teklen bidez helburu guztiak lortzeko?
         studio_c3_game_3: '"Errepikatu betirako" blokeak ahalbidetzen du kodea modu jarraituan exekutatzea. Elkartu al ditzakezu blokeak dinosauro hau etengabe mugitzeko gora eta behera?'
-        studio_c3_game_4: 'Lor dezakezu pinguinoak Ene! esan eta kolpe baten soinua sortzea dinosauruarekin topo egitean? Gezidun teklekin mugiarazi behar da  guzti hau gertatzeko.'
+        studio_c3_game_4: 'Lor dezakezu pinguinoak "Ene!" esan eta kolpe baten soinua sortzea dinosauroarekin topo egitean? Geziekin mugiarazi behar da, guzti hau gertatzeko.'
         studio_c3_game_5: Gehitu al dezakezu bloke bat puntu bat eskuratzeko pinguinoak olagarroa harrapatzen duenean? Mugi ezazu pinguinoa gezien bidez puntua lortu arte
         studio_c3_game_6: Gehitu al ditzakezu blokeak atzealdea eta pinguinoaren abiadura aldatzeko? Mugi ezazu pinguinoa gezien bidez puntu bat lortu arte
-        studio_c3_game_7: Sortu zeure jokoa. Bukatuta daukazunean, amaieran sakatu zure jokoa zure lagunak beraien sakelakoetan froga egin dezatela.
-        studio_playlab_1: 'Pinguinoak "kaixo" esan nahi du. Lagun dezakezu?'
-        studio_playlab_2: 'Haitzuloko mutilak (1.aktorea) eta neskak (2.aktorea) "kaixo" esan nahi diote elkarri. Lagun ditzakezu "esan" blokea bi aldiz erabiliz?'
-        studio_playlab_3: Lagun dezakezu tenislaria bandera heltzen?
-        studio_playlab_4: Lagun dezakezu mutil tenislaria (1. aktorea) neska tenislariarengana (2. aktorea) iristen eta lortzean soinu bat egin?
-        studio_playlab_5: 'Lagunduko diozu espazioko Robotari "Agur lurtarrak" esaten klikatzen dugunean? Ez ahaztu bere gainean klik egiten "Egin"-en klik egiten duzunean.'
-        studio_playlab_6: Lagun dezakezu sorgina su-bola guztietara iristen, gezidun teklak gora/behera/ezker/eskuin erabiliz?
+        studio_c3_game_7: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
+        studio_playlab_1: 'Pinguinoak "kaixo" esan nahi du. Lagun diezaiokezu?'
+        studio_playlab_2: 'Haitzuloko mutilak (1. aktorea) eta neskak (2. aktorea) "kaixo" esan nahi diote elkarri. Lagun diezaiekezu "esan" blokea bi aldiz erabiliz?'
+        studio_playlab_3: Lagun diezaiokezu tenislariari bandera heltzen?
+        studio_playlab_4: Lagun diezaiokezu mutil tenislariari (1. aktorea) neska tenislariarengana (2. aktorea) iristen eta hori lortzean soinu bat egin?
+        studio_playlab_5: 'Lagunduko diozu espazioko Robotari "Agur lurtarrak" esaten klikatzen dugunean? Ez ahaztu bere gainean klik egin beharko duzula "Hasi" klikatu ondoren'
+        studio_playlab_6: Lagun diezaiokezu sorginari su-bola guztietara iristen, gora/behera/ezker/eskuin gezi-teklak erabiliz?
         studio_playlab_7: '"Errepikatu betirako" blokeak kodea etengabe errepikatzea ahalbidetzen du. Gehi ditzakezu blokeak aztia eskuin eta ezker behin eta berriz mugi dadin?'
-        studio_playlab_8: Gehi dezakezu bloke bat puntu bat lortzeko eta bloke bat soinu bat erreproduzitzeko adarbakarra aztirantz doanean, eta ondoren hau mugitu geziekin puntu bat lortu arte?
+        studio_playlab_8: Gehi dezakezu bloke bat puntu bat lortzeko eta bloke bat soinu bat erreproduzitzeko adarbakarra aztiarenganaino iristean? Programa martxan dagoenean, mugitu adarbakarra geziekin puntu bat lortu arte
         studio_playlab_9: Ezarri atzealdea estralurtarren inbasio honetarako eta lagundu espazioko robotari estralurtarrengana azkarrago iristen haren abiadura aldatuz. Mugiarazi gezien bidez beste guztiei abisatzeko
-        studio_playlab_10: Sortu zeure jokoa. Bukatuta daukazunean, amaieran sakatu zure jokoa zure lagunak beraien sakelakoetan froga egin dezatela.
+        studio_playlab_10: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
         studio_iceage_1: 'Mannyk "kaixo" esan nahi du - lagunduko diozu?'
-        studio_iceage_2: 'Diegok (1. aktorea) eta Grannyk (2. aktorea) "kaixo" esan nahi diote elkarri. Lagun ditzakezu "esan" blokea bi aldiz erabiliz?'
+        studio_iceage_2: 'Diegok (1. aktorea) eta Grannyk (2. aktorea) "kaixo" esan nahi diote elkarri. Lagun diezaiekezu "esan" blokea bi aldiz erabiliz?'
         studio_iceage_3: Scrat lagundu dezakezu banderara iristen?
-        studio_iceage_4: Scrat (1 aktorea) lagundu dezakezu Grannyrengana (2 aktorea) iristeko eta iristen denean soinu bat jotzeko?
-        studio_iceage_5: 'Lagundu diezaiokezu Sidi "agurrak" esaten klikatua denean? Ez ahaztu klikatzeaz Hasi sakatu ondoren'
+        studio_iceage_4: Scrati (1. aktorea) lagundu diezaiokezu Grannyrengana (2. aktorea) iristeko eta iristen denean soinu bat erreproduzitzeko?
+        studio_iceage_5: 'Lagundu diezaiokezu Sidi "agurrak" esaten klikatua denean? Ez ahaztu klikatzeaz "Hasi" sakatu ondoren'
         studio_iceage_6: Lagundu diezaiokezu Diegori mugi dadin gora/behera/ezker/eskuin gezi-teklak erabiliz, bandera guztiak har ditzan?
         studio_iceage_7: '"Errepikatu betiko" blokeak ahalbidetzen dizu kodea etengabe egikaritzea. Itsatsi bloke horri beste bloke batzuk Sid mugi dadin ezker-eskuin etengabe'
         studio_iceage_8: Gehitu dezakezu bloke bat puntu bat eskuratzeko eta beste bloke bat soinu bat ateratzeko Sidek Manny harrapatzen duenean? Orduan, mugi ezazu Sid gezi-teklen bidez, puntu bat lortu arte.
-        studio_iceage_9: Ezarri fondo bat izotz-aldi honetarako eta lagundu Sidi azkarrago joaten Grannyrenganaino, bere abiadura aldatuz. Orduan, mugi ezazu Sid gezi-teklen bidez Grannyrenganaino iritsi eta beste guztiei abisua emateko.
-        studio_iceage_10: Sortu zeure jokoa. Bukatuta daukazunean, amaieran sakatu zure jokoa zure lagunak beraien sakelakoetan froga egin dezatela.
+        studio_iceage_9: Ezarri atzealde bat izotz-aldi honetarako eta lagundu Sidi azkarrago joaten Grannyrenganaino, bere abiadura aldatuz. Orduan, mugi ezazu Sid gezi-teklen bidez Grannyrenganaino iritsi eta beste guztiei abisua emateko.
+        studio_iceage_10: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
         studio_gumball_1: 'Anaisek "kaixo" esan nahi du. Lagundu diezaiokezu?'
-        studio_gumball_2: 'Darwinek (1 aktorea) eta Gumballek (2 aktorea) "kaixo" esan nahi diote elkarri. Lagundu diezaiekezu "esan" blokea bi aldiz erabiliz?'
+        studio_gumball_2: 'Darwinek (1. aktorea) eta Gumballek (2. aktorea) "kaixo" esan nahi diote elkarri. Lagundu diezaiekezu "esan" blokea bi aldiz erabiliz?'
         studio_gumball_3: Lagundu diezaiokezu Banana Joeri banderaraino iristen?
-        studio_gumball_4: Lagundu diezaiokezu Gumballi (1 aktorea) Darwinenganaino (2 aktorea) iristen eta soinu bat egiten hara iristean?
-        studio_gumball_5: 'Lagundu diezaiokezu Antonyri "zorionak" esaten bere gainean klik egitean? Ez ahaztu klik egin behar duzula "Hasi" sakatu ondoren'
+        studio_gumball_4: Lagundu diezaiokezu Gumballi (1. aktorea) Darwinenganaino (2. aktorea) iristen eta soinu bat egiten hara iristean?
+        studio_gumball_5: 'Lagundu diezaiokezu Antonyri "agurrak" esaten bere gainean klik egitean? Ez ahaztu klik egin behar duzula "Hasi" sakatu ondoren'
         studio_gumball_6: Lagundu diezaiokezu Darwini mugi dadin gora/behera/ezker/eskuin gezi-teklak erabiliz, bandera guztiak har ditzan?
         studio_gumball_7: '"Errepikatu betiko" blokeak ahalbidetzen dizu kodea etengabe egikaritzea. Itsatsi bloke horri beste bloke batzuk Antony mugi dadin ezker-eskuin etengabe'
-        studio_gumball_8: Gehitu dezakezu bloke bat puntu bat eskuratzeko eta beste bloke bat soinu bat ateratzeko Banana Joek Antony harrapatzen duenean? Orduan, mugi ezazu Banana Joe gezi-teklen bidez, puntu bat lortu arte.
-        studio_gumball_9: Ezarri fondo bat espazio inbasio honetarako eta lagundu Nicoleri azkarrago joaten Pennyrenganaino, bere abiadura aldatuz. Orduan, mugi ezazu Nicole gezi-teklen bidez Pennyrenganaino iritsi eta beste guztiei abisua emateko.
-        studio_gumball_10: Sortu zeure jokoa. Bukatuta daukazunean, amaieran sakatu zure jokoa zure lagunak beraien sakelakoetan froga egin dezatela.
-        studio_full_sandbox: Sortu zeure jokoa. Bukatuta daukazunean, amaieran sakatu zure jokoa zure lagunak beraien sakelakoetan froga egin dezatela.
+        studio_gumball_8: Gehitu dezakezu bloke bat puntu bat eskuratzeko eta beste bloke bat soinu bat ateratzeko Banana Joek Antony harrapatzen duenean? Orduan, mugi ezazu Banana Joe gezien bidez, puntu bat lortu arte.
+        studio_gumball_9: Ezarri atzealde bat espazio inbasio honetarako eta lagundu Nicoleri azkarrago joaten Pennyrenganaino, bere abiadura aldatuz. Orduan, mugi ezazu Nicole gezi-teklen bidez Pennyrenganaino iritsi eta beste guztiei abisua emateko.
+        studio_gumball_10: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
+        studio_full_sandbox: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
         studio_k1_1: 'Esanarazi diezaiokezu txakurrari "Kaixo mundua"?'
-        studio_k1_2: Lor dezakezu, txakurrak zerbait esan eta katuak erantzutea?
+        studio_k1_2: Lor dezakezu txakurrak zerbait esan eta katuak erantzutea?
         studio_k1_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
         studio_k1_4: 'Txakurra katuarengana mugi dadin agindu eta iristean "Kaixo" esan dezala.'
         studio_k1_5: Erants dezakezu bloke bat, olagarroa pozik egon dadin?
@@ -342,16 +342,16 @@ eu:
         maze_wordsearch_k_2: 'Mugi nazazu "SOUTH" hitzaren gainean, letraz letra'
         maze_wordsearch_k_3: 'Mugi nazazu "WEST" hitzaren gainean, letraz letra'
         maze_wordsearch_k_4: 'Mugi nazazu "NORTH" hitzaren gainean, letraz letra'
-        maze_wordsearch_k_6: Mugi nazazu lehenik ekialdera eta ondoren hegoaldera SALTO hitza letratzeko
+        maze_wordsearch_k_6: 'Mugi nazazu lehenik ekialdera eta ondoren hegoaldera "JUMP" hitzaren letren gainean, letraz letra'
         maze_wordsearch_k_9: 'Mugi nazazu alde batera, eta ondoren bestera, "CODE" hitzaren gainean, letraz letra'
         maze_wordsearch_k_13: 'Mugi nazazu alde batera, eta ondoren bestera, "DEBUG" hitzaren gainean, letraz letra'
         maze_wordsearch_k_15: 'Mugi nazazu alde batera, eta ondoren bestera, "ABOVE" hitzaren gainean, letraz letra'
         maze_wordsearch_k_16: 'Mugi nazazu alde batera, eta ondoren bestera, "BELOW" hitzaren gainean, letraz letra'
         maze_wordsearch_k_20: 'Hau proba da! Mugi nazazu alde batera, eta ondoren bestera, "STORY" hitzaren gainean, letraz letra'
         applab_ec_simple: Sortu zure app-a tresna-kutxako blokeak erabiliz.
-        turtle_ec_1_2: 'Orain, karratu bat marraztu. OHARRA: erabili zure kolore gustokoena "bolaluma kolorea" bloke berrian aukeratuz.'
-        turtle_ec_1_10: 'Lortu duzu! Orain, marraztu zuk nahi duzuna. Ideia dibertigarri batzuk: makila bat, elur maluta, edo kiribila. "Bolaluma zabalera" blokea ere proba ezazu. Dibertitu!'
-        studio_ec_sandbox: Sortu zeure jokoa. Bukatuta daukazunean, amaieran sakatu zure jokoa zure lagunak beraien sakelakoetan froga egin dezatela.
+        turtle_ec_1_2: 'Orain, marraztu karratu bat. OHARRA: erabili zure kolore gustukoena "bolaluma kolorea" bloke berrian aukeratuz.'
+        turtle_ec_1_10: 'Lortu duzu! Orain, marraztu zuk nahi duzuna. Ideia dibertigarri batzuk: marratxoz egindako panpintxo bat, elur maluta, edo espirala. "Ezarri lodiera" bloke berria ere erabil dezakezu. Ondo pasa!'
+        studio_ec_sandbox: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
     video:
       name:
         maze_intro: 'Sarrera: Labirintora'
@@ -383,7 +383,7 @@ eu:
         C1_moveitmoveit_unplugged: Mugi ezazu, mugi ezazu!
         C1_bigevent_unplugged: Gertaera Handia
         C1_getting_loopy: Iteratzen
-        C1_pair_programming: Bikoitien programazioa.
+        C1_pair_programming: Bikoteka programatzen
         C1_maze_intro_sequencing: 'Sarrera: Labirintoaren sekuentziazioa'
         C1_maze_debugging: Labirintoaren arazketa
         C1_bee_level_intro: 'Erle maila - Sarrera'
@@ -504,11 +504,11 @@ eu:
         starwars_blocks_intro: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen - Sarrera'
         starwars_blocks_events: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen - Gertaerak'
         starwars_blocks_congrats: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen - Zorionak'
-        mc_intro: 'Minecraft - Introduction'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        mc_intro: 'Minecraft - Sarrera'
+        mc_repeat: 'Minecraft - Errepikatu'
+        mc_if_statements: 'Minecraft - Baldintzapeko aginduak'
+        mc_congrats_share: 'Minecraft - Zorionak'
+        mc_congrats_no_share: 'Minecraft - Zorionak'
     callout:
       text:
         drag_blocks: 'Arrastatu "mugitu" blokea eta lotu beste blokearen azpian'
@@ -518,7 +518,7 @@ eu:
         show_code_explanation: Klikatu hemen sortzen ari zaren programaren kodea ikusteko
         instructions_repeat_explanation: Puzzle bakoitzerako jarraibideak hemen daude errepikatuta
         category_explanation: Bloke berberak dituzu baino oraingoan kategorietan antolatu dira
-        set_sprite_image: 'Gehitu "ezarri aktorea irudiari" blokea "istoria hasten denean" blokeari aktore bat istorian gaitzeko'
+        set_sprite_image: 'Gehitu "ezarri aktorea irudiari" blokea "istorioa hasten denean" blokeari aktore bat istorioan gaitzeko'
         studio_say_text: Kakots artean idatzi zure aktoreak esango duena
         jigsaw_click: Klikatu bloke hau!
         move_elsa_forward: 'Arrastatu "Mugitu aurrera" blokea eta utzi "Martxan dagoenean" blokearen azpian Elsa aurrera mugitzeko'
@@ -543,17 +543,17 @@ eu:
         edit_get_nectar: Erabili botoi hau funtzioa editatzeko eta aldatu Erlearen biraketa noranzkoa nektarra biltzeko.
         logic_category: 'Ireki "Logika" zabalgarria "baldin/bestela" blokea aurkitzeko.'
         length_parameter: 'Funtzio hau eguneratu dezakezu "luzera" parametroa erabiltzeko moduan?'
-        frozen_diamond_repeat: Erabili errepikatu blokea irudi hau sortzeko.
+        frozen_diamond_repeat: 'Erabili "errepikatu" blokea irudi hau sortzeko.'
         frozen_circle_function_in_circle_turn: Ez ahaztu biratzeaz zirkulu bakoitza sortu ondoren.
         frozen_circle_function_with_parameter_circle: 'Erabili "sortu zirkulua" blokea eta aldatu tamaina.'
         frozen_snowflake_branch: 'Erabili "sortu elur-malutaren adarra" blokea'
         frozen_create_square: Gehitu bloke gehiago hemen karratu bat sortzeko
         playlab_drag_say: 'Arrastatu "esan" blokea hona eta tekleatu "kaixo"'
-        playlab_use_twice: Erabili bloke hau bi aldiz eta gogoratu eragilearen zenbakia aldatzeaz
+        playlab_use_twice: Erabili bloke hau bi aldiz eta gogoratu aktorearen zenbakia aldatzeaz
         playlab_move_girl: 'Erabili "mugitu eskuinerantz" blokea Neska Tenislaria mugitzeko'
-        playlab_play_sound: 'Gehitu "soinua erreproduzitu" blokea hemen'
-        playlab_arrow_keys: 'Gogoratu hauek erabili behar dituzula sorgina mugi dadin "Hasi programa" sakatu ondoren'
-        playlab_add_move: 'Gehitu "mugitu" blokeak errepikapen bloke honen barruan'
+        playlab_play_sound: 'Gehitu "erreproduzitu soinua" blokea hemen'
+        playlab_arrow_keys: 'Gogoratu hauek erabili behar dituzula sorgina mugi dadin "Hasi" sakatu ondoren'
+        playlab_add_move: 'Gehitu "mugitu" blokeak "errepikatu" bloke honen barruan'
         playlab_add_score: Gehitu puntuazio blokeak hemen
         playlab_add_blocks: Gehitu zure blokeak hemen
         set_variable: Arrastatu zenbakizko bloke bat hona zure aldagaiari balioa emateko
@@ -564,26 +564,26 @@ eu:
         change_here: Egin hemen zure aldaketa
         write_draw_square_function: Arrastatu tresna-kutxatik hona karratu bat marrazten duten blokeak
         write_draw_triangle_function: Arrastatu tresna-kutxatik hona triangelu bat marrazten duten blokeak
-        edit_add_parameter: Klikatu editatu zure funtzioan parametro bat gehitzeko
-        add_and_drag_parameter: Idatzi hemen zure parametroaren izena, klikatu gehitu eta orduan arrastatu ezazu zure funtzioaren definiziora
-        fill_in_actor: Bete itzazu ??? eragileei dagozkien zenbakiekin (1, 2 eta 3)
-        repeat: Jarri blokeak begizta barruan komandoak errepikatzeko
-        if_bee_nectar: 'Erabili "if" blokea erleak nektarra behar duen erabakitzeko'
-        if_else_bee: 'Erabili "if/else" blokea Bee-k lorearen nektarra lortzeko, eta eztia egiteko ez bada lore bat'
+        edit_add_parameter: 'Klikatu "editatu" zure funtzioan parametro bat gehitzeko'
+        add_and_drag_parameter: 'Idatzi hemen zure parametroaren izena, klikatu "gehitu" eta orduan arrastatu ezazu zure funtzioaren definiziora'
+        fill_in_actor: Bete itzazu ??? aktoreei dagozkien zenbakiekin (1, 2 eta 3)
+        repeat: Jarri blokeak begiztaren barruan komandoak errepikatzeko
+        if_bee_nectar: 'Erabili "baldin" blokea erleak nektarra behar duen erabakitzeko'
+        if_else_bee: 'Erabili "baldin/bestela" blokea erleak lorearen nektarra lortzeko, eta eztia egiteko ez bada lore bat'
         repeat_full_circle: Adierazi zenbatetan mugitu behar den zonbia biribil osoa egiteko.
-        place_length_variable: Eraman luzeraren aldagaia hona galdera-ikurrak ordezkatzeko
+        place_length_variable: 'Arrastatu "luzera" aldagaia hona galdera-ikurrak ordezkatzeko'
         arrows_move_actor: Geziak erabili aktorea mugitzeko.
         right_arrow_fireball: Eskuineko gezia erabili su-bolak jaurtikitzeko.
         name_function: Idatzi hemen zure funtzioaren izena.
-        Infinity_move_right_runbutton: Gehitu mugitu blokea hemen
+        Infinity_move_right_runbutton: 'Gehitu "mugitu" blokea hemen'
         Infinity_move_directions_callout: Ze blokek mugitu araziko du gora Baymax gezia gora sakatzerakoan?
         Infinity_move_directions_callout_arrow: Erabili gezi hauek gidatzeko
         Infinity_move_collide_callout: Gertaera honetan hots bat egin.
         Infinity_repeat_callout: '"Mugitu" blokeak hemen kokatu'
         craft_run_button_callout: 'Sakatu "Hasi" zure programa probatzeko'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_drag_block_callout: 'Arrastatu "moveForward();" bloke bat eta kokatu beste blokearen azpian'
+        craft_callout_preplaced: Hona hemen hainbat bloke zu hasi ahal izateko
+        craft_inside_repeat: Errepikatu ekintzak blokeak hemen txertatuz
+        craft_callout_preplaced_house: Kode honen bitartez, zure etxea eraikitzen hasiko da. Bukatu dezakezu zuk?
+        craft_what_is_iron: Erauzi burdina!
+        craft_callout_moveforward: Kode honek laba bilatzen du. Gehitu dezakezu agindu bat aurrera mugitzeko?

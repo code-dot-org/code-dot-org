@@ -920,7 +920,7 @@ uk:
       Course 4 Artist Vars 10_instruction: 'Ось алгоритм, який малює трикутник з менших трикутників. Можеш змінити його так, щоб він використовував змінну "сторони" для малювання трикутників? Переглянь код і щоразу, коли бачиш число 3, заміни його на змінну "сторони". Не забудь використати блок "встановити сторони".'
       Course 4 Artist Vars 11_instruction: 'Ось трохи складніший код, що базується на тих же поняттях, що й останнє завдання - як слід змінити змінну "сторони" для того, щоб можна було намалювати зображення з квадратів?'
       Course 4 Artist Vars 12_instruction: 'Встановимо змінну "сторони" як 5. Чим більше сторін ми додаємо до цього алгоритму, тим більшим стає узор! Зверни увагу на появу нової змінної "довжина". Тепер можна її використати, коли потрібно "рухатися вперед". Для цієї фігури встанови змінну "довжина" у значення 75.'
-      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the \"length\" variable, let's use a math block with the\n\"sides\" variable inside to make sure that each shape fits correctly. The\nperimeter of each polygon is 300 pixels.\r\nNeed some hints?  Click here."
+      Course 4 Artist Vars 13_instruction: "Коли фігура має багато сторін, кожна із них має бути коротшою, якщо ти хочеш, щоб увесь узор помістився на екран.\n\r\nСтворимо алгоритм для цього цікавого візерунка, але замість того, щоб вручну задавати змінну \"довжина\", скористаємось математичним блоком зі змінною \"сторін\" всередині, щоб кожна фігура вписувалась коректно. Периметр багатокутника становить 300 пікселів.\r\nПотрібні підказки? Клацай тут."
       Course 4 Artist Vars 14_instruction: 'Вільна гра: Поглянь, тепер алгоритм міститься всередині ще одного циклу. Поекспериментуй зі значеннями двох змінних, щоб утворились цікаві узори.'
       Course 4 Artist Vars 2_instruction: 'Замість того, щоб "рухатися вперед на 100", тепер блок "рухатись" містить посилання на змінну "довжина". Можеш встановити "довжину" в 150 і намалювати новий трикутник?'
       Course 4 Artist Vars 3_instruction: 'Ось цикл, що малює квадрат, але чогось не вистачає. Можеш виправити його так, щоб він використовував змінну "довжина", щоб встановити, якої довжини має бути кожна сторона? '
@@ -1000,17 +1000,13 @@ uk:
         
       Course 4 Play Lab Params 2_instruction: 'Тепер у нас є прапори, що занадто високі для наших поточних стрибків! Додамо до функції стрибка параметр, який називається "висота". Стрілка вгору повинна виконувати стрибок на 200 пікселів, а стрілка вниз на 100 пікселів. Натисни "Редагувати" на функції стрибка і онови її, так щоб замість простого стрибка на 100 пікселів використовувався параметр висоти.'
       Course 4 Play Lab Params 3_instruction: 'Давайте додамо ще один параметр до функції стрибка, так щоб можна було використовувати її з іншими персонажами. Кожен персонажам представлений числом, починаючи від одного. Зміни функцію стрибка, так щоб включити у її визначення параметр персонажа. '
-      Course 4 Play Lab Params 4_instruction: 'Ось функції, яка називається "патруль." Зміни її так, щоб перемістити кішку на 400 пікселів вгору, а потім на 400 пікселів вниз .'
+      Course 4 Play Lab Params 4_instruction: 'Ось функції, яка називається "патрулювати." Зміни її так, щоб перемістити кішку на 400 пікселів вгору, а потім на 400 пікселів вниз.'
       Course 4 Play Lab Params 5_instruction: |-
-        Заповни вхідний параметр "персонаж", так щоб можна було викликати функцію "патруль" для кожного персонажу. Пам'ятай, що персонажам відповідають номери 1, 2 і 3.
-      Course 4 Play Lab Params 6_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Try using a "set speed" block with the new "speed"
-        parameter to help Penguin get both flags before the other sprites even get
-        one.
+        Заповни вхідний параметр "персонаж", так щоб можна було викликати функцію "патрулювати" для кожного персонажу. Пам'ятай, що персонажам відповідають номери 1, 2 і 3.
+      Course 4 Play Lab Params 6_instruction: 'Додай параметр з назвою "швидкість" до функції "патрулювати". Спробуй використати блок "задати швидкість" з новим параметром "швидкість", щоб допомогти Пінгвіну дістатись до обох прапорців до того, як інші персонажі дістануться хоч до одного.'
       Course 4 Play Lab Params 7_instruction: Використовуй клавіші зі стрілками для керування собакою і збирання усіх прапорів.
       Course 4 Play Lab Params 8_instruction: 'Використовуй блок "коли торкається", щоб відправити собаку назад у верхній лівий напрям, якщо собака торкнеться будь-якого іншого персонажу.'
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit\nthe function so that a \"points\" parameter is added to the \"player_score\"\nvariable. \r\n\r\nThe variable \"player_score\" should increase each time\nDog tags Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Ось наша гра з попереднього етапу, але більшість коду приховано. Є нова функція, яка називається \"отримати бали\".\r\n\r\nЗміни цю функцію так, щоб параметр \"бали\" додавався до змінної \"бали гравця\".\r\n\r\nЗмінна \"бали гравця\" повинна збільшуватись щоразу, як Собака торкається Кота сердечком, і зменшуватись щоразу, як Кіт влучає у Собаку сердечком.\n\r\n\r\nПримітка. Коли готово, клацай \"Запустити\", щоб грати. Коли Собака набере 6 балів, ти зможеш перейти до наступного завдання. "
       Course 4 Play Lab Vars 1_instruction: 'Тобі не доведеться писати код, просто натисни "Запустити", щоб пограти в гру! Ти граєш за собаку, яка намагається зібрати прапорів, ніж кішка. Використовуй стрілку вниз, щоб керувати собакою. Натисни "Готово", коли завершиш гру.'
       Course 4 Play Lab Vars 2_instruction: 'Ті перегони були не зовсім справедливим! Поміняй змінну "швидкість собаки", щоб переконатися, що можеш зібрати більше прапорів, ніж кіт. Перемагає перший, хто збере 10 прапорів!'
       Course 4 Play Lab Vars 3_instruction: Ось і новий вид гри! Використовуй стрілки вліво та вправо для переміщення, а вгору, щоб стрибати. Подивимось, чи зможеш ти зібрати всі прапори.
@@ -1309,19 +1305,10 @@ uk:
       frozen circle_instruction: Коло є особливою фігурою. Здогадаєшся, які числа потрібно поставити замість знаків питання, щоб намалювати коло?
       frozen cross rotate dense_instruction: 'А повторимо це 90 разів! Скільки разів 90 входить у 360? Підказка: це дуже мале число.'
       frozen cross rotate_instruction: А тепер спробуємо повторити 10 разів. На скільки градусів потрібно повертати між лініями?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using another “Repeat"
-        block to repeat a parallelogram 4 times, turning right by 90 degrees between
-        each parallelogram.
+      frozen cross_instruction: 'Розмісти ці команди всередині блоку "Повторити", щоб створити знак плюса. А ти зауважив, що Ельза може рухатись вперед та назад?'
+      frozen diamond mini snowflake_instruction: 'Чи знаєш ти, що кожна сніжинка має унікальну форму? Створимо нову сніжинку, використавши блок "Повторити" для малювання паралелограма 4 рази, повертаючи на 90 градусів після кожної фігури.'
       frozen diamond snowflake_instruction: Що ж, створимо нову сніжинку, використавши блок повторення, щоб намалювати паралелограм 10 разів, повертаючи на 36 градусів між ними.
-      frozen diamond_instruction: |
-        Use a repeat around these blocks to create a parallelogram.
-        It's just like a rectangle but has different angles. This one has 60 degree
-        and 120 degree angles instead of all 90 degree angles.
+      frozen diamond_instruction: 'Застосуй блок повторення до цих блоків, щоб намалювати паралелограм. Він схожий на квадрат, але з різними кутами. Цей має кути 60 та 120 градусів, тоді як квадрат - усі по 90 градусів.'
       frozen freeplay_instruction: Вітаємо офіційного головного художника! Створіть свою зимову казку!
       frozen line_instruction: Привіт! Я Ельза з Еренделу. Допоможи мені намалювати лінію.
       frozen perpendicular_instruction: 'А тепер спробуємо створити дві лінії, розміщені під кутом 90 градусів між собою. Нам знадобиться блок "Повернути", а також блок "Рухатись".'
@@ -1727,68 +1714,25 @@ uk:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
-      Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
-      Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
-      Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
-      Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
-      Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
-      Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
-      Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+        Налетіти на Плазуна - погана ідея.
+        Обережно пробирайся повз Плазунів та доберись до безпеки свого дому.
+      Overworld Chop Tree_instruction: 'Деревина - важливий ресурс. З неї виготовляють багато речей. Підійди до дерева і скористайся командою "знищити блок", щоб зрубати його.'
+      Overworld Chop Trees_instruction: Нам потрібно збудувати будинок до заходу сонця. Для цього потрібно багато деревини. Зрубай 3 дерева.
+      Overworld Free Play 20x20_instruction: Вітання! Вирішено останнє завдання! Тепер добувай, будуй, створюй щось унікальне, використовуючи все вивчене.
+      Overworld Free Play_instruction: 'Цей краєвид - твоє поле гри. Можеш будувати що завгодно.'
+      Overworld House Frame - A_instruction: Створимо власний будинок! Це місце виглядає непогано. Збудуй каркас на земляних блоках.
+      Overworld House Frame - C_instruction: Створимо власний будинок! Це місце виглядає непогано. Збудуй каркас на земляних блоках.
+      Overworld House Frame B_instruction: Одну стіну завершено, збудуємо решту будинку, відповідно до плану! Потрібно буде повторювати багато дій.
+      Overworld House Frame B2_instruction: Одну стіну завершено, збудуємо решту будинку, відповідно до плану! Потрібно буде повторювати багато дій.
+      Overworld House Frame C_instruction: Одну стіну завершено, збудуємо решту будинку, відповідно до плану! Потрібно буде повторювати багато дій.
+      Overworld House Frame Chosen_instruction: 'Збудуй решту будинку з матеріалу, який подобається. Команда "повторити" стане у нагоді.'
+      Overworld House Frame_instruction: Збудуємо власний будинок! Це місце виглядає непогано. Будуй каркас на земляних блоках.
+      Overworld Minecart Track_instruction: 'Ми знову на поверхні, маючи багато підземних ресурсів. Тепер спробуємо побудувати колію вздовж шляху від твого будинку. Перший етап - очистити шлях. Слідуй по шляху і розчищай дерева.'
+      Overworld Move to Sheep_instruction: 'Додай другу команду "рухатись вперед" для того, щоб дістатись до вівці.'
+      Overworld Place Wall_instruction: 'Будинок починається зі стіни. Створи першу частину свого будинку, розміщуючи команди "поставити" та "рухатись вперед" всередині циклу повторення.'
+      Overworld Plant Crops_instruction: Дуже добре планувати заздалегідь. Посади рослини по обидві сторони від води, щоб не бути голодним згодом.
+      Overworld Powered Minecart_instruction: Чудова робота! Зібрано багато ресурсів і побудовано скромний будиночок. А тепер додамо колію від краю карти до дверей твого будинку.
+      Overworld Shear Sheep_instruction: 'Час стригти овець! Скористайся командою "стригти", щоб зістригти вовну з обох овець.'
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -1970,7 +1914,7 @@ uk:
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
       Ryan - 4-5 Bee Conditionals 2_instruction: "Зараз бджолі потрібен тільки нектар. Не всі об'єкти є квітами, тож перевіряй під кожною хмаринкою, чи приховує вона квітку. Якщо так, то можна збирати нектар."
-      Ryan Test Locked Blocks_instruction: 'Ось функції, яка називається "патруль." Зміни її так, щоб перемістити кішку на 400 пікселів вгору, а потім на 400 пікселів вниз .'
+      Ryan Test Locked Blocks_instruction: 'Ось функції, яка називається "патрулювати." Зміни її так, щоб перемістити кішку на 400 пікселів вгору, а потім на 400 пікселів вниз.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
         This butterfly is named Sam, and
@@ -3361,23 +3305,11 @@ uk:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
-      Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
-      Underground If Statements_instruction: |
-        Now things are getting tricky. Mine
-        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
-        over any lava you uncover.
-      Underground Iron_instruction: |
-        Walking into molten lava is a bad idea. Place
-        cobblestone to create a bridge, then mine at least two of the iron blocks.
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7 redstone! Try using a repeat command inside a repeat command to walk in\na square.\r\n"
-      Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
-      Underground Test Level_instruction: Collect all of the minerals!
+      Underground Avoiding Lava_instruction: 'Під деякими блоками приховано лаву, її потрібно прикрити перш, ніж рухатися вперед. Команда "якщо" стане тут у нагоді. Додай команду "рухатись вперед" на відповідну позицію, щоб видобути ці блоки.'
+      Underground If Statements_instruction: 'Ситуація ускладнюється. Треба добути 3 червоні камені, але не потрап у лаву. Використай команду "якщо", щоб розмістити бруківку над відкритою лавою.'
+      Underground Iron_instruction: 'Ходити по розплавленій лаві - погана ідея. Замости її бруківкою, створивши міст, а тоді добудь ще хоча б два блоки заліза.'
+      Underground Mine in a Circle_instruction: "Знайди спосіб добути 5 діамантів та 7 червоних каменів! Спробуй використати команду повторення всередині іншої команди повторення, щоб пройти по квадрату.\r\n"
+      Underground Mining Coal_instruction: Під землею ти знайдеш багато цінних ресурсів, але там темно. Розмісти принаймні 2 факели та добудь принаймні 2 блоки вугілля.
+      Underground Test Level_instruction: Збирай усі мінерали!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

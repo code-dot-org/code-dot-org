@@ -715,7 +715,7 @@
   "failedRemovedItemCount":"下一次，得到正确的项目数。",
   "failedSetActivity":"下一次，设置正确的角色活动。",
   "failedHasWonGame":"Next time, win the game.",
-  "failedHasLostGame":"Next time, lose the game",
+  "failedHasLostGame":"Next time, lose the game.",
   "failedAddItem":"Next time, add a character.",
   "failedAvoidHazard":"\"Uh oh, a Bandit got you!  Try again.\"",
   "failedHasAllGoals":"\"Try again, BB-8.  Get all the scrap metal.\"",

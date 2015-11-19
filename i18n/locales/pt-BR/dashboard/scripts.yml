@@ -183,7 +183,7 @@ pt-BR:
           Artist Binary: 'Artista: binário'
           description_audience: 10-18 anos de idade
           Super Challenge - Variables: 'Superdesafio - variáveis'
-          Super Challenge - For Loops: 'Super desafio - Laços de repetição'
+          Super Challenge - For Loops: 'Super desafio - Laços para'
           Super Challenge - Functions and Parameters: 'Super Desafio - Funções e Parâmetros'
           Extreme Challenge - Comprehensive: 'Desafio Extremo - Abrangente'
         Course4pre:
@@ -1391,10 +1391,10 @@ pt-BR:
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
         iceage:
-          title: Laboratório de Jogos da Era do Gelo
-          description_short: Crie uma história ou faça um jogo com o Laboratório de Jogos da Era do Gelo!
-          description: Crie uma história ou faça um jogo com o Laboratório de Jogos da Era do Gelo!
-          Ice Age Play Lab: Laboratório de Jogos da Era do Gelo
+          title: Laboratório da Era do Gelo
+          description_short: Crie uma história ou faça um jogo com o Laboratório da Era do Gelo!
+          description: Crie uma história ou faça um jogo com o Laboratório da Era do Gelo!
+          Ice Age Play Lab: Laboratório da Era do Gelo
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1436,19 +1436,19 @@ pt-BR:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Laboratório de jogos do Gumball
-          description_short: Crie uma história ou faça um jogo com o Laboratório de Jogos do Gumball!
-          description: Crie uma história ou faça um jogo com o Laboratório de Jogos do Gumball!
-          Gumball Play Lab: Laboratório de jogos do Gumball
+          title: Laboratório do Gumball
+          description_short: Crie uma história ou faça um jogo com o Laboratório do Gumball!
+          description: Crie uma história ou faça um jogo com o Laboratório do Gumball!
+          Gumball Play Lab: Laboratório do Gumball
         starwars:
           title: 'Star Wars: Construindo uma Galáxia com Código'
-          description_short: Aprenda a programar droids, e criar seu próprio jogo de Star Wars em uma galáxia muito, muito distante.
-          description: Aprenda a programar droids, e criar seu próprio jogo de Star Wars em uma galáxia muito, muito distante.
+          description_short: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
+          description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           Hour of Code 2015: Hora do Código 2015
         starwarsblocks:
           title: 'Star Wars: Construindo uma Galáxia com Código'
-          description_short: Aprenda a programar droids, e criar seu próprio jogo de Star Wars em uma galáxia muito, muito distante.
-          description: Aprenda a programar droids, e criar seu próprio jogo de Star Wars em uma galáxia muito, muito distante.
+          description_short: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
+          description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           Hour of Code 2015: Hora do Código 2015
         minecraft:
           title: Minecraft

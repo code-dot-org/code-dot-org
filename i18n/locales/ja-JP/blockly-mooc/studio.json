@@ -715,7 +715,7 @@
   "failedRemovedItemCount":"Next time, get the right number of items.",
   "failedSetActivity":"次回は正しいキャラクターの動きを考えよう。",
   "failedHasWonGame":"次は勝つよ",
-  "failedHasLostGame":"Next time, lose the game",
+  "failedHasLostGame":"Next time, lose the game.",
   "failedAddItem":"次はキャラクターを増やしましょう。",
   "failedAvoidHazard":"\"Uh oh, a Bandit got you!  Try again.\"",
   "failedHasAllGoals":"\"Try again, BB-8.  Get all the scrap metal.\"",

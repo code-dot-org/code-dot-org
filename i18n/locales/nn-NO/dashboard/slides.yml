@@ -632,14 +632,14 @@ nn:
         text: Hei! Jeg heter Orion og jeg programmerer roboter her på Play-im. Alt i datamaskiner og roboters hjerne er i grunnen små elektroniske porter. Når porten er åpen går strøm igjennom, og når den er stengt, så gjør den det ikke.
       4:
         image: notes/C2_binary_bracelets_4.png
-        text: "An example of binary on the robot is the robot's eyes. The robot's eyes are LEDs and those are lights that are either on or off. It's a binary system, one or the other. We can use the lights to represent binary numbers. If we have a set of robots, we can say that the first robot is the 1s place and the second robot is the 2s place, the third robot is the 4s place and so on. That's how you represent a binary number. The robots will do it with their binary eyes and count it out for you."
+        text: Et eksempel på noe binært på roboten er øynene. Robotens øyne er lysdioder, altså lys som er enten på eller av. Dette er et binært system, som betyr at det enten er det ene eller det andre. Vi kan bruke lysene til å representere binære tall. Hvis vi har flere roboter, kan vi si at den første roboten er enernes plass, den andre roboten er toernes plass, tredje roboten er firernes plass og så videre. Slik representerer man et binærtall. Robotene gjør dette med øynene og regner det ut for deg.
     C2_conditionals_with_cards:
       1:
         image: notes/C2_conditionals_with_cards_1.png
         text: This lesson is called conditionals with cards. Every day you make decisions based on what you see and hear.
       2:
         image: notes/C2_conditionals_with_cards_2.png
-        text: "I want to walk to the park but first I have to decide whether I should bring an umbrella or not. So I look out the window. If it's cloudy, I'm going to take my umbrella. Else, I'll take some sunglasses. I think I'd better take the umbrella. What I see and hear determines what I take to the park."
+        text: Jeg vil gå til parken, men først må jeg bestemme om jeg skal ta med paraply eller ikke. Så ser jeg ut av vinduet. Hvis det er overskyet, tar jeg med meg paraplyen. Hvis ikke, tar jeg med meg solbriller. Jeg tror jeg heller tar paraplyen. Det jeg ser og hører bestemmer hva jeg tar med til parken.
       3:
         image: notes/C2_conditionals_with_cards_3.png
         text: |-
@@ -653,17 +653,17 @@ nn:
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: Here we already have some blocks out in our work space. But there is something wrong.
+        text: Her har vi allerede noen blokker på arbeidsplassen vår. Men noe er galt.
       2:
         image: notes/C2_artist_debugging_2.png
-        text: "Let's debug this code by slowing down the speed and watching it as it goes through each block step by step."
+        text: La oss feilsøke denne koden ved å bremse ned farten og ser hvordan koden går trinnvis gjennom hver blokk.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: "Oh, there's the problem! The cat's whiskers are 75 pixels long, not 25."
+        text: Å, der er problemet! Kattens værhår er 75 piksler lange, ikke 25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Har du noen gang hørt om å feilsøke i et program? Det er måten du finner ut hva som ikke fungerer. Når du feilsøker koden, kan du finne og fjerne feil.
       2:
         image: notes/C2_bee_debugging_2.png
         text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
@@ -832,7 +832,7 @@ nn:
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Har du noen gang hørt om å feilsøke i et program? Det er måten du finner ut hva som ikke fungerer. Når du feilsøker koden, kan du finne og fjerne feil.
       2:
         image: notes/C3_debugging_bee_2.png
         text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."

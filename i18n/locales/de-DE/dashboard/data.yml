@@ -506,9 +506,9 @@ de:
         starwars_blocks_intro: 'Star Wars: Baue eine Galaxie aus Code - Einführung'
         starwars_blocks_events: 'Star Wars: Baue eine Galaxie aus Code - Ereignisse (Events)'
         starwars_blocks_congrats: 'Star Wars: Baue eine Galaxie aus Code - Herzlichen Glückwunsch'
-        mc_intro: 'Minecraft - Introduction'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
+        mc_intro: 'Minecraft - Einführung'
+        mc_repeat: 'Minecraft - Wiederholung'
+        mc_if_statements: 'Minecraft - If Anweisungen'
         mc_congrats_share: 'Minecraft - Congratulations'
         mc_congrats_no_share: 'Minecraft - Congratulations'
     callout:

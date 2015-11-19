@@ -2045,75 +2045,30 @@ ca:
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
       Frequency Analysis_instruction: Test
-      frozen circle function in circle_instruction: |
-        Now let's create 20 overlapping
-        circles, turning 18 degrees between each circle.
-      frozen circle function with parameter_instruction: |
-        Here's a ”Create circle”
-        block that can make circles of different sizes. Can you use this to create
-        a small circle of size 5 and a larger circle of size 10?
-      frozen circle function_instruction: |
-        Use the new “Create a circle” block to
-        create 10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle_instruction: |
-        A circle is a special shape. Can you figure out
-        what number to replace the question marks with to draw a circle?
-      frozen cross rotate dense_instruction: |
-        Let's repeat it 90 times! How many
-        times does 90 go into 360? Hint: It's a really small number.
-      frozen cross rotate_instruction: |
-        Now try repeating it 10 times. How many degrees
-        do you need to turn between each line?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using another “Repeat"
-        block to repeat a parallelogram 4 times, turning right by 90 degrees between
-        each parallelogram.
-      frozen diamond snowflake_instruction: |
-        Now, let's create a new snowflake by
-        using the repeat block to repeat a parallelogram 10 times, turning right by
-        36 degrees between each one.
-      frozen diamond_instruction: |
-        Use a repeat around these blocks to create a parallelogram.
-        It's just like a rectangle but has different angles. This one has 60 degree
-        and 120 degree angles instead of all 90 degree angles.
-      frozen freeplay_instruction: |
-        You've officially become a master artist! Create
-        a winter wonderland.
-      frozen line_instruction: |
-        Hi! I'm Elsa of Arendelle. Help me create a single
-        line.
-      frozen perpendicular_instruction: |
-        Now let's see if we can create two lines
-        that are at a 90 degree angle to each other. You will need to use the “Turn”
-        block as well as the “Move” block.
-      frozen snowflake branch_instruction: |
-        Try using the ”Create a snowflake branch”
-        block to create three branches, which starts to look like a snowflake.
-      frozen snowflake full_instruction: |
-        Now let's repeat it 8 times to make a
-        beautiful snowflake!
-      frozen snowflower_instruction: |
-        Intricate snow patterns can be created with
-        very simple shapes. Can you make a pattern by repeating 5 circles of size
-        5 and 5 circles of size 10?
-      frozen square iterative_instruction: |
-        It seems like we're halfway to making
-        a square. Let's put 4 lines together to create a square.
-      frozen square loop 3x_instruction: |
-        Let's create three squares, turning after
-        each square. Be sure to turn by 120 degrees before each new square.
-      frozen square loop_instruction: |
-        Hi, I’m Anna of Arendelle! Let’s make a square
-        with the “Repeat” block, which uses fewer blocks. How many times (???) should
-        the “Repeat” block loop the blocks inside it to make a square?
-      frozen square snowflake_instruction: |
-        Can you create a snowflake using the
-        “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
-        degrees between each square?
+      frozen circle function in circle_instruction: Ara anem a crear 20 cercles que es superposin, girant 18 graus entre cada cercle.
+      frozen circle function with parameter_instruction: 'Aquí tens un bloc "Crea un cercle" que pot fer cercles de diferents mides. Pots utilitzar-ho per crear un cercle petit de mida 5 i un cercle més grans de mida 10?'
+      frozen circle function_instruction: 'Utilitza el nou bloc "Crea un cercle" per fer 10 cercles que es superposin. No oblidis saltar endavant entre cercles.'
+      frozen circle_instruction: Un cercle és una forma especial. Pots esbrinar per quin nombre necessites reemplaçar els interrogants per dibuixar un cercle?
+      frozen cross rotate dense_instruction: 'Anem a repetir-ho 90 vegades! Quantes vegades quep 90 a 360? Pista: És un nombre molt petit.'
+      frozen cross rotate_instruction: Ara intenta repetir-ho 10 vegades. Quants graus necessites girar entre cada línia?
+      frozen cross_instruction: |-
+        Utilitza un bloc "Repetir" al voltant d'aquestes comandes per crear un signe de sumar. T'has fixat que na Elsa es pot moure cap endavant i cap endarrera?
+      frozen diamond mini snowflake_instruction: 'Sabíeu que cada floc de neu és una forma diferent? Anem a crear un nou floc de neu utilitzant el bloc "Repetir" per repetir un paral·lelogram 4 vegades, girant a la dreta 90 graus entre cada paral·lelogram.'
+      frozen diamond snowflake_instruction: Ara, anem a crear un nou floc de neu utilitzant el bloc repeteix per repetir un paral·lelogram 10 vegades, girant a la dreta 36 graus entre cadascuna.
+      frozen diamond_instruction: |-
+        Utilitza un "Repetir" al voltant d'aquestos blocs per crear una parel·lolagram. És com un rectangle però te angles diferents. Aquest tá angles de 60 i de 120 graus en lloc de tots els angles de 90 graus.
+      frozen freeplay_instruction: "T'has convertit oficialment en una artista fabulosa! Crea un meravellós món hivernal."
+      frozen line_instruction: "Hola! Sóc Elsa d'Arendelle. Ajuda'm a crear una sola línia."
+      frozen perpendicular_instruction: |-
+        Ara anem a veure si podem crear dues línies que estiguin en un angle de 90 graus l'una de l'altre. Necessitaràs utilitzar el bloc "Gira", així com el bloc "Avança".
+      frozen snowflake branch_instruction: 'Intenta utilitzar el bloc "Crea una branca de un floc de neu" per crear tres branques, que comencin a semblar-se a un floc de neu.'
+      frozen snowflake full_instruction: Ara anem a repetir-ho 8 vegades per fer un floc de neu preciós!
+      frozen snowflower_instruction: Es poden crear flocs de neu amb patrons complexos fent servir formes molt simples. Pots fer un patró mitjançant la repetició de 5 cercles de mida 5 i 5 de mida 10?
+      frozen square iterative_instruction: Sembla que estem a mig camí per fer un quadrat. Anem a posar 4 línies juntes per crear un quadrat.
+      frozen square loop 3x_instruction: "Anem a crear 3 quadrats, girant després de cada quadrat. Assegura't de girar 120 graus abans de cada nou quadrat."
+      frozen square loop_instruction: |-
+        Hola, sóc Anna d'Arendelle! Anem a fer un quadrat amb el bloc "Repetir", que fa servir menys blocs. Quantes vegades (???) haurà de repetir-se el contingut del bloc "Repetir" per fer un quadrat?
+      frozen square snowflake_instruction: 'Pots fer un floquet de neu emprant el bloc "Repetir" per fer un quadrat 10 vegades i un bloc "Girar" que giri 36 graus entre cada quadrat?'
       Infinity_catch_instruction: |-
         Pots fer que l'Elsa ("actor 2") atrapi l'Anna utilitzant les fletxes del teclat?
       Infinity_finale_instruction: "Crea qualsevol cosa que t'agradi i comparteix-la!"
@@ -3044,9 +2999,7 @@ ca:
         Can you add just 3 blocks to help me solve a more complex
         maze? If you do it right, I can walk any curvy path no matter the length.
         Hurry! The ice is melting!
-      SpecialFrozenLevel_instruction: |
-        You've officially become a master artist!
-        Create a winter wonderland.
+      SpecialFrozenLevel_instruction: "T'has convertit oficialment en una artista fabulosa! Crea un meravellós món hivernal."
       Standalone_Artist_1_instruction: |
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.

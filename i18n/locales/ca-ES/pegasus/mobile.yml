@@ -1,4 +1,5 @@
 ca-ES:
+  hour_of_code: Hour of Code
   hello: Hola món
   select_language: "Seleccioneu l'idioma"
   en: Informàtica
@@ -287,11 +288,13 @@ ca-ES:
   starwars_watch_videos: Before you get started, watch one of these inspirational videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_gradelevel: Ages 6+
   mc_platformtext: Navegadors moderns, mòbils i tablets
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -745,7 +748,7 @@ ca-ES:
   projguts_shortdescription: Prova modelatge i simulació utilitzant pedra-paper-estisores
   hourofcode_shortdescription: Contenidor per al nou code.org/hoc
   frozen_shortdescription: "Anem a utilitzar el codi per unir l'Anna i l'Elsa mentre exploren la màgia i la bellesa del gel."
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+  starwars_shortdescription: "Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana."
   playlab_shortdescription: Crea una història o fes una partida amb Play Lab!
   codeorg_longdescription: Aprèn els conceptes bàsics de la Informàtica mitjançant la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Aprèn bucles, condicionals i algorismes bàsics. Disponible en 34 idiomes.
   codeintl_longdescription: Aprèn els conceptes bàsics de la Informàtica mitjançant la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Aprèn bucles, condicionals i algorismes bàsics. Disponible en 34 idiomes.
@@ -788,7 +791,7 @@ ca-ES:
     Aquesta activitat "sense connexió" ajuda als alumnes a aprendre com modelar i simular treballs fent que un grup d'alumnes jugui a diferents versions del joc Pedra / Paper / Tisores, i veient els resultats com a experiments de diferent modelatge.
   hourofcode_longdescription: Contenidor per al nou code.org/hoc
   frozen_longdescription: "Programeu per unir-vos amb l' Anna i l' Elsa mentre exploren la màgia i la bellesa del gel. Creareu flocs de neu i patrons com patinatge sobre gel i la creació d'un món fantàstic d'hivern que podeu compartir amb els amics!"
-  starwars_longdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+  starwars_longdescription: "Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana."
   playlab_longdescription: Crea una història o fes un joc amb Play Lab! Fes que animals, pirates, zombies, ninjes i molts més personatges es moguin, facin sons, puntuacions i fins i tot llançar boles de foc!
   codeorg_beyond_name: Introducció a la programació (ESO)
   khan_beyond_name: Aprèn programació informàtica

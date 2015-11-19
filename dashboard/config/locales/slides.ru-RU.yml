@@ -590,9 +590,9 @@
           more. So be sure to make as much honey as the honeycomb can hold.'
       3:
         image: notes/C1_bee_level_intro_3.png
-        text: If you're able to get all the nectar and make all the honey, you succeed
-          and go to the next level. Otherwise, you need to try this puzzle again.
-          Play around a while and see what it feels like to "bee" a programmer!
+        text: Если вы сможете собрать весь нектар и сделать мед, вы успешно перейдете
+          на следующих уровень. В противном случае вам придется пройти головоломку
+          ещё раз. Поиграй ещё и посмотри, что чувствует "пчела" программист!
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
@@ -2943,8 +2943,8 @@
           a house out of wool!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Когда вы закончите делать ваше творение, нажмите Поделиться что бы отправить
+          ссылку вашим друзьям. Веселитесь!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
@@ -2962,4 +2962,4 @@
           a house out of wool!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Теперь вы можете построить все, что хотите. Веселитесь!

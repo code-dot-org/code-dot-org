@@ -1,4 +1,5 @@
 "bn-BD":
+  hour_of_code: Hour of Code
   hello: হ্যালো ওয়ার্ল্ড
   select_language: অনুগ্রহ করে আপনার ভাষা নির্বাচন করুন
   en: কম্পিউটার বিজ্ঞান
@@ -323,6 +324,7 @@
     videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
@@ -330,6 +332,7 @@
     this Minecraft world.
   mc_gradelevel: Ages 4-104
   mc_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host

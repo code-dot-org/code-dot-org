@@ -77,24 +77,25 @@
         one: '%{resource} சேமிக்கப்படுவதிலிருந்து 1 பிழை தடை விதித்துள்ளது:'
         other: '%{resource} சேமிக்கப்படுவதிலிருந்து %{count} பிழைகள் தடை விதித்துள்ளது:'
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: '%{email} க்கு ஒரு அழைப்பிதழ் மின்னஞ்சல் அனுப்பப்பட்டுள்ளது.'
+      invitation_token_invalid: அழைப்பிதழ்க்கு அடையாளமாக வழங்கப்பட்ட சொல் செல்லுபடியானதாக
+        இல்லை!
+      updated: உங்கள் கடவுச்சொல் வெற்றிகரமாக மாற்றப்பட்டுள்ளது. நீங்கள் இப்போது உள்நுளைந்துள்ளீர்கள்.
+      no_invitations_remaining: அழைப்பிதழ்கள் மீதமில்லை
+      invitation_removed: உங்கள் அழைப்பிதழ் அகற்றப்பட்டது.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: அழைப்பிதழை அனுப்பவும்
+        submit_button: ஒரு அழைப்பிதழை அனுப்பவும்
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: உங்கள் கடவுச்சொல்லை அமைக்கவும்
+        submit_button: என்னுடைய கடவுச்சொல்லை அமைக்கவும்
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
-        accept: Accept invitation
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        subject: அழைப்பிதழ்க்கான வழிமுறைகள்
+        hello: வணக்கம் %{email}
+        someone_invited_you: யாரோ ஒருவர் %{url} வழியாக உங்களுக்கு ஒரு அழைப்பு விடுத்துள்ளார்,
+          அதை கீழே உள்ள இணைப்பை மூலம் நீங்கள் ஏற்றுக்கொள்ள முடியும்.
+        accept: அழைப்பிதழை ஏற்கவும்
+        ignore: நீங்கள் இந்த அழைப்பை ஏற்க விரும்பவில்லை என்றால், இந்த மின்னஞ்சலயை
+          புறக்கணிக்கவும்.<br />நீங்கள் மேலே உள்ள இணைப்பை அணுகும் வரையிலும் மற்றும்
+          உங்கள் கடவுச்சொல்லை அமைக்கும் வரையிலும், உங்கள் கணக்கை உருவாக்க முடியாது.

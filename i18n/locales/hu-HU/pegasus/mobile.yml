@@ -1,4 +1,5 @@
 hu-HU:
+  hour_of_code: Kódolás Órája
   hello: Helló világ
   select_language: Válassz nyelvet
   en: Számítógép-tudomány
@@ -29,12 +30,12 @@ hu-HU:
   hoc2014_whatishoc: Mi az a Kódolás Órája?
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Feliratkozás az eseményre
-  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_placeholder: Kódolás órája események keresése
   csedweek_map_search_search: Keresés
   csedweek_map_search_reset: Visszaállítás
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_title: Jelmagyarázat
+  csedweek_map_legend_event: A Kódolás Órája esmény
+  csedweek_map_legend_cs_tech_jam: Informatikai stúdió
   cded_sign_up: Regisztrálás
   cded_try_it: Próbáld ki
   twentyhours_trynow: Próbálja ki most
@@ -200,9 +201,9 @@ hu-HU:
   homepage_slot_text_course4: 4. tanfolyam
   homepage_slot_text_shop: Áruház
   homepage_slot_text_flappy: Flappy kód
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_hoc: Minden diáknak legyen egy Kódolás Órája.
   homepage_action_text_num_served: '# fő már kipróbálta'
-  homepage_action_text_join_us: Join us
+  homepage_action_text_join_us: Csatlakozz
   homepage_action_text_sign_up: Regisztrálás
   homepage_action_text_try_it: Próbáld ki
   homepage_action_text_volunteers: Technical volunteers wanted
@@ -212,7 +213,7 @@ hu-HU:
   homepage_action_text_learn: Kezdj tanulni
   homepage_action_text_signpetition: Írd alá a petíciót
   homepage_signpetition_dropdown: 'Írd alá a petíciót &#x25BE;'
-  homepage_diversity_pledge: Take the diversity pledge
+  homepage_diversity_pledge: Csatlakozz a diverzitási peticióhoz
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
   homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: A Code.org és a felsőoktatás összefog az informatika sokszínűségének javítása érdekében.
@@ -282,24 +283,26 @@ hu-HU:
   class_submission_level_vocational: Szakmai
   class_submission_languages_other: Egyéb nyelv(ek)
   inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
-  starwars_subtitle: Building a Galaxy With Code
+  starwars_subtitle: Építsünk egy Kódgalaxist
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_specs: 'Csak angol nyelvű | Modern böngészők | Korosztály: 11 +'
   starwars_javascript_start_button: Próbálja ki most
   starwars_blocks_title: blokkok
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_description: Használd a mozgatható blokkokat.
+  starwars_blocks_specs: 'Több nyelven is (hamarosan) | Modern böngészők, okostelefonok, tabletek | Korosztály: 6-10'
   starwars_blocks_start_button: Próbálja ki most
-  starwars_watch_videos: Before you get started, watch one of these inspirational videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_gradelevel: Ages 6+
+  starwars_watch_videos: Mielőtt elkezded, nézz meg egy inspiráló videót
+  starwars_speak_languages: Beszél egy másik nyelven is?
+  starwars_help_translate: Segítsen a fordításban
+  starwars_platform_text: Modern böngészők, okostelefonok, tabletek
+  mc_name: Minecraft Kódolás Órája
+  mc_longdescription: Használd a kódblokkokat, hogy segítsd Steve és Alex kalandjait a Minecraft világában.
+  mc_shortdescription: Használd a kódblokkokat, hogy segítsd Steve és Alex kalandjait a Minecraft világában.
+  mc_gradelevel: 'Korosztály: 6 +'
   mc_platformtext: Modern böngészők, okostelefonok, tabletek
-  minecraft_subtitle: Minecraft Hour of Code
+  mc_specs: 'Több nyelven is (hamarosan) | Modern böngészők és tabletek | Korosztály: 6 +'
+  minecraft_subtitle: Minecraft Kódolás Órája
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
@@ -317,7 +320,7 @@ hu-HU:
   volunteer_engineer_submission_field_location_desc: Your location will be used to allow teachers to search for nearby volunteers and will be shown as a pin on the map. If you are concerned about privacy, please use your work/school address or your city only.
   volunteer_engineer_submission_field_location_placeholder: Irányítószám, város és állam/ország vagy utca
   volunteer_engineer_submission_field_location_flexibility: Tudok segíteni a kódolás órája alatt a... (jelölje ki az összes vállalni kívánt tevékenységet)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering after the Hour of Code
+  volunteer_engineer_submission_checkbox_after_hoc: Éngem érdekel az önkéntesség a Kódolás Órája után
   volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
   volunteer_engineer_submission_field_linkedin: LinkedIn adatlap
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
@@ -586,7 +589,7 @@ hu-HU:
   older_systems_subheading: 'Ezek régebbi böngészőkön is működnek. Az összes oktatóanyag eléréséhez frissíts  <a href="http://browsehappy.com/" target="_blank">modern webböngészőre.</a>'
   mobile_devices: Oktatóanyagok mobile eszközökre
   frozen_name: Kódolás Annával és Elsával
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_name: 'Star Wars: A galaxis építése kóddal'
   codeorg_name: Írd meg az első számítógépes programod
   codeintl_name: Írd meg az első számítógépes programod
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -617,7 +620,7 @@ hu-HU:
   robomindnl_name: Programozz egy virtuális robotot
   flappy_name: Készíts egy Flappy játékot
   bitsbox_name: 'Bitsbox - készíts egy játékot'
-  makeschool_name: Build an iPhone game in your browser!
+  makeschool_name: Készíts egy iPhone játékot a böngésződben!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Kódolás Órája
   blockly_name: Blockly
@@ -665,7 +668,7 @@ hu-HU:
   projguts_gradelevel: 10-től 13 éves korig
   hourofcode_gradelevel: 4-től 104 éves korig
   frozen_gradelevel: 8 éves kortól
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: 'Korosztály: 6 +'
   playlab_gradelevel: 4-től 104 éves korig
   codeorg_platformtext: Modern böngészők, okostelefonok, tabletek
   codeintl_platformtext: Modern böngészők, okostelefonok, tabletek
@@ -738,7 +741,7 @@ hu-HU:
   robomindnl_shortdescription: Írj programot egy virtuális robotnak
   flappy_shortdescription: 'Készítsd el a saját játékod - Flappy Birds, Shark vagy Submarine'
   bitsbox_shortdescription: Kódolj le néhány appot, hogy játszhass velük és megoszthasd őket, felhasználva erre az igazi JavaScript programnyelvet!
-  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach your monster new moves!
+  makeschool_shortdescription: 'Készíts egy iPhone játékot! Tanuld meg - a kód írásával - hogyan taníthatod meg a szörnyet az új mozgásokra!'
   touchdevelop_shortdescription: 'Oldd meg a rejtvényeket, készíts játékokat, s tanuld meg a kódírást a telefonodon. '
   appinventor_shortdescription: Készítsd el a saját app-od! (csak Androidra)
   blockly_shortdescription: Tölts le egy ZIP fájlt az offline tanuláshoz
@@ -803,7 +806,7 @@ hu-HU:
   groklearning_beyond_name: Tanulj Python programozást
   hacketyhack_beyond_name: Tanulj Ruby-t
   robomind_beyond_name: Programozz egy virtuális robotot
-  makeschool_beyond_name: Build an iPhone game in your browser!
+  makeschool_beyond_name: Készíts egy iPhone játékot a böngésződben!
   appinventor_beyond_name: AppInventor Kódolás Órája
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Tanulj programozni Karellel a kutyával
@@ -951,7 +954,7 @@ hu-HU:
   groklearning_beyond_longdescription: Egy bevezető kurzus a Python nyelv használatával olyanok számára, akiknek nincs programozási gyakorlatuk. Az egyedi bevezető tartalmunk és a kihívások lehetővé teszik, hogy a diák alaposan megértse a Pythont és a programozást magát. Már nagyon sok különböző korú diákot megtanítottunk ennek a kurzusnak a segítségével, biztosak vagyunk benne, hogy ez neked is megfelelő lesz.
   hacketyhack_beyond_longdescription: 'A Hackety Hack a legelső lépésektől tanít meg a programozás abszolút alapjaira. Nincs szükség semmiféle előképzettségre a programozás terén. A Hackety Hack segítségével a Ruby programozási nyelvet fogod megtanulni. A Ruby sokféle program elkészítésére használható, köztük asztali számítógépen futó alkalmazásokhoz is. [Megjegyzés: program telepítése szükséges]'
   robomind_beyond_longdescription: 'A diákok megtanulják a programozás alapjait a saját virtuális robotjuk irányításán keresztül. Az online kurzus tartalmazza a rövid prezentációkat, videókat, kvízeket és az automatikus útmutatókat illetve tippeket, amik segítenek a feladatok végrehajtása során. '
-  makeschool_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
+  makeschool_beyond_longdescription: Valamennyire ismered az ObjectiveC-t? Tanuld meg hogy kell iPhone játékot készíteni, egy óra alatt! Végig fogunk vezetni a kódolási, a tesztelési, és a játék kipróbálási folyamaton, a böngészőben, és hogy hogyan osszthatod meg a barátaiddal a Facebook-on, hogy kipróbálhassák! Nincs szükség előzetes iPhone fejlesztési tapasztalatra. Értened kell már, hogy mik a változók, a metódusok és az objektumok.
   appinventor_beyond_longdescription: Rövid, szórakoztató videós oktatóanyagok segítségével három egyszerű alkalmazást fejleszthetsz Android telefonodra vagy táblagépedre. Ezzel a kezdőknek és haladóknak egyaránt alkalmas programmal a Kódolás Órája alatt azelőtt igazi app fejlesztő leszel, hogy észrevennéd. Gondolj bele, hogy milyen lenne a saját appodat megosztani a barátaiddal! Ezek a feladatok önállóan vagy osztályban tanárral együtt is megoldhatók.
   touchdevelop_beyond_longdescription: A TouchDevelop segít az IPAD, iPhone, Android, PC, Mac, Windows Phone alkalmazások elkészítésében. Az érintésbarát szerkesztőnkkel a kódolás még telefonon vagy tableten is szórakoztató!
   codehs_beyond_longdescription: 'Tanuld meg a programozás alapjait Karel kutyával! Egy vidám, hozzáférhető és vizuális bevezetés a kódolás világába, ahol ugyanúgy kell kiadni a számítógép utasításokat, mintha egy kutyát irányítanál. Ez az oktató anyag tanári segítséggel a leghatékonyabb, de önállóan is elvégezhető. [Megjegyzés: nem ingyenes]'
