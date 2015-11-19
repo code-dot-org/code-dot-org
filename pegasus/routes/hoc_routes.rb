@@ -14,6 +14,11 @@ get '/v2/hoc/tutorial-metrics.json' do
   JSON.pretty_generate(fetch_hoc_metrics['tutorials'])
 end
 
+# Employee engagement
+get '/api/hour/begin_company/:company' do |company|
+  redirect "/learn?company=#{company}"
+end
+
 get '/api/hour/begin/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
   pass unless tutorial = DB[:tutorials].where(code: code).first
