@@ -1,11 +1,9 @@
 @dashboard_db_access
+@as_student
 Feature: Big Game Remix
 
   Background:
-    Given I am on "http://learn.code.org/"
-    And I am a student
-    And I am on "http://learn.code.org/users/sign_in"
-    And I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/6?noautoplay=true"
+    Given I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/6?noautoplay=true"
     And I rotate to landscape
     Then I wait to see a dialog titled "Puzzle 6 of 11"
     And I close the dialog
