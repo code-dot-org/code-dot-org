@@ -11,7 +11,7 @@ nav: promote_nav
 
 # Promovo Orën e Kodimit
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Po organizoni një Orë Kodimi? [ Shikoni udhëzimet](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -20,12 +20,6 @@ nav: promote_nav
 ## Vendosni këta posterë në shkollën tuaj
 
 <%= view :promote_posters %>
-
-<a id="banners"></a>
-
-## Vendosni këta banera në webfaqen tuaj
-
-[![Foto](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![Foto](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![Foto](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="social"></a>
 
@@ -37,15 +31,25 @@ nav: promote_nav
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Përdorni logon e Orës së Kodimit për të përhapur fjalë
 
 [![Foto](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Shkarkoni versionin hi-res](http://images.code.org/share/hour-of-code-logo.zip)
+
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+
+  1. Çdo referencë për "Orën e Kodimit" duhet të përdoret në një mënyrë që nuk sugjeron që është emri i markës suaj, por më tepër referenca për Orën e Kodimit si një lëvizje bazë. Shembull i mire: "Merr pjese ne Oren e Kodimit™ ne ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. Përfshini gjuhën në faqe (ose në fund), duke përfshirë edhe lidhjet me faqet e web-it të CSEdWeek dhe Code.org, që thonë si në vijim:
+    
+    *"Ora e Kodimit" është një nismë në shkallë vendi nga Java Edukative e Shkencave Kompjuterike[csedweek.org] dhe Code.org [code.org] për të futur miliona studentë për një orë në shkencën kompjuterike dhe programimin kompjuterik. "*
+
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## Printoni këto stiksat për t'ja dhënë studentëve të tu
 
 (Stickers are 1" diameter, 63 per sheet)  
 [![Foto](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
@@ -128,4 +132,3 @@ Ju lutem të kontaktoni në [NUMRI I TELEFONIT APO ADRESA E EMAILIT]. Në pritje
 
 Sinqërisht, [EMRI], [TITULLI]
 
-<%= view :signup_button %>

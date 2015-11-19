@@ -129,7 +129,7 @@
     "encrypted_examples": "HWJgoeg/LliyinUlPQm1NpxdVv5LPaeJ7iLvIFQ2a2gFejC0uGb+ETyUHZl4\n6qev\n",
     "embed": "false",
     "instructions": "Increase the number of iterations to fully fill the screen with random dots. (Click to see full instructions)",
-    "markdown_instructions": "# Looping with random values\r\n\r\n<img src=\"https://images.code.org/520e45a90988b04bb0ff3baa184f080a-image-1443108426597.png\" style=\"width: 100px; float: right;\">\r\n\r\nIf you add some randomness to turtle behavior inside a loop, the program will run a little differently every time which can make for some cool effects. \r\n\r\nYou're about to see a program in which the turtle **moves to a random location** each iteration of the loop, and **draws a randomly-sized dot** that also has a **random color**.  We've also made the dot semi-transparent by setting the alpha value to 0.5 (50% transparency).\r\n\r\n# Do This\r\n\r\n**Figure out how many iterations** you need to consistently fill the screen entirely with dots so none of the background is showing.  It will be a little different every time so you'll need to experiment.\r\n\r\n**Compare what you found** with a neighbor to see how close your results are.  Then **move on**.",
+    "markdown_instructions": "# Looping with Random Values\r\n\r\n<img src=\"https://images.code.org/520e45a90988b04bb0ff3baa184f080a-image-1443108426597.png\" style=\"width: 100px; float: right;\">\r\n\r\nIf you add some randomness to turtle behavior inside a loop, the program will run a little differently every time which can make for some cool effects. \r\n\r\nYou're about to see a program in which the turtle **moves to a random location** each iteration of the loop, and **draws a randomly-sized dot** that also has a **random color**.  We've also made the dot semi-transparent by setting the alpha value to 0.5 (50% transparency).\r\n\r\n# Do This:\r\n\r\n**Figure out how many iterations** you need to consistently fill the screen entirely with dots so none of the background is showing.  It will be a little different every time so you'll need to experiment.\r\n\r\n**Compare what you found** with a neighbor to see how close your results are.  Then **move on**.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -159,7 +159,9 @@
     "hide_view_data_button": "true",
     "project_template_level_name": "U3L07 - randomDotsTemplate",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

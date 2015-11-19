@@ -10,14 +10,14 @@ title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 Visite uma sala de aula da sua região e inspire os alunos a continuar aprendendo ciência da computação. [Voluntário por uma hora](https://code.org/volunteer/engineer).
 
-## 2. Participe de um webinar para treinamento de voluntários
+## 2. Join a volunteer info session
 
-Vamos sediar dois webinars para explicar como será uma típica experiência de voluntariado. Vamos discutir como coordenar com os professores antes de seu evento da Hora do Código e o que você deve fazer no dia do evento para se preparar. Traga suas perguntas! Esses webinars serão organizados via Hangouts, então se você por acaso perder algum, você pode assistir à sessão gravada depois.
+We'll be hosting two info sessions to explain what a typical volunteer experience will be like. Vamos discutir como coordenar com os professores antes de seu evento da Hora do Código e o que você deve fazer no dia do evento para se preparar. Traga suas perguntas! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Data           | Hora                                |
-| -------------- | ----------------------------------- |
-| 16 de novembro | 13:00 - 13:30 - horário do pacífico |
-| 3 de dezembro  | 11:00 - 11:30 - horário do pacífico |
+| Data           | Hora                                | Link to info session                                                            |
+| -------------- | ----------------------------------- | ------------------------------------------------------------------------------- |
+| 16 de novembro | 13:00 - 13:30 - horário do pacífico | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
+| 3 de dezembro  | 11:00 - 11:30 - horário do pacífico | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
 
 ## 3. Antes de participar, experimente os tutoriais por 30 minutos
 
@@ -25,7 +25,7 @@ Experimente os tutoriais da Hora do código em [code.org/learn](https://code.org
 
 ## 4. Convide colegas de trabalho para se voluntariarem
 
-Conte aos seus amigos e colegas sobre a Hora do Código. Temos milhares de professores cadastrados procurando por engenheiros voluntários, então peça a eles para se [cadastrarem como voluntários](https://code.org/volunteer/engineer).
+Conte aos seus amigos e colegas sobre a Hora do Código. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
 **Modelo de e-mail:**
 

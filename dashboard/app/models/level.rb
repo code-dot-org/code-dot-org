@@ -239,6 +239,10 @@ class Level < ActiveRecord::Base
     self.name = name.to_s.strip unless name.nil?
   end
 
+  def self.cache_find(id)
+    Script.cache_find_level(id)
+  end
+
   private
 
   def write_to_file?

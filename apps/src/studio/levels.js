@@ -244,13 +244,13 @@ levels.playlab_1 = utils.extend(levels.dog_hello, {
   ]
 });
 
-levels.iceage_1 = utils.extend(levels.playlab_1, {
-  background: 'icy',
-  firstSpriteIndex: 0, // manny
+levels.iceage_hello1 = utils.extend(levels.playlab_1, {
+  background: 'icy5',
+  firstSpriteIndex: 1,
 });
-levels.gumball_1 = utils.extend(levels.playlab_1, {
+levels.gumball_hello1 = utils.extend(levels.playlab_1, {
   background: 'dots',
-  firstSpriteIndex: 0, // manny
+  firstSpriteIndex: 0,
 });
 
 // Can you make the dog say something and then have the cat say something afterwards?
@@ -330,13 +330,14 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 });
-levels.iceage_2 = utils.extend(levels.playlab_2, {
-  background: 'leafy',
-  firstSpriteIndex: 3, // diego
+levels.iceage_hello2 = utils.extend(levels.playlab_2, {
+  background: 'icy1',
+  firstSpriteIndex: 0,
 });
-levels.gumball_2 = utils.extend(levels.playlab_2, {
+levels.gumball_hello2 = utils.extend(levels.playlab_2, {
   background: 'dots',
-  firstSpriteIndex: 3, // diego
+  firstSpriteIndex: 3,
+  defaultEmotion: Emotions.NORMAL,
 });
 
 // extended by: k1_3
@@ -420,13 +421,13 @@ levels.playlab_3 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ]
 };
-levels.iceage_3 = utils.extend(levels.playlab_3, {
-  background: 'grassy',
-  firstSpriteIndex: 2, // scrat
+levels.iceage_move_to_flag = utils.extend(levels.playlab_3, {
+  background: 'icy3',
+  firstSpriteIndex: 2,
 });
-levels.gumball_3 = utils.extend(levels.playlab_3, {
+levels.gumball_move_to_flag = utils.extend(levels.playlab_3, {
   background: 'clouds',
-  firstSpriteIndex: 2, // scrat
+  firstSpriteIndex: 2,
 });
 
 
@@ -546,13 +547,14 @@ levels.playlab_4 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 };
-levels.iceage_4 = utils.extend(levels.playlab_4, {
-  background: 'grassy',
-  avatarList: ['scrat', 'granny']
+levels.iceage_move_to_actor = utils.extend(levels.playlab_4, {
+  background: 'icy3',
+  avatarList: ['diego', 'manny']
 });
-levels.gumball_4 = utils.extend(levels.playlab_4, {
-  background: 'checkers',
-  avatarList: ['gumball', 'darwin']
+levels.gumball_move_to_actor = utils.extend(levels.playlab_4, {
+  background: 'space',
+  avatarList: ['gumball', 'darwin'],
+  defaultEmotion: Emotions.NORMAL,
 });
 
 // Can you write a program to make the octopus say "hello" when it is clicked?
@@ -585,6 +587,25 @@ levels.click_hello =  {
       return (Studio.sayComplete > 0 && this.successState.seenCmd);
     }
   },
+  'callouts': [
+    {
+      'id': 'playlab:click_hello:instructions',
+      'element_id': '#prompt-table',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutInstructions(),
+        },
+        'position': {
+          'my': 'bottom left',
+          'at': 'top right',
+          'adjust': {
+            'x': -40,
+            'y': 0
+          }
+        }
+      }
+    }
+  ],
   'timeoutFailureTick': 300,
   'toolbox':
     tb('<block type="studio_moveDistance"><title name="DIR">2</title></block>' +
@@ -604,13 +625,9 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
 });
-levels.iceage_5 = utils.extend(levels.playlab_5, {
-  background: 'icy',
-  firstSpriteIndex: 1, // sid
-});
-levels.gumball_5 = utils.extend(levels.playlab_5, {
-  background: 'characters',
-  firstSpriteIndex: 1, // sid
+levels.iceage_click_hello = utils.extend(levels.playlab_5, {
+  background: 'icy4',
+  firstSpriteIndex: 1,
 });
 
 levels.octopus_happy =  {
@@ -761,15 +778,22 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 });
-levels.iceage_6 = utils.extend(levels.playlab_6, {
-  background: 'tile',
-  firstSpriteIndex: 3, // diego
+levels.iceage_move_events = utils.extend(levels.playlab_6, {
+  background: 'icy5',
+  firstSpriteIndex: 2,
   goalOverride: {} // This prevents the override from original playlab from being used
 });
-levels.gumball_6 = utils.extend(levels.playlab_6, {
+
+levels.gumball_click_hello = utils.extend(levels.playlab_5, {
+  background: 'characters',
+  firstSpriteIndex: 1, // sid
+});
+
+levels.gumball_move_events = utils.extend(levels.playlab_6, {
   background: 'cornered',
   firstSpriteIndex: 3, // diego
-  goalOverride: {} // This prevents the override from original playlab from being used
+  goalOverride: {}, // This prevents the override from original playlab from being used
+  defaultEmotion: Emotions.NORMAL,
 });
 
 // The "repeat forever" block allows you to run code continuously. Can you
@@ -890,13 +914,34 @@ levels.playlab_7 = {
     }]
   ],
 };
-levels.iceage_7 = utils.extend(levels.playlab_7, {
-  background: 'icy',
-  firstSpriteIndex: 1, // sid
+levels.iceage_repeat = utils.extend(levels.playlab_7, {
+  background: 'icy1',
+  firstSpriteIndex: 4,
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 16,0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
 });
-levels.gumball_7 = utils.extend(levels.playlab_7, {
-  background: 'graffiti',
-  firstSpriteIndex: 1, // sid
+levels.gumball_repeat = utils.extend(levels.playlab_7, {
+  background: 'dots',
+  firstSpriteIndex: 4,
+  defaultEmotion: Emotions.NORMAL,
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 16,0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
 });
 
 // Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into
@@ -1119,14 +1164,15 @@ levels.playlab_8 = {
     '</next></block>'
 
 };
-levels.iceage_8 = utils.extend(levels.playlab_8, {
-  background: 'icy',
-  avatarList: ['manny', 'sid']
+levels.iceage_sound_and_points = utils.extend(levels.playlab_8, {
+  background: 'icy2',
+  avatarList: ['sid', 'granny']
 });
-levels.gumball_8 = utils.extend(levels.playlab_8, {
+levels.gumball_sound_and_points = utils.extend(levels.playlab_8, {
   background: 'wood',
-  avatarList: ['bananajoe', 'antony'],
+  avatarList: ['bananajoe', 'anton'],
   'delayCompletion': 500,
+  defaultEmotion: Emotions.NORMAL,
 });
 
 // Can you add blocks to change the background and the speed of the penguin, and
@@ -1311,12 +1357,12 @@ levels.playlab_9 = {
     '</block>'
 };
 
-levels.iceage_9 = utils.extend(levels.playlab_9, {
-  background: 'flower',
+levels.iceage_warn_ice_age = utils.extend(levels.playlab_9, {
+  background: 'ground',
   toolbox:
     tb(
       blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
-      blockOfType('studio_setBackground', {VALUE: '"icy"'}) +
+      blockOfType('studio_setBackground', {VALUE: '"icy5"'}) +
       blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
       blockOfType('studio_saySprite') +
       blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
@@ -1330,7 +1376,7 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
       type: 'studio_setSpriteSpeed',
       titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
   ],
-  avatarList: ['sid', 'granny'],
+  avatarList: ['sid', 'diego'],
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block>' +
     '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
@@ -1370,13 +1416,15 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
       '</next>' +
     '</block>'
 });
-levels.gumball_9 = utils.extend(levels.playlab_9, {
+
+levels.gumball_warn_food_fight = utils.extend(levels.playlab_9, {
   background: 'dots',
   'delayCompletion': 500,
+  defaultEmotion: Emotions.NORMAL,
   toolbox:
     tb(
       blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
-      blockOfType('studio_setBackground', {VALUE: '"space"'}) +
+      blockOfType('studio_setBackground', {VALUE: '"characters"'}) +
       blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
       blockOfType('studio_saySprite') +
       blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
@@ -1385,12 +1433,12 @@ levels.gumball_9 = utils.extend(levels.playlab_9, {
   requiredBlocks: [
     [{test: 'setBackground',
       type: 'studio_setBackground',
-      titles: {VALUE: '"space"'}}],
+      titles: {VALUE: '"characters"'}}],
     [{test: 'setSpriteSpeed',
       type: 'studio_setSpriteSpeed',
       titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
   ],
-  avatarList: ['nicole', 'penny'],
+  avatarList: ['darwin', 'penny'],
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block>' +
     '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
@@ -1405,7 +1453,7 @@ levels.gumball_9 = utils.extend(levels.playlab_9, {
       '<title name="SPRITE2">1</title>' +
       '<next>' +
         blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
-          blockOfType('studio_saySprite', {TEXT: msg.spaceInvasion()})
+          blockOfType('studio_saySprite', {TEXT: msg.foodFight()})
         ) +
       '</next>' +
     '</block>' +
@@ -1429,6 +1477,53 @@ levels.gumball_9 = utils.extend(levels.playlab_9, {
         blockOfType('studio_move', {DIR: 4}) +
       '</next>' +
     '</block>'
+});
+
+levels.gumball_join_food_fight = {
+  background: 'wood',
+  'delayCompletion': 2000,
+  requiredBlocks: [
+    [{test: 'setSpriteEmotion',
+      type: 'studio_setSpriteEmotion'}],
+    [{test: 'throw',
+      type: 'studio_throw'}]
+  ],
+  timeoutFailureTick: 300,
+  scale: {
+    snapRadius: 2
+  },
+  defaultEmotion: Emotions.NORMAL,
+  avatarList: ['bananajoe', 'anton'],
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [16,0, 0, 0, 0, 16,0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
+  toolbox:
+    tb(
+      blockOfType('studio_whenSpriteCollided', {SPRITE1: 1, SPRITE2: 'anything'}) +
+      blockOfType('studio_setSpriteEmotion', {SPRITE: 1}) +
+      blockOfType('studio_throw', {SPRITE: 0, DIR: 2}) +
+      blockOfType('studio_playSound') +
+      blockOfType('studio_saySprite')
+    ),
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>',
+  'progressConditions' : [
+    { required: { 'setEmotion': true, 'throwProjectile': true},
+      result: { success: true} },
+    { required: { 'timedOut': true}, result: {success: false}}
+  ]
+};
+
+levels.iceage_throw_hearts = utils.extend(levels.gumball_join_food_fight, {
+  background: 'icy3',
+  avatarList: ['sid', 'granny'],
 });
 
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
@@ -1487,9 +1582,21 @@ levels.sandbox =  {
 };
 levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
-levels.playlab_10 = utils.extend(levels.sandbox, {});
-levels.iceage_10 = utils.extend(levels.playlab_10, {});
-levels.gumball_10 = utils.extend(levels.playlab_10, {});
+levels.playlab_10 = utils.extend(levels.sandbox, {
+  appStringsFunctions: {
+    continueText: msg.playlab_lastLevel_continueText
+  },
+});
+levels.iceage_free_play = utils.extend(levels.playlab_10, {
+  appStringsFunctions: {
+    continueText: msg.playlab_lastLevel_continueText
+  },
+});
+levels.gumball_free_play = utils.extend(levels.playlab_10, {
+  appStringsFunctions: {
+    continueText: msg.playlab_lastLevel_continueText
+  },
+});
 
 // Create your own story! Move around the cat and dog, and make them say things.
 levels.k1_6 = {
@@ -2148,6 +2255,7 @@ levels.js_hoc2015_event_two_items = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'background': 'hoth',
   'music': [ 'song7' ],
   'wallMap': 'blank',
@@ -2186,7 +2294,7 @@ levels.js_hoc2015_event_two_items = {
   instructions: msg.hoc2015_event_two_items_instructions(),
   instructions2: msg.hoc2015_event_two_items_instructions2(),
   'timeoutFailureTick': 600, // 20 seconds
-  'showTimeoutRect': true,
+  'showTimeoutRect': 'rgba(0, 0, 0, 0.5)',
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
     'goalRenderOffsetX': 0
@@ -2245,6 +2353,7 @@ levels.js_hoc2015_event_four_items = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'background': 'hoth',
   'music': [ 'song5' ],
   'wallMap': 'blobs',
@@ -2286,7 +2395,7 @@ levels.js_hoc2015_event_four_items = {
   instructions: msg.hoc2015_event_four_items_instructions(),
   instructions2: msg.hoc2015_event_four_items_instructions2(),
   'timeoutFailureTick': 1350, // 45 seconds
-  'showTimeoutRect': true,
+  'showTimeoutRect': 'rgba(0, 0, 0, 0.5)',
   'goalOverride': {
     'goalAnimation': 'animatedGoal'
   },
@@ -2310,6 +2419,7 @@ levels.js_hoc2015_score =
   'avatarList': ['R2-D2'],
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'editCode': true,
   'background': 'hoth',
   'music': [ 'song6' ],
@@ -2326,12 +2436,13 @@ levels.js_hoc2015_score =
   },
   'startBlocks': [
     'function whenGetRebelPilot() {',
-    '  playSound("R2-D2sound1");',
+    '  playSound("R2-D2random");',
     '}',
     ].join('\n'),
   paramRestrictions: {
     playSound: {
       'random': true,
+      'R2-D2random': true,
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
@@ -2359,7 +2470,7 @@ levels.js_hoc2015_score =
   instructions2: msg.hoc2015_score_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
-  'showTimeoutRect': true,
+  'showTimeoutRect': 'rgba(0, 0, 0, 0.5)',
   'goalOverride': {
     'goalAnimation': 'animatedGoal'
   },
@@ -2432,6 +2543,7 @@ levels.js_hoc2015_win_lose = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'background': 'endor',
   'music': [ 'song9' ],
   'wallMap': 'blobs',
@@ -2448,6 +2560,7 @@ levels.js_hoc2015_win_lose = {
   paramRestrictions: {
     playSound: {
       'random': true,
+      'R2-D2random': true,
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
@@ -2475,7 +2588,7 @@ levels.js_hoc2015_win_lose = {
   instructions2: msg.hoc2015_win_lose_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
-  'showTimeoutRect': true,
+  'showTimeoutRect': 'rgba(255, 255, 255, 0.5)',
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_win_lose:instructions',
@@ -2497,6 +2610,10 @@ levels.js_hoc2015_win_lose = {
   ],
 
   'progressConditions' : [
+    // Got all items, not enough points
+    { required: { 'gotAllItems': true, 'currentPointsBelow': 200},
+      result: { message: msg.failedWinLoseScore(), blocklyMessage: msg.failedWinLoseScoreBlockly() } },
+
     // Timed out: not enough items, not enough points
     { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 },
       result: { success: false, message: msg.failedWinLoseTimeout() } },
@@ -2530,6 +2647,7 @@ levels.js_hoc2015_add_characters = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'background': 'endor',
   'music': [ 'song11' ],
   'wallMap': 'circle',
@@ -2547,19 +2665,22 @@ levels.js_hoc2015_add_characters = {
     'addCharacter("PufferPig");',
     '',
     'function whenGetPufferPig() {',
-    '  playSound("PufferPigSound1");',
+    '  playSound("PufferPigRandom");',
     '  addPoints(1000);',
     '}',
     ].join('\n'),
   paramRestrictions: {
     playSound: {
       'random': true,
+      'R2-D2random': true,
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
       'R2-D2sound4': true,
+      'PufferPigRandom': true,
       'PufferPigSound1': true,
-      'PufferPigSound2': true
+      'PufferPigSound2': true,
+      'PufferPigSound3': true
     }
   },
   'sortDrawOrder': true,
@@ -2583,7 +2704,7 @@ levels.js_hoc2015_add_characters = {
   instructions2: msg.hoc2015_add_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
-  'showTimeoutRect': true,
+  'showTimeoutRect': 'rgba(255, 255, 255, 0.5)',
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_add_characters:calloutPutCommandsHereRunStart',
@@ -2604,9 +2725,16 @@ levels.js_hoc2015_add_characters = {
     }
   ],
   'progressConditions' : [
-    { required: { 'collectedItemsAtOrAbove': 3 },
+    { required: { 'createdSpecificItemsBelow': { className: "pufferpig", count: 3 } },
+      result: {
+        success: false,
+        message: msg.failedAddCharactersTimeout(),
+        blocklyMessage: msg.failedAddCharactersTimeoutBlockly()
+      }
+    },
+    { required: { 'collectedSpecificItemsAtOrAbove': { className: "pufferpig", count: 3 } },
       result: { success: true, message: msg.successCharacter1() } },
-    { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
+    { required: { 'timedOut': true },
       result: {
         success: false,
         message: msg.failedAddCharactersTimeout(),
@@ -2620,6 +2748,7 @@ levels.js_hoc2015_chain_characters = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'background': 'starship',
   'music': [ 'song13' ],
   'wallMap': 'horizontal',
@@ -2640,7 +2769,7 @@ levels.js_hoc2015_chain_characters = {
     'addCharacter("Tauntaun");',
     '',
     'function whenGetTauntaun() {',
-    '  playSound("TauntaunSound4");',
+    '  playSound("TauntaunRandom");',
     '  addPoints(50);',
     '',
     '}',
@@ -2648,14 +2777,17 @@ levels.js_hoc2015_chain_characters = {
   paramRestrictions: {
     playSound: {
       'random': true,
+      'R2-D2random': true,
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
       'R2-D2sound4': true,
+      'TauntaunRandom': true,
       'TauntaunSound1': true,
       'TauntaunSound2': true,
       'TauntaunSound3': true,
       'TauntaunSound4': true,
+      'MynockRandom': true,
       'MynockSound1': true,
       'MynockSound2': true,
       'MynockSound3': true,
@@ -2674,7 +2806,7 @@ levels.js_hoc2015_chain_characters = {
   instructions2: msg.hoc2015_chain_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1800, // 60 seconds
-  'showTimeoutRect': true,
+  'showTimeoutRect': 'rgba(255, 255, 255, 0.5)',
   'progressConditions' : [
     { required: { 'collectedSpecificItemsAtOrAbove': { className: "mynock", count: 8 } },
       result: { success: true, message: msg.successCharacter1() } },
@@ -2692,9 +2824,13 @@ levels.js_hoc2015_chain_characters = {
     {
       'id': 'playlab:js_hoc2015_chain_characters:calloutPlaceTwoWhenTauntaun',
       'element_id': '.droplet-gutter-line:nth-of-type(9)',
+      'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content' : {
           'text': msg.calloutPlaceTwoWhenTauntaun(),
+        },
+        'hide': {
+          'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top left',
@@ -2713,6 +2849,7 @@ levels.js_hoc2015_multiply_characters = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'background': 'starship',
   'music': [ 'song12' ],
   'wallMap': 'grid',
@@ -2732,10 +2869,12 @@ levels.js_hoc2015_multiply_characters = {
   paramRestrictions: {
     playSound: {
       'random': true,
+      'R2-D2random': true,
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
       'R2-D2sound4': true,
+      'MouseDroidRandom': true,
       'MouseDroidSound1': true,
       'MouseDroidSound2': true,
       'MouseDroidSound3': true
@@ -2754,7 +2893,7 @@ levels.js_hoc2015_multiply_characters = {
   instructions2: msg.hoc2015_multiply_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 2250, // 75 seconds
-  'showTimeoutRect': true,
+  'showTimeoutRect': 'rgba(255, 255, 255, 0.5)',
   'progressConditions' : [
     { required: { 'collectedItemsAtOrAbove': 20 },
       result: { success: true, message: msg.successCharacter1() } },
@@ -2798,6 +2937,7 @@ levels.js_hoc2015_change_setting = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'background': 'starship',
   'music': [ 'song14' ],
   'wallMap': 'blobs',
@@ -2825,26 +2965,33 @@ levels.js_hoc2015_change_setting = {
   paramRestrictions: {
     playSound: {
       'random': true,
+      'C-3POrandom': true,
       'C-3POsound1': true,
       'C-3POsound2': true,
       'C-3POsound3': true,
       'C-3POsound4': true,
+      'R2-D2random': true,
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
       'R2-D2sound4': true,
+      'PufferPigRandom': true,
       'PufferPigSound1': true,
       'PufferPigSound2': true,
       'PufferPigSound3': true,
+      'TauntaunRandom': true,
       'TauntaunSound1': true,
       'TauntaunSound2': true,
       'TauntaunSound3': true,
+      'MouseDroidRandom': true,
       'MouseDroidSound1': true,
       'MouseDroidSound2': true,
       'MouseDroidSound3': true,
+      'MynockRandom': true,
       'MynockSound1': true,
       'MynockSound2': true,
       'MynockSound3': true,
+      'ProbotRandom': true,
       'ProbotSound1': true,
       'ProbotSound2': true,
       'ProbotSound3': true,
@@ -2863,7 +3010,7 @@ levels.js_hoc2015_change_setting = {
   instructions2: msg.hoc2015_change_setting_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
-  'showTimeoutRect': true,
+  'showTimeoutRect': 'rgba(255, 255, 255, 0.5)',
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_change_setting:setMap',
@@ -2881,16 +3028,14 @@ levels.js_hoc2015_change_setting = {
   ],
   'progressConditions' : [
     // Collected all the items and set the right properties?  Success.
-    { required: { 'setMap': true, 'setDroidSpeed': true, 'collectedItemsAtOrAbove': 3 },
+    { required: { 'setSprite': true, 'setDroidSpeed': true, 'collectedItemsAtOrAbove': 3 },
       result: { success: true, message: msg.successGenericCharacter() } },
-    // Special message for timing out when not enough items collected.
-    { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
-      result: { success: false, message: msg.failedChangeSettingTimeout() } },
-    // If all items are collected, but either property not set?  Failure.
-    { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 },
+    // If all items are collected, but either property not set?  Immediate failure.
+    { required: { 'collectedItemsAtOrAbove': 3 },
       result: { success: false, message: msg.failedChangeSettingSettings() } },
-    { required: { 'setDroidSpeed': false, 'collectedItemsAtOrAbove': 3 },
-      result: { success: false, message: msg.failedChangeSettingSettings() } }
+    // Timed out and obviously collected not enough items.
+    { required: { 'timedOut': true },
+      result: { success: false, message: msg.failedChangeSettingTimeout() } }
   ]
 };
 
@@ -2926,6 +3071,22 @@ var js_hoc2015_event_free_markdown = [
       'Feel free to use `for` loops, `if` statements, variables, or other JavaScript ' +
       'commands to make much more complex games. And _please_: document and share ' +
       'the code you wrote for others to learn too!</p>',
+  '',
+  '</details>',
+  '<details class="hoc2015">',
+  '<summary>More about the characters</summary>',
+  '<p>Each character has a unique behavior:',
+  '<br/><br/>',
+  '[pufferpig] <b>Puffer Pigs</b> roam around slowly<br/>',
+  '[tauntaun] <b>Tauntauns</b> roam around at a normal speed<br/>',
+  '[mynock] <b>Mynocks</b> fly around at a normal speed<br/>',
+  '[stormtrooper] <b>Stormtroopers</b> chase your droid slowly<br/>',
+  '[probot] <b>Probots</b> chase your droid quickly<br/>',
+  '[rebelpilot] <b>Rebel Pilots</b> flee at a normal speed<br/>',
+  '[mousedroid] <b>Mouse Droids</b> flee quickly<br/>',
+  '<br/>',
+  'You can change the speed of any character with the moveFast, moveNormal, and moveSlow commands.',
+  '</p>',
   '',
   '</details>'
 ].join('\r\n');
@@ -2985,7 +3146,7 @@ levels.js_hoc2015_event_free = {
     'setMap("circle");',
     'setDroid("R2-D2");',
     'setDroidSpeed("normal");',
-    'playSound("R2-D2sound5");',
+    'playSound("R2-D2random");',
     'function whenUp() {',
     '  goUp();',
     '}',
@@ -3036,8 +3197,8 @@ levels.js_hoc2015_event_free = {
           'text': msg.calloutFinishButton(),
         },
         'position': {
-          'my': 'top left',
-          'at': 'bottom right',
+          'my': 'center left',
+          'at': 'center right',
         }
       }
     }
@@ -3048,7 +3209,8 @@ levels.js_hoc2015_event_free = {
     sharingText: msg.hoc2015_shareGame
   },
   disablePrinting: true,
-  disableSaveToGallery: true
+  disableSaveToGallery: true,
+  playStartSound: false
 };
 
 levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
@@ -3132,6 +3294,7 @@ levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_finale,  {
   enableShowCode: true,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
+  callouts: null,
   requiredBlocks: [
     moveNorthRequiredBlock(),
     moveSouthRequiredBlock(),
@@ -3206,7 +3369,7 @@ levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   },
   startBlocks:
     '<block type="studio_whenTouchGoal" deletable="false"> \
-      <next><block type="studio_playSound"><title name="SOUND">R2-D2sound1</title></block> \
+      <next><block type="studio_playSound"><title name="SOUND">R2-D2random</title></block> \
       </next></block>',
   toolbox:
     tb('<block type="studio_playSound"></block> \
@@ -3276,7 +3439,7 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
       <title name="VALUE">pufferpig</title> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">PufferPigSound1</title> \
+       <block type="studio_playSound"><title name="SOUND">PufferPigRandom</title> \
         <next> \
          <block type="studio_addPoints"><title name="VALUE">1000</title></block> \
         </next> \
@@ -3337,7 +3500,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="180"> \
       <title name="VALUE">tauntaun</title> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">TauntaunSound4</title> \
+       <block type="studio_playSound"><title name="SOUND">TauntaunRandom</title> \
         <next> \
          <block type="studio_addPoints"><title name="VALUE">50</title></block> \
         </next> \
@@ -3426,9 +3589,9 @@ levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
           <next> \
            <block type="studio_addCharacter"><title name="VALUE">"rebelpilot"</title> \
             <next> \
-             <block type="studio_setBackground"><title name="VALUE">"random"</title> \
+             <block type="studio_setBackground"><title name="VALUE">random</title> \
               <next> \
-               <block type="studio_setMap"><title name="VALUE">"random"</title></block> \
+               <block type="studio_setMap"><title name="VALUE">random</title></block> \
               </next> \
              </block> \
             </next> \
@@ -3439,11 +3602,9 @@ levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
        </block> \
       </next> \
      </block>',
-  // TODO: create setDroid block to improve the readability of the block?
-  // TODO: skin override of playSound dropdown (with paramsList filtering & random)
   toolbox:
-    tb('<block type="studio_setSprite"><title name="VALUE">"C-3PO"</title></block> \
-        <block type="studio_setDroidSpeed"></block> \
+    tb('<block type="studio_setSprite"><title name="VALUE">"c-3po"</title></block> \
+        <block type="studio_setDroidSpeed"><title name="VALUE">fast</title></block> \
         <block type="studio_setBackground"></block> \
         <block type="studio_setMap"></block> \
         <block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
@@ -3489,7 +3650,7 @@ levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
             <next> \
              <block type="studio_setDroidSpeed"><title name="VALUE">normal</title> \
               <next> \
-               <block type="studio_playSound"><title name="SOUND">R2-D2sound5</title></block> \
+               <block type="studio_playSound"><title name="SOUND">R2-D2random</title></block> \
               </next> \
              </block> \
             </next> \
@@ -3534,8 +3695,8 @@ levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
           text: msg.calloutFinishButton(),
         },
         position: {
-          my: 'top left',
-          at: 'bottom right',
+          my: 'center left',
+          at: 'center right',
         }
       }
     },

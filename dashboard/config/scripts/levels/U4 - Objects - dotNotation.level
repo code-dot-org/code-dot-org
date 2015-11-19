@@ -1,0 +1,51 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-12-02T15:59:18.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": null,
+      "console.log": null,
+      "addOperator": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Use dot notation to display individual properties of the object. (Click to see full instructions)",
+    "start_blocks": "onEvent(\"screen1\", \"click\", function(event){\r\n\tconsole.log(\"You clicked at \");\r\n});\r\nonEvent(\"screen1\", \"keydown\", function(event){\r\n  console.log(\"You pressed \");\r\n});",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "markdown_instructions": "# Objects\r\n\r\n**Objects are unordered collections of name value pairs**. Like an array they can hold many pieces of information, but where arrays use a numeric index to reference specific pieces of information, objects use a descriptive name. We lose the \"ordered\" nature of our data, but we gain the ability to describe the purpose of each piece of data within a collection.\r\n\r\nConsider the event objects you just looked at. An array can just as easily store all the information they contain, but it would be difficult to determine what any of the values represent.\r\n\r\n# Properties and Dot Notation\r\n\r\nIt can be awkward to refer to each item in an object as a \"name value pair\". Each describes one aspect of the whole object, and so it is much more common to refer to each name value pair as a **property** of the object.\r\n\r\nIn JavaScript we use **dot notation** to access individual properties of your object. Dot notation is formed by **connecting the name of the object to the name of the property with a period (or \"dot\")**.\r\n\r\n**Example:** `user.age` would access the `\"age\"` property of the an object called `user`\r\n\r\nWe've used dot notation before, so let's just do a little practice to remind ourselves how it works.\r\n\r\n# Do This\r\n\r\n**Starter code** is provided which creates event handlers for both a \"click\" and \"keydown\" event and displays the contents of the event object they create. You will need to use **dot notation** to access individual properties of the event object.\r\n\r\n* **Add code** to the \"click\" event handler that displays where the mouse was clicked.\r\n* **Add code** to the \"keydown\" event handler that displays what key was pressed.\r\n* **Run your program** and confirm the correct information is being displayed in the console.\r\n\r\n![](https://images.code.org/b56d0370a35d11918c754c7132f57ba1-image-1449072748156.12.13 AM.png)",
+    "slider_speed": "1.0",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "debugger_disabled": "false"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

@@ -21,12 +21,6 @@ nav: promote_nav
 
 <%= view :promote_posters %>
 
-<a id="banners"></a>
-
-## გამოაქვეყნეთ ეს ბანერები თქვენს ვებგვერდზე
-
-[![გამოსახულება](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![გამოსახულება](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![გამოსახულება](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-
 <a id="social"></a>
 
 ## გამოაქვეყნეთ სოციალურ მედიაში
@@ -42,6 +36,16 @@ nav: promote_nav
 [![გამოსახულება](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+
+  1. ნებისმიერი მითითება "კოდის საათზე" უნდა გამოყენებულ იქნეს ისე, რომ გამოჩნდეს არა როგორც თქვენი ბრენდის სახელი, არამედ როგორც მითითება კოდის საათზე როგორც grassroots-ის მოძრაობაზე. კარგი მაგალითი: "იმონაწილევეთ კოდის საათი™-ში ACMECorp.com-ზე". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. ჩასვით ენა თქვენს გვერდზე (ან footer-ში), CSEdWeek-ის ბმულებისა და Code.org-ის ვებგვერდების ჩათვლით, რომელშიც შემდეგი რამ იქნება გადმოცემული:
+    
+    *"'კოდის საათი™' არის ქვეყნის მასშტაბის ინიციატივა კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის[csedweek.org] და Code.org-ის[code.org] მიერ, წარვუდგნოთ მილიონობით მოსწავლეს კომპიუტერული მეცნიერების და კომპიუტერული პროგრამირების ერთი საათი."*
+
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 
@@ -128,4 +132,3 @@ nav: promote_nav
 
 პატივისცემით, [NAME], [TITLE]
 
-<%= view :signup_button %>

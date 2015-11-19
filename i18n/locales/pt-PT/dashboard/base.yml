@@ -221,6 +221,7 @@ pt:
         playlab: Desenvolver uma aplicação
         artist: Desenhar alguma coisa
         calculate: Calculate Something
+        applab: Desenvolver uma aplicação
     user:
       classroom: Página inicial do Professor
       district_dashboard: Painel do distrito
@@ -244,6 +245,8 @@ pt:
       prize_us_only: (Apenas para estudantes dos E.U.A.)
       prizes_link: Mais informação
   teacher:
+    answer: Resposta
+    for_teachers_only: Apenas para Professores
     title:
       one: 'Seu professor:'
       other: 'Os teus professores:'
@@ -400,6 +403,9 @@ pt:
     privacy: Política de privacidade
     secure: Versão segura
     report_abuse: Denunciar abuso
+    built_on_code_studio: 'Construído no "Code Studio"'
+    make_my_own_app: 'Fazer a minha própria "app"'
+    how_it_works: Como funciona
   reference_area:
     title: Precisas de ajuda?
     subtitle: Vê estes vídeos e sugestões
@@ -431,6 +437,7 @@ pt:
   pdf_download: Descarregar PDF
   download_coming_soon: 'Brevemente: Atividade para descarregar.'
   video_coming_soon: Vídeo em breve!
+  not_started: O aluno ainda não tentou este nível.
   share_code:
     title: "Clica em 'Executar' para veres o meu programa em ação"
     bounce_og_title: Veja meu jogo de Pingue-pongue
@@ -455,7 +462,7 @@ pt:
       unused: Níveis por utilizar
   upsell:
     hoc:
-      title: Hora de Código
+      title: Classic Maze
       body: Experimente as noções básicas de ciência da computação. Milhões de pessoas já experimentaram.
     flappy:
       title: Flappy Bird
@@ -472,9 +479,14 @@ pt:
       body: Veja uma galeria de aplicativos e imagens artísticas criadas por nossos usuários
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Laboratório infinito
       body: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
+    minecraft:
+      title: Minecraft
+      body: Explora um mundo Minecraft através do código.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!

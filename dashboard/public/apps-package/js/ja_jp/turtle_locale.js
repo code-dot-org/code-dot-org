@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "鉛筆を持ち上げたり、下げたりして、描くのを始めたり、止めたりします。"},
 "penUp":function(d){return "鉛筆を持ち上げる"},
 "reinfFeedbackMsg":function(d){return "絵が描けましたね！別の絵を描いてもいいですし、次のパズルに進んでもいいですよ。"},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "アルファ値を設定します"},
 "setColour":function(d){return "色を設定"},
 "setPattern":function(d){return "模様を設定"},
 "setWidth":function(d){return "幅を設定"},

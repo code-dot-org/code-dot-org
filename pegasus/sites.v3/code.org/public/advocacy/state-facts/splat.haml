@@ -151,11 +151,13 @@ theme: pdf
       Code.org's Impact in
       = state_info[:state_name_s]
     %p.larger
-      About
-      = format_integer_with_commas(state_info[:num_hoc_i])
-      people in
-      = state_info[:state_name_s]
-      have completed an Hour of Code!
+      There are
+      = format_integer_with_commas(state_info[:teacher_studio_acct_i])
+      teacher accounts and
+      = format_integer_with_commas(state_info[:student_studio_acct_i])
+      student accounts in Code Studio in
+      = succeed '.' do
+        = state_info[:state_name_s]
     %ul
       - if state_info[:school_district_partners_t] != 'no school districts in the state'
         %li
@@ -340,7 +342,6 @@ theme: pdf
       = succeed "." do
         %a{href: "https://twitter.com/codeorg"} Twitter
     %div
-      %img.logo{src: "/images/logo_2x.png"}
       %p Launched in 2013, Code.org® is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
     %p.clear-both.sources Data is from the Conference Board, the Bureau of Labor Statistics, the College Board, the National Science Foundation, the National Center for Education Statistics, and the Gallup research study Searching for Computer Science: Access and Barriers in K-12 Education.
 

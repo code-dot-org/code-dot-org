@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -45,6 +44,10 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -57,10 +60,10 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
-**تمام اسباق گھنٹے کا کوڈ:**
+**آور-آف-کوڈ کے تمام ٹیٹوریئلز**
 
-  * Require minimal prep-time for organizers
-  * Are self-guided - allowing students to work at their own pace and skill-level
+  * آرگنائزرز کے لیے تیاری کا کم از کم درکار وقت
+  * یہ سیلف-گائیڈڈ ہوں گے – جو اسٹوڈینٹس کو ان کی رفتار اور اسکل-لیول کے مطابق انہیں کام کرنے کی سہولت دیں گے۔
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
@@ -68,29 +71,28 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
-  * **Test tutorials on student computers or devices.** Make sure they work properly (with sound and video).
-  * **Preview the congrats page** to see what students will see when they finish. 
-  * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **اسٹوڈینٹس کمپیوٹرز یا ڈیوائسز پر ٹیٹوریئلز ٹیسٹ کرسکیں گے۔ **یقینی اطمینان کرلیں کہ یہ براؤزرز پر ساؤنڈ اور وڈیو کے ساتھ مناسب طور پر کام کر رہے ہیں۔
+  * **کانگریٹس پیج کا پری-ویو لیں** تاکہ یہ دیکھیں کہ جب اسٹوڈینٹس فنش کریں گے تو وہ کیا دیکھیں گے۔ 
+  * **اپنی کلاس کے لیے ھیڈ فون فراہم کریں، یا اسٹوڈینٹس سے کہیں کہ وہ اپنے ہیڈفونز اپنے ساتھ لے کر آئیں، **جبکہ آپ کا منتخب کردہ ٹیٹوریئل ساؤنڈ کے ساتھ بہترین کام کرتا ہو۔
 
 ## 3) Plan ahead based on your technology available
 
-  * **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
-  * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+  * **کیا کافی ڈیوائسز موجود نہیں ہیں؟ تو پھر ** استعمال کریں [پیئر پروگرامنگ۔ ](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) جب پارٹیسیپنٹس (شرکاء) آپس میں پارٹنرز بنتے ہیں، تو ایک دوسرے کی مدد کرتے ہیں اور ٹیچر پر انحصار کم کرتے ہیں۔
+  * ** کیا آپ کی بینڈوردتھ کم ہے؟** پوری کلاس کے سامنے ویڈیوز شو (دیکھانے) کا پلان کریں، تاکہ پھر ہر ایک اسٹوڈینٹ کو اپنے لئے انفرادی طور پر ویڈیوز ڈاؤن-لوڈ نہ کرنا پڑے۔ یا اَن-پلگڈ/آف-لائن ٹیٹوریئلز ٹرائی کریں۔
 
 ## 4) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
+  * Code.org کی اوریجنل ویڈیو پلے کریں، جس میں بل گیٹس، مارک زوکربرگ، اور NBA اسٹار کرس بوش نمایاں کردار ہیں۔ (اس کے [ 1 منٹ](https://www.youtube.com/watch?v=qYZF6oIZtfc)، [ 5 منٹ](https://www.youtube.com/watch?v=nKIu9yen5nc)، اور [ 9 منٹ](https://www.youtube.com/watch?v=dU1xS07N-FA) پر مبنی ورژن ہیں)
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * [صدر اوباما نے تمام اسٹوڈینٹس کو کمپیوٹر سائنس سیکھنے پر زور دیا](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**اپنے طالب علموں کی حوصلہ افزائی کریں - ان کو ایک مختصر انٹرو دے**
 
 <% else %>
 
-# Additional resources coming soon!
+# اضافی وسائل (ریسورسز) جلد آ رہے ہیں!
 
 <% end %>
 
-<%= view :signup_button %>

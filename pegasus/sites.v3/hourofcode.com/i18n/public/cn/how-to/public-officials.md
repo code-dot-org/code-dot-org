@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # How to bring the Hour of Code to your entire community.
 
@@ -34,7 +33,7 @@ nav: how_to_nav
 
 ## 让每个学校都参加，每个学生都来学习！
 
-  1. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/prizes') %>) and in **each state**, one participating school will win **$10,000 in technology**!
+  1. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/prizes') %>) while supplies last and in **each state**, one participating school will win **$10,000 in technology**!
 
   2. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/event') %>) for a sample run of show, media outreach kit and other event-planning resources. 组织活动能极大的推广编程一小时并增加参与人数。
 
@@ -55,4 +54,3 @@ nav: how_to_nav
 
   8. **Connect locally.** Visit [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to learn more about computer science education in your state. 在这里签署请愿书，你会从当地的州政府和联邦政府的大力宣传中得到信息的更新。
 
-<%= view :signup_button %>

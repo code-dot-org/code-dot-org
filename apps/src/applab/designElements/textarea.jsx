@@ -140,12 +140,16 @@ module.exports = {
     element.style.color = '#000000';
     element.style.backgroundColor = '#ffffff';
 
+    $(element).addClass('textArea');
+
     this.onDeserialize(element);
 
     return element;
   },
 
   onDeserialize: function (element) {
+    $(element).addClass('textArea');
+
     $(element).on('mousedown', function (e) {
       if (!Applab.isRunning()) {
         // Disable clicking into text area unless running

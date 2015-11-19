@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -45,6 +44,10 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -53,7 +56,7 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](<%= localized_file('/files/corporations.pdf') %>)
 
-## 1) Try the tutorials:
+## 1) ნახეთ ტუტორიალები:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
@@ -64,28 +67,28 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) დაგეგმეთ, რა ტექნიკა დაგჭირდებათ - კომპიუტერები არ არის აუცილებელი
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
+საუკეთესო გამოცდილებას კომპიუტერებითა და ინტერნეტით აღჭურვილ კლასში მიიღებთ, თუმცა თქვენ არ გჭირდებათ კომპიუტერი ყოველი ბავშვისთვის - და საერთოდ კომპიუტერის გარეშეც შეგიძლიათ კოდის ერთი საათის ჩატარება.
 
   * ** გატესტეთ ტუტორიალების მუშაობა მოსწავლეების კომპიუტერებზე.** დარმწუნდით, რომ ვიდეო ჩანს და ხმა ისმის.
   * **გაცანით მილოცვის გვერდს** და გაიგეთ, რას ნახავენ მოსწავლეები როცა დაასრულებენ ტუტორიალს. 
   * **არ დაგავიწყდეთ კლასის ყურსასმენებით უზრუნველყოფა**, ან სთხოვეთ მოსწავლეებს მოიტანონ თავიანთი, თუ თქვენ მიერ შერჩეული ტუტორიალის გასავლელად საჭიროა ხმა.
 
-## 3) Plan ahead based on your technology available
+## 3) დაგეგმეთ წინასწარ, თქვენთვის მისაწვდომი ტექნიკის გათვალისწინებით
 
   * **არ გაქვს საკმარისი მოწყობილობა?** გამოიყენეთ [პროგრამირება წყვილებში](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). ერთად მუშაობისას მონაწილეები ეხმარებიან ერთმანეთს და ნაკლებად მოითხოვენ მასწავლებლის ყურადღებას.
   * **ინტერნეტს დაბალი სიჩქარე აქვს?** აჩვენეთ ვიდეოები ერთ დიდ ეკრანზე - ასე ყოველ მოსწავლეს არ დასჭირდება ცალკე ჩატვირთოს ვიდეო. ან სცადეთ ოფლაინ-ტუტორიალები.
 
-## 4) Inspire students - show them a video
+## 4) შთააგონეთ მოსწავლეები - აჩვენეთ მათ ვიდეო
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+აჩვენეთ მოსწავლეებს ჩვენი ერთ-ერთი ვიდეო კოდის ერთი საათის ენერგიულად დასაწყებად. მაგალითად:
 
   * Code.org-ის მთავარი ვიდეო-რგოლი, რომელშიც ლაპარაკობენ ბილ გეითსი, მარკ ცუკერბერგი და NBA ვარსკვლავი ქრის ბოში (ხანგრძლივობა: [1 წუთი](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 წუთი](https://www.youtube.com/watch?v=nKIu9yen5nc) ან [9 წუთი](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [პრეზიდენტი ობამა მოუწოდებს ყველა მოსწავლეს პროგრამირების სწავლას](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**დააინტერესეთ თქვენი მოსწავლეები - აჩვენეთ, რასთან აქვთ საქმე**
 
 <% else %>
 
@@ -93,4 +96,3 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <% end %>
 
-<%= view :signup_button %>

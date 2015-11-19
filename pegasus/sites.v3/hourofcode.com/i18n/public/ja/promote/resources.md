@@ -21,12 +21,6 @@ nav: promote_nav
 
 <%= view :promote_posters %>
 
-<a id="banners"></a>
-
-## このバナーをあなたのウェブサイトで取り上げてください
-
-[![画像](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-
 <a id="social"></a>
 
 ## ソーシャル メディアに投稿してください
@@ -42,6 +36,16 @@ nav: promote_nav
 [![画像](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
 [高解像度のバージョンをダウンロード](http://images.code.org/share/hour-of-code-logo.zip)
+
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+
+  1. いかなる「Hour of Code」への言及も、それがあなたの独自のブランド名だと示唆する形ではなく、Hour of Code を草の根運動として参照する形で使われるべきです。 Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. ページに（またはフッターに）、CSEdWeek と Code.org へのリンクを含めて次の言葉を含めてください:
+    
+    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 
@@ -128,4 +132,3 @@ Hour of Code は[学校名] が21世紀を生きるご子息の皆様に必須�
 
 敬具 [名前]、[肩書]
 
-<%= view :signup_button %>

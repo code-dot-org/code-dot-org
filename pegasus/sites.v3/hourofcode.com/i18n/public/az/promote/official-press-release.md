@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Sample press release for elected officials
 
@@ -26,7 +25,7 @@ Contact: [**CONTACT INFORMATION**]
   
 </p> 
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
+**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [ADI DAXİL EDİN] və ictimaiyyət nümayəndələri dünyanın hər yerindən tarixin ən böyük təhsil hadisəsində qoşulmuş on milyonlarla insanın arasında idilər.
 
 [**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
 “Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
@@ -49,4 +48,3 @@ For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] o
   
 
 
-<%= view :signup_button %>

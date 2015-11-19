@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # How to bring the Hour of Code to your entire community.
 
@@ -34,7 +33,7 @@ nav: how_to_nav
 
 ## Hãy để mọi học sinh đều có cơ hội tham gia!
 
-  1. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/prizes') %>) and in **each state**, one participating school will win **$10,000 in technology**!
+  1. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/prizes') %>) while supplies last and in **each state**, one participating school will win **$10,000 in technology**!
 
   2. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/event') %>) for a sample run of show, media outreach kit and other event-planning resources. Tổ chức một sự kiện là cách tuyệt vời để thúc đẩy Giờ Lập trình và tăng người tham dự.
 
@@ -55,4 +54,3 @@ nav: how_to_nav
 
   8. **Connect locally.** Visit [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to learn more about computer science education in your state. Đăng đơn kiến nghị tại đây và bạn sẽ nhận được thông tin cập nhật từ Code.org về những nỗ lực vận động tại địa phương, tiểu bang và liên bang của họ.
 
-<%= view :signup_button %>

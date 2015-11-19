@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Thanks for signing up for a chance to win the $10,000 Hardware Prize
 
@@ -16,7 +15,7 @@ Your whole school is now entered to win a class-set of laptops (or $10,000 for o
 
 Berätta för dina vänner om #HourOfCode.
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Be din skola att arrangera En timma av kod
 
 [Send this email](<%= resolve_url('/promote/resources#email') %>) to your principal.
 
@@ -32,4 +31,3 @@ Recruit a local group — boy/girl scouts club, church, university, veterans gro
 
 [Send this email](<%= resolve_url('/promote/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
 
-<%= view :signup_button %>

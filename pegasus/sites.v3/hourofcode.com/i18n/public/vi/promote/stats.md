@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Lời giới thiệu và các thống kê hữu ích
 
@@ -20,4 +19,3 @@ Máy tính ở khắp mọi nơi, nhưng 10 năm trở lại trước chỉ mộ
 
 <%= view :stats_carousel %>
 
-<%= view :signup_button %>

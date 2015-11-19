@@ -4,7 +4,6 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -35,6 +34,14 @@ title: <%= hoc_s(:title_partners) %>
 # Parteneri din Indonesia
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
+
+<% end %>
+
+<% if @country == 'ie' %>
+
+# Ireland Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
 <% end %>
 
@@ -112,4 +119,3 @@ title: <%= hoc_s(:title_partners) %>
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 
-<%= view :signup_button %>

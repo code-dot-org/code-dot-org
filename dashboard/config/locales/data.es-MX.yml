@@ -31,13 +31,13 @@
           desc: Editar código (beta)
           MazeEC: Etapa 1
         2014 Levels:
-          desc: Bounce (beta)
+          desc: Rebotar (beta)
           Bounce: Etapa 1
         Builder Levels:
           desc: Rompecabezas creados por el usuario (beta)
           Custom: Etapa 1
         Flappy Levels:
-          desc: Flappy Bird
+          desc: El Ave Flappy
           Flappy: Etapa 1
         Jigsaw Levels:
           desc: Rompecabezas (beta)
@@ -52,14 +52,14 @@
           ArtistEC: Etapa 3
           StudioEC: Etapa 4
         events:
-          desc: Bounce (beta)
+          desc: Rebotar (beta)
           Bounce: Etapa 1
           Studio: Etapa 2
         builder:
           desc: Rompecabezas creados por el usuario (beta)
           Custom: Etapa 1
         flappy:
-          desc: Flappy Bird
+          desc: El Ave Flappy
           Flappy: Etapa 1
         jigsaw:
           desc: Rompecabezas (beta)
@@ -95,7 +95,7 @@
         Unplug11: Cierre
         MazeEC: El laberinto
         Bounce: Rebotar
-        Flappy: Flappy Bird
+        Flappy: El Ave Flappy
         Jigsaw: Rompecabezas
         MazeStep: Modo paso a paso de laberinto
         Wordsearch: Sopa de Letras
@@ -105,6 +105,8 @@
         StudioEC: Laboratorio de Juegos
         Applab: Laboratorio de App
         NetSim: Simulador de internet
+        Custom: Artista
+        CustomStudio: Laboratorio de Juegos
     trophy:
       name:
         Bronze: Bronce
@@ -558,6 +560,83 @@
           alertar a los demás
         studio_playlab_10: Crea tu propio juego. Cuando hayas terminado, haz clic
           en finalizar para que tus amigos prueben tu juego en sus teléfonos.
+        studio_iceage_hello1: Sid quiere reunir a todos para una nueva aventura. ¿Puedes
+          ayudarlo a decir '"Hola" arrastrando el bloque 'Decir' en el área de trabajo
+          y tecleando la palabra "Hola" dentro de él?
+        studio_iceage_hello2: Sid (actor 1) se encontró a Manny (actor 2) y quiere
+          invitarlo a una aventura. Ayudarlos a saludarse uno al otro usando el bloque
+          "Actor Dice" dos veces.
+        studio_iceage_move_to_flag: ¡Scrat esta buscando su bellota! Ayúdalo a avanzar
+          los últimos 200 pixeles usando el bloque "Avanzar".
+        studio_iceage_move_to_actor: Diego (actor 1) esta buscando a Manny (actor
+          2). Ayuda a Diego a moverse 200 pixeles hacia abajo con Manny, utiliza el
+          bloque "mover actor". Después, conecta un bloque a el evento "cuando el
+          actor toque" para reproducir un sonido cuando ellos se encuentren.
+        studio_iceage_repeat: El bloque "repetir por siempre" permite correr el código
+          continuamente. ¿Puedes adjuntar bloques a él para ayudar a Granny a hacer
+          algo de ejercicio al moverse de izquierda a derecha repetidamente?
+        studio_iceage_click_hello: ¿Puedes ayudar a Sid a decidir por sus amigos cuando
+          le das clic? no olvides dar clic en él después de que oprimas ejecutar.
+        studio_iceage_move_events: ¡Scrat esta buscando bellotas¡ Ayúdale a correr
+          tras de ellas al adjuntar el bloque "mover" a cada uno de los eventos y
+          cambiar de dirección con cada flecha de dirección. Cuando termines, da clic
+          en Ejecutar e intenta recolectar todas las bellotas.
+        studio_iceage_sound_and_points: Te hemos dado la mayoría del código que hace
+          que Granny se mueva a la izquierda y derecha, también el código para mover
+          a Sid por la pantalla. ¿Puedes finalizar el código y agregar bloques al
+          evento "cuando el actor toca" para hacer que se reproduzca un sonido y ganen
+          un punto cuando Sid y Granny se encuentren? Presiona Ejecutar y juega.
+        studio_iceage_warn_ice_age: ¡Todos necesitan moverse más rápido porque la
+          era de hielo se aproxima! Cambia el fondo a "tempanos" y fija la velocidad
+          de Sid a "rápido", después presiona Ejecutar y muévelo hacia Diego para
+          que se caliente.
+        studio_iceage_throw_hearts: Sid quiere que su abuela Granny sepa que él la
+          ama. ¡Usa el comando "actor lanza" para hacer que Sid (actor1) le lance
+          corazones a Granny (actor 2)! Fija el humor de Granny a feliz cuando le
+          lleguen los corazones.
+        studio_iceage_free_play: ¡Es hora de crear tu propio juego o historia! Cuando
+          termines, da clic en Terminar y ¡haz que tus amigos jueguen con tu juego
+          en sus teléfonos, tablets o computadoras!
+        studio_gumball_hello1: Anais quiere hacer nuevos amigos. ¿Puede ayudarla a
+          decir "Hola" arrastrando el bloque de «decir» en el área de trabajo y escribiendo
+          dentro la palabra "Hola"?
+        studio_gumball_hello2: Darwin (actor 1) y su hermano Gumball (actor 2) se
+          dirigen a la escuela.  Ayudales a saludarse mediante el uso de los el bloque
+          de "actor dice" dos veces.
+        studio_gumball_move_to_flag: ¡Banana Joe está a punto de ganar una carrera
+          un día de campo!  Ayúdale a ir a los últimas 200 píxeles utilizando el bloque
+          "mover".
+        studio_gumball_move_to_actor: ¡Gumball (actor 1) y Darwin (actor 2) llegan
+          tarde en el día de campo! Ayuda a Gumball a ir 200 píxeles hacia abajo hasta
+          Darwin utilizando el bloque "mover actor".  A continuación, conecta un bloque
+          al evento "cuando toque actor" para reproducir un sonido cuando se encuentran
+          uno al otro.
+        studio_gumball_repeat: El bloque "repetir por siempre" nos permite ejecutar
+          código de forma continua.  ¿Puedes conectar bloques a el para ayudar a Gumball
+          a calentar para la carrera moviendo a izquierda y derecha repetidamente?
+        studio_gumball_click_hello: ¿Puedes ayudar a Antón a anunciar el inicio de
+          una carrera dicendo "¡Preparados, listos, ya!"? ¡Para probar tu programa,
+          no olvides pulsar sobre Antón después de hacer clic en ejecutar!
+        studio_gumball_move_events: ¡Darwin está en la bandera del concurso de la
+          reunión! Ayúdale a correr conectando el bloque "mover" a cada uno de los
+          eventos. Cuando hayas terminado, haz clic en ejecutar y trata de recoger
+          todas las banderas.
+        studio_gumball_sound_and_points: Tenemos la mayor parte del código que hace
+          que a Anton (actor 2) se mueva de la izquierda y derecha, así como el código
+          para mover a Banana Joe (actor 1) alrededor de la pantalla.  ¿Puedes terminar
+          el código y añadir bloques al evento "cuando el actor toque" para hacer
+          que ambos reproduzcan un sonido y anotar un punto cuando Joe Banana y Antón
+          choquen?  Pulsa ejecutar para jugar al juego.
+        studio_gumball_warn_food_fight: ¡Darwin apenas escapó de una lucha de comida!
+          Cambia el fondo a los "personajes" y configura a rápida la velocidad de
+          Darwin, luego presiona "Correr" y muevelo hacia Penny para advertirla.
+        studio_gumball_join_food_fight: ¡ Únete a la lucha de la comida! Utiliza el
+          comando "actor tira el ítem recto" para que Banana Joe (actor 1) lance comida
+          a Antón (actor 2)! Establece el humor de Antón en enfadado cuando reciba
+          el impacto.
+        studio_gumball_free_play: Crea tu propio juego o historia. ¡Cuando hayas terminado,
+          haz clic en finalizar para permitir que los amigos prueben tu juego en sus
+          teléfonos, tabletas o computadoras!
         studio_full_sandbox: Crea tu propio juego. Cuando hayas terminado, haz clic
           en finalizar para que tus amigos prueben tu juego en sus teléfonos.
         studio_k1_1: ¿Puedes hacer que este perro diga "Hola mundo"?
@@ -618,52 +697,52 @@
         Unplug6: Condicionales
         Unplug7: Composición Musical
         Unplug8: Liberación abstracta
-        Unplug9: Programación de relevos
+        Unplug9: Programación de Relevos
         Unplug10: Internet
         Unplug11: Cierre
         C1_happy_maps_unplugged: Mapas Felices
         C1_moveitmoveit_unplugged: Muévelo, Muévelo
         C1_bigevent_unplugged: El Gran Evento
-        C1_getting_loopy: Bucleandose
+        C1_getting_loopy: Ciclándose
         C1_pair_programming: Programación de pares
         C1_maze_intro_sequencing: Introducción a Secuenciamiento del Laberinto
         C1_maze_debugging: Depuración del Laberinto
         C1_bee_level_intro: Nivel de Abeja - Introducción
         C1_artist_intro: Introducción al Artista
         C1_spelling_bee_intro: Abeja de Deletreo - Introducción
-        C1_zuck_repeat_loop: Bucles de Laberinto
-        C1_bee_loops: Bucles de Abeja
-        C1_maze_loops: Bucles de Laberinto
+        C1_zuck_repeat_loop: 'Laberinto: Ciclos'
+        C1_bee_loops: 'Abeja: Ciclos'
+        C1_maze_loops: 'Laberinto: Ciclos'
         C1_playlab_storytelling: Laboratorio de Juego - Crear una Historia
         C1_planting_seed: Plantando una Semilla
         C1_building_foundation: Construyendo una base
-        C1_going_places_safely: Ir a Sitios Seguro
+        C1_going_places_safely: Ir a Sitios con seguridad
         C2_maze_intro: Introducción al Laberinto
         C2_artist_intro: Introducción al Artista
-        C2_zuck_repeat_loop: Bucles de Laberinto
-        C2_artist_loops: Ciclos del Artista
-        C2_artist_debugging: Debugging del Artista
-        C2_bee_loops: Bucles de Abeja
-        C2_bee_debugging: Depuración Abeja
-        C2_bee_conditionals: Condiciones de la Abeja
+        C2_zuck_repeat_loop: 'Laberinto: Ciclos'
+        C2_artist_loops: Ciclos de Artista
+        C2_artist_debugging: 'Artista: Depuración (Corrección de errores)'
+        C2_bee_loops: 'Abeja: Ciclos'
+        C2_bee_debugging: 'Abeja: Depuración'
+        C2_bee_conditionals: 'Abeja: Condicionales'
         C2_playlab_createstory: Laboratorio de Juego - Crear una Historia
         C2_graph_paper: Programación de hoja cuadriculada
         C2_conditionals_with_cards: Condicionales
         C2_binary_bracelets: Pulseras Binarias
         C2_relay_programming: Programación bajo presión
         C2_paper_airplanes: Aviones de Papel
-        C2_digital_footprint: Tu huella Digital
-        C2_digital_footprint_v2: Tu huella Digital
-        C3_maze_level_4: Bucles de Laberinto
+        C2_digital_footprint: Tu huella digital
+        C2_digital_footprint_v2: Tu huella digital
+        C3_maze_level_4: 'Laberinto: Ciclos'
         C3_artist_intro: Introducción al Artista
-        C3_artist_functions: Funciones de artista
-        C3_bee_functions: Funciones Abeja
-        C3_bee_conditionals: Condiciones de la Abeja
-        C3_maze_conditionals: Condicionales de Laberinto
+        C3_artist_functions: 'Artista: Funciones'
+        C3_bee_functions: 'Abeja: Funciones'
+        C3_bee_conditionals: 'Abeja: Condicionales'
+        C3_maze_conditionals: 'Laberinto: Condicionales'
         C3_artist_nested_loops: Bucles anidados
         C3_farmer_while: Bucles While
         C3_bee_nested_loops: Bucles anidados
-        C3_bee_debugging: Depuración Abeja
+        C3_bee_debugging: 'Abeja: Depuración'
         C3_bounce: Rebotar
         C3_playlab_create_game: Laboratorio de Juego - Crear un Juego
         C3_computational_thinking: Pensamiento computacional
@@ -674,12 +753,12 @@
         C3_songwriting_with_parameters: Composición Musical con Parámetros
         C4_intro: Introducción
         C4_loops_zombie: Iteraciones
-        C4_bee_conditional: Condiciones de la Abeja
+        C4_bee_conditional: 'Abeja: Condicionales'
         C4_variables_artist: Variables - Artista
         C4_variables_playlab: Variables - Laboratorio de juego
-        C4_for_loops: Bucles Para
-        C4_for_loops_bee: Bucles Para
-        C4_for_loops_no_bee: Bucles Para
+        C4_for_loops: Ciclos "Para"
+        C4_for_loops_bee: Ciclos "Para"
+        C4_for_loops_no_bee: Ciclos "Para"
         C4_math_artist: Programando al Artista con matemáticas
         C4_function_edit: Editando funciones
         C4_function_create: Creando funciones
@@ -688,7 +767,7 @@
         C4_unplugged_algorithms: Algoritmos con Tangramas
         C4_unplugged_madlibs: Bibliotecas locas
         C4_unplugged_variables: Variables en sobres
-        C4_unplugged_forloops: Bucles Para
+        C4_unplugged_forloops: Ciclos "Para"
         C4_unplugged_parameters: Composicion musical con Parámetros
         C4_unplugged_binary: Binario
         frozen_intro: Introducción a La Hora del Código
@@ -701,7 +780,16 @@
         infinity_playlab_intro: Jugar Lab - introducción
         infinity_playlab_events: Jugar Lab - eventos
         infinity_playlab_repeat_forever: Jugar Lab - repetir por siempre
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introducción a las Funciones
+        csp_applab_functions_parameters: Funciones con parámetros
+        csp_applab_loops: Iteraciones
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Un poco más de píxeles
         csp_pixelation_color_1: Reproductor Color pixelación - parte 1
         csp_pixelation_color_2: Reproductor Color pixelación - parte 2
@@ -734,6 +822,25 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: Contruyendo una Galaxia con Código - Introducción'
+        starwars_typing: 'Star Wars: Contruyendo una Galaxia con Código - JavaScript'
+        starwars_events: 'Star Wars: Contruyendo una Galaxia con Código - Eventos'
+        starwars_congrats: 'Star Wars: Construyendo una Galaxia con Código - Felicitaciones'
+        starwars_blocks_intro: 'Star Wars: Contruyendo una Galaxia con Código - Introducción'
+        starwars_blocks_events: 'Star Wars: Contruyendo una Galaxia con Código - Eventos'
+        starwars_blocks_congrats: 'Star Wars: Construyendo una Galaxia con Código
+          - Felicitaciones'
+        mc_intro: Minecraft - Introducción
+        mc_repeat: Minecraft - Repeticiones
+        mc_if_statements: Minecraft - Declaraciones condicionales
+        mc_congrats_share: Minecraft - Felicitaciones
+        mc_congrats_no_share: Minecraft - Felicitaciones
+        gumball_intro: Hora del Código de Gumball - introducción
+        gumball_events: Hora del Código de Gumball - Eventos
+        gumball_repeat: Hora del Código de Gumball - instrucciones Repetir
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
@@ -843,3 +950,13 @@
         Infinity_move_collide_callout: Reproducir un sonido cuando se produce este
           evento.
         Infinity_repeat_callout: Lugar para mover bloques dentro de aquí
+        craft_run_button_callout: Toca "Ejecutar" para probar el programa
+        craft_drag_block_callout: Arrastra un bloque "ir hacia adelante" y encájalo
+          debajo del otro bloque
+        craft_callout_preplaced: Pusimos unos bloques aquí para que comiences
+        craft_inside_repeat: Repite las acciones ubicando los bloques aquí
+        craft_callout_preplaced_house: Este código comenzará a construir tu casa.
+          ¿Puedes terminarla?
+        craft_what_is_iron: ¡Mina este hierro!
+        craft_callout_moveforward: Este código verificará si hay lava. ¿Puedes agregar
+          un comando para ir hacia adelante?

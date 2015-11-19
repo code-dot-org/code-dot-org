@@ -6,6 +6,7 @@ var RGBColor = require('./rgbcolor.js');
 var codegen = require('../codegen');
 var keyEvent = require('./keyEvent');
 var utils = require('../utils');
+var elementLibrary = require('./designElements/library');
 
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
@@ -1052,10 +1053,30 @@ applabCommands.playSound = function (opts) {
 
   if (studioApp.cdoSounds) {
     var url = Applab.maybeAddAssetPathPrefix(opts.url);
-    studioApp.cdoSounds.playURL(url,
-                               {volume: 1.0,
-                                forceHTML5: true,
-                                allowHTML5Mobile: true
+    if (studioApp.cdoSounds.isPlayingURL(url)) {
+      return;
+    }
+
+    studioApp.cdoSounds.playURL(url, {
+      volume: 1.0,
+      // TODO: Re-enable forceHTML5 after Varnish 4.1 upgrade.
+      //       See Pivotal #108279582
+      //
+      //       HTML5 audio is not working for user-uploaded MP3s due to a bug in
+      //       Varnish 4.0 with certain forms of the Range request header.
+      //
+      //       By commenting this line out, we re-enable Web Audio API in App
+      //       Lab, which has the following effects:
+      //       GOOD: Web Audio should not use the Range header so it won't hit
+      //             the bug.
+      //       BAD: This disables cross-domain audio loading (hotlinking from an
+      //            App Lab app to an audio asset on another site) so it might
+      //            break some existing apps.  This should be less problematic
+      //            since we now allow students to upload and serve audio assets
+      //            from our domain via the Assets API now.
+      //
+      // forceHTML5: true,
+      allowHTML5Mobile: true
     });
   }
 };
@@ -1315,9 +1336,13 @@ applabCommands.onEvent = function (opts) {
   apiValidateType(opts, 'onEvent', 'callback', opts.func, 'function');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
-    if (domElement.tagName.toUpperCase() === 'DIV' && domElement.contentEditable && opts.eventName === 'change') {
-      // contentEditable divs don't generate a change event, so
-      // synthesize one here.
+    var elementType = elementLibrary.getElementType(domElement);
+    if ((elementType === elementLibrary.ElementType.TEXT_INPUT ||
+        elementType === elementLibrary.ElementType.TEXT_AREA ) &&
+        opts.eventName === 'change') {
+      // contentEditable divs don't generate a change event, and change events
+      // on text inputs behave differently across browsers, so synthesize a
+      // change event here.
       var callback = applabCommands.onEventFired.bind(this, opts);
       ChangeEventHandler.addChangeEventHandler(domElement, callback);
       return true;

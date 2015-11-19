@@ -5,13 +5,13 @@ zh:
       send_instructions: 您將在幾分鐘內收到一封有關說明如何確認您的帳戶的電子郵件。
       send_paranoid_instructions: 如果您的電子郵件地址存在於我們的資料庫中，您將在幾分鐘內收到一封說明如何確認您的帳戶的電子郵件。
     failure:
-      already_authenticated: 您已經登錄。
+      already_authenticated: 您已經登入。
       inactive: 您的帳戶尚未啟動。
       invalid: 無效的電子郵件或密碼。
       invalid_token: 無效的身份驗證碼。
-      locked: 您的帳戶被鎖定。
+      locked: 您的帳戶已被鎖定。
       not_found_in_database: 無效的電子郵件或密碼。
-      timeout: 您的使用時間已過期，請重新登錄以繼續。
+      timeout: 您的工作階段已過期，請重新登入以繼續。
       unauthenticated: 您需要登錄或註冊才能繼續。
       unconfirmed: 你必須先認證您的帳號才能繼續。
     mailer:
@@ -56,21 +56,21 @@ zh:
         one: '發生一個錯誤，%{resource}無法儲存：'
         other: '發生%{count}個錯誤，%{resource}無法儲存：'
     invitations:
-      send_instructions: 'An invitation email has been sent to %{email}.'
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: '邀請的email已寄送到 %{email}'
+      invitation_token_invalid: 所提供的邀請碼是無效的！
+      updated: 你的密碼已成功設置。現在可以登入。
+      no_invitations_remaining: 沒有多餘的邀請。
+      invitation_removed: 您的邀請已被移除。
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: 發送邀請
+        submit_button: 發送邀請
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: 設置您的密碼
+        submit_button: 設置我的密碼
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: 'Hello %{email}'
-        someone_invited_you: 'Someone has invited you to %{url}, you can accept it through the link below.'
-        accept: Accept invitation
-        ignore: "If you don't want to accept the invitation, please ignore this email.<br />Your account won't be created until you access the link above and set your password."
+        subject: 邀請說明
+        hello: ' %{email} 你好'
+        someone_invited_you: '有人邀請你到 %{url}，你可以通過以下的連結接受它。'
+        accept: 接受邀請
+        ignore: '如果你不想要接受邀請，請忽略這封電子郵件內容。 < br / > 直到您訪問上面的連結並設置好密碼之前，您的帳號將不會被建立。'

@@ -11,7 +11,7 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
   
 
 
-Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to find state specific information about computer science.
+다음 링크를 방문해서, [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) 컴퓨터과학(정보과학) 수업과 관련한 주/지역별 정보를 살펴보세요. Context | Edit Context
 
 **제목: 컴퓨팅... 일자리가 있는 모든 곳에**
 
@@ -43,6 +43,6 @@ Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/
 
 노동부의 통계에 의하면, 2020년까지 STEM(과학, 기술, 공학, 수학)과 연관된 9천2백만 개의 일자리가 생길 것이라고 합니다. 그 반 만큼의 일자리들—4천6백만—은 컴퓨팅 또는 (정보를 생산하는)정보기술이 될 것이라고 합니다. 그리고 컴퓨터과학은, 21세기를 준비하기 위해 필요한 필수적인 지식으로 점점더 그 가치가 커지고 있습니다. 우리 아이들이, 그렇게 필요한 컴퓨터과학 지식들을 배울 수 있는 기회 조차 없다면, 어떤 사람들로 그러한 일자리들을 채워야 할까요?
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. **[STATE]** 지역의 학교들을 통해서, 우리 학생들이 전세계적으로 진행되는 Hour of Code 행사에 참여하게 될 것입니다. Hour of Code 는 컴퓨터과학의 주제들을 이해하기 쉽게 설명하고, 희망적으로 흥미를 북돋우며 관심과 공부를 지속하게 할 수 있습니다. 저는 함께 참여할 것입니다. 저는, 함께 참여해 주실 수 있도록 여러분들도 초청하고 싶습니다. 우리 모두가 코딩을 배워야 합니다. Visit https://hourofcode.com/<%= @country %> to learn more and get started. 그리고 **[STATE]**의 더 많은 학교들이 컴퓨터과학(정보과학) 과목을 가르칠 수 있도록 하는 우리의 노력에 함께 동참해 주세요..
+이번 주, <%= campaign_date('full') %>, 는 컴퓨터과학교육주간(Computer Science Education Week) 입니다. **[STATE]** 지역의 학교들을 통해서, 우리 학생들이 전세계적으로 진행되는 Hour of Code 행사에 참여하게 될 것입니다. Hour of Code 는 컴퓨터과학의 주제들을 이해하기 쉽게 설명하고, 희망적으로 흥미를 북돋우며 관심과 공부를 지속하게 할 수 있습니다. 저는 함께 참여할 것입니다. 저는, 함께 참여해 주실 수 있도록 여러분들도 초청하고 싶습니다. 우리 모두가 코딩을 배워야 합니다. Https://hourofcode.com/ 를 방문해서 <%= @country %>자세한 내용을 살펴보고 시작하세요. 그리고 **[STATE]**의 더 많은 학교들이 컴퓨터과학(정보과학) 과목을 가르칠 수 있도록 하는 우리의 노력에 함께 동참해 주세요..
 
 <%= view :signup_button %>

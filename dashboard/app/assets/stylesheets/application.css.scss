@@ -232,7 +232,7 @@ a.header_status_bar:hover {
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
-$footer_height: 110px;
+$footer_height: 165px;
 $footer_padding-top: 20px;
 $footer_padding-bottom: 20px;
 $footer_fullheight: $footer_height + $footer_padding-top + $footer_padding-bottom;
@@ -242,9 +242,13 @@ html, body {
 .wrapper {
   min-height: 100%;
   margin-bottom: -$footer_fullheight;     /* This is the same as the height of .push. */
+  position: relative;
 }
 .push {
   height: $footer_fullheight;             /* This is the same as the height of .footer once its padding is included. */
+}
+.legacy-share-view .push {
+  display: none;
 }
 
 .footer {
@@ -890,7 +894,7 @@ input.header_input {
     top: 10px;
   }
 
-  &.embed_hidesource {
+  &.centered_embed {
     position: relative;
     top: 0px;
     left: auto;
@@ -1153,9 +1157,8 @@ a.download-video {
   .welcomeleft {
     float: left;
     text-align: center;
-    width: 190px;
     img {
-    padding-left: 50px;
+      padding-left: 65px;
     }
   }
 
@@ -1933,6 +1936,10 @@ $modal-no-icon-gap: 22px;
     font-size: 16px;
     color: $black;
   }
+
+  strong {
+    font-family: $gotham-bold;
+  }
 }
 
 .markdown-level-header-text {
@@ -1945,6 +1952,11 @@ $modal-no-icon-gap: 22px;
   &.no-modal-icon {
     margin-left: $modal-no-icon-gap;
   }
+}
+
+#feedbackBlocksContainer.hiddenIframe {
+  visibility: hidden;
+  height: 0px;
 }
 
 #feedbackBlocks {
@@ -2098,5 +2110,23 @@ $width: 400px;
   }
   #visualizationEditorHeader.responsive {
     margin-left: $width;
+  }
+}
+
+div#tryHoc {
+  font-size: 20px;
+  padding: 10px 15px;
+  text-align: right;
+  margin:0;
+  right: 0;
+  a {
+    color: #999;
+  }
+  a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  img#hocLogo {
+    width:40px;
   }
 }

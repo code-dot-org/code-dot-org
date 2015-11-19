@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ## Como atrair a mídia para sua Hora do Código
 
@@ -49,7 +48,7 @@ Esperamos que isso desperte o interesse dos alunos para continuar aprendendo. Al
 
 *Por que isso é importante?*
 
-Na China, todos os alunos estudam a ciência da computação para concluir o ensino médio. Nos EUA, 90% das escolas sequer a ensinam. Chegou a hora de agirmos de acordo com o século XXI. Sabemos que, independentemente do que nossos alunos venham a fazer quando chegarem à idade adulta, quer optem pela medicina, quer optem pela administração, política ou artes, saber como construir a tecnologia permitirá que eles tenham a confiança e o conhecimento necessários para alcançar o sucesso.
+In China, every student takes computer science to graduate high school. Nos EUA, 90% das escolas sequer a ensinam. Chegou a hora de agirmos de acordo com o século XXI. Sabemos que, independentemente do que nossos alunos venham a fazer quando chegarem à idade adulta, quer optem pela medicina, quer optem pela administração, política ou artes, saber como construir a tecnologia permitirá que eles tenham a confiança e o conhecimento necessários para alcançar o sucesso.
 
 **Mais detalhes e uma citação que podem ser usados nos materiais**
 
@@ -62,4 +61,3 @@ A Code.org® é uma instituição pública sem fins lucrativos dedicada a promov
   
 Encontre mais recursos e exemplos de e-mail [aqui](<%= resolve_url('/promote') %>).
 
-<%= view :signup_button %>

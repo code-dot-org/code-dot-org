@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Призи - умови отримання
 
@@ -32,4 +31,11 @@ Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide i
 
 <% end %>
 
-<%= view :signup_button %>
+<% if @country == 'us' || @country == 'ca' %>
+
+## Відео-чат із запрошеним оратором:
+
+Приз призначено для шкіл США та Канади. Code.org випадковим чином обере школи-переможці, надасть часові інтервали для веб-чату та узгодить технологічні деталі з відповідним вчителем. Щоб претендувати на приз, не потрібно реєструвати всю школу. Both public and private schools are eligible to win.
+
+<% end %>
+

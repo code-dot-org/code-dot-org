@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ## Hur man lockar till sig media till ett Hour of Code evenemang
 
@@ -49,7 +48,7 @@ We hope it’ll spark interest in students to keep learning. Research also shows
 
 *Varför är det viktigt?*
 
-In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+In China, every student takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
 **More details and a quote you can use in materials**
 
@@ -62,4 +61,3 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
   
 Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
 
-<%= view :signup_button %>

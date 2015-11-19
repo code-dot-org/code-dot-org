@@ -9,7 +9,7 @@
     "code_functions": {
       "appendItem": null,
       "addOperator": null,
-      "randomNumber": null,
+      "randomNumber_min_max": null,
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
@@ -49,8 +49,9 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Write a sentence word by word by adding strings to an array. (Click to see full instructions)",
-    "markdown_instructions": "# Arrays can hold strings\r\n\r\nSo far we have been using arrays to hold numbers, but each location in an array could hold a string instead.\r\n\r\n![](https://images.code.org/5088def6c9aa8c114fc415bf25d83511-image-1447195709238.48.13 PM.png)\r\n\r\n**Note:** It is possible for an array to hold both strings and numbers, but **typically you will only want your arrays to hold one type of data**.\r\n\r\n# Do This\r\n\r\n* Create an **empty array**\r\n* Use `appendItem` to **individually add strings to your array**, forming a sentence of at least **5 words**.\r\n* Use `console.log` to confirm you succesfully created your sentence.\r\n\r\n![](https://images.code.org/75fc0b55a44d02e2366c60b30aeb28d1-image-1447252397993.33.06 AM.png)",
-    "slider_speed": "1"
+    "markdown_instructions": "# Arrays Can Hold Strings\r\n\r\nSo far we have been using arrays to hold numbers, but each location in an array could hold a string instead.\r\n\r\n![](https://images.code.org/5088def6c9aa8c114fc415bf25d83511-image-1447195709238.48.13 PM.png)\r\n\r\n**Note:** It is possible for an array to hold both strings and numbers, but **typically you will only want your arrays to hold one type of data**.\r\n\r\n# Do This:\r\n\r\n* Create an **empty array**.\r\n* Use `appendItem` to **individually add strings to your array**, forming a sentence of at least **5 words**.\r\n* Use `console.log` to confirm you succesfully created your sentence.\r\n\r\n![](https://images.code.org/75fc0b55a44d02e2366c60b30aeb28d1-image-1447252397993.33.06 AM.png)",
+    "slider_speed": "1",
+    "encrypted_examples": "Tcit/kzH4GJRVOZ8eSaySOkP4RFUfiFwHz6RhwLAX+QT3y07/U2qta35z4YK\nj/e/\n"
   }
 }]]></config>
   <blocks/>

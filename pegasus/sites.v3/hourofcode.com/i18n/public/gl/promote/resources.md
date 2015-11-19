@@ -21,12 +21,6 @@ nav: promote_nav
 
 <%= view :promote_posters %>
 
-<a id="banners"></a>
-
-## Feature these banners on your website
-
-[![image](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-
 <a id="social"></a>
 
 ## Post these on social media
@@ -42,6 +36,16 @@ nav: promote_nav
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+
+  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
+    
+    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 
@@ -60,7 +64,7 @@ nav: promote_nav
 
 Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! and Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! e Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 
 This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
@@ -76,7 +80,7 @@ Get started at http://hourofcode.com/<%= @country %>
 
 Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! and Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! e Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 7-13.
 
@@ -128,4 +132,3 @@ Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your res
 
 Sincerely, [NAME], [TITLE]
 
-<%= view :signup_button %>

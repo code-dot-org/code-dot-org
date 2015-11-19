@@ -313,6 +313,8 @@ window.apps = {
 
     timing.startTiming('Puzzle', script_path, '');
 
+    var lastSavedProgram;
+
     // Sets up default options and initializes blockly
     var baseOptions = {
       containerId: 'codeApp',
@@ -339,6 +341,12 @@ window.apps = {
           // (The levelSource is already stored in the channels API.)
           delete report.program;
           delete report.image;
+        } else {
+          // Only locally cache non-channel-backed levels. Use a client-generated
+          // timestamp initially (it will be updated with a timestamp from the server
+          // if we get a response.
+          lastSavedProgram = decodeURIComponent(report.program);
+          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, +new Date(), lastSavedProgram);
         }
         report.scriptName = appOptions.scriptName;
         report.fallbackResponse = appOptions.report.fallback_response;
@@ -351,6 +359,12 @@ window.apps = {
         }
         trackEvent('Activity', 'Lines of Code', script_path, report.lines);
         sendReport(report);
+      },
+      onComplete: function (response) {
+        if (!appOptions.channel) {
+          // Update the cache timestamp with the (more accurate) value from the server.
+          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, response.timestamp, lastSavedProgram);
+        }
       },
       onResetPressed: function() {
         cancelReport();
@@ -461,9 +475,12 @@ window.apps = {
 };
 
 },{"./chrome34Fix":1,"./loadApp":4,"./project":5,"./timing":7}],4:[function(require,module,exports){
-/* global dashboard, appOptions */
+/* global dashboard, appOptions, mergedActivityCssClass */
 
 var renderAbusive = require('./renderAbusive');
+
+// Max milliseconds to wait for last attempt data from the server
+var LAST_ATTEMPT_TIMEOUT = 5000;
 
 // Loads the given app stylesheet.
 function loadStyle(name) {
@@ -475,7 +492,82 @@ function loadStyle(name) {
 }
 
 module.exports = function (callback) {
-  if (window.dashboard && dashboard.project) {
+  var lastAttemptLoaded = false;
+
+  var loadLastAttemptFromSessionStorage = function () {
+    if (!lastAttemptLoaded) {
+      lastAttemptLoaded = true;
+
+      // Load the locally-cached last attempt (if one exists)
+      setLastAttemptUnlessJigsaw(dashboard.clientState.sourceForLevel(
+          appOptions.scriptName, appOptions.serverLevelId));
+
+      callback();
+    }
+  };
+
+  var isViewingSolution = (dashboard.clientState.queryParams('solution') === 'true');
+  var isViewingStudentAnswer = !!dashboard.clientState.queryParams('user_id');
+
+  if (!appOptions.channel && !isViewingSolution && !isViewingStudentAnswer) {
+
+    if (appOptions.publicCaching) {
+      // Disable social share by default on publicly-cached pages, because we don't know
+      // if the user is underage until we get data back from /api/user_progress/ and we
+      // should err on the side of not showing social links
+      appOptions.disableSocialShare = true;
+    }
+
+    $.ajax('/api/user_progress/' + appOptions.scriptName + '/' + appOptions.stagePosition + '/' + appOptions.levelPosition).done(function (data) {
+      appOptions.disableSocialShare = data.disableSocialShare;
+
+      // Merge progress from server (loaded via AJAX)
+      var serverProgress = data.progress || {};
+      var clientProgress = dashboard.clientState.allLevelsProgress()[appOptions.scriptName] || {};
+      Object.keys(serverProgress).forEach(function (levelId) {
+        if (serverProgress[levelId] !== clientProgress[levelId]) {
+          var status = mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId]);
+
+          // Clear the existing class and replace
+          $('#header-level-' + levelId).attr('class', 'level_link ' + status);
+
+          // Write down new progress in sessionStorage
+          dashboard.clientState.trackProgress(null, null, serverProgress[levelId], appOptions.scriptName, levelId);
+        }
+      });
+
+      if (!lastAttemptLoaded) {
+        if (data.lastAttempt) {
+          lastAttemptLoaded = true;
+
+          var timestamp = data.lastAttempt.timestamp;
+          var source = data.lastAttempt.source;
+
+          var cachedProgram = dashboard.clientState.sourceForLevel(
+              appOptions.scriptName, appOptions.serverLevelId, timestamp);
+          if (cachedProgram !== undefined) {
+            // Client version is newer
+            setLastAttemptUnlessJigsaw(cachedProgram);
+          } else if (source && source.length) {
+            // Sever version is newer
+            setLastAttemptUnlessJigsaw(source);
+
+            // Write down the lastAttempt from server in sessionStorage
+            dashboard.clientState.writeSourceForLevel(appOptions.scriptName,
+                appOptions.serverLevelId, timestamp, source);
+          }
+          callback();
+        } else {
+          loadLastAttemptFromSessionStorage();
+        }
+      }
+    }).fail(loadLastAttemptFromSessionStorage);
+
+    // Use this instead of a timeout on the AJAX request because we still want
+    // the header progress data even if the last attempt data takes too long.
+    // The progress dots can fade in at any time without impacting the user.
+    setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
+  } else if (window.dashboard && dashboard.project) {
     dashboard.project.load().then(function () {
       if (dashboard.project.hideBecauseAbusive()) {
         renderAbusive();
@@ -483,9 +575,15 @@ module.exports = function (callback) {
       }
     }).then(callback);
   } else {
-    callback();
+    loadLastAttemptFromSessionStorage();
   }
 };
+
+function setLastAttemptUnlessJigsaw(source) {
+  if (appOptions.levelGameName !== 'Jigsaw') {
+    appOptions.level.lastAttempt = source;
+  }
+}
 
 },{"./renderAbusive":6}],5:[function(require,module,exports){
 /* global dashboard, appOptions, trackEvent */
@@ -503,18 +601,6 @@ var channels = require('./clientApi').create('/v3/channels');
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
-
-function packSourceFile() {
-  return JSON.stringify({
-    source: current.levelSource,
-    html: current.levelHtml
-  });
-}
-
-function unpackSourceFile(data) {
-  current.levelSource = data.source;
-  current.html = data.html;
-}
 
 var events = {
   // Fired when run state changes or we enter/exit design mode
@@ -540,11 +626,10 @@ var PathPart = {
 };
 
 /**
+ * Current state of our Channel API object
  * @typedef {Object} ProjectInstance
  * @property {string} id
  * @property {string} name
- * @property {string} levelHtml
- * @property {string} levelSource
  * hidden // unclear when this ever gets set
  * @property {boolean} isOwner Populated by our update/create callback.
  * @property {string} updatedAt String representation of a Date. Populated by
@@ -555,6 +640,33 @@ var current;
 var currentSourceVersionId;
 var currentAbuseScore = 0;
 var isEditing = false;
+
+/**
+ * Current state of our sources API data
+ */
+var currentSources = {
+  source: null,
+  html: null
+};
+
+/**
+ * Get string representation of our sources API object for upload
+ */
+function packSources() {
+  return JSON.stringify(currentSources);
+}
+
+/**
+ * Populate our current sources API object based off of given data
+ * @param {string} data.source
+ * @param {string} data.html
+ */
+function unpackSources(data) {
+  currentSources = {
+    source: data.source,
+    html: data.html
+  };
+}
 
 var projects = module.exports = {
   /**
@@ -717,6 +829,18 @@ var projects = module.exports = {
       dashboard.header.showProjectLevelHeader();
     }
   },
+  setName: function(newName) {
+    current = current || {};
+    if (newName) {
+      current.name = newName;
+      this.setTitle(newName);
+    }
+  },
+  setTitle: function(newName) {
+    if (newName && appOptions.gameDisplayName) {
+      document.title = newName + ' - ' + appOptions.gameDisplayName;
+    }
+  },
 
   //////////////////////////////////////////////////////////////////////
   // End of properties and callbacks.
@@ -737,19 +861,17 @@ var projects = module.exports = {
     }
 
     if (this.isProjectLevel() || current) {
-      if (current && current.levelHtml) {
-        sourceHandler.setInitialLevelHtml(current.levelHtml);
+      if (currentSources.html) {
+        sourceHandler.setInitialLevelHtml(currentSources.html);
       }
 
       if (isEditing) {
         if (current) {
-          if (current.levelSource) {
-            sourceHandler.setInitialLevelSource(current.levelSource);
+          if (currentSources.source) {
+            sourceHandler.setInitialLevelSource(currentSources.source);
           }
         } else {
-          current = {
-            name: 'My Project'
-          };
+          this.setName('My Project');
         }
 
         $(window).on(events.appModeChanged, function(event, callback) {
@@ -759,7 +881,7 @@ var projects = module.exports = {
         // Autosave every AUTOSAVE_INTERVAL milliseconds
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
-          current.levelSource = this.sourceHandler.getLevelSource(current.levelSource);
+          currentSources.source = this.sourceHandler.getLevelSource(currentSources.source);
         }.bind(this));
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
@@ -775,13 +897,11 @@ var projects = module.exports = {
           }
         }
       } else if (current) {
-        this.sourceHandler.setInitialLevelSource(current.levelSource);
+        this.sourceHandler.setInitialLevelSource(currentSources.source);
         this.showMinimalProjectHeader();
       }
     } else if (appOptions.isLegacyShare && this.getStandaloneApp()) {
-      current = {
-        name: 'Untitled Project'
-      };
+      this.setName('Untitled Project');
       this.showMinimalProjectHeader();
     }
     if (appOptions.noPadding) {
@@ -793,6 +913,10 @@ var projects = module.exports = {
   projectChanged: function() {
     hasProjectChanged = true;
   },
+  /**
+   * @returns {string} The name of the standalone app capable of running
+   * this project as a standalone project, or null if none exists.
+   */
   getStandaloneApp: function () {
     switch (appOptions.app) {
       case 'applab':
@@ -810,17 +934,28 @@ var projects = module.exports = {
           return null;
         }
         return 'playlab';
+      default:
+        return null;
     }
   },
+  /**
+   * @returns {string} The path to the app capable of running
+   * this project as a standalone app.
+   * @throws {Error} If no standalone app exists.
+   */
   appToProjectUrl: function () {
-    return '/projects/' + projects.getStandaloneApp();
+    var app = projects.getStandaloneApp();
+    if (!app) {
+      throw new Error('This type of project cannot be run as a standalone app.');
+    }
+    return '/projects/' + app;
   },
   /**
    * Explicitly clear the HTML, circumventing safety measures which prevent it from
    * being accidentally deleted.
    */
   clearHtml: function() {
-    current.levelHtml = '';
+    currentSources.html = '';
   },
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
@@ -831,7 +966,6 @@ var projects = module.exports = {
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
   save: function(sourceAndHtml, callback, forceNewVersion) {
-
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -840,8 +974,10 @@ var projects = module.exports = {
     if (typeof arguments[0] === 'function' || !sourceAndHtml) {
       // If no source is provided, shift the arguments and ask for the source
       // ourselves.
-      callback = arguments[0];
-      forceNewVersion = arguments[1];
+      var args = Array.prototype.slice.apply(arguments);
+      callback = args[0];
+      forceNewVersion = args[1];
+
       sourceAndHtml = {
         source: this.sourceHandler.getLevelSource(),
         html: this.sourceHandler.getLevelHtml()
@@ -856,18 +992,20 @@ var projects = module.exports = {
     var channelId = current.id;
     // TODO(dave): Remove this check and remove clearHtml() once all projects
     // have versioning: https://www.pivotaltracker.com/story/show/103347498
-    if (current.levelHtml && !sourceAndHtml.html) {
+    if (currentSources.html && !sourceAndHtml.html) {
       throw new Error('Attempting to blow away existing levelHtml');
     }
 
-    current.levelSource = sourceAndHtml.source;
-    current.levelHtml = sourceAndHtml.html;
-    current.level = this.appToProjectUrl();
+    unpackSources(sourceAndHtml);
+    if (this.getStandaloneApp()) {
+      current.level = this.appToProjectUrl();
+    }
 
     var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
-    sources.put(channelId, packSourceFile(), filename, function (err, response) {
+    sources.put(channelId, packSources(), filename, function (err, response) {
       currentSourceVersionId = response.versionId;
       current.migratedToS3 = true;
+
       channels.update(channelId, current, function (err, data) {
         this.updateCurrentData_(err, data, false);
         executeCallback(callback, data);
@@ -900,8 +1038,8 @@ var projects = module.exports = {
    * Autosave the code if things have changed
    */
   autosave_: function () {
-    // Bail if a baseline levelSource doesn't exist (app not yet initialized)
-    if (current.levelSource === undefined) {
+    // Bail if baseline code doesn't exist (app not yet initialized)
+    if (currentSources.source === null) {
       return;
     }
     // `getLevelSource()` is expensive for Blockly so only call
@@ -917,7 +1055,7 @@ var projects = module.exports = {
     var source = this.sourceHandler.getLevelSource();
     var html = this.sourceHandler.getLevelHtml();
 
-    if (current.levelSource === source && current.levelHtml === html) {
+    if (currentSources.source === source && currentSources.html === html) {
       hasProjectChanged = false;
       return;
     }
@@ -930,7 +1068,7 @@ var projects = module.exports = {
    * Renames and saves the project.
    */
   rename: function(newName, callback) {
-    current.name = newName;
+    this.setName(newName);
     this.save(callback);
   },
   /**
@@ -953,7 +1091,7 @@ var projects = module.exports = {
     var wrappedCallback = this.copyAssets.bind(this, srcChannel, callback);
     delete current.id;
     delete current.hidden;
-    current.name = newName;
+    this.setName(newName);
     channels.create(current, function (err, data) {
       this.updateCurrentData_(err, data, true);
       this.save(wrappedCallback);
@@ -976,9 +1114,9 @@ var projects = module.exports = {
   serverSideRemix: function() {
     if (current && !current.name) {
       if (projects.appToProjectUrl() === '/projects/algebra_game') {
-        current.name = 'Big Game Template';
+        this.setName('Big Game Template');
       } else if (projects.appToProjectUrl() === '/projects/applab') {
-        current.name = 'My Project';
+        this.setName('My Project');
       }
     }
     function redirectToRemix() {
@@ -1062,6 +1200,12 @@ var projects = module.exports = {
     return deferred;
   },
 
+  /**
+   * Generates the url to perform the specified action for this project.
+   * @param {string} action Action to perform.
+   * @returns {string} Url to the specified action.
+   * @throws {Error} If this type of project does not have a standalone app.
+   */
   getPathName: function (action) {
     var pathName = this.appToProjectUrl() + '/' + this.getCurrentId();
     if (action) {
@@ -1071,14 +1215,31 @@ var projects = module.exports = {
   }
 };
 
-function fetchSource(data, callback) {
-  current = data;
-  if (data.migratedToS3) {
+/**
+ * Given data from our channels api, updates current and gets sources from
+ * sources api
+ * @param {object} channelData Data we fetched from channels api
+ * @param {function} callback
+ */
+function fetchSource(channelData, callback) {
+  // Explicitly remove levelSource/levelHtml from channels
+  delete channelData.levelSource;
+  delete channelData.levelHtml;
+  // Also clear out html, which we never should have been setting.
+  delete channelData.html;
+
+  // Update current
+  current = channelData;
+
+  projects.setTitle(current.name);
+  if (channelData.migratedToS3) {
     sources.fetch(current.id + '/' + SOURCE_FILE, function (err, data) {
-      unpackSourceFile(data);
+      unpackSources(data);
       callback();
     });
   } else {
+    // It's possible that we created a channel, but failed to save anything to
+    // S3. In this case, it's expected that html/levelSource are null.
     callback();
   }
 }

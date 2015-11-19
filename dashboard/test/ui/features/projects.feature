@@ -16,16 +16,14 @@ Scenario: Save Artist Project
   Then element "#draw-color" is a child of element "#when_run"
 
 # dashboard_db_access for sign in
+# as_student to actually perform sign-in/out before/after scenario
 # no_mobile because we don't end up with open-workspace on mobile
 # no_ie because applab is broken on IE9, and on IE10 this test crashes when we
 #   try to execute any JS after our redirect on line 42
-@dashboard_db_access @no_mobile @no_ie
+@dashboard_db_access @as_student
+@no_mobile @no_ie
 Scenario: Applab Flow
-  Given I am on "http://studio.code.org/"
-  And I am a student
-  And I am on "http://studio.code.org/users/sign_in"
-  And I reload the page
-  Then I am on "http://studio.code.org/projects/applab"
+  Given I am on "http://studio.code.org/projects/applab"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
   And I rotate to landscape
   Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
@@ -34,11 +32,17 @@ Scenario: Applab Flow
   And I wait to see "#runButton"
   And element "#runButton" is visible
   And element ".project_updated_at" contains text "Saved"
+  And I click selector ".project_edit"
+  And I type "Code Ninja" into "input.project_name"
+  And I click selector ".project_save"
+  And I wait until element ".project_edit" is visible
+  Then I should see title "Code Ninja - App Lab"
   Then I click selector ".project_share"
   And I wait to see "#x-close"
 
   Then I navigate to the share URL
   And I wait to see "#footerDiv"
+  Then I should see title "Code Ninja - App Lab"
   And element "#codeWorkspace" is hidden
   And I press the first "#footerDiv .more-link" element
   And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How It Works']"
@@ -47,11 +51,13 @@ Scenario: Applab Flow
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "pushState"
   And I wait to see "#codeWorkspace"
   And selector "#codeWorkspace" doesn't have class "readonly"
+  And I should see title "Code Ninja - App Lab"
 
   Then I am on "http://studio.code.org/users/sign_out"
   And I navigate to the last shared URL
   And I wait to see "#footerDiv"
   And element "#codeWorkspace" is hidden
+  And I should see title "Code Ninja - App Lab"
   And I press the first "#footerDiv .more-link" element
   And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How It Works']"
 
@@ -59,6 +65,7 @@ Scenario: Applab Flow
   And I get redirected to "/projects/applab/([^\/]*?)/view" via "nothing"
   And I wait to see "#codeWorkspace"
   And selector "#codeWorkspace" has class "readonly"
+  And I should see title "Code Ninja - App Lab"
 
   # Now view the /edit page as a signed in, non-owner
   Given I am on "http://studio.code.org/"

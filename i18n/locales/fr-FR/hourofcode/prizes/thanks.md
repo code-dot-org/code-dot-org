@@ -10,7 +10,7 @@ title: <%= hoc_s(:title_prizes_thanks) %> layout: wide nav: prizes_nav
 
 Toute votre école dest maintenant inscrite pour gagner un ensemble d'ordinateurs portables pour la classe (ou 10 000 $ pour acquérir d'autres technologies). Nous allons examiner votre demande et annoncer les gagnants en décembre.
 
-## 1. En parler
+## 1. Parlez-en autour de vous
 
 Parlez de #HourOfCode à vos amis.
 

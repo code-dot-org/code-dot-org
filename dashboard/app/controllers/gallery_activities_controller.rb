@@ -5,6 +5,8 @@ class GalleryActivitiesController < ApplicationController
 
   before_action :set_gallery_activity, only: [:destroy]
 
+  protect_from_forgery except: [:create]
+
   INDEX_PER_PAGE = 30
   MAX_PAGE = 100
 
