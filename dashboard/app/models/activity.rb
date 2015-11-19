@@ -32,6 +32,10 @@ class Activity < ActiveRecord::Base
   has_one :activity_hint
   has_many :experiment_activities
 
+  def Activity.create_async(options)
+
+  end
+
   def Activity.submitted?(result)
     return false if result.nil?
     (result == SUBMITTED_RESULT)
@@ -72,4 +76,5 @@ class Activity < ActiveRecord::Base
     # yeah, this is a lot like .last -- but I want a dataset not an array
     Activity.order('id desc').limit(limit)
   end
+
 end
