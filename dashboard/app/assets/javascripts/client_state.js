@@ -45,12 +45,18 @@ dashboard.clientState.reset = function() {
  * Returns the client-cached copy of the level source for the given
  * scriptLevelId, if it's newer than the given timestamp.
  * @param {number} scriptLevelId
- * @param {number} timestamp
+ * @param {number=} timestamp
+ * @returns {string|undefined} Cached copy of the level source, or undefined if
+ *   the cached copy is missing/stale.
  */
 dashboard.clientState.sourceForLevel = function (scriptLevelId, timestamp) {
   var data = localStorage.getItem('source' + scriptLevelId);
   if (data) {
-    var parsed = JSON.parse(data);
+    try {
+      var parsed = JSON.parse(data);
+    } catch (e) {
+      return;
+    }
     if (!timestamp || parsed.timestamp > timestamp) {
       return parsed.source;
     }
@@ -59,8 +65,8 @@ dashboard.clientState.sourceForLevel = function (scriptLevelId, timestamp) {
 
 /**
  * Cache a copy of the level source along with a timestamp. Posts to /milestone
- * get queued, so save the data in localStorage to present a consistent client
- * view.
+ * may be queued, so save the data in localStorage to present a consistent
+ * client view.
  * @param scriptLevelId
  * @param timestamp
  * @param source

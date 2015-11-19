@@ -16,13 +16,18 @@ describe("clientState#trackProgress", function() {
   });
 
   it("returns cached levelSource if no timestamp given", function () {
-    state.writeSourceForLevel(1, 300, 'abc');
-    state.sourceForLevel(1, null).should.equal('abc');
+    state.writeSourceForLevel(2, 300, 'abc');
+    state.sourceForLevel(2, null).should.equal('abc');
   });
 
   it("returns `undefined` if timestamp is older", function () {
-    state.writeSourceForLevel(2, 100, 'abc');
-    assert(state.sourceForLevel(2, 200) === undefined);
+    state.writeSourceForLevel(3, 100, 'abc');
+    assert(state.sourceForLevel(3, 200) === undefined);
+  });
+
+  it("returns `undefined` if cache can't be parsed", function () {
+    localStorage.setItem('source4', 'bad data');
+    assert(state.sourceForLevel(4, 200) === undefined);
   });
 
   it("records level progress and line counts when level is completed", function() {
