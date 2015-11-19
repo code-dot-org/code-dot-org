@@ -28,6 +28,7 @@ Watch the [demo video](/files/amara.swf) in full screen.
 * [Introduction to functions](http://amara.org/en/videos/azkfStUQ1EqG/info/frozen-hour-of-code-introduction-to-functions/)
 
 ## Social
+* [Change the World - Hour of Code 2015](https://amara.org/en/videos/yOXuiXs9lWrn/info/change-the-world-hour-of-code-2015/)
 * [The Hour of Code 2015](https://amara.org/en/videos/hlM6lmrQc6DR/info/hour-of-code-2015-worldwide/)
 * [What Most schools Don't Teach](http://amara.org/en/videos/ZuVc6mobngWz/info/what-most-schools-dont-teach/)
 * [The Hour of Code is Here](http://amara.org/en/videos/OuklhBeGw70l/info/learn-what-most-schools-dont-teach/)
