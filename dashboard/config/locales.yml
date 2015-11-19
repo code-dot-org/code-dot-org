@@ -97,7 +97,6 @@
 "et-EE":
   english: "Estonian"
   native: "Eesti"
-  debug: true
 
 "eu": "eu-ES"
 "eu-ES":
@@ -286,12 +285,12 @@
 "nn": "nn-NO"
 "nn-NO":
   english: "Norwegian Nynorsk"
-  native: "Nynorsk"
+  native: "Norsk (nynorsk)"
 
 "no": "no-NO"
 "no-NO":
   english: "Norwegian"
-  native: "Norsk"
+  native: "Norsk (bokmål)"
 
 "pl": "pl-PL"
 "pl-PL":
@@ -324,6 +323,13 @@
   english: "Russian"
   native: "Русский"
   webfonts: false
+
+"si": "si-LK"
+"si-LK":
+  english: "Sinhalese"
+  native: "සිංහල"
+  webfonts: false
+  debug: true
 
 "sk": "sk-SK"
 "sk-SK":
@@ -407,3 +413,9 @@
   english: "Chinese (Traditional)"
   native: "繁體字"
   webfonts: false
+
+"zu": "zu-ZA"
+"zu-ZA":
+  english: "Zulu"
+  native: "isiZulu"
+  debug: true

@@ -6,13 +6,12 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Merci de vous être inscrit pour avoir une chance de gagner 10 000 $ de matériel
 
 Toute votre école dest maintenant inscrite pour gagner un ensemble d'ordinateurs portables pour la classe (ou 10 000 $ pour acquérir d'autres technologies). Nous allons examiner votre demande et annoncer les gagnants en décembre.
 
-## 1. En parler
+## 1. Parlez-en autour de vous
 
 Parlez de #HourOfCode à vos amis.
 
@@ -32,4 +31,3 @@ Constituez un groupe - dans votre église ou votre université, à la maison de 
 
 [Envoyez cet email](<%= resolve_url('/promote/resources#politicians') %>) à votre maire, Conseiller municipal ou à la directions de votre école et invitez-les à participer à l'évènement.
 
-<%= view :signup_button %>

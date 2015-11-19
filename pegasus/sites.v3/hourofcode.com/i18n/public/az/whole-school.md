@@ -5,10 +5,8 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # Məhtəbinizdən hamının iştirak etməsini təmin edin
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Məktəbdən hamının "Kod saatı"nda iştirak etməsi haqqında məlumat burada olacaq.
 
-<%= view :signup_button %>

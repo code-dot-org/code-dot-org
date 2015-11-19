@@ -5,7 +5,6 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
@@ -151,7 +150,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
   * Please also include recommended computer science knowledge within grade level: Beginner, Intermediate, or Advanced. The Hour of Code website will highlight activities for Beginners most prominently. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * 技術要求: 
       * In order to more accurately track participation we want every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials. Place a starting pixel-image on the start page and a final pixel-image on the end page. Do not place pixels on interim pages). See the Tracking Pixel section below for more details. 
-      * Upon finishing your activity, users should be directed to [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
+      * Upon finishing your activity, users should be directed to [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) 在那裡他們將能夠: 
           * Share on social media that they completed the Hour of Code
           * Receive a certificate that they completed the Hour of Code
           * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
@@ -215,13 +214,13 @@ After the success of the 2013 campaign, we took steps to make sure we set up the
 
 One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
 
-  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp"
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions
+  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. No use of "Hour of Code" in app names
+  4. No use of "Hour of Code" in app names.
 
 [**返回頁首**](#top)
 
@@ -265,4 +264,3 @@ If you create a tutorial that is designed for the vision-impaired, we’d love t
 
 [**返回頁首**](#top)
 
-<%= view :signup_button %>

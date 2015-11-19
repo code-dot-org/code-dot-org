@@ -55,6 +55,9 @@
     <required_blocks>
       <xml>
         <block type="maze_moveForward"/>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
       </xml>
     </required_blocks>
   </blocks>

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "appendItem": null
+      "createRecord": null
     },
     "edit_code": true,
     "embed": "false",

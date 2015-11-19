@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ## 如何吸引媒體目光至您的Hour of Code活動
 
@@ -49,7 +48,7 @@ nav: promote_nav
 
 *為甚麼這是重要的?*
 
-在中國，每個高中學生畢業前皆須學習電腦科學。 在美國，90%的學校甚至不教它。 此時是我們追上 21 世紀的時候。 我們知道無論我們的學生他們長大後從事何職業：醫藥、 商業、 政治、 還是藝術，懂得科技創建的方法將帶給他們的信心與成功的訣竅。
+In China, every student takes computer science to graduate high school. 在美國，90%的學校甚至不教它。 此時是我們追上 21 世紀的時候。 我們知道無論我們的學生他們長大後從事何職業：醫藥、 商業、 政治、 還是藝術，懂得科技創建的方法將帶給他們的信心與成功的訣竅。
 
 **你可以使用教材裡更多的細節和引用**
 
@@ -62,4 +61,3 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
   
 Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
 
-<%= view :signup_button %>

@@ -1,0 +1,10 @@
+- require 'pp'
+%table
+  - params = %w(ip referer url path cookies user_agent env)
+  - params.each do |param|
+    %tr
+      %td
+        = param
+      %td
+        %pre
+          = html_escape request.send(param.to_sym).pretty_inspect

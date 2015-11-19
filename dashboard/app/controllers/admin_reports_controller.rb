@@ -15,71 +15,77 @@ class AdminReportsController < ApplicationController
   def funometer
     authorize! :read, :reports
 
-    # Compute the global funometer percentage.
-    ratings = PuzzleRating.all
-    @overall_percentage = get_percentage_positive(ratings)
+    SeamlessDatabasePool.use_persistent_read_connection do
+      # Compute the global funometer percentage.
+      ratings = PuzzleRating.all
+      @overall_percentage = get_percentage_positive(ratings)
 
-    # Generate the funometer percentages, by day, for the last month.
-    @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
-    @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
+      # Generate the funometer percentages, by day, for the last month.
+      @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
+      @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
 
-    # Compute funometer percentages by script.
-    @script_headers = ['Script ID', 'Script Name', 'Percentage', 'Count']
-    @script_ratings = ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").group(:script_id).order('SUM(100.0 * rating) / COUNT(rating)').select('script_id', 'name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+      # Compute funometer percentages by script.
+      @script_headers = ['Script ID', 'Script Name', 'Percentage', 'Count']
+      @script_ratings = ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").group(:script_id).order('SUM(100.0 * rating) / COUNT(rating)').select('script_id', 'name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
 
-    # Compute funometer percentages by level, saving the most-favored and
-    # least-favored with over one hundred ratings.
-    @level_headers = ['Script ID', 'Level ID', 'Script Name', 'Level Name', 'Percentage', 'Count']
-    level_ratings = ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").joins("INNER JOIN levels ON levels.id = puzzle_ratings.level_id").group(:script_id, :level_id).select(:script_id, :level_id, 'scripts.name AS script_name', 'levels.name AS level_name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt').having('cnt > ?', 100)
-    @favorite_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) desc').limit(25)
-    @hated_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) asc').limit(25)
+      # Compute funometer percentages by level, saving the most-favored and
+      # least-favored with over one hundred ratings.
+      @level_headers = ['Script ID', 'Level ID', 'Script Name', 'Level Name', 'Percentage', 'Count']
+      level_ratings = ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").joins("INNER JOIN levels ON levels.id = puzzle_ratings.level_id").group(:script_id, :level_id).select(:script_id, :level_id, 'scripts.name AS script_name', 'levels.name AS level_name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt').having('cnt > ?', 100)
+      @favorite_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) desc').limit(25)
+      @hated_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) asc').limit(25)
 
-    render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+      render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+    end
   end
 
   def funometer_by_script
     authorize! :read, :reports
 
-    @script_id = params[:script_id]
-    @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @script_id = params[:script_id]
+      @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
 
-    # Compute the global funometer percentage for the script.
-    ratings = PuzzleRating.where('puzzle_ratings.script_id = ?', @script_id)
-    @overall_percentage = get_percentage_positive(ratings)
+      # Compute the global funometer percentage for the script.
+      ratings = PuzzleRating.where('puzzle_ratings.script_id = ?', @script_id)
+      @overall_percentage = get_percentage_positive(ratings)
 
-    # Generate the funometer percentages for the script, by day, for the last month.
-    @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
-    @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
+      # Generate the funometer percentages for the script, by day, for the last month.
+      @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
+      @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
 
-    # Generate the funometer percentages for the script, by stage.
-    ratings_by_stage = ratings.joins("INNER JOIN script_levels ON puzzle_ratings.script_id = script_levels.script_id AND puzzle_ratings.level_id = script_levels.level_id").joins("INNER JOIN stages ON stages.id = script_levels.stage_id").group('script_levels.stage_id').order('script_levels.stage_id')
-    @ratings_by_stage_headers = ['Stage ID', 'Stage Name', 'Percentage', 'Count']
-    @ratings_by_stage = ratings_by_stage.select('stage_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+      # Generate the funometer percentages for the script, by stage.
+      ratings_by_stage = ratings.joins("INNER JOIN script_levels ON puzzle_ratings.script_id = script_levels.script_id AND puzzle_ratings.level_id = script_levels.level_id").joins("INNER JOIN stages ON stages.id = script_levels.stage_id").group('script_levels.stage_id').order('script_levels.stage_id')
+      @ratings_by_stage_headers = ['Stage ID', 'Stage Name', 'Percentage', 'Count']
+      @ratings_by_stage = ratings_by_stage.select('stage_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
 
-    # Generate the funometer percentages for the script, by level.
-    ratings_by_level = ratings.joins(:level).group(:level_id).order(:level_id)
-    @ratings_by_level_headers = ['Level ID', 'Level Name', 'Percentage', 'Count']
-    @ratings_by_level = ratings_by_level.select('level_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+      # Generate the funometer percentages for the script, by level.
+      ratings_by_level = ratings.joins(:level).group(:level_id).order(:level_id)
+      @ratings_by_level_headers = ['Level ID', 'Level Name', 'Percentage', 'Count']
+      @ratings_by_level = ratings_by_level.select('level_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
 
-    render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+      render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+    end
   end
 
   def funometer_by_script_level
     authorize! :read, :reports
 
-    @script_id = params[:script_id]
-    @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
-    @level_id = params[:level_id]
-    @level_name = Level.where('id = ?', @level_id).pluck(:name)[0]
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @script_id = params[:script_id]
+      @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
+      @level_id = params[:level_id]
+      @level_name = Level.where('id = ?', @level_id).pluck(:name)[0]
 
-    ratings = PuzzleRating.where('script_id = ?', @script_id).where('level_id = ?', @level_id)
-    @overall_percentage = get_percentage_positive(ratings)
+      ratings = PuzzleRating.where('puzzle_ratings.script_id = ?', @script_id).where('level_id = ?', @level_id)
+      @overall_percentage = get_percentage_positive(ratings)
 
-    # Generate the funometer percentages for the level, by day, for the last month.
-    @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
-    @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
+      # Generate the funometer percentages for the level, by day, for the last month.
+      @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
+      @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
 
-    render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+      render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+    end
   end
 
   def level_completions
@@ -211,10 +217,50 @@ class AdminReportsController < ApplicationController
     # Requested by Roxanne on 16 November 2015 to track HOC 2015 signups by day.
     authorize! :read, :reports
 
-    # Get the HOC 2015 signup counts by day, deduped by email and name.
-    # TODO(asher): Is this clumsy notation really necessary? Is Sequel really this stupid?
-    signups_by_day = DB[:forms].where(kind: 'HocSignup2015').group(:name, :email).group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).all.map{|row| [row[:created_at_day].to_s, row[:count].to_i]}
-    render locals: {signups_by_day: signups_by_day}
+    # Get the HOC 2014 and HOC 2015 signup counts by day, deduped by email and name.
+    # We restrict by dates to avoid long trails of (inappropriate?) signups.
+    data_2014 = DB[:forms].
+        where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2014', '2014-08-01', '2015-01-01').
+        group(:name, :email).
+        # TODO(asher): Is this clumsy notation really necessary? Is Sequel
+        # really this stupid? Also below.
+        group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
+        order(:created_at_day).
+        all.
+        map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
+    data_2015 = DB[:forms].
+        where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2015', '2015-08-01', '2016-01-01').
+        group(:name, :email).
+        group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
+        order(:created_at_day).
+        all.
+        map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
+
+    # Construct the hash {MM-DD => [count2014, count2015]}.
+    # Start by constructing the key space as the union of the MM-DD dates for
+    # data_2014 and data_2015.
+    require 'set'
+    dates = Set.new []
+    data_2014.each do |day|
+      dates.add(day[0])
+    end
+    data_2015.each do |day|
+      dates.add(day[0])
+    end
+    # Then populate the keys of our hash {date=>[count2014,count2015], ..., date=>[...]} with dates.
+    data_by_day = {}
+    dates.each do |date|
+      data_by_day[date] = [0, 0]
+    end
+    # Finally populate the values of our hash.
+    data_2014.each do |day|
+      data_by_day[day[0]][0] = day[1]
+    end
+    data_2015.each do |day|
+      data_by_day[day[0]][1] = day[1]
+    end
+
+    render locals: {data_by_day: data_by_day.sort}
   end
 
   # Use callbacks to share common setup or constraints between actions.

@@ -6,9 +6,8 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
-# Cum să realizati o Ora de Programare in After-School
+# How to teach one Hour of Code in after-school
 
 ## 1) Inscrie-te
 
@@ -96,6 +95,7 @@ Puteti spori succesul evenimentului tau Hour of Code inspirandu-i pe participant
 
   * [Imprimati certificate](<%= resolve_url('https://code.org/certificates') %>) pentru studenţii dumneavoastră.
   * [Imprima autocolante pe care scrie "Am făcut o Oră de Programare!"](<%= resolve_url('/promote/resources#stickers') %>).
+  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your students.
   * Distribuiti fotografii şi înregistrări video ale evenimentului dumneavoastra Hour of Code pe social media. Utilizati #HourOfCode şi @codeorg, astfel încât putem evidenţia si noi succesul dumneavoastră!
 
 [col-33]
@@ -124,12 +124,15 @@ Puteti spori succesul evenimentului tau Hour of Code inspirandu-i pe participant
 
   * Utilizaţi acest [plan de lecţie şablon](/files/AfterschoolEducatorLessonPlanOutline.docx) pentru a organiza evenimentele dumneavoastră Hour of Code.
   * Vedeti [cele mai bune practici](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) din ultimele evenimente Hour of Code din partea organizatorilor. 
-  * Participa la [ Ghidul nostru catre webbinar-ul pentru profesorii si educatorii Hour of Code](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
+  * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+  * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
   * Vizitaţi [Forum-ul Hour of Code](http://forum.code.org/c/plc/hour-of-code) pentru a obţine sfaturi, informatii din interior şi sprijin de la alti organizatori. <% if @country == 'us' %>
   * Revedeti [ sectiunea Intrebari Frecvente ale site-ului Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Ce urmeaza dupa Hour of Code?
 
-Hour of Code este abia primul pas catre o lunga calatorie pentru a afla mai multe despre cum functioneaza tehnologia si cum se pot crea aplicatiile software. Pentru a continua această călătorie, [încurajaţi-vă copiii să înveţe online](<%= resolve_url('https://code.org/learn/beyond') %>).
+Hour of Code este abia primul pas catre o lunga calatorie pentru a afla mai multe despre cum functioneaza tehnologia si cum se pot crea aplicatiile software. To continue this journey: - The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-<%= view :signup_button %>
+  * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+  * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+

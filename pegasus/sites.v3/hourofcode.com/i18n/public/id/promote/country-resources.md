@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -45,6 +44,10 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -53,7 +56,7 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](<%= localized_file('/files/corporations.pdf') %>)
 
-## 1) Try the tutorials:
+## 1) Cobalah tutorial:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
@@ -64,28 +67,28 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Rencanakan perangkat yang keras yang anda butuhkan - komputer hanyalah opsional
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
+Pengalaman terbaik dari Hour of Code adalah jika tersedia komputer-komputer yang terkoneksi dengan internet. Tetapi Anda tidak membutuhkan komputer untuk tiap anak, dan Hour of Code tetap dapat dilakukan tanpa komputer sama sekali.
 
   * **Tes tutorial pada perangkat atau komputer pelajar.** Pastikan itu bekerja dengan baik (dengan suara dan gambar).
   * **Tinjau ulang halaman keberhasilan menyelesaikan tutorial** untuk melihat apa yang pelajar akan lihat ketika menyelesaikannya. 
   * **Sediakan headphone untuk kelas anda**, atau minta pelajar untuk membawanya sendiri jika tutorial bekerja dengan baik jika disertai suaranya.
 
-## 3) Plan ahead based on your technology available
+## 3) Rencanakan kedepan berdasarkan teknologi yang anda punya
 
   * **Tidak memiliki perangkat yang cukup?** Gunakan [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Ketika peserta berpasangan, mereka saling membantu dan mengandalkan guru lebih sedikit.
   * **Mempunyai bandwidth kecil?** Rencanakan untuk menunjukan video di depan kelas, supaya setiap pelajar tidak mengunduh video mereka sendiri. Atau cobalah tutorial offline atau tanpa komputer.
 
-## 4) Inspire students - show them a video
+## 4) Inspirasikan pelajar - tunjukan mereka video
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Menunjukkan kepada siswa video inspiratif untuk kick off jam kode. Contoh:
 
   * Video orginal peluncuran Code.org, yang menampilkan Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (Ada versi [1 menit](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 menit](https://www.youtube.com/watch?v=nKIu9yen5nc), dan [9 menit](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [Presiden Obama menyerukan semua pelajar untuk belajar ilmu komputer](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Buat pelajar anda bersemangat - berikan intro singkat**
 
 <% else %>
 
@@ -93,4 +96,3 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <% end %>
 
-<%= view :signup_button %>

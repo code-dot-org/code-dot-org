@@ -4,7 +4,6 @@
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -16,7 +15,7 @@
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# Партньори от Африка
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -38,9 +37,17 @@
 
 <% end %>
 
+<% if @country == 'ie' %>
+
+# Ireland Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
+
+<% end %>
+
 <% if @country == 'in' %>
 
-# India Partners
+# Партньори от Индия
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -56,7 +63,7 @@
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# Партньори от Нова Зеландия
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -112,4 +119,3 @@
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 
-<%= view :signup_button %>

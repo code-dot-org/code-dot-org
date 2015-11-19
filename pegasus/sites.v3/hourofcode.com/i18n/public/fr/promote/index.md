@@ -30,7 +30,7 @@ Parlez-en à vos amis en utilisant **#HourOfCode**!
 
 ## 2. Proposez à votre école de participer à Une Heure de Code
 
-[Envoyez cet email](<%= resolve_url('/promote/resources#sample-emails') %>) à votre principal ou au directeur de votre école et proposez à chaque professeur de s'inscrire. <% if @country == 'us' %> Pour cela, c'est simple ! [Inscrivez-vous ici](<%= resolve_url('/prizes/hardware-signup') %>) pour être admissibles. <% end %>
+[Envoyez cet email](<%= resolve_url('/promote/resources#sample-emails') %>) à votre principal ou au directeur de votre école et proposez à chaque professeur de s'inscrire. <% if @country == 'us' %> Pour cela, c'est simple ! [Inscrivez-vous ici](<%= resolve_url('/prizes/hardware-signup') %>) pour [**être admissibles**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
 
 ## 4. Demandez à votre employeur de s'impliquer
 
@@ -44,4 +44,3 @@ Parlez-en à vos amis en utilisant **#HourOfCode**!
 
 [Envoyez cet email](<%= resolve_url('/promote/resources#sample-emails') %>) à vos représentants locaux, Conseil municipal ou Commission scolaire et invitez-les à visiter votre école durant votre Heure de Code. Ça pourrait aider à agrandir le groupe des amoureux d'informatique de votre région au-delà du projet d'une heure.
 
-<%= view :signup_button %>

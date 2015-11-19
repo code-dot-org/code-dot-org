@@ -6,9 +6,8 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
-# Efterskrift og statistik
+# Viden og statistik
 
 ## Brug denne kort tekst i et nyhedsbrev
 
@@ -20,4 +19,3 @@ Computere findes overalt, men langt færre skoler underviser i programmering end
 
 <%= view :stats_carousel %>
 
-<%= view :signup_button %>

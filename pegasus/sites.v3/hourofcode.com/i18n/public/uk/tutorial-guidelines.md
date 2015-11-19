@@ -5,7 +5,6 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
@@ -151,7 +150,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
   * Будь ласка, вкажіть рекомендований попередній рівень знань з інформатики: Початківець, Аматор чи Експерт. Сайт Години коду першочергово висвітлюватиме завдання для Початківців. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Технічні вимоги: 
       * Для того, щоб точніше відстежувати участь, ми хочемо, щоб кожен партнер-розробник підручника, розмістив 1-піксельне зображення для відстеження у свою першу та останню вправу. Розмістіть однопіксельне зображення на початку першої та в кінці останньої сторінки. Не розміщуйте пікселів на проміжних сторінках). Перегляньте розділ Піксель відстеження нижче для із детальнішою інформацією. 
-      * Після завершення Вашої діяльності, користувачів потрібно направити [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
+      * Після завершення Вашої діяльності, користувачів потрібно направити [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) де вони зможуть: 
           * Поділитися у соціальних мережах тим, що вони завершили Годину коду
           * Отримати сертифікат про завершення Годину коду
           * Переглянути таблицю лідерів країн/міст, з яких найбільше учасників виконали Годину коду
@@ -215,13 +214,13 @@ After the success of the 2013 campaign, we took steps to make sure we set up the
 
 Одним з аспектів цього є захист торгової марки "Hour of Code" з метою запобігання плутанини. Багато наших партнерів-розробників завдань використали "Hour of Code" на своїх сайтах. Ми не хочемо забороняти таке використання, але воно має перебувати в межах вимог:
 
-  1. Будь-яке посилання на Годину коду має використовуватись таким чином, щоб не створювати враження про те, що це Ваша власна торгова марка, натомість посилаючись на масовий рух Години коду. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Приклад невдалого використання: "Спробуйте Годину коду від ACME Corp"
-  2. Використовуйте позначку "TM" у найбільш вагомих місцях згадування Години коду на своєму сайті та в описі програми
+  1. Будь-яке посилання на Годину коду має використовуватись таким чином, щоб не створювати враження про те, що це Ваша власна торгова марка, натомість посилаючись на масовий рух Години коду. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Додайте на сторінку (або в колонтитул) текстовий блок з посиланнями на сайти CSEdWeek та Code.org, з наступним змістом:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. Не використовуйте "Годину коду" в назвах програм
+  4. No use of "Hour of Code" in app names.
 
 [**На початок**](#top)
 
@@ -265,4 +264,3 @@ IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
 [**На початок**](#top)
 
-<%= view :signup_button %>

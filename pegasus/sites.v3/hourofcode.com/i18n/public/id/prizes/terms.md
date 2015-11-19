@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Hadiah - syarat dan ketentuan
 
@@ -32,4 +31,11 @@ Untuk memperjelas, ini bukanlah undian atau kontes melibatkan kesempatan murni.
 
 <% end %>
 
-<%= view :signup_button %>
+<% if @country == 'us' || @country == 'ca' %>
+
+## Percakapan video dengan seorang pembicara tamu:
+
+Hadiah terbatas hanya pada kelas K-12 di U.S dan Kanada. Code.org akan secara acak memilih pemenang dari setiap sekolah, menyediakan waktu untuk web chat dan bekerja dengan guru yang bersangkutan untuk mengatur teknologi yang diperlukan. Seluruh isi sekolah Anda tidak perlu mengajukan permohonan untuk memenuhi syarat untuk hadiah ini. Both public and private schools are eligible to win.
+
+<% end %>
+

@@ -6,30 +6,36 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
-# Prizes - terms and conditions
+# پرائزز – شرائط و ضوابط
 
 ## Amazon.com, iTunes and Windows Store credit:
 
-The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Limit one redemption per organizer.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. فی آرگنائزیشن ایک ریڈمپشن (مختص) محدود کریں۔
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
+ہر آرگنائزر کو آور-آف-کوڈ کے تحت دی ایمیزون ڈاٹ کام، آئی ٹیونز یا ونڈوز اسٹور کریڈٹ وصول کرنے کے لیے لازماً رجسٹر کرانا ہوگا۔ اگر آپ کا پورا اسکول آور-آف-کوڈ میں شرکت کر رہا ہے تو کوالیفائی کے لیے ہر ایجوکیٹر کو لازماً بطور انفرادی آرگنائزر رجسٹر کرانا ہوگا۔
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
+Code.org آور-آف-کوڈ (7 تا 13 دسمبر) کے بعد آرگنائزر سے رابطہ کرے گا تاکہ دی ایمیزون ڈاٹ کام، آئی ٹیونز یا ونڈوز اسٹور کریڈٹ مختص کرانے کے لیے ہدایات فراہم کی جاسکیں۔
 
 <% if @country == 'us' %>
 
-## Class-set of laptops (or $10,000 for other technology):
+## لیپ-ٹاپس کلاس-سیٹ (یا $10,000 کی دیگر ٹیکنالوجی):
 
-Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2015.
+پرائزز صرف US اور کینیڈا میں K-12 کلاسرومز کے لیے محدود ہیں۔ کوالیفائی کرنے کے لیے آپ کے پورے اسکول کو 16 نومبر 2015 تک لازماً آور-آف-کوڈ سے رجسٹر ہونا پڑے گا۔ ہر یو-ایس اسٹیٹ کا کوئی ایک اسکول کمپیوٹرز کا ایک کلاس-سیٹ وصول کرے گا۔ Code.org کے ونرز (فاتحین) کو منتخب اور مطلع بذریعہ ای-میل 1 دسمبر 2015 کو کرے گا۔
 
-To clarify, this is not a sweepstakes or a contest involving pure chance.
+یہ واضح رہے، کہ یہ کوئی سویپ-اسٹیکس یا کانٹیسٹ نہیں ہے جو کہ نادر موقع پر مبنی ہو۔
 
-1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+1) اپلائی کرنے کے لیے کوئی فنانشیل اسٹیک یا رسک شامل نہیں۔ کوئی بھی اسکول یا کلاس روم بغیر کسی ادائیگی کے Code.org یا کسی بھی دیگر آرگنائزیشن کے تحت شرکت کرسکتی ہے۔
 
-2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+2) جیتنے والے صرف اُن اسکولز میں سے ہی منتخب ہوں گے جہاں کی تمام کلاس روم (یا اسکول) نے آور-آف-کوڈ میں حصہ لیا ہو، جس میں اسٹوڈینٹس اور ٹیچرز کی مجموعی مہارت کا ٹیسٹ شامل ہے۔
 
 <% end %>
 
-<%= view :signup_button %>
+<% if @country == 'us' || @country == 'ca' %>
+
+## Video chat with a guest speaker:
+
+Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligible to win.
+
+<% end %>
+

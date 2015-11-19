@@ -1,6 +1,6 @@
 ---
 layout: none
-template: none
+theme: none
 ---
 - authentication_required!
 - forbidden! unless dashboard_user[:admin]
@@ -17,10 +17,10 @@ template: none
 %input.form-control{type: 'text', 'ng-model' => 'workshop.name'}
 %h3
   Workshop Address
-%input.form-control{type:'text', 'ng-model' => 'workshop.location'}
+%input.form-control{type:'text', 'ng-model' => 'workshop.location', maxlength: 750}
 %h3
   Notes
-%textarea.form-control{'ng-model' => 'workshop.instructions', rows: 3, type:'text'}
+%textarea.form-control{'ng-model' => 'workshop.instructions', rows: 3, type:'text', maxlength: 750}
 %h3
   Program Type
 %select.form-control{'ng-model' => 'workshop.program_type'}

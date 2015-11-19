@@ -3,20 +3,23 @@ title 'Arrays and Loops: Altering Images'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 33 - Arrays and Loops: Altering Images
+## Unit 3: Lesson 28 - Canvas and Arrays in Apps
 
 # Background
 
-A for-loop can be used to iterate through an image array. Cool visual effects can be achieved by changing targeted elements of the array. Specific color channels of an image can be modified by controlling the initial value and increment of an iterator variable.
+Processing arrays of information is much more interesting and powerful when we can visualize the results. In this lesson, you will be developing a drawing app which takes advantage of a new user interface element called the canvas. By capturing user interactions with this element, your app will not only let the user draw on the canvas, but it will store every mark they place on the screen. Using array processing, it is possible to remix these drawings in a number of interesting and visually-pleasing ways.
+
+# Vocabulary
+
+**Canvas:** a user interface element which acts as a digital canvas, allowing the programmatic drawing and manipulation of geometric figures and images.
 
 # Lesson
 
-* Create visual effects by alter the elements of an array.
-* Refine the visual effect by accessing specific color channels in the image. 
+* Introduction to the canvas.
+* Create a drawing app with the canvas.
+* Store information about the drawing in an array.
+* Process stored information to redraw an image with a variety of visual effects.
 
-
-# Resources
-none listed at this time
   
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

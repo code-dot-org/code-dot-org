@@ -5,17 +5,17 @@ title: "<%= hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('short'))
 social:
   "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
   "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  "og:image": "https://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
   "og:image:width": 1440
   "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
+  "og:url": "https://<%=request.host%>"
 
   "twitter:card": player
   "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
+  "twitter:url": "https://<%=request.host%>"
   "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  "twitter:image:src": "https://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
 
 -facebook = {:u=>"http://#{request.host}/us"}
@@ -45,6 +45,8 @@ social:
   }
 
 - imageheight = 590
+
+= view :answer_dash
 
 #top{style: "position: relative; width: 100%; overflow: hidden;"}
 
@@ -84,19 +86,14 @@ social:
               %div.students-served
                 =hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
             %div.ctabuttongroup
-              %div#signuptext.ctatext
-                %a#signupbutton.ctabuttonatag{onclick: "adjustScroll('hocsignupform');", target: "_blank"}
-                  %button.ctabutton
-                    =hoc_s(:front_join_us_sign_up)
               %div#tryittext.ctatext
                 %a#tryitbutton.ctabuttonatag{href: resolve_url('https://code.org/learn')}
                   %button.ctabutton
-                    =hoc_s(:front_join_us_try)
+                    =hoc_s(:get_started)
             #remainder.hidden-xs{style: "text-align: center; margin-top: 15px;"}
               %div.watch-video-small{onclick: "return startVideo();"}
                 =hoc_s(:front_watch_regular_video)
                 %img{src: "/images/play-button.png", width: "25", onclick: "return startVideo();", style: "cursor: pointer;"}
-            -if @country == 'us'
               %div#volunteer-signup
                 %a{href: "https://code.org/volunteer"}= hoc_s('front_volunteers')
 
@@ -183,17 +180,13 @@ social:
       %img{src: "/images/stats-info3.jpg", style: "width: 100%;"}
         %p{style:"color: #ea7717;"}=hoc_s(:stats_girls_million)
 
-  %a#hocsignupform{name: 'signup'}
-  #join
-    %h1=hoc_s(:front_join_us_button)
-    %div
-      .row
-        .col-md-6
-          =view :signup_form
-        .col-md-1
-        .col-md-5
-          =view :join_us_description
-          =view :prizes_announce
+  %div
+    .row
+      .col-md-6
+        =view :prizes_announce
+      .col-md-1
+      .col-md-5
+        =view :join_us_description
 
   -# FAQ
 
@@ -203,8 +196,6 @@ social:
       =view :faq
 
   = view 'popup_window.js'
-
-  = view :signup_button
 
 :javascript
 

@@ -1,0 +1,51 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-09-23T19:19:05.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "declareAssign_x": null,
+      "assign_x": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "start_blocks": "var myObj = { };\r\nconsole.log(myObj);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "true",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "instructions": "Create an object with at least 3 properties and display it in the Debug Console. (Click to see full instructions) ",
+    "markdown_instructions": "# Creating Your Own Objects\r\n\r\nWe've been using objects in our programs, but now we're going to start making objects of our own.\r\n\r\n**Syntax for Creating Objects**\r\n\r\n* Curly braces are placed around the contents of an object `{}`\r\n* Properties of the object are given a name and a value which are separated by a colon `:`\r\n* Properties are separated from one another by commas `,`\r\n* Names must be strings and should be written in double quotes `\"`. If they are not they will be coerced to strings, possibly creating unpredictable behavior.\r\n* **Example:** `var user = {\"userName\":\"Ada\", \"password\":\"csIsAwesome\", \"yearBorn\":1815};`\r\n\r\n# Do This\r\n\r\n**Starter code** is provided which creates an empty object and displays its value.\r\n\r\n* Modify the code **using the syntax above** to create an object of your own. Experiment with including **value of different types (string, number, and boolean)**.\r\n* **Run the program** and confirm all values in your object appear as you expected.\r\n\r\n![](https://images.code.org/f3812eb1ff896a1876d2f2abdf021ba4-image-1449080488321.21.14 PM.png)",
+    "slider_speed": "1.0",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "debugger_disabled": "false"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

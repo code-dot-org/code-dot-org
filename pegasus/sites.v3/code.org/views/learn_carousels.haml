@@ -1,22 +1,27 @@
-- page_mode = PageMode.get(request)
+- learn_categories = []
+- learn_categories << {tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}
+- learn_categories << {tag:"Beginner", name: I18n.t(:carousel_heading_beginners)}
+- learn_categories << {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}
+- learn_categories << {tag:"Apps", name: I18n.t(:carousel_heading_devices)}
+- learn_categories << {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}
+- learn_categories << {tag:"Teacherled", name: I18n.t(:teach_led_lesson_plans)}
 
-- categories = [{tag:"Beginner", name: I18n.t(:carousel_heading_beginners)}, {tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}, {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}, {tag:"Apps", name: I18n.t(:carousel_heading_devices)}, {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}, {tag:"MakeApps", name: I18n.t(:carousel_heading_apps_games)}, {tag: "Univ", name: I18n.t(:carousel_heading_university)}, {tag: "Web", name: I18n.t(:carousel_heading_webpages)}, {tag: "Robot", name: I18n.t(:carousel_heading_robots)}, {tag: "IDE", name: I18n.t(:carousel_heading_ide)}]
+- beyond_categories = []
+- beyond_categories << {tag:"Beginner", name: I18n.t(:carousel_heading_beyond_beginners)}
+- beyond_categories << {tag:"JavaScript", name: I18n.t(:carousel_heading_beyond_javascript)}
+- beyond_categories << {tag:"Apps", name: I18n.t(:carousel_heading_beyond_devices)}
+- beyond_categories << {tag:"OtherLang", name: I18n.t(:carousel_heading_beyond_languages)}
+- beyond_categories << {tag:"MakeApps", name: I18n.t(:carousel_heading_apps_games)}
+- beyond_categories << {tag:"Univ", name: I18n.t(:carousel_heading_university)}
+- beyond_categories << {tag:"Web", name: I18n.t(:carousel_heading_webpages)}
+- beyond_categories << {tag:"Robot", name: I18n.t(:carousel_heading_robots)}
+- beyond_categories << {tag:"IDE", name: I18n.t(:carousel_heading_ide)}
 
 %div{style: "clear:both"}
 
 -tutorials = Tutorials.new(variation=='learn' ? :tutorials : :beyond_tutorials)
 
 - @variation = variation
-- if page_mode == 'minecraft'
-  #carousel-mc{:style=>''}
-    = view :learn_carousel_special, :tag=>'minecraft', :tutorials=>tutorials, :id=>'collection-mc', :second_panel_image=>'/images/mc/fit-520/MC_Panorama_Stack_V2_background.jpg'
-
-- if page_mode == 'starwars'
-  #carousel-starwars{:style=>'display:none'}
-    = view :learn_carousel_special, :tag=>'starwars', :tutorials=>tutorials, :id=>'collection-starwars', :second_panel_image=>'/images/fit-520/starwars_carousel_background.jpg'
-
-#carousel-frozen{:style=>'display:none'}
-  = view :learn_carousel_special, :tag=>'frozen', :tutorials=>tutorials, :id=>'collection-frozen', :second_panel_image=>'/images/fit-520/frozen_carousel_background.jpg'
 
 #carousel-ie8{:style=>'display:none'}
   = view :learn_carousel, :heading=>I18n.t(:older_systems), :subheading=>I18n.t(:older_systems_subheading), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8', :check_language=>true
@@ -31,21 +36,27 @@
   %a{:id=>"englishtutorials", :href=>"#", :onclick=>"toggle_visibility();return false;"}
     %button{:style=>"font-size:20px;"}
       = I18n.t(:carousel_heading_domestic)
+  %br
+  %br    
 
-#all-tutorials{:style=>'visibility:hidden; overflow:hidden'}
+- categories = variation == 'learn' ? learn_categories : beyond_categories
+#all-tutorials{:style=>'visibility:hidden; overflow:hidden;'}
   - categories.each do |category|
     - id = "collection-" + category[:tag]
     = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
 
-%br
-%br
+  - if variation == 'learn'
+    = view :learn_teacher_banner
 
--if variation == 'learn'
-  %h1
-    %a{:href=>"/teacher-led"}
-      = I18n.t(:teach_led_lesson_plans)
+- if request.locale == "en-US"
+  .footer-banner
+    = I18n.t(:learn_footer_all_tutorials)
+  %br
+  %br
 
--if variation == 'beyond'
+- if variation == 'beyond'
+  %br
+  %br
   %a{:href=>"/educate"}
     = I18n.t(:more_resources_educators)
   %br
@@ -84,20 +95,6 @@
 
   // International
   var pegasusLocale = "#{request.locale}";
-
-  /* Disable Frozen carousel
-  // Special Frozen entry, not shown for mobile or IE8
-  if (!window.mobilecheck() && !is_ie8)
-  {
-    $('#carousel-frozen').show();
-  }
-  */
-
-  // Special Star Wars entry, not shown for IE8
-  if (!is_ie8)
-  {
-    $('#carousel-starwars').show();
-  }
 
   if (pegasusLocale.substring(0,2) == "en")
   {

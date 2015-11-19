@@ -5,7 +5,6 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
@@ -151,7 +150,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
   * Ta også med hvilke forkunnskaper i data som er forutsatt på det aktuelle klassetrinnet: nybegynner, middels eller avansert. Kodetimens nettsted kommer til å gi aktivitetene for nybegynnere den mest fremtredende plassen. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Tekniske krav: 
       * For å kunne spore deltagelsen nøyaktig, skal alle tredjeparts-aktiviter ha med et 1-piksel bilde på første og siste siden av instruksjonene. Plasser et start 1-pixel-bilde på startsiden og et slutt 1-pixel-bilde på siste side. Ikke plasser noen piksler på mellomliggende sider). Se seksjonen om pixler for sporing nedenfor for mer informasjon. 
-      * Når din aktivitet avsluttes, skal brukere linkes til [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
+      * Når din aktivitet avsluttes, skal brukere linkes til [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) hvor de vil få mulighet til å: 
           * Dele på sosiale medier at de fullført Kodetimen
           * Motta et sertifikat som bevis for fullført Kodetime
           * Se resultatlister over hvilek land/byer som har de høyeste tallene for deltakelse i aktiviteter i Kodetimen
@@ -215,13 +214,13 @@ After the success of the 2013 campaign, we took steps to make sure we set up the
 
 En del av dette er å beskytte varemerket «Kodetimen» for å forhindre forvirring. Mange av våre veiledningsparntere har brukt «Kodetimen» på sine sider. Vi ønsker ikke å forhindre denne bruken, men vi ønsker å være sikker på at det passer innenfor et par rammer:
 
-  1. En hver referanse til «Kodetimen» burde bli brukt på en slik måte at det ikke tyder på at det er ditt eget merkenavn, men heller reffererer til Kodetimen som en grasrotbevegelse. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Dårlig eksempel: «Prøv Kodetimen fra ACME Corp»
-  2. Bruk et «TM» hevet i de mest fremtredene plassene du nevner «Kodetimen», både på din nettside og i app beskrivelsene
+  1. En hver referanse til «Kodetimen» burde bli brukt på en slik måte at det ikke tyder på at det er ditt eget merkenavn, men heller reffererer til Kodetimen som en grasrotbevegelse. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Inkluder språk på siden (eller som bunntekst), inkluder lenker til CSEdWeek og Code.org sidene, som sier det følgende:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. Ingen bruk av «Kodetimen» i app navn
+  4. No use of "Hour of Code" in app names.
 
 [**Tilbake til toppen**](#top)
 
@@ -265,4 +264,3 @@ Hvis du lager en veiledning som er skapt for personer med synsproblemer, hadde v
 
 [**Tilbake til toppen**](#top)
 
-<%= view :signup_button %>

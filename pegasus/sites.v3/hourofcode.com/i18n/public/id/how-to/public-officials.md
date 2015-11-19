@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Bagaimana untuk membawa Hour of Code ke seluruh komunitas Anda.
 
@@ -34,9 +33,9 @@ nav: how_to_nav
 
 ## Buat semua sekolah berpartisipasi, setiap pelajar harus mempelajarinya!
 
-  1. **Rekrut daerah dan sekolah-sekolah setempat.** Gunakan [email](<%= resolve_url('/promote/resources#sample-emails') %>) atau [uraian ini](<%= resolve_url('/promote/stats') %>) sebagai titik awal, dan lihatlah [how-to](<%= resolve_url('/how-to') %>) ini untuk sekolah dan Kabupaten. Biarkan mereka tahu **setiap** pendidik peserta akan menerima [hadiah terima kasih](<%= resolve_url('/prizes') %>) dan di **setiap negara bagian**, satu sekolah yang berpartisipasi akan menang **teknologi senilai $10.000**!
+  1. **Rekrut daerah dan sekolah-sekolah setempat.** Gunakan [email](<%= resolve_url('/promote/resources#sample-emails') %>) atau [uraian ini](<%= resolve_url('/promote/stats') %>) sebagai titik awal, dan lihatlah [how-to](<%= resolve_url('/how-to') %>) ini untuk sekolah dan Kabupaten. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/prizes') %>) while supplies last and in **each state**, one participating school will win **$10,000 in technology**!
 
-  2. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/event') %>) for a sample run of show, media outreach kit and other event-planning resources. Menyelenggarakan acara adalah cara yang bagus untuk mempromosikan Hour of Code dan meningkatkan partisipasi.
+  2. **Slenggarakan sebuah event Hour of Code.** Lihat [panduan acara](<%= resolve_url('/how-to/event') %>) kami untuk sample acara yang berjalan, media outreach kit dan sumber-sumber lain perencanaan acara. Menyelenggarakan acara adalah cara yang bagus untuk mempromosikan Hour of Code dan meningkatkan partisipasi.
 
   3. **Hadiri acara selama Pekan Edukasi Ilmu Komputer (<%= campaign_date('short') %>).** [Temukan sekolah dan kelas](<%= resolve_url('/events') %>) yang berpartisipasi di distrik, kota atau negara Anda.
 
@@ -55,4 +54,3 @@ nav: how_to_nav
 
   8. **Terhubung secara lokal.** Kunjungi [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) untuk mempelajari lebih lanjut tentang pendidikan ilmu komputer di negara Anda. Tandatangani petisi yang ada dan Anda akan mendapatkan update dari Code.org pada upaya-upaya advokasi lokal, negara bagian dan federal mereka.
 
-<%= view :signup_button %>
