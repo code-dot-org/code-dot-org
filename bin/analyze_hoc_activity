@@ -169,6 +169,14 @@ def main()
     end
   end
 
+  # Compute number of hoc participants per company in 2015.
+  hoc_company_participants = {}
+  company_count_results = PEGASUS_REPORTING_DB_READONLY.fetch("SELECT company, count(1) as ct FROM hoc_activity WHERE company is not null and started_at > '2015-08-01 00:00:00' group by company")
+  company_count_results.each do |row|
+    hoc_company_participants[row['company']] = row['ct']
+  end
+
+
   Properties.set :hoc_metrics, {
     started: total_started,
     finished: total_finished,
@@ -179,6 +187,7 @@ def main()
     total_hoc_count: total_hoc_count,
     hoc_country_totals: hoc_country_totals,
     hoc_company_totals: hoc_company_totals,
+    hoc_company_participants: hoc_company_participants,
   }
 
   #HipChat.log 'Calculating lines of code...' if rack_env?(:production)
