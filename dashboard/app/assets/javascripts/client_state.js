@@ -88,12 +88,13 @@ dashboard.clientState.writeSourceForLevel = function (scriptName, levelKey, time
 
 /**
  * Returns the progress attained for the given level from the cookie.
- * @param {number} level The id of the level
+ * @param {string} scriptName The script name
+ * @param {string} levelKey The level
  * @returns {number}
  */
-dashboard.clientState.levelProgress = function(level) {
+dashboard.clientState.levelProgress = function(scriptName, levelKey) {
   var progressMap = dashboard.clientState.allLevelsProgress();
-  return progressMap[String(level)] || 0;
+  return progressMap[scriptName + '_' + levelKey] || 0;
 };
 
 /**
@@ -101,26 +102,29 @@ dashboard.clientState.levelProgress = function(level) {
  * @param {boolean} result - Whether the user's solution is successful
  * @param {number} lines - Number of lines of code user wrote in this solution
  * @param {number} testResult - Indicates pass, fail, perfect
- * @param {number} scriptLevelId - Which level this is for
+ * @param {string} scriptName - Which script this is for
+ * @param {string} levelKey - Which level this is for
  */
-dashboard.clientState.trackProgress = function(result, lines, testResult, scriptLevelId) {
+dashboard.clientState.trackProgress = function(result, lines, testResult, scriptName, levelKey) {
   if (result) {
     addLines(lines);
   }
 
-  if (testResult > dashboard.clientState.levelProgress(scriptLevelId)) {
-    setLevelProgress(scriptLevelId, testResult);
+  if (testResult > dashboard.clientState.levelProgress(scriptName, levelKey)) {
+    setLevelProgress(scriptName, levelKey, testResult);
   }
 };
 
 /**
  * Sets the progress attained for the given level in the cookie
- * @param {number} level The id of the level
+ * @param {string} scriptName The script name
+ * @param {string} levelKey The level
+ * @param {number} progress Indicates pass, fail, perfect
  * @returns {number}
  */
-function setLevelProgress(level, progress) {
+function setLevelProgress(scriptName, levelKey, progress) {
   var progressMap = dashboard.clientState.allLevelsProgress();
-  progressMap[String(level)] = progress;
+  progressMap[scriptName + '_' + levelKey] = progress;
   $.cookie('progress', JSON.stringify(progressMap), COOKIE_OPTIONS);
 }
 
