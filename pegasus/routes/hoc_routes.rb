@@ -14,17 +14,17 @@ get '/v2/hoc/tutorial-metrics.json' do
   JSON.pretty_generate(fetch_hoc_metrics['tutorials'])
 end
 
-# Employee engagement
-get '/api/hour/begin_company/:company' do |company|
-  pass unless DB[:forms].where(kind: 'CompanyProfile', name: company).first
-  pass unless tutorial = DB[:tutorials].where(code: 'codeorg').first
-  launch_tutorial(tutorial, company: company)
-end
-
 get '/api/hour/begin/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
   pass unless tutorial = DB[:tutorials].where(code: code).first
-  launch_tutorial(tutorial)
+
+  # set company to nil if not a valid company
+  company = request.GET['company']
+  unless company.nil?
+    company = nil unless DB[:forms].where(kind: 'CompanyProfile', name: company).first
+  end
+
+  launch_tutorial(tutorial, company: company)
 end
 
 get '/api/hour/begin_:code.png' do |code|
