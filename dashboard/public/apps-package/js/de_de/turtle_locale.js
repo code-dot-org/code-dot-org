@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Hebt oder senkt den Stift um das Zeichnen zu starten oder zu beenden."},
 "penUp":function(d){return "Stift anheben"},
 "reinfFeedbackMsg":function(d){return "Dein Bild ist fertig! Arbeite weiter daran oder gehe zur nächsten Aufgabe."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "setze Transparenz"},
 "setColour":function(d){return "Farbe festlegen"},
 "setPattern":function(d){return "Muster einstellen"},
 "setWidth":function(d){return "Breite festlegen"},

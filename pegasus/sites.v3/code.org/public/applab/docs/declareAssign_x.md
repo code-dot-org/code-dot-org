@@ -5,10 +5,9 @@ embedded_layout: simple_embedded
 
 [name]
 
-## Declare a variable: var x = 0;
+## Declare and assign a value to a variable
 
 [/name]
-
 
 [category]
 
@@ -20,7 +19,7 @@ Category: Variables
 
 [short_description]
 
-Declares that the code will now use a variable named x and assign it an initial value of 0.
+Declares and assigns an initial value to a variable.
 
 [/short_description]
 

@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## setInterval(function, milliseconds)
+## setInterval(callback, ms)
 
 [/name]
 
@@ -94,7 +94,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-setInterval(function, milliseconds);
+setInterval(callback, ms);
 ```
 
 [/syntax]
@@ -105,8 +105,8 @@ setInterval(function, milliseconds);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| function | function | Yes | A function to execute.  |
-| milliseconds | number | Yes | The number of milliseconds between each execution of the function.  |
+| callback | function | Yes | A function to execute.  |
+| ms | number | Yes | The number of milliseconds between each execution of the function.  |
 
 [/parameters]
 

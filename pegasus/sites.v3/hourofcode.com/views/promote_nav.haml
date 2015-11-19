@@ -38,11 +38,11 @@
         = hoc_s(:resources_posters)
   %div.nav-item
     - if request.path == "/promote/resources"
-      %a.nav-link{href:"#", onclick:"return adjustScroll('banners')"}
-        = hoc_s(:resources_banners)
+      %a.nav-link{href:"#", onclick:"return adjustScroll('social')"}
+        = hoc_s(:resources_social)
     - else
-      %a.nav-link{href: resolve_url('/promote/resources#banners')}
-        = hoc_s(:resources_banners)
+      %a.nav-link{href: resolve_url('/promote/resources#social')}
+        = hoc_s(:resources_social)
   %div.nav-item
     - if request.path == "/promote/resources"
       %a.nav-link{href:"#", onclick:"return adjustScroll('logo')"}

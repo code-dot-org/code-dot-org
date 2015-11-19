@@ -1,8 +1,8 @@
 {
   "blockDestroyBlock": "destroy block",
-  "blockIf": "if",
+  "blockIf": "ako",
   "blockIfLavaAhead": "if lava ahead",
-  "blockMoveForward": "move forward",
+  "blockMoveForward": "idi naprijed",
   "blockPlaceTorch": "place torch",
   "blockPlaceXAheadAhead": "ahead",
   "blockPlaceXAheadPlace": "place",
@@ -10,8 +10,8 @@
   "blockPlantCrop": "plant crop",
   "blockShear": "shear",
   "blockTillSoil": "till soil",
-  "blockTurnLeft": "turn left",
-  "blockTurnRight": "turn right",
+  "blockTurnLeft": "okreni lijevo",
+  "blockTurnRight": "okreni desno",
   "blockTypeBedrock": "bedrock",
   "blockTypeBricks": "bricks",
   "blockTypeClay": "clay",
@@ -51,9 +51,9 @@
   "blockTypeWater": "water",
   "blockTypeWool": "wool",
   "blockWhileXAheadAhead": "ahead",
-  "blockWhileXAheadDo": "do",
-  "blockWhileXAheadWhile": "while",
-  "generatedCodeDescription": "By dragging and placing blocks in this puzzle, you've created a set of instructions in a computer language called Javascript. This code tells computers what to display on the screen. Everything you see and do in Minecraft also starts with lines of computer code like these.",
+  "blockWhileXAheadDo": "napravi",
+  "blockWhileXAheadWhile": "dok",
+  "generatedCodeDescription": "Povlačenjem i postavljanjem blokova u ovoj zagonetki, stvorit ćete skup uputa u računalnom jeziku Javascript. Ovaj kod govori računalu što će prikazati na zaslonu. Sve što vidite i radite u Minecraftu također počinje sa linijama računalnog koda poput ovih.",
   "houseSelectChooseFloorPlan": "Choose the floor plan for your house.",
   "houseSelectEasy": "Easy",
   "houseSelectHard": "Hard",
@@ -84,5 +84,5 @@
   "reinfFeedbackMsg": "You can press \"Keep Playing\" to go back to playing your game.",
   "replayButton": "Replay",
   "selectChooseButton": "Select",
-  "tooManyBlocksFail": "Puzzle {puzzleNumber} completed. Congratulations! It is also possible to complete it with {numBlocks, plural, one {1 block} other {# blocks}}."
+  "tooManyBlocksFail": "Zagonetka {puzzleNumber} je dovršena. Čestitam! Također je moguće završiti ju sa {numBlocks, plural, jedna {jednom kockom} other {# kocki}}."
 }

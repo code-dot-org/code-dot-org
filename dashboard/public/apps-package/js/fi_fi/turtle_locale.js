@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Nostaa tai laskee kynän, aloittaakseen tai lopettaakseen piirtämisen."},
 "penUp":function(d){return "kynä ylös"},
 "reinfFeedbackMsg":function(d){return "Tässä on piirustuksesi! Jatka työstämistä sen parissa tai siirry seuraavaan tehtävään."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "aseta läpinäkymättömyys"},
 "setColour":function(d){return "aseta väri"},
 "setPattern":function(d){return "määritä malli"},
 "setWidth":function(d){return "aseta leveys"},

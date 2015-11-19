@@ -6,14 +6,6 @@
   "user_id": 155,
   "properties": {
     "skin": "applab",
-    "code_functions": {
-      "onEvent": null,
-      "getText": null,
-      "setText": null,
-      "declareAssign_x": null,
-      "assign_x": null,
-      "console.log": null
-    },
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# String Capitalization\r\n\r\nIf you want to change the capitalization of a string you can do so with two new functions\r\n\r\n![](https://images.code.org/d8523cdae7c07b34baa1c61809bb80d4-image-1445980407200.42.31 PM.png)\r\n\r\nNote that the syntax is similar to `console.log` . This is because `toUpperCase` really only makes sense as a command when you are using a **string**, just as `log` only makes sense when you are talking about the console. This function **evaluates to a new string in which all characters have been made upper / lower case**. If you want to update the value in your original variable you'll have to do so explicitly, as in\r\n\r\n```\r\nvar myString = \"lower case for now\";\r\nmyString = myString.toUpperCase();\r\n```\r\n\r\n# Do This\r\n\r\n* **Update your application so that the user's name is printed in UPPER CASE**\r\n\r\n<img src=\"https://images.code.org/26d8ffb7c631c1c510f781b5bf46d494-image-1445980322936.04.55 PM.png\", style=\"width:250px;\">",
@@ -47,9 +39,9 @@
     "instructions": "Make the name of the user appear in upper case (Click to see full instructions)",
     "slider_speed": "1",
     "project_template_level_name": "U3L16 - nameAgeTemplate",
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "Eese+s2iwO+pdvvtfb5eWUhdPqeNmiN4B2A5blQLJWJJXKcQYJpqvUefoedc\nEZmQ\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

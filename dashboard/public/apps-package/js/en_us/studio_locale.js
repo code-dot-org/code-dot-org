@@ -870,7 +870,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedRemovedItemCount":function(d){return "Next time, get the right number of items."},
 "failedSetActivity":function(d){return "Next time, set the correct character activity."},
 "failedHasWonGame":function(d){return "Next time, win the game."},
-"failedHasLostGame":function(d){return "Next time, lose the game"},
+"failedHasLostGame":function(d){return "Next time, lose the game."},
 "failedAddItem":function(d){return "Next time, add a character."},
 "failedAvoidHazard":function(d){return "\"Uh oh, a Bandit got you!  Try again.\""},
 "failedHasAllGoals":function(d){return "\"Try again, BB-8.  Get all the scrap metal.\""},

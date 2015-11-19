@@ -175,12 +175,12 @@ fi:
         desc: Tutustu miten rakastamasi videopelit perustuvat matematiikkaan. Tutki kuinka matemaattiset lausekkeet ja koordinaattitaso auttavat ymmärtämään videopelien toimintaa. Sitten voit alkaa suunnitella videopeliä, jonka tulet tekemään.
         video: alg_11_coordinate_plane
       Contracts:
-        title: Contracts, Domain, and Range
-        desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
+        title: Sopimukset, lähtöjoukko ja maalijoukko
+        desc: Sopimukset tarjoavat meille tavan ymmärtää funktioita ja keskustella niistä. Tässä oppitunnissa katsomme kuinka sopimukset auttavat meitä hahmottamaan uuden ohjelmointikielen tai funktion.
         video: alg_5_contracts
       DesignRecipe:
         title: Suunnitteluresepti
-        desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
+        desc: 'Viimeisessä vaiheessa opiskelijat kirjoittivat joitain hyvin yksinkertaisia funktioita - kehittyneemmät funktiot vaativat syvällisempää lähestymistapaa. Suunnitteluresepti on rakenteellinen lähestymistapa funktioiden kirjoittamiseen. Se sisältää myös testitapausten kirjoittamista, joilla voidaan tutkia toimiiko funktio joillakin arvoilla odotetusti.'
         video: alg_8_design_recipe
       Booleans:
         title: Totuusarvot ja logiikka
@@ -188,7 +188,7 @@ fi:
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Ehtolauseet ja paloittaiset funktiot
-        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
+        desc: Parametrit, joita välitämme funktiolle, aiheuttavat muutoksia saatavaan tulokseen, jotka riippuvat käytettävästä mallista. Oletetaan että haluamme joidenkin parametrin arvojen luovan tuloksen käyttäen yhtä mallia mutta muut arvot käyttävät toista mallia. Tämän aikaansamiseksi tarvitaan ehtolauseita...
         video: alg_10_conditionals
       CollisionDetection:
         title: Törmäyksentunnistus ja Pythagoraan lause

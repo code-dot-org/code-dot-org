@@ -182,7 +182,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveDownTooltip":function(d){return "Move the paddle down."},
 "moveForward":function(d){return "முன்னோக்கி நகர்த்த"},
 "moveForwardTooltip":function(d){return "என்னை ஒரு அடி முன்னே நகர்த்து."},
-"moveLeft":function(d){return "move left"},
+"moveLeft":function(d){return "edadu pakkam thirumbu"},
 "moveLeftTooltip":function(d){return "Move the paddle to the left."},
 "moveRight":function(d){return "move right"},
 "moveRightTooltip":function(d){return "Move the paddle to the right."},

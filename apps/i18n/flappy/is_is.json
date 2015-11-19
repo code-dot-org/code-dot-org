@@ -125,7 +125,7 @@
   "whenCollideObstacle": "þegar rekst á hindrun",
   "whenCollideObstacleTooltip": "Gera aðgerðirnar hér fyrir neðan þegar Flappy rekst á hindrun.",
   "whenEnterObstacle": "þegar gegnum hindrun",
-  "whenEnterObstacleTooltip": "Gera aðgerðirnar hér fyrir neðan þegar Flappy kemst framhjá hindrun.",
+  "whenEnterObstacleTooltip": "Gera aðgerðirnar hér fyrir neðan þegar Flappy fer inn í hindrun.",
   "whenRunButtonClick": "þegar leikur byrjar",
   "whenRunButtonClickTooltip": "Gera aðgerðirnar fyrir neðan þegar leikurinn byrjar.",
   "yes": "Já"
