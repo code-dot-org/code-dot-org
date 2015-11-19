@@ -11,8 +11,8 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: Samsvare knappe kombinasjonen
-          til dansetrinnene.
+        Match the button combination to the dance moves.: Set saman knappkombinasjonen
+          til dansebevegelsen.
         Matching: Samansetting
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
@@ -35,7 +35,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Samsvare rutenettet til programmet.
+        Match the grid to the program.: Set saman rutenettet to programmet.
         Matching: Samansetting
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -232,8 +232,8 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
-        Match the button combination to the dance moves.: Samsvare knappe kombinasjonen
-          til dansetrinnene.
+        Match the button combination to the dance moves.: Set saman knappkombinasjonen
+          til dansebevegelsen.
         Matching: Samansetting
       K-1 Flappy Match 1:
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
@@ -321,9 +321,8 @@
           til høgre for trekanten
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Begynn med et kvadrat<br/> Sett inn en trekant til høyre for kvadratet<br/>
-          Sett inn et parallellogram under kvadratet<br/> Sett inn en trekant til
-          høyre for parallellogrammet
+        : Start med ein firkant<br/>Set ein trekant til høgre for firkanten<br/>Set
+          eit parallellogram under firkanten<br/>Set ein trekant til høgre for parallellogrammet
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -471,29 +470,29 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
         Maze Multiple Choice One: Labyrint Fleirval Ein
-        Which set of blocks is the correct answer?: Hvilket sett blokker er det riktige
-          svaret?
+        Which set of blocks is the correct answer?: Kva for sett av blokker er det
+          rette svaret?
       4-5 Algorithms Multi 1:
         Baking cookies: Bake kaker
         Banana: Banan
-        Brushing your teeth: Pusse tennene
+        Brushing your teeth: Pusse tenna
         Multiple Choice: Fleirval
-        Shopping from a grocery list: Gjøre innkjøp fra en handleliste
+        Shopping from a grocery list: Handle med ei handleliste
         Which one of these items is hardest to describe an algorithm for?: Kva for
           av desse elementa er det vansklegast å beskrive ei algoritme til?
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene er en _____ by.
+        Eugene is a _____ city.: Eugene er ein _____ by.
         0: '? Her er tre setningar. Kva for ein av malane under abstraherer rett,
           slik at alle tre passar i det samme mønsteret som malen?'
         1: ': Her er tre setningar. Kva for ein av malane under abstraherer rett,
           slik at alle tre passar i det samme mønsteret som malen?'
         Multiple Choice: Fleirval
-        Seattle _____ a _____ _____.: Seattle _____ en _____ _____.
+        Seattle _____ a _____ _____.: Seattle _____ ein _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
-          er en stor by. <br/>Eugene er en mellomstor by<br/>Hillview er en liten
+          er ein stor by.<br/>Eugene er ein mellomstor by<br/>Hillview er ein liten
           by.
-        _____ is _____ a _____.: _____ er _____ en _____.
-        _____ is a _____ city.: _____ er en _____ by.
+        _____ is _____ a _____.: _____ er _____ ein _____.
+        _____ is a _____ city.: _____ er ein _____ by.
       4-5 Crowdsourcing Multi 1:
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
@@ -502,20 +501,20 @@
           bilda illusterer crowdsourcing best?
       4-5 Crowdsourcing Multi 2:
         Brushing your hair: Børste håret
-        Cleaning your room: Rydde på rommet ditt
-        Eating your dessert: Spise dessert
+        Cleaning your room: Rydde rommet ditt
+        Eating your dessert: Spise desserten din
         Multiple Choice: Fleirval
-        Washing your face: Vaske ansiktet
+        Washing your face: Vaske andletet ditt
         Which one of these activities would be best for practicing crowdsourcing?: Kva
           for ein av desse aktivitetane vil vere best for å øve på crowdsourcing?
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Fleirval
         Which piece of information listed below is okay to share on the internet?: Kva
           for ei av opplysningane nedanfor er det greit å dele på internett?
-        Your address: Adressen din
-        Your birthday: Bursdagen din
+        Your address: Adressa di
+        Your birthday: Fødselsdagen din
         Your favorite food: Favorittmaten din
-        Your parent's credit card number: Kredittkortet til foreldrene dine
+        Your parent's credit card number: Kredittkortnummeret til foreldra dine
       4-5 Internet Multi 1:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         23.23.224.106: 23.23.224.106
@@ -557,17 +556,17 @@
         Multiple Choice: Fleirval
         ? What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?
-        : Hva er den største delen av sangen du kan definere som refrenget slik at
-          refrenget gjentas nøyaktig hver gang det synges?
+        : Kva er den største delen av songen du kan definere som refreng, slik at
+          refrenget gjentas nøyaktig kvar gong?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
         Multiple Choice: Fleirval
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Hvilket
-          av programmene nedenfor <em>vil ikke</em> lage nøyaktig samme sekvens som
-          program 1?
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Kva
+          for eit av programma under <em>vil ikkje</em> lage nøyaktig den same sekvensen
+          som Program 1?
       4-5 artist functions multi 1:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
@@ -633,7 +632,7 @@
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
         Bee Debug Multiple Choice: Bier Feilsøking Fleirval
-        Which version of the function will work?: Kva fr versjon av funksjonen vil
+        Which version of the function will work?: Kva for versjon av funksjonen vil
           fungere?
       4-5 bee loops multi 1:
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
@@ -749,7 +748,7 @@
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
         Multiple Choice: Fleirval
         Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Kva
-          for dyr har det digitale fotsporet, som gjer han eller henne <strong>mest
+          for dyr har det digitale fotsporet som gjer han eller henne <strong>mest
           utrygg</strong>?
       K-1 Getting Loopy Multi 1:
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
@@ -773,7 +772,7 @@
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
         Multiple Choice: Fleirval
-        Which information should you <strong>not</strong> share online?: Kva for information
+        Which information should you <strong>not</strong> share online?: Kva for informasjon
           skal du <strong>ikkje</strong> dele på nettet?
       K-1 Maze Debugging Multi 1:
         /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png,
@@ -833,7 +832,7 @@
         /script_assets/k_1_images/unplugged_images/water-pot.png: /script_assets/k_1_images/unplugged_images/water-pot.png
         Multiple Choice: Fleirval
         Which step should fill in the blank for this algorithm?: Kva for steg skal
-          fylle tomrommet i til denne algoritma?
+          fylle tomrommet i denne algoritma?
       K-1 Word Search Multi 1:
         /script_assets/k_1_images/move_blocks/EEES.png: /script_assets/k_1_images/move_blocks/EEES.png
         /script_assets/k_1_images/move_blocks/EESS.png: /script_assets/k_1_images/move_blocks/EESS.png
@@ -862,7 +861,7 @@
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
-        Driver and Helper: Sjåfær og hjelpar
+        Driver and Helper: Sjåfør og hjelpar
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Ein
           av desse gutane er <b>sjåfør</b>.  Ein annan er <b>hjelpar</b>.
         Which boy is the <large>helper</large>?: Kva for gut er <large>hjelpar</large>?

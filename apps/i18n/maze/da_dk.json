@@ -31,7 +31,7 @@
   "ifTooltip": "Hvis der er en sti i den angivne retning, så udfør nogle handlinger.",
   "ifelseTooltip": "Hvis der er en sti i den angivne retning, så udfør den første blok af handlinger. Ellers udfør den anden blok af handlinger.",
   "ifFlowerTooltip": "Hvis der er en blomst/et bistade i den angivne retning, så udfør nogle handlinger.",
-  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions.",
+  "ifOnlyFlowerTooltip": "Hvis der er en blomst i den angivne retning, så udfør nogle handlinger.",
   "ifelseFlowerTooltip": "Hvis der er en blomst/et bistade i den angivne retning, så udfør den første gruppe af handlinger. Ellers udfør den anden gruppe af handlinger.",
   "insufficientHoney": "Du bruger alle de rigtige blokke, men du skal lave den rigtige mængde af honning.",
   "insufficientNectar": "Du bruger alle de rigtige blokke, men du har brug for at indsamle den rigtige mængde af nektar.",

@@ -1,11 +1,6 @@
 @dashboard_db_access
-
+@as_student
 Feature: Hour of Code tests for users that are signed in
-
-Background:
-  Given I am on "http://studio.code.org/"
-  And I am a student
-  Then I reload the page
 
 Scenario:
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"

@@ -155,7 +155,7 @@ p:function(d,k,o,l,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:(k=bounce_lo
 s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).bounce_locale = {
 "bounceBall":function(d){return "اچھال کی گیند"},
-"bounceBallTooltip":function(d){return "Bounce a ball off of an object."},
+"bounceBallTooltip":function(d){return "کسی چیز سے گیند ٹکرا کے اچھل دیں "},
 "continue":function(d){return "Continue"},
 "dirE":function(d){return "E"},
 "dirN":function(d){return "N"},
@@ -169,8 +169,8 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifPathAhead":function(d){return "if path ahead"},
 "ifTooltip":function(d){return "If there is a path in the specified direction, then do some actions."},
 "ifelseTooltip":function(d){return "If there is a path in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."},
-"incrementOpponentScore":function(d){return "score opponent point"},
-"incrementOpponentScoreTooltip":function(d){return "Add one to the current opponent score."},
+"incrementOpponentScore":function(d){return "مخالف کے سکور میں اضافہ "},
+"incrementOpponentScoreTooltip":function(d){return "مخالف کے سکور میں ایک اور جمع کریں "},
 "incrementPlayerScore":function(d){return "سکور پوائنٹ"},
 "incrementPlayerScoreTooltip":function(d){return "Add one to the current player score."},
 "isWall":function(d){return "یہ ایک دیوار ہے"},

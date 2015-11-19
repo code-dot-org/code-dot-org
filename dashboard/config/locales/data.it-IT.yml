@@ -339,7 +339,7 @@
         turtle_3_7: Aggiungi un parametro chiamato "lunghezza" alla funzione "disegna
           una casa" e costruisci una casa grande per l'elefante (con lati lunghi 150
           pixel)
-        turtle_3_8: Modifica "disegna una casa" così finisco all'angolo inferiore
+        turtle_3_8: Modifica "disegna una casa" così da finire nell'angolo inferiore
           destro dopo aver disegnato una nuova casa. Utilizza questa funzione modificata
           per disegnare tre case.
         turtle_3_9: Riesci a ricreare la funzione "disegna una casa" senza aiuto?
@@ -486,7 +486,7 @@
         jigsaw_10: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
         jigsaw_11: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
         jigsaw_12: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
-        jigsaw_13: Questo è un esercizio di verifica -- Sistema i blocchi nell'ordine
+        jigsaw_13: Questo è un esercizio di riepilogo -- Sistema i blocchi nell'ordine
           corretto per formare l'immagine indicata.
         mazestep_1: Qui c'è la descrizione del passo del labirinto
         mazestep_2: Qui c'è la descrizione del passo del labirinto
@@ -572,6 +572,49 @@
           fino all'alieno ed avvisare tutti.
         studio_playlab_10: Crea un gioco per conto tuo. Quando hai fatto, clicca su
           Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+        studio_iceage_1: Manny vuole dire "Ciao" - puoi aiutarlo?
+        studio_iceage_2: Diego (attore 1) e la nonna (attore 2) vorrebbero dirsi "Ciao".
+          Li puoi aiutare utilizzando il blocco "dire" due volte?
+        studio_iceage_3: Puoi aiutare Scrat ad arrivare alla bandiera?
+        studio_iceage_4: Puoi aiutare Scrat (attore 1) ad arrivare a Nonnina (attore
+          2) e riprodurre un suono una volta raggiunta?
+        studio_iceage_5: Puoi aiutare Sid a dire "Saluti" una volta cliccato? Non
+          dimenticare di fare clic dopo il clic su Esegui
+        studio_iceage_6: Puoi aiutare Diego a muoversi utilizzando i tasti freccia
+          su/giù/destra/sinistra per arrivare a tutte le bandiere?
+        studio_iceage_7: Il blocco "ripeti per sempre" ti permette di eseguire il
+          codice in continuazione. Puoi attaccare ad esso dei blocchi per aiutare
+          Sid a spostarsi ripetutamente a destra e a sinistra?
+        studio_iceage_8: Puoi aggiungere un blocco per segnare un punto e un blocco
+          per riprodurre un suono quando Sid si imbatte in Manny e quindi muoverlo
+          con le frecce per riuscirci?
+        studio_iceage_9: Imposta lo sfondo per questa era glaciale e aiuta Sid a raggiungere
+          Nonnina più velocemente modificando la sua velocità. Quindi muovilo con
+          i tasti freccia per arrivare da Sid e avvisare tutti gli altri.
+        studio_iceage_10: Crea un gioco per conto tuo. Quando hai fatto, clicca su
+          Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+        studio_gumball_1: Anais vuole dire "Ciao" - puoi aiutarla?
+        studio_gumball_2: Darwin (attore 1) e Gumball (attore 2) vorrebbero dirsi
+          "Ciao". Li puoi aiutare utilizzando il blocco "dire" due volte?
+        studio_gumball_3: Può aiutare Banana Joe a raggiungere la bandiera?
+        studio_gumball_4: Potete aiutare Gumball (attore 1) ad arrivare a Darwin (attore
+          2) e riprodurre un suono una volta arrivato?
+        studio_gumball_5: Puoi aiutare Antony a dire "Saluti" una volta cliccato?
+          Non dimenticare di fare clic dopo il clic su Esegui
+        studio_gumball_6: Puoi aiutare Darwin a muoversi utilizzando i tasti freccia
+          su/giù/destra/sinistra per arrivare a tutte le bandiere?
+        studio_gumball_7: Il blocco "ripeti per sempre" ti permette di eseguire il
+          codice in continuazione. Puoi attaccare ad esso dei blocchi per aiutare
+          Antony a spostarsi ripetutamente a destra e a sinistra?
+        studio_gumball_8: Puoi aggiungere un blocco per segnare un punto e un blocco
+          per riprodurre un suono quando Banana Joe si imbatte in Antony e quindi
+          muoverlo con le frecce per riuscirci?
+        studio_gumball_9: Imposta lo sfondo per questa invasione spaziale e aiuta
+          Nicole a raggiungere Penny più velocemente modificando la sua velocità.
+          Quindi muoverla con i tasti freccia per arrivare a Nicole e avvisare tutti
+          gli altri.
+        studio_gumball_10: Crea un gioco per conto tuo. Quando hai fatto, clicca su
+          Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_full_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca
           su Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_k1_1: Riesci a far dire a questo cane "Ciao a tutti"?
@@ -598,8 +641,8 @@
           le lettere della parola ABOVE.
         maze_wordsearch_k_16: Spostami in una direzione e poi in un'altra per scrivere
           le lettere della parola BELOW.
-        maze_wordsearch_k_20: Questo è un esercizio di verifica! Spostami in una direzione
-          e poi in un'altra per scrivere le lettere della parola STORY.
+        maze_wordsearch_k_20: Questo è un esercizio di riepilogo -- Spostami in una
+          direzione e poi in un'altra per scrivere le lettere della parola STORY.
         applab_ec_simple: Crea la tua App usando i blocchi nella cassetta degli attrezzi.
         turtle_ec_1_2: 'Ora, disegna un quadrato. Suggerimento: usa il tuo colore
           preferito scegliendolo col nuovo blocco "imposta colore".'
@@ -711,11 +754,17 @@
         playlab_intro: Introduzione al Laboratorio
         playlab_events: 'Laboratorio: Eventi'
         playlab_repeat_forever: 'Laboratorio: Ripeti per Sempre'
-        tutorial_puzzle_challenge: Sfida "Tutorial Puzzle"
-        infinity_playlab_intro: Play Lab - Introduzione
-        infinity_playlab_events: Play Lab - Eventi
-        infinity_playlab_repeat_forever: Play Lab - Ripeti per sempre
+        tutorial_puzzle_challenge: Corso "Esercitazione Puzzle"
+        infinity_playlab_intro: Laboratorio - Introduzione
+        infinity_playlab_events: Laboratorio - Eventi
+        infinity_playlab_repeat_forever: Laboratorio - Ripeti per sempre
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduzione alle Funzioni
+        csp_applab_functions_parameters: Funzioni con parametri
+        csp_applab_loops: Ripetizioni
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Un po ' sui pixel
         csp_pixelation_color_1: Color pixelation widget - parte 1
         csp_pixelation_color_2: Color pixelation widget - parte 2
@@ -748,6 +797,21 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: Costruisci una galassia con il codice - Introduzione'
+        starwars_typing: 'Star Wars: Costruisci una galassia con il codice - JavaScript'
+        starwars_events: 'Star Wars: Costruisci una galassia con il codice - Eventi'
+        starwars_congrats: 'Star Wars: Costruisci una galassia con il codice - Complimenti'
+        starwars_blocks_intro: 'Star Wars: Costruisci una galassia con il codice -
+          Introduzione'
+        starwars_blocks_events: 'Star Wars: Costruisci una galassia con il codice
+          - Eventi'
+        starwars_blocks_congrats: 'Star Wars: Costruisci una galassia con il codice
+          - Complimenti'
+        mc_intro: Minecraft - Introduction
+        mc_repeat: Minecraft - Repeat
+        mc_if_statements: Minecraft - If statements
+        mc_congrats_share: Minecraft - Congratulations
+        mc_congrats_no_share: Minecraft - Congratulations
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto
@@ -866,3 +930,13 @@
           evento.
         Infinity_repeat_callout: Aggiungi i blocchi "sposta" all'interno di questo
           blocco di ripetizione
+        craft_run_button_callout: Clicca su "Esegui" per provare il tuo programma
+        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
+          the other block
+        craft_callout_preplaced: We've put some blocks here to get you started
+        craft_inside_repeat: Repeat actions by placing blocks in here
+        craft_callout_preplaced_house: This code will start building your house. Can
+          you finish it?
+        craft_what_is_iron: Mine this iron!
+        craft_callout_moveforward: This code will check for lava, can you add a command
+          to move forward?

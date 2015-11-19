@@ -250,7 +250,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "turnRight":function(d){return "gira a destra"},
 "turnTooltip":function(d){return "Gira a sinistra o a destra di 90 gradi."},
 "whenBallInGoal":function(d){return "quando la palla va in rete"},
-"whenBallInGoalTooltip":function(d){return "Esegue le azioni qua sotto quando la palla va in rete."},
+"whenBallInGoalTooltip":function(d){return "Esegue le azioni attaccate a questo blocco quando la palla va in rete."},
 "whenBallMissesPaddle":function(d){return "quando la palla manca la racchetta"},
 "whenBallMissesPaddleTooltip":function(d){return "Esegue le azioni attaccate a questo blocco quando la palla manca la racchetta."},
 "whenDown":function(d){return "quando si preme sulla freccia verso il basso"},

@@ -822,7 +822,6 @@ Applab.init = function(config) {
   config.makeYourOwn = false;
 
   config.varsInGlobals = true;
-  config.noButtonsBelowOnMobileShare = true;
 
   config.dropletConfig = dropletConfig;
 
@@ -838,6 +837,11 @@ Applab.init = function(config) {
   config.mobileNoPaddingShareWidth = config.level.appWidth;
 
   config.enableShowLinesCount = false;
+
+  // In Applab, we want our embedded levels to look the same as regular levels,
+  // just without the editor
+  config.centerEmbedded = false;
+  config.wireframeShare = true;
 
   // Applab.initMinimal();
 
@@ -857,7 +861,7 @@ Applab.init = function(config) {
   if (config.embed || config.hideSource) {
     // no responsive styles active in embed or hideSource mode, so set sizes:
     viz.style.width = Applab.appWidth + 'px';
-    viz.style.height = Applab.appHeight + 'px';
+    viz.style.height = Applab.footerlessAppHeight + 'px';
     // Use offsetWidth of viz so we can include any possible border width:
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
@@ -1853,6 +1857,7 @@ Applab.getAssetDropdown = function (typeFilter) {
     }, typeFilter);
   };
   options.push({
+    text: 'Choose...',
     display: '<span class="chooseAssetDropdownOption">Choose...</a>',
     click: handleChooseClick
   });

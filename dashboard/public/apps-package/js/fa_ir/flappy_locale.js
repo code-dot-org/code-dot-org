@@ -157,7 +157,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "ادامه"},
 "doCode":function(d){return "انحام دادن"},
 "elseCode":function(d){return "وگرنه"},
-"endGame":function(d){return "بازی را تمام کن"},
+"endGame":function(d){return "پایان بازی"},
 "endGameTooltip":function(d){return "بازی را تمام می‌کند."},
 "finalLevel":function(d){return "تبریک میگم . معمای نهایی رو حل کردی ."},
 "flap":function(d){return "پریدن"},

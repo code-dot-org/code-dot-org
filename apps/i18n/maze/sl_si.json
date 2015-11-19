@@ -31,7 +31,7 @@
   "ifTooltip": "Če obstaja pot naprej v določeni smeri, potem naredi nekaj.",
   "ifelseTooltip": "Če obstaja pot naprej v določeni smeri, potem naredi prvi blok dejanj. V nasprotnem primeru, naredi drugi blok dejanj.",
   "ifFlowerTooltip": "Če v dani smeri obstaja roža satovje, potem izvedi dejanja.",
-  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions.",
+  "ifOnlyFlowerTooltip": "Če obstaja pot naprej v določeni smeri, potem ukrepaj.",
   "ifelseFlowerTooltip": "Če v dani smeri obstaja roža/satovje, potem izvedi prvi blok dejanj. Drugače izvedi drugi blok dejanj.",
   "insufficientHoney": "Uporabil si prave bloke, vendar moraš narediti pravo količino medu.",
   "insufficientNectar": "Uporabil si prave bloke, vendar moraš nabrati pravo količino nektarja.",
