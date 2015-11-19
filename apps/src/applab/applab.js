@@ -1857,6 +1857,7 @@ Applab.getAssetDropdown = function (typeFilter) {
     }, typeFilter);
   };
   options.push({
+    text: 'Choose...',
     display: '<span class="chooseAssetDropdownOption">Choose...</a>',
     click: handleChooseClick
   });
