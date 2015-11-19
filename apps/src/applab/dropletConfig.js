@@ -178,3 +178,9 @@ module.exports.categories = {
  * an 'Examples' link that opens documentation in a lightbox:
  */
 module.exports.showExamplesLink = true;
+
+/*
+ * Set the showParamDropdowns config value so that ace autocomplete dropdowns
+ * will appear for each parameter based on the dropdown properties above:
+ */
+module.exports.showParamDropdowns = true;

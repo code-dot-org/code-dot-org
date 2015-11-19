@@ -183,6 +183,26 @@ function loadGumball(skin, assetUrl) {
     [msg.projectileWaterball(), '"projectile_waterball"'],
     [msg.projectileRandom(), RANDOM_VALUE]];
 
+  skin.makeProjectileChoices = [
+    [msg.makeProjectileBanana(), '"projectile_banana"'],
+    [msg.makeProjectileDodgeball(), '"projectile_dodgeball"'],
+    [msg.makeProjectileDonkey(), '"projectile_donkey"'],
+    [msg.makeProjectileHandbag(), '"projectile_handbag"'],
+    [msg.makeProjectileHotdog(), '"projectile_hotdog"'],
+    [msg.makeProjectilePompom(), '"projectile_pompom"'],
+    [msg.makeProjectileToaster(), '"projectile_toaster"'],
+    [msg.makeProjectileWaterball(), '"projectile_waterball"']];
+
+  skin.whenProjectileCollidedChoices = [
+    [msg.whenSpriteCollidedWithProjectileBanana(), 'projectile_banana'],
+    [msg.whenSpriteCollidedWithProjectileDodgeball(), 'projectile_dodgeball'],
+    [msg.whenSpriteCollidedWithProjectileDonkey(), 'projectile_donkey'],
+    [msg.whenSpriteCollidedWithProjectileHandbag(), 'projectile_handbag'],
+    [msg.whenSpriteCollidedWithProjectileHotdog(), 'projectile_hotdog'],
+    [msg.whenSpriteCollidedWithProjectilePompom(), 'projectile_pompom'],
+    [msg.whenSpriteCollidedWithProjectileToaster(), 'projectile_toaster'],
+    [msg.whenSpriteCollidedWithProjectileWaterball(), 'projectile_waterball']];
+
   // TODO: Create actual item choices
   // NOTE: item names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
@@ -317,6 +337,20 @@ function loadIceAge(skin, assetUrl) {
     [msg.projectileIAProjectile4(), '"ia_projectile_4"'],
     [msg.projectileIAProjectile5(), '"ia_projectile_5"'],
     [msg.projectileRandom(), RANDOM_VALUE]];
+
+  skin.makeProjectileChoices = [
+    [msg.makeProjectileIAProjectile1(), '"ia_projectile_1"'],
+    [msg.makeProjectileIAProjectile2(), '"ia_projectile_2"'],
+    [msg.makeProjectileIAProjectile3(), '"ia_projectile_3"'],
+    [msg.makeProjectileIAProjectile4(), '"ia_projectile_4"'],
+    [msg.makeProjectileIAProjectile5(), '"ia_projectile_5"']];
+
+  skin.whenProjectileCollidedChoices = [
+    [msg.whenSpriteCollidedWithIAProjectile1(), 'ia_projectile_1'],
+    [msg.whenSpriteCollidedWithIAProjectile2(), 'ia_projectile_2'],
+    [msg.whenSpriteCollidedWithIAProjectile3(), 'ia_projectile_3'],
+    [msg.whenSpriteCollidedWithIAProjectile4(), 'ia_projectile_4'],
+    [msg.whenSpriteCollidedWithIAProjectile5(), 'ia_projectile_5']];
 
   // TODO: Create actual item choices
   // NOTE: item names must have double quotes inside single quotes
@@ -512,6 +546,15 @@ function loadHoc2015(skin, assetUrl) {
   skin.defaultBackground = 'endor';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
+
+  skin.instructions2ImageSubstitutions = {
+    "pufferpig": skin.assetUrl('instructions_pufferpig.png'),
+    "mynock": skin.assetUrl('instructions_mynock.png'),
+    "rebelpilot": skin.assetUrl('instructions_rebelpilot.png'),
+    "stormtrooper": skin.assetUrl('instructions_stormtrooper.png'),
+    "mousedroid": skin.assetUrl('instructions_mousedroid.png'),
+    "tauntaun": skin.assetUrl('instructions_tauntaun.png')
+  };
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
@@ -952,6 +995,13 @@ function loadHoc2015x(skin, assetUrl) {
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
+  skin.instructions2ImageSubstitutions = {
+    "bb8": skin.assetUrl('instructions_bb8.png'),
+    "hazard": skin.assetUrl('instructions_hazard.png'),
+    "scrapmetal1": skin.assetUrl('goal1.png'),
+    "scrapmetal2": skin.assetUrl('goal2.png'),
+  };
+
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
   skin.ProjectileClassNames = [
@@ -1297,6 +1347,22 @@ function loadStudio(skin, assetUrl) {
     [msg.projectilePurpleHearts(), '"purple_hearts"'],
     [msg.projectileRedHearts(), '"red_hearts"'],
     [msg.projectileRandom(), RANDOM_VALUE]];
+
+  skin.makeProjectileChoices = [
+    [msg.makeProjectileBlueFireball(), '"blue_fireball"'],
+    [msg.makeProjectilePurpleFireball(), '"purple_fireball"'],
+    [msg.makeProjectileRedFireball(), '"red_fireball"'],
+    [msg.makeProjectileYellowHearts(), '"yellow_hearts"'],
+    [msg.makeProjectilePurpleHearts(), '"purple_hearts"'],
+    [msg.makeProjectileRedHearts(), '"red_hearts"']];
+
+  skin.whenProjectileCollidedChoices = [
+    [msg.whenSpriteCollidedWithBlueFireball(), 'blue_fireball'],
+    [msg.whenSpriteCollidedWithPurpleFireball(), 'purple_fireball'],
+    [msg.whenSpriteCollidedWithRedFireball(), 'red_fireball'],
+    [msg.whenSpriteCollidedWithYellowHearts(), 'yellow_hearts'],
+    [msg.whenSpriteCollidedWithPurpleHearts(), 'purple_hearts'],
+    [msg.whenSpriteCollidedWithRedHearts(), 'red_hearts']];
 
   // TODO: Create actual item choices
   // NOTE: item names must have double quotes inside single quotes

@@ -5,10 +5,10 @@
   <div class='instructions-markdown<% if (locals.markdownClassicMargins) { -%> classic-margins<% } -%>'><%- locals.renderedMarkdown %></div>
 <% } else { -%>
   <% if (locals.instructions) { -%>
-    <p><%= locals.instructions %></p>
+    <p><%- locals.instructions %></p>
   <% } -%>
   <% if (locals.instructions2) { -%>
-    <p class="instructions2"><%= locals.instructions2 %></p>
+    <p class="instructions2"><%- locals.instructions2 %></p>
   <% } -%>
 <% } -%>
 <% if (locals.aniGifURL) { -%>

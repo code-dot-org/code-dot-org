@@ -2044,8 +2044,7 @@ Studio.reset = function(first) {
     softButtonCount++;
   }
   if (softButtonCount) {
-    var softButtonsCell = document.getElementById('soft-buttons');
-    softButtonsCell.className = 'soft-buttons-' + softButtonCount;
+    $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonCount);
   }
 
   // True if we should fail before execution, even if freeplay

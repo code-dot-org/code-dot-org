@@ -66,6 +66,10 @@ var TextAreaProperties = React.createClass({
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
         <BooleanPropertyRow
+          desc={'read only'}
+          initialValue={!element.isContentEditable}
+          handleChange={this.props.handleChange.bind(this, 'readonly')} />
+        <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')} />
@@ -136,12 +140,16 @@ module.exports = {
     element.style.color = '#000000';
     element.style.backgroundColor = '#ffffff';
 
+    $(element).addClass('textArea');
+
     this.onDeserialize(element);
 
     return element;
   },
 
   onDeserialize: function (element) {
+    $(element).addClass('textArea');
+
     $(element).on('mousedown', function (e) {
       if (!Applab.isRunning()) {
         // Disable clicking into text area unless running
