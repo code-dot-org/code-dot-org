@@ -306,9 +306,6 @@ designMode.updateProperty = function(element, name, value) {
     case 'cols':
       element.setAttribute('rows', value);
       break;
-    case 'readonly':
-      element.setAttribute('contenteditable', !value);
-      break;
     default:
       // Mark as unhandled, but give typeSpecificPropertyChange a chance to
       // handle it
