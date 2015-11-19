@@ -15,7 +15,7 @@ Please reference your Code.org Teacher Welcome Kit for program expectations, com
 
 ----------
 ## FAQs
-Still have questions? See below for answers to commonly asked questions or email [pd@code.org](pd@code.org).
+Still have questions? See below for answers to commonly asked questions or email [pd@code.org](pd@code.org). 
 <br/><br/>
 **Questions about in-person PD workshops:**<br/>
 
@@ -35,6 +35,14 @@ Still have questions? See below for answers to commonly asked questions or email
 - [What is the payment process?](#pay)
 - [What if my bank account changes?](#acct)	
 - [Are parking fees reimbursable?](#park)
+
+**Questions about your specific program:**<br/>
+
+- [I have a quesiton about Exploring Computer Science](#ecs)
+- [I have a question about Computer Science Principles](#csp)
+- [I have a question about CS in Algebra](#algebra)
+- [I have a question about CS in Science](#science)
+
 
 _________________________________
 
@@ -78,6 +86,10 @@ __________________________________
 *Middle school program timeline*
 
 ![Image 1](/images//fit-700/timeline-pd-faq2.png)
+<br/>
+<br/>
+[**Back to the top**](#top)
+<br/>
 __________________________________
 <a id="winter"></a>
 <br/>
@@ -94,6 +106,9 @@ ___________________________________________
 <br/>
 <br/>
 ### **When is my online PD due?**
+NOTE: CodeVA dates & deadlines for payments & online PD do not align to those listed on this FAQ.
+<br/>
+<br/>
 **Phase 1 and Phase 2 online PD** was due on September 7, 2015. Use [this tutorial](#complete) to make sure you completed both Phase 1 and Phase 2. 
 <br /><br/>
 **Phase 3 online PD** due dates vary by program (see below). Add these launch dates and due dates to your calendar to best coordinate your online professional development and classroom implementation. We recommend that you complete your online PD courses before you implement the respective curriculum. <br /><br />
@@ -128,9 +143,48 @@ Payments for Phase 3: Academic Year Development online PD will be pulled twice d
 ____________________________________
 <br/>
 <br/>
-<a id="pay"></a>
-### What is the payment process?
+<a id="progress"></a>
 
+### **How do I navigate my online PD? How do I check my progress?**
+
+#### Code Studio platform
+Your online PD courses live in [Code Studio](https://studio.code.org), our learning platform. You can always navigate to this page by clicking on the orange button in the top right corner and selecting "Code Studio" from the dropdown (see image 1). 
+<br/>
+<br/>
+*Image 1: Your course in Code Studio*
+
+![Image 1](/images//fit-700/online-pd-faq.png)
+<br/>
+<br/>
+#### Online PD courses in Code Studio
+Once you're in [Code Studio](https://studio.code.org), you'll see all your online PD courses (see image 1 above). Click on a course to view your progress page (see image 2). Pay attention to the name of the course you are completing!
+<br/>
+<br/>
+*Image 2: Your progress page in Code Studio*
+![Image 2](/images//fit-700/online-pd-faq2.png)
+<br/>
+<br/>
+[**Back to the top**](#top)
+<br/>
+<a id="complete"></a>
+
+### **I completed my online PD. Why does it still say I haven't finished?**
+Check that *every* circle in your progress page is green (see image 2 above). Make sure you’ve clicked the orange "Continue" button at the bottom of every level in your online PD (see image 3). 
+<br/>
+*Image 3: Importance of the Continue button*
+![Image 3](/images//fit-700/online-pd-faq3.png)
+<br/>
+<br/>
+[**Back to the top**](#top)
+<br/>
+___________________________
+<br/>
+<br/>
+<a id="pay"></a>
+### **What is the payment process?**
+NOTE: CodeVA dates & deadlines for payments & online PD do not align to those listed on this FAQ.
+<br/>
+<br/>
 **Teacher Payment Process**
 
 **Phase 1 and Phase 2**: Teachers will be paid their stipend at the completion of Phase 2: Blended Summer Study according to their district's payment policy.
@@ -173,11 +227,12 @@ Teachers being **paid directly by Code.org** can select from the following payme
 
 [**Back to the top**](#top)
 <br/>
+___________________
 <br/>
 <br/>
 
 <a id="acct"></a>
-### I need to update bank account information, where do I go?
+### **I need to update bank account information, where do I go?**
 
 If you need to edit your previously submitted information, please search for an email from hadi_partovi@code.org with the subject line "Thank you for your submission to Code.org." Click on the "Edit Submission" link. 
 
@@ -185,44 +240,72 @@ If you try to submit a second entry, you will receive an error message: "Sorry! 
 
 [**Back to the top**](#top)
 <br/>
+________________________
 <br/>
 <br/>
 <a id="park"></a>
-### Will Code.org reimburse me for parking fees?
+### **Will Code.org reimburse me for parking fees?**
 
-No, Code.org does not cover parking expenses and encourages participants to use public transit options in their city.
-
-[**Back to the top**](#top)
-<br/>
-<br/>
-<br/>
-<a id="progress"></a>
-
-### How do I navigate my online PD? How do I check my progress?
-
-Your Online PD courses live in Code Studio, our learning platform (see image 1 below). To get to this page, click on the orange button in the top right corner. Select Code Studio from the dropdown. Select your online PD course - that brings you to your progress page (see image 2). Pay attention to the name of the course you are completing!
+No, Code.org does not cover parking expenses and encourages participants to use public transit options in their city or carpool.
 
 [**Back to the top**](#top)
 <br/>
+___________________________
 <br/>
 <br/>
-<a id="complete"></a>
+<a id="ecs"></a>
 
-### I completed my online PD. Why does it still say I haven't finished?
-Make sure you’ve clicked the orange continue button at the bottom of every level in your online PD (see image 3). 
+## Exploring Computer Science FAQs
 
-<br/>
-*Image 1: Your course in Code Studio*
-
-![Image 1](/images//fit-700/online-pd-faq.png)
-
-<br/>
-*Image 2: Your progress page in Code Studio*
-![Image 2](/images//fit-700/online-pd-faq2.png)
-
-<br/>
-*Image 3: Importance of the Continue button*
-![Image 3](/images//fit-700/online-pd-faq3.png)
+### **Where can I find assessments for each unit?**
+Visit the [CS10k](https://cs10kcommunity.org/resource/ECSassessments) website for ECS Units 1 & 2 assessments. Code.org has created a [How-To Guide](http://forum.code.org/t/how-to-access-the-sri-ecs-assessments/2257) if you're having trouble accessing these assessments. 
 
 [**Back to the top**](#top)
 <br/>
+________________
+### **How do I download Scratch?**
+We've listed instructions on [what to download and how to download](http://eepurl.com/bEh8Aj) Scratch for Unit 4. You'll also see additional resources that you should use in implementing Unit 4! 
+
+[**Back to the top**](#top)
+<br/>
+___________________________
+<br/>
+<br/>
+<a id="csp"></a>
+
+## Computer Science Principles FAQs
+
+
+FAQs coming soon!
+
+[**Back to the top**](#top)
+<br/>
+___________________________
+<br/>
+<br/>
+<a id="algebra"></a>
+
+## Computer Science in Algebra FAQs
+
+### **I don't know which online PD course to complete for Phase 3.**
+Here's a summary of the online PD courses that appear in your Code Studio: <br/>
+
+|**Phase**|**Script(s)**|
+|:--------|:------------|
+
+
+
+
+[**Back to the top**](#top)
+<br/>
+___________________________
+<br/>
+<br/>
+<a id="science"></a>
+
+## Computer Science in Science FAQs
+
+
+[**Back to the top**](#top)
+<br/>
+___________________________
