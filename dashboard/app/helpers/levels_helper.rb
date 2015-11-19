@@ -313,7 +313,7 @@ module LevelsHelper
     unless params[:no_last_attempt]
       level_options[:lastAttempt] = @last_attempt
       if @last_activity
-        level_options[:lastAttemptTimestamp] = @last_activity.updated_at.to_datetime.strftime('%Q').to_i
+        level_options[:lastAttemptTimestamp] = @last_activity.updated_at.to_milliseconds
       end
     end
 
