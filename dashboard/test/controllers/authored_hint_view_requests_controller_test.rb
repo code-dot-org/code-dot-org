@@ -16,23 +16,21 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
   test 'can create multiple with a single post' do
     initial_count = AuthoredHintViewRequest.count
 
-    assert_creates(AuthoredHintViewRequest) do
-      post :create, {
-        hints: [{
-          script_id: @script.id,
-          level_id: @level.id,
-          hint_id: "first"
-        }, {
-          script_id: @script.id,
-          level_id: @level.id,
-          hint_id: "second"
-        }]
-      }, format: :json
-    end
+    post :create, {
+      hints: [{
+        script_id: @script.id,
+        level_id: @level.id,
+        hint_id: "first"
+      }, {
+        script_id: @script.id,
+        level_id: @level.id,
+        hint_id: "second"
+      }]
+    }, format: :json
 
     final_count = AuthoredHintViewRequest.count
 
-    assert_equal(final_count - initial_count, 2)
+    assert_equal(2, final_count - initial_count)
   end
 
 end

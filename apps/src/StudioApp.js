@@ -155,6 +155,9 @@ var StudioApp = function () {
   /**
    * @typedef {Object} AuthoredHint
    * @property {string} content
+   * @property {string} hintId
+   * @property {string} hintClass
+   * @property {string} hintType
    * @property {boolean} alreadySeen
    */
   /**
@@ -885,8 +888,8 @@ StudioApp.prototype.onReportComplete = function (response) {
     time: ((new Date().getTime()) - this.initTime),
     attempt: this.attempts,
     test_result: this.lastTestResult,
-    activity_id: response.activity_id,
-    level_source_id: response.level_source_id,
+    activity_id: response && response.activity_id,
+    level_source_id: response && response.level_source_id,
   });
 };
 
