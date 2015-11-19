@@ -18,6 +18,7 @@ module LevelsHelper
         script_id: script_level.script.name,
         stage_id: script_level.stage.position,
         locale: I18n.locale,
+        only_path: true,
       ) + ".html"
     end
   end

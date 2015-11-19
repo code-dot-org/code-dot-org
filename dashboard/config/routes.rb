@@ -134,7 +134,7 @@ Dashboard::Application.routes.draw do
 
   post 'level_assets/upload', to: 'level_assets#upload'
 
-  scope "/:locale" do
+  scope "/:locale", locale: 'en' do
     resources :scripts, path: '/s/', format: "html" do
       # /s/xxx/reset
       get 'reset', to: 'script_levels#reset'
