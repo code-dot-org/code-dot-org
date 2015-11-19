@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## readRecords(tableName, searchTerms, callbackFunction)
+## readRecords(table, terms, callback)
 
 [/name]
 
@@ -20,7 +20,7 @@ Category: Data
 
 [short_description]
 
-Using App Lab's table data storage, reads the records from the provided `tableName` that match the `searchTerms`. When the call is completed, the `callbackFunction` is called and is passed the array of records. Data is accessible to your app and users of your app.
+Using App Lab's table data storage, reads the records from the provided `table` that match the `terms`. When the call is completed, the `callback` function is called and is passed the array of records. Data is accessible to your app and users of your app.
 
 [/short_description]
 
@@ -34,7 +34,7 @@ ____________________________________________________
 
 [example]
 
-**Read all records from a table** After creating a record in the table, we can read all records back from the table and display the column values to the screen. To retrieve all records, an empty object is passed as the `searchTerms` parameter. Click 'View Data' in App Lab to see the stored data.
+**Read all records from a table** After creating a record in the table, we can read all records back from the table and display the column values to the screen. To retrieve all records, an empty object is passed as the `terms` parameter. Click 'View Data' in App Lab to see the stored data.
 
 
 ```
@@ -58,7 +58,7 @@ ____________________________________________________
 
 [example]
 
-**Search for records** Similar the example above, we can request a subset of records to be returned using the `searchTerms` parameter. `searchTerms` can be used to find exact matches on one or more columns of a record. Click 'View Data' in App Lab to see the stored data.
+**Search for records** Similar the example above, we can request a subset of records to be returned using the `terms` parameter. `terms` can be used to find exact matches on one or more columns of a record. Click 'View Data' in App Lab to see the stored data.
 
 
 ```
@@ -85,7 +85,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-readRecords(tableName, searchTerms, function(records){
+readRecords(table, terms, function(records){
     //callback function code goes here
   });
 ```
@@ -98,16 +98,16 @@ readRecords(tableName, searchTerms, function(records){
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| tableName | string | Yes | The name of the table from which the records should be searched and read. |
-| searchTerms | object | Yes | To read all records from a table, use the empty searchTerms object {}. To search for a particular set of records, use the object syntax to specify values for one or more column values to match. Examples: {id: 1}, {food:"avocado"}, {name:"Sally", food:"ravioli"}
-| callbackFunction | function | Yes | A function that is asynchronously called when the call to readRecords() is finished. An array of the matching records are passed as a single parameter to this function.|
+| table | string | Yes | The name of the table from which the records should be searched and read. |
+| terms | object | Yes | To read all records from a table, use the empty terms object {}. To search for a particular set of records, use the object syntax to specify values for one or more column values to match. Examples: {id: 1}, {food:"avocado"}, {name:"Sally", food:"ravioli"}
+| callback | function | Yes | A function that is asynchronously called when the call to readRecords() is finished. An array of the matching records are passed as a single parameter to this function.|
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. When `readRecords()` is finished executing, `callbackFunction` is automatically called.
+No return value. When `readRecords()` is finished executing, `callback` function is automatically called.
 
 [/returns]
 
