@@ -160,7 +160,7 @@
     "project_template_level_name": "U3L03 - drawDiamond Template",
     "droplet_tooltips_disabled": "true",
     "debugger_disabled": "true",
-    "lock_zero_param_functions": "false",
+    "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "true"
   }
 }]]></config>
