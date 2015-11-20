@@ -21,8 +21,9 @@ Even after creating functions with parameters there are still instances when our
 * Use loops in conjunction with Top-Down Design and random values to complete a digital scene.
 
 # Resources
+* Tutorial video: Loops
 
-- Loops Video (embedded in next level)
+<iframe width="320" height="180" src="https://www.youtube.com/embed/G8hfAk4PfOM?rel=0" frameborder="0" allowfullscreen></iframe>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

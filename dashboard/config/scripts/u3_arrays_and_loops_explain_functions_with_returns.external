@@ -39,11 +39,13 @@ It is possible to make your program return at any point using the `return` comma
 
 Most of the time we want every line of our functions to run, and so we wouldn't write functions with commands after a return statement. If we were ever going to use `return` it would have been as the last line in our functions, and since reaching the closing curly brace will automatically do the same thing as a `return` command, there's been no reason to use it at all.
 
+
+
 # Returning Values
 
-There is one critical difference between reaching the last line of your function and calling `return`. **When you call `return` you are able to specify a single value that will replace the function where it was called in the code.** Just like `randomNumber` is replaced by a randomly generated number and `getText` is replaced by the text of one of your UI elements, when your function returns from executing it will be replaced by whatever value you select. This is how your functions can generate output that other parts of your program can use.
+There is one critical difference between reaching the last line of your function and using `return`. When you use `return` you are also able to **specify a single value** that will be "returned" to whatever code called the function in the first place.  The effect is that the function acts like any expression that evaluates to a single value.  You can think of it as the though the value simply replaces the function where it was called in the code.
 
-This example shows a single function that accepts a number as input, multiplies it by two, and then uses `return` to provide the result back to the calling location. We can then use our function to calculate the double of any number we wish.
+Just like `randomNumber` is replaced by a randomly generated number and `getText` is replaced by the text of one of your UI elements.  When your function is done executing it will be replaced by whatever value you return. This is how your functions can generate output that other parts of your program can use.
 
 ![](https://images.code.org/932db65300a4117b7e1b92fd07283884-image-1447732356725.50.34 PM.png)
 
