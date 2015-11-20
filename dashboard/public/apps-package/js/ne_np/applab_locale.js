@@ -514,7 +514,7 @@ s:function(d,k,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "numBlocksNeeded":function(d){return "This puzzle can be solved with %1 blocks."},
 "pause":function(d){return "Break"},
 "privacyPolicy":function(d){return "Privacy Policy"},
-"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
+"reinfFeedbackMsg":function(d){return "You're finished! Click \"Continue\" to move on to the next level."},
 "repeatForever":function(d){return "repeat forever"},
 "repeatDo":function(d){return "do"},
 "repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
@@ -524,5 +524,6 @@ s:function(d,k,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "Step in"},
 "stepOver":function(d){return "Step over"},
 "stepOut":function(d){return "Step out"},
+"tryAgainText":function(d){return "Keep working"},
 "viewData":function(d){return "View Data"},
 "yes":function(d){return "Yes"}};

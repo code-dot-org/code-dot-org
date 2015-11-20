@@ -797,7 +797,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenGetAllCharacters":function(d){return "when get all characters"},
 "whenGetAllCharactersTooltip":function(d){return "Execute the actions below when the droid gets all the characters."},
 "whenGetAllCharacterPufferPig":function(d){return "when get all Puffer Pigs"},
-"whenGetAllCharacterStormtrooper":function(d){return "when get all Puffer Pigs"},
+"whenGetAllCharacterStormtrooper":function(d){return "when get all Stormtroopers"},
 "whenGetAllCharacterTauntaun":function(d){return "when get all Tauntauns"},
 "whenGetAllCharacterMynock":function(d){return "when get all Mynocks"},
 "whenGetAllCharacterProbot":function(d){return "when get all Probots"},
