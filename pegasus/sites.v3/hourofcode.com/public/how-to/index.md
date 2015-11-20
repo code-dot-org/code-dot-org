@@ -28,7 +28,8 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 
 
-[<img src="/images/fit-700/tutorials.png">](<%= resolve_url('https://code.org/learn') %>)
+[<img src="/images/fill-300/mc-1.jpg">](<%= resolve_url('https://code.org/learn') %>)
+[<img src="/images/fill-300/starwars_carousel.jpg">](<%= resolve_url('https://code.org/learn') %>)
 
 ## 4) Plan your technology needs - computers are optional
 

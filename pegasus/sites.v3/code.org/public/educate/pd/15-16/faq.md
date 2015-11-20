@@ -38,7 +38,7 @@ Still have questions? See below for answers to commonly asked questions or email
 
 **Questions about your specific program:**<br/>
 
-- [I have a quesiton about Exploring Computer Science](#ecs)
+- [I have a question about Exploring Computer Science](#ecs)
 - [I have a question about Computer Science Principles](#csp)
 - [I have a question about CS in Algebra](#algebra)
 - [I have a question about CS in Science](#science)
@@ -119,7 +119,7 @@ Payments for Phase 3: Academic Year Development online PD will be pulled twice d
 
 |  **Exploring Computer Science** | 
 | :---------- | 
-| **Due**:<br />• All units are due before your Phase 4: Summer Wrap-up, and no later than June 30th. <br />**Launches:**<br />• Unit 2: October 6th<br />• Units 3 & 4: November 3rd<br />• Unit 5: February 2nd<br />• Unit 6: March 1st|
+| **Due**:<br />• All units are due before your Phase 4: Summer Wrap-up, and no later than June 30th. <br />**Launches:**<br />• Unit 2: October 6th<br />• Units 3 & 4: November 3rd<br />• Unit 5: Early February<br />• Unit 6: Early March|
 
 | **CS Principles** | 
 |:---------- |
