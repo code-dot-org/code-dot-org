@@ -135,7 +135,7 @@ Dashboard::Application.routes.draw do
   post 'level_assets/upload', to: 'level_assets#upload'
 
   scope "/:locale", locale: 'en' do
-    resources :scripts, path: '/s/', format: "html" do
+    resources :scripts, path: '', format: "html" do
       # /s/xxx/reset
       get 'reset', to: 'script_levels#reset'
       get 'next', to: 'script_levels#next'
@@ -148,9 +148,9 @@ Dashboard::Application.routes.draw do
       get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: "html"
 
       # /s/xxx/stage/yyy/puzzle/zzz
-      resources :stages, only: [], path: "/stage", format: "html" do
-        resources :script_levels, only: [:show], path: "/puzzle", format: "html"
-      end
+      #resources :stages, only: [], path: "/stage", format: "html" do
+        resources :script_levels, only: [:show], path: "", format: "html", stage_id: 1
+      #end
     end
   end
   get '/beta', to: redirect('/')
