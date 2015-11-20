@@ -34,6 +34,7 @@ module LevelsHelper
       data = storage_app.get(src)
       data['name'] = "Remix: #{data['name']}"
       data['hidden'] = false
+      data['frozen'] = false
     end
 
     timestamp = Time.now

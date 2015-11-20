@@ -53,9 +53,9 @@ Please email pd@code.org *and* your district contact with the workshop date and 
 Unfortunately, you can't make up the workshop. Here are some recommendations for how you can connect with a colleague to catch up on important concepts:<br/> 
 1) Locally: Connect with a colleague from your local cohort<br/>
 2) Virtually: Connect to your nationwide network of CS teachers through your program's forum: <br/>
-[CS Principles](forum.code.org/c/csp) | 
-[ECS](forum.code.org/c/ecs) | 
-[CS in Algebra](forum.code.org/c/cs-in-algebra) | [CS in Science](forum.code.org/c/cs-in-science)
+[CS Principles](https://forum.code.org/c/csp) | 
+[ECS](https://forum.code.org/c/ecs) | 
+[CS in Algebra](https://forum.code.org/c/cs-in-algebra) | [CS in Science](https://forum.code.org/c/cs-in-science)
 <br/>
 
 
@@ -251,11 +251,13 @@ No, Code.org does not cover parking expenses and encourages participants to use 
 [**Back to the top**](#top)
 <br/>
 ___________________________
-<br/>
-<br/>
 <a id="ecs"></a>
+<br/>
+<br/>
 
 ## Exploring Computer Science FAQs
+
+**PD Updates Archive:** [October](http://us9.campaign-archive1.com/?u=dc783682a08c5eb6dfe447070&id=755330c1ae) | [November](http://eepurl.com/bEh8Aj)
 
 ### **Where can I find assessments for each unit?**
 Visit the [CS10k](https://cs10kcommunity.org/resource/ECSassessments) website for ECS Units 1 & 2 assessments. Code.org has created a [How-To Guide](http://forum.code.org/t/how-to-access-the-sri-ecs-assessments/2257) if you're having trouble accessing these assessments. 
@@ -269,9 +271,9 @@ We've listed instructions on [what to download and how to download](http://eepur
 [**Back to the top**](#top)
 <br/>
 ___________________________
-<br/>
-<br/>
 <a id="csp"></a>
+<br/>
+<br/>
 
 ## Computer Science Principles FAQs
 
@@ -281,31 +283,65 @@ FAQs coming soon!
 [**Back to the top**](#top)
 <br/>
 ___________________________
-<br/>
-<br/>
 <a id="algebra"></a>
+<br/>
+<br/>
 
 ## Computer Science in Algebra FAQs
+
+**PD Updates Archive:** [October](http://us9.campaign-archive1.com/?u=dc783682a08c5eb6dfe447070&id=9fa9381980) | [November](http://us9.campaign-archive1.com/?u=dc783682a08c5eb6dfe447070&id=28d75fcb44)
 
 ### **I don't know which online PD course to complete for Phase 3.**
 Here's a summary of the online PD courses that appear in your Code Studio: <br/>
 
-|**Phase**|**Script(s)**|
+|**Phase**|**Course Name(s)**|
 |:--------|:------------|
-
+|**Phase 1**|**Computer Science in Algebra** <br/>*Phase 1: Online Introduction*|
+|**Phase 2**|**Computer Science in Algebra PD Phase 2** <br/>*Phase 2 Online: Blended Summer Study*|
+|**Student Learning**|**Computer Science in Algebra**<br/>*Learn Functional Programming through Algebra* <br/>Note: this is not part of your PD. This course is what your students complete in your classroom. You will not be paid for your progress in this course. |
+|**Phase 3**|**Computer Science in Algebra PD** (complete before Phase 3 workshop)<br/>*Phase 3 (Part 1): CS in Algbera blended online school year study*<br/>**Computer Science in Algebra PD** (complete before implementation)<br/>*Phase 3 (Part 2): CS in Algebra mid year lesson support*<br/>**Computer Science in Algebra PD** (launches in May 2016) <br/>*Phase 3 (Part 3): CS in Algebra Reflection*
 
 
 
 [**Back to the top**](#top)
 <br/>
 ___________________________
-<br/>
-<br/>
 <a id="science"></a>
+<br/>
+<br/>
 
 ## Computer Science in Science FAQs
 
+**PD Updates Archive:** [October](http://us9.campaign-archive1.com/?u=dc783682a08c5eb6dfe447070&id=55391a06c1) | [November](http://us9.campaign-archive2.com/?u=dc783682a08c5eb6dfe447070&id=579295973d)
+
+### **How do I set up student accounts on StarLogo Nova?**
+There are 4 options for setting up student accounts on StarLogo Nova. <br/>
+
+**CASE 1: Your school does not allow students to have their own logins and passwords.**
+<br/>
+<br/>
+In this case, you, as the teacher, can create a class account and have all of your students login to that account.  For example, you'd create a login for your 4th period Integrated Science course called “Integ.Sci.period4.” When saving project files, ask students to include their names in the project file such as “Danny and Emma’s ecosystem model - IntegSciPeriod4.”  As a teacher, you can review all of the student projects in this account. A side effect to be aware of is that all students will be able to see and modify each others work.
+<br/>
+<br/>
+**CASE 2: Students create their own accounts using school issued ID number.**
+<br/>
+<br/>
+On the first day of class (to use the Project GUTS Code.org modules with StarLogo TNG), have your students create logins and passwords on slnova.org.  Their logins can be their first and last names and their passwords can be their school issued ID number.
+<br/>
+<br/>
+**CASE 3: Students create their own accounts with their own passwords.**
+<br/>
+<br/>
+- Make note of login and password for students (they may lose or forget them)<br/>
+- Students need to make their project public and add the teacher as a collaborator
+<br/>
+<br/>
+**CASE 4: Teacher makes accounts for students using teacher issued password.**
 
 [**Back to the top**](#top)
 <br/>
 ___________________________
+<br/>
+### **StarLogo Nova is loading slowly. Who do I inform?**
+
+The Project GUTS team is seeing huge spikes on StarLogo Nova. Irene and the team are addressing the load issue. If you’re experiencing slowdowns on StarLogo Nova, please let the Project GUTS team know ASAP by emailing [info@projectguts.org](info@projectguts.org).
