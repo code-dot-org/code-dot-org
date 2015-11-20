@@ -140,7 +140,7 @@ social:
                     </div>
                   </div></div><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.rgda.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/2014/10/RGDA-new-logo-337x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.rgda.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/RGDA-new-logo-337x160.png"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
