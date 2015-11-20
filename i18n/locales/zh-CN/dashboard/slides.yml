@@ -1362,7 +1362,7 @@ zh:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: 嗨，我是凯瑟琳 · 肯尼迪，我是《星球大战：原力觉醒》的制作人。今天你将与我们的明星之一--BB-8--合作。BB-8 是一个球形的机器人。他所做的一切和每一个动作都由计算机软件控制。计算机影响着每一个行业，从市场营销到生理健康再到电影。事实上，一部像《原力觉醒》一样的电影需要数以百计的电脑工程师一起工作才能完成。
       2:
         image: notes/starwars_intro_2.JPG
         text: "Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artists develop rigs which are the parts of the character that move that allow the character to look very believable in a galaxy far far away."

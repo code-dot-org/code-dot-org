@@ -504,11 +504,11 @@ el:
         starwars_blocks_intro: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν γαλαξία με Κώδικα - Εισαγωγή'
         starwars_blocks_events: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα - Γεγονότα'
         starwars_blocks_congrats: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα - Συγχαρητήρια'
-        mc_intro: 'Minecraft - Introduction'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        mc_intro: 'Minecraft - Εισαγωγή'
+        mc_repeat: 'Minecraft - Επανάληψη'
+        mc_if_statements: 'Minecraft - Δηλώσεις Αν'
+        mc_congrats_share: 'Minecraft - Συγχαρητήρια'
+        mc_congrats_no_share: 'Minecraft - Συγχαρητήρια'
     callout:
       text:
         drag_blocks: |-
@@ -583,10 +583,10 @@ el:
         Infinity_move_directions_callout_arrow: Χρησιμοποιήστε αυτά τα βελάκια για να το κατευθύνετε
         Infinity_move_collide_callout: Παίξε έναν ήχο όταν συμβαίνει αυτό το γεγονός.
         Infinity_repeat_callout: Τοποθετήστε τα μπλοκ μετακίνησης εδώ μέσα
-        craft_run_button_callout: 'Πάτα "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά σου'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_run_button_callout: 'Πάτησε "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά σου'
+        craft_drag_block_callout: 'Σύρε ένα μπλοκ "moveForward();" (προχώρησε μπροστά) και κόλλησέ το κάτο από τα άλλα μπλοκ'
+        craft_callout_preplaced: Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις
+        craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
+        craft_callout_preplaced_house: Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι σου. Μπορείς να τον ολοκληρώσεις;
+        craft_what_is_iron: Εξόρυξε αυτόν τον σίδηρο!
+        craft_callout_moveforward: Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να προσθέσεις μία εντολή για να προχωρήσεις μπροστά;

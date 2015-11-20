@@ -411,10 +411,10 @@ nn:
         text: Ei hending er ei handling som gjer at noko skjer. Det er som når du klikkar på museknappen og ei webside lastas opp. Det er ei hending. Når du tar på skjermen på et nettbrett for å bla nedover, er det og ei hending. Hendingar kan brukast for å la brukaren styre programmet ditt når dei vil.
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: 'I hverdagen skjer det ting som gjør at vi handler. Vi er sultne og går til kjøleskapet. Vi hører at postmannen kommer og legger post i postkassen, og så går vi og henter posten.  Dette er akkurat som handlingene der man trykker på en knapp eller bruker en joystick. Dette er noe som skjer som får oss til å gjøre noe annet.'
+        text: Nokre hendingar får oss til å reagere. Vi blir svoltne og går til kjøleskapet. Det ringer på døra og vi går for å opne. Slike reaksjonar er akkurat som å trykke på ein knapp, ei hending får fram ein gitt reaksjon.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: 'I dataspill finnes det en handling kalt "Oppdater" og det skjer 30 eller 60 ganger i sekundet. For dataspillprogrammerere er denne handlingen nesten viktigere enn knappene eller joysticken.'
+        text: 'I dataspel er det ei handling som heiter "Update". Denne blir utført 30 eller 60 gongar i sekundet. For dataspelprogrammerarar er denne handlinga nesten viktigare enn ei tastetrykkhandling eller ei styrespakrørsle.'
       6:
         image: notes/C1_bigevent_unplugged_6.png
         text: 'Den viktigste hendelsen vi følger med på er "Oppdater". Når dette skjer, sjekker vi joysticken. Så vi sier, "Oj, har noen trykket på knappen siden forrige gang vi sjekket? Ja eller nei?" Uten hendelser kan ikke spilleren flytte på seg eller hoppe, og du vil ikke klare å kontrollere det som skjer. Dataspillet ville ikke kunne bevege noen ting.'
@@ -636,20 +636,19 @@ nn:
     C2_conditionals_with_cards:
       1:
         image: notes/C2_conditionals_with_cards_1.png
-        text: This lesson is called conditionals with cards. Every day you make decisions based on what you see and hear.
+        text: Denne økten heter betingelser med kort. Hver dag tar du avgjørelser basert på hva du ser og hører.
       2:
         image: notes/C2_conditionals_with_cards_2.png
         text: Jeg vil gå til parken, men først må jeg bestemme om jeg skal ta med paraply eller ikke. Så ser jeg ut av vinduet. Hvis det er overskyet, tar jeg med meg paraplyen. Hvis ikke, tar jeg med meg solbriller. Jeg tror jeg heller tar paraplyen. Det jeg ser og hører bestemmer hva jeg tar med til parken.
       3:
         image: notes/C2_conditionals_with_cards_3.png
-        text: |-
-          Conditionals are used in games too. Today we're going to practice using conditionals with a card game. In this game, the card that I draw determines what my friends are going to do. If I draw a seven, everyone claps. Else, everyone says "awww." Let's try it! "Awww" "cheers"
+        text: 'Betingelser brukes i spill også. I dag skal vi øve oss på å bruke betingelser i et kortspill. I dette spiller bestemmer kortet jeg trekker hva vennene mine skal gjøre. Hvis jeg trekker syv skal alle klappe. Hvis ikke skal alle si "awww". La oss prøve det!'
       4:
         image: notes/C2_conditionals_with_cards_4.png
-        text: I bet you can make up games that are even more fun with conditionals. Give it a try! Conditionals are what make computers seem smart. A computer program that includes conditionals can react to the user and change its course of action.
+        text: I vedder på at du kan lage spill som er enda artigere med betingelser. Prøv det! Betingelser er det som gjør at datamaskiner virker smart. Et dataprogram som har betingelser kan gjøre forskjellige ting ut fra hva brukeren gjør.
       5:
         image: notes/C2_conditionals_with_cards_5.png
-        text: "Think about your favorite video game. Do you earn more points for some actions than you do for others? This occurs because the computer is using conditionals. It's the way a computer makes a decision. How about, if you hit the target, you earn ten points. Else, you lose three. When you know how conditionals work, you can create all kinds of exciting games."
+        text: Tenk på ditt favorittspill. Hender det at du får flere poeng for når du gjør spesielle ting? Dette er fordi datamaskinen bruker betingelser. Betingelser er måten datamaskinen tar avgjørelser. Hva med at hvis du treffer målet får du ti poeng. Hvis ikke mister du tre. Når du vet hvordan betingelser fungerer kan du lage all slags spennende spill.
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
@@ -666,10 +665,10 @@ nn:
         text: Har du noen gang hørt om å feilsøke i et program? Det er måten du finner ut hva som ikke fungerer. Når du feilsøker koden, kan du finne og fjerne feil.
       2:
         image: notes/C2_bee_debugging_2.png
-        text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
+        text: Her har vi allerede fått noen blokker. Vi skal bruke steg-knappen for å gå gjennom blokkene steg for steg for å se om dette er riktig løsning, eller hvor vi trenger å gjøre endringer.
       3:
         image: notes/C2_bee_debugging_3.png
-        text: "Looks like there's our problem! We need one more move forward block. The step button helps us debug our problem by identifying where the error is so we can fix it."
+        text: Ser ut som det er et problem! Vi trenger én ekstra gå fremover-blokk. Steg-knappen hjelper oss å feilsøke problemet ved å vise hvor feilen er slik at vi kan fikse den.
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
@@ -692,52 +691,50 @@ nn:
     C2_digital_footprint_v2:
       1:
         image: notes/C2_digital_footprint_v2_1.png
-        text: Everytime you go online, you leave a footprint that can be searched, copied, shared, broadcast and is permanent. What kind of digital footprint are you leaving? What kind of digital footprint do you want to leave?
+        text: Hver gang du går online legger du igjen et fotavtrykk som kan søkes fram, kopieres, deles, spres og som er permanent. Hva slags digitalt fotavtrykk legger du igjen? Hva slags digitalt fotavtrykk ønsker du å legge igjen?
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
-        text: |-
-          This lesson is called "Graph Paper Programming" and it's all about algorithms. Today we're going to learn how to write programs that show each other how to recreate simple black and white images, using only hand drawn arrows.
+        text: 'Denne leksjonen kalles "rutepapirprogrammering", og det handler om algoritmer. I dag skal vi lære hvordan man skriver programmer sm viser hverandre hvordan man gjenskaper enkle svart-hvitt-bilder, bare ved å bruke håndtegnede piler.'
       2:
         image: notes/C2_graph_paper_2.png
-        text: "An algorithm is a list of instructions for completing a task. We'll follow this set of instructions to make the bowl. Algorithms are really helpful when you need someone else to understand how to do something."
+        text: En algoritme er en liste med instruksjoner for å gjennomføre en oppgave. Vi kommer til å følge dette settet med instruksjoner for å lage bollen. Algoritmer er skikkelig nyttige når du trenger å vise noen andre hvordan de skal gjøre noe.
       3:
         image: notes/C2_graph_paper_3.png
-        text: "If you're writing an algorithm for a computer, you have to break it down to little tiny steps. So finish this row and go to the next, then the next one, and you'll be done."
+        text: Hvis du skriver en algoritme for en datamaskin må du bryte det ned i bittesmå skritt. Så gjør ferdig denne raden og gå til den neste, så den neste, og så er du ferdig.
       4:
         image: notes/C2_graph_paper_4.png
-        text: I use algorithms in my work. If I write down all of the steps I can recreate that same piece again, or I can teach someone else to do it. Put the glass in the kiln, fuse it together, follow the rest of the instructions to make the bowl. Algorithms give you a road map for getting something done.
+        text: Jeg bruker algoritmer i jobben min. Hvis jeg skriver ned alle skrittene kan jeg gjenskape den samme tingen på nytt, eller jeg kan lære noen andre å gjøre det. Legg glasset i ovnen, smelt det sammen, følg resten av instruksjonene for å lage bollen. Algoritmer gir deg et kart for å gjøre noe.
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
-        text: Here we are going to use the repeat block to help us save steps when we are programming our artist. We already have some blocks out on our stage but they are just there to get us started.
+        text: Nå skal vi bruke gjentablokken for å hjelpe oss med å redusere antall trinn vi trenger å programmere. Vi har allerede noen blokker klare, men de er bare der for å hjelpe oss i gang.
       2:
         image: notes/C2_artist_loops_2.png
-        text: To loop those blocks four times to draw the whole square, we just drag out the repeat block and put the moveforward and turn right blocks inside the repeat block. When we hit run, the artist will repeat those steps four times to complete the square.
+        text: 'For å kunne gjenta handlingen fire ganger og dermed tegne hele kvadratet, kan vi dra ut en gjentablokk og putte en "gå fremover" og en "snu mot høyre" inne i den. Når vi trykker "kjør", vil kunstneren gjenta de skrittene fire ganger og fullføre kvadratet.'
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
-        text: "A loop is a repetition of activity. Going into a hive to inspect, I look at a frame, and then I put it back. I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
+        text: En løkke er en repeterende handling. Jeg åpner en bikube for å inspisere den, jeg ser på rammen og så setter jeg den tilbake. Dette gjør jeg flere ganger. Det går i løkke, gjentar den samme handlingen flere ganger.
       2:
         image: notes/C2_bee_loops_2.png
-        text: "This is the repeat block. Whatever you put inside the repeat block will repeat those actions the number of times that you tell it to. For example, in this level, rather than drag out move forward and get nectar three times, we're going to just drag them out once each and repeat the action three times. That made it easy!"
+        text: Dette er en gjenta blokk. Det du putter inne i den vil repeteres det antall ganger som du ber den om. For eksempel, på dette nivået, i stedet for å dra ut gå fremover og få nektar tre ganger, kan vi hente dem en gang hver og repetere handlingene tre ganger. Da ble det lett!
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
-        text: "Usually programming is all in text but we'll use Blockly which uses visual blocks that you drag and drop to write programs. Under the hood, you're still creating code. To start off, we're going to build code for a program that will help this Angry Bird move through a maze to get to the evil pigs that stole its eggs."
+        text: Vanligvis bruker vi tekst når vi programmerer, men nå skal vi bruke Blockly, hvor du drar og slipper blokker for å skrive et program. Under overflaten lager du fremdeles koder. Først skal vi bygge en kode for å lage et program som vil hjelpe Angry Bird med å gå gjennom labyrinten og komme fram til grisene som har stjålet eggene.
       2:
         image: notes/C2_maze_intro_2.png
-        text: "Blockly is split into three main parts. On the left is the bird's maze, where your program will run. The instructions for each level are written below the maze. This middle area is the toolbox and each of these blocks is a command that the bird can understand. The white space on the right is called the workspace and this is where we'll build our program."
+        text: Blockly er delt i tre hoveddeler. Til venstre er labyrinten hvor programmet vil kjøre. Instruksjonene for hvert nivå står under labyrinten. På midten er verktøykassen. Hver av disse blokkene er kommandoer som fuglen kan forstå. Det hvite feltet til høyre kalles arbeidsområdet, og det er her vi skal bygge programmet vårt.
       3:
         image: notes/C2_maze_intro_3.png
-        text: 'If I drag the move block to our work space and press "Run", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program.'
+        text: 'Hva skjer hvis jeg drar "gå fremover"-blokken til arbeidsområdet og trykker "kjør"? Fuglen beveger seg en boks fremover i koordinatsystemet. Hva hvis jeg vil at fuglen skal gjøre noe annet etterpå? Da legger jeg til en blokk til i programmet vårt.'
       4:
         image: notes/C2_maze_intro_4.png
-        text: |-
-          I'm going to choose the "turn right" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press "Run" again,  the bird will perform the commands that are stacked from top to bottom on our work space.
+        text: 'Jeg skal velge en "snu mot høyre"-blokk og jeg drar den under "gå fremover"-blokken, til det dukker opp en gul pil. Da slipper jeg den og de to blokkene vil feste seg sammen. Når jeg trykker på "kjør" igjen, vil fuglen gjøre kommandoene som er stablet i arbeidsområdet fra toppen og nedover.'
       5:
         image: notes/C2_maze_intro_5.png
-        text: "If you ever want to delete a block, just remove it from the stack and drag it to the trash can. After you've hit run, you can always hit the reset button to get the bird back to the start. Now let's get those pigs!"
+        text: 'Hvis du vil slette en blokk, kan du dra den vekk fra stablen og dra den til søppelkassen. Etter at du trykker "kjør", kan du alltid velge "nullstill" for å få fuglen tilbake til start. La oss fange grisene!'
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
@@ -750,7 +747,7 @@ nn:
         text: "You'll create your algorithm by first cutting apart the pictures. Next, you'll select the 6 pictures that show the steps needed to make a paper airplane and arrange those pictures in the correct order. After you have everything in order, you will trade algorithms with another student team to test out the algorithm to see if the algorithm works. A well designed algorithm is super important to making the best paper airplane."
       4:
         image: notes/C2_paper_airplanes_4.png
-        text: "When we want to make chocolate, there are many big steps to that process. And each of those big steps has its own set of smaller steps. And there are different recipes, or algorithms, depending on how we want the chocolate to taste. Each step is important, even the small ones. So without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down, so no matter who does it, the result is the same."
+        text: Når vi skal lage sjokolade er det mange store skritt i prosessen. Og hvert av disse store skrittene består av flere små skritt. Og det er ulike oppskrifter, eller algoritmer, avhengig av hvordan vi vil at sjokoladen skal smak. Hvert skritt er viktig, også de små. Så hvis et skritt mangler kan ikke de andre gjøres ferdige. Å lage algoritmer som andre kan forstå er veldig viktig. Det er derfor hvert skritt må skrives ned, så resultatet blir det sammen uansett hvem som gjør det.
     C2_playlab_createastory:
       1:
         image: notes/C2_playlab_createastory_1.png
@@ -761,30 +758,29 @@ nn:
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
-        text: "Today we're going to do relay programming. It's all about programming under pressure and debugging the mistakes that sometimes happen when you work really quickly or in teams. We'll use graph paper programming to simulate coding, and use relay races to simulate having a deadline."
+        text: I dag skal vi gjøre stafettprogrammering. Det dreier seg om programmering under press, og å debugge feilene som noen ganger kommer når du jobber veldig fort eller i lag. Vi skal bruke rutepapirprogrammering for å simulere koding, og bruke en stafettkonkurranse for å simulere å ha en frist.
       2:
         image: notes/C2_relay_programming_2.png
-        text: "In relay programming, teams will be racing to finish a graph paper program. You have to check your teammate's work, or debug it, fix it if there's a mistake, add your arrow, and run back and tag your teammate."
+        text: I stafettprogrammering vil lag konkurrere om å gjøre ferdig et rutepapirprogram. Du må sjekke arbeidet til lagkompisen din, eller debugge det, rette det hvis det er en feil, legge til pilen din og løpe tilbake og veksle med lagkameraten din.
       3:
         image: notes/C2_relay_programming_3.png
-        text: Programmers use debugging a lot to find and fix problems in their algorithms or code. There are lots of ways to debug problems. One of the easiest is to move step by step until you find where something goes wrong, then fix it.
+        text: Programmerere bruker mye debugging for å finne og rette problemer i algoritmene og koden sin. Det er mange måter å debugge på. En av de enkleste er å gå trinnvis gjennom programmet til du finner ut hvor noe går galt, og så rette det.
       4:
         image: notes/C2_relay_programming_4.png
-        text: "Here, I'm trying to do a back handspring, but I keep falling off. I walk through each part, step by step, and realize where my mistake was. My coach showed me I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position, and I stuck it! I was really glad I debugged my back  handspring. We figured it out! Debugging is finding and fixing problems. Nice, good job!"
+        text: Her forsøker jeg å gjøre en flikkflakk, men jeg faller hele tiden ned. Jeg går gjennom hver del, skritt for skritt, og innser hvor feilen min var. Treneren viste meg at jeg ikke satte hendene mine riktig på bommen. Så jeg prøvde enda en flikkflakk på bommen med den nye håndposisjonen min, og jeg klarte det! Jeg var virkelig glad jeg debugget flikkflakken min. Vi skjønte det! Debugging er å finne og fikse problemer. Bra, godt jobbet!
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
-        text: "One thing that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots of times in a row. But a computer can do the same thing millions or even billions of times, and not get bored and be able to carry that out really well."
+        text: En ting datamaskiner er skikkelig gode til er å gjenta kommandoer. Siden du er et menneske ville du kjedet deg veldig hvis du måtte gjøre den samme tingen mange ganger på rad. Men en datamaskin kan gjøre den samme tingen millioner eller til og med milliarder ganger, uten å kjede seg, og kan gjøre det ordentlig bra.
       2:
         image: notes/C2_zuck_repeat_loop_2.png
-        text: "So for example if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than a century to actually write out all of those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday. So that's what loops are, and why they're valuable, and something that computers can do very well."
+        text: Så hvis jeg for eksempel ønsket å gratulere alle på Facebook med bursdagen ved å sende dem en epost ville det tatt med mer enn hundre år å faktisk skrive alle disse epostene til alle sammen. Men bare med noen få linjer kode kan jeg la et datasystem sende en epost til alle på Facebook for å gratulere dem med bursdagen. Så det er hva løkker er, og grunnen til at de er verdifulle, og noe datamaskiner er veldig gode til.
       3:
         image: notes/C2_zuck_repeat_loop_3.png
-        text: |-
-          In this example your goal is going to be to move the bird to get the pig.  Now we're gonna be able to use the "repeat" block in order to be able to do this very easily. You can either do this by giving the computer a "move forward" command five times in order to advance the bird one step each time to the pig.
+        text: 'I dette eksemplet er målet ditt å flytte fuglen for å få tak i grisen. Nå kan vi bruke "gjenta"-blokken for å kunne gjøre dette på en enkel måte. Du kan enten gjøre dette ved å gi datamaskinen en "flytt framover"-kommando fem ganger for å hver gang flytte fuglen et steg mot grisen.'
       4:
         image: notes/C2_zuck_repeat_loop_4.png
-        text: 'Or you can just tell the computer to "move forward" once, and then tell it to "repeat" that 5 times, and it will do the same thing. So in order to do this you drag your "move forward" command, and then you put it inside the "repeat" block.And you can click on it and tell it how many times you want to repeat the block to tell it how many steps you want it to take forward.'
+        text: 'Eller du kan bare be datamaskinen om å "flytte framover" en gang, og så be den "gjenta" det 5 ganger, og det vil gjøre samme ting. Så for å gjøre dette drar du "flytt framover"-kommandoen inn i "gjenta"-blokken. Og du klikke på blokken og angi hvor mange ganger du ønsker å kjøre blokken for å si hvor mange skritt du vil at den skal ta framover.'
       5:
         image: notes/C2_zuck_repeat_loop_5.png
         text: |-
@@ -835,10 +831,10 @@ nn:
         text: Har du noen gang hørt om å feilsøke i et program? Det er måten du finner ut hva som ikke fungerer. Når du feilsøker koden, kan du finne og fjerne feil.
       2:
         image: notes/C3_debugging_bee_2.png
-        text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
+        text: Her har vi allerede fått noen blokker. Vi skal bruke steg-knappen for å gå gjennom blokkene steg for steg for å se om dette er riktig løsning, eller hvor vi trenger å gjøre endringer.
       3:
         image: notes/C3_debugging_bee_3.png
-        text: "Looks like there's our problem! We need one more move forward block. The step button helps us debug our problem by identifying where the error is so we can fix it."
+        text: Ser ut som det er et problem! Vi trenger én ekstra gå fremover-blokk. Steg-knappen hjelper oss å feilsøke problemet ved å vise hvor feilen er slik at vi kan fikse den.
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
@@ -1070,10 +1066,10 @@ nn:
     C4_intro:
       1:
         image: notes/C4_intro_1.png
-        text: "Usually programming is all in text but we'll use Blockly which uses visual blocks that you drag and drop to write programs. Under the hood, you're still creating code. To start off, we're going to build code for a program that will help this Angry Bird move through a maze to get to the evil pigs that stole its eggs."
+        text: Vanligvis bruker vi tekst når vi programmerer, men nå skal vi bruke Blockly, hvor du drar og slipper blokker for å skrive et program. Under overflaten lager du fremdeles koder. Først skal vi bygge en kode for å lage et program som vil hjelpe Angry Bird med å gå gjennom labyrinten og komme fram til grisene som har stjålet eggene.
       2:
         image: notes/C4_intro_2.png
-        text: "Blockly is split into three main parts. On the left is the bird's maze, where your program will run. The instructions for each level are written below the maze. This middle area is the toolbox and each of these blocks is a command that the bird can understand. The white space on the right is called the workspace and this is where we'll build our program."
+        text: Blockly er delt i tre hoveddeler. Til venstre er labyrinten hvor programmet vil kjøre. Instruksjonene for hvert nivå står under labyrinten. På midten er verktøykassen. Hver av disse blokkene er kommandoer som fuglen kan forstå. Det hvite feltet til høyre kalles arbeidsområdet, og det er her vi skal bygge programmet vårt.
       3:
         image: notes/C4_intro_3.png
         text: 'If I drag the move block to our work space and press "run", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program.'
@@ -1083,7 +1079,7 @@ nn:
           I'm going to choose the "turn right" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press "run" again,  the bird will perform the commands that are stacked from top to bottom on our work space.
       5:
         image: notes/C4_intro_5.png
-        text: "If you ever want to delete a block, just remove it from the stack and drag it to the trash can. After you've hit run, you can always hit the reset button to get the bird back to the start. Now let's get those pigs!"
+        text: 'Hvis du vil slette en blokk, kan du dra den vekk fra stablen og dra den til søppelkassen. Etter at du trykker "kjør", kan du alltid velge "nullstill" for å få fuglen tilbake til start. La oss fange grisene!'
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
@@ -1344,44 +1340,44 @@ nn:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: 'Hei, jeg heter Kathleen Kennedy og jeg er produsenten av Star Wars: The Force Awakens. I dag vil du arbeide med en av våre stjerner, BB-8. BB-8 er en rund drone. Alt den gjør og alle dens bevegelser kontrolleres av programvare. Informatikk påvirker alle bransjer, fra markedsføring til helsetjenester til filmindustrien. Faktisk jobbet hundrevis av IT-ingeniører sammen for å lage en film som The Force Awakens.'
       2:
         image: notes/starwars_intro_2.JPG
-        text: Hei jeg heter Rachel Rose, og jeg er en senioringeniør ved ILM hvor jeg leder utviklingsteamet for animasjon og skapning. I The Force Awakens er jeg ansvarlig for å hjelpe kunstnere med å bygge delene til filmen slik at de ser troverdige ut i en galakse langt langt borte.
+        text: Hei jeg heter Rachel Rose, og jeg er en senioringeniør ved ILM hvor jeg leder utviklingsteamet for animasjon og skapning. I The Force Awakens er jeg ansvarlig for å hjelpe kunstnere med å bygge delene til filmen slik at de ser troverdige ut i en galakse langt, langt borte.
       3:
         image: notes/starwars_intro_3.JPG
         text: Den neste timen skal vi prøve å lage våre egne Star Wars-spill, mens vi lærer deg de grunnleggende konseptene i programmering. Programmering er vanligvis tekstbasert, men her kommer vi istedenfor til å bruke blokker som vi kan dra og slippe for å lage programmene. I bakgrunnen skrives det fremdeles kode. Etter at du har testet det enkleste ved hjelp av blokker, så vil vi bytte over til JavaScript, et av de mest populære programmeringsspråkene på Internett.
       4:
         image: notes/starwars_intro_4.JPG
-        text: "To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts. Your screen is split into three parts. On the left is the Star Wars game space, where code will run. The instructions for each level are written below the game space."
+        text: For å komme igang, skal vi jobbe med Rey for å programmere BB-8 til å gå og samle alle skrapdeler. Skjermen din er delt i tre deler. På venstre side finner du Star Wars spillområde, der koden vil kjøre. Instruksjonen for hvert nivå er skrevet nedenfor spillområdet.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: Dette midtre området er verktøykassen og hver av disse blokkene er en kommando som BB-8 kan forstå.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where we are going to build our program.
+        text: Det hvite området på høyre side kalles arbeidsområdet og det er der vi skal bygge opp programmet vårt.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what happens? BB-8 moves left one block on the grid.
+        text: Hva skjer hvis du drar blokken flyttVenstre(); til ditt arbeidsområde og trykker kjør? BB-8 flytter en blokk til venstre på rutenettet.
       8:
         image: notes/starwars_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together."
+        text: Og hva om jeg vil få BB-8 til å gjøre noe etter blokken moveLeft();? Jeg kan legge en annen blokk til programmet. Jeg velger blokken moveUp(); og jeg drar den under min blokk moveLeft(); til uthevingen vises. Så slipper den og de to blokkene festes sammen.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked from top to bottom on our workspace. If you ever want to delete a block, just remove it from the stack and drag it back into the tool box.
+        text: Når jeg klikker kjør igjen, utfører BB-8 kommandoene som er stablet fra topp til bunn i arbeidsområdet. Hvis du vil slette en blokk, bare fjerne den fra stabelen og dra den tilbake til verktøykassa.
       10:
         image: notes/starwars_intro_10.JPG
-        text: "After you've hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: Etter at du har valgt kjør, kan du alltid velge tilbakestill-knappen for å få BB-8 tilbake til start. La oss rulle i gang!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: "Inside the blocks we've been using are JavaScript commands. JavaScript is the most popular programming language for professional developers today. Blocks are a great way to get started learning to code and in fact, top universities like Harvard and Berkeley start teaching this way. But once we learn the basics, engineers write code by typing because it allows us to go faster."
+        text: Inne i blokkene vi har brukt er JavaScript-kommandoer. JavaScript er det mest populære programmeringsspråket for profesjonelle utviklere i dag. Blokker er en flott måte å komme i gang med å lære koding og selv ved anerkjente universiteter som Harvard og Berkeley begynner man å lære på denne måten. Men så fort man lærer det grunnleggende, skriver ingeniører kode fordi det gir oss muligheten til å jobbe raskere.
       2:
         image: notes/starwars_typing_2.JPG
-        text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try."
+        text: Vi kan skrive hundrevis av kommandoer uten å måtte finne dem i verktøykassen eller trekke dem ut. Fordi du lærer å skrive kan være tregere i begynnelsen, men vi ville at du skulle få prøve det.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.
+        text: Øverst til høyre i arbeidsområdet, kan du klikke knappen Vis tekst på hvilken som helst oppgave for å bytte fra blokker til å skrive koden som tekst.
       4:
         image: notes/starwars_typing_4.JPG
         text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
@@ -1453,7 +1449,7 @@ nn:
         text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: Dette midtre området er verktøykassen og hver av disse blokkene er en kommando som BB-8 kan forstå.
       6:
         image: notes/starwars_blocks_intro_6.JPG
         text: "The white space on the right is called the work space and this is where we're going to build our program."

@@ -101,7 +101,7 @@ nn:
       2-3 Bee Debugging 3_instruction: Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
       2-3 Bee Debugging 4_instruction: Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
       2-3 Bee Debugging 5_instruction: 'Desse blokkane plagar meg. Fiks feila og samle inn nektaren for å lage all honningen. No kan du bruke "kjør" og "steg".'
-      2-3 Bee Debugging 6_instruction: 'Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. '
+      2-3 Bee Debugging 6_instruction: Desse byggeklossane er verkeleg irriterande. Fiks det som er feil for å samle all nektaren.
       2-3 Bee Debugging 7_instruction: Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
       2-3 Bee Debugging 8_instruction: Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
       2-3 Bee Debugging 9_instruction: Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
@@ -1319,9 +1319,7 @@ nn:
       frozen circle_instruction: En sirkel er en spesiell form. Klarer du finne ut hvilket tall som skal erstatte spørsmålstegnene for å tegne en sirkel?
       frozen cross rotate dense_instruction: 'La oss gjenta det 90 ganger! Hvor mange ganger går 90 opp i 360? Hint: Det er et ganske lite tall.'
       frozen cross rotate_instruction: Prøv å gjenta det 10 ganger. Hvor mange grader må du snu mellom hver linje?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
+      frozen cross_instruction: 'Putt en "gjenta"-blokk rundt disse kommandoene for å lage et plusstegn. La du merke til at Elsa kan bevege seg både framover og bakover?'
       frozen diamond mini snowflake_instruction: |
         Did you know every snowflake is
         a different shape? Let's create a new snowflake by using another “Repeat"

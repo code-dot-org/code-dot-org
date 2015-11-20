@@ -67,7 +67,7 @@
   "dropletBlock_declareAssign_x_promptNum_param1_description":"La cadena que el usuario verá en el pop up cuando le pida que ingrese un valor",
   "dropletBlock_declareAssign_x_promptNum_signatureOverride":"Prompt the user for a numerical value and store it",
   "dropletBlock_declareAssign_x_signatureOverride":"Declare una variable",
-  "dropletBlock_declareNoAssign_x_description":"Declares a variable with the given name after 'var'",
+  "dropletBlock_declareNoAssign_x_description":"Declares a variable with the given name.",
   "dropletBlock_declareNoAssign_x_signatureOverride":"Declare una variable",
   "dropletBlock_divideOperator_description":"Dividir dos números",
   "dropletBlock_divideOperator_signatureOverride":"Operador divisor",

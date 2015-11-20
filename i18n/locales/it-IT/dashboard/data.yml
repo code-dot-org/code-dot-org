@@ -529,11 +529,11 @@ it:
         starwars_blocks_intro: 'Star Wars: Costruisci una galassia con il codice - Introduzione'
         starwars_blocks_events: 'Star Wars: Costruisci una galassia con il codice - Eventi'
         starwars_blocks_congrats: 'Star Wars: Costruisci una galassia con il codice - Complimenti'
-        mc_intro: 'Minecraft - Introduction'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        mc_intro: 'Minecraft - Introduzione'
+        mc_repeat: 'Minecraft - Ripeti'
+        mc_if_statements: 'Minecraft - Istruzione "se"'
+        mc_congrats_share: 'Minecraft - Congratulazioni'
+        mc_congrats_no_share: 'Minecraft - Congratulazioni'
     callout:
       text:
         drag_blocks: |-
@@ -619,9 +619,9 @@ it:
         Infinity_repeat_callout: |-
           Aggiungi i blocchi "sposta" all'interno di questo blocco di ripetizione
         craft_run_button_callout: 'Clicca su "Esegui" per provare il tuo programma'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_drag_block_callout: 'Trascina un blocco "va avanti" e aggancialo sotto il blocco precedente'
+        craft_callout_preplaced: Abbiamo messo qualche blocco qui per farti cominciare
+        craft_inside_repeat: Ripeti le azioni mettendo blocchi qui
+        craft_callout_preplaced_house: Questo codice inizia la costruzione della tua casa. Riesci a finirla tu?
+        craft_what_is_iron: Estrai il ferro!
+        craft_callout_moveforward: Questo codice controlla la lava, sai aggiungere un comando per andare avanti?

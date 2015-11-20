@@ -2118,9 +2118,9 @@
         ganger går 90 opp i 360? Hint: Det er et ganske lite tall.'
       frozen cross rotate_instruction: Prøv å gjenta det 10 ganger. Hvor mange grader
         må du snu mellom hver linje?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
+      frozen cross_instruction: Putt en "gjenta"-blokk rundt disse kommandoene for
+        å lage et plusstegn. La du merke til at Elsa kan bevege seg både framover
+        og bakover?
       frozen diamond mini snowflake_instruction: |
         Did you know every snowflake is
         a different shape? Let's create a new snowflake by using another “Repeat"

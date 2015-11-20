@@ -757,11 +757,11 @@
         starwars_blocks_intro: 'Tähtien Sota: Kasaa koodista Galaksi - Johdanto'
         starwars_blocks_events: 'Tähtien Sota: Kasaa koodista Galaksi - Tapahtumat'
         starwars_blocks_congrats: 'Tähtien Sota: Kasaa koodista Galaksi - Onnittelut'
-        mc_intro: Minecraft - Introduction
-        mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        mc_intro: Minecraft - Esittely
+        mc_repeat: Minecraft - Toisto
+        mc_if_statements: Minecraft - Jos-lausunnot
+        mc_congrats_share: Minecraft - Onnittelut
+        mc_congrats_no_share: Minecraft - Onnittelut
     callout:
       text:
         drag_blocks: Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan
@@ -869,6 +869,6 @@
         craft_inside_repeat: Repeat actions by placing blocks in here
         craft_callout_preplaced_house: This code will start building your house. Can
           you finish it?
-        craft_what_is_iron: Mine this iron!
+        craft_what_is_iron: Louhi tämä rauta!
         craft_callout_moveforward: This code will check for lava, can you add a command
           to move forward?

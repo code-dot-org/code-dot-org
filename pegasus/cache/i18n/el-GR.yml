@@ -333,16 +333,16 @@
   starwars_speak_languages: Μιλάτε άλλη γλώσσα;
   starwars_help_translate: Βοηθήστε μας να μεταφράσουμε
   starwars_platform_text: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
-  mc_name: Ώρα του Κώδικα με το Minecraft
-  mc_longdescription: Χρησιμοποιήστε μπλοκ κώδικα για να οδηγήσετε τον Στιβ ή τον
-    Άλεξ σε μια περιπέτεια μέσα σε αυτόν τον Minecraft κόσμο.
-  mc_shortdescription: Χρησιμοποιήστε μπλοκ κώδικα για να οδηγήσετε τον Στιβ ή τον
-    Άλεξ σε μια περιπέτεια μέσα σε αυτόν τον Minecraft κόσμο.
+  mc_name: Η Ώρα του Κώδικα με το Minecraft
+  mc_longdescription: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον Άλεξ
+    σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft.
+  mc_shortdescription: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον
+    Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft.
   mc_gradelevel: Ηλικίες 6+
   mc_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
   mc_specs: Πολλές γλώσσες (προσεχώς) | Σύγχρονα προγράμματα περιήγησης και tablets
     | Ηλικιών 6 +
-  minecraft_subtitle: Ώρα του Κώδικα με το Minecraft
+  minecraft_subtitle: Η Ώρα του Κώδικα με το Minecraft
   volunteer_engineer_submission_title: Εμπνεύστε μαθητές και προσφέρετε εθελοντική
     εργασία για την Ώρα του Κώδικα.
   volunteer_engineer_submission_subtitle_generic: '100.000 εκπαιδευτικοί πρόκειται

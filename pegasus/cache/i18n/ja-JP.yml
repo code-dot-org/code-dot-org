@@ -1,5 +1,5 @@
 "ja-JP":
-  hour_of_code: Hour of Code
+  hour_of_code: Hour of Code（コーディングを学ぶ時間）
   hello: Hello world
   select_language: 言語を選択してください
   en: コンピュータサイエンス
@@ -295,16 +295,14 @@
   starwars_watch_videos: 始める前に、以下のビデオのうち1つを見てみましょう。
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
-  starwars_platform_text: Modern browsers, smartphones, tablets
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
+  starwars_platform_text: 最新ブラウザ、スマート フォン、タブレット
+  mc_name: MinecraftのHour of Code (アワーオブコード)
+  mc_longdescription: コードのブロックを使って、スティーブかアレックスにMinecraftの世界を冒険させよう！
+  mc_shortdescription: コードのブロックを使って、スティーブかアレックスにMinecraftの世界を冒険させよう！
   mc_gradelevel: 6歳以上
   mc_platformtext: 最新ブラウザ、スマート フォン、タブレット
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
-  minecraft_subtitle: Minecraft Hour of Code
+  minecraft_subtitle: MinecraftのHour of Code (アワーオブコード)
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '

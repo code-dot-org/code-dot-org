@@ -1,5 +1,5 @@
 "lv-LV":
-  hour_of_code: Hour of Code
+  hour_of_code: Programmēšanas stunda
   hello: Sveika, pasaule
   select_language: Lūdzu izvēlieties savu valodu
   en: Datorzinātne
@@ -347,7 +347,7 @@
     videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: Moderni pārlūki, viedtālruņi, planšetdatori
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.

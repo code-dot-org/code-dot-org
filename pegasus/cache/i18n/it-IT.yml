@@ -337,8 +337,8 @@
   starwars_javascript_start_button: Prova adesso
   starwars_blocks_title: Blocchi
   starwars_blocks_description: Usa la programmazione a blocchi.
-  starwars_blocks_specs: In molte lingue (in corso di preparazione) | Browser moderni,
-    smartphone, tablet | Da 6 a 10 anni
+  starwars_blocks_specs: In molte lingue (in preparazione) | Browser moderni, smartphone,
+    tablet | Da 6 a 10 anni
   starwars_blocks_start_button: Prova adesso
   starwars_watch_videos: Prima di iniziare, guarda uno di questi video stimolanti
   starwars_speak_languages: Parli un'altra lingua?
@@ -351,9 +351,10 @@
     nel mondo di Minecraft.
   mc_gradelevel: Da 6 anni in su
   mc_platformtext: Browser moderni, smartphone, Tablet
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Molte lingue (prossimamente) | Browser recenti e tablet | Età 6+
   minecraft_subtitle: Minecraft L'Ora del Codice
-  volunteer_engineer_submission_title: Volontario per l'ora del codice
+  volunteer_engineer_submission_title: Invita studenti e volontari a partecipare all'ora
+    del codice.
   volunteer_engineer_submission_subtitle_generic: '100.000 insegnanti ospiteranno
     un''Ora di Codice nelle loro classi quest''anno: 7-13 Dicembre 2015. Hanno bisogno
     del tuo aiuto! '
@@ -717,7 +718,7 @@
   learn_sign_up_description: Iscriviti per partecipare all'Ora del Codice durante
     la Settimana di Educazione all'Informatica
   learn_sign_up_button: Iscriviti
-  learn_videos_watch: Watch this inspirational video with your classroom
+  learn_videos_watch: Guarda questo video stimolante con la classe
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Impara ad insegnare l'Ora del Codice
@@ -728,9 +729,9 @@
   hoc2014_try_new_tutorial: Prova il nuovo corso dell'Ora del Codice in versione provvisoria
   hoc2014_try_scrat: Angry Birds, PvZ, e Scrat
   hoc2014_try_frozen: Artista con Anna ed Elsa, da Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Tutorial di Code.org
+  carousel_heading_3rd_party: Tutorial di terze parti
+  carousel_heading_third_party: Tutorial di terze parti
   carousel_heading_international: Corsi nella tua lingua
   carousel_heading_domestic: Corsi disponibili in Inglese
   carousel_heading_beginners: Corsi per principianti

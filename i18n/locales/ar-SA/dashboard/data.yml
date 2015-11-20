@@ -581,8 +581,8 @@ ar:
         Infinity_move_collide_callout: تشغيل صوت عند حدوث هذا الحدث.
         Infinity_repeat_callout: وضع مربعات برمجة التنقّل هنا
         craft_run_button_callout: 'انقر على "نفذ" لتجربة برنامجك'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
+        craft_drag_block_callout: 'قم بسحب المقطع البرمجي "تحريك للأمام" و ركّبه اسفل المقاطع الأخرى.'
+        craft_callout_preplaced: لقد وضعنا بعض المقاطع البرمجية هنا للبدء
         craft_inside_repeat: Repeat actions by placing blocks in here
         craft_callout_preplaced_house: This code will start building your house. Can you finish it?
         craft_what_is_iron: Mine this iron!

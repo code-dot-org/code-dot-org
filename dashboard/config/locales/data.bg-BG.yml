@@ -782,11 +782,11 @@
           - събития'
         starwars_blocks_congrats: 'Междузвездни войни: Изграждане на галактика с код
           - Честито'
-        mc_intro: Minecraft - Introduction
-        mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        mc_intro: Minecraft - Въведение
+        mc_repeat: Minecraft - повторение
+        mc_if_statements: Minecraft - "ако" отчети
+        mc_congrats_share: Minecraft - Поздравления
+        mc_congrats_no_share: Minecraft - Поздравления
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок
@@ -900,10 +900,10 @@
         craft_run_button_callout: Натиснете "Старт", за да пробвате вашата програма
         craft_drag_block_callout: Drag a "moveForward();" block and snap it below
           the other block
-        craft_callout_preplaced: We've put some blocks here to get you started
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can
-          you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command
-          to move forward?
+        craft_callout_preplaced: Ние сме поставили някои блокове тук, за да започнете
+        craft_inside_repeat: Повторете действията като поставите блокове тук вътре
+        craft_callout_preplaced_house: Този код ще започне изграждането на вашия дом.
+          Можете ли да го завършите?
+        craft_what_is_iron: Изкопай това желязо!
+        craft_callout_moveforward: Този код ще провери за лава, можете ли да добавите
+          команда да се придвижим напред?

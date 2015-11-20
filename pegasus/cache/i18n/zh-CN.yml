@@ -1,5 +1,5 @@
 "zh-CN":
-  hour_of_code: Hour of Code
+  hour_of_code: 编程一小时
   hello: 世界你好
   select_language: 请选择您的语言
   en: 计算机科学
@@ -268,27 +268,25 @@
   class_submission_languages_other: 其他语言
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
+  starwars_subtitle: 创建一个充满代码的星系
   starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_description: 使用拖放块和 JavaScript。
+  starwars_javascript_specs: 英语 | 现代浏览器 | 11岁以上
   starwars_javascript_start_button: 现在就试试
   starwars_blocks_title: 块
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_description: 使用拖放块。
+  starwars_blocks_specs: 各国语言 (即将推出) | 现代浏览器、 智能手机、 平板电脑 | 年龄在 6-10岁之间
   starwars_blocks_start_button: 现在就试试
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_watch_videos: 在开始之前，看一段鼓舞人心的视频
+  starwars_speak_languages: 另一种语言?
+  starwars_help_translate: 帮我们翻译
+  starwars_platform_text: 最新的浏览器，智能手机，平板电脑
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: 6岁以上
   mc_platformtext: 最新的浏览器，智能手机，平板电脑
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
@@ -640,7 +638,7 @@
     最新的网页浏览器。</a>
   mobile_devices: 用于移动设备的教程
   frozen_name: Code with Anna and Elsa
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_name: '星球大战: 建立一个充满代码的星系'
   codeorg_name: 编写你的第一个计算机程序
   codeintl_name: 编写你的第一个计算机程序
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -719,7 +717,7 @@
   projguts_gradelevel: 10-13岁
   hourofcode_gradelevel: 年龄鉴于4至104
   frozen_gradelevel: 年龄 8 +
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: 6岁以上
   playlab_gradelevel: 年龄鉴于4至104
   codeorg_platformtext: 最新的浏览器，智能手机，平板电脑
   codeintl_platformtext: 最新的浏览器，智能手机，平板电脑
@@ -802,8 +800,7 @@
   projguts_shortdescription: 尝试用石头、剪子、布来建模和模拟
   hourofcode_shortdescription: 新 code.org/hoc 的占位符
   frozen_shortdescription: 让我们用代码同安娜和艾尔莎一起去探寻冰雪的魔力与美丽。
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortdescription: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
   playlab_shortdescription: 创建一个故事或做游戏玩实验室！
   codeorg_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这是一个游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座。了解重复，循环，条件和基本算法。提供34种语言。
   codeintl_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这是一个游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座。了解重复，循环，条件和基本算法。提供34种语言。
@@ -862,8 +859,7 @@
   frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_longdescription: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
   playlab_longdescription: 用游戏实验室创作一个故事或制作一个游戏！使动物，海盗，僵尸，忍者和许多别的角色，动起来，发出声音，记录得分甚至是发射火球。
   codeorg_beyond_name: 介绍电脑科学 (学龄前到8 年级）
   khan_beyond_name: 学习电脑程式设计

@@ -1,5 +1,5 @@
 "fr-FR":
-  hour_of_code: Hour of Code
+  hour_of_code: Heure de Code
   hello: Bonjour tout le monde
   select_language: Veuillez sélectionner votre langue
   en: Informatique
@@ -237,7 +237,7 @@
   homepage_action_text_volunteers: Bénévoles techniques recherchés
   homepage_action_text_codevideo: Voir la vidéo
   homepage_action_text_teachervideo: Voir la vidéo
-  homepage_action_text_girlvideo: Inspirer une fille
+  homepage_action_text_girlvideo: Soyez source d'inspiration pour une fille
   homepage_action_text_learn: Commencer à apprendre
   homepage_action_text_signpetition: Signez la pétition
   homepage_signpetition_dropdown: Signez notre pétition &#x25BE;
@@ -326,13 +326,13 @@
   starwars_javascript_start_button: Essaie maintenant
   starwars_blocks_title: Blocs
   starwars_blocks_description: Utilise les blocs.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: Plusieurs langues (à venir) | navigateurs modernes, smartphones,
+    tablettes | 6-10 ans
   starwars_blocks_start_button: Essaie maintenant
   starwars_watch_videos: Avant de commencer, regarde une de ces vidéos inspirantes
   starwars_speak_languages: Tu parles une autre langue ?
   starwars_help_translate: Aidez-nous à traduire
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: Navigateurs récents, smartphones, tablettes
   mc_name: Une Heure de Code Minecraft
   mc_longdescription: Utilise des blocs de code pour emmener Steve ou Alex dans une
     aventure dans le monde de Minecraft.
@@ -340,26 +340,29 @@
     aventure dans le monde de Minecraft.
   mc_gradelevel: 6 ans et plus
   mc_platformtext: Navigateurs modernes, smartphones, tablettes
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Plusieurs langues (à venir) | navigateurs modernes et tablettes | 6 ans
+    et plus
   minecraft_subtitle: Une Heure de Code Minecraft
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  volunteer_engineer_submission_title: Soyez une source d'inspiration et bénévoles
+    pour Une Heure de Code.
   volunteer_engineer_submission_subtitle_generic: '100 000 enseignants vont accueillir
     Une Heure de Code dans leur classe cette année, du 7 au 13 décembre 2015. Ils
     ont besoin de votre aide ! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} enseignants cherchent
+    des bénévoles passionnés par l''informatique pour les aider avec leur Heure de
+    Code en décembre. <br>%{num_volunteers} bénévoles se sont inscrits. Rejoignez-les.'
   volunteer_engineer_submission_intro_background: Une Heure de Code est un mouvement
     mondial qui a pour but de présenter l'informatique durant une heure, afin d'atteindre
     des dizaines de millions d'étudiants dans 180 pays. S'il vous plait, impliquez-vous
     au cours de la semaine d'éducation des Sciences Informatiques, du 7 au 13 décembre.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_recruit: 'Ces enseignants adoreraient avoir
+    quelqu''un de <span style="font-family: ''Gotham 7r'', sans-serif;">passionné
+    par l''enseignement de l''informatique</span> qui puisse les aider en classe,
+    ou quelqu''un qui puisse <span style="font-family: ''Gotham 7r'', sans-serif;">inspirer</span>
+    leurs élèves en leur parlant de l''ampleur des possibilités offertes par l''informatique
+    (ce qui peut être fait en visio-conférence). Si vous ne souhaitez pas être bénévole,
+    <a href="%{url}">apprenez plus</a> sur comment organiser votre propre événement
+    Heure de Code.'
   volunteer_engineer_submission_intro_signup: Veuillez saisir les informations suivantes
     si vous êtes étudiant en informatique ou développeur. Les champs marqués d'une
     <span class="form-required-field"> *</span> sont obligatoires.
@@ -705,9 +708,9 @@
   learn_sign_up_description: Enregistre-toi pour participer à l'Heure de Code pendant
     la Semaine de l'Education de l'Informatique
   learn_sign_up_button: S’inscrire
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Regardez cette vidéo inspirante avec votre classe
+  learn_videos_show: Montrez cette vidéo inspirante à votre classe
+  learn_videos_before_hoc: Regardez une vidéo inspirante avant votre Heure de Code
   learn_educator_resources_description: Apprends à enseigner une Heure de Code
   learn_educator_resources_button: Ressources de l'éducateur
   learn_are_you_educator: Vous êtes éducateur ? Apprendre <a href="http://hourofcode.com/resources/how-to">
@@ -717,9 +720,9 @@
     bêta
   hoc2014_try_scrat: Angry Birds, PvZ, et Scrat
   hoc2014_try_frozen: Artiste avec Anna et Elsa, de La Reine des neiges
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Tutoriels par Code.org
+  carousel_heading_3rd_party: Tutoriels par des tiers
+  carousel_heading_third_party: Tutoriels par des tiers
   carousel_heading_international: Tutoriels dans votre langue
   carousel_heading_domestic: Tutoriels disponibles en anglais
   carousel_heading_beginners: Tutoriels pour débutants

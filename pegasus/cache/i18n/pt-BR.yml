@@ -706,9 +706,11 @@
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
   dashboard_announcements: Anúncios
   dashboard_announce_view_all: Ver todos
-  dashboard_announce_hoc: <b>30 de setembro de 2015</b> - A Hora do Código 2015 está
-    chegando! Junte-se a salas de aula do mundo todo para o maior evento de aprendizagem
-    da história.
+  dashboard_announce_hoc: '<b>9 de novembro 2015</b> - Um novo tutorial da Hora do
+    Código está disponível, trazendo o novo filme de Star Wars: O Despertar da Força.
+    Trabalhe junto com Rey para guiar o novo androide, BB-8, em uma missão. Então,
+    junte-se a Leia para criar e compartilhar seu próprio jogo em uma galáxia muito,
+    muito distante.'
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
@@ -716,9 +718,9 @@
   learn_sign_up_description: Cadastre-se para participar da Hora do Código durante
     a Semana da Educação em Ciência da Computação
   learn_sign_up_button: Inscreva-se
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Assista a esse vídeo inspirador com sua classe
+  learn_videos_show: Mostre esse vídeo inspirador para sua classe
+  learn_videos_before_hoc: Assista a um vídeo inspirador antes de sua Hora do Código
   learn_educator_resources_description: Aprenda como ensinar uma Hora do Código
   learn_educator_resources_button: Recursos para educadores
   learn_are_you_educator: Você é um educador? Saiba <a href="http://hourofcode.com/resources/how-to">como
@@ -728,9 +730,9 @@
     beta
   hoc2014_try_scrat: Angry Birds, PvZ e Scrat
   hoc2014_try_frozen: O Artista com Anna e Elsa, do filme Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Tutoriais por Code.org
+  carousel_heading_3rd_party: Tutoriais por terceiros
+  carousel_heading_third_party: Tutoriais por terceiros
   carousel_heading_international: Tutoriais no seu idioma
   carousel_heading_domestic: Tutoriais disponíveis em inglês
   carousel_heading_beginners: Tutoriais para iniciantes

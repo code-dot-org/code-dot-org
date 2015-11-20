@@ -1,5 +1,5 @@
 "he-IL":
-  hour_of_code: Hour of Code
+  hour_of_code: שעת תיכנות
   hello: הי עולם
   select_language: אנא בחר את שפתך
   en: מדעי המחשב
@@ -37,9 +37,9 @@
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_search_search: חפש
   csedweek_map_search_reset: אפס
-  csedweek_map_legend_title: Legend
+  csedweek_map_legend_title: מקרא
   csedweek_map_legend_event: Hour of Code Event
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: הירשם
@@ -213,7 +213,7 @@
   homepage_slot_text_flappy: קוד מתנופף
   homepage_action_text_hoc: An Hour of Code for every student.
   homepage_action_text_num_served: '# למדו'
-  homepage_action_text_join_us: Join us
+  homepage_action_text_join_us: הצטרף אלינו
   homepage_action_text_sign_up: הירשם
   homepage_action_text_try_it: נסו זאת
   homepage_action_text_volunteers: Technical volunteers wanted
@@ -312,7 +312,7 @@
     videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: דפדפנים מודרנים, סמרטפונים, טבלטים
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
@@ -379,20 +379,19 @@
     teachers to contact you for the Hour of Code or other volunteer opportunities.
     Your email and exact address will NEVER be shared by us. But the other information
     (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
-    me for volunteer opportunities (Note: your email address won''t be shared)'
+  volunteer_engineer_submission_checkbox_contact: אני מסכים כי מורים יוכלו ליצור עימי
+    קשר לגבי אפשרויות התנדבות (כתובת הדוא"ל שלך לא תפורסם)
   volunteer_engineer_submission_submit: שלח
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: תודה על ההתנדבותך ל"שעת תיכנות". כדי להתכונן
+    לקראת "שעת תיכנות" ועל מנת לגייס מתנדבים אחרים, <a href="%{url}"> המשך לקרוא כאן.</a>
   volunteer_engineer_submission_commitment_uncertain: לא בטוח
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 שעה בשבוע
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 שעות בשבוע
   volunteer_engineer_submission_commitment_five_hrs_per_week: 3 שעות בשבוע
   volunteer_engineer_submission_commitment_now_and_then: מפעם לפעם
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: פעמיים עד שלושה בשנה
+  volunteer_engineer_submission_commitment_monthly: מספר שעות בחודש
+  volunteer_engineer_submission_commitment_weekly: מספר שעות בשבוע
   volunteer_engineer_submission_commitment_more: יותר
   volunteer_engineer_submission_location_flexibility_onsite: באתר בית ספר
   volunteer_engineer_submission_location_flexibility_remote: חונכות מרחוק (מורים או
@@ -404,20 +403,20 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: סטודנט
     באוניברסיטת הנוכחי (או חוקר)
   volunteer_engineer_submission_experience_software_professional: תוכנה מקצועית
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_8: 8 ק"מ
+  volunteer_engineer_submission_distance_16: 16 ק"מ
   volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
+  volunteer_engineer_submission_distance_32: 32 ק"מ
+  volunteer_engineer_submission_num_volunteers_5: 5 מתנדבים
+  volunteer_engineer_submission_num_volunteers_10: 10 מתנדבים
+  volunteer_engineer_submission_num_volunteers_25: 25 מתנדבים
+  volunteer_engineer_submission_num_volunteers_50: 50 מתנדבים
+  volunteer_engineer_submission_type_task_onsite: אנא בקרו בכיתתי למתן עזרה טכנית
+    והשראה
+  volunteer_engineer_submission_type_task_remote: אנא הצטרפו לכיתתי באמצעות סקייפ
+    על מנת להלהיב את הילדים
+  volunteer_engineer_submission_type_task_mentor: מעוניין במנחה שידריך אותי לקראת
+    "שעת תיכנות" עם התלמידים
   petition_age: גיל
   dashboard_landing_title: דף הבית של המורה
   dashboard_landing_welcome: ברוכים הבאים לתצוגת המורה המשופרת.
@@ -450,10 +449,8 @@
   dashboard_hoc_courses: שעה של קוד לכל הגילאים
   dashboard_hoc_courses_desc: נסה את אחת מההדרכות הקצרות הללו (באורך שעה) עם התלמידים
     שלך!
-  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
-    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
-    during Computer Science Education Week.
-  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_hoc_courses_desc_and_cta: נסה את מערכי ההדרכה הקצרים (שעה) עם הסטודנטים.
+  dashboard_k5_courses: קורס באורך 20 שעות לגילאי גן חובה עד כיתה ה
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
     consists of about 20 lessons that may be implemented as one unit or over the course
@@ -461,12 +458,12 @@
     get started, we offer high quality professional development workshops around the
     U.S. free of charge. <a href="/professional-development-workshops">Find one near
     you!</a>
-  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses: קורס באורך 20 שעות לגילאי חטיבת בניים
   dashboard_middle_courses_desc: Our middle school curriculum uses computer science
     and programming within the context of middle school math and science - as a tool
     to teach math and science concepts. To register for professional development workshops,
     apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
-  dashboard_high_courses: Year-long High School Courses
+  dashboard_high_courses: קורס לאורך השנה לגילאי תיכון
   dashboard_high_courses_desc: Our high school program helps school districts offer
     full-year computer science classes by preparing existing teaching staff to offer
     this new field. To register for professional development workshops, apply for
@@ -618,7 +615,7 @@
   dashboard_stage: שלב
   dashboard_puzzle: חידה
   dashboard_question: Question
-  dashboard_response: Response
+  dashboard_response: תגובה
   stats_hoc_2013_heading: 'סטטיסטיקה מדהימה מן  Hour of Code  שנה שעברה. בשבוע אחד
     בלבד:'
   stats_hoc_2013_image_alt: סטטיסטיקה של  Hour of Code 2013
@@ -637,8 +634,8 @@
     <b>תמונה, מילה, או דוא"ל</b>, תרצה לבחור עבור אזור מסויים.
   dashboard_faq: שאלות נפוצות
   dashboard_faq_k5: שאלות נפוצות למורי יסודי
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
+  dashboard_announcements: הודעות
+  dashboard_announce_view_all: הצג הכל
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
