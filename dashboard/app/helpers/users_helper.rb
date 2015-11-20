@@ -38,7 +38,7 @@ module UsersHelper
     script_levels.each do |sl|
       completion_status = level_info(user, sl, uls)
       if completion_status != 'not_tried'
-        user_data[:levels][sl.level_id] = {
+        user_data[:levels][sl.key] = {
           status: completion_status
           # More info could go in here...
         }

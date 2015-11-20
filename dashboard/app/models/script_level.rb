@@ -104,7 +104,7 @@ class ScriptLevel < ActiveRecord::Base
     end
 
     summary = {
-        id: level.id,
+        key: key,
         position: position,
         kind: kind,
         title: level_display_text,
