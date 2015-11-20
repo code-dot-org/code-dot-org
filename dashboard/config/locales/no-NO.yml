@@ -383,7 +383,7 @@
     title: Kodestudio
     description: Code Studio er hjemmet til nettbaserte kurs av Code.org
     lines_of_code: '%{lines_count} LINJER MED KODE SKREVET AV ELEVER'
-    lines_of_code_linebreak: '%{lines_count} LINJER KODE<br/>SKREVET AV %{elevs_count}
+    lines_of_code_linebreak: '%{lines_count} LINJER KODE<br/>SKREVET AV %{student_count}
       MILLIONER STUDENTER'
     all_courses: Oversikt over kurs 1, 2 og 3
     lesson_plans: Plan for øvelser
