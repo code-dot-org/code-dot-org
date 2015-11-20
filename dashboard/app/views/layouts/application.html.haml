@@ -19,6 +19,7 @@
         = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
         = tag 'meta', property: 'og:description', content: t('share.description')
       = render partial: 'layouts/analytics'
+
     = render partial: 'layouts/javascript_strings'
   %body
     - if current_user && current_user.age.nil?
@@ -49,3 +50,6 @@
 
 
     = yield :body_scripts
+:javascript
+  function trackEvent() {}
+  function ga() {};
