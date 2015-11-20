@@ -216,7 +216,7 @@ Dashboard::Application.routes.draw do
   get '/popup/stats', to: 'reports#header_stats', as: 'header_stats'
   get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 
-  get '/notes/:key', to: 'notes#index'
+  get '/:locale/notes/:key', to: 'notes#index'
 
   resources :zendesk_session, only: [:index]
 

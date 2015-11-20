@@ -285,7 +285,7 @@ function getShowNotes(key, container) {
   };
 
   $.ajax({
-    url: '/notes/' + key,
+    url: '/' + window.location.pathname.split("/")[1] + '/notes/' + key + '.html',
     success: callback
   });
 }
