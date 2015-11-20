@@ -422,9 +422,6 @@ GEM
       websocket (~> 1.0.4)
     sequel (4.10.0)
     sexp_processor (4.6.0)
-    shoryuken (2.0.2)
-      aws-sdk-core (~> 2)
-      celluloid (~> 0.16.0)
     shotgun (0.9)
       rack (>= 1.0)
     signature (0.1.8)
@@ -594,7 +591,6 @@ DEPENDENCIES
   seamless_database_pool
   selenium-webdriver (~> 2.41.0)
   sequel (~> 4.10.0)
-  shoryuken
   shotgun
   simplecov (~> 0.9)
   sinatra
