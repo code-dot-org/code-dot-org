@@ -328,10 +328,14 @@ var drawDiv = function () {
     div.style.height = Applab.footerlessAppHeight + "px";
   });
 
-  if (studioApp.share) {
+  if (shouldRenderFooter()) {
     renderFooterInSharedGame();
   }
 };
+
+function shouldRenderFooter() {
+  return studioApp.share;
+}
 
 function renderFooterInSharedGame() {
   var divApplab = document.getElementById('divApplab');
@@ -860,7 +864,7 @@ Applab.init = function(config) {
   if (config.embed || config.hideSource) {
     // no responsive styles active in embed or hideSource mode, so set sizes:
     viz.style.width = Applab.appWidth + 'px';
-    viz.style.height = Applab.footerlessAppHeight + 'px';
+    viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
     // Use offsetWidth of viz so we can include any possible border width:
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
