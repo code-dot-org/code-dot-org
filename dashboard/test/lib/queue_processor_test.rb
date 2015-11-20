@@ -144,9 +144,6 @@ class QueueProcessorTest < ActiveSupport::TestCase
     end
 
     # Wait for the queue processor to handle all of the messages.
-    expected_elapsed_time = num_messages / global_max_messages_per_sec
-    start = Time.now.to_f
-
     while handler.received_bodies.proper_subset?(expected_bodies)
       processor.assert_workers_alive_for_test
       sleep 2
