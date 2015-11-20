@@ -164,7 +164,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "lock_zero_param_functions": "false"
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "EmG2/AkqkFRV9fvCazwDJfM/xsJC8hqKZObPTp8J9bUVViC21WfXDU6IAbqi\nMRnw\n"
   }
 }]]></config>
   <blocks/>

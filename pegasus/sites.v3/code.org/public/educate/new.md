@@ -1,15 +1,15 @@
 ---
-title: Computer Science Explorations
+title: New Middle Level Computer Science
 nav: educate_nav
 ---
 
-# Our newest course: CS Explorations #
+# Our newest course for Middle Level Education #
 
-## <a name="what"></a>What is CS Explorations?
-CS Explorations is our newest curriculum-in-development - an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun.
+## <a name="what"></a>What is this course?
+This course is our newest curriculum-in-development - an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun.
 
 ### <a name="equity"></a>A CS course for everyone
-CS Explorations is designed from the ground up to be an accessible and engaging course for all students, regardless of background or prior experience. By providing students opportunities to engage with culturally and personally relevant topics in a wide variety of CS related fields we hope to show all students that CS can be for them.
+This new course is designed from the ground up to be an accessible and engaging course for all students, regardless of background or prior experience. By providing students opportunities to engage with culturally and personally relevant topics in a wide variety of CS related fields we hope to show all students that CS can be for them.
 
 ### <a name="maker"></a>Made for Makers
 We know that students engage differently with real world physical objects than with virtual software, and that the process of making physical artifacts is a powerful tool for fun, engaging, and lasting learning experiences. CS Explorations has the Maker ethos embedded throughout, providing students the opportunity to see and participate in the physical act of creation alongside the more abstract elements of computer science.

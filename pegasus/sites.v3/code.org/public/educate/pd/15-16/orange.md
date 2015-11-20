@@ -45,14 +45,14 @@ Quarter 4: Saturday, April 23, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**November 7th Location**
+**January 23rd Location**
 
 [Orange County Department of Education<br/>
-Building A: Board Room<br/>
+Room: Esplanade 108B<br/>
 200 Kalmus Dr<br/>
 Costa Mesa, CA 92626](https://www.google.com/maps/place/Orange+County+Department+of+Education/@33.6729962,-117.8832766,17z/data=!4m7!1m4!3m3!1s0x80dcdf02d89983eb:0xade5c39a8aba012d!2s200+Kalmus+Dr,+Costa+Mesa,+CA+92626!3b1!3m1!1s0x0000000000000000:0x4d5cc9efa1e6739a)
 
-Note: you will be in a different building that the 10/3/15 PD. For a campus map and parking information, [click here](code.org/files/OCDEmap.pdf)
+For a campus map and parking information, [click here](code.org/files/OCDEmap.pdf)
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -154,14 +154,11 @@ Semester 2: Saturday, February 20, 2016 in Los Angeles.
 <br/>
 Breakfast and lunch will be served.
 
-**October 17th Location**
+**February 20th Location**
 
-[Ball Junior High School<br/>
-Room 37<br/>
-1500 W Ball Rd<br/>
-Anaheim, CA 92802](https://www.google.com/maps/place/Ball+Junior+High+School/@33.81769,-117.93384,15z/data=!4m2!3m1!1s0x0:0xbe44bc07473540a3)
-
-[Click here for a School Map](/images/ball-jr-high-map.JPG)
+[Columbia Memorial Space Center<br/> 
+12400 Columbia Way<br/> 
+Downey, CA 90242](https://www.google.com/maps/place/Columbia+Memorial+Space+Center/@33.9198421,-118.1335994,15z/data=!4m2!3m1!1s0x0:0xd6cb5baba4c4a1d2)
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -209,10 +206,10 @@ Wednesday, October 21st, 2015 <br/>
 
 **Location**
 
-Orange USD<br/> 
+[Orange USD<br/> 
 1401 N. Handy Street<br/>
 Board Rooms 1 and 2 <br/>
-Orange, CA 92867 
+Orange, CA 92867](https://www.google.com/maps/place/Orange+Unified+School+District/@33.8111924,-117.8275697,17z/data=!3m1!4b1!4m2!3m1!1s0x80dcd0adfdbed09f:0x1f2d121d62eb2653) 
 
 
 [**Back to the top**](#top)

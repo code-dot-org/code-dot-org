@@ -81,7 +81,6 @@ Feature: Hour of Code 2015 tutorial is completable
     And I rotate to landscape
     And I wait to see a dialog titled "Puzzle 5 of 15"
     And I close the dialog
-    When I switch to text mode
     And I append text to droplet "moveRight();\n"
     And I append text to droplet "moveDown();\n"
     And I append text to droplet "moveDown();\n"
@@ -116,7 +115,6 @@ Feature: Hour of Code 2015 tutorial is completable
     And I rotate to landscape
     And I wait to see a dialog titled "Puzzle 5 of 15"
     And I close the dialog
-    When I switch to text mode
     And I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveDown();\n"

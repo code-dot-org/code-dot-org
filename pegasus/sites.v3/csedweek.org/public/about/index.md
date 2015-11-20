@@ -6,7 +6,9 @@ nav: about_nav
 
 Computer Science Education Week (CSEdWeek) is an annual program dedicated to inspiring K-12 students to take interest in computer science.
 
-Originally conceived by the Computing in the Core coalition, Code.org&reg; is producing CSEdWeek for the first time this year, held in recognition of the birthday of computing pioneer [Admiral Grace Murray Hopper](http://en.wikipedia.org/wiki/Grace_Hopper) (December 9, 1906).
+Originally conceived by the Computing in the Core coalition, Code.org&reg; organizes CSEdWeek as a grassroots campaign supported by [350 partners](/about/partners) and 100,000 educators worldwide.
+
+CSEdWeek is held in recognition of the birthday of computing pioneer [Admiral Grace Murray Hopper](http://en.wikipedia.org/wiki/Grace_Hopper) (December 9, 1906).
 
 ## Code.org&reg;
 

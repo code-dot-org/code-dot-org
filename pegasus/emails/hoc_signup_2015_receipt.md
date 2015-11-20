@@ -9,7 +9,7 @@ litmus_tracking_id: "5g5lyi1a"
 
 You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13. 
 
-*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [Details](https://<%= hostname %>/prizes).
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [And there are more awesome prizes](https://<%= hostname %>/prizes).
 
 #### We'll be in touch about new tutorials and other exciting updates. What can you do now?
 
@@ -21,7 +21,7 @@ We need your help to reach 100,000 organizers worldwide. Tell your friends about
 [Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). 
 <% else %>
 ## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup).
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 <% end %>
 
 ## 3. Ask your employer to get involved

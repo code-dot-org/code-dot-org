@@ -7,9 +7,14 @@ nav: about_nav
 
 **We are currently hiring for:**
 
-- [CS Curriculum Writer](#curric)
-- [Engineering Manager / Chief Architect](#eng)
-- [Integrated Curriculum Coordinator] (#int)
+- **Curriculum**
+ 	- [CS Curriculum Writer](#curric)
+	- [Integrated Curriculum Coordinator](#int)
+- **Product**
+	- [Engineering Manager / Chief Architect](#eng)
+- **Operations & Professional Development**
+	- [Operations Program Coordinator](#ops)
+	- [VP of Professional Learning & Community](#vp)
 
 **No current positions, but always accepting great resumes:**
 
@@ -17,7 +22,7 @@ nav: about_nav
 
 **[Working at Code.org](#info)**
 
-## <a name="curric"href="#curric">CS Curriculum Writer (Seattle or Chicago, IL preferred)</a>
+## <a name="curric"href="#curric">CS Curriculum Writer (Seattle, WA or Chicago, IL preferred)</a>
 
 **Job Summary:**
 
@@ -80,12 +85,6 @@ The ideal candidate has the following qualifications:
 - Mobile development experience (iOS, Android) desired but not required
 - Experience in a fast growth start-up environment desired
 
-In addition, candidates:
-
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
-
-
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
@@ -123,7 +122,75 @@ Experience using the Understanding by Design curriculum framework
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="engineer" href="#engineer">Software Engineer (Seattle)</a>
+## <a name="ops" href="#ops">Operations Program Coordinator (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is looking for a Operations Program Coordinator, an event planning expert, to join Code.org’s Operations team. Responsibilities of the position include:
+
+- Coordinate event logistics (dates, location, travel, accommodations, catering); act as primary logistics point-of-contact
+- Update and manage event participant lists
+- Draft communications to stakeholders; use mark-up to create e-mail communications
+- Utilize customer service system to respond to questions in a timely manner
+- Analyze survey results and report findings to Operations Manager
+- Attend and participate in meetings and record notes/follow-up items, as appropriate
+- Respond to requests for information, distribute materials externally
+- Special projects (perform research, prepare documentation, develop templates, etc.)
+
+
+
+
+**Skills and Qualifications:**
+
+The ideal candidate has a demonstrated interest and aptitude for utilizing technology to automate routine functions and has strong administrative and event planning skills, as well as an excellent customer service attitude. 
+
+Must be extremely detail-oriented, possess exceptional writing and communications ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Candidate should be flexible and willing to work in a fast-paced, start-up environment. Proficiency in working with Google Docs and Microsoft Office a must.
+
+
+Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="vp"href="#vp">VP of Professional Learning & Community  (Seattle, WA)</a>
+
+**Job Summary:**
+
+This critical senior management role would manage an integrated team responsible for ensuring a high-quality professional learning and professional development (PD) experience for Code.org’s K-12 partner schools, districts, and local organizations. 
+The primary responsibility of this role is to establish a nationwide network of facilitators and professional learning organizations, and to use this local PD capacity to train 100,000 in-service teachers to begin teaching computer science. 
+The job includes leading or managing the following activities:
+
+- Manage the development of online and in-person mastery-based teacher and facilitator PD programs, content, and communications
+- Oversee the implementation of all K-12 PD activities, including the operational logistics to facilitate all middle-school and high-school teacher in-person PD workshops nationwide (dates, locations, travel, accommodations, catering) 
+- Oversee the ongoing management of a nationwide train-the-trainer program
+- Supervise the creation and management of high-level relationships with regionally-based PD organizations 
+- Ensure cross-team alignment of workflows with District Outreach and Curriculum Development teams
+- Coordinate PD program evaluation with the Director of Research and Evaluation and third party evaluator
+- Develop a culture of efficiencies through the development of standardized, automated, and/or streamlined processes, including driving technical automation projects in collaboration with the engineering team
+- Utilize data to inform program improvements
+Other duties, as assigned
+
+
+
+**Skills and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Bachelor’s degree (minimum) with a major in Education, Business or other similarly comparable field; Master’s degree or higher is preferred
+- 5+ years senior management experience, skilled in managing cross-functional teams
+- Direct experience in planning, managing, and executing end-to-end professional development experiences for teachers and/or school districts at a national scale
+- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes
+- Professional demeanor, possessing excellent communication, organizational, project management and interpersonal skills
+- Must be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team 
+- A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must
+
+Additional desired strengths include:
+
+- Experience in developing or delivering online/asynchronous professional development and/or managing train-the-trainer models is highly preferred 
+- Experience in a fast growth start-up environment desired
+- Understanding of and passion for equity in computer science and K-12 education
+ 
+Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+
+## <a name="engineer" href="#engineer">Software Engineer (Seattle, WA)</a>
 
 **Job Summary:**
 
@@ -155,7 +222,7 @@ Code.org offers a comprehensive employee benefits package that includes:
 - Technology subsidy consistent with our Bring Your Own Device environment 
 - Flexible, engaging working environment
 - Monthly unlimited ORCA pass or equal value transit subsidy; located near public transit hub in Seattle, WA
-- Paid vacation (3 weeks annually) and sick leave
+- Paid time off: 3 weeks annually, sick leave, and the 2 weeks that include Christmas and New Years.
 - Medical, dental and vision premiums paid at 100% for FT positions and their dependents
 - Option to participate in 403b retirement savings plan
 - The opportunity to help students learn better and change the face of computer science
