@@ -16,6 +16,7 @@
 require 'aws-sdk'
 require 'logger'
 require 'thread'
+require_relative 'messages_handler'
 require_relative 'metrics'
 require_relative 'queue_processor_config'
 require_relative 'rate_limiter'
@@ -23,8 +24,9 @@ require_relative 'rate_limiter'
 module SQS
 
   # A class for processing an SQS queue using a pool of worker threads, each of which
-  # does long polling and runs a throttled handler.
+  # does long polling against the queue.
   class QueueProcessor
+    attr_reader :state, :logger, :config, :metrics, :handler
 
     # @param [SQS::QueueProcessorConfig] config
     # @param [SQS::Metrics] metrics
@@ -53,37 +55,41 @@ module SQS
         worker_thread = Thread.new do
           Thread.current[:name] = "SQS worker #{i}"
           rate_limiter = RateLimiter.new(@config)
-          poller = Aws::SQS::QueuePoller.new(@config.queue_url,
-                                             wait_time_seconds: @config.max_wait_time)
+          poller = Aws::SQS::QueuePoller.new(@config.queue_url)
 
           # Break out of the polling loop when we leave the running state.
           poller.before_request do |stats|
             throw :stop_polling if @state != :running
           end
 
+          # Wrap the polling loop in an outer exception handler and while loop,
+          # to prevent an unanticipated exception from terminating the thread.
           while @state == :running
             begin
               # Long-poll for messages and handle them until we're told to stop.
-              poller.poll(max_number_of_messages: @config.max_batch_size) do |messages|
+              poller.poll(max_number_of_messages: 10, wait_time_seconds: 20, visibility_timeout: 5) do |sqs_messages|
                 batch_failed = false
-                batch_size = messages.size
-                bodies = messages.map(&:body)
+                messages = sqs_messages.map {|sqs_message|
+                  SQS::Message.new(sqs_message.body)
+                }
+                batch_size = sqs_messages.size
 
                 start_time_sec = Time.now.to_f
                 begin
-                  @handler.handle(bodies)
+                  @handler.handle(messages)
                   @metrics.successes.increment(batch_size)
                 rescue Exception => exception
+                  @logger.warn "Failed on batch of size #{batch_size}"
                   @metrics.failures.increment(batch_size)
                   batch_failed = true
-                  @logger.warn "Failed on batch of size #{batch_size}"
-                  @logger.warn exception
+                  @logger.warn exception.message
                 end
                 # Sleep for a bit to make sure we stay below the configured maximum rate. Note that we
                 # pause even if the handler failed because we don't want to exceed the configured rate
                 # even when failures are occuring.
                 delay = rate_limiter.inter_batch_delay(
                     batch_size: batch_size, elapsed_time_sec: Time.now.to_f - start_time_sec)
+                logger.debug "Sleeping for #{delay} for batch of size #{batch_size}"
                 sleep(delay) if delay > 0
 
                 # Tell SQS to resend the batch if it failed.
@@ -98,8 +104,14 @@ module SQS
       end
     end
 
+    def thread_proc
+
+
+
+    end
+
     # Request each of the worker threads to stop and block until they terminate (which could take
-    # ~max_wait_time seconds). Requires that run has been called.
+    # up to max_wait_time seconds). Requires that run has been called.
     def stop
       assert_state :running, "Can't stop in state #{@state}, must be :running"
       @state = :stopping
@@ -109,9 +121,15 @@ module SQS
       @state = :stopped
     end
 
+    def assert_workers_alive_for_test
+      @worker_threads.each do |thread|
+        raise "Unexpected thread death" unless thread.alive?
+      end
+    end
+
+    # Asserts that the current state is `desired_state`.
     def assert_state(desired_state, error_message)
       raise error_message unless @state == desired_state
     end
-
   end
 end
