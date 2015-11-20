@@ -1,5 +1,5 @@
 "pt-PT":
-  hour_of_code: Hour of Code
+  hour_of_code: Hora de Código
   hello: Olá mundo
   select_language: Por favor, escolhe o teu idioma
   en: Ciência da computação
@@ -346,16 +346,16 @@
     videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
-  starwars_platform_text: Modern browsers, smartphones, tablets
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
+  starwars_platform_text: Navegadores modernos, smartphones e tablets
+  mc_name: Hora do Código de Minecraft
+  mc_longdescription: Use blocos de código para levar o Steve ou a Alex numa aventura
+    por este mundo Minecraft.
+  mc_shortdescription: Use blocos de código para levar o Steve ou a Alex numa aventura
+    por este mundo Minecraft.
   mc_gradelevel: Ages 4-104
   mc_platformtext: Navegadores modernos, smartphones e tablets
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
-  minecraft_subtitle: Minecraft Hour of Code
+  minecraft_subtitle: Hora do Código de Minecraft
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -930,8 +930,8 @@
   hourofcode_shortdescription: Espaço reservado para um novo code.org/hoc
   frozen_shortdescription: Use a programação para explorar a mágica e a beleza do
     gelo com Anna e Elsa.
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortdescription: Aprenda a programar dróides, e crie o seu jogo Star Wars
+    numa galáxia muito, muito distante.
   playlab_shortdescription: Crie uma história ou um jogo no Laboratório!
   codeorg_longdescription: Aprenda os conceitos básicos de Ciência da Computação com
     a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo
@@ -1088,8 +1088,8 @@
     do gelo com a Anna e com a Elsa. Vais criar flocos de neve e padrões enquanto
     patinas no gelo, e ainda conseguirás construir a ilha encantada do inverno que
     poderás partilhar com os teus amigos!
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_longdescription: Aprenda a programar dróides, e crie o seu jogo Star Wars
+    numa galáxia muito, muito distante.
   playlab_longdescription: Crie uma história ou faça um jogo no Laboratório! Faça
     animais, piratas, zumbis, ninjas e muitos outros personagens se moverem, fazer
     sons, marcar pontos e até mesmo lançar bolas de fogo!

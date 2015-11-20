@@ -1,5 +1,5 @@
 "bs-BA":
-  hour_of_code: Hour of Code
+  hour_of_code: Sat Kodiranja
   hello: Pozdrav svijete
   select_language: Odaberi svoj jezik
   en: Računarstvo
@@ -327,7 +327,7 @@
   starwars_watch_videos: Prije nego počneš, pogledaj jedan od ovih inspirativnih klipova
   starwars_speak_languages: Govoriš li neki drugi jezik?
   starwars_help_translate: Pomozi nam da prevedemo
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: Savremeni browser-i, mobiteli, tableti
   mc_name: Sata Kodiranja Minecraft-a
   mc_longdescription: Iskoristi blokove koda da bi poveo Steve ili Alex u avanturu
     kroz Minecraft svijet.

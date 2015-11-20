@@ -237,7 +237,7 @@
   homepage_slot_text_shop: Магазин
   homepage_slot_text_flappy: Код Пурха
   homepage_action_text_hoc: Година коду для кожного учня.
-  homepage_action_text_num_served: '# спробували'
+  homepage_action_text_num_served: '# вже спробували'
   homepage_action_text_join_us: Приєднуйтесь
   homepage_action_text_sign_up: Зареєструватися
   homepage_action_text_try_it: Спробувати
@@ -261,7 +261,7 @@
   homepage_slot_text_blurb_hoc: Кожен може навчитися. Почніть сьогодні
   homepage_slot_text_link_hoc: Спробуйте годину коду
   homepage_slot_text_link_host: Провести Годину Коду
-  homepage_slot_text_link_hocserved: '# спробували'
+  homepage_slot_text_link_hocserved: '# вже спробували'
   homepage_solot_text_link_volunteer: Волонтер для Години коду
   homepage_slot_text_title_students: Учні
   homepage_slot_text_blurb_students: Пройдіть всі наші навчальні курси
@@ -280,7 +280,7 @@
   homepage_slot_text_link_donate: Зробити пожертвування
   homepage_header_codestudio: Творчість учнів Студії Коду
   homepage_header_donors: Code.org дякує своїм помічникам
-  homepage_donors_seall: Подивитися все
+  homepage_donors_seall: Подивитися усіх
   homepage_donors_donate: Підтримати
   contact_form_topic_student: Я учень
   contact_form_topic_parent: Я батько/мати
@@ -337,15 +337,15 @@
   starwars_speak_languages: Інша мова?
   starwars_help_translate: Допоможіть нам з перекладом
   starwars_platform_text: Сучасні браузери, смартфони, планшети
-  mc_name: Година коду від Minecraft
+  mc_name: Година коду від Майнкрафт
   mc_longdescription: Використайте блоки коду, щоб допомогти Стіву чи Алексу в їхніх
-    пригодах у світі Minecraft.
+    пригодах у світі Майнкрафт.
   mc_shortdescription: Використайте блоки коду, щоб допомогти Стіву чи Алексу в їхніх
-    пригодах у світі Minecraft.
+    пригодах у світі Майнкрафт.
   mc_gradelevel: Вік 6+
   mc_platformtext: Сучасні браузери, смартфони, планшети
   mc_specs: Багато мов (скоро) | Сучасні браузери та планшети| Вік 6+
-  minecraft_subtitle: Година коду від Minecraft
+  minecraft_subtitle: Година коду від Майнкрафт
   volunteer_engineer_submission_title: Надихайте учнів та волонтерів на Годину коду.
   volunteer_engineer_submission_subtitle_generic: '100000 вчителів збираються провести
     Годину коду в своїх класах цьогоріч 7-13 грудня 2015 року. Їм потрібна допомога! '
