@@ -116,7 +116,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
     # Configure and start the queue processor.
     sqs_metrics = SQS::Metrics.new
     num_workers = 5
-    global_max_messages_per_sec = 10 # Process no more than 5 messages per second.
+    global_max_messages_per_sec = 25
     config = SQS::QueueProcessorConfig.new(
         queue_url: queue_url,
         handler: handler,
