@@ -608,6 +608,86 @@ function loadHoc2015(skin, assetUrl) {
     'rebelpilot':      { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
   };
 
+  skin.customObstacleZones = {endor : {}, hoth: {}, starship: {}};
+
+  skin.customObstacleZones.endor.blogs = [
+    { minx: 361, maxx: 413, miny: 261, maxy: 344 },
+    { minx: 318, maxx: 404, miny: 342, maxy: 397 },
+    { minx: 308, maxx: 352, miny: 72, maxy: 110 },
+    { minx: 264, maxx: 352, miny: 112, maxy: 197 },
+    { minx: 109, maxx: 154, miny: 289, maxy: 351 },
+    { minx: 109, maxx: 205, miny: 228, maxy: 288 },
+    { minx: 83, maxx: 125, miny: 125, maxy: 147 },
+    { minx: 58, maxx: 99, miny: 72, maxy: 91 },
+    { minx: 57, maxx: 156, miny: 92, maxy: 123 }];
+
+  skin.customObstacleZones.endor.horizontal = [
+    { minx: 51, maxx: 299, miny: 269, maxy: 293 },
+    { minx: 150, maxx: 348, miny: 168, maxy: 189 },
+    { minx: 53, maxx: 97, miny: 159, maxy: 199 },
+    { minx: 50, maxx: 198, miny: 71, maxy: 94 },
+    { minx: 255, maxx: 345, miny: 71, maxy: 94 }];
+
+  skin.customObstacleZones.endor.circle = [
+    { minx: 251, maxx: 317, miny: 332, maxy: 348 },
+    { minx: 83, maxx: 198, miny: 326, maxy: 348 },
+    { minx: 250, maxx: 317, miny: 77, maxy: 94 },
+    { minx: 316, maxx: 334, miny: 77, maxy: 348 },
+    { minx: 163, maxx: 236, miny: 202, maxy: 244 },
+    { minx: 83, maxx: 200, miny: 77, maxy: 93 },
+    { minx: 62, maxx: 82, miny: 77, maxy: 348 }];
+
+  skin.customObstacleZones.hoth.blobs = [
+    { minx: 116, maxx: 142, miny: 283, maxy: 342 },
+    { minx: 116, maxx: 187, miny: 226, maxy: 281 },
+    { minx: 356, maxx: 394, miny: 264, maxy: 311 },
+    { minx: 311, maxx: 393, miny: 313, maxy: 388 },
+    { minx: 310, maxx: 344, miny: 61, maxy: 106 },
+    { minx: 258, maxx: 344, miny: 108, maxy: 192 },
+    { minx: 117, maxx: 146, miny: 120, maxy: 132 },
+    { minx: 57, maxx: 117, miny: 70, maxy: 132 }];
+
+  skin.customObstacleZones.hoth.horizontal = [
+    { minx: 54, maxx: 299, miny: 268, maxy: 294 },
+    { minx: 150, maxx: 350, miny: 171, maxy: 198 },
+    { minx: 53, maxx: 99, miny: 161, maxy: 200 },
+    { minx: 252, maxx: 350, miny: 66, maxy: 100 },
+    { minx: 54, maxx: 195, miny: 62, maxy: 92 }];
+
+  skin.customObstacleZones.hoth.circle = [
+    { minx: 250, maxx: 298, miny: 312, maxy: 342 },
+    { minx: 300, maxx: 346, miny: 65, maxy: 342 },
+    { minx: 252, maxx: 302, miny: 65, maxy: 100 },
+    { minx: 99, maxx: 192, miny: 311, maxy: 342 },
+    { minx: 101, maxx: 196, miny: 65, maxy: 91 },
+    { minx: 50, maxx: 100, miny: 65, maxy: 342 },
+    { minx: 163, maxx: 242, miny: 188, maxy: 238 }];
+
+  skin.customObstacleZones.starship.blobs = [
+    { minx: 301, maxx: 344, miny: 58, maxy: 120 },
+    { minx: 353, maxx: 405, miny: 260, maxy: 308 },
+    { minx: 306, maxx: 405, miny: 310, maxy: 393 },
+    { minx: 101, maxx: 144, miny: 300, maxy: 350 },
+    { minx: 101, maxx: 197, miny: 208, maxy: 299 },
+    { minx: 261, maxx: 344, miny: 120, maxy: 192 },
+    { minx: 55, maxx: 128, miny: 77, maxy: 141 }];
+
+  skin.customObstacleZones.starship.horizontal = [
+    { minx: 52, maxx: 298, miny: 267, maxy: 300 },
+    { minx: 151, maxx: 351, miny: 167, maxy: 198 },
+    { minx: 49, maxx: 99, miny: 165, maxy: 201 },
+    { minx: 51, maxx: 199, miny: 66, maxy: 102 },
+    { minx: 251, maxx: 351, miny: 68, maxy: 104 }];
+
+  skin.customObstacleZones.starship.circle = [
+    { minx: 251, maxx: 316, miny: 315, maxy: 351 },
+    { minx: 153, maxx: 242, miny: 165, maxy: 251 },
+    { minx: 252, maxx: 314, miny: 66, maxy: 101 },
+    { minx: 316, maxx: 333, miny: 66, maxy: 351 },
+    { minx: 80, maxx: 200, miny: 316, maxy: 351 },
+    { minx: 82, maxx: 200, miny: 66, maxy: 102 },
+    { minx: 69, maxx: 80, miny: 66, maxy: 351 }];
+
   skin.explosion = skin.assetUrl('vanish.png');
   skin.explosionFrames = 17;
 
