@@ -35,7 +35,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
 
     def handle(messages)
       @@lock.synchronize {
-        @messages += messages
+        @@messages += messages
       }
       sleep(@latency)
     end
@@ -73,7 +73,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
     queue_url = response.queue_url
 
     num_workers = 10
-    global_max_messages_per_sec = 50
+    global_max_messages_per_sec = 30
 
     handler = RecordingHandler.new(0)
     sqs_metrics = SQS::Metrics.new
@@ -99,14 +99,23 @@ class QueueProcessorTest < ActiveSupport::TestCase
     processor = SQS::QueueProcessor.new(config, sqs_metrics)
     processor.start
 
+    expected_elapsed_time = num_messages / global_max_messages_per_sec
     start_time_sec = Time.now.to_f
-    while sqs_metrics.successes.value < num_messages
+    while sqs_metrics.successes.value < num_messages &&
+        (Time.now.to_f - start_time_sec) < expected_elapsed_time * 1.5
       sleep 2
-      @logger.info "Successes: #{sqs_metrics.successes.value}"
-      @logger.info "Failures:  #{sqs_metrics.failures.value}"
     end
-
     processor.stop
+
+    # Make sure that we received the expected number of messages
+    assert sqs_metrics.successes.value == num_messages
+
+    # Make sure that the processor did not exceed the rate limit.
+    rate = num_messages / (Time.now.to_f - start_time_sec)
+    assert rate < global_max_messages_per_sec
+
+    pp RecordingHandler.recorded_messages[0]
+    pp RecordingHandler.recorded_messages[1]
   end
 
 end

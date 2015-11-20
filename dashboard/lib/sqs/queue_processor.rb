@@ -67,10 +67,11 @@ module SQS
               poller.poll(max_number_of_messages: @config.max_batch_size) do |messages|
                 batch_failed = false
                 batch_size = messages.size
+                bodies = messages.map(&:body)
 
                 start_time_sec = Time.now.to_f
                 begin
-                  @handler.handle(messages)
+                  @handler.handle(bodies)
                   @metrics.successes.increment(batch_size)
                 rescue Exception => exception
                   @metrics.failures.increment(batch_size)
