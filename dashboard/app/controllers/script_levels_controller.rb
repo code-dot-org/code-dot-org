@@ -203,7 +203,7 @@ class ScriptLevelsController < ApplicationController
 
     load_level_source
 
-    @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level.id)
+    @callback = ''#milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level.id)
 
     view_options(
       full_width: true,

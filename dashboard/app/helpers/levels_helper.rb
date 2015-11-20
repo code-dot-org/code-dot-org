@@ -346,9 +346,9 @@ module LevelsHelper
     end
 
     # Request-dependent option
-    app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
-        (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
-    app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
+    #app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
+        #(!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
+    #app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
     if @game and @game.owns_footer_for_share?
       app_options[:copyrightStrings] = build_copyright_strings
