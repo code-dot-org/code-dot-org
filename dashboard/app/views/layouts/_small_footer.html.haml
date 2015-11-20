@@ -2,7 +2,7 @@
 
 :ruby
   reactProps = {
-    i18nDropdown: (view_options[:has_i18n] ? URI.encode(i18n_dropdown.to_str) : ''),
+    i18nDropdown: '', #(view_options[:has_i18n] ? URI.encode(i18n_dropdown.to_str) : ''),
     copyrightInBase: true,
     baseCopyrightString: I18n.t('footer.copyright'),
     baseMoreMenuString: I18n.t('footer.more'),
