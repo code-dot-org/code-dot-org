@@ -3,8 +3,7 @@
   %head
     = javascript_include_tag 'soundEffects'
     :javascript
-      var enableDiagnostics = true;
-      var sounds = new Sounds(enableDiagnostics);
+      var sounds = new Sounds();
       sounds.register({
         id: 'intro',
         ogg: '/blockly/media/skins/craft/music/vignette4-intro.ogg',
