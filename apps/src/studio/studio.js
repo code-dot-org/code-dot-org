@@ -1866,6 +1866,7 @@ Studio.init = function(config) {
   config.varsInGlobals = true;
   config.dropletConfig = dropletConfig;
   config.dropIntoAceAtLineStart = true;
+  config.showDropdownInPalette = true;
   config.unusedConfig = [];
   for (prop in skin.AutohandlerTouchItems) {
     AUTO_HANDLER_MAP[prop] =
