@@ -59,6 +59,7 @@ languages = {
   'Romanian' => ['ro-RO', 'ro'],
   'Russian' => ['ru-RU', 'ru'],
   'Serbian (Cyrillic)' => ['sr-SP', 'sr'],
+  'Sinhala' => ['si-LK', 'si'],
   'Slovak' => ['sk-SK', 'sk'],
   'Slovenian' => ['sl-SI', 'sl'],
   'Spanish' => ['es-ES', 'es'],

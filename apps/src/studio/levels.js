@@ -2497,6 +2497,10 @@ levels.js_hoc2015_win_lose = {
   ],
 
   'progressConditions' : [
+    // Got all items, not enough points
+    { required: { 'gotAllItems': true, 'currentPointsBelow': 200},
+      result: { message: msg.failedWinLoseScore(), blocklyMessage: msg.failedWinLoseScoreBlockly() } },
+
     // Timed out: not enough items, not enough points
     { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 },
       result: { success: false, message: msg.failedWinLoseTimeout() } },
@@ -2604,9 +2608,16 @@ levels.js_hoc2015_add_characters = {
     }
   ],
   'progressConditions' : [
-    { required: { 'collectedItemsAtOrAbove': 3 },
+    { required: { 'createdSpecificItemsBelow': { className: "pufferpig", count: 3 } },
+      result: {
+        success: false,
+        message: msg.failedAddCharactersTimeout(),
+        blocklyMessage: msg.failedAddCharactersTimeoutBlockly()
+      }
+    },
+    { required: { 'collectedSpecificItemsAtOrAbove': { className: "pufferpig", count: 3 } },
       result: { success: true, message: msg.successCharacter1() } },
-    { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
+    { required: { 'timedOut': true },
       result: {
         success: false,
         message: msg.failedAddCharactersTimeout(),
@@ -2670,8 +2681,8 @@ levels.js_hoc2015_chain_characters = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  instructions: msg.hoc2015_chain_characters2_instructions(),
-  instructions2: msg.hoc2015_chain_characters2_instructions2(),
+  instructions: msg.hoc2015_chain_characters_instructions(),
+  instructions2: msg.hoc2015_chain_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1800, // 60 seconds
   'showTimeoutRect': true,

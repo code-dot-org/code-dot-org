@@ -1,7 +1,7 @@
 "ko":
   errors:
     messages:
-      not_saved: '다음 오류를 수정하시기 바랍니다:'
+      not_saved: '다음 오류를 수정해주세요:'
       too_young: 이 내용은 연령 제한이 있어서 사용할 수 없습니다.
   activerecord:
     errors:
@@ -259,6 +259,8 @@
       prize_us_only: (U.S. students only)
       prizes_link: 자세히
   teacher:
+    answer: 응답
+    for_teachers_only: 선생님 전용
     title:
       one: '선생님 : '
       other: '나의 선생님들:'
@@ -328,7 +330,7 @@
       section: 섹션
       example: 예시 해법
       example_with_number: 예시 해법 %{solution_number}
-      submitted_on: '%{date} 에 제출됨'
+      submitted_on: '제출일:'
       unsubmit: 제출 취소
   user:
     email_confirm_needed: '이메일 주소가 확인되지 않았습니다:'
@@ -466,6 +468,7 @@
   pdf_download: PDF 다운로드
   download_coming_soon: 활동 자료 다운로드(예정)
   video_coming_soon: 동영상 자료(예정)
+  not_started: 이 레벨을 시도한 적이 없습니다.
   share_code:
     title: 프로그램을 확인하기 위해 "실행하기"를 클릭하세요.
     bounce_og_title: 내가 만든 바운스 게임 확인하기
@@ -508,9 +511,14 @@
       body: 다른 사람이 만든 앱과 이미지 갤러리 보기
     frozen:
       title: 겨울왕국
+    starwars:
+      title: 스타워즈
     infinity:
       title: 무한 Play Lab
       body: 플레이 랩을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 스토리나 게임을 만드세요
+    minecraft:
+      title: 마인크래프트
+      body: 코드를 이용해 마인크래프트 월드를 탐험해보세요.
   gallery:
     students_drew_these_with_code: 학생들이 코드로 그려낸 것들!
     students_made_these_with_code: 학생들이 만든 작품

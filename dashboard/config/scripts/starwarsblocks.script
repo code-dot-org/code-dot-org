@@ -1,6 +1,7 @@
 title 'Star Wars: Building a Galaxy With Code'
 description_short "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
 description "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+hidden 'false'
 
 stage 'Hour of Code 2015'
 

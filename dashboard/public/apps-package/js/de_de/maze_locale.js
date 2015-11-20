@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Wenn ein Weg in die benannte Richtung existiert, dann führe ein paar Aktionen aus."},
 "ifelseTooltip":function(d){return "Wenn ein Weg in die benannte Richtung existiert, beginne mit dem ersten Block, ansonsten den zweiten Block vor."},
 "ifFlowerTooltip":function(d){return "Wenn es eine Blume/Honigwabe in der angegebenen Richtung gibt, dann führe einige Aktionen aus."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Wenn eine Blume in der angegebenen Richtung ist, dann führe bestimmte Aktionen aus."},
 "ifelseFlowerTooltip":function(d){return "Ist eine Blume/Waben in der angegebenen Richtung, dann führe den ersten Block der Aktionen aus. Andernfalls führe den zweiten Block der Aktionen aus."},
 "insufficientHoney":function(d){return "Du benutzt die richtigten Bausteine, aber du hast nicht die richtige Menge an Honig."},
 "insufficientNectar":function(d){return "Du benutzt die richtigten Bausteine, aber du hast nicht die richtige Menge an Nektar."},

@@ -1370,11 +1370,11 @@ function checkForCollisions() {
     for (j = 0; j < skin.ItemClassNames.length; j++) {
       executeCollision(i, skin.ItemClassNames[j]);
       if (level.removeItemsWhenActorCollides) {
-        Studio.executeQueue('whenGetAllCharacterClass-' + skin.ItemClassNames[j]);
+        Studio.executeQueue('whenGetAll-' + skin.ItemClassNames[j]);
       }
     }
     if (level.removeItemsWhenActorCollides) {
-      Studio.executeQueue('whenGetAllCharacters');
+      Studio.executeQueue('whenGetAllItems');
     }
   }
 }
@@ -1792,25 +1792,16 @@ Studio.init = function(config) {
     Studio.musicController.preload();
   };
 
-  if (studioApp.cdoSounds && !studioApp.cdoSounds.isAudioUnlocked()) {
-    // Would use addClickTouchEvent, but iOS9 does not let you unlock audio
-    // on touchstart, only on touchend.
-    var removeEvent = dom.addMouseUpTouchEvent(document, function () {
-      studioApp.cdoSounds.unlockAudio();
-      removeEvent();
-    });
-  }
-
   // Play music when the instructions are shown
   var playOnce = function () {
-    if (studioApp.cdoSounds && studioApp.cdoSounds.isAudioUnlocked()) {
-      Studio.musicController.play();
-      document.removeEventListener('instructionsShown', playOnce);
-      document.removeEventListener('instructionsHidden', playOnce);
+    document.removeEventListener('instructionsShown', playOnce);
+    if (studioApp.cdoSounds) {
+      studioApp.cdoSounds.whenAudioUnlocked(function () {
+        Studio.musicController.play();
+      });
     }
   };
   document.addEventListener('instructionsShown', playOnce);
-  document.addEventListener('instructionsHidden', playOnce);
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1866,6 +1857,7 @@ Studio.init = function(config) {
   config.varsInGlobals = true;
   config.dropletConfig = dropletConfig;
   config.dropIntoAceAtLineStart = true;
+  config.showDropdownInPalette = true;
   config.unusedConfig = [];
   for (prop in skin.AutohandlerTouchItems) {
     AUTO_HANDLER_MAP[prop] =
@@ -2348,7 +2340,6 @@ var displayFeedback = function() {
     studioApp.displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
-      hideIcon: skin.hideIconInClearPuzzle,
       feedbackType: Studio.testResults,
       executionError: Studio.executionError,
       tryAgainText: tryAgainText,

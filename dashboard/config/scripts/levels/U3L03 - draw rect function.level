@@ -157,7 +157,7 @@
     "droplet_tooltips_disabled": "true",
     "debugger_disabled": "true",
     "encrypted_examples": "lP3v8o6oIQ+pLg0QOLcUdtQ3BrqIk3aEpYIvTsV+IRmNH1+I2xeJmeEgGFr2\nTXST\n",
-    "lock_zero_param_functions": "false",
+    "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "true"
   }
 }]]></config>

@@ -37,6 +37,11 @@ When /^I close the dialog$/ do
   }
 end
 
+When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until { @browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';") }
+end
+
 When /^I reset the puzzle to the starting version$/ do
   steps %q{
     Then I click selector "#versions-header"
@@ -187,6 +192,10 @@ When /^I click selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
 end
 
+When /^I focus selector "([^"]*)"$/ do |jquery_selector|
+  @browser.execute_script("$(\"#{jquery_selector}\")[0].focus();")
+end
+
 When /^I send click events to selector "([^"]*)"$/ do |jquery_selector|
   # svg elements can only be clicked this way
   @browser.execute_script("$(\"#{jquery_selector}\").click();")
@@ -235,6 +244,16 @@ Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedTe
   element_has_text(selector, expectedText)
 end
 
+Then /^I set selector "([^"]*)" text to "([^"]*)"$/ do |selector, text|
+  @browser.execute_script("$(\"#{selector}\").text(\"#{text}\");")
+end
+
+Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
+  # Add more unescaping rules here as needed.
+  expectedText.gsub!(/\\n/, "\n")
+  element_has_text(selector, expectedText)
+end
+
 Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expectedHtml|
   element_has_html(selector, expectedHtml)
 end
@@ -243,6 +262,16 @@ Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
   steps %{
     Then I wait to see a ".dialog-title"
     And element ".dialog-title" has text "#{expectedText}"
+  }
+end
+
+# pixelation and other dashboard levels pull a bunch of hidden dialog elements
+# into the dom, so we have to check for the dialog more carefully.
+Then /^I wait to see a visible dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+  steps %{
+    And I wait to see ".modal-body"
+    And element ".modal-body .dialog-title" is visible
+    And element ".modal-body .dialog-title" contains text "#{expectedText}"
   }
 end
 
@@ -498,9 +527,17 @@ Given(/^I manually sign in as "([^"]*)"$/) do |name|
   }
 end
 
+When(/^I sign out$/) do
+  steps 'When I am on "http://studio.code.org/users/sign_out"'
+end
+
 When(/^I debug cookies$/) do
   puts "DEBUG: url=#{CGI::escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
+end
+
+When(/^I debug focus$/) do
+  puts "Focused element id: #{@browser.execute_script("return document.activeElement.id")}"
 end
 
 And(/^I ctrl-([^"]*)$/) do |key|
@@ -545,6 +582,11 @@ end
 
 When /^I disable onBeforeUnload$/ do
   @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
+end
+
+Then /^I get redirected away from "([^"]*)"$/ do |old_path|
+  wait = Selenium::WebDriver::Wait.new(timeout: 30)
+  wait.until { !/#{old_path}/.match(@browser.execute_script("return location.pathname")) }
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|

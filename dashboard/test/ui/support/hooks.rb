@@ -11,3 +11,11 @@ After('@stop_after_failure') do |scenario|
     saw_failure = true
   end
 end
+
+Before('@as_student') do
+  steps 'Given I manually sign in as "TestStudent"'
+end
+
+After('@as_student') do
+  steps 'When I sign out'
+end

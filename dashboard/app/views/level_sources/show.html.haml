@@ -1,6 +1,6 @@
 = render partial: 'shared/sharing_meta_tags'
 
-- if @game.share_mobile_fullscreen? && browser.safari?
+- if browser.safari?
   :javascript
     if (!window.navigator.standalone) {
       window.addEventListener("load", function() {
@@ -8,9 +8,6 @@
       }, false);
     }
 
-- if !@game.share_mobile_fullscreen?
-  - @page_title = t('share_code.title')
-  %h1= @page_title
 = render partial: "levels/blockly", locals: { slider_speed: "0.9" }
 
 = render partial: 'level_sources/admin'

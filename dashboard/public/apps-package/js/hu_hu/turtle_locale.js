@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Felemeli vagy lejjebb viszi a ceruzát, hogy megállítsa vagy elindítsa a rajzolást."},
 "penUp":function(d){return "ceruza fel"},
 "reinfFeedbackMsg":function(d){return "Itt van a rajzod! Még dolgozhatsz rajta, de áttérhetsz a következő feladványra is."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "alfa beállítása"},
 "setColour":function(d){return "színbeállítások megadása"},
 "setPattern":function(d){return "minta beállítása"},
 "setWidth":function(d){return "szélesség beállítása"},
