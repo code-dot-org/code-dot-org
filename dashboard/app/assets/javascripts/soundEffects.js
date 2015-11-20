@@ -95,11 +95,13 @@ Sounds.prototype.initializeAudioUnlockState_ = function () {
         if (this.isAudioUnlocked()) {
           document.removeEventListener("mousedown", unlockHandler, true);
           document.removeEventListener("touchend", unlockHandler, true);
+          document.removeEventListener("keydown", unlockHandler, true);
         }
       }.bind(this));
     }.bind(this);
     document.addEventListener("mousedown", unlockHandler, true);
     document.addEventListener("touchend", unlockHandler, true);
+    document.addEventListener("keydown", unlockHandler, true);
   }.bind(this));
 };
 
