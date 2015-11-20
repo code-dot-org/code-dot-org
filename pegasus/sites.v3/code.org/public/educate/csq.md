@@ -23,7 +23,7 @@ CS ?NAME-TBD? aims to introduce students to tools and programming languages that
 ### <a name="flexible"></a>Designed for flexible implementation options
 CS ?NAME-TBD? will be designed primarily for students in grades 6-9, so it can be used in middle school or high school. The two semesters spiral upon each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
 
-### <a name="content"></a>A wide lense on Computer Science
+### <a name="content"></a>A wide lens on Computer Science
 Computer Science encompases far more than just coding, and CS ?NAME-TBD? will provide students with opportunities to explore the many facets of CS, including:
 
 - Human Computer Interaction: The myriad ways in which people interface with the computing objects in their lives.
@@ -38,7 +38,7 @@ Computer Science encompases far more than just coding, and CS ?NAME-TBD? will pr
 
 ### <a name="relationship"></a>What is the relationship between CS ?NAME-TBD? and Exploring Computer Science?
 
-This course is deeply inspired by the philosophy of Exploring CS, based on our years of experience teaching ECS, scaling it to hundreds of classrooms nationwide, and evaluation of feedback from the teachers. This course teaches the same core concepts as ECS, along with the same _**inquiry-based philosophy**_ and the same _**teacher-learner-observer PD model**_. It also shares the same emphasis on _**equity**_ which has pervaded Code.org's curriculum in other grade levels. Because of a shared philosophy and similar learning sequence, CS ?NAME-TBD? is a natural successor to ECS for schools or teachers who love the ECS phillosophy while looking to gain some of the benefits mentioned below.
+This course is deeply inspired by the philosophy of Exploring CS, based on our years of experience teaching ECS, scaling it to hundreds of classrooms nationwide, and evaluation of feedback from the teachers. This course teaches the same core concepts as ECS, along with the same _**inquiry-based philosophy**_ and the same _**teacher-learner-observer PD model**_. It also shares the same emphasis on _**equity**_ which has pervaded Code.org's curriculum in other grade levels. Because of a shared philosophy and similar learning sequence, CS ?NAME-TBD? is a natural successor to ECS for schools or teachers who love the ECS philosophy while looking to gain some of the benefits mentioned below.
 
 ### <a name="transition"></a>Why is Code.org transitioning to a new course from ECS?
 
@@ -73,9 +73,9 @@ For 2017-18 and beyond, we'll continue supporting ECS in our existing schools wh
 
 Of course! If schools prefer to continue using the ECS v5 curriculum, we will continue distributing it to them. If they want to use the latest version of ECS, they may also choose to ask the ECS team for it.
 
-### I was trained on ECS, can I transition to CSE?
+### I was trained on ECS, can I transition to CS ?NAME-TBD??
 
-For existing ECS teachers who want to try the new curriculum, we’ll also offer a short transitional PD to help familiarize them to the new content. The core pedagogy surrounding equity and inquiry as well as the high level conceptual material should be very familiar to ECS teachers. You will also be welcome to integrate parts of CSE into your current ECS course at your own pace and as you see fit.
+For existing ECS teachers who want to try the new curriculum, we’ll also offer a short transitional PD to help familiarize them to the new content. The core pedagogy surrounding equity and inquiry as well as the high level conceptual material should be very familiar to ECS teachers. You will also be welcome to integrate parts of CS ?NAME-TBD? into your current ECS course at your own pace and as you see fit.
 
 <!--
 #### Can I pilot the new course?

@@ -1,11 +1,11 @@
 ---
-title: Teacher Resources - Star Wars
+title: Teacher Resources - MINECRAFT
 nav: hoc_teacher_resources_nav
 ---
 
-# Star Wars: Building a Galaxy with Code
+# MINECRAFT Hour of Code
 
-<center><iframe width="483" height="234" src="https://www.youtube.com/embed/vNjiHkQQl6A" frameborder="0" allowfullscreen></iframe></center>
+<center><iframe width="830" height="429" src="https://www.youtube.com/embed/55jADN4Y7Pg" frameborder="0" allowfullscreen></iframe></center>
 
 [col-50]
 
@@ -13,8 +13,7 @@ nav: hoc_teacher_resources_nav
 
 ### Lesson Plans:
 
-- [Star Wars: Building a Galaxy with Code](/files/star-wars-lp.pdf)
-- [Answer Sheet and Teacher Tips](https://docs.google.com/document/d/1BzdwxHsmFMt7ib1HLW7dL24W3sSCLhTklkj4wZ9I26c/edit?usp=sharing)
+- Coming soon!
 
 ### Extension Activities:
 
@@ -33,7 +32,7 @@ nav: hoc_teacher_resources_nav
 
 ## Overview
 
-Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
 
 **Recommended Age Range:** 6+
 
