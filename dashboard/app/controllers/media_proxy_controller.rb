@@ -41,6 +41,7 @@ class MediaProxyController < ApplicationController
     url = URI.parse(location)
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
     http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl = url.scheme == 'https'
     path = (url.path.empty?) ? '/' : url.path
 
     # Limit how long we're willing to wait.

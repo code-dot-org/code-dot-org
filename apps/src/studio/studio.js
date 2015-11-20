@@ -1370,11 +1370,11 @@ function checkForCollisions() {
     for (j = 0; j < skin.ItemClassNames.length; j++) {
       executeCollision(i, skin.ItemClassNames[j]);
       if (level.removeItemsWhenActorCollides) {
-        Studio.executeQueue('whenGetAllCharacterClass-' + skin.ItemClassNames[j]);
+        Studio.executeQueue('whenGetAll-' + skin.ItemClassNames[j]);
       }
     }
     if (level.removeItemsWhenActorCollides) {
-      Studio.executeQueue('whenGetAllCharacters');
+      Studio.executeQueue('whenGetAllItems');
     }
   }
 }
