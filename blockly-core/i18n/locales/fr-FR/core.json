@@ -25,7 +25,7 @@
   "COLOUR_RGB_TITLE": "Colorez avec",
   "COLOUR_RGB_TOOLTIP": "Créez une couleur avec la quantité spécifiée de rouge, vert et bleu.  Toutes les valeurs doivent être comprises entre 0 et 100.",
   "CONFIRM_DELETE_FUNCTION_MESSAGE": "Attention ! Êtes-vous sûr de vouloir supprimer %1 ?",
-  "CONTRACT_EDITOR_HEADER": "Recette de conception",
+  "CONTRACT_EDITOR_HEADER": "Méthode de conception",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "sortir de la boucle",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "continuer avec la prochaine itération de la boucle",

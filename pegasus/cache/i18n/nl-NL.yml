@@ -1,5 +1,5 @@
 "nl-NL":
-  hour_of_code: Hour of Code
+  hour_of_code: Uur Code
   hello: Hallo wereld
   select_language: Kies de gewenste taal
   en: informatica
@@ -154,11 +154,11 @@
   boy: Jongen
   help_recruit_coders: Help ons meer programmeurs te vinden voor jouw team!
   help_recruit: Help ons meer programmeurs te vinden!
-  lines_of_code: MEER DAN <b># REGELS CODE</b> GESCHREVEN TOT NU TOE.
+  lines_of_code: AL MEER DAN <b># REGELS CODE</b> GESCHREVEN.
   lines_of_code_alt: <b>#</b> REGELS CODE GESCHREVEN DOOR LEERLINGEN
   who_has_done_hoc: 'Wie heeft het #HourOfCode gedaan? @codeorg'
   hoc_leaderboards: De 'Hour of Code' Highscores
-  students_and_lines: '%{students} leerlingen hebben het Uur Code gedaan en %{lines}
+  students_and_lines: '%{students} leerlingen hebben een Uur Code gedaan en %{lines}
     regels code geschreven.'
   start_hoc: Start de 'Hour of Code' nu
   contact_form_topic_press: Pers/media (interview of met betrokkenen spreken)
@@ -226,7 +226,8 @@
     &ldquo;100% van mijn leerlingen raakte door dit
     programma geëngageerd en betrokken en deed actief mee.&rdquo;
     Adam, leraar
-  homepage_hero_text_stat_loc: '#loc lijnen code geschreven door studenten'
+  homepage_hero_text_stat_loc: 2.5 miljoen meisjes hebben zich aangemeld om te leren
+    op Code Studio
   homepage_hero_text_stat_students: '#student_count studenten accounts op Code Studio'
   homepage_hero_text_stat_served: 'Uur van Code: #served geserveerd'
   homepage_slot_text_hoc: Het Uur Code
@@ -331,13 +332,13 @@
   starwars_javascript_start_button: Probeer nu
   starwars_blocks_title: blokken
   starwars_blocks_description: Gebruik klik-en-sleep-blokken.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: Veel talen | Moderne browsers, smartphones, tablets | Leeftijd
+    6-10jr
   starwars_blocks_start_button: Probeer nu
   starwars_watch_videos: Bekijk voor je begint deze inspiratie-video's
   starwars_speak_languages: Spreek je een andere taal?
   starwars_help_translate: Help ons met vertalen
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: Moderne browsers, smartphones, tablets
   mc_name: Minecraft Uur Code
   mc_longdescription: Gebruik blokken code om Steve of Alex te helpen op hun avontuur
     door deze Minecraft-wereld.
@@ -345,25 +346,26 @@
     door deze Minecraft-wereld.
   mc_gradelevel: Leeftijd 6+
   mc_platformtext: Moderne browsers, smartphones, tablets
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Veel talen | Moderne browsers en tablets | Leeftijd 6+jr
   minecraft_subtitle: Minecraft Uur Code
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  volunteer_engineer_submission_title: Inspireer leerlingen en meld je als vrijwilliger
+    voor het Uur Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 leerkrachten geven dit
     jaar een Uur Code in hun klaslokaal, 7-13 dec 2015. Ze willen jouw hulp! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} leerkrachten zijn
+    op zoek naar vrijwilligers om dit jaar in December te helpen met hun Uur Code.<br>%{num_volunteers}
+    vrijwilligers hebben zich aangemeld. Doe mee!'
   volunteer_engineer_submission_intro_background: Het Uur Code is een wereldwijde
     beweging om een uur informatica uit te proberen, met een bereik van tientallen
     miljoenen leerlingen in meer dan 180 landen. Doe mee tijdens de Computer Science
     Eductaion Week, 7-13 december.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_recruit: 'Deze leerkrachten zijn op zoek naa
+    iemand die <span style="font-family: ''Gotham 7r'', sans-serif;">gepassioneerd
+    is over informaticaonderwijs</span> die kan helpen in de klas, of iemand die hun
+    leerlingen kan <span style="font-family: ''Gotham 7r'', sans-serif;">inspireren</span>
+    door ze te vertellen over wat je allemaal kan doen met informatie (dat zou via
+    videochat kunnen). Als je geen vrijwilliger wil worden, <a href="%{url}">lees
+    hier</a> over het organiseren van je eigen Uur Code.'
   volunteer_engineer_submission_intro_signup: Voer de volgende gegevens in als je
     een informaticastudent of software ontwikkelaar bent. Velden met een <span class="form-required-field">*</span>
     zijn verplicht.
@@ -690,9 +692,9 @@
   learn_sign_up_description: Meld je aan om deel te nemen in het Uur Code tijdens
     de week van het informaticaonderwijs
   learn_sign_up_button: Meld je aan
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Bekijk deze inspirerende video met je klas
+  learn_videos_show: Laat deze inspirerende video zien aan je klas
+  learn_videos_before_hoc: Bekijk een inspirerende video voor je Uur Code
   learn_educator_resources_description: Leer om een Uur Code te onderwijzen
   learn_educator_resources_button: Middelen voor leerkrachten
   learn_are_you_educator: Ben je een leerkracht? Leer dan <a href="http://hourofcode.com/resources/how-to">hoe
@@ -701,9 +703,9 @@
   hoc2014_try_new_tutorial: Probeer onze nieuwe Uur Code-cursus in beta
   hoc2014_try_scrat: Angry Birds, PvZ en Scrat
   hoc2014_try_frozen: Kunst met Anna en Elsa van Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Opdrachten van Code.org
+  carousel_heading_3rd_party: Opdrachten van andere partijen
+  carousel_heading_third_party: Opdrachten van andere partijen
   carousel_heading_international: Opdrachten in jouw taal
   carousel_heading_domestic: Handleidingen beschikbaar in het Engels
   carousel_heading_beginners: Handleidingen voor Beginners

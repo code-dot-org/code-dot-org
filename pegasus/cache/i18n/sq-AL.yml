@@ -1,5 +1,5 @@
 "sq-AL":
-  hour_of_code: Hour of Code
+  hour_of_code: Ora e Kodit
   hello: Pershendetje Botë
   select_language: Ju lutem zgjedheni gjuhën tuaj
   en: Shkencat Kompjuterike
@@ -331,7 +331,7 @@
     videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: Shfletuesit modern, telefonat e mençur, tabletat
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.

@@ -1,5 +1,5 @@
 "pl-PL":
-  hour_of_code: Hour of Code
+  hour_of_code: Godzina Kodowania
   hello: Witaj świecie
   select_language: Wybierz język
   en: Informatyka
@@ -322,13 +322,13 @@
   starwars_javascript_start_button: Spróbuj teraz
   starwars_blocks_title: Bloki
   starwars_blocks_description: Użyj bloków do przeciągania i upuszczania.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: Wiele języków (już wkrótce) | Nowoczesne przeglądarki, smartfony,
+    tablety | W wieku 6-10
   starwars_blocks_start_button: Spróbuj teraz
   starwars_watch_videos: Zanim zaczniesz, obejrzyj jeden z tych inspirujących filmów
   starwars_speak_languages: Czy mówisz w innym języku?
   starwars_help_translate: Pomóż nam tłumaczyć
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: Nowoczesne przeglądarki, smartfony, tablety
   mc_name: Minecraftowa Godzina Kodowania
   mc_longdescription: Użyj bloków kodu, by dołączyć do przygody ze Steve lub Alex
     poprzez świat Minecrafta.
@@ -336,9 +336,11 @@
     poprzez świat Minecrafta.
   mc_gradelevel: Wiek 6 +
   mc_platformtext: Nowoczesne przeglądarki, smartfony, tablety
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Wiele języków (już wkrótce) | Nowoczesne przeglądarki i tablety | Wiek
+    6 +
   minecraft_subtitle: Minecraftowa Godzina Kodowania
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  volunteer_engineer_submission_title: Inspiruj studentów i wolontariuszy dla godziny
+    kodowania.
   volunteer_engineer_submission_subtitle_generic: '100 000 nauczycieli będzie gościć
     Godzinę Kodowanie w swoich klasach w tym roku między 7 a 13 grudnia. Potrzebują
     Twojej pomocy! '
@@ -693,9 +695,9 @@
   learn_sign_up_description: Zarejestruj się, by uczestniczyć w Godzinie Kodowania
     w czasie Tygodnia Nauczania Informatyki
   learn_sign_up_button: Zarejestruj się
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Oglądnij ten film z twoją klasą
+  learn_videos_show: Pokaż ten inspirujący film swojej klasie
+  learn_videos_before_hoc: Obejrzyj ten inspirujący film prze twoją godziną kodowania
   learn_educator_resources_description: Dowiedz się, jak wykorzystać Godzinę kodowania
     (the Hour of Code)
   learn_educator_resources_button: Zasoby nauczyciela
@@ -706,9 +708,9 @@
     beta
   hoc2014_try_scrat: Angry Birds, PvZ i wiewióra
   hoc2014_try_frozen: Artysta z Anną i Elsą, z Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg: Poradnik stworzone przez Code.org
   carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_third_party: Poradniki przez strony trzecie
   carousel_heading_international: Poradniki w Twoim języku
   carousel_heading_domestic: Poradniki (samouczki) dostępne w języku angielskim
   carousel_heading_beginners: Samouczki dla początkujących
