@@ -153,7 +153,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
         url: "/popup/stats",
         data: {
           script_id: stageData.script_id,
-          script_level_id: currentLevelId,
+          current_level_id: currentLevelId,
           user_id: userId,
           section_id: sectionId
         }, success: function (result) {
