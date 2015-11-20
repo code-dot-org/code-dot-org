@@ -31,7 +31,7 @@
   "ifTooltip": "Om det finns en sökväg i den angivna riktningen, utför ett antal åtgärder.",
   "ifelseTooltip": "Om det finns en väg i den angivna riktningen, gör i så fall det första blocket av handlingar. Annars, gör den andra blocket av handlingar.",
   "ifFlowerTooltip": "Om det finns en blomma/honungskaka i angiven riktning, utför vissa åtgärder.",
-  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions.",
+  "ifOnlyFlowerTooltip": "Om det finns en blomma åt det angivna hållet så gör vissa saker.",
   "ifelseFlowerTooltip": "Om det finns en blomma/honungskaka i angiven riktning, utför då det första blocket av åtgärder. Annars, utför det andra blocket av åtgärder.",
   "insufficientHoney": "Du använder alla de rätta blocken, men du måste göra rätt mängd honung.",
   "insufficientNectar": "Du använder alla de rätta blocken, men du behöver samla in rätt mängd av nektar.",

@@ -1,6 +1,6 @@
 {
   "blockDestroyBlock": "destroy block",
-  "blockIf": "if",
+  "blockIf": "agr",
   "blockIfLavaAhead": "if lava ahead",
   "blockMoveForward": "move forward",
   "blockPlaceTorch": "place torch",
@@ -51,7 +51,7 @@
   "blockTypeWater": "water",
   "blockTypeWool": "wool",
   "blockWhileXAheadAhead": "ahead",
-  "blockWhileXAheadDo": "do",
+  "blockWhileXAheadDo": "کر",
   "blockWhileXAheadWhile": "while",
   "generatedCodeDescription": "By dragging and placing blocks in this puzzle, you've created a set of instructions in a computer language called Javascript. This code tells computers what to display on the screen. Everything you see and do in Minecraft also starts with lines of computer code like these.",
   "houseSelectChooseFloorPlan": "Choose the floor plan for your house.",

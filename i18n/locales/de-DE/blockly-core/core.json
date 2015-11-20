@@ -25,7 +25,7 @@
   "COLOUR_RGB_TITLE":"Färbe mit",
   "COLOUR_RGB_TOOLTIP":"Erstelle eine Farbe mit der angegebenen Menge an Rot, Grün und Blau.  Alle Werte müssen zwischen 0 und 100 sein.",
   "CONFIRM_DELETE_FUNCTION_MESSAGE":"Achtung! Bist du sicher das du %1 löschen willst?",
-  "CONTRACT_EDITOR_HEADER":"Design Recipe",
+  "CONTRACT_EDITOR_HEADER":"Designkonzept",
   "CONTROLS_FLOW_STATEMENTS_HELPURL":"http:\/\/de.wikipedia.org\/wiki\/Kontrollstruktur",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK":"Verlassen der Schleife",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE":"mit der nächsten Wiederholung der Schleife fortfahren",

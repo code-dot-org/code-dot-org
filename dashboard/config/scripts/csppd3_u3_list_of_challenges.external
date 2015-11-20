@@ -1,0 +1,51 @@
+name 'CSPPD3-u3 list of challenges'
+css 'unplugged'
+markdown <<MARKDOWN
+
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Challenge Overview > List of Challenges 
+
+<br/>
+See below for the list of challenge lessons. Feel free to explore the materials so you can selection one to complete. **Your goal right now is to pick the lesson that you will complete later.**
+<br>
+
+
+#### Are you fairly new to programming? Pick one of these… 
+
+##### Lessons 2 - 5: Turtle Drawing
+***Consider doing if:*** you are totally new to programming
+<br><br>
+**What you learn:** These lessons teach simple programming commands, turtle drawing, reading the documentation that describes what a programming language can do, and how do design programs from the top down. 
+
+**You will produce:** a drawing using turtle functions that you learned about in the documentation.
+<br><br>
+>**Lesson Plans:**
+
+>- <a href=”https://docs.google.com/document/d/1TL3j0pcKHvpAruyoqpIb5a84vyMCRm8el20y6Ck6pTk/edit” target =_blank>Lesson 2 >></a>
+- <a href=”https://docs.google.com/document/d/1Q7j0s0z04ykJoS6gu096QjJOuUYt4jbbz7GxNz1UeVs/edit” target =_blank>Lesson 3 >></a>
+- <a href=”https://docs.google.com/document/d/1uw4yg-1EI5thSMBGnFIgH-VGuF3OKNEDJcWXVvq_CFM/edit” target =_blank>Lesson 4 >></a>
+- <a href=”https://docs.google.com/document/d/1x0XymE9nEEQkVoOED53Wwu3ssBpcJEFESv-K4RInUa4/edit” target =_blank>Lesson 5 >></a>
+
+##### Lessons 6 - 7:
+***Consider doing if:*** you have some experience with programming, but want to brush up on some of the basics. 
+<br><br>
+**What you learn:** These lessons teach the creation of functions that take an input when they’re used (called functions with parameters), simple repeat loops, and how to create random numbers in a program. 
+
+**You will produce:** a drawing of an ocean scene that looks slightly different each time you run the program, with randomly generated numbers of fish and other ocean friends.
+<br><br>
+>**Lesson Plans:**
+
+>- <a href=”https://docs.google.com/document/d/13b3z3Zg7S78X6FKfEqI4q7y2kQx9bLc1MAyGUjEQfi0/edit” target =_blank>Lesson 6 >></a>
+- <a href=”https://docs.google.com/document/d/1PBPLJ-qFkXrFuVo4MdsRC081rntY1mLyQTBQGtHJDvI/edit” target =_blank>Lesson 7 >></a>
+
+
+#### Do you have some experience with programming? Pick one of these… 
+
+*All of the following lessons use the <a href=“https://youtu.be/-EoTeD4mSNU” target=_blank>Design Mode</a> feature of App Lab. During your in-person workshop in November or December you will have a chance to learn more about design mode, but make sure you spend time with <a href = “https://studio.code.org/s/cspunit3/stage/12/puzzle/1” target=_blank>Lesson 12</a> if you want more background and support with design mode!* 
+
+
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

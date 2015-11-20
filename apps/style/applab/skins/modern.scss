@@ -18,7 +18,7 @@
     }
   }
 
-  input[type=text], input:not([type]), div[contenteditable=true] {
+  input[type=text], input:not([type]), div.textArea {
     border: 1px solid #999;
     padding: 5px; /* padding clips text in text inputs in Firefox */
   }
@@ -41,7 +41,7 @@
     }
   }
 
-  button, select, input, [contenteditable=true] {
+  button, select, input, .textArea {
     outline: 0;
   }
 

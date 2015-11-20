@@ -28,7 +28,8 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 
 
-[<img src="/images/fit-700/tutorials.png">](<%= resolve_url('https://code.org/learn') %>)
+[<img src="/images/fill-400/mc-1.jpg">](<%= resolve_url('https://code.org/learn') %>)
+[<img src="/images/fill-400/starwars_carousel.jpg">](<%= resolve_url('https://code.org/learn') %>)
 
 ## 4) Plan your technology needs - computers are optional
 
@@ -126,7 +127,8 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 ## Other Hour of Code resources for educators:
 - Use this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx) to organize your Hour of Code.
 - Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code teachers. 
-- Attend our [Educator's Guide to the Hour of Code webinar](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
+- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+- [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
 <% if @country == 'us' %>
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).

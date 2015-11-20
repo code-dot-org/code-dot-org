@@ -154,7 +154,7 @@ v:function(d,k){bounce_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:(k=bounce_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).bounce_locale = {
-"bounceBall":function(d){return "bounce ball"},
+"bounceBall":function(d){return "ibbawnsja il-ballun"},
 "bounceBallTooltip":function(d){return "Bounce a ball off of an object."},
 "continue":function(d){return "Continue"},
 "dirE":function(d){return "E"},

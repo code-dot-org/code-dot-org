@@ -23,8 +23,7 @@ Assigns a value to a previously declared variable.
 
 [/short_description]
 
-
-**Note**: The variable must be declared using "var x" before it can be assigned another value.  Variables can be assigned to a static value or the result of a function or expression.
+To process data in our apps we need to assign values to memory locations we have previously named using *var* to declare a variable. Programmers read the statement "area = length * width;" as "area gets length times width". The variable getting the value always goes on the left hand side of the assignment operator =. The right hand side of the assignment operator can be a number or a string, or the number or string returned by a function, or the numeric or string result of the evaluation of an expression.
 
 [/description]
 
@@ -33,9 +32,9 @@ ____________________________________________________
 
 [example]
 
-
 ```
-var x = 0;
+// Declare, assign, and output the value of a variable.
+var x;
 x = 5;
 console.log("x has the value " + x)
 ```
@@ -46,23 +45,15 @@ ____________________________________________________
 
 [example]
 
+**Example: Circumference and Area** Calculate the circumference and area of a circle with radius 10.
 
 ```
-// simple Fibonacci
-var x = 1;
-var y = 1;
-var z = 2;
-console.log(x + " " + y + " " + z)
-
-x = y + z;
-y = z + x;
-z = x + y;
-console.log(x + " " + y + " " + z)
-
-x = y + z;
-y = z + x;
-z = x + y;
-console.log(x + " " + y + " " + z)
+// Calculate the circumference and area of a circle with radius 10.
+var radius, circumference, area;
+radius = 10;
+circumference = 2 * Math.PI * radius;
+area = Math.PI * radius * radius;
+console.log("Circle radius 10 has circumference of " + circumference + " and area of " + area);
 ```
 
 [/example]
@@ -71,17 +62,47 @@ ____________________________________________________
 
 [example]
 
+**Example: Fibonacci** Generate the first nine terms of the Fibonacci series.
 
 ```
-textInput("myTextInput", "Hi")
-button("myButton","Click Me")
-onEvent("myButton", "click", function(event) {
+// Generate the first 9 terms of the Fibonacci series.
+var termA, termB, termC;
+termA = 1;
+termB = 1;
+termC = termA + termB;
+console.log(termA + " " + termB + " " + termC);
+termA = termB + termC;
+termB = termC + termA;
+termC = termA + termB;
+console.log(termA + " " + termB + " " + termC);
+termA = termB + termC;
+termB = termC + termA;
+termC = termA + termB;
+console.log(termA + " " + termB + " " + termC);
+```
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Example: Message Board** Collect, count and display messages from friends.
+
+```
+// Collect, count and display messages from friends.
+textLabel("myTextLabel", "Type a message and press press enter");
+textInput("myTextInput", "");
+var count;
+count=1;
+onEvent("myTextInput", "change", function(event) {
   var myText;
   myText = getText("myTextInput");
-  console.log(myText)
-})
+  write("Message #" + count + ": " + myText);
+  setText("myTextInput", "");
+  count = count + 1;
+});
 ```
-
 
 [/example]
 
@@ -92,7 +113,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-x = 5
+x = ___;
 ```
 
 [/syntax]
@@ -103,46 +124,25 @@ x = 5
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | variable name | Yes | The variable name being assigned to  |
-| value | any type | Yes | The value the variable is being assigned to.  |
+| x | variable name | Yes | The name you will use in the program to reference the variable. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |
+| ___ | any type | Yes | The right hand side of the assignment operator can be a number or a string, or the number or string returned by a function, or the numeric or string result of the evaluation of an expression. |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-Usually you do not think of assignment returning a value, you simply think of it as completing the assignment of the variable to the value.  However, the expression technically does return the value that the variable was assigned to.
-For instance the following code displays "Value is 4"
-
-```
-var x = 1;
-var y = 2*(x=2)
-console.log("Value is " + y)
-```
+No return value. Variable assigned value in memory.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- You can use the current value of a variable in the calculation of the new value of a variable.
-- Be careful in your if statements that you don't accidentally do an assignment.  if(x=1) is very different than if(x==1).  These bugs can be very hard to catch because if(x=1) is a valid statement, but isn't probably what you intended.
-- In some programming languages, the return result of assignment is 'true' or 'false', so you can test if your assignment happened using an if statement.  That is not the case in Javascript.
-- If you're assigning a value to some complicated mathematical expression (say E = m*c*c) it can be helpful to add a comment letting the next developer know you're calculating the energy in the mass using Einstein's theory of relativity.
-- Puzzler for you: what does the following code print...
 
-
-```
-var x = 1
-x = x + (x=3)
-console.log(x)
-
-x = 1
-x = (x=3) + x
-console.log(x)
-// Neat isn't it!
-```
-
+- The variable must be declared using *var* before it can be assigned its initial value. 
+- You can use the same variable on both the right hand side of the assignment operator = and the left hand side. This is sometimes used for a counter *count = count + 1;*
+- = is the assignment operator. == is the boolean check for equivalency operator.
 
 [/tips]
 
