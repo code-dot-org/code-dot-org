@@ -1,13 +1,7 @@
 require 'test_helper'
-require 'minitest/autorun'
-require 'aws-sdk'
 require 'fake_sqs/test_integration'
-
 require 'sqs/rate_limiter'
-require 'sqs/queue_processor'
 require 'sqs/queue_processor_config'
-require 'pp'
-require 'set'
 
 class RateLimiterTest < ActiveSupport::TestCase
   DCDO_MAX_RATE_KEY = 'test-max-rate'
@@ -17,7 +11,7 @@ class RateLimiterTest < ActiveSupport::TestCase
   end
 
   def test_rate_limiter_with_default_rate_limit
-    limiter = SQS::RateLimiter.new(create_config(max_rate: 10))
+    limiter = SQS::RateLimiter.new(create_config(max_rate: 10, num_processors: 1, num_workers_per_processor: 1))
 
     # If the maximum rate is 10 messages/second, we need to wait at least 0.1 seconds after
     # the start of a batch with 1 message to stay below the limit.
@@ -28,6 +22,13 @@ class RateLimiterTest < ActiveSupport::TestCase
     assert_in_delta 0.01, limiter.inter_batch_delay(batch_size: 1, elapsed_time_sec: 0.09)
     assert_in_delta 0.0, limiter.inter_batch_delay(batch_size: 1, elapsed_time_sec: 0.1)
     assert_in_delta 0.0, limiter.inter_batch_delay(batch_size: 1, elapsed_time_sec: 0.2)
+
+    # Make sure that as the number of processors and workers goes up that the inter batch delays also increase.
+    limiter2 = SQS::RateLimiter.new(create_config(max_rate: 10, num_workers_per_processor: 5, num_processors: 1))
+    assert_in_delta 0.5, limiter2.inter_batch_delay(batch_size: 1, elapsed_time_sec: 0.0)
+
+    limiter3 = SQS::RateLimiter.new(create_config(max_rate: 10, num_workers_per_processor: 5, num_processors: 2))
+    assert_in_delta 1, limiter3.inter_batch_delay(batch_size: 1, elapsed_time_sec: 0.0)
   end
 
   def test_rate_limiter_with_disabled_rate_limit
@@ -66,13 +67,13 @@ class RateLimiterTest < ActiveSupport::TestCase
 
   private
 
-  def create_config(max_rate:)
-    SQS::QueueProcessorConfig.new(
-      queue_uri: 'http://example.com',
+  def create_config(max_rate:, num_workers_per_processor: 1, num_processors: 1)
+    SQS::QueueProcessorConfig.new(queue_uri: 'http://example.com',
+      handler: NoOpHandler.new,
       initial_max_rate: max_rate,
       dcdo_max_rate_key: DCDO_MAX_RATE_KEY,
-      handler: NoOpHandler.new,
-      num_workers: 1,
+      num_processors: num_processors,
+      num_workers_per_processor: num_workers_per_processor,
       logger: @logger)
   end
 
