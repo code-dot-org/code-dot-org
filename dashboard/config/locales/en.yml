@@ -245,6 +245,7 @@ en:
         artist: 'Draw Something'
         calculate: 'Calculate Something'
     user:
+      pair_programming: 'Pair Programming'
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
       label: 'Hi %{username}'

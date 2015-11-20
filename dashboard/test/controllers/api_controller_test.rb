@@ -273,6 +273,26 @@ class ApiControllerTest < ActionController::TestCase
     assert_select 'a[href="http://test.host/users/sign_out"]', 'Sign out'
   end
 
+  test 'show link to pair programming when in a section' do
+    student = create(:follower).student_user
+    sign_in student
+
+    get :user_menu
+
+    assert_response :success
+    assert_select 'a[href="http://test.host/pairing"]', 'Pair Programming'
+  end
+
+  test "don't show link to pair programming when not in a section" do
+    student = create(:student)
+    sign_in student
+
+    get :user_menu
+
+    assert_response :success
+    assert_select 'a[href="http://test.host/pairing"]', false
+  end
+
   test 'api routing' do
     # /dashboardapi urls
     assert_routing({method: "get", path: "/dashboardapi/user_menu"},
