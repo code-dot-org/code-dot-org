@@ -42,7 +42,7 @@ This activity builds off of the classic game of Rock/Paper/Scissors, known to mo
 [Kodable fuzzFamily Frenzy](https://www.kodable.com/hour-of-code/lessons)  
 **Ages 5-9. Seqence, Algorithms, Programming, unplugged.** Students will learn basic programing language and use math concepts to move a “robot” forward, spin, and jump.
 
-[High Seas](http://www.cs-first.com/clubplan/sample-activity-0)  
+[High Seas](http://www.cs-first.com/content/hour-code-teachers)  
 **Ages 7-13. Sequence, Art, Storytelling, web-based.** Students will use Scratch to program a story about being lost at sea. 
 
 [Bitsbox Coding + Math](https://bitsbox.com/hocprint.html)  
@@ -78,7 +78,7 @@ This activity builds off of the classic game of Rock/Paper/Scissors, known to mo
 [Climate Science](https://app.vidcode.io/hourofcode/science-teacher-guide)  
 **Ages 12-16. Science (Climate), Science (Environment), unplugged.** Students draw a picture, and take turns giving the class steps to recreate their drawing.
 
-[High Seas](http://www.cs-first.com/clubplan/sample-activity-0)  
+[High Seas](http://www.cs-first.com/content/hour-code-teachers)  
 **Ages 7-13. Sequence, Art, Storytelling, web-based.** Students will use Scratch to program a story about being lost at sea. 
 
 [Arduino Activity](https://csedweek.org/csteacher/arduino.pdf)  

@@ -12,15 +12,9 @@ Code.org hosts regular, free virtual events for our community. Here are a few hi
 
 ## Upcoming Events
 
-### An Educator's Guide to the Hour of Code
-#### Wednesday, November 18, 2015 from 7:00 PM to 8:00 PM (CST) 
-In this interactive webinar, you'll hear from Melissa Jones, Community Manager at Code.org and Laura Kline, Product Manager for Hour of Code and learn the five simple steps you can take to plan and deliver an engaging, interactive coding event at your school.
-<br>
-[<button>Register Now</button>](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
-
-### Sneak Peek: 2015 Hour of Code Tutorials
+### Ask Your Final Hour of Code Questions w/ Hadi Partovi
 #### Wednesday, December 2, 2015 from 7:00 PM to 8:00 PM (CDT) 
-In this interactive webinar, you'll get a sneak peek of all the new tutorials for 2015. You'll get a chance to preview what's new, what's cool and what you might want to use in your classroom. This guided tour of the tutorials will be hosted by Code.org's VP of Product,  Alice Steinglass, VP of Product and will feature guest speakers from a number of the Hour of Code partners.
+To prepare for this year’s Hour of Code, we’re organizing a special chat with Hadi Partovi, co-founder of Code.org, and Alice Steinglass, head of product and engineering who designed this year’s Minecraft and Star Wars tutorials.   This will be mostly an open-ended Q&A, whether to answer questions about how to host an Hour of Code, or just asking Hadi or Alice your own favorite computer science questions, we encourage every Hour of Code organizer to join and hear a bit about the vision for the campaign.
 <br>
 [<button>Register Now</button>](http://www.eventbrite.com/e/sneak-peak-2015-hour-of-code-tutorials-tickets-17987437911)
 
@@ -39,6 +33,12 @@ Join [Hadi Partovi](https://code.org/about/leadership/hadi_partovi), CEO and Fou
 In this interactive discussion, you’ll hear from Pat Yongpradit, VP of Education at Code.org and Heather King, program manager at Outlier, about the results of our programs over the course of the 2014-15 school year. What did teachers take away from professional development? What did students learn? What did we learn from our district partnerships? Learn from our successes and challenges as we discuss how we might work together as a CS education community to increase access to CS education for all. See [https://code.org/about/evaluation/summary](https://code.org/about/evaluation/summary) and [http://outlier.uchicago.edu/evaluation_codeorg/](http://outlier.uchicago.edu/evaluation_codeorg/) for the reports.
 <br><br>
 [<button>View a recording</button>](https://youtu.be/jJfZMgvm4SU)
+
+### An Educator's Guide to the Hour of Code
+#### Wednesday, November 18, 2015 from 7:00 PM to 8:00 PM (CST) 
+In this interactive webinar, you'll hear from Melissa Jones, Community Manager at Code.org and Laura Kline, Product Manager for Hour of Code and learn the five simple steps you can take to plan and deliver an engaging, interactive coding event at your school.
+<br>
+[<button>View a Recording</button>](https://youtu.be/EJeMeSW2-Mw)
 
 
 <br><br>

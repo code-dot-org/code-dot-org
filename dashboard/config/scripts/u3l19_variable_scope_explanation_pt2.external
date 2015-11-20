@@ -1,6 +1,7 @@
 name 'U3L19 - variable scope explanation pt2'
 title 'U3L19 - variable scope explanation pt2'
 description 'description here'
+css 'unplugged'
 
 
 markdown <<MARKDOWN
