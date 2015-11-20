@@ -610,7 +610,7 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.customObstacleZones = {endor : {}, hoth: {}, starship: {}};
 
-  skin.customObstacleZones.endor.blogs = [
+  skin.customObstacleZones.endor.blobs = [
     { minx: 361, maxx: 413, miny: 261, maxy: 344 },
     { minx: 318, maxx: 404, miny: 342, maxy: 397 },
     { minx: 308, maxx: 352, miny: 72, maxy: 110 },
