@@ -701,7 +701,8 @@ function loadHoc2015(skin, assetUrl) {
     return className === '';
   };
 
-  // No failure avatar for this skin.
+  // No win or failure avatar for this skin.
+  skin.winAvatar = null;
   skin.failureAvatar = null;
 
   skin.pufferpig = skin.assetUrl('walk_pufferpig.png');
@@ -1112,6 +1113,9 @@ function loadHoc2015x(skin, assetUrl) {
   skin.preventItemLoop = function (className) {
     return className === '';
   };
+
+  // No win avatar for this skin.
+  skin.winAvatar = null;
 
   skin.hazard = skin.assetUrl('hazard_idle.png');
 
