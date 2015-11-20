@@ -203,16 +203,18 @@ class User < ActiveRecord::Base
 
   has_many :gallery_activities, -> {order 'id desc'}
 
-  has_many :sections
-
   has_many :user_trophies
   has_many :trophies, through: :user_trophies, source: :trophy
 
+  # student/teacher relationships where I am the teacher
   has_many :followers
-  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
-
   has_many :students, through: :followers, source: :student_user
+  has_many :sections
+
+  # student/teacher relationships where I am the student
+  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
   has_many :teachers, through: :followeds, source: :user
+  has_many :sections_as_student, through: :followeds, source: :section
 
   has_one :prize
   has_one :teacher_prize
@@ -332,7 +334,7 @@ class User < ActiveRecord::Base
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
-      user.email = auth.info.email
+      user.email = auth.info.email || ''
       user.user_type = params['user_type'] || auth.info.user_type || User::TYPE_STUDENT
 
       # clever provides us these fields
@@ -805,6 +807,10 @@ SQL
 
   def recent_activities(limit = 10)
     self.activities.order('id desc').limit(limit)
+  end
+
+  def can_pair?
+    !sections_as_student.empty?
   end
 
   # make some random-ish fake progress for a user. As you may have
