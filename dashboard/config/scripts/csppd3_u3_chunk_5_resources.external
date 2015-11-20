@@ -19,7 +19,7 @@ Here are a few resources to help you get started with understanding these CS con
 
 Let’s consider another example. 
 
-<img src="https://images.code.org/1d7330cc481e1094c25e830d87c3a53b-image-1446443737305.gif" width="450" style="float:right; margin-left:30px">
+<img src="https://images.code.org/3a2fcfa49c6918dee9b7877d6d669e55-image-1447991716637.gif" width="450" style="float:right; margin-left:30px">
 <br>
 Imagine you wanted to simulate flipping a coin, and you want to keep track of how many heads in a row you flip. You won’t know ahead of time how many times in a row heads will come up, so you want to keep flipping the coin **while** it comes up heads. 
 <br><br>
@@ -40,7 +40,9 @@ In english: “while the coin is showing heads, flip the coin, and add one to a 
 
 ##### Vocabulary
 
-- **Array**: a data type that holds a list of items. An array can be used like any other variable and gives us the ability to store information for use while the program is running. With an array we can keep track of lots of pieces of information all under one name. 
+- **Array**: a data type that holds a list of items.  While the word 'list' is a generic term, and 'array' is a specific kind of list, we often use these words interchangably.   All programming languages have many ways of constructing and processing list of information.  An 'array' in most languages is usually the most primitive kind of list structure.
+<br><br>
+An array can be used like any other variable and gives us the ability to store information for use while the program is running. With an array we can keep track of lots of pieces of information all under one name. 
 <br><br>
 When creating an array we often add some initial items to the list. For example, `var numList = [2,4,8,16,32]`.  You can also store string in an array `var studentNames = ["Nancy", "Bill", "Marcus"]`
 <br><br>
@@ -48,7 +50,7 @@ The elements stored in an array are each assigned an `index`, or numeric value r
 <br><br>
 If we want to **retrieve the value of an element in the array**, we just need to reference the index of the item. For example, if we wanted to print the word “Nancy” from the array, we could do this: `write(studentNames[0]);`
 <br><br>
-Let’s looks at an example in code. Imagine we’re back to flipping the coin from earlier.  We can use a two-element array in a clever way to make custom message for heads or tails. 
+Let’s looks at an example in code. Imagine we’re back to flipping the coin from earlier.  We can use a two-element array in a clever way to make a custom message for heads or tails. 
 <br>
 <img src="https://images.code.org/b5a8a013306d4ec5aa1ec7286ee6f369-image-1446446698823.gif" width=“550px”>
 <br><br>
@@ -65,7 +67,23 @@ We can also **add elements** to the array by using the `appendItem` function.  `
 
 `appendItem(studentNames, "Caley")`
 
-After this operation `studentNames` will have 4 values in it and Caley will be at index 3 - the last index.
+After this operation `studentNames` will have 4 values in it: `["Nancy", "Bill", "Marcus", "Caley"] and *Caley* will be at index 3 - the last index.
+
+
+##### Lessons in Code Studio
+
+ * 24 - Introduction to Arrays
+ * 25 - Using Arrays in Apps
+
+##### External Resources 
+
+- <a href="http://www.w3schools.com/js/js_arrays.asp" target=_blank>JavaScript Arrays- W3Schools</a>
+- <a href="https://en.wikipedia.org/wiki/Array_data_type" target=_blank>Array data type- Wikipedia</a>
+
+
+
+#### Using loops to process arrays
+
 
 - **For Loop**: 
 
@@ -92,32 +110,69 @@ For loops are a convenient way to wrap up into one statement these three things 
 
 As we’ll see in this chunk, `for` loops are particularly useful for situations where we want to use a loop to visit, read, or update, every item in an array.
 
-##### Lessons in Code Studio
-
- * 24 - Introduction to Arrays
- * 25 - Using Arrays in Apps
-
-##### External Resources 
-
-- <a href="http://www.w3schools.com/js/js_arrays.asp" target=_blank>JavaScript Arrays- W3Schools</a>
-- <a href="https://en.wikipedia.org/wiki/Array_data_type" target=_blank>Array data type- Wikipedia</a>
-
-
-
-
-#### Using loops to process arrays
-
 For loops are convenient for processing arrays because we can use the looping variable as an index into the array.  
 
-Arrays also carry around with them a `length` variable that holds the number of items currently in the array.
+Arrays also carry around with them a `length` variable that holds the number of items currently in the array.  You access it like this:
 
 `myArray.length`
 
-Combining these things: here is an example that will simply display all the values in an array.
+Combining for loops and arrays, you can in a few lines of code write a loop to visit every element of a list. Here is an example that will simply display all the values in an array:
 
 ![](https://images.code.org/930923a746004603ee9f68f8807c3e70-image-1447948267650.png)
 
+- **Functions with Return Values**: 
+- 
+**Using output from functions**
 
+We already know that **parameters provide input values** to our functions. It is also possible for functions to **generate output values which can be used to change the logical flow of the program.**
+
+We have already seen many examples of **functions that generate output**, including:
+
+* `randomNumber()` 
+* `includes()`
+* `promptNum()`
+* `getText()`
+* `toUpperCase()`
+* `toLowerCase()`
+ 
+You may not have thought of it at the time, but when you called these functions you treated them **as if they were a value**. In reality you were using the **value returned by these functions**. For example using `randomNumber`:
+
+![](https://images.code.org/2b600bb438230da22acc3b74693bf386-image-1447697995804.19.17 PM.png)
+
+or using `getText`
+
+![](https://images.code.org/cd6e2a40b398fc097a415221ff89b117-image-1447698000658.19.44 PM.png)
+
+**The "return" command**
+When you call a function you are telling the computer to run a piece of code elsewhere in your program. When that function is finished running, execution of the program **returns to the point in the code where the function was called**. In some programming languages you must explicitly tell the program to return at the end of a function, but in JavaScript this just happens automatically when you reach the closing `}` of your function.
+
+It is possible to make your program return at any point using the `return` command. This command tells the function to stop executing immediately, skipping any commands that appear afterwards within the function. This example shows how a console.log statement after a return is never executed. It will even generate a warning in your program.
+
+![](https://images.code.org/632c3875d47bb6fd54130b9874c44552-image-1447778563981.gif)
+
+Most of the time we want every line of our functions to run, and so we wouldn't write functions with commands after a return statement. If we were ever going to use `return` it would have been as the last line in our functions, and since reaching the closing curly brace will automatically do the same thing as a `return` command, there's been no reason to use it at all.
+
+** Returning Values**
+
+When you use `return` you are also able to specify a single value that will be "returned" to whatever code called the function in the first place.  The effect is that the function acts like any expression that evaluates to a single value.  You can think of it as the though the value simply replaces the function where it was called in the code.
+
+Just like `randomNumber` is replaced by a randomly generated number and `getText` is replaced by the text of one of your UI elements, when your function is done executing it will be replaced by whatever value you return. This is how your functions can generate output that other parts of your program can use.
+
+This trivial (but illustrative) example shows a single function that accepts a number as input, multiplies it by two, and then uses `return` to provide the result back to the calling location. We can then use our function to calculate the double of any number we wish.
+
+![](https://images.code.org/932db65300a4117b7e1b92fd07283884-image-1447732356725.50.34 PM.png)
+
+Notice that we need to place our new function inside of a `console.log` statement in order to display the value it returned. Without this statement the value would be calculated, but it would not be used anywhere in your program. This is no different than if you were to call `randomNumber` and not use the value generated. It is up to you, the programmer, to decide how this returned value will be used in the rest of your program.
+
+You will typically write a function that returns a value when you have **a calculation that you perform many times in your code**. Your function would use parameters to provide inputs, would calculate a result, and would return that result as output. To help you get started writing your own functions that return value, here are some simple guidelines to follow.
+
+**Guidelines for Writing Functions with Return Values**
+
+* Decide what values you need as input to your computation. Make these **parameters of your function**.
+* Use your parameters to calculate your result **and save that result in a single variable**
+* **Return that variable** on the last line of your function
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
 ##### Lessons in Code Studio
 
@@ -137,6 +192,5 @@ Combining these things: here is an example that will simply display all the valu
 
 <br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 
 MARKDOWN

@@ -7,10 +7,9 @@ markdown <<MARKDOWN
 ### Unit 3 Overview > Chunk 5: Introduction to Loops and Arrays > Concepts
 
 <br/>
-<img src="https://images.code.org/90926d638b13b74fb200b8ecc9cfc00b-image-1446429898526.png" width="550" style="float:right; margin-left:30px">
+<img src="https://images.code.org/2d26325c552af8a215a02a15900369ee-image-1447991124491.png" width="550" style="float:right; margin-left:30px">
 #### Content Overview
-So far in this unit, students have learned about functions, how to program with events, use variables, and how to use conditionals to control the flow of a program. In the final instructional chunk of unit 3, students learn about **loops**, **arrays** and how to **write functions that return values.**
-
+So far in this unit students have learned about functions, how to program with events, use variables, and how to use conditionals to control the flow of a program. In the final instructional chunk of unit 3, students learn about **loops**, **arrays** and how to **write functions that return values.**
 
 <br><br>
 We explore **while loop** and go into a bit more depth with **for loop**.  Students have used `for` loops already but only as simple "repeat loops" - we controlled the syntax of the code block so students only had to type in the number of times they wanted the loop to repeat.  In this chunk we break down what's happening with all the parts of the for-loop statement. 
@@ -28,7 +27,7 @@ This chunk starts with structured activities to motivate the concepts of loops a
 <br><br>
 
 ##### Introduction to While Loops
-Earlier in the unit, students learned about simple loops that served to let them avoid duplicating code by enclosing segments of code inside of the `repeat` loop. In this chunk of lessons students are introduced to the `while` loop, which builds on the work they’ve just done with conditionals, but now rather than executing a piece of code one time when the condition is true, the code is repeated until the condition becomes false. 
+Earlier in the unit, students use for loops to simply repeat lines of code some number of times. In this chunk of lessons students are introduced to the `while` loop, which builds on the work they’ve just done with conditionals, but now rather than executing a piece of code one time when the condition is true, the code is repeated until the condition becomes false. 
 
 <br><br>
 >**CS Concepts:** 
@@ -49,22 +48,26 @@ In these lessons, students learn how to construct an array to use as a list in a
 >- An **array** is a data type that is very useful when writing a program that has a list of items that need to be stored. Without arrays, each items would need to be stored in its own variable, which means as the list grows the number of variables needed grows. An array allows us to store the whole list, or collection of elements, in one place. 
 - The contents of an array can change as the program runs.
 
-##### Processing Arrays
-This chunk ends with a three-lesson sequence where students learn how to use and control `for` loops to iterate over an array of values.   Many common techniques in programming involving writing loops that read, write, or compute things on lists (arrays) of data.  We introduce students to some of the classic algorithms of array processing: linear search, counting items in an array, finding the smallest or largest value in a list.
+##### Processing Arrays and Functions with return values
+This chunk ends with a three-lesson sequence where students learn how to use and control `for` loops to iterate over an array of values.   
+<br><br>
+Many common techniques in programming involving writing loops that read, write, or compute things on lists (arrays) of data.  We introduce students to some of the classic algorithms of array processing: linear search, counting items in an array, finding the smallest or largest value in a list.
 <br><br>
 We then briefly re-visit functions to complete students understanding.  Students have used many functions that return values in programs so far (randomNumber, getText, includes, etc.) but they have never written their own function that returns a value.  We have students practice writing small functions that accept input, calculate something and `return` a value.  These functions will be useful in the final project of the unit.
 <br><br>
-In the last lesson students bring it all together in making a drawing app (using the **canvas** UI element) that tracks the user's mouse moves in an array, so that after the drawing is completed, different effects can be applied to the drawing by processing the array of mouse locations.  Many effects are complex and students manage some of that complexity by writing functions that return values to handle some of the more complex mathematical calculations.
+The last lesson students bring it all together in making a drawing app (using the **canvas** UI element) that tracks the user's mouse moves in an array, so that after the drawing is completed, different effects can be applied to the drawing by processing the array of mouse locations.  Many effects are complex and students manage some of that complexity by writing functions that return values to handle some of the more complex mathematical calculations.
 
 <br><br>
 >**CS Concepts:** 
 
->- 
+>- Looping over arrays to process their values (search, find min, find max)
+>- writing functions that return values
+>- Using arrays in a novel way in an app
+>- Employing mathematical concepts in a program
+>- Developing a "complex" algorithm
 
 
 
 <br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

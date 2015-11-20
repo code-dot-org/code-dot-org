@@ -3,15 +3,23 @@ title 'Images are Arrays'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 26 - Looping Through Arrays
+## Unit 3: Lesson 26 - Processing Arrays
 
 # Background
 
-There are many situations where we want to repeat a loop a set number of times. Although this can be done with a while loop there are many small pieces to keep track of. As a result a for loop is used to consolidate all of those pieces - counter variable, incrementing, and boolean condition- onto one line. One of the most common uses of for loops in programming is processing arrays.  For loops allow programmers to easily step through all the elements in an array and process information about arrays.
+Once we have stored a list of information in an array we will want to process that data in some way. Many algorithms used to process arrays rely on an ability to inspect or change every item in a list and so will naturally require the use of a loop. Although this can be done with a while loop there are many small pieces to keep track of. As a result a for loop is used to consolidate all of those pieces - counter variable, incrementing, and boolean condition- into a single command.
 
 # Lesson
 
-* Loop through all the elements of an array using a for loop.
+* Introduction to the for loop
+* Design algorithms for processing arrays
+* Create functions which implement algorithms for processing arrays
+
+# Resources
+* Activity: <a href="https://docs.google.com/document/d/1Ca6NTpGxXjuHH6jyUy4wBPZiXa0Gq7gXo0WMvAGa890/edit?usp=sharing" target="_blank">
+Min Card Algorithm
+</a>
+
   
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
