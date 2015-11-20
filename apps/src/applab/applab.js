@@ -745,7 +745,6 @@ Applab.init = function(config) {
   });
 
   config.loadAudio = function() {
-    studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
@@ -1306,6 +1305,7 @@ var displayFeedback = function() {
       response: Applab.response,
       level: level,
       showingSharing: level.freePlay,
+      tryAgainText: applabMsg.tryAgainText(),
       feedbackImage: Applab.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
