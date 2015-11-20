@@ -1,6 +1,7 @@
 # Tests for the SQS::QueueProcessor class. These are run by default against a fake
 # SQS instance but can be run against the real SQS by setting the environment variable
-# USE_REAL_SQS to 'true'.
+# USE_REAL_SQS to 'true'.  If LOG_TO_STDOUT is true, logs to stdout, otherwise uses the
+# Rails logger.
 
 require_relative '../../config/environment'
 require 'minitest/autorun'
@@ -88,7 +89,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
       @sqs.config.endpoint = $fake_sqs_service.uri
     end
 
-    @logger = Logger.new(STDOUT)
+    @logger = ENV['LOG_TO_STDOUT'] ? Logger.new(STDOUT) : Rails.logger
     @lock = Mutex.new
     @message_id = 0
   end
