@@ -147,6 +147,18 @@ module.exports = {
         var deleteButton = $("#design-properties button").eq(-1);
         assert.equal(deleteButton.text(), 'Delete');
 
+        // Both screen 1 and 2 should have delete buttons
+        $('#screenSelector').val('screen1');
+        ReactTestUtils.Simulate.change(screenSelector);
+        deleteButton = $("#design-properties button").eq(-1);
+        validatePropertyRow(0, 'id', 'screen1', assert);
+        assert.equal(deleteButton.text(), 'Delete');
+
+        $('#screenSelector').val('screen2');
+        ReactTestUtils.Simulate.change(screenSelector);
+        validatePropertyRow(0, 'id', 'screen2', assert);
+        deleteButton = $("#design-properties button").eq(-1);
+
         ReactTestUtils.Simulate.click(deleteButton[0]);
 
         // Should have resulted in two new buttons
