@@ -155,7 +155,7 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "actor"},
-"addCharacter":function(d){return "add a"},
+"addCharacter":function(d){return "afegir un"},
 "addCharacterTooltip":function(d){return "Afegeix un personatge a l'escena."},
 "addPoints10":function(d){return "suma 10 punts"},
 "addPoints50":function(d){return "suma 50 punts"},

@@ -226,7 +226,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "level3FailureMessage":function(d){return "เพื่อที่จะเก็บขนแกะ, เดินไปหาแกะแต่ละตัวแล้วใช้คำสั่ง \"กรรไกร\". อย่าลืมใช้คำสั่ง \"หัน\"เพื่อไปให้ถึงแกะ"},
 "level3TooFewBlocksMessage":function(d){return "ลองใช้คำสั่งเพิ่มเติมเพื่อที่จะเก็บขนแกะจากแกะทั้งสองตัว. เดินไปหาแกะแต่ละตัวแล้วใช้คำสั่ง \"กรรไกร\""},
 "level4FailureMessage":function(d){return "คุณต้องใช้คำสั่ง \"ทำลายบล็อค\" ที่โคนต้นไม้ทั้งสามต้น"},
-"level5FailureMessage":function(d){return "Place your blocks on the dirt outline to build a wall. The pink \"repeat\" command will run commands placed inside it, like \"place block\" and \"move forward\"."},
+"level5FailureMessage":function(d){return "วางปล็อกของคุณบนแนวดินเพื่อสร้างกำแพง. คำสั่ง \"repeat\" สีชมพูจะเรียกคำสั่งที่อยู่ข้างใน เช่น \"place block\" (วางบล็อก) และ \"move forward\" (ก้าวไปข้างหน้า)"},
 "level6FailureMessage":function(d){return "Place blocks on the dirt outline of the house to complete the puzzle."},
 "level7FailureMessage":function(d){return "Use the \"plant\" command to place crops on each patch of dark tilled soil."},
 "level8FailureMessage":function(d){return "If you touch a creeper it will explode. Sneak around them and enter your house."},
