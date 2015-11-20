@@ -134,6 +134,7 @@ Dashboard::Application.routes.draw do
 
   post 'level_assets/upload', to: 'level_assets#upload'
 
+  get '/:locale/notes/:key', to: 'notes#index'
   scope "/:locale", locale: 'en' do
     resources :scripts, path: '', format: "html" do
       # /s/xxx/reset
@@ -149,7 +150,7 @@ Dashboard::Application.routes.draw do
 
       # /s/xxx/stage/yyy/puzzle/zzz
       #resources :stages, only: [], path: "/stage", format: "html" do
-        resources :script_levels, only: [:show], path: "", format: "html", stage_id: 1
+      resources :script_levels, only: [:show], path: "", format: "html", stage_id: 1
       #end
     end
   end
@@ -216,7 +217,6 @@ Dashboard::Application.routes.draw do
   get '/popup/stats', to: 'reports#header_stats', as: 'header_stats'
   get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 
-  get '/:locale/notes/:key', to: 'notes#index'
 
   resources :zendesk_session, only: [:index]
 
