@@ -168,7 +168,7 @@ gem 'rack-ssl-enforcer'
 # PubSub for NetSim
 gem 'pusher', '~> 0.14.5'
 
-gem 'viddl-rb', group: [:development, :staging, :levelbuilder]
+gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
 gem 'net-ssh'
 gem 'net-scp'
