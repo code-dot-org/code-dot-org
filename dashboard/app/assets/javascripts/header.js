@@ -27,7 +27,7 @@ if (!window.dashboard) {
  *   }>
  * }}
  */
-dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId) {
+dashboard.buildHeader = function (stageData, progressData, currentScriptLevelKey, userId, sectionId) {
   stageData = stageData || {};
   // Progress Data is only provided for signed in users. Otherwise, client gets progress data from cookie
   if (progressData === null) {
@@ -56,7 +56,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   }
   var progressContainer = $('.progress_container');
   stageData.levels.forEach(function(level, index, levels) {
-    var status = (levelProgress[level.id] || {}).status || 'not_tried';
+    var status = (levelProgress[level.key] || {}).status || 'not_tried';
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
     var href = level.url;
     if (userId) {
@@ -70,7 +70,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
     if (level.kind == 'unplugged') {
       link.addClass('unplugged_level');
     }
-    var div = $('<div>').addClass(level.id === currentLevelId ? 'puzzle_outer_current' : defaultClass).append(link);
+    var div = $('<div>').addClass(level.key === currentScriptLevelKey ? 'puzzle_outer_current' : defaultClass).append(link);
     if (index === levels.length - 1) {
       div.addClass('last');
     }
@@ -153,7 +153,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
         url: "/popup/stats",
         data: {
           script_id: stageData.script_id,
-          script_level_id: currentLevelId,
+          current_script_level_key: currentScriptLevelKey,
           user_id: userId,
           section_id: sectionId
         }, success: function (result) {

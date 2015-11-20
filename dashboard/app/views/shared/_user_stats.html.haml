@@ -3,7 +3,7 @@
 - progress = summarize_user_progress(script, user) || {}
 - level_progress = progress[:levels] || {}
 - should_show_lesson_plan = user && user.teacher?
-- current_level_id = params[:script_level_id]
+- current_script_level_key = params[:current_script_level_key]
 
 .user-stats-block
   - script_summary[:stages].each do |stage|
@@ -18,8 +18,8 @@
       .games
         - stage[:levels].each do |level|
           .level
-            - status = level_progress[level[:id]].try(:[], :status) || 'not_tried'
-            - if current_level_id == "#{level[:id]}"
+            - status = level_progress[level[:key]].try(:[], :status) || 'not_tried'
+            - if current_script_level_key == "#{level[:key]}"
               - puzzle_outer_class = 'puzzle_outer_current'
             - elsif level[:kind] == 'assessment'
               - puzzle_outer_class = 'puzzle_outer_assessment'
