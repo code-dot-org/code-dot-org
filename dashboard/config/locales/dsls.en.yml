@@ -2008,7 +2008,6 @@ en:
         Is the value of the variable x greater than or equal to 3?: Is the value of the variable x greater than or equal to 3?
         Is the value of the variable x less than 3?: Is the value of the variable x less than 3?
         Is the value of the variable x less than or equal to 3?: Is the value of the variable x less than or equal to 3?
-        Match the boolean expression using comparison operators to the English description: Match the boolean expression using comparison operators to the English description
         Match the boolean expression using comparison operators to the English description.: Match the boolean expression using comparison operators to the English description.
         'Matching: Comparison Operators': 'Matching: Comparison Operators'
         blue == 'blue': blue == 'blue'
@@ -2018,10 +2017,6 @@ en:
         x &gt;= 3: x &gt;= 3
         x &lt; 3: x &lt; 3
         x &lt;= 3: x &lt;= 3
-        x&gt;3: x&gt;3
-        x&gt;=3: x&gt;=3
-        x&lt;3: x&lt;3
-        x&lt;=3: x&lt;=3
       U3L19 - MATCH what are values of abc:
         '10': '10'
         '12': '12'

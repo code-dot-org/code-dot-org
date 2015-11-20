@@ -164,9 +164,6 @@
     "execute_palette_apis_only": "false",
     "instructions": "Use the toLowerCase() command to change all user input into lowercase letters after they enter it. (Click to see full instructions)",
     "project_template_level_name": "U3 - Movie Bot - Template",
-    "encrypted_examples": [
-
-    ],
     "lock_zero_param_functions": "false"
   }
 }]]></config>
