@@ -30,7 +30,7 @@ class ScriptLevelsController < ApplicationController
       client_state.reset
       reset_session
 
-      render html: "<html><head><script>localStorage.clear(); window.location = '#{redirect_path}'</script></head><body>OK</body></html>".html_safe
+      render html: "<html><head><script>sessionStorage.clear(); window.location = '#{redirect_path}'</script></head><body>OK</body></html>".html_safe
     end
   end
 
