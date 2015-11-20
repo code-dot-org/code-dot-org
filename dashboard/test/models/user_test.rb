@@ -857,7 +857,6 @@ class UserTest < ActiveSupport::TestCase
     create(:user, name: 'Same Name')
   end
 
-
   test 'generate username' do
     def create_user_with_username(username)
       user = create(:user)
@@ -944,7 +943,7 @@ class UserTest < ActiveSupport::TestCase
 
     other_user = create :student
 
-
+    # student_of? method
     assert !student.student_of?(student)
     assert !student.student_of?(other_user)
     assert student.student_of?(teacher)
@@ -957,6 +956,7 @@ class UserTest < ActiveSupport::TestCase
     assert !other_user.student_of?(other_user)
     assert !other_user.student_of?(teacher)
 
+    # user associations
     assert_equal [], other_user.teachers
     assert_equal [], other_user.students
 
@@ -965,6 +965,20 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal [teacher], student.teachers
     assert_equal [], student.students
+
+    # section associations
+    assert_equal [section], student.sections_as_student
+    assert_equal [], teacher.sections_as_student
+    assert_equal [], other_user.sections_as_student
+
+    assert_equal [], student.sections
+    assert_equal [section], teacher.sections
+    assert_equal [], other_user.sections
+
+    # can_pair? method
+    assert_equal true, student.can_pair?
+    assert_equal false, teacher.can_pair?
+    assert_equal false, other_user.can_pair?
   end
 
   test "authorized teacher" do

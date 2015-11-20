@@ -248,6 +248,7 @@ en:
         calculate: 'Calculate Something'
         applab: 'Make an App'
     user:
+      pair_programming: 'Pair Programming'
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
       label: 'Hi %{username}'

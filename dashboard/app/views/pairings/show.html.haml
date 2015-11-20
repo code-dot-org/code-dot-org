@@ -1,0 +1,32 @@
+- @page_title = "Pairing"
+:scss
+  $cyan: #0094ca;
+  $light_cyan: #59b9dc;
+  $lighter_cyan: #a6daed;
+  $lightest_cyan: #d9eff7;
+
+  #pairing {
+    .student {
+      color: $cyan;
+      padding: 10px;
+      border: 2px solid $cyan;
+      float: left;
+      border-radius: 5px;
+      margin: 10px 10px 10px 0;
+
+      &.selected {
+        background-color: $lighter_cyan;
+      }
+    }
+  }
+
+#pairing
+
+:javascript
+  $(document).ready(function () {
+    var props = #{@react_props.to_json};
+    props.i18n = window.dashboard.i18n;
+    React.render(
+      React.createElement(window.dashboard.Pairing, props),
+      document.getElementById('pairing'));
+  });
