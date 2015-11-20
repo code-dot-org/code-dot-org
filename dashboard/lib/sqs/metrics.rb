@@ -2,7 +2,7 @@ module SQS
 
   # A collection of Counters for the queue processor.
   class Metrics
-    attr_accessor :success, :failures
+    attr_accessor :successes, :failures
 
     def initialize
       @successes = Counter.new
@@ -19,9 +19,9 @@ module SQS
 
   # A thread safe counter.
   class Counter
-    lock = Mutex.new
 
     def initialize
+      @lock = Mutex.new
       reset
     end
 
@@ -30,19 +30,19 @@ module SQS
     end
 
     def increment(added_value)
-      lock.synchronize {
+      @lock.synchronize {
         @value += added_value
       }
     end
 
     def set(value)
-      lock.synchronize {
+      @lock.synchronize {
         @value = value
       }
     end
 
     def reset
-      lock.synchronize {
+      @lock.synchronize {
         @value = 0
       }
     end
