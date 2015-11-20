@@ -421,7 +421,7 @@ levels.playlab_3 = {
   ]
 };
 levels.iceage_3 = utils.extend(levels.playlab_3, {
-  background: 'grassy',
+  background: 'icy',
   firstSpriteIndex: 2, // scrat
 });
 levels.gumball_3 = utils.extend(levels.playlab_3, {
@@ -547,7 +547,7 @@ levels.playlab_4 = {
   ],
 };
 levels.iceage_4 = utils.extend(levels.playlab_4, {
-  background: 'grassy',
+  background: 'icy',
   avatarList: ['scrat', 'granny']
 });
 levels.gumball_4 = utils.extend(levels.playlab_4, {
@@ -891,7 +891,7 @@ levels.playlab_7 = {
   ],
 };
 levels.iceage_7 = utils.extend(levels.playlab_7, {
-  background: 'icy',
+  background: 'leafy',
   firstSpriteIndex: 1, // sid
 });
 levels.gumball_7 = utils.extend(levels.playlab_7, {
