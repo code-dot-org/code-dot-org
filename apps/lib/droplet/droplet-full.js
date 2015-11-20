@@ -2,7 +2,7 @@
  * Copyright (c) 2015 Anthony Bau.
  * MIT License.
  *
- * Date: 2015-11-19
+ * Date: 2015-11-20
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
@@ -8287,7 +8287,7 @@ Editor.prototype.showDropdown = function(socket, inPalette) {
   this.dropdownElement.style.left = '-9999px';
   return setTimeout(((function(_this) {
     return function() {
-      var k, len1, location;
+      var dropdownTop, k, len1, location;
       if (_this.dropdownElement.offsetHeight < _this.dropdownElement.scrollHeight) {
         for (k = 0, len1 = dropdownItems.length; k < len1; k++) {
           el = dropdownItems[k];
@@ -8296,14 +8296,22 @@ Editor.prototype.showDropdown = function(socket, inPalette) {
       }
       if (inPalette) {
         location = _this.paletteView.getViewNodeFor(socket).bounds[0];
-        _this.dropdownElement.style.top = location.y + _this.fontSize - _this.scrollOffsets.palette.y + _this.paletteCanvas.offsetTop + 'px';
         _this.dropdownElement.style.left = location.x - _this.scrollOffsets.palette.x + _this.paletteCanvas.offsetLeft + 'px';
-        return _this.dropdownElement.style.minWidth = location.width + 'px';
+        _this.dropdownElement.style.minWidth = location.width + 'px';
+        dropdownTop = location.y + _this.fontSize - _this.scrollOffsets.palette.y + _this.paletteCanvas.offsetTop;
+        if (dropdownTop + _this.dropdownElement.offsetHeight > _this.paletteElement.offsetHeight) {
+          dropdownTop -= _this.fontSize + _this.dropdownElement.offsetHeight;
+        }
+        return _this.dropdownElement.style.top = dropdownTop + 'px';
       } else {
         location = _this.view.getViewNodeFor(socket).bounds[0];
-        _this.dropdownElement.style.top = location.y + _this.fontSize - _this.scrollOffsets.main.y + 'px';
         _this.dropdownElement.style.left = location.x - _this.scrollOffsets.main.x + _this.dropletElement.offsetLeft + _this.mainCanvas.offsetLeft + 'px';
-        return _this.dropdownElement.style.minWidth = location.width + 'px';
+        _this.dropdownElement.style.minWidth = location.width + 'px';
+        dropdownTop = location.y + _this.fontSize - _this.scrollOffsets.main.y;
+        if (dropdownTop + _this.dropdownElement.offsetHeight > _this.dropletElement.offsetHeight) {
+          dropdownTop -= _this.fontSize + _this.dropdownElement.offsetHeight;
+        }
+        return _this.dropdownElement.style.top = dropdownTop + 'px';
       }
     };
   })(this)), 0);
