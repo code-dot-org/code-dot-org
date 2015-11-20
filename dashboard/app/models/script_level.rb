@@ -90,6 +90,10 @@ class ScriptLevel < ActiveRecord::Base
     stage.script_levels.to_a.count
   end
 
+  def key
+    "#{script.name}/#{level.key}"
+  end
+
   def summarize
     if level.unplugged?
       kind = 'unplugged'
