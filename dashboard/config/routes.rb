@@ -10,6 +10,8 @@ Dashboard::Application.routes.draw do
     redirect CDO.code_org_url('/teacher-dashboard')
   end
 
+  resource :pairing, only: [:show]
+
   resources :user_levels, only: [:update]
 
   resources :gallery_activities, path: '/gallery' do
