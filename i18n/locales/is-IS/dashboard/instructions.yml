@@ -622,7 +622,7 @@ is:
       Course 4 Artist Vars 10_instruction: 'Hér er algrím sem teiknar þríhyrning úr minni þríhyrningum. Getur þú breytt því svo það noti breytuna "hliðar" til að teikna hvern þríhyrning? Skoðaðu kóðann og í hvert skipti sem þú sérð töluna 3 skaltu setja breytuna "hliðar" í staðinn. Mundu að nota "stilla hliðar" kubbinn.'
       Course 4 Artist Vars 11_instruction: 'Hér er flóknari kóði sem notar sömu hugtök og síðasta þraut - hvaða gildi ætti að setja í breytuna "hliðar" til að teikna þessa mynd gerða úr ferningum?'
       Course 4 Artist Vars 12_instruction: 'Prófum að setja "hliðar" jafnt og 5. Því fleiri hliðar sem við notum í algríminu, því stærra verður allt mynstrið! Taktu eftir að það er ný breyta "lengd". Við getum nú notað hana í hvert sinn sem við höfum "færa áfram". Settu 75 í breytuna "lengd" til að teikna þetta form.'
-      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the \"length\" variable, let's use a math block with the\n\"sides\" variable inside to make sure that each shape fits correctly. The\nperimeter of each polygon is 300 pixels.\r\nNeed some hints?  Click here."
+      Course 4 Artist Vars 13_instruction: "Þegar form hefur margar hliðar, þarf hver hlið að vera styttri ef allt mynstrið á að geta komist fyrir á skjánum.\n\r\nVið skulum búa til algrímið fyrir þetta flotta mynstur, en í stað þess að setja fasta tölu í  breytuna \"lengd\", skulum við nota reikningskubb með breytunni \"hliðar\" til að tryggja að hvert form komist fyrir. Ummál hvers marghyrnings er 300 dílar.\r\nÞarftu vísbendingar. Smelltu hér."
       Course 4 Artist Vars 14_instruction: "Frjáls æfing! Kíktu á þetta: Nú er algrímið þitt faldað í enn einni lykkju. Gerðu tilraunir með gildi í breytunum tveimur til að teikna óvænt mynstur.\r\n\r\nEnn meiri áhrif fást með því að nota liti! Notaðu handahófsliti innan í lykkjum til að sjá hvernig það breytir hönnuninni þinni."
       Course 4 Artist Vars 2_instruction: 'Í stað þess að "færa áfram um 150" er "færa" kubburinn nú að lesa úr breytunni "lengd". Getur þú stillt "lengd" á 150 og teiknað þennan nýja þríhyrning?'
       Course 4 Artist Vars 3_instruction: 'Hér er lykkja sem teiknar ferning, en það vantar eitthvað. Geturðu lagað hana svo að hún noti breytuna "lengd" til að reikna hve löng hver hlið á að vera? '
@@ -700,14 +700,10 @@ is:
       Course 4 Play Lab Params 3_instruction: 'Við höfum bætt við öðrum stika við stökkfallið svo við getum notað það með öðrum leikverum. Hver leikvera er táknuð með tölu, talið frá 1. Breyttu fallinu "stökkva" svo að það noti stikann "leikvera" til að láta rétta veru stökkva.'
       Course 4 Play Lab Params 4_instruction: 'Hér er fallið "rása". Breyttu því svo að Köttur færist upp 400 díla og svo niður 400.'
       Course 4 Play Lab Params 5_instruction: 'Breyttu "rása" fallinu með því að bæta við stikanum "leikvera", svo að við getum kallað á það fyrir hverja leikveru á skjánum. Mundu að leikverurnar hafa tölurnar 1, 2 og 3.'
-      Course 4 Play Lab Params 6_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Try using a "set speed" block with the new "speed"
-        parameter to help Penguin get both flags before the other sprites even get
-        one.
+      Course 4 Play Lab Params 6_instruction: 'Bættu við öðrum stika "hraði" við fallið "rása". Prófaðu að nota "stilla hraða" kubb með nýja stikanum "hraði" til að hjálpa Mörgæs að ná báðum flöggunum áður en hinar leikverurnar ná svo mikið sem einum.'
       Course 4 Play Lab Params 7_instruction: "Skemmtum okkur! Skoðaðu gefna kóðann og reyndu að finna út hvað hver kubbur gerir.\r\n\r\nNotaðu svo örvarlyklana til að stjórna Hundi og safna öllum flöggunum."
       Course 4 Play Lab Params 8_instruction: 'Notaðu kubbinn "þegar leikvera snertir" til að senda Hund aftur efst til vinstri en AÐEINS ef Hundur snertir einhverja aðra leikveru.'
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit\nthe function so that a \"points\" parameter is added to the \"player_score\"\nvariable. \r\n\r\nThe variable \"player_score\" should increase each time\nDog tags Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Hér er leikurinn okkar frá fyrra borði, en mest af kóðanum er falið. Það er nýtt fall \"skora_stig\".\r\n\r\nBreyttu fallinu svo að stika \"stig\" sé bætt við breytuna \"skor_spilara\".\r\n\r\nBreytan \"skor_spilara\" ætti að hækka í hvert sinn sem Hundur klukkar Kött með hjörtum og lækka í hvert sem Köttur klukkar Hund með hjörtum.\r\n\r\nTaktu eftir: Smelltu svo á \"Keyra\" til að spila. Þegar Hundur nær að skora 6 stig, munt þú færast áfram í næstu þraut. "
       Course 4 Play Lab Vars 1_instruction: 'Í þetta sinn þarft þú ekki að búa til neinn kóða heldur bara ýta á "Keyra" til að spila leikinn! Í leiknum ert þú hundurinn sem reynir að safna fleiri flöggum en kötturinn. Notaðu örvarlykilinn niður til að stjórna hundinum. Ýttu á "Ljúka" þegar þú vilt hætta.'
       Course 4 Play Lab Vars 2_instruction: 'Keppnin í síðustu þraut var ekki sanngjörn! Breyttu breytunni "hraði_hunds" til að tryggja að þú náir að safna fleiri flöggum en kötturinn. Sá sem fyrst safnar 10 vinnur leikinn!'
       Course 4 Play Lab Vars 3_instruction: Hér ný tegund af leik! Notaðu vinstri og hægri örvarnar til að hreyfa og upp örina til að stökkva. Reyndu að safna öllum flöggunum.
@@ -841,19 +837,10 @@ is:
       frozen circle_instruction: Hringur er sérstakt form. Getur þú fundið út hvaða tölu á að setja í stað spurningarmerkjanna til að teikna hring?
       frozen cross rotate dense_instruction: 'Endurtökum þetta 90 sinnum! Hve oft gengur 90 upp í 360? Vísbending: Það er mjög lítil tala.'
       frozen cross rotate_instruction: Reyndu nú að endurtaka þetta 10 sinnum. Um hve margar gráður þarf að snúa milli lína?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using another “Repeat"
-        block to repeat a parallelogram 4 times, turning right by 90 degrees between
-        each parallelogram.
+      frozen cross_instruction: 'Settu "endurtaka" kubb utan um þessar skipanir til að búa til plús merki. Tókstu eftir að Elsa getur færst bæði fram og aftur?'
+      frozen diamond mini snowflake_instruction: 'Vissirðu að það eru engin tvö snjókorn eins? Búum til nýtt snjókorn með því að nota "endurtaka" kubbinn til að teikna samsíðung 4 sinnum, með snúning um 90 gráður eftir hvern samsíðung.'
       frozen diamond snowflake_instruction: 'Búum til nýtt snjókorn með því að láta "endurtaka" kubbinn endurtaka samsíðung 10 sinnum og snúa til hægri um 36 gráður eftir hvern.'
-      frozen diamond_instruction: |
-        Use a repeat around these blocks to create a parallelogram.
-        It's just like a rectangle but has different angles. This one has 60 degree
-        and 120 degree angles instead of all 90 degree angles.
+      frozen diamond_instruction: Notaðu endurtekningu utan um þessa kubba til að búa til samsíðung. Hann er alveg eins og rétthyrningur en hefur mismunandi horn. Þessi er með 60 gráðu og 120 gráðu horn í stað þess að öll hornin séu 90 gráður.
       frozen freeplay_instruction: Þú ert hér með orðin meistari í ísteikningu! Búðu nú til ævintýralegt vetrarríki.
       frozen line_instruction: Hæ! Ég heiti Elsa frá Arendelle. Hjálpaðu mér að búa til eitt strik.
       frozen perpendicular_instruction: 'Nú skulum við athuga hvort við getum búið til tvær línur með 90 gráðu horn á milli. Hér þarftu að nota kubbana "snúa" og "færa".'
@@ -1167,68 +1154,25 @@ is:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
-      Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
-      Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
-      Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
-      Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
-      Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
-      Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
-      Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+        Það er ekki góð hugmynd að rekast á laumupúka. 
+        Farðu varlega framhjá þeim til að komast í öryggi heimilisins.
+      Overworld Chop Tree_instruction: 'Viður er mjög mikilvæg auðlind. Alls konar hlutir eru búnir til úr viði. Gakktu að trénu og notaðu "eyða blokk" skipunina til að höggva það niður.'
+      Overworld Chop Trees_instruction: Við þurfum að byggja hús áður en sólin sest. Hús þurfa mikið af viði. Höggðu niður öll 3 trén.
+      Overworld Free Play 20x20_instruction: Til hamingju! Þú hefur lokið við allar þrautirnar okkar! Nú getur þú grafið, byggt og búið til eitthvað sérstakt með því að nota allt sem þú hefur lært hingað til.
+      Overworld Free Play_instruction: Þetta landslag er fyrir þig að leika þér með. Þú ræður hvað þú byggir.
+      Overworld House Frame - A_instruction: Byggjum okkar eigið hús! Þessi staður er álitlegur. Byggðu undirstöðu á moldarblokkunum.
+      Overworld House Frame - C_instruction: Byggjum okkar eigið hús! Þessi staður er álitlegur. Byggðu undirstöðu á moldarblokkunum.
+      Overworld House Frame B_instruction: Einn veggur er búinn. Klárum húsið með því að fylgja grunnteikningunni þinni! Þú þarft að endurtaka þig heilmikið hér.
+      Overworld House Frame B2_instruction: Einn veggur er búinn. Klárum húsið með því að fylgja grunnteikningunni þinni! Þú þarft að endurtaka þig heilmikið hér.
+      Overworld House Frame C_instruction: Einn veggur er búinn. Klárum húsið með því að fylgja grunnteikningunni þinni! Þú þarft að endurtaka þig heilmikið hér.
+      Overworld House Frame Chosen_instruction: 'Byggðu afganginn af húsinu úr hvaða efni sem þú vilt. "Endurtaka" skipunin kemur að góðu gagni.'
+      Overworld House Frame_instruction: Byggjum okkar eigið hús! Þessi staður er álitlegur. Byggðu undirstöðu á moldarblokkunum.
+      Overworld Minecart Track_instruction: Þú ert aftur uppi á yfirborðinu með fullt af neðanjarðarefnivið. Nú ætlum við að leggja teina eftir moldarslóðinni frá húsinu. Fyrst er að hreinsa slóðina. Fylgdu slóðinni og fjarlægðu trén.
+      Overworld Move to Sheep_instruction: 'Bættu annarri "færa áfram" skipun til að ná til kindarinnar.'
+      Overworld Place Wall_instruction: 'Sérhvert hús byrjar með vegg. Byggðu fyrsta hluta hússins með því að láta "setja" og "færa áfram" skipanir inn í "endurtaka" lykkju.'
+      Overworld Plant Crops_instruction: Það er gott að hugsa fram í tímann. Gróðursettu jurtir báðum megin við vatnið til að forða hungri seinna.
+      Overworld Powered Minecart_instruction: Vel af sér vikið! Þú hefur safnað heilmiklu af auðlindum og skapað lítið heimili. Nú áttu að leggja teina frá jaðri kortsins til dyra hússins.
+      Overworld Shear Sheep_instruction: 'Nú þarf að rýja rollur! Notaðu "rýja" skipunina til safna ull af báðum kindunum.'
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -2648,23 +2592,11 @@ is:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
-      Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
-      Underground If Statements_instruction: |
-        Now things are getting tricky. Mine
-        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
-        over any lava you uncover.
-      Underground Iron_instruction: |
-        Walking into molten lava is a bad idea. Place
-        cobblestone to create a bridge, then mine at least two of the iron blocks.
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7 redstone! Try using a repeat command inside a repeat command to walk in\na square.\r\n"
-      Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
-      Underground Test Level_instruction: Collect all of the minerals!
+      Underground Avoiding Lava_instruction: 'Það leynist hraun undir sumum blokkunum og þú verður að þekja það áður þú ferð áfram. "Ef" skipun er gagnleg hér. Bættu "færa áfram" skipun við á réttum stað til að ná að grafa út þessar blokkir.'
+      Underground If Statements_instruction: 'Nú vandast málin. Grafðu út 3 af roðasteini, en ekki detta í hraunið. Notaðu "ef" skipun til að leggja hleðslustein yfir hraun sem kemur í ljós.'
+      Underground Iron_instruction: Að ganga út í bráðið hraun er slæm hugmynd. Notaðu hleðslustein til að byggja brú, og grafðu svo út minnst 2 af járnblokkunum.
+      Underground Mine in a Circle_instruction: "Finndu leið til að ná 5 af demanti og 7 af roðasteini! Prófaðu að nota endurtaka skipun innan í endurtaka skipun til að ganga í ferning.\r\n"
+      Underground Mining Coal_instruction: Þú finnur dýrmætasta hráefnið neðanjarðar, en það getur orðið dimmt. Settu upp minnst 2 kyndla og grafðu út minnst 2 af kolum.
+      Underground Test Level_instruction: Safnaðu öllum steindunum!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Nota þennan prófáfanga til að ná í xml fyrir áfangapróf

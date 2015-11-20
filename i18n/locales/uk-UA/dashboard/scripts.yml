@@ -1456,7 +1456,14 @@ uk:
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Година коду від Minecraft
+          title: Година коду від Майнкрафт
           description_short: Дослідимо світ Майнкрафту через код
           description: Використай блоки коду, щоб допомогти Стіву та Алексу в їхніх пригодах у світі Майнкрафт
           Hour of Code 2015: Година коду 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          description: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit

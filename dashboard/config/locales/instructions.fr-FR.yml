@@ -1560,12 +1560,13 @@
         global devient grand ! Nous allons ajouter une nouvelle variable appelée «
         longueur » et l'utiliser partout où tu utilises un « avancer ». Affecte la
         variable « longueur » à 75 pour cette forme.
-      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside
-        needs to be shorter if you want the whole pattern to fit on the screen.\n\r\nLet's
-        recreate the algorithm for this amazing pattern, but instead of\nmanually
-        setting the \"length\" variable, let's use a math block with the\n\"sides\"
-        variable inside to make sure that each shape fits correctly. The\nperimeter
-        of each polygon is 300 pixels.\r\nNeed some hints?  Click here."
+      Course 4 Artist Vars 13_instruction: "Quand une forme a beaucoup de côtés, chaque
+        côté doit être plus court si tu veux que toute la forme rentre dans l'écran.\n\r\nNous
+        allons recréer l'algorithme pour cette forme incroyable, mais au lieu de régler
+        manuellement la variable « longueur », nous allons utiliser un bloc math avec
+        la variable \"côtés\" à l'intérieur pour s'assurer que chaque forme s'adapte
+        correctement. Le périmètre de chaque polygone est de 300 pixels.\r\nBesoin
+        de quelques conseils ?  Clique ici."
       Course 4 Artist Vars 14_instruction: 'Jeu gratuit: vérifie-le, maintenant ton
         algorithme est niché dans ue boucle de plus. Essaie de changer le variables
         de tes variables pour dessiner de jolis modèles.'
@@ -1776,22 +1777,21 @@
       Course 4 Play Lab Params 5_instruction: Renseigne les données du paramètres
         "acteur" pour que nous puissions appeler la fonction "patrouille" pour chaque
         acteur. Rappelle toi, les acteurs ont les numéros 1, 2 et 3.
-      Course 4 Play Lab Params 6_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Try using a "set speed" block with the new "speed"
-        parameter to help Penguin get both flags before the other sprites even get
-        one.
+      Course 4 Play Lab Params 6_instruction: Ajoute un autre paramètre intitulé «
+        vitesse » à la fonction « patrouiller ». Essaye d'utiliser un bloc « régler
+        la vitesse » avec le nouveau paramètre « vitesse » pour aider les pingouins
+        à obtenir les deux drapeaux avant que les autres lutins n'en obtienne un seul.
       Course 4 Play Lab Params 7_instruction: Utilisez les touches fléchées pour contrôler
         le chien et collecter tous les drapeaux.
       Course 4 Play Lab Params 8_instruction: Utilise un bloc "si touché" pour renvoyer
         le chien en haut à gauche s'il touche un des personnages.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
-        most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit\nthe
-        function so that a \"points\" parameter is added to the \"player_score\"\nvariable.
-        \r\n\r\nThe variable \"player_score\" should increase each time\nDog tags
-        Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:\nWhen
-        you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
-        on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Voici notre jeu à un stade plus précoce,
+        mais la plupart du code est masqué. Il existe une nouvelle fonction « marquer_points
+        ». \r\n \r\nModifie la fonction afin qu'un paramètre \"points\" soit ajouté
+        à la variable \"score_joueur\". \r\n\r\nLa variable \"score_joueur\" devrait
+        augmenter chaque fois que Dog touche Chat et diminuer chaque fois que Cat
+        touche Dog. \r\n\r\nRemarque : lorsque tu as terminé, clique sur \" Démarrer
+        \" pour jouer.  Lorsque Dog inscrit 6 points, tu passeras au puzzle suivant. "
       Course 4 Play Lab Vars 1_instruction: Pas besoin de coder, appuie simplement
         sur « exécuter » pour jouer au jeu ! Dans ce jeu, tu es le chien qui tente
         de récolter plus de drapeaux que le chat. Utilise la flèche vers le bas pour
@@ -2226,21 +2226,20 @@
         de fois 90 rentre dans 360 ? Indice : C''est un très petit nombre.'
       frozen cross rotate_instruction: Maintenant, essaie de le répéter 10 fois. De
         combien de degrés dois-tu tourner entre chaque ligne ?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using another “Repeat"
-        block to repeat a parallelogram 4 times, turning right by 90 degrees between
-        each parallelogram.
+      frozen cross_instruction: Place un bloc « Répéter » autour de ces commandes
+        pour créer un signe plus. As-tu remarqué que Elsa peut se déplacer vers l'avant
+        et vers l'arrière ?
+      frozen diamond mini snowflake_instruction: Savais-tu que chaque flocon de neige
+        a une forme différente ? Nous allons créer un nouveau flocon de neige en utilisant
+        le bloc « Répéter » pour répéter un parallélogramme 4 fois, en tournant à
+        droite de 90 degrés entre chaque parallélogramme.
       frozen diamond snowflake_instruction: Maintenant, nous allons créer un nouveau
         flocon de neige en utilisant le bloc « Répéter » pour répéter un parallélogramme
         10 fois, en tournant à droite par 36 degrés entre chacun d'eux.
-      frozen diamond_instruction: |
-        Use a repeat around these blocks to create a parallelogram.
-        It's just like a rectangle but has different angles. This one has 60 degree
-        and 120 degree angles instead of all 90 degree angles.
+      frozen diamond_instruction: Utilise un "Répéter" autour de ces blocs pour créer
+        un parallélogramme. C'est comme un rectangle, mais les angles sont différents.
+        Celui-ci a des angles de 60 degrés et 120 degrés au lieu d'avoir tous les
+        angles à 90 degrés.
       frozen freeplay_instruction: Tu es officiellement devenu un maître de l'art
         ! Crée un paradis d'hiver.
       frozen line_instruction: Salut ! Je suis Elsa d'Arendelle. Aide-moi à créer
@@ -2863,69 +2862,52 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
-      Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
-      Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
-      Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
-      Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
-      Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
-      Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
-      Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+      Overworld Avoid Monsters_instruction: Rentrer dans un Creeper est une mauvaise
+        idée. Dépasse le Creeper avec précautions et mets toi à l’abri dans ta maison.
+      Overworld Chop Tree_instruction: Le bois est une ressource très importante.
+        Beaucoup de choses sont fabriquées avec. Marche jusqu'à l'arbre et utilise
+        la commande « détruire un bloc » pour l'abattre.
+      Overworld Chop Trees_instruction: Nous avons besoin de construire une maison
+        avant que le soleil ne se couche. Les maisons nécessitent beaucoup de bois.
+        Abats les 3 arbres.
+      Overworld Free Play 20x20_instruction: Félicitations ! Tu as terminé tous nos
+        puzzles ! Maintenant extrais, construis et crée quelque chose d'unique à l'aide
+        de tout ce que tu as appris jusqu'ici.
+      Overworld Free Play_instruction: Ce paysage t'appartient pour jouer. Tu choisis
+        ce que tu veux construire.
+      Overworld House Frame - A_instruction: Nous allons construire notre propre maison
+        ! Cet endroit semble bien. Construis un cadre sur les blocs de boue.
+      Overworld House Frame - C_instruction: Nous allons construire notre propre maison
+        ! Cet endroit semble bien. Construis un cadre sur les blocs de boue.
+      Overworld House Frame B_instruction: Un mur est terminé, nous allons construire
+        le reste de la maison en suivant ton plan de rez de chaussée ! Tu vas devoir
+        te répéter beaucoup ici.
+      Overworld House Frame B2_instruction: Un mur est terminé, nous allons construire
+        le reste de la maison en suivant ton plan de rez de chaussée ! Tu vas devoir
+        te répéter beaucoup ici.
+      Overworld House Frame C_instruction: Un mur est terminé, nous allons construire
+        le reste de la maison en suivant ton plan de rez de chaussée ! Tu vas devoir
+        te répéter beaucoup ici.
+      Overworld House Frame Chosen_instruction: Construis le reste de ta maison à
+        partir des matériaux que tu souhaites. La commande « répéter » sera utile.
+      Overworld House Frame_instruction: Nous allons construire notre propre maison
+        ! Cet endroit semble bien. Construis un cadre sur les blocs de boue.
+      Overworld Minecart Track_instruction: Tu es de retour à la surface avec beaucoup
+        de ressources souterraines. Maintenant, nous allons construire un chemin sur
+        la voie boueuse à partir de ta maison. La première étape consiste à ouvrir
+        la voie. Suis le chemin et coupe les arbres.
+      Overworld Move to Sheep_instruction: Ajoute une deuxième commande « avancer
+        plus » pour atteindre le mouton.
+      Overworld Place Wall_instruction: Chaque maison commence par un mur. Construis
+        la première partie de ta maison en mettant les commandes « placer » et « avancer
+        plus » à l'intérieur de la boucle répéter.
+      Overworld Plant Crops_instruction: Il est utile de planifier à l'avance. Plante
+        des cultures des deux côtés de l'eau pour ne pas avoir faim plus tard.
+      Overworld Powered Minecart_instruction: Super boulot ! Tu as rassemblé beaucoup
+        de ressources et construit une maison modeste. Maintenant pose de rails depuis
+        le bord de la carte jusqu'à la porte de ta maison.
+      Overworld Shear Sheep_instruction: C'est l'heure de tondre les moutons ! Utilise
+        la commande « tondre » pour recueillir la laine des deux moutons.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -4578,25 +4560,22 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
-      Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
-      Underground If Statements_instruction: |
-        Now things are getting tricky. Mine
-        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
-        over any lava you uncover.
-      Underground Iron_instruction: |
-        Walking into molten lava is a bad idea. Place
-        cobblestone to create a bridge, then mine at least two of the iron blocks.
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7
-        redstone! Try using a repeat command inside a repeat command to walk in\na
-        square.\r\n"
-      Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
-      Underground Test Level_instruction: Collect all of the minerals!
+      Underground Avoiding Lava_instruction: La lave se cache sous certains de ces
+        blocs, qu'il faudra recouvrir avant d'avancer. Une commande « si » te sera
+        utile ici. Ajoute une commande « avancer plus » au bon endroit pour extraire
+        ces blocs.
+      Underground If Statements_instruction: Maintenant, les choses deviennent plus
+        difficiles. Extrais 3 redstone, mais ne tombe pas dans la lave. Utilise une
+        commande « Si » pour placer des pavés sur toutes les laves que tu découvres.
+      Underground Iron_instruction: Marcher dans de la lave en fusion est une mauvaise
+        idée. Place des pavés pour créer un pont, puis extrais au moins deux blocs
+        de fer.
+      Underground Mine in a Circle_instruction: "Trouve un moyen d'obtenir 5 diamants
+        et 7 redstone ! Essaye d'utiliser une commande répéter à l'intérieur d'une
+        commande répéter pour marcher dans un carré. \r\n"
+      Underground Mining Coal_instruction: Tu trouveras les ressources les plus précieuses
+        sous terre, mais il peut faire sombre. Place au moins 2 torches et extrais
+        au moins 2 charbons.
+      Underground Test Level_instruction: Récolte l'ensemble des minéraux !
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

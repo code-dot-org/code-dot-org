@@ -403,47 +403,45 @@ ko:
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
-        text: "This lesson is called the big event. It's all about how we can control our programs and actually change the way a program runs on the fly using events, like the push of a button or the click of a mouse."
+        text: 이번 레슨의 제목은 큰! 이벤트 입니다. 우리가 프로그램들을 움직이고, 버튼이나 마우스를 눌러 이벤트들을 전달해서 프로그램의 실행을 변화시키는 것들에 대한 이야기입니다.
       2:
         image: notes/C1_bigevent_unplugged_2.png
-        text: "For this lesson, you'll be controlled with a paper remote control. It's just like a real-live video game."
+        text: 이번 차시에서 여러분은 종이 원격 제어기를 조정할 것입니다. 그것은 생생한 비디오 게임처럼 보일 것입니다.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: "An event is an action  that causes something to happen. It's like when you click the button on a mouse and a webpage loads. That's an event. When you touch your screen on a tablet to scroll, that's an event also. Events are a great way of letting the user direct your program whenever they need or want to."
+        text: 이벤트는 어떤 일이 갑자기 일어나는 것을 말합니다. 그것은 당신이 마우스의 버튼을 클릭하고, 웹페이지를 가져오는 것 같은 동작을 말합니다. 그것이 바로 이벤트입니다. 여러분들이 타블렛의 스크롤을 움직이기 위해 화면을 만질때도 이런 이벤트가 발생합니다. 이벤트는 사용자가 원할 때 언제든지 여러분들의 프로그램을 직접 작동시키는 훌륭한 방법입니다.
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: 'Things happen that we all respond to. We feel hungry and we go to the fridge. We hear the mailman come and he puts our mail in the mailbox  and then we go get our mail. Those are just like the events of pushing a button or moving a joystick. They are something that happens that triggers us to do something.'
+        text: 우리는 모든 일들에 응답할 수 있습니다. 우리는 배고픔을 느끼면 냉장고로 달려갑니다. 우리는 우편배달부가 와서 우체통에 편지를 넣는 소리를 듣고 메일을 가질러 달려갑니다. 그런 것들이 버튼을 누르거나 조이스틱을 움직이는 것과 같은 이벤트입니다. 이벤트는 어떤 일을 일으키는 방아쇠 같은 역할을 합니다.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: |-
-          In video games, there's an event called "Update" and it happens 30 or 60 times a second. For videogame programmers that's almost more important as an event than the buttons or the joystick.
+        text: '비디오 게임들에서 "업데이트"라는 이벤트는 1초에 30번 또는 60번 일어납니다. 비디오 게임 프로그래머에게는 버튼을 누르거나 조이스틱을 움직이는 것보다 더 중요합니다.'
       6:
         image: notes/C1_bigevent_unplugged_6.png
-        text: |-
-          The main event we're watching for is that "Update" tick happening. And then we check the joystick in the tick. So we say, "Oh, has somebody pushed the button this frame? Yes or no?" Without events, the player couldn't move, you couldn't jump, you wouldn't be able to control what's going on. The videogame wouldn't be able to animate anything.
+        text: '우리가 살펴보고자하는 메인 이벤트는 "업데이트"라는 신호 입니다. 아주 짧은 시간 동안에 조이스틱의 움직임을 체크합니다. 그렇게 "이 프레임에서 누군가가 단추를 눌렀나? 그런가? 아닌가?" 등을 확인할 수 있습니다. 이런 이벤트들이 없다면 게임 플레이어가 움직일 수도, 점프를 할 수도, 제어할 수도 없습니다. 비디오게임에서 화면을 바꿔 애니메이션을 보여줄 수도 없을 것입니다.'
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: "In sand sculpture you've got to know that failure is part of the program. But if you persist, it's just going to get nothing but better and more exciting for you. Persistence is the name of the game. Stay with it, you'll love it."
+        text: 여러분들은 모래 조각에서, 실패도 프로그램의 일부분이라는 것을 알았을 것입니다. 하지만 계속 노력하면, 점점 더 잘하게 되고 더 재미있게 됩니다. 이제 끊임없는 노력과 열정이라는 게임을 함께 살펴봅시다. 아주 재미있을 거에요.
       2:
         image: notes/C1_building_foundation_2.jpg
-        text: "This lesson is called building a foundation. In this lesson, we'll work on a task that is meant to be really difficult. You will figure out how to make a structure at least as tall as one of these cups and it's got to be strong enough to hold the weight of a book."
+        text: 이번 레슨의 제목은 기초 만들기 입니다. 이 레슨에서는 정말 어려운 작업을 하게 될 것입니다. 여러분들은 최대로 이 컵들 높이 정도 만큼의 구조로, 책의 무게를 견딜 수 있도록 하는 구조를 어떻게 만들어낼 지 생각해 내야 합니다.
       3:
         image: notes/C1_building_foundation_3.jpg
-        text: "There might be times that our creation doesn't work out. There might be times that we get frusrated and want to give up. There might be a lot of those moments. But if we keep on trying, give it our best shot over and over again, then we're sure to get it before long."
+        text: 만들어 낸 것이 원하는 대로 움직이지 않을 것입니다. 당황스럽고 포기하고 싶을 것입니다. 그런 순간들이 매우 많이 있을 수 있습니다. 하지만 계속 노력하고, 반복해서 최선을 다 한다면, 언젠가는 될 것이라는 것을 알고 있습니다.
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: "Persistence is all about hanging in there when you really want to give up. If you want to create something new and different, there's going to be a lot of failures along the way."
+        text: 끊임없는 노력과 열정은, 여러분들이 정말로 포기하고 싶을 때 포기하지 않게 해주는 힘이라고 할 수 있습니다. 여러분들이 지금까지는 없었던 새롭고 다른 것을 만들어내려고 한다면, 그 앞에는 수 많은 실패들이 놓여 있을 것입니다.
       5:
         image: notes/C1_building_foundation_5.jpg
-        text: "The trick to persistence is choosing to keep on going and learn from your failures instead of quitting because you're frustrated. Frustration actually just means there's something wonderful around the corner. So don't quit before you get to it. Wooo!"
+        text: 끊임없는 노력과 열정은, 실망하고 좌절해서 포기하려는 것이 아니라, 실패들로부터 더 배우고 계속 도전해 나가는 것을 선택하면서 만들어지게 됩니다. 실망과 좌절은 실제로는 그 근처에 멋진 세상이 있다는 것을 의미합니다. 그렇기 때문에.. 원하는 것을 얻기 전까지 포기하지 말고 힘내세요!
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: "Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work, there is something we use in both dances and in programming lightsuits. And that is loops! Loops are repeating an action over and over."
+        text: 안녕하세요. 여러분! 저는 일루미나티(iLuminati) 작품들을 만들어낸 마이랄 코트(Miral kotb) 입니다. 작품들을 만들기 위해서는 춤(dances) 과, 프로그래밍이 되는 라이트 슈트(lightsuits) 가 모두 필요합니다. 이건 반복이에요! 반복은 어떤 동작을 무한히 반복해 줍니다.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: "When you repeat something multiple times, like my actions to keep the hula hoop spinning, I'm performing a loop of that action. This is a loop. This is a loop. And this is a loop."
+        text: 여러분들이 어떤 작업을 여러 번 반복할 때에는, 제가 훌라후프를 계속 돌리기 위한 동작을 하는 것처럼, 동작을 반복해서 실행하고 있는 것입니다. 이것이 반복입니다. 이것도 반복입니다. 이것도 반복입니다.
       3:
         image: notes/C1_getting_loopy_3.png
         text: "Today we're going to have a dance party. We'll act out loops with a new dance. The Iteration. We're going to learn about loops using a dance. You will learn a couple of easy steps and repeat them over and over to complete the dance."
@@ -533,7 +531,7 @@ ko:
         text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
       7:
         image: notes/C1_going_places_safely_7.png
-        text: "Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to log on again to see where I can visit next."
+        text: 와우! 정말 신나! 이제 저녁시간이에요. 나는 이제 로그 오프를 합니다. 나는 다음에 방문할 곳을 알기 위해 새로 로그인을 할때까지 기다리기 힘들어요.
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png

@@ -1458,7 +1458,14 @@ ja:
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          title: MinecraftのHour of Code (アワーオブコード)
+          description_short: コードで マインクラフト の世界を探検（たんけん）しよう
+          description: コードのブロックを使って、スティーブかアレックスにMinecraftの世界を冒険させよう！
           Hour of Code 2015: Hour of Code 2015　（コードの時間　２０１５）
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          description: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit

@@ -1650,7 +1650,14 @@
           Craft: Craft
         mc:
           title: Minecraft L'Ora del Codice
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
+          description_short: Esplora il mondo di Minecraft attraverso il codice
+          description: Usa i blocchi di codice per vivere con Steve o Alex un'avventura
+            nel mondo di Minecraft
           Hour of Code 2015: L'Ora del Codice 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit

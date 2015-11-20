@@ -2935,20 +2935,16 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
-      Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
+      Overworld Avoid Monsters_instruction: Бежать прямо к Рептилиям это плохая идея.
+        Осторожно двигайтесь мимо Рептилий и безопасно дойдите до вашего дома.
+      Overworld Chop Tree_instruction: Древесина – это очень важный ресурс. Многие
+        вещи сделаны из неё. Дойдите до дерева и используйте команду «уничтожить блок»,
+        чтобы срубить его.
+      Overworld Chop Trees_instruction: Нам нужно построить дом до захода солнца.
+        Для дома нужно много древесины. Срубите все 3 дерева.
+      Overworld Free Play 20x20_instruction: Поздравляем! Вы решили все наши головоломки!
+        Теперь добывайте, стройте и создавайте что-то уникальное, используя все, что
+        вы узнали до настоящего времени.
       Overworld Free Play_instruction: |
         This landscape is yours to play with. You
         choose what to build.
@@ -2970,9 +2966,8 @@
         One wall is finished, let’s build the
         rest of the house by following your floor plan! You’ll have to repeat yourself
         quite a lot here.
-      Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
+      Overworld House Frame Chosen_instruction: Постройте остальную часть вашего дома
+        из любого материала, который вам нравится. Команда «повторить» вам пригодится.
       Overworld House Frame_instruction: |
         Let's make our own house! This spot looks
         good. Build a frame on the dirt blocks.
@@ -2981,23 +2976,18 @@
         of underground resources. Now, we're going to build a track along the dirt
         path from your house. The first step is clearing the path. Follow the path
         and clear the trees.
-      Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
-      Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
-      Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
-      Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+      Overworld Move to Sheep_instruction: Добавьте вторую команду «двигаться вперед»,
+        чтобы дойти до овцы.
+      Overworld Place Wall_instruction: Каждый дом начинается со стен. Постройте первую
+        часть вашего дома, разместив команды «поставить» и «двигаться вперед» внутри
+        повторения цикла.
+      Overworld Plant Crops_instruction: Это хорошо - планировать заранее. Грядки
+        расположены по обе стороны от воды, так что вы не будете голодать.
+      Overworld Powered Minecart_instruction: Отличная работа! Вы собрали много ресурсов
+        и построили небольшой дом. Теперь проложите железную дорогу от края карты
+        до двери вашего дома.
+      Overworld Shear Sheep_instruction: Время стрижки овец! Используйте команду «стричь»
+        для сбора шерсти с обеих овец.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -4655,25 +4645,21 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
-      Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
-      Underground If Statements_instruction: |
-        Now things are getting tricky. Mine
-        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
-        over any lava you uncover.
-      Underground Iron_instruction: |
-        Walking into molten lava is a bad idea. Place
-        cobblestone to create a bridge, then mine at least two of the iron blocks.
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7
-        redstone! Try using a repeat command inside a repeat command to walk in\na
-        square.\r\n"
-      Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
+      Underground Avoiding Lava_instruction: Лава скрывается под некоторыми из этих
+        блоков, вам нужно будет её закрыть прежде чем двигаться вперед. Здесь вам
+        пригодится команда «если». Добавьте команду «двигаться вперед» в правильное
+        место, чтобы добыть все ресурсы.
+      Underground If Statements_instruction: Теперь вещи посложнее. Нужно добыть 3
+        красного камня, но не упасть в лаву. Используйте команду «если», чтобы уложить
+        булыжники над любой лавой, которую вы откроете.
+      Underground Iron_instruction: Идти в расплавленную лаву является плохой идеей.
+        Сделайте из булыжников мост, а затем раскопайте хотя бы два железных блока.
+      Underground Mine in a Circle_instruction: "Найдите способ, чтобы получить 5
+        алмазов и 7 красных камней! Попробуйте использовать команду \"повторить\"
+        внутри команды \"повторить\", чтобы двигаться по квадрату. \r\n"
+      Underground Mining Coal_instruction: Вы сможете найти наиболее ценные ресурсы
+        под землей, но там темно. Нужно поставить как минимум 2 факела и добыть по
+        крайней мере 2 угля.
       Underground Test Level_instruction: Collect all of the minerals!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Используйте этот тест, чтовы создать xml для модульного

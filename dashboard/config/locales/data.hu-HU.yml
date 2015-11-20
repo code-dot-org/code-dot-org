@@ -777,11 +777,11 @@
         starwars_blocks_intro: 'Star Wars: A galaxis építése kóddal - Bevezetés'
         starwars_blocks_events: 'Star Wars: A galaxis építése kóddal - Események'
         starwars_blocks_congrats: 'Star Wars: A galaxis építése kóddal - Gratulálunk'
-        mc_intro: Minecraft - Introduction
-        mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        mc_intro: Minecraft - Bevezetés
+        mc_repeat: Minecraft - Ismétlés
+        mc_if_statements: Minecraft - Ha állítások
+        mc_congrats_share: Minecraft - Gratulálunk
+        mc_congrats_no_share: Minecraft - Gratulálunk
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá

@@ -686,9 +686,10 @@
           ajoi është unazore! Laqet janë duke përsëritur një aksion përsëri dhe përsëri.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: When you repeat something multiple times, like my actions to keep the
-          hula hoop spinning, I'm performing a loop of that action. This is a loop.
-          This is a loop. And this is a loop.
+        text: Kur ju përsërisni diqka shumë herë, sikur aksionet e mia për të mbajtur
+          kolovajzën duke u luhatur, unë jam duke performuar një unazë përsëritëse
+          të atij aksioni. Kjo është një unazë përsëritëse. Kjo është një unazë përsëritëse.
+          Dhe kjo është një unazë përsëritëse.
       3:
         image: notes/C1_getting_loopy_3.png
         text: Sot ne do të kemi një parti vallëzimi. Ne do të veprojmë jashtë përsëritjeve
@@ -704,13 +705,14 @@
           përsëritje.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: We actually do use loops in our dancing. The dancers are wearing computers,
-          all in the same network. I might loop the lights through to the same dancers
-          over and over again. In the loop I might have an iteration where I'll say
-          you want to go loop through these six dancers over and over again and then
-          within the loop you want to increase the speed of the light. And that's
-          all created through loops. Loops are important in computer science because
-          they make our work shorter and easier.
+        text: Ne i përdorim përsëritjet në vallëzimet tona. Valltarët janë të veshur
+          me kompjutera, të gjithë në të njëjtin rrjet. Unë mund të përsëris dritat
+          përmes të njejtëve vallëtarë pa pushim. Në unazë përsëritëse unë mund të
+          kem një përsëritje ku unë do të them se ti dëshiron të përsëritësh nëpërmjet
+          këtyre gjashtë kërcimtarve pa pushim dhe pastaj brenda unazës përsëritëse
+          ti dëshiron të rrisësh shpejtësinë e dritës. Dhe kjo e gjitha është krijuaj
+          përmes përsëritjeve. Përsëritjet janë të rëndësishme në shkenca kompjuterike
+          sepse ata e bëjnë punën tonë më të shkurtër dhe më të lehtë.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
@@ -764,31 +766,30 @@
           në enigmë dhe shiko se çfarë drejtime ajo ka nevojë për të marrë.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: You need to drag the blocks over from the toolbox to the workspace.
-          Make sure it's under the "when run" block and when you think you've got
-          the right solution, then you can click "Run" and watch the bird go to the
-          pig.
+        text: Ju duhet të bartni blloqet prej kutisë së veglave në hapsirën e punës.
+          Sigurohu që është nën bllokun "kur vazhdon" dhe kur mendon se e keni gjetur
+          zgjidhjen e duhur, pastaj kliko "vazhdo" dhe shiko zogun të shkojë te derri.
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: One that computers are really good at is repeating commands. As a person,
-          you'd get really bored if you had to do the same thing lots and lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times and not get bored and be able to carry that out really well.
+        text: Një që kompjuterët janë vërtetë të mirë është përsëritja e komandave.
+          Si një person, ju do të mërziteni nëse duhet të bëni gjërat e njejta shumë
+          herë në një rresht. Por një kompjuter mund të bëjë gjënë e njejtë milion
+          apo bilion herë dhe nuk mërzitet dhe mund ta bëjë atë shumë mirë.
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: Për shembull, nëse do të doja të urojë të gjithë në Facebook një ditëlindje
+          të lumtur duke u dërguar atyre një email, do të më merrte kohë më shumë
+          së një shekull për të shkruar të gjithë kto emaile. Por me pak linja kodimi,
+          mund të kem një sistem që u dërgon emaile të gjithve për t'i uruar ditëndje
+          të lumtur.
       3:
         image: notes/C1_maze_loops_3.png
-        text: To get the bird to the pig in this level... rather than drag three North
-          blocks on to the workspace, you will use the "repeat" block. Drag the "repeat"
-          block on to the workspace and enter the number 3. Then drag the "move North"
-          block into the "repeat" block and hit "Run" to see if you got it right.
-          Congratulations, you got it!
+        text: Për të marrë zogun deri te derri në këtë nivel... më mirë sesa të tërheqësh
+          tre blloqe veriore në hapsirën e punës, ju do të përdorni bllokun "përsërit".
+          Tërhiq bllokun "përsërit" në hapsirën e punës dhe shkruaj numrin 3. Pastaj
+          tërhiq bllokun "lëviz në veri" në bllokun "përsërit" dhe shtyp "vazhdo"
+          për të parë nëse e keni bërë mirë. Përgëzime, ja dole!
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
@@ -797,26 +798,26 @@
           the smiley face goal.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: But the smiley is face down and only one person knows how to get there.
-          Let's get this program started.
+        text: Por fytyra e qeshur është poshtë dhe vetëm një person di si të arrijë
+          atje. Le të fillojmë këtë program.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: A program is an algorithm that has been coded into something that can
-          be run by a machine. Most of us think of a program as something that we
-          write for a computer. Programs are really good for that but they're also
-          helpful in other places. You can make your own game or even program a robot
-          to do things for you.
+        text: Një program është një algoritëm që ka qenë i programuar nëpërmes diqkaje
+          që mund të punojë si makinë. Shumë prej nesh mendojnë një program si diqka
+          që ne e shkruajmë për një kompjuter. Programet janë vërtetë të mira për
+          atë por ato janë gjithashtu ndihmuese në vende të tjera. Ti mund të bësh
+          lojën tënde apo program që një robot të bëjë gjërat për ju.
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: My name is Jeremiah. Hi! I am seven years old. I love playing on my
-          mom's computer but I always get permission first. "Mom, can I go on the
-          computer? Sure honey!"
+        text: Emri im është Jeremiah. Tung! Une jam shtatë vjeqare. Pëlqej të luaj
+          në kompjuterin e nënës time por unë gjithëmonë kërkojë leje fillimisht.
+          "Nënë, mund të shkojë te kompjuteri? Sigurisht shpirti im!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: I love my mom's computer because I can go on the internet. The internet
-          is kind of like your neighborhood. You can visit cool places, you can talk
-          to family and friends and you can learn lots of new things.
+        text: E pëlqejë kompjuterin e nënës time sepse mund të përdorë internetin.
+          Interneti është diqka si lagjia juaj. Mund të vizitoni vende të bukura,
+          mund të flisni me familjen dhe shokët dhe të mësoni plot gjëra të reja.
       3:
         image: notes/C1_going_places_safely_3.png
         text: Yesterday, I visited a zoo that's near my house. I saw a baby zebra.
@@ -944,17 +945,17 @@
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: One that computers are really good at is repeating commands. As a person,
-          you'd get really bored if you had to do the same thing lots and lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times and not get bored and be able to carry that out really well.
+        text: Një që kompjuterët janë vërtetë të mirë është përsëritja e komandave.
+          Si një person, ju do të mërziteni nëse duhet të bëni gjërat e njejta shumë
+          herë në një rresht. Por një kompjuter mund të bëjë gjënë e njejtë milion
+          apo bilion herë dhe nuk mërzitet dhe mund ta bëjë atë shumë mirë.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: Për shembull, nëse do të doja të urojë të gjithë në Facebook një ditëlindje
+          të lumtur duke u dërguar atyre një email, do të më merrte kohë më shumë
+          së një shekull për të shkruar të gjithë kto emaile. Por me pak linja kodimi,
+          mund të kem një sistem që u dërgon emaile të gjithve për t'i uruar ditëndje
+          të lumtur.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
         text: In this example, your goal is going to be to move the bird to get the

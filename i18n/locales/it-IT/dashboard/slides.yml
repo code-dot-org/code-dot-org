@@ -734,10 +734,10 @@ it:
         text: Usa il tuo cuore per crescere e crescere. e dai a te stesso un colorito sano e per fare un biglietto di SanValentino, di a qualcuno che tu sarai mio! Usa il tuo cuore quando sei in linea, senti ciò che e giusto e sempre gentile e mostra rispetto ai tuoi amici, essere onesto e carino su internet. Dalla tua testa giù alle dita dei tuoi piedi, pausa, pensaci. Dai tuoi piedi su per il tuo naso, pausa e pensa in linea!
       3:
         image: notes/C2_digital_footprint_3.png
-        text: "Use your arms to hug your pet, to keep your clothes from getting wet, and to wear your favorite sleeves and to help you fly and make believe. Use your arms when you're online, to take break and balance time and leave your tech behind and to find yourself a tree to climb. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: Usa le tue braccia per abbracciare il tuo animale, per evitare i tuoi vestiti di far bagnare, e per indossare le tue magliette preferite e per aiutarti a volare ed essere felice. Usa le tue braccia quando sei connesso, per fare un pausa e dividere il tempo con compromesso, e della tecnologia scordarti e trovare un albero su cui arrampicarti. Dalla testa fino ai tuoi piedi, fermati, riflettici adesso. Dai tuoi piedi fino al naso, fermati e pensa connesso!
       4:
         image: notes/C2_digital_footprint_4.png
-        text: "Use your gut to store your food, and to listen to its growling mood, to make a belly flop, and to feel the gas in soda pop. Use your gut when you're online, to know to watch for certain signs, and to let it guide the way and tell you when it's not ok. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: Usa la tua pancia per il mangiare e per ascoltare il suo brontolare, per dare una panciata e per sentire il gas nella bevanda gassata. Usa la tua pancia quando sei connesso, per riconoscere un segnale espresso e per farti guidare bene e dirti quando non conviene. Dalla testa fino ai tuoi piedi, fermati, riflettici adesso. Dai tuoi piedi fino al naso, fermati e pensa connesso!
       5:
         image: notes/C2_digital_footprint_5.png
         text: "So think with your head, and feel with your heart, balance with your arms, listen to your gut, online. Use your legs to run and kick, and to jump and bounce on a pogo stick, and to dance around the block, and to skip along in your smelly socks. Use your legs when you're online, to stand up to bullies who cross the line, and remember to stand tall, be nice to creatures great and small."
@@ -1431,7 +1431,7 @@ it:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Ciao, sono Kathleen Kennedy e sono la produttrice di Guerre Stellari: Episodio VII - Il Risveglio della Forza. Oggi lavoreremo con una delle nostre celebrità, BB-8. BB-8 è un droide sferico. Tutto ciò che fa e ogni movimento che fa è controllato da un software. L'informatica influisce su ogni settore industriale, dal marketing alle cure sanitarie e perfino nel cinema. Infatti, per realizzare un film come Il Risveglio della Forza, hanno lavorato insieme centinaia di ingegneri informatici."
+        text: "Ciao, sono Kathleen Kennedy e sono la produttrice di Guerre Stellari: Episodio VII - Il Risveglio della Forza. Oggi lavoreremo con una delle nostre celebrità, BB-8. BB-8 è un droide sferico. Tutto ciò che fa e ogni movimento che fa è controllato dal software, cioè da programmi informatici. L'informatica influisce su ogni settore industriale, dal marketing alle cure sanitarie e perfino nel cinema. Infatti, per realizzare un film come Il Risveglio della Forza, hanno lavorato insieme centinaia di informatici."
       2:
         image: notes/starwars_intro_2.JPG
         text: "Ciao, sono Rachel Rose, un ingegnere senior nel settore Ricerca e Sviluppo alla ILM e mi occupo dell'animazione e del gruppo di sviluppo delle creature. Nel Risveglio della Forza, mi occupo di aiutare gli artisti a sviluppare gli equipaggiamenti che costituiscono quelle parti che permettono ai personaggi di apparire credibili come creature di una galassia molto molto lontana."
@@ -1440,13 +1440,13 @@ it:
         text: Nella prossima ora, costruiremo la nostra personale versione del gioco di Star Wars. Ti insegneremo i concetti fondamentali della programmazione. I programmi di solito sono interamente testuali ma, in questo caso, per scrivere i nostri programmi, uniamo dei blocchi. In realtà stai sempre scrivendo del codice. Dopo che avrai appreso i concetti di base usando i blocchi, passeremo al JavaScript, uno dei linguaggi di programmazione più popolari per il web.
       4:
         image: notes/starwars_intro_4.JPG
-        text: "Per cominciare, lavoreremo con Ray per programmare BB-8 in modo tale da farlo andare a raccogliere tutti i rottami metallici. Il tuo schermo e suddiviso in tre parti. Sulla sinistra c'è lo spazio per il gioco di Star Wars, in cui viene eseguito il codice. Le istruzioni di ogni livello sono scritte sotto l'area del gioco."
+        text: "Per cominciare, lavoreremo con Ray per programmare BB-8 in modo tale da fargli raccogliere tutti i rottami metallici. Il tuo schermo è suddiviso in tre parti. Sulla sinistra c'è l'area di gioco di Star Wars, in cui viene eseguito il codice. Le istruzioni di ogni esercizio sono scritte sotto l'area di gioco."
       5:
         image: notes/starwars_intro_5.JPG
-        text: "Al centro dello schermo c'è la cassetta degli attrezzi che contiene i blocchi. Ogni blocco è un'istruzione che BB-8 può capire."
+        text: "Al centro dello schermo c'è la cassetta degli attrezzi che contiene i blocchi. Ogni blocco è un'istruzione che BB-8 può eseguire."
       6:
         image: notes/starwars_intro_6.JPG
-        text: Lo spazio bianco sulla destra è il tuo spazio di lavoro ed è il posto in cui costruirai il tuo programma.
+        text: Lo spazio bianco sulla destra è il tuo spazio di lavoro ed è il posto in cui costruisci il tuo programma.
       7:
         image: notes/starwars_intro_7.JPG
         text: |-
@@ -1548,7 +1548,7 @@ it:
         text: "Il tuo schermo e suddiviso in tre parti. Sulla sinistra c'è lo spazio per il gioco di Star Wars, in cui viene eseguito il codice. Le istruzioni di ogni livello sono scritte sotto l'area del gioco."
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: "Al centro dello schermo c'è la cassetta degli attrezzi che contiene i blocchi. Ogni blocco è un'istruzione che BB-8 può capire."
+        text: "Al centro dello schermo c'è la cassetta degli attrezzi che contiene i blocchi. Ogni blocco è un'istruzione che BB-8 può eseguire."
       6:
         image: notes/starwars_blocks_intro_6.JPG
         text: Lo spazio bianco sulla destra è il tuo spazio di lavoro ed è il posto in cui costruirai il tuo programma.
@@ -1648,7 +1648,7 @@ it:
         text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
       2:
         image: notes/mc_repeat_2.JPG
-        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+        text: "La cosa che preferisco fare in Minecraft è esplorare. Io amo avventurarmi nelle grotte e vedere cosa riesco a trovare. Come chi non è un programmatore, sono davvero entusiasta di seguire la lezione di Minecraft e imparare un po' di codice da solo."
       3:
         image: notes/mc_repeat_3.JPG
         text: The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops.

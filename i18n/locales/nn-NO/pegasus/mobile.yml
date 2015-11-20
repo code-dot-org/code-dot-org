@@ -1,5 +1,5 @@
 nn-NO:
-  hour_of_code: Hour of Code
+  hour_of_code: Kodetimen
   hello: Hallo, verda
   select_language: Vel språk
   en: Informatikk
@@ -278,25 +278,25 @@ nn-NO:
   starwars_javascript_start_button: Prøv no
   starwars_blocks_title: Blokker
   starwars_blocks_description: Bruk dra-og-slepp blokker.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Mange språk (kommer snart) | Moderne nettlesere, smart-telefoner, nettbrett | Alderen 6-10
   starwars_blocks_start_button: Prøv no
   starwars_watch_videos: Før du begynnar kan du sjå ein av desse inspirerande filmane
   starwars_speak_languages: Snakkar du eit anna språk?
   starwars_help_translate: Hjelp oss med å oversetja
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
   mc_name: Kodetimen med Minecraft
   mc_longdescription: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr gjennom denne Minecraft-verda.
   mc_shortdescription: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr gjennom denne Minecraft-verda.
   mc_gradelevel: Alder 6 +
   mc_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Mange språk (kommer snart) | Moderne nettlesere og nettbrett | Alder 6 +
   minecraft_subtitle: Kodetimen med Minecraft
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
+  volunteer_engineer_submission_title: Meld deg som frivillig til Kodetimen og inspirer elevene.
   volunteer_engineer_submission_subtitle_generic: '100 000 lærarar skal ha ein Kodetime i sitt klasserom i år, 7.-13. desember 2015. Dei ønskjer di hjelp! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} lærere trenger frivillige som er lidenskapelig opptatt av informatikk til å hjelpe til med Kodetimen i desember. <br>%{num_volunteers} frivillige har meldt seg. Bli med.'
   volunteer_engineer_submission_intro_background: Kodetimen er ei global rørsle for å gi ein time introduksjon til informatikk og programmering, som når ut til titals millionar elevar i meir enn 180 land. Bli gjerne med under Computer Science Education Week, 7.-13. desember.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    Disse lærerne vil gjerne ha noen <span style="font-family: 'Gotham 7r', sans-serif;">tekonologer</span> som kan hjelpe til i klasserommet, eller noe som kan <span style="font-family: 'Gotham 7r', sans-serif;">inspirere</span> elevene deres ved å prate om bredden av muligheter med informatikk og programmering. Dette kan f. eks. bli gjort gjennom video-chat. Hvis du ikke er en ingeniør, skal du vite at alle kan organisere Kodetimen. <a href="%{url}">Lær mer her</a>.
   volunteer_engineer_submission_intro_signup: 'Ver gild å oppgi følgjande informasjon om du er ein informatikkstudent eller jobbar med programmering. Felta markert med <span class="form-required-field">*</span> er obligatoriske.'
   volunteer_engineer_submission_header_shared: Informasjon vert delt med lærarar på eit kart over frivillige
   volunteer_engineer_submission_field_name: Namn
@@ -538,9 +538,9 @@ nn-NO:
   learn_more: Lær meir
   learn_sign_up_description: Registrer deg for å delta på Kodetimen under CS Code Week
   learn_sign_up_button: Meld deg på
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Se på denne inspirerende filmen
+  learn_videos_show: Vis denne inspirerende filmen til klassen din
+  learn_videos_before_hoc: Se en inspirerende film før Kodetimen
   learn_educator_resources_description: Lær om korleis du kan gjennomføra Kodetimen
   learn_educator_resources_button: Lærarressursar
   learn_are_you_educator: 'Er du lærar? Sjekk<a href="http://hourofcode.com/resources/how-to"> korleis du kan gjennomføra Kodetimen</a>'
@@ -548,9 +548,9 @@ nn-NO:
   hoc2014_try_new_tutorial: Prøv den nye Kodetime-leksjonen (beta)
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
   hoc2014_try_frozen: Skap kunst med Anna og Elsa frå Frost
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Guider laget av Code.org
+  carousel_heading_3rd_party: Guider laget av andre
+  carousel_heading_third_party: Guider laget av andre
   carousel_heading_international: Leksjonar på ditt språk
   carousel_heading_domestic: Leksjonar tilgjengeleg på engelsk
   carousel_heading_beginners: Leksjonar for nybegynnarar

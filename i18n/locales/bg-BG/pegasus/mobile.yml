@@ -1,5 +1,5 @@
 bg-BG:
-  hour_of_code: Hour of Code
+  hour_of_code: Час на Кодирането
   hello: Здравей, свят
   select_language: Моля, изберете вашия език
   en: Компютърни науки
@@ -265,7 +265,7 @@ bg-BG:
   starwars_watch_videos: Преди да започнете, гледайте едно от тези вдъхновяващи видеа
   starwars_speak_languages: Говорите друг език?
   starwars_help_translate: Помогнете ни с превода
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: Съвременни браузъри, смартфони, таблети
   mc_name: Minecraft Hour of Code
   mc_longdescription: Използвайте блокове с код, за да въведете Steve или Alex в приключението чрез този Minecraft свят.
   mc_shortdescription: Използвайте блокове с код, за да въведете Steve или Alex в приключението чрез този Minecraft свят.

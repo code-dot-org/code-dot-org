@@ -1610,18 +1610,18 @@
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
+          title: 'Star Wars: Construir uma Galáxia com Código'
+          description_short: Aprenda a programar dróides, e crie o seu jogo Star Wars
+            numa galáxia muito, muito distante.
+          description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa
+            galáxia muito, muito distante.
           Hour of Code 2015: Hora de Código 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
+          title: 'Star Wars: Construir uma Galáxia com Código'
+          description_short: Aprenda a programar dróides, e crie o seu jogo Star Wars
+            numa galáxia muito, muito distante.
+          description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa
+            galáxia muito, muito distante.
           Hour of Code 2015: Hora de Código 2015
         minecraft:
           title: Minecraft
@@ -1629,8 +1629,15 @@
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
+          title: Hora do Código de Minecraft
+          description_short: Explore um mundo Minecraft pelo código
+          description: Use blocos de código para levar o Steve ou a Alex numa aventura
+            por este mundo Minecraft
           Hour of Code 2015: Hora de Código 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit

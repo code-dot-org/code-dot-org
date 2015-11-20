@@ -1694,11 +1694,10 @@
       Course 4 Play Lab Params 5_instruction: Попълнете параметъра за "актьор", за
         да извикаме функцията "патрул" за всеки от актьорите. Запомнете, актьорите
         отговарят на числата 1, 2, и 3.
-      Course 4 Play Lab Params 6_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Try using a "set speed" block with the new "speed"
-        parameter to help Penguin get both flags before the other sprites even get
-        one.
+      Course 4 Play Lab Params 6_instruction: Добавете друг параметър, наречен "скорост"
+        на "патрул" функцията. Опитайте да използвате "Задаване скорост" блок с нов
+        параметър "скорост", за да помогнете на пингвина да стигне двете знамена,
+        преди другите дори да достигнат едно.
       Course 4 Play Lab Params 7_instruction: "Нека се позабавляваме! Погледнете предоставения
         код, за да видите дали можете да разберете какво всеки блок прави.  \r \r
         Когато сте готови, използвайте клавишите със стрелки за контрол на кучето
@@ -1706,13 +1705,14 @@
       Course 4 Play Lab Params 8_instruction: Използвайте блока " когато докосва",
         за да изпратите Кучето обратно в горния ляв ъгъл, ако то докосне някои от
         актьорите.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
-        most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit\nthe
-        function so that a \"points\" parameter is added to the \"player_score\"\nvariable.
-        \r\n\r\nThe variable \"player_score\" should increase each time\nDog tags
-        Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:\nWhen
-        you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
-        on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Тук е нашата игра от по-рано, но по-голямата
+        част от кода е скрита. Има нова функция \"score_points.\" \r \r Редактирайте
+        функцията, така че към променливата \"player_score\" да се добави параметъра
+        \"точки\". \r \r Променливата \"player_score\" трябва да се увеличава всеки
+        път щом кучето докосва котката със сърца и да намалява всеки път, щом котката
+        докосва кучето със сърца. \r \r бележка: Когато сте готови, щракнете върху
+        \"Старт\", за да играете.  Когато кучето направи резултат 6 точки, Вие ще
+        преминете към следващия пъзел. "
       Course 4 Play Lab Vars 1_instruction: Не трябва да пишете никакъв код , просто
         натиснете "Старт", за да играете! Тук вие сте Кучето, което се опитва да събере
         повече знамена от Котката. Използвайте стрелката надолу за да го контролирате.
@@ -2147,21 +2147,18 @@
         пъти 90 се съдържа в 360? Съвет: Това е малка стойност.'
       frozen cross rotate_instruction: Сега повторете това 10 пъти. На колко градуса
         трябва да се завъртате между всеки ред?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using another “Repeat"
-        block to repeat a parallelogram 4 times, turning right by 90 degrees between
-        each parallelogram.
+      frozen cross_instruction: Увийте блока за повторение около тези команди, за
+        да създадете знак плюс. Забелязахте ли, Елза може да се движи напред и назад?
+      frozen diamond mini snowflake_instruction: Знаете ли, че всяка снежинка е с
+        различна форма? Нека създадем нова снежинка с помощта на блок за повторение,
+        като повторим успоредника 4 пъти. Ще завиваме надясно на 90 градуса между
+        всеки успоредник.
       frozen diamond snowflake_instruction: Сега, нека създадем нова снежинка с помощта
         на блок за повторение. Ще повторим успоредника 10 пъти и ще завиваме надясно
         на 36 градуса след всяка фигура.
-      frozen diamond_instruction: |
-        Use a repeat around these blocks to create a parallelogram.
-        It's just like a rectangle but has different angles. This one has 60 degree
-        and 120 degree angles instead of all 90 degree angles.
+      frozen diamond_instruction: Използвайте повторение около тези блокове, за да
+        създадете успоредник. Това е точно като правоъгълник но има различни ъгли.
+        Той има 60 градуса и 120 градуса ъгли вместо 90 градуса.
       frozen freeplay_instruction: Вие официално сте главен художник! Създайте зимна
         приказка и я споделете с приятелите си.
       frozen line_instruction: Здравейте! Аз съм Елза от Арендейл. Помогнете ми да
@@ -2778,41 +2775,31 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
-      Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
-      Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
+      Overworld Avoid Monsters_instruction: Тичането по пълзящо растение е лоша идея.
+        Внимателно се придвижете покрай шиповете и достигнете безопасно до вашия дом.
+      Overworld Chop Tree_instruction: Дървесината е много важен ресурс. Много неща
+        са направени от него. Отидете до дървото и използвайте командата "унищожи
+        блок" да го отрежете.
+      Overworld Chop Trees_instruction: Ние трябва да построим къща, преди да залезе
+        слънцето. Къщите изискват много дърво. Отсечете всички 3 дървета.
+      Overworld Free Play 20x20_instruction: Поздравления! Вие приключите всички наши
+        пъзели! Сега копайте, изградете и създайте нещо уникално с помощта на всичко,
+        което сте научили досега.
+      Overworld Free Play_instruction: Този пейзаж е твой. Разгледай го. Ти избираш
+        какво да изградиш.
+      Overworld House Frame - A_instruction: Да направим наш собствен дом! Това място
+        изглежда добре. Изгради рамка върху блоковете от мръсотия.
+      Overworld House Frame - C_instruction: Да направим наш собствен дом! Това място
+        изглежда добре. Изгради рамка върху блоковете от мръсотия.
+      Overworld House Frame B_instruction: Една стена е завършена, нека построим останалата
+        част от къщата като следвате вашия етажен план! Вие ще трябва да се повтараете
+        много тук.
+      Overworld House Frame B2_instruction: Една стена е завършена, нека построим
+        останалата част от къщата като следвате вашия етажен план! Вие ще трябва да
+        се повтараете много тук.
+      Overworld House Frame C_instruction: Една стена е завършена, нека построим останалата
+        част от къщата като следвате вашия етажен план! Вие ще трябва да се повтараете
+        много тук.
       Overworld House Frame Chosen_instruction: |
         Build the rest of your house from
         any material you'd like. The "repeat" command will come in handy.

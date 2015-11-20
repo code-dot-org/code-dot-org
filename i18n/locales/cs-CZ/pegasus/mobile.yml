@@ -1,5 +1,5 @@
 cs-CZ:
-  hour_of_code: Hour of Code
+  hour_of_code: Hodina kódu
   hello: Ahoj světe
   select_language: Prosím, zvolte jazyk
   en: Informatika
@@ -293,14 +293,14 @@ cs-CZ:
   starwars_watch_videos: Před zahájením práce, Prohlédněte si jedno z těchto inspirujících videí
   starwars_speak_languages: Mluvíš cizím jazykem?
   starwars_help_translate: Pomozte nám s překladem
-  starwars_platform_text: Modern browsers, smartphones, tablets
-  mc_name: Minecraft Hodina kódu
-  mc_longdescription: Používej bloky kódu vzít Steva nebo Alexe na dobrodružství po Minecraft světu.
-  mc_shortdescription: Používej bloky kódu vzít Steva nebo Alexe na dobrodružství po Minecraft světu.
+  starwars_platform_text: Moderní prohlížeče, smartphony, tablety
+  mc_name: Hodina kódu Minecraftu
+  mc_longdescription: Použij bloky kódu, abys vzal Steva nebo Alexe na dobrodružství po světu Minecraftu.
+  mc_shortdescription: Použij bloky kódu, abys vzal Steva nebo Alexe na dobrodružství po světu Minecraftu.
   mc_gradelevel: Věk 6 +
   mc_platformtext: Moderní prohlížeče, smartphony, tablety
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
-  minecraft_subtitle: Minecraft Hodina kódu
+  minecraft_subtitle: Hodina kódu Minecraftu
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100 000 učitelů bude hostit Hodinu kódu ve svých třídách letos 7.-13. prosince tohoto roku 2015. Chtějí vaši pomoc! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'

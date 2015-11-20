@@ -1,5 +1,5 @@
 "tr-TR":
-  hour_of_code: Hour of Code
+  hour_of_code: Saat Kodu
   hello: Merhaba dünya
   select_language: Lütfen dilinizi seçiniz
   en: Bilgisayar Bilimi
@@ -330,7 +330,7 @@
     videos
   starwars_speak_languages: Farklı bir dili mi konuşuyorsunuz?
   starwars_help_translate: Çevirmemize yardım edin
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: Modern tarayıcılar, akıllı telefonlar, tabletler
   mc_name: Minecraft Kod Saati
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.

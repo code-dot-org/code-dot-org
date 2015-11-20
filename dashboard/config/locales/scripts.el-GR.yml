@@ -1636,8 +1636,15 @@
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Ώρα του Κώδικα με το Minecraft
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
+          title: Η Ώρα του Κώδικα με το Minecraft
+          description_short: Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα
+          description: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve ή τον
+            Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
           Hour of Code 2015: Ώρα του Κώδικα 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit

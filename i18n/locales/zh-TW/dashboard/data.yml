@@ -500,13 +500,13 @@ zh:
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
-        starwars_typing: 'Star Wars: Building a Galaxy with Code - JavaScript'
-        starwars_events: 'Star Wars: Building a Galaxy with Code - Events'
-        starwars_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
-        starwars_blocks_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
-        starwars_blocks_events: 'Star Wars: Building a Galaxy with Code - Events'
-        starwars_blocks_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
+        starwars_intro: '星際大戰: 用程式建立一個銀河系-介紹'
+        starwars_typing: '星際大戰: 用程式建立一個銀河系-JavaScript'
+        starwars_events: '星際大戰: 用程式建立一個銀河系-事件'
+        starwars_congrats: '星際大戰: 用程式建立一個銀河系-恭禧'
+        starwars_blocks_intro: '星際大戰: 用程式建立一個銀河系-介紹'
+        starwars_blocks_events: '星際大戰: 用程式建立一個銀河系-事件'
+        starwars_blocks_congrats: '星際大戰: 用程式建立一個銀河系-恭禧'
         mc_intro: 'Minecraft - Introduction'
         mc_repeat: 'Minecraft - Repeat'
         mc_if_statements: 'Minecraft - If statements'

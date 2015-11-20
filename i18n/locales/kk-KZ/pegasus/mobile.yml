@@ -1,12 +1,14 @@
 kk-KZ:
-  hour_of_code: Hour of Code
+  hour_of_code: Код жазу Сағаты
   hello: Сәлем, әлем
   select_language: Тілді таңдаңыз
   en: Информатика
   computer_science_edweek: Компьютерлік технологияның білім беру апталығы
   csedweek_dates: Желтоқсан 8-14, 2014
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
+  csedweek_banner_hoc: |-
+    '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">"Код жазу Сағаты"</a> жақындап келе жатыр. Барлық оқытушылар мен ұйымдастырушыларды шақырамыз, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">өзіңіздің "Код жазу Сағатыңызды" белгілеңіз</a>'
+  csedweek_banner_teachers: |-
+    '<a href="/Информатикаteacher" style="color: white; text-decoration: none; font-weight: 400">Сіз информатика пәнінің оқытушысыз ба? ИнформатикаEdWeek-тің басқа да ресурстарын қарап көріңіз</a>'
   n_have_learned_an_hoc: '<h2>"Код жазу Сағатын" </h2><h1>қарап көріңіз</h1><h3>#</h3>'
   anybody_can_learn: Бұны бәрі игере алады.
   learn_now: Оқуды бастау
@@ -30,7 +32,7 @@ kk-KZ:
   hoc2014_support: 'Қолдаңыз &#x25BE;'
   hoc2014_whatishoc: '"Код жазу Сағаты" деген не'
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
+  csedweek_map_signup: Сіздің Код Жазу Сағатын тіркеңіз
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Іздеу
   csedweek_map_search_reset: Reset
@@ -259,14 +261,14 @@ kk-KZ:
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
   starwars_javascript_specs: English only | Modern browsers | Ages 11+
   starwars_javascript_start_button: Қазір қолданып көріңіз
-  starwars_blocks_title: Blocks
+  starwars_blocks_title: Блоктар
   starwars_blocks_description: Use drag-drop blocks.
   starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
   starwars_blocks_start_button: Қазір қолданып көріңіз
   starwars_watch_videos: Before you get started, watch one of these inspirational videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: Заманауи браузерлер, смартфондар, планшеттер
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
@@ -355,7 +357,7 @@ kk-KZ:
   dashboard_landing_progress_title: Сыныптың басты жетістіктері
   dashboard_landing_progress_biggest: Бұл сіздің үлкен бөліміңіздің жетістіктері.
   dashboard_landing_view_progress: '%{biggest_section} Ілгерілеуін көру '
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_print_progress: Прогресіңізді басып шығару
   dashboard_landing_available_title: Қолжетімді курстар
   dashboard_landing_available_courses: Сізге және сіздің оқушыларыңызға қолжетімді курстар.
   dashboard_landing_more_tutorials: Бұдан да көбірек сабақ көргіңіз келе ме?

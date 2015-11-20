@@ -509,8 +509,8 @@ de:
         mc_intro: 'Minecraft - Einführung'
         mc_repeat: 'Minecraft - Wiederholung'
         mc_if_statements: 'Minecraft - If Anweisungen'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        mc_congrats_share: 'Minecraft - Herzlichen Glückwunsch'
+        mc_congrats_no_share: 'Minecraft - Herzlichen Glückwunsch'
     callout:
       text:
         drag_blocks: 'Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten'
@@ -583,9 +583,9 @@ de:
         Infinity_move_collide_callout: Spiele einen Ton, wenn dieses Ereignis passiert.
         Infinity_repeat_callout: 'Platziere "bewegen"-Bausteine hier drin'
         craft_run_button_callout: 'Drücke "Ausführen", um dein Programm zu testen'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_drag_block_callout: 'Ziehen Sie ein "moveForward()" Block; und rasten Sie es unter den anderen Block'
+        craft_callout_preplaced: 'Zu start, hier sind einige beispiel Blöcken. '
+        craft_inside_repeat: Wiederholen Sie die Aktionen durch Platzieren von Blöcken hier
+        craft_callout_preplaced_house: Dieser Code wird Ihr Hausbau anstarten. Können Sie es beenden?
+        craft_what_is_iron: ' Verminen Sie das Eisenerz'
+        craft_callout_moveforward: Hinzufügen dieser Code überprüft auf Lava, können Sie, einen Befehl zugeben zu bewegen?

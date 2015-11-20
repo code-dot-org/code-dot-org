@@ -1,5 +1,5 @@
 sk-SK:
-  hour_of_code: Hour of Code
+  hour_of_code: Hodina kódovania
   hello: Ahoj svet
   select_language: Prosím, zvoľte si jazyk
   en: Počítačová veda
@@ -300,7 +300,7 @@ sk-SK:
   starwars_watch_videos: Skôr než začnete, prezrite si niektoré zaujímavé videá
   starwars_speak_languages: Hovoríte iným jazykom?
   starwars_help_translate: Pomôžte nám s prekladom
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: Moderné prehliadače, smartfóny, tablety
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.

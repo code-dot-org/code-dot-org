@@ -244,8 +244,8 @@ ka:
       prize_us_only: (მხოლოდ აშშ-ის სტუდენტებისთვის)
       prizes_link: მეტი ინფორმაცია
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: პასუხი
+    for_teachers_only: მხოლოდ მასწავლებლებისთვის
     title:
       one: 'თქვენი მასწავლებელი:'
       other: 'თქვენი მასწავლებლები:'
@@ -401,7 +401,7 @@ ka:
     tos: მომსახურების პირობები
     privacy: კონფიდენციალურობის პოლიტიკა
     secure: დაცული ვერსია
-    report_abuse: Report Abuse
+    report_abuse: შეგვატყობინეთ დარღვევა
   reference_area:
     title: გჭირდებათ დახმარება?
     subtitle: ნახეთ ეს ვიდეოები და მინიშნებები
@@ -476,12 +476,12 @@ ka:
     frozen:
       title: '"გაყინული"'
     starwars:
-      title: Star Wars
+      title: ვარსკვლავური ომები
     infinity:
       title: თამაშების ლაბორატორია Infinity
       body: გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად დისნეის Infinity-ს პერსონაჟების მონაწილეობით.
     minecraft:
-      title: Minecraft
+      title: მაინკრაფტი
       body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: მოსწავლეებმა ეს კოდით დახატეს!
@@ -630,7 +630,7 @@ ka:
         abuse_type:
           question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
           harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
+          offensive: შეურაცხმყოფელი კონტენტი
           infringement: Copyright Infringement
           other: სხვა
         detail: Please provide as much detail as possible regarding the content you are reporting.

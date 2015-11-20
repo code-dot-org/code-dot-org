@@ -411,7 +411,7 @@ pt-BR:
     direction: Direção de início (em graus)
   video:
     tab: Vídeo.
-    notes: Nenhum vídeo? Mostrar notas.
+    notes: Não é possível ver o vídeo? Mostrar notas.
     notes_coming_soon: As notas deste vídeo estarão disponíveis em breve.
     autoplay_option: Vídeos com reprodução automática
     download: Baixar Vídeo
@@ -482,7 +482,7 @@ pt-BR:
       body: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Explore o mundo de Minecraft através do Code.org.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!

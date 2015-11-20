@@ -1,5 +1,5 @@
 "bn-BD":
-  hour_of_code: Hour of Code
+  hour_of_code: এক ঘন্টার কোড
   hello: হ্যালো ওয়ার্ল্ড
   select_language: অনুগ্রহ করে আপনার ভাষা নির্বাচন করুন
   en: কম্পিউটার বিজ্ঞান
@@ -324,7 +324,7 @@
     videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.

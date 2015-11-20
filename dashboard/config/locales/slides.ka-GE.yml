@@ -669,13 +669,12 @@
           can shorten the directions by putting some dance steps in loops.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: We actually do use loops in our dancing. The dancers are wearing computers,
-          all in the same network. I might loop the lights through to the same dancers
-          over and over again. In the loop I might have an iteration where I'll say
-          you want to go loop through these six dancers over and over again and then
-          within the loop you want to increase the speed of the light. And that's
-          all created through loops. Loops are important in computer science because
-          they make our work shorter and easier.
+        text: ციკლებს ჩვენ ცეკვისასაც კი ვიყენებთ. მოცეკვავეები ერთსა და იმავე ქსელში
+          მყოფ კომპიუტერებს. ციკლურად შემიძლია გავაშუქო ერთი და იგივე მოცეკვავეები.
+          შემიძლია ისე გავაკეთო, რომ ციკლი 6 მოცეკვავეს გაივლის უსასრულოდ და თან ყოველ
+          ჯერზე სინათლის სიჩქარე გაიზრდება. ეს ყველაფერი ციკლებით კეთდება. ციკლები
+          ძალიან მნიშვნელოვანია კომპიუტერულ მეცნიერებაში, იმიტომ რომ ისინი ამოკლებენ
+          და ამარტივებენ ჩვენს ამოცანას.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
@@ -866,13 +865,14 @@
           with pictures!
       5:
         image: notes/C1_planting_seed_5.png
-        text: When we want to make chocolate, there are many big steps to that process
-          and each of those big steps has a set of smaller steps and there are different
-          recipes or algorithms depending on how we want the chocolate to taste. Each
-          step is important, even the small ones, so that without one step, the rest
-          of them cannot be completed. Creating algorithms that others can understand
-          is really important. That's why each step has to be written down so that
-          no matter who does it, the result is the same.
+        text: როცა შოკოლადის გაკეთება გვინდა, ბევრი დიდი საქმის შესრულება გვიწევს
+          ამ პროცესში. და თითოეული საქმის უკან არის უფრო პატარა საქმეების ნაკრები.
+          ამის გარდა არსებობს ბევრი სხვადასხვა რეცეპტი, ანუ, ალგორითმი, რომელთაც ვირჩევთ
+          იქიდან გამომდინარე, თუ როგორი გემო უნდა ჰქონდეს ჩვენს შოკოლადს. ყველა ნაბიჯი,
+          ყველაზე პატარაც კი, ძალიან მნიშვნელოვანია - ერთის გარეშე ვერ შესრულდება
+          დანარჩენები. ძალიან მნიშვნელოვანია ისეთი ალგორითმების შექმნა, რომელთა გაგებაც
+          სხვებს მარტივად შეუძლიათ. ამიტომ, თითოეული ნაბიჯი უნდა იყოს გაწერილი - ასე,
+          ვინც არ უნდა აკეთებდეს შოკოლადს, შედეგი ზუსტად ერთი და იგივე გამოვა.
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
@@ -998,13 +998,13 @@
           electricity can't.
       4:
         image: notes/C2_binary_bracelets_4.png
-        text: An example of binary on the robot is the robot's eyes. The robot's eyes
-          are LEDs and those are lights that are either on or off. It's a binary system,
-          one or the other. We can use the lights to represent binary numbers. If
-          we have a set of robots, we can say that the first robot is the 1s place
-          and the second robot is the 2s place, the third robot is the 4s place and
-          so on. That's how you represent a binary number. The robots will do it with
-          their binary eyes and count it out for you.
+        text: ბინარულობის მაგალითი რობოტში არის რობოტის თვალები. რობოტის თვალები არის
+          LED ნათურები, რომლებიც ან ჩართულია, ან გამორთული. ეს არის ბინარული სისტემა
+          - ან ერთი, ან მეორე. ჩვენ შეგვიძლია გამოვიყენოთ სინათლე ბინარული რიცხვების
+          წარმოსადგენად. თუ რობოტების რაღაც რაოდენობა გვაქვს, შეგვიძლია ვთქვათ, რომ
+          პირველი რობოტი არის 1-ლი ადგილი, მეორე რობოტი - მე-2 ადგილი, მესამე - მე-4
+          ადგილი და ა. შ. აი, ასე შეგიძლიათ ბინარული რიცხვის წარმოდგენა რობოტების
+          ბინარული თვალებით.
     C2_conditionals_with_cards:
       1:
         image: notes/C2_conditionals_with_cards_1.png
@@ -1218,13 +1218,14 @@
           algorithm is super important to making the best paper airplane.
       4:
         image: notes/C2_paper_airplanes_4.png
-        text: When we want to make chocolate, there are many big steps to that process.
-          And each of those big steps has its own set of smaller steps. And there
-          are different recipes, or algorithms, depending on how we want the chocolate
-          to taste. Each step is important, even the small ones. So without one step,
-          the rest of them cannot be completed. Creating algorithms that others can
-          understand is really important. That's why each step has to be written down,
-          so no matter who does it, the result is the same.
+        text: როცა შოკოლადის გაკეთება გვინდა, ბევრი დიდი საქმის შესრულება გვიწევს
+          ამ პროცესში. და თითოეული საქმის უკან არის უფრო პატარა საქმეების ნაკრები.
+          ამის გარდა არსებობს ბევრი სხვადასხვა რეცეპტი, ანუ, ალგორითმი, რომელთაც ვირჩევთ
+          იქიდან გამომდინარე, თუ როგორი გემო უნდა ჰქონდეს ჩვენს შოკოლადს. ყველა ნაბიჯი,
+          ყველაზე პატარაც კი, ძალიან მნიშვნელოვანია - ერთის გარეშე ვერ შესრულდება
+          დანარჩენები. ძალიან მნიშვნელოვანია ისეთი ალგორითმების შექმნა, რომელთა გაგებაც
+          სხვებს მარტივად შეუძლიათ. ამიტომ, თითოეული ნაბიჯი უნდა იყოს გაწერილი - ასე,
+          ვინც არ უნდა აკეთებდეს შოკოლადს, შედეგი ზუსტად ერთი და იგივე გამოვა.
     C2_playlab_createastory:
       1:
         image: notes/C2_playlab_createastory_1.png
@@ -1476,22 +1477,18 @@
           the next Marsenne prime number, or even possible alien communications.
       3:
         image: notes/C3_crowdsourcing_3.png
-        text: When you see a movie, each second of the movie is 24 individual pictures,
-          we call those frames. So every one of those pictures needs to be created
-          and rendered and put all together. My team and I, we're all software developers.
-          We all work together to create a piece of software that actually creates
-          an image, creates the final image that you see on screen. That's a tool
-          that artists and other developers can use as part of their teamwork and
-          their process to be able to create the images that they want on screen.
+        text: ფილმის ყოველი წამი 24 ცალკეულ სურათს შეიცავს - ჩვენ მათ კადრებს ვეძახით.
+          თითეული სურათი უნდა შევქმნათ, დავარენდეროთ და მერე ყველა შევკრათ. მე და
+          ჩემი გუნდი დეველოპერები ვართ. ჩვენ ვქმნით პროგრამას, რომელიც შექმნის საბოლოო
+          სურათს, იმას, რასაც თქვენ ეკრანზე უყურებთ. ეს არის ინსტრუმენტი, რომლის გამოყენებაც
+          შეუძლიათ ხელოვანებსა და სხვა დეველოპერებს იდეალური სურათის მისაღებად.
       4:
         image: notes/C3_crowdsourcing_4.png
-        text: For example, in Finding Nemo, when Crush and Squirt and all their friends
-          are flying through the East Australian Current. You're seeing images of
-          water flowing by, you're seeing the colors on the back of the turtle, you're
-          seeing the sides of the fish. All of those things are generated through
-          math and computer programs that we write, that we then give to the artist
-          and they take that to create that final image and tweak it and make it look
-          beautiful and look fun.
+        text: მაგალითად, მულტფილმში "ვიპოვოთ ნემო", როცა ქრაში და სქვირთი და მათი
+          მეგობრები აღმოსავლეთ ავსტრალიური დინებას მიუყვებიან თქვენ ხედავთ მდინარე
+          წყალს, კუს ბაკანის ფერებს, თევზის გვერდებს. ეს ყველაფერი შექმნილია მათემატიკითა
+          და ჩვენ მიერ დაწერილი კომპიუტერული პროგრამებით, რომლებითაც ხელოვანები შემდეგ
+          ამ მშვენიერ და სახალისო კარდებს ქმნიან.
     C3_dice_race:
       1:
         image: notes/C3_dice_race_1.png
@@ -1501,12 +1498,12 @@
           in solving any problem requires thinking and planning.
       2:
         image: notes/C3_dice_race_2.png
-        text: The thinking step of problem solving produces an algorithm, which is
-          a step by step plan for solving a problem or finishing a task. In this lesson,
-          you'll create an algorithm for a dice race game. Then you'll ask your friends
-          to try out your plan to see if they can follow the steps to play the game.
-          After the programmer is sure the steps are correct, it's time to translate
-          the algorithm into a program with language that the computer can understand.
+        text: 'ამოცანის ამოხსნის მნიშვნელოვანი ნაწილია ალგორითმის შემქნა: გეგმის,
+          რომელიც ნაბიჯ-ნაბიჯ ხსნის პრობლემას ან ასრულებს დავალებას. ამ გაკვეთილში
+          თქვენ შექმნით ალგორითმს კამათლის გაგორების თამაშისთვის. შემდეგ უნდა თხოვოთ
+          მეგობრებს, გამოსცადონ თქვენი გეგმა და ნახოთ, თუ შეძლებენ თამაშს თქვენ მიერ
+          გაწერილი ნაბიჯების მიხედვით. როცა პროგრამისტი დარწმუნებულია, რომ ალგორითმი
+          სწორია, დროა "თარგმნოს" ის პროგრამად, ენაზე, რომელსაც კომპიუტერი გაიგებს.'
       3:
         image: notes/C3_dice_race_3.png
         text: Almost everything we do every day requires an algorithm, a list of steps
@@ -1587,34 +1584,33 @@
           the IP address on that door? I've written this message and hit send.
       4:
         image: notes/C3_internet_4.png
-        text: Unlike the Postal Service, the first thing that happens is that the
-          internet breaks the message into smaller parts so it can be sent more easily.
-          These small parts are called packets. Each packet of the message is delivered
-          to the destination one at a time. These packets are all put together in
-          the right order so that the receiver can read the message correctly. Of
-          course, there are many more things to learn about how the internet works
-          but this is a great start. You're on your way to becoming a savvy internet
-          user! Be sure to tell your family and friends what you've learned!
+        text: ფოსტისგან განსხვავებით, ინტერნეტი შეტყობინებას უფრო პატარა ნაწილებად
+          ჰყოფს - ასე მისი გაგზავნა უფრო მარტივი ხდება. ამ პატარა ნაწილებს ეწოდება
+          პაკეტები. შეტყობინების პაკეტები დანიშნულების ადგილას იგზავნება თითო-თითო,
+          რა თქმა უნდა, სწორი თანმიმდევრობით, რომ მიმღებმა შეძლოს შეტყობინების სწორად
+          წაკითხვა. რა თქმა უნდა, ინტერნეტის შესახებ კიდევ ძალიან ბევრი რამის სწავლა
+          შეგიძლიათ, მაგრამ ესეც კარგი დასაწყისია. მალე ინტერნეტის პროგრესული მომხმარებელი
+          გახდებით - მთავარია, არ დაგავიწყდეთ, მოუყვეთ თქვენს ოჯახსა და მეგობრებს
+          ყველაფერი, რასაც ისწავლით!
       5:
         image: notes/C3_internet_5.png
-        text: My name is Amanda Camp and I'm a software engineer at Google. I work
-          on a team that works on a backend server that stores profiles and contacts.
-          In my job, we think a lot about how contacts can be sent to other devices,
-          such as your phone. Most people have a lot of contacts, you might have say,
-          1000 contacts and we don't want to send all of those contacts at once to
-          your phone because it's too large of a message. Similar to the way the internet
-          breaks large messages down into packets, we use a concept called paging
-          where we might only send your phone 100 contacts at a time and let your
-          phone respond to us and ask for the next 100.
+        text: 'მე მქვია ამანდა კემპი და მე ვარ პროგრამული უზრუნველყოფის ინჟინერი გუგლში.
+          მე ვმუშაობ ჯგუფში, რომელის მთავარი საქმეა სერვერი, რომელშიც ინახება ანგარიშები
+          და კონტაქტები. მაგალითად, ჩვენ ვფქირობთ იმაზე, როგორ შეიძლება გავუგზავნოთ
+          კონტაქტები სხვა მოწყობილობას, მაგალითად, თქვენს ტელეფონს. ადამიანების უმეტესობას
+          ბევრი კონტაქტი ჰყავს, 1000 მაინც. ერთიანად კი 1000-ის გაგზავნა არ გვინდა,
+          იმიტომ რომ ეს ძალიან დიდი მოცულობაა. ისევე, როგორც ინტერნეტი დიდ შეტყობინებებს
+          რამდენიმე ნაწილად ჰყოფს, ჩვენც ვიყენებთ კონცეპტს, რომელსაც ჰქვია ფეიჯინგი:
+          ვაგზავნით მხოლოდ 100 კონტაქტს, მერე კი თქვენი ტელეფონი გვიკავშირდება და
+          მოითხოვს შემდეგ 100-ს.'
       6:
         image: notes/C3_internet_6.png
-        text: The most exciting thing about software is the fact that it can impact
-          the entire world. I first learned to program when I was about nineteen.
-          I think I was already a sophomore or a junior in college. The first program
-          I remember writing is something that converted Celsius to Fahrenheit. I
-          like programming because I like helping people. I can write programs at
-          Google that help people all over the world and that's really mind-boggling
-          and exciting.
+        text: პროგრამული უზრუნველყოფის ყველაზე საინტერესო და ამაღელვებელი თვისება
+          ისაა, რომ მას შეუძლია გავლენის მოხდება მთელ მსოფლიოზე. პროგრმირება ვისწავლე
+          როცა 19 წლის ვიყავი, მეორე თუ მესამე კურსზე უნივერსიტეტში. პირველი პროგრამა,
+          რომელიც დავწერე უბრალოდ აკონვერტებდა ცელსიუსს ფარენგეითში. მე მომწონს პროგრამირება,
+          იმიტომ რომ მომწონს ადამიანების დახმარება. გუგლში ვწერ პროგრამებს, რომლებიც
+          ეხმარება ადამიანებს მთელს მსოფლიოში - და ეს ჩემთვის ძალიან დიდი სტიმულია.
     C3_maze_conditionals:
       1:
         image: notes/C3_maze_conditionals_1.png
@@ -1699,23 +1695,21 @@
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
-        text: We have a new block that's called the if/else block. It's a conditional
-          statement just like the if block you've used in the puzzles before. But
-          now there's a new part at the bottom that says else. The if/else block lets
-          the bee make a decision between two sets of actions. If the bee is at a
-          flower, the bee will do the set of actions you put in the first part where
-          it says do. If the bee is not at a flower, the bee will do the set of actions
-          you put in the slot where it says else.
+        text: გვაქვს ახალი ბლოკი "თუ/სხვაგვარად". ეს ბლოკიც პირობითი დებულებაა, როგორც
+          "თუ" ბლოკი, რომელიც წინა თავსატეხებში გამოიყენე. მაგრამ ახლა მას აქვს კიდევ
+          ერთი ნაწილი, რომელიც ამბობს "სხვაგვარად". "თუ/სხვაგვარად" ბლოკი აძლევს კომპიუტერს
+          საშუალებას აირჩიოს ქმედებების ორ ნაკრებს შორის. თუ ფუთკარი ყვავილთანაა,
+          ის ქმედებების პირველ ნაკრებს შეასრულებს და თუ არა, მაშინ ქმედებების მეორე
+          ნაკრებს შეასრულებს, იმას, რომელიც "სხვაგვარად" სლოტშია მითითებული.
       2:
         image: notes/C4_conditionals_2.png
-        text: If statements are how computers are able to make decisions. Humans set
-          up conditions for the computer that say if the computer is presented with
-          a certain situation do this. Else, which just means otherwise, do that.
-          The top of our if/else block says if at flower. But the top of our block
-          could say other things, like if nectar equals 2 or if there's a path ahead,
-          our block will behave in the same way. That if the statement at the top
-          is true it will do the first set of actions. But if the statement at the
-          top is false, it will do the second set of actions.
+        text: '"თუ" დებულებები აძლევს კომპიუტერს გადაწყვეტილების მიღების საშუალებას.
+          ადამიანი ატყობინებს კომპიუტერს პირობებს: იმ შემთხვევაში, თუ განხორციელდა
+          გარკვეული სიტუაცია, გააკეთე ასე. სხვა შემთხვევაში, გააკეთე ისე. ჩვენი "თუ/სხვაგვარად"
+          ბლოკის სათაური ამბობს "თუ ყვავილთან". შეიძლება სხვა პირობაც ყოფილიყო, მაგალითად,
+          "თუ ნექტარი უდრის 2-ს", ან "თუ წინ არის გზა" - ჩვენი ბლოკი მაინც იგივენაირად
+          მოიქცეოდა. თუ მოცემული დებულება ჭეშმრიტია, ბლოკი ქმედებების ერთ ჯგუფს განახორციელბს,
+          თუ კი მცდარია - ქმედებების მეორე ჯგუფს.'
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
@@ -1781,14 +1775,13 @@
           starting value up to an ending value by a specific increment.
       2:
         image: notes/C4_for_loops_no_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running. The benefit of using a real for loop
-          instead of the repeat block is that you can actually see the counter variable
-          and use it in your loop.
+        text: მაგალითად, გამეორების ბლოკი ითვლის 1-დან 3-მდე ერთეულებით. ყოველი დათვლისას
+          ის უშვებს ციკლის კოდს. "for" ციკლმა იცის, რამდენჯერ უნდა გაეშვას - ამისთვის
+          ის იყენებს ცვლადების მთვლელს, რომელშიც მოცემულია საწყისი მნიშვნელობა და
+          განსაზღვრულია ნაზრდი, ის, რაც ემატება მნიშვნელობას ციკლის ყოველი გაშვებისას.
+          როგორც კი მთვლელის ცვალი სასრულ მნიშვნელობაზე მეტი ხდება, ციკლი ჩერდება.
+          გამეორების ბლოკის ნაცვლად for ციკლის გამოყენების უპირატესობა არის ის, რომ
+          პირდაპირ ხედავთ მთვლელის ცვლადს და იყენებთ მას ციკლში.
     C4_function_create:
       1:
         image: notes/C4_function_create_1.png
@@ -1825,23 +1818,21 @@
           done for us. We've added that concept to our programming language.
       3:
         image: notes/C4_function_edit_3.png
-        text: In this puzzle, we have already created a draw a square function for
-          you. You'll see it in the toolbox as a green block. What you'll need to
-          do is write the same code you wrote before to draw a square and put it in
-          this function. To do that, click on the edit option in the green draw a
-          square block. This will open up the function editor. The function editor
-          has three parts. A place where you name your function. This will appear
-          on the green block before that function. Then write out a short description
-          of what your function is supposed to do.
+        text: ამ თავსატეხში ჩვენ უკვე შევქმენით ფუნქცია "კვადრატის დახატვა" - მწვანე
+          ბლოკი ინსტრუმენტების პანელზე. ახლა უნდა დაწერო იგივე კოდი, რაც წინა ჯერ
+          დაწერე კვადრატის დასახატად და ჩასვა ამ ფუნქციაში. ამისთვის, მწვანე ბლოკზე
+          "დახატე კვადრატი" დააჭირეთ რედაქტირებას. ასე გაიხსნება ფუნქციის რედაქტორი,
+          რომელიც სამი ნაწილისგან შედგება. არის ადგილი, სადაც იწერება ფუნქციის სახელი
+          - რაც გამოჩნდება მწვანე ბლოკზე. შემდეგ იწერება ფუნქციის მოქმედების მოკლე
+          აღწერა.
       4:
         image: notes/C4_function_edit_4.png
-        text: In this case, it's supposed to draw a square. The white space below
-          this is the work space and works just like the work space you've already
-          been using. Drag and drop blocks from the toolbox into this work space.
-          Remember to put the blocks that create a square inside the green wrapping
-          block for the function. Once you're done, click on save and exit. This will
-          take you back to the main puzzle work space. Now you can use the draw the
-          square function block just like any other block to solve the puzzle.
+        text: ამ შემთხვევაში, უნდა დაიხატოს კვადრატი. თეთრი სივრცე არის სამუშაო სივრცე
+          - ზუსტად ისეთი, როგორიც უკვე გამოგიყენებიათ. გადმოიტანეთ ამ სივრცეში ბლოკები
+          ინსტრუმენტების პანელიდან. არ დაგავიწყდეთ კვადრატის დახატვისთვის საჭირო ბლოკები
+          ფუნქციის მწვანე ბლოკში ჩასვათ. როცა დაასრულებთ, დააჭირეთ "შენახვასა და გასვლას".
+          ასე გადახვალთ თავსატეხის მთავარ სამუშაო სივრცეში და შეძლებთ გამოიყენოთ კვადრატის
+          დახატვის ფუქნცია, როგორც ნებისმიერი სხვა ბლოკი.
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
@@ -1851,14 +1842,14 @@
           that do almost the same thing. Instead, we can use one function with a parameter.
       2:
         image: notes/C4_function_parameters_2.png
-        text: Parameters allow us to pass values into a function that get used as
-          variables inside the function. Let's try adding a parameter called like
-          to this function so we can use it to create squares of different sizes.
-          In the function editor, you can edit the name and description like before
-          but now you can also add a parameter. Write the name of your parameter in
-          the space and click Add Parameter. This will create a red block with the
-          name of the parameter you just created. Now we can replace the move forward
-          by 100 block with the parameter Length so it will move forward by Length.
+        text: პარამეტრები გვაძლევს საშუალებას გადავცეთ ფუნქციას მნიშვნელობები, რომლებიც
+          ფუნქციაში ცვლადებივით გამოიყენება. დავუმატოთ ამ ფუნქციას პარამეტრი "სიგრძე"
+          და შევქმნათ სხვადასხვა ზომის კვადრატები. ფუნქციის რედაქტორში ისევე, როგორც
+          ადრე, შეგიძლიათ სახელის და აღწერის შეცვლა, მაგრამ ასევე შეგიძლიათ პარამეტრის
+          დამატება. ჩაწერეთ პარამეტრის სახელი ცარიელ ადგილას და დააჭირეთ "პარამეტრის
+          დამატებას". ასე შეიქმნება წითელი ბლოკი თქვენ მიერ შექმნილი პარამეტრის სახელით.
+          ახლა შეგიძლიათ ჩაანაცვლოთ ბლოკი "წინ გადაადგილება 100-ით" პარამეტრით "სიგრძე"
+          და ყველაფერი წინ მოცემული "სიგრძით" გადაინაცვლებს.
       3:
         image: notes/C4_function_parameters_3.png
         text: Click save and close and drag out your new create a square block from
@@ -1967,13 +1958,12 @@
           figure out how to do it.'
       4:
         image: notes/C4_unplugged_binary_4.png
-        text: You imagine that we're going to put a grid over this panda bear and
-          for each square, we're going to decide whether that square is more black
-          or more white. And then we're going to color it that way. Now each cell
-          on the grid is either black or white and then the black squares we say those
-          are zeros (binary digit) and the white squares are ones, the other binary
-          digit. At the end, you're left with just a bunch of ones and zeros. That's
-          how you represent this image in binary.
+        text: წარმოიდგინეთ, რომ ამ პანდას უნდა დავადოთ ბადე და ყოველი კვადრატისთვის
+          უნდა გადავწყვიტოთ, ის უფრო შავია, თუ უფრო თეთრი - შემდეგ კი უნდა შევღებოთ
+          გადაწყვეტილების შესაბამისად. ამ ბადეზე ყოველი კვადრატი ან შავია, ან თეთრი
+          და ვთქვათ, რომ შავი კვარდატი არის ნული (ბინარული ციფრი) და თეთრი კვადრატი
+          არის ერთი, მეორე ბინარული ციფრი. ბოლოს მხოლოდ ნულები და ერთიანები დაგრჩებათ
+          - აი, როგორ გამოვსახოთ სურათი ბინარული სისტემით.
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png
@@ -2062,13 +2052,13 @@
           a label so that we know which piece of information goes where.
       2:
         image: notes/C4_unplugged_variables_2.png
-        text: Variables are placeholders for pieces of information that can change.
-          By using a variable for the missing information, we can continue working
-          on whatever we were doing and let someone else fill in the missing information
-          later. In software, we use variables a lot. We use variables as placeholders
-          for name, email address, and even username. That way we can let the program
-          know where those details will appear after the user fills them in. We use
-          variables all the time in our work.
+        text: ცვლადები იგივე ადგილის შემავსებლებია ისეთი ინფორმაციისთვის, რომელიც
+          შეიძლება შეიცვალოს. თუ რამე ინფომრაცია გვაკლია, მის ადგილას შეგვიძლია გამოვიყენოთ
+          ცვლადი და გავაგრძელოთ მუშაობა, მერე ვინმე სხვა შეავსებს ამ გამოტოვებულ ინფორმაციას.
+          პროგრამულ უზრუნველყოფაში ცვლადები ძალიან ხშირად გამოიყენება, მაგალითად,
+          სახელის, ელ. ფოსტისა ან მომხმრებლის სახელის ადგილას. ასე ჩვენ ვასწავლით
+          პროგრამას, სად უნდა გამოჩნდეს ესა თუ ის დეტალი იმის მერე, რაც მომხმარებელი
+          მას შეავსებს. ჩვენს სამუშაოში განუწყვეტლივ გვიწევს ცვლადების გამოყენება.
       3:
         image: notes/C4_unplugged_variables_3.png
         text: Any time you need to store a piece of information for later, we use
@@ -2086,12 +2076,12 @@
           on the value stored in the variable.
       2:
         image: notes/C4_variables_artist_2.png
-        text: For example, if you wanted to write an algorithm to say Happy birthday,
-          you're turning 10! to my little brother, that's great now but when I run
-          it next year I'd want it to say, Happy birthday, you're turning 11! I could
-          create a variable called age to store my brother's age and write my algorithm
-          to say Happy birthday, you're turning 'age' instead. Because variable can
-          change, every year I can update the variable 'age' to equal 'age' plus 1.
+        text: 'მაგალითად, გვინდა დავწეროთ ალგორითმი, რომელიც ჩემს უმცროს ძმას ასე
+          მიულოცავდა დაბადების დღეს "გილოცავ! შენ 10 წლის ხდები!". მაგრამ მომავალ
+          წელს მე მინდა, რომ პროგრამამ უთხრას "გილოცავ! შენ 11 წლის ხდები!". ამისთვის
+          შემიძლია შევქმნა ცვლადი, რომელშიც შეინახება ჩემი ძმის ასაკი და დავწერო ალგორითმი
+          ასე: "გილოცავ! შენ "ასაკი" წლის ხდები!". იმის გამო, რომ ცვლადი შეიძლება
+          იცვლებოდეს, ყოველი წელს განვაახლებ ცვლადს და გავუტოლებ მას "ასაკი" +1-ს.'
       3:
         image: notes/C4_variables_artist_3.png
         text: In this puzzle, we're going to be using a variable that will set the
@@ -2159,13 +2149,13 @@
           skills of making games.
       4:
         image: notes/infinity_playlab_intro_4.png
-        text: Do you have a favorite video game? Well, we're going to take one step
-          towards creating games just like that using Play Lab. Good games have a
-          story and every story has actors. Actors do things like speak, move, and
-          interact with each other. Maybe even score points based on the rules of
-          the game. Today we'll be learning how to do all these things, one by one,
-          with Disney's characters like Anna, Elsa, Hiro, Baymax, and Rapunzel. We'll
-          build a game from scratch that can be shared and played on a phone.
+        text: 'გაქვთ საყვარელი ვიდეო-თამაში? ახლა თამაშების ლაბორატორიაში მსგავსი
+          თამაშების შექმნისკენ ერთ მნიშვნელოვან ნაბიჯს გადავდგამთ. კარგ თამაშებს ყოველთვის
+          აქვთ ისტორია და ისტორიაში, რა თქმა უნდა, მონაწილეობენ პერსონაჟები. პერსონაჟები
+          საუბრობენ, მოძრაობენ და აქვთ ერთმანეთთან კონტაქტი. შეიძლება ქულებიც დააგროვონ,
+          გააჩნია თამაშის წესებს. დღეს ამ ყველაფრის გაკეთებას ვისწავლით, დისნეის პერსონაჟების
+          მაგალითზე: ანა, ელზა, ჰირო, ბეიმაქსი და რაპუნცელი. ჩვენ სუფთა ფურცლიდან
+          დავწერთ თამაშს, რომლის გაზიარებაც და ტელეფონზე თამაში შეგვეძლება.'
       5:
         image: notes/infinity_playlab_intro_5.png
         text: Your screen is split into three main parts. On the left is the gamespace,
@@ -2175,13 +2165,13 @@
           is where we'll build our program.
       6:
         image: notes/infinity_playlab_intro_6.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow outline, and then they'll snap together. In this first
-          puzzle, Hiro is Actor 1 and Baymax is Actor 2. We need to move Hiro to get
-          to Baymax by dragging the "move right" block out and linking it to the "when
-          run" block. Once you have your blocks in place, hit the "Run" button to
-          see what you've programmed.
+        text: 'პირველ რგიში, თქვენი ბლოკები უნდა მიუმაგროთ ნარინჯისფერ ბლოკს "გაშვებისას".
+          ერთმანეთზე ბევრი ბლოკის გადაბმა შეიძლება, გადმოიტანეთ ისინი, მიუახლოვეთ
+          ერთი მეორეს სანამ ყვითელი ზოლი არ გაჩნდება - და მერე ისინი მიეკვრებიან ერთმანეთს.
+          ამ პირველ თავსატეხში ჰირო არის მსახიობი 1 და ბეიმაქსი არის მსახიობი 2. ჩვენი
+          მიზანია, ჰირო მივიდეს ბეიმაქსამდე. ვაკეთებთ ასე: ვიღებთ ბლოკს "მოძრაობა
+          მარჯვნივ" და ვუმაგრებთ მას ბლოკს "გაშვებისას". როცა ბლოკები მიმაგრებულია,
+          დააჭირეთ "გაშვებას" და ნახეთ, რა დააპროგრამეთ.'
       7:
         image: notes/infinity_playlab_intro_7.png
         text: Get started and by the end you'll be able to create your own game with
@@ -2261,23 +2251,22 @@
           from great art.
       3:
         image: notes/unplug1_3.png
-        text: When I finally learned a little bit of programming, that blank wall
-          resolved into a bunch of doors and you open them and of course then you
-          find behind them is another hallway filled with a bunch of doors. Programming
-          is fun and easy. You can do anything your mind wants to do. Finally you
-          start to open enough doors the light comes in. To me a finished program
-          is like a structure filled with light. All the corners are illuminated.
-          The number of people that you can touch and interact with is something the
-          world has never seen before.
+        text: როცა ბოლოს და ბოლოს რაღაც ვისწავლე პროგრამირებაზე, ეს თეთრი კედელი გადაიქცა
+          ბევრ კარად - აღებ მათ და, რა თქმა უნდა, ხედავ კიდევ უამრავ კარს. პროგრამირება
+          არის მარტივი და სახალისო. ყველაფრის გაკეთება შეგიძლია, რაც შენს ტვინს მოესურვება.
+          ბოლოს, იმდენ კარს აღებ, რომ სინათლე შემოდის. ჩემთვის, დასრულებული პროგრამა
+          არის სინათლის სავსე სტრუქტურა, სადაც ყველა კუთხეა განათებული. ადამიანების
+          რაოდენობა, რომელთაც შეგიძლია დაუკავშირდე ტექნოლოგიების მეშვეობით დღეს უპრეცედენტოდ
+          მაღალია.
       4:
         image: notes/unplug1_4.png
-        text: Our first lesson in this series is all about what computer science is,
-          what a computer scientist does and how you can be more responsible in your
-          use of technology. It's a very important lesson but it is a little text-heavy.
-          At the end, you get to make your very own customized encoding using your
-          initials. It's a fun activity and it's very empowering because binary is
-          one of those things that feels very technical but once you understand it,
-          it's like you speak a secret language.
+        text: ჩვენი პირველი გაკვეთილი ამ სერიაში ახსნის, თუ რა არის ინფორმატიკა, რას
+          აკეთებენ პროგრამისტები და როგორ უნდა გამოიყენო ტექნოლოგიები. ეს გაკვეთილი
+          ძალიან მნიშვნელოვანია, თუმცა ბევრ საკითხავს შეიცავს. ბოლოს თქვენ შეძლებთ
+          დაშიფროთ რამე თქვენივე ინიციალების გამოყენებით. ეს მხიარული აქტივობა ძალიან
+          მნიშვნელოვანიც არის, იმიტომ რომ ბინარულობა ისეთი საკითხია, რომელიც შეიძლება
+          ჟღერს ძალიან ტექნიკურად, მაგრამ როცა მას გაიგებთ, გეგონებათ, რომ საიდუმლო
+          ენა ისწავლეთ.
     unplug2:
       1:
         image: notes/unplug2_1.png
@@ -2375,13 +2364,12 @@
           how to understand what a program is doing when it defines and calls a function.
       3:
         image: notes/unplug7_3.png
-        text: We use familiar songs including Old Macdonald to talk about how a chorus
-          is called over and over and how sometimes a chorus can change. When you
-          have a song like Old Macdonald, where certain words change, that's a great
-          place to introduce the idea of parameters. Passing certain words through
-          so that you can send extra information to your function. Once we're sure
-          everybody gets it, you can take your own familiar songs and break them up
-          yourself. See if you can figure it out together.
+        text: 'მისამღერი ხშირად მეორდება, მაგრამ ხანდახან შეიძლება შეიცვალოს - ამის
+          მაგალითად შეგვიძლია მოვიყვანოთ ყველასთვის ნაცნობი სიმღერა Old Macdonald.
+          ამის მსგავსი სიმღერა, სადაც იცვლება ცალკეული სიტყვები, იდეალური მაგალითია
+          პარამეტრების იდეის გასაცნობად: ფუნქციაში დამატებითი ინფორმაციის გასაგზავნად,
+          ვაწოდებთ მას ცალკეულ სიტყვებს. როცა დავრწმუნდებით, რომ ყველამ გაიგო საკითხი,
+          აიღეთ სხვა, ყველასთვის ნაცნობი სიმღერები და სცადეთ თქვენით გაარჩიოთ ისინი.'
     unplug8:
       1:
         image: notes/unplug8_1.png
@@ -2453,13 +2441,13 @@
           learned more over these lessons than most adults know about computer science.
       2:
         image: notes/unplug11_2.png
-        text: Discuss as a class or in small groups about their favorite lessons.
-          Once you take a look back at everything you've learned, this is where your
-          students' creativity can shine. Split them into groups and have them create
-          an unplugged lesson of their own. Assign each group a key concept, like
-          functions or algorithms and have lots of craft materials on hand for them
-          to use. Have each group present their new unplugged activity or even set
-          aside another day to do a few of the student created activities.
+        text: კლასში ან პატარა ჯგუფებში განიხილეთ მოსწავლეების საყვარელი გაკვეთილები.
+          როცა გაიხსენებთ ყველაფერს, რაც ისწავლეთ, თქვენმა მოსწავლეებმა შეიძლება გამოამჟღავნონ
+          თავიანთი კრეატიულობა. დაყავით ისინი ჯგუფებად და დაავალეთ შემქნან თავიანთი
+          დავალება, რომელთა შესრულებაც კომპიუტერის გარეშე იქნება შესაძლებელი. მიეცით
+          თითოეულ ჯგუფს ძირითადი კონცეპტი, მაგალითად ფუნქცია ან ალგორითმი - და აუცილებლად
+          მოიმარაგეთ ბევრი სხვადასხვა მასალა. შემდეგ მიეცით თითოეულ ჯგუფს მათი დავალების
+          პრეზენტაციის საშუალება, ან დანიშნეთ დამატებითი დღე და შეასრულეთ ეს დავალებები.
       3:
         image: notes/unplug11_3.png
         text: From everyone here at Code.org, we hope you've had a TON of fun during
@@ -2699,8 +2687,8 @@
           drag it back into the toolbox.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: After you hit run, you can always hit the reset button to get BB-8 back
-          to the start. Now let's get rolling!
+        text: გაშვების შემდეგ ყოველთვის შეგიძლიათ გამოიყენოთ ღილაკი "თავიდან" და BB-8
+          თავიდან დაიწყებს. ახლა კი დროა!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
@@ -2732,11 +2720,12 @@
           him move. When the player uses the up/down arrow keys, or the up/down buttons.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down. Now instead
-          of writing all the code to control our droid in advance, we can let R2-D2
-          react to button press events that move him around the screen.
+        text: ჩვენ ვიღებთ "როცა_ზემოთ" მოვლენის ბლოკს და ვუმაგრებთ მას ბლოკს "ასვლა".
+          როცა მოთამაშე აჭერს ზემოთა ისარს, გაეშვება კოდი, რომელიც მიმაგრებულია ბლოკს
+          "როცა_ზემოთ". ზუსტად იგივეს ვაკებთ, რომ R2-D2 ქვემოთ გადავაადგილოთ. იმის
+          მაგივრად, რომ მთელი კოდი წინასწარ დავწერთო და ასე ვაკონტროლოთ ჩვენი დროიდის
+          მოძრაობები, უბრალოდ მივცეთ მას საშუალება იმოძრავოს ღილაკებზე დაჭერის მოვლენების
+          შესაბამისად.
       7:
         image: notes/starwars_blocks_events_7.JPG
         text: ნაბიჯ-ნაბიჯ, თქვენი თამაში უფრო ინტერაქტიული ხდება.
@@ -2773,90 +2762,89 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: მე მქვია ჯენს ბერგენსტენი, მაგრამ ყველა ჯებს მეძახის. მე ვარ მაინკრაფტის
+          მთავარი დეველოპერი. ჩვენი კომპანია მოჯანგი სტოკჰოლმში მდებარეობს. თუ სწორად
+          მახსოვს, თერთმეტის ან თორმეტის ვიყავი, როცა პროგრამირება დავიწყე - თამაშების
+          შექმნა მინდოდა. მამის ერთმა მეგობარმა მითხრა, რომ თუ თამაშების შექმნა მინდა,
+          პროგრამირება უნდა ვისწავლო. აი, ასე დაიწყო ყველაფერი. მომწონს თამაშების
+          არქიტექტურის მოფირება და შექმნა - და მაინკრაფტიც ძალიან მომწონს.
       2:
         image: notes/mc_intro_2.JPG
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
+        text: შემდეგი საათის განმავლობაში თქვენ ისწავლით კომპიუტერული მეცნიერების
+          საწყისებს - დააპროგრამებთ ალექსსა ან სტივს მაინკრაფტის სამყაროს გასავლელად.
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: ჩვეულებრივ, პროგრამას ტექსტით წერენ, მაგრამ დღეს ჩვენ გამოვიყენებთ ბლოკლის,
+          სისტემას, რომელიც იყენებს ვიზუალურ ბლოკებს, რომელთა გადაადგილებითაც იწერება
+          პროგრამა. სინამდვილეში თქვენ Javascript კოდს შექმნით.
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: კონცეპტებს, რომელთაც თქვენ ისწავლით, პროგრამისტები ყოველდღე იყენებენ
+          - ისინი კომპიუტერული მეცნიერების საფუძველს წარმოადგენენ. აქ, მოჯანგში, მაინკრაფტის
+          შესაქმნელად ზუსტად იგივე კონცეპტებს ვიყენებთ.
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: დაწყებამდე უნდა აირჩიოთ თქვენი პერსონაჟი. მე ალექსს ავირჩევ. დავწეროთ
+          კოდი პროგრამისთვის, რომელიც დაეხმარება მას ეკრანზე იმოძრავოს.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: თქვენი ეკრანი დაყოფილია სამ მთავარ ნაწილად. მარცხნივ არის მაინკრაფტის
+          სათამაშო სივრცე, სადაც გაეშვება თქვენი პროგრამა. ყოველი დონის ინსტრუქციები
+          ქვემოთ არის მოცემული.
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: სივრცე შუაში არის ინსტრუმენტების პანელი - ამ ბლოკებიდან ყოველი არის
+          ბრძანება, რომელიც განსაზღვრავს ალექსის მოქმედებებს.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: თეთრი სივრცე მარჯვნივ არის სამუშაო სივრცე - აქ დაიწერება ჩვენი პროგრამა.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: რა მოხდება, თუ ბლოკს "წინ_გადაადგილება" ჩვენს სამუშაო სივრცეში გადავიტანს
+          და დავაჭერთ ღილაკს "გაშვება"? ალექსი ბადეზე ერთი ნაბიჯით წინ გადავა.
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: დავუშვათ, გვინდა, რომ წინ გადაადგილების მერე კიდევ რამე გააკეთოს. რა
+          უნდა ვქნათ? კიდევ ერთი ბლოკი დავუმატოთ ჩვენს პროგრამას. მე ავირჩევ ბლოკს
+          "მარჯვნივ_მობრუნებ" და მივუმაგრებ მას ბლოკს "წინ_გადაადგილება" - უნდა გადავიტანოთ
+          ერთი ბლოკი მეორეს ქვემოთ და მივუახლოვოთ, სანამ არ გამოჩნდება ნარინჯისფერი
+          ხაზი - მაშინ შეიძლება გავუშვათ ბლოკი და ის მემაგრება ზემოთას. ახლა, როცა
+          დავაჭერთ ღილაკს "გაშვება" ალექსი შეასრულებს ყველა ბრძანებას, თანმიმდევრობით
+          ზემოდან ქვემოთ.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: თუ ბლოკის წაშლა მოგინდებათ, უბრალოდ გადაიტანეთ ის უკან, ინსტრუმენტების
+          პანელზე.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: 'ცვლილებების გასაუქმებლად და საწყის პოზიციაში დასაბრუნებლად გამოიყენეთ
+          სამუშაო სივრცის მარჯვენა ზედა კუთხეში განლაგებული ღილაკი "ხელახლა დაწყება".
+          და კიდევ: ხედავთ პატარა სამკუთხედებს მოტრიალებს ბლოკებზე? ყოველთვის, როცა
+          სამკუთხედს ხედავთ, ეს ნიშნავს, რომ რამდენიმე ვარიანტიდან არჩევა შეგიძლიათ.
+          დავიწყოთ კოდის წერა!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: მე ვარ ლიდია უინტერსი, მოჯანგის ბრენდ-დირექტორი. ჩვენ შევქმენით პატარა
+          თამაში, რომელსაც ჰქვია მაინკრაფტი.
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: მაინკრაფტში ყველაზე მეტად გამოკვლევა მიყვარს. მომწონს გამოქვაბულებში
+          თავგადასავლები და რაღაცების პოვნა. მე თვითონ არ ვარ პროგარმისტი, ამიტომ
+          ძალიან მაინტერესებს მაინკრაფტის გაკვეთილის გავლა და პროგრამირების სწავლა.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: ბოლო დონეზე ბევრი "წინ_გადაადგილების" ბლოკი დაგვჭირდა. უფრო მარტივი
+          იქნებოდა, უბრალოდ რომ გვეთქვა კომპიუტერისთვის, რომ "წინ_გადაადგილება" ოთხჯერ
+          ან ხუთჯერ უნდა შეასრულოს. საბედნიეროდ, ეს შესაძლებელია გამეორების ციკლების
+          გამოყენებით.
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: მაინკრაფტის შექმნისას ჩვენ ვიყენებთ გამეორების ციკლებს, სადაც ვათავსებთ
+          ყველა საწყის მასალას სამყაროს შესაქმნელად - ანუ, ათასობით ბლოკს. ციკლებს
+          პატარ-პატარა დავალებებისთვისაც ვიყენებთ, მაგალიტად, იმისთვის, რომ ალექსის
+          ფეხემა იმოძრავოს, როცა ის წინ და უკან გადაადგილდება. გამეორების ციკლები
+          პროგრამირების მნიშვნელოვანი ნაწილია.
       5:
         image: notes/mc_repeat_5.JPG
         text: Night is coming so in the next couple of levels, we're going to build

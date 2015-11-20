@@ -123,14 +123,12 @@ zh:
       2-3 Artist Loops New 15_instruction: 畫一些有趣的東西。
       2-3 Artist Loops New 2_instruction: '這裡有一部份你用來繪製正方形的程式碼。如果你用"重複次數"程式積木來執行這段程式碼4次，會發生什麼事呢？'
       2-3 Artist Loops New 9_instruction: 畫出一個Ｖ其兩邊都是50像素長，以完成箭頭
-      2-3 Artist Match Hex Pic_instruction: 'Match:  Help finish the Hexagon.'
-      2-3 Artist Match Rho Pic_instruction: 'Match:  Finish the missing code.'
-      2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
-      2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
+      2-3 Artist Match Hex Pic_instruction: '比賽: 請完成六角形。'
+      2-3 Artist Match Rho Pic_instruction: '比賽: 完成缺少的程式碼。'
+      2-3 Artist Match Sq Pic_instruction: '比賽: 完成缺少的程式碼'
+      2-3 Artist Match Tri pic_instruction: '匹配: 填寫缺少的程式碼。'
       2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut did you know you can put a loop inside another loop?\r\nLoop this whole\nblock of code 3 times to draw the pattern."
-      2-3 Artist Nested Loops 10_instruction: |
-        Loop this code 12 times to complete
-        the pattern.
+      2-3 Artist Nested Loops 10_instruction: 將程式碼重覆12 次以完成圖樣。
       2-3 Artist Nested Loops 11_instruction: |
         Loop this code 4 times to complete
         the pattern, turn 90 degrees after each circle.
@@ -164,12 +162,8 @@ zh:
       2-3 Artist Nested Loops 9_instruction: |
         We'll finish this picture by adding
         a flower. Loop the diamond 12 times to draw your flower.
-      2-3 Artist Nested Loops Free Play_instruction: |
-        Free play, draw something cool
-        with nested loops.
-      2-3 Bee Conditionals 1_instruction: |
-        Hi! I'm a bee. Help me get nectar from
-        the flower.
+      2-3 Artist Nested Loops Free Play_instruction: 自由發揮，使用嵌套迴圈繪畫有趣的東西。
+      2-3 Bee Conditionals 1_instruction: 你好！我是一隻蜜蜂，請幫這朵花採花蜜。
       2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0\nnectar. Be careful not to collect nectar from a purple flower if it doesn't\nhave any.\r\n"
       2-3 Bee Conditionals 11_instruction: Collect nectar where flowers have nectar.
       2-3 Bee Conditionals 12_instruction: |
