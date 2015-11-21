@@ -105,7 +105,7 @@ function loadGumball(skin, assetUrl) {
     background: skin.assetUrl('background_wood.png'),
   };
 
-  skin.avatarList = ["anais", "antony", "bananajoe", "darwin", "gumball", "nicole", "penny", "richard"];
+  skin.avatarList = ["anais", "anton", "bananajoe", "darwin", "gumball", "nicole", "penny", "richard"];
   skin.walkValues = [8, 8, 8, 12, 12, 8, 10, 12];
 
   /**
@@ -164,7 +164,7 @@ function loadGumball(skin, assetUrl) {
     [msg.setSpriteHidden(), HIDDEN_VALUE],
     [msg.setSpriteRandom(), RANDOM_VALUE],
     [msg.setSpriteAnais(), '"anais"'],
-    [msg.setSpriteAntony(), '"antony"'],
+    [msg.setSpriteAnton(), '"anton"'],
     [msg.setSpriteBananajoe(), '"bananajoe"'],
     [msg.setSpriteDarwin(), '"darwin"'],
     [msg.setSpriteGumball(), '"gumball"'],
