@@ -2524,23 +2524,27 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: |
-          Salut! Sunt Kathleen Kennedy - producator al Star Wars: The Force Awakens. Azi vei lucra cu unul din star-urile noastre, BB-8. BB-8 este un droid sferic. Orice face si orice miscare a sa este controlata de un program. Informatica are influenta asupra fiecatui domeniu, de la marketing
-          la sanatate si film. Sute de ingineri lucreaza impreuna pentru a face un film ca The Force Awakens.
+        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
+          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
+          spherical droid. Everything he does and every movement that he makes is
+          controlled by computer software. Computer science impacts every industry,
+          from marketing to health care to film. In fact, hundreds of computer engineers
+          worked together to make a film like The Force Awakens.
       2:
         image: notes/starwars_intro_2.JPG
-        text: Здравейте, Аз съм Рейчъл Роуз Глaвен Инженер в отдела за Разработки
-          в Ай Ел Ем, аз ръководя групата за създаване на амимираните ефекти. В Силата
-          се Пробужда аз отговарям за ефектите които карат героя да извършва движения
-          като че ли е наистина от далечно съзвездие.
+        text: Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the
+          animation and creature development team. In The Force Awakens, I'm responsible
+          for helping the artists develop rigs which are the parts of the character
+          that move that allow the character to look very believable in a galaxy far
+          far away.
       3:
         image: notes/starwars_intro_3.JPG
-        text: В следващият час ще създадем наша собствена игра Междузвездни Войни
-          която ще ви научи на основните методи в Програмирането. Обикновенно програмирането
-          представлява текст но ние ще използваме Блокове, за да можем да ги влачим
-          и оставяме. Но въпреки това вие все пак съсздавате код. След като пробвате
-          основните методи с блокове, ще преминем на JavaScript един от най-известните
-          езици за програмиране на интернет.
+        text: In the next hour, we're going to build our own Star Wars game. We'll
+          teach you the basic concepts of programming. Usually programming is all
+          text but we're going to use blocks here so that we can drag and drop to
+          write the programs. Under the hood, you're still creating code. After you
+          try the basics with blocks, we'll switch you to JavaScript, one of the most
+          popular programming languages on the web.
       4:
         image: notes/starwars_intro_4.JPG
         text: To start off, we're going to work with Rey to program BB-8 to walk to
@@ -2577,11 +2581,12 @@
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: Зада създадем Блок ние изпозваме JavaScript. Един от най-използваните
-          езици за програмиране от Програмистите. Блоковете са прекрасен начин за
-          начинаещи да навлизат в програмирането, факт е че някои университети като
-          Харвард и Бъркли започнаха да въвеждат Блоково програмиране. Но веднъж научили
-          основите Инженерите пишат код защото е по бързо.
+        text: Inside the blocks we've been using are JavaScript commands. JavaScript
+          is the most popular programming language for professional developers today.
+          Blocks are a great way to get started learning to code and in fact, top
+          universities like Harvard and Berkeley start teaching this way. But once
+          we learn the basics, engineers write code by typing because it allows us
+          to go faster.
       2:
         image: notes/starwars_typing_2.JPG
         text: We can type hundreds of commands without having to find them in the
@@ -2698,25 +2703,26 @@
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: 'Здравейте! Аз съм Катлийн Кенеди Продуцент на Междузвездни Войни: Силата
-          се Пробужда. Днес ще работите с една от нашите звезди, ББ-8, който е сферичен
-          дроид. Всичко което прави и всяко негово движение се контролира от софтуер.
-          Компютърните науки оказват влияние във всяка една сфера от маркетинг до
-          медицина и филмо-производство. Всъщност хиляди Инженери работят заедно за
-          да създадават филми като Силата се Пробужда.'
+        text: 'Hi I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
+          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
+          spherical droid. Everything he does and every movement that he makes is
+          controlled by computer software. Computer science impacts every industry,
+          from marketing to health care to film. In fact, hundreds of computer engineers
+          worked together to make a film like The Force Awakens.'
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: Здравейте, Аз съм Рейчъл Роуз Глaвен Инженер в отдела за Разработки
-          в Ай Ел Ем, аз ръководя групата за създаване на анимираните ефекти. В Силата
-          се Пробужда аз отговарям за ефектите които карат героя да извършва движения
-          като че ли е наистина от далечно съзвездие.
+        text: Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the
+          animation and creature development team. In The Force Awakens, I'm responsible
+          for helping the artist develop rigs, which are the parts of the character
+          that move that allow the character to look very believable in a galaxy far,
+          far away.
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: В следващият час ще създадем наша собствена игра Междузвездни Войни
-          която ще ви научи на основните методи в Програмирането. Обикновенно програмирането
-          представлява текст но ние ще използваме Блокове, за да можем да ги влачим
-          и оставяме. За начало ще работим с Рей за да програмираме ББ-8 да върви
-          и събира металните остатъци.
+        text: In the next hour, we're going to build our own Star Wars game that will
+          teach you the basic concepts of programming. Usually programming is all
+          text but we're going to use blocks here so we can drag and drop to write
+          the programs. To start off, we're going to work with Rey to program BB-8
+          to walk to collect all of the scrap parts.
       4:
         image: notes/starwars_blocks_intro_4.JPG
         text: Your screen is split into three parts. On the left is the Star Wars
