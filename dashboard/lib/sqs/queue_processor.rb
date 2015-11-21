@@ -104,12 +104,6 @@ module SQS
       end
     end
 
-    def thread_proc
-
-
-
-    end
-
     # Request each of the worker threads to stop and block until they terminate (which could take
     # up to max_wait_time seconds). Requires that run has been called.
     def stop
