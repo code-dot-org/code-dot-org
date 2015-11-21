@@ -611,82 +611,82 @@ function loadHoc2015(skin, assetUrl) {
   skin.customObstacleZones = {endor : {}, hoth: {}, starship: {}};
 
   skin.customObstacleZones.endor.blobs = [
-    { minx: 361, maxx: 413, miny: 261, maxy: 344 },
-    { minx: 318, maxx: 404, miny: 342, maxy: 397 },
-    { minx: 308, maxx: 352, miny: 72, maxy: 110 },
-    { minx: 264, maxx: 352, miny: 112, maxy: 197 },
-    { minx: 109, maxx: 154, miny: 289, maxy: 351 },
-    { minx: 109, maxx: 205, miny: 228, maxy: 288 },
-    { minx: 83, maxx: 125, miny: 125, maxy: 147 },
-    { minx: 58, maxx: 99, miny: 72, maxy: 91 },
-    { minx: 57, maxx: 156, miny: 92, maxy: 123 }];
+    { minX: 361, maxX: 413, minY: 261, maxY: 344 },
+    { minX: 318, maxX: 404, minY: 342, maxY: 397 },
+    { minX: 308, maxX: 352, minY: 72, maxY: 110 },
+    { minX: 264, maxX: 352, minY: 112, maxY: 197 },
+    { minX: 109, maxX: 154, minY: 289, maxY: 351 },
+    { minX: 109, maxX: 205, minY: 228, maxY: 288 },
+    { minX: 83, maxX: 125, minY: 125, maxY: 147 },
+    { minX: 58, maxX: 99, minY: 72, maxY: 91 },
+    { minX: 57, maxX: 156, minY: 92, maxY: 123 }];
 
   skin.customObstacleZones.endor.horizontal = [
-    { minx: 51, maxx: 299, miny: 269, maxy: 293 },
-    { minx: 150, maxx: 348, miny: 168, maxy: 189 },
-    { minx: 53, maxx: 97, miny: 159, maxy: 199 },
-    { minx: 50, maxx: 198, miny: 71, maxy: 94 },
-    { minx: 255, maxx: 345, miny: 71, maxy: 94 }];
+    { minX: 51, maxX: 299, minY: 269, maxY: 293 },
+    { minX: 150, maxX: 348, minY: 168, maxY: 189 },
+    { minX: 53, maxX: 97, minY: 159, maxY: 199 },
+    { minX: 50, maxX: 198, minY: 71, maxY: 94 },
+    { minX: 255, maxX: 345, minY: 71, maxY: 94 }];
 
   skin.customObstacleZones.endor.circle = [
-    { minx: 251, maxx: 317, miny: 332, maxy: 348 },
-    { minx: 83, maxx: 198, miny: 326, maxy: 348 },
-    { minx: 250, maxx: 317, miny: 77, maxy: 94 },
-    { minx: 316, maxx: 334, miny: 77, maxy: 348 },
-    { minx: 163, maxx: 236, miny: 202, maxy: 244 },
-    { minx: 83, maxx: 200, miny: 77, maxy: 93 },
-    { minx: 62, maxx: 82, miny: 77, maxy: 348 }];
+    { minX: 251, maxX: 317, minY: 332, maxY: 348 },
+    { minX: 83, maxX: 198, minY: 326, maxY: 348 },
+    { minX: 250, maxX: 317, minY: 77, maxY: 94 },
+    { minX: 316, maxX: 334, minY: 77, maxY: 348 },
+    { minX: 163, maxX: 236, minY: 202, maxY: 244 },
+    { minX: 83, maxX: 200, minY: 77, maxY: 93 },
+    { minX: 62, maxX: 82, minY: 77, maxY: 348 }];
 
   skin.customObstacleZones.hoth.blobs = [
-    { minx: 116, maxx: 142, miny: 283, maxy: 342 },
-    { minx: 116, maxx: 187, miny: 226, maxy: 281 },
-    { minx: 356, maxx: 394, miny: 264, maxy: 311 },
-    { minx: 311, maxx: 393, miny: 313, maxy: 388 },
-    { minx: 310, maxx: 344, miny: 61, maxy: 106 },
-    { minx: 258, maxx: 344, miny: 108, maxy: 192 },
-    { minx: 117, maxx: 146, miny: 120, maxy: 132 },
-    { minx: 57, maxx: 117, miny: 70, maxy: 132 }];
+    { minX: 116, maxX: 142, minY: 283, maxY: 342 },
+    { minX: 116, maxX: 187, minY: 226, maxY: 281 },
+    { minX: 356, maxX: 394, minY: 264, maxY: 311 },
+    { minX: 311, maxX: 393, minY: 313, maxY: 388 },
+    { minX: 310, maxX: 344, minY: 61, maxY: 106 },
+    { minX: 258, maxX: 344, minY: 108, maxY: 192 },
+    { minX: 117, maxX: 146, minY: 120, maxY: 132 },
+    { minX: 57, maxX: 117, minY: 70, maxY: 132 }];
 
   skin.customObstacleZones.hoth.horizontal = [
-    { minx: 54, maxx: 299, miny: 268, maxy: 294 },
-    { minx: 150, maxx: 350, miny: 171, maxy: 198 },
-    { minx: 53, maxx: 99, miny: 161, maxy: 200 },
-    { minx: 252, maxx: 350, miny: 66, maxy: 100 },
-    { minx: 54, maxx: 195, miny: 62, maxy: 92 }];
+    { minX: 54, maxX: 299, minY: 268, maxY: 294 },
+    { minX: 150, maxX: 350, minY: 171, maxY: 198 },
+    { minX: 53, maxX: 99, minY: 161, maxY: 200 },
+    { minX: 252, maxX: 350, minY: 66, maxY: 100 },
+    { minX: 54, maxX: 195, minY: 62, maxY: 92 }];
 
   skin.customObstacleZones.hoth.circle = [
-    { minx: 250, maxx: 298, miny: 312, maxy: 342 },
-    { minx: 300, maxx: 346, miny: 65, maxy: 342 },
-    { minx: 252, maxx: 302, miny: 65, maxy: 100 },
-    { minx: 99, maxx: 192, miny: 311, maxy: 342 },
-    { minx: 101, maxx: 196, miny: 65, maxy: 91 },
-    { minx: 50, maxx: 100, miny: 65, maxy: 342 },
-    { minx: 163, maxx: 242, miny: 188, maxy: 238 }];
+    { minX: 250, maxX: 298, minY: 312, maxY: 342 },
+    { minX: 300, maxX: 346, minY: 65, maxY: 342 },
+    { minX: 252, maxX: 302, minY: 65, maxY: 100 },
+    { minX: 99, maxX: 192, minY: 311, maxY: 342 },
+    { minX: 101, maxX: 196, minY: 65, maxY: 91 },
+    { minX: 50, maxX: 100, minY: 65, maxY: 342 },
+    { minX: 163, maxX: 242, minY: 188, maxY: 238 }];
 
   skin.customObstacleZones.starship.blobs = [
-    { minx: 301, maxx: 344, miny: 58, maxy: 120 },
-    { minx: 353, maxx: 405, miny: 260, maxy: 308 },
-    { minx: 306, maxx: 405, miny: 310, maxy: 393 },
-    { minx: 101, maxx: 144, miny: 300, maxy: 350 },
-    { minx: 101, maxx: 197, miny: 208, maxy: 299 },
-    { minx: 261, maxx: 344, miny: 120, maxy: 192 },
-    { minx: 55, maxx: 128, miny: 77, maxy: 141 }];
+    { minX: 301, maxX: 344, minY: 58, maxY: 120 },
+    { minX: 353, maxX: 405, minY: 260, maxY: 308 },
+    { minX: 306, maxX: 405, minY: 310, maxY: 393 },
+    { minX: 101, maxX: 144, minY: 300, maxY: 350 },
+    { minX: 101, maxX: 197, minY: 208, maxY: 299 },
+    { minX: 261, maxX: 344, minY: 120, maxY: 192 },
+    { minX: 55, maxX: 128, minY: 77, maxY: 141 }];
 
   skin.customObstacleZones.starship.horizontal = [
-    { minx: 52, maxx: 298, miny: 267, maxy: 300 },
-    { minx: 151, maxx: 351, miny: 167, maxy: 198 },
-    { minx: 49, maxx: 99, miny: 165, maxy: 201 },
-    { minx: 51, maxx: 199, miny: 66, maxy: 102 },
-    { minx: 251, maxx: 351, miny: 68, maxy: 104 }];
+    { minX: 52, maxX: 298, minY: 267, maxY: 300 },
+    { minX: 151, maxX: 351, minY: 167, maxY: 198 },
+    { minX: 49, maxX: 99, minY: 165, maxY: 201 },
+    { minX: 51, maxX: 199, minY: 66, maxY: 102 },
+    { minX: 251, maxX: 351, minY: 68, maxY: 104 }];
 
   skin.customObstacleZones.starship.circle = [
-    { minx: 251, maxx: 316, miny: 315, maxy: 351 },
-    { minx: 153, maxx: 242, miny: 165, maxy: 251 },
-    { minx: 252, maxx: 314, miny: 66, maxy: 101 },
-    { minx: 316, maxx: 333, miny: 66, maxy: 351 },
-    { minx: 80, maxx: 200, miny: 316, maxy: 351 },
-    { minx: 82, maxx: 200, miny: 66, maxy: 102 },
-    { minx: 69, maxx: 80, miny: 66, maxy: 351 }];
+    { minX: 251, maxX: 316, minY: 315, maxY: 351 },
+    { minX: 153, maxX: 242, minY: 165, maxY: 251 },
+    { minX: 252, maxX: 314, minY: 66, maxY: 101 },
+    { minX: 316, maxX: 333, minY: 66, maxY: 351 },
+    { minX: 80, maxX: 200, minY: 316, maxY: 351 },
+    { minX: 82, maxX: 200, minY: 66, maxY: 102 },
+    { minX: 69, maxX: 80, minY: 66, maxY: 351 }];
 
   skin.explosion = skin.assetUrl('vanish.png');
   skin.explosionFrames = 17;
