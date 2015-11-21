@@ -624,9 +624,12 @@ function loadHoc2015(skin, assetUrl) {
   // How long to show each frame of the optional goal animation.
   skin.timePerGoalAnimationFrame = 100;
 
+  // Override the default scaling of collision rectangles for an item.
+  skin.finishCollideDistanceScaling = 1;
+
   // For a smaller collision region on a goal.
   skin.goalCollisionRectWidth = 50;
-  skin.goalCollisionRectHeight = 50;
+  skin.goalCollisionRectHeight = 75;
 
   // Whether that goal should fade out when touched.  If true, then the
   // success image is never shown.
