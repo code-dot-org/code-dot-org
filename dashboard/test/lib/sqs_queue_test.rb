@@ -15,3 +15,4 @@ class SqsQueueTest  < ActiveSupport::TestCase
   end
 
 end
+
