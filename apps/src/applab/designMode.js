@@ -308,23 +308,32 @@ designMode.updateProperty = function(element, name, value) {
       break;
     case 'readonly':
       element.setAttribute('contenteditable', !value);
-    case 'is-default':
-      element.setAttribute('is-default', value);
-      var screenId = element.id.startsWith('design_') ? element.id.substring(7) : element.id;
-
+    case 'data-is-default':
       if (value === true) {
-        // Make all other screens not default
-        var allScreens = document.querySelectorAll('#designModeViz [class=screen]');
-        Array.prototype.forEach.call(allScreens, function (item) {
-          if (item.id !== 'design_' + element.id && item.id !== element.id) {
-            item.setAttribute('is-default', 'false');
-          }
-        });
-
-        // Change the order in the dropdown so the new default goes to the top
-        console.log('changing screen order');
-        $('#screenSelector').prepend($('#screenSelector option:contains("' + screenId + '")'));
+        //Make this one default
+        $('#designModeViz .screen').attr('data-is-default', false);
+        element.setAttribute('data-is-default', true);
+        console.log("Setting first element in DOM to be " + element.id);
+        $('#designModeViz').prepend(element);
+      } else {
+        element.setAttribute('data-is-default', false);
       }
+
+      //var screenId = element.id.startsWith('design_') ? element.id.substring(7) : element.id;
+      //
+      //if (value === true) {
+      //  // Make all other screens not default
+      //  var allScreens = document.querySelectorAll('#designModeViz [class=screen]');
+      //  Array.prototype.forEach.call(allScreens, function (item) {
+      //    if (item.id !== 'design_' + element.id && item.id !== element.id) {
+      //      item.setAttribute('is-default', 'false');
+      //    }
+      //  });
+      //
+      //  // Change the order in the dropdown so the new default goes to the top
+      //  console.log('changing screen order');
+      //  $('#screenSelector').prepend($('#screenSelector option:contains("' + screenId + '")'));
+      //}
       break;
     default:
       // Mark as unhandled, but give typeSpecificPropertyChange a chance to
@@ -795,12 +804,10 @@ designMode.getCurrentScreenId = function() {
  * if we have none.
  */
 designMode.loadDefaultScreen = function () {
-  var potentialDefaultScreens = $('#designModeViz [class=screen][is-default=true]');
   var defaultScreen;
+
   if ($('#designModeViz .screen').length === 0) {
     defaultScreen = designMode.createScreen();
-  } else if (potentialDefaultScreens.length === 1) {
-    defaultScreen = elementUtils.getId(potentialDefaultScreens[0]);
   } else {
     defaultScreen = elementUtils.getId($('#designModeViz .screen')[0]);
   }
