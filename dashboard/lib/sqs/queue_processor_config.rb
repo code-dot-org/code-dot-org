@@ -1,4 +1,4 @@
-require_relative '../../../lib/dynamic_config/dcdo'
+require 'dynamic_config/dcdo'
 
 module SQS
 
@@ -35,23 +35,23 @@ module SQS
 
     # The current maximum messages per second across all processor workers, or
     # 0 for no limit.
-    # @return [Integer]
+    # @return [Float]
     def global_max_rate
       if dcdo_max_rate_key
-        DCDO.get(dcdo_max_rate_key, initial_max_rate).to_i
+        DCDO.get(dcdo_max_rate_key, initial_max_rate).to_f
       else
         initial_max_rate
       end
     end
 
     # The current maximum messages per second for a given processor.
-    # @return [Integer]
+    # @return [Float]
     def processor_max_rate
-      global_max_rate / num_processors
+      global_max_rate.to_f / num_processors
     end
 
     # The current maximum messages per second for a given worker.
-    # @return [Integer]
+    # @return [Float]
     def worker_max_rate
       processor_max_rate / num_workers_per_processor
     end
