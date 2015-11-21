@@ -5168,6 +5168,9 @@ Studio.timedOut = function() {
  * Tests whether the sprite is currently at the goal sprite.
  */
 function spriteAtGoal(sprite, goal) {
+  var goalWidth = utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH);
+  var goalHeight = utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT);
+
   var goalCollisionWidth = skin.goalCollisionRectWidth || Studio.MARKER_WIDTH;
   var goalCollisionHeight = skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
 
@@ -5177,18 +5180,28 @@ function spriteAtGoal(sprite, goal) {
   var xSpriteCenter = sprite.x + sprite.width / 2;
   var ySpriteCenter = sprite.y + sprite.height / 2;
 
-  var xFinCenter = goal.x + Studio.MARKER_WIDTH / 2 + utils.valueOr(skin.goalRenderOffsetX, 0);
-  var yFinCenter = goal.y + Studio.MARKER_HEIGHT / 2 + utils.valueOr(skin.goalRenderOffsetY, 0);
+  var xFinCenter = goal.x + goalWidth / 2 + utils.valueOr(skin.goalRenderOffsetX, 0);
+  var yFinCenter = goal.y + goalHeight / 2 + utils.valueOr(skin.goalRenderOffsetY, 0);
 
-  Studio.drawDebugRect("goalCollisionSprite", xSpriteCenter, ySpriteCenter, spriteCollisionWidth, spriteCollisionHeight);
-  Studio.drawDebugRect("goalCollisionGoal", xFinCenter, yFinCenter, goalCollisionWidth, goalCollisionHeight);
+  var distanceScaling =
+    utils.valueOr(skin.finishCollideDistanceScaling, constants.FINISH_COLLIDE_DISTANCE_SCALING);
+
+  Studio.drawDebugRect("goalCollisionSprite",
+                       xSpriteCenter,
+                       ySpriteCenter,
+                       distanceScaling * spriteCollisionWidth,
+                       distanceScaling * spriteCollisionHeight);
+
+  Studio.drawDebugRect("goalCollisionGoal",
+                       xFinCenter,
+                       yFinCenter,
+                       distanceScaling * goalCollisionWidth,
+                       distanceScaling * goalCollisionHeight);
 
   var finishCollisionDistance = function (yAxis) {
     var dim1 = yAxis ? spriteCollisionHeight : spriteCollisionWidth;
     var dim2 = yAxis ? goalCollisionHeight : goalCollisionWidth;
 
-    var distanceScaling =
-      utils.valueOr(skin.finishCollideDistanceScaling, constants.FINISH_COLLIDE_DISTANCE_SCALING);
 
     return distanceScaling * (dim1 + dim2) / 2;
   };
