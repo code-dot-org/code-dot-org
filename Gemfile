@@ -51,6 +51,7 @@ group :development, :test do
   gem "codeclimate-test-reporter", require: false
   gem 'sqlite3'
   gem 'timecop'
+  gem 'fake_sqs'
 
   # for ui testing
   gem 'cucumber'
