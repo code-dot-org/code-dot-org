@@ -1,4 +1,4 @@
-require_relative '../../../lib/dynamic_config/dcdo'
+require 'dynamic_config/dcdo'
 
 module SQS
 
@@ -26,7 +26,7 @@ module SQS
                    max_wait_time: 10,
                    max_batch_size: 10)
 
-      raise ArgumentError, 'max batch size must be <= 10' unless max_batch_size <= 10 and max_batch_size > 0
+      raise ArgumentError, 'max batch size must be <= 10' unless max_batch_size <= 10 && max_batch_size > 0
       raise ArgumentError, 'num_workers_per_processor must be positive' unless num_workers_per_processor > 0
       raise ArgumentError, 'max_wait_time must be positive' unless max_wait_time > 0
       raise ArgumentError, 'initial_max_rate must be non-negative' unless initial_max_rate >= 0
@@ -44,23 +44,23 @@ module SQS
 
     # The current maximum messages per second across all processor workers, or
     # 0 for no limit.
-    # @return [Integer]
+    # @return [Float]
     def global_max_rate
       if dcdo_max_rate_key
-        DCDO.get(dcdo_max_rate_key, initial_max_rate).to_i
+        DCDO.get(dcdo_max_rate_key, initial_max_rate).to_f
       else
         initial_max_rate
       end
     end
 
     # The current maximum messages per second for a given processor.
-    # @return [Integer]
+    # @return [Float]
     def processor_max_rate
-      global_max_rate / num_processors
+      global_max_rate.to_f / num_processors
     end
 
     # The current maximum messages per second for a given worker.
-    # @return [Integer]
+    # @return [Float]
     def worker_max_rate
       processor_max_rate / num_workers_per_processor
     end
