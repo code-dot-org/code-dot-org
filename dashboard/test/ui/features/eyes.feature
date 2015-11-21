@@ -161,11 +161,10 @@ Scenario:
   Then I see no difference for "evaluated expression"
   And I close my eyes
 
-
+@dashboard_db_access
 Scenario Outline: Simple blockly level page view
   Given I am on "http://learn.code.org/"
   And I am a student
-  And I wait for 2 seconds
   When I open my eyes to test "<test_name>"
   And I am on "<url>"
   When I rotate to landscape

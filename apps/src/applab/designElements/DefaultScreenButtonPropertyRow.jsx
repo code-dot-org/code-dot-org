@@ -2,7 +2,6 @@ var rowStyle = require('./rowStyle');
 
 var DefaultButtonPropertyRow = React.createClass({
   handleMakeDefault: function(event) {
-    //TODO: Delete console statements
     this.props.handleChange(true);
   },
 
