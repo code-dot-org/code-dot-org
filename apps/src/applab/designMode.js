@@ -313,8 +313,29 @@ designMode.updateProperty = function(element, name, value) {
         //Make this one default
         $('#designModeViz .screen').attr('data-is-default', false);
         element.setAttribute('data-is-default', true);
-        console.log("Setting first element in DOM to be " + element.id);
         $('#designModeViz').prepend(element);
+
+        //Resort elements in the dropdown list
+        var options = $('#screenSelector option');
+        var newScreenText = options.last().text();
+        var defaultScreenId = elementUtils.getId(element);
+        options.sort(function (a, b) {
+          if (a.text === defaultScreenId) {
+            return -1;
+          } else if (b.text === defaultScreenId) {
+            return 1;
+          } else if (a.text === newScreenText) {
+            return 1;
+          } else if (b.text === newScreenText) {
+            return -1;
+          } else {
+            return a.text.localeCompare(b.text);
+          }
+        });
+
+        $('#screenSelector').html(options);
+        $('#screenSelector')[0].selectedIndex = 0;
+
       } else {
         element.setAttribute('data-is-default', false);
       }
