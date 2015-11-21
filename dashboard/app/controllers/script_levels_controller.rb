@@ -5,7 +5,7 @@ class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
 
-  # Disable the session if this a cachable request.
+  # Disable the session if this a cacheable request.
   session :off, :if =>
     Proc.new {|request| ScriptLevelsController.is_cachable_request?(request)}
 
@@ -82,7 +82,7 @@ class ScriptLevelsController < ApplicationController
 
   # Configure http caching for the given script. Caching is disabled unless the
   # Gatekeeper configuration for 'script' specifies that it is publicly
-  # cachable, in which case the max-age and s-maxage headers are set based the
+  # cacheable, in which case the max-age and s-maxage headers are set based the
   # 'public-max-age' DCDO configuration value.  Because of a bug in Amazon Cloudfront,
   # we actually set max-age to twice the value of s-maxage, to avoid Cloudfront serving
   # stale content which has to be revalidated by the client. The details of the bug are

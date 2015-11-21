@@ -42,7 +42,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should make script level pages uncachable by default' do
     get_show_script_level_page(@script_level)
 
-    # Make sure the content is not cachable by default
+    # Make sure the content is not cacheable by default
     assert_response :success
 
     assert_caching_disabled response.headers['Cache-Control']
