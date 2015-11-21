@@ -45,9 +45,10 @@ class ActivityTest < ActiveSupport::TestCase
 
     # We shouldn't be able to find the activity in the database
     # because the async write hasn't happened yet.
-    activity_finder = Activity.where(user_id: student.id)
-                          .where(level_id: level.id)
-                          .where(level_source_id: level_source.id)
+    activity_finder = Activity.
+        where(user_id: student.id).
+        where(level_id: level.id).
+        where(level_source_id: level_source.id)
 
     assert_nil activity_finder.first
 
