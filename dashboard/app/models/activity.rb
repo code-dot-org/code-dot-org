@@ -68,40 +68,49 @@ class Activity < ActiveRecord::Base
     Activity.finished? test_result
   end
 
-  # Returns a new Activity and queues an SQS message to asynchronously create it in
-  # the database. Note that this id, created_at, and updated_at attributes will not
-  # # be populated. Also, if the object does not pass validation, an immediate
-  # exception will be thrown and the object will not be saved.
-  def Activity.create_async!(attributes, queue)
-    Activity.new(attributes).tap do |activity|
-      activity.validate!
-
-      async_create_json = {
-          'model' => 'Activity',
-          'action' => 'create',
-          'attributes' => attributes}.to_json
-
-      @sqs_client.send_message(queue_url: queue_url, message_body: async_json)
-    end
-  end
-
-  def Activity.apply_async_json(async_json)
-    op = JSON::parse(async_json)
-
-    if op[:model] != 'Activity'
-      raise "Model must be Activity, but was #{op[:model]} in #{async_json}"
-    end
-
-    case op['action']
-      when 'create'
-          Activity.create!(op[:attributes])
-      else
-        raise "Unknown action #{op[:action]} in #{async_json}"
-    end
-  end
-
   def Activity.recent(limit)
     # yeah, this is a lot like .last -- but I want a dataset not an array
     Activity.order('id desc').limit(limit)
   end
+
+  # Returns a new Activity and queues an SQS message to asynchronously create it in
+  # the database. Note that this id, created_at, and updated_at attributes will not
+  # # be populated. Also, if the object does not pass validation, an immediate
+  # exception will be thrown and the object will not be saved.
+  def Activity.create_async!(queue, attributes)
+    Activity.new(attributes).tap do |activity|
+      activity.validate!
+      message_body = {
+        'model' => 'Activity', 'action' => 'create', 'attributes' => activity.attributes
+      }.to_json
+      queue.enqueue(message_body)
+    end
+  end
+
+  # Handle an async message body created by async_create! etc.
+  # @param [String] json A JSON-encoded asynchronous operation.
+  def Activity.handle_async_message_json(json)
+    op = JSON::parse(json)
+
+    if op['model'] != 'Activity'
+      raise "Model must be Activity, but was #{op['model']} in #{json}"
+    end
+
+    case op['action']
+      when 'create'
+        Activity.create!(op['attributes'])
+      else
+        raise "Unknown action #{op['action']} in #{async_json}"
+    end
+  end
+
+  # Helper handler class for handling a batch of async Activity messages.
+  class AsyncHandler
+    def handle(messages)
+      messages.each do |message|
+        Activity.handle_async_message_json(message.body)
+      end
+    end
+  end
+
 end
