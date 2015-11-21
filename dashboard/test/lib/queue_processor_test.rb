@@ -15,7 +15,14 @@ require 'sqs/queue_processor_config'
 # variable is set to use the actual SQS service.
 unless ENV['USE_REAL_SQS'] == 'true'
   require 'fake_sqs/test_integration'
-  Aws.config.update(region: 'us-east-1')
+  AWS.config.update(
+      region: 'us-east-1',
+      :use_ssl           => false,
+      :sqs_endpoint      => "localhost",
+      :sqs_port          => 4568,
+      :access_key_id     => "fake access key id",
+      :secret_access_key => "fake secret access key"
+  )
   $fake_sqs_service = FakeSQS::TestIntegration.new(
     database: ':memory:',
     sqs_endpoint: 'localhost',
