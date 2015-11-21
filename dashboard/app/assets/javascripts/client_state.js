@@ -93,7 +93,7 @@ dashboard.clientState.writeSourceForLevel = function (scriptName, levelId, times
  */
 dashboard.clientState.levelProgress = function(scriptName, levelId) {
   var progressMap = dashboard.clientState.allLevelsProgress();
-  return progressMap[createKey(scriptName, levelId)] || 0;
+  return (progressMap[scriptName] || {})[levelId] || 0;
 };
 
 /**
@@ -123,7 +123,10 @@ dashboard.clientState.trackProgress = function(result, lines, testResult, script
  */
 function setLevelProgress(scriptName, levelId, progress) {
   var progressMap = dashboard.clientState.allLevelsProgress();
-  progressMap[createKey(scriptName, levelId)] = progress;
+  if (!progressMap[scriptName]) {
+    progressMap[scriptName] = {}
+  }
+  progressMap[scriptName][levelId] = progress;
   $.cookie('progress', JSON.stringify(progressMap), COOKIE_OPTIONS);
 }
 
