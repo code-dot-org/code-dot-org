@@ -380,6 +380,9 @@ designMode.onDeletePropertiesButton = function(element, event) {
 
   if (isScreen) {
     designMode.loadDefaultScreen();
+    if ($('#designModeViz .screen[data-is-default=true]').length === 0) {
+      $('#designModeViz .screen').first().attr('data-is-default', true);
+    }
   } else {
     designMode.editElementProperties(elementUtils.getPrefixedElementById(currentScreenId));
   }
@@ -776,6 +779,7 @@ designMode.configureDesignToggleRow = function () {
  */
 designMode.createScreen = function () {
   var newScreen = elementLibrary.createElement('SCREEN', 0, 0);
+  newScreen.setAttribute('data-is-default', $('#designModeViz .screen').length === 0);
   $("#designModeViz").append(newScreen);
 
   return elementUtils.getId(newScreen);
