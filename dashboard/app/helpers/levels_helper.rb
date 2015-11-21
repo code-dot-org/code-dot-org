@@ -126,7 +126,7 @@ module LevelsHelper
 
     set_channel if @level.channel_backed?
 
-    view_options level_key: @level.key
+    view_options server_level_id: @level.id
 
     unless params[:share]
       # Set videos and callouts.
@@ -353,7 +353,6 @@ module LevelsHelper
     embed
     share
     hide_source
-    script_level_id
     submitted
     unsubmit_url
   ))
