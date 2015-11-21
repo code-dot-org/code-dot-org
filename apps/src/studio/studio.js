@@ -1522,10 +1522,10 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
     // Compare against a set of specific rectangles.
     for (var i = 0; i < collisionRects.length; i++) {
       var rect = collisionRects[i];
-      var rectWidth = rect.maxx-rect.minx+1;
-      var rectHeight = rect.maxy-rect.miny+1;
-      var rectCenterX = rect.minx + rectWidth/2;
-      var rectCenterY = rect.miny + rectHeight/2;
+      var rectWidth = rect.maxX-rect.minX+1;
+      var rectHeight = rect.maxY-rect.minY+1;
+      var rectCenterX = rect.minX + rectWidth/2;
+      var rectCenterY = rect.minY + rectHeight/2;
       Studio.drawDebugRect("avatarCollision", rectCenterX, rectCenterY, rectWidth, rectHeight);
       if (overlappingTest(xCenter,
                           rectCenterX,
