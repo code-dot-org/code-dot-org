@@ -5168,24 +5168,30 @@ Studio.timedOut = function() {
  * Tests whether the sprite is currently at the goal sprite.
  */
 function spriteAtGoal(sprite, goal) {
-  var goalWidth = skin.goalCollisionRectWidth || Studio.MARKER_WIDTH;
-  var goalHeight = skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
+  var goalCollisionWidth = skin.goalCollisionRectWidth || Studio.MARKER_WIDTH;
+  var goalCollisionHeight = skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
+
+  var spriteCollisionWidth = skin.itemCollisionRectWidth || sprite.width;
+  var spriteCollisionHeight = skin.itemCollisionRectHeight || sprite.height;
+
+  var xSpriteCenter = sprite.x + sprite.width / 2;
+  var ySpriteCenter = sprite.y + sprite.height / 2;
+
+  var xFinCenter = goal.x + Studio.MARKER_WIDTH / 2 + utils.valueOr(skin.goalRenderOffsetX, 0);
+  var yFinCenter = goal.y + Studio.MARKER_HEIGHT / 2 + utils.valueOr(skin.goalRenderOffsetY, 0);
+
+  Studio.drawDebugRect("goalCollisionSprite", xSpriteCenter, ySpriteCenter, spriteCollisionWidth, spriteCollisionHeight);
+  Studio.drawDebugRect("goalCollisionGoal", xFinCenter, yFinCenter, goalCollisionWidth, goalCollisionHeight);
 
   var finishCollisionDistance = function (yAxis) {
-    var dim1 = yAxis ? sprite.height : sprite.width;
-    var dim2 = yAxis ? goalHeight : goalWidth;
+    var dim1 = yAxis ? spriteCollisionHeight : spriteCollisionWidth;
+    var dim2 = yAxis ? goalCollisionHeight : goalCollisionWidth;
 
-    return constants.FINISH_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+    var distanceScaling =
+      utils.valueOr(skin.finishCollideDistanceScaling, constants.FINISH_COLLIDE_DISTANCE_SCALING);
+
+    return distanceScaling * (dim1 + dim2) / 2;
   };
-
-  var xSpriteCenter = sprite.x + (skin.itemCollisionRectWidth || sprite.width) / 2;
-  var ySpriteCenter = sprite.y + (skin.itemCollisionRectHeight || sprite.height) / 2;
-
-  var xFinCenter = goal.x + goalWidth / 2;
-  var yFinCenter = goal.y + goalHeight / 2;
-
-  Studio.drawDebugRect("goalCollisionSprite", xSpriteCenter, ySpriteCenter, sprite.width, sprite.height);
-  Studio.drawDebugRect("goalCollisionGoal", xFinCenter, yFinCenter, goalWidth, goalHeight);
 
   return collisionTest(xSpriteCenter,
     xFinCenter,
