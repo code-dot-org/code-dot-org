@@ -1166,16 +1166,18 @@ function handleActorCollisionsWithCollidableList (
       continue;
     }
 
+    var distanceScaing = constants.SPRITE_COLLIDE_DISTANCE_SCALING;
+
     Studio.drawDebugRect("itemCollision",
       next.x,
       next.y,
-      skin.itemCollisionRectWidth || collidable.width,
-      skin.itemCollisionRectHeight || collidable.height);
+      distanceScaing * (skin.itemCollisionRectWidth || collidable.width),
+      distanceScaing * (skin.itemCollisionRectHeight || collidable.height));
     Studio.drawDebugRect("spriteCollision",
       xCenter,
       yCenter,
-      skin.spriteCollisionRectWidth || Studio.sprite[spriteIndex].width,
-      skin.spriteCollisionRectHeight || Studio.sprite[spriteIndex].height);
+      distanceScaing * (skin.spriteCollisionRectWidth || Studio.sprite[spriteIndex].width),
+      distanceScaing * (skin.spriteCollisionRectHeight || Studio.sprite[spriteIndex].height));
 
     if (collisionTest(
           xCenter,
