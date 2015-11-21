@@ -190,10 +190,6 @@ class ScriptLevelsController < ApplicationController
       has_i18n: @game.has_i18n?
     )
 
-    level_view_options(
-      script_level_id: @script_level.level_id
-    )
-
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {
       success: milestone_response(script_level: @script_level, solved?: true),
