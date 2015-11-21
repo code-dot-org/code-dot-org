@@ -34,4 +34,3 @@ class SynchronousQueueTest < ActiveSupport::TestCase
     }
   end
 end
-
