@@ -44,13 +44,13 @@ dashboard.clientState.reset = function() {
  * Returns the client-cached copy of the level source for the given script
  * level, if it's newer than the given timestamp.
  * @param {string} scriptName
- * @param {string} levelKey
+ * @param {number} levelId
  * @param {number=} timestamp
  * @returns {string|undefined} Cached copy of the level source, or undefined if
  *   the cached copy is missing/stale.
  */
-dashboard.clientState.sourceForLevel = function (scriptName, levelKey, timestamp) {
-  var data = sessionStorage.getItem(createKey(scriptName, levelKey, 'source'));
+dashboard.clientState.sourceForLevel = function (scriptName, levelId, timestamp) {
+  var data = sessionStorage.getItem(createKey(scriptName, levelId, 'source'));
   if (data) {
     try {
       var parsed = JSON.parse(data);
@@ -68,13 +68,13 @@ dashboard.clientState.sourceForLevel = function (scriptName, levelKey, timestamp
  * may be queued, so save the data in sessionStorage to present a consistent
  * client view.
  * @param {string} scriptName
- * @param {string} levelKey
+ * @param {number} levelId
  * @param {number} timestamp
  * @param {string} source
  */
-dashboard.clientState.writeSourceForLevel = function (scriptName, levelKey, timestamp, source) {
+dashboard.clientState.writeSourceForLevel = function (scriptName, levelId, timestamp, source) {
   try {
-    sessionStorage.setItem(createKey(scriptName, levelKey, 'source'), JSON.stringify({
+    sessionStorage.setItem(createKey(scriptName, levelId, 'source'), JSON.stringify({
       source: source,
       timestamp: timestamp
     }));
@@ -88,12 +88,12 @@ dashboard.clientState.writeSourceForLevel = function (scriptName, levelKey, time
 /**
  * Returns the progress attained for the given level from the cookie.
  * @param {string} scriptName The script name
- * @param {string} levelKey The level
+ * @param {number} levelId The level
  * @returns {number}
  */
-dashboard.clientState.levelProgress = function(scriptName, levelKey) {
+dashboard.clientState.levelProgress = function(scriptName, levelId) {
   var progressMap = dashboard.clientState.allLevelsProgress();
-  return progressMap[createKey(scriptName, levelKey)] || 0;
+  return (progressMap[scriptName] || {})[levelId] || 0;
 };
 
 /**
@@ -102,28 +102,31 @@ dashboard.clientState.levelProgress = function(scriptName, levelKey) {
  * @param {number} lines - Number of lines of code user wrote in this solution
  * @param {number} testResult - Indicates pass, fail, perfect
  * @param {string} scriptName - Which script this is for
- * @param {string} levelKey - Which level this is for
+ * @param {number} levelId - Which level this is for
  */
-dashboard.clientState.trackProgress = function(result, lines, testResult, scriptName, levelKey) {
+dashboard.clientState.trackProgress = function(result, lines, testResult, scriptName, levelId) {
   if (result) {
     addLines(lines);
   }
 
-  if (testResult > dashboard.clientState.levelProgress(scriptName, levelKey)) {
-    setLevelProgress(scriptName, levelKey, testResult);
+  if (testResult > dashboard.clientState.levelProgress(scriptName, levelId)) {
+    setLevelProgress(scriptName, levelId, testResult);
   }
 };
 
 /**
  * Sets the progress attained for the given level in the cookie
  * @param {string} scriptName The script name
- * @param {string} levelKey The level
+ * @param {number} levelId The level
  * @param {number} progress Indicates pass, fail, perfect
  * @returns {number}
  */
-function setLevelProgress(scriptName, levelKey, progress) {
+function setLevelProgress(scriptName, levelId, progress) {
   var progressMap = dashboard.clientState.allLevelsProgress();
-  progressMap[createKey(scriptName, levelKey)] = progress;
+  if (!progressMap[scriptName]) {
+    progressMap[scriptName] = {}
+  }
+  progressMap[scriptName][levelId] = progress;
   $.cookie('progress', JSON.stringify(progressMap), COOKIE_OPTIONS);
 }
 
@@ -235,12 +238,12 @@ function hasSeenVisualElement(visualElementType, visualElementId) {
 /**
  * Creates standardized keys for storing values in sessionStorage.
  * @param {string} scriptName
- * @param {string} levelKey
+ * @param {number} levelId
  * @param {string=} prefix
  * @return {string}
  */
-function createKey(scriptName, levelKey, prefix) {
-  return (prefix ? prefix + '_' : '') + scriptName + '_' + levelKey;
+function createKey(scriptName, levelId, prefix) {
+  return (prefix ? prefix + '_' : '') + scriptName + '_' + levelId;
 }
 
 })(window, $);
