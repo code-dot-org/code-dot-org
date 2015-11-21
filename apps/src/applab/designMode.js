@@ -339,22 +339,6 @@ designMode.updateProperty = function(element, name, value) {
       } else {
         element.setAttribute('data-is-default', false);
       }
-
-      //var screenId = element.id.startsWith('design_') ? element.id.substring(7) : element.id;
-      //
-      //if (value === true) {
-      //  // Make all other screens not default
-      //  var allScreens = document.querySelectorAll('#designModeViz [class=screen]');
-      //  Array.prototype.forEach.call(allScreens, function (item) {
-      //    if (item.id !== 'design_' + element.id && item.id !== element.id) {
-      //      item.setAttribute('is-default', 'false');
-      //    }
-      //  });
-      //
-      //  // Change the order in the dropdown so the new default goes to the top
-      //  console.log('changing screen order');
-      //  $('#screenSelector').prepend($('#screenSelector option:contains("' + screenId + '")'));
-      //}
       break;
     default:
       // Mark as unhandled, but give typeSpecificPropertyChange a chance to
