@@ -134,7 +134,7 @@ module.exports = React.createClass({
         return <option key={item}>{item}</option>;
       });
 
-      var defaultScreenId = $('#divApplab [class=screen][is-default=true]').first().attr('id') || '';
+      var defaultScreenId = $('#divApplab [class=screen][data-is-default=true]').first().attr('id') || '';
 
       options.sort(function (a, b) {
         if (a.key === defaultScreenId) {
