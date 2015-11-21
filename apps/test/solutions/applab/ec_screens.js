@@ -38,6 +38,7 @@ module.exports = {
         var screen1 = designModeViz.children[0];
         assert.equal(screen1.id, 'design_screen1');
         assert.equal(screen1.tagName, 'DIV');
+        assert.equal(screen1.getAttribute('data-is-default'), 'true');
 
         // The design button is visible, and there's no dropdown
         var designModeButton = document.getElementById('designModeButton');
@@ -92,6 +93,8 @@ module.exports = {
 
         assert.equal($("#designModeViz").is(':visible'), true, 'designModeViz is visible');
         assert.equal($("#designModeViz").children().length, 2, 'has two screen divs');
+        assert.equal($("#designModeViz .screen").first().attr('data-is-default'), 'true', 'first element is set to default');
+        assert.equal($("#designModeViz .screen").last().attr('data-is-default'), 'false', 'first element is not set to default');
         assert.equal(screenSelector.options.length, 3, 'has three options in dropdown');
         assert.equal($(screenSelector).val(), 'screen2');
 
@@ -145,25 +148,26 @@ module.exports = {
         validatePropertyRow(0, 'id', 'screen2', assert);
 
         var deleteButton = $("#design-properties button").eq(-1);
-        assert.equal(deleteButton.text(), 'Delete');
+        assert.equal(deleteButton.text(), 'Delete', 'delete button on screen 2 should say delete');
 
         // Both screen 1 and 2 should have delete buttons
         $('#screenSelector').val('screen1');
         ReactTestUtils.Simulate.change(screenSelector);
         deleteButton = $("#design-properties button").eq(-1);
         validatePropertyRow(0, 'id', 'screen1', assert);
-        assert.equal(deleteButton.text(), 'Delete');
+        assert.equal(deleteButton.text(), 'Delete', 'delete button on screen 1 should say delete');
 
         $('#screenSelector').val('screen2');
         ReactTestUtils.Simulate.change(screenSelector);
         validatePropertyRow(0, 'id', 'screen2', assert);
         deleteButton = $("#design-properties button").eq(-1);
+        assert.equal(deleteButton.text(), 'Delete', 'last button is delete button')
 
         ReactTestUtils.Simulate.click(deleteButton[0]);
 
         // Should have resulted in two new buttons
-        assert.equal($("#design-properties button").eq(-2).text(), 'No');
-        assert.equal($("#design-properties button").eq(-1).text(), 'Yes');
+        assert.equal($("#design-properties button").eq(-2).text(), 'No', 'second to last button should be no');
+        assert.equal($("#design-properties button").eq(-1).text(), 'Yes', 'last button should be no');
 
         ReactTestUtils.Simulate.click($("#design-properties button").eq(-1)[0]);
 
@@ -177,9 +181,12 @@ module.exports = {
         $("#design_screen1").click();
         validatePropertyRow(0, 'id', 'screen1', assert);
 
-        // One button, and it isn't delete
-        assert.equal($("#design-properties button").length, 1);
-        assert.equal($("#design-properties button").text(), '');
+        // Two buttons, first is color picker, second is default
+        assert.equal($("#design-properties button").length, 2, 'There should be two buttons');
+        assert.equal($("#design-properties button").first().attr('class'), 'rainbow-gradient',
+          'First button is color picker');
+        assert.equal($("#design-properties button").last().text(), 'Make Default',
+          'Second button is the default button');
 
         // Change name
         var inputId = $('#design-properties input').first();
@@ -188,8 +195,8 @@ module.exports = {
         assert(document.getElementById('design_renamed_screen'));
 
         // Still can't delete
-        assert.equal($("#design-properties button").length, 1);
-        assert.equal($("#design-properties button").text(), '');
+        assert.equal($("#design-properties button").length, 2, 'There should be two buttons');
+        assert.equal($("#design-properties button:contains('Delete')").length, 0, 'None should say Delete');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
