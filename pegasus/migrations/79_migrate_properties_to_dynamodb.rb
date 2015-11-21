@@ -3,7 +3,7 @@ require 'properties_api'
 
 Sequel.migration do
   up do
-    HipChat.log 'Copying <b>>key value pairs</b> to DynamoDB...'
+    HipChat.log 'Copying <b>key value pairs</b> to DynamoDB...'
 
     # There are currently < 1000 rows in production. Don't bother batching.
     rows = from(:app_properties)
