@@ -1,5 +1,3 @@
-- page_mode = PageMode.get(request)
-
 - categories = [{tag:"Beginner", name: I18n.t(:carousel_heading_beginners)}, {tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}, {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}, {tag:"Apps", name: I18n.t(:carousel_heading_devices)}, {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}, {tag:"MakeApps", name: I18n.t(:carousel_heading_apps_games)}, {tag: "Univ", name: I18n.t(:carousel_heading_university)}, {tag: "Web", name: I18n.t(:carousel_heading_webpages)}, {tag: "Robot", name: I18n.t(:carousel_heading_robots)}, {tag: "IDE", name: I18n.t(:carousel_heading_ide)}]
 
 %div{style: "clear:both"}
@@ -7,13 +5,6 @@
 -tutorials = Tutorials.new(variation=='learn' ? :tutorials : :beyond_tutorials)
 
 - @variation = variation
-- if page_mode == 'feature-minecraft'
-  #carousel-mc{:style=>''}
-    = view :learn_carousel_special, :tag=>'minecraft', :tutorials=>tutorials, :id=>'collection-mc', :second_panel_image=>'/images/mc/fit-520/MC_Panorama_Stack_V2_background.jpg'
-
-- if page_mode == 'feature-starwars'
-  #carousel-starwars{:style=>'display:none'}
-    = view :learn_carousel_special, :tag=>'starwars', :tutorials=>tutorials, :id=>'collection-starwars', :second_panel_image=>'/images/fit-520/starwars_carousel_background.jpg'
 
 #carousel-frozen{:style=>'display:none'}
   = view :learn_carousel_special, :tag=>'frozen', :tutorials=>tutorials, :id=>'collection-frozen', :second_panel_image=>'/images/fit-520/frozen_carousel_background.jpg'
