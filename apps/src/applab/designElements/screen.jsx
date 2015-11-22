@@ -2,6 +2,7 @@
 var PropertyRow = require('./PropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
+var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
 
@@ -31,6 +32,10 @@ var ScreenProperties = React.createClass({
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'screen-image')} />
+        <BooleanPropertyRow
+            desc={'default'}
+            initialValue={element.getAttribute('is-default') === 'true'}
+            handleChange={this.props.handleChange.bind(this, 'is-default')} />
       </div>);
   }
 });
@@ -132,5 +137,8 @@ module.exports = {
     element.style.zIndex = 0;
 
     element.setAttribute('tabIndex', '1');
+
+    var isDefault = element.getAttribute('is-default');
+    updateProperty(element, 'is-default', isDefault ? isDefault === 'true' : false);
   }
 };
