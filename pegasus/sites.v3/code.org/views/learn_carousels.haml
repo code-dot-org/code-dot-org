@@ -6,9 +6,6 @@
 
 - @variation = variation
 
-#carousel-frozen{:style=>'display:none'}
-  = view :learn_carousel_special, :tag=>'frozen', :tutorials=>tutorials, :id=>'collection-frozen', :second_panel_image=>'/images/fit-520/frozen_carousel_background.jpg'
-
 #carousel-ie8{:style=>'display:none'}
   = view :learn_carousel, :heading=>I18n.t(:older_systems), :subheading=>I18n.t(:older_systems_subheading), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8', :check_language=>true
 
@@ -75,20 +72,6 @@
 
   // International
   var pegasusLocale = "#{request.locale}";
-
-  /* Disable Frozen carousel
-  // Special Frozen entry, not shown for mobile or IE8
-  if (!window.mobilecheck() && !is_ie8)
-  {
-    $('#carousel-frozen').show();
-  }
-  */
-
-  // Special Star Wars entry, not shown for IE8
-  if (!is_ie8)
-  {
-    $('#carousel-starwars').show();
-  }
 
   if (pegasusLocale.substring(0,2) == "en")
   {
