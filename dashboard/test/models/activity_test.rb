@@ -1,6 +1,8 @@
 require 'test_helper'
+
 require 'securerandom'
 require 'sqs/synchronous_queue'
+require 'timecop'
 
 class ActivityTest < ActiveSupport::TestCase
 
@@ -27,18 +29,24 @@ class ActivityTest < ActiveSupport::TestCase
     handler = DeferredActivityHandler.new
     queue = SQS::SynchronousQueue.new(handler)
 
-    student = create :student
-    level = create :applab
-    level_source = LevelSource.find_identical_or_create(level, SecureRandom.uuid)
-    activity = Activity.create_async!(queue,
-                                      {level: level,
-                                       user: student,
-                                       level_source: level_source})
+    time = Time.local(2015, 1, 1, 0, 0, 0)
+
+    activity = student = level = level_source = nil
+    Timecop.freeze(time) do
+      student = create :student
+      level = create :applab
+      level_source = LevelSource.find_identical_or_create(level, SecureRandom.uuid)
+      activity = Activity.create_async!(queue,
+                                        {level: level,
+                                         user: student,
+                                         level_source: level_source})
+    end
+
     # The new activity returned by create_async doesn't have an id or timestamps yet, but it does
     # have other attributes.
     assert_nil activity.id
-    assert_nil activity.created_at
-    assert_nil activity.updated_at
+    assert_equal time, activity.created_at
+    assert_equal time, activity.updated_at
     assert_equal student.id, activity.user_id
     assert_equal level.id, activity.level_id
     assert_equal level_source.id, activity.level_source_id
@@ -52,12 +60,17 @@ class ActivityTest < ActiveSupport::TestCase
 
     assert_nil activity_finder.first
 
-    # Now let the database write proceed and make sure the correct data was written.
-    handler.execute_async_writes
+    new_time = time + 1
+    Timecop.freeze(new_time) do
+      # Now let the database write proceed and make sure the correct data was written.
+      handler.execute_async_writes
+    end
+
     saved_activity = activity_finder.first
     assert_not_nil saved_activity.id
-    assert_not_nil saved_activity.created_at
-    assert_not_nil saved_activity.updated_at
+    assert_equal time, saved_activity.created_at
+
+    assert_equal new_time, saved_activity.updated_at
     assert_equal student.id, saved_activity.user_id
     assert_equal level.id, saved_activity.level_id
     assert_equal level_source.id, saved_activity.level_source_id
