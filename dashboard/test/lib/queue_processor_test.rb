@@ -3,8 +3,7 @@
 # USE_REAL_SQS to 'true'.  If LOG_TO_STDOUT is true, logs to stdout, otherwise uses the
 # Rails logger.
 
-require_relative '../../config/environment'
-require 'minitest/autorun'
+require 'test_helper'
 require 'aws-sdk'
 require 'securerandom'
 
