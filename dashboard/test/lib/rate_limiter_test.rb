@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'aws-sdk'
 require 'fake_sqs/test_integration'
 require 'sqs/rate_limiter'
 require 'sqs/queue_processor_config'
@@ -68,13 +69,14 @@ class RateLimiterTest < ActiveSupport::TestCase
   private
 
   def create_config(max_rate:, num_workers_per_processor: 1, num_processors: 1)
-    SQS::QueueProcessorConfig.new(queue_uri: 'http://example.com',
-      handler: NoOpHandler.new,
-      initial_max_rate: max_rate,
-      dcdo_max_rate_key: DCDO_MAX_RATE_KEY,
-      num_processors: num_processors,
-      num_workers_per_processor: num_workers_per_processor,
-      logger: @logger)
+    SQS::QueueProcessorConfig.new(
+        queue_url: 'http://example.com',
+        handler: NoOpHandler.new,
+        initial_max_rate: max_rate,
+        dcdo_max_rate_key: DCDO_MAX_RATE_KEY,
+        num_processors: num_processors,
+        num_workers_per_processor: num_workers_per_processor,
+        logger: @logger)
   end
 
   # A fake handler that does nothing.
