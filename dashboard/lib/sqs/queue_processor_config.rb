@@ -5,7 +5,7 @@ module SQS
   # Immutable configuration for a queue processor.
   class QueueProcessorConfig
     attr_reader :queue_url, :handler, :num_workers_per_processor, :num_processors, :logger
-    attr_reader :initial_max_rate, :dcdo_max_rate_key
+    attr_reader :initial_max_rate, :dcdo_max_rate_key, :name
 
     # @param [String] queue_url URI to the SQS queue.
     # @param [Integer] initial_max_rate Initial max rate (in messages per second) or 0 for no limit.
@@ -19,6 +19,7 @@ module SQS
                    dcdo_max_rate_key:,
                    num_processors:,
                    num_workers_per_processor:,
+                   name: nil,
                    logger: Rails.logger)
 
       raise ArgumentError, 'num_workers_per_processor must be positive' unless num_workers_per_processor > 0
@@ -30,6 +31,7 @@ module SQS
       @dcdo_max_rate_key = dcdo_max_rate_key
       @num_processors = check_not_nil(num_processors)
       @num_workers_per_processor = check_not_nil(num_workers_per_processor)
+      @name = name
       @logger = check_not_nil(logger)
     end
 
@@ -41,7 +43,8 @@ module SQS
         num_processors: options['num_processors'] || 1,
         num_workers_per_processor: options['num_workers_per_processor'] || 10,
         initial_max_rate: options['initial_max_rate'] || 5000,
-        dcdo_max_rate_key: options['dcdo_max_rate_key'])
+        dcdo_max_rate_key: options['dcdo_max_rate_key'],
+        name: options['name'])
     end
 
     def self.create_configs_from_json(json)

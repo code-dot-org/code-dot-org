@@ -1,0 +1,89 @@
+#!/usr/bin/env ruby
+require_relative '../config/environment'
+
+require 'json'
+require 'optparse'
+require 'ostruct'
+require 'pp'
+
+require 'sqs/queue_processor_config'
+require 'sqs/queue_processor'
+
+# A helper class for starting a set of queue processors based on a config file.
+class QueueProcessorManager
+  def initialize
+    @processors = []
+  end
+
+  # Start queue processors based on a config hash.
+  # Returns a map for queue name to SQS::Metric objects for each queue.
+  def start_queue_processors(json)
+    metrics_map = {}
+    configs = SQS::QueueProcessorConfig::create_configs_from_json(json)
+    for config in configs
+      sqs_metrics = SQS::Metrics.new
+      metrics_map[config.name] = sqs_metrics
+      processor = SQS::QueueProcessor.new(config, sqs_metrics)
+      processor.start
+      @processors << processor
+    end
+    metrics_map
+  end
+
+  # Stop all of the queue processors in parallel.
+  # Blocks until they all have stopped.
+  def stop_queue_processors
+    threads = []
+    @processors.each do |processor|
+      threads << Thread.new {
+        processor.stop
+      }
+    end
+    threads.each do |thread|
+      thread.join
+    end
+  end
+end
+
+# Sleep but allow ^C to interrupt the sleep
+def interruptible_sleep(seconds)
+  @_sleep_check, @_sleep_interrupt = IO.pipe
+  IO.select([@_sleep_check], nil, nil, seconds)
+end
+
+def main
+  if ARGV.size != 1
+    puts "Usage: #{$0} CONFIG_FILE.json"
+    exit 0
+  end
+
+
+  manager = QueueProcessorManager.new
+  json = File.open(ARGV[0]).read
+  metrics_map = manager.start_queue_processors(json)
+
+  # Run until SIGINT is received.
+  running = true
+
+  exit_proc = Proc.new {
+    manager.stop_queue_processors
+    exit
+  }
+  Signal.trap('SIGINT')  {
+    exit_proc.call
+  }
+  Signal.trap('SIGTERM')  {
+    exit_proc.call
+  }
+
+  puts "Press ^C to stop"
+  while true
+    for k, v in metrics_map
+      puts "#{k}: #{v}"
+    end
+    interruptible_sleep 10
+  end
+
+end
+
+main
