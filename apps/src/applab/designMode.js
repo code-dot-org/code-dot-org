@@ -308,6 +308,7 @@ designMode.updateProperty = function(element, name, value) {
       break;
     case 'readonly':
       element.setAttribute('contenteditable', !value);
+      break;
     case 'data-is-default':
       if (value === true) {
         //Make this one default
