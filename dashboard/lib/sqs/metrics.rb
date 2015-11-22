@@ -16,8 +16,12 @@ module SQS
       }
     end
 
+    def as_json
+      {'successes' => @successes.value, 'failures' => @failures.value}
+    end
+
     def to_s
-      {'sucesses' => @successes, 'failures' => @failures}.to_json
+      as_json.to_json
     end
   end
 
@@ -49,6 +53,10 @@ module SQS
       @lock.synchronize {
         @value = 0
       }
+    end
+
+    def to_s
+      value
     end
   end
 
