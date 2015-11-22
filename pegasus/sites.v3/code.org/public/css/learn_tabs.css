@@ -44,12 +44,6 @@
 #learn-tabs .nav-tabs>li.active>a:active {
   color: #ff8b02;
 }
-.learn-hoc-banner {
-  position: relative;
-  border: 1px solid #e7e8ea;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
 #hoc-sign-up {
   margin-top: 0px;
   font-size: 18px;
@@ -72,4 +66,16 @@
   background-size: 100px 100px;
   background-image: url('/images/bee_avatar.png');
   background-repeat: no-repeat;
+}
+
+.learn-hoc-banner {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 971px) {
+  .learn-hoc-banner {
+    display: none;
+  }
 }

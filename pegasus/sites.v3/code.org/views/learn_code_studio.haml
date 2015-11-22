@@ -1,0 +1,73 @@
+:ruby
+  page_mode = PageMode.get(request)
+  if page_mode == "feature-starwars"
+    first_tutorial = "starwars"
+    second_tutorial = "mc"
+    banner_image = "starwars_wide"
+  elsif page_mode == "feature-mc"
+    first_tutorial = "mc"
+    second_tutorial = "starwars"
+    banner_image = "MC_Wide_Learn_V4"
+  end
+
+%h1.main-header= I18n.t(:carousel_heading_codeorg)
+%img.banner{src: "/images/#{first_tutorial}/#{banner_image}.jpg"}
+
+.container.col-md-12
+  #codeStudioCarousel.carousel.slide.multi-item-carousel
+    .carousel-inner
+      .item.active
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: first_tutorial
+      .item
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: second_tutorial
+      .item
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: "frozen"
+      .item
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: "hourofcode"
+      .item
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: "flappy"
+      .item
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: "infinity"
+      .item
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: "playlab"
+      .item
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: "artist"
+    %a.left.carousel-control{href: "#codeStudioCarousel", "data-slide" => "prev"}
+      %i.fa.fa-2x.fa-chevron-left
+    %a.right.carousel-control{href: "#codeStudioCarousel", "data-slide" => "next"}
+      %i.fa.fa-2x.fa-chevron-right
+
+.clear
+%br
+
+:javascript
+  $('#codeStudioCarousel').carousel({
+    interval: false
+  })
+
+  $('.multi-item-carousel .item').each(function() {
+    console.log("here")
+    var next = $(this).next();
+    if (!next.length) {
+      console.log("end of row")
+      next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+
+    if (next.next().length > 0) {
+      console.log("if")
+      next.next().children(':first-child').clone().appendTo($(this));
+    } else {
+      console.log("else")
+      $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+    }
+  });
+  

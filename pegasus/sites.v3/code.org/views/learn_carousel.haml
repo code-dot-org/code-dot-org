@@ -8,7 +8,7 @@
 -else
   -items = tutorials.find_with_tag(tag)
 -if items.count > 0
-  %h1{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
+  %h2{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
 
   -# If minecraft mode, show starwars at the beginning of the beginner carousel
   - if page_mode == 'minecraft' and tag == 'Beginner' and @variation == 'learn'
