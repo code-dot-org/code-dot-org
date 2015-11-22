@@ -20,4 +20,16 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     assert_equal nil, cookies['_learn_session_test']
   end
 
+  test 'session cookie not set in publicly cached level page' do
+    Gatekeeper.set('public_caching_for_script', value: true)
+    get '/hoc/1'
+    assert_nil cookies['_learn_session_test']
+  end
+
+  test 'session cookie is set in on non-cached level page' do
+    Gatekeeper.set('public_caching_for_script', value: false)
+    get '/hoc/1'
+    assert_not_nil cookies['_learn_session_test']
+  end
+
 end
