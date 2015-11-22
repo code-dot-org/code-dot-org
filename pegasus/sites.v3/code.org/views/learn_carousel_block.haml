@@ -1,0 +1,21 @@
+.container-fluid
+  .row-fluid
+    .courseblock-tall
+      %a{href: "http://studio.code.org/s/#{id}/reset"}
+        .imgspan
+          %img{src: "/shared/images/courses/logo_tall_#{id}.jpg", style: "width: 100%;"}
+        .clear
+        .heading
+          %h4{style: "font-size: 18px;"}= I18n.t(:"#{id}_name")
+        .clear
+        .smalltext= I18n.t(:"#{id}_shortdescription")
+      #bottomalign{style: "bottom: 0; width: 100%; position: absolute; margin-bottom: 10px;"}
+        #quicklinks.smalltext{style: "float: left; display: inline-block; width: 200px;"}
+          %br
+          %a{href: "/starwars"}
+            Teacher's Notes
+          %a{href: "/starwars"}
+            https://hourofcodecom/xyz
+        #gobutton{style: "position: relative;"}
+          %a{href: "http://studio.code.org/s/#{id}/reset"}
+            %button{style: "float: right; margin: 15px 10px 0 0;"} Go

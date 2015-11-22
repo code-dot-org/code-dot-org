@@ -7,11 +7,11 @@
 -tutorials = Tutorials.new(variation=='learn' ? :tutorials : :beyond_tutorials)
 
 - @variation = variation
-- if page_mode == 'minecraft'
+- if page_mode == 'feature-minecraft'
   #carousel-mc{:style=>''}
     = view :learn_carousel_special, :tag=>'minecraft', :tutorials=>tutorials, :id=>'collection-mc', :second_panel_image=>'/images/mc/fit-520/MC_Panorama_Stack_V2_background.jpg'
 
-- if page_mode == 'starwars'
+- if page_mode == 'feature-starwars'
   #carousel-starwars{:style=>'display:none'}
     = view :learn_carousel_special, :tag=>'starwars', :tutorials=>tutorials, :id=>'collection-starwars', :second_panel_image=>'/images/fit-520/starwars_carousel_background.jpg'
 
@@ -32,7 +32,7 @@
     %button{:style=>"font-size:20px;"}
       = I18n.t(:carousel_heading_domestic)
 
-#all-tutorials{:style=>'visibility:hidden; overflow:hidden'}
+#all-tutorials{:style=>'visibility:hidden; overflow:hidden; margin-top: -30px;'}
   - categories.each do |category|
     - id = "collection-" + category[:tag]
     = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
