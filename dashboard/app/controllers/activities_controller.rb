@@ -128,14 +128,25 @@ class ActivitiesController < ApplicationController
 
     current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
 
-    @activity = Activity.create!(user: current_user,
-                                 level: @level,
-                                 action: solved, # TODO I think we don't actually use this. (maybe in a report?)
-                                 test_result: test_result,
-                                 attempt: params[:attempt].to_i,
-                                 lines: lines,
-                                 time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
-                                 level_source_id: @level_source.try(:id))
+    should_create_gallery_activity =
+        params[:save_to_gallery] == 'true' && @level_source_image && solved
+
+    options = {user: current_user,
+      level: @level,
+      action: solved, # TODO I think we don't actually use this. (maybe in a report?)
+      test_result: test_result,
+      attempt: params[:attempt].to_i,
+      lines: lines,
+      time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
+      level_source_id: @level_source.try(:id)}
+
+    if should_create_gallery_activity
+      logger.info "Saving synchronously"
+      @activity = Activity.create!(options)
+    else
+      logger.info "Saving async"
+      @activity = Activity.create_async!(activity_queue, options)
+    end
 
     if @script_level
       @new_level_completed = current_user.track_level_progress(@script_level, test_result)
@@ -158,6 +169,18 @@ class ActivitiesController < ApplicationController
     rescue StandardError => e
       Rails.logger.error "Error updating trophy exception: #{e.inspect}"
     end
+  end
+
+  def activity_queue
+    # We use a thread local variable because it is not safe to share
+    # an SQS client across threads.
+    Thread.current['activity_queue'] ||=
+      queue = SQS::SQSQueue.new(Aws::SQS::Client.new, queue_url)
+  end
+
+  def queue_url
+    # XXX TODO Replace this with config
+    "https://sqs.us-east-1.amazonaws.com/475661607190/activities-phil_dev"
   end
 
   def track_progress_in_session
