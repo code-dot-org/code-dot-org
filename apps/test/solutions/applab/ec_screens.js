@@ -161,7 +161,7 @@ module.exports = {
         ReactTestUtils.Simulate.change(screenSelector);
         validatePropertyRow(0, 'id', 'screen2', assert);
         deleteButton = $("#design-properties button").eq(-1);
-        assert.equal(deleteButton.text(), 'Delete', 'last button is delete button')
+        assert.equal(deleteButton.text(), 'Delete', 'last button is delete button');
 
         ReactTestUtils.Simulate.click(deleteButton[0]);
 
