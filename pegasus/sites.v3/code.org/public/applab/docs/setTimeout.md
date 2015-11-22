@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## setTimeout(callback, milliseconds)
+## setTimeout(callback, ms)
 
 [/name]
 
@@ -112,7 +112,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-setTimeout(callback, milliseconds);
+setTimeout(callback, ms);
 ```
 
 [/syntax]
@@ -124,7 +124,7 @@ setTimeout(callback, milliseconds);
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
 | callback | function | Yes | A function to execute.  |
-| milliseconds | number | Yes | The number of milliseconds to wait before executing the function.  |
+| ms | number | Yes | The number of milliseconds to wait before executing the function.  |
 
 [/parameters]
 
