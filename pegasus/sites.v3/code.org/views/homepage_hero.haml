@@ -1,12 +1,12 @@
 #hero
-  - page_mode = PageMode.get(request)
-
   -# temporary for hoc2015: using id_s is a quick hack to only pull the hero desired.
   -# Generate a random set of hero images alternating between non-celeb and celeb.
   - heroes = DB[:cdo_homepage].where(id_s: "hero_#{page_mode}", type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
 
-  - if page_mode == "minecraft"
+  - if page_mode == "feature-mc"
     - heroes = [{:id=>2, :id_s=>"hero_minecraft", :type_s=>"widehero", :param1_s=>"15% 50%", :param2_s=>"celeba", :param3_s=>"bottom", :image_t=>"/images/homepage/minecraft.jpg", :site_s=>"both", :active_s=>"show", :language_supported_s=>"all"}]
+  - elsif page_mode == "feature-starwars"
+    - heroes = [{:id=>2, :id_s=>"hero_starwars", :type_s=>"widehero", :param1_s=>"15% 50%", :param2_s=>"celeba", :param3_s=>"bottom", :image_t=>"/images/homepage/starwars.jpg", :site_s=>"both", :active_s=>"show", :language_supported_s=>"all"}]
 
 
   - if rack_env != :production && request.params["preview"]
@@ -61,7 +61,7 @@
     .col-66.desktop-feature{style: "position:relative;"}
 
       -# begin temporary for hoc2015:
-      - if page_mode == "minecraft"
+      - if page_mode == "feature-mc"
         -# minecraft
         .captionarea{id: "captionarea_special;", style: "cursor: pointer",  onclick:"location.href='/mc'", class: "homepage-caption-bottom"}
           %div{style: "left: 50px; top: 50px; text-align:left; padding-left:100px;"}
@@ -72,7 +72,7 @@
               %br/
               %br/
         -# end minecraft
-      - elsif page_mode == "starwars"
+      - elsif page_mode == "feature-starwars"
 
         .captionarea{id: "captionarea_special;", style: "cursor: pointer",  onclick:"location.href='/starwars'", class: "homepage-caption-bottom"}
           %div{style: "left: 50px; top: 50px; text-align:left; padding-left:100px;"}
@@ -111,13 +111,13 @@
 
       &nbsp;
 
-      - if page_mode == "minecraft"
+      - if page_mode == "feature-mc"
 
         -# Temporary for hoc2015:
         -# Maintains a large empty chunk so that the hero image remains large and visible at all browser sizes.
         #blankspaceleftdesktop.desktop-feature{style: "cursor: pointer", onclick:"location.href='/mc'"}
 
-      - elsif page_mode == "starwars"
+      - elsif page_mode == "feature-starwars"
         -# Temporary for hoc2015:
         -# Maintains a large empty chunk so that the hero image remains large and visible at all browser sizes.
         #blankspaceleftdesktop.desktop-feature{style: "cursor: pointer", onclick:"location.href='/starwars'"}
