@@ -270,7 +270,7 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
       var prefix = funcInfo.blockPrefix || funcInfo.func;
       var paletteParams = funcInfo.paletteParams || funcInfo.params;
       block = buildFunctionPrototype(prefix, paletteParams);
-      if (paletteParams) {
+      if (funcInfo.paletteParams) {
         // If paletteParams were specified and used for the 'block', then use
         // the regular params for the 'expansion' which appears when the block
         // is dragged out of the palette:

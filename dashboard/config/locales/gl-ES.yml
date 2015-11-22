@@ -293,6 +293,8 @@
       prize_us_only: (Sólo estudiantes de Estados Unidos)
       prizes_link: 'Más información '
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Tu profesor:'
       other: 'Tus maestros:'
@@ -523,6 +525,7 @@
   pdf_download: Descargar PDF
   download_coming_soon: Actividad descargable próximamente.
   video_coming_soon: Video próximamente!
+  not_started: The student has not attempted this level.
   share_code:
     title: Haz clic en "Ejecutar" para ver el programa en acción
     bounce_og_title: Revisa mi juego Bounce
@@ -572,9 +575,14 @@
         nuestros usuarios
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: ¡Los estudiantes dibujaron esto con código!
     students_made_these_with_code: ¡Los estudiantes hicieron éstos con código!

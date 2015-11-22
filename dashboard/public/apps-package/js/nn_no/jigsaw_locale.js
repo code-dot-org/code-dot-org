@@ -159,6 +159,6 @@ s:function(d,k,p){jigsaw_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "no":function(d){return "Nei"},
 "numBlocksNeeded":function(d){return "Denne oppgåva kan løysast med %1 blokker."},
 "reinfFeedbackMsg":function(d){return "Du kan trykke på \"Prøv igjen\" for å gå tilbake til spelet ditt."},
-"share":function(d){return "Andel"},
+"share":function(d){return "Del"},
 "shareGame":function(d){return "Del spelet ditt:"},
 "yes":function(d){return "Ja"}};

@@ -184,6 +184,16 @@ var StudioApp = function () {
    */
   this.share = false;
 
+  /**
+   * By default, we center our embedded levels. Can be overriden by apps.
+   */
+  this.centerEmbedded = true;
+
+  /**
+   * If set to true, we use our wireframe share (or chromeless share on mobile)
+   */
+  this.wireframeShare = false;
+
   this.onAttempt = undefined;
   this.onContinue = undefined;
   this.onResetPressed = undefined;
@@ -335,8 +345,9 @@ StudioApp.prototype.init = function(config) {
     }
   }
 
-  // In embed mode, the display scales down when the width of the visualizationColumn goes below the min width
-  if(config.embed) {
+  // In embed mode, the display scales down when the width of the
+  // visualizationColumn goes below the min width
+  if(config.embed && config.centerEmbedded) {
     var resized = false;
     var resize = function() {
       var vizCol = document.getElementById('visualizationColumn');
@@ -1392,6 +1403,8 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
  */
 StudioApp.prototype.setConfigValues_ = function (config) {
   this.share = config.share;
+  this.centerEmbedded = utils.valueOr(config.centerEmbedded, this.centerEmbedded);
+  this.wireframeShare = utils.valueOr(config.wireframeShare, this.wireframeShare);
 
   // if true, dont provide links to share on fb/twitter
   this.disableSocialShare = config.disableSocialShare;
@@ -1512,9 +1525,11 @@ StudioApp.prototype.configureDom = function (config) {
     $(codeWorkspace).addClass('readonly');
   }
 
-  if (config.embed && config.hideSource) {
-    container.className = container.className + " embed_hidesource";
-    visualizationColumn.className = visualizationColumn.className + " embed_hidesource";
+  // NOTE: Can end up with embed true and hideSource false in level builder
+  // scenarios. See https://github.com/code-dot-org/code-dot-org/pull/1744
+  if (config.embed && config.hideSource && this.centerEmbedded) {
+    container.className = container.className + " centered_embed";
+    visualizationColumn.className = visualizationColumn.className + " centered_embed";
   }
 
   if (!config.embed && !config.hideSource) {
@@ -1542,7 +1557,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   document.getElementById('visualizationResizeBar').style.display = 'none';
 
   // Chrome-less share page.
-  if (this.share && options.app === 'applab') {
+  if (this.share && this.wireframeShare) {
     if (dom.isMobile()) {
       document.getElementById('visualizationColumn').className = 'chromelessShare';
     } else {
@@ -1626,6 +1641,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     modeOptions: dropletUtils.generateDropletModeOptions(config),
     palette: fullDropletPalette,
     showPaletteInTextMode: true,
+    showDropdownInPalette: config.showDropdownInPalette,
+    allowFloatingBlocks: false,
     dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
     enablePaletteAtStart: !config.readonlyWorkspace,
     textModeAtStart: config.level.textModeAtStart

@@ -7,13 +7,18 @@ markdown <<MARKDOWN
 
 # Background
 
-Functions can accept input in the form of parameters, but we'll often want our functions to generate output as well. We have already seen several functions that generate output already, for example `randomNumber` and `getText` . The ability to write your own functions that return values allows you to reuse useful calculations at many places in your program, and is a further step in creating generally useful programs.
+Functions can accept input in the form of parameters, but we'll often want our functions to generate output which can be used in the logic of a program as well. We have already seen several functions that return values, for example `randomNumber` and `getText` . The ability to write your own functions that return values allows you to reuse useful calculations at many places in your program, and is a further step in creating generally useful programs.
 
 # Lesson
 
 * Introduction to the use of the return command
 * Write functions that return values
 * Use functions that return values to analyze information stored in an array
+
+# Resources
+* Activity: <a href="https://docs.google.com/document/d/1rGKhRhH5pzJJfYBa_tZy96-bg-SWgSbf_nomluTl18U/edit?usp=sharing" target="_blank">
+Go Fish
+</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

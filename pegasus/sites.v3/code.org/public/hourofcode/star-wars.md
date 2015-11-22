@@ -13,7 +13,8 @@ nav: hoc_teacher_resources_nav
 
 ### Lesson Plans:
 
-- Coming soon!
+- [Star Wars: Building a Galaxy with Code](/files/star-wars-lp.pdf)
+- [Answer Sheet and Teacher Tips](https://docs.google.com/document/d/1BzdwxHsmFMt7ib1HLW7dL24W3sSCLhTklkj4wZ9I26c/edit?usp=sharing)
 
 ### Extension Activities:
 

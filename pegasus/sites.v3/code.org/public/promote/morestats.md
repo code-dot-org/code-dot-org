@@ -37,6 +37,7 @@ We are interested in seeing what's happening in computer science education inter
 
 - Landscape of K-12 Computer Science Education in the U.S., a Gallup [report](http://csedu.gallup.com/home.aspx) commissioned by Google
 - On average, a computer science degree from ANY university earns a [significantly higher](http://www.economist.com/news/united-states/21646220-it-depends-what-you-study-not-where) financial return on investment than an arts & humanities degree from even the best schools
+- [Arkansas has seen a major boost in CS enrollment and diversity](http://amppob.com/nearly-4000-arkansas-students-enrolled-in-computer-science-in-fall-15/). This spring, Arkansas passed a law requiring (and funding) every high school to teach CS. Months later, Arkansas has seen a 260% increase in total CS enrollment, a 300% increase among females, and a 600% increase among African American females. This shows the massive impact of state policy on CS, and helps our advocacy efforts in other states.
 
 
 ## Master slide deck 
