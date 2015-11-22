@@ -29,3 +29,7 @@ def partner_site?()
   partner_sites = CDO.partners.map{|x|x + '.code.org'}
   return partner_sites.include?(request.site)
 end
+
+def mobile?
+  return !(request.user_agent =~ /Mobile/).nil?
+end
