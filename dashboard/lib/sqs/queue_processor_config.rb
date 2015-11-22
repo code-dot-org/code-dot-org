@@ -19,7 +19,7 @@ module SQS
                    dcdo_max_rate_key:,
                    num_processors:,
                    num_workers_per_processor:,
-                   logger: Logger.new(STDOUT))
+                   logger: Rails.logger)
 
       raise ArgumentError, 'num_workers_per_processor must be positive' unless num_workers_per_processor > 0
       raise ArgumentError, 'initial_max_rate must be non-negative' unless initial_max_rate >= 0
@@ -27,10 +27,28 @@ module SQS
       @queue_url = check_not_nil(queue_url)
       @handler = check_not_nil(handler)
       @initial_max_rate = [0, initial_max_rate].max
-      @dcdo_max_rate_key = check_not_nil(dcdo_max_rate_key)
+      @dcdo_max_rate_key = dcdo_max_rate_key
       @num_processors = check_not_nil(num_processors)
       @num_workers_per_processor = check_not_nil(num_workers_per_processor)
       @logger = check_not_nil(logger)
+    end
+
+    # Creates a config from an options hash.
+    def self.create(options)
+      SQS::QueueProcessorConfig.new(
+        queue_url: options['queue_url'],
+        handler: options['handler_class'].constantize.new,
+        num_processors: options['num_processors'] || 1,
+        num_workers_per_processor: options['num_workers_per_processor'] || 10,
+        initial_max_rate: options['initial_max_rate'] || 5000,
+        dcdo_max_rate_key: options['dcdo_max_rate_key'])
+    end
+
+    def self.create_configs_from_json(json)
+      queues_hash = JSON::parse(json)['queues']
+      queues_hash.map do |queue_hash|
+        SQS::QueueProcessorConfig.create(queue_hash)
+      end
     end
 
     # The current maximum messages per second across all processor workers, or
