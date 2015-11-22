@@ -1,5 +1,10 @@
--short_code = I18n.t(:"#{id}_shortcode")
--short_url = "https://hourofcode.com/#{short_code}"
+- short_code = I18n.t(:"#{id}_shortcode")
+- short_url = "https://hourofcode.com/#{short_code}"
+- show_sw_blocks = id == "starwars" && (request.locale != "en-US" || mobile?)
+- if show_sw_blocks
+  - launch_code = "starwarsblocks"
+- else
+  - launch_code = id
 
 .container-fluid
   .row-fluid
@@ -22,5 +27,5 @@
           %a{href: short_url}
             = short_url
         #gobutton{style: "position: relative;"}
-          %a{href:  "/api/hour/begin/#{id}", target: "_blank"}
+          %a{href:  "/api/hour/begin/#{launch_code}", target: "_blank"}
             %button{style: "float: right; margin: 15px 10px 0 0;"}= I18n.t(:go)
