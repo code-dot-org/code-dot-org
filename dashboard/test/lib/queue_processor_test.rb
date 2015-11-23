@@ -3,11 +3,11 @@
 # USE_REAL_SQS to 'true'.  If LOG_TO_STDOUT is true, logs to stdout, otherwise uses the
 # Rails logger.
 
-require_relative '../../config/environment'
-require 'minitest/autorun'
+require 'test_helper'
 require 'aws-sdk'
 require 'securerandom'
 
+require 'sqs/messages_handler'
 require 'sqs/queue_processor'
 require 'sqs/queue_processor_config'
 
@@ -31,7 +31,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
   attr_accessor :logger
 
   # A test handler that allows simulated failure and records received messages.
-  class TestHandler
+  class TestHandler < SQS::MessagesHandler
     # @return {Array<String>}
     attr_reader :messages
 
@@ -121,11 +121,17 @@ class QueueProcessorTest < ActiveSupport::TestCase
     sqs_metrics = SQS::Metrics.new
     num_workers = 5
     global_max_messages_per_sec = 25
+
+    # Proc for determining the max rate based on DCDO.
+    max_rate_proc = Proc.new {
+      DCDO.get('test-max-rate', global_max_messages_per_sec)
+    }
+
     config = SQS::QueueProcessorConfig.new(
         queue_url: queue_url,
         handler: handler,
         initial_max_rate: global_max_messages_per_sec,
-        dcdo_max_rate_key: 'test-max-rate',
+        max_rate_proc: max_rate_proc,
         num_processors: 1,
         num_workers_per_processor: num_workers,
         logger: logger)
@@ -213,7 +219,14 @@ class QueueProcessorTest < ActiveSupport::TestCase
     assert_equal 5, config.num_processors
     assert_equal 32, config.num_workers_per_processor
     assert_equal 2000, config.initial_max_rate
-    assert_equal 'test_rate', config.dcdo_max_rate_key
+
+    DCDO.set('test_rate', nil)
+    assert_equal config.initial_max_rate, config.max_rate_proc.call,
+                 'Max rate proc should return initial_max_rate if DCDO value is not set'
+
+    DCDO.set('test_rate', 234)
+    assert_equal 234, config.max_rate_proc.call,
+                 'Max rate proc should return DCDO value if set'
 
     config2 = configs[1]
     assert_equal 'https://sqs.us-east-1.amazonaws.com/1234/example2', config2.queue_url
