@@ -9,16 +9,17 @@ module SQS
 
     # @param [String] queue_url URI to the SQS queue.
     # @param [Integer] initial_max_rate Initial max rate (in messages per second) or 0 for no limit.
-    # @param [String] max_rate_proc A proc for  returning the current max rate.
+    # @param [String] max_rate_proc A proc for returning the current max rate, or nil to always use
+    #     the initial rate.
     # @param [Logger] logger
     # @param [Integer] num_processors The number of processor instances.
     # @param [Integer] num_workers_per_processor How many worker threads for each processor.
     def initialize(queue_url:,
                    handler:,
                    initial_max_rate:,
-                   max_rate_proc:,
                    num_processors:,
                    num_workers_per_processor:,
+                   max_rate_proc: nil,
                    logger: Logger.new(STDOUT))
 
       raise ArgumentError, 'num_workers_per_processor must be positive' unless num_workers_per_processor > 0
@@ -27,7 +28,7 @@ module SQS
       @queue_url = check_not_nil(queue_url)
       @handler = check_not_nil(handler)
       @initial_max_rate = [0, initial_max_rate].max
-      @max_rate_proc = check_not_nil(max_rate_proc)
+      @max_rate_proc = max_rate_proc
       @num_processors = check_not_nil(num_processors)
       @num_workers_per_processor = check_not_nil(num_workers_per_processor)
       @logger = check_not_nil(logger)
