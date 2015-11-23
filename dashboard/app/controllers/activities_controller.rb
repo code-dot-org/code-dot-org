@@ -128,23 +128,26 @@ class ActivitiesController < ApplicationController
 
     current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
 
-    options = {user: current_user,
-      level: @level,
-      action: solved, # TODO I think we don't actually use this. (maybe in a report?)
-      test_result: test_result,
-      attempt: params[:attempt].to_i,
-      lines: lines,
-      time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
-      level_source_id: @level_source.try(:id)}
+    save_to_gallery =  params[:save_to_gallery] == 'true' && @level_source_image && solved
 
-    save_to_gallery = params[:save_to_gallery] == 'true' && @level_source_image && solved
+    # Create the activity. If saving the gallery, we create it synchronously so that
+    # the activity_id is known for the GalleryActivity, otherwise async creation is allowed.
+    attributes = {
+        user: current_user,
+        level: @level,
+        action: solved, # TODO I think we don't actually use this. (maybe in a report?)
+        test_result: test_result,
+        attempt: params[:attempt].to_i,
+        lines: lines,
+        time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
+        level_source_id: @level_source.try(:id)
+    }
+    if save_to_gallery
+      @activity = Activity.create!(attributes)
+    else
+      @activity = Activity.create_async!(attributes)
+    end
 
-    # Write the activity either synchronously or asynchronously. We always use synchronous writes
-    # when saving to the gallery because the GalleryActivity object needs the activity id, otherwise
-    # dynamic configuration decides how the activity should be written.
-    ActivitiesController.create_activity_maybe_async(queue: async_activity_queue,
-                                                     force_sync: save_to_gallery,
-                                                     options: options)
     if @script_level
       @new_level_completed = current_user.track_level_progress(@script_level, test_result)
     end
@@ -157,7 +160,7 @@ class ActivitiesController < ApplicationController
     end
 
     # blockly sends us 'undefined', 'false', or 'true' so we have to check as a string value
-    if params[:save_to_gallery] == 'true' && @level_source_image && solved
+    if save_to_gallery
       @gallery_activity = GalleryActivity.create!(user: current_user, activity: @activity, autosaved: true)
     end
 
@@ -166,34 +169,6 @@ class ActivitiesController < ApplicationController
     rescue StandardError => e
       Rails.logger.error "Error updating trophy exception: #{e.inspect}"
     end
-  end
-  
-  # Creates an activity with the provided options, possibly asynchronously. Async writes occur only
-  # when force_sync is false and the provided queue is not nil.
-  def ActivitiesController.create_activity_maybe_async(force_sync:, queue:, options:)
-    # Write the activity either synchronously or asynchronously.
-    if force_sync || queue.nil?
-      @activity = Activity.create!(options)
-    else
-      @activity = Activity.create_async!(queue, options)
-    end
-  end
-
-  # Returns the activity queue to use for the current thread, or nil if async
-  # activity writes are disabled.
-  def ActivitiesController.async_activity_queue
-    return nil unless Gatekeeper.allows('async_activity_writes',
-                                        where: {hostname: Socket.gethostname})
-
-    # We use a thread local variable because it is not safe to share
-    # an SQS client across threads.
-    if Thread.current['activity_queue'].nil?
-      url = CDO.get('activity_queue_url')
-      if url
-        Thread.current['activity_queue'] = SQS::SQSQueue.new(Aws::SQS::Client.new, url)
-      end
-    end
-    Thread.current['activity_queue']
   end
 
   def track_progress_in_session
@@ -258,5 +233,4 @@ class ActivitiesController < ApplicationController
 
     milestone_logger.info log_string
   end
-
 end
