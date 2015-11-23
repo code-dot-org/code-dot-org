@@ -8,7 +8,13 @@ Sequel.migration do
     # There are currently < 1000 rows in production. Don't bother batching.
     rows = from(:app_properties)
     rows.each do |row|
-      value = PropertyBag.parse_value(row[:value])
+      begin
+        value = PropertyBag.parse_value(row[:value])
+      rescue JSON::ParserError
+        HipChat.log "<b>Skipping bad key value pair with id #{row[:id]}</b>."
+        next
+      end
+
       property_bag = DynamoPropertyBag.new(row[:app_id], row[:storage_id])
       property_bag.set(row[:name], value, row[:updated_ip], row[:updated_at])
     end
