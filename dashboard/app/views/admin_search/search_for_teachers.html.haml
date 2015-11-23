@@ -16,12 +16,12 @@
       %td
         Email Domain (e.g., "cps.edu" or "lausd.net" [no at symbol])
       %td
-        %input{name: "emailFilter", id: "emailFilter"}
+        %input{name: "emailFilter", id: "emailFilter", value: params[:emailFilter]}
     %tr
       %td
         Address Filter (e.g., "Seattle" or "20500")
       %td
-        %input{name: "addressFilter", id: "addressFilter"}
+        %input{name: "addressFilter", id: "addressFilter", value: params[:addressFilter]}
     %tr
       %td
         Filter on whether teachers have attended PD
@@ -46,6 +46,7 @@
     displayed.
     %br
 
+  -# Note that newlines were replaced in the controller, the commas are replaced in the .csv.erb.
   #{link_to 'Download CSV', {:format => :csv}} (commas and newlines have been replaced by spaces)
 
   %br
@@ -63,10 +64,3 @@
             %span= field
 - else
   No teachers met the specified search criteria.
-
-
-:javascript
-  var email = '#{ params[:emailFilter]}';
-  var address = '#{ params[:addressFilter]}';
-  document.getElementById("emailFilter").defaultValue = email
-  document.getElementById("addressFilter").defaultValue = address
