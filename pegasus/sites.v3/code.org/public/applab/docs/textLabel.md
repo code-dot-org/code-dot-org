@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## textLabel(labelId, text, *forId*)
+## textLabel(id, text, *forId*)
 
 [/name]
 
@@ -19,7 +19,7 @@ Category: UI controls
 
 [short_description]
 
-Creates a text label on the screen displaying the *text* provided and referenced by the given *labelId* at default location (0,0).
+Creates a text label on the screen displaying the *text* provided and referenced by the given *id* at default location (0,0).
 
 [/short_description]
 
@@ -81,7 +81,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-textLabel(labelId, text, forId)
+textLabel(id, text, forId)
 ```
 
 [/syntax]
@@ -92,7 +92,7 @@ textLabel(labelId, text, forId)
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| labelId | string | Yes | The unique identifier for the text label. The labelId is used for referencing the text label in event handlers or other UI element modification functions. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |
+| id | string | Yes | The unique identifier for the text label. The id is used for referencing the text label in event handlers or other UI element modification functions. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |
 | text | string | Yes | The text displayed within the text label. |
 | forId | string | No | The id of the other UI element to associate the label with. |
 

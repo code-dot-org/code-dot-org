@@ -1,6 +1,6 @@
 id_s!,type_s,text1_s,param1_s,param2_s,param3_s,param4_s,watermark_s,image_t,site_s,active_s,language_supported_s
-hero_starwars,widehero,,15% 30%,celeba,bottom,,,/images/homepage/starwars.jpg,both,show,all
-hero_minecraft,widehero,,15% 30%,celeba,bottom,,,/images/homepage/minecraft.jpg,both,nah,all
+hero_starwars,widehero,,15% 50%,celeba,bottom,,,/images/homepage/starwars.jpg,both,show,all
+hero_minecraft,widehero,,15% 50%,celeba,bottom,,,/images/homepage/minecraft.jpg,both,show,all
 hero_stat_loc,widehero,homepage_hero_text_stat_loc,50% 40%,stat,bottom,,,/images/homepage/girl2.jpg,both,nah,all
 hero_stat_students,widehero,homepage_hero_text_stat_students,50% 30%,stat,bottom,,,/images/homepage/girl6.jpg,both,nah,all
 hero_stat_served,widehero,homepage_hero_text_stat_served,50% 35%,stat,top,,,/images/homepage/girl9.jpg,both,nah,all

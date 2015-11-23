@@ -13,26 +13,14 @@ The majority of our translations are done through CrowdIn, a localization manage
 Please complete translations for these projects in the above order of priority. If you have completed translations (at least 75% of the project is complete) and do not see your language in the drop down menu, please send a report to translations@code.org.
 
 ## What do I translate first?
-Right now, we're focused on translating the instructions of our courses. Search by the course's keyword to see the instructions specific for that course.
 
-**Go to file dashboard/data.yml**
-
-* [Hour of Code levels 1-15](https://studio.code.org/hoc/1) - search for "maze_2"
-
-**Go to file dashboard/instructions.yml**
-
-* [Hour of Code levels 16-20](https://studio.code.org/hoc/16) - search for "Scrat"
-* [Frozen Code with Anna and Elsa](https://studio.code.org/s/frozen) - search for "Frozen"
-* [Disney Infinity Play Lab](https://studio.code.org/s/infinity) - search for "Infinity"
-* [Course 1](https://studio.code.org/s/course1) - search for "K-1"
-* [Course 2](https://studio.code.org/s/course2) - search for "2-3"
-* [Course 3](https://studio.code.org/s/course3) - search for "4-5"
-* [Course 4](https://studio.code.org/s/course4) - search for "Course 4"
-
-The new Star Wars tutorial will be posted for translation very soon. Check back this Friday.
+1. Please translate our [Star Wars tutorial](/translate/starwars) and our [Minecraft tutorial](/translate/mc) first.
+2. Then translate the Code.org homepage and Code.org/learn by completing the pegasus/mobile.yml file in the [Code.org project](https://crowdin.com/project/codeorg).
+3. Translate the HourofCode.com homepage by completing the homepage file in the [Hour of Code project](https://crowdin.com/project/hour-of-code).
+4. Then come back to the [Code.org project](https://crowdin.com/project/codeorg) to complete the rest of Code Studio tutorials.
 
 
-## Where can I find context for translations?
+## Where can I find context for Code Studio tutorial translations?
 If you have more time, complete the project in the following prioritized order.
 
 <br/>

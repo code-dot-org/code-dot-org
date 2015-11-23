@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "指定した方向に道がある場合は、いくつかのアクションを行います。"},
 "ifelseTooltip":function(d){return "指定した方向にパスがある場合は、最初のブロックにアクションを行います。それ以外の場合は、2 番目のブロックにアクションを行います。"},
 "ifFlowerTooltip":function(d){return "はなや はちのすがあるときにだけ、どうぐをつかいます。"},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "指定した方向に花があれば、なにかアクションをおこします"},
 "ifelseFlowerTooltip":function(d){return "はなや はちのすがあるときにだけ、うえのどうぐをつかいます。ないときには、したのどうぐをつかいます。"},
 "insufficientHoney":function(d){return "どうぐをただしくつかうことができたね！ でも、はちみつがたりないよ！"},
 "insufficientNectar":function(d){return "どうぐをただしくつかうことができたね！ でも、はなのみつがたりないよ！"},

@@ -57,7 +57,7 @@ fi:
         other: '%{count} virhettä esti tämän %{resource} tallentamisen:'
     invitations:
       send_instructions: 'Sähköpostikutsu on lähetetty osoitteeseen %{email}.'
-      invitation_token_invalid: The invitation token provided is not valid!
+      invitation_token_invalid: Käyttämäsi kutsuavain ei ole voimassa!
       updated: Salasanasi määritys onnistui. Olet nyt kirjautunut sisään.
       no_invitations_remaining: Ei kutsuja jäljellä
       invitation_removed: Kutsusi poistettiin.

@@ -40,7 +40,7 @@
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
-    "start_blocks": "var count = 0;\r\nsetText(\"countDisplayLabel\", count);\r\nonEvent(\"upButton\", \"click\", function() {\r\n  count = count+1;\r\n  setText(\"countDisplayLabel\", count);\r\n});\r\nonEvent(\"downButton\", \"click\", function() {\r\n  setText(\"countDisplayLabel\", \"Down\");\r\n});",
+    "start_blocks": "var count = 0;\r\nsetText(\"countDisplayLabel\", count);\r\nonEvent(\"upButton\", \"click\", function() {\r\n  count = count + 1;\r\n  setText(\"countDisplayLabel\", count);\r\n});\r\nonEvent(\"downButton\", \"click\", function() {\r\n  setText(\"countDisplayLabel\", \"Down\");\r\n});",
     "markdown_instructions": "# Make Count Down Work\r\n\r\n<img src=\"https://images.code.org/0044a46a27f7af5da74daeae8de021f7-image-1446063781449.gif\" style=\"float: right; width: 200px\">You now know enough about using global variables (and some of the problems you might run into) to try it yourself.\r\n\r\nLet's start with an easy task. Right now clicking the up arrow works as expected; **clicking the down arrow does not**. So...\r\n\r\n# Do This:\r\n**Make the count go down by 1 every time the down arrow is clicked**\r\n\r\n* Study how the up arrow works, and use it as an example for writing the code for the down arrow.\r\n* Add and modify the code so that when the down arrow is clicked the count goes down.\r\n* When you're done the app should work like the animation shown to the right.\r\n* HINT: Don't forget to set the text of the label.\r\n\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
@@ -55,7 +55,8 @@
     "debugger_disabled": "true",
     "slider_speed": "1.0",
     "execute_palette_apis_only": "false",
-    "lock_zero_param_functions": "false"
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "8jeHTxuOXqZXZiyMsuTJB13Q5rN+M7t1ZRk1+FmHQ+28CQ5rg6vp3q8kxiOe\nfbVR\n"
   }
 }]]></config>
   <blocks/>

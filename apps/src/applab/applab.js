@@ -328,10 +328,14 @@ var drawDiv = function () {
     div.style.height = Applab.footerlessAppHeight + "px";
   });
 
-  if (studioApp.share) {
+  if (shouldRenderFooter()) {
     renderFooterInSharedGame();
   }
 };
+
+function shouldRenderFooter() {
+  return studioApp.share;
+}
 
 function renderFooterInSharedGame() {
   var divApplab = document.getElementById('divApplab');
@@ -745,7 +749,6 @@ Applab.init = function(config) {
   });
 
   config.loadAudio = function() {
-    studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
@@ -822,7 +825,6 @@ Applab.init = function(config) {
   config.makeYourOwn = false;
 
   config.varsInGlobals = true;
-  config.noButtonsBelowOnMobileShare = true;
 
   config.dropletConfig = dropletConfig;
 
@@ -838,6 +840,11 @@ Applab.init = function(config) {
   config.mobileNoPaddingShareWidth = config.level.appWidth;
 
   config.enableShowLinesCount = false;
+
+  // In Applab, we want our embedded levels to look the same as regular levels,
+  // just without the editor
+  config.centerEmbedded = false;
+  config.wireframeShare = true;
 
   // Applab.initMinimal();
 
@@ -857,7 +864,7 @@ Applab.init = function(config) {
   if (config.embed || config.hideSource) {
     // no responsive styles active in embed or hideSource mode, so set sizes:
     viz.style.width = Applab.appWidth + 'px';
-    viz.style.height = Applab.appHeight + 'px';
+    viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
     // Use offsetWidth of viz so we can include any possible border width:
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
@@ -1302,6 +1309,7 @@ var displayFeedback = function() {
       response: Applab.response,
       level: level,
       showingSharing: level.freePlay,
+      tryAgainText: applabMsg.tryAgainText(),
       feedbackImage: Applab.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
@@ -1543,7 +1551,8 @@ Applab.onCodeModeButton = function() {
   }
 };
 
-var HTTP_REGEXP = new RegExp('^http://');
+// starts with http or https
+var ABSOLUTE_REGEXP = new RegExp('^https?://');
 
 // Exposed for testing
 Applab.assetPathPrefix = "/v3/assets/";
@@ -1552,14 +1561,13 @@ Applab.assetPathPrefix = "/v3/assets/";
  * If the filename is relative (contains no slashes), then prepend
  * the path to the assets directory for this project to the filename.
  *
- * If the filename URL is absolute and non-https, route it through the
- * MEDIA_PROXY.
+ * If the filename URL is absolute, route it through the MEDIA_PROXY.
  * @param {string} filename
  * @returns {string}
  */
 Applab.maybeAddAssetPathPrefix = function (filename) {
 
-  if (HTTP_REGEXP.test(filename)) {
+  if (ABSOLUTE_REGEXP.test(filename)) {
     return MEDIA_PROXY + encodeURIComponent(filename);
   }
 
@@ -1854,6 +1862,7 @@ Applab.getAssetDropdown = function (typeFilter) {
     }, typeFilter);
   };
   options.push({
+    text: 'Choose...',
     display: '<span class="chooseAssetDropdownOption">Choose...</a>',
     click: handleChooseClick
   });
