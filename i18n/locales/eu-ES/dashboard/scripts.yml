@@ -1458,7 +1458,14 @@ eu:
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft Kode Ordua
           description_short: Esploratu Minecraft mundu bat kodearen bitartez
           description: Erabili kode-blokeak Steve edo Alex abentura batera eramateko Minecraft mundu honetan
           Hour of Code 2015: 2015 Code ordua
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          description: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit

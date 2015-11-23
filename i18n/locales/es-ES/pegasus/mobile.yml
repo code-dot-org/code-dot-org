@@ -279,14 +279,14 @@ es-ES:
   starwars_watch_videos: Antes de empezar, ve uno de estos videos inspiradores
   starwars_speak_languages: ¿Hablas otro idioma?
   starwars_help_translate: Ayúdanos a traducir
-  starwars_platform_text: Modern browsers, smartphones, tablets
-  mc_name: Hora de Código de Minecraft
+  starwars_platform_text: Cualquier navegador moderno, smartphone, tableta
+  mc_name: "Minecraft L'Ora dei Codici"
   mc_longdescription: Utiliza bloques de código para llevar a Steve o Alex en una aventura a través del mundo de Minecraft.
   mc_shortdescription: Utiliza bloques de código para llevar a Steve o Alex en una aventura a través del mundo de Minecraft.
   mc_gradelevel: Mayores de 6 años
   mc_platformtext: Cualquier navegador moderno, smartphone, tableta
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
-  minecraft_subtitle: Hora de Código de Minecraft
+  minecraft_subtitle: "Minecraft L'Ora dei Codici"
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 profesores van a acoger una Hora del Código en sus aulas este año, del 7 al 13 de Diciembre del 2015 ¡Y necesitan tu ayuda! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'

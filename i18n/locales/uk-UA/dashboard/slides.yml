@@ -1473,7 +1473,7 @@ uk:
         text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together. When I press run again, BB-8 will perform the commands that are stacked top to bottom on our workspace."
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and drag it back into the toolbox.
+        text: Якщо вам треба видалити блок, просто виберіть його у схемі та перетягніть назад у палітру інструментів.
       10:
         image: notes/starwars_blocks_intro_10.JPG
         text: "After you hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
@@ -1518,7 +1518,7 @@ uk:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
+        text: "Мене звуть Йенс Бергенстен, але я більш відомий як Джеб. Я - головний розробник Майнкрафт, тут в Mojang у Стокгольмі. Здається, мені було одинадцять або дванадцять, коли я почав програмувати, бо хотів робити ігри. Один з друзів батька сказав, що для цього треба програмувати. Так я і почав. Мені подобається розробляти й з'ясовувати архітектуру гри. Це те, чим мені дійсно подобається Майнкрафт."
       2:
         image: notes/mc_intro_2.JPG
         text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
@@ -1590,7 +1590,7 @@ uk:
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Вітаємо! Ви тільки що вивчили основні блоки компьютерної науки.
       2:
         image: notes/mc_congrats_share_2.JPG
         text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
@@ -1603,7 +1603,7 @@ uk:
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Вітаємо! Ви тільки що вивчили основні блоки компьютерної науки.
       2:
         image: notes/mc_congrats_no_share_2.JPG
         text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
@@ -1612,4 +1612,4 @@ uk:
         text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Тепер ви можете побудувати все, що хочете. Розважайтеся!

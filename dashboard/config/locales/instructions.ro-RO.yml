@@ -11,74 +11,74 @@
         creeze un "cerc" pentru a termina ochiul. Dacă fiecare mişcare se roteşte
         la dreapta cu un grad, de câte ori trebuie să repeți pentru a finaliza cercul?
         180? 360? 500?
-      2-3 Artist 2 new_instruction: 'Această casă are un perete jumătate terminat.
-        Fiecare parte este de 100, peretele jumătate terminat este de numai 50. Completati
-        peretele. '
+      2-3 Artist 2 new_instruction: 'Această casă are un perete pe jumătate terminat.
+        Fiecare latură este de 100, dar peretele pe jumătate terminat este de numai
+        50. Completează peretele. '
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100,
         but the half-finished wall is only 50. Complete the wall. \n"
-      2-3 Artist 3.4_instruction: Blocul de salt mută artistul fără să deseneze. Desenati
-        line punctată folosind ambele blocuri, si cel de sărit si cel de desenat.
-      2-3 Artist 3_instruction: Această pălărie este 100 pixeli înălţime. Desenaţi
-        o palarie care este 70 pixeli mai mică.
-      2-3 Artist 3new_instruction: Pălăria roşie este 100 de pixeli inaltime. Terminati
-        de desenat o pălărie neagră, care este mai scurtă cu 70 de pixeli. Lăţimea
-        pălăriei neagre este de 50 pixeli.
+      2-3 Artist 3.4_instruction: Blocul de salt mută artistul fără a desena. Trasează
+        linia punctată folosind și blocul de salt şi cel de desen.
+      2-3 Artist 3_instruction: Această pălărie are o înălțime de 100 de pixeli. Desenează
+        o pălărie care este cu 70 de pixeli mai mică.
+      2-3 Artist 3new_instruction: Pălăria roşie are o înălțime de 100 de pixeli.
+        Termină de desenat o pălărie neagră, care este mai scurtă cu 70 de pixeli.
+        Lăţimea pălăriei neagre este de 50 de pixeli.
       2-3 Artist 4_instruction: Ajută-mă să termin casa pentru această pisică.
-      2-3 Artist 5_instruction: Înlocuiţi acest cod cu un bloc "repeta" pentru a desena
-        aceeaşi casă folosind numai 3 blocuri.
-      2-3 Artist 6_instruction: 'Această casă are nevoie de un acoperiş! Trasaţi triunghiul.  Sugestie:
-        toate trei laturile au aceeaşi lungime.'
-      2-3 Artist 7_instruction: 'Termină de desenat jumătatea dreaptă a ultimei fereastre.
-        Fiecare latura a ferestrei are 25 de pixeli. '
-      2-3 Artist 8_instruction: Completati camerele pentru fiecare dintre animalele
-        prin impartirea dreptunghiul în 2 patrate de dimensiuni egale. Dreptunghiul
-        este 200 pixeli lăţime şi 100 pixeli înălţime .
-      2-3 Artist 9_instruction: Termină acest zmeu
-      2-3 Artist Assessment 1_instruction: 'Evaluare: Termina desenul ultimului dinte,
-        25 de pixeli lăţime şi 25 de pixeli inaltime.'
-      2-3 Artist Debugging 1_instruction: Poți face această pălărie cu o lungimea
-        the maxim 100?
-      2-3 Artist Debugging 10_instruction: 'Butonul de direcţie de pe comanda jocului
-        meu este prea îngustă. Sugestie: Faceti-l mai lat cu 10 pixeli'
+      2-3 Artist 5_instruction: Înlocuiește acest cod cu un bloc "repetă ori" pentru
+        a desena aceeaşi casă folosind numai 3 blocuri.
+      2-3 Artist 6_instruction: 'Această casă are nevoie de un acoperiş! Desenează
+        triunghiul.  Sugestie: toate trei laturile au aceeaşi lungime.'
+      2-3 Artist 7_instruction: 'Termină de desenat jumătatea dreaptă a ultimei ferestre.
+        Fiecare geam pătrat al ferestrei are 25 de pixeli lățime. '
+      2-3 Artist 8_instruction: Completează camerele pentru fiecare dintre animale
+        prin împărțirea dreptunghiul în 2 pătrate de dimensiuni egale. Dreptunghiul
+        are 200 de pixeli în lăţime şi 100 de pixeli în înălţime.
+      2-3 Artist 9_instruction: Finalizează acest zmeu
+      2-3 Artist Assessment 1_instruction: 'Evaluare: Termină de desenat ultimul dinte,
+        25 de pixeli în lățime și 25 de pixeli în înălțime.'
+      2-3 Artist Debugging 1_instruction: Poți face această pălărie cu o lungime până
+        la vârf de 100?
+      2-3 Artist Debugging 10_instruction: 'Butonul de direcţie de pe comanda mea
+        de joc este prea îngust. Sugestie: Faceți-l mai lat cu 10 pixeli'
       2-3 Artist Debugging 11_instruction: Ajută-mă să termin frumosul meu fulg de
         nea. De câte ori trebuie să "repet" pentru a-l termina?
-      2-3 Artist Debugging 12_instruction: Ar trebui să adăug un val de ocean la această
-        scenă.  Poţi să mă ajuţi?
-      2-3 Artist Debugging 2_instruction: 'Codul pentru cele trei mustăţi pe care
-        le vedeţi este greşit. Indiciu: fiecare mustaţă are 75 pixeli lungime. Repară
-        acest cod pentru a desena mustăţile corect.'
-      2-3 Artist Debugging 3_instruction: 'Barca mea are o gaura! Poti sa o repari
-        prin schimbarea unghiului liniei? Sugestie: ultimul unghi este mai mic cu
-        15 grade.'
-      2-3 Artist Debugging 4_instruction: Care este imaginea pe care incercam sa o
-        desenam? Termina conectarea punctelor utilizând liniile şi unghiurile corecte.
-      2-3 Artist Debugging 5_instruction: 'Codul pentru picior şi laba piciorului
-        pe care le vedeţi este greşit. Sugestie: Laba piciorului este prea lungă,
-        ar trebui să ştergeţi un pas (joc de cuvinte intentionat)'
-      2-3 Artist Debugging 6_instruction: Se pare ca stau pe un scaun caruia ii lipseşte
-        un picior. Editati blocurile pentru a denena piciorul.
-      2-3 Artist Debugging 7_instruction: Se pare ca litera C în cod se desenează
-        invers. Puteţi să îl faceţi să arate ca un C?
-      2-3 Artist Debugging 8_instruction: Morişca mea nu este terminată. De câte ori
-        trebuie să repet pentru a o termina?
+      2-3 Artist Debugging 12_instruction: Trebuie să adaug un val de ocean la această
+        scenă. Poți să mă ajuți?
+      2-3 Artist Debugging 2_instruction: 'Codul pentru cele trei mustăți pe care
+        le vezi este greșit. Indiciu: fiecare mustață are o lungime de 75 de pixeli.
+        Repară acest cod pentru a desena mustățile.'
+      2-3 Artist Debugging 3_instruction: 'Barca mea are o gaură! Poți să o repari
+        schimbând unghiul liniei? Indiciu: ultimul unghi este greșit cu 15 grade.'
+      2-3 Artist Debugging 4_instruction: Care este imaginea pe care încercăm să o
+        desenăm? Termină conectarea punctelor utilizând liniile și unghiurile potrivite.
+      2-3 Artist Debugging 5_instruction: 'Codul pentru piciorul și laba piciorului
+        pe care le vezi e greșit. Indiciu: piciorul e prea lung, poate trebuie să
+        mai ștergem un pas (jocul de cuvinte este intenționat)'
+      2-3 Artist Debugging 6_instruction: Se pare că stau pe un scaun căruia îi lipsește
+        un picior. Editează blocurile pentru a desena piciorul.
+      2-3 Artist Debugging 7_instruction: Se pare că litera C în cod este desenată
+        invers. Poţi să o faci să arate ca un C?
+      2-3 Artist Debugging 8_instruction: Morișca mea nu e gata. De câte ori trebuie
+        folosit blocul "repetă" pentru a fi gata?
       2-3 Artist Debugging 9_instruction: 'Codul pentru această tulpină este incorect.
         Sugestie: Unghiul este greşit cu 60 de grade'
-      2-3 Artist Debugging Assessment 1_instruction: 'Această formă este prea mică.
-        Puteţi să o faceţi mai mare? Sugestie: ar trebui să fie mai lungă cu 75 pixeli  în
-        fiecare parte.'
+      2-3 Artist Debugging Assessment 1_instruction: 'Forma aceasta este prea mică.
+        Poți să o faci mai mare? Indiciu: ar trebui să fie cu 75 de pixeli mai lungă
+        pe fiecare parte.'
       2-3 Artist Free Play_instruction: Joc liber! Desenează orice ți-ar plăcea.
       2-3 Artist Functions 1_instruction: |
-        Salut! Eu sunt artist zombie. Eu indrăgesc desenul!
-        Ajută-mă să desenez ochelari pătraţi. Sugestie: puntea dintre lentile este cu 25 pixeli mai scurtă decât latura lentilei pătrate.
-      2-3 Artist Functions 10_instruction: Aveţi aici două funcţii, una ca să desenaţi
-        o roată dinţată mare şi una ca să desenaţi o roată dinţata mica. Folosiţi-le
-        ca să desenaţi interiorul unui mecanism!
-      2-3 Artist Functions 11.5_instruction: Aveţi aici aceeaşi funcţie "Desenaţi
-        un hexagon". Ce se întamplă dacă intoarceţi cate 60 grade la fiecare buclă?
+        Salut! Eu zombie artist. Eu iubesc desenul!
+        Ajută-mă să desenez ochelarii pătraţi. Sugestie: puntea dintre lentile este cu 25 de pixeli mai scurtă decât latura pătratului.
+      2-3 Artist Functions 10_instruction: 'Iată doua funcții: una pentru a desena
+        o roată dințată mare și una pentru a desena o roată dințată mică. Folosește-le
+        pentru a desena interiorul unei mașinării!'
+      2-3 Artist Functions 11.5_instruction: Aici este aceeși funcție "Desenează un
+        hexagon". Ce se întâmplă dacă întorci cu doar 60 de grade de fiecare dată
+        când buclezi?
       2-3 Artist Functions 11_instruction: Am redenumit funcția "desenează un pătrat"
         în "desenează un hexagon", dar încă desenează pătrate! Poți să modifici funcția
         "desenează un hexagon" astfel încât să deseneze un hexagon cu laturile de
-        60 de pixeli, și apoi să desenezi imaginea folosind această funcție?
+        50 de pixeli și apoi să desenezi imaginea folosind această funcție?
       2-3 Artist Functions 12_instruction: 'Funcţiile sunt foarte utile pentru a desena
         de mai multe ori lucruri complicate. Puteţi utiliza funcţia "desenează o floare"
         pentru a completa restul jardinierei? (Sugestie: distanța dintre plante este
@@ -750,27 +750,28 @@
       4-5 Nested Loops 9_instruction: Desenează dinţii în gura aligatorului!
       4-5 Nested Loops Assessment 1_instruction: Utilizaţi o buclă imbricată pentru
         a finaliza proiectul.
-      4-5 While Loops 1_instruction: Mută-mă în gaură şi pune în ea două lopeţi cu
-        gunoi, folosind construcţia "fill".
-      4-5 While Loops 2_instruction: Mută-mă pe grămada de gunoi şi apoi încarcă 5
-        cupe de gunoi pentru a o muta, folosind construcţia 'remove'.
+      4-5 While Loops 1_instruction: Mută-mă în gaură şi umple-o două lopeţi cu pământ,
+        folosind blocul "umple".
+      4-5 While Loops 2_instruction: Mută-mă la grămada de pământ şi apoi înlătur-o
+        cu 5 lopeți, folosind blocul "elimină".
       4-5 While Loops 3_instruction: 'Mută-mă pe grămadă şi mută grămada toată, apoi
         umple complet gaura. Indicaţie: Foloseşte cât mai puţine blocuri.'
-      4-5 While Loops 4_instruction: 'Oau, am găsit o gaură într-adevăr adâncă! Nu
-        ştiu cât de multe lopeţi de gunoi am nevoie pentru a o umple. Poţi scrie un
-        program care să umple gaura până la nivelul solului? Indicaţie: Încearcă să
-        foloseşti bucla''while'' de data asta.'
+      4-5 While Loops 4_instruction: 'Oau, am găsit o gaură foarte adâncă! Nu ştiu
+        de câte lopeţi cu pământ am nevoie pentru a o umple. Poţi scrie un program
+        care să umple gaura până la nivelul solului? Indicaţie: Încearcă să foloseşti
+        bucla "în timp ce" de data asta.'
       4-5 While Loops 5_instruction: Oau, acum sunt două găuri adânci acolo! Poţi
         tu să scri un program care să umple ambele găuri până la nivelul solului?
-      4-5 While Loops 6_instruction: Oau, acum este o grămadă mare de gunoi acolo!
-        Poţi scrie un program care să îndepărteze toată grămada până la nivelul solului?
-      4-5 While Loops 7_instruction: Oau, acum sunt trei grămezi mari de gunoi acolo!
+      4-5 While Loops 6_instruction: Oau, acum este o grămadă mare de pământ acolo!
+        Poţi scrie un program care să o îndepărteze în intregime până se nivelează
+        solul?
+      4-5 While Loops 7_instruction: Oau, acum sunt trei grămezi mari de pământ acolo!
         Poţi scrie un program care să le îndepărteze pe fiecare dintre ele până la
         nivelul solului?
       4-5 While Loops 8_instruction: ' Acolo este o gaură într-adevăr adâncă şi o
-        grămadă foarte mare de gunoi. Câte lopeţi pline de gunoi trebuie să încarci
-        pentru a ajunge la nivelul solului? Indicaţie: Foloseşte bucla ''while'' pentru
-        ambele.'
+        grămadă foarte mare de mizerie. Câte lopeţi pline de mizerie trebuie să fie
+        mutate de la una la alta pentru a nivela solul? Indicaţie: Foloseşte bucla
+        "în timp ce" pentru amândouă.'
       4-5 While Loops Assessment 1_instruction: Există multe găuri şi grămezi de pământ.
         Ajută-mă să le umplu şi să le mut pentru a face terenul plat.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
@@ -1546,12 +1547,13 @@
         devine mai mare! Observă că există nouă variabilă numită "lungime". Acum o
         putem folosi pe aceasta oriunde avem un "mută înainte". Setează variabila
         "lungime" la 75 pentru acestă formă.
-      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside
-        needs to be shorter if you want the whole pattern to fit on the screen.\n\r\nLet's
-        recreate the algorithm for this amazing pattern, but instead of\nmanually
-        setting the \"length\" variable, let's use a math block with the\n\"sides\"
-        variable inside to make sure that each shape fits correctly. The\nperimeter
-        of each polygon is 300 pixels.\r\nNeed some hints?  Click here."
+      Course 4 Artist Vars 13_instruction: "Cand o forma are mai multe fete, fiecare
+        fata trebuie sa fie mai scurta daca doriti ca intregul model sa se integreze
+        in ecran. \r Haideti sa cream algoritmul pentru acest model, dar in loc sa
+        adaugam manual variabila 'lungime', haideti sa folosim un bloc matematic cu
+        variabila \"parte\" pentru a ne asigura ca fiecare forma se potriveste corect.
+        Perimetrul fiecarui poligon este 300 de pixeli.\r Ai nevoie de niste ponturi?
+        Click aici."
       Course 4 Artist Vars 14_instruction: 'Joc la alegere: Ia te uită! Acum algoritmul
         tău este cuprins în cadrul unei bucle suplimentare. Experimentează schimbarea
         valorilor celor două variabile ale tale pentru a desena modele super tari.'
@@ -1769,11 +1771,10 @@
       Course 4 Play Lab Params 5_instruction: Completează parametrul de intrare "actor"
         astfel încât putem apela funcţia "patrol" pentru fiecare dintre actori. Amintiţi-vă,
         actorii corespund cifrelor 1, 2 şi 3.
-      Course 4 Play Lab Params 6_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Try using a "set speed" block with the new "speed"
-        parameter to help Penguin get both flags before the other sprites even get
-        one.
+      Course 4 Play Lab Params 6_instruction: Adauga un alt parametru numit "viteza"
+        in functia de "preluare". Incearca sa utilizezi un bloc "seteaza viteza" impreuna
+        cu noul parametru "viteza" pentru a ajuta pinguinul sa ia ambele steaguri
+        inainte ca alte spirite sa ajunga la unul din ele.
       Course 4 Play Lab Params 7_instruction: "Uită-te la codul furnizat pentru a
         vedea dacă îţi dai seama ce face fiecare bloc de instrucţiuni. \r\n\r\nCând
         eşti gata, foloseşte tastele săgeţi pentru a controla câinele şi adună toate
@@ -1781,13 +1782,14 @@
       Course 4 Play Lab Params 8_instruction: Foloseşte blocul de instrucţiuni "when
         touching" pentru a trimite câinele înapoi în colţul din stânga-sus DOAR dacă
         acesta atinge oricare unul din celelalte personaje.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
-        most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit\nthe
-        function so that a \"points\" parameter is added to the \"player_score\"\nvariable.
-        \r\n\r\nThe variable \"player_score\" should increase each time\nDog tags
-        Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:\nWhen
-        you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
-        on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Aici este jocul nostru dintr-o etapa
+        incipienta, dar majoritatea codului este ascuns. Este o functie noua \"inscrie_puncte.\"
+        \r\n\r\n Editati functia astfel incat paramentrul 'Puncte' sa fie adaugat
+        la variabila ''scorul_jucatorului\". \r\n\r\nVariabila \"scorul_jucatorului\"
+        trebuie sa creasca de fiecare data cand \ncatelul eticheteaza pisica cu inimioare,
+        si descreste cand pisica prinde cainele.\r\n\r\nNota:\nCand ai terminat, apasa
+        \"Ruleaza\" pentru a te juca. Cand cainele inscrie 6 puncte, vei trece la
+        urmatorul puzzle. "
       Course 4 Play Lab Vars 1_instruction: De data asta nu trebuie să este nevoie
         să scrii niciun cod, doar clic pe "Run" pentru a rula jocul! În acest joc,
         tu eşti câinele care încearcă să adune mai multe steaguri decât pisica. Foloseşte
@@ -2220,21 +2222,18 @@
         ori intră 90 în 360? Sugestie: Este un număr chiar foarte mic.'
       frozen cross rotate_instruction: Acum, încearcă să îl repeți de 10 ori. Câte
         grade trebuie să rotești între fiecare linie?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using another “Repeat"
-        block to repeat a parallelogram 4 times, turning right by 90 degrees between
-        each parallelogram.
+      frozen cross_instruction: Impachetati un bloc "repetare" pentru aceste comenzi
+        sa creati un semn plus. Ati observat ca Elsa poate merge si inainte si inapoi?
+      frozen diamond mini snowflake_instruction: Stiai ca fiecare fulg de nea are
+        o forma diferita? Haideti sa realizam un fulg de nea folosind inca un bloc
+        'Repeta' pentru a repeta un paralelogram de 4 ori, intorcandu-te la dreapta
+        cu 90 de grade intre fiecare paralelogram.
       frozen diamond snowflake_instruction: Acum, hai să creăm un fulg de zăpadă nou
         utilizând blocul de repetare pentru a repeta un paralelogram de 10 ori, rotind
         la dreapta cîte 36 de grade între fiecare dintre ele.
       frozen diamond_instruction: |
-        Use a repeat around these blocks to create a parallelogram.
-        It's just like a rectangle but has different angles. This one has 60 degree
-        and 120 degree angles instead of all 90 degree angles.
+        Utilizati un blocul repeta pentru a crea un paralelogram.
+        Este la fel ca un dreptunghi dar are unghiuri diferite. Acesta are unghi de 60 de grade si de 120 in loc sa aiba toate unghiurile de 90 de grade.
       frozen freeplay_instruction: Ai devenit oficial un artist maestru! Creează un
         paradis de iarnă.
       frozen line_instruction: Salutare! Eu sunt Elsa din Arendelle. Ajută-mă să creez
@@ -2847,68 +2846,51 @@
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
-      Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
-      Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
-      Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
-      Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
-      Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
-      Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
-      Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+        Daca vreti sa atingeti un vierme, nu e o idee buna.
+        Mergeti cu grija pe langa viermi si ajungeti in siguranta in casa.
+      Overworld Chop Tree_instruction: Lemnul este o resursa foarte importanta. Multe
+        lucruri sunt facute din lemn. Mergeti spre copac si utilizati blocul "distruge"
+        pentru a-l taia.
+      Overworld Chop Trees_instruction: Trebuie să construim o casă înainte ca soarele
+        să apună. Casele necesită foarte mult lemn. Taie toți cei 3 copaci.
+      Overworld Free Play 20x20_instruction: Felicitări! Ai finalizat toate puzzle-urile
+        noastre! Acum minează, construiește și creează ceva unic folosind tot ce ai
+        învățat până acum.
+      Overworld Free Play_instruction: Acest peisaj este aici pentru a te juca tu
+        cu el. Tu alegi ce să construiești.
+      Overworld House Frame - A_instruction: Hai să ne facem propria noastră casă!
+        Acest loc arată bine. Construiește un cadru pe blocurile de mizerie.
+      Overworld House Frame - C_instruction: Hai să ne facem propria noastră casă!
+        Acest loc arată bine. Construiește un cadru pe blocurile de mizerie.
+      Overworld House Frame B_instruction: Un perete este terminat, haideti sa construim
+        restul casei folosind planul tau pentru podele! Va trebui sa repeti mutarile
+        destul de mult aici.
+      Overworld House Frame B2_instruction: Un perete este terminat, haideti sa construim
+        restul casei folosind planul tau pentru podele! Va trebui sa repeti mutarile
+        destul de mult aici.
+      Overworld House Frame C_instruction: Un perete este terminat, haideti sa construim
+        restul casei folosind planul tau pentru podele! Va trebui sa repeti mutarile
+        destul de mult aici.
+      Overworld House Frame Chosen_instruction: Construieste restul casei din orice
+        material doresti. Comanda 'repeta' iti va veni in ajutor.
+      Overworld House Frame_instruction: Hai să ne facem propria noastră casă! Acest
+        loc arată bine. Construiește un cadru pe blocurile de mizerie.
+      Overworld Minecart Track_instruction: Ești din nou la suprafața cu o mulțime
+        de resurse subterane. Acum, vom construi un drum de-a lungul traseului cu
+        mizerie de la casa ta. Primul pas este să cureți tot de pe traseu. Urmărește
+        traseul și taie copacii.
+      Overworld Move to Sheep_instruction: Adauga o a doua comanda "mergi inainte"
+        pentru a ajunge la oi.
+      Overworld Place Wall_instruction: Fiecare casa incepe cu un perete. Construieste
+        prima parte a casei asezand comenzile 'loc' si 'mergi inainte' inaunruntrul
+        buclei repeta.
+      Overworld Plant Crops_instruction: Este bine sa planifici inainte. Planteaza
+        culturi de ambele parti ale apei astfel incat sa nu iti fie foame mai tarziu.
+      Overworld Powered Minecart_instruction: Buna treaba! Ai adunat resurse suficiente
+        pentru a construi o casa modesta. Acum pune o cale ferata de la capatul hartii
+        la usa casei tale.
+      Overworld Shear Sheep_instruction: E vremea sa tunzi oile! Foloseste comanda
+        "forfecare' pentru a aduna lana de la oi.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -4560,25 +4542,22 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
-      Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
-      Underground If Statements_instruction: |
-        Now things are getting tricky. Mine
-        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
-        over any lava you uncover.
-      Underground Iron_instruction: |
-        Walking into molten lava is a bad idea. Place
-        cobblestone to create a bridge, then mine at least two of the iron blocks.
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7
-        redstone! Try using a repeat command inside a repeat command to walk in\na
-        square.\r\n"
-      Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
-      Underground Test Level_instruction: Collect all of the minerals!
+      Underground Avoiding Lava_instruction: Sub aceste blocuri se gaseste lava, pe
+        care trebuie sa o acoperi inainte sa mergi inainte. O comanda "Daca" ar fi
+        de ajutor aici. Adauga o comanda 'mergi inainte' in locul corect pentru a
+        acoperi aceste blocuri.
+      Underground If Statements_instruction: Acum lucrurile devin mai dificile. Aduna
+        3 pietre rosii, dar fara sa cazi in lava. Foloseste o comanda "daca" pentru
+        a acoperi lava cu gresie.
+      Underground Iron_instruction: A merge in lava topita este o idee rea. Plaseaza
+        placi de gresie pentru a crea un pod, apoi aduna cel putin 2 dintre blocurile
+        de fier.
+      Underground Mine in a Circle_instruction: "Gaseste un mod sa aduni 5 diamante
+        si 7 pietre rosii! Incearca sa folosesti o comanda \"repeta\" pentru a intra
+        in patrat.\r\n"
+      Underground Mining Coal_instruction: Vei gasi cele mai valoroase resurse in
+        subteran, dar se poate face intuneric. Plaseaza cel putin 2 torte si cauta
+        cel putin 2 carbuni.
+      Underground Test Level_instruction: Colecteaza toate mineralele!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

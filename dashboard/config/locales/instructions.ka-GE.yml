@@ -1705,13 +1705,13 @@
         საკონტროლებლად და დროშების შესაგროვებლად."
       Course 4 Play Lab Params 8_instruction: გამოიყენეთ "შეხებისას" ბლოკი, რომ დააბრუნოთ
         ძაღლი მარცხენა ზედა კუთხეში მხოლოდ იმ შემთხვევაში, თუ ის სხვა მსახიობს შეეხება.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
-        most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit\nthe
-        function so that a \"points\" parameter is added to the \"player_score\"\nvariable.
-        \r\n\r\nThe variable \"player_score\" should increase each time\nDog tags
-        Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:\nWhen
-        you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
-        on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "ესაა, თამაში წინა დონიდან,\nმაგრამ
+        კოდის უმეტესობა დამალულია. მოცემულია ახალი ფუნქცია \"ქულის_დაგროვება\".\r\n\r\nდაარედაქტირეთ\nფუნქცია
+        ისე, რომ ცვლადს \"მოთამაშის_ანგარიში\" დაემატოს პარამეტრი\n\"ქულები\".\r\n\r\nცვლადი
+        \"მოთამაშის_ანგარიში\" უნდა გაიზარდოს ყოველჯერ, როცა\nძაღლი მონიშნავს კატას
+        გულით და იკლებდეს, როცა კატა მონიშნავს ძაღლს გულით.\r\n\r\nმინიშნება:\nროცა
+        დაასრულებთ, დააჭირეთ \"გაშვებას\". როცა ძაღლი დააგროვებს 6 ქულას, \nთქვენ
+        გადახვლათ შემდეგ დონეზე. "
       Course 4 Play Lab Vars 1_instruction: ამჯერად კოდის დაწერა საერთოდ არ გიწევთ,
         დააჭირეთ "გაშვებას" და ითამაშეთ! ამ თამაშში თქვენი ძაღლი კატაზე მეტი დროშის
         შეგროვებას ცდილობს. გამოიყენეთ ქვედა ისარი ძაღლის საკონტროლებლად. დააჭირეთ
@@ -2557,9 +2557,8 @@
         პროექტი, რომელსაც შეგიძლიათ ნებისმიერ დროს დაუბრუნდეთ.
       NEW Course 4 Artist Functions 1_instruction: შეგიძლიათ ციკლის გამოყენებით დახატოთ
         კვადრატი გვერდით 100 პიქსელი?
-      NEW Course 4 Artist Functions 10.1_instruction: |
-        Use the functions from the
-        previous puzzles to draw this pattern.
+      NEW Course 4 Artist Functions 10.1_instruction: ამ მოდელის გასამეორებლად გამოიყენეთ
+        ფუნქციები წინა თავსატეხიდან.
       NEW Course 4 Artist Functions 10_instruction: დააჭირეთ ჩასწორებას, რომ ფუნქციის
         განსაზღვრების ბლოკები შეავსოთ და დახატოთ 40 პიქსელიანი კვადრატი.
       NEW Course 4 Artist Functions 11_instruction: გვაქვს ახალი ფუნქცია სახელად "დახატე
@@ -2765,38 +2764,25 @@
         Congratulations! You've completed
         all our puzzles! Now mine, build, and create something unique by using everything
         you've learned so far.
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
-      Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
-      Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
+      Overworld Free Play_instruction: ეს ლანდშაფტი თქვენია - შეგიძლიათ ააშენოთ, რაც
+        კი მოგესურვებათ.
+      Overworld House Frame - A_instruction: ავაშენოთ ჩვენი საკუთარი სახლი! ეს ადგილი
+        კარგად გამოიყურება. ავაშენოთ კარკასი ჭუჭყის ბლოკებზე.
+      Overworld House Frame - C_instruction: ავაშენოთ ჩვენი საკუთარი სახლი! ეს ადგილი
+        კარგად გამოიყურება. ავაშენოთ კარკასი ჭუჭყის ბლოკებზე.
+      Overworld House Frame B_instruction: ერთი კედელი დასრულებულია, ავაშენოთ მთელი
+        სახლი იატაკის გეგმის მიხედვით! ბევრი რამის გამეორება მოგიწევთ აქ.
+      Overworld House Frame B2_instruction: ერთი კედელი დასრულებულია, ავაშენოთ მთელი
+        სახლი იატაკის გეგმის მიხედვით! ბევრი რამის გამეორება მოგიწევთ აქ.
+      Overworld House Frame C_instruction: ერთი კედელი დასრულებულია, ავაშენოთ მთელი
+        სახლი იატაკის გეგმის მიხედვით! ბევრი რამის გამეორება მოგიწევთ აქ.
+      Overworld House Frame Chosen_instruction: ააშენეთ სახლი ბოლომდე ნებისმიერი მასალით.
+        "გამეორების" ბრძანება აქ ძალიან გამოგადგებათ.
+      Overworld House Frame_instruction: ავაშენოთ ჩვენი საკუთარი სახლი! ეს ადგილი
+        კარგად გამოიყურება. ავაშენოთ კარკასი ჭუჭყის ბლოკებზე.
+      Overworld Minecart Track_instruction: ისევ ზედაპირზე ხართ და გაქვთ უამრავი მიწისქვეშა
+        რესურსი. ახლა უნდა ავაშენოთ გზა თქვენი სახლიდან ჭუჭყინი ბილიკის გასწვრივ.
+        პირველ რიგში, უნდა გავასუფთავოთ ბილიკი. გაჰყევით ბილიკს და მოაშორეთ ხეები.
       Overworld Move to Sheep_instruction: |
         Add a second “move forward” command to
         reach the sheep.
@@ -4460,25 +4446,19 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
-      Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
-      Underground If Statements_instruction: |
-        Now things are getting tricky. Mine
-        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
-        over any lava you uncover.
-      Underground Iron_instruction: |
-        Walking into molten lava is a bad idea. Place
-        cobblestone to create a bridge, then mine at least two of the iron blocks.
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7
-        redstone! Try using a repeat command inside a repeat command to walk in\na
-        square.\r\n"
-      Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
-      Underground Test Level_instruction: Collect all of the minerals!
+      Underground Avoiding Lava_instruction: ლავა სადღაც ამ ბლოკების ქვეშ არის და
+        წინ გადასაადგილებლად ის უნდა გადახუროთ. "თუ" ბრძანება აქ ძალიან გამოგადგებათ.
+        დაუმატეთ ბრძანება "გადაადგილება წინ" საჭირო ადგილებში და მოიპოვეთ ეს ბლოკები.
+      Underground If Statements_instruction: ახლა კი გავართულოთ. მოიპოვეთ 3 წითელი
+        ქვა ისე, რომ ლავაში არ ჩავარდეთ. გამოიყენეთ "თუ" ბრძანება, იმისთვის რომ დადოთ
+        რიყის ქვა ყველგან, სადაც ლავას აღმოაჩენთ.
+      Underground Iron_instruction: მდნარ ლავაში მოხვედრა არ არის კარგი იდეა. დააწყვეთ
+        რიყის ქვა ხიდის შესაქმნელად, შემდეგ კი მოიპოვეთ მინიმუმ ორი რკინის ბლოკი.
+      Underground Mine in a Circle_instruction: "მოიფიქრეთ, როგორ მოიპოვოთ 5 ალმასი
+        და 7 წითელი ქვა! სცადეთ გამოყენების ბრძანებაში კიდევ ერთი გამეორების ბრძანების
+        გამოყენება, რომ კვადრატულად იმოძრავოთ.\r\n"
+      Underground Mining Coal_instruction: ყველაზე ძვირფასი რესურსები მიწის ქვეშაა,
+        მაგრამ იქ ბნელა. დასვით 2 ჩირაღდანი და მოიპოვეთ ყველაზე მცირე 2 ქვანახშირი.
+      Underground Test Level_instruction: შეაგროვეთ ყველა მინერალი!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

@@ -313,7 +313,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "errorQuestionMarksInNumberField":function(d){return "Prøv å erstatte \"???\" med en verdi!"},
 "errorRequiredParamsMissing":function(d){return "Lag en parameter for funksjonen din ved å klikke \"Rediger\" og legge til de nødvendige parameterne. Dra de nye parameterblokkene til funksjonsdefinisjonen."},
 "errorUnusedFunction":function(d){return "Du opprettet en funksjon, men brukte den ikke i arbeidsområdet! Klikk på \"Funksjoner\" i verktøykassen, og forsikre deg om at du bruker den i programmet ditt."},
-"errorUnusedParam":function(d){return "Du la til en parameterblokk, men bruke den ikke i definisjonen. Husk å bruke parameteren ved å klikke \"Rediger\" og sette parameterblokk innenfor den grønne blokken."},
+"errorUnusedParam":function(d){return "Du la til en parameterblokk, men brukte den ikke i definisjonen. Husk å bruke parameteren ved å klikke \"Rediger\" og sette parameterblokk innenfor den grønne blokken."},
 "exampleErrorMessage":function(d){return "Funksjonen "+common_locale.v(d,"functionName")+" har én eller flere eksempler som trenger justering. Kontroller at de passer med din definisjon og svar på spørsmålet."},
 "examplesFailedOnClose":function(d){return "En eller flere av eksemplene dine samsvarer ikke definisjonen. Kontroller eksemplene før du lukker"},
 "extraTopBlocks":function(d){return "Du har ledige blokker."},

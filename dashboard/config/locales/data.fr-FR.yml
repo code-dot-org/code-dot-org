@@ -811,10 +811,10 @@
         starwars_blocks_congrats: 'Star Wars : Construire une Galaxie avec Code -
           Félicitations'
         mc_intro: Minecraft - Introduction
-        mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        mc_repeat: Minecraft - Répéter
+        mc_if_statements: Minecraft - Instructions conditionnelles
+        mc_congrats_share: Minecraft - Félicitations
+        mc_congrats_no_share: Minecraft - Félicitations
     callout:
       text:
         drag_blocks: Attrape un bloc « avancer plus » et attache-le sous l'autre bloc
@@ -929,12 +929,13 @@
         Infinity_move_collide_callout: Joue un son lorsque cet événement se produit.
         Infinity_repeat_callout: Place un bloc de déplacement à l'intérieur d'ici
         craft_run_button_callout: Clique sur « Démarrer » pour essayer ton programme
-        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
-          the other block
-        craft_callout_preplaced: We've put some blocks here to get you started
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can
-          you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command
-          to move forward?
+        craft_drag_block_callout: Fais glisser un bloc « moveForward(); » et emboite
+          le sous l'autre bloc
+        craft_callout_preplaced: Nous avons mis quelques blocs ici pour t'aider à
+          démarrer
+        craft_inside_repeat: Répète des actions en plaçant des blocs à l'intérieur
+        craft_callout_preplaced_house: Ce code va commencer à construire ta maison.
+          Peux-tu terminer ?
+        craft_what_is_iron: Extrais ce fer !
+        craft_callout_moveforward: Ce code recherchera de la lave, peux-tu ajouter
+          une commande pour avancer plus ?

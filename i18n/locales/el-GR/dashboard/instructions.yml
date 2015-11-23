@@ -221,30 +221,16 @@ el:
       4-5 Artist 2_instruction: Μπορείς να επαναλάβεις αυτόν τον κώδικα για να ολοκληρώσεις το τετράγωνο;
       4-5 Artist 3.5_instruction: 'Εντάξει, προσπάθησε να καταλάβεις τι θα συμβεί όταν εκτελέσεις τον κώδικα (ή πατήσεις "Εκτέλεση" για να τον δοκιμάσεις. Μετά, επανέλαβέ το όσες φορές χρειάζεται για να ολοκληρώσεις το σχέδιο. Τα χρώματα, πολύ πιθανόν, θα είναι διαφορετικά κάθε φορά.'
       4-5 Artist 3_instruction: |
-        This rectangular flower bed has a perimeter of 600.
-        The long side has a length of 200. Draw the rectangle.
-      4-5 Artist 4_instruction: |
-        How many degrees are in a circle?  Loop the blocks
-        to create a circle of colors.
+        Αυτό το ορθογώνιο κρεβάτι με τα λουλούδια έχει περίμετρο 600.
+        Η μακρυά πλευρά του έχει μήκος 200. Σχεδίασε ένα ορθογώνιο.
+      4-5 Artist 4_instruction: Πόσες μοίρες έχει ένας κύκλος; Επαναδιάταξε τα μπλοκ για να δημιουργήσεις ένα χρωματιστό κύκλο.
       4-5 Artist 5_instruction: Τι γωνία χρησιμοποιείς;
       4-5 Artist 6_instruction: Αυτό το ισόπλευρο τρίγωνο έχει γωνίες 60, 60, και 60 μοίρες. Κάθε πλευρά είναι 200 εικονοστοιχεία. Ολοκλήρωσε το σχέδιο.
-      4-5 Artist 7_instruction: |
-        This right triangle has angles of 30, 60, and 90
-        degrees. The slanted side's length is double the height of 100 pixels. Complete
-        the drawing.
-      4-5 Artist 8_instruction: |
-        The halfway line on a soccer field is perpendicular
-        to the sidelines. This field has a perimeter of 800 pixels and it is 240 pixels
-        long. How wide is it? Draw the bounds and the halfway line.
-      4-5 Artist 9_instruction: |
-        Draw the other half so that the design is symmetrical.
-        The triangles are equilateral and are 50 pixels long.
-      4-5 Artist Assessment 1_instruction: |
-        Assessment: Use a loop to draw the equilateral
-        triangle. Each side is 300 pixels.
-      4-5 Artist For Loops 1_instruction: |
-        Put the numbers 1 through 10 into the
-        width blocks and run the code.
+      4-5 Artist 7_instruction: Αυτό το τρίγωνο στα δεξιά αποτελείται από γωνίες των 30, 60 και 90 μοιρών. Το μήκος της λοξής πλευράς είναι διπλάσιο του ύψους 100 εικονοστοιχείων. Ολοκλήρωσε την ζωγραφιά.
+      4-5 Artist 8_instruction: Η μεσαία γραμμή ενός γηπέδου ποδοσφαίρου είναι κάθετη στις πλαϊνές γραμμές του. Η περιοχή του γηπέδου έχει περίμετρο 800 εικονοστοιχείων και έχει μήκος 240 εικονοστοιχείων. Πόσο φαρδύ είναι το γήπεδο; Ζωγράφισε τα όριά του και την μεσαία γραμμή του.
+      4-5 Artist 9_instruction: Σχεδίασε το άλλο μισό ώστε το σχέδιο να είναι συμμετρικό. Τα τρίγωνα είναι ισόπλευρα και έχουν μήκος 50 εικονοστοιχείων.
+      4-5 Artist Assessment 1_instruction: 'Αξιολόγηση: Χρησιμοποίησε ένα βρόχο για να σχεδιάσεις το ισόπλευρο τρίγωνο. Κάθε πλευρά έχει μήκος 300 εικονοστοιχείων.'
+      4-5 Artist For Loops 1_instruction: Βάλε τα νούμερα από 1 εώς 10 μέσα στα πλατιά μπλοκς και τρέξε τον κώδικα.
       4-5 Artist For Loops 11_instruction: |
         Complete the "for" block so that it
         counts 0, 20, 40, 60, 80... 200.
@@ -256,54 +242,24 @@ el:
         This design got started without a "for"
         loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
         the last line length is 250 pixels.
-      4-5 Artist For Loops 14_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.)
-      4-5 Artist For Loops 15_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)
-      4-5 Artist For Loops 3_instruction: |
-        How can we count from 1 to 50? Edit the
-        "for" block.
-      4-5 Artist For Loops 4_instruction: |
-        Complete the "for" block so that it
-        counts from 1 to 10 by 1.
+      4-5 Artist For Loops 14_instruction: 'Κάποιος ξεκίνησε τον κώδικα, αλλά μετά διαπίστωσε ότι πρέπει να υπάρχει πιο γρήγορος τρόπος! Χρησιμοποίησε ένα "επανέλαβε" μπλοκ για να αντικαταστήσεις τα μπλοκς και ολοκλήρωσε το τριγωνικό σπιράλ. (Στοιχείο: το μήκος της τελευταίας γραμμής είναι 300 εικονοστοιχεία.)'
+      4-5 Artist For Loops 15_instruction: 'Κάποιος ξεκίνησε τον κώδικα, αλλά μετά διαπίστωσε ότι πρέπει να υπάρχει πιο γρήγορος τρόπος! Χρησιμοποίησε ένα "επανέλαβε" μπλοκ για να αντικαταστήσεις τα μπλοκς και ολοκλήρωσε το εξάγωνο σπιράλ. (Στοιχείο: το μήκος της τελευταίας γραμμής είναι 200 εικονοστοιχεία.)'
+      4-5 Artist For Loops 3_instruction: 'Πώς μπορούμε να μετρήσουμε από το 1 ως το 50; Επεξεργάσου το μπλοκ "επανέλαβε".'
+      4-5 Artist For Loops 4_instruction: 'Ολοκλήρωσε το μπλοκ "επανέλαβε" ώστε να μετράει από το 1 ως το 10 κατά 1.'
       4-5 Artist For Loops 6_instruction: 'Σχεδίασε τετράγωνα με πλευρές 50, 60, 70, 80 και 90 εικονοστοιχείων. Θα χρειαστεί να χρησιμοποιήσεις τη συνάρτηση "σχεδίασε ένα τετράγωνο" 5 φορές.'
-      4-5 Artist For Loops 7_instruction: |
-        Draw the same squares but use a "count
-        with" block to change the sizes. Place the "counter" block in the "draw
-        a square" function. Hint: It's in the Variables category.
+      4-5 Artist For Loops 7_instruction: 'Σχεδίασε τα ίδια τετράγωνα αλλά χρησιμοποίησε τον "μετρητή" μπλοκ στην εντολή "σχεδίασε ένα τετράγωνο". Στοιχείο; Βρίσκεται στην κατηγορία "Διάφορα".'
       4-5 Artist For Loops 8_instruction: |
         Can you complete the program by placing
         the blocks inside a "for" block that counts from 10 to 200 by 10? You can
         find the "for" block in the Loops category.
       4-5 Artist For Loops 9_instruction: 'Αυτοί οι κύκλοι έχουν μέγεθος 5, 10, 15, 20, 25, 30, και 35. Σχεδιάσε τους κύκλους για τον βρόχο "for".'
-      4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
-      4-5 Artist Functions 10a_instruction: |
-        Put this code into the 'draw a snowflake'
-        function and replace the 50 with the parameter 'size'. The function is already
-        called on to make a snowflake that is 100 pixels.
-      4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
-      4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
-      4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
-      4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
+      4-5 Artist Free Draw 1_instruction: Ελεύθερη σχεδίαση! Σχεδίασε ότι σε εμπνέει να δημιουργήσεις.
+      4-5 Artist Functions 1_instruction: 'Χρησιμοποίησε την εντολή "επανέλαβε" για να σχεδιάσεις αυτό το τρίγωνο.'
+      4-5 Artist Functions 10a_instruction: 'Βάλε αυτόν τον κώδικα στην εντολή "σχεδίασε μία νιφάδα χιονιού" και αντικατέστησε το 50 με την παράμετρο "μήκος". Η εντολή είναι ήδη προγραμματισμένη να δημιουργήσει μια νιφάδα χιονιού 100 εικονοστοιχείων.'
+      4-5 Artist Functions 10b_instruction: 'Χρησιμοποίησε την εντολή "σχεδίασε μια νιφάδα χιονιού" για να δημιουργήσεις νιφάδες διάφορων μεγεθών.  Στοιχείο: Η πρώτη νιφάδα χιονιού έχει μήκος 25 και κάθε νιφάδα χιονιού είναι διπλάσια σε μέγεθος από την προηγούμενή της.'
+      4-5 Artist Functions 11_instruction: 'Η "σχεδίασε ένα εξάγωνο" εντολή χρησιμοποιεί την "σχεδίασε ένα τρίγωνο" εντολή. Ολοκλήρωσε την εντολή του εξαγώνου. Στοιχείο: ( Ένα εξάγωνο έχει 6 πλευρές, κάθε πλευρά έχει μήκος 100 εικονοστοιχείων.)'
+      4-5 Artist Functions 12_instruction: 'Ολοκλήρωσε την εντολή "σχεδίασε κύματα". Κάθε κύμα αποτελείται από το άνω και κάτω κύμα. Στοιχείο: Σχεδίασε 5 μπλε κύματα.'
+      4-5 Artist Functions 13 Free play_instruction: Να μερικές εντολές για να σχεδιάσεις πλανήτες, αστέρια. πυραύλους και robots. Χρησιμοποίησέ τες για να δημιουργήσεις εικόνες που μπορείς να μοιραστείς με τους φίλους σου.
       4-5 Artist Functions 14 Free play_instruction: |
         Here, we've provided you with
         several functions.  Use them any way you like inside of one or more loops
@@ -2727,68 +2683,68 @@ el:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
+        Το να πηγαίνεις προς ένα Αναρριχητικό Φυτό είναι κακή ιδέα.
+        Προχώρησε προσεκτικά τριγύρω τους για να φτάσεις στην ασφάλεια του σπιτιού σου.
       Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
+        Το μαλλί είναι πολύ σημαντικός πόρος. Πολλά πράγματα
+        φτιάχνονται από αυτό. Πήγαινε σε ένα δέντρο και χρησιμοποίησε την εντολή "κατάστρεψε μπλοκ" για
+        να το κόψεις.
       Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
+        Πρέπει να φτιάξουμε ένα σπίτι πριν δύσει
+        ο ήλιος. Τα σπίτια θέλουν πολύ ξύλο. Κόψε και τα 3 δέντρα.
       Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
+        Συγχαρητήρια! Ολοκλήρωσες
+        όλα τα παζλ μας! Τώρα εξόρυξε, χτίσε και δημιούργησε κάτι μοναδικό χρησιμοποιώντας
+        όλα όσα έμαθες μέχρι τώρα.
       Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
+        Αυτό το τοπίο είναι δικό σου για να παίξεις. Μπορείς
+        να επιλέξεις τί θα χτίσεις.
       Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
+        Ας φτιάξουμε το σπίτι μας! Αυτό το μέρος
+        φαίνεται καλό. Φτιάξε το σκελετό του στα μπλοκ χώματος.
       Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
+        Ας φτιάξουμε το σπίτι μας! Αυτό το μέρος
+        φαίνεται καλό. Φτιάξε το σκελετό του στα μπλοκ χώματος.
       Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
+        Μόλις ολοκληρωθεί ο τοίχος, ας φτιάξουμε
+        το υπόλοιπο σπίτι ακολουθώντας τα δικά σου σχέδια. Πρέπει να επαναλάβεις τον εαυτό σου
+        αρκετές φορές εδώ.
       Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
+        Μόλις ολοκληρωθεί ο τοίχος, ας φτιάξουμε
+        το υπόλοιπο σπίτι ακολουθώντας τα δικά σου σχέδια. Πρέπει να επαναλάβεις τον εαυτό σου
+        αρκετές φορές εδώ.
       Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
+        Μόλις ολοκληρωθεί ο τοίχος, ας φτιάξουμε
+        το υπόλοιπο σπίτι ακολουθώντας τα δικά σου σχέδια. Πρέπει να επαναλάβεις τον εαυτό σου
+        αρκετές φορές εδώ.
       Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
+        Χτίσε το υπόλοιπο σπίτι από
+        όποια υλικά σου αρέσουν. Η εντολή "επανάλαβε" θα σου είναι χρήσιμη.
       Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
+        Ας φτιάξουμε το σπίτι μας! Αυτό το μέρος
+        φαίνεται καλό. Φτιάξε τον σκελετό του σπιτιού στα μπλοκ χώματος.
       Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
+        Ήρθες πίσω στην επιφάνεια με πολλούς
+        από τους υπόγειους πόρους. Τώρα, θα φτιάξουμε μία γραμμή στον
+        χωματόδρομο από το σπίτι σου. Το πρώτο βήμα είναι να καθαρίσουμε το μονοπάτι. Ακολούθησε το μονοπάτι
+        και καθάρισε τα δέντρα.
       Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
+        Πρόσθεσε μία δεύτερη εντολή "πάμε εμπρός" για
+        να φτάσεις τα πρόβατα.
       Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
+        Κάθε σπίτι ξεκινά με έναν τοίχο. Φτιάξε το
+        πρώτο μέρος του σπιτιού σου βάζοντας τις εντολές "βάλε" και "πάμε εμπρός" μέσα
+        στο βρόχο επανάληψης.
       Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
+        Είναι καλό να προγραμματίζουμε. Βάλε καλλιέργειες σε
+        κάθε πλευρά του νερού ώστε να μην πεινάσεις αργότερα.
       Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
+        Πολύ καλά! Μάζεψες αρκετούς από τους
+        πόρους και έφτιαξες ένα καλό σπίτι. Τώρα βάλε ράγες από την άκρη του χάρτη
+        προς την πόρτα του σπιτιού σου.
       Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+        Ώρα για κουρά προβάτων! Χρησιμοποίησε την εντολή "κούρεψε"
+        για να μαζέψεις μαλλί από όλα τα πρόβατα.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -4402,22 +4358,22 @@ el:
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
       Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
+        Η λάβα κρύβεται πίσω από κάποια από αυτά
+        τα μπλοκ, τα οποία πρέπει να καλύψεις πριν προχωρήσεις μπροστά. Μία εντολή "αν"
+        θα είναι χρήσιμη εδώ. Πρόσθεσε μία εντολή "πάμε εμπρός" στο σωστό μέρος
+        για να εξορύξεις αυτά τα μπλοκ.
       Underground If Statements_instruction: |
-        Now things are getting tricky. Mine
-        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
-        over any lava you uncover.
+        Τώρα τα πράγματα γίνονται δύσκολα. Εξόρυξε
+        3 κοκκινόπετρες, αλλά μην πέσεις μέσα στη λάβα. Χρησιμοποίησε μία εντολή "αν" για να βάλεις πλακόστρωτο
+        πάνω σε κάθε λάβα που αποκαλύπτεις.
       Underground Iron_instruction: |
-        Walking into molten lava is a bad idea. Place
-        cobblestone to create a bridge, then mine at least two of the iron blocks.
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7 redstone! Try using a repeat command inside a repeat command to walk in\na square.\r\n"
+        Το να περπατάς πάνω σε τηγμένη λάβα είναι κακή ιδέα. Βάλε
+        πλακόστρωτο για να φτιάξεις μία γέφυρα και μετά εξόρυξε τουλάχιστον δύο μπλοκ σιδήρου.
+      Underground Mine in a Circle_instruction: "Βρες έναν τρόπο για να πάρεις 5 διαμάντια και\n7 κοκκινόπετρες! Δοκίμασε να χρησιμοποιήσεις μία εντολή επανάληψης μέσα στην εντολή επανάληψης για να περπατήσεις\nσε τετράγωνο.\r\n"
       Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
-      Underground Test Level_instruction: Collect all of the minerals!
+        Θα βρεις τους πιο πολύτιμους πόρους
+        υπόγεια, αλλά μπορεί να είναι σκοτεινά. Βάλε τουλάχιστον δύο δαυλούς και εξόρυξε τουλάχιστον
+        2 κάρβουνα.
+      Underground Test Level_instruction: Μάζεψε όλα τα ορυκτά!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

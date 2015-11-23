@@ -67,7 +67,7 @@
   "dropletBlock_declareAssign_x_promptNum_param1_description":"The string the user will see in the pop up when asked to enter a value",
   "dropletBlock_declareAssign_x_promptNum_signatureOverride":"Prompt the user for a numerical value and store it",
   "dropletBlock_declareAssign_x_signatureOverride":"Mendeklarasikan sebuah variabel",
-  "dropletBlock_declareNoAssign_x_description":"Declares a variable with the given name after 'var'",
+  "dropletBlock_declareNoAssign_x_description":"Declares a variable with the given name.",
   "dropletBlock_declareNoAssign_x_signatureOverride":"Mendeklarasikan sebuah variabel",
   "dropletBlock_divideOperator_description":"Membagi dua nomor",
   "dropletBlock_divideOperator_signatureOverride":"Membagi operator",

@@ -1501,47 +1501,47 @@ cs:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
+        text: Jménuji se Jens Bergensten, známý pod jménem Jeb. Pracuji jako hlavní vývojář na Minecraftu, zde v Mojangu ve Stockholmu. Myslím, že mi bylo jedenáct, možná dvanáct, kdy jsem začal s programováním. Chtěl jsem dělat hry. Jeden z přátel mého otce mi řekl, že pro hry se musím naučit programovat. A tak jsem se začal učit. Mám rád návrh a promýšlení architektura hry. To je to, co se mi opravdu líbí na Minecraftu.
       2:
         image: notes/mc_intro_2.JPG
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: Během následující hodiny se naučíš základy informatiky programováním Alexe nebo Steva, abys ses tak posunul do simulovaného kousku světa Minecraftu.
       3:
         image: notes/mc_intro_3.JPG
-        text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+        text: Tradiční programování je obvykle v textu, dnes však budeme používat blokově systém používající vizuální bloky. Ty můžeš přetahovat a pouštět k psaní programů. Pod kapotou tak se vytváří Javascript kód.
       4:
         image: notes/mc_intro_4.JPG
-        text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work."
+        text: Pojmy, které se naučíš, počítačoví programátoři používají denně a jsou základem informatiky. Tady v Mojangu používáme tyto stejné koncepty, aby Minecraft pracoval.
       5:
         image: notes/mc_intro_5.JPG
-        text: "Before you start, you'll pick your character. I'm going to choose Alex. Let's build code for a program that will help her move around the screen."
+        text: Než začneš, vyber si svoji postavu. Vyberu si Alexe. Budujeme kód pro program, který mu pomůže pohybovat po obrazovce.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft playspace where your program will run. The instructions for each level are written below.
+        text: Tvoje obrazovka je rozdělená do tří hlavních částí. Na levé straně je hrací místo pro Minecraft., Zde tvůj program bude spuštěn. Pokyny pro jednotlivé úrovně jsou napsané dole.
       7:
         image: notes/mc_intro_7.JPG
-        text: "This middle area is the toolbox and each of these blocks is a command that directs Alex's actions."
+        text: Tato střední oblast je panel nástrojů a každý z těchto bloků je povel řídící akce Alexe.
       8:
         image: notes/mc_intro_8.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Prázdné místo na pravé straně se nazývá pracovní prostor. Tam budeme stavět náš program.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click run, what happens? Alex moves forward one space on the grid.
+        text: Když přetáhneme blok moveForward(); do našeho pracovního prostoru a klepnete na tlačítko run. Co se stane? Alex se pohybuje vpřed o jedno pole na mřížce.
       10:
         image: notes/mc_intro_10.JPG
-        text: "And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the turnRight(); block and I'll drag it underneath my moveForward(); block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+        text: A co, když chceme udělat něco poté, co se přesuneme dopředu o jedno pole? Můžeme přidat další blok do našeho programu. Vyberu si blok turnRight(); a přetáhnu pod moveForward(); blok, dokud se neobjeví tato oranžová čára. Pak to tam upustím a dva bloky se přichytí dohromady. Když stiskneme znova run, Alex bude provádět příkazy v našem pracovním prostoru od shora dolů.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back to the toolbox.
+        text: Když chceš někdy odstranit blok, stačí jej přetáhnout ze zásobníku zpět do panelu nástrojů.
       12:
         image: notes/mc_intro_12.JPG
-        text: "To undo your changes and get back to how the level started, use the Start Over button in the top right corner of the workspace. One more thing: you see the little triangle on the turn blocks? Anytime you see these triangles, it means that you can pick a different option. Let's start coding!"
+        text: 'Ke zrušení změn a dostat se zpět na počáteční úroveň, použij tlačítko Start Over v pravém horním rohu pracovního prostoru. Ještě jedna věc: vidíš malý trojúhelník na otáčrcích blocích? Kdykoli uvidíš tyto trojúhelníky, znamená to, že můžeš si vybrat jinou možnost. Začněme s kódováním!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
+        text: Jsem Lydie Winters, ředitelka Mojang značky a udělali jsme malou hru názvanou Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+        text: Mojí oblíbenou věcí, co dělám v Minecraftu, je zkoumání. Mám ráda dobrodružství v jeskyních a vidět, co mohu najít. Jako někdo, kdo není programátor, jsem opravdu nadšený, projít Minecraft ponaučení a skutečně se učit sám kódování.
       3:
         image: notes/mc_repeat_3.JPG
         text: The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops.

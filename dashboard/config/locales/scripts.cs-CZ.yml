@@ -1612,8 +1612,15 @@
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hodina kódu
-          description_short: Prozkoumejte svět Minecraftu prostřednictvím kódu
-          description: Používej bloky kódu, abys vzal Steva nebo Alex na dobrodružství
-            po Minecraft světu
+          title: Hodina kódu Minecraftu
+          description_short: Prozkoumej svět Minecraftu pomocí kódu
+          description: Používej bloky kódu, abys vzal Steva nebo Alexe na dobrodružství
+            po Minecraft světě
           Hour of Code 2015: Hodina kódu 2013
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit

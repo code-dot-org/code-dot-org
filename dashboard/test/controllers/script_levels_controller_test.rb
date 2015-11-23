@@ -42,7 +42,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should make script level pages uncachable by default' do
     get_show_script_level_page(@script_level)
 
-    # Make sure the content is not cachable by default
+    # Make sure the content is not cacheable by default
     assert_response :success
 
     assert_caching_disabled response.headers['Cache-Control']
@@ -56,6 +56,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_caching_enabled response.headers['Cache-Control'],
                            ScriptLevelsController::DEFAULT_PUBLIC_CLIENT_MAX_AGE,
                            ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE
+
+    puts "***with public caching cookies=#{response.headers}"
   end
 
   test 'should allow public caching for script level pages with dynamic lifetime' do
@@ -72,6 +74,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: false)
     get_show_script_level_page(@script_level)
     assert_caching_disabled response.headers['Cache-Control']
+
+    puts "***without public caching cookies=#{response.headers}"
   end
 
   def get_show_script_level_page(script_level)

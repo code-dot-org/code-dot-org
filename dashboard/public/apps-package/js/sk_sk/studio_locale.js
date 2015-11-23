@@ -157,7 +157,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "actor":function(d){return "postava"},
 "addCharacter":function(d){return "pridaj"},
 "addCharacterTooltip":function(d){return "Pridaj postavu na scénu."},
-"addPoints10":function(d){return "add 10 points"},
+"addPoints10":function(d){return "pridaj 10 bodov"},
 "addPoints50":function(d){return "add 50 points"},
 "addPoints100":function(d){return "add 100 points"},
 "addPoints300":function(d){return "add 300 points"},

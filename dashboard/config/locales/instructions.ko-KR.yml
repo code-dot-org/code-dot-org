@@ -247,7 +247,7 @@
       2-3 Maze 7_instruction: 초록색 나쁜 놈에게 데려다 줘!(TNT 폭탄 조심)
       2-3 Maze 8_instruction: 나를 돼지에게 데려가줘!
       2-3 Maze 9_instruction: 초록색 나쁜 놈에게 데려다 줘!(TNT 폭탄 조심)
-      2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
+      2-3 Maze Loops 1_instruction: 5 개의 블록들만 사용해서 돼지로 이동시켜 주세요.
       2-3 Maze Loops 17_instruction: 나를 해바라기로 데려가줘!
       2-3 Maze Loops 18_instruction: 나를 해바라기로 데려가줘!
       2-3 Maze Loops 19_instruction: 나를 해바라기로 데려가줘!
@@ -320,178 +320,103 @@
         160, 140, 120...0.
       4-5 Artist For Loops 13_instruction: '이 디자인은 "for" 루프 없이 시작되었고 너무 많은 블록을 사용하고
         있습니다. "for" 블록을 사용하여 이 나선형을 완성하세요. 힌트: 마지막 줄의 길이는 250 픽셀입니다.'
-      4-5 Artist For Loops 14_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.)
-      4-5 Artist For Loops 15_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)
+      4-5 Artist For Loops 14_instruction: '코드를 배우기 시작하고나면 더 빠른 방법들이 있다는 것을 알게 됩니다.
+        삼각 나선구조를 완셩하기 위해서 사용된 블록들을 "for" 블록으로 바꿔보세요. (힌트: 마지막 선의 길이는 300 픽셀입니다.)'
+      4-5 Artist For Loops 15_instruction: '코드를 배우기 시작하고나면 더 빠른 방법들이 있다는 것을 알게 됩니다.
+        육각 나선구조를 완셩하기 위해서 사용된 블록들을 "for" 블록으로 바꿔보세요. (힌트: 마지막 선의 길이는 200 픽셀입니다.)'
       4-5 Artist For Loops 3_instruction: 어떻게 하면 우리가 1에서 50까지 셀 수 있을까요? "for"블록으로
         만들어 보세요.
       4-5 Artist For Loops 4_instruction: 1부터 10까지 1씩 증가하도록 "for' 블록을 완성시키세요.
-      4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
-      4-5 Artist For Loops 7_instruction: |
-        Draw the same squares but use a "count
-        with" block to change the sizes. Place the "counter" block in the "draw
-        a square" function. Hint: It's in the Variables category.
-      4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
+      4-5 Artist For Loops 6_instruction: 50, 60, 70, 80, 90 픽셀 크기의 정사각형들을 그려보세요.
+        "사각형 그리기" 함수 블록을 5 번 사용면 됩니다.
+      4-5 Artist For Loops 7_instruction: '같은 삼각형들을 그려봅시다. 이번에는 "count with" 블록을 이용해서
+        크기들을 바꿔보세요. "사각형 그리기" 함수 안에 "카운터" 블록을 넣어보세요. 힌트: 변수 카테고리에 있습니다.'
+      4-5 Artist For Loops 8_instruction: 10부터 200까지 10씩 올리며 카운트하면서 반복하도록 "for" 블록
+        안에 다른 블록들을 넣어 완성 시켜주세요. 반복 카테고리에서 "for" 블럭을 찾을 수 있습니다.
       4-5 Artist For Loops 9_instruction: 이 원들은 5, 10, 15, 20, 25, 30, 35의 크기를 갖습니다.
         "for" 블록을 사용해서 원들을 만들어보세요.
       4-5 Artist Free Draw 1_instruction: 자유시간! 그리고 싶은 것을 그려 보세요.
       4-5 Artist Functions 1_instruction: '''반복 루프''를 사용해서 이 삼각형을 그려보세요.'
-      4-5 Artist Functions 10a_instruction: |
-        Put this code into the 'draw a snowflake'
-        function and replace the 50 with the parameter 'size'. The function is already
-        called on to make a snowflake that is 100 pixels.
-      4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
-      4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
-      4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
-      4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
-      4-5 Artist Functions 14 Free play_instruction: |
-        Here, we've provided you with
-        several functions.  Use them any way you like inside of one or more loops
-        to make pictures that you can share with your friends. Click 'Run' to see
-        an example.
-      4-5 Artist Functions 15 Assessment_instruction: |
-        Assessment:  Use the "draw
-        a square" function to create the squares.  The squares are 50, 100, and 150
-        pixels.
-      4-5 Artist Functions 2a_instruction: |
-        Now put these blocks into a new function
-        called "draw a small triangle" and call on it.
-      4-5 Artist Functions 2b_instruction: |
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
+      4-5 Artist Functions 10a_instruction: 이 코드를 "눈송이 그리기" 함수 안에 넣고 50 값을 "크기" 변수로
+        바꿔주세요. 이 함수는 100 픽셀 크기의 눈송이들을 만들기 위해서 사용되었습니다.
+      4-5 Artist Functions 10b_instruction: '"눈송이 그리기" 함수를 이용해서 서로 다른 크기의 눈송이들을 만들어
+        보세요. 힌트: 첫 번째 눈송이의 길이는 25이고 그 이후로는 2배씩 커지면 됩니다.'
+      4-5 Artist Functions 11_instruction: '이 "육각형 그리기" 함수는 "삼각형 그리기" 함수를 사용합니다. (힌트:
+        육각형은 6개의 변들로 이루어져 있으며, 각 변의 길이는 100 픽셀입니다.)'
+      4-5 Artist Functions 12_instruction: '"웨이브 그리기" 함수를 완성해 봅시다. 각 웨이브는 위아래로 한 번씩
+        구부러진 모양입니다. 힌트: 5개의 파란 웨이브를 그려보세요.'
+      4-5 Artist Functions 13 Free play_instruction: 행성, 별, 로켓, 로봇을 그리기 위한 함수들이 여기
+        있습니다. 함수들을 자유롭게 이용해서 여러분이 원하는 그림들을 그리고 친구들에게 공유해 보세요.
+      4-5 Artist Functions 14 Free play_instruction: 여기 여러가지 함수들을 만들어 드렸습니다. 한 두개
+        이상의 반복 구조 안에 넣어서 사용해 보세요. 여러분이 원하는 그림들을 만들어서 친구들에게 공유해 보세요. "실행" 을 눌러 예시를
+        살펴보세요.
+      4-5 Artist Functions 15 Assessment_instruction: '형성평가: "사각형 그리기" 블록을 사용해 사각형들을
+        그려보세요. 사각형들의 각 변의 길이는 50, 100, 15 픽셀입니다.'
+      4-5 Artist Functions 2a_instruction: 자 이제 이 블록들을 "작은 삼각형 그리기" 라는 새로운 함수에 넣고,
+        사용해 보세요.
+      4-5 Artist Functions 2b_instruction: 자 이제 주어진 블록들을 이용해서 "작은 삼각형 그리기" 함수를 만들어보세요.
       4-5 Artist Functions 3_instruction: |
         Now create the functions "draw a medium
         triangle" and "draw a large triangle". The "draw a small triangle" function
         is done for you. The triangles have side lengths of 50 (small), 100 (medium),
         and 150 (large).
-      4-5 Artist Functions 4_instruction: |
-        This new "draw a triangle" function
-        has a parameter and can do the work of all three functions before. Draw the
-        same triangles using this new function.
-      4-5 Artist Functions 5_instruction: |
-        Can you modify the "draw a triangle"
-        function into a "draw a square" function to change the drawing?
-      4-5 Artist Functions 6_instruction: |
-        Use the "draw a square" and "draw a
-        triangle functions" to draw a house. (Hint: The square's sides are 200 pixels)
-      4-5 Artist Functions 6b_instruction: |
-        Use the draw a square and triangle functions
-        along with other blocks to create a house by adding them to the 'draw a house"
-        function and calling it.
-      4-5 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        houses that are 100 pixels and 50 pixels. The two houses are separated by
-        50 pixels.
-      4-5 Artist Functions 8_instruction: |
-        The "draw a flower" function has a parameter
-        that allows you to set the stem height.  Set it to 200 and see what happens.
-      4-5 Artist Functions 9_instruction: |
-        Draw these 3 flowers. The first one's
-        height is 100 and the next flower is always 50 pixels more than the height
-        of the previous one. The flowers are also 100 pixels apart.
-      4-5 Artist Patterns 1_instruction: |
-        Can you draw this square using a loop?
-        Each side is 20 pixels long.
-      4-5 Artist Patterns 10_instruction: |
-        This code draws two rows of hexagons -
-        loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need
-        to jump back 120 pixels in your outermost loop to make sure the artist doesn't
-        draw off the screen.
-      4-5 Artist Patterns 11_instruction: |
-        How many times do you need to loop this
-        to draw a half circle? Hint: if there's 360 degrees in a circle and each
-        loop moves 3 degrees, how many times would you need to loop draw a full circle?
-      4-5 Artist Patterns 12_instruction: |
-        If you copy that loop and turn left instead
-        of right, what happens? Can you repeat that to draw this wave?
-      4-5 Artist Patterns 13_instruction: |
-        Now let's loop that whole thing four
-        times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! If looping a 3 degree turn 60 times makes a half circle,
-        which of these blocks of code will make a quarter circle for the corners?
-      4-5 Artist Patterns 2_instruction: |
-        If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add to your outer loop
-        to make sure all 15 squares line up next to each other?
-      4-5 Artist Patterns 3_instruction: |
-        Now let's go one level deeper! We've
-        nested that whole block of code into another loop, but you need to get the
-        artist back in place to draw the next line. Which of these code blocks can
-        you place at the end of the outermost loop to draw the whole grid?
-      4-5 Artist Patterns 4_instruction: |
-        This diamond has 50 pixel sides and angles
-        of 120 and 60 degrees. Use a loop to draw it.
-      4-5 Artist Patterns 5.5_instruction: |
-        How many times do you need to repeat
-        this block to draw the full grid of diamonds?
-      4-5 Artist Patterns 5_instruction: |
-        Let's repeat that to make a row of 6 diamonds.
-        Notice that we changed our diamond code to repeat 3 times instead of 2 - why
-        do you think that is?
-      4-5 Artist Patterns 6_instruction: |
-        How many times do you need to repeat this
-        block to draw the full grid of diamonds?
-      4-5 Artist Patterns 7_instruction: |
-        Let's modify the code from the last puzzle
-        to make this more complex pattern. Notice how the diamonds overlap now, try
-        changing the first "jump backwards" from 100 to 50 (half as far) - now how
-        far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
-      4-5 Artist Patterns 9.5_instruction: |
-        Let's loop this code to draw two rows
-        of hexagons. Notice how our second row is shifted to the right.
-      4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times to draw the
-        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
-        to right.
-      4-5 Artist Patterns Free Play_instruction: |
-        Free play - try your hand at making
-        a pattern of your own!
-      4-5 Bee Conditionals - FC Test_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      4-5 Artist Functions 4_instruction: 새로운 "삼각형 그리기" 함수는 매개변수가 있기 때문에, 이전에 보았던
+        3개의 다른 함수 모두의 기능을 한 번에 할 수 있습니다. 새로운 함수를 사용해서 같은 크기의 삼각형을 3개 그려보세요.
+      4-5 Artist Functions 5_instruction: '"삼각형 그리기" 함수를 수정해서 "사각형 그리기" 함수로 만들어 주세요.'
+      4-5 Artist Functions 6_instruction: '"사각형 그리기", "삼각형 그리기" 함수를 이용해 집을 그려보세요.
+        (힌트: 사각형의 한 변의 길이는 200 픽셀입니다.)'
+      4-5 Artist Functions 6b_instruction: 삼각형/사각형 그리기 함수들을 추가해서 "집 그리기" 함수를 만들어 사용해
+        보세요.
+      4-5 Artist Functions 7_instruction: '"집 그리기" 함수를 이용해서 100, 50 픽셀의 집들을 그려보세요.
+        두 집은 50 픽셀 만큼 떨어져 있습니다.'
+      4-5 Artist Functions 8_instruction: '"꽃 그리기" 함수는 줄기의 높이를 설정할 수 있는 매개 변수가 있습니다.
+        높이를 200 으로 설정한 다음에 어떻게 되나 살펴보세요.'
+      4-5 Artist Functions 9_instruction: 3개의 꽃을 그리세요. 첫 번째 꽃은 높이 100, 그 다음에는 50 만큼
+        씩 커지게 그리면 됩니다. 꽃들은 100 픽셀 만큼씩 떨어져 있습니다.
+      4-5 Artist Patterns 1_instruction: 반복 구조를 이용해서 이 사각형을 그려주세요. 각 변은 20 픽셀 입니다.
+      4-5 Artist Patterns 10_instruction: '이 코드는 두 줄의 육각형을 만들어 줍니다. - 전체 벌집을 다 그리기
+        위해서 4번 반복 실행하면 됩니다. 힌트: 가장 마지막 반복에서 120 픽셀 만큼 뒤로 뛰어야, 화가가 화면을 벗어나지 않습니다.'
+      4-5 Artist Patterns 11_instruction: '반 원을 그리기 위해서 얼마나 반복시켜야 할 까요? 힌트: 각 원의 내각은
+        360도이고, 한 번 반복시키면 3도 만큼씩 돌아갑니다. 완전한 원을 만들기 위해서는 몇 번이나 반복해야 할까요?'
+      4-5 Artist Patterns 12_instruction: 반복하는 것을 복사해서 오른쪽으로 돌기를 왼쪽으로 돌기로 바꾸면 어떻게
+        될까요? 이 웨이브를 만들기 위해서 반복해 주세요.
+      4-5 Artist Patterns 13_instruction: 그림 틀을 만들기 위해서 전체를 4번 반복시켜보세요. 모서리에 주의하세요
+        - 90도만 돌면 안됩니다! 3도를 60번 돌면 반 원을 만들 수 있습니다. 어떻게 사분원(1/4 원) 을 만들 수 있을까요?
+      4-5 Artist Patterns 2_instruction: 어떤 반복 구조 안에 다른 반복 구조를 넣으면, 중첩 반복이라고 부릅니다.
+        15개의 모든 사각형들이 한 줄로 서려면 바깥쪽 반복 구조를 어떻게 추가해야 할까요?
+      4-5 Artist Patterns 3_instruction: 좀더 어려운 것을 해보아요! 반복 구조 안에 반복 구조를 넣어봤는데, 다음
+        줄을 그리려면 화가를 다시 이전 위치로 돌려 놓아야 해요. 전체 격자를 그리기 위해서 가장 바깥쪽 반복의 끝에 어떤 블록들을 놓아야
+        할까요?
+      4-5 Artist Patterns 4_instruction: 이 다이아몬드는 각 변이 50 픽셀이고, 120도 각과 60도 각으로 이루어져
+        있습니다. 다이아몬드를 그려보세요.
+      4-5 Artist Patterns 5.5_instruction: 다이아몬드 격자를 그리기 위해서는 얼마나 많이 반복해야 할까요?
+      4-5 Artist Patterns 5_instruction: 자 이제 한 줄에 6개의 다이아몬드를 그려보세요. 다이아몬드 코드에서 2번
+        반복하던 것을 3번 반복으로 고친것을 잘 보세요. - 왜 그랬을까요?
+      4-5 Artist Patterns 6_instruction: 다이아몬드 격자를 그리기 위해서는 얼마나 많이 반복해야 할까요?
+      4-5 Artist Patterns 7_instruction: 이전 퍼즐에서 사용했던 코드를 변형해서 더 복잡한 패턴을 만들어보세요. 다이아몬드들이
+        얼마나 겹쳐 그려지는지 살펴보고, 첫 번째 "뒤로 점프하기"를 100에서 50사이 정도로 바꿔보세요. - 그리고 나서 두 번째 "뒤로
+        점프하기"는 얼마나 더 멀리 해야 할까요?
+      4-5 Artist Patterns 8_instruction: 반복 구조를 사용해서 각 변의 길이가 40 픽셀이면서 내각의 크기가 60
+        도인 육각형을 만들어 보세요.
+      4-5 Artist Patterns 9.5_instruction: 이 코드를 반복시켜서 두 줄로 육각형들을 만들어보세요. 두 번째 줄이
+        오른쪽으로 얼마나 빗겨 그려져 있는지 살펴보세요.
+      4-5 Artist Patterns 9_instruction: '주어진 코드를 3번 반복시켜서 모든 줄을 그려보세요. 힌트: 각각의 6각형들은
+        너비가 80픽셀입니다.'
+      4-5 Artist Patterns Free Play_instruction: 마음대로 그리기 - 원하는 패턴을 직접 만들어보세요.
+      4-5 Bee Conditionals - FC Test_instruction: 꿀벌이 꽃꿀을 원합니다. 모두 꽃은 아니기 때문에, 안개
+        구름 아래에 꽃이 숨어있는지 모두 살펴보아야 합니다. 꽃이면 꽃꿀을 모으면 됩니다.
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: |
-        The bee can't tell if this is a flower
-        or a honeycomb. Gather nectar only from flowers, but first check if it is
-        a flower or a honeycomb.
+      4-5 Bee Conditionals 1_instruction: 꿀벌은 꽃인지 벌집인지 말할 수 없습니다. 꽃인 경우에만 꽃꿀을 모아야
+        하는데, 꽃인지 벌집인지 먼저 확인해 보세요.
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right now. Not
-        all objects are flowers, so check underneath EVERY CLOUD to see if it is hiding
-        a flower. If it is, then you can gather nectar.
+      4-5 Bee Conditionals 2_instruction: 꿀벌이 꽃꿀을 원합니다. 모두 꽃은 아니기 때문에, 안개 구름 아래에 꽃이
+        숨어있는지 모두 살펴보아야 합니다. 꽃이면 꽃꿀을 모으면 됩니다.
       4-5 Bee Conditionals 3_instruction: 이제 벌이 꿀을 만들고 싶어합니다. 벌집에서만 꿀을 만들도록 체크하세요.
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
@@ -499,35 +424,24 @@
         a flower, else to make honey (because it is a honeycomb).
       4-5 Bee Conditionals 4_instruction: 알 수 없는 개체는 꽃이나 벌집일 수 있습니다. "if/else"블럭을
         사용해서 꽃이면 넥타를 수집하고, 아니면(벌집이라면) 꿀을 만들도록 하세요.
-      4-5 Bee Conditionals 5_instruction: |
-        There might be a flower or a honeycomb
-        under those clouds. Use the if/else block to collect nectar if there is a
-        flower, else to make honey (because there is a honeycomb).
+      4-5 Bee Conditionals 5_instruction: 이 안개 구름들 아래에는 꽃이나 벌집이 있을 수 있습니다. 만약/그렇지않으면
+        블록을 이용해서 꽃이면 꽃꿀을 모으고 아니면 (즉, 벌집이라면) 꿀을 만들도록 해보세요.
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: |
-        This purple flower may have either 3,
-        2, or 1 nectar. Here an if-else block is combined with another if-else block
-        to create an if, else-if, else block. Complete the solution to collect the
-        unknown amount of nectar.
-      4-5 Bee Conditionals 7_instruction: |
-        Remember that purple flowers can have
-        3, 2, or 1 nectars. Complete the "check purple flower" function and use
-        it to collect all of the nectar at the flowers.
-      4-5 Bee Conditionals 8_instruction: |
-        Write inside the function "check flower
-        make honey". Your function should check if the purple flower has 3, 2, or
-        1 nectar and collect all of the nectar. Then, move forward and make honey.
+      4-5 Bee Conditionals 6_instruction: 이 분홍 꽃에는 꽃꿀이 3, 2, 1 만큼 있을 수 있습니다. 여기 만약~아니면
+        블록은 다른 만약~아니면 블록과 결합되어있는 것으로, 만약/만약~아니면/아니면 영역으로 구분되어 있습니다. 꽃꿀의 양을 모를 때에도
+        꽃꿀을 모을 수 있도록 방법을 만들어보세요.
+      4-5 Bee Conditionals 7_instruction: 분홍 꽃은 꽃꿀이 3, 2, 1 중 하나입니다. "분홍 꽃 확인" 함수를
+        완성하고 이용해서 꽃의 모든 꽃꿀들을 모을 수 있도록 해보세요.
+      4-5 Bee Conditionals 8_instruction: '"꿀을 만드는지 확인" 함수의 안쪽을 완성해 주세요. 분홍 꽃의 꽃꿀이
+        3, 2, 1 인 경우에는 모든 꽃꿀을 모으고, 그 후에 앞으로 이동해서 꿀을 만들면 됩니다.'
       4-5 Bee Conditionals Assessment 1_instruction: |
-        Assessment: This code is wrong.
-        Complete the "get nectar or make honey" function, then call it to collect
-        all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars.
-      4-5 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Can you
-        fix them?
+        형성평가: 이 코드에는 오류가 있습니다.
+        "꽃꿀을 모으거나 꿀 만들기" 함수를 완성해서, 모든 꽃꿀을 모으거나 꿀을 만들도록 만들어 주세요. 분홍 꽃에는 3, 2, 1 개의 꽃꿀이 있을 수 있습니다.
+      4-5 Bee Debugging 1_instruction: 이 블록들이 왜 안되는지 진짜 잘 모르겠어요. 고쳐주세요.
       4-5 Bee Debugging 10_instruction: 에러를 찾아서 수정하세요.
       4-5 Bee Debugging 11_instruction: 이 계산이 맞나요?
       4-5 Bee Debugging 2_instruction: 벌이 넥타를 모아서 꿀을 만들 수 있도록 도와주세요.
@@ -544,32 +458,22 @@
       4-5 Bee Nested Loops 2_instruction: |
         Collect all of the nectar from each flower.
         Use a nested loop.
-      4-5 Bee Nested Loops 3_instruction: |
-        Collect all of the nectar by putting the
-        starter code into a nested loop.
+      4-5 Bee Nested Loops 3_instruction: 중첩 반복 안에 시작 코드를 넣어서 모든 꽃꿀을 모아보세요.
       4-5 Bee Nested Loops 4_instruction: |
         Collect all of the nectar from each flower
         and make honey at each honeycomb. Use a nested loop.
-      4-5 Bee Nested Loops 5_instruction: |
-        Collect all of the nectar by creating
-        a nested loop.
+      4-5 Bee Nested Loops 5_instruction: 중첩 반복 구조를 만들어서 모든 꽃꿀을 모아보세요.
       4-5 Bee Nested Loops 6_instruction: 모든 넥타를 수집하세요.
-      4-5 Bee Nested Loops 7_instruction: |
-        Put this loop inside another loop to create
-        a nested loop and collect all of the nectar from the flowers.
+      4-5 Bee Nested Loops 7_instruction: 반복 구조를 다른 반복 구조 안에 넣어 중첩 반복을 만든 후 꽃에서 모든
+        꽃꿀을 모을 수 있도록 해보세요.
       4-5 Bee Nested Loops 8_instruction: |
         Collect all of the nectar from these flowers
         by nesting a while loop. Replace the inner repeat times block with a while
         block.
-      4-5 Bee Nested Loops 9_instruction: |
-        Collect all of the nectar from these flowers
-        by nesting a while loop inside a repeat.
-      4-5 Bee Nested Loops Assessment 1_instruction: |
-        Assessment - Collect all of
-        the nectar and make all the honey by using loops.
-      4-5 Bee Nested Loops Rows_instruction: |
-        Gather nectar from the rows of flowers!
-        Use a nested loop.
+      4-5 Bee Nested Loops 9_instruction: 반복 구조 안에 반복 구조를 중첩시켜서 이 꽃들로 부터 모든 꽃꿀을 모아보세요.
+      4-5 Bee Nested Loops Assessment 1_instruction: '형성평가: 반복 구조들을 사용해서 모든 꽃꿀을 모아서
+        꿀을 만드세요.'
+      4-5 Bee Nested Loops Rows_instruction: 꽃들로 부터 꽃꿀을 모으세요. 중첩 반복을 사용하면 됩니다.
       4-5 Maze 1 (copy 1)_instruction: 친애하는 인간. 나 좀비. 해바라기..로..가야해.
       4-5 Maze 1_instruction: 친애하는 인간. 나 좀비. 해바라기..로..가야해.
       4-5 Maze 10_instruction: 네 개의 블록만 사용해서 해바라기에게 갈 수 있나요?
@@ -588,16 +492,12 @@
       4-5 Maze 6 (copy 1)_instruction: 가능한 제일 적은 수의 블럭을 사용해서 이 퍼즐을 해결할 수 있나요?
       4-5 Maze 6_instruction: 가능한 제일 적은 수의 블럭을 사용해서 이 퍼즐을 해결할 수 있나요?
       4-5 Maze 7_instruction: 친애하는 인간. 나 좀비. 해바라기..로..가야해.
-      4-5 Maze 8_instruction: |
-        Use the "repeat" block to get the zombie to the
-        sunflower. (Avoid the chompers!)
-      4-5 Maze 9_instruction: Create a loop with the "repeat until" block.
-      4-5 Maze Assessment 1_instruction: 'Assessment: Get to the sunflower.'
+      4-5 Maze 8_instruction: '"반복" 블럭을 사용해서 좀비가 해바라기로 가도록 해주세요. (식충식물들은 피해야 합니다!)'
+      4-5 Maze 9_instruction: '"~할 때까지 반복" 블럭으로 반복을 만들어보세요.'
+      4-5 Maze Assessment 1_instruction: '형성평가: 해바라기로 가기'
       4-5 Maze Conditionals 1_instruction: '"반복 까지"블럭을 사용해서 좀비를 해바라기로 데려가세요.'
-      4-5 Maze Conditionals 10_instruction: |
-        Can you add just 3 blocks to help me
-        solve a more complex maze? If you do it right, I can walk any curvy path no
-        matter the length.
+      4-5 Maze Conditionals 10_instruction: 더 복잡한 미로를 풀 수 있도록 3개의 블록만 더 더해 주실 수 있으세요?
+        그렇게만 된다면, 얼마나 멀던지 상관없이 구부러진 길에서 돌아갈 수 있을 것 같아요.
       4-5 Maze Conditionals 2_instruction: '"반복 까지"블럭을 사용해서 좀비를 해바라기로 데려가세요.'
       4-5 Maze Conditionals 3_instruction: |
         왼쪽/오른쪽으로 돌아야 할때를 결정해야할 때, '만약' 블럭을 사용하세요.
@@ -609,78 +509,45 @@
       4-5 Maze Conditionals 6_instruction: 나 해바라기 바래! '만약' 블럭을 사용하면 적을 블럭을 사용해서 갈
         수 있어..
       4-5 Maze Conditionals 7_instruction: 좋아요. 다시 한번 연습해 보세요. 그렇게 어렵지 않지만, 먹개비를 조심하세요.
-      4-5 Maze Conditionals 8_instruction: |
-        The "if/else" block checks a condition,
-        and then does one thing OR another. To get me to the sunflower try to use
-        this new block.
-      4-5 Maze Conditionals 9_instruction: |
-        One more practice of the "if-else"
-        block, can you get it right on your first try?
-      4-5 Maze Conditionals Assessment 1_instruction: |
-        Use a "repeat until" and
-        an "if-else" block to get me to the sunflower in as few blocks as possible.
-      4-5 Nested Loops 1_instruction: |
-        Complete the code to draw these triangles.  The
-        first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
-      4-5 Nested Loops 10_instruction: |
-        Draw the last row of stars on this flag by
-        looping the provided blocks. The stars are 50 pixels apart, but remember that
-        the stars themselves are 30 pixels wide.
-      4-5 Nested Loops 11_instruction: |
-        Can you draw these 10 squares of this sidewalk
-        using a nested loop? Each square is 30 pixels.
-      4-5 Nested Loops 12_instruction: |
-        Can you draw these 36 triangles using a nested
-        loop?
+      4-5 Maze Conditionals 8_instruction: '"조건/선택" 블럭은 조건을 검사한 다음에 그 결과에 따라 하나의 작업을
+        선택해 실행해 줍니다. 이 블록을 사용해서 저를 해바라기로 보내주세요.'
+      4-5 Maze Conditionals 9_instruction: '"조건/선택" 블록을 다시 한 번 사용해 보겠습니다. 한 번에 성공할
+        수 있겠어요?'
+      4-5 Maze Conditionals Assessment 1_instruction: '"~할 때까지" 블록과 "만약-아니면" 블록을 사용하고
+        가장 적은 블록 개수로 해바라기로 보내주세요.'
+      4-5 Nested Loops 1_instruction: '이 삼각형들을 그리는 코드를 완성시켜 주세요. 첫 번째 것은 만들어져 있습니다.
+        힌트: 360 도 방향으로 3개의 삼각형들이 있습니다.'
+      4-5 Nested Loops 10_instruction: 이전에 사용되었던 반복 블럭들을 사용해서 마지막 줄의 별들을 그려 주세요. 별들은
+        50 픽셀씩 떨어져 있습니다. 각 별들의 너비는 30 픽셀입니다.
+      4-5 Nested Loops 11_instruction: 중첩 반복을 사용해서 사람다니는 길에 10개의 사각형들을 그려주세요. 각 사각형들은
+        30 픽셀입니다.
+      4-5 Nested Loops 12_instruction: 중첩 반복을 이용해서 36개의 삼각형들을 그려주세요.
       4-5 Nested Loops 2_instruction: |
         Now nest this loop inside another loop to
         draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles
         complete a 360 degree rotation.
-      4-5 Nested Loops 3_instruction: "Create a sun by nesting the starter code in\nanother
-        loop. This is called a nested loop.\r\n"
-      4-5 Nested Loops 5_instruction: Loop the given code to create a windmill.
-      4-5 Nested Loops 6_instruction: |
-        Can you draw a hexagon by looping the triangle
-        code?
-      4-5 Nested Loops 7_instruction: |
-        Loop this design 10 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 10?)
-      4-5 Nested Loops 8_instruction: |
-        Loop this design 6 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 6?)
-      4-5 Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
-      4-5 Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete the
-        design.
-      4-5 While Loops 1_instruction: |
-        Move me to the hole and fill it with two shovelfuls
-        of dirt, using the "fill" block.
-      4-5 While Loops 2_instruction: |
-        Move me to the pile of dirt and remove it with
-        5 shovel scoops, using the 'remove' block.
-      4-5 While Loops 3_instruction: |
-        Move me to the pile and remove all of it, then
-        move to the hole and fill it completely.  Hint:  Use as few blocks as possible.
-      4-5 While Loops 4_instruction: |
-        Wow, I found a really deep hole! I don't know
-        how many shovelfuls of dirt it needs.  Can you write a program that fills
-        it until the ground is even?  Hint:  Try using the while loop this time.
-      4-5 While Loops 5_instruction: |
-        Wow, now there are two deep holes! Can you
-        write a program that fills them both until the ground is even?
-      4-5 While Loops 6_instruction: |
-        Wow, now there is a large pile of dirt! Can
-        you write a program that removes all of it so the ground is even?
-      4-5 While Loops 7_instruction: |
-        Wow, now there are three piles of dirt! Can
-        you write a program that removes each of them until the ground is even?
-      4-5 While Loops 8_instruction: |2
-         There is a really deep hole and a really large
-        pile of dirt.  How many shovelfuls of dirt need to be moved around to make
-        the ground flat?  Hint: Use the while loop for both.
-      4-5 While Loops Assessment 1_instruction: |
-        There are a lot of holes and piles.  Help
-        me to fill and remove them to make the ground flat.
+      4-5 Nested Loops 3_instruction: "다른 반복 안에 시작 코드를 중첩시켜 넣어서 해를 만들어 주세요. 이러한 것을
+        중첩 반복이라고 합니다.\r\n"
+      4-5 Nested Loops 5_instruction: 주어진 코드를 반복시켜서 풍차를 만들어 주세요.
+      4-5 Nested Loops 6_instruction: 삼각형 코드를 반복시켜서 육각형을 그려 주세요.
+      4-5 Nested Loops 7_instruction: '이 디자인을 10번 반복시켜주세요. 한 번 반복하고나서 얼마나 회전해야 할까요?
+        (힌트: 360을 10으로 나누면 얼마일까요?)'
+      4-5 Nested Loops 8_instruction: '이 디자인을 6번 반복시켜주세요. 한 번 반복하고나서 얼마나 회전해야 할까요?
+        (힌트: 360을 6으로 나누면 얼마일까요?)'
+      4-5 Nested Loops 9_instruction: 악어 입 안에 이빨을 그려주세요!
+      4-5 Nested Loops Assessment 1_instruction: 중첩 반복을 사용해서 디자인을 완성시켜주세요.
+      4-5 While Loops 1_instruction: 구멍으로 이동해서 "메우기" 블록으로 흙을 2번 메우기 해주세요.
+      4-5 While Loops 2_instruction: 흙더미로 이동해서 "치우기" 블록으로 흙을 5번 치우기 해주세요.
+      4-5 While Loops 3_instruction: '흙더미로 이동해서 흙을 모두 치우고, 구덩이로 이동해서 흙을 모두 메워 주세요.
+        힌트: 최대한 블록을 적게 사용하세요.'
+      4-5 While Loops 4_instruction: '와! 진짜 깊은 구덩이를 발견했습니다. 얼마나 흙을 메워야 할지 모르겠어요. 구덩이가
+        다 메워질 때까지 계속 흙을 채울 수 있을까요? 힌트: 이번에는 while 블록을 사용해 보세요.'
+      4-5 While Loops 5_instruction: 와! 이번에는 깊은 구덩이가 2개 입니다. 2개의 구덩이를 모두 채워주세요.
+      4-5 While Loops 6_instruction: 와우, 저기 엄청 큰 흙더미가 있네요! 흙더미를 모두 치워보세요.
+      4-5 While Loops 7_instruction: 와우, 이제는 3개의 흙더미가 있습니다! 3개의 흙더미를 모두 치워주세요.
+      4-5 While Loops 8_instruction: ' 진짜 깊은 구덩이와 진짜 큰 흙더미가 있습니다. 구덩이를 메우고 흙더미를 치우려면
+        얼마나 많은 삽질이 필요 할까요? 힌트: 모두 while 반복을 사용해 보세요.'
+      4-5 While Loops Assessment 1_instruction: 구덩이와 흙더미가 많이 있습니다. 모든 구덩이와 흙더미를 없애주세요.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -721,19 +588,14 @@
         Loop this design 6 times. How much do
         you have to turn each time you loop? (Hint: What is 360 divided by 6?)
       Artist - Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
-      Artist - Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete
-        the design.
+      Artist - Nested Loops Assessment 1_instruction: 중첩 반복을 사용해서 디자인을 완성시켜주세요.
       Auto Open Function Editor_instruction: |
         You can call functions from inside
         other functions! Using your "shape" function as a base, create 3 house shapes
         each 20 pixels larger than the last starting at 50 pixels in length. Using
         a counter loop might be helpful.
-      Bee Recommended Blocks test_instruction: |
-        Purple flowers may have either 1
-        or 0 nectar, but you don't know which one! Be careful not to collect nectar
-        from a purple flower if it doesn't have any. Check if the nectar is equal
-        to 1 by using the if block.
+      Bee Recommended Blocks test_instruction: 자주색 꽃들은 1 또는 0 의 꽃꿀이 있지만, 정확히 알 수 없습니다.
+        꽃꿀이 없는 자주색 꽃에서 꿀을 모으지 마세요. if 블록을 사용해서 꽃꿀이 1 만큼 있는지 확인해 주세요.
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -886,12 +748,8 @@
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
         it!
-      Busy Bee 2_instruction: |
-        This bee has a lot of work to do! Do you notice any
-        patterns that you can use to simplify your code?
-      Busy Bee_instruction: |
-        This bee has a lot of work to do! Do you notice any
-        patterns that you can use to simplify your code?
+      Busy Bee 2_instruction: 이 꿀벌은 아주 바쁘답니다! 단순한 코드를 만들어 낼 수 있는 패턴들을 찾아보세요.
+      Busy Bee_instruction: 이 꿀벌은 아주 바쁘답니다! 단순한 코드를 만들어 낼 수 있는 패턴들을 찾아보세요.
       C3-Farmer While Loops 1_instruction: |
         Move me to the hole and fill it with
         two shovelfuls of dirt, using the "fill" block.
@@ -1157,162 +1015,97 @@
       Course 2 Bee Loops 4_instruction: |
         What happens if you loop this sequence 3
         times? Don't forget to make the honey at the end!
-      Course 2 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
-      Course 4 2_instruction: |
-        The bee only wants nectar right now. Remember, not
-        all objects are flowers, so check to gather nectar only at flowers.
+      Course 2 Maze Loops 1_instruction: 5 개의 블록들만 사용해서 돼지로 이동시켜 주세요.
+      Course 4 2_instruction: 꿀벌이 꽃꿀을 모으고 있습니다. 꽃들에서만 꽃꿀을 모을 수 있게 해 주세요.
       Course 4 Artist 1_instruction: |
         Help me draw a box. (Each line is 200 pixels
         long)
-      Course 4 Artist 10_instruction: "Click here to see the hints again!\r\n\r\nHere\nis
-        the code for an interesting shape.  What happens when you repeat it multiple\ntimes,
-        turning between each iteration?   Notice that the turns in this shape\nadd
-        up to 420 degrees, which means that when your artist is done drawing,\nit
-        will be facing a different direction than when you started.  That new direction\nis
-        exactly 60 degrees to the right of where you began."
-      Course 4 Artist 11_instruction: |
-        Now for a challenge!  Here is a design that
-        uses only blocks that you have already been shown.  Can you figure out how
-        to recreate it?  Feel free to use trial and error. You are not expected to
-        get it perfect the first time.  Want to see more hints?  Click here!
-      Course 4 Artist 12_instruction: "Want a second peek at the inspiration design\nor
-        the hints?  Click here!\r\n\r\nOtherwise, make a design all your own!"
-      Course 4 Artist 13_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can design anything you want!
-      Course 4 Artist 2_instruction: |
-        Can you loop this code to draw the greyed out
-        square?
-      Course 4 Artist 20_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can create whatever you want!
-      Course 4 Artist 3_instruction: |
-        Try to figure out what happens if you run this
-        code (or press "Run" to test it). Then, repeat it enough times to complete
-        the drawing.
-      Course 4 Artist 4_instruction: |
-        How many degrees are in a circle?  Fill in
-        the repeat block with that number to create a circle of colors.
-      Course 4 Artist 5_instruction: |
-        Draw the other half of this design so it's
-        symmetrical. The triangles are equilateral and are 50 pixels long. Hint: You
-        may have to run the code several times to figure out all of the blocks that
-        need to be added.
-      Course 4 Artist 6_instruction: |
-        Complete the code to draw these triangles.
-        Hint: There are 3 triangles within the 360 degree rotation...how many times
-        does 3 go into 360?
+      Course 4 Artist 10_instruction: "힌트를 다시 보려면 여기를 눌러보세요!\r\r\n재미있는 모양을 위한 코드가
+        있습니다. 한 번 실행할 때마다 회전시키면 어떤 일이 일어날까요? 이 모양의 각도는 420도까지 가능하고, 실행할 때마다 화가가 바라보는
+        방향이 바뀔 것입니다. 그리고 그 각도는 정확히 60도 입니다."
+      Course 4 Artist 11_instruction: 자 이제 도전해보세요! 이전에 보았던 블록들만 사용해서 만들 수 있는 디자인이
+        있습니다. 어떻게 하면 똑같이 만들 수 있을까요? 실패하더라도 계속 도전해 보세요. 한 번에 성공하는 사람은 거의 없습니다. 힌트가
+        필요하다고요? 여기를 눌러보세요!
+      Course 4 Artist 12_instruction: "멋진 디자인을 위한 도움말이나 힌트가 필요하면? 여기를 클릭하세요!\r\n\r\n아니면,
+        자유롭게 디자인해 보세요!"
+      Course 4 Artist 13_instruction: 계속 하고 있나요? 빈 캔버스가 있습니다. 마음대로 그려보세요.
+      Course 4 Artist 2_instruction: 이 코드를 반복시켜서 회색 사각형을 그려주세요.
+      Course 4 Artist 20_instruction: 계속 하고 있나요? 빈 캔버스가 있습니다. 마음대로 그려보세요.
+      Course 4 Artist 3_instruction: 이 코드를 실행(또는 실행 누르기) 하면 어떻게 될지 생각해 보세요. 그 다음에
+        그림을 완성할 때까지 충분히 여러 번 시도해 보세요.
+      Course 4 Artist 4_instruction: 원 안에는 얼마나 많은 각이 있을까요? 색 원들을 만들어내기 위해서 필요한 수를
+        반복 블록에 채워넣어주세요.
+      Course 4 Artist 5_instruction: '이 디자인의 나머지 반을 만들어서 대칭이 되도록 만들어 보세요. 삼각형들은 변들이
+        같고 50 픽셀 길이입니다. 힌트: 추가해야 할 모든 블록들을 찾아내기 위해서 코드를 여러 번 실행시켜봐야 할 수도 있습니다.'
+      Course 4 Artist 6_instruction: '이 삼각형들을 그리기 위한 코드를 완성시켜보세요. 힌트: 360 도 회전 안에
+        3개의 삼각형들이 있습니다... 360 안에 3개를 몇 번 넣을 수 있을까요?'
       Course 4 Artist 7_instruction: |
         Now nest this loop inside another loop to draw
         10 triangles. This is called a nested loop. Hint: All 10 triangles complete
         a 360 degree rotation.
-      Course 4 Artist 8_instruction: |
-        Draw this sun by looping this whole block of
-        code multiple times.
-      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet
-        you build it without giving you any blocks to start!\r\nHint: There are\n3
-        triangles within the 360 degree rotation...how many times does 3 go into\n360?"
-      Course 4 Artist 9_instruction: |
-        Loop this design 10 times and make sure to
-        turn between each shape that's drawn. Here's a hint for how much you have
-        to turn: What is 360 divided by 10?
-      Course 4 Artist Binary 1_instruction: "Here's a function that takes a binary\nstring
-        of 1's and 0's and instructs the artist to follow them from left\nto right,
-        top to bottom.  The artist will fill-in the squares when it sees\na 1 and
-        ignore the square when it sees a 0. \r\n\r\nRun this code to see how\nthe
-        artist uses binary to draw this pattern."
-      Course 4 Artist Binary 1a_instruction: "Here's a function that takes a binary\nstring
-        of 1's and 0's and instructs the artist to follow them from left\nto right,
-        top to bottom.  The artist will fill-in the squares when it sees\na 1 and
-        ignore the square when it sees a 0. \r\n\r\nRun this code to see how\nthe
-        artist uses binary to draw this pattern."
-      Course 4 Artist Binary 2_instruction: |
-        Which of these binary strings could
-        you loop 8 times to draw this image?
-      Course 4 Artist Binary 3_instruction: |
-        Can you draw this pattern by looping
-        a three digit binary string?
-      Course 4 Artist Binary 4_instruction: |
-        Each binary string represents one row
-        of this picture. Can you rearrange them so it draws a smiley face instead
-        of a frowny face?
-      Course 4 Artist Binary 5_instruction: |
-        Which 6 digit binary string, repeated
-        11 times, will draw this image?
-      Course 4 Artist Binary 6_instruction: |
-        What is the shortest binary string that
-        you can repeat to draw this image?
+      Course 4 Artist 8_instruction: 이 코드 블록을 여러번 반복시켜 해를 그려보세요.
+      Course 4 Artist 8a_instruction: "이 모양이 기억이 나나요? 이제 처음에 아무 블록들이 없는 상태로 만들어내야
+        합니다!\r\n힌트: 360도 안에 3개의 삼각형들이 있습니다... 360 안에 3이 몇 번이나 들어갈 수 있을까요?"
+      Course 4 Artist 9_instruction: '이 디자인을 10번 반복 시키면서, 한 번 그릴 때마다 회전시켜보세요. 얼마나
+        회전 시켜야 하는지에 대한 힌트: 360을 10으로 나누면?'
+      Course 4 Artist Binary 1_instruction: "여기에 1, 0 로만 이루어진 문자열을 입력해서, 화가를 왼쪽에서
+        오른쪽으로, 위에서 아래로 움직이는 함수가 있습니다. 화가는 1을 보면 사각형을 채우고, 0이면 무시할 것입니다. \r\n\r\n이
+        코드를 실행시킨 후, 화가가 2진 정보를 이용해서 이 패턴을 그려내는 것을 살펴보세요."
+      Course 4 Artist Binary 1a_instruction: "여기에 1, 0 로만 이루어진 문자열을 입력해서, 화가를 왼쪽에서
+        오른쪽으로, 위에서 아래로 움직이는 함수가 있습니다. 화가는 1을 보면 사각형을 채우고, 0이면 무시할 것입니다. \r\n\r\n이
+        코드를 실행시킨 후, 화가가 2진 정보를 이용해서 이 패턴을 그려내는 것을 살펴보세요."
+      Course 4 Artist Binary 2_instruction: 이 이미지를 그려내기 위해서, 어떤 2진 문자열이 8번 반복시켜 줄까요?
+      Course 4 Artist Binary 3_instruction: 3자리의 2진 문자열을 반복시켜서 이 패턴을 그려주세요.
+      Course 4 Artist Binary 4_instruction: 각 2진 문자는 이 그림의 한 줄을 의미합니다. 2진 문자열을 재배치해서
+        찡그린 얼굴 모양을 웃는 얼굴 모양으로 만들어 주세요.
+      Course 4 Artist Binary 5_instruction: 이 이미지를 그리기 위해 11번을 반복 시킬 수 있는 6자리 2진 문자열은
+        어떤 것 일까요?
+      Course 4 Artist Binary 6_instruction: 이 이미지를 그리기 위해 반복하는 것들 중에서 가장 짧은 2진 문자열은
+        어떤 것 일까요?
       Course 4 Artist Binary 7_instruction: 이 그림을 마무리하세요.
-      Course 4 Artist Binary Free Play 2_instruction: |
-        Free Play: Here's a blank
-        canvas for you to draw on.  Have fun!
-      Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas
-        to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we\nstart
-        to get creative with the bits?"
-      Course 4 Artist Binary Free Play 2b_instruction: Click here to see hints.
-      Course 4 Artist Binary Free Play_instruction: |
-        Free Play: Draw whatever you
-        like with binary!
-      Course 4 Artist Binary pre1_instruction: "Binary is a way of representing information\nusing
-        only two options.  Here, we're going to use the options \"off\" (represented\nby
-        the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided
-        you with a grid of \"pixels\" that you can walk through and make\ndesigns
-        by turning on only certain squares.  Can you have the artist draw\n\"01010101\"
-        in binary in the first row?"
-      Course 4 Artist Binary ryan_instruction: "Binary is a way of representing information\nusing
-        only two options.  Here, we're going to use the options \"off\" (represented\nby
-        the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided
-        you with a grid of \"pixels\" that you can walk through and make\ndesigns
-        by turning on only certain squares.  Can you have the artist draw\n\"01010101\"
-        in binary in the first row?"
-      Course 4 Artist For  Functions 10_instruction: |
-        Let's Step it up a little,
-        can you draw a Star shape using the "Draw a Square Line" function? Good
-        luck!
-      Course 4 Artist For  Functions 11_instruction: |
-        Let's Step it up a little,
-        can you draw a Star shape using the "Draw a Square Line" function? Good
-        luck!
-      Course 4 Artist For Loops 1_instruction: |
-        Draw this triangle that is 50 pixels
-        wide. Hint: use a repeat block.
+      Course 4 Artist Binary Free Play 2_instruction: '자유 플레이: 빈 캔버스가 있습니다. 마음대로 재미있게
+        그려보세요!'
+      Course 4 Artist Binary Free Play 2a_instruction: "좀 더 높은 해상도로 표현할 수 있는 캔버스가
+        여기 있습니다. - 16 픽셀 * 16 픽셀!\r\n\r\n2진 비트 문자열로 어떤 것이 그려지는 지 살펴보세요."
+      Course 4 Artist Binary Free Play 2b_instruction: 여기를 눌러 힌트를 살펴보세요.
+      Course 4 Artist Binary Free Play_instruction: '자유 플레이: 2진 문자열을 이용해서 자유롭게 그려보세요!'
+      Course 4 Artist Binary pre1_instruction: "2진은 단지 서로 다른 2가지 만 가지고 정보를 표현하는 방법입니다.
+        \"off\"(또는 0 으로 표현) 과 \"on\"(또는 1로 표현) 만 사용한다고 해봅시다.\r\n\r\n주어진 \"픽셀판\"이라는
+        격자를 사용하면, 그 위를 이동하다가 특정 사각형들에서만 회전이 가능하게 해서 디자인들을 만들 수 있습니다. 화가가 첫 번째 줄에 2진수
+        표현으로 \"01010101\"을 그리도록 해보세요."
+      Course 4 Artist Binary ryan_instruction: "2진은 단지 서로 다른 2가지 만 가지고 정보를 표현하는 방법입니다.
+        \"off\"(또는 0 으로 표현) 과 \"on\"(또는 1로 표현) 만 사용한다고 해봅시다.\r\n\r\n주어진 \"픽셀판\"이라는
+        격자를 사용하면, 그 위를 이동하다가 특정 사각형들에서만 회전이 가능하게 해서 디자인들을 만들 수 있습니다. 화가가 첫 번째 줄에 2진수
+        표현으로 \"01010101\"을 그리도록 해보세요."
+      Course 4 Artist For  Functions 10_instruction: 조금 더 나아가 봅시다. "사각형 한 변 그리기" 함수를
+        이용해서 별 모양을 만들어보세요. 행운을 빕니다!
+      Course 4 Artist For  Functions 11_instruction: 조금 더 나아가 봅시다. "사각형 한 변 그리기" 함수를
+        이용해서 별 모양을 만들어보세요. 행운을 빕니다!
+      Course 4 Artist For Loops 1_instruction: '이 삼각형은 너비가 50 픽셀입니다. 힌트: 반복 블록을 1개
+        사용하세요.'
       Course 4 Artist For Loops 10_instruction: 자유 놀이 시간! 사용 방법을 배운 블럭들을 사용해서 무엇이든
         원하는 것을 재미있게 만들어보세요.
-      Course 4 Artist For Loops 11_instruction: |
-        Remember back in a previous stage
-        when we used a variable to control the number of sides in a shape? We are
-        going to do the same thing with the "counter" variable now. This pattern
-        starts with a triangle and adds one side at a time until it draws a decagon
-        (10 sides). Each side should be 100 pixels long. Hint: 360 divided by the
-        number of sides a shape has is the number of degrees you'll need to turn.
-      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour
-        knowledge of \"for loops\" and the \"counter\", create this drawing where\neach
-        shape has two more sides than the last.  Make sure that each side is\n10 times
-        as long as the number of sides in the polygon.\r\n\r\nVery little\nof the
-        code has been provided for you."
+      Course 4 Artist For Loops 11_instruction: '이전 스테이지에서 어떤 모양의 변의 길이를 조절하기 위해 사용했던
+        밴수에 대해서 생각해 보세요. 이번에는 "카운터" 변수라는 것을 이용해서 같은 작업을 해 보도록 하겠습니다. 이 패턴은 삼각형으로 시작하고,
+        한 변을 붙이면서 10각형(10개의 변을 가진 다각형) 을 그립니다. 각 변의 길이는 100 픽셀 입니다. 힌트: 360 나누기 어떤
+        모양의 변의 개수는 회전시켜야 하는 각도 입니다.'
+      Course 4 Artist For Loops 11a_instruction: "자 이제 모두 함께 사용해 봅시다! \"반복(~인 동안)\"과
+        \"카운터\"를 이용해서, 앞의 것보다 2개 더 많은 변을 가지고 있는 각각의 도형들을 만들어보세요. 각 변의 길이는 각 다각형의 변의
+        개수의 10배이어야 합니다.\r\n\r\n아주 적은 코드가 미리 주어져 있습니다."
       Course 4 Artist For Loops 12_instruction: |
         That looked pretty cool, but now
         I'd like to draw each shape next to the last one. This time each side is
         20 pixels. Use a jump block to jump forward 40 pixels after each shape.
-      Course 4 Artist For Loops 13_instruction: |
-        Hmmm, those shapes are getting bigger
-        every time! Didn't we already solve this problem with variables? How can
-        we use the counter variable to make the sides smaller as there are more of
-        them? Instead of moving forward by a set amount, try moving forward (100 /
-        counter) pixels.
-      Course 4 Artist For Loops 14_instruction: |
-        If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try using
-        some of the code from the last level, but turning 89 degrees to create this
-        twisted square spiral.
-      Course 4 Artist For Loops 15_instruction: |
-        Free Play: Try making some drawings
-        of your own using "for loops". We've added a few useful variables for you
-        as well.
-      Course 4 Artist For Loops 2_instruction: |
-        I've put the code for drawing a
-        triangle inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure
-        you look at the code before you hit "Run".
+      Course 4 Artist For Loops 13_instruction: 흠, 저 모양들은 점점 더 커지는 군요! 이전에 이 문제를 변수를
+        이용해 해결했었습니다. 카운트 변수를 이용해서 어떻게 각 변의 크기를 줄일 수 있을까요? 일정 거리 만큼 앞으로 움직이지말고, 앞으로
+        (100/카운터) 픽셀 만큼 움직여 보세요.
+      Course 4 Artist For Loops 14_instruction: 일반적인 도형들에 사용하는 각 보다 조금 더 많거나 적게 각을
+        회전시키면 멋진 효과를 만들어낼 수 있습니다. 이전 레벨에서의 코드를 이용해 실험해 보는데, 89도를 사용하면 이런 비틀어진 사각형
+        나선 구조를 만들어 낼 수 있습니다.
+      Course 4 Artist For Loops 15_instruction: '자유 플레이: "반복(~동안)"을 이용해서 원하는 그림들을
+        만들어보세요. 여러분이 사용할 수 있는 편리한 변수들을 몇 개 더 추가했습니다.'
+      Course 4 Artist For Loops 2_instruction: '50 부터 100 까지 10씩 올리며 카운트하는 반복(~동안)
+        구조 안에 삼각형을 그리는 코드를 넣어 두었습니다. 참고: "실행"을 누르기 전에 코드를 먼저 살펴보세요.'
       Course 4 Artist For Loops 3_instruction: |
         Use the last puzzle as a reference
         to complete this one.  The smallest triangle has 20 pixel sides, the largest
@@ -1324,116 +1117,75 @@
       Course 4 Artist For Loops 5_instruction: |
         Good job on the last puzzle! Let's
         use that "counter" variable block again to draw this cool picture.
-      Course 4 Artist For Loops 6_instruction: |
-        Free Play! Try using a for loop to
-        draw a growing shape pattern of your own design.
-      Course 4 Artist For Loops 6a_instruction: |
-        Make three small changes to the
-        code from the last level to get this!
-      Course 4 Artist For Loops 7_instruction: |
-        What happens if you remove the "Repeat
-        3" from this algorithm, keeping the "move" and "turn" blocks in the for
-        loop? In this spiraling triangle, each side is 20 pixels longer than the last.
-      Course 4 Artist For Loops 8_instruction: "Just one little change to the code\nfrom
-        the last image can create this drawing. Can you figure out what that\nchange
-        is?\r\n\r\nHint:  You need to remove something!"
-      Course 4 Artist For Loops 8a_instruction: |
-        Just one little change to the code
-        from the last image can create this image. Can you figure out what that change
-        is?
-      Course 4 Artist For Loops 9_instruction: |
-        Can you make a spiral? Move forward
-        from 1 to 75 pixels, increasing by 1 pixel each time.
-      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse
-        all of the things you've learned to create this image?\r\n\r\nNeed a\nhint?
-        Click here."
-      Course 4 Artist For Loops inspire_instruction: "Free-Play Inspiration: You've\nnow
-        learned everything you need to know to make a pattern like this! If this\npicture
-        inspires you, try to make something similar. Otherwise, create something\nall
-        your own.\r\n\r\nNeed a hint? Click here."
-      Course 4 Artist Functions 1_instruction: |
-        Can you draw a square that is 100
-        pixels in length, using a loop?
-      Course 4 Artist Functions 10_instruction: |
-        Which block do you need to add to
-        get the triangle to sit on top of the square?
-      Course 4 Artist Functions 11_instruction: |
-        Check out this code that draws a
-        cube - can you move it into a function called "Draw a Cube"
-      Course 4 Artist Functions 12.1_instruction: |
-        Let's create a function called
-        "draw an octagon 20" that draws an octagon where each side is 20 pixels
-        long.
-      Course 4 Artist Functions 12_instruction: Loop square function to draw a line
-      Course 4 Artist Functions 13.1_instruction: "Now, let's make a function called\n\"jump
-        to upper right\" that moves the artist to the upper-right of the octagon\nthat
-        you just drew so we can finish this pattern.\r\n\r\nHint:  To get yourself\nto
-        the upper-right corner, try jumping in a pattern that makes just 3/8 of\nthe
-        octagon."
-      Course 4 Artist Functions 13_instruction: |
-        Check it out we have a new function
-        called "draw a line of squares". Feel free to take a look inside the function
-        block to see how we built it. Click on "Run" when your are ready for the
-        next puzzle.
-      Course 4 Artist Functions 14.1_instruction: |
-        Now, let's make a function called
-        "jump to upper right" that moves the artist to the top-right of the octagon
-        that you just drew so we can finish this pattern.
-      Course 4 Artist Functions 14_instruction: |
-        You're doing great! Let's use
-        your new "Draw a line of squares" function to draw a Square shape. Remember
-        each square is 40 pixels in length.
-      Course 4 Artist Functions 15_instruction: |
-        Let's Step it up a little, can
-        you draw a star shape using the "draw a line of squares" function? Good
-        luck! Hint: you may have to turn 144 degrees
-      Course 4 Artist Functions 2_instruction: |
-        Can you draw 3 squares 20 pixels
-        apart from one another? Hint: each square is 100 pixels in size
-      Course 4 Artist Functions 3_instruction: "Using the \"draw a square\" function\nblock,
-        can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
-      Course 4 Artist Functions 4_instruction: |
-        Are you ready to create your own
-        "Function Block"? Click on the "Functions" block in the tool box, name
-        it "draw a triangle", then create a triangle as you have done before with
-        the Action and Loops blocks. Then click on the Save and Close in the upper
-        right hand corner. Hint: Create a triangle that is 100 pixels in length. Good
-        luck!
-      Course 4 Artist Functions 5 OLD_instruction: |
-        Let's try to use our two functions
-        to draw a house - what needs to be fixed in this code to draw the house properly?
-      Course 4 Artist Functions 5_instruction: "Using the \"draw a square\" function\nblock,
-        can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
-      Course 4 Artist Functions 6_instruction: |
-        Which block do you need to add to
-        get the triangle to sit on top of the square?
-      Course 4 Artist Functions 7_instruction: |
-        Can you draw a line of squares using
-        a Square function? Each square is 40 pixel's in length.
+      Course 4 Artist For Loops 6_instruction: '자유 플레이: 점점 커지는 도형들을 반복(~동안) 을 이용해
+        자유롭게 만들어 보세요.'
+      Course 4 Artist For Loops 6a_instruction: 이 레벨을 완료하기 위해서 지난 번 코드에서 3가지만 수정하면
+        됩니다.
+      Course 4 Artist For Loops 7_instruction: 알고리즘에서 반복 구조 안에 들어있는 "이동하기" 와 "돌기"
+        블록들은 그대로 두고, "반복 3회" 만 지우면 어떻게 될까요? 이 나선형 삼각형에서 각 선분들은 그 이전 선분보다 20 픽셀 씩 더
+        깁니다.
+      Course 4 Artist For Loops 8_instruction: "이전 그림에서 1가지만 바꾸면 이 그림을 만들 수 있습니다.
+        어떤 것을 바꾼 것인지 찾아낼 수 있나요?\r\n\r\n힌트: 뭔가 제거하면 됩니다!"
+      Course 4 Artist For Loops 8a_instruction: 이전 이미지에서 1가지만 바꾸면 이 이미지를 만들 수 있습니다.
+        어떤 것을 바꾼 것인지 찾아낼 수 있나요?
+      Course 4 Artist For Loops 9_instruction: 나선 구조를 만들 수 있나요? 1 픽셀 부터 75 픽셀까지 한
+        번에 1 픽셀씩 증가시키면서 이동해 보세요.
+      Course 4 Artist For Loops Challenge_instruction: "이 이미지를 만들어내기 위해서 어떤 것들을 어떻게
+        써야 할 지 생각해 낼 수 있을까요?\r\n\r\n힌트가 필요한가요? 여기를 클릭하세요."
+      Course 4 Artist For Loops inspire_instruction: "멋진 자유 플레이: 여러분은 이제 이런 패턴을 만들기
+        위해 필요한 모든 것들을 배웠습니다! 이 그림이 여러분이 느끼기에 멋지다면, 비슷한 것을 한 번 만들어 보세요. 아니면, 만들고 싶은
+        것을 자유롭게 만들어도 됩니다.\r\n\r\n힌트가 필요한가요? 여기를 클릭하세요."
+      Course 4 Artist Functions 1_instruction: 반복을 이용해서 한 변의 길이가 100 인 사각형을 만들어 보세요.
+      Course 4 Artist Functions 10_instruction: 사각형 위에 꼭 맞는 삼각형을 그리기 위해서 어떤 블록을 추가해야
+        할까요?
+      Course 4 Artist Functions 11_instruction: 큐브를 그리는 코드를 확인해 보세요 - "큐브 그리기"라는 이름의
+        함수 안에 넣어주세요.
+      Course 4 Artist Functions 12.1_instruction: 자 이제 "8각형 그리기 20" 이라는 함수를 만들어보세요.
+        8각형의 각 변의 길이는 20 픽셀입니다.
+      Course 4 Artist Functions 12_instruction: 직선을 그리기 위해서 사각형 함수를 반복시켜보세요.
+      Course 4 Artist Functions 13.1_instruction: "자 이제, \"오른쪽 위로 점프\"라는 함수를 만들어보세요.
+        이 함수는 8각형 위에 있는 화가가 오른쪽 위로 움직이게 해서 패턴을 다 그릴 수 있게 해줄 것입니다.\r\n\r\n힌트: 여러분이
+        오른쪽 위로 가려면? 패턴 위에서 8각형의 3/8만큼 점프하면 될 것입니다."
+      Course 4 Artist Functions 13_instruction: 새로운 "사각형의 한 변 그리기" 함수를 살펴보세요. 함수가
+        어떻게 만들어졌는지 구조를 살펴보세요. 다음 퍼즐을 하기 위해서는 "실행"을 누르면 됩니다.
+      Course 4 Artist Functions 14.1_instruction: 자 이제, "오른쪽 위로 점프" 함수를 만들어서 이 패턴을
+        완성할 수 있도록, 화가를 8각형의 오른쪽 위로 이동시켜보세요.
+      Course 4 Artist Functions 14_instruction: 잘 했습니다! 이제 새로운 "사각형의 한 변 그리기" 함수를
+        이용해서 사각형을 그려보세요. 사각형의 한 변의 길이는 40 픽셀입니다.
+      Course 4 Artist Functions 15_instruction: '조금 더 배워 봅시다. "사각형의 한 변 그리기" 함수를 이용해서
+        별 모양을 그릴 수 있을까요? 행운을 빕니다! 힌트: 144도를 돌아야 합니다.'
+      Course 4 Artist Functions 2_instruction: '20 픽셀 만큼 씩 떨어져 있는 3개의 사각형을 그려보세요.
+        힌트: 각 사각형의 크기는 100 픽셀입니다.'
+      Course 4 Artist Functions 3_instruction: "\"사각형 그리기\" 함수 블록을 이용해서 이 그림을 만들어보세요.
+        힌트: 각 사각형들은 120 픽셀 만큼 씩 떨어져 있습니다.\r\n"
+      Course 4 Artist Functions 4_instruction: '직접 "함수 블록"을 만들 준비가 되었나요? 도구상자에서 "함수"
+        블록을 클릭한 후에 "삼각형 그리기" 로 함수 이름을 바꾸세요. 그 다음에 이전에 반복 블록을 이용해서 삼각형을 만들었던 것과 같이
+        삼각형을 만드세요. 그 다음에 오른쪽 위의 모서리에 있는 저장 후 닫기 를 누르세요. 힌트: 100 픽셀 크기의 삼각형을 만드세요.
+        행운을 빌어요!'
+      Course 4 Artist Functions 5 OLD_instruction: 집을 그리기 위해서 2개의 함수를 사용해 보세요. - 집을
+        제대로 그리기 위해서, 이 코드에서 어떤 부분을 고쳐야 할까요?
+      Course 4 Artist Functions 5_instruction: "\"사각형 그리기\" 함수 블록을 이용해서 이 그림을 만들어보세요.
+        힌트: 각 사각형들은 120 픽셀 만큼 씩 떨어져 있습니다.\r\n"
+      Course 4 Artist Functions 6_instruction: 사각형 위에 꼭 맞는 삼각형을 그리기 위해서 어떤 블록을 추가해야
+        할까요?
+      Course 4 Artist Functions 7_instruction: 사각형 함수를 이용해서 한 줄의 사각형을 그려보세요. 각 사각형의
+        한 변의 길이는 40 픽셀입니다.
       Course 4 Artist Functions 8_instruction: |
         Are you getting the hang of how to
         use function blocks? Let's modify this square so that it is 200 pixels in
         size. Hint: click on "edit" to change the size of the "draw a square"
         function editor. Remember to click on "save and close" to get out of the
         function editor.
-      Course 4 Artist Functions 9_instruction: |
-        We have given you most of the code
-        to create a function. However there seems to be something missing. Can you
-        make this function block complete?
-      Course 4 Artist Functions challenge_instruction: |
-        Click here to see the hints
-        again.
-      Course 4 Artist Functions Inspiration_instruction: |
-        Click here to see the hints
-        again.
+      Course 4 Artist Functions 9_instruction: 함수를 만들기 위해 필요한 거의 모든 코드를 해보았습니다. 하지만
+        뭔가 빠진 듯 하네요. 이 함수 블록을 완성해주세요.
+      Course 4 Artist Functions challenge_instruction: 여기를 눌러 힌트를 다시 살펴보세요.
+      Course 4 Artist Functions Inspiration_instruction: 여기를 눌러 힌트를 다시 살펴보세요.
       Course 4 Artist Functions inspire_instruction: |
         여기를 눌러 멋진 그림을
         다시 살펴보세요.
-      Course 4 Artist Inspire_instruction: "Want a second peek at the inspiration\ndesign
-        or the hints?  Click here!\r\n\r\nOtherwise, make a design all your\nown!"
-      Course 4 Artist Params 1_instruction: |
-        Let's edit a function that draws a
-        square with 50 pixel sides
+      Course 4 Artist Inspire_instruction: "멋진 디자인을 위한 도움말이나 힌트가 필요하면? 여기를 클릭하세요!\r\n\r\n아니면,
+        자유롭게 디자인해 보세요!"
+      Course 4 Artist Params 1_instruction: 한 변의 길이가 50 픽셀인 사각형을 그리는 함수를 수정해보세요.
       Course 4 Artist Params 10_instruction: |
         You can call functions from inside
         other functions! Using your "shape" function as a base, create 3 house shapes
@@ -1445,12 +1197,10 @@
         calculate how much to turn after each shape using the same math you used to
         figure out the turns for a shape of "sides". Can you recreate this picture?
         Here's a tip each shape is 100 pixel's in length.
-      Course 4 Artist Params 12_instruction: |
-        Use your "pinwheel" function to draw
-        each of these shapes. The side length for each image is 50.
-      Course 4 Artist Params 13_instruction: |
-        Freeplay: Here are the functions you've
-        written, and some more for you to play with. Draw something awesome!
+      Course 4 Artist Params 12_instruction: '"바람개비" 함수를 이용해서 이 모양들을 그려보세요. 각 이미지의
+        측면 길이는 50 입니다.'
+      Course 4 Artist Params 13_instruction: '자유 플레이: 여러분들이 만든 함수와 가지고 놀 수 있는 함수들이
+        더 있습니다. 멋진 것을 그려보세요!'
       Course 4 Artist Params 2_instruction: |
         That triangle function would be a whole
         lot more useful if it could draw triangles of different sizes. I've added
@@ -1461,10 +1211,9 @@
         Awesome, can you draw each of these
         triangles with that new function? The first is 25 pixels long, the second
         is 50, and the third is 75.
-      Course 4 Artist Params 4_instruction: |
-        Can you add a new function called square?
-        It should also take a length parameter, just like the triangle. This time
-        draw 3 squares 25, 50 and 75 pixels in length,100 pixels apart.
+      Course 4 Artist Params 4_instruction: '''사각형''이라는 새로운 함수를 추가할 수 있나요? 삼각형 함수와
+        같이 길이 매개 변수를 전달해야 합니다. 이번에는 100 픽셀 씩 떨어져 있는 길이가 25 픽셀, 50 픽셀, 75 픽셀인 세 개의
+        사각형을 그립니다.'
       Course 4 Artist Params 5_instruction: |
         Use both of your new functions to draw
         this picture. To make this easier you use a loop with a "counter" parameter.
@@ -1481,29 +1230,18 @@
       Course 4 Artist Params 8_instruction: |
         Can you figure out how to draw this
         shape? Here's a hint create a new function with 6 sides called a hexagon.
-      Course 4 Artist Params 9_instruction: |
-        Do you remember when we used the counter
-        loop but removed a loop within? Let's have some fun and use the "draw a
-        shape" function with "sides" and "length" parameters. Can you re create
-        these shapes? The square counter should be 5/100/5, the triangle counter should
-        be 10/100/10 and the hexagon is 2/100/2.
-      Course 4 Artist Var 9_instruction: |
-        Here's the algorithm to draw a triangle,
-        modify it so it uses the "sides" variable instead. Replace the number 3
-        with the "sides" variable. Hint: remember to use the "set sides to" block.
-      Course 4 Artist Vars 1_instruction: |
-        Can you help me draw an equilateral triangle?
-        It has to be exactly 100 pixels long on each side.
-      Course 4 Artist Vars 10_instruction: |
-        Here's an algorithm that draws a triangle
-        out of smaller triangles. Can you modify it so that it uses the "sides"
-        variable to draw each triangle? Look through the code, and every time you
-        see the number 3, replace it with your "sides" variable. Remember to use
-        the "set sides" block.
-      Course 4 Artist Vars 11_instruction: |
-        Here’s more complicated code using the
-        same concepts from the last puzzle - what should you set the "sides" variable
-        to in order to draw this picture made of squares?
+      Course 4 Artist Params 9_instruction: 우리가 안쪽 루프를 제거한 카운터 루프를 사용했을 때를 기억하나요?
+        재미있는 놀이를 해 봅시다. "변"과 "길이" 매개변수를 가지는 "도형 그리기" 함수를 사용해 봅시다. 이 모양들을 만들 수 있나요?
+        이 사각형 카운터는 5/100/5가 되어야 하고, 삼각형 카운터는 10/100/10, 육각형 카운터는 2/100/2가 되어야 합니다.
+      Course 4 Artist Var 9_instruction: '삼각형을 그리는 알고리즘이 여기 있습니다. "변"이라는 변수를 대신 사용하도록
+        수정하세요. "변" 변수에 숫자 3을 대입하세요. 힌트: "변을 ~로 설정하기" 블록을 이용하세요.'
+      Course 4 Artist Vars 1_instruction: 제가 이등변 삼각형을 그리는 것을 도와줄래요? 양변의 길이가 정확히 100
+        픽셀이 되어야 합니다.
+      Course 4 Artist Vars 10_instruction: 여기 더 작은 삼각형의 바깥에 삼각형을 그리는 알고리즘이 있습니다. "변"
+        변수를 사용하여 각 삼각형을 그리도록 알고리즘을 수정할 수 있나요? 코드를 훑어보고 여러분이 숫자 3을 볼 때마다 그것을 "변" 변수로
+        바꿔보세요. "변 설정하기" 블록을 사용하는 것을 기억하세요.
+      Course 4 Artist Vars 11_instruction: 이것은 마지막 퍼즐로부터 동일한 개념을 사용한 좀 더 복잡한 코드입니다.
+        - 사각형들로 만들어진 이 그림을 그리기 위해 "변" 변수를 어떻게 설정해야 할까요?
       Course 4 Artist Vars 12_instruction: |
         Let's set the "sides" variable to
         5. The more sides we add to this algorithm, the bigger this whole pattern
@@ -2708,9 +2446,8 @@
         function so that you don't have to call it twice.  Notice, you'll have to
         move forward a certain number of pixels and turn 144 degrees.
       NEW Course 4 Artist Functions 14_instruction: 자유 시간!
-      NEW Course 4 Artist Functions 2_instruction: |
-        Can you draw 3 squares 20 pixels
-        apart from one another? Hint: each square is 100 pixels in size
+      NEW Course 4 Artist Functions 2_instruction: '20 픽셀 만큼 씩 떨어져 있는 3개의 사각형을 그려보세요.
+        힌트: 각 사각형의 크기는 100 픽셀입니다.'
       NEW Course 4 Artist Functions 3_instruction: |
         Here is a new type of Block.
         It is called a "Function" block. Click "edit" then fill it with the code
@@ -3172,10 +2909,8 @@
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
-      Ryan - 4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      Ryan - 4-5 Bee Conditionals 2_instruction: 꿀벌이 꽃꿀을 원합니다. 모두 꽃은 아니기 때문에, 안개 구름
+        아래에 꽃이 숨어있는지 모두 살펴보아야 합니다. 꽃이면 꽃꿀을 모으면 됩니다.
       Ryan Test Locked Blocks_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.

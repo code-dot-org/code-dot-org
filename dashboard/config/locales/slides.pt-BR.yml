@@ -2360,179 +2360,186 @@
           decomposição, identificação de padrões, abstração e algoritmos.'
       3:
         image: notes/unplug2_3.png
-        text: First groups will decompose the task which means make a game plan. Then
-          they'll look for patterns between all the monsters in the catalog. When
-          they come across differences between the monsters, they'll abstract or remove
-          those details. For instance, one monster in the catalog has vegitas eyes
-          and another has spritem eyes. But they both have eyes so we can write a
-          line that says the monster has blank eyes.
+        text: Primeiro, os grupos vão dividir a tarefa, o que significa fazer um plano
+          de jogo. Então, eles vão procurar por padrões entre todos os monstros do
+          catálogo. Quando eles se depararem com as diferenças entre os monstros,
+          eles vão abstrair ou remover esses detalhes. Por exemplo, um monstro do
+          catálogo tem olhos de vegitas e outro tem olhos de spritem. Mas ambos têm
+          olhos, então podemos escrever uma linha que diz que o monstro tem olhos
+          em branco.
       4:
         image: notes/unplug2_4.png
-        text: So students will be able to write a set of instructions, called an algorithm,
-          that list the monsters' parts with blanks for what the styles should be.
-          This is the set of instructions they'll pass to other students to recreate
-          their very own monster.
+        text: Então, os alunos poderão escrever um conjunto de instruções, chamado
+          de algoritmo, que lista as partes dos monstros que estão em branco para
+          dizer de que estilo elas devem ser. Esse é o conjunto de instruções que
+          eles vão passar aos outros alunos para recriar seu próprio monstro.
     unplug3:
       1:
         image: notes/unplug3_1.png
-        text: In graph paper programming, we help explain how coding works by trying
-          to help people recreate drawings using only arrows and scribbles. One person
-          is given a small drawing on graph paper and they need to go through using
-          only specific arrows and try to describe how to recreate that drawing.
+        text: Na programação em papel quadriculado, ajudamos a explicar como a programação
+          funciona tentando ajudar as pessoas a recriarem desenhos usando apenas setas
+          e rabiscos. Uma pessoa recebe um pequeno desenho em um papel quadriculado
+          e ela precisa usar apenas setas específicas para tentar descrever como recriar
+          esse desenho.
       2:
         image: notes/unplug3_2.png
-        text: 'In this activity, the only symbols you can use are these: move one
-          square forward, one square backward, move one square up, move one square
-          down, change to next color, and fill in your square with color. Once we
-          have that coded up, we can hand it off to another person who can read the
-          code and try and recreate the picture.'
+        text: 'Nessa atividade, os únicos símbolos que você pode usar são esses: avance
+          um quadrado, volte um quadrado, mova um quadrado para cima, mova um quadrado
+          para baixo, altere para a próxima cor e preencha seu quadrado com cor. Quando
+          tivermos isso programado, podemos entregar as instruções para outra pessoa
+          e ela poderá ler o código e tentar recriar a imagem.'
     unplug4:
       1:
         image: notes/unplug4_1.png
-        text: In graph paper programming, we help explain how coding works by trying
-          to help people recreate drawings using only arrows and scribbles. One person
-          is given a small drawing on graph paper and they need to go through using
-          only specific arrows and try to describe how to recreate that drawing.
+        text: Na programação em papel quadriculado, ajudamos a explicar como a programação
+          funciona tentando ajudar as pessoas a recriarem desenhos usando apenas setas
+          e rabiscos. Uma pessoa recebe um pequeno desenho em um papel quadriculado
+          e ela precisa usar apenas setas específicas para tentar descrever como recriar
+          esse desenho.
       2:
         image: notes/unplug4_2.png
-        text: In the second half of the activity, we ask students how many different
-          ways they can fold a piece of paper to create sixteen identical rectangles.
-          Then you'll discuss how multiple solutions can lead to the same end result
-          and why some solutions are better in certain situations.
+        text: Na segunda metade da atividade, perguntamos aos alunos de quantas formas
+          diferentes eles podem dobrar um pedaço de papel para criar dezesseis retângulos
+          idênticos. Então, você vai discutir quantas soluções podem levar ao mesmo
+          resultado e por que algumas soluções são melhores em certas situações.
     unplug5:
       1:
         image: notes/unplug5_1.png
-        text: In graph paper programming, we help explain how coding works by trying
-          to help people recreate drawings using only arrows and scribbles. One person
-          is given a small drawing on graph paper and they need to go through using
-          only specific arrows and try to describe how to recreate that drawing.
+        text: Na programação em papel quadriculado, ajudamos a explicar como a programação
+          funciona tentando ajudar as pessoas a recriarem desenhos usando apenas setas
+          e rabiscos. Uma pessoa recebe um pequeno desenho em um papel quadriculado
+          e ela precisa usar apenas setas específicas para tentar descrever como recriar
+          esse desenho.
       2:
         image: notes/unplug5_2.png
-        text: In the second half of the activity, we ask students how many different
-          ways they can fold a piece of paper to create sixteen identical rectangles.
-          Then you'll discuss how multiple solutions can lead to the same end result
-          and why some solutions are better in certain situations.
+        text: Na segunda metade da atividade, perguntamos aos alunos de quantas formas
+          diferentes eles podem dobrar um pedaço de papel para criar dezesseis retângulos
+          idênticos. Então, você vai discutir quantas soluções podem levar ao mesmo
+          resultado e por que algumas soluções são melhores em certas situações.
     unplug6:
       1:
         image: notes/unplug6_1.png
-        text: This activity is called coding with cards and it's great for any age.
-          Like you learned with the if statements in earlier lessons,  during Blockly,
-          if statements have a piece about them you have to evaluate to find out if
-          it's true or false. That's the conditional and it can be used in lots of
-          different ways.
+        text: Essa atividade se chama programação com cartas, e ela é ótima para todas
+          as idades. Como você aprendeu com as lições anteriores, durante o conteúdo
+          sobre o Blockly, as instruções "se" precisam ser avaliadas para sabermos
+          se elas são verdadeiras ou falsas. Isso é condicional, e pode ser usado
+          de várias formas diferentes.
       2:
         image: notes/unplug6_2.png
-        text: We take advantage of that by creating programs on paper that you run
-          using a random draw of playing cards. You might have an if statement that
-          says something like if the card you draw is greater than 8, you get a point.
-          Otherwise, your opponent gets a point. You can make it as simple or as complicated
-          as you feel comfortable.
+        text: 'Tiramos vantagem disso criando programas em papel que você executa
+          usando cartas escolhidas aleatoriamente. Você pode ter uma instrução "se"
+          que diz algo como: "se a carta que você tirou for maior que 8, você ganha
+          um ponto. Caso contrário, seu oponente ganha um ponto". Você pode fazer
+          isso de formas mais simples ou mais complexas conforme você se sentir mais
+          confortável.'
     unplug7:
       1:
         image: notes/unplug7_1.png
-        text: You know how when you look up the lyrics for a song and they define
-          the chorus at the very beginning and then for the rest of the song, they
-          just refer you back to the chorus? That's how you call a function.
+        text: Você sabe quando você procura a letra de uma música e eles definem o
+          refrão logo no início e depois, para o resto da música, eles apenas fazem
+          referência ao refrão? É assim que você chama uma função.
       2:
         image: notes/unplug7_2.png
-        text: In this lesson, we define the chorus at the beginning of our song and
-          then we sing through our song and go back and we notice that the class doesn't
-          sing the word chorus, they automatically go up to the top where we define
-          the chorus and sing through that. We use that as a great introduction to
-          how to understand what a program is doing when it defines and calls a function.
+        text: Nessa lição, definimos o refrão no começo da música e então começamos
+          a cantar, e percebemos que a classe não canta a palavra "refrão", eles automaticamente
+          voltam para o início, onde definimos o refrão, e o cantam. Usamos isso como
+          uma ótima introdução para entender o que um programa faz quando ele define
+          e chama uma função.
       3:
         image: notes/unplug7_3.png
-        text: We use familiar songs including Old Macdonald to talk about how a chorus
-          is called over and over and how sometimes a chorus can change. When you
-          have a song like Old Macdonald, where certain words change, that's a great
-          place to introduce the idea of parameters. Passing certain words through
-          so that you can send extra information to your function. Once we're sure
-          everybody gets it, you can take your own familiar songs and break them up
-          yourself. See if you can figure it out together.
+        text: Usamos músicas conhecidas, como Old Macdonald, para falar sobre como
+          um refrão é chamado várias vezes e, às vezes, ele pode ser alterado. Quando
+          temos uma música como Old Macdonald, na qual certas palavras mudam, temos
+          uma ótima oportunidade de introduzir a ideia de parâmetros. Passando certas
+          palavras, você pode enviar informações extras para a sua função. Quando
+          você tiver certeza de que todos entenderam, você pode pegar suas próprias
+          músicas e dividi-las você mesmo. Veja se, junto com toda a turma, vocês
+          conseguem fazer isso.
     unplug8:
       1:
         image: notes/unplug8_1.png
-        text: Our lesson on abstraction uses the familiar concept of madlibs, where
-          you basically insert a blank in a story that can be filled with lots of
-          different words. We take that idea, challenge kids to come up with their
-          own words for their own stories, and really explain the concept of abstraction.
+        text: Nossa lição sobre abstração usa o conceito de madlibs, nas quais você
+          basicamente insere uma lacuna em uma história que pode ser preenchida com
+          várias palavras diferentes. Pegamos essa ideia, desafiamos as crianças para
+          que inventem suas próprias palavras para suas próprias histórias, e explicamos
+          o conceito de abstração.
       2:
         image: notes/unplug8_2.png
-        text: It's all about functions and how you can have a function, like in Old
-          Macdonald, where you have a structure for your chorus but you have something
-          little that changes and you abstract out that little thing that changes
-          and you can fill it in with your own word every time through. But sometimes
-          you have three words that change and so you fill those in with three parameters,
-          that's still pretty helpful.
+        text: Isso está relacionado a funções e como você pode ter uma função, como
+          na música do Old Macdonald, na qual você tem uma estrutura para o seu refrão,
+          mas também tem pequenas alterações, e você as abstrai preenchendo-as toda
+          vez com sua própria palavra. Mas às vezes você tem três palavras que mudam,
+          então você as preenche com três parâmetros, isso é muito útil.
       3:
         image: notes/unplug8_3.png
-        text: You can have one function that handles lots of different problems. Lots
-          of times people will write separate functions for all those problems, not
-          realizing there's only one little difference. If they could just find a
-          way to handle that one little difference, they could just reuse one function
-          over and over again, instead of having 14 different functions.
+        text: Você pode ter uma função que lida com vários problemas diferentes. Muitas
+          vezes, as pessoas vão escrever funções separadas para todos esses problemas,
+          sem perceber que há apenas uma pequena diferença. Se elas pudessem encontrar
+          uma maneira de lidar com essa pequena diferença, elas poderiam reutilizar
+          uma função várias vezes, ao invés de ter 14 funções diferentes.
     unplug9:
       1:
         image: notes/unplug9_1.png
-        text: Relay programming is an extremely fun lesson that gets across way more
-          than computer science. Sometimes everybody is getting a little bit antsy
-          and you want to get them up on their feet. This is a great way to add some
-          excitement to computer science.
+        text: A programação por revezamento é uma lição extremamente divertida que
+          vai muito além da ciência da computação. Às vezes alguém está ficando um
+          pouco impaciente e você quer mantê-lo atento. Essa é uma ótima forma de
+          adicionar um pouco de emoção à ciência da computação.
       2:
         image: notes/unplug9_2.png
-        text: You break everyone up into two groups where they stand in a line and
-          run relay style. The first person in each group runs to the other side of
-          the room where you have a graph paper drawing and a blank piece of paper
-          waiting for them. They write down the first step to creating that image,
-          run back to their line, tag the next player who goes back up to write the
-          next step.
+        text: Você divide todo o mundo em dois grupos nos quais eles ficam em uma
+          fila e correm no estilo revezamento. A primeira pessoa em cada grupo corre
+          até o outro lado da sala, onde há um papel de desenho quadriculado e um
+          papel em branco esperando por eles. Eles escrevem o primeiro passo para
+          criar essa imagem, voltam correndo para a fila e o próximo jogador vai correndo
+          escrever o próximo passo.
       3:
         image: notes/unplug9_3.png
-        text: This is a great way to get across the idea of debugging, needing to
-          proofread your own work, and needing to check the work of the people done
-          before you. You'll quickly understand how important it is that you be careful
-          in your coding when a whole team is depending on you.
+        text: Essa é uma ótima maneira de passar a ideia de depuração, a necessidade
+          de revisar seu próprio trabalho e o trabalho que as pessoas fizeram antes
+          de você. Você vai entender rapidamente o quão importante é ser cuidadoso
+          ao escrever seu código quando uma equipe inteira depende de você.
     unplug10:
       1:
         image: notes/unplug10_1.png
-        text: This activity explains in an easy-to-understand way how the internet
-          works. We explain all the terminology you'll need in simple terms so that
-          students can simulate transmitting messages, like an email.
+        text: Essa atividade explica, de forma fácil de entender, como a internet
+          funciona. Explicamos todas as terminologias que você precisa em termos simples,
+          para que os alunos possam simular transmissões de mensagens, como um e-mail.
       2:
         image: notes/unplug10_2.png
-        text: Students will transmit messages while pretending to be one of three
-          transmission methods. Wireless internet, DSL or fiber optic. The students
-          who represent wi-fi will have to wear the message they're transmitting on
-          their head because wifi is the most likely to drop some information.
+        text: Os alunos vão transmitir mensagens enquanto fingem ser um dos três métodos
+          de transmissão. Internet sem fio, DSL ou fibra ótica. Os alunos que representam
+          o wi-fi precisam equilibrar a mensagem que eles estão enviando na cabeça,
+          porque o wi-fi tem a maior probabilidade de perder alguma informação.
       3:
         image: notes/unplug10_3.png
-        text: The students pretending to be DSL or cable will carry the message on
-          the back of their hand, where they're slightly less likely to drop information.
-          And the students representing fiber optic will get to carry them with both
-          hands. This activity is a great way to understand something that many of
-          us use every day.
+        text: Os alunos que fingem ser o DSL ou o cabo vão carregar a mensagem nas
+          costas de suas mãos, local com menor probabilidade de perder a informação.
+          E os alunos que representam a fibra ótica vão carregar a mensagem com as
+          duas mãos. Essa atividade é uma ótima forma de compreender algo que muitos
+          de nós usamos todos os dias.
     unplug11:
       1:
         image: notes/unplug11_1.png
-        text: So now it's time to step back and take a birds eye view of everything
-          you've done in these past nineteen lessons. This is a great time to call
-          out to students that what they've just done is a huge achievement. They've
-          learned more over these lessons than most adults know about computer science.
+        text: Então, agora é hora de dar um passo para trás e dar uma olhada em tudo
+          o que você fez nas últimas dezenove lições. Essa é uma ótima hora para dizer
+          aos alunos que o que eles fizeram já é uma grande conquista. Eles aprenderam
+          mais nessas lições do que muitos adultos sabem sobre ciência da computação.
       2:
         image: notes/unplug11_2.png
-        text: Discuss as a class or in small groups about their favorite lessons.
-          Once you take a look back at everything you've learned, this is where your
-          students' creativity can shine. Split them into groups and have them create
-          an unplugged lesson of their own. Assign each group a key concept, like
-          functions or algorithms and have lots of craft materials on hand for them
-          to use. Have each group present their new unplugged activity or even set
-          aside another day to do a few of the student created activities.
+        text: Discuta com a sala toda ou em grupos pequenos sobre suas lições favoritas.
+          Quando você olhar para tudo o que aprendeu, é o momento no qual pode brilhar
+          a criatividade de seus alunos. Divida-os em grupos e peçam para que eles
+          criem sua própria lição offline. Atribua um conceito chave para cada grupo,
+          como funções ou algoritmos, e dê materiais para que eles usem. Peça para
+          que cada grupo apresente sua nova atividade ou até mesmo reserve outro dia
+          para realizar as atividades criadas pelos alunos.
       3:
         image: notes/unplug11_3.png
-        text: From everyone here at Code.org, we hope you've had a TON of fun during
-          this course. And whether your dream is to create the best new app, use programming
-          to help cure diseases, or you just want to be a stellar problem-solver,
-          this course was the first step in achieving those dreams.
+        text: De todos da Code.org, esperamos que você tenha tido uma TONELADA de
+          diversão durante esse curso. E se seu sonho é criar o melhor novo aplicativo,
+          usar a programação para ajudar na cura de doenças, ou se você quer ser apenas
+          um grande solucionador de problemas, esse curso foi o primeiro passo para
+          alcançar esses sonhos.
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
@@ -2574,14 +2581,14 @@
           criar nosso programa.
       7:
         image: notes/starwars_intro_7.JPG
-        text: Se eu arrastar o bloco movaParaEsquerda(); para nossa área de trabalho
-          e pressionar Executar, o que acontece? O BB-8 se move um bloco para a esquerda.
+        text: Se eu arrastar o bloco moveLeft(); para nossa área de trabalho e pressionar
+          Executar, o que acontece? O BB-8 se move um bloco para a esquerda.
       8:
         image: notes/starwars_intro_8.JPG
-        text: E se eu quiser que BB-8 faça algo depois do movaParaEsquerda();? Posso
-          adicionar outro bloco ao nosso programa. Vou escolher o bloco movaParacima();
-          e arrastá-lo para debaixo do bloco movaParaEsquerda(); até que ele fique
-          em destaque. Então, vou soltá-lo, e os dois blocos vão se encaixar.
+        text: E se eu quiser que BB-8 faça algo depois do moveLeft();? Posso adicionar
+          outro bloco ao nosso programa. Vou escolher o bloco moveUp(); e arrastá-lo
+          para debaixo do bloco moveLeft(); até que ele fique em destaque. Então,
+          vou soltá-lo, e os dois blocos vão se encaixar.
       9:
         image: notes/starwars_intro_9.JPG
         text: Quando pressiono Executar de novo, BB-8 vai obedecer aos comandos empilhados
@@ -2669,21 +2676,20 @@
           de direção para cima/para baixo ou os botões para cima/para baixo.
       6:
         image: notes/starwars_events_6.JPG
-        text: Usamos o bloco de evento quandoParaCima() e encaixamos o bloco movaParaCima()
-          a ele. Quando o jogador pressionar a tecla de direção para cima, o código
-          vinculado ao bloco quandoParaCima() é executado. Faremos a mesma coisa para
-          o R2-D2 se mover para baixo.
+        text: Usamos o bloco de evento whenUp() e encaixamos o bloco goUp() a ele.
+          Quando o jogador pressionar a tecla de direção para cima, o código vinculado
+          ao bloco whenUp() é executado. Faremos a mesma coisa para o R2-D2 se mover
+          para baixo.
       7:
         image: notes/starwars_events_7.JPG
-        text: Para fazer isso, usamos um comando chamado quandoParaCima(). Quando
-          você arrastar o comando para fora da caixa de ferramentas, vai ver que ele
-          começa e termina com chaves em vez de ponto e vírgula. Isso nos dá espaço
-          para colocar outros comandos entre as chaves. Todos os comandos que colocarmos
-          entre essas chaves serão executados quando o jogador pressionar a seta para
-          cima.
+        text: Para fazer isso, usamos um comando chamado whenUp(). Quando você arrastar
+          o comando para fora da caixa de ferramentas, vai ver que ele começa e termina
+          com chaves em vez de ponto e vírgula. Isso nos dá espaço para colocar outros
+          comandos entre as chaves. Todos os comandos que colocarmos entre essas chaves
+          serão executados quando o jogador pressionar a seta para cima.
       8:
         image: notes/starwars_events_8.JPG
-        text: Queremos que o R2-D2 vá para cima, então vamos colocar um bloco movaParaCima();
+        text: Queremos que o R2-D2 vá para cima, então vamos colocar um bloco goUp();
           dentro do comando. E vamos fazer a mesma coisa para o R2-D2 ir para baixo.
       9:
         image: notes/starwars_events_9.JPG
@@ -2693,8 +2699,8 @@
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Oi, meu nome é Alice, e eu gerencio o projeto e equipes de engenharia
-          aqui na Code.org, e trabalhei nesse tutorial que você está vendo agora.
+        text: Oi, meu nome é Alice! Eu gerencio o projeto e as equipes de engenharia
+          aqui na Code.org e trabalhei neste tutorial que você está vendo agora.
       2:
         image: notes/starwars_congrats_2.JPG
         text: Você acaba de chegar ao último nível. Parabéns! Você aprendeu tudo o
@@ -2759,16 +2765,16 @@
           vamos criar nosso programa.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: Se eu arrastar o bloco movaParaEsquerda(); para nossa área de trabalho,
-          o que acontece? BB-89 se move um bloco para a esquerda.
+        text: Se eu arrastar o bloco moveLeft(); para nossa área de trabalho, o que
+          acontece? BB-89 se move um bloco para a esquerda.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: E se eu quiser que BB-8 faça algo depois do movaParaEsquerda();? Posso
-          adicionar outro bloco ao nosso programa. Vou escolher o bloco movaParaCima();
-          e arrastá-lo para debaixo do bloco movaParaEsquerda(); até que ele fique
-          em destaque. Então, vou soltá-lo, e os dois blocos vão se encaixar. Quando
-          eu pressionar Executar de novo, BB-8 vai seguir os comandos que estão empilhados
-          em nossa área de trabalho de cima para baixo.
+        text: E se eu quiser que BB-8 faça algo depois do moveLeft();? Posso adicionar
+          outro bloco ao nosso programa. Vou escolher o bloco moveUp(); e arrastá-lo
+          para debaixo do bloco moveLeft(); até que ele fique em destaque. Então,
+          vou soltá-lo, e os dois blocos vão se encaixar. Quando eu pressionar Executar
+          de novo, BB-8 vai seguir os comandos que estão empilhados em nossa área
+          de trabalho de cima para baixo.
       9:
         image: notes/starwars_blocks_intro_9.JPG
         text: Se você quiser apagar um bloco, simplesmente remova-o da pilha e arraste-o
@@ -2809,20 +2815,20 @@
           de direção para cima/para baixo ou os botões para cima/para baixo.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: Usamos o bloco de evento quandoParaCima() e encaixamos o bloco movaParaCima()
-          nele. Quando o jogador pressionar a tecla de direção para cima, o código
-          do bloco quandoParaCima() é executado. Faremos a mesma coisa para fazer
-          R2-D2 se mover para baixo. Agora, em vez de escrever antecipadamente todo
-          o código para controlar nosso androide, podemos deixar R2-D2 reagir a eventos
-          de botões sendo pressionados que o fazem se mover pela tela.
+        text: Usamos o bloco de evento whenUp() e encaixamos o bloco goUp() nele.
+          Quando o jogador pressionar a tecla de direção para cima, o código do bloco
+          whenUp() é executado. Faremos a mesma coisa para fazer R2-D2 se mover para
+          baixo. Agora, em vez de escrever antecipadamente todo o código para controlar
+          nosso androide, podemos deixar R2-D2 reagir a eventos de botões sendo pressionados
+          que o fazem se mover pela tela.
       7:
         image: notes/starwars_blocks_events_7.JPG
         text: Passo a passo, seu jogo está ficando mais interativo.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Oi, meu nome é Alice, e eu gerencio o projeto e equipes de engenharia
-          aqui na Code.org, e trabalhei nesse tutorial que você está vendo agora.
+        text: Oi, meu nome é Alice! Eu gerencio o projeto e as equipes de engenharia
+          aqui na Code.org e trabalhei neste tutorial que você está vendo agora.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
         text: Você acaba de chegar ao último nível. Parabéns! Você aprendeu tudo o
@@ -2852,164 +2858,172 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
+        text: Meu nome é Jens Bergensten, mas sou mais conhecido como Jeb. Eu sou
+          o desenvolvedor líder de Minecraft, aqui na Mojang, em Estocolmo. Eu acho
+          que eu tinha onze ou doze anos talvez, e comecei a programar porquê eu queria
+          fazer jogos. Um dos amigos do meu pai me disse que para fazer jogos, você
+          precisa aprender a programar. É assim que eu comecei. Eu gosto de desenhar
+          e descobrir a arquitetura de jogos. Isso é o que eu realmente gosto sobre
           Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
+        text: Durante a próxima hora, você vai aprender o básico de ciência da computação
+          por programar Alex ou Steve para percorrer um pedaço simulado de um mundo
+          de Minecraft.
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: Programação tradicional é normalmente em texto, mas hoje nós vamos usar
+          o Blockly, um sistema que utiliza blocos visuais que você pode arrastar
+          e soltar para montar os programas. Sob o capô, você está criando código
+          Javascript.
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: Os conceitos que você estará aprendendo são aqueles que programadores
+          de computador usam diariamente, e que são os fundamentos da ciência da computação.
+          Aqui na Mojang, usamos estes mesmos conceitos para fazer funcionar o Minecraft.
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: Antes de começar, você vai escolher seu personagem. Eu vou escolher
+          a Alex. Vamos compilar o código para um programa que vai ajudá-la a se mover
+          pela tela.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: Sua tela é dividida em três partes principais. À esquerda está a área
+          de jogo de Minecraft onde seu programa será executado. As instruções para
+          cada nível são escritas abaixo.
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: Esta área do meio é a caixa de ferramentas e cada um destes blocos é
+          um comando que direciona as ações da Alex.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: O espaço em branco à direita é chamado o espaço de trabalho e é onde
+          iremos construir nosso programa.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: Se arrastarmos o bloco moveForward(); para a nossa área de trabalho
+          e clicarmos em executar, o que acontece? Alex se move para a frente um espaço
+          no mapa.
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: E se quisermos fazer algo depois dela avançar um espaço? Podemos adicionar
+          outro bloco ao nosso programa. Eu vou escolher o bloco turnRight(); e vou
+          arrastá-lo para baixo do meu bloco moveForward(); até que essa linha laranja
+          apareça. Então eu vou soltá-lo e os dois blocos vão se encaixar. Quando
+          pressionarmos o botão executar novamente, Alex vai realizar os comandos
+          empilhados de cima para baixo em nossa área de trabalho.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: Se você quiser apagar um bloco, simplesmente arraste-o da pilha de volta
+          para a caixa de ferramentas.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: 'Para desfazer as alterações e voltar para o estado inicial do nível,
+          use o botão Começar do início no canto superior direito da área de trabalho.
+          Mais uma coisa: você vê o pequeno triângulo nos blocos de virar? Toda vez
+          que você ver esses triângulos, significa que você pode escolher uma opção
+          diferente. Vamos começar a programar!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: Meu nome é Lydia Winters, diretora de marca da Mojang e fizemos um pequeno
+          jogo chamado Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: O que eu mais gosto de fazer no Minecraft é explorar. Eu amo me aventurar
+          nas cavernas e ver o que posso encontrar. Para alguém que não é um programador,
+          estou realmente empolgada para ver a lição sobre Minecraft e de fato aprender
+          um pouco sobre programação.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: O último nível precisa de vários blocos moveFoward();. Seria mais fácil
+          se pudéssemos simplesmente dizer ao computador para realizar o comando moveForward();
+          quatro vezes. Para nossa sorte, os computadores são muito bons em repetir
+          comandos com os laços de repetição.
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: Quando criamos o Minecraft, usamos laços de repetição para colocar todo
+          o material inicial para criar um novo mundo. São milhares e milhares de
+          blocos. Também usamos laços para coisas menores, por exemplo para fazer
+          os pés de Alex se moverem para frente e para trás conforme ela anda. Laços
+          de repetição são uma parte poderosa da programação.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: A noite está chegando, então nos próximos níveis vamos construir uma
+          casa segura para ficarmos. Vamos usar o bloco repita para fazer isso facilmente.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: Para construir uma parede da nossa casa, podemos falar para Alex para
+          avançar com moveForward(); e colocar tábuas quatro vezes, ou podemos falar
+          para ela avançar com moveForward(); e colocar uma tábua, então pegar esse
+          comando e usar o bloco repita para que ela realize a ação várias vezes.
+          Agora, vamos clicar no bloco repita e dizer a ela quantas vezes queremos
+          que ela realize essa ação. Agora, vamos construir nossa casa antes de escurecer!
+          Divirta-se.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: Agora, vamos aprender sobre as instruções "se". Instruções "se" são
+          uma parte fundamental do aprendizado sobre programação. Elas ajudam o computador
+          a tomar decisões.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Todos os computadores usam instruções "se", incluindo meu telefone.
+          Por exemplo, quando eu desbloqueio meu telefone, ele executa um código que
+          diz que, se eu digitei a senha correta, então desbloqueie o telefone. Caso
+          contrário, ele mostra uma mensagem de erro.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: Você pode usar instruções "se" em seu código para fazer Steve e Alice
+          reagirem ao que eles veem no mundo. Por exemplo, se há uma pedra na frente
+          deles, eles podem virar à esquerda. Ou virar à direita se eles se depararem
+          com uma árvore.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: Nesse caso, não queremos cair na lava. É fácil planejar como evitar
+          a lava. Podemos vê-la na tela. Mas e quanto a lava que não podemos ver por
+          estar sob a pedra?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: Depois de minerar a pedra, precisamos verificar se há lava nesse lugar
+          antes de avançar. Se houver lava, queremos colocar uma pedra na frente de
+          nosso personagem antes de poder avançar. Assim podemos nos mover com segurança.
+          Hora de minerar! E lembre-se de usar a instrução "se" para ter cuidado onde
+          pisa.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Parabéns! Você aprendeu o básico da ciência de computação por blocos
+          de comando.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Agora, você pode usar esses blocos para construir sua própria criação.
+          Não há mais instruções e desafios para resolver. Você pode construir o que
+          quiser. Você escolhe.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[alunos falando] Isso está prestes a se tornar realidade. Tosquiar.
+          Eu fiz um L com tochas. Fiz um A com tábuas. Funcionou, funcionou. Construímos
+          uma casa de lã!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Quando você tiver terminado sua criação, escolha compartilhar para obter
+          um link para compartilhar com seus amigos. Divirta-se!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Parabéns! Você aprendeu o básico da ciência de computação por blocos
+          de comando.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Agora, você pode usar esses blocos para construir sua própria criação.
+          Não há mais instruções e desafios para resolver. Você pode construir o que
+          quiser. Você escolhe.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[alunos falando] Isso está prestes a se tornar realidade. Tosquiar.
+          Eu fiz um L com tochas. Fiz um A com tábuas. Funcionou, funcionou. Construímos
+          uma casa de lã!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Agora você pode construir o que quiser. Divirta-se!

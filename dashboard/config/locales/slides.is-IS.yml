@@ -2480,12 +2480,9 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+        text: |
+          Hæ, ég er Kathleen Kennedy og ég er framleiðandi Star Wars: The Force Awakens. Í dag færð þú að vinna með einni af stjörnunum okkar, BB-8. BB-8 er kúlulaga vélmenni. Allt sem hann gerir og sérhver hreyfing hans er undir stjórn tölvuhugbúnaðar.
+          Tölvunarfræði kemur við sögu í allri starfsemi, í markaðssetningu, í heilbrigðisþjónustu, í kvikmyndum. Reyndar unnu hundruðir tölvunarfræðinga saman við að búa til kvikmyndina The Force Awakens.
       2:
         image: notes/starwars_intro_2.JPG
         text: |
@@ -2498,37 +2495,37 @@
           Eftir að þú hefur prófað grunnatriðin með kubbum ætlum við að láta þig skipta yfir í JavaScript, eitt vinsælasta forritunarmálið á vefnum.
       4:
         image: notes/starwars_intro_4.JPG
-        text: To start off, we're going to work with Rey to program BB-8 to walk to
-          collect all of the scrap parts. Your screen is split into three parts. On
-          the left is the Star Wars game space, where code will run. The instructions
-          for each level are written below the game space.
+        text: Til að byrja með ætlum við að vinna með Rey og forrita BB-8 svo hann
+          hreyfist og safni öllu dótinu. Skjárinn skiptist í þrjá hluta. Vinstra megin
+          er Star Wars leiksvæðið þar sem kóði mun keyra. Fyrirmælin fyrir hverja
+          þraut eru fyrir neðan leiksvæðið.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: Þetta miðsvæði er verkfærakassinn. Og hver þessara kubba er skipun sem
+          BB-8 skilur.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
+        text: Hvíta svæðið hægra megin nefnist vinnusvæðið og það er hér sem við munum
+          byggja forritið okkar.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what
-          happens? BB-8 moves left one block on the grid.
+        text: Ef ég dreg moveLeft(); kubbinn inn á vinnusvæðið og ýti á "Keyra", hvað
+          gerist þá? BB-8 færist um einn reit á borðinu.
       8:
         image: notes/starwars_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together.
+        text: Og hvað ef ég vil að BB-8 geri eitthvað eftir moveLeft(); kubbinn? Þá
+          get ég bætt öðrum kubbi í forritið. Ég ætla að velja moveUp(); kubbinn og
+          ég ætla að draga hann undir moveLeft(); kubbinn þar til litaða röndin birtist.
+          Þá sleppi ég honum og kubbarnir tveir smella saman.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked
-          from top to bottom on our workspace. If you ever want to delete a block,
-          just remove it from the stack and drag it back into the tool box.
+        text: Þegar ég ýti aftur á Keyra, mun BB-8 gera skipanirnar sem er staflað
+          ofan frá og niður á vinnusvæðinu. Ef þú vilt eyða kubbi, skaltu bara fjarlægja
+          hann úr stæðunni og draga hann aftur inn í verkfærakassann.
       10:
         image: notes/starwars_intro_10.JPG
-        text: After you've hit run, you can always hit the reset button to get BB-8
-          back to the start. Now let's get rolling!
+        text: Eftir að þú hefur ýtt á Keyra, geturðu alltaf ýtt á "Endurstilla" hnappinn
+          til að færa BB-8 aftur á byrjunarreit. Nú skulum við velta af stað!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
@@ -2540,117 +2537,119 @@
           erum við fljótari.
       2:
         image: notes/starwars_typing_2.JPG
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
+        text: Við getum skrifað hundruði skipana án þess að þurfa að finna þær í verkfærakassanum
+          eða draga þær fram. Vegna þess að þú ert að læra ertu ef til vill lengur
+          að skrifa í byrjun, en við vildum að þú prófaðir það.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show
-          text button on any puzzle to switch from blocks to typing code as text.
+        text: Efst uppi í hægra horni vinnusvæðisins getur þú smellt á Sýna texta
+          hnappinn í öllum þrautum til að skipta úr að draga kubba yfir í að skrifa
+          kóða sem texta.
       4:
         image: notes/starwars_typing_4.JPG
-        text: In the next lesson, we'll start you out in typing mode. Here you can
-          still drag the block from the toolbox or you can type the command name.
-          As you start to type, you'll see names of possible commands show below where
-          you're typing. Instead of typing the whole command name, you can select
-          one of these to move faster. In my job, I use this auto-complete feature
-          all the time when writing code.
+        text: Í næstu þraut ætlum við að láta þig byrja í textahamnum. Þú getur eins
+          og áður dregið kubb úr verkfærakassanum eða þú getur skrifað heiti skipunarinnar.
+          Þegar þú byrjar að skrifa muntu sjá heiti skipana sem koma til greina fyrir
+          neðan það sem þú skrifar. Í stað þess að skrifa allt heiti skipunar getur
+          þú valið eina af þeim til að flýta fyrir. Í minni vinnu er ég alltaf að
+          nota þessa flýtifyllingu.
       5:
         image: notes/starwars_typing_5.JPG
-        text: When you're typing code, the computer needs you to be very precise.
-          You need to spell and capitalize the command name exactly correctly, including
-          the parentheses and the semi-colon. Even with a small typing mistake, BB-8
-          cannot understand the code and won't be able to move.
+        text: |
+          Þegar þú skrifar kóða er nauðsynlegt fyrir tölvuna að þú vandir þig. Þú verður að hafa alla stafi og hástafi nákvæmlega rétta. Og ekki gleyma sviganum og semikommunni.
+          Minnsta villa í ritun veldur því að BB-8 skilur ekki kóðann og getur ekki hreyft sig.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
+        text: Þegar það er villa í línu merkir ritillinn hana fyrir þig svo þú getir
+          reynt að breyta textanum til að laga villuna.
       7:
         image: notes/starwars_typing_7.JPG
-        text: If you get stuck, you can always start over with the start over button
-          and you can switch back to block mode at any time by clicking in the top-right
-          corner. Ok, let's give typing a try! And if you make mistakes, don't get
-          frustrated. It takes everybody a few tries to get it right.
+        text: Ef þú festist, geturðu alltaf byrjað upp á nýtt með Byrja aftur hnappnum
+          og þú getur skipt yfir í kubbaham hvenær sem er með því að smella í hornið
+          efst til hægri. Jæja, prófum nú að vélrita! Og ef þú gerir mistök, skaltu
+          ekki láta það ergja þig. Það þurfa allir nokkrar tilraunir til að gera þetta
+          rétt.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Hæ, ég heiti Charita Carter. Ég er yfirframleiðandi í sköpun hérna hjá
+          Walt Disney Imagineering. Ég ber ábyrgð á að leiða hópa sem raunverulega
+          búa til leiktækin sem gestir okkar fá að upplifa. Svo við erum alltaf að
+          leita leiða til að endurbæta og betrumbæta upplifun gesta okkar. Og tölvutæknin
+          er þungamiðja í því.
       2:
         image: notes/starwars_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Til hamingju! Þér tókst það! Þú forritaðir BB-8. Nú held ég að við séum
+          tilbúin fyrir eitthvað erfiðara. Skellum okkur í það. Nú þegar þú hefur
+          lært grunnatriði í forritun, ætlum við að fara aftur til fortíðar og búa
+          til leik með R2-D2 og C-3PO.
       3:
         image: notes/starwars_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: Til að búa til leik, þurfum við að læra nokkuð sem leikjaforritarar
+          nota á hverjum degi. Það eru atvik. Atvik segja forriti að hlusta eða bíða
+          eftir því að eitthvað gerist. Og þegar það gerist þá framkvæmir forritið
+          einhverja aðgerð.
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Nokkur dæmi um atvik eru þegar mús er smellt, ýtt er á örvarlykil eða
+          þegar pikkað er á snertiskjá.
       5:
         image: notes/starwars_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Hér ætlum við að láta R2-D2 færast upp til að flytja skilaboð til flugmanns
+          uppreisnarmanna og síðan færast niður til hins flugmannsins. Við notum atvik
+          til að láta hann færast þegar spilarinn notar upp/niður örvarlyklana eða
+          upp/niður hnappana.
       6:
         image: notes/starwars_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down.
+        text: Við notum whenUp() atvikskubbinn og festum goUp() kubbinn við hann.
+          Þegar spilarinn ýtir á upp örvarlykilinn, keyrir það kóðann sem er tengdur
+          við whenUp() kubbinn. Og við gerum það sama til að láta R2-D2 færast niður.
       7:
         image: notes/starwars_events_7.JPG
-        text: To do this, we'll use a command called whenUp(). When you drag the command
-          out of the toolbox, you'll see that it starts and ends with a curly bracket
-          instead of a semi-colon. This gives us space to put other commands in the
-          middle. Every command that we place inside these brackets will run when
-          the player presses the up arrow.
+        text: Til að gera þetta notum við skipun sem heitir whenUp(). Þegar þú dregur
+          skipunina út úr verkfærakassanum, þá sérðu að hún byrjar og endar á slaufusviga
+          en ekki semikommu. Þetta gefur okkur rúm til að setja aðrar skipanir á milli.
+          Sérhver skipun, sem við setjum í þessa sviga, mun keyra þegar spilarinn
+          ýtir á upp örina.
       8:
         image: notes/starwars_events_8.JPG
-        text: We want R2-D2 to go up so let's put a goUp(); block inside the command.
-          And we'll do the same thing to make R2-D2 go down.
+        text: Við viljum að R2-D2 færist upp svo við skulum setja goUp(); kubb inn
+          í skipunina. Og við gerum það sama til að láta R2-D2 færast niður.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance,
-          we can let R2-D2 react to button press events that move him around the screen.
-          Step by step, your game is getting more interactive.
+        text: Núna, í stað þess að þurfa að skrifa allan kóða sem stjórnar vélmenninu
+          fyrirfram, getum við látið R2-D2 bregðast við atvikum örvarlykla sem færa
+          hann um skjáinn. Skref fyrir skref er leikurinn þinn að verða gagnvirkari.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Hæ, ég heiti Alice og ég stjórna framleiðsluteyminu hér hjá Code.org
+          og ég vann að þessu kennsluefni sem þú ert að nota einmitt núna.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: Og þér tókst að komast á síðasta borðið. Til hamingju! Þú hefur lært
+          allt sem þú þarft að vita til að búa til þinn eigin Star Wars leik. Nú eru
+          ekki fleiri fyrirmæli, engar þrautir að leysa. Þú getur búið til þinn eigin
+          leik og þú ákveður hvernig hann virkar. Eitt í viðbót. Þú hefur nú fengið
+          aðgang að nýjum hljóðum og nýjum skipunum til að gera enn fleira.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[nemendur tala] Svo við gerðum leik þar sem maður fær stig ef maður
+          nær blöðrusvínum. Vandamálið er að þegar maður nær svíni þá birtist stormsveitarmaður.
+          Í lokin er skjárinn fullur af blöðrusvínum og svo þegar maður hefur snert
+          10.000 svín, þá vinnur maður.'
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[nemendur tala] Við bjuggum til leik þar sem maður getur ekki tapað
+          og allt sem maður drepur gefur stig. Í forritinu mínu sneri ég við lyklunum
+          svo að ef maður smellir á upp þá fer kallinn niður og þegar maður smellir
+          á vinstri þá fer hann til hægri. Þetta er sko erfitt! Stundum fær maður
+          forskot, ósanngjarnt forskot ef maður hefur þróað leikinn sjálfur. Náði
+          ég þessu? Yay!'
       5:
         image: notes/starwars_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Þegar þú ert búinn með leikinn, veldu þá að deila til að fá tengil til
+          að deila með vinum eða spila leikinn í símanum. Góða skemmtun!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
@@ -2671,267 +2670,266 @@
           og safni öllu brotajárninu.
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars
-          game space where code will run. The instructions for each level are written
-          below the game space.
+        text: Skjárinn skiptist í þrjá hluta. Vinstra megin er Star Wars leiksvæðið
+          þar sem kóði mun keyra. Fyrirmælin fyrir hverja þraut eru fyrir neðan leiksvæðið.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: Þetta miðsvæði er verkfærakassinn. Og hver þessara kubba er skipun sem
+          BB-8 skilur.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we're going to build our program.
+        text: Hvíta svæðið hægra megin nefnist vinnusvæðið og það er hér sem við munum
+          byggja forritið okkar.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8
-          moves left one block on the grid.
+        text: Ef ég dreg moveLeft(); kubbinn inn á vinnusvæðið og ýti á Keyra, hvað
+          gerist þá? BB-8 færist til vinstri um einn reit á borðinu.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together. When I press run
-          again, BB-8 will perform the commands that are stacked top to bottom on
-          our workspace.
+        text: Og hvað ef ég vil að BB-8 geri eitthvað eftir moveLeft(); kubbinn? Þá
+          get ég bætt öðrum kubbi í forritið. Ég ætla að velja moveUp(); kubbinn og
+          ég ætla að draga hann undir moveLeft(); kubbinn þar til litaða röndin birtist
+          og þá sleppi ég honum og kubbarnir tveir smella saman. Þegar ég ýti aftur
+          á Keyra, mun BB-8 gera skipanirnar sem er staflað ofan frá og niður á vinnusvæðinu.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back into the toolbox.
+        text: Ef þú vilt eyða kubbi, skaltu bara fjarlægja hann úr stæðunni og draga
+          hann aftur inn í verkfærakassann.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: After you hit run, you can always hit the reset button to get BB-8 back
-          to the start. Now let's get rolling!
+        text: Eftir að þú hefur ýtt á Keyra, geturðu alltaf ýtt á "Endurstilla" hnappinn
+          til að færa BB-8 aftur á byrjunarreit. Nú skulum við velta af stað!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Hæ, ég heiti Charita Carter. Ég er yfirframleiðandi í sköpun hérna hjá
+          Walt Disney Imagineering. Ég ber ábyrgð á að leiða hópa sem raunverulega
+          búa til leiktækin sem gestir okkar fá að upplifa. Svo við erum alltaf að
+          leita leiða til að endurbæta og betrumbæta upplifun gesta okkar. Og tölvutæknin
+          er þungamiðja í því.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Til hamingju! Þér tókst það! Þú forritaðir BB-8. Nú held ég að við séum
+          tilbúin fyrir eitthvað erfiðara. Skellum okkur í það. Nú þegar þú hefur
+          lært grunnatriði í forritun, ætlum við að fara aftur til fortíðar og búa
+          til leik með R2-D2 og C-3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: Til að búa til leik, þurfum við að læra nokkuð sem leikjaforritarar
+          nota á hverjum degi. Það eru atvik. Atvik segja forriti að hlusta eða bíða
+          eftir því að eitthvað gerist. Og þegar það gerist þá framkvæmir forritið
+          einhverja aðgerð.
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Nokkur dæmi um atvik eru þegar mús er smellt, ýtt er á örvarlykil eða
+          þegar pikkað er á snertiskjá.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Hér ætlum við að láta R2-D2 færast upp til að flytja skilaboð til flugmanns
+          uppreisnarmanna og síðan færast niður til hins flugmannsins. Við notum atvik
+          til að láta hann færast þegar spilarinn notar upp/niður örvarlyklana eða
+          upp/niður hnappana.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down. Now instead
-          of writing all the code to control our droid in advance, we can let R2-D2
-          react to button press events that move him around the screen.
+        text: Við notum whenUp() atvikskubbinn og festum goUp() kubbinn við hann.
+          Þegar spilarinn ýtir á upp örvarlykilinn, keyrir það kóðann sem er tengdur
+          við whenUp() kubbinn. Og við gerum það sama til að láta R2-D2 færast niður.
+          Núna, í stað þess að þurfa að skrifa allan kóða sem stjórnar vélmenninu
+          fyrirfram, getum við látið R2-D2 bregðast við atvikum örvarlykla sem færa
+          hann um skjáinn.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Skref fyrir skref er leikurinn þinn að verða gagnvirkari.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Hæ, ég heiti Alice og ég stjórna framleiðsluteyminu hér hjá Code.org
+          og ég vann að þessu kennsluefni sem þú ert að nota einmitt núna.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: Og þér tókst að komast á síðasta borðið. Til hamingju! Þú hefur lært
+          allt sem þú þarft að vita til að búa til þinn eigin Star Wars leik. Nú eru
+          ekki fleiri fyrirmæli, engar þrautir að leysa. Þú getur búið til þinn eigin
+          leik og þú ákveður hvernig hann virkar. Eitt í viðbót. Þú hefur nú fengið
+          aðgang að nýjum hljóðum og nýjum skipunum til að gera enn fleira.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[nemendur tala] Svo við gerðum leik þar sem maður fær stig ef maður
+          nær blöðrusvínum. Vandamálið er að þegar maður nær svíni þá birtist stormsveitarmaður.
+          Í lokin er skjárinn fullur af blöðrusvínum og svo þegar maður hefur snert
+          10.000 svín, þá vinnur maður.'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[nemendur tala] Við bjuggum til leik þar sem maður getur ekki tapað
+          og allt sem maður drepur gefur stig. Í forritinu mínu sneri ég við lyklunum
+          svo að ef maður smellir á upp þá fer kallinn niður og þegar maður smellir
+          á vinstri þá fer hann til hægri. Þetta er sko erfitt! Stundum fær maður
+          forskot, ósanngjarnt forskot ef maður hefur þróað leikinn sjálfur. Náði
+          ég þessu? Yay!'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Þegar þú ert búinn með leikinn, veldu þá að deila til að fá tengil til
+          að deila með vinum eða spila leikinn í símanum. Góða skemmtun!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: Ég heiti Jens Bergenstein, en er betur þekktur sem Jeb. Ég er yfir hugbúnaðarþróun
+          í Minecraft hér hjá Mojang í Stokkhólmi. Ég held ég hafi verið 11 eða kannske
+          12 ára og ég byrjaði að forrita vegna þess að ég vildi búa til leiki. Einn
+          af vinum föður míns sagði mér að til að gera leiki þyrfti maður að læra
+          að forrita. Svo þannig byrjaði ég. Mér finnst gaman að hanna og pæla í uppbyggingu
+          hluta. Það er það sem mér líkar svo vel við Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
+        text: Næstu klukkustundina munt þú læra grunnatriði tölvunarfræði með því
+          að forrita Alex eða Steve svo þau hreyfist um eftirlíkingu af Minecraft
+          heimi.
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: Venjulega fer forritun fram með texta, en í dag ætlum við að nota Blockly,
+          kerfi sem notar myndræna kubba sem þú getur dregið og sleppt til að skrifa
+          forrit. Bak við tjöldin ert þú að búa til JavaScript kóða.
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: Hugtökin sem þú munt læra eru þau sem tölvuforritarar nota daglega og
+          eru grunnatriði í tölvunarfræði. Hér hjá Mojang notuð við þessi sömu hugtök
+          til að láta Minecraft virka.
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: Áður en þú byrjar, velur þú persónu. Ég ætla að velja hana Alex. Við
+          skulum setja saman kóða fyrir forrit, sem mun hjálpa henni að hreyfast um
+          skjáinn.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: Skjárinn þinn skiptist í 3 meginhluta. Vinstra megin er Minecraft leiksvæðið
+          þar sem forritin þín munu keyra. Leiðbeiningar fyrir hvern áfanga birtast
+          fyrir neðan.
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: Þetta svæði í miðjunni er verkfærakassinn og hver af þessum kubbum er
+          skipun sem stýrir hreyfingum Alex.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Hvíta svæðið hægra megin nefnist vinnusvæðið og það er hér sem við munum
+          byggja forritið okkar.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: Ef við drögum moveForward(); kubbinn inn á vinnusvæðið og smellum á
+          Keyra, hvað gerist þá? Alex færist áfram um einn reit á borðinu.
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: Og hvað ef við viljum gera eitthvað fleira eftir að hún hefur farið
+          áfram um einn reit? Þá getum við bætt öðrum kubbi við forritið. Ég ætla
+          að velja turnRight(); kubbinn og ég dreg hann inn undir moveForward(); kubbinn
+          þar til þessi appelsínugula rönd birtist. Þá sleppi ég honum og kubbarnir
+          tveir smella saman. Þegar við ýtum aftur á Keyra, mun Alex framkvæma skipanirnar
+          sem er staflað ofan frá og niður á vinnusvæðinu.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: Ef þú vilt eyða kubbi, skaltu bara fjarlægja hann úr stæðunni og draga
+          hann aftur inn í verkfærakassann.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: 'Til að afturkalla breytingar og fara aftur þangað sem borðið byrjaði,
+          notar þú Byrja aftur hnappinn efst til hægri á vinnusvæðinu. Eitt í viðbót:
+          sérðu litla þríhyrninginn á "snúa" kubbunum? Þegar þú sérð þessa þríhyrninga
+          þýðir það að þú getur valið annan valkost. Förum að kóða!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: Ég heiti Lydia Winters, vörumerkjastjóri hjá Mojang og við gerðum smá
+          leik sem heitir Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: Uppáhaldsiðjan mín í Minecraft er að kanna. Ég elska að kanna hella
+          til að sjá hvað ég get fundið. Ég er ekki forritari, en mér finnst mjög
+          spennandi að fara í gegnum þessar Minecraft kennslustundir og læra sjálf
+          einhverja kóðun.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: Í síðasta borði voru notaðir mjög margir moveForward(); kubbar. Það
+          væri auðveldara ef við gætum bara sagt tölvunni að endurtaka moveForward();
+          skipunina fjórum eða fimm sinnum. Við erum heppin því að tölvur eru virkilegar
+          góðar í að endurtaka skipanir með lykkjum sem endurtaka.
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: Þegar Minecraft er keyrt upp, notum við lykkjur sem endurtaka til að
+          setja allt efnið í nýjan heim. Það er fleiri þúsundir af blokkum. Við notum
+          lykkjur líka fyrir minni hluti, til dæmis til að láta fætur Alex færast
+          fram og aftur þegar hún gengur. "Endurtaka" lykkjur eru mjög öflugur hluti
+          forritunar.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: Nóttin er að skella á, svo að í næstu borðum ætlum við að byggja hús
+          til að vera örugg. Við ætlum að nota "endurtaka" kubbinn til að gera þetta
+          mjög auðvelt.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: Til að byggja húsvegg, getum við annað hvort sagt Alex að "fara áfram"
+          og "setja planka" fjórum sinnum eða sagt henni að "fara áfram" og "setja
+          planka" og síðan tekið þessa skipun og notað "endurtaka" kubb til að láta
+          hana gera þetta mörgum sinnum. Svo smellum við á "endurtaka" kubbinn og
+          segjum henni hve oft við viljum að hún geri þetta. Byggjum nú húsið áður
+          en nóttin skellur á! Góða skemmtun.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: Nú ætlum við að læra um EF setningar. EF setningar eru undirstöðuatriði
+          þegar lært er að forrita. Þær hjálpa tölvu að taka ákvarðanir.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Allar tölvur nota EF setningar, þar á meðal síminn minn. Til dæmis þegar
+          ég aflæsi símanum, keyrir hann kóða sem segir EF ég slæ inn rétt aðgangsorð,
+          þá aflæsi ég símanum. Annars sýnir hann villuboð.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: Þú getur notað EF setningar í þínum kóða til að láta Steve og Alex bregðast
+          við því sem þau sjá í heiminum. Til dæmis, ef það er klöpp framundan, þá
+          geta þau beygt til vinstri. Eða snúið til hægri ef þau rekast á tré.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: Í þessu dæmi viljum við ekki detta í hraunið. Það er auðvelt að gera
+          ráð fyrir hrauninu sem við sjáum, en hvað með hraunið sem við sjáum ekki
+          undir klöppinni?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: Eftir að við gröfum út klöppina, þurfum að við athuga hvort að þar sé
+          hraun áður en við förum áfram. Ef það er hraun þar, viljum við setja stein
+          framan við persónuna áður en við getum farið áfram. Svona getið við haldið
+          örugg áfram. Tími til að grafa meira! Og mundu að nota EF setninguna til
+          að gá hvar þú stígur.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Til hamingju! Nú hefur þú lært undirstöðuatriði í tölvunarfræði.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Nú getur þú notað þessi atriði til að búa til þitt eigið sköpunarverk.
+          Það eru ekki fleiri fyrirmæli. Og ekki fleiri þrautir að leysa. Þú getur
+          byggt hvað sem þú vilt. Þú færð að velja.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[nemendur tala] Ó ó það er að verða erfiðara. Rýja. Ég bjó til L úr
+          kyndlum. Ég bjó til A úr birkiplönkum. Það virkaði, það virkaði. Við byggðum
+          hús úr ull!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Þegar sköpunarverkið þitt er tilbúið, getur þú valið að deila til að
+          fá tengil sem þú getur deilt með vinunum. Góða skemmtun!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Til hamingju! Nú hefur þú lært undirstöðuatriði í tölvunarfræði.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Nú getur þú notað þessi atriði til að búa til þitt eigið sköpunarverk.
+          Það eru ekki fleiri fyrirmæli. Og ekki fleiri þrautir að leysa. Þú getur
+          byggt hvað sem þú vilt. Þú færð að velja.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[nemendur tala] Ó ó það er að verða erfiðara. Rýja. Ég bjó til L úr
+          kyndlum. Ég bjó til A úr birkiplönkum. Það virkaði, það virkaði. Við byggðum
+          hús úr ull!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Nú geturðu byggt hvað sem þú vilt. Skemmtu þér vel!

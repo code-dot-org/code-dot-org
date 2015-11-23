@@ -1,5 +1,5 @@
 "nl-NL":
-  hour_of_code: Hour of Code
+  hour_of_code: Uur Code
   hello: Hallo wereld
   select_language: Kies de gewenste taal
   en: informatica
@@ -12,7 +12,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Bent u een Informaticadocent? Zie andere bronnen voor
     de CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>Probeer een</h1><h2>'Hour of Code'</h2><h3># geholpen</h3>
+  n_have_learned_an_hoc: "<h1>Probeer een</h1><h2>'Hour of Code'</h2><h3># geholpen</h3>"
   anybody_can_learn: Iedereen kan het leren.
   learn_now: Nu leren
   petition_message: Elke leerling in elke school moet de kans krijgen om informatica
@@ -38,7 +38,7 @@
   hoc2014_everyone: Iedereen
   hoc2014_support: Ondersteun het &#x25BE;
   hoc2014_whatishoc: Wat is het Hour of Code?
-  csedweek_map_header: '# CSEdWeek / Uur Code-events over de hele wereld'
+  csedweek_map_header: "# CSEdWeek / Uur Code-events over de hele wereld"
   csedweek_map_signup: Meld jouw event aan
   csedweek_map_search_placeholder: Zoek Uur Code-events
   csedweek_map_search_search: Zoeken
@@ -68,7 +68,7 @@
     en eenvoudige algoritmen.
   all_ages: Alle leeftijden
   beginner: Beginner
-  n_participants: '# deelnemers'
+  n_participants: "# deelnemers"
   go: Verder
   thank_you_: Bedankt!
   congratulations: Gefeliciteerd!
@@ -119,7 +119,7 @@
   beyond_an_hour: Na het Uur Code
   get_started: Start
   i_agree: Ik ga akkoord
-  participant_select: '- Kiezen -'
+  participant_select: "- Kiezen -"
   participant_student: Leerling
   participant_parent: Ouder
   participant_educator: Leraar
@@ -154,12 +154,12 @@
   boy: Jongen
   help_recruit_coders: Help ons meer programmeurs te vinden voor jouw team!
   help_recruit: Help ons meer programmeurs te vinden!
-  lines_of_code: MEER DAN <b># REGELS CODE</b> GESCHREVEN TOT NU TOE.
-  lines_of_code_alt: <b>#</b> REGELS CODE GESCHREVEN DOOR LEERLINGEN
+  lines_of_code: AL MEER DAN <b># REGELS CODE</b> GESCHREVEN.
+  lines_of_code_alt: "<b>#</b> REGELS CODE GESCHREVEN DOOR LEERLINGEN"
   who_has_done_hoc: 'Wie heeft het #HourOfCode gedaan? @codeorg'
   hoc_leaderboards: De 'Hour of Code' Highscores
-  students_and_lines: '%{students} leerlingen hebben het Uur Code gedaan en %{lines}
-    regels code geschreven.'
+  students_and_lines: "%{students} leerlingen hebben een Uur Code gedaan en %{lines}
+    regels code geschreven."
   start_hoc: Start de 'Hour of Code' nu
   contact_form_topic_press: Pers/media (interview of met betrokkenen spreken)
   stats_nina: '"Iedere dag leverde hetzelfde resultaat &mdash; 100% deelname." -Nina
@@ -184,20 +184,20 @@
   studiobar_donate_body: Eén kind leert voor elke euro die u doneert
   studiobar_shop_title: winkel
   studiobar_shop_body: Breek stereotypes. Draag ons logo met trots.
-  homepage_hero_text_malala: '&ldquo;Ik daag meisjes in alle landen uit om één Uur
-    Code te leren&rdquo; Malala, winnares Nobelprijs voor de Vrede'
-  homepage_hero_text_susan: '&ldquo;Als je technologie kunt veranderen, kun je de
-    wereld veranderen.&rdquo; Susan, directeur van YouTube'
+  homepage_hero_text_malala: "&ldquo;Ik daag meisjes in alle landen uit om één Uur
+    Code te leren&rdquo; Malala, winnares Nobelprijs voor de Vrede"
+  homepage_hero_text_susan: "&ldquo;Als je technologie kunt veranderen, kun je de
+    wereld veranderen.&rdquo; Susan, directeur van YouTube"
   homepage_hero_text_fistbump: |
     &ldquo;Speel niet alleen met je telefoon,
     programmeer hem&rdquo;
     President Barack Obama
-  homepage_hero_text_sheryl: '&ldquo;Onze kinderen &mdash; ook onze meisjes &mdash;
-    moeten de kans krijgen informatica te leren&rdquo; Sheryl, directeur van Facebook'
-  homepage_hero_text_satya: '&ldquo;Informatica geeft je toegang tot de mooiste kansen
-    ter wereld.&rdquo; Satya, directeur van Microsoft'
-  homepage_hero_text_bosh: '&ldquo;Als je programmeert kun je zelf je leven bepalen.&rdquo;
-    Chris Bosh'
+  homepage_hero_text_sheryl: "&ldquo;Onze kinderen &mdash; ook onze meisjes &mdash;
+    moeten de kans krijgen informatica te leren&rdquo; Sheryl, directeur van Facebook"
+  homepage_hero_text_satya: "&ldquo;Informatica geeft je toegang tot de mooiste kansen
+    ter wereld.&rdquo; Satya, directeur van Microsoft"
+  homepage_hero_text_bosh: "&ldquo;Als je programmeert kun je zelf je leven bepalen.&rdquo;
+    Chris Bosh"
   homepage_hero_text_student1: |
     &ldquo;Deze vaardigheden hebben mijn toekomst
     veranderd. Maar het is ook gewoon leuk.&rdquo;
@@ -226,8 +226,9 @@
     &ldquo;100% van mijn leerlingen raakte door dit
     programma geëngageerd en betrokken en deed actief mee.&rdquo;
     Adam, leraar
-  homepage_hero_text_stat_loc: '#loc lijnen code geschreven door studenten'
-  homepage_hero_text_stat_students: '#student_count studenten accounts op Code Studio'
+  homepage_hero_text_stat_loc: 2.5 miljoen meisjes hebben zich aangemeld om te leren
+    op Code Studio
+  homepage_hero_text_stat_students: "#student_count studenten accounts op Code Studio"
   homepage_hero_text_stat_served: 'Uur van Code: #served geserveerd'
   homepage_slot_text_hoc: Het Uur Code
   homepage_slot_text_frozen: Frozen met Anna en Elsa
@@ -237,7 +238,7 @@
   homepage_slot_text_shop: winkel
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_hoc: Een Uur Code voor elke student.
-  homepage_action_text_num_served: '# bediend'
+  homepage_action_text_num_served: "# bediend"
   homepage_action_text_join_us: Doe mee
   homepage_action_text_sign_up: Meld je aan
   homepage_action_text_try_it: Probeer het
@@ -261,7 +262,7 @@
   homepage_slot_text_blurb_hoc: Iedereen kan het leren. Begin vandaag
   homepage_slot_text_link_hoc: Probeer een Uur Code
   homepage_slot_text_link_host: Organiseer een 'Hour of Code'
-  homepage_slot_text_link_hocserved: '# bediend'
+  homepage_slot_text_link_hocserved: "# bediend"
   homepage_solot_text_link_volunteer: Word vrijwilliger voor het Uur Code
   homepage_slot_text_title_students: Leerlingen
   homepage_slot_text_blurb_students: Verken onze handleidingen
@@ -331,13 +332,13 @@
   starwars_javascript_start_button: Probeer nu
   starwars_blocks_title: blokken
   starwars_blocks_description: Gebruik klik-en-sleep-blokken.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: Veel talen | Moderne browsers, smartphones, tablets | Leeftijd
+    6-10jr
   starwars_blocks_start_button: Probeer nu
   starwars_watch_videos: Bekijk voor je begint deze inspiratie-video's
   starwars_speak_languages: Spreek je een andere taal?
   starwars_help_translate: Help ons met vertalen
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: Moderne browsers, smartphones, tablets
   mc_name: Minecraft Uur Code
   mc_longdescription: Gebruik blokken code om Steve of Alex te helpen op hun avontuur
     door deze Minecraft-wereld.
@@ -345,25 +346,26 @@
     door deze Minecraft-wereld.
   mc_gradelevel: Leeftijd 6+
   mc_platformtext: Moderne browsers, smartphones, tablets
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Veel talen | Moderne browsers en tablets | Leeftijd 6+jr
   minecraft_subtitle: Minecraft Uur Code
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  volunteer_engineer_submission_title: Inspireer leerlingen en meld je als vrijwilliger
+    voor het Uur Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 leerkrachten geven dit
     jaar een Uur Code in hun klaslokaal, 7-13 dec 2015. Ze willen jouw hulp! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} leerkrachten zijn
+    op zoek naar vrijwilligers om dit jaar in December te helpen met hun Uur Code.<br>%{num_volunteers}
+    vrijwilligers hebben zich aangemeld. Doe mee!"
   volunteer_engineer_submission_intro_background: Het Uur Code is een wereldwijde
     beweging om een uur informatica uit te proberen, met een bereik van tientallen
     miljoenen leerlingen in meer dan 180 landen. Doe mee tijdens de Computer Science
     Eductaion Week, 7-13 december.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_recruit: 'Deze leerkrachten zijn op zoek naa
+    iemand die <span style="font-family: ''Gotham 7r'', sans-serif;">gepassioneerd
+    is over informaticaonderwijs</span> die kan helpen in de klas, of iemand die hun
+    leerlingen kan <span style="font-family: ''Gotham 7r'', sans-serif;">inspireren</span>
+    door ze te vertellen over wat je allemaal kan doen met informatie (dat zou via
+    videochat kunnen). Als je geen vrijwilliger wil worden, <a href="%{url}">lees
+    hier</a> over het organiseren van je eigen Uur Code.'
   volunteer_engineer_submission_intro_signup: Voer de volgende gegevens in als je
     een informaticastudent of software ontwikkelaar bent. Velden met een <span class="form-required-field">*</span>
     zijn verplicht.
@@ -681,18 +683,18 @@
   dashboard_faq_k5: K-5 Veelgestelde vragen
   dashboard_announcements: Aankondigingen
   dashboard_announce_view_all: Alles weergeven
-  dashboard_announce_hoc: <b>15 oktober 2015</b> - het Uur Code komt &mdash; elke
+  dashboard_announce_hoc: "<b>15 oktober 2015</b> - het Uur Code komt &mdash; elke
     deelnemende organisator ontvangt een kadokaart van Amazon.com of Microsofts Windows-winkel
-    als een bedankje. Doe mee met klassen over de hele wereld tijdens 7-13 December.
+    als een bedankje. Doe mee met klassen over de hele wereld tijdens 7-13 December."
   code_hoc_coming: Het Uur Code is hier - van 8 -14 december!
   code_sign_up: Meld u aan om deel te nemen tijdens de CS Onderwijs Week
   learn_more: Leer meer
   learn_sign_up_description: Meld je aan om deel te nemen in het Uur Code tijdens
     de week van het informaticaonderwijs
   learn_sign_up_button: Meld je aan
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Bekijk deze inspirerende video met je klas
+  learn_videos_show: Laat deze inspirerende video zien aan je klas
+  learn_videos_before_hoc: Bekijk een inspirerende video voor je Uur Code
   learn_educator_resources_description: Leer om een Uur Code te onderwijzen
   learn_educator_resources_button: Middelen voor leerkrachten
   learn_are_you_educator: Ben je een leerkracht? Leer dan <a href="http://hourofcode.com/resources/how-to">hoe
@@ -701,9 +703,9 @@
   hoc2014_try_new_tutorial: Probeer onze nieuwe Uur Code-cursus in beta
   hoc2014_try_scrat: Angry Birds, PvZ en Scrat
   hoc2014_try_frozen: Kunst met Anna en Elsa van Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Opdrachten van Code.org
+  carousel_heading_3rd_party: Opdrachten van andere partijen
+  carousel_heading_third_party: Opdrachten van andere partijen
   carousel_heading_international: Opdrachten in jouw taal
   carousel_heading_domestic: Handleidingen beschikbaar in het Engels
   carousel_heading_beginners: Handleidingen voor Beginners
@@ -1396,3 +1398,19 @@
     over naar HTTPS. Na deze datum kan u Code.org niet bereiken. <a href='%{it_requirements_url}'>Klik
     hier</a> om te leren hoe je HTTPS moet inschakelen voor Code.org.
   compatibility_https_hide_this_warning: Verberg deze waarschuwing
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  infinity_name: Infinity Play Lab
+  artist_name: Artist
+  infinity_gradelevel: Ages 4-104
+  artist_gradelevel: Ages 4-104
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: flap
+  infinity_shortcode: inf
+  playlab_shortcode: play
+  artist_shortcode: art

@@ -1,5 +1,5 @@
 th-TH:
-  hour_of_code: Hour of Code
+  hour_of_code: ช่วงเวลาของ Code
   hello: สวัสดีชาวโลก
   select_language: กรุณาเลือกภาษาของคุณ
   en: วิทยาการคอมพิวเตอร์
@@ -300,7 +300,7 @@ th-TH:
   starwars_watch_videos: Before you get started, watch one of these inspirational videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
