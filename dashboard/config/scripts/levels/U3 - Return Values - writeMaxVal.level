@@ -9,6 +9,7 @@
     "code_functions": {
       "forLoop_i_0_4": null,
       "ifBlock": null,
+      "ifElseBlock": null,
       "addOperator": null,
       "subtractOperator": null,
       "multiplyOperator": null,
@@ -65,7 +66,10 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "// Add a call to minVal to the console.log command below\r\nvar rand1 = randomNumber(1,100);\r\nvar rand2 = randomNumber(1,100);    \r\nconsole.log(\"The maximum of \" + rand1 + \" and \" + rand2 + \" is \");\r\n\r\nfunction maxVal(num1, num2){\r\n  \r\n}\r\n\r\nfunction minVal(num1, num2){\r\n  var min;\r\n  if(num1 < num2){\r\n    min = num1;\r\n  }\r\n  else{\r\n    min = num2;\r\n  }\r\n  return min;\r\n}"
+    "start_blocks": "// Add a call to minVal to the console.log command below\r\nvar rand1 = randomNumber(1,100);\r\nvar rand2 = randomNumber(1,100);    \r\nconsole.log(\"The maximum of \" + rand1 + \" and \" + rand2 + \" is \");\r\n\r\nfunction maxVal(num1, num2){\r\n  \r\n}\r\n\r\nfunction minVal(num1, num2){\r\n  var min;\r\n  if(num1 < num2){\r\n    min = num1;\r\n  }\r\n  else{\r\n    min = num2;\r\n  }\r\n  return min;\r\n}",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>
