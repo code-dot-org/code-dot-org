@@ -152,9 +152,9 @@ theme: pdf
       = state_info[:state_name_s]
     %p.larger
       There are
-      = state_info[:teacher_studio_acct_i]
+      = format_integer_with_commas(state_info[:teacher_studio_acct_i])
       teacher accounts and
-      = state_info[:student_studio_acct_i]
+      = format_integer_with_commas(state_info[:student_studio_acct_i])
       student accounts in Code Studio in
       = succeed '.' do
         = state_info[:state_name_s]
