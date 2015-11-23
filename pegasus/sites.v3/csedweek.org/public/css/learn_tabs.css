@@ -51,3 +51,11 @@
 #learn-tabs .nav-tabs>li.active>a:active {
   color: #c12b2a;
 }
+
+.learn-hoc-banner {
+  margin-top: 10px;
+}
+
+.course-carousel-title {
+  margin-top: 40px;
+}
