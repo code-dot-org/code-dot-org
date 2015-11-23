@@ -46,7 +46,8 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "execute_palette_apis_only": "false",
-    "lock_zero_param_functions": "false"
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "ZWHa9JdkR3OLuegzVK6G0hB7Jffbf5PUIVG9+Dkqz8ybT4PIV+CNMKwWfXyK\nExCD\n"
   }
 }]]></config>
   <blocks/>

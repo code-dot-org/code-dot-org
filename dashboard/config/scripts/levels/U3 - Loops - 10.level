@@ -52,7 +52,7 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Write a program that if the sum of the dice is a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click to see full instructions)",
-    "markdown_instructions": "# Writing Loop From English\r\n\r\nAlright it’s your turn. Can you translate the English into code? Hint: In English we often say \"if\" when we mean \"while\".\r\n\r\n\r\n# Do This\r\n\r\nTake this statement in English and translate it into code: \r\n\r\n**“Write a program that simulates the rolling of two dice.  After the first roll of both dice, if the sum of the dice is a 7 or 11 roll again and keep rolling until the sum is not 7 or 11.”**\r\n\r\n\r\n\r\n",
+    "markdown_instructions": "# Writing Loop From English\r\n\r\nAlright it’s your turn. Can you translate the English into code? Hint: In English we often say \"if\" when we mean \"while\".\r\n\r\n# Do This\r\n\r\nTake this statement in English and translate it into code: \r\n\r\n**“Write a program that simulates the rolling of two dice. If the sum of the dice is a 7 or 11 then roll again until the sum is something other than 7 or 11.\"**\r\n\r\nYour program should display the results of each roll.",
     "start_blocks": "var die1 = randomNumber(1,6)\r\nvar die2 = randomNumber(1,6)"
   }
 }]]></config>

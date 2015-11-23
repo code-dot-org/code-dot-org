@@ -709,6 +709,22 @@ designMode.configureDragAndDrop = function () {
       if (elementType === elementLibrary.ElementType.SCREEN) {
         designMode.changeScreen(elementUtils.getId(element));
       }
+      if (elementType === elementLibrary.ElementType.IMAGE) {
+        var parent = $(element).parent();
+        // Safari has some weird bug where it doesn't end up rendering our dropped
+        // image for some reason. We get around that by moving the image to the
+        // wrong location, and then moving it back to the right location (which
+        // forces a rerender at which point safari does the right thing)
+        if (parent.width() === 0) {
+          var origLeft = parent.css('left');
+          parent.css('visibility', 'hidden');
+          parent.css('left', '0px');
+          setTimeout(function () {
+            parent.css('left', origLeft);
+            parent.css('visibility', '');
+          }, 1);
+        }
+      }
     }
   });
 };
