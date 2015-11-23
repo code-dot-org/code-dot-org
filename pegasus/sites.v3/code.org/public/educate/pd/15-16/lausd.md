@@ -93,7 +93,10 @@ Breakfast and lunch will be served.
 
 **December 12th Location**
 
-TBD
+[Alliance College-Ready Public Schools<br/>
+Columbia Ave. Building<br/>
+515 Columbia Ave<br/>
+Los Angeles, CA 90017](https://www.google.com/maps/place/515+Columbia+Ave,+Los+Angeles,+CA+90017/@34.0568357,-118.2683455,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2c7a5dc0c6221:0xcce25074a5f9e728)
 
 **What to bring to Phase 3 quarterly sessions:**
 

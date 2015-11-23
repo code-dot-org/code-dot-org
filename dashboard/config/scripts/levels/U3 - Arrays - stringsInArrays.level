@@ -9,7 +9,7 @@
     "code_functions": {
       "appendItem": null,
       "addOperator": null,
-      "randomNumber": null,
+      "randomNumber_min_max": null,
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,

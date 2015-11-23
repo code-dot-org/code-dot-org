@@ -36,8 +36,8 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Print true if the value 5 appears in the array and false when it is not a 5. (Click to see full instructions)",
-    "markdown_instructions": "# Algorithms and general purpose functions\r\n\r\nOver the next several exercises we will be **creating a general purpose function that implements an algorithm to determine if a value is contained within an array**.  Over the course of these exercises keep and eye out for the general pattern we are using, because you'll get to use it again to create functions of your own.\r\n\r\nTo begin we'll start simple. We'll write code that **checks whether a specific array contains a specific value**. At every index your program should display `true` if the value at that index is a 5 and `false` otherwise.\r\n\r\n# Do This\r\n\r\n* **Starter Code:** The starter code is similar to past levels but we use a loop to append items to `myArray` instead of one at a time.  You are also given the `for` loop you will use.\r\n* Add an `if` statement inside the `for` loop to check if the value of the array at the current index is 5. If the value is equal to 5, `console.log` **true**. Otherwise `console.log` **false**.\r\n* **Test your code** to make sure it is working as you intend. An example output is below.\r\n\r\n![](https://images.code.org/a64c3be0a23e25bef67494bdfeb61415-image-1447879494916.44.45 PM.png)",
+    "instructions": "Visit every element in the array and display 'true' if the value is a 5, and 'false' otherwise. (Click to see full instructions)",
+    "markdown_instructions": "# Algorithms and general purpose functions\r\n\r\nOver the next several exercises we will be **creating a general purpose function to determine if a value is contained within an array**.  Over the course of these exercises keep and eye out for the general pattern we are using, because you'll get to use it again to create functions of your own.\r\n\r\nTo begin we'll start simple. We'll write code that **checks whether an array contains a specific value**. At every index your program should display `true` if the value at that index is a 5 and `false` otherwise.\r\n\r\n# Do This\r\nThe **starter Code** is similar to past levels but you'll notice that we a loop to construct `myArray` rather than appending items one line at a time.  You are also given the `for` loop you will use.\r\n\r\n* Add an `if` statement inside the `for` loop to check if the value of the array at the current index is 5. \r\n * If the value is equal to 5, `console.log` **true**. Otherwise `console.log` **false**.\r\n \r\n* **Test your code** to make sure it is working as you intend. An example output is below.\r\n\r\n![](https://images.code.org/a64c3be0a23e25bef67494bdfeb61415-image-1447879494916.44.45 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -67,7 +67,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "var randomArray = [];\r\nfor(var i = 0; i < 10; i++){\r\n  appendItem(randomArray, randomNumber(0,10));\r\n}\r\n\r\nconsole.log(\"Original: \" + randomArray);\r\n\r\nfor(var i = 0; i < randomArray.length; i++){\r\n  // Your code goes here \r\n}"
+    "start_blocks": "var randomArray = [];\r\nfor(var i = 0; i < 15; i++){\r\n  appendItem(randomArray, randomNumber(0,10));\r\n}\r\n\r\nconsole.log(\"Original: \" + randomArray);\r\n\r\nfor(var i = 0; i < randomArray.length; i++){\r\n  // Your code goes here \r\n}"
   }
 }]]></config>
   <blocks/>
