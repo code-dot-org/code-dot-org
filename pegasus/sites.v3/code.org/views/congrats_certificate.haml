@@ -109,4 +109,4 @@
     %h2{:style=>'margin-top: 0px; margin-bottom: .5em;'}=I18n.t :congratulations
 
     %p
-      =I18n.t :beyond_hour_message
+      =(I18n.t :beyond_hour_message).sub!("/learn/beyond", "https://code.org/learn/beyond")

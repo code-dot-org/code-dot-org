@@ -1,5 +1,5 @@
 #continue{:style=>"background-color:grey; color:white; overflow:hidden; padding:20px; text-align:center"}
-  
+
   %p{:style=>"font-size: 18px; font-family: 'Gotham 5r', sans-serif;"}
     %b=I18n.t :continue_learning_header
 
@@ -7,11 +7,11 @@
     %button.button-color-share{:style=>'margin:10px'}
       %b=I18n.t :learn_next_level
 
-  %a{:href=>'/learn/beyond'}
+  %a{:href=>'https://code.org/learn/beyond'}
     %button.button-color-share{:style=>'margin:10px'}
       %b=I18n.t :learn_online
 
   -if request.site != 'uk.code.org'
-    %a{:href=>'/learn/local'}
+    %a{:href=>'https://code.org/learn/local'}
       %button.button-color-share{:style=>'margin:10px'}
         %b=I18n.t :learn_classes
