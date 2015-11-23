@@ -28,6 +28,7 @@ var url = require('url');
 var FeedbackUtils = require('./feedback');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
+var HintSelect = require('./templates/hintSelect.jsx');
 var codegen = require('./codegen');
 var authoredHintUtils = require('./authoredHintUtils');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
@@ -409,11 +410,11 @@ StudioApp.prototype.init = function(config) {
     }
     var bubble = document.getElementById('bubble');
     dom.addClickTouchEvent(bubble, _.bind(function() {
-      var hintsToShow = this.authoredHints_.filter(function(hint){
+      var hintsToShow = this.authoredHints_.filter(function (hint) {
         return hint.alreadySeen === false;
       });
       if (hintsToShow.length > 0) {
-        this.showHint_(hintsToShow[0], config);
+        this.showHint_(hintsToShow[0], config.level, config.scriptId, config.level.scriptLevelId);
       } else {
         this.showInstructions_(config.level, false);
       }
@@ -868,13 +869,13 @@ StudioApp.prototype.createModalDialog = function(options) {
   return this.feedback_.createModalDialog(options);
 };
 
-StudioApp.prototype.recordUserViewedHint_ = function (hint, config) {
+StudioApp.prototype.recordUserViewedHint_ = function (hint, scriptId, levelId) {
   hint.alreadySeen = true;
 
   authoredHintUtils.recordUnfinishedHint({
     // level info
-    script_id: config.scriptId,
-    level_id: config.level.scriptLevelId,
+    script_id: scriptId,
+    level_id: levelId,
 
     // hint info
     hint_id: hint.hintId,
@@ -893,25 +894,33 @@ StudioApp.prototype.onReportComplete = function (response) {
   });
 };
 
-StudioApp.prototype.showHint_ = function (hint, config) {
-
+/**
+ * Render a qtip popup containing an interface which gives the user the
+ * option of viewing the instructions for the level (along with all
+ * previously-viewed hints) or viewing a new hint.
+ * @param {AuthoredHint} hint
+ * @param {Object} level
+ * @param {string} scriptId
+ * @param {string} levelId
+ */
+StudioApp.prototype.showHint_ = function (hint, level, scriptId, levelId) {
   $('#prompt-icon').qtip({
     content: {
       text: function(html, api) {
         var container = document.createElement('div');
-        container.innerHTML = require('./templates/hintSelect.html.ejs')();
 
-        var instructionsButton = container.querySelector('#inst');
-        dom.addClickTouchEvent(instructionsButton, function () {
-          this.showInstructions_(config.level, false);
-          api.destroy();
-        }.bind(this));
+        var element = React.createElement(HintSelect, {
+          showInstructions: function () {
+            this.showInstructions_(level, false);
+            api.destroy();
+          }.bind(this),
+          showHint: function () {
+            api.set('content.text', hint.content);
+            this.recordUserViewedHint_(hint, scriptId, levelId);
+          }.bind(this),
+        });
 
-        var hintButton = container.querySelector('#newhint');
-        dom.addClickTouchEvent(hintButton, function () {
-          api.set('content.text', hint.content);
-          this.recordUserViewedHint_(hint, config);
-        }.bind(this));
+        React.render(element, container);
 
         return container;
       }.bind(this),
@@ -931,7 +940,7 @@ StudioApp.prototype.showHint_ = function (hint, config) {
       at: "top right"
     },
     hide: {
-      event: 'click mousedown touchstart unfocus'
+      event: 'unfocus'
     },
     show: false // don't show on mouseover
   }).qtip('show');
