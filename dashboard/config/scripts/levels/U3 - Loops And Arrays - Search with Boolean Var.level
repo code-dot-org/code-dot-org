@@ -67,10 +67,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "// Fill an array with some random values\r\nvar testArray = [];\r\nfor (var i = 0; i < 10; i++) {\r\n  appendItem(testArray, randomNumber(0,10));\r\n}\r\nconsole.log(\"Original: \"+testArray);\r\n\r\n// Process the array\r\n\r\nvar flag = false;\r\nfor(var i=0; i<10; i++){\r\n\r\n  // your code here\r\n  \r\n}\r\nconsole.log(\"There is a 5 in the array: \"+flag);",
-    "encrypted_examples": [
-
-    ]
+    "start_blocks": "// Fill an array with some random values\r\nvar testArray = [];\r\nfor (var i = 0; i < 10; i++) {\r\n  appendItem(testArray, randomNumber(0,10));\r\n}\r\nconsole.log(\"Original: \"+testArray);\r\n\r\n// Process the array\r\n\r\nvar flag = false;\r\nfor(var i=0; i<10; i++){\r\n\r\n  // your code here\r\n  \r\n}\r\nconsole.log(\"There is a 5 in the array: \"+flag);"
   }
 }]]></config>
   <blocks/>
