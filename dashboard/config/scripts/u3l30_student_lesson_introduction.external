@@ -7,7 +7,13 @@ markdown <<MARKDOWN
 
 # Background
 
-We would like to store lists of information in our programs and variables have many shortcomings when it comes to doing so. Most programming languages, including JavaScript, include a list structure of some sort to make it easier to hold many pieces of related information. When used carefully, these can greatly expand the functionality of our apps.
+It is very common to want to store lists of information in our programs. This could be done with variables but they have many shortcomings when it comes to doing so. Most programming languages, including JavaScript, include a list structure of some sort to make it easier to hold many pieces of related information. When used carefully, lists can greatly expand the functionality of our apps.  The list structure in JavaScript is called an array.
+
+# Vocabulary
+
+**List:** a generic term for a programming data structure that holds multiple items
+
+**Array:** a data structure in JavaScript used to represent a list 
 
 # Lesson
 
