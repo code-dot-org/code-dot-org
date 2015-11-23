@@ -47,6 +47,7 @@
 .clear
 %br
 
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
 :javascript
   $(document).ready()
   {
@@ -56,6 +57,16 @@
     else {
       $("#banner-mc").fadeIn(0);
     }
+
+    $("#codeStudioCarousel").swipe( {
+      swipeLeft: function() {
+        $(this).parent().carousel('prev'); 
+      },
+      swipeRight: function() {
+        $(this).parent().carousel('next'); 
+      },
+      threshold: 25
+    });
   }
 
   $.ready()
