@@ -34,7 +34,7 @@ var ScreenProperties = React.createClass({
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'screen-image')} />
         <DefaultScreenButtonPropertyRow
-          handleChange={this.props.handleChange.bind(this, 'data-is-default')}/>
+          handleChange={this.props.handleChange.bind(this, 'is-default')}/>
       </div>);
   }
 });
