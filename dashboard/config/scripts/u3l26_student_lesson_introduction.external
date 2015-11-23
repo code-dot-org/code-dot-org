@@ -13,17 +13,20 @@ Strings are a data type found inside of most programming languages. Strings are 
 
 * Introduction to strings
 * Introduction to new user interface elements
-* Design your own Mad Lib App
+* Design your own Mad Libs App
 
 # Vocabulary
 
-* **String:** a arbitrary-length sequence of ASCII characters
+* **String:** an arbitrary-length sequence of ASCII characters
 * **Concatenate:** to link together or join
 
 # Resources
 * Activity Guide: <a href="https://docs.google.com/document/d/1M2mhlY02hsvczLG3oe9a6n90lGb7Vrm0F4tNRS5eBa8/edit?usp=sharing" target="_blank">
-Mad Lib
+Mad Libs
 </a>
+<br><br>
+*Mad Libs® is a trademark of the LEGO Group of companies, which does not sponsor, authorize or endorse this site.*
+<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

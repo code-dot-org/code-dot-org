@@ -325,6 +325,13 @@
   native: "Русский"
   webfonts: false
 
+"si": "si-LK"
+"si-LK":
+  english: "Sinhalese"
+  native: "සිංහල"
+  webfonts: false
+  debug: true
+
 "sk": "sk-SK"
 "sk-SK":
   english: "Slovak"

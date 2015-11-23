@@ -466,20 +466,13 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  // todo (brent) - per skin
   blockly.Blocks.studio_whenSpriteCollided.GROUPINGS =
       [[msg.whenSpriteCollidedWithAnything(), 'anything'],
        [msg.whenSpriteCollidedWithAnyActor(), 'any_actor'],
        [msg.whenSpriteCollidedWithAnyProjectile(), 'any_projectile'],
        [msg.whenSpriteCollidedWithAnyEdge(), 'any_edge']];
 
-  blockly.Blocks.studio_whenSpriteCollided.PROJECTILES =
-      [[msg.whenSpriteCollidedWithBlueFireball(), 'blue_fireball'],
-       [msg.whenSpriteCollidedWithPurpleFireball(), 'purple_fireball'],
-       [msg.whenSpriteCollidedWithRedFireball(), 'red_fireball'],
-       [msg.whenSpriteCollidedWithYellowHearts(), 'yellow_hearts'],
-       [msg.whenSpriteCollidedWithPurpleHearts(), 'purple_hearts'],
-       [msg.whenSpriteCollidedWithRedHearts(), 'red_hearts']];
+  blockly.Blocks.studio_whenSpriteCollided.PROJECTILES = skin.whenProjectileCollidedChoices;
 
   blockly.Blocks.studio_whenSpriteCollided.EDGES =
       [[msg.whenSpriteCollidedWithTopEdge(), 'top'],
@@ -714,13 +707,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.studio_makeProjectile.VALUES =
-      [[msg.makeProjectileBlueFireball(), '"blue_fireball"'],
-       [msg.makeProjectilePurpleFireball(), '"purple_fireball"'],
-       [msg.makeProjectileRedFireball(), '"red_fireball"'],
-       [msg.makeProjectileYellowHearts(), '"yellow_hearts"'],
-       [msg.makeProjectilePurpleHearts(), '"purple_hearts"'],
-       [msg.makeProjectileRedHearts(), '"red_hearts"']];
+  blockly.Blocks.studio_makeProjectile.VALUES = skin.makeProjectileChoices;
 
   blockly.Blocks.studio_makeProjectile.ACTIONS =
         [[msg.makeProjectileBounce(), '"bounce"'],
@@ -1145,10 +1132,19 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   function onSoundSelected(soundValue) {
-    if (soundValue === RANDOM_VALUE) {
+    var lowercaseSound = utils.stripQuotes(soundValue).toLowerCase().trim();
+
+    if (lowercaseSound === RANDOM_VALUE) {
       return;
     }
-    studioApp.playAudio(utils.stripQuotes(soundValue), {volume: 1.0});
+    var skinSoundMetadata = utils.valueOr(skin.soundMetadata, []);
+    var playbackOptions = $.extend({
+      volume: 1.0
+    }, _.find(skinSoundMetadata, function (metadata) {
+      return metadata.name.toLowerCase().trim() === lowercaseSound;
+    }));
+
+    studioApp.playAudio(lowercaseSound, playbackOptions);
   }
 
   blockly.Blocks.studio_playSound = {

@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## circle(centerX, centerY, radius)
+## circle(x, y, radius)
 
 [/name]
 
@@ -20,7 +20,7 @@ Category: Canvas
 
 [short_description]
 
-Draws a circle on the active canvas with the specified radius, and center at coordinates: (centerX, centerY).
+Draws a circle on the active canvas with the specified radius, and center at coordinates: (x, y).
 
 [/short_description]
 
@@ -144,7 +144,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-circle(centerX, centerY, radius)
+circle(x, y, radius)
 ```
 
 [/syntax]
@@ -155,8 +155,8 @@ circle(centerX, centerY, radius)
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| centerX | number | Yes | The x position in pixels of the center of the circle.  |
-| centerY | number | Yes | The y position in pixels of the center of the circle.  |
+| x | number | Yes | The x position in pixels of the center of the circle.  |
+| y | number | Yes | The y position in pixels of the center of the circle.  |
 | radius | number | Yes | The radius of the circle, in pixels.  |
 [/parameters]
 

@@ -42,7 +42,7 @@ This activity builds off of the classic game of Rock/Paper/Scissors, known to mo
 [Kodable fuzzFamily Frenzy](https://www.kodable.com/hour-of-code/lessons)  
 **Ages 5-9. Seqence, Algorithms, Programming, unplugged.** Students will learn basic programing language and use math concepts to move a “robot” forward, spin, and jump.
 
-[High Seas](http://www.cs-first.com/clubplan/sample-activity-0)  
+[High Seas](http://www.cs-first.com/content/hour-code-teachers)  
 **Ages 7-13. Sequence, Art, Storytelling, web-based.** Students will use Scratch to program a story about being lost at sea. 
 
 [Bitsbox Coding + Math](https://bitsbox.com/hocprint.html)  
@@ -78,7 +78,7 @@ This activity builds off of the classic game of Rock/Paper/Scissors, known to mo
 [Climate Science](https://app.vidcode.io/hourofcode/science-teacher-guide)  
 **Ages 12-16. Science (Climate), Science (Environment), unplugged.** Students draw a picture, and take turns giving the class steps to recreate their drawing.
 
-[High Seas](http://www.cs-first.com/clubplan/sample-activity-0)  
+[High Seas](http://www.cs-first.com/content/hour-code-teachers)  
 **Ages 7-13. Sequence, Art, Storytelling, web-based.** Students will use Scratch to program a story about being lost at sea. 
 
 [Arduino Activity](https://csedweek.org/csteacher/arduino.pdf)  
@@ -95,6 +95,9 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 
 [Grace Hopper Debugging Activity](https://csedweek.org/csteacher/gracehopperdebugging.pdf)  
 **Ages 12-18. History, Language Arts, Storytelling, unplugged** Students will research Grace Hopper and learn the story of the first "bug".
+
+[Globaloria MakeQuest](http://globaloria.com/courses-services/teacher-guides/)  
+**Ages 10-18. Programming, Game Design, English, Math, Creativity, web-based.** Learn to edit and write JavaScript code to defeat the 'Evil 404,' as you explore computer science concepts like variables and functions. Lesson Plan includes subject-matter extension activities for English, Mathematics, Science, History and Arts classes.
 
 
 ## High School
@@ -157,6 +160,9 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 
 [Grace Hopper Debugging Activity](https://csedweek.org/csteacher/gracehopperdebugging.pdf)  
 **Ages 12-18. History, Language Arts, Storytelling, unplugged** Students will research Grace Hopper and learn the story of the first "bug".
+
+[Globaloria MakeQuest](http://globaloria.com/courses-services/teacher-guides/)  
+**Ages 10-18. Programming, Game Design, English, Math, Creativity, web-based.** Learn to edit and write JavaScript code to defeat the 'Evil 404,' as you explore computer science concepts like variables and functions. Lesson Plan includes subject-matter extension activities for English, Mathematics, Science, History and Arts classes.
 
 
 <br/><br/>
