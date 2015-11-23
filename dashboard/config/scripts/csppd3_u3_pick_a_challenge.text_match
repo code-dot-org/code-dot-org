@@ -7,11 +7,17 @@ markdown <<MARKDOWN
 ### Challenge Overview > What's your Challenge? 
 
 <br/>
+#### Enter the lesson you selected for your challenge in the text box below.
+
+- 2 - 5: Turtle Drawing
+- 6 - 7: Functions and Simple Loops
+- 14-15: Variables 
+- 16: Strings
+- 18: Programming Flow and Conditionals
 
 >Now that you've selected a lesson, head to the forum and **share which lesson you plan to complete** for your challenge. 
 <br><br>
 <a href="http://forum.code.org/t/unit-3-challenge-selection/2470" target=_blank>forums >> </a>
 
-##### Enter the lesson you selected for your challenge below: 
 <br>
 MARKDOWN

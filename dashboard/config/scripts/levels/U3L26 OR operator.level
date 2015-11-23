@@ -78,7 +78,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "true",
-    "markdown_instructions": "# OR Operator in Movie Bot\r\n\r\nLet's try to check for the keywords realated to questions (\"who\", \"what\", \"where\", \"when\", \"why\", \"how\", and \"?\") to decide if the user asked a question. You could do this with a chain of if-else-if statements, but it would not be very efficient. \r\n\r\nInstead let's use a **series of OR operators (`||`)** to check whether \"who\", \"what\", \"where\", \"when\", \"why\", \"how\" or \"?\" show up in the user input. \r\n\r\n**Note: ** We've updated the the flow chart below to show the logic we are trying to add to the initial question.\r\n\r\n# Do This\r\n\r\n* **Update the if statement** to check if **\"who\" OR \"what\" OR \"where\" OR \"when\" OR \"why\" OR \"how\" OR \"?\"** have been typed in by the user.\r\n\r\n* **Test out a couple sentences with your keywords** to make sure the change worked.\r\n\r\n<img src=\"https://images.code.org/6104c7fd0ecd31010d12be79bc350831-image-1446495141539.png\" style=\"width: 500px\">\r\n",
+    "markdown_instructions": "# OR Operator in Movie Bot\r\n\r\nLet's try to check for the keywords related to questions (\"who\", \"what\", \"where\", \"when\", \"why\", \"how\", and \"?\") to decide if the user asked a question. You could do this with a chain of `if-else-if` statements, but it would not be very efficient. \r\n\r\nInstead let's use a **series of OR operators (`||`)** to check whether \"who\", \"what\", \"where\", \"when\", \"why\", \"how\" or \"?\" show up in the user input. \r\n\r\n**Note: ** We've updated the the flowchart below to show the logic we are trying to add to the initial question.\r\n\r\n# Do This:\r\n\r\n* **Update the `if` statement** to check if **\"who\" OR \"what\" OR \"where\" OR \"when\" OR \"why\" OR \"how\" OR \"?\"** have been typed in by the user.\r\n\r\n* **Test out a couple sentences with your keywords** to make sure the change worked.\r\n\r\n<img src=\"https://images.code.org/6104c7fd0ecd31010d12be79bc350831-image-1446495141539.png\" style=\"width=500px\">\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",
@@ -87,7 +87,9 @@
     "debugger_disabled": "true",
     "project_template_level_name": "U3 - Movie Bot - Template",
     "execute_palette_apis_only": "false",
-    "instructions": "Update the if statement to use an OR to check for a '?' as well as who, what, where, when, why, in the user input. (Click to see full instructions)"
+    "instructions": "Update the if statement to use an OR to check for a \"?\" as well as who, what, where, when, why, how in the user input. (Click to see full instructions)",
+    "encrypted_examples": "7d5ay+jTnr9vt8RRD8G5VvNSyyzjza/SY4RIAD9I4PiaRYjvkCBsleZLh147\nX5x2\n",
+    "lock_zero_param_functions": "false"
   }
 }]]></config>
   <blocks/>
