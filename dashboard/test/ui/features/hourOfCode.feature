@@ -18,6 +18,8 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
   And I close the dialog
   When element "#runButton" is visible
   Then element ".header_middle a:first" has class "level_link perfect"
+  And I am on "http://studio.code.org/s/hourofcode"
+  And element ".user-stats-block a:first" has class "level_link perfect"
 
 Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as attempted
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
@@ -33,6 +35,8 @@ Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as att
   And I close the dialog
   When element "#runButton" is visible
   Then element ".header_middle a:first" has class "level_link attempted"
+  And I am on "http://studio.code.org/s/hourofcode"
+  And element ".user-stats-block a:first" has class "level_link attempted"
 
 @no_mobile
 Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video, comes back on link
