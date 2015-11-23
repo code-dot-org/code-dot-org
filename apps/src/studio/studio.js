@@ -1877,6 +1877,25 @@ Studio.init = function(config) {
     annotationList.clearRuntimeAnnotations();
   };
 
+  // Since we allow "show code" for some blockly levels with move blocks,
+  // we supply a polishCodeHook function here to make the generated code look
+  // more readable:
+  config.polishCodeHook = function (code) {
+    if (studioApp.isUsingBlockly()) {
+      var regexpMoveBlockPrefix = /Studio.move\('\S*', 0, /g;
+      code = code.replace(regexpMoveBlockPrefix, "move");
+      var regexpUpBlockSuffix = /1\);/g;
+      code = code.replace(regexpUpBlockSuffix, "Up();");
+      var regexRightBlockSuffix = /2\);/g;
+      code = code.replace(regexRightBlockSuffix, "Right();");
+      var regexpDownBlockSuffix = /4\);/g;
+      code = code.replace(regexpDownBlockSuffix, "Down();");
+      var regexpLeftBlockSuffix = /8\);/g;
+      code = code.replace(regexpLeftBlockSuffix, "Left();");
+    }
+    return code;
+  };
+
   config.twitter = twitterOptions;
 
   // for this app, show make your own button if on share page
