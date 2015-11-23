@@ -128,14 +128,25 @@ class ActivitiesController < ApplicationController
 
     current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
 
-    @activity = Activity.create!(user: current_user,
-                                 level: @level,
-                                 action: solved, # TODO I think we don't actually use this. (maybe in a report?)
-                                 test_result: test_result,
-                                 attempt: params[:attempt].to_i,
-                                 lines: lines,
-                                 time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
-                                 level_source_id: @level_source.try(:id))
+    save_to_gallery =  params[:save_to_gallery] == 'true' && @level_source_image && solved
+
+    # Create the activity. If saving the gallery, we create it synchronously so that
+    # the activity_id is known for the GalleryActivity, otherwise async creation is allowed.
+    attributes = {
+        user: current_user,
+        level: @level,
+        action: solved, # TODO I think we don't actually use this. (maybe in a report?)
+        test_result: test_result,
+        attempt: params[:attempt].to_i,
+        lines: lines,
+        time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
+        level_source_id: @level_source.try(:id)
+    }
+    if save_to_gallery
+      @activity = Activity.create!(attributes)
+    else
+      @activity = Activity.create_async!(attributes)
+    end
 
     if @script_level
       @new_level_completed = current_user.track_level_progress(@script_level, test_result)
@@ -149,7 +160,7 @@ class ActivitiesController < ApplicationController
     end
 
     # blockly sends us 'undefined', 'false', or 'true' so we have to check as a string value
-    if params[:save_to_gallery] == 'true' && @level_source_image && solved
+    if save_to_gallery
       @gallery_activity = GalleryActivity.create!(user: current_user, activity: @activity, autosaved: true)
     end
 
