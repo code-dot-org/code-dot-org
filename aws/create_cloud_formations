@@ -5,6 +5,6 @@
 # our SQS queues but in the future we can describe other dependencies
 # as well.
 
-for environment in %w{staging test production}
+%w{staging test production}.each do |environment|
   puts `aws cloudformation create-stack --stack-name #{environment} --template-body file://cloud_formation.json --parameters --parameters ParameterKey=Environment,ParameterValue=#{environment}`
 end
