@@ -1090,13 +1090,9 @@ nl:
         
       Course 4 Play Lab Params 2_instruction: 'Nu hebben we vlaggen die hoger zijn dan we kunnen springen. Voeg een parameter toe aan de jump-functie en noem die "hoogte". het pijltje naar boven moet 200 pixels springen, maar het pijltje naar beneden moet 100 pixels springen. Klik op "bewerken" op de jump-functie en verander het zodathet de hoogte-parameter gebruikt in plaats van gewoon 100 pixels te springen.'
       Course 4 Play Lab Params 3_instruction: 'Laten we een andere parameter toevoegen aan de jump-functie, zodat we het kunnen gebruiken met andere figuren. Elk figuur stelt een nummer voor, beginnend bij 1. verander de "jump"-functie, zodat het ook om de "actor"-parameter vraagt. '
-      Course 4 Play Lab Params 4_instruction: 'Hier is een functie genaamd "surveilleren". Bewerk hem om de kat eerst 400 pixels omhoog en dan 400 pixels omlaag te laten bewegen.'
+      Course 4 Play Lab Params 4_instruction: 'Hier is een functie genaamd "patrol". Bewerk hem om de kat eerst 400 pixels omhoog en dan 400 pixels omlaag te laten bewegen.'
       Course 4 Play Lab Params 5_instruction: "Voeg een 'speler'-parameter toe aan de 'patrol'-functie, zodat we hem kunnen aanroepen voor alle spelers op het scherm. De spelers hebben nummer 1, 2 en 3."
-      Course 4 Play Lab Params 6_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Try using a "set speed" block with the new "speed"
-        parameter to help Penguin get both flags before the other sprites even get
-        one.
+      Course 4 Play Lab Params 6_instruction: "Voeg een 'snelheid'-parameter toe aan de 'patrol'-functie. Probeer een 'bepaal snelheid'-blok te gebruiken met de nieuwe 'snelheid'-parameter om de Penguin te helpen allebei de flaggen te pakken voor de andere figuren er eentje krijgen."
       Course 4 Play Lab Params 7_instruction: Gebruik de pijltjes om naar de hond te gaan en alle vlaggen te pakken.
       Course 4 Play Lab Params 8_instruction: 'Gebruik een "wanneer de speler aanraakt"-blok om de hond terug naar de linkerbovenhoek te sturen, maar alleen wanneer hij een van de andere spelers aanraakt.'
       Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit\nthe function so that a \"points\" parameter is added to the \"player_score\"\nvariable. \r\n\r\nThe variable \"player_score\" should increase each time\nDog tags Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
@@ -1407,19 +1403,10 @@ nl:
       frozen circle_instruction: Een cirkel is een speciale vorm. Kun jij bedenken welk getal op de plaats van de vraagtekens moet komen om een cirkel te tekenen?
       frozen cross rotate dense_instruction: 'Laten we dit 90 maal herhalen! Hoeveel keer gaat 90 in 360? Tip: Het is een heel klein getal.'
       frozen cross rotate_instruction: Probeer het nu 10 maal te herhalen. Hoeveel graden moet je draaien tussen de lijnen?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using another “Repeat"
-        block to repeat a parallelogram 4 times, turning right by 90 degrees between
-        each parallelogram.
+      frozen cross_instruction: "Plak een 'herhaal'-blok om deze commando's om een plus-teken te maken. Heb je al gezien dat Elsa vooruit en achteruit kan lopen?"
+      frozen diamond mini snowflake_instruction: "Wist je dat iedere sneeuwvolk een andere vorm heeft? Laten we een nieuwe sneeuwvlok maken door nog een 'herhaal'-blok te gebruiken om 4 keer een parallellogram te tekenen, waarbij we 90 graden naar rechts draaien na ieder parallellogram."
       frozen diamond snowflake_instruction: 'Laten we nu een nieuwe sneeuwvlok maken door met het "Herhaal" blok een parallellogram 10 keer te herhalen, draai steeds 36 graden tussen de parallellogrammen.'
-      frozen diamond_instruction: |
-        Use a repeat around these blocks to create a parallelogram.
-        It's just like a rectangle but has different angles. This one has 60 degree
-        and 120 degree angles instead of all 90 degree angles.
+      frozen diamond_instruction: Gebruik een lus om deze blokken om een parallellogram te maken. Dat is net een rechthoek, maar met andere hoeken. Deze heeft hoeken van 60 en van 120 graden in plaats van allemaal hoeken van 90 graden.
       frozen freeplay_instruction: Je bent nu officieel een meester kunstenaar geworden! Maak een winter wonderland.
       frozen line_instruction: Hoi! Ik ben Elsa van Arendelle. Help mij met het maken van een lijn.
       frozen perpendicular_instruction: 'Laten we nu eens kijken of we twee lijnen kunnen maken die in een hoek van 90 graden staan. Je zult zowel het "draai" als het "ga vooruit" blok moeten gebruiken.'
@@ -1793,7 +1780,7 @@ nl:
       NEW Course 4 Bee For Loops 9_instruction: Wanneer je lus aftelt wordt de stapwaarde in iedere lus afgetrokken van je tellervariabele. Wat zou je staalharde moeten zijn om 9, dan 6 en dan 3 nectar te verzamelen?
       NEW Course 4 Bee For Loops 95_instruction: 'Kijk goed naar elk deel van de "rekenen met" lus die je net hebt gemaakt. Kan je bedenken welke getallen je moet verdubbelen om dit puzzel op te lossen? Waarom werkt dit?'
       NEW Course 4 Play Lab Params 11_instruction: 'Het is vrije speel tijd! Veel plezier met alle blokken in je gereedschapskist. '
-      NEW Course 4 Play Lab Params 5 5_instruction: Laten we dat opnieuw proberen, maar dan met minder hulp. Wat moet je nu bewerken om de spelers te laten patrouilleren (rondlopen)?
+      NEW Course 4 Play Lab Params 5 5_instruction: Laten we dat opnieuw proberen, maar dan met minder hulp. Wat moet je nu aanpassen om de spelers te laten patrouilleren (rondlopen)?
       NEW Course 4 Play Lab Vars 4 5_instruction: 'Wat denk je dat deze code zal doen? Druk op "Start" om te zien wat er gebeurt.'
       NEW Course 4 Play Labs For Loops 7a_instruction: Kan je, met behulp van wat je tot nu toe geleerd hebt, de dinosaurus een stap vooruit laten zetten elke keer wanneer de pinguïn telt?
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Het is vrije speel tijd! Veel plezier met alle blokken in je gereedschapskist. '
@@ -1841,7 +1828,7 @@ nl:
         Ieder huis start met een muur. Bouw het eerste deel van je huis door "plaats" en "vooruit" commando's in het "herhaal" commando te plaatsen.
       Overworld Plant Crops_instruction: Het is goed om vooruit te plannen. Plant gewassen aan beide zijden van het water zodat je later geen honger krijgt.
       Overworld Powered Minecart_instruction: Goed gedaan! Je hebt veel grondstoffen verzameld en een mooi huis gebouwd. Leg nu een spoor aan van de rand van de kaart naar de deur van uw huis.
-      Overworld Shear Sheep_instruction: 'Schaap scheertijd! gebruik het "scheer" commando om wol te verzamelen van beide schapen.'
+      Overworld Shear Sheep_instruction: 'Schaap scheertijd! gebruik het "schaar" commando om wol te verzamelen van beide schapen.'
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -2023,7 +2010,7 @@ nl:
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
       Ryan - 4-5 Bee Conditionals 2_instruction: De bij wil op dit moment alleen nectar. Niet alle objecten zijn bloemen, dus kijk onder IEDERE WOLK om te zien of hij een bloem verbergt. Dan kun je nectar verzamelen.
-      Ryan Test Locked Blocks_instruction: 'Hier is een functie genaamd "surveilleren". Bewerk hem om de kat eerst 400 pixels omhoog en dan 400 pixels omlaag te laten bewegen.'
+      Ryan Test Locked Blocks_instruction: 'Hier is een functie genaamd "patrol". Bewerk hem om de kat eerst 400 pixels omhoog en dan 400 pixels omlaag te laten bewegen.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
         This butterfly is named Sam, and

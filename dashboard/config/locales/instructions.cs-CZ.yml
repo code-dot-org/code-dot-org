@@ -2686,69 +2686,45 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
-      Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
-      Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
-      Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
-      Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
-      Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
-      Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
-      Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+      Overworld Avoid Monsters_instruction: Běh do lián je špatný nápad. Opatrně se
+        pohybuj kolem šlahounů, abys ses dostal do bezpečí domova.
+      Overworld Chop Tree_instruction: Dřevo je velmi důležitý zdroj. Mnoho věcí se
+        vyrábí z něho. Jdi ke stromu a použij povel "destroy block" jej porazit.
+      Overworld Chop Trees_instruction: Potřebujeme postavit dům před západem slunce.
+        Domy požadují hodně dřeva. Pokácej 3 celé stromy.
+      Overworld Free Play 20x20_instruction: Blahopřejeme! Dokončil jsi všechny naše
+        hádanky! Teď tu moji, zbuduj a vytvoř něco jedinečného cokoli, co jsi se naučil
+        až dosud.
+      Overworld Free Play_instruction: Tato krajina je tvoje na hraní. Zvol si, co
+        chceš stavět.
+      Overworld House Frame - A_instruction: Udělejme si vlastní dům! Toto místo vypadá
+        dobře. Postav kostru na hliněných blocích.
+      Overworld House Frame - C_instruction: Udělejme si vlastní dům! Toto místo vypadá
+        dobře. Postav kostru na hliněných blocích.
+      Overworld House Frame B_instruction: Jedna zeď je dokončená, postavme zbytek
+        domu podle tvého plánu pater! Budeš zde muset opakovat docela hodně.
+      Overworld House Frame B2_instruction: Jedna zeď je dokončená, postavme zbytek
+        domu podle tvého plánu pater! Budeš zde muset opakovat docela hodně.
+      Overworld House Frame C_instruction: Jedna zeď je dokončená, postavme zbytek
+        domu podle tvého plánu pater! Budeš zde muset opakovat docela hodně.
+      Overworld House Frame Chosen_instruction: Postav zbytek tvého domu z jakéhokoliv
+        materiálu, který se ti líbí. Povel "Opakování" se bude hodit.
+      Overworld House Frame_instruction: Udělejme si vlastní dům! Toto místo vypadá
+        dobře. Postav kostru na hliněných blocích.
+      Overworld Minecart Track_instruction: Vrať se zpět na povrch, pod který je spousta
+        podzemních zdrojů. Zbudujme nyní od tvého domu cestu podél polní cestičky.
+        Prvním krokem je vyčistit cestu. Projdi se cestu a odstraň z ní stromy.
+      Overworld Move to Sheep_instruction: Přidej druhý povel "move forward" příkaz
+        k dosažení ovce.
+      Overworld Place Wall_instruction: Každý dům začíná stavbou zdí. Vytvoř první
+        část domu tím, že položíš povely "place" a "move forward" dovnitř cyklu.
+      Overworld Plant Crops_instruction: Je dobré dopředu plánovat. Zasaď plodiny
+        po obou stranách vody, abys neměl později hlad.
+      Overworld Powered Minecart_instruction: Skvělá práce! Shromáždil si spoustu
+        zdrojů a postavil skromný dům. Nyní polož železnici od okraje mapy ke dveřím
+        tvého domu.
+      Overworld Shear Sheep_instruction: Čas stříhání ovcí! Použij povel "shear" k
+        získání vlny od obou ovcí.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all

@@ -432,8 +432,7 @@ nl:
           In computer spellen is er een gebeurtenis genaamd "Update" en dit gebeurt 30 tot 60 keer per seconde. Voor computerspel programmeurs is zo'n gebeurtenis vele malen belangrijker dan de klik op een knop of beweging van een joystick.
       6:
         image: notes/C1_bigevent_unplugged_6.png
-        text: |-
-          The main event we're watching for is that "Update" tick happening. And then we check the joystick in the tick. So we say, "Oh, has somebody pushed the button this frame? Yes or no?" Without events, the player couldn't move, you couldn't jump, you wouldn't be able to control what's going on. The videogame wouldn't be able to animate anything.
+        text: 'Het belangrijkste waar we naar uitzien, is dat de "Update" aangeraakt werd. En dan bekijken we de joystick in d.'
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg

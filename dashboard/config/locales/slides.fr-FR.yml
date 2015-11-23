@@ -41,8 +41,8 @@
       10:
         image: notes/hoc1_10.jpg
         text: Chaque bloc est une seule instruction. Si tu fais glisser un bloc «
-          avancer » dans ton espace de travail et appuie sur « Exécuter le programme
-          », l'oiseau se déplace d'une case sur le labyrinthe.
+          avancer » dans ton espace de travail et appuies sur « Exécuter le programme
+          », l'oiseau se déplacera d'une case sur le labyrinthe.
       11:
         image: notes/hoc1_11.jpg
         text: Pour faire plusieurs actions, vous pouvez faire glisser les blocs sur
@@ -850,35 +850,36 @@
           to family and friends and you can learn lots of new things.
       3:
         image: notes/C1_going_places_safely_3.png
-        text: Yesterday, I visited a zoo that's near my house. I saw a baby zebra.
-          I took her picture and changed the color of her stripes, then added a hat
-          and added it to my collection of wacky animals. Awesome! Later, I went to
-          a place far far away. I visited Kenya. That's a country in Africa. Lots
-          of zebras live there.
+        text: Hier, j'ai visité un zoo près de ma maison. J'ai vu un bébé zèbre. J'ai
+          pris une photo et j'ai changé la couleur des rayures, puis ajouté un chapeau
+          et je l'ai ajouté à ma collection d'animaux farfelus. Génial ! Plus tard,
+          je suis allé très très loin. J'ai visité le Kenya. C'est un pays en Afrique.
+          Plein de zèbres y vivent.
       4:
         image: notes/C1_going_places_safely_4.png
-        text: Sometimes on the internet I talk to peeople I know, like my grandma
-          who lives in another state. Hi grandma! She's making me cookies that she'll
-          send me for my birthday. "Yummy, I wish the internet had smellorama!" I
-          can talk to different people on the internet, like my cousin but I only
-          talk to people I know.
+        text: Parfois sur Internet, je parle à des gens que je connais, comme ma grand-mère,
+          qui vit dans un autre état. Salut Mamie! Elle me fait des cookies qu'elle
+          m'enverra pour mon anniversaire. "Miam, j'aimerais que l'odeur passe par
+          Internet !". Je peux parler à beaucoup de gens par Internet, comme mon cousin,
+          mais je ne parle qu'aux gens que je connais.
       5:
         image: notes/C1_going_places_safely_5.png
-        text: What I like most on the interent is that I get to play fun games. Score!
-          I also like to draw and create new things and share it with my friends.
-          Cool! Sometimes I visit websites where I learn new things but I always stick
-          to websites that are just right for me. Wow, dinosaurs!
+        text: Ce que j'aime le plus sur Internet, c'est que je peux jouer à des jeux
+          amusants. Gagné ! J'aime aussi dessiner et créer de nouvelles choses et
+          les partager avec mes amis. Cool ! Parfois, je visite des sites où j'apprends
+          de nouvelles choses, mais je reste toujours sur les sites qui sont bien
+          pour moi. Oh, des dinosaures !
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The internet is a super fun place. But just like when you cross a street
-          in your neighborhood, you also have to be careful when you go online. Here
-          are three rules to remember. Rule number 1: Always ask your parents first.
-          Rule number 2: Only talk to people you know. Rule number 3: Stick to places
-          that are just right for you.'
+        text: 'Internet est un lieu très amusant. Mais comme quand tu traverse une
+          rue dans ton quartier, tu dois être prudent en ligne. Voici trois règles
+          à retenir. Règle numéro 1 : Demande toujours à tes parents d''abord. Règle
+          numéro 2 : Ne parle qu''aux gens que tu connais. Règle numéro 3 : Reste
+          aux endroits qui sont adaptés pour toi.'
       7:
         image: notes/C1_going_places_safely_7.png
-        text: Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to
-          log on again to see where I can visit next.
+        text: Wouah, c'était amusant ! Heure du dîner. Je me déconnecte maintenant.
+          Je suis impatient de me reconnecter pour voir où je peux aller après.
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png

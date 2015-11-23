@@ -1583,18 +1583,14 @@
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
+          title: '星球大战: 建立一个充满代码的星系'
+          description_short: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
+          description: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
           Hour of Code 2015: Hour of Code 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
+          title: '星球大战: 建立一个充满代码的星系'
+          description_short: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
+          description: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
           Hour of Code 2015: Hour of Code 2015
         minecraft:
           title: Minecraft
@@ -1607,3 +1603,10 @@
           description: Use blocks of code to take Steve or Alex on an adventure through
             this Minecraft world
           Hour of Code 2015: Hour of Code 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit

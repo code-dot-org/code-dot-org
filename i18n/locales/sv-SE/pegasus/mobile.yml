@@ -1,5 +1,5 @@
 sv-SE:
-  hour_of_code: Hour of Code
+  hour_of_code: Timmen med Kod
   hello: Hej världen
   select_language: Vänligen välj ditt språk
   en: Datavetenskap
@@ -291,7 +291,7 @@ sv-SE:
   starwars_watch_videos: Innan du börjar, titta på en av dessa inspirerande videofilmer
   starwars_speak_languages: Tala ett annat språk?
   starwars_help_translate: Hjälp oss översätta
-  starwars_platform_text: Modern browsers, smartphones, tablets
+  starwars_platform_text: Moderna webbläsare, smartphones, surfplattor
   mc_name: Minecraft Hour of Code
   mc_longdescription: Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft värld.
   mc_shortdescription: Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft värld.

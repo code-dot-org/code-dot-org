@@ -52,8 +52,10 @@ social:
 - # The homepage gsheet may specify "en" or "not en" for many row types.
 - languageFilter = request.language == "en" ? "en" : "not en"
 
+- page_mode = PageMode.get(request)
+
 #homepage.supreme-container
-  = view :homepage_hero, languageFilter: languageFilter
+  = view :homepage_hero, languageFilter: languageFilter, page_mode: page_mode
 
   #petitionexpand{style: "display: none"}
     %script{:src=>"/js/jquery.placeholder.js"}
@@ -63,7 +65,7 @@ social:
     .container_responsive
       #user_hero
 
-  = view :homepage_sections, languageFilter: languageFilter
+  = view :homepage_sections, languageFilter: languageFilter, page_mode: page_mode
 
   = view :homepage_gallery
   = view :donor_slider

@@ -2330,60 +2330,51 @@ ja:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
+        クリーパーにぶつかると大変です。
+        そっとクリーパーのそばをすりぬけて、安全な家まで帰りましょう。
       Overworld Chop Tree_instruction: 木は何かを作るのにとても役に立ちます。木まで歩いて、「ブロックをこわす」コマンドを使ってそれを切り倒しましょう。
       Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
+        夜になって暗くなってしまうまえに家をたてないといけません。
+        家をたてるには木がたくさんいります。3本ある木をすべて切ってください。
       Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
+        クリアおめでとう！ これでパズルは全部です。
+        これまでに勉強したことを思いだして、掘ったり、置いたり
+        なんでもあなたの好きなものつくってみてくださいね。
       Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
+        ここは自由な遊び場として用意されました。
+        なにをつくるのもあなたしだいです。
       Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
+        それではわたしたちの家をたてましょう。この辺りがよさそうですね。
+        土ブロック の上に、ワクをたてましょう。
       Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
+        それではわたしたちの家をたてましょう。この辺りがよさそうですね。
+        土ブロック の上に、ワクをたてましょう。
       Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
+        はじめのカベが完成ました。それではのこりを計画どおりにたてていきましょう。
+        ここではなんども「繰り返し」をすることになると思いますよ。
       Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
+        はじめのカベが完成ました。それではのこりを計画どおりにたてていきましょう。
+        ここではなんども「繰り返し」をすることになると思いますよ。
       Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
+        はじめのカベが完成ました。それではのこりを計画どおりにたてていきましょう。
+        ここではなんども「繰り返し」をすることになると思いますよ。
       Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
+        家のまだできていないところを、あなたの気にいったものをつかってたててください。
+        ここでは「繰り返し」コマンドがやくに立つと思いますよ。
       Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
+        それではわたしたちの家をたてましょう！ 場所はこの辺りがよさそうですね。
+        土ブロック の上にワクをたてていきましょう。
+      Overworld Minecart Track_instruction: あなたは今、地下で手に入れた様々な資源を持って地上に帰ってきました。次は、あなたの家まで道を作る時間です。まずは、邪魔な木などをどけましょう。
       Overworld Move to Sheep_instruction: ２つ目の「前に進む」コマンドを追加（ついか）して、ヒツジに触りましょう。
       Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
+        家をたてるなら、何といってもまずはカベからです。
+        「置く」と「前に進む」のふたつのコマンドを「繰り返し」の中で上手につかって、家をたてていきましょう。
       Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
+        前もって計画をたてるのはいつだっていい考えですよね。
+        まん中に流れる水の左右に作物を植えて、おなかがへったときにそなえましょう。
       Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
+        すばらしい！ あなたは、たくさんの役に立つものを集め、家をたてるところまできました。
+        それでは次に、画面上の地図のはしからあなたの家のげんかんまでつづくレールをひくことにしましょう。
       Overworld Shear Sheep_instruction: ヒツジの毛を刈（か）る時間です。「刈る」コマンドを使って、２匹のヒツジから羊毛（ようもう）を収穫（しゅうかく）しましょう。
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
@@ -3979,23 +3970,13 @@ ja:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
-      Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
-      Underground If Statements_instruction: |
-        Now things are getting tricky. Mine
-        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
-        over any lava you uncover.
-      Underground Iron_instruction: |
-        Walking into molten lava is a bad idea. Place
-        cobblestone to create a bridge, then mine at least two of the iron blocks.
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7 redstone! Try using a repeat command inside a repeat command to walk in\na square.\r\n"
-      Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
-      Underground Test Level_instruction: Collect all of the minerals!
+      Underground Avoiding Lava_instruction: 溶岩は、いくつかのブロックの下に隠れています。だから、前に進むためには何かを置く必要がありますね。そんな時は、「もし」コマンドを使うと便利です。正しい場所に「前に進む」コマンドを置いて、前にあるブロックを掘りましょう。
+      Underground If Statements_instruction: さっきよりも難しくなってきました。ここでは、溶岩に落ちないようにしながら３つのレッドストーンを掘る必要があります。「もし」コマンドを上手に使って、必要な場所に丸石を配置して進みましょう。
+      Underground Iron_instruction: 溶岩に足を踏み入れるのは悪いアイデアです。丸石を置いて橋を造り、最低でも２つの鉄のブロックを採掘（さいくつ）しましょう。
+      Underground Mine in a Circle_instruction: |
+        ５つのダイアモンドと、７つのレッドストーンを手にいれる方法を考えましょう。繰り返しコマンドを繰り返しコマンドの中で使うと良いですよ。
+        
+      Underground Mining Coal_instruction: 地下には、沢山の貴重（きちょう）な資源（しげん）が埋まっていますが、とても暗い所です。最低でも２つのたいまつを置いて、最低でも２つの石炭を入手しましょう。
+      Underground Test Level_instruction: 全ての鉱物（こうぶつ）を手に入れよう！
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

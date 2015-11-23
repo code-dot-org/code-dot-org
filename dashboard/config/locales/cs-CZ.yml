@@ -43,7 +43,7 @@
   less: MÉNĚ
   beta: beta
   try_hoc: Zkus Hodinu Kódu kliknutím zde >> 
-  try_k8intro: Vyzkoušejte náš kurz K-8 Úvod do informatiky (15-25 hodin)
+  try_k8intro: Vyzkoušej náš kurz K-8 Úvod do informatiky (15-25 hodin)
   k8intro: Kurz K-8 Úvod do počítačové vědy (15-25 hodin)
   already_started: 'Už jsi začal? Pokračuj zde >> '
   demos: 'Admin: Všechny Ukázky'
@@ -111,7 +111,7 @@
   signin:
     try_heading: Chcete zkusit kódovat bez registrace?
     try_hoc: Nejprve vyzkoušej Hodinu kódování
-    try_20hours: Vyzkoušej náš 20ti hodinový Úvod do počítačové vědy
+    try_20hours: Vyzkoušej náš 20hodinový Úvod do informatiky
   signinsection:
     welcome: Vítejte v %{section_name}
     name: Vyber si své jméno
@@ -552,7 +552,7 @@
     frozen:
       title: Frozen
     starwars:
-      title: Star Wars
+      title: Hvězdné války
     infinity:
       title: Infinity Play Lab
       body: Použij Play Lab k vytvoření příběhu nebo hry s Disney Infinity postavami.

@@ -158,7 +158,7 @@
   "errorQuestionMarksInNumberField": "Prøv å erstatte \"???\" med en verdi!",
   "errorRequiredParamsMissing": "Lag en parameter for funksjonen din ved å klikke \"Rediger\" og legge til de nødvendige parameterne. Dra de nye parameterblokkene til funksjonsdefinisjonen.",
   "errorUnusedFunction": "Du opprettet en funksjon, men brukte den ikke i arbeidsområdet! Klikk på \"Funksjoner\" i verktøykassen, og forsikre deg om at du bruker den i programmet ditt.",
-  "errorUnusedParam": "Du la til en parameterblokk, men bruke den ikke i definisjonen. Husk å bruke parameteren ved å klikke \"Rediger\" og sette parameterblokk innenfor den grønne blokken.",
+  "errorUnusedParam": "Du la til en parameterblokk, men brukte den ikke i definisjonen. Husk å bruke parameteren ved å klikke \"Rediger\" og sette parameterblokk innenfor den grønne blokken.",
   "exampleErrorMessage": "Funksjonen {functionName} har én eller flere eksempler som trenger justering. Kontroller at de passer med din definisjon og svar på spørsmålet.",
   "examplesFailedOnClose": "En eller flere av eksemplene dine samsvarer ikke definisjonen. Kontroller eksemplene før du lukker",
   "extraTopBlocks": "Du har ledige blokker.",

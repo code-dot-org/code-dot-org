@@ -1617,7 +1617,14 @@
           Craft: Craft
         mc:
           title: Kodetimen med Minecraft
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
+          description_short: Utforsk en Minecraft-verden gjennom kode
+          description: Bruk kodeblokker til å ta med Steve eller Alex ut på et eventyr
+            i denne Minecraft-verdenen
           Hour of Code 2015: Kodetimen 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
