@@ -5,6 +5,8 @@
     %title= title
     = ::NewRelic::Agent.browser_timing_header rescue ''
     = tag :meta, name: 'viewport', content: 'minimal-ui'
+    = tag :meta, charset: 'utf-8'
+
     /[if IE 9]
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
     = stylesheet_link_tag    'application', media: 'all'
