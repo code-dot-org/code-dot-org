@@ -4,8 +4,8 @@ var assert = testUtils.assert;
 var authoredHintUtils = require('@cdo/apps/authoredHintUtils');
 
 describe("Authored Hint Utils", function () {
-  
   var hintOne, hintTwo, record, recordTwo;
+  var originalAjax;
 
   beforeEach(function () {
     localStorage.removeItem('finished_authored_hint_views');
@@ -14,36 +14,43 @@ describe("Authored Hint Utils", function () {
 
     hintOne = {
       id: 'first',
-      prev_time: 'something decent',
-      next_time: 'something great',
-      final_time: 'something awesome'
+      prevTime: 'something decent',
+      nextTime: 'something great',
+      finalTime: 'something awesome'
     };
 
     hintTwo ={
       id: 'second',
-      prev_test_result: 'something okay',
-      next_test_result: 'something fine',
-      final_test_result: 'something rather poor'
+      prevTestResult: 'something okay',
+      nextTestResult: 'something fine',
+      finalTestResult: 'something rather poor'
     };
 
     record = {
       time: 'something standard',
-      test_result: 'something grand',
-      activity_id: 0,
+      testResult: 'something grand',
+      activityId: 0,
       attempt: 1,
-      level_source_id: 2
+      levelSourceId: 2
     };
     recordTwo = {
       time: 'something superb',
-      test_result: 'something glorious',
-      activity_id: 3,
+      testResult: 'something glorious',
+      activityId: 3,
       attempt: 4,
-      level_source_id: 5
+      levelSourceId: 5
     };
+
+    // some of our tests modify $.ajax. Cache the original value here so
+    // we can restore it later
+    originalAjax = $.ajax;
+  });
+
+  afterEach(function () {
+    $.ajax = originalAjax;
   });
 
   describe('getFromLocalStorage_', function () {
-
     it('returns default when key doesn\' exist', function () {
       var defaultValue = "hello";
       var result = authoredHintUtils.getFromLocalStorage_('nonexistent_key', defaultValue);
@@ -63,7 +70,6 @@ describe("Authored Hint Utils", function () {
       var result = authoredHintUtils.getFromLocalStorage_('good_json', undefined);
       assert.equal(result, expectedValue);
     });
-
   });
 
   describe('recordFinishedHints_', function () {
@@ -77,7 +83,6 @@ describe("Authored Hint Utils", function () {
   });
 
   describe('finalizeHints_', function () {
-
     it('if no last_attempt_record is set, simply returns the finished hints', function () {
       var hints = [1, 2, 3];
       localStorage.setItem('finished_authored_hint_views', JSON.stringify(hints));
@@ -94,25 +99,24 @@ describe("Authored Hint Utils", function () {
       var finalizedHints = authoredHintUtils.finalizeHints_();
       assert.deepEqual(finalizedHints, [{
         id: 'first',
-        prev_time: 'something decent',
-        next_time: 'something great',
-        final_time: 'something awesome',
-        final_test_result: 'something grand',
-        final_activity_id: 0,
-        final_attempt: 1,
-        final_level_source_id: 2
+        prevTime: 'something decent',
+        nextTime: 'something great',
+        finalTime: 'something awesome',
+        finalTestResult: 'something grand',
+        finalActivityId: 0,
+        finalAttempt: 1,
+        finalLevelSourceId: 2
       }, {
         id: 'second',
-        prev_test_result: 'something okay',
-        next_test_result: 'something fine',
-        final_test_result: 'something rather poor',
-        final_time: 'something standard',
-        final_activity_id: 0,
-        final_attempt: 1,
-        final_level_source_id: 2
+        prevTestResult: 'something okay',
+        nextTestResult: 'something fine',
+        finalTestResult: 'something rather poor',
+        finalTime: 'something standard',
+        finalActivityId: 0,
+        finalAttempt: 1,
+        finalLevelSourceId: 2
       }]);
     });
-
   });
 
   describe('recordUnfinishedHint', function () {
@@ -130,21 +134,18 @@ describe("Authored Hint Utils", function () {
 
       assert.deepEqual(unfinishedHints, [{
         id: 'first',
-        prev_time: 'something decent',
-        next_time: 'something great',
-        final_time: 'something awesome',
-        prev_test_result: 'something grand',
-        prev_activity_id: 0,
-        prev_attempt: 1,
-        prev_level_source_id: 2
+        prevTime: 'something decent',
+        nextTime: 'something great',
+        finalTime: 'something awesome',
+        prevTestResult: 'something grand',
+        prevActivityId: 0,
+        prevAttempt: 1,
+        prevLevelSourceId: 2
       }]);
     });
-
-
   });
 
   describe('finishHints', function () {
-
     it('sets last_attempt_record', function () {
       assert.isNull(localStorage.getItem('last_attempt_record'));
       authoredHintUtils.finishHints(record);
@@ -166,20 +167,18 @@ describe("Authored Hint Utils", function () {
 
       assert.deepEqual(finishedHints, [{
         id: 'first',
-        prev_time: 'something decent',
-        next_time: 'something great',
-        final_time: 'something awesome',
-        next_test_result: 'something grand',
-        next_activity_id: 0,
-        next_attempt: 1,
-        next_level_source_id: 2
+        prevTime: 'something decent',
+        nextTime: 'something great',
+        finalTime: 'something awesome',
+        nextTestResult: 'something grand',
+        nextActivityId: 0,
+        nextAttempt: 1,
+        nextLevelSourceId: 2
       }]);
     });
-
   });
 
   describe('submitHints', function () {
-
     it('finishes all unfinished hints using the last hint', function () {
       $.ajax = function () {};
 
@@ -195,32 +194,31 @@ describe("Authored Hint Utils", function () {
 
       assert.deepEqual(finishedHints, [{
         id: 'first',
-        final_time: 'something awesome',
-        next_activity_id: 3,
-        next_attempt: 4,
-        next_level_source_id: 5,
-        next_test_result: 'something okay',
-        next_time: 'something great',
-        prev_activity_id: 0,
-        prev_attempt: 1,
-        prev_level_source_id: 2,
-        prev_test_result: 'something grand',
-        prev_time: 'something decent',
+        finalTime: 'something awesome',
+        nextActivityId: 3,
+        nextAttempt: 4,
+        nextLevelSourceId: 5,
+        nextTestResult: 'something okay',
+        nextTime: 'something great',
+        prevActivityId: 0,
+        prevAttempt: 1,
+        prevLevelSourceId: 2,
+        prevTestResult: 'something grand',
+        prevTime: 'something decent',
       }, {
         id: 'second',
-        final_test_result: 'something rather poor',
-        next_activity_id: 3,
-        next_attempt: 4,
-        next_level_source_id: 5,
-        next_test_result: 'something fine',
-        next_time: 'something superb',
-        prev_activity_id: 3,
-        prev_attempt: 4,
-        prev_level_source_id: 5,
-        prev_test_result: 'something okay',
-        prev_time: 'something superb',
+        finalTestResult: 'something rather poor',
+        nextActivityId: 3,
+        nextAttempt: 4,
+        nextLevelSourceId: 5,
+        nextTestResult: 'something fine',
+        nextTime: 'something superb',
+        prevActivityId: 3,
+        prevAttempt: 4,
+        prevLevelSourceId: 5,
+        prevTestResult: 'something okay',
+        prevTime: 'something superb',
       }]);
-
     });
 
     it('posts all finalized hints at once', function () {
@@ -249,7 +247,5 @@ describe("Authored Hint Utils", function () {
       var finishedHints = authoredHintUtils.getFinishedHints_();
       assert.deepEqual(finishedHints, []);
     });
-
   });
-
 });

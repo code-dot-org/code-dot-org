@@ -1,3 +1,5 @@
+/* global marked */
+
 /**
  * @overview A helper class for all actions associated with the Authored
  * Hint viewing and logging system.
@@ -25,42 +27,42 @@
 
 /**
  * @typedef {Object} HintData
- * @property {number} script_id
- * @property {number} level_id
- * @property {string} hint_id
- * @property {string} hint_class
- * @property {string} hint_type
+ * @property {number} scriptId
+ * @property {number} levelId
+ * @property {string} hintId
+ * @property {string} hintClass
+ * @property {string} hintType
  *
  * @typedef {Object} UnfinishedHint
  * @augments HintData
- * @property {number} [prev_time]
- * @property {number} [prev_attempt]
- * @property {number} [prev_test_result]
- * @property {number} [prev_activity_id]
- * @property {number} [prev_level_source_id]
+ * @property {number} [prevTime]
+ * @property {number} [prevAttempt]
+ * @property {number} [prevTestResult]
+ * @property {number} [prevActivityId]
+ * @property {number} [prevLevelSourceId]
  *
  * @typedef {Object} FinishedHint
  * @augments UnfinishedHint
- * @property {number} next_time
- * @property {number} next_attempt
- * @property {number} next_test_result
- * @property {number} next_activity_id
- * @property {number} next_level_source_id
+ * @property {number} nextTime
+ * @property {number} nextAttempt
+ * @property {number} nextTestResult
+ * @property {number} nextActivityId
+ * @property {number} nextLevelSourceId
  *
  * @typedef {Object} FinalizedHint
  * @augments FinishedHint
- * @property {number} final_time
- * @property {number} final_attempt
- * @property {number} final_test_result
- * @property {number} final_activity_id
- * @property {number} final_level_source_id
+ * @property {number} finalTime
+ * @property {number} finalAttempt
+ * @property {number} finalTestResult
+ * @property {number} finalActivityId
+ * @property {number} finalLevelSourceId
  *
  * @typedef {Object} AttemptRecord
  * @property {number} time
  * @property {number} attempt
- * @property {number} test_result
- * @property {number} activity_id
- * @property {number} level_source_id
+ * @property {number} testResult
+ * @property {number} activityId
+ * @property {number} levelSourceId
  */
 
 var authoredHintUtils = {};
@@ -126,11 +128,11 @@ authoredHintUtils.finalizeHints_ = function () {
   if (finalAttemptRecord) {
     hints = hints.map(function(hint){
       hint = $.extend({
-        final_time: finalAttemptRecord.time,
-        final_attempt: finalAttemptRecord.attempt,
-        final_test_result: finalAttemptRecord.test_result,
-        final_activity_id: finalAttemptRecord.activity_id,
-        final_level_source_id: finalAttemptRecord.level_source_id,
+        finalTime: finalAttemptRecord.time,
+        finalAttempt: finalAttemptRecord.attempt,
+        finalTestResult: finalAttemptRecord.testResult,
+        finalActivityId: finalAttemptRecord.activityId,
+        finalLevelSourceId: finalAttemptRecord.levelSourceId,
       }, hint);
       return hint;
     });
@@ -150,11 +152,11 @@ authoredHintUtils.recordUnfinishedHint = function (hint) {
   var lastAttemptRecord = authoredHintUtils.getLastAttemptRecord_();
   if (lastAttemptRecord) {
     hint = $.extend({
-      prev_time: lastAttemptRecord.time,
-      prev_attempt: lastAttemptRecord.attempt,
-      prev_test_result: lastAttemptRecord.test_result,
-      prev_activity_id: lastAttemptRecord.activity_id,
-      prev_level_source_id: lastAttemptRecord.level_source_id,
+      prevTime: lastAttemptRecord.time,
+      prevAttempt: lastAttemptRecord.attempt,
+      prevTestResult: lastAttemptRecord.testResult,
+      prevActivityId: lastAttemptRecord.activityId,
+      prevLevelSourceId: lastAttemptRecord.levelSourceId,
     }, hint);
   }
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
@@ -174,11 +176,11 @@ authoredHintUtils.finishHints = function (nextAttemptRecord) {
   authoredHintUtils.clearUnfinishedHints();
   var finishedHintViews = unfinishedHintViews.map(function(hint){
     hint = $.extend({
-      next_time: nextAttemptRecord.time,
-      next_attempt: nextAttemptRecord.attempt,
-      next_test_result: nextAttemptRecord.test_result,
-      next_activity_id: nextAttemptRecord.activity_id,
-      next_level_source_id: nextAttemptRecord.level_source_id,
+      nextTime: nextAttemptRecord.time,
+      nextAttempt: nextAttemptRecord.attempt,
+      nextTestResult: nextAttemptRecord.testResult,
+      nextActivityId: nextAttemptRecord.activityId,
+      nextLevelSourceId: nextAttemptRecord.levelSourceId,
     }, hint);
     return hint;
   });
@@ -194,11 +196,11 @@ authoredHintUtils.submitHints = function (url) {
   if (unfinishedHints && unfinishedHints.length) {
     var finalHint = unfinishedHints[unfinishedHints.length-1];
     authoredHintUtils.finishHints({
-      time: finalHint.prev_time,
-      attempt: finalHint.prev_attempt,
-      test_result: finalHint.prev_test_result,
-      activity_id: finalHint.prev_activity_id,
-      level_source_id: finalHint.prev_level_source_id,
+      time: finalHint.prevTime,
+      attempt: finalHint.prevAttempt,
+      testResult: finalHint.prevTestResult,
+      activityId: finalHint.prevActivityId,
+      levelSourceId: finalHint.prevLevelSourceId,
     });
   }
 
@@ -217,5 +219,31 @@ authoredHintUtils.submitHints = function (url) {
       }
     });
   }
+};
+
+/**
+ * Generates authored hints as used by StudioApp from levelbuilder JSON.
+ * @param {string} - JSON representing an array of hints
+ * @return {Object[]}
+ */
+authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
+  if (!marked) {
+    return [];
+  }
+  var hints;
+  try {
+    hints = JSON.parse(levelBuilderAuthoredHints);
+  } catch (e) {
+    hints = [];
+  }
+  return hints.map(function (hint) {
+    return {
+      content: marked(hint.hint_markdown),
+      hintId: hint.hint_id,
+      hintClass: hint.hint_class,
+      hintType: hint.hint_type,
+      alreadySeen: false
+    };
+  });
 };
 

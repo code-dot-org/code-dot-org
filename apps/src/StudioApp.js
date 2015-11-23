@@ -874,13 +874,13 @@ StudioApp.prototype.recordUserViewedHint_ = function (hint, scriptId, levelId) {
 
   authoredHintUtils.recordUnfinishedHint({
     // level info
-    script_id: scriptId,
-    level_id: levelId,
+    scriptId: scriptId,
+    levelId: levelId,
 
     // hint info
-    hint_id: hint.hintId,
-    hint_class: hint.hintClass,
-    hint_type: hint.hintType,
+    hintId: hint.hintId,
+    hintClass: hint.hintClass,
+    hintType: hint.hintType,
   });
 };
 
@@ -888,9 +888,9 @@ StudioApp.prototype.onReportComplete = function (response) {
   authoredHintUtils.finishHints({
     time: ((new Date().getTime()) - this.initTime),
     attempt: this.attempts,
-    test_result: this.lastTestResult,
-    activity_id: response && response.activity_id,
-    level_source_id: response && response.level_source_id,
+    testResult: this.lastTestResult,
+    activityId: response && response.activity_id,
+    levelSourceId: response && response.level_source_id,
   });
 };
 
@@ -944,7 +944,6 @@ StudioApp.prototype.showHint_ = function (hint, level, scriptId, levelId) {
     },
     show: false // don't show on mouseover
   }).qtip('show');
-
 };
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
