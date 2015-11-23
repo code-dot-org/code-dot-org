@@ -121,11 +121,17 @@ class QueueProcessorTest < ActiveSupport::TestCase
     sqs_metrics = SQS::Metrics.new
     num_workers = 5
     global_max_messages_per_sec = 25
+
+    # Proc for determining the max rate based on DCDO.
+    max_rate_proc = Proc.new {
+      DCDO.get('test-max-rate', global_max_messages_per_sec)
+    }
+
     config = SQS::QueueProcessorConfig.new(
         queue_url: queue_url,
         handler: handler,
         initial_max_rate: global_max_messages_per_sec,
-        dcdo_max_rate_key: 'test-max-rate',
+        max_rate_proc: max_rate_proc,
         num_processors: 1,
         num_workers_per_processor: num_workers,
         logger: logger)
