@@ -112,10 +112,14 @@ class Activity < ActiveRecord::Base
   end
 
   # Helper handler class for handling a batch of async Activity messages.
+  # The handler runs the batch of updates in a transaction to avoid the
+  # overhead of running every update in an individual transaction.
   class AsyncHandler
     def handle(messages)
-      messages.each do |message|
-        Activity.handle_async_message_json(message.body)
+      Activity.transaction do
+        messages.each do |message|
+          Activity.handle_async_message_json(message.body)
+        end
       end
     end
   end
