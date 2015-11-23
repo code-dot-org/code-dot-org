@@ -9,6 +9,7 @@
     "code_functions": {
       "forLoop_i_0_4": null,
       "ifBlock": null,
+      "ifElseBlock": null,
       "addOperator": null,
       "subtractOperator": null,
       "multiplyOperator": null,
@@ -65,7 +66,10 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "console.log(\"Limiting 5 to the range 10 - 20: \" + constrain(5,10,20));\r\nconsole.log(\"Limiting 10 to the range 10 - 20: \" + constrain(10,10,20));\r\nconsole.log(\"Limiting 15 to the range 10 - 20: \" + constrain(15,10,20));\r\nconsole.log(\"Limiting 20 to the range 10 - 20: \" + constrain(20,10,20));\r\nconsole.log(\"Limiting 25 to the range 10 - 20: \" + constrain(25,10,20));\r\n\r\n// Rewrite this function to use the pattern described and a single return value\r\n\r\nfunction constrain(input, low, high){\r\n  if(input > low){\r\n    return input;\r\n  } else {\r\n    return low;\r\n  }\r\n  if(input < high){\r\n    return input;\r\n  } else {\r\n    return high;\r\n  }\r\n  return input;\r\n}"
+    "start_blocks": "console.log(\"Limiting 5 to the range 10 - 20: \" + constrain(5,10,20));\r\nconsole.log(\"Limiting 10 to the range 10 - 20: \" + constrain(10,10,20));\r\nconsole.log(\"Limiting 15 to the range 10 - 20: \" + constrain(15,10,20));\r\nconsole.log(\"Limiting 20 to the range 10 - 20: \" + constrain(20,10,20));\r\nconsole.log(\"Limiting 25 to the range 10 - 20: \" + constrain(25,10,20));\r\n\r\n// Rewrite this function to use the pattern described and a single return value\r\n\r\nfunction constrain(input, low, high){\r\n  if(input > low){\r\n    return input;\r\n  } else {\r\n    return low;\r\n  }\r\n  if(input < high){\r\n    return input;\r\n  } else {\r\n    return high;\r\n  }\r\n  return input;\r\n}",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>
