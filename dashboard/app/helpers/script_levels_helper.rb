@@ -64,11 +64,7 @@ module ScriptLevelsHelper
   end
 
   def tracking_pixel_url(script)
-    if script.name == Script::HOC_2013_NAME
-      CDO.code_org_url '/api/hour/begin_codeorg.png'
-    else
-      CDO.code_org_url "/api/hour/begin_#{script.name}.png"
-    end
+    "https://code.org/api/hour/begin_disney_static_#{script.name}.png"
   end
 
   def section_options
