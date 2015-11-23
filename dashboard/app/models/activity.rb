@@ -88,7 +88,7 @@ class Activity < ActiveRecord::Base
       activity = Activity.create!(attributes)
       activity.id = nil  # Clear out the id so that no code comes to depend on it.
     end
-   activity
+    activity
   end
 
   # Handle an async message body created by create_async! (and other async operations we might add
