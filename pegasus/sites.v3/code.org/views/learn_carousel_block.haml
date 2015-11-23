@@ -9,7 +9,7 @@
 .container-fluid
   .row-fluid
     .courseblock-tall
-      %a{href: CDO.studio_url("/s/#{id}/reset")}
+      %a{href: CDO.studio_url("/s/#{id}/reset"), target: "_blank"}
         .imgspan
           %img{src: "/shared/images/courses/logo_tall_#{id}.jpg", style: "width: 100%;"}
         .clear
@@ -22,9 +22,10 @@
       #bottomalign
         #quicklinks.smalltext
           %br
-          %a{href: "/hourofcode/#{id}"}
+          %a{href: "/hourofcode/#{id}", target: "_blank"}
             = I18n.t(:teachers_notes)
-          %a{href: short_url, style: "font-family: 'Gotham 4r', sans-serif;"}
+          %br
+          %a{href: short_url, style: "font-family: 'Gotham 4r', sans-serif;", target: "_blank"}
             = short_url
         #gobutton{style: "position: relative;"}
           %a{href: "/api/hour/begin/#{launch_code}", target: "_blank"}
