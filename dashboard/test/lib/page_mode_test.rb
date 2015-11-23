@@ -3,9 +3,7 @@ require 'dynamic_config/page_mode'
 
 class PageModeTest < ActionController::TestCase
   test 'returns sw or mc if unset' do
-    assert_block do
-      ['feature-starwars', 'feature-mc'].include?(PageMode.get(@request))
-    end
+    assert ['feature-starwars', 'feature-mc'].include?(PageMode.get(@request))
   end
 
   test 'get and set' do
