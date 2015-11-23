@@ -2,7 +2,7 @@
 
 var msg = require('../locale');
 var applabMsg = require('./locale');
-var constants = require('./constants')
+var constants = require('./constants');
 
 var Mode = {
   CODE: 'CODE',
