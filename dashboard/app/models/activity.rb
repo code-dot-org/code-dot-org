@@ -83,7 +83,7 @@ class Activity < ActiveRecord::Base
       activity.created_at = activity.updated_at = Time.now
       activity.validate!
       async_op = {'model' => 'Activity', 'action' => 'create', 'attributes' => activity.attributes}
-      Activity.queue.enqueue(async_op.to_json)
+      activity_queue.enqueue(async_op.to_json)
     else
       activity = Activity.create!(attributes)
       activity.id = nil  # Clear out the id so that no code comes to depend on it.
@@ -121,7 +121,7 @@ class Activity < ActiveRecord::Base
   end
 
   # Returns a thread-local SQS queue.(Thread-local because the SQS client is not thread-safe.)
-  def Activity.queue
+  def Activity.activity_queue
     Thread.current['activity_queue'] ||=
         SQS::SQSQueue.new(Aws::SQS::Client.new, CDO.activity_queue_url)
   end

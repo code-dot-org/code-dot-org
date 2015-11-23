@@ -48,8 +48,8 @@ class ActivityTest < ActiveSupport::TestCase
   end
 
   def _test_create_async(allow_queueing:)
-    # We need to freeze time, but it needs to be close to reality because AWS will reject
-    # our request when using the real SQS.
+    # We need to freeze time, but it needs to be close to reality because otherwise AWS
+    # will reject our request when using the real SQS.
     time = Time.now
     activity = student = level = level_source = nil
     Timecop.freeze(time) do
@@ -59,7 +59,7 @@ class ActivityTest < ActiveSupport::TestCase
       activity = Activity.create_async!(level: level, user: student, level_source: level_source)
     end
 
-    # The new activity returned by create_async doesn't have an id or timestamps yet, but it does
+    # The new activity returned by create_async doesn't have an id yet, but it should
     # have other attributes.
     assert_nil activity.id
     assert_equal time.to_i, activity.created_at.to_i
