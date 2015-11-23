@@ -9,17 +9,17 @@
 .container-fluid
   .row-fluid
     .courseblock-tall
-      %a{href: "http://studio.code.org/s/#{id}/reset"}
+      %a{href: CDO.studio_url("/s/#{id}/reset")}
         .imgspan
           %img{src: "/shared/images/courses/logo_tall_#{id}.jpg", style: "width: 100%;"}
         .clear
         .heading
           %h4{style: "font-size: 18px;"}= I18n.t(:"#{id}_name")
         .clear
-        .smalltext{style: "height: 53px;"}
+        .smalltext{style: "height: 50px;"}
           = I18n.t(:"#{id}_shortdescription")
           = "(" + I18n.t(:"#{id}_gradelevel") + ")"
-      #bottomalign{style: "bottom: 0; width: 100%; position: absolute; margin-bottom: 10px;"}
+      #bottomalign
         #quicklinks.smalltext
           %br
           %a{href: "/hourofcode/#{id}"}
@@ -27,8 +27,8 @@
           %a{href: short_url, style: "font-family: 'Gotham 4r', sans-serif;"}
             = short_url
         #gobutton{style: "position: relative;"}
-          %a{href:  "/api/hour/begin/#{launch_code}", target: "_blank"}
-            %button{style: "margin: 5px 0 0 10px;"}= I18n.t(:go)
+          %a{href: "/api/hour/begin/#{launch_code}", target: "_blank"}
+            %button{style: "margin: 5px 0px 0px 10px;"}= I18n.t(:go)
 
 :javascript
   // mobile

@@ -1,5 +1,5 @@
 .main-header {
-  margin-top: 0;
+  margin-top: 0px;
   margin-bottom: 5px;
 }
 
@@ -21,7 +21,15 @@
 }
 
 .courseblock-tall {
-  min-height: 360px;
+  min-height: 370px;
+}
+
+#bottomalign {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  position: relative\9;
+  margin-bottom: 10px;
 }
 
 .multi-item-carousel .carousel-control.left,
@@ -40,6 +48,10 @@
   right: -25px;
 }
 
+.ie-text {
+  position: relative;
+}
+
 .multi-item-carousel .carousel-inner > .item {
   transition: 0.6s ease-in-out all;
 }
@@ -51,6 +63,7 @@
     backface-visibility: visible;
     -webkit-perspective: none;
     -webkit-transform: none!important;
+    -webkit-transition: none!important;
     transform: none!important;
   }
 }
@@ -62,8 +75,8 @@
 
   .banner { 
     display: none;
-    height: 0;
-    width: 0;
+    height: 0px;
+    width: 0px;
   }
 
   .container-fluid {
@@ -118,8 +131,8 @@
 
   .banner { 
     display: none;
-    height: 0;
-    width: 0;
+    height: 0px;
+    width: 0px;
   }
 
   .container-fluid {
@@ -174,10 +187,10 @@
   }
 
   .multi-item-carousel .carousel-inner .active.left {
-    left: -50%;
+    left: -0%;
   }
   .multi-item-carousel .carousel-inner .active.right {
-    left: 50%;
+    left: 0%;
   }
   .multi-item-carousel .carousel-inner .next {
     left: 50%;
@@ -193,10 +206,10 @@
   }
 
   .multi-item-carousel .carousel-inner .active.left {
-    left: -33.33%;
+    left: -0%;
   }
   .multi-item-carousel .carousel-inner .active.right {
-    left: 33.33%;
+    left: 0%;
   }
   .multi-item-carousel .carousel-inner .next {
     left: 33.33%;
