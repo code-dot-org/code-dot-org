@@ -128,10 +128,12 @@ class ActivitiesController < ApplicationController
 
     current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
 
-    save_to_gallery =  params[:save_to_gallery] == 'true' && @level_source_image && solved
-
     # Create the activity. If saving the gallery, we create it synchronously so that
     # the activity_id is known for the GalleryActivity, otherwise async creation is allowed.
+    logger.info " solved=#{solved}"
+    logger.info " @level.free_play=#{ @level.free_play}"
+    logger.info " @level.impressive=#{@level.impressive}"
+
     attributes = {
         user: current_user,
         level: @level,
@@ -142,11 +144,15 @@ class ActivitiesController < ApplicationController
         time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
         level_source_id: @level_source.try(:id)
     }
-    if save_to_gallery
+    synchronous_save = solved &&
+        (params[:save_to_gallery] == 'true' || @level.free_play.to_bool || @level.impressive.to_bool)
+    logger.info " synchronous_save=#{synchronous_save}"
+    if synchronous_save
       @activity = Activity.create!(attributes)
     else
       @activity = Activity.create_async!(attributes)
     end
+    logger.info " @activity.id=#{@activity.id}"
 
     if @script_level
       @new_level_completed = current_user.track_level_progress(@script_level, test_result)
@@ -160,7 +166,7 @@ class ActivitiesController < ApplicationController
     end
 
     # blockly sends us 'undefined', 'false', or 'true' so we have to check as a string value
-    if save_to_gallery
+    if  params[:save_to_gallery] == 'true' && @level_source_image && solved
       @gallery_activity = GalleryActivity.create!(user: current_user, activity: @activity, autosaved: true)
     end
 
