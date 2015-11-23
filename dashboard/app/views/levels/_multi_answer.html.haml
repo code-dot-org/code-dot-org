@@ -6,8 +6,10 @@
       %h3= t('teacher.answer')
       .content
         - correct_answers.each do |correct_answer|
-          %span.answerbutton.btn{style: "height: #{height}"}
-            .item-mark
-              .fa{class: checked_class}
-            .item-label
-              %label{style: "height: #{height}"}!= multi_t(correct_answer['text'])
+          .multi
+            .mainblock
+              %span.answerbutton.btn{style: "height: #{height}"}
+                .item-mark
+                  .fa{class: checked_class}
+                .item-label
+                  %label{style: "height: #{height}"}!= multi_t(correct_answer['text'])
