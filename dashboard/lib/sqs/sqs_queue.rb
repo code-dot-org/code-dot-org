@@ -13,7 +13,7 @@ module SQS
 
     def enqueue(message_body)
       Rails.logger.info("Enqueuing #{message_body} to #{queue_url}")
-      @sqs_client.send_message(activity_queue_url: queue_url, message_body: message_body)
+      @sqs_client.send_message(queue_url: queue_url, message_body: message_body)
     end
   end
 
