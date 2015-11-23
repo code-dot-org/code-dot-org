@@ -157,11 +157,18 @@ Your online PD courses live in [Code Studio](https://studio.code.org), our learn
 <br/>
 <br/>
 #### Online PD courses in Code Studio
-Once you're in [Code Studio](https://studio.code.org), you'll see all your online PD courses (see image 1 above). Click on a course to view your progress page (see image 2). Pay attention to the name of the course you are completing!
+Once you're in [Code Studio](https://studio.code.org), you'll see all your online PD courses (see image 1 above). The color of the course block will indicate its completeness (see image 2). Click on an incomplete course to view your progress page (see image 3). Pay attention to the name of the course you are completing!
 <br/>
 <br/>
-*Image 2: Your progress page in Code Studio*
-![Image 2](/images//fit-700/online-pd-faq2.png)
+
+*Image 2: Progress on Tiles*
+
+![Image 2](/images//fit-600/tile_names.png)
+
+<br/><br/>
+
+*Image 3: Your progress page in Code Studio*
+![Image 3](/images//fit-700/online-pd-faq2.png)
 <br/>
 <br/>
 [**Back to the top**](#top)
