@@ -16,10 +16,7 @@ max_age: 60
 -cert_id = params[:i]
 -cert_script = params[:s] ? Base64.urlsafe_decode64(params[:s]) : ScriptConstants::HOC_NAME
 
--if cert_id
-  -share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"
--else
-  -share_url = "http://#{request.host_with_port}/certificates/blank"
+-share_url = "https://code.org/certificates/blank"
 
 -facebook = {:u=>share_url}
 -twitter = {:url=>share_url, :related=>'codeorg', :hashtags=>'', :text=>I18n.t(:just_did_hoc)}
