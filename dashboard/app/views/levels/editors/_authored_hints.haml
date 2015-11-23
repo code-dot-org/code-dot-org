@@ -39,13 +39,13 @@
 - content_for :body_scripts do
   :javascript
     $(document).ready(function () {
-      calloutEditor("#authored_hints", {
+      jsonEditor("#authored_hints", {
         json_textarea: '#level_authored_hints',
         add_button: '#add_authored_hint',
         remove_button: ".remove_authored_hint",
         up_button: ".move_up",
         down_button: ".move_down",
-        callout_space: ".authored_hint_space",
+        value_space: ".authored_hint_space",
         template: ".json_template",
         form_container: "#all_authored_hints_editor",
         wrapper: ".json_editor",
