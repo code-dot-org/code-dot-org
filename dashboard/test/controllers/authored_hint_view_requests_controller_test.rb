@@ -18,13 +18,13 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
 
     post :create, {
       hints: [{
-        script_id: @script.id,
-        level_id: @level.id,
-        hint_id: "first"
+        scriptId: @script.id,
+        levelId: @level.id,
+        hintId: "first"
       }, {
-        script_id: @script.id,
-        level_id: @level.id,
-        hint_id: "second"
+        scriptId: @script.id,
+        levelId: @level.id,
+        hintId: "second"
       }]
     }, format: :json
 
