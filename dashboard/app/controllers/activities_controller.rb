@@ -128,9 +128,6 @@ class ActivitiesController < ApplicationController
 
     current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
 
-    should_create_gallery_activity =
-        params[:save_to_gallery] == 'true' && @level_source_image && solved
-
     options = {user: current_user,
       level: @level,
       action: solved, # TODO I think we don't actually use this. (maybe in a report?)
@@ -140,14 +137,14 @@ class ActivitiesController < ApplicationController
       time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
       level_source_id: @level_source.try(:id)}
 
-    if should_create_gallery_activity
-      logger.info "Saving synchronously"
-      @activity = Activity.create!(options)
-    else
-      logger.info "Saving async"
-      @activity = Activity.create_async!(activity_queue, options)
-    end
+    save_to_gallery = params[:save_to_gallery] == 'true' && @level_source_image && solved
 
+    # Write the activity either synchronously or asynchronously. We always use synchronous writes
+    # when saving to the gallery because the GalleryActivity object needs the activity id, otherwise
+    # dynamic configuration decides how the activity should be written.
+    ActivitiesController.create_activity_maybe_async(queue: async_activity_queue,
+                                                     force_sync: save_to_gallery,
+                                                     options: options)
     if @script_level
       @new_level_completed = current_user.track_level_progress(@script_level, test_result)
     end
@@ -170,17 +167,33 @@ class ActivitiesController < ApplicationController
       Rails.logger.error "Error updating trophy exception: #{e.inspect}"
     end
   end
-
-  def activity_queue
-    # We use a thread local variable because it is not safe to share
-    # an SQS client across threads.
-    Thread.current['activity_queue'] ||=
-      queue = SQS::SQSQueue.new(Aws::SQS::Client.new, queue_url)
+  
+  # Creates an activity with the provided options, possibly asynchronously. Async writes occur only
+  # when force_sync is false and the provided queue is not nil.
+  def ActivitiesController.create_activity_maybe_async(force_sync:, queue:, options:)
+    # Write the activity either synchronously or asynchronously.
+    if force_sync || queue.nil?
+      @activity = Activity.create!(options)
+    else
+      @activity = Activity.create_async!(queue, options)
+    end
   end
 
-  def queue_url
-    # XXX TODO Replace this with config
-    "https://sqs.us-east-1.amazonaws.com/475661607190/activities-phil_dev"
+  # Returns the activity queue to use for the current thread, or nil if async
+  # activity writes are disabled.
+  def ActivitiesController.async_activity_queue
+    return nil unless Gatekeeper.allows('async_activity_writes',
+                                        where: {hostname: Socket.gethostname})
+
+    # We use a thread local variable because it is not safe to share
+    # an SQS client across threads.
+    if Thread.current['activity_queue'].nil?
+      url = CDO.get('activity_queue_url')
+      if url
+        Thread.current['activity_queue'] = SQS::SQSQueue.new(Aws::SQS::Client.new, url)
+      end
+    end
+    Thread.current['activity_queue']
   end
 
   def track_progress_in_session
@@ -245,4 +258,5 @@ class ActivitiesController < ApplicationController
 
     milestone_logger.info log_string
   end
+
 end

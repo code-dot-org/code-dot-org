@@ -110,7 +110,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
         # Set a short visibility timeout so that retries will happen quickly.
         attributes: {"VisibilityTimeout" => "1"}
     )
-    queue_url = response.queue_url
+    queue_url = response.activity_queue_url
 
     # Set up a handler which will fail on the initial delivery attempt
     # for 2 of the bodies so that we can make sure that those bodies are subsequently
@@ -122,7 +122,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
     num_workers = 5
     global_max_messages_per_sec = 25
     config = SQS::QueueProcessorConfig.new(
-        queue_url: queue_url,
+        activity_queue_url: queue_url,
         handler: handler,
         initial_max_rate: global_max_messages_per_sec,
         dcdo_max_rate_key: 'test-max-rate',
@@ -144,7 +144,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
         expected_bodies << item[:message_body]
         batch << item
       end
-      @sqs.send_message_batch(queue_url: queue_url, entries: batch)
+      @sqs.send_message_batch(activity_queue_url: queue_url, entries: batch)
     end
 
     # Wait for the queue processor to handle all of the messages.
@@ -168,7 +168,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
     initially_failing_body = 'initially_failing'
     handler.raise_on_next_receipt_of(initially_failing_body)
 
-    @sqs.send_message(queue_url: queue_url, message_body: initially_failing_body)
+    @sqs.send_message(activity_queue_url: queue_url, message_body: initially_failing_body)
     while not handler.received_bodies.include?(initially_failing_body)
       sleep 2
     end
@@ -209,14 +209,14 @@ class QueueProcessorTest < ActiveSupport::TestCase
     assert_equal 2, configs.size
     config = configs[0]
     assert_equal QueueProcessorTest::TestHandler, config.handler.class
-    assert_equal 'https://sqs.us-east-1.amazonaws.com/1234/example', config.queue_url
+    assert_equal 'https://sqs.us-east-1.amazonaws.com/1234/example', config.activity_queue_url
     assert_equal 5, config.num_processors
     assert_equal 32, config.num_workers_per_processor
     assert_equal 2000, config.initial_max_rate
     assert_equal 'test_rate', config.dcdo_max_rate_key
 
     config2 = configs[1]
-    assert_equal 'https://sqs.us-east-1.amazonaws.com/1234/example2', config2.queue_url
+    assert_equal 'https://sqs.us-east-1.amazonaws.com/1234/example2', config2.activity_queue_url
   end
 
   def create_unique_message_body

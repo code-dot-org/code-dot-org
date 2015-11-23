@@ -70,7 +70,7 @@ class RateLimiterTest < ActiveSupport::TestCase
 
   def create_config(max_rate:, num_workers_per_processor: 1, num_processors: 1)
     SQS::QueueProcessorConfig.new(
-        queue_url: 'http://example.com',
+        activity_queue_url: 'http://example.com',
         handler: NoOpHandler.new,
         initial_max_rate: max_rate,
         dcdo_max_rate_key: DCDO_MAX_RATE_KEY,

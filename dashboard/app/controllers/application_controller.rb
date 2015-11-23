@@ -1,6 +1,7 @@
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
+require 'socket'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
@@ -210,4 +211,5 @@ class ApplicationController < ActionController::Base
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
     end
   end
+
 end
