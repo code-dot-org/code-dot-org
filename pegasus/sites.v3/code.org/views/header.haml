@@ -103,16 +103,6 @@
     }
     headerSetup = true;
 
-    $.ajax({
-      type: "GET",
-      url: '/dashboardapi/user_menu',
-      //data: "id=" + id, // appears as $_GET['id'] @ ur backend side
-      success: function(data) {
-        // data is ur summary
-        $('#sign_in_or_user').html(data);
-      }
-    });
-
     $("#learnlink").click(function() {
       $("#learnoptions").fadeToggle();
     });
