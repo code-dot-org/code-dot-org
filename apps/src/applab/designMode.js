@@ -311,7 +311,7 @@ designMode.updateProperty = function(element, name, value) {
       break;
     case 'data-is-default':
       if (value === true) {
-        //Make this one default
+        // Make this one default
         $('#designModeViz .screen').attr('data-is-default', false);
         element.setAttribute('data-is-default', true);
         $('#designModeViz').prepend(element);
