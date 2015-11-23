@@ -74,7 +74,7 @@ class Activity < ActiveRecord::Base
   end
 
   # Creates a new Activity which will be written eventually to the database. (Note that the id is
-  # nil because it may not have ben written yet.) An exception will be thrown if the object does
+  # nil because it may not have been written yet.) An exception will be thrown if the object does
   # not pass validation. The object is only written asynchronously if the gatekeeper allows it for
   # this hostname.
   def Activity.create_async!(attributes)
