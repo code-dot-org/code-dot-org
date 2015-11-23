@@ -38,13 +38,13 @@ module SQS
     # Creates a config from an options hash.
     def self.create(options)
       SQS::QueueProcessorConfig.new(
-        queue_url: options['queue_url'],
-        handler: options['handler_class'].constantize.new,
-        num_processors: options['num_processors'] || 1,
-        num_workers_per_processor: options['num_workers_per_processor'] || 10,
-        initial_max_rate: options['initial_max_rate'] || 5000,
-        dcdo_max_rate_key: options['dcdo_max_rate_key'],
-        name: options['name'])
+          activity_queue_url: options['queue_url'],
+          handler: options['handler_class'].constantize.new,
+          num_processors: options['num_processors'] || 1,
+          num_workers_per_processor: options['num_workers_per_processor'] || 10,
+          initial_max_rate: options['initial_max_rate'] || 5000,
+          dcdo_max_rate_key: options['dcdo_max_rate_key'],
+          name: options['name'])
     end
 
     def self.create_configs_from_json(json)
