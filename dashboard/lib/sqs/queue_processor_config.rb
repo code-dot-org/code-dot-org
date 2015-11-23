@@ -38,7 +38,7 @@ module SQS
     # Creates a config from an options hash.
     def self.create(options)
       SQS::QueueProcessorConfig.new(
-          activity_queue_url: options['queue_url'],
+          queue_url: options['queue_url'],
           handler: options['handler_class'].constantize.new,
           num_processors: options['num_processors'] || 1,
           num_workers_per_processor: options['num_workers_per_processor'] || 10,
