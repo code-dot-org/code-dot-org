@@ -10,13 +10,18 @@
   text-align: center;
 }
 
+.smalltext {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .container-fluid {
   padding-left: 0px;
   padding-right: 0px;
 }
 
 .courseblock-tall {
-  min-height: 350px;
+  min-height: 360px;
 }
 
 .multi-item-carousel .carousel-control.left,
@@ -52,9 +57,14 @@
 
 @media (min-width: 0px) and (max-width: 399px) {
   .main-header { text-align: center; }
-  .banner { display: none; }
   .active > div { display:none; }
   .active > div:first-child { display:block; }
+
+  .banner { 
+    display: none;
+    height: 0;
+    width: 0;
+  }
 
   .container-fluid {
     padding-left: 0px;
@@ -95,7 +105,7 @@
   }
 
   .multi-item-carousel .carousel-control.left,
-  .multi-item-carousel .carousel-control.right, {
+  .multi-item-carousel .carousel-control.right {
     position: relative;
     margin-left: 80px;
   }
@@ -103,9 +113,14 @@
 
 @media (min-width: 400px) and (max-width: 769px) {
   .main-header { text-align: center; }
-  .banner { display: none; }
   .active > div { display:none; }
   .active > div:first-child { display:block; }
+
+  .banner { 
+    display: none;
+    height: 0;
+    width: 0;
+  }
 
   .container-fluid {
     padding-left: 30px;
@@ -141,12 +156,18 @@
   }
 }
 
-@media (min-width: 770px) and (max-width: 999px) {
+@media (min-width: 770px) and (max-width: 989px) {
   .main-header { text-align: center; }
-  .banner { display: none; }
   .active > div { display:none; }
   .active > div:first-child { display:block; }
   .active > div:first-child + div { display:block; }
+
+  .banner { 
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   #learnCodeStudio {
     max-width: 600px;
@@ -166,7 +187,7 @@
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 990px) {
   #learnCodeStudio {
     max-width: 970px;
   }

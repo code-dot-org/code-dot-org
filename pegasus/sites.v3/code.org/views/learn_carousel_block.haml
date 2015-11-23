@@ -16,11 +16,11 @@
         .heading
           %h4{style: "font-size: 18px;"}= I18n.t(:"#{id}_name")
         .clear
-        .smalltext
+        .smalltext{style: "height: 53px;"}
           = I18n.t(:"#{id}_shortdescription")
           = "(" + I18n.t(:"#{id}_gradelevel") + ")"
       #bottomalign{style: "bottom: 0; width: 100%; position: absolute; margin-bottom: 10px;"}
-        #quicklinks.smalltext{style: "float: left; display: inline-block; width: 200px;"}
+        #quicklinks.smalltext
           %br
           %a{href: "/hourofcode/#{id}"}
             = I18n.t(:teachers_notes)
@@ -28,7 +28,7 @@
             = short_url
         #gobutton{style: "position: relative;"}
           %a{href:  "/api/hour/begin/#{launch_code}", target: "_blank"}
-            %button{style: "float: right; margin: 15px 10px 0 0;"}= I18n.t(:go)
+            %button{style: "margin: 5px 0 0 10px;"}= I18n.t(:go)
 
 :javascript
   // mobile
