@@ -757,11 +757,11 @@
         starwars_blocks_intro: 'Star Wars: Kod ile Galaksiyi inşa et - Başlarken'
         starwars_blocks_events: 'Star Wars: Kod ile Galaksiyi inşa et - Etkinlikler'
         starwars_blocks_congrats: 'Star Wars: Kod ile Galaksiyi inşa et - Tebrikler'
-        mc_intro: Minecraft - Introduction
+        mc_intro: Minecraft - Giriş
         mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        mc_if_statements: Minecraft - Eğer komutları
+        mc_congrats_share: Minecraft - Tebrikler
+        mc_congrats_no_share: Minecraft - Tebrikler
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

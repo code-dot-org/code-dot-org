@@ -219,6 +219,10 @@ def local_environment?
 end
 
 def install_npm
+  # Temporary workaround to play nice with nvm-managed npm installation.
+  # See discussion of a better approach at https://github.com/code-dot-org/code-dot-org/pull/4946
+  return if RakeUtils.system_('which npm') == 0
+
   if OS.linux?
     RakeUtils.system 'sudo apt-get install -y nodejs npm'
     RakeUtils.system 'sudo ln -s -f /usr/bin/nodejs /usr/bin/node'

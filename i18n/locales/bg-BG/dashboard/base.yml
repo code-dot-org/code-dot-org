@@ -474,13 +474,13 @@ bg:
     frozen:
       title: Frozen
     starwars:
-      title: Star Wars
+      title: Междузвездни войни
     infinity:
       title: Infinity Игрална лаборатория
       body: 'Използвайте "Игрална лаборатория", за да създадете история или игра с участието на героите от Дисни Инфинити.'
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Изследвайте Minecraft света чрез код.
   gallery:
     students_drew_these_with_code: Учениците начертаха това с код!
     students_made_these_with_code: Учениците правят това с код!

@@ -793,7 +793,7 @@
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
         text: Esta lección se llama muévelo, muévelo, Juntos vamos a escribir un programa
-          para llevar a nuestros amigos desde la salida con la brújula hasta ka meta
+          para llevar a nuestros amigos desde la salida con la brújula hasta la meta
           con la cara sonriente.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
@@ -801,11 +801,11 @@
           llegar hasta ella. Vamos a empezar este programa.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: Un programa es un algoritmo que se ha escrito en algún sitio donde lo
-          puede ejecutar una máquina. La mayoría de nosotros pensamos que un programa
-          es algo que escribimos para un ordenador. Los programas son muy adecuados
-          para eso, pero también son útiles en otros lugares. Puedes crear tu propio
-          juego o incluso programar un robot para que haga cosas para ti.
+        text: Un programa es un algoritmo que ha sido codificado en algo que se puede
+          ejecutar en una máquina. La mayoría de nosotros piensa en un programa como
+          algo que escribimos para una computadora. Los programas son muy buenos para
+          eso pero también son útiles en otros lugares. Usted puede hacer su propio
+          programa de juego o incluso un robot para hacer las cosas para usted.
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
@@ -816,7 +816,7 @@
         image: notes/C1_going_places_safely_2.png
         text: Me encanta el ordenador de mamá porque me puedo meter en Internet. Internet
           es un poco como tu barrio. Puedes visitar sitios chulos, puedes hablar con
-          la familia y los amigos, y puedes aprender un montón de cosas nuevas.
+          tu familia y amigos, y puedes aprender un montón de cosas nuevas.
       3:
         image: notes/C1_going_places_safely_3.png
         text: Ayer, visité un parque zoológico que es cerca de mi casa. Vi una cebra
@@ -827,10 +827,10 @@
       4:
         image: notes/C1_going_places_safely_4.png
         text: A veces en Internet conozco y hablo con las personas, como mi abuela
-          que vive en otro Estado. ¡Hola abuela! Ella está haciendo galletas que me
-          entregara para mi cumpleaños. "Delicioso, ojalá que Internet tuviera smellorama!"
-          yo hablo con diferentes personas en Internet, como mi prima, pero solamente
-          hablo con la gente que conozco.
+          que vive en otro Estado. ¡Hola abuela! Ella me está haciendo galletas que
+          me enviará para mi cumpleaños. "Delicioso, ojalá que Internet tuviera smellrama!"
+          Yo puedo hablar con diferentes personas en Internet, como mi prima, pero
+          solamente hablo con la gente que conozco.
       5:
         image: notes/C1_going_places_safely_5.png
         text: Lo que más me gusta en la Internet es obtengo juegos divertidos. ¡Puntos!
@@ -839,16 +839,16 @@
           web que son adecuados para mí. ¡Oh, dinosaurios!
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'Internet es un estupendo lugar. Pero al igual que cruzar una calle
+        text: 'Internet es un lugar super divertido. Pero al igual que cruzar la calle
           en tu barrio, también debes tener cuidado cuando estés en línea. Aquí hay
           tres reglas para recordar. Regla número 1: siempre pregunta a tus padres
           primero. Regla número 2: sólo hablar con gente que conozcas. Regla número
           3: Visita lugares que son adecuados para ti.'
       7:
         image: notes/C1_going_places_safely_7.png
-        text: Wow, ¡eso fue divertido! Hora de la cena. Ahora estoy logging off. No
-          puedo esperar para iniciar sesión otra vez para ver que puedo visitar a
-          continuación.
+        text: Wow, ¡eso fue divertido! Hora de la cena. Ahora estoy cerrando sesión.
+          No puedo esperar para iniciar sesión otra vez para ver que puedo visitar
+          a continuación.
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
@@ -867,11 +867,11 @@
           y señala posibles problemas o errores.
       3:
         image: notes/C1_pair_programming_3.png
-        text: La comunicación es clave para éxito en la programación en par. No hay
+        text: La comunicación es la clave para éxito en la programación en par. Sin
           insultos, debes ser respetuoso, no seas un navegador mandon, porque a nadie
           le gusta un conductor en el asiento trasero. Siempre se deben hablar tú
           y tu compañero. El conductor puede explicar lo que él o ella está haciendo.
-          Y el navegador puede sugerir qué hacer.
+          Y el navegador puede ayudar sugeriendo qué hacer a continuación.
       4:
         image: notes/C1_pair_programming_4.png
         text: El navegador debe estar pensando en el panorama y el conductor se centra
@@ -982,10 +982,10 @@
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
-        text: You wouldn't even qualify for the race if you don't have people who
-          are proficient in computer science because of how much data the cars collect
-          and the necessity to be able to have people that can write programs to figure
-          out how you continue to figure out how to build performance.
+        text: Nisiquiera calificas para la carrera si tu no tienes personas que son
+          competentes en ciencias de la computación debido a tantos datos que colectan
+          los carros y la necesidad de poder tener personas que puedan escribir programas
+          que encuentren la manera de cómo construir rendimiento.
       2:
         image: notes/C2_artist_intro_2.png
         text: En estos puzzles, tu serás un artista que usa un lápiz para dibujar
@@ -1064,10 +1064,10 @@
           llevar al parque.
       3:
         image: notes/C2_conditionals_with_cards_3.png
-        text: Conditionals are used in games too. Today we're going to practice using
-          conditionals with a card game. In this game, the card that I draw determines
-          what my friends are going to do. If I draw a seven, everyone claps. Else,
-          everyone says "awww." Let's try it! "Awww" "cheers"
+        text: Condicionales se utilizan en juegos tambien. Hoy vamos a practicar usando
+          condicionales con un juego de cartas. En este juego, la carta que saque
+          determina que mis amigos van a hacer. Si yo saco un siete, todos aplauden.
+          Sino, todos dicen "awww". Vamos a intentarlo! "Awww" "Aplausos"
       4:
         image: notes/C2_conditionals_with_cards_4.png
         text: Te apuesto a que puedes hacer juegos mucho más entretenidos usando condicionales.
@@ -1103,9 +1103,9 @@
           depuras un código, identificas y arreglas errores.
       2:
         image: notes/C2_bee_debugging_2.png
-        text: Here we're given a few blocks already in our workplace. We're going
-          to use the step button to walk through the blocks, step by step, to see
-          if this is the right solution and where we may need to fix it.
+        text: Aquí estamos dando unos pocos bloques ya en nuestro lugar de trabajo.
+          Vamos a utilizar el botón de paso para caminar a través de los bloques,
+          paso a paso, a ver si esta es la solución correcta y donde necesitemos repararlo.
       3:
         image: notes/C2_bee_debugging_3.png
         text: Al parecer ahi está nuestro problema! Necesitamos un bloque más de mover
@@ -1114,43 +1114,44 @@
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
-        text: On your head you hold your hat and your smarts will tell you where you're
-          at and to think about the zoo, and to nod hello to you and you! Use your
-          head when you're online to keep what's yours inside your mind and to know
-          how to be safe, how to give your life some private space! From your head
-          down to your toes, pause, think about it. From your feet up to your nose,
-          pause and think online!
+        text: En tu cabeza sostienes tu sombrero y tu inteligencia te dirá dónde estás
+          y pensar acerca en el zoológico y asentir Hola a ti y a ti! Usa la cabeza
+          cuando estás en línea para mantener lo que es tuyo dentro de tu mente y
+          saber cómo estar a salvo, cómo darle a tu vida un espacio privado! De tu
+          cabeza hasta los dedos de tu pie, pausa, pensar en ello. Desde tus pies
+          hasta tu nariz, pausa y piensa en línea!
       2:
         image: notes/C2_digital_footprint_2.png
-        text: Use your heart to grow and grow, and to give yourself a healthy glow,
-          and to make a valentine, tell someone that you'll be mine! Use your heart
-          when you're online, feel what's right and always kind, and show your friends
-          respect, to be fair and nice on the internet. From your head down to your
-          toes, pause, think about it. From your feet up to your nose, pause and think
-          online!
+        text: Usa tu corazón para crecer y crecer y date a ti mismo un brillo saludable
+          y para hacer un San Valentín, Dile a alguien que tu seras mío! Usa tu corazón
+          cuando estás en línea, siente lo que es correcto y siempre amable y muestra
+          a tus amigos respeto, para ser justo y agradable en el Internet. Desde tu
+          cabeza a los dedos de tu pie, pausa, piensa en ello. Desde tus pies arriba
+          a la nariz, pausa y piensa en línea!
       3:
         image: notes/C2_digital_footprint_3.png
-        text: Use your arms to hug your pet, to keep your clothes from getting wet,
-          and to wear your favorite sleeves and to help you fly and make believe.
-          Use your arms when you're online, to take break and balance time and leave
-          your tech behind and to find yourself a tree to climb. From your head down
-          to your toes, pause, think about it. From your feet up to your nose, pause
-          and think online!
+        text: Utiliza tus brazos para abrazar a tu mascota, maten tu ropa sin que
+          se moje y lleva tus mangas favoritas y ayudate a volar y hacerte creer.
+          Utiliza tus brazos cuando estés en línea, tomate tiempo de descanso y equilibra
+          el tiempo y deja tu tecnología y encuentrate a ti mismo un árbol para trepar.
+          Desde tu cabeza hasta los dedos de tu pie, pausa, piensa en ello. Desde
+          tus pies hasta la nariz, pausa y piensa en línea!
       4:
         image: notes/C2_digital_footprint_4.png
-        text: Use your gut to store your food, and to listen to its growling mood,
-          to make a belly flop, and to feel the gas in soda pop. Use your gut when
-          you're online, to know to watch for certain signs, and to let it guide the
-          way and tell you when it's not ok. From your head down to your toes, pause,
-          think about it. From your feet up to your nose, pause and think online!
+        text: Utiliza tus instintos para almacenar tus alimentos y escucha su rugido
+          estado de ánimo, as descansar tu vientre y siente el gas de la soda. Utiliza
+          tus instintos cuando estás en línea, para saber, observar ciertos signos
+          y dejar que guíe el camino y te diga cuando no está bien. De la cabeza hasta
+          los dedos de tu pie, pausa, piensa en ello. Desde los pies hasta la nariz,
+          pausa y piensa en línea!
       5:
         image: notes/C2_digital_footprint_5.png
-        text: So think with your head, and feel with your heart, balance with your
-          arms, listen to your gut, online. Use your legs to run and kick, and to
-          jump and bounce on a pogo stick, and to dance around the block, and to skip
-          along in your smelly socks. Use your legs when you're online, to stand up
-          to bullies who cross the line, and remember to stand tall, be nice to creatures
-          great and small.
+        text: Entonces piensa con tu cabeza y siente con tu corazón, equilibra tus
+          brazos, escucha tus presentimiento. en línea. Utiliza tus piernas para correr
+          y patear, salta y rebotar en un palo de pogo y baila alrededor de la cuadra
+          y salta a lo largo de tus calcetines malolientes. Utiliza tus piernas cuando
+          estás en línea, para enfrentar a los peleoneros que cruzan la línea y recuerda
+          pararte alto, se agradable a las criaturas grandes y pequeñas.
       6:
         image: notes/C2_digital_footprint_6.png
         text: Desde la cabeza hasta los dedos de los piés, para, piensa en ello. Desde
@@ -1168,9 +1169,10 @@
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
-        text: This lesson is called "Graph Paper Programming" and it's all about algorithms.
-          Today we're going to learn how to write programs that show each other how
-          to recreate simple black and white images, using only hand drawn arrows.
+        text: Esta lección se llama "Papel gráfico Programación" y se trata de algoritmos.
+          Hoy vamos a aprender como escribir programas que muestran entre sí cómo
+          recrear simples imágenes en blanco y negro, usando sólo flechas dibujadas
+          a mano.
       2:
         image: notes/C2_graph_paper_2.png
         text: Un algoritmo es una lista de instrucciones necesarias para completar
@@ -1184,22 +1186,23 @@
           a la siguiente, luego a la siguiente, y estarás listo.
       4:
         image: notes/C2_graph_paper_4.png
-        text: I use algorithms in my work. If I write down all of the steps I can
-          recreate that same piece again, or I can teach someone else to do it. Put
-          the glass in the kiln, fuse it together, follow the rest of the instructions
-          to make the bowl. Algorithms give you a road map for getting something done.
+        text: Yo Utilizó algoritmos en mi trabajo. Si yo escribo todos los pasos puedo
+          recrear esa misma pieza otra vez, o puedo enseñar a alguien que lo haga.
+          Pon el vaso en el horno, lo funden, sige el resto de las instrucciones para
+          hacer el tazón. Algoritmos te darán una ruta para conseguir que se haga
+          algo.
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
-        text: Here we are going to use the repeat block to help us save steps when
-          we are programming our artist. We already have some blocks out on our stage
-          but they are just there to get us started.
+        text: Aquí vamos a utilizar el bloque de repetición que nos ayuda a ahorrar
+          pasos cuando estemos programando nuestro artista. Ya tenemos algunos bloques
+          fuera en nuestro escenario pero están ahi sólo para que comencemos.
       2:
         image: notes/C2_artist_loops_2.png
-        text: To loop those blocks four times to draw the whole square, we just drag
-          out the repeat block and put the moveforward and turn right blocks inside
-          the repeat block. When we hit run, the artist will repeat those steps four
-          times to complete the square.
+        text: Para ciclar los bloques cuatro veces y dibujar to un cuadro, sólo arrastra
+          el bloque de repetir y pon el bloques de avanzar y gira a la derecha dentro
+          del bloque de repetición. Cuando damos clic en ejecutar, el artista repetirá
+          los pasos cuatro veces para completar el cuadrado.
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
@@ -1361,10 +1364,10 @@
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
-        text: You wouldn't even qualify for the race if you don't have people who
-          are proficient in computer science because of how much data the cars collect
-          and the necessity to be able to have people that can write programs to figure
-          out how you continue to figure out how to build performance.
+        text: Nisiquiera calificas para la carrera si tu no tienes personas que son
+          competentes en ciencias de la computación debido a tantos datos que colectan
+          los carros y la necesidad de poder tener personas que puedan escribir programas
+          que encuentren la manera de cómo construir rendimiento.
       2:
         image: notes/C3_artist_intro_2.png
         text: En estos puzzles, tu serás un artista que usa un lápiz para dibujar
@@ -1421,9 +1424,9 @@
           depuras un código, identificas y arreglas errores.
       2:
         image: notes/C3_debugging_bee_2.png
-        text: Here we're given a few blocks already in our workplace. We're going
-          to use the step button to walk through the blocks, step by step, to see
-          if this is the right solution and where we may need to fix it.
+        text: Aquí estamos dando unos pocos bloques ya en nuestro lugar de trabajo.
+          Vamos a utilizar el botón de paso para caminar a través de los bloques,
+          paso a paso, a ver si esta es la solución correcta y donde necesitemos repararlo.
       3:
         image: notes/C3_debugging_bee_3.png
         text: Al parecer ahi está nuestro problema! Necesitamos un bloque más de mover
@@ -2521,23 +2524,27 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: |
-          Salut! Sunt Kathleen Kennedy - producator al Star Wars: The Force Awakens. Azi vei lucra cu unul din star-urile noastre, BB-8. BB-8 este un droid sferic. Orice face si orice miscare a sa este controlata de un program. Informatica are influenta asupra fiecatui domeniu, de la marketing
-          la sanatate si film. Sute de ingineri lucreaza impreuna pentru a face un film ca The Force Awakens.
+        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
+          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
+          spherical droid. Everything he does and every movement that he makes is
+          controlled by computer software. Computer science impacts every industry,
+          from marketing to health care to film. In fact, hundreds of computer engineers
+          worked together to make a film like The Force Awakens.
       2:
         image: notes/starwars_intro_2.JPG
-        text: Здравейте, Аз съм Рейчъл Роуз Глaвен Инженер в отдела за Разработки
-          в Ай Ел Ем, аз ръководя групата за създаване на амимираните ефекти. В Силата
-          се Пробужда аз отговарям за ефектите които карат героя да извършва движения
-          като че ли е наистина от далечно съзвездие.
+        text: Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the
+          animation and creature development team. In The Force Awakens, I'm responsible
+          for helping the artists develop rigs which are the parts of the character
+          that move that allow the character to look very believable in a galaxy far
+          far away.
       3:
         image: notes/starwars_intro_3.JPG
-        text: В следващият час ще създадем наша собствена игра Междузвездни Войни
-          която ще ви научи на основните методи в Програмирането. Обикновенно програмирането
-          представлява текст но ние ще използваме Блокове, за да можем да ги влачим
-          и оставяме. Но въпреки това вие все пак съсздавате код. След като пробвате
-          основните методи с блокове, ще преминем на JavaScript един от най-известните
-          езици за програмиране на интернет.
+        text: In the next hour, we're going to build our own Star Wars game. We'll
+          teach you the basic concepts of programming. Usually programming is all
+          text but we're going to use blocks here so that we can drag and drop to
+          write the programs. Under the hood, you're still creating code. After you
+          try the basics with blocks, we'll switch you to JavaScript, one of the most
+          popular programming languages on the web.
       4:
         image: notes/starwars_intro_4.JPG
         text: To start off, we're going to work with Rey to program BB-8 to walk to
@@ -2574,11 +2581,12 @@
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: Зада създадем Блок ние изпозваме JavaScript. Един от най-използваните
-          езици за програмиране от Програмистите. Блоковете са прекрасен начин за
-          начинаещи да навлизат в програмирането, факт е че някои университети като
-          Харвард и Бъркли започнаха да въвеждат Блоково програмиране. Но веднъж научили
-          основите Инженерите пишат код защото е по бързо.
+        text: Inside the blocks we've been using are JavaScript commands. JavaScript
+          is the most popular programming language for professional developers today.
+          Blocks are a great way to get started learning to code and in fact, top
+          universities like Harvard and Berkeley start teaching this way. But once
+          we learn the basics, engineers write code by typing because it allows us
+          to go faster.
       2:
         image: notes/starwars_typing_2.JPG
         text: We can type hundreds of commands without having to find them in the
@@ -2695,25 +2703,26 @@
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: 'Здравейте! Аз съм Катлийн Кенеди Продуцент на Междузвездни Войни: Силата
-          се Пробужда. Днес ще работите с една от нашите звезди, ББ-8, който е сферичен
-          дроид. Всичко което прави и всяко негово движение се контролира от софтуер.
-          Компютърните науки оказват влияние във всяка една сфера от маркетинг до
-          медицина и филмо-производство. Всъщност хиляди Инженери работят заедно за
-          да създадават филми като Силата се Пробужда.'
+        text: 'Hi I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
+          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
+          spherical droid. Everything he does and every movement that he makes is
+          controlled by computer software. Computer science impacts every industry,
+          from marketing to health care to film. In fact, hundreds of computer engineers
+          worked together to make a film like The Force Awakens.'
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: Здравейте, Аз съм Рейчъл Роуз Глaвен Инженер в отдела за Разработки
-          в Ай Ел Ем, аз ръководя групата за създаване на анимираните ефекти. В Силата
-          се Пробужда аз отговарям за ефектите които карат героя да извършва движения
-          като че ли е наистина от далечно съзвездие.
+        text: Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the
+          animation and creature development team. In The Force Awakens, I'm responsible
+          for helping the artist develop rigs, which are the parts of the character
+          that move that allow the character to look very believable in a galaxy far,
+          far away.
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: В следващият час ще създадем наша собствена игра Междузвездни Войни
-          която ще ви научи на основните методи в Програмирането. Обикновенно програмирането
-          представлява текст но ние ще използваме Блокове, за да можем да ги влачим
-          и оставяме. За начало ще работим с Рей за да програмираме ББ-8 да върви
-          и събира металните остатъци.
+        text: In the next hour, we're going to build our own Star Wars game that will
+          teach you the basic concepts of programming. Usually programming is all
+          text but we're going to use blocks here so we can drag and drop to write
+          the programs. To start off, we're going to work with Rey to program BB-8
+          to walk to collect all of the scrap parts.
       4:
         image: notes/starwars_blocks_intro_4.JPG
         text: Your screen is split into three parts. On the left is the Star Wars
@@ -2819,13 +2828,13 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: Il mio nome è Jens Bergensten meglio conosciuto come Jeb. Sono lo sviluppatore
+          principale di Minecraft, qui alla Mojang a Stoccolma. Penso che da quando
+          avevo 11 anni, forse 12 ho iniziato a programmare perche volevo creare videogiochi.
+          Un amico di mio padre mi disse che per creare videogiochi, hai bisogno di
+          imparare come programmare. Ed è da li che ho iniziato. A me piace progettare
+          e capire l' architettura dei videogiochi. E' questo che mi piace davvero
+          di Minecraft.
       2:
         image: notes/mc_intro_2.JPG
         text: Over the next hour, you're going to learn the basics of computer science

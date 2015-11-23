@@ -518,159 +518,156 @@ ro:
         text: Ieri, am vizitat gradina zoologica care se afla in apropierea casei mele. Am vazut un pui de zebra. I-am facut o poza si i-am schimbat culoare dungilor, apoi i-am adaugat o palarie si am salvat fotografia in colectia mea de animale traznite. Grozav! Mai tarziu am plecat intr-un loc foarte indepartat. Am vizitat Kenya. Aceasta este o tara din Africa. Multe zebre locuiesc aici.
       4:
         image: notes/C1_going_places_safely_4.png
-        text: |-
-          Sometimes on the Internet I talk to people I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. "Yummy, I wish the Internet had smellorama!" I can talk to different people on the Internet, like my cousin but I only talk to people I know.
+        text: 'Uneori, pe internet, vorbesc cu oameni pe care ii cunosc, cum ar fi bunica mea care locuieste in alt stat. Buna bunica! Ea imi va face prajiturele pe care mi le va trimite de ziua mea. "Yummy, mi-as fi dorit ca internetul sa transmita mirosul si gustul!" Pe internet pot vorbi cu diverse persoane, cum ar fi varul meu, dar eu vorbesc doar cu oameni pe care ii stiu.'
       5:
         image: notes/C1_going_places_safely_5.png
-        text: What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!
+        text: Pe internet cel mai mult imi place faptul ca pot sa joc multe jocuri distractive. Scor! De asemenea imi place sa desenez si sa creez lucruri noi pe care le impartasesc cu prietenii mei. Cool! Cateodata intru pe site-uri web de unde invat lucruri noi, dar intotdeauna raman la site-urile care mi se potrivesc mie. Wow, dinozauri!
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
+        text: 'Internetul este un loc super distractiv. Dar, la fel ca atunci cand traversezi strada din cartierul tau, trebuie sa ai grija si cand intrii online. Sunt trei reguli pe care trebuie sa le tii minte. Prima regula 1: Mereu sa iti intrebi parintii. Regula numarul 2: Vorbeste doar cu persoane pe care le cunosti. Regula numarul 3: Viziteaza doar site-uri potrivite tie.'
       7:
         image: notes/C1_going_places_safely_7.png
-        text: "Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to log on again to see where I can visit next."
+        text: Wow, asta a fost distractiv! Ora cinei. Ma deconectez acum. De-abia astept sa ma loghez din nou sa vad ce urmeaza.
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
-        text: "Today we're going to learn about Pair Programming. In pair programming you work as a team. Why should two people use one computer? Because two heads are better than one. In pair programming you and your partner are going to sit down together at one computer and you are both going to work on the same project."
+        text: Astazi vom invata despre Pair Programming (programarea in echipa). In pair programming lucrezi ca o echipa. De ce ar trebui doua persoane sa foloseasca un calculator? Pentru ca doua capete sunt mai bune decat unul. In pair programming, tu si partenerul tau va trebui sa stati impreuna la un calculator si impreuna veti lucra la acelasi proiect.
       2:
         image: notes/C1_pair_programming_2.png
-        text: "In pair programming, one person is the driver and the other person is the navigator, just like driving a car. The driver sits at the computer and is the one using the keyboard and mouse or touchscreen and controlling the main actions of the computer. The other person is the navigator. The navigator helps the driver by answering the driver's questions and pointing out potential problems or mistakes."
+        text: In programarea in echipa, una dintre persoane este conducatorul auto si cealalta persoana este navigatorul, la fel ca in condusul unei masini. Conducatorul auto sta la calculator folosind tastatura si mouse-ul sau touchscreenul si controleaza principalele actiuni ale calculatorului. Cealalta persoana este navigatorul. Navigatorul ajuta conducatorul auto raspunzandu-i acestuia la intrebari si ii evidentiaza potentialele probleme sau greseli.
       3:
         image: notes/C1_pair_programming_3.png
-        text: "Communication is key to successful pair programming. No insults, be respectful, don't be a bossy navigator, because nobody likes a backseat driver. You and your partner should always be talking. The driver can explain what she or he is doing. And the navigator can help suggest what to do next."
+        text: Comunicarea este cheia succesului in programarea in echipa. Fara insulte, fii respectuos, nu fi un navigator autoritar, deoarece nimanui nu ii place un sofer de pe bancheta din spate. Intre tine si partenerul tau ar trebuie sa existe comunicare. Conducatorul auto poate explica ceea ce el sau ea va face. Si navigatorul poate sa ii sugereze ce sa faca in continuare.
       4:
         image: notes/C1_pair_programming_4.png
-        text: The navigator should be thinking about the big picture and the driver focuses on the details. Both roles are important. Pair programming is all about working together as a team.
+        text: Navigatorul ar trebui sa se gandeasca in ansamblu si conducatorul auto sa se concentreze pe detalii. Ambele roluri sunt importante. In programarea pereche este vorba doar de lucru impreuna, ca o echipa.
     C1_planting_seed:
       1:
         image: notes/C1_planting_seed_1.png
-        text: "This lesson is called planting a seed and it's going to help us understand algorithms. Algorithms are specific instructions that explain the order in which to do something. Even everyday things like eating breakfast or brushing your teeth are algorithms that require small steps to get a job done."
+        text: Aceasta lectie este numita plantarea unei seminte si ne va ajuta sa intelegem algoritmi. Algoritmii sunt instructiuni specifice care arata ordinea in care trebuie facut un lucru. Chiar si zi de zi lucruri ca micul dejun sau spalatul pe dinti reprezinta algoritmi care necesita pasi mici pentru a termina o munca.
       2:
         image: notes/C1_planting_seed_2.png
-        text: "Computers can be really smart but they can only understand you if you tell them exactly what you want step by step. The great thing about algorithms is that if you follow the instructions in order, you can do something that you didn't know how to do ahead of time. It's like following a recipe."
+        text: Calculatoarele pot fi foarte inteligente, dar te pot intelege doar daca tu le spui exact ceea ce vrei pas cu pas. Cel mai tare lucru despre algoritmi este acela ca, daca tu urmezi intructiunile in ordine, poti sa realizezi un lucru pe care inainte nu stiai cum sa il faci. Este ca si cum ai urma o reteta.
       3:
         image: notes/C1_planting_seed_3.png
-        text: "Today we're going to plant our own seeds using an algorithm. Create your own algorithm by cutting apart the pictures. Select the pictures that show steps in planting a seed and arrange those pictures in the correct order."
+        text: Astazi vom planta propriile noastre seminte folosind un algoritm. Creati-va propriul algoritm prin taierea de imagini. Selecteaza pozele care arata pasii plantarii unei seminte si aranjati-va pozele in ordinea corecta.
       4:
         image: notes/C1_planting_seed_4.png
-        text: "Now, it's time for you to see if your algorithm works. Follow the steps in the algorithm very carefully. Are they in the correct order? Did you succeed in planting a seed by following the algorithm? It's like programming with pictures!"
+        text: Acum, este timpul sa vezi daca algoritmul functioneaza. Urmeaza pasii din algoritm foarte atent. Sunt in ordinea corecta? Ai reusit plantarea unei seminte urmarind algoritmul? Este ca si cum ai programa cu poze!
       5:
         image: notes/C1_planting_seed_5.png
-        text: "When we want to make chocolate, there are many big steps to that process and each of those big steps has a set of smaller steps and there are different recipes or algorithms depending on how we want the chocolate to taste. Each step is important, even the small ones, so that without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down so that no matter who does it, the result is the same."
+        text: Cand vrem sa facem ciocolata, sunt multi pasi importanti in acest proces si fiecare dintre acesti mari pasi are un set cu pasi mai micuti si exista diferite retete sau algoritmi in functie de gustul pe care il dorim ca ciocolata sa o aiba. Fiecare pas este important, chiar si cei mici, astfel incat fara un singur pas, restul sa nu poata fi finalizat. Crearea de algoritmi pe care altii o pot intelege este foarte importanta. De aceea fiecare pas trebuie sa fie scris astfel incat indiferent de cine il utilizeaza, rezultatul sa fie acelasi.
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
-        text: Time to get creative and use your coding skills to tell a story. Your story will have actors and you will be able to make these actors talk and interact with each other. Start thinking of what kind of story you want to tell.
+        text: Este timpul sa fii creativ si sa iti folosesti abilitatile de programare pentru a spune o poveste. Povestea ta va contine actori si tu vei fi capabil sa faci acesti actori sa vorbeasca si sa interactioneze intre ei. Incepe sa te gandesti ce fel de poveste vrei sa spui.
       2:
         image: notes/C1_playlab_storytelling_2.png
-        text: |-
-          The cat's always been afraid of the dog and what if the cat figures out that the dog is trying to be nice? The "when run" block starts everything. The "move" block will move your character and the "say" block will make your character say whatever you type.
+        text: 'Pisicii mereu i-a fost frica de caine si daca pisica va realiza ca acel caine doreste sa fie prietenos? Blocul "cand alearga" porneste totul. Blocul "mutare" va misca personajul tau si blocul "spune" va face personajul tau sa vorbeste indiferent de ce vei tasta.'
       3:
         image: notes/C1_playlab_storytelling_3.png
-        text: 'This is the "when actors collide" block which you can link up to the other blocks.'
+        text: 'Acesta este blocul "atunci cand actorii se ciocnesc" pe care il poti lega de celelalte blocuri.'
       4:
         image: notes/C1_playlab_storytelling_4.png
-        text: 'I was making the dog come over and say "Hi" but then the cat got scared so it ran away. "Ahh" If there was more time, it would have been a happy ending. The end!'
+        text: 'Incercam sa chem cainele si sa ii spun "Buna" dar apoi pisica s-a speriat si a fugit. "Ahh" daca ar fi fost mai mult timp, ar fi fost un final fericit. Sfarsit!'
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: This is the spelling bee level. Use the puzzle pieces to move the bee. As it moves, it will collect letters to spell words.
+        text: Acesta este nivelul de ortografie al albinelor. Foloseste bucatile de puzzle pentru a muta albina. In timpul miscarii, albina va colecta litere pentru a scrie cuvinte.
       2:
         image: notes/C1_spelling_bee_intro_2.png
-        text: "See if you can spell the word they give you in the box below the stage. But bee careful! Moving the wrong direction will add letters you don't want."
+        text: Vezi daca poti scrie corect cuvantul pe care ti l-au dat in casuta de mai jos. Dar fii atent! Mutarea intr-o directie gresita va adauga litere pe care nu le-ai dori.
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: Un lucru la care calculatoarele sunt foarte bune este repetarea unor comenzi. Ca persoana, te-ai plictisi dacă ar trebui să face același lucru de multe ori una după alta. Dar un calculator poate face același lucru de milioane sau chiar miliarde de ori fără să se plictisească, și poate să facă acest lucru foarte bine.
+        text: Un lucru la care calculatoarele sunt foarte bune este să repete comenzi. Ca persoana, te-ai plictisi foarte tare dacă ar trebui să faci același lucru de multe, multe ori la rând. Dar un calculator poate face același lucru de milioane sau chiar miliarde de ori fără să se plictisească și poate să facă acest lucru foarte bine.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: De exemplu, dacă aș vrea să le urez tuturor celor de pe Facebook La Mulți Ani prin e-mail, atunci s-ar putea să îmi trebuiască mai mult de un secol să trimit acele e-mailuri. Dar folosind doar câteva linii de cod, pot face în așa fel încât un sistem să trimită un e-mail tuturor de pe Facebook urândule La Mulți Ani.
+        text: De exemplu, dacă aș vrea să le urez tuturor celor de pe Facebook La Mulți Ani prin e-mail, atunci s-ar putea să îmi trebuiască mai mult de un secol să scriu acele e-mailuri. Dar, folosind doar câteva linii de cod, pot face în așa fel încât un sistem să trimită un e-mail tuturor de pe Facebook urându-le La Mulți Ani.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
-        text: "In this example, your goal is going to be to move the bird to get the pig. Now, we're going to be able to use the repeat block in order to be able to do this very easily. You can either do this by giving the computer a move forward command five times in order to advance the bird one step each time to the pig or you can just tell the computer to move forward once, and then tell it to repeat that five times and it'll do the same thing."
+        text: In acest exemplu, obiectivul tau va fi sa muti pasarea pentru a ajunge la porc. Acum, vom putea folosi blocul repeta pentru a putea face acest lucru mai usor. Poti face asta dandu-i calculatorului o comanda sa mute inainte de cinci ori la rand in scopul de a avansa pasarea cate un pas de fiecare data pentru a ajunge la porc, ori poti sa comanzi calculatorului sa mearga mai departe o singura data, si apoi pune-l sa repete asta de cinci ori si va face acelasi lucru.
       4:
         image: notes/C1_zuck_repeat_loop_4.png
-        text: 'In order to do this, you drag your move forward command and then you put it inside the repeat block. And you can click on it and tell it how many times you  to repeat the block to tell it how many steps you want it to take forward.'
+        text: In scopul de a face asta, trageti comanda muta inainte si apoi pune-o inauntru blocului repeta. Si poti sa faceti clic pe el si spuneti-i de cate ori vreti sa repetati blocul pentru a ii spune cati pasi doriti sa mergeti inainte.
       5:
         image: notes/C1_zuck_repeat_loop_5.png
-        text: "One more thing is you can put as many commands as you want inside the repeat block. So in this example, you're telling it to move forward and turn left, which it'll do five times. Have fun!"
+        text: Un alt lucru este acela ca poti sa pui cat de multe comenzi doresti in interiorul blocului repeta. Deci in acest exemplu, o sa ii spui sa se mute inainte si apoi sa faca stanga, pe care o va face de cinci ori. Distractie placuta!
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
-        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+        text: Tu nici nu te-ai califica pentru cursa daca nu ai persoane care sunt competente in informatica din cauza marimii data pe care masinile le colecteaza si necesitatea de a fi capabili in a avea oameni care pot scrie programe pentru a-si da seama cum veti continua sa construiti performanta.
       2:
         image: notes/C2_artist_intro_2.png
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: In aceste puzzle-uri, tu vei fi un artist care va folosi creionul pentru a desena diversa forme. Oriunde merge artistul dumneavoastra, se va desena o linie in spatele tau.
       3:
         image: notes/C2_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: Pentru a te muta in jurul panzei, vei utiliza blocul muta inainte. Aici, blocul muta inainte, zice muta inainte 100 pixeli. Atunci cand vei lovi blocul fugi, ce se intampla? Artistul merge inainte o anumita suma si acea suma este de 100 pixeli. Practic, pixelii sunt patratelele foarte mici de pe ecranul calculatorului.
       4:
         image: notes/C2_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
+        text: Celalalt bloc pe care il avem in puzzle spune muta dreapta cu 90 de grade. Si cand tragi, aceasta va face artistul nostru sa se intoarca o anumita suma. Deci te vei putea juca cat de departe vrei ca artistul sa se intoarca. Acesta este un viraj de 90 de grade.
       5:
         image: notes/C2_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+        text: Si aceasta este un viraj de 120 de grade. Si nu uita, poti sa modifici aceste valori apasand clic pe sagetile de langa numerele pentru pixeli si grade. Bucura-te de desen impreuna cu artistul tau!
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that is less than, equal to or greater than a number, THEN do something.
+        text: Acesta este un bloc conditional. Spune ca daca exista nectar sau miere care este mai putin, echivalent sau mai mare decat un numar, atunci fa ceva.
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+        text: Acest lucru este util atunci cand nu stim cat de mult nectar sau miere obtinem, dupa cum vedem cu acest semn se intrebare.
       3:
         image: notes/C2_bee_conditionals_3.png
-        text: "In this example, we're going to say IF the purple flower has nectar greater than 0, get nectar. That will tell our bee to keep getting nectar as long as it's there. Ta-dah!"
+        text: In acest exemplu, vom spune ca, daca floarea mov are nectar mai mare de 0, obtine nectar. Acest lucru va spune albinelor noastre sa continue obtinerea de nectar atata timp cat exista acolo. Ta-dah!
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
-        text: This is the binary bracelets lesson. We are going to code our initials on a bracelet we can wear and show all our friends!
+        text: Aceasta este lecţia despre brăţări binare. Vom codifica iniţialele noastre pe o brăţară pe care să o putem purta şi arăta toturor prietenilor noştri!
       2:
         image: notes/C2_binary_bracelets_2.png
-        text: Binary is a way of representing information using only two options. Sometimes people think of this as only 1s and 0s. But you can represent binary with combinations of on or off, up and down, in and out or really any set of opposites.
+        text: Sistemul binar este o modalitate de a reprezenta informaţii utilizând doar două opţiuni. Uneori, oamenii se gândesc la acesta ca și cum ar fi vorba numai de 0-uri şi mulți de 1. Dar poţi reprezenta binar cu combinaţii de pe sau sub, sus şi jos, înăuntru sau înafară sau chiar orice set de contrarii.
       3:
         image: notes/C2_binary_bracelets_3.png
-        text: "Hi, I'm Orion and I program robots here at Play-im. All computer and robot brains at their most fundamental level are little electronic gates. When the gate is open, electricity can flow through and when it's closed, electricity can't."
+        text: Bună, eu sunt Orion şi programez roboţi aici la Play-im. Toate creierele calculatoarelor şi roboților sunt, la nivelul cel mai fundamental, mici porți electronice. Când poarta este deschisă, energia electrică poate curge prin ea şi, atunci când este închisă, energia electrică nu mai poate trece.
       4:
         image: notes/C2_binary_bracelets_4.png
-        text: "An example of binary on the robot is the robot's eyes. The robot's eyes are LEDs and those are lights that are either on or off. It's a binary system, one or the other. We can use the lights to represent binary numbers. If we have a set of robots, we can say that the first robot is the 1s place and the second robot is the 2s place, the third robot is the 4s place and so on. That's how you represent a binary number. The robots will do it with their binary eyes and count it out for you."
+        text: Un exemplu de sistem binar la robot îl reprezintă ochii robotului. Ochii robotului sunt LED-uri şi acestea sunt luminile care fie sunt aprinse, fie sunt stinse. Este un sistem binar, unul sau altul. Putem folosi luminile pentru a reprezenta numerele binare. Dacă avem un set de roboţi, putem spune că primul robot este locul numerelor 1 şi al doilea robot este locul numerelor 2, al treilea robot este locul numerelor 4 şi aşa mai departe. Așa se reprezintă un număr binar. Roboţii vor face acest lucru cu ochii lor binari şi vor enumera pentru tine.
     C2_conditionals_with_cards:
       1:
         image: notes/C2_conditionals_with_cards_1.png
-        text: This lesson is called conditionals with cards. Every day you make decisions based on what you see and hear.
+        text: Această lecţie se numeşte condiţionale cu carduri. În fiecare zi iei decizii bazate pe ceea ce vezi şi auzi.
       2:
         image: notes/C2_conditionals_with_cards_2.png
-        text: "I want to walk to the park but first I have to decide whether I should bring an umbrella or not. So I look out the window. If it's cloudy, I'm going to take my umbrella. Else, I'll take some sunglasses. I think I'd better take the umbrella. What I see and hear determines what I take to the park."
+        text: Vreau să fac o plimbare în parc dar mai întâi trebuie să decid dacă ar trebui să iau umbrela sau nu. Deci, mă uit pe fereastră, dacă este noros voi lua umbrela. Altfel voi lua ochelarii de soare. Mă gândesc că este mai bine să iau umbrela. Ceea ce văd și aud stabilește ce iau cu mine în parc.
       3:
         image: notes/C2_conditionals_with_cards_3.png
-        text: |-
-          Conditionals are used in games too. Today we're going to practice using conditionals with a card game. In this game, the card that I draw determines what my friends are going to do. If I draw a seven, everyone claps. Else, everyone says "awww." Let's try it! "Awww" "cheers"
+        text: 'Condiţionale sunt utilizate și în jocuri. Astăzi vom exersa utilizarea condiţionalelor cu un joc de cărți. În acest joc, cartea pe care o trag eu determină ceea ce vor face prietenii mei. Dacă trag un şapte, toată lumea va bate din palme. Altfel, toată lumea va spune "Auuu". Hai să-l încercăm! "Auuu" "noroc"'
       4:
         image: notes/C2_conditionals_with_cards_4.png
-        text: I bet you can make up games that are even more fun with conditionals. Give it a try! Conditionals are what make computers seem smart. A computer program that includes conditionals can react to the user and change its course of action.
+        text: Pun pariu că poţi inventa jocuri care sunt chiar și mai distractive cu condiţionale. Hai, încearcă și tu! Condiţionalele sunt cele care fac calculatoarele să pară inteligente. Un program de calculator care include condiţionale poate reacţiona la utilizator şi-și poate schimba cursul de acţiune.
       5:
         image: notes/C2_conditionals_with_cards_5.png
-        text: "Think about your favorite video game. Do you earn more points for some actions than you do for others? This occurs because the computer is using conditionals. It's the way a computer makes a decision. How about, if you hit the target, you earn ten points. Else, you lose three. When you know how conditionals work, you can create all kinds of exciting games."
+        text: 'Gândește-te la jocul tău video favorit. Câștigi mai multe puncte cu anumite acțiuni față decât câștigi cu altele? Acest lucru se întâmplă deoarece calculatorul folosește condiționale. Este modul în care calculatorul ia o decizie. Cum ar fi: dacă atingi ținta, câștigi zece puncte. Altfel, pierzi trei. Când știi cum funcționează condiționalele, poți crea tot felul de jocuri palpitante.'
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: Here we already have some blocks out in our work space. But there is something wrong.
+        text: Aici avem deja câteva blocuri în spațiul de lucru. Dar ceva este greșit.
       2:
         image: notes/C2_artist_debugging_2.png
-        text: "Let's debug this code by slowing down the speed and watching it as it goes through each block step by step."
+        text: Să depanăm acest cod încetinind viteza pentru a vedea ce se întâmplă la fiecare bloc pas cu pas.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: "Oh, there's the problem! The cat's whiskers are 75 pixels long, not 25."
+        text: Oh, aici este o problemă! Mustățile pisicii sunt de 75 pixeli, nu de 25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Ai auzit vreodată de depanarea unui program? Este o modalitate de a afla ce nu funcționează. Când depanezi un cod găsești și elimini erorile.
       2:
         image: notes/C2_bee_debugging_2.png
-        text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
+        text: Avem deja câteva blocuri în spațiul nostru de lucru. Vom folosi butonul „Pas” pentru a parcurge blocurile, pas cu pas, pentru a vedea dacă aceasta este soluția corectă și unde ar fi nevoie să o reparăm.
       3:
         image: notes/C2_bee_debugging_3.png
-        text: "Looks like there's our problem! We need one more move forward block. The step button helps us debug our problem by identifying where the error is so we can fix it."
+        text: Se pare că aceasta este problema noastră! Mai avem nevoie de un bloc „mută înainte”. Butonul „Pas” ne ajută să depanăm problema prin identificarea erorii pentru ca noi să o putem repara.
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
@@ -701,20 +698,20 @@ ro:
           This lesson is called "Graph Paper Programming" and it's all about algorithms. Today we're going to learn how to write programs that show each other how to recreate simple black and white images, using only hand drawn arrows.
       2:
         image: notes/C2_graph_paper_2.png
-        text: "An algorithm is a list of instructions for completing a task. We'll follow this set of instructions to make the bowl. Algorithms are really helpful when you need someone else to understand how to do something."
+        text: Un algoritm este o listă de instrucțiuni cu scopul de a completa o sarcină. Vom respecta acest set de instrucțiuni pentru a face castronul. Algoritmii sunt foarte utili când ai nevoie ca altcineva să ințeleagă cum să facă ceva.
       3:
         image: notes/C2_graph_paper_3.png
-        text: "If you're writing an algorithm for a computer, you have to break it down to little tiny steps. So finish this row and go to the next, then the next one, and you'll be done."
+        text: Dacă scrii un algoritm pentru un computer, trebuie să îl împarți în mici pași. Așa că termină acest rând și treci la următorul, apoi la următorul, și vei fi gata.
       4:
         image: notes/C2_graph_paper_4.png
         text: I use algorithms in my work. If I write down all of the steps I can recreate that same piece again, or I can teach someone else to do it. Put the glass in the kiln, fuse it together, follow the rest of the instructions to make the bowl. Algorithms give you a road map for getting something done.
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
-        text: Here we are going to use the repeat block to help us save steps when we are programming our artist. We already have some blocks out on our stage but they are just there to get us started.
+        text: Acum vom folosi blocul „repetă” pentru a economisi pași când programăm artistul. Avem deja câteva blocuri în spațiul nostru de lucru dar acestea sunt acolo pentru a ne ajuta să începem.
       2:
         image: notes/C2_artist_loops_2.png
-        text: To loop those blocks four times to draw the whole square, we just drag out the repeat block and put the moveforward and turn right blocks inside the repeat block. When we hit run, the artist will repeat those steps four times to complete the square.
+        text: Pentru a repeta (bucla) aceste blocuri de 4 ori pentru a desena întregul pătrat, doar tragem blocul „repetă” și punem blocurile „mută înainte” și „întoarce la dreapta” în interiorul blocului „repetă”. Când apăsăm „rulează”, artistul va repeta acei pași de 4 ori pentru a completa pătratul.
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
@@ -781,8 +778,7 @@ ro:
         text: "So for example if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than a century to actually write out all of those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday. So that's what loops are, and why they're valuable, and something that computers can do very well."
       3:
         image: notes/C2_zuck_repeat_loop_3.png
-        text: |-
-          In this example your goal is going to be to move the bird to get the pig.  Now we're gonna be able to use the "repeat" block in order to be able to do this very easily. You can either do this by giving the computer a "move forward" command five times in order to advance the bird one step each time to the pig.
+        text: 'În acest exemplu sarcina ta este să muți pasărea astfel încât să ajungă la porc. Acum vom putea folosi blocul "repetă" pentru a face aceasta foarte ușor. Poți, deasemenea face aceasta dând calculatorului comanta "mută înainte" de 5 ori pentru ca pasărea să înainteze spre porc câte un pas pentru fiecare comandă.'
       4:
         image: notes/C2_zuck_repeat_loop_4.png
         text: 'Or you can just tell the computer to "move forward" once, and then tell it to "repeat" that 5 times, and it will do the same thing. So in order to do this you drag your "move forward" command, and then you put it inside the "repeat" block.And you can click on it and tell it how many times you want to repeat the block to tell it how many steps you want it to take forward.'
@@ -800,19 +796,19 @@ ro:
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
-        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+        text: Tu nici nu te-ai califica pentru cursa daca nu ai persoane care sunt competente in informatica din cauza marimii data pe care masinile le colecteaza si necesitatea de a fi capabili in a avea oameni care pot scrie programe pentru a-si da seama cum veti continua sa construiti performanta.
       2:
         image: notes/C3_artist_intro_2.png
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: In aceste puzzle-uri, tu vei fi un artist care va folosi creionul pentru a desena diversa forme. Oriunde merge artistul dumneavoastra, se va desena o linie in spatele tau.
       3:
         image: notes/C3_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: Pentru a te muta in jurul panzei, vei utiliza blocul muta inainte. Aici, blocul muta inainte, zice muta inainte 100 pixeli. Atunci cand vei lovi blocul fugi, ce se intampla? Artistul merge inainte o anumita suma si acea suma este de 100 pixeli. Practic, pixelii sunt patratelele foarte mici de pe ecranul calculatorului.
       4:
         image: notes/C3_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
+        text: Celalalt bloc pe care il avem in puzzle spune muta dreapta cu 90 de grade. Si cand tragi, aceasta va face artistul nostru sa se intoarca o anumita suma. Deci te vei putea juca cat de departe vrei ca artistul sa se intoarca. Acesta este un viraj de 90 de grade.
       5:
         image: notes/C3_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+        text: Si aceasta este un viraj de 120 de grade. Si nu uita, poti sa modifici aceste valori apasand clic pe sagetile de langa numerele pentru pixeli si grade. Bucura-te de desen impreuna cu artistul tau!
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
@@ -823,23 +819,23 @@ ro:
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that is less than, equal to or greater than a number, THEN do something.
+        text: Acesta este un bloc conditional. Spune ca daca exista nectar sau miere care este mai putin, echivalent sau mai mare decat un numar, atunci fa ceva.
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+        text: Acest lucru este util atunci cand nu stim cat de mult nectar sau miere obtinem, dupa cum vedem cu acest semn se intrebare.
       3:
         image: notes/C3_bee_conditionals_3.png
-        text: "In this example, we're going to say IF the purple flower has nectar greater than 0, get nectar. That will tell our bee to keep getting nectar as long as it's there. Ta-dah!"
+        text: In acest exemplu, vom spune ca, daca floarea mov are nectar mai mare de 0, obtine nectar. Acest lucru va spune albinelor noastre sa continue obtinerea de nectar atata timp cat exista acolo. Ta-dah!
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Ai auzit vreodată de depanarea unui program? Este o modalitate de a afla ce nu funcționează. Când depanezi un cod găsești și elimini erorile.
       2:
         image: notes/C3_debugging_bee_2.png
-        text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
+        text: Avem deja câteva blocuri în spațiul nostru de lucru. Vom folosi butonul „Pas” pentru a parcurge blocurile, pas cu pas, pentru a vedea dacă aceasta este soluția corectă și unde ar fi nevoie să o reparăm.
       3:
         image: notes/C3_debugging_bee_3.png
-        text: "Looks like there's our problem! We need one more move forward block. The step button helps us debug our problem by identifying where the error is so we can fix it."
+        text: Se pare că aceasta este problema noastră! Mai avem nevoie de un bloc „mută înainte”. Butonul „Pas” ne ajută să depanăm problema prin identificarea erorii pentru ca noi să o putem repara.
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
@@ -1466,7 +1462,7 @@ ro:
           BB-8 o poate intelege.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we're going to build our program."
+        text: Spațiul alb din dreapta se numește spațiul de lucru și aici vom construi programul nostru.
       7:
         image: notes/starwars_blocks_intro_7.JPG
         text: If I drag the moveLeft(); block to our workspace, what happens? BB-8 moves left one block on the grid.

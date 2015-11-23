@@ -38,7 +38,7 @@ Still have questions? See below for answers to commonly asked questions or email
 
 **Questions about your specific program:**<br/>
 
-- [I have a quesiton about Exploring Computer Science](#ecs)
+- [I have a question about Exploring Computer Science](#ecs)
 - [I have a question about Computer Science Principles](#csp)
 - [I have a question about CS in Algebra](#algebra)
 - [I have a question about CS in Science](#science)
@@ -119,7 +119,7 @@ Payments for Phase 3: Academic Year Development online PD will be pulled twice d
 
 |  **Exploring Computer Science** | 
 | :---------- | 
-| **Due**:<br />• All units are due before your Phase 4: Summer Wrap-up, and no later than June 30th. <br />**Launches:**<br />• Unit 2: October 6th<br />• Units 3 & 4: November 3rd<br />• Unit 5: February 2nd<br />• Unit 6: March 1st|
+| **Due**:<br />• All units are due before your Phase 4: Summer Wrap-up, and no later than June 30th. <br />**Launches:**<br />• Unit 2: October 6th<br />• Units 3 & 4: November 3rd<br />• Unit 5: Early February<br />• Unit 6: Early March|
 
 | **CS Principles** | 
 |:---------- |
@@ -211,7 +211,7 @@ If, for example, a teacher finishes Phase 1 on Wednesday, May 20th and goes thro
 
 **Code.org Teacher Payment options:**
 
-Teachers that are **paid directly by their Districts** can be found on [this list](https://docs.google.com/spreadsheets/d/1O1rvNDZ_TfAOfvxQG2wqi9BqG3JsrxG1BV9TruBpt3s/edit?usp=sharing). 
+**Districts paying their teachers directly** can be found on [this list](https://docs.google.com/spreadsheets/d/1O1rvNDZ_TfAOfvxQG2wqi9BqG3JsrxG1BV9TruBpt3s/edit?usp=sharing), sorted alphabetically by state. 
 
 *Note: Code.org is not responsible for delays in payment from districts to teachers. If your district pays you directly, please contact your district finance department with any payment delay questions.*
 <br/>
@@ -260,7 +260,7 @@ ___________________________
 **PD Updates Archive:** [October](http://us9.campaign-archive1.com/?u=dc783682a08c5eb6dfe447070&id=755330c1ae) | [November](http://eepurl.com/bEh8Aj)
 
 ### **Where can I find assessments for each unit?**
-Visit the [CS10k](https://cs10kcommunity.org/resource/ECSassessments) website for ECS Units 1 & 2 assessments. Code.org has created a [How-To Guide](http://forum.code.org/t/how-to-access-the-sri-ecs-assessments/2257) if you're having trouble accessing these assessments. 
+Visit the [CS10k](https://cs10kcommunity.org/resource/ECSassessments) website for ECS Units 1 & 2 assessments. Code.org has created a [How-To Guide](https://docs.google.com/document/d/1vj6ZLt62EDEDWo-D_IzVTzZ79DEkemx3u2T0Blt1wwY/edit#heading=h.1ya6s8k1e8wg) if you're having trouble accessing these assessments. 
 
 [**Back to the top**](#top)
 <br/>

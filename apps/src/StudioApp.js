@@ -1641,6 +1641,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     modeOptions: dropletUtils.generateDropletModeOptions(config),
     palette: fullDropletPalette,
     showPaletteInTextMode: true,
+    showDropdownInPalette: config.showDropdownInPalette,
+    allowFloatingBlocks: false,
     dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
     enablePaletteAtStart: !config.readonlyWorkspace,
     textModeAtStart: config.level.textModeAtStart

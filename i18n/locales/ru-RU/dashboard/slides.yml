@@ -1522,10 +1522,10 @@ ru:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
+        text: Меня зовут Йенс Бергенстен, но я больше известен как Джеб. Я ведущий разработчик Minecraft, здесь на Mojang в Стокгольме. Я думаю, что мне было одиннадцать или может быть двенадцать лет, когда я начал программировать, потому что я хотел делать игры. Один из друзей моего отца сказал мне, что для того, чтобы делать игры, нужно научиться программировать. Вот, так я и начал. Мне нравится разрабатывать и постигать архитектуру игры. Вот что мне действительно нравится в Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: В течение следующего часа вы научитесь основам информатики, программируя Алекс или Стива для передвижения по имитации части мира Minecraft.
       3:
         image: notes/mc_intro_3.JPG
         text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
@@ -1594,10 +1594,10 @@ ru:
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Поздравляем! Вы только что узнали основные строительные блоки компьютерной науки.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Теперь вы можете использовать эти блоки для создания вашего собственного творения. Больше нет инструкций и нет головоломок для решения. Вы можете построить всё что вы хотите. Вы можете выбирать.
       3:
         image: notes/mc_congrats_share_3.JPG
         text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
@@ -1607,10 +1607,10 @@ ru:
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Поздравляем! Вы только что узнали основные строительные блоки компьютерной науки.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Теперь вы можете использовать эти блоки для создания вашего собственного творения. Больше нет инструкций и нет головоломок для решения. Вы можете построить всё что вы хотите. Вы можете выбирать.
       3:
         image: notes/mc_congrats_no_share_3.JPG
         text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"

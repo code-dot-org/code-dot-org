@@ -590,14 +590,14 @@
     frozen:
       title: Frozen
     starwars:
-      title: Star Wars
+      title: Guerre Stellari
     infinity:
       title: Disney Infinity
       body: Crea una storia o inventa un gioco con i personaggi di Disney Infinity
         come protagonisti!
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Esplora il mondo di Minecraft con il codice.
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
     students_made_these_with_code: Gli studenti l'hanno creato scrivendo del codice!
@@ -641,7 +641,7 @@
     badname: Il vostro contratto ha il nome sbagliato.
     badname_case: I nomi delle funzioni sono sensibili al maiuscolo/minuscolo. Provate
       a cambiare il nome del vostro contratto.
-    badrange: Il vostro contratto ha dimensioni errate.
+    badrange: Il tuo contratto è fuori dai limiti.
     baddomainsize: Il contratto non ha il giusto numero di elementi nel dominio.
     baddomainname: Uno o più elementi del dominio ha il nome sbagliato.
     baddomaintype: Uno o più dei tuoi elementi del dominio è di tipo errato o sono

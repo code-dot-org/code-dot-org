@@ -160,7 +160,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "addPoints10":function(d){return "gehitu 10 puntu"},
 "addPoints50":function(d){return "gehitu 50 puntu"},
 "addPoints100":function(d){return "gehitu 100 puntu"},
-"addPoints300":function(d){return "add 300 points"},
+"addPoints300":function(d){return "gehitu 300 puntu"},
 "addPoints1000":function(d){return "gehitu 1000 puntu"},
 "addPointsTooltip":function(d){return "Gehitu edo kendu puntu bat markagailuari."},
 "alienInvasion":function(d){return "Alien inbasioa!"},

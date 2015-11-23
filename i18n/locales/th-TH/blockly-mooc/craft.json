@@ -71,7 +71,7 @@
   "level3FailureMessage":"เพื่อที่จะเก็บขนแกะ, เดินไปหาแกะแต่ละตัวแล้วใช้คำสั่ง \"กรรไกร\". อย่าลืมใช้คำสั่ง \"หัน\"เพื่อไปให้ถึงแกะ",
   "level3TooFewBlocksMessage":"ลองใช้คำสั่งเพิ่มเติมเพื่อที่จะเก็บขนแกะจากแกะทั้งสองตัว. เดินไปหาแกะแต่ละตัวแล้วใช้คำสั่ง \"กรรไกร\"",
   "level4FailureMessage":"คุณต้องใช้คำสั่ง \"ทำลายบล็อค\" ที่โคนต้นไม้ทั้งสามต้น",
-  "level5FailureMessage":"Place your blocks on the dirt outline to build a wall. The pink \"repeat\" command will run commands placed inside it, like \"place block\" and \"move forward\".",
+  "level5FailureMessage":"วางปล็อกของคุณบนแนวดินเพื่อสร้างกำแพง. คำสั่ง \"repeat\" สีชมพูจะเรียกคำสั่งที่อยู่ข้างใน เช่น \"place block\" (วางบล็อก) และ \"move forward\" (ก้าวไปข้างหน้า)",
   "level6FailureMessage":"Place blocks on the dirt outline of the house to complete the puzzle.",
   "level7FailureMessage":"Use the \"plant\" command to place crops on each patch of dark tilled soil.",
   "level8FailureMessage":"If you touch a creeper it will explode. Sneak around them and enter your house.",

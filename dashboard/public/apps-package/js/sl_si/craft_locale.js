@@ -172,7 +172,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockTypeClay":function(d){return "glina"},
 "blockTypeClayHardened":function(d){return "trda glina"},
 "blockTypeCobblestone":function(d){return "cobblestone"},
-"blockTypeDirt":function(d){return "dirt"},
+"blockTypeDirt":function(d){return "umazanijo"},
 "blockTypeDirtCoarse":function(d){return "coarse dirt"},
 "blockTypeEmpty":function(d){return "empty"},
 "blockTypeFarmlandWet":function(d){return "farmland"},

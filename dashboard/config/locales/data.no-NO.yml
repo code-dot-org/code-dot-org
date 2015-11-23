@@ -747,11 +747,11 @@
         starwars_blocks_intro: 'Star Wars: Skap en galakse med kode - introduksjon'
         starwars_blocks_events: 'Star Wars: Skap en galakse med kode - Hendelser'
         starwars_blocks_congrats: 'Star Wars: Skap en galakse med kode - Gratulerer'
-        mc_intro: Minecraft - Introduction
-        mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        mc_intro: Minecraft - introduksjon
+        mc_repeat: Minecraft - gjenta
+        mc_if_statements: Minecraft - hvis-instruksjon
+        mc_congrats_share: Minecraft - gratulerer
+        mc_congrats_no_share: Minecraft - gratulerer
     callout:
       text:
         drag_blocks: Dra en "flytt" blokk og fest den under den andre blokken
@@ -855,10 +855,11 @@
         craft_run_button_callout: Trykk "Kjør" for å prøve programmet
         craft_drag_block_callout: Drag a "moveForward();" block and snap it below
           the other block
-        craft_callout_preplaced: We've put some blocks here to get you started
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can
-          you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command
-          to move forward?
+        craft_callout_preplaced: Vi har satt sammen noen blokker for å hjelpe deg
+          i gang
+        craft_inside_repeat: Gjenta handlinger ved å sette blokkene her inne
+        craft_callout_preplaced_house: Denne koden kommer til å starte byggingen av
+          huset ditt. Kan du fullføre den?
+        craft_what_is_iron: Utvinn dette jernet!
+        craft_callout_moveforward: Denne koden vil se etter lava, kan du legge til
+          en kommando for å gå fremover?

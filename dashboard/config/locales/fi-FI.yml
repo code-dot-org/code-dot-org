@@ -548,13 +548,13 @@
     frozen:
       title: Frozen
     starwars:
-      title: Star Wars
+      title: Tähtien Sota
     infinity:
       title: Infinity Pelilabra
       body: Tee Pelilabrassa tarina tai peli jonka pääosassa ovat Disneyn Infinity-hahmot.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Tutki Minecraft-maailmaa koodin kautta.
   gallery:
     students_drew_these_with_code: Oppilaat piirsivät nämä koodilla!
     students_made_these_with_code: Oppilaat tekivät nämä koodilla!

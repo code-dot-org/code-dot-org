@@ -998,69 +998,71 @@ eu:
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
-        text: "When you use a repeat block to loop your code, how does the computer know when it's repeated enough times? The repeat block is actually hiding a more sophisticated piece of code called a for loop which counts from a starting value up to an ending value by a specific increment."
+        text: 'Begizta bat sortzeko zure kodean errepikatu bloke bat erabiltzen duzunean, nola daki konpatagailuak nahikoa aldiz errepikatu duela? errepikatu blokeak kode zati konplexuago bat izkutatzen du, "for" izeneko begizta, hasierako balio batetik amaierako baliorarte inkrementu zehatz batekin zenbatzen duena.'
       2:
         image: notes/C4_for_loops_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time it counts, it runs the code inside the loop. The for loop knows how many times it has run by using a counter variable which is set to the starting value at the beginning of the loop and has the increment added to it each time the loop is run. As soon as the counter variable is greater than the ending value, the loop stops running.
+        text: 'Adibidez, errepikatu hiru blokeak 1etik 3arte zenbatzen du, banaka. Zenbatzen duen aldi bakoitzean, begiztaren barneko kodea exekutatzen du. "for" begiztak zenbat aldiz exekutatu den jakiteko kontagailu aldagai bat erabiltzen du, hasierako balioarekin hasieratzen dena begiztaren hasieran eta inkrementu zehatz batekin gehitzen dena begizta exekutatzen den bakoitzean. Kontagailu aldagaiaren balioa amaierako balioa baino handiagoa denean, begizta amaitzen da.'
       3:
         image: notes/C4_for_loops_3.png
-        text: "The benefit of using a real for loop instead of the repeat block is that you can actually see the counter variable and use it in your loop. For example, if I have a series of flowers and the first one has one nectar, the second one has two nectars and the third one has three, I can use the for loop to tell the bee to collect 'counter' nectars each time, which would one at the first flower, two at the second and three at the third."
+        text: "Errepikatu blokearen ordez benetako begiztak erabiltzearen abantaila zera da, zure begiztan bertan kontagailua aldagaiaren balioa ikusi eta erabili dezakezula. Adibidez, lore batzuk badauzkat eta lehenengoak nektar bat badu, bigarrenak bi nektar eta hirugarrenak hiru, for begizta erabili dezaket erleari 'kontagailua' nektar biltzeko aldi bakoitzean, hau da, bat lehenengo lorean, bi bigarrenean, eta hiru hirugarrenean."
       4:
         image: notes/C4_for_loops_4.png
-        text: Also in a for loop, you can increment the counter by a number other than one each time. You can potentially count by 2s, 4s or even an amount that changes every time through.
+        text: For begiztan ere, kontagailua zenbaki batekin inkrementatu dezakezu aldi bakoitzean. 2naka, 4naka edo aldi bakoitzean aldatzen den kopuruka zenbatu dezakezu.
     C4_for_loops_bee:
       1:
         image: notes/C4_for_loops_bee_1.png
-        text: "When you use a repeat block to loop your code, how does the computer know when it's repeated enough times? The repeat block is actually hiding a more sophisticated piece of code called a for loop which counts from a starting value up to an ending value by a specific increment."
+        text: 'Begizta bat sortzeko zure kodean errepikatu bloke bat erabiltzen duzunean, nola daki konpatagailuak nahikoa aldiz errepikatu duela? errepikatu blokeak kode zati konplexuago bat izkutatzen du, "for" izeneko begizta, hasierako balio batetik amaierako baliorarte inkrementu zehatz batekin zenbatzen duena.'
       2:
         image: notes/C4_for_loops_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time it counts, it runs the code inside the loop. The for loop knows how many times it has run by using a counter variable which is set to the starting value at the beginning of the loop and has the increment added to it each time the loop is run. As soon as the counter variable is greater than the ending value, the loop stops running.
+        text: 'Adibidez, errepikatu hiru blokeak 1etik 3arte zenbatzen du, banaka. Zenbatzen duen aldi bakoitzean, begiztaren barneko kodea exekutatzen du. "for" begiztak zenbat aldiz exekutatu den jakiteko kontagailu aldagai bat erabiltzen du, hasierako balioarekin hasieratzen dena begiztaren hasieran eta inkrementu zehatz batekin gehitzen dena begizta exekutatzen den bakoitzean. Kontagailu aldagaiaren balioa amaierako balioa baino handiagoa denean, begizta amaitzen da.'
       3:
         image: notes/C4_for_loops_bee_3.png
-        text: "The benefit of using a real for loop instead of the repeat block is that you can actually see the counter variable and use it in your loop. For example, if I have a series of flowers and the first one has one nectar, the second one has two nectars and the third one has three, I can use the for loop to tell the bee to collect 'counter' nectars each time, which would one at the first flower, two at the second and three at the third."
+        text: "Errepikatu blokearen ordez benetako begiztak erabiltzearen abantaila zera da, zure begiztan bertan kontagailua aldagaiaren balioa ikusi eta erabili dezakezula. Adibidez, lore batzuk badauzkat eta lehenengoak nektar bat badu, bigarrenak bi nektar eta hirugarrenak hiru, for begizta erabili dezaket erleari 'kontagailua' nektar biltzeko aldi bakoitzean, hau da, bat lehenengo lorean, bi bigarrenean, eta hiru hirugarrenean."
       4:
         image: notes/C4_for_loops_bee_4.png
-        text: Also in a for loop, you can increment the counter by a number other than one each time. You can potentially count by 2s, 4s or even an amount that changes every time through.
+        text: For begiztan ere, kontagailua zenbaki batekin inkrementatu dezakezu aldi bakoitzean. 2naka, 4naka edo aldi bakoitzean aldatzen den kopuruka zenbatu dezakezu.
     C4_for_loops_no_bee:
       1:
         image: notes/C4_for_loops_no_bee_1.png
-        text: "When you use a repeat block to loop your code, how does the computer know when it's repeated enough times? The repeat block is actually hiding a more sophisticated piece of code called a for loop which counts from a starting value up to an ending value by a specific increment."
+        text: 'Begizta bat sortzeko zure kodean errepikatu bloke bat erabiltzen duzunean, nola daki konpatagailuak nahikoa aldiz errepikatu duela? errepikatu blokeak kode zati konplexuago bat izkutatzen du, "for" izeneko begizta, hasierako balio batetik amaierako baliorarte inkrementu zehatz batekin zenbatzen duena.'
       2:
         image: notes/C4_for_loops_no_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time it counts, it runs the code inside the loop. The for loop knows how many times it has run by using a counter variable which is set to the starting value at the beginning of the loop and has the increment added to it each time the loop is run. As soon as the counter variable is greater than the ending value, the loop stops running. The benefit of using a real for loop instead of the repeat block is that you can actually see the counter variable and use it in your loop.
+        text: Adibidez, errepikatu hiru blokeak 1etik 3arte zenbatzen du. Zenbatzen duen aldi bakoitzean begiztaren barneko kodea exekutatzen du. zenbat aldiz exekutatu den jakiteko kontagailu aldagai bat erabiltzen du, hasierako balioarekin hasieratzen dena begiztaren hasieran eta inkrementu zehatz batekin gehitzen dena begizta exekutatzen den bakoitzean. Kontagailu aldagaiaren balioa amaierako balioa baino handiagoa denean, begizta amaitzen da. Errepikatu blokearen ordez benetako begiztak erabiltzearen abantaila zera da, zure begiztan bertan kontagailua aldagaiaren balioa ikusi eta erabili dezakezula.
     C4_function_create:
       1:
         image: notes/C4_function_create_1.png
-        text: "Now that you've edited function blocks, it's time to create a new function block from scratch. It's really simple. You'll see the toolbox has a category called functions. If you click on this, you'll see an orange button called create a function. Clicking on this brings up the function editor that you've already used to edit existing function blocks."
+        text: Funtzio blokeak editatu dituzula, hutsetik funtzio berri bat sortzeko garaia da. Oso erraza da. Tresna-kutxak funtzioak izeneko kategoria du. Bertan klik egiten baduzu, sortu funtzioa izeneko botoi laranja ikusiko duzu. Botoian klik egin eta existitzen diren funtzio blokeak editatzeko erabili duzun funtzio editorea bistaratuko zaizu.
       2:
         image: notes/C4_function_create_2.png
-        text: "Just like before, you started by naming your function, writing down a description for what the function is supposed to do. For instance, it's supposed to draw a square or draw a triangle and then drag blocks from the toolbox into the white work space below. Remember to drag these blocks inside the green wrapping block for the function."
+        text: Lehen bezala, hasi funtzioari izena ematen, funtzioak egingo duenaren deskribapena idatziz. Adibidez, karratua edo triangelua marraztuko ditu eta, ondoren, tresna-kutxatik blokeak arrastatu beheko laneremu zurira. Gogoratu, bloke hauek funtzioa ixteko bloke berdearen barnera arrastatu behar dituzu.
       3:
         image: notes/C4_function_create_3.png
-        text: "Once you're done, click on save and exit. This will take you back to the main puzzle work space. The new function you created will show up as a green block in the function category in your toolbox. Drag and drop this into the main work space and use it like any other block to solve the puzzle."
+        text: Amaitu duzunean, egin klik gorde-n eta irten. Puzle nagusiaren laneremura itzuliko zara. Sortu berri duzun funtzioa bloke berde gisa azalduko zaizu zure tresna-kutxaren funtzioak kategoriaren barnean. Arrastatu eta askatu laneremu nagusian eta puzlea ebazteko beste blokeen gisa erabili ahal izango duzu.
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
         text: Konputagailu programazioaren gauza onenetarikoa zera da, behin konputagailu bati gauza bat nola egin erakutsi diozunean, gauza hori berriz egin ahal izango duzu funtzio bati deituz. Funtzioari izen bat eman eta listo, dei egin diezaiokezu. Hau lengoaia zabaltzea bezala da.
       2:
         image: notes/C4_function_edit_2.png
-        text: "In the program we built, we learned how to draw a square by moving and turning four times. We can take that function and give it a name, draw a square so that any time we want to do that, we simply say draw a square and it will go back and invoke that function, that code and it will get done for us. We've added that concept to our programming language."
+        text: 'Eraiki dugun programan, karratu bat lau aldiz mugituz eta biratuz nola marraztu ikasi dugu. Funtzio hori hartu eta izena jar diezaiokegu, egin nahi dugun bakoitzean "karratua marraztu" esanda funtzio hori inboka dezan, kode hori. Egingo digu. Kontzeptu hori gehitu diogu gure programazio lengoaiari.'
       3:
         image: notes/C4_function_edit_3.png
-        text: "In this puzzle, we have already created a draw a square function for you. You'll see it in the toolbox as a green block. What you'll need to do is write the same code you wrote before to draw a square and put it in this function. To do that, click on the edit option in the green draw a square block. This will open up the function editor. The function editor has three parts. A place where you name your function. This will appear on the green block before that function. Then write out a short description of what your function is supposed to do."
+        text: Puzle hontan, zuretzat sortu dugu marraztu karratua funtzioa. Tresna-kutxan topatuko duzu bloke berde gisa. Karratu bat marrazteko lehen idatzi duzun kode bera idatzi behar duzu eta funzio hontan jarri. Horretarako, egin klik marraztu karratua bloke berdeko editatu aukeran. Honek funtzio editorea irekiko du. Funtzio editoreak 3 atal ditu. Funtzioari izena emateko lekua. Funzioaren aurretiko bloke berdean azalduko da hau. Ondoren idatzi zure funtzioak egingo duenaren deskribapen laburra.
       4:
         image: notes/C4_function_edit_4.png
-        text: "In this case, it's supposed to draw a square. The white space below this is the work space and works just like the work space you've already been using. Drag and drop blocks from the toolbox into this work space. Remember to put the blocks that create a square inside the green wrapping block for the function. Once you're done, click on save and exit. This will take you back to the main puzzle work space. Now you can use the draw the square function block just like any other block to solve the puzzle."
+        text: Kasu hontan, karratua marraztuko du. Hemen azpiko espazio zuria laneremua da eta orain arte erabili duzun laneremua bezalakoa da. Tresna-kutxako blokeak arrastatu eta askatu laneremuan. Gogoratu, karratua sortuko duten blokeak funtzioa itxiko duen bloke berdearen barruan jarri behar dira. Amaitutakoan, gorde eta irten. Honek puzle nagusiaren laneremura itzuliko zaitu. Aurrerantzean marraztu karratua funtzioa blokea erabili dezakezu puzlea ebazteko beste edozein blokeren gisan.
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
-        text: "Here's a function that draws a square with 50 pixel sides. That's great but what if I wanted to draw a square with sides 50 pixels and another square with sides of 100 pixels? We shouldn't have to make two separate functions that do almost the same thing. Instead, we can use one function with a parameter."
+        text: Hemen duzu 50 pixeleko aldeak dituen karratua marrazteko funzioa. Aparta baina eta 50 pixeleko karratu bat eta 100 pixeleko beste mat marraztu nahi baditugu? ez genituzke ia gauza bera egiten duten bi funtzio egin beharko. Parametro bat duen funtzioa erabili dezakegu.
       2:
         image: notes/C4_function_parameters_2.png
-        text: "Parameters allow us to pass values into a function that get used as variables inside the function. Let's try adding a parameter called like to this function so we can use it to create squares of different sizes. In the function editor, you can edit the name and description like before but now you can also add a parameter. Write the name of your parameter in the space and click Add Parameter. This will create a red block with the name of the parameter you just created. Now we can replace the move forward by 100 block with the parameter Length so it will move forward by Length."
+        text: |
+          Parametroek funtzioetan aldagai gisa erabiliko diren balioak pasatzea ahalbidetzen dute. Funtzio honi Luzera izeneko parametroa gehitzen saiatuko gara tamaina desberdineko karratuak marraztu ahal izateko. Funtzio editorean, lehen bezala funtzioaren izena eta azalpena editatu ditzakezu baina
+          parametro bat ere gehitu dezakezu. Idatzi parametroaren izena eremuan eta egin klik Gehitu Parametroa-n. Honek, sortu berri duzun parametroaren izena duen bloke gorri bat sortuko du. Orain, mugitu aurrera 100 blokea ordeztu dezakezu Luzera parametroarekin aurrera Luzera-k adierazten duen adina egin dezan.
       3:
         image: notes/C4_function_parameters_3.png
-        text: "Click save and close and drag out your new create a square block from the functions category in the toolbox. You'll notice there's an empty space next to length because the function wants to know what value the parameter Length should have. Drag a number block from the Math category and place it in this space. See how you can use the function again and again with different lengths to make squares of different sizes? Try it for yourself!"
+        text: Gorde eta irten, eta arrastatu tresna-kutxako funtzioak kategorian sortu berri duzun sortu karratua blokea. Luzera-n aldamenean espazio hutsa ikusiko duzu funtzioak Luzera parametroaren balioa jakin behar duelako. Matematika kategoritik arrastatu zenbakizko bloke bat eta espazio horretan kokatu. Funtzioa behin eta berriro erabili dezakezu luzera desberdinekin tamaina desberdineko karratuak marrazteko. Probatu zuk zeuk!
     C4_intro:
       1:
         image: notes/C4_intro_1.png
@@ -1070,57 +1072,58 @@ eu:
         text: Blockly hiru zati nagusitan dago banatuta. Ezkerraldean txoriaren labirintoa dago, non programa exekutatuko den. Maila bakoitzarentzat jarraibideak labirintoaren azpian daude idatzirik. Erdikaldea tresna kutxa da eta bloke horietako bakoitza txoriak uler dezakeen komando bat da. Eskuinaldeko espazio zuria lan eremua da eta bertan eraikiko dugu programa.
       3:
         image: notes/C4_intro_3.png
-        text: 'If I drag the move block to our work space and press "run", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program.'
+        text: 'Mugitu blokea gure laneremura arrastatu eta "abiarazi" sakatzen badut, zer gertatzen da? Txoriak gelaska bat egingo du aurrera. Eta aurrera egin ondoren txoriak beste zerbait egitea nahi badut? Gure programari beste bloke bat gehitu diezaioket.'
       4:
         image: notes/C4_intro_4.png
-        text: |-
-          I'm going to choose the "turn right" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press "run" again,  the bird will perform the commands that are stacked from top to bottom on our work space.
+        text: '"biratu eskuinera" blokea aukeratuko dut eta nire mugitu blokearen azpira arrastatuko dut gezi horia azaltzen den arte. Gero, askatu eta bi blokeek bat egingo dute. Berriro "Abiarazi" sakatzerakoan, txoriak gure lan eremuan dauden komando guztiak beteko ditu, goitik behera.'
       5:
         image: notes/C4_intro_5.png
         text: 'Inoiz bloke bat ezabatu nahi baldin baduzu, kendu pilatik eta arrastatu zakarrontzira. Behin "abiarazi" sakatu duzula, beti izango duzu aukera "berrezarri" botoia sakatzeko eta txoria hasierara bueltatzeko. Orain harrapa ditzagun txerri horiek!'
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
-        text: "If I want to draw a rectangle 50 pixels tall and that is twice as wide as it is tall, how would I program the computer to do that? Well, I could tell the artist to go up fifty, turn right, and then go over 100 and move the whole thing twice. But then I'm doing the math for the computer."
+        text: 50 pixeleko altuera eta zabaleran altueraren bikoitza duen laukizuzena marraztu nahi dut, nola programatu konputagailua hori egiteko? Tira, artistari 50 gora, eskuinera bira, ondoren aurrera 100 egin eta gero guztia bi aldiz mugitzeko esatea daukat. Baina horrela kalkulu matematikoak nik egiten ditut konputagailuaren ordez.
       2:
         image: notes/C4_math_artist_2.png
-        text: Multiplying fifty by two in your head may not that hard but computers are really good at doing math so we should leave it to them whenever possible. If I just used a variable called height instead, then I could easily change height to fifty and then change my algorithm to tell the artist to go up by height, turn right and then go over by height times 2, which gives us a rectangle that is twice as wide as it is tall.
+        text: |
+          Berrogeitamar bider bi egitea buruz agian ez da oso nekeza zure buruarentzat baina konputagailuak oso onak dira kalkulu matematikoak egiten eta,
+          horregatik, ahal dugun neurrian haien esku utzi behar ditugu. Altuera izeneko aldagaia erabili izan banu, orduan, erraz aldatu ahal izango nule altuera berrogei eta hamarrera eta aldatu nire algoritmoa artistari altuera adina egiteko gora, eskuinera bira eta, gero, aurrera egiteko altuera 2 aldiz, zabalera altueraren bikoitza duen laukizuzena marrazteko.
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
-        text: "This lesson is called Tangram Algorithms. A tangram is a puzzle with seven pieces that can be put together to make other shapes. You'll be using an algorithm to explain to your partner how to put the puzzle together."
+        text: Ikasgai honek Tangram Algoritmoak du izena. Tangram-a 7 piezako puzle bat da eta piezak hauek elkartu daitezke beste forma batzuk sortzeko. Algoritmo bat erabiliko duzu zure lagunari azaltzeko puzlea nola osatu.
       2:
         image: notes/C4_unplugged_algorithms_2.png
-        text: An algorithm is just a of list steps that you can take to complete a task. We use them every day with things like shopping lists and recipes. If you keep an algorithm simple, there are lots of ways to interpret it and whoever performs that algorithm might not get exactly what you wanted. If you want to make sure that everyone ends up with the exact same thing, then your algorithm will need to be detailed and very specific.
+        text: Algoritmo bat ataza bat burutzeko urrats zerrenda bat baino ez da. Egunero erabiltzen ditugu erosketa zerrendak egin eta errezetak jarraitzeko adibidez. Algoritmo sinplea egiten baduzu, interpretatzeko aukera asko egongo dira eta algoritmoa exekutatzean lortzen den emaitza esperotakoaren desberdina izan daiteke. Mundu guztiak emaitza berdina lortzea nahi baduzu, orduan zure algoritmoak zehatza eta espezifikoa izan behar du.
       3:
         image: notes/C4_unplugged_algorithms_3.png
-        text: "I'm using an algorithm today to complete a painting. I wanted to try doing a painting of some wolves but I'm not the most amazing painter. Luckily for people by me, there is paint by numbers. There are forty colors and it has little letters and numbers that tell you which color to paint each section. Paint by numbers tells me exactly what color to use and where."
+        text: Gaur, algoritmo bat erabiltzen ari naiz margolan bat amaitzeko. Otso batzuk margotu nahi nituen baina ez naiz oso margolari trebea. Zorionez, zenbaki bidez margotu daiteke. Berrogei kolore daude eta hizki eta zenbaki txikiak daude eskualde bakoitza ze kolorerekin margotu behar den esaten dizutena. Zenbaki bidez margotu aukerak ze kolore erabili eta non esaten dit zehatz mehatz.
       4:
         image: notes/C4_unplugged_algorithms_4.png
-        text: "It's very specific so I'm able to follow directions and the painting will come out looking awesome. It's a great algorithm. If the instructions weren't specific enough, my wolves wouldn't look as good. When you really want something to turn out exactly the way that you planned it, it's best to be extremely precise."
+        text: Oso zehatza da, beraz, kapaz naiz norabideak jarraitzeko eta margolan zoragarria agertuko da. Algoritmo aparta da. Aginduak nahikoa espezifikoak izango ez balira, nire otsoak ez lirateke horren politak izango. Zerbait zehatz-mehatz pentsatutako moduan agertzea nahi baduzu, oso zehatza izan behar duzu.
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
-        text: "Each team, the person who's instructing that's the person who's holding the paper, has to figure out what their off symbol is going to be and what their on symbol is going to be. In binary, it's kind of like an alphabet with two letters. Like having A and B be your entire alphabet but you've got a 0 and a 1."
+        text: 'Talde bakoitzean, argibideak ematen dituen pertsonak, paperari heltzen dionak, erabaki behar du zeintzuk izango diren "deskonektatuta" eta "konektatuta" ikurrak. Bitarrez, bi ikurreko alfabetoaren parekoa da. A eta B-k zure alfabeto osoa osatuko balute bezala, baina 0 eta 1 ikurrekin.'
       2:
         image: notes/C4_unplugged_binary_2.png
-        text: "The most common way you use binary is in an if statement. It's a classic thing from programming. The program runs along and it says if something is true, then do this. Or it's not true and you do something else. What if you want to do something maybe a little more complicated. Instead an if statement, you want to work with something like an image or a sound in a computer."
+        text: Bitarra erabiltzeko modurik arruntena baldin agindua da. Programazio arloan klasikoa da. Programak aurrera egiten du eta zerbait egiazkoa bada, orduan beste hau egin esaten du. Edo ez da egia eta, orduan, beste zerbait egin. Eta zerbait konplexuagoa egin nahi baduzu? If agindu baten ordez, konputagailu bateko irudi edo hots batekin lan egin nahi duzu.
       3:
         image: notes/C4_unplugged_binary_3.png
-        text: "A computer only knows binary but an image, it's not binary, it's not ones and zeros so how do you do that? Here's an example: You have this beautiful picture. Now a picture is basically a form of information. All information can be encoded in binary one way or another, you just have to figure out how to do it."
+        text: 'Konputagailuak bitarrez ulertzen du baina irudiak ez dira bitarrak. Ez da 0 edo 1, orduan, nola? Hemen duzu adibide bat: irudi eder hau duzu, Irudia oinarrian informazioa da. Informazio guztia era batera edo bestera bitarrez kodetu daiteke, pentsatu behar duzu nola.'
       4:
         image: notes/C4_unplugged_binary_4.png
-        text: "You imagine that we're going to put a grid over this panda bear and for each square, we're going to decide whether that square is more black or more white. And then we're going to color it that way. Now each cell on the grid is either black or white and then the black squares we say those are zeros (binary digit) and the white squares are ones, the other binary digit. At the end, you're left with just a bunch of ones and zeros. That's how you represent this image in binary."
+        text: Imajinatu panda artz honen gainean lauki sarea jartzen dugula eta lauki bakoitza beltzetik edo zuritik gertuago dagoen erabaki behar dugula. Eta horrela margotzen dugula. Orain, lauki bakoitza zuria edo beltza izango da, demagun lauki beltzak zeroak direla (digitu bitarra) eta lauki zuriak batekoak, beste digitu bitarra, Amaieran, zeroko eta bateko mordoa izango duzu. Horrela adierazten da irudi hau bitarrez.
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png
-        text: "This lesson is called for loop fun. In this lesson, we'll use a number line to play a dice game. Each player will roll three times to assign a starting value, a stopping value, and our interval. During each turn, we circle our starting value, and every value that is the same number of steps forward as our interval value. We stop circling when we get to our stopping value. The person with the highest score wins!"
+        text: Ikasgai honek for begizta dibertigarria du izena. Ikasgai hontan, lerro zenbaki bat erabiliko dugu dado jolas batean aritzeko. Jokalari bakoitzak hiru aldiz botako du dadoa hasteko balioa, amaitzeko balioa eta gure tartea esleitzeko. Txanda bakoitzean, hasteko balioa inguratuko dugu zirkulu batez, eta baita gure tarteak adierazten duen adina pauso aurrera dauden zenbakiak ere. Amaitzeko balioa ateratzerakoan amaituko ditugu inguraketak. Puntuazio handiena lortzen duena da irabazlea!
       2:
         image: notes/C4_unplugged_forloops_2.png
-        text: "For loops can come in handy a lot of places and if you were to become a meteorologist, you would use for loops all the time. Hi, I'm Becky. I work at EverPower Renewables as a wind meteorologist. I forecast wind speeds for the Columbia River Gorge area where the company owns wind farms."
+        text: For begiztak erabilgarriak dira leku askotan eta eguraldi iragarlea bazina, for begiztak nonahi erabiliko zenituzke. Kaixo, Becky naiz. Everpower Renewables-en egiten dut lan haize iragarle gisa. Haizearen abiadurak iragartzen ditut Columbia River Gorge zonaldean, enpresak bertan dituen haize-parkeekin.
       3:
         image: notes/C4_unplugged_forloops_3.png
-        text: "We're trying to understand how much wind is going to be there so that we know how much power is going to be outputted. We give that information to real time energy traders. They buy and sell power based on how much power we tell them is going to be there in order to make sure the power grid is balanced, your lights stay on, and that we maximize the amount of energy we get out of our farms."
+        text: Nolako haizea egongo den han ulertu nahi dug zenbat potentzia sortuko den jakiteko. Informazio hori energia salerosleei ematen diegu denbora errealean. Informazio horretan oinarrituz haiek potentzia saldu eta erosten dute ziurtatzeko sare energia orekatuta mantentzen dela, zure etxeko argiak piztuta daudela eta gure haize-parkeetatik ateratzen den energia maximizatzen dugula.
       4:
         image: notes/C4_unplugged_forloops_4.png
         text: "We're at the national control center for EverPower Renewables here in Portland and this is where we have information coming in from all our farms across the country. Even the highest power computers today can't simulate the atmosphere everywhere. In computer forecasting models, we have what we call a grid. Each grid point is a latitude, longitude. We have to calculate the physics and try and figure out the wind speed, temperature,  pressure, that sort of thing."
