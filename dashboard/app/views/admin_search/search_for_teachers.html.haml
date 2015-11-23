@@ -5,6 +5,10 @@
     margin: 0 10px !important
   }
 
+:javascript
+  emailParam = params[:emailFilter];
+  addressParam = params[:addressFilter];
+
 %center
   %h1 Search for Teachers
 
@@ -16,10 +20,10 @@
       %td
         Email Domain (e.g., "cps.edu" or "lausd.net" [no at symbol])
       %td
-        %input{name: "emailFilter", id: "emailFilter"}
+        %input{name: "emailFilter", id: "emailFilter", value: "hello"}
     %tr
       %td
-        Address Filter
+        Address Filter (e.g., "Seattle" or "20500")
       %td
         %input{name: "addressFilter", id: "addressFilter"}
     %tr
@@ -47,7 +51,7 @@
     displayed.
     %br
 
-  #{link_to 'Download CSV', {:format => :csv}}
+  #{link_to 'Download CSV', {:format => :csv}} (commas have been replaced by spaces)
 
   %br
 
