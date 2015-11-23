@@ -59,7 +59,7 @@ dashboard.clientState.levelProgress = function(level) {
  * @param {number} scriptLevelId - Which level this is for
  */
 dashboard.clientState.trackProgress = function(result, lines, testResult, scriptLevelId) {
-  if (result) {
+  if (result && isFinite(lines)) {
     addLines(lines);
   }
 
@@ -99,7 +99,7 @@ dashboard.clientState.allLevelsProgress = function() {
  */
 dashboard.clientState.lines = function() {
   var linesStr = $.cookie('lines');
-  return linesStr ? Number(linesStr) : 0;
+  return isFinite(linesStr) ? Number(linesStr) : 0;
 };
 
 /**

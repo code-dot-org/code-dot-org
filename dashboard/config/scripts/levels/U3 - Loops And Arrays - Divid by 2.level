@@ -28,7 +28,7 @@
       "appendItem": null,
       "removeItem": null,
       "listLength": null,
-      "randomNumber": null,
+      "randomNumber_min_max": null,
       "console.log": null,
       "declareAssign_x_array_1_4": {
         "block": "var list = [1,2,3];"
@@ -37,7 +37,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Divide every value in the array by 2. (Click to see full instructions)",
-    "markdown_instructions": "# Divide by 2\r\n\r\nIn the last exercise you updated every element in an array using a for loop that visited every index in the array. Let's get a little bit more practice with the pattern you used in the last exercise, this time creating the loop yourself.\r\n\r\n# Do This\r\n\r\n* **Starter code** is provided which creates an array of random values\r\n* Create a for loop that **iterates over every index in the array**\r\n* Within your loop add code that **divides every values in the array by 2**\r\n* Use the provided `console.log` statements to **confirm your program runs as expected**. Below is an example of the expected outcome.\r\n\r\n![](https://images.code.org/04b09b795c30313c67b2242f1773b2f6-image-1447795598583.26.21 PM.png)",
+    "markdown_instructions": "# Divide by 2\r\n\r\nIn the last exercise you updated every element in an array using a for loop. Let's get a little bit more practice with the pattern you used in the last exercise, this time creating the loop yourself.\r\n\r\n# Do This\r\n**Starter code** is provided which creates an array of random values\r\n\r\n* Create a for loop that **iterates over every index in the array**\r\n* Within your loop add code that **divides each value in the array by 2**\r\n* Use the provided `console.log` statements to **confirm your program runs as expected**. Below is an example of the expected outcome.\r\n\r\n![](https://images.code.org/04b09b795c30313c67b2242f1773b2f6-image-1447795598583.26.21 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
