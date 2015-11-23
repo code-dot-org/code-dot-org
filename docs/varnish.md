@@ -38,7 +38,7 @@ In our apps we tell Varnish it's ok to cache something (and for how long) with:
 
 cache_control :public, max_age:3600, ...
 
-This says the content is public (shareable) and cacheable for an hour. If we do:
+This says the content is public (shareable) and cachable for an hour. If we do:
 
 cache_control :private, max_age:3600, ...
 
