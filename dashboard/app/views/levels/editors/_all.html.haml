@@ -98,11 +98,11 @@
 - content_for :body_scripts do
   :javascript
     $(document).ready(function() {
-      calloutEditor("#callout_editor", {
+      jsonEditor("#callout_editor", {
         json_textarea: '#level_callout_json',
         add_button: '#add_callout',
         remove_button: ".remove_callout",
-        callout_space: ".callout_space",
+        value_space: ".callout_space",
         template: ".json_template",
         form_container: "#all_callouts_editor",
         wrapper: ".json_editor",

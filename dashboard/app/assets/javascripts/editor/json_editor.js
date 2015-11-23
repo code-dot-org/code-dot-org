@@ -1,106 +1,121 @@
 /* global CodeMirror */
 
-function calloutEditor(container, options) {
-
-  container = $(container);
-
-  var callout_editor = CodeMirror.fromTextArea(container.find(options.json_textarea).get(0), {
-    mode: 'javascript',
-    viewportMargin: Infinity,
-    matchBrackets: true
-  });
-
-  // Create callout spaces for each callout in the original JSON
-  var calloutJSON = callout_editor.getValue();
-  if (calloutJSON.length > 0) {
-    var callouts_to_update = JSON.parse(callout_editor.getValue());
-    $.each(callouts_to_update, function (index, callout) {
-      updateTemplate(callout, $createNewCalloutSpace());
-    });
-  }
-
+(function () {
   /**
-    * For each key in the given model, set the <input> with a matching class name to the key's value.
-    * @param {model} The model to use when updating the DOM.
-    * @param {$template} The jQuery element to search for <input> elements.
-    */
-  function updateTemplate(model, $template) {
-    $.each(model, function (key, value) {
-      if (value && typeof value === 'object') {
-        updateTemplate(value, $template);
-      } else {
-        $template.find('.' + key).val(model[key]);
-      }
+   * "Factory" function to transform a container into an interface for
+   * editing lists of JSON values.
+   *
+   * @param {string} container - jQuery selector for the container
+   * @param {Object} options
+   * @param {string} options.json_textarea
+   * @param {string} options.add_button
+   * @param {string} options.remove_button
+   * @param {string} options.value_space
+   * @param {string} options.template
+   * @param {string} options.form_container
+   * @param {string} options.wrapper
+   * @param {Object} options.model
+   */
+  window.jsonEditor = function (container, options) {
+    container = $(container);
+
+    var jsonEditor = CodeMirror.fromTextArea(container.find(options.json_textarea).get(0), {
+      mode: 'javascript',
+      viewportMargin: Infinity,
+      matchBrackets: true
     });
-    if (options.onNewSpace) {
-      options.onNewSpace($template);
+
+    // Create spaces for each element in the original JSON
+    var jsonContent = jsonEditor.getValue();
+    if (jsonContent.length > 0) {
+      var valuesToUpdate = JSON.parse(jsonEditor.getValue());
+      $.each(valuesToUpdate, function (index, value) {
+        updateTemplate(value, $createNewSpace());
+      });
     }
-  }
 
-  /**
-    * For each key in the given model, set the key's value to the value of the <input> with a matching class name.
-    * @param {model} The model to update from the DOM.
-    * @param {$template} The jQuery element to search for <input> elements.
-    */
-  function updateModel(model, $template) {
-    $.each(model, function (key, value) {
-      if (typeof value === 'object') {
-        updateModel(value, $template);
-      } else {
-        value = $template.find('.' + key).val();
-        model[key] = typeof model[key] === 'number' ? +value : value;
+    /**
+      * For each key in the given model, set the <input> with a matching class name to the key's value.
+      * @param {model} The model to use when updating the DOM.
+      * @param {$template} The jQuery element to search for <input> elements.
+      */
+    function updateTemplate(model, $template) {
+      $.each(model, function (key, value) {
+        if (value && typeof value === 'object') {
+          updateTemplate(value, $template);
+        } else {
+          $template.find('.' + key).val(model[key]);
+        }
+      });
+      if (options.onNewSpace) {
+        options.onNewSpace($template);
       }
+    }
+
+    /**
+      * For each key in the given model, set the key's value to the value of the <input> with a matching class name.
+      * @param {model} The model to update from the DOM.
+      * @param {$template} The jQuery element to search for <input> elements.
+      */
+    function updateModel(model, $template) {
+      $.each(model, function (key, value) {
+        if (typeof value === 'object') {
+          updateModel(value, $template);
+        } else {
+          value = $template.find('.' + key).val();
+          model[key] = typeof model[key] === 'number' ? +value : value;
+        }
+      });
+    }
+
+    function updateJSON() {
+      var updatedValues = [];
+      container.find(options.form_container).find(options.value_space).each(function () {
+        var model = $.extend(true, {}, options.model);
+        updateModel(model, $(this));
+        updatedValues.push(model);
+      });
+      jsonEditor.setValue(JSON.stringify(updatedValues, null, ' '));
+    }
+
+    function $createNewSpace() {
+      var $newValue = container.find(options.template).children(":first").clone();
+      container.find(options.form_container).append($newValue);
+      return $newValue;
+    }
+
+    if (options.up_button) {
+      container.find(options.up_button).on("click", function () {
+        var wrapper = $(this).closest(options.value_space);
+        if (wrapper.prev().length) {
+          wrapper.insertBefore(wrapper.prev());
+          updateJSON();
+        }
+      });
+    }
+
+    if (options.down_button) {
+      container.find(options.down_button).on("click", function () {
+        var wrapper = $(this).closest(options.value_space);
+        if (wrapper.next().length) {
+          wrapper.insertAfter(wrapper.next());
+          updateJSON();
+        }
+      });
+    }
+
+    container.find(options.add_button).on("click", function () {
+      $createNewSpace();
+      updateJSON();
     });
-  }
 
-  function updateCalloutJSON() {
-    var updated_callouts = [];
-    container.find(options.form_container).find(options.callout_space).each(function () {
-      var model = $.extend(true, {}, options.model);
-      updateModel(model, $(this));
-      updated_callouts.push(model);
+    container.on("click", options.remove_button, function () {
+      $(this).closest(options.value_space).remove();
+      updateJSON();
     });
-    callout_editor.setValue(JSON.stringify(updated_callouts, null, ' '));
-  }
 
-  function $createNewCalloutSpace() {
-    var $newCallout = container.find(options.template).children(":first").clone();
-    container.find(options.form_container).append($newCallout);
-    return $newCallout;
-  }
-
-  if (options.up_button) {
-    container.find(options.up_button).on("click", function () {
-      var wrapper = $(this).closest(options.callout_space);
-      if (wrapper.prev().length) {
-        wrapper.insertBefore(wrapper.prev());
-        updateCalloutJSON();
-      }
+    container.find(options.wrapper).on("change", function () {
+      updateJSON();
     });
-  }
-
-  if (options.down_button) {
-    container.find(options.down_button).on("click", function () {
-      var wrapper = $(this).closest(options.callout_space);
-      if (wrapper.next().length) {
-        wrapper.insertAfter(wrapper.next());
-        updateCalloutJSON();
-      }
-    });
-  }
-
-  container.find(options.add_button).on("click", function () {
-    $createNewCalloutSpace();
-    updateCalloutJSON();
-  });
-
-  container.on("click", options.remove_button, function () {
-    $(this).closest(options.callout_space).remove();
-    updateCalloutJSON();
-  });
-
-  container.find(options.wrapper).on("change", function () {
-    updateCalloutJSON();
-  });
-
-}
+  };
+})();
