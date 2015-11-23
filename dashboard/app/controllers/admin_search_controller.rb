@@ -35,7 +35,7 @@ class AdminSearchController < ApplicationController
     @headers = ['ID', 'Name', 'Email', 'Address', 'Num Students']
     @teachers = @teachers.limit(@teacher_limit).pluck('id', 'name', 'email', 'full_address', 'COUNT(followers.id) AS num_students')
 
-    # Remove newlines from the full_address field.
+    # Remove newlines from the full_address field, replacing them with spaces.
     @teachers.each do |teacher|
       teacher[3].gsub!("\r", ' ')
       teacher[3].gsub!("\n", ' ')
