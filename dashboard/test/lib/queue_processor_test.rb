@@ -7,6 +7,7 @@ require 'test_helper'
 require 'aws-sdk'
 require 'securerandom'
 
+require 'sqs/messages_handler'
 require 'sqs/queue_processor'
 require 'sqs/queue_processor_config'
 
@@ -30,7 +31,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
   attr_accessor :logger
 
   # A test handler that allows simulated failure and records received messages.
-  class TestHandler
+  class TestHandler < SQS::MessagesHandler
     # @return {Array<String>}
     attr_reader :messages
 
