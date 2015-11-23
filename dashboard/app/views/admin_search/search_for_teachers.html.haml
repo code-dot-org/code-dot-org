@@ -14,7 +14,7 @@
   %table.filters
     %tr
       %td
-        Email Filter
+        Email Domain (e.g., "cps.edu" or "lausd.net" [no at symbol])
       %td
         %input{name: "emailFilter", id: "emailFilter"}
     %tr
@@ -24,7 +24,7 @@
         %input{name: "addressFilter", id: "addressFilter"}
     %tr
       %td
-        PD Filter
+        Filter on whether teachers have attended PD
       %td
         %input.radio{type: "radio", name: "pd", id: "pd-all", value: "all", checked: true} All
         %input.radio{type: "radio", name: "pd", id: "pd-pd", value: "pd"} PD
