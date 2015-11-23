@@ -188,7 +188,7 @@
 
   function showCaption()
   {
-    if ($("#captionarea_sw").is(':visible')) {
+    if ($("#captionarea_sw").is(':visible') && $("#captionarea_sw").css('opacity') == 1) {
       $("#captionarea_sw").fadeTo(4000, 0);
       $("#captionarea_mc").fadeTo(4000, 1);
     }

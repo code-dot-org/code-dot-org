@@ -3,15 +3,14 @@
   if page_mode == "feature-starwars"
     first_tutorial = "starwars"
     second_tutorial = "mc"
-    banner_image = "starwars_wide"
   else
     first_tutorial = "mc"
     second_tutorial = "starwars"
-    banner_image = "MC_Wide_Learn_V4"
   end
 
 %h1.main-header= I18n.t(:carousel_heading_codeorg_any_device)
-%img.banner{src: "/images/#{first_tutorial}/#{banner_image}.jpg"}
+%img.banner{id: "banner-mc", src: "/images/mc/MC_Wide_Learn_V4.jpg", style: "display: none;"}
+%img.banner{id: "banner-starwars", src: "/images/starwars_wide.jpg", style: "display: none;"}
 
 #learnCodeStudio.container.col-md-12
   #codeStudioCarousel.carousel.slide.multi-item-carousel
@@ -49,6 +48,32 @@
 %br
 
 :javascript
+  $(document).ready()
+  {
+    if ("#{page_mode}" == "feature-starwars") {
+      $("#banner-starwars").fadeIn(0);
+    }
+    else {
+      $("#banner-mc").fadeIn(0);
+    }
+  }
+
+  $.ready()
+  {
+    timerId = setInterval(cycleBanner, 13000);
+  }
+
+  function cycleBanner() {
+    if ($("#banner-starwars").is(':visible')) {
+      $("#banner-starwars").fadeOut(1000);
+      $("#banner-mc").delay(1000).fadeIn(4000);
+    }
+    else {
+      $("#banner-mc").fadeOut(1000);
+      $("#banner-starwars").delay(1000).fadeIn(4000);
+    }
+  }
+
   $('#codeStudioCarousel').carousel({
     interval: false
   })
