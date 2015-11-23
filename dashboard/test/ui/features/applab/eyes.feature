@@ -93,6 +93,7 @@ Scenario: Applab embedded level
   When I open my eyes to test "Applab embedded level"
   And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/12"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait to see "#x-close"
+  And I press "x-close"
   And I see no difference for "embedded level"
   Then I close my eyes

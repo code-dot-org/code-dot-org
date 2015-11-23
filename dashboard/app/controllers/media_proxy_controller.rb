@@ -51,6 +51,11 @@ class MediaProxyController < ApplicationController
     # Get the media.
     media = http.request_get(path)
 
+    # generate content-type from file name if we weren't given one
+    if media.content_type.nil?
+      media.content_type = Rack::Mime.mime_type(File.extname(path))
+    end
+
     if media.kind_of? Net::HTTPRedirection
       # Follow up to five redirects.
       render_proxied_url(media['location'], redirect_limit - 1)

@@ -127,9 +127,9 @@ class Script < ActiveRecord::Base
   @@script_cache = nil
   SCRIPT_CACHE_KEY = 'script-cache'
 
-  # Caching isn't compatible with class reloading. Also disabled when building levels.
+  # Caching is disabled when editing scripts and levels.
   def self.should_cache?
-    Rails.application.config.cache_classes && !Rails.application.config.levelbuilder_mode
+    !Rails.application.config.levelbuilder_mode
   end
 
   def self.script_cache_to_cache

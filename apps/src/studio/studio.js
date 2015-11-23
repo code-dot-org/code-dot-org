@@ -1166,16 +1166,18 @@ function handleActorCollisionsWithCollidableList (
       continue;
     }
 
+    var distanceScaling = constants.SPRITE_COLLIDE_DISTANCE_SCALING;
+
     Studio.drawDebugRect("itemCollision",
       next.x,
       next.y,
-      skin.itemCollisionRectWidth || collidable.width,
-      skin.itemCollisionRectHeight || collidable.height);
+      distanceScaling * (skin.itemCollisionRectWidth || collidable.width),
+      distanceScaling * (skin.itemCollisionRectHeight || collidable.height));
     Studio.drawDebugRect("spriteCollision",
       xCenter,
       yCenter,
-      skin.spriteCollisionRectWidth || Studio.sprite[spriteIndex].width,
-      skin.spriteCollisionRectHeight || Studio.sprite[spriteIndex].height);
+      distanceScaling * (skin.spriteCollisionRectWidth || Studio.sprite[spriteIndex].width),
+      distanceScaling * (skin.spriteCollisionRectHeight || Studio.sprite[spriteIndex].height));
 
     if (collisionTest(
           xCenter,
@@ -1510,20 +1512,54 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
   var rowsOffset = Math.floor(yCenter) + 1;
   var xGrid = Math.floor(xCenter / Studio.SQUARE_SIZE);
   var iYGrid = Math.floor(yCenter / Studio.SQUARE_SIZE);
-  for (var col = Math.max(0, xGrid - colsOffset);
-       col < Math.min(Studio.COLS, xGrid + colsOffset);
-       col++) {
-    for (var row = Math.max(0, iYGrid - rowsOffset);
-         row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
-         row++) {
-      if (Studio.getWallValue(row, col)) {
-        if (overlappingTest(xCenter,
-                            (col + 0.5) * Studio.SQUARE_SIZE,
-                            Studio.SQUARE_SIZE / 2 + collidableWidth / 2,
-                            yCenter,
-                            (row + 0.5) * Studio.SQUARE_SIZE,
-                            Studio.SQUARE_SIZE / 2 + collidableHeight / 2)) {
-          return true;
+
+  var collisionRects = null;
+  if (skin.customObstacleZones &&
+      skin.customObstacleZones[Studio.background] &&
+      skin.customObstacleZones[Studio.background][Studio.wallMapRequested]) {
+    collisionRects = skin.customObstacleZones[Studio.background][Studio.wallMapRequested];
+  }
+
+  if (collisionRects) {
+    // Compare against a set of specific rectangles.
+    for (var i = 0; i < collisionRects.length; i++) {
+      var rect = collisionRects[i];
+      var rectWidth = rect.maxX-rect.minX+1;
+      var rectHeight = rect.maxY-rect.minY+1;
+      var rectCenterX = rect.minX + rectWidth/2;
+      var rectCenterY = rect.minY + rectHeight/2;
+      Studio.drawDebugRect("avatarCollision", rectCenterX, rectCenterY, rectWidth, rectHeight);
+      if (overlappingTest(xCenter,
+                          rectCenterX,
+                          rectWidth / 2 + collidableWidth / 2,
+                          yCenter,
+                          rectCenterY,
+                          rectHeight / 2 + collidableHeight / 2)) {
+        return true;
+      }
+    }
+  } else {
+    // Compare against regular wall tiles.
+    for (var col = Math.max(0, xGrid - colsOffset);
+         col < Math.min(Studio.COLS, xGrid + colsOffset);
+         col++) {
+      for (var row = Math.max(0, iYGrid - rowsOffset);
+           row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
+           row++) {
+        if (Studio.getWallValue(row, col)) {
+          Studio.drawDebugRect("avatarCollision",
+                               (col + 0.5) * Studio.SQUARE_SIZE,
+                               (row + 0.5) * Studio.SQUARE_SIZE,
+                               Studio.SQUARE_SIZE,
+                               Studio.SQUARE_SIZE);
+          if (overlappingTest(xCenter,
+                              (col + 0.5) * Studio.SQUARE_SIZE,
+                              Studio.SQUARE_SIZE / 2 + collidableWidth / 2,
+                              yCenter,
+                              (row + 0.5) * Studio.SQUARE_SIZE,
+                              Studio.SQUARE_SIZE / 2 + collidableHeight / 2)) {
+            return true;
+          }
         }
       }
     }
@@ -1792,25 +1828,16 @@ Studio.init = function(config) {
     Studio.musicController.preload();
   };
 
-  if (studioApp.cdoSounds && !studioApp.cdoSounds.isAudioUnlocked()) {
-    // Would use addClickTouchEvent, but iOS9 does not let you unlock audio
-    // on touchstart, only on touchend.
-    var removeEvent = dom.addMouseUpTouchEvent(document, function () {
-      studioApp.cdoSounds.unlockAudio();
-      removeEvent();
-    });
-  }
-
   // Play music when the instructions are shown
   var playOnce = function () {
-    if (studioApp.cdoSounds && studioApp.cdoSounds.isAudioUnlocked()) {
-      Studio.musicController.play();
-      document.removeEventListener('instructionsShown', playOnce);
-      document.removeEventListener('instructionsHidden', playOnce);
+    document.removeEventListener('instructionsShown', playOnce);
+    if (studioApp.cdoSounds) {
+      studioApp.cdoSounds.whenAudioUnlocked(function () {
+        Studio.musicController.play();
+      });
     }
   };
   document.addEventListener('instructionsShown', playOnce);
-  document.addEventListener('instructionsHidden', playOnce);
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1866,6 +1893,7 @@ Studio.init = function(config) {
   config.varsInGlobals = true;
   config.dropletConfig = dropletConfig;
   config.dropIntoAceAtLineStart = true;
+  config.showDropdownInPalette = true;
   config.unusedConfig = [];
   for (prop in skin.AutohandlerTouchItems) {
     AUTO_HANDLER_MAP[prop] =
@@ -2348,7 +2376,6 @@ var displayFeedback = function() {
     studioApp.displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
-      hideIcon: skin.hideIconInClearPuzzle,
       feedbackType: Studio.testResults,
       executionError: Studio.executionError,
       tryAgainText: tryAgainText,
@@ -5177,24 +5204,43 @@ Studio.timedOut = function() {
  * Tests whether the sprite is currently at the goal sprite.
  */
 function spriteAtGoal(sprite, goal) {
-  var goalWidth = skin.goalCollisionRectWidth || Studio.MARKER_WIDTH;
-  var goalHeight = skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
+  var goalWidth = utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH);
+  var goalHeight = utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT);
+
+  var goalCollisionWidth = skin.goalCollisionRectWidth || Studio.MARKER_WIDTH;
+  var goalCollisionHeight = skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
+
+  var spriteCollisionWidth = skin.itemCollisionRectWidth || sprite.width;
+  var spriteCollisionHeight = skin.itemCollisionRectHeight || sprite.height;
+
+  var xSpriteCenter = sprite.x + sprite.width / 2;
+  var ySpriteCenter = sprite.y + sprite.height / 2;
+
+  var xFinCenter = goal.x + goalWidth / 2 + utils.valueOr(skin.goalRenderOffsetX, 0);
+  var yFinCenter = goal.y + goalHeight / 2 + utils.valueOr(skin.goalRenderOffsetY, 0);
+
+  var distanceScaling =
+    utils.valueOr(skin.finishCollideDistanceScaling, constants.FINISH_COLLIDE_DISTANCE_SCALING);
+
+  Studio.drawDebugRect("goalCollisionSprite",
+                       xSpriteCenter,
+                       ySpriteCenter,
+                       distanceScaling * spriteCollisionWidth,
+                       distanceScaling * spriteCollisionHeight);
+
+  Studio.drawDebugRect("goalCollisionGoal",
+                       xFinCenter,
+                       yFinCenter,
+                       distanceScaling * goalCollisionWidth,
+                       distanceScaling * goalCollisionHeight);
 
   var finishCollisionDistance = function (yAxis) {
-    var dim1 = yAxis ? sprite.height : sprite.width;
-    var dim2 = yAxis ? goalHeight : goalWidth;
+    var dim1 = yAxis ? spriteCollisionHeight : spriteCollisionWidth;
+    var dim2 = yAxis ? goalCollisionHeight : goalCollisionWidth;
 
-    return constants.FINISH_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+
+    return distanceScaling * (dim1 + dim2) / 2;
   };
-
-  var xSpriteCenter = sprite.x + (skin.itemCollisionRectWidth || sprite.width) / 2;
-  var ySpriteCenter = sprite.y + (skin.itemCollisionRectHeight || sprite.height) / 2;
-
-  var xFinCenter = goal.x + goalWidth / 2;
-  var yFinCenter = goal.y + goalHeight / 2;
-
-  Studio.drawDebugRect("goalCollisionSprite", xSpriteCenter, ySpriteCenter, sprite.width, sprite.height);
-  Studio.drawDebugRect("goalCollisionGoal", xFinCenter, yFinCenter, goalWidth, goalHeight);
 
   return collisionTest(xSpriteCenter,
     xFinCenter,
