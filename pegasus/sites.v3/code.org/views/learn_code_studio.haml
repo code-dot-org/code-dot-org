@@ -60,11 +60,12 @@
 
     $("#codeStudioCarousel").swipe( {
       swipeLeft: function() {
-        $(this).parent().carousel('prev'); 
-      },
-      swipeRight: function() {
         $(this).parent().carousel('next'); 
       },
+      swipeRight: function() {
+        $(this).parent().carousel('prev'); 
+      },
+      excludedElements: "button, .noSwipe",
       threshold: 25
     });
   }
