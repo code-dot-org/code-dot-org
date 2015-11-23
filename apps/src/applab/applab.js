@@ -1932,7 +1932,7 @@ Applab.changeScreen = function(screenId) {
 };
 
 Applab.loadDefaultScreen = function() {
-  var defaultScreen = $('#divApplab .screen[is-default=true]').first().attr('id')
-    || $('#divApplab .screen').first().attr('id');
+  var defaultScreen = $('#divApplab .screen[is-default=true]').first().attr('id') ||
+    $('#divApplab .screen').first().attr('id');
   Applab.changeScreen(defaultScreen);
 };
