@@ -48,12 +48,9 @@ class ActivityTest < ActiveSupport::TestCase
   end
 
   def _test_create_async(allow_queueing:)
-    handler = Activity::AsyncHandler.new
-
     # We need to freeze time, but it needs to be close to reality because AWS will reject
     # our request when using the real SQS.
     time = Time.now
-
     activity = student = level = level_source = nil
     Timecop.freeze(time) do
       student = create :student
