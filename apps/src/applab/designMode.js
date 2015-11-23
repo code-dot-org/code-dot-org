@@ -9,6 +9,7 @@ var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
 var KeyCodes = require('../constants').KeyCodes;
+var constants = require('./constants');
 
 var designMode = module.exports;
 
@@ -318,7 +319,7 @@ designMode.updateProperty = function(element, name, value) {
 
         //Resort elements in the dropdown list
         var options = $('#screenSelector option');
-        var newScreenText = options.last().text();
+        var newScreenText = constants.NEW_SCREEN;
         var defaultScreenId = elementUtils.getId(element);
         options.sort(function (a, b) {
           if (a.text === defaultScreenId) {
