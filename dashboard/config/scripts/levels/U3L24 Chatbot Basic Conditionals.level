@@ -149,7 +149,7 @@
     "hide_design_mode": "false",
     "beginner_mode": "true",
     "instructions": "Check out the project description for instructions. (Click to see full instructions.)",
-    "markdown_instructions": "# Digital Assistant Project\r\n\r\n**Your Digital Assistant Project is back!**\r\n\r\n# Do This\r\n\r\n* **Use the flowchart you have developed to implement the logic that will be used for your digital assistant to \"intelligently\" respond to user input.**\r\n* Once you're done, **submit your project!**\r\n",
+    "markdown_instructions": "# Digital Assistant Project\r\n\r\n**Your Digital Assistant Project is back!**\r\n\r\n# Do This:\r\n\r\n* **Use the flowchart you have developed to implement the logic that will be used for your digital assistant to \"intelligently\" respond to user input.**\r\n* Once you're done, **submit your project!**\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",
