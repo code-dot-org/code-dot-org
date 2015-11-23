@@ -1,5 +1,5 @@
 module SQS
-  # An generic queued message with a body.
+  # A generic queued message with a body.
   class Message
 
     # @type [String]

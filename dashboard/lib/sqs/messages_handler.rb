@@ -1,6 +1,6 @@
 module SQS
 
-  # Defines the interface for a queueu messages handler.
+  # Defines the interface for a queued messages handler.
   class MessagesHandler
 
     # Handles an array of queue messages. If this method raises an exception, the
