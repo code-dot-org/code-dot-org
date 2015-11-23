@@ -90,7 +90,8 @@
     "debugger_disabled": "true",
     "project_template_level_name": "U3 - Movie Bot - Template",
     "execute_palette_apis_only": "false",
-    "lock_zero_param_functions": "false"
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "gzAKlkXs+aDE/I8cpSnvOgN7qjLtcxv1EwwOv8BaqHucCf43e3o3F3rHfZ/r\nwez8\n"
   }
 }]]></config>
   <blocks/>

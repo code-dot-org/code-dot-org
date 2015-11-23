@@ -175,7 +175,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
     handler.raise_on_next_receipt_of(initially_failing_body)
 
     @sqs.send_message(queue_url: queue_url, message_body: initially_failing_body)
-    while not handler.received_bodies.include?(initially_failing_body)
+    until handler.received_bodies.include?(initially_failing_body)
       sleep 2
     end
 

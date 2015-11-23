@@ -95,7 +95,7 @@
     <required_blocks>
       <xml>
         <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3, 5, 10, 20">20</title>
+          <title name="TIMES" config="2, 5, 10, 20">20</title>
         </block>
         <block type="pick_one">
           <statement name="PICK">
