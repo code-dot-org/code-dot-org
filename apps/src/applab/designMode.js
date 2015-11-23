@@ -309,7 +309,7 @@ designMode.updateProperty = function(element, name, value) {
     case 'readonly':
       element.setAttribute('contenteditable', !value);
       break;
-    case 'data-is-default':
+    case 'is-default':
       if (value === true) {
         // Make this one default
         $('#designModeViz .screen').attr('data-is-default', false);
