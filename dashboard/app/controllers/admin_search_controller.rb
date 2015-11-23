@@ -31,7 +31,7 @@ class AdminSearchController < ApplicationController
     end
 
     # Prune the set of fields to those that will be displayed.
-    @teacher_limit = 100
+    @teacher_limit = 500
     @headers = ['ID', 'Name', 'Email', 'Address', 'Num Students']
     @teachers = @teachers.limit(@teacher_limit).pluck('id', 'name', 'email', 'full_address', 'COUNT(followers.id) AS num_students')
   end
