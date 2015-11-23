@@ -73,23 +73,26 @@ class Activity < ActiveRecord::Base
     Activity.order('id desc').limit(limit)
   end
 
-  # Returns a new Activity and queues an SQS message to asynchronously create it in
-  # the database. Note that the id in the return object will not be populated
-  # because it has not been saved yet. The Activity must pass validation or an
-  # exception will be thrown synchronously.
-  def Activity.create_async!(queue, attributes)
-    Activity.new(attributes).tap do |activity|
-      activity.created_at = Time.now
-      activity.updated_at = Time.now
+  # Creates a new Activity which will be written eventually to the database. (Note that the id is
+  # nil because it may not have been written yet.) An exception will be thrown if the object does
+  # not pass validation. The object is only written asynchronously if the gatekeeper allows it for
+  # this hostname.
+  def Activity.create_async!(attributes)
+    if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
+      activity = Activity.new(attributes)
+      activity.created_at = activity.updated_at = Time.now
       activity.validate!
-      message_body = {
-        'model' => 'Activity', 'action' => 'create', 'attributes' => activity.attributes
-      }.to_json
-      queue.enqueue(message_body)
+      async_op = {'model' => 'Activity', 'action' => 'create', 'attributes' => activity.attributes}
+      Activity.queue.enqueue(async_op.to_json)
+    else
+      activity = Activity.create!(attributes)
+      activity.id = nil  # Clear out the id so that no code comes to depend on it.
     end
+    activity
   end
 
-  # Handle an async message body created by async_create! etc.
+  # Handle an async message body created by create_async! (and other async operations we might add
+  # in the future).
   # @param [String] json A JSON-encoded asynchronous operation.
   def Activity.handle_async_message_json(json)
     op = JSON::parse(json)
@@ -115,6 +118,12 @@ class Activity < ActiveRecord::Base
         Activity.handle_async_message_json(message.body)
       end
     end
+  end
+
+  # Returns a thread-local SQS queue.(Thread-local because the SQS client is not thread-safe.)
+  def Activity.queue
+    Thread.current['activity_queue'] ||=
+        SQS::SQSQueue.new(Aws::SQS::Client.new, CDO.activity_queue_url)
   end
 
 end
