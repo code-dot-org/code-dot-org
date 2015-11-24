@@ -13,13 +13,13 @@ sv:
           description_short: Bara en inofficiell testkurs.
         course1:
           "Jigsaw: Learn to drag and drop": 'Pussel: Lär dig dra och släpp'
-          "Maze: Sequence": 'Labyrint: sekvens'
+          "Maze: Sequence": 'Labyrint: Sekvens'
           "Maze: Debugging": 'Labyrint: Felsökning'
-          "Artist 1: Intro": 'Artist 1: Intro'
-          Artists 2: Artister 2
-          Spelling Bee: Spelling Bee
-          Spelling Bee not blockly: Spelling Bee inte blockly
-          "Bee 1: Intro": 'Bee 1: Intro'
+          "Artist 1: Intro": 'Konstnär 1: Introduktion'
+          Artists 2: Konstnärer 2
+          Spelling Bee: Stavning
+          Spelling Bee not blockly: Stavning inte blockly
+          "Bee 1: Intro": 'Stavning 1: Introduktion'
           "Maze 2: Loops": 'Labyrint 2: slingor'
           "Bee 2: Loops": 'Bee 2: slingor'
           Multi & Match: 'Multi & Matcha'
@@ -70,7 +70,7 @@ sv:
           The Big Event: Den stora händelsen
           Your Digital Footprint: Ditt digitala fotavtryck
           description: Kurs 2 är utformad för elever som kan läsa och inte har tidigare erfarenhet av programmering. I kursen kommer eleverna skapa program för att lösa problem och utveckla interaktiva spel eller berättelser som de kan dela. Rekommenderas för årskurserna 2-5.
-          "Maze: Sequence": 'Labyrint: sekvens'
+          "Maze: Sequence": 'Labyrint: Sekvens'
           "Artist: Sequence": 'Artist: sekvens'
           "Maze: Loops": 'Labyrint: slingor'
           "Artist: Loops": Artist Loopar
@@ -191,7 +191,7 @@ sv:
           description_short: En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.
           description: En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.
           Course 4 Prerequisite: Kurs 4 förutsättning
-          "Maze: Sequence": 'Labyrint: sekvens'
+          "Maze: Sequence": 'Labyrint: Sekvens'
           "Artist: Sequence": 'Artist: sekvens'
           "Artist: Loops": Artist Loopar
           "Bee: Conditionals": Bee Villkorssatser
@@ -419,7 +419,7 @@ sv:
           description_short: En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.
           description: En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.
           Course 4 Prerequisite: Kurs 4 förutsättning
-          "Maze: Sequence": 'Labyrint: sekvens'
+          "Maze: Sequence": 'Labyrint: Sekvens'
           "Artist: Sequence": 'Artist: sekvens'
           "Artist: Loops": Artist Loopar
           "Bee: Conditionals": Bee Villkorssatser
@@ -1459,13 +1459,13 @@ sv:
           Gumball Play Lab: Gumball Play Lab
         starwars:
           title: 'Star Wars: Bygg en galax med kod'
-          description_short: Lär dig att programmera droids och skapa ditt egna Star Wars spel i en galax långt, långt borta.
-          description: Lär dig att programmera droids och skapa ditt egna Star Wars spel i en galax långt, långt borta.
+          description_short: Lär dig att programmera droider och skapa ditt eget Star Wars spel i en galax långt, långt borta.
+          description: Lär dig att programmera droider och skapa ditt eget Star Wars spel i en galax långt, långt borta.
           Hour of Code 2015: Hour of Code 2015
         starwarsblocks:
           title: 'Star Wars: Bygg en galax med kod'
-          description_short: Lär dig att programmera droids och skapa ditt egna Star Wars spel i en galax långt, långt borta.
-          description: Lär dig att programmera droids och skapa ditt egna Star Wars spel i en galax långt, långt borta.
+          description_short: Lär dig att programmera droider och skapa ditt eget Star Wars spel i en galax långt, långt borta.
+          description: Lär dig att programmera droider och skapa ditt eget Star Wars spel i en galax långt, långt borta.
           Hour of Code 2015: Hour of Code 2015
         minecraft:
           title: Minecraft

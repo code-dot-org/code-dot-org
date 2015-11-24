@@ -184,7 +184,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "drawARhombus":function(d){return "ромб салу"},
 "drawARobot":function(d){return "робот салу"},
 "drawARocket":function(d){return "рокета салу"},
-"drawASnowflake":function(d){return "draw a snowflake"},
+"drawASnowflake":function(d){return "қар бүршігін салу"},
 "drawASnowman":function(d){return "аққала салу"},
 "drawASquare":function(d){return "төртбұрыш салу"},
 "drawAStar":function(d){return "жұлдыз салу"},

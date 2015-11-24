@@ -1617,14 +1617,14 @@
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Construcció d''una galàxia amb codi'
+          title: 'Star Wars: Construint una galàxia amb codi'
           description_short: Aprèn a programar droides i a crear el teu propi joc
             d'Star Wars en una galàxia molt, molt llunyana.
           description: Aprèn a programar droides i a crear el teu propi joc d'Star
             Wars en una galàxia molt, molt llunyana.
           Hour of Code 2015: Hora del codi 2015
         starwarsblocks:
-          title: 'Star Wars: Construcció d''una galàxia amb codi'
+          title: 'Star Wars: Construint una galàxia amb codi'
           description_short: Aprèn a programar droides i a crear el teu propi joc
             d'Star Wars en una galàxia molt, molt llunyana.
           description: Aprèn a programar droides i a crear el teu propi joc d'Star
@@ -1637,7 +1637,7 @@
           Craft: Craft
         mc:
           title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
+          description_short: Explora el món de Minecraft a través del codi
           description: Use blocks of code to take Steve or Alex on an adventure through
             this Minecraft world
           Hour of Code 2015: Hora del codi 2015

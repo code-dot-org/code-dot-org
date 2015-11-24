@@ -28,7 +28,7 @@
     and programming concepts in this follow-up course.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
-  hoc2014_students: Students
+  hoc2014_students: සිසුන්
   hoc2014_try: එය උත්සහ කරන්න
   hoc2014_teachers: ගුරුවරුන්
   hoc2014_host: Host it
@@ -258,7 +258,7 @@
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: '# served'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
-  homepage_slot_text_title_students: Students
+  homepage_slot_text_title_students: සිසුන්
   homepage_slot_text_blurb_students: Explore all of our tutorials
   homepage_slot_text_link_codestudio: Try Code Studio
   homepage_slot_text_link_local: Find a local class
@@ -544,12 +544,12 @@
   dashboard_sections_jumbotron_instruction: Create new sections and add students to
     them. Sections help you organize students into smaller groups so you can track
     their progress and manage their accounts.
-  dashboard_sections_table_section: Section
+  dashboard_sections_table_section: අංශය
   dashboard_sections_table_secret: Login Type
-  dashboard_sections_table_grade: Grade
-  dashboard_sections_table_course: Course
-  dashboard_sections_table_students: Students
-  dashboard_sections_table_code: Section Code
+  dashboard_sections_table_grade: ශේණිය
+  dashboard_sections_table_course: පාඨමාලාව
+  dashboard_sections_table_students: සිසුන්
+  dashboard_sections_table_code: අංශ කේතය
   dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
     students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
@@ -574,8 +574,8 @@
   dashboard_students_progress: Progress
   dashboard_students_age: වයස
   dashboard_students_gender: ලිංගභේදය
-  dashboard_students_male: Male
-  dashboard_students_female: Female
+  dashboard_students_male: පිරිමි
+  dashboard_students_female: ගැහැණු
   dashboard_students_secret: Secret
   dashboard_students_password: මුර පදය
   dashboard_students_username: 'Username: %{student_username}'
@@ -1372,7 +1372,7 @@
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: ඉගිලෙන්න
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art

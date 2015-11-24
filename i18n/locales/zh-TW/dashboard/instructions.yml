@@ -272,9 +272,7 @@ zh:
       2-3 Bee Loops 13_instruction: |
         Assessment: Use the repeat block to collect
         all of the nectar.
-      2-3 Bee Loops 1A_instruction: |
-        Hi, I'm a bee. Can you help me collect the
-        nectar from these flowers? 
+      2-3 Bee Loops 1A_instruction: Hi 我是蜜蜂。你能幫助我從這些花朵中收集花蜜嗎？
       2-3 Bee Loops 2_instruction: |
         Use a loop to collect the nectar and make the
         honey.
@@ -419,7 +417,7 @@ zh:
         This rectangular flower bed has a perimeter of 600.
         The long side has a length of 200. Draw the rectangle.
       4-5 Artist 4_instruction: 一個圓有多少度？藉由迴圈來創造一個有顏色的圓。
-      4-5 Artist 5_instruction: What angle do you use?
+      4-5 Artist 5_instruction: 你使用的是那個角度呢？
       4-5 Artist 6_instruction: |
         This equilateral triangle has angles of 60, 60,
         and 60 degrees. Each side is 200 pixels. Complete the drawing.

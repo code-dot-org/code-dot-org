@@ -232,7 +232,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "turnTooltip":function(d){return "මාව වමට හෝ දකුණට අංශක 90 කින් හරවන්න."},
 "uncheckedCloudError":function(d){return "මල් හෝ මී වද ඇත්දැයි සියලුම වලාකුළු පරීක්ෂා කිරීමට වග බලා ගන්න."},
 "uncheckedPurpleError":function(d){return "මල්පැණි ඇත්දැයි සියලුම දම් පාට මල් පරීක්ෂා කිරීමට වග බලා ගන්න"},
-"whileMsg":function(d){return "while"},
+"whileMsg":function(d){return "එතෙක්"},
 "whileTooltip":function(d){return "Repeat the enclosed actions until finish point is reached."},
 "word":function(d){return "වචනය සොයන්න"},
 "yes":function(d){return "ඔව්"},

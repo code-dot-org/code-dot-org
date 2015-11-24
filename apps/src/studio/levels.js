@@ -2377,12 +2377,13 @@ levels.js_hoc2015_score =
   },
   'startBlocks': [
     'function whenGetRebelPilot() {',
-    '  playSound("R2-D2sound1");',
+    '  playSound("R2-D2random");',
     '}',
     ].join('\n'),
   paramRestrictions: {
     playSound: {
       'random': true,
+      'R2-D2random': true,
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
@@ -2499,6 +2500,7 @@ levels.js_hoc2015_win_lose = {
   paramRestrictions: {
     playSound: {
       'random': true,
+      'R2-D2random': true,
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
@@ -2602,19 +2604,22 @@ levels.js_hoc2015_add_characters = {
     'addCharacter("PufferPig");',
     '',
     'function whenGetPufferPig() {',
-    '  playSound("PufferPigSound1");',
+    '  playSound("PufferPigRandom");',
     '  addPoints(1000);',
     '}',
     ].join('\n'),
   paramRestrictions: {
     playSound: {
       'random': true,
+      'R2-D2random': true,
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
       'R2-D2sound4': true,
+      'PufferPigRandom': true,
       'PufferPigSound1': true,
-      'PufferPigSound2': true
+      'PufferPigSound2': true,
+      'PufferPigSound3': true
     }
   },
   'sortDrawOrder': true,
@@ -2702,7 +2707,7 @@ levels.js_hoc2015_chain_characters = {
     'addCharacter("Tauntaun");',
     '',
     'function whenGetTauntaun() {',
-    '  playSound("TauntaunSound4");',
+    '  playSound("TauntaunRandom");',
     '  addPoints(50);',
     '',
     '}',
@@ -2710,14 +2715,17 @@ levels.js_hoc2015_chain_characters = {
   paramRestrictions: {
     playSound: {
       'random': true,
+      'R2-D2random': true,
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
       'R2-D2sound4': true,
+      'TauntaunRandom': true,
       'TauntaunSound1': true,
       'TauntaunSound2': true,
       'TauntaunSound3': true,
       'TauntaunSound4': true,
+      'MynockRandom': true,
       'MynockSound1': true,
       'MynockSound2': true,
       'MynockSound3': true,
@@ -2754,9 +2762,13 @@ levels.js_hoc2015_chain_characters = {
     {
       'id': 'playlab:js_hoc2015_chain_characters:calloutPlaceTwoWhenTauntaun',
       'element_id': '.droplet-gutter-line:nth-of-type(9)',
+      'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content' : {
           'text': msg.calloutPlaceTwoWhenTauntaun(),
+        },
+        'hide': {
+          'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top left',
@@ -2794,10 +2806,12 @@ levels.js_hoc2015_multiply_characters = {
   paramRestrictions: {
     playSound: {
       'random': true,
+      'R2-D2random': true,
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
       'R2-D2sound4': true,
+      'MouseDroidRandom': true,
       'MouseDroidSound1': true,
       'MouseDroidSound2': true,
       'MouseDroidSound3': true
@@ -2887,26 +2901,33 @@ levels.js_hoc2015_change_setting = {
   paramRestrictions: {
     playSound: {
       'random': true,
+      'C-3POrandom': true,
       'C-3POsound1': true,
       'C-3POsound2': true,
       'C-3POsound3': true,
       'C-3POsound4': true,
+      'R2-D2random': true,
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
       'R2-D2sound4': true,
+      'PufferPigRandom': true,
       'PufferPigSound1': true,
       'PufferPigSound2': true,
       'PufferPigSound3': true,
+      'TauntaunRandom': true,
       'TauntaunSound1': true,
       'TauntaunSound2': true,
       'TauntaunSound3': true,
+      'MouseDroidRandom': true,
       'MouseDroidSound1': true,
       'MouseDroidSound2': true,
       'MouseDroidSound3': true,
+      'MynockRandom': true,
       'MynockSound1': true,
       'MynockSound2': true,
       'MynockSound3': true,
+      'ProbotRandom': true,
       'ProbotSound1': true,
       'ProbotSound2': true,
       'ProbotSound3': true,
@@ -3063,7 +3084,7 @@ levels.js_hoc2015_event_free = {
     'setMap("circle");',
     'setDroid("R2-D2");',
     'setDroidSpeed("normal");',
-    'playSound("R2-D2sound5");',
+    'playSound("R2-D2random");',
     'function whenUp() {',
     '  goUp();',
     '}',
@@ -3126,7 +3147,8 @@ levels.js_hoc2015_event_free = {
     sharingText: msg.hoc2015_shareGame
   },
   disablePrinting: true,
-  disableSaveToGallery: true
+  disableSaveToGallery: true,
+  playStartSound: false
 };
 
 levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
@@ -3284,7 +3306,7 @@ levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   },
   startBlocks:
     '<block type="studio_whenTouchGoal" deletable="false"> \
-      <next><block type="studio_playSound"><title name="SOUND">R2-D2sound1</title></block> \
+      <next><block type="studio_playSound"><title name="SOUND">R2-D2random</title></block> \
       </next></block>',
   toolbox:
     tb('<block type="studio_playSound"></block> \
@@ -3354,7 +3376,7 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
       <title name="VALUE">pufferpig</title> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">PufferPigSound1</title> \
+       <block type="studio_playSound"><title name="SOUND">PufferPigRandom</title> \
         <next> \
          <block type="studio_addPoints"><title name="VALUE">1000</title></block> \
         </next> \
@@ -3415,7 +3437,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="180"> \
       <title name="VALUE">tauntaun</title> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">TauntaunSound4</title> \
+       <block type="studio_playSound"><title name="SOUND">TauntaunRandom</title> \
         <next> \
          <block type="studio_addPoints"><title name="VALUE">50</title></block> \
         </next> \
@@ -3504,9 +3526,9 @@ levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
           <next> \
            <block type="studio_addCharacter"><title name="VALUE">"rebelpilot"</title> \
             <next> \
-             <block type="studio_setBackground"><title name="VALUE">"random"</title> \
+             <block type="studio_setBackground"><title name="VALUE">random</title> \
               <next> \
-               <block type="studio_setMap"><title name="VALUE">"random"</title></block> \
+               <block type="studio_setMap"><title name="VALUE">random</title></block> \
               </next> \
              </block> \
             </next> \
@@ -3517,10 +3539,8 @@ levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
        </block> \
       </next> \
      </block>',
-  // TODO: create setDroid block to improve the readability of the block?
-  // TODO: skin override of playSound dropdown (with paramsList filtering & random)
   toolbox:
-    tb('<block type="studio_setSprite"><title name="VALUE">"C-3PO"</title></block> \
+    tb('<block type="studio_setSprite"><title name="VALUE">C-3PO</title></block> \
         <block type="studio_setDroidSpeed"></block> \
         <block type="studio_setBackground"></block> \
         <block type="studio_setMap"></block> \
@@ -3567,7 +3587,7 @@ levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
             <next> \
              <block type="studio_setDroidSpeed"><title name="VALUE">normal</title> \
               <next> \
-               <block type="studio_playSound"><title name="SOUND">R2-D2sound5</title></block> \
+               <block type="studio_playSound"><title name="SOUND">R2-D2random</title></block> \
               </next> \
              </block> \
             </next> \

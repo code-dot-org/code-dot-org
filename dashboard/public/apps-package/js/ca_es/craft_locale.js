@@ -172,7 +172,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockTypeClay":function(d){return "argila"},
 "blockTypeClayHardened":function(d){return "argila endurida (maons)"},
 "blockTypeCobblestone":function(d){return "empedrat"},
-"blockTypeDirt":function(d){return "dirt"},
+"blockTypeDirt":function(d){return "terra"},
 "blockTypeDirtCoarse":function(d){return "coarse dirt"},
 "blockTypeEmpty":function(d){return "buit"},
 "blockTypeFarmlandWet":function(d){return "farmland"},

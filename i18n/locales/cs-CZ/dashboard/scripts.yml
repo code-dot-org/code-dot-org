@@ -28,7 +28,7 @@ cs:
           title: Kurz 1
           Artist 2: Umělec 2
           Happy Maps: Šťastné mapy
-          Move it, Move it: Přesuň to, Přesuň to
+          Move it, Move it: Pohyb, pohyb
           "Real-life Algorithms: Plant a Seed": 'Algoritmy ze života: Zasadit semínko'
           Building a Foundation: Budování nadace
           Getting Loopy: Bláznit
@@ -1165,7 +1165,7 @@ cs:
           description: Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
           Happy Maps: Šťastné mapy
-          Move it, Move it: Přesuň to, Přesuň to
+          Move it, Move it: Pohyb, pohyb
           "Real-life Algorithms: Plant a Seed": 'Algoritmy ze života: Zasadit semínko'
           Graph Paper Programming: Programování Na Milimetrovém Papíru
           Building a Foundation: Budování nadace
@@ -1458,12 +1458,12 @@ cs:
           description: Vytvoř příběh nebo udělej hru s Play Lab žvýkačky!
           Gumball Play Lab: Žvýkačka Play Lab
         starwars:
-          title: 'Star Wars: Budování Galaxy s kódem'
+          title: 'Hvězdné války: Budování galaxie s kódem'
           description_short: Nauč se programovat droidy a vytvořit si vlastní hru Star Wars v galaxii daleko, daleko pryč.
           description: Nauč se programovat droidy a vytvořit si vlastní hru Star Wars v galaxii daleko, daleko pryč.
           Hour of Code 2015: Hodina kódu 2013
         starwarsblocks:
-          title: 'Star Wars: Budování Galaxy s kódem'
+          title: 'Hvězdné války: Budování galaxie s kódem'
           description_short: Nauč se programovat droidy a vytvořit si vlastní hru Star Wars v galaxii daleko, daleko pryč.
           description: Nauč se programovat droidy a vytvořit si vlastní hru Star Wars v galaxii daleko, daleko pryč.
           Hour of Code 2015: Hodina kódu 2013
