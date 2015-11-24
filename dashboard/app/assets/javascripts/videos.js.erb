@@ -116,7 +116,7 @@ function showVideoDialog(options, forceShowVideo) {
     event : 'click touchend',
     activate: tabHandler,
     create: tabHandler,
-    active: (lastTab !== null) ? lastTab : 0  // Set starting tab.
+    active: 0  // Set starting tab.
   });
 
   var download = $('<a/>').append($('<img src="<%= asset_path 'download_button.png' %>"/>'))
