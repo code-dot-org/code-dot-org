@@ -128,13 +128,8 @@ class ActivitiesController < ApplicationController
 
     current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
 
-    # Create the activity. If saving the gallery, we create it synchronously so that
-    # the activity_id is known for the GalleryActivity, otherwise async creation is allowed.
-    logger.info " solved=#{solved}"
-    logger.info " @level.free_play=#{ @level.free_play}"
-    logger.info " @level.impressive=#{@level.impressive}"
-
-    attributes = {
+    # Create the activity.
+     attributes = {
         user: current_user,
         level: @level,
         action: solved, # TODO I think we don't actually use this. (maybe in a report?)
@@ -144,8 +139,11 @@ class ActivitiesController < ApplicationController
         time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
         level_source_id: @level_source.try(:id)
     }
+    # Save the activity synchronously if the level is or might be saved to the gallery (for which
+    # the activity.id is required.)
     synchronous_save = solved &&
-        (params[:save_to_gallery] == 'true' || @level.free_play.to_bool || @level.impressive.to_bool)
+        (params[:save_to_gallery] == 'true' || @level.free_play.to_bool ||
+            @level.impressive.to_bool || test_result == ActivityConstants.FREE_PLAY_RESULT)
     logger.info " synchronous_save=#{synchronous_save}"
     if synchronous_save
       @activity = Activity.create!(attributes)
