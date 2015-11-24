@@ -2741,7 +2741,9 @@ Studio.execute = function() {
                                      'SPRITE2');
   }
 
-  Studio.playSound({ soundName: 'start' });
+  if (utils.valueOr(level.playStartSound, true)) {
+    Studio.playSound({ soundName: 'start' });
+  }
 
   studioApp.reset(false);
 
