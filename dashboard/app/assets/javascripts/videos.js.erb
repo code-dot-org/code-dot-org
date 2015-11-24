@@ -236,7 +236,7 @@ function youTubeAvailabilityEndpointURL() {
 function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   var fallbackPlayerID = 'fallbackPlayer' + Date.now();
   var playerCode =
-      '<div><video id="'+ fallbackPlayerID +'" ' +
+      '<div id="video"><video id="'+ fallbackPlayerID +'" ' +
       'width="' + playerWidth + '" height="' + playerHeight + '" ' +
       (videoInfo.autoplay ? 'autoplay ' : '') +
       'class="video-js vjs-default-skin vjs-big-play-centered" ' +
