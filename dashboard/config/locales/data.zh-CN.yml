@@ -315,12 +315,10 @@
         studio_playlab_8: 当独角兽跑进该向导中时，添加一个模块来得分和一个模块播放声音，然后用箭头移动它们直到你得分，好吗？
         studio_playlab_9: 为这次外星人入侵事件设置背景画面，并通过改变空间机器人的速度来使其接触外星人。通过方向键来接触外星人，并警示其它人。
         studio_playlab_10: 创建你自己的游戏。当你完成后时，单击Finish（完成），让朋友在他们手机上试试你的游戏。
-        studio_iceage_1: Manny wants to say "hello" - can you help him?
-        studio_iceage_2: Diego (actor 1) and Granny (actor 2) would like to say "hello"
-          to each other. Can you help them by using the "say" block twice?
-        studio_iceage_3: Can you help Scrat get to the flag?
-        studio_iceage_4: Can you help Scrat (actor 1) get to Granny (actor 2) and
-          play a sound when he gets there?
+        studio_iceage_1: 曼尼想要说"你好"— — 你能帮助他吗?
+        studio_iceage_2: Diego (演员1）和奶奶（演员2）想向对方说 "你好"。使用“说” 块，你能帮他们吗？
+        studio_iceage_3: 你能帮Scrat到达旗子的位置吗？
+        studio_iceage_4: 你能帮Scrat (演员1） 到达奶奶（演员2）的位置并且播放出声音当他到那的时候？
         studio_iceage_5: Can you help Sid say "greetings" when it is clicked? Don’t
           forget to click it after you click Run
         studio_iceage_6: Can you help Diego move around using the up/down/right/left

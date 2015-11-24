@@ -31,7 +31,7 @@ ja-JP:
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_search_search: 検索
   csedweek_map_search_reset: リセット
   csedweek_map_legend_title: Legend
   csedweek_map_legend_event: Hour of Code Event
@@ -270,7 +270,7 @@ ja-JP:
   class_submission_languages_other: その他の言語
   inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
   starwars_subtitle: スターウォーズでプログラミング
-  starwars_javascript_title: JavaScript
+  starwars_javascript_title: Java Script
   starwars_javascript_description: ブロックと、JavaScriptを使います。
   starwars_javascript_specs: 英語のみ | 最新のブラウザー | 11歳以上向け
   starwars_javascript_start_button: 今すぐ試す
@@ -530,7 +530,7 @@ ja-JP:
   dashboard_faq_k5: よくある質問（幼稚園/小学生対象コース）
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: 'Hour of Codeはこちら - 12月8日 - 14日です！'
   code_sign_up: コンピュタサイエンス教育週間の間に参加する
   learn_more: さらに詳しく
@@ -547,6 +547,7 @@ ja-JP:
   hoc2014_try_scrat: アングリバード, PvZ, そしてスクラット
   hoc2014_try_frozen: 「アナと雪の女王」から、アナとエルザと一緒のアーティスト
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: あなたの言語のチュートリアル
@@ -619,6 +620,8 @@ ja-JP:
   projguts_name: グー、パー、チョキ
   hourofcode_name: 新しいcode.or/hocのプレイスホルダ
   playlab_name: プレイラボ
+  infinity_name: インフィニティ プレイ ラボ
+  artist_name: アーティスト
   codeorg_gradelevel: 4才-104才
   codeintl_gradelevel: 4才-104才
   thinkersmithspanish_gradelevel: Por todos
@@ -660,6 +663,8 @@ ja-JP:
   frozen_gradelevel: 8 才以上
   starwars_gradelevel: 6歳以上
   playlab_gradelevel: 4才-104才
+  infinity_gradelevel: 4才-104才
+  artist_gradelevel: 4才-104才
   codeorg_platformtext: 最新ブラウザ、スマート フォン、タブレット
   codeintl_platformtext: 最新ブラウザ、スマート フォン、タブレット
   thinkersmithspanish_platformtext: アンプラグド（コンピュータを使わず学ぶ方法）
@@ -744,10 +749,12 @@ ja-JP:
   thinkersmith2_shortdescription: コンピュータが情報を表現するために１秒と０秒をどう使うのか学ぶ
   kodableunplugged_shortdescription: 楽しいアンプラグド（コンピュタを使わずに学ぶ方法）での演習
   projguts_shortdescription: グー/パー/チョキを題材にモデリングとシミュレーションを試す
-  hourofcode_shortdescription: 新しいcode.or/hocのプレイスホルダ
+  hourofcode_shortdescription: マークザッカーバーグとアングリーバードと一緒にコーディングを学ぼう！
   frozen_shortdescription: コードを使って、アナとエルザと一緒に魔法と氷の美しさを探検しましょう
   starwars_shortdescription: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
   playlab_shortdescription: プレイラボでお話やゲームを作りましょう！
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
+  artist_shortdescription: アーティストでかっこいい絵やデザインを描きましょう！
   codeorg_longdescription: ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています
   codeintl_longdescription: ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています
   thinkersmithspanish_longdescription: '"ロボット語"を使用して、事前に打ち合わせすることなく、お互いに課題を解決する方法を探ります。このレッスンでは、デバッグという非常に重要なスキルと同時に、シンボルとアクションの関連について学びます。'
@@ -979,3 +986,11 @@ ja-JP:
   compatibility_https_header: HTTPS を有効にしてください
   compatibility_https_message: "Code.org では、セキュリティを強化するため、%{https_date} をもって HTTPS に切り替えます。それ以降は、HTTPS を有効にしない限り Code.org にアクセスできなくなります。HTTPS を有効にする方法については<a href='%{it_requirements_url}'>こちらをクリック</a>してください。"
   compatibility_https_hide_this_warning: この警告を非表示
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: パタパタ
+  infinity_shortcode: inf
+  playlab_shortcode: 再生する
+  artist_shortcode: art

@@ -310,25 +310,25 @@ el:
         studio_playlab_8: Μπορείς να προσθέσεις ένα μπλοκ ώστε να σκοράρεται ένας πόντος και ένα μπλοκ ώστε να ακούγεται ένας ήχος όταν ο μονόκερος πέσει πάνω στο μάγο, και μετά να τον μετακινείς με τα βελάκια μέχρι να σκοράρεις πόντο;
         studio_playlab_9: Φτιάξτε το φόντο για αυτή την εισβολή εξωγήινων και βοηθήστε το διαστημικό ρομπότ Spacebot να φτάσει γρηγορότερα στον εξωγήινο αλλάζοντας την ταχύτητά του. Μετά, μετακινήστε τον με τα βελάκια για να φτάσετε στο Spacebot και να ειδοποιήσετε όλους τους άλλους
         studio_playlab_10: 'Δημιούργησε το δικό σου παιχνίδι. Όταν το κάνεις, πάτα "Τέλος" κι άσε τους φίλους σου να δοκιμάσουν το παιχνίδι στα κινητά τους.'
-        studio_iceage_1: 'Manny wants to say "hello" - can you help him?'
-        studio_iceage_2: 'Diego (actor 1) and Granny (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_iceage_3: Can you help Scrat get to the flag?
-        studio_iceage_4: Can you help Scrat (actor 1) get to Granny (actor 2) and play a sound when he gets there?
-        studio_iceage_5: 'Can you help Sid say "greetings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_iceage_6: Can you help Diego move around using the up/down/right/left arrow keys to get to all the flags?
-        studio_iceage_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Sid move right and left repeatedly?'
-        studio_iceage_8: Can you add a block to score a point and a block to play a sound when Sid runs into Manny, and then move him with the arrows until you score?
-        studio_iceage_9: Set the background for this ice age and help Sid get to Granny faster by changing its speed. Then move him with the arrow keys to get to Sid and alert everyone else.
+        studio_iceage_1: 'Ο Μάνι θέλει να πει "Γεια" - μπορείτε να τον βοηθήσετε;'
+        studio_iceage_2: 'Ο Diego (ηθοποιός 1) και η γιαγιά (ηθοποιός 2) θα ήθελαν να πουν "Γεια" μεταξύ τους. Μπορείτε να τους βοηθήσετε χρησιμοποιώντας το μπλοκ "πες" δύο φορές;'
+        studio_iceage_3: Μπορείτε να βοηθήσετε τον Scrat να πάει στη σημαία;
+        studio_iceage_4: Μπορείτε να βοηθήσετε τον Scrat (ηθοποιός 1) να φτάσει στη γιαγιά (ηθοποιός 2) και να παίξει έναν ήχο όταν πάει εκεί;
+        studio_iceage_5: 'Μπορείτε να βοηθήσετε το Σιντ πει "Χαιρετίσματα" όταν πατηθεί; Μην ξεχάσετε να πατήσετε κλικ αφού όμως κάνετε κλικ στο Run'
+        studio_iceage_6: Μπορείτε να βοηθήσετε το Diego να μετακινηθεί χρησιμοποιώντας τα πλήκτρα βέλους πάνω/κάτω/αριστερά/δεξιά για να πάει σε όλες τις σημαίες;
+        studio_iceage_7: 'Η εντολή "επανάλαβε για πάντα" επιτρέπει να εκτελείς κώδικα συνεχώς. Μπορείς να της κολλήσεις και άλλα μπλοκ ώστε να βοηθήσεις το Σιντ να κινείται διαρκώς δεξιά και αριστερά;'
+        studio_iceage_8: Μπορείτε να προσθέσετε ένα μπλοκ και να σκοράρετε ένα πόντο και ένα μπλοκ για να παίξει έναν ήχο όταν ο Sid τρέχει στο Μάνι, και στη συνέχεια να τον μετακινήσετε με τα βέλη μέχρι να σκοράρετε;
+        studio_iceage_9: Ρυθμίσετε το βάθος για την εποχή των παγετώνων και βοηθήστε το Sid να φτάσει στη γιαγιά πιο γρήγορα με την αλλαγή ταχύτητας. Στη συνέχεια να τον μετακινήσετε με τα πλήκτρα βέλους για να φτάσετε στο Sid και προειδοποιήσει όλους τους άλλους.
         studio_iceage_10: 'Δημιούργησε το δικό σου παιχνίδι. Όταν το κάνεις, πάτα "Τέλος" κι άσε τους φίλους σου να δοκιμάσουν το παιχνίδι στα κινητά τους.'
-        studio_gumball_1: 'Anais wants to say "hello" - can you help her?'
-        studio_gumball_2: 'Darwin (actor 1) and Gumball (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_gumball_3: Can you help Banana Joe get to the flag?
-        studio_gumball_4: Can you help Gumball (actor 1) get to Darwin (actor 2) and play a sound when he gets there?
-        studio_gumball_5: 'Can you help Antony say "greetings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_gumball_6: Can you help Darwin move around using the up/down/right/left arrow keys to get to all the flags?
-        studio_gumball_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Antony move right and left repeatedly?'
-        studio_gumball_8: Can you add a block to score a point and a block to play a sound when Banana Joe runs into Antony, and then move him with the arrows until you score?
-        studio_gumball_9: Set the background for this space invasion and help Nicole get to Penny faster by changing its speed. Then move him with the arrow keys to get to Nicole and alert everyone else.
+        studio_gumball_1: 'Η Anais θέλει να πει ένα "Γεια σας" - μπορείτε να τη βοηθήσετε;'
+        studio_gumball_2: 'Ο Darwin (ηθοποιός 1) και ο Gumball (ηθοποιός 2) θα ήθελαν να πουν "Γειά" ο ένας στον άλλο. Μπορείτε να τους βοηθήσετε χρησιμοποιώντας το μπλοκ "πες" δυο φορές;'
+        studio_gumball_3: Μπορείτε να βοηθήσετε το μπανάνα Τζο να πάει στη σημαία;
+        studio_gumball_4: Μπορείτε να βοηθήσετε τον Gumball (ηθοποιός 1) να φτάσει στον Darwin (ηθοποιός 2) και να παίξει έναν ήχο όταν αυτό συμβεί;
+        studio_gumball_5: 'Μπορείτε να βοηθήσετε τον Άντονι να πει "Χαιρετίσματα" όταν πατηθεί; Μην ξεχάσετε να πατήσετε κλικ αφού όμως πρώτα κάνετε κλικ στο Run'
+        studio_gumball_6: Μπορείτε να βοηθήσετε το Darwin να μετακινηθεί χρησιμοποιώντας τα πλήκτρα βέλους πάνω/κάτω/αριστερά/δεξιά για να πάει σε όλες τις σημαίες;
+        studio_gumball_7: 'Η εντολή "επανάλαβε για πάντα" επιτρέπει να εκτελείς κώδικα συνεχώς. Μπορείς να της κολλήσεις και άλλα μπλοκ ώστε να βοηθήσεις τον Άντονι να κινείται διαρκώς δεξιά και αριστερά;'
+        studio_gumball_8: Μπορείτε να προσθέσετε ένα μπλοκ για να σκοράρετε ένα πόντο και ένα μπλοκ για να παίξει έναν ήχο όταν ο Μπανάνα Τζο τρέχει στον Άντονι, και στη συνέχεια να τον μετακινήτε με τα βέλη μέχρι να σκοράρετε;
+        studio_gumball_9: Ρυθμίσετε το χώρο για αυτή την εισβολή από το διάστημα και βοηθήστε τη Nicole να φτάσει στη Penny πιο γρήγορα με την αλλαγή της ταχύτητας. Στη συνέχεια να τον μετακινήσετε με τα πλήκτρα βέλους για να φτάσει στη Nicole και να προειδοποιήσει όλους τους άλλους.
         studio_gumball_10: 'Δημιούργησε το δικό σου παιχνίδι. Όταν το κάνεις, πάτα "Τέλος" κι άσε τους φίλους σου να δοκιμάσουν το παιχνίδι στα κινητά τους.'
         studio_full_sandbox: 'Δημιούργησε το δικό σου παιχνίδι. Όταν το κάνεις, πάτα "Τέλος" κι άσε τους φίλους σου να δοκιμάσουν το παιχνίδι στα κινητά τους.'
         studio_k1_1: 'Μπορείς να κάνεις αυτό το σκυλί να λέει "Γεια χαραντάν κόσμε";'

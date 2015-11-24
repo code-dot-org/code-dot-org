@@ -60,7 +60,7 @@ ___ * ___
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| ___ | any type | Yes | The operands can be a number, or the number returned by a function, or the numeric result of the evaluation of an expression. |
+| ___ | any | Yes | The operands can be a number, or a variable containing a number, or the number returned by a function, or the numeric result of the evaluation of an expression. |
 
 [/parameters]
 

@@ -157,7 +157,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "and":function(d){return "és"},
 "backToPreviousLevel":function(d){return "Vissza az előző szintre"},
 "blocklyMessage":function(d){return "Blockly"},
-"blocks":function(d){return "blokk"},
+"blocks":function(d){return "blokkok"},
 "booleanFalse":function(d){return "hamis"},
 "booleanTrue":function(d){return "igaz"},
 "catActions":function(d){return "Műveletek"},

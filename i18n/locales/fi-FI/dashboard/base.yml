@@ -224,6 +224,7 @@ fi:
         playlab: Tee sovellus
         artist: Piirrä jotakin
         calculate: Calculate Something
+        applab: Tee sovellus
     user:
       classroom: Opettajan kotisivu
       district_dashboard: Koulupiirin hallintapaneeli

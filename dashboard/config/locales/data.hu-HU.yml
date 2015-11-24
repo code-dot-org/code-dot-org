@@ -893,12 +893,12 @@
         Infinity_repeat_callout: Ide húzz be Mozgasd blokkokat
         craft_run_button_callout: Nyomd meg a „Futtatás” gombot, hogy kipróbáld a
           programodat
-        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
-          the other block
-        craft_callout_preplaced: We've put some blocks here to get you started
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can
-          you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command
-          to move forward?
+        craft_drag_block_callout: Vonszold ide az előrelépni blokkot és kattintsd
+          a másik blokk alá
+        craft_callout_preplaced: Idetettünk néhány blokkot kezdetnek
+        craft_inside_repeat: Ismételd a blokkokat úgy, hogy ide helyezed őket
+        craft_callout_preplaced_house: Ez a kód megkezdi a házad építését. Be tudod
+          fejezni?
+        craft_what_is_iron: Bányászd ki a vasat!
+        craft_callout_moveforward: Ez a kód leellenőrzi a lávát, hozzá tudsz adni
+          egy utasítást, hogy előrelépjen?

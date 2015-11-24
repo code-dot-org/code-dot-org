@@ -317,7 +317,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "exampleErrorMessage":function(d){return common_locale.v(d,"functionName")+" fonksiyonunda bir ya da daha fazla örnekte düzeltme yapılmasına ihtiyaç vardırç Tanımla uyuştuğuna emin olun ve soruyu cevaplandırın."},
 "examplesFailedOnClose":function(d){return "Bir veya daha fazla örneğiniz tanımınızla uyuşmuyor. Örneklerinizi kapatmadan önce kontrol ediniz"},
 "extraTopBlocks":function(d){return "Bağımsız bloğa sahipsin."},
-"extraTopBlocksWhenRun":function(d){return "Bağlanmamış bloklarınız var. Bunları \"değerlendir\" bloğuna bağlamak mı istiyorsunuz?"},
+"extraTopBlocksWhenRun":function(d){return "Bağlanmamış komutlarınız var. Bunları \"Çalıştığı zaman\" komutuna mı bağlamak istemiştin?"},
 "finalStage":function(d){return "Son aşamayı bitirdiniz. Tebrikler!"},
 "finalStageTrophies":function(d){return "Tebrikler! Son aşamayı bitirerek "+common_locale.p(d,"numTrophies",0,"tr",{"one":"bir ganimet","other":common_locale.n(d,"numTrophies")+" ganimet"})+" kazandınız."},
 "finish":function(d){return "Bitiş"},

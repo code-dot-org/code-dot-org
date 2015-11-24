@@ -260,6 +260,7 @@
         playlab: Lag ein app
         artist: Teikn noko
         calculate: Calculate Something
+        applab: Lag ein app
     user:
       classroom: Lærar heimeside
       district_dashboard: Distrikt dashboard
@@ -356,7 +357,7 @@
       section: Seksjon
       example: Løysingsframlegg
       example_with_number: Løysingsframlegg %{solution_number}
-      submitted_on: Sendt inn %{date}
+      submitted_on: 'Sendt inn:'
       unsubmit: Trekk tilbake
   user:
     email_confirm_needed: 'E-postadressa er ikkje stadfesta:'
@@ -412,7 +413,7 @@
       til $1000 i klasseromsmidler.'
     tryfirst: 'Eller du kan prøve først og registrere deg seinare:'
     trynow: Prøv no
-    add_hint_help: Ver snitt og hjelp oss med å legge inn smarte hint i Code.org-innføringskursa
+    add_hint_help: Ver snill og hjelp oss med å legge inn smarte hint i Code.org-innføringskursa
     20hour_overview: Dette kurset på 20 timar introduserer grunnleggjande informasjonsvitskap
       og prinsipp frå programmering. Kurset er utvikla for bruk i 5. klasse og oppover,
       men det er morosamt å lære for alle aldersgruppe.

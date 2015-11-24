@@ -222,6 +222,7 @@ el:
         playlab: Δημιουργήστε μια εφαρμογή
         artist: Ζωγραφίστε κάτι
         calculate: Calculate Something
+        applab: Δημιουργήστε μια εφαρμογή
     user:
       classroom: H Αρχική Σελίδα του Εκπαιδευτικού
       district_dashboard: Περιοχή Ταμπλό
@@ -480,10 +481,10 @@ el:
       title: Star Wars
     infinity:
       title: αιώνιο εργαστήρι παιχνιδιού
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα.
   gallery:
     students_drew_these_with_code: Οι μαθητές τα σχεδίασαν αυτά με κώδικα!
     students_made_these_with_code: Οι μαθητές τα δημιούργησαν αυτά με κώδικα!

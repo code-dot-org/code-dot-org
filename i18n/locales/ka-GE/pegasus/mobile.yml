@@ -531,6 +531,7 @@ ka-GE:
   hoc2014_try_scrat: Angry Birds, PvZ და Scrat
   hoc2014_try_frozen: 'ხატეთ "გაყინულის" გმირებთან, ანასა და ელზასთან ერთად'
   carousel_heading_codeorg: Code.org ტუტორიალები
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: მესამე მხარის მიერ მოწოდებული ტუტორიალები
   carousel_heading_third_party: მესამე მხარის მიერ მოწოდებული ტუტორიალები
   carousel_heading_international: ტუტორიალები მშობლიურ ენაზე
@@ -599,6 +600,8 @@ ka-GE:
   projguts_name: ქვა, ქაღალდი, მაკრატელი
   hourofcode_name: შემავსებელი ახალი code.org/hoc-ისთვის
   playlab_name: თამაშების ლაბორატორია
+  infinity_name: თამაშების ლაბორატორია Infinity
+  artist_name: მხატვარი
   codeorg_gradelevel: ასაკი 4-104
   codeintl_gradelevel: ასაკი 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -640,6 +643,8 @@ ka-GE:
   frozen_gradelevel: ასაკი 8+
   starwars_gradelevel: ასაკი 6+
   playlab_gradelevel: ასაკი 4-104
+  infinity_gradelevel: ასაკი 4-104
+  artist_gradelevel: ასაკი 4-104
   codeorg_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   codeintl_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   thinkersmithspanish_platformtext: უსადენო
@@ -718,10 +723,12 @@ ka-GE:
   thinkersmith2_shortdescription: გაიგეთ, როგორ იყენებს კომპიუტერი 1-სა და 0-ს ინფრმაციის გადმოსაცემად
   kodableunplugged_shortdescription: სახალისო სავარჯიშოები კომპიუტერის გარეშე
   projguts_shortdescription: სცადეთ მოდელირება და სიმულაცია ქვა/ქაღალდი/მაკრატლის გამოყენებით
-  hourofcode_shortdescription: შემავსებელი ახალი code.org/hoc-ისთვის
+  hourofcode_shortdescription: ისწავლეთ პროგრამირება მარკ ცუკერბერგთან.. და Аngry Birds-თან ერთად!
   frozen_shortdescription: გამოიყენეთ კოდი და შეუერთდით ანასა და ელზას ყინულის მაგიის აღმოჩენაში.
   starwars_shortdescription: ისწავლეთ დროიდების დაპროგრამება და შექმენით თქვენი საკუთარი ვარსკვლავური ომების თამაში შორეულ გალაქტიკაში.
   playlab_shortdescription: შექმენით ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!
+  infinity_shortdescription: გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად დისნეის Infinity-ს პერსონაჟების მონაწილეობით.
+  artist_shortdescription: დახატეთ მაგარი სურათები და შექმენით დიზაინები მხატვართან ერთად!
   codeorg_longdescription: ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით. ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი, Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლეთ გამეორების ციკლები, თუ-მაშინ დებულებები და ბაზისური ალგორითმები. მისაწვდომია 34 ენაზე.
   codeintl_longdescription: ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით. ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი, Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლეთ გამეორების ციკლები, თუ-მაშინ დებულებები და ბაზისური ალგორითმები. მისაწვდომია 34 ენაზე.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -951,3 +958,11 @@ ka-GE:
   compatibility_https_header: ჩართეთ HTTPS Code.org-ისთვის.
   compatibility_https_message: "უსაფრთხოების დონის ასამაღლებლად %{https_date} გადავდივართ HTTPS -ზე. ამ თარიღის შემდეგ Code.org-ზე ვეღარ შემოხვალთ. <a href='%{it_requirements_url}'>დააჭირეთ აქ</a> და გაიგეთ, როგორ ჩართოთ HTTPS Code.org-ისთვის."
   compatibility_https_hide_this_warning: გაფრთხილების გათიშვა
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: ფრთების ქნევა
+  infinity_shortcode: inf
+  playlab_shortcode: თამაში
+  artist_shortcode: art
