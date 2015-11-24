@@ -22,14 +22,18 @@
   var resizeZoom;
   var scrollwheelOption = false;
   var draggableOption = false;
+  var resizeThrottleTimeout;
 
   $(document).ready(function() {
     initializeMap();
     addGeocomplete();
+    resizeMap();
 
     $(window).resize(function() {
-      resizeMap();
-    }).trigger('resize');
+      // Throttle calling of resizeMap
+      clearTimeout(resizeThrottleTimeout);
+      resizeThrottleTimeout = setTimeout(resizeMap, 500);
+    });
   });
 
   function initializeMap() {
@@ -111,12 +115,21 @@
     var map_zoom = gmap.getZoom();
     var map_center = gmap.getCenter();
 
-    var map_height = map_width / 2;
+    // Max height of map is 2/3 of screen height so user can always scroll.
+    var max_height = $(window).innerHeight() * .65; 
 
     var window_aspect_ratio = $(window).innerHeight() / $(window).innerWidth();
-    if  (window_aspect_ratio > 1) {
-      // Portrait window, so make the map taller and more usable.
-      map_height = $(window).innerHeight() * .70;
+    
+    if  (window_aspect_ratio < 1) {
+      // Landscape window. Use the current 1:2 ratio map size.
+      map_height = map_width / 2;
+
+      // But, make sure this size doesn't exceed our max height.
+       map_height = Math.min(map_height, max_height);
+    } 
+    else {
+      // Portrait window. Just use the max height so that it's taller and more usable.
+      map_height = max_height;
     }
 
     $('#gmap').height(map_height);
