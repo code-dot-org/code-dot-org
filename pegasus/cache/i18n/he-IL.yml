@@ -301,12 +301,12 @@
   starwars_subtitle: לבנות את הגלקסיה באמצעות קוד
   starwars_javascript_title: Javascript
   starwars_javascript_description: השתמשו בבלוקים "גרור ושחרר" ו-JavaScript.
-  starwars_javascript_specs: אנגלית בלבד, לדפדפנים מודרניים, לגילאי 11 ומעלה
-  starwars_javascript_start_button: נסו כעת
+  starwars_javascript_specs: אנגלית בלבד | דפדפנים מודרניים | לגילאי 11 ומעלה
+  starwars_javascript_start_button: נסה כעת
   starwars_blocks_title: בלוקים
-  starwars_blocks_description: השתמשו בבלוקים ב"גרור ושחרר".
-  starwars_blocks_specs: שפות נוספות (בקרוב), דפדפנים מודרניים, סמארטפונים, טאבלטים,
-    לגילאי 6 עד 10
+  starwars_blocks_description: השתמש בבלוקים ב"גרור ושחרר".
+  starwars_blocks_specs: שפות נוספות (בקרוב) | דפדפנים מודרניים | סמארטפונים, טאבלטים
+    | לגילאי 6 עד 10
   starwars_blocks_start_button: נסו כעת
   starwars_watch_videos: לפני שאתם מתחילים, צפו באחד מסרטוני הווידאו הללו
   starwars_speak_languages: האם אתם דוברים שפה נוספת?
@@ -687,7 +687,7 @@
     יש לשדרג<a href="http://browsehappy.com/" target="_blank"> לדפדפן אינטרנט מודרני.</a>
   mobile_devices: הדרכות עבור התקנים ניידים
   frozen_name: Code with Anna and Elsa
-  starwars_name: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד'
+  starwars_name: 'מלחמת הכוכבים: לבנות את הגלקסיה באמצעות קוד'
   codeorg_name: כתוב את תוכנת המחשב הראשונה שלך
   codeintl_name: כתוב את תוכנת המחשב הראשונה שלך
   thinkersmithspanish_name: Mis Amigos Roboticos
