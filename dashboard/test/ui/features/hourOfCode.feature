@@ -79,11 +79,11 @@ Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, s
   And I rotate to landscape
   Then I wait to see a dialog titled "Puzzle 9 of 20"
   And I close the dialog
-  Then element "#qtip-4-content" is visible
+  Then element ".qtip-content:contains('Blocks that are grey')" is visible
   Then I am on "http://studio.code.org/hoc/10?noautoplay=true"
   Then I wait to see a dialog titled "Puzzle 10 of 20"
   And I close the dialog
   Then I am on "http://studio.code.org/hoc/9?noautoplay=true"
   Then I wait to see a dialog titled "Puzzle 9 of 20"
   And I close the dialog
-  Then element "#qtip-4-content" does not exist
+  Then element ".qtip-content:contains('Blocks that are grey')" does not exist
