@@ -15,6 +15,14 @@ module SQS
         @failures.reset
       }
     end
+
+    def as_json
+      {'successes' => @successes.value, 'failures' => @failures.value}
+    end
+
+    def to_s
+      as_json.to_json
+    end
   end
 
   # A thread safe counter.
@@ -45,6 +53,10 @@ module SQS
       @lock.synchronize {
         @value = 0
       }
+    end
+
+    def to_s
+      value
     end
   end
 

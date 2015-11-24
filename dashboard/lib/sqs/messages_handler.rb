@@ -11,18 +11,4 @@ module SQS
     end
   end
 
-  # A message with a body.
-  # We don't expose the full underlying SQS message body to avoid introducing hard dependencies on SQS-specific
-  # features in handlers.
-  class Message
-    attr_reader :body
-
-    def initialize(body)
-      @body = body
-    end
-
-    def to_s
-      body
-    end
-  end
 end
