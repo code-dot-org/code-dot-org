@@ -1,4 +1,4 @@
-name 'CSPPD3-u3 chunk 5 checkin-b'
+name 'CSPPD3-u3 chunk 5 checkin-c'
 skip_sound true
 answer_line true
 success_title "Got it!"
@@ -7,6 +7,8 @@ success_body "Thanks for your response"
 right 'I better understand what these lessons are about'
 right 'My understanding of these lessons has not changed'
 right 'I understand what these lessons are about less than I did before I started' 
+
+
 
 
 markdown <<MARKDOWN
