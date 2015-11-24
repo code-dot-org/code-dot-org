@@ -3,6 +3,12 @@ skip_sound true
 answer_line true
 success_title "Got it!"
 success_body "Thanks for your response"
+
+right 'I better understand what these lessons are about'
+right 'My understanding of these lessons has not changed'
+right 'I understand what these lessons are about less than I did before I started' 
+
+
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
