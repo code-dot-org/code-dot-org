@@ -14,6 +14,7 @@ social:
 max_age: 60
 ---
 -cert_id = params[:i]
+-cert_script = params[:s]
 
 -if cert_id
   -share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"
@@ -56,7 +57,10 @@ max_age: 60
   #toprow
     #hoc-certificate-small.col-50{:style=>"padding:20px; padding-top: 0; box-sizing: border-box"}
       %a{:href=>"/printcertificate", :target=>'_blank'}
-        %img{:src=>"/images/fit-540/hour_of_code_certificate.jpg", :width=>"100%"}
+        - if cert_script == 'mc'
+          %img{:src=>"/images/fit-540/MC_Hour_Of_Code_Certificate.jpg", :width=>"100%"}
+        - else
+          %img{:src=>"/images/fit-540/hour_of_code_certificate.jpg", :width=>"100%"}
 
     #certificate.col-50
       = view :congrats_certificate

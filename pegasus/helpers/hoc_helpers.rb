@@ -58,6 +58,7 @@ def complete_tutorial(tutorial={})
     end
     destination = "http://#{row[:referer]}/congrats?i=#{row[:session]}"
     destination += "&co=#{row[:company]}" unless row[:company].blank?
+    destination += "&s=#{tutorial[:code]}" unless tutorial[:code].blank?
   end
 
   dont_cache
