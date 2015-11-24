@@ -84,5 +84,5 @@
   "reinfFeedbackMsg":"באפשרותך להקיש \"להמשיך לשחק\" לחזור לשחק את המשחק.",
   "replayButton":"שחק שוב",
   "selectChooseButton":"בחר",
-  "tooManyBlocksFail":"פאזל {puzzleNumber} הושלמ. מזל טוב! אפשר גם להשלים את זה עם {numBlocks, ברבים, {1 block} אחד {# blocks} אחרים}."
+  "tooManyBlocksFail":"פאזל {puzzleNumber} הושלמ. מזל טוב! אפשר גם להשלים את זה עם {numBlocks, plural, one {1 block} other {# blocks}}."
 }

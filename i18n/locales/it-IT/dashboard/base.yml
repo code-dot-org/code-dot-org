@@ -223,6 +223,7 @@ it:
         playlab: Costruisci una App
         artist: Disegna qualcosa
         calculate: Calculate Something
+        applab: Costruisci una App
     user:
       classroom: "Cruscotto di Controllo dell'insegnante"
       district_dashboard: Dashboard
@@ -390,9 +391,11 @@ it:
     help_from_html: Siamo particolarmente riconoscenti agli ingegneri di Google, Microsoft, Facebook, Twitter, e molti altri, che hanno aiutato a creare questi corsi.
     help_from_html_old: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno contribuito a creare questi materiali.
     art_from_html: |
-      Ice Age™ & © %{current_year} 20th Century Fox. Tutti i diritti riservati. <br />
-      AngryBirds™ & © 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati. <br/>
-      Plants vs Zombies™ & © %{current_year} Electronic Arts Inc. Tutti i diritti riservati
+      Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. Tutti i diritti riservati.<br />
+      Frozen&#8482; &amp; &copy; %{current_year} Disney. Tutti i diritti riservati.<br />
+      Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Tutti i diritti riservati. <br />
+      AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati. <br />
+      Plants vs Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati'
     powered_by_aws: Eseguito su Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, il logo CODE e Hour of Code&reg; sono marchi registrati di Code.org.'

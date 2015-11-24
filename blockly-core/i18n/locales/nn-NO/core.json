@@ -28,7 +28,7 @@
   "CONTRACT_EDITOR_HEADER": "Designoppskrift",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "bryt ut av løkka",
-  "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "fortsett med neste gjentakelse av løkka",
+  "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "hald fram med neste gjentaking av løkka",
   "CONTROLS_FLOW_STATEMENTS_TOOLTIP_BREAK": "Bryt ut av den gjeldande løkka.",
   "CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE": "Hopp over resten av denne løkka og fortsett med neste gjentakelse.",
   "CONTROLS_FLOW_STATEMENTS_WARNING": "Advarsel: Denne blokka kan berre brukast inne i ei løkke.",

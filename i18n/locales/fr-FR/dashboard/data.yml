@@ -593,6 +593,6 @@ fr:
         craft_drag_block_callout: "Fais glisser un bloc « moveForward(); » et emboite le sous l'autre bloc"
         craft_callout_preplaced: "Nous avons mis quelques blocs ici pour t'aider à démarrer"
         craft_inside_repeat: "Répète des actions en plaçant des blocs à l'intérieur"
-        craft_callout_preplaced_house: Ce code va commencer à construire ta maison. Peux-tu terminer ?
+        craft_callout_preplaced_house: Ce code va commencer la construction de ta maison. Arriveras-tu à le terminer ?
         craft_what_is_iron: Extrais ce fer !
         craft_callout_moveforward: Ce code recherchera de la lave, peux-tu ajouter une commande pour avancer plus ?

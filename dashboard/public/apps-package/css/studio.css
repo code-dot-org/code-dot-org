@@ -119,3 +119,11 @@
 .instructions-markdown details.hoc2015 > p {
   color: #5b6770;
   margin-left: 1em; }
+
+.instructions-markdown .instructionsImageContainer {
+  width: 67px;
+  text-align: center;
+  display: inline-block; }
+  .instructions-markdown .instructionsImageContainer .instructionsImage {
+    height: 35px;
+    vertical-align: text-bottom; }

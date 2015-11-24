@@ -38,6 +38,6 @@ Use blocks of code to take Steve or Alex on an adventure through this Minecraft 
 
 **Technology Requirements:** Modern browsers + tablets
 
-<a href="/starwars"><button>Try the tutorial</button></a>
+<a href="/mc"><button>Try the tutorial</button></a>
 
 [/col-50]

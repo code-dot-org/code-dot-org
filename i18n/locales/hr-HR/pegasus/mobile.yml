@@ -540,7 +540,7 @@ hr-HR:
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: 'Sat Kodiranja je ovdje - 8. - 14. prosinca!'
   code_sign_up: Prijavite se za sudjelovanje u Tjednu poučavanja informatike
   learn_more: Nauči više
@@ -557,6 +557,7 @@ hr-HR:
   hoc2014_try_scrat: Angry Birds, Plants vs. Zombies i Scrat
   hoc2014_try_frozen: Budi umjetnik s Annom i Elsom iz Snježnog kraljevstva
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Vodiči na tvom jeziku
@@ -625,6 +626,8 @@ hr-HR:
   projguts_name: Kamen, škare, papir
   hourofcode_name: Prostor za novi code.org/hoc
   playlab_name: Laboratorij igara
+  infinity_name: Infinity Laboratorij igara
+  artist_name: Umjetnik
   codeorg_gradelevel: Dob 4-104
   codeintl_gradelevel: Dob 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -666,6 +669,8 @@ hr-HR:
   frozen_gradelevel: Dob 8+
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Dob 4-104
+  infinity_gradelevel: Dob 4-104
+  artist_gradelevel: Dob 4-104
   codeorg_platformtext: Suvremeni preglednici, mobiteli, tableti
   codeintl_platformtext: Suvremeni preglednici, mobiteli, tableti
   thinkersmithspanish_platformtext: Izvanmrežno
@@ -744,10 +749,12 @@ hr-HR:
   thinkersmith2_shortdescription: Nauči kako računala koriste nule i jedinice za prikaz informacija
   kodableunplugged_shortdescription: Zabavna izvanmrežna vježba
   projguts_shortdescription: Pokušaj oblikovanje i simulaciju uporabom kamen/škare/papir
-  hourofcode_shortdescription: Prostor za novi code.org/hoc
+  hourofcode_shortdescription: Nauči programirati s Markom Zuckerbergom i Angry Birds!
   frozen_shortdescription: Hajdemo koristiti kodiranje da se pridružimo Anni i Elsi dok istražuju čaroliju i ljepotu leda.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
   playlab_shortdescription: Napravi priču ili igru pomoću Laboratorija igara!
+  infinity_shortdescription: Koristi Laboratorij igara da napraviš priču ili igru s likovima iz Disney Infinity.
+  artist_shortdescription: Nacrtaj cool slike i uzorke pomoću Umjetnika!
   codeorg_longdescription: Nauči osnovne informatičke pojmove pomoću povuci-i-ispusti programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika.
   codeintl_longdescription: Nauči osnovne informatičke pojmove pomoću povuci-i-ispusti programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika.
   thinkersmithspanish_longdescription: 'Korištenjem ugrađenog "Robotskog rječnika" učenici će otkriti kako navoditi jedan drugog ka izvršavanju određene zadaće bez prethodnog dogovaranja. Ova lekcija poučava djecu vezi između simbola i akcije, kao i neprocjenjivo vrijednoj vještini ispravljanja grešaka.'
@@ -977,3 +984,11 @@ hr-HR:
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
   compatibility_https_hide_this_warning: Sakrij ovo upozorenje
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: mahni krilima
+  infinity_shortcode: inf
+  playlab_shortcode: igraj
+  artist_shortcode: art

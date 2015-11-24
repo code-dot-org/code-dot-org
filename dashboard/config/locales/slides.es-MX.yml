@@ -191,44 +191,47 @@
           "si". Esta es la forma en la que las computadoras toman decisiones.'
       2:
         image: notes/hoc4_2.jpg
-        text: Tu mismo usas declaraciones "sí", "If", diariamente.  Antes de salir
-          afuera cada mañana, dices "sí", "IF", lloviera afuera, yo me pondría una
-          chubasquero.
+        text: Tú utilizas sentencias "if" todos los días. Antes de salir cada mañana
+          dices IF (si) está lloviendo afuera, debo utilizar mi chamarra.
       3:
         image: notes/hoc4_3.jpg
-        text: Podemos decirle al zombie que compruebe si hay un camino a la izquierda,
-          y si encuentra un camino a la izquierda, podemos hacerlo girar en esa dirección.
+        text: Podemos decirle al zombie que verifique IF (si) existe un camino hacia
+          la izquierda, y si encuentra un camino a la izauiqerda, podemos pedirle
+          que de vuelta en esa dirección.
       4:
         image: notes/hoc4_4.jpg
-        text: Para escribir el código para esto, vamos a sacar nuestro bloque "si"
-          y colocaremos un bloque "gira a la izquierda" en su interior.
+        text: Para escribir este código para esto arrastremos nuestro bloque "if"
+          y pongamos un bloque "turn left" adentro de él.
       5:
         image: notes/hoc4_5.jpg
-        text: Ahora, si ponemos un bloque "avanzar" encima de este, y un bloque "repetir"
-          alrededor de todo, cada vez que el zombie se mueva, el comprobará si hay
-          un camino a la izquierda y girará. El comando "repetir" es crítico, para
-          comprobar si tiene que girar en cada paso.
+        text: Ahora, si ponemos un bloque "move forward" encima de él y un bloque
+          "repeat" alrededor de todo, cada vez que el zombie se mueva, verificará
+          si existe un camino hacia la izquierda y dará la vuelta. El comando "repeat"
+          es crítico para poder verificar si hay vuelta en cada paso.
       6:
         image: notes/hoc4_6.jpg
-        text: Las declaraciones "si" son muy importantes en las ciencias de la computación.
-          Uno de los primeros programas que escribí era un juego de tic-tac-toe, y
-          había una declaración "Si" que decía que si la otra persona está a punto
-          de ganar, bloquea el lugar que le permite ganar.
+        text: Las sentencias "if" son realmente importantes en computación. Uno de
+          los primeros programas que escribí fue un juego de gato, y había una sentencia
+          "if" que decía, IF (si) la otra persona está a punto de ganar, bloquea el
+          espacio que le permitiría ganar.
       7:
         image: notes/hoc4_7.jpg
         text: ¡Diviértete usando el bloque "if" (si)!
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hola, mi nombre es Saloni. Yo uso la informática para ayudar a resolver
-          problemas en salud y medicina. Vamos a aprender acerca del bloque "si sino".
-          Se parece al bloque "si", pero tiene una parte extra al final que dice "sino".
+        text: Hola, mi nombre es Saloni. Yo utilizó la ciencia de la computación para
+          resolver problemas en medicina y salud. Aprendamos acerca del bloque "if
+          else". Se parece a un bloque "if", pero tiene una parte adicional al final
+          que dice "else" (si no).
       2:
         image: notes/hoc5_2.jpg
-        text: Si pongo el bloque "avanzar" en el lugar donde dice "hacer" y un bloque
-          "girar a la izquierda" donde dice "sino" el zombie va a elegir entre dos
-          opciones. Si hay un camino adelante, el zombie va a avanzar, y SINO (si
-          no hay un camino adelante), el zombie va a girar hacia la izquierda.
+        text: Si coloco un bloque "move forward" (avanza hacia adelante) en el lugar
+          dónde dice "do" (hacer) y un bloque "turn left" (giro izquierda) en dónde
+          dice "else" (si no) esto quiere decir que el zombie eligirá una de las dos
+          opciones. IF (si) existe un camino hacia adelante, el zombie se moverá adelante,
+          de otra manera (no existe un camino hacia adelante), el zombie girará hacia
+          la izquierda.
       3:
         image: notes/hoc5_3.jpg
         text: Al igual que el bloque "si", podemos poner el bloque "si sino" dentro
@@ -1205,43 +1208,45 @@
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
-        text: A loop is a repetition of activity. Going into a hive to inspect, I
-          look at a frame, and then I put it back. I repeat that same activity multiple
-          times. It's looping around, doing the same activity multiple times.
+        text: Un bucle es una repetición de una actividad. Para entrar en una colmena
+          a inspeccionar, miro un cuadro y luego lo pongo, luego repito esta actividad
+          varias veces. Hacer un bucle, es hacer la misma actividad varias veces.
       2:
         image: notes/C2_bee_loops_2.png
-        text: This is the repeat block. Whatever you put inside the repeat block will
-          repeat those actions the number of times that you tell it to. For example,
-          in this level, rather than drag out move forward and get nectar three times,
-          we're going to just drag them out once each and repeat the action three
-          times. That made it easy!
+        text: Este es el bloque de repetición. Lo que pongas dentro el bloque de repetición
+          repetirá las acciones el numero de veces que le digas. Por ejemplo, en éste
+          nivel, algo que arrastre hacia fuera mueva hacia adelante y obtengas el
+          néctar tres veces, vamos a hacer simplemente que los arrastre hacia fuera
+          cada uno y repetir la acción tres veces. Ha sido fácil!
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
-        text: Usually programming is all in text but we'll use Blockly which uses
-          visual blocks that you drag and drop to write programs. Under the hood,
-          you're still creating code. To start off, we're going to build code for
-          a program that will help this Angry Bird move through a maze to get to the
-          evil pigs that stole its eggs.
+        text: Normalmente la programación es en texto pero nosotros usaremos Blockly
+          que usa bloques visuales que puedes arrastrar y soltar para escribir programas.
+          Bajo la cubierta, sigues creando el código. Para empezar, vamos a crear
+          el código para el programa que ayudará a éste Angry Bird a moverse entre
+          el laberinto para llegar a los cerdos malvados que robaron sus huevos.
       2:
         image: notes/C2_maze_intro_2.png
-        text: Blockly is split into three main parts. On the left is the bird's maze,
-          where your program will run. The instructions for each level are written
-          below the maze. This middle area is the toolbox and each of these blocks
-          is a command that the bird can understand. The white space on the right
-          is called the workspace and this is where we'll build our program.
+        text: Blockly se divide en tres partes principales. A la izquierda está el
+          laberinto de los pájaros, donde tu programa se ejecutará. Las instrucciones
+          de cada nivel se escriben debajo del laberinto. Esta zona media es la caja
+          de herramientas y cada uno de estos bloques es un comando que el pájaro
+          puede entender. El espacio blanco en la derecha es el espacio de trabajo
+          y es donde compilaremos nuestro programa.
       3:
         image: notes/C2_maze_intro_3.png
-        text: If I drag the move block to our work space and press "Run", what happens?
-          The bird moves forward one box on the grid. And what if I want the bird
-          to do something after it moves forward one box? I can add another block
-          to our program.
+        text: Si arrastro un bloque "mover" al área de trabajo y presiono "Ejecutar",
+          ¿qué sucede? El págaro se mueve hacia adelante un bloque del terreno. ¿Y
+          si quiero que el pájaro haga algo más después de moverse adelante? Puedo
+          añadir otro bloque al programa.
       4:
         image: notes/C2_maze_intro_4.png
-        text: I'm going to choose the "turn right" block and I'll drag it under my
-          move block until the yellow arrow appears. Then I'll drop it and the two
-          blocks will snap together. When I press "Run" again,  the bird will perform
-          the commands that are stacked from top to bottom on our work space.
+        text: Voy a elegir el bloque "girar a la derecha" y a arrastrarlo debajo de
+          mi bloque de mover hasta que aparezca la flecha amarilla. Después la voy
+          a soltar y los dos bloques se quedarán pegados. Cuando presione "Ejecutar"
+          otra vez, el pájaro realizará los comandos que están apilados en nuestra
+          area de trabajo en orden desde arriba hacia abajo.
       5:
         image: notes/C2_maze_intro_5.png
         text: Si deseas eliminar un bloque, solo sácalo de la pila y arrástralo a
@@ -1251,32 +1256,33 @@
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
-        text: This lesson is called Real Life Algorithms. Algorithms describe things
-          that people do everyday. Cookie recipes and directions for building a birdhouse
-          are both everyday algorithms.
+        text: Esta lição é designada de Real Life Algorithms. Algorismos descrevem
+          coisas que as pessoas fazem todos os dias. Receitas de bolachas e instruções
+          de como construir uma casa para passáros são ambos algorismos usados no
+          quotidiano.
       2:
         image: notes/C2_paper_airplanes_2.png
-        text: Today we're gonna make, create, and test an algorithm for a paper airplane.
-          But first, we need to break this big project into easy to follow small steps.
-          For making a paper airplane, we need to decide what steps to take and in
-          what order to take them.
+        text: Hoje, vamos fazer, criar e testar um algorismo para um avião de papel.
+          Mas primeiro, necessitamos de separar este grande projecto em passos mais
+          facéis de seguir. Para fazer um avião de papel, necessitamos de decidir
+          que passos seguir e em que ordem devemos seguí-los.
       3:
         image: notes/C2_paper_airplanes_3.png
-        text: You'll create your algorithm by first cutting apart the pictures. Next,
-          you'll select the 6 pictures that show the steps needed to make a paper
-          airplane and arrange those pictures in the correct order. After you have
-          everything in order, you will trade algorithms with another student team
-          to test out the algorithm to see if the algorithm works. A well designed
-          algorithm is super important to making the best paper airplane.
+        text: Crearás tu algoritmo con primero cortando aparte las fotos. Luego, selecciorás
+          las 6 fotos que muestran los pasos necesarios para hacer un avión de papel
+          y arregla esas fotos en el orden correcto. Después de tener todo en orden,
+          cambiarás algoritmos con otro equipo de estudiantes para probar el algoritmo
+          y ver si el algoritmo funciona. Es super importante un algoritmo bien diseñado
+          para hacer el mejor aeroplano de papel.
       4:
         image: notes/C2_paper_airplanes_4.png
-        text: When we want to make chocolate, there are many big steps to that process.
-          And each of those big steps has its own set of smaller steps. And there
-          are different recipes, or algorithms, depending on how we want the chocolate
-          to taste. Each step is important, even the small ones. So without one step,
-          the rest of them cannot be completed. Creating algorithms that others can
-          understand is really important. That's why each step has to be written down,
-          so no matter who does it, the result is the same.
+        text: Cuando queremos hacer chocolate, hay muchos grandes pasos para ese proceso
+          y cada uno de esos grandes pasos tiene un conjunto de pequeños pasos. Y
+          hay diferentes recetas o algoritmos, dependiendo de cómo queremos que el
+          sepa el chocolate. Cada paso es importante, incluso los pequeños. Así que
+          sin un solo paso, el resto de ellos no podran ser completados. Es muy importante
+          crear algoritmos que otros puedan entender. Es por ello que cada paso tiene
+          que ser escrito no importando quien lo hace, el resultado es el mismo.
     C2_playlab_createastory:
       1:
         image: notes/C2_playlab_createastory_1.png
@@ -1290,58 +1296,62 @@
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
-        text: Today we're going to do relay programming. It's all about programming
-          under pressure and debugging the mistakes that sometimes happen when you
-          work really quickly or in teams. We'll use graph paper programming to simulate
-          coding, and use relay races to simulate having a deadline.
+        text: Hoy vamos hacer programación retransmitida. Es todo sobre programación
+          bajo presión y depurando los errores que a veces ocurren cuando se trabaja
+          muy rápido o en equipos. Utilizaremos papel gráfico programando para simular
+          la codificación y utiizaremos carreras retransmitiendo para simular que
+          se tiene una fecha límite.
       2:
         image: notes/C2_relay_programming_2.png
-        text: In relay programming, teams will be racing to finish a graph paper program.
-          You have to check your teammate's work, or debug it, fix it if there's a
-          mistake, add your arrow, and run back and tag your teammate.
+        text: En programación retransmitida, equipos estarán compitiendo para terminar
+          un programa de papel grafico. Tienes que comprobar el trabajo de su compañero
+          de equipo, o depurarlo, arreglarlo si hay un error, agrega tu flecha y ejecutalo
+          denuevo y etiqueta a tu compañero.
       3:
         image: notes/C2_relay_programming_3.png
-        text: Programmers use debugging a lot to find and fix problems in their algorithms
-          or code. There are lots of ways to debug problems. One of the easiest is
-          to move step by step until you find where something goes wrong, then fix
-          it.
+        text: Programadores utilizan mucho la depuración para encontrar y solucionar
+          problemas en su código o sus algoritmos. Hay muchas maneras de depurar problemas.
+          Uno de lo más fáciles es seguir paso a paso hasta encontrar algo donde sale
+          mal, entonces arreglarlo.
       4:
         image: notes/C2_relay_programming_4.png
-        text: Here, I'm trying to do a back handspring, but I keep falling off. I
-          walk through each part, step by step, and realize where my mistake was.
-          My coach showed me I wasn't putting my hands on the beam correctly. So I
-          tried another back handspring on the beam with my new hand position, and
-          I stuck it! I was really glad I debugged my back  handspring. We figured
-          it out! Debugging is finding and fixing problems. Nice, good job!
+        text: Aquí, estoy tratando de hacer un salto hacia atras, pero me sigo callendo.
+          Veo cada parte, paso a paso y trato de darme cuenta en donde estababa mi
+          error. Mi entrenador me demostró que no estaba poniendo mis manos sobre
+          la viga correctamente. Así que probé otro salto hacia atras en la viga con
+          mi nueva posición de la mano, y me quedé! Realmente me alegró haber depurado
+          mi salto hacia atras. Hemos averiguado! que la Depuración es encontrar y
+          resolver problemas. Que bueno, buen trabajo!
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
-        text: One thing that computers are really good at is repeating commands. As
-          a person, you'd get really bored if you had to do the same thing lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times, and not get bored and be able to carry that out really well.
+        text: Una cosa que a los ordenadores se les da muy bien es la de repetir instrucciones.
+          Como persona, te aburrirías mucho si tuvieras que hacer lo mismo un montón
+          de veces seguidas. Pero un ordenador puede hacer lo mismo millones o incluso
+          miles de millones de veces sin aburrirse, y llevarlo a cabo perfectamente.
       2:
         image: notes/C2_zuck_repeat_loop_2.png
-        text: So for example if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than a century to actually
-          write out all of those emails to everyone. But with just a few lines of
-          code, I can have a system send an email to everyone on Facebook wishing
-          them a happy birthday. So that's what loops are, and why they're valuable,
-          and something that computers can do very well.
+        text: Asi que por ejemplo si yo quisiera desearle a todos un feliz cumpleaños
+          en Facebook enviandoles un correo electrónico, me tardaría más de un siglo
+          para realmente escribir todos los mensajes de correo electrónico a todos.
+          Pero con sólo unas pocas líneas de código, puedo tener un sistema envia
+          un correo electrónico a todos en Facebook deseándoles un feliz cumpleaños.
+          Entonces eso es lo que un ciclo es, y por qué son valiosos, y es algo que
+          las computadoras pueden hacer muy bien.
       3:
         image: notes/C2_zuck_repeat_loop_3.png
-        text: In this example your goal is going to be to move the bird to get the
-          pig.  Now we're gonna be able to use the "repeat" block in order to be able
-          to do this very easily. You can either do this by giving the computer a
-          "move forward" command five times in order to advance the bird one step
-          each time to the pig.
+        text: En este ejemplo tu objetivo va a ser el mover el pájaro para obtener
+          el cerdo.  Ahora vamos a ser capaces de utilizar el bloque "repetir" para
+          poder hacer esto muy fácilmente. Tu puedes hacer esto dando al equipo un
+          comando de "seguir adelante" cinco veces en orden para avanzar el pájaro
+          un paso a la vez hacia el cerdo.
       4:
         image: notes/C2_zuck_repeat_loop_4.png
-        text: Or you can just tell the computer to "move forward" once, and then tell
-          it to "repeat" that 5 times, and it will do the same thing. So in order
-          to do this you drag your "move forward" command, and then you put it inside
-          the "repeat" block.And you can click on it and tell it how many times you
-          want to repeat the block to tell it how many steps you want it to take forward.
+        text: O sólo puedes decirle a la computadora "avanzar" una vez y luego dile
+          "repetir" 5 veces, y hará lo mismo. Así que para hacer esto arrastra el
+          comando "avanzar", y ponlo dentro del bloque "repetir". Puedes hacer clic
+          en él y dile cuantas veces deseas que repita el bloque para indicarle cuántos
+          pasos quieres que avance.
       5:
         image: notes/C2_zuck_repeat_loop_5.png
         text: 'Una cosa más: puedes poner todos los comandos que desees dentro de
@@ -1350,16 +1360,17 @@
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: Una de las grandes cosas programando computadoras es que una vez que
+          ya le dijiste a la computadora cómo realizar una acción, puedes llamar a
+          esa función denuevo. le das un nombre y entonces asi le puedes llamar. En
+          realidad es como ampliando el idioma.
       2:
         image: notes/C3_artist_functions_2.png
-        text: In the program we built, we learned how to draw a square by moving and
-          turning four times. We can take that function and give it a name, draw a
-          square, so that any time we want to do that, we simply say draw a square
-          and it will go back and invoke that function, that code. It will get done
-          for us. We've added that concept to our programming language.
+        text: En el programa que construimos, aprendimos a dibujar un cuadrado moviéndose
+          y girando cuatro veces. Podemos tomar esa función y darle un nombre, dibujar
+          un cuadrado, para cada vez que quieramos hacerlo, simplemente decimos dibuja
+          un cuadrado y volvera a invocar esa función, ese código. Se hará pora nosotros.
+          Hemos añadido ese concepto a nuestro lenguaje de programación.
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
@@ -1393,10 +1404,10 @@
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: When you put a loop inside of another loop, we call that a nested loop.
-          For example, here we're given the code already to draw one triangle with
-          sides of length 100 pixels using the repeat times block set to three, once
-          for each side of a triangle.
+        text: Cuando pones un ciclo dentro de otro ciclo, nosotros llamamos eso un
+          ciclo anidado. Por ejemplo, aquí nosotros dadomos ya el código para dibujar
+          un triángulo con lados de 100 píxeles de longitud usando el bloque de repetición
+          tres veces, una para cada lado del triángulo.
       2:
         image: notes/C3_artist_nested_loops_2.png
         text: Pero queremos dibujar seis triángulos. Para hacer eso, vamos a tomar
@@ -1434,39 +1445,41 @@
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
-        text: One of the most important concepts in computer science is how to define
-          new commands, how to add your own words to a computer language. Most computer
-          languages have only about one hundred words or commands. The art and magic
-          is in defining your own new words out of these building blocks.
+        text: Uno de los conceptos más importantes en Ciencias de la computación es
+          cómo definir nuevos comandos, cómo agregar tus propias palabras a un lenguaje
+          para la computadora. La mayoría de los lenguajes de programación tienen
+          sólo alrededor de cien palabras o comandos. El arte y la magia está definiendo
+          tus propias nuevas palabras fuera de bloques de construcción.
       2:
         image: notes/C3_bee_functions_2.png
-        text: We do this all the time in sports. For example, in basketball, you start
-          by learning how to dribble, how to do a lay-up, how to rebound. Once you've
-          learned these really basic moves, you learn new moves and put together these
-          building blocks, like a pick and roll or give and go. You can then go from
-          there to do more complex plays. Once you learn that play and give it a name,
-          everybody on the team knows how to do it.
+        text: Hacemos esto todo el tiempo en el deporte. Por ejemplo, en baloncesto,
+          tu empiezas aprendindo a como regatear el balón, como hacer un lanzamiento,
+          como rebote. Una vez que aprendimos estos movimientos muy básicos, aprendes
+          nuevos movimientos y juntas estos bloques, como agarra y rola o da y muevete.
+          Entonces puedes ir desde allí a hacer juegos más complejos. Una vez que
+          aprendiste ese juego y le das un nombre, todos en el equipo saben cómo hacerlo.
       3:
         image: notes/C3_bee_functions_3.png
-        text: Similarly once you've taught a computer how to do an action once using
-          these sequences of commands, you can make up your own name for that action
-          so it's easy to repeat it later. When you define your own command and give
-          it a name, that's called a function. Now we're going to use functions to
-          help the bee.
+        text: Del mismo modo una vez que le enseñaste a la computadora cómo realizar
+          una acción y una vez usando estas secuencias de comandos, puedes darle un
+          nombre a esa acción para que sea fácil repetirla más tarde. Cuando defines
+          tu propio comando y le das un nombre, A eso se le llama función. Ahora vamos
+          a usar funciones para ayudar a la abeja.
       4:
         image: notes/C3_bee_functions_4.png
-        text: In this example, our function is called get 2 nectar, this green block
-          right here. We know what get 2 nectar does by looking at this grey box which
-          is the function definition. If we look inside there, the get 2 nectar is
-          going to get nectar and then get nectar again. Always look at what's inside
-          the grey box so that you know what these green function blocks can do.
+        text: En este ejemplo, nuestra función se llama obten 2 néctares, este bloque
+          verde de aquí. Sabemos qué es lo que hace obten 2 néctares, Viendo la caja
+          gris que es la definición de función. Si vemos en el interior, va a obtener
+          2 néctares y luego va a obter 2 néctares otra vez. Entonces siempre mira
+          lo que está dentro de la caja gris para que sepas que es lo que pueden hacer
+          estas funciones de bloques verdes.
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: Now we're going to use nested loops with the bee. We're given some starter
-          code which tells the bee to move forward and get nectar three times and
-          then turn right. Let's take that whole piece of code and nest it inside
-          another repeat block and set to repeat three times. Done!
+        text: Ahora vamos a utilizar ciclos anidados con la abeja. Estamos dado un
+          código de arranque que le dice a la abeja a avanzar y oten néctar tres veces
+          y luego girar a la derecha. Tomemos la piesa completa de código y anidola
+          dentro de otro bloque de repetir y establece a repetir tres veces. Hecho!
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
@@ -1474,59 +1487,61 @@
           con tus amigos, Genial, ¿No?
       2:
         image: notes/C3_bounce_2.png
-        text: To get started, we have to link up the paddle controls to the arrow
-          keys on our keyboard.
+        text: Para empezar, tenemos que enlazar los controles de paleta a las flechas
+          de nuestro teclado.
       3:
         image: notes/C3_bounce_3.png
-        text: We can do this by linking the when left arrow block to the move left
-          block and the when right arrow block to the move right block. Give it a
-          go and you'll be programming your own bounce game in no time!
+        text: Podemos hacer esto mediante la vinculación cuando el bloque de flecha
+          izquierda mover el bloque izquierdo y cuando el bloque de la flecha derecha
+          mover el boque derecho. Pruébalo y estaras programando tu propio juejo al
+          instante!
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
-        text: This lesson is computational thinking. Sometimes learning a new game
-          can be tough, right? At first it might seem really confusing and sometimes,
-          there's no one there to teach you the rules, so you have to figure it out
-          on your own.
+        text: Esta lección es pensamiento computacional. A veces aprender un nuevo
+          juego puede ser difícil ¿Verdad? Al principio puede parecer muy confuso
+          y aveces, no hay nadie allí para enseñarle las reglas, entonces tienes que
+          averiguarlo tu mismo.
       2:
         image: notes/C3_computational_thinking_2.png
-        text: The good news is that you can get better at figuring things out on your
-          own when you know a few thinking tricks. These tricks are unique ways for
-          looking at and solving problems. In this lesson, you'll learn about four
-          tricks and practice them with your friends to figure out the rules to a
-          game.
+        text: La buena noticia es que puedes mejorar averiguando cosas por tu cuenta
+          cuando sabes algunos trucos del pensamiento. Estos trucos son formas únicas
+          identificando y resolviendo problemas. En esta lección, aprenderas cuatro
+          formas de trucos y practicarlos con tus amigos para encontrar las reglas
+          para un juego.
       3:
         image: notes/C3_computational_thinking_3.png
-        text: When you break down a big problem into smaller pieces, you're using
-          your brain to decompose the big problem. Once we've decomposed the big problem
-          into several smaller problems, we can go on to our next trick, which is
-          called pattern match.
+        text: Cuando desglosas un gran problema en secciones pequeños, estas utilizando
+          tu cerebro para descomponer el problema. Una vez que hemos descompuesto
+          el problema en varios problemas más pequeños, podemos pasar a nuestro siguiente
+          truco, que se llama coincidencia de patrón.
       4:
         image: notes/C3_computational_thinking_4.png
-        text: That's when we look for similarities between things. Once I find the
-          things that are the same, I can figure out what things are different. When
-          I remove those differences, that's called abstraction.
+        text: Esto es cuando buscamos semejanzas entre las cosas. Una vez que encuentre
+          las cosas que son iguales, puedo averiguar qué cosas son diferentes. Cuando
+          elimino esas diferencias, a eso se le llama abstracción.
       5:
         image: notes/C3_computational_thinking_5.png
-        text: After I have figured out the steps to solving a problem, I can put those
-          steps in a specific order called an algorithm so that anyone can use my
-          directions to solve that problem. We're going to use these four steps to
-          figure out how to play the game with no rules. By the end of the game, you'll
-          be able to play something that looks like this!
+        text: Después que me he di cuenta los pasos para resolver un problema, puedo
+          poner esos pasos en un orden específico llamado algoritmo para que cualquiera
+          pueda utilizar mis instrucciones para resolver el problema. Vamos a utilizar
+          estos cuatro pasos para encontrar la manera de jugar el juego sin reglas.
+          Al final del juego, podrás jugar algo que se ve así!
     C3_crowdsourcing:
       1:
         image: notes/C3_crowdsourcing_1.png
-        text: This lesson is called crowdsourcing. In this lesson we'll use a deck
-          of cards to learn about how much easier some things can be to do in groups
-          instead of trying to do them all alone. So grab some friends and make something
-          awesome. Crowdsourcing is getting help from a large group of people to finish
-          something faster.
+        text: Esta lección se llama crowdsourcing. En esta lección vamos a usar una
+          baraja de cartas para aprender cuanto mas fácil algunas cosas pueden ser
+          si se hacer en grupos en lugar de intentar hacerlo todo solo. Así que ve
+          por algunos amigos y haz algo impresionante. Crowdsourcing es conseguir
+          ayuda de un grupo grande de personas para terminar algo más rápido.
       2:
         image: notes/C3_crowdsourcing_2.png
-        text: In computer science, we use crowdsourcing all the time. Thousands of
-          amateurs and professionals link their computers together to search through
-          billions and billions of pieces of information. Looking for things like
-          the next Marsenne prime number, or even possible alien communications.
+        text: En ciencias de la computación, utilizamos crowdsourcing todo el tiempo.
+          Miles de aficionados y profesionales enlazan sus equipos conjuntamente para
+          buscar a través de miles de millones y miles de millones de piezas de información.
+          Buscando por cosas como el siguiente número primo de Mersenne, o incluso
+          posibles comunicaciones de extraterrestres.
       3:
         image: notes/C3_crowdsourcing_3.png
         text: When you see a movie, each second of the movie is 24 individual pictures,
@@ -1866,9 +1881,10 @@
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: Una de las grandes cosas programando computadoras es que una vez que
+          ya le dijiste a la computadora cómo realizar una acción, puedes llamar a
+          esa función denuevo. le das un nombre y entonces asi le puedes llamar. En
+          realidad es como ampliando el idioma.
       2:
         image: notes/C4_function_edit_2.png
         text: In the program we built, we learned how to draw a square by moving and
@@ -1923,18 +1939,19 @@
     C4_intro:
       1:
         image: notes/C4_intro_1.png
-        text: Usually programming is all in text but we'll use Blockly which uses
-          visual blocks that you drag and drop to write programs. Under the hood,
-          you're still creating code. To start off, we're going to build code for
-          a program that will help this Angry Bird move through a maze to get to the
-          evil pigs that stole its eggs.
+        text: Normalmente la programación es en texto pero nosotros usaremos Blockly
+          que usa bloques visuales que puedes arrastrar y soltar para escribir programas.
+          Bajo la cubierta, sigues creando el código. Para empezar, vamos a crear
+          el código para el programa que ayudará a éste Angry Bird a moverse entre
+          el laberinto para llegar a los cerdos malvados que robaron sus huevos.
       2:
         image: notes/C4_intro_2.png
-        text: Blockly is split into three main parts. On the left is the bird's maze,
-          where your program will run. The instructions for each level are written
-          below the maze. This middle area is the toolbox and each of these blocks
-          is a command that the bird can understand. The white space on the right
-          is called the workspace and this is where we'll build our program.
+        text: Blockly se divide en tres partes principales. A la izquierda está el
+          laberinto de los pájaros, donde tu programa se ejecutará. Las instrucciones
+          de cada nivel se escriben debajo del laberinto. Esta zona media es la caja
+          de herramientas y cada uno de estos bloques es un comando que el pájaro
+          puede entender. El espacio blanco en la derecha es el espacio de trabajo
+          y es donde compilaremos nuestro programa.
       3:
         image: notes/C4_intro_3.png
         text: If I drag the move block to our work space and press "run", what happens?

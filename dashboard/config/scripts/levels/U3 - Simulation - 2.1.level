@@ -115,7 +115,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Change your looping condition to be based on the number of heads flipped. (Click to see full instructions)",
+    "instructions": "Change your looping condition so the simulation runs until there are 5 heads flipped. (Click to see full instructions)",
     "markdown_instructions": "# Changing the Loop Condition\r\n\r\nCurrently our loop condition is based on a counter variable that keeps track of the total number of flips, but our simulation should only run **while we have fewer than the target number of heads**. In this exercise you are going to change the condition used by your while loop so that your **simulation terminates once you have flipped 5 total heads**. At the end of the loop we will **write the total number of flips** to know how many flips it took to get 5 heads.\r\n\r\n# Do This\r\n\r\n* Change the looping condition to use the variable you are using to keep track of the number of heads. **Your loop should run as long as you have fewer than 5 total heads**\r\n* Add code after your loop that **writes the total number of flips**\r\n* **Test your program** several times to make sure it works as expected. See the example below.\r\n* **Note:** the simulation is always terminating once it flips its 5th heads. Sometimes this means the text output runs off the screen. We will address this in the next exercise.\r\n\r\n![](https://images.code.org/878ff327142ebad8f81ecd8cdf58b14a-image-1446861064994.gif)",
     "slider_speed": "1",
     "project_template_level_name": "U3 - Simulation - Template"

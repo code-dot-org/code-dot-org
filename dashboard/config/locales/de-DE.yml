@@ -269,6 +269,7 @@
         playlab: Eine App erstellen
         artist: Zeichne etwas
         calculate: Calculate Something
+        applab: Eine App erstellen
     user:
       classroom: Lehrer-Homepage
       district_dashboard: Dashboard
@@ -580,7 +581,7 @@
         Infinity Charakteren zu erstellen.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Erkunde eine Minecraft-Welt mit Hilfe von Code.
   gallery:
     students_drew_these_with_code: Schüler haben folgendes mit Code gezeichnet!
     students_made_these_with_code: Schüler haben diesen Code gemacht!
