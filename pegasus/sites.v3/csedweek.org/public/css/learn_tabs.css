@@ -20,7 +20,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2caee8', endColorstr='#28a9e3',GradientType=0 ); /* IE6-9 */
 }
 #learn-tabs ul {
-  margin: 0 0 0 20px;
+  margin: 0 0 0 30px;
 }
 #learn-tabs ul li {
   padding-left: 0;
@@ -58,4 +58,15 @@
 
 .course-carousel-title {
   margin-top: 40px;
+}
+
+.learn-tabs-signup {
+  float: right;
+  margin-right: 30px;
+}
+
+.learn-teacher-header, 
+.learn-signup-button {
+  margin-left: 20px;
+  margin-right: 20px;
 }
