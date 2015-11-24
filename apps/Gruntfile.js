@@ -500,7 +500,7 @@ module.exports = function(grunt) {
     'prebuild',
     'exec:browserify',
     // Skip minification in development environment.
-    envOptions.dev ? 'noop' : ('concurrent:uglify'),
+    //envOptions.dev ? 'noop' : ('concurrent:uglify'),
     'postbuild'
   ]);
 
