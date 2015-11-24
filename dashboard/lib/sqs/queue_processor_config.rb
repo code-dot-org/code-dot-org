@@ -60,7 +60,7 @@ module SQS
       if dcdo_max_rate_key
         initial_max_rate = processor_options['initial_max_rate']
         processor_options['max_rate_proc'] = Proc.new {
-          DCDO.get(dcdo_max_rate_key, initial_max_rate)
+          DCDO.get(dcdo_max_rate_key, initial_max_rate).to_i
         }
       end
     end
@@ -70,7 +70,7 @@ module SQS
     # @return [Float]
     def global_max_rate
       if max_rate_proc
-        max_rate_proc.call.to_i || initial_max_rate
+        max_rate_proc.call || initial_max_rate
       else
         initial_max_rate
       end
