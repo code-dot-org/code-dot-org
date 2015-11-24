@@ -1663,9 +1663,9 @@
           Craft: Craft
         mc:
           title: Minecraft de la Hora del Código
-          description_short: Explora o mundo Minecraft apartir do code
-          description: Usa i blocchi di codice per far vivere a Steve o a Alex un
-            avventura nel mondo di Minecraft
+          description_short: Explora el mundo de Minecraft a través del código
+          description: Use blocos de código para levar Steve ou Alex para uma aventura
+            através deste mundo de Minecraft
           Hour of Code 2015: Hora de código 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

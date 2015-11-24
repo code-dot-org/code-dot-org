@@ -372,7 +372,7 @@ nn:
         Unplug6: Betingelser
         Unplug7: Låtskriving
         Unplug8: Abstraksjon
-        Unplug9: Programmering med relé
+        Unplug9: Programmeringsstafett
         Unplug10: Internett
         Unplug11: Oppsummering
         C1_happy_maps_unplugged: Glade Kart
@@ -503,8 +503,8 @@ nn:
         mc_intro: 'Minecraft - introduksjon'
         mc_repeat: 'Minecraft - gjenta'
         mc_if_statements: 'Minecraft - Viss-setningar'
-        mc_congrats_share: 'Minecraft - Gratulerer'
-        mc_congrats_no_share: 'Minecraft - Gratulerer'
+        mc_congrats_share: 'Minecraft - Gratulera'
+        mc_congrats_no_share: 'Minecraft - Gratulera'
     callout:
       text:
         drag_blocks: 'Dra ei "flytt"-blokk og fest den under den andre blokka'

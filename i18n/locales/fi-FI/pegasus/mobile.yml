@@ -2,7 +2,7 @@ fi-FI:
   hour_of_code: Koodaustunti
   hello: Hei maailma
   select_language: Valitse kieli
-  en: Tietokonetiede
+  en: Tietojenkäsittelytiede
   computer_science_edweek: Tietotekniikan koulutusviikko
   csedweek_dates: 8. -14. Joulukuuta 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Koodaustunti</a> on tulossa. Kaikki opettajat ja järjestäjät, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">suunnittele koodaustuntisi</a>'
@@ -113,7 +113,7 @@ fi-FI:
   learn_classes: Etsi paikallisia oppitunteja
   hoc_is_here: '#Koodaustunti on täällä - Tsekkaa! @codeorg'
   just_did_hoc: 'Suoritin juuri #Koodaustunti - tsekkaa tämä! @codeorg'
-  twitter_teach_cs: Miksi enemmän kouluja ei opeta tietojenkäsittelytiedettä? Voimme korjata tämän. http://youtu.be/nKIu9yen5nc. Vieraile http://code.org/ ja opi lisää.
+  twitter_teach_cs: Miksi usemmat koulut eivät opeta tietojenkäsittelytiedettä? Voimme korjata tämän. http://youtu.be/2DxWIxec6yo. Vieraile osoitteessa http://code.org/ ja opi lisää.
   learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: Opiskele Koodaustunnilla
   beyond_hoc: Koodaustunnin jälkeen

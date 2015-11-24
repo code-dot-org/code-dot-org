@@ -502,10 +502,10 @@
         starwars_intro: '星際大戰: 用程式建立一個銀河系-介紹'
         starwars_typing: '星際大戰: 用程式建立一個銀河系-JavaScript'
         starwars_events: '星際大戰: 用程式建立一個銀河系-事件'
-        starwars_congrats: '星際大戰: 用程式建立一個銀河系-恭禧'
+        starwars_congrats: '星際大戰: 用程式建立一個銀河系-恭喜'
         starwars_blocks_intro: '星際大戰: 用程式建立一個銀河系-介紹'
         starwars_blocks_events: '星際大戰: 用程式建立一個銀河系-事件'
-        starwars_blocks_congrats: '星際大戰: 用程式建立一個銀河系-恭禧'
+        starwars_blocks_congrats: '星際大戰: 用程式建立一個銀河系-恭喜'
         mc_intro: 當個創世神 Minecraft - 介紹
         mc_repeat: 當個創世神 Minecraft - 迴圈
         mc_if_statements: 當個創世神 Minecraft - 判斷式

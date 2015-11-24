@@ -88,7 +88,7 @@ si:
     invalid_username: Username must be at least 5 characters
     taken_username: Username is already taken
     valid_password: Valid password!
-    invalid_password: Password must be at least 6 characters
+    invalid_password: Password එක අකුරු 6ට වැඩිවිය යුතුයි
     mismatch_password: The two passwords you entered do not match
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
     teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
@@ -105,9 +105,9 @@ si:
     try_20hours: Try our 20 hour Intro to Computer Science
   signinsection:
     welcome: 'Welcome to %{section_name}'
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    name: ඔබේ නම තෝරන්න
+    picture: දැන් ඔබේ රහස් රූපය සොයන්න
+    words: දැන් ඔබේ රහස් වචනය සොයන්න
     login: Sign in
   password:
     reset_form:
@@ -120,7 +120,7 @@ si:
       confirm_password: ඔබේ නව මුරපදය තහවුරු කරන්න
       submit: මගේ මුරපදය වෙනස් කරන්න
   welcome_email:
-    subject: Join my class (on Code.org)
+    subject: මාගේ පන්තියට එකතුවෙන්න ( Code.org එකෙන්)
     body: |
       Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
       
@@ -139,7 +139,7 @@ si:
       username_in_use: '%{username} යන පරිශීලක නාමය මේ වන විටත් වෙන්කරවා ඇත, වෙනත් පරිශීලක නාමයක් තෝරා ගන්න'
       no_teacher: "Could not find anyone signed in with '%{teacher_email_or_code}'. Please ask them to sign up here and then try adding them again"
       section_not_found: "Could not find a section with code '%{section_code}'."
-      blank_code: Please enter a section code
+      blank_code: කරුණාකර Section Code එක ඇතුලත් කරන්න
       cant_join_own_section: "Sorry, you can't join your own section."
     mail:
       invite_student:
@@ -218,23 +218,23 @@ si:
       finished_hoc: මා Hour of Code අවසන් කරන ලදි
       sign_in_to_save: Sign in to save progress
       free_play:
-        playlab: Make an App
+        playlab: App එකක් හදන්න
         artist: යමක් අඳින්න
         calculate: Calculate Something
-        applab: Make an App
+        applab: App එකක් හදන්න
     user:
       classroom: Teacher Home Page
       district_dashboard: District Dashboard
       label: 'ආයුබෝවන් %{username}'
       stats: Code Studio
       settings: මාගේ ගිණුම
-      prizes: Prizes
+      prizes: තෑගි
       logout: Sign out
       signin: Sign in
       signup: Sign up
       already_registered: පෙර ලියාපදිංචි වී ඇත් ද?
     popup:
-      progress_for_user: "%{name}'s progress"
+      progress_for_user: '%{name} ගේ ප්‍රගතිය'
       progress: Your progress
       lines: 'Total lines of code: %{lines}'
       close: CLOSE
@@ -250,19 +250,19 @@ si:
     title:
       one: 'Your teacher:'
       other: 'Your teachers:'
-    remove: (remove teacher)
+    remove: (ගුරුවරයා ඉවත්කරන්න)
     confirm:
       remove: Are you sure you want to remove this teacher?
     tools: Teacher Tools
     followers:
-      section: 'Section:'
+      section: 'අංශය:'
       stages: 'Stage(s) to display:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: Levels key
       perfect: Completed, perfect
       completed: Completed, but using too many blocks
       tried: Tried, but not completed
-      not_tried: Not tried yet
+      not_tried: දැනට උත්සහ කර නැත
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
       trophies: ඵලකයන්
@@ -272,7 +272,7 @@ si:
       password: මුර පදය
       manage: Manage students
       dashboard: Go to Teacher Dashboard
-      add: Add students
+      add: ශිෂ්‍යයින් ඇතුලත්කරන්න
       remove: remove student
       confirm_remove: Are you sure you want to remove this student?
       help_reassign: To divide your class into multiple sections, select students to assign to a new section.
@@ -281,18 +281,18 @@ si:
       vist: Ask your students to visit
       section_code: 'and enter their section-code:'
       first_please: 'First, please %{add_section}'
-      for: For
+      for: සඳහා
       enter: 'enter:'
     sections:
-      add: Add section
+      add: අංශයක් අතුලත්කරන්න
       manage: Manage sections
-      section: Section
-      students: Students
-      section_code: Section Code
+      section: අංශය
+      students: සිසුන්
+      section_code: අංශ කේතය
       add_section_code: Add Students Section-Code
       secret: Secret type
-      grade: Grade
-      course: Course
+      grade: ශේණිය
+      course: පාඨමාලාව
       rename: rename
       edit: edit
       delete: delete
@@ -308,9 +308,9 @@ si:
       answer_viewer: Answer Viewer
       student: ශිෂ්‍යයා
       viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
-      section: Section
-      example: Example Solution
+      try_it_yourself: ඔබ විසින්ම උත්සහකර බලන්න
+      section: අංශය
+      example: ආදර්ශ පිළිතුරු
       example_with_number: 'Example Solution %{solution_number}'
       submitted_on: 'Submitted on:'
       unsubmit: Unsubmit
@@ -326,7 +326,7 @@ si:
     delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
     delete_confirm: Are you sure you want to delete your account?
   user_level:
-    completed: Completed
+    completed: සම්පූර්ණයි
     tried: Tried
   user_stats:
     recent_activity: Recent activity
@@ -349,7 +349,7 @@ si:
     teacher_averages: 'On average your students have earned %{trophy_average} out of %{trophy_max} "Concept Mastery" trophies.'
     teacher_print_certificates: Print certificates for students who finish this course
     teacher_read_blog: Read about news and updates to our materials at our Educator Blog
-    classroom: Your classroom
+    classroom: ඔබගේ පන්තිය
     student_progress: Your learning progress
     student_stats: |-
       You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery" trophies.
@@ -374,13 +374,13 @@ si:
     your_gallery: Gallery
     no_primary_course: Try a Code Studio course
     choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    print_certificate: සහතිකය මුද්‍රණයකරන්න
   share:
     title: Learn on Code Studio
     description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
-    male: Male
-    female: Female
+    male: පිරිමි
+    female: ගැහැණු
     none: Prefer not to answer
   user_type:
     student: ශිෂ්‍යයා
@@ -405,9 +405,9 @@ si:
     secure: Secure Version
     report_abuse: Report Abuse
   reference_area:
-    title: Need help?
+    title: උදව්වක් අවශ්‍යද?
     subtitle: See these videos and hints
-    teacher: See the solution
+    teacher: උත්තරය බලන්න
     auth_error: You are not authorized to see the solution.
     submit: Update Artist Location
     direction: Start Direction (in degrees)
@@ -507,14 +507,14 @@ si:
   multi:
     wrong_title: Incorrect answer
     wrong_body: "The answer you've entered is not correct.  Please try again!"
-    correct_title: Correct
+    correct_title: නිවැරදියි
     correct_body: That is the correct answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Incorrect solution
     wrong_body: "The solution you've entered is not correct.  Please try again!"
-    correct_title: Correct
+    correct_title: නිවැරදියි
     correct_body: That is the correct answer.
   contract_match:
     wrong_title: Incorrect answer
@@ -525,9 +525,9 @@ si:
     baddomainname: One or more of your domain items has the wrong name.
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
-    placeholder: Enter your answer here
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    placeholder: ඔබගේ පිළිතුර මෙතනට ඇතුල් කරන්න
+    open_response_title: ස්තූතියි
+    open_response_body: ඔබගේ ප්‍රතිචාරය සඳහා ස්තූතියි!
   dialog:
     ok: හරි
     startover_title: Are you sure you want to start over?
@@ -536,8 +536,8 @@ si:
     startover_cancel: අවලංගු කරන්න
   time:
     hour: 1 hour
-    day: day
-    week: week
+    day: දිනය
+    week: සතිය
   data:
     script:
       name:

@@ -31,7 +31,7 @@
   "ifTooltip":"Kung meron daanan sa tinukay na direksyon, kung gayon ay gumawa ng mga aksyon.",
   "ifelseTooltip":"Kung meron daan sa nasabing direksyon, kung gayon ay gawin ang unang bloke ng mga aksyon. Kung hindi, gawin ang pangalawang bloke ng mga aksyon.",
   "ifFlowerTooltip":"Kung meron bulaklak\/honeycomb sa itinurong direksyon, saka gawin ang mga aksyon.",
-  "ifOnlyFlowerTooltip":"If there is a flower in the specified direction, then do some actions.",
+  "ifOnlyFlowerTooltip":"Kung may bulaklak sa nasabing direksiyon, gumawa ng kahit anong action.",
   "ifelseFlowerTooltip":"Kung meron bulaklak\/honeycomb sa itinurong direksyon, saka gawin ang unang mga block ng mga aksyon. Kung hindi, gawin ang pangalawang block ng mga aksyon.",
   "insufficientHoney":"Ginagamit mo ang lahat ng tamang mga block, ngunit kailangan mo gumawa ng tamang dami ng honey.",
   "insufficientNectar":"Ginagamit mo ang lahat ng tamang mga block, ngunit kailangan mo kumulekta ng tamang dami ng honey.",

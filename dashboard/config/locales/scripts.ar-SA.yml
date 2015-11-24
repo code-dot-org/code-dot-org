@@ -174,11 +174,10 @@
         course4:
           description_short: يجب على الطالب أخذ الدورة 2 و 3 ليتمكنوا من أخذ الدورة
             4.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
+          description: تم تصميم الدورة 4 للطلاب الذين أخذوا دورة 2 و 3. سيقوم الطلاب
+            في هذه الدورة بالتعمق في موضوعات البرمجة التي أدخلت في الدورات السابقة
+            وحل مشاكل أكثر تعقيدا. بنهاية هذه الدورة،سيتمكن الطلاب من خلق القصص والألعاب
+            التفاعلية التي يمكن مشاركتها مع أي شخص.  للصفوف 4-8.
           'Artist: Variables': 'الفنان: المتغيرات'
           'Bee: For Loops': 'النحل: للحلقات'
           title: الدورة 4

@@ -332,27 +332,26 @@
   class_submission_languages_other: Outro(s) idioma(s)
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
+  starwars_subtitle: Construindo uma galáxia com código
   starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_description: Utiliza blocos de arrastar-soltar e JavaScript.
+  starwars_javascript_specs: Apenas Inglês | Navegadores modernos | Idades 11 +
   starwars_javascript_start_button: Experimentar agora
   starwars_blocks_title: Blocos
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_description: Utiliza blocos de arrastar-soltar.
+  starwars_blocks_specs: Muitas línguas (em breve) | Navegadores modernos, smartphones,
+    tablets | Idades 6-10
   starwars_blocks_start_button: Experimentar agora
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+  starwars_watch_videos: Antes de começares, vê um destes vídeos inspiradores
+  starwars_speak_languages: Falas outra língua?
+  starwars_help_translate: Ajuda-nos a traduzir
   starwars_platform_text: Navegadores modernos, smartphones e tablets
   mc_name: Hora do Código de Minecraft
   mc_longdescription: Use blocos de código para levar o Steve ou a Alex numa aventura
     por este mundo Minecraft.
   mc_shortdescription: Use blocos de código para levar o Steve ou a Alex numa aventura
     por este mundo Minecraft.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: Idades 6 +
   mc_platformtext: Navegadores modernos, smartphones e tablets
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Hora do Código de Minecraft
@@ -751,7 +750,7 @@
     target="_blank">navegador Web moderno.</a>
   mobile_devices: Tutoriais para dispositivos móveis
   frozen_name: Programa com a Anna e com a Elsa
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_name: 'Star Wars: Construir uma Galáxia com Código'
   codeorg_name: Aprende a programar e cria o teu primeiro programa
   codeintl_name: Aprende a programar e cria o teu primeiro programa
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -832,7 +831,7 @@
   projguts_gradelevel: Dos 10 aos 13 anos
   hourofcode_gradelevel: Dos 4 aos 104 anos
   frozen_gradelevel: Maiores de 8 anos
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: Idades 6 +
   playlab_gradelevel: Dos 4 aos 104 anos
   infinity_gradelevel: Dos 4 aos 104 anos
   artist_gradelevel: Dos 4 aos 104 anos
@@ -936,7 +935,7 @@
     Birds!
   frozen_shortdescription: Use a programação para explorar a mágica e a beleza do
     gelo com Anna e Elsa.
-  starwars_shortdescription: Aprenda a programar dróides, e crie o seu jogo Star Wars
+  starwars_shortdescription: Aprenda a programar dróides e crie o seu jogo Star Wars,
     numa galáxia muito, muito distante.
   playlab_shortdescription: Crie uma história ou um jogo no Laboratório!
   infinity_shortdescription: Use o Laboratório para criar uma história ou um jogo
@@ -1097,7 +1096,7 @@
     do gelo com a Anna e com a Elsa. Vais criar flocos de neve e padrões enquanto
     patinas no gelo, e ainda conseguirás construir a ilha encantada do inverno que
     poderás partilhar com os teus amigos!
-  starwars_longdescription: Aprenda a programar dróides, e crie o seu jogo Star Wars
+  starwars_longdescription: Aprenda a programar dróides e crie o seu jogo Star Wars,
     numa galáxia muito, muito distante.
   playlab_longdescription: Crie uma história ou faça um jogo no Laboratório! Faça
     animais, piratas, zumbis, ninjas e muitos outros personagens se moverem, fazer

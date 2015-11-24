@@ -1378,13 +1378,13 @@ pl:
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: "Inside the blocks we've been using are JavaScript commands. JavaScript is the most popular programming language for professional developers today. Blocks are a great way to get started learning to code and in fact, top universities like Harvard and Berkeley start teaching this way. But once we learn the basics, engineers write code by typing because it allows us to go faster."
+        text: Wewnątrz bloków, które używaliśmy znajdują się polecenia języka JavaScript. JavaScript jest najbardziej popularnym językiem programowania dla programistów. Bloki są świetnym sposobem, aby rozpocząć nauki programowania i większość najlepszych uniwersytetów, takich jak np. Harvard i Berkley rozpoczyna naukę programowania właśnie od bloków. Jak tylko nauczymy się podstaw, zaczniemy pisać kod, gdyż jest to szybsze od pracy z blokami.
       2:
         image: notes/starwars_typing_2.JPG
-        text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try."
+        text: Możemy wpisać setki poleceń bez konieczności ich znalezienia w przyborniku lub też je po przeciągnąć. Ponieważ się uczysz, pisanie może być wolniejsze, jednak warto żebyś spróbował.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.
+        text: 'W prawym górnym rogu na polu roboczym można kliknąć przycisk "Pokaż tekst" na dowolnej łamigłówce aby przejść z bloków do pisania kodu.'
       4:
         image: notes/starwars_typing_4.JPG
         text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
