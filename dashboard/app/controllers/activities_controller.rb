@@ -139,18 +139,17 @@ class ActivitiesController < ApplicationController
         time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
         level_source_id: @level_source.try(:id)
     }
-    # Save the activity synchronously if the level is or might be saved to the gallery (for which
-    # the activity.id is required.)
+    # Save the activity synchronously if the level might be saved to the gallery (for which
+    # the activity.id is required). This is true for levels auto-saved to the gallery, and for
+    # free play and "impressive" levels.
     synchronous_save = solved &&
-        (params[:save_to_gallery] == 'true' || @level.free_play.to_bool ||
-            @level.impressive.to_bool || test_result == ActivityConstants.FREE_PLAY_RESULT)
-    logger.info " synchronous_save=#{synchronous_save}"
+        (params[:save_to_gallery] == 'true' || @level.try(:free_play).to_bool ||
+            @level.try(:impressive).to_bool || test_result == ActivityConstants.FREE_PLAY_RESULT)
     if synchronous_save
       @activity = Activity.create!(attributes)
     else
       @activity = Activity.create_async!(attributes)
     end
-    logger.info " @activity.id=#{@activity.id}"
 
     if @script_level
       @new_level_completed = current_user.track_level_progress(@script_level, test_result)
