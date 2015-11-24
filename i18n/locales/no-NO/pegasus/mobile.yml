@@ -552,6 +552,7 @@ no-NO:
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
   hoc2014_try_frozen: Kunstner med Anna og Elsa fra Frost
   carousel_heading_codeorg: Guider laget av Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Guider laget av andre
   carousel_heading_third_party: Guider laget av andre
   carousel_heading_international: Gjennomganger på norsk
@@ -620,6 +621,8 @@ no-NO:
   projguts_name: Stein, saks papir
   hourofcode_name: Plassholder for ny code.org/hoc
   playlab_name: Spill-lab
+  infinity_name: Infinity Spill-Lab
+  artist_name: Kunstner
   codeorg_gradelevel: Alder 4-104
   codeintl_gradelevel: Alder 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -661,6 +664,8 @@ no-NO:
   frozen_gradelevel: Alderen 8+
   starwars_gradelevel: Passer for de som er 6 år og eldre
   playlab_gradelevel: Alder 4-104
+  infinity_gradelevel: Alder 4-104
+  artist_gradelevel: Alder 4-104
   codeorg_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
   codeintl_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
   thinkersmithspanish_platformtext: Frakobla
@@ -739,10 +744,12 @@ no-NO:
   thinkersmith2_shortdescription: Lær hvordan datamaskiner bruker 1-ere og 0-er for å representere informasjon
   kodableunplugged_shortdescription: En morsom frakoblet øvelse
   projguts_shortdescription: Prøv modellering og simulering ved å bruke stein/saks/papir
-  hourofcode_shortdescription: Plassholder for ny code.org/hoc
+  hourofcode_shortdescription: Lær å kode med Mark Zuckerberg og sinte fuglar!
   frozen_shortdescription: La oss bruke kode til å bli med Anna og Elsa mens de utforsker magien og vakkerheten av is.
   starwars_shortdescription: Lær å programmere droner og skap ditt eget Star Wars-spill i en galakse langt, langt borte.
   playlab_shortdescription: Lag en historie eller spill med Spill-labben!
+  infinity_shortdescription: Bruk Spill-lab for å lage en historie eller spill med Disney Infinity figurer.
+  artist_shortdescription: Tegn kule bilder og tegninger med Kunstneren!
   codeorg_longdescription: Lær de grunnleggende kodekonseptene med dra-og-slipp-programmering. Dette er spill-lignende, selvstyrt øving med videoforelesninger av Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær løkker og betingelser og grunnleggende algoritmer. Tilgjengelig på 34 språk.
   codeintl_longdescription: Lær de grunnleggende kodekonseptene med dra-og-slipp-programmering. Dette er spill-lignende, selvstyrt øving med videoforelesninger av Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær løkker og betingelser og grunnleggende algoritmer. Tilgjengelig på 34 språk.
   thinkersmithspanish_longdescription: 'Ved å bruke et forhåndsdefinert "Robot-språk" vil finne ut hvordan de kan instruere hverandere til å utføre bestemte oppgaver uten å diskutere dem først. Denne leksjonen lærer barn sammenhengen mellom symboler og handlinger, i tillegg til uvurderlige ferdigheter i å finne feil.'
@@ -972,3 +979,11 @@ no-NO:
   compatibility_https_header: Du må aktivere HTTPS i nettleseren for å bruke Code.org.
   compatibility_https_message: "For å øke sikkerheten, bytter vi over til HTTPS %{https_date}. Du vil ikke kunne få tilgang til Code.org etter denne datoen uten å benytte HTTPS. <a href='%{it_requirements_url}'> Klikk her</a> for å lære hvordan du aktiverer HTTPS for Code.org."
   compatibility_https_hide_this_warning: Skjul denne advarselen
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: flaks
+  infinity_shortcode: inf
+  playlab_shortcode: spill
+  artist_shortcode: art

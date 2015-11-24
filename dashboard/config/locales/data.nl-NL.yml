@@ -426,8 +426,8 @@
         flappy_8: Je kan de vormgeving altijd veranderen, niet alleen als het spel
           start. Probeer een WILLEKEURIGE achtergrond in te stellen als er iets gebeurt,
           bijvoorbeeld als Flappy een obstakel passeert.
-        flappy_9: Probeer voor de verandering om, als je een obstakel raakt, het spel
-          niet te beëindigen maar de score weer op 0 te zetten.
+        flappy_9: Probeer voor de verandering eens de score op 0 te zetten in plaats
+          van het spel te stoppen wanneer je tegen een obstakel botst.
         flappy_11: Maak je eigen Flappy spel. Je kunt de vormgeving en de regels helemaal
           veranderen, zelfs de zwaartekracht. Druk als je klaar bent op afronden om
           je vrienden je spel te laten spelen op hun telefoons.

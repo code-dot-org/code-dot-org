@@ -248,7 +248,7 @@ nl:
         flappy_6: Kijk of je nog steeds punten geeft als Flappy meer of minder flappert.
         flappy_7: 'Probeer vervolgens de scène te wijzigen door een ander blok toe te voegen aan het "bij uitvoeren" blok.'
         flappy_8: Je kan de vormgeving altijd veranderen, niet alleen als het spel start. Probeer een WILLEKEURIGE achtergrond in te stellen als er iets gebeurt, bijvoorbeeld als Flappy een obstakel passeert.
-        flappy_9: Probeer voor de verandering om, als je een obstakel raakt, het spel niet te beëindigen maar de score weer op 0 te zetten.
+        flappy_9: Probeer voor de verandering eens de score op 0 te zetten in plaats van het spel te stoppen wanneer je tegen een obstakel botst.
         flappy_11: Maak je eigen Flappy spel. Je kunt de vormgeving en de regels helemaal veranderen, zelfs de zwaartekracht. Druk als je klaar bent op afronden om je vrienden je spel te laten spelen op hun telefoons.
         flappy_k1_1: Speel Flappy
         flappy_k1_2: 'Plak een blok aan het "bij een klik" blok, klik dan op "Uitvoeren". Klik of raak het scherm aan om Flappy naar zijn doel te bewegen.'

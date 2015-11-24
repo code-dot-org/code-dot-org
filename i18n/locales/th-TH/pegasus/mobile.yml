@@ -566,6 +566,7 @@ th-TH:
   hoc2014_try_scrat: Angry Birds, PvZ, และ Scrat
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: ฝึกฝนในภาษาของคุณ
@@ -634,6 +635,8 @@ th-TH:
   projguts_name: ค้อน กรรไกร กระดาษ เป่ายิ้งฉุบ
   hourofcode_name: พื้นที่สำหรับ code.org/hoc ใหม่
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: ศิลปิน
   codeorg_gradelevel: 'อายุ 4 - 104 ปี'
   codeintl_gradelevel: 'อายุ 4 - 104 ปี'
   thinkersmithspanish_gradelevel: Por todos
@@ -675,6 +678,8 @@ th-TH:
   frozen_gradelevel: อายุ 8 ปีขึ้นไป
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: 'อายุ 4 - 104 ปี'
+  infinity_gradelevel: 'อายุ 4 - 104 ปี'
+  artist_gradelevel: 'อายุ 4 - 104 ปี'
   codeorg_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
   codeintl_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
   thinkersmithspanish_platformtext: ถอดปลั๊ก
@@ -753,10 +758,12 @@ th-TH:
   thinkersmith2_shortdescription: เรียนรู้ว่าคอมพิวเตอร์ใช้เลข 1 และ 0 เพื่อแสดงข้อมูลอย่างไร
   kodableunplugged_shortdescription: กิจกรรมแบบออฟไลน์ที่สนุกสนาน
   projguts_shortdescription: สร้างแบบจำลองและลองเล่น ด้วยเกมเป่ายิ้งฉุบ
-  hourofcode_shortdescription: พื้นที่สำหรับ code.org/hoc ใหม่
+  hourofcode_shortdescription: เรียนรู้การเขียนโค้ดกับ Mark Zuckerberg และเกม Angry Birds!
   frozen_shortdescription: ลองใช้โค้ด เพื่อเข้าช่วย Anna และ Elsa สำรวจความมหัศจรรย์แห่งเมืองน้ำแข็ง
   starwars_shortdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the ศิลปิน!
   codeorg_longdescription: 'เรียนรู้แนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ ผ่านการลากและวาง  เริ่มเข้าสู่บทเรียน โดย Bill Gates, Mark Zuckerberg, Angry Birds และ Plants vs. Zombies เรียนรู้เรื่อง Loop เงื่อนไข และอัลกอริทึมพื้นฐาน ซึ่งมีให้เรียนมากถึง 34 ภาษา'
   codeintl_longdescription: 'เรียนรู้แนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ ผ่านการลากและวาง  เริ่มเข้าสู่บทเรียน โดย Bill Gates, Mark Zuckerberg, Angry Birds และ Plants vs. Zombies เรียนรู้เรื่อง Loop เงื่อนไข และอัลกอริทึมพื้นฐาน ซึ่งมีให้เรียนมากถึง 34 ภาษา'
   thinkersmithspanish_longdescription: ด้วยการใช้คำศัพท์ของ Robot (ซึ่งมีมาให้แล้ว) นักเรียนจะได้ศึกษาวิธีการทำกิจกรรมต่างๆให้สำเร็จโดยไม่ต้องปรึกษากันมาก่อน บทเรียนนนี้สอนให้นักเรียนรู้จักการเชื่อมต่อของสัญลักษณ์และการกระทำ รวมไปถึงทักษะในการแก้ไขจุดบกพร่องต่างๆ
@@ -986,3 +993,11 @@ th-TH:
   compatibility_https_header: กรุณาเปิดใช้งาน HTTPS สำหรับ Code.org
   compatibility_https_message: "เพื่อเพิ่มความปลอดภัย เรากำลังจะสลับไป HTTPS ในวันที่ %{https_date} คุณจะไม่สามารถเข้าถึง Code.org ได้หลังจากวันนี้ <a href='%{it_requirements_url}'>คลิกที่นี่</a>เพื่อเรียนรู้วิธีการเปิดใช้งาน HTTPS สำหรับ Code.org"
   compatibility_https_hide_this_warning: Hide this warning
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: บิน
+  infinity_shortcode: inf
+  playlab_shortcode: เล่น
+  artist_shortcode: art

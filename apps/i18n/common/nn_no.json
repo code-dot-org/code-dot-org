@@ -1,6 +1,6 @@
 {
   "and": "og",
-  "backToPreviousLevel": "Tilbake til forrige nivå",
+  "backToPreviousLevel": "Tilbake til førre nivå",
   "blocklyMessage": "Blockly",
   "blocks": "blokker",
   "booleanFalse": "usann",
@@ -222,7 +222,7 @@
   "submitYourProjectConfirm": "Etter at du har sendt inn prosjektet kan du ikkje editere det, vil du verkeleg sende det?",
   "unsubmit": "Trekk tilbake",
   "unsubmitYourProject": "Av-publiser prosjektet ditt",
-  "unsubmitYourProjectConfirm": "Sletting av prosjektet slettar det som er lagra. Vil du slette?",
+  "unsubmitYourProjectConfirm": "Sletting av prosjektet slettar det som er lagra, vil du slette?",
   "subtitle": "eit visuelt programmeringsmiljø",
   "syntaxErrorMsg": "Programmet ditt inneheld ein skrivefeil. Fjern linje nummer {lineNumber} og prøv på nytt.",
   "textVariable": "tekst",

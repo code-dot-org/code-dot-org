@@ -219,7 +219,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penDown":function(d){return "Arkatza behera"},
 "penTooltip":function(d){return "Arkatza igo edo jeisten du, marrazten hasi edo bukatzkeo."},
 "penUp":function(d){return "Arkatza gora"},
-"reinfFeedbackMsg":function(d){return "Hona hemen zue marrazkia! Jarraitu lanean marrazkian edo pasa hurrengo puzzlera."},
+"reinfFeedbackMsg":function(d){return "Hona hemen zue marrazkia! Jarraitu lanean marrazkian edo pasa hurrengo ariketara."},
 "setAlpha":function(d){return "ezarri alfa"},
 "setColour":function(d){return "Ezarri kolorea"},
 "setPattern":function(d){return "eredua ezarri"},

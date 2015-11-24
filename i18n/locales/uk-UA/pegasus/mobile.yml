@@ -573,6 +573,7 @@ uk-UA:
   hoc2014_try_scrat: Angry Birds, PvZ та Scrat
   hoc2014_try_frozen: Художник з Анною та Ельзою, із Крижаного серця
   carousel_heading_codeorg: Підручники від Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Підручники від інших учасників
   carousel_heading_third_party: Підручники від інших учасників
   carousel_heading_international: Підручники вашою мовою
@@ -641,6 +642,8 @@ uk-UA:
   projguts_name: Камінь, папір, ножиці
   hourofcode_name: Бланк для нового code.org/hoc
   playlab_name: Ігрова студія
+  infinity_name: Ігрова лабораторія Infiinty
+  artist_name: Художник
   codeorg_gradelevel: Вік 4-104
   codeintl_gradelevel: Вік 4-104
   thinkersmithspanish_gradelevel: Для всіх
@@ -682,6 +685,8 @@ uk-UA:
   frozen_gradelevel: Вік 8 +
   starwars_gradelevel: Вік 6+
   playlab_gradelevel: Вік 4-104
+  infinity_gradelevel: Вік 4-104
+  artist_gradelevel: Вік 4-104
   codeorg_platformtext: Сучасні браузери, смартфони, планшети
   codeintl_platformtext: Сучасні браузери, смартфони, планшети
   thinkersmithspanish_platformtext: Безмашинні вправи
@@ -760,10 +765,12 @@ uk-UA:
   thinkersmith2_shortdescription: "Дізнайтесь, як інформація подається в комп'ютері за допомогою 0 та 1"
   kodableunplugged_shortdescription: Веселі безмашинні вправи
   projguts_shortdescription: 'Спробуйте змоделювати гру "камінь-ножиці-папір"'
-  hourofcode_shortdescription: Бланк для нового code.org/hoc
+  hourofcode_shortdescription: Вчіться програмувати з Марком Цукенбергом та Злими птахами!
   frozen_shortdescription: Вивчимо програмування, приєднавшись до Анни та Ельзи у подорожі чарівною зимовою казкою.
   starwars_shortdescription: Навчись програмувати дроїдів, створи власну гру Зоряних воєн у далекій-далекій галактиці.
   playlab_shortdescription: Складіть історію або створіть гру в Ігровій студії!
+  infinity_shortdescription: За допомогою Ігрової лабораторії створіть гру або історію за участі персонажів Діснея Infiinty.
+  artist_shortdescription: Малюйте картини та узори разом з Художником!
   codeorg_longdescription: 'Вивчайте основи програмування шляхом перетягування блоків. Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові алгоритми як цикли та умови. Перекладено 34 мовами.'
   codeintl_longdescription: 'Вивчайте основи програмування шляхом перетягування блоків. Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові алгоритми як цикли та умови. Перекладено 34 мовами.'
   thinkersmithspanish_longdescription: 'За допомогою визначеного словника робота, учні навчаться скеровувати один одного для досягнення певної мети, без попередніх домовленостей. Ця вправа навчає встановлювати відповідність між символами та діями, а також розвиває навик відлагодження. "Мої друзі-роботи" працює найкраще як групова діяльність, і містить робочі аркуші вчителя для використання у класі.'
@@ -993,3 +1000,11 @@ uk-UA:
   compatibility_https_header: Будь ласка, увімкніть HTTPS для Code.org.
   compatibility_https_message: "Для підвищення безпеки, ми перейшли до HTTPS %{https_date}. Ви не зможете отримати доступ до Code.org після цієї дати. <a href='%{it_requirements_url}'> натисніть тут</a>, щоб дізнатися, як увімкнути HTTPS для Code.org."
   compatibility_https_hide_this_warning: Сховати попередження
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: махати
+  infinity_shortcode: inf
+  playlab_shortcode: грати
+  artist_shortcode: art

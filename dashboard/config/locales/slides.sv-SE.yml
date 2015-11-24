@@ -596,597 +596,593 @@
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
-        text: This lesson is called the big event. It's all about how we can control
-          our programs and actually change the way a program runs on the fly using
-          events, like the push of a button or the click of a mouse.
+        text: Denna lektion kallas den stora händelsen. Det är allt om hur vi kan
+          styra våra program och faktiskt ändra hur ett program körs i farten med
+          hjälp av händelser, som att trycka på en knapp eller ett musklick.
       2:
         image: notes/C1_bigevent_unplugged_2.png
-        text: For this lesson, you'll be controlled with a paper remote control. It's
-          just like a real-live video game.
+        text: I den här lektionen ska du styras med en fjärrkontroll av papper. Det
+          är precis som ett real-live spel.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: An event is an action  that causes something to happen. It's like when
-          you click the button on a mouse and a webpage loads. That's an event. When
-          you touch your screen on a tablet to scroll, that's an event also. Events
-          are a great way of letting the user direct your program whenever they need
-          or want to.
+        text: En händelse är en åtgärd som gör så att något händer. Det är som när
+          du klickar på knappen på en mus och en webbsida laddas. Det är en händelse.
+          När du rör skärmen på en surfplatta för att scrolla, är det en händelse
+          också. Händelser är ett bra sätt att låta användaren dirigera ditt program
+          när de behöver eller vill.
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: Things happen that we all respond to. We feel hungry and we go to the
-          fridge. We hear the mailman come and he puts our mail in the mailbox  and
-          then we go get our mail. Those are just like the events of pushing a button
-          or moving a joystick. They are something that happens that triggers us to
-          do something.
+        text: Saker händer som vi alla svarar på. Vi känner oss hungriga och går till
+          kylskåpet. Vi hör brevbäraren komma och han lägger vår post i brevlådan
+          och sedan går vi för att hämta våra brev. De är precis som händelserna  trycka
+          på en dator tangent eller röra en joystick. De är något som händer som triggar
+          oss att göra något.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: In video games, there's an event called "Update" and it happens 30 or
-          60 times a second. For videogame programmers that's almost more important
-          as an event than the buttons or the joystick.
+        text: I Tv-spel finns en händelse kallas "Uppdatera" och sker 30 eller 60
+          gånger per sekund. För videospels- programmerare är den nästan ännu viktigare
+          som en händelse än knapparna eller joysticken.
       6:
         image: notes/C1_bigevent_unplugged_6.png
-        text: The main event we're watching for is that "Update" tick happening. And
-          then we check the joystick in the tick. So we say, "Oh, has somebody pushed
-          the button this frame? Yes or no?" Without events, the player couldn't move,
-          you couldn't jump, you wouldn't be able to control what's going on. The
-          videogame wouldn't be able to animate anything.
+        text: Den viktigaste händelsen vi tittar efter är att "Uppdatera" ticket var
+          eller varannan sekund sker. I varje tick kontrollerar vi joysticken. Så
+          vi säger, "Åh, har någon tryckt på knappen under denna 'frame'? Ja eller
+          nej?" Utan händelser, kan inte spelaren gå, du kunde inte hoppa, du skulle
+          inte kunna kontrollera vad som händer. Videospelet skulle inte kunna animera
+          något.
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: In sand sculpture you've got to know that failure is part of the program.
-          But if you're persist, it's just going to get nothing but better and more
-          exciting for you.Persistence is the name of the game. Stay with it, you'll
-          love it.
+        text: Med sandskulpturer vet du att misslyckande är en del av det hela. Men
+          om du håller ut, kommer det bara att bli bättre och mer spännande. Uthållighet
+          är namnet. Håll ut, du kommer att älska det.
       2:
         image: notes/C1_building_foundation_2.jpg
-        text: This lesson is called building a foundation. In this lesson, we'll work
-          on a task that is meant to be really difficult. You will figure out how
-          to make a structure at least as tall as one of these cups and it's got to
-          be strong enough to hold the weight of a book.
+        text: Denna lektion kallas bygga en grund. I den här lektionen ska vi arbeta
+          med en aktivitet som är tänkt att vara riktigt svårt. Du ska räkna ut hur
+          man gör en struktur som är minst lika lång som en av dessa koppar och den
+          måste vara stark nog att hålla vikten på en bok.
       3:
         image: notes/C1_building_foundation_3.jpg
-        text: There might be times that our creation doesn't work out. There might
-          be times that we get frusrated and want to give up. There might be a lot
-          of those moments. But if we keep on trying, give it our best shot over and
-          over again, then we're sure to get it before long.
+        text: Det kan finnas tillfällen då vår skapelse inte fungerar. Det kan finnas
+          tillfällen när vi blir frustrerade och vill ge upp. Det kan finnas en hel
+          del av dessa stunder. Men om vi fortsätter försöka, ge det vårt bästa om
+          och om igen, då kan vi vara säkra på att få till det snart.
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: Persistence is all about hanging in there when you really want to give
-          up. If you want to create something new and different, there's going to
-          be a lot of failures along the way.
+        text: Envishet handlar om hänga i när du verkligen vill ge upp. Om du vill
+          skapa något nytt och annorlunda, kommer det att finnas en hel del missar
+          längs vägen.
       5:
         image: notes/C1_building_foundation_5.jpg
-        text: The trick to persistence is choosing to keep on going and learn from
-          your failures instead of quitting because you're frustrated. Frustration
-          actually just means there's something wonderful around the corner. So don't
-          quit before you get to it. Wooo!
+        text: Uthållighet är att välja att hålla ut och lära av dina misslyckanden
+          i stället för att sluta för att du är frustrerad. Frustration innebär egentligen
+          bara att det något underbart runt hörnet. Så sluta inte innan du kommer
+          till den. Wooo!
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work,
-          there is something we use in both dances and in programming lightsuits.
-          And that is loops! Loops are repeating an action over and over.
+        text: Hej, mitt namn är Miral Kotb och jag är skaparen av Illuminate. I mitt
+          arbete är det något vi använder i både danserna och programmeringen av ljusdräkter.
+          Och det är slingor! Loopar upprepar en åtgärd om och om igen.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: When you repeat something multiple times, like my actions to keep the
-          hula hoop spinning, I'm performing a loop of that action. This is a loop.
-          This is a loop. And this is a loop.
+        text: När du upprepar något flera gånger, som när jag håller en rockring i
+          spinn, utför jag en slinga med den handlingen. Detta är en loop. Detta är
+          en loop. Och detta är en loop.
       3:
         image: notes/C1_getting_loopy_3.png
-        text: Today we're going to have a dance party. We'll act out loops with a
-          new dance. The Iteration. We're going to learn about loops using a dance.
-          You will learn a couple of easy steps and repeat them over and over to complete
-          the dance.
+        text: Idag ska vi ha ett dansparty. Vi ska agera ut loopar med en ny dans.
+          Upprepningen. Vi kommer att lära sig om loopar genom en dans. Du kommer
+          att lära dig ett par enkla steg och upprepa dem om och om igen för att slutföra
+          dansen.
       4:
         image: notes/C1_getting_loopy_4.png
-        text: Here are the steps you need to learn. Clap your hands. Put your hands
-          behind your head. Put your hands on your waist. Lift your left hand up.
-          Lift your right hand up. Pretty simple, right? You will discover that you
-          can shorten the directions by putting some dance steps in loops.
+        text: Här är de steg du behöver lära dig. Klappa händerna. Upp med händerna
+          bakom huvudet. Upp med händerna på midjan. Lyft vänster hand upp. Lyft din
+          högra hand upp. Ganska enkelt, eller hur? Du kommer att upptäcka att du
+          kan förkorta anvisningarna genom att sätta några danssteg i loopar.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: We actually do use loops in our dancing. The dancers are wearing computers,
-          all in the same network. I might loop the lights through to the same dancers
-          over and over again. In the loop I might have an iteration where I'll say
-          you want to go loop through these six dancers over and over again and then
-          within the loop you want to increase the speed of the light. And that's
-          all created through loops. Loops are important in computer science because
-          they make our work shorter and easier.
+        text: 'Vi använder faktiskt loopar i vår dans. Dansarna bär datorer, alla
+          i samma nätverk. Jag kan loopa ljusen genom samma dansare om och om igen.
+          I slingan kan jag ha en upprepning där jag säger: loopa genom dessa sex
+          dansare om och om igen och sedan inom loopen öka hastigheten på ljuset.
+          Och det skapas med loopar. Loopar är viktiga i datavetenskap eftersom de
+          gör vårt arbete snabbare och lättare.'
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
-        text: This lesson is called Happy Maps. Today we're gonna help our furry little
-          friend Flurb get to her fruit.
+        text: Denna lektion kallas Happy Maps. Idag ska vi hjälpa våra lurviga lilla
+          vän Flurb komma till sin frukt.
       2:
         image: notes/C1_happy_maps_unplugged_2.png
-        text: Make your Flurb go to your fruit. To do this you'll need to figure out
-          which way the Flurb needs to go and direct her with arrows. In order for
-          the Flurb to get to the apple, what direction does the Flurb have to go?
-          Line to make it go up.
+        text: Gör så att din Flurb går till din frukt. För att göra detta måste du
+          räkna ut vilken väg Flurb behöver gå och dirigera henne med pilar. I vilken
+          riktning behöver Flurb gå för att komma till äpplet? Linje för att få det
+          gå upp.
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: To get it there you circle the direction that it has to go.
+        text: För att få den dit gör du riktningen till en cirkel som den måste gå.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
-        text: Create your algorithm by gluing arrows next to the map that you're trying
-          to solve. The second one it's the same but it's going down.
+        text: Skapa din algoritm genom att limma pilar bredvid kartan som du försöker
+          lösa. Den andra är samma men går nedåt.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: It's like programming with paper. And that's it!
+        text: Det är som programmering med papper. Och det är allt!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: Debugging is finding and fixing problems. There are lots of ways to
-          debug problems. One of the easiest is to move step by step until where you
-          find where something goes wrong. Here I'm trying to do a back handspring
-          on the beam but I keep falling off.
+        text: Felsökning är att hitta och åtgärda problem. Det finns många sätt att
+          felsöka problem. Ett av de enklaste är att gå steg för steg tills du hittar
+          där något går fel. Jag försöker här göra en bakåtvolt på balken men jag
+          faller av hela tiden.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: I walked through each part step by step and realized where my mistake
-          was. I wasn't putting my hands on the beam correctly. So I tried another
-          back handspring on the beam with my new hand position and I got it. I was
-          really glad I debugged my back handspring.
+        text: Jag gick igenom varje del steg och insåg var mitt misstag var. Jag satte
+          inte mina händer korrekt på balken. Så jag provade en bakåt volt på balken
+          med min nya handposition och jag klarade den. Jag var verkligen glad att
+          jag felsökte min bakåtvolt.
       3:
         image: notes/C1_maze_debugging_3.png
-        text: To learn about debugging, we start with a set of blocks already on the
-          stage. You'll notice that these blocks won't get you to the goal. We need
-          to debug the solution and fix it. What went wrong? You'll notice that you
-          needed to keep going west one more block.
+        text: För att läsa oss om felsökning börjar vi med en uppsättning block på
+          ytan. Du kommer att märka att dessa block inte kommer att få dig till målet.
+          Vi måste felsöka och fixa det. Vad gick fel? Du kommer att märka att du
+          behöver gå väst ett block ytterligare.
       4:
         image: notes/C1_maze_debugging_4.png
-        text: Let's fix this by adding another west block and hitting run to see if
-          you got it right. Yay, you got it!
+        text: Låt oss fixa detta genom att lägga till ett annat 'väster' block och
+          trycka på kör för att se om det blev rätt. Yay, du klarade det!
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle
-          and see what directions it needs to take.
+        text: I detta pussel måste du få fågeln till grisen. Titta på pusslet och
+          se vilka riktningar fågeln behöver välja.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: You need to drag the blocks over from the toolbox to the workspace.
-          Make sure it's under the "when run" block and when you think you've got
-          the right solution, then you can click "Run" and watch the bird go to the
-          pig.
+        text: Du måste dra blocken från verktygslådan till arbetsytan. Se till att
+          det är under "när kör" blocket och när du tror att du har den rätta lösningen,
+          då du kan klicka på "Kör" och titta på när fågeln går till grisen.
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: One that computers are really good at is repeating commands. As a person,
-          you'd get really bored if you had to do the same thing lots and lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times and not get bored and be able to carry that out really well.
+        text: Något som datorer är riktigt bra på är att upprepa kommandon. Som person
+          blir du verkligen uttråkad om du gör samma sak massor och massor av gånger
+          i rad. Men en dator kan göra samma sak miljoner eller miljarder gånger och
+          inte bli uttråkad och utföra den väl.
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: Till exempel, om jag ville önska alla på Facebook en fin födelsedag
+          genom att skicka dem ett mail, skulle det ta mig mer än ett århundrade att
+          faktiskt skriva ut alla dessa e-postmeddelanden till alla. Men med bara
+          några rader kod, kan jag skicka ett mail till alla på Facebook, ett mail
+          som önskar dem en glad födelsedag.
       3:
         image: notes/C1_maze_loops_3.png
-        text: To get the bird to the pig in this level... rather than drag three North
-          blocks on to the workspace, you will use the "repeat" block. Drag the "repeat"
-          block on to the workspace and enter the number 3. Then drag the "move North"
-          block into the "repeat" block and hit "Run" to see if you got it right.
-          Congratulations, you got it!
+        text: För att få fågeln till grisen i denna nivå... snarare än att dra tre
+          norr- block till arbetsytan, använder du "Upprepa" blocket. Dra "Upprepa"
+          blocket till arbetsytan och ange nummer 3. Sedan dra blocket "flytta norrut"
+          in i "Upprepa" blocket och tryck på "Kör" för att se om du fick det rätt.
+          Grattis, du klarade det!
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
-        text: This lesson is called move it, move it. Together we're going to write
-          a program to get our friends from the starting with the compass rose to
-          the smiley face goal.
+        text: Denna lektion kallas flytta det, flytta den. Tillsammans kommer vi att
+          skriva ett program för att få våra vänner från starten med kompassrosen
+          till målet med smiley ansiktet.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: But the smiley is face down and only one person knows how to get there.
-          Let's get this program started.
+        text: Men smileyn är upp och ner och endast en person vet hur man kommer dit.
+          Låt oss starta programmet.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: A program is an algorithm that has been coded into something that can
-          be run by a machine. Most of us think of a program as something that we
-          write for a computer. Programs are really good for that but they're also
-          helpful in other places. You can make your own game or even program a robot
-          to do things for you.
+        text: Ett program är en algoritm som har kodats in i något som kan köras av
+          en maskin. De flesta av oss tänker på ett program som något som vi skriver
+          för en dator. Program är riktigt bra för det men de är också bra på andra
+          ställen. Du kan göra dina egna spel eller programmera en robot att göra
+          saker för dig.
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: My name is Jeremiah. Hi! I am seven years old. I love playing on my
-          mom's computer but I always get permission first. "Mom, can I go on the
-          computer? Sure honey!"
+        text: Mitt namn är Jeremia. Hej! Jag är sju år gammal. Jag älskar att spela
+          på min mammas dator men jag får alltid tillstånd först. "Mamma, kan jag
+          få vara på datorn? Javisst, vännen!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: I love my mom's computer because I can go on the internet. The internet
-          is kind of like your neighborhood. You can visit cool places, you can talk
-          to family and friends and you can learn lots of new things.
+        text: Jag älskar min mammas dator eftersom jag kan gå ut på Internet. Internet
+          är ungefär som ditt grannskap. Du kan besöka coola ställen, du kan prata
+          med familj och vänner och du kan lära dig massor av nya saker.
       3:
         image: notes/C1_going_places_safely_3.png
-        text: Yesterday, I visited a zoo that's near my house. I saw a baby zebra.
-          I took her picture and changed the color of her stripes, then added a hat
-          and added it to my collection of wacky animals. Awesome! Later, I went to
-          a place far far away. I visited Kenya. That's a country in Africa. Lots
-          of zebras live there.
+        text: Igår besökte jag en djurpark som är nära mitt hus. Jag såg ett zebraföl.
+          Jag tog en bild och ändrade färgen på hennes ränder, och sedan lade jag
+          till en hatt och lade till bilden till min samling av galna djur. Toppen!
+          Senare gick jag till ett ställe långt långt bort. Jag besökte Kenya. Det
+          är ett land i Afrika. Massor av zebror lever där.
       4:
         image: notes/C1_going_places_safely_4.png
-        text: Sometimes on the internet I talk to peeople I know, like my grandma
-          who lives in another state. Hi grandma! She's making me cookies that she'll
-          send me for my birthday. "Yummy, I wish the internet had smellorama!" I
-          can talk to different people on the internet, like my cousin but I only
-          talk to people I know.
+        text: Ibland på Internet pratar jag med folk som jag, som min mormor som bor
+          i en annan stat. Hej mormor! Hon bakar kakor som hon ska skicka mig på min
+          födelsedag. "Mums, jag önskar att Internet hade luktorama!" Jag kan prata
+          med olika människor på Internet, som min kusin men jag pratar bara med människor
+          jag känner.
       5:
         image: notes/C1_going_places_safely_5.png
-        text: What I like most on the interent is that I get to play fun games. Score!
-          I also like to draw and create new things and share it with my friends.
-          Cool! Sometimes I visit websites where I learn new things but I always stick
-          to websites that are just right for me. Wow, dinosaurs!
+        text: Vad jag gillar mest på internet är att jag får spela roliga spel. Poäng!
+          Jag gillar även att rita och skapa nya saker och dela det med mina vänner.
+          Häftigt! Ibland besöker jag webbplatser där jag lär mig nya saker men jag
+          håller mig alltid till webbplatser som är rätt för mig. Wow, dinosaurier!
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The internet is a super fun place. But just like when you cross a street
-          in your neighborhood, you also have to be careful when you go online. Here
-          are three rules to remember. Rule number 1: Always ask your parents first.
-          Rule number 2: Only talk to people you know. Rule number 3: Stick to places
-          that are just right for you.'
+        text: 'Internet är en superkul ställe. Men precis som när du korsar en gata,
+          måste du också vara försiktig när du går online. Här är tre regler att komma
+          ihåg. Regel nummer 1: fråga alltid dina föräldrar först. Regel nummer 2:
+          prata endast med folk du känner. Regel nummer 3: håll dig till platser som
+          är precis rätt för dig.'
       7:
         image: notes/C1_going_places_safely_7.png
-        text: Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to
-          log on again to see where I can visit next.
+        text: Wow, det var kul! Middagstid. Jag loggar ut nu. Jag kan inte vänta med
+          att logga in igen för att se vart jag kan gå.
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
-        text: Today we're going to learn about Pair Programming. In pair programming
-          you work as a team. Why should two people use one computer? Because two
-          heads are better than one. In pair programming you and your partner are
-          going to sit down together at one computer and you are both going to work
-          on the same project.
+        text: Idag ska vi lära oss om par-programmering. I par-programmering arbetar
+          du som ett team. Varför ska två personer använda en dator? Eftersom två
+          huvuden är bättre än ett. I par-programmering kommer du och din partner
+          att sitta tillsammans vid en dator och ni kommer både att arbeta i samma
+          projekt.
       2:
         image: notes/C1_pair_programming_2.png
-        text: In pair programming, one person is the driver and the other person is
-          the navigator, just like driving a car. The driver sits at the computer
-          and is the one using the keyboard and mouse or touchscreen and controlling
-          the main actions of the computer. The other person is the navigator. The
-          navigator helps the driver by answering the driver's questions and pointing
-          out potential problems or mistakes.
+        text: I par programmering, är en person föraren och den andra personen är
+          navigatör, precis som att köra en bil. Föraren sitter vid datorn och är
+          den som med hjälp av tangentbord och mus eller pekskärm kontrollerar de
+          viktigaste åtgärderna av datorn. Den andra personen är navigatör. Navigatören
+          hjälper föraren genom svara på förarens frågor och peka ut potentiella problem
+          eller misstag.
       3:
         image: notes/C1_pair_programming_3.png
-        text: Communication is key to successful pair programming. No insults, be
-          respectful, don't be a bossy navigator, because nobody likes a backseat
-          driver. You and your partner should always be talking. The driver can explain
-          what she or he is doing. And the navigator can help suggest what to do next.
+        text: Kommunikation är nyckeln till framgångsrik par-programmering. Inga förolämpningar,
+          var respektfull, inte vara en diktatorisk navigatör eftersom ingen gillar
+          en baksäteschaufför. Du och din partner bör alltid prata. Föraren kan förklara
+          vad hon eller han gör. Och navigatören kan föreslå vad man ska göra härnäst.
       4:
         image: notes/C1_pair_programming_4.png
-        text: The navigator should be thinking about the big picture and the driver
-          focuses on the details. Both roles are important. Pair programming is all
-          about working together as a team.
+        text: Navigatören bör tänka på den stora bilden och föraren fokuserar på detaljer.
+          Båda rollerna är viktiga. Par-programmering handlar om att arbeta tillsammans
+          som ett team.
     C1_planting_seed:
       1:
         image: notes/C1_planting_seed_1.png
-        text: This lesson is called planting a seed and it's going to help us understand
-          algorithms. Algorithms are specific instructions that explain the order
-          in which to do something. Even everyday things like eating breakfast or
-          brushing your teeth are algorithms that require small steps to get a job
-          done.
+        text: Denna lektion kallas plantera ett frö och det kommer att hjälpa oss
+          att förstå algoritmer. Algoritmer är specifika instruktioner som förklarar
+          ordningen för att göra något. Även vardagliga saker som att äta frukost
+          eller borsta tänderna är algoritmer som kräver små steg för att få jobbet
+          gjort.
       2:
         image: notes/C1_planting_seed_2.png
-        text: Computers can be really smart but they can only understand you if you
-          tell them exactly what you want step by step. The great thing about algorithms
-          is that if you follow the instructions in order, you can do something that
-          you didn't know how to do ahead of time. It's like following a recipe.
+        text: Datorer kan vara riktigt smarta, men de kan endast förstå dig om du
+          berätta exakt vad du vill steg för steg. Det fina med algoritmer är att
+          om du följer instruktionerna i ordning, kan du göra något som du inte visste
+          hur man gör innan. Det är som att följa ett recept.
       3:
         image: notes/C1_planting_seed_3.png
-        text: Today we're going to plant our own seeds using an algorithm. Create
-          your own algorithm by cutting apart the pictures. Select the pictures that
-          show steps in planting a seed and arrange those pictures in the correct
-          order.
+        text: Idag ska vi plantera våra egna frön genom att använda en algoritm. Skapa
+          din egen algoritm genom att klippa isär bilderna. Markera de bilder som
+          visar stegen för att plantera ett frö och ordna dessa bilder i rätt ordning.
       4:
         image: notes/C1_planting_seed_4.png
-        text: Now, it's time for you to see if your algorithm works. Follow the steps
-          in the algorithm very carefully. Are they in the correct order? Did you
-          succeed in planting a seed by following the algorithm? It's like programming
-          with pictures!
+        text: Nu är det dags för dig att se om din algoritm fungerar. Följ stegen
+          i algoritmen mycket noga. Är de i rätt ordning? Lyckades du plantera ett
+          frö genom att följa algoritmen? Det är som programmering med bilder!
       5:
         image: notes/C1_planting_seed_5.png
-        text: When we want to make chocolate, there are many big steps to that process
-          and each of those big steps has a set of smaller steps and there are different
-          recipes or algorithms depending on how we want the chocolate to taste. Each
-          step is important, even the small ones, so that without one step, the rest
-          of them cannot be completed. Creating algorithms that others can understand
-          is really important. That's why each step has to be written down so that
-          no matter who does it, the result is the same.
+        text: När vi vill göra choklad, finns det många stora steg till denna process
+          och alla dessa stora steg har en uppsättning mindre steg och det finns olika
+          recept eller algoritmer beroende på hur vi vill ha chokladen efter smak.
+          Varje steg är viktigt, även de små, så att resten av dem inte kan fullföljas
+          om ett steg fattas. Det är verkligen viktigt att skapa algoritmer som andra
+          kan förstå. Det är därför varje steg måste skrivas så att vem som än gör
+          det, blir resultatet detsamma.
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
-        text: Time to get creative and use your coding skills to tell a story. Your
-          story will have actors and you will be able to make these actors talk and
-          interact with each other. Start thinking of what kind of story you want
-          to tell.
+        text: Dags att vara kreativ och använda din kodningsförmåga till att berätta
+          en historia. Din berättelse kommer att ha skådespelare och du kommer att
+          kunna göra så att dessa aktörer talar och interagerar med varandra. Börja
+          tänka på vilken typ av berättelse du vill berätta.
       2:
         image: notes/C1_playlab_storytelling_2.png
-        text: The cat's always been afraid of the dog and what if the cat figures
-          out that the dog is trying to be nice? The "when run" block starts everything.
-          The "move" block will move your character and the "say" block will make
-          your character say whatever you type.
+        text: Katten har alltid varit rädd för hunden och vad händer om katten klurar
+          ut att hunden försöker vara trevlig? "När kör" blocket startar allt. "Flytta"
+          blocket kommer att flytta din karaktär och "säger" blocket kommer att göra
+          så att din karaktär säger vad du skriver.
       3:
         image: notes/C1_playlab_storytelling_3.png
-        text: This is the "when actors collide" block which you can link up to the
-          other blocks.
+        text: Detta är "när aktörer kolliderar" blocket som du kan länka till andra
+          block.
       4:
         image: notes/C1_playlab_storytelling_4.png
-        text: I was making the dog come over and say "Hi" but then the cat got scared
-          so it ran away. "Ahh" If there was more time, it would have been a happy
-          ending. The end!
+        text: Jag gjorde så att hunden kommer och säger "Hej" men då blev katten rädd
+          och sprang iväg. "Ahh" om det fanns mer tid, skulle ha blivit ett lyckligt
+          slut. Slut!
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: This is the spelling bee level. Use the puzzle pieces to move the bee.
-          As it moves, it will collect letters to spell words.
+        text: Detta är 'spelling bee' nivån. Använd pusselbitar för att flytta biet.
+          När det flyttar sig, samlar det in bokstäver för att stava ord.
       2:
         image: notes/C1_spelling_bee_intro_2.png
-        text: See if you can spell the word they give you in the box below the stage.
-          But bee careful! Moving the wrong direction will add letters you don't want.
+        text: Se om du kan stava ordet de ger dig i rutan nedanför scenen. Men var
+          försiktig! Flytta åt fel håll kommer att lägga till bokstäver du inte vill.
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: One that computers are really good at is repeating commands. As a person,
-          you'd get really bored if you had to do the same thing lots and lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times and not get bored and be able to carry that out really well.
+        text: Något som datorer är riktigt bra på är att upprepa kommandon. Som person
+          blir du verkligen uttråkad om du gör samma sak massor och massor av gånger
+          i rad. Men en dator kan göra samma sak miljoner eller miljarder gånger och
+          inte bli uttråkad och utföra den väl.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: Till exempel, om jag ville önska alla på Facebook en fin födelsedag
+          genom att skicka dem ett mail, skulle det ta mig mer än ett århundrade att
+          faktiskt skriva ut alla dessa e-postmeddelanden till alla. Men med bara
+          några rader kod, kan jag skicka ett mail till alla på Facebook, ett mail
+          som önskar dem en glad födelsedag.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
-        text: In this example, your goal is going to be to move the bird to get the
-          pig. Now, we're going to be able to use the repeat block in order to be
-          able to do this very easily. You can either do this by giving the computer
-          a move forward command five times in order to advance the bird one step
-          each time to the pig or you can just tell the computer to move forward once,
-          and then tell it to repeat that five times and it'll do the same thing.
+        text: I det här exemplet ska ditt mål vara att flytta fågeln för att få grisen.
+          Vi i kommer att kunna använda upprepa blocket för att kunna göra detta mycket
+          enkelt. Du kan antingen göra detta genom att ge datorn en kommandot Flytta
+          framåt fem gånger för att föra fram fågeln ett steg varje gång till grisen
+          eller bara tala om för datorn att gå framåt en gång och sedan att upprepa
+          det fem gånger och den kommer att göra samma sak.
       4:
         image: notes/C1_zuck_repeat_loop_4.png
-        text: In order to do this, you drag your move forward command and then you
-          put it inside the repeat block. And you can click on it and tell it how
-          many times you  to repeat the block to tell it how many steps you want it
-          to take forward.
+        text: För att göra detta drar du ditt flyttaframåt kommando och lägger inuti
+          upprepa blocket. Du kan klicka på det och tala om hur många gånger det ska
+          upprepa kommandot.
       5:
         image: notes/C1_zuck_repeat_loop_5.png
-        text: One more thing is you can put as many commands as you want inside the
-          repeat block. So in this example, you're telling it to move forward and
-          turn left, which it'll do five times. Have fun!
+        text: En annan sak är du kan sätta så många kommandon som du vill ha inuti
+          upprepa blocket. Så i det här exemplet säger du åt den att gå framåt och
+          sväng vänster, vilket det kommer att göra fem gånger. Ha det så kul!
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
-        text: You wouldn't even qualify for the race if you don't have people who
-          are proficient in computer science because of how much data the cars collect
-          and the necessity to be able to have people that can write programs to figure
-          out how you continue to figure out how to build performance.
+        text: Du skulle inte ens kvalificera för racet om du inte har människor som
+          är kunniga i datavetenskap på grund av hur mycket data bilarna samlar och
+          behovet av att kunna ha folk som kan skriva program för att räkna ut hur
+          du fortsätter att räkna ut hur man bygger prestanda.
       2:
         image: notes/C2_artist_intro_2.png
-        text: In these puzzles, you'll be an artist that uses a pencil to draw different
-          shapes. Wherever your artist goes, it will draw a line behind you.
+        text: I dessa pussel, kommer du vara en konstnär som använder en penna för
+          att rita olika figurer. Vart din artist går, kommer den att det dra en linje
+          bakom dig.
       3:
         image: notes/C2_artist_intro_3.png
-        text: To move around the canvas, you'll use the move forward block. Here the
-          move forward block says move forward by 100 pixels. When we hit run, what
-          happens? The artist moves forward a certain amount and that amount is 100
-          pixels. Pixels are basically very tiny squares on your computer screen.
+        text: Om du vill flytta runt scenen, ska du använda flytta framåt blocket.
+          Här säger flytta framåt blocket 'flytta framåt 100 pixlar'. När vi trycker
+          på kör, vad händer? Konstnären rör sig framåt en viss sträcka och den 100
+          bildpunkter. Pixlar är i grunden mycket små rutor på skärmen.
       4:
         image: notes/C2_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees.
-          And when we drag that out that makes our artist turn a certain amount. So
-          you can play around with how far you want the artist to turn. This is a
-          90 degree turn.
+        text: Det andra blocket som vi har i detta pussel säger' sväng höger 90 grader'.
+          Och när vi drar ut det gör det så att vår konstnär vänder vissa grader.
+          Så du kan leka med hur långt du vill att konstnären ska vända. Detta är
+          en 90 graders sväng.
       5:
         image: notes/C2_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: Och detta är en 120 graders sväng. Och kom ihåg, du kan ändra dessa
+          värden genom att klicka på pilarna bredvid siffrorna för pixlar och grader.
+          Njut av att rita med din artist!
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that
-          is less than, equal to or greater than a number, THEN do something.
+        text: Detta är villkorsblock. Det står OM det finns nektar eller honung som
+          är mindre än, lika med eller större än ett tal, GÖR något.
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: This is useful when we don't know how much nectar or honey to get, as
-          we see here with this question mark.
+        text: Detta är användbart när vi inte vet hur mycket nektar eller honung där
+          finns att få, som vi ser här med detta frågetecken.
       3:
         image: notes/C2_bee_conditionals_3.png
-        text: In this example, we're going to say IF the purple flower has nectar
-          greater than 0, get nectar. That will tell our bee to keep getting nectar
-          as long as it's there. Ta-dah!
+        text: I det här exemplet ska vi säga OM den lila blomman har nektar större
+          än 0, få nektar. Det säger till vårt bi att fortsätta så länge det finns
+          nektar där. Ta-dah!
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
-        text: This is the binary bracelets lesson. We are going to code our initials
-          on a bracelet we can wear and show all our friends!
+        text: Detta är den 'binära- armband' läxan. Vi ska koda våra initialer på
+          ett armband vi kan bära och visar alla våra vänner!
       2:
         image: notes/C2_binary_bracelets_2.png
-        text: Binary is a way of representing information using only two options.
-          Sometimes people think of this as only 1s and 0s. But you can represent
-          binary with combinations of on or off, up and down, in and out or really
-          any set of opposites.
+        text: 'Binärt är ett sätt att representera information med hjälp av endast
+          två alternativ. Ibland tänker människor på detta som endast 1: or och 0:
+          or. Men du kan representera binär med kombinationer av på eller utanför,
+          upp eller ner, in eller ut eller vilken uppsättning av motsatser som helst.'
       3:
         image: notes/C2_binary_bracelets_3.png
-        text: Hi, I'm Orion and I program robots here at Play-im. All computer and
-          robot brains at their most fundamental level are little electronic gates.
-          When the gate is open, electricity can flow through and when it's closed,
-          electricity can't.
+        text: Hej, jag är Orion och jag programmera robotar här på Play-im. Alla datorer
+          och robothjärnor är på den mest grundläggande nivån små elektroniska grindar.
+          När porten är öppen, kan elektricitet flöda genom och när den är stängd
+          kan den inte.
       4:
         image: notes/C2_binary_bracelets_4.png
-        text: An example of binary on the robot is the robot's eyes. The robot's eyes
-          are LEDs and those are lights that are either on or off. It's a binary system,
-          one or the other. We can use the lights to represent binary numbers. If
-          we have a set of robots, we can say that the first robot is the 1s place
-          and the second robot is the 2s place, the third robot is the 4s place and
-          so on. That's how you represent a binary number. The robots will do it with
-          their binary eyes and count it out for you.
+        text: Ett exempel på binär på robot är robotens ögon. Robotens ögon är lysdioder
+          och de är lampor som är antingen på eller av. Det är ett binärt system,
+          ena eller andra. Vi kan använda lamporna för att representera binära tal.
+          Om vi har en uppsättning av robotar, kan vi säga att den första roboten
+          är 1a plats och andra roboten är 2a, tredje roboten är 4e plats och så vidare.
+          Det är hur du representerar ett binärt tal. Robotar kommer att göra det
+          med sina binära ögon och räkna ut det åt dig.
     C2_conditionals_with_cards:
       1:
         image: notes/C2_conditionals_with_cards_1.png
-        text: This lesson is called conditionals with cards. Every day you make decisions
-          based on what you see and hear.
+        text: Denna lektion kallas villkorssatser med kort. Varje dag fattar du beslut
+          baserat på vad du ser och hör.
       2:
         image: notes/C2_conditionals_with_cards_2.png
-        text: I want to walk to the park but first I have to decide whether I should
-          bring an umbrella or not. So I look out the window. If it's cloudy, I'm
-          going to take my umbrella. Else, I'll take some sunglasses. I think I'd
-          better take the umbrella. What I see and hear determines what I take to
-          the park.
+        text: Jag vill gå till parken men först måste jag bestämma om jag ska ta ett
+          paraply eller inte. Så jag ser ut genom fönstret. Om det är molnigt, ska
+          jag ta mitt paraply. Annars tar jag solglasögon. Jag tror jag tar paraplyet.
+          Vad jag ser och hör avgör vad jag tar med till parken.
       3:
         image: notes/C2_conditionals_with_cards_3.png
-        text: Conditionals are used in games too. Today we're going to practice using
-          conditionals with a card game. In this game, the card that I draw determines
-          what my friends are going to do. If I draw a seven, everyone claps. Else,
-          everyone says "awww." Let's try it! "Awww" "cheers"
+        text: Villkorssatser används i spel också. Idag ska vi öva med villkorssatser
+          med ett kortspel. I detta spel avgör det kortet som jag drar vad mina vänner
+          ska göra. Om jag drar en sjua, klappar alla. Annars, säger alla "aww." Låt
+          oss prova det! "aw" skål""
       4:
         image: notes/C2_conditionals_with_cards_4.png
-        text: I bet you can make up games that are even more fun with conditionals.
-          Give it a try! Conditionals are what make computers seem smart. A computer
-          program that includes conditionals can react to the user and change its
-          course of action.
+        text: Jag slår vad du kan komma på spel som är ännu roligare med villkorssatser.
+          Ge det ett försök! Villkorssatser är vad som göratt datorer verkar smarta.
+          Ett datorprogram som innehåller villkorssatser kan reagera på användaren
+          och ändra sitt tillvägagångssätt.
       5:
         image: notes/C2_conditionals_with_cards_5.png
-        text: Think about your favorite video game. Do you earn more points for some
-          actions than you do for others? This occurs because the computer is using
-          conditionals. It's the way a computer makes a decision. How about, if you
-          hit the target, you earn ten points. Else, you lose three. When you know
-          how conditionals work, you can create all kinds of exciting games.
+        text: Tänk på ditt favorit videospel. Fårdu mer poäng för vissa åtgärder än
+          för andra? Detta beror på att datorn använder villkorssatser. Det är på
+          det sättet som en dator tar ett beslut. Vad sägs om att du tjänar tio poäng
+          om du träffar målet. Annars förlorar du tre. När du vet hur villkorssatser
+          fungerar, kan du skapa alla typer av spännande spel.
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: Here we already have some blocks out in our work space. But there is
-          something wrong.
+        text: Här har vi redan några block på vår arbetsyta. Men det är något fel.
       2:
         image: notes/C2_artist_debugging_2.png
-        text: Let's debug this code by slowing down the speed and watching it as it
-          goes through each block step by step.
+        text: Låt oss felsöka denna kod genom att sakta ner hastigheten och titta
+          på den när den går igenom varje block steg för steg.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: Oh, there's the problem! The cat's whiskers are 75 pixels long, not
+        text: Åh, där är problemet! Kattens morrhår är 75 bildpunkter långa, inte
           25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
-        text: Have you ever heard of debugging a program? This is the way you figure
-          out what's not working. When you debug code, you identify and remove errors.
+        text: Har du någonsin hört talas om felsökning av ett program? Detta är hur
+          du tar reda på vad som inte fungerar. När du felsöker kod, kan du identifiera
+          och ta bort fel.
       2:
         image: notes/C2_bee_debugging_2.png
-        text: Here we're given a few blocks already in our workplace. We're going
-          to use the step button to walk through the blocks, step by step, to see
-          if this is the right solution and where we may need to fix it.
+        text: Här är vi fått några block på vår arbetsplats redan. Vi kommer att använda
+          knappen steg för att gå igenom blocken, steg för steg, för att se om detta
+          är den rätta lösningen och var vi kan behöva fixa det.
       3:
         image: notes/C2_bee_debugging_3.png
-        text: Looks like there's our problem! We need one more move forward block.
-          The step button helps us debug our problem by identifying where the error
-          is so we can fix it.
+        text: Ser ut som det är vårt problem! Vi behöver ett till flytta framåtblock.
+          Knappen steg hjälper oss att felsöka vårt problem genom att identifiera
+          var felet är så att vi kan fixa det.
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
-        text: On your head you hold your hat and your smarts will tell you where you're
-          at and to think about the zoo, and to nod hello to you and you! Use your
-          head when you're online to keep what's yours inside your mind and to know
-          how to be safe, how to give your life some private space! From your head
-          down to your toes, pause, think about it. From your feet up to your nose,
-          pause and think online!
+        text: På ditt huvud håller du din hatt och din smarthet kommer att berätta
+          var du är och att tänka på djurparken samt att nicka Hej till dig och dig!
+          Använd huvudet när du online för att hålla det som är ditt inuti ditt sinne
+          och veta hur man ska vara säker, hur du ger ditt liv privat utrymme! Från
+          huvudet ner till tårna, pausa, tänk på det. Från fötterna upp till näsan,
+          stanna upp och tänk online!
       2:
         image: notes/C2_digital_footprint_2.png
-        text: Use your heart to grow and grow, and to give yourself a healthy glow,
-          and to make a valentine, tell someone that you'll be mine! Use your heart
-          when you're online, feel what's right and always kind, and show your friends
-          respect, to be fair and nice on the internet. From your head down to your
-          toes, pause, think about it. From your feet up to your nose, pause and think
-          online!
+        text: Använd ditt hjärta för att växa och växa, och att ge dig själv en hälsosam
+          lyster och att göra en valentine, berätta för någon att du blir min! Använd
+          ditt hjärta när du är online, känn vad som är rätt och alltid snällt och
+          visa respekt för dina vänner, för att vara rättvis och trevlig på Internet.
+          Från huvudet ner till tårna, pausa, tänk på det. Från fötterna upp till
+          näsan, stanna upp och tänk online!
       3:
         image: notes/C2_digital_footprint_3.png
-        text: Use your arms to hug your pet, to keep your clothes from getting wet,
-          and to wear your favorite sleeves and to help you fly and make believe.
-          Use your arms when you're online, to take break and balance time and leave
-          your tech behind and to find yourself a tree to climb. From your head down
-          to your toes, pause, think about it. From your feet up to your nose, pause
-          and think online!
+        text: Använd dina armar för att krama ditt sällskapsdjur, för att hålla dina
+          kläder torra, och att bära dina favoritärmar och att hjälpa dig att flyga
+          och tro. Använd dina armar när du är online, att ta paus och balansera tid
+          och lämna din tech bakom och hitta dig själv ett träd att klättra i. Från
+          huvudet ner till tårna, pausa, tänk på det. Från fötterna upp till näsan,
+          stanna upp och tänk online!
       4:
         image: notes/C2_digital_footprint_4.png
-        text: Use your gut to store your food, and to listen to its growling mood,
-          to make a belly flop, and to feel the gas in soda pop. Use your gut when
-          you're online, to know to watch for certain signs, and to let it guide the
-          way and tell you when it's not ok. From your head down to your toes, pause,
-          think about it. From your feet up to your nose, pause and think online!
+        text: Använd din mage att lagra din mat och att lyssna till dess morrande
+          humör, att göra en magflopp, och att känna bubblorna i läsk. Använd din
+          mage när du är online, att veta hur man hittar vissa tecken, och låta det
+          styra vägen och berätta när det inte är ok. Från huvudet ner till tårna,
+          pausa, tänk på det. Från fötterna upp till näsan, stanna upp och tänk online!
       5:
         image: notes/C2_digital_footprint_5.png
-        text: So think with your head, and feel with your heart, balance with your
-          arms, listen to your gut, online. Use your legs to run and kick, and to
-          jump and bounce on a pogo stick, and to dance around the block, and to skip
-          along in your smelly socks. Use your legs when you're online, to stand up
-          to bullies who cross the line, and remember to stand tall, be nice to creatures
-          great and small.
+        text: Så tänk med huvudet, och känn med ditt hjärta, balansera med armarna,
+          lyssna på magkänslan, online. Använd dina ben att springa och sparka, och
+          att hoppa och studsa på en Hoppstylta, och dansa runt kvarteret och hoppa
+          i dina luktande strumpor. Använd benen när du är online, att stå upp mot
+          översittare som passerar linjen, och kom ihåg att stå hög, vara trevlig
+          mot varelser stora och små.
       6:
         image: notes/C2_digital_footprint_6.png
-        text: From your head down to your toes, pause, think about it. From your feet
-          up to your nose, pause and think online! So think with your head, and feel
-          with your heart, balance with your arms, listen to your gut, stand up with
-          your legs. From your head down to your toes, pause, think about it. From
-          your feet up to your nose, pause and think online!
+        text: Från huvudet ner till tårna, pausa, tänk på det. Från fötterna upp till
+          näsan, stanna upp och tänk online! Så tänk med huvudet, och känn med ditt
+          hjärta, balansera med armarna, lyssna på magkänslan, stå upp med benen.
+          Från huvudet ner till tårna, pausa, tänk på det. Från fötterna upp till
+          näsan, stanna upp och tänk online!
     C2_digital_footprint_v2:
       1:
         image: notes/C2_digital_footprint_v2_1.png
-        text: Everytime you go online, you leave a footprint that can be searched,
-          copied, shared, broadcast and is permanent. What kind of digital footprint
-          are you leaving? What kind of digital footprint do you want to leave?
+        text: Varje gång du går online, lämnar du ett fotavtryck som kan sökas, kopieras,
+          delas, sändas och är permanent. Vilken typ av digitala fotavtryck lämnar
+          du? Vilken typ av digitala fotavtryck vill du lämna?
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
-        text: This lesson is called "Graph Paper Programming" and it's all about algorithms.
-          Today we're going to learn how to write programs that show each other how
-          to recreate simple black and white images, using only hand drawn arrows.
+        text: Denna lektion kallas "Rutat papper programmering" och det handlar om
+          algoritmer. Idag kommer vi att lära dig hur du skriver program som visar
+          andra hur man återskapar enkla svartvita bilder, genom att bara använda
+          handritade pilar.
       2:
         image: notes/C2_graph_paper_2.png
-        text: An algorithm is a list of instructions for completing a task. We'll
-          follow this set of instructions to make the bowl. Algorithms are really
-          helpful when you need someone else to understand how to do something.
+        text: En algoritm är en lista med instruktioner för att slutföra en aktivitet.
+          Vi ska följa denna uppsättning instruktioner för att göra skålen. Algoritmer
+          är verkligen hjälpsamma när du behöver få någon annan att förstå hur man
+          gör något.
       3:
         image: notes/C2_graph_paper_3.png
-        text: If you're writing an algorithm for a computer, you have to break it
-          down to little tiny steps. So finish this row and go to the next, then the
-          next one, and you'll be done.
+        text: Om du skriver en algoritm för en dator, måste du bryta den ner till
+          små små steg. Så avsluta denna rad och gå till nästa och nästa och du kommer
+          att bli klar.
       4:
         image: notes/C2_graph_paper_4.png
-        text: I use algorithms in my work. If I write down all of the steps I can
-          recreate that same piece again, or I can teach someone else to do it. Put
-          the glass in the kiln, fuse it together, follow the rest of the instructions
-          to make the bowl. Algorithms give you a road map for getting something done.
+        text: Jag använder algoritmer i mitt arbete. Om jag skriver ner alla steg
+          kan jag återskapa samma bit igen, eller jag kan lära någon annan att göra
+          det. Sätta glaset i ugnen, smälta samman, följ resten av instruktionerna
+          för att göra skålen. Algoritmer ger dig en färdplan för att få något gjort.
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
-        text: Here we are going to use the repeat block to help us save steps when
-          we are programming our artist. We already have some blocks out on our stage
-          but they are just there to get us started.
+        text: Här ska vi använda upprepa blocket för att hjälpa oss att spara steg
+          när vi programmerar vår artist. Vi har redan några block på vår arbetsyta
+          men de är bara där för att få oss igång.
       2:
         image: notes/C2_artist_loops_2.png
-        text: To loop those blocks four times to draw the whole square, we just drag
-          out the repeat block and put the moveforward and turn right blocks inside
-          the repeat block. When we hit run, the artist will repeat those steps four
-          times to complete the square.
+        text: För att loopa dessa block fyra gånger för att rita hela rutan, drar
+          vi bara ut upprepa blocket och lägger flytta framåtblocket och vänd högerblocket
+          inuti upprepa blocket. När vi trycker på kör, kommer konstnären att upprepa
+          dessa steg fyra gånger för att slutföra fyrkanten.
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
-        text: A loop is a repetition of activity. Going into a hive to inspect, I
-          look at a frame, and then I put it back. I repeat that same activity multiple
-          times. It's looping around, doing the same activity multiple times.
+        text: En loop är att göra om en sak flera gånger. Så när jag inspekterar en
+          bikupa, så tittar jag på en ram och stoppar tillbaka den, det upprepar jag
+          flera gånger. Det kallas på programmeringsspråk att loopa.
       2:
         image: notes/C2_bee_loops_2.png
-        text: This is the repeat block. Whatever you put inside the repeat block will
-          repeat those actions the number of times that you tell it to. For example,
-          in this level, rather than drag out move forward and get nectar three times,
-          we're going to just drag them out once each and repeat the action three
-          times. That made it easy!
+        text: Detta är upprepa blocket. Vad du än sätter inne upprepa blocket kommer
+          det att upprepa dessa åtgärder antalet gånger som du sagt. På den här nivån
+          t ex, snarare än dra gå framåt och få nektar tre gånger, ska vi bara dra
+          dem en gång var och upprepa det tre gånger. Det gjorde det lätt!
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
-        text: Usually programming is all in text but we'll use Blockly which uses
-          visual blocks that you drag and drop to write programs. Under the hood,
-          you're still creating code. To start off, we're going to build code for
-          a program that will help this Angry Bird move through a maze to get to the
-          evil pigs that stole its eggs.
+        text: Vanligtvis är programmering i text men vi använder Blockly som använder
+          visuella block som du dra och släppa för att skriva program. Under huven
+          skapar du fortfarande kod. Till att börja med ska vi bygga koden för ett
+          program som kommer att hjälpa denna arga fågel flytta genom en labyrint
+          för att ta sig till de elaka grisar som stal hans ägg.
       2:
         image: notes/C2_maze_intro_2.png
         text: Blockly is split into three main parts. On the left is the bird's maze,
@@ -1196,50 +1192,52 @@
           is called the workspace and this is where we'll build our program.
       3:
         image: notes/C2_maze_intro_3.png
-        text: If I drag the move block to our work space and press "Run", what happens?
-          The bird moves forward one box on the grid. And what if I want the bird
-          to do something after it moves forward one box? I can add another block
-          to our program.
+        text: Om jag drar flytta blocket till vår arbetsyta och trycker på "Kör",
+          vad händer? Fågeln flyttas framåt en ruta på nätet. Och vad händer om jag
+          vill att fågeln ska göra något när den rör sig framåt en ruta? Jag kan lägga
+          ett annat block till vårt program.
       4:
         image: notes/C2_maze_intro_4.png
-        text: I'm going to choose the "turn right" block and I'll drag it under my
-          move block until the yellow arrow appears. Then I'll drop it and the two
-          blocks will snap together. When I press "Run" again,  the bird will perform
-          the commands that are stacked from top to bottom on our work space.
+        text: Jag kommer att välja "sväng höger" blocket och jag ska dra det under
+          mitt Flytta blocke tills den gula pilen visas. Sedan ska jag släppa det
+          och de två blocken kommer att knäppa ihop. När jag trycker på "Kör" igen,
+          utför fågeln de kommandon som är staplade från toppen till botten på vår
+          arbetsyta.
       5:
         image: notes/C2_maze_intro_5.png
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it to the trash can. After you've hit run, you can always hit the reset
-          button to get the bird back to the start. Now let's get those pigs!
+        text: Om du någonsin vill ta bort ett block, bara ta bort det från stacken
+          och dra det till papperskorgen kan. När du har tryckt på kör, kan du alltid
+          trycka på omstarts-knappen för att få fågeln tillbaka till starten. Nu låt
+          oss få dessa grisar!
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
-        text: This lesson is called Real Life Algorithms. Algorithms describe things
-          that people do everyday. Cookie recipes and directions for building a birdhouse
-          are both everyday algorithms.
+        text: Denna lektion kallas verkliga livet algoritmer. Algoritmerna beskriver
+          saker som människor gör varje dag. Kakrecept och riktningar för att bygga
+          en fågelholk är båda vardagliga algoritmer.
       2:
         image: notes/C2_paper_airplanes_2.png
-        text: Today we're gonna make, create, and test an algorithm for a paper airplane.
-          But first, we need to break this big project into easy to follow small steps.
-          For making a paper airplane, we need to decide what steps to take and in
-          what order to take them.
+        text: Idag ska vi göra, skapa och testa en algoritm för ett pappersflygplan.
+          Men först måste vi bryta ner detta stora projekt i små steg som är lätta
+          att följa. Vi måste bestämma vilka åtgärder vi ska utföra för att för att
+          göra ett pappersflygplan, och i vilken ordning.
       3:
         image: notes/C2_paper_airplanes_3.png
-        text: You'll create your algorithm by first cutting apart the pictures. Next,
-          you'll select the 6 pictures that show the steps needed to make a paper
-          airplane and arrange those pictures in the correct order. After you have
-          everything in order, you will trade algorithms with another student team
-          to test out the algorithm to see if the algorithm works. A well designed
-          algorithm is super important to making the best paper airplane.
+        text: Du ska skapa din algoritm genom att första skära isär bilderna. Därefter
+          ska du välja de 6 bilder som visar de steg som behövs för att göra ett pappersflygplan
+          och ordna dessa bilder i rätt ordning. Efter att du har allt i ordning,
+          ska du byta algoritmer med ett annan elev-lag för att testa algoritmen och
+          se om algoritmen fungerar. En väl utformad algoritm är superviktig för att
+          göra det bästa pappersflygplanet.
       4:
         image: notes/C2_paper_airplanes_4.png
-        text: When we want to make chocolate, there are many big steps to that process.
-          And each of those big steps has its own set of smaller steps. And there
-          are different recipes, or algorithms, depending on how we want the chocolate
-          to taste. Each step is important, even the small ones. So without one step,
-          the rest of them cannot be completed. Creating algorithms that others can
-          understand is really important. That's why each step has to be written down,
-          so no matter who does it, the result is the same.
+        text: När vi vill göra choklad, finns det många stora steg i denna process
+          och alla dessa stora steg har en uppsättning mindre steg och det finns olika
+          recept eller algoritmer beroende på hur vi vill ha chokladen efter smak.
+          Varje steg är viktigt, även de små, så att resten av dem inte kan fullföljas
+          om ett steg fattas. Det är verkligen viktigt att skapa algoritmer som andra
+          kan förstå. Det är därför varje steg måste skrivas så att vem som än gör
+          det, blir resultatet detsamma.
     C2_playlab_createastory:
       1:
         image: notes/C2_playlab_createastory_1.png
@@ -1253,260 +1251,260 @@
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
-        text: Today we're going to do relay programming. It's all about programming
-          under pressure and debugging the mistakes that sometimes happen when you
-          work really quickly or in teams. We'll use graph paper programming to simulate
-          coding, and use relay races to simulate having a deadline.
+        text: Idag ska vi göra stafett-programmering. Det handlar om programmering
+          under stress och felsökning av de misstag som ibland händer när du arbetar
+          verkligt snabbt eller i lag. Vi kommer använda rutpappers- programmering
+          för att simulera kodning och använda stafettlopp för att simulera en deadline.
       2:
         image: notes/C2_relay_programming_2.png
-        text: In relay programming, teams will be racing to finish a graph paper program.
-          You have to check your teammate's work, or debug it, fix it if there's a
-          mistake, add your arrow, and run back and tag your teammate.
+        text: I stafett programmering, tävlar lagen om att slutföra en rutat-papper
+          -program. Du måste kolla dina lagkamraters arbete, eller felsöka det, fixa
+          det om det finns ett fel, lägga till din pil, och springa tillbaka och tagga
+          din lagkamrat.
       3:
         image: notes/C2_relay_programming_3.png
-        text: Programmers use debugging a lot to find and fix problems in their algorithms
-          or code. There are lots of ways to debug problems. One of the easiest is
-          to move step by step until you find where something goes wrong, then fix
-          it.
+        text: Programmerare använder felsökning mycket för att hitta och åtgärda problem
+          i sina algoritmer eller kod. Det finns många sätt att felsöka problem. En
+          av de enklaste är att gå steg för steg tills du hittar där något går fel,
+          sedan fixa det.
       4:
         image: notes/C2_relay_programming_4.png
-        text: Here, I'm trying to do a back handspring, but I keep falling off. I
-          walk through each part, step by step, and realize where my mistake was.
-          My coach showed me I wasn't putting my hands on the beam correctly. So I
-          tried another back handspring on the beam with my new hand position, and
-          I stuck it! I was really glad I debugged my back  handspring. We figured
-          it out! Debugging is finding and fixing problems. Nice, good job!
+        text: Här, jag försöker göra en bakåtvolt, men jag bara faller av. Jag går
+          igenom varje del, steg för steg, och inser var mitt misstag är. Min tränare
+          visade mig att jag inte satte mina händer på balken korrekt. Så jag försökte
+          en annan bakåtvolt på balken med min nya hand sättning, och jag klarade
+          det! Jag var verkligen glad att jag felsökte min bakåtvolt. Vi kom på det!
+          Felsökning är att hitta och åtgärda problem. Nice, bra jobb!
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
-        text: One thing that computers are really good at is repeating commands. As
-          a person, you'd get really bored if you had to do the same thing lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times, and not get bored and be able to carry that out really well.
+        text: Något som datorer är riktigt bra på är att upprepa kommandon. Som person
+          blir du verkligen uttråkad om du gör samma sak massor och massor av gånger
+          i rad. Men en dator kan göra samma sak miljoner eller miljarder gånger och
+          inte bli uttråkad och utföra den väl.
       2:
         image: notes/C2_zuck_repeat_loop_2.png
-        text: So for example if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than a century to actually
-          write out all of those emails to everyone. But with just a few lines of
-          code, I can have a system send an email to everyone on Facebook wishing
-          them a happy birthday. So that's what loops are, and why they're valuable,
-          and something that computers can do very well.
+        text: Så till exempel om jag ville önska alla på Facebook en fin födelsedag
+          genom att skicka dem ett mail, skulle det ta mig mer än ett sekel att faktiskt
+          skriva alla dessa e-postmeddelanden till alla. Men med bara några rader
+          kod, kan jag skicka ett mail till alla på Facebook, ett mail som önskar
+          dem en glad födelsedag. Så det är vad loopar är, och varför de är värdefulla,
+          och något som datorer kan göra mycket bra.
       3:
         image: notes/C2_zuck_repeat_loop_3.png
-        text: In this example your goal is going to be to move the bird to get the
-          pig.  Now we're gonna be able to use the "repeat" block in order to be able
-          to do this very easily. You can either do this by giving the computer a
-          "move forward" command five times in order to advance the bird one step
-          each time to the pig.
+        text: I det här exemplet är ditt mål att flytta fågeln för att få grisen.  Vi
+          ska nu kunna använda blocket "Upprepa" för att kunna göra detta mycket enkelt.
+          Du kan antingen göra detta genom att ge datorn ett "gå vidare" kommando
+          fem gånger för att fågeln ska gå ett steg i taget fram  till grisen.
       4:
         image: notes/C2_zuck_repeat_loop_4.png
-        text: Or you can just tell the computer to "move forward" once, and then tell
-          it to "repeat" that 5 times, and it will do the same thing. So in order
-          to do this you drag your "move forward" command, and then you put it inside
-          the "repeat" block.And you can click on it and tell it how many times you
-          want to repeat the block to tell it how many steps you want it to take forward.
+        text: Eller så du kan bara tala om för datorn att "gå vidare" en gång och
+          sedan tala om för den att "Upprepa" det 5 gånger och den kommer att göra
+          samma sak. Så du drar ditt "gå vidare" kommando för att göra detta och lägger
+          det inuti blocket "upprepa". Och du kan klicka på det och tala om hur många
+          gånger du vill upprepa blocket för att tala om för det hur många steg du
+          vill gå fram.
       5:
         image: notes/C2_zuck_repeat_loop_5.png
-        text: Now one more thing is you can put as many commands as you want inside
-          the "repeat" block. So in this example you're telling it to move forward
-          and turn left, which it will do five times. All right good job and have
-          fun!
+        text: En till sak är du kan sätta så många kommandon du vill ha inne i "Upprepa"
+          blocket. Så i det här exemplet säger du åt den att gå framåt och svänga
+          vänster, som det att göra fem gånger. Bra jobbat och ha kul!
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: En av de stora sakerna i datorprogrammering är när du har lärt en dator
+          hur den ska utföra en åtgärd, kan du anropa funktionen igen. Du ge den ett
+          namn och sedan kan du anropa den. Det är verkligen som att utvidga språket.
       2:
         image: notes/C3_artist_functions_2.png
-        text: In the program we built, we learned how to draw a square by moving and
-          turning four times. We can take that function and give it a name, draw a
-          square, so that any time we want to do that, we simply say draw a square
-          and it will go back and invoke that function, that code. It will get done
-          for us. We've added that concept to our programming language.
+        text: I programmet vi byggde lärde vi oss hur man ritar en fyrkant genom att
+          flytta och vrida fyra gånger. Vi kan ta denna funktion och ge den ett namn,
+          rita en kvadrat, så att när vi vill göra det, säger vi bara rita en kvadrat
+          och programmet kommer att gå tillbaka och anropa funktionen, koden. Den
+          får det gjort åt oss. Vi har lagt detta begrepp till vårt programmeringsspråk.
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
-        text: You wouldn't even qualify for the race if you don't have people who
-          are proficient in computer science because of how much data the cars collect
-          and the necessity to be able to have people that can write programs to figure
-          out how you continue to figure out how to build performance.
+        text: Du skulle inte ens kvalificera för racet om du inte har människor som
+          är kunniga i datavetenskap på grund av hur mycket data bilarna samlar och
+          behovet av att kunna ha folk som kan skriva program för att räkna ut hur
+          du fortsätter att räkna ut hur man bygger prestanda.
       2:
         image: notes/C3_artist_intro_2.png
-        text: In these puzzles, you'll be an artist that uses a pencil to draw different
-          shapes. Wherever your artist goes, it will draw a line behind you.
+        text: I dessa pussel, kommer du vara en konstnär som använder en penna för
+          att rita olika figurer. Vart din artist går, kommer den att det dra en linje
+          bakom dig.
       3:
         image: notes/C3_artist_intro_3.png
-        text: To move around the canvas, you'll use the move forward block. Here the
-          move forward block says move forward by 100 pixels. When we hit run, what
-          happens? The artist moves forward a certain amount and that amount is 100
-          pixels. Pixels are basically very tiny squares on your computer screen.
+        text: Om du vill flytta runt scenen, ska du använda flytta framåt blocket.
+          Här säger flytta framåt blocket 'flytta framåt 100 pixlar'. När vi trycker
+          på kör, vad händer? Konstnären rör sig framåt en viss sträcka och den 100
+          bildpunkter. Pixlar är i grunden mycket små rutor på skärmen.
       4:
         image: notes/C3_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees.
-          And when we drag that out that makes our artist turn a certain amount. So
-          you can play around with how far you want the artist to turn. This is a
-          90 degree turn.
+        text: Det andra blocket som vi har i detta pussel säger' sväng höger 90 grader'.
+          Och när vi drar ut det gör det så att vår konstnär vänder vissa grader.
+          Så du kan leka med hur långt du vill att konstnären ska vända. Detta är
+          en 90 graders sväng.
       5:
         image: notes/C3_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: Och detta är en 120 graders sväng. Och kom ihåg, du kan ändra dessa
+          värden genom att klicka på pilarna bredvid siffrorna för pixlar och grader.
+          Njut av att rita med din artist!
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: When you put a loop inside of another loop, we call that a nested loop.
-          For example, here we're given the code already to draw one triangle with
-          sides of length 100 pixels using the repeat times block set to three, once
-          for each side of a triangle.
+        text: När du sätter en slinga i en annan slinga, kallar vi det en kapslad
+          loop. Till exempel här har vi fått koden för att rita en triangel med sid
+          längd av 100 pixlar genom att använda upprepa-blocket, satt till 3, en gång
+          för varje sida i en triangel.
       2:
         image: notes/C3_artist_nested_loops_2.png
-        text: But we want to draw six triangles. In order to do that, we're going
-          to take that loop and place it inside of another repeat times block. Pretty
-          cool!
+        text: Men vi vill ritasex trianglar. För att göra det, ska vi ta loopen och
+          placera den inuti ett annat upprepa- gånger block. Grymt!
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that
-          is less than, equal to or greater than a number, THEN do something.
+        text: Detta är villkorsblock. Det står OM det finns nektar eller honung som
+          är mindre än, lika med eller större än ett tal, GÖR något.
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: This is useful when we don't know how much nectar or honey to get, as
-          we see here with this question mark.
+        text: Detta är användbart när vi inte vet hur mycket nektar eller honung där
+          finns att få, som vi ser här med detta frågetecken.
       3:
         image: notes/C3_bee_conditionals_3.png
-        text: In this example, we're going to say IF the purple flower has nectar
-          greater than 0, get nectar. That will tell our bee to keep getting nectar
-          as long as it's there. Ta-dah!
+        text: I det här exemplet ska vi säga OM den lila blomman har nektar större
+          än 0, få nektar. Det säger till vårt bi att fortsätta så länge det finns
+          nektar där. Ta-dah!
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
-        text: Have you ever heard of debugging a program? This is the way you figure
-          out what's not working. When you debug code, you identify and remove errors.
+        text: Har du någonsin hört talas om felsökning av ett program? Detta är hur
+          du tar reda på vad som inte fungerar. När du felsöker kod, kan du identifiera
+          och ta bort fel.
       2:
         image: notes/C3_debugging_bee_2.png
-        text: Here we're given a few blocks already in our workplace. We're going
-          to use the step button to walk through the blocks, step by step, to see
-          if this is the right solution and where we may need to fix it.
+        text: Här är vi fått några block på vår arbetsplats redan. Vi kommer att använda
+          knappen steg för att gå igenom blocken, steg för steg, för att se om detta
+          är den rätta lösningen och var vi kan behöva fixa det.
       3:
         image: notes/C3_debugging_bee_3.png
-        text: Looks like there's our problem! We need one more move forward block.
-          The step button helps us debug our problem by identifying where the error
-          is so we can fix it.
+        text: Ser ut som det är vårt problem! Vi behöver ett till flytta framåtblock.
+          Knappen steg hjälper oss att felsöka vårt problem genom att identifiera
+          var felet är så att vi kan fixa det.
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
-        text: One of the most important concepts in computer science is how to define
-          new commands, how to add your own words to a computer language. Most computer
-          languages have only about one hundred words or commands. The art and magic
-          is in defining your own new words out of these building blocks.
+        text: En av de viktigaste begreppen inom datavetenskap är hur man definierar
+          nya kommandon, hur man lägger till egna ord till ett datorspråk. De flesta
+          datorspråk har endast omkring hundra ord eller kommandon. Konsten och magin
+          är att definiera dina egna nya ord ur dessa byggstenar.
       2:
         image: notes/C3_bee_functions_2.png
-        text: We do this all the time in sports. For example, in basketball, you start
-          by learning how to dribble, how to do a lay-up, how to rebound. Once you've
-          learned these really basic moves, you learn new moves and put together these
-          building blocks, like a pick and roll or give and go. You can then go from
-          there to do more complex plays. Once you learn that play and give it a name,
-          everybody on the team knows how to do it.
+        text: Vi gör detta hela tiden i sport. T ex basket, du börjar med att lära
+          dig att dribbla, hur man gör ett uppställningsspår, hur man gör rebound.
+          När du lärt dig dessa riktigt grundläggande drag, kan du lära dig nya rörelser
+          och sätta ihop dessa byggstenar. Du kan sedan därifrån göra mer komplexa
+          spel. När du lärt dig att spela det spelet och gett det ett namn, vet alla
+          i laget hur man gör.
       3:
         image: notes/C3_bee_functions_3.png
-        text: Similarly once you've taught a computer how to do an action once using
-          these sequences of commands, you can make up your own name for that action
-          so it's easy to repeat it later. When you define your own command and give
-          it a name, that's called a function. Now we're going to use functions to
-          help the bee.
+        text: På samma sätt när du väl har lärt en dator hur en åtgärd ska utföras
+          med dessa sekvenser av kommandon, kan du hitta på ditt eget namn för åtgärden
+          så det är lätt att upprepa det senare. När du definierar ditt eget kommando
+          och ger det ett namn, kallas det en funktion. Nu ska vi använda funktioner
+          för att hjälpa biet.
       4:
         image: notes/C3_bee_functions_4.png
-        text: In this example, our function is called get 2 nectar, this green block
-          right here. We know what get 2 nectar does by looking at this grey box which
-          is the function definition. If we look inside there, the get 2 nectar is
-          going to get nectar and then get nectar again. Always look at what's inside
-          the grey box so that you know what these green function blocks can do.
+        text: I det här exemplet kallas vår funktionen 'få 2 nektar', detta gröna
+          block här. Vi vet vad' få 2 nektar' gör genom att titta på den här grå boxen
+          som är funktionsdefinitionen. Om vi tittar in där, ska 'få 2 nektar' få
+          nektar och sedan få nektar igen. Titta alltid efter vad som finns inuti
+          den grå rutan så att du vet vad dessa gröna funktionsblock kan göra.
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: Now we're going to use nested loops with the bee. We're given some starter
-          code which tells the bee to move forward and get nectar three times and
-          then turn right. Let's take that whole piece of code and nest it inside
-          another repeat block and set to repeat three times. Done!
+        text: Vi ska nu använda kapslade slingor med biet. Vi har fått lite start
+          kod som talar om för biet att gå vidare och få nektar tre gånger och sedan
+          svänga höger. Låt oss ta det hela biten kod och kapsla in det inuti ett
+          annat upprepa block och ange upprepa tre gånger. Gjort!
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: You're going to be creating your very own bounce game that you'll be
-          able to share with your friends! How cool!
+        text: Du kommer att skapa ditt alldeles egna studsa spel som du kommer att
+          kunna dela med dina vänner! Så coolt!
       2:
         image: notes/C3_bounce_2.png
-        text: To get started, we have to link up the paddle controls to the arrow
-          keys on our keyboard.
+        text: För att komma igång, måste vi länka paddel kontrollerna till piltangenterna
+          på vårt tangentbord.
       3:
         image: notes/C3_bounce_3.png
-        text: We can do this by linking the when left arrow block to the move left
-          block and the when right arrow block to the move right block. Give it a
-          go and you'll be programming your own bounce game in no time!
+        text: Vi kan göra detta genom att länka 'när-vänsterpil' blocket till 'flytta
+          vänster' blocket och' när- högerpil' blocket till 'flytta höger' blocket.
+          Ge det en chans och du kommer att programmera egna studsa spel på nolltid!
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
-        text: This lesson is computational thinking. Sometimes learning a new game
-          can be tough, right? At first it might seem really confusing and sometimes,
-          there's no one there to teach you the rules, so you have to figure it out
-          on your own.
+        text: Denna lektion är datorbaserat tänkande. Ibland kan det vara tufft att
+          lära sig ett nytt spel, eller hur? Först kan det verka förvirrande och ibland
+          finns det ingen där för att lära dig reglerna, så du måste lista ut på egen
+          hand.
       2:
         image: notes/C3_computational_thinking_2.png
-        text: The good news is that you can get better at figuring things out on your
-          own when you know a few thinking tricks. These tricks are unique ways for
-          looking at and solving problems. In this lesson, you'll learn about four
-          tricks and practice them with your friends to figure out the rules to a
-          game.
+        text: Den goda nyheten är att du kan bli bättre på räkna ut saker på egen
+          hand när du vet några tänkarknep. Dessa trick är unika sätt för att titta
+          på och lösa problem. I den här lektionen ska du lära dig om fyra knep och
+          öva dem med dina vänner för att ta reda på reglerna till ett spel.
       3:
         image: notes/C3_computational_thinking_3.png
-        text: When you break down a big problem into smaller pieces, you're using
-          your brain to decompose the big problem. Once we've decomposed the big problem
-          into several smaller problems, we can go on to our next trick, which is
-          called pattern match.
+        text: När du bryter ner ett stort problem i mindre bitar, använder du din
+          hjärna att bryta ner det stora problemet. När vi har fördelat det stora
+          problemet i flera mindre problem, kan vi gå till vårt nästa trick som kallas
+          mönstermatchning.
       4:
         image: notes/C3_computational_thinking_4.png
-        text: That's when we look for similarities between things. Once I find the
-          things that are the same, I can figure out what things are different. When
-          I remove those differences, that's called abstraction.
+        text: Det är då vi letar efter likheter mellan saker. När jag hittar saker
+          som är lika, kan jag räkna ut vilka saker som är olika. När jag tar bort
+          dessa skillnader kallas det abstraktion.
       5:
         image: notes/C3_computational_thinking_5.png
-        text: After I have figured out the steps to solving a problem, I can put those
-          steps in a specific order called an algorithm so that anyone can use my
-          directions to solve that problem. We're going to use these four steps to
-          figure out how to play the game with no rules. By the end of the game, you'll
-          be able to play something that looks like this!
+        text: Efter att jag har listat ut åtgärderna för att lösa ett problem, kan
+          jag sätta dessa steg i en viss ordning som kallas en algoritm så att någon
+          kan använda mina anvisningar för att lösa det problemet. Vi kommer att använda
+          dessa fyra steg för att lista ut hur man spelar spelet med inga regler.
+          I slutet av spelet, kommer du att kunna spela något som ser ut så här!
     C3_crowdsourcing:
       1:
         image: notes/C3_crowdsourcing_1.png
-        text: This lesson is called crowdsourcing. In this lesson we'll use a deck
-          of cards to learn about how much easier some things can be to do in groups
-          instead of trying to do them all alone. So grab some friends and make something
-          awesome. Crowdsourcing is getting help from a large group of people to finish
-          something faster.
+        text: Denna lektion kallas crowdsourcing. I den här lektionen ska vi använda
+          en kortlek för att lära oss om hur mycket lättare vissa saker kan vara att
+          göra i grupper istället för att försöka göra dem ensam. Så ta några vänner
+          och gör något fantastiskt. Crowdsourcing är att få hjälp från en stor grupp
+          människor för att kunna avsluta något snabbare.
       2:
         image: notes/C3_crowdsourcing_2.png
-        text: In computer science, we use crowdsourcing all the time. Thousands of
-          amateurs and professionals link their computers together to search through
-          billions and billions of pieces of information. Looking for things like
-          the next Marsenne prime number, or even possible alien communications.
+        text: I datavetenskap använder vi crowdsourcing hela tiden. Tusentals amatörer
+          och proffs länkar ihop sina datorer för att söka igenom miljarder och åter
+          miljarder av bitar av information. Leta efter saker som nästa Marsenne primtal,
+          eller röster från rymden.
       3:
         image: notes/C3_crowdsourcing_3.png
-        text: When you see a movie, each second of the movie is 24 individual pictures,
-          we call those frames. So every one of those pictures needs to be created
-          and rendered and put all together. My team and I, we're all software developers.
-          We all work together to create a piece of software that actually creates
-          an image, creates the final image that you see on screen. That's a tool
-          that artists and other developers can use as part of their teamwork and
-          their process to be able to create the images that they want on screen.
+        text: När du ser en film, är varje sekund av filmen 24 enskilda bilder, vi
+          kallar dem frames. Så var och en av dessa bilder måste skapas och återges
+          och sättas tillsammans. Mitt team och jag, vi är alla programutvecklare.
+          Vi arbetar tillsammans för att skapa en bit av programvara som faktiskt
+          skapar en bild, som skapar den slutliga bilden som du ser på skärmen. Det
+          är ett verktyg som konstnärer och andra utvecklare kan använda som en del
+          av deras lagarbete och sin process för att kunna skapa bilder som de vill
+          ha på skärmen.
       4:
         image: notes/C3_crowdsourcing_4.png
-        text: For example, in Finding Nemo, when Crush and Squirt and all their friends
-          are flying through the East Australian Current. You're seeing images of
-          water flowing by, you're seeing the colors on the back of the turtle, you're
-          seeing the sides of the fish. All of those things are generated through
-          math and computer programs that we write, that we then give to the artist
-          and they take that to create that final image and tweak it and make it look
-          beautiful and look fun.
+        text: Till exempel i Hitta Nemo, när Crush och Squirt och alla deras vänner
+          flyger genom östra australiska strömmen. Du ser bilder av vatten som rinner
+          förbi, du ser färgerna på baksidan av sköldpaddan, du ser sidorna av fisken.
+          Alla dessa saker genereras genom matte och dator program som vi skriver,
+          och som vi ger till konstnären som använder det för att skapa den slutliga
+          bilden och justera den och göra den vacker och ser roligt.
     C3_dice_race:
       1:
         image: notes/C3_dice_race_1.png
@@ -1684,212 +1682,214 @@
     C3_songwriting_with_parameters:
       1:
         image: notes/C3_songwriting_with_parameters_1.png
-        text: This is the song writing lesson. Music is a lot like a computer program.
-          The written notes and words tell the singer exactly what to do. Some parts
-          of music are used over and over again.
+        text: Detta är en låtskrivarlektion. Musik är väldigt lik ett datorprogram.
+          De skrivna anteckningarna och orden berättar för sångaren exakt vad den
+          ska göra. Vissa delar av musiken används om och om igen.
       2:
         image: notes/C3_songwriting_with_parameters_2.png
-        text: We call this the chorus. In a computer program, the parts of the program
-          that are used over and over again are called functions. When you read song
-          lyrics and it says the word chorus, do you sing the word chorus? No, you
-          look at the top of the page to see what words make up the chorus.
+        text: Vi kallar detta refrängen. I ett datorprogram kallas de delar av programmet
+          som används om och om igen funktioner. När du läser texter och det säger
+          ordet refräng, sjunger du ordet refräng? Nej, du tittar högst upp på sidan
+          för att se vilka ord som är refräng.
       3:
         image: notes/C3_songwriting_with_parameters_3.png
-        text: In this lesson, you'll learn a silly little song called little bunny
-          foo foo. The song has a chorus that you will sing several times over and
-          over again. A function is a piece of code that you can call and use over
-          and over again. It makes programming easier and more efficient so you don't
-          have to write out the steps of your function over and over again. You can
-          just write it once!
+        text: I den här lektionen lär du dig en dum liten låt som heter little bunny
+          foo foo. Låten har en refräng som du kommer att sjunga flera gånger om och
+          om igen. En funktion är en bit kod som du kan kalla på och använda om och
+          om igen. Det gör programmering enklare och effektivare så att du inte behöver
+          skriva ut stegen i din funktion om och om igen. Du kan bara skriva det en
+          gång!
     C4_bee_conditional:
       1:
         image: notes/C4_bee_conditional_1.png
-        text: This is the conditional block. It says if you're at the flower or the
-          honeycomb, then do something. This is useful when we don't know how much
-          honey or nectar to get as we see here with this question mark.
+        text: Detta är villkorsblock. Det säger att om du är vid blomman eller honumgskakan,
+          gör något. Detta är användbart när vi inte vet hur mycket honung eller nektar
+          som finns att få, som vi ser här med detta frågetecken.
       2:
         image: notes/C4_bee_conditional_2.png
-        text: In this example, we're going to say, if it's a flower, get all the nectar
-          and then use another one to say, if it's a honeycomb, make honey. Ta-dah!
+        text: 'I det här exemplet ska vi säga: om det är en blomma, få all nektar,
+          och sedan använda en annan för att säga: om det är en honungskaka, gör honung.
+          Ta-dah!'
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
-        text: We have a new block that's called the if/else block. It's a conditional
-          statement just like the if block you've used in the puzzles before. But
-          now there's a new part at the bottom that says else. The if/else block lets
-          the bee make a decision between two sets of actions. If the bee is at a
-          flower, the bee will do the set of actions you put in the first part where
-          it says do. If the bee is not at a flower, the bee will do the set of actions
-          you put in the slot where it says else.
+        text: Vi har ett nytt block som kallas den om/annars block. Det är en villkorssats
+          precis som om-blocket du har använt i pussel innan. Men nu finns en ny del
+          längst ner som säger annat. Om/annars-blocket låter biet välja mellan två
+          uppsättningar av åtgärder. Om biet är på en blomma, kommer biet att utföra
+          uppsättningen åtgärder du sätter i den första delen där det står gör. Om
+          biet inte är i en blomma, kommer biet utföra uppsättningen åtgärder som
+          du sätter i facket där det står annars.
       2:
         image: notes/C4_conditionals_2.png
-        text: If statements are how computers are able to make decisions. Humans set
-          up conditions for the computer that say if the computer is presented with
-          a certain situation do this. Else, which just means otherwise, do that.
-          The top of our if/else block says if at flower. But the top of our block
-          could say other things, like if nectar equals 2 or if there's a path ahead,
-          our block will behave in the same way. That if the statement at the top
-          is true it will do the first set of actions. But if the statement at the
-          top is false, it will do the second set of actions.
+        text: Om-satser är hur datorer kan fatta beslut. Människor ställer villkor
+          för datorn som säger att om datorn presenteras med en viss situation gör
+          detta. Annars, vilket bara innebär annars gör det. Toppen av vårt om/annars-block
+          säger 'om på blomma'. Men toppen av vårt block kunde säga andra saker, som
+          om nektar är lika med 2 eller om det finns en väg framåt, kommer vårt block
+          att bete sig på samma sätt. Så att om uttalandet överst stämmer kommer det
+          att utföra den första uppsättningen åtgärder. Men om uttrycket överst är
+          falskt, så utför det den andra gruppen av åtgärder.
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: När du använder ett upprepa-block för att loopa din kod, hur vet datorn
+          när det har upprepats tillräckligt många gånger? Upprepa blocket gömmer
+          faktiskt en mer sofistikerad bit kod som kallas en for-loop som räknas från
+          ett startvärde upp till slutvärdet i specifika steg.
       2:
         image: notes/C4_for_loops_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running.
+        text: Till exempel räknar en upprepa-tre-block från 1 till 3 med 1 i taget.
+          Varje gång det räknar, körs koden inuti loopen. För-loopen vet hur många
+          gånger det har körts genom att använda en räknar-variabel som är satt till
+          startvärdet i början av loopen och har ökningen tillagd till det för varje
+          gång loopen körs. Så snart variabeln är större än slutvärdet, avbryts loop
+          körningen.
       3:
         image: notes/C4_for_loops_3.png
-        text: The benefit of using a real for loop instead of the repeat block is
-          that you can actually see the counter variable and use it in your loop.
-          For example, if I have a series of flowers and the first one has one nectar,
-          the second one has two nectars and the third one has three, I can use the
-          for loop to tell the bee to collect 'counter' nectars each time, which would
-          one at the first flower, two at the second and three at the third.
+        text: Fördelen med att använda en riktig 'för-loop' istället för upprepa-
+          blocket är att du faktiskt kan se räkne-variabel och använda den i din loop.
+          T ex om jag har en serie av blommor och den första har en nektar, den andra
+          har två nektar och den tredje en har tre, kan jag använda 'för- loopen'
+          för att berätta för biet att samla "räknar" nektar varje gång, det skulle
+          bli en på första blomman, två på andra och tre på tredje.
       4:
         image: notes/C4_for_loops_4.png
-        text: Also in a for loop, you can increment the counter by a number other
-          than one each time. You can potentially count by 2s, 4s or even an amount
-          that changes every time through.
+        text: Också i en for-loop kan du få räknaren att öka med ett antal annat än
+          ett varje gång. Du kan räkna med 2or, 4or eller t o m ett antal som ändras
+          varje gång.
     C4_for_loops_bee:
       1:
         image: notes/C4_for_loops_bee_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: När du använder ett upprepa-block för att loopa din kod, hur vet datorn
+          när det har upprepats tillräckligt många gånger? Upprepa blocket gömmer
+          faktiskt en mer sofistikerad bit kod som kallas en for-loop som räknas från
+          ett startvärde upp till slutvärdet i specifika steg.
       2:
         image: notes/C4_for_loops_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running.
+        text: Till exempel räknar en upprepa-tre-block från 1 till 3 med 1 i taget.
+          Varje gång det räknar, körs koden inuti loopen. För-loopen vet hur många
+          gånger det har körts genom att använda en räknar-variabel som är satt till
+          startvärdet i början av loopen och har ökningen tillagd till det för varje
+          gång loopen körs. Så snart variabeln är större än slutvärdet, avbryts loop
+          körningen.
       3:
         image: notes/C4_for_loops_bee_3.png
-        text: The benefit of using a real for loop instead of the repeat block is
-          that you can actually see the counter variable and use it in your loop.
-          For example, if I have a series of flowers and the first one has one nectar,
-          the second one has two nectars and the third one has three, I can use the
-          for loop to tell the bee to collect 'counter' nectars each time, which would
-          one at the first flower, two at the second and three at the third.
+        text: Fördelen med att använda en riktig 'för-loop' istället för upprepa-
+          blocket är att du faktiskt kan se räkne-variabel och använda den i din loop.
+          T ex om jag har en serie av blommor och den första har en nektar, den andra
+          har två nektar och den tredje en har tre, kan jag använda 'för- loopen'
+          för att berätta för biet att samla "räknar" nektar varje gång, det skulle
+          bli en på första blomman, två på andra och tre på tredje.
       4:
         image: notes/C4_for_loops_bee_4.png
-        text: Also in a for loop, you can increment the counter by a number other
-          than one each time. You can potentially count by 2s, 4s or even an amount
-          that changes every time through.
+        text: Också i en for-loop kan du få räknaren att öka med ett antal annat än
+          ett varje gång. Du kan räkna med 2or, 4or eller t o m ett antal som ändras
+          varje gång.
     C4_for_loops_no_bee:
       1:
         image: notes/C4_for_loops_no_bee_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: När du använder ett upprepa-block för att loopa din kod, hur vet datorn
+          när det har upprepats tillräckligt många gånger? Upprepa blocket gömmer
+          faktiskt en mer sofistikerad bit kod som kallas en for-loop som räknas från
+          ett startvärde upp till slutvärdet i specifika steg.
       2:
         image: notes/C4_for_loops_no_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running. The benefit of using a real for loop
-          instead of the repeat block is that you can actually see the counter variable
-          and use it in your loop.
+        text: Till exempel räknar ett 'upprepa-tre' block från 1 till 3 med 1 i taget.
+          Varje gång det räknar, körs koden inuti loopen. För-loopen vet hur många
+          gånger det har körts genom att använda en variabel som är satt till startvärdet
+          i början av loopen och har ökningen tillagd till det varje gång loopen körs.
+          Så snart variabeln är större än slutvärdet, avbryts loop körningen. Fördelen
+          med att använda en riktig för-loop istället för upprepa-blocket är att du
+          faktiskt kan se räknar- variabeln och använda det i din loop.
     C4_function_create:
       1:
         image: notes/C4_function_create_1.png
-        text: Now that you've edited function blocks, it's time to create a new function
-          block from scratch. It's really simple. You'll see the toolbox has a category
-          called functions. If you click on this, you'll see an orange button called
-          create a function. Clicking on this brings up the function editor that you've
-          already used to edit existing function blocks.
+        text: Nu när du har redigerat funktionsblock, är det dags att skapa en nya
+          funktionsblock från grunden. Det är verkligen enkelt. Du ser att verktygslådan
+          har en kategori som kallas funktioner. Om du klickar på det, ser du en orange
+          knapp som heter 'skapa en funktion'. Klickar du på den öppnas den funktion
+          editor som du redan har använt för att redigera befintliga funktionsblock.
       2:
         image: notes/C4_function_create_2.png
-        text: Just like before, you started by naming your function, writing down
-          a description for what the function is supposed to do. For instance, it's
-          supposed to draw a square or draw a triangle and then drag blocks from the
-          toolbox into the white work space below. Remember to drag these blocks inside
-          the green wrapping block for the function.
+        text: Precis som innan, började du med att namnge din funktion, och skriva
+          ner en beskrivning av vad funktionen är tänkt att göra. Till exempel är
+          det tänkt att rita en fyrkant eller rita en triangel och sedan dra block
+          från verktygslådan till den vita arbetsytan nedan. Kom ihåg att dra dessa
+          block inuti den gröna omslag- block för funktionen.
       3:
         image: notes/C4_function_create_3.png
-        text: Once you're done, click on save and exit. This will take you back to
-          the main puzzle work space. The new function you created will show up as
-          a green block in the function category in your toolbox. Drag and drop this
-          into the main work space and use it like any other block to solve the puzzle.
+        text: När du är klar, klicka på Spara och avsluta. Detta tar dig tillbaka
+          till det huvudpusslets arbetsyta. Den nya funktionen som du skapat visas
+          som ett grönt block i funktionskategorin i din verktygslåda. Dra detta till
+          arbetsytan och använd den som alla andra block för att lösa pusslet.
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: En av de stora sakerna i datorprogrammering är när du har lärt en dator
+          hur den ska utföra en åtgärd, kan du anropa funktionen igen. Du ge den ett
+          namn och sedan kan du anropa den. Det är verkligen som att utvidga språket.
       2:
         image: notes/C4_function_edit_2.png
-        text: In the program we built, we learned how to draw a square by moving and
-          turning four times. We can take that function and give it a name, draw a
-          square so that any time we want to do that, we simply say draw a square
-          and it will go back and invoke that function, that code and it will get
-          done for us. We've added that concept to our programming language.
+        text: I programmet vi byggde lärde vi oss hur man ritar en fyrkant genom att
+          flytta och vrida fyra gånger. Vi kan ta denna funktion och ge den ett namn,
+          rita en kvadrat, så att när vi vill göra det, säger vi bara rita en kvadrat
+          och programmet kommer att gå tillbaka och anropa funktionen, koden. Den
+          får det gjort åt oss. Vi har lagt detta begrepp till vårt programmeringsspråk.
       3:
         image: notes/C4_function_edit_3.png
-        text: In this puzzle, we have already created a draw a square function for
-          you. You'll see it in the toolbox as a green block. What you'll need to
-          do is write the same code you wrote before to draw a square and put it in
-          this function. To do that, click on the edit option in the green draw a
-          square block. This will open up the function editor. The function editor
-          has three parts. A place where you name your function. This will appear
-          on the green block before that function. Then write out a short description
-          of what your function is supposed to do.
+        text: I detta pussel, har vi redan skapat en 'rita en fyrkant- funktion' åt
+          dig. Du ser den i verktygslådan som ett grönt block. Vad du behöver göra
+          är att skriva samma kod du skrev innan för att rita en fyrkant och lägga
+          den i denna funktion. För att göra det, klicka på alternativet Redigera
+          i det gröna 'rita en fyrkant' blocket. Detta öppnar upp funktionens redaktör.
+          Funktionseditorn består av tre delar. En plats där du namnger din funktion.
+          Detta visas på det gröna blocket före funktionen. Sedan skriver duen kort
+          beskrivning av vad din funktion är tänkt för att göra.
       4:
         image: notes/C4_function_edit_4.png
-        text: In this case, it's supposed to draw a square. The white space below
-          this is the work space and works just like the work space you've already
-          been using. Drag and drop blocks from the toolbox into this work space.
-          Remember to put the blocks that create a square inside the green wrapping
-          block for the function. Once you're done, click on save and exit. This will
-          take you back to the main puzzle work space. Now you can use the draw the
-          square function block just like any other block to solve the puzzle.
+        text: I det här fallet är det tänkt att rita en fyrkant. Det vita utrymmet
+          under detta är arbetsytan och fungerar precis som arbetsytan du redan har
+          använt. Dra och släpp block från verktygslådan på denna arbetsyta. Kom ihåg
+          att sätta blocken som skapar en fyrkant inuti det gröna omslag-block för
+          funktionen. När du är klar, klicka på Spara och avsluta. Detta tar dig tillbaka
+          till huvudpusslets arbetsyta. Nu kan du använda rita fyrkant funktions-blocket
+          precis som alla andra block för att lösa pusslet.
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
-        text: Here's a function that draws a square with 50 pixel sides. That's great
-          but what if I wanted to draw a square with sides 50 pixels and another square
-          with sides of 100 pixels? We shouldn't have to make two separate functions
-          that do almost the same thing. Instead, we can use one function with a parameter.
+        text: Här är en funktion som ritar en fyrkant med 50 pixlar långa sidor. Det
+          är bra men vad händer om jag vill rita en fyrkant med sidorna 50 pixlar
+          och en annan fyrkant med sidan 100 pixlar? Vi ska inte behöva göra två separata
+          funktioner som gör nästan samma sak. Vi kan i stället använda en funktion
+          med en parameter.
       2:
         image: notes/C4_function_parameters_2.png
-        text: Parameters allow us to pass values into a function that get used as
-          variables inside the function. Let's try adding a parameter called like
-          to this function so we can use it to create squares of different sizes.
-          In the function editor, you can edit the name and description like before
-          but now you can also add a parameter. Write the name of your parameter in
-          the space and click Add Parameter. This will create a red block with the
-          name of the parameter you just created. Now we can replace the move forward
-          by 100 block with the parameter Length so it will move forward by Length.
+        text: Med parametrar kan vi skicka värden till en funktion som kan användas
+          som variabler inuti funktionen. Låt oss försöka att lägga till en parameter
+          som kallas 'längd' till den här funktionen som vi kan använda för att skapa
+          rutor i olika storlekar. I funktions-redigeraren kan du redigera namn och
+          beskrivning som förr men nu kan du också lägga till en parameter. Skriv
+          namnet på parametern i utrymmet och klicka på Lägg till Parameter. Detta
+          skapar ett rött block med namnet på parametern som du just har skapat. Nu
+          kan vi ersätta vägen framåt av 100 block med parametern längd så det kommer
+          att gå framåt just denna sträcka.
       3:
         image: notes/C4_function_parameters_3.png
-        text: Click save and close and drag out your new create a square block from
-          the functions category in the toolbox. You'll notice there's an empty space
-          next to length because the function wants to know what value the parameter
-          Length should have. Drag a number block from the Math category and place
-          it in this space. See how you can use the function again and again with
-          different lengths to make squares of different sizes? Try it for yourself!
+        text: Klicka på Spara och stäng och dra ut ditt nya 'skapa ett fyrkant'- block
+          från kategorin funktioner i verktygslådan. Du kommer att märka det finns
+          en tom plats bredvid längd eftersom funktionen vill veta vad värdet parametern
+          längd bör ha. Dra ett antal-block från kategorin matematik och placera det
+          i detta utrymme. Se hur du kan använda funktionen igen och igen med olika
+          längder för att göra rutor i olika storlekar? Prova själv!
     C4_intro:
       1:
         image: notes/C4_intro_1.png
-        text: Usually programming is all in text but we'll use Blockly which uses
-          visual blocks that you drag and drop to write programs. Under the hood,
-          you're still creating code. To start off, we're going to build code for
-          a program that will help this Angry Bird move through a maze to get to the
-          evil pigs that stole its eggs.
+        text: Vanligtvis är programmering i text men vi använder Blockly som använder
+          visuella block som du dra och släppa för att skriva program. Under huven
+          skapar du fortfarande kod. Till att börja med ska vi bygga koden för ett
+          program som kommer att hjälpa denna arga fågel flytta genom en labyrint
+          för att ta sig till de elaka grisar som stal hans ägg.
       2:
         image: notes/C4_intro_2.png
         text: Blockly is split into three main parts. On the left is the bird's maze,
@@ -1899,28 +1899,29 @@
           is called the workspace and this is where we'll build our program.
       3:
         image: notes/C4_intro_3.png
-        text: If I drag the move block to our work space and press "run", what happens?
-          The bird moves forward one box on the grid. And what if I want the bird
-          to do something after it moves forward one box? I can add another block
-          to our program.
+        text: Om jag drar flytta blocket till vår arbetsyta och trycker på "Kör",
+          vad händer? Fågeln flyttas framåt en ruta på nätet. Och vad händer om jag
+          vill att fågeln ska göra något när den rör sig framåt en ruta? Jag kan lägga
+          ett annat block till vårt program.
       4:
         image: notes/C4_intro_4.png
-        text: I'm going to choose the "turn right" block and I'll drag it under my
-          move block until the yellow arrow appears. Then I'll drop it and the two
-          blocks will snap together. When I press "run" again,  the bird will perform
-          the commands that are stacked from top to bottom on our work space.
+        text: Jag kommer att välja "sväng höger" blocket och jag ska dra det under
+          mitt Flytta block tills den gula pilen visas. Sedan ska jag släppa det och
+          de två blocken kommer att knäppa ihop. När jag trycker på "Kör" igen, utför
+          fågeln de kommandon som är staplade från toppen till botten på vår arbetsyta.
       5:
         image: notes/C4_intro_5.png
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it to the trash can. After you've hit run, you can always hit the reset
-          button to get the bird back to the start. Now let's get those pigs!
+        text: Om du någonsin vill ta bort ett block, bara ta bort det från stacken
+          och dra det till papperskorgen kan. När du har tryckt på kör, kan du alltid
+          trycka på omstarts-knappen för att få fågeln tillbaka till starten. Nu låt
+          oss få dessa grisar!
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
-        text: If I want to draw a rectangle 50 pixels tall and that is twice as wide
-          as it is tall, how would I program the computer to do that? Well, I could
-          tell the artist to go up fifty, turn right, and then go over 100 and move
-          the whole thing twice. But then I'm doing the math for the computer.
+        text: Om jag vill rita en rektangel 50 pixlar hög och som är dubbelt så bred
+          som den är lång, hur jag programmerar datorn för att göra det? Tja, jag
+          skulle kunna be artisten att gå upp 50, svänga höger, och sedan gå över
+          100 och flytta det hela två gånger. Men då jag gör matten åt datorn.
       2:
         image: notes/C4_math_artist_2.png
         text: Multiplying fifty by two in your head may not that hard but computers
@@ -2302,194 +2303,196 @@
           follow to draw one of the monsters included in the lesson plan.
       2:
         image: notes/unplug2_2.png
-        text: 'Students will break into groups to write instructions and then they''ll
-          switch them with another group that will have to draw the monster. Groups
-          will write instructions using the four steps of computational thinking:
-          decomposition, pattern location, abstraction and algorithms.'
+        text: 'Studenter kommer att dela sig i grupper för att skriva instruktioner
+          och sedan kommer de att byta dem med en annan grupp som kommer att rita
+          monster. Grupper kommer att skriva instruktioner med hjälp av de fyra stegen
+          i datoriellt tänkande: nedbrytning, mönster letning, abstraktion och algoritmer.'
       3:
         image: notes/unplug2_3.png
-        text: First groups will decompose the task which means make a game plan. Then
-          they'll look for patterns between all the monsters in the catalog. When
-          they come across differences between the monsters, they'll abstract or remove
-          those details. For instance, one monster in the catalog has vegitas eyes
-          and another has spritem eyes. But they both have eyes so we can write a
-          line that says the monster has blank eyes.
+        text: Först kommer grupperna att bryta ner uppgiften vilket innebär att göra
+          en spelplan. De ska leta efter mönster mellan alla monster i katalogen.
+          När de hittar skillnaderna mellan monstren, kommer de att abstrahera eller
+          ta bort dessa detaljer. Till exempel, ett monster i katalogen har vegitas
+          ögon och en annan har spritem ögon. Men de båda har ögon så att vi kan skriva
+          en rad som säger att monster har tomma ögon.
       4:
         image: notes/unplug2_4.png
-        text: So students will be able to write a set of instructions, called an algorithm,
-          that list the monsters' parts with blanks for what the styles should be.
-          This is the set of instructions they'll pass to other students to recreate
-          their very own monster.
+        text: Så eleverna kommer att kunna skriva en uppsättning instruktioner, kallat
+          en algoritm, som listar monstrens delar med tomma fält för vilka stilarna
+          är. Detta är uppsättningen instruktioner de ska ge till andra lever som
+          ska återskapa sina alldeles egna monster.
     unplug3:
       1:
         image: notes/unplug3_1.png
-        text: In graph paper programming, we help explain how coding works by trying
-          to help people recreate drawings using only arrows and scribbles. One person
-          is given a small drawing on graph paper and they need to go through using
-          only specific arrows and try to describe how to recreate that drawing.
+        text: Med rutat- papper- programmering hjälper vi till att förklara hur kodning
+          fungerar genom att försöka hjälpa människor att återskapa teckningar med
+          endast pilar och klotter. En person får en liten ritning på rutat papper
+          som den behöver gå igenom för att med hjälp av endast speciella pilar försöka
+          beskriva hur man återskapa denna ritning.
       2:
         image: notes/unplug3_2.png
-        text: 'In this activity, the only symbols you can use are these: move one
-          square forward, one square backward, move one square up, move one square
-          down, change to next color, and fill in your square with color. Once we
-          have that coded up, we can hand it off to another person who can read the
-          code and try and recreate the picture.'
+        text: 'I denna aktivitet, är de enda symboler som du kan använda dessa: flytta
+          en fyrkant framåt, en fyrkant bakåt, flytta en ruta upp, flytta en ruta
+          ner, ändra till nästa färg och fyll i din fyrkant med färg. När vi har kodat
+          det, kan vi lämna över det till en annan person som kan läsa koden och försöka
+          återskapa bilden.'
     unplug4:
       1:
         image: notes/unplug4_1.png
-        text: In graph paper programming, we help explain how coding works by trying
-          to help people recreate drawings using only arrows and scribbles. One person
-          is given a small drawing on graph paper and they need to go through using
-          only specific arrows and try to describe how to recreate that drawing.
+        text: Med rutat- papper- programmering hjälper vi till att förklara hur kodning
+          fungerar genom att försöka hjälpa människor att återskapa teckningar med
+          endast pilar och klotter. En person får en liten ritning på rutat papper
+          som den behöver gå igenom för att med hjälp av endast speciella pilar försöka
+          beskriva hur man återskapa denna ritning.
       2:
         image: notes/unplug4_2.png
-        text: In the second half of the activity, we ask students how many different
-          ways they can fold a piece of paper to create sixteen identical rectangles.
-          Then you'll discuss how multiple solutions can lead to the same end result
-          and why some solutions are better in certain situations.
+        text: Under andra hälften av aktiviteten frågar vi eleverna hur många olika
+          sätt de kan vika en bit papper för att skapa sexton identiska rektanglar.
+          Sedan diskuterar ni hur flera lösningar kan leda till samma slutresultatet
+          och varför vissa lösningar är bättre i vissa situationer.
     unplug5:
       1:
         image: notes/unplug5_1.png
-        text: In graph paper programming, we help explain how coding works by trying
-          to help people recreate drawings using only arrows and scribbles. One person
-          is given a small drawing on graph paper and they need to go through using
-          only specific arrows and try to describe how to recreate that drawing.
+        text: Med rutat- papper- programmering hjälper vi till att förklara hur kodning
+          fungerar genom att försöka hjälpa människor att återskapa teckningar med
+          endast pilar och klotter. En person får en liten ritning på rutat papper
+          som den behöver gå igenom för att med hjälp av endast speciella pilar försöka
+          beskriva hur man återskapa denna ritning.
       2:
         image: notes/unplug5_2.png
-        text: In the second half of the activity, we ask students how many different
-          ways they can fold a piece of paper to create sixteen identical rectangles.
-          Then you'll discuss how multiple solutions can lead to the same end result
-          and why some solutions are better in certain situations.
+        text: Under andra hälften av aktiviteten frågar vi eleverna hur många olika
+          sätt de kan vika en bit papper för att skapa sexton identiska rektanglar.
+          Sedan diskuterar ni hur flera lösningar kan leda till samma slutresultatet
+          och varför vissa lösningar är bättre i vissa situationer.
     unplug6:
       1:
         image: notes/unplug6_1.png
-        text: This activity is called coding with cards and it's great for any age.
-          Like you learned with the if statements in earlier lessons,  during Blockly,
-          if statements have a piece about them you have to evaluate to find out if
-          it's true or false. That's the conditional and it can be used in lots of
-          different ways.
+        text: Denna aktivitet kallas' kodning med kort' och den är bra för alla åldrar.
+          Som du lärt dig med om-satser i tidigare lektioner, när du arbetade med
+          Blockly, har om-uttalandet en bit inuti sig som du måste utvärdera om den
+          är sann eller falsk.  Det är villkoret och det kan användas på många olika
+          sätt.
       2:
         image: notes/unplug6_2.png
-        text: We take advantage of that by creating programs on paper that you run
-          using a random draw of playing cards. You might have an if statement that
-          says something like if the card you draw is greater than 8, you get a point.
-          Otherwise, your opponent gets a point. You can make it as simple or as complicated
-          as you feel comfortable.
+        text: Vi drar nytta av det genom att skapa program på papper som du kör med
+          en slumpmässig dragning av spelkort. Du kanske har en om-sats som säger
+          något som 'om kortet du drar är större än 8 får du en poäng'. Annars får
+          din motståndare en poäng. Du kan göra det så enkelt eller så komplicerat
+          som du känner dig bekväm med.
     unplug7:
       1:
         image: notes/unplug7_1.png
-        text: You know how when you look up the lyrics for a song and they define
-          the chorus at the very beginning and then for the rest of the song, they
-          just refer you back to the chorus? That's how you call a function.
+        text: Du vet när du tittar på texterna till en låt och de definierar refrängen
+          i början och sedan för resten av sången, hänvisas du tillbaka till refrängen?
+          Det är så du anropar en funktion.
       2:
         image: notes/unplug7_2.png
-        text: In this lesson, we define the chorus at the beginning of our song and
-          then we sing through our song and go back and we notice that the class doesn't
-          sing the word chorus, they automatically go up to the top where we define
-          the chorus and sing through that. We use that as a great introduction to
-          how to understand what a program is doing when it defines and calls a function.
+        text: I den här lektionen definierar vi refrängen i början av vår sång och
+          sedan sjunger vi igenom vår sång och går tillbaka och vi märker att klassen
+          inte sjunger ordet refräng, de går automatiskt upp till toppen där vi skrev
+          refrängen och sjunger igenom den. Vi använder det som en bra introduktion
+          till hur man ska förstå vad ett program gör när det definierar och anropar
+          en funktion.
       3:
         image: notes/unplug7_3.png
-        text: We use familiar songs including Old Macdonald to talk about how a chorus
-          is called over and over and how sometimes a chorus can change. When you
-          have a song like Old Macdonald, where certain words change, that's a great
-          place to introduce the idea of parameters. Passing certain words through
-          so that you can send extra information to your function. Once we're sure
-          everybody gets it, you can take your own familiar songs and break them up
-          yourself. See if you can figure it out together.
+        text: Vi använder välkända låtar inklusive Old Macdonald för att tala om hur
+          en refräng kallas om och om igen och hur en refräng kan ändras. När du har
+          en låt som Old Macdonald, där vissa ord ändras, är den ett bra tillfälle
+          att införa idén om parametrar. Skickarvissa ord igenom så att du kan skicka
+          extra information till din funktion. När vi är säkra på att alla förstår
+          det, kan du ta egna välkända låtar och bryta upp dem själv. Se om ni kan
+          lista ut det tillsammans.
     unplug8:
       1:
         image: notes/unplug8_1.png
-        text: Our lesson on abstraction uses the familiar concept of madlibs, where
-          you basically insert a blank in a story that can be filled with lots of
-          different words. We take that idea, challenge kids to come up with their
-          own words for their own stories, and really explain the concept of abstraction.
+        text: Vår lektion om abstraktion använder det välkända begreppet lucktext,
+          där du i princip sätter in en tom bit i en berättelse som kan fyllas med
+          massor av olika ord. Vi tar denna idé, utmanar barn att hitta på egna ord
+          till sina egna historier, och verkligen förklara begreppet abstraktion.
       2:
         image: notes/unplug8_2.png
-        text: It's all about functions and how you can have a function, like in Old
-          Macdonald, where you have a structure for your chorus but you have something
-          little that changes and you abstract out that little thing that changes
-          and you can fill it in with your own word every time through. But sometimes
-          you have three words that change and so you fill those in with three parameters,
-          that's still pretty helpful.
+        text: Det handlar om funktioner och hur du kan ha en funktion, som i gamla
+          Macdonald, där du har en struktur för din refräng men du har något litet
+          som ändras och du har abstraherat ut den lilla sak som ändrar och du kan
+          fylla den med dina egna ord varje gång. Men ibland har du tre ord som ändras
+          så du fyller dem med tre parametrar, det är fortfarande ganska bra.
       3:
         image: notes/unplug8_3.png
-        text: You can have one function that handles lots of different problems. Lots
-          of times people will write separate functions for all those problems, not
-          realizing there's only one little difference. If they could just find a
-          way to handle that one little difference, they could just reuse one function
-          over and over again, instead of having 14 different functions.
+        text: Du kan ha en funktion som hanterar massor av olika problem. Massor av
+          gånger kommer människor att skriva separata funktioner för alla dessa problem,
+          utan att inse det är bara en liten skillnad. Om de bara kunde hitta ett
+          sätt att hantera den enda lilla skillnaden, kunde de bara återanvända en
+          funktion om och om igen, istället för att ha 14 olika funktioner.
     unplug9:
       1:
         image: notes/unplug9_1.png
-        text: Relay programming is an extremely fun lesson that gets across way more
-          than computer science. Sometimes everybody is getting a little bit antsy
-          and you want to get them up on their feet. This is a great way to add some
-          excitement to computer science.
+        text: Stafett- programmering är en extremt rolig lektion som fungerar bättre
+          än bara datavetenskap. Ibland alla blir lite trötta och du vill få dem upp
+          på fötter. Detta är ett bra sätt att lägga till lite spänning i datavetenskap.
       2:
         image: notes/unplug9_2.png
-        text: You break everyone up into two groups where they stand in a line and
-          run relay style. The first person in each group runs to the other side of
-          the room where you have a graph paper drawing and a blank piece of paper
-          waiting for them. They write down the first step to creating that image,
-          run back to their line, tag the next player who goes back up to write the
-          next step.
+        text: Du delar in alla i två grupper där de ska stå i en rad och köra stafett
+          stil. Den första personen i varje grupp springer till andra sidan av rummet
+          där du har en rutat papper teckning och ett tomt papper som väntar på dem.
+          De skriver ner det första steget för att skapa teckningen, springer tillbaka
+          till sin rad, taggar nästa spelare som springer tillbaka för att skriva
+          nästa steg.
       3:
         image: notes/unplug9_3.png
-        text: This is a great way to get across the idea of debugging, needing to
-          proofread your own work, and needing to check the work of the people done
-          before you. You'll quickly understand how important it is that you be careful
-          in your coding when a whole team is depending on you.
+        text: Detta är ett bra sätt att få in idén om felsökning, behovet av att korrekturläsa
+          ditt eget arbete och att kontrollera arbetet människor gjort före dig. Du
+          kommer snabbt att förstå hur viktigt det är att vara försiktig i din kodning
+          när ett helt lag är beroende av dig.
     unplug10:
       1:
         image: notes/unplug10_1.png
-        text: This activity explains in an easy-to-understand way how the internet
-          works. We explain all the terminology you'll need in simple terms so that
-          students can simulate transmitting messages, like an email.
+        text: Denna aktivitet förklarar på ett lätt sätt hur internet fungerar. Vi
+          förklarar all terminologi du behöver med enkla uttryckt så att eleverna
+          kan simulera att sända meddelanden, som en e-post.
       2:
         image: notes/unplug10_2.png
-        text: Students will transmit messages while pretending to be one of three
-          transmission methods. Wireless internet, DSL or fiber optic. The students
-          who represent wi-fi will have to wear the message they're transmitting on
-          their head because wifi is the most likely to drop some information.
+        text: Eleverna kommer att överföra meddelanden samtidigt som låtsas vara en
+          av tre överföringsmetoder. Trådlöst internet, DSL eller fiber. De elever
+          som representerar wi-fi måste att bära det budskap de föra över på huvudet
+          eftersom wifi är det mest sannolika att släppa någon information av de tre.
       3:
         image: notes/unplug10_3.png
-        text: The students pretending to be DSL or cable will carry the message on
-          the back of their hand, where they're slightly less likely to drop information.
-          And the students representing fiber optic will get to carry them with both
-          hands. This activity is a great way to understand something that many of
-          us use every day.
+        text: De elever som låtsas vara DSL eller kabel kommer att överföra budskapet
+          på baksidan av sin hand, där de är något mindre benägna att släppa information.
+          Och eleverna som representerar fiberoptiska får bära dem med båda händerna.
+          Denna verksamhet är ett bra sätt att förstå något som många av oss använder
+          varje dag.
     unplug11:
       1:
         image: notes/unplug11_1.png
-        text: So now it's time to step back and take a birds eye view of everything
-          you've done in these past nineteen lessons. This is a great time to call
-          out to students that what they've just done is a huge achievement. They've
-          learned more over these lessons than most adults know about computer science.
+        text: Så nu är det dags att steg tillbaka och ta ett fågelperspektiv av allt
+          du gjort i de senaste nitton lektionerna. Detta är ett bra tillfälle att
+          berätta för eleverna att vad de gjort är en enorm prestation. De har lärt
+          sig mer under dessa lektioner än de flesta vuxna vet om datavetenskap.
       2:
         image: notes/unplug11_2.png
-        text: Discuss as a class or in small groups about their favorite lessons.
-          Once you take a look back at everything you've learned, this is where your
-          students' creativity can shine. Split them into groups and have them create
-          an unplugged lesson of their own. Assign each group a key concept, like
-          functions or algorithms and have lots of craft materials on hand for them
-          to use. Have each group present their new unplugged activity or even set
-          aside another day to do a few of the student created activities.
+        text: Diskutera deras favorit lektioner i klass eller i små grupper om. När
+          du tar en titt tillbaka på allt du har lärt dig, är det här elevernas kreativitet
+          kan lysa. Dela in dem i grupper och låt dem skapa en egen ouppkopplad lektion.
+          Tilldela varje grupp ett nyckelbegrepp, som funktioner eller algoritmer
+          och ha massor av pysselmaterial till hands för dem att använda. Låt varje
+          grupp presentera sin nya ouppkopplade aktivitet eller boka en annan dag
+          för att göra några av aktiviteterna som eleverna skapat.
       3:
         image: notes/unplug11_3.png
-        text: From everyone here at Code.org, we hope you've had a TON of fun during
-          this course. And whether your dream is to create the best new app, use programming
-          to help cure diseases, or you just want to be a stellar problem-solver,
-          this course was the first step in achieving those dreams.
+        text: Från alla hoppas här på Code.org, vi hoppas du har haft massor av kul
+          under kursen. Och om din dröm är att skapa den bästa nya appen, att använda
+          programmering för att bota sjukdomar, eller bara vill vara en bra problemlösare,
+          var kursen det första steget i att uppnå dessa drömmar.
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+        text: 'Hej, jag är Kathleen Kennedy och jag är producenten av Star Wars: The
+          Force Awakens. Idag kommer du att arbeta med en av våra stjärnor, BB-8.
+          BB-8 är en sfärisk droid. Allt han gör och varje rörelse som han gör styrs
+          av datorprogram. Datavetenskap påverkar alla branscher, från marknadsföring
+          till sjukvård till film. I själva verket har hundratals datatekniker arbetat
+          tillsammans för att göra en film som The Force Awakening.'
       2:
         image: notes/starwars_intro_2.JPG
         text: Hej jag är Rachel Rose, jag är en senior R&D ingenjör på ILM och jag
@@ -2507,37 +2510,38 @@
           de mest populära programmeringsspråken på webben.
       4:
         image: notes/starwars_intro_4.JPG
-        text: To start off, we're going to work with Rey to program BB-8 to walk to
-          collect all of the scrap parts. Your screen is split into three parts. On
-          the left is the Star Wars game space, where code will run. The instructions
-          for each level are written below the game space.
+        text: Till att börja med, kommer vi att arbeta med Rey för att programmera
+          BB-8 att gå och samla in alla skrotdelar. Skärmen är uppdelad i tre delar.
+          Till vänster är Star Wars spelyta, där koden körs. Under spelytan skrivs
+          instruktionerna för varje nivå.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: Detta område i mitten är verktygslådan och vart och ett av dessa block
+          är ett kommando som BB-8 kan förstå.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
+        text: Det vita utrymmet till höger kallas arbetsytan och det är där vi ska
+          bygga våra program.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what
-          happens? BB-8 moves left one block on the grid.
+        text: Om jag drar flyttaVänster(); blocket till vår arbetsyta och trycker
+          på Kör, vad händer? BB-8 flyttar vänster ett steg på skärmen.
       8:
         image: notes/starwars_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together.
+        text: Och vad händer om jag vill att BB-8 ska göra något efter flyttaVänster();
+          blocket? Jag kan lägga till ett annat block till vårt program. Jag kommer
+          att välja flyttaUpp(); blocket och jag ska dra det under mitt flyttaVänster();
+          block tills linjen visas. Sedan ska jag släppa det och de två blocken kommer
+          att knäppa ihop.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked
-          from top to bottom on our workspace. If you ever want to delete a block,
-          just remove it from the stack and drag it back into the tool box.
+        text: När jag trycker på kör igen, utför BB-8 de kommandon som är staplade
+          från toppen till botten på vår arbetsyta. Om du någonsin vill ta bort ett
+          block, ta bort det från stacken och dra tillbaka det in i verktygslådan.
       10:
         image: notes/starwars_intro_10.JPG
-        text: After you've hit run, you can always hit the reset button to get BB-8
-          back to the start. Now let's get rolling!
+        text: Efter du har tryckt på Kör, kan du alltid trycka på Omstart-knappen
+          för att få BB-8 tillbaka till starten. Nu låt oss börja!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
@@ -2548,87 +2552,90 @@
           skriver ingenjörerna sin kod därför att det går fortare.
       2:
         image: notes/starwars_typing_2.JPG
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
+        text: Vi kan skriva hundratals kommandon utan att vi måste hitta dem i verktygslådan
+          eller dra ut dem. Eftersom du håller på och lär dig kan skrivandet vara
+          långsammare till en början men vi vill att du ska göra ett försök.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show
-          text button on any puzzle to switch from blocks to typing code as text.
+        text: I det övre högra hörnet på din arbetsyta kan du klicka på knappen Visa
+          text på vilket pussel som helst för att byta från block till att skriva
+          kod som text.
       4:
         image: notes/starwars_typing_4.JPG
-        text: In the next lesson, we'll start you out in typing mode. Here you can
-          still drag the block from the toolbox or you can type the command name.
-          As you start to type, you'll see names of possible commands show below where
-          you're typing. Instead of typing the whole command name, you can select
-          one of these to move faster. In my job, I use this auto-complete feature
-          all the time when writing code.
+        text: I nästa lektion startar vi dig i skrivarläge. Här kan du fortfarande
+          dra block från verktygslådan eller skriva kommandonamnet. När du börjar
+          skriva, ser du namnen på möjliga kommandon visas under där du skriver. Istället
+          för att skriva hela kommandonamn, kan du välja ett av dessa. I mitt jobb
+          använder jag den här funktionen' Komplettera automatiskt' hela tiden när
+          jag skriver kod.
       5:
         image: notes/starwars_typing_5.JPG
-        text: When you're typing code, the computer needs you to be very precise.
-          You need to spell and capitalize the command name exactly correctly, including
-          the parentheses and the semi-colon. Even with a small typing mistake, BB-8
-          cannot understand the code and won't be able to move.
+        text: När du skriver kod, måste du vara mycket exakt. Du måste stava och Kapitalisera
+          kommandonamn exakt korrekt, inklusive parenteserna och semikolon. Även med
+          ett litet maskinskrivningsmisstag, kan BB-8 inte förstå koden och kommer
+          inte att kunna flytta.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
+        text: När du gör ett fel på raden, belyser redaktör det åt dig så att du kan
+          prova att ändra din text för att fixa det.
       7:
         image: notes/starwars_typing_7.JPG
-        text: If you get stuck, you can always start over with the start over button
-          and you can switch back to block mode at any time by clicking in the top-right
-          corner. Ok, let's give typing a try! And if you make mistakes, don't get
-          frustrated. It takes everybody a few tries to get it right.
+        text: Om du fastnar, kan du alltid börja om med Omstartsknappen och du kan
+          växla tillbaka till blockläge när som helst genom att klicka i det övre
+          högra hörnet. Ok, låt oss göra ett försök att skriva kod! Och om du gör
+          misstag, bli inte frustrerad. Det tar oss alla några försök innan det blir
+          rätt.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Hej, mitt namn är Charita Carter och jag är en senior kreativ producent
+          här på Walt Disney Imagineering. Jag är ansvarig för att leda grupper som
+          faktiskt producerar de attraktioner som våra gäster får uppleva. Vi letar
+          alltid efter sätt att vi kan förbättra oss och skapa en bättre upplevelse
+          för våra gäster och teknik är kärnan i det.
       2:
         image: notes/starwars_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Grattis, gjorde du det! Du har programmerat BB-8. Nu tror jag att är
+          vi redo för något svårare. Låt oss göra det. Nu när du har lärt dig grunderna
+          i programmering, ska vi tillbaka i tiden att bygga ditt eget spel, med R2-D2
+          och C3PO.
       3:
         image: notes/starwars_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'För att göra ett spel måste vi lära oss om något som spelprogrammerare
+          använder varje dag: dte kallas händelser. Händelser säger till ditt program
+          att lyssna eller vänta på att något händer och då utföra en åtgärd.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Några exempel på händelser är att lyssna efter ett musklick, en pilknapp
+          eller ett tryck på skärmen.
       5:
         image: notes/starwars_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Här kommer vi att göra så att R2-D2 går uppåt för att leverera ett meddelande
+          till en rebel pilot och sedan går ned till den andra rebel pilot. Vi använder
+          händelser för att få honom att flytta när spelaren använder upp/ner piltangenterna
+          eller upp/ner knapparna.
       6:
         image: notes/starwars_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down.
+        text: Vi använder närUpp() händelse blocket och fäster det under flyttaUpp()
+          blocket. När spelaren trycker på uppåt-piltangenten, körs koden som fästs
+          vid närUpp() blocket. Och vi ska göra samma sak för att få R2-D2 att flytta
+          nedåt.
       7:
         image: notes/starwars_events_7.JPG
-        text: To do this, we'll use a command called whenUp(). When you drag the command
-          out of the toolbox, you'll see that it starts and ends with a curly bracket
-          instead of a semi-colon. This gives us space to put other commands in the
-          middle. Every command that we place inside these brackets will run when
-          the player presses the up arrow.
+        text: För att göra det ska vi använda ett kommando som kallas närUpp(). När
+          du drar kommandot ur verktygslådan, ser du att det börjar och slutar med
+          en lockig klammer istället för semikolon. Detta ger oss utrymme att sätta
+          andra kommandon i mitten. Varje kommando som vi placerar inuti dessa klamrar
+          kommer att köras när spelaren trycker på uppåt-pilen.
       8:
         image: notes/starwars_events_8.JPG
-        text: We want R2-D2 to go up so let's put a goUp(); block inside the command.
-          And we'll do the same thing to make R2-D2 go down.
+        text: Vi vill att R2-D2 ska gå upp så låt oss sätta ett gåUpp(); block inuti
+          kommandot. Och vi ska göra samma sak fär att få R2-D2 att gå ner.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance,
-          we can let R2-D2 react to button press events that move him around the screen.
-          Step by step, your game is getting more interactive.
+        text: Istället för att skriva all kod för att styra vår droid i förväg, kan
+          vi låta R2-D2 vänta på knapptryckningar för att gå runt på skärmen. Steg
+          för steg blir dina spel mer interaktiva.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
@@ -2689,8 +2696,8 @@
           below the game space.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: Detta område i mitten är verktygslådan och vart och ett av dessa block
+          är ett kommando som BB-8 kan förstå.
       6:
         image: notes/starwars_blocks_intro_6.JPG
         text: The white space on the right is called the work space and this is where
@@ -2718,32 +2725,32 @@
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Hej, mitt namn är Charita Carter och jag är en senior kreativ producent
+          här på Walt Disney Imagineering. Jag är ansvarig för att leda grupper som
+          faktiskt producerar de attraktioner som våra gäster får uppleva. Vi letar
+          alltid efter sätt att vi kan förbättra oss och skapa en bättre upplevelse
+          för våra gäster och teknik är kärnan i det.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Grattis, gjorde du det! Du har programmerat BB-8. Nu tror jag att är
+          vi redo för något svårare. Låt oss göra det. Nu när du har lärt dig grunderna
+          i programmering, ska vi tillbaka i tiden att bygga ditt eget spel, med R2-D2
+          och C3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'För att göra ett spel måste vi lära oss om något som spelprogrammerare
+          använder varje dag: dte kallas händelser. Händelser säger till ditt program
+          att lyssna eller vänta på att något händer och då utföra en åtgärd.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Några exempel på händelser är att lyssna efter ett musklick, en pilknapp
+          eller ett tryck på skärmen.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Här kommer vi att göra så att R2-D2 går uppåt för att leverera ett meddelande
+          till en rebel pilot och sedan går ned till den andra rebel pilot. Vi använder
+          händelser för att få honom att flytta när spelaren använder upp/ner piltangenterna
+          eller upp/ner knapparna.
       6:
         image: notes/starwars_blocks_events_6.JPG
         text: We use the whenUp() event block and attach the goUp() block to it. When

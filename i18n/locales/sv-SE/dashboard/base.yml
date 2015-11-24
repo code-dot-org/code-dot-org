@@ -226,6 +226,7 @@ sv:
         playlab: Skapa en App
         artist: Rita något
         calculate: Calculate Something
+        applab: Skapa en App
     user:
       classroom: Lärare hemsida
       district_dashboard: Distrikt Dashboard
@@ -440,7 +441,7 @@ sv:
   pdf_download: Ladda ner PDF
   download_coming_soon: Nedladdningsbar aktivitet kommer snart.
   video_coming_soon: Video kommer snart!
-  not_started: The student has not attempted this level.
+  not_started: Studenten har inte försökt på denna nivå.
   share_code:
     title: "Klicka på 'Kör' för att testa mitt program"
     bounce_og_title: Kolla in mitt Studsa Spel
@@ -489,7 +490,7 @@ sv:
       body: Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Utforska en Minecraft värld med kod.
   gallery:
     students_drew_these_with_code: Elever ritade dessa med kod!
     students_made_these_with_code: Elever gjorde dessa med kod!

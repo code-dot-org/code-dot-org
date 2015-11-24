@@ -1347,34 +1347,34 @@ pl:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: 'Witam, jestem Kathleen Kennedy i jestem producentem filmu Star Wars: Przebudzenie Mocy (The Force Awakens). Dzisiaj będziecie pracować z jedną z naszych gwiazd, BB-8. BB-8 jest kulistym droidem. Cokolwiek robi i każdy jego ruch jest sterowany programem komputerowym. Informatyka ma wpływ na przemysł, od marketingu po ochronę zdrowia, na filmy. W rzeczywistości, setki inżynierów pracowało, aby powstał film taki, jak The Force Awakens.'
       2:
         image: notes/starwars_intro_2.JPG
-        text: "Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artists develop rigs which are the parts of the character that move that allow the character to look very believable in a galaxy far far away."
+        text: 'Witam, jestem Rachel Rose. Jestem starszym inżynierem R&D w ILM i prowadzę zespół zajmujący się animacją i tworzeniem postaci. W The Force Awakens odpowiadam za pomoc artystom w doborze wyposażenia, będącego częścią postaci, dzięki czemu wyglądają bardzo wiarygodnie w galaktyce znajdującej się bardzo daleko.'
       3:
         image: notes/starwars_intro_3.JPG
-        text: "In the next hour, we're going to build our own Star Wars game. We'll teach you the basic concepts of programming. Usually programming is all text but we're going to use blocks here so that we can drag and drop to write the programs. Under the hood, you're still creating code. After you try the basics with blocks, we'll switch you to JavaScript, one of the most popular programming languages on the web."
+        text: W ciągu następnej godziny zbudujemy własną grę Star Wars, poznając przy okazji podstawowe pojęcia związane z programowaniem. Zwykle, programy mają postać tekstu, ale nasze programy będziemy tworzyć przeciągając i upuszczając bloki. Faktycznie, nadal piszemy kod programu. Po zapoznaniu się z podstawami z użyciem bloków, przełączysz się na JavaScript, na jeden z najpopularniejszych języków programowania w sieci.
       4:
         image: notes/starwars_intro_4.JPG
-        text: "To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts. Your screen is split into three parts. On the left is the Star Wars game space, where code will run. The instructions for each level are written below the game space."
+        text: Będziemy pracować z Reyem, który programuje BB-8, by zebrał cały złom. Ekran jest podzielony na 3 części. Po lewej stronie jest plansza gry Star Wars, na której jest wykonywany program. Poniżej znajduje się instrukcja odpowiednia do poziomu gry.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: W środkowej części znajduje się przybornik z blokami (Toolbox), które rozumie BB-8.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where we are going to build our program.
+        text: Biała część po prawej stronie to pole robocze (Work space), gdzie będziemy budować nasz program.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what happens? BB-8 moves left one block on the grid.
+        text: 'Gdy przeciągnę blok "idź w lewo" na pole robocze i nacisnę Uruchom (Run), BB-8 przesunie się w lewo o jedno miejsce na siatce.'
       8:
         image: notes/starwars_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together."
+        text: 'Jeśli chcę, aby BB-8 wykonał coś po przesunięciu się w lewo, mogę dodać kolejny blok do naszego programu. Wybieram blok "idź do góry" i przesuwam go pod blok "idź w lewo", aż pojawi się rozjaśnienie. Wtedy upuszczam go i oba bloki łączą się ze sobą.'
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked from top to bottom on our workspace. If you ever want to delete a block, just remove it from the stack and drag it back into the tool box.
+        text: Gdy ponownie nacisnę przycisk Uruchom (Run), BB-8 wykona od góry do dołu polecenia znajdujące się w polu roboczym. Jeśli chcesz usuną blok z pola roboczego, usuń go z programu i przeciągnij z powrotem do przybornika.
       10:
         image: notes/starwars_intro_10.JPG
-        text: "After you've hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: Po naciśnięciu Uruchom możesz zawsze nacisnąć przycisk Reset, by powrócić z BB-8 na początek. Milego toczenia się!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
@@ -1456,7 +1456,7 @@ pl:
         text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: W środkowej części znajduje się przybornik z blokami (Toolbox), które rozumie BB-8.
       6:
         image: notes/starwars_blocks_intro_6.JPG
         text: "The white space on the right is called the work space and this is where we're going to build our program."

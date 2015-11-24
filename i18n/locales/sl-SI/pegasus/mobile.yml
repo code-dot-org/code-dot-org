@@ -546,7 +546,7 @@ sl-SI:
   dashboard_faq_k5: Pogosta vprašanja, prva petletka
   dashboard_announcements: Announcements
   dashboard_announce_view_all: Poglej vse
-  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: 'Ura za kodo je tu - 8. do 14. december!'
   code_sign_up: Prijavite se za sodelovanje med Tednom poučevanja računalništva
   learn_more: Več o tem
@@ -563,6 +563,7 @@ sl-SI:
   hoc2014_try_scrat: Angry Birds, PvZ in Scrat
   hoc2014_try_frozen: Umetnik z Anno in Elsa (iz Disney-eve risanke Frozen)
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Vaje v vašem jeziku
@@ -631,6 +632,8 @@ sl-SI:
   projguts_name: Kamen, papir, škarje
   hourofcode_name: Prostor za novi code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artist
   codeorg_gradelevel: Starost 4-104
   codeintl_gradelevel: Starost 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -672,6 +675,8 @@ sl-SI:
   frozen_gradelevel: Starost 8 +
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Starost 4-104
+  infinity_gradelevel: Starost 4-104
+  artist_gradelevel: Starost 4-104
   codeorg_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   codeintl_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   thinkersmithspanish_platformtext: Izštekano
@@ -750,10 +755,12 @@ sl-SI:
   thinkersmith2_shortdescription: Nauči se, kako računalniki uporabljajo 1ke in 0le, da predstavijo informacije
   kodableunplugged_shortdescription: Zabavna izštekana vaja
   projguts_shortdescription: Poskusite modeliranje in simulacijo z igro kamen/papir/škarje
-  hourofcode_shortdescription: Prostor za novi code.org/hoc
+  hourofcode_shortdescription: Naučite se kodirati z Markom Zuckerbergom in Jeznimi ptiči!
   frozen_shortdescription: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju čarabnosti in lepote ledu.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: Nauči se osnov računalništva s povleci in spusti programiranjem. To je igri podobna vaja z video predavanji, v katerih nastopajo Bill Gates, Mark Zuckerberg, Angry Birds in Rastline vs zombiji. Naučite se zanke repeat, pogojne stavke in osnovne algoritme. Na voljo v 34 jezikih.
   codeintl_longdescription: Nauči se osnov računalništva s povleci in spusti programiranjem. To je igri podobna vaja z video predavanji, v katerih nastopajo Bill Gates, Mark Zuckerberg, Angry Birds in Rastline vs zombiji. Naučite se zanke repeat, pogojne stavke in osnovne algoritme. Na voljo v 34 jezikih.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -985,3 +992,11 @@ sl-SI:
   compatibility_https_header: Prosimo, omogočite HTTPS za Code.org.
   compatibility_https_message: "Da bi povečali varnost, smo prešli na HTTPS, dne %{https_date}. Po tem datumu ne boste mogli dostopati do Code.org. <a href='%{it_requirements_url}'> Kliknite tukaj</a>, če želite izvedeti, kako omogočiti HTTPS za Code.org."
   compatibility_https_hide_this_warning: Skrij to opozorilo
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: plahutaj
+  infinity_shortcode: inf
+  playlab_shortcode: igraj
+  artist_shortcode: art
