@@ -1,5 +1,5 @@
 / Show the correct answer to authorized teachers
-- if current_user.try(:authorized_teacher?)
+- if current_user.try(:authorized_teacher?) && !@script.try(:pd?)
   #markdown.teacher
     %h3= t('teacher.answer')
     .content
