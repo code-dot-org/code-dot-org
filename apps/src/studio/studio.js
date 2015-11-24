@@ -2155,7 +2155,9 @@ Studio.reset = function(first) {
     timedOut: false,
     gotAllItems: false,
     removedItems: {},
-    createdItems: {}
+    createdItems: {},
+    hasSetEmotion: false,
+    hasThrownProjectile: false
   };
 
   // Reset the record of the last direction that the user moved the sprite.
@@ -3678,6 +3680,7 @@ Studio.callCmd = function (cmd) {
     case 'setSpriteEmotion':
       studioApp.highlight(cmd.id);
       Studio.setSpriteEmotion(cmd.opts);
+      Studio.trackedBehavior.hasSetEmotion = true;
       break;
     case 'setSpriteSpeed':
       studioApp.highlight(cmd.id);
@@ -3754,6 +3757,7 @@ Studio.callCmd = function (cmd) {
       if (!cmd.opts.started) {
         studioApp.highlight(cmd.id);
       }
+      Studio.trackedBehavior.hasThrownProjectile = true;
       return Studio.throwProjectile(cmd.opts);
     case 'makeProjectile':
       studioApp.highlight(cmd.id);
@@ -5431,6 +5435,14 @@ Studio.conditionSatisfied = function(required) {
     }
 
     if (valueName === 'setDroidSpeed' && tracked.hasSetDroidSpeed !== value) {
+      return false;
+    }
+
+    if (valueName === 'throwProjectile' && tracked.hasThrownProjectile !== value) {
+      return false;
+    }
+
+    if (valueName === 'setEmotion' && tracked.hasSetEmotion !== value) {
       return false;
     }
   }
