@@ -1448,6 +1448,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
   this.skin = config.skin;
   this.showInstructions = this.showInstructions_.bind(this, config.level);
+  this.polishCodeHook = config.polishCodeHook;
 };
 
 // Overwritten by applab.
@@ -2232,4 +2233,17 @@ StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
       return descendant.getVars().indexOf(varName) !== -1;
     });
   });
+};
+
+/**
+ * Polishes the generated code string before displaying it to the user. If the
+ * app provided a polishCodeHook function, it will be called.
+ * @returns {string} code string that may/may not have been modified
+ */
+StudioApp.prototype.polishGeneratedCodeString = function (code) {
+  if (this.polishCodeHook) {
+    return this.polishCodeHook(code);
+  } else {
+    return code;
+  }
 };
