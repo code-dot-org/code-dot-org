@@ -158,7 +158,7 @@ s:function(d,k,p){jigsaw_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "nextLevel":function(d){return "සුබ පැතුම්! ඔබට මෙම ප්‍රහේලිකාව සම්පූර්ණ කර ඇත."},
 "no":function(d){return "නැහැ"},
 "numBlocksNeeded":function(d){return "This puzzle can be solved with %1 blocks."},
-"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to playing your game."},
+"reinfFeedbackMsg":function(d){return "නැවත වරක් ක්‍රීඩා කිරීමට \"Try again\" බොත්තම ඔබන්න."},
 "share":function(d){return "බෙදා ගන්න"},
-"shareGame":function(d){return "Share your game:"},
+"shareGame":function(d){return "ඔබෙගේ ක්‍රීඩාව මිතුරන් අතරේ හුවමාරු කරන්න:"},
 "yes":function(d){return "ඔව්"}};
