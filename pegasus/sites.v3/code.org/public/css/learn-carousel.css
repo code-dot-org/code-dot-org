@@ -113,6 +113,10 @@
     margin-bottom: 15px;
   }
 
+  #quicklinks {
+    width: 184px;
+  }
+
   .multi-item-carousel .carousel-inner .active.left {
     left: -100%;
   }
