@@ -1225,7 +1225,7 @@ levels.c2_10 = utils.extend(levels.change_background_and_speed, {});
 levels.c3_game_6 = utils.extend(levels.change_background_and_speed, {});
 
 levels.playlab_9 = {
-  background: 'rgba(0, 0, 0, 0.5)',
+  background: 'black',
   requiredBlocks: [
     [{test: 'setBackground',
       type: 'studio_setBackground',
