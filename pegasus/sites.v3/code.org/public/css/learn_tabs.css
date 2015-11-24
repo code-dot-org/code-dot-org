@@ -1,7 +1,8 @@
 #learn-tabs {
   margin-top: 0px;
   width: 100%;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 #learn-tabs .content {
   margin: 0 auto;
@@ -10,7 +11,6 @@
   text-align: left;
 }
 #learn-tabs ul {
-  margin: 0;
   padding-left: 10px;
 }
 #learn-tabs ul li {
@@ -88,7 +88,7 @@
 
 .learn-tabs-signup {
   float: right;
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
 @media (min-width: 0px) and (max-width: 345px) {

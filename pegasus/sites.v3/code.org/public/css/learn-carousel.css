@@ -24,7 +24,7 @@
 }
 
 .courseblock-tall {
-  min-height: 370px;
+  min-height: 350px;
 }
 
 #bottomalign {
@@ -33,6 +33,12 @@
   position: absolute;
   position: relative\9;
   margin-bottom: 10px;
+}
+
+#quicklinks {
+  float: left;
+  display: inline-block;
+  width: 200px;
 }
 
 .multi-item-carousel .carousel-control.left,
@@ -184,6 +190,10 @@
 
   #learnCodeStudio {
     max-width: 600px;
+  }
+
+  #quicklinks {
+    width: 185px;
   }
 
   .multi-item-carousel .carousel-inner .active.left {
