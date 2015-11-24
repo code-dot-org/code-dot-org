@@ -286,11 +286,11 @@ sv-SE:
   starwars_javascript_start_button: Prova nu
   starwars_blocks_title: Block
   starwars_blocks_description: Använd dra-och-släpp block.
-  starwars_blocks_specs: Många språk (kommer snart) | Moderna webbläsare, smartphones, tabletter | Åldrarna 6-10
+  starwars_blocks_specs: Många språk (kommer snart) | Moderna webbläsare, smartphones, surfplattor | Åldrarna 6-10
   starwars_blocks_start_button: Prova nu
   starwars_watch_videos: Innan du börjar, titta på en av dessa inspirerande videofilmer
   starwars_speak_languages: Tala ett annat språk?
-  starwars_help_translate: Hjälp oss översätta
+  starwars_help_translate: Hjälp oss att översätta
   starwars_platform_text: Moderna webbläsare, smartphones, surfplattor
   mc_name: Minecraft Hour of Code
   mc_longdescription: Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft värld.
@@ -751,7 +751,7 @@ sv-SE:
   projguts_shortdescription: Prova modellering och simulering med hjälp av sten/papper/sax
   hourofcode_shortdescription: Lär dig att koda med Mark Zuckerberg och Angry Birds!
   frozen_shortdescription: Vi kan använda kod för att följa Anna och Elsa när de utforskar isens magi och skönhet.
-  starwars_shortdescription: Lär dig att programmera droids och skapa ditt egna Star Wars spel i en galax långt, långt borta.
+  starwars_shortdescription: Lär dig att programmera droider och skapa ditt eget Star Wars spel i en galax långt, långt borta.
   playlab_shortdescription: Skapa en berättelse eller gör ett spel med Play Lab!
   infinity_shortdescription: Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .
   artist_shortdescription: Rita häftiga bilder och mönster med artisten!
@@ -795,7 +795,7 @@ sv-SE:
   projguts_longdescription: Denna ouppkopplade aktivitet hjälper eleverna att lära sig hur modellering och simulering fungerar genom att en grupp elever spelar olika versioner av sten / papper / sax spelet, och studerar resultaten som olika modellerings experiment.
   hourofcode_longdescription: Platshållare för nya code.org/hoc
   frozen_longdescription: Vi kan använda kod för att följa Anna och Elsa när de utforskar isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom skridskoåkning och skapa ett underbart vinterland som du kan dela med dina vänner!
-  starwars_longdescription: Lär dig att programmera droids och skapa ditt egna Star Wars spel i en galax långt, långt borta.
+  starwars_longdescription: Lär dig att programmera droider och skapa ditt eget Star Wars spel i en galax långt, långt borta.
   playlab_longdescription: Skapa en berättelse eller gör ett spel med Play Lab! Gör så att djur, zombies, pirater, ninjor, och många fler figurer rör på sig, låter, får poäng, och till och med kastar eldklot!
   codeorg_beyond_name: Introduktion datavetenskap (årskurs 0-8)
   khan_beyond_name: 'Lär dig  datorprogrammering'

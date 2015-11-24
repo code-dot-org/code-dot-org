@@ -116,9 +116,9 @@
         Vi kan bruge løkker til at lave alle muligt typer figurer.
         Kan du lave en rhombe indeni denne sekskant?
       2-3 Artist Loops 8_instruction: Lad os sætte begge bokse ind i en gentagelse.
-      2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow
-        we're going to add some distance between them.\r\nUse the same code as\nbefore,
-        but add a step forward at the end of the outer loop."
+      2-3 Artist Loops 9_instruction: "We vil lave en løkke over de samme elementer,
+        men nu vil vi tilføje noget afstand imellem dem.\r\nBrug den samme kode som
+        før, men tilføj et skridt i bunden af den ydre løkke."
       2-3 Artist Loops New 1_instruction: |
         Lad os tegne robottens hoved! Kan du
         lave et kvadrat, hvor siderne er 100 pixel?
@@ -139,12 +139,12 @@
       2-3 Artist Loops New 9_instruction: "Tegn et simpelt V hvor begge sider er \n50
         pixels for at færdiggøre pilen.\n"
       2-3 Artist Match Hex Pic_instruction: 'Mission: Hjælp med at fuldføre sekskanten.'
-      2-3 Artist Match Rho Pic_instruction: 'Match:  Finish the missing code.'
-      2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
-      2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
-      2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut
-        did you know you can put a loop inside another loop?\r\nLoop this whole\nblock
-        of code 3 times to draw the pattern."
+      2-3 Artist Match Rho Pic_instruction: 'Match:  Afslut den manglende kode.'
+      2-3 Artist Match Sq Pic_instruction: 'Match: Færdiggør den manglende kode'
+      2-3 Artist Match Tri pic_instruction: 'Matchende: Indsæt den manglende kode.'
+      2-3 Artist Nested Loops 1_instruction: "Du har brugt løkker til at tegne former
+        før, men vidste du, at du kan lave en løkke inden i en anden løkke?\r\nGentag
+        hele koden 3 gange med en løkke for at tegne mønsteret."
       2-3 Artist Nested Loops 10_instruction: Gentag denne kode 12 gange for at gøre
         mønsteret færdigt.
       2-3 Artist Nested Loops 11_instruction: |

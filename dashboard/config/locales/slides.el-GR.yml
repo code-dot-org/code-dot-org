@@ -889,11 +889,11 @@
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
-        text: Today we're going to learn about Pair Programming. In pair programming
-          you work as a team. Why should two people use one computer? Because two
-          heads are better than one. In pair programming you and your partner are
-          going to sit down together at one computer and you are both going to work
-          on the same project.
+        text: Σήμερα πρόκειται να μάθουμε για τον προγραμματισμό σε ζεύγη. Στον προγραμματισμό
+          σε ζεύγη εργάζεστε σαν ομάδα. Γιατί πρέπει δύο άνθρωποι να χρησιμοποιούν
+          ένα υπολογιστή; Επειδή δύο μυαλά είναι καλύτερα από ένα. Στον προγραμματισμό
+          σε ζεύγη εσείς και ο συνεργάτης σας θα καθίσετε μαζί σε ένα υπολογιστή και
+          θα εργαστείτε σε ένα κοινό θέμα.
       2:
         image: notes/C1_pair_programming_2.png
         text: In pair programming, one person is the driver and the other person is

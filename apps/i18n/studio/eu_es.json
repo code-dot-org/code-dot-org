@@ -150,6 +150,7 @@
   "endGameLose": "bukatu jolasa galtzaile gisa",
   "endGameTooltip": "Bukatu jolasa garaile edo galtzaile gisa.",
   "finalLevel": "Zorionak! Amaierako puzlea ebatzi duzu.",
+  "foodFight": "Food fight!",
   "for": "ondokoarekin zenbatu",
   "goSprite": "joan",
   "hello": "kaixo",
@@ -498,7 +499,7 @@
   "setSpriteDiego": "Diegoren irudi bati",
   "setSpriteScrat": "Scraten irudi bati",
   "setSpriteAnais": "Anaisen irudi bati",
-  "setSpriteAntony": "Antonyren irudi bati",
+  "setSpriteAnton": "to an Anton image",
   "setSpriteBananajoe": "BananaJoeren irudi bati",
   "setSpriteDarwin": "Darwinen irudi bati",
   "setSpriteGumball": "Gumballen irudi bati",
@@ -743,5 +744,12 @@
   "failedMultiplyCharactersTimeoutBlockly": "20 Mouse Droid behar dituzu. Erabili \"gehitu Mouse Droid bat\" komandoa \"Mouse Droid lortzean\" gertaeraren barnean bi Mouse Droid edo gehiago gehitzeko bat lortzen duzun bakoitzean.",
   "failedMultiplyCharactersTimeoutGotSome": "Zorionak, Mouse Droid-ak egiteko kodea gehitu duzu. Hurrengo puzlearekin jarrai dezakezu edo berriro saiatu 20 Mouse Droid lortzeko. Errazagoa da gehiago gehitzen badituzu! (mantendu sakatuta gezidun teklak zure teklatuan (edo pantailan) arinago mugitzeko.)",
   "failedChangeSettingTimeout": "Lortu hiru Rebel Pilot aurrera jarraitzeko.",
-  "failedChangeSettingSettings": "Egin nahi duzun jokoa. Puzle hau gainditzeko, zure robota aldatu behar duzu eta bere abiadura ezarri."
+  "failedChangeSettingSettings": "Egin nahi duzun jokoa. Puzle hau gainditzeko, zure robota aldatu behar duzu eta bere abiadura ezarri.",
+  "playSoundR2D2Random": "play R2-D2 random sound",
+  "playSoundC3PORandom": "play C-3PO random sound",
+  "playSoundPufferPigRandom": "play Puffer Pig random sound",
+  "playSoundTauntaunRandom": "play Tauntaun random sound",
+  "playSoundMynockRandom": "play Mynock random sound",
+  "playSoundProbotRandom": "play Probot random sound",
+  "playSoundMouseDroidRandom": "play Mouse Droid random sound"
 }

@@ -43,7 +43,7 @@
   csedweek_map_signup: Сіздің Код Жазу Сағатын тіркеңіз
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Іздеу
-  csedweek_map_search_reset: Ысыру
+  csedweek_map_search_reset: қалпына келтіру
   csedweek_map_legend_title: Аңыз
   csedweek_map_legend_event: Hour of Code Event
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
@@ -755,7 +755,7 @@
   makeschool_name: iPhone ойының браузеріңізде жасаңыз!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Код Жазу Сағаты
-  blockly_name: Blockly
+  blockly_name: Блокты
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Тас, қайшы, қағаз

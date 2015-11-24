@@ -150,6 +150,7 @@
   "endGameLose": "end game as a loss",
   "endGameTooltip": "End the game as either a win or a loss.",
   "finalLevel": "تبریک! شما پازل نهایی را حل کردید.",
+  "foodFight": "Food fight!",
   "for": "حلقه ی تکرار",
   "goSprite": "go",
   "hello": "سلام",
@@ -498,7 +499,7 @@
   "setSpriteDiego": "to a Diego image",
   "setSpriteScrat": "to a Scrat image",
   "setSpriteAnais": "to a Anais image",
-  "setSpriteAntony": "to a Antony image",
+  "setSpriteAnton": "to an Anton image",
   "setSpriteBananajoe": "to a BananaJoe image",
   "setSpriteDarwin": "to a Darwin image",
   "setSpriteGumball": "to a Gumball image",
@@ -743,5 +744,12 @@
   "failedMultiplyCharactersTimeoutBlockly": "You need to get 20 Mouse Droids. Use the \"add a Mouse Droid\" command inside the \"when get Mouse Droid\" event to add two or more Mouse Droids every time you get one.",
   "failedMultiplyCharactersTimeoutGotSome": "Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)",
   "failedChangeSettingTimeout": "Get three Rebel Pilots to move on.",
-  "failedChangeSettingSettings": "Make the game your own. To pass this puzzle, you need to change your droid and set its speed."
+  "failedChangeSettingSettings": "Make the game your own. To pass this puzzle, you need to change your droid and set its speed.",
+  "playSoundR2D2Random": "play R2-D2 random sound",
+  "playSoundC3PORandom": "play C-3PO random sound",
+  "playSoundPufferPigRandom": "play Puffer Pig random sound",
+  "playSoundTauntaunRandom": "play Tauntaun random sound",
+  "playSoundMynockRandom": "play Mynock random sound",
+  "playSoundProbotRandom": "play Probot random sound",
+  "playSoundMouseDroidRandom": "play Mouse Droid random sound"
 }

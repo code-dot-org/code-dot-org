@@ -2821,52 +2821,51 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: |
-        Andare contro un Creeper non è una buona idea.
-        Muoviti con cautela attorno ai Creeper e raggiungi la parte sicura della tua casa.
-      Overworld Chop Tree_instruction: Madeira é um recurso muito importante. Muitas
-        coisas são feitas dela. Ande à árvore e use o comando "destruir bloco" para
-        cortá-la.
-      Overworld Chop Trees_instruction: Nós necessitamos construir uma casa antes
-        que o sol se ponha. Casas requerem bastante madeira. Corte todas as 3 árvores.
-      Overworld Free Play 20x20_instruction: Congratulações! Você completou todos
-        os nossos quebras-cabeça! Agora minere, construa e crie algo único usando
-        tudo o que aprendemos até então.
-      Overworld Free Play_instruction: A paisagem é sua, para que brinques. Você escolhe
-        o quê construir.
-      Overworld House Frame - A_instruction: Façamos nossa própria casa! Este local
-        parece bom. Construa a fundação nos blocos de terra.
-      Overworld House Frame - C_instruction: Façamos nossa própria casa! Este local
-        parece bom. Construa a fundação nos blocos de terra.
-      Overworld House Frame B_instruction: Uma parede está pronta, agora contruamos
-        o resto da casa seguindo sua planta! Você precisará de bastante "repetir"
-        aqui.
-      Overworld House Frame B2_instruction: Uma parede está pronta, agora contruamos
-        o resto da casa seguindo sua planta! Você precisará de bastante "repetir"
-        aqui.
-      Overworld House Frame C_instruction: Uma parede está pronta, agora contruamos
-        o resto da casa seguindo sua planta! Você precisará de bastante "repetir"
-        aqui.
-      Overworld House Frame Chosen_instruction: Construa o resto de sua casa a partir
-        de qualquer material que gostes. O comando "repetir" será uma mão-na-roda.
-      Overworld House Frame_instruction: Façamos nossa própria casa! Este local parece
-        bom. Construa a fundação nos blocos de terra.
-      Overworld Minecart Track_instruction: Você está de volta à superfície com um
-        monte de recursos subterrâneos. Agora, iremos construir uma trilha ao longo
-        do caminho de terra de sua casa. O primeiro passo é limpar o caminho. Siga
-        o caminho e remova as árvores.
-      Overworld Move to Sheep_instruction: Adicione um segundo comando "ir para a
-        frente" para alcançar a ovelha.
-      Overworld Place Wall_instruction: Toda casa começa com uma parede. Construa
-        a primeira parte de sua casa colocando os comandos "colocar" e "ir adiante"
-        dentro do ciclo de repetição.
-      Overworld Plant Crops_instruction: É bom planear adiante. Plante mudas em ambos
-        os lados da água, para que não fiques faminto após.
-      Overworld Powered Minecart_instruction: Bom trabalho! Você coletou um monte
-        de recursos e construiu uma casa modesta. Agora, ponha trilhos do canto do
-        mapa até a porta de sua casa.
-      Overworld Shear Sheep_instruction: Hora de tosar ovelhas! Use o comando "tosar"
-        para coletar lã de ambas as ovelhas.
+      Overworld Avoid Monsters_instruction: "Chocar on un Creeper es una mala idea.
+        \nMuévete con cuidado entre los Creepers y alcanza la seguridad de tu hogar.\n"
+      Overworld Chop Tree_instruction: La madera es un recurso muy importante. Muchas
+        cosas están hechas de ella. Camina hasta el árbol y usa el comando "destruir
+        bloque" para talarlo.
+      Overworld Chop Trees_instruction: Necesitamos construir una casa antes de que
+        se ponga el sol. Las casas requieren mucha madera. Tala los 3 árboles.
+      Overworld Free Play 20x20_instruction: ¡Enhorabuena! ¡Has completado todos los
+        puzzles! Ahora mina, construye, y crea algo único usando todo lo que has aprendido
+        hasta ahora.
+      Overworld Free Play_instruction: Este paisaje es tuyo para jugar con él. Tú
+        eliges qué construir.
+      Overworld House Frame - A_instruction: ¡Hagamos nuestra propia casa! Este lugar
+        se ve bien. Construye una estructura en los bloques de tierra.
+      Overworld House Frame - C_instruction: ¡Hagamos nuestra propia casa! Este lugar
+        se ve bien. Construye una estructura en los bloques de tierra.
+      Overworld House Frame B_instruction: Una pared está terminada, construyamos
+        ahora el resto de la casa siguiendo los planos de la planta. Vas a tener que
+        repetirte mucho aquí.
+      Overworld House Frame B2_instruction: Una pared está terminada, construyamos
+        ahora el resto de la casa siguiendo los planos de la planta. Vas a tener que
+        repetirte mucho aquí.
+      Overworld House Frame C_instruction: Una pared está terminada, construyamos
+        ahora el resto de la casa siguiendo los planos de la planta. Vas a tener que
+        repetirte mucho aquí.
+      Overworld House Frame Chosen_instruction: Construye el resto de tu casa de cualquier
+        material que desees. El comando "repetir" va a venir bien.
+      Overworld House Frame_instruction: ¡Hagamos nuestra propia casa! Este lugar
+        se ve bien. Construye una estructura en los bloques de tierra.
+      Overworld Minecart Track_instruction: Estás de vuelta en la superficie con un
+        montón de recursos subterráneos. Ahora, vamos a construir una senda a lo largo
+        del camino de tierra de tu casa. El primer paso es despejar el camino. Sigue
+        el camino y tala los árboles.
+      Overworld Move to Sheep_instruction: Añade un segundo comando de "avanzar" para
+        alcanzar la oveja.
+      Overworld Place Wall_instruction: Cada casa se inicia con una pared. Construye
+        la primera parte de tu casa poniendo el comando "colocar" y "avanzar" dentro
+        del bucle de repetición.
+      Overworld Plant Crops_instruction: Es bueno planificar con antelación. Siembra
+        a ambos lados del agua para que no te de hambre más tarde.
+      Overworld Powered Minecart_instruction: ¡Buen trabajo! Has reunido un montón
+        de recursos y has construido una casa modesta. Ahora pon carril desde el borde
+        del mapa hasta la puerta de su casa.
+      Overworld Shear Sheep_instruction: '!Es hora de esquilar de ovejas! Utiliza
+        el comando de "esquilar" para recolectar lana de ambas ovejas.'
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -4631,14 +4630,15 @@
       Underground If Statements_instruction: |
         Ahora las cosas están poniendo difíciles. Mina
         3 piedras rojas, pero no caigas en la lava. Utiliza un comando "Si" para colocar adoquines sobre cualquier lava que te encuentres.
-      Underground Iron_instruction: Caminar en la lava fundida es una mala idea. Coloca
+      Underground Iron_instruction: Caminar sobre lava fundida es una mala idea. Coloca
         la piedra para crear un puente y luego mina al menos dos de los bloques de
         hierro.
-      Underground Mine in a Circle_instruction: "Encuentra una manera de obtener 5
+      Underground Mine in a Circle_instruction: "¡Encuentra la manera de obtener 5
         diamantes y \n7 piedras rojas! Trata de usar un comando de repetición dentro
-        de un comando de repetición para caminar en un cuadrado.\r\n"
-      Underground Mining Coal_instruction: Troverai molte risorse utili sottoterra,
-        ma puo diventare buio. Piazza almeno 2 torce e scava almeno 2 carboni.
-      Underground Test Level_instruction: Colecta todos los minerales!
+        de otro comando de repetición para caminar en un cuadrado.\r\n"
+      Underground Mining Coal_instruction: Encontrarás los recursos más valiosos bajo
+        tierra, pero puede estar oscuro. Coloca al menos 2 antorchas y recolecta al
+        menos 2 piezas de carbón.
+      Underground Test Level_instruction: Recolecta todos los minerales!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

@@ -1882,16 +1882,14 @@ Studio.init = function(config) {
   // more readable:
   config.polishCodeHook = function (code) {
     if (studioApp.isUsingBlockly()) {
-      var regexpMoveBlockPrefix = /Studio.move\('\S*', 0, /g;
-      code = code.replace(regexpMoveBlockPrefix, "move");
-      var regexpUpBlockSuffix = /1\);/g;
-      code = code.replace(regexpUpBlockSuffix, "Up();");
-      var regexRightBlockSuffix = /2\);/g;
-      code = code.replace(regexRightBlockSuffix, "Right();");
-      var regexpDownBlockSuffix = /4\);/g;
-      code = code.replace(regexpDownBlockSuffix, "Down();");
-      var regexpLeftBlockSuffix = /8\);/g;
-      code = code.replace(regexpLeftBlockSuffix, "Left();");
+      var regexpMoveUpBlock = /Studio.move\('\S*', 0, 1\);/g;
+      code = code.replace(regexpMoveUpBlock, "moveUp();");
+      var regexpMoveRightBlock = /Studio.move\('\S*', 0, 2\);/g;
+      code = code.replace(regexpMoveRightBlock, "moveRight();");
+      var regexpMoveDownBlock = /Studio.move\('\S*', 0, 4\);/g;
+      code = code.replace(regexpMoveDownBlock, "moveDown();");
+      var regexpMoveLeftBlock = /Studio.move\('\S*', 0, 8\);/g;
+      code = code.replace(regexpMoveLeftBlock, "moveLeft();");
     }
     return code;
   };
@@ -2155,7 +2153,9 @@ Studio.reset = function(first) {
     timedOut: false,
     gotAllItems: false,
     removedItems: {},
-    createdItems: {}
+    createdItems: {},
+    hasSetEmotion: false,
+    hasThrownProjectile: false
   };
 
   // Reset the record of the last direction that the user moved the sprite.
@@ -2743,7 +2743,9 @@ Studio.execute = function() {
                                      'SPRITE2');
   }
 
-  Studio.playSound({ soundName: 'start' });
+  if (utils.valueOr(level.playStartSound, true)) {
+    Studio.playSound({ soundName: 'start' });
+  }
 
   studioApp.reset(false);
 
@@ -3678,6 +3680,7 @@ Studio.callCmd = function (cmd) {
     case 'setSpriteEmotion':
       studioApp.highlight(cmd.id);
       Studio.setSpriteEmotion(cmd.opts);
+      Studio.trackedBehavior.hasSetEmotion = true;
       break;
     case 'setSpriteSpeed':
       studioApp.highlight(cmd.id);
@@ -3754,6 +3757,7 @@ Studio.callCmd = function (cmd) {
       if (!cmd.opts.started) {
         studioApp.highlight(cmd.id);
       }
+      Studio.trackedBehavior.hasThrownProjectile = true;
       return Studio.throwProjectile(cmd.opts);
     case 'makeProjectile':
       studioApp.highlight(cmd.id);
@@ -3821,11 +3825,30 @@ Studio.playSound = function (opts) {
   }
 
   var soundVal = opts.soundName.toLowerCase().trim();
+  // Get all non-random values
+  var allValues = paramLists.getPlaySoundValues(false);
 
   if (soundVal === constants.RANDOM_VALUE) {
-    // Get all non-random values and choose one at random:
-    var allValues = paramLists.getPlaySoundValues(false);
+    // Choose a sound at random:
     soundVal = allValues[Math.floor(Math.random() * allValues.length)].toLowerCase();
+  } else {
+    var isInAllValues = function (value) {
+      return allValues.indexOf(value) != -1;
+    };
+    for (var group in skin.soundGroups) {
+      var groupData = skin.soundGroups[group];
+      if (soundVal === groupData.randomValue.toLowerCase()) {
+        // Choose a sound at random from this group (intersect sounds in this group
+        // based on the suffix range with the allValues array)
+        var groupValues = [];
+        for (var suffix = groupData.minSuffix; suffix <= groupData.maxSuffix; suffix++) {
+          groupValues.push(group + suffix);
+        }
+        groupValues.filter(isInAllValues);
+        soundVal = groupValues[Math.floor(Math.random() * groupValues.length)].toLowerCase();
+        break;
+      }
+    }
   }
 
   if (!skin.soundFiles[soundVal]) {
@@ -5431,6 +5454,14 @@ Studio.conditionSatisfied = function(required) {
     }
 
     if (valueName === 'setDroidSpeed' && tracked.hasSetDroidSpeed !== value) {
+      return false;
+    }
+
+    if (valueName === 'throwProjectile' && tracked.hasThrownProjectile !== value) {
+      return false;
+    }
+
+    if (valueName === 'setEmotion' && tracked.hasSetEmotion !== value) {
       return false;
     }
   }

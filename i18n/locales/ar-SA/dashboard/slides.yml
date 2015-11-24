@@ -1451,7 +1451,7 @@ ar:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: 'مرحبا، أنا كاثلين كينيدي وأنا منتجة فلم حرب النجوم: القوة تنهض. اليوم سوف تعمل مع أحد نجومنا، ب ب8 و هو انسان الي كروي. أي شيء يفعله، و كل حركة يقوم بها، يقع التحكم بها ببرمجيات في الحاسوب.علوم الحاسوب تؤثر على كل صناعة من الصناعات، من التسويق للرعاية الصحية و الأفلام. في الواقع، مئات مهندسي الحاسوب عملوا معا لصناعة فيلم مثل "القوة تنهض".'
       2:
         image: notes/starwars_intro_2.JPG
         text: 'مرحبا أنا وردة راشيل، أنا مهندسة خبيرة في البحث و التطوير  في شركة  ILM وأنا أقود فريق الرسوم المتحركة والمخلوقات. في "القوة تنهض"، أنا مسؤولة عن مساعدة الفنانين في تطوير المعدات التي هي الأجزاء من الإنسان الالي التي تتحرك و تشعرنا ان شكل الروبوت مقنع جداً في مجرة بعيداً جدا .'
@@ -1460,16 +1460,16 @@ ar:
         text: 'في الساعة القادمة، سنقوم ببناء لعبتنا الخاصة من حرب النجوم. سوف نعلمك المفاهيم الأساسية للبرمجة. عادة البرمجة نكون بشكل نصوص ولكن نحن سنستخدم  القطع التي يمكن سحبها وإسقاطها لكتابة البرامج. وراء الستار، انت لا تزال تكتب التعليمات البرمجية. بعد أن جربت الأساسيات باستعمال القطع، سوف نتحول إلى جافا سكريبت، واحد من لغات البرمجة الأكثر شعبية على شبكة الإنترنت.'
       4:
         image: notes/starwars_intro_4.JPG
-        text: "To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts. Your screen is split into three parts. On the left is the Star Wars game space, where code will run. The instructions for each level are written below the game space."
+        text: في البداية، سنعمل مع ري برنامجا يجعل ب ب -8 يمشي لجمع كافة أجزاء الخردة. يتم تقسيم الشاشة إلى ثلاثة أجزاء. على اليمين فضاء لعبة حرب النجوم، حيث سيتم تشغيل التعليمات البرمجية. تتم كتابة التعليمات الخاصة بكل لغز أسفل فضاء اللّعب.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: 'المنطقة الوسطى تحتوي صندوق الأدوات وكل واحدة من هذه المقاطع البرمجيّة هو أمر يمكن ل ب ب - 8 أن يفهمه.'
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where we are going to build our program.
+        text: المساحة البيضاء على اليمين تسمى مساحة العمل، و هو مكان إنتاج البرنامج.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what happens? BB-8 moves left one block on the grid.
+        text: إذا سحبنا المقطع تحريك إلى اليسار لمساحة العمل ثم نضغط على تشغيل، ماذا يحدث؟ ب ب 8 يتحرك لليسار بخطوة واحدة.
       8:
         image: notes/starwars_intro_8.JPG
         text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together."
@@ -1560,7 +1560,7 @@ ar:
         text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: 'المنطقة الوسطى تحتوي صندوق الأدوات وكل واحدة من هذه المقاطع البرمجيّة هو أمر يمكن ل ب ب - 8 أن يفهمه.'
       6:
         image: notes/starwars_blocks_intro_6.JPG
         text: "The white space on the right is called the work space and this is where we're going to build our program."

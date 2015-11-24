@@ -3111,66 +3111,44 @@
       Overworld Avoid Monsters_instruction: |
         Running into a Creeper is a bad idea.
         Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
-      Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
-      Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
-      Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
-      Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
-      Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
-      Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
-      Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+      Overworld Chop Tree_instruction: Les je zelo pomembna surovina. Veliko se da
+        narediti iz njega. Pojdi do drevesa in uporabi ukaz 'uniči', da ga posekaš.
+      Overworld Chop Trees_instruction: Zgraditi moramo hišo preden sonce zaide. Hiše
+        potrebujejo veliko lesa. Posekaj vsa 3 drevesa.
+      Overworld Free Play 20x20_instruction: Čestitamo! Zaključili ste vse uganke!
+        Sedaj pa razbijajte, gradite in ustvarite nekaj edinstvenega z uporabo vsega
+        naučenega do sedaj.
+      Overworld Free Play_instruction: Ta pokrajina je vaša za igranje. Izberite kaj
+        želite zgraditi.
+      Overworld House Frame - A_instruction: Naredimo našo hišo! To mesto zgleda vredu.
+        Zgradite okvir na zemlji.
+      Overworld House Frame - C_instruction: Naredimo našo hišo! To mesto zgleda vredu.
+        Zgradite okvir na zemlji.
+      Overworld House Frame B_instruction: En zid je končan, zgradite preostalo hišo
+        po načrtu! Tukaj se boste mogli večkrat ponoviti.
+      Overworld House Frame B2_instruction: En zid je končan, zgradite preostalo hišo
+        po načrtu! Tukaj se boste mogli večkrat ponoviti.
+      Overworld House Frame C_instruction: En zid je končan, zgradite preostalo hišo
+        po načrtu! Tukaj se boste mogli večkrat ponoviti.
+      Overworld House Frame Chosen_instruction: Zgradite preostalo hišo iz poljubnih
+        materialov. Ukaz +ponovi' vam bo tukaj prišel prav.
+      Overworld House Frame_instruction: Naredimo našo hišo! To mesto zgleda vredu.
+        Zgradite okvir na zemlji.
+      Overworld Minecart Track_instruction: Ponovno ste na območju z veliko podzemnimi
+        surovinami. Naredili bomo pot po zemlji od vaše hiše. Prvi korak je, da počitimo
+        pot. Sledite poti in počistite vsa drevesa.
+      Overworld Move to Sheep_instruction: Dodajte še en ukaz 'premakni naprej', da
+        dosežete ovco.
+      Overworld Place Wall_instruction: Vsaka hiša se začne z zidom. Zgradite prvi
+        del hiše z uporabo ukazov 'postavi' in 'premakni naprej' znotraj zanke za
+        ponavljanje.
+      Overworld Plant Crops_instruction: Dobro je načrtovati vnaprej. Posadite pridelke
+        na obeh straneh vode, da ne boste lačni kasneje.
+      Overworld Powered Minecart_instruction: Dobro opravljeno! Zbrali ste veliko
+        virov in si zgradili skomen dom. Sedaj položite tračnice od roba zemljevida
+        do vrat vaše hiše.
+      Overworld Shear Sheep_instruction: Čas je za striženje ovc! Uporabite ukaz 'ostriži'
+        in zberite volno od obeh ovc.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all

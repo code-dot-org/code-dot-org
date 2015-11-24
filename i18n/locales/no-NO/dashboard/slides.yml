@@ -1035,23 +1035,23 @@
         text: Nå som du har redigert funksjonsblokkene, er tiden inne for å lage en ny funksjonsblokk helt fra grunnen av. Det er veldig lett. Du vil se at verktøykassen har en kategori som heter funksjoner. Hvis du klikker på denne, vil du se en oransje knapp som heter Lag en funksjon. Når du klikker på denne åpner du funksjonseditoren som du allerede har brukt for å redigere eksisterende funksjonsblokker.
       2:
         image: notes/C4_function_create_2.png
-        text: "Just like before, you started by naming your function, writing down a description for what the function is supposed to do. For instance, it's supposed to draw a square or draw a triangle and then drag blocks from the toolbox into the white work space below. Remember to drag these blocks inside the green wrapping block for the function."
+        text: Akkurat som før, startet du med å navngi din funksjon, skrev ned en beskrivelse for hva funksjonen skal gjøre. F. eks., er det ment å tegne en firkant eller tegne en trekant og deretter dra blokker fra verktøykassen inn i det hvite arbeidsområdet nedenfor. Husk å dra disse blokkene til den grønne innpakningsblokken for funksjonen.
       3:
         image: notes/C4_function_create_3.png
-        text: "Once you're done, click on save and exit. This will take you back to the main puzzle work space. The new function you created will show up as a green block in the function category in your toolbox. Drag and drop this into the main work space and use it like any other block to solve the puzzle."
+        text: Når du er ferdig, klikker du på lagre og avslutt. Dette vil ta deg tilbake til arbeidsområdet. Den nye funksjonen du opprettet vil vises som en grønn blokk i funksjonskategorien i din verktøykasse. Dra og slipp disse i arbeidsområdet og bruk de som alle andre blokker for å løse gåten.
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
         text: Noe av det beste med dataprogrammering er at så snart du har lært en datamaskin hvordan den utfører en handling, kan du be den gjenta funksjonen. Du gir funksjonen et navn og så kaller du på den. Det blir som å lære seg nye ord.
       2:
         image: notes/C4_function_edit_2.png
-        text: "In the program we built, we learned how to draw a square by moving and turning four times. We can take that function and give it a name, draw a square so that any time we want to do that, we simply say draw a square and it will go back and invoke that function, that code and it will get done for us. We've added that concept to our programming language."
+        text: I programmet vi laget, lærte vi hvordan vi skal tegne et kvadrat ved å flytte og snu fire ganger. Vi kan ta den funksjonen og gi den et navn, tegn kvadrat, slik at hver gang vi vil gjøre det bare sier tegn kvadrat, så går vi tilbake og henter den funksjonen, den koden, og det blir gjort for oss. Vi har lagt det begrepet til vårt programmeringsspråk.
       3:
         image: notes/C4_function_edit_3.png
-        text: "In this puzzle, we have already created a draw a square function for you. You'll see it in the toolbox as a green block. What you'll need to do is write the same code you wrote before to draw a square and put it in this function. To do that, click on the edit option in the green draw a square block. This will open up the function editor. The function editor has three parts. A place where you name your function. This will appear on the green block before that function. Then write out a short description of what your function is supposed to do."
+        text: 'I dette puslespillet, har vi allerede opprettet en tegn et kvadrat - funksjon for deg. Du vil se den i verktøykassen som en grønn blokk. Hva du trenger å gjøre er skrive det likt koden du skrev forå tegne et kvadrat og putte den i denne funksjonen. For å gjøre det, klikker du på alternativet Rediger i den grønne skuffen for å tegne en firkantet blokk. Dette vil åpne opp redigeringsprogrammet for funksjonen. Redigeringsprogrammet for funksjonen har tre deler. Et sted der du navngir funksjonen. Dette vil vises på de grønne blokken før denne funksjonen. Deretter skrive ut en kort beskrivelse av hva funksjonen er ment for å gjøre.'
       4:
         image: notes/C4_function_edit_4.png
-        text: "In this case, it's supposed to draw a square. The white space below this is the work space and works just like the work space you've already been using. Drag and drop blocks from the toolbox into this work space. Remember to put the blocks that create a square inside the green wrapping block for the function. Once you're done, click on save and exit. This will take you back to the main puzzle work space. Now you can use the draw the square function block just like any other block to solve the puzzle."
+        text: I dette tilfellet skal det tegne et kvadrat. Det hvite området under dette er arbeidsområdet, og fungerer akkurat som arbeidsplassen du allerede har brukt. Dra og slipp blokker fra verktøykassen til dette arbeidsområdet. Husk å sette blokkene som oppretter en firkant inne i den grønne blokken for funksjonen. Når du er ferdig, klikk på lagre og Avslutt. Dette vil ta deg tilbake til arbeidsområdet.. Nå kan du bruke tegn et kvadrat funksjon blokken akkurat som alle andre blokker for å løse oppgaven.
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
@@ -1445,25 +1445,25 @@
         text: "In the next hour, we're going to build our own Star Wars game that will teach you the basic concepts of programming. Usually programming is all text but we're going to use blocks here so we can drag and drop to write the programs. To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts."
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
+        text: Din skjerm er delt opp i tre deler. Til venstre er Star Wars spillet hvor koden vil bli kjørt. Instruksjonene for hvert nivå er beskrevet nedenfor spillområdet.
       5:
         image: notes/starwars_blocks_intro_5.JPG
         text: Dette midtre området er verktøykassen og hver av disse blokkene er en kommando som BB-8 kan forstå.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we're going to build our program."
+        text: Det hvite området på høyre side kalles arbeidsområdet og det er der vi skal bygge opp programmet vårt.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8 moves left one block on the grid.
+        text: Hvis jeg drar moveLeft(); blokken til vårt arbeidsområde, hva skjer? BB-8 flytter seg ett steg på rutenettet.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together. When I press run again, BB-8 will perform the commands that are stacked top to bottom on our workspace."
+        text: Og hva om jeg ønsker at BB-8 skal gjøre noe etter moveLeft(); puslebit? Jeg kan legge til en annen puslebit til vårt program. Jeg vil velge moveUp(); puslebiten og dra den under min moveLeft(); puslebit for å feste den der. Et lite lys markerer også at den kan bli festet. Slipp puslebiten og den sitter på plass. Når jeg trykker kjør igjen, vil BB-8 utføre kommandoer som er stablet topp til bunn i vårt arbeidsområdet.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and drag it back into the toolbox.
+        text: Om du ønsker å slette en puslebit, så drar du den ønskede puslebiten fra arbeidsområdet tilbake til verktøykassen.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: "After you hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: Etter at du har klikket kjør, så kan du alltid klikke på nullstill-knappen for å få BB-8 tilbake til start. La oss prøve!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
@@ -1485,7 +1485,7 @@
         text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Steg for steg vil gjøre ditt spill mer interaktivt.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
@@ -1508,7 +1508,7 @@
         text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
       2:
         image: notes/mc_intro_2.JPG
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: I løpet av den neste timen, kommer du til å lære grunnleggende informatikk ved å programmere Alex eller Steve til å bevege seg gjennom en simulert stykke i en Minecraft verden.
       3:
         image: notes/mc_intro_3.JPG
         text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
@@ -1517,7 +1517,7 @@
         text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work."
       5:
         image: notes/mc_intro_5.JPG
-        text: "Before you start, you'll pick your character. I'm going to choose Alex. Let's build code for a program that will help her move around the screen."
+        text: Før du starter, så velger du deg din ønskede karakter. Jeg kommer til å velge Alex. La oss kode et program som hjelper henne å gå rundt på skjermen.
       6:
         image: notes/mc_intro_6.JPG
         text: Your screen is split into three main parts. On the left is the Minecraft playspace where your program will run. The instructions for each level are written below.

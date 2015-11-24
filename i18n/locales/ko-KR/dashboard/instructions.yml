@@ -1,97 +1,161 @@
 ko:
   data:
     instructions:
-      2-3 Artist 1 new_instruction: 안녕, 친구들. 나는 화가란다. 너는 내가 무엇을 그리게 하려면 주어진 블록들로 코드를 작성할 수 있어. 최대한 적은 블록으로 화면에 표시된 회색 선들을 그려 봐. 각 선들은 길이가 100이야.
-      2-3 Artist 11_instruction: '각각 100픽셀인 변 8개로 팔각형인 정지 표지판을 만들어보세요. 얼마나 각을 높여야 할까요? (도움말: 360을 8로 나누면 무엇일까요?) '
-      2-3 Artist 12_instruction: '"반복 회수"블럭을 설정해서 "원"을 만들어 눈알을 완성하세요. 한 번 움직일 때마다 1도씩 오른쪽으로 움직인다고 할 때 원을 완성시키려면 몇 번을 반복해야 할까요? 180? 360? 500?'
-      2-3 Artist 2 new_instruction: '이 집의 벽은 다 완성되지 않았습니다. 각 측면은 100이지만, 완성되지 않은 벽은 50입니다. 벽을 완성하세요. '
+      2-3 Artist 1 new_instruction: |
+        안녕하세요. 저는 화가입니다. 여러분들이 코드를 작성하면 원하는 모든 것들을 그릴 수 있습니다.
+        블록들을 사용해서 그림의 회색 선들을 그려보세요.(각 선들은 100 픽셀 길이입니다.)
+      2-3 Artist 11_instruction: |
+        8각형 모양을 만들어 정지 표지판을 만들어보세요. 각 변의 길이는 100 픽셀입니다. 몇 도나 회전시켜야 할까요?
+        (힌트: 360을 8로 나누면?) 
+      2-3 Artist 12_instruction: '"반복 회수"블럭을 설정해서 "원"을 만들어 눈을 완성해보세요. 한 번 움직일 때마다 1도씩 오른쪽으로 움직인다고 할 때, 원을 완성시키려면 몇 번을 반복해야 할까요? 180? 360? 500?'
+      2-3 Artist 2 new_instruction: '이 집의 벽은 다 완성되지 않았습니다. 각 측면은 100이지만, 완성되지 않은 벽은 50입니다. 벽을 완성해보세요. '
       2-3 Artist 2_instruction: |
         This house has a half-finished wall. Each side is
         100, but the half-finished wall is only 50. Complete the wall. 
-      2-3 Artist 3.4_instruction: "이 '점프' 블록은 그림을 그리지 않고 예술가를 이동시킬 수 있다. '점프'와 '그리기' 블록을 사용해서 파선을 그리세요."
-      2-3 Artist 3_instruction: 이 모자의 높이는 100픽셀입니다. 70픽셀 더 짧은 모자를 그리세요.
-      2-3 Artist 3new_instruction: 빨간 모자의 높이는 100픽셀입니다. 이것보다 70픽셀 더 짧은 검은 모자를 그리세요. 검은 모자의 너비는 50픽셀입니다.
-      2-3 Artist 4_instruction: 이 고양이를 위한 집을 완성해주세요.
-      2-3 Artist 5_instruction: 이 코드를 “반복 횟수” 블록으로 바꾸되 단 세번만 사용해 같은 모양의 집을 그려주세요.
-      2-3 Artist 6_instruction: 이 집은 지붕이 없잖아! 정삼각형 지붕을 그려야 되겠어. 네가 해 줄 수 있니?
+      2-3 Artist 3.4_instruction: |
+        점프 블록은 화가가 선을 그리지 않고 이동하게 해줍니다.
+        점프, 그리기 블록들을 이용해서 파선을 그려보세요.
+      2-3 Artist 3_instruction: 이 모자의 높이는 100픽셀입니다. 70픽셀 더 짧은 모자를 그려보세요.
+      2-3 Artist 3new_instruction: 빨간 모자의 높이는 100픽셀입니다. 이것보다 70픽셀 더 짧은 검은 모자를 그려보세요. 검은 모자의 너비는 50픽셀입니다.
+      2-3 Artist 4_instruction: 고양이를 위한 집을 완성해주세요.
+      2-3 Artist 5_instruction: '똑같은 집을 그릴 수 있도록, "반복 횟수" 블록의 코드를 바꿔주세요. 3개의 블록만 사용하면 됩니다.'
+      2-3 Artist 6_instruction: |
+        이 집에는 지붕이 필요합니다! 삼각형을 그려주세요. 힌트:
+        세 변의 길이는 모두 같습니다.
       2-3 Artist 7_instruction: |
-        마지막 윈도우의 오른쪽 절반을 완성하세요.
-        윈도우는 25픽셀 크기의 정사각형입니다. 
-      2-3 Artist 8_instruction: 각 동물을 위해 직사각형의 방을 두 개의 동일한 정사각형 방으로 쪼개주세요. 직사각형은 너비 200픽셀, 높이 100픽셀입니다.
-      2-3 Artist 9_instruction: 이 연을 완성해 봐.
-      2-3 Artist Assessment 1_instruction: '평가: 가로 25 픽셀 및 세로 25 픽셀 크기 마지막 치아 그리기 완료.'
-      2-3 Artist Debugging 1_instruction: 이 모자의 최고 길이를 100으로 만들 수 있나요?
-      2-3 Artist Debugging 10_instruction: 내 게임패드의 방향 키의 길이가 너무 좁습니다. 10픽셀 더 늘리세요.
+        마지막 창의 오른쪽 절반을 완성해주세요.
+        각 창의 틀은 25 픽셀 크기입니다. 
+      2-3 Artist 8_instruction: |
+        한 개의 사각형을 똑같은 크기의 정사각형 2개로 나누어 보세요.
+        사각형의 폭은 200 픽셀이고, 높이는 100 픽셀입니다.
+      2-3 Artist 9_instruction: 이 연을 완성해주세요.
+      2-3 Artist Assessment 1_instruction: '형성 평가: 마지막 이빨을 그려주세요. 가로 25 픽셀, 세로 25 픽셀입니다.'
+      2-3 Artist Debugging 1_instruction: 이 모자의 윗 부분을 100 픽셀 길이로 만들어주세요.
+      2-3 Artist Debugging 10_instruction: '게임기의 방향키가 너무 작습니다. 힌트: 10 픽셀 만큼 폭을 넓혀주세요.'
       2-3 Artist Debugging 11_instruction: 멋진 눈송이를 완성하게 도와 주세요. 완성시키기 위해 “반복”을 얼마나 많이 사용해야 하나요?
       2-3 Artist Debugging 12_instruction: 이 장면에 파도를 추가하고 싶습니다. 도와주시겠어요?
-      2-3 Artist Debugging 2_instruction: '세 개의 수염을 그리기 위한 이 코드는 현재 에러가 있습니다. 이 코드를 수정하세요. 힌트: 각 수염을 75픽셀로 늘리세요.'
-      2-3 Artist Debugging 3_instruction: '내 보트에 구멍이 났어요! 라인의 각도를 변경해서 고칠 수 있나요? 힌트: 마지막 각도는 15도 차이납니다.'
-      2-3 Artist Debugging 4_instruction: 우리가 그리려고 하는 이미지는 무엇인가요? 각 점들을 연결해서 완성하세요.
-      2-3 Artist Debugging 5_instruction: '다리와 발을 그려야할 이 코드는 현재 틀렸습니다. 힌트: 발이 너무 길어요.'
-      2-3 Artist Debugging 6_instruction: 현재 다리가 하나 없는 의자에 앉아있습니다. 다리 그리는 블록을 수정해주세요.
-      2-3 Artist Debugging 7_instruction: 현재 코드가 그린 C가 뒤집어져 있는 것 같습니다. 고쳐주세요.
+      2-3 Artist Debugging 2_instruction: |
+        수염을 3개 그리기 위한 이 코드에는 오류가 있습니다.
+        힌트: 각 수염의 길이는 75 픽셀입니다. 수염을 그릴 수 있도록 코드를 수정해주세요.
+      2-3 Artist Debugging 3_instruction: '내 보트에 구멍이 났어요! 선을 그리는 각도를 변경해서 고쳐주세요. 힌트: 마지막 각도는 15도 만큼 빼야합니다.'
+      2-3 Artist Debugging 4_instruction: 무엇을 그리려고 하는 것 일까요? 정확한 선들과 각들로 점들을 연결해 주세요.
+      2-3 Artist Debugging 5_instruction: |
+        다리와 발을 그리려고 하는 이 코드에는 오류가 있습니다.
+        힌트: 발이 너무 깁니다. 단계를 줄여야 할 수 있습니다.(장난 일까요?)
+      2-3 Artist Debugging 6_instruction: 다리가 없는 의자에 앉아있는 것 같아요. 의자 다리를 그려주세요.
+      2-3 Artist Debugging 7_instruction: C가 좌우 반대로 그려지는 코드 같습니다. C 처럼 보이게 해주세요.
       2-3 Artist Debugging 8_instruction: 바람개비가 완성되지 않았습니다. 완성하려면 얼마나 반복해야 할까요?
-      2-3 Artist Debugging 9_instruction: '줄기 관련 코드가 올바르지 않습니다. 힌트: 각도를 60도 정도 꺾어 보세요.'
-      2-3 Artist Debugging Assessment 1_instruction: '현재 이 도형이 너무 작습니다. 크게 그려주세요. 힌트: 각 모서리가 75픽셀 더 길어야 합니다.'
-      2-3 Artist Free Play_instruction: 자유 시간이야! 그리고 싶은 것을 그려 봐.
+      2-3 Artist Debugging 9_instruction: |
+        줄기를 그리는 코드가 정확하지 않습니다. 힌트:
+        60도가 다릅니다.
+      2-3 Artist Debugging Assessment 1_instruction: |
+        도형이 너무 작습니다. 더 크게 해주세요.
+        힌트: 각 선의 길이가 75 픽셀이 되어야 합니다.
+      2-3 Artist Free Play_instruction: '자유 플레이: 원하는 것을 그려보세요.'
       2-3 Artist Functions 1_instruction: |
-        안녕. 나는 좀비 예술가. 그림을 좋아해!
-        이 네모 안경을 그릴 수 있게 도와 줘.
-        힌트: 네모 사이의 다리는 길이가 네모보다 25 짧아.
-      2-3 Artist Functions 10_instruction: 여기에 두가지 함수가 있습니다. 첫 번째는 커다란 기어를 그리는 것이고, 두 번째는 작은 기어를 그리는 것입니다. 이를 이용해서 기계의 내부를 그려주세요.
-      2-3 Artist Functions 11.5_instruction: 여기에 육각형을 그리는 함수가 있습니다. 루프안에서 60도만 회전하게 바꾼다면 어떻게 될까요?
-      2-3 Artist Functions 11_instruction: “사각형 그리기” 함수의 이름을 “육각형 그리기”로 바꿨지만, 여전히 이 함수는 사각형을 그립니다. 각 모서리의 길이가 50픽셀인 육각형을 그리도록 이 함수를 바꿔주세요.
-      2-3 Artist Functions 12_instruction: '복잡한 그림을 여러차례 그리기에 아주 훌륭한 함수입니다. 화분의 나머지를 채우기 위해 "꽃 그리기" 함수를 사용하시겠습니까?(힌트: 식물은 100 픽셀 길이로 전부 구분됩니다)  '
-      2-3 Artist Functions 13_instruction: '4개의 함수를 제공하겠습니다. 친구들과 공유하고 싶은 사진를 만들기 위해서 제공한 함수를 이용해서 1개 또는 그 이상의 loop(루프) 를 사용하세요. 그리고 "run"를 누른후 예제를 확인하세요.'
+        안녕하세요. 저는 좀비 화가입니다. 그림 그리기 좋아요!
+        사각형 안경을 그릴 수 있게 도와주세요. 힌트: 안경 알 사이의 길이는
+        안경 한 변의 길이보다 25 픽셀 만큼 작습니다.
+      2-3 Artist Functions 10_instruction: |
+        여기에 두 개의 함수가 있습니다. 하나는 큰 기어를 그리는 것이고, 하나는 작은 기어를 그리는 것입니다.
+        기계의 내부를 그리는데 사용해보세요!
+      2-3 Artist Functions 11.5_instruction: |
+        여기에 똑같은 "육각형 그리기" 함수가 있습니다.
+        반복 할 때마다 60 도씩만 회전하면 어떻게 될까요?
+      2-3 Artist Functions 11_instruction: |
+        “사각형 그리기” 함수의 이름을 “육각형 그리기”로 바꿨지만, 여전히 이 함수는 사각형을 그리고 있습니다!
+        "육각형 그리기" 함수를 수정해서, 한 변의 길이가 50 픽셀인 육각형을 그려보세요.
+      2-3 Artist Functions 12_instruction: |
+        함수를 사용하면 복잡한 모양을 가진 그림을 그리기에 아주 좋습니다.
+        "꽃 그리기" 함수를 사용해서 나머지 꽃 묘목 상자를 채워주세요.
+        (힌트: 꽃들은 100 픽셀 간격으로 놓여져 있습니다.)  
+      2-3 Artist Functions 13_instruction: |
+        4개의 함수를 더 만들었습니다.
+        1개 이상의 반복 구조를 이용해 원하는 그림을 만들고 친구들과 공유해 보세요.
+        실행을 눌러 살펴보세요.
       2-3 Artist Functions 2_instruction: |
-        함수를 사용해 새로운 block를 정의할 수 있습니다. "draw a square" 함수에 사각형을 그리는 블록을 이동하세요.
-        "draw a square"함수가 안경을 생성하는 것을 볼 수 있나요? 이 사각형은 75pixels떨어져 있다.
-      2-3 Artist Functions 3_instruction: 변의 길이가 115인 사각형을 그릴 수 있도록 함수를 수정하고 더 큰 안견을 그린다. 사각형은 45픽셀(pixels) 떨어져 있다.
-      2-3 Artist Functions 4_instruction: “반복” 블록을 사용해서 이 정사각형을 세 개 그리세요.
-      2-3 Artist Functions 7_instruction: '두개의 다른 매개 변수를 사용해서 "집 그리기" 기능으로 두개의 집을 그려보세요. (힌트: 첫번째 집은 100픽셀)'
-      2-3 Artist Functions 9_instruction: 이것은 눈송이 기능이다. 이것으로 겨울 장면을 만들어보자! 자유 놀이라서 해결해야 하는 퍼즐은 없다. 즐거운 시간 보내세요!
-      2-3 Artist Loops 1_instruction: "셀을 완성하기 위해서 100픽셀 길이의 면을 갖는 육각형을 만들 수 있나요? 기억하세요, 'turn' 블럭을 60도 설정하면 만들 수 있다는 것을."
-      2-3 Artist Loops 10_instruction: 절반 정도의 설계를 마쳤을 경우에는 어떤 일이 일어날까요?
-      2-3 Artist Loops 11_instruction: 우리가 만든 전체 작품에 또 다른 반복 루프를 넣어 봅시다. 바깥 반복 루프의 끝에 각도 표시기호를 추가해 넣는 것을 잊지마세요.
+        함수들로 새로운 블록들을 만들어낼 수 있습니다!
+        "사각형 그리기" 라는 함수에 사각형 1개를 그리는 블록들을 넣었습니다.
+        "사각형 그리기" 함수를 이용해서 안경을 그려보세요. 사각형들은 75 픽셀 만큼 떨어져 있습니다.
+      2-3 Artist Functions 3_instruction: |
+        한 변의 길이가 115 인 사각형을 그려 더 큰 안경을 만들어보세요.
+        사각형들은 이제 45 픽셀 만큼 떨어져 있습니다.
+      2-3 Artist Functions 4_instruction: “반복” 블록을 사용해서 이 정사각형을 3개 그려보세요.
+      2-3 Artist Functions 7_instruction: |
+        2개의 서로 매개 변수가 있는 "집 그리기" 함수를 이용해 2개의 집을 그려보세요.
+        (힌트: 첫 번째 집은 100 픽셀입니다.)
+      2-3 Artist Functions 9_instruction: |
+        여기 눈송이 함수가 있습니다.
+        겨울 풍경을 만들어내기 위해서 실험해보세요! 이 판은 자유 플레이입니다.
+        풀어야 할 퍼즐이 아니니까, 재미있게 놀아보세요!
+      2-3 Artist Loops 1_instruction: |
+        셀을 완성하기 위해서, 한 변의 길이가 100 픽셀인 육각형을 만들어보세요.
+        생각해보면, 60 도씩 회전하면 됩니다!
+      2-3 Artist Loops 10_instruction: 절반 만큼 만 마지막 단계에서 이동하면 어떻게 될까요?
+      2-3 Artist Loops 11_instruction: |
+        자 이제, 만든 것을 모두 *다른* 반복 구조에 넣어보세요!
+        바깥쪽 반복 구조에 각도를 더하는 것을 잊지 마세요.
       2-3 Artist Loops 2_instruction: 이제 반복 블럭을 사용해 셀을 조개로 만들어 봅니다.
-      2-3 Artist Loops 4_instruction: 루프(loop)를 사용해 그 모양을 자꾸 반복할 경우 무슨 일이 일어날지 확인해 볼까요?
-      2-3 Artist Loops 5_instruction: 루프에 작은 변화를 주어서, 우리 그림이 어떻게 다르게 변하는지 살펴보세요.
-      2-3 Artist Loops 6_instruction: '반복 루프 안에서 한 칸을 더 움직인 후 회전을 해서 당신의 설계가 어떻게 변하는 지 알아보세요. '
-      2-3 Artist Loops 7_instruction: 루프를 이용하면 모든 종류의 다각형을 만들 수 있습니다. 당신은 육각형안에 마름모를 만들 수 있나요?
-      2-3 Artist Loops 8_instruction: 루프 안에 두 개의 요소를 모두 넣어보세요.
-      2-3 Artist Loops 9_instruction: |
-        우리는 같은 요소들을 루프로 반복하려고 하지만 이제부터는 그 사이에 약간의 거리를 추가하려고 합니다.
-        이전과 같은 코드를 사용하되 바깥 루프의 끝에 앞으로 가는 스텝을 추가하세요. 
-      2-3 Artist Loops New 1_instruction: 로보트의 머리를 그려봅시다! 한 변의 길이가 100픽셀인 사각형을 그릴 수 있나요?
-      2-3 Artist Loops New 10_instruction: |
-        이제 여러 개의 'V'자를 연결해봅시다. 
-        루프를 사용하여 그려보세요.
-      2-3 Artist Loops New 11_instruction: 이번에는 그걸 24번 그려 볼까요. 30도 왼쪽으로 회전하기를 이 코드에 추가해서 반복 블럭에 해당 코드를 전부 넣어 주세요.
-      2-3 Artist Loops New 12_instruction: 한 선의 길이가 100픽셀인 다이아몬드를 그려보세요.
-      2-3 Artist Loops New 13_instruction: 이제, 하나의 루프 내에서 다이아몬드를 3번 그려보세요.
-      2-3 Artist Loops New 14_instruction: 다이아몬드를 10번 그려보세요. 다이아몬드는 새로 그려질 때 마다 90도씩 회전합니다.
-      2-3 Artist Loops New 15_instruction: 재미있는 것을 그려봐.
-      2-3 Artist Loops New 2_instruction: 자 정사각형 그리기에 사용한 코드 일부가 있습니다. 반복 블록을 사용해 이 코드를 4번 실행하면 어떤 일이 일어날까요?
-      2-3 Artist Loops New 9_instruction: 화살 그림을 완성하기 위해서 한 선의 길이가 50픽셀인 간단한 V를 그려보세요.
-      2-3 Artist Match Hex Pic_instruction: 육각형 그리는 것에 도움을 줘.
-      2-3 Artist Match Rho Pic_instruction: '맞추기 : 누락된 코드를 완성하세요'
-      2-3 Artist Match Sq Pic_instruction: '맞추기: 누락된 코드를 완성하세요'
-      2-3 Artist Match Tri pic_instruction: '맞추기: 누락된 코드를 채우세요.'
-      2-3 Artist Nested Loops 1_instruction: "이전에도 루프를 이용하여 모양들을 그렸는데, 루프 안에 다른 루프를 넣을 수 있다는 것을 알고 계셨나요? \r\n패턴을 그리기 위해 전체 코드 블록을 3 번 반복해보세요."
-      2-3 Artist Nested Loops 10_instruction: 루프를 12번 이용해서 이 패턴을 완성하세요.
-      2-3 Artist Nested Loops 11_instruction: 루프를 4번 이용해서 이 패턴을 완성하세요. 각 원을 완성한 후에 90도로 회전하세요.
-      2-3 Artist Nested Loops 12_instruction: 루프를 12번 이용해서 이 나선모양을 완성하세요.
-      2-3 Artist Nested Loops 2_instruction: 이제 삼각형 루프를 여섯 번 반복하세요. 각각의 삼각형을 그린 후에는 다음 삼각형을 그리기 전에 60도 회전해야 합니다.
-      2-3 Artist Nested Loops 3_instruction: '이 패턴을 그리기 위해서는 삼각형 루프를 12번 사용해야 합니다. 원 안에 있는 각도의 숫자(360) 모양의 수(12)만큼 나누고 각각의 모양을 위해 몇 번을 회전해야 하는지 알아보세요. '
-      2-3 Artist Nested Loops 4_instruction: '이 다이아몬드 모양을 12번의 루프를 사용하여 꽃 모양을 그려보세요. 힌트: 12개의 다이아몬드는 12개의 삼각형을 만든 것과 같은 방법으로 하면 됩니다 - 각각의 모양을 위해 몇 도를 회전해야 하나요?'
-      2-3 Artist Nested Loops 5_instruction: 이 건물의 유리창들을 루프 안의 루프를 써서 채워보세요. 창문은 20픽셀 너비이고 20픽셀씩 떨어져 있습니다.
+      2-3 Artist Loops 4_instruction: 반복 구조를 사용해서, 모양을 반복해서 그리면 어떻게 될까요?
+      2-3 Artist Loops 5_instruction: 반복 실행에 조그만 변화를 주었을 때, 얼마나 다른 그림이 나올 수 있는지 살펴보세요.
+      2-3 Artist Loops 6_instruction: |
+        반복 구조 안에 1번 이동, 1번 회전을 더 추가해서
+        디자인이 어떻게 변하는지 살펴보세요.
+      2-3 Artist Loops 7_instruction: |
+        반복 구조들을 이용하면 모든 종류의 다각형들을 만들 수 있습니다.
+        이 육각형 안에 마름모를 만들어보세요.
+      2-3 Artist Loops 8_instruction: 한 반복 안에 2개의 요소를 모두 넣어 보세요.
+      2-3 Artist Loops 9_instruction: "같은 요소들을 반복 안에 넣되, 그 둘 사이에 거리를 추가하겠습니다.\r\n이전에 사용했던 것과 같은 코드를 넣고, 바깥쪽 반복의 마지막에 앞으로 이동하는 것을 추가해 보세요."
+      2-3 Artist Loops New 1_instruction: |
+        이 로봇의 머리를 그려보세요!
+        한 변의 길이가 100 픽셀인 사각형을 그려보세요.
+      2-3 Artist Loops New 10_instruction: "이제 여러 개의 'V'자를 연결해보세요. 반복 안에 넣으면 됩니다."
+      2-3 Artist Loops New 11_instruction: |
+        이번에는 24번 그려보세요.
+        30도 왼쪽으로 회전하기를 추가한 후, 모두 다시 반복 블럭에 넣어보세요.
+      2-3 Artist Loops New 12_instruction: |
+        한 변의 길이가 100 픽셀인 다이아몬드를 그려보세요.
+        
+      2-3 Artist Loops New 13_instruction: 이제 한 반복 안에서, 다이아몬드를 3번 그려보세요.
+      2-3 Artist Loops New 14_instruction: 이번에는 다이아몬드를 10번 그리되, 한 개를 그릴 때마다 90도씩 돌려보세요.
+      2-3 Artist Loops New 15_instruction: 재미있는 것을 그려보세요.
+      2-3 Artist Loops New 2_instruction: |
+        사각형을 그릴 때 사용했던 코드가 있습니다.
+        이 코드를 4번 실행시키기 위해 반복 블록을 사용하면 어떻게 될까요?
+      2-3 Artist Loops New 9_instruction: |
+        화살 그림을 완성하기 위해서,
+        양쪽 모두 50 픽셀인 간단한 V 자를 그려보세요.
+      2-3 Artist Match Hex Pic_instruction: '맞추기: 육각형을 완성해보세요.'
+      2-3 Artist Match Rho Pic_instruction: '맞추기: 빠진 코드를 완성해보세요.'
+      2-3 Artist Match Sq Pic_instruction: '맞추기: 빠진 코드를 채워보세요.'
+      2-3 Artist Match Tri pic_instruction: '맞추기: 빠진 코드를 채워주세요.'
+      2-3 Artist Nested Loops 1_instruction: "여러 가지 모양들을 그리기 위해서 반복 구조들을 사용했었습니다.\n그런데, 반복 구조 안에 다른 반복을 넣을 수 있다는 것을 알았나요?\r\n패턴을 그리기 위해서, 이 코드 전체를 반복에 넣어 3번 반복 시켜보세요."
+      2-3 Artist Nested Loops 10_instruction: 패턴을 완성시키기 위해서 이 코드를 12번 반복해 보세요.
+      2-3 Artist Nested Loops 11_instruction: |
+        이 코드를 4번 반복해서 패턴을 완성해 보세요.
+        원을 한 번 그리고 나면, 90도 만큼 회전하세요.
+      2-3 Artist Nested Loops 12_instruction: 이 코드를 12번 반복시켜서 곱슬곱슬한 그림을 그려보세요.
+      2-3 Artist Nested Loops 2_instruction: |
+        삼각형을 6번 반복해 그리세요.
+        삼각형을 한 번 그리고 난 후에, 60도씩 회전하면 됩니다.
+      2-3 Artist Nested Loops 3_instruction: |
+        이 패턴을 그리려면, 삼각형을 12번 반복해서 그려야 합니다.
+        원 중심의 각(360 도) 을 그리려고 하는 모양의 개수(12 개) 로 나누면,
+        모양을 한 번 그린 후 몇 도를 회전시켜야 하는지 알 수 있습니다.
+      2-3 Artist Nested Loops 4_instruction: |
+        이 다이아몬드 모양을 12번 반복시켜서 꽃을 그려보세요.
+        힌트: 12 개의 다이아몬드는 12 개의 삼각형을 그리는 것과 같은 방법으로 만들면 됩니다 - 
+        한 번 모양을 그린 후에 얼마나 회전시켜야 할까요?
+      2-3 Artist Nested Loops 5_instruction: |
+        이 건물의 창들을 중첩 반복을 이용해 채워보세요.
+        창들은 20 픽셀 크기로 20 픽셀 만큼 씩 떨어져 있습니다.
       2-3 Artist Nested Loops 6_instruction: 이 공룡은 꼬리 쪽으로 8개의 뾰족한 뿔이 나 있습니다; 각각의 뿔 길이는 30 픽셀입니다. 삼각형을 8번의 루프를 사용하되 매번 그린 후에는 앞으로 이동해야 하는 것을 잊지 마세요.
       2-3 Artist Nested Loops 7_instruction: '이 삼각형을 10번 반복하는 루프를 사용하여 태양을 만들어보세요. 각 삼각형을 그린 후에는 움직이고 방향 회전을 해야 합니다. 원 안에서 몇 개의 모양을 그리게 되며 몇 도씩 회전해야 할 지 알아내 보세요. '
       2-3 Artist Nested Loops 8_instruction: 우리가 그린 그림에 잔디를 더해봅시다. 각 잔디 다발은 50픽셀씩 떨어져 있습니다.
       2-3 Artist Nested Loops 9_instruction: 우리는 꽃을 더한 후에 이 그림을 다 끝내게 됩니다. 다이아몬드를 12번의 반복 루프를 사용하여 꽃을 그려보세요.
       2-3 Artist Nested Loops Free Play_instruction: 자유 시간! 반복문을 여러 개 써서 재미있는 것을 만들어 봐.
       2-3 Bee Conditionals 1_instruction: 안녕! 나는 꿀벌이야. 내가 꽃에서 꿀을 얻게 도와줘.
-      2-3 Bee Conditionals 10_instruction: "보라색 꽃들은 꿀이 1개나 0개가 있습니다. 아무 것도 들어있지 않은 보라색 꽃에서 꿀을 따지 않도록 주의하세요. \r"
+      2-3 Bee Conditionals 10_instruction: "자주색 꽃에서는 꿀이 있을 수도 있고 없을 수도 있습니다.\n아무것도 없는 자주색 꽃에서 꽃꿀을 얻어내려고 하지 마세요.\r\n"
       2-3 Bee Conditionals 11_instruction: 넥타가 들어 있는 꽃에서 넥타를 모으세요.
       2-3 Bee Conditionals 12_instruction: 넥타를 모으기 위해 루프를 이용하여 체크를 한 후에 넥타가 있는 꽃들에서 넥타를 모으세요.
       2-3 Bee Conditionals 13_instruction: '넥타를 모아서 꿀을 만드세요. 힌트: 빨간 꽃 위에서 "넥타가 있다면" 조건문을 사용할 경우 무슨 일이 일어나나요? 루프를 이용해서 만들 수 있나요?'
@@ -100,7 +164,7 @@ ko:
       2-3 Bee Conditionals 2_instruction: "안녕, 나는 꿀벌이야! 꽃으로 부터 꿀을 모으는 것을 도와줘. '루프'를 사용해봐."
       2-3 Bee Conditionals 3_instruction: "꽃으로 부터 꽃꿀을 모아서 꿀을 만드는 것을 도와줘. '루프'를 사용해봐."
       2-3 Bee Conditionals 4_instruction: 꽃들에서 넥타를 모두 모아 다 꿀로 만들 수 있도록 도와주세요.
-      2-3 Bee Conditionals 5_instruction: 보라색 꽃에는 하나의 넥타의 값이 1이거나 0일 수 있는데, 어떤 것이 그런 지는 몰라요! 넥타가 들어있지 않은 보라색 꽃에서 넥타를 모으지 않도록 조심하세요. 넥타의 값이 1인지 if 블록을 사용해서 체크하세요.
+      2-3 Bee Conditionals 5_instruction: 자주색 꽃들은 1 또는 0 의 꽃꿀이 있지만, 정확히 알 수 없습니다. 꽃꿀이 없는 자주색 꽃에서 꿀을 모으지 마세요. if 블록을 사용해서 꽃꿀이 1 만큼 있는지 확인해 주세요.
       2-3 Bee Conditionals 6_instruction: '이 꽃에 모을 수 있는 넥타가 있는 지 if 블록을 사용해서 알아보세요. '
       2-3 Bee Conditionals 7_instruction: 각각의 꽃에 넥타가 있는 지 알아보고 있으면 모아보세요.
       2-3 Bee Conditionals 8_instruction: |
@@ -195,7 +259,7 @@ ko:
       2-3 maze sq13_instruction: |
         친애하는 사람에게. 나 좀비. 해바라기에게... 가야만... 해.
         "~할 때까지 반복" 블록을 가지고 루프를 만들어 줘.
-      2-3 maze sq14_instruction: 네 개의 블록만 사용해서 해바라기에게 갈 수 있나요?
+      2-3 maze sq14_instruction: 4개의 블럭만 사용해서 해바라기로 갈 수 있나요?
       2-3 maze sq15_instruction: 5개의 블럭만 사용해서 해바라기로 갈 수 있나요?
       2-3 maze sq16_instruction: 좋아요, 이건 비슷하긴 한데 조금 다르네요. 5개 블럭으로만 할 수 있나요?
       2-3 Maze sq2_instruction: 길을 따라가서 멍청이 돼지를 잡을 수 있도록 해줘. TNT 폭탄을 피하지 않으면 깃털들이 날라가버릴 거야!
@@ -354,8 +418,8 @@ ko:
       4-5 Bee Nested Loops Rows_instruction: 꽃들로 부터 꽃꿀을 모으세요. 중첩 반복을 사용하면 됩니다.
       4-5 Maze 1 (copy 1)_instruction: 친애하는 인간. 나 좀비. 해바라기..로..가야해.
       4-5 Maze 1_instruction: 친애하는 인간. 나 좀비. 해바라기..로..가야해.
-      4-5 Maze 10_instruction: 네 개의 블록만 사용해서 해바라기에게 갈 수 있나요?
-      4-5 Maze 11_instruction: 여섯개의 블럭만 사용해서 해바라기로 갈 수 있나요?
+      4-5 Maze 10_instruction: 4개의 블럭만 사용해서 해바라기로 갈 수 있나요?
+      4-5 Maze 11_instruction: 6개의 블록만 사용해서 해바라기로 갈 수 있나요?
       4-5 Maze 12_instruction: 좋아요. 이건 약간 다르네요. 당신은 6개 블럭만 사용해서 할 수 있나요?
       4-5 Maze 13_instruction: 나를 돼지에게 데려가줘!
       4-5 Maze 14_instruction: '나를 돼지한테 데려다줘! "반복.. 까지"블럭을 사용하세요.'
@@ -966,11 +1030,9 @@ ko:
       Course 4 Artist Functions 6_instruction: 사각형 위에 꼭 맞는 삼각형을 그리기 위해서 어떤 블록을 추가해야 할까요?
       Course 4 Artist Functions 7_instruction: 사각형 함수를 이용해서 한 줄의 사각형을 그려보세요. 각 사각형의 한 변의 길이는 40 픽셀입니다.
       Course 4 Artist Functions 8_instruction: |
-        Are you getting the hang of how to
-        use function blocks? Let's modify this square so that it is 200 pixels in
-        size. Hint: click on "edit" to change the size of the "draw a square"
-        function editor. Remember to click on "save and close" to get out of the
-        function editor.
+        함수 블록들을 사용하는 것이 어려운가요? 이 함수를 수정해서 200 픽셀 크기가 되도록 바꿔보세요.
+        힌트: "사각형 그리기" 함수에서 "수정하기"를 눌러서 고치면 됩니다.
+        함수 수정을 끝내려면 "닫기"를 누르면 됩니다. 
       Course 4 Artist Functions 9_instruction: 함수를 만들기 위해 필요한 거의 모든 코드를 해보았습니다. 하지만 뭔가 빠진 듯 하네요. 이 함수 블록을 완성해주세요.
       Course 4 Artist Functions challenge_instruction: 여기를 눌러 힌트를 다시 살펴보세요.
       Course 4 Artist Functions Inspiration_instruction: 여기를 눌러 힌트를 다시 살펴보세요.
@@ -1086,8 +1148,8 @@ ko:
         제어할 수 있도록 "카운터" 변수를 반복 구조에 사용하세요.
       Course 4 Bee For Loops 8_instruction: 이동하고 꽃꿀을 모으는데 반복 변수를 사용해보세요.
       Course 4 Bee For Loops 9_instruction: |
-        반복(~동안) 구조 안에 있는 마지막 수를 "증가시킬값"이라고 합니다. 
-        한 번 실행보고 나면 카운터 변수의 값이 "증가시킬값" 만큼 변화됩니다. 값을 2씩 증가시키면서 이 꽃들의 꽃꿀을 모아보세요.
+        반복(~동안) 구조 안에 있는 마지막 수를 "증가값"이라고 합니다. 
+        한 번 실행보고 나면 카운터 변수의 값이 "증가값" 만큼 변화됩니다. 값을 2씩 증가시키면서 이 꽃들의 꽃꿀을 모아보세요.
       Course 4 Bee Loops 5 NEW_instruction: 3개의 꽃이 있습니다. 가장 적은 블록 개수로 꽃꿀을 모을 수 있도록, 3번 반복시키는 명령 패턴을 찾아보세요.
       Course 4 Bee Loops 5a NEW_instruction: |
         이제 최대한 적은 블록들을 사용해서
@@ -1228,19 +1290,17 @@ ko:
       Course 4 SCFL 6_instruction: 어떻게 하면, 반복 구조 하나를 사용해서 이 그림을 다시 그려낼 수 있을까요?
       Course 4 SCFL 7_instruction: 화가가 물결무늬들을 잡고 싶어합니다! 어떻게 하면 다시 그려낼 수 있을까요?
       Course 4 SCFP 1_instruction: |
-        Create a function with parameters that allows
-        the artist to jump backward and forward by x pixels, and also up and down
-        by y pixels (using positive and negative numbers).
+        매개 변수들을 이용해서 화가가 왼쪽/오른쪽/위쪽/아래쪽으로 x 필셀 만큼 점프 뛰는 함수를 만들어보세요.
+        (음수, 양수 모두 사용 가능하도록 만들면 됩니다.)
       Course 4 SCV 1_instruction: 설명을 다시 보려면 여기를 클릭하세요.
       Course 4 SCV 2_instruction: 설명을 다시 보려면 여기를 클릭하세요.
-      Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.\nTag Penguin to get 3 points.  Get 10 points to win!\r\nBut be careful, when\nCat and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks\nnecessary to make this game work the way it's been explained.  How will you\nget Dog to move in all directions using the arrow keys?  How will you add\npoints when Dog tags Cat or Penguin?  How will you subtract points when Cat\nand Penguin touch?"
+      Course 4 SCV 3_instruction: "이번에는 잡기 게입입니다! 고양이를 잡으면 2 포인트, 펭귄을 잡으면 3 포인트를 얻게 해보세요.\n10 포인트를 먼저 얻으면 이깁니다!\r\n하지만, 고양이와 펭귄이 서로 잡으면, 점수를 잃습니다.\r\n\r\n위에서 설명한 것처럼 게임이 동작하도록 필요한 블록들을 붙이세요. 방향키를 눌러 강아지를 4방향으로 움직이도록 하려면 어떻게 하면 될까요?\n강아지가 고양이나 펭귄을 잡으면 어떻게 점수를 얻게 할 수 있을까요? 고양이와 펭귄에 동시에 닿으면 어떻게 점수를 잃게 할 수 있을까요?"
       Course 4 SCV 4_instruction: 최대한 가장 적은 개수의 블록을 사용해서 이 퍼즐을 풀어보세요.
       Course 4 SCV 5_instruction: 최대한 가장 적은 개수의 블록을 사용해서 이 퍼즐을 풀어보세요.
       Course 4 SCV 6_instruction: 설명을 다시 보려면 여기를 클릭하세요.
       Course 4 SCVP 1_instruction: |
-        Create a function with parameters that allows
-        the artist to jump backward and forward by x pixels, and also up and down
-        by y pixels (using positive and negative numbers).
+        매개 변수들을 이용해서 화가가 왼쪽/오른쪽/위쪽/아래쪽으로 x 필셀 만큼 점프 뛰는 함수를 만들어보세요.
+        (음수, 양수 모두 사용 가능하도록 만들면 됩니다.)
       Course 4 Variables Assessment_instruction: |
         한 변의 크기를 지정하기 위한 변수를 사용해 이 이미지를 만들어보세요.
         각 선의 길이는 50 픽셀입니다.
@@ -1486,29 +1546,28 @@ ko:
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
       Frequency Analysis_instruction: Test
-      frozen circle function in circle_instruction: 이제 하나의 원을 그리고 18도씩 회전하면서 20개의 겹치는 원을 만들어보자.
-      frozen circle function with parameter_instruction: '서로 다른 크기의 원을 만들 수 있는 "원 만들기" 블럭을 사용할거야. 이 블럭을 이용해서 크기 5의 작은 원과 크기 10의 원을 만들 수 있어?'
-      frozen circle function_instruction: '새로운 "원 만들기" 블럭을 이용해서 10개의 겹치는 원을 만들거야. 하나의 원을 그리고 앞으로 점프하는 것을 잊지마.'
-      frozen circle_instruction: 원은 매우 특별한 도형이야. 물음표 안에 어떤 숫자를 넣어야 원을 그릴 수 있을까?
-      frozen cross rotate dense_instruction: '선그리기를 90번 반복해 보자. 90번을 몇 번 반복해야 360이 될까? 힌트: 아주 작은 숫자야.'
-      frozen cross rotate_instruction: 이번에는 선그리기를 10번 반복해서 눈손이 모양을 만들려고 해, 선과 선 사이의 각을 몇 도로 해야 그릴 수 있을까?
+      frozen circle function in circle_instruction: 이제 20개의 원을 겹치고, 각각을 18도씩 회전시키세요.
+      frozen circle function with parameter_instruction: '원하는 크기로 그릴 수 있는 "원 그리기" 블럭이 있습니다. 이 블럭을 사용해 5 크기의 원과 10 크기의 원을 그릴 수 있겠어요?'
+      frozen circle function_instruction: '새로운 "원 그리기" 블럭을 이용해 10개의 원을 겹쳐 그리세요. 원을 그리기 위해 점프 하는 것을 잊지 마세요.'
+      frozen circle_instruction: 원은 특별한 도형입니다. 원을 그리기 위해서 물음표 부분에 어떤 수가 들어가야 할까요?
+      frozen cross rotate dense_instruction: '이제 90번 반복해 보세요. 360도를 회전하려면 90도를 몇 번 회전해야 할까요? 힌트: 생각보다 작은 수입니다.'
+      frozen cross rotate_instruction: 이제 10번 반복해보세요. 각 선들을 그리면서 회전하기 위해서 몇 도가 필요할까요?
       frozen cross_instruction: |
         더하기 기호를 만들기 위해서 이 명령어들을 "반복" 블럭 안에 넣어보세요.
         엘사가 앞 뒤로 움직일 수 있는 것 아시죠?
       frozen diamond mini snowflake_instruction: '모든 눈송이들이 서로 다른 모양을 하고 있다는 것을 아시나요? 평행 사변형을 4번 그리기 위해 "반복"블럭을 사용하고, 각각을 90도 만큼씩 회전시켜 새로운 눈송이를 만들어보세요.'
-      frozen diamond snowflake_instruction: 이번에는 오른쪽으로 36도씩 돌며 평행사변형을 10번 그려서 또다른 눈송이를 만들거야.
+      frozen diamond snowflake_instruction: 이제, 평행 사변형을 10번 그릴 수 있도록 반복 블럭을 사용하고, 각각을 36도 만큼씩 오른쪽으로 돌려 새로운 눈송이를 그려보겠습니다.
       frozen diamond_instruction: |
-        Use a repeat around these blocks to create a parallelogram.
-        It's just like a rectangle but has different angles. This one has 60 degree
-        and 120 degree angles instead of all 90 degree angles.
-      frozen freeplay_instruction: 당신은 이제 최고의 예술가가 되었어요! 당신만의 겨울 왕국을 만들어보세요.
-      frozen line_instruction: 안녕! 나는 아렌델의 엘사야. 내가 선을 그릴 수 있게 도와줘.
-      frozen perpendicular_instruction: "이제 서로 90도로 이어진 두개의 선을 그려야 돼. '돌기' 블럭과 '이동' 블럭을 사용하면 그릴 수 있을거야."
-      frozen snowflake branch_instruction: '"가지 형태의 눈송이 만들기" 블럭으로 3개의 가지 모양의 눈송이를 만들어 보자.'
-      frozen snowflake full_instruction: 이제 8개의 눈송이 가지를 만들어 아름다운 눈송이를 만들어보자!
-      frozen snowflower_instruction: 매우 단순한 도형을 이용해서 복잡한 눈송이 모양을 만들거야. 크기 5의 원을 5번 반복하고 크기 10의 원을 5번 반복해서 위의 모양을 만들 수 있어?
-      frozen square iterative_instruction: 사각형을 만드는 과정 중에 절반은 그려져 있어. 사각형을 만들 수 있게 4개의 선을 그려보자.
-      frozen square loop 3x_instruction: 이번에는 세 개의 사각형을 약간씩 위치를 옮겨서 그릴거야. 새로운 사격형을 그리기 전에 120도를 회전하는 것을 기억해.
+        이 블록들을 반복 블록 안에 넣어서 평행사변형을 만들어보세요.
+        사각형하고 비슷하지만 각이 다릅니다. 4개의 각이 모두 90도가 아니라, 한 가지는 60도 이고 다른 한가지는 120도 입니다.
+      frozen freeplay_instruction: 여러분은 이제 진짜 화가가 된 것 같아요! 겨울왕국을 만들어 보세요.
+      frozen line_instruction: 안녕하세요! 저는 아렌델의 엘사입니다. 선 1개를 그릴 수 있도록 도와주세요.
+      frozen perpendicular_instruction: '이제 두 개의 선을 90도 만큼 교차시켜 그릴 수 있는지 살펴보세요. "회전"블럭과 "이동" 블럭을 사용해야 할 것 입니다.'
+      frozen snowflake branch_instruction: '"눈송이 가지 만들기" 블럭을 이용해 3개의 가지로 뻗어나가는 그럴 듯한 눈송이를 만들어보세요.'
+      frozen snowflake full_instruction: 이제 이쁜 눈송이를 만들기 위해 8번 반복해 보세요.
+      frozen snowflower_instruction: 아주 복잡한 눈송이 모양도 아주 간단한 모양들을 이용해 만들 수 있습니다. 5크기의 원을 5개, 10크기의 원을 5개 이용해 패턴을 만들 수 있겠어요?
+      frozen square iterative_instruction: 사각형을 만들기 위한 과정에 반 정도 왔습니다. 4개의 선을 모아 사각형을 그려보세요.
+      frozen square loop 3x_instruction: 이제 3개의 사각형을 회전시켜 만들어 보세요! 새로운 사각형을 그리기 전에 120도 만큼 회전하는 것을 잊지 마세요.
       frozen square loop_instruction: "안녕, 나는 아렌델의 안나야, 이번에는 '반복' 블럭을 사용하여, 더 적은 블럭을 이용해서 사각형을 그려보려고 해. '반복' 블럭 안의 블럭들을 몇 번(???) 반복해야 사각형을 그릴 수 있을까?"
       frozen square snowflake_instruction: "'반복' 블럭으로 10개의 사각형을 그려서 눈송이를 만들어 볼거야. 매번 사각형을 그리고 36도 회전 블럭을 이용하면 그릴 수 있을거야."
       Infinity_catch_instruction: '방향키를 이용해서 엘사("캐릭터 2") 가 안나를 잡아보세요.'
@@ -1578,7 +1637,7 @@ ko:
       K-1 Bee 2_instruction: 제가 꿀을 얻을 수 있게 꽃으로 데려다 주세요. 그리고나서 꿀을 만들 수 있게 벌집에 데려다 주세요.
       K-1 Bee 3_instruction: 제가 꿀을 얻을 수 있게 꽃으로 데려다 주세요. 그리고나서 꿀을 만들 수 있게 벌집에 데려다 주세요.
       K-1 Bee 4_instruction: 꽃꿀을 2개 모은 후, 2개의 꿀을 만들어보세요!
-      K-1 Bee 5_instruction: 3개의 넥타를 얻어서 3개의 꿀을 만드세요!
+      K-1 Bee 5_instruction: 꽃꿀을 3개 모은 후, 1개의 꿀을 만들어보세요!
       K-1 Bee 6_instruction: 꽃꿀을 2개 모은 후, 2개의 꿀을 만들어보세요!
       K-1 Bee 7_instruction: 꽃꿀을 3개 모은 후, 2개의 꿀을 만들어보세요!
       K-1 Bee 8_instruction: 꽃꿀을 2개 모은 후, 2개의 꿀을 만들어보세요!
@@ -1824,35 +1883,29 @@ ko:
       NEW Course 4 Artist Functions 1_instruction: 반복 구조를 이용해서 한 변의 길이가 100 픽셀인 사각형을 그려보세요.
       NEW Course 4 Artist Functions 10.1_instruction: 이 패턴을 그리기 위해서 이전 퍼즐들의 함수들을 사용해보세요.
       NEW Course 4 Artist Functions 10_instruction: '"수정"을 누른 후, 함수를 정의한 블록들을 40 픽셀 사각형을 그릴 수 있도록 만들어주세요.'
-      NEW Course 4 Artist Functions 11_instruction: "Now we want to create a new\nfunction called \"draw a line of squares\" that draws six squares all in a\nrow.  Can you build this function using the \"draw a square 20\" function\nthat we've already created? Note: See that we've changed the pen to be much\nthinner. Click \"edit\" on the  the \"draw a square 20\" function to see how!\r\n"
+      NEW Course 4 Artist Functions 11_instruction: "한 줄에 6개의 사각형을 그리는 \"사각형 한 줄 그리기\" 함수를 만들어 보세요.\n이전에 만들어 보았던 \"20 크기 사각형 그리기\" 함수를 이용해서 만들면 됩니다.\n참고: 펜의 굵기가 더 두껍게 바뀌었습니다. \"20 크기 사각형 그리기\" 함수를 \"수정\"해서\n어떻게 되나 살펴보세요!\r\n"
       NEW Course 4 Artist Functions 12_instruction: |
         이 패턴을 그리기 위해서, 마지막 퍼즐에서 사용했던
         "사각형 한 줄 그리기" 함수를 사용해보세요.
       NEW Course 4 Artist Functions 13_instruction: |
-        Can you draw a star shape using
-        the "draw a line of squares" function? Hint: Edit the "draw a line of squares"
-        function so that you don't have to call it twice.  Notice, you'll have to
-        move forward a certain number of pixels and turn 144 degrees.
+        "사각형 한 줄 그리기" 함수를 이용해서 별 모양을 그려보세요.
+        힌트: "사각형 한 줄 그리기" 함수를 수정하면 두 번 실행시킬 필요가 없습니다.
+        그리고, 일정 픽셀 만큼 이동시킨 다음에 144도를 회전해야 합니다.
       NEW Course 4 Artist Functions 14_instruction: 자유 시간!
       NEW Course 4 Artist Functions 2_instruction: '20 픽셀 만큼 씩 떨어져 있는 3개의 사각형을 그려보세요. 힌트: 각 사각형의 크기는 100 픽셀입니다.'
       NEW Course 4 Artist Functions 3_instruction: |
-        Here is a new type of Block.
-        It is called a "Function" block. Click "edit" then fill it with the code
-        for drawing a square with 100 pixel sides. When you're done editing the function,
-        click "Close" to go back to your program.
+        여기에 "함수"라는 새로운 블록이 있습니다. "수정하기"를 눌러 한 변의 길이가 100 픽셀인 사각형을 그릴 수 있도록 코드를 채워보세요.
+        함수를 모두 수정하면 "닫기"를 누른 후 프로그램을 실행시켜보세요.
       NEW Course 4 Artist Functions 4_instruction: '"사각형 그리기" 함수를 사용해서 이 패턴을 그려보세요. 힌트: 각 사각형을 그린 후 "오른쪽으로 120도 회전" 을 사용하면 됩니다.'
       NEW Course 4 Artist Functions 5_instruction: |
-        How did the "draw a square"
-        block know what commands to run? Click on "edit" in the "draw a square"
-        function block. The blocks in the function editor are the definition that
-        make up "draw a square." When you're done looking around, click "Save
-        and Close" and then "Run."
+        "사각형 그리기" 블록은 어떻게 실행되는 것일까요? "사각형 그리기" 함수에서 "수정하기"를 눌러보세요.
+        수정하기를 눌렀을 때 보이는 것은 "사각형 그리기"를 정의한 것입니다.
+        함수를 살펴보았으면, "저장 후 닫기"를 누른 후, 프로그램을 "실행" 시켜 보세요.
       NEW Course 4 Artist Functions 6_instruction: "\"사각형 그리기\" 함수 블록을 이용해서 이 그림을 만들어보세요. 힌트: 각 사각형들은 120 픽셀 만큼 씩 떨어져 있습니다.\r\n"
       NEW Course 4 Artist Functions 7_instruction: |
-        Are you getting the hang of how
-        to use function blocks? Let's modify this square so that it is 200 pixels
-        in size. Hint: click on "edit" to enter the "draw a square" function editor.
-        Remember to click on "Close" to get out of the function editor. 
+        함수 블록들을 사용하는 것이 어려운가요? 이 함수를 수정해서 200 픽셀 크기가 되도록 바꿔보세요.
+        힌트: "사각형 그리기" 함수에서 "수정하기"를 눌러서 고치면 됩니다.
+        함수 수정을 끝내려면 "닫기"를 누르면 됩니다. 
       NEW Course 4 Artist Functions 8_instruction: |
         "삼각형 그리기"라는 새로운 함수를 만들었습니다.
         한 변의 길이가 100 픽셀인 삼각형을 그릴 수 있도록 함수 정의를 수정해보세요.
@@ -1878,14 +1931,13 @@ ko:
       NEW Course 4 Artist Params 12a_instruction: |
         이번 이미지는 이전 것과 비슷합니다.
         함수에 "~동안 반복" 을 이용해 이 디자인을 만들어보세요.
-      NEW Course 4 Artist Params 13_instruction: "Let's edit this \"draw a polygon\"\nfunction. It already has a \"sides\" parameter. Now, let's add a \"length\"\nparameter. \r\nHint: The perimeter of each shape is 200 pixels long. Do you\nremember the equation to make shapes the same size when they have a different\nnumber of sides?"
+      NEW Course 4 Artist Params 13_instruction: "\"다각형 그리기\" 함수를 수정해 보세요. \"변의 길이\" 매개 변수가 있습니다. 이제 \"길이\"를 매개 변수로 추가해 보세요. \r\n힌트: 각 모양의 둘레의 길이는 200 픽셀입니다. 다각형에서 면의 개수가 달라질 때, 같은 크기로 만드는 공식 기억하고 있으시죠?"
       NEW Course 4 Artist Params 14_instruction: |
         "나선 그리기"를
         "길이"와 "한 변의 길이" 변수를 이용할 수 있도록 수정하고, 이 모양을 다시 만들어보세요.
       NEW Course 4 Artist Params 15_instruction: |
-        Freeplay: Here are the functions
-        you've written, and some more for you to play with. Draw something awesome!
-        Play with the pen width to see how different your drawings look!
+        자유 플레이: 여기 여러분들이 작성한 함수들과 가지고 놀 수 있는 몇 개의 함수가 더 있습니다.
+        멋진 것들을 그려보세요! 선 그리기로 얼마나 많은 것들을 그릴 수 있는지 해보세요.
       NEW Course 4 Artist Params 2_instruction: '한 변의 길이가 50 픽셀인 삼각형을 그리는 "삼각형 그리기" 함수를 만들어보세요.'
       NEW Course 4 Artist Params 3_instruction: "이제 5개의 삼각형이 한 줄로 그리기 위한 함수를 사용해보세요.\n힌트: 각 삼각형들은 30 픽셀씩 떨어져 있습니다.\r\n"
       NEW Course 4 Artist Params 4_instruction: |
@@ -1895,85 +1947,71 @@ ko:
         입력 블록의 길이 매개변수에 입력 되어있는 ??? 를 채워보세요.
         힌트: 육각형의 한 변의 길이는 100 픽셀입니다. 
       NEW Course 4 Artist Params 6_instruction: |
-        Fill in the "length" parameter
-        to draw these shapes by replacing the "???" with the right numbers. The
-        square and triangle have 100 pixels sides while each side of the hexagon is
-        75 pixels long.
+        이런 모양들을 그려내기 위해서, "???" 로 입력되어있는 "길이" 매개 변수의 정확한 값을 채워보세요.
+        사각형과 삼각형의 각 변의 길이는 100 픽셀이고 육각형의 한 변의 길이는 75 픽셀입니다.
       NEW Course 4 Artist Params 7_instruction: |
-        Can you complete this drawing? Hint:
-        The sides of each triangle are 25 pixels larger than the last.  The first
-        triangle has 25 pixel sides.
+        이 그림을 완성시켜보세요. 힌트:
+        각 선의 길이는 바로 이전 선보다 25 픽셀만큼 더 큽니다. 첫 번째 삼각형의 한 변의 길이는 25 픽셀입니다.
       NEW Course 4 Artist Params 8_instruction: |
         이 삼각형 함수의 코드는 문제가 있습니다.
         함수를 고쳐서 25, 50, 75 길이의 삼각형을 그려보세요.
       NEW Course 4 Artist Params 9_instruction: |
-        Click "edit" to fill in the function
-        definition of "draw a square" and add a parameter. It should take a length
-        parameter, just like the triangle. This time, draw 3 squares: 25, 50 and 75
-        pixels in length, each 100 pixels apart.
-      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n \r\nWant to know how our inspiration pattern was made? "
+        "사각형 그리기" 함수의 정의를 "수정"해서 매개 변수를 추가해보세요.
+        삼각형 그리기와 마찬가지로 길이를 매개 변수로 사용하면 됩니다.
+        이번에는 3개의 사각형들을 그리면 됩니다: 한 변의 길이가 25, 50, 75 픽셀이고,
+        100 픽셀 만큼씩 떨어져 있습니다.
+      NEW Course 4 Artist Params inspire_instruction: "멋진 자유 플레이: 여러분들은 이런 패턴을 만들기 위해 필요한 모든 것들을 배웠습니다.\n이 그림이 멋지다고 생각하면, 비슷하게 다른 것을 만들어보세요. 아니면, 만들고 싶은 것을\n만들어보세요.\r\n\r\n이런 멋진 패턴이 어떻게 만들어졌는지 궁금한가요? "
       NEW Course 4 Artist Vars 1.5_instruction: |
-        Take a look at the code, can you
-        see how the "set length" block and "length" block works together? Click
-        on "Run" to see it in action. 
+        코드를 살펴보세요. "길이 설정" 블록과 "길이" 블록이 어떻게 함께 사용될 수 있는지
+        이해할 수 있나요? "실행"을 눌러 어떻게 실행되는지 살펴보세요. 
       NEW Course 4 Artist Vars 12_instruction: |
         자 이제, 이전 레벨에서의 알고리즘을 다시 만든 후,
         한 변의 길이가 150 인 5각형을 만들어보세요.
       NEW Course 4 Artist Vars 2.5_instruction: |
-        Take a look at the code, can you
-        see how the "set length" block and "length" block works together? Click
-        on "Run" to see it in action. 
-      NEW Course 4 Artist Vars 2_instruction: |
-        Drag a number block to the "set length"
-        block to draw a set of 50 pixel triangles. 
+        코드를 살펴보세요. "길이 설정" 블록과 "길이" 블록이 어떻게 함께 사용될 수 있는지
+        이해할 수 있나요? "실행"을 눌러 어떻게 실행되는지 살펴보세요. 
+      NEW Course 4 Artist Vars 2_instruction: '"길이 설정" 블록에 수 블록을 넣어, 50 픽셀 크기의 삼각형들을 만들어보세요. '
       NEW Course 4 Artist Vars 4 5_instruction: |
-        Awesome job on the last puzzle,
-        let's try it again this time let's make this cool design with with 60 pixel
-        hexagon's.
+        이전 퍼즐을 멋지게 해결했으니, 이번에는 60 픽셀 크기의 육각형으로 멋진
+        디자인을 만들어보세요.
       NEW Course 4 Artist Vars 4_instruction: |
-        Let's try it again. Can you set the
-        length variable to make this cool design with hexagons? Hint: It's a multiple
-        of 10.
-      NEW Course 4 Artist Vars 6_instruction: "Draw this pattern by dropping the\nlength variable in the correct places, and then setting the right value for\nlength. (Hint: it's a multiple of 10).  \r\n\r\nSee how you only set the\nvalue for length once, and the code uses the right value everywhere?\r\n\r\n\r\n"
+        다시 한 번 해보세요. 육각형들로 이런 멋진 디자인을 만들려면 길이 변수의 값을 어떻게 해야할까요?
+        힌트: 10의 배수 입니다.
+      NEW Course 4 Artist Vars 6_instruction: "길이 변수를 정확한 위치에 넣어서 이 패턴을 그려보세요. 그 다음에 정확한 길이를 입력하면 됩니다.\n(힌트: 10의 배수입니다). \r\n\r\n길이 변수의 값을 한 번만 입력하면, 그 값을 계속 사용할 수 있다는 것을 알 수 있습니다.\r\n\r\n\r\n"
       NEW Course 4 Bee For Loops 1_instruction: 각 꽃에서 꽃꿀을 모으기 위해서 반복 구조를 사용하세요.
       NEW Course 4 Bee For Loops 10_instruction: |
         수평 방향으로 얼마나 멀리 가야하는지
         제어할 수 있도록 "카운터" 변수를 반복 구조에 사용하세요.
       NEW Course 4 Bee For Loops 10a_instruction: |
-        Ready for a challenge?  Take what
-        you've learned about loops and try to solve this problem. Remember: You may
-        have to run your solution multiple times before you figure out all of the
-        steps.
+        자 이제 도전해보세요! 이전 반복들에 배웠던 것들을 이용해서, 이 문제를 풀어보세요.
+        기억하시죠?: 어떤 단계들로 진행되는지 이해하기 위해서, 여러 번 실행시켜 볼 수 있습니다.
       NEW Course 4 Bee For Loops 11_instruction: 이동하고 꽃꿀을 모으는데 반복 변수를 사용해보세요.
       NEW Course 4 Bee For Loops 2_instruction: |
-        Add the code necessary to make sure
-        the bee collects all the nectar. Look at how much code you need for this puzzle!
-        (We'll learn a simpler way in the next puzzle.)
+        꿀벌이 모든 꽃꿀을 모울 수 있도록 할 수 있는 코드를 추가해보세요.
+        이 퍼즐을 해결하기 위해서, 코드가 얼마나 많이 필요한지 잘 살펴보세요!
+        (다음 퍼즐에서는 더 간단한 방법을 배우게 될 것입니다.)
       NEW Course 4 Bee For Loops 3_instruction: |
-        Ah, the "for loop" makes this
-        much easier! All the code you need is here, take a look at how it is put together
-        then click "Run" to see how it works. 
+        아! "반복" 구조는 더 쉽게 할 수 있어요! 필요한 모든 코드는 여기있으니, 어떻게 사용할지 살펴본 후에
+        "실행"을 눌러 결과를 살펴보세요. 
       NEW Course 4 Bee For Loops 4 4_instruction: |
-        Now we need to move forward "counter"
-        times, then get nectar "counter" times.  Can you use two "repeat" loops
-        to solve this challenge?
+        이제 "카운터" 만큼 앞으로 이동시켜야 합니다.
+        그 다음에 "카운터" 만큼 꽃꿀을 얻으면 됩니다. 이 문제를 해결하기 위해서 
+        2 개의 "반복" 블록을 사용하세요.
       NEW Course 4 Bee For Loops 4_instruction: '"for 반복문"에서 ??? 를 꿀벌이 수집해야 하는 가장 많은 양의 꽃꿀로 바꾸세요. '
       NEW Course 4 Bee For Loops 5 5_instruction: '"for 반복문"을 사용하는 요령을 파악했나요? 꿀벌이 남은 꽃꿀을 얻을 수 있도록 도와줍시다.'
       NEW Course 4 Bee For Loops 5_instruction: '카운트다운 "for 반복문"을 사용할 수도 있습니다. 이 꽃꿀을 5부터 1까지 카운트다운하면서 모아보세요.'
       NEW Course 4 Bee For Loops 6_instruction: |
-        The last number in your for loop
-        is called the "increment". Each time the loop is run, the counter variable
-        changes by the value of the increment. Try collecting these flowers using
-        an increment of 2.
-      NEW Course 4 Bee For Loops 7_instruction: "Now, let's combine the \"counter\"\nvariable with a math block! How can you use the \"counter\" variable to navigate\nthis garden with the fewest number of blocks possible? What do you need to\ndo to collect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"\nvariable!\r\n\r\nRemember: If your loop is counting up, the increment is added\nto your \"counter\" variable each time through."
+        반복 함수의 마지막에 있는 수는 "증가값"이라고 부릅니다.
+        반복 구조가 한 번 실행된 후에, 카운터에는 증가값만큼 더해집니다. 2만큼 증가시켜서
+        이 꽃들로부터 모아보세요.
+      NEW Course 4 Bee For Loops 7_instruction: "자 이제, \"카운터\" 변수를 수학 블록과 함께 사용해보세요!\n어떻게하면 최대한 적은 블록들로, 이 정원을 돌아다닐 수 있을까요?\n이렇게 3, 6, 9, 12, 15 만큼씩 꽃꿀을 모으려면 어떻게 해야 할까요?\n\"카운터\" 변수를 사용하면 됩니다!\r\n\r\n기억하시죠?: 반복 구조가 실행되면, 한 번 실행 하고 난 후에 \"카운터\"\n변수의 값에 그 만큼 더합니다."
       NEW Course 4 Bee For Loops 8_instruction: "잘 했어요! 꽃 꿀을 3, 6, 9, 12, 15 로 증가시키려면 어떻게 해야 할까요?\r\n힌트: 이전의 각 값에 얼마를 더하면 될까요?"
       NEW Course 4 Bee For Loops 9_instruction: |
         반복 카운팅이 줄어드는 과정에서는 반복이 한 번씩 끝날 때마다 카운터 변수의 값이 줄어듭니다.
         15, 12, 9, 6, 3의 꽃꿀을 모으기 위해서는 카운터 변수에 더할 값이 어떻게 되어야 할까요?
       NEW Course 4 Bee For Loops 95_instruction: |
-        Take a look at each piece of the
-        "for loop" that you have just created.  Can you figure out which numbers
-        you need to double to solve this puzzle? Why does it work?
+        여러분이 방금 만든 "반복" 조각을 살펴보세요.
+        이 퍼즐을 해결하기 위해서는 얼마나 곱해야 할까요? 어떻게 되죠?
       NEW Course 4 Play Lab Params 11_instruction: |
         자유 시간입니다!
         도구 상자에 있는 모든 블록들을 이용해보세요. 
@@ -1986,9 +2024,8 @@ ko:
         펭귄이 카운트할 때 마다 한 번씩 앞으로 가도록 해보세요.
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: '자유롭게 노는 시간입니다. 도구 상자의 모든 블록들을 가지고 재밌게 놀아보세요. '
       NEW Course 4 Play Labs For Loops 8a_instruction: |
-        Challenge: How would you
-        use the "for loop" to get every actor to go around and say their actor number,
-        then vanish from the screen? 
+        도전과제: "반복" 구조를 사용해서 모든 캐릭터들이 돌아다니면서 자신의 번호를 말하고 난 후,
+        화면에서 사라지게 해보세요. 
       New Play Lab Project_instruction: 여러분만의 이야기나 게임을 만들어 보세요! 여러분의 코드는 언제든지 다시 볼 수 있는 프로젝트로 저장됩니다.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
@@ -2116,8 +2153,9 @@ ko:
         me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
         shorter than the square length.
       PDK5 Functions 2_instruction: |
-        함수를 사용해 새로운 block를 정의할 수 있습니다. "draw a square" 함수에 사각형을 그리는 블록을 이동하세요.
-        "draw a square"함수가 안경을 생성하는 것을 볼 수 있나요? 이 사각형은 75pixels떨어져 있다.
+        함수들로 새로운 블록들을 만들어낼 수 있습니다!
+        "사각형 그리기" 라는 함수에 사각형 1개를 그리는 블록들을 넣었습니다.
+        "사각형 그리기" 함수를 이용해서 안경을 그려보세요. 사각형들은 75 픽셀 만큼 떨어져 있습니다.
       PDK5 Loops 1_instruction: |
         Instead of using 5 "move forward" blocks, use
         the "repeat" block with a "move forward" block inside of it. In computer
@@ -2280,29 +2318,35 @@ ko:
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
-      scrat 17_instruction: 좋아요. 다시 한번 연습해 보세요. 그렇게 어렵지 않지만, 벽을 조심하세요.
+      scrat 17_instruction: '좋아요, 다시 한 번 해봅시다. - 크게 다르지는 않지만, 벽을 조심해야 해요!'
       scrat 18 (copy 1)_instruction: |
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
         new block.
-      scrat 18_instruction: '"만약(if)-아니면(else)" 블럭은 조건을 검사하고, 두 가지 중 하나만 실행합니다. 이 새로운 블럭을 사용하여 도토리가 있는 위치로 보내주세요.'
+      scrat 18_instruction: '"만약(if)-아니면(else)" 블럭은 조건을 검사하고, 두 가지 중 하나만 실행합니다. 도토리가 있는 위치로 이동시키기 위해 이 새로운 블럭을 사용하세요.'
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
         can you get it right on your first try?
-      scrat 19_instruction: '"조건/선택" 블럭을 다시 한 번 사용해 봅시다. 한 번에 성공할 수 있을까요?'
+      scrat 19_instruction: '"조건/선택" 블록을 다시 한 번 사용해 보겠습니다. 한 번에 성공할 수 있겠어요?'
       scrat 20_instruction: 좀 더 복잡한 미로를 해결할 수 있도록 3개의 블럭만 더 더해줄 수 있나요? 그렇게 해준다면, 길이가 얼마나 길던지 상관없이 꺽인 길에서 회전할 수 있게 됩니다. 빨리 빨리요! 얼음이 녹고 있어요!
-      SpecialFrozenLevel_instruction: 당신은 이제 최고의 예술가가 되었습니다!! 당신만의 겨울 왕국을 만들어보세요.
-      Standalone_Artist_1_instruction: 예술가 퍼즐에 오신 것을 환영합니다. 처음으로 오른쪽으로 이동 블럭과 앞으로 이동 블럭을 이용해서 간단한 사각형을 만들어 보겠습니다. 각 면의 길이는 정확히 100 픽셀이 되어야 합니다.
+      SpecialFrozenLevel_instruction: 여러분은 이제 진짜 화가가 된 것 같아요! 겨울왕국을 만들어 보세요.
+      Standalone_Artist_1_instruction: |
+        화가 퍼즐에 오신 것을 환영합니다.
+        처음으로 오른쪽으로 이동 블럭과 앞으로 이동 블럭을 이용해서 간단한 사각형을 만들어 보겠습니다.
+        한 변의 길이는 정확히 100 픽셀이 되어야 합니다.
       Standalone_Artist_2_instruction: 120도, 60도의 각과 150 픽셀 만큼의 길이로 이 다이아몬드를 그려보세요.
       Standalone_Artist_3_instruction: 100픽셀의 선과 60도 회전으로 육각형을 그릴 수 있나요?
       Standalone_Artist_4_instruction: 이제 반복(loop) 이라는 새로운 블록을 이용할 수 있습니다. 이 블록은 원하는 명령어들을 반복시켜줄 것입니다. 이 명령어들을 6번 반복하면 어떻게 될까요?
       Standalone_Artist_5.5_instruction: '다이아몬드 모양을 반복 블럭 안에 넣어서 회전시키면서 아주 쉽게 코드를 만드는 방법을 잘 보세요. 순서대로 실행시켜야하는 명령어들을 12번 반복시킬 수 있습니다. 힌트: 다이아몬드 반복(loop) 를 30도만큼 회전시키면 됩니다. 다이아몬드를 또 그릴 필요가 없습니다.'
-      Standalone_Artist_5_instruction: 꽃을 그리려면 다이아몬드를 몇 번 반복해야 할까요?
+      Standalone_Artist_5_instruction: 이 다이아몬드 모양을 이용해서 꽃을 그리려면 반복(loop) 을 몇 번 시켜야 할까요?
       Standalone_Artist_6_instruction: '이 6각형 코드를 반복적으로 이용해서 디자인 해보세요. 한 번 실행할 때마다 몇 도를 회전시켜야 할까요? 힌트: 원의 각도를 반복시키려고 하는 횟수로 나누면 됩니다.'
-      Standalone_Artist_7_instruction: '함수는 한 번 만든 것을 다시 사용하는 프로그래밍 방법입니다. 꽃을 그려주는 이 함수를 이용하면 원하는 만큼 몇 번이든지 꽃을 그릴 수 있습니다. 이 함수와 점프 블록을 사용하여 꽃을 그려보세요. 힌트: 꽃은 150픽셀만큼 떨어져 있습니다.'
-      Standalone_Artist_8_instruction: '육각형을 그리는 "모양 그리기" 함수가 있습니다. 코드를 실행시켜 함수가 어떻게 동작하는지 살펴보세요. 사각형, 삼각형, 팔각형을 그리는 함수를 만들 수 있나요?'
+      Standalone_Artist_7_instruction: '함수는 한번 만들어둔 것을 다시 사용하는 프로그래밍 방법입니다. 이 함수는 꽃을 그려주는데, 이 함수를 이용하면 원하는 만큼의 꽃을 편리하게 그릴 수 있습니다. 이 함수와 점프 블럭을 이용해서 이 꽃들을 그려주세요. 힌트: 꽃들은 150 픽셀만큼 떨어져 있습니다.'
+      Standalone_Artist_8_instruction: '"모양 그리기" 라는 이름의 6각형 그리기 함수 블럭이 있습니다. 일단 먼저 코드를 실행시켜 어떻게 실행되는지 살펴보고, 실험해 보세요. 사각형, 삼각형, 8각형을 그릴 수 있겠어요?'
       Standalone_Artist_9_instruction: 자 이제 계속해서, 원하는 그림을 마음껏 그려보세요! 원하는 것이 어떤 것이든지, 빈 함수를 이용해 마음대로 만들고 사용할 수 있습니다.
-      Standalone_Artist_v2_instruction: 예술가 퍼즐에 오신 것을 환영합니다. 처음으로 오른쪽으로 이동 블럭과 앞으로 이동 블럭을 이용해서 간단한 사각형을 만들어 보겠습니다. 각 면의 길이는 정확히 100 픽셀이 되어야 합니다.
+      Standalone_Artist_v2_instruction: |
+        화가 퍼즐에 오신 것을 환영합니다.
+        처음으로 오른쪽으로 이동 블럭과 앞으로 이동 블럭을 이용해서 간단한 사각형을 만들어 보겠습니다.
+        한 변의 길이는 정확히 100 픽셀이 되어야 합니다.
       template test_instruction: "what's up"
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi hi
@@ -3727,13 +3771,11 @@ ko:
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
       Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
+        용암은 이 블록들 아래 어딘가에 있습니다. 그렇기 때문에 앞으로 이동하기 전에 먼저 확인해 봐야 합니다.
+        "if" 명령이 여기 있습니다. 이 블럭들에 "move forward" 을 정확히 추가해 보세요.
       Underground If Statements_instruction: |
         이제 좀더 복잡해졌습니다.
-        3개의 레드스톤을 구하되, 용암에 빠지지 마세요. "만약" 명령을 사용해서
+        3개의 레드스톤을 구하되, 용암에 빠지지 마세요. "If" 명령을 사용해서
         용암을 발견하면 조약돌을 놓도록 하세요.
       Underground Iron_instruction: |
         녹은 암에 들어가지 마세요.
@@ -3742,6 +3784,6 @@ ko:
       Underground Mining Coal_instruction: |
         지하에서 가장 비싼 자원들을 찾을 수 있지만, 어두워질 수 있습니다.
         적어도 2개 이상의 횃불을 놓고 2개 이상의 석탄을 캐내세요.
-      Underground Test Level_instruction: 모든 미네랄을 수집하세요!
+      Underground Test Level_instruction: 모든 광물을 수집하세요!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

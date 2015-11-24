@@ -896,85 +896,88 @@
           sur le même projet.
       2:
         image: notes/C1_pair_programming_2.png
-        text: In pair programming, one person is the driver and the other person is
-          the navigator, just like driving a car. The driver sits at the computer
-          and is the one using the keyboard and mouse or touchscreen and controlling
-          the main actions of the computer. The other person is the navigator. The
-          navigator helps the driver by answering the driver's questions and pointing
-          out potential problems or mistakes.
+        text: En pair programming, une personne est le pilote, et l'autre est le navigateur,
+          comme dans une voiture. Le pilote est celui qui interagit avec l'ordinateur.
+          Le navigateur l'aide en répondant à ses questions et en relevant d'éventuels
+          problèmes ou erreurs.
       3:
         image: notes/C1_pair_programming_3.png
-        text: Communication is key to successful pair programming. No insults, be
-          respectful, don't be a bossy navigator, because nobody likes a backseat
-          driver. You and your partner should always be talking. The driver can explain
-          what she or he is doing. And the navigator can help suggest what to do next.
+        text: 'La communication est la clé du succès du pair programming. Pas d''insultes,
+          soyez respectueux et ne jouez pas au chef : personne n''aime avoir un deuxième
+          pilote. Vous et votre pilote devez toujours vous parler. Le pilote peut
+          expliquer ce qu''il ou elle fait, et le navigateur peut aider en suggérant
+          quoi faire ensuite.'
       4:
         image: notes/C1_pair_programming_4.png
-        text: The navigator should be thinking about the big picture and the driver
-          focuses on the details. Both roles are important. Pair programming is all
-          about working together as a team.
+        text: Le copilote devrait réfléchir à la situation dans son ensemble et le
+          chauffeur se concentre sur les détails. Les deux rôles sont importants.
+          La programmation à deux est principalement un travail d'équipe.
     C1_planting_seed:
       1:
         image: notes/C1_planting_seed_1.png
-        text: This lesson is called planting a seed and it's going to help us understand
-          algorithms. Algorithms are specific instructions that explain the order
-          in which to do something. Even everyday things like eating breakfast or
-          brushing your teeth are algorithms that require small steps to get a job
-          done.
+        text: Cette leçon s'appelle planter une graine et elle va nous aider à comprendre
+          les algorithmes. Les algorithmes sont des instructions spécifiques qui expliquent
+          l'ordre dans lequel il faut faire quelque chose. Même certains gestes quotidiens
+          comme manger son petit déjeuner ou se brosser les dents sont des algorithmes
+          qui nécessitent plusieurs petites étapes afin d'aller jusqu'au bout de la
+          tâche.
       2:
         image: notes/C1_planting_seed_2.png
-        text: Computers can be really smart but they can only understand you if you
-          tell them exactly what you want step by step. The great thing about algorithms
-          is that if you follow the instructions in order, you can do something that
-          you didn't know how to do ahead of time. It's like following a recipe.
+        text: Les ordinateurs peuvent être très intelligents mais ils ne peuvent vous
+          comprendre que si vous leur dites exactement ce que vous voulez étape par
+          étape. Ce qui est génial avec les algorithmes c'est que si vous suivez les
+          instructions dans l'ordre, vous pouvez faire quelque chose que vous n'auriez
+          pas su faire avant. C'est comme suivre une recette.
       3:
         image: notes/C1_planting_seed_3.png
-        text: Today we're going to plant our own seeds using an algorithm. Create
-          your own algorithm by cutting apart the pictures. Select the pictures that
-          show steps in planting a seed and arrange those pictures in the correct
-          order.
+        text: Aujourd'hui nous allons planter nos propres graines à l'aide d'un algorithme.
+          Crée ton propre algorithme en découpant les images. Sélectionne les images
+          qui montrent les différentes étapes pour planter une graine et remets les
+          dans le bon ordre.
       4:
         image: notes/C1_planting_seed_4.png
-        text: Now, it's time for you to see if your algorithm works. Follow the steps
-          in the algorithm very carefully. Are they in the correct order? Did you
-          succeed in planting a seed by following the algorithm? It's like programming
-          with pictures!
+        text: Maintenant, il est temps de voir si votre algorithme fonctionne. Suivez
+          les étapes de l'algorithme avec beaucoup d'attention. Sont-ils dans le bon
+          ordre ? Avez-vous réussi à planter une graine en suivant l'algorithme ?
+          C'est de la programmation avec des photos !
       5:
         image: notes/C1_planting_seed_5.png
-        text: When we want to make chocolate, there are many big steps to that process
-          and each of those big steps has a set of smaller steps and there are different
-          recipes or algorithms depending on how we want the chocolate to taste. Each
-          step is important, even the small ones, so that without one step, the rest
-          of them cannot be completed. Creating algorithms that others can understand
-          is really important. That's why each step has to be written down so that
-          no matter who does it, the result is the same.
+        text: Lorsque l'on fait du chocolat, il y a plusieurs étapes importantes dans
+          le processus. Et chacune de ces grandes étapes a son lot de petites étapes.
+          Et il y a différentes recettes, ou algorithmes, en fonction du goût que
+          nous voulons donner au chocolat. Chaque étape est importante, même la plus
+          petite. C'est pourquoi, si une seule étape manque, les autres ne peuvent
+          fonctionner. Il est vraiment important de créer des algorithmes que d'autres
+          peuvent comprendre. C'est pourquoi chaque étape doit être écrite, de façon
+          à ce que le résultat soit le même quelque soit la personne qui le crée.
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
-        text: Time to get creative and use your coding skills to tell a story. Your
-          story will have actors and you will be able to make these actors talk and
-          interact with each other. Start thinking of what kind of story you want
-          to tell.
+        text: Il est temps de faire preuve de créativité et d'utiliser vos compétence
+          en codage pour raconter une histoire. Votre histoire intégrera des acteurs,
+          et vous serez en mesure de les faire parler mais aussi d'interagir entre
+          eux. Commencez à réfléchir à quelle type d'histoire vous voulez raconter.
       2:
         image: notes/C1_playlab_storytelling_2.png
-        text: The cat's always been afraid of the dog and what if the cat figures
-          out that the dog is trying to be nice? The "when run" block starts everything.
-          The "move" block will move your character and the "say" block will make
-          your character say whatever you type.
+        text: Le chat a toujours eu peur du chien, mais que se passerait il si le
+          chat se rendait compte que le chien essayait juste d'être gentil ? Le bloc
+          "Quand cela demarre" démarre tout. Le bloc "Déplacer" fera bouger votre
+          personnage et le bloc "Parler" lui fera dire tout ce que vous tapez.
       3:
         image: notes/C1_playlab_storytelling_3.png
-        text: This is the "when actors collide" block which you can link up to the
-          other blocks.
+        text: Ceci est le bloc "quand les acteurs se touchent" que vous pouvez connecter
+          aux autres blocs.
       4:
         image: notes/C1_playlab_storytelling_4.png
-        text: I was making the dog come over and say "Hi" but then the cat got scared
-          so it ran away. "Ahh" If there was more time, it would have been a happy
-          ending. The end!
+        text: J'ai fait venir le chien et lui faire dire "Bonjour" mais alors le chat
+          a eu peur et s'est enfui. "Ahh", s'il y avait eu plus de temps, cela aura
+          été une fin heureuse. La fin!
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: This is the spelling bee level. Use the puzzle pieces to move the bee.
-          As it moves, it will collect letters to spell words.
+        text: Voici le niveau de l'abeille qui épelle. Utilise les pièces du puzzle
+          pour déplacer l'abeille. Lorsqu'elle se déplace, elle récupérera les lettre
+          pour composer un mot.
       2:
         image: notes/C1_spelling_bee_intro_2.png
         text: Si vous pouvez épeler ce mot, ils sera présent dans la zone au-dessous.
@@ -997,23 +1000,23 @@
           à tout le monde sur Facebook pour leur souhaiter un joyeux anniversaire.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
-        text: In this example, your goal is going to be to move the bird to get the
-          pig. Now, we're going to be able to use the repeat block in order to be
-          able to do this very easily. You can either do this by giving the computer
-          a move forward command five times in order to advance the bird one step
-          each time to the pig or you can just tell the computer to move forward once,
-          and then tell it to repeat that five times and it'll do the same thing.
+        text: Dans cet exemple, votre objectif est de déplacer l'oiseau jusqu'au cochon.
+          Maintenant, nous allons pouvoir utiliser le bloc de répétition pour le faire
+          très facilement. Vous pouvez soit donner à l'ordinateur un ordre "avancer"
+          cinq fois afin de faire avancer l'oiseau d'une étape à chaque fois vers
+          le cochon, ou vous pouvez juste demander à l'ordinateur d'avancer une seule
+          fois, puis de lui demander de le répéter cinq fois, cela donnera le même
+          résultat.
       4:
         image: notes/C1_zuck_repeat_loop_4.png
-        text: In order to do this, you drag your move forward command and then you
-          put it inside the repeat block. And you can click on it and tell it how
-          many times you  to repeat the block to tell it how many steps you want it
-          to take forward.
+        text: Pour faire cela, vous devez déplacer la commande "avancer" et la mettre
+          à l'intérieur du bloc de répétition. Alors, vous pouvez cliquer dessus pour
+          indiquer au bloc de répétition de combien de pas vous voulez avancer.
       5:
         image: notes/C1_zuck_repeat_loop_5.png
-        text: One more thing is you can put as many commands as you want inside the
-          repeat block. So in this example, you're telling it to move forward and
-          turn left, which it'll do five times. Have fun!
+        text: Encore une chose, tu peux mettre autant de commandes que tu le souhaite
+          à l'intérieur du bloc répéter. Ainsi, dans cet exemple, tu lui dit d'avancer
+          et de tourner à gauche, ce qu'il fera cinq fois. Amuse-toi !
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
@@ -1411,16 +1414,19 @@
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: Une des choses géniales dans la programmation informatique est qu'une
+          fois qu'on a appris à un ordinateur comment faire une action, vous pouvez
+          appeler cette fonction à nouveau. Vous lui donnez un nom puis vous pouvez
+          l'appeler. C'est vraiment comme si on pouvait agrandir le langage.
       2:
         image: notes/C3_artist_functions_2.png
-        text: In the program we built, we learned how to draw a square by moving and
-          turning four times. We can take that function and give it a name, draw a
-          square, so that any time we want to do that, we simply say draw a square
-          and it will go back and invoke that function, that code. It will get done
-          for us. We've added that concept to our programming language.
+        text: Dans le programme que nous avons construit, nous avons appris comment
+          tracer un carré en se déplaçant et en tournant quatre fois. Nous pouvons
+          créer cette fonction et lui donner un nom, comme "dessiner un carré", ainsi
+          à chaque fois que nous voulons le faire, nous avons juste à dire "dessiner
+          un carré", l'ordinateur va revenir en arrière pour appeler la fonction et
+          donc son code. Il le fera pour nous. Nous avons ajouté ce concept dans notre
+          langage de programmation.
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
@@ -1455,14 +1461,14 @@
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: When you put a loop inside of another loop, we call that a nested loop.
-          For example, here we're given the code already to draw one triangle with
-          sides of length 100 pixels using the repeat times block set to three, once
-          for each side of a triangle.
+        text: Quand vous mettez une boucle à l'intérieur d'une autre boucle, on appelle
+          cela une boucle imbriquée. Par exemple, ici, nous avons déjà le code pour
+          dessiner un triangle de 100 pixels de côtés en utilisant le bloc de répétition
+          calé sur trois, une fois pour chaque côté du triangle.
       2:
         image: notes/C3_artist_nested_loops_2.png
-        text: But we want to draw six triangles. In order to do that, we're going
-          to take that loop and place it inside of another repeat times block. Pretty
+        text: Mais nous voulons dessiner six triangles. Pour faire cela, nous allons
+          prendre cette boucle et la placer dans un autre bloc de répétition. Plutôt
           cool!
     C3_bee_conditionals:
       1:
@@ -1498,10 +1504,11 @@
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
-        text: One of the most important concepts in computer science is how to define
-          new commands, how to add your own words to a computer language. Most computer
-          languages have only about one hundred words or commands. The art and magic
-          is in defining your own new words out of these building blocks.
+        text: Un des plus importants concept en informatique est la façon de créer
+          de nouvelle commandes, comment ajouter vos propres mots dans un langage
+          informatique. La plupart des langages informatiques ont seulement une centaine
+          de mots ou de commandes. L'art et la magie sont dans la définition de vos
+          propres nouveaux mots de ces blocs de construction.
       2:
         image: notes/C3_bee_functions_2.png
         text: We do this all the time in sports. For example, in basketball, you start
@@ -1924,16 +1931,18 @@
           the green wrapping block for the function.
       3:
         image: notes/C4_function_create_3.png
-        text: Once you're done, click on save and exit. This will take you back to
-          the main puzzle work space. The new function you created will show up as
-          a green block in the function category in your toolbox. Drag and drop this
-          into the main work space and use it like any other block to solve the puzzle.
+        text: Une fois terminé, clique sur enregistrer et quitter. Cette opération
+          te ramène à l'espace de travail de puzzle principal. La nouvelle fonction
+          que tu as créée apparaît comme un bloc vert dans la catégorie "fonction"
+          de ta boîte à outils. Fais le glisser dans l'espace de travail principal
+          et utilise-le comme n'importe quel autre bloc pour résoudre l'énigme.
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: Une des choses géniales dans la programmation informatique est qu'une
+          fois qu'on a appris à un ordinateur comment faire une action, vous pouvez
+          appeler cette fonction à nouveau. Vous lui donnez un nom puis vous pouvez
+          l'appeler. C'est vraiment comme si on pouvait agrandir le langage.
       2:
         image: notes/C4_function_edit_2.png
         text: In the program we built, we learned how to draw a square by moving and
@@ -2593,12 +2602,13 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+        text: 'Bonjour, je suis Kathleen Kennedy, et je suis la productrice de Star
+          Wars : Le Réveil de la Force. Aujourd''hui, tu travailleras avec une de
+          nos stars, BB-8. BB-8 est un droïde sphérique. Tout ce qu''il fait et tous
+          ses mouvements sont contrôlés par un logiciel. L''informatique a un impact
+          sur tous les secteurs, du marketing à la santé en passant par le cinéma.
+          En fait, des centaines d''ingénieurs informaticiens ont travaillé ensemble
+          pour faire un film comme Le Réveil de la Force.'
       2:
         image: notes/starwars_intro_2.JPG
         text: Bonjour je suis Rachel Rose, je suis ingénieur R&D senior chez ILM,
@@ -2617,37 +2627,41 @@
           sur le web.
       4:
         image: notes/starwars_intro_4.JPG
-        text: To start off, we're going to work with Rey to program BB-8 to walk to
-          collect all of the scrap parts. Your screen is split into three parts. On
-          the left is the Star Wars game space, where code will run. The instructions
-          for each level are written below the game space.
+        text: Pour commencer, nous allons travailler avec Rey pour programmer BB-8
+          pour qu'il marche et ramasse toutes les pièces de ferraille. Ton écran est
+          divisé en trois parties. Sur la gauche se trouve l'espace de jeu Star Wars,
+          où le code s'exécutera. Les instructions pour chaque niveau sont rédigées
+          sous l'espace de jeu.
       5:
         image: notes/starwars_intro_5.JPG
         text: La zone du milieu est la boîte à outils, et chacun de ces blocs est
           une action que BB-8 peut comprendre.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
+        text: L'espace blanc à droite est appelé l'espace de travail et c'est là que
+          nous allons construire notre programme.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what
-          happens? BB-8 moves left one block on the grid.
+        text: Si je fais glisser le bloc "déplacer vers la gauche" dans notre espace
+          de travail et que je clique sur Démarrer, que se passe-t-il ? BB-8 se déplace
+          à gauche d'un bloc sur la grille.
       8:
         image: notes/starwars_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together.
+        text: Et si je veux que BB-8 fasse quelque chose après le bloc "déplacer vers
+          la gauche" ? Je peux ajouter un autre bloc à notre programme. Je vais choisir
+          le bloc "déplacer vers le haut" et je vais le glisser sous mon bloc "déplacer
+          vers la gauche" jusqu'à voir la surbrillance. Puis je le lâche et les deux
+          blocs s'assemblent.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked
-          from top to bottom on our workspace. If you ever want to delete a block,
-          just remove it from the stack and drag it back into the tool box.
+        text: Lorsque j'appuie de nouveau sur Démarrer, BB-8 exécute les commandes
+          qui sont empilées de haut en bas dans notre espace de travail. Si jamais
+          tu veux supprimer un bloc, il suffit de le retirer de la pile et de le glisser
+          dans la boîte à outils.
       10:
         image: notes/starwars_intro_10.JPG
-        text: After you've hit run, you can always hit the reset button to get BB-8
-          back to the start. Now let's get rolling!
+        text: Après avoir cliqué sur Démarrer, tu peux toujours cliquer le bouton
+          Réinitialiser pour faire revenir BB-8 au début. Et maintenant, en avant!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
@@ -2701,16 +2715,16 @@
           guests and technology is at the heart of that.
       2:
         image: notes/starwars_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Félicitations, tu as réussi ! Tu as programmé BB-8. Maintenant, je pense
+          que nous sommes prêts pour quelque chose de plus difficile. Allons-y. Maintenant
+          que tu as appris les rudiments de la programmation, nous retournons dans
+          le temps pour construire ton propre jeu, mettant en vedette R2-D2 et C3PO.
       3:
         image: notes/starwars_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Pour faire un jeu, nous devons en apprendre plus sur quelque chose
+          que les développeurs de jeu utilisent tous les jours: il s''agit des événement.
+          Les évènements disent a ton programme d’écouter ou d’attendre que quelque
+          chose arrive, et quand ça arrive, une action est exécutée.'
       4:
         image: notes/starwars_events_4.JPG
         text: Some examples of events are listening for a mouse click, an arrow button
@@ -2807,8 +2821,8 @@
           une action que BB-8 peut comprendre.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we're going to build our program.
+        text: L'espace blanc à droite est appelé l'espace de travail et c'est là que
+          nous allons construire notre programme.
       7:
         image: notes/starwars_blocks_intro_7.JPG
         text: If I drag the moveLeft(); block to our workspace, what happens? BB-8
@@ -2839,16 +2853,16 @@
           guests and technology is at the heart of that.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Félicitations, tu as réussi ! Tu as programmé BB-8. Maintenant, je pense
+          que nous sommes prêts pour quelque chose de plus difficile. Allons-y. Maintenant
+          que tu as appris les rudiments de la programmation, nous retournons dans
+          le temps pour construire ton propre jeu, mettant en vedette R2-D2 et C3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Pour faire un jeu, nous devons en apprendre plus sur quelque chose
+          que les développeurs de jeu utilisent tous les jours: il s''agit des événement.
+          Les évènements disent a ton programme d’écouter ou d’attendre que quelque
+          chose arrive, et quand ça arrive, une action est exécutée.'
       4:
         image: notes/starwars_blocks_events_4.JPG
         text: Some examples of events are listening for a mouse click, an arrow button
@@ -2991,32 +3005,36 @@
           and forth as she walks. Repeat loops are a powerful part of programming.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: La nuit tombe, alors dans les prochains niveaux, nous allons construire
+          une maison pour être en sécurité. Nous allons utiliser le bloc répéter pour
+          faire ça très facilement.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: Pour construire le mur de notre maison, nous pouvons soit dire à Alex
+          d'avancer(); et placer des planches quatre fois, ou nous pouvons lui dire
+          d'avancer(); et placer une planche, ensuite prendre cette commande et utiliser
+          le bloc répéter pour qu'elle exécute l'action plusieurs fois. Maintenant,
+          nous allons cliquer sur le bloc répéter et lui dire combien de fois nous
+          voulons qu'elle exécute cette action. Maintenant, construisons cette maison
+          avant que la nuit tombe ! Amuse-toi.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: Maintenant, nous allons apprendre les conditions si. Les conditions
+          si sont fondamentales pour apprendre à programmer. Elles aident l'ordinateur
+          à prendre des décisions.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Tous les ordinateurs utilisent des conditions si, y compris mon téléphone.
+          Par exemple, lorsque je déverrouille mon téléphone, cela lance un code qui
+          vérifie si j'entre le mot de passe correctement, alors le téléphone est
+          déverrouillé. Sinon, cela affiche un message d'erreur.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: Tu peux utiliser les conditions si dans ton code pour que Steve et Alice
+          réagissent à ce qu'ils voient dans le monde. Par exemple, s'il y a un caillou
+          devant eux, ils peuvent tourner à gauche. Ou à droite si ils courent vers
+          un arbre.
       4:
         image: notes/mc_if_statements_4.JPG
         text: In this case, we don't want to fall in the lava. It's easy to plan for
@@ -3032,8 +3050,7 @@
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Félicitations ! Tu viens juste d'apprendre les bases de l'informatique.
       2:
         image: notes/mc_congrats_share_2.JPG
         text: Now you can use these blocks to build your own creation. There are no
@@ -3046,13 +3063,12 @@
           a house out of wool!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Lorsque tu as terminé ta création, sélectionne "partager" pour obtenir
+          un lien pour partager avec tes amis. Amuse-toi !
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Félicitations ! Tu viens juste d'apprendre les bases de l'informatique.
       2:
         image: notes/mc_congrats_no_share_2.JPG
         text: Now you can use these blocks to build your own creation. There are no
@@ -3065,4 +3081,4 @@
           a house out of wool!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Maintenant tu peux construire tout ce que tu veux. Amuse-toi !

@@ -853,8 +853,8 @@
         Infinity_move_collide_callout: Spill en lyd når denne hendelsen inntreffer.
         Infinity_repeat_callout: Plasser flytte blokker her
         craft_run_button_callout: Trykk "Kjør" for å prøve programmet
-        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
-          the other block
+        craft_drag_block_callout: Dra en "moveForward();" blokk og sett den under
+          den andre blokken
         craft_callout_preplaced: Vi har satt sammen noen blokker for å hjelpe deg
           i gang
         craft_inside_repeat: Gjenta handlinger ved å sette blokkene her inne

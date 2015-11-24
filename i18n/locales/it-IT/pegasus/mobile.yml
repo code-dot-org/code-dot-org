@@ -312,10 +312,10 @@ it-IT:
   minecraft_subtitle: "Minecraft L'Ora del Codice"
   volunteer_engineer_submission_title: "Invita studenti e volontari a partecipare all'ora del codice."
   volunteer_engineer_submission_subtitle_generic: "100.000 insegnanti ospiteranno un'Ora di Codice nelle loro classi quest'anno: 7-13 Dicembre 2015. Hanno bisogno del tuo aiuto! "
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} insegnanti cercano volontari appassionati di formazione informatica per aiutarli nella loro Ora del Codice questo Dicembre.<br>%{num_volunteers} volontari hanno aderito. Unisciti a loro.'
   volunteer_engineer_submission_intro_background: "L'Ora del Codice è un movimento globale per far provare un'ora di introduzione all'informatica, che raggiunge decine di milioni di studenti in più di 180 nazioni. Partecipa durante la Settimana di Educazione all'Informatica, dal 7-13 Dicembre 2015."
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    Questi insegnanti cercano <span style="font-family: 'Gotham 7r', sans-serif;"> appassionati di formazione informatica</span> che possano aiutare in classe, o qualcuno che possa <span style="font-family: 'Gotham 7r', sans-serif;"> ispirare</span> i loro studenti parlando delle grandi possibilità dell'informatica (che potrebbe essere fatto con una chat video). Se non siete in cerca di volontari, <a href="%{url}"> impara</a> come organizzare il tuo evento dell'Ora del Codice.
   volunteer_engineer_submission_intro_signup: 'Compila i campi sottostanti se sei uno studente di informatica o uno sviluppatore professionista. I campi contrassegnati con un <span class="form-required-field">*</span> sono obbligatori.'
   volunteer_engineer_submission_header_shared: Informazioni condivise con gli insegnanti sulla mappa dei volontari
   volunteer_engineer_submission_field_name: Nome
@@ -575,7 +575,7 @@ it-IT:
   hoc2014_try_scrat: Angry Birds, PvZ, e Scrat
   hoc2014_try_frozen: Artista con Anna ed Elsa, da Frozen
   carousel_heading_codeorg: Tutorial di Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_codeorg_any_device: Tutorial di Code.org (per tutti i dispositivi)
   carousel_heading_3rd_party: Tutorial di terze parti
   carousel_heading_third_party: Tutorial di terze parti
   carousel_heading_international: Corsi nella tua lingua

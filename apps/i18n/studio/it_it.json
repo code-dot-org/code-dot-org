@@ -150,6 +150,7 @@
   "endGameLose": "fine del gioco con una sconfitta",
   "endGameTooltip": "Fine del gioco con una vittoria o una sconfitta.",
   "finalLevel": "Complimenti! Hai risolto l'esercizio finale.",
+  "foodFight": "Food fight!",
   "for": "per",
   "goSprite": "vai",
   "hello": "ciao",
@@ -498,7 +499,7 @@
   "setSpriteDiego": "come Diego",
   "setSpriteScrat": "come Scrat",
   "setSpriteAnais": "come Anais",
-  "setSpriteAntony": "come Antony",
+  "setSpriteAnton": "to an Anton image",
   "setSpriteBananajoe": "come Banana Joe",
   "setSpriteDarwin": "come Darwin",
   "setSpriteGumball": "come Gumball",
@@ -743,5 +744,12 @@
   "failedMultiplyCharactersTimeoutBlockly": "Devi raggiungere 20 Droidi-Topo. Usa il blocco \"aggiungi un Droide-Topo\" all'interno dell'evento \"quando raggiungi un Droide-Topo\" per aggiungere due o più Droidi-Topo ogni volta che ne raggiungi uno.",
   "failedMultiplyCharactersTimeoutGotSome": "Complimenti, hai aggiunto il codice per far apparire i Droidi-Topo. Puoi passare al prossimo esercizio o provare di nuovo a prendere 20 Droidi-Topo. Più Droidi-Topo aggiungi e più sarà facile superare il livello! (Tieni premuti i tasti freccia della tastiera (o dello schermo) per muoverti più velocemente.)",
   "failedChangeSettingTimeout": "Raggiungi tre piloti dell'Alleanza Ribelle per superare il livello.",
-  "failedChangeSettingSettings": "Costruisci la tua versione del gioco. Per superare il livello, devi cambiare il tuo droide e impostarne la velocità."
+  "failedChangeSettingSettings": "Costruisci la tua versione del gioco. Per superare il livello, devi cambiare il tuo droide e impostarne la velocità.",
+  "playSoundR2D2Random": "play R2-D2 random sound",
+  "playSoundC3PORandom": "play C-3PO random sound",
+  "playSoundPufferPigRandom": "play Puffer Pig random sound",
+  "playSoundTauntaunRandom": "play Tauntaun random sound",
+  "playSoundMynockRandom": "play Mynock random sound",
+  "playSoundProbotRandom": "play Probot random sound",
+  "playSoundMouseDroidRandom": "play Mouse Droid random sound"
 }

@@ -162,7 +162,7 @@
   "exampleErrorMessage": "{functionName} fonksiyonunda bir ya da daha fazla örnekte düzeltme yapılmasına ihtiyaç vardırç Tanımla uyuştuğuna emin olun ve soruyu cevaplandırın.",
   "examplesFailedOnClose": "Bir veya daha fazla örneğiniz tanımınızla uyuşmuyor. Örneklerinizi kapatmadan önce kontrol ediniz",
   "extraTopBlocks": "Bağımsız bloğa sahipsin.",
-  "extraTopBlocksWhenRun": "Bağlanmamış bloklarınız var. Bunları \"değerlendir\" bloğuna bağlamak mı istiyorsunuz?",
+  "extraTopBlocksWhenRun": "Bağlanmamış komutlarınız var. Bunları \"Çalıştığı zaman\" komutuna mı bağlamak istemiştin?",
   "finalStage": "Son aşamayı bitirdiniz. Tebrikler!",
   "finalStageTrophies": "Tebrikler! Son aşamayı bitirerek {numTrophies, plural, one {bir ganimet} other {# ganimet}} kazandınız.",
   "finish": "Bitiş",

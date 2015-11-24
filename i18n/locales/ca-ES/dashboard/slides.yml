@@ -296,10 +296,10 @@ ca:
         text: "Hola, el meu nom és Lyndsey. Sóc model, actuo i escric les meves pròpies apps. Utilitzeu el codi per unir-vos a l' Anna i l' Elsa mentre exploren la màgia i la bellesa del gel."
       2:
         image: notes/frozen1_2.jpg
-        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
+        text: "Crearàs flocs de neu i patrons mentre patines sobre gel i fas un món meravellós d'hivern, que després pots compartir amb els teus amics."
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: "Durant l'hora següent, aprendràs els conceptes bàsics de programació. La programació tradicional és normalment amb text, però utilitzarem Blockly, que utilitza blocs visuals que pots arrossegar i deixar anar per escriure programes. Així és com fins i tot els estudiants universitaris aprenen els conceptes bàsics. En el fons, ja estàs creant codi."
       4:
         image: notes/frozen1_4.jpg
         text: "Un programa és un conjunt d'instruccions que indica què fer a un ordinador. Anem a construir un codi o un programa, que ajudarà a l' Elsa a crear una simple línia. Ho utilitzarem més tard per crear patrons més complexos."

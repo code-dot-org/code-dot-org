@@ -514,7 +514,7 @@ ko-KR:
   dashboard_faq_k5: K-5(초등학교 5학년) 자주묻는 질문들
   dashboard_announcements: 공시사항
   dashboard_announce_view_all: 모두 보기
-  dashboard_announce_hoc: '<b>2015년 11월 9일</b> - 곧 개봉할 영화 Star Wars: The Force Awakens을 소재로 만든 새로운 Hour of Code 튜토리얼이 여기 있습니다. 레이와 함께 새로운 드로이드, BB-8을 움직여 함께 임무를 수행하세요. 그리고나서 여러분이 만든 게임을 은하계멀리 멀리 공유하세요.'
+  dashboard_announce_hoc: '<b>2015년 11월 23일</b> - 곧 개봉할 영화 Star Wars: The Force Awakens을 소재로 만든 새로운 Hour of Code 튜토리얼이 여기 있습니다. 레이와 함께 새로운 드로이드, Bb-8을 움직여 함께 임무를 수행하세요. 그리고나서 여러분이 만든 게임을 은하계멀리 멀리 공유하세요.'
   code_hoc_coming: 'Hour of Code 가 여기있습니다. - 12월8일-14일!'
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   learn_more: 더 알아보기
@@ -536,7 +536,7 @@ ko-KR:
   carousel_heading_third_party: 써드 파티 튜토리얼
   carousel_heading_international: 다른 언어로 된 튜토리얼
   carousel_heading_domestic: 영어 튜토리얼들
-  carousel_heading_beginners: 처음하는 사람들을 위한 튜토리얼
+  carousel_heading_beginners: K-8(유치원-초1) 학생들을 위한 튜토리얼
   carousel_heading_javascript: Javascript 를 교육할 수 있는 튜토리얼들
   carousel_heading_unplugged: 적당한 장비나 인터넷 연결이 없나요? 컴퓨터과학 언플러그드 활동을 해보세요.
   carousel_heading_devices: 스마트폰과 패드를 위한 튜토리얼 앱
@@ -598,7 +598,7 @@ ko-KR:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: 가위, 바위, 보
-  hourofcode_name: 새로운 code.org/hoc
+  hourofcode_name: 컴퓨터 프로그램을 직접 만들어 보세요
   playlab_name: Play Lab
   infinity_name: 무한 Play Lab
   artist_name: 예술가

@@ -1394,7 +1394,7 @@ hu:
         text: A munkafelület jobb fölső sarkában a Kód megjelenítésére kattintva kattinthatsz a blokkokról a gépelős üzemmódba.
       4:
         image: notes/starwars_typing_4.JPG
-        text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
+        text: A következő leckében gépelési módban kezdünk. Még mindig behúzhatod az eszköztárból a blokkot, de beírhatod a parancs nevét is. Ahogy elkezdesz gépelni, látni fogod a lehetséges utasítások neveit az alatt, ahol gépelsz. Hogy gyorsabban haladj, ahelyett, hogy begépelnéd a teljes utasítás nevét, kiválaszthatod a felsorolásból az egyiket. Én mindig alkalmazom a munkámban ezt az automatikus-kiegészítés funkciót.
       5:
         image: notes/starwars_typing_5.JPG
         text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move."
