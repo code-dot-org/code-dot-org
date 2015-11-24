@@ -672,6 +672,14 @@ he:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: While Loops
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1408,6 +1416,8 @@ he:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
           description_short: Programming
@@ -1422,6 +1432,13 @@ he:
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: While Loops
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1441,14 +1458,14 @@ he:
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          title: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד'
+          description_short: 'למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה...'
+          description: 'למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה...'
           Hour of Code 2015: Hour of Code 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          title: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד'
+          description_short: 'למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה...'
+          description: 'למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה...'
           Hour of Code 2015: Hour of Code 2015
         minecraft:
           title: Minecraft
@@ -1460,3 +1477,10 @@ he:
           description_short: Explore a Minecraft world through code
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
           Hour of Code 2015: Hour of Code 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          description: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit

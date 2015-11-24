@@ -32,7 +32,7 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
 
 ## 51 schools will win a class-set of laptops (or $10,000 for other technology)
 
-One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners).
+Sign up for this prize is now closed. Check back to see this year's winners.
 
 <img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize1.jpg"/>
 

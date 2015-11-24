@@ -307,25 +307,25 @@ sv:
         studio_playlab_8: Kan du lägga till ett block för att få en poäng och ett block för att spela ett ljud när enhörningen kör på trollkarlen, och sedan flytta honom med pilarna tills du får poäng?
         studio_playlab_9: Ställ in bakgrunden för denna invasion av utomjordingar och hjälp Rymdroboten att komma till utomjordingen snabbare genom att ändra dess hastighet. Flytta honom sedan med piltangenterna för att komma till Rymdroboten och varna alla andra
         studio_playlab_10: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
-        studio_iceage_1: 'Manny wants to say "hello" - can you help him?'
-        studio_iceage_2: 'Diego (actor 1) and Granny (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_iceage_3: Can you help Scrat get to the flag?
-        studio_iceage_4: Can you help Scrat (actor 1) get to Granny (actor 2) and play a sound when he gets there?
-        studio_iceage_5: 'Can you help Sid say "greetings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_iceage_6: Can you help Diego move around using the up/down/right/left arrow keys to get to all the flags?
-        studio_iceage_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Sid move right and left repeatedly?'
-        studio_iceage_8: Can you add a block to score a point and a block to play a sound when Sid runs into Manny, and then move him with the arrows until you score?
-        studio_iceage_9: Set the background for this ice age and help Sid get to Granny faster by changing its speed. Then move him with the arrow keys to get to Sid and alert everyone else.
+        studio_iceage_1: 'Manny vill säga "Hej" - kan du hjälpa honom?'
+        studio_iceage_2: 'Diego (skådespelare 1) och farmor (skådespelare 2) vill säga "Hej" till varandra. Kan du hjälpa dem genom att använda blocket "säga" två gånger?'
+        studio_iceage_3: Kan du hjälpa Scrat att komma till flaggan?
+        studio_iceage_4: Kan du hjälpa Scrat (skådespelare 1) komma till farmor (skådespelare 2) och spela upp ett ljud när han kommer dit?
+        studio_iceage_5: 'Kan du hjälpa Sid säga "hälsningar" när han klickas på? Glöm inte att klicka på Sid efter du har klickat på Kör'
+        studio_iceage_6: Kan du hjälpa Diego flytta runt med upp/ned/höger/vänster piltangenterna för att komma till alla flaggorna?
+        studio_iceage_7: 'Med "Upprepa för alltid" blocket kan du köra kod kontinuerligt. Kan du bifoga block för att hjälpa Sid att flytta sig till höger och till vänster om och om igen?'
+        studio_iceage_8: Kan du lägga till ett block som lägger till ett poäng och ett block som spelar ett ljud när Sid rör vid Manny och sedan flytta honom med pilarna tills du får poäng?
+        studio_iceage_9: Ställ in bakgrunden för denna istid och hjälp Sid komma till farmor snabbare genom att ändra hans hastighet. Flytta honom sedan med piltangenterna för att komma till Sid och varna alla andra.
         studio_iceage_10: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
-        studio_gumball_1: 'Anais wants to say "hello" - can you help her?'
-        studio_gumball_2: 'Darwin (actor 1) and Gumball (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_gumball_3: Can you help Banana Joe get to the flag?
-        studio_gumball_4: Can you help Gumball (actor 1) get to Darwin (actor 2) and play a sound when he gets there?
-        studio_gumball_5: 'Can you help Antony say "greetings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_gumball_6: Can you help Darwin move around using the up/down/right/left arrow keys to get to all the flags?
-        studio_gumball_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Antony move right and left repeatedly?'
-        studio_gumball_8: Can you add a block to score a point and a block to play a sound when Banana Joe runs into Antony, and then move him with the arrows until you score?
-        studio_gumball_9: Set the background for this space invasion and help Nicole get to Penny faster by changing its speed. Then move him with the arrow keys to get to Nicole and alert everyone else.
+        studio_gumball_1: 'Anais vill säga "Hej" - kan du hjälpa henne?'
+        studio_gumball_2: 'Diego (skådespelare 1) och farmor (skådespelare 2) vill säga "Hej" till varandra. Kan du hjälpa dem genom att använda blocket "säga" två gånger?'
+        studio_gumball_3: Kan du hjälpa Banana Joe att gå till flaggan?
+        studio_gumball_4: Kan du hjälpa Gumball (skådespelare 1) gå till Darwin (skådespelare 2) och spela upp ett ljud när han kommer dit?
+        studio_gumball_5: 'Kan du hjälpa Antony säga "hälsningar" när han klickas på? Glöm inte att klicka på honom efter du har klickat på kör'
+        studio_gumball_6: Kan du hjälpa Diego flytta runt med upp/ned/höger/vänster piltangenterna för att komma till alla flaggorna?
+        studio_gumball_7: 'Med "Upprepa för alltid" blocket kan du köra kod kontinuerligt. Kan du bifoga block för att hjälpa Antony att flytta sig till höger och till vänster om och om igen?'
+        studio_gumball_8: Kan du lägga till ett block som lägger till ett poäng och ett block som spelar ett ljud när Banana Joe rör vid Antony och sedan flytta honom med pilarna tills du får poäng?
+        studio_gumball_9: Ställ in bakgrunden för denna rymd invasion och hjälp Nicole att komma till Penny snabbare genom att ändra dess hastighet. Flytta den sedan med piltangenterna för att komma till Nicole och varna alla andra.
         studio_gumball_10: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
         studio_full_sandbox: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
         studio_k1_1: 'Kan du göra så att hunden säger "hello world"?'
@@ -500,11 +500,11 @@ sv:
         starwars_blocks_intro: 'Star Wars: Bygg en galax med kod - introduktion'
         starwars_blocks_events: 'Star Wars: Bygg en galax med kod - händelser'
         starwars_blocks_congrats: 'Star Wars: Bygg en galax med kod - Grattis'
-        mc_intro: 'Minecraft - Introduction'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        mc_intro: 'Minecraft - Introduktion'
+        mc_repeat: 'Minecraft - Upprepa'
+        mc_if_statements: 'Minecraft - If-statements'
+        mc_congrats_share: 'Minecraft - Grattis'
+        mc_congrats_no_share: 'Minecraft - Grattis'
     callout:
       text:
         drag_blocks: 'Dra ett "gå framåt" block och fäst det under det andra blocket'
@@ -578,9 +578,9 @@ sv:
         Infinity_move_collide_callout: Spela upp ett ljud när händelsen inträffar.
         Infinity_repeat_callout: 'Placera flytta - block  här inne'
         craft_run_button_callout: 'Klicka på "Kör" för att prova ditt program'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_drag_block_callout: 'Dra ett #gå framåt()", block och fäst det under det andra blocket'
+        craft_callout_preplaced: Vi har lagt några block här för så attdu kan komma igång
+        craft_inside_repeat: Upprepa åtgärderna genom att placera block härinne
+        craft_callout_preplaced_house: Denna kod kommer att börja bygga ditt hus. Kan du avsluta det?
+        craft_what_is_iron: Gräv upp detta järn!
+        craft_callout_moveforward: Denna kod kommer att kontrollera om det finns lava, kan du lägga till ett kommando för att gå framåt?

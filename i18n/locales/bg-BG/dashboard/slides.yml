@@ -1338,7 +1338,7 @@ bg:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: 'Здравейте! Аз съм Катлийн Кенеди Продуцент на Междузвездни Войни: Силата се Пробужда. Днес ще работите с една от нашите звезди, ББ-8, който е сферичен дроид. Всичко което прави и всяко негово движение се контролира от софтуер. Компютърните науки оказват влияние във всяка една сфера от маркетинг до медицина и филмо-производство. Всъщност хиляди Инженери работят заедно за да създадават филми като Силата се Пробужда.'
       2:
         image: notes/starwars_intro_2.JPG
         text: Здравейте, Аз съм Рейчъл Роуз Глaвен Инженер в отдела за Разработки в Ай Ел Ем, аз ръководя групата за създаване на амимираните ефекти. В Силата се Пробужда аз отговарям за ефектите които карат героя да извършва движения като че ли е наистина от далечно съзвездие.
@@ -1347,91 +1347,93 @@ bg:
         text: В следващият час ще създадем наша собствена игра Междузвездни Войни която ще ви научи на основните методи в Програмирането. Обикновенно програмирането представлява текст но ние ще използваме Блокове, за да можем да ги влачим и оставяме. Но въпреки това вие все пак съсздавате код. След като пробвате основните методи с блокове, ще преминем на JavaScript един от най-известните езици за програмиране на интернет.
       4:
         image: notes/starwars_intro_4.JPG
-        text: "To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts. Your screen is split into three parts. On the left is the Star Wars game space, where code will run. The instructions for each level are written below the game space."
+        text: За начало, ще работим с Рей който ще програмира ББ-8 да ходи и събира скрап. Монитора ви е разделен на три части. От ляво е игровото пространство кудето играта се извършва. Инструкциите за написани под него.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: Пространството по средата е кутията с инструменти, и всеки блок а команда която ББ-8 може да разбере.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where we are going to build our program.
+        text: Бялото пространство в дясно е работното пространство където ще създадем играта.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what happens? BB-8 moves left one block on the grid.
+        text: Какво ще стане ако завлека блока преместиНаляво(); в работното пространсвто и натисна тръгни? ББ-8 ще се премести наляво с една стъпка в мрежата.
       8:
         image: notes/starwars_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together."
+        text: Ами ако поискам ББ-8 да направи още нещо след блока преместиНаляво();? Мога да добавя друг блок към нашата програма. Ще избера блока преместиНагоре(); и ще го завлека под блока преместиНаляво(); докато очертанията не се появят. Тогава ще го пусна и двата блока ще се споят.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked from top to bottom on our workspace. If you ever want to delete a block, just remove it from the stack and drag it back into the tool box.
+        text: Когато натисна Тръгни отново, ББ-8 ще изпълни командите отгоре до долу от работното пространство. Ако искате да изтриете блок просто го извадете от купчината и го завлечете обратно в кутията с инструментите.
       10:
         image: notes/starwars_intro_10.JPG
-        text: "After you've hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: След като натиснете Тръгни, винаги може да натиснете бутона върни обратно за да накарете ББ-8 да започне отначало. Да започваме!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
         text: Зада създадем Блок ние изпозваме JavaScript. Един от най-използваните езици за програмиране от Програмистите. Блоковете са прекрасен начин за начинаещи да навлизат в програмирането, факт е че някои университети като Харвард и Бъркли започнаха да въвеждат Блоково програмиране. Но веднъж научили основите Инженерите пишат код защото е по бързо.
       2:
         image: notes/starwars_typing_2.JPG
-        text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try."
+        text: Можем да напишем хиляди команди без да търсим и измъкваме от кутията с инструментите. Може в началото да сте по бавни в писането, но все пак пробвайте.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.
+        text: В горният десен ъгъл на работното пространство, може да натиснете бутона покажи текст на всеки пъзел за да преминете от блоков към текстови режим.
       4:
         image: notes/starwars_typing_4.JPG
-        text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
+        text: 'В следващият урок ще започнем в текстови режим. Ще можете да избирате блокове или текстови команди. Възможни команди ще се появяват след като започнете да пишете, така вместо да изписвате цялата команда ще може да избирате и завършите по бързо. В моята работа използвам инструмента "завършване по подразбиране" когато пиша код.'
       5:
         image: notes/starwars_typing_5.JPG
-        text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move."
+        text: Когато пишете код трябва да сте много внимателни. Тряжва да изписвате правилно командите, главните букви, включително скобите и двуеточието. Дори незначителни грешки могат да попречат на ББ-8 да разбере кода и няма да може да извърши действието.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you so that you can try changing your text to fix it.
+        text: Когато направите грешка редактора ще я подчертае така че ще може да я поправите.
       7:
         image: notes/starwars_typing_7.JPG
-        text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
+        text: Ако се затрудните, винаги може да започнете отначало с бутона Започни Отначало и изберете режим Блокове по всяко време като натиснете в горния десен ъгъл. Хайде да пробваме! Ако направите грешка не се отчайвайте. Всеки пробва по няколко пъти докато го направи правилно.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: Здравейте, казвам се Шарита Картер. Аз съм Гл. Творчески Директор в Уолт Дисни Отдел за Инженерно Моделиране. Отговарям за групата която създава атракциите които нашите гости могат да пробват. Винаги се опитваме да подобрим и направим нашите атракции по атрактивни за гостите ни като технологиите са в основата на това.
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: Поздравления! Вие програмирахте ББ-8. Мисля че вече сте готови за нещо по сложно. След като научихте основите на програмирането, да се върнем във времето и направим собствена игра с участието на Р2-Д2 и С3ПО.
       3:
         image: notes/starwars_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: 'За да създаден игра, трябва да научим нещо което всеки програмист използва всекидневно: Събития. Събитията казват на програмата да слуша или чака нещо да се случи и тогава да изпълни действието.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: Някои примери за събития които слушат са щракване с мишката, натискане на бутона със стрелка или на екрана.
       5:
         image: notes/starwars_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: Ще накараме Р2-Д2 да се премести нагоре и после надолъ да предаде съобщение до пилоти на Бунтовниците. За целта ще използваме Събития. Когато играча използва стрелките нгоре/надолу или бутоните нагоре/надолу.
       6:
         image: notes/starwars_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down."
+        text: Използваме блокът Събитие КогатоНагоре с добавен блок ОтидиНагоре. Когато играчът натисне клавиша със стрелка нагоре кода от блока КогатоНагоре ще се извърши. Ще направим същото за да преместим Р2-Д2 надолу.
       7:
         image: notes/starwars_events_7.JPG
-        text: "To do this, we'll use a command called whenUp(). When you drag the command out of the toolbox, you'll see that it starts and ends with a curly bracket instead of a semi-colon. This gives us space to put other commands in the middle. Every command that we place inside these brackets will run when the player presses the up arrow."
+        text: За да постигнем това ще използваме командата КогатоНагоре. Като я извлечете от кутията с инструменти, ще видите че започва и завършва с къдрави скоби вместо с двоеточие. Това ни позволява да добавим команди по средата. Когато играчът натисне клавиша със стрелаката нагоре тези вмъкнати команди ще се изпълнят.
       8:
         image: notes/starwars_events_8.JPG
-        text: "We want R2-D2 to go up so let's put a goUp(); block inside the command. And we'll do the same thing to make R2-D2 go down."
+        text: Искаме Р2-Д2 да отиде нагоре и вмъкваме блока ОтидиНагоре(); вкомандата. Ще направим същото за да направим Р2-Д2 да отиде надолу.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen. Step by step, your game is getting more interactive.
+        text: Вместо да пишем кода предварително, можем да направим Р2-Д2 да реагира на бутон Натисни Събитие който ще го мести по монитора. Стъпка, по стъпка играта става по интерактивна.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: Здравейте аз съм Алис и отговарям за Инженерния Отдел в Code.org също работех върху ръководството което сега използвате.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: Достигнахте до последното ниво. Поздравления! Вече научихте всичко което трябва за да направите собствена игра Междузвездни войни. Няма повече инструкции и пъзели за решаване. Може да направите собствена игра със собствени правила. Още нещо, отключихте нови звукове и команди с които да подобрите играта.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+        text: |
+          Значи направихме игра в която печелите точки като вземете пафър прасета.Уловката е всеки път като вземете прасе се появява войник от империята.Постепенно
+          целият екран ще се изпълни с прасета и като достигнат 10,000 печелите.
       4:
         image: notes/starwars_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: Направихме игра в която неможете да губите печелите точки от всичко. В моята програма обърнах бутоните, когато натиснете горе, вашият герой отива долу, като натиснете дясно, той отива на ляво. Трудно е! Понякога това е предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!
       5:
         image: notes/starwars_congrats_5.JPG
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: След като сте направите играта, изберете сподели за да я споделите с приятели или да играете на телефон. Забавлявайте се!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
@@ -1444,107 +1446,109 @@ bg:
         text: В следващият час ще създадем наша собствена игра Междузвездни Войни която ще ви научи на основните методи в Програмирането. Обикновенно програмирането представлява текст но ние ще използваме Блокове, за да можем да ги влачим и оставяме. За начало ще работим с Рей за да програмираме ББ-8 да върви и събира металните остатъци.
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
+        text: Екрана ви е разделен на три части. В ляво е пространствоте където кода на играта Междузвездни войни ще се извърши. Инструкциите за всяко ниво са написани под игровото пространство.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: Пространството по средата е кутията с инструменти, и всеки блок а команда която ББ-8 може да разбере.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we're going to build our program."
+        text: Бялото пространство в дясно е работното пространство където ще създадем играта.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8 moves left one block on the grid.
+        text: Какво ще стане ако завлечем блока ПреместиНаляво(); до работното пространство? ББ-8 ще се премести наляво по мрежата.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together. When I press run again, BB-8 will perform the commands that are stacked top to bottom on our workspace."
+        text: А ако искам ББ-8 да направи още нещо след като изпълни командата от блок ПреместиНаляво(); Мога да добавя блок. Ще избера блока ПреместиНагоре(); и ще го завлека под блока ПреместиНаляво(); докато не се появят очертанията. Тогава ще го пусна и двата ще се споят. ББ-8 ще испълни комадите по ред отгоре до долу.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and drag it back into the toolbox.
+        text: Ако изкате да изтриете блок, просто го преместет от купчината и го завлечете обратно в кутията с инструменти.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: "After you hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: След като натиснете Тръгни, винаги може да натиснете бутона върни обратно за да накарете ББ-8 да започне отначало. Да започваме!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: Здравейте, казвам се Шарита Картер. Аз съм Гл. Творчески Директор в Уолт Дисни Отдел за Инженерно Моделиране. Отговарям за групата която създава атракциите които нашите гости могат да пробват. Винаги се опитваме да подобрим и направим нашите атракции по атрактивни за гостите ни като технологиите са в основата на това.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: Поздравления! Вие програмирахте ББ-8. Мисля че вече сте готови за нещо по сложно. След като научихте основите на програмирането, да се върнем във времето и направим собствена игра с участието на Р2-Д2 и С3ПО.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: 'За да създаден игра, трябва да научим нещо което всеки програмист използва всекидневно: Събития. Събитията казват на програмата да слуша или чака нещо да се случи и тогава да изпълни действието.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: Някои примери за събития които слушат са щракване с мишката, натискане на бутона със стрелка или на екрана.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: Ще накараме Р2-Д2 да се премести нагоре и после надолъ да предаде съобщение до пилоти на Бунтовниците. За целта ще използваме Събития. Когато играча използва стрелките нгоре/надолу или бутоните нагоре/надолу.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
+        text: Използваме блокът Събитие КогатоНагоре() с добавен блок ОтидиНагоре(). Когато играчът натисне клавиша със стрелка нагоре кода от блока КогатоНагоре() ще се извърши. Ще направим същото за да преместим Р2-Д2 надолу. Обаче, вместо да пишем кода предварително, да направим Р2-Д2 да реагира на бутона натисни събития който го движи из екрана.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Стъпка по стъпка играта става по-интерактивна.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: Здравейте аз съм Алис и отговарям за Инженерния Отдел в Code.org също работех върху ръководството което сега използвате.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: Достигнахте до последното ниво. Поздравления! Вече научихте всичко което трябва за да направите собствена игра Междузвездни войни. Няма повече инструкции и пъзели за решаване. Може да направите собствена игра със собствени правила. Още нещо, отключихте нови звукове и команди с които да подобрите играта.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+        text: |
+          Значи направихме игра в която печелите точки като вземете пафър прасета.Уловката е всеки път като вземете прасе се появява войник от империята.Постепенно
+          целият екран ще се изпълни с прасета и като достигнат 10,000 печелите.
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: Направихме игра в която неможете да губите печелите точки от всичко. В моята програма обърнах бутоните, когато натиснете горе, вашият герой отива долу, като натиснете дясно, той отива на ляво. Трудно е! Понякога това е предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: След като сте направите играта, изберете сподели за да я споделите с приятели или да играете на телефон. Забавлявайте се!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
+        text: Казвам се Йенс Бергенстен, но съм по известен като Джеб. Аз съм главният разработчик в Minecraft, в студио Моянг в Стокхолм. Мисля че бях единадесет или дванадесет годишен когато започнах да програмирам защото изках да създавам игри. Един от приятелите на баща ми ми каза че трябва да се науча да програмирам ако искам да правя игри. Така започнах. Обичам да проектирам и да структурата на играта. Това е което харесвам в Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: В следващият час ще се запознаете с основите на компютърните науки като програмирате Алекс или Стив да преминат през симулираната част на света на Minecraft.
       3:
         image: notes/mc_intro_3.JPG
-        text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+        text: Програмирането представлява текст, но ние ще използваме Блокове, това е система от блокове които може да влачите и пускате за да напишете програмата. В действителност ви е използвате Javascript код.
       4:
         image: notes/mc_intro_4.JPG
-        text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work."
+        text: Концепциите които ще научите са същите които програмистите използват всеки ден и които са в основата на програмирането. В Моянг, използваме същите концепции за да направим Minecraft да работи.
       5:
         image: notes/mc_intro_5.JPG
-        text: "Before you start, you'll pick your character. I'm going to choose Alex. Let's build code for a program that will help her move around the screen."
+        text: Преди да започнете трябва да изерете герой. Аз ще избера Алекс, Хайде да напишем код за програма която ще и помогне да се мести по екрана.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft playspace where your program will run. The instructions for each level are written below.
+        text: Вашият екран е разделен на три основни части. В ляво е Minecraft игрово пространство където вашата програма ще се изпълни. Инструкции за всяко ниво са дадени по-долу.
       7:
         image: notes/mc_intro_7.JPG
-        text: "This middle area is the toolbox and each of these blocks is a command that directs Alex's actions."
+        text: Тази средна област е кутията с инструменти и всеки от тези блокове е команда, които насочват действията на Алекс.
       8:
         image: notes/mc_intro_8.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Бялото пространство в дясно, се нарича работно пространство и това е мястото, където ние ще изгради нашата програма.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click run, what happens? Alex moves forward one space on the grid.
+        text: Какво ще стане ако завлечете блока ПреместиНапред(); в работното пространство и после натиснете Тръгни? Алекс ще се премести напред с едно място.
       10:
         image: notes/mc_intro_10.JPG
-        text: "And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the turnRight(); block and I'll drag it underneath my moveForward(); block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+        text: А ако искаме тя да направи още нещо след като се премести напред? Може да добавим друг блок в програмата. Ще избера блока завииНадясно(); и ще го приплъзна под блока тръгниНапред(); докато несе появят оранжеви линии. Тогава ще го пусна и двата блока ще се споят. Като натисн Тръгни, Алекс ще изпълни командите които са в купчината отгоре до долу.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back to the toolbox.
+        text: Ако някога искате да изтриете блок, просто го плъзнете от купчината обратно към кутията с инструменти.
       12:
         image: notes/mc_intro_12.JPG
-        text: "To undo your changes and get back to how the level started, use the Start Over button in the top right corner of the workspace. One more thing: you see the little triangle on the turn blocks? Anytime you see these triangles, it means that you can pick a different option. Let's start coding!"
+        text: 'За да отмените промените и отидете обратно в началото на нивото, използвайте бутона Започни отначало в горния десен ъгъл. Още нещо: виждате ли малкият триъгълник на блока Завий? Всеки път като видите триъгълник, означава че може да изберете друга опция. Хайде да започваме да кодираме!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
+        text: Аз съм Лидия Уинтерс, Директор в Моянг, кудето направихме игра наречена Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+        text: Любимата ми нещо в Minecraft е опознаването. Обичам приключенията защото ога да намеря нещо. Аз не съм програмист и съм много развълнувана да чета уроците на Minecraft и действително да науча някои програмни кодове.
       3:
         image: notes/mc_repeat_3.JPG
         text: The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops.

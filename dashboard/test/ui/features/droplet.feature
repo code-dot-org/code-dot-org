@@ -22,7 +22,7 @@ Feature: Droplet levels work as expected
     And I press keys ":down"
 
     And the Droplet ACE text is "butto"
-    And there is a Tooltipster tooltip with text "button(buttonId, text)"
+    And there is a Tooltipster tooltip with text "button(id, text)"
 
     And I press keys ":down"
 

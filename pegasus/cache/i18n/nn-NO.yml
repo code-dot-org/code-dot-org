@@ -1,4 +1,5 @@
 "nn-NO":
+  hour_of_code: Kodetimen
   hello: Hallo, verda
   select_language: Vel språk
   en: Informatikk
@@ -317,12 +318,13 @@
   starwars_javascript_start_button: Prøv no
   starwars_blocks_title: Blokker
   starwars_blocks_description: Bruk dra-og-slepp blokker.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: Mange språk (kommer snart) | Moderne nettlesere, smart-telefoner,
+    nettbrett | Alderen 6-10
   starwars_blocks_start_button: Prøv no
   starwars_watch_videos: Før du begynnar kan du sjå ein av desse inspirerande filmane
   starwars_speak_languages: Snakkar du eit anna språk?
   starwars_help_translate: Hjelp oss med å oversetja
+  starwars_platform_text: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   mc_name: Kodetimen med Minecraft
   mc_longdescription: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr
     gjennom denne Minecraft-verda.
@@ -330,24 +332,27 @@
     gjennom denne Minecraft-verda.
   mc_gradelevel: Alder 6 +
   mc_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
+  mc_specs: Mange språk (kommer snart) | Moderne nettlesere og nettbrett | Alder 6
+    +
   minecraft_subtitle: Kodetimen med Minecraft
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  volunteer_engineer_submission_title: Meld deg som frivillig til Kodetimen og inspirer
+    elevene.
   volunteer_engineer_submission_subtitle_generic: '100 000 lærarar skal ha ein Kodetime
     i sitt klasserom i år, 7.-13. desember 2015. Dei ønskjer di hjelp! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} lærere trenger
+    frivillige som er lidenskapelig opptatt av informatikk til å hjelpe til med Kodetimen
+    i desember. <br>%{num_volunteers} frivillige har meldt seg. Bli med.'
   volunteer_engineer_submission_intro_background: Kodetimen er ei global rørsle for
     å gi ein time introduksjon til informatikk og programmering, som når ut til titals
     millionar elevar i meir enn 180 land. Bli gjerne med under Computer Science Education
     Week, 7.-13. desember.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_recruit: 'Disse lærerne vil gjerne ha noen <span
+    style="font-family: ''Gotham 7r'', sans-serif;">tekonologer</span> som kan hjelpe
+    til i klasserommet, eller noe som kan <span style="font-family: ''Gotham 7r'',
+    sans-serif;">inspirere</span> elevene deres ved å prate om bredden av muligheter
+    med informatikk og programmering. Dette kan f. eks. bli gjort gjennom video-chat.
+    Hvis du ikke er en ingeniør, skal du vite at alle kan organisere Kodetimen. <a
+    href="%{url}">Lær mer her</a>.'
   volunteer_engineer_submission_intro_signup: Ver gild å oppgi følgjande informasjon
     om du er ein informatikkstudent eller jobbar med programmering. Felta markert
     med <span class="form-required-field">*</span> er obligatoriske.
@@ -449,7 +454,7 @@
     dette kurset
   dashboard_landing_educator_blog: Les om nyheiter og oppdateringar av materiellet
     vårt i lærerbloggen
-  dashboard_landing_smart_hints: Ver snitt og hjelp oss med å legge inn smarte hint
+  dashboard_landing_smart_hints: Ver snill og hjelp oss med å legge inn smarte hint
     i Code.org-innføringskursa
   dashboard_landing_video_player: Prøv den nye videospelaren på skulen din
   dashboard_landing_progress_title: Klassen si framdrift
@@ -539,7 +544,7 @@
     spore framdrifta og administrere kontoane.
   dashboard_sections_table_section: Seksjon
   dashboard_sections_table_secret: Logg inn
-  dashboard_sections_table_grade: Karakter
+  dashboard_sections_table_grade: Trinn
   dashboard_sections_table_course: Leksjon
   dashboard_sections_table_students: Elevar
   dashboard_sections_table_code: Seksjonskode
@@ -673,9 +678,9 @@
   learn_sign_up_description: Registrer deg for å delta på Kodetimen under CS Code
     Week
   learn_sign_up_button: Meld deg på
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Se på denne inspirerende filmen
+  learn_videos_show: Vis denne inspirerende filmen til klassen din
+  learn_videos_before_hoc: Se en inspirerende film før Kodetimen
   learn_educator_resources_description: Lær om korleis du kan gjennomføra Kodetimen
   learn_educator_resources_button: Lærarressursar
   learn_are_you_educator: Er du lærar? Sjekk<a href="http://hourofcode.com/resources/how-to">
@@ -684,9 +689,10 @@
   hoc2014_try_new_tutorial: Prøv den nye Kodetime-leksjonen (beta)
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
   hoc2014_try_frozen: Skap kunst med Anna og Elsa frå Frost
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Guider laget av Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Guider laget av andre
+  carousel_heading_third_party: Guider laget av andre
   carousel_heading_international: Leksjonar på ditt språk
   carousel_heading_domestic: Leksjonar tilgjengeleg på engelsk
   carousel_heading_beginners: Leksjonar for nybegynnarar
@@ -754,8 +760,10 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Stein, saks, papir
-  hourofcode_name: Plassholder for ny code.org/hoc
+  hourofcode_name: Skriv ditt første dataprogram
   playlab_name: Spel-lab
+  infinity_name: Infinity Spill-lab
+  artist_name: Kunstnar
   codeorg_gradelevel: Frå 4 - 104 år
   codeintl_gradelevel: Frå 4 - 104 år
   thinkersmithspanish_gradelevel: Por todos
@@ -797,6 +805,8 @@
   frozen_gradelevel: Alderen 8+
   starwars_gradelevel: Alder 6 +
   playlab_gradelevel: Frå 4 - 104 år
+  infinity_gradelevel: Frå 4 - 104 år
+  artist_gradelevel: Frå 4 - 104 år
   codeorg_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   codeintl_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   thinkersmithspanish_platformtext: Straumlaust
@@ -887,12 +897,15 @@
   kodableunplugged_shortdescription: Ei morsom fråkopla øving
   projguts_shortdescription: Prøv modellering og simulering ved å bruke stein, saks
     og papir
-  hourofcode_shortdescription: Plassholder for ny code.org/hoc
+  hourofcode_shortdescription: Lær å kode med Mark Zuckerberg og Angry Birds!
   frozen_shortdescription: La oss bruke kode for å bli med Anna og Elsa som utforskar
     den magiske og vakre isen.
   starwars_shortdescription: Lær å programmere droner og skap ditt eige Star Wars-spel
     i ein galakse langt, langt borte.
   playlab_shortdescription: Lag ein historie eller eit spel med Spel-lab!
+  infinity_shortdescription: Bruk Spill-Lab for å lage ei historie eller spel med
+    Disney Infinity figurar.
+  artist_shortdescription: Teikn stilige bilde og design med Kunstnaren!
   codeorg_longdescription: Lær dei grunnlegjande konsepta for datavitksap med drag-og-slepp-programmering.
     Dette er ei spel-liknande, sjølvstyrt øving med videoforedrag av Bill Gates, Mark
     Zuckerberg, Angry Birds og Plantar mot Zombiar. Lær løkker, vilkår og grunnleggjande
@@ -1368,3 +1381,11 @@
     <a href='%{it_requirements_url}'> Klikk her</a> for å lære hvordan du aktiverer
     HTTPS for Code.org.
   compatibility_https_hide_this_warning: Skjul denne advarselen
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: flaks
+  infinity_shortcode: inf
+  playlab_shortcode: spel av
+  artist_shortcode: art

@@ -1,4 +1,5 @@
 sv-SE:
+  hour_of_code: Timmen med Kod
   hello: Hej världen
   select_language: Vänligen välj ditt språk
   en: Datavetenskap
@@ -283,22 +284,24 @@ sv-SE:
   starwars_javascript_description: Använd dra-och-släpp block och JavaScript.
   starwars_javascript_specs: Endast på engelska | Moderna webbläsare | Åldrar 11 +
   starwars_javascript_start_button: Prova nu
-  starwars_blocks_title: bitar
+  starwars_blocks_title: Block
   starwars_blocks_description: Använd dra-och-släpp block.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Många språk (kommer snart) | Moderna webbläsare, smartphones, tabletter | Åldrarna 6-10
   starwars_blocks_start_button: Prova nu
   starwars_watch_videos: Innan du börjar, titta på en av dessa inspirerande videofilmer
   starwars_speak_languages: Tala ett annat språk?
   starwars_help_translate: Hjälp oss översätta
+  starwars_platform_text: Moderna webbläsare, smartphones, surfplattor
   mc_name: Minecraft Hour of Code
   mc_longdescription: Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft värld.
   mc_shortdescription: Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft värld.
   mc_gradelevel: Ålder 6 +
   mc_platformtext: Moderna webbläsare, smartphones, surfplattor
+  mc_specs: Många språk (kommer snart) | Moderna webbläsare och surfplattor | Ålder 6 +
   minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
+  volunteer_engineer_submission_title: Inspirera elever och frivilliga för Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100 000 lärare kommer att vara värdar för Hour of Code i sina klassrum detta år,7-13 dec, 2015. De vill ha din hjälp! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} lärare önskar frivilliga brinner för datavetenskaplig utbildning att hjälpa till med deras Hour of Code i December. <br>%{num_volunteers} frivilliga har anmält sig. Anslut dig.'
   volunteer_engineer_submission_intro_background: Hour of Code är en global rörelse för att prova en timme introduktion till datavetenskap som når tiotals miljoner studenter i 180 + länder. Kom gärna med under Computer Science Education Week, 7-13 december.
   volunteer_engineer_submission_intro_recruit: |-
     These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
@@ -537,7 +540,7 @@ sv-SE:
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: Kodtimmen är här – 8-14 december!
   code_sign_up: 'Registrera dig för att kunna delta i CS utbildnings- vecka'
   learn_more: Lär dig mer
@@ -554,6 +557,7 @@ sv-SE:
   hoc2014_try_scrat: Angry Birds, PvZ och Scrat
   hoc2014_try_frozen: Konstnären, med Anna och Elsa från Frost
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Övningar på ditt språk
@@ -622,6 +626,8 @@ sv-SE:
   projguts_name: Sten, sax, påse
   hourofcode_name: Platshållare för nya code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artist
   codeorg_gradelevel: Åldrarna 4-104
   codeintl_gradelevel: Åldrarna 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -663,6 +669,8 @@ sv-SE:
   frozen_gradelevel: Åldrar 8 +
   starwars_gradelevel: Ålder 6 +
   playlab_gradelevel: Åldrarna 4-104
+  infinity_gradelevel: Åldrarna 4-104
+  artist_gradelevel: Åldrarna 4-104
   codeorg_platformtext: Moderna webbläsare, smartphones, surfplattor
   codeintl_platformtext: Moderna webbläsare, smartphones, surfplattor
   thinkersmithspanish_platformtext: Ouppkopplad
@@ -741,10 +749,12 @@ sv-SE:
   thinkersmith2_shortdescription: Lär dig hur datorer använder ettor och nollor som representerar information
   kodableunplugged_shortdescription: En rolig ouppkopplad övning
   projguts_shortdescription: Prova modellering och simulering med hjälp av sten/papper/sax
-  hourofcode_shortdescription: Platshållare för nya code.org/hoc
+  hourofcode_shortdescription: Lär dig att koda med Mark Zuckerberg och Angry Birds!
   frozen_shortdescription: Vi kan använda kod för att följa Anna och Elsa när de utforskar isens magi och skönhet.
   starwars_shortdescription: Lär dig att programmera droids och skapa ditt egna Star Wars spel i en galax långt, långt borta.
   playlab_shortdescription: Skapa en berättelse eller gör ett spel med Play Lab!
+  infinity_shortdescription: Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .
+  artist_shortdescription: Rita häftiga bilder och mönster med artisten!
   codeorg_longdescription: Lär dig grundläggande begrepp av datavetenskap med dra och släpp-programmering. Detta är en spel-liknande, självförklarande handledningar video föreläsningar med Bill Gates, Mark Zuckerberg, Angry Birds och Plants vs. Zombies. Lär dig upprepa-loopar, villkorssatser och grundläggande algoritmer. Tillgänglig på 34 språk.
   codeintl_longdescription: Lär dig grundläggande begrepp av datavetenskap med dra och släpp-programmering. Detta är en spel-liknande, självförklarande handledningar video föreläsningar med Bill Gates, Mark Zuckerberg, Angry Birds och Plants vs. Zombies. Lär dig upprepa-loopar, villkorssatser och grundläggande algoritmer. Tillgänglig på 34 språk.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -975,3 +985,11 @@ sv-SE:
   compatibility_https_header: Aktivera HTTPS för Code.org.
   compatibility_https_message: "För att öka säkerheten, byter vi till HTTPS på %{https_date}. Du kommer inte att kunna komma åt Code.org efter detta datum. <a href='%{it_requirements_url}'> Klicka här</a> för att lära dig hur du aktiverar HTTPS för Code.org."
   compatibility_https_hide_this_warning: Dölj denna varning
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: flaxa
+  infinity_shortcode: inf
+  playlab_shortcode: spela
+  artist_shortcode: art

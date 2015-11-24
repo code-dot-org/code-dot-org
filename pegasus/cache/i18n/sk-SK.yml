@@ -1,4 +1,5 @@
 "sk-SK":
+  hour_of_code: Hodina kódovania
   hello: Ahoj svet
   select_language: Prosím, zvoľte si jazyk
   en: Počítačová veda
@@ -330,6 +331,7 @@
   starwars_watch_videos: Skôr než začnete, prezrite si niektoré zaujímavé videá
   starwars_speak_languages: Hovoríte iným jazykom?
   starwars_help_translate: Pomôžte nám s prekladom
+  starwars_platform_text: Moderné prehliadače, smartfóny, tablety
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
@@ -337,6 +339,7 @@
     this Minecraft world.
   mc_gradelevel: Ages 4-104
   mc_platformtext: Moderné prehliadače, smartfóny, tablety
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
@@ -690,6 +693,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
   hoc2014_try_frozen: Postavy s Annou a Elsou z Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Kurzy vo vašom jazyku
@@ -763,6 +767,8 @@
   projguts_name: Kameň, papier, nožnice
   hourofcode_name: Obsadené miesto pre nový code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Neobmedzená Play Lab
+  artist_name: Artist
   codeorg_gradelevel: Vek 4-104
   codeintl_gradelevel: Vek 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -804,6 +810,8 @@
   frozen_gradelevel: Vek 8+
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Vek 4-104
+  infinity_gradelevel: Vek 4-104
+  artist_gradelevel: Vek 4-104
   codeorg_platformtext: Moderné prehliadače, smartfóny, tablety
   codeintl_platformtext: Moderné prehliadače, smartfóny, tablety
   thinkersmithspanish_platformtext: Unplugged
@@ -892,12 +900,15 @@
     jednotiek a núl
   kodableunplugged_shortdescription: Zábavné cvičenie bez počítača (unplugged)
   projguts_shortdescription: Vyskúšaj modelovanie a simuláciu pomocou kameň/papier/nožnice
-  hourofcode_shortdescription: Obsadené miesto pre nový code.org/hoc
+  hourofcode_shortdescription: Nauč sa programovať s Markom Zuckerbergom a Angry Birds!
   frozen_shortdescription: S pomocou kódu sa pridajme k Anne a Elze, ktoré skúmajú
     kúzlo a krásu ľadu.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: Nauč sa základné pojmy informatiky pomocou vizuálneho "drag
     & drop" programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ sám.
     Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry Birds
@@ -1369,3 +1380,11 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Skryť toto upozornenie
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: mávni
+  infinity_shortcode: inf
+  playlab_shortcode: hrať
+  artist_shortcode: art

@@ -241,7 +241,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setPlayerSanta":function(d){return "velg spelar Julenisse"},
 "setPlayerShark":function(d){return "velg spelar Hai"},
 "setPlayerEaster":function(d){return "velg spelar Påskehare"},
-"setPlayerBatman":function(d){return "vis avatar Flaggermus gut"},
+"setPlayerBatman":function(d){return "vis avatar Flaggermusgut"},
 "setPlayerSubmarine":function(d){return "velg spiller Ubåt"},
 "setPlayerUnicorn":function(d){return "vis avatar Einhjørning"},
 "setPlayerFairy":function(d){return "vis avatar Fe"},

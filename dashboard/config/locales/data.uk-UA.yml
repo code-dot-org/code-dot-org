@@ -759,11 +759,11 @@
         starwars_blocks_intro: 'Зоряні війни: Закодуємо далеку Галактику - Вступ'
         starwars_blocks_events: 'Зоряні війни: Закодуємо далеку Галактику - Події'
         starwars_blocks_congrats: 'Зоряні війни: Закодуємо далеку Галактику - Вітання'
-        mc_intro: Minecraft - Introduction
-        mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        mc_intro: Майнкрафт - вступ
+        mc_repeat: Майнкрафт - повтори
+        mc_if_statements: Майнкрафт - команди умови
+        mc_congrats_share: Майнкрафт - вітання
+        mc_congrats_no_share: Майнкрафт - вітання
     callout:
       text:
         drag_blocks: Перетягни блок "рухатись" і прикріпи його під іншим блоком
@@ -873,12 +873,12 @@
         Infinity_move_collide_callout: Грати звук, коли відбувається дана подія.
         Infinity_repeat_callout: Помісти блоки руху всередину
         craft_run_button_callout: Натисни "Запустити", щоб випробувати програму
-        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
-          the other block
-        craft_callout_preplaced: We've put some blocks here to get you started
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can
-          you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command
-          to move forward?
+        craft_drag_block_callout: Перетягни блок "moveForward();" і прикріпи його
+          під іншим блоком
+        craft_callout_preplaced: Ми вже розмістили деякі блоки в заготовці
+        craft_inside_repeat: Повторюй дії, розміщуючи тут блоки
+        craft_callout_preplaced_house: Цей код розпочне побудову будинку. Можеш його
+          завершити?
+        craft_what_is_iron: Добувай це залізо!
+        craft_callout_moveforward: Цей код перевіряє наявність лави, можеш додати
+          команду, щоб рухатися вперед?

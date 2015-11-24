@@ -221,6 +221,7 @@ ro:
         playlab: Creează o aplicație
         artist: Desenează ceva
         calculate: Calculate Something
+        applab: Creează o aplicație
     user:
       classroom: Pagina de Start a Profesorilor
       district_dashboard: Tabel de instrumente pe zonă districtuală
@@ -482,7 +483,7 @@ ro:
       body: Folosește Laboratorul de Joacă pentru a crea o poveste sau un joc cu personaje Disney Infinity.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Exploreaza o lume Minecraft prin cod.
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
     students_made_these_with_code: Elevii au creat acestea cu secvențe de cod!

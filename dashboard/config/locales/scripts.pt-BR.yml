@@ -214,7 +214,7 @@
           Artist Binary: 'Artista: binário'
           description_audience: 10-18 anos de idade
           Super Challenge - Variables: Superdesafio - variáveis
-          Super Challenge - For Loops: Super desafio - Laços de repetição
+          Super Challenge - For Loops: Super desafio - Laços para
           Super Challenge - Functions and Parameters: Super Desafio - Funções e Parâmetros
           Extreme Challenge - Comprehensive: Desafio Extremo - Abrangente
         Course4pre:
@@ -766,6 +766,14 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: Laços enquanto
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         algebraPD3:
           title: DP - Fase 3
           description: Ensine álgebra com programação funcional com base em blocos
@@ -1571,12 +1579,12 @@
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
         iceage:
-          title: Laboratório de Jogos da Era do Gelo
-          description_short: Crie uma história ou faça um jogo com o Laboratório de
-            Jogos da Era do Gelo!
-          description: Crie uma história ou faça um jogo com o Laboratório de Jogos
-            da Era do Gelo!
-          Ice Age Play Lab: Laboratório de Jogos da Era do Gelo
+          title: Laboratório da Era do Gelo
+          description_short: Crie uma história ou faça um jogo com o Laboratório da
+            Era do Gelo!
+          description: Crie uma história ou faça um jogo com o Laboratório da Era
+            do Gelo!
+          Ice Age Play Lab: Laboratório da Era do Gelo
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1590,6 +1598,8 @@
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
           description_short: Programação
@@ -1609,6 +1619,13 @@
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Laços enquanto
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1623,24 +1640,23 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Laboratório de jogos do Gumball
-          description_short: Crie uma história ou faça um jogo com o Laboratório de
-            Jogos do Gumball!
-          description: Crie uma história ou faça um jogo com o Laboratório de Jogos
-            do Gumball!
-          Gumball Play Lab: Laboratório de jogos do Gumball
+          title: Laboratório do Gumball
+          description_short: Crie uma história ou faça um jogo com o Laboratório do
+            Gumball!
+          description: Crie uma história ou faça um jogo com o Laboratório do Gumball!
+          Gumball Play Lab: Laboratório do Gumball
         starwars:
           title: 'Star Wars: Construindo uma Galáxia com Código'
-          description_short: Aprenda a programar droids, e criar seu próprio jogo
-            de Star Wars em uma galáxia muito, muito distante.
-          description: Aprenda a programar droids, e criar seu próprio jogo de Star
+          description_short: Aprenda a programar droids, e crie seu próprio jogo do
+            Star Wars em uma galáxia muito, muito distante.
+          description: Aprenda a programar droids, e crie seu próprio jogo do Star
             Wars em uma galáxia muito, muito distante.
           Hour of Code 2015: Hora do Código 2015
         starwarsblocks:
           title: 'Star Wars: Construindo uma Galáxia com Código'
-          description_short: Aprenda a programar droids, e criar seu próprio jogo
-            de Star Wars em uma galáxia muito, muito distante.
-          description: Aprenda a programar droids, e criar seu próprio jogo de Star
+          description_short: Aprenda a programar droids, e crie seu próprio jogo do
+            Star Wars em uma galáxia muito, muito distante.
+          description: Aprenda a programar droids, e crie seu próprio jogo do Star
             Wars em uma galáxia muito, muito distante.
           Hour of Code 2015: Hora do Código 2015
         minecraft:
@@ -1650,7 +1666,14 @@
           Craft: Craft
         mc:
           title: Hora do Código Minecraft
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
+          description_short: Explore o mundo de Minecraft usando códigos
+          description: Use blocos de código para levar Steve ou Alex a uma aventura
+            pelo mundo do Minecraft
           Hour of Code 2015: Hora do Código 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit

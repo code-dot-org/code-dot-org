@@ -1,4 +1,5 @@
 pt-PT:
+  hour_of_code: Hora de Código
   hello: Olá mundo
   select_language: Por favor, escolhe o teu idioma
   en: Ciência da computação
@@ -305,12 +306,14 @@ pt-PT:
   starwars_watch_videos: Before you get started, watch one of these inspirational videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+  starwars_platform_text: Navegadores modernos, smartphones e tablets
+  mc_name: Hora do Código de Minecraft
+  mc_longdescription: Use blocos de código para levar o Steve ou a Alex numa aventura por este mundo Minecraft.
+  mc_shortdescription: Use blocos de código para levar o Steve ou a Alex numa aventura por este mundo Minecraft.
   mc_gradelevel: Ages 6+
   mc_platformtext: Navegadores modernos, smartphones e tablets
-  minecraft_subtitle: Minecraft Hour of Code
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  minecraft_subtitle: Hora do Código de Minecraft
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
@@ -552,7 +555,7 @@ pt-PT:
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: 'A Hora de Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência da Computação
   learn_more: Saber mais
@@ -569,6 +572,7 @@ pt-PT:
   hoc2014_try_scrat: Angry Birds, PvZ e Scrat
   hoc2014_try_frozen: O Artista com Anna e Elsa, do filme Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Tutoriais em português
@@ -637,6 +641,8 @@ pt-PT:
   projguts_name: Pedra, papel ou tesoura
   hourofcode_name: Espaço reservado para um novo code.org/hoc
   playlab_name: Laboratório
+  infinity_name: Laboratório infinito
+  artist_name: Artista
   codeorg_gradelevel: Dos 4 aos 104 anos
   codeintl_gradelevel: Dos 4 aos 104 anos
   thinkersmithspanish_gradelevel: Por todos
@@ -678,6 +684,8 @@ pt-PT:
   frozen_gradelevel: Maiores de 8 anos
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Dos 4 aos 104 anos
+  infinity_gradelevel: Dos 4 aos 104 anos
+  artist_gradelevel: Dos 4 aos 104 anos
   codeorg_platformtext: Navegadores modernos, smartphones e tablets
   codeintl_platformtext: Navegadores modernos, smartphones e tablets
   thinkersmithspanish_platformtext: Desligado
@@ -756,10 +764,12 @@ pt-PT:
   thinkersmith2_shortdescription: Aprenda como os computadores utilizam 1s e 0s para representar informações
   kodableunplugged_shortdescription: Um divertido exercício offline
   projguts_shortdescription: Conheça a modelagem e a simulação com pedra/papel/tesoura
-  hourofcode_shortdescription: Espaço reservado para um novo code.org/hoc
+  hourofcode_shortdescription: Aprende a programar com Mark Zuckerberg e com os Angry Birds!
   frozen_shortdescription: Use a programação para explorar a mágica e a beleza do gelo com Anna e Elsa.
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+  starwars_shortdescription: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
   playlab_shortdescription: Crie uma história ou um jogo no Laboratório!
+  infinity_shortdescription: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
+  artist_shortdescription: Faça desenhos e figuras legais com o Artista!
   codeorg_longdescription: Aprenda os conceitos básicos de Ciência da Computação com a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos básicos. Este tutorial está disponível em 34 idiomas.
   codeintl_longdescription: Aprenda os conceitos básicos de Ciência da Computação com a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos básicos. Este tutorial está disponível em 34 idiomas.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -799,7 +809,7 @@ pt-PT:
   projguts_longdescription: 'Esta atividade "offline" ajuda os alunos a aprender como a modelagem e a simulação funcionam, com um grupo de alunos jogando diferentes versões do jogo Pedra/Papel/Tesoura, e a ver os resultados como diferentes experiências de modelagem.'
   hourofcode_longdescription: Espaço reservado para um novo code.org/hoc
   frozen_longdescription: Vamos usar programação para explorar a magia e a beleza do gelo com a Anna e com a Elsa. Vais criar flocos de neve e padrões enquanto patinas no gelo, e ainda conseguirás construir a ilha encantada do inverno que poderás partilhar com os teus amigos!
-  starwars_longdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+  starwars_longdescription: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
   playlab_longdescription: Crie uma história ou faça um jogo no Laboratório! Faça animais, piratas, zumbis, ninjas e muitos outros personagens se moverem, fazer sons, marcar pontos e até mesmo lançar bolas de fogo!
   codeorg_beyond_name: Introdução à Ciência da Computação (Ensino Fundamental)
   khan_beyond_name: Aprenda programação de computador
@@ -989,3 +999,11 @@ pt-PT:
   compatibility_https_header: Habilite o HTTPS para Code.org.
   compatibility_https_message: "Para aumentar a segurança, vamos mudar para o HTTPS em %{https_date}. Você não vai poder acessar a Code.org após essa data. <a href='%{it_requirements_url}'>Clique aqui</a> para aprender a habilitar o HTTPS para a Code.org."
   compatibility_https_hide_this_warning: Ocultar este aviso
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: bater as assas
+  infinity_shortcode: inf
+  playlab_shortcode: jogar
+  artist_shortcode: art

@@ -265,6 +265,7 @@
         playlab: Utwórz aplikację
         artist: Narysuj cokolwiek
         calculate: Calculate Something
+        applab: Utwórz aplikację
     user:
       classroom: Domowa strona nauczyciela
       district_dashboard: Panel dzielnicy/okręgu
@@ -571,14 +572,14 @@
     frozen:
       title: Frosen
     starwars:
-      title: Star Wars
+      title: Gwiezdne Wojny
     infinity:
       title: Infinity Play Lab
       body: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity
         w rolach głównych.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Odkrywaj świat Minecraft poprzez kodowanie.
   gallery:
     students_drew_these_with_code: Uczniowie narysowali to z pomocą kodu!
     students_made_these_with_code: Uczniowie wykonali to z pomocą kodu!

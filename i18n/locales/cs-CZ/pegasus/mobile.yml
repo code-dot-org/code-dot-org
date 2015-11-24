@@ -1,4 +1,5 @@
 cs-CZ:
+  hour_of_code: Hodina kódu
   hello: Ahoj světe
   select_language: Prosím, zvolte jazyk
   en: Informatika
@@ -287,23 +288,25 @@ cs-CZ:
   starwars_javascript_start_button: Vyzkoušej hned
   starwars_blocks_title: Bloky
   starwars_blocks_description: Použij táhni-pusť bloky.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Mnoho jazyků (již brzy) | Moderní prohlížeče, smartphony, tablety | Věk 6-10
   starwars_blocks_start_button: Vyzkoušej hned
   starwars_watch_videos: Před zahájením práce, Prohlédněte si jedno z těchto inspirujících videí
   starwars_speak_languages: Mluvíš cizím jazykem?
   starwars_help_translate: Pomozte nám s překladem
-  mc_name: Minecraft Hodina kódu
-  mc_longdescription: Používej bloky kódu vzít Steva nebo Alexe na dobrodružství po Minecraft světu.
-  mc_shortdescription: Používej bloky kódu vzít Steva nebo Alexe na dobrodružství po Minecraft světu.
+  starwars_platform_text: Moderní prohlížeče, smartphony, tablety
+  mc_name: Hodina kódu Minecraftu
+  mc_longdescription: Použij bloky kódu, abys vzal Steva nebo Alexe na dobrodružství po světu Minecraftu.
+  mc_shortdescription: Použij bloky kódu, abys vzal Steva nebo Alexe na dobrodružství po světu Minecraftu.
   mc_gradelevel: Věk 6 +
   mc_platformtext: Moderní prohlížeče, smartphony, tablety
-  minecraft_subtitle: Minecraft Hodina kódu
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
+  mc_specs: Mnoho jazyků (již brzy) | Moderní prohlížeče a tablety | Věk 6 +
+  minecraft_subtitle: Hodina kódu Minecraftu
+  volunteer_engineer_submission_title: Inspirujte studenty a dobrovolníky pro Hodinu kódu.
   volunteer_engineer_submission_subtitle_generic: '100 000 učitelů bude hostit Hodinu kódu ve svých třídách letos 7.-13. prosince tohoto roku 2015. Chtějí vaši pomoc! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} učitelů shání dobrovolníky nadšené pro výuku informatiky, aby jim pomohli s Hodinou kódu letos v prosinci.<br>%{num_volunteers} dobrovolníků se přihlásilo. Přidejte se k nim.'
   volunteer_engineer_submission_intro_background: Hodina kódu je globální hnutí zkusit si hodinu Úvodu do informatiky dosahující desítky milionů studentů ve 180+ zemích. Zapojte se během týdne počítačové vědy vzdělávání 7.-13. prosince, prosím.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    Tito učitelé by rádi našli někoho <span style="font-family: 'Gotham 7r', sans-serif;">nadšeného do výuky informatiky</span>, kdo jim může pomoci v učebně, nebo někoho kodo může <span style="font-family: 'Gotham 7r', sans-serif;">inspirovat</span> jejich studenty přednáškou o šíři možností v informatice (to lze provést přes videokonferenci). Pokud se nechcete přihlásit jako dobrovolník, <a href="%{url}">zjistěte více</a> o možnosti zorganizovat svoji vlastní Hodinu kódu.
   volunteer_engineer_submission_intro_signup: 'Zadejte následující informace, pokud jste počítačové vědy student nebo software profesionál, prosím. Pole označená <span class="form-required-field"> *</span> jsou požadovaná.'
   volunteer_engineer_submission_header_shared: Informace sdílené s učiteli na dobrovolnické mapě
   volunteer_engineer_submission_field_name: Jméno
@@ -545,9 +548,9 @@ cs-CZ:
   learn_more: Další informace
   learn_sign_up_description: Přihlásit se k účasti Hodiny kódu během týdne CS vzdělávání
   learn_sign_up_button: Registrace
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Podívej se na tohle inspirační video se svou třídou
+  learn_videos_show: Ukaž tohle inspirační video své třídě
+  learn_videos_before_hoc: Podívej se na inspirační video před svojí Hodinou kódu
   learn_educator_resources_description: Dozvěďte se jak vyučovat Hodinu kódu
   learn_educator_resources_button: Pedagogické zdroje
   learn_are_you_educator: 'Jste pedagog? Zjistěte si na <a href="http://hourofcode.com/resources/how-to"> jak vyučovat Hodinu kódu</a>'
@@ -555,9 +558,10 @@ cs-CZ:
   hoc2014_try_new_tutorial: Vyzkoušej náš nový výukový kurz Hour of Code v beta verzi
   hoc2014_try_scrat: Angry Birds, PvZ a Scratch
   hoc2014_try_frozen: Umělec s Annou a Elsa, od zmrazené
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Tutoriály od Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Tutoriály od třetích stran
+  carousel_heading_third_party: Tutoriály od třetích stran
   carousel_heading_international: Výuka ve tvém jazyce
   carousel_heading_domestic: Kurzy dostupné v angličtině
   carousel_heading_beginners: Kurzy pro začátečníky
@@ -624,6 +628,8 @@ cs-CZ:
   projguts_name: Kámen, nůžky, papír
   hourofcode_name: Zástupný symbol pro nový code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Umělec
   codeorg_gradelevel: Stáří 4-104
   codeintl_gradelevel: Stáří 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -665,6 +671,8 @@ cs-CZ:
   frozen_gradelevel: Věk 8 +
   starwars_gradelevel: Věk 6 +
   playlab_gradelevel: Stáří 4-104
+  infinity_gradelevel: Stáří 4-104
+  artist_gradelevel: Stáří 4-104
   codeorg_platformtext: Moderní prohlížeče, smartphony, tablety
   codeintl_platformtext: Moderní prohlížeče, smartphony, tablety
   thinkersmithspanish_platformtext: Unplugged
@@ -743,10 +751,12 @@ cs-CZ:
   thinkersmith2_shortdescription: Naučte se, jak počítače reprezentují informace pomocí jedniček a nul
   kodableunplugged_shortdescription: Zábavné unplugged cvičení
   projguts_shortdescription: Vyzkoušejte modelování a simulaci pomocí kámen, nůžky, papír
-  hourofcode_shortdescription: Zástupný symbol pro nový code.org/hoc
+  hourofcode_shortdescription: Naučte se programovat s Markem Zuckerbergem a Angry Birds!
   frozen_shortdescription: Připojme se pomocí kódu k Anně a Else, které zkoumají kouzlo a krásu ledu.
   starwars_shortdescription: Nauč se programovat droidy a vytvořit si vlastní hru Star Wars v galaxii daleko, daleko pryč.
   playlab_shortdescription: Vytvoř příběh nebo udělej hru s Play Lab!
+  infinity_shortdescription: Použij Play Lab k vytvoření příběhu nebo hry s Disney Infinity postavami.
+  artist_shortdescription: Bakresli v pohodě obrázky a vzory s umělcem!
   codeorg_longdescription: Nauč se základní pojmy informatiky pomocí tahání myší. Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč se příkazy opakování, rozhodování a základní algoritmy. Dostupné v 34 jazycích.
   codeintl_longdescription: Nauč se základní pojmy informatiky pomocí tahání myší. Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč se příkazy opakování, rozhodování a základní algoritmy. Dostupné v 34 jazycích.
   thinkersmithspanish_longdescription: 'Použitím předdefinovaného "slovníkového Robota" budou žáci vedeni k objevování tak, aby prováděli specifické úkoly bez předchozí instruktáže. Tato pasáž učí žáky spojení mezi symboly a akcí, jakož i cennou dovednost ladění.'
@@ -976,3 +986,11 @@ cs-CZ:
   compatibility_https_header: Prosím povolte HTTPS pro Code.org
   compatibility_https_message: "Kvůli zvýšení zabezpečení, přecházíme  na HTTPS  %{https_date}. Nebude mít přístup k Code.org po tomto datu. <a href='%{it_requirements_url}'> zde se dozvíte,</a> jak povolit HTTPS pro Code.org."
   compatibility_https_hide_this_warning: Skrýt toto varování
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: mávni
+  infinity_shortcode: inf
+  playlab_shortcode: hrát
+  artist_shortcode: art

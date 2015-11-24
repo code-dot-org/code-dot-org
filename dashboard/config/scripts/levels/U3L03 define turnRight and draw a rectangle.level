@@ -64,7 +64,7 @@
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "true",
     "debugger_disabled": "true",
-    "lock_zero_param_functions": "false",
+    "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "true"
   }
 }]]></config>

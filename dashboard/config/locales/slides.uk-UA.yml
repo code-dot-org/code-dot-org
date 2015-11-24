@@ -829,10 +829,11 @@
           і вказуючи на різні проблеми та помилки.
       3:
         image: notes/C1_pair_programming_3.png
-        text: Communication is key to successful pair programming. No insults, be
-          respectful, don't be a bossy navigator, because nobody likes a backseat
-          driver. You and your partner should always be talking. The driver can explain
-          what she or he is doing. And the navigator can help suggest what to do next.
+        text: Спілкування є ключем до успішного програмування в парах. Не зневажай,
+          а шануй партнера. Будь ввічливим, не роби із себе владного командира, тому
+          що ніхто не любить заднє сидіння. Ви і ваш партнер завжди повинні говорити.
+          Водій може пояснити, що робить. І штурман може допомогти, запропонувати,
+          що робити далі.
       4:
         image: notes/C1_pair_programming_4.png
         text: The navigator should be thinking about the big picture and the driver
@@ -848,44 +849,42 @@
           done.
       2:
         image: notes/C1_planting_seed_2.png
-        text: Computers can be really smart but they can only understand you if you
-          tell them exactly what you want step by step. The great thing about algorithms
-          is that if you follow the instructions in order, you can do something that
-          you didn't know how to do ahead of time. It's like following a recipe.
+        text: Комп'ютери можуть бути дуже розумними, але вони можуть зрозуміти вас
+          тількти у тому випадку, якщо ви їм послідовно кажете, чого саме ви хочете.
+          Штука алгоритмів у тому, що якщо ви будете виконувати інструкції за порядком,
+          ви зможете зробити те, чого не вміли до цього. Це як слідувати рецепту.
       3:
         image: notes/C1_planting_seed_3.png
-        text: Today we're going to plant our own seeds using an algorithm. Create
-          your own algorithm by cutting apart the pictures. Select the pictures that
-          show steps in planting a seed and arrange those pictures in the correct
-          order.
+        text: Сьогодні ми висаджуємо насіння використовуючи алгоритм. Створити свій
+          власний алгоритм шляхом розрізання фотографій на частини. Вибрати фотографії,
+          які показують етапи в посадці насіння та організувати ці картинки в правильному
+          порядку.
       4:
         image: notes/C1_planting_seed_4.png
-        text: Now, it's time for you to see if your algorithm works. Follow the steps
-          in the algorithm very carefully. Are they in the correct order? Did you
-          succeed in planting a seed by following the algorithm? It's like programming
-          with pictures!
+        text: Тепер настав час для того, щоб побачити, чи ваш алгоритм працює. Виконуйте
+          алгоритм поступово і дуже ретельно. Ви на вірному шляху? Ви досягли успіху
+          в посадці насіння, дотримуючись алгоритму? Це як програмування з фотографіями!
       5:
         image: notes/C1_planting_seed_5.png
-        text: When we want to make chocolate, there are many big steps to that process
-          and each of those big steps has a set of smaller steps and there are different
-          recipes or algorithms depending on how we want the chocolate to taste. Each
-          step is important, even the small ones, so that without one step, the rest
-          of them cannot be completed. Creating algorithms that others can understand
-          is really important. That's why each step has to be written down so that
-          no matter who does it, the result is the same.
+        text: Коли ми хочемо зробити шоколад, ми маємо здійснити багато великих кроків
+          на шляху до цього, і кожен з цих кроків має набір менших кроків, і також
+          існують різні рецепти або алгоритми залежно від того, як ми хочемо, щоб
+          смакував шоколад. Кожен крок є важливим, навіть найменший, бо без нього
+          не буде здійснено процесу. Створення алгоритмів, які можуть бути зрозумілими
+          для інших - це дійсно важливо. Ось чому кожен крок повинен бути прописаний
+          так, що незалежно від того, хто його робить, результат залишається тим самим.
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
-        text: Time to get creative and use your coding skills to tell a story. Your
-          story will have actors and you will be able to make these actors talk and
-          interact with each other. Start thinking of what kind of story you want
-          to tell.
+        text: Час "спіймати" творчість і використати свої навички кодування, щоб розповісти
+          історію. Ваша історія буде мати акторів, і можна заставити цих акторів говорити
+          і взаємодіяти один з одним. Почніть думати, яку саме історію ви хочете розказати.
       2:
         image: notes/C1_playlab_storytelling_2.png
-        text: The cat's always been afraid of the dog and what if the cat figures
-          out that the dog is trying to be nice? The "when run" block starts everything.
-          The "move" block will move your character and the "say" block will make
-          your character say whatever you type.
+        text: Кіт завжди боїться собаку, але що буде, якщо кіт з'ясує, що собака намагається
+          сподобатись? "Коли запустити" блок починається все. Блок "руху" приведе
+          вашого персонажа до руху і блок "говоріння" спонукає вашого персонажа сказати
+          все, що ви введете.
       3:
         image: notes/C1_playlab_storytelling_3.png
         text: This is the "when actors collide" block which you can link up to the
@@ -2692,8 +2691,8 @@
           our workspace.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back into the toolbox.
+        text: Якщо вам треба видалити блок, просто виберіть його у схемі та перетягніть
+          назад у палітру інструментів.
       10:
         image: notes/starwars_blocks_intro_10.JPG
         text: After you hit run, you can always hit the reset button to get BB-8 back
@@ -2770,13 +2769,12 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: Мене звуть Йенс Бергенстен, але я більш відомий як Джеб. Я - головний
+          розробник Майнкрафт, тут в Mojang у Стокгольмі. Здається, мені було одинадцять
+          або дванадцять, коли я почав програмувати, бо хотів робити ігри. Один з
+          друзів батька сказав, що для цього треба програмувати. Так я і почав. Мені
+          подобається розробляти й з'ясовувати архітектуру гри. Це те, чим мені дійсно
+          подобається Майнкрафт.
       2:
         image: notes/mc_intro_2.JPG
         text: Over the next hour, you're going to learn the basics of computer science
@@ -2897,8 +2895,7 @@
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Вітаємо! Ви тільки що вивчили основні блоки компьютерної науки.
       2:
         image: notes/mc_congrats_share_2.JPG
         text: Now you can use these blocks to build your own creation. There are no
@@ -2916,8 +2913,7 @@
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Вітаємо! Ви тільки що вивчили основні блоки компьютерної науки.
       2:
         image: notes/mc_congrats_no_share_2.JPG
         text: Now you can use these blocks to build your own creation. There are no
@@ -2930,4 +2926,4 @@
           a house out of wool!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Тепер ви можете побудувати все, що хочете. Розважайтеся!

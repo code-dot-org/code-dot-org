@@ -500,11 +500,11 @@ is:
         starwars_blocks_intro: 'Star Wars: Gerð Vetrarbrautar með Kóða - Kynning'
         starwars_blocks_events: 'Star Wars: Gerð Vetrarbrautar með Kóða - Atvik'
         starwars_blocks_congrats: 'Star Wars: Gerð Vetrarbrautar með Kóða - Hamingjuóskir'
-        mc_intro: 'Minecraft - Introduction'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        mc_intro: 'Minecraft - Kynning'
+        mc_repeat: 'Minecraft - Endurtekning'
+        mc_if_statements: 'Minecraft - Ef setningar'
+        mc_congrats_share: 'Minecraft - Hamingjuóskir'
+        mc_congrats_no_share: 'Minecraft - Hamingjuóskir'
     callout:
       text:
         drag_blocks: 'Dragðu "færa" kubb og festu hann neðan í hinn kubbinn'
@@ -577,9 +577,9 @@ is:
         Infinity_move_collide_callout: Spila hljóð þegar þetta atvik á sér stað.
         Infinity_repeat_callout: 'Setja "færa" kubba hér innan í'
         craft_run_button_callout: 'Smelltu á "Keyra" til að prófa forritið þitt'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_drag_block_callout: 'Dragðu "moveForward();" kubb og festu hann neðan undir hinn kubbinn'
+        craft_callout_preplaced: Við höfum sett kubba hér til að koma þér af stað
+        craft_inside_repeat: Endurtaktu aðgerðir með því að setja kubba hér
+        craft_callout_preplaced_house: Þessi kóði mun byrja að byggja húsið þitt. Getur þú klárað það?
+        craft_what_is_iron: Grafðu út þetta járn!
+        craft_callout_moveforward: Þessi kóði mun athuga með hraun. Getur þú bætt við skipun um að fara áfram?

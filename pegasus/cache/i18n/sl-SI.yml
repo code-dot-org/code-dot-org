@@ -1,4 +1,5 @@
 "sl-SI":
+  hour_of_code: Ura kode
   hello: Pozdravljen svet
   select_language: Prosimo izberite vaš jezik
   en: računalniška znanost, računalništvo
@@ -329,6 +330,7 @@
     videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
+  starwars_platform_text: Sodobni brskalniki, pametni telefoni, tablice
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
@@ -336,6 +338,7 @@
     this Minecraft world.
   mc_gradelevel: Ages 4-104
   mc_platformtext: Sodobni brskalniki, pametni telefoni, tablice
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
@@ -686,6 +689,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ in Scrat
   hoc2014_try_frozen: Umetnik z Anno in Elsa (iz Disney-eve risanke Frozen)
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Vaje v vašem jeziku
@@ -758,6 +762,8 @@
   projguts_name: Kamen, papir, škarje
   hourofcode_name: Prostor za novi code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artist
   codeorg_gradelevel: Starost 4-104
   codeintl_gradelevel: Starost 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -799,6 +805,8 @@
   frozen_gradelevel: Starost 8 +
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Starost 4-104
+  infinity_gradelevel: Starost 4-104
+  artist_gradelevel: Starost 4-104
   codeorg_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   codeintl_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   thinkersmithspanish_platformtext: Izštekano
@@ -889,12 +897,16 @@
     da predstavijo informacije
   kodableunplugged_shortdescription: Zabavna izštekana vaja
   projguts_shortdescription: Poskusite modeliranje in simulacijo z igro kamen/papir/škarje
-  hourofcode_shortdescription: Prostor za novi code.org/hoc
+  hourofcode_shortdescription: Naučite se kodirati z Markom Zuckerbergom in Jeznimi
+    ptiči!
   frozen_shortdescription: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju
     čarabnosti in lepote ledu.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: Nauči se osnov računalništva s povleci in spusti programiranjem.
     To je igri podobna vaja z video predavanji, v katerih nastopajo Bill Gates, Mark
     Zuckerberg, Angry Birds in Rastline vs zombiji. Naučite se zanke repeat, pogojne
@@ -1349,3 +1361,11 @@
     Po tem datumu ne boste mogli dostopati do Code.org. <a href='%{it_requirements_url}'>
     Kliknite tukaj</a>, če želite izvedeti, kako omogočiti HTTPS za Code.org.
   compatibility_https_hide_this_warning: Skrij to opozorilo
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: plahutaj
+  infinity_shortcode: inf
+  playlab_shortcode: igraj
+  artist_shortcode: art

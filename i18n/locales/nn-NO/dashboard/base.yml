@@ -221,6 +221,7 @@ nn:
         playlab: Lag ein app
         artist: Teikn noko
         calculate: Calculate Something
+        applab: Lag ein app
     user:
       classroom: Lærar heimeside
       district_dashboard: Distrikt dashboard
@@ -258,9 +259,9 @@ nn:
       stages: 'Nivå å vise:'
       show_past: 'Vis elev-aktivitetar (%{bullet_html}) frå tidlegare:'
       levels_key: Nivånøklar
-      perfect: Perfekt fulført
-      completed: Fulført, men brukte for mange blokker
-      tried: Prøvde, men fulførte ikkje
+      perfect: Perfekt fullført
+      completed: Fullført, men brukte for mange blokker
+      tried: Prøvde, men fullførte ikkje
       not_tried: Ikkje prøvd enno
       activity: 'Viser elevens aktivitet i dei siste %{hours} %{plural}'
       no_section: Ikkje tilordna ein seksjon
@@ -275,7 +276,7 @@ nn:
       remove: fjern elev
       confirm_remove: Er du sikker på at du vil fjerne denne eleven?
       help_reassign: For å dele klassa inn i fleire seksjonar, vel ut dei elevane som skal med i den nye seksjonen!
-      help_register: I staden for å bruke mykje tid på å legge informasjon om kvar elev, kan du be klassa din om registrere seg sjølve. Elevane dine vil trenge brukarnamn og passord, men dei trenger ikkje å oppgi epost-adressa si. Viss ei elev gløymer passordet sitt, kan du sette det på nytt for dei.
+      help_register: I staden for å bruke mykje tid på å legge informasjon om kvar elev, kan du be klassa din om registrere seg sjølve. Elevane dine vil trenge brukarnamn og passord, men dei trenger ikkje å oppgi epost-adressa si. Viss ein elev gløymer passordet sitt, kan du sette det på nytt for dei.
       register: Be elevane om å registrere seg sjølve
       vist: Be elevane om å besøke
       section_code: 'og oppgi seksjonskoden deira:'
@@ -289,10 +290,10 @@ nn:
       students: Elevar
       section_code: Seksjonskode
       add_section_code: Legg til elevenes seksjonskode
-      secret: Hemmelighet
-      grade: Karakter
+      secret: Hemmelegheit
+      grade: Trinn
       course: Leksjon
-      rename: gi nytt namn
+      rename: gje nytt namn
       edit: rediger
       delete: slett
       confirm_delete: Er du sikker på at du vil slette denne seksjonen?
@@ -311,7 +312,7 @@ nn:
       section: Seksjon
       example: Løysingsframlegg
       example_with_number: 'Løysingsframlegg %{solution_number}'
-      submitted_on: 'Sendt inn %{date}'
+      submitted_on: 'Sendt inn:'
       unsubmit: Trekk tilbake
   user:
     email_confirm_needed: 'E-postadressa er ikkje stadfesta:'
@@ -360,7 +361,7 @@ nn:
     prize_info: 'Premier for deltaking (gjeld berre offentleg lærerarar i USA): opp til $1000 i klasseromsmidler.'
     tryfirst: 'Eller du kan prøve først og registrere deg seinare:'
     trynow: Prøv no
-    add_hint_help: Ver snitt og hjelp oss med å legge inn smarte hint i Code.org-innføringskursa
+    add_hint_help: Ver snill og hjelp oss med å legge inn smarte hint i Code.org-innføringskursa
     20hour_overview: Dette kurset på 20 timar introduserer grunnleggjande informasjonsvitskap og prinsipp frå programmering. Kurset er utvikla for bruk i 5. klasse og oppover, men det er morosamt å lære for alle aldersgruppe.
     test_videos_help: Prøv den nye videospelaren på skulen din
     try_beta_courses: Nyheit! Prøv betaversjonar av kursa våre for elevar på barnetrinnet
@@ -482,7 +483,7 @@ nn:
       body: Bruk Spill-Lab for å lage ei historie eller spel med Disney Infinity figurar.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Utforsk ei Minecraft-verd gjennom kode.
   gallery:
     students_drew_these_with_code: Elevar teikna desse ved å kode!
     students_made_these_with_code: Elever laga desse ved å kode!

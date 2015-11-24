@@ -202,7 +202,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "nectar":function(d){return "prendre du nectar"},
 "nectarRemaining":function(d){return "nectar"},
 "nectarTooltip":function(d){return "Prendre le nectar d'une fleur"},
-"nextLevel":function(d){return "Félicitations ! Vous avez terminé cette énigme."},
+"nextLevel":function(d){return "Félicitations ! Tu as terminé cette énigme."},
 "no":function(d){return "Non"},
 "noPathAhead":function(d){return "le chemin est bloqué"},
 "noPathLeft":function(d){return "pas de chemin à gauche"},

@@ -535,9 +535,9 @@
           zero e condividerlo con i tuoi amici.
       2:
         image: notes/playlab_intro_2.png
-        text: Lo schermo è suddiviso in tre parti principali. Sulla sinistra c'è lo
-          spazio del gioco dove viene eseguito il programma. Le spiegazioni per ogni
-          esercizio sono scritte qui sotto.
+        text: Lo schermo è suddiviso in tre parti principali. Sulla sinistra c'è l'area
+          di gioco dove viene eseguito il programma. Le spiegazioni per ciascun esercizio
+          sono scritte sotto quest'area.
       3:
         image: notes/playlab_intro_3.png
         text: La zona centrale è la "cassetta degli attrezzi". Ognuno di questi blocchi
@@ -1173,19 +1173,21 @@
           su per il tuo naso, pausa e pensa in linea!
       3:
         image: notes/C2_digital_footprint_3.png
-        text: Use your arms to hug your pet, to keep your clothes from getting wet,
-          and to wear your favorite sleeves and to help you fly and make believe.
-          Use your arms when you're online, to take break and balance time and leave
-          your tech behind and to find yourself a tree to climb. From your head down
-          to your toes, pause, think about it. From your feet up to your nose, pause
-          and think online!
+        text: Usa le tue braccia per abbracciare il tuo animale, per evitare i tuoi
+          vestiti di far bagnare, e per indossare le tue magliette preferite e per
+          aiutarti a volare ed essere felice. Usa le tue braccia quando sei connesso,
+          per fare un pausa e dividere il tempo con compromesso, e della tecnologia
+          scordarti e trovare un albero su cui arrampicarti. Dalla testa fino ai tuoi
+          piedi, fermati, riflettici adesso. Dai tuoi piedi fino al naso, fermati
+          e pensa connesso!
       4:
         image: notes/C2_digital_footprint_4.png
-        text: Use your gut to store your food, and to listen to its growling mood,
-          to make a belly flop, and to feel the gas in soda pop. Use your gut when
-          you're online, to know to watch for certain signs, and to let it guide the
-          way and tell you when it's not ok. From your head down to your toes, pause,
-          think about it. From your feet up to your nose, pause and think online!
+        text: Usa la tua pancia per il mangiare e per ascoltare il suo brontolare,
+          per dare una panciata e per sentire il gas nella bevanda gassata. Usa la
+          tua pancia quando sei connesso, per riconoscere un segnale espresso e per
+          farti guidare bene e dirti quando non conviene. Dalla testa fino ai tuoi
+          piedi, fermati, riflettici adesso. Dai tuoi piedi fino al naso, fermati
+          e pensa connesso!
       5:
         image: notes/C2_digital_footprint_5.png
         text: So think with your head, and feel with your heart, balance with your
@@ -2320,11 +2322,12 @@
           build a game from scratch that can be shared and played on a phone.
       5:
         image: notes/infinity_playlab_intro_5.png
-        text: Your screen is split into three main parts. On the left is the gamespace,
-          where your program will run. The instructions for each level are written
-          below. This middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace, and this
-          is where we'll build our program.
+        text: 'Lo schermo è diviso in tre parti principali. Sulla sinistra c''è l''
+          "area di gioco", dove viene eseguito il programma. Le spiegazioni per ciascun
+          esercizio sono scritte sotto quest''area. La zona centrale è la "cassetta
+          degli attrezzi": ognuno di questi blocchi corrisponde ad un''istruzione.
+          Lo spazio bianco sulla destra si chiama "area di lavoro" e qui costruisci
+          il tuo programma.'
       6:
         image: notes/infinity_playlab_intro_6.png
         text: To start off, you'll need to link your blocks to the orange "when run"
@@ -2621,19 +2624,21 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+        text: 'Ciao, sono Kathleen Kennedy e sono la produttrice di Guerre Stellari:
+          Episodio VII - Il Risveglio della Forza. Oggi lavoreremo con una delle nostre
+          celebrità, BB-8. BB-8 è un droide sferico. Tutto ciò che fa e ogni movimento
+          che fa è controllato dal software, cioè da programmi informatici. L''informatica
+          influisce su ogni settore industriale, dal marketing alle cure sanitarie
+          e perfino nel cinema. Infatti, per realizzare un film come Il Risveglio
+          della Forza, hanno lavorato insieme centinaia di informatici.'
       2:
         image: notes/starwars_intro_2.JPG
-        text: Ciao, sono Rachel Rose, un ingegnere senior nel settore Ricerca e Sviluppo
-          alla ILM e mi occupo dell'animazione e del gruppo di sviluppo delle creature.
-          Nel Risveglio della Forza, mi occupo di aiutare gli artisti a sviluppare
-          gli equipaggiamenti che costituiscono quelle parti che permettono ai personaggi
-          di apparire credibili come creature di una galassia molto molto lontana.
+        text: Ciao, sono Rachel Rose, un'informatica senior nel settore Ricerca e
+          Sviluppo alla ILM e mi occupo dell'animazione e del gruppo di sviluppo delle
+          creature. Nel Risveglio della Forza, mi occupo di aiutare gli artisti a
+          sviluppare gli equipaggiamenti che costituiscono quelle parti che permettono
+          ai personaggi di apparire credibili come creature di una galassia lontana
+          lontana...
       3:
         image: notes/starwars_intro_3.JPG
         text: Nella prossima ora, costruiremo la nostra personale versione del gioco
@@ -2645,449 +2650,493 @@
           per il web.
       4:
         image: notes/starwars_intro_4.JPG
-        text: To start off, we're going to work with Rey to program BB-8 to walk to
-          collect all of the scrap parts. Your screen is split into three parts. On
-          the left is the Star Wars game space, where code will run. The instructions
-          for each level are written below the game space.
+        text: Per cominciare, lavoriamo con Ray per programmare BB-8 in modo tale
+          da fargli raccogliere tutti i rottami metallici. Il tuo schermo è suddiviso
+          in tre parti. Sulla sinistra c'è l'area di gioco ("game space") di Star
+          Wars, in cui viene eseguito il codice. Le spiegazioni di ogni esercizio
+          ("instructions") sono scritte sotto quest'area.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: Al centro dello schermo c'è la cassetta degli attrezzi ("tool box")
+          che contiene i blocchi. Ognuno di questi blocchi è un'istruzione che BB-8
+          può eseguire.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
+        text: Lo spazio bianco sulla destra è la tua area di lavoro ("workspace")
+          ed è il posto in cui costruisci il tuo programma.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what
-          happens? BB-8 moves left one block on the grid.
+        text: Se sposti il blocco "moveLeft();" (vai a sinistra) sull'area di lavoro
+          come illustrato e premi il pulsante "Esegui" (Run), cosa succede? BB-8 si
+          sposta di una casella a sinistra sulla griglia.
       8:
         image: notes/starwars_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together.
+        text: E cosa puoi fare se vuoi che BB-8 faccia qualcosa dopo essere andato
+          a sinistra? Puoi aggiungere un altro blocco al programma. Scegli il blocco
+          "moveUp();" (vai in alto) e spostalo sotto il blocco "moveLeft();" che hai
+          aggiunto prima. Non appena appare una linea gialla sul contorno puoi rilasciarlo
+          e i due blocchi si agganceranno.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked
-          from top to bottom on our workspace. If you ever want to delete a block,
-          just remove it from the stack and drag it back into the tool box.
+        text: Se premo nuovamente "Esegui" (Run), BB-8 esegue le istruzioni associate
+          ai blocchi presenti nell'area di lavoro, procedendo dall'alto verso il basso.
+          Se vuoi cancellare un blocco, basta rimuoverlo dalla tua area di lavoro
+          e rimetterlo nella cassetta degli attrezzi.
       10:
         image: notes/starwars_intro_10.JPG
-        text: After you've hit run, you can always hit the reset button to get BB-8
-          back to the start. Now let's get rolling!
+        text: Dopo aver mandato in esecuzione il programma, puoi sempre cliccare su
+          "Ricomincia" (Reset) per riportare BB-8 al punto di partenza. E ora, iniziamo!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: All'interno dei blocchi che abbiamo usato ci sono delle istruzioni JavaScript.
-          JavaScript è uno dei linguaggi di programmazione più popolari per gli sviluppatori
-          professionali di oggi. I blocchi sono un ottimo modo per iniziare ad imparare
-          a scrivere codice, infatti, alcune tra le migliori università del mondo,
-          come ad es. Harvard e Berkeley, li usano. Però, una volta appresi i concetti
-          fondamentali, gli ingegneri preferiscono scrivere il codice in maniera testuale
-          perché gli permette di essere più veloci.
+        text: 'All''interno dei blocchi che abbiamo usato ci sono delle istruzioni
+          JavaScript. JavaScript è uno dei linguaggi di programmazione più popolari
+          per gli sviluppatori professionali di oggi. I blocchi sono un ottimo modo
+          per iniziare ad imparare a scrivere codice: infatti, alcune tra le migliori
+          università del mondo, come ad es. Harvard e Berkeley, li usano. Però, una
+          volta appresi i concetti fondamentali, gli informatici preferiscono scrivere
+          il codice in maniera testuale perché gli permette di essere più veloci.'
       2:
         image: notes/starwars_typing_2.JPG
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
+        text: Scrivendo il codice in modo testuale, si possono scrivere centinaia
+          di istruzioni di seguito senza doverle ogni volta prendere dalla cassetta
+          degli attrezzi e spostarle nell'area di lavoro. A te che stai imparando,
+          scrivere le istruzioni in maniera testuale potrà all'inizio richiedere più
+          tempo, ma abbiamo voluto darti la possibilità di provare.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show
-          text button on any puzzle to switch from blocks to typing code as text.
+        text: Nell'angolo in alto a destra della tua area di lavoro, puoi cliccare
+          il pulsante "Visualizza il testo" per passare dalla modalità a blocchi a
+          quella testuale.
       4:
         image: notes/starwars_typing_4.JPG
-        text: In the next lesson, we'll start you out in typing mode. Here you can
-          still drag the block from the toolbox or you can type the command name.
-          As you start to type, you'll see names of possible commands show below where
-          you're typing. Instead of typing the whole command name, you can select
-          one of these to move faster. In my job, I use this auto-complete feature
-          all the time when writing code.
+        text: Nella prossima lezione, inizieremo in modalità testuale. In questa modalità
+          puoi sempre trascinare i blocchi dalla tua cassetta degli attrezzi, però
+          puoi anche scrivere tu il nome dell'istruzione. Non appena inizi a scrivere
+          il nome dell'istruzione, vedrai apparire, sotto a ciò che stai scrivendo,
+          i nomi delle istruzioni che puoi selezionare. Invece di digitare tutto il
+          nome dell'istruzione, puoi selezionare una di quelle che ti vengono suggerite,
+          per essere più veloce. Nel mio lavoro uso sempre questa funzionalità di
+          "auto-completamento" quando scrivo del codice.
       5:
         image: notes/starwars_typing_5.JPG
-        text: When you're typing code, the computer needs you to be very precise.
-          You need to spell and capitalize the command name exactly correctly, including
-          the parentheses and the semi-colon. Even with a small typing mistake, BB-8
-          cannot understand the code and won't be able to move.
+        text: Quando scrivi del codice in modo testuale, devi essere estremamente
+          preciso, altrimenti il computer non potrà capirti. E' necessario scrivere
+          l'istruzione esattamente com'è, stando attenti alle maiuscole e includendo
+          anche le parentesi e i punti e virgola. Se c'è anche un solo piccolo errore
+          di battitura, BB-8 non potrà comprendere il codice e non sarà in grado di
+          muoversi.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
+        text: Se commetti un errore su una riga, l'editor di testo la evidenzierà
+          in modo tale che tu possa modificare la tua istruzione e risolvere il problema.
       7:
         image: notes/starwars_typing_7.JPG
-        text: If you get stuck, you can always start over with the start over button
-          and you can switch back to block mode at any time by clicking in the top-right
-          corner. Ok, let's give typing a try! And if you make mistakes, don't get
-          frustrated. It takes everybody a few tries to get it right.
+        text: Se ti blocchi, puoi sempre ricominciare premendo il pulsante “Ricomincia”
+          e puoi passare alla modalità a blocchi ogni volta che vuoi, cliccando sull'angolo
+          in alto a destra dell'area di lavoro. Ok, facciamo un tentativo! E se sbagli,
+          non scoraggiarti. Tutti hanno bisogno di un po' di tentativi per imparare
+          bene.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Ciao, il mio nome è Charita Carter e sono un produttore creativo senior
+          qui alla Walt Disney Imagineering. Io sono a capo dei gruppi che producono
+          le attrazioni per i nostri visitatori. Siamo sempre alla ricerca di nuovi
+          modi per migliorare e rendere più piacevoli le esperienze che vivono i nostri
+          ospiti e la tecnologia è al centro di tutto ciò.
       2:
         image: notes/starwars_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Complimenti, ce l'hai fatta! Hai programmato BB-8. Ora sei pronto per
+          qualcosa di un po' più difficile. Facciamola. Ora che hai imparato i concetti
+          fondamentali della programmazione, torniamo indietro e impara a costruire
+          la tua versione del gioco con R2-D2 e C-3PO.
       3:
         image: notes/starwars_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Per costruire un gioco, abbiamo bisogno di imparare qualcosa che i
+          programmatori di giochi utilizzano ogni giorno: gli "eventi". Gli "eventi"
+          dicono al programma di ascoltare o aspettare qualcosa che succederà: quando
+          questo avviene, il programma esegue un''azione.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Alcuni esempi di eventi sono quelli rappresentati da un clic del mouse,
+          dall'uso di un tasto freccia o dalla pressione di un dito sullo schermo.
       5:
         image: notes/starwars_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: In questo esempio, vogliamo far andare R2-D2 verso l'alto per consegnare
+          un messaggio a un pilota dell'Alleanza Ribelle e poi verso il basso per
+          andare dall'altro pilota dell'Alleanza Ribelle. Useremo gli eventi per spostarlo
+          quando il giocatore usa i pulsanti freccia verso l'alto o verso il basso.
       6:
         image: notes/starwars_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down.
+        text: Usiamo il blocco evento "whenUp()" (quando si preme sulla freccia verso
+          l'alto) e attacchiamo al suo interno un blocco "goUp()" (vai in alto). In
+          questo modo, quando il giocatore preme sul tasto freccia verso l'alto, verrà
+          eseguito il codice associato al blocco "whenUp()". E facciamo la stessa
+          cosa per far muovere R2-D2 verso il basso.
       7:
         image: notes/starwars_events_7.JPG
-        text: To do this, we'll use a command called whenUp(). When you drag the command
-          out of the toolbox, you'll see that it starts and ends with a curly bracket
-          instead of a semi-colon. This gives us space to put other commands in the
-          middle. Every command that we place inside these brackets will run when
-          the player presses the up arrow.
+        text: Per fare ciò, usiamo un'istruzione chiamata "whenUp()" (quando si preme
+          sulla freccia verso l'alto). Quando la trascini fuori dalla cassetta degli
+          attrezzi, vedrai che l'istruzione termina con delle parentesi graffe (aperta
+          e chiusa) invece che con un punto e virgola. Questa istruzione ha lo spazio
+          necessario a contenere altre istruzioni al suo interno. Ogni istruzione
+          che poniamo all'interno di queste parentesi graffe verrà eseguita quando
+          il giocatore userà la freccia verso l'alto.
       8:
         image: notes/starwars_events_8.JPG
-        text: We want R2-D2 to go up so let's put a goUp(); block inside the command.
-          And we'll do the same thing to make R2-D2 go down.
+        text: Noi vogliamo che R2-D2 vada verso l'alto e quindi mettiamo un blocco
+          "goUp();" (vai in alto) all'interno dell'istruzione. Poi facciamo la stessa
+          cosa per far andare R2-D2 verso il basso.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance,
-          we can let R2-D2 react to button press events that move him around the screen.
-          Step by step, your game is getting more interactive.
+        text: Ora, invece di dover scrivere in anticipo tutto il codice necessario
+          a controllare il nostro droide, lasciamo che R2-D2 reagisca agli eventi
+          legati alla pressione dei pulsanti spostandosi sullo schermo. Passo dopo
+          passo, il nostro gioco è sempre più interattivo.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Ciao, mi chiamo Alice e gestisco i gruppi di progettazione e produzione
+          qui a Code.org. Ho realizzato il corso che stai facendo adesso.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: 'Sei già arrivato all''ultimo esercizio. Complimenti! Hai già imparato
+          tutto quello che ti serve per creare la tua versione personale del gioco
+          di Star Wars. Non ci sono più istruzioni, né enigmi da risolvere. Puoi creare
+          il tuo gioco personale e decidere come funzionerà! Un''ultima cosa: hai
+          a disposizione nuovi suoni e nuove istruzioni per fare ancora di più.'
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[parlano gli studenti] Abbiamo fatto un gioco in cui si ottengono punti
+          quando raggiungi i Porco-Palla. Il colpo di scena è che ogni volta che raggiungi
+          un Porco-Palla viene visualizzato uno Stormtrooper. Alla fine l''intero
+          schermo è pieno di Porco-Palla e quando ne tocchi 10.000, vinci.'
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[parlano gli studenti] Abbiamo fatto un gioco in cui non si può perdere
+          e tutto ciò che uccidi ti dà punti. Per il mio programma, ho invertito i
+          tasti in modo che ogni volta che si preme la freccia verso l''alto, il personaggio
+          va giù e quando si preme la freccia verso destra, il tuo personaggio va
+          a sinistra. È molto difficile! A volte basta avere un vantaggio, e se sei
+          lo sviluppatore del gioco puoi darti un vantaggio sleale. Ce l''ho fatta?
+          Sìì!'
       5:
         image: notes/starwars_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Quando hai finito di creare la tua versione del gioco, clicca su condividi
+          per ottenere un link da condividere con i tuoi amici o per giocare sul tuo
+          telefono con la tua versione del gioco. Buon divertimento!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
         text: 'Ciao, sono Kathleen Kennedy e sono la produttrice di Guerre Stellari:
           Episodio VII - Il Risveglio della Forza. Oggi lavoreremo con una delle nostre
           celebrità, BB-8. BB-8 è un droide sferico. Tutto ciò che fa e ogni movimento
-          che fa è controllato da un software. L''informatica influisce su ogni settore
-          industriale, dal marketing alle cure sanitarie e perfino nel cinema. Infatti,
-          centinaia di ingegneri informatici hanno lavorato insieme per realizzare
-          un film come Il Risveglio della Forza.'
+          che fa è controllato dal software, cioè da programmi informatici. L''informatica
+          influisce su ogni settore industriale, dal marketing alle cure sanitarie
+          e perfino nel cinema. Infatti, per realizzare un film come Il Risveglio
+          della Forza, hanno lavorato insieme centinaia di informatici.'
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: Ciao, sono Rachel Rose, un ingegnere senior nel settore Ricerca e Sviluppo
-          alla ILM e mi occupo dell'animazione e del gruppo di sviluppo delle creature.
-          Nel Risveglio della Forza, mi occupo di aiutare gli artisti a sviluppare
-          gli equipaggiamenti che costituiranno le parti mobili del personaggio e
-          che permettono al personaggio di apparire veramente credibile in una galassia
-          molto molto lontana.
+        text: Ciao, sono Rachel Rose, un'informatica senior nel settore Ricerca e
+          Sviluppo alla ILM e mi occupo dell'animazione e del gruppo di sviluppo delle
+          creature. Nel Risveglio della Forza, mi occupo di aiutare gli artisti a
+          sviluppare gli equipaggiamenti che costituiscono quelle parti che permettono
+          ai personaggi di apparire credibili come creature di una galassia lontana
+          lontana...
       3:
         image: notes/starwars_blocks_intro_3.JPG
         text: Nella prossima ora, costruiremo la nostra personale versione del gioco
-          di Star Wars e ti insegneremo i concetti fondamentali della programmazione.
-          Di solito, la programmazione è interamente testuale ma, in questo caso,
-          per scrivere i nostri programmi, utilizzeremo dei blocchi che possiamo trascinare
-          e rilasciare. Per cominciare, lavoreremo con Ray per programmare BB-8 in
-          modo tale da andare a raccogliere tutti i rottami metallici.
+          di Star Wars. Ti insegneremo i concetti fondamentali della programmazione.
+          I programmi di solito sono interamente testuali ma, in questo caso, per
+          scrivere i nostri programmi, uniamo dei blocchi. Per cominciare, lavoriamo
+          con Ray per programmare BB-8 in modo tale da fargli raccogliere tutti i
+          rottami metallici.
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars
-          game space where code will run. The instructions for each level are written
-          below the game space.
+        text: Il tuo schermo è suddiviso in tre parti. Sulla sinistra c'è l'area di
+          gioco ("game space") di Star Wars, in cui viene eseguito il codice. Le spiegazioni
+          di ogni esercizio ("instructions") sono scritte sotto quest'area.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: Al centro dello schermo c'è la cassetta degli attrezzi ("tool box")
+          che contiene i blocchi. Ognuno di questi blocchi è un'istruzione che BB-8
+          può eseguire.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we're going to build our program.
+        text: Lo spazio bianco sulla destra è la tua area di lavoro ("workspace")
+          ed è il posto in cui costruisci il tuo programma.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8
-          moves left one block on the grid.
+        text: Se sposti il blocco "move left" (vai a sinistra) nell'area di lavoro
+          come illustrato e premi il pulsante "Esegui" (Run), cosa succede? BB-8 si
+          sposta di una casella a sinistra sulla griglia.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together. When I press run
-          again, BB-8 will perform the commands that are stacked top to bottom on
-          our workspace.
+        text: E cosa puoi fare se vuoi che BB-8 faccia qualcosa dopo essere andato
+          a sinistra? Puoi aggiungere un altro blocco al programma. Scegli il blocco
+          "move up" (vai in l'alto) e spostalo sotto il blocco "move left" che hai
+          aggiunto prima. Non appena appare una linea gialla sul contorno puoi rilasciarlo
+          e i due blocchi si agganceranno. Se premi nuovamente "Esegui" (Run), BB-8
+          esegue le istruzioni associate ai blocchi presenti nell'area di lavoro,
+          procedendo dall'alto verso il basso.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back into the toolbox.
+        text: Se vuoi cancellare un blocco, basta rimuoverlo dalla tua area di lavoro
+          e rimetterlo nella cassetta degli attrezzi.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: After you hit run, you can always hit the reset button to get BB-8 back
-          to the start. Now let's get rolling!
+        text: Dopo aver mandato in esecuzione il programma, puoi sempre premere il
+          pulsante "Ricomincia" (Reset) per riportare BB-8 al punto di partenza. E
+          ora, iniziamo!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Ciao, il mio nome è Charita Carter e sono un produttore creativo senior
+          qui alla Walt Disney Imagineering. Io sono a capo dei gruppi che producono
+          le attrazioni per i nostri visitatori. Siamo sempre alla ricerca di nuovi
+          modi per migliorare e rendere più piacevoli le esperienze che vivono i nostri
+          ospiti e la tecnologia è al centro di tutto ciò.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Complimenti, ce l'hai fatta! Hai programmato BB-8. Ora sei pronto per
+          qualcosa di un po' più difficile. Facciamola. Ora che hai imparato i concetti
+          fondamentali della programmazione, torniamo indietro e impara a costruire
+          la tua versione del gioco con R2-D2 e C-3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Per costruire un gioco, abbiamo bisogno di imparare qualcosa che i
+          programmatori di giochi utilizzano ogni giorno: gli "eventi". Gli "eventi"
+          dicono al programma di ascoltare o aspettare qualcosa che succederà: quando
+          questo avviene, il programma esegue un''azione.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Alcuni esempi di eventi sono quelli rappresentati da un clic del mouse,
+          dall'uso di un tasto freccia o dalla pressione di un dito sullo schermo.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: In questo esempio, vogliamo far andare R2-D2 verso l'alto per consegnare
+          un messaggio a un pilota dell'Alleanza Ribelle e poi verso il basso per
+          andare dall'altro pilota dell'Alleanza Ribelle. Useremo gli eventi per spostarlo
+          quando il giocatore usa i pulsanti freccia verso l'alto o verso il basso.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down. Now instead
-          of writing all the code to control our droid in advance, we can let R2-D2
-          react to button press events that move him around the screen.
+        text: Usiamo il blocco evento "whenUp()" (quando si preme sulla la freccia
+          verso l'alto) e attacchiamo al suo interno un blocco "goUp()" (vai in alto).
+          In questo modo, quando il giocatore preme sul tasto freccia verso l'alto,
+          verrà eseguito il codice associato al blocco "whenUp()". E facciamo la stessa
+          cosa per far muovere R2-D2 verso il basso. Ora, invece di dover scrivere
+          in anticipo tutto il codice necessario a controllare il nostro droide, lasciamo
+          che R2-D2 reagisca agli eventi legati alla pressione dei pulsanti spostandosi
+          sullo schermo.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Passo dopo passo, il nostro gioco è sempre più interattivo.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Ciao, mi chiamo Alice e gestisco i gruppi di progettazione e produzione
+          qui a Code.org. Ho realizzato il corso che stai facendo adesso.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: 'Sei già arrivato all''ultimo esercizio. Complimenti! Hai già imparato
+          tutto quello che ti serve per creare la tua versione personale del gioco
+          di Star Wars. Non ci sono più istruzioni, né enigmi da risolvere. Puoi creare
+          il tuo gioco personale e decidere come funzionerà! Un''ultima cosa: hai
+          a disposizione nuovi suoni e nuove istruzioni per fare ancora di più.'
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[parlano gli studenti] Abbiamo fatto un gioco in cui si ottengono punti
+          quando raggiungi i Porco-Palla. Il colpo di scena è che ogni volta che raggiungi
+          un Porco-Palla viene visualizzato uno Stormtrooper. Alla fine l''intero
+          schermo è pieno di Porco-Palla e quando ne tocchi 10.000, vinci.'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[parlano gli studenti] Abbiamo fatto un gioco in cui non si può perdere
+          e tutto ciò che uccidi ti dà punti. Per il mio programma, ho invertito i
+          tasti in modo che ogni volta che si preme la freccia verso l''alto, il personaggio
+          va giù e quando si preme la freccia verso destra, il tuo personaggio va
+          a sinistra. È molto difficile! A volte basta avere un vantaggio, e se sei
+          lo sviluppatore del gioco puoi darti un vantaggio sleale. Ce l''ho fatta?
+          Sìì!'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Quando hai finito di creare la tua versione del gioco, clicca su condividi
+          per ottenere un link da condividere con i tuoi amici o per giocare sul tuo
+          telefono con la tua versione del gioco. Buon divertimento!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: Il mio nome è Jens Bergensten, ma tutti mi chiamano Jeb. Sono il capo
+          sviluppatore di Minecraft, qui alla Mojang di Stoccolma. Penso di aver avuto
+          undici anni, o forse dodici, quando ho cominciato a programmare, perché
+          volevo creare dei giochi. Uno degli amici di mio padre mi aveva detto che,
+          per creare dei giochi, dovevo imparare a programmare. Ecco come ho iniziato.
+          Mi piace immaginare e progettare l'architettura dei giochi. Questo è ciò
+          che mi piace veramente di Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
+        text: Nella prossima ora, imparerai i concetti base dell'informatica dando
+          istruzioni a Steve o Alex in modo da farli muovere nel mondo virtuale di
+          Minecraft.
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: I programmi tradizionali sono di solito del testo detto "codice". Tu
+          invece scriverai programmi con Blockly, che usa blocchi colorati. I blocchi
+          vengono uniti per scrivere programmi. Anche se usi i blocchi, in realtà
+          stai scrivendo del codice JavaScript.
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: I concetti che stai per apprendere ("commands"=istruzioni, "repeat blocks"=blocchi
+          di ripetizione, "if statements"=istruzioni 'se') sono usati ogni giorno
+          dai programmatori di computer e sono le basi dell'informatica. Qui a Mojang,
+          utilizziamo questi stessi concetti per realizzare Minecraft.
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: Prima di iniziare, devi scegliere il tuo personaggio. Io scelgo Alex.
+          Realizziamo del codice per un programma che la fa muovere sullo schermo.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: Il tuo schermo è suddiviso in tre parti principali. Sulla sinistra si
+          trova l'area di gioco ("play space") di Minecraft, dove viene eseguito il
+          programma. Le spiegazioni di ogni esercizio ("instructions") sono scritte
+          sotto quest'area.
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: Questa zona centrale è la cassetta degli attrezzi ("tool box"). Ognuno
+          di questi blocchi è un'istruzione che dirige le azioni di Alex.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Lo spazio bianco sulla destra è la tua area di lavoro ("workspace")
+          ed è il posto in cui costruisci il tuo programma.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: Se sposti il blocco "moveForward" (vai avanti) nell'area di lavoro come
+          illustrato e premi il pulsante "Esegui", cosa succede? Alex si sposta di
+          una casella avanti sulla griglia.
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: E cosa puoi fare se vuoi che Alex faccia qualcosa dopo essere avanzata
+          di una casella? Puoi aggiungere un altro blocco al programma. Scegli il
+          blocco "turnRight" (gira a destra) e spostalo sotto il blocco "moveForward"
+          che hai aggiunto prima. Non appena appare una linea gialla sul contorno
+          puoi rilasciarlo e i due blocchi si agganceranno. Se premi nuovamente "Esegui",
+          Alex esegue le istruzioni associate ai blocchi presenti nell'area di lavoro,
+          procedendo dall'alto verso il basso.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: Se vuoi cancellare un blocco, basta rimuoverlo dalla tua area di lavoro
+          e rimetterlo nella cassetta degli attrezzi.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: 'Per annullare le modifiche e tornare nella situazione iniziale, usa
+          il pulsante "Ripristina" che trovi sull''angolo in alto a destra della tua
+          area di lavoro. Un''ultima cosa: hai notato il triangolino con la punta
+          verso il basso nei blocchi "gira a ...."? Ogni volta che vedi questi triangolini,
+          significa che puoi selezionare una tra più opzioni a tua disposizione. Inizia
+          a programmare!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: Sono Lydia Winters, sono "brand director" alla Mojang, che ha realizzato
+          questo gioco chiamato Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: La cosa che preferisco fare in Minecraft è esplorare. Amo avventurarmi
+          nelle grotte e vedere cosa riesco a trovare. Come chiunque altro che non
+          sia un programmatore, sono davvero entusiasta di seguire queste lezioni
+          con Minecraft e d'imparare anch'io un po' di codice.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: L'ultimo esercizio ha richiesto un bel po' di blocchi "vai avanti" (move
+          forward). Sarebbe stato più semplice se avessimo potuto dire al computer
+          di eseguire quattro o cinque volte l'istruzione "vai avanti". Fortunatamente,
+          i computer sono davvero bravi a ripetere le istruzioni usando il blocco
+          "ripeti ... volte" (repeat ... times).
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: Durante la creazione di Minecraft, usiamo i blocchi di ripetizione (detti
+          anche "cicli") per posizionare tutti i materiali necessari a creare un nuovo
+          mondo. Sono migliaia e migliaia di blocchi. Usiamo i cicli anche in altri
+          modi, ad esempio per far muovere i piedi di Alex avanti e indietro mentre
+          cammina. I cicli giocano un ruolo importantissimo nella programmazione.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: Sta per scendere la notte e quindi, nei prossimi due livelli, devi costruire
+          una casa per stare al sicuro. Useremo il blocco "ripeti ... volte" per farlo
+          in maniera molto semplice.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: Per costruire un muro della tua casa, puoi dire ad Alex di andare avanti
+          e mettere le assi di legno per quattro volte di fila, oppure puoi dirle
+          di andare avanti e mettere le assi di legno una sola volta, poi spostare
+          queste due istruzioni all'interno di un blocco "ripeti ... volte" per farle
+          eseguire queste azioni più volte. Poi inserisci nel blocco "ripeti ... volte"
+          il numero di volte che vuoi che ripeta queste azioni. Ed ora costruisci
+          la tua casa prima che scenda la notte! E buon divertimento.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: Stai per imparare le istruzioni "se" (if). Le istruzioni "se" sono una
+          parte fondamentale della programmazione. Danno al computer la possibilità
+          di prendere delle decisioni.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Tutti i computer usano le istruzioni "se", compreso il mio telefono.
+          Per esempio, quando sblocco il mio telefono, lui esegue del codice che dice
+          che se inserisco la password correttamente, allora il telefono si deve sbloccare.
+          Altrimenti, deve mostrare un messaggio di errore.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: Nel tuo codice puoi usare le istruzioni "se" per far agire Steve e Alex
+          in base a ciò che vedono nel mondo. Per esempio, se di fronte a loro c'è
+          una roccia, possono girare a sinistra. Oppure possono girare a destra se
+          si imbattono in un albero.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: In questo caso, non vuoi che cadano nella lava. È facile evitare la
+          lava quando la vedi sullo schermo. Ma cosa puoi fare se la lava è nascosta
+          sotto la roccia?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: Dopo che hai scavato la roccia, devi controllare se c'è della lava prima
+          di poter andare avanti. Se c'è della lava, devi mettere una lastra di pietra
+          prima di proseguire. In questo modo puoi avanzare tranquillamente. È il
+          momento di scavare altra roccia! E ricordati di usare l'istruzione "se"
+          per fare attenzione a dove metti i piedi.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Complimenti! Hai appena imparato i concetti di base dell'informatica.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Ora puoi usare questi blocchi per creare qualcosa di tuo. Non ci sono
+          più indicazioni o esercizi da risolvere. Puoi costruire qualunque cosa tu
+          voglia. A te la scelta.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[parlano gli studenti] Sembra reale. Tosare. Io ho fatto una L con
+          le torce. Io ho fatto una A con le assi di betulla. Funziona, funziona.
+          Abbiamo costruito una casa di lana!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Quando hai finito di creare la tua versione del gioco, clicca su "Condividi"
+          (Share) per ottenere un link da condividere con i tuoi amici o per giocare
+          sul tuo telefono con la tua versione del gioco. Buon divertimento!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Complimenti! Hai appena imparato i concetti di base dell'informatica.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Ora puoi usare questi blocchi per creare qualcosa di tuo. Non ci sono
+          più indicazioni o esercizi da risolvere. Puoi costruire qualunque cosa tu
+          voglia. A te la scelta.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[parlano gli studenti] Sembra reale. Tosare. Io ho fatto una L con
+          le torce. Io ho fatto una A con le assi di betulla. Funziona, funziona.
+          Abbiamo costruito una casa di lana!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Ora puoi costruire qualunque cosa tu voglia. Buon divertimento!

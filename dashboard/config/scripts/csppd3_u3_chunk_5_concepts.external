@@ -7,21 +7,22 @@ markdown <<MARKDOWN
 ### Unit 3 Overview > Chunk 5: Introduction to Loops and Arrays > Concepts
 
 <br/>
-<img src="https://images.code.org/90926d638b13b74fb200b8ecc9cfc00b-image-1446429898526.png" width="550" style="float:right; margin-left:30px">
+<img src="https://images.code.org/bdea1a079f63a4e55d6ef30efa9d47fe-image-1448049415486.56.04 AM.png" width="550" style="float:right; margin-left:30px">
 #### Content Overview
-So far in this unit, students have learned about functions, how to program with events, how to use variables to control the computer’s memory, and how to use conditionals to control the flow of a program. In the final instructional chunk of unit 3, students learn about **loops** and **arrays**.
+So far in this unit students have learned about functions, how to program with events, use variables, and how to use conditionals to control the flow of a program. In the final instructional chunk of unit 3, students learn about **while loops** and go into more depth with **for loops**, **arrays** and how to **write functions that return values.**
 <br><br>
-We explore two types of loops in this chunk - the **while loop** and the **for loop**. A *while loop* is useful when you have a conditional statement in which the "true" branch leads back to the original condition. For example, while it’s raining outside, you will wear a raincoat. In other words, you will perform the action for as long as the condition is true. A *for loop* is used to execute a block of code some number of times. The `repeat` loop we saw back in the first chunk of this unit was actually a version of the `for` loop, but with the statements that make the loop run abstracted away. When setting up a `for` loop, there are three pieces of setup that must be done: create a counter variable,  define the conditions for the loop to run, and increment or decrement the value of the counter variable. As we’ll see in this chunk, `for` loops are particularly useful for situations where we need to execute a piece of code a specific number of times, regardless of if that amount is defined when the program is written or as the program runs.  
+Students have used **for loops** already but only as simple "repeat loops" - we controlled the syntax of the code block so students only had to type in the number of times they wanted the loop to repeat.  In this chunk we break down what's happening with all the parts of the for-loop statement. 
 <br><br>
-**Arrays** are a data type that can store *multiple values* at the same time in *one variable*— in other words, arrays are lists of items. This is useful for situations where a program is keeping track of similar pieces of data, but it would get tedious for the programmer to assign each value to a different variable. In this unit students will get a chance to circle back to digital images (a topic that was covered in unit 1) and see how images are actually just large arrays of pixel data. 
+A **while loop** is a more general looping structure that runs as long as some supplied condition is `true`.  For example, while it’s raining outside, you will wear a raincoat.  Or "while I haven't rolled a 2 or 12, keep rolling the dice".  While loops are useful when you encounter situations when you want to repeat a block of code but you're not sure how long or how many times you need to repeat - instead you simply want to keep going as long as something is true.
+<br><br>
+**Arrays** are a data type that can store *multiple values* at the same time in *one variable*— in other words, arrays are lists of items. This is useful for situations where a program is keeping track of many pieces of data, but it would get tedious for the programmer to assign each value to a different variable. 
 <br><br>
 #### What it looks like
-This chunk starts with structured activities to motivate the concepts of loops and arrays, and then builds up to an open-ended project where students manipulate the pixels of an image. 
+This chunk starts with structured activities to motivate the concepts of loops and arrays, and then builds up to an open-ended project where students manipulate pixels on the app's screen. 
 
-<br><br>
 
 ##### Introduction to While Loops
-Earlier in the unit, students learned about simple loops that served to let them avoid duplicating code by enclosing segments of code inside of the `repeat` loop. In this chunk of lessons students are introduced to the `while` loop, which builds on the work they’ve just done with conditionals, but now rather than executing a piece of code one time when the condition is true, the code is repeated until the condition becomes false. 
+Earlier in the unit, students use for loops to simply repeat lines of code some number of times. In this chunk of lessons students are introduced to the `while` loop, which builds on the work they’ve just done with conditionals, but now rather than executing a piece of code one time when the condition is true, the code is repeated until the condition becomes false. 
 
 <br><br>
 >**CS Concepts:** 
@@ -31,7 +32,9 @@ Earlier in the unit, students learned about simple loops that served to let them
 - Loops can help us write programs that **simulate an experiment** that has a lot of data points (for example: flipping a coin 10,000 times)
 
 ##### Introduction to Arrays
-As students are generating more data in their programs and need to store more and more information, the prospect of creating individual variables for each piece of data becomes less appealing and harder to keep track of. In these lessons, students develop an understanding of how to use arrays, and build a simple app that stores information in an array that can be controlled by and displayed to the user. 
+Arrays are effectively lists of values.  As students are generating more data in their programs and need to store more and more information, the prospect of creating individual variables for each piece of data becomes less appealing and harder to keep track of. 
+
+In these lessons, students learn how to construct an array to use as a list in a program, and add, remove and insert items into the list.  They build a simple app that stores text or image information in an array that can be controlled by and displayed to the user.
 
 <br><br>
 
@@ -39,21 +42,28 @@ As students are generating more data in their programs and need to store more an
 
 >- An **array** is a data type that is very useful when writing a program that has a list of items that need to be stored. Without arrays, each items would need to be stored in its own variable, which means as the list grows the number of variables needed grows. An array allows us to store the whole list, or collection of elements, in one place. 
 - The contents of an array can change as the program runs.
-- We use a **for loop**  to move through the elements of an array.
 
-##### Image Data in Arrays
-This chunk ends with a three-lesson sequence where students extend their knowledge and begin to explore digital images, which are stored as arrays of image data (meta data and pixel data). Students construct mathematical functions and apply them to the pixel color values to manipulate the appearance of the image, effectively creating image filters like those you see on image sharing and editing apps like Instagram. 
+##### Processing Arrays and Functions with return values
+This chunk ends with a three-lesson sequence where students learn how to use and control `for` loops to iterate over an array of values.   
+<br><br>
+Many common techniques in programming involving writing loops that read, write, or compute things on lists (arrays) of data.  We introduce students to some of the classic algorithms of array processing: linear search, counting items in an array, finding the smallest or largest value in a list.
+<br><br>
+We then briefly re-visit functions and learn to create functions that `return` values.  Students have used many functions that return values in programs so far (randomNumber, getText, includes, etc.) but they have never written their own function that returns a value.  We have students practice writing small functions that accept input, calculate something and return a value.  These functions will be useful in the final project of the unit.
+<br><br>
+In the last lesson, students bring it all together in making a drawing app (using the **canvas** UI element) that tracks the user's mouse moves in an array, so that after the drawing is completed, different effects can be applied to the drawing by processing the array of mouse locations.  Students manage the complexity of this task by writing functions that return values to handle some of the more complex mathematical calculations.
 
 <br><br>
+
 >**CS Concepts:** 
 
->- **Images are actually an array of pixel-data.**
-- The appearance of an image can be altered by **altering the RGB values of the pixels**, which are stored as numbers in an array. 
+>- Looping over arrays to process their values (search, find min, find max)
+- Writing functions that return values
+- Using arrays in a novel way in an app
+- Employing mathematical concepts in a program
+- Developing a "complex" algorithm
 
 
 
 <br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

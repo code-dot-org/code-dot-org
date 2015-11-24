@@ -789,18 +789,18 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Construirea unei galaxii cu cod - Introducere'
-        starwars_typing: 'Star Wars: Construirea unei galaxii cu cod - JavaScript'
-        starwars_events: 'Star Wars: Construirea unei galaxii cu cod - Evenimente'
-        starwars_congrats: 'Star Wars: Construirea unei galaxii cu cod - Felicitări'
-        starwars_blocks_intro: 'Star Wars: Construirea unei galaxii cu cod - Introducere'
-        starwars_blocks_events: 'Star Wars: Construirea unei galaxii cu cod - Evenimente'
-        starwars_blocks_congrats: 'Star Wars: Construirea unei galaxii cu cod - Felicitări'
-        mc_intro: Minecraft - Introduction
-        mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        starwars_intro: 'Star Wars: Programarea unei galaxii - Introducere'
+        starwars_typing: 'Star Wars: Programarea unei galaxii - JavaScript'
+        starwars_events: 'Star Wars: Programarea unei galaxii - Evenimente'
+        starwars_congrats: 'Star Wars: Programarea unei galaxii - Felicitări'
+        starwars_blocks_intro: 'Star Wars: Programarea unei galaxii - Introducere'
+        starwars_blocks_events: 'Star Wars: Programarea unei galaxii - Evenimente'
+        starwars_blocks_congrats: 'Star Wars: Programarea unei galaxii - Felicitări'
+        mc_intro: Minecraft - introducere
+        mc_repeat: Minecraft - repetare
+        mc_if_statements: Minecraft - Declaratiile "Daca"
+        mc_congrats_share: Minecraft - Felicitari
+        mc_congrats_no_share: Minecraft - Felicitari
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc
@@ -915,12 +915,11 @@
         Infinity_move_collide_callout: Emite un sunet când se produce acest eveniment.
         Infinity_repeat_callout: Plasează blocuri de mutare în interior aici
         craft_run_button_callout: Apasă "Rulează" pentru a încerca programul tău
-        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
-          the other block
-        craft_callout_preplaced: We've put some blocks here to get you started
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can
-          you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command
-          to move forward?
+        craft_drag_block_callout: Trageţi un bloc "moveForward();" şi fixaţi-l sub
+          alt bloc
+        craft_callout_preplaced: Am pus unele blocuri aici pentru a începe
+        craft_inside_repeat: Repetaţi acţiunile prin plasarea blocurilor aici
+        craft_callout_preplaced_house: Acest cod iti va constui casa. Il poti termina?
+        craft_what_is_iron: Extrage acest fier!
+        craft_callout_moveforward: Acest cod te va ajuta sa vezi lava, poti adauga
+          o comanda pentru a inainta?

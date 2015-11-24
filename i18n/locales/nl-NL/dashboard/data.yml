@@ -248,7 +248,7 @@ nl:
         flappy_6: Kijk of je nog steeds punten geeft als Flappy meer of minder flappert.
         flappy_7: 'Probeer vervolgens de scène te wijzigen door een ander blok toe te voegen aan het "bij uitvoeren" blok.'
         flappy_8: Je kan de vormgeving altijd veranderen, niet alleen als het spel start. Probeer een WILLEKEURIGE achtergrond in te stellen als er iets gebeurt, bijvoorbeeld als Flappy een obstakel passeert.
-        flappy_9: Probeer voor de verandering om, als je een obstakel raakt, het spel niet te beëindigen maar de score weer op 0 te zetten.
+        flappy_9: Probeer voor de verandering eens de score op 0 te zetten in plaats van het spel te stoppen wanneer je tegen een obstakel botst.
         flappy_11: Maak je eigen Flappy spel. Je kunt de vormgeving en de regels helemaal veranderen, zelfs de zwaartekracht. Druk als je klaar bent op afronden om je vrienden je spel te laten spelen op hun telefoons.
         flappy_k1_1: Speel Flappy
         flappy_k1_2: 'Plak een blok aan het "bij een klik" blok, klik dan op "Uitvoeren". Klik of raak het scherm aan om Flappy naar zijn doel te bewegen.'
@@ -506,11 +506,11 @@ nl:
         starwars_blocks_intro: 'Star Wars: Bouw een Heelal met Code - Inleiding'
         starwars_blocks_events: 'Star Wars: Bouw een Heelal met Code - Gebeurtenissen'
         starwars_blocks_congrats: 'Star Wars: Bouw een sterrenstelsel met Code - Gefeliciteerd'
-        mc_intro: 'Minecraft - Introduction'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        mc_intro: 'Minecraft - Introductie'
+        mc_repeat: 'Minecraft - Herhalen'
+        mc_if_statements: 'Minecraft - Als-statements'
+        mc_congrats_share: 'Minecraft - Gefeliciteerd'
+        mc_congrats_no_share: 'Minecraft - Gefeliciteerd'
     callout:
       text:
         drag_blocks: 'Sleep een "vooruit" blok en plak het onder het andere blok'
@@ -582,10 +582,10 @@ nl:
         Infinity_move_directions_callout_arrow: Gebruik deze pijlen om te sturen
         Infinity_move_collide_callout: Speel een geluid af wanneer deze gebeurtenis plaatsvindt.
         Infinity_repeat_callout: Zet hierin verplaats blokken
-        craft_run_button_callout: 'Druk op "Uitvoeren" om het programma uit te proberen'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_run_button_callout: 'Klik "Uitvoeren" om het programma uit te proberen'
+        craft_drag_block_callout: 'Sleep een "moveForward();" blok en plaats het onder het andere blok'
+        craft_callout_preplaced: We hebben hier wat blokken geplaatst om je op weg te helpen
+        craft_inside_repeat: Herhaal acties door hier blokken te plaatsen
+        craft_callout_preplaced_house: Met deze code begin je met het bouwen van je huis. Kun jij het af maken?
+        craft_what_is_iron: Graaf dit blok ijzer!
+        craft_callout_moveforward: Deze code checkt voor lava, kun jij een commando toevoegen om vooruit te gaan?

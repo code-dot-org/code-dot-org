@@ -221,6 +221,7 @@ eu:
         playlab: Aplikazio bat sortu
         artist: Marraztu zerbait
         calculate: Calculate Something
+        applab: Aplikazio bat sortu
     user:
       classroom: Irakasleen sarrera orria
       district_dashboard: Hezkuntza distritua
@@ -484,7 +485,7 @@ eu:
       body: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak sortzeko
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Esploratu Minecraft mundu bat kodearen bitartez.
   gallery:
     students_drew_these_with_code: Ikasleek hauek irudikatu dituzte kodea erabiliz!
     students_made_these_with_code: Ikasleek hauek egin dituzte kodearekin!

@@ -1,7 +1,8 @@
 "da-DK":
+  hour_of_code: Hour of Code
   hello: Hej verden
   select_language: Vælg dit sprog
-  en: Computer Science
+  en: Computere og programmering
   computer_science_edweek: Computer Videnskabs Uddannelses Uge
   csedweek_dates: 8.-14. december 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -34,12 +35,12 @@
   hoc2014_everyone: Alle
   hoc2014_support: Støt &#x25BE;
   hoc2014_whatishoc: Hvad er "Hour of Code"?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_header: '# CSEdWeek / Hour of Code begivenheder over hele verden'
   csedweek_map_signup: Tilmeld dit arrangement
   csedweek_map_search_placeholder: Søg efter Hour of Code arrangementer
   csedweek_map_search_search: Søg
   csedweek_map_search_reset: Nulstil
-  csedweek_map_legend_title: Legend
+  csedweek_map_legend_title: Forklaring
   csedweek_map_legend_event: Hour of Code begivenhed
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Tilmeld
@@ -78,9 +79,9 @@
   course_name_course3: Kursus 3
   course_name_course4: Kursus 4
   congratulations_on_completing_course: Congratulations on completing %{course}
-  congrats_next_tutorials_title: Try these tutorials next
-  congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
-    tutorial</a>.
+  congrats_next_tutorials_title: Prøv dissse øvelser nu
+  congrats_next_tutorials_desc: Prøv disse kortere, 1 times øvelser eller prøv en
+    <a href="%{current_path}/next">partner-øvelse</a>.
   get_a_certificate_of_achievement: Få et certifikat for gennemførelsen
   enter_valid_age: Angiv venligst en gyldig alder
   enter_valid_email: Angiv en gyldig emailadresse
@@ -313,27 +314,28 @@
   class_submission_languages_other: Andre sprog
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
+  starwars_subtitle: Byg en galakse med kode
   starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_description: Brug træk-slip blokke og JavaScript.
+  starwars_javascript_specs: Kun på engelsk | Moderne browsere | Fra 11 år
   starwars_javascript_start_button: Prøv nu
-  starwars_blocks_title: blokke
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_title: Blokke
+  starwars_blocks_description: Brug træk-slip blokke.
+  starwars_blocks_specs: Mange sprog (kommer snart) | Moderne browsere, smartphones,
+    tablets | Fra 6-10 år
   starwars_blocks_start_button: Prøv nu
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
+  starwars_watch_videos: Før du går i gang, kan du se en af vores inspirationsvideoer
+  starwars_speak_languages: Taler du et andet sprog?
   starwars_help_translate: Hjælp os med at oversætte
+  starwars_platform_text: Moderne browsere, smartphones, tabletter
   mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
+  mc_longdescription: Brug kodeblokke til at lede Steve eller Alex gennem et eventyr
+    i denne Minecraft-verden.
+  mc_shortdescription: Brug kodeblokke til at lede Steve eller Alex gennem et eventyr
+    i denne Minecraft-verden.
   mc_gradelevel: Alder 6+
   mc_platformtext: Moderne browsere, smartphones, tabletter
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
@@ -683,6 +685,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
   hoc2014_try_frozen: Kunstner med Anna og Elsa, fra Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Vejledninger på dit sprog
@@ -754,6 +757,8 @@
   projguts_name: Sten, saks, papir
   hourofcode_name: Pladsholder for nye code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Kunstner
   codeorg_gradelevel: For 4-104-årige
   codeintl_gradelevel: For 4-104-årige
   thinkersmithspanish_gradelevel: Por todos
@@ -795,6 +800,8 @@
   frozen_gradelevel: Fra 8 år
   starwars_gradelevel: Alder 6+
   playlab_gradelevel: For 4-104-årige
+  infinity_gradelevel: For 4-104-årige
+  artist_gradelevel: For 4-104-årige
   codeorg_platformtext: Moderne browsere, smartphones, tabletter
   codeintl_platformtext: Moderne browsere, smartphones, tabletter
   thinkersmithspanish_platformtext: Ikke tilsluttet
@@ -881,12 +888,15 @@
     at repræsentere information
   kodableunplugged_shortdescription: En sjov unplugged øvelse
   projguts_shortdescription: Lær modelering og simulation ved at bruge sten/saks/papir
-  hourofcode_shortdescription: Pladsholder for nye code.org/hoc
+  hourofcode_shortdescription: Lære at kode med Mark Zuckerberg og Angry Birds!
   frozen_shortdescription: Lad os bruge noget kode for at slutte os til Anna og Elsa,
     når de går på opdagelse i magien og isens skønhed.
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortdescription: Lær at programmere droider, og lav dit eget Star Wars
+    spil i en galakse langt, langt herfra.
   playlab_shortdescription: Opret en historie eller lav et spil med Play Lab!
+  infinity_shortdescription: Brug Play Lab til at skabe en historie eller et spil
+    med karakterer fra Disneys Infinity
+  artist_shortdescription: Tegn seje billeder og designs!
   codeorg_longdescription: Lær de grundlæggende begreber i computer videnskab med
     træk og slip-programmering. Dette er et spil-lignende, selvstyret opgaveforløb
     med stjernespækket video foredrag af Bill Gates, Mark Zuckerberg, Angry Birds
@@ -1025,8 +1035,8 @@
   frozen_longdescription: Lad os bruge kode til at udforske isens magi og skønhed
     sammen med Anna og Elsa. Du kan tegne snefnug og mønstre, mens du skøjter og laver
     et vinterlandskab, som du derefter kan dele med dine venner!
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_longdescription: Lær at programmere droider, og lav dit eget Star Wars
+    spil i en galakse langt, langt herfra.
   playlab_longdescription: Skab en historie eller lav et spil i Play Lab! Få dyr,
     pirater, zombier, ninjaer og mange flere figurer til at bevæge sig. Lav lyde,
     scor point og endda kaste med ildkugler!
@@ -1351,3 +1361,11 @@
     Du vil ikke kunne få adgang til Code.org efter denne dato. <a href='%{it_requirements_url}'>
     Klik her</a> for at finde ud af  hvordan du aktiverer HTTPS for Code.org
   compatibility_https_hide_this_warning: Skjul denne advarsel
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: bask
+  infinity_shortcode: inf
+  playlab_shortcode: afspil
+  artist_shortcode: art

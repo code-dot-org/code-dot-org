@@ -1,4 +1,5 @@
 bs-BA:
+  hour_of_code: Sat Kodiranja
   hello: Pozdrav svijete
   select_language: Odaberi svoj jezik
   en: Računarstvo
@@ -288,11 +289,13 @@ bs-BA:
   starwars_watch_videos: Prije nego počneš, pogledaj jedan od ovih inspirativnih klipova
   starwars_speak_languages: Govoriš li neki drugi jezik?
   starwars_help_translate: Pomozi nam da prevedemo
+  starwars_platform_text: Savremeni browser-i, mobiteli, tableti
   mc_name: Sata Kodiranja Minecraft-a
   mc_longdescription: Iskoristi blokove koda da bi poveo Steve ili Alex u avanturu kroz Minecraft svijet.
   mc_shortdescription: Iskoristi blokove koda da bi poveo Steve ili Alex u avanturu kroz Minecraft svijet.
   mc_gradelevel: Uzrast 6+
   mc_platformtext: Savremeni browser-i, mobiteli, tableti
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Sata Kodiranja Minecraft-a
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 nastavnika će ugostiti Sat Kodiranja u njihovoj učionici ove godine, Dec 7-13, 2015. Oni žele tvoju pomoć! '
@@ -552,6 +555,7 @@ bs-BA:
   hoc2014_try_scrat: Angry Birds, Plants vs. Zombies i Scrat
   hoc2014_try_frozen: Budi umjetnik s Annom i Elsom iz Sniježnog kraljevstva
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Tutorijali i na tvom jeziku
@@ -620,6 +624,8 @@ bs-BA:
   projguts_name: Kamen, makaze, papir
   hourofcode_name: Prostor za novi code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab (Beskonačni Laboratorij Igranja)
+  artist_name: Umjetnik
   codeorg_gradelevel: Dob 4-104
   codeintl_gradelevel: Dob 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -661,6 +667,8 @@ bs-BA:
   frozen_gradelevel: Dob 8+
   starwars_gradelevel: Uzrast 6+
   playlab_gradelevel: Dob 4-104
+  infinity_gradelevel: Dob 4-104
+  artist_gradelevel: Dob 4-104
   codeorg_platformtext: Savremeni browser-i, mobiteli, tableti
   codeintl_platformtext: Savremeni browser-i, mobiteli, tableti
   thinkersmithspanish_platformtext: Izvanmrežno
@@ -739,10 +747,12 @@ bs-BA:
   thinkersmith2_shortdescription: Nauči kako kompjuteri koriste nule i jedinice za prikaz informacija
   kodableunplugged_shortdescription: Zabavna izvanmrežna vježba
   projguts_shortdescription: Pokušaj modelovanje i simulaciju uporabom kamen/makaze/papir
-  hourofcode_shortdescription: Prostor za novi code.org/hoc
+  hourofcode_shortdescription: Nauči programirati s Markom Zuckerbergom i Angry Birds!
   frozen_shortdescription: Hajde da se kodiranjem pridružimo Anni i Elsi dok istražuju čaroliju i ljepotu leda.
   starwars_shortdescription: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Upotrijebi Laboratorij Igranja da bi napravio/la priču ili igru u kojoj igraju karakteri Disney Beskonačnost.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: 'Nauči osnovne pojmove računarstva pomoću "povuci-i-ispusti" programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika.'
   codeintl_longdescription: 'Nauči osnovne pojmove računarstva pomoću "povuci-i-ispusti" programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika.'
   thinkersmithspanish_longdescription: 'Korištenjem ugrađenog "Robotskog Rječnika" učenici će otkriti kako navoditi jedan drugog ka izvršavanju određene zadaće bez prethodnog dogovaranja. Ova lekcija poučava djecu o nalaženju veze između simbola i akcije, kao i neprocjenjivo vrijednoj vještini ispravljanja grešaka.'
@@ -972,3 +982,11 @@ bs-BA:
   compatibility_https_header: Molimo da obezbijediš HTTPS za Code.org.
   compatibility_https_message: "Da vi se pojačala sigurnost, prebacujemo se na HTTPS na %{https_date}. Nećeš moći pristupiti Code.org nakon ovog datuma. <a href='%{it_requirements_url}'>Klikni ovdje</a> da naučiš kako omogućiti HTTPS za Code.org."
   compatibility_https_hide_this_warning: Sakrij ovo upozorenje
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: mahni krilima
+  infinity_shortcode: inf
+  playlab_shortcode: igraj
+  artist_shortcode: art

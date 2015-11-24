@@ -1,4 +1,5 @@
 "ru-RU":
+  hour_of_code: Hour of Code
   hello: Привет, мир!
   select_language: Выберите язык
   en: Информатика
@@ -323,6 +324,7 @@
     видео
   starwars_speak_languages: Говорите на другом языке?
   starwars_help_translate: Помогите нам перевести
+  starwars_platform_text: Современные браузеры, смартфоны, планшеты
   mc_name: Час Кода Minecraft
   mc_longdescription: Используйте блоки кода, чтобы помочь Стиву или Алексу в их приключениях
     в мире Minecraft.
@@ -330,6 +332,7 @@
     приключениях в мире Minecraft.
   mc_gradelevel: Возраст 6+
   mc_platformtext: Современные браузеры, смартфоны, планшеты
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Час Кода Minecraft
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100 000 учителей, собираются провести
@@ -693,6 +696,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ, и Scrat
   hoc2014_try_frozen: Рисуй вместе с Анной и Эльзой из "Холодного сердца"
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Обучающее руководство на Вашем языке
@@ -764,6 +768,8 @@
   projguts_name: Камень, ножницы, бумага
   hourofcode_name: Заполнитель для новых code.org/hoc
   playlab_name: Лаборатория игр
+  infinity_name: Лаборатория игр Infinity
+  artist_name: Художник
   codeorg_gradelevel: Возраст 4-104
   codeintl_gradelevel: Возраст 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -805,6 +811,8 @@
   frozen_gradelevel: Возраст 8 +
   starwars_gradelevel: Возраст 6+
   playlab_gradelevel: Возраст 4-104
+  infinity_gradelevel: Возраст 4-104
+  artist_gradelevel: Возраст 4-104
   codeorg_platformtext: Современные браузеры, смартфоны, планшеты
   codeintl_platformtext: Современные браузеры, смартфоны, планшеты
   thinkersmithspanish_platformtext: Офф-лайн
@@ -902,12 +910,16 @@
   kodableunplugged_shortdescription: Весёлые упражнения без компьютера
   projguts_shortdescription: Испытайте моделирование с помощью игры "Камень - ножницы
     - бумага"
-  hourofcode_shortdescription: Заполнитель для новых code.org/hoc
+  hourofcode_shortdescription: Учитесь программировать с Марком Цукербергом и Angry
+    Birds!
   frozen_shortdescription: Давайте использовать код, чтобы присоединиться к Анне и
     Эльзе, открывающим магию и красоту льда.
   starwars_shortdescription: Научись программировать дроидов и создай свою собственную
     игру по мотивам Звездных войн в далекой-далекой галактике.
   playlab_shortdescription: Создай историю или игру с Лабораторией игр!
+  infinity_shortdescription: Используйте лабораторию игр, чтобы создать историю или
+    игру с персонажами Disney Infinity.
+  artist_shortdescription: Рисуйте картины и узоры вместе с Художником!
   codeorg_longdescription: Изучайте основные понятия информатики с помощью drag-and-drop
     программирования. Это похожий на игру самоучитель с видеолекциями Билла Гейтса,
     Марка Цукерберга, Angry Birds и Plants vs. Zombies. Изучите циклы, условные операторы
@@ -1394,3 +1406,11 @@
     href='%{it_requirements_url}'> Нажмите здесь</a>, чтобы узнать как включить HTTPS
     для Code.org.
   compatibility_https_hide_this_warning: Скрыть это предупреждение
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: взмах крыльев
+  infinity_shortcode: inf
+  playlab_shortcode: играть
+  artist_shortcode: art

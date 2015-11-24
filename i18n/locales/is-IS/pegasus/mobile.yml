@@ -1,4 +1,5 @@
 is-IS:
+  hour_of_code: Klukkustund kóðunar
   hello: Halló heimur
   select_language: Vinsamlegast veldu tungumál þitt
   en: Tölvunarfræði
@@ -284,29 +285,31 @@ is-IS:
   class_submission_languages_other: Önnur tungumál
   inspirational_videos_more: 'Fleiri <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">hvatningarmyndbönd</a> með fyrirmyndum og frægu fólki'
   starwars_subtitle: Gerð Vetrarbrautar með Kóða
-  starwars_javascript_title: JavaScript
+  starwars_javascript_title: Javascript
   starwars_javascript_description: Notaðu færanlega kubba og JavaScript.
   starwars_javascript_specs: Aðeins á ensku | Nýlegir vafrar | Aldur 11+
   starwars_javascript_start_button: Prófa núna
   starwars_blocks_title: kubbar
   starwars_blocks_description: Nota færanlega kubba.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Mörg tungumál (á næstunni) | Nýlegir vafrar, snjallsímar, spjaldtölvur | Aldur 6-10
   starwars_blocks_start_button: Prófa núna
   starwars_watch_videos: Horfðu á eitt af þessum hvatningarmyndböndum áður en þú byrjar
   starwars_speak_languages: Talarðu annað tungumál?
   starwars_help_translate: Hjálpaðu að þýða
+  starwars_platform_text: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   mc_name: Klukkustund kóðunar með Minecraft
   mc_longdescription: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim.
   mc_shortdescription: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim.
   mc_gradelevel: Aldur 6+
   mc_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
+  mc_specs: Mörg tungumál (á næstunni) | Nýlegir vafrar og spjaldtölvur | Aldur 6+
   minecraft_subtitle: Klukkustund kóðunar með Minecraft
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
+  volunteer_engineer_submission_title: Vertu nemendum hvatning og hjálpaðu til við Klukkustund kóðunar.
   volunteer_engineer_submission_subtitle_generic: '100.000 kennarar ætla að halda Klukkustund kóðunar í skólastofunni 7.-13. des. 2015. Þeir þurfa aðstoð þína! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} kennara vantar sjálfboðaliða með brennandi áhuga á fræðslu í tölvunarfræði til að hjálpa til við Klukkustund kóðunar nú í desember.<br>%{num_volunteers} sjálfboðaliðar hafa skráð sig. Vertu með.'
   volunteer_engineer_submission_intro_background: Klukkustund kóðunar er alheimsátak í að prófa einnar klukkustundar inngang að tölvunarfræði. Það nær til tuga miljóna nemenda í 180+ löndum. Taktu þátt á einhvern hátt í Fræðsluviku tölvunarfræði 7.-13. desember.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    Þessi kennarar mundu gjarnan vilja fá einhvern <span style="font-family: 'Gotham 7r', sans-serif;">með brennandi áhuga á að fræða um tölvunarfræði</span> sem getur hjálpað í skólastofunni eða einhvern sem getur <span style="font-family: 'Gotham 7r', sans-serif;">hvatt</span> nemendur þeirra með því að tala um hin fjölmörgu tækifæri í tölvunarfræði (þetta gæti farið fram í með netspjalli). Ef þú hefur ekki tök á að hjálpa til, <a href="%{url}">þá er hér nánar</a> um að skipuleggja þína eigin Klukkustund kóðunar.
   volunteer_engineer_submission_intro_signup: 'Vinsamlegast skráðu eftirfarandi upplýsingar ef þú ert tölvunarfræðinemi eða hugbúnaðarsérfræðingur. Reiti merkta með <span class="form-required-field">*</span> þarf að fylla út.'
   volunteer_engineer_submission_header_shared: Upplýsingar sem deildar eru með kennurum á korti sjálfboðaliða
   volunteer_engineer_submission_field_name: Nafn
@@ -550,9 +553,9 @@ is-IS:
   learn_more: Nánar
   learn_sign_up_description: Skráðu þig til að taka þátt í Klukkustund kóðunar í Viku tölvufræðikennslu
   learn_sign_up_button: Skráning
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Horfðu á þetta hvatningarmyndband með bekknum þínum
+  learn_videos_show: Sýndu bekknum þínum þetta hvatningarmyndband
+  learn_videos_before_hoc: Horfðu á hvatningarmyndband á undan Klukkustund kóðunar
   learn_educator_resources_description: Lærðu að kenna Klukkustund kóðunar
   learn_educator_resources_button: Efni fyrir fræðara
   learn_are_you_educator: 'Ertu fræðari? Lærðu <a href="http://hourofcode.com/resources/how-to">hvernig á að kenna Klukkustund kóðunar</a>'
@@ -560,9 +563,10 @@ is-IS:
   hoc2014_try_new_tutorial: Prófaðu nýjustu Klukkustund kóðunar (beta)
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
   hoc2014_try_frozen: Listamaður með Önnu og Elsu úr Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Kennsluefni Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Kennsluefni 3ja aðila
+  carousel_heading_third_party: Kennsluefni þriðja aðila
   carousel_heading_international: Kennsluefni á þínu tungumáli
   carousel_heading_domestic: Kennsluefni á ensku
   carousel_heading_beginners: Kennsluefni fyrir byrjendur
@@ -629,6 +633,8 @@ is-IS:
   projguts_name: Steinn, pappír, skæri
   hourofcode_name: Staðgengill fyrir nýtt code.org/hoc
   playlab_name: Leikjasmiðja
+  infinity_name: Infinity leikjasmiðja
+  artist_name: Listamaður
   codeorg_gradelevel: 4-104 ára
   codeintl_gradelevel: 4-104 ára
   thinkersmithspanish_gradelevel: Por todos
@@ -670,6 +676,8 @@ is-IS:
   frozen_gradelevel: 8+ ára
   starwars_gradelevel: Aldur 6+
   playlab_gradelevel: 4-104 ára
+  infinity_gradelevel: 4-104 ára
+  artist_gradelevel: 4-104 ára
   codeorg_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
   codeintl_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
   thinkersmithspanish_platformtext: Án tölvu
@@ -748,10 +756,12 @@ is-IS:
   thinkersmith2_shortdescription: Lærðu hvernig tölvur nota 1 og 0 til að tákna upplýsingar
   kodableunplugged_shortdescription: Skemmtilegt verkefni án tölvu
   projguts_shortdescription: Prófaðu gerð hermilíkana með stein/pappír/skærum
-  hourofcode_shortdescription: Staðgengill fyrir nýtt code.org/hoc
+  hourofcode_shortdescription: Lærðu að kóða með Mark Zuckerberg og Angry Birds!
   frozen_shortdescription: Notum kóða til að fylgja Önnu og Elsu er þær kanna töfra og fegurð íss.
   starwars_shortdescription: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
   playlab_shortdescription: Búðu til sögu eða leik með Leikjasmiðju!
+  infinity_shortdescription: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum.
+  artist_shortdescription: Teiknaðu flottar myndir og mynstur með listamanninum!
   codeorg_longdescription: Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lærðu á lykkjur, skilyrði og grunnalgrím. Tiltækt á 34 tungumálum.
   codeintl_longdescription: Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lærðu á lykkjur, skilyrði og grunnalgrím. Tiltækt á 34 tungumálum.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -981,3 +991,11 @@ is-IS:
   compatibility_https_header: Vinsamlegast virkjaðu HTTPS fyrir Code.org.
   compatibility_https_message: "Til að auka öryggi erum við að skipta yfir í HTTPS frá og með %{https_date}. Þú munt ekki geta opnað Code.org eftir það nema með HTTPS. <a href='%{it_requirements_url}'>Smelltu hér</a> til að læra að virkja HTTPS fyrir Code.org."
   compatibility_https_hide_this_warning: Fela þessa aðvörun
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: blaka
+  infinity_shortcode: inf
+  playlab_shortcode: spila
+  artist_shortcode: art

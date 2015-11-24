@@ -1,4 +1,5 @@
 es-MX:
+  hour_of_code: La Hora del Código
   hello: Hola mundo
   select_language: Por favor seleccione su idioma
   en: Ciencias de la Computación
@@ -34,7 +35,7 @@ es-MX:
   csedweek_map_search_reset: Reiniciar
   csedweek_map_legend_title: Leyenda
   csedweek_map_legend_event: Evento de la Hora del Código
-  csedweek_map_legend_cs_tech_jam: Eventos Especiales de Ciencias de la Computación
+  csedweek_map_legend_cs_tech_jam: Encuentro de Ciencias de la Computación
   cded_sign_up: Registrarse
   cded_try_it: Pruébalo
   twentyhours_trynow: Probar ahora
@@ -54,7 +55,7 @@ es-MX:
   thank_you_: ¡Gracias!
   congratulations: Felicidades!
   congratulations_on_completing_hoc: Felicitaciones por completar una Hora del Código
-  congratulations_volunteer: 'Felicidades: ahora que has probado la Hora del Código, <a href="https://code.org/volunteer"> inscríbete como voluntario en el aula</a> y ayuda a estudiantes a aprender una Hora de Código!'
+  congratulations_volunteer: 'Felicidades: ahora que has probado la Hora del Código, <a href="https://code.org/volunteer"> inscríbete como voluntario en el aula</a> y ¡ayuda estudiantes a realizar la Hora de Código!'
   course_name_accelerated: Curso acelerado
   course_name_course1: Curso 1
   course_name_course2: Curso 2
@@ -147,17 +148,17 @@ es-MX:
   studiobar_donate_body: Un niño aprende por cada dólar que done
   studiobar_shop_title: Tienda
   studiobar_shop_body: Rompe los estereotipos. Usa nuestro logotipo con orgullo.
-  homepage_hero_text_malala: '&ldquo;Hago un reto a chicas en cada país a aprender una "Hora de código"&rdquo; Malala, ganadora del Premio Nobel de la paz'
+  homepage_hero_text_malala: '&ldquo;Desafía a las chicas de cada país a aprender una "Hora de Código"&rdquo; Malala, ganadora del Premio Nobel de la Paz'
   homepage_hero_text_susan: '"Si puedes cambiar la tecnología, puedes cambiar el mundo." Susan, CEO de YouTube'
-  homepage_hero_text_fistbump: '"No sólo juegues con tu  teléfono, prográmalo" Presidente Barack Obama'
-  homepage_hero_text_sheryl: '&ldquo;Nuestros hijos &mdash;incluyendo nuestras chicas&mdash; necesitan la oportunidad de aprender ciencias de la computación.&rdquo; Sheryl, COO de Facebook'
-  homepage_hero_text_satya: '&ldquo;Las ciencias de la computación pueden permitirle acceder a las mejores oportunidades en el mundo.&rdquo; Satya, CEO de Microsoft'
-  homepage_hero_text_bosh: '"Si programas, puedes elegir el curso de tu vida." Chris Bosh'
+  homepage_hero_text_fistbump: '&ldquo;No sólo juegues con tu teléfono, prográmalo.&rdquo; Presidente Barack Obama'
+  homepage_hero_text_sheryl: '&ldquo;Nuestros hijos &mdash;incluyendo nuestras chicas&mdash; necesitan la oportunidad de aprender Ciencias de la Computación.&rdquo; Sheryl, COO de Facebook'
+  homepage_hero_text_satya: '&ldquo;Las Ciencias de la Computación pueden permitirte acceder a las mejores oportunidades en el mundo.&rdquo; Satya, CEO de Microsoft'
+  homepage_hero_text_bosh: '&ldquo;Si programas, puedes elegir el curso de tu vida.&rdquo; Chris Bosh'
   homepage_hero_text_student1: |
     &ldquo;Estas habilidades han cambiado mi futuro. Sin mencionar, esto es simplemente diversión.&ldquo;
     Luna, 7 º grado
   homepage_hero_text_student2: |
-    &ldquo;Yo nunca había visto mis hijos tan emocionados por aprender&ldquo;
+    &ldquo;Yo nunca había visto a mis hijos tan emocionados por aprender&ldquo;
     Michael, profesor
   homepage_hero_text_student3: |
     &ldquo;Ciencias de la computación es un campo que no puedes saber si te gusta o no antes de intentarlo&ldquo;
@@ -177,46 +178,46 @@ es-MX:
   homepage_hero_text_stat_loc: '# lineas de código escritas por estudiantes'
   homepage_hero_text_stat_students: '#student_count cuentas del estudiante en Code Studio'
   homepage_hero_text_stat_served: 'La Hora del Codigo: #Served servidos'
-  homepage_slot_text_hoc: La Hora de Programación
-  homepage_slot_text_frozen: Congelados con Anna y Elsa
-  homepage_slot_text_teacher: Tablero Maestro del Profesor
+  homepage_slot_text_hoc: La hora de Código
+  homepage_slot_text_frozen: Frozen con Anna y Elsa
+  homepage_slot_text_teacher: Panel del docente
   homepage_slot_text_studio: Todos nuestros tutoriales
   homepage_slot_text_course4: Curso 4
   homepage_slot_text_shop: Tienda
   homepage_slot_text_flappy: Código Flappy
   homepage_action_text_hoc: Una hora de código para cada estudiante.
   homepage_action_text_num_served: '# servido'
-  homepage_action_text_join_us: Únete
+  homepage_action_text_join_us: Participa
   homepage_action_text_sign_up: Registrarse
-  homepage_action_text_try_it: Pruébalo
+  homepage_action_text_try_it: Inténtalo
   homepage_action_text_volunteers: Se necesitan voluntarios técnicos
   homepage_action_text_codevideo: Mirá el video
-  homepage_action_text_teachervideo: Mirá el video
+  homepage_action_text_teachervideo: Mira el video
   homepage_action_text_girlvideo: Inspira a una chica
   homepage_action_text_learn: Empieza a aprender
-  homepage_action_text_signpetition: Firmá la petición
+  homepage_action_text_signpetition: Firma la petición
   homepage_signpetition_dropdown: 'Firma nuestra petición &#x25BE;'
   homepage_diversity_pledge: Toma la promesa de diversidad
-  homepage_banner_text_prizes: 'Vuelve la Hora del Código, 7-13 de Diciembre. '
-  homepage_banner_link_prizes: 'Únete al mayor evento educativo de la historia. '
-  homepage_banner_text_main: Code.org y el College Board forman una alianza para mejorar la diversidad en Ciencias de la computación.
+  homepage_banner_text_prizes: 'Del 7 al 13 de diciembre, vuelve la Hora del Código. '
+  homepage_banner_link_prizes: Únete al mayor evento educativo de la historia.
+  homepage_banner_text_main: Code.org y el College Board forman una alianza para mejorar la diversidad en Ciencias de la Computación.
   homepage_banner_text_link: Aprende más
-  homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
+  homepage_banner_privacy_main: '3 de agosto: Hemos actualizado nuestra política de privacidad para incluir herramientas que se utilizan en nuestro nuevo curso básico de Ciencias de la Computación para la escuela secundaria.'
   homepage_banner_privacy_link: Aprende más
-  homepage_slot_text_title_hoc: Hora del código
-  homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comience hoy mismo
+  homepage_slot_text_title_hoc: Hora del Código
+  homepage_slot_text_blurb_hoc: Todos podemos aprender. Comience hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
-  homepage_slot_text_link_host: Sea anfitrión de una hora de código
+  homepage_slot_text_link_host: Organice una Hora de Código
   homepage_slot_text_link_hocserved: '# servido'
-  homepage_solot_text_link_volunteer: Hazte voluntario para la Hora del Código
-  homepage_slot_text_title_students: Alumnos
+  homepage_solot_text_link_volunteer: Voluntarios para la Hora del Código
+  homepage_slot_text_title_students: Estudiantes
   homepage_slot_text_blurb_students: Explora todos nuestros tutoriales
   homepage_slot_text_link_codestudio: Prueba Code Studio
   homepage_slot_text_link_local: Encuentra una clase local
   homepage_slot_text_link_othercourses: Otros cursos en línea
   homepage_slot_text_title_educators: Educadores
-  homepage_slot_text_blurb_educators: Enseña a tus alumnos
-  homepage_slot_text_link_k5: Cursos para los grados K-5
+  homepage_slot_text_blurb_educators: Enseña a tus estudiantes
+  homepage_slot_text_link_k5: Cursos para el jardín de infantes
   homepage_slot_text_link_fullcurriculum: Ver nuestro curriculum completo
   homepage_slot_text_link_pd: Desarrollo profesional
   homepage_slot_text_title_advocates: Defensores
@@ -265,31 +266,33 @@ es-MX:
   class_submission_level_college: Universidad
   class_submission_level_vocational: Vocacional
   class_submission_languages_other: Otros idiomas
-  inspirational_videos_more: 'Más <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> vídeos inspiradores</a> por modelos y celebridades'
+  inspirational_videos_more: 'Más <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> videos inspiradores</a> de modelos y celebridades'
   starwars_subtitle: Construyendo una Galaxia con Código
   starwars_javascript_title: JavaScript
-  starwars_javascript_description: Arrastra y suelta bloques y utiliza JavaScript.
-  starwars_javascript_specs: Solo en inglés | Navegadores modernos | Mayores de 11 años
+  starwars_javascript_description: Usa los bloques y JavaScript.
+  starwars_javascript_specs: Navegadores modernos | Edades 11+
   starwars_javascript_start_button: Probar ahora
-  starwars_blocks_title: bloques
-  starwars_blocks_description: Arrastra y suelta bloques.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_title: Bloques
+  starwars_blocks_description: Arrastra los bloques.
+  starwars_blocks_specs: Navegadores modernos, smartphones, tabletas | Edades 6-10
   starwars_blocks_start_button: Probar ahora
-  starwars_watch_videos: Antes de empezar, ve uno de estos videos inspiradores
+  starwars_watch_videos: Antes de empezar, mira uno de estos videos motivadores
   starwars_speak_languages: ¿Hablas otro idioma?
   starwars_help_translate: Ayúdanos a traducir
-  mc_name: Hora de Código de Minecraft
-  mc_longdescription: Utiliza bloques de código para llevar a Steve o Alex en una aventura a través del mundo de Minecraft.
-  mc_shortdescription: Utiliza bloques de código para llevar a Steve o Alex en una aventura a través del mundo de Minecraft.
-  mc_gradelevel: Mayores de 6 años
+  starwars_platform_text: Navegadores modernos, smartphones, tabletas
+  mc_name: Minecraft de la Hora del Código
+  mc_longdescription: Utiliza bloques de código para llevar a Esteban o Ale en una aventura a través del mundo de Minecraft.
+  mc_shortdescription: Utiliza bloques de código para llevar a Esteban o Ale en una aventura a través del mundo de Minecraft.
+  mc_gradelevel: Edades 6+
   mc_platformtext: Cualquier navegador moderno, smartphone, tableta
-  minecraft_subtitle: Hora de Código de Minecraft
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
-  volunteer_engineer_submission_subtitle_generic: '100.000 profesores van a acoger una Hora del Código en sus aulas este año, del 7 al 13 de Diciembre del 2015 ¡Y necesitan tu ayuda! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+  mc_specs: Navegadores modernos y tabletas | Edades 6+
+  minecraft_subtitle: Minecraft de la Hora del Código
+  volunteer_engineer_submission_title: Inspirar a los estudiantes y voluntarios para la Hora del Código.
+  volunteer_engineer_submission_subtitle_generic: 100.000 docentes van a realizar una Hora del Código en sus aulas este año, del 7 al 13 de Diciembre del 2015 ¡Y necesitan tu ayuda!
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} maestros quieren a voluntarios apasionados por la enseñanza de ciencias de la computación para ayudar cons su Horas de Código este Diciembre. <br>%{num_volunteers} voluntarios se han inscripto. Únete a ellos.'
   volunteer_engineer_submission_intro_background: La Hora del Código es un movimiento mundial para introducir a la Informática a decenas de millones de estudiantes en más de 180 países. Por favor únete a esta iniciativa durante la Semana de Educación en Ciencias de la Computación, del 7 al 13 de Diciembre.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    Estos maestros le encantaría tener a alguien <span style="font-family: 'Gotham 7r', sans-serif;"> apasionado por la enseñanza de ciencia de a computación</span> que pueden ayudar en el aula, o para alguien que pueda <span style="font-family: 'Gotham 7r', sans-serif;"> inspirar </span> a sus alumnos hablando de la amplitud de posibilidades con las ciencias de la computación (que podría hacerse a través de una video conferencia). Si usted no está buscando ofrecerse de voluntario, <a href="%{url}"> aprender más</a> acerca de organizar su propio evento de Hora de Código.
   volunteer_engineer_submission_intro_signup: 'Por favor introduzca la siguiente información si usted es un estudiante de informática o profesional del software. Los campos marcados con un <span class="form-required-field">*</span> son obligatorios.'
   volunteer_engineer_submission_header_shared: Información compartida con docentes en el mapa de voluntarios
   volunteer_engineer_submission_field_name: Nombre
@@ -373,7 +376,7 @@ es-MX:
   dashboard_hoc_courses: La Hora de Código para todas las edades
   dashboard_hoc_courses_desc: Prueba alguno de estos tutoriales de menos de 1 hora con tus alumnos!
   dashboard_hoc_courses_desc_and_cta: 'Pruebe estos tutoriales cortos de una hora con sus alumnos. <a href="https://hourofcode.com">Únete al movimiento de la Hora del Código</a> durante la Semana de Educación en Ciencias de la Computación.'
-  dashboard_k5_courses: Curso de 20 horas para K-5
+  dashboard_k5_courses: Cursos de 20 horas para jardín de infantes
   dashboard_k5_courses_desc: 'Estos cursos en línea, mezclan tutoriales autoguiados y a realizar a su propio ritmo con actividades  que no requieren el uso de un ordenador. Cada curso consta de aproximadamente 20 lecciones que pueden ser implementadas como una unidad o a lo largo de un semestre. Pueden participar incluso alumnos en edad preescolar que no sepan leer. Para ayudarte a empenzar, ofrecemos talleres de desarrollo profesional de alta calidad  en los Estados Unidos de forma gratuita. <a href="/professional-development-workshops">Encuentra uno cerca!</a>'
   dashboard_middle_courses: Cursos de 20 horas para secundaria
   dashboard_middle_courses_desc: 'Nuestro plan de estudios de secundaria utiliza informática y programación en el contexto de las matemáticas y la ciencias a nivel de escuela de secundaria - como una herramienta para enseñar conceptos de matemáticas y ciencias. Para inscribirse en los talleres de desarrollo profesional, realizar una solicitud en <a href="/educate/districts">Centros Asociados</a> de Code.org.'
@@ -443,7 +446,7 @@ es-MX:
   dashboard_students_male: Varón
   dashboard_students_female: Mujer
   dashboard_students_secret: Secreto
-  dashboard_students_password: contraseña
+  dashboard_students_password: Contraseña
   dashboard_students_username: 'Nombre de usuario: %{student_username}'
   dashboard_students_email: 'Correo: %{student_email}'
   dashboard_students_completed_levels: Niveles Completados
@@ -531,9 +534,9 @@ es-MX:
   learn_more: Aprenda más
   learn_sign_up_description: Regístrate para participar en la Hour of Code durante la Semana de Educación en Ciencias de la Computación
   learn_sign_up_button: Registrarse
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Mira este video inspirador con tu curso
+  learn_videos_show: Muestra este video inspirador a tus clases
+  learn_videos_before_hoc: Mira un video inspirador antes de tu Hora de Código
   learn_educator_resources_description: Aprende como enseñar una Hour of Code
   learn_educator_resources_button: Recursos del educador
   learn_are_you_educator: '¿Es Ud. un educador? Aprenda <a href="http://hourofcode.com/resources/how-to">como a enseñar una Hora del Código</a>'
@@ -541,9 +544,10 @@ es-MX:
   hoc2014_try_new_tutorial: Prueba nuestro nuevo tutorial de la hora del código en beta
   hoc2014_try_scrat: Scrat, PvZ y Angry Birds
   hoc2014_try_frozen: 'Artista con Anna y Elsa de "Frozen"'
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Tutoriales realizados por Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Tutoriales realizados por terceros
+  carousel_heading_third_party: Tutoriales realizados por terceros
   carousel_heading_international: Tutoriales en tu idioma
   carousel_heading_domestic: Tutoriales disponibles en inglés
   carousel_heading_beginners: Tutoriales para principiantes (en inglés)
@@ -570,7 +574,7 @@ es-MX:
   older_systems_subheading: 'Estos deberían funcionar sin problemas en navegadores no tan modernos. Para acceder al resto de los tutoriales vas a necesitar <a href="http://browsehappy.com/" target="_blank">actualizar tu navegador</a>.'
   mobile_devices: Tutoriales para dispositivos móviles
   frozen_name: Programa con Ana y Elsa
-  starwars_name: 'Star Wars: Contruyendo una Galaxia con Código'
+  starwars_name: 'Star Wars: construyendo una Galaxia con Código'
   codeorg_name: Codifica tu primer programa de computación
   codeintl_name: Codifica tu primer programa de computación
   thinkersmithspanish_name: Mis amigos robóticos
@@ -610,6 +614,8 @@ es-MX:
   projguts_name: Piedra, papel, tijera
   hourofcode_name: Espacio reservado para un nuevo code.org/hoc
   playlab_name: Laboratorio de Juegos
+  infinity_name: Laboratorio de Juego Infinity
+  artist_name: Artista
   codeorg_gradelevel: Edad 4-104
   codeintl_gradelevel: Edad 4-104
   thinkersmithspanish_gradelevel: Todas las edades
@@ -649,8 +655,10 @@ es-MX:
   projguts_gradelevel: Edad 10-13
   hourofcode_gradelevel: Edad 4-104
   frozen_gradelevel: Edad 8+
-  starwars_gradelevel: Mayores de 6 años
+  starwars_gradelevel: Edades 6+
   playlab_gradelevel: Edad 4-104
+  infinity_gradelevel: Edad 4-104
+  artist_gradelevel: Edad 4-104
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeintl_platformtext: Cualquier navegador moderno, smartphone, tableta
   thinkersmithspanish_platformtext: Desconectado
@@ -729,10 +737,12 @@ es-MX:
   thinkersmith2_shortdescription: Aprenda cómo las computadoras usan unos y ceros para representar la información
   kodableunplugged_shortdescription: 'Un divertido ejercicio "desconectado"'
   projguts_shortdescription: Aprende sobre modelado y simulación con piedra, papel, o tijeras
-  hourofcode_shortdescription: Espacio reservado para un nuevo code.org/hoc
+  hourofcode_shortdescription: ¡Aprende a programar con Mark Zuckerberg y Angry Birds!
   frozen_shortdescription: Vamos a usar código para unirnos a Anna y Elsa mientras exploran la magia y la belleza del hielo.
-  starwars_shortdescription: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia, muy lejana.
+  starwars_shortdescription: Aprende a programar robots y crea tu propio juego de Star Wars en una galaxia muy muy lejana.
   playlab_shortdescription: ¡Crea una historia o haz un juego con el Laboratorio de Juegos!
+  infinity_shortdescription: Utilice el laboratorio de juegos para crear una historia o juego protagonizados por personajes de Disney Infinity.
+  artist_shortdescription: ¡Dibuja imagenes estupendas y diseños con el Artista!
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante programación de arrastrar y soltar. Este tutorial autodirigido que se parece a un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprenda los bucles, condicionales y algoritmos básicos. Disponible en 34 idiomas.
   codeintl_longdescription: Aprende los conceptos básicos de la programación mediante programación de arrastrar y soltar. Este tutorial autodirigido que se parece a un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprenda los bucles, condicionales y algoritmos básicos. Disponible en 34 idiomas.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n c&oacute;mo guiarse para llevar a cabo tareas espec&iacute;ficas sin discutirlas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -772,7 +782,7 @@ es-MX:
   projguts_longdescription: Esta actividad sin conexión ayuda a los estudiantes a aprender cómo funciona el modelado y simulación, haciendo que un grupo de estudiantes jueguen distintas versiones del juego piedra, papel y tijeras, y viendo los resultados como diferentes experimentos de modelado.
   hourofcode_longdescription: Espacio reservado para un nuevo code.org/hoc
   frozen_longdescription: Vamos a usar código para unirnos a Ana y Elsa mientras exploran la magia y la belleza del hielo. Crearás copos de nieve y patrones mientras patinas sobre hielo y harás un paisaje invernal que luego podrás compartir con tus amigos!
-  starwars_longdescription: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia, muy lejana.
+  starwars_longdescription: Aprende a programar robots y crea tu propio juego de Star Wars en una galaxia muy muy lejana.
   playlab_longdescription: ¡Crea una historia o haz un juego con el Laboratorio de juegos! ¡Haz que animales, piratas, zombis, ninjas y muchos personajes más se muevan, hagan sonidos, marquen puntos y hasta lancen bolas de fuego!
   codeorg_beyond_name: Introducción a ciencias de la computación (13 años)
   khan_beyond_name: Aprende programación de computadoras
@@ -962,3 +972,11 @@ es-MX:
   compatibility_https_header: Por favor habilitar HTTPS para Code.org.
   compatibility_https_message: "Para aumentar la seguridad, nos cambio a HTTPS en %{https_date}. Usted no podrá accede Code.org después de esta fecha. <a href='%{it_requirements_url}'> haga clic aquí</a> para aprender cómo activar HTTPS para Code.org."
   compatibility_https_hide_this_warning: Ocultar esta advertencia
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: aletear
+  infinity_shortcode: inf
+  playlab_shortcode: ejecutar
+  artist_shortcode: art

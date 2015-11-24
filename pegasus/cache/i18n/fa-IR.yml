@@ -1,4 +1,5 @@
 "fa-IR":
+  hour_of_code: ساعتی با کد
   hello: سلام دنیا
   select_language: لطفا زبان خود را انتخاب کنید
   en: علوم کامپیوتر
@@ -338,6 +339,7 @@
     videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
+  starwars_platform_text: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
@@ -345,6 +347,7 @@
     this Minecraft world.
   mc_gradelevel: Ages 4-104
   mc_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
@@ -707,6 +710,7 @@
   hoc2014_try_scrat: پرندگان عصبانی، گیاهان علیه زامبی‌ها و اسکرات
   hoc2014_try_frozen: هنرمندی با آنا و السا, از کارتون منجمد
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: آموزش به زبان شما
@@ -779,6 +783,8 @@
   projguts_name: سنگ، کاغذ، قیچی
   hourofcode_name: جا نگهدار برای code.org/hoc جدید
   playlab_name: آزمایشگاه بازی
+  infinity_name: آزمایشگاه بازی نامحدود
+  artist_name: هنرمند
   codeorg_gradelevel: سنین 4 تا 104
   codeintl_gradelevel: سنین 4 تا 104
   thinkersmithspanish_gradelevel: Por todos
@@ -820,6 +826,8 @@
   frozen_gradelevel: سنین بالای 8
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: سنین 4 تا 104
+  infinity_gradelevel: سنین 4 تا 104
+  artist_gradelevel: سنین 4 تا 104
   codeorg_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   codeintl_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   thinkersmithspanish_platformtext: آنپلاگد
@@ -914,12 +922,15 @@
   kodableunplugged_shortdescription: یک تمرین بدون اتصال جالب
   projguts_shortdescription: مدل سازی و شبیه سازی  رابا استفاده از سنگ/کاغذ/قیچی امتحان
     کنید
-  hourofcode_shortdescription: جا نگهدار برای code.org/hoc جدید
+  hourofcode_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!
   frozen_shortdescription: بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو
     و زیبایی یخ را کشف می کنند استفاده کنیم.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: با نقاش چند عکس و طرح باحال بکش!
   codeorg_longdescription: با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر
     را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک
     زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری،
@@ -1406,3 +1417,11 @@
     داشت. برای این که ببینید چه طور می توانید مرور امن (HTTPS) را برای Code.org فعال
     کنید <a href='%{it_requirements_url}'>اینجا کلیک کنید</a>.
   compatibility_https_hide_this_warning: مخفی کردن هشدار
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: پریدن
+  infinity_shortcode: inf
+  playlab_shortcode: بازی کن
+  artist_shortcode: art

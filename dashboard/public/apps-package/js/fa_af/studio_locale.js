@@ -645,7 +645,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setItemSpeedSet":function(d){return "set type"},
 "setItemSpeedTooltip":function(d){return "Sets the speed for a set of items"},
 "setPlayerSpeed":function(d){return "تنظیم سرعت پخش"},
-"setScoreText":function(d){return "تنظیم امتیاز"},
+"setScoreText":function(d){return "قرار دادن امتیاز"},
 "setScoreTextTooltip":function(d){return "نوشته را تنظیم می کند تا در ناحیه ی امتیاز نمایش داده شود."},
 "setSpriteManny":function(d){return "to a Manny image"},
 "setSpriteSid":function(d){return "to a Sid image"},

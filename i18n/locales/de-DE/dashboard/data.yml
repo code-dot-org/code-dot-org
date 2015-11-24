@@ -501,16 +501,16 @@ de:
         hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Baue eine Galaxie aus Code - Einführung'
         starwars_typing: 'Star Wars: Baue eine Galaxie aus Code - JavaScript'
-        starwars_events: 'Star Wars: Baue eine Galaxie aus Code - Ereignisse (Events)'
+        starwars_events: 'Star Wars: Baue eine Galaxie aus Code - Ereignisse'
         starwars_congrats: 'Star Wars: Baue eine Galaxie aus Code - Herzlichen Glückwunsch'
         starwars_blocks_intro: 'Star Wars: Baue eine Galaxie aus Code - Einführung'
-        starwars_blocks_events: 'Star Wars: Baue eine Galaxie aus Code - Ereignisse (Events)'
+        starwars_blocks_events: 'Star Wars: Baue eine Galaxie aus Code - Ereignisse'
         starwars_blocks_congrats: 'Star Wars: Baue eine Galaxie aus Code - Herzlichen Glückwunsch'
-        mc_intro: 'Minecraft - Introduction'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        mc_intro: 'Minecraft - Einführung'
+        mc_repeat: 'Minecraft - Wiederholung'
+        mc_if_statements: 'Minecraft - If Anweisungen ("wenn"-Anweisung)'
+        mc_congrats_share: 'Minecraft - Herzlichen Glückwunsch'
+        mc_congrats_no_share: 'Minecraft - Herzlichen Glückwunsch'
     callout:
       text:
         drag_blocks: 'Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten'
@@ -583,9 +583,9 @@ de:
         Infinity_move_collide_callout: Spiele einen Ton, wenn dieses Ereignis passiert.
         Infinity_repeat_callout: 'Platziere "bewegen"-Bausteine hier drin'
         craft_run_button_callout: 'Drücke "Ausführen", um dein Programm zu testen'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_drag_block_callout: 'Ziehe einen "forwärts bewegen"-Block und platziere ihn unter den anderen Block, so dass er einrastet'
+        craft_callout_preplaced: Wir haben hier einige Blöcke platziert, damit Du beginnen kannst
+        craft_inside_repeat: Wiederhole Befehle, indem Du sie hier rein ziehst
+        craft_callout_preplaced_house: Dieser Code baut den Anfang Deines Hauses. Kannst Du es fertig stellen?
+        craft_what_is_iron: Baue dieses Eisenerz ab!
+        craft_callout_moveforward: Dieser Code überprüft, ob Lava vorhanden ist. Kannst Du einen Befehl hinzufügen, um vorwärts zu gehen?

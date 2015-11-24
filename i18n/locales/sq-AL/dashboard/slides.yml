@@ -380,148 +380,141 @@ sq:
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: These are your draw blocks. Use the correct one to move the artist where he needs to go to fill in the grey lines.
+        text: Këto janë blloqet tuaja të vizatimit. Përdor të duhurën për të lëvizur artistin ku ai ka nevojë të shkojë për të mbushur linjat gri.
       2:
         image: notes/C1_artist_intro_2.png
-        text: "These are jump blocks. When you use these, your artist moves but doesn't draw, so use these to jump to the next grey line."
+        text: Këto janë blloqet e kërcimit. Kur ju përdorni këto, artisti juaj lëviz mirëpo nuk vizaton, kështu që përdor këto për të këcyer të linja gri e rradhës.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: |-
-          Aren't bees super cool? In this next set of puzzles, your goal is to help the bee get to the flowers and get nectar from the flowers and fly over to the honeycomb to make honey. You'll need to use the "get nectar" and the "make honey" blocks for this exercise.
+        text: 'A nuk janë bletët shumë të mira? Në këtë set të rradhës me enigma, qëllimi juaj është të ndihmoni bletën të mbërrijë te lulet dhe të marrë nektarin dhe të fluturojë mbi huall të bëjë mjaltin. Ju do të keni nevojë të përdorni blloqet "merr nektarin" dhe "bëj mjaltin" për këtë ushtrim.'
       2:
         image: notes/C1_bee_level_intro_2.png
-        text: 'Every flower has a different number of nectars: 1, 2, 3, or more. We know how much nectar is in the red flowers, by the little number in the corner. So be sure to get all the nectar from the flower before you move forward. Also, every honeycomb can only hold so much honey: 1, 2, 3, or more. So be sure to make as much honey as the honeycomb can hold.'
+        text: 'Cdo lule ka një numër të ndryshëm të nektërëve: 1, 2, 3 apo më shumë. Ne e dijmë sa shumë nektar është në lulet e kuqe, nga numri i vogël në qoshe. Kështu që sigurohu të marrësh të gjithë nektarin nga lulet para se të levizësh përpara. Gjithashtu, çdo huall mund të mbajë vetëm kaq mjaltë: 1, 2, 3 apo më shume. Kështu që sigurohu të bësh aq mjalte sa hualli mund të mbajë.'
       3:
         image: notes/C1_bee_level_intro_3.png
-        text: |-
-          If you're able to get all the nectar and make all the honey, you succeed and go to the next level. Otherwise, you need to try this puzzle again. Play around a while and see what it feels like to "bee" a programmer!
+        text: 'Nëse ju jeni i gatshëm të merrni të gjithë nektarin dhe të pregaditni mjaltin, ju do të keni sukses dhe kaloni në nivelin tjetër. Përndryshe, ju duhet të provoni këtë engimë përsëri. Provoje pak lojën dhe shiko se si është të "bletë" një kodues!'
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
-        text: "A loop is a repetition of activity. So going into a hive to inspect, I look at a frame and then I put it back, so I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
+        text: Një lak është një përsëritje e aktivitetit. Kështu që duke shkuar në një koshere për të inspektuar, une shikojë në një kornizë dhe pastaj e kthej atë mbrapa, kështu që unë përsëris atë aktivitet të njejtë shumë herë. Është duke u kthyer përseri, duke bërë aktivitetin e njejtë disa herë.
       2:
         image: notes/C1_bee_loops_2.png
-        text: |-
-          In this level, we want the bee to collect three nectars from the flower. Instead of using three "get nectar" blocks, you're going to use the repeat block to get nectar three times. Hit "Run" and see if you got it right. Nice!
+        text: 'Në këtë nivel, ne duam që bleta të grumbullojë tre nektarë nga lulja. Në vend të përdorimit tre blloqe "merr nektarin" ju do të përdorni këtë bllok përsëritës për të marrë nektarin tre herë. Prek "Vrapo" dhe shiko nëse e keni bërë mirë. Bukur!'
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
-        text: "This lesson is called the big event. It's all about how we can control our programs and actually change the way a program runs on the fly using events, like the push of a button or the click of a mouse."
+        text: Ky mësim thirret ngjarja e madhe. Është gjithçka si ne mund të kontrollojmë programet tona dhe të ndryshojmë mënyrën që një program shkon në fluturim duke përdorur ngjarjet, sikur shtyp një buton apo kliko miun.
       2:
         image: notes/C1_bigevent_unplugged_2.png
-        text: "For this lesson, you'll be controlled with a paper remote control. It's just like a real-live video game."
+        text: Për këtë mësim, ju do të kontrolloheni me një kontrollues letre. Është sikur një video loje e vërtetë.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: "An event is an action  that causes something to happen. It's like when you click the button on a mouse and a webpage loads. That's an event. When you touch your screen on a tablet to scroll, that's an event also. Events are a great way of letting the user direct your program whenever they need or want to."
+        text: Një ngjarje është një aksion që shtyn diçka të ndodhë. Është sikur kur ju klikoni butonin në një mi dhe një uebfaqe ngarkohet. Kjo është një ngjarje. Kur ju prekni ekranin tuaj në një tabletë për të lëvizur, dhe kjo poashtu është një ngjarje. Ngjarjet janë një mënyrë e mrekullueshme për të lënë përdoruesin të drejtojë programin tuaj kudo që ata kanë nevojë apo duan.
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: 'Things happen that we all respond to. We feel hungry and we go to the fridge. We hear the mailman come and he puts our mail in the mailbox  and then we go get our mail. Those are just like the events of pushing a button or moving a joystick. They are something that happens that triggers us to do something.'
+        text: Gjërat ndodhin që ne të gjithë përgjigjemi për to. Ne ndjehemi të uritur dhe shkojmë te frigoriferi. Ne ndëgjojmë postierin duke ardhur dhe ai vendos letrat tona në postë dhe ne shkojmë për ti marrë. Këto janë sikur ngjarjet e shtypjes së një butoni apo lëvizjes së dorezës. Ato janë dicka që ndodhin që na shtyn neve të bëjmë dicka.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: |-
-          In video games, there's an event called "Update" and it happens 30 or 60 times a second. For videogame programmers that's almost more important as an event than the buttons or the joystick.
+        text: 'Në video lojrat, është një ngjarje që thirret "Përditësimi" dhe kjo ndodhë 30 apo 60 herë në sekond. Për programerët e videolojrave ajo është gati më e rëndësishme si një ngjarje sesa butonët apo doreza.'
       6:
         image: notes/C1_bigevent_unplugged_6.png
-        text: |-
-          The main event we're watching for is that "Update" tick happening. And then we check the joystick in the tick. So we say, "Oh, has somebody pushed the button this frame? Yes or no?" Without events, the player couldn't move, you couldn't jump, you wouldn't be able to control what's going on. The videogame wouldn't be able to animate anything.
+        text: 'Ngjarja kryesore që ne jemi duke shikuar është ajo "Përditësimi" tik-tak duke ndodhur. Dhe pastaj ne kontrollojmë dorezën në tik-tak. Kështu që ne themi, "Oh, dikush ka shtypur butonin këtë kornizë? Po apo jo?" Pa ngjarje, lojtari nuk mund të lëvizë, ju nuk mund të kërceni, ju nuk do të jeni të gatshëm të kontrolloni se çfarë po ndodhë. Videoloja nuk mund të gjallërojë asgjë.'
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: "In sand sculpture you've got to know that failure is part of the program. But if you persist, it's just going to get nothing but better and more exciting for you. Persistence is the name of the game. Stay with it, you'll love it."
+        text: Në skulpturën e rërës ju do të keni rastin të mësoni se dështimi është pjesë e programit. Por nëse ju këmbëngulni, do të bëhet më mirë dhe më emocionuese për ty. Këmbëngulësia është emri i lojës. Qëndro me të, do të duash.
       2:
         image: notes/C1_building_foundation_2.jpg
-        text: "This lesson is called building a foundation. In this lesson, we'll work on a task that is meant to be really difficult. You will figure out how to make a structure at least as tall as one of these cups and it's got to be strong enough to hold the weight of a book."
+        text: Ky ushtrim njihet si ndërtimi i një themeli. Në këtë ushtrim, ne do të punojmë në një detyrë që është menduar të jetë me të vërtetë e vështirë. Ju do të mësoni si të ndërtoni një strukturë së fundmi aq të gjatë sa një nga këto gota dhe duhet të jetë e fortë mjaftueshëm të mbajë peshën e një libri.
       3:
         image: notes/C1_building_foundation_3.jpg
-        text: "There might be times that our creation doesn't work out. There might be times that we get frusrated and want to give up. There might be a lot of those moments. But if we keep on trying, give it our best shot over and over again, then we're sure to get it before long."
+        text: Mund të ketë kohë që kreacioni jonë nuk funksionon. Mund të ketë kohë kur ne bëhemi të frustruar dhe duam të dorëzohemi. Mund të ketë shumë nga këto momente. Por nëse ne vazhdojmë në përpjekje, jepi goditjen më të mirë përsëri dhe përsëri, pastaj ne do të sigurohemi ta marrim atë para se të zgjatet.
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: "Persistence is all about hanging in there when you really want to give up. If you want to create something new and different, there's going to be a lot of failures along the way."
+        text: Këmbëngulësia është gjithqka rreth të qëndruarit aty kur ju me të vërtetë dëshironi të dorëzoheni. Nëse doni të krijoni diqka të re dhe ndryshe, do të ketë shumë dështime gjatë rruges.
       5:
         image: notes/C1_building_foundation_5.jpg
-        text: "The trick to persistence is choosing to keep on going and learn from your failures instead of quitting because you're frustrated. Frustration actually just means there's something wonderful around the corner. So don't quit before you get to it. Wooo!"
+        text: Triku te këmbëngulësia është duke zgjedhur të qëndrosh dhe të mësosh nga dështimet tuaja në vend se të hiqni dorë sepse jeni i frustruar. Frustrimi do të thotë që ka diqka të mrekullueshme rreth qoshit. Kështu që mos heq dorë para se të arrini te ajo. Wooo!
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: "Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work, there is something we use in both dances and in programming lightsuits. And that is loops! Loops are repeating an action over and over."
+        text: Tung, emri im është Miral Kotb dhe unë jam kreatorja e Iluminate. Në punën time, ka diqka që ne përdorim në të dyja vallëzim dhe programim. Dhe ajoi është unazore! Laqet janë duke përsëritur një aksion përsëri dhe përsëri.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: "When you repeat something multiple times, like my actions to keep the hula hoop spinning, I'm performing a loop of that action. This is a loop. This is a loop. And this is a loop."
+        text: Kur ju përsërisni diqka shumë herë, sikur aksionet e mia për të mbajtur kolovajzën duke u luhatur, unë jam duke performuar një unazë përsëritëse të atij aksioni. Kjo është një unazë përsëritëse. Kjo është një unazë përsëritëse. Dhe kjo është një unazë përsëritëse.
       3:
         image: notes/C1_getting_loopy_3.png
-        text: "Today we're going to have a dance party. We'll act out loops with a new dance. The Iteration. We're going to learn about loops using a dance. You will learn a couple of easy steps and repeat them over and over to complete the dance."
+        text: Sot ne do të kemi një parti vallëzimi. Ne do të veprojmë jashtë përsëritjeve me një vallëzim të ri. Përsëritja. Ne do të mësojmë rreth përsëritjeve duke përdorur një vallëzim. Ju do të mësoni disa hapa të thjeshtë dhe përsërit ata përsëri dhe përsëri për të kompletuar vallëzimin.
       4:
         image: notes/C1_getting_loopy_4.png
-        text: Here are the steps you need to learn. Clap your hands. Put your hands behind your head. Put your hands on your waist. Lift your left hand up. Lift your right hand up. Pretty simple, right? You will discover that you can shorten the directions by putting some dance steps in loops.
+        text: Këtu janë hapat që ju duhet të mësoni. Duartrokitni. Vendos duart tuaja pas kokës. Vendos duart mbi ijet tuaja. Ngrini dorën tuaj të majtë lart. Ngrini dorën tuaj të djathtë lart. E lehtë, apo jo? Ju do të zbuloni se ju mund të shkurtoni udhëzimet duke vendosur disa hapa të vallëzimit në përsëritje.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: "We actually do use loops in our dancing. The dancers are wearing computers, all in the same network. I might loop the lights through to the same dancers over and over again. In the loop I might have an iteration where I'll say you want to go loop through these six dancers over and over again and then within the loop you want to increase the speed of the light. And that's all created through loops. Loops are important in computer science because they make our work shorter and easier."
+        text: Ne i përdorim përsëritjet në vallëzimet tona. Valltarët janë të veshur me kompjutera, të gjithë në të njëjtin rrjet. Unë mund të përsëris dritat përmes të njejtëve vallëtarë pa pushim. Në unazë përsëritëse unë mund të kem një përsëritje ku unë do të them se ti dëshiron të përsëritësh nëpërmjet këtyre gjashtë kërcimtarve pa pushim dhe pastaj brenda unazës përsëritëse ti dëshiron të rrisësh shpejtësinë e dritës. Dhe kjo e gjitha është krijuaj përmes përsëritjeve. Përsëritjet janë të rëndësishme në shkenca kompjuterike sepse ata e bëjnë punën tonë më të shkurtër dhe më të lehtë.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
-        text: "This lesson is called Happy Maps. Today we're gonna help our furry little friend Flurb get to her fruit."
+        text: Ky mësim thirret harta e lumtur. Sot ne do të ndihmojmë shokun tonë të vogël prej gëzofi Flurb të marrë ftutin e tij.
       2:
         image: notes/C1_happy_maps_unplugged_2.png
-        text: "Make your Flurb go to your fruit. To do this you'll need to figure out which way the Flurb needs to go and direct her with arrows. In order for the Flurb to get to the apple, what direction does the Flurb have to go? Line to make it go up."
+        text: Bëj Flurbin tuaj të shkojë te fruti juaj. Për të bërë këtë ju duhet të zbuloni në cilën rrugë Flurb duhet të shkojë dhe direkto atë me shigjeta. Në mënyrë që Flurb të marrë mollën, qfarë drejtimi Flurb duhet të shkojë? Linja për ta shtyrë atë.
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: To get it there you circle the direction that it has to go.
+        text: Për të marrë atë atje ju rrethoni drejtimin që ka për të shkuar.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
-        text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."
+        text: Krijo algoritmin tuaj duke ngjitur shigjetat afër hartës që ju provoni për të zgjidhur. E dyta është e njejtë vetëm se shkon poshtë.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: "It's like programming with paper. And that's it!"
+        text: Është sikur duke programuar me letër. Dhe kjo është!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: "Debugging is finding and fixing problems. There are lots of ways to debug problems. One of the easiest is to move step by step until where you find where something goes wrong. Here I'm trying to do a back handspring on the beam but I keep falling off."
+        text: Rregullimi është gjetja dhe fiksimi i problemeve. Janë shumë mënyra për të rregulluar problemet. Një nga më të lehtat është të lëvizësh hap pas hapi deri sa të gjesh kur diqka shkon gabim. Këtu unë jam duke provuar për të bërë salto mbi duar prap në rreze por vazhdoj të keqsohem.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: "I walked through each part step by step and realized where my mistake was. I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position and I got it. I was really glad I debugged my back handspring."
+        text: Kam ecur nëpër çdo pjesë hap pas hapi dhe e kuptova ku ishte gabimi im. Unë nuk isha duke vendosur duart e mia në rreze si duhet. Kështu që provova një tjetër salto mbi duar prapa në rreze me pozicionin e ri të dorës dhe ja dola. Unë isha me të vërtetë krenare që e rregullova salton time me duar prapa.
       3:
         image: notes/C1_maze_debugging_3.png
-        text: "To learn about debugging, we start with a set of blocks already on the stage. You'll notice that these blocks won't get you to the goal. We need to debug the solution and fix it. What went wrong? You'll notice that you needed to keep going west one more block."
+        text: Për të mësuar për rregullimin, ne fillojmë me një grup të blloqeve tashmë në skenë. Ju do të vëreni që këto blloqe nuk do të ju dërgojnë te qellimi. Ne duhet të rregullojmë zgjidhjen dhe fiksojmë atë. Cfare shkoi gabim? Ju do të vëreni se ju keni pasur nevojë të vazhdoni në perëndim një bllok më shumë.
       4:
         image: notes/C1_maze_debugging_4.png
-        text: "Let's fix this by adding another west block and hitting run to see if you got it right. Yay, you got it!"
+        text: Le ta rregullojmë këtë duke shtuar një tjetër bllok në perëndim dhe duke shtypur fillo për të parë nëse e keni bërë mirë. Yay, ja dole!
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle and see what directions it needs to take.
+        text: Për këtë mister, ju keni nevojë për të marrë zogun deri te derri. Shikoni në enigmë dhe shiko se çfarë drejtime ajo ka nevojë për të marrë.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: |-
-          You need to drag the blocks over from the toolbox to the workspace. Make sure it's under the "when run" block and when you think you've got the right solution, then you can click "Run" and watch the bird go to the pig.
+        text: 'Ju duhet të bartni blloqet prej kutisë së veglave në hapsirën e punës. Sigurohu që është nën bllokun "kur vazhdon" dhe kur mendon se e keni gjetur zgjidhjen e duhur, pastaj kliko "vazhdo" dhe shiko zogun të shkojë te derri.'
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: Një që kompjuterët janë vërtetë të mirë është përsëritja e komandave. Si një person, ju do të mërziteni nëse duhet të bëni gjërat e njejta shumë herë në një rresht. Por një kompjuter mund të bëjë gjënë e njejtë milion apo bilion herë dhe nuk mërzitet dhe mund ta bëjë atë shumë mirë.
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: "Për shembull, nëse do të doja të urojë të gjithë në Facebook një ditëlindje të lumtur duke u dërguar atyre një email, do të më merrte kohë më shumë së një shekull për të shkruar të gjithë kto emaile. Por me pak linja kodimi, mund të kem një sistem që u dërgon emaile të gjithve për t'i uruar ditëndje të lumtur."
       3:
         image: notes/C1_maze_loops_3.png
-        text: 'To get the bird to the pig in this level... rather than drag three North blocks on to the workspace, you will use the "repeat" block. Drag the "repeat" block on to the workspace and enter the number 3. Then drag the "move North" block into the "repeat" block and hit "Run" to see if you got it right. Congratulations, you got it!'
+        text: 'Për të marrë zogun deri te derri në këtë nivel... më mirë sesa të tërheqësh tre blloqe veriore në hapsirën e punës, ju do të përdorni bllokun "përsërit". Tërhiq bllokun "përsërit" në hapsirën e punës dhe shkruaj numrin 3. Pastaj tërhiq bllokun "lëviz në veri" në bllokun "përsërit" dhe shtyp "vazhdo" për të parë nëse e keni bërë mirë. Përgëzime, ja dole!'
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
         text: "This lesson is called move it, move it. Together we're going to write a program to get our friends from the starting with the compass rose to the smiley face goal."
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: "But the smiley is face down and only one person knows how to get there. Let's get this program started."
+        text: Por fytyra e qeshur është poshtë dhe vetëm një person di si të arrijë atje. Le të fillojmë këtë program.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: "A program is an algorithm that has been coded into something that can be run by a machine. Most of us think of a program as something that we write for a computer. Programs are really good for that but they're also helpful in other places. You can make your own game or even program a robot to do things for you."
+        text: Një program është një algoritëm që ka qenë i programuar nëpërmes diqkaje që mund të punojë si makinë. Shumë prej nesh mendojnë një program si diqka që ne e shkruajmë për një kompjuter. Programet janë vërtetë të mira për atë por ato janë gjithashtu ndihmuese në vende të tjera. Ti mund të bësh lojën tënde apo program që një robot të bëjë gjërat për ju.
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: |-
-          My name is Jeremiah. Hi! I am seven years old. I love playing on my mom's computer but I always get permission first. "Mom, can I go on the computer? Sure honey!"
+        text: 'Emri im është Jeremiah. Tung! Une jam shtatë vjeqare. Pëlqej të luaj në kompjuterin e nënës time por unë gjithëmonë kërkojë leje fillimisht. "Nënë, mund të shkojë te kompjuteri? Sigurisht shpirti im!"'
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: E pëlqejë kompjuterin e nënës time sepse mund të përdorë internetin. Interneti është diqka si lagjia juaj. Mund të vizitoni vende të bukura, mund të flisni me familjen dhe shokët dhe të mësoni plot gjëra të reja.
       3:
         image: notes/C1_going_places_safely_3.png
         text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
@@ -591,10 +584,10 @@ sq:
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: Një që kompjuterët janë vërtetë të mirë është përsëritja e komandave. Si një person, ju do të mërziteni nëse duhet të bëni gjërat e njejta shumë herë në një rresht. Por një kompjuter mund të bëjë gjënë e njejtë milion apo bilion herë dhe nuk mërzitet dhe mund ta bëjë atë shumë mirë.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: "Për shembull, nëse do të doja të urojë të gjithë në Facebook një ditëlindje të lumtur duke u dërguar atyre një email, do të më merrte kohë më shumë së një shekull për të shkruar të gjithë kto emaile. Por me pak linja kodimi, mund të kem një sistem që u dërgon emaile të gjithve për t'i uruar ditëndje të lumtur."
       3:
         image: notes/C1_zuck_repeat_loop_3.png
         text: "In this example, your goal is going to be to move the bird to get the pig. Now, we're going to be able to use the repeat block in order to be able to do this very easily. You can either do this by giving the computer a move forward command five times in order to advance the bird one step each time to the pig or you can just tell the computer to move forward once, and then tell it to repeat that five times and it'll do the same thing."

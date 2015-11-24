@@ -1,4 +1,5 @@
 ca-ES:
+  hour_of_code: Hour of Code
   hello: Hola món
   select_language: "Seleccioneu l'idioma"
   en: Informàtica
@@ -287,11 +288,13 @@ ca-ES:
   starwars_watch_videos: Before you get started, watch one of these inspirational videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
+  starwars_platform_text: Navegadors moderns, mòbils i tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_gradelevel: Ages 6+
   mc_platformtext: Navegadors moderns, mòbils i tablets
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -538,7 +541,7 @@ ca-ES:
   dashboard_faq_k5: Preguntes freqüents sobre K-5
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: "L'hora del Codi és aquí - 8-14 de desembre!"
   code_sign_up: "Inscriure's a participar durant la setmana de l'educació CS"
   learn_more: Més informació
@@ -555,6 +558,7 @@ ca-ES:
   hoc2014_try_scrat: Ocells enutjat, Scrat i PvZ
   hoc2014_try_frozen: Amb els personatges Anna i Elsa de Frozem
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Tutorials en el teu idioma
@@ -624,6 +628,8 @@ ca-ES:
   projguts_name: Pedra, Paper, tisora
   hourofcode_name: Contenidor per al nou code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artista
   codeorg_gradelevel: Edat 4-104
   codeintl_gradelevel: Edat 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -665,6 +671,8 @@ ca-ES:
   frozen_gradelevel: Edat 8 +
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Edat 4-104
+  infinity_gradelevel: Edat 4-104
+  artist_gradelevel: Edat 4-104
   codeorg_platformtext: Navegadors moderns, mòbils i tablets
   codeintl_platformtext: Navegadors moderns, mòbils i tablets
   thinkersmithspanish_platformtext: Sense connexió
@@ -743,10 +751,12 @@ ca-ES:
   thinkersmith2_shortdescription: Aprèn com els ordinadors utilitzen 1s i 0s per representar informació
   kodableunplugged_shortdescription: Un divertit exercici sense connexió
   projguts_shortdescription: Prova modelatge i simulació utilitzant pedra-paper-estisores
-  hourofcode_shortdescription: Contenidor per al nou code.org/hoc
+  hourofcode_shortdescription: Aprèn a programar amb Mark Zuckerberg i Angry Birds!
   frozen_shortdescription: "Anem a utilitzar el codi per unir l'Anna i l'Elsa mentre exploren la màgia i la bellesa del gel."
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+  starwars_shortdescription: "Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana."
   playlab_shortdescription: Crea una història o fes una partida amb Play Lab!
+  infinity_shortdescription: Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity.
+  artist_shortdescription: "Dibuixar imatges estupendes i dissenys amb l'artista!"
   codeorg_longdescription: Aprèn els conceptes bàsics de la Informàtica mitjançant la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Aprèn bucles, condicionals i algorismes bàsics. Disponible en 34 idiomes.
   codeintl_longdescription: Aprèn els conceptes bàsics de la Informàtica mitjançant la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Aprèn bucles, condicionals i algorismes bàsics. Disponible en 34 idiomes.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -788,7 +798,7 @@ ca-ES:
     Aquesta activitat "sense connexió" ajuda als alumnes a aprendre com modelar i simular treballs fent que un grup d'alumnes jugui a diferents versions del joc Pedra / Paper / Tisores, i veient els resultats com a experiments de diferent modelatge.
   hourofcode_longdescription: Contenidor per al nou code.org/hoc
   frozen_longdescription: "Programeu per unir-vos amb l' Anna i l' Elsa mentre exploren la màgia i la bellesa del gel. Creareu flocs de neu i patrons com patinatge sobre gel i la creació d'un món fantàstic d'hivern que podeu compartir amb els amics!"
-  starwars_longdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+  starwars_longdescription: "Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana."
   playlab_longdescription: Crea una història o fes un joc amb Play Lab! Fes que animals, pirates, zombies, ninjes i molts més personatges es moguin, facin sons, puntuacions i fins i tot llançar boles de foc!
   codeorg_beyond_name: Introducció a la programació (ESO)
   khan_beyond_name: Aprèn programació informàtica
@@ -979,3 +989,11 @@ ca-ES:
   compatibility_https_header: Si us plau accepta HTTPS per a Code.org.
   compatibility_https_message: "Per augmentar la seguretat, estem canviant a HTTPS en %{https_date}.  No podràs accedir a Code.org passada aquesta data. <a href='%{it_requirements_url}'> feu clic aquí</a> per aprendre com permetre HTTPS per Code.org."
   compatibility_https_hide_this_warning: Amaga aquest avís
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: aleteig
+  infinity_shortcode: inf
+  playlab_shortcode: reprodueix
+  artist_shortcode: art

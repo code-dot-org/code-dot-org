@@ -12,7 +12,7 @@ nl:
         name: Weergegeven naam
         email: Email
         username: gebruikersnaam
-        password: wachtwoord
+        password: Wachtwoord
         password_confirmation: Wachtwoord bevestiging
         current_password: Huidig wachtwoord
         locale: Taal
@@ -71,9 +71,9 @@ nl:
     overview_teacher: 'Geef les in Informatica in je klaslokaal, maak een gebruikersnaam aan. <p/> Je kunt je leerlingen toevoegen en hun voortgang zien.'
     no_signup_message: 'Je kunt <a target="_blank" href="http://learn.code.org">de verschillende niveaus en levels bekijken</a>, maar om je voortgang te bewaren moet je je aanmelden.'
     teacher_educator_guide: Kijk in de lerarengids
-    teacher_pitch: Leraar registratie voor Code.org
+    teacher_pitch: Code.org-aanmelding als leerkracht
     teacher_title: Inschrijven voor leraren
-    student_pitch: Registreer als leerling voor Code.org
+    student_pitch: Code.org-aanmelding als leerling
     student_title: Registreren als leerling
     school_name: School naam (optioneel)
     school_address: Schooladres (optioneel)
@@ -156,7 +156,7 @@ nl:
     provider: 'Provider:'
     code: 'Code:'
     redeem_header: 'Vrijgeven:'
-    donorschoose_register: Registreer je als leraar op DonorsChoose.org
+    donorschoose_register: Meld je aan als leerkracht op DonorsChoose.org
     donorschoose_project: Een project plaatsen
     donorschoose_how_to: Hoe gebruik je jouw code
     success: Je prijs is vrijgegeven, gebruik de code hieronder.
@@ -221,6 +221,7 @@ nl:
         playlab: Maak een App
         artist: Teken iets
         calculate: Calculate Something
+        applab: Maak een App
     user:
       classroom: Leerkracht Home Page
       district_dashboard: District Ovezicht
@@ -231,7 +232,7 @@ nl:
       logout: Uitloggen
       signin: Aanmelden
       signup: Meld je aan
-      already_registered: Al geregistreerd?
+      already_registered: Al aangemeld?
     popup:
       progress_for_user: '%{name} de vooruitgang'
       progress: Jouw voortgang
@@ -335,12 +336,12 @@ nl:
     title: Code Studio
     description: Code Studio is de basis voor online cursussen gemaakt door code.org
     lines_of_code: '%{lines_count} REGELS CODE DIE GESCHREVEN DOOR STUDENTEN'
-    lines_of_code_linebreak: '%{lines_count} REGELS CODE <br/> GESCHREVEN DOOR leerlingen%{students_count} MILJOEN LEERLINGEN'
+    lines_of_code_linebreak: '%{lines_count} REGELS CODE<br/>GESCHREVEN DOOR %{students_count} MILJOEN LEERLINGEN'
     all_courses: Overzicht van cursussen 1, 2 en 3
     lesson_plans: Lesplannen
-    signin_message: 'Al geregistreerd? %{link}'
-    student_reg_link: Registreer als leerling
-    teacher_reg_link: Registreer als leraar
+    signin_message: 'Al aangemeld? %{link}'
+    student_reg_link: Meld je aan als leerling
+    teacher_reg_link: Meld je aan als leerkracht
     signin_directions: 'Gebruik een account gebruiken om je voortgang bij te houden.<br/> Leraren, houd je hele klas bij.'
     teacher_dashboard: Ga naar voorgangsoverzicht
     teacher_student_count_one: 'Je hebt %{count} leerling.'
@@ -483,7 +484,7 @@ nl:
       body: Gebruik Play Lab om een verhaal of spel te maken met Disney Infinity figuren in de hoofdrol.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Ontdek een Minecraft-wereld met code.
   gallery:
     students_drew_these_with_code: Leerlingen wonnen deze met programmeren!
     students_made_these_with_code: Leerlingen hebben dit gemaakt met code!

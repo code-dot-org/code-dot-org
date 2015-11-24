@@ -1,4 +1,5 @@
 sr-SP:
+  hour_of_code: Час кода
   hello: Здраво свете
   select_language: Молимо изаберите свој језик
   en: Информатика
@@ -302,11 +303,13 @@ sr-SP:
   starwars_watch_videos: Before you get started, watch one of these inspirational videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft sat programiranja
   mc_longdescription: Користите блокове кода да поведете Стива или Алексу у авантуру кроз овај Мајнкрафт свет.
   mc_shortdescription: Користите блокове кода да поведете Стива или Алексу у авантуру кроз овај Мајнкрафт свет.
   mc_gradelevel: Ages 6+
   mc_platformtext: Modern browsers, smartphones, tablets
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft sat programiranja
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -549,7 +552,7 @@ sr-SP:
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: 'Сат Програмирања је стигао: 8-14 Децембра!'
   code_sign_up: Пријавите се да учествујете током недеље за едукацију о компјутерској науци
   learn_more: Сазнајте више
@@ -566,6 +569,7 @@ sr-SP:
   hoc2014_try_scrat: Angry Birds, Plants vs Zombies,и Ice age
   hoc2014_try_frozen: Уметник са Аном и Елзом из Залеђеног краљевства
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Туторијали на твом језику
@@ -632,8 +636,10 @@ sr-SP:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Лист, камен, маказе
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: Напиши свој први компјутерски програм
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artist
   codeorg_gradelevel: Ages 4-104
   codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -675,6 +681,8 @@ sr-SP:
   frozen_gradelevel: Ages 8+
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Ages 4-104
+  infinity_gradelevel: Ages 4-104
+  artist_gradelevel: Ages 4-104
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
@@ -753,10 +761,12 @@ sr-SP:
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
   kodableunplugged_shortdescription: A fun unplugged exercise
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   frozen_shortdescription: Хајде да искористимо програмирање да би се придружили Ани и Елзи у истраживању магије и лепоте леда.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
   codeintl_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -987,3 +997,11 @@ sr-SP:
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
   compatibility_https_hide_this_warning: Hide this warning
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: маши крилима
+  infinity_shortcode: inf
+  playlab_shortcode: играј
+  artist_shortcode: art

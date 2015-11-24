@@ -1,7 +1,8 @@
 ta-IN:
+  hour_of_code: Hour of Code
   hello: ஹலோ உலகம்
   select_language: உங்கள் மொழியை தேர்ந்தெடுக்கவும்
-  en: Computer Science
+  en: கணினி அறிவியல்
   computer_science_edweek: கணினி அறிவியல் கல்வி வாரம்
   csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ஒரு மணியில் குறியீடு </a> இதோ வருகிறது. அனைத்து ஆசிரியர்கள் மற்றும் அமைப்பாளர்களுக்கு, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> திட்டமிடுங்கள் உங்கள் ஒரு மணியில் குறியீட்டை</a> '
@@ -30,7 +31,7 @@ ta-IN:
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_search_search: தேடு
   csedweek_map_search_reset: மீட்டமை
   csedweek_map_legend_title: Legend
   csedweek_map_legend_event: Hour of Code Event
@@ -38,9 +39,9 @@ ta-IN:
   cded_sign_up: Sign up
   cded_try_it: இதை முயற்சிக்கவும்
   twentyhours_trynow: இப்பொழுது முயற்சிக்கவும்
-  california_heading: Ask your school to teach computer science
+  california_heading: உங்கள் பள்ளி கூடத்தில் கணினி அறிவியலை கற்றுக்கொடுக்க கேட்டுக்கொள்ளவும்
   california_text: "Any teacher can offer our <a href='http://studio.code.org/'>free courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner with us."
-  california_button: Learn More
+  california_button: மேலும் அறிய
   flappy_heading: Flappy Birthday to Code.org
   flappy_text: 'Code.org just turned 1 year old.<br/><br/> Celebrate with us by making your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!'
   view_english_site: ஆங்கில தளத்தை பார்க்க
@@ -64,7 +65,7 @@ ta-IN:
   congrats_next_tutorials_title: Try these tutorials next
   congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
   get_a_certificate_of_achievement: சாதனைக்கு ஓர் சான்றிதழை பெறுக
-  enter_valid_age: Please select a valid age
+  enter_valid_age: ஒரு செல்லுபடியாகும் வயது தேர்ந்தெடுக்கவும்
   enter_valid_email: தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்
   get_a_certificate_message: "We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond an Hour</a>"
   get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
@@ -83,7 +84,7 @@ ta-IN:
   give_my_hour: 'Give my Hour to:'
   girls_team: பெண்களின் அணி
   boys_team: "Boys' Team"
-  tell_the_world: Tell the world!
+  tell_the_world: உலகத்திடம் சொல்லுங்கள்!
   thanks_for_voting: வாக்களித்ததற்கு நன்றிகள்!
   share_on_facebook: பேஸ்புக்கில் பகிரவும்
   share_on_twitter: ட்விட்டரில் பகிரவும்
@@ -104,7 +105,7 @@ ta-IN:
   enter_country: அமெரிக்காவுக்கு வெளியே இருந்தால் உங்கள் நாட்டை உள்ளிடவும்
   used_infrequent_updates: Only used for infrequent updates
   privacy_practices_children: See our privacy practices for children
-  petition_thankyou: Thank you for signing the petition
+  petition_thankyou: மனுவில் கையெழுத்திட்டமைக்கி நன்றி
   continue_learning_header: Continue learning beyond an Hour
   continue_learning_body: 'There are lots of options.  You can learn online, or at a local school, or summer camp.'
   learn_next_level: Try another Code Studio course
@@ -303,11 +304,13 @@ ta-IN:
   starwars_watch_videos: Before you get started, watch one of these inspirational videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
+  starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_gradelevel: Ages 6+
   mc_platformtext: Modern browsers, smartphones, tablets
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -550,7 +553,7 @@ ta-IN:
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: இப்பொழுது முயற்சிக்கவும்
@@ -567,11 +570,12 @@ ta-IN:
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: உங்கள் மொழியிலுள்ள பயிற்சிகள்
   carousel_heading_domestic: Tutorials available in English
-  carousel_heading_beginners: Tutorials for Beginners
+  carousel_heading_beginners: Tutorials for Grades K-8
   carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: "No device or internet? Try 'unplugged' computer science"
   carousel_heading_devices: Tutorial apps for phones and tablets
@@ -633,8 +637,10 @@ ta-IN:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: உங்கள் முதலாவது கணினி நிரலை எழுதவும்
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artist
   codeorg_gradelevel: Ages 4-104
   codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -676,6 +682,8 @@ ta-IN:
   frozen_gradelevel: Ages 8+
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Ages 4-104
+  infinity_gradelevel: Ages 4-104
+  artist_gradelevel: Ages 4-104
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
@@ -755,10 +763,12 @@ ta-IN:
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
   kodableunplugged_shortdescription: A fun unplugged exercise
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   frozen_shortdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
   starwars_shortdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
   codeintl_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -989,3 +999,11 @@ ta-IN:
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
   compatibility_https_hide_this_warning: Hide this warning
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: flap
+  infinity_shortcode: inf
+  playlab_shortcode: play
+  artist_shortcode: art

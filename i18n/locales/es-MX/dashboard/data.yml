@@ -314,7 +314,7 @@ es-MX:
         studio_iceage_1: 'Manny quiere decir "Hola" - ¿Puedes ayudarle?'
         studio_iceage_2: 'A Diego (actor 1) y abuela (actor 2) les gustaría decirse "Hola" mutuamente. ¿Puedes ayudarles usando el bloque "decir" dos veces?'
         studio_iceage_3: ¿Puedes ayudar a Scrat a llegar a la bandera?
-        studio_iceage_4: ¿Puedes ayudar a Scrat (actor 1) llegar a Abuela (actor 2) y reproducir un sonido cuando llegue?
+        studio_iceage_4: ¿Puedes ayudar a Scrat (actor 1) llegar hasta la Abuela (actor 2) y reproducir un sonido cuando llegue?
         studio_iceage_5: '¿Puedes ayudar a Sid a decir "Saludos" cuando se hace click en él? No te olvides de clickearlo después de haber clickeado "Ejecutar"'
         studio_iceage_6: ¿Puedes ayudar a Diego a moverse usando las felechas arriba/abajo/derecha/izquierda para llegar a todas las banderas?
         studio_iceage_7: 'El bloque de "repetir para siempre" te permite ejecutar un código continuamente. ¿Puedes conectar bloques para ayudar a Sid a moverse de derecha a izquierda repetidamente?'
@@ -497,18 +497,18 @@ es-MX:
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Contruyendo una Galaxia con Code - Introducción'
-        starwars_typing: 'Star Wars: Contruyendo una Galaxia con Code - JavaScript'
-        starwars_events: 'Star Wars: Contruyendo una Galaxia con Code - Eventos'
-        starwars_congrats: 'Star Wars: Contruyendo una Galaxia con Code - Enhorabuena'
-        starwars_blocks_intro: 'Star Wars: Contruyendo una Galaxia con Code - Introducción'
-        starwars_blocks_events: 'Star Wars: Contruyendo una Galaxia con Code - Eventos'
-        starwars_blocks_congrats: 'Star Wars: Contruyendo una Galaxia con Code - Enhorabuena'
-        mc_intro: 'Minecraft - Introduction'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        starwars_intro: 'Star Wars: Contruyendo una Galaxia con Código - Introducción'
+        starwars_typing: 'Star Wars: Contruyendo una Galaxia con Código - JavaScript'
+        starwars_events: 'Star Wars: Contruyendo una Galaxia con Código - Eventos'
+        starwars_congrats: 'Star Wars: Construyendo una Galaxia con Código - Felicitaciones'
+        starwars_blocks_intro: 'Star Wars: Contruyendo una Galaxia con Código - Introducción'
+        starwars_blocks_events: 'Star Wars: Contruyendo una Galaxia con Código - Eventos'
+        starwars_blocks_congrats: 'Star Wars: Construyendo una Galaxia con Código - Felicitaciones'
+        mc_intro: 'Minecraft - Introdução'
+        mc_repeat: 'Minecraft - Repetir'
+        mc_if_statements: 'Minecraft - Instruções "se"'
+        mc_congrats_share: 'Minecraft - Parabéns'
+        mc_congrats_no_share: 'Minecraft - Parabéns'
     callout:
       text:
         drag_blocks: 'Arrastra un bloque de "mover" y pégalo debajo del otro bloque'
@@ -581,9 +581,9 @@ es-MX:
         Infinity_move_collide_callout: Reproducir un sonido cuando se produce este evento.
         Infinity_repeat_callout: Lugar para mover bloques dentro de aquí
         craft_run_button_callout: 'Haz clic en "Ejecutar" para probar tu programa'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_drag_block_callout: 'Arrastra un bloque "mueveHaciaAdelante()"; y pegalo por debajo de la otro bloque'
+        craft_callout_preplaced: Hemos puesto algunos bloques aquí para que comiences
+        craft_inside_repeat: Repite acciones colocando bloques aquí
+        craft_callout_preplaced_house: Questo codice inizia la costruzione della tua casa. Riesci a finirla tu?
+        craft_what_is_iron: Scava il ferro!
+        craft_callout_moveforward: Questo codice controlla la lava, sai aggiungere un comando per andare avanti?

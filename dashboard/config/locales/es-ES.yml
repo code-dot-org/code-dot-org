@@ -269,6 +269,7 @@
         playlab: Hacer una aplicación
         artist: Dibujar algo
         calculate: Calculate Something
+        applab: Hacer una aplicación
     user:
       classroom: Página de inicio del maestro
       district_dashboard: Tablero de Distrito
@@ -586,7 +587,7 @@
         por personajes de Disney Infinity.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Explora un mundo de Minecraft, a través de código.
   gallery:
     students_drew_these_with_code: ¡Los estudiantes dibujaron esto con código!
     students_made_these_with_code: ¡Los estudiantes hicieron éstos con código!

@@ -595,7 +595,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySpriteChoices_56":function(d){return "You almost got me!"},
 "saySpriteChoices_57":function(d){return "Nice try!"},
 "saySpriteChoices_58":function(d){return "You can’t catch me!"},
-"scoreText":function(d){return "Score: "+studio_locale.v(d,"playerScore")},
+"scoreText":function(d){return "Hisob: "+studio_locale.v(d,"playerScore")},
 "setActivityRandom":function(d){return "set activity to random for"},
 "setActivityRoam":function(d){return "set activity to roam for"},
 "setActivityChase":function(d){return "set activity to chase for"},

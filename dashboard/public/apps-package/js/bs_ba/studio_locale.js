@@ -160,7 +160,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "addPoints10":function(d){return "dodaj 10 poena"},
 "addPoints50":function(d){return "dodaj 50 poena"},
 "addPoints100":function(d){return "dodaj 100 poena"},
-"addPoints300":function(d){return "add 300 points"},
+"addPoints300":function(d){return "dodaj 300 poena"},
 "addPoints1000":function(d){return "dodaj 1000 poena"},
 "addPointsTooltip":function(d){return "Dodaj ili oduzmi bod."},
 "alienInvasion":function(d){return "Napad vanzemaljaca!"},

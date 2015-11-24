@@ -314,22 +314,22 @@ pt-BR:
         studio_iceage_1: 'Manny quer dizer "Olá" - você pode ajudá-lo?'
         studio_iceage_2: 'Diego (personagem 1) e vovó (personagem 2) querem dizer "olá" um para o outro. Você pode ajudá-los usando o bloco "diga" duas vezes?'
         studio_iceage_3: Você pode ajudar o Scrat a chegar à bandeira?
-        studio_iceage_4: Você pode ajudar o Scrat (personagem 1) a chegar à vovó (personagem 2) e tocar um som quando ele chegar lá?
+        studio_iceage_4: Você pode ajudar o Scrat (personagem 1) a chegar à vovó (personagem 2) e reproduzir um som quando ele chegar lá?
         studio_iceage_5: 'Você pode ajudar o Sid a dizer "saudações" quando ele for clicado? Não se esqueça de clicar nele depois de clicar em Executar'
-        studio_iceage_6: Você pode ajudar o Diego a se mover usando as teclas de seta para cima/para baixo/direita/esquerda para chegar a todas as bandeiras?
+        studio_iceage_6: Você pode ajudar o Diego a se mover usando as setas para cima/para baixo/direita/esquerda para chegar a todas as bandeiras?
         studio_iceage_7: 'O bloco "repita infinitamente" permite que você execute um código continuamente. Você pode conectar blocos a ele para ajudar o Sid a se mover para a direita e para a esquerda repetidamente?'
-        studio_iceage_8: Você pode adicionar um bloco para marcar um ponto e um bloco para tocar um som quando o Sid chega ao Manny, e então movê-lo com as setas até marcar um ponto?
-        studio_iceage_9: Defina o plano de fundo para esta era do gelo e ajude o Sid a chegar à vovó mais rápido mudando sua velocidade. Então mova-o com as teclas de seta para chegar ao Sid e alertar a todos.
+        studio_iceage_8: Você pode adicionar um bloco para marcar um ponto e um bloco para reproduzir um som quando o Sid chega ao Manny, e então movê-lo com as setas até marcar um ponto?
+        studio_iceage_9: Defina o plano de fundo para esta era do gelo e ajude o Sid a chegar à vovó mais rápido alterando sua velocidade. Então mova-o com as setas para chegar até a vovó e alertar todos.
         studio_iceage_10: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_gumball_1: 'Anais quer dizer "olá" - você pode ajudá-la?'
         studio_gumball_2: 'Darwin (personagem 1) e Gumball (personagem 2) querem dizer olá um para o outro. Você pode ajudá-los usando o bloco "diga" duas vezes?'
-        studio_gumball_3: Você pode ajudar o Banana Joe a chegar à bandeira?
-        studio_gumball_4: Você pode ajudar o Gumball (personagem 1) a chegar ao Darwin (personagem 2) e tocar um som quando ele chegar lá?
+        studio_gumball_3: Você pode ajudar o João Banana a chegar até a bandeira?
+        studio_gumball_4: Você pode ajudar o Gumball (personagem 1) a chegar ao Darwin (personagem 2) e reproduzir um som quando ele chegar lá?
         studio_gumball_5: 'Você pode ajudar o Antony a dizer "saudações" quando ele for clicado? Não se esqueça de clicá-lo depois de clicar em Executar'
-        studio_gumball_6: Você pode ajudar o Darwin a se mover usando as teclas de seta para cima/para baixo/direita/esquerda para chegar a todas as bandeiras?
+        studio_gumball_6: Você pode ajudar o Darwin a se mover usando as setas para cima/para baixo/direita/esquerda para chegar a todas as bandeiras?
         studio_gumball_7: 'O bloco "repita infinitamente" permite que você execute um código continuamente. Você pode conectar blocos a ele para ajudar o Antony a se mover para a direita e para a esquerda repetidamente?'
-        studio_gumball_8: Você pode adicionar um bloco para marcar um ponto e um bloco para tocar um som quando o Banana Joe chegar ao Antony, e então movê-lo com as setas até marcar um ponto?
-        studio_gumball_9: Defina o plano de fundo para esta invasão espacial e ajude a Nicole a chegar até a Penny mais rápido, alterando sua velocidade. Em seguida, mova-a com as teclas de seta para chegar à Nicole e alertar todos os outros.
+        studio_gumball_8: Você pode adicionar um bloco para marcar um ponto e um bloco para reproduzir um som quando o João Banana chegar ao Antony, e então movê-lo com as setas até marcar um ponto?
+        studio_gumball_9: Defina o plano de fundo para esta invasão espacial e ajude a Nicole a chegar até a Penny mais rápido, alterando sua velocidade. Em seguida, mova-a com as setas para chegar à Nicole e alertar todos os outros.
         studio_gumball_10: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_full_sandbox: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_k1_1: 'Você consegue fazer esse cachorro dizer "Olá, mundo"?'
@@ -504,11 +504,11 @@ pt-BR:
         starwars_blocks_intro: 'Star Wars: Construindo uma galáxia com código - Introdução'
         starwars_blocks_events: 'Star Wars: Construindo uma galáxia com código - Eventos'
         starwars_blocks_congrats: 'Star Wars: Construindo uma galáxia com código - Parabéns'
-        mc_intro: 'Minecraft - Introduction'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        mc_intro: 'Minecraft - Introdução'
+        mc_repeat: 'Minecraft - Repetição'
+        mc_if_statements: 'Minecraft - Instruções se'
+        mc_congrats_share: 'Minecraft - Parabéns'
+        mc_congrats_no_share: 'Minecraft - Parabéns'
     callout:
       text:
         drag_blocks: 'Arraste um bloco "avance" e o encaixe embaixo do outro bloco'
@@ -580,10 +580,10 @@ pt-BR:
         Infinity_move_directions_callout_arrow: Use as setas para direcionar
         Infinity_move_collide_callout: Reproduza um som quando esse evento ocorrer.
         Infinity_repeat_callout: Coloque blocos Mova aqui dentro
-        craft_run_button_callout: 'Clique em "Executar" para iniciar seu programa'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_run_button_callout: 'Clique em "Executar" para testar seu programa'
+        craft_drag_block_callout: 'Arraste um bloco "moveForward();" e prenda-o debaixo do outro bloco'
+        craft_callout_preplaced: Nós colocamos alguns blocos aqui para começar
+        craft_inside_repeat: Repita ações colocando blocos aqui
+        craft_callout_preplaced_house: Este código vai começar a construir a sua casa. Consegue acabá-lo?
+        craft_what_is_iron: Minere esse ferro!
+        craft_callout_moveforward: Este código vai verificar se há lava, você consegue adicionar um comando para avançar?

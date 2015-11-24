@@ -252,6 +252,7 @@
         playlab: Создать приложение
         artist: Нарисовать что-нибудь
         calculate: Calculate Something
+        applab: Создать приложение
     user:
       classroom: Домашняя страница Преподавателя
       district_dashboard: Панель управления области
@@ -554,14 +555,14 @@
     frozen:
       title: '"Холодное сердце"'
     starwars:
-      title: Star Wars
+      title: Звёздные войны
     infinity:
       title: Лаборатория игр Infinity
       body: Используйте лабораторию игр, чтобы создать историю или игру с персонажами
         Disney Infinity.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Изучайте мир Minecraft через программный код.
   gallery:
     students_drew_these_with_code: Ученики нарисовали это с помощью кода!
     students_made_these_with_code: Сделано учениками с помощью кода!
