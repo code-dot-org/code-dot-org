@@ -9,6 +9,24 @@ require 'cdo/properties'
 include ApplicationHelper
 include UsersHelper
 
+def get_program_type(script_name)
+  if script_name.downcase.include? "k5"
+    return "CSF"
+  elsif script_name.downcase.include? "csp"
+    return "CSP"
+  # Some scripts (e.g., "algPDMiami") abbreviate "algebra" to "alg".
+  elsif script_name.downcase.include? "alg"
+    return "CSinA"
+  elsif script_name.downcase.include? "science"
+    return "CSinS"
+  elsif script_name.downcase.include? "ecs"
+    return "ECS"
+  # There are known scripts (e.g., "equity-pd") that will receive this classification.
+  else
+    return "Unknown"
+  end
+end
+
 pd_scripts = Script.all.select(&:pd?)
 pd_scripts.each do |script|
   # Get all users with any activity in the script
@@ -21,7 +39,8 @@ pd_scripts.each do |script|
                    :'Ops First Name' => user.ops_first_name,
                    :'Ops Last Name' => user.ops_last_name,
                    :'Email' => user.email,
-                   :'District' => user.district.try(:name) || 'None'
+                   :'District' => user.district.try(:name) || 'None',
+                   :'School' => user.school,
                })
     level_progress = summarize_user_progress(script, user)[:levels]
     percent = percent_complete(script, user)
@@ -38,6 +57,7 @@ pd_scripts.each do |script|
     headers ||= row.keys
     row.values
   end
-  locals_options = {headers: headers, data: data, script: {name: script.name, id: script.id}, time: DateTime.now}
+  program_type = get_program_type(script.name)
+  locals_options = {headers: headers, data: data, script: {name: script.name, id: script.id, program_type: program_type}, time: DateTime.now}
   Properties.set("pd_progress_#{script.id}", locals_options)
 end
