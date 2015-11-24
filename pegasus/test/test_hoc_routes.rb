@@ -24,7 +24,6 @@ class HocRoutesTest < Minitest::Test
       assert_redirects_from_to '/api/hour/begin/mc', CDO.code_org_url('/mc')
     end
 
-
     it 'starts tutorial with png image' do
       assert_successful_get '/api/hour/begin_mc.png'
       assert_equal 'image/png', @pegasus.last_response['Content-Type']
@@ -51,9 +50,9 @@ class HocRoutesTest < Minitest::Test
                                CDO.code_org_url('/mc')
 
       after_start_row = get_session_hoc_activity_entry
-      assert_equal('testcompany', after_start_row[:company])
-      assert_equal('mc', after_start_row[:tutorial])
-      assert(after_start_row[:started_at])
+      assert_equal 'testcompany', after_start_row[:company]
+      assert_equal 'mc', after_start_row[:tutorial]
+      assert after_start_row[:started_at]
 
       # track tutorial end
       assert_redirects_from_to '/api/hour/finish/mc', CDO.code_org_url('/congrats')
@@ -61,24 +60,24 @@ class HocRoutesTest < Minitest::Test
       assert_includes @pegasus.last_request.url, '&co=testcompany'
 
       after_end_row = get_session_hoc_activity_entry
-      assert(after_end_row[:finished_at])
+      assert after_end_row[:finished_at]
     end
 
     it 'starts and ends given tutorial, tracking time' do
       before_start_row = get_session_hoc_activity_entry
       assert_nil before_start_row
 
-      before_began_time = Sequel.string_to_datetime(Time.now.utc.to_s)
+      before_began_time = now_in_sequel_datetime
       assert_redirects_from_to '/api/hour/begin/mc', CDO.code_org_url('/mc')
-      after_began_time = Sequel.string_to_datetime(Time.now.utc.to_s)
+      after_began_time = now_in_sequel_datetime
 
       after_start_row = get_session_hoc_activity_entry
       assert_datetime_within(after_start_row[:started_at], before_began_time, after_began_time)
       assert_nil after_start_row[:finished_at]
 
-      before_ended_time = Sequel.string_to_datetime(Time.now.utc.to_s)
+      before_ended_time = now_in_sequel_datetime
       assert_redirects_from_to '/api/hour/finish/mc', CDO.code_org_url('/congrats')
-      after_ended_time = Sequel.string_to_datetime(Time.now.utc.to_s)
+      after_ended_time = now_in_sequel_datetime
       after_end_row = get_session_hoc_activity_entry
       assert_datetime_within(after_end_row[:finished_at], before_ended_time, after_ended_time)
     end
@@ -90,6 +89,10 @@ class HocRoutesTest < Minitest::Test
 
     def assert_datetime_within(after_start_time, before_begin_time, after_begin_time)
       assert (before_begin_time..after_begin_time).cover?(after_start_time)
+    end
+
+    def now_in_sequel_datetime
+      Sequel.string_to_datetime(Time.now.utc.to_s)
     end
 
     def get_session_hoc_activity_entry
