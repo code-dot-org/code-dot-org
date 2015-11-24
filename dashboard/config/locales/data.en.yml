@@ -337,7 +337,7 @@ en:
         'studio_gumball_7': "Darwin is in the flag gathering contest! Help him run around by attaching the \"move\" block to each of the events. When you’re done, click Run and try to collect all of the flags."
         'studio_gumball_8': "We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the \"when actor touches\" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game."
         'studio_gumball_9': "Darwin just escaped a food fight! Change the background to \"characters\" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her."
-        'studio_gumball_10': "Join the food fight! Use the \"actor __ throw __ right\" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit."
+        'studio_gumball_10': "Join the food fight! Use the \"actor throw item right\" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit."
         'studio_gumball_11': "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         'studio_full_sandbox': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
         'studio_k1_1': "Can you make this dog say \"hello world\"?"
