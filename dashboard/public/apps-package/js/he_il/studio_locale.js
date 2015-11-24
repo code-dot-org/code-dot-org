@@ -899,4 +899,11 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "אתם צריכים להשיג 20 דרואידים עכבריים. השתמשו בפקודת \"add a Mouse Droid\" בתוך אירוע \"when get Mouse Droid\" על מנת להוסיף שניים או יותר דרואידים עכבריים בכל פעם שאתם משיגים אחד."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "כל הכבוד, הוספתם קוד על מנת לייצר דרואידים עכבריים. כעת תוכלו לעבור לשלב הבא, או לנסות שוב על מנת להשיג 20 דרואידים עכבריים. יהיה לכם קל יותר אם תוסיפו יותר מהם! (הקישו והחזיקו את מקשי החצים במקלדת או המסך שלכם על מנת לנוע מהר יותר)"},
 "failedChangeSettingTimeout":function(d){return "השיגו שלושה טייסי מחתרת על מנת להמשיך הלאה."},
-"failedChangeSettingSettings":function(d){return "הפכו את המשחק לשלכם. על מנת לעבור את השלב הזה עליכם לשנות את הדרואיד ואת מהירותו."}};
+"failedChangeSettingSettings":function(d){return "הפכו את המשחק לשלכם. על מנת לעבור את השלב הזה עליכם לשנות את הדרואיד ואת מהירותו."},
+"playSoundR2D2Random":function(d){return "play R2-D2 random sound"},
+"playSoundC3PORandom":function(d){return "play C-3PO random sound"},
+"playSoundPufferPigRandom":function(d){return "play Puffer Pig random sound"},
+"playSoundTauntaunRandom":function(d){return "play Tauntaun random sound"},
+"playSoundMynockRandom":function(d){return "play Mynock random sound"},
+"playSoundProbotRandom":function(d){return "play Probot random sound"},
+"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"}};

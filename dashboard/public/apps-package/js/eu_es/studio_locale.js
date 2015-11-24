@@ -899,4 +899,11 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "20 Mouse Droid behar dituzu. Erabili \"gehitu Mouse Droid bat\" komandoa \"Mouse Droid lortzean\" gertaeraren barnean bi Mouse Droid edo gehiago gehitzeko bat lortzen duzun bakoitzean."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Zorionak, Mouse Droid-ak egiteko kodea gehitu duzu. Hurrengo puzlearekin jarrai dezakezu edo berriro saiatu 20 Mouse Droid lortzeko. Errazagoa da gehiago gehitzen badituzu! (mantendu sakatuta gezidun teklak zure teklatuan (edo pantailan) arinago mugitzeko.)"},
 "failedChangeSettingTimeout":function(d){return "Lortu hiru Rebel Pilot aurrera jarraitzeko."},
-"failedChangeSettingSettings":function(d){return "Egin nahi duzun jokoa. Puzle hau gainditzeko, zure robota aldatu behar duzu eta bere abiadura ezarri."}};
+"failedChangeSettingSettings":function(d){return "Egin nahi duzun jokoa. Puzle hau gainditzeko, zure robota aldatu behar duzu eta bere abiadura ezarri."},
+"playSoundR2D2Random":function(d){return "play R2-D2 random sound"},
+"playSoundC3PORandom":function(d){return "play C-3PO random sound"},
+"playSoundPufferPigRandom":function(d){return "play Puffer Pig random sound"},
+"playSoundTauntaunRandom":function(d){return "play Tauntaun random sound"},
+"playSoundMynockRandom":function(d){return "play Mynock random sound"},
+"playSoundProbotRandom":function(d){return "play Probot random sound"},
+"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"}};
