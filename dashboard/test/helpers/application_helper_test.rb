@@ -95,6 +95,7 @@ class ApplicationHelperTest < ActionView::TestCase
 
      # but course1 is a different certificate
     assert_not_equal script_certificate_image_url(user, Script.get_from_cache(Script::HOC_2013_NAME)), script_certificate_image_url(user, Script.get_from_cache(Script::COURSE1_NAME))
+    assert_not_equal script_certificate_image_url(user, Script.get_from_cache(Script::HOC_2013_NAME)), script_certificate_image_url(user, Script.get_from_cache(Script::MINECRAFT_NAME))
   end
 
   test 'client state lines' do

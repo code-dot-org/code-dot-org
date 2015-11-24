@@ -28,9 +28,9 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
   name = name.gsub(/@/,'\@')
   name = ' ' if name.empty?
 
-  if course == '20hours' || course == 'hoc' || course == '20-hour' || course == 'hourofcode' || course == 'starwars'
+  if prefilled_title_course?(course)
     # only need to fill in name
-    image_file = (course == '20hours' || course == '20-hour') ? '20hours_certificate.jpg' : 'hour_of_code_certificate.jpg'
+    image_file = prefilled_title_course_template(course)
     vertical_offset = course == '20hours' || course == '20-hour' ? -115 : -110
     image = create_certificate_image2(pegasus_dir('sites.v3', 'code.org', 'public', 'images', image_file), name, y: vertical_offset)
   else # all other courses use a certificate image where the course name is also blank
@@ -97,6 +97,26 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
     self.fill = 'rgb(87,87,87)'
   end
   image
+end
+
+def prefilled_title_course?(course)
+  course == '20hours' ||
+      course == 'hoc' ||
+      course == '20-hour' ||
+      course == 'hourofcode' ||
+      course == 'starwars' ||
+      course == 'mc' ||
+      course == 'frozen'
+end
+
+def prefilled_title_course_template(course)
+  if course == '20hours' || course == '20-hour'
+    '20hours_certificate.jpg'
+  elsif course == 'mc'
+    'MC_Hour_Of_Code_Certificate.jpg'
+  else
+    'hour_of_code_certificate.jpg'
+  end
 end
 
 # generate a url for a certificate image, given options:
