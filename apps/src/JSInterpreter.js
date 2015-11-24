@@ -486,3 +486,22 @@ JSInterpreter.prototype.findGlobalFunction = function (funcName) {
     return funcObj;
   }
 };
+
+/**
+ * Returns an array containing the names of all of the global functions
+ * in the interpreter's global scope. Built-in global functions are excluded.
+ */
+JSInterpreter.prototype.getGlobalFunctionNames = function () {
+  var builtInExclusionList = [ "eval", "getCallback", "setCallbackRetVal" ];
+
+  var names = [];
+  for (var objName in this.globalScope.properties) {
+    var object = this.globalScope.properties[objName];
+    if (object.type === 'function' &&
+        !object.nativeFunc &&
+        builtInExclusionList.indexOf(objName) === -1) {
+      names.push(objName);
+    }
+  }
+  return names;
+};

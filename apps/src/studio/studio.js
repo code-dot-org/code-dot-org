@@ -2534,10 +2534,10 @@ var defineProcedures = function (blockType) {
 };
 
 /**
- * Looks for failures that should prevent execution.
+ * Looks for failures that should prevent execution in blockly mode.
  * @returns {boolean} True if we have a pre-execution failure
  */
-Studio.checkForPreExecutionFailure = function () {
+Studio.checkForBlocklyPreExecutionFailure = function () {
   if (studioApp.hasUnfilledFunctionalBlock()) {
     Studio.result = false;
     Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
@@ -2615,6 +2615,45 @@ Studio.checkExamples_ = function () {
   return outcome;
 };
 
+/**
+ * Looks for failures that should prevent execution in editCode mode.
+ * @returns {boolean} True if we have a pre-execution failure
+ */
+Studio.checkForEditCodePreExecutionFailure = function () {
+  var funcName = Studio.hasUnexpectedFunction_();
+  if (funcName) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EXTRA_FUNCTION_FAIL;
+    Studio.message = studioMsg.extraFunction({
+      funcName: funcName + '()'
+    });
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  return false;
+};
+
+/**
+ * @returns {string} the name of the first unexpected function found
+ */
+Studio.hasUnexpectedFunction_ = function () {
+  if (studioApp.editCode &&
+      level.preventUserDefinedFunctions &&
+      Studio.JSInterpreter) {
+    var funcNames = Studio.JSInterpreter.getGlobalFunctionNames();
+    for (var name in AUTO_HANDLER_MAP) {
+      var index = funcNames.indexOf(name);
+      if (index != -1) {
+        funcNames.splice(index, 1);
+      }
+    }
+    if (funcNames.length > 0) {
+      return funcNames[0];
+    }
+  }
+};
+
 var ErrorLevel = {
   WARNING: 'WARNING',
   ERROR: 'ERROR'
@@ -2685,7 +2724,7 @@ Studio.execute = function() {
 
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
-    if (Studio.checkForPreExecutionFailure()) {
+    if (Studio.checkForBlocklyPreExecutionFailure()) {
       return Studio.onPuzzleComplete();
     }
 
@@ -2767,6 +2806,9 @@ Studio.execute = function() {
     });
     if (!Studio.JSInterpreter.initialized()) {
         return;
+    }
+    if (Studio.checkForEditCodePreExecutionFailure()) {
+      return Studio.onPuzzleComplete();
     }
     Studio.initAutoHandlers(AUTO_HANDLER_MAP);
   } else {
