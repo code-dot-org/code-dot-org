@@ -517,7 +517,7 @@ StudioApp.prototype.substituteInstructionImages = function(htmlText) {
   if (htmlText) {
     for (var prop in this.skin.instructions2ImageSubstitutions) {
       var value = this.skin.instructions2ImageSubstitutions[prop];
-      var substitutionHtml = '<img src="' + value + '" class="instructionsImage"/>';
+      var substitutionHtml = '<span class="instructionsImageContainer"><img src="' + value + '" class="instructionsImage"/></span>';
       var re = new RegExp('\\[' + prop + '\\]', 'g');
       htmlText = htmlText.replace(re, substitutionHtml);
     }
@@ -862,7 +862,8 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   });
 
   if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
-    renderedMarkdown = marked(level.markdownInstructions);
+    var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
+    renderedMarkdown = marked(markdownWithImages);
     scrollableSelector = '.instructions-markdown';
     instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
