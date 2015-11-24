@@ -1436,13 +1436,14 @@ levels.gumball_8 = utils.extend(levels.playlab_9, {
 
 levels.gumball_9 = {
   background: 'wood',
+  'delayCompletion': 2000,
   requiredBlocks: [
     [{test: 'setSpriteEmotion',
       type: 'studio_setSpriteEmotion'}],
     [{test: 'throw',
       type: 'studio_throw'}]
   ],
-  timeoutFailureTick: 400,
+  timeoutFailureTick: 300,
   scale: {
     snapRadius: 2
   },
@@ -1467,7 +1468,12 @@ levels.gumball_9 = {
       blockOfType('studio_saySprite')
     ),
   startBlocks:
-    '<block type="when_run" deletable="false" x="20" y="20"></block>'
+    '<block type="when_run" deletable="false" x="20" y="20"></block>',
+  'progressConditions' : [
+    { required: { 'setEmotion': true, 'throwProjectile': true},
+      result: { success: true} },
+    { required: { 'timedOut': true}, result: {success: false}}
+  ]
 };
 
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
