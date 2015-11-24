@@ -25,15 +25,9 @@
     - id = "collection-" + category[:tag]
     = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
 
-%br
-%br
-
--if variation == 'learn'
-  %h1
-    %a{:href=>"/teacher-led"}
-      = I18n.t(:teach_led_lesson_plans)
-
 -if variation == 'beyond'
+  %br
+  %br
   %a{:href=>"/educate"}
     = I18n.t(:more_resources_educators)
   %br
