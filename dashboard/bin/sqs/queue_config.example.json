@@ -1,4 +1,5 @@
 {
+  "description": "Customize this to describe your queue processor configurations.",
   "queues": [
     {
       "name": "ActivityQueue",
