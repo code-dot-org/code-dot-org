@@ -764,7 +764,13 @@ levels.iceage_6 = utils.extend(levels.playlab_6, {
   firstSpriteIndex: 3, // diego
   goalOverride: {} // This prevents the override from original playlab from being used
 });
-levels.gumball_6 = utils.extend(levels.playlab_6, {
+
+levels.gumball_6 = utils.extend(levels.playlab_5, {
+  background: 'characters',
+  firstSpriteIndex: 1, // sid
+});
+
+levels.gumball_7 = utils.extend(levels.playlab_6, {
   background: 'cornered',
   firstSpriteIndex: 3, // diego
   goalOverride: {}, // This prevents the override from original playlab from being used
@@ -1123,7 +1129,7 @@ levels.iceage_8 = utils.extend(levels.playlab_8, {
   background: 'icy',
   avatarList: ['manny', 'sid']
 });
-levels.gumball_7 = utils.extend(levels.playlab_8, {
+levels.gumball_8 = utils.extend(levels.playlab_8, {
   background: 'wood',
   avatarList: ['bananajoe', 'anton'],
   'delayCompletion': 500,
@@ -1372,7 +1378,7 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
     '</block>'
 });
 
-levels.gumball_8 = utils.extend(levels.playlab_9, {
+levels.gumball_9 = utils.extend(levels.playlab_9, {
   background: 'dots',
   'delayCompletion': 500,
   defaultEmotion: Emotions.NORMAL,
@@ -1434,7 +1440,7 @@ levels.gumball_8 = utils.extend(levels.playlab_9, {
     '</block>'
 });
 
-levels.gumball_9 = {
+levels.gumball_10 = {
   background: 'wood',
   'delayCompletion': 2000,
   requiredBlocks: [
@@ -1534,7 +1540,7 @@ levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
 levels.playlab_10 = utils.extend(levels.sandbox, {});
 levels.iceage_10 = utils.extend(levels.playlab_10, {});
-levels.gumball_10 = utils.extend(levels.playlab_10, {});
+levels.gumball_11 = utils.extend(levels.playlab_10, {});
 
 // Create your own story! Move around the cat and dog, and make them say things.
 levels.k1_6 = {
