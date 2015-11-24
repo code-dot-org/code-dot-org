@@ -402,9 +402,9 @@ StudioApp.prototype.init = function(config) {
       $('#prompt-icon-cell').show();
     }
     var bubble = document.getElementById('bubble');
-    dom.addClickTouchEvent(bubble, _.bind(function() {
+    bubble.addEventListener('click', function () {
       this.showInstructions_(config.level, false);
-    }, this));
+    }.bind(this));
   }
 
   var aniGifPreview = document.getElementById('ani-gif-preview');
