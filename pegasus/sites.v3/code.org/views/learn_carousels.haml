@@ -20,7 +20,7 @@
     %button{:style=>"font-size:20px;"}
       = I18n.t(:carousel_heading_domestic)
 
-#all-tutorials{:style=>'visibility:hidden; overflow:hidden; margin-top: -50px;'}
+#all-tutorials{:style=>'visibility:hidden; overflow:hidden;'}
   - categories.each do |category|
     - id = "collection-" + category[:tag]
     = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
