@@ -35,7 +35,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
     # @return {Array<String>}
     attr_reader :messages
 
-    def initialize(logger)
+    def initialize(logger = Rails.logger)
       @logger = logger
       @lock = Mutex.new
 
@@ -183,6 +183,53 @@ class QueueProcessorTest < ActiveSupport::TestCase
     assert sqs_metrics.failures.value >= 1
 
     processor.stop
+  end
+
+  def test_queue_process_config_parsing
+    configs_json = <<-JSON
+      {
+        "queues": [
+          {
+            "name": "TestQueue",
+            "handler_class": "QueueProcessorTest::TestHandler",
+            "queue_url": "https://sqs.us-east-1.amazonaws.com/1234/example",
+            "num_processors": 5,
+            "num_workers_per_processor": 32,
+            "initial_max_rate": 2000,
+            "dcdo_max_rate_key": "test_rate"
+          },
+          {
+            "name": "queue2",
+            "handler_class": "QueueProcessorTest::TestHandler",
+            "queue_url": "https://sqs.us-east-1.amazonaws.com/1234/example2",
+            "num_processors": 1,
+            "num_workers_per_processor": 1,
+            "initial_max_rate": 1000
+          }
+        ]
+      }
+    JSON
+
+    configs = SQS::QueueProcessorConfig.create_configs_from_json(configs_json)
+
+    assert_equal 2, configs.size
+    config = configs[0]
+    assert_equal QueueProcessorTest::TestHandler, config.handler.class
+    assert_equal 'https://sqs.us-east-1.amazonaws.com/1234/example', config.queue_url
+    assert_equal 5, config.num_processors
+    assert_equal 32, config.num_workers_per_processor
+    assert_equal 2000, config.initial_max_rate
+
+    DCDO.set('test_rate', nil)
+    assert_equal config.initial_max_rate, config.max_rate_proc.call,
+                 'Max rate proc should return initial_max_rate if DCDO value is not set'
+
+    DCDO.set('test_rate', 234)
+    assert_equal 234, config.max_rate_proc.call,
+                 'Max rate proc should return DCDO value if set'
+
+    config2 = configs[1]
+    assert_equal 'https://sqs.us-east-1.amazonaws.com/1234/example2', config2.queue_url
   end
 
   def create_unique_message_body
