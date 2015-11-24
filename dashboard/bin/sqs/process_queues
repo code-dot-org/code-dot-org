@@ -60,8 +60,6 @@ class QueueProcessorManager
     metrics_map = manager.start_queue_processors(json)
 
     # Run until SIGINT is received.
-    running = true
-
     stopping = false
     exit_proc = Proc.new {
       puts "Shutting down, please wait..."
@@ -69,15 +67,15 @@ class QueueProcessorManager
       stopping = true
       exit
     }
-    Signal.trap('SIGINT')  {
+    Signal.trap('SIGINT') {
       exit_proc.call
     }
-    Signal.trap('SIGTERM')  {
+    Signal.trap('SIGTERM') {
       exit_proc.call
     }
 
     puts "Press ^C to stop"
-    while true
+    loop do
       metrics_map.each do |k,v|
         puts "#{k}: #{v}"
       end
