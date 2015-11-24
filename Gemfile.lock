@@ -7,6 +7,14 @@ GIT
       activemodel (>= 4.0)
 
 GIT
+  remote: git://github.com/trevorb/shoryuken.git
+  revision: 72cb3748169891aa7dafeec3a5545c3bbb37b3d9
+  specs:
+    shoryuken (2.0.2)
+      aws-sdk-core (~> 2)
+      celluloid (~> 0.16)
+
+GIT
   remote: https://github.com/code-dot-org/omniauth-clever.git
   revision: 8c7adde39157d64dc8b05c5eec5b0a7329f8ef95
   specs:
@@ -591,6 +599,7 @@ DEPENDENCIES
   seamless_database_pool
   selenium-webdriver (~> 2.41.0)
   sequel (~> 4.10.0)
+  shoryuken!
   shotgun
   simplecov (~> 0.9)
   sinatra

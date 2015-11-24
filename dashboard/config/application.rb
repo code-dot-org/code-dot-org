@@ -46,7 +46,7 @@ module Dashboard
     config.encoding = 'utf-8'
 
     Rails.application.routes.default_url_options[:host] = CDO.canonical_hostname('studio.code.org')
-
+    config.active_job.queue_adapter = :shoryuken
     config.generators do |g|
       g.template_engine :haml
     end
