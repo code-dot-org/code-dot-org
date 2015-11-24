@@ -803,16 +803,15 @@
         hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Baue eine Galaxie aus Code - Einführung'
         starwars_typing: 'Star Wars: Baue eine Galaxie aus Code - JavaScript'
-        starwars_events: 'Star Wars: Baue eine Galaxie aus Code - Ereignisse (Events)'
+        starwars_events: 'Star Wars: Baue eine Galaxie aus Code - Ereignisse'
         starwars_congrats: 'Star Wars: Baue eine Galaxie aus Code - Herzlichen Glückwunsch'
         starwars_blocks_intro: 'Star Wars: Baue eine Galaxie aus Code - Einführung'
-        starwars_blocks_events: 'Star Wars: Baue eine Galaxie aus Code - Ereignisse
-          (Events)'
+        starwars_blocks_events: 'Star Wars: Baue eine Galaxie aus Code - Ereignisse'
         starwars_blocks_congrats: 'Star Wars: Baue eine Galaxie aus Code - Herzlichen
           Glückwunsch'
         mc_intro: Minecraft - Einführung
         mc_repeat: Minecraft - Wiederholung
-        mc_if_statements: Minecraft - If Anweisungen
+        mc_if_statements: Minecraft - If Anweisungen ("wenn"-Anweisung)
         mc_congrats_share: Minecraft - Herzlichen Glückwunsch
         mc_congrats_no_share: Minecraft - Herzlichen Glückwunsch
     callout:
@@ -932,13 +931,13 @@
         Infinity_move_collide_callout: Spiele einen Ton, wenn dieses Ereignis passiert.
         Infinity_repeat_callout: Platziere "bewegen"-Bausteine hier drin
         craft_run_button_callout: Drücke "Ausführen", um dein Programm zu testen
-        craft_drag_block_callout: Ziehen Sie ein "moveForward()" Block; und rasten
-          Sie es unter den anderen Block
-        craft_callout_preplaced: 'Zu start, hier sind einige beispiel Blöcken. '
-        craft_inside_repeat: Wiederholen Sie die Aktionen durch Platzieren von Blöcken
-          hier
-        craft_callout_preplaced_house: Dieser Code wird Ihr Hausbau anstarten. Können
-          Sie es beenden?
-        craft_what_is_iron: ' Verminen Sie das Eisenerz'
-        craft_callout_moveforward: Hinzufügen dieser Code überprüft auf Lava, können
-          Sie, einen Befehl zugeben zu bewegen?
+        craft_drag_block_callout: Ziehe einen "forwärts bewegen"-Block und platziere
+          ihn unter den anderen Block, so dass er einrastet
+        craft_callout_preplaced: Wir haben hier einige Blöcke platziert, damit Du
+          beginnen kannst
+        craft_inside_repeat: Wiederhole Befehle, indem Du sie hier rein ziehst
+        craft_callout_preplaced_house: Dieser Code baut den Anfang Deines Hauses.
+          Kannst Du es fertig stellen?
+        craft_what_is_iron: Baue dieses Eisenerz ab!
+        craft_callout_moveforward: Dieser Code überprüft, ob Lava vorhanden ist. Kannst
+          Du einen Befehl hinzufügen, um vorwärts zu gehen?

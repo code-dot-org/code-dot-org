@@ -581,9 +581,9 @@ pt-BR:
         Infinity_move_collide_callout: Reproduza um som quando esse evento ocorrer.
         Infinity_repeat_callout: Coloque blocos Mova aqui dentro
         craft_run_button_callout: 'Clique em "Executar" para testar seu programa'
-        craft_drag_block_callout: 'Arraste um bloco "seguirEmFrente();" e prenda-o debaixo do outro bloco'
-        craft_callout_preplaced: Pusemos alguns blocos aqui para começar
+        craft_drag_block_callout: 'Arraste um bloco "moveForward();" e prenda-o debaixo do outro bloco'
+        craft_callout_preplaced: Nós colocamos alguns blocos aqui para começar
         craft_inside_repeat: Repita ações colocando blocos aqui
         craft_callout_preplaced_house: Este código vai começar a construir a sua casa. Consegue acabá-lo?
         craft_what_is_iron: Minere esse ferro!
-        craft_callout_moveforward: Este código irá checar se há lava, você pode adicionar um comando para avançar?
+        craft_callout_moveforward: Este código vai verificar se há lava, você consegue adicionar um comando para avançar?

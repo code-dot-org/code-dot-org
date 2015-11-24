@@ -268,6 +268,7 @@
         playlab: Crie um aplicativo
         artist: Desenhe alguma coisa
         calculate: Calculate Something
+        applab: Crie um aplicativo
     user:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
@@ -586,7 +587,7 @@
         da Disney Infinity.
     minecraft:
       title: Minecraft
-      body: Explore o mundo de Minecraft através do Code.org.
+      body: Explore o mundo de Minecraft usando códigos.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!

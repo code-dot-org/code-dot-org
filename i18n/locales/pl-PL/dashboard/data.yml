@@ -581,8 +581,8 @@ pl:
         Infinity_repeat_callout: Umieść tutaj wewnątrz bloki przesunięcia
         craft_run_button_callout: 'Kliknij na "Uruchom", aby uruchomić program'
         craft_drag_block_callout: 'Przeciągnij blok "idź do przodu()", aby doczepić go pod innym blokiem'
-        craft_callout_preplaced: Aby ułatwić Ci rozpoczęcie umieściliśmy tutaj trochę bloków
+        craft_callout_preplaced: Aby ułatwić Ci rozpoczęcie, umieściliśmy tutaj kilka bloków
         craft_inside_repeat: Powtórz akcje układając bloki tutaj
         craft_callout_preplaced_house: Ten kod pozwoli na rozpoczęcie budowy Twojego domu. Czy potrafisz go dokończyć?
         craft_what_is_iron: Wykop to żelazo!
-        craft_callout_moveforward: Ten kod sprawdza czy jest lawa, a czy możesz dodać polecenie, aby ruszyć naprzód?
+        craft_callout_moveforward: Ten kod sprawdza czy jest lawa, a czy możesz dodać polecenie, aby przejść naprzód?

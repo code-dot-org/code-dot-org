@@ -562,8 +562,8 @@
         studio_iceage_2: A Diego (actor 1) y abuela (actor 2) les gustaría decirse
           "Hola" mutuamente. ¿Puedes ayudarles usando el bloque "decir" dos veces?
         studio_iceage_3: ¿Puedes ayudar a Scrat a llegar a la bandera?
-        studio_iceage_4: ¿Puedes ayudar a Scrat (actor 1) llegar a Abuela (actor 2)
-          y reproducir un sonido cuando llegue?
+        studio_iceage_4: ¿Puedes ayudar a Scrat (actor 1) llegar hasta la Abuela (actor
+          2) y reproducir un sonido cuando llegue?
         studio_iceage_5: ¿Puedes ayudar a Sid a decir "Saludos" cuando se hace click
           en él? No te olvides de clickearlo después de haber clickeado "Ejecutar"
         studio_iceage_6: ¿Puedes ayudar a Diego a moverse usando las felechas arriba/abajo/derecha/izquierda
@@ -788,11 +788,11 @@
         starwars_blocks_intro: 'Star Wars: Contruyendo una Galaxia con Code - Introducción'
         starwars_blocks_events: 'Star Wars: Contruyendo una Galaxia con Code - Eventos'
         starwars_blocks_congrats: 'Star Wars: Contruyendo una Galaxia con Code - Enhorabuena'
-        mc_intro: Minecraft - Introduzione
-        mc_repeat: Minecraft - Ripetizione
-        mc_if_statements: Minecraft - Istruzione "se"
-        mc_congrats_share: Minecraft - Congratulazioni
-        mc_congrats_no_share: Minecraft - Congratulazioni
+        mc_intro: Minecraft - Introdução
+        mc_repeat: Minecraft - Repetir
+        mc_if_statements: Minecraft - Instruções "se"
+        mc_congrats_share: Minecraft - Parabéns
+        mc_congrats_no_share: Minecraft - Parabéns
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

@@ -577,7 +577,7 @@ bg:
         Infinity_move_collide_callout: Издай звук, когато това събитие се случи.
         Infinity_repeat_callout: Постави блоковете за движение тук вътре
         craft_run_button_callout: 'Натиснете "Старт", за да пробвате вашата програма'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
+        craft_drag_block_callout: 'Плъзнете "moveForward();" блок и го залепи под друг блок'
         craft_callout_preplaced: Ние сме поставили някои блокове тук, за да започнете
         craft_inside_repeat: Повторете действията като поставите блокове тук вътре
         craft_callout_preplaced_house: Този код ще започне изграждането на вашия дом. Можете ли да го завършите?

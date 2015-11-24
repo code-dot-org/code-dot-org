@@ -68,11 +68,11 @@ id:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Pemetaan bahagia
+        title: Happy Maps
         desc: Siswa membuat algoritma sederhana (satu set instruksi) untuk memindahkan sebuah karakter melalui labirin menggunakan satu perintah.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Pindahkan, pindahkan
+        title: Move it, Move it
         desc: Siswa membuat algoritma sederhana (satu set instruksi) untuk memindahkan sebuah karakter melalui labirin menggunakan satu perintah.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
