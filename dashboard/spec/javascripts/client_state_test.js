@@ -87,6 +87,29 @@ describe("clientState#trackProgress", function() {
 
   });
 
+  it("Does not record line counts when level progress does not have a line count", function () {
+    $.cookie('lines', 50, {expires: 365, path: '/'});
+    state.lines().should.equal(50);
+    state.trackProgress(true, undefined, 100, 1);
+    state.lines().should.equal(50);
+    state.trackProgress(true, Infinity, 100, 2);
+    state.lines().should.equal(50);
+    state.trackProgress(true, NaN, 100, 3);
+    state.lines().should.equal(50);
+    state.trackProgress(true, '', 100, 4);
+    state.lines().should.equal(50);
+    state.trackProgress(true, 50, 100, 5);
+    state.lines().should.equal(100);
+  });
+
+  it("Handled malformed line counts in cookie", function () {
+    $.cookie('lines', NaN, {expires: 365, path: '/'});
+    state.lines().should.equal(0);
+    state.trackProgress(true, 50, 100, 1);
+    state.lines().should.equal(50);
+    $.cookie('lines').should.equal('50');
+  });
+
   it("records video progress", function () {
     state.hasSeenVideo('video1').should.equal(false);
     state.hasSeenVideo('video2').should.equal(false);
