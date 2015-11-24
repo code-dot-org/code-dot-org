@@ -522,6 +522,9 @@ en:
         'mc_if_statements' : 'Minecraft - If statements'
         'mc_congrats_share' : 'Minecraft - Congratulations'
         'mc_congrats_no_share' : 'Minecraft - Congratulations'
+        'gumball_intro' : 'Gumball Hour of Code - Introduction'
+        'gumball_events' : 'Gumball Hour of Code - Events'
+        'gumball_repeat' : 'Gumball Hour of Code - Repeat statements'
     callout:
       text:
         # Keyed by #{callout.localization_key}

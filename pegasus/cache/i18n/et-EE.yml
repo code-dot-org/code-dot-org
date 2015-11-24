@@ -1,4 +1,5 @@
 "et-EE":
+  hour_of_code: KoodiTund
   hello: Tere maailm
   select_language: Palun vali oma keel
   en: Arvutiteadus
@@ -318,6 +319,7 @@
     videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
+  starwars_platform_text: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
@@ -325,6 +327,7 @@
     this Minecraft world.
   mc_gradelevel: Ages 4-104
   mc_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Ole KoodiTund vabatahtlik
   volunteer_engineer_submission_subtitle_generic: '100,000 õpetajat korraldavad sel
@@ -675,6 +678,7 @@
   hoc2014_try_frozen: Näitleja Anna ja Elsaga, filmist "Lumekuninganna ja Igavene
     talv"
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Juhendid sinu keeles
@@ -747,6 +751,8 @@
   projguts_name: Kivi, paber, käärid
   hourofcode_name: Koht uue code.org/hoc jaoks
   playlab_name: Play Lab
+  infinity_name: Lõpmatu Play Lab
+  artist_name: Kunstnik
   codeorg_gradelevel: Vanusele 4-104
   codeintl_gradelevel: Vanusele 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -788,6 +794,8 @@
   frozen_gradelevel: Vanusele 8+
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Vanusele 4-104
+  infinity_gradelevel: Vanusele 4-104
+  artist_gradelevel: Vanusele 4-104
   codeorg_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   codeintl_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   thinkersmithspanish_platformtext: Ilma tehnikata tegevused
@@ -879,12 +887,15 @@
   kodableunplugged_shortdescription: Lõbus avutivaba ülesanne
   projguts_shortdescription: Proovige modelleerimist ja simulatsiooni kivi/paber/käärid
     abil
-  hourofcode_shortdescription: Koht uue code.org/hoc jaoks
+  hourofcode_shortdescription: Õpi programmeerima koos Mark Zuckerbergi ja Angry Birds'iga!
   frozen_shortdescription: Programmeerigem, et ühineda Anna ja Elsaga samal ajal,
     kui nad avastavad jää võlu ja ilu.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: Loo lugu või mäng "Play Lab"iga!
+  infinity_shortdescription: Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad
+    Disney Infinity tegelased.
+  artist_shortdescription: Joonista lahedaid pilte ja kujundusi Kunstnikuga!
   codeorg_longdescription: Õpi arvutiteaduse algpõhimõtteid "sikuta ja lase lahti"
     programmeerimise amil. See mängusarnane iseõppimise videos esinevad by Bill Gates,
     Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Õpi kordusi, tingimuslauseid
@@ -1333,3 +1344,11 @@
     Pärast seda kuupäeva ei saa saa Code.org siseneda. <a href='%{it_requirements_url}'>Kliki
     siia</a>, et õppida, kuidas HTTPSi Code.org lehel kasutada.
   compatibility_https_hide_this_warning: Peida see hoiatussõnum
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: laksuta tiibu
+  infinity_shortcode: inf
+  playlab_shortcode: mängi
+  artist_shortcode: art

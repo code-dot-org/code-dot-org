@@ -88,7 +88,7 @@ console.log(message)
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| message | string | Yes | The message string to display in the console.  |
+| message | string | Yes | The message string and/or variable values to display in the console. |
 
 [/parameters]
 

@@ -96,6 +96,9 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 [Grace Hopper Debugging Activity](https://csedweek.org/csteacher/gracehopperdebugging.pdf)  
 **Ages 12-18. History, Language Arts, Storytelling, unplugged** Students will research Grace Hopper and learn the story of the first "bug".
 
+[Globaloria MakeQuest](http://globaloria.com/courses-services/teacher-guides/)  
+**Ages 10-18. Programming, Game Design, English, Math, Creativity, web-based.** Learn to edit and write JavaScript code to defeat the 'Evil 404,' as you explore computer science concepts like variables and functions. Lesson Plan includes subject-matter extension activities for English, Mathematics, Science, History and Arts classes.
+
 
 ## High School
 
@@ -157,6 +160,9 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 
 [Grace Hopper Debugging Activity](https://csedweek.org/csteacher/gracehopperdebugging.pdf)  
 **Ages 12-18. History, Language Arts, Storytelling, unplugged** Students will research Grace Hopper and learn the story of the first "bug".
+
+[Globaloria MakeQuest](http://globaloria.com/courses-services/teacher-guides/)  
+**Ages 10-18. Programming, Game Design, English, Math, Creativity, web-based.** Learn to edit and write JavaScript code to defeat the 'Evil 404,' as you explore computer science concepts like variables and functions. Lesson Plan includes subject-matter extension activities for English, Mathematics, Science, History and Arts classes.
 
 
 <br/><br/>

@@ -1,4 +1,5 @@
 "hr-HR":
+  hour_of_code: Hour of Code
   hello: Pozdrav svima
   select_language: Odaberite svoj jezik
   en: Računalna znanost
@@ -328,6 +329,7 @@
     videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
+  starwars_platform_text: Suvremeni preglednici, mobiteli, tableti
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
@@ -335,6 +337,7 @@
     this Minecraft world.
   mc_gradelevel: Ages 4-104
   mc_platformtext: Suvremeni preglednici, mobiteli, tableti
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
@@ -683,6 +686,7 @@
   hoc2014_try_scrat: Angry Birds, Plants vs. Zombies i Scrat
   hoc2014_try_frozen: Budi umjetnik s Annom i Elsom iz Snježnog kraljevstva
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Vodiči na tvom jeziku
@@ -755,6 +759,8 @@
   projguts_name: Kamen, škare, papir
   hourofcode_name: Prostor za novi code.org/hoc
   playlab_name: Laboratorij igara
+  infinity_name: Infinity Laboratorij igara
+  artist_name: Umjetnik
   codeorg_gradelevel: Dob 4-104
   codeintl_gradelevel: Dob 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -796,6 +802,8 @@
   frozen_gradelevel: Dob 8+
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Dob 4-104
+  infinity_gradelevel: Dob 4-104
+  artist_gradelevel: Dob 4-104
   codeorg_platformtext: Suvremeni preglednici, mobiteli, tableti
   codeintl_platformtext: Suvremeni preglednici, mobiteli, tableti
   thinkersmithspanish_platformtext: Izvanmrežno
@@ -885,12 +893,15 @@
     informacija
   kodableunplugged_shortdescription: Zabavna izvanmrežna vježba
   projguts_shortdescription: Pokušaj oblikovanje i simulaciju uporabom kamen/škare/papir
-  hourofcode_shortdescription: Prostor za novi code.org/hoc
+  hourofcode_shortdescription: Nauči programirati s Markom Zuckerbergom i Angry Birds!
   frozen_shortdescription: Hajdemo koristiti kodiranje da se pridružimo Anni i Elsi
     dok istražuju čaroliju i ljepotu leda.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: Napravi priču ili igru pomoću Laboratorija igara!
+  infinity_shortdescription: Koristi Laboratorij igara da napraviš priču ili igru
+    s likovima iz Disney Infinity.
+  artist_shortdescription: Nacrtaj cool slike i uzorke pomoću Umjetnika!
   codeorg_longdescription: Nauči osnovne informatičke pojmove pomoću povuci-i-ispusti
     programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije
     koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči
@@ -1358,3 +1369,11 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Sakrij ovo upozorenje
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: mahni krilima
+  infinity_shortcode: inf
+  playlab_shortcode: igraj
+  artist_shortcode: art

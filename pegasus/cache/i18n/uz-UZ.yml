@@ -1,4 +1,5 @@
 "uz-UZ":
+  hour_of_code: Dasturlash soati
   hello: Salom Dunyo
   select_language: Iltimos, tilni tanlang
   en: Informatika
@@ -44,8 +45,8 @@
   csedweek_map_search_search: Qidiruv
   csedweek_map_search_reset: Reset
   csedweek_map_legend_title: Afsona
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_event: Dasturlash soati tadbiri
+  csedweek_map_legend_cs_tech_jam: Texnik studiya
   cded_sign_up: Sign up
   cded_try_it: Sinab ko‘ring
   twentyhours_trynow: Hoziroq sinang
@@ -72,9 +73,9 @@
   thank_you_: Rahmat!
   congratulations: Tabriklaymiz!
   congratulations_on_completing_hoc: Dasturlash soatini tugatganingiz bilan tabriklaymiz
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
+  congratulations_volunteer: 'Tabriklaymiz: siz Dasturlash soatini sinab ko‘rdingiz,
+    <a href="https://code.org/volunteer">ko‘ngilli bo‘lib ro‘yxatdan o‘ting</a> va
+    o‘quvchilarga dasturlash soatini o‘rganishiga yordam bering!'
   course_name_accelerated: Accelerated Course
   course_name_course1: Course 1
   course_name_course2: Course 2
@@ -239,15 +240,15 @@
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Xarid
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_hoc: Har bir o‘quvchi uchun Dasturlash soati.
   homepage_action_text_num_served: '# kishi sinab ko‘rdi'
   homepage_action_text_join_us: Bizga qo'shiling
   homepage_action_text_sign_up: Sign up
   homepage_action_text_try_it: Sinab ko‘ring
-  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_volunteers: Texnik ko‘ngillilarni taklif qilamiz
   homepage_action_text_codevideo: Videoni ko‘ring
   homepage_action_text_teachervideo: Videoni ko‘ring
-  homepage_action_text_girlvideo: Inspire a girl
+  homepage_action_text_girlvideo: Qizlarni ruhlantiring
   homepage_action_text_learn: O‘rganishni boshlang
   homepage_action_text_signpetition: Murojaatni imzolang
   homepage_signpetition_dropdown: 'Roziman: &#x25BE;'
@@ -256,10 +257,10 @@
   homepage_banner_link_prizes: 'Tarixdagi eng katta o‘quv tadbiriga qo‘shiling. '
   homepage_banner_text_main: Code.org hamda College Board informatikada turli qatlamdagi
     o‘rganuvchilarni oshirish uchun hamkorlik qiladi.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_link: Ko‘proq bilish
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more
+  homepage_banner_privacy_link: Ko‘proq bilish
   homepage_slot_text_title_hoc: Dasturlash soati
   homepage_slot_text_blurb_hoc: Har kim o‘rganishi mumkin. Bugundan boshlang.
   homepage_slot_text_link_hoc: Try the Hour of Code
@@ -324,48 +325,52 @@
   class_submission_level_college: Kollej
   class_submission_level_vocational: Kasbiy
   class_submission_languages_other: Boshqa til(lar)
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
+  inspirational_videos_more: Rol modeli va mashxurlardan ko‘roq <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">ilhomlantiruvchi
+    videolar</a>
+  starwars_subtitle: Dasturlash bilan galaktika quring
   starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_description: Ko‘chuvchi blok va JavaScriptdan foydalaning.
+  starwars_javascript_specs: 'Faqat inglizcha | Zamonaviy brauzerlar | Yosh: 11+'
   starwars_javascript_start_button: Hoziroq sinang
-  starwars_blocks_title: Blocks
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_title: Bloklar
+  starwars_blocks_description: Ko‘chuvchi bloklardan foydalaning.
+  starwars_blocks_specs: 'Ko‘p tillar (tez orada) | Zamonaviy brazerlar, smartfonlar,
+    planshetlar | Yosh: 6-10'
   starwars_blocks_start_button: Hoziroq sinang
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
+  starwars_watch_videos: Boshlashdan avval ilhomlantiruvchi videolardan birortasini
+    ko‘ring
+  starwars_speak_languages: Boshqa tilda so‘zlashasizmi?
   starwars_help_translate: Bizga o'girishga yordam
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
+  starwars_platform_text: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  mc_name: Maynkraft Dasturlash soati
+  mc_longdescription: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod
+    bloklaridan foydalaning.
+  mc_shortdescription: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod
+    bloklaridan foydalaning.
   mc_gradelevel: Ages 4-104
   mc_platformtext: Modern browsers, smartphones, tablets
-  minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  mc_specs: 'Ko‘p tillar (tez orada) | Zamonaviy brauzerlar | Yosh: 6+'
+  minecraft_subtitle: Maynkraft Dasturlash soati
+  volunteer_engineer_submission_title: O‘quvchi va ko‘ngillilarni Dasturlash soatiga
+    jalb qiling.
   volunteer_engineer_submission_subtitle_generic: 'Bu yil (7-13 dekabr, 2015) 100
     000 o‘qituvchi o‘z sinflarida Dasturlash soatini o‘tishmoqchi. Ularga yordamingiz
     kerak! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} ta o‘qituvchilar
+    ko‘ngillilarni shu dekabrda bo‘ladigan Informatika haftaligida Dasturlash soatiga
+    yordam berishga chaqiradi. <br>%{num_volunteers} ta ko‘ngillilar ro‘yxatdan o‘tishgan.
+    Ularga qo‘shiling.'
   volunteer_engineer_submission_intro_background: Dasturlash soati — Informatikaga
     kirish soatini o‘tishni maqsad qilgan umumbashariy harakat. U 180 dan oshiq mamlakatda
     o‘n millionlab o‘quvchilarni qamrab olishni maqsad qilgan. 7-13 Dekabr kunlari
     Informatika ta'limi haftaligiga qo‘shiling.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_recruit: 'Bu o‘qituvchilar darslariga yordami
+    tegadigan, <span style="font-family: ''Gotham 7r'', sans-serif;">informatikani
+    o‘qitishga qiziqqan</span> yoki o‘quvchilarini Informatika ilmi imkoniyatlari
+    haqida so‘zlab (buni videochat orqali ham amalga oshirish mumkin) <span style="font-family:
+    ''Gotham 7r'', sans-serif;">ilhomlantira oladigan</span> insonlarni qo‘shilishidan
+    bag‘oyatda minnatdor. Agar siz ko‘ngilli qidirmayotgan bo‘lsangiz, Dasturlash
+    soatini tashkillashtirish haqida <a href="%{url}">batafsil o‘rganing</a>.'
   volunteer_engineer_submission_intro_signup: Informatika talabasi yoki dasturchi
     bo‘lsangiz, iltimos, quyidagi ma'lumotlarni kiriting. <span class="form-required-field">*</span>
     belgili sohalarni to‘ldirish majburiy.
@@ -385,8 +390,8 @@
     mobaynida qayidagilar bilan yordam berolaman (barcha tegishlilarni belgilang):'
   volunteer_engineer_submission_checkbox_after_hoc: Men Dasturlash soatidan so‘ng
     ko‘ngilli bo‘lish ishtiyoqidaman
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
-    of Code
+  volunteer_engineer_submission_field_time_commitment: Dasturlash soatidan keyin unga
+    ketqizilgan vaqt
   volunteer_engineer_submission_field_linkedin: Linkedin hisobingiz
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/ismingiz
   volunteer_engineer_submission_field_facebook: Facebook hisobingiz
@@ -401,12 +406,12 @@
   volunteer_engineer_submission_field_email_desc: Elektron pochtangiz hech qachon
     tarqatilmaydi, ammo sizga o‘qituvchilardan takliflarni jo‘natamiz.
   volunteer_engineer_submission_field_email_placeholder: Email address
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
-    teachers to contact you for the Hour of Code or other volunteer opportunities.
-    Your email and exact address will NEVER be shared by us. But the other information
-    (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
-    me for volunteer opportunities (Note: your email address won''t be shared)'
+  volunteer_engineer_submission_final_paragraph: Dasturlash soati uchun o‘qituvchilar
+    yoki boshqa ko‘ngillilar bog‘lanishi uchun siz xaritada ko‘rsatilasiz. Sizning
+    elektron pochtangiz va manzilingiz hech qachon tarqatilmaydi. Ammo boshqa ma‘lumotlar
+    (taxminiy joylashgan o‘rningiz ham) mahalliy o‘qituvchilar uchun ko‘rinadi.
+  volunteer_engineer_submission_checkbox_contact: 'Men o‘qituvchilar ko‘ngillilik
+    uchun bog‘lanishlariga roziman (Eslatma: sizning elektron pochtangiz tarqatilmaydi)'
   volunteer_engineer_submission_submit: Tasdiqlash
   volunteer_engineer_submission_thankyou: Dasturlash soatiga ko‘ngilli bo‘lganingiz
     uchun tashakkur. Dasturlash soatiga tayyorlanish va boshqalarni jalb qilish uchun
@@ -427,24 +432,25 @@
   volunteer_engineer_submission_location_flexibility_curriculum: ochiq kodli o‘quv
     loyihalariga hissa qo‘shish
   volunteer_engineer_submission_experience_unspecified: Ko‘rsatilmagan
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_experience_tech_company: Texnik kopaniyadagi texnikaga
+    aloqasiz ishchi
   volunteer_engineer_submission_experience_university_student_or_researcher: Universitet
     informatika talabasi
   volunteer_engineer_submission_experience_software_professional: Dasturchi
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
+  volunteer_engineer_submission_distance_8: 5 mil
+  volunteer_engineer_submission_distance_16: 10 mil
+  volunteer_engineer_submission_distance_24: 15 mil
+  volunteer_engineer_submission_distance_32: 20 mil
+  volunteer_engineer_submission_num_volunteers_5: 5 ta ko‘ngilli
+  volunteer_engineer_submission_num_volunteers_10: 10 ta ko‘ngilli
+  volunteer_engineer_submission_num_volunteers_25: 25 ta ko‘ngilli
+  volunteer_engineer_submission_num_volunteers_50: 50 ta ko‘ngilli
+  volunteer_engineer_submission_type_task_onsite: Men o‘z darsimga texnik yordam yoki
+    ilhomlantirishingiz uchun taklif qilishni xohlayman
+  volunteer_engineer_submission_type_task_remote: Men sinfimga Skayp orqali bog‘lanib,
+    bolalarni ilhomlantirishingizni xohlayman
+  volunteer_engineer_submission_type_task_mentor: Men o‘quvchilarim bilan dasturlash
+    uchun murabbiy qidirayapman
   petition_age: Yoshi
   dashboard_landing_title: O‘qituvchining bosh sahifasi
   dashboard_landing_welcome: Yangi va takomillashgan o‘qituvchi boshqaruv paneliga
@@ -453,22 +459,25 @@
   dashboard_landing_watch_video: yangi imkoniyatlar bilan tanishish uchun!
   dashboard_landing_view_as_student: Saytni o‘quvchi kabi ko‘rish
   dashboard_landing_students_title: Sizning talabalar
-  dashboard_landing_students_manage: View and manage your students
-  dashboard_landing_news_title: K-5 Educator Resources (in English only)
-  dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
-  dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
-  dashboard_landing_useful_links: Other useful links
-  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
-    office hours.
+  dashboard_landing_students_manage: O‘quvchilarni ko‘rish va boshqarish
+  dashboard_landing_news_title: Boshlang‘ich sinfdagilar uchun manba (faqat ingliz
+    tilida)
+  dashboard_landing_new_beta: Yangilik! Boshlang‘ich sinfdagilar uchun beta-mashg‘ulotlarimizni
+    sinab ko‘ring.
+  dashboard_landing_new_k5courses: Yangilik! Boshlang‘ich sinfdagilar uchun mashg‘ulotlarimizni
+    sinab ko‘ring.
+  dashboard_landing_useful_links: Boshqa foydali havolalar
+  dashboard_landing_office_hours: Shaxsan savol bering! Oylik video offis soatlarimizga
+    tashrif buyuring.
   dashboard_landing_print_certificates: Print certificates for students who finish
     this course
   dashboard_landing_educator_blog: Read about news and updates to our materials at
     our Educator Blog
   dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
   dashboard_landing_video_player: Test our new video player at your school
-  dashboard_landing_progress_title: Main class progress
-  dashboard_landing_progress_biggest: This is the progress for your biggest section.
-  dashboard_landing_view_progress: View Progress for %{biggest_section}
+  dashboard_landing_progress_title: Sinfning asosiy yutuqlari
+  dashboard_landing_progress_biggest: Bu sizning eng katta bo‘limingiz uchun yutuqlaringiz.
+  dashboard_landing_view_progress: '%{biggest_section} uchun o‘sishni ko‘rish'
   dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Available courses
   dashboard_landing_available_courses: Here are the courses currently available for
@@ -584,12 +593,12 @@
   dashboard_students_password: Kalit so`z
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_completed_levels: Completed Levels
-  dashboard_students_total_lines: Lines of Code
-  dashboard_students_show_secret: Show secret
-  dashboard_students_auto_generated: Auto-generated
-  dashboard_students_reset_secret: Reset secret
-  dashboard_students_reset_password: Reset password
+  dashboard_students_completed_levels: O‘tilgan bosqichlar
+  dashboard_students_total_lines: Kod satrlari
+  dashboard_students_show_secret: Sirini ko‘rsatish
+  dashboard_students_auto_generated: Avtomatik tuzilgan
+  dashboard_students_reset_secret: Sirni qayta tuzish
+  dashboard_students_reset_password: Parolni qayta tuzish
   dashboard_students_share_section: 'Share this section''s sign in page with your
     students:'
   dashboard_students_print_info: Print out cards with your students' login information.
@@ -701,6 +710,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Tutorials in your language
@@ -770,8 +780,10 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: Ilk kompyuter dasturingizni yarating
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artist
   codeorg_gradelevel: Ages 4-104
   codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -813,6 +825,8 @@
   frozen_gradelevel: Ages 8+
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Ages 4-104
+  infinity_gradelevel: Ages 4-104
+  artist_gradelevel: Ages 4-104
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
@@ -906,6 +920,9 @@
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
@@ -1363,3 +1380,11 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Hide this warning
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: qanot qoqmoq
+  infinity_shortcode: inf
+  playlab_shortcode: play
+  artist_shortcode: art

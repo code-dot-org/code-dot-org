@@ -1,4 +1,5 @@
 "fil-PH":
+  hour_of_code: Hour of Code
   hello: Mabuhay!
   select_language: Piliin ang iyong wika
   en: Computer Science
@@ -340,6 +341,7 @@
     videos
   starwars_speak_languages: Speak another language?
   starwars_help_translate: Help us translate
+  starwars_platform_text: Makabagong mga browser, smartphone, at mga tablet
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
@@ -347,6 +349,7 @@
     this Minecraft world.
   mc_gradelevel: Ages 4-104
   mc_platformtext: Makabagong mga browser, smartphone, at mga tablet
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
@@ -708,6 +711,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ, at Scrat
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Mga tutorial sa iyong wika
@@ -778,8 +782,10 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Bato, Papel, Gunting
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: Isulat ang iyong unang computer program
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artist
   codeorg_gradelevel: Edad 4-104
   codeintl_gradelevel: Edad 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -821,6 +827,8 @@
   frozen_gradelevel: Edad 8+
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Edad 4-104
+  infinity_gradelevel: Edad 4-104
+  artist_gradelevel: Edad 4-104
   codeorg_platformtext: Makabagong mga browser, smartphone, at mga tablet
   codeintl_platformtext: Makabagong mga browser, smartphone, at mga tablet
   thinkersmithspanish_platformtext: Unplugged
@@ -916,6 +924,9 @@
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
@@ -1375,3 +1386,11 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Itago ang babalang ito
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: flap
+  infinity_shortcode: inf
+  playlab_shortcode: i-play
+  artist_shortcode: art
