@@ -306,6 +306,8 @@ class Script < ActiveRecord::Base
   def freeplay_links
     if name.include?('algebra')
       ['calc', 'eval']
+    elsif name.start_with?('csp')
+      ['applab']
     else
       ['playlab', 'artist']
     end
