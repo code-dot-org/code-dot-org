@@ -1225,7 +1225,7 @@ levels.c2_10 = utils.extend(levels.change_background_and_speed, {});
 levels.c3_game_6 = utils.extend(levels.change_background_and_speed, {});
 
 levels.playlab_9 = {
-  background: 'grey',
+  background: 'rgba(0, 0, 0, 0.5)',
   requiredBlocks: [
     [{test: 'setBackground',
       type: 'studio_setBackground',
@@ -2186,7 +2186,7 @@ levels.js_hoc2015_event_two_items = {
   instructions: msg.hoc2015_event_two_items_instructions(),
   instructions2: msg.hoc2015_event_two_items_instructions2(),
   'timeoutFailureTick': 600, // 20 seconds
-  'showTimeoutRect': 'grey',
+  'showTimeoutRect': 'rgba(0, 0, 0, 0.5)',
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
     'goalRenderOffsetX': 0
@@ -2286,7 +2286,7 @@ levels.js_hoc2015_event_four_items = {
   instructions: msg.hoc2015_event_four_items_instructions(),
   instructions2: msg.hoc2015_event_four_items_instructions2(),
   'timeoutFailureTick': 1350, // 45 seconds
-  'showTimeoutRect': 'grey',
+  'showTimeoutRect': 'rgba(0, 0, 0, 0.5)',
   'goalOverride': {
     'goalAnimation': 'animatedGoal'
   },
@@ -2359,7 +2359,7 @@ levels.js_hoc2015_score =
   instructions2: msg.hoc2015_score_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
-  'showTimeoutRect': 'grey',
+  'showTimeoutRect': 'rgba(0, 0, 0, 0.5)',
   'goalOverride': {
     'goalAnimation': 'animatedGoal'
   },
@@ -2475,7 +2475,7 @@ levels.js_hoc2015_win_lose = {
   instructions2: msg.hoc2015_win_lose_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
-  'showTimeoutRect': 'white',
+  'showTimeoutRect': 'rgba(255, 255, 255, 0.5)',
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_win_lose:instructions',
@@ -2587,7 +2587,7 @@ levels.js_hoc2015_add_characters = {
   instructions2: msg.hoc2015_add_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
-  'showTimeoutRect': 'white',
+  'showTimeoutRect': 'rgba(255, 255, 255, 0.5)',
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_add_characters:calloutPutCommandsHereRunStart',
@@ -2685,7 +2685,7 @@ levels.js_hoc2015_chain_characters = {
   instructions2: msg.hoc2015_chain_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1800, // 60 seconds
-  'showTimeoutRect': 'white',
+  'showTimeoutRect': 'rgba(255, 255, 255, 0.5)',
   'progressConditions' : [
     { required: { 'collectedSpecificItemsAtOrAbove': { className: "mynock", count: 8 } },
       result: { success: true, message: msg.successCharacter1() } },
@@ -2765,7 +2765,7 @@ levels.js_hoc2015_multiply_characters = {
   instructions2: msg.hoc2015_multiply_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 2250, // 75 seconds
-  'showTimeoutRect': 'white',
+  'showTimeoutRect': 'rgba(255, 255, 255, 0.5)',
   'progressConditions' : [
     { required: { 'collectedItemsAtOrAbove': 20 },
       result: { success: true, message: msg.successCharacter1() } },
@@ -2874,7 +2874,7 @@ levels.js_hoc2015_change_setting = {
   instructions2: msg.hoc2015_change_setting_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
-  'showTimeoutRect': 'white',
+  'showTimeoutRect': 'rgba(255, 255, 255, 0.5)',
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_change_setting:setMap',
