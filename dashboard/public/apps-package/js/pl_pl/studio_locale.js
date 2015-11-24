@@ -899,4 +899,11 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Musisz złapać 20 myszodroidów. Użyj polecenia \"dodaj myszodroida\" wewnątrz zdarzenia \"gdy złapie myszodroida\", by dodać dwa lub więcej myszodroidy za każdym razem gdy złapiesz jednego."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Gratulacje, dodałeś kod, by utworzyć Myszodroidów. Możesz przejść do następnej łamigłówki lub ponownie zdobyć 20 Myszodroidów. Ułatwisz to sobie dodając ich więcej! (Naciskaj i przytrzymuj klawisze ze strzałkami na klawiaturze (lub na ekranie), by poruszać się szybciej.)"},
 "failedChangeSettingTimeout":function(d){return "Zdobądź trzech Pilotów Rebeliantów, aby kontynuować."},
-"failedChangeSettingSettings":function(d){return "Stwórz własną grę. Aby przejść ten poziom, musisz zmienić swojego droida i ustawić jego prędkość."}};
+"failedChangeSettingSettings":function(d){return "Stwórz własną grę. Aby przejść ten poziom, musisz zmienić swojego droida i ustawić jego prędkość."},
+"playSoundR2D2Random":function(d){return "play R2-D2 random sound"},
+"playSoundC3PORandom":function(d){return "play C-3PO random sound"},
+"playSoundPufferPigRandom":function(d){return "play Puffer Pig random sound"},
+"playSoundTauntaunRandom":function(d){return "play Tauntaun random sound"},
+"playSoundMynockRandom":function(d){return "play Mynock random sound"},
+"playSoundProbotRandom":function(d){return "play Probot random sound"},
+"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"}};
