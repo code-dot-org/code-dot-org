@@ -853,7 +853,7 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function(options) {
 
   var infoMessage = this.getGeneratedCodeDescription(codeInfoMsgParams,
       options.generatedCodeDescription);
-  var code = this.getGeneratedCodeString_();
+  var code = this.studioApp_.polishGeneratedCodeString(this.getGeneratedCodeString_());
 
   var codeDiv = document.createElement('div');
   codeDiv.innerHTML = require('./templates/code.html.ejs')({

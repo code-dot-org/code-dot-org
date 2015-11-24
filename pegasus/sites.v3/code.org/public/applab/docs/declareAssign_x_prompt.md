@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## Declare a variable and prompt the user for its value
+## Prompt the user for a value and store it
 
 [/name]
 
