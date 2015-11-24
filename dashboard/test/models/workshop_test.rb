@@ -215,4 +215,13 @@ class WorkshopTest < ActiveSupport::TestCase
     assert_nil create(:workshop, program_type: '1', phase: 999).exit_survey_url
   end
 
+  test "location and instructions can be 500 chars" do
+    string_500 = "a" * 500
+
+    workshop = Workshop.create!(name: 'name', location: string_500, instructions: string_500, program_type: '1')
+
+    assert_equal string_500, workshop.location
+    assert_equal string_500, workshop.instructions
+  end
+
 end

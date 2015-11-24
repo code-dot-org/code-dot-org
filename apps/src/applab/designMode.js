@@ -9,6 +9,7 @@ var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
 var KeyCodes = require('../constants').KeyCodes;
+var constants = require('./constants');
 
 var designMode = module.exports;
 
@@ -309,6 +310,38 @@ designMode.updateProperty = function(element, name, value) {
     case 'readonly':
       element.setAttribute('contenteditable', !value);
       break;
+    case 'is-default':
+      if (value === true) {
+        // Make this one default
+        $('#designModeViz .screen').attr('data-is-default', false);
+        element.setAttribute('data-is-default', true);
+        $('#designModeViz').prepend(element);
+
+        //Resort elements in the dropdown list
+        var options = $('#screenSelector option');
+        var newScreenText = constants.NEW_SCREEN;
+        var defaultScreenId = elementUtils.getId(element);
+        options.sort(function (a, b) {
+          if (a.text === defaultScreenId) {
+            return -1;
+          } else if (b.text === defaultScreenId) {
+            return 1;
+          } else if (a.text === newScreenText) {
+            return 1;
+          } else if (b.text === newScreenText) {
+            return -1;
+          } else {
+            return a.text.localeCompare(b.text);
+          }
+        });
+
+        $('#screenSelector').html(options);
+        $('#screenSelector')[0].selectedIndex = 0;
+
+      } else {
+        element.setAttribute('data-is-default', false);
+      }
+      break;
     default:
       // Mark as unhandled, but give typeSpecificPropertyChange a chance to
       // handle it
@@ -333,6 +366,9 @@ designMode.onDeletePropertiesButton = function(element, event) {
 
   if (isScreen) {
     designMode.loadDefaultScreen();
+    if ($('#designModeViz .screen[data-is-default=true]').length === 0) {
+      $('#designModeViz .screen').first().attr('data-is-default', true);
+    }
   } else {
     designMode.editElementProperties(elementUtils.getPrefixedElementById(currentScreenId));
   }
@@ -415,6 +451,7 @@ designMode.serializeToLevelHtml = function () {
   if (madeUndraggable) {
     makeDraggable(designModeViz.children().children());
   }
+
   Applab.levelHtml = serialization;
 };
 
@@ -735,8 +772,7 @@ designMode.configureDesignToggleRow = function () {
     return;
   }
 
-  var firstScreen = elementUtils.getId($('#designModeViz .screen')[0]);
-  designMode.changeScreen(firstScreen);
+  designMode.loadDefaultScreen();
 };
 
 /**
@@ -745,6 +781,7 @@ designMode.configureDesignToggleRow = function () {
  */
 designMode.createScreen = function () {
   var newScreen = elementLibrary.createElement('SCREEN', 0, 0);
+  newScreen.setAttribute('data-is-default', $('#designModeViz .screen').length === 0);
   $("#designModeViz").append(newScreen);
 
   return elementUtils.getId(newScreen);
@@ -795,6 +832,7 @@ designMode.getCurrentScreenId = function() {
  */
 designMode.loadDefaultScreen = function () {
   var defaultScreen;
+
   if ($('#designModeViz .screen').length === 0) {
     defaultScreen = designMode.createScreen();
   } else {

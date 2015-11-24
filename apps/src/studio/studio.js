@@ -1877,6 +1877,25 @@ Studio.init = function(config) {
     annotationList.clearRuntimeAnnotations();
   };
 
+  // Since we allow "show code" for some blockly levels with move blocks,
+  // we supply a polishCodeHook function here to make the generated code look
+  // more readable:
+  config.polishCodeHook = function (code) {
+    if (studioApp.isUsingBlockly()) {
+      var regexpMoveBlockPrefix = /Studio.move\('\S*', 0, /g;
+      code = code.replace(regexpMoveBlockPrefix, "move");
+      var regexpUpBlockSuffix = /1\);/g;
+      code = code.replace(regexpUpBlockSuffix, "Up();");
+      var regexRightBlockSuffix = /2\);/g;
+      code = code.replace(regexRightBlockSuffix, "Right();");
+      var regexpDownBlockSuffix = /4\);/g;
+      code = code.replace(regexpDownBlockSuffix, "Down();");
+      var regexpLeftBlockSuffix = /8\);/g;
+      code = code.replace(regexpLeftBlockSuffix, "Left();");
+    }
+    return code;
+  };
+
   config.twitter = twitterOptions;
 
   // for this app, show make your own button if on share page
@@ -2999,6 +3018,8 @@ Studio.drawDebugLine = function(className, x1, y1, x2, y2, color) {
  * Draw a timeout rectangle across the bottom of the play area.
  * It doesn't appear until halfway through the level, and briefly fades in
  * when first appearing.
+ * level.showTimeoutRect should be a valid color that can be passed to an SVG
+ * 'fill'.
  */
 Studio.drawTimeoutRect = function() {
   if (!level.showTimeoutRect || Studio.timeoutFailureTick === Infinity) {
@@ -3032,7 +3053,7 @@ Studio.drawTimeoutRect = function() {
       background.setAttribute('height', height);
       background.setAttribute('x', 0);
       background.setAttribute('y', Studio.MAZE_HEIGHT - height);
-      background.setAttribute('fill', 'rgba(255, 255, 255, 0.5)');
+      background.setAttribute('fill', level.showTimeoutRect);
       group.appendChild(background);
       svg.appendChild(group);
     }
@@ -3394,6 +3415,11 @@ Studio.animateGoals = function() {
     frameWidth = skin.goalSpriteWidth;
   }
 
+  // We want each goal animation to play at an offset so they're not all in
+  // sync.  By offsetting the frame by (goal index * 7) we ensure that each goal's
+  // animation is significantly out of sync.
+  var animationOffset = 7;
+
   for (var i = 0; i < Studio.spriteGoals_.length; i++) {
     var goal = Studio.spriteGoals_[i];
     // Keep animating the goal unless it's finished and we're not fading out.
@@ -3403,7 +3429,7 @@ Studio.animateGoals = function() {
 
       if (animate) {
         var baseX = parseInt(goalClipRect.getAttribute('x'), 10);
-        var frame = Math.floor(elapsed / frameDuration) % numFrames;
+        var frame = (i * animationOffset + Math.floor(elapsed / frameDuration)) % numFrames;
 
         goalSprite.setAttribute('x', baseX - frame * frameWidth);
       }
