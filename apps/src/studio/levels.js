@@ -3453,9 +3453,9 @@ levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
           <next> \
            <block type="studio_addCharacter"><title name="VALUE">"rebelpilot"</title> \
             <next> \
-             <block type="studio_setBackground"><title name="VALUE">"random"</title> \
+             <block type="studio_setBackground"><title name="VALUE">random</title> \
               <next> \
-               <block type="studio_setMap"><title name="VALUE">"random"</title></block> \
+               <block type="studio_setMap"><title name="VALUE">random</title></block> \
               </next> \
              </block> \
             </next> \
@@ -3469,7 +3469,7 @@ levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
   // TODO: create setDroid block to improve the readability of the block?
   // TODO: skin override of playSound dropdown (with paramsList filtering & random)
   toolbox:
-    tb('<block type="studio_setSprite"><title name="VALUE">"C-3PO"</title></block> \
+    tb('<block type="studio_setSprite"><title name="VALUE">C-3PO</title></block> \
         <block type="studio_setDroidSpeed"></block> \
         <block type="studio_setBackground"></block> \
         <block type="studio_setMap"></block> \
