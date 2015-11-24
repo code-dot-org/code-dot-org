@@ -614,13 +614,13 @@ function loadHoc2015(skin, assetUrl) {
   skin.customObstacleZones.endor.blobs = [
     { minX: 361, maxX: 413, minY: 261, maxY: 344 },
     { minX: 318, maxX: 404, minY: 342, maxY: 397 },
-    { minX: 308, maxX: 352, minY: 72, maxY: 110 },
-    { minX: 264, maxX: 352, minY: 112, maxY: 197 },
-    { minX: 109, maxX: 154, minY: 289, maxY: 351 },
-    { minX: 109, maxX: 205, minY: 228, maxY: 288 },
+    { minX: 308, maxX: 348, minY: 72, maxY: 110 },
+    { minX: 264, maxX: 348, minY: 112, maxY: 197 },
+    { minX: 109, maxX: 149, minY: 289, maxY: 351 },
+    { minX: 109, maxX: 200, minY: 238, maxY: 288 },
     { minX: 83, maxX: 125, minY: 125, maxY: 147 },
     { minX: 58, maxX: 99, minY: 72, maxY: 91 },
-    { minX: 57, maxX: 156, minY: 92, maxY: 123 }];
+    { minX: 57, maxX: 150, minY: 92, maxY: 123 }];
 
   skin.customObstacleZones.endor.horizontal = [
     { minX: 51, maxX: 299, minY: 269, maxY: 293 },
