@@ -941,6 +941,31 @@ function loadHoc2015(skin, assetUrl) {
       randomValue: 'C-3POrandom',
       minSuffix: 1,
       maxSuffix: 4
+    },
+    'PufferPigSound': {
+      randomValue: 'PufferPigRandom',
+      minSuffix: 1,
+      maxSuffix: 4
+    },
+    'TauntaunSound': {
+      randomValue: 'TauntaunRandom',
+      minSuffix: 1,
+      maxSuffix: 4
+    },
+    'MynockSound': {
+      randomValue: 'MynockRandom',
+      minSuffix: 1,
+      maxSuffix: 3
+    },
+    'ProbotSound': {
+      randomValue: 'ProbotSoundRandom',
+      minSuffix: 1,
+      maxSuffix: 3
+    },
+    'MouseDroidSound': {
+      randomValue: 'MouseDroidSoundRandom',
+      minSuffix: 1,
+      maxSuffix: 3
     }
   };
 
@@ -961,20 +986,25 @@ function loadHoc2015(skin, assetUrl) {
     [msg.playSoundC3POSound2(), 'C-3POsound2'],
     [msg.playSoundC3POSound3(), 'C-3POsound3'],
     [msg.playSoundC3POSound4(), 'C-3POsound4'],
+    [msg.playSoundPufferPigRandom(), 'PufferPigRandom'],
     [msg.playSoundPufferPigSound1(), 'PufferPigSound1'],
     [msg.playSoundPufferPigSound2(), 'PufferPigSound2'],
     [msg.playSoundPufferPigSound3(), 'PufferPigSound3'],
     [msg.playSoundPufferPigSound4(), 'PufferPigSound4'],
+    [msg.playSoundTauntaunRandom(), 'TauntaunRandom'],
     [msg.playSoundTauntaunSound1(), 'TauntaunSound1'],
     [msg.playSoundTauntaunSound2(), 'TauntaunSound2'],
     [msg.playSoundTauntaunSound3(), 'TauntaunSound3'],
     [msg.playSoundTauntaunSound4(), 'TauntaunSound4'],
+    [msg.playSoundMynockRandom(), 'MynockRandom'],
     [msg.playSoundMynockSound1(), 'MynockSound1'],
     [msg.playSoundMynockSound2(), 'MynockSound2'],
     [msg.playSoundMynockSound3(), 'MynockSound3'],
+    [msg.playSoundProbotRandom(), 'ProbotRandom'],
     [msg.playSoundProbotSound1(), 'ProbotSound1'],
     [msg.playSoundProbotSound2(), 'ProbotSound2'],
     [msg.playSoundProbotSound3(), 'ProbotSound3'],
+    [msg.playSoundMouseDroidRandom(), 'MouseDroidRandom'],
     [msg.playSoundMouseDroidSound1(), 'MouseDroidSound1'],
     [msg.playSoundMouseDroidSound2(), 'MouseDroidSound2'],
     [msg.playSoundMouseDroidSound3(), 'MouseDroidSound3'],
