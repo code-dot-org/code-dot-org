@@ -81,7 +81,7 @@ class Stage < ActiveRecord::Base
     end
 
     if script.hoc?
-      stage_data[:finishLink] = "../congrats.html" #script.hoc_finish_url
+      stage_data[:finishLink] = "congrats.html" #script.hoc_finish_url
       stage_data[:finishText] = I18n.t('nav.header.finished_hoc')
     end
 

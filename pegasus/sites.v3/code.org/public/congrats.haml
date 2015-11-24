@@ -85,7 +85,7 @@ max_age: 60
   = view :congrats_continue
 
 = view 'popup_window.js'
-%img{src: "https://code.org/api/hour/finish_disney_static_starwars.png"}
+%img{src: "https://code.org/api/hour/finish_#{params[:tutorial]}.png", alt: params[:tutorial]}
 :javascript
 
   var cookieValue;
