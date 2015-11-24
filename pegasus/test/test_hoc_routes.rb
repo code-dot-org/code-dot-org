@@ -64,9 +64,32 @@ class HocRoutesTest < Minitest::Test
       assert(after_end_row[:finished_at])
     end
 
+    it 'starts and ends given tutorial, tracking time' do
+      before_start_row = get_session_hoc_activity_entry
+      assert_nil before_start_row
+
+      before_began_time = Sequel.string_to_datetime(Time.now.utc.to_s)
+      assert_redirects_from_to '/api/hour/begin/mc', CDO.code_org_url('/mc')
+      after_began_time = Sequel.string_to_datetime(Time.now.utc.to_s)
+
+      after_start_row = get_session_hoc_activity_entry
+      assert_datetime_within(after_start_row[:started_at], before_began_time, after_began_time)
+      assert_nil after_start_row[:finished_at]
+
+      before_ended_time = Sequel.string_to_datetime(Time.now.utc.to_s)
+      assert_redirects_from_to '/api/hour/finish/mc', CDO.code_org_url('/congrats')
+      after_ended_time = Sequel.string_to_datetime(Time.now.utc.to_s)
+      after_end_row = get_session_hoc_activity_entry
+      assert_datetime_within(after_end_row[:finished_at], before_ended_time, after_ended_time)
+    end
+
     it 'ends given tutorial with png image' do
       assert_successful_get '/api/hour/finish_mc.png'
       assert_equal 'image/png', @pegasus.last_response['Content-Type']
+    end
+
+    def assert_datetime_within(after_start_time, before_begin_time, after_begin_time)
+      assert (before_begin_time..after_begin_time).cover?(after_start_time)
     end
 
     def get_session_hoc_activity_entry
