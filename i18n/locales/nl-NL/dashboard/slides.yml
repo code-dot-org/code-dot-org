@@ -436,45 +436,45 @@ nl:
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: "In sand sculpture you've got to know that failure is part of the program. But if you persist, it's just going to get nothing but better and more exciting for you. Persistence is the name of the game. Stay with it, you'll love it."
+        text: In zand sculptuur is het belangrijk om te begrijpen dat je van je fouten moet leren. Maar als je weet vol te houden dan wordt het alleen maar mooier en beter. Volhouden is het devies. Gewoon doorgaan, het wordt geweldig.
       2:
         image: notes/C1_building_foundation_2.jpg
-        text: "This lesson is called building a foundation. In this lesson, we'll work on a task that is meant to be really difficult. You will figure out how to make a structure at least as tall as one of these cups and it's got to be strong enough to hold the weight of a book."
+        text: "Dit is de les: 'een stevige basis maken'. In deze les gaan we aan een taak werken die opzettelijk heel moeilijk is. Je gaat ontdekken hoe je een constructie moet bouwen die tenminste net zo hoog is als één van deze kopjes en toch sterk genoeg is om een het gewicht van een boek te dragen."
       3:
         image: notes/C1_building_foundation_3.jpg
-        text: "There might be times that our creation doesn't work out. There might be times that we get frusrated and want to give up. There might be a lot of those moments. But if we keep on trying, give it our best shot over and over again, then we're sure to get it before long."
+        text: Soms lukt onze creatie niet goed. Soms raken we gefrustreerd en willen we het opgeven. Soms zijn er best vaak van die momenten. Maar als we het blijven proberen en keer op keer ons best blijven doen dan gaat het ons zeker snel lukken.
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: "Persistence is all about hanging in there when you really want to give up. If you want to create something new and different, there's going to be a lot of failures along the way."
+        text: Volharding draait om doorgaan wanneer je eigenlijk had willen opgeven. Wanneer je iets nieuws en iets anders wilt maken dan gaan er zeker een paar mislukkingen op je pad komen.
       5:
         image: notes/C1_building_foundation_5.jpg
-        text: "The trick to persistence is choosing to keep on going and learn from your failures instead of quitting because you're frustrated. Frustration actually just means there's something wonderful around the corner. So don't quit before you get to it. Wooo!"
+        text: "Waar het om gaat bij volhouden is dat je er voor kiest om door te gaan en leert van je fouten in plaats van stoppen uit frustratie. Die frustratie betekent dat je het dus erg vindt dat het niet is gelukt en dat het dus de moeite waard is en dat het bijna was gelukt. Dus geef niet op en ga d'r voor!"
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: "Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work, there is something we use in both dances and in programming lightsuits. And that is loops! Loops are repeating an action over and over."
+        text: Hallo, mijn naam is Miral Kotb en ik ben de bedenker van Iluminate. Bij mijn werk is er iets dat we gebruiken bij zowel het dansen als het programmeren van onze verlichte kostuums. En dat zijn herhalingen! Lussen zijn acties die zich herhalen en herhalen en herhalen en herhalen.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: "When you repeat something multiple times, like my actions to keep the hula hoop spinning, I'm performing a loop of that action. This is a loop. This is a loop. And this is a loop."
+        text: Als je iets meerdere keren herhaalt, zoals mijn bewegingen om de hoepel rond te laten gaan. dan voer ik een lus uit van die actie. Dit is een lus. Dit is een lus. En dit is een lus.
       3:
         image: notes/C1_getting_loopy_3.png
-        text: "Today we're going to have a dance party. We'll act out loops with a new dance. The Iteration. We're going to learn about loops using a dance. You will learn a couple of easy steps and repeat them over and over to complete the dance."
+        text: Vandaag gaan we een dansfeestje vieren. We gaan lussen uitbeelden met een nieuwe dans. De iteratie. We gaan leren over lussen door middel van een dans. Je gaat een paar eenvoudige stappen leren die we steeds herhalen om de dans af te maken.
       4:
         image: notes/C1_getting_loopy_4.png
-        text: Here are the steps you need to learn. Clap your hands. Put your hands behind your head. Put your hands on your waist. Lift your left hand up. Lift your right hand up. Pretty simple, right? You will discover that you can shorten the directions by putting some dance steps in loops.
+        text: Hier zijn de stappen die je moet leren. Klap in je handen. Houd je handen achter je hoofd, Houd je handen op je heupen. Til je linker hand op. Til je rechter hand op. Best makkelijk, toch? Je zult ontdekken dat je de aanwijzingen kunt verkorten door wat herhalingen in te bouwen.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: "We actually do use loops in our dancing. The dancers are wearing computers, all in the same network. I might loop the lights through to the same dancers over and over again. In the loop I might have an iteration where I'll say you want to go loop through these six dancers over and over again and then within the loop you want to increase the speed of the light. And that's all created through loops. Loops are important in computer science because they make our work shorter and easier."
+        text: We gebruiken zeker herhalingen in onze dansen. De dansers dragen computers, allemaal verbonden met hetzelfde netwerk. Ik zou de lichten kunnen laten lussen naar dezelfde dansers, steeds weer en steeds weer. In die lus kan ik een iteratie maken waarbij ik zeg dat deze lus zich steeds moet herhalen over deze zes dansers maar dan in die lus de snelheid van het licht steeds verhogen. Dat wordt allemaal gedaan met lussen. Lussen zijn belangrijk in de informatica omdat ze ons werk besparen en het makkelijker maken.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
-        text: "This lesson is called Happy Maps. Today we're gonna help our furry little friend Flurb get to her fruit."
+        text: Deze les heet Vrolijke Kaarten. Vandaag gaan we onze pluizige kleine vriend Flurb aan haar fruit helpen.
       2:
         image: notes/C1_happy_maps_unplugged_2.png
-        text: "Make your Flurb go to your fruit. To do this you'll need to figure out which way the Flurb needs to go and direct her with arrows. In order for the Flurb to get to the apple, what direction does the Flurb have to go? Line to make it go up."
+        text: Zorg dat jouw Flurb naar het fruit gaat. Dit doe je door te bedenken hoe Flurb moet lopen en haar de weg te wijzen met pijlen. Om de Flurb bij de appel te krijgen, welke kant moet de Flurb dan op? Lijn om het omhoog te laten gaan.
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: To get it there you circle the direction that it has to go.
+        text: Om het daar te krijgen omcirkel je de richting die het op moet.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
         text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."

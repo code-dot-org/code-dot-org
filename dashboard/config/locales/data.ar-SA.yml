@@ -720,11 +720,11 @@
         starwars_blocks_intro: 'حرب النجوم: بناء مجرة باستعمال  البرمجة --مقدمة'
         starwars_blocks_events: 'حرب النجوم: بناء مجرة باستعمال البرمجة --الأحداث'
         starwars_blocks_congrats: 'حرب النجوم: بناء مجرة باستعمال البرمجة --تهانينا'
-        mc_intro: Minecraft - Introduction
-        mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        mc_intro: ماين كرافت - مقدّمة
+        mc_repeat: ماين كرافت -تكرار
+        mc_if_statements: ماين كرفت - التركيب الشرطي إذا
+        mc_congrats_share: ماين كرافت -التهاني
+        mc_congrats_no_share: ماين كرافت -التهاني
     callout:
       text:
         drag_blocks: اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر
@@ -821,9 +821,9 @@
         craft_drag_block_callout: قم بسحب المقطع البرمجي "تحريك للأمام" و ركّبه اسفل
           المقاطع الأخرى.
         craft_callout_preplaced: لقد وضعنا بعض المقاطع البرمجية هنا للبدء
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can
-          you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command
-          to move forward?
+        craft_inside_repeat: كرّر الأعمال عن طريق وضع المقاطع البرمجيّة هنا
+        craft_callout_preplaced_house: سيبدأ هذا الجزء من البرنامج ببناء منزلك. هل
+          يمكن إنهاء البرنامج لإتمام عمليّة البناء؟
+        craft_what_is_iron: إستخرج هذا الحديد!
+        craft_callout_moveforward: هذا الجزء من البرنامج سيتحقق من وجود الحمم البركانيّة،
+          هل يكنك إضافة مقطع برمجي للتقّدم للأمام؟

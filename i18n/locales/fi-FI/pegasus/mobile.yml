@@ -557,6 +557,7 @@ fi-FI:
   hoc2014_try_scrat: Angry Birds, PvZ ja Scrat
   hoc2014_try_frozen: Taiteilija Frozenin Annan ja Elsan kanssa
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Oppitunnit omalla kielelläsi
@@ -625,6 +626,8 @@ fi-FI:
   projguts_name: Kivi, sakset, paperi
   hourofcode_name: Paikkamerkki uuteen code.org/hoc
   playlab_name: Pelilabra
+  infinity_name: Infinity Pelilabra
+  artist_name: Taiteilija
   codeorg_gradelevel: 4-104-vuotiaille
   codeintl_gradelevel: 4-104-vuotiaille
   thinkersmithspanish_gradelevel: Por todos
@@ -666,6 +669,8 @@ fi-FI:
   frozen_gradelevel: Ikä 8+
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: 4-104-vuotiaille
+  infinity_gradelevel: 4-104-vuotiaille
+  artist_gradelevel: 4-104-vuotiaille
   codeorg_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   codeintl_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   thinkersmithspanish_platformtext: Tietokoneeton tekeminen
@@ -744,10 +749,12 @@ fi-FI:
   thinkersmith2_shortdescription: Opi kuinka tietokoneet käyttävät 1:iä ja 0:ia tiedon esittämiseen
   kodableunplugged_shortdescription: Hauska tietokoneettoman tekemisen harjoitus
   projguts_shortdescription: Kokeile mallinnusta ja simulointia kivi-sakset-paperi -pelin avulla
-  hourofcode_shortdescription: Paikkamerkki uuteen code.org/hoc
+  hourofcode_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
   frozen_shortdescription: Liitymme Annan ja Elsan matkaan, kun he tutkivat jään taikaa ja kauneutta ohjelmoinnin avulla.
   starwars_shortdescription: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin ikioma Tähtien Sota -pelisi.
   playlab_shortdescription: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
+  infinity_shortdescription: Tee Pelilabrassa tarina tai peli jonka pääosassa ovat Disneyn Infinity-hahmot.
+  artist_shortdescription: Tee hienoja piirrustuksia ja kuvioita Taiteilijan kanssa!
   codeorg_longdescription: Opettele tietojenkäsittelytieteen perusteet rakentamalla tietokoneohjelmia palikoista. Tällä pelillisellä itseopiskelukurssilla johdantovideoilla (englanniksi, tekstit suomeksi) esiintyy Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla 34 kielellä.
   codeintl_longdescription: Opettele tietojenkäsittelytieteen perusteet rakentamalla tietokoneohjelmia palikoista. Tällä pelillisellä itseopiskelukurssilla johdantovideoilla (englanniksi, tekstit suomeksi) esiintyy Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla 34 kielellä.
   thinkersmithspanish_longdescription: 'Käyttämällä ennakkoon "Robotti kieltä" , opiskelijat oppivat tekemään tiettyjä tehtäviä ilman etukäteistä keskustelua . Tämä opetus opettaa lapsille symbolien ja toimintojen suhdetta, lisäksi se on korvaamaton kyky virheenkorjauksessa.'
@@ -978,3 +985,11 @@ fi-FI:
   compatibility_https_header: Ota HTTPS käyttöön sivulla Code.org.
   compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
   compatibility_https_hide_this_warning: Piilota varoitus
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: räpyttele
+  infinity_shortcode: inf
+  playlab_shortcode: pelaa
+  artist_shortcode: art

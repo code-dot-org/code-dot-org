@@ -258,13 +258,13 @@ ar-SA:
   class_submission_languages_other: اللغات الأخرى
   inspirational_videos_more: 'المزيد من <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> مقاطع الفيديو الملهمة</a> من المشاهير و الشخصيات'
   starwars_subtitle: بناء مجرة باستعمال البرمجة
-  starwars_javascript_title: JavaScript
+  starwars_javascript_title: جافا سكريبت
   starwars_javascript_description: استعمل تعنية سحب و اسقاط القطع و جافا سكريبت.
   starwars_javascript_specs: الإنجليزية فقط | المتصفحات الحديثة | الإعمار 11 +
   starwars_javascript_start_button: جرب الآن
   starwars_blocks_title: مربعات برمجية
   starwars_blocks_description: استخدام تقنية سحب و اسقاط القطع.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: العديد من اللغات (ستتوفر قريبا) | المتصفحات الحديثة والهواتف الذكية و الألواح الرقميّة | الذين تتراوح أعمارهم بين 6-10
   starwars_blocks_start_button: جرب الآن
   starwars_watch_videos: قبل البدء، شاهد أحد هذه المقاطع الملهمة
   starwars_speak_languages: تتكلم لغة أخرى؟
@@ -520,7 +520,7 @@ ar-SA:
   dashboard_faq_k5: الأسئلة المتاوترة الطرح في المستوى الخامس K-5
   dashboard_announcements: إعلانات
   dashboard_announce_view_all: عرض الكل
-  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: إرسال رسالة إلكترونية
   code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب
   learn_more: أعرف المزيد
@@ -537,6 +537,7 @@ ar-SA:
   hoc2014_try_scrat: Angry Birds, PvZ, و Scrat
   hoc2014_try_frozen: الفنان مع آنا و إلسا, من Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: دروس تعليمية بلغتك
@@ -603,8 +604,10 @@ ar-SA:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: الصخرة، الورقة، المقص
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: اكتب برنامجك الاول
   playlab_name: مختبر اللعب
+  infinity_name: لعبة مختبر اللعب اللانهائية
+  artist_name: الرسام
   codeorg_gradelevel: الأعمار 4-104
   codeintl_gradelevel: الأعمار 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -646,6 +649,8 @@ ar-SA:
   frozen_gradelevel: الأعمار 8 +
   starwars_gradelevel: الاعمار 6 +
   playlab_gradelevel: الأعمار 4-104
+  infinity_gradelevel: الأعمار 4-104
+  artist_gradelevel: الأعمار 4-104
   codeorg_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
   codeintl_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
   thinkersmithspanish_platformtext: غير مربوطة
@@ -724,10 +729,12 @@ ar-SA:
   thinkersmith2_shortdescription: تعلم كيفية استخدام أجهزة الكمبيوتر لل0 وال1 لتمثيل المعلومات
   kodableunplugged_shortdescription: تمارين ممتعة غير موصولة
   projguts_shortdescription: حاول إستعمال النمذجة والمحاكاة باستخدام ورقة/مقص/صخرة
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: تعرف على التعليمات البرمجية مع مارك زوكربيرج و الطيورالغاضبة!
   frozen_shortdescription: دعونا استخدام التعليمات البرمجية للانضمام إلى آنا و إليسا, و نستكشف سحر وجمال الجليد.
   starwars_shortdescription: تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في مجرة بعيدة، بعيدة جدا.
   playlab_shortdescription: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
+  artist_shortdescription: ارسم صور رائعة و صمم مع الرسام !
   codeorg_longdescription: 'تعرف على المفاهيم الأساسية "لعلم الحاسوب" مع سحب وإسقاط البرمجة. هذا البرنامج التعليمي موجه ذاتيا شبيه بلعبة، ومن خلال محاضرات الفيديو من بيل جيتس ومارك زوكربيرج، لعبة الأنجري بيردز ولعبة بلانتس والزومبي. تعلم تكرار الحلقات، والشرطية، والخوارزميات الأساسية. متاح ب 34 لغة.'
   codeintl_longdescription: 'تعرف على المفاهيم الأساسية "لعلم الحاسوب" مع سحب وإسقاط البرمجة. هذا البرنامج التعليمي موجه ذاتيا شبيه بلعبة، ومن خلال محاضرات الفيديو من بيل جيتس ومارك زوكربيرج، لعبة الأنجري بيردز ولعبة بلانتس والزومبي. تعلم تكرار الحلقات، والشرطية، والخوارزميات الأساسية. متاح ب 34 لغة.'
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -957,3 +964,11 @@ ar-SA:
   compatibility_https_header: رجاءً فعل HTTPS لـ code.org.
   compatibility_https_message: "لزيادة الأمان. اصبحنا نستخدم HTTPS على %{https_date}. لن تستطيع الوصول إلى code.org بعد هذا التاريخ. <a href='%{it_requirements_url}'>اضغط هنا</a> لتعلم كيفية تفعيل HTTPS لـ code.org."
   compatibility_https_hide_this_warning: إخفاء هذا التحذير
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: رفرف
+  infinity_shortcode: inf
+  playlab_shortcode: إلعب
+  artist_shortcode: art

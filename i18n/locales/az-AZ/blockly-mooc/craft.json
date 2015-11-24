@@ -1,9 +1,9 @@
 {
-  "blockDestroyBlock":"destroy block",
+  "blockDestroyBlock":"bloku dağıt",
   "blockIf":"əgər",
-  "blockIfLavaAhead":"if lava ahead",
+  "blockIfLavaAhead":"əgər qabaqda lava varsa",
   "blockMoveForward":"irəli get",
-  "blockPlaceTorch":"place torch",
+  "blockPlaceTorch":"məşəl yerləşdir",
   "blockPlaceXAheadAhead":"ahead",
   "blockPlaceXAheadPlace":"place",
   "blockPlaceXPlace":"place",
