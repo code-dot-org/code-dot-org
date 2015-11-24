@@ -2999,6 +2999,8 @@ Studio.drawDebugLine = function(className, x1, y1, x2, y2, color) {
  * Draw a timeout rectangle across the bottom of the play area.
  * It doesn't appear until halfway through the level, and briefly fades in
  * when first appearing.
+ * level.showTimeoutRect should be a valid color that can be passed to an SVG
+ * 'fill'.
  */
 Studio.drawTimeoutRect = function() {
   if (!level.showTimeoutRect || Studio.timeoutFailureTick === Infinity) {
@@ -3032,7 +3034,7 @@ Studio.drawTimeoutRect = function() {
       background.setAttribute('height', height);
       background.setAttribute('x', 0);
       background.setAttribute('y', Studio.MAZE_HEIGHT - height);
-      background.setAttribute('fill', 'rgba(255, 255, 255, 0.5)');
+      background.setAttribute('fill', level.showTimeoutRect);
       group.appendChild(background);
       svg.appendChild(group);
     }
