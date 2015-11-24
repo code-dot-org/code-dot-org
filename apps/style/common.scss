@@ -841,6 +841,15 @@ input[type="radio"] {
     #lightbulb {
       position: absolute;
       left: 40px;
+
+      #hintCount {
+        font-weight: bold;
+        font-size: 400px;
+        fill: white;
+        stroke: black;
+        stroke-width: 30px;
+        font-family: Verdana, Geneva, sans-serif;
+      }
     }
   }
 }
