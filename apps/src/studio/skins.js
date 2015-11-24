@@ -931,8 +931,22 @@ function loadHoc2015(skin, assetUrl) {
     'applause'
   ];
 
+  skin.soundGroups = {
+    'R2-D2sound': {
+      randomValue: 'R2-D2random',
+      minSuffix: 1,
+      maxSuffix: 9
+    },
+    'C-3POsound': {
+      randomValue: 'C-3POrandom',
+      minSuffix: 1,
+      maxSuffix: 4
+    }
+  };
+
   skin.soundChoices = [
     [msg.playSoundRandom(), RANDOM_VALUE],
+    [msg.playSoundR2D2Random(), 'R2-D2random'],
     [msg.playSoundR2D2Sound1(), 'R2-D2sound1'],
     [msg.playSoundR2D2Sound2(), 'R2-D2sound2'],
     [msg.playSoundR2D2Sound3(), 'R2-D2sound3'],
@@ -942,6 +956,7 @@ function loadHoc2015(skin, assetUrl) {
     [msg.playSoundR2D2Sound7(), 'R2-D2sound7'],
     [msg.playSoundR2D2Sound8(), 'R2-D2sound8'],
     [msg.playSoundR2D2Sound9(), 'R2-D2sound9'],
+    [msg.playSoundC3PORandom(), 'C-3POrandom'],
     [msg.playSoundC3POSound1(), 'C-3POsound1'],
     [msg.playSoundC3POSound2(), 'C-3POsound2'],
     [msg.playSoundC3POSound3(), 'C-3POsound3'],
