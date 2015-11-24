@@ -553,7 +553,8 @@ function loadHoc2015(skin, assetUrl) {
     "rebelpilot": skin.assetUrl('instructions_rebelpilot.png'),
     "stormtrooper": skin.assetUrl('instructions_stormtrooper.png'),
     "mousedroid": skin.assetUrl('instructions_mousedroid.png'),
-    "tauntaun": skin.assetUrl('instructions_tauntaun.png')
+    "tauntaun": skin.assetUrl('instructions_tauntaun.png'),
+    "probot": skin.assetUrl('instructions_probot.png')
   };
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
