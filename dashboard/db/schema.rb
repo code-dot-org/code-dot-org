@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022174100) do
+ActiveRecord::Schema.define(version: 20151105100000) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -360,6 +360,21 @@ ActiveRecord::Schema.define(version: 20151022174100) do
   add_index "segments", ["end"], name: "index_segments_on_end", using: :btree
   add_index "segments", ["start"], name: "index_segments_on_start", using: :btree
   add_index "segments", ["workshop_id"], name: "index_segments_on_workshop_id", using: :btree
+
+  create_table "site_metrics", id: false, force: :cascade do |t|
+    t.date     "date"
+    t.integer  "total_users",         limit: 4
+    t.integer  "total_students",      limit: 4
+    t.integer  "total_teachers",      limit: 4
+    t.integer  "seven_day_users",     limit: 4
+    t.integer  "seven_day_students",  limit: 4
+    t.integer  "seven_day_teachers",  limit: 4
+    t.integer  "thirty_day_users",    limit: 4
+    t.integer  "thirty_day_students", limit: 4
+    t.integer  "thirty_day_teachers", limit: 4
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
 
   create_table "stages", force: :cascade do |t|
     t.string   "name",       limit: 255, null: false
