@@ -248,7 +248,7 @@ levels.iceage_1 = utils.extend(levels.playlab_1, {
   background: 'icy',
   firstSpriteIndex: 0, // manny
 });
-levels.gumball_1 = utils.extend(levels.playlab_1, {
+levels.gumball_hello1 = utils.extend(levels.playlab_1, {
   background: 'dots',
   firstSpriteIndex: 0, // manny
 });
@@ -334,7 +334,7 @@ levels.iceage_2 = utils.extend(levels.playlab_2, {
   background: 'leafy',
   firstSpriteIndex: 3, // diego
 });
-levels.gumball_2 = utils.extend(levels.playlab_2, {
+levels.gumball_hello2 = utils.extend(levels.playlab_2, {
   background: 'dots',
   firstSpriteIndex: 3, // diego
   defaultEmotion: Emotions.NORMAL,
@@ -425,7 +425,7 @@ levels.iceage_3 = utils.extend(levels.playlab_3, {
   background: 'grassy',
   firstSpriteIndex: 2, // scrat
 });
-levels.gumball_3 = utils.extend(levels.playlab_3, {
+levels.gumball_move_to_flag = utils.extend(levels.playlab_3, {
   background: 'clouds',
   firstSpriteIndex: 2, // scrat
 });
@@ -551,7 +551,7 @@ levels.iceage_4 = utils.extend(levels.playlab_4, {
   background: 'grassy',
   avatarList: ['scrat', 'granny']
 });
-levels.gumball_4 = utils.extend(levels.playlab_4, {
+levels.gumball_move_to_actor = utils.extend(levels.playlab_4, {
   background: 'space',
   avatarList: ['gumball', 'darwin'],
   defaultEmotion: Emotions.NORMAL,
@@ -765,12 +765,12 @@ levels.iceage_6 = utils.extend(levels.playlab_6, {
   goalOverride: {} // This prevents the override from original playlab from being used
 });
 
-levels.gumball_6 = utils.extend(levels.playlab_5, {
+levels.gumball_click_hello = utils.extend(levels.playlab_5, {
   background: 'characters',
   firstSpriteIndex: 1, // sid
 });
 
-levels.gumball_7 = utils.extend(levels.playlab_6, {
+levels.gumball_move_events = utils.extend(levels.playlab_6, {
   background: 'cornered',
   firstSpriteIndex: 3, // diego
   goalOverride: {}, // This prevents the override from original playlab from being used
@@ -899,7 +899,7 @@ levels.iceage_7 = utils.extend(levels.playlab_7, {
   background: 'icy',
   firstSpriteIndex: 1, // sid
 });
-levels.gumball_5 = utils.extend(levels.playlab_7, {
+levels.gumball_repeat = utils.extend(levels.playlab_7, {
   background: 'graffiti',
   firstSpriteIndex: 4, // sid
   defaultEmotion: Emotions.NORMAL,
@@ -1129,7 +1129,7 @@ levels.iceage_8 = utils.extend(levels.playlab_8, {
   background: 'icy',
   avatarList: ['manny', 'sid']
 });
-levels.gumball_8 = utils.extend(levels.playlab_8, {
+levels.gumball_sound_and_points = utils.extend(levels.playlab_8, {
   background: 'wood',
   avatarList: ['bananajoe', 'anton'],
   'delayCompletion': 500,
@@ -1378,7 +1378,7 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
     '</block>'
 });
 
-levels.gumball_9 = utils.extend(levels.playlab_9, {
+levels.gumball_warn_food_fight = utils.extend(levels.playlab_9, {
   background: 'dots',
   'delayCompletion': 500,
   defaultEmotion: Emotions.NORMAL,
@@ -1440,7 +1440,7 @@ levels.gumball_9 = utils.extend(levels.playlab_9, {
     '</block>'
 });
 
-levels.gumball_10 = {
+levels.gumball_join_food_fight = {
   background: 'wood',
   'delayCompletion': 2000,
   requiredBlocks: [
@@ -1540,7 +1540,7 @@ levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
 levels.playlab_10 = utils.extend(levels.sandbox, {});
 levels.iceage_10 = utils.extend(levels.playlab_10, {});
-levels.gumball_11 = utils.extend(levels.playlab_10, {});
+levels.gumball_free_play = utils.extend(levels.playlab_10, {});
 
 // Create your own story! Move around the cat and dog, and make them say things.
 levels.k1_6 = {
