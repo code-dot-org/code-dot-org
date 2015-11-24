@@ -28,11 +28,10 @@ var url = require('url');
 var FeedbackUtils = require('./feedback');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
-var HintSelect = require('./templates/hintSelect.jsx');
 var codegen = require('./codegen');
-var authoredHintUtils = require('./authoredHintUtils');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
+var AuthoredHints = require('./authoredHints');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -52,6 +51,7 @@ var MAX_PHONE_WIDTH = 500;
 
 var StudioApp = function () {
   this.feedback_ = new FeedbackUtils(this);
+  this.authoredHintsController_ = new AuthoredHints(this);
 
   /**
   * The parent directory of the apps. Contains common.js.
@@ -152,19 +152,6 @@ var StudioApp = function () {
   * @type {number}
   */
   this.maxRecommendedBlocksToFlag_ = 1;
-
-  /**
-   * @typedef {Object} AuthoredHint
-   * @property {string} content
-   * @property {string} hintId
-   * @property {string} hintClass
-   * @property {string} hintType
-   * @property {boolean} alreadySeen
-   */
-  /**
-  * @type {!AuthoredHint[]}
-  */
-  this.authoredHints_ = [];
 
   /**
   * The number of attempts (how many times the run button has been pressed)
@@ -292,8 +279,9 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
+  this.authoredHintsController_.init(config.level.authoredHints, config.scriptId, config.level.scriptLevelId);
   if (config.authoredHintViewRequestsUrl) {
-    authoredHintUtils.submitHints(config.authoredHintViewRequestsUrl);
+    this.authoredHintsController_.submitHints(config.authoredHintViewRequestsUrl);
   }
 
   if (config.puzzleRatingsUrl) {
@@ -420,17 +408,12 @@ StudioApp.prototype.init = function(config) {
       promptIcon.src = this.smallIcon;
       $('#prompt-icon-cell').show();
     }
+
     var bubble = document.getElementById('bubble');
-    dom.addClickTouchEvent(bubble, _.bind(function() {
-      var hintsToShow = this.authoredHints_.filter(function (hint) {
-        return hint.alreadySeen === false;
-      });
-      if (hintsToShow.length > 0) {
-        this.showHint_(hintsToShow[0], config.level, config.scriptId, config.level.scriptLevelId);
-      } else {
-        this.showInstructions_(config.level, false);
-      }
-    }, this));
+
+    this.authoredHintsController_.display(promptIcon, bubble, function () {
+      this.showInstructions_(config.level, false);
+    }.bind(this));
   }
 
   var aniGifPreview = document.getElementById('ani-gif-preview');
@@ -876,81 +859,8 @@ StudioApp.prototype.createModalDialog = function(options) {
   return this.feedback_.createModalDialog(options);
 };
 
-StudioApp.prototype.recordUserViewedHint_ = function (hint, scriptId, levelId) {
-  hint.alreadySeen = true;
-
-  authoredHintUtils.recordUnfinishedHint({
-    // level info
-    scriptId: scriptId,
-    levelId: levelId,
-
-    // hint info
-    hintId: hint.hintId,
-    hintClass: hint.hintClass,
-    hintType: hint.hintType,
-  });
-};
-
 StudioApp.prototype.onReportComplete = function (response) {
-  authoredHintUtils.finishHints({
-    time: ((new Date().getTime()) - this.initTime),
-    attempt: this.attempts,
-    testResult: this.lastTestResult,
-    activityId: response && response.activity_id,
-    levelSourceId: response && response.level_source_id,
-  });
-};
-
-/**
- * Render a qtip popup containing an interface which gives the user the
- * option of viewing the instructions for the level (along with all
- * previously-viewed hints) or viewing a new hint.
- * @param {AuthoredHint} hint
- * @param {Object} level
- * @param {string} scriptId
- * @param {string} levelId
- */
-StudioApp.prototype.showHint_ = function (hint, level, scriptId, levelId) {
-  $('#prompt-icon').qtip({
-    content: {
-      text: function(html, api) {
-        var container = document.createElement('div');
-
-        var element = React.createElement(HintSelect, {
-          showInstructions: function () {
-            this.showInstructions_(level, false);
-            api.destroy();
-          }.bind(this),
-          showHint: function () {
-            api.set('content.text', hint.content);
-            this.recordUserViewedHint_(hint, scriptId, levelId);
-          }.bind(this),
-        });
-
-        React.render(element, container);
-
-        return container;
-      }.bind(this),
-      title: {
-        button: $('<div class="tooltip-x-close"/>')
-      }
-    },
-    style: {
-      classes: "cdo-qtips",
-      tip: {
-        width: 20,
-        height: 20
-      }
-    },
-    position: {
-      my: "bottom left",
-      at: "top right"
-    },
-    hide: {
-      event: 'unfocus'
-    },
-    show: false // don't show on mouseover
-  }).qtip('show');
+  this.authoredHintsController_.finishHints(response);
 };
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
@@ -958,20 +868,11 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var renderedMarkdown;
   var scrollableSelector;
   var headerElement;
-  var authoredHints;
 
   var puzzleTitle = msg.puzzleTitle({
     stage_total: level.stage_total,
     puzzle_number: level.puzzle_number
   });
-
-  if (level.authoredHints) {
-    authoredHints = this.authoredHints_.filter(function(hint){
-      return hint.alreadySeen;
-    }).map(function(hint){
-      return hint.content;
-    });
-  }
 
   if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
     renderedMarkdown = marked(level.markdownInstructions);
@@ -990,7 +891,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     instructions: this.substituteInstructionImages(level.instructions),
     instructions2: this.substituteInstructionImages(level.instructions2),
     renderedMarkdown: renderedMarkdown,
-    authoredHints: authoredHints,
+    authoredHints: this.authoredHintsController_.getSeenHints(),
     markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
     aniGifURL: level.aniGifURL
   });
@@ -1539,7 +1440,6 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
-  this.authoredHints_ = config.level.authoredHints || [];
   this.startBlocks_ = config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
