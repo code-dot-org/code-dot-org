@@ -56,7 +56,7 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "encrypted_examples": "ydHzZtnGZ/G71WCKKdpIdiW1CGgABSHec/1JAIQ69Fgh6n/OCsAC8kE1gZWy\ngjUJ\n",
-    "markdown_instructions": "###Challenge\r\nGet some more practice **calling** a function by using `turnAround()` to create a plus sign, as shown below. The function has already been **defined** for you. \r\n\r\n![](https://images.code.org/9d6c2d7d69c2f1c68c5b273bdbae65c7-image-1441296690812.11.14 AM.png)",
+    "markdown_instructions": "#Do This:\r\nGet some more practice **calling** a function by using `turnAround()` to create a plus sign, as shown below. The function has already been **defined** for you. \r\n\r\n![](https://images.code.org/9d6c2d7d69c2f1c68c5b273bdbae65c7-image-1441296690812.11.14 AM.png)",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "submittable": "false",
