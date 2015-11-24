@@ -419,11 +419,7 @@ ru:
         other functions! Using your "shape" function as a base, create 3 house shapes
         each 20 pixels larger than the last starting at 50 pixels in length. Using
         a counter loop might be helpful. 
-      Bee Recommended Blocks test_instruction: |
-        Purple flowers may have either 1
-        or 0 nectar, but you don't know which one! Be careful not to collect nectar
-        from a purple flower if it doesn't have any. Check if the nectar is equal
-        to 1 by using the if block.
+      Bee Recommended Blocks test_instruction: 'Фиолетовые цветки могут иметь 1 нектар, либо 0, но Вы не знаете, какой именно! Будьте осторожны, не собирайте нектар с фиолетовых цветков, у которых его нет. Проверьте, равен ли нектар 1, используя блок "Если".'
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -882,33 +878,12 @@ ru:
       Course 4 Artist For  Functions 11_instruction: Двигаемся дальше, сможешь ли ты нарисовать звезду, используя функцию «Рисовать квадратную линию»? Удачи!
       Course 4 Artist For Loops 1_instruction: 'Нарисуй этот треугольник, ширина которого 50 пикселей. Подсказка: используйте блок повтора.'
       Course 4 Artist For Loops 10_instruction: Время творить! Рисуйте все, что вам нравится с блоками, которые вы изучили
-      Course 4 Artist For Loops 11_instruction: |
-        Remember back in a previous stage
-        when we used a variable to control the number of sides in a shape? We are
-        going to do the same thing with the "counter" variable now. This pattern
-        starts with a triangle and adds one side at a time until it draws a decagon
-        (10 sides). Each side should be 100 pixels long. Hint: 360 divided by the
-        number of sides a shape has is the number of degrees you'll need to turn.
-      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour knowledge of \"for loops\" and the \"counter\", create this drawing where\neach shape has two more sides than the last.  Make sure that each side is\n10 times as long as the number of sides in the polygon.\r\n\r\nVery little\nof the code has been provided for you."
-      Course 4 Artist For Loops 12_instruction: |
-        That looked pretty cool, but now
-        I'd like to draw each shape next to the last one. This time each side is
-        20 pixels. Use a jump block to jump forward 40 pixels after each shape. 
-      Course 4 Artist For Loops 13_instruction: |
-        Hmmm, those shapes are getting bigger
-        every time! Didn't we already solve this problem with variables? How can
-        we use the counter variable to make the sides smaller as there are more of
-        them? Instead of moving forward by a set amount, try moving forward (100 /
-        counter) pixels.
-      Course 4 Artist For Loops 14_instruction: |
-        If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try using
-        some of the code from the last level, but turning 89 degrees to create this
-        twisted square spiral.
-      Course 4 Artist For Loops 15_instruction: |
-        Free Play: Try making some drawings
-        of your own using "for loops". We've added a few useful variables for you
-        as well.
+      Course 4 Artist For Loops 11_instruction: 'Помнишь предыдущий этап, когда мы использовали переменную для контроля количества сторон в форме? Мы будем теперь делать то же самое с переменной «счетчик». Этот шаблон начинается с треугольника и добавляет одну сторону до тех пор пока не получится декагон (10 Сторон). Каждая сторона должна быть длиной 100 пикселей. Подсказка: 360 градусов, деленные на количество сторон, у фигуры — это угол, на которую вам нужно повернуть.'
+      Course 4 Artist For Loops 11a_instruction: "Давай соберем все это вместе!  Используя свои знания «цикла for» и «счетчика», создайте этот рисунок, где каждая форма имеет две стороны больше чем в прошлом.  Убедитесь, что каждая сторона в 10 раз длинее количества сторон многоугольника. \r \r Тебе дано очень мало кода."
+      Course 4 Artist For Loops 12_instruction: 'Это выглядело довольно классно, но теперь я хотел бы нарисовать каждую фигуру рядом с предыдущей. На этот раз каждая сторона составляет 20 точек. Используйте блок прыжок для перехода вперед на 40 точек после каждой фигуры. '
+      Course 4 Artist For Loops 13_instruction: Хмм, эти формы становятся все больше каждый раз! Мы же уже решить эту проблему с переменными? Как мы можем использовать переменную счетчика, чтобы сделать стороны меньше? Вместо того, чтобы двигаться вперед, на фиксированную величину, попробуйте переместить вперед на (100 / счетчик) точек.
+      Course 4 Artist For Loops 14_instruction: Если вы немного повернуть немного больше или меньше, чем обычно для фигуры, то получится отличный эффект. Попробуйте использовать некоторые куски кода из предыдущего уровня, но поворачивать на 89 градусов для создания этой витой квадратный спираль.
+      Course 4 Artist For Loops 15_instruction: 'Свободная игра: Попробуй сделать свой чертеж с помощью «цикла for». Мы добавили для тебя несколько полезных переменных.'
       Course 4 Artist For Loops 2_instruction: |
         I've put the code for drawing a
         triangle inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure

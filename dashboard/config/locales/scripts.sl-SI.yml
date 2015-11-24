@@ -1629,10 +1629,10 @@
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
+          title: Minecraft Ura za kodo
+          description_short: Razišči svet Minecraft-a s pomočjo kode
+          description: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
+            v svet Minecraft-a
           Hour of Code 2015: Hour of Code 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

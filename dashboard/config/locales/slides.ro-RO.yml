@@ -1541,17 +1541,17 @@
     C3_crowdsourcing:
       1:
         image: notes/C3_crowdsourcing_1.png
-        text: This lesson is called crowdsourcing. In this lesson we'll use a deck
-          of cards to learn about how much easier some things can be to do in groups
-          instead of trying to do them all alone. So grab some friends and make something
-          awesome. Crowdsourcing is getting help from a large group of people to finish
-          something faster.
+        text: Această lecţie se numeşte crowdsourcing. În această lecţie vom utiliza
+          un pachet de cărţi pentru a învăţa despre cum unele lucruri pot fi facute
+          mult mai uşor în grupuri în loc să încerci să le faci singur. Aşa că ia-ți
+          niște prieteni şi apucă-te să faci ceva minunat. Crowdsourcing este obţinerea
+          de ajutor de la un grup mare de oameni pentru a termina ceva mai repede.
       2:
         image: notes/C3_crowdsourcing_2.png
-        text: In computer science, we use crowdsourcing all the time. Thousands of
-          amateurs and professionals link their computers together to search through
-          billions and billions of pieces of information. Looking for things like
-          the next Marsenne prime number, or even possible alien communications.
+        text: În informatică folosim crowdsourcing tot timpul. Mii de amatori şi profesionişti
+          își conectează computerele împreună pentru a căuta prin miliarde şi miliarde
+          de informaţii. Se află în căutarea unor lucruri ca următorul număr prim
+          Marsenne, sau chiar posibile comunicaţii extraterestre.
       3:
         image: notes/C3_crowdsourcing_3.png
         text: Cand vezi un film, fiecare secunda de film este formata din 24 de imagini
@@ -1579,12 +1579,13 @@
           pe calculator si in rezolvarea oricarei probleme, necesita gandire si planificare.
       2:
         image: notes/C3_dice_race_2.png
-        text: The thinking step of problem solving produces an algorithm, which is
-          a step by step plan for solving a problem or finishing a task. In this lesson,
-          you'll create an algorithm for a dice race game. Then you'll ask your friends
-          to try out your plan to see if they can follow the steps to play the game.
-          After the programmer is sure the steps are correct, it's time to translate
-          the algorithm into a program with language that the computer can understand.
+        text: Etapa de gandire de rezolvare a problemei produce un algoritm care este
+          un plan pentru rezolvarea unei probleme sau inchierea unei sarcini, pas
+          cu pas. In aceasta lectie, vei crea un algoritm pentru o cursa cu jocuri
+          de zaruri. Apoi iti vei intreba prietenii sa incerce planul tau pentru a
+          vedea daca pot sa urmeze pasii acestui joc. Dupa ce programatorul este sigur
+          ca pasii sunt corecti, este timpul sa traduci algoritmul in program, intr-un
+          limbaj pe care calculatorul il poate intelege.
       3:
         image: notes/C3_dice_race_3.png
         text: Aproape tot ceea ce facem in fiecare zi necesita un algoritm, o lista
@@ -1679,24 +1680,25 @@
           spune familiei tale si prietenilor ce ai invatat!
       5:
         image: notes/C3_internet_5.png
-        text: My name is Amanda Camp and I'm a software engineer at Google. I work
-          on a team that works on a backend server that stores profiles and contacts.
-          In my job, we think a lot about how contacts can be sent to other devices,
-          such as your phone. Most people have a lot of contacts, you might have say,
-          1000 contacts and we don't want to send all of those contacts at once to
-          your phone because it's too large of a message. Similar to the way the internet
-          breaks large messages down into packets, we use a concept called paging
-          where we might only send your phone 100 contacts at a time and let your
-          phone respond to us and ask for the next 100.
+        text: Numele meu este Amanda Camp si sunt inginer de software la Google. Sunt
+          intr-o echipa care lucreaza la un server care stocheaza profile si contacte.
+          In meseria mea, ne gandim mult cum pot fi trimise contactele la alte dispozitive,
+          cum ar fi telefonul. Majoritatea persoanelor are o multime de contacte,
+          sa spunem ca poti avea, 1000 de contacte si noi nu dorim sa trimitem dintr-o
+          data toate acele contacte pe telefonul tau pentru ca sunt prea mari pentru
+          un mesaj. Similar cu modul in care internetul separa mesajele mari in pachete,
+          noi folosim un concept numit paginare unde am putea trimite telefonului
+          tau doar 100 de contacte o data si lasa-ti telefonul sa ne raspunda si sa
+          ceara pentru urmatoarele 100.
       6:
         image: notes/C3_internet_6.png
-        text: The most exciting thing about software is the fact that it can impact
-          the entire world. I first learned to program when I was about nineteen.
-          I think I was already a sophomore or a junior in college. The first program
-          I remember writing is something that converted Celsius to Fahrenheit. I
-          like programming because I like helping people. I can write programs at
-          Google that help people all over the world and that's really mind-boggling
-          and exciting.
+        text: Cel mai interesant lucru despre software este faptul ca acesta poate
+          avea un impact in toata lumea. Prima data am invatat sa programez pe la
+          varsta de 19 ani. Cred ca eram deja in al doi-lea an de studentie sau incepator
+          in facultate. Primul program pe care mi-l amintesc a fost sa convertesc
+          Celsius in Fahrenheit. Imi place sa programez pentru ca imi place sa ajut
+          oamenii. Pot scrie programe la Google care ajuta oamenii din toata lumea
+          si asta este foarte nebunesc si interesant.
     C3_maze_conditionals:
       1:
         image: notes/C3_maze_conditionals_1.png
@@ -1715,18 +1717,19 @@
           respectiva.
       3:
         image: notes/C3_maze_conditionals_3.png
-        text: Then we use the move forward block inside this repeat to get it to keep
-          moving forward as long as it just wants to go straight. Then when there's
-          a turn, the if block will tell it to make that turn to the left. You can
-          see that if we do that, if we take the turn to the left and otherwise moving
-          forward, we'll achieve our goal.
+        text: Apoi folosim blocul muta inainte in interiorul repeta pentru a primi,
+          ca sa te deplasezi inainte atata timp cat vrei sa mearga drept. Apoi cand
+          este intoarcere, blocul daca va spune sa faca acea intoarcere la stanga.
+          Poti vedea ca daca facem asta, daca ne intoarcem la stanga si altfel mergem
+          inainte, ne vom atinge obiectivul nostru.
       4:
         image: notes/C3_maze_conditionals_4.png
-        text: It's an example of using an if statement which is really a fundamental
-          concept in computer programming. One of the first things I learned was how
-          to write a program that played tic-tac-toe. I had if statements to say,
-          ok, if the other person is about to win, go ahead and block that spot. Have
-          fun learning how to use if statements, it's a key concept.
+        text: Este un exemplu de folosire al declaratiei daca, care este un adevarat
+          concept fundamental in programarea calculatoarelor. Unul din primele lucruri
+          pe care le-am invatat a fost sa scriu un program de jucat tic-tac-toe. Am
+          avut de pus declaratia daca, daca cealalta persoana este pe cale sa castige,
+          avanseaza si blocheaza acel loc. Distreaza-te invatand cum sa folosesti
+          declaratiile daca, este un concept cheie.
     C3_maze_level_4:
       1:
         image: notes/C3_maze_level_4_1.png
@@ -1756,111 +1759,115 @@
           faca. Unele parti ale muzicii sunt folosite iar si iar.
       2:
         image: notes/C3_songwriting_with_parameters_2.png
-        text: We call this the chorus. In a computer program, the parts of the program
-          that are used over and over again are called functions. When you read song
-          lyrics and it says the word chorus, do you sing the word chorus? No, you
-          look at the top of the page to see what words make up the chorus.
+        text: Numim acest lucru cor. Intr-un program de calculator, partile programului
+          care sunt utilizate iar si iar sunt numite functii. Atunci cand citesti
+          versurile unei melodii si spune cuvantul cor, canti cuvantul cor? Nu, te
+          uiti la partea de sus a paginii ca sa vezi cuvintele care formeaza corul.
       3:
         image: notes/C3_songwriting_with_parameters_3.png
-        text: In this lesson, you'll learn a silly little song called little bunny
-          foo foo. The song has a chorus that you will sing several times over and
-          over again. A function is a piece of code that you can call and use over
-          and over again. It makes programming easier and more efficient so you don't
-          have to write out the steps of your function over and over again. You can
-          just write it once!
+        text: In aceasta lectie, vei invata un cantecel prostesc numit micul iepuras
+          foo foo. Cantecul are un cor care va canta de cateva ori iar si iar. O functie
+          este o bucata de cod pe care tu il poti apela si folosi din nou si din nou.
+          Astfel se face programarea mai usoara si mai eficienta atfel incat tu nu
+          este nevoit sa scrii pasii functiei tale iar si iar. Il poti scrie doar
+          o singura data!
     C4_bee_conditional:
       1:
         image: notes/C4_bee_conditional_1.png
-        text: This is the conditional block. It says if you're at the flower or the
-          honeycomb, then do something. This is useful when we don't know how much
-          honey or nectar to get as we see here with this question mark.
+        text: Acesta este blocul conditionat. Spuna ca daca esti la floare sau la
+          fagurele de miere, atunci fa ceva. Acesta este folositor cand nu stim cat
+          de multa miere sau nectar sa luam, dupa cum vedem aici cu acest semn de
+          intrebare.
       2:
         image: notes/C4_bee_conditional_2.png
-        text: In this example, we're going to say, if it's a flower, get all the nectar
-          and then use another one to say, if it's a honeycomb, make honey. Ta-dah!
+        text: In acest exemplu, vom spune ca, daca este o floare, luam tot nectarul
+          si apoi folosim altul sa zicem ca, daca este un fagure de miere, sa facem
+          miere. Ta-dah!
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
-        text: We have a new block that's called the if/else block. It's a conditional
-          statement just like the if block you've used in the puzzles before. But
-          now there's a new part at the bottom that says else. The if/else block lets
-          the bee make a decision between two sets of actions. If the bee is at a
-          flower, the bee will do the set of actions you put in the first part where
-          it says do. If the bee is not at a flower, the bee will do the set of actions
-          you put in the slot where it says else.
+        text: Avem un bloc nou care este numit blocul daca/ altfel. Este o declaratie
+          conditionata la fel ca la blocul daca pe care l-am folosit in puzzle-urile
+          de dinainte. Dar acum exista o parte noua in partea de jos care spune altfel.
+          Blocul daca/ altfel face albina sa ia o decizie intre cele doua seturi de
+          actiuni. Daca albina este la floare, albina va face setul de actiuni pe
+          care le-ai pus in prima parte unde scrie a face. Daca albina nu este la
+          floare, albina va face setul de reguli pe care le pui in fereastra unde
+          scrie altfel.
       2:
         image: notes/C4_conditionals_2.png
-        text: If statements are how computers are able to make decisions. Humans set
-          up conditions for the computer that say if the computer is presented with
-          a certain situation do this. Else, which just means otherwise, do that.
-          The top of our if/else block says if at flower. But the top of our block
-          could say other things, like if nectar equals 2 or if there's a path ahead,
-          our block will behave in the same way. That if the statement at the top
-          is true it will do the first set of actions. But if the statement at the
-          top is false, it will do the second set of actions.
+        text: Declaratiile daca sunt folosite atunci cand calculatorul trebuie sa
+          ia o decizie. Oamenii seteaza conditii pentru calculator care spun ca daca
+          calculatorul este prezentat intr-o anumita situatie sa faca asta. Altfel,
+          care inseama in caz contrar, sa faca celalalt lucru. Partea de sus a blocului
+          daca/altfel spuna daca la floare. Dar partea de jos a blocului poate spune
+          alte lucruri, cum ar fi, daca nectarul este egal cu 2 sau daca exista o
+          cale inainte, blocul nostru se va comporta la fel. Daca acea declaratie
+          din partea de sus este adevarata, va face primul set de actiuni, Dar daca
+          declaratia de jos este falsa, va face al doilea set de actiuni.
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: Cand folosesti blocul repeta in bucla unui cod, cum stie calculatorul
+          cand acesta e repetat indeajuns de multe ori? De fapt blocul repeta ascunde
+          o parte sofisticata a codului numita pentru bucla care numara de la o valoarea
+          de pornire pana la o una de incheieri folosind o anumita crestere.
       2:
         image: notes/C4_for_loops_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running.
+        text: De exemplu, blocul repeta de 3 ori numara de la 1 la 3 cu 1. De fiecare
+          data cand numara, ruleaza codul din interiorul buclei. Blocul pentru bucla
+          stie de cate ori a rulat acesta folosind un contor de variabile care este
+          setat la valoarea de plecare la inceputul fiecarei bucle si creste de fiecare
+          data cand bucla este pornita. De indata ce variabila din contor este mai
+          mare decat variabila de final, bucla se opreste.
       3:
         image: notes/C4_for_loops_3.png
-        text: The benefit of using a real for loop instead of the repeat block is
-          that you can actually see the counter variable and use it in your loop.
-          For example, if I have a series of flowers and the first one has one nectar,
-          the second one has two nectars and the third one has three, I can use the
-          for loop to tell the bee to collect 'counter' nectars each time, which would
-          one at the first flower, two at the second and three at the third.
+        text: Beneficiul folosirii unui bloc pentru bucla in locul blocului repeta
+          este acela ca poti vedea variabilele contorului si sa le folosesti in bucla
+          ta. De exemplu, daca am o serie de flori si prima are un singur nectar,
+          a doua are 2 nectaruri si a treia are 3 nectaruri, pot folosi bucla pentru
+          a spune albinei sa adune "contorul" nectarurilor de fiecare data, care va
+          fi unul la prima floare, doi la a doua floare si trei la a treia.
       4:
         image: notes/C4_for_loops_4.png
-        text: Also in a for loop, you can increment the counter by a number other
-          than one each time. You can potentially count by 2s, 4s or even an amount
-          that changes every time through.
+        text: De asemenea, intr-un bloc pentru bucla, poti sa incrementezi contorul
+          de la un numar altul decat 1 de fiecare data, Poti numera potential cu 2s,
+          4s sau chiar cu o suma care se schimba de fiecare data.
     C4_for_loops_bee:
       1:
         image: notes/C4_for_loops_bee_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: Cand folosesti blocul repeta in bucla unui cod, cum stie calculatorul
+          cand acesta e repetat indeajuns de multe ori? De fapt blocul repeta ascunde
+          o parte sofisticata a codului numita pentru bucla care numara de la o valoarea
+          de pornire pana la o una de incheieri folosind o anumita crestere.
       2:
         image: notes/C4_for_loops_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running.
+        text: De exemplu, blocul repeta de 3 ori numara de la 1 la 3 cu 1. De fiecare
+          data cand numara, ruleaza codul din interiorul buclei. Blocul pentru bucla
+          stie de cate ori a rulat acesta folosind un contor de variabile care este
+          setat la valoarea de plecare la inceputul fiecarei bucle si creste de fiecare
+          data cand bucla este pornita. De indata ce variabila din contor este mai
+          mare decat variabila de final, bucla se opreste.
       3:
         image: notes/C4_for_loops_bee_3.png
-        text: The benefit of using a real for loop instead of the repeat block is
-          that you can actually see the counter variable and use it in your loop.
-          For example, if I have a series of flowers and the first one has one nectar,
-          the second one has two nectars and the third one has three, I can use the
-          for loop to tell the bee to collect 'counter' nectars each time, which would
-          one at the first flower, two at the second and three at the third.
+        text: Beneficiul folosirii unui bloc pentru bucla in locul blocului repeta
+          este acela ca poti vedea variabilele contorului si sa le folosesti in bucla
+          ta. De exemplu, daca am o serie de flori si prima are un singur nectar,
+          a doua are 2 nectaruri si a treia are 3 nectaruri, pot folosi bucla pentru
+          a spune albinei sa adune "contorul" nectarurilor de fiecare data, care va
+          fi unul la prima floare, doi la a doua floare si trei la a treia.
       4:
         image: notes/C4_for_loops_bee_4.png
-        text: Also in a for loop, you can increment the counter by a number other
-          than one each time. You can potentially count by 2s, 4s or even an amount
-          that changes every time through.
+        text: De asemenea, intr-un bloc pentru bucla, poti sa incrementezi contorul
+          de la un numar altul decat 1 de fiecare data, Poti numera potential cu 2s,
+          4s sau chiar cu o suma care se schimba de fiecare data.
     C4_for_loops_no_bee:
       1:
         image: notes/C4_for_loops_no_bee_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: Cand folosesti blocul repeta in bucla unui cod, cum stie calculatorul
+          cand acesta e repetat indeajuns de multe ori? De fapt blocul repeta ascunde
+          o parte sofisticata a codului numita pentru bucla care numara de la o valoarea
+          de pornire pana la o una de incheieri folosind o anumita crestere.
       2:
         image: notes/C4_for_loops_no_bee_2.png
         text: For example, a repeat three block counts from 1 to 3 by 1. Every time
@@ -1901,11 +1908,11 @@
           aseamana cu extinderea limbii.
       2:
         image: notes/C4_function_edit_2.png
-        text: In the program we built, we learned how to draw a square by moving and
-          turning four times. We can take that function and give it a name, draw a
-          square so that any time we want to do that, we simply say draw a square
-          and it will go back and invoke that function, that code and it will get
-          done for us. We've added that concept to our programming language.
+        text: In programul pe care il construim am invatat cum sa desenem un patrat
+          mutandu-ne si intorcandu-ne de 4 ori. Putem sa luam acea functie si sa-i
+          dam un nume, deseneaza un patrat, astfel incat oricand vrem sa facem asta
+          pur si simplu zicem deseneaza un patrat si o sa apeleze functia, codul si
+          o sa o fac pentru noi. Am adaugat acest concept la limbajul de programare.
       3:
         image: notes/C4_function_edit_3.png
         text: In this puzzle, we have already created a draw a square function for
@@ -1928,10 +1935,11 @@
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
-        text: Here's a function that draws a square with 50 pixel sides. That's great
-          but what if I wanted to draw a square with sides 50 pixels and another square
-          with sides of 100 pixels? We shouldn't have to make two separate functions
-          that do almost the same thing. Instead, we can use one function with a parameter.
+        text: Aici este o functie care deseneaza un patrat cu laturi de 50 de pixeli.
+          Este minunat, dar daca as vrea sa desenez un patrat cu latura de 50 de pixeli
+          si altul cu latura de 100 de pixeli> Nu ar trebui sa facem doua functii
+          separate care fac acelasi lucru. In schimb, ar trebui sa facem o functie
+          cu un parametru.
       2:
         image: notes/C4_function_parameters_2.png
         text: Parameters allow us to pass values into a function that get used as
@@ -2156,27 +2164,29 @@
           variables all the time in our work.
       3:
         image: notes/C4_unplugged_variables_3.png
-        text: Any time you need to store a piece of information for later, we use
-          a variable. Let's say we need to count the number of times the user has
-          tweeted. Every time that user tweets, we'll add one to that number and every
-          time the user deletes a tweet, we'll decrease that number by one. Anytime
-          we need to know how many times that user has tweeted, we'll just look at
-          that variable.
+        text: Oricând e nevoie de stocarea unei informaţii pentru mai târziu, vom
+          folosi o variabilă. Să presupunem că avem nevoie să numărăm câte tweet-uri
+          are un utilizator. De fiecare dată când utilizatorul adaugă un tweet, adăugăm
+          unu la acel număr, şi de fiecare dată când utilizatorul şterge un tweet,
+          ne vom scădea numărul cu unu. Oricand avem nevoie să ştim câte tweets are
+          un utilizator, ajunge să ne uităm la acea variabilă.
     C4_variables_artist:
       1:
         image: notes/C4_variables_artist_1.png
-        text: A variable is a container you can store a value in. When you use that
-          variable in an algorithm, it opens up the container and looks at the value
-          inside. This lets you write smarter algorithms that behave differently depending
-          on the value stored in the variable.
+        text: O variabilă este un container în care puteţi stoca o valoare. Când utilizaţi
+          această variabilă într-un algoritm, acesta deschide containerul şi se uită
+          la valoarea din interior. Acest lucru vă permite să scrieți algoritmi mai
+          inteligenți, care se comportă diferit în funcţie de valoarea stocată in
+          variabilă.
       2:
         image: notes/C4_variables_artist_2.png
-        text: For example, if you wanted to write an algorithm to say Happy birthday,
-          you're turning 10! to my little brother, that's great now but when I run
-          it next year I'd want it to say, Happy birthday, you're turning 11! I could
-          create a variable called age to store my brother's age and write my algorithm
-          to say Happy birthday, you're turning 'age' instead. Because variable can
-          change, every year I can update the variable 'age' to equal 'age' plus 1.
+        text: De exemplu, dacă vrei să scrii un algoritm care să-i spună "La mulţi
+          ani, împlinești 10!" pentru fratele meu mai mic, o să meargă bine acum,
+          dar când îl rulez la anul aş dori să spună "La mulţi ani, împlinești 11!".
+          Aş putea crea o variabilă numită vârstă pentru a stoca vârsta fratelui meu,
+          şi să scriu algoritmul meu să spună "La mulţi ani, împlinești --vârstă--!"
+          în schimb. Deoarece variabilele pot fi modificate, în fiecare an se poate
+          actualiza variabila "vârstă" la egal "vârstă" plus 1.
       3:
         image: notes/C4_variables_artist_3.png
         text: In this puzzle, we're going to be using a variable that will set the
@@ -2186,10 +2196,10 @@
     C4_variables_playlab:
       1:
         image: notes/C4_variables_playlab_1.png
-        text: A variable is a container that you can store a value in. When you use
-          that variable in an algorithm, it opens up the container and looks at the
-          value inside. This lets you write smarter algorithms that behave differently
-          depending on the value stored in the variable.
+        text: O variabila este un container în care poți stoca o valoare. Când folosești
+          o variabila într-un algoritm, acesta deschide containerul și se uita înauntru
+          la valoare. Acest lucru îți permite sa scrii algoritmi mai inteligenți care
+          se comporta diferit în funcție de valoarea stocata în variabila.
       2:
         image: notes/C4_variables_playlab_2.png
         text: Now you're going to try playlab where you are given different games
@@ -2222,10 +2232,10 @@
     infinity_playlab_intro:
       1:
         image: notes/infinity_playlab_intro_1.png
-        text: So what grade are you in? Second. Tenth grade. First grade. I was in
-          eighth grade when I learned to program. I got my first computer when I was
-          in sixth grade. What gets me excited is being able to fix people's problems.
-          You can express yourself, you can build things from an idea.
+        text: Deci în ce clasa ești? A doua? Clasa a zecea? Clasa întâi. Eram în clasa
+          a opta când am învățat sa programez. Am primit primul meu computer când
+          eram în clasa a șasea. Ce ma face entuziasmat e faptul ca pot sa repar problemele
+          altora. Poți sa te exprimi, poți construi lucruri pornind de la o ide.
       2:
         image: notes/infinity_playlab_intro_2.png
         text: Computer science is the basis for a lot of the things that college students
@@ -2236,12 +2246,12 @@
           a beginner myself and I want you to learn with me.
       3:
         image: notes/infinity_playlab_intro_3.png
-        text: I'm John Vechey, I'm one of the co-founders of PopCap Games. We make
-          games like Plants vs. Zombies, Bejeweled, and Peggle. A lot about games
-          isn't how perfect your code is, it's not how perfect your art is, it's about
-          how does it feel and how much fun it is. You can only get that sense by
-          trying it, by doing it, by learning and adapting and iterating your own
-          skills of making games.
+        text: Eu sunt John Vechey, sunt unul din co-fondatori PopCap Games. Noi facem
+          jocuri precum Plants vs. Zombies, Bejeweled, si Peggle. Cel mai important
+          intr-un joc nu e cat de perfect e codul, nu e cat de perfecta e arta, ci
+          cum te simti si cat de distractiv este. Poti sa intelegi acest lucru doar
+          daca il incercand, il facand, invatand si adaptand si imbunatatindu-si aptitudinile
+          de a face jocuri.
       4:
         image: notes/infinity_playlab_intro_4.png
         text: Do you have a favorite video game? Well, we're going to take one step
@@ -2896,8 +2906,8 @@
           programul nostru.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: Daca tragi blocul moveForward(); in spatiul de lucru si dupa aperi run,
+          ce se intampla? Alex se misca in fata cu un spatiu pe retea.
       10:
         image: notes/mc_intro_10.JPG
         text: And what if we want to do something after she has moved forward one
@@ -2908,8 +2918,8 @@
           stacked from top to bottom in our workspace.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: Daca vrei sa stergi un bloc, atunci treage-l din gramada inapoi in setul
+          de instrumente.
       12:
         image: notes/mc_intro_12.JPG
         text: 'To undo your changes and get back to how the level started, use the
@@ -2919,8 +2929,8 @@
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: Eu sunt Lydia Winters, director de brand la Mojang si noi facem un mic
+          joc numit Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
         text: My favorite thing to do in Minecraft is explore. I love adventuring
@@ -2959,9 +2969,9 @@
           part of learning to program. They help a computer make decisions.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Toate computerele folosesc conditi daca, chiar si telefonul. De exemplu,
+          cand imi deschid telefonul el apeleaza un cod care zice ca daca introduc
+          parola corecta, imi deschide telefonul. Altfel, imi arata un mesaj de eroare.
       3:
         image: notes/mc_if_statements_3.JPG
         text: You can use if statements in your code to make Steve and Alice react
@@ -2969,9 +2979,9 @@
           of them, they can turn left. Or turn right if they run into a tree.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: In acest caz nu vrem sa cadem in lava. Este usor sa planuiesti pentru
+          lava. Putem sa o vedem pe ecran. Dar ce facem cu lava pe care nu putem sa
+          o vedem sub roci?
       5:
         image: notes/mc_if_statements_5.JPG
         text: After we mine the stone, we'll need to check if there's any lava in
@@ -2982,37 +2992,35 @@
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Felicitari! Tocmai ai invatat bazele programarii cu blocuri.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Acum poti sa folosesti aceste blocuri ca sa construiesti proprile creati.
+          Nu mai sunt nici intructiuni nici puzzeluri de rezolvat. Poti sa construiesti
+          ce vrei. Poti sa alegi.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: Suntem pe cale sa devenim seriosi. Foarte. Am facut un L din torte.
+          Am facut un A din scanduri de mesteacan. A functionat, a functionat. Am
+          facut o casa din lana!
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Cand ai terminat sa-ti faci creatia, apasa share ca sa primesti link-ul
+          ca sa sharuesti cu priteni tai. Distreaza-te!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Felicitari! Tocmai ai invatat bazele programarii cu blocuri.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Acum poti sa folosesti aceste blocuri ca sa construiesti proprile creati.
+          Nu mai sunt nici intructiuni nici puzzeluri de rezolvat. Poti sa construiesti
+          ce vrei. Poti sa alegi.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: Suntem pe cale sa devenim seriosi. Foarte. Am facut un L din torte.
+          Am facut un A din scanduri de mesteacan. A functionat, a functionat. Am
+          facut o casa din lana!
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Acum poti sa construiesti tot ce vrei. Distreaza-te!

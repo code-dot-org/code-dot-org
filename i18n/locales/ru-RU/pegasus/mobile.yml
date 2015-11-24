@@ -262,18 +262,18 @@ ru-RU:
   starwars_javascript_start_button: Попробуйте сейчас
   starwars_blocks_title: Блоки
   starwars_blocks_description: Используйте переносные блоки.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Множество языков (скоро) | Современные браузеры, смартфоны, планшеты | Возраст 6-10 лет
   starwars_blocks_start_button: Попробуйте сейчас
   starwars_watch_videos: Прежде чем начать, посмотрите одно их этих вдовнохвляющих видео
   starwars_speak_languages: Говорите на другом языке?
   starwars_help_translate: Помогите нам перевести
   starwars_platform_text: Современные браузеры, смартфоны, планшеты
   mc_name: Час Кода Minecraft
-  mc_longdescription: Используйте блоки кода, чтобы помочь Стиву или Алексу в их приключениях в мире Minecraft.
-  mc_shortdescription: Используйте блоки кода, чтобы помочь Стиву или Алексу в их приключениях в мире Minecraft.
+  mc_longdescription: Используйте блоки кода, чтобы помочь Стиву или Алексе в их приключениях в мире Minecraft.
+  mc_shortdescription: Используйте блоки кода, чтобы помочь Стиву или Алексе в их приключениях в мире Minecraft.
   mc_gradelevel: Возраст 6+
   mc_platformtext: Современные браузеры, смартфоны, планшеты
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Множество языков (скоро) | Современные браузеры и планшеты | От 6 лет
   minecraft_subtitle: Час Кода Minecraft
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100 000 учителей, собираются провести Час Кода в своих классах в этом, 7-13 декабря 2015. Они хотят вашей помощи! '
@@ -522,9 +522,9 @@ ru-RU:
   learn_more: Подробнее
   learn_sign_up_description: Зарегистрируйтесь, чтобы участвовать в Час Кода во время недели образования CS
   learn_sign_up_button: Зарегистрироваться
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Смотрите вместе с вашими учениками вдохновляющие ролики
+  learn_videos_show: Покажите это вдохновляющий видео-ролик вашему классу
+  learn_videos_before_hoc: Посмотрите это вдохновляющее видео перед Часом Кода
   learn_educator_resources_description: Узнайте, как учить в Час Кода
   learn_educator_resources_button: Педагогические ресурсы
   learn_are_you_educator: 'Вы педагог? Узнайте, <a href="http://hourofcode.com/resources/how-to"> как научить Час Кода</a>'
@@ -532,10 +532,10 @@ ru-RU:
   hoc2014_try_new_tutorial: 'Попробуй наше новое пособие "Час кода" в бета-версии'
   hoc2014_try_scrat: Angry Birds, PvZ, и Scrat
   hoc2014_try_frozen: 'Рисуй вместе с Анной и Эльзой из "Холодного сердца"'
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Уроки от Code.org
+  carousel_heading_codeorg_any_device: Уроки от Code.org (для всех устройств)
+  carousel_heading_3rd_party: Уроки от третьих лиц
+  carousel_heading_third_party: Уроки от третьих лиц
   carousel_heading_international: Обучающее руководство на Вашем языке
   carousel_heading_domestic: Учебные материалы доступны на английском языке
   carousel_heading_beginners: Учебники для начинающих

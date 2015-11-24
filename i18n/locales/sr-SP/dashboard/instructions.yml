@@ -2361,19 +2361,10 @@ sr:
       frozen circle_instruction: Круг је посебан облик. Покушај да одредиш који број треба да замени упитнике да бисте нацртали круг?
       frozen cross rotate dense_instruction: 'Хајде да то поновимо 90 пута! Колико пута се 90 садржи у 360? Савет: то је стварно мали број.'
       frozen cross rotate_instruction: Сада поновите то 10 пута. Колико степени морате да скренете после сваке линије?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using another “Repeat"
-        block to repeat a parallelogram 4 times, turning right by 90 degrees between
-        each parallelogram.
+      frozen cross_instruction: 'Обмотај "Понављај" блок око ових команди да направиш знак плус. Да ли примећујеш да Елза може да се помера напред и назад?'
+      frozen diamond mini snowflake_instruction: 'Да ли сте знали да је свака пахуља различитог облика? Хајде да направимо нову пахуљицу користећи блок "Понављај" да бисте поновили паралелограм 4 пута, скрећући за 90 степени између сваког паралелограма.'
       frozen diamond snowflake_instruction: Сада, хајде да направимо нову пахуљицу помоћу понављај блока да би направили паралелограм 10 пута, скрећући за 36 степени после сваког.
-      frozen diamond_instruction: |
-        Use a repeat around these blocks to create a parallelogram.
-        It's just like a rectangle but has different angles. This one has 60 degree
-        and 120 degree angles instead of all 90 degree angles.
+      frozen diamond_instruction: Користи понављање око ових блокова за креирање паралелограма. То је као правоугаоник, али има различите углове. Овај има углове од 60 степени и 120 степени уместо свих углова од 90 степени.
       frozen freeplay_instruction: Званично си постао врхунски уметник! Направи зимску чаролију.
       frozen line_instruction: Здраво! Ја сам Елса од Аренделa. Помози ми да креирам само једну линију.
       frozen perpendicular_instruction: 'Сада да видимо да ли можемо да створимо две линије које су постављене под углом од 90 степени. Мораћете да користите блок "скрени", као и "помери".'
@@ -3020,9 +3011,7 @@ sr:
         of underground resources. Now, we're going to build a track along the dirt
         path from your house. The first step is clearing the path. Follow the path
         and clear the trees.
-      Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
+      Overworld Move to Sheep_instruction: 'Додај другу команду "напред" да дођеш до овце.'
       Overworld Place Wall_instruction: |
         Every house starts with a wall. Build the
         first part of your house by putting the "place" and "move forward" commands

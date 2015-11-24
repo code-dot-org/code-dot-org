@@ -291,7 +291,7 @@ tr-TR:
   mc_name: Minecraft Kod Saati
   mc_longdescription: "Steve veya Alex'i Minecraft dünyasında bir maceraya almak için kod blokları kullan."
   mc_shortdescription: "Steve veya Alex'i Minecraft dünyasında bir maceraya almak için kod blokları kullan."
-  mc_gradelevel: Ages 6+
+  mc_gradelevel: 6 yaş ve üzeri
   mc_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   mc_specs: Birçok dil desteği (yakında) | Modern tarayıcılar, akıllı telefonlar, tabletler | 6 yaş ve üzeri
   minecraft_subtitle: Minecraft Kod Saati
@@ -584,7 +584,7 @@ tr-TR:
   older_systems_subheading: 'Bunların eski web tarayıcılarında çalışması gerekir. Tüm eğitimlere erişmek için, modern web tarayıcısına yükseltin <a href="http://browsehappy.com/" target="_blank"></a>'
   mobile_devices: Mobil cihazlar için eğitimler
   frozen_name: Anna ve Elsa ile kodlama yap
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_name: 'Star Wars: Kod ile bir Galaksi İnşa Et'
   codeorg_name: İlk bilgisayar programınızı yazın
   codeintl_name: İlk bilgisayar programınızı yazın
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -665,7 +665,7 @@ tr-TR:
   projguts_gradelevel: 10-13 yaş grubu
   hourofcode_gradelevel: 4-104 Yaş
   frozen_gradelevel: 8 + Yaş grubu
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: 6 yaş ve üzeri
   playlab_gradelevel: 4-104 Yaş
   infinity_gradelevel: 4-104 Yaş
   artist_gradelevel: 4-104 Yaş
@@ -708,7 +708,7 @@ tr-TR:
   projguts_platformtext: İnternetsiz
   hourofcode_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   frozen_platformtext: Modern tarayıcılar + Tablet
-  starwars_platformtext: Modern tarayıcılar + Tablet
+  starwars_platformtext: Modern tarayıcılar + tabletler
   playlab_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeorg_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlama öğrenin!
   codeintl_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlama öğrenin!

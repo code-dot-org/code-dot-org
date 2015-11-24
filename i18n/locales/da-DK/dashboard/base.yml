@@ -391,7 +391,7 @@ da:
     art_from_html: 'Angry Birds&trade; & &copy; & © 2009-2013 Rovio Entertainment Ltd. Alle rettigheder forbeholdes. <br/>Plants vs zombies&trade; & &copy; & © 2013 Electronic Arts Inc. Alle rettigheder forbeholdes.'
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Powered by Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo og Hour of Code&reg; er varemærker tilhørende Code.org.'
     copyright: Copyright
     more: Mere
     feedback: Giv feedback
@@ -630,7 +630,7 @@ da:
         abusive_url: URL-adressen til det indhold, der indberettes
         abuse_type:
           question: 'Hvordan dette indhold overtræder %{link_start}Terms af Service%{link_end}?'
-          harassment: Threats, cyberbullying, harassement
+          harassment: Trusler, cybermobning, chikane
           offensive: Stødende indhold
           infringement: Brud på copyright
           other: Andre

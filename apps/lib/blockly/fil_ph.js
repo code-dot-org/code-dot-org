@@ -1,5 +1,5 @@
-Blockly.Msg.ACTUAL = "tawag";
-Blockly.Msg.ADD = "Dagdagan";
+Blockly.Msg.ACTUAL = "tawag (noun)\n\ntawagin (verb)\n\n";
+Blockly.Msg.ADD = "Dagdagan (increase the content)\n\nLagyan (add something new)\n\nDuktungan (continue to add more )";
 Blockly.Msg.ADD_COMMENT = "Magdagdag ng komento";
 Blockly.Msg.ADD_PARAMETER = "Magdagdag ng parameter";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Baguhin ang value:";

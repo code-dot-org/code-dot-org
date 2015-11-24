@@ -280,13 +280,13 @@ es-ES:
   starwars_speak_languages: ¿Hablas otro idioma?
   starwars_help_translate: Ayúdanos a traducir
   starwars_platform_text: Cualquier navegador moderno, smartphone, tableta
-  mc_name: "Minecraft L'Ora dei Codici"
+  mc_name: Hora de Código de Minecraft
   mc_longdescription: Utiliza bloques de código para llevar a Steve o Alex en una aventura a través del mundo de Minecraft.
   mc_shortdescription: Utiliza bloques de código para llevar a Steve o Alex en una aventura a través del mundo de Minecraft.
   mc_gradelevel: Mayores de 6 años
   mc_platformtext: Cualquier navegador moderno, smartphone, tableta
   mc_specs: Muchos idiomas (muy pronto) | Navegadores modernos, tablets | Edades 6+
-  minecraft_subtitle: "Minecraft L'Ora dei Codici"
+  minecraft_subtitle: Hora de Código de Minecraft
   volunteer_engineer_submission_title: Inspirar a estudiantes y voluntarios para la Hora de Código.
   volunteer_engineer_submission_subtitle_generic: '100.000 profesores van a acoger una Hora del Código en sus aulas este año, del 7 al 13 de Diciembre del 2015 ¡Y necesitan tu ayuda! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} maestros quieren a voluntarios apasionados por la enseñanza de ciencias de la computación para ayudar cons su Horas de Código este Diciembre. <br>%{num_volunteers} voluntarios se han inscripto. Únete a ellos.'
@@ -545,7 +545,7 @@ es-ES:
   hoc2014_try_scrat: Scrat, PvZ y Angry Birds
   hoc2014_try_frozen: 'Artista con Anna y Elsa de "Frozen"'
   carousel_heading_codeorg: Tutoriales realizados por Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_codeorg_any_device: Tutoriales por Code.org (para todos los dispositivos)
   carousel_heading_3rd_party: Tutoriales realizados por terceros
   carousel_heading_third_party: Tutoriales realizados por terceros
   carousel_heading_international: Tutoriales en tu idioma
@@ -739,7 +739,7 @@ es-ES:
   projguts_shortdescription: Aprende sobre modelado y simulación con piedra, papel, o tijeras
   hourofcode_shortdescription: ¡Aprende a programar con Mark Zuckerberg y Angry Birds!
   frozen_shortdescription: Vamos a usar código para unirnos a Anna y Elsa mientras exploran la magia y la belleza del hielo.
-  starwars_shortdescription: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia muy, muy lejana.
+  starwars_shortdescription: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
   playlab_shortdescription: ¡Crea una historia o haz un juego con Laboratorio de Juegos!
   infinity_shortdescription: Utilice el laboratorio de juegos para crear una historia o juego protagonizada por personajes de Disney Infinity.
   artist_shortdescription: ¡Dibuja imagenes estupendas y diseños con el Artista!
@@ -782,7 +782,7 @@ es-ES:
   projguts_longdescription: Esta actividad sin conexión ayuda a los estudiantes a aprender cómo funciona el modelado y simulación, haciendo que un grupo de estudiantes jueguen distintas versiones del juego piedra, papel y tijeras, y viendo los resultados como diferentes experimentos de modelado.
   hourofcode_longdescription: Espacio reservado para un nuevo code.org/hoc
   frozen_longdescription: Vamos a usar código para unirnos a Ana y Elsa mientras exploran la magia y la belleza del hielo. Crearás copos de nieve y patrones a medida que patinas sobre hielo y harás un paisaje invernal que luego puedes compartir con tus amigos!
-  starwars_longdescription: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia muy, muy lejana.
+  starwars_longdescription: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
   playlab_longdescription: ¡Crea una historia o haz un juego con el Laboratorio de juegos! ¡Haz que animales, piratas, zombis, ninjas y muchos personajes más se muevan, hagan sonidos, marquen puntos y hasta lancen bolas de fuego!
   codeorg_beyond_name: Introducción a ciencias de la computación (13 años)
   khan_beyond_name: Aprende programación de computadoras

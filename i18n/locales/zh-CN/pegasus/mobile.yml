@@ -28,14 +28,14 @@ zh-CN:
   hoc2014_everyone: 每个人
   hoc2014_support: '支持它 &#x25BE;'
   hoc2014_whatishoc: 什么是编程一小时？
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_header: '#CSEdWeek/ 编程一小时是一个世界性的活动'
+  csedweek_map_signup: 登记参加活动
+  csedweek_map_search_placeholder: 搜索变成一小时的活动
+  csedweek_map_search_search: 搜索
   csedweek_map_search_reset: 重置
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_title: 图例
+  csedweek_map_legend_event: 编程一小时活动
+  csedweek_map_legend_cs_tech_jam: 计算机技术展会
   cded_sign_up: 登陆
   cded_try_it: 体验一下
   twentyhours_trynow: 现在就试试
@@ -114,7 +114,7 @@ zh-CN:
   hoc_is_here: '#HourOfCode来了 —— 让我们试试看！@codeorg'
   just_did_hoc: '我刚刚完成了 #HourOfCode —— 大家也来看看吧！@codeorg'
   twitter_teach_cs: 为什么没有更多的学校教计算机科学？我们可以解决这个问题。http://youtu.be/nKIu9yen5nc。请访问 http://code.org/ 了解更多。
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
+  learn_hoc_prizes: 了解更多关于每个教育者的奖项
   learn_hoc: 学习编程一小时
   beyond_hoc: 一小时之后
   what_gender: 你的性别是什么？
@@ -171,21 +171,21 @@ zh-CN:
   homepage_slot_text_course4: 第4课
   homepage_slot_text_shop: 商店
   homepage_slot_text_flappy: 飞扬的代码
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_hoc: 变成一小时提供给每一个学生
   homepage_action_text_num_served: '# 送达'
-  homepage_action_text_join_us: Join us
+  homepage_action_text_join_us: 加入我们
   homepage_action_text_sign_up: 登陆
   homepage_action_text_try_it: 体验一下
-  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_volunteers: 我们需要技术志愿者
   homepage_action_text_codevideo: 观看视频
   homepage_action_text_teachervideo: 观看视频
-  homepage_action_text_girlvideo: Inspire a girl
+  homepage_action_text_girlvideo: 鼓舞激励一个女孩
   homepage_action_text_learn: 开始学习
   homepage_action_text_signpetition: 在请愿书上签名
   homepage_signpetition_dropdown: '签署我们请愿 &#x25BE;'
-  homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_diversity_pledge: 承诺多样性
+  homepage_banner_text_prizes: '12月7号到13号，编程一小时即将再次到来 '
+  homepage_banner_link_prizes: '加入史上最大的学习盛会 '
   homepage_banner_text_main: Code.org和大学理事会是一个以增加电脑科学的多样性的联盟。
   homepage_banner_text_link: 了解更多
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -195,7 +195,7 @@ zh-CN:
   homepage_slot_text_link_hoc: 来试试”编程一小时“项目！
   homepage_slot_text_link_host: 举办一个小时编程活动
   homepage_slot_text_link_hocserved: '# 送达'
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_solot_text_link_volunteer: 成为编程一小时志愿者
   homepage_slot_text_title_students: 学生
   homepage_slot_text_blurb_students: 体验我们所有的教程
   homepage_slot_text_link_codestudio: 尝试编程工作室
@@ -252,7 +252,7 @@ zh-CN:
   class_submission_level_college: 大学
   class_submission_level_vocational: 职业级
   class_submission_languages_other: 其他语言
-  inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  inspirational_videos_more: '更多<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> 榜样和名人激励人心的视频'
   starwars_subtitle: 创建一个充满代码的星系
   starwars_javascript_title: JavaScript
   starwars_javascript_description: 使用拖放块和 JavaScript。

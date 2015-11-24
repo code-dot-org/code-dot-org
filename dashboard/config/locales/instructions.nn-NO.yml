@@ -220,13 +220,13 @@
         samle inn all nektaren for å lage all honningen.
       2-3 Bee Debugging 9_instruction: Desse blokkane plagar meg. Reparer feila og
         samle inn all nektaren for å lage all honningen.
-      2-3 Bee Debugging Assessment 1_instruction: 'Lekse: Disse blokkene plager meg.
-        Fiks feilene og samle inn nektaren for å lage all honningen. '
-      2-3 Bee Functions 1_instruction: Funksjoner er kodeblokker som utfører en bestemt
-        oppgave. Bruk blokken "hent 2 nektar" til å samle inn nektar fra hver blomst.
-      2-3 Bee Functions 10_instruction: Lilla blomster har enten 1 eller 0 nektar.
-        Lag en funksjon som samler bare samler inn nektar fra de blomstene som har
-        nektar i seg.
+      2-3 Bee Debugging Assessment 1_instruction: 'Lekse: Dess blokkane plagar meg.
+        Fiks feila og samle inn all nektaren slik at du kan lage all honningen.'
+      2-3 Bee Functions 1_instruction: Funksjonar er blokker med kode som gjer ei
+        oppgåve. Bruk blokka "hent 2 nektar" for å samle inn nektar frå kvar blome.
+      2-3 Bee Functions 10_instruction: Lilla blomar har enten ein eller null nektar.
+        Lag ein funksjon som berre samlar nektar frå dei blomane som har nektar i
+        seg.
       2-3 Bee Functions 2_instruction: Funksjoner er kodeblokker som utfører en bestemt
         oppgave. Bruk blokken "hent 5" til å samle inn 5 nektar om gangen. Pass på
         å bruk en løkke for å bruke ideelt antall blokker.
@@ -2718,49 +2718,49 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: Å løpe inn i en Creeper er en dårlig ide.
-        Gå forsiktig forbi Creeperene for å komme sikkert hjem.
-      Overworld Chop Tree_instruction: Tre er en veldig viktig ressurs. Mange ting
-        blir laget av tre. Gå bort til treet og bruk "ødelegg blokk"-kommandoen for
-        å hugge det ned.
-      Overworld Chop Trees_instruction: Vi trenger å bygge et hus før sola går ned.
-        Det trengs mye tre for å bygge et hus. Hugg ned alle 3 trærne.
-      Overworld Free Play 20x20_instruction: Gratulerer! Du har fullført alle våre
-        oppgaver! Grav, bygg og lag noe unikt ved å bruke alt du har lært.
-      Overworld Free Play_instruction: I dette landskapet kan du gjøre hva du vil.
-        Bygg noe kult.
-      Overworld House Frame - A_instruction: La oss lage vårt eget hus! Dette stedet
-        ser bra ut. Bygg en ramme på jord-blokkene.
-      Overworld House Frame - C_instruction: La oss lage vårt eget hus! Dette stedet
-        ser bra ut. Bygg en ramme på jord-blokkene.
-      Overworld House Frame B_instruction: En vegg er fullført, la oss bygge resten
-        av huset etter plantegningen! Du er nødt til å gjenta deg selv ganske mye
+      Overworld Avoid Monsters_instruction: Å springe inn i ein klatreplante er ein
+        dårleg ide. Gå forsiktig forbi klatreplantene for å komme sikkert heim.
+      Overworld Chop Tree_instruction: Tre er ein veldig viktig ressurs. Mange ting
+        blir laga av tre. Gå bort til treet og bruk "øydelegg blokk"-kommandoen for
+        å hogge det ned.
+      Overworld Chop Trees_instruction: Me må bygge eit hus før sola går ned. Hus
+        krev mykje tre. Kutt ned alle 3 trea.
+      Overworld Free Play 20x20_instruction: Gratulera! Du har fullført alle våre
+        oppgåver! Grav, bygg og lag noko unikt ved å bruke alt du har lært.
+      Overworld Free Play_instruction: I dette landskapet kan du gjera kva du vil.
+        Bygg noko kult.
+      Overworld House Frame - A_instruction: La oss lage vårt eige hus! Denne staden
+        ser bra ut. Bygg ei ramme på jord-blokkene.
+      Overworld House Frame - C_instruction: La oss lage vårt eige hus! Denne staden
+        ser bra ut. Bygg ei ramme på jord-blokkene.
+      Overworld House Frame B_instruction: Ein vegg er fullført, la oss bygge resten
+        av huset etter planteikninga! Du er nøydd til å gjenta deg sjølv ganske mykje
         her.
-      Overworld House Frame B2_instruction: En vegg er fullført, la oss bygge resten
-        av huset etter plantegningen! Du er nødt til å gjenta deg selv ganske mye
+      Overworld House Frame B2_instruction: Ein vegg er fullført, la oss bygge resten
+        av huset etter planteikninga! Du er nøydd til å gjenta deg sjølv ganske mykje
         her.
-      Overworld House Frame C_instruction: En vegg er fullført, la oss bygge resten
-        av huset etter plantegningen! Du er nødt til å gjenta deg selv ganske mye
+      Overworld House Frame C_instruction: Ein vegg er fullført, la oss bygge resten
+        av huset etter planteikninga! Du er nøydd til å gjenta deg sjølv ganske mykje
         her.
-      Overworld House Frame Chosen_instruction: Bygg resten av huset med det materiale
-        du vil. Kommandoen "gjenta" vil være nyttig her.
-      Overworld House Frame_instruction: La oss bygge vårt eget hus! Dette stedet
-        ser bra ut. Bygg en ramme på jord-blokkene.
-      Overworld Minecart Track_instruction: Du er tilbake på overflaten med mange
-        ressurser under jorda. Nå skal vi bygge en sti oppå stien av jord fra huset
-        ditt. Det første steget er å rydde opp stien. Følg stien og fjern trærne.
-      Overworld Move to Sheep_instruction: Legg til enda en "gå fremover"-kommando
+      Overworld House Frame Chosen_instruction: Bygg resten av huset med det materialet
+        du vil. Kommandoen "gjenta" vil vera nyttig her.
+      Overworld House Frame_instruction: La oss bygge vårt eige hus! Denne staden
+        ser bra ut. Bygg ei ramme på jord-blokkene.
+      Overworld Minecart Track_instruction: Du er tilbake på overflata med mange underjordiske
+        ressursar. No skal me bygge ein sti langs det skitne jordtråkket frå huset
+        ditt. Det første steget er å rydde opp stien. Følg stien og fjern trea.
+      Overworld Move to Sheep_instruction: Legg til endå ein "gå framover"-kommando
         for å nå fram til sauen.
-      Overworld Place Wall_instruction: Hvert hus starter med en vegg. Bygg den første
-        delen av huset ditt med å putte "plasser" og "gå fremover"-kommandoer inni
-        gjenta-løkken.
-      Overworld Plant Crops_instruction: Det er lurt å tenke framover. Plant avlinger
-        på begge sider av vannet så du ikke blir sulten senere.
-      Overworld Powered Minecart_instruction: Bra jobba! Du har samlet mange ressurser
-        og bygd et beskjedent hus. Legg skinner fra kanten av kartet og fram til døra
-        på huset ditt.
-      Overworld Shear Sheep_instruction: Tid for å klippe sau! Bruk "klipp"-kommandoen
-        for å samle ull fra begge sauene.
+      Overworld Place Wall_instruction: Kvart hus startar med ein vegg. Bygg den første
+        delen av huset ditt med å putte "plassèr" og "gå framover"-kommandoar inni
+        gjenta-løkka.
+      Overworld Plant Crops_instruction: Det er lurt å tenke framover. Plant avlingar
+        på begge sider av vatnet så du ikkje blir svolten seinare.
+      Overworld Powered Minecart_instruction: Bra jobba! Du har samla mange ressursar
+        og bygd eit beskjedent hus. Legg skinner frå kanten av kartet og fram til
+        døra på huset ditt.
+      Overworld Shear Sheep_instruction: Tid for å klippe sau! Bruk "klypp"-kommandoen
+        for å samle ull frå begge sauene.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -4518,21 +4518,21 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
-      Underground Avoiding Lava_instruction: Lava er gjemt under noen av disse blokkene.
-        De er du nødt til å dekke over før du går fremover. En "hvis"-kommando vil
-        være nyttig. Legg til en "gå fremover"-kommando på riktig sted for å grave
-        ut disse blokkene.
-      Underground If Statements_instruction: Nå begynner ting å bli vanskelig. Grav
-        ut 3 redstone, men ikke fall ned i lavaen. Bruk en "hvis"-kommando til å plassere
-        brostein over all lava du graver frem.
-      Underground Iron_instruction: Å gå inn i smeltet lava er en dårlig ide. Plasser
-        brostein over for å lage en bro, og så grav ut minst to av jern-blokkene.
-      Underground Mine in a Circle_instruction: "Finn en måte å få 5 diamanter og
-        7 redstone! Prøv å bruke en gjenta-kommando inni en annen gjenta-kommando
-        for å gå i en firkant.\r\n"
-      Underground Mining Coal_instruction: Du vil finne de mest verdifulle ressursene
-        under jorda, men det kan bli mørkt. Sett ut minst 2 fakler og grav ut minst
-        2 kull.
-      Underground Test Level_instruction: Samle alle mineralene!
+      Underground Avoiding Lava_instruction: Lava er gøymt under nokre av desse blokkene.
+        Dei er du nøydd til å dekke over før du går framover. Ein "viss"-kommando
+        vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave
+        ut desse blokkene.
+      Underground If Statements_instruction: No begynnar ting å bli vanskeleg. Grav
+        ut 3 redstone, men ikkje dett ned i lavaen. Bruk ein "viss"-kommando til å
+        plassere brustein over all lavaen du grev fram.
+      Underground Iron_instruction: Å gå inn i smelta lava er ein dårleg ide. Plassèr
+        brustein over for å lage ei bru, og grav ut minst to av jern-blokkene.
+      Underground Mine in a Circle_instruction: "Finn ein måte å få 5 diamantar og
+        7 redstone! Prøv å bruke ein gjenta-kommando inni ein annan gjenta-kommando
+        for å gå i ein firkant.\r\n"
+      Underground Mining Coal_instruction: Du vil finne dei mest verdfulle ressursane
+        under jorda, men det kan bli mørkt. Sett ut minst 2 faklar og grav ut minst
+        2 kol.
+      Underground Test Level_instruction: Samle alle minerala!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

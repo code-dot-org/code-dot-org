@@ -3060,20 +3060,16 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
-      Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
+      Overworld Avoid Monsters_instruction: Canavara çarpmak pek akıllıca bir davranış
+        değil. Canavarların yanından dikkatlice hareket ederek güvenli evine ulaş.
+      Overworld Chop Tree_instruction: Ahşap çok önemli bir kaynaktır. Pek çok şey
+        o kullanılarak yapılır. Ağaca doğru yürü ve onu kesmek için "bloğu yok et"
+        komutunu kullan.
+      Overworld Chop Trees_instruction: Güneş batmadan bir ev inşa etmeliyiz. Evler
+        için çok ahşap gerekir. 3 ağacı da kes.
+      Overworld Free Play 20x20_instruction: Tebrikler! Bütün bulmacaları çözdün.
+        Şimdi de öğrendiklerini kullanarak bloklar top, bina inşa et ve değişik bir
+        şeyler yarat.
       Overworld Free Play_instruction: |
         This landscape is yours to play with. You
         choose what to build.
@@ -3095,9 +3091,8 @@
         One wall is finished, let’s build the
         rest of the house by following your floor plan! You’ll have to repeat yourself
         quite a lot here.
-      Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
+      Overworld House Frame Chosen_instruction: Evin geri kalan kısmını istediğin
+        bir malzemeyi kullanarak inşa et. "Tekrarla" komutu çok işine yarayacak.
       Overworld House Frame_instruction: |
         Let's make our own house! This spot looks
         good. Build a frame on the dirt blocks.
@@ -3106,22 +3101,17 @@
         of underground resources. Now, we're going to build a track along the dirt
         path from your house. The first step is clearing the path. Follow the path
         and clear the trees.
-      Overworld Move to Sheep_instruction: Koyuna ulaşmak için ikinci bir “ileri git“
-        komutu ekleyin.
-      Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
+      Overworld Move to Sheep_instruction: Koyuna ulaşmak için ikinci bir “ilerle“
+        komutu ekle.
+      Overworld Place Wall_instruction: Her ev bir duvarla başlar. Evinin ilk kısmını
+        tekrar döngüsü içine "yerleştir" ve "ilerle" komutlarını koyarak tamamla.
       Overworld Plant Crops_instruction: |
         It’s good to plan ahead. Plant crops on
         both sides of the water so you don’t get hungry later on.
-      Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+      Overworld Powered Minecart_instruction: Süper! Pek çok kaynak topladın ve mütevazi
+        bir ev inşa ettin. Şimdi haritanın kenarından evinin kapısına ray döşe.
+      Overworld Shear Sheep_instruction: Koyun kırpma zamanı! "Kırp" komutunu kullanarak
+        her iki koyundan da yün topla.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -4892,25 +4882,21 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
-      Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
-      Underground If Statements_instruction: |
-        Now things are getting tricky. Mine
-        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
-        over any lava you uncover.
-      Underground Iron_instruction: |
-        Walking into molten lava is a bad idea. Place
-        cobblestone to create a bridge, then mine at least two of the iron blocks.
+      Underground Avoiding Lava_instruction: Bu blokların bazılarının altında lav
+        gizli. İlerlemeden önce lavın üstünü örtmen gerekecek. "Eğer" komutu burada
+        çok işine yarayacak. Bu blokları toplamak için doğru yerde "ilerle" komutunu
+        kullan.
+      Underground If Statements_instruction: Şimdi işler biraz karmaşıklaşıyor. 3
+        tane kırmızı taş topla ama lavın içine düşme. Açığa çıkardığın lavların üstüne
+        "eğer" komutu kullanarak parke taşı yerleştir.
+      Underground Iron_instruction: Erimiş lavın içine yürümek iyi bir fikir değil.
+        Köprü oluşturmak için parke taşı döşe, sonrada en az iki demir blok topla.
       Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7
         redstone! Try using a repeat command inside a repeat command to walk in\na
         square.\r\n"
-      Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
+      Underground Mining Coal_instruction: En değerli doğal kaynakları yeraltında
+        bulacaksın, ama yer altı karanlık olabilir. En az 2 meşale yerleştir ve en
+        az 2 kömür topla.
       Underground Test Level_instruction: Collect all of the minerals!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

@@ -558,16 +558,13 @@
           있는 것입니다. 이것이 반복입니다. 이것도 반복입니다. 이것도 반복입니다.
       3:
         image: notes/C1_getting_loopy_3.png
-        text: Today we're going to have a dance party. We'll act out loops with a
-          new dance. The Iteration. We're going to learn about loops using a dance.
-          You will learn a couple of easy steps and repeat them over and over to complete
-          the dance.
+        text: 오늘 우리는 무도회를 할 것입니다. 우리는 루프를 새로운 춤을 통해 작동시킬 것입니다. 반복합니다. 우리는 루프를 춤을 통해
+          배울 것입니다. 여러분은 쉬운 몇 단계를 학습하고, 반복해 춤을 끝낼 것입니다.
       4:
         image: notes/C1_getting_loopy_4.png
-        text: Here are the steps you need to learn. Clap your hands. Put your hands
-          behind your head. Put your hands on your waist. Lift your left hand up.
-          Lift your right hand up. Pretty simple, right? You will discover that you
-          can shorten the directions by putting some dance steps in loops.
+        text: 여기에 여러분이 학습해야할 단계가 있습니다. 손뼉을 쳐보세요. 머리 뒤로 손을 올려보세요. 손을 허리에 두세요. 왼손을 드세요.
+          오른손을 드세요. 정말 간단하죠? 그렇죠? 여러분은 반복문 안에 어떤 춤의 과정을 넣어 지시사항을 단축시킬 수 있다는 것을 발견할
+          것입니다.
       5:
         image: notes/C1_getting_loopy_5.png
         text: We actually do use loops in our dancing. The dancers are wearing computers,
@@ -597,7 +594,7 @@
           to solve. The second one it's the same but it's going down.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: It's like programming with paper. And that's it!
+        text: 그것은 종이를 가지고 프로그래밍 하는 것과 같습니다. 그리고 그게 전부입니다.
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
@@ -624,8 +621,7 @@
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle
-          and see what directions it needs to take.
+        text: 이 퍼즐을 풀기 위해 여러분은 새를 돼지에게 데려가야 합니다. 퍼즐을 살펴보고, 어느 방향으로 데려가야 하는지 보세요.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
         text: You need to drag the blocks over from the toolbox to the workspace.
@@ -808,10 +804,8 @@
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: One that computers are really good at is repeating commands. As a person,
-          you'd get really bored if you had to do the same thing lots and lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times and not get bored and be able to carry that out really well.
+        text: 컴퓨터는 명령을 반복하는 일을 굉장히 잘합니다. 사람은 같은일을 연속해 반복할때 굉장히 지루해합니다. 하지만 컴퓨터는 같은
+          일을 수백만 또는 수십억의 일을 지루해 하지 않으면서도 굉장히 그 일을 열심히 할 수 있습니다.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
         text: For example, if I wanted to wish everyone on Facebook a happy birthday
@@ -863,9 +857,8 @@
           90 degree turn.
       5:
         image: notes/C2_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: 그리고 120도 회전합니다. 기억하세요, 여러분은 숫자 옆에 화살표를 클릭해 픽셀과 각도의 값을 변경할 수 있습니다. 그럼
+          그림그리는 것을 즐겨주세요!
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
@@ -1233,9 +1226,8 @@
           90 degree turn.
       5:
         image: notes/C3_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: 그리고 120도 회전합니다. 기억하세요, 여러분은 숫자 옆에 화살표를 클릭해 픽셀과 각도의 값을 변경할 수 있습니다. 그럼
+          그림그리는 것을 즐겨주세요!
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
@@ -2801,9 +2793,8 @@
           science.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: 이제 블록들을 사용해 여러분만의 작품을 만들 수 있습니다. 이제 설명과 퍼즐 풀기는 끝났습니다. 이제 여러분은 아무거나 원하는
+          것을 만들 수 있습니다. 선택하세요.
       3:
         image: notes/mc_congrats_share_3.JPG
         text: '[students talking] It''s about to get real. Shear. I made an L out
@@ -2820,9 +2811,8 @@
           science.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: 이제 블록들을 사용해 여러분만의 작품을 만들 수 있습니다. 이제 설명과 퍼즐 풀기는 끝났습니다. 이제 여러분은 아무거나 원하는
+          것을 만들 수 있습니다. 선택하세요.
       3:
         image: notes/mc_congrats_no_share_3.JPG
         text: '[students talking] It''s about to get real. Shear. I made an L out
@@ -2830,4 +2820,4 @@
           a house out of wool!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: 이제 당신이 원하는대로 만들 수 있습니다. 즐거운 시간 보내세요!

@@ -1459,13 +1459,13 @@ es:
           Gumball Play Lab: Laboratorio de juego de Gumball
         starwars:
           title: 'Star Wars: Contruyendo una Galaxia con Código'
-          description_short: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia muy, muy lejana.
-          description: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia muy, muy lejana.
+          description_short: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
+          description: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
           Hour of Code 2015: Hora del Código 2015
         starwarsblocks:
           title: 'Star Wars: Contruyendo una Galaxia con Código'
-          description_short: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia muy, muy lejana.
-          description: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia muy, muy lejana.
+          description_short: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
+          description: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
           Hour of Code 2015: Hora del Código 2015
         minecraft:
           title: Minecraft
@@ -1473,9 +1473,9 @@ es:
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: "Minecraft L'Ora dei Codici"
-          description_short: Explora o mundo Minecraft apartir do code
-          description: Usa i blocchi di codice per far vivere a Steve o a Alex un avventura nel mondo di Minecraft
+          title: Hora de Código de Minecraft
+          description_short: Explora el mundo de Minecraft a través del código
+          description: Use blocos de código para levar Steve ou Alex para uma aventura através deste mundo de Minecraft
           Hour of Code 2015: Hora del Código 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
