@@ -3394,6 +3394,11 @@ Studio.animateGoals = function() {
     frameWidth = skin.goalSpriteWidth;
   }
 
+  // We want each goal animation to play at an offset so they're not all in
+  // sync.  By offsetting the frame by (goal index * 7) we ensure that each goal's
+  // animation is significantly out of sync.
+  var animationOffset = 7;
+
   for (var i = 0; i < Studio.spriteGoals_.length; i++) {
     var goal = Studio.spriteGoals_[i];
     // Keep animating the goal unless it's finished and we're not fading out.
@@ -3403,7 +3408,7 @@ Studio.animateGoals = function() {
 
       if (animate) {
         var baseX = parseInt(goalClipRect.getAttribute('x'), 10);
-        var frame = Math.floor(elapsed / frameDuration) % numFrames;
+        var frame = (i * animationOffset + Math.floor(elapsed / frameDuration)) % numFrames;
 
         goalSprite.setAttribute('x', baseX - frame * frameWidth);
       }
