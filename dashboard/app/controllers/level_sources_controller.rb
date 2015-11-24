@@ -84,7 +84,7 @@ class LevelSourcesController < ApplicationController
     view_options(
       callouts: [],
       full_width: true,
-      small_footer: @game.uses_small_footer? || enable_scrolling?,
+      share_footer: true,
       has_i18n: @game.has_i18n?,
       no_padding: browser.mobile?
     )

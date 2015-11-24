@@ -1,11 +1,13 @@
 #page-small-footer
 
 :ruby
+  hoc_script = @level.find_hoc_script
   reactProps = {
     i18nDropdown: (view_options[:has_i18n] ? URI.encode(i18n_dropdown.to_str) : ''),
     copyrightInBase: true,
     baseCopyrightString: I18n.t('footer.copyright'),
     baseMoreMenuString: I18n.t('footer.more'),
+    className: 'dark',
     menuItems: [
       {
         text: I18n.t('footer.report_abuse'),
@@ -13,13 +15,13 @@
         newWindow: true
       },
       {
-        text: I18n.t('footer.support'),
-        link: "https://support.code.org",
+        text: I18n.t('footer.make_my_own_app'),
+        link: hoc_script ? url_for(hoc_script) : url_for(@level),
         newWindow: true
       },
       {
-        text: I18n.t('footer.translate'),
-        link: "https://code.org/translate",
+        text: I18n.t('footer.how_it_works'),
+        link: url_for(action: 'edit'),
         newWindow: true
       },
       {
