@@ -28,6 +28,19 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
   And I close the dialog
   And element "#runButton" is visible
   And element ".header_middle a.level_link:first" does not have class "perfect"
+  # Level source is saved
+  Then I am on "http://studio.code.org/hoc/1?noautoplay=true"
+  And I wait to see a dialog titled "Puzzle 1 of 20"
+  And I close the dialog
+  And I wait until element "#runButton" is visible
+  And block "6" is child of block "5"
+  # Level source is reset
+  Then I am on "http://studio.code.org/hoc/reset"
+  Then I am on "http://studio.code.org/hoc/1?noautoplay=true"
+  And I wait to see a dialog titled "Puzzle 1 of 20"
+  And I close the dialog
+  And I wait until element "#runButton" is visible
+  And element "g[block-id=\'6\']" does not exist
 
 Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as attempted
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
