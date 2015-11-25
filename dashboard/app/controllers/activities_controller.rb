@@ -163,7 +163,7 @@ class ActivitiesController < ApplicationController
     end
 
     # blockly sends us 'undefined', 'false', or 'true' so we have to check as a string value
-    if  params[:save_to_gallery] == 'true' && @level_source_image && solved
+    if params[:save_to_gallery] == 'true' && @level_source_image && solved
       @gallery_activity = GalleryActivity.create!(user: current_user, activity: @activity, autosaved: true)
     end
 
