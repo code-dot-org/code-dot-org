@@ -2,7 +2,7 @@
 # A service for processing a set of SQS queues defined by a config file.
 # Usage ./process_queues QUEUE_CONFIG.JSON
 
-puts "Loading Rails environment..."
+puts "Loading environment..."
 require_relative '../../config/environment'
 
 require 'json'
@@ -31,7 +31,7 @@ class QueueProcessorManager
       processor.start
       @processors << processor
     end
-    metrics_map
+    return metrics_map, configs
   end
 
   # Stop all of the queue processors in parallel.
@@ -60,7 +60,7 @@ class QueueProcessorManager
     update_interval = (ARGV.size >= 2) ? ARGV[1].to_i : 10
     update_interval = 1 if update_interval < 1  # Don't update too quickly.
 
-    metrics_map = manager.start_queue_processors(json)
+    metrics_map, configs = manager.start_queue_processors(json)
 
     # Run until SIGINT is received.
     stopping = false
@@ -78,11 +78,15 @@ class QueueProcessorManager
     }
 
     puts "Press ^C to stop"
+    sqs = Aws::SQS::Client.new
     loop do
-      metrics_map.each do |k,v|
-        puts "#{k}: #{v}"
-      end
-      interruptible_sleep update_interval
+      configs.each do |config|
+        name = config.name
+        response = sqs.get_queue_attributes(queue_url: config.queue_url, 
+                                            attribute_names: %w{ApproximateNumberOfMessages})
+        puts "#{name}: #{metrics_map[name]} backlog=#{response.attributes['ApproximateNumberOfMessages']}"
+        interruptible_sleep update_interval
+      end  
     end
   end
 
