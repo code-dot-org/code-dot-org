@@ -245,7 +245,7 @@ levels.playlab_1 = utils.extend(levels.dog_hello, {
 });
 
 levels.iceage_1 = utils.extend(levels.playlab_1, {
-  background: 'icy',
+  background: 'ice',
   firstSpriteIndex: 0, // manny
 });
 levels.gumball_hello1 = utils.extend(levels.playlab_1, {
@@ -607,7 +607,7 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
 });
 levels.iceage_5 = utils.extend(levels.playlab_5, {
-  background: 'icy',
+  background: 'ice',
   firstSpriteIndex: 1, // sid
 });
 
@@ -896,7 +896,7 @@ levels.playlab_7 = {
   ],
 };
 levels.iceage_7 = utils.extend(levels.playlab_7, {
-  background: 'leafy',
+  background: 'ice',
   firstSpriteIndex: 1, // sid
 });
 levels.gumball_repeat = utils.extend(levels.playlab_7, {
