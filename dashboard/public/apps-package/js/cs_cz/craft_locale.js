@@ -229,7 +229,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "level5FailureMessage":function(d){return "Postav zeď položením bloků na pruh hlíny. Růžový příkaz „opakuj“ opakovaně provádí příkazy v něm umístěné, například „polož blok“ a „jdi vpřed“."},
 "level6FailureMessage":function(d){return "Pro vyřešení úkolu polož bloky na hliněný obrys domu."},
 "level7FailureMessage":function(d){return "Použij příkaz „zasaď plodinu“ k umístění plodin na každý čtvereček tmavé hlíny."},
-"level8FailureMessage":function(d){return "Když se dotkneš syčáka, exploduje. Proklouzni kolem nich a vejdi do svého domu."},
+"level8FailureMessage":function(d){return "Když se dotkneš Creepera, exploduje. Proklouzni kolem nich a vejdi do svého domu."},
 "level9FailureMessage":function(d){return "Nezapomeň umístit 2 louče k osvětlení cesty, a natěžit aspoň 2 kusy uhlí."},
 "minecraftBlock":function(d){return "blok"},
 "nextLevelMsg":function(d){return "Hádanka "+craft_locale.v(d,"puzzleNumber")+" dokončena. Blahopřejeme!"},
@@ -239,4 +239,4 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "reinfFeedbackMsg":function(d){return "Můžeš stisknout \"Hraj dál\" k vrácení do tvé hry."},
 "replayButton":function(d){return "Přehrát"},
 "selectChooseButton":function(d){return "Vybrat"},
-"tooManyBlocksFail":function(d){return "Puzzle "+craft_locale.v(d,"puzzleNumber")+" dokončen. Blahopřejeme! Je též možné dokončit s "+craft_locale.p(d,"numBlocks",0,"cs",{"one":"1 block","other":craft_locale.n(d,"numBlocks")+" blocks"})+"."}};
+"tooManyBlocksFail":function(d){return "Hádanka "+craft_locale.v(d,"puzzleNumber")+" dokončen. Blahopřejeme! Je též možné dokončit s "+craft_locale.p(d,"numBlocks",0,"cs",{"one":"1 block","other":craft_locale.n(d,"numBlocks")+" blocks"})+"."}};
