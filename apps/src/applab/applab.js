@@ -1567,7 +1567,7 @@ Applab.assetPathPrefix = "/v3/assets/";
 Applab.maybeAddAssetPathPrefix = function (filename) {
 
   if (ABSOLUTE_REGEXP.test(filename)) {
-    return MEDIA_PROXY + encodeURIComponent(filename);
+    return MEDIA_PROXY + encodeURIComponent(filename.replace(' ', '%20'));
   }
 
   filename = filename || '';
