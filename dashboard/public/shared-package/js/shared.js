@@ -566,7 +566,7 @@ var PathPart = {
  * @property {string} name
  * @property {string} levelHtml
  * @property {string} levelSource
- * @property {boolean} hidden Doesn't show up in project list
+ * hidden // unclear when this ever gets set
  * @property {boolean} isOwner Populated by our update/create callback.
  * @property {string} updatedAt String representation of a Date. Populated by
  *   out update/create callback
@@ -733,21 +733,9 @@ var projects = module.exports = {
     }
   },
 
-  showShareRemixHeader: function() {
+  showProjectLevelHeader: function() {
     if (this.shouldUpdateHeaders()) {
-      dashboard.header.showShareRemixHeader();
-    }
-  },
-  setName: function(newName) {
-    current = current || {};
-    if (newName) {
-      current.name = newName;
-      this.setTitle(newName);
-    }
-  },
-  setTitle: function(newName) {
-    if (newName && appOptions.gameDisplayName) {
-      document.title = newName + ' - ' + appOptions.gameDisplayName;
+      dashboard.header.showProjectLevelHeader();
     }
   },
 
@@ -780,7 +768,9 @@ var projects = module.exports = {
             sourceHandler.setInitialLevelSource(current.levelSource);
           }
         } else {
-          this.setName('My Project');
+          current = {
+            name: 'My Project'
+          };
         }
 
         $(window).on(events.appModeChanged, function(event, callback) {
@@ -797,11 +787,7 @@ var projects = module.exports = {
         });
         window.setInterval(this.autosave_.bind(this), AUTOSAVE_INTERVAL);
 
-        if (current.hidden) {
-          if (!this.isFrozen()) {
-            this.showShareRemixHeader();
-          }
-        } else {
+        if (!current.hidden) {
           if (current.isOwner || !parsePath().channelId) {
             this.showProjectHeader();
           } else {
@@ -814,7 +800,9 @@ var projects = module.exports = {
         this.showMinimalProjectHeader();
       }
     } else if (appOptions.isLegacyShare && this.getStandaloneApp()) {
-      this.setName('Untitled Project');
+      current = {
+        name: 'Untitled Project'
+      };
       this.showMinimalProjectHeader();
     }
     if (appOptions.noPadding) {
@@ -979,7 +967,7 @@ var projects = module.exports = {
    * Renames and saves the project.
    */
   rename: function(newName, callback) {
-    this.setName(newName);
+    current.name = newName;
     this.save(callback);
   },
   /**
@@ -1002,7 +990,7 @@ var projects = module.exports = {
     var wrappedCallback = this.copyAssets.bind(this, srcChannel, callback);
     delete current.id;
     delete current.hidden;
-    this.setName(newName);
+    current.name = newName;
     channels.create(current, function (err, data) {
       this.updateCurrentData_(err, data, true);
       this.save(wrappedCallback);
@@ -1025,9 +1013,9 @@ var projects = module.exports = {
   serverSideRemix: function() {
     if (current && !current.name) {
       if (projects.appToProjectUrl() === '/projects/algebra_game') {
-        this.setName('Big Game Template');
+        current.name = 'Big Game Template';
       } else if (projects.appToProjectUrl() === '/projects/applab') {
-        this.setName('My Project');
+        current.name = 'My Project';
       }
     }
     function redirectToRemix() {
@@ -1098,7 +1086,7 @@ var projects = module.exports = {
           deferred.reject();
         } else {
           fetchSource(data, function () {
-            projects.showShareRemixHeader();
+            projects.showProjectLevelHeader();
             fetchAbuseScore(function () {
               deferred.resolve();
             });
@@ -1128,7 +1116,6 @@ var projects = module.exports = {
 
 function fetchSource(data, callback) {
   current = data;
-  projects.setTitle(current.name);
   if (data.migratedToS3) {
     sources.fetch(current.id + '/' + SOURCE_FILE, function (err, data) {
       unpackSourceFile(data);

@@ -8,6 +8,9 @@ nav: educate_nav
 - [Teacher-Led Hour of Code Tutorials](#teacher)
 - [Other Activities](#other)
 
+And if you want more, check out AskATeacher's [Hour of Code suggestions by grade level](http://askatechteacher.com/2015/11/09/hour-of-code-3/)
+
+
 <a id="student"></a>
 # Student-Led Hour of Code Tutorials 
 Student-led tutorials are designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. These tutorials optimize the experience for students and teachers who are new to computer science. 
@@ -60,7 +63,7 @@ Student-led tutorials are designed so they can be fun for a student working alon
 [AllCanCode](https://www.allcancode.com/web/hourofcode)  
 **Ages 5-10. Modern web browsers, iOS.** An immersive game to guide Marco with a visual programming language.
 
-[CS First](http://www.cs-first.com/content/hour-code-students)  
+[CS First](http://cs-first.com/content/hour-code-students)  
 **Ages 9-14. Modern web-browsers.** Animate a story about two characters on the ocean. Add your own style!
 
 [NCLab: Karel the Robot](http://hoc.nclab.com/karel/)  
@@ -208,7 +211,7 @@ This activity builds off of the classic game of Rock/Paper/Scissors, known to mo
 [Kodable fuzzFamily Frenzy](https://www.kodable.com/hour-of-code/lessons)  
 **Ages 5-9. Seqence, Algorithms, Programming, unplugged.** Students will learn basic programing language and use math concepts to move a “robot” forward, spin, and jump.
 
-[Google CS First](www.cs-first.com/hocteachers)  
+[Google CS First](http://cs-first.com/hocteachers)  
 **Ages 9-14 Sequence, Programming, Art, Storytelling, web-based.** Students use Scratch to code a story about being lost at sea. 
 
 [Bitsbox Coding + Math](https://bitsbox.com/hocprint.html)  
@@ -244,7 +247,7 @@ This activity builds off of the classic game of Rock/Paper/Scissors, known to mo
 [Climate Science](https://app.vidcode.io/hourofcode/science-teacher-guide)  
 **Ages 12-16. Science (Climate), Science (Environment), unplugged.** Students draw a picture, and take turns giving the class steps to recreate their drawing.
 
-[Google CS First](www.cs-first.com/hocteachers)  
+[Google CS First](http://cs-first.com/hocteachers)   
 **Ages 9-14 Sequence, Programming, Art, Storytelling, web-based.** Students use Scratch to code a story about being lost at sea. 
 
 [Arduino Activity](https://csedweek.org/csteacher/arduino.pdf)  
@@ -345,7 +348,7 @@ Create your own video greeting card with code!  Learn one of the most popular we
 This is a ready-to-use learning experience for students in grades 6 - 10 that guides students through creating fun games using real world design and programming skills. 
 
 
-[Try a week of 3D coding with AgentCubes](http://tinyurl.com/SGDTechJam)  
+[Try a week of 3D coding with AgentCubes](http://sgd.cs.colorado.edu/wiki/CS_Ed_Week_Tech-Jam_2015:_Epidemiology_Activity)  
 Students use the online 3D tool AgentCubes, which runs on any WebGL enabled browser (i.e. Chrome) with an Internet connection, to create an epidemiology simulation. This activity takes about a week of class-time (assuming 50 minute classes with time to get settled etc, and ~30 minutes of actual work).
 
 
