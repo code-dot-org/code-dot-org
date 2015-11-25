@@ -25,7 +25,7 @@ ROLE_MAP = {
 # couple minutes.
 MAX_WAIT_TIME = 600
 
-# Define a mutext to keep output blocks from different threads from getting too jumped.
+# Define a mutext to keep output blocks from different threads from getting too jumbled.
 OUTPUT_MUTEX = Mutex.new
 
 class InstanceProvisioningInfo
@@ -88,14 +88,15 @@ def determine_frontend_instance_distribution
   instances = @ec2client.describe_instances
 
   frontend_instances = instances.reservations.map do |reservation|
-    reservation.instances.select { |instance| instance.state.name == 'running' && instance.tags.detect { |tag| tag.key ==
-        'Name' && tag.value.include?('frontend') } }
+    reservation.instances.select { |instance| instance.state.name == 'running' &&
+        instance.tags.detect { |tag| tag.key == 'Name' && tag.value.include?('frontend') } }
   end
 
   frontend_instances.flatten!
 
   instance_distribution = frontend_instances.each_with_object(Hash.new(0)) { |(instance, _), instance_distribution|
-    instance_distribution[instance.placement.availability_zone] += 1 }
+    instance_distribution[instance.placement.availability_zone] += 1
+  }
 
   instance_distribution
 end
@@ -107,12 +108,12 @@ end
 def create_instance_provisioning_infos
   instances_to_provision_array = []
   instance_distribution = determine_frontend_instance_distribution
-  instances_to_provision = @options['count'].to_f
+  instances_to_provision = @options['count']
 
   instances_to_provision_for_zones = Hash.new()
 
   instance_distribution.keys.each do |zone|
-    instances_to_provision_for_zones[zone] = (instances_to_provision / instance_distribution.keys.count).floor
+    instances_to_provision_for_zones[zone] = (instances_to_provision / instance_distribution.keys.count)
   end
 
   leftover_instances = instances_to_provision % instance_distribution.keys.count
@@ -148,7 +149,8 @@ def determine_unique_name_for_instance_zone(ssh_username, frontend_name, determi
       if frontend_name
         name = "#{frontend_name}#{retry_index == 0 ? '' : retry_index.to_s}"
       else
-        name = @options['prefix'] + "frontend-#{determined_instance_zone[-1, 1] + (instance_count + 1 + retry_index).to_s}"
+        name = "frontend-#{@options['prefix'] ? @options['prefix'] + '-' : '' }#{determined_instance_zone[-1, 1] +
+            (instance_count + 1 + retry_index).to_s}"
       end
 
       # Collect the names of all of the AWS instances.
@@ -175,10 +177,9 @@ def determine_unique_name_for_instance_zone(ssh_username, frontend_name, determi
   raise 'Unable to find unique instance name'
 end
 
-# Returns a (instance_zone, frontend_name) typle for the given
-# ec2client.  The instance_zone is the one with least capacity amongst frontend instances,
-# and the frontend_name is one that is (probably) not currently already a known name to Chef,
-# except in infrequent race conditions.
+# Returns a (instance_zone, frontend_name) typle for the given  ec2client.  The instance_zone is the one with least
+# capacity amongst frontend instances, and the frontend_name is one that is (probably) not currently already a known
+# name to Chef,  except in infrequent race conditions.
 
 # param {string} ssh_username: The ssh username to use for connecting to the gateway.
 # param {frontend_name}: The base frontend name, or nil to use an automatically generated name.
