@@ -149,7 +149,7 @@
   "endGameWin": "end game as a win",
   "endGameLose": "end game as a loss",
   "endGameTooltip": "End the game as either a win or a loss.",
-  "extraFunction": "You have created a function called {funcName}, which is not needed for this puzzle. Check to see if you have a typo.",
+  "extraFunction": "You have renamed a function to {funcName} but it won't work. You should use the original function name.",
   "finalLevel": "Congratulations! You have solved the final puzzle.",
   "foodFight": "Food fight!",
   "for": "for",
