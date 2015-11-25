@@ -303,14 +303,14 @@
   inspirational_videos_more: المزيد من <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     مقاطع الفيديو الملهمة</a> من المشاهير و الشخصيات
   starwars_subtitle: "بناء مجرة باستعمال البرمجة"
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: "جافا سكريبت"
   starwars_javascript_description: "استعمل تعنية سحب و اسقاط القطع و جافا سكريبت."
   starwars_javascript_specs: "الإنجليزية فقط | المتصفحات الحديثة | الإعمار 11 +"
   starwars_javascript_start_button: "جرب الآن"
   starwars_blocks_title: "مربعات برمجية"
   starwars_blocks_description: "استخدام تقنية سحب و اسقاط القطع."
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: "العديد من اللغات (ستتوفر قريبا) | المتصفحات الحديثة والهواتف
+    الذكية و الألواح الرقميّة | الذين تتراوح أعمارهم بين 6-10"
   starwars_blocks_start_button: "جرب الآن"
   starwars_watch_videos: "قبل البدء، شاهد أحد هذه المقاطع الملهمة"
   starwars_speak_languages: "تتكلم لغة أخرى؟"
@@ -664,6 +664,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ, و Scrat
   hoc2014_try_frozen: "الفنان مع آنا و إلسا, من Frozen"
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: "دروس تعليمية بلغتك"
@@ -733,8 +734,10 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: "الصخرة، الورقة، المقص"
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: "اكتب برنامجك الاول"
   playlab_name: "مختبر اللعب"
+  infinity_name: "لعبة مختبر اللعب اللانهائية"
+  artist_name: "الرسام"
   codeorg_gradelevel: "الأعمار 4-104"
   codeintl_gradelevel: "الأعمار 4-104"
   thinkersmithspanish_gradelevel: Por todos
@@ -776,6 +779,8 @@
   frozen_gradelevel: "الأعمار 8 +"
   starwars_gradelevel: "الاعمار 6 +"
   playlab_gradelevel: "الأعمار 4-104"
+  infinity_gradelevel: "الأعمار 4-104"
+  artist_gradelevel: "الأعمار 4-104"
   codeorg_platformtext: "المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية"
   codeintl_platformtext: "المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية"
   thinkersmithspanish_platformtext: "غير مربوطة"
@@ -862,12 +867,15 @@
     المعلومات"
   kodableunplugged_shortdescription: "تمارين ممتعة غير موصولة"
   projguts_shortdescription: "حاول إستعمال النمذجة والمحاكاة باستخدام ورقة/مقص/صخرة"
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: "تعرف على التعليمات البرمجية مع مارك زوكربيرج و الطيورالغاضبة!"
   frozen_shortdescription: "دعونا استخدام التعليمات البرمجية للانضمام إلى آنا و إليسا,
     و نستكشف سحر وجمال الجليد."
   starwars_shortdescription: "تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في
     مجرة بعيدة، بعيدة جدا."
   playlab_shortdescription: "أنشئ قصة أو إصنع لعبة مع مختبر اللعب !"
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: "ارسم صور رائعة و صمم مع الرسام !"
   codeorg_longdescription: تعرف على المفاهيم الأساسية "لعلم الحاسوب" مع سحب وإسقاط
     البرمجة. هذا البرنامج التعليمي موجه ذاتيا شبيه بلعبة، ومن خلال محاضرات الفيديو
     من بيل جيتس ومارك زوكربيرج، لعبة الأنجري بيردز ولعبة بلانتس والزومبي. تعلم تكرار
@@ -1311,19 +1319,19 @@
     لن تستطيع الوصول إلى code.org بعد هذا التاريخ. <a href='%{it_requirements_url}'>اضغط
     هنا</a> لتعلم كيفية تفعيل HTTPS لـ code.org."
   compatibility_https_hide_this_warning: "إخفاء هذا التحذير"
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  infinity_name: Infinity Play Lab
-  artist_name: Artist
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: "رفرف"
   infinity_shortcode: inf
-  playlab_shortcode: play
+  playlab_shortcode: "إلعب"
   artist_shortcode: art
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>

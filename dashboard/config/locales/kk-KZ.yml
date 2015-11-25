@@ -48,7 +48,7 @@
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
   already_started: 'Already started? Resume here >> '
   demos: 'Admin: All Demos'
-  continue: Continue
+  continue: Жалғастыру
   prize: prize
   more_info: More info
   auth:
@@ -185,8 +185,8 @@
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
       title: Please Confirm
-      'no': 'No'
-      'yes': 'Yes'
+      'no': Жоқ
+      'yes': Иә
       msg: Are you sure you want to claim the %{prize_name} prize?
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
@@ -260,6 +260,7 @@
         playlab: Make an App
         artist: Draw Something
         calculate: Calculate Something
+        applab: Make an App
     user:
       classroom: Оқытушының жеке парақшасы
       district_dashboard: District Dashboard
@@ -624,11 +625,11 @@
     open_response_body: Thanks for your response!
   dialog:
     ok: OK
-    startover_title: Are you sure you want to start over?
+    startover_title: Сіз басынан бастауға сенімдісіз бе?
     startover_body: This will reset the puzzle to its start state and reset all the
       data you've added or changed.
-    startover_ok: Start Over
-    startover_cancel: Cancel
+    startover_ok: Басынан бастау
+    startover_cancel: Болдырмау
   time:
     hour: 1 hour
     day: day
@@ -648,7 +649,7 @@
           title: Edit Code
           description: ''
         events:
-          title: Events
+          title: Шаралар
           description: ''
         builder:
           title: Builder
@@ -661,7 +662,7 @@
           title: Jigsaw
           description: ''
         step:
-          title: Step
+          title: Қадам
           description: ''
         sample_level_builder:
           title: Sample Level Builder
@@ -699,7 +700,7 @@
     delete: Өшіру
     exit: Return to Course
     my_projects: My Projects
-    share: Share
+    share: Бөлісу
     share_title: Share your project
     share_copy_link: 'Copy the link:'
     close: Close
@@ -712,11 +713,11 @@
       on your projects at any time.
     need_help: Need help getting started?
     really_delete: Өшіру?
-    delete_yes: 'Yes'
-    delete_no: 'No'
+    delete_yes: Иә
+    delete_no: Жоқ
     saved: Saved
     not_saved: Not saved
-    cancel: Cancel
+    cancel: Болдырмау
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your
       My Projects list. Anyone you have shared the link to will no longer be able

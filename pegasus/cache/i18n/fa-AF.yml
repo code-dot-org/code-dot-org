@@ -710,6 +710,7 @@
   hoc2014_try_scrat: "پرندگان عصبانی، گیاهان علیه زامبی‌ها و اسکرات"
   hoc2014_try_frozen: "هنرمندی با آنا و السا, از کارتون منجمد"
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: "آموزش به زبان شما"
@@ -780,8 +781,10 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: "سنگ، کاغذ، قیچی"
-  hourofcode_name: "جا نگهدار برای code.org/hoc جدید"
+  hourofcode_name: "اولین برنامه کامپیوتر خودت را بنویس"
   playlab_name: "آزمایشگاه بازی"
+  infinity_name: "آزمایشگاه بازی نامحدود"
+  artist_name: "هنرمند"
   codeorg_gradelevel: "سنین 4 تا 104"
   codeintl_gradelevel: "سنین 4 تا 104"
   thinkersmithspanish_gradelevel: Por todos
@@ -823,6 +826,8 @@
   frozen_gradelevel: "سنین بالای 8"
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: "سنین 4 تا 104"
+  infinity_gradelevel: "سنین 4 تا 104"
+  artist_gradelevel: "سنین 4 تا 104"
   codeorg_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"
   codeintl_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"
   thinkersmithspanish_platformtext: "آنپلاگد"
@@ -918,12 +923,15 @@
   kodableunplugged_shortdescription: "یک تمرین بدون اتصال جالب"
   projguts_shortdescription: "مدل سازی و شبیه سازی  رابا استفاده از سنگ/کاغذ/قیچی
     امتحان کنید"
-  hourofcode_shortdescription: "جا نگهدار برای code.org/hoc جدید"
+  hourofcode_shortdescription: "کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!"
   frozen_shortdescription: "بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو
     و زیبایی یخ را کشف می کنند استفاده کنیم."
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: "یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!"
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: "با نقاش چند عکس و طرح باحال بکش!"
   codeorg_longdescription: "با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر
     را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک
     زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری،
@@ -1411,19 +1419,19 @@
     داشت. برای این که ببینید چه طور می توانید مرور امن (HTTPS) را برای Code.org فعال
     کنید <a href='%{it_requirements_url}'>اینجا کلیک کنید</a>."
   compatibility_https_hide_this_warning: "مخفی کردن هشدار"
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  infinity_name: Infinity Play Lab
-  artist_name: Artist
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: "پریدن"
   infinity_shortcode: inf
-  playlab_shortcode: play
+  playlab_shortcode: "بازی کن"
   artist_shortcode: art
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>

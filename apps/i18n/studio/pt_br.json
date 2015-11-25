@@ -150,6 +150,7 @@
   "endGameLose": "encerre o jogo como uma derrota",
   "endGameTooltip": "Encerre o jogo como uma vitória ou derrota.",
   "finalLevel": "Parabéns! Você resolveu o desafio final.",
+  "foodFight": "Food fight!",
   "for": "para",
   "goSprite": "ir",
   "hello": "olá",
@@ -498,7 +499,7 @@
   "setSpriteDiego": "para uma imagem do Diego",
   "setSpriteScrat": "para uma imagem do Scrat",
   "setSpriteAnais": "para uma imagem de Anais",
-  "setSpriteAntony": "para uma imagem do Antony",
+  "setSpriteAnton": "to an Anton image",
   "setSpriteBananajoe": "para uma imagem do João Banana",
   "setSpriteDarwin": "para uma imagem do Darwin",
   "setSpriteGumball": "para uma imagem do Gumball",
@@ -743,5 +744,12 @@
   "failedMultiplyCharactersTimeoutBlockly": "Você precisa pegar 20 Mouse Droids. Use o comando \"adicione um Mouse Droid\" dentro do evento \"quando pegar Mouse Droid\" para adicionar dois ou mais Mouse Droids sempre que você pegar um.",
   "failedMultiplyCharactersTimeoutGotSome": "Parabéns, você adicionou código para criar Mouse Droids. Você pode ir para o próximo desafio ou tentar pegar 20 Mouse Droids novamente. Tente facilitar, adicionando mais deles! (Pressione e segure as teclas do seu teclado - ou tela - para se mover mais rápido).",
   "failedChangeSettingTimeout": "Pegue três Pilotos Rebeldes para seguir em frente.",
-  "failedChangeSettingSettings": "Faça seu próprio jogo. Para vencer esse desafio, você precisa alterar seu androide e definir sua velocidade."
+  "failedChangeSettingSettings": "Faça seu próprio jogo. Para vencer esse desafio, você precisa alterar seu androide e definir sua velocidade.",
+  "playSoundR2D2Random": "play R2-D2 random sound",
+  "playSoundC3PORandom": "play C-3PO random sound",
+  "playSoundPufferPigRandom": "play Puffer Pig random sound",
+  "playSoundTauntaunRandom": "play Tauntaun random sound",
+  "playSoundMynockRandom": "play Mynock random sound",
+  "playSoundProbotRandom": "play Probot random sound",
+  "playSoundMouseDroidRandom": "play Mouse Droid random sound"
 }

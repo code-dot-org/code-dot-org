@@ -504,11 +504,11 @@ lt:
         starwars_blocks_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
         starwars_blocks_events: 'Star Wars: Building a Galaxy with Code - Events'
         starwars_blocks_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
-        mc_intro: 'Minecraft - Introduction'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        mc_intro: 'Minecraft - Pristatymas'
+        mc_repeat: 'Minecraft - Kartoti'
+        mc_if_statements: 'Minecraft - "Jei" sakiniai'
+        mc_congrats_share: 'Minecraft - Sveikiname'
+        mc_congrats_no_share: 'Minecraft - Sveikiname'
     callout:
       text:
         drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat blokeliu
@@ -582,9 +582,9 @@ lt:
         Infinity_move_collide_callout: Groti garsą, kai įvyks šis įvykis.
         Infinity_repeat_callout: Padėkite judėjimo blokelius viduje
         craft_run_button_callout: Nuspausk „Paleisti“, kad išmėgintum savo programą
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_drag_block_callout: 'Nutempk "eikPirmyn();" blokelį ir prikabink jį po kitais blokeliais'
+        craft_callout_preplaced: Męs čia padėjome kelis blokus, kad tau būtų nuo ko pradėti
+        craft_inside_repeat: Kartok veiksmus įdėdamas čia blokielius
+        craft_callout_preplaced_house: Šis kodas pradės statyti tavo namą. Ar tu gali jį pabaigti?
+        craft_what_is_iron: Iškask šią geležį!
+        craft_callout_moveforward: Šis kodas tikrins ar yra lava, ar gali pridėti komandą eik pirmyn?

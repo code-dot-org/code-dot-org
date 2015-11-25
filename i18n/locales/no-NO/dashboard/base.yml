@@ -221,6 +221,7 @@
         playlab: Lag en app
         artist: Tegn noe
         calculate: Calculate Something
+        applab: Lag en app
     user:
       classroom: Lærerens startside
       district_dashboard: Distrikt skrivebord
@@ -335,7 +336,7 @@
     title: Kodestudio
     description: Code Studio er hjemmet til nettbaserte kurs av Code.org
     lines_of_code: '%{lines_count} LINJER MED KODE SKREVET AV ELEVER'
-    lines_of_code_linebreak: '%{lines_count} LINJER KODE<br/>SKREVET AV %{elevs_count} MILLIONER STUDENTER'
+    lines_of_code_linebreak: '%{lines_count} LINJER KODE<br/>SKREVET AV %{students_count} MILLIONER STUDENTER'
     all_courses: Oversikt over kurs 1, 2 og 3
     lesson_plans: Plan for øvelser
     signin_message: 'Allerede registrert? %{link}'

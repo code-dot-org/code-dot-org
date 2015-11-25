@@ -562,8 +562,8 @@
         studio_iceage_2: A Diego (actor 1) y abuela (actor 2) les gustaría decirse
           "Hola" mutuamente. ¿Puedes ayudarles usando el bloque "decir" dos veces?
         studio_iceage_3: ¿Puedes ayudar a Scrat a llegar a la bandera?
-        studio_iceage_4: ¿Puedes ayudar a Scrat (actor 1) llegar a Abuela (actor 2)
-          y reproducir un sonido cuando llegue?
+        studio_iceage_4: ¿Puedes ayudar a Scrat (actor 1) llegar hasta la Abuela (actor
+          2) y reproducir un sonido cuando llegue?
         studio_iceage_5: ¿Puedes ayudar a Sid a decir "Saludos" cuando se hace click
           en él? No te olvides de clickearlo después de haber clickeado "Ejecutar"
         studio_iceage_6: ¿Puedes ayudar a Diego a moverse usando las felechas arriba/abajo/derecha/izquierda
@@ -790,11 +790,11 @@
         starwars_blocks_events: 'Star Wars: Contruyendo una Galaxia con Código - Eventos'
         starwars_blocks_congrats: 'Star Wars: Construyendo una Galaxia con Código
           - Felicitaciones'
-        mc_intro: Minecraft - Introduzione
-        mc_repeat: Minecraft - Ripetizione
-        mc_if_statements: Minecraft - Istruzione "se"
-        mc_congrats_share: Minecraft - Congratulazioni
-        mc_congrats_no_share: Minecraft - Congratulazioni
+        mc_intro: Minecraft - Introducción
+        mc_repeat: Minecraft - Repetir
+        mc_if_statements: Minecraft - Instrucciones "Si"
+        mc_congrats_share: Minecraft - Felicidades
+        mc_congrats_no_share: Minecraft - Felicidades
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
@@ -905,12 +905,12 @@
           evento.
         Infinity_repeat_callout: Lugar para mover bloques dentro de aquí
         craft_run_button_callout: Haz clic en "Ejecutar" para probar tu programa
-        craft_drag_block_callout: Arrastra un bloque "mueveHaciaAdelante()"; y pegalo
-          por debajo de la otro bloque
-        craft_callout_preplaced: Hemos puesto algunos bloques aquí para que comiences
+        craft_drag_block_callout: Arrastra un bloque "mueveHaciaAdelante();" y pégalo
+          por debajo del otro bloque
+        craft_callout_preplaced: Hemos puesto aquí algunos bloques para que comiences
         craft_inside_repeat: Repite acciones colocando bloques aquí
-        craft_callout_preplaced_house: Questo codice inizia la costruzione della tua
-          casa. Riesci a finirla tu?
-        craft_what_is_iron: Scava il ferro!
-        craft_callout_moveforward: Questo codice controlla la lava, sai aggiungere
-          un comando per andare avanti?
+        craft_callout_preplaced_house: Este código comenzará a construir tu casa.
+          ¿Puedes terminarlo?
+        craft_what_is_iron: ¡Pica esta mina de hierro!
+        craft_callout_moveforward: Este código comprobará si hay lava, ¿puedes añadir
+          un comando para avanzar?

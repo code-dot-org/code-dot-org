@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'aws-sdk'
 require 'fake_sqs/test_integration'
 require 'sqs/rate_limiter'
 require 'sqs/queue_processor_config'
@@ -37,13 +38,10 @@ class RateLimiterTest < ActiveSupport::TestCase
   end
 
   def test_rate_limiter_with_dcdo_updates
-    limiter = SQS::RateLimiter.new(create_config(max_rate: 10))
+    max_rate_proc = Proc.new { DCDO.get(DCDO_MAX_RATE_KEY, 1) }
+    limiter = SQS::RateLimiter.new(create_config(max_rate: 10, max_rate_proc: max_rate_proc))
 
-    # If the DCDO max rate is not explicitly set we should use the default.
-    assert_in_delta 0.5, limiter.inter_batch_delay(batch_size: 5, elapsed_time_sec: 0.0)
-
-    # Change the DCDO rate limit to 1 message per second and make sure the rate limiter
-    # uses the updated limit.
+    # Change the DCDO rate limit and make sure the rate limiter uses the updated values.
     DCDO.set(DCDO_MAX_RATE_KEY, 1)
     assert_in_delta 10.0, limiter.inter_batch_delay(batch_size: 10, elapsed_time_sec: 0.0)
 
@@ -52,7 +50,7 @@ class RateLimiterTest < ActiveSupport::TestCase
 
     # Make sure the rate limiter keeps below the target max rate (but not too far below)
     # for a range of different max_rates and batch sizes.
-    limiter = SQS::RateLimiter.new(create_config(max_rate: 1))
+    limiter = SQS::RateLimiter.new(create_config(max_rate: 1, max_rate_proc: max_rate_proc))
     (10..1000).step(50) do |max_rate|
       DCDO.set(DCDO_MAX_RATE_KEY, max_rate.to_s)
       (1..10).each do |batch_size|
@@ -67,14 +65,17 @@ class RateLimiterTest < ActiveSupport::TestCase
 
   private
 
-  def create_config(max_rate:, num_workers_per_processor: 1, num_processors: 1)
-    SQS::QueueProcessorConfig.new(queue_uri: 'http://example.com',
-      handler: NoOpHandler.new,
-      initial_max_rate: max_rate,
-      dcdo_max_rate_key: DCDO_MAX_RATE_KEY,
-      num_processors: num_processors,
-      num_workers_per_processor: num_workers_per_processor,
-      logger: @logger)
+  def create_config(max_rate:, max_rate_proc: nil, num_workers_per_processor: 1, num_processors: 1)
+
+    # Proc for determining the max rate based on DCDO.
+    SQS::QueueProcessorConfig.new(
+        queue_url: 'http://example.com',
+        handler: NoOpHandler.new,
+        initial_max_rate: max_rate,
+        max_rate_proc: max_rate_proc,
+        num_processors: num_processors,
+        num_workers_per_processor: num_workers_per_processor,
+        logger: @logger)
   end
 
   # A fake handler that does nothing.

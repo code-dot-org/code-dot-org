@@ -621,7 +621,7 @@
         Unplug6: Betingelser
         Unplug7: Låtskriving
         Unplug8: Abstraksjon
-        Unplug9: Programmering med relé
+        Unplug9: Programmeringsstafett
         Unplug10: Internett
         Unplug11: Oppsummering
         C1_happy_maps_unplugged: Glade Kart
@@ -751,9 +751,9 @@
         starwars_blocks_congrats: 'Star Wars: Skap ein galakse med kode - Gratulerer'
         mc_intro: Minecraft - introduksjon
         mc_repeat: Minecraft - gjenta
-        mc_if_statements: Minecraft - hvis-instruksjon
-        mc_congrats_share: Minecraft - gratulerer
-        mc_congrats_no_share: Minecraft - gratulerer
+        mc_if_statements: Minecraft - Viss-setningar
+        mc_congrats_share: Minecraft - Gratulera
+        mc_congrats_no_share: Minecraft - Gratulera
     callout:
       text:
         drag_blocks: Dra ei "flytt"-blokk og fest den under den andre blokka
@@ -856,13 +856,13 @@
         Infinity_move_collide_callout: Spel av ein lyd når denne hendinga skjer.
         Infinity_repeat_callout: Plassér Flytt blokker innanfor her
         craft_run_button_callout: Trykk "Køyr" for å prøve programmet
-        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
-          the other block
-        craft_callout_preplaced: Vi har satt sammen noen blokker for å hjelpe deg
-          i gang
-        craft_inside_repeat: Gjenta handlinger ved å sette blokkene her inne
-        craft_callout_preplaced_house: Denne koden kommer til å starte byggingen av
-          huset ditt. Kan du fullføre den?
+        craft_drag_block_callout: Dra ein "moveForward();"-blokk og klikk den fast
+          under den andre blokka
+        craft_callout_preplaced: Vi har satt saman nokre blokker her for å hjelpe
+          deg i gong
+        craft_inside_repeat: Gjenta handlingar ved å sette blokker inni her
+        craft_callout_preplaced_house: Denne koden startar bygginga av huset ditt.
+          Kan du gjere han ferdig?
         craft_what_is_iron: Utvinn dette jernet!
-        craft_callout_moveforward: Denne koden vil se etter lava, kan du legge til
-          en kommando for å gå fremover?
+        craft_callout_moveforward: Denne koden sjekker om det er lava, kan du legge
+          til ein kommando for å gå framover?

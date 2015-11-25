@@ -299,27 +299,26 @@
   class_submission_languages_other: "שפות אחרות"
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
+  starwars_subtitle: "לבנות את הגלקסיה באמצעות קוד"
   starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
-  starwars_javascript_start_button: "נסה עכשיו"
+  starwars_javascript_description: השתמשו בבלוקים "גרור ושחרר" ו-JavaScript.
+  starwars_javascript_specs: "אנגלית בלבד | דפדפנים מודרניים | לגילאי 11 ומעלה"
+  starwars_javascript_start_button: "נסה כעת"
   starwars_blocks_title: "בלוקים"
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
-  starwars_blocks_start_button: "נסה עכשיו"
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
-  starwars_platform_text: "דפדפנים מודרנים, סמרטפונים, טבלטים"
+  starwars_blocks_description: השתמש בבלוקים ב"גרור ושחרר".
+  starwars_blocks_specs: "שפות נוספות (בקרוב) | דפדפנים מודרניים | סמארטפונים, טאבלטים
+    | לגילאי 6 עד 10"
+  starwars_blocks_start_button: "נסו כעת"
+  starwars_watch_videos: "לפני שאתם מתחילים, צפו באחד מסרטוני הווידאו הללו"
+  starwars_speak_languages: "האם אתם דוברים שפה נוספת?"
+  starwars_help_translate: "עזרו לנו לתרגם"
+  starwars_platform_text: "דפדפנים מודרנים, סמארטפונים, טאבלטים"
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: "לגילאי 6 ומעלה"
   mc_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
@@ -659,6 +658,7 @@
   hoc2014_try_scrat: "האנגרי בירדז,צמחים נגד זומבים וראט הסנאי"
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: "הדרכות בשפה שלך"
@@ -689,7 +689,7 @@
     יש לשדרג<a href="http://browsehappy.com/" target="_blank"> לדפדפן אינטרנט מודרני.</a>
   mobile_devices: "הדרכות עבור התקנים ניידים"
   frozen_name: Code with Anna and Elsa
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_name: "מלחמת הכוכבים: לבנות את הגלקסיה באמצעות קוד"
   codeorg_name: "כתוב את תוכנת המחשב הראשונה שלך"
   codeintl_name: "כתוב את תוכנת המחשב הראשונה שלך"
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -729,6 +729,8 @@
   projguts_name: "אבן, נייר ומספריים"
   hourofcode_name: "מחזיק מקום עבור code.org/hoc חדש"
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artist
   codeorg_gradelevel: "גילאי 4-104"
   codeintl_gradelevel: "גילאי 4-104"
   thinkersmithspanish_gradelevel: Por todos
@@ -768,8 +770,10 @@
   projguts_gradelevel: "גילאי 10-13"
   hourofcode_gradelevel: "גילאי 4-104"
   frozen_gradelevel: "גילאי 8 +"
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: "לגילאי 6 ומעלה"
   playlab_gradelevel: "גילאי 4-104"
+  infinity_gradelevel: "גילאי 4-104"
+  artist_gradelevel: "גילאי 4-104"
   codeorg_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
   codeintl_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
   thinkersmithspanish_platformtext: "ללא חיבור"
@@ -854,12 +858,15 @@
   thinkersmith2_shortdescription: "למד כיצד מחשבים משתמשים ב1 ו- 0 כדי לייצג מידע"
   kodableunplugged_shortdescription: "תרגיל כיפי שאינו מצריך חיבור"
   projguts_shortdescription: "נסו מודלים וסימולציות באמצעות אבן/נייר/מספריים"
-  hourofcode_shortdescription: "מחזיק מקום עבור code.org/hoc חדש"
+  hourofcode_shortdescription: "למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!"
   frozen_shortdescription: "בוא נשתמש בקוד כדי להצטרף לאנה ואלזה כשהן חוקרות את הקסם
     והיופי של קרח."
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortdescription: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
+    הפרטי שלכם בגלקסיה רחוקה, רחוקה.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: "למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור
     ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק
     צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים.
@@ -979,8 +986,8 @@
   frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_longdescription: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
+    הפרטי שלכם בגלקסיה רחוקה, רחוקה...
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
     pirates, zombies, ninjas, and many more characters move, make sounds, score points,
     and even throw fireballs!
@@ -1298,19 +1305,19 @@
     בתאריך  %{https_date}. לא תוכלו לגשת לCode.org אחרי תאריך זה.  <a href='%{it_requirements_url}'לחצו
     כאן</a>כדי ללמוד איך לאפשר שימוש בHTTPS על  Code.org."
   compatibility_https_hide_this_warning: "הסתר את האזהרה הזו"
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  infinity_name: Infinity Play Lab
-  artist_name: Artist
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: "נופף"
   infinity_shortcode: inf
-  playlab_shortcode: play
+  playlab_shortcode: "הפעל"
   artist_shortcode: art
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>

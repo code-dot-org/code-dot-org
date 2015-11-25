@@ -42,8 +42,8 @@
           על "הפעל תוכנית", הציפור תנוע צעד אחד על המבוך.
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace
-          and attach them together. The bird will do the commands from top to bottom.
+        text: על מנת לבצע יותר מפעולה אחת, ניתן לגרור בלוקים רבים אל סביבת העבודה
+          שלך, ולחבר אותם יחדיו. הציפור תבצע את הפקודות מלמעלה למטה.
       12:
         image: notes/hoc1_12.jpg
         text: אם אתה מפעיל תוכנית ורוצה לתקן אותה ולנסות שוב, לחץ על לחצן "איפוס".
@@ -198,9 +198,9 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hi, my name is Saloni. I use computer science to help solve problems
-          in health and medicine. Let's learn about the "if else" block. It looks
-          like the "if" block, but it has an extra part at the end that says "else".
+        text: שלום! שמי הוא סאלוני. אני נעזרת בתכנות על מנת לפתור בעיות בעולם הבריאות
+          והרפואה. בואו נלמד מה עושה בלוק "If else". הוא נראה כמו בלוק "if", אך יש
+          לו חלק נוסף הנקרא "else".
       2:
         image: notes/hoc5_2.jpg
         text: If I put a "move forward" block in the spot where it says "do" and a

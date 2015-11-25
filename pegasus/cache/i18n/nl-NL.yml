@@ -5,10 +5,10 @@
   en: informatica
   computer_science_edweek: Week van het Informaticaonderwijs
   csedweek_dates: 8-14 December 2014
-  csedweek_banner_hoc: 'De <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold"> ''Hour of Code'' </a> komt eraan. Dit is een oproep aan alle
-    leerkrachten en organisatoren, <a href="http://hourofcode.com" style="color: white;
-    text-decoration:underline; font-weight:bold">plan uw ''Hour of Code''</a>'
+  csedweek_banner_hoc: 'Het <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold"> "Hour of Code"</a> komt eraan. Dit is een oproep aan alle leerkrachten
+    en organisatoren, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">plan uw "Hour of Code"</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Bent u een Informaticadocent? Zie andere bronnen voor
     de CSEdWeek</a>'
@@ -704,6 +704,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ en Scrat
   hoc2014_try_frozen: Kunst met Anna en Elsa van Frozen
   carousel_heading_codeorg: Opdrachten van Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Opdrachten van andere partijen
   carousel_heading_third_party: Opdrachten van andere partijen
   carousel_heading_international: Opdrachten in jouw taal
@@ -775,6 +776,8 @@
   projguts_name: Blad, Steen, Schaar
   hourofcode_name: Tijdelijke aanduiding voor nieuwe code.org/hoc
   playlab_name: Speel Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Kunstenaar
   codeorg_gradelevel: Leeftijden 4-104
   codeintl_gradelevel: Leeftijden 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -816,6 +819,8 @@
   frozen_gradelevel: Leeftijden 8 +
   starwars_gradelevel: Leeftijd 6+
   playlab_gradelevel: Leeftijden 4-104
+  infinity_gradelevel: Leeftijden 4-104
+  artist_gradelevel: Leeftijden 4-104
   codeorg_platformtext: Moderne browsers, smartphones, tablets
   codeintl_platformtext: Moderne browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
@@ -908,12 +913,16 @@
     te onthouden
   kodableunplugged_shortdescription: Een leuke oefening zonder apparaten
   projguts_shortdescription: Probeer modellering en simulatie via Blad/Steen/Schaar
-  hourofcode_shortdescription: Tijdelijke aanduiding voor nieuwe code.org/hoc
+  hourofcode_shortdescription: Leer hoe je moet programmeren met Mark Zuckerberg en
+    Angry Birds!
   frozen_shortdescription: Ga met Anna en Elsa mee op hun speurtocht naar de magie
     en schoonheid van ijs door middel van programma-code.
   starwars_shortdescription: Leer hoe je droids moet programmeren en maak je eigen
-    Star Wars-spel en een heelal heel, heel ver weg.
+    Star Wars-spel in een Melkweg heel, heel ver hier vandaan.
   playlab_shortdescription: Maak een verhaal of een spel met Speel Lab!
+  infinity_shortdescription: Gebruik Play Lab om een verhaal of spel te maken met
+    Disney Infinity figuren in de hoofdrol.
+  artist_shortdescription: Teken coole plaatjes en ontwerpen met de Kunstenaar!
   codeorg_longdescription: Leer de basis concepten van de informatica met drag en
     drop programmeren. Dit is een spelvormig zelfgestuurde cursus met , Angry Birds,
     Plants vs Zombies en video lezingen door onder andere Bill Gates, Mark Zuckerberg.
@@ -1398,19 +1407,19 @@
     over naar HTTPS. Na deze datum kan u Code.org niet bereiken. <a href='%{it_requirements_url}'>Klik
     hier</a> om te leren hoe je HTTPS moet inschakelen voor Code.org.
   compatibility_https_hide_this_warning: Verberg deze waarschuwing
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  infinity_name: Infinity Play Lab
-  artist_name: Artist
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: flapperen
   infinity_shortcode: inf
-  playlab_shortcode: play
+  playlab_shortcode: afspelen
   artist_shortcode: art
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>

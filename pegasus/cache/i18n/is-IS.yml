@@ -707,6 +707,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
   hoc2014_try_frozen: Listamaður með Önnu og Elsu úr Frozen
   carousel_heading_codeorg: Kennsluefni Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Kennsluefni 3ja aðila
   carousel_heading_third_party: Kennsluefni þriðja aðila
   carousel_heading_international: Kennsluefni á þínu tungumáli
@@ -779,6 +780,8 @@
   projguts_name: Steinn, pappír, skæri
   hourofcode_name: Staðgengill fyrir nýtt code.org/hoc
   playlab_name: Leikjasmiðja
+  infinity_name: Infinity leikjasmiðja
+  artist_name: Listamaður
   codeorg_gradelevel: 4-104 ára
   codeintl_gradelevel: 4-104 ára
   thinkersmithspanish_gradelevel: Por todos
@@ -820,6 +823,8 @@
   frozen_gradelevel: 8+ ára
   starwars_gradelevel: Aldur 6+
   playlab_gradelevel: 4-104 ára
+  infinity_gradelevel: 4-104 ára
+  artist_gradelevel: 4-104 ára
   codeorg_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
   codeintl_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
   thinkersmithspanish_platformtext: "Án tölvu"
@@ -909,12 +914,15 @@
   thinkersmith2_shortdescription: Lærðu hvernig tölvur nota 1 og 0 til að tákna upplýsingar
   kodableunplugged_shortdescription: Skemmtilegt verkefni án tölvu
   projguts_shortdescription: Prófaðu gerð hermilíkana með stein/pappír/skærum
-  hourofcode_shortdescription: Staðgengill fyrir nýtt code.org/hoc
+  hourofcode_shortdescription: Lærðu að kóða með Mark Zuckerberg og Angry Birds!
   frozen_shortdescription: Notum kóða til að fylgja Önnu og Elsu er þær kanna töfra
     og fegurð íss.
   starwars_shortdescription: Lærðu að forrita vélmenni og búðu til þinn eigin Star
     Wars leik í órafjarlægri vetrarbraut.
   playlab_shortdescription: Búðu til sögu eða leik með Leikjasmiðju!
+  infinity_shortdescription: Nota Leikjasmiðjuna til að búa til sögu eða leik með
+    Disney Infinity persónum.
+  artist_shortdescription: Teiknaðu flottar myndir og mynstur með listamanninum!
   codeorg_longdescription: Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta
     er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem
     koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies.
@@ -1379,19 +1387,19 @@
     HTTPS. <a href='%{it_requirements_url}'>Smelltu hér</a> til að læra að virkja
     HTTPS fyrir Code.org.
   compatibility_https_hide_this_warning: Fela þessa aðvörun
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  infinity_name: Infinity Play Lab
-  artist_name: Artist
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: blaka
   infinity_shortcode: inf
-  playlab_shortcode: play
+  playlab_shortcode: spila
   artist_shortcode: art
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
