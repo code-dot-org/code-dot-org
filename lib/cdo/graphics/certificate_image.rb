@@ -1,4 +1,5 @@
 require 'rmagick'
+require_relative '../../../dashboard/config/environment'
 
 def create_certificate_image2(image_path, name, params={})
   name = name.to_s.gsub(/@/,'\@').strip
@@ -24,19 +25,22 @@ def create_certificate_image2(image_path, name, params={})
   background
 end
 
-def create_course_certificate_image(name, course=nil, sponsor=nil)
-  course = 'hoc' if course.nil? || course.empty?
-
+def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=nil)
   name = name.gsub(/@/,'\@')
   name = ' ' if name.empty?
 
-  template_file = cert_template_for_course(course)
+  template_file = certificate_template_for_course(course)
 
   if prefilled_title_course?(course)
-    # only need to fill in name
-    vertical_offset = course == '20hours' || course == '20-hour' ? -115 : -110
+    # only need to fill in student name
+    vertical_offset = course == '20-hour' ? -115 : -110
     image = create_certificate_image2(pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file), name, y: vertical_offset)
   else # all other courses use a certificate image where the course name is also blank
+    # assuming that cert links for non-HoC / 20-hour courses will not exposed outside of
+    # code paths that pass along the course title. Throw if assumption invalid, if detected,
+    # re-implement course -> course_title mapping or find way to pass along
+    raise "No course title specified for #{course}." unless course_title
+
     image = Magick::Image.read(pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file)).first
 
     # student name
@@ -51,7 +55,7 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
     end
 
     course_vertical_offset = 610
-    Magick::Draw.new.annotate(image, 0, 0, 0, course_vertical_offset, cert_display_name_for_course(course)) do
+    Magick::Draw.new.annotate(image, 0, 0, 0, course_vertical_offset, course_title) do
       self.gravity = Magick::NorthGravity
       self.pointsize = 60
       self.font_family = 'Helvetica'
@@ -78,44 +82,24 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
   image
 end
 
-def cert_display_name_for_course(course)
-  case course
-    when 'artist'
-      'Artist'
-    when 'course1'
-      'Course 1'
-    when 'course2'
-      'Course 2'
-    when 'course3'
-      'Course 3'
-    when 'course4'
-      'Course 4'
-    else
-      course
-  end
-end
-
 def prefilled_title_course?(course)
-  course == '20hours' ||
-      course == 'hoc' ||
-      course == '20-hour' ||
-      course == 'hourofcode' ||
-      course == 'Hour of Code' ||
-      course == 'starwars' ||
-      course == 'mc' ||
-      course == 'flappy' ||
-      course == 'frozen'
+  course_script = Script.get_from_cache(course)
+  course_script.hoc? || course_script.twenty_hour?
 end
 
-def cert_template_for_course(course)
-  return 'blank_certificate.png' unless prefilled_title_course?(course)
+def certificate_template_for_course(course)
+  course_script = Script.get_from_cache(course)
 
-  if course == '20hours' || course == '20-hour'
+  if course_script.hoc?
+    if course_script.minecraft?
+      'MC_Hour_Of_Code_Certificate.jpg'
+    else
+      'hour_of_code_certificate.jpg'
+    end
+  elsif course_script.twenty_hour?
     '20hours_certificate.jpg'
-  elsif course == 'mc'
-    'MC_Hour_Of_Code_Certificate.jpg'
   else
-    'hour_of_code_certificate.jpg'
+    'blank_certificate.png'
   end
 end
 
