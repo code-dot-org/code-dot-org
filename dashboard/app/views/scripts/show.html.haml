@@ -36,6 +36,10 @@
   .row#stats
     .span12#rightside
       = render partial: 'shared/user_stats', locals: { user: current_user, width: '100%'}
+      :javascript
+        //<![CDATA[
+        populateProgress("#{@script.name}")
+        //]]>
 
   %div{style: 'clear: both;'}
   %br/
