@@ -675,7 +675,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     sign_out @user
 
     # set up existing session
-    client_state.set_level_progress(@script_level_prev.level_id, 50)
+    client_state.set_level_progress(@script_level_prev, 50)
     client_state.add_lines(10)
 
     # do all the logging
@@ -713,7 +713,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
 
     # record activity in session
-    assert_equal 0, client_state.level_progress(@script_level.level_id)
+    assert_equal 0, client_state.level_progress(@script_level)
 
     # lines in session does not change
     assert_equal 10, client_state.lines
@@ -726,7 +726,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     sign_out @user
 
     # set up existing session
-    client_state.set_level_progress(@script_level_prev.level_id, 50)
+    client_state.set_level_progress(@script_level_prev, 50)
     client_state.add_lines(10)
 
     # do all the logging
@@ -755,7 +755,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     sign_out @user
 
     # set up existing session
-    client_state.set_level_progress(@script_level_prev.level_id, 50)
+    client_state.set_level_progress(@script_level_prev, 50)
     client_state.add_lines(10)
 
     # do all the logging

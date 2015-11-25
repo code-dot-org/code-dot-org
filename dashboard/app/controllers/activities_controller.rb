@@ -161,14 +161,13 @@ class ActivitiesController < ApplicationController
   end
 
   def track_progress_in_session
-    # hash of level_id => test_result
-    test_result = params[:testResult].to_i
-    old_result = client_state.level_progress(@level.id)
-
-    @new_level_completed = true if !Activity.passing?(old_result) && Activity.passing?(test_result)
-
     # track scripts
     if @script_level.try(:script).try(:id)
+      test_result = params[:testResult].to_i
+      old_result = client_state.level_progress(@script_level)
+
+      @new_level_completed = true if !Activity.passing?(old_result) && Activity.passing?(test_result)
+
       client_state.add_script(@script_level.script_id)
     end
   end
