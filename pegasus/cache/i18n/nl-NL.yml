@@ -145,8 +145,6 @@
   twitter_teach_cs: Waarom wordt informatica niet op meer scholen onderwezen? Wij
     kunnen dit veranderen. http://youtu.be/nKIu9yen5nc. Bezoek http://code.org voor
     meer informatie.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Meer informatie</a> over
-    prijzen voor iedere leerkracht.
   learn_hoc: Leer een 'Hour of Code'
   beyond_hoc: Verder dan een Uur Code
   what_gender: Ben je een jongen of een meisje?
@@ -369,6 +367,9 @@
   volunteer_engineer_submission_intro_signup: Voer de volgende gegevens in als je
     een informaticastudent of software ontwikkelaar bent. Velden met een <span class="form-required-field">*</span>
     zijn verplicht.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Informatie gedeeld met docenten op
     de vrijwilligerskaart
   volunteer_engineer_submission_field_name: naam
@@ -699,6 +700,16 @@
   learn_educator_resources_button: Middelen voor leerkrachten
   learn_are_you_educator: Ben je een leerkracht? Leer dan <a href="http://hourofcode.com/resources/how-to">hoe
     je een Uur Code kunt geven</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Meer informatie</a> over
+    prijzen voor iedere leerkracht.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Probeer onze nieuwe 'Hour of Code'-tutorials
   hoc2014_try_new_tutorial: Probeer onze nieuwe Uur Code-cursus in beta
   hoc2014_try_scrat: Angry Birds, PvZ en Scrat
@@ -1415,14 +1426,3 @@
   infinity_shortcode: inf
   playlab_shortcode: afspelen
   artist_shortcode: art
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>

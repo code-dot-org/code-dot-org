@@ -141,8 +141,6 @@
   just_did_hoc: 'Я щойно завершив #HourOfCode - подивіться, що це! @codeorg'
   twitter_teach_cs: Чому більше шкіл не викладають інформатику? Ми можемо це виправити.
     http://youtu.be/2DxWIxec6yo. Відвідайте http://code.org/ щоб дізнатися більше.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Дізнатися більше</a> про
-    призи для кожного вчителя.
   learn_hoc: Вивчати Годину Коду
   beyond_hoc: Поза Годиною коду
   what_gender: Якої ви статі?
@@ -364,6 +362,9 @@
   volunteer_engineer_submission_intro_signup: Вкажіть наступну інформацію, якщо ви
     студент галузі комп'ютерних наук чи професійний програміст. Поля, позначені <span
     class="form-required-field">*</span> є обов'язковими для заповнення.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Інформація доступна вчителям та волонтерам
     на карті
   volunteer_engineer_submission_field_name: Ім’я
@@ -696,6 +697,16 @@
   learn_educator_resources_button: Ресурси для вчителів
   learn_are_you_educator: Ви педагог? Дізнайтеся, <a href="http://hourofcode.com/resources/how-to">як
     провести Годину коду</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Дізнатися більше</a> про
+    призи для кожного вчителя.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Спробуйте наш новий підручник Години коду
   hoc2014_try_new_tutorial: Спробуйте новий підручник Години коду в бета-версії
   hoc2014_try_scrat: Angry Birds, PvZ та Scrat
@@ -1387,14 +1398,3 @@
   infinity_shortcode: inf
   playlab_shortcode: грати
   artist_shortcode: art
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
