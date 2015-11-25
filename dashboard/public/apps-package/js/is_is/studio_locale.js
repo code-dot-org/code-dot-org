@@ -900,6 +900,8 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Til hamingju, þú bættir við kóða sem býr til vélmýs. Þú getur farið áfram í næstu þraut eða reynt aftur að ná 20 vélmúsum. Prófaðu að auðvelda það með því að hafa fleiri! (Ýttu á og haltu niðri lyklunum á lyklaborðinu (eða skjánum) til að hreyfast hraðar.)"},
 "failedChangeSettingTimeout":function(d){return "Náðu þremur flugmönnum til að halda áfram."},
 "failedChangeSettingSettings":function(d){return "Gerðu þetta að þínum leik. Til að ljúka þrautinni þarft þú að breyta vélmenninu og stilla hraða þess."},
+"extraFunction":function(d){return "You have renamed a function to "+studio_locale.v(d,"funcName")+" but it won't work. You should use the original function name."},
+"localFunction":function(d){return "You have placed "+studio_locale.v(d,"funcName")+" inside another function. You should move "+studio_locale.v(d,"funcName")+" to a different location in your program."},
 "playSoundR2D2Random":function(d){return "play R2-D2 random sound"},
 "playSoundC3PORandom":function(d){return "play C-3PO random sound"},
 "playSoundPufferPigRandom":function(d){return "play Puffer Pig random sound"},

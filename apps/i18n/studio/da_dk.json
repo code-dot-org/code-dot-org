@@ -745,6 +745,8 @@
   "failedMultiplyCharactersTimeoutGotSome": "Sådan! Du har skrevet kode som tilføjer Musedroider. Du kan gå til næste øvelse eller prøve en gang til at få 20 Musedroider. Prøv at gøre det lettere ved at tilføje flere af dem! (Tryk og hold nede på piletasterne på dit tastatur (eller skærmen) for at bevæge dig hurtigere:)",
   "failedChangeSettingTimeout": "Nå frem til tre Rebel Pilots for at gå videre.",
   "failedChangeSettingSettings": "Gør det til dit spil. For at gå videre, skal du ændre din droide og sætte dens hastighed.",
+  "extraFunction": "You have renamed a function to {funcName} but it won't work. You should use the original function name.",
+  "localFunction": "You have placed {funcName} inside another function. You should move {funcName} to a different location in your program.",
   "playSoundR2D2Random": "play R2-D2 random sound",
   "playSoundC3PORandom": "play C-3PO random sound",
   "playSoundPufferPigRandom": "play Puffer Pig random sound",

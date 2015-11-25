@@ -900,6 +900,8 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Blahopřejeme, přidal jsi kód, abys vytvořil Mouse Droidy. Můžeš přejít na další hádanku nebo znova se pokusit dostat 20 Mouse Droidů. Zkus to snadněji přidáním více z nich! (Stiskni a podrž klávesy na klávesnici (nebo obrazovce) se pohybovat rychleji.)"},
 "failedChangeSettingTimeout":function(d){return "Dostaň tři Rebel Piloty k posunu dál."},
 "failedChangeSettingSettings":function(d){return "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost."},
+"extraFunction":function(d){return "You have renamed a function to "+studio_locale.v(d,"funcName")+" but it won't work. You should use the original function name."},
+"localFunction":function(d){return "You have placed "+studio_locale.v(d,"funcName")+" inside another function. You should move "+studio_locale.v(d,"funcName")+" to a different location in your program."},
 "playSoundR2D2Random":function(d){return "play R2-D2 random sound"},
 "playSoundC3PORandom":function(d){return "play C-3PO random sound"},
 "playSoundPufferPigRandom":function(d){return "play Puffer Pig random sound"},

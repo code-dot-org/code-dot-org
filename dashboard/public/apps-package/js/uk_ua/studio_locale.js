@@ -900,6 +900,8 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Вітання, додано код створення Дроїдів-Мишей. Можна перейти до наступного рівня, коли збереш 20 Дроїдів-Мишей. Спробуй полегшити задачу, додаючи їх більшу кількість! (Натискай та утримуй клавіші на клавіатурі чи екрані, щоб рухатися швидше.)"},
 "failedChangeSettingTimeout":function(d){return "Дістанься до трьох Пілотів повстанців, щоб рухатися далі."},
 "failedChangeSettingSettings":function(d){return "Створи власну гру. Щоб пройти цей рівень потрібно змінити дроїда та задати його швидкість."},
+"extraFunction":function(d){return "You have renamed a function to "+studio_locale.v(d,"funcName")+" but it won't work. You should use the original function name."},
+"localFunction":function(d){return "You have placed "+studio_locale.v(d,"funcName")+" inside another function. You should move "+studio_locale.v(d,"funcName")+" to a different location in your program."},
 "playSoundR2D2Random":function(d){return "play R2-D2 random sound"},
 "playSoundC3PORandom":function(d){return "play C-3PO random sound"},
 "playSoundPufferPigRandom":function(d){return "play Puffer Pig random sound"},

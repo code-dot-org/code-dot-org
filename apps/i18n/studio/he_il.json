@@ -745,6 +745,8 @@
   "failedMultiplyCharactersTimeoutGotSome": "כל הכבוד, הוספתם קוד על מנת לייצר דרואידים עכבריים. כעת תוכלו לעבור לשלב הבא, או לנסות שוב על מנת להשיג 20 דרואידים עכבריים. יהיה לכם קל יותר אם תוסיפו יותר מהם! (הקישו והחזיקו את מקשי החצים במקלדת או המסך שלכם על מנת לנוע מהר יותר)",
   "failedChangeSettingTimeout": "השיגו שלושה טייסי מחתרת על מנת להמשיך הלאה.",
   "failedChangeSettingSettings": "הפכו את המשחק לשלכם. על מנת לעבור את השלב הזה עליכם לשנות את הדרואיד ואת מהירותו.",
+  "extraFunction": "You have renamed a function to {funcName} but it won't work. You should use the original function name.",
+  "localFunction": "You have placed {funcName} inside another function. You should move {funcName} to a different location in your program.",
   "playSoundR2D2Random": "play R2-D2 random sound",
   "playSoundC3PORandom": "play C-3PO random sound",
   "playSoundPufferPigRandom": "play Puffer Pig random sound",
