@@ -29,12 +29,9 @@ if (!window.dashboard) {
  */
 dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId, scriptName) {
   stageData = stageData || {};
-  // Progress Data is only provided for signed in users. Otherwise, client gets progress data from cookie
-  if (progressData === null) {
-    progressData = getSummarizedProgressForAnonymousUser(scriptName);
-  }
+  progressData = progressData || {levels: {}};
 
-  var levelProgress = progressData.levels || {};
+  var clientLevelProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
 
   $('.header_text').first().text(stageData.title);
   if (stageData.finishLink) {
@@ -56,7 +53,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   }
   var progressContainer = $('.progress_container');
   stageData.levels.forEach(function(level, index, levels) {
-    var status = (levelProgress[level.id] || {}).status || 'not_tried';
+    var status = mergeProgress((progressData.levels[level.id] || {}).result, clientLevelProgress[level.id]);
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
     var href = level.url;
     if (userId) {
@@ -414,41 +411,37 @@ dashboard.header.updateTimestamp = function () {
   }
 };
 
+/**
+ * See ActivitiesHelper#activity_css_class.
+ * @param result
+ * @return {string}
+ */
 function activityCssClass(result) {
-  if (result >= 1000) {
-    return 'submitted';
-  } else if (result >= 30) {
-    return 'perfect';
-  } else if (result >= 20) {
-    return 'passed';
-  } else if (result != 0) {
-    return 'attempted';
-  } else {
-    return 'not attempted';
-  }
+  if (!result) return 'not_tried';
+  if (result >= 1000) return 'submitted';
+  if (result >= 30) return 'perfect';
+  if (result >= 20) return 'passed';
+  return 'attempted';
 }
 
 /**
- * Get the user progress for an anonymous user from the client side cookie.
- * @param {string} scriptName The script to get progress for.
- * @return Object that is a representation of the user's individual level progress.
+ * Returns the "best" of the two results, as defined in apps/src/constants.js.
+ * Note that there are negative results that count as an attempt, so we can't
+ * just take the maximum.
+ * @param {Number} a
+ * @param {Number} b
+ * @return {string} The result css class.
  */
-function getSummarizedProgressForAnonymousUser(scriptName) {
-  var summarizedProgress = {};
-  var levelProgress = {};
-
-  summarizedProgress.lines = dashboard.clientState.lines();
-
-  var scriptProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
-  for (var level in scriptProgress) {
-    levelProgress[level] = {
-      status: activityCssClass(scriptProgress[level] || -1)
-    };
+function mergeProgress(a, b) {
+  a = a || 0;
+  b = b || 0;
+  if (a === 0) {
+    return activityCssClass(b);
   }
-
-  summarizedProgress.levels = levelProgress;
-
-  return summarizedProgress;
+  if (b === 0) {
+    return activityCssClass(a);
+  }
+  return activityCssClass(Math.max(a, b));
 }
 
 function populateProgress(scriptName) {
@@ -457,8 +450,7 @@ function populateProgress(scriptName) {
   // Aggregate progress from server and client
   $.each(scriptProgress, function (level_id, result) {
     var level_link = $('[data-level=' + level_id + ']');
-    result = Math.max(result, level_link.data('result'));
-    var status = activityCssClass(result);
+    var status = mergeProgress(result, level_link.data('result'));
 
     if (!level_link.hasClass(status)) {
       level_link.attr('class', 'level_link ' + status);
