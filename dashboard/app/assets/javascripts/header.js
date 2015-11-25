@@ -414,12 +414,26 @@ dashboard.header.updateTimestamp = function () {
   }
 };
 
+function activityCssClass(result) {
+  if (result >= 1000) {
+    return 'submitted';
+  } else if (result >= 30) {
+    return 'perfect';
+  } else if (result >= 20) {
+    return 'passed';
+  } else if (result != 0) {
+    return 'attempted';
+  } else {
+    return 'not attempted';
+  }
+}
+
 /**
  * Get the user progress for an anonymous user from the client side cookie.
  * @param {string} scriptName The script to get progress for.
  * @return Object that is a representation of the user's individual level progress.
  */
-function getSummarizedProgressForAnonymousUser (scriptName) {
+function getSummarizedProgressForAnonymousUser(scriptName) {
   var summarizedProgress = {};
   var levelProgress = {};
 
@@ -427,20 +441,9 @@ function getSummarizedProgressForAnonymousUser (scriptName) {
 
   var scriptProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
   for (var level in scriptProgress) {
-    levelProgress[level] = {};
-    var individualLevelProgress = scriptProgress[level] || -1;
-
-    if (individualLevelProgress >= 1000) {
-      levelProgress[level].status = 'submitted';
-    } else if (individualLevelProgress >= 30) {
-      levelProgress[level].status = 'perfect';
-    } else if (individualLevelProgress >= 20) {
-      levelProgress[level].status = 'passed';
-    } else if (individualLevelProgress != 0) {
-      levelProgress[level].status = 'attempted';
-    } else {
-      levelProgress[level].status = 'not attempted';
-    }
+    levelProgress[level] = {
+      status: activityCssClass(scriptProgress[level] || -1)
+    };
   }
 
   summarizedProgress.levels = levelProgress;
