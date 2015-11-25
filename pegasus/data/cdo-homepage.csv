@@ -1,5 +1,6 @@
 id_s!,type_s,text1_s,param1_s,param2_s,param3_s,param4_s,watermark_s,image_t,site_s,active_s,language_supported_s
-hero_starwars,widehero,,15% 30%,celeba,bottom,,,/images/homepage/starwars.jpg,both,show,all
+hero_starwars,widehero,,15% 50%,celeba,bottom,,,/images/homepage/starwars.jpg,both,show,all
+hero_minecraft,widehero,,15% 50%,celeba,bottom,,,/images/homepage/minecraft.jpg,both,show,all
 hero_stat_loc,widehero,homepage_hero_text_stat_loc,50% 40%,stat,bottom,,,/images/homepage/girl2.jpg,both,nah,all
 hero_stat_students,widehero,homepage_hero_text_stat_students,50% 30%,stat,bottom,,,/images/homepage/girl6.jpg,both,nah,all
 hero_stat_served,widehero,homepage_hero_text_stat_served,50% 35%,stat,top,,,/images/homepage/girl9.jpg,both,nah,all
@@ -24,7 +25,7 @@ action_hoc_title_i18n,action,homepage_slot_text_link_hoc,hoc_title,,,,,,code.org
 action_num_served_i18n,action,homepage_slot_text_link_hocserved,num_served,,,,,,code.org,show,not en
 action_hoc_buttons_i18n,action,cded_sign_up,hoc_buttons,cded_try_it,https://hourofcode.com,/learn,,,code.org,show,not en
 action_codevideo,action,homepage_action_text_codevideo,video,2DxWIxec6yo,,,,,code.org,nah,all
-action_girlvideo,action,homepage_action_text_girlvideo,video,BvRvluhfzf0,,,,,code.org,show,en
+action_girlvideo,action,homepage_action_text_girlvideo,video,mFPg96gdPkc,,,,,code.org,show,en
 action_girlvideo_i18n,action,homepage_action_text_teachervideo,video,BvRvluhfzf0,,,,,code.org,show,not en
 action_teachervideo,action,homepage_action_text_teachervideo,video,rH7AjDMz_dc,,,,,csedweek.org,show,all
 action_volunteers,action,homepage_action_text_volunteers,volunteers,,,,,,code.org,show,en
@@ -50,7 +51,7 @@ blocklink_pd,blocklink,block_educators,homepage_slot_text_link_pd,/educate/profe
 blocklink_stats,blocklink,block_advocates,homepage_slot_text_link_stats,/promote,,,,,code.org,show,en
 blocklink_buy,blocklink,block_advocates,homepage_slot_text_link_buy,/help,,,,,code.org,show,en
 blocklink_donate,blocklink,block_advocates,homepage_slot_text_link_donate,/donate,,,,,code.org,show,en
-blockshort_hoc_noten,blockshort,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",/learn,,/shared/images/courses/logo_tall_hoc.jpg,code.org,show,not en
+blockshort_hoc_noten,blockshort,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",/learn,,/shared/images/courses/logo_tall_frozen_footer.jpg,code.org,show,not en
 blockshort_students_noten,blockshort,homepage_slot_text_title_students,homepage_slot_text_blurb_students,"118, 101, 160","166, 155, 193",http://studio.code.org,,/shared/images/courses/logo_tall_elementary.jpg,code.org,show,not en
 blockshort_educators_noten,blockshort,homepage_slot_text_title_educators,homepage_slot_text_blurb_educators,"0, 148, 202","89, 185, 220",http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher,,/shared/images/courses/logo_tall_teacher2.jpg,code.org,show,not en
 blockshort_flappy_noten,blockshort,studiobar_flappy_title,studiobar_flappy_body,"185, 191, 21","209, 213, 103",/flappy,,/shared/images/courses/logo_tall_flappy.jpg,code.org,show,not en

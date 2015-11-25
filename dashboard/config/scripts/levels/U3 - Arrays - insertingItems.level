@@ -16,7 +16,7 @@
       "assign_x": null,
       "console.log": null,
       "declareAssign_x_array_1_4": {
-        "block": "var list = [1,2,3];"
+        "block": "var list = [];"
       }
     },
     "edit_code": true,
@@ -50,12 +50,9 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Insert items into an array to form a complete sentence. (Click to see full instructions)",
-    "markdown_instructions": "# Inserting Items: Array Indexes\r\n\r\nSo far we have been adding elements to the end of our array, but there are many times you'll want to add them to somewhere in the middle. In order to do so you'll need to specify the **index** at which the item should be inserted.\r\n\r\n![](https://images.code.org/46815edd373b9fe51c4efcf145474ecc-image-1447252675635.37.24 AM.png)\r\n\r\n**Note:** `insertItem` creates a new location in the array at the index provided, shifts all locations at or after the index provided one location to the right, and adds the item you provided. As a result **no information is lost and the array is one location larger**.\r\n\r\n# Do This\r\n\r\n* **Read the documentation** for `insertItem`\r\n* **Starter code** has been provided which appends some strings to an array, but right now they don't form a complete sentence.\r\n* Use `insertItem` to **individually insert strings to your array** to form a complete sentence.\r\n* Use `console.log` to confirm you succesfully created your sentence.\r\n\r\n![](https://images.code.org/a77efe777082d387f64c4761d890c560-image-1447254451590.06.59 AM.png)",
+    "markdown_instructions": "# Inserting Items: Array Indexes\r\n\r\nIf you want to add elements in the middle of your array you can use `insertItem` to specify an **index** at which an item should be inserted.\r\n\r\n![](https://images.code.org/46815edd373b9fe51c4efcf145474ecc-image-1447252675635.37.24 AM.png)\r\n\r\nJust like `appendItem`, `insertItem` creates a new location in the array. However `insertItem` allows you to insert an item anywhere in the array, not just at the end, of the array and shifts all elements at or after its index one location over.\r\n\r\n# Do This\r\n\r\n* **Read the documentation** for `insertItem`\r\n* **Starter code** has been provided which appends some strings to an array, but right now they don't form a complete sentence.\r\n* Use `insertItem` to **individually insert strings to your array** to form a complete sentence.\r\n* Use `console.log` to confirm you succesfully created your sentence.\r\n\r\n![](https://images.code.org/a77efe777082d387f64c4761d890c560-image-1447254451590.06.59 AM.png)",
     "slider_speed": "1",
-    "encrypted_examples": [
-
-    ],
-    "start_blocks": "var sentence = [];\r\nappendItem(sentence, \"Today\");\r\nappendItem(sentence, \"I\");\r\nappendItem(sentence, \"want\");\r\nappendItem(sentence, \"to\");\r\nappendItem(sentence, \"and\");\r\nappendItem(sentence, \"with\");\r\nconsole.log(\"Original Sentence: \" + sentence);\r\n\r\n// Your code goes here\r\n\r\nconsole.log(\"Final Sentence: \" + sentence);"
+    "start_blocks": "var sentence = [\"Today\",\"I\",\"want\",\"to\",\"and\",\"with\"];\r\nconsole.log(\"Original Sentence: \" + sentence);\r\n\r\n// Insert words to complete the sentence here\r\n\r\nconsole.log(\"Final Sentence: \" + sentence);"
   }
 }]]></config>
   <blocks/>

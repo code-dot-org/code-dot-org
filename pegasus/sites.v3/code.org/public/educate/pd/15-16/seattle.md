@@ -56,7 +56,12 @@ Breakfast and lunch will be served.
 
 **December 5th Location**
 
-TBD
+[Rainier Tower<br/>
+30th Floor Conference Room<br/>
+1301 Fifth Ave.<br/>
+Seattle, WA 98101](https://www.google.com/maps/place/1301+5th+Ave,+Seattle,+WA+98101/@47.6088445,-122.3365763,523m/data=!3m2!1e3!4b1!4m2!3m1!1s0x54906ab475734df5:0x9da092b2067513ae!6m1!1e1)
+
+[Please click here for parking rates.](/files/rainier-tower-parking.pdf)
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -105,19 +110,9 @@ Semester 2: Saturday, April 30, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**November 7th Location**
+**April 30th Location**
 
-[Talaris Conference Center](http://www.talarisconferencecenter.com/)
-<br />
-Lodge Conference Room
-<br />
-4000 NE 41st Street
-<br />
-Seattle, WA 98105
-<br />
-
-
-Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000 and let them know you are attending the Code.org's CS in Algebra event. Go [here](http://www.talarisconferencecenter.com/maps-directions.php) for a map and directions.
+TBD
 
 **What to bring to Phase 3 bi-yearly sessions:**
 

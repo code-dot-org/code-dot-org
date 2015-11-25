@@ -32,7 +32,6 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
     "step_speed": "1",
-    "maze_data": null,
     "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\nTry using your new function to collect all of this nectar.\r\n\r\n<br/>\r\n<h5 class=\"hint\">\r\n<details>\r\n<summary><b>Hint</b></summary>\r\n\t<br/><br/>\r\n\r\n    \tTry using a `for loop` to collect all the nectar with fewer blocks.\r\n  \r\n</details>\r\n</h5>\r\n    \r\n"
   }
 }]]></config>
@@ -191,17 +190,17 @@
             <title name="VAR">counter</title>
             <value name="FROM">
               <block type="math_number">
-                <title name="NUM">5</title>
+                <title name="NUM">???</title>
               </block>
             </value>
             <value name="TO">
               <block type="math_number">
-                <title name="NUM">25</title>
+                <title name="NUM">???</title>
               </block>
             </value>
             <value name="BY">
               <block type="math_number">
-                <title name="NUM">10</title>
+                <title name="NUM">???</title>
               </block>
             </value>
           </block>
@@ -273,5 +272,27 @@
         </category>
       </xml>
     </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+          <value name="BY">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </recommended_blocks>
   </blocks>
 </Karel>

@@ -51,11 +51,10 @@ Breakfast and lunch will be served.
 <br/><br/>
 **Location**
 
-Loyola University - Water Tower Campus<br/> 
-Corboy Law Center<br/> 
-Room: 205<br/>
-25 E Pearson St <br/>
-Chicago, IL 60611
+[23 E Illinois St<br/>
+Chicago, IL 60611](https://www.google.com/maps/place/Philip+H.+Corboy+Law+Center/@41.8973803,-87.6271242,15z/data=!4m2!3m1!1s0x0:0x45b3bb60ee4f6313)
+
+Please enter through After-Words bookstore found on E Illinois St. 
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -118,10 +117,10 @@ Breakfast and lunch will be served.
 <br/><br/>
 **Location**
 
-DePaul University<br/> 
+[DePaul University<br/> 
 CDM Room 924<br/>
 243 S. Wabash Ave<br/> 
-Chicago, IL 60604
+Chicago, IL 60604](https://www.google.com/maps/place/DePaul+University+Computing+and+Digital+Media+Center/@41.8785145,-87.6257265,15z/data=!4m2!3m1!1s0x0:0xbdb1039244587c09?sa=X&ved=0CHAQ_BIwCmoVChMI5Nv1joKYyQIVDutjCh1-XQOC)
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -177,21 +176,19 @@ Semester 2: Saturday, April 30, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**October 24th Location**
+**April 30th Location**
 
 <i><b>Group 1</i></b><br/>
-Loyola University - Water Tower Campus<br/> 
-Corboy Law Center <br/>
-Room CLC 205<br/>
-25 E Pearson St<br/> 
-Chicago, IL 60611
+[General Assembly<br/>
+5th Floor, Classroom 1<br/>
+444 N Wabash Ave<br/>
+Chicago, IL 60611](Google Maps: https://www.google.com/maps/place/General+Assembly+Chicago/@41.89055,-87.626847,15z/data=!4m2!3m1!1s0x0:0xc2c352cd47420b13?sa=X&ved=0CJQBEPwSMApqFQoTCJ3T1q7NmMkCFQlNiAodPGwIXw)
 
 <i><b>Group 2</i></b><br/>
-Loyola University - Water Tower Campus<br/> 
-Corboy Law Center <br/>
-Room CLC 301<br/>
-25 E Pearson St<br/> 
-Chicago, IL 60611
+[General Assembly<br/>
+5th Floor, Classroom 2<br/>
+444 N Wabash Ave<br/>
+Chicago, IL 60611](Google Maps: https://www.google.com/maps/place/General+Assembly+Chicago/@41.89055,-87.626847,15z/data=!4m2!3m1!1s0x0:0xc2c352cd47420b13?sa=X&ved=0CJQBEPwSMApqFQoTCJ3T1q7NmMkCFQlNiAodPGwIXw)
 
 
 **What to bring to Phase 3 bi-yearly sessions:**
@@ -246,18 +243,18 @@ Breakfast and lunch will be served.
 **Location**
 
 <i><b>Group 1</i></b><br/>
-Loyola University - Water Tower Campus<br/> 
-Corboy Law Center <br/>
-Room CLC 301<br/>
-25 E Pearson St<br/> 
-Chicago, IL 60611
+[Loyola University - Water Tower Campus<br/> 
+Corboy Law Center<br/> 
+Room: CLC 301<br/>
+25 E Pearson St <br/>
+Chicago, IL 60611](https://www.google.com/maps/place/Philip+H.+Corboy+Law+Center/@41.8973803,-87.6271242,15z/data=!4m2!3m1!1s0x0:0x45b3bb60ee4f6313)
 
 <i><b>Group 2</i></b><br/>
-Loyola University - Water Tower Campus<br/> 
-Corboy Law Center <br/>
-Room CLC 302<br/>
-25 E Pearson St<br/> 
-Chicago, IL 60611
+[Loyola University - Water Tower Campus<br/> 
+Corboy Law Center<br/> 
+Room: CLC 302<br/>
+25 E Pearson St <br/>
+Chicago, IL 60611](https://www.google.com/maps/place/Philip+H.+Corboy+Law+Center/@41.8973803,-87.6271242,15z/data=!4m2!3m1!1s0x0:0x45b3bb60ee4f6313)
 
 
 

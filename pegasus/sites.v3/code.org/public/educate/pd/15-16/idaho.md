@@ -46,11 +46,11 @@ Breakfast and lunch will be served.
 
 **Location**
 
-Boise State University<br/> 
+[Boise State University<br/> 
 Micron Engineering Center <br/>
 Room 307 (3rd floor) <br/>
 1020 S. Manitou Ave. <br/>
-Boise, ID 83706
+Boise, ID 83706](https://www.google.com/maps/place/Micron+Engineering+Center/@43.6000284,-116.1992915,18z/data=!4m2!3m1!1s0x54aef85bcff7eb61:0xa0a7a4c459a04c19)
 
 The building location has changed so please carefully look at the  [BSU map here](http://code.org/files/bsu-parking.pdf). The MEC building is circled in red. All of the blue highlights indicate free street parking on Saturdays.
 
@@ -102,11 +102,11 @@ Breakfast and lunch will be served.
 
 **Location**
 
-Boise State University<br/> 
+[Boise State University<br/> 
 Micron Engineering Center <br/>
 Room 307 (3rd floor) <br/>
 1020 S. Manitou Ave. <br/>
-Boise, ID 83706
+Boise, ID 83706](https://www.google.com/maps/place/Micron+Engineering+Center/@43.6000284,-116.1992915,18z/data=!4m2!3m1!1s0x54aef85bcff7eb61:0xa0a7a4c459a04c19)
 
 <b>NOTE:</b> The building location has changed so please carefully look at the  [BSU map here](http://code.org/files/bsu-parking.pdf). The MEC building is circled in red. All of the blue highlights indicate free street parking on Saturdays.
 
@@ -156,29 +156,29 @@ Breakfast and lunch will be served.
 
 **Main Location - Boise**
 
-University of Idaho - Boise<br/> 
+[University of Idaho - Boise<br/> 
 Idaho Water Center<br/> 
 Seminar Room 348A – 3rd floor <br/>
-322 E Front St <br/>Boise, ID 83702
+322 E Front St <br/>Boise, ID 83702](https://www.google.com/maps/place/322+E+Front+St,+Boise,+ID+83702/@43.608919,-116.1961197,17z/data=!3m1!4b1!4m2!3m1!1s0x54aef8fed625b255:0x79c9ee7c26ccbdfc)
 
 Parking is free on Saturdays.  Please refer to parking directions [here](http://www.uidaho.edu/boise/contact-locations/hoursmapsparking).
 
 **Satellite Location - Idaho Falls**
 
 
-University of Idaho - Idaho Falls<br/>
-1776 Science Center Drive<br/>
+[University of Idaho - Idaho Falls<br/>
 TAB 320<br/>
-Idaho Falls, ID  83402
+1776 Science Center Drive<br/>
+Idaho Falls, ID  83402](https://www.google.com/maps/place/1776+Science+Center+Dr,+Idaho+Falls,+ID+83402/@43.5163601,-112.0533244,17z/data=!3m1!4b1!4m2!3m1!1s0x53545bf44ae6aa27:0xcc5940bc2734506f)
 
 Parking is free on Saturdays. Please refer to parking directions [here](http://www.uidaho.edu/idahofalls/aboutus/hoursmapsparking).
 
 **Satellite Location - CDA**
 
-University of Idaho - Coeur d’Alene<br/>
-1031 N. Academic Way<br/>
+[University of Idaho - Coeur d’Alene<br/>
 Suite 242 , Room 128<br/>
-Coeur d’Alene, ID  83814<br/>
+1031 N. Academic Way<br/>
+Coeur d’Alene, ID  83814<br/>](https://www.google.com/maps/place/1031+N+Academic+Way,+Coeur+d'Alene,+ID+83814/@47.6832333,-116.7990827,17z/data=!3m1!4b1!4m2!3m1!1s0x5361c6918f4dabb3:0x52d71c83655b319f)
 
 
 Parking is free on Saturdays. Please refer to parking directions [here](/files/UI-Harbor-Center.pdf).

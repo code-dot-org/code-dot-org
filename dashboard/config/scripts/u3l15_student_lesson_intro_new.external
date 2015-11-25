@@ -2,6 +2,7 @@ name 'U3L15 Student Lesson Intro - new'
 title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
+css 'unplugged'
 markdown <<MARKDOWN
 ## Unit 3: Lesson 15
 
@@ -14,21 +15,21 @@ We examine the difference between the `=` operator and a new one `==`
 
 # Vocab
 
-* Global variables v. Local Variables (Variable Scope)
+* Global Variables vs. Local Variables (Variable Scope)
 * The `==` (equal-equal) comparison operator
 * If statements
 
 # Lesson
 * Simple Counter App uses a variable
-* Where you create your varaibles *matters*
-* Understanding variable scope - global v. local
+* Where you create your variables *matters*
+* Understanding variable scope - global vs. local
 * Using variables in a clicker game (Apple Grab)
 * Add *if* statements to a game
 * **Make your own clicker game** mini-project (see activity guide below)
 
 
 # Resources
- * Activity Guide - [Make your own Clicker Game](https://docs.google.com/document/d/1NLv9y_XQMayjpd4U0brS61gLYRbpDiT-Cm5Z-3CEszQ)
+ * Activity Guide - [The Clicker Game](https://docs.google.com/document/d/1NLv9y_XQMayjpd4U0brS61gLYRbpDiT-Cm5Z-3CEszQ)
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

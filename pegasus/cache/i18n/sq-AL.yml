@@ -1,4 +1,5 @@
 "sq-AL":
+  hour_of_code: Ora e Kodit
   hello: Pershendetje Botë
   select_language: Ju lutem zgjedheni gjuhën tuaj
   en: Shkencat Kompjuterike
@@ -11,11 +12,11 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">A je ti një mësues për shkencat kompjuterike? Shiko burimet
     e javes për shkencat kompjuterike</a>'
-  n_have_learned_an_hoc: "<h1>Provo</h1><h2>Orën e Kodimit</h2><h3># të shërbyer</h3>"
+  n_have_learned_an_hoc: <h1>Provo</h1><h2>Orën e Kodimit</h2><h3># të shërbyer</h3>
   anybody_can_learn: Të gjithë mund të mësojnë.
   learn_now: Meso tani
-  petition_message: "Çdo student në çdo shkollë duhet të ketë mundësinë për të mësuar
-    rreth shkencave kompjuterike"
+  petition_message: Çdo student në çdo shkollë duhet të ketë mundësinë për të mësuar
+    rreth shkencave kompjuterike
   petition_sign_message: 'Nëse jeni dakort, nënshkruani emrin tuaj. Bashkohuni me
     # të tjerët.'
   petition_sign_message_support: 'Në qoftë se ju na mbështesni, nënshkruaj emrin tënd.
@@ -36,20 +37,23 @@
   hoc2014_host: Organizo
   hoc2014_everyone: Të gjithë
   hoc2014_support: Mbështete &#x25BE;
-  hoc2014_whatishoc: "Çfarë është Ora e Kodimit?"
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  hoc2014_whatishoc: Çfarë është Ora e Kodimit?
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
   csedweek_map_search_reset: Rivendosni
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Rregjistrohu
   cded_try_it: Provoje
   twentyhours_trynow: Provo tani
   california_heading: Kerkoj shkollës tënde që të të mësojë shkencën kompjuterike
-  california_text: "Çdo mësues mund të ofrojë <a href='http://studio.code.org/'> kurset
+  california_text: Çdo mësues mund të ofrojë <a href='http://studio.code.org/'> kurset
     tona falas</a>. Çdo shkollë fillore mund <a href='http://code.org/educate/k5'>
     të japë mësim shkencën komjuterike</a>. Pyesni shkollat e mesme për tu <a href='http://code.org/educate/districts'>
-    bërë partnerë me ne."
+    bërë partnerë me ne.
   california_button: Mëso më shumë
   flappy_heading: Ditëlindja e Flapit te Code.org
   flappy_text: Code.org sapo mbushi një vit.<br/><br/> Festo me ne duke krijuar lojën
@@ -63,11 +67,14 @@
     fjalitë nëse-atëherë, dhe alegoritme fillestare.
   all_ages: Të gjitha moshat
   beginner: Fillestar
-  n_participants: "# pjesmarrës"
+  n_participants: '# pjesmarrës'
   go: Shkoni
   thank_you_: Faleminderit!
   congratulations: Urime!
   congratulations_on_completing_hoc: Urime që përfunduat një Orë Kodimi
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
   course_name_accelerated: Kurs i Avancuar
   course_name_course1: Kursi 1
   course_name_course2: Kursi 2
@@ -109,7 +116,7 @@
   beyond_an_hour: Përtej një Ore Kodimi
   get_started: Fillo
   i_agree: Pranoj
-  participant_select: "- Zgjidh -"
+  participant_select: '- Zgjidh -'
   participant_student: student
   participant_parent: Prindi
   participant_educator: Mësues
@@ -130,13 +137,11 @@
   learn_next_level: Provo një kurs tjetër nga Code Studio
   learn_online: Provo kurse të tjera online
   learn_classes: Gjej klasa lokale
-  hoc_is_here: "#OraPërKodim është ketu - provoje! @codeorg"
+  hoc_is_here: '#OraPërKodim është ketu - provoje! @codeorg'
   just_did_hoc: 'Unë sapo mbarova #OrënPërKodim - provoje! @codeorg'
   twitter_teach_cs: Përse nuk mësohen shkencat kompjuterike në më shumë shkolla? Gjë
     që rregullohet http://youtu.be/nKIu9yen5nc. Vizito http://code.org/ për të mësuar
     më shumë.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: Meso Orën e Kodimit
   beyond_hoc: Përtej Orës së Kodimit
   what_gender: Cfare gjinie jeni ju?
@@ -145,11 +150,11 @@
   help_recruit_coders: Na ndihmoni të rekrutojmë më shumë kodues për skuadrën tënde!
   help_recruit: Na ndihmo te rekrutojmë më shumë kodues!
   lines_of_code: MBI <b># VIJAT E KODIT</b> SHKRUAR NE KOHE.
-  lines_of_code_alt: "<b>#</b> VIJAT E KODIMIT TE SHKRUARA NGA STUDENTET"
+  lines_of_code_alt: <b>#</b> VIJAT E KODIMIT TE SHKRUARA NGA STUDENTET
   who_has_done_hoc: 'Kush ka kryer #OrënPërKodim? @codeorg'
   hoc_leaderboards: Tabela e udheheqësve të Orës Së Kodimit
-  students_and_lines: "%{students} studente kane kryer Oren e Kodimit dhe jane shkruar
-    %{lines} rrjeshta me kode."
+  students_and_lines: '%{students} studente kane kryer Oren e Kodimit dhe jane shkruar
+    %{lines} rrjeshta me kode.'
   start_hoc: Fillo Orën e Kodimit tani
   contact_form_topic_press: Shtypi/media (intervista ose fjalime)
   stats_nina: '"Cdo ditë kisha të njëjtat rezultate&mdash; me një angazhim 100%."
@@ -212,8 +217,8 @@
   homepage_hero_text_teacher2: |
     &ldquo; Ky program i bën të gjithë nxënësit të përfshihen, të marrin pjesë dhe të angazhohen plotësisht.&rdquo;
     Adam, mësues
-  homepage_hero_text_stat_loc: "#loc rreshtat e kodimit të përgatitura nga studentët"
-  homepage_hero_text_stat_students: "#student_count llogari studentësh në Code Studio"
+  homepage_hero_text_stat_loc: '#loc rreshtat e kodimit të përgatitura nga studentët'
+  homepage_hero_text_stat_students: '#student_count llogari studentësh në Code Studio'
   homepage_hero_text_stat_served: 'Ora e Kodimit: #served dorëzuar'
   homepage_slot_text_hoc: Ora e Kodimit
   homepage_slot_text_frozen: Frozen me Anën dhe Elsën
@@ -222,8 +227,15 @@
   homepage_slot_text_course4: Kursi 4
   homepage_slot_text_shop: Bli
   homepage_slot_text_flappy: Kodi Flappy
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: '# e dorëzuar'
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Rregjistrohu
+  homepage_action_text_try_it: Provoje
+  homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_codevideo: Shiko videon
   homepage_action_text_teachervideo: Ndiq videon
+  homepage_action_text_girlvideo: Inspire a girl
   homepage_action_text_learn: Fillo të mësosh
   homepage_action_text_signpetition: Nënshkruaj peticionin
   homepage_signpetition_dropdown: Jam dakort &#x25BE;
@@ -235,12 +247,12 @@
   homepage_banner_text_link: Mëso më shumë
   homepage_banner_privacy_main: Ne e kemi rifreskuar linjën tonë të privacisë që të
     përfshijë vegla të përdorura në kursin tonë ë ri te shkollës, CS Principles.
-  homepage_banner_privacy_link: Mëso më Shumë
+  homepage_banner_privacy_link: Mëso më shumë
   homepage_slot_text_title_hoc: Ora e Kodimit
-  homepage_slot_text_blurb_hoc: "Çdokush mund të mësojë. Fillo sot"
+  homepage_slot_text_blurb_hoc: Çdokush mund të mësojë. Fillo sot
   homepage_slot_text_link_hoc: Provo Orën e Kodimit
   homepage_slot_text_link_host: Organizo një Orë Kodim
-  homepage_slot_text_link_hocserved: "# e dorëzuar"
+  homepage_slot_text_link_hocserved: '# e dorëzuar'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Studentët
   homepage_slot_text_blurb_students: Eksploro të gjitha tutorialet tona
@@ -301,26 +313,55 @@
   class_submission_level_college: Fakulteti
   class_submission_level_vocational: Profesionale
   class_submission_languages_other: Gjuhë të tjera
+  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
+    videos</a> by role models and celebrities
+  starwars_subtitle: Building a Galaxy With Code
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: Provo tani
+  starwars_blocks_title: Blloqet
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
+  starwars_blocks_start_button: Provo tani
+  starwars_watch_videos: Before you get started, watch one of these inspirational
+    videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  starwars_platform_text: Shfletuesit modern, telefonat e mençur, tabletat
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_gradelevel: Ages 4-104
+  mc_platformtext: Shfletuesit modern, telefonat e mençur, tabletat
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up."
+    have signed up.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Emri
@@ -379,9 +420,24 @@
   volunteer_engineer_submission_location_flexibility_curriculum: Të gatshëm për të
     ndihmuar në kontributin e kurrikulës së projekteve open-source
   volunteer_engineer_submission_experience_unspecified: I/e paspecifikuar
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: Student
     i universitetit (ose studiues)
   volunteer_engineer_submission_experience_software_professional: Profesionist Software-i
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
   petition_age: Mosha
   dashboard_landing_title: Faqja Kryesore e Mësuesit
   dashboard_landing_welcome: Mirë se vini në panelin e ri dhe të përmirësuar të mësuesve.
@@ -629,23 +685,40 @@
   dashboard_faq_k5: Pyetje e shtruar shpesh të K-5
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: Ora e Kodimit është këtu - Dhjetor 8-14!
   code_sign_up: Rregjistrohu për të marrë pjesë në Javën Edukative për SHK
   learn_more: Mëso më Shumë
   learn_sign_up_description: Regjostrohuni që të bëheni pjesë e Orës së Kodimit gjatë
     Javës së Mësimdhënies së Shkencave Kompjuterike
   learn_sign_up_button: Rregjistrohu
+  learn_videos_watch: Watch this inspirational video with your classroom
+  learn_videos_show: Show this inspirational video to your class
+  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Mësoni si të jepni mësim për Orën e Kodimit
   learn_educator_resources_button: Burimet e Mësimdhënësit
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Provo tutorialet e reja të Orës së Kodimit
   hoc2014_try_new_tutorial: Provo tutorialin tonë të ri Ora e Kodimit në beta
   hoc2014_try_scrat: Angry Birds, PvZ, dhe Scrat
   hoc2014_try_frozen: Artistët me Anna dhe Elsa, nga Frozen
+  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Tutorials by 3rd parties
+  carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Mësimet në gjuhën tuaj
   carousel_heading_domestic: Tutorialet vetëm në Anglisht
   carousel_heading_beginners: Tutoriale për Fillestarët
@@ -660,6 +733,7 @@
   carousel_heading_robots: Mëso të programosh me robota
   carousel_heading_ide: Platformat popullore ndërmjet mësuesëve
   educator_notes: Shënimet e Edukatorit
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   how_to_teach_hoc: Si të mësosh një Orë Kodimi
   more_resources_educators: Më shumë burime për mësuesit dhe edukatorët
   beyond_submission: Dëshironi të paraqisni një turotial për Përtej Orës së Kodimit?
@@ -675,6 +749,7 @@
     target="_blank">shfletues modern.</a>
   mobile_devices: Tutorialet për pajisje mobile
   frozen_name: Kodo me Ann-en dhe Elsa-n
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
   codeorg_name: Shkruani programin tuaj të parë kompjuterik
   codeintl_name: Shkruani programin e parë kompjuterik tuajin
   thinkersmithspanish_name: Miqtë e mi Robotë
@@ -714,6 +789,8 @@
   projguts_name: Guri, Letra, Gërshërët
   hourofcode_name: Vendi për new code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Laboratori i Pafundmë
+  artist_name: Artisti
   codeorg_gradelevel: Moshat 4-104
   codeintl_gradelevel: Moshat 4-104
   thinkersmithspanish_gradelevel: Për të gjithë
@@ -753,7 +830,10 @@
   projguts_gradelevel: Moshat 10-13
   hourofcode_gradelevel: Moshat 4-104
   frozen_gradelevel: Moshat 8+
+  starwars_gradelevel: Ages 6+
   playlab_gradelevel: Moshat 4-104
+  infinity_gradelevel: Moshat 4-104
+  artist_gradelevel: Moshat 4-104
   codeorg_platformtext: Shfletuesit modern, telefonat e mençur, tabletat
   codeintl_platformtext: Browserat e kohës, smartphones, tableta
   thinkersmithspanish_platformtext: Unplugged
@@ -794,6 +874,7 @@
   projguts_platformtext: Unplugged
   hourofcode_platformtext: Shfletuesit modern, telefonat e mençur, tabletat
   frozen_platformtext: Shfletuesit modernë + tabletat
+  starwars_platformtext: Shfletuesit modernë + tabletat
   playlab_platformtext: Browserat e kohës, smartphones, tableta
   codeorg_shortdescription: Mëso të kodosh me Marc Zuckerberg dhe Angry Birds!
   codeintl_shortdescription: Mëso të kodosh me Marc Zuckerberg dhe Angry Birds!
@@ -844,10 +925,15 @@
     informacionin
   kodableunplugged_shortdescription: Një ushtrim argëtues unplugged
   projguts_shortdescription: Përpiqu të modelosh dhe të simulosh duke përdorur gurin/letrën/gërshërët
-  hourofcode_shortdescription: Vendi për new code.org/hoc
+  hourofcode_shortdescription: Mëso të kodosh me Marc Zuckerberg dhe Angry Birds!
   frozen_shortdescription: Le të përodrim kod për të bashkuar Anën dhe Elsën ndërkohë
     që ato eksplorojnë magjinë dhe bukurinë e akullit.
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
   playlab_shortdescription: Krijo një histori ose bëj një lojë me Play Lab!
+  infinity_shortdescription: Perdorni laboratorin e lojrave per te krijuar nje histori
+    ose pafundesi personazhesh Disney.
+  artist_shortdescription: Vizato figura të hatashme dhe dizenjo me Artistin!
   codeorg_longdescription: Mëso konceptet bazë të Shkencës Kompjuterike me programimin
     drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione
     në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies.
@@ -986,6 +1072,8 @@
     ato eksplorojnë magjinë dhe bukurinë e akullit. Ti do të krijosh flokë dëbore
     dhe modele ndërkohë që bën patinazh në akull dhe bën një magji dimërore që mund
     ta ndash me shokët e tu!
+  starwars_longdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
   playlab_longdescription: Krijo një histori ose bëj një lojë me Play Lab! Bëj kafshë,
     piratë, zombi, ninxha, dhe shumë lëvizje të tjera karakteresh, bëj tinguj, shëno
     pikë dhe madje hidh topa zjarri!
@@ -1066,7 +1154,7 @@
   codeorg_beyond_platformtext: Shfletuesit modernë, tabletat
   khan_beyond_platformtext: Shfletuesit modern të web-it
   tynker_beyond_platformtext: Shfletuesit modern të web-it ($$ kërkohet)
-  scratch_beyond_platformtext: "Çdo shfletues"
+  scratch_beyond_platformtext: Çdo shfletues
   lightbot_beyond_platformtext: iOS, Android (ose shfletues web-i)
   codecademy_beyond_platformtext: Shfletues modern të web-it. iOS, aplikacione Android
   kodable_beyond_platformtext: iPad
@@ -1321,38 +1409,11 @@
     Pas kesaj nuk do të arrish te kësh akesë në Code.org. <a href='%{it_requirements_url}'>
     Kliko ketu </a> për të mësuar si të mundesosh HTTPS per Code.org.
   compatibility_https_hide_this_warning: Mbaj të fshehtë këtë paralajmërim
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: "# served"
-  homepage_action_text_join_us: Join us
-  homepage_action_text_sign_up: Sign up
-  homepage_action_text_try_it: Try it
-  homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_girlvideo: Inspire a girl
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  starwars_gradelevel: Ages 6+
-  starwars_platformtext: Modern browsers + tablets
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: përplas flatrat
+  infinity_shortcode: inf
+  playlab_shortcode: luaj
+  artist_shortcode: art

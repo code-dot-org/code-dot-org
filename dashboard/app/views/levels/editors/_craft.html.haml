@@ -1,0 +1,145 @@
+%hr
+%h1 Minecraft Level Configuration
+%hr
+
+.field
+  = f.label :player_start_position, 'Player Start Position in format [x, y]'
+  = f.text_field :player_start_position
+.field
+  = f.label :player_start_direction, 'Player Start Direction'
+  = f.select :player_start_direction, options_for_select(@level.class.player_start_directions, @level.player_start_direction)
+.field
+  = f.label :is_daytime, 'Is Daytime level'
+  = boolean_check_box(f, :is_daytime)
+.field
+  = f.label :show_popup_on_load, 'Show Popup on Level Start (work in progress)'
+  = f.select :show_popup_on_load, options_for_select(@level.class.show_popup_options, @level.show_popup_on_load), {include_blank: true}
+.field
+  = f.label :special_level_type, 'Special level type'
+  = f.select :special_level_type, options_for_select(@level.class.special_level_type_options, @level.special_level_type), {include_blank: true}
+.field
+  = f.label :verification_function, 'Verification Function'
+  Click to insert: (
+  - Craft::SAMPLE_VERIFICATION_FUNCTIONS.each do |name, value|
+    :javascript
+      var verificationFunction#{name} = '#{value.gsub('\n', "\\n' + '")}';
+    %a{style:"cursor: pointer", onclick: "verificationEditor.getDoc().setValue(verificationFunction#{name})"}= "#{name}"
+  )
+  = f.text_area :verification_function, rows: 10
+  :javascript
+    var verificationEditor = codeMirror('verification_function', 'javascript');
+.field
+  = f.label :available_blocks, 'Available Blocks in format ["bedrock", "bricks", "clay", "oreCoal", "dirtCoarse"] (will eventually be multi-select)'
+  %a{style:"cursor: pointer", onclick: "availableBlocksEditor.getDoc().setValue('#{Craft::ALL_BLOCKS_ARRAY}')"}= "Insert all"
+  = f.text_area :available_blocks, rows: 10
+  :javascript
+    var availableBlocksEditor = codeMirror('available_blocks', 'javascript');
+
+.field
+  = f.label :if_block_options, 'Override if and while ahead block dropdown options. Format: ["bedrock", "bricks", "clay", "oreCoal", "dirtCoarse"]'
+  %a{style:"cursor: pointer", onclick: "ifBlocksEditor.getDoc().setValue('#{Craft::ALL_BLOCKS_ARRAY}')"}= "Insert all"
+  = f.text_area :if_block_options, rows: 10
+  :javascript
+    var ifBlocksEditor = codeMirror('if_block_options', 'javascript');
+
+.field
+  = f.label :place_block_options, 'Override place and place ahead block dropdown options. Format: ["bedrock", "bricks", "clay", "oreCoal", "dirtCoarse"]'
+  %a{style:"cursor: pointer", onclick: "placeBlocksEditor.getDoc().setValue('#{Craft::ALL_BLOCKS_ARRAY}')"}= "Insert all"
+  = f.text_area :place_block_options, rows: 10
+  :javascript
+    var placeBlocksEditor = codeMirror('place_block_options', 'javascript');
+%div{style: "opacity: .5"}
+  .field
+    = f.label :grid_width, 'Grid width (warning: do not change, only use for initial sizing)'
+    = f.text_field :grid_width, {value: @level.get_width}
+  .field
+    = f.label :grid_height, 'Grid height (warning: do not change, only use for initial sizing)'
+    = f.text_field :grid_height, {value: @level.get_height}
+
+- Craft::JSON_LEVEL_MAPS.each do |level_json_name|
+  .field
+    = f.hidden_field level_json_name
+    = f.label "Map for #{level_json_name}"
+    .map-editor-table{:id => "map-table-#{level_json_name}"}
+
+:css
+  tr {
+    min-height: 100px;
+    min-width: 100px;
+  }
+
+  td {
+    background-repeat: no-repeat;
+    background-position: 50px;
+  }
+
+- Craft::TILES_TO_PREVIEW_IMAGES.each do |tile, preview|
+  :css
+    td.#{tile} {
+     background-image: url('#{preview}');
+    }
+
+:javascript
+  function padFlatArrayToWidthHeight(array, width, height) {
+    var extraNeeded = width * height - array.length;
+    for (var i = 0; i < extraNeeded; i++) {
+      array.push('grass');
+    }
+
+    array.length = width * height; // truncate
+
+    return array;
+  }
+  function arrayTo2d(array, width) {
+    var arrayCopy = array.slice(0);
+    var array2d = [];
+    while (arrayCopy.length > 0) {
+      array2d.push(arrayCopy.splice(0, width));
+    }
+    return array2d;
+  }
+
+  function array2dToFlat(array2d) {
+    return [].concat.apply([], array2d);
+  }
+
+  function tableFor(map_property_name, data, possibleValues) {
+    var array2d = arrayTo2d(padFlatArrayToWidthHeight(data, #{@level.get_width}, #{@level.get_height}), #{@level.get_width});
+
+    var mapDivID = "#map-table-" + map_property_name;
+    var allColumns = [];
+    var allColumnWidths = [];
+    var columnConfig = {
+      type: 'autocomplete',
+      source: possibleValues,
+      strict: false
+    };
+    for(var i = 0; i < #{@level.get_width}; i++) {
+      allColumns.push(columnConfig);
+      allColumnWidths.push(100);
+    }
+    $(mapDivID).handsontable({
+      data: array2d,
+      startRows: #{@level.get_height},
+      startCols: #{@level.get_width},
+      maxRows: #{@level.get_height},
+      maxCols: #{@level.get_width},
+      columns: allColumns,
+      colWidths: allColumnWidths,
+      stretchH: 'none',
+      afterChange: function(changes, source) {
+        $("#level_" + map_property_name).val(JSON.stringify(array2dToFlat(array2d)));
+      },
+      cells: function(row, col, prop) {
+        return {renderer: renderMaze};
+    }});
+  }
+
+  function renderMaze(instance, td, row, col, prop, value, cellProperties) {
+    td.className += ' ' + value;
+    Handsontable.renderers.AutocompleteRenderer.apply(this, arguments);
+  }
+
+- Craft::JSON_LEVEL_MAPS.each do |level_json_name|
+  :javascript
+    tableFor("#{level_json_name}", eval(#{@level.properties[level_json_name.to_s]}), #{Craft::KNOWN_TILE_TYPES[level_json_name].keys.map{|key| key.to_s}});

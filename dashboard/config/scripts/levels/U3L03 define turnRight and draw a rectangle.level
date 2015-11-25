@@ -55,7 +55,7 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "encrypted_examples": "ICti52Whgu7iBiq1e2qaZvYu39KWQitYAlXVG5lHuBMEFBNGgrYee3pg6AgN\ntcyY\n",
-    "markdown_instructions": "###Challenge\r\nAs you know, in order to turn right we have to call `turnLeft()` three times.  **Define** a function called `right()` that turns the turtle to the right. Then **use** this function in some code to draw a rectangle, as shown below. \r\n\r\n![](https://images.code.org/2b8d21f4a31100136762274fdf517e1c-image-1441297846326.gif)",
+    "markdown_instructions": "# Draw a rectangle with right\r\n\r\nAs you know, in order to turn right we have to call `turnLeft()` three times.  **Define** a function called `right()` that turns the turtle to the right. Then **use** this function in some code to draw a rectangle, as shown below. \r\n\r\n![](https://images.code.org/fd6e8b4d2218a242bae19ac9c78b5d5f-image-1447799438050.gif)",
     "start_blocks": "function right(){\r\n  \r\n}",
     "never_autoplay_video": "false",
     "examples_required": "false",
@@ -64,7 +64,7 @@
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "true",
     "debugger_disabled": "true",
-    "lock_zero_param_functions": "false",
+    "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "true"
   }
 }]]></config>

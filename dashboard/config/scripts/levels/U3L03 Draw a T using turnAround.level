@@ -48,7 +48,7 @@
     "app_width": "320",
     "app_height": "480",
     "slider_speed": "0.1",
-    "start_blocks": "function turnAround(){\r\n  turnLeft();\r\n  turnLeft();\r\n  moveForward();\r\n}",
+    "start_blocks": "function turnAround(){\r\n  turnLeft();\r\n  turnLeft();\r\n}",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
@@ -56,14 +56,14 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "encrypted_examples": "ydHzZtnGZ/G71WCKKdpIdiW1CGgABSHec/1JAIQ69Fgh6n/OCsAC8kE1gZWy\ngjUJ\n",
-    "markdown_instructions": "###Challenge\r\nGet some more practice **calling** a function by using `turnAround()` to create a plus sign, as shown below. The function has already been **defined** for you. \r\n\r\n![](https://images.code.org/9d6c2d7d69c2f1c68c5b273bdbae65c7-image-1441296690812.11.14 AM.png)",
+    "markdown_instructions": "#Do This:\r\nGet some more practice **calling** a function by using `turnAround()` to create a plus sign, as shown below. The function has already been **defined** for you. \r\n\r\n![](https://images.code.org/9d6c2d7d69c2f1c68c5b273bdbae65c7-image-1441296690812.11.14 AM.png)",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "true",
     "debugger_disabled": "true",
-    "lock_zero_param_functions": "false",
+    "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "true"
   }
 }]]></config>

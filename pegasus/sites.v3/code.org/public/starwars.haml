@@ -11,8 +11,8 @@ social:
   "og:title": "Star Wars: Building a Galaxy with Code"
   "og:description": "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   "og:image" : "https://code.org/images/star-wars-announcement.jpg"
-  "og:image:width": "1020"
-  "og:image:height": "573"
+  "og:image:width": "1920"
+  "og:image:height": "1080"
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
@@ -25,7 +25,7 @@ social:
 
 %div.starwars-container
   %div.img-container
-    %img.starwars-img{src:"/images/sw_landingpage.jpg"}
+    %img.starwars-img{src:"/images/fit-1940/sw_landingpage.jpg"}
   %h1.starwars-heading= I18n.t(:starwars_subtitle)
 
   .col-25.starwars-tutorial{style: "right: 20px;"}
@@ -44,13 +44,14 @@ social:
         %p.sw-tutorial-description= I18n.t(:starwars_blocks_description)
         %p.sw-tutorial-specs= I18n.t(:starwars_blocks_specs)
       %a{:href => CDO.studio_url('/s/starwarsblocks/reset'), :target=>'_self'}
-        %button.sw-try-button= I18n.t(:starwars_javascript_start_button)
+        %button.sw-try-button= I18n.t(:starwars_blocks_start_button)
 
 %div{style: "clear:both"}
+
+%h2
+  = I18n.t(:starwars_speak_languages)
+  %a{href: "/translate/starwars"}= I18n.t(:starwars_help_translate)
 
 %div.starwars-videos{style: "clear: both;"}
   %h2= I18n.t(:starwars_watch_videos)
   =view :inspirational_videos
-
-%span= I18n.t(:starwars_speak_languages)
-%a{href: "/translate"}= I18n.t(:starwars_help_translate)

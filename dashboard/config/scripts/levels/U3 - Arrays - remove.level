@@ -9,6 +9,7 @@
     "code_functions": {
       "insertItem": null,
       "appendItem": null,
+      "removeItem": null,
       "addOperator": null,
       "randomNumber": null,
       "declareAssign_x": null,
@@ -49,13 +50,10 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Insert items into an array to form a complete sentence. (Click to see full instructions)",
-    "markdown_instructions": "# Removing Items\r\n\r\nYou can now add items to arrays. Sometimes we want to remove something from an array. In order to do so you'll need to specify the **index** at which the item that should be removed.\r\n\r\n<img src=\"https://images.code.org/350e3dfe234b1ce1e47e11bc0629b47d-image-1447272428285.06.40 PM.png\" style=\"width: 250px\">\r\n\r\n**Note:** `removeItem` removes the location in the array at the index provided and shifts all locations at or after the index provided one location to the left As a result **the array is one location shorter and all the indexes have shifted down by one**.\r\n\r\n# Do This\r\n\r\n* **Read the documentation** for `removeItem`\r\n* **Starter code** has been provided which appends strings to an array to form a complete sentence but there are a couple extra words in the array.\r\n* Use `removeItem` to **individually remove all the \"REMOVE\" strings in your array** to form a complete sentence. **Note:** Be careful to pay attention to how indexes shift as you remove items.\r\n* Use `console.log` to confirm you succesfully created your sentence.\r\n\r\n| Result |\r\n| --- |\r\n| |\r\n",
+    "instructions": "Remove items from an array to form a complete sentence. (Click to see full instructions)",
+    "markdown_instructions": "# Removing Items\r\n\r\nSometimes we want to remove something from an array. In order to do so you'll need to specify the **index** at which the item that should be removed.\r\n\r\n<img src=\"https://images.code.org/350e3dfe234b1ce1e47e11bc0629b47d-image-1447272428285.06.40 PM.png\" style=\"width: 250px\">\r\n\r\n**Note:** `removeItem` removes the location in the array at the index provided. As a result **the array is one location shorter and all the indexes after the index provided will have their index decreased by one**.\r\n\r\n# Do This\r\n\r\n* **Read the documentation** for `removeItem`\r\n* **Starter code** has been provided which creates an array of strings.\r\n* Use `removeItem` to **individually remove all the \"REMOVE\" strings in your array** to form a complete sentence. \r\n* Use `console.log` to confirm you succesfully created your sentence.\r\n\r\n**Note:** Keep an eye out, your indexes will shift as you remove items.\r\n\r\n![](https://images.code.org/5ba2247cafcfcb5d8be80db32126105e-image-1447273315312.21.17 PM.png)",
     "slider_speed": "1",
-    "start_blocks": "var sentence = [];\r\nappendItem(sentence, \"REMOVE\");\r\nappendItem(sentence, \"Today\");\r\nappendItem(sentence, \"I'm\");\r\nappendItem(sentence, \"REMOVE\");\r\nappendItem(sentence, \"excited\");\r\nappendItem(sentence, \"to\");\r\nappendItem(sentence, \"learn\");\r\nappendItem(sentence, \"REMOVE\");\r\nappendItem(sentence, \"REMOVE\");\r\nappendItem(sentence, \"about\");\r\nappendItem(sentence, \"arrays\");\r\nconsole.log(\"Original Sentence: \" + sentence);\r\n\r\n// Your code goes here\r\n\r\nconsole.log(\"Final Sentence: \" + sentence);",
-    "encrypted_examples": [
-
-    ]
+    "start_blocks": "var sentence = [\"REMOVE\",\"Today\",\"I'm\",\"REMOVE\",\"excited\",\"to\",\"learn\",\"REMOVE\",\"REMOVE\",\"about\",\"arrays\"];\r\nconsole.log(\"Original Sentence: \" + sentence);\r\n\r\n// Your code goes here\r\n\r\nconsole.log(\"Final Sentence: \" + sentence);"
   }
 }]]></config>
   <blocks/>

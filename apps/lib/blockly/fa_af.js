@@ -1,11 +1,11 @@
-Blockly.Msg.ACTUAL = "تماس بگیر";
+Blockly.Msg.ACTUAL = "تماس";
 Blockly.Msg.ADD = "اضافه کردن";
-Blockly.Msg.ADD_COMMENT = "اضافه کردن نظر";
+Blockly.Msg.ADD_COMMENT = "نظر دادن";
 Blockly.Msg.ADD_PARAMETER = "اضافه کردن پارامتر";
-Blockly.Msg.CHANGE_VALUE_TITLE = "تغییر مقدار:";
+Blockly.Msg.CHANGE_VALUE_TITLE = "تغییر قیمت:";
 Blockly.Msg.CLOSE = "ببند";
-Blockly.Msg.COLLAPSE_ALL = "جمع کردن بلوک ها";
-Blockly.Msg.COLLAPSE_BLOCK = "جمع کردن بلوک";
+Blockly.Msg.COLLAPSE_ALL = "بستن بلاک ها";
+Blockly.Msg.COLLAPSE_BLOCK = "بستن بلاک ها";
 Blockly.Msg.COLOUR_BLEND_COLOUR1 = "رنگ 1";
 Blockly.Msg.COLOUR_BLEND_COLOUR2 = "رنگ 2";
 Blockly.Msg.COLOUR_BLEND_HELPURL = "http://meyerweb.com/eric/tools/color-blend/";
@@ -26,19 +26,19 @@ Blockly.Msg.COLOUR_RGB_TOOLTIP = "یک رنگ با ترکیب مقدار مشخ�
 Blockly.Msg.CONFIRM_DELETE_FUNCTION_MESSAGE = "هشدار! آیا مطمئنید می خواهید %1 را پاک کنید?";
 Blockly.Msg.CONTRACT_EDITOR_HEADER = "دستور العمل طرح";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
-Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "از حلقه خارج شو";
-Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "ادامه به حلقه  تکرار بعدی";
-Blockly.Msg.CONTROLS_FLOW_STATEMENTS_TOOLTIP_BREAK = "از حلقه حاوی خارج شو.";
+Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "از حلقه تکرار خارج شو";
+Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "ادامه به تکرار بعدی حلقه ی تکرار";
+Blockly.Msg.CONTROLS_FLOW_STATEMENTS_TOOLTIP_BREAK = "از حلقه ی تکرار فعلی خارج شو.";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE = "از بقيه ي حلقه رد شو ، و به تكرار بعدي برو.";
-Blockly.Msg.CONTROLS_FLOW_STATEMENTS_WARNING = "اخطار: این بلوک فقط ميتواند در داخل یک حلقه استفاده شود.";
+Blockly.Msg.CONTROLS_FLOW_STATEMENTS_WARNING = "اخطار: این بلاک فقط ميتواند در داخل یک حلقه استفاده شود.";
 Blockly.Msg.CONTROLS_FOREACH_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#for_each";
-Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST = "در فهرست";
+Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST = "در لیست";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "برای هر مورد";
-Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "برای هر مورد در این فهرست، متغیر «%1» را به مورد نسبت، و بعد چند دستور انجام بده.";
+Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "برای هر مورد در این لیست، قیمت متغیر را به مورد «%1» بده، و بعد چند دستور انجام بده.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
-Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "از %1 به %2 با گام‌های %3";
-Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "بشمار با";
+Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "از%1 تا %2 به تعداد %3";
+Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "حلقه ی تکرار";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "با متغیر %1 مقادیر را از عدد ابتدایی تا عدد انتهایی بردار، به بازه ی مشخص‌شده اضافه کن و بلوک های مشخص‌شده را انجام بده.";
 Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "افزودن یک شرط به بلوک شرطی.";
 Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "اضافه‌کردن یک پایان، در نظر گرفتن همهٔ شرایط دیگر برای بلوک شرطی.";
@@ -144,7 +144,7 @@ Blockly.Msg.LISTS_INDEX_OF_FIRST = "یافتن اولین رخداد مورد";
 Blockly.Msg.LISTS_INDEX_OF_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#Getting_Items_from_a_List";
 Blockly.Msg.LISTS_INDEX_OF_LAST = "یافتن آخرین رخداد مورد";
 Blockly.Msg.LISTS_INDEX_OF_TOOLTIP = "از اولین/آخرین رخداد مورد در فهرست شاخص را برمی‌گرداند. ۰ برمی‌گرداند اگر متن پیدا نشد.";
-Blockly.Msg.LISTS_INLIST = "در فهرست";
+Blockly.Msg.LISTS_INLIST = "در لیست";
 Blockly.Msg.LISTS_IS_EMPTY_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#is_empty";
 Blockly.Msg.LISTS_IS_EMPTY_TITLE = "%1 خالی است";
 Blockly.Msg.LISTS_LENGTH_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#length_of";

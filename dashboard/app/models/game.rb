@@ -41,6 +41,7 @@ class Game < ActiveRecord::Base
   STUDIO_EC = 'StudioEC'
   APPLAB = WEBAPP = 'applab'
   NETSIM = 'netsim'
+  CRAFT = 'craft'
   MAZE = 'maze'
   CALC = 'calc'
   EVAL = 'eval'
@@ -71,6 +72,10 @@ class Game < ActiveRecord::Base
 
   def self.netsim
     @@game_netsim ||= find_by_name("NetSim")
+  end
+
+  def self.craft
+    @@game_craft ||= find_by_name("Craft")
   end
 
   def self.pixelation
@@ -107,10 +112,6 @@ class Game < ActiveRecord::Base
 
   def supports_sharing?
     app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
-  end
-
-  def share_mobile_fullscreen?
-    app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
   end
 
   def flappy?
@@ -192,6 +193,7 @@ class Game < ActiveRecord::Base
         Odometer:odometer
         FrequencyAnalysis:frequency_analysis
         Vigenere:vigenere
+        Craft:craft
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

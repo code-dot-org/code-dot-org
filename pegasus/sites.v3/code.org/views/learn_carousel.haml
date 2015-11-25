@@ -1,12 +1,14 @@
 -check_language ||= nil
 -international_layout ||= nil
 -subheading ||= nil
+-company = request.GET['company']
 -if check_language
   -items = tutorials.find_with_tag_and_language(tag, request.locale)
 -else
   -items = tutorials.find_with_tag(tag)
 -if items.count > 0
-  %h1{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
+  %h2{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
+
   -unless subheading.nil_or_empty?
     %p=subheading
 
@@ -20,6 +22,7 @@
           -items.each_pair do |key, tutorial|
             -tags = tutorial[:gradelevel] + ' | ' + tutorial[:platformtext]
             -url = tutorials.launch_url_for(key,request.host_with_port)
+            -url = url + "?company=#{company}" if company
             -short_url = ('http://hourofcode.com/' + tutorial[:short_code]) unless tutorial[:short_code].nil_or_empty?
             -styling = "display:none" unless count == 0
             .slide.clear{:style=>styling}

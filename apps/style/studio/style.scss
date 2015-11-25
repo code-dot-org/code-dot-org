@@ -144,5 +144,16 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
       margin-left: 1em;
     }
   }
+
+  .instructionsImageContainer {
+    width: 67px;
+    text-align: center;
+    display: inline-block;
+
+    .instructionsImage {
+      height: 35px;
+      vertical-align: text-bottom;
+    }
+  }
 }
 
