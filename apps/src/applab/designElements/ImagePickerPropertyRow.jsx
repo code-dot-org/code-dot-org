@@ -17,7 +17,7 @@ var PropertyRow = React.createClass({
   getInitialState: function () {
     return {
       value: this.props.initialValue,
-      lastEdit: new Date()
+      lastEdit: new Date(0)
     };
   },
 
