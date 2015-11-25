@@ -1,7 +1,7 @@
 class TransfersController < ApplicationController
   before_filter :authenticate_user!
 
-  # POST /section/:id/transfers
+  # POST /sections/:id/transfers
   def create
     new_section_code = params[:new_section_code]
 
@@ -22,6 +22,14 @@ class TransfersController < ApplicationController
       # TODO: i18n
       render json: {
         error: "Please provide current_section_code."
+      }, status: :bad_request
+      return
+    end
+
+    if new_section_code == current_section_code
+      # TODO: i18n
+      render json: {
+        error: "The current section cannot be the same as the new section."
       }, status: :bad_request
       return
     end

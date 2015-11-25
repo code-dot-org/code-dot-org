@@ -30,8 +30,6 @@ Dashboard::Application.routes.draw do
     member do
       post 'log_in'
     end
-
-    # resources :transfers, only: [:create], defaults: {format: 'json'}
   end
 
   post 'sections/:new_section_code/transfers', to: 'transfers#create'

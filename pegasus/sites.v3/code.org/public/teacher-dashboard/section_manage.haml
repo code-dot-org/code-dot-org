@@ -21,17 +21,27 @@ theme: none
               %input{type: "checkbox", "ng-model" => "student.selected"}
               {{student.name}}
         Move to section:
-        {{ getSectionToMoveTo() }}
         %select{"ng-model" => "selectedSectionCode"}
-          %option{"ng-repeat" => "section in sections", value: "{{section.code}}"}
+          %option{"ng-repeat" => "section in sections | filter: {id: '!' + currentSection.id}", value: "{{section.code}}"}
             {{section.name}}
           %option{value: "Other Section"}
             {{otherSection}}
+        %div{"ng-show" => "selectedSectionCode != 'Other Section'"}
+          Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
         %div{"ng-show" => "selectedSectionCode == 'Other Section'"}
-          %input{class: "text-box", type: 'text', "ng-model" => "manuallySelectedSectionCode", maxLength: 6}
+          %input{class: "text-box", type: 'text', "ng-model" => "manuallySelectedSectionCode", placeholder: "6-character code (ABCDEF)"}
+          %div
+            Would you like the student(s) to be in both sections?
+            %form
+              %label
+                %input{type: 'radio', "ng-model" => "stayEnrolledInCurrentSection", value: "true"}
+                Yes, I want to copy student(s) to be in this current section AND the new section
+              %label
+                %input{type: 'radio', "ng-model" => "stayEnrolledInCurrentSection", value: "false"}
+                No, I want to move student(s) to be in the new section only.
         %div{class: "modal-buttons"}
           %button{:type=>"button", :class=>"btn btn-primary", :"data-dismiss"=>"modal"}= "Cancel"
-          %button{:type=>"button", :class=>"btn btn-primary", :"data-dismiss"=>"modal"}= "Move Students"
+          %button{:type=>"button", :class=>"btn btn-primary", "ng-click" => "moveStudents()"}= "Move Students"
 
 %div{style: "padding-left:20px"}
 

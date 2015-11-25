@@ -105,6 +105,7 @@ angular: teacherDashboard
          // TODO: This isn't very restful
          allStudents: {method:'GET', url:'v2/sections/:id/students', isArray: true},
          addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
+         moveStudents: {method:'POST', url:'/sections/:new_section_code/transfers'},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
          progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
          studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'}
@@ -397,25 +398,37 @@ angular: teacherDashboard
 
       // 'Other Section' selected
       $scope.otherSection = 'Other Section';
+      $scope.stayEnrolledInCurrentSection = 'true';
 
       // Query
+      $scope.currentSection = sectionsService.get({id: $routeParams.id});
       $scope.sections = sectionsService.query();
       $scope.students = sectionsService.allStudents({id: $routeParams.id});
 
-      $scope.getStudentsToMove = function() {
-        // TODO: Return Value depends on API call
-      };
+      // API post
 
-      $scope.getSectionToMoveTo = function() {
-        if ($scope.selectedSectionCode !== $scope.otherSection) {
-          return $scope.selectedSectionCode;
-        } else {
-          return $scope.manuallySelectedSectionCode;
-        }
+      $scope.moveStudents = function() {
+        // Need:
+        // new_section_code
+        // current_section_code
+        // stay_enrolled_in_current_section (kinda optional)
+        var params = {};
+        params['new_section_code'] = $scope.getNewSectionCode();
+        // params['current_section_code'] = $scope.getCurrentSectionCode();
+        // params['student_ids'] = $scope.getSelectedStudentIds();
+        // params['stay_enrolled_in_current_section'] = $scope.getStayEnrolledInCurrentSection();
+        // TODO: Get this working
+        sectionsService.moveStudents(params, {}).$promise.then(
+          function success(response) {
+            $('#move-students').modal('hide');
+          },
+          function error(response) {
+            debugger;
+          });
       };
 
       $scope.showModal = function() {
-        $q.all([$scope.sections.$promise, $scope.students.$promise]).then(function() {
+        $q.all([$scope.currentSection.$promise, $scope.students.$promise]).then(function() {
           $('#move-students').modal('show');
         })
       };
@@ -425,6 +438,37 @@ angular: teacherDashboard
         angular.forEach($scope.students, function(student) {
           student.selected = $scope.selectedAll;
         });
+      };
+
+      $scope.getCurrentSectionCode = function() {
+        return $scope.section.code;
+      };
+
+      $scope.getSelectedStudentIds = function() {
+        var student_ids = [];
+        angular.forEach($scope.students, function(student) {
+          if (student.selected) {
+            student_ids.push(student.id);
+          }
+        });
+
+        return student_ids;
+      };
+
+      $scope.getNewSectionCode = function() {
+        if ($scope.selectedSectionCode !== $scope.otherSection) {
+          return $scope.selectedSectionCode;
+        } else {
+          return $scope.manuallySelectedSectionCode;
+        }
+      };
+
+      $scope.getStayEnrolledInCurrentSection = function() {
+        if ($scope.selectedSectionCode == $scope.manuallySelectedSectionCode) {
+          return $scope.stayEnrolledInCurrentSection;
+        } else {
+          return false;
+        }
       };
   }]);
 
