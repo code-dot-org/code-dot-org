@@ -1,5 +1,8 @@
+# Utility methods for generating certificate images.
+# Note: requires pegasus_dir to be in scope.
+
 require 'rmagick'
-require_relative '../../../dashboard/config/environment'
+require_relative '../scripts/script_info'
 
 def create_certificate_image2(image_path, name, params={})
   name = name.to_s.gsub(/@/,'\@').strip
@@ -83,20 +86,17 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
 end
 
 def prefilled_title_course?(course)
-  course_script = Script.get_from_cache(course)
-  course_script.hoc? || course_script.twenty_hour?
+  ScriptInfo.hoc?(course) || ScriptInfo.twenty_hour?(course)
 end
 
 def certificate_template_for_course(course)
-  course_script = Script.get_from_cache(course)
-
-  if course_script.hoc?
-    if course_script.minecraft?
+  if ScriptInfo.hoc?(course)
+    if ScriptInfo.minecraft?(course)
       'MC_Hour_Of_Code_Certificate.jpg'
     else
       'hour_of_code_certificate.jpg'
     end
-  elsif course_script.twenty_hour?
+  elsif ScriptInfo.twenty_hour?(course)
     '20hours_certificate.jpg'
   else
     'blank_certificate.png'
