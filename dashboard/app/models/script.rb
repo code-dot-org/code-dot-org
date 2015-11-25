@@ -19,6 +19,8 @@
 #  index_scripts_on_wrapup_video_id  (wrapup_video_id)
 #
 
+require 'cdo/scripts/script_info'
+
 # A sequence of Levels
 class Script < ActiveRecord::Base
   include Seeded
@@ -37,25 +39,25 @@ class Script < ActiveRecord::Base
   serialized_attrs %w(pd admin_required)
 
   # Names used throughout the code
-  HOC_2013_NAME = 'Hour of Code' # this is the old (2013) hour of code
-  EDIT_CODE_NAME = 'edit-code'
-  TWENTY_FOURTEEN_NAME = 'events'
-  JIGSAW_NAME = 'jigsaw'
-  HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
-  STARWARS_NAME = 'starwars'
-  MINECRAFT_NAME = 'mc'
-  STARWARS_BLOCKS_NAME = 'starwarsblocks'
-  FROZEN_NAME = 'frozen'
-  PLAYLAB_NAME = 'playlab'
-  INFINITY_NAME = 'infinity'
-  ARTIST_NAME = 'artist'
-  ALGEBRA_NAME = 'algebra'
-  FLAPPY_NAME = 'flappy'
-  TWENTY_HOUR_NAME = '20-hour'
-  COURSE1_NAME = 'course1'
-  COURSE2_NAME = 'course2'
-  COURSE3_NAME = 'course3'
-  COURSE4_NAME = 'course4'
+  HOC_2013_NAME = ScriptInfo::HOC_2013_NAME
+  EDIT_CODE_NAME = ScriptInfo::EDIT_CODE_NAME
+  TWENTY_FOURTEEN_NAME = ScriptInfo::TWENTY_FOURTEEN_NAME
+  JIGSAW_NAME = ScriptInfo::JIGSAW_NAME
+  HOC_NAME = ScriptInfo::HOC_NAME
+  STARWARS_NAME = ScriptInfo::STARWARS_NAME
+  MINECRAFT_NAME = ScriptInfo::MINECRAFT_NAME
+  STARWARS_BLOCKS_NAME = ScriptInfo::STARWARS_BLOCKS_NAME
+  FROZEN_NAME = ScriptInfo::FROZEN_NAME
+  PLAYLAB_NAME = ScriptInfo::PLAYLAB_NAME
+  INFINITY_NAME = ScriptInfo::INFINITY_NAME
+  ARTIST_NAME = ScriptInfo::ARTIST_NAME
+  ALGEBRA_NAME = ScriptInfo::ALGEBRA_NAME
+  FLAPPY_NAME = ScriptInfo::FLAPPY_NAME
+  TWENTY_HOUR_NAME = ScriptInfo::TWENTY_HOUR_NAME
+  COURSE1_NAME = ScriptInfo::COURSE1_NAME
+  COURSE2_NAME = ScriptInfo::COURSE2_NAME
+  COURSE3_NAME = ScriptInfo::COURSE3_NAME
+  COURSE4_NAME = ScriptInfo::COURSE4_NAME
 
   def Script.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
@@ -217,21 +219,19 @@ class Script < ActiveRecord::Base
   end
 
   def twenty_hour?
-    self.name == TWENTY_HOUR_NAME
+    ScriptInfo.twenty_hour?(self.name)
   end
 
   def hoc?
-    # Note that now multiple scripts can be an 'hour of code' script.
-    # If adding a script here, you must also update the Data_HocTutorials gsheet so the end of script API works
-    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME, STARWARS_NAME, STARWARS_BLOCKS_NAME, MINECRAFT_NAME].include? self.name
+    ScriptInfo.hoc?(self.name)
   end
 
   def flappy?
-    self.name == FLAPPY_NAME
+    ScriptInfo.flappy?(self.name)
   end
 
   def minecraft?
-    self.name == MINECRAFT_NAME
+    ScriptInfo.minecraft?(self.name)
   end
 
   def find_script_level(level_id)
