@@ -8,6 +8,9 @@ nav: educate_nav
 - [Teacher-Led Hour of Code Tutorials](#teacher)
 - [Other Activities](#other)
 
+And if you want more, check out AskATeacher's [Hour of Code suggestions by grade level](http://askatechteacher.com/2015/11/09/hour-of-code-3/)
+
+
 <a id="student"></a>
 # Student-Led Hour of Code Tutorials 
 Student-led tutorials are designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. These tutorials optimize the experience for students and teachers who are new to computer science. 
