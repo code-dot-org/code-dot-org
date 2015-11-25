@@ -36,11 +36,12 @@ module UsersHelper
 
     user_data[:levels] = {}
     script_levels.each do |sl|
-      completion_status = level_info(user, sl, uls)
+      result = level_info(user, sl, uls)
+      completion_status = activity_css_class result
       if completion_status != 'not_tried'
         user_data[:levels][sl.level_id] = {
-          status: completion_status
-          # More info could go in here...
+          status: completion_status,
+          result: result
         }
       end
     end
