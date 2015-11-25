@@ -220,6 +220,7 @@
   "itemMouseDroid": "Mouse Droid",
   "itemTauntaun": "Tauntaun",
   "itemProbot": "Probot",
+  "localFunction": "You have placed {funcName} inside another function. You should move {funcName} to a different location in your program.",
   "loseMessage": "You lose!",
   "makeProjectileDisappear": "disappear",
   "makeProjectileBounce": "bounce",

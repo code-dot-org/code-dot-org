@@ -2631,6 +2631,17 @@ Studio.checkForEditCodePreExecutionFailure = function () {
     return true;
   }
 
+  funcName = Studio.hasUnexpectedLocalFunction_();
+  if (funcName) {
+    Studio.result = false;
+    Studio.testResults = TestResults.LOCAL_FUNCTION_FAIL;
+    Studio.message = studioMsg.localFunction({
+      funcName: funcName + '()'
+    });
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
   return false;
 };
 
@@ -2650,6 +2661,22 @@ Studio.hasUnexpectedFunction_ = function () {
     }
     if (funcNames.length > 0) {
       return funcNames[0];
+    }
+  }
+};
+
+/**
+ * @returns {string} the name of the first unexpected local function found
+ */
+Studio.hasUnexpectedLocalFunction_ = function () {
+  if (studioApp.editCode &&
+      Studio.JSInterpreter) {
+    var funcNames = Studio.JSInterpreter.getLocalFunctionNames();
+    for (var name in AUTO_HANDLER_MAP) {
+      var index = funcNames.indexOf(name);
+      if (index != -1) {
+        return name;
+      }
     }
   }
 };
