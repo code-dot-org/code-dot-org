@@ -162,7 +162,7 @@
   "exampleErrorMessage":"La fonction {functionName} a un ou plusieurs des exemples qui doivent être modifiés. Assure-toi qu'ils correspondent à ta définition et qu'ils répondent à la question.",
   "examplesFailedOnClose":"Un ou plusieurs de tes exemples ne correspondent pas à ta définition. Vérifie tes exemples avant de terminer",
   "extraTopBlocks":"Certains blocs ne sont pas attachés.",
-  "extraTopBlocksWhenRun":"Certains blocs ne sont pas attachés. Voulais-tu les fixer au bloc « lors du lancement » ?",
+  "extraTopBlocksWhenRun":"Certains blocs ne sont pas attachés. Voulais-tu les rattacher au bloc « quand l'exécution commence » ?",
   "finalStage":"Félicitations ! Tu as terminé l'étape finale.",
   "finalStageTrophies":"Félicitations ! Tu as terminé l'étape finale et gagné {numTrophies, plural, one {un trophée} other {# trophées}}.",
   "finish":"Terminer",

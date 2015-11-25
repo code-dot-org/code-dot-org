@@ -1596,3 +1596,54 @@ en:
       4:
         image: crwdns54481:0crwdne54481:0
         text: crwdns54482:0crwdne54482:0
+    gumball_intro:
+      1:
+        image: crwdns54753:0crwdne54753:0
+        text: crwdns54754:0crwdne54754:0
+      2:
+        image: crwdns54755:0crwdne54755:0
+        text: crwdns54756:0crwdne54756:0
+      3:
+        image: crwdns54757:0crwdne54757:0
+        text: crwdns54758:0crwdne54758:0
+      4:
+        image: crwdns54759:0crwdne54759:0
+        text: crwdns54760:0crwdne54760:0
+      5:
+        image: crwdns54761:0crwdne54761:0
+        text: crwdns54762:0crwdne54762:0
+      6:
+        image: crwdns54763:0crwdne54763:0
+        text: crwdns54764:0crwdne54764:0
+      7:
+        image: crwdns54765:0crwdne54765:0
+        text: crwdns54766:0crwdne54766:0
+      8:
+        image: crwdns54767:0crwdne54767:0
+        text: crwdns54768:0crwdne54768:0
+      9:
+        image: crwdns54769:0crwdne54769:0
+        text: crwdns54770:0crwdne54770:0
+    gumball_events:
+      1:
+        image: crwdns54771:0crwdne54771:0
+        text: crwdns54772:0crwdne54772:0
+      2:
+        image: crwdns54773:0crwdne54773:0
+        text: crwdns54774:0crwdne54774:0
+      3:
+        image: crwdns54775:0crwdne54775:0
+        text: crwdns54776:0crwdne54776:0
+      4:
+        image: crwdns54777:0crwdne54777:0
+        text: crwdns54778:0crwdne54778:0
+    gumball_repeat:
+      1:
+        image: crwdns54779:0crwdne54779:0
+        text: crwdns54780:0crwdne54780:0
+      2:
+        image: crwdns54781:0crwdne54781:0
+        text: crwdns54782:0crwdne54782:0
+      3:
+        image: crwdns54783:0crwdne54783:0
+        text: crwdns54784:0crwdne54784:0

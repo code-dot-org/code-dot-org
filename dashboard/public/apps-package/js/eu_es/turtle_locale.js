@@ -175,7 +175,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "createASnowflakeBranch":function(d){return "adar moduko elur-maluta sortu"},
 "degrees":function(d){return "Graduak"},
 "depth":function(d){return "sakonera"},
-"dots":function(d){return "Pixelak"},
+"dots":function(d){return "pixel"},
 "drawACircle":function(d){return "Marraztu zirkulua"},
 "drawAFlower":function(d){return "marraztu lore bat"},
 "drawAHexagon":function(d){return "marraztu hexagono bat"},

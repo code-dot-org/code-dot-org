@@ -142,8 +142,6 @@
   twitter_teach_cs: Miért nem tanítanak több iskolában programozást? Van megoldásunk.
     http://youtu.be/nKIu9yen5nc. Látogasd meg a http://code.org/ honlapot, hogy többet
     megtudj róla.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: Ismerd meg a Kódolás Óráját
   beyond_hoc: Az első órán túl
   what_gender: Milyen nemű vagy?
@@ -346,13 +344,14 @@
     Órájára.
   volunteer_engineer_submission_subtitle_generic: '100 000 tanár for Kódolás Óráját
     tartani idén az osztályában, 2015. december 7-13 között. Szükségük van a segítségedre! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
-    to try an hour introduction to computer science, reaching tens of millions of
-    students in 180+ countries. Please get involved during Computer Science Education
-    Week, December 7-13.
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} tanárnak van szüksége
+    számítástechnikai oktatással lelkesedő önkéntesekre, akik segítenének nekik idén
+    decemberben a Kódolás Órája lebonyolításában.<br>%{num_volunteers} önkéntes már
+    csatlakozott. Csatlakozz hozzájuk.'
+  volunteer_engineer_submission_intro_background: A Kódolás Órája egy globális mozgalom,
+    amely abban segít, hogy kipróbáld egy órán keresztül a programozást, amely már
+    diákok millióihoz jutott el már a világ több, mint 180 országban. Kérlek vegyél
+    részt rajta a Számítástechnikai Oktatási Hét keretein belül december 7-13. között.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
     somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
     computer science education</span> who can help in the classroom, or for somebody
@@ -363,6 +362,9 @@
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Az információ meg lett osztva az önkéntes
     tanárok térképén
   volunteer_engineer_submission_field_name: Név
@@ -400,12 +402,13 @@
     teachers to contact you for the Hour of Code or other volunteer opportunities.
     Your email and exact address will NEVER be shared by us. But the other information
     (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
-    me for volunteer opportunities (Note: your email address won''t be shared)'
+  volunteer_engineer_submission_checkbox_contact: 'Egyetértek azzal, hogy a tanárok
+    felvehetik a kapcsolatot velem az önkéntes feladatok elvégzése céljából (Megjegyzés:
+    az e-mail címed nem kerül harmadik félhez)'
   volunteer_engineer_submission_submit: Elküldés
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: Köszönjük, hogy részt veszel a Kódolás Órájában
+    önkénteskét. Készülj fel a Kódolás Órájára és szerezz magadhoz még több önkéntest,
+    amiről <a href="%{url}">többet megtudhatsz itt.</a>
   volunteer_engineer_submission_commitment_uncertain: Bizonytalan
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 óra hetente
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 óra hetente
@@ -421,18 +424,19 @@
   volunteer_engineer_submission_location_flexibility_curriculum: Segítene a nyílt
     forrású tananyag projektekben
   volunteer_engineer_submission_experience_unspecified: Nem meghatározott
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_experience_tech_company: A nem vagyok mérnök egy tech
+    cégnél
   volunteer_engineer_submission_experience_university_student_or_researcher: Jelenleg
     egyetemi hallgató (vagy kutató)
   volunteer_engineer_submission_experience_software_professional: Szoftverfeljesztő
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_distance_8: 5 mérföld
+  volunteer_engineer_submission_distance_16: 10 mérföld
+  volunteer_engineer_submission_distance_24: 15 mérföld
+  volunteer_engineer_submission_distance_32: 20 mérföld
+  volunteer_engineer_submission_num_volunteers_5: 5 önkéntes
+  volunteer_engineer_submission_num_volunteers_10: 10 önkéntes
+  volunteer_engineer_submission_num_volunteers_25: 25 önkéntes
+  volunteer_engineer_submission_num_volunteers_50: 50 önkéntes
   volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
     for technical help and inspiration
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
@@ -693,6 +697,16 @@
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes"> Tudj meg többet</a> a
+    tanároknak szánt jutalmakról.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Próbáld ki az új Kódolás Órája anyagainkat
   hoc2014_try_new_tutorial: Próbáld ki az új Hour of Code oktató anyagunk béta változatát
   hoc2014_try_scrat: Angry Birds, PvZ és Scrat
@@ -1417,14 +1431,3 @@
   infinity_shortcode: inf
   playlab_shortcode: lejátszás
   artist_shortcode: art
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>

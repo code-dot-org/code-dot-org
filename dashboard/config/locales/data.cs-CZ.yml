@@ -528,26 +528,41 @@
           dostal k Sidovi a varovat všechny ostatní.
         studio_iceage_10: Vytvoř svou vlastní hru. Až budeš mít hotovo, klikni na
           Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
-        studio_gumball_1: Anais chce říci "Ahoj" - umíš ji pomoci?
-        studio_gumball_2: Darwin (herec 1) a žvýkačku (herec 2) by si rádi řekli "ahoj".
-          Umíš jim pomoci použitím dvakrát bloku "říkat"?
-        studio_gumball_3: Umíš pomoci banánový Joe dostat se k vlajce?
-        studio_gumball_4: Umíš pomoci žvýkačku (aktér1) dostat se k Darwinovi (aktér
-          2) a přehrávat zvuk, když se tam dostane?
-        studio_gumball_5: Umíš pomoci Sidovi, aby řekl po klepnutí na něj "pozdravy"?
-          Nezapomeň klepnout na něj a poté na Run
-        studio_gumball_6: Umíš pomoci Darwinovi se pohybovat okolo pomocí šipek nahoru/dolů/vpravo/vlevo,
-          aby dostal všechny vlajky?
-        studio_gumball_7: Blok "opakovat natrvalo" umožňuje nepřetržitý běh kódu.
-          Lze připojit bloky k tomu, abys pomohl Antonymu opakovaně se pohybovat doleva
-          a doprava?
-        studio_gumball_8: Umíš přidat bloky ke skórování bodu a přehrání zvuku, když
-          Banana Joe narazí do Mannyho a potom jej přesuň pomocí šipek, dokud neskóruješ?
-        studio_gumball_9: Nastav pozadí pro tento prostor invazi a pomoz Nicole dostat
-          se k Pennymu rychleji změnou jeho rychlost. Přesuň jej pomocí šipek dostat
-          k Nicole a varuj všechny ostatní.
-        studio_gumball_10: Vytvoř svou vlastní hru. Až budeš mít hotovo, klikni na
-          Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
+          him go the last 200 pixels using the "move" block.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Can you help Anton announce the start of a race
+          by saying "Ready, set, go!"? To test your program, don’t forget to click
+          Anton after you click Run!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Create your own game or story. When you're done,
+          click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Vytvoř svou vlastní hru. Až budeš mít hotovo, klikni
           na Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
         studio_k1_1: Umíš udělat, aby tento pes řekl "hello world"?
@@ -738,6 +753,9 @@
         mc_if_statements: Minecraft - if příkazy
         mc_congrats_share: Minecraft - Gratulujeme
         mc_congrats_no_share: Minecraft - Gratulujeme
+        gumball_intro: Gumball Hour of Code - Introduction
+        gumball_events: Gumball Hour of Code - Events
+        gumball_repeat: Gumball Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok
