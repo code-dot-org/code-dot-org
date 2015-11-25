@@ -452,16 +452,16 @@ function getSummarizedProgressForAnonymousUser(scriptName) {
 }
 
 function populateProgress(scriptName) {
-  $.ajax('/api/user_progress/' + scriptName).done(function (data) {
-    // Aggregate progress from server and client
-    data.levels && $.each(data.levels, function (level_id, info) {
-      var level_link = $('[data=' + level_id + ']');
-      var result = Math.max(info.result, level_link.data('result'));
-      var status = activityCssClass(result);
+  var scriptProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
 
-      if (!level_link.hasClass(status)) {
-        level_link.attr('class', 'level_link ' + status);
-      }
-    })
+  // Aggregate progress from server and client
+  $.each(scriptProgress, function (level_id, result) {
+    var level_link = $('[data-level=' + level_id + ']');
+    result = Math.max(result, level_link.data('result'));
+    var status = activityCssClass(result);
+
+    if (!level_link.hasClass(status)) {
+      level_link.attr('class', 'level_link ' + status);
+    }
   });
 }
