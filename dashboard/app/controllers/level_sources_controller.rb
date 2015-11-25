@@ -79,7 +79,7 @@ class LevelSourcesController < ApplicationController
       @level_source = LevelSource.where(hidden: false).find(params[:id])
     end
     @level_source.replace_old_when_run_blocks
-    @level = @level_source.level
+    @level = Level.cache_find(@level_source.level_id)
     @game = @level.game
     view_options(
       callouts: [],
