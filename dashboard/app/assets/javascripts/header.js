@@ -412,7 +412,7 @@ dashboard.header.updateTimestamp = function () {
 };
 
 /**
- * See ActivitiesHelper#activity_css_class.
+ * See ApplicationHelper#activity_css_class.
  * @param result
  * @return {string}
  */
