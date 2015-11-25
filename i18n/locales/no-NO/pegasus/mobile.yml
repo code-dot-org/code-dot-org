@@ -114,7 +114,6 @@ no-NO:
   hoc_is_here: '#Kodetimen er her - sjekk den ut! @kidsakoder'
   just_did_hoc: 'Jeg ble nettopp ferdig med #kodetimen! @kidsakoder'
   twitter_teach_cs: Hvorfor tilbyr ikke flere skoler undervisning i informatikk? Vi kan fikse dette. http://youtu.be/nKIu9yen5nc. Les mer på http://code.org/.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Lær mer</a> om premiene for hver lærer.'
   learn_hoc: Lær en Time med Kode
   beyond_hoc: Utover en time
   what_gender: Er du jente eller gutt?
@@ -301,6 +300,7 @@ no-NO:
   volunteer_engineer_submission_intro_recruit: |-
     Disse lærerne vil gjerne ha noen <span style="font-family: 'Gotham 7r', sans-serif;">tekonologer</span> som kan hjelpe til i klasserommet, eller noe som kan <span style="font-family: 'Gotham 7r', sans-serif;">inspirere</span> elevene deres ved å prate om bredden av muligheter med informatikk og programmering. Dette kan f. eks. bli gjort gjennom video-chat. Hvis du ikke er en ingeniør, skal du vite at alle kan organisere Kodetimen. <a href="%{url}">Lær mer her</a>.
   volunteer_engineer_submission_intro_signup: 'Angi følgende informasjon hvis du er en informatikkelev eller jobber med programmering. Feltene markert med en <span class="form-required-field">*</span> er obligatoriske.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Informasjon deles med lærere på frivillig-kartet
   volunteer_engineer_submission_field_name: Navn
   volunteer_engineer_submission_field_name_placeholder: Fullt navn
@@ -547,6 +547,11 @@ no-NO:
   learn_educator_resources_description: Lær om hvordan du kan gjennomføre Kodetimen
   learn_educator_resources_button: Lærerressurser
   learn_are_you_educator: 'Du er lærer? Sjekk<a href="http://hourofcode.com/resources/how-to"> hvordan du kan gjennomføre Kodetimen</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Lær mer</a> om premiene for hver lærer.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Prøv våre nye Kodetime-øvinger
   hoc2014_try_new_tutorial: Prøv den nye Kodetime-veiledningen i beta
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat

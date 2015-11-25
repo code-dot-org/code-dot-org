@@ -317,16 +317,17 @@ en:
         studio_iceage_8: crwdns51002:0crwdne51002:0
         studio_iceage_9: crwdns51003:0crwdne51003:0
         studio_iceage_10: crwdns51004:0crwdne51004:0
-        studio_gumball_1: crwdns51005:0crwdne51005:0
-        studio_gumball_2: crwdns51006:0crwdne51006:0
-        studio_gumball_3: crwdns51007:0crwdne51007:0
-        studio_gumball_4: crwdns51008:0crwdne51008:0
-        studio_gumball_5: crwdns51009:0crwdne51009:0
-        studio_gumball_6: crwdns51010:0crwdne51010:0
-        studio_gumball_7: crwdns51011:0crwdne51011:0
-        studio_gumball_8: crwdns51012:0crwdne51012:0
-        studio_gumball_9: crwdns51013:0crwdne51013:0
-        studio_gumball_10: crwdns51014:0crwdne51014:0
+        studio_gumball_hello1: crwdns54731:0crwdne54731:0
+        studio_gumball_hello2: crwdns54732:0crwdne54732:0
+        studio_gumball_move_to_flag: crwdns54733:0crwdne54733:0
+        studio_gumball_move_to_actor: crwdns54734:0crwdne54734:0
+        studio_gumball_repeat: crwdns54735:0crwdne54735:0
+        studio_gumball_click_hello: crwdns54736:0crwdne54736:0
+        studio_gumball_move_events: crwdns54737:0crwdne54737:0
+        studio_gumball_sound_and_points: crwdns54738:0crwdne54738:0
+        studio_gumball_warn_food_fight: crwdns54739:0crwdne54739:0
+        studio_gumball_join_food_fight: crwdns54740:0crwdne54740:0
+        studio_gumball_free_play: crwdns54741:0crwdne54741:0
         studio_full_sandbox: crwdns23436:0crwdne23436:0
         studio_k1_1: crwdns5375:0crwdne5375:0
         studio_k1_2: crwdns5376:0crwdne5376:0
@@ -505,6 +506,9 @@ en:
         mc_if_statements: crwdns51945:0crwdne51945:0
         mc_congrats_share: crwdns51946:0crwdne51946:0
         mc_congrats_no_share: crwdns51947:0crwdne51947:0
+        gumball_intro: crwdns54742:0crwdne54742:0
+        gumball_events: crwdns54743:0crwdne54743:0
+        gumball_repeat: crwdns54744:0crwdne54744:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

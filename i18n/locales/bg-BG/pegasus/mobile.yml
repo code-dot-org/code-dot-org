@@ -114,7 +114,6 @@ bg-BG:
   hoc_is_here: '#HourOfCode е тук - вижте го! @codeorg'
   just_did_hoc: 'Преди малко завърших #HourOfCode - вижте го! @codeorg'
   twitter_teach_cs: Защо да не се преподава информатика в повече училища? Можем да поправим това. http://Youtu.be/nKIu9yen5nc. Посетете http://code.org/, за да научите повече.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes"> Научете повече</a> за наградите за всеки учител.'
   learn_hoc: 'Научете се да програмирате с "Часът на кодирането"'
   beyond_hoc: След Часа по Кодиране
   what_gender: Какъв пол сте?
@@ -280,6 +279,7 @@ bg-BG:
   volunteer_engineer_submission_intro_recruit: |-
     Тези учители ще се радват да има някой, <span style="font-family: 'Gotham 7r', sans-serif;"> технически спец,</span> който може да помогне в класната стая, или някой, който може да <span style="font-family: 'Gotham 7r', sans-serif;"> вдъхнови</span> учениците с разговори за многобройните възможности на компютърните науки (което може да бъде направено и чрез видео чат). Ако не желаеш да бъдеш доброволец, <a href="%{url}"> научи повече</a> за възможността сам да организираш Hour of Code събитие.
   volunteer_engineer_submission_intro_signup: 'Моля, въведете следната информация, ако сте студент, учещ компютърни науки или професионален софтуерен инжинер. Полетата, отбелязани със <span class="form-required-field"> *</span> са задължителни.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Информацията, споделена от учители на доброволческата карта
   volunteer_engineer_submission_field_name: Име
   volunteer_engineer_submission_field_name_placeholder: Пълно име
@@ -526,6 +526,11 @@ bg-BG:
   learn_educator_resources_description: Научете как да преподавате Hour of Code
   learn_educator_resources_button: Ресурси за учители
   learn_are_you_educator: 'Вие сте учител? Научете <a href="http://hourofcode.com/resources/how-to"> как да преподавате часът на кода</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes"> Научете повече</a> за наградите за всеки учител.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Опитайте нашите нови уроци за Часа на кода
   hoc2014_try_new_tutorial: Опитайте нашия нов Час на кодирането (бета версия)
   hoc2014_try_scrat: Angry Birds, PvZ и Scrat
@@ -725,7 +730,7 @@ bg-BG:
   projguts_shortdescription: Опитайте моделиране и симулация, използвайки камък/ножица/хартия /
   hourofcode_shortdescription: Научете се да кодирате с Марк Зукерберг и Angry Birds!
   frozen_shortdescription: 'Нека да използваме кода, за да се присъединим към Анна и Елза и заедно  опознаем  магията и красотата на леда.'
-  starwars_shortdescription: Научете се да програмирате дроиди и създайте своя собствена Междузвездни войни игра в галактиката далече, далече.
+  starwars_shortdescription: 'Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.'
   playlab_shortdescription: Създайте история или направете игра с Театрална лаборатория!
   infinity_shortdescription: 'Използвайте "Игрална лаборатория", за да създадете история или игра с участието на героите от Дисни Инфинити.'
   artist_shortdescription: Начертайте готини картинки и дизайни с художника!

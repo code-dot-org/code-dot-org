@@ -118,7 +118,6 @@ ar-SA:
   twitter_teach_cs: |
     لماذا لا تعلّم المزيد من المدارس علوم الحاسب؟ بإمكاننا إصلاح ذلك. http://youtu.be/nKIu9yen5nc.
     قم بزيارة http://code.org لمعرفة المزيد.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">تعلم المزيد</a> حول جوائز كل معلم.'
   learn_hoc: تعلم ساعة من البرمجة
   beyond_hoc: بعد تعلم ساعة من البرمجة
   what_gender: ماهو جنسك؟
@@ -275,15 +274,16 @@ ar-SA:
   mc_shortdescription: استخدم القطع البرمجية لاخذ ستبف و ألكس في مغامرة من خلال عالم ماين كرافت.
   mc_gradelevel: الاعمار 6 +
   mc_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: العديد من اللغات (ستتوفر قريبا) للمتصفحات الحديثة و الحواسيب المحمولة الصغيرة | الاعمار 6 +
   minecraft_subtitle: ساعة البرمجة ماين كرافت
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
+  volunteer_engineer_submission_title: 'ألهم الطلاب و تطوع لأجل "Hour of code".'
   volunteer_engineer_submission_subtitle_generic: '100.000 مدرس سيقدمون فعالية "ساعة برمجة" في أقسامهم هذه السنة، من 07 إلى 13 ديسمبر 2015. إنهم يحتاجون ساعدتكم'
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} مدرسين يريدون متطوعين شغوفين بتعليم علوم الحاسوب لمساعدتهم في "Hour of code" في ديسمبر الحالي. <br>%{num_volunteers} متطوعين انضموا. كن واحداً منهم.'
   volunteer_engineer_submission_intro_background: 'فعالية "ساعة برمجة" هي حركة عالمية لتقديم ساعة من علوم الحاسب، ستصل إلى عشرات الملاين من الطلبة في أكثر من 180 دولة. من فضلك انضم إلينا خلال "أسبوع تعليم علوم الحاسب"، 07-13 ديسمبر.'
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    سيحب المعلمين الحصول على أشخاص <span style="font-family: 'Gotham 7r', sans-serif;"> شغوفين بتعليم علوم الحاسوب </span> و يستطيعون المساعدة في الفصول او اشخاص يستطيعون <span style="font-family: 'Gotham 7r', sans-serif;"> الهام </span> طلابهم عن طريق التحدث معهم عن الامكانيات المهولة المتاحة عن طريق علوم الحاسوب ( و يكمن عمل هذا عن طريق محادثة مُصورة عبر الانترنت). اذا كنت لا تريد ان تتطوع <a href="%{url}"> تعلم المزيد </a> عن تنظيم "Hour of code" الخاص بك.
   volunteer_engineer_submission_intro_signup: 'الرجاء إدخال المعلومات التالية إذا كنت طالب علوم الحاسوب أو مختص في البرمجة. ادخال الحقول ب  <span class="form-required-field"> *</span> لازمة.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: معلومات مشتركة مع المدرسيين علي خريطة التطوع
   volunteer_engineer_submission_field_name: الاسم
   volunteer_engineer_submission_field_name_placeholder: الأسم بالكامل
@@ -369,7 +369,7 @@ ar-SA:
   dashboard_k5_courses: 20 ساعة من الدروس لأطفال
   dashboard_k5_courses_desc: 'تمزج هذه الدورات بين جزء على الإنترنت، دروس ذات توجيه الذاتي حسب النسق الشخصي و الأنشطة "الغير موصولة" و هي لا  تتطلب  حاسوب. كل دورة تتكون من حوالي 20 درس، و يمكن تنفيذها كوحدة أو على مدى فصل دراسي. حتى التلاميذ في رياض الأطفال و بدون أي معرفة بالقراءة يمكنهم المشاركة. لمساعدتك على البدء، نحن نقدم ورشات عمل في التطوير المهني عالية الجودة حول الولايات المتحدة مجاناً. <a href="/professional-development-workshops"> العثور على واحد قريب منك!</a>'
   dashboard_middle_courses: مساقات العشرون ساعة للمدارس المتوسطة / الإعدادية
-  dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
+  dashboard_middle_courses_desc: 'منهجنا للمدارس الاعدادية يستعمل علوم الحاسوب و البرمجة في نطاق دراسة الرياضيات و العلوم للسنوات الاعدادية - كوسيلة لتعليم مبادئ الرياضيات و العلوم. للتسجيل في ورش العمل المتخصصة. قدِّم علي <a href="/educate/districts"> منحة للمنطقة السكنية الخاصة بك </a> مع Code.org.'
   dashboard_high_courses: مقررات الثانوية العامة مدى العام
   dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
   dashboard_course_csina: Computer Science in Algebra
@@ -402,7 +402,7 @@ ar-SA:
   dashboard_navigation_section_speakers: 'علوم الحاسب الآلي <br/> المتحدثين الضيوف'
   dashboard_navigation_all_sections: حسابات و سير الطلاب
   dashboard_navigation_view_progress: عرض عملية التقدم
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: اظهار الردود النصيّة
   dashboard_navigation_add_students: إضافة طلاب
   dashboard_navigation_manage_students: إدارة الطلاب
   dashboard_navigation_lesson_plans_resources: خطط الدرس والموارد
@@ -532,14 +532,19 @@ ar-SA:
   learn_educator_resources_description: 'التعرف على كيفية تعليم "ساعة البرمجة"'
   learn_educator_resources_button: موارد المعلم
   learn_are_you_educator: 'هل أنت معلم؟ التعرف على <a href="http://hourofcode.com/resources/how-to"> كيفية تعليم "ساعة البرمجة"</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">تعلم المزيد</a> حول جوائز كل معلم.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: جرّب الدروس الجديدة لساعة البرمجة
   hoc2014_try_new_tutorial: 'جرب درس ساعة من البرمجة الجديد في "بيتا - التجريبي"'
   hoc2014_try_scrat: Angry Birds, PvZ, و Scrat
   hoc2014_try_frozen: الفنان مع آنا و إلسا, من Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: الدروس مقدمة لكم عن طريق Code.org
+  carousel_heading_codeorg_any_device: الدروس مقدمة لكم عن طريق Code.org ( لجميع الاجهزة)
+  carousel_heading_3rd_party: الدروس مقدمة لكم عن طريق طرف ثالث
+  carousel_heading_third_party: الدروس مقدمة لكم عن طريق اطراف اخرى
   carousel_heading_international: دروس تعليمية بلغتك
   carousel_heading_domestic: البرامج التعليمية المتوفرة باللغة الإنجليزية
   carousel_heading_beginners: دروس للمبتدئين

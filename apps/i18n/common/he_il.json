@@ -119,7 +119,7 @@
   "dropletBlock_mathMin_param0_description": "One or more numbers to compare.",
   "dropletBlock_mathMin_signatureOverride": "Math.min(n1, n2, ..., nX)",
   "dropletBlock_mathRandom_description": "מחזיר מספר אקראי הנע בין 0 (כולל) עד 1 (לא כולל)",
-  "dropletBlock_mathRandom_signatureOverride": "Math.random()",
+  "dropletBlock_mathRandom_signatureOverride": "בחר.אקראי()",
   "dropletBlock_mathRound_description": "Round to the nearest integer",
   "dropletBlock_mathRound_param0": "x",
   "dropletBlock_mathRound_param0_description": "An arbitrary number.",

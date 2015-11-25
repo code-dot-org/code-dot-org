@@ -114,7 +114,6 @@ ka-GE:
   hoc_is_here: '#HourOfCode გელით - ეწვიეთ! @codeorg'
   just_did_hoc: 'ახლახან დავასრულე #HourOfCode - ნახე! @codeorg'
   twitter_teach_cs: რატომ არ ისწავლება პროგრამირება ყველა სკოლაში? ჩვენ შეგვიძლია ამის გამოსწორება. ttp://youtu.be/nKIu9yen5nc. ეწვიეთ საიტს http://code.org/ და გაიგეთ მეტი.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">გაიგეთ მეტი</a> მასწავლებლების პრიზების შესახებ.'
   learn_hoc: ისწავლეთ კოდის ერთი საათის განმავლობაში
   beyond_hoc: ერთი საათის შემდეგ
   what_gender: თქვენი სქესი?
@@ -280,6 +279,7 @@ ka-GE:
   volunteer_engineer_submission_intro_recruit: |-
     მასწავლებლებს გაუხარდებოდათ, რომ ჰყავდეთ <span style="font-family: 'Gotham 7r', sans-serif;">ვინმე, ვისაც უყვარს პროგრამირება და ინფორმატიკა</span> და შეუძლია დაეხმაროს მათ კლასსში, ან ვინმე, <span style="font-family: 'Gotham 7r', sans-serif;"> ვინც შეძლებდა, შთაეგონებინა</span> მოსავლეები, მოეყოლა ინფორმატიკის უსაზღვრო შესაძლებლობების შესახებ (თუნდაც ვიდეო-ჩატით). თუ მოხალისეობა არ გინდათ, <a href="%{url}">გაიგეთ</a>, როგორ ჩაატაროთ თქვენი საკუთარი კოდის ერთი საათი.
   volunteer_engineer_submission_intro_signup: 'შეავსეთ შემდეგი ველები, თუ ხართ კომპიუტერული მეცნიერების სტუდენტი ან დეველოპერი. ველები, რომლებიც მონიშნულია ასე <span class="form-required-field">*</span> სავალდებულოა.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: მოხალისეთა რუკაზე მასწავლებლებთან გაზიარებული ინფორმაცია
   volunteer_engineer_submission_field_name: სახელი
   volunteer_engineer_submission_field_name_placeholder: სრული სახელი
@@ -526,6 +526,11 @@ ka-GE:
   learn_educator_resources_description: გაიგეთ, როგორ ჩაატაროთ კოდის ერთი საათი
   learn_educator_resources_button: პედაგოგის რესურსები
   learn_are_you_educator: 'მასწავლებელი ხართ? გაიგეთ,<a href="http://hourofcode.com/resources/how-to"> როგორ გაუძღვეთ კოდის ერთ საათს</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">გაიგეთ მეტი</a> მასწავლებლების პრიზების შესახებ.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: ნახეთ ჩვენი ახალი კოდის ერთი საათის გაკვეთილები
   hoc2014_try_new_tutorial: 'ნახეთ "კოდის ერთი საათის" ახალი ტუტორიალის ბეტა-ვერსია'
   hoc2014_try_scrat: Angry Birds, PvZ და Scrat
