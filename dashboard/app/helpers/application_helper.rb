@@ -64,8 +64,9 @@ module ApplicationHelper
 
   def level_info(user, script_level, user_levels)
     if user
-      ul = user_levels[script_level.level_id]
-      ul.try(:best_result) if ul
+      user_levels[script_level.level_id].try(:best_result) || 0
+    else
+      0
     end
   end
 
