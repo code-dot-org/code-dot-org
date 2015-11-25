@@ -257,9 +257,11 @@ class ScriptTest < ActiveSupport::TestCase
   test 'hoc?' do
     assert Script.find_by_name('flappy').hoc?
     assert Script.find_by_name('mc').hoc?
-    assert Script.find_by_name('20-hour').hoc?
+    assert Script.find_by_name('hourofcode').hoc?
+    assert Script.find_by_name('Hour of Code').hoc?
     assert Script.find_by_name('frozen').hoc?
     assert Script.find_by_name('playlab').hoc?
+    assert_not Script.find_by_name('20-hour').hoc?
     assert_not Script.find_by_name('course1').hoc?
     assert_not Script.find_by_name('course2').hoc?
     assert_not Script.find_by_name('course3').hoc?
