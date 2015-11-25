@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-require 'mocha/api'
 require 'test_helper'
 
 class ActivitiesControllerTest < ActionController::TestCase

@@ -1,11 +1,7 @@
-gem 'mocha'
-require 'mocha/api'
-require 'mocha/mini_test'
 require 'test_helper'
-include ActionDispatch::TestProcess
 
 class LevelTest < ActiveSupport::TestCase
-  include Mocha::API
+  include ActionDispatch::TestProcess
 
   setup do
     @turtle_data = {:game_id=>23, :name=>"__bob4", :level_num=>"custom", :skin=>"artist", :instructions=>"sdfdfs", :type=>'Artist'}
