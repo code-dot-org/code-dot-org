@@ -10,7 +10,7 @@ theme: none
 
   -course = request.params['course'] || nil
 
-  - if course == "20hours"
+  - if course == "20-hour"
     - small_certificate_image_url = "/images/fit-240/20hours_certificate.jpg"
     - course_name = "K-8 Intro to Computer Science Course"
   - elsif course == "mc"
@@ -47,7 +47,7 @@ theme: none
   -sponsor = request.params['sponsor']
 
   %div.hide-print
-    -if course == "20hours"
+    -if course == '20-hour'
       %h1 K-8 Intro to Computer Science Course Certificates
     -else
       %h1 Hour of Code Certificates

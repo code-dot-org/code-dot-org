@@ -4,8 +4,8 @@ Title: Print Certificates
 -personalized = (request.site == 'uk.code.org') ? 'personalised' : 'personalized'
 
 -course = request.params['course'] || nil
--course_name = course == "20hours" || course == "20-hour" ? "K-8 Intro to Computer Science Course" : "Hour of Code"
--if course == "20hours" || course == "20-hour"
+-course_name = course == "20-hour" ? "K-8 Intro to Computer Science Course" : "Hour of Code"
+-if course == "20-hour" || course == "20-hour"
   -small_certificate_image_url = "/images/fit-240/20hours_certificate.jpg"
 -elsif course == "hoc" || course == "hourofcode" || course == nil
   -small_certificate_image_url = "/images/fit-240/hour_of_code_certificate.jpg"

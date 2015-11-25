@@ -70,7 +70,7 @@ get '/v2/hoc/certificate/:filename' do |filename|
   pass unless extnames.include?(extname)
 
   format = extname[1..-1]
-  image = create_course_certificate_image(data['name'], data['course'], data['sponsor'])
+  image = create_course_certificate_image(data['name'], data['course'], data['sponsor'], data['course_title'])
   image.format = format
 
   content_type format.to_sym

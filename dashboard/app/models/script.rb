@@ -230,6 +230,10 @@ class Script < ActiveRecord::Base
     self.name == FLAPPY_NAME
   end
 
+  def minecraft?
+    self.name == MINECRAFT_NAME
+  end
+
   def find_script_level(level_id)
     self.script_levels.detect { |sl| sl.level_id == level_id }
   end

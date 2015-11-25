@@ -86,16 +86,17 @@ class ApplicationHelperTest < ActionView::TestCase
   test 'certificate images for hoc-type scripts are all hoc certificates' do
     # old hoc, new hoc, frozen, flappy, playlab, and starwars are all the same certificate
     user = create :user
-    hoc_2013 = Script.get_from_cache(Script::HOC_2013_NAME)
-    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::HOC_NAME))
-    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::FROZEN_NAME))
-    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::FLAPPY_NAME))
-    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::PLAYLAB_NAME))
-    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::STARWARS_NAME))
-
-     # but course1 is a different certificate
-    assert_not_equal script_certificate_image_url(user, Script.get_from_cache(Script::HOC_2013_NAME)), script_certificate_image_url(user, Script.get_from_cache(Script::COURSE1_NAME))
-    assert_not_equal script_certificate_image_url(user, Script.get_from_cache(Script::HOC_2013_NAME)), script_certificate_image_url(user, Script.get_from_cache(Script::MINECRAFT_NAME))
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::HOC_2013_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::HOC_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::FROZEN_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::FLAPPY_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::PLAYLAB_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::STARWARS_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE1_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE2_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE3_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE4_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::MINECRAFT_NAME)
   end
 
   test 'client state lines' do
@@ -211,5 +212,18 @@ class ApplicationHelperTest < ActionView::TestCase
   private
   def assert_equal_unordered(array1, array2)
     Set.new(array1) == Set.new(array2)
+  end
+
+  def assert_certificate_url_encodes(user, script)
+    url = script_certificate_image_url(user, script)
+    uri = URI.parse(url)
+    filename = uri.path
+    extname = File.extname(filename)
+    encoded = File.basename(filename, extname)
+    data = JSON.parse(Base64.urlsafe_decode64(encoded))
+
+    assert_equal user.name, data['name']
+    assert_equal script.name, data['course']
+    assert_equal data_t_suffix('script.name', script.name, 'title'), data['course_title']
   end
 end

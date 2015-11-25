@@ -105,6 +105,7 @@ class HocRoutesTest < Minitest::Test
       assert_datetime_within(after_end_row[:finished_at], before_ended_time, after_ended_time)
     end
 
+    private
     def assert_datetime_within(after_start_time, before_begin_time, after_begin_time)
       assert (before_begin_time..after_begin_time).cover?(after_start_time)
     end
