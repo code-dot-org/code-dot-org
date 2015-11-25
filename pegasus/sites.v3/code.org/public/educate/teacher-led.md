@@ -2,7 +2,7 @@
 title: Teacher led Hour of Code lesson plans - by grade and subject
 nav: educate_nav
 ---
-# Teacher Led Hour of Code Lesson Plans
+# Teacher-Led Hour of Code Lesson Plans
 
 Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans. 
 
