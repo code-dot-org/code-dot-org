@@ -53,7 +53,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Create your own \"Chaser App\". (Click to see full instructions)",
+    "instructions": "Create your own \"Chaser Game.\" (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -72,7 +72,7 @@
     "autocomplete_palette_apis_only": "true",
     "app_width": "320",
     "app_height": "480",
-    "markdown_instructions": "# Chaser Game\r\n\r\nYou now have all the skills you need to make a simple \"chaser\" game. A chaser game is just a game where an image runs away from your mouse.\r\n<img src=\"https://images.code.org/ed1e9852b33ca368cf8cd8e0b0159de7-image-1444336815528.gif\" style=\"float: right\">\r\n\r\n# Do This\r\n\r\n**Create a \"Chaser Game\"** which includes the following components:\r\n\r\n* **text** on the top of the screen with a title or instructions for what to do\r\n* **an image** that \"runs away\" (moves randomly) based on some mouse event\r\n\r\nOnce you have the basic functionality down feel free to spend time adding more features to your application.\r\n<br><br><br>\r\n\r\n",
+    "markdown_instructions": "# Chaser Game\r\n\r\nYou now have all the skills you need to make a simple \"chaser\" game. A chaser game is just a game where an image runs away from your mouse.\r\n<img src=\"https://images.code.org/ed1e9852b33ca368cf8cd8e0b0159de7-image-1444336815528.gif\" style=\"float: right\">\r\n\r\n# Do This:\r\n\r\n**Create a \"Chaser Game\"** which includes the following components:\r\n\r\n* **Text** on the top of the screen with a title or instructions for what to do.\r\n* **An image** that \"runs away\" (moves randomly) based on some mouse event.\r\n\r\nOnce you have the basic functionality down feel free to spend time adding more features to your application.\r\n<br><br><br>\r\n\r\n",
     "never_autoplay_video": "false",
     "slider_speed": "1",
     "examples_required": "false",
@@ -85,7 +85,9 @@
     "encrypted_examples": "Wk3hzX9XIob7GjrQL7HolAbzNsZb03o+QBTNsk2Vc3AG733OFJ1Mc1uRjkWt\nIpqY\n",
     "project_template_level_name": "U3L16 - projectTemplate",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>
