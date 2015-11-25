@@ -1,47 +1,26 @@
 ---
 theme: responsive
 banner: null
-<%
-  if request.site == 'csedweek.org'
-%>
 social:
-  "og:title": "The Hour of Code is here"
-  "og:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104."
-  "og:image": "http://csedweek.org/images/hoc-video-thumbnail.jpg"
+  "og:title": "The Hour of Code is coming"
+  "og:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104."
+  "og:image": "http://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg"
   "og:image:width": "1200"
   "og:image:height": "627"
-  "og:video:url": "http://youtubeeducation.com/v/FC5FbmsH4fw"
-  "og:video:secure_url": "https://youtubeeducation.com/v/FC5FbmsH4fw"
+  "og:video:url": "http://youtubeeducation.com/v/2DxWIxec6yo"
+  "og:video:secure_url": "https://youtubeeducation.com/v/2DxWIxec6yo"
   "og:video:type": "application/x-shockwave-flash"
   "og:video:width": "640"
   "og:video:height": "360"
   "twitter:card": "player"
   "twitter:site": "@codeorg"
   "twitter:url": "http://code.org/"
-  "twitter:title": "The Hour of Code is here"
-  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104."
-  "twitter:image:src": "http://csedweek.org/images/hoc-video-thumbnail.jpg"
-  "twitter:player": "https://youtubeeducation.com/v/FC5FbmsH4fw"
+  "twitter:title": "The Hour of Code is coming"
+  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104."
+  "twitter:image:src": "http://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg"
+  "twitter:player": "https://youtubeeducation.com/v/2DxWIxec6yo"
   "twitter:player:width": "640"
   "twitter:player:height": "360"
-<%
-  else
-%>
-social:
-  "og:title": "Every child deserves opportunity"
-  "og:description": "Every student in every school deserves the opportunity to study computer science."
-  "og:image": "http://code.org/images/code-video-thumbnail.jpg"
-  "og:image:width": "1440"
-  "og:image:height": "810"
-  "og:video:url": "http://youtubeeducation.com/v/nKIu9yen5nc"
-  "og:video:secure_url": "https://youtubeeducation.com/v/nKIu9yen5nc"
-  "og:video:type": "application/x-shockwave-flash"
-  "og:video:width": "640"
-  "og:video:height": "360"
-<%
-  end
-%>
-
 ---
 - if request.site == 'csedweek.org'
   %div
@@ -50,7 +29,7 @@ social:
   %div.desktop-feature
     = view :index_loc
 
--facebook = {:u=>"http://#{request.site}/"}
+-facebook = {:u=>"https://#{request.site}/"}
 
 -if request.site == 'csedweek.org'
   -twitter = {:related=>'codeorg', :hashtags=>'', :text=>I18n.t(:hoc_is_here)}
@@ -102,9 +81,9 @@ social:
         %a{:href=>'/learn/beyond', :style=>'font-size: 16px; color: white'}
           =I18n.t :homepage_action_text_volunteers
 
-    -download_filename = 'HoC-video-15mb.mp4'
+    -download_filename = 'hourofcode-2015-50MB.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
-      = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/#{download_filename}"
+      = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://videos.code.org/social/#{download_filename}"
 
   -if request.site != 'csedweek.org'
     #header-social-links.desktop-feature{style: "margin: 15px 0 0 0; float: right;"}
