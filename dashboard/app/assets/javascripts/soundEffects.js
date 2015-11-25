@@ -276,6 +276,18 @@ Sounds.prototype.playURL = function (url, playbackOptions) {
   }
 };
 
+/**
+ * @param {!string} url
+ * @returns {boolean} whether the given sound is currently playing.
+ */
+Sounds.prototype.isPlayingURL = function (url) {
+  var sound = this.soundsById[url];
+  if (sound) {
+    return sound.isPlaying();
+  }
+  return false;
+};
+
 Sounds.prototype.stopLoopingAudio = function (soundId) {
   var sound = this.soundsById[soundId];
   sound.stop();
@@ -301,6 +313,13 @@ function Sound(config, audioContext) {
   this.audioElement = null; // if HTML5 Audio
   this.reusableBuffer = null; // if Web Audio
   this.playableBuffer = null; // if Web Audio
+
+  /**
+   * @private {boolean} Whether the sound is currently playing - sadly, neither
+   *          audio system tracks this for us particularly well so we have to
+   *          do it ourselves.
+   */
+  this.isPlaying_ = false;
 }
 
 /**
@@ -319,10 +338,12 @@ Sound.prototype.play = function (options) {
     this.playableBuffer = this.newPlayableBufferSource(this.reusableBuffer, options);
 
     // Hook up on-ended callback, although browser support may be limited.
-    // Don't make anything depend on this callback happening.
-    if (options.onEnded) {
-      this.playableBuffer.onended = options.onEnded;
-    }
+    this.playableBuffer.onended = function () {
+      this.isPlaying_ = false;
+      if (options.onEnded) {
+        options.onEnded();
+      }
+    }.bind(this);
 
     // Play sound, supporting older versions of the Web Audio API which used noteOn(Off).
     if (this.playableBuffer.start) {
@@ -330,6 +351,7 @@ Sound.prototype.play = function (options) {
     } else {
       this.playableBuffer.noteOn(0);
     }
+    this.isPlaying_ = true;
     return;
   }
 
@@ -342,18 +364,20 @@ Sound.prototype.play = function (options) {
       Math.max(0, Math.min(1, options.volume));
   this.audioElement.volume = volume;
   this.audioElement.loop = !!options.loop;
-  if (options.onEnded) {
-    var unregisterAndCallback = function () {
-      this.audioElement.removeEventListener('abort', unregisterAndCallback);
-      this.audioElement.removeEventListener('ended', unregisterAndCallback);
-      this.audioElement.removeEventListener('pause', unregisterAndCallback);
+  var unregisterAndCallback = function () {
+    this.audioElement.removeEventListener('abort', unregisterAndCallback);
+    this.audioElement.removeEventListener('ended', unregisterAndCallback);
+    this.audioElement.removeEventListener('pause', unregisterAndCallback);
+    this.isPlaying_ = false;
+    if (options.onEnded) {
       options.onEnded();
-    }.bind(this);
-    this.audioElement.addEventListener('abort', unregisterAndCallback);
-    this.audioElement.addEventListener('ended', unregisterAndCallback);
-    this.audioElement.addEventListener('pause', unregisterAndCallback);
-  }
+    }
+  }.bind(this);
+  this.audioElement.addEventListener('abort', unregisterAndCallback);
+  this.audioElement.addEventListener('ended', unregisterAndCallback);
+  this.audioElement.addEventListener('pause', unregisterAndCallback);
   this.audioElement.play();
+  this.isPlaying_ = true;
 };
 
 Sound.prototype.stop = function () {
@@ -375,6 +399,14 @@ Sound.prototype.stop = function () {
       throw e;
     }
   }
+  this.isPlaying_ = false;
+};
+
+/**
+ * @returns {boolean} whether the sound is currently playing.
+ */
+Sound.prototype.isPlaying = function () {
+  return this.isPlaying_;
 };
 
 Sound.prototype.newPlayableBufferSource = function(buffer, options) {
