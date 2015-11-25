@@ -2,8 +2,11 @@
 # A service for processing a set of SQS queues defined by a config file.
 # Usage ./process_queues QUEUE_CONFIG.JSON
 
+require 'logger'
+
 puts "Loading environment..."
 require_relative '../../config/environment'
+puts "Loaded, press ^C to stop"
 
 require 'json'
 require 'pp'
@@ -14,8 +17,11 @@ require 'sqs/queue_processor'
 # A manager for starting and stopping a set of queue processors based
 # on a JSON config file.
 class QueueProcessorManager
-  def initialize
+  attr_accessor :logger
+
+  def initialize(logger = Logger.new(STDOUT))
     @processors = []
+    @logger = logger
   end
 
   # Starts as set of queue processors based on a config hash.
@@ -24,7 +30,7 @@ class QueueProcessorManager
     metrics_map = {}
     configs = SQS::QueueProcessorConfig::create_configs_from_json(json)
     configs.each do |config|
-      puts "Starting queue processor for #{config.name}"
+      logger.info "Starting queue processor for #{config.name}"
       sqs_metrics = SQS::Metrics.new
       metrics_map[config.name] = sqs_metrics
       processor = SQS::QueueProcessor.new(config, sqs_metrics)
@@ -48,25 +54,23 @@ class QueueProcessorManager
     end
   end
 
-  def main
+  def run
     if ARGV.size < 1
       puts "Usage: #{$0} CONFIG_FILE.json [UPDATE-INTERVAL]"
       exit 0
     end
-
-    manager = QueueProcessorManager.new
     json = File.open(ARGV[0]).read
 
     update_interval = (ARGV.size >= 2) ? ARGV[1].to_i : 10
     update_interval = 1 if update_interval < 1  # Don't update too quickly.
 
-    metrics_map = manager.start_queue_processors(json)
+    metrics_map = start_queue_processors(json)
 
     # Run until SIGINT is received.
     stopping = false
     exit_proc = Proc.new {
       puts "Shutting down, please wait..."
-      manager.stop_queue_processors unless stopping
+      stop_queue_processors unless stopping
       stopping = true
       exit
     }
@@ -77,11 +81,10 @@ class QueueProcessorManager
       exit_proc.call
     }
 
-    puts "Press ^C to stop"
     time = 0
     loop do
       metrics_map.each do |k,v|
-        puts "#{k}: #{v}  time=#{time}"
+        logger.info "#{k}: #{v}  time=#{time}"
         time += 1
       end
       interruptible_sleep update_interval
@@ -97,4 +100,4 @@ class QueueProcessorManager
   end
 end
 
-QueueProcessorManager.new.main
+QueueProcessorManager.new.run
