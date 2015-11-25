@@ -239,7 +239,7 @@ Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
 end
 
 Then /^mark the current level as completed on the client/ do
-  @browser.execute_script %q-$.cookie('progress', '{"hourofcode":{"' + appOptions.serverLevelId + '":100}}')-
+  @browser.execute_script %q-sessionStorage.setItem('progress', '{"hourofcode":{"' + appOptions.serverLevelId + '":100}}')-
 end
 
 # The second regex matches strings in which all double quotes and backslashes
