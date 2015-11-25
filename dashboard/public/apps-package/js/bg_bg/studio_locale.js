@@ -900,10 +900,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Поздравления, добавихте код за да направите Дроид Мишка. Можете да отидете на следвашият пъзел или да се върнете на този и да получите още 20Дроида Мишки"},
 "failedChangeSettingTimeout":function(d){return "Стигни до трима Бунтовник пилоти, за да продължиш."},
 "failedChangeSettingSettings":function(d){return "Направете своя собствена игра. За да завършите пъзела, трябва да промените дроида и посочите скоростта му."},
+"extraFunction":function(d){return "You have renamed a function to "+studio_locale.v(d,"funcName")+" but it won't work. You should use the original function name."},
+"localFunction":function(d){return "You have placed "+studio_locale.v(d,"funcName")+" inside another function. You should move "+studio_locale.v(d,"funcName")+" to a different location in your program."},
 "playSoundR2D2Random":function(d){return "play R2-D2 random sound"},
 "playSoundC3PORandom":function(d){return "play C-3PO random sound"},
 "playSoundPufferPigRandom":function(d){return "play Puffer Pig random sound"},
 "playSoundTauntaunRandom":function(d){return "play Tauntaun random sound"},
 "playSoundMynockRandom":function(d){return "play Mynock random sound"},
 "playSoundProbotRandom":function(d){return "play Probot random sound"},
-"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"}};
+"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"},
+"setBackgroundIceberg":function(d){return "set icebergs background"}};

@@ -745,11 +745,14 @@
   "failedMultiplyCharactersTimeoutGotSome": "Félicitations, Tu as ajouté du code pour fabriquer des Droïdes Souris. Tu peux passer au prochain puzzle ou essayer à nouveau d'obtenir 20 Droïdes Souris. Essaye de le rendre plus facile en en ajoutant plus ! (Maintiens les touches du clavier (ou de l'écran) enfoncées pour aller plus vite.)",
   "failedChangeSettingTimeout": "Atteins trois Pilotes Rebelles de passer.",
   "failedChangeSettingSettings": "Fais ton propre jeu. Pour réussir ce puzzle, tu devras modifier ton droïde et régler sa vitesse.",
+  "extraFunction": "You have renamed a function to {funcName} but it won't work. You should use the original function name.",
+  "localFunction": "You have placed {funcName} inside another function. You should move {funcName} to a different location in your program.",
   "playSoundR2D2Random": "play R2-D2 random sound",
   "playSoundC3PORandom": "play C-3PO random sound",
   "playSoundPufferPigRandom": "play Puffer Pig random sound",
   "playSoundTauntaunRandom": "play Tauntaun random sound",
   "playSoundMynockRandom": "play Mynock random sound",
   "playSoundProbotRandom": "play Probot random sound",
-  "playSoundMouseDroidRandom": "play Mouse Droid random sound"
+  "playSoundMouseDroidRandom": "play Mouse Droid random sound",
+  "setBackgroundIceberg": "set icebergs background"
 }

@@ -900,10 +900,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Felicitaciones, has agregado código para hacer Droides Ratón. Puedes ir al siguiente rompecabezas o intentar otra vez conseguir 20 Ratónes Droide. Trata de hacerlo más fácil agregando más de ellos! (Presione y sostenga las teclas de tu teclado (o pantalla) para moverse más rápido.)"},
 "failedChangeSettingTimeout":function(d){return "Obten tres pilotos rebeldes para seguir adelante."},
 "failedChangeSettingSettings":function(d){return "Crea tu propio juego. Para pasar este rompecabezas, necesitas cambiar tu droide y establecer su velocidad."},
+"extraFunction":function(d){return "You have renamed a function to "+studio_locale.v(d,"funcName")+" but it won't work. You should use the original function name."},
+"localFunction":function(d){return "You have placed "+studio_locale.v(d,"funcName")+" inside another function. You should move "+studio_locale.v(d,"funcName")+" to a different location in your program."},
 "playSoundR2D2Random":function(d){return "play R2-D2 random sound"},
 "playSoundC3PORandom":function(d){return "play C-3PO random sound"},
 "playSoundPufferPigRandom":function(d){return "play Puffer Pig random sound"},
 "playSoundTauntaunRandom":function(d){return "play Tauntaun random sound"},
 "playSoundMynockRandom":function(d){return "play Mynock random sound"},
 "playSoundProbotRandom":function(d){return "play Probot random sound"},
-"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"}};
+"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"},
+"setBackgroundIceberg":function(d){return "set icebergs background"}};

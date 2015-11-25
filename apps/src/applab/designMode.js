@@ -313,8 +313,6 @@ designMode.updateProperty = function(element, name, value) {
     case 'is-default':
       if (value === true) {
         // Make this one default
-        $('#designModeViz .screen').attr('data-is-default', false);
-        element.setAttribute('data-is-default', true);
         $('#designModeViz').prepend(element);
 
         //Resort elements in the dropdown list
@@ -338,8 +336,6 @@ designMode.updateProperty = function(element, name, value) {
         $('#screenSelector').html(options);
         $('#screenSelector')[0].selectedIndex = 0;
 
-      } else {
-        element.setAttribute('data-is-default', false);
       }
       break;
     default:
@@ -366,9 +362,6 @@ designMode.onDeletePropertiesButton = function(element, event) {
 
   if (isScreen) {
     designMode.loadDefaultScreen();
-    if ($('#designModeViz .screen[data-is-default=true]').length === 0) {
-      $('#designModeViz .screen').first().attr('data-is-default', true);
-    }
   } else {
     designMode.editElementProperties(elementUtils.getPrefixedElementById(currentScreenId));
   }
@@ -781,7 +774,6 @@ designMode.configureDesignToggleRow = function () {
  */
 designMode.createScreen = function () {
   var newScreen = elementLibrary.createElement('SCREEN', 0, 0);
-  newScreen.setAttribute('data-is-default', $('#designModeViz .screen').length === 0);
   $("#designModeViz").append(newScreen);
 
   return elementUtils.getId(newScreen);

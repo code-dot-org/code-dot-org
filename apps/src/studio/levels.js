@@ -245,7 +245,7 @@ levels.playlab_1 = utils.extend(levels.dog_hello, {
 });
 
 levels.iceage_1 = utils.extend(levels.playlab_1, {
-  background: 'icy',
+  background: 'iceberg',
   firstSpriteIndex: 0, // manny
 });
 levels.gumball_hello1 = utils.extend(levels.playlab_1, {
@@ -422,7 +422,7 @@ levels.playlab_3 = {
   ]
 };
 levels.iceage_3 = utils.extend(levels.playlab_3, {
-  background: 'grassy',
+  background: 'icy',
   firstSpriteIndex: 2, // scrat
 });
 levels.gumball_move_to_flag = utils.extend(levels.playlab_3, {
@@ -548,7 +548,7 @@ levels.playlab_4 = {
   ],
 };
 levels.iceage_4 = utils.extend(levels.playlab_4, {
-  background: 'grassy',
+  background: 'icy',
   avatarList: ['scrat', 'granny']
 });
 levels.gumball_move_to_actor = utils.extend(levels.playlab_4, {
@@ -607,7 +607,7 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
 });
 levels.iceage_5 = utils.extend(levels.playlab_5, {
-  background: 'icy',
+  background: 'iceberg',
   firstSpriteIndex: 1, // sid
 });
 
@@ -896,7 +896,7 @@ levels.playlab_7 = {
   ],
 };
 levels.iceage_7 = utils.extend(levels.playlab_7, {
-  background: 'icy',
+  background: 'iceberg',
   firstSpriteIndex: 1, // sid
 });
 levels.gumball_repeat = utils.extend(levels.playlab_7, {
@@ -2199,6 +2199,7 @@ levels.js_hoc2015_event_two_items = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'background': 'hoth',
   'music': [ 'song7' ],
   'wallMap': 'blank',
@@ -2296,6 +2297,7 @@ levels.js_hoc2015_event_four_items = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'background': 'hoth',
   'music': [ 'song5' ],
   'wallMap': 'blobs',
@@ -2361,6 +2363,7 @@ levels.js_hoc2015_score =
   'avatarList': ['R2-D2'],
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'editCode': true,
   'background': 'hoth',
   'music': [ 'song6' ],
@@ -2484,6 +2487,7 @@ levels.js_hoc2015_win_lose = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'background': 'endor',
   'music': [ 'song9' ],
   'wallMap': 'blobs',
@@ -2587,6 +2591,7 @@ levels.js_hoc2015_add_characters = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'background': 'endor',
   'music': [ 'song11' ],
   'wallMap': 'circle',
@@ -2687,6 +2692,7 @@ levels.js_hoc2015_chain_characters = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'background': 'starship',
   'music': [ 'song13' ],
   'wallMap': 'horizontal',
@@ -2787,6 +2793,7 @@ levels.js_hoc2015_multiply_characters = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'background': 'starship',
   'music': [ 'song12' ],
   'wallMap': 'grid',
@@ -2874,6 +2881,7 @@ levels.js_hoc2015_change_setting = {
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
+  preventUserDefinedFunctions: true,
   'background': 'starship',
   'music': [ 'song14' ],
   'wallMap': 'blobs',

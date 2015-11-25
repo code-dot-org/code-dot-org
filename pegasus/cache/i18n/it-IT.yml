@@ -12,7 +12,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Sei un insegnante interessato all''Informatica? Guarda
     le altre risorse disponibili</a>'
-  n_have_learned_an_hoc: "<h1>Prova una</h1><h3># completa</h3><h2>Ora del Codice</h2>"
+  n_have_learned_an_hoc: <h1>Prova una</h1><h3># completa</h3><h2>Ora del Codice</h2>
   anybody_can_learn: Chiunque può imparare.
   learn_now: Impara Adesso
   petition_message: Ogni studente di ogni Scuola dovrebbe avere l'opportunità di imparare
@@ -38,7 +38,7 @@
   hoc2014_everyone: Tutti
   hoc2014_support: Sostienilo &#x25BE;
   hoc2014_whatishoc: Cosa è l'Ora del Codice?
-  csedweek_map_header: "#CSEdWeek / Eventi dell'Ora del Codice nel mondo"
+  csedweek_map_header: '#CSEdWeek / Eventi dell''Ora del Codice nel mondo'
   csedweek_map_signup: Iscrivi il tuo evento
   csedweek_map_search_placeholder: Cerca eventi per l'Ora del codice
   csedweek_map_search_search: Cerca
@@ -68,7 +68,7 @@
     Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali.
   all_ages: Per tutte le età
   beginner: Principiante
-  n_participants: "# partecipanti"
+  n_participants: '# partecipanti'
   go: Inizia
   thank_you_: Grazie!
   congratulations: Complimenti!
@@ -117,7 +117,7 @@
   beyond_an_hour: Dopo l'Ora del Codice
   get_started: Inizia
   i_agree: Firmo
-  participant_select: "- Seleziona -"
+  participant_select: '- Seleziona -'
   participant_student: Studente
   participant_parent: Genitore
   participant_educator: Insegnante
@@ -154,11 +154,11 @@
   help_recruit_coders: Aiutaci a reclutare più scrittori di codice per la tua squadra!
   help_recruit: Aiutaci a reclutare più scrittori di codice!
   lines_of_code: OLTRE <b># LINEE DI CODICE</b> SCRITTE FINO AD ORA.
-  lines_of_code_alt: "<b>#</b> LINEE DI CODICE SCRITTE DAGLI STUDENTI"
+  lines_of_code_alt: <b>#</b> LINEE DI CODICE SCRITTE DAGLI STUDENTI
   who_has_done_hoc: 'Chi ha realizzato l''Ora del Codice #HourOfCode? @codeorg'
   hoc_leaderboards: Le classifiche dell'Ora del Codice
-  students_and_lines: "%{students} studenti hanno svolto l'Ora del Codice e scritto
-    %{lines} linee di codice."
+  students_and_lines: '%{students} studenti hanno svolto l''Ora del Codice e scritto
+    %{lines} linee di codice.'
   start_hoc: Inizia l'Ora del Codice adesso
   contact_form_topic_press: Stampa/media (appuntamento per un'intervista o per un
     intervento)
@@ -231,7 +231,7 @@
     Adam, insegnante
   homepage_hero_text_stat_loc: 2,5 milioni di ragazze si sono iscritte per imparare
     con Code Studio
-  homepage_hero_text_stat_students: "#student_count account di studenti in Code Studio"
+  homepage_hero_text_stat_students: '#student_count account di studenti in Code Studio'
   homepage_hero_text_stat_served: 'L''Ora del Codice: ne hanno già fatte #served'
   homepage_slot_text_hoc: L'Ora del Codice
   homepage_slot_text_frozen: Frozen con Anna ed Elsa
@@ -241,7 +241,7 @@
   homepage_slot_text_shop: Acquista
   homepage_slot_text_flappy: Flappy
   homepage_action_text_hoc: Un'Ora del Codice per ogni studente.
-  homepage_action_text_num_served: "# fatte"
+  homepage_action_text_num_served: '# fatte'
   homepage_action_text_join_us: Unisciti a noi
   homepage_action_text_sign_up: Iscriviti
   homepage_action_text_try_it: Prova
@@ -266,7 +266,7 @@
   homepage_slot_text_blurb_hoc: Chiunque può imparare. Inizia oggi
   homepage_slot_text_link_hoc: Prova l'Ora del Codice
   homepage_slot_text_link_host: Organizza un'Ora del Codice
-  homepage_slot_text_link_hocserved: "# fatte"
+  homepage_slot_text_link_hocserved: '# fatte'
   homepage_solot_text_link_volunteer: Volontario per l'Ora del Codice
   homepage_slot_text_title_students: Studenti
   homepage_slot_text_blurb_students: Guarda tutti i nostri corsi
@@ -358,10 +358,10 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 insegnanti ospiteranno
     un''Ora di Codice nelle loro classi quest''anno: 7-13 Dicembre 2015. Hanno bisogno
     del tuo aiuto! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} insegnanti cercano
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} insegnanti cercano
     volontari appassionati di formazione informatica per aiutarli nella loro Ora del
     Codice questo Dicembre.<br>%{num_volunteers} volontari hanno aderito. Unisciti
-    a loro."
+    a loro.'
   volunteer_engineer_submission_intro_background: L'Ora del Codice è un movimento
     globale per far provare un'ora di introduzione all'informatica, che raggiunge
     decine di milioni di studenti in più di 180 nazioni. Partecipa durante la Settimana
@@ -709,10 +709,10 @@
   dashboard_faq_k5: Domande frequenti FAQ K-5
   dashboard_announcements: Annunci
   dashboard_announce_view_all: Visualizza tutto
-  dashboard_announce_hoc: "<b>15 Ottobre 2015</b> - l'Ora del Codice 2015 sta arrivando!
+  dashboard_announce_hoc: <b>15 Ottobre 2015</b> - l'Ora del Codice 2015 sta arrivando!
     Ogni organizzatore di un evento dell'Ora del Codice riceverà un buono acquisto
     di Amazon.com o di Microsoft's Windows Store come regalo di ringraziamento. Unisciti
-    agli studenti di tutto il mondo nella settimana 7-13 dicembre 2015."
+    agli studenti di tutto il mondo nella settimana 7-13 dicembre 2015.
   code_hoc_coming: 'L''Ora del Codice è qui: 8-14 Dicembre!'
   code_sign_up: Iscriviti per partecipare durante la Settimana di Educazione all'Informatica
   learn_more: Ulteriori informazioni
@@ -1471,6 +1471,9 @@
   infinity_shortcode: inf
   playlab_shortcode: inizia
   artist_shortcode: art
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
     to help during your Hour of Code
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher

@@ -12,8 +12,8 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Informatika o‘qituvchisimisiz? Boshqa CSEdWeek manbalarini
     ham ko‘ring.</a>'
-  n_have_learned_an_hoc: "<h1>Dasturlash soatini</h1><h2>sinab ko‘ring</h2><h3>o‘tganlar:
-    #</h3>"
+  n_have_learned_an_hoc: '<h1>Dasturlash soatini</h1><h2>sinab ko‘ring</h2><h3>o‘tganlar:
+    #</h3>'
   anybody_can_learn: Har kim o‘rganishi mumkin.
   learn_now: Hoziroq o‘rganing
   petition_message: Har bir maktabning har bir o‘quvchisida informatikani o‘rganish
@@ -68,7 +68,7 @@
     Takrorlanuchi sikllar, shartli amallar va boshqa algoritmlarni o‘rganing.
   all_ages: Barcha yoshdagilar uchun
   beginner: Boshlovchi
-  n_participants: "# ta qatnashchi"
+  n_participants: '# ta qatnashchi'
   go: Boshlan
   thank_you_: Rahmat!
   congratulations: Tabriklaymiz!
@@ -81,7 +81,7 @@
   course_name_course2: Course 2
   course_name_course3: Course 3
   course_name_course4: Course 4
-  congratulations_on_completing_course: "%{course}’ni tugatganingiz bilan tabriklaymiz"
+  congratulations_on_completing_course: '%{course}’ni tugatganingiz bilan tabriklaymiz'
   congrats_next_tutorials_title: Endi ushbu mashg‘ulotlarni sinab ko‘ring
   congrats_next_tutorials_desc: Yo 1 soatlik mashg‘ulotlarimizni, yo <a href="%{current_path}/next">hamkorlik
     mashg‘ulotlarimizni</a> sinab ko‘ring.
@@ -98,8 +98,8 @@
     butun dunyo o‘rganishini istaymiz.
   personalize_certificate: Sertifikatingizni to‘ldiring
   share_achievement: Erishganlaringizni o‘rtoqlashing
-  beyond_hour_message: "<a href='http://studio.code.org'>Boshqa darslarimiz</a> yoki
-    <a href='/learn/beyond'>batafsilroq o‘rganish orqali</a> davom eting."
+  beyond_hour_message: <a href='http://studio.code.org'>Boshqa darslarimiz</a> yoki
+    <a href='/learn/beyond'>batafsilroq o‘rganish orqali</a> davom eting.
   leaderboards_for_hoc: Dasturlash soatidagi yetakchilar doskasi.
   support_url: http://support.code.org/
   country: Mamlakat
@@ -117,7 +117,7 @@
   beyond_an_hour: Dasturlash soatidan tashqari
   get_started: Boshlash
   i_agree: Roziman
-  participant_select: "- Tanlash -"
+  participant_select: '- Tanlash -'
   participant_student: O‘quvchi
   participant_parent: Ota-ona
   participant_educator: Pedagog
@@ -138,7 +138,7 @@
   learn_next_level: Boshqa Dasturlash studiyasi kursini sinab ko‘ring
   learn_online: Boshqa kurslarni onlayn tarzda sinab ko‘ring
   learn_classes: Mahalliy darslar toping
-  hoc_is_here: "#HourOfCode — sinab ko‘ring! @codeorg"
+  hoc_is_here: '#HourOfCode — sinab ko‘ring! @codeorg'
   just_did_hoc: 'Men #HourOfCode''ni o‘tdim - siz ham sinab ko‘ring! @codeorg'
   twitter_teach_cs: 'Nega ko‘pchilik maktablar dasturlashni o‘rgatishmaydi? Biz buni
     to‘g‘irlay olamiz. http://youtu.be/nKIu9yen5nc. Batafsil: http://code.org/'
@@ -155,18 +155,17 @@
   lines_of_code_alt: TALABALAR <b>#</b> QATOR KOD YOZILDI
   who_has_done_hoc: 'Kim #HourOfCode''ni o‘tdi? @codeorg'
   hoc_leaderboards: Dasturlash soati yetakchilari
-  students_and_lines: "%{students} o‘quvchi dasturlash soatini o‘tib, %{lines} qator
-    kod yozishdi."
+  students_and_lines: '%{students} o‘quvchi dasturlash soatini o‘tib, %{lines} qator
+    kod yozishdi.'
   start_hoc: Dasturlash soatini hoziroq o‘rganing
   contact_form_topic_press: Ro‘znoma / OAV (intervyu yoki qatnashchilar chiqishi)
-  stats_nina: "“Ha kuni bir xil natija &mdash; 100% davomat.” - Nina Nikols Piri,
-    o‘qituvchi"
-  stats_student: "“Bu <b>hayotda bir marta beriladigan</b> imkon ekanlgini bilardim.”
-    - Mariana Alzate, 5-sinf"
-  stats_michael: "“Men <b>hech qachon</b> o‘quvchilarimni bunchalik zavqlanishganini
-    ko‘rmaganman.” - Maykl Klark, o‘qituvchi"
-  studiobar_title: "<a href='http://studio.code.org'>Dasturlash studiyasini</a> o‘rganib
-    chiqing"
+  stats_nina: “Ha kuni bir xil natija &mdash; 100% davomat.” - Nina Nikols Piri, o‘qituvchi
+  stats_student: “Bu <b>hayotda bir marta beriladigan</b> imkon ekanlgini bilardim.”
+    - Mariana Alzate, 5-sinf
+  stats_michael: “Men <b>hech qachon</b> o‘quvchilarimni bunchalik zavqlanishganini
+    ko‘rmaganman.” - Maykl Klark, o‘qituvchi
+  studiobar_title: <a href='http://studio.code.org'>Dasturlash studiyasini</a> o‘rganib
+    chiqing
   studiobar_title_nolink: Dasturlash studiyasini ko‘rib chiqing
   studiobar_elementary_title: Boshlang‘ich kurslar
   studiobar_elementary_body: K&#8209;5 uchun bizning yangi uchta darslarimiz
@@ -242,7 +241,7 @@
   homepage_slot_text_shop: Xarid
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_hoc: Har bir o‘quvchi uchun Dasturlash soati.
-  homepage_action_text_num_served: "# kishi sinab ko‘rdi"
+  homepage_action_text_num_served: '# kishi sinab ko‘rdi'
   homepage_action_text_join_us: Bizga qo'shiling
   homepage_action_text_sign_up: Sign up
   homepage_action_text_try_it: Sinab ko‘ring
@@ -266,7 +265,7 @@
   homepage_slot_text_blurb_hoc: Har kim o‘rganishi mumkin. Bugundan boshlang.
   homepage_slot_text_link_hoc: Try the Hour of Code
   homepage_slot_text_link_host: Dasturlash soatini o‘tkazing
-  homepage_slot_text_link_hocserved: "# kishi sinab ko‘rdi"
+  homepage_slot_text_link_hocserved: '# kishi sinab ko‘rdi'
   homepage_solot_text_link_volunteer: Dasturlash soatiga ko‘ngilli bo‘lib qo‘shiling
   homepage_slot_text_title_students: Students
   homepage_slot_text_blurb_students: Barcha mashg‘ulotlarimizni ko‘zdan kechiring
@@ -357,10 +356,10 @@
   volunteer_engineer_submission_subtitle_generic: 'Bu yil (7-13 dekabr, 2015) 100
     000 o‘qituvchi o‘z sinflarida Dasturlash soatini o‘tishmoqchi. Ularga yordamingiz
     kerak! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} ta o‘qituvchilar
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} ta o‘qituvchilar
     ko‘ngillilarni shu dekabrda bo‘ladigan Informatika haftaligida Dasturlash soatiga
     yordam berishga chaqiradi. <br>%{num_volunteers} ta ko‘ngillilar ro‘yxatdan o‘tishgan.
-    Ularga qo‘shiling."
+    Ularga qo‘shiling.'
   volunteer_engineer_submission_intro_background: Dasturlash soati — Informatikaga
     kirish soatini o‘tishni maqsad qilgan umumbashariy harakat. U 180 dan oshiq mamlakatda
     o‘n millionlab o‘quvchilarni qamrab olishni maqsad qilgan. 7-13 Dekabr kunlari
@@ -478,7 +477,7 @@
   dashboard_landing_video_player: Test our new video player at your school
   dashboard_landing_progress_title: Sinfning asosiy yutuqlari
   dashboard_landing_progress_biggest: Bu sizning eng katta bo‘limingiz uchun yutuqlaringiz.
-  dashboard_landing_view_progress: "%{biggest_section} uchun o‘sishni ko‘rish"
+  dashboard_landing_view_progress: '%{biggest_section} uchun o‘sishni ko‘rish'
   dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Available courses
   dashboard_landing_available_courses: Here are the courses currently available for
@@ -690,9 +689,9 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Hoziroq sinang
@@ -1389,6 +1388,9 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
     to help during your Hour of Code
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher

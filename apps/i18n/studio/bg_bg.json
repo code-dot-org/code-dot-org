@@ -745,11 +745,14 @@
   "failedMultiplyCharactersTimeoutGotSome": "Поздравления, добавихте код за да направите Дроид Мишка. Можете да отидете на следвашият пъзел или да се върнете на този и да получите още 20Дроида Мишки",
   "failedChangeSettingTimeout": "Стигни до трима Бунтовник пилоти, за да продължиш.",
   "failedChangeSettingSettings": "Направете своя собствена игра. За да завършите пъзела, трябва да промените дроида и посочите скоростта му.",
+  "extraFunction": "You have renamed a function to {funcName} but it won't work. You should use the original function name.",
+  "localFunction": "You have placed {funcName} inside another function. You should move {funcName} to a different location in your program.",
   "playSoundR2D2Random": "play R2-D2 random sound",
   "playSoundC3PORandom": "play C-3PO random sound",
   "playSoundPufferPigRandom": "play Puffer Pig random sound",
   "playSoundTauntaunRandom": "play Tauntaun random sound",
   "playSoundMynockRandom": "play Mynock random sound",
   "playSoundProbotRandom": "play Probot random sound",
-  "playSoundMouseDroidRandom": "play Mouse Droid random sound"
+  "playSoundMouseDroidRandom": "play Mouse Droid random sound",
+  "setBackgroundIceberg": "set icebergs background"
 }

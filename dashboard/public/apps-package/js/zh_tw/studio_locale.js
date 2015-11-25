@@ -900,10 +900,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "恭喜! 你已經完成新增程式碼來增加滾輪機器人(Mouse Droid) 。你可以繼續前往下一關，或是試著抓住這20隻滾輪機器人(Mouse Droid)。新增更多的滾輪機器人(Mouse Droid)可以讓這個關卡更容易通過。(按住鍵盤(螢幕) 上的方向鍵不放讓角色移動的更快些。)"},
 "failedChangeSettingTimeout":function(d){return "抓住3個反叛軍飛行員繼續前往下一關。"},
 "failedChangeSettingSettings":function(d){return "開始設計你自己的遊戲。要完成這個關卡，你必須改變你的機器人並設置它的速度。"},
+"extraFunction":function(d){return "You have renamed a function to "+studio_locale.v(d,"funcName")+" but it won't work. You should use the original function name."},
+"localFunction":function(d){return "You have placed "+studio_locale.v(d,"funcName")+" inside another function. You should move "+studio_locale.v(d,"funcName")+" to a different location in your program."},
 "playSoundR2D2Random":function(d){return "play R2-D2 random sound"},
 "playSoundC3PORandom":function(d){return "play C-3PO random sound"},
 "playSoundPufferPigRandom":function(d){return "play Puffer Pig random sound"},
 "playSoundTauntaunRandom":function(d){return "play Tauntaun random sound"},
 "playSoundMynockRandom":function(d){return "play Mynock random sound"},
 "playSoundProbotRandom":function(d){return "play Probot random sound"},
-"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"}};
+"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"},
+"setBackgroundIceberg":function(d){return "set icebergs background"}};

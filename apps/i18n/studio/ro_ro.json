@@ -745,11 +745,14 @@
   "failedMultiplyCharactersTimeoutGotSome": "Felicitari, ai adaugat codul pentru a crea mai multi roboti Mouse. Poti merge catre urmatorul puzzle sau sa incerci din nou sa prinzi cei 20 de roboti. Incearca sa iti usurezi munca adaugand mai multi! (tine apasate sagetile tasataturii sau ecranului pentru a merge mai repede",
   "failedChangeSettingTimeout": "Obtine 3 Rebel Pilots pentru a trece mai departe.",
   "failedChangeSettingSettings": "Fa-ti propriul joc. Pentru a trece de acest puzzle, trebuie sa iti schimbi robotul si sa ii setezi viteza.",
+  "extraFunction": "You have renamed a function to {funcName} but it won't work. You should use the original function name.",
+  "localFunction": "You have placed {funcName} inside another function. You should move {funcName} to a different location in your program.",
   "playSoundR2D2Random": "play R2-D2 random sound",
   "playSoundC3PORandom": "play C-3PO random sound",
   "playSoundPufferPigRandom": "play Puffer Pig random sound",
   "playSoundTauntaunRandom": "play Tauntaun random sound",
   "playSoundMynockRandom": "play Mynock random sound",
   "playSoundProbotRandom": "play Probot random sound",
-  "playSoundMouseDroidRandom": "play Mouse Droid random sound"
+  "playSoundMouseDroidRandom": "play Mouse Droid random sound",
+  "setBackgroundIceberg": "set icebergs background"
 }

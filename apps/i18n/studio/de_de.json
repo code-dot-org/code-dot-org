@@ -745,11 +745,14 @@
   "failedMultiplyCharactersTimeoutGotSome": "Glückwunsch, Du hast programmiert, Maus-Droiden zu erschaffen. Du kannst zum nächsten Level gehen oder nochmal versuchen, 20 Stück von ihnen zu fangen. Es wird leichter, wenn Du mehr von ihnen auf einmal hinzufügst. Halte die Pfeiltasten gedrückt, um Dich schneller zu bewegen.",
   "failedChangeSettingTimeout": "Hol' Dir drei Rebellen-Piloten, um weiter zu kommen.",
   "failedChangeSettingSettings": "Jetzt kannst Du das Spiel selbst gestalten. Um dieses Level zu schaffen, mußt Du das Aussehen und die Geschwindigkeit des Droiden einstellen.",
+  "extraFunction": "You have renamed a function to {funcName} but it won't work. You should use the original function name.",
+  "localFunction": "You have placed {funcName} inside another function. You should move {funcName} to a different location in your program.",
   "playSoundR2D2Random": "play R2-D2 random sound",
   "playSoundC3PORandom": "play C-3PO random sound",
   "playSoundPufferPigRandom": "play Puffer Pig random sound",
   "playSoundTauntaunRandom": "play Tauntaun random sound",
   "playSoundMynockRandom": "play Mynock random sound",
   "playSoundProbotRandom": "play Probot random sound",
-  "playSoundMouseDroidRandom": "play Mouse Droid random sound"
+  "playSoundMouseDroidRandom": "play Mouse Droid random sound",
+  "setBackgroundIceberg": "set icebergs background"
 }

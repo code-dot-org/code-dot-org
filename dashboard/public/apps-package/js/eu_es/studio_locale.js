@@ -900,10 +900,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Zorionak, Mouse Droid-ak egiteko kodea gehitu duzu. Hurrengo puzlearekin jarrai dezakezu edo berriro saiatu 20 Mouse Droid lortzeko. Errazagoa da gehiago gehitzen badituzu! (mantendu sakatuta gezidun teklak zure teklatuan (edo pantailan) arinago mugitzeko.)"},
 "failedChangeSettingTimeout":function(d){return "Lortu hiru Rebel Pilot aurrera jarraitzeko."},
 "failedChangeSettingSettings":function(d){return "Egin nahi duzun jokoa. Puzle hau gainditzeko, zure robota aldatu behar duzu eta bere abiadura ezarri."},
+"extraFunction":function(d){return "You have renamed a function to "+studio_locale.v(d,"funcName")+" but it won't work. You should use the original function name."},
+"localFunction":function(d){return "You have placed "+studio_locale.v(d,"funcName")+" inside another function. You should move "+studio_locale.v(d,"funcName")+" to a different location in your program."},
 "playSoundR2D2Random":function(d){return "play R2-D2 random sound"},
 "playSoundC3PORandom":function(d){return "play C-3PO random sound"},
 "playSoundPufferPigRandom":function(d){return "play Puffer Pig random sound"},
 "playSoundTauntaunRandom":function(d){return "play Tauntaun random sound"},
 "playSoundMynockRandom":function(d){return "play Mynock random sound"},
 "playSoundProbotRandom":function(d){return "play Probot random sound"},
-"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"}};
+"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"},
+"setBackgroundIceberg":function(d){return "set icebergs background"}};

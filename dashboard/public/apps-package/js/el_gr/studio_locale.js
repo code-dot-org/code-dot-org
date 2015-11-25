@@ -900,10 +900,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Συγχαρητήρια, έβαλες κώδικα για να κάνεις Ανδροειδή Ποντίκια. Μπορείς να πας στο επόμενο παζλ ή να δοκιμάσεις να πάρεις 20 Ανδροειδή Ποντίκια. Δοκίμασε να το κάνεις πιο εύκολο βάζοντας περισσότερα από αυτά (Πάτησε και κράτα πατημένα τα πλήκτρα στο πληκτρολόγιό σου (ή την οθόνη σου) για να κινηθείς ταχύτερα.)"},
 "failedChangeSettingTimeout":function(d){return "Πάρε τρεις Αντάρτες Πιλότους για να προχωρήσεις."},
 "failedChangeSettingSettings":function(d){return "Κάνε το δικό σου παιχνίδι. Για να περάσεις αυτό το παζλ πρέπει να αλλάξεις το ανδροειδές σου και να ορίσεις την ταχύτητά του."},
+"extraFunction":function(d){return "You have renamed a function to "+studio_locale.v(d,"funcName")+" but it won't work. You should use the original function name."},
+"localFunction":function(d){return "You have placed "+studio_locale.v(d,"funcName")+" inside another function. You should move "+studio_locale.v(d,"funcName")+" to a different location in your program."},
 "playSoundR2D2Random":function(d){return "play R2-D2 random sound"},
 "playSoundC3PORandom":function(d){return "play C-3PO random sound"},
 "playSoundPufferPigRandom":function(d){return "play Puffer Pig random sound"},
 "playSoundTauntaunRandom":function(d){return "play Tauntaun random sound"},
 "playSoundMynockRandom":function(d){return "play Mynock random sound"},
 "playSoundProbotRandom":function(d){return "play Probot random sound"},
-"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"}};
+"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"},
+"setBackgroundIceberg":function(d){return "set icebergs background"}};
