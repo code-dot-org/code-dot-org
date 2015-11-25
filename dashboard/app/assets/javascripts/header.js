@@ -27,11 +27,11 @@ if (!window.dashboard) {
  *   }>
  * }}
  */
-dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId) {
+dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId, scriptName) {
   stageData = stageData || {};
   // Progress Data is only provided for signed in users. Otherwise, client gets progress data from cookie
   if (progressData === null) {
-    progressData = getSummarizedProgressForAnonymousUser();
+    progressData = getSummarizedProgressForAnonymousUser(scriptName);
   }
 
   var levelProgress = progressData.levels || {};
@@ -153,7 +153,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
         url: "/popup/stats",
         data: {
           script_id: stageData.script_id,
-          script_level_id: currentLevelId,
+          current_level_id: currentLevelId,
           user_id: userId,
           section_id: sectionId
         }, success: function (result) {
@@ -415,19 +415,20 @@ dashboard.header.updateTimestamp = function () {
 };
 
 /**
- * Get the user progress for an anonymous user from the client side cookie
- * @return Object that is a representation of the user's individual level progress
+ * Get the user progress for an anonymous user from the client side cookie.
+ * @param {string} scriptName The script to get progress for.
+ * @return Object that is a representation of the user's individual level progress.
  */
-function getSummarizedProgressForAnonymousUser () {
+function getSummarizedProgressForAnonymousUser (scriptName) {
   var summarizedProgress = {};
   var levelProgress = {};
 
   summarizedProgress.lines = dashboard.clientState.lines();
 
-  var allLevelsProgress = dashboard.clientState.allLevelsProgress();
-  for(var level in allLevelsProgress) {
+  var scriptProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
+  for (var level in scriptProgress) {
     levelProgress[level] = {};
-    var individualLevelProgress = allLevelsProgress[level] || -1;
+    var individualLevelProgress = scriptProgress[level] || -1;
 
     if (individualLevelProgress >= 1000) {
       levelProgress[level].status = 'submitted';
