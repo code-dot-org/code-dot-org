@@ -239,12 +239,8 @@ class Level < ActiveRecord::Base
     self.name = name.to_s.strip unless name.nil?
   end
 
-  # Find the first script this level belongs to that is a HOC script.
-  # Returns nil if this level does not belong to any HOC scripts.
-  def find_hoc_script
-    hoc_script_level = self.script_levels.find{|l| l.script.hoc?}
-    return nil unless hoc_script_level
-    hoc_script_level.script
+  def self.cache_find(id)
+    Script.cache_find_level(id)
   end
 
   private

@@ -1,28 +1,26 @@
 #page-small-footer
 
 :ruby
-  hoc_script = @level.find_hoc_script
   reactProps = {
-    i18nDropdown: (view_options[:has_i18n] ? URI.encode(i18n_dropdown.to_str) : ''),
-    copyrightInBase: true,
-    baseCopyrightString: I18n.t('footer.copyright'),
-    baseMoreMenuString: I18n.t('footer.more'),
+    i18nDropdown: '',
+    copyrightInBase: false,
+    baseMoreMenuString: I18n.t('footer.built_on_code_studio'),
     className: 'dark',
     menuItems: [
       {
-        text: I18n.t('footer.report_abuse'),
-        link: '/report_abuse',
-        newWindow: true
-      },
-      {
         text: I18n.t('footer.make_my_own_app'),
-        link: hoc_script ? url_for(hoc_script) : url_for(@level),
+        link: 'https://code.org/learn',
         newWindow: true
       },
       {
         text: I18n.t('footer.how_it_works'),
         link: url_for(action: 'edit'),
         newWindow: true
+      },
+      {
+        text: I18n.t('footer.copyright'),
+        link: '#',
+        copyright: true
       },
       {
         text: I18n.t('footer.tos'),
@@ -35,13 +33,7 @@
         newWindow: true
       }
     ],
-    copyrightStrings: {
-      thank_you: URI.escape(I18n.t('footer.thank_you')),
-      help_from_html: I18n.t('footer.help_from_html'),
-      art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
-      powered_by_aws: I18n.t('footer.powered_by_aws'),
-      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
-    }
+    copyrightStrings: build_copyright_strings
   }
 
 :javascript
