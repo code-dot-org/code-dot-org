@@ -1482,6 +1482,11 @@ levels.gumball_join_food_fight = {
   ]
 };
 
+levels.iceage_throw_hearts = utils.extend(levels.gumball_join_food_fight, {
+  background: 'icy',
+  avatarList: ['sid', 'granny'],
+});
+
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
 levels.sandbox =  {
   'ideal': Infinity,
