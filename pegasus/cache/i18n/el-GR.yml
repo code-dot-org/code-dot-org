@@ -147,8 +147,6 @@
   twitter_teach_cs: Γιατί δεν διδάσκουν περισσότερα σχολεία Επιστήμη των Υπολογιστών;
     Αυτό μπορούμε να το διορθώσουμε.  http://youtu.be/nKIu9yen5nc. Επισκεφτείτε την
     σελίδα http://code.org/ για να μάθετε περισσότερα.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes"> Μάθετε περισσότερα</a>
-    για τα βραβεία για κάθε εκπαιδευτικό.
   learn_hoc: Μάθε μία Ώρα του Κώδικα
   beyond_hoc: Πέρα από Μία Ώρα
   what_gender: Ποιο είναι το φύλο σου;
@@ -368,6 +366,9 @@
   volunteer_engineer_submission_intro_signup: Παρακαλούμε εισάγετε τις ακόλουθες πληροφορίες,
     αν είστε φοιτητής επιστήμης υπολογιστών ή επαγγελματίας λογισμικού. Τα πεδία με
     <span class="form-required-field"> *</span> είναι υποχρεωτικά.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Οι πληροφορίες μοιράζονται με τους
     καθηγητές στο χάρτη εθελοντή
   volunteer_engineer_submission_field_name: Όνομα
@@ -727,6 +728,16 @@
   learn_educator_resources_button: Πόροι για τους επιμορφωτές
   learn_are_you_educator: Είστε επιμορφωτἠς; Μάθετε <a href="http://hourofcode.com/resources/how-to">
     πώς να διδάξετε μια Ώρα του Κώδικα</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes"> Μάθετε περισσότερα</a>
+    για τα βραβεία για κάθε εκπαιδευτικό.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Δοκιμάστε τα νέα βοηθήματα εκμάθησης για την "Ώρα του
     Κώδικα"
   hoc2014_try_new_tutorial: Δοκιμάστε μας νέο σεμινάριο για την ώρα του κώδικα σε
@@ -1498,14 +1509,3 @@
   infinity_shortcode: inf
   playlab_shortcode: παίξε
   artist_shortcode: art
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>

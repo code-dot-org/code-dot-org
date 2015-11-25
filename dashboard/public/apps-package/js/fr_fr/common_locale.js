@@ -317,7 +317,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "exampleErrorMessage":function(d){return "La fonction "+common_locale.v(d,"functionName")+" a un ou plusieurs des exemples qui doivent être modifiés. Assure-toi qu'ils correspondent à ta définition et qu'ils répondent à la question."},
 "examplesFailedOnClose":function(d){return "Un ou plusieurs de tes exemples ne correspondent pas à ta définition. Vérifie tes exemples avant de terminer"},
 "extraTopBlocks":function(d){return "Certains blocs ne sont pas attachés."},
-"extraTopBlocksWhenRun":function(d){return "Certains blocs ne sont pas attachés. Voulais-tu les fixer au bloc « lors du lancement » ?"},
+"extraTopBlocksWhenRun":function(d){return "Certains blocs ne sont pas attachés. Voulais-tu les rattacher au bloc « quand l'exécution commence » ?"},
 "finalStage":function(d){return "Félicitations ! Tu as terminé l'étape finale."},
 "finalStageTrophies":function(d){return "Félicitations ! Tu as terminé l'étape finale et gagné "+common_locale.p(d,"numTrophies",0,"fr",{"one":"un trophée","other":common_locale.n(d,"numTrophies")+" trophées"})+"."},
 "finish":function(d){return "Terminer"},
