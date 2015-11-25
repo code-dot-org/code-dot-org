@@ -26,25 +26,22 @@ social:
 %div{style: "clear:both"}
 
 .playlab-container
-  %h1 Choose your Play Lab theme
+  %h1= I18n.t(:playlab_choose_theme)
   %div.image-collection
     %a.while-link{href: "https://studio.code.org/s/playlab/stage/1/puzzle/1"}
       %div.choice
         %div.choice-container
-          %div.choice-label.purple
-            Original
+          %div.choice-label.purple= I18n.t(:playlab_classic_title)
           %img.character-img{src: "/images/playlab_original3.png"}
     %a{href: "https://studio.code.org/s/gumball/stage/1/puzzle/1"}
       %div.choice
         %div.choice-container
-          %div.choice-label.blue
-            Gumball
+          %div.choice-label.blue= I18n.t(:playlab_gumball_title)
           %img.character-img{src: "/images/playlab_gumball.png"}
-    %a{href: "https://studio.code.org/s/iceage/stage/1/puzzle/1"}
+    %a{}
       %div.choice
         %div.choice-container
-          %div.choice-label.green
-            Ice Age
+          %div.choice-label.green= I18n.t(:playlab_iceage_title)
           %img.character-img{src: "/images/playlab_iceage.png"}
 
 %div{style: "clear:both"}
