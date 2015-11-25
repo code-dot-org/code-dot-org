@@ -78,9 +78,11 @@ class QueueProcessorManager
     }
 
     puts "Press ^C to stop"
+    time = 0
     loop do
       metrics_map.each do |k,v|
-        puts "#{k}: #{v}"
+        puts "#{k}: #{v}  time=#{time}"
+        time += 1
       end
       interruptible_sleep update_interval
     end
