@@ -38,7 +38,7 @@ class MediaProxyController < ApplicationController
 
     # Give up if the host doesn't respond within 3 seconds to avoid
     # tying up Rails thread.
-    url = URI.parse(location)
+    url = URI.parse(URI.escape(location))
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
