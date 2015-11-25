@@ -59,6 +59,13 @@ Scenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as att
   And I debug cookies
   Then element ".progress_container div:nth-child(6) a" has class "level_link attempted"
 
+Scenario: Async progress write followed by a stale read
+  Given I am on "http://studio.code.org/hoc/20?noautoplay=true"
+  And element ".header_middle a.level_link:first" does not have class "perfect"
+  Then mark the current level as completed on the client
+  And I reload the page
+  And element ".header_middle a.level_link:first" has class "perfect"
+
 @no_mobile
 Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video
   Given I am on "http://studio.code.org/hoc/10"
