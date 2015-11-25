@@ -1045,16 +1045,11 @@ applabCommands.playSound = function (opts) {
       //       Lab, which has the following effects:
       //       GOOD: Web Audio should not use the Range header so it won't hit
       //             the bug.
-      //       BAD: Internet Explorer won't be fixed by this change, because it
-      //            doesn't support Web Audio.
       //       BAD: This disables cross-domain audio loading (hotlinking from an
       //            App Lab app to an audio asset on another site) so it might
       //            break some existing apps.  This should be less problematic
       //            since we now allow students to upload and serve audio assets
       //            from our domain via the Assets API now.
-      //       BAD: We lose a natural check against triggering a sound while it
-      //            is already playing - to preserve this behavior we will need
-      //            to manually write a workaround.
       //
       // forceHTML5: true,
       allowHTML5Mobile: true
