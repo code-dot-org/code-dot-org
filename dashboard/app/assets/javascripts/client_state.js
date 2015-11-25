@@ -52,8 +52,9 @@ dashboard.clientState.reset = function() {
 dashboard.clientState.sourceForLevel = function (scriptName, levelId, timestamp) {
   var data = sessionStorage.getItem(createKey(scriptName, levelId, 'source'));
   if (data) {
+    var parsed;
     try {
-      var parsed = JSON.parse(data);
+      parsed = JSON.parse(data);
     } catch (e) {
       return;
     }
