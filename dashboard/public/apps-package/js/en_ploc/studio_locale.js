@@ -628,6 +628,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundLeafy":function(d){return "!!-set leafy background-!!"},
 "setBackgroundGrassy":function(d){return "!!-set grassy background-!!"},
 "setBackgroundFlower":function(d){return "!!-set flower background-!!"},
+"setBackgroundIceberg":function(d){return "!!-set icebergs background-!!"},
 "setBackgroundTile":function(d){return "!!-set tile background-!!"},
 "setBackgroundIcy":function(d){return "!!-set icy background-!!"},
 "setBackgroundSnowy":function(d){return "!!-set snowy background-!!"},

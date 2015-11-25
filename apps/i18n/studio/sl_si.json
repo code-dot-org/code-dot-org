@@ -751,5 +751,6 @@
   "playSoundTauntaunRandom": "play Tauntaun random sound",
   "playSoundMynockRandom": "play Mynock random sound",
   "playSoundProbotRandom": "play Probot random sound",
-  "playSoundMouseDroidRandom": "play Mouse Droid random sound"
+  "playSoundMouseDroidRandom": "play Mouse Droid random sound",
+  "setBackgroundIceberg": "set icebergs background"
 }
