@@ -34,6 +34,7 @@ end
 group :development, :test do
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
+  gem 'byebug'
   gem 'konacha'  # Mocha + Chai JS testing in Rails
   gem 'poltergeist'  # Headless JS tests.p
 
