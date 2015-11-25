@@ -12,7 +12,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Apakah Anda seorang guru komputer? Lihat sumber CSEdWeek
     yang lain</a>'
-  n_have_learned_an_hoc: "<h1>Cobalah</h1><h2>Hour of Code</h2><h3># served</h3>"
+  n_have_learned_an_hoc: <h1>Cobalah</h1><h2>Hour of Code</h2><h3># served</h3>
   anybody_can_learn: Siapa pun bisa belajar.
   learn_now: Pelajari sekarang
   petition_message: Setiap siswa di setiap sekolah seharusnya memiliki kesempatan
@@ -38,7 +38,7 @@
   hoc2014_everyone: Semua orang
   hoc2014_support: Dukunglah &#x25BE;
   hoc2014_whatishoc: Apa itu Hour of Code?
-  csedweek_map_header: "# CSEdWeek / acara Hour of Code di seluruh dunia"
+  csedweek_map_header: '# CSEdWeek / acara Hour of Code di seluruh dunia'
   csedweek_map_signup: Daftarkan acaramu
   csedweek_map_search_placeholder: Telusuri acara Hour of Code
   csedweek_map_search_search: Telusuri
@@ -68,7 +68,7 @@
     vs Zombies. Pelajari ulangi (repeat-loop), pernyataan jika-maka, dan dasar algoritma.
   all_ages: Segala usia
   beginner: Pemula
-  n_participants: "# peserta"
+  n_participants: '# peserta'
   go: Buka
   thank_you_: Terima kasih!
   congratulations: Selamat!
@@ -119,7 +119,7 @@
   beyond_an_hour: Setelah Satu Jam Kode
   get_started: Mulai
   i_agree: Saya setuju
-  participant_select: "-Pilih-"
+  participant_select: -Pilih-
   participant_student: siswa
   participant_parent: Orang tua
   participant_educator: Guru
@@ -140,7 +140,7 @@
   learn_next_level: Lanjut ke tingkat berikutnya
   learn_online: Coba kursus online lain
   learn_classes: Cari kelas kursus
-  hoc_is_here: "#HourOfCode ada di sini – coba lihat! @codeorg"
+  hoc_is_here: '#HourOfCode ada di sini – coba lihat! @codeorg'
   just_did_hoc: 'Aku telah mengerjakan #HourOfCode – cobalah lihat! @codeorg'
   twitter_teach_cs: Mengapa tidak lebih banyak sekolah mengajarkan ilmu komputer?
     Kita dapat memperbaiki ini. http://youtu.be/nKIu9yen5nc. Kunjungi http://code.org/
@@ -156,7 +156,7 @@
     tim Anda!
   help_recruit: Bantu kami merekrut lebih banyak orang untuk bergabung!
   lines_of_code: Sebanyak <b># baris kode</b> telah ditulis sampai saat ini.
-  lines_of_code_alt: "<b>#</b> BARIS KODE YANG TELAH DITULIS OLEH SISWA-SISWI"
+  lines_of_code_alt: <b>#</b> BARIS KODE YANG TELAH DITULIS OLEH SISWA-SISWI
   who_has_done_hoc: 'Siapakah yang telah menyelesaikan #HourOfCode? @codeorg'
   hoc_leaderboards: 'Papan Prestasi Jam kode '
   students_and_lines: Sebanyak %{students} siswa telah menyelesaikan jam kode dan
@@ -185,8 +185,8 @@
   studiobar_donate_body: Satu anak belajar untuk setiap US dollar yang Anda sumbangkan
   studiobar_shop_title: Belanja
   studiobar_shop_body: Pecahkan stereotip. Pakailah logo kami dengan bangga.
-  homepage_hero_text_malala: "&ldquo;Saya menantang anak-anak di setiap negara untuk
-    belajar mengkode selama satu jam.&rdquo; Malala, pemenang Hadiah Nobel Perdamaian"
+  homepage_hero_text_malala: '&ldquo;Saya menantang anak-anak di setiap negara untuk
+    belajar mengkode selama satu jam.&rdquo; Malala, pemenang Hadiah Nobel Perdamaian'
   homepage_hero_text_susan: |
     &ldquo;Jika Anda bisa mengubah teknologi,
     Anda bisa mengubah dunia.&rdquo;
@@ -227,8 +227,8 @@
   homepage_hero_text_teacher2: |
     &ldquo;Program ini mendapat 100% dari murid-murid saya terlibat, terlibat dan berpartisipasi.&rdquo;
     Adam, guru
-  homepage_hero_text_stat_loc: "#loc baris kode ditulis oleh para pelajar"
-  homepage_hero_text_stat_students: "#student_count akun pelajar pada kode Studio"
+  homepage_hero_text_stat_loc: '#loc baris kode ditulis oleh para pelajar'
+  homepage_hero_text_stat_students: '#student_count akun pelajar pada kode Studio'
   homepage_hero_text_stat_served: 'Hour of Code: #served disediakan'
   homepage_slot_text_hoc: Jam kode
   homepage_slot_text_frozen: Frozen bersama Anna dan Elsa
@@ -238,7 +238,7 @@
   homepage_slot_text_shop: Belanja
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_hoc: Hour of Code untuk setiap pelajar.
-  homepage_action_text_num_served: "# disajikan"
+  homepage_action_text_num_served: '# disajikan'
   homepage_action_text_join_us: Bergabung dengan kami
   homepage_action_text_sign_up: Daftar
   homepage_action_text_try_it: Cobalah
@@ -262,7 +262,7 @@
   homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
   homepage_slot_text_link_hoc: Cobalah "Hour of Code"
   homepage_slot_text_link_host: Selenggarakan Hour of Code
-  homepage_slot_text_link_hocserved: "# disajikan"
+  homepage_slot_text_link_hocserved: '# disajikan'
   homepage_solot_text_link_volunteer: Relawan untuk Hour of Code
   homepage_slot_text_title_students: Siswa
   homepage_slot_text_blurb_students: Jelajahi semua panduan kami
@@ -353,20 +353,20 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 guru akan menjadi tuan
     rumah Hour of Code di kelas mereka tahun ini, 7-13 Desember, 2015. Mereka butuh
     bantuan Anda! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up."
+    have signed up.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Masukkan informasi berikut jika Anda
     seorang mahasiswa ilmu komputer atau software profesional. Kolom yang ditandai
     dengan <span class="form-required-field"> *</span> diperlukan.
@@ -569,11 +569,11 @@
   dashboard_sections_name: Nama kelompok
   dashboard_sections_choose_secret: Jika Anda ingin memberikan akun kepada murid Anda,
     pilih <b>kata</b> atau <b>gambar</b> rahasia untuk bagian tersebut.
-  dashboard_sections_secret_word: "<b>Kata</b> memungkinkan Anda untuk menetapkan
-    kata rahasia yang berbeda untuk setiap siswa."
-  dashboard_sections_secret_picture: "<b>Gambar</b> yang memungkinkan Anda untuk menetapkan
+  dashboard_sections_secret_word: <b>Kata</b> memungkinkan Anda untuk menetapkan kata
+    rahasia yang berbeda untuk setiap siswa.
+  dashboard_sections_secret_picture: <b>Gambar</b> yang memungkinkan Anda untuk menetapkan
     gambar rahasia untuk setiap siswa, ideal untuk siswa yang lebih muda yang belum
-    bisa mengetik."
+    bisa mengetik.
   dashboard_sections_secret_none: Jika Anda ingin siswa Anda untuk mengelola akun
     mereka sendiri, termasuk memilih kata sandi mereka sendiri, maka pilihlah tipe
     kata sandi <b>kosong</b>.
@@ -652,7 +652,7 @@
   dashboard_teacher_worksheet: lembar kerja guru
   dashboard_curriculum_csina: 'Ilmu Komputer dalam Aljabar:'
   dashboard_curriculum_csins: 'Ilmu komputer dalam ilmu pengetahuan:'
-  dashboard_curriculum_csp: "® AP Prinsip-prinsip ilmu komputer :"
+  dashboard_curriculum_csp: '® AP Prinsip-prinsip ilmu komputer :'
   dashboard_curriculum_ecs: 'Menjelajahi ilmu komputer:'
   dashboard_grade_k: K
   dashboard_grade_other: Lain
@@ -694,11 +694,11 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions/pertanyaan yang sering diajukan
   dashboard_announcements: Pengumuman
   dashboard_announce_view_all: Lihat semua
-  dashboard_announce_hoc: "<b>9 November 2015</b> - tutorial Hour of Code baru ada
+  dashboard_announce_hoc: '<b>9 November 2015</b> - tutorial Hour of Code baru ada
     di sini, menampilkan film terbaru dari Star Wars: The Force Awakens. Bekerja samalah
     dengan Rey untuk membimbing droid baru, BB-8, melalui misi. Kemudian, bergabung
     dengan Leia untuk membuat dan berbagi pertandingan Anda sendiri di sebuah galaksi
-    yang sangat jauh."
+    yang sangat jauh.'
   code_hoc_coming: Hour of Code hadir disini - 8-14 Desember!
   code_sign_up: Daftarlah untuk ikut serta dalam Pekan Edukasi Ilmu Komputer
   learn_more: Pelajari lebih banyak
@@ -1451,6 +1451,9 @@
   infinity_shortcode: inf
   playlab_shortcode: mainkan
   artist_shortcode: art
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
     to help during your Hour of Code
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
