@@ -745,6 +745,8 @@
   "failedMultiplyCharactersTimeoutGotSome": "Συγχαρητήρια, έβαλες κώδικα για να κάνεις Ανδροειδή Ποντίκια. Μπορείς να πας στο επόμενο παζλ ή να δοκιμάσεις να πάρεις 20 Ανδροειδή Ποντίκια. Δοκίμασε να το κάνεις πιο εύκολο βάζοντας περισσότερα από αυτά (Πάτησε και κράτα πατημένα τα πλήκτρα στο πληκτρολόγιό σου (ή την οθόνη σου) για να κινηθείς ταχύτερα.)",
   "failedChangeSettingTimeout": "Πάρε τρεις Αντάρτες Πιλότους για να προχωρήσεις.",
   "failedChangeSettingSettings": "Κάνε το δικό σου παιχνίδι. Για να περάσεις αυτό το παζλ πρέπει να αλλάξεις το ανδροειδές σου και να ορίσεις την ταχύτητά του.",
+  "extraFunction": "You have renamed a function to {funcName} but it won't work. You should use the original function name.",
+  "localFunction": "You have placed {funcName} inside another function. You should move {funcName} to a different location in your program.",
   "playSoundR2D2Random": "play R2-D2 random sound",
   "playSoundC3PORandom": "play C-3PO random sound",
   "playSoundPufferPigRandom": "play Puffer Pig random sound",

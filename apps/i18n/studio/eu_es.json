@@ -745,6 +745,8 @@
   "failedMultiplyCharactersTimeoutGotSome": "Zorionak, Mouse Droid-ak egiteko kodea gehitu duzu. Hurrengo puzlearekin jarrai dezakezu edo berriro saiatu 20 Mouse Droid lortzeko. Errazagoa da gehiago gehitzen badituzu! (mantendu sakatuta gezidun teklak zure teklatuan (edo pantailan) arinago mugitzeko.)",
   "failedChangeSettingTimeout": "Lortu hiru Rebel Pilot aurrera jarraitzeko.",
   "failedChangeSettingSettings": "Egin nahi duzun jokoa. Puzle hau gainditzeko, zure robota aldatu behar duzu eta bere abiadura ezarri.",
+  "extraFunction": "You have renamed a function to {funcName} but it won't work. You should use the original function name.",
+  "localFunction": "You have placed {funcName} inside another function. You should move {funcName} to a different location in your program.",
   "playSoundR2D2Random": "play R2-D2 random sound",
   "playSoundC3PORandom": "play C-3PO random sound",
   "playSoundPufferPigRandom": "play Puffer Pig random sound",

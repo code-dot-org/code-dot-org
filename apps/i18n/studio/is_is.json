@@ -745,6 +745,8 @@
   "failedMultiplyCharactersTimeoutGotSome": "Til hamingju, þú bættir við kóða sem býr til vélmýs. Þú getur farið áfram í næstu þraut eða reynt aftur að ná 20 vélmúsum. Prófaðu að auðvelda það með því að hafa fleiri! (Ýttu á og haltu niðri lyklunum á lyklaborðinu (eða skjánum) til að hreyfast hraðar.)",
   "failedChangeSettingTimeout": "Náðu þremur flugmönnum til að halda áfram.",
   "failedChangeSettingSettings": "Gerðu þetta að þínum leik. Til að ljúka þrautinni þarft þú að breyta vélmenninu og stilla hraða þess.",
+  "extraFunction": "You have renamed a function to {funcName} but it won't work. You should use the original function name.",
+  "localFunction": "You have placed {funcName} inside another function. You should move {funcName} to a different location in your program.",
   "playSoundR2D2Random": "play R2-D2 random sound",
   "playSoundC3PORandom": "play C-3PO random sound",
   "playSoundPufferPigRandom": "play Puffer Pig random sound",

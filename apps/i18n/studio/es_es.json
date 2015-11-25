@@ -745,6 +745,8 @@
   "failedMultiplyCharactersTimeoutGotSome": "Felicitaciones, has agregado código para hacer Droides Ratón. Puedes ir al siguiente rompecabezas o intentar otra vez conseguir 20 Ratónes Droide. Trata de hacerlo más fácil agregando más de ellos! (Presione y sostenga las teclas de tu teclado (o pantalla) para moverse más rápido.)",
   "failedChangeSettingTimeout": "Obten tres pilotos rebeldes para seguir adelante.",
   "failedChangeSettingSettings": "Crea tu propio juego. Para pasar este rompecabezas, necesitas cambiar tu droide y establecer su velocidad.",
+  "extraFunction": "You have renamed a function to {funcName} but it won't work. You should use the original function name.",
+  "localFunction": "You have placed {funcName} inside another function. You should move {funcName} to a different location in your program.",
   "playSoundR2D2Random": "play R2-D2 random sound",
   "playSoundC3PORandom": "play C-3PO random sound",
   "playSoundPufferPigRandom": "play Puffer Pig random sound",

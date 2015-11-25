@@ -12,7 +12,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Adakah anda seorang guru Sains Komputer? Sila lihat sumber
     lain Minggu Pendidikan Sains Komputer</a>'
-  n_have_learned_an_hoc: "<h1>#</h1><h3>pernah mencuba</h3><h2>1 Jam Pengaturcaraan</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>pernah mencuba</h3><h2>1 Jam Pengaturcaraan</h2>
   anybody_can_learn: Sesiapapun boleh belajar.
   learn_now: Pelajari Sekarang
   petition_message: Setiap pelajar di setiap sekolah perlu diberi peluang untuk mempelajari
@@ -36,7 +36,7 @@
   hoc2014_everyone: Sesiapa sahaja
   hoc2014_support: Beri sokongan
   hoc2014_whatishoc: Apakah 1 Jam Pengaturcaraan?
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
@@ -66,7 +66,7 @@
     ulang-gelung, penyata jika-kemudian, dan algoritma asas.
   all_ages: Semua peringkat umur
   beginner: Pemula
-  n_participants: "# peserta"
+  n_participants: '# peserta'
   go: Pergi
   thank_you_: Terima kasih!
   congratulations: Tahniah!
@@ -118,7 +118,7 @@
   beyond_an_hour: Di sebalik Hour of Code
   get_started: Mula
   i_agree: saya setuju
-  participant_select: "-Pilih-"
+  participant_select: -Pilih-
   participant_student: pelajar
   participant_parent: Ibu bapa
   participant_educator: Pendidik
@@ -139,7 +139,7 @@
   learn_next_level: Teruskan ke tahap seterusnya
   learn_online: Cuba kursus-kursus lain secara online
   learn_classes: cari kelas tempatan
-  hoc_is_here: "#SatuJamKod ada di sini - Jom tengok! @codeorg"
+  hoc_is_here: '#SatuJamKod ada di sini - Jom tengok! @codeorg'
   just_did_hoc: 'Saya baru buat #SatuJamKod - Jom tengok! @codeorg'
   twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
     http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
@@ -153,11 +153,11 @@
   help_recruit_coders: bantu kami merekrut lebih banyak coders ke pasukan anda!
   help_recruit: bantu kami merekrut lebih banyak coders!
   lines_of_code: LEBIH <b># BARIS KOD</b> DITULIS HINGGA KINI.
-  lines_of_code_alt: "<b>#</b> BARIS KOD YANG DITULIS OLEH PARA PELAJAR"
+  lines_of_code_alt: <b>#</b> BARIS KOD YANG DITULIS OLEH PARA PELAJAR
   who_has_done_hoc: 'Siapa yang dah buat #SatuJamKod? @codeorg'
   hoc_leaderboards: Papan Carta Satu Jam Kod
-  students_and_lines: "%{students} pelajar telah selesaikan Satu Jam Kod dan telah
-    menulis %{lines} baris kod."
+  students_and_lines: '%{students} pelajar telah selesaikan Satu Jam Kod dan telah
+    menulis %{lines} baris kod.'
   start_hoc: Mulakan Satu Jam Kod sekarang
   contact_form_topic_press: Akhbar/media (temu bual atau penglibatan perbualan)
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
@@ -227,7 +227,7 @@
     engaged, involved and participating.&rdquo;
     Adam, teacher
   homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
-  homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Satu Jam Kod
   homepage_slot_text_frozen: Frozen with Anna and Elsa
@@ -237,7 +237,7 @@
   homepage_slot_text_shop: Kedai
   homepage_slot_text_flappy: Kod Flappy
   homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: "# served"
+  homepage_action_text_num_served: '# served'
   homepage_action_text_join_us: Join us
   homepage_action_text_sign_up: Mendaftar
   homepage_action_text_try_it: Selamat mencuba
@@ -261,7 +261,7 @@
   homepage_slot_text_blurb_hoc: Sesiapa pun boleh belajar. Mulakan hari ini
   homepage_slot_text_link_hoc: Cuba Hour of Code
   homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: "# served"
+  homepage_slot_text_link_hocserved: '# served'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Students
   homepage_slot_text_blurb_students: Explore all of our tutorials
@@ -349,20 +349,20 @@
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up."
+    have signed up.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
@@ -672,9 +672,9 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Ketahui lebih lanjut
@@ -1371,6 +1371,9 @@
   infinity_shortcode: inf
   playlab_shortcode: Main
   artist_shortcode: art
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
     to help during your Hour of Code
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
