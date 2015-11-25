@@ -149,7 +149,7 @@ def determine_unique_name_for_instance_zone(ssh_username, frontend_name, determi
       if frontend_name
         name = "#{frontend_name}#{retry_index == 0 ? '' : retry_index.to_s}"
       else
-        name = "frontend-#{@options['prefix'] ? @options['prefix'] + '-' : '' }#{determined_instance_zone[-1, 1] +
+        name = "frontend-#{@options['prefix'] ? @options['prefix'] + '-' : ''}#{determined_instance_zone[-1, 1] +
             (instance_count + 1 + retry_index).to_s}"
       end
 
