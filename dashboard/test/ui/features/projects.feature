@@ -32,17 +32,11 @@ Scenario: Applab Flow
   And I wait to see "#runButton"
   And element "#runButton" is visible
   And element ".project_updated_at" contains text "Saved"
-  And I click selector ".project_edit"
-  And I type "Code Ninja" into "input.project_name"
-  And I click selector ".project_save"
-  And I wait until element ".project_edit" is visible
-  Then I should see title "Code Ninja - App Lab"
   Then I click selector ".project_share"
   And I wait to see "#x-close"
 
   Then I navigate to the share URL
   And I wait to see "#footerDiv"
-  Then I should see title "Code Ninja - App Lab"
   And element "#codeWorkspace" is hidden
   And I press the first "#footerDiv .more-link" element
   And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How It Works']"
@@ -51,13 +45,11 @@ Scenario: Applab Flow
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "pushState"
   And I wait to see "#codeWorkspace"
   And selector "#codeWorkspace" doesn't have class "readonly"
-  And I should see title "Code Ninja - App Lab"
 
   Then I am on "http://studio.code.org/users/sign_out"
   And I navigate to the last shared URL
   And I wait to see "#footerDiv"
   And element "#codeWorkspace" is hidden
-  And I should see title "Code Ninja - App Lab"
   And I press the first "#footerDiv .more-link" element
   And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How It Works']"
 
@@ -65,7 +57,6 @@ Scenario: Applab Flow
   And I get redirected to "/projects/applab/([^\/]*?)/view" via "nothing"
   And I wait to see "#codeWorkspace"
   And selector "#codeWorkspace" has class "readonly"
-  And I should see title "Code Ninja - App Lab"
 
   # Now view the /edit page as a signed in, non-owner
   Given I am on "http://studio.code.org/"
