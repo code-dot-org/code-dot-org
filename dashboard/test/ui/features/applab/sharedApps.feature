@@ -94,7 +94,7 @@ Feature: App Lab Scenarios
   @no_safari
   @no_ie
   @no_firefox
-  @no_mobile_safari
+  @no_ios
   Scenario: Can type in textarea on share page
     Given I switch to design mode
     And I drag a TEXT_AREA into the app
