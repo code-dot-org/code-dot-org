@@ -9,7 +9,7 @@ litmus_tracking_id: "5g5lyi1a"
 
 You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13. 
 
-*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [And there are more awesome prizes](https://<%= hostname %>/prizes).
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
 
 #### We'll be in touch about new tutorials and other exciting updates. What can you do now?
 
