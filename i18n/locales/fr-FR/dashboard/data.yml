@@ -125,7 +125,7 @@ fr:
       instructions:
         maze_2_2: "Peux-tu m'aider à attraper le vilain cochon ? Assemble deux blocs « avancer plus » et clique sur « Démarrer » pour m'aider à y arriver. "
         maze_2_1: "Ce cochon me hérisse les plumes. Aide-moi à l'atteindre !"
-        maze_2_2_5: Trace le chemin et amène-moi à ce stupide cochon. Évite les explosifs ou les plumes vont voler !
+        maze_2_2_5: Trace le chemin et amène-moi à ce stupide cochon. Évite les TNT ou les plumes vont voler !
         maze_2_3: "Guide-moi jusqu'à cette maudite créature verte ! (Fais attention aux explosifs…)"
         maze_2_4: Reste calme et aide-moi à trouver cet affreux cochon. Sinon, je pourrais me fâcher !
         maze_2_5: "Il y a un moyen d'attraper ce stupide cochon en 2 blocs seulement. Peux-tu le trouver ?"
@@ -208,16 +208,16 @@ fr:
         turtle_3_6: "En vous basant sur l'exemple de la fonction « dessiner un carré », ajoutez un paramètre nommé « longueur » à la fonction « dessiner un triangle ». Ensuite, dessinez des triangles de différentes tailles. (Astuce : cliquez sur l'étoile pour ajouter un paramètre à la fonction.)"
         turtle_3_7: "Ajoutez un paramètre nommé « longueur » à la fonction « dessiner une maison » et construisez une grande maison pour l'éléphant (avec des côtés de 150 pixels de long)."
         turtle_3_8: Modifier « dessiner une maison » pour que je me retrouve dans le coin inférieur droit après avoir dessiné une nouvelle maison. Utilisez cette fonction modifiée pour dessiner trois maisons.
-        turtle_3_9: Saurez-vous remettre en place la fonction « dessiner une maison » sans aucune indication ? Lancez-vous, puis dessinez une nouvelle rangée de maisons.
+        turtle_3_9: Sauras-tu remettre en place la fonction « dessiner une maison » sans aucune indication ? Essaye, puis dessine une nouvelle rangée de maisons.
         turtle_3_10: Vous avez beaucoup appris ! Vous pouvez à présent profiter de vos nouvelles connaissances pour dessiner tout ce dont vous avez envie. Essayez de dessiner une étoile, ou une spirale, ou encore un flocon de neige.
-        maze_karel_debug_seq_1: "Bienvenue au débogage ! Mon code ne fonctionne pas bien. Pouvez-vous repérer le problème et le corriger afin que je puisse aplanir mon champ et qu'il soit prêt pour la plantation ?"
+        maze_karel_debug_seq_1: "Bienvenue au débogage ! Mon code ne fonctionne pas bien. Peux-tu repérer le problème et le corriger afin que je puisse aplanir mon champ et qu'il soit prêt pour la plantation ?"
         maze_karel_debug_seq_2: "Qu'est-ce qui ne va pas dans ce programme ? Quelle correction pouvez-vous effectuer afin que je puisse enlever cette motte de terre ?"
         maze_karel_debug_repeat: Déboguez ce programme pour moi afin que mon terrain soit beau et plat.
-        maze_karel_debug_while: "Comment pouvez-vous modifier ce programme pour m'aider à combler le trou ?"
+        maze_karel_debug_while: "Comment devrais-tu modifier ce programme pour m'aider à combler le trou ?"
         maze_karel_debug_if: "À l'aide ! Corrigez ce programme afin que je puisse aplanir complètement mon champ."
         maze_karel_debug_if_else: Déboguez ce programme afin que je remplisse tous les trous et rase toutes les mottes.
         maze_karel_debug_function_1: "Quelle modification pouvez-vous effectuer dans ce programme pour m'aider à retirer toutes les mottes ?"
-        maze_karel_debug_function_2: Pouvez-vous déboguer ce programme pour moi afin que je puisse aplanir mon champ ?
+        maze_karel_debug_function_2: Peux-tu déboguer ce programme pour moi afin que je puisse aplanir mon champ ?
         maze_karel_debug_function_3: Modifiez ce programme pour que je rase toutes les mottes présentes sur mon terrain.
         turtle_5_1: "Essayez d'exécuter ce programme, et apportez-y des modifications pour voir quels changements sont produits. Comprenez-vous comment cela fonctionne ? (Vous pouvez également tout supprimer et mettre quelque chose de totalement différent à la place.)"
         turtle_5_2: "Essayez d'exécuter ce programme, et apportez-y des modifications pour voir quels changements sont produits. Comprenez-vous comment cela fonctionne ? (Vous pouvez également tout supprimer et mettre quelque chose de totalement différent à la place.)"
@@ -229,25 +229,25 @@ fr:
         maze_3_2: "Écrivez-moi un programme pour que je puisse aller jusqu'à ce cochon."
         maze_3_3: "Comment puis-je atteindre le cochon ? Assurez-vous que je ne trébuche pas sur la caisse pleine d'explosifs !"
         maze_3_4: "Argh ! Écrivez-moi un programme qui me permette d'éviter les explosifs et qui me conduise au cochon."
-        bounce_1: "Attachez un bloc au bloc « lors de l'action flèche gauche » et cliquez sur le bouton « Démarrer ». Déplacez la raquette à l'aide de la flèche gauche pour atteindre l'objectif d'arrivée."
-        bounce_2: "Attachez un bloc aux blocs « lors de l'action flèche droite » et « lors de l'action flèche gauche ». Déplacez la raquette pour atteindre les deux cibles d'arrivée."
-        bounce_3: "Maintenant, essayez de produire un résultat semblable avec le bloc « lors de l'action flèche du haut ». Déplacez la raquette vers la cible d'arrivée en haut."
+        bounce_1: "Attache un bloc au bloc « quand flèche à gauche » et clique sur le bouton « Démarrer ». Déplace la raquette à l'aide de la flèche gauche pour atteindre l'objectif d'arrivée."
+        bounce_2: "Attache un bloc à chacun des blocs « quand flèche droite » et « quand flèche gauche ». Déplace la raquette pour atteindre les deux cibles d'arrivée."
+        bounce_3: 'Maintenant, essaye la même chose avec le bloc "quand flèche en haut".  Fais déplacer la raquette vers la cible en haut.'
         bounce_4: "Cette fois, vous devez ajouter quatre blocs. Déplacez la raquette vers chacune des quatre cibles d'arrivée pour résoudre cette énigme."
-        bounce_5: "Nous allons envoyer une balle qui va tomber vers la raquette. Attachez un bloc au bloc « lorsque la balle touche la raquette » pour faire en sorte que la balle atteigne la cible d'arrivée."
-        bounce_6: Maintenant, la cible est en haut. Il vous faudra attacher des blocs aux deux blocs « lorsque la balle touche… » pour résoudre cette énigme.
-        bounce_7: "Attachez des blocs à chacun des blocs « lors ». Faites rebondir la balle jusqu'à ce qu'elle touche la cible d'arrivée."
-        bounce_10: "Il y a à présent une cible en haut. Attachez les blocs « marquer un point » et « marquer un point pour l'adversaire » aux blocs « lorsque la balle est dans la cible » et « lorsque la balle manque la raquette » pour mettre le jeu en place. Regardez combien de points vous pouvez marquer avant que votre adversaire en marque deux."
-        bounce_11: "Vous pouvez à présent attacher des blocs au bloc « lors du lancement du jeu ». Vous devez insérer le nouveau bloc « lancer une nouvelle balle » à plusieurs endroits. Essayez aussi de changer l'arrière-plan ou la vitesse de la raquette ou de la balle et voyez combien de points vous pouvez marquer avant que votre adversaire en marque deux."
+        bounce_5: "Nous allons envoyer une balle vers la raquette. Attache un bloc au bloc « quand la balle touche la raquette » pour t'assurer que la balle atteindra la cible."
+        bounce_6: Maintenant, la cible est en haut. Il faudra attacher des blocs aux deux blocs « quand la balle touche… » pour résoudre cette énigme.
+        bounce_7: "Attache des blocs à chacun des blocs « quand... ». Fais rebondir la balle jusqu'à ce qu'elle touche la cible d'arrivée."
+        bounce_10: "Il y a maintenant une cible en haut. Attache les blocs « marquer un point » et « marquer un point pour l'adversaire » aux blocs « quand la balle est dans le but » et « quand la balle manque la raquette » pour mettre le jeu en place. Combien de points peux-tu marquer avant que ton adversaire en marque deux?"
+        bounce_11: "Tu peux à présent attacher des blocs au bloc « lors du lancement ». Tu dois insérer le nouveau bloc « lancer une nouvelle balle » à plusieurs endroits. Essaie aussi de changer l'arrière-plan ou la vitesse de la raquette ou de la balle et vois combien de points tu peux marquer avant que ton adversaire en marque deux."
         bounce_12: "Créez votre propre jeu Rebond. Vous pouvez changer tous les éléments visuels et les règles. Une fois que vous avez terminé, cliquez sur Terminer pour permettre à vos amis d'essayer votre jeu sur leur téléphone."
         Custom_builder: "Faites glisser les blocs depuis la boîte à outils jusqu'à l'espace de travail pour former le niveau que vous souhaitez réaliser. Cliquez sur « Démarrer » quand vous êtes prêt."
         flappy_1: "Attachez un bloc au bloc « lors d'un clic », puis cliquez sur « Démarrer ». Cliquez sur l'écran ou tapotez-le pour déplacer Flappy vers la cible."
         flappy_2: "À présent, nous avons ajouté du sol. Attachez un bloc au bloc « lorsque le sol est touché ». Votre code doit « terminer le jeu » lorsque Flappy s'écrase."
-        flappy_3: "Le bloc « lors du lancement » vous permet d'exécuter du code au démarrage de votre jeu.  Essayez de régler la vitesse du niveau et le battement d'ailes."
+        flappy_3: "Le bloc « lors du lancement » te permet d'exécuter du code au démarrage de ton jeu.  Essaie de régler la vitesse du niveau et le battement d'ailes."
         flappy_4: "Flappy volera à travers les obstacles à moins que vous mettiez en place le code pour qu'il s'écrase. Attachez un bloc au bloc « lors de la rencontre avec un obstacle ». Votre code doit « terminer le jeu » lorsque Flappy s'écrase sur un tuyau pour la première fois."
         flappy_5: "Ajoutons un tableau de scores, et comptons les points quand Flappy passe les obstacles. Ajoutez les bonnes instructions au bloc « lors du dépassement d'un obstacle », puis marquez des points en faisant voler Flappy à travers les tuyaux."
-        flappy_6: "Regardez si vous pouvez toujours marquer un point en changeant l'énergie que Flappy met dans ses battements d'ailes."
-        flappy_7: "Ensuite, essayez de changer l'arrière-plan en attachant un autre bloc à bloc « lors du lancement »."
-        flappy_8: "Vous pouvez changer l'apparence à tout moment, pas seulement au lancement du jeu. Essayez donc de choisir un arrière-plan aléatoire lorsque d'autres événements se produisent, par exemple, lors du dépassement d'un obstacle."
+        flappy_6: "Regarde si tu peux toujours marquer un point en changeant l'énergie que Flappy met dans ses battements d'ailes."
+        flappy_7: "Ensuite, essaie de changer l'arrière-plan en attachant un autre bloc au bloc « lors du lancement »."
+        flappy_8: "Tu peux changer l'apparence à tout moment, pas seulement au lancement du jeu. Essaie de choisir un arrière-plan aléatoire lorsque d'autres événements se produisent, par exemple, lors du dépassement d'un obstacle."
         flappy_9: "Pour améliorer les choses, quand tu touches un obstacle, plutôt qu'arrêter le jeu, essaye de remettre le score à 0."
         flappy_11: "Créez votre propre jeu Flappy Bird. Vous pouvez changer tous les éléments visuels et tous les paramètres, même la pesanteur. Une fois que vous avez terminé, cliquez sur Terminer pour permettre à vos amis d'essayer votre jeu sur leur téléphone."
         flappy_k1_1: Jouer à Flappy Bird
@@ -258,7 +258,7 @@ fr:
         flappy_k1_6: "Ajoutons un tableau de scores, et comptons les points quand Flappy passe les obstacles. Ajoutez les bonnes instructions au bloc « lors du dépassement d'un obstacle », puis marquez des points en faisant voler Flappy à travers les tuyaux."
         flappy_k1_7: Regardez si vous pouvez marquer des points en dépassant des obstacles.
         flappy_k1_8: "Ensuite, essayez de changer l'arrière-plan en attachant un autre bloc à bloc « lors du lancement »."
-        flappy_k1_9: Essayez de modifier le joueur en attachant un bloc « choisir le personnage » pour le bloc « lors du lancement ».
+        flappy_k1_9: Essaie de modifier le joueur en attachant un bloc « choisir le personnage » au bloc « lors du lancement ».
         jigsaw_1: Clique sur le bloc
         jigsaw_2: Glisse le bloc sur la cible
         jigsaw_3: "Ordonne les blocs pour former l'image"
@@ -308,13 +308,35 @@ fr:
         studio_playlab_3: Peux-tu aider Mademoiselle Tennis à rejoindre le drapeau ?
         studio_playlab_4: "Peux-tu aider Monsieur Tennis (acteur 1) à rejoindre Mademoiselle Tennis (acteur 2) et à jouer un son lorsqu'il y arrive ?"
         studio_playlab_5: |-
-          Peux tu aider le Robot spatial à dire "salutations terriens" lorsque l'on clic? N'oublie pas de cliquer après avoir cliqué sur Cours
+          Peux tu aider le Robot spatial à dire "salutations terriens" lorsque l'on clique? N'oublie pas de cliquer après avoir cliqué sur Exécuter
         studio_playlab_6: Peux tu aider la Sorcière à se déplacer avec les flèches haut/bas/droite/gauche pour récupérer toutes les boules de feu magiques?
         studio_playlab_7: |-
           Le bloc "répéter pour toujours" permet d'exécuter du code en continu. Peux-tu y attacher des blocs pour aider le magicien à se déplacer vers la droite et vers la gauche alternativement ?
         studio_playlab_8: "Peux-tu ajouter un bloc pour ajouter un point au score et un autre pour jouer un son quand la licorne percute le magicien, et  déplace-la à l'aide des flèches jusqu'à marquer à nouveau ?"
         studio_playlab_9: "Définis l'arrière-plan de cette invasion extra-terrestre, et aide le robot spatial à atteindre l'extra-terrestre plus rapidement en changeant sa vitesse. Déplace-le alors avec les flèches pour atteindre le robot et alerter tout le monde"
         studio_playlab_10: Crée ton propre jeu. Quand tu as fini, clic sur Terminer pour laisser tes amis essayer ton jeu sur leur téléphone.
+        studio_iceage_1: "Manny veut dire « Bonjour » - peux-tu l'aider ?"
+        studio_iceage_2: Diego (acteur 1) et Mémé (acteur 2) aimeraient se dire « Bonjour ». Peux-tu les aider en utilisant le bloc « dire » deux fois ?
+        studio_iceage_3: Pouvez vous aider Scrat à obtenir le drapeau ?
+        studio_iceage_4: "Peux-tu aider Scrat (acteur 1) à arriver auprès de Mémé (acteur 2) et émettre un signal sonore lorsqu'il y arrive ?"
+        studio_iceage_5: "Peux-tu aider Sid pour dire « bonjour » quand on clique dessus ? N'oublie pas de cliquer dessus après avoir cliqué sur Démarrer"
+        studio_iceage_6: Peux-tu aider Diego à se déplacer en utilisant les touches fléchées haut/bas/droite/gauche pour rejoindre tous les drapeaux ?
+        studio_iceage_7: |-
+          Le bloc "répéter pour toujours" permet d'exécuter du code en continu. Peux-tu y attacher des blocs pour aider Sid à se déplacer vers la droite et vers la gauche à plusieurs reprises ?
+        studio_iceage_8: "Peux-tu ajouter un bloc pour marquer un point et un bloc pour jouer un son quand Sid entre en collision avec Manny, et ensuite le déplacer avec les flèches jusqu'à ce que tu marques des points ?"
+        studio_iceage_9: "Définis l'arrière-plan de l'Age de Glace et aide le Sid à atteindre Mémé le plus rapidement en changeant sa vitesse. Déplace-le alors avec les flèches pour atteindre Sid et alerter tout le monde."
+        studio_iceage_10: Crée ton propre jeu. Quand tu as fini, clic sur Terminer pour laisser tes amis essayer ton jeu sur leur téléphone.
+        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
+        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
+        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
+        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
+        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
+        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
+        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
+        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_full_sandbox: Crée ton propre jeu. Quand tu as fini, clic sur Terminer pour laisser tes amis essayer ton jeu sur leur téléphone.
         studio_k1_1: Peux-tu faire dire « Bonjour » à ce chien ?
         studio_k1_2: Peux-tu faire dire quelque chose au chien puis faire parler le chat juste après ?
@@ -384,7 +406,7 @@ fr:
         C2_artist_intro: "Introduction à l'Artiste"
         C2_zuck_repeat_loop: Labyrinthe et boucles
         C2_artist_loops: "Boucles d'artiste"
-        C2_artist_debugging: Artiste et le débogage
+        C2_artist_debugging: "L'Artiste et le débogage"
         C2_bee_loops: Abeilles et boucles
         C2_bee_debugging: Abeilles et débogage
         C2_bee_conditionals: Abeilles et instructions conditionnelles
@@ -443,7 +465,13 @@ fr:
         infinity_playlab_intro: 'Play Lab - Introduction'
         infinity_playlab_events: 'Play Lab - événements'
         infinity_playlab_repeat_forever: Play Lab Répétition Infinie
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: 'Introduction to Variables - Part 1'
+        csp_applab_variables_2: 'Introduction to Variables - Part 2'
         csp_applab_functions: Introduction aux fonctions
+        csp_applab_functions_parameters: Fonctions avec Paramètres
+        csp_applab_loops: Boucles
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
@@ -475,6 +503,21 @@ fr:
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars : Construire une Galaxie avec Code - Introduction'
+        starwars_typing: 'Star Wars : Construire une Galaxie avec Code - JavaScript'
+        starwars_events: 'Star Wars : Construire une Galaxie avec Code - événements'
+        starwars_congrats: 'Star Wars : Construire une Galaxie avec Code - Félicitations'
+        starwars_blocks_intro: 'Star Wars : Construire une Galaxie avec Code - Introduction'
+        starwars_blocks_events: 'Star Wars : Construire une Galaxie avec Code - événements'
+        starwars_blocks_congrats: 'Star Wars : Construire une Galaxie avec Code - Félicitations'
+        mc_intro: 'Minecraft - Introduction'
+        mc_repeat: 'Minecraft - Répéter'
+        mc_if_statements: 'Minecraft - Instructions conditionnelles'
+        mc_congrats_share: 'Minecraft - Félicitations'
+        mc_congrats_no_share: 'Minecraft - Félicitations'
+        gumball_intro: 'Gumball Hour of Code - Introduction'
+        gumball_events: 'Gumball Hour of Code - Events'
+        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: "Attrape un bloc « avancer plus » et attache-le sous l'autre bloc"
@@ -487,7 +530,7 @@ fr:
         set_sprite_image: "Attachez un bloc « choisir l'image pour le personnage » au bloc « lorsque l'histoire commence » pour ajouter un personnage à l'histoire"
         studio_say_text: Entrez ce que vous souhaitez que votre personnage dise dans ces guillemets
         jigsaw_click: Clique sur ce bloc !
-        move_elsa_forward: Faites glisser un bloc « Avancer » et attachez le sous la bloc «Lors du lancement» pour faire avancer Elsa
+        move_elsa_forward: Fais glisser un bloc « avancer » et attache-le sous le bloc «lors du lancement» pour faire avancer Elsa
         turn_elsa: Utilise le bloc « Tourner » pour faire tourner Elsa. Le nombre dans le menu déroulant détermine de combien de degrés Elsa tournera
         replace_questions: 'Utilise le menu déroulant pour remplacer "???" par un nombre'
         replace_questions_degree: 'Utilise le menu déroulant pour remplacer "???" avec le bon nombre de degrés à tourner'
@@ -544,7 +587,14 @@ fr:
         right_arrow_fireball: Utilise la flèche droite pour tirer des boules de feu
         name_function: Écris le now de ta fonction ici
         Infinity_move_right_runbutton: Ajouter déplacer bloc ici
-        Infinity_move_directions_callout: 'Quel bloc fera déplacer Baymax  vers le haut lorsque vous appuyez sur la flèche vers le haut ?'
+        Infinity_move_directions_callout: Quel bloc fera déplacer Baymax vers le haut lorsque tu appuies sur la flèche vers le haut ?
         Infinity_move_directions_callout_arrow: Utilisez ces flèches pour vous diriger
-        Infinity_move_collide_callout: Jouer un son lorsque cet événement se produit.
+        Infinity_move_collide_callout: Joue un son lorsque cet événement se produit.
         Infinity_repeat_callout: "Place un bloc de déplacement à l'intérieur d'ici"
+        craft_run_button_callout: Clique sur « Démarrer » pour essayer ton programme
+        craft_drag_block_callout: "Fais glisser un bloc « moveForward(); » et emboite le sous l'autre bloc"
+        craft_callout_preplaced: "Nous avons mis quelques blocs ici pour t'aider à démarrer"
+        craft_inside_repeat: "Répète des actions en plaçant des blocs à l'intérieur"
+        craft_callout_preplaced_house: Ce code va commencer la construction de ta maison. Arriveras-tu à le terminer ?
+        craft_what_is_iron: Extrais ce fer !
+        craft_callout_moveforward: Ce code recherchera de la lave, peux-tu ajouter une commande pour avancer plus ?

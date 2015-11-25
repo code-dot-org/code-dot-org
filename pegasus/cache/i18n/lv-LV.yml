@@ -1,4 +1,5 @@
 "lv-LV":
+  hour_of_code: Programmēšanas stunda
   hello: Sveika, pasaule
   select_language: Lūdzu izvēlieties savu valodu
   en: Datorzinātne
@@ -11,8 +12,8 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ja esi informātikas skolotājs, apskati citus CSEdWeek
     resursus</a>'
-  n_have_learned_an_hoc: "<h1>Izmēģini</h1><h2>Programmēšanas stundu</h2><h3># jau
-    notikušas</h3>"
+  n_have_learned_an_hoc: <h1>Izmēģini</h1><h2>Programmēšanas stundu</h2><h3># jau
+    notikušas</h3>
   anybody_can_learn: Jebkurš var iemācīties.
   learn_now: Mācīties tagad
   petition_message: Katram skolēnam katrā skolā būtu jābūt iespējai apgūt programmēšanu
@@ -37,11 +38,14 @@
   hoc2014_everyone: Visi
   hoc2014_support: Atbalsti &#x25BE;
   hoc2014_whatishoc: Kas ir "Programmēšanas stunda"?
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
   csedweek_map_search_reset: Atiestatīt
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Piereģistrēties
   cded_try_it: Izmēģini
   twentyhours_trynow: Izmēģini tūlīt
@@ -64,11 +68,14 @@
     ciklus, ja-tad nosacījumus un pamatalgoritmus.
   all_ages: Visu vecumu
   beginner: Iesācējs
-  n_participants: "# dalībnieki"
+  n_participants: '# dalībnieki'
   go: Sākt
   thank_you_: Paldies!
   congratulations: Apsveicu!
   congratulations_on_completing_hoc: Apsveicam tevi ar "Programmēšanas stundas" pabeigšanu
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
   course_name_accelerated: Accelerated Course
   course_name_course1: Kurss 1
   course_name_course2: Kurss 2
@@ -112,7 +119,7 @@
   beyond_an_hour: Pēc Programmēšanas stundas
   get_started: Sākt
   i_agree: es piekrītu
-  participant_select: "-Izvēlēties-"
+  participant_select: -Izvēlēties-
   participant_student: Students
   participant_parent: Vecāki
   participant_educator: Skolotājs
@@ -133,12 +140,10 @@
   learn_next_level: Turpināt nākamo līmeni
   learn_online: Izmēģiniet citus kursus tiešsaistē
   learn_classes: Atrast vietējās klases
-  hoc_is_here: "#Programmēšanas_stunda ir šeit - pārbaudi @codeorg"
+  hoc_is_here: '#Programmēšanas_stunda ir šeit - pārbaudi @codeorg'
   just_did_hoc: 'Es tikko izpildīju #Programmēšanas_stundu - pārbaudi! @codeorg'
   twitter_teach_cs: Kādēļ vairāk skolās nemāca datorzinības? Mēs to varam uzlabot.
     http://youtu.be/nKIu9yen5nc. Ieskaties http://code.org/ un uzzini vairāk.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: Mācies "Programmēšanas skolu"
   beyond_hoc: Pārsniedz vienu stundu
   what_gender: Kāda dzimuma pārstāvis tu esi?
@@ -147,11 +152,11 @@
   help_recruit_coders: Palīdzi mums papildnāt tavu sastāvu ar programmētājiem!
   help_recruit: Palīdzi mums papildināt sastāvu ar programmētājiem!
   lines_of_code: VAIRĀK NEKĀ <b># KODA RINDIŅAS</b> JAU UZRAKSTĪTAS.
-  lines_of_code_alt: "<b>#</b> KODA RINDIŅAS UZRAKSTĪJUŠI SKOLĒNI"
+  lines_of_code_alt: <b>#</b> KODA RINDIŅAS UZRAKSTĪJUŠI SKOLĒNI
   who_has_done_hoc: 'Kas ir veidojis #ProgrammesanasStundu? @codeorg'
   hoc_leaderboards: Programmēšanas stundas rezultātu saraksts
-  students_and_lines: "%{students} skolēni ir piedalījušies Programmēšanas stundā
-    un uzrakstījuši %{lines} rindas koda."
+  students_and_lines: '%{students} skolēni ir piedalījušies Programmēšanas stundā
+    un uzrakstījuši %{lines} rindas koda.'
   start_hoc: Sāc Programmēšanas stundu tagad
   contact_form_topic_press: Prese/mediji (intervija vai uzaicinājums sniegt runu)
   stats_nina: '"Katru dienu sasniedzu visaugstāko rezultātu&mdash; 100% atsaucību."
@@ -226,8 +231,8 @@
     &ldquo;Šī programma iesaistīja, iedvesmoja un
     lika piedalīties 100% manu skolēnu.&rdquo;
     Ādams, skolotājs
-  homepage_hero_text_stat_loc: "#loc rindiņas koda ir uzrakstījuši skolēni"
-  homepage_hero_text_stat_students: "#student_count skolēnu profili kodēšanas studijā"
+  homepage_hero_text_stat_loc: '#loc rindiņas koda ir uzrakstījuši skolēni'
+  homepage_hero_text_stat_students: '#student_count skolēnu profili kodēšanas studijā'
   homepage_hero_text_stat_served: 'Programmēšanas stundas: #served notikušas līdz
     šim'
   homepage_slot_text_hoc: Programmēšanas stunda
@@ -237,8 +242,15 @@
   homepage_slot_text_course4: 4. kurss
   homepage_slot_text_shop: Veikals
   homepage_slot_text_flappy: Flappy kods
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: '# notikušas'
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Piereģistrēties
+  homepage_action_text_try_it: Izmēģini
+  homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_codevideo: Noskaties video
   homepage_action_text_teachervideo: Noskaties video
+  homepage_action_text_girlvideo: Inspire a girl
   homepage_action_text_learn: Sāc mācīties
   homepage_action_text_signpetition: Paraksti petīciju
   homepage_signpetition_dropdown: Es piekrītu &#x25BE;
@@ -255,7 +267,7 @@
   homepage_slot_text_blurb_hoc: Ikviens var mācīties. Sāc šodien
   homepage_slot_text_link_hoc: Izmēģini Programmēšanas stundu
   homepage_slot_text_link_host: Novadi programmēšanas stundu
-  homepage_slot_text_link_hocserved: "# notikušas"
+  homepage_slot_text_link_hocserved: '# notikušas'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Skolēni
   homepage_slot_text_blurb_students: Izpēti visas mūsu pamācības
@@ -279,7 +291,7 @@
   contact_form_topic_student: Skolēniem
   contact_form_topic_parent: Vecākiem
   contact_form_topic_teacher: Pasniedzējiem/skolotājiem
-  contact_form_topic_outside_us: "Ārpus ASV"
+  contact_form_topic_outside_us: Ārpus ASV
   contact_form_topic_contribution: Ziedojumi
   contact_form_topic_partner: Sadarbības partneriem
   contact_form_topic_other: Citi
@@ -299,9 +311,9 @@
     programma
   class_submission_in_school_exploring_computer_science: Izpētot datordatorzinātni
   class_submission_in_school_other: Citi skolā
-  class_submission_out_of_school: "Ārā no skolas"
+  class_submission_out_of_school: Ārā no skolas
   class_submission_out_of_school_summer_camp: Vasaras nometne
-  class_submission_out_of_school_afterschool_program: "Ārpusskolas programma"
+  class_submission_out_of_school_afterschool_program: Ārpusskolas programma
   class_submission_out_of_school_all-day_workshop: Visas dienas darbnīca (līdz vienai
     nedēļai)
   class_submission_out_of_school_multi-week_workshop: Vairāku nedēļu darbnīca
@@ -317,26 +329,55 @@
   class_submission_level_college: Studentiem
   class_submission_level_vocational: Arods
   class_submission_languages_other: Cita valoda(s)
+  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
+    videos</a> by role models and celebrities
+  starwars_subtitle: Building a Galaxy With Code
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: Izmēģini tūlīt
+  starwars_blocks_title: Bloki
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
+  starwars_blocks_start_button: Izmēģini tūlīt
+  starwars_watch_videos: Before you get started, watch one of these inspirational
+    videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  starwars_platform_text: Moderni pārlūki, viedtālruņi, planšetdatori
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_gradelevel: Ages 4-104
+  mc_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up."
+    have signed up.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Vārds
@@ -384,7 +425,7 @@
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 stundu katru nedēļu
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 stundas katru nedēļu
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 stundas katru nedēļu
-  volunteer_engineer_submission_commitment_now_and_then: "Šad un tad"
+  volunteer_engineer_submission_commitment_now_and_then: Šad un tad
   volunteer_engineer_submission_commitment_annually: 2-3 times per year
   volunteer_engineer_submission_commitment_monthly: A couple hours per month
   volunteer_engineer_submission_commitment_weekly: A couple hours per week
@@ -395,9 +436,24 @@
   volunteer_engineer_submission_location_flexibility_curriculum: Gatavs palīdzēt atvērtā
     koda mācību programmas projektā
   volunteer_engineer_submission_experience_unspecified: Nav precizēts
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: Pašreizējais
     universitātes students (vai pētnieks)
   volunteer_engineer_submission_experience_software_professional: Progammatūras profesionāļi
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
   petition_age: Vecums
   dashboard_landing_title: Skolotāju mājas lapa
   dashboard_landing_welcome: Esiet sveicināti jaunajā un uzlabotājā skolotāju vadības
@@ -421,12 +477,12 @@
     pamācībās
   dashboard_landing_video_player: Izmēģinat mūsu jauno video atskaņotāju savā skolā
   dashboard_landing_progress_title: Galveno klašu progress
-  dashboard_landing_progress_biggest: "Šis ir tava lielākā koda progress."
+  dashboard_landing_progress_biggest: Šis ir tava lielākā koda progress.
   dashboard_landing_view_progress: Aplūko %{biggest_section} progresu
   dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Pieejamie kursi
-  dashboard_landing_available_courses: "Šeit atrodas kursi, kas ir pieejami tev un
-    taviem studentiem."
+  dashboard_landing_available_courses: Šeit atrodas kursi, kas ir pieejami tev un
+    taviem studentiem.
   dashboard_landing_more_tutorials: Vēlies redzēt vēl pamācības?
   dashboard_landing_more_tutorials_desc: Šeit ir vēl pamācības <a href="/learn/beyond">
     kuras iesaka mūsu partneris.</a> Iemācies programmēt ar robotiem, veidot mājas
@@ -514,10 +570,10 @@
   dashboard_sections_name: Sadaļas nosaukums
   dashboard_sections_choose_secret: Ja vēlies piedāvāt kontus skolēniem, izvēlies
     slepenu <b>vārdu</b> vai <b>attēlu</b> šim nodalījumam.
-  dashboard_sections_secret_word: "<b>Vārds</b> ļauj uzstādīt slepeno vārdu katram
-    skolēnam."
-  dashboard_sections_secret_picture: "<b>Bilde</b> ļauj Tev uzstādīt slepeno bildi
-    katram skolēnam, piemērots jaunākiem skolēniem, kuri vēl nemāk rakstīt."
+  dashboard_sections_secret_word: <b>Vārds</b> ļauj uzstādīt slepeno vārdu katram
+    skolēnam.
+  dashboard_sections_secret_picture: <b>Bilde</b> ļauj Tev uzstādīt slepeno bildi
+    katram skolēnam, piemērots jaunākiem skolēniem, kuri vēl nemāk rakstīt.
   dashboard_sections_secret_none: Ja vēlies, lai skolēni var pārvaldīt paši savus
     kontus, tai skaitā izvēlēties savas paroles, izvēlies slepeno tipu <b>neviens</b>.
   dashboard_sections_print_secrets: Tad jūs varat izdrukāt lapiņas, kas satur informāciju
@@ -627,31 +683,48 @@
     skolēnus"
   dashboard_sections_sign_in_main: http://code.org un spied "Pieslēgties"
   dashboard_sections_password_account_creation: Skolēnu izveidotā parole
-  dashboard_sections_login_type_explanation: "Šī tabula palīdz paskaidrot, kuru no
+  dashboard_sections_login_type_explanation: Šī tabula palīdz paskaidrot, kuru no
     visiem pieteikšanās veidiem <b>attēls, vārds vai e-pasts</b>, tu gribēsi izvēlēties
-    sadaļai."
+    sadaļai.
   dashboard_faq: Biežāk uzdotie jautājumi
   dashboard_faq_k5: No bērnudārza līdz 5. klases līmeņa Biežāk Uzdotie Jautājumi
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: 'Programmēšanas stunda ir klāt: no 8. līdz 14. decembrim!'
   code_sign_up: Reģistrējies, lai piedalītos Datorzinību izglītības nedēļā
   learn_more: Uzzini vairāk
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
   learn_sign_up_button: Piereģistrēties
+  learn_videos_watch: Watch this inspirational video with your classroom
+  learn_videos_show: Show this inspirational video to your class
+  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Izmēģini mūsu jauno "Programmēšanas stundas" pamācību
   hoc2014_try_new_tutorial: Pamēģini mūsu jauno Programmēšanas Stundas apmācību beta
     versijā
   hoc2014_try_scrat: Dusmīgie putni, Augi pret Zombijiem un Skrets
   hoc2014_try_frozen: Zīmē kopā ar Annu un Elzu no "Ledus sirds"
+  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Tutorials by 3rd parties
+  carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Pamācības tavā valodā
   carousel_heading_domestic: Pamācības, kas pieejamas Angļu valodā
   carousel_heading_beginners: Pamācības iesācējiem
@@ -665,6 +738,7 @@
   carousel_heading_robots: Iemāčies programēt ar robotiem
   carousel_heading_ide: Skolotāju starpā populāras platformas
   educator_notes: Pasniedzēju pieraksti
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   how_to_teach_hoc: Ko mācīt Programmēšanas stundā
   more_resources_educators: Vairāk resursi priekš skolotājiem un pasniedzējiem
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -680,6 +754,7 @@
     jaunāku pārlūkprogrammu</a>
   mobile_devices: Apmācības mobilajām ierīcēm
   frozen_name: Programmē ar Annu un Elzu
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
   codeorg_name: Uzraksti savu pirmo programmu
   codeintl_name: Uzraksti savu pirmo programmu
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -719,6 +794,8 @@
   projguts_name: Akmens, Šķēres, Papīrīts
   hourofcode_name: Vietturis uz jauno code.org/hoc
   playlab_name: Spēles laboratorija
+  infinity_name: Infinity Play Lab
+  artist_name: Mākslinieks
   codeorg_gradelevel: Vecums no 4-104
   codeintl_gradelevel: Vecums no 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -758,7 +835,10 @@
   projguts_gradelevel: Vecumā no 10-13
   hourofcode_gradelevel: Vecums no 4-104
   frozen_gradelevel: Vecumā no 8+
+  starwars_gradelevel: Ages 6+
   playlab_gradelevel: Vecums no 4-104
+  infinity_gradelevel: Vecums no 4-104
+  artist_gradelevel: Vecums no 4-104
   codeorg_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   codeintl_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   thinkersmithspanish_platformtext: Bezsaistē
@@ -798,6 +878,7 @@
   projguts_platformtext: Bezsaistē
   hourofcode_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   frozen_platformtext: Moderni pārlūki + planšetdatori
+  starwars_platformtext: Moderni pārlūki + planšetdatori
   playlab_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   codeorg_shortdescription: Iemācies programmēt ar Mark Zuckerberg un Dusmīgajiem
     putniem!
@@ -850,10 +931,16 @@
   kodableunplugged_shortdescription: Jautrs bezsaistes vingrinājums
   projguts_shortdescription: Izmēģini modelēšanu un simulāciju izmantojot "akmens,
     šķēres, papīrītis"
-  hourofcode_shortdescription: Vietturis uz jauno code.org/hoc
+  hourofcode_shortdescription: Iemācies programmēt ar Mark Zuckerberg un Dusmīgajiem
+    putniem!
   frozen_shortdescription: Kodē, lai kopā ar Annu un Elzu iepazītu ledus skaistumu
     un burvību.
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
   playlab_shortdescription: Izveidot stāstu vai spēli ar Spēles laboratoriju!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: Uzzīmēt foršus attēlus un dizainus ar Izpildītāju!
   codeorg_longdescription: Apgūsti datorzinību pamatus ar vizuālo "velc un nomet"
     programmēšanu. Tas atgādinās spēlēšanos, skatoties video lekcijas ar Bilu Geitsu,
     Marku Zuckerberg, pikatajiem putniem un augiem pret zombijiem. Mācies cikliskas
@@ -933,10 +1020,10 @@
   groklearning_longdescription: Ar programmēšanas valodu Python veido čata robotu
     "Eliza", kas attēlos robote0psihoterapeitu. Tu apmācīsi, ko un kad Elīzai teikt.
     Vai viņa apmuļķos tavus draugus, sakot, ka nav dators, bet gan cilvēks?
-  quorum_longdescription: "Šī pamācība ir pieejama arī ar redzes traucējumiem un strādā
+  quorum_longdescription: Šī pamācība ir pieejama arī ar redzes traucējumiem un strādā
     ar ekrāna lasītājiem. Pievienojies Mērijai ekskursijā pa bioloģijas laboratoriju
     un mācies programmēšanas valodu Quorum. Šajā pamācībā pieejami tiešsaistes aktivitātes
-    ar piemēriem."
+    ar piemēriem.
   codespark_longdescription: The Foos ir jautrs un bērniem draudzīgs vieds, kā apgūt
     programmēšanu. Programmē mīlīgus tēlus un saliec puzles, ko no virtuālās pasaules
     ienest reālajā. Spēle ir bez vārdiem, visi var spēlēt!
@@ -985,6 +1072,8 @@
   frozen_longdescription: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt ledus
     burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot un taisot
     ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
+  starwars_longdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
   playlab_longdescription: Spēļu laboratorijā radi stāstu vai spēli. Liec dzīvniekiem,
     pirātiem, zombijiem, nindzjām un citiem tēliem kustēties, skanēt, krāt punktus
     un ķert ugunsbumbas!
@@ -1226,12 +1315,12 @@
     spējas, gan ierobežojumus. CS 101 arī'sniedz vispārīgu ievadu par to, kas ir mūsdienu
     dators, kas ir aparatūra, programmatūra un internets. Nav nepieciešama iepriekšēja
     pieredze, izņemot prasme lietot tīmekļa pārlūku.
-  udacity_beyond_longdescription: "Šajā kursā apgūsi datorzinību pamatjēdzienus un
+  udacity_beyond_longdescription: Šajā kursā apgūsi datorzinību pamatjēdzienus un
     mācīsies, kā rakstīt savas datorprogrammas, sevišķi tīmekļa lietotnes. Uzsākot
     kursu nav nepieciešamas priekšzināšanas - aicināts ir katrs iesācējs! Kursa beigās
     būsi apguvis datorzinību pamatjēdzienus un pietiekami daudz programmēšanas prasmes
     , lai patstāvīgi izveidotu Python programmas, kas risina tevis izvirzītas problēmas.
-    Kurss sagatavos tālāk mācībām jau ar priekšzināšanām."
+    Kurss sagatavos tālāk mācībām jau ar priekšzināšanām.
   teachingtree_beyond_longdescription: TeachingTree ir atvērta platforma, kas ļauj
     organizēt mācību saturu. Mūsu mērķis ir ļaut skolēniem ātri piekļūst pie vajadzīgajiem
     klipiem, lai organizētu individuālo mācīšanos. Katrs ir aicināts pievienot video
@@ -1297,38 +1386,11 @@
     no %{https_date}. Pēc šī datuma tu nevarēsi piekļūt code.org. <a href='%{it_requirements_url}'>Spied
     šeit</a> un izlasi, kā iespējot HTTPS Code.org.
   compatibility_https_hide_this_warning: Nerādīt šo brīdinājumu
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: "# served"
-  homepage_action_text_join_us: Join us
-  homepage_action_text_sign_up: Sign up
-  homepage_action_text_try_it: Try it
-  homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_girlvideo: Inspire a girl
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  starwars_gradelevel: Ages 6+
-  starwars_platformtext: Modern browsers + tablets
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: vicināt
+  infinity_shortcode: inf
+  playlab_shortcode: spēlēt
+  artist_shortcode: art

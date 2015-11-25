@@ -3,7 +3,7 @@ nn:
     script:
       name:
         20-hour:
-          desc: 'Introduksjon til datavitskap ("informatikk") for barne- og ungdomstrinnet'
+          desc: 'Introduksjon til informatikk for barne- og ungdomstrinnet'
           Unplug1: Steg 1
           Maze: Steg 2
           Unplug2: Steg 3
@@ -72,7 +72,7 @@ nn:
           WordSearch: Steg 1
     game:
       name:
-        Unplug1: Introduksjon til datavitskap (informatikk)
+        Unplug1: Introduksjon til informatikk
         Maze: Labyrinten
         Multi: Fleirvalsprøver
         Unplug2: Programmeringstenking
@@ -88,7 +88,7 @@ nn:
         Farmer2: Bonden 2
         Unplug8: Abstraksjon
         Artist4: Kunstnaren 4
-        Unplug9: Programmering med relé
+        Unplug9: Programmeringsstafett
         Farmer3: Bonden 3
         Unplug10: Internett
         Artist5: Kunstnaren 5
@@ -104,7 +104,7 @@ nn:
         TextMatch: Teksttreff
         StudioEC: Spel-lab
         Applab: App Lab
-        NetSim: Internett Simulator
+        NetSim: Internettsimulator
     trophy:
       name:
         Bronze: Bronse
@@ -113,8 +113,8 @@ nn:
     concept:
       description:
         sequence: Sekvens
-        if: Hvis-blokk
-        if_else: Hvis-ellers blokk
+        if: Viss-blokk
+        if_else: Viss-elles blokk
         loop_times: Gjenta-gonger-blokk
         loop_until: Gjenta-til-blokk
         loop_while: Medan-blokk
@@ -123,7 +123,7 @@ nn:
         parameters: Funksjonar med parameter
     level:
       instructions:
-        maze_2_2: 'Kan du hjelpe meg med å fange den sleme grisen? Set saman et par «framover»-blokker og trykk på "Køyr" for å hjelpe meg å komme dit. '
+        maze_2_2: 'Kan du hjelpe meg med å fange den slemme grisen? Set saman et par «framover»-blokker og trykk på "Køyr" for å hjelpe meg å komme dit. '
         maze_2_1: Denne grisen rufser til fjørene mine. Hjelp meg med å finne han!
         maze_2_2_5: Følg stien og leid meg til den tåpelege grisen. Unngå TNT ellers vil fjørene mine fyke!
         maze_2_3: Før meg til den grøne styggingen! (Sjå opp for dynamitt)
@@ -166,7 +166,7 @@ nn:
         turtle_4_11: 'Prøv å forandre på verdiane i rotasjon- og gjenta-blokkene for å lage ulike mønster. Eller prøv å eksperimentere med resten av koden for å teikne det du sjølv vil!'
         maze_karel_1_1: 'Hei, eg er ein bonde. Eg treng hjelp til å gjere åkeren min flat slik at den blir klar til planting. Flytt meg til jordhaugen og bruk "fjern"-blokka til å fjerne den.'
         maze_karel_1_2: 'Flytt meg så til holet og fyll det med TO spader jord ved å bruke "fyll"-blokka.'
-        maze_karel_1_3: Flytte meg til haugen med jord, og fortell meg kor mange spadetak eg skal fjerne, med så få blokker som mulig.
+        maze_karel_1_3: Flytt meg til haugen med jord, og fortell meg kor mange spadetak eg skal fjerne, med så få blokker som mulig.
         maze_karel_1_4: 'Kan du hjelpe meg med å fjerne alle haugane med jord? Hint: Bruk ei gjenta-blokk dersom du kan!'
         maze_karel_1_5: 'Hjelp meg å fylle alle desse hola med 5 spadetak med jord. Hint: Du kan sette en "gjenta"-blokk inni ei "så lenge"-blokk.'
         maze_karel_1_6: 'Fjern alle jordhaugane ved å bruke så få blokker som mulig. Dei nye vala i nedtrekksmenyen til "så lenge"-blokka forteller meg om eg står på ein haug eller over eit hol.'
@@ -203,7 +203,7 @@ nn:
         turtle_3_5: 'No skal du lage ein ny "teikne eit hus"-funksjon, og bruke den til å huse to kattar. Tips: lag ein ny funksjon med "gjer noko"-blokka, og skriv inn egen tekst for å gi blokka eit namn.'
         turtle_3_6: 'Ved å bruke "teikn ein firkant" som eksempel: Legg til ein parameter "lengde" til "teikn ein trekant". Teikn så trekantar i ulike storleikar. (Hint: Klikk på stjerna for å legge til ein ny parameter til ein funksjon)'
         turtle_3_7: 'Legg til ein parameter "lengde" til "teikn eit hus"-funksjonen, og bygg eit stort hus til elefanten (med sider som er 150 piksel lange)'
-        turtle_3_8: 'Endre "tegne et hus" så jeg ender opp på nedre høyre hjørne etter et nytt hus. Bruk endrede funksjonen til å trekke tre hus.'
+        turtle_3_8: 'Endre "tegn eit hus" slik at eg endar opp i nedste høgre hjørne etter å ha tegna eit nytt hus. Bruk denne endra funksjonen til å tegne tre hus.'
         turtle_3_9: 'Kan du gjenskape funksjonen "teikn eit hus" utan hjelp? Prøv det, og teikn så ei husrekkje.'
         turtle_3_10: Du har lært mykje! Bruk det til å teikne det du vil. Prøv å teikn ei stjerne, eller ein spiral eller eit stilig snøfnugg.
         maze_karel_debug_seq_1: Velkomen til feilsøkjing! Koden verkar ikkje rett. Kan du finne problemet og fikse det slik at eg kan få jordet flatt og klart for planting?
@@ -244,7 +244,7 @@ nn:
         flappy_6: Sjå om du framleis kan skåre etter at du har fått Flappy til å flakse meir eller mindre.
         flappy_7: 'Prøv å endre scena ved å feste ei anna blokk til "når køyrt"-blokka.'
         flappy_8: Du kan sette utsjånad når som helst, ikkje berre når spelet startar. Prøv å sette ei tilfeldig scene når andre hendingar skjer, for eksempel når du passerer eit hinder.
-        flappy_9: For å blande ting, når du treffer et hinder, i stedet for å avslutte spillet Prøv innstillingen score tilbake til 0.
+        flappy_9: For å gjere det meir moro, prøv å sette poengsummen tilbake til 0 i staden for å avslutte spelet når du treff eit hinder.
         flappy_11: Lag ditt eige Flappy-spel! Du kan endre alle bilda og alle reglane, til og med tyngdekrafta. Når du er ferdig, klikk Fullfør og du kan la venane dine prøve spelet på sine telefonar.
         flappy_k1_1: Spel Flappy
         flappy_k1_2: 'Fest ei blokk til "når klikk"-blokka, og trykk "Køyr". Klikk eller trykk på skjermen for å flyge  Flappy til målet.'
@@ -307,6 +307,27 @@ nn:
         studio_playlab_8: Kan du legge til ei blokk for å score eit poeng og ei blokk for å spele ein lyd når einhjørningen kjem borti trollmannen, og så flytte han rundt med pilene til du scorer?
         studio_playlab_9: Sett bakgrunn for denne rominvasjonen og hjelp Romroboten å komme til romvesenet raskare ved å endre hastigheita hans. Flytt han med piltastane for å komme til Romroboten slik at han kan advare alle andre
         studio_playlab_10: Lag ditt eige spel. Når du er ferdig, trykk Fullør for å la venane dine prøve ditt spel på sine mobilar.
+        studio_iceage_1: 'Manny vil si "hei" - kan du hjelpe han?'
+        studio_iceage_2: 'Diego (figur 1) og Granny (figur 2) vil seie "hei" til kvarandre. Kan du hjelpe dei ved å bruke "sei"-blokka to gonger?'
+        studio_iceage_3: Kan du hjelpe Scrat med å kome seg til flagget?
+        studio_iceage_4: Kan du hjelpe Scrat (figur 1) med å kome seg til Granny (figur 2) og spele ein lyd når han kjem seg dit?
+        studio_iceage_5: 'Kan du hjelpe Sid med å seie "hallo" når han blir trykka på? Ikkje gløym å klikke på han etter at du har trykt Køyr'
+        studio_iceage_6: Kan du hjelpe Diego med å flytte seg rundt ved å bruke piltastane opp/ned/høgre/venstre for å kome seg til alle flagga?
+        studio_iceage_7: 'Blokka "gjenta for alltid" gjer slik at du kan køyre kode om igjen og om igjen. Kan du sette blokker i han slik at Sid kan flytte seg til høyre og venstre heile tida?'
+        studio_iceage_8: Kan du legge til ei blokk for å score eit poeng og ei blokk som spelar ein lyd når Sid løper inn i Manny, og så flytte han med pilene til du scorer?
+        studio_iceage_9: Set bakgrunnen for denne istida og hjelp Sid å kome seg til Granny raskare ved å endre farten. Bruk pilane for å kome til Sid og varsle alle andre.
+        studio_iceage_10: Lag ditt eige spel. Når du er ferdig, trykk Fullør for å la venane dine prøve ditt spel på sine mobilar.
+        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
+        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
+        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
+        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
+        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
+        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
+        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
+        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_full_sandbox: Lag ditt eige spel. Når du er ferdig, trykk Fullør for å la venane dine prøve ditt spel på sine mobilar.
         studio_k1_1: Kan du få denne hunden til å seie «hallo verda»?
         studio_k1_2: Kan du få hunden til å sei noko og så få katten til å seie noko etterpå?
@@ -324,7 +345,7 @@ nn:
         maze_wordsearch_k_15: Flytt meg ein veg, så ein annan for å stave ordet OVER
         maze_wordsearch_k_16: Flytt meg en vei, så ein annan for å stave ordet UNDER
         maze_wordsearch_k_20: Dette er en test! Flytt meg en veg, så en annan for å stave ordet HISTORIE
-        applab_ec_simple: Opprette app med blokker i verktøykassen.
+        applab_ec_simple: "Lag app'en din ved å bruke brikkene i verktykassa."
         turtle_ec_1_2: 'Teikn eit kvadrat. MERK: bruk din favorittfarge ved å velje den i den nye «pennFarge» blokka.'
         turtle_ec_1_10: 'Du klarte det! No kan du teikne akkurat det du vil. Noen morosame idear: Ein strekmann, eit snøflak eller ein spiral. Prøv også den nye «pennStørrelse»-blokka. Ha det gøy!'
         studio_ec_sandbox: Lag ditt eige spel. Når du er ferdig, trykk Fullør for å la venane dine prøve ditt spel på sine mobilar.
@@ -352,7 +373,7 @@ nn:
         Unplug6: Betingelser
         Unplug7: Låtskriving
         Unplug8: Abstraksjon
-        Unplug9: Programmering med relé
+        Unplug9: Programmeringsstafett
         Unplug10: Internett
         Unplug11: Oppsummering
         C1_happy_maps_unplugged: Glade Kart
@@ -371,7 +392,7 @@ nn:
         C1_playlab_storytelling: 'Spel-lab - lage ei historie'
         C1_planting_seed: Plant eit frø
         C1_building_foundation: Bygge eit fundament
-        C1_going_places_safely: Går steder trygt
+        C1_going_places_safely: Går stader trygt
         C2_maze_intro: Labyrint introduksjon
         C2_artist_intro: Kunstner introduksjon
         C2_zuck_repeat_loop: 'Labyrint: Sløyfer'
@@ -384,7 +405,7 @@ nn:
         C2_graph_paper: Programmering på millimeterpapir
         C2_conditionals_with_cards: Betingelser
         C2_binary_bracelets: Binær armbånd
-        C2_relay_programming: Programmering med relé
+        C2_relay_programming: Programmeringsstafett
         C2_paper_airplanes: Papirfly
         C2_digital_footprint: Dine digitale fotspor
         C2_digital_footprint_v2: Dine digitale fotspor
@@ -432,10 +453,16 @@ nn:
         playlab_events: Spelelaboratoriehendingar
         playlab_repeat_forever: Spelelaboratoriet gjenta for alltid
         tutorial_puzzle_challenge: Opplæring Puzzle utfordring
-        infinity_playlab_intro: Spill-Lab – introduksjon
-        infinity_playlab_events: Spill-Lab – hendelser
-        infinity_playlab_repeat_forever: Spill-Lab Gjenta for alltid
+        infinity_playlab_intro: Spele-Lab – Introduksjon
+        infinity_playlab_events: 'Spele-Lab - Hendingar'
+        infinity_playlab_repeat_forever: 'Spele-Lab - Gjenta for alltid'
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: 'Introduction to Variables - Part 1'
+        csp_applab_variables_2: 'Introduction to Variables - Part 2'
         csp_applab_functions: Introduksjon til Funksjonar
+        csp_applab_functions_parameters: Funksjonar med parameter
+        csp_applab_loops: Løkker
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Litt om pixler
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
@@ -467,6 +494,21 @@ nn:
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: Skap ein galakse med kode - introduksjon'
+        starwars_typing: 'Star Wars: Skap ein galakse med kode - JavaScript'
+        starwars_events: 'Star Wars: Skap ein galakse med kode - Hendingar'
+        starwars_congrats: 'Star Wars: Skap ein galakse med kode - Gratulerer'
+        starwars_blocks_intro: 'Star Wars: Skap ein galakse med kode - introduksjon'
+        starwars_blocks_events: 'Star Wars: Skap ein galakse med kode - Hendingar'
+        starwars_blocks_congrats: 'Star Wars: Skap ein galakse med kode - Gratulerer'
+        mc_intro: 'Minecraft - introduksjon'
+        mc_repeat: 'Minecraft - gjenta'
+        mc_if_statements: 'Minecraft - Viss-setningar'
+        mc_congrats_share: 'Minecraft - Gratulera'
+        mc_congrats_no_share: 'Minecraft - Gratulera'
+        gumball_intro: 'Gumball Hour of Code - Introduction'
+        gumball_events: 'Gumball Hour of Code - Events'
+        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Dra ei "flytt"-blokk og fest den under den andre blokka'
@@ -534,7 +576,14 @@ nn:
         right_arrow_fireball: Bruk pil-høyre til å skyte eldkuler
         name_function: Skriv namnet på funksjonen din her
         Infinity_move_right_runbutton: Legg til Flytt blokk her
-        Infinity_move_directions_callout: Hvilken blokk vil få Baymax til å flytte opp når du trykker på pil opp?
-        Infinity_move_directions_callout_arrow: Bruk disse pilene til å styre
-        Infinity_move_collide_callout: Spill en lyd når denne hendelsen inntreffer.
-        Infinity_repeat_callout: Plasser flytte blokker her
+        Infinity_move_directions_callout: Kva blokk vil få Baymax til å flytte opp når du trykker på pil opp?
+        Infinity_move_directions_callout_arrow: Bruk desse pilene til å styre
+        Infinity_move_collide_callout: Spel av ein lyd når denne hendinga skjer.
+        Infinity_repeat_callout: Plassér Flytt blokker innanfor her
+        craft_run_button_callout: 'Trykk "Køyr" for å prøve programmet'
+        craft_drag_block_callout: 'Dra ein "moveForward();"-blokk og klikk den fast under den andre blokka'
+        craft_callout_preplaced: Vi har satt saman nokre blokker her for å hjelpe deg i gong
+        craft_inside_repeat: Gjenta handlingar ved å sette blokker inni her
+        craft_callout_preplaced_house: Denne koden startar bygginga av huset ditt. Kan du gjere han ferdig?
+        craft_what_is_iron: Utvinn dette jernet!
+        craft_callout_moveforward: Denne koden sjekker om det er lava, kan du legge til ein kommando for å gå framover?

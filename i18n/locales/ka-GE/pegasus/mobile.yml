@@ -1,4 +1,5 @@
 ka-GE:
+  hour_of_code: კოდის ერთი საათი
   hello: ჰეი, სამყარო
   select_language: შეარჩიეთ თქვენი ენა
   en: ინფორმატიკა
@@ -27,11 +28,14 @@ ka-GE:
   hoc2014_everyone: ყველა
   hoc2014_support: 'დაუჭირეთ მხარი &#x25BE;'
   hoc2014_whatishoc: რა არის კოდის ერთი საათი?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
-  csedweek_map_search_reset: საწყისი მდგომარეობა
+  csedweek_map_header: '# CSEdWeek / კოდის ერთი საათი მთელს მსოფლიოში'
+  csedweek_map_signup: დაარეგისტრირეთ თქვენი ღონისძიება
+  csedweek_map_search_placeholder: კოდის ერთი საათის ღონისძიების პოვნა
+  csedweek_map_search_search: ძიება
+  csedweek_map_search_reset: თავიდან
+  csedweek_map_legend_title: ლეგენდა
+  csedweek_map_legend_event: კოდის ერთი საათის ღონისძიება
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: რეგისტრაცია
   cded_try_it: სცადეთ
   twentyhours_trynow: სცადეთ ახლა
@@ -51,6 +55,7 @@ ka-GE:
   thank_you_: მადლობა!
   congratulations: გილოცავთ!
   congratulations_on_completing_hoc: გილოცავთ! კოდის ერთი საათი დასრულებულია
+  congratulations_volunteer: 'გილოცავთ:ახლა, როცა თქვენ უკვე სცადეთ კოდის ერთი საათი, <a href="https://code.org/volunteer">დარეგისტრირდით მოხლისედ თქვენს კლასში</a> და დაეხმარეთ მოსწავლეებს კოდის ერთი საათის სწავლაში!'
   course_name_accelerated: დაჩქარებული კურსი
   course_name_course1: კურსი 1
   course_name_course2: კურსი 2
@@ -109,7 +114,6 @@ ka-GE:
   hoc_is_here: '#HourOfCode გელით - ეწვიეთ! @codeorg'
   just_did_hoc: 'ახლახან დავასრულე #HourOfCode - ნახე! @codeorg'
   twitter_teach_cs: რატომ არ ისწავლება პროგრამირება ყველა სკოლაში? ჩვენ შეგვიძლია ამის გამოსწორება. ttp://youtu.be/nKIu9yen5nc. ეწვიეთ საიტს http://code.org/ და გაიგეთ მეტი.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: ისწავლეთ კოდის ერთი საათის განმავლობაში
   beyond_hoc: ერთი საათის შემდეგ
   what_gender: თქვენი სქესი?
@@ -166,14 +170,21 @@ ka-GE:
   homepage_slot_text_course4: კურსი 4
   homepage_slot_text_shop: მაღაზია
   homepage_slot_text_flappy: Flappy კოდი
+  homepage_action_text_hoc: კოდის ერთი საათი ყველა მოსწავლისთვის.
+  homepage_action_text_num_served: '#-მა უკვე სცადა'
+  homepage_action_text_join_us: შემოგვიერთდით
+  homepage_action_text_sign_up: რეგისტრაცია
+  homepage_action_text_try_it: სცადეთ
+  homepage_action_text_volunteers: გვჭირდებიან ტექ. მოხალისეები
   homepage_action_text_codevideo: უყურეთ ვიდეოს
   homepage_action_text_teachervideo: უყურეთ ვიდეოს
+  homepage_action_text_girlvideo: შთააგონეთ გოგოს
   homepage_action_text_learn: დაიწყეთ სწავლა
   homepage_action_text_signpetition: მოაწერეთ ხელი პეტიციას
   homepage_signpetition_dropdown: 'ვეთანხმები პეტიციას &#x25BE;'
   homepage_diversity_pledge: დაუჭირეთ მხარი მრავალფეროვნებას
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_banner_text_prizes: 'კოდის ერთი საათი კვლავ ბრუნდება, დეკემბრის 7-13. '
+  homepage_banner_link_prizes: 'მიიღეთ მონაწილეობა ისტორიაში ყველაზე დიდ საგანმანათლებლო ღონისძიებაში. '
   homepage_banner_text_main: Code.org და კოლეჯის საბჭო გაერთიანდნენ ინფორმატიკის მრავალფეროვნების მხარდასაჭერად.
   homepage_banner_text_link: გაიგეთ მეტი
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -183,7 +194,7 @@ ka-GE:
   homepage_slot_text_link_hoc: სცადეთ კოდის ერთი საათი
   homepage_slot_text_link_host: ჩაატარეთ კოდის ერთი საათი
   homepage_slot_text_link_hocserved: '#-მა უკვე სცადა'
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_solot_text_link_volunteer: გახდით კოდის ერთი საათის მოხალისე
   homepage_slot_text_title_students: მოსწვლეები
   homepage_slot_text_blurb_students: ყველა ჩვენი ტუტორიალის ნახვა
   homepage_slot_text_link_codestudio: ნახეთ კოდის სტუდია
@@ -240,55 +251,89 @@ ka-GE:
   class_submission_level_college: კოლეჯი
   class_submission_level_vocational: პროფესიული
   class_submission_languages_other: სხვა ენები
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  inspirational_videos_more: 'მეტი <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> შთამაგონებელი ვიდეო</a> როლ-მოდელებისა და ცნობილი ადამიანების მონაწილეობით'
+  starwars_subtitle: გალაქტიკის შექმნა კოდით
+  starwars_javascript_title: JavaScript
+  starwars_javascript_description: გამოიყენეთ ბლოკლი და JavaScript.
+  starwars_javascript_specs: მხოლოდ ინგლისური | თანამედროვე ბრაუზერები | ასაკი 11+
+  starwars_javascript_start_button: სცადეთ ახლა
+  starwars_blocks_title: ბლოკები
+  starwars_blocks_description: გამოიყენეთ ბლოკლი.
+  starwars_blocks_specs: ბევრი სხვადასხვა ენა (მალე იქნება) | თანამედროვე ბრაუზერები, სმარტფონები, ტაბლეტები | ასაკი 6-10
+  starwars_blocks_start_button: სცადეთ ახლა
+  starwars_watch_videos: სანამ დაიწყებთ, უყურეთ ამ ვიდეოებიდან რომელიმეს
+  starwars_speak_languages: სხვა ენაზე ლაპარაკობთ?
+  starwars_help_translate: დაგვეხმარეთ თარგმნაში
+  starwars_platform_text: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
+  mc_name: მაინკრაფტის კოდის ერთი საათი
+  mc_longdescription: გამოიყენეთ ბლოკები და დაეხმარეთ სტივსა და ალექსს მაინკრაფტის სამყაროს თავგადასავლებში.
+  mc_shortdescription: გამოიყენეთ ბლოკები და დაეხმარეთ სტივსა და ალექსს მაინკრაფტის სამყაროს თავგადასავლებში.
+  mc_gradelevel: ასაკი 6+
+  mc_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
+  mc_specs: სხვადასხვა ენები (იქნება მალე) | თანამედროვე ბრაუზერები და პლანშეტები | ასაკი 6+
+  minecraft_subtitle: მაინკრაფტის კოდის ერთი საათი
+  volunteer_engineer_submission_title: შთააგონეთ მოსწავლეებს და გახდით კოდის ერთი საათის მოხალისე.
+  volunteer_engineer_submission_subtitle_generic: 'წელს, 7-13 დეკემბერს, 100,000 მასწავლებელი ჩაატარებს კოდის ერთ საათს თავის კლასში. მათ თქვენი დახმარება სჭირდებათ! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} მასწავლებელს სჭირდება პროგრამირების მოყვარული მოხალისე კოდის ერთი საათის ღონისძიების ჩატარებაში დასახმარებლად. <br>%{num_volunteers} მოხალისე უკვე დარეგისტრირდა. შემოგვიერთდით თქვენც.'
+  volunteer_engineer_submission_intro_background: კოდის ერთი საათი არის გლობალური მოძრაობა, რომლის მიზანია ინფორმატიკისა და პროგრამირების გავრცელება 180+ ქვეყენაში ათობით მილიონი მოსწავლისთვის. თქვენც ჩაერთეთ ინფორმატიკის საგანმანათლებლო კვირეულში, რომელიც დეკემბრის 7-13 ტარდება.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
-  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
+    მასწავლებლებს გაუხარდებოდათ, რომ ჰყავდეთ <span style="font-family: 'Gotham 7r', sans-serif;">ვინმე, ვისაც უყვარს პროგრამირება და ინფორმატიკა</span> და შეუძლია დაეხმაროს მათ კლასსში, ან ვინმე, <span style="font-family: 'Gotham 7r', sans-serif;"> ვინც შეძლებდა, შთაეგონებინა</span> მოსავლეები, მოეყოლა ინფორმატიკის უსაზღვრო შესაძლებლობების შესახებ (თუნდაც ვიდეო-ჩატით). თუ მოხალისეობა არ გინდათ, <a href="%{url}">გაიგეთ</a>, როგორ ჩაატაროთ თქვენი საკუთარი კოდის ერთი საათი.
+  volunteer_engineer_submission_intro_signup: 'შეავსეთ შემდეგი ველები, თუ ხართ კომპიუტერული მეცნიერების სტუდენტი ან დეველოპერი. ველები, რომლებიც მონიშნულია ასე <span class="form-required-field">*</span> სავალდებულოა.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_header_shared: მოხალისეთა რუკაზე მასწავლებლებთან გაზიარებული ინფორმაცია
   volunteer_engineer_submission_field_name: სახელი
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: "If you enter your exact address we won't share it, just show you as a pin on map."
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country, or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_field_name_placeholder: სრული სახელი
+  volunteer_engineer_submission_field_company: კომპანია (ან უნივერსიტეტი)
+  volunteer_engineer_submission_field_company_placeholder: კომპანია (ან უნივერსიტეტი)
+  volunteer_engineer_submission_field_experience_level: გამოცდილების დონე
+  volunteer_engineer_submission_field_location: ადგილმდებარეობა
+  volunteer_engineer_submission_field_location_desc: თქვენი ადგილმდებარეობა გამოიყენება იმისთვის, რომ მასწავლებლებმა მარტივად იპოვონ ახლოს მდებარე მოხალისეები რუკაზე. თუ კონფიდენციალურობა გაღელვებთ, მიუთითეთ თქვენი სამსახურის/სკოლის მისამართი ან მხოლოდ ქალაქი.
+  volunteer_engineer_submission_field_location_placeholder: საფოსტო კოდი, ქალაქი და შტატი/ქვეყანა ან მისამართი
+  volunteer_engineer_submission_field_location_flexibility: კოდის ერთი საათის ღონისძიებისთვის შემიძლია... (აირჩიეთ ყველა შესაბამისი ვარიანტი)
+  volunteer_engineer_submission_checkbox_after_hoc: მინდა კოდის ერთი საათის დასრულების შემდეგაც გავაგრძელო მოხალისეობა
+  volunteer_engineer_submission_field_time_commitment: კოდის ერთი საათის მერე საათობრივი ვალდებულება
+  volunteer_engineer_submission_field_linkedin: LinkedIn ანგარიში
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook: Facebook ანგარიში
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: აღწერა
-  volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never shared
+  volunteer_engineer_submission_field_description_desc: აღწერეთ თქვენი გამოცდილება პროგრამირებასა და ინფორმატიკაში და როგორ შეგიძლიათ დაეხმაროთ ადგილობრივ მასწავლებლებს.
+  volunteer_engineer_submission_field_description_placeholder: გამოცდილების და/ან მონაწილეობის აღწერა. თუ ინგლისურის გარდა სხვა ენებიც იცით, აუცილებლად მიუთითეთ ისინიც.
+  volunteer_engineer_submission_header_private: ინფორმაცია ინახება კონფიდენციალურად და არასდროს არ გავრცელდება
   volunteer_engineer_submission_field_email: ელ.ფოსტის მისამართი
-  volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
+  volunteer_engineer_submission_field_email_desc: თქვენი ელ. ფოსტის მისამართი ინახება კონფიდენციალურად, მაგრამ ჩვენ გამოგიგზავნით მასწავლებლების შეტყობინებებს.
   volunteer_engineer_submission_field_email_placeholder: ელ.ფოსტის მისამართი
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
+  volunteer_engineer_submission_final_paragraph: თქვენ იქნებით აღნიშნული რუკაზე, რათა ადგილობრივმა მასწავლებლემა მარტივად შეძლონ თქვენი პოვნა კოდის ერთი საათისა ან სხვა მოხალისეობრივი პროექტებისთვის. ჩვენ არსად არ ვაზიარებთ თქვენს ელ. ფოსტასა და მისამართს. მაგრამ სხვა ინფორმაცია (დაახლოებითი ადგილმდებარეობის ჩათვლით) ღიად იქნება მისაწვდომი ადგილობრივი მასწავლებლებისთვის.
+  volunteer_engineer_submission_checkbox_contact: 'ვეთანხმები იმას, რომ მასწავლებლებს შეუძლიათ დამიკავშირდნენ მოხალისეობრივი პროექტებისთვის (მინიშნება: მათ არ გადაეცემათ თქვენი ელ. ფოსტის მისმართი)'
   volunteer_engineer_submission_submit: გაგზავნა
-  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn more here.</a>'
+  volunteer_engineer_submission_thankyou: 'მადლობა, რომ ხართ კოდის ერთი საათის მოხალისე. კოდის ერთი საათისთვის მოსამზადებლად და სხვა მოხალისეების <a href="%{url}">გაეცანით დამატებით ინფორმაციას აქ.</a>'
   volunteer_engineer_submission_commitment_uncertain: განუსაზღვრელი
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 საათი კვირაში
   volunteer_engineer_submission_commitment_three_hrs_per_week: კვირაში 3 საათი
   volunteer_engineer_submission_commitment_five_hrs_per_week: კვირაში 5 საათი
   volunteer_engineer_submission_commitment_now_and_then: დროდადრო
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: წელიწადში 2-3-ჯერ
+  volunteer_engineer_submission_commitment_monthly: რამდენიმე საათი თვეში
+  volunteer_engineer_submission_commitment_weekly: რამდენიმე საათი კვირაში
   volunteer_engineer_submission_commitment_more: მეტი
   volunteer_engineer_submission_location_flexibility_onsite: სკოლიდან
   volunteer_engineer_submission_location_flexibility_remote: დისტნაციური კონტროლი (მასწავლებლები ან მოსწავლეები)
   volunteer_engineer_submission_location_flexibility_curriculum: მინდა, დავეხმარო ღია საგანმანათლებლო პროექტებს
   volunteer_engineer_submission_experience_unspecified: დაუზუსტებელი
+  volunteer_engineer_submission_experience_tech_company: არ ვარ დეველოპერი ტექ. კომპანიაში
   volunteer_engineer_submission_experience_university_student_or_researcher: ამჟამად სტუდენტი (ან უნივერსიტეტთან ასოცირებული მკვლევარი)
   volunteer_engineer_submission_experience_software_professional: პროგრამული უზრუნველყოფის პროფესიონალი
+  volunteer_engineer_submission_distance_8: 5 მილი
+  volunteer_engineer_submission_distance_16: 10 მილი
+  volunteer_engineer_submission_distance_24: 15 მილი
+  volunteer_engineer_submission_distance_32: 20 მილი
+  volunteer_engineer_submission_num_volunteers_5: 5 მოხალისე
+  volunteer_engineer_submission_num_volunteers_10: 10 მოხალისე
+  volunteer_engineer_submission_num_volunteers_25: 25 მოხალისე
+  volunteer_engineer_submission_num_volunteers_50: 50 მოხალისე
+  volunteer_engineer_submission_type_task_onsite: მინდა, რომ ჩემს კლასში მოსწავლეებს მოუყვეთ ინფორმატიკის შესახებ და გაგვიწიოთ ტექ. დახმარება
+  volunteer_engineer_submission_type_task_remote: მინდა, რომ სკაიპით ჩაგვერთოთ კლასში და მოსწავლეებს შთააგონოთ პროგრამირების სწავლა
+  volunteer_engineer_submission_type_task_mentor: ვეძებ მენტორს, რომელიც მომზმადებს კლასში პროგრმირების სწავლისთვის
   petition_age: ასაკი
   dashboard_landing_title: მასწავლებლის მთავარი გვერდი
   dashboard_landing_welcome: მოგესალმებით მასწავლებლის განახლებულ სამართავ პანელზე.
@@ -309,7 +354,7 @@ ka-GE:
   dashboard_landing_progress_title: კლასის ძირითადი მიღწევები
   dashboard_landing_progress_biggest: აქ ნაჩვენებია თქვენიყველაზე დიდი განყოფილების პროგრესი.
   dashboard_landing_view_progress: 'ნახეთ პროგრესი განყოფილებისთვის %{biggest_section}'
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_print_progress: პროგრესის ამობეჭდვა
   dashboard_landing_available_title: მისაწვდომი კურსები
   dashboard_landing_available_courses: ეს კურსები უკვე მისაწვდომია თქვნთვის და თქვენი მოსწავლეებისთვის.
   dashboard_landing_more_tutorials: კიდევ უფრო მეტი ტუტორიალის ნახვა გინდათ?
@@ -353,7 +398,7 @@ ka-GE:
   dashboard_navigation_section_speakers: 'ინფორმატიკა <br/> მოწვეული სპიკერები'
   dashboard_navigation_all_sections: მოსწავლეების ანგარიშები და პროგრესი
   dashboard_navigation_view_progress: პროგრესის ნახვა
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: ტექსტური პასუხების ნახვა
   dashboard_navigation_add_students: მოსწავლეებს დამატება
   dashboard_navigation_manage_students: სტუდენტების მართვა
   dashboard_navigation_lesson_plans_resources: გაკვეთილების გეგმები და რესურსები
@@ -449,8 +494,8 @@ ka-GE:
   dashboard_progress_furthest_level_attempted: ეს დონე ძალიან მაღალია
   dashboard_stage: ეტაპი
   dashboard_puzzle: თავსატეხი
-  dashboard_question: Question
-  dashboard_response: Response
+  dashboard_question: კითხვა
+  dashboard_response: პასუხი
   stats_hoc_2013_heading: 'წარმოუდგენელი სტატისტიკა წინა წლის კოდის ერთი საათიდან. მხოლოდ ერთი კვირის განმავლობაში:'
   stats_hoc_2013_image_alt: 2013 წლის კოდის ერთი საათის სტატისტიკა
   dashboard_teacher: მასწავლებელი
@@ -467,21 +512,33 @@ ka-GE:
   dashboard_sections_login_type_explanation: 'ეს ტაბულა დაგეხმარებათ აარჩიოთ შესვლის ტიპი ამ განყოფილებისთვის: <b>სურათი, სიტყვა ან ელ. ფოსტა</b>.'
   dashboard_faq: ხშირად დასმული კითხვები
   dashboard_faq_k5: K-5 ხშირად დასმული კითხვები
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+  dashboard_announcements: განცხადება
+  dashboard_announce_view_all: ყველას ნახვა
+  dashboard_announce_hoc: '<b>2015, 9 ნოემბერი</b> - აი, კოდის ერთი საათის ახალი ტუტორიალი, რომელიც მომავალ ვარსკვლავურ ომება ეხება. იმუშავეთ რეისთან ერთად და მართეთ ახალი დროიდი BB-8. შემდეგ კი შექმენით შორეულ გალაქტიკაში თქვენი საკუთარი თამაში ლეიასთან ერთად.'
   code_hoc_coming: 'გვიახლოვდება კოდის ერთი საათი - დეკემბრის 8-დან 14-მდე!'
   code_sign_up: დარეგისტრირდით და მიიღეთ მონაწილეობა CS განათლების კვირეულში
-  learn_more: გაიგეთ მეტი
+  learn_more: გაიგე მეტი
   learn_sign_up_description: დარეგისტრირდით და მიიღეთ მონაწილეობა კოდის ერთ საათიში CS საგანმანათლებლო კვირეულის ფარგლებში
   learn_sign_up_button: რეგისტრაცია
+  learn_videos_watch: უყურეთ ამ შთამაგონებელ ვიდეოს თქვენს კლასთან ერთად
+  learn_videos_show: აჩვენეთ ეს შთამაგონებელი ვიდეო თქვენს კლასს
+  learn_videos_before_hoc: თქვენი კოდის ერთი საათის დაწყებამდე უყურეთ შთამაგონებელ ვიდეოს
   learn_educator_resources_description: გაიგეთ, როგორ ჩაატაროთ კოდის ერთი საათი
   learn_educator_resources_button: პედაგოგის რესურსები
-  learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
+  learn_are_you_educator: 'მასწავლებელი ხართ? გაიგეთ,<a href="http://hourofcode.com/resources/how-to"> როგორ გაუძღვეთ კოდის ერთ საათს</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">გაიგეთ მეტი</a> მასწავლებლების პრიზების შესახებ.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: ნახეთ ჩვენი ახალი კოდის ერთი საათის გაკვეთილები
   hoc2014_try_new_tutorial: 'ნახეთ "კოდის ერთი საათის" ახალი ტუტორიალის ბეტა-ვერსია'
   hoc2014_try_scrat: Angry Birds, PvZ და Scrat
   hoc2014_try_frozen: 'ხატეთ "გაყინულის" გმირებთან, ანასა და ელზასთან ერთად'
+  carousel_heading_codeorg: Code.org ტუტორიალები
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: მესამე მხარის მიერ მოწოდებული ტუტორიალები
+  carousel_heading_third_party: მესამე მხარის მიერ მოწოდებული ტუტორიალები
   carousel_heading_international: ტუტორიალები მშობლიურ ენაზე
   carousel_heading_domestic: ტუტორიალები მისაწვდომია ინგლისურად
   carousel_heading_beginners: ტუტორიალები დამწყებთათვის
@@ -495,6 +552,7 @@ ka-GE:
   carousel_heading_robots: პროგრამირების სწავლა რობოტებთან ერთად
   carousel_heading_ide: მასწავლებლებს შორის პოპულარული პლატფორმები
   educator_notes: მასწავლებლის ჩანაწერები
+  teach_led_lesson_plans: კოდის ერთი საათის გაკვეთილების გეგმები მასწავლებლებისთვის
   how_to_teach_hoc: როგორ გავუძღვეთ კოდის ერთ საათს
   more_resources_educators: მეტი რესურსი მასწავლებლებისთვის
   beyond_submission: გინდათ კოდის ერთი საათის შემდგომი ტუტორიალის გამოგზავნა? ნახეთ კრიტერიუმები და გაგზავნის ფორმა.
@@ -507,6 +565,7 @@ ka-GE:
   older_systems_subheading: 'ესენი ძველ ვებ ბრაუზერებზეც იმუშავებს. ყველა ტუტორიალის სანახავად დააყენეთ <a href="http://browsehappy.com/" target="_blank">თანამედროვე ვებ ბრაუზერი.</a>'
   mobile_devices: ტუტორიალები მობილური მოწყობილობებისთვის
   frozen_name: წერეთ კოდი ანასა და ელზასთან ერთად
+  starwars_name: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით'
   codeorg_name: დაწერეთ თქვენი პირველი კომპიუტერული პროგრამა
   codeintl_name: დაწერეთ თქვენი პირველი კომპიუტერული პროგრამა
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -537,7 +596,7 @@ ka-GE:
   robomindnl_name: ვირტუალური რობოტის კოდის დაწერა
   flappy_name: შექმენით თამაში Flappy
   bitsbox_name: 'Bitsbox - შექმენით თამაში'
-  makeschool_name: Build an iPhone game in your browser!
+  makeschool_name: შექმენით iPhone თამაში თქვენს ბრაუზერში!
   touchdevelop_name: TouchDevelop
   appinventor_name: 'კოდის ერთი საათი: აპინვენტორი'
   blockly_name: Blockly
@@ -546,6 +605,8 @@ ka-GE:
   projguts_name: ქვა, ქაღალდი, მაკრატელი
   hourofcode_name: შემავსებელი ახალი code.org/hoc-ისთვის
   playlab_name: თამაშების ლაბორატორია
+  infinity_name: თამაშების ლაბორატორია Infinity
+  artist_name: მხატვარი
   codeorg_gradelevel: ასაკი 4-104
   codeintl_gradelevel: ასაკი 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -585,7 +646,10 @@ ka-GE:
   projguts_gradelevel: ასაკი 10-13
   hourofcode_gradelevel: ასაკი 4-104
   frozen_gradelevel: ასაკი 8+
+  starwars_gradelevel: ასაკი 6+
   playlab_gradelevel: ასაკი 4-104
+  infinity_gradelevel: ასაკი 4-104
+  artist_gradelevel: ასაკი 4-104
   codeorg_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   codeintl_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   thinkersmithspanish_platformtext: უსადენო
@@ -625,6 +689,7 @@ ka-GE:
   projguts_platformtext: უსადენო
   hourofcode_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   frozen_platformtext: თანამედროვე ბრაუზერები + პლანშეტები
+  starwars_platformtext: თანამედროვე ბრაუზერები + პლანშეტები
   playlab_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   codeorg_shortdescription: ისწავლეთ პროგრამირება მარკ ცუკერბერგთან.. და Аngry Birds-თან ერთად!
   codeintl_shortdescription: ისწავლეთ პროგრამირება მარკ ცუკერბერგთან.. და Аngry Birds-თან ერთად!
@@ -656,16 +721,19 @@ ka-GE:
   robomindnl_shortdescription: დაწერეთ კოდი ვირტუალური რობოტისთვის
   flappy_shortdescription: 'შექმენით თქვენი საკუთარი თამაში - Flappy Bird, Shark ან Submarine'
   bitsbox_shortdescription: დაწერეთ სხვადასხვა აპლიკაციები ნადმვილი JavaScript-ის გამოყენებით.
-  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach your monster new moves!
+  makeschool_shortdescription: შექმენით iPhone თამაში! ისწავლეთ, როგორ შეასრულებინოთ თქვენს მონსტრებს ახალი მოძრაობები კოდით!
   touchdevelop_shortdescription: 'ამოხსენით თავსატეხები, შექმენით თამაშები და ისწავლეთ პროგრმირება თქვენს სმარტფონზე. '
   appinventor_shortdescription: შექმენით თქვენი საკუთარი აპლიკაცია! (მხოლოდ ანდროიდზე)
   blockly_shortdescription: გადმოიწერეთ ZIP ფაილი და ისწავლეთ ოფლაინ
   thinkersmith2_shortdescription: გაიგეთ, როგორ იყენებს კომპიუტერი 1-სა და 0-ს ინფრმაციის გადმოსაცემად
   kodableunplugged_shortdescription: სახალისო სავარჯიშოები კომპიუტერის გარეშე
   projguts_shortdescription: სცადეთ მოდელირება და სიმულაცია ქვა/ქაღალდი/მაკრატლის გამოყენებით
-  hourofcode_shortdescription: შემავსებელი ახალი code.org/hoc-ისთვის
+  hourofcode_shortdescription: ისწავლეთ პროგრამირება მარკ ცუკერბერგთან.. და Аngry Birds-თან ერთად!
   frozen_shortdescription: გამოიყენეთ კოდი და შეუერთდით ანასა და ელზას ყინულის მაგიის აღმოჩენაში.
+  starwars_shortdescription: ისწავლეთ დროიდების დაპროგრამება და შექმენით თქვენი საკუთარი ვარსკვლავური ომების თამაში შორეულ გალაქტიკაში.
   playlab_shortdescription: შექმენით ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!
+  infinity_shortdescription: გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად დისნეის Infinity-ს პერსონაჟების მონაწილეობით.
+  artist_shortdescription: დახატეთ მაგარი სურათები და შექმენით დიზაინები მხატვართან ერთად!
   codeorg_longdescription: ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით. ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი, Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლეთ გამეორების ციკლები, თუ-მაშინ დებულებები და ბაზისური ალგორითმები. მისაწვდომია 34 ენაზე.
   codeintl_longdescription: ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით. ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი, Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლეთ გამეორების ციკლები, თუ-მაშინ დებულებები და ბაზისური ალგორითმები. მისაწვდომია 34 ენაზე.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -696,7 +764,7 @@ ka-GE:
   robomindnl_longdescription: 'მოსწავლეები სწავლობენ პგორამირებას თავიანთი ვირტუალური რობოტის მართვით. ოლაინ-კურსში შედის მოკლე პრეზენტაციები, ფილმები, თავსატეხები და დავალებების შესასრულებლად სასრგებლო მინიშნებები. '
   flappy_longdescription: 'გამოიეყენეთ ვიზუალური პროგრამირება და შექმენით საკუთარი Flappy Bird თამაში - შეგიძლიათ გააკეთოთ Flappy Shark, Flappy Santa - რაც გინდათ. შემდეგ დაამატეთ თამაში თქვენს ტელეფონზე ერთი ღილაკის დაჭერით.'
   bitsbox_longdescription: შექმენით საკუთარი ვირტუალური პლანშეტი, შემდეგ კი დაწერეთ სხვადასხვა აპლიკაციები სათამაშოდ და გასაზიარებლად. მარტივი ინსტრუქციებით ბავშვებიც კი შეძლებენ ნამდვილი JavaScript-ით პროგრამირებას. შემდეგ კი, რაც მეტს ივარჯიშებთ, მით მეტი გამოგივათ.
-  makeschool_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
+  makeschool_longdescription: 'ისწავლეთ პროგრამირება iPhone თამაშის შექმნით - გამოიყენეთ ახალი, დამწყებებზე გათვლილი პროგრამირების ენა Swift! შექმნით თამაში პოკემონების მონაწილეობით, დაწერეთ კოდი და ასწავლეთ თქვენს მონსტრებს ახალი მოძრაობები. თქვენ ისწავლით, როგორ გამოიყენოთ ცვლადები, მეთოდები და ობიექტები თქვენი მონსტრების გამარჯვების უზრუნველსაყოფად!'
   touchdevelop_longdescription: 'სენსორული რედაქტორი დაგეხმარებათ პიქსელური ნახატის შექმნაში, დათვის თავსატეხის ამოხსნაში ან თქვენი საკუთარი მხტუნავი ჩიტის თამაშის შექმნაში. '
   appinventor_longdescription: მოკლე და დინამიკური ვიდეო-ტუტორიალები გასწავლით თქვენი Android ტელეფონისა ან პლანშეტისთვის სამი მარტივი აპლიკაციის შექმნას. გამოადგება როგორც დამწყებებს, ასევე ექსპერტებს, როგორც ინდივიდუალურ მოსწავლეებს, ასევე ჯგუფებს.
   blockly_longdescription: თუ ინტერნეტ-კავშირი ძალიან ნელია, გადმოიწერეთ Blockly-ის ტუტორიალები ერთ სამმეგაბაიტიან ZIP ფაილად ნებისმიერ კომპიუტერსა ან მეხსიერების გარე მოწყობილობაზე
@@ -705,6 +773,7 @@ ka-GE:
   projguts_longdescription: ეს ოფლაინ-აქტივობა ეხმარება მოსწავლეებს მოდელირების და სიმულაციის არსის გაგებაში. მოსწავლეთა ჯგუფი ქვა/ქაღალდი/მაკრატლის სხვადასხვა ვარიაციებს თამაშობენ, შედეგები კი სხვადასხვა მოდელირების კონტექსტში განიხილება.
   hourofcode_longdescription: შემავსებელი ახალი code.org/hoc-ისთვის
   frozen_longdescription: გამოვიყენოთ კოდი, რათა შევუერთდეთ ანასა და ელზას, რომლებიც მაგიისა და ყინულის მშვენიერებას იკვლევენ. თქვენ შექმნით ფიფქებსა და ფიგურებს, ისრიალებთ ციგურებზე და შექმნით ზამთრის საოცნებო სამყაროს, რომლის მეგობრებთან გაზიარება შეგეძლებათ!
+  starwars_longdescription: ისწავლეთ დროიდების დაპროგრამება და შექმენით თქვენი საკუთარი ვარსკვლავური ომების თამაში შორეულ გალაქტიკაში.
   playlab_longdescription: 'შექმენით ისტორია ან თამაში თამაშების ლაბორატორიაში! გააცოცხლეთ ცხოველები, მეკობრეები, ზომბები, ნინძები და ბევრი სხვა პერსონაჟი: აამოძრავეთ, აალაპარაკეთ და აამოქმედეთ ისინი. მათ ქულების დაგროვბაც კი შეუძლიათ!'
   codeorg_beyond_name: 'შესავალი ინფორმატიკაში (კლასები: K-8)'
   khan_beyond_name: ისწავლეთ პროგრამირება
@@ -719,7 +788,7 @@ ka-GE:
   groklearning_beyond_name: ისწავლეთ პროგრამიერების ენა Python
   hacketyhack_beyond_name: Ruby-ის წავლა
   robomind_beyond_name: ვირტუალური რობოტის კოდის დაწერა
-  makeschool_beyond_name: Build an iPhone game in your browser!
+  makeschool_beyond_name: შექმენით iPhone თამაში თქვენს ბრაუზერში!
   appinventor_beyond_name: 'კოდის ერთი საათი: აპინვენტორი'
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: ისწავლეთ პროგრამირება ძაღლ კარელთან ერთად
@@ -830,7 +899,7 @@ ka-GE:
   groklearning_beyond_shortdescription: შესავალი პროგრამირების ენაში Phyton
   hacketyhack_beyond_shortdescription: ისწავლეთ Ruby ნულიდან
   robomind_beyond_shortdescription: დაწერეთ კოდი ვირტუალური რობოტისთვის
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
+  makeschool_beyond_shortdescription: ისწავლეთ iPhone თამაშის შექმნა ერთ საათში
   appinventor_beyond_shortdescription: შექმენით თქვენი საკუთარი აპლიკაცია! (მხოლოდ ანდროიდზე)
   touchdevelop_beyond_shortdescription: დაწერეთ მობილური აპლიკაციები პირდაპირ თქვენს ტელეფონზე, პლანშეტზე ან ლეპტოპზე
   codehs_beyond_shortdescription: ისწავლეთ JavaScript პროგრამირება მხიარულ ვიზუალურ გარემოში
@@ -867,7 +936,7 @@ ka-GE:
   groklearning_beyond_longdescription: 'ეს არის Python პროგრამირების ენის შესავალი კურსი - მათთვის, ვისაც ჯერ არა აქვს პროგრამირების არანაირი გამოცდილება. სასწავლო მასალისა და ამოცანების ერთობლიობა გაგარკვევთ Phyton-ისა და პროგრამირების რაობაში. ეს კურსი სხვადასხვა გამოცდილებისა და ასაკის უამრავმა ბავშმა გაიგარა - დარწმუნებული ვართ, რომ იგი თქვენთვისაც იქნება სასარგებლო.'
   hacketyhack_beyond_longdescription: 'ჰაკერი ჰაკი გასწავლით პროგრამირებას ნულიდან ბოლომდე. არაუშავს, თუ არანაირი გამოცდილება არ გაქვთ! ჰაკი გასწავლით Ruby-ს. Ruby გამოიყენება ბევრი სხვადასხვა აპლიკაციისთვის, მათ შორის კომპიუტერული აპლიკაციებისა და საიტებისთვის. (მინიშნება: დაგჭირდებათ პროგრამის დაყენება)'
   robomind_beyond_longdescription: 'მოსწავლეები პროგრამირების საფუძვლებს საკუთარი რობოტის მართვით სწავლობენ. ონლაინ-კურსი შეიცავს პრეზენტაციებს, ფილმებს, დავალებებს და სხვადასხვა მინიშნებებს - ეს ყველაფერი დაგეხმარებათ პროგრამირების დავალებების შესრულებაში. '
-  makeschool_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
+  makeschool_beyond_longdescription: 'უკვე იცით, რა არის ObjectiveC? ისწავლეთ iPhone თამაშის შექმნა ერთ საათში! ჩვენ გასწავლით პროცესს მთლიანად: კოდის შექმნა, ტესტირება, თამაში და მისი გაზიარება Facebook ქსელში მეგობრებისთვის! iPhone დეველოპმენტის გამოცდილება საჭირო არ არის. უნდა გესმოდეთ, რა არის ცვლადი, მეთოდები და ობიექტები.'
   appinventor_beyond_longdescription: მოკლე და დინამიკური ვიდეო-ტუტორიალები გასწავლით თქვენი Android ტელეფონისა ან პლანშეტისთვის სამი მარტივი აპლიკაციის შექმნას. გამოადგება როგორც დამწყებებს, ასევე ექსპერტებს, როგორც ინდივიდუალურ მოსწავლეებს, ასევე ჯგუფებს.
   touchdevelop_beyond_longdescription: 'TouchDevelop გაძლევთ საშუალებას შექმნათ აპლიკაცები შემდეგი მოწყობილობებისთვის: iPad, iPhone, Android, PC, Mac, Windows Phone. ჩვენი სენსორული რედაქტორით კოდის წერა პლანშეტის ან მობილურის გამოყენებითაც კია სახალისო!'
   codehs_beyond_longdescription: 'ისწავლეთ პროგრამირების საფუძვლები ძაღლ კარელთან ერთად, გაიარეთ სახალისო ვიზუალური გაცნობითი კურსი. კომპიუტერისთვის ბრძანებების გაცემა იგივეა, რაც ძაღლისთვის. კარგი იქნება, თუ ამ ტუტორიალს მასწავლებელთან ერთად გაივლით, მაგრამ მარტოც გაუმკლავდებით. (მინიშნება: კურსი ფასიანია)'
@@ -894,3 +963,11 @@ ka-GE:
   compatibility_https_header: ჩართეთ HTTPS Code.org-ისთვის.
   compatibility_https_message: "უსაფრთხოების დონის ასამაღლებლად %{https_date} გადავდივართ HTTPS -ზე. ამ თარიღის შემდეგ Code.org-ზე ვეღარ შემოხვალთ. <a href='%{it_requirements_url}'>დააჭირეთ აქ</a> და გაიგეთ, როგორ ჩართოთ HTTPS Code.org-ისთვის."
   compatibility_https_hide_this_warning: გაფრთხილების გათიშვა
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: ფრთების ქნევა
+  infinity_shortcode: inf
+  playlab_shortcode: თამაში
+  artist_shortcode: art

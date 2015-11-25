@@ -162,12 +162,10 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Getting started with your digital assistant\r\n\r\n<img src=\"https://images.code.org/e875ff7b54c314a378cdb784f92371a0-image-1445989933171.52.04.png\" style=\"width:200px;float:right;\">\r\nOver the course of the next few lessons, you'll be __developing your own digital assistant__. To make your digital assistant more useful, it needs to be able to make __decisions__ based on questions the user asks it, and respond intelligently.\r\n\r\nTo get started, __choose a topic__ you want your digital assistant to specialize in. It should be something you are interested in and know a lot about. Examples: Country Music, Sushi, College Football, Comedy Movies.\r\n\r\nYou'll next setup the layout for your app. __The basic layout contains just two primary design elements:__ a text input, and a text area.\r\n\r\n# Do this\r\n\r\n- __Choose a topic__ for your digital assistant to specialize in\r\n- __Create the layout__ for your app. Your digital assistant should have:\r\n    - A name\r\n    - A text input for the user to ask a question\r\n    - A text area for the digital assistant to respond\r\n    - The text area should have a greeting for the user (e.g. Ask me a question about movies!)\r\n",
-    "encrypted_examples": [
-
-    ],
+    "markdown_instructions": "# Getting Started with Your Digital Assistant\r\n\r\n<img src=\"https://images.code.org/e875ff7b54c314a378cdb784f92371a0-image-1445989933171.52.04.png\" style=\"width:200px;float:right;\">\r\nOver the course of the next few lessons, you'll be __developing your own digital assistant__. To make your digital assistant more useful, it needs to be able to make __decisions__ based on questions the user asks it, and respond intelligently.\r\n\r\nTo get started, __choose a topic__ you want your digital assistant to specialize in. It should be something you are interested in and know a lot about. Examples: Country Music, Sushi, College Football, Comedy Movies.\r\n\r\nYou'll next set up the layout for your app. __The basic layout contains just two primary design elements:__ a text input and a text area.\r\n\r\n# Do This:\r\n\r\n- __Choose a topic__ for your digital assistant to specialize in.\r\n- __Create the layout__ for your app. Your digital assistant should have:\r\n    - A name\r\n    - A text input for the user to ask a question\r\n    - A text area for the digital assistant to respond\r\n    - The text area should have a greeting for the user (e.g. Ask me a question about movies!)\r\n",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "encrypted_examples": "vX+lX7SX6H7FZYUQ0YdEPlE7vtyexc/bvYXrMEmxuVcj2cXIIlxnqnh4F3Py\nLoGF\n"
   }
 }]]></config>
   <blocks/>

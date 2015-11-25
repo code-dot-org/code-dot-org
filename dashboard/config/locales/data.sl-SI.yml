@@ -512,6 +512,61 @@
           the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
+        studio_iceage_1: Manny wants to say "hello" - can you help him?
+        studio_iceage_2: Diego (actor 1) and Granny (actor 2) would like to say "hello"
+          to each other. Can you help them by using the "say" block twice?
+        studio_iceage_3: Can you help Scrat get to the flag?
+        studio_iceage_4: Can you help Scrat (actor 1) get to Granny (actor 2) and
+          play a sound when he gets there?
+        studio_iceage_5: Can you help Sid say "greetings" when it is clicked? Don’t
+          forget to click it after you click Run
+        studio_iceage_6: Can you help Diego move around using the up/down/right/left
+          arrow keys to get to all the flags?
+        studio_iceage_7: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to it to help Sid move right and left repeatedly?
+        studio_iceage_8: Can you add a block to score a point and a block to play
+          a sound when Sid runs into Manny, and then move him with the arrows until
+          you score?
+        studio_iceage_9: Set the background for this ice age and help Sid get to Granny
+          faster by changing its speed. Then move him with the arrow keys to get to
+          Sid and alert everyone else.
+        studio_iceage_10: Create your own game. When you're done, click Finish to
+          let friends try your game on their phones.
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
+          him go the last 200 pixels using the "move" block.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Can you help Anton announce the start of a race
+          by saying "Ready, set, go!"? To test your program, don’t forget to click
+          Anton after you click Run!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Create your own game or story. When you're done,
+          click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Create your own game. When you're done, click Finish
           to let friends try your game on their phones.
         studio_k1_1: Can you make this dog say "hello world"?
@@ -649,7 +704,13 @@
         infinity_playlab_intro: Play Lab - Introduction
         infinity_playlab_events: Play Lab - Events
         infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Uvod v funkcije
+        csp_applab_functions_parameters: Funkcije s parametri
+        csp_applab_loops: Zanke
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: Color pixelation widget - Part 1
         csp_pixelation_color_2: Color pixelation widget - Part 2
@@ -681,6 +742,21 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
+        starwars_typing: 'Star Wars: Building a Galaxy with Code - JavaScript'
+        starwars_events: 'Star Wars: Building a Galaxy with Code - Events'
+        starwars_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
+        starwars_blocks_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
+        starwars_blocks_events: 'Star Wars: Building a Galaxy with Code - Events'
+        starwars_blocks_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
+        mc_intro: Minecraft - Introduction
+        mc_repeat: Minecraft - Repeat
+        mc_if_statements: Minecraft - If statements
+        mc_congrats_share: Minecraft - Congratulations
+        mc_congrats_no_share: Minecraft - Congratulations
+        gumball_intro: Gumball Hour of Code - Introduction
+        gumball_events: Gumball Hour of Code - Events
+        gumball_repeat: Gumball Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Povleci blok "premakni se" in ga postavi pod drugi blok
@@ -783,3 +859,13 @@
         Infinity_move_directions_callout_arrow: Use these arrows to steer
         Infinity_move_collide_callout: Play a sound when this event occurs.
         Infinity_repeat_callout: Place Move blocks inside here
+        craft_run_button_callout: Klikni "Zaženi" in preizkusi
+        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
+          the other block
+        craft_callout_preplaced: We've put some blocks here to get you started
+        craft_inside_repeat: Repeat actions by placing blocks in here
+        craft_callout_preplaced_house: This code will start building your house. Can
+          you finish it?
+        craft_what_is_iron: Mine this iron!
+        craft_callout_moveforward: This code will check for lava, can you add a command
+          to move forward?

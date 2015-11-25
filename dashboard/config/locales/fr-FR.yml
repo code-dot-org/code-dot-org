@@ -31,8 +31,8 @@
       placeholder: Code de la section (ABCDEF)
     submit: Ajouter un enseignant
   add_hint_form:
-    placeholder: Veuillez entrer votre astuce ici
-    submit: Ajouter une astuce
+    placeholder: Entrer votre indice de mot de passe ici
+    submit: Ajouter un indice
   appname: Code.org
   stage: étape
   stage_number: Étape %{number} 
@@ -70,12 +70,12 @@
   signup_form:
     student_count: '%{count} étudiants ont déjà signé.'
     teacher_count: '%{count} enseignants se sont déjà inscrits.'
-    overview_student: Inscrivez-vous pour un compte pour suivre vos progrès. Votre
-      email est utilisé principalement pour vous permettre de vous connecter et pour
-      récupérer votre mot de passe. Pour plus d'informations, consultez notre <a href="http://code.org/privacy">Politique
+    overview_student: Crée ton compte pour suivre tes progrès. Ton adresse email sera
+      utilisée essentiellement utilisé pour te permettre de te connecter et pour récupérer
+      ton mot de passe. Pour plus d'informations, consultez notre <a href="http://code.org/privacy">Politique
       de confidentialité</a>.
-    overview_teacher: Enseigner l'informatique à votre salle de classe en vous inscrivant
-      pour un compte. <p/> Vous pourrez ajouter vos élèves et suivre leurs progrès.
+    overview_teacher: Enseigner l'informatique dans votre classe en créant un compte
+      d'enseignant. <p/> Vous pourrez ajouter vos élèves et suivre leurs progrès.
     no_signup_message: Vous pouvez <a target="_blank" href="http://learn.code.org">parcourir
       les différentes étapes et énigmes</a>, mais vous devez vous inscrire pour pouvoir
       enregistrer votre progression.
@@ -117,11 +117,11 @@
     submit: Connexion
   signin:
     try_heading: Vous souhaitez essayer de coder sans vous inscrire ?
-    try_hoc: Essayez d'abord une Heure de Code
+    try_hoc: Essaie d'abord une Heure de Code
     try_20hours: Essayez notre Introduction à l'informatique de 20 heures
   signinsection:
     welcome: Bienvenue sur %{section_name}
-    name: Choisissez votre nom
+    name: Choisis ton nom
     picture: Maintenant, trouve ta photo secrète
     words: maintenant entre ton mot de passe
     login: Connexion
@@ -150,7 +150,7 @@
     added_teacher: '%{name} ajouté en tant qu''enseignant'
     registered: Vous vous êtes inscrit à %{section_name}.
     error:
-      signed_in: Veuillez vous déconnecter avant de procéder
+      signed_in: Merci de vous déconnecter avant de continuer
       username_not_found: Nom d'utilisateur %{username} introuvable
       username_in_use: Le nom d'utilisateur %{username} est déjà pris, veuillez en
         choisir un autre
@@ -274,6 +274,7 @@
         playlab: Créer une application
         artist: Dessine quelque chose
         calculate: Calculate Something
+        applab: Créer une application
     user:
       classroom: Page d'accueil de l'enseignant
       district_dashboard: Tableau de bord de district
@@ -297,6 +298,8 @@
       prize_us_only: (Elèves états-uniens seulement)
       prizes_link: Plus d'informations
   teacher:
+    answer: Réponse
+    for_teachers_only: Pour les enseignants uniquement
     title:
       one: 'Ton enseignant :'
       other: 'Vos enseignants :'
@@ -416,10 +419,10 @@
     teacher_read_blog: Lisez l'actualité et les mises à jour de nos matériels sur
       notre Blog Enseignant
     classroom: Votre classe
-    student_progress: Votre progression d'apprentissage
+    student_progress: Ta progression
     student_stats: Vous avez remporté %{trophy_count} trophées « Maîtrise du Concept »
       sur %{trophy_max}.
-    student_left_off: 'Ton dernier cours :'
+    student_left_off: 'Tu t''es arrêté là la dernière fois:'
     student_finished: Tu as terminé toutes les leçons, choisis une autre classe  %{online_link}
       ou à une %{local_school_link}
     local_school: école locale
@@ -462,8 +465,9 @@
       <a href="https://code.org/about/partners"> partenaires</a>, notre <a href="https://code.org/about/team">
       équipe étendue</a>, notre casting vidéo et nos <a href="https://code.org/about/advisors">
       conseillers d'éducation</a> pour leur soutien dans la création de Code Studio.
-    help_from_html: Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué
-      à créer cette plateforme d'apprentissage.
+    help_from_html: Nous tenons particulièrement à remercier les ingénieurs de Google,
+      Microsoft, Facebook, Twitter et beaucoup d'autres qui ont contribué à créer
+      ces matériaux.
     help_from_html_old: Les ingénieurs de Google, Microsoft, Facebook et Twitter ont
       contribué à créer cette plateforme d'apprentissage.
     art_from_html: Angry Birds ™ & © 2009-2014 Rovio Entertainment Ltd. Tous droits
@@ -518,7 +522,7 @@
         <a href='#'>essayez d'afficher la page</a>, mais attendez vous à des erreurs.
       button: Montrez-moi la liste des navigateurs pris en charge
   slow_loading: Cela prend plus de temps que d'habitude...
-  try_reloading: Essayez de recharger la page
+  try_reloading: Essaie de recharger la page
   next_stage: Terminé ! Passer à l'étape suivante
   download_pdf: Ouvrir le plan de la leçon
   lesson_plan: Plan de leçon
@@ -526,6 +530,7 @@
   pdf_download: Télécharger le PDF
   download_coming_soon: Activité téléchargeable prochainement.
   video_coming_soon: Vidéo à venir bientôt !
+  not_started: L'étudiant n'a pas tenté ce niveau.
   share_code:
     title: Clique sur « Démarrer » pour voir mon programme en action
     bounce_og_title: Regarde mon jeu Bounce
@@ -546,7 +551,7 @@
     back: Retour aux scripts
     success: Vous avez modifié les blocs avec succès.
     level:
-      create: Créer un nouveau niveau
+      create: Crée un nouveau niveau
       current: Niveaux Actuels
       unused: Niveaux Inutilisés
   upsell:
@@ -574,10 +579,15 @@
         nos utilisateurs
     frozen:
       title: La Reine des neiges
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Utilisez le labo pour créer une histoire ou un jeu mettant en vedette
         les personnages de Disney Infiny.
+    minecraft:
+      title: Minecraft
+      body: Explore un monde Minecraft avec du code.
   gallery:
     students_drew_these_with_code: Les élèves les ont dessinés avec du code !
     students_made_these_with_code: Les élèves ont réalisé ceci avec du code !
@@ -588,7 +598,7 @@
       <b>%{count}</b> applications et photos en écrivant leurs propres programmes.
       Cliquez sur les images et les captures d'écran pour voir chaque programme en
       action.
-    want_to_make_your_own: Envie de faire le vôtre ?
+    want_to_make_your_own: Tu veux créer le tien ?
     more: Plus &rarr;
     caption_by_name_age: par %{name}, âge %{age}
     caption_time_ago: il y a %{time_ago}
@@ -596,45 +606,46 @@
     header_playlab: Labo
     header_artist: Artiste
   landing:
-    prerelease: Ce cours est en <span class='betatext'>bêta</span>. Cela signifie
-      qu'il ne s'agit pas de la version finale du cours, est qu'il est sujet à révision
-      tant que des commentaires sont envoyés et que des améliorations sont effectuées.
+    prerelease: C'est un cours  <span class='betatext'>bêta</span>. Il ne s'agit pas
+      de la version finale du cours, le cours est susceptible d'être modifié tant
+      que nous recevrons des commentaires à son sujet et que des améliorations seront
+      effectuées.
     prerelease_hoc2014: Ce tutoriel est en <span class='betatext'> version bêta</span>.  Il
-      est sujet à révision et des améliorations sont apportées avec les commentaires
-      qui sont reçus.
+      est susceptible d'être modifié en fonction des commentaires reçus qui apporteront
+      des améliorations.
     feedback: Envoyer un commentaire
     report_bug: Signaler un bogue
     support: Obtenir de l'aide
     support_url: //support.code.org
   multi:
     wrong_title: Réponse incorrecte
-    wrong_body: La réponse que vous avez entrée n'est pas correcte. Veuillez réessayer !
+    wrong_body: La réponse que tu as entrée n'est pas correcte. Essaie encore !
     correct_title: Correct
     correct_body: C'est la bonne réponse.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Solution incorrecte
-    wrong_body: La solution que vous avez entrée est incorrecte. Veuillez réessayer !
+    wrong_body: La solution que tu as entrée est incorrecte. Essaie encore !
     correct_title: Correct
     correct_body: C'est la bonne réponse.
   contract_match:
     wrong_title: Réponse incorrecte
     badname: Votre contrat a le mauvais nom.
-    badname_case: Les noms de fonctions sont sensibles à la casse.  Essayez de changer
-      le nom de votre contrat.
+    badname_case: Les noms de fonctions sont sensibles à la casse.  Essaie de changer
+      le nom de ton contrat.
     badrange: Votre contrat a la mauvaise plage.
-    baddomainsize: Votre contrat n'a pas le bon nombre d'items dans son domaine.
-    baddomainname: Un ou plusieurs items de votre domaine ont le mauvais nom.
-    baddomaintype: Un ou plusieurs items de votre domaine ont le mauvais type ou sont
-      dans le mauvais ordre.
+    baddomainsize: Votre contrat n'a pas le bon nombre d'éléments dans son domaine.
+    baddomainname: Un ou plusieurs éléments de ton domaine ont le mauvais nom.
+    baddomaintype: Un ou plusieurs éléments de ton domaine ont le mauvais type ou
+      sont dans le mauvais ordre.
   text_match:
     placeholder: Entrez votre réponse ici
     open_response_title: Merci
-    open_response_body: Merci pour votre réponse !
+    open_response_body: Merci pour ta réponse !
   dialog:
     ok: OK
-    startover_title: Est-tu certain(e) de vouloir recommencer ?
+    startover_title: Es-tu certain(e) de vouloir recommencer ?
     startover_body: Cela va réinitialiser le puzzle à son état de départ et supprimer
       tous les blocs que tu as ajouté ou changé.
     startover_ok: Recommencer
@@ -653,7 +664,7 @@
             et les concepts de la programmation. Il est conçu pour la grande section
             jusqu'à la 4ème (14 ans et moins), mais il n'y a pas d'âge pour apprendre.
         Hour of Code:
-          title: Heure de code 2013
+          title: L'Heure de code 2013
           description: ''
         edit-code:
           title: Modifier le Code
@@ -678,17 +689,17 @@
           title: Exemple de générateur de niveau
           description: ''
   age_interstitial:
-    age: Votre âge
-    header: Mise à jour des informations de compte
-    message: Nous sommes de faire des mises à jour afin de vous garantir une protection
-      des données privées encore meilleure. Pour ce faire, nous demandons aux utilisateurs
-      existants d'entrer leur âge ici. <br/>Comme toujours, code.org ne louera, vendra
-      ou partagera ces informations avec des tiers.
-    sign_out: Si vous ne souhaitez pas fournir votre âge vous pouvez vous <a href="%{url}">déconnecter</a>.
+    age: Ton âge
+    header: Mise à jour des informations de ton compte
+    message: Nous sommes en train d'implanter des mises à jour afin de te garantir
+      une protection des données privées encore meilleure. Pour ce faire, nous demandons
+      aux utilisateurs existants d'entrer leur âge ici. <br/>Comme toujours, code.org
+      ne louera pas, ne vendra pas ou ne partagera pas ces informations avec des tiers.
+    sign_out: Si tu ne souhaites pas fournir ton âge, tu peux te <a href="%{url}">déconnecter</a>.
   zendesk_too_young_message: Désolé, les plus jeunes utilisateurs ne peuvent pas s'enregistrer
     sur notre site de support. Néanmoins, vous pouvez parcourir les <a href="http://support.code.org">
-    support.code.org</a> en ou demandez à votre parent ou enseignant à nous contacter
-    pour vous.
+    support.code.org</a> en ou demandez à votre parent ou enseignant de nous contacter
+    à votre place.
   progress:
     not_started: pas commencé
     in_progress: en cours
@@ -711,8 +722,8 @@
     exit: Retourner au cours
     my_projects: Mes projets
     share: Partager
-    share_title: Partages votre projet
-    share_copy_link: 'Copiez le lien :'
+    share_title: Partage ton projet
+    share_copy_link: 'Copie le lien :'
     close: Fermer
     more: Plus
     name: Nom
@@ -729,13 +740,13 @@
     saved: Enregistré
     not_saved: Pas enregistré
     cancel: Annuler
-    delete_confirm_title: Êtes-vous sûr de que vouloir supprimer ce projet ?
-    delete_confirm_text: Supprimer votre projet le supprimera définitivement de votre
-      liste de mes projets. Tous ceux auxquels vous avez partagé le lien ne seront
-      plus en mesure de visualiser votre projet.
+    delete_confirm_title: Es-tu sûr de vouloir supprimer ce projet ?
+    delete_confirm_text: Supprimer ton projet le supprimera définitivement de ta liste
+      de tes projets. Tous ceux avec qui tu as partagé le lien ne pourront plus visualiser
+      ton projet.
     view_all: Afficher mes projets
     remix: Remix
-    click_to_remix: Cliquez sur «Remix» pour créer votre propre version!
+    click_to_remix: Clique sur «Remix» pour créer ta propre version!
     edit_project: Editer le Projet
     abuse:
       tos: Ce projet a été signalé comme ne respectant pas les <a href='http://code.org/tos'>conditions

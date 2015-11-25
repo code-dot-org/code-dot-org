@@ -22,9 +22,9 @@ hr:
           "Bee 1: Intro": 'Pčela 1: Uvod'
           "Maze 2: Loops": 'Labirint 2: Petlje'
           "Bee 2: Loops": 'Pčela 2: Petlje'
-          Multi & Match: 'Višestruki izbor & Spoji parove'
-          K-1 Flappy: '4-6 godina: Flappy'
-          Flappy non blockly: Fleppy bez blokova
+          Multi & Match: 'Višestruki izbor & Parovi'
+          K-1 Flappy: '4-7 godina: Flappy'
+          Flappy non blockly: Flappy bez blokova
           title: Tečaj 1
           Artist 2: Umjetnik 2
           Happy Maps: Vesele karte
@@ -64,7 +64,7 @@ hr:
           Graph Paper Programming: Grafičko programiranje
           "Real-life Algorithms: Paper Planes": 'Algoritmi iz stvarnog života: Papirnati avioni'
           Getting Loopy: Zapetljancije
-          Relay programming: Relay programming
+          Relay programming: Odnosno programiranje
           Conditionals: Uvjeti
           Binary Bracelets: Binarne narukvice
           The Big Event: Veliki događaj
@@ -102,13 +102,13 @@ hr:
           Artist Functions with Parameters: 'Umjetnik: Funkcije s parametrima'
           Computational Thinking: Razmišljati poput računala
           Functional Suncatchers: Funkcionalni ukrasi
-          Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
+          Songwriting Parameters: Parametri pisanja pjesme
+          Dice Race: Utrka kockom
           Internet: Internet
           Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital Citizenship
-          Farmer - While Loops: 'Farmer - While Loops'
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          Digital Citizenship: Digitalno građanstvo
+          Farmer - While Loops: 'Farmer - petlja Dok'
+          description: Tečaj 3 je napravljen za učenike koji su završili Tečaj 2. Učenici će dublje zaroniti u programerske teme koje su predstavljene u prethodnim tečajevima i tražiti fleksibilna rješenja za složenije zadatke. Do kraja ovog tečaja, učenici će napraviti interaktivne priče i igre koje mogu podijeliti s drugima. Preporučeno za učenike 4. i 5. razreda.
           "Studio: Create a Game": 'Laboratorij igara: Napravi igru'
           Maze: Labirint
           Artist: Umjetnik
@@ -117,7 +117,7 @@ hr:
           "Bee: Conditionals": 'Pčela: Uvjeti'
           "Maze: Conditionals": 'Labirint: Uvjeti'
           "Artist: Nested Loops": 'Umjetnik: Ugniježđene petlje'
-          "Farmer: While Loops": 'Farmer: While Loops'
+          "Farmer: While Loops": 'Farmer - petlja Dok'
           "Bee: Nested Loops": 'Pčela: Ugniježđene petlje'
           "Bee: Debugging": 'Pčela: Ispravljanje pogrešaka'
           Maze2: Labirint2
@@ -127,13 +127,13 @@ hr:
           "Bee: Conditionals2": 'Pčela: Uvjeti 2'
           "Maze: Conditionals2": 'Labirint: Uvjeti 2'
           "Artist: Nested Loops2": 'Umjetnik: Ugniježđene petlje 2'
-          "Farmer: While Loops2": 'Farmer: While Loops2'
+          "Farmer: While Loops2": 'Farmer - petlja Dok 2'
           "Bee: Nested Loops2": 'Pčela: Ugniježđene petlje 2'
           "Bee: Debugging2": 'Pčela: Ispravljanje pogrešaka 2'
           "Artist: Patterns": 'Umjetnik: Uzorci'
           Songwriting: Pisanje pjesama
-          description_audience: Ages 8-18
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Godine 8-18
+          description_short: Tečaj 3 slijedi nakon Tečaja 2.
         playlab:
           title: Laboratorij igara
           description: Napravi priču ili igru pomoću Laboratorija igara!
@@ -141,22 +141,22 @@ hr:
           description_short: Napravi priču ili igru pomoću Laboratorija igara!
         artist:
           title: Umjetnik
-          description: Draw cool pictures and designs with the Artist!
+          description: Nacrtaj cool slike i uzorke pomoću Umjetnika!
           Artist: Umjetnik
-          description_short: Draw cool pictures and designs with the Artist!
+          description_short: Nacrtaj cool slike i uzorke pomoću Umjetnika!
         hourofcode:
           Maze: Labirint
           title: Hour of Code
-          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description: Isprobaj osnove informatike s likovima kao što su Angry Birds, Plants vs. Zombies i vjeverac Scrat iz Ledenog doba!
+          description_short: Isprobaj osnove računalstva s mnogim zanimljivim likovima!
         frozen:
-          title: Code with Anna and Elsa
-          description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+          title: Kodiraj s Annom i Elsom
+          description: Iskoristimo programiranje da bi se pridružili Anni i Elsi dok istražuju čarobnu ljepotu leda. Kližući po ledu napravit ćeš pahuljice i druge uzorke i tako stvoriti zimsku čaroliju koju možeš podijeliti sa svojim prijateljima!
           Artist: Umjetnik
           description_short: Hajdemo koristiti kodiranje da se pridružimo Anni i Elsi dok istražuju čaroliju i ljepotu leda.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
+          description_short: Učenici koji kreću na Tečaj 4 trebali bi prije završiti Tečajeve 2 i 3.
+          description: Tečaj 4 napravljen je za učenike koji su već završili Tečaj 2 i Tečaj 3. Učenici će dublje zaroniti u programerske teme koje su predstavljene u prethodnim tečajevima i tražiti fleksibilna rješenja za složenije zadatke. Do kraja ovog tečaja, učenici će napraviti interaktivne priče i igre koje mogu podijeliti s drugima. Preporučeno za učenike od 4. do 8. razreda.
           "Artist: Variables": 'Umjetnik: Varijable'
           "Bee: For Loops": 'Pčela: Petlje brojača'
           title: Tečaj 4
@@ -182,7 +182,10 @@ hr:
           Maze and Bee: Labirint i Pčela
           Artist Binary: Umjetnik binarno
           description_audience: Dob 10+ (nakon Tečaja 3)
-          Super Challenge - Variables: 'Super Challenge - Variables'
+          Super Challenge - Variables: 'Super izazov - Varijable'
+          Super Challenge - For Loops: 'Super Challenge - For Loops'
+          Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
+          Extreme Challenge - Comprehensive: 'Extreme Challenge - Comprehensive'
         Course4pre:
           title: Preduvjeti za Tečaj 4
           description_short: Kratko objašnjenje pojmova za učenike koji nisu prošli Tečajeve 2 i 3.
@@ -193,7 +196,7 @@ hr:
           "Artist: Loops": 'Umjetnik: Petlje'
           "Bee: Conditionals": 'Pčela: Uvjeti'
           "Artist: Nested Loops": 'Umjetnik: Ugniježđene petlje'
-          "Farmer: While Loops": 'Farmer: While Loops'
+          "Farmer: While Loops": 'Farmer - petlja Dok'
           "Bee: Nested Loops": 'Pčela: Ugniježđene petlje'
           "Artist: Functions": 'Umjetnik: Funkcije'
           "Bee: Debugging": 'Pčela: Ispravljanje pogrešaka'
@@ -219,33 +222,33 @@ hr:
           Special: Posebno
           Binary: Binarno
         algebra:
-          title: Computer Science in Algebra
-          description: Learn Functional Programming through Algebra
-          description_short: Learn Functional Programming through Algebra
+          title: Informatika u algebri
+          description: Nauči funkcionalno programiranje kroz algebru
+          description_short: Nauči funkcionalno programiranje kroz algebru
           "Unplugged: Video Games and Coordinate Planes": 'Izvanmrežno: Videoigre i Koordinatne ravnine'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
-          "Eval: Strings and Images": Strings and Images
+          "Eval: Strings and Images": Tekstovi i slike
           "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
-          "Eval: Writing Contracts": Writing Contracts
-          "Calc: Defining Variables": Defining Variables and Substitution
-          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
+          "Eval: Writing Contracts": Pisanje ugovora
+          "Calc: Defining Variables": Definiranje varijabli i zamjena
+          "Play Lab: Defining Variables (Big Game)": 'Velika Igra - Varijable'
           "Eval: Defining Functions": Composite Functions
           "Unplugged: The Design Recipe": 'Izvanmrežno: Dizajn recepta'
           "Play Lab: Defining Functions": Rocket Height
           "Eval: Functions": Solving Word Problems with the Design Recipe
           "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
           "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
-          "Eval: Boolean Operators": Boolean Operators
-          "Play Lab: Booleans": Sam the Bat
-          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
+          "Eval: Boolean Operators": Logički operatori
+          "Play Lab: Booleans": Sam šišmiš
+          "Play Lab: Boolean (Big Game)": 'Velika Igra - Logičke varijable'
           "Unplugged: Conditionals and Piecewise Functions": 'Izvanmrežno: Uvjeti i Funkcije po dijelovima'
           "Eval: Conditionals": Uvjeti
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
-          title: Disney Infinity Play Lab
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          title: Disney Infinity Laboratorij igara
+          description_short: Koristi Laboratorij igara da napraviš priču ili igru s likovima iz Disney Infinity.
+          description: Koristi Laboratorij igara da napraviš priču ili igru s likovima iz Disney Infinity.
           Play Lab: Laboratorij igara
           Infinity: Beskonačnost
         algebrademo:
@@ -253,9 +256,9 @@ hr:
           description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Blokovi za ocjenjivanje
           Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
+          Defining Variables: Definiranje varijabli
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: The Design Recipe
         K5PD:
@@ -319,10 +322,10 @@ hr:
           Color Pixelation Examples: Color Pixelation Examples
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: Accelerated Intro to CS Course
+          title: '20-satni ubrzani tečaj - Uvod u informatiku'
           description_audience: Dob 10+ (nakon Tečaja 3)
           description: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne škole, ali je zabavan za učenje bez obzira na dob polaznika.
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          description_short: Ovaj 20-satni tečaj obrađuje osnove informatike i koncepte programiranja kroz tečajeve 2-4.
           Introduction to Computer Science: Uvod u računalstvo
           The Maze: Labirint
           Computational Thinking: Razmišljati poput računala
@@ -351,7 +354,8 @@ hr:
           Applab: Applab
           The Artist: Umjetnik
           Play Lab: Laboratorij igara
-          Play Lab 2015: Play Lab 2015
+          Play Lab 2015: Laboratorij igara 2015
+          Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: Događaji
           description: Događaji
@@ -363,23 +367,23 @@ hr:
         flappy:
           title: Flappy kôd
           description: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš tutorijal izrade Flappy kôda!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Napravi vlastitu Flappy igricu za manje od 10 minuta!
           Flappy Code: Flappy kôd
         jigsaw:
           title: Slagalica
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: Isprobaj naš tutorijal Slagalice
+          description_short: Isprobaj naš tutorijal Slagalice
           Jigsaw: Slagalica
         step:
           title: korak
-          description: Step tutorial
-          description_short: Step tutorial
+          description: Step tutorijal
+          description_short: Step tutorijal
           Step: korak
         Hour of Code:
-          title: Hour of Code 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
-          description_short: Try the basics of computer science with many fun characters!
-          Hour of Code 2013: Hour of Code 2013
+          title: Sat programiranja 2013
+          description: Isprobaj osnove informatike s likovima iz Angry Birds i Plants vs. Zombies!
+          description_short: Isprobaj osnove računalstva s mnogim zanimljivim likovima!
+          Hour of Code 2013: Sat programiranja 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -420,7 +424,7 @@ hr:
           "Artist: Loops": 'Umjetnik: Petlje'
           "Bee: Conditionals": 'Pčela: Uvjeti'
           "Artist: Nested Loops": 'Umjetnik: Ugniježđene petlje'
-          "Farmer: While Loops": 'Farmer: While Loops'
+          "Farmer: While Loops": 'Farmer - petlja Dok'
           "Bee: Nested Loops": 'Pčela: Ugniježđene petlje'
           "Artist: Functions": 'Umjetnik: Funkcije'
           "Bee: Debugging": 'Pčela: Ispravljanje pogrešaka'
@@ -469,10 +473,10 @@ hr:
           description_short: 'Phase 1: Online Introduction'
           "Unplugged: Video Games and Coordinate Planes": 'Izvanmrežno: Videoigre i Koordinatne ravnine'
           "Calc: Evaluation Blocks": 'Računanje: Blokovi provjere'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
+          "Eval: Strings and Images": 'Ocjenjivanje: tekstovi i slike'
           "Unplugged: Contracts": 'Izvanmrežno: Ugovori'
           "Eval: Writing Contracts": 'Provjera: Pisanje ugovora'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
+          "Calc: Defining Variables": 'Kalkulator: definiranje varijabli'
           "Play Lab: Defining Variables (Big Game)": 'Laboratorij igara: Definiranje varijabli (velika igra)'
           "Eval: Defining Functions": 'Eval: Defining Functions'
           "Unplugged: The Design Recipe": 'Izvanmrežno: Dizajn recepta'
@@ -487,15 +491,15 @@ hr:
           "Eval: Conditionals": 'Provjera: Uvjeti'
           "Unplugged: Collision Detection and the Distance Formula": 'Izvanmrežno: Opažanje sudara i Formula udaljenosti'
           "Play Lab: Collision Detection (Big Game)": 'Laboratorij igara: Opažanje sudara (velika igra)'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Contracts: Contracts
+          Evaluation Blocks: Blokovi za ocjenjivanje
+          Strings and Images: Tekstovi i slike
+          Contracts: Ugovori
           Your Game - Defining Variables: 'Your Game - Defining Variables'
           Simple Function Definition: Simple Function Definition
           The Design Recipe: The Design Recipe
           Your Game - Animation: 'Your Game - Animation'
-          Booleans: Booleans
-          Sam the Bat: Sam the Bat
+          Booleans: Logičke varijable
+          Sam the Bat: Sam šišmiš
           Your Game - Booleans: 'Your Game - Booleans'
           Conditionals and Piecewise Functions: Uvjeti i Funkcije po dijelovima
           Rocket-Height: Rocket-Height
@@ -510,13 +514,13 @@ hr:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Blokovi za ocjenjivanje
+          Strings and Images: Tekstovi i slike
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: 'Your Game - Animation'
-          Booleans: Booleans
-          Sam the Bat: Sam the Bat
+          Booleans: Logičke varijable
+          Sam the Bat: Sam šišmiš
           Your Game - Booleans: 'Your Game - Booleans'
           Luigi's Pizza: "Luigi's Pizza"
           "Play Lab: Collision Detection (Big Game)": 'Laboratorij igara: Opažanje sudara (velika igra)'
@@ -649,6 +653,33 @@ hr:
           Variables Conceptorial Fodder: Variables Conceptorial Fodder
           "Variables: Create, Assign, and Read": 'Variables: Create, Assign, and Read'
           "Variables: Increment, Decrement, Display, and Scope": 'Variables: Increment, Decrement, Display, and Scope'
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistant: Introduction to Digital Assistant
+          "Improving Digital Assistant: Conditionals": 'Improving Digital Assistant: Conditionals'
+          "Improving Digital Assistant: Functions with Return": 'Improving Digital Assistant: Functions with Return'
+          "Improving Digital Assistant: Complex Conditionals": 'Improving Digital Assistant: Complex Conditionals'
+          Conditionals with Movie Bot: Conditionals with Movie Bot
+          Improving Digital Assistant with Conditionals: Improving Digital Assistant with Conditionals
+          Chained and Nested Conditionals with Movie Bot: Chained and Nested Conditionals with Movie Bot
+          Compound Conditionals with Movie Bot: Compound Conditionals with Movie Bot
+          "Practice PT: Digital Assistant": 'Practice PT: Digital Assistant'
+          Practice PT - Design a Digital Scene: 'Practice PT - Design a Digital Scene'
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          Introduction to Digital Assistant Project: Introduction to Digital Assistant Project
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: Petlje s uvjetom
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -657,9 +688,9 @@ hr:
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Blokovi za ocjenjivanje
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
+          Strings and Images: Tekstovi i slike
           The Design Recipe: The Design Recipe
           Next Steps: Next Steps
         sciPD complex adaptive 2:
@@ -707,7 +738,7 @@ hr:
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Blokovi za ocjenjivanje
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -719,7 +750,7 @@ hr:
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Blokovi za ocjenjivanje
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -771,8 +802,8 @@ hr:
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -848,24 +879,24 @@ hr:
           Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
+          Evaluation Blocks: Blokovi za ocjenjivanje
+          Strings and Images: Tekstovi i slike
+          Defining Variables: Definiranje varijabli
           Big Game - Variables: 'Big Game - Variables'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           The Design Recipe: The Design Recipe
           Big Game - Animation: 'Big Game - Animation'
-          Booleans: Booleans
-          Sam the Bat: Sam the Bat
+          Booleans: Logičke varijable
+          Sam the Bat: Sam šišmiš
           Big Game - Booleans: 'Big Game - Booleans'
           Luigi's Pizza: "Luigi's Pizza"
           Big Game - Player Movement: 'Big Game - Player Movement'
           Big GAme - Collision Detection: 'Big GAme - Collision Detection'
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: 'Big Game - Collision Detection'
-          Free Play: Free Play
+          Free Play: Slobodna igra
         allthethings:
           Jigsaw: Slagalica
           Maze: Labirint
@@ -896,18 +927,18 @@ hr:
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Evaluation Blocks: Blokovi za ocjenjivanje
+          Strings and Images: Tekstovi i slike
+          Writing Contracts: Pisanje ugovora
+          Defining Variables: Definiranje varijabli
+          Defining Functions: Definiranje funkcija
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
+          Booleans: Logičke varijable
           "Eval: Conditionals": 'Provjera: Uvjeti'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
@@ -918,19 +949,19 @@ hr:
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Internetski Simulator
-          App Lab: App Lab
+          App Lab: Laboratorij aplikacija
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: Dobro došli!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: Dobro došli!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Internetski Simulator
-          App Lab: App Lab
+          App Lab: Laboratorij aplikacija
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
@@ -950,9 +981,9 @@ hr:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
+          Welcome!: Dobro došli!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -995,38 +1026,38 @@ hr:
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          title: Sat kodiranja 2015
+          description_short: Koristi Laboratorij igara za stvaranje priče ili igre.
+          description: Koristi Laboratorij igara za stvaranje priče ili igre.
           Hour of Code: Hour of Code
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: Sat kodiranja 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Evaluation Blocks: Blokovi za ocjenjivanje
+          Strings and Images: Tekstovi i slike
+          Writing Contracts: Pisanje ugovora
+          Defining Variables: Definiranje varijabli
+          Defining Functions: Definiranje funkcija
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
+          Booleans: Logičke varijable
           "Eval: Conditionals": 'Provjera: Uvjeti'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
+          Welcome!: Dobro došli!
           The Design Recipe: The Design Recipe
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          Welcome!: Dobro došli!
           Wrap-Up: Wrap-Up
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1041,9 +1072,9 @@ hr:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          Welcome!: Dobro došli!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1059,10 +1090,10 @@ hr:
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: Dobro došli!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
+          description: 'Faza 2 online: Mješoviti ljetni studij'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1071,9 +1102,9 @@ hr:
           Wrap-Up: Wrap-Up
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          Welcome!: Dobro došli!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1090,9 +1121,9 @@ hr:
           Wrap-up: Zamotavanje
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          Welcome!: Dobro došli!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1159,8 +1190,8 @@ hr:
           Frequency Analysis: Frequency Analysis
         algebraPD3a:
           title: Computer Science in Algebra PD
-          description_short: CS in Algebra blended online school year study
-          description: CS in Algebra blended online school year study
+          description_short: 'Phase 3 (Part 1): CS in Algebra blended online school year study'
+          description: 'Phase 3 (Part 2): CS in Algebra blended online school year study'
           Updates - Tweaks and Polish: 'Updates - Tweaks and Polish'
           Updates - The Big Game and Projects: 'Updates - The Big Game and Projects'
           Updates - The Design Recipe: 'Updates - The Design Recipe'
@@ -1181,7 +1212,7 @@ hr:
           title: 'Exploring Computer Science: Unit 2'
           description_short: Unit 2 of the Exploring Computer Science curriculum
           description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: Dobro došli!
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1204,10 +1235,10 @@ hr:
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
         ECSPD3-Unit3:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description_short: Academic Year Development
-          description: Academic Year Development
-          Welcome!: Welcome!
+          title: 'Exploring Computer Science: Unit 3'
+          description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
+          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 3 of the version 5 Exploring Computer Science curriculum.
+          Welcome!: Dobro došli!
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1224,11 +1255,20 @@ hr:
           "Day 20-21 HTML and CSS: Adding Enhancements to Site": 'Day 20-21 HTML and CSS: Adding Enhancements to Site'
           Day 22-25 Final Project: Day 22-25 Final Project
           "Day 15-16 HTML and CSS: Tables, Lists, Menus": 'Day 15-16 HTML and CSS: Tables, Lists, Menus'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: 'Close & Next Steps'
+          Intro to Unit 3: Intro to Unit 3
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
         ECSPD3-Unit4:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description_short: Academic Year Development
-          description: Academic Year Development
-          Welcome!: Welcome!
+          title: 'Exploring Computer Science: Unit 4'
+          description_short: Unit 4 of the version 5 Exploring Computer Science curriculum.
+          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 4 of the version 5 Exploring Computer Science curriculum.
+          Welcome!: Dobro došli!
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1250,11 +1290,18 @@ hr:
           Day 25-30 Final Project: Day 25-30 Final Project
           Unit 4 Challenge Planning: Unit 4 Challenge Planning
           Unit 4 Challenge Creation: Unit 4 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: 'Close & Next Steps'
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Dobro došli!
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1263,7 +1310,7 @@ hr:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Dobro došli!
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1300,11 +1347,12 @@ hr:
           "Data App Part 8: Visualize Data": 'Data App Part 8: Visualize Data'
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Dobro došli!
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
@@ -1313,8 +1361,8 @@ hr:
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
           title: Computer Science in Algebra PD
-          description_short: CS in Algebra mid year lesson support
-          description: CS in Algebra mid year lesson support
+          description_short: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
+          description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
           Teaching Support - Lessons 1-3: 'Teaching Support - Lessons 1-3'
           Teaching Support - Lessons 4-7: 'Teaching Support - Lessons 4-7'
           Teaching Support - Lessons 8-12: 'Teaching Support - Lessons 8-12'
@@ -1326,7 +1374,7 @@ hr:
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: Welcome!
+          Welcome!: Dobro došli!
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1335,6 +1383,10 @@ hr:
         duino:
           Experimenting with Arduino stuff: Experimenting with Arduino stuff
           Basic Circuits: Basic Circuits
+          description: Testing some tools for teaching with Arduinos
+          Blinky Lights: Blinky Lights
+          Making Music: Making Music
+          JunkBot: JunkBot
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
@@ -1345,3 +1397,97 @@ hr:
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
           description_audience: Dob 10+ (nakon Tečaja 3)
           Halloween 2015: Halloween 2015
+          description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+        iceage:
+          title: Ice Age Play Lab
+          description_short: Create a story or make a game with Ice Age Play Lab!
+          description: Create a story or make a game with Ice Age Play Lab!
+          Ice Age Play Lab: Ice Age Play Lab
+        CSPPD3-Unit3:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit3temp:
+          title: 'CSP Unit 3 - Temp'
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          Key Events with Image Scroller: Key Events with Image Scroller
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Petlje s uvjetom
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
+        CSP-Unit3-Support:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+        gumball:
+          title: Gumball Play Lab
+          description_short: Create a story or make a game with Gumball Play Lab!
+          description: Create a story or make a game with Gumball Play Lab!
+          Gumball Play Lab: Gumball Play Lab
+        starwars:
+          title: 'Zvjezdani ratovi: Izgradnja galaksije uz pomoć koda'
+          description_short: Nauči programirati droide, te kreiraj svoju Zvjezdani ratovi igricu u dalekoj, dalekoj galaksiji.
+          description: Nauči programirati droide, te kreiraj svoju Zvjezdani ratovi igricu u dalekoj, dalekoj galaksiji.
+          Hour of Code 2015: Sat kodiranja 2015
+        starwarsblocks:
+          title: 'Zvjezdani ratovi: Izgradnja galaksije uz pomoć koda'
+          description_short: Nauči programirati droide, te kreiraj svoju Zvjezdani ratovi igricu u dalekoj, dalekoj galaksiji.
+          description: Nauči programirati droide, te kreiraj svoju Zvjezdani ratovi igricu u dalekoj, dalekoj galaksiji.
+          Hour of Code 2015: Sat kodiranja 2015
+        minecraft:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
+        mc:
+          title: Minecraft Sat Kodiranja
+          description_short: Explore a Minecraft world through code
+          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          Hour of Code 2015: Sat kodiranja 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          description: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Dobro došli!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Wrap-Up

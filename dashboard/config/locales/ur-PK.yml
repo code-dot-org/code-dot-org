@@ -260,6 +260,7 @@
         playlab: Make an App
         artist: Draw Something
         calculate: Calculate Something
+        applab: Make an App
     user:
       classroom: Teacher Home Page
       district_dashboard: District Dashboard
@@ -283,6 +284,8 @@
       prize_us_only: (U.S. students only)
       prizes_link: more info
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Your teacher:'
       other: 'Your teachers:'
@@ -508,6 +511,7 @@
   pdf_download: Download PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
+  not_started: The student has not attempted this level.
   share_code:
     title: Click 'Run' to see my program in action
     bounce_og_title: Check out my Bounce Game
@@ -556,9 +560,14 @@
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -688,7 +697,7 @@
     delete: Delete
     exit: Return to Course
     my_projects: My Projects
-    share: Share
+    share: دوسروں کو بتائیں
     share_title: Share your project
     share_copy_link: 'Copy the link:'
     close: Close
@@ -737,7 +746,7 @@
           harassment: Threats, cyberbullying, harassement
           offensive: Offensive content
           infringement: Copyright Infringement
-          other: Other
+          other: دیگر
         detail: Please provide as much detail as possible regarding the content you
           are reporting.
         acknowledge: By submitting this information, you acknowledge it will be handled

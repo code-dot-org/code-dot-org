@@ -2,7 +2,7 @@ da:
   errors:
     messages:
       not_saved: 'Ret venligst følgende fejl:'
-      too_young: This content has age restrictions in place and is not available for younger students
+      too_young: Dette indhold har aldersbegrænsning og er ikke tilgængelig for yngrer studerende
   activerecord:
     errors:
       messages:
@@ -221,6 +221,7 @@ da:
         playlab: Lav en App
         artist: Tegn noget
         calculate: Calculate Something
+        applab: Lav en App
     user:
       classroom: Lærerens startside
       district_dashboard: Særskilt betjeningspanel
@@ -244,6 +245,8 @@ da:
       prize_us_only: (Kun for amerikanske elever)
       prizes_link: Mere info
   teacher:
+    answer: Svar
+    for_teachers_only: Kun for lærere
     title:
       one: 'Din lærer:'
       other: 'Dine lærere:'
@@ -307,10 +310,10 @@ da:
       viewing_solution: Vis løsningsforslag
       try_it_yourself: Prøv selv
       section: Afsnit
-      example: Example Solution
-      example_with_number: 'Example Solution %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
-      unsubmit: Unsubmit
+      example: Løsningseksempel
+      example_with_number: 'Løsningseksempel %{solution_number}'
+      submitted_on: 'Indsendt den %{date}'
+      unsubmit: Fortryd indsendelse
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'
@@ -354,7 +357,7 @@ da:
     local_school: lokal skole
     online: online
     see_details: Se detaljer
-    view_course: View Course
+    view_course: Se kursus
     prize_info: 'Præmier for deltagelse (kun amerikanske offentlige skolelærere): op til $1.000 i klasseværelset belønninger.'
     tryfirst: 'Eller du kan prøve det først, og tilmeld dig bagefter:'
     trynow: Prøv nu
@@ -369,11 +372,11 @@ da:
     heading_legacy: '<h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>'
     your_gallery: Galleri
     no_primary_course: Prøv et kursusforløb på Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Prøv en Code Studio kursus ved at vælge en nedenfor
     print_certificate: Udskriv certifikat
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with code.
+    title: Lære om Code Studio
+    description: Enhver kan lære programmering. Lav spil, apps og kunst med kode.
   gender:
     male: Mand
     female: Kvinde
@@ -382,24 +385,24 @@ da:
     student: studerende
     teacher: Lærer
   footer:
-    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
+    thank_you: 'Vi takker vores <a href="https://code.org/about/donors"> støtter</a>, <a href="https://code.org/about/partners"> partnere</a>, vores <a href="https://code.org/about/team">team</a>, vores video stemmer og vores <a href="https://code.org/about/advisors"> rådgivere</a> for deres støtte til at skabe Code Studio.'
     help_from_html: Ingeniører fra Google, Microsoft, Facebook og Twitter har bidraget til at skabe denne øvelse.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
+    help_from_html_old: Ingeniører fra Google, Microsoft, Facebook og Twitter har bidraget til at skabe denne øvelse.
     art_from_html: 'Angry Birds&trade; & &copy; & © 2009-2013 Rovio Entertainment Ltd. Alle rettigheder forbeholdes. <br/>Plants vs zombies&trade; & &copy; & © 2013 Electronic Arts Inc. Alle rettigheder forbeholdes.'
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Powered by Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo og Hour of Code&reg; er varemærker tilhørende Code.org.'
     copyright: Copyright
     more: Mere
     feedback: Giv feedback
     translate: Hjælp os med at oversætte til dit sprog
     support: Support
     support_url: http://support.Code.org
-    tos_short: Terms
+    tos_short: Vilkår
     tos: Termer
     privacy: Privatlivspolitik
     secure: Sikker Version
-    report_abuse: Report Abuse
+    report_abuse: Rapporter misbrug
   reference_area:
     title: Brug for hjælp?
     subtitle: Se disse videoer og tips
@@ -431,6 +434,7 @@ da:
   pdf_download: Download PDF
   download_coming_soon: Aktiviter til download kommer snart.
   video_coming_soon: Video kommer snart!
+  not_started: Den studerende har ikke forsøgt dette niveau.
   share_code:
     title: "Klik på 'Kør' for at se min program i aktion"
     bounce_og_title: Tjek mit Hoppespil
@@ -472,9 +476,14 @@ da:
       body: Se et galleri af app og kunstnerbilleder skabt af vores brugere
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Brug Play Lab til at skabe en historie eller et spil med karakterer fra Disneys Infinity
+    minecraft:
+      title: Minecraft
+      body: Udforsk en Minecraft-verden gennem kode.
   gallery:
     students_drew_these_with_code: Elever har tegnet disse med kode!
     students_made_these_with_code: Elever har lavet disse med kode!
@@ -521,7 +530,7 @@ da:
   dialog:
     ok: Ok
     startover_title: Sikker på, at du vil starte forfra?
-    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_body: Dette vil nulstille programmet og slette alle de blokke, du har tilføjet eller ændret.
     startover_ok: Start forfra
     startover_cancel: Annuller
   time:
@@ -606,24 +615,24 @@ da:
     view_all: Se Mine Projekter
     remix: Bland igen
     click_to_remix: "Klik 'Bland igen' oprette et spin-off i din egen version!"
-    edit_project: Edit Project
+    edit_project: Rediger projekt
     abuse:
-      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
-      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
-      go_to_code_studio: Go to Code Studio
+      tos: "Dette projekt er blevet rapporteret til at overtræde Code.org med <a href='http://code.org/tos'> Terms of Service</a> og kan ikke deles med andre."
+      contact_us: "Hvis du mener, at dette er en fejl, bedes du <a href='https://code.org/contact'> kontakte os.</a>"
+      go_to_code_studio: Gå til Code Studio
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        intro: Hvis du er stødt på stødende indhold, trusler, cybermobning, chikane eller en forekomst af krænkelse af ophavsretten til indholdet, du ejer, mens du bruger apps bygget på Code Studio, bedes du udfylde nedenstående formular. Vi vil tage dit rapport alvorligt, undersøge i overensstemmelse hermed, og træffe passende foranstaltninger.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Angiv venligst en e-mail adresse
+          age: Angiv alder
+          abuse_type: Besvar venligst, hvordan denne indhold overtræder Servicevilkår
+          abuse_detail: Anfør nærmere oplysninger vedrørende det indhold, du rapporterer
+        abusive_url: URL-adressen til det indhold, der indberettes
         abuse_type:
-          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: 'Hvordan dette indhold overtræder %{link_start}Terms af Service%{link_end}?'
+          harassment: Trusler, cybermobning, chikane
+          offensive: Stødende indhold
+          infringement: Brud på copyright
           other: Andre
-        detail: Please provide as much detail as possible regarding the content you are reporting.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        detail: Anfør så mange detaljer som muligt om det indhold, du rapporterer.
+        acknowledge: 'Ved at indsende disse oplysninger, anerkender du det vil blive behandlet i overensstemmelse med de %{link_start_privacy}Privacy Policy%{link_end} og %{link_start_tos}Terms af Service%{link_end}'

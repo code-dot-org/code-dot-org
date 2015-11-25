@@ -2,7 +2,7 @@ ru:
   errors:
     messages:
       not_saved: 'Пожалуйста, исправьте следующие ошибки:'
-      too_young: Этот урок имеет возрастные ограничения и не доступен для юных студентов
+      too_young: Этот урок имеет возрастные ограничения и не доступен для школьников младшего возраста
   activerecord:
     errors:
       messages:
@@ -216,11 +216,12 @@ ru:
         playlab: Создать приложение
         artist: Нарисовать что-нибудь
         calculate: Calculate Something
+        applab: Создать приложение
     user:
       classroom: Домашняя страница Преподавателя
       district_dashboard: Панель управления области
       label: 'Привет, %{username}'
-      stats: Мои результаты
+      stats: Code Studio
       settings: Моя регистрация
       prizes: Призы
       logout: Выйти
@@ -239,6 +240,8 @@ ru:
       prize_us_only: (Только для учеников в США)
       prizes_link: Дополнительная информация
   teacher:
+    answer: Ответ
+    for_teachers_only: Только для учителей
     title:
       one: 'Ваш учитель:'
       other: 'Ваши учителя:'
@@ -305,7 +308,7 @@ ru:
       example: Пример решения
       example_with_number: 'Пример решения %{solution_number}'
       submitted_on: 'Отправлено %{date}'
-      unsubmit: Unsubmit
+      unsubmit: Снять подтверждение
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
     email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был подтверждён:'
@@ -328,7 +331,7 @@ ru:
     title: Студия кода
     description: Code Studio является домом для онлайн курсов, созданных Code.org
     lines_of_code: '%{lines_count} СТРОК КОДА НАПИСАНО УЧЕНИКАМИ'
-    lines_of_code_linebreak: '%{lines_count} строк кода <br/> НАПИСАНЫ %{students_count} миллионами студентов'
+    lines_of_code_linebreak: '%{lines_count} СТРОК КОДА <br/> НАПИСАНЫ %{students_count} МИЛЛИОНАМИ УЧЕНИКОВ'
     all_courses: Обзор курсов 1, 2 и 3
     lesson_plans: Планы уроков
     signin_message: 'Уже зарегистрированы? %{link}'
@@ -361,7 +364,7 @@ ru:
     heading_hoc2014: '<h2>Час Кода для</h2><h1>Для всех возрастов</h1>'
     heading_elementary: '<h2>20-часовые курсы для</h2><h1>Начинающих (всех возрастов)</h1>'
     heading_apps: '<h2>Развлечения для</h2><h1>всех</h1>'
-    heading_legacy: '<h2>Наш общий курс для</h2><h1>Для всех возрастов</h1>'
+    heading_legacy: '<h2>Наш ускоренный курс для</h2><h1>Для всех возрастов</h1>'
     your_gallery: Галерея
     no_primary_course: Попробуйте курс Студии Кода
     choose_next_course: Попробуйте курс Студии кода, выбрав один из вариантов ниже
@@ -381,9 +384,9 @@ ru:
     help_from_html: Инженеры от Google, Microsoft, Facebook и Twitter помогли создать этот учебник.
     help_from_html_old: Инженеры из Google, Microsoft, Facebook, и Twitter помогли с созданием этих материалов.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Все права защищены.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Все права защищены.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права защищены.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Все права защищены'
     powered_by_aws: Создано с помощью Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE и Hour of Code&reg; являются товарными знаками Code.org.'
     copyright: Авторское право
     more: Ещё
     feedback: Оставить отзыв
@@ -426,6 +429,7 @@ ru:
   pdf_download: Скачать PDF
   download_coming_soon: 'Возможность загрузки появится в  ближайшее время.'
   video_coming_soon: Данное видео скоро появится!
+  not_started: Студент не пытался пройти этот уровень.
   share_code:
     title: Нажмите кнопку «Run», чтобы увидеть мою программу в действии
     bounce_og_title: Оцените мою Bounce игру
@@ -467,9 +471,14 @@ ru:
       body: Показать галерею приложений и картинок, созданных нашими пользователями
     frozen:
       title: '"Холодное сердце"'
+    starwars:
+      title: Звёздные войны
     infinity:
       title: Лаборатория игр Infinity
       body: Используйте лабораторию игр, чтобы создать историю или игру с персонажами Disney Infinity.
+    minecraft:
+      title: Minecraft
+      body: Изучайте мир Minecraft через программный код.
   gallery:
     students_drew_these_with_code: Ученики нарисовали это с помощью кода!
     students_made_these_with_code: Сделано учениками с помощью кода!
@@ -603,20 +612,20 @@ ru:
     click_to_remix: Нажмите «Ремикс», чтобы воспроизвести вашу собственную версию!
     edit_project: Редактировать проект
     abuse:
-      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
-      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
+      tos: "Этот проект нарушает <a href='http://code.org/tos'>правила использования</a> Code.org, о чем было уведомлено, связи с этим проектом нельзя поделиться."
+      contact_us: "Если вы считаете, что произошла ошибка, пожалуйста, <a href='https://code.org/contact'>свяжитесь с нами.</a>"
       go_to_code_studio: Перейти в студию кода
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        intro: Если вы столкнулись с оскорбительным содержанием, угрозой, киберзапугиванием, домогательством или нарушением вашего авторского права, во время работы в Code Studio, пожалуйста, заполните форму ниже. Ваша жалоба будет рассмотрена, так же будет проведено необходимое расследование и приняты соответствующие меры, так как мы относимся к этому делу очень серьезно.
         validation:
           email: Пожалуйста предоставьте адрес электронной почты
           age: Пожалуйста, укажите возраст
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          abuse_type: Пожалуйста, ответьте, как это содержание нарушает условия предоставления услуг
+          abuse_detail: Пожалуйста предоставьте подробную информацию относительно содержания, по поводу которого вы отправляете жалобу
+        abusive_url: URL-адрес содержимого был передан на рассмотрение
         abuse_type:
-          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: Threats, cyberbullying, harassement
+          question: 'Как это содержание нарушает %{link_start}Правила использования%{link_end}?'
+          harassment: Угрозы, запугивания, домогательство
           offensive: Оскорбительное содержание
           infringement: Нарушение авторских прав
           other: Другое

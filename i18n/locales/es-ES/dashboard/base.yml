@@ -221,6 +221,7 @@ es:
         playlab: Hacer una aplicación
         artist: Dibujar algo
         calculate: Calculate Something
+        applab: Hacer una aplicación
     user:
       classroom: Página de inicio del maestro
       district_dashboard: Tablero de Distrito
@@ -244,6 +245,8 @@ es:
       prize_us_only: (Sólo estudiantes de Estados Unidos)
       prizes_link: 'Más información '
   teacher:
+    answer: Respuesta
+    for_teachers_only: Sólo para profesores
     title:
       one: 'Tu profesor:'
       other: 'Tus maestros:'
@@ -308,9 +311,9 @@ es:
       try_it_yourself: Inténtalo tu mismo
       section: Sección
       example: Solución de ejemplo
-      example_with_number: 'Example Solution %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
-      unsubmit: Unsubmit
+      example_with_number: 'Ejemplo de solución %{solution_number}'
+      submitted_on: 'Enviado el %{date}'
+      unsubmit: NO enviado
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
     email_confirm_needed_required: 'Tu dirección de email %{email} no ha sido confirmada:'
@@ -372,7 +375,7 @@ es:
     choose_next_course: Prueba un curso de Código Studio eligiendo uno a continuación
     print_certificate: Imprimir Certificado
   share:
-    title: Aprender en Código Studio
+    title: Aprender en Code Studio
     description: Cualquier persona puede aprender informática. Crear juegos, aplicaciones y arte con código.
   gender:
     male: Varón
@@ -382,13 +385,13 @@ es:
     student: estudiante
     teacher: Profesor
   footer:
-    thank_you: 'Agradecemos a nuestros <a href="https://code.org/about/donors">donantes</a>, <a href="https://code.org/about/partners">aliados</a>, nuestro <a href="https://code.org/about/team">equipo extendido</a> nuestro elenco de video y nuestros <a href="https://code.org/about/advisors">asesores académicos</a> por su apoyo a la creación de Codigo Studio.'
-    help_from_html: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado a crear estos materiales educativos.
+    thank_you: 'Agradecemos a nuestros <a href="https://code.org/about/donors">donantes</a>, <a href="https://code.org/about/partners">aliados</a>, nuestro <a href="https://code.org/about/team">equipo extendido</a> nuestro elenco de video y nuestros <a href="https://code.org/about/advisors">asesores académicos</a> por su apoyo a la creación de Code Studio.'
+    help_from_html: En especial queremos reconocer el trabajo de los Ingenieros de Google, Microsoft, Facebook y Twitter que han ayudado a crear estos materiales educativos.
     help_from_html_old: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado a crear este material.
-    art_from_html: 'Angry Brids&trade;&&copy; 2009-2013 Rovio Entertainment Ltd. Todos los derechos reservados. <br/>Plantas vs. Zombies&trade;&&copy; 2013 Electronic Arts Inc. Todos los derechos reservados.'
+    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Todos los Derechos Reservados.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los Derechos Reservados.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Todos los Derechos Reservados'
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados.<br />Plantas vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados'
     powered_by_aws: Powered by Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, el logotipo de CODE y hora de Codigo &reg; son marcas registradas de Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, el logotipo de CODE y el de Hora de Código &reg; son marcas registradas de Code.org.'
     copyright: Derechos de autor
     more: Más
     feedback: Enviar comentarios
@@ -396,10 +399,10 @@ es:
     support: Soporte
     support_url: http://support.code.org
     tos_short: Términos
-    tos: Términos
+    tos: Términos de uso
     privacy: Política de Privacidad
     secure: Versión Segura
-    report_abuse: Report Abuse
+    report_abuse: Reportar Abuso
   reference_area:
     title: ¿Necesitas ayuda?
     subtitle: Ver estos videos y sugerencias
@@ -431,6 +434,7 @@ es:
   pdf_download: Descargar PDF
   download_coming_soon: Actividad descargable próximamente.
   video_coming_soon: Video próximamente!
+  not_started: El alumno no a intentado este nivel.
   share_code:
     title: 'Haz clic en "Ejecutar" para ver el programa en acción'
     bounce_og_title: Revisa mi juego Bounce
@@ -472,9 +476,14 @@ es:
       body: Ver una galería de aplicaciones y de imágenes de artistas creadas por nuestros usuarios
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Laboratorio de Juego Infinity
       body: Utilice el laboratorio de juegos para crear una historia o juego protagonizada por personajes de Disney Infinity.
+    minecraft:
+      title: Minecraft
+      body: Explora un mundo de Minecraft, a través de código.
   gallery:
     students_drew_these_with_code: ¡Los estudiantes dibujaron esto con código!
     students_made_these_with_code: ¡Los estudiantes hicieron éstos con código!
@@ -513,7 +522,7 @@ es:
     badrange: El contrato tiene el nombre equivocado.
     baddomainsize: El contrato no tiene el número correcto de elementos en el dominio.
     baddomainname: Uno o más items de tu dominio tienen el nombre equivocado.
-    baddomaintype: 'Uno o más de  tus artículos de dominio estan mal escritos, o se encuentran fuera de orden.'
+    baddomaintype: 'Uno o más de  tus artículos de dominio están mal escritos o se encuentran en el orden incorrecto.'
   text_match:
     placeholder: Escribe aquí tu respuesta
     open_response_title: Gracias
@@ -521,7 +530,7 @@ es:
   dialog:
     ok: OK
     startover_title: ¿Seguro que quieres empezar de nuevo?
-    startover_body: Esto reiniciará el rompecabeza a su estado inicial y reiniciara todos los datos que hayas agregado o cambiado.
+    startover_body: Esto reiniciará el rompecabeza a su estado inicial y borrará todos los datos que hayas agregado o cambiado.
     startover_ok: Volver a empezar
     startover_cancel: Cancelar
   time:
@@ -586,23 +595,23 @@ es:
     exit: Regresar al Curso
     my_projects: Mis Proyectos
     share: Compartir
-    share_title: Compartir su Proyecto
+    share_title: Compartir tu proyecto
     share_copy_link: 'Copiar el enlace:'
     close: Cerrar
     more: Más
     name: Nombre
     updated: Actualizado
     project_type: Tipo de Proyecto
-    help_text: '¡Haz clic en <strong>Hacer una Aplicación</strong> o <strong>Dibujar Algo</strong> más abajo para hacer un nuevo proyecto de Artista o de Laboratorio de Juego! <br/>Puedes regresar y trabajar en tus proyectos en cualquier momento.'
-    need_help: Necesita ayuda para empezar ?
+    help_text: '¡Haz clic en <strong>Hacer una Aplicación</strong> o <strong>Dibujar Algo</strong> más abajo para hacer un nuevo proyecto de Artista o de Laboratorio Lúdico! <br/>Puedes regresar y trabajar en tus proyectos en cualquier momento.'
+    need_help: ¿Necesitas ayuda para empezar?
     really_delete: ¿Borrar?
     delete_yes: Sí
     delete_no: 'No'
     saved: Guardado
     not_saved: No guardado
     cancel: Cancelar
-    delete_confirm_title: ¿Está seguro de que quiere eliminar este proyecto?
-    delete_confirm_text: Borrar su proyecto hará que se retire permanentemente de su Lista de Proyectos. Cualquiera que tenga un enlace compartido por usted no podrá seguir viendo este proyecto.
+    delete_confirm_title: ¿Estás seguro de que quieres eliminar este proyecto?
+    delete_confirm_text: Borrar tu proyecto hará que se retire permanentemente de tu Lista de Proyectos. Las personas que tengan un enlace al mismo no podrán seguir viendo el proyecto una vez que haya sido eliminado.
     view_all: Ver Mis Proyectos
     remix: Remezclar
     click_to_remix: "¡Haz clic en 'Remix' para obtener tu propia versión!"
@@ -612,18 +621,18 @@ es:
       contact_us: "Si cree que esto es un error, por favor <a href='https://code.org/contact'>contáctenos.</a>"
       go_to_code_studio: Ve a Code Studio
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        intro: Si usted ha encontrado contenido ofensivo, amenazas, intimidación, acoso o alguna instancia de infracción de sus Derechos de Autor por medio del uso de aplicaciones hechas en Code Studio por favor llene el siguiente formulario. Tomaremos muy en serio su informe, investigaremos y tomaremos las medidas correspondientes.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Por favor proporcione una dirección de correo electrónico
+          age: Por favor especifique una edad
+          abuse_type: Por favor describa cómo este contenido viola los términos del servicio
+          abuse_detail: Proporcione detalles sobre el contenido que está informando
+        abusive_url: URL de los contenidos que está reportando
         abuse_type:
-          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: '¿Cómo este contenido viola la %{link_start}Term de Servicio%{link_end}?'
+          harassment: Amenazas, ciberacoso, acoso
+          offensive: Contenido ofensivo
+          infringement: Infracción de Derechos de Autor
           other: Otros
-        detail: Please provide as much detail as possible regarding the content you are reporting.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        detail: Por favor, proporcione tantos detalles como sea posible sobre el contenido que está informando.
+        acknowledge: 'Al enviar esta información, usted reconoce que se tratarán de un acuerdo con los términos de %{link_start_privacy}Privacy Policy%{link_end}%y de%{link_start_tos}Terminos de Servicio%{link_end}'

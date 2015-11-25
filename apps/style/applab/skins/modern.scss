@@ -18,9 +18,9 @@
     }
   }
 
-  input[type=text], input:not([type]), div[contenteditable=true] {
+  input[type=text], input:not([type]), div.textArea {
     border: 1px solid #999;
-    padding: 10px;
+    padding: 5px; /* padding clips text in text inputs in Firefox */
   }
 
   select {
@@ -41,7 +41,7 @@
     }
   }
 
-  button, select, input, [contenteditable=true] {
+  button, select, input, .textArea {
     outline: 0;
   }
 
@@ -58,6 +58,8 @@
 
   img[src=''], canvas, .chart {
     border: 5px solid #fff;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
     outline: 1px solid #bdc3c7;
     outline-offset: -1px;
   }

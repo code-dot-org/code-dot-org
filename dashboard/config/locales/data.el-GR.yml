@@ -588,6 +588,64 @@
           Spacebot και να ειδοποιήσετε όλους τους άλλους
         studio_playlab_10: Δημιούργησε το δικό σου παιχνίδι. Όταν το κάνεις, πάτα
           "Τέλος" κι άσε τους φίλους σου να δοκιμάσουν το παιχνίδι στα κινητά τους.
+        studio_iceage_1: Ο Μάνι θέλει να πει "Γεια" - μπορείτε να τον βοηθήσετε;
+        studio_iceage_2: Ο Diego (ηθοποιός 1) και η γιαγιά (ηθοποιός 2) θα ήθελαν
+          να πουν "Γεια" μεταξύ τους. Μπορείτε να τους βοηθήσετε χρησιμοποιώντας το
+          μπλοκ "πες" δύο φορές;
+        studio_iceage_3: Μπορείτε να βοηθήσετε τον Scrat να πάει στη σημαία;
+        studio_iceage_4: Μπορείτε να βοηθήσετε τον Scrat (ηθοποιός 1) να φτάσει στη
+          γιαγιά (ηθοποιός 2) και να παίξει έναν ήχο όταν πάει εκεί;
+        studio_iceage_5: Μπορείτε να βοηθήσετε το Σιντ πει "Χαιρετίσματα" όταν πατηθεί;
+          Μην ξεχάσετε να πατήσετε κλικ αφού όμως κάνετε κλικ στο Run
+        studio_iceage_6: Μπορείτε να βοηθήσετε το Diego να μετακινηθεί χρησιμοποιώντας
+          τα πλήκτρα βέλους πάνω/κάτω/αριστερά/δεξιά για να πάει σε όλες τις σημαίες;
+        studio_iceage_7: Η εντολή "επανάλαβε για πάντα" επιτρέπει να εκτελείς κώδικα
+          συνεχώς. Μπορείς να της κολλήσεις και άλλα μπλοκ ώστε να βοηθήσεις το Σιντ
+          να κινείται διαρκώς δεξιά και αριστερά;
+        studio_iceage_8: Μπορείτε να προσθέσετε ένα μπλοκ και να σκοράρετε ένα πόντο
+          και ένα μπλοκ για να παίξει έναν ήχο όταν ο Sid τρέχει στο Μάνι, και στη
+          συνέχεια να τον μετακινήσετε με τα βέλη μέχρι να σκοράρετε;
+        studio_iceage_9: Ρυθμίσετε το βάθος για την εποχή των παγετώνων και βοηθήστε
+          το Sid να φτάσει στη γιαγιά πιο γρήγορα με την αλλαγή ταχύτητας. Στη συνέχεια
+          να τον μετακινήσετε με τα πλήκτρα βέλους για να φτάσετε στο Sid και προειδοποιήσει
+          όλους τους άλλους.
+        studio_iceage_10: Δημιούργησε το δικό σου παιχνίδι. Όταν το κάνεις, πάτα "Τέλος"
+          κι άσε τους φίλους σου να δοκιμάσουν το παιχνίδι στα κινητά τους.
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
+          him go the last 200 pixels using the "move" block.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Can you help Anton announce the start of a race
+          by saying "Ready, set, go!"? To test your program, don’t forget to click
+          Anton after you click Run!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Create your own game or story. When you're done,
+          click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Δημιούργησε το δικό σου παιχνίδι. Όταν το κάνεις, πάτα
           "Τέλος" κι άσε τους φίλους σου να δοκιμάσουν το παιχνίδι στα κινητά τους.
         studio_k1_1: Μπορείς να κάνεις αυτό το σκυλί να λέει "Γεια χαραντάν κόσμε";
@@ -732,7 +790,13 @@
         infinity_playlab_intro: Εργαστηριακό παιχνίδι - Εισαγωγή
         infinity_playlab_events: Εργαστηριακό παιχνίδι - Γεγονότα
         infinity_playlab_repeat_forever: Εργαστηριακό παιχνίδι - Επανάλαβε Για πάντα
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Εισαγωγή στις Συναρτήσεις
+        csp_applab_functions_parameters: Συναρτήσεις με παραμέτρους
+        csp_applab_loops: Βρόχοι
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Λίγα για τα Εικονοστοιχεία
         csp_pixelation_color_1: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 1
         csp_pixelation_color_2: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 2
@@ -769,6 +833,28 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν γαλαξία με Κώδικα
+          - Εισαγωγή'
+        starwars_typing: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα
+          - JavaScript'
+        starwars_events: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα
+          - Γεγονότα'
+        starwars_congrats: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα
+          - Συγχαρητήρια'
+        starwars_blocks_intro: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν γαλαξία με
+          Κώδικα - Εισαγωγή'
+        starwars_blocks_events: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία
+          με Κώδικα - Γεγονότα'
+        starwars_blocks_congrats: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία
+          με Κώδικα - Συγχαρητήρια'
+        mc_intro: Minecraft - Εισαγωγή
+        mc_repeat: Minecraft - Επανάληψη
+        mc_if_statements: Minecraft - Δηλώσεις Αν
+        mc_congrats_share: Minecraft - Συγχαρητήρια
+        mc_congrats_no_share: Minecraft - Συγχαρητήρια
+        gumball_intro: Gumball Hour of Code - Introduction
+        gumball_events: Gumball Hour of Code - Events
+        gumball_repeat: Gumball Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ
@@ -883,3 +969,14 @@
           να το κατευθύνετε
         Infinity_move_collide_callout: Παίξε έναν ήχο όταν συμβαίνει αυτό το γεγονός.
         Infinity_repeat_callout: Τοποθετήστε τα μπλοκ μετακίνησης εδώ μέσα
+        craft_run_button_callout: Πάτησε "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά
+          σου
+        craft_drag_block_callout: Σύρε ένα μπλοκ "moveForward();" (προχώρησε μπροστά)
+          και κόλλησέ το κάτο από τα άλλα μπλοκ
+        craft_callout_preplaced: Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις
+        craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
+        craft_callout_preplaced_house: Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι
+          σου. Μπορείς να τον ολοκληρώσεις;
+        craft_what_is_iron: Εξόρυξε αυτόν τον σίδηρο!
+        craft_callout_moveforward: Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να
+          προσθέσεις μία εντολή για να προχωρήσεις μπροστά;

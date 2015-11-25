@@ -19,19 +19,19 @@ Category: UI controls
 
 [short_description]
 
-Plays the MP3, OGG or WAV sound file from the specified URL.
+Plays the MP3 sound file from the specified URL.
 
 [/short_description]
 
 Today's apps play sounds to make them more engaging. You can add sounds to your apps that are triggered by events on UI elements, or based on turtle movements, or just based on other app code. There are two ways to fill in the url string for the parameter.
 
 **1. Copy the URL of a sound on the web.**
-In most browsers you can simply *right-click (ctrl+click on a Mac)* on an image and you'll see a menu with a few option. One will be to copy the URL of the image. You could also choose to view the image in its own window and just copy the URL from there.
+In most browsers you can simply *right-click (ctrl+click on a Mac)* on a sound file and you'll see a menu with a few option. One will be to copy the URL of the sound.
 
-**2. Upload your own image to App Lab.**
-You can upload images saved on your computer to your app in App Lab.
+**2. Upload your own sound file to App Lab.**
+You can upload sound files saved on your computer to your app in App Lab.
 
-- Click the pulldown arrow in the image URL field and then click "Choose..."![](https://images.code.org/e726e56fd3e4c7cd4a0d58cba731a855-image-1444240440116.53.49%20PM.png)
+- Click the pulldown arrow in the image URL field and then click "Choose..."![](https://images.code.org/fd732bd6408f4b057f25b1dad946cb13-image-1447331874346.jpg)
 - Then click the "Upload File" button the in the window.
 ![](https://images.code.org/4e33ebc4011b5eb6590f573ada3ed1da-image-1444241056243.04.04%20PM.png)
 - Then choose the file from your computer by navigating to it
@@ -42,18 +42,11 @@ You can upload images saved on your computer to your app in App Lab.
 ### Examples
 ____________________________________________________
 
-<!--Each example needs to be fully standalone, copy/pasteable into App Lab without errors. Examples should
-always strive to do something visible, such as turtle drawing or console.logging the value of something.
-Each piece of documentation should have two examples, with a third or beyond being optional.
--->
-
 [example]
 
-
 ```
-//Example 1 goes here. Example 1 should ideally use just the API where possible, so as not to presume
-knowledge about other functions. This example should be self-documenting and not need an intro. For APIs
-that have optional parameters, create two bare bones examples, one without the optional param and one with.
+// Play a goal sound.
+playSound("https://studio.code.org/blockly/media/skins/studio/1_goal.mp3");
 ```
 
 [/example]
@@ -62,32 +55,19 @@ ____________________________________________________
 
 [example]
 
-**Example: descriptive title** Helper/intro text that explains what the sample program is doing. This implies that the program
-has a purpose that is moderately interesting. Contrast this with the first example which would be 
-doing something like printing out the value of a variable for its own sake, which is not a real program.
-
-Do this:
+**Example: Don't Go Too Far** Beep whenever the turtle moves to a position outside a rectangle at the center of the screen.
 
 ```
-//Draw 2 eyes <-- this is a comment that helps you understand the intent of the code. It is also on its own line
-dot(50);
-moveTo(100,100);
-dot(50);
-```
-
-Don't do this:
-
-
-```
-dot(50); //Make a dot of radius 50<--this comment is obvious/not helpful AND is inline, which copies poorly in App Lab
-moveTo(100,100); //move to x:100, y:100 <-- this comment is equally not helpful AND is inline, which copies poorly in App Lab
-dot(50);
-	
-/*
-When a block comment is necessary (for example to describe a function) make a proper block comment.
-Thoughts on comments: Don't comment extraneously if you think it can survive without a comment. This
-will also make the example look more digestable.
-*/
+// Beep whenever the turtle moves to a position outside a rectangle at the center of the screen.
+var count = 1;
+while ((count <= 3)) {
+  turnTo(randomNumber(1, 360));
+  moveForward(randomNumber(25, 50));
+  if (getX() < 100 || getX() > 220 || getY() < 165 || getY() > 285) {
+    playSound("beep-01a.mp3");
+    count = count+1;
+  }
+}
 ```
 
 [/example]
@@ -96,15 +76,33 @@ ____________________________________________________
 
 [example]
 
-**Example: descriptive title** Helper/intro text. Optional example that would be more complex. 
+**Animal Piano** Play an animal sound when each animal image is clicked.
 
 ```
-Code here	
+// Play an animal sound when each animal image is clicked. 
+image("dog", "http://animalia-life.com/data_images/dog/dog7.jpg");
+setPosition("dog", 50, 100, 100, 100);
+image("cat", "http://animalia-life.com/data_images/cat/cat1.jpg");
+setPosition("cat", 150, 100, 100, 100);
+image("pig", "http://animalia-life.com/data_images/pig/pig1.jpg");
+setPosition("pig", 50, 200, 100, 100);
+image("owl", "http://animalia-life.com/data_images/owl/owl1.jpg");
+setPosition("owl", 150, 200, 100, 100);
+onEvent("dog", "click", function(event) {
+  playSound("http://static1.grsites.com/archive/sounds/animals/animals079.mp3");
+});
+onEvent("cat", "click", function(event) {
+  playSound("http://static1.grsites.com/archive/sounds/animals/animals021.mp3");
+});
+onEvent("pig", "click", function(event) {
+  playSound("http://static1.grsites.com/archive/sounds/animals/animals025.mp3");
+});
+onEvent("owl", "click", function(event) {
+  playSound("http://static1.grsites.com/archive/sounds/animals/animals074.mp3");
+});
 ```
-
 
 [/example]
-
 ____________________________________________________
 
 
@@ -124,7 +122,7 @@ playSound(url)
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| url | string | Yes | The source URL (or filename for an uploaded file) of the MP3, OGG or WAV sound file to be played. |
+| url | string | Yes | The source URL (or filename for an uploaded file) of the MP3 sound file to be played. |
 
 [/parameters]
 
@@ -139,9 +137,7 @@ No return value. Plays a sound only.
 
 ### Tips
 
-- bulleted list
-- of related APIs/documentation (use relative urls) or information and where to find it.
-
+- The sound URL requires the full http:// prefix.
 
 [/tips]
 

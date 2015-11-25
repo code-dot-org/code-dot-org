@@ -45,10 +45,12 @@ exports.TestResults = {
   EXAMPLE_FAILED: 19,                 // One of our examples didn't match the definition
 
   // start using negative values, since we consider >= 20 to be "solved"
-  NESTED_FOR_SAME_VARIABLE: -2, // We have nested for loops each using the same counter variable
+  NESTED_FOR_SAME_VARIABLE: -2,       // We have nested for loops each using the same counter variable
   // NOTE: for smoe period of time, this was -1 and conflicted with NO_TESTS_RUN
-  EMPTY_FUNCTION_NAME: -3,                  // We have a variable or function with the name ""
+  EMPTY_FUNCTION_NAME: -3,            // We have a variable or function with the name ""
   MISSING_RECOMMENDED_BLOCK_UNFINISHED: -4, // The level was attempted but not solved without a recommended block
+  EXTRA_FUNCTION_FAIL: -5,            // The program contains a JavaScript function when it should not
+  LOCAL_FUNCTION_FAIL: -6,            // The program contains an unexpected JavaScript local function
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,               // More than the ideal number of blocks were used.

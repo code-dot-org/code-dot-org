@@ -23,22 +23,28 @@
     display: inline-block; }
   #divApplab div, #designModeViz div, .draggingParent div {
     overflow: hidden; }
-  #divApplab div[contenteditable=true], #designModeViz div[contenteditable=true], .draggingParent div[contenteditable=true] {
-    overflow: auto; }
+  #divApplab div.textArea, #designModeViz div.textArea, .draggingParent div.textArea {
+    overflow: auto;
+    word-wrap: break-word;
+    /* needed by Firefox */
+    -moz-user-select: text; }
   #divApplab button, #designModeViz button, .draggingParent button {
     padding: 7px 12px;
     margin: 2px;
     font-size: 14px; }
-  #divApplab input, #divApplab div[contenteditable=true], #divApplab button, #divApplab select, #divApplab img, #divApplab label, #designModeViz input, #designModeViz div[contenteditable=true], #designModeViz button, #designModeViz select, #designModeViz img, #designModeViz label, .draggingParent input, .draggingParent div[contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent img, .draggingParent label {
+  #divApplab input, #divApplab div.textArea, #divApplab button, #divApplab select, #divApplab img, #divApplab label, #designModeViz input, #designModeViz div.textArea, #designModeViz button, #designModeViz select, #designModeViz img, #designModeViz label, .draggingParent input, .draggingParent div.textArea, .draggingParent button, .draggingParent select, .draggingParent img, .draggingParent label {
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
     line-height: 1.2em;
     margin: 5px; }
+    #divApplab input p, #divApplab div.textArea p, #divApplab button p, #divApplab select p, #divApplab img p, #divApplab label p, #designModeViz input p, #designModeViz div.textArea p, #designModeViz button p, #designModeViz select p, #designModeViz img p, #designModeViz label p, .draggingParent input p, .draggingParent div.textArea p, .draggingParent button p, .draggingParent select p, .draggingParent img p, .draggingParent label p {
+      line-height: inherit; }
   #divApplab .chart, #designModeViz .chart, .draggingParent .chart {
     position: absolute;
     display: block;
     overflow: hidden; }
     #divApplab .chart .loading, #designModeViz .chart .loading, .draggingParent .chart .loading {
-      background: image-url("spinner-big.gif") no-repeat center center; }
+      background: url("/blockly/media/applab/spinner-big.gif") no-repeat center center; }
   #divApplab .design-mode-hidden, #designModeViz .design-mode-hidden, .draggingParent .design-mode-hidden {
     visibility: hidden; }
 
@@ -63,9 +69,10 @@
     #divApplab.appModern button:active, #designModeViz.appModern button:active, .draggingParent button:active {
       background-image: url("/blockly/media/applab/darker.png");
       border: 0 !important; }
-  #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div[contenteditable=true], #designModeViz.appModern input[type=text], #designModeViz.appModern input:not([type]), #designModeViz.appModern div[contenteditable=true], .draggingParent input[type=text], .draggingParent input:not([type]), .draggingParent div[contenteditable=true] {
+  #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div.textArea, #designModeViz.appModern input[type=text], #designModeViz.appModern input:not([type]), #designModeViz.appModern div.textArea, .draggingParent input[type=text], .draggingParent input:not([type]), .draggingParent div.textArea {
     border: 1px solid #999;
-    padding: 10px; }
+    padding: 5px;
+    /* padding clips text in text inputs in Firefox */ }
   #divApplab.appModern select, #designModeViz.appModern select, .draggingParent select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -78,7 +85,7 @@
       display: none; }
     #divApplab.appModern select:hover, #designModeViz.appModern select:hover, .draggingParent select:hover {
       background: url("/blockly/media/applab/dropdown.png") no-repeat center right, url("/blockly/media/applab/brighter.png"); }
-  #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern [contenteditable=true], #designModeViz.appModern button, #designModeViz.appModern select, #designModeViz.appModern input, #designModeViz.appModern [contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent [contenteditable=true] {
+  #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern .textArea, #designModeViz.appModern button, #designModeViz.appModern select, #designModeViz.appModern input, #designModeViz.appModern .textArea, .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent .textArea {
     outline: 0; }
   #divApplab.appModern img[src=''], #designModeViz.appModern img[src=''], .draggingParent img[src=''] {
     display: none; }
@@ -87,6 +94,8 @@
 
 #designModeViz.appModern img[src=''], #designModeViz.appModern canvas, #designModeViz.appModern .chart, .draggingParent img[src=''], .draggingParent canvas, .draggingParent .chart {
   border: 5px solid #fff;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   outline: 1px solid #bdc3c7;
   outline-offset: -1px; }
 
@@ -248,21 +257,58 @@ div#visualizationResizeBar {
     left: 16px;
     border: 0; }
 
+#wireframeSendToPhone {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+  text-shadow: #000 -1px -1px 0; }
+  #wireframeSendToPhone, #wireframeSendToPhone .sharing label {
+    font: 12pt "Gotham 5r", sans-serif;
+    color: #8F9499; }
+  #wireframeSendToPhone i {
+    font-size: 1.5em; }
+  #wireframeSendToPhone .sharing div {
+    margin: 0; }
+
 #visualizationColumn.chromelessShare #designToggleRow, #visualizationColumn.chromelessShare #gameButtons {
   display: none; }
 
-#divApplab, #designModeViz {
+#divApplab, #designModeViz, #visualizationOverlay {
   overflow: hidden;
   outline: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none; }
+
+#divApplab {
   position: relative;
   z-index: 1;
-  background-color: white;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
+  background-color: white; }
+
+#visualizationOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius=0); }
+
+.crosshair-overlay line {
+  stroke: #aaa;
+  stroke-width: 1.8px;
+  stroke-dasharray: 6.5px; }
+
+.crosshair-overlay rect {
+  stroke: #bdc3c7;
+  stroke-width: 2px;
+  fill: rgba(255, 255, 255, 0.8); }
+
+.crosshair-overlay text {
+  text-anchor: middle; }
 
 #divApplab canvas, #designModeViz canvas {
   position: absolute;
@@ -270,6 +316,32 @@ div#visualizationResizeBar {
   top: 0px;
   left: 0px;
   z-index: -1; }
+
+/* When not running, show default arrow cursor for all UI elements
+   so that they do not look active. */
+#divApplab.notRunning button, #divApplab.notRunning label, #divApplab.notRunning select, #divApplab.notRunning input, #divApplab.notRunning img, #divApplab.notRunning div.chart, #divApplab.notRunning canvas, #divApplab.notRunning div[contenteditable=true] {
+  cursor: default; }
+
+#divApplab.notRunning.withCrosshair {
+  cursor: crosshair; }
+  #divApplab.notRunning.withCrosshair button, #divApplab.notRunning.withCrosshair label, #divApplab.notRunning.withCrosshair select, #divApplab.notRunning.withCrosshair input, #divApplab.notRunning.withCrosshair img, #divApplab.notRunning.withCrosshair div.chart, #divApplab.notRunning.withCrosshair canvas, #divApplab.notRunning.withCrosshair div[contenteditable=true] {
+    cursor: crosshair; }
+
+/* In design mode, show grab/grabbing cursor for all UI elements
+ * so that they look draggable. */
+#designModeViz button, #designModeViz label, #designModeViz select, #designModeViz input, #designModeViz img, #designModeViz div.chart, #designModeViz canvas, #designModeViz div[contenteditable=true] {
+  cursor: move;
+  /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab; }
+  #designModeViz button:active, #designModeViz label:active, #designModeViz select:active, #designModeViz input:active, #designModeViz img:active, #designModeViz div.chart:active, #designModeViz canvas:active, #designModeViz div[contenteditable=true]:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing; }
+
+#designModeViz.withCrosshair {
+  cursor: crosshair; }
 
 #visualizationResizeBar {
   margin-left: 2px;

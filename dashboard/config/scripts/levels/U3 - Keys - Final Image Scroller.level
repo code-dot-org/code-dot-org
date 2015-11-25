@@ -136,7 +136,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Final Image Scroller\r\n\r\nNow you've got some experience with handling keystrokes. Lets update your image scroller to respond to buttons and keys. \r\n\r\n**Remember:**  Use functions to keep from copying repeated code.\r\n\r\n# Do This\r\n\r\n* Make the images scroller **respond to both buttons and keys.**\r\n\r\n* **Add a secret key which when pressed plays a sound.**\r\n",
+    "markdown_instructions": "# Final Image Scroller\r\n\r\nYou're now ready to add keyEvent functionality to your app! As you are doing so keep an eye out for moments when you need to **refactor** old code in order to prevent redundancy. **Create functions** that carry out repeated tasks and make other changes to keep your code **readable and consistent**. \r\n\r\nIf you want a reminder of how keyEvents work, you can always go back to the example from earlier in this lesson.  You will need to add if statements to check for which keys were pressed, just as before.\r\n\r\n# Do This\r\n\r\n* Add the ability to respond to **key events** to your app\r\n\r\n* **Refactor your old code** to remove redundant portions\r\n\r\n* Keeping adding to your program. What other features do you want to include?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -156,20 +156,17 @@
     "lock_zero_param_functions": "false",
     "free_play": "true",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "true",
+    "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "submittable": "false",
+    "submittable": "true",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "slider_speed": "1.0",
-    "project_template_level_name": "U3 - Keys - Image Scroller Template",
-    "encrypted_examples": [
-
-    ],
+    "project_template_level_name": "U3 - Arrays - favThings Template",
     "instructions": "Update the image scroller to respond to buttons and key presses. (Click to see full instructions)"
   }
 }]]></config>

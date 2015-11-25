@@ -7,7 +7,13 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "onEvent": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
       "button": null,
       "textInput": null,
       "textLabel": null,
@@ -127,7 +133,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Console Log\r\nIn the last level, we saw a new command: `console.log()`. You may have noticed that it prints out text in the Debug Console below the code workspace.\r\n\r\n<img src=\"https://images.code.org/326e0f6c7d3b846ba06db998f06f56aa-image-1444419414248.36.33 PM.png\" style=\"width: 450px; border: solid 1px black\"> \r\n\r\nThe Debug Console is an important tool for programmers.  You've seen it display error messages, but you can also send messages that a user cannot see to the Debug Console while a program is running. <img src=\"https://images.code.org/cdc253db1b9a3685eaf5ea4b6bc30766-image-1444337429645.png\" style=\"width: 250px; float: right; border: solid 1px black\"> The Debug Console is really helpful for debugging programs because you can send messages to yourself from within your own code!\r\n\r\nYou can find `console.log()` in the code toolbox under the Variables tab.\r\n\r\n# Do This\r\n\r\n* Drag out 3 `console.log()` commands into the workspace.\r\n\r\n* Update each `console.log()` with your own messages.\r\n\r\n* Run the program a couple times to test out this new command.",
+    "markdown_instructions": "# Console Log\r\nIn the last level, we saw a new command: `console.log`. You may have noticed that it prints out text in the Debug Console below the code workspace.\r\n\r\n<img src=\"https://images.code.org/326e0f6c7d3b846ba06db998f06f56aa-image-1444419414248.36.33 PM.png\" style=\"width: 450px; border: solid 1px black\"> \r\n\r\nThe Debug Console is an important tool for programmers.  You've seen it display error messages, but you can also send messages that a user cannot see to the Debug Console while a program is running. <img src=\"https://images.code.org/cdc253db1b9a3685eaf5ea4b6bc30766-image-1444337429645.png\" style=\"width: 250px; float: right; border: solid 1px black\"> The Debug Console is really helpful for debugging programs because you can send messages to yourself from within your own code!\r\n\r\nYou can find `console.log` in the code toolbox under the Variables tab.\r\n\r\n# Do This:\r\n\r\n* Drag out 3 `console.log` commands into the workspace.\r\n\r\n* Update each `console.log` with your own messages.\r\n\r\n* Run the program a couple times to test out this new command.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

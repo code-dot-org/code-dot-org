@@ -313,6 +313,8 @@ window.apps = {
 
     timing.startTiming('Puzzle', script_path, '');
 
+    var lastSavedProgram;
+
     // Sets up default options and initializes blockly
     var baseOptions = {
       containerId: 'codeApp',
@@ -339,6 +341,12 @@ window.apps = {
           // (The levelSource is already stored in the channels API.)
           delete report.program;
           delete report.image;
+        } else {
+          // Only locally cache non-channel-backed levels. Use a client-generated
+          // timestamp initially (it will be updated with a timestamp from the server
+          // if we get a response.
+          lastSavedProgram = decodeURIComponent(report.program);
+          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, +new Date(), lastSavedProgram);
         }
         report.scriptName = appOptions.scriptName;
         report.fallbackResponse = appOptions.report.fallback_response;
@@ -351,6 +359,12 @@ window.apps = {
         }
         trackEvent('Activity', 'Lines of Code', script_path, report.lines);
         sendReport(report);
+      },
+      onComplete: function (response) {
+        if (!appOptions.channel) {
+          // Update the cache timestamp with the (more accurate) value from the server.
+          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, response.timestamp, lastSavedProgram);
+        }
       },
       onResetPressed: function() {
         cancelReport();
@@ -373,21 +387,35 @@ window.apps = {
           return;
         }
 
+        var afterVideoCallback = showInstructions;
+        if (appOptions.level.afterVideoBeforeInstructionsFn) {
+          afterVideoCallback = function () {
+            appOptions.level.afterVideoBeforeInstructionsFn(showInstructions);
+          };
+        }
+
         var hasVideo = !!appOptions.autoplayVideo;
         var hasInstructions = !!(appOptions.level.instructions ||
         appOptions.level.aniGifURL);
 
         if (hasVideo) {
           if (hasInstructions) {
-            appOptions.autoplayVideo.onClose = showInstructions;
+            appOptions.autoplayVideo.onClose = afterVideoCallback;
           }
           showVideoDialog(appOptions.autoplayVideo);
         } else if (hasInstructions) {
-          showInstructions();
+          afterVideoCallback();
         }
       }
     };
     $.extend(true, appOptions, baseOptions);
+
+    // Load locally cached version if it's newer than the version from the server.
+    var cachedProgram = dashboard.clientState.sourceForLevel(
+        appOptions.scriptName, appOptions.serverLevelId, appOptions.level.lastAttemptTimestamp);
+    if (cachedProgram !== undefined) {
+      appOptions.level.lastAttempt = cachedProgram;
+    }
 
     // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
     // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
@@ -786,6 +814,10 @@ var projects = module.exports = {
   projectChanged: function() {
     hasProjectChanged = true;
   },
+  /**
+   * @returns {string} The name of the standalone app capable of running
+   * this project as a standalone project, or null if none exists.
+   */
   getStandaloneApp: function () {
     switch (appOptions.app) {
       case 'applab':
@@ -803,10 +835,21 @@ var projects = module.exports = {
           return null;
         }
         return 'playlab';
+      default:
+        return null;
     }
   },
+  /**
+   * @returns {string} The path to the app capable of running
+   * this project as a standalone app.
+   * @throws {Error} If no standalone app exists.
+   */
   appToProjectUrl: function () {
-    return '/projects/' + projects.getStandaloneApp();
+    var app = projects.getStandaloneApp();
+    if (!app) {
+      throw new Error('This type of project cannot be run as a standalone app.');
+    }
+    return '/projects/' + app;
   },
   /**
    * Explicitly clear the HTML, circumventing safety measures which prevent it from
@@ -824,7 +867,6 @@ var projects = module.exports = {
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
   save: function(sourceAndHtml, callback, forceNewVersion) {
-
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -855,7 +897,9 @@ var projects = module.exports = {
 
     current.levelSource = sourceAndHtml.source;
     current.levelHtml = sourceAndHtml.html;
-    current.level = this.appToProjectUrl();
+    if (this.getStandaloneApp()) {
+      current.level = this.appToProjectUrl();
+    }
 
     var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
     sources.put(channelId, packSourceFile(), filename, function (err, response) {
@@ -1055,6 +1099,12 @@ var projects = module.exports = {
     return deferred;
   },
 
+  /**
+   * Generates the url to perform the specified action for this project.
+   * @param {string} action Action to perform.
+   * @returns {string} Url to the specified action.
+   * @throws {Error} If this type of project does not have a standalone app.
+   */
   getPathName: function (action) {
     var pathName = this.appToProjectUrl() + '/' + this.getCurrentId();
     if (action) {

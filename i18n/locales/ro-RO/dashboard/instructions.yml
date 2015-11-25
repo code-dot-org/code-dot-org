@@ -4,40 +4,40 @@ ro:
       2-3 Artist 1 new_instruction: Bună, eu sunt un artist. Poţi scrie codul care mă face să desenez orice. Folosește câteva blocuri pentru a mă face să desenez peste liniile de gri din imagine. (Fiecare linie este de 100 de pixeli lungime)
       2-3 Artist 11_instruction: 'Dă semnului stop o bordură făcând un octogon cu 8 laturi, fiecare lungă de 100 de pixeli. Cu câte grade ar trebui să rotești? (Sugestie: cât este 360 împărţit la 8?) '
       2-3 Artist 12_instruction: 'Setează blocul "repetă ori" astfel încât acesta să creeze un "cerc" pentru a termina ochiul. Dacă fiecare mişcare se roteşte la dreapta cu un grad, de câte ori trebuie să repeți pentru a finaliza cercul? 180? 360? 500?'
-      2-3 Artist 2 new_instruction: 'Această casă are un perete jumătate terminat. Fiecare parte este de 100, peretele jumătate terminat este de numai 50. Completati peretele. '
+      2-3 Artist 2 new_instruction: 'Această casă are un perete pe jumătate terminat. Fiecare latură este de 100, dar peretele pe jumătate terminat este de numai 50. Completează peretele. '
       2-3 Artist 2_instruction: |
         This house has a half-finished wall. Each side is
         100, but the half-finished wall is only 50. Complete the wall. 
-      2-3 Artist 3.4_instruction: Blocul de salt mută artistul fără să deseneze. Desenati line punctată folosind ambele blocuri, si cel de sărit si cel de desenat.
-      2-3 Artist 3_instruction: Această pălărie este 100 pixeli înălţime. Desenaţi o palarie care este 70 pixeli mai mică.
-      2-3 Artist 3new_instruction: Pălăria roşie este 100 de pixeli inaltime. Terminati de desenat o pălărie neagră, care este mai scurtă cu 70 de pixeli. Lăţimea pălăriei neagre este de 50 pixeli.
+      2-3 Artist 3.4_instruction: Blocul de salt mută artistul fără a desena. Trasează linia punctată folosind și blocul de salt şi cel de desen.
+      2-3 Artist 3_instruction: Această pălărie are o înălțime de 100 de pixeli. Desenează o pălărie care este cu 70 de pixeli mai mică.
+      2-3 Artist 3new_instruction: Pălăria roşie are o înălțime de 100 de pixeli. Termină de desenat o pălărie neagră, care este mai scurtă cu 70 de pixeli. Lăţimea pălăriei neagre este de 50 de pixeli.
       2-3 Artist 4_instruction: Ajută-mă să termin casa pentru această pisică.
-      2-3 Artist 5_instruction: 'Înlocuiţi acest cod cu un bloc "repeta" pentru a desena aceeaşi casă folosind numai 3 blocuri.'
-      2-3 Artist 6_instruction: 'Această casă are nevoie de un acoperiş! Trasaţi triunghiul.  Sugestie: toate trei laturile au aceeaşi lungime.'
-      2-3 Artist 7_instruction: 'Termină de desenat jumătatea dreaptă a ultimei fereastre. Fiecare latura a ferestrei are 25 de pixeli. '
-      2-3 Artist 8_instruction: Completati camerele pentru fiecare dintre animalele prin impartirea dreptunghiul în 2 patrate de dimensiuni egale. Dreptunghiul este 200 pixeli lăţime şi 100 pixeli înălţime .
-      2-3 Artist 9_instruction: Termină acest zmeu
-      2-3 Artist Assessment 1_instruction: 'Evaluare: Termina desenul ultimului dinte, 25 de pixeli lăţime şi 25 de pixeli inaltime.'
-      2-3 Artist Debugging 1_instruction: Poți face această pălărie cu o lungimea the maxim 100?
-      2-3 Artist Debugging 10_instruction: 'Butonul de direcţie de pe comanda jocului meu este prea îngustă. Sugestie: Faceti-l mai lat cu 10 pixeli'
+      2-3 Artist 5_instruction: 'Înlocuiește acest cod cu un bloc "repetă ori" pentru a desena aceeaşi casă folosind numai 3 blocuri.'
+      2-3 Artist 6_instruction: 'Această casă are nevoie de un acoperiş! Desenează triunghiul.  Sugestie: toate trei laturile au aceeaşi lungime.'
+      2-3 Artist 7_instruction: 'Termină de desenat jumătatea dreaptă a ultimei ferestre. Fiecare geam pătrat al ferestrei are 25 de pixeli lățime. '
+      2-3 Artist 8_instruction: Completează camerele pentru fiecare dintre animale prin împărțirea dreptunghiul în 2 pătrate de dimensiuni egale. Dreptunghiul are 200 de pixeli în lăţime şi 100 de pixeli în înălţime.
+      2-3 Artist 9_instruction: Finalizează acest zmeu
+      2-3 Artist Assessment 1_instruction: 'Evaluare: Termină de desenat ultimul dinte, 25 de pixeli în lățime și 25 de pixeli în înălțime.'
+      2-3 Artist Debugging 1_instruction: Poți face această pălărie cu o lungime până la vârf de 100?
+      2-3 Artist Debugging 10_instruction: 'Butonul de direcţie de pe comanda mea de joc este prea îngust. Sugestie: Faceți-l mai lat cu 10 pixeli'
       2-3 Artist Debugging 11_instruction: 'Ajută-mă să termin frumosul meu fulg de nea. De câte ori trebuie să "repet" pentru a-l termina?'
-      2-3 Artist Debugging 12_instruction: 'Ar trebui să adăug un val de ocean la această scenă.  Poţi să mă ajuţi?'
-      2-3 Artist Debugging 2_instruction: 'Codul pentru cele trei mustăţi pe care le vedeţi este greşit. Indiciu: fiecare mustaţă are 75 pixeli lungime. Repară acest cod pentru a desena mustăţile corect.'
-      2-3 Artist Debugging 3_instruction: 'Barca mea are o gaura! Poti sa o repari prin schimbarea unghiului liniei? Sugestie: ultimul unghi este mai mic cu 15 grade.'
-      2-3 Artist Debugging 4_instruction: Care este imaginea pe care incercam sa o desenam? Termina conectarea punctelor utilizând liniile şi unghiurile corecte.
-      2-3 Artist Debugging 5_instruction: 'Codul pentru picior şi laba piciorului pe care le vedeţi este greşit. Sugestie: Laba piciorului este prea lungă, ar trebui să ştergeţi un pas (joc de cuvinte intentionat)'
-      2-3 Artist Debugging 6_instruction: Se pare ca stau pe un scaun caruia ii lipseşte un picior. Editati blocurile pentru a denena piciorul.
-      2-3 Artist Debugging 7_instruction: Se pare ca litera C în cod se desenează invers. Puteţi să îl faceţi să arate ca un C?
-      2-3 Artist Debugging 8_instruction: Morişca mea nu este terminată. De câte ori trebuie să repet pentru a o termina?
+      2-3 Artist Debugging 12_instruction: Trebuie să adaug un val de ocean la această scenă. Poți să mă ajuți?
+      2-3 Artist Debugging 2_instruction: 'Codul pentru cele trei mustăți pe care le vezi este greșit. Indiciu: fiecare mustață are o lungime de 75 de pixeli. Repară acest cod pentru a desena mustățile.'
+      2-3 Artist Debugging 3_instruction: 'Barca mea are o gaură! Poți să o repari schimbând unghiul liniei? Indiciu: ultimul unghi este greșit cu 15 grade.'
+      2-3 Artist Debugging 4_instruction: Care este imaginea pe care încercăm să o desenăm? Termină conectarea punctelor utilizând liniile și unghiurile potrivite.
+      2-3 Artist Debugging 5_instruction: 'Codul pentru piciorul și laba piciorului pe care le vezi e greșit. Indiciu: piciorul e prea lung, poate trebuie să mai ștergem un pas (jocul de cuvinte este intenționat)'
+      2-3 Artist Debugging 6_instruction: Se pare că stau pe un scaun căruia îi lipsește un picior. Editează blocurile pentru a desena piciorul.
+      2-3 Artist Debugging 7_instruction: Se pare că litera C în cod este desenată invers. Poţi să o faci să arate ca un C?
+      2-3 Artist Debugging 8_instruction: 'Morișca mea nu e gata. De câte ori trebuie folosit blocul "repetă" pentru a fi gata?'
       2-3 Artist Debugging 9_instruction: 'Codul pentru această tulpină este incorect. Sugestie: Unghiul este greşit cu 60 de grade'
-      2-3 Artist Debugging Assessment 1_instruction: 'Această formă este prea mică. Puteţi să o faceţi mai mare? Sugestie: ar trebui să fie mai lungă cu 75 pixeli  în fiecare parte.'
+      2-3 Artist Debugging Assessment 1_instruction: 'Forma aceasta este prea mică. Poți să o faci mai mare? Indiciu: ar trebui să fie cu 75 de pixeli mai lungă pe fiecare parte.'
       2-3 Artist Free Play_instruction: Joc liber! Desenează orice ți-ar plăcea.
       2-3 Artist Functions 1_instruction: |
-        Salut! Eu sunt artist zombie. Eu indrăgesc desenul!
-        Ajută-mă să desenez ochelari pătraţi. Sugestie: puntea dintre lentile este cu 25 pixeli mai scurtă decât latura lentilei pătrate.
-      2-3 Artist Functions 10_instruction: Aveţi aici două funcţii, una ca să desenaţi o roată dinţată mare şi una ca să desenaţi o roată dinţata mica. Folosiţi-le ca să desenaţi interiorul unui mecanism!
-      2-3 Artist Functions 11.5_instruction: 'Aveţi aici aceeaşi funcţie "Desenaţi un hexagon". Ce se întamplă dacă intoarceţi cate 60 grade la fiecare buclă?'
-      2-3 Artist Functions 11_instruction: 'Am redenumit funcția "desenează un pătrat" în "desenează un hexagon", dar încă desenează pătrate! Poți să modifici funcția "desenează un hexagon" astfel încât să deseneze un hexagon cu laturile de 60 de pixeli, și apoi să desenezi imaginea folosind această funcție?'
+        Salut! Eu zombie artist. Eu iubesc desenul!
+        Ajută-mă să desenez ochelarii pătraţi. Sugestie: puntea dintre lentile este cu 25 de pixeli mai scurtă decât latura pătratului.
+      2-3 Artist Functions 10_instruction: 'Iată doua funcții: una pentru a desena o roată dințată mare și una pentru a desena o roată dințată mică. Folosește-le pentru a desena interiorul unei mașinării!'
+      2-3 Artist Functions 11.5_instruction: 'Aici este aceeși funcție "Desenează un hexagon". Ce se întâmplă dacă întorci cu doar 60 de grade de fiecare dată când buclezi?'
+      2-3 Artist Functions 11_instruction: 'Am redenumit funcția "desenează un pătrat" în "desenează un hexagon", dar încă desenează pătrate! Poți să modifici funcția "desenează un hexagon" astfel încât să deseneze un hexagon cu laturile de 50 de pixeli și apoi să desenezi imaginea folosind această funcție?'
       2-3 Artist Functions 12_instruction: 'Funcţiile sunt foarte utile pentru a desena de mai multe ori lucruri complicate. Puteţi utiliza funcţia "desenează o floare" pentru a completa restul jardinierei? (Sugestie: distanța dintre plante este de 100 de pixeli)  '
       2-3 Artist Functions 13_instruction: 'Aveți la dispoziție patru functii. Folositi-le orice mod doriţi, în interiorul uneia sau mai multor bucle, pentru a face fotografii care aveţi posibilitatea să partajaţi cu prietenii dvs. Apăsaţi "rulează" pentru a vedea un exemplu.'
       2-3 Artist Functions 2_instruction: 'Funcțiile îțî permit să construiești blocuri noi! Am mutat blocurile ce deseneaza un pătrat într-o funcție numită "desenează un pătrat". Poți folosi această funcție pentru a crea ochelarii? Pătratele au 75 de pixeli între ele.'
@@ -543,19 +543,24 @@ ro:
       4-5 Nested Loops 8_instruction: 'Reia de 6 ori acest proiect. Cât de mult te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii lui 360 la 6?)'
       4-5 Nested Loops 9_instruction: Desenează dinţii în gura aligatorului!
       4-5 Nested Loops Assessment 1_instruction: Utilizaţi o buclă imbricată pentru a finaliza proiectul.
-      4-5 While Loops 1_instruction: 'Mută-mă în gaură şi pune în ea două lopeţi cu gunoi, folosind construcţia "fill".'
-      4-5 While Loops 2_instruction: "Mută-mă pe grămada de gunoi şi apoi încarcă 5 cupe de gunoi pentru a o muta, folosind construcţia 'remove'."
+      4-5 While Loops 1_instruction: 'Mută-mă în gaură şi umple-o două lopeţi cu pământ, folosind blocul "umple".'
+      4-5 While Loops 2_instruction: 'Mută-mă la grămada de pământ şi apoi înlătur-o cu 5 lopeți, folosind blocul "elimină".'
       4-5 While Loops 3_instruction: 'Mută-mă pe grămadă şi mută grămada toată, apoi umple complet gaura. Indicaţie: Foloseşte cât mai puţine blocuri.'
-      4-5 While Loops 4_instruction: "Oau, am găsit o gaură într-adevăr adâncă! Nu ştiu cât de multe lopeţi de gunoi am nevoie pentru a o umple. Poţi scrie un program care să umple gaura până la nivelul solului? Indicaţie: Încearcă să foloseşti bucla'while' de data asta."
+      4-5 While Loops 4_instruction: 'Oau, am găsit o gaură foarte adâncă! Nu ştiu de câte lopeţi cu pământ am nevoie pentru a o umple. Poţi scrie un program care să umple gaura până la nivelul solului? Indicaţie: Încearcă să foloseşti bucla "în timp ce" de data asta.'
       4-5 While Loops 5_instruction: Oau, acum sunt două găuri adânci acolo! Poţi tu să scri un program care să umple ambele găuri până la nivelul solului?
-      4-5 While Loops 6_instruction: Oau, acum este o grămadă mare de gunoi acolo! Poţi scrie un program care să îndepărteze toată grămada până la nivelul solului?
-      4-5 While Loops 7_instruction: Oau, acum sunt trei grămezi mari de gunoi acolo! Poţi scrie un program care să le îndepărteze pe fiecare dintre ele până la nivelul solului?
-      4-5 While Loops 8_instruction: " Acolo este o gaură într-adevăr adâncă şi o grămadă foarte mare de gunoi. Câte lopeţi pline de gunoi trebuie să încarci pentru a ajunge la nivelul solului? Indicaţie: Foloseşte bucla 'while' pentru ambele."
+      4-5 While Loops 6_instruction: Oau, acum este o grămadă mare de pământ acolo! Poţi scrie un program care să o îndepărteze în intregime până se nivelează solul?
+      4-5 While Loops 7_instruction: Oau, acum sunt trei grămezi mari de pământ acolo! Poţi scrie un program care să le îndepărteze pe fiecare dintre ele până la nivelul solului?
+      4-5 While Loops 8_instruction: ' Acolo este o gaură într-adevăr adâncă şi o grămadă foarte mare de mizerie. Câte lopeţi pline de mizerie trebuie să fie mutate de la una la alta pentru a nivela solul? Indicaţie: Foloseşte bucla "în timp ce" pentru amândouă.'
       4-5 While Loops Assessment 1_instruction: Există multe găuri şi grămezi de pământ. Ajută-mă să le umplu şi să le mut pentru a face terenul plat.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings_moviebot_instruction: |
+        This level cloned from "U3 Digital Assistant
+        Target"
+      allthethings_template_backed1_instruction: 'Backed by a template #1'
+      allthethings_template_backed2_instruction: 'Backed by a template #2'
       App Lab test_instruction: test
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -592,6 +597,11 @@ ro:
       Artist - Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
       Artist - Nested Loops Assessment 1_instruction: Utilizaţi o buclă imbricată pentru a finaliza proiectul.
       Auto Open Function Editor_instruction: 'Poți apela funcții din interiorul altor funcții! Folosind ca bază funcția ta de "formă", creează 3 forme de casă fiecare mai mare cu 20 de pixeli decat precedenta, începând cu 50 de pixeli în lungime. Ar putea fi de ajutor folosirea unei bucle numărătoare. '
+      Bee Recommended Blocks test_instruction: |
+        Florile violete pot avea ori 1 ori 0 
+        nectar, dar nu știi exact care din ele! Ai grijă să nu colectezi nectar dintr-o 
+        floare violetă dacă aceasta nu are deloc. Verifică dacă nectarul este egal cu 1 
+        folosind blocul "dacă".
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -744,12 +754,8 @@ ro:
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
         it!
-      Busy Bee 2_instruction: |
-        This bee has a lot of work to do! Do you notice any
-        patterns that you can use to simplify your code?
-      Busy Bee_instruction: |
-        This bee has a lot of work to do! Do you notice any
-        patterns that you can use to simplify your code?
+      Busy Bee 2_instruction: Această albină are o mulţime de lucruri de facut! Observaţi vreunele modele pe care le puteţi utiliza pentru a simplifica codul?
+      Busy Bee_instruction: Această albină are o mulţime de lucruri de facut! Observaţi vreunele modele pe care le puteţi utiliza pentru a simplifica codul?
       C3-Farmer While Loops 1_instruction: |
         Move me to the hole and fill it with
         two shovelfuls of dirt, using the "fill" block.
@@ -1043,10 +1049,11 @@ ro:
       Course 4 Artist Binary 6_instruction: Care este cel mai scurt şir binar pe care tu poţi să-l rulezi repetat pentru a desena această imagine?
       Course 4 Artist Binary 7_instruction: Finalizează acest desen.
       Course 4 Artist Binary Free Play 2_instruction: 'Joc liber: Aici ai o pânză de desen cu o rezoluţie mare - 16 biţi pe 16 biţi!'
-      Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we\nstart to get creative with the bits?"
-      Course 4 Artist Binary Free Play 2b_instruction: Click here to see hints.
+      Course 4 Artist Binary Free Play 2a_instruction: "Aici este o pânză de rezoluţie mai mare pentru a desena - 16 pixeli 16 pixeli! \r \r Vezi ce se întâmplă atunci când începem sa cream cu biţi?"
+      Course 4 Artist Binary Free Play 2b_instruction: Click aici pentru a vedea indicii.
       Course 4 Artist Binary Free Play_instruction: 'Joc liber: Desenează ce-ţi place ţie în binar!'
-      Course 4 Artist Binary pre1_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
+      Course 4 Artist Binary pre1_instruction: "Codul binar este un mod de a reprezenta informatia utilizand numai doua optiuni. Aici, vom folosi optiunile \"off\"(reprezentat de numarul zero) si \"on\" (reprezentat de numarul 1). \r\r V-am pus la dispozitie o grila de pixeli prin care va puteti plimba si face design-uri intorcand doar anumite patrate. Il poti face pe artist sa deseneze \"01010101\"in cod binar in primul rand?"
+      Course 4 Artist Binary ryan_instruction: "Codul binar este un mod de a reprezenta informatia utilizand numai doua optiuni. Aici, vom folosi optiunile \"off\"(reprezentat de numarul zero) si \"on\" (reprezentat de numarul 1). \r\r V-am pus la dispozitie o grila de pixeli prin care va puteti plimba si face design-uri intorcand doar anumite patrate. Il poti face pe artist sa deseneze \"01010101\"in cod binar in primul rand?"
       Course 4 Artist For  Functions 10_instruction: 'Hai să progresăm un pic, poţi desena o stea folosind funcţia "Draw a Square Line"? Succes!'
       Course 4 Artist For  Functions 11_instruction: 'Hai să progresăm un pic, poţi desena o stea folosind funcţia "Draw a Square Line"? Succes!'
       Course 4 Artist For Loops 1_instruction: 'Desenează acest triunghi de 50 de pixeli mărime. Tip: folosește un bloc "repetă".'
@@ -1062,6 +1069,7 @@ ro:
       Course 4 Artist For Loops 4_instruction: 'Utilizaţi "for loop" pentru a desena aceste patrulatere. Ele încep cu 50 pixeli lungime, cel mai mare are 300 pixeli lungime şi fiecare patrulater este cu 25 pixeli mai mare decât ultimul. Ţi-am dat aproape tot codul de care ai nevoie - îţi lipseşte o singură rutină, care este aceea?'
       Course 4 Artist For Loops 5_instruction: 'Bună treabă ai făcut la ultimul puzzle! Hai să folosim acea contrucţie variabilă "contor" iar pentru a desena a desena această imagine simpatică. '
       Course 4 Artist For Loops 6_instruction: 'Joc liber! Încearcă să foloseşti instrucţiunea "for loop" pentru a desena un formă care îşi măreşte dimensiunea cum vrei tu.'
+      Course 4 Artist For Loops 6a_instruction: Fă trei modificări mici la codul de la ultimul nivel pentru a obţine aceast lucru!
       Course 4 Artist For Loops 7_instruction: 'Ce se întâmplă dacă elimini instrucţiunea "Repeat 3" din acest algoritm, păstrând construcţiile "move" şi "turn" în "for loop"? În această spirală generată de un triunghi, fiecare latură este cu 20 pixeli mai lungă decât ultima.'
       Course 4 Artist For Loops 8_instruction: Latura cea mai mică a acestei spirale pătratică este de 10 pixeli, cea mai mare este de 200 pixeli şi fiecare linie este cu 10 pixeli mai lungă decât ultima. Poţi completa blocul de instrucțiuni lipsă pentru a finaliza această imagine minunată?
       Course 4 Artist For Loops 8a_instruction: Latura cea mai mică a acestei spirale pătratică este de 10 pixeli, cea mai mare este de 200 pixeli şi fiecare linie este cu 10 pixeli mai lungă decât ultima. Poţi completa blocul de instrucțiuni lipsă pentru a finaliza această imagine minunată?
@@ -1129,7 +1137,7 @@ ro:
       Course 4 Artist Vars 10_instruction: 'Iată aici un algoritm care desenează un triunghi din triunghiuri mai mici. Poți să-l modifici așa încât acesta să folosească variabila "laturi" pentru a desena fiecare triunghi? Uită-te prin cod şi, de fiecare dată când vezi numărul 3, înlocuiește-l cu variabila ta "laturi". Aminteaște-ți să utilizezi blocul "setează laturi".'
       Course 4 Artist Vars 11_instruction: 'Iată aici același algoritm pe care l-am inventat pentru ultimul puzzle - la cât ar trebui să setezi variabila "laturi" pentru a desena cu pătrate această imagine?'
       Course 4 Artist Vars 12_instruction: 'Hai să setăm variabila "laturi" la 5. Cu cât adăugam mai multe laturi la acest algoritm, cu atât acest întreg model devine mai mare! Observă că există nouă variabilă numită "lungime". Acum o putem folosi pe aceasta oriunde avem un "mută înainte". Setează variabila "lungime" la 75 pentru acestă formă.'
-      Course 4 Artist Vars 13_instruction: 'Cu cât o formă are mai multe laturi, cu atât fiecare latură trebuie să fie mai scurtă, astfel încât întregul model să se încadreze pe ecran. În loc să setăm manual variabila "lungime", hai să folosim variabila "laturi" și un bloc matematic pentru a seta "lungimea". Selectează ecuația corectă din setul de instrumente pentru a seta variabila "lungime" și, de asemenea, a actualiza variabila "laturi".'
+      Course 4 Artist Vars 13_instruction: "Cand o forma are mai multe fete, fiecare fata trebuie sa fie mai scurta daca doriti ca intregul model sa se integreze in ecran. \r Haideti sa cream algoritmul pentru acest model, dar in loc sa adaugam manual variabila 'lungime', haideti sa folosim un bloc matematic cu variabila \"parte\" pentru a ne asigura ca fiecare forma se potriveste corect. Perimetrul fiecarui poligon este 300 de pixeli.\r Ai nevoie de niste ponturi? Click aici."
       Course 4 Artist Vars 14_instruction: 'Joc la alegere: Ia te uită! Acum algoritmul tău este cuprins în cadrul unei bucle suplimentare. Experimentează schimbarea valorilor celor două variabile ale tale pentru a desena modele super tari.'
       Course 4 Artist Vars 2_instruction: 'În loc de "mută înainte cu 100", blocul "mută" se va referi acum la variabila numită "lungime". Poți seta "lungime" la 150 pentru a desena acest triunghi nou?'
       Course 4 Artist Vars 3_instruction: 'Avem aici o buclă ce desenează un pătrat, dar ceva lipsește. Poți s-o repari astfel încât să folosească variabila "lungime" pentru a ne da seama cât de lungă trebuie să fie fiecare latură? '
@@ -1189,6 +1197,13 @@ ro:
       Course 4 Binary 6_instruction: Care şir binar, repetat de 10 ori va desena această imagine?
       Course 4 Binary 7_instruction: Care şir binar, repetat de 10 ori va desena această imagine?
       Course 4 Binary 8_instruction: 'Poţi completa cât mai mult din această imagine prin rularea în buclă a unui număr de 5 biţi - apoi vei avea nevoie de încă un număr de 4 biţi pentru a ajunge în colţul din parta dreapta jos.'
+      Course 4 EC 1a_instruction: Nici o regulă. Nici un indiciu. Doar provocare!
+      Course 4 EC 1b_instruction: Nici o regulă. Nici un indiciu. Doar provocare!
+      Course 4 EC 2a_instruction: '** Provocare extremă: ** Nici o regulă. Nici un indiciu. Doar provocare!'
+      Course 4 EC 2b_instruction: '** Provocare extremă: ** Nici o regulă. Nici un indiciu. Doar provocare!'
+      Course 4 EC 2c_instruction: '** Provocare extremă: ** Nici o regulă. Nici un indiciu. Doar provocare!'
+      Course 4 EC 3_instruction: 'Utilizează ceea ce ai învățat în cadrul nivelului precedent pentru a desena o imagine ca aceasta. Notă: Codul devine mai simplu dacă încorporezi parametri. '
+      Course 4 EC 3a_instruction: 'Provocare extremă: ** Nici o regulă. Nici un indiciu. Doar provocare!'
       Course 4 Maze 1_instruction: Du pasărea furioasă la porc!
       Course 4 Maze 2_instruction: Evită TNT-ul!
       Course 4 Maze 3_instruction: 'Programează pasărea nervoasă să ajungă la purcel. '
@@ -1204,10 +1219,10 @@ ro:
         Aici este o funcţie numită "patrol."
         Editeaz-o pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli.
       Course 4 Play Lab Params 5_instruction: 'Completează parametrul de intrare "actor" astfel încât putem apela funcţia "patrol" pentru fiecare dintre actori. Amintiţi-vă, actorii corespund cifrelor 1, 2 şi 3.'
-      Course 4 Play Lab Params 6_instruction: 'Adaugă funcţiei "patrol" alt parametru numit "speed". Foloseşte un bloc de instrucţiuni "set speed" cu noul parametru "speed".'
+      Course 4 Play Lab Params 6_instruction: 'Adauga un alt parametru numit "viteza" in functia de "preluare". Incearca sa utilizezi un bloc "seteaza viteza" impreuna cu noul parametru "viteza" pentru a ajuta pinguinul sa ia ambele steaguri inainte ca alte spirite sa ajunga la unul din ele.'
       Course 4 Play Lab Params 7_instruction: "Uită-te la codul furnizat pentru a vedea dacă îţi dai seama ce face fiecare bloc de instrucţiuni. \r\n\r\nCând eşti gata, foloseşte tastele săgeţi pentru a controla câinele şi adună toate steagurile."
       Course 4 Play Lab Params 8_instruction: 'Foloseşte blocul de instrucţiuni "when touching" pentru a trimite câinele înapoi în colţul din stânga-sus DOAR dacă acesta atinge oricare unul din celelalte personaje.'
-      Course 4 Play Lab Params 9_instruction: "Poate recunoşti acest joc dintr-un nivel anterior.\r\n\r\nAm adăugat o funcţie numită \"score_points\" care primeşte parametrul \"points\".\r\n\r\nEditeay[ funcţia astfel încât parametrul \"points\" este adăugat variabilei \"player_points\".\r\n\r\nCând eşti pregătit dă clic pe \"Run\" pentru a juca. Când câinele marchează 10 puncte, vei trece la următorul puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Aici este jocul nostru dintr-o etapa incipienta, dar majoritatea codului este ascuns. Este o functie noua \"inscrie_puncte.\" \r\n\r\n Editati functia astfel incat paramentrul 'Puncte' sa fie adaugat la variabila ''scorul_jucatorului\". \r\n\r\nVariabila \"scorul_jucatorului\" trebuie sa creasca de fiecare data cand \ncatelul eticheteaza pisica cu inimioare, si descreste cand pisica prinde cainele.\r\n\r\nNota:\nCand ai terminat, apasa \"Ruleaza\" pentru a te juca. Cand cainele inscrie 6 puncte, vei trece la urmatorul puzzle. "
       Course 4 Play Lab Vars 1_instruction: 'De data asta nu trebuie să este nevoie să scrii niciun cod, doar clic pe "Run" pentru a rula jocul! În acest joc, tu eşti câinele care încearcă să adune mai multe steaguri decât pisica. Foloseşte tasta săgeată jos pentru a controla câinele. Apăsă "Finish" când doreşti terminarea jocului.'
       Course 4 Play Lab Vars 2_instruction: 'Cursa în acest ultim puzzle nu a fost foarte corectă! Schimbă variabila "dog_speed" pentru a fi sigur că poţi aduna mai multe steaguri decât pisica. Primul care adună 10 steaguri câştigă!'
       Course 4 Play Lab Vars 3_instruction: Aici avem un nou tip de joc! Foloseşte pentru mutare tastele săgeţi stânga şi dreapta şi pentru a sării tasta săgeată sus. Vezi dacă poţi să aduni toate steagurile.
@@ -1235,15 +1250,30 @@ ro:
       Course 4 Play Labs For Loops 7a_instruction: "Acum ajungem unde trebuie!  Ce-ar fi dacă am începe să numărăm de câte ori putem face clic pe Expert înainte ca acest Caine să ajungă la 30? \r\n\r\nFinalizează adăugând blocuri Expertului astfel încât, de câte ori se face clic pe el, variabila \"clicuit\" crește cu câte unu. Poți ignora pentru moment \"increment\"-ul.\r\n\r\nCâinele va începe să cronometreze când faci clic pe \"Rulează\"."
       Course 4 Play Labs For Loops 8_instruction: 'Ce buclă "pentru" m-ar face pe mine să spun 19, 27, 35, 43, 51?'
       Course 4 Play Labs For Loops 8a_instruction: "Pentru a finaliza jocul nostru, trebuie să aducem înapoi variabila \"increment\"!    Hai s-o legăm de nivelul de joc.\r\n\r\n1) Ține evidența numărului de câte ori se face clic pe Expert.\r \n2) Dacă expertul este clicuit de cel puţin 10 ori înainte ca și Câinele să numere la 30, ridică \"increment\"-ul cu 1 şi începe din nou.\r 3) dacă expertul nu este apăsat cu clic de cel puţin 10 ori, jocul s-a terminat."
-      Course 4 SCV 1_instruction: Click here to view the instructions again.
-      Course 4 SCV 2_instruction: Click here to view the instructions again.
-      Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.\nTag Penguin to get 3 points.  Get 10 points to win!\r\nBut be careful, when\nCat and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks\nnecessary to make this game work the way it's been explained.  How will you\nget Dog to move in all directions using the arrow keys?  How will you add\npoints when Dog tags Cat or Penguin?  How will you subtract points when Cat\nand Penguin touch?"
-      Course 4 SCV 4_instruction: |
-        Solve this puzzle with the fewest number of blocks
-        possible.
-      Course 4 SCV 5_instruction: |
-        Solve this puzzle with the fewest number of blocks
-        possible.
+      Course 4 SCF 1_instruction: Utilizează funcţiile sugerate pentru a desena patru rânduri de hexagoane. Observi cum rândurile noastre pare sunt întoarse către dreapta?
+      Course 4 SCF 1a_instruction: Îţi poți da seama cum să colectezi tot acest nectar cu cât mai puţine blocuri posibil?
+      Course 4 SCF 1b_instruction: Îţi poți da seama cum să colectezi tot acest nectar cu cât mai puţine blocuri posibil?
+      Course 4 SCF 2_instruction: 'Utilizează ceea ce ai învățat în cadrul nivelului precedent pentru a desena o imagine ca aceasta. Notă: Codul devine mai simplu dacă încorporezi parametri. '
+      Course 4 SCF 3 Fail 1_instruction: Îți poți da seama cum să...
+      Course 4 SCF 3 Fail 2_instruction: Îți poți da seama cum să...
+      Course 4 SCF 3_instruction: 'Utilizează ceea ce ai învățat în cadrul nivelului precedent pentru a desena o imagine ca aceasta. Notă: Codul devine mai simplu dacă încorporezi parametri. '
+      Course 4 SCFL 1_instruction: Rezolvă acest puzzle folosind cât mai puține blocuri posibil.
+      Course 4 SCFL 1a_instruction: Poți să-l duci pe Skrat la ghinda lui folosind cât mai puține blocuri posibil?
+      Course 4 SCFL 1b_instruction: Poți să-l duci pe Skrat la ghinda lui folosind cât mai puține blocuri posibil?
+      Course 4 SCFL 2_instruction: Rezolvă acest puzzle folosind cât mai puține blocuri posibil.
+      Course 4 SCFL 3_instruction: Îți poți da seama cum să re-creezi acest desen?
+      Course 4 SCFL 4_instruction: Îți poți da seama cum să re-creezi acest desen?
+      Course 4 SCFL 5_instruction: Îți poți da seama cum să re-creezi acest desen?
+      Course 4 SCFL 6_instruction: Îţi poți da seama cum să re-creezi acest desen cu o singură buclă?
+      Course 4 SCFL 7_instruction: Artistul vrea să prindă nişte valuri! Îţi poți da seama cum să re-creezi acest desen?
+      Course 4 SCFP 1_instruction: Creează o funcție cu parametri care permite artistului să facă salturi cu x pixeli înapoi și înainte, precum și în sus și în jos cu y pixeli (folosind numere pozitive și negative).
+      Course 4 SCV 1_instruction: Click aici pentru a vedea instrucţiunile din nou.
+      Course 4 SCV 2_instruction: Click aici pentru a vedea instrucţiunile din nou.
+      Course 4 SCV 3_instruction: "Acum un joc al etichetelor! Prinde pisica pentru a lua 2 puncte. Pinde pinguinul si  faci 3 puncte. Strangeti 10 puncte pentru a castiga!\r Ai grija, cand pisica si pinguinul se intalnesc, iau punctele inapoi. \r\rAdauga blocurile necesare pentru a face jocul sa mearga asa cum e explicat. Cum il vei face pe caine sa se miste in toate directiile folosing sagetile? Cum vei adauga puncte cand cainele prinde pisica sau pinguinul? Cum vei sustrage puncte cand pisica si pinguinul se ating?"
+      Course 4 SCV 4_instruction: Rezolva acest puzzle cu cel mai mic număr de blocuri posibil.
+      Course 4 SCV 5_instruction: Rezolva acest puzzle cu cel mai mic număr de blocuri posibil.
+      Course 4 SCV 6_instruction: Click aici pentru a vedea instrucţiunile din nou.
+      Course 4 SCVP 1_instruction: Creează o funcție cu parametri care permite artistului să facă salturi cu x pixeli înapoi și înainte, precum și în sus și în jos cu y pixeli (folosind numere pozitive și negative).
       Course 4 Variables Assessment_instruction: Poţi crea această imagine folosind o variabilă pentru laturi? Fiecare linie trebuie să aibe 50 de pixeli lungime.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
@@ -1493,10 +1523,12 @@ ro:
       frozen circle_instruction: Un cerc este o formă specială. Poți să intuiești cu ce număr să înlocuim semnele de întrebare pentru a desena un cerc?
       frozen cross rotate dense_instruction: 'Hai să îl repetăm de 90 de ori! De câte ori intră 90 în 360? Sugestie: Este un număr chiar foarte mic.'
       frozen cross rotate_instruction: Acum, încearcă să îl repeți de 10 ori. Câte grade trebuie să rotești între fiecare linie?
-      frozen cross_instruction: 'Utilizează blocul "Repetă" pentru a crea un semn plus. Ai observat că Elsa se poate muta înainte şi înapoi?'
-      frozen diamond mini snowflake_instruction: 'Ştiai că fiecare fulg de nea are o formă diferită? Hai să creăm un nou fulg de nea utilizând blocul "Repetă" pentru a repeta un paralelogram de 4 ori, rontind la dreapta 90 de grade între fiecare paralelogram.'
+      frozen cross_instruction: 'Impachetati un bloc "repetare" pentru aceste comenzi sa creati un semn plus. Ati observat ca Elsa poate merge si inainte si inapoi?'
+      frozen diamond mini snowflake_instruction: "Stiai ca fiecare fulg de nea are o forma diferita? Haideti sa realizam un fulg de nea folosind inca un bloc 'Repeta' pentru a repeta un paralelogram de 4 ori, intorcandu-te la dreapta cu 90 de grade intre fiecare paralelogram."
       frozen diamond snowflake_instruction: Acum, hai să creăm un fulg de zăpadă nou utilizând blocul de repetare pentru a repeta un paralelogram de 10 ori, rotind la dreapta cîte 36 de grade între fiecare dintre ele.
-      frozen diamond_instruction: 'Hai să creăm un paralelogram. Este ca și un pătrat dar are unghiuri diferite: unghiuri de 60 și 120 de grade în loc de unghiuri de 90 de grade.'
+      frozen diamond_instruction: |
+        Utilizati un blocul repeta pentru a crea un paralelogram.
+        Este la fel ca un dreptunghi dar are unghiuri diferite. Acesta are unghi de 60 de grade si de 120 in loc sa aiba toate unghiurile de 90 de grade.
       frozen freeplay_instruction: Ai devenit oficial un artist maestru! Creează un paradis de iarnă.
       frozen line_instruction: Salutare! Eu sunt Elsa din Arendelle. Ajută-mă să creez o singură linie.
       frozen perpendicular_instruction: Acum, hai să vedem dacă putem crea două linii care formează un unghi de 90 de grade. Va trebui să folosești blocul ”Întoarce” precum și blocul ”Mută”.
@@ -1636,6 +1668,7 @@ ro:
       K-1 Maze Multi 15_instruction: Nivel de evaluare
       K-1 Maze Sequence Assessment 1_instruction: "Acesta este un test!\r\nMută-mă într-o direcţie apoi în cealaltă pentru a mă duce la porc"
       K-1 Maze Sequence Assessment 2_instruction: "Acesta este un test!\r\nMută-mă într-o direcţie apoi în cealaltă pentru a mă duce la porc."
+      kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -1860,74 +1893,29 @@ ro:
         Minunat lucru cu ultimul puzzle,
         hai să-l mai încercăm din nou, de data aceasta hai să facem acest design super cu hexagoane de 60 de pixeli.
       NEW Course 4 Artist Vars 4_instruction: 'Hai să-l încercăm din nou. Poți tu seta variabila de lungime pentru a face acest design minunat cu hexagoane? Indiciu: Este un multiplu de 10.'
-      NEW Course 4 Artist Vars 6_instruction: "Draw this pattern by dropping the\nlength variable in the correct places, and then setting the right value for\nlength. (Hint: it's a multiple of 10).  \r\n\r\nSee how you only set the\nvalue for length once, and the code uses the right value everywhere?\r\n\r\n\r\n"
-      NEW Course 4 Bee For Loops 1_instruction: |
-        Use a loop to collect the nectar
-        from each flower.
+      NEW Course 4 Artist Vars 6_instruction: "Deseneaza acest model prin mutarea variabilei lungime in locurile corecte si apoi setati valoarea corecta pentru lungime. (pont: este un multiplu de 10). \r\r Vezi cum setezi valoarea pentru lungime doar o data, iar codurile folosesc aceeasi valoare peste tot? \r\r\r\n"
+      NEW Course 4 Bee For Loops 1_instruction: Utilizează o buclă pentru a colecta nectarul din fiecare floare.
       NEW Course 4 Bee For Loops 10_instruction: 'Folosește variabila ta din bucla "pentru" ca să controlezi cât de departe să muți pe orizontal.'
-      NEW Course 4 Bee For Loops 10a_instruction: |
-        Ready for a challenge?  Take what
-        you've learned about loops and try to solve this problem. Remember: You may
-        have to run your solution multiple times before you figure out all of the
-        steps.
-      NEW Course 4 Bee For Loops 11_instruction: |
-        Can you use the loop variable to
-        control movement and nectar collection?
-      NEW Course 4 Bee For Loops 2_instruction: |
-        Add the code necessary to make sure
-        the bee collects all the nectar. Look at how much code you need for this puzzle!
-        (We'll learn a simpler way in the next puzzle.)
-      NEW Course 4 Bee For Loops 3_instruction: |
-        Ah, the "for loop" makes this
-        much easier! All the code you need is here, take a look at how it is put together
-        then click "Run" to see how it works. 
-      NEW Course 4 Bee For Loops 4 4_instruction: |
-        Now we need to move forward "counter"
-        times, then get nectar "counter" times.  Can you use two "repeat" loops
-        to solve this challenge?
-      NEW Course 4 Bee For Loops 4_instruction: |
-        Replace the ??? in the "for loop"
-        with the largest amount of nectar the bee has to collect. 
-      NEW Course 4 Bee For Loops 5 5_instruction: |
-        Are you getting the hang of using
-        the "for loop"? Let's help the bee get the rest of the nectar.
-      NEW Course 4 Bee For Loops 5_instruction: |
-        You can also use a "for loop"
-        to count down. Try gathering this nectar by counting down from 5 to 1 by 1.
-      NEW Course 4 Bee For Loops 6_instruction: |
-        The last number in your for loop
-        is called the "increment". Each time the loop is run, the counter variable
-        changes by the value of the increment. Try collecting these flowers using
-        an increment of 2.
-      NEW Course 4 Bee For Loops 7_instruction: "Now, let's combine the \"counter\"\nvariable with a math block! How can you use the \"counter\" variable to navigate\nthis garden with the fewest number of blocks possible? What do you need to\ndo to collect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"\nvariable!\r\n\r\nRemember: If your loop is counting up, the increment is added\nto your \"counter\" variable each time through."
-      NEW Course 4 Bee For Loops 8_instruction: "You've got this! What should your\nincrement be to collect 3, 6, 9, 12, 15 nectar?\r\n"
+      NEW Course 4 Bee For Loops 10a_instruction: 'Gata pentru o provocare? Foloseste ce ai invatat despre bucle si incearca sa rezolvi problema asta. Aminteste-ti: se poate sa rulezi solutia de mai multe ori inainte sa iti dai seama de toti pasii.'
+      NEW Course 4 Bee For Loops 11_instruction: Poţi folosi variabila de buclă pentru a controla mişcarea şi colectarea de nectar?
+      NEW Course 4 Bee For Loops 2_instruction: Adauga codul necesar pentru a fii sigur ca albinele colecteaza tot nectarul. Uite de cate linii de cod ai nevoie pentru puzzle-ul acesta! (Vom invata un mod mai usor puzzle-ul urmator.)
+      NEW Course 4 Bee For Loops 3_instruction: 'Ah, blocul "pentru bucla" face asta mult mai usor! Toate cod-urile de care ai nevoie sunt aici, arunca o privire si vezi cum sunt puse impreuna apoi selecteaza "Ruleaza" pentru a vedea cum merge. '
+      NEW Course 4 Bee For Loops 4 4_instruction: 'Acum trebuie sa ne mutam inainte "de atatea ori" si sa culegem nectarul "de atatea ori". Poti folosi buclele "repetare"pentru a rezolva aceasta provocare?'
+      NEW Course 4 Bee For Loops 4_instruction: 'Înlocuiţi??? în "pentru buclă" cu cea mai mare cantitate de polen pe care albinele trebuie să o colecteze. '
+      NEW Course 4 Bee For Loops 5 5_instruction: Incepeti sa stii sa folositi buclele? Haideti sa ajutam albinele sa culeaga si nectarul ramas.
+      NEW Course 4 Bee For Loops 5_instruction: 'De asemenea, poţi utiliza o buclă "pentru" ca să numere în ordine descrescătoare. Încearcă să colectezi acest nectar numărând în ordine descrescătoare de la 5 la 1 câte 1.'
+      NEW Course 4 Bee For Loops 6_instruction: 'Ultimul numar din blocul "pentru bucla" este numit "crescatorul". De fiecare data cand ruleaza bucla, variabila se schimba cu valoarea crescatorului. Incearca sa colectezi aceste flori utilizand crescatorul 2.'
+      NEW Course 4 Bee For Loops 7_instruction: "Acum, haideti sa combinam variabila \"contorul\" cu un bloc matematic! Cum poti utiliza variabila \"contorul\" pentru a naviga prin gradina cu cat mai putine blocuri posibile? Ce trebuie sa faci pentru a colecta 3, 6, 9, 12, sau 15 randuri de polen de data asta? Secretul este variabila \"contorul\"!\r\rAminteste-ti: daca bucla ta numara crescator, cresterea este adaugata variabilei \"Contor\" de fiecare data."
+      NEW Course 4 Bee For Loops 8_instruction: "Ati prins ideea! Care ar trebui sa fie variabila voastra crescatoare pentru a colecta 3, 6, 9, 12 sau 15 randuri de polen?\r\n"
       NEW Course 4 Bee For Loops 9_instruction: Dacă bucla ta este de numărare în ordine descrescătoare, incrementul este scăzut din variabila ta numărător la fiecare buclă. Ce ar trebui să fie incrementul tău pentru a colecta 9 nectaruri, apoi 6, şi apoi 3 nectaruri?
-      NEW Course 4 Bee For Loops 95_instruction: |
-        Take a look at each piece of the
-        "for loop" that you have just created.  Can you figure out which numbers
-        you need to double to solve this puzzle? Why does it work?
-      NEW Course 4 Play Lab Params 11_instruction: |
-        It's free play time! Have fun
-        with all the blocks in your tool box. 
-      NEW Course 4 Play Lab Params 5 5_instruction: |
-        Let's try that again, but with
-        less help. What do you need to edit this time to make the actors patrol?
-      NEW Course 4 Play Lab Vars 4 5_instruction: |
-        “What do you think this code will
-        do? Press “Run” to see what happens.”
-      NEW Course 4 Play Labs For Loops 7a_instruction: |
-        Using what you learned so
-        far, can you have Dinosaur take a step forward every time Penguin counts?
-      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: |
-        It's Free Play
-        time, have fun with all the blocks in your tool box. 
-      NEW Course 4 Play Labs For Loops 8a_instruction: |
-        Challenge: How would you
-        use the "for loop" to get every actor to go around and say their actor number,
-        then vanish from the screen? 
-      New Play Lab Project_instruction: |
-        Create your own story or game! Your code
-        is saved as a project you can return to at any time.
+      NEW Course 4 Bee For Loops 95_instruction: 'Aruncati o privire la fiecare piesa de "pentru bucla" pe care ati realizat-o. Iti poti da seama de ce numere ai nevoie pentru a rezolva acest puzzle? Cum functioneaza?'
+      NEW Course 4 Play Lab Params 11_instruction: 'Este timpul sa va jucati liberi! Distrati-va cu toate blocurile din bara de instrumente. '
+      NEW Course 4 Play Lab Params 5 5_instruction: Haideti sa incercam din nou, dar cu mai putin ajutor. Ce trebuie sa schimbi acum pentru a face actorii sa se deplaseze?
+      NEW Course 4 Play Lab Vars 4 5_instruction: '"Ce crezi ca va face codul aceasta? Apasa "Ruleaza" ca sa vezi ce se intampla."'
+      NEW Course 4 Play Labs For Loops 7a_instruction: Folosind tot ceea ce ai invatat pana acum, poti sa il faci pe dinozaur sa fara un pas de fiecare data cand trece pe langa un pinguin?
+      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Este timpul sa va jucati liberi! Distrati-va cu toate blocurile din bara de instrumente. '
+      NEW Course 4 Play Labs For Loops 8a_instruction: 'Provocare: Cum a-ti folosi blocul "pentru bucla" pentru a face fiecare actor sa mearga de jur impresur si sa isi rosteasca numarul, apoi sa dispara de pe ecran? '
+      New Play Lab Project_instruction: Creeaza-ti propria poveste sau joc! Codul tau este salvat ca proiect, asa ca te poti intoarce la el in orice moment.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
@@ -1952,6 +1940,26 @@ ro:
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
+      Overworld Avoid Monsters_instruction: |
+        Intalnirea unui Vierme nu este o idee buna.
+        Mergeti cu atentie pe langa ei si ajungeti in siguranta in casa.
+      Overworld Chop Tree_instruction: 'Lemnul este o resursa importanta. Se pot construi multe cu ajutorul lui. Mergeti la copac si utilizati blocul "Distrugeti" pentru a-l taia.'
+      Overworld Chop Trees_instruction: 'Trebuie sa construim o casa inainte de apus. Este necesar mult lemn. Taie toti cei trei copaci. '
+      Overworld Free Play 20x20_instruction: Felicitări! Ai finalizat toate puzzle-urile! Acum extrage, construieste si creeaza ceva unic folosind tot ceea ce ai invatat pana acum.
+      Overworld Free Play_instruction: Te poti juca cu acest peisaj. Tu alegi ce sa construiesti.
+      Overworld House Frame - A_instruction: Sa ne construim propria casa! Acest loc arata bine. Construieste un cadru pe blocurile de pamant.
+      Overworld House Frame - C_instruction: Sa ne construim propria casa! Acest loc arata bine. Construieste un cadru pe blocurile de pamant.
+      Overworld House Frame B_instruction: Un perete a fost terminat, acum sa construim restul casei urmand planurile! Va trebui sa repeti mutarile destul de mult.
+      Overworld House Frame B2_instruction: Un perete a fost terminat, acum sa construim restul casei urmand planurile! Va trebui sa repeti mutarile destul de mult.
+      Overworld House Frame C_instruction: Un perete a fost terminat, acum sa construim restul casei urmand planurile! Va trebui sa repeti mutarile destul de mult.
+      Overworld House Frame Chosen_instruction: 'Construieste restul casei din orice material doresti. Comanda "Repeta" iti va fi de ajutor.'
+      Overworld House Frame_instruction: Sa ne construim propria casa! Acest loc arata bine. Construieste un cadru pe blocurile de pamant.
+      Overworld Minecart Track_instruction: Esti din nou la suprafata cu o multime de resurse subterane. Acum, vom construi un drum de-a lungul traseului cu mizerie de la casa ta. Primul pas este sa cureti tot de pe traseu. Urmareste traseul si taie copacii.
+      Overworld Move to Sheep_instruction: 'Adauga din nou instructiunea "Mergi inainte" pentru a ajunge la oi.'
+      Overworld Place Wall_instruction: 'Fiecare casa incepe cu un perete. Construieste prima parte a casei asezand comenzile "Loc" si "Mergi inainte" in interiorul buclei "Repeta".'
+      Overworld Plant Crops_instruction: Este bine sa planifici dinainte. Planteaza culturi pe ambele parti ale apei astfel incat mai tarziu sa nu-ti fie foame.
+      Overworld Powered Minecart_instruction: Buna treaba! Ai adunat resurse suficiente pentru a construi o casa modesta. Acum dezvolta o cale ferata de la marginea hartii pana la usa casei tale.
+      Overworld Shear Sheep_instruction: 'E vremea sa tunzi oile! Foloseste comanda "Tunde" pentru a aduna lana de la oi.'
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -2186,32 +2194,21 @@ ro:
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
-      scrat 16_instruction: |
-        Acorn! Acorn! Acorn! Use an "if" block to get me there
-        with the fewest number of blocks.
+      scrat 16_instruction: 'Ghindă! Ghindă! Ghindă! Utilizaţi un bloc "dacă" pentru a mă acolo cu cel mai mic număr de blocuri.'
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
-      scrat 17_instruction: |
-        Ok, let's do that again for practice - this isn't
-        very different, but watch out for the wall!
+      scrat 17_instruction: 'Ok, haideți să exersăm din nou - nu este foarte diferit, dar uitați-vă după perete!'
       scrat 18 (copy 1)_instruction: |
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
         new block.
-      scrat 18_instruction: |
-        The "If-else" blocks checks a condition, and then
-        does one thing OR another. To get me to the acorn try to use this new block.
+      scrat 18_instruction: 'Blocurile "dacă-altfel" verifică o condiţie, şi apoi execută un lucru sau altul. Pentru a mă duce la ghindă încercaţi să utilizaţi acest bloc nou.'
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
         can you get it right on your first try?
-      scrat 19_instruction: |
-        One more practice of the "if-else" block, can you
-        get it right on your first try?
-      scrat 20_instruction: |
-        Can you add just 3 blocks to help me solve a more complex
-        maze? If you do it right, I can walk any curvy path no matter the length.
-        Hurry! The ice is melting!
+      scrat 19_instruction: 'Încă un exercițiu de practică cu blocul "dacă-altfel", poate reușești chiar prima încercare?'
+      scrat 20_instruction: Puteți să mai adăugați doar 3 blocuri pentru a mă ajuta să rezolv un labirint mai complex? Dacă o faceți bine, voi putea să merg pe orice traseu curbat, indiferent de lungime. Uraaa! Gheața se topește!
       SpecialFrozenLevel_instruction: Ai devenit oficial un artist maestru! Creează un paradis de iarnă.
       Standalone_Artist_1_instruction: 'Bine ai venit la Artist! În primul rând, să încercăm să facem un pătrat simplu folosind blocul "rotește la dreapta" şi blocul "mută înainte". Fiecare latură ar trebui să aibă lungimea de 100 de pixeli.'
       Standalone_Artist_2_instruction: Desenează acest romb cu unghiuri de 120 şi 60 de grade şi laturile cu lungimea de 150 de pixeli.
@@ -2224,9 +2221,9 @@ ro:
       Standalone_Artist_8_instruction: 'Aici este o funcţie numită "Desenează o formă", pe care noi am programat-o să elaboreze hexagoane. Rulează codul pentru a vedea ce face şi apoi experimentează cu funcția pentru a vedea ce se întâmplă. Poţi să o faci să deseneze un model de pătrate, triunghiuri sau octagoane?'
       Standalone_Artist_9_instruction: Acum mergi mai departe şi creează orice imagine dorești! Ai chiar şi o funcţie goală pe care o poți face să realizeze ce vrei tu!
       Standalone_Artist_v2_instruction: 'Bine ai venit la Artist! În primul rând, să încercăm să facem un pătrat simplu folosind blocul "rotește la dreapta" şi blocul "mută înainte". Fiecare latură ar trebui să aibă lungimea de 100 de pixeli.'
-      template test_instruction: what up
+      template test_instruction: "what's up"
       Test Play Lab_instruction: This is a test play lab level.
-      test_sarah_instruction: hi
+      test_sarah_instruction: hi hi
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
@@ -2289,9 +2286,190 @@ ro:
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
         to be dropped.
+      U3 - Arrays - appendItem_instruction: |
+        Create an array of odd numbers 1-11
+        by using appendItem. (Click to see full instructions)
+      U3 - Arrays - assignment_instruction: |
+        Use indexes to change the values in
+        this array from 1 to 0. (Click to see full instructions)
+      U3 - Arrays - assignment2_instruction: |
+        Calculate the sum of three values stored
+        in an array. (Click to see full instructions)
+      U3 - Arrays - assignment3_instruction: |
+        Increase the value of each value in
+        the randomly generated array by 1. (Click to see full instructions)
+      U3 - Arrays - createFirstArray_instruction: |
+        Create an array of the even numbers
+        from 0-10 and display its contents with console.log. (Click to see full instructions)
+      U3 - Arrays - Demo App_instruction: |
+        Use the "My Favorite Things" app. How
+        might this app be making use of an array? (Click to see full instructions)
+      U3 - Arrays - expressionsAsIndexes_instruction: |
+        Write a program that displays
+        a randomly chosen color from the array. (Click to see full instructions)
+      U3 - Arrays - favThings addItem_instruction: |
+        Write code that allows a user
+        to add their own favorite things to the list. (Click to see full instructions)
+      U3 - Arrays - favThings bounds_instruction: |
+        Add if statements to your event
+        handlers that prevent the global index from going out of bounds. (Click to
+        see full instructions)
+      U3 - Arrays - favThings Counting Variable_instruction: |
+        Create a global variable
+        for the current index and use it to display the first item in the array. (Click
+        to see full instructions)
+      U3 - Arrays - favThings createArray_instruction: |
+        Create an array of words
+        describing your favorite things. (Click to see full instructions)
+      U3 - Arrays - favThings firstOutput_instruction: |
+        Use setText to display the
+        first item in the array. (Click to see full instructions)
+      U3 - Arrays - favThings giveIDs_instruction: |
+        Give your UI elements descriptive
+        and meaningful IDs. (Click to see full instructions)
+      U3 - Arrays - favThings keepPlaying_instruction: |
+        Make any other improvements
+        you want! (Click to see full instructions)
+      U3 - Arrays - favThings Next_instruction: |
+        Write code that allows the user
+        to move forward through your list by clicking the "Next" button. (Click
+        to see full instructions)
+      U3 - Arrays - favThings Prev_instruction: |
+        Write code that allows the user
+        to move backward through your list by clicking the "Last" button. (Click
+        to see full instructions)
+      U3 - Arrays - favThings template_instruction: |
+        Give your UI elements descriptive
+        and meaningful IDs. (Click to see full instructions)
+      U3 - Arrays - globalVariableIndex_instruction: |
+        Give your UI elements descriptive
+        and meaningful IDs. (Click to see full instructions)
+      U3 - Arrays - indexPractice_instruction: |
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      U3 - Arrays - insertingItems_instruction: |
+        Insert items into an array to form
+        a complete sentence. (Click to see full instructions)
+      U3 - Arrays - insertionErrors_instruction: |
+        Run each command that references
+        indexes that are out of bounds and observe the results. (Click to see full
+        instructions)
+      U3 - Arrays - introIndex_instruction: |
+        Display the first and last element in
+        the array. Display the number 5 from the array. (Click to see full instructions)
+      U3 - Arrays - length_instruction: |
+        Use list.length to determine the length
+        of each array. (Click to see full instructions)
+      U3 - Arrays - lengthMinus1_instruction: |
+        Use list.length - 1 to log the last
+        item in the array to the console. (Click to see full instructions)
+      U3 - Arrays - remove_instruction: |
+        Remove items from an array to form a complete
+        sentence. (Click to see full instructions)
+      U3 - Arrays - stringsInArrays_instruction: |
+        Write a sentence word by word by
+        adding strings to an array. (Click to see full instructions)
+      U3 - Canvas - 200dots_instruction: |
+        Add a loop to your program that draws 200
+        dots on your canvas. (Click to see full instructions)
+      U3 - Canvas - appendToArray_instruction: |
+        Create an array to store each event
+        parameter. Append each event parameter to this array within your event handler.
+        (Click to see full instructions)
+      U3 - Canvas - changeToMouseMove_instruction: |
+        Change your program so that dots
+        are drawn at the location of the mouse as the user moves the mouse on the
+        canvas. (Click to see full instructions)
+      U3 - Canvas - clickToAdd_instruction: |
+        Change your program so that dots are
+        added to the canvas when the user clicks on it. (Click to see full instructions)
+      U3 - Canvas - delete_instruction: |
+        Create a button that deletes the drawing
+        by clearing the canvas and removing all stored values. (Click to see full
+        instructions)
+      U3 - Canvas - draw at click point_instruction: |
+        Change your program so that
+        dots are drawn at the location of the mouse click. (Click to see full instructions)
+      U3 - Canvas - freePlay_instruction: |
+        Write code that redraws your image using
+        a sketch effect. (Click to see full instructions)
+      U3 - Canvas - introCanvas_instruction: |
+        Add a canvas to your app and set it
+        to be the active canvas. Then add a large dot to your canvas. (Click to see
+        full instructions)
+      U3 - Canvas - movementFunction fix Orig_instruction: |
+        Write a function that
+        takes the movement of the mouse as input and generates a line width as output.
+        (Click to see full instructions)
+      U3 - Canvas - movementFunction_instruction: |
+        Write a function that takes the
+        movement of the mouse as input and generates a line width as output. (Click
+        to see full instructions)
+      U3 - Canvas - One Dot sprayPaint_instruction: |
+        Write code that redraws your
+        image using a dot whose x and y locations use `offsetX` and `offsetY` with
+        small random value added. (Click to see full instructions)
+      U3 - Canvas - redrawOriginal_instruction: |
+        Write a function that processes
+        your array, redrawing the dots as they originally appeared. (Click to see
+        full instructions)
+      U3 - Canvas - redrawRandom_instruction: |
+        Set up a button and event handler
+        for the random function. (Click to see full instructions)
+      U3 - Canvas - redrawRandom2_instruction: |
+        Write a function that processes your
+        array, redrawing every dot with a random size. (Click to see full instructions)
+      U3 - Canvas - shiftKey_instruction: |
+        Add an if statement to your event handler
+        so dots are only drawn when the shift key is pressed. (Click to see full instructions)
+      U3 - Canvas - sketch_instruction: |
+        Write code that redraws your image using
+        a sketch effect. (Click to see full instructions)
+      U3 - Canvas - sprayPaint_instruction: |
+        Update the spray paint code so that
+        redraws your image using multiple random dots instead of one using a nested
+        for loop. (Click to see full instructions)
+      U3 - Canvas - transparentDots_instruction: |
+        Change the colors of your dots
+        so they have a fully transparent stroke and partially transparent fill. (Click
+        to see full instructions)
+      U3 - Canvas - usingOffsetXY_instruction: |
+        Add a console.log command inside
+        the function of your event handler. Use it to display the event parameter.
+        Click on the screen to see the contents of the event parameter (Click to see
+        full instructions)
+      U3 - Conditional Basics - 6_instruction: |
+        Add a setText after the if statement
+        to "Nope. Guess again." (Click to see full instructions)
+      U3 - Conditionals - Combine AND and OR_instruction: |
+        Write an if statement
+        that uses AND and OR to display "Time to go to school!" if it's not the
+        weekend and the user is under 18. (Click to see full instrucitons.
+      U3 - Conditionals - Combine AND OR and NOT_instruction: |
+        Write an if statement
+        that uses AND and OR to display "Time to go to school!" if it's not the
+        weekend and the user is under 18. (Click to see full instrucitons.
+      U3 - Conditionals - Combine AND OR Simple_instruction: |
+        Write an if statement
+        that uses AND and OR to display "Sleep in!" if it's the weekend and the
+        user is a teenager. (Click to see full instructions.
+      U3 - Conditionals - intoOr_instruction: |
+        Add 2 if statements that use the OR
+        operator. (Click to see full instructions)
+      U3 - Conditionals - introAND_instruction: |
+        Add 2 if statements that use the
+        OR operator. (Click to see full instructions)
+      U3 - Conditionals - Simple AND_instruction: |
+        Write an if statement that uses
+        AND to display "You are a teenager." if the user enters an age between 13
+        and 19. (Click to see full instructions)
+      U3 - Conditionals - Simple OR_instruction: |
+        Write an if statement that uses
+        OR to display "It's the weekend!" if the user enters a weekend day at the
+        prompt. (Click to see full instructions)
       U3 - Design Mode - Console Log_instruction: |
-        Update the ID names and `console.log()`
-        messages to match the correct button (Click to see full instructions).
+        Update the ID names and `console.log`
+        messages to match the correct button. (Click to see full instructions.)
       U3 - Design Mode - Layers and Delete_instruction: |
         Fix the layout of the bullseye
         game. (Click to see full instructions)
@@ -2308,14 +2486,318 @@ ro:
         instructions)
       U3 - Design Mode - WTF Console Log_instruction: |
         Add a 3 console.log messages
-        and test them out(Click to see full instructions).
+        and test them out. (Click to see full instructions.)
       U3 - Design Mode -Recreate Beyond Buttons_instruction: |
         Recreate the game from
-        the 'chaser-game' with a welcome screen and game over screen. (Click to
-        see full instructions)
+        the "Chaser Game" with a Welcome Screen and Game Over Screen. (Click to
+        see full instructions.)
       U3 - Design Mode 1_instruction: |
         Add a large red button to your screen using
-        Design Mode (Click for full instructions).
+        Design Mode. (Click for full instructions.)
+      U3 - Dice - Dropdown and Score_instruction: |
+        Add guess and score to the Dice
+        Game (Click to see full instructions)
+      U3 - Dice - Dropdown with Strings_instruction: |
+        Add a dropdown for difficulty
+        level that prints the difficulty level in the console. (Click to see full
+        instructions)
+      U3 - Dice - If_instruction: |
+        Show different die images for the random number
+        generated. (Click to see full instructions)
+      U3 - Dice - Nested_instruction: |
+        Use nested if statements to make the scoring
+        different for the different game levels. (Click to see full instructions)
+      U3 - High Low - Debug_instruction: |
+        Debug the order of the conditionals so
+        that it will actually tell the user when their guess is close. (Click to see
+        full instructions)
+      U3 - High Low - Dropdown_instruction: |
+        Add a dropdown for their guess instead
+        of promptNum (Click to see full instructions)
+      U3 - High Low - Else if_instruction: |
+        Add an else-if statement in order to
+        tell the user if their guess is high or low instead of just wrong. (Click
+        to see full instructions)
+      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill tell the user when they are right and when they are wrong. (Click to\nsee full instructions)\r\n"
+      U3 - High Low - If_instruction: |
+        Add code to the if statement that indicates
+        the user guessed the secret number. (Click to see full instructions)
+      U3 - Keys - Add Image URLs_instruction: |
+        Add image URLs to your array. Replace
+        the text area with an image and setText with setImageURL. Then test your app!
+        (Click to see full instructions)
+      U3 - Keys - Buttons and Keys_instruction: |
+        Have the program respond the same
+        way for both clicking images on the screen and hitting the up and down keys
+        on the keyboard. (Click to see full instructions)
+      U3 - Keys - Demo App_instruction: |
+        Play with the image scroller. Press the
+        left and right arrows to progress through the images.
+      U3 - Keys - Final Image Scroller_instruction: |
+        Update the image scroller to
+        respond to buttons and key presses. (Click to see full instructions)
+      U3 - Keys - Functions_instruction: |
+        Write a doUpArrow and doDownArrow function
+        and call the functions instead of duplicating the code. (Click to see full
+        instructions)
+      U3 - Keys - Key Up and Down_instruction: |
+        Try out the keyup and keydown events
+        to see how they are different from keypress. (Click to see full instructions)
+      U3 - Keys - Multiple Keys_instruction: |
+        Play a different sound when the down
+        arrow is pressed. (Click to see full instructions)
+      U3 - Keys - Practice Adding Images with URL_instruction: |
+        Add image URLs to
+        your image array. Test out the add button. Style your image scroller. (Click
+        to see full instructions)
+      U3 - Keys - Words to Images_instruction: |
+        Add image URLs to your image array.
+        Test out the add button. Style your image scroller. (Click to see full instructions)
+      U3 - Loops -  9 Part 2_instruction: |
+        Change the boolean expression for the
+        while loop so that it will roll until both dice are greater than 3. (Click
+        to see full instructions)
+      U3 - Loops -  Complex Condition_instruction: |
+        Change the boolean expression
+        for the while loop so that it will roll until both dice are greater than 3.
+        (Click to see full instructions)
+      U3 - Loops - 1_instruction: |
+        Change the condition for the while loop to check
+        if the variable num is less than 90. (Click to see full instructions)
+      U3 - Loops - 10_instruction: |
+        Write a program that if the sum of the dice is
+        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
+        to see full instructions)
+      U3 - Loops - 11_instruction: |
+        Fix the condition so that it keeps rolling the
+        die as long as the value is not a 2 or a 3 instead of rolling infinitely.
+        (Click to see full instructions)
+      U3 - Loops - 12_instruction: |
+        Change the code so that it prints the string
+        'Hi' 5 times. (Click to see full instructions)
+      U3 - Loops - 13_instruction: |
+        Update the code to count up by 3 instead of 1.
+        (Click to see full instructions)
+      U3 - Loops - 14_instruction: |
+        Change the loop condition to prevent the infinite
+        loop and stop counting at once the count is past 30. (Click to see full instructions)
+      U3 - Loops - 15_instruction: |
+        Count the number of times the sum of the dice
+        is 7. (Click to see full instructions)
+      U3 - Loops - 16_instruction: |
+        Find out how many times you have to roll to get
+        the sum of 7 100 times (Click to see full instructions)
+      U3 - Loops - 2_instruction: |
+        Try creating an infinite loop using !=, > and
+        <. (Click to see full instructions)
+      U3 - Loops - 3_instruction: |
+        Change the if statement to a while loop so the
+        program will run until it rolls a 6. (Click to see full instructions)
+      U3 - Loops - 4_instruction: |2
+         Use the Debug Commands to to make a list of all
+        the values rolled before a 6. (Click to see full instructions)
+      U3 - Loops - 5_instruction: |
+        Add code inside the while loop which will update
+        the variable num so that the condition will eventually become false. (Click
+        to see full instructions)
+      U3 - Loops - 6_instruction: |
+        Fix the problem so the loop will run at least
+        once. Change the initial value of num to a dummy value such as -1. (Click
+        to see full instructions)
+      U3 - Loops - 7_instruction: |
+        Without adding any lines of code, reorder the
+        code so that it prints all the values of num. (Click to see full instructions)
+      U3 - Loops - 8_instruction: |
+        Debug which number is not getting printed and
+        add a write statement to display that value. (Click to see full instructions)
+      U3 - Loops - 9_instruction: |2
+         Modify the condition so that it keeps rolling
+        as long as both are less than 3. (Click to see full instructions)
+      U3 - Loops - Continue_instruction: |2
+         Use the Debug Commands to to make a list
+        of all the values rolled before a 6. (Click to see full instructions)
+      U3 - Loops - minus = operator_instruction: |
+        Update the code to use the -= operator
+        to count from 30 down to 0 by 3s. (Click to see full instructions)
+      U3 - Loops - Minus Minus_instruction: |
+        Change the code to count down from 10
+        to 1. (Click to see full instructions)
+      U3 - Loops - plus and minus = operator_instruction: |
+        Update the code to use
+        the += operator. (Click to see full instructions)
+      U3 - Loops - Plus Plus_instruction: |
+        Change the code to use count++ instead
+        of count = count + 1.  (Click to see full instructions)
+      U3 - Loops - Typing in Console_instruction: |
+        Use console to check the ending
+        value of num. (Click to see full instructions)
+      U3 - Loops And Arrays - Add 5_instruction: |
+        Add 5 to all the values in an array
+        (Click to see full instructions)
+      U3 - Loops And Arrays - Challenge 1_instruction: |
+        Write a function that finds
+        and returns the minimum value in an array.   (Click to see full instructions)
+      U3 - Loops And Arrays - Challenge 2_instruction: |
+        Write a function that finds
+        and returns the minimum value in an array.   (Click to see full instructions)
+      U3 - Loops And Arrays - Counting Times_instruction: |
+        Count the number of times
+        5 appears in an array. (Click to see full instructions)
+      U3 - Loops And Arrays - Divid by 2_instruction: |
+        Divide every value in the
+        array by 2. (Click to see full instructions)
+      U3 - Loops And Arrays - Find Max_instruction: |
+        Design a function that displays
+        the smallest number in an array  (Click to see full instructions)
+      U3 - Loops And Arrays - Find Min_instruction: |
+        Complete the 'findMinVal'
+        function to find and display the smallest value in an array  (Click to see
+        full instructions)
+      U3 - Loops And Arrays - Functions that Return Value_instruction: |
+        Call findMin
+        within the console.log statement to calculate the minimum of two values.  (Click
+        to see full instructions)
+      U3 - Loops And Arrays - General Search Param_instruction: |
+        Add a second parameter
+        to the 'search' function for the value to search for.  (Click to see full
+        instructions)
+      U3 - Loops And Arrays - Intro For Loop_instruction: |
+        Add a for loop with a
+        console.log inside and test out the 3 pieces of the for loop. (Click to see
+        full instructions)
+      U3 - Loops And Arrays - Linear Search_instruction: |
+        Visit every element in
+        the array and display 'true' if the value is a 5, and 'false' otherwise.
+        (Click to see full instructions)
+      U3 - Loops And Arrays - Loop Array If_instruction: |
+        Use an if statement to
+        only display the values in the array that are greater than 5. (Click to see
+        full instructions)
+      U3 - Loops And Arrays - Make it a Function - add list parameter_instruction: |
+        Create
+        a function that takes a list parameter and prints if the list contains a 5.
+        (Click to see full instructions)
+      U3 - Loops And Arrays - Make it a Function_instruction: |
+        Move the code that
+        searches the list for a 5 into a function called 'search'. (Click to see
+        full instructions)
+      U3 - Loops And Arrays - Multiple Returns_instruction: |
+        Test out the return
+        values of the findMax function.  (Click to see full instructions)
+      U3 - Loops And Arrays - Print Array_instruction: |
+        Use a for loop to print out
+        all the values in an array. (Click to see full instructions)
+      U3 - Loops And Arrays - Printing Single True_instruction: |
+        Process the array
+        and display a single 'true' if the array contains a 5 or a single 'false'
+        if it does not.  (Click to see full instructions)
+      U3 - Loops And Arrays - Return Index_instruction: |
+        Make the search function
+        return the index of the search value in the array. (Click to see full instructions)
+      U3 - Loops And Arrays - Return Value_instruction: |
+        Use constrain in this simple
+        app to keep the turtle from driving off the screen.  (Click to see full instructions)
+      U3 - Loops And Arrays - Search and Remove_instruction: |
+        Search for 5 in the
+        array and remove it from the array. (Click to see full instructions)
+      U3 - Loops And Arrays - Search with Boolean Var_instruction: |
+        Make a boolean
+        variable to use as a flag to keep track of whether there is a 5 in the array.
+        (Click to see full instructions)
+      U3 - Loops And Arrays - useFindMin_instruction: |
+        Call findMin within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)
+      U3 - Movie Bot - Multiple If Sequences_instruction: |
+        Add another set of if,
+        else if, and else statements inside the question if statement to check for
+        keywords for movie ratings (G, PG, PG-13, and R). (Click to see full instructions)
+      U3 - Movie Bot - Nested Motivation_instruction: |
+        Add a separate set of if statements
+        to check for a "?" in the input. (Click to see full instructions)
+      U3 - Movie Bot - toLowerCase_instruction: |
+        Use the toLowerCase command to change
+        all user input into lowercase letters after they enter it. (Click to see full
+        instructions)
+      U3 - Movie Bot - When Multiple If Statements_instruction: |
+        Add an if and else-if
+        statement that checks for please and thank you. (Click to see full instructions)
+      U3 - Practice Create Performance Task_instruction: |
+        Design and implement your
+        practice Create Performance Task. (Click to see full instructions)
+      U3 - Return Values - constrainTurtle_instruction: |
+        Use constrain in this simple
+        app to keep the turtle from driving off the screen.  (Click to see full instructions)
+      U3 - Return Values - debuggingConstrain_instruction: |
+        Correct the error in
+        constrain so that it correctly reports the maximum value.  (Click to see full
+        instructions)
+      U3 - Return Values - debuggingMaxVal_instruction: |
+        Correct the error in maxVal
+        so that it correctly reports the maximum value.  (Click to see full instructions)
+      U3 - Return Values - debuggingReturns_instruction: |
+        Correct the error in maxVal
+        so that it correctly reports the maximum value.  (Click to see full instructions)
+      U3 - Return Values - increase1_instruction: |
+        Call the increase function within
+        moveForward, write, and console.log.  (Click to see full instructions)
+      U3 - Return Values - increase2_instruction: |
+        Change the increase function to
+        return 3 times the input value. (Click to see full instructions)
+      U3 - Return Values - min1_instruction: |
+        Test out the return values of the findMax
+        function.  (Click to see full instructions)
+      U3 - Return Values - useFindMin_instruction: |
+        Call findMin within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)
+      U3 - Return Values - useMinVal_instruction: |
+        Call minVal within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)
+      U3 - Return Values - wrapTurtle_instruction: |
+        Write wrap in this simple app
+        to let the turtle "wrap" to the other side of the screen when it goes off.  (Click
+        to see full instructions)
+      U3 - Return Values - writeMaxVal_instruction: |
+        Write the function maxVal and
+        then use it within the console.log statement to calculate the maximum of two
+        values.  (Click to see full instructions)
+      U3 - Simulation - 1_instruction: |
+        Use a while loop to "flip a coin 10 times"
+        and write the values to the screen. (Click to see full instructions)
+      U3 - Simulation - 2.1_instruction: |
+        Change your looping condition so the simulation
+        runs until there are 5 heads flipped. (Click to see full instructions)
+      U3 - Simulation - 2.5_instruction: |
+        Run your simulation to get the full 10,000
+        flips! How long did it take? (Click to see full instructions)
+      U3 - Simulation - 2_instruction: |
+        Keep track of how many heads (1s) your program
+        generates and print the results to the screen. (Click to see full instructions)
+      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
+      U3 - Simulation - 4_instruction: |
+        Update your while loop's condition so the
+        the coin flips until there are three heads in a row. (Click to see full instructions)
+      U3 - Simulation - 5_instruction: |
+        Change your while loop to run until you get
+        a streak of 12 heads. How many flips did it take? (Click to see full instructions)
+      U3 - Simulation - 6_instruction: |
+        Keep adding to your simulation. What do you
+        want to explore next? (Click to see full instructions)
+      U3 - Simulation - App_instruction: |
+        Change your code to run the full simulation
+        with 10,000 coins. What was your longest streak of heads? (Click to see full
+        instructions)
+      U3 - Simulation - Template_instruction: |
+        Use a while loop to "flip 10 coins"
+        and write them to the screen. (Click to see full instructions)
+      U3 - User Input - Save getText To Variable_instruction: |
+        Save the age and name
+        of the user in variables (Click to see full instructions)
+      U3 - User Input - Saving After Input_instruction: |
+        Save the age of the user
+        in a variable using getText() (Click to see full instructions)
+      U3 - User Input and String -  Concat_instruction: |
+        Output a message about age
+        in a Text Area (Click to see full instructions)
       U3 - Variables - Clicker Game_instruction: |
         Create your improved Chaser-Game
         here. (Click to see full instructions)
@@ -2351,14 +2833,35 @@ ro:
         (click
         to see full instructions)
       U3 - Variables - Set to Expression with Other Variables_instruction: |
-        (click
-        to see full instructions)
+        Write
+        an expression that calculates the player's total score and stores it in the
+        totalScore variable. The calculation is: the player's points times lives
+        divided by the total time. (click to see full instructions)
       U3 - Variables - Set to Expression with Turtle_instruction: |
         (click to see
         full)
       U3 - Variables - Set to Expression_instruction: |
         Test out the new expressions.
         (Click to see full instructions)
+      U3 Digital Assistant Design_instruction: |
+        Pick a topic for your Digital Assistant
+        and create the basic layout with a text input and text area. (Click to show
+        full instructions)
+      U3 Digital Assistant Set Text_instruction: |
+        Have your digital assistant repeat
+        back what the user types and include a canned response. (Click to see full
+        instructions)
+      U3 Digital Assistant Target - Mehal_instruction: |
+        Try out a demo of the Digital
+        Assistant!
+      U3 Digital Assistant Target_instruction: Try out a demo of the Digital Assistant!
+      U3 Digital Assistant Template_instruction: This is a project template!
+      U3 Digital_instruction: |
+        Choose a specialization topic for your digital assistant.
+        Create a basic digital assistant that takes the user's input and displays
+        back a default response.
+      U3 full clicker demo_instruction: 'Clicker game - Try it out!'
+      U3 mehal's clone_instruction: Try out a demo of the Digital Assistant!
       U3- Variables - Assign Random For Turtle Draw_instruction: |
         Try writing the
         same code in text mode.
@@ -2367,10 +2870,12 @@ ro:
         before each moveForward so the turtle turns a different amount each time.
         (Click to see full instructions)
       U3- Variables - Create And Assign_instruction: |
-        Edit the variables to be created
-        and assigned on one line. Add a third variable. Print all three in the console.
-        (Click to see full instructions)
-      U3- Variables - Text Mode_instruction: Try writing the same code in text mode.
+        On one line add a variable
+        called "lives" and assign it the value 3. Print it to the console. (Click
+        to see full instructions)
+      U3- Variables - Text Mode_instruction: |
+        1. Switch to text mode and type instructions;
+        2. drag blocks out into text mode; 3. experiment with code completion
       U3-Design Mode-ID and Event Handler_instruction: |
         Add an event handler for
         the button using the "Insert and show" link in the Design Mode Events tab.
@@ -2379,8 +2884,8 @@ ro:
         Using the Design Mode Events change the button
         ID and update the code to match. (Click to see detail instructions).
       U3-Design Mode-Image_instruction: |
-        Recreate the 'chaser-game' from the last
-        lesson using Design Mode. (Click to see full instructions).
+        Recreate the "Chaser Game" from the last
+        lesson using Design Mode. (Click to see full instructions.)
       U313 drag Two Buttons_instruction: |
         Run a program with two buttons that have
         the same id to see the warning message in the console. Change the ids to make
@@ -2500,8 +3005,8 @@ ro:
         Add 15 fish to the image by writing drawAllFish
         with a loop. (Click to see full instructions)
       U3L07 - Free Play Loops and Random_instruction: |
-        Free Play!  Use what you learned
-        from loops and random to make your own little scene.  Have fun.
+        Free Play! Use what you learned
+        from loops and random to make your own little scene. Have fun.
       U3L07 - introSquare_instruction: |
         Use a loop to draw a square. (Click to see
         full instructions)
@@ -2544,6 +3049,10 @@ ro:
       U3L08 - drawSquaresWithParams_instruction: |
         Write drawSmallSquare() to draw
         a 25px square. (Click to see full instructions)
+      U3L08 - drawSquareWithParam - for video_instruction: |
+        Use drawSquare() to recreate
+        the image of both squares, this time using parameters. (Click to see full
+        instructions)
       U3L08 - drawSquareWithParam_instruction: |
         Use drawSquare() to recreate the
         image of both squares, this time using parameters. (Click to see full instructions)
@@ -2554,7 +3063,7 @@ ro:
         which accept parameters to allow you to add more variation to your scene.  The
         student worksheet provides more details and guidance.
       U3L08 - fish_instruction: |
-        Add a parameter to drawFish() that changes the size
+        Add a parameter to drawFish that changes the size
         of the fish drawn. (Click to see full instructions)
       U3L08 - freePlay_instruction: |
         Keep adding to your image by making more calls
@@ -2567,21 +3076,21 @@ ro:
         of sea grass to the image. Look at, but don't change, the functions that
         create them. (Click to see full instructions)
       U3L08 - multiParamFish_instruction: |
-        Add three parameters to your drawFish()
+        Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
         colors. (Click to see full instructions)
       U3L08 - multipleLayersofParams_instruction: |
         Call drawPlusSign() to complete
         the image. (Click to see full instructions)
       U3L08 - paramsToStarfish_instruction: |
-        Add a parameter to drawStarfish() that
+        Add a parameter to drawStarfish that
         changes the size of the starfish drawn. (Click to see full instructions)
       U3L08 - randomInput_instruction: |
         Use the randomNumber() blocks to test the
         functions you designed with random input. (Click to see full instructions)
       U3L08 - seaGrass_instruction: |
-        Add a parameter to drawSeaGrass() that changes
-        the size of the piece of sea grass drawn. (Click to see full instructions)
+        Add a parameter to drawSeagrass that changes
+        the size of the piece of seagrass drawn. (Click to see full instructions)
       U3L08 - squareTwoParams_instruction: |
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
@@ -2592,6 +3101,10 @@ ro:
       U3L08 - triangleTwoParams_instruction: |
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
+      U3L1 - Simulation - Template_instruction: |
+        Use a while loop to "flip 10 coins"
+        and write them to the screen. (Click to see full instructions)
+      U3L12 Chaser Template_instruction: This is a project template!
       U3L13 - Button with ID_instruction: |
         Drag a button out onto the screen and
         set its text to "Go forth!".  Run the program to make sure you can see the
@@ -2610,8 +3123,8 @@ ro:
         Debug the program by fixing the logical error
         within the program. (Click to see full instructions)
       U3L13 - Project_instruction: |
-        Create your Multi-screen App. (Click to see full
-        instructions)
+        Create your multi-screen app. (Click to see full
+        instructions.)
       U3L13 - Turtle Driver Project_instruction: |
         Create a "turtle driver" that
         includes buttons to move the turtle forward and turn it left and right. (Click
@@ -2622,17 +3135,126 @@ ro:
       U3L13 eventsDetails_instruction: |
         Add an event handler to the button to move
         the turtle forward. (Click to see full instructions)
+      U3L14 - Assigning Random Value_instruction: |
+        Write a program that simulates
+        the rolling of two dice and reports their individual values as well as the
+        sum. (click to see full instructions)
+      U3L14 - concatenate simple_instruction: |
+        Modify the write statement on line
+        3 to combine text and variables together to make the app display a single
+        line of text that shows the player's lives and score. (click to see full
+        instructions)
+      U3L14 - Mini Calculator embed_instruction: |
+        You will be prompted for two numbers,
+        one right after the other.  See what happens.  Enter different numbers until
+        you get the idea.
+      U3L14 - moving memory challenge1_instruction: |
+        Using only the variables provided,
+        assignment (=) and arithmetic (+ - * /) re-assign the values to make the console.log
+        statement display the correct value(s).  (Click to see full instructions)
+      U3L14 - moving memory challenge2_instruction: |
+        Using only the variables provided,
+        assignment (=) and arithmetic (+ - * /) re-assign the values to make the console.log
+        statement display the correct value(s).  (Click to see full instructions)
+      U3L14 - moving memory challenge3_instruction: |
+        Using only the variables provided,
+        assignment (=) and arithmetic (+ - * /) re-assign the values to make the console.log
+        statement display the correct value(s).  (Click to see full instructions)
+      U3L14 - moving memory challenge4_instruction: |
+        Using only the variables provided,
+        assignment (=) and arithmetic (+ - * /) re-assign the values to make the console.log
+        statement display the correct value(s).  (Click to see full instructions)
+      U3L14 - moving memory challenge5_instruction: |
+        Using only the variables provided,
+        assignment (=) and arithmetic (+ - * /) re-assign the values to make the console.log
+        statement display the correct value(s).  (Click to see full instructions)
+      U3L14 - moving memory challenge6_instruction: |
+        Using only the variables provided,
+        assignment (=) and arithmetic (+ - * /) re-assign the values to make the console.log
+        statement display the correct value(s).  (Click to see full instructions)
       U3L14 - Unfortunate Events Free Play_instruction: |
         Follow the "Unfortunate
         Events" Worksheet and enter your code here to experiment.  We've pre-loaded
         the code you need to start.
-      U3L16 - challenge say hi app_instruction: "In this challenge we give you starter\ncode that lays all the elements out on the screen.  Here’s what you need to\ndo:\r\nAdd event handler to textInput with the event type ‘input’ that shows\nthe “Say hi” button when that event occurs.\r\nAdd event handler to button\nso that on click, it writes a hello message to the screen and hides the textInput\nand button."
+      U3L14 - User Input Division calculator_instruction: |
+        Write a program that acts
+        as a simple calculator. (click to see full instructions)
+      U3L14 - Variable ReAssignment pt2_instruction: |
+        Trace the code and predict
+        what you think will be printed to the console. Then add a console.log statement
+        at the end of the program to see the last value of someNum to see if your
+        full prediction is correct. (click to see full Instructions)
+      U3L15 - add code to make count down work_instruction: |
+        Write code to make the
+        down arrow work as expected. (Click to see full instructions)
+      U3L15 - Add reset button to UpDown app_instruction: |
+        Add code so that clicking
+        the start over button will reset the game and send you back to the main screen.
+        (Click to see full instructions)
+      U3L15 - clicker update score_instruction: |
+        Add code to update the score when
+        the apple is clicked. (Click to see full instructions)
+      U3L15 - count upDown bug forget to set text_instruction: |
+        Find the bug in the
+        program and fix it. (Click to see full instructions)
+      U3L15 - count upDown bug logic error wrong update_instruction: |
+        Find the bug
+        in the program and fix it. (Click to see full instructions)
+      U3L15 - count upDown bug var not created globally_instruction: |
+        Find the bug
+        in the program and fix it. (Click to see full instructions)
+      U3L15 - Debug forget to update var on reset in UpDown app_instruction: |
+        Run
+        the app, and click the up or down button until you get to the gameOverScreen.
+        Click 'Start Over' and try the app again. Find and fix the issue in the
+        code. (Click to see full instructions)
+      U3L15 - Debug if never triggers in UpDown app_instruction: |
+        Run the app and
+        use the up and down arrows to try to hit the gameOverScreen. You can't! Find
+        and fix the issue in the code. (Click to see full instructions)
+      U3L15 - Debugging Simple If-statements =v==_instruction: |
+        Run the app, and
+        click the up button. Then restart and run it again, and click the down button.
+        Find and fix the issue in the code. (Click to see full instructions)
+      U3L15 - DEMO up down count practice app_instruction: |
+        Try out the demo app
+        (Click to see full instructions)
+      U3L15 - global var example count up_instruction: |
+        Look at the code for this
+        app and see how the code works to update the count variable when the up arrow
+        is clicked. (Click to see full instructions).
+      U3L15 - mini clicker update score_instruction: |
+        Add code to update the score
+        when the apple is clicked. (Click to see full instructions)
+      U3L15 - practice with setText_instruction: |
+        Use setText to complete the click
+        event handler for the down arrow. (Click to see full instructions)
+      U3L15 - Simple If-statements in UpDown App_instruction: |
+        Add an if statement
+        so that the app changes screens when the count reaches -5. (Click to see full
+        instructions)
+      U3L15 - variable scoping problem debugging_instruction: |
+        See if you can figure
+        out why the code is no longer working. (Click to see full instructions)
+      U3L15 click add lives_instruction: |
+        Add lives to the clicker game that decrement
+        by 1 when the background image is clicked (Click to see full instructions)
+      U3L15 full clicker app_instruction: |
+        Complete your clicker game! (Click to
+        see full instructions)
+      U3L16 - challenge say hi app_instruction: |
+        Write a greeting to the user when
+        they hit 'enter' in the text input, using the 'change' event. (Click to
+        see full instructions)
       U3L16 - chaserApp_instruction: |
-        Create your own "Chaser App". (Click to see
-        full instructions)
+        Create your own "Chaser Game." (Click to
+        see full instructions)
       U3L16 - chooseImages_instruction: |
         Replace the image in your application with
         one of your own. (Click to see full instructions)
+      U3L16 - doubleQuotes_instruction: |
+        Save a string inside a variable and log
+        it to the console. (Click to see full instructions)
       U3L16 - hideAndShow_instruction: |
         Introducing textInput, getText and write.  First
         run the starter code several times.  Try to change what's written to the
@@ -2660,12 +3282,24 @@ ro:
         connecting an event handler to it.  We've started you out with code similar
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
+      U3L16 - intro getText_instruction: |
+        Add text input UI elements for name and
+        age. (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)
+      U3L16 - introStrings_instruction: |
+        Save a string inside a variable and log
+        it to the console. (Click to see full instructions)
+      U3L16 - nameAgeTemplate_instruction: |
+        Add an Text Input box for the name and
+        age. (Click to see full instructions)
       U3L16 - newEventTypes_instruction: |
         Experiment with different event types and
         select the one that you think is best. (Click to see full instructions)
+      U3L16 - outputWithTextArea_instruction: |
+        Output a message to the 'textArea'
+        (Click to see full instructions)
       U3L16 - projectTemplate_instruction: |
         Create your own "Chaser App". (Click
         to see full instructions)
@@ -2679,7 +3313,7 @@ ro:
         it!  For more details see the Activity guide for this lesson.
       U3L16 - setPosition to move button_instruction: |
         Introducing the setPosition
-        command!  Replace the moveTo in the button-click event handler to use setPosition
+        command! Replace the moveTo in the button-click event handler to use setPosition
         to move the button itself to a random location when it's clicked.
       U3L16 - setPositionMoveButton_instruction: Use setPositon to moveButton
       U3L16 - setupMoveToRandom_instruction: |
@@ -2689,20 +3323,46 @@ ro:
       U3L16 - singleSetPosition_instruction: |
         Move the button to the middle of the
         screen. (Click to see full instructions)
+      U3L16 - stringsVsNumbers_instruction: |
+        Run the program to see how strings and
+        numbers behave with different arithmetic operators. (Click to see full instructions)
       U3L16 - text labels_instruction: |
         Use the textLabel command to replace the
         button in your program with a text label. (Click to see full instructions)
       U3L16 - textInput getText write_instruction: |
-        Introducing textInput, getText
-        and write.  First run the starter code several times.  Try to change what's
-        written to the screen when the button is clicked. Then use getText to write
-        to the screen what the user entered in the text box.
+        Add an Text Input box for the
+        name and age. (Click to see full instructions)
+      U3L16 - toUpper_instruction: |
+        Make the name of the user appear in uppercase
+        (Click to see full instructions)
       U3L16 - use images_instruction: |
         Use the image command to replace the text
         label in your program with an image. (Click to see full instructions)
+      U3L16 Mad Lib Clear Input_instruction: |
+        Clear the user's previous text when
+        the Play Again button is clicked (Click to see full instructions) 
+      U3L16 Mad Lib Demo_instruction: 'Mad Lib Demo - Try it out!'
+      U3L16 Mad Lib getText_instruction: |
+        Before setting the text area with your
+        Mad Lib outline, get the user's text and incorporate their responses. (Click
+        to see full instructions) 
+      U3L16 Mad Lib setText_instruction: |
+        When the Next button is clicked, set the
+        text area to have the main outline of your How-to Mad Lib (without the user's
+        input). (Click to see full instructions) 
+      U3L16 Mad Lib Student Setup_instruction: |
+        Back to Mad Lib: To get started,
+        set up the two screens for your Mad Lib app (Click to show full instructions)
+      U3L16 Mad Lib toUpper_instruction: |
+        Apply the toUpperCase and toLowerCase string
+        functions to the user's text. (Click to see full instructions) 
+      U3L17 - getAndSetKeyValue_instruction: |
+        Create an image like app. (Click to
+        see full instructions)
       U3L17 - getKeyValue_instruction: |
-        Create and update your key value pairs using
-        setKeyValue. (Click to see full instructions)
+        Run the program several times to observe
+        how the setKeyValue commands now always arrive in order. (Click to see full
+        instructions)
       U3L17 - introCallbacks_instruction: |
         Run the program several times to observe
         how the setKeyValue commands now always arrive in order. (Click to see full
@@ -2719,6 +3379,14 @@ ro:
       U3L17 - twoSetKeyValue_instruction: |
         Run the program several times to observe
         how often setKeyValue commands arrive out of order. (Click to see full instructions)
+      U3L18 comparison operators_instruction: |
+        Use console.log to print out the different
+        boolean expressions below to see what information they return. (Click to see
+        full instructions)
+      U3L18 comparison operators_for_video_instruction: |
+        Use `console.log` to print
+        out the different boolean expressions below to see what information they return.
+        (Click to see full instructions)
       U3L19 - Clicker Game Freeplay Area_instruction: |
         Use this App Lab area to improve
         your clicker game.  You should start by copy/pasting the code from your old
@@ -2730,14 +3398,27 @@ ro:
         Add console.log() statements
         to find out the value of a and b after the first reassignment statement a
         = b; (Click to see full instructions)
-      U3L19 - DEMO up down count practice app_instruction: Try out the demo app
+      U3L19 - DEMO up down count practice app_instruction: |
+        Try out the demo app
+        (Click to see full instructions)
       U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \r\nDo this: \r\n1. Try changing the value assigned\nto foo to see the string change. \r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \r\n"
+      U3L19 - fix the var name syntax error v2_instruction: |
+        Fix the error and get
+        it to print the value of both variables (Click to see full instructions)
       U3L19 - fix the var name syntax error_instruction: |
         Fix the error and get it
         to print the value of both variables (Click to see full instructions)
+      U3L19 - global var example count up_instruction: |
+        Look at the code for this
+        app and see how the code works to update the count variable when the up arrow
+        is clicked. (Click to see full instructions).
       U3L19 - practice with setText_instruction: |
         Add another button that changes
         the text to the value of a new variable. (Click to see full instructions)
+      U3L19 - Simple If-statements in UpDown App_instruction: |
+        Add an if statement
+        so that the app changes screens when the count reaches -5. (Click to see full
+        instructions)
       U3L19 - Target Clicker App_instruction: |
         Investigate the new elements of the
         'chaser-game'
@@ -2746,9 +3427,9 @@ ro:
         and b. Add console.log statements to find out the actual value of a and b.
         (Click for full instructions)
       U3L19 - three basic ops of variables_instruction: |
-        Add another variable with
-        a name of your choosing. Print the value of the variable to the console. (Click
-        to see full instructions)
+        Add another variable called
+        "lives" and set the value to 3. Print the value of the variable to the console.
+        (Click to see full instructions)
       U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF: U3L19-useconsolelog.gif"
       U3L19 - up down count practice app_instruction: |
         Set up the down button to
@@ -2763,14 +3444,22 @@ ro:
         shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
       U3L19 - variable reassignment challenge pt2_instruction: |
         Make a prediction
-        about the ending values of a,b, and c. Then use console.log to check your
+        about the ending values of a, b, and c. Then use console.log to check your
         understanding (Click to see full instructions)
+      U3L19 - variable reassignment part 1_instruction: |
+        Predict the value of a and
+        b. Add console.log statements to find out the actual value of a and b. (Click
+        for full instructions)
       U3L19 - variable scope problem 2_instruction: |
         What is happening with foo?
         Play with the level to try to figure it out. (Click to see full instructions)
       U3L19 - variable scoping problem debugging_instruction: |
         See if you can figure
         out why the code is no longer work. (Click to see full instructions)
+      U3L19 - write var and string with same name v2_instruction: |
+        Fix the code so
+        that the values of both variables print to the console. (Click to see full
+        instructions)
       U3L19 - write var and string with same name_instruction: |
         Fix the code so that
         the value of both variables prints to the console. (Click to see full instructions)
@@ -2781,9 +3470,9 @@ ro:
         Draw a 1x1 square above and to the
         left of the turtle's starting position. Click to see full instructions.
       U3L23 Chatbot Conditionals 1_instruction: |
-        Adjust the "if" block to make
-        the bot respond "That's the color of the sky!" if the user inputs the color
-        "blue".
+        Add if, else if, and else statements
+        to detect the movie genres Comedy, Romance, Action, and Horror. (Click to
+        see full instructions)
       U3L23 Chatbot Intro 1a_instruction: |
         Store the user's input inside a variable
         and log it to the console.
@@ -2829,8 +3518,8 @@ ro:
         to check if the strings "pizza" or "soup" are anywhere in the user's
         response.
       U3L24 Chatbot Basic Conditionals_instruction: |
-        Add a chained conditional with
-        at least 3 "else if" statements to your personal assistant.
+        Check out the project description
+        for instructions. (Click to see full instructions.)
       U3L24 Chatbot Conditionals 2_instruction: |
         Adjust the "if" block to make
         the bot respond "I don't know that color." if the user types anything besides
@@ -2845,16 +3534,18 @@ ro:
       U3L24 Chatbot Nested Conditionals_instruction: |
         Add a chained conditional with
         at least 3 "else if" statements to your personal assistant.
+      U3L24 introIncludes_instruction: |
+        Practice using the includes command. (Click
+        to see full instructions)
       U3L24 Nested Conditionals 1_instruction: |
-        Replace all instances of `str.indexOf("word")`
-        with a function `contains(sentence, word)` that returns true if the word is
-        in the sentence and returns false otherwise.
+        Change all of the boolean expressions
+        to use includes instead of ==. (Click to see full instructions)
       U3L24 Nested Conditionals 2_instruction: |
-        Use a nested conditional to respond
-        to the category "pizza" and the details "Hawaiian," "vegan," and "meat."
+        Nest your movie genre if statements
+        inside the if statements to check for a ? in the input. 
       U3L24 Nested Conditionals Bugs 2_instruction: |
-        Fix the bugs that still exist
-        in this program. Prove that the program works correctly.
+        Fix the problem with the code
+        so that all the conditions can be reached. (Click to see full instructions)
       U3L24 Nested Conditionals Bugs 3_instruction: |
         Fix the bugs that still exist
         in this program. Prove that the program works correctly.
@@ -2862,6 +3553,13 @@ ro:
         Expose the bugs in this problem
         by typing inputs into the user-input box. Track which inputs cause unexpected
         outputs.
+      U3L25 - drag out key event_instruction: |
+        Set up an event handler to respond
+        to keypress events, and display event.key in the console.  Hit keys on the
+        keyboard to see what happens.  (Click to see full instructions)
+      U3L25 - play sound when up key_instruction: |
+        Change the code so the sound will
+        only play when the up arrow is pressed. (Click to see full instructions)
       U3L25 Chatbot Strings_instruction: |
         1. Adjust your digital assistant to evaluate
         inputs the same way whether the inputs are capitalized or lowercase. 2. If
@@ -2894,10 +3592,8 @@ ro:
         music for those who listen.” Manipulate it using the functions str.toUpperCase()
         and str.toLowerCase().
       U3L26 AND operator_instruction: |
-        Inside the findingNemo function, write a conditional
-        statement that detects if a command contains all the phrases "2000" "animated"
-        and "G-rated." The function should return true if the above conditions are
-        met and return false otherwise
+        Update the genre and rating if statements
+        to give only one movie suggestion at a time. (Click to see full instructions)
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
@@ -2915,10 +3611,9 @@ ro:
         make Movie Bot respond normally. Otherwise, make Movie Bot respond "Sorry,
         I don't know about bad movies." 
       U3L26 OR operator_instruction: |
-        Inside the isBest function, write a conditional
-        statement that detects if a command contains at least one of the phrases "all
-        time" "all-time" "overall" or "millennium." The function should return
-        true if the above conditions are met and return false otherwise
+        Update the if statement to use an OR to check
+        for a "?" as well as who, what, where, when, why, how in the user input.
+        (Click to see full instructions)
       U3L27 Chatbot Final_instruction: |
         Make your digital assistant awesome and when
         you are finished, ask one of your classmates to test it for you using the
@@ -2957,5 +3652,11 @@ ro:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      Underground Avoiding Lava_instruction: 'Sub aceste blocuri se gaseste lava, pe care trebuie sa o acoperi inainte sa mergi inainte. O comanda "Daca" ar fi de ajutor aici. Adauga o comanda "mergi inainte" in locul corect pentru a acoperi aceste blocuri.'
+      Underground If Statements_instruction: 'Acum lucrurile devin mai dificile. Aduna 3 pietre rosii, dar fara sa cazi in lava. Foloseste o comanda "daca" pentru a acoperi lava cu piatra.'
+      Underground Iron_instruction: A merge in lava topita este o idee rea. Plaseaza placi de gresie pentru a crea un pod, apoi aduna cel putin 2 dintre blocurile de fier.
+      Underground Mine in a Circle_instruction: "Gaseste un mod sa aduni 5 diamante si 7 pietre rosii! Incearca sa folosesti o comanda \"repeta\" in interiorul altei comenzi \"repeta\" pentru a intra in patrat.\r\n"
+      Underground Mining Coal_instruction: Vei gasi cele mai valoroase resurse in subteran, dar se poate face intuneric. Plaseaza cel putin 2 torte si cauta cel putin 2 carbuni.
+      Underground Test Level_instruction: Colecteaza toate mineralele!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

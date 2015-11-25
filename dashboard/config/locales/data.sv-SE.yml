@@ -124,10 +124,10 @@
     level:
       instructions:
         maze_2_2: 'Kan du hjälpa mig att fånga den dumma grisen? Sätt ihop ett par
-          "gå framåt" block och tryck på "Kör" för att hjälpa mig komma dit. '
+          "gå framåt"-block och tryck på "Kör" för att hjälpa mig komma dit. '
         maze_2_1: Den här grisen stör mig. Hjälp mig att hitta honom!
-        maze_2_2_5: Lägg ut vägen och led mig till den dumma grisen. Undvik TNT:t
-          annars flyger fjädrarna!
+        maze_2_2_5: Lägg ut vägen och led mig till den dumma grisen. Undvik TNT, annars
+          flyger fjädrarna!
         maze_2_3: Led mig till den gröna elakheten! (Se upp för TNT)
         maze_2_4: Håll dig lugn och hjälp mig att hitta den elaka grisen. Annars kan
           det hända att jag blir arg!
@@ -534,6 +534,63 @@
           Rymdroboten och varna alla andra
         studio_playlab_10: Skapa ditt eget spel. När du är klar, klicka på Slutför
           för att låta vänner prova ditt spel på sina telefoner.
+        studio_iceage_1: Manny vill säga "Hej" - kan du hjälpa honom?
+        studio_iceage_2: Diego (skådespelare 1) och farmor (skådespelare 2) vill säga
+          "Hej" till varandra. Kan du hjälpa dem genom att använda blocket "säga"
+          två gånger?
+        studio_iceage_3: Kan du hjälpa Scrat att komma till flaggan?
+        studio_iceage_4: Kan du hjälpa Scrat (skådespelare 1) komma till farmor (skådespelare
+          2) och spela upp ett ljud när han kommer dit?
+        studio_iceage_5: Kan du hjälpa Sid säga "hälsningar" när han klickas på? Glöm
+          inte att klicka på Sid efter du har klickat på Kör
+        studio_iceage_6: Kan du hjälpa Diego flytta runt med upp/ned/höger/vänster
+          piltangenterna för att komma till alla flaggorna?
+        studio_iceage_7: Med "Upprepa för alltid" blocket kan du köra kod kontinuerligt.
+          Kan du bifoga block för att hjälpa Sid att flytta sig till höger och till
+          vänster om och om igen?
+        studio_iceage_8: Kan du lägga till ett block som lägger till ett poäng och
+          ett block som spelar ett ljud när Sid rör vid Manny och sedan flytta honom
+          med pilarna tills du får poäng?
+        studio_iceage_9: Ställ in bakgrunden för denna istid och hjälp Sid komma till
+          farmor snabbare genom att ändra hans hastighet. Flytta honom sedan med piltangenterna
+          för att komma till Sid och varna alla andra.
+        studio_iceage_10: Skapa ditt eget spel. När du är klar, klicka på Slutför
+          för att låta vänner prova ditt spel på sina telefoner.
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
+          him go the last 200 pixels using the "move" block.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Can you help Anton announce the start of a race
+          by saying "Ready, set, go!"? To test your program, don’t forget to click
+          Anton after you click Run!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Create your own game or story. When you're done,
+          click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Skapa ditt eget spel. När du är klar, klicka på Slutför
           för att låta vänner prova ditt spel på sina telefoner.
         studio_k1_1: Kan du göra så att hunden säger "hello world"?
@@ -593,34 +650,34 @@
         Unplug6: Villkor
         Unplug7: Låtskrivande
         Unplug8: Abstraktion
-        Unplug9: Relä programmering
+        Unplug9: Stafettprogrammering
         Unplug10: Internet
         Unplug11: Gör klart
         C1_happy_maps_unplugged: Glada kartor
         C1_moveitmoveit_unplugged: Flytta det, flytta den
         C1_bigevent_unplugged: Den stora händelsen
-        C1_getting_loopy: Bli Snurrig
+        C1_getting_loopy: Att bli snurrig
         C1_pair_programming: Par- programmering
         C1_maze_intro_sequencing: Labyrint- sekvensering Intro
         C1_maze_debugging: Labyrint felsökning
         C1_bee_level_intro: Bee nivå - Intro
         C1_artist_intro: Konstnär Introduktion
         C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: 'Labyrint: slingor'
-        C1_bee_loops: 'Bee: slingor'
-        C1_maze_loops: 'Labyrint: slingor'
+        C1_zuck_repeat_loop: 'Labyrint: Slingor'
+        C1_bee_loops: 'Bi: Slingor'
+        C1_maze_loops: 'Labyrint: Slingor'
         C1_playlab_storytelling: Play Lab - skapa en berättelse
         C1_planting_seed: Plantera ett frö
         C1_building_foundation: Bygga en grund
-        C1_going_places_safely: Tryggt gå till platser
+        C1_going_places_safely: Trygg resa
         C2_maze_intro: Labyrint Introduktion
         C2_artist_intro: Konstnär Introduktion
-        C2_zuck_repeat_loop: 'Labyrint: slingor'
-        C2_artist_loops: Artist Loopar
-        C2_artist_debugging: Artist Felsökning
-        C2_bee_loops: 'Bee: slingor'
-        C2_bee_debugging: Bee felsökning
-        C2_bee_conditionals: Bee Villkorssatser
+        C2_zuck_repeat_loop: 'Labyrint: Slingor'
+        C2_artist_loops: 'Konstnären: Slingor'
+        C2_artist_debugging: 'Konstnären: Felsökning'
+        C2_bee_loops: 'Bi: Slingor'
+        C2_bee_debugging: 'Biet: Felsökning'
+        C2_bee_conditionals: 'Bi: Villkor'
         C2_playlab_createstory: Play Lab - skapa en berättelse
         C2_graph_paper: Kalkyleringsprogrammering
         C2_conditionals_with_cards: Villkor
@@ -629,16 +686,16 @@
         C2_paper_airplanes: Pappersflygplan
         C2_digital_footprint: Ditt digitala fotavtryck
         C2_digital_footprint_v2: Ditt digitala fotavtryck
-        C3_maze_level_4: 'Labyrint: slingor'
+        C3_maze_level_4: 'Labyrint: Slingor'
         C3_artist_intro: Konstnär Introduktion
-        C3_artist_functions: Artist Funktioner
-        C3_bee_functions: Bee funktioner
-        C3_bee_conditionals: Bee Villkorssatser
+        C3_artist_functions: 'Konstnären: Funktioner'
+        C3_bee_functions: 'Biet: Funktioner'
+        C3_bee_conditionals: 'Bi: Villkor'
         C3_maze_conditionals: Labyrint villkorssatser
         C3_artist_nested_loops: Kapslade slingor(loopar)
         C3_farmer_while: '''Medan'' loopar(slingor)'
         C3_bee_nested_loops: Kapslade slingor(loopar)
-        C3_bee_debugging: Bee felsökning
+        C3_bee_debugging: 'Biet: Felsökning'
         C3_bounce: Studsa
         C3_playlab_create_game: PlayLab - skapa ett spel
         C3_computational_thinking: Uträkningstänkande
@@ -649,7 +706,7 @@
         C3_songwriting_with_parameters: Låtskrivande Med parametrar
         C4_intro: Introduktion
         C4_loops_zombie: Loopar
-        C4_bee_conditional: Bee Villkorssatser
+        C4_bee_conditional: 'Bi: Villkor'
         C4_variables_artist: Variabler - Konstnär
         C4_variables_playlab: Variabler - Play Lab
         C4_for_loops: '''För'' loopar'
@@ -676,7 +733,13 @@
         infinity_playlab_intro: Play Lab - introduktion
         infinity_playlab_events: Play Lab - Händelser
         infinity_playlab_repeat_forever: Play Lab -  Upprepa för evigt
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduktion till funktioner
+        csp_applab_functions_parameters: Funktioner med parametrar
+        csp_applab_loops: Loopar
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Lite om pixlar
         csp_pixelation_color_1: Färg pixelerings widget - Del1
         csp_pixelation_color_2: Färg pixelerings widget - Del2
@@ -708,6 +771,21 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: Bygg en galax med kod - introduktion'
+        starwars_typing: 'Star Wars: Bygg en galax med kod - JavaScript'
+        starwars_events: 'Star Wars: Bygg en galax med kod - händelser'
+        starwars_congrats: 'Star Wars: Bygg en galax med kod - Grattis'
+        starwars_blocks_intro: 'Star Wars: Bygg en galax med kod - introduktion'
+        starwars_blocks_events: 'Star Wars: Bygg en galax med kod - händelser'
+        starwars_blocks_congrats: 'Star Wars: Bygg en galax med kod - Grattis'
+        mc_intro: Minecraft - Introduktion
+        mc_repeat: Minecraft - Upprepa
+        mc_if_statements: Minecraft - If-statements
+        mc_congrats_share: Minecraft - Grattis
+        mc_congrats_no_share: Minecraft - Grattis
+        gumball_intro: Gumball Hour of Code - Introduction
+        gumball_events: Gumball Hour of Code - Events
+        gumball_repeat: Gumball Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Dra ett "gå framåt" block och fäst det under det andra blocket
@@ -809,3 +887,14 @@
         Infinity_move_directions_callout_arrow: Använd dessa pilar för att styra
         Infinity_move_collide_callout: Spela upp ett ljud när händelsen inträffar.
         Infinity_repeat_callout: Placera flytta - block  här inne
+        craft_run_button_callout: Klicka på "Kör" för att prova ditt program
+        craft_drag_block_callout: 'Dra ett #gå framåt()", block och fäst det under
+          det andra blocket'
+        craft_callout_preplaced: Vi har lagt några block här för så attdu kan komma
+          igång
+        craft_inside_repeat: Upprepa åtgärderna genom att placera block härinne
+        craft_callout_preplaced_house: Denna kod kommer att börja bygga ditt hus.
+          Kan du avsluta det?
+        craft_what_is_iron: Gräv upp detta järn!
+        craft_callout_moveforward: Denna kod kommer att kontrollera om det finns lava,
+          kan du lägga till ett kommando för att gå framåt?

@@ -1,26 +1,30 @@
 name 'U3L27 Student Lesson Introduction'
-encrypted 'l3N8Fr/nRQTGrtARv2a/eWgNcQFt1E/F2F4t4n7xbVHnJHAYrYVj9n4ZLWZY
-/0BOfadprx/fonZfKZWGTbKScMqlmDQjwuc+3t7Na2gtS3XcExK+KpcQKmaa
-KdnG0UVteFlSbZ3r6Qk3W4lYq33oX/D/xHUMgHRGQWsuwJ8FaVLV2vJjRVE2
-4DCwYqDRmambjVBY5XAj9TT/hPfHXpZJVL0oy/QHkv5ySJHqu0lLA+8U8d4p
-Dw3s213dd81tXb29eUexy730MxH7BV7jT4nQHUXBuGk+41jdymFKe0kwNiVv
-D0HlgzF5pM1dTjh3O92sto0UMFiGcsbZa9maFZZg8uYz0ImEwLdqmmcLevmp
-07VfRO1eqfM4xC+sgLKL2dAMHaJLUiHm4575ph/JKVzi4mNvcQOmeYR3Glsk
-RFjw88PpVEUkCvhpBmmgeWwuSoqgcT0wvY0XjppPBxed+Fy9xAr0w1f3dkVT
-HJjhi3Pkm+QHu5i3Iz9prIAQILRxcMPaRU7GX2NOvsRpTgO1+FgSvvqS5lcI
-xfbnRSTwQAxhQjfN/uyG7mrLWBsedpZWwQlSUb9Hj57D2qILyfIbzj6kneNZ
-QoGP13dl06/L2apMMFWw82buCs7OGZVZkoSI9S86BDdaQYqqeWi1eIjfxkWZ
-Md8sMlxJ9G3VK/4sw51HR5MKTTr+guhTxYVRzeROYnmRhfyasCfBDKVZMIj7
-riPwo0Gq5D0Sm8qaWWzJZodhcktZK1GIKkNtTSczRxf0mLA9l9xlxDP+EmNJ
-yeSNVmivpcu4ha13NQfrjXX+srbczNd0Gsly1xiIpZYzUAXFrVcOsidyNuna
-baDY5DnkED81QJ06qc1c7oG1XNVYxvpjDXu8/DnYnTPQcXCjMmfTAXLue6pt
-5xiTSFiydSgk2Dj+0tUs70Vnc+fF+yxawONkI/kaxk2D27c70helHa7s+E1j
-fEVVRuBZlg5Ws9kf9Mxxr2zvXyOZwez33W4moWEYBlVxNet8sfJhulo9b4AK
-FQ80sMqV42By0A1jrhzrVoUxEmlO6cmiph1a/urecPYtkgSoP6o8kVJ7OhsB
-wEeQD7n3UkyrVS2penrIE9zx9LVDcVf6YgvGyVd0tVKjvLJn0y8YRFkfakib
-gR+0CAtVcPu4dWBftUCmHrAMWHao7CuErSgOgemv15ZQpyT797aPM4aIygAW
-tWMbeW9wSuZUXxgzN3iTpTAkDuzHTjTiH3jnUL3EXPrPg0Mmn9GZ2hnA22gE
-FOmO864rZAKRIXlbj4+/H5rvhBOrbAoTYEIrJ1i40BP5R5i7S5m3pSdU/kB/
-kCmNyvZZWX5cFQJ4Od927uzQJW/uXOfUyDJLDy4zC+GADoMH/LLEseVCjCsj
-X9faPmA=
-'
+title 'Digital Assistant Challenge'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 27 - Functions with Return Values
+
+# Background
+
+Functions can accept input in the form of parameters, but we'll often want our functions to generate output which can be used in the logic of a program as well. We have already seen several functions that return values, for example `randomNumber` and `getText`. The ability to write your own functions that return values allows you to reuse useful calculations at many places in your program, and is a further step in creating generally useful programs.
+
+# Vocabulary
+
+**`return`:** a command used to end execution of a function and resume execution at the point where the function was called.
+
+**Return Value:** a value that is passed when a function returns to the place in the code where the function was called, potentially to be used in further computation.
+
+# Lesson
+
+* Introduction to the use of the `return` command.
+* Write functions that return values.
+* Use functions that return values to analyze information stored in an array.
+
+# Resources
+* Activity Guide: <a href="https://docs.google.com/document/d/1rGKhRhH5pzJJfYBa_tZy96-bg-SWgSbf_nomluTl18U/edit?usp=sharing" target="_blank">
+Go Fish
+</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

@@ -1,7 +1,8 @@
 sr-SP:
+  hour_of_code: Час кода
   hello: Здраво свете
   select_language: Молимо изаберите свој језик
-  en: Computer Science
+  en: Информатика
   computer_science_edweek: Едукацијска седмица о информатици
   csedweek_dates: 8-14 Децембар, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Сат програмирања </a>долази. Позивамо све учитеље и организаторе, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">да испланирају свој Сат програмирања</a>'
@@ -30,8 +31,11 @@ sr-SP:
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_search_search: Тражи
   csedweek_map_search_reset: Почни поново
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Региструј се
   cded_try_it: Пробајте
   twentyhours_trynow: Испробај сада
@@ -51,16 +55,17 @@ sr-SP:
   thank_you_: Хвала!
   congratulations: Честитамо!
   congratulations_on_completing_hoc: Честитамо на завршавању 1 Сата Програмирања
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code, <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and help students learn an Hour of Code!'
   course_name_accelerated: Accelerated Course
   course_name_course1: Course 1
   course_name_course2: Course 2
   course_name_course3: Course 3
   course_name_course4: Course 4
   congratulations_on_completing_course: 'Congratulations on completing %{course}'
-  congrats_next_tutorials_title: Try these tutorials next
-  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
+  congrats_next_tutorials_title: Probaj ovaj tutorijal
+  congrats_next_tutorials_desc: 'Isprobaj ovae kratake, jednočasovne tutorijale ili isprobaj <a href="%{current_path}/next">partnerski tutorijali</a>.'
   get_a_certificate_of_achievement: Узмите сертификат о достигнућу
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Molimo da izaberete važeće godine
   enter_valid_email: Молимо да унесете валидну емаил адресу
   get_a_certificate_message: "Послаћемо Вам сертификат и информације како да <a href='/learn/beyond'> Научите и више од сата кодирања</a>"
   get_a_certificate_message_after: "Кликните на диплому да би је преузели или одштампали. Сада, наставите са нашим <a href='http://studio.code.org'>другим курсевима</a>, или да би видели више могућности идите на <a href='/learn/beyond'>Научите више него у Сату програмирања</a>."
@@ -109,7 +114,6 @@ sr-SP:
   hoc_is_here: '#HourOfCode је стигао - Погледајте га! @codeorg'
   just_did_hoc: 'Управо сам завршио #HourOfCode - погледајте га! @codeorg'
   twitter_teach_cs: Зашто тако мало школа предаје рачунарске науке? Ми то можемо поправити. http://youtu.be/nKIu9yen5nc. Посетите http://code.org/ да научите више.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: Научите час кодирања
   beyond_hoc: Изван Једног Часа
   what_gender: Којег сте пола?
@@ -198,20 +202,27 @@ sr-SP:
   homepage_hero_text_stat_students: '#student_count студент рачуни на коду Студио'
   homepage_hero_text_stat_served: 'Час Кода: #served served'
   homepage_slot_text_hoc: сата кодирања
-  homepage_slot_text_frozen: 'Смрзнути - са Аном и Елзом'
+  homepage_slot_text_frozen: Залеђено краљевство са Аном и Елзом
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Сви наши туторијали
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Купуј
   homepage_slot_text_flappy: Flappy Code
+  homepage_action_text_hoc: Sat programiranja za svakog učenika.
+  homepage_action_text_num_served: '# приказано'
+  homepage_action_text_join_us: Pridruži nam se
+  homepage_action_text_sign_up: Региструј се
+  homepage_action_text_try_it: Пробајте
+  homepage_action_text_volunteers: Potrebni volonteri za tehničku podršku
   homepage_action_text_codevideo: Погледајте видео
   homepage_action_text_teachervideo: Погледајте видео
+  homepage_action_text_girlvideo: Inspirišimo devojčice
   homepage_action_text_learn: Почни
   homepage_action_text_signpetition: Потпишите петицију
   homepage_signpetition_dropdown: 'Потпишите нашу петицију &#x25BE;'
   homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_banner_text_prizes: 'Sat programiranja je opet tu od 7. do 13. decembra. '
+  homepage_banner_link_prizes: 'Pridruži se najvećem događaju za učenje u istoriji. '
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: Сазнајте више
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -221,7 +232,7 @@ sr-SP:
   homepage_slot_text_link_hoc: 'Испробај "Hour of Code"'
   homepage_slot_text_link_host: Одржите Сат програмирања
   homepage_slot_text_link_hocserved: '# приказано'
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_solot_text_link_volunteer: Volontiraj na Satu programiranja
   homepage_slot_text_title_students: Students
   homepage_slot_text_blurb_students: Истражи све наше туторијале
   homepage_slot_text_link_codestudio: Испробај Студио Програмирања
@@ -278,21 +289,43 @@ sr-SP:
   class_submission_level_college: Факултет
   class_submission_level_vocational: Професионални
   class_submission_languages_other: Други језик/ци
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  starwars_subtitle: Izgradi Galaksiju sa Code
+  starwars_javascript_title: JavaScript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: Испробај сада
+  starwars_blocks_title: блокови
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_start_button: Испробај сада
+  starwars_watch_videos: Before you get started, watch one of these inspirational videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  starwars_platform_text: Modern browsers, smartphones, tablets
+  mc_name: Minecraft sat programiranja
+  mc_longdescription: Користите блокове кода да поведете Стива или Алексу у авантуру кроз овај Мајнкрафт свет.
+  mc_shortdescription: Користите блокове кода да поведете Стива или Алексу у авантуру кроз овај Мајнкрафт свет.
+  mc_gradelevel: Ages 6+
+  mc_platformtext: Modern browsers, smartphones, tablets
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  minecraft_subtitle: Minecraft sat programiranja
+  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: Име
-  volunteer_engineer_submission_field_name_placeholder: Full Name
+  volunteer_engineer_submission_field_name_placeholder: Пуно име и презиме
   volunteer_engineer_submission_field_company: Company (or University)
   volunteer_engineer_submission_field_company_placeholder: Company (or University)
   volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: "If you enter your exact address we won't share it, just show you as a pin on map."
+  volunteer_engineer_submission_field_location: Место
+  volunteer_engineer_submission_field_location_desc: Your location will be used to allow teachers to search for nearby volunteers and will be shown as a pin on the map. If you are concerned about privacy, please use your work/school address or your city only.
   volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country, or street address
   volunteer_engineer_submission_field_location_flexibility: I can help during the Hour of Code by... (select all that apply)
   volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering after the Hour of Code
@@ -303,7 +336,7 @@ sr-SP:
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Опис
   volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation
+  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here.
   volunteer_engineer_submission_header_private: Information kept private and never shared
   volunteer_engineer_submission_field_email: Емаил адреса
   volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
@@ -311,7 +344,7 @@ sr-SP:
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
   volunteer_engineer_submission_submit: Пошаљи
-  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn more here.</a>'
+  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn more here.</a>'
   volunteer_engineer_submission_commitment_uncertain: Несигурно
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 сат по недељи
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 сата по недељи
@@ -325,8 +358,20 @@ sr-SP:
   volunteer_engineer_submission_location_flexibility_remote: Учење на даљину (учитељи или ученици)
   volunteer_engineer_submission_location_flexibility_curriculum: Желели би сте да допринесете отвореним програмима?
   volunteer_engineer_submission_experience_unspecified: Неодређено
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: Тренутни студент (или истраживач)
   volunteer_engineer_submission_experience_software_professional: Професионалац за програмирање
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: "I'm looking for a mentor to help prepare me for coding with my students"
   petition_age: Узраст
   dashboard_landing_title: Почетна страница за учитеље
   dashboard_landing_welcome: Добродошли на нову и побољшану учитељску контролну таблу.
@@ -507,19 +552,31 @@ sr-SP:
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: 'Сат Програмирања је стигао: 8-14 Децембра!'
   code_sign_up: Пријавите се да учествујете током недеље за едукацију о компјутерској науци
   learn_more: Сазнајте више
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
   learn_sign_up_button: Региструј се
+  learn_videos_watch: Watch this inspirational video with your classroom
+  learn_videos_show: Show this inspirational video to your class
+  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Saznaj više</a> o nagradama za svakog edukatora.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Пробајте наше нове водиче за Сат програмирања
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, Plants vs Zombies,и Ice age
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: Уметник са Аном и Елзом из Залеђеног краљевства
+  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Tutorials by 3rd parties
+  carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Туторијали на твом језику
   carousel_heading_domestic: Водичи на Енглеском
   carousel_heading_beginners: Водичи за почетнике
@@ -533,6 +590,7 @@ sr-SP:
   carousel_heading_robots: Научите да програмирате са роботима
   carousel_heading_ide: Платформе популарне са учитељима
   educator_notes: Белешке за едукаторе
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   how_to_teach_hoc: Како предавати Сат програмирања
   more_resources_educators: Више ресурса за учитеље и едукаторе
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
@@ -544,7 +602,8 @@ sr-SP:
   older_systems: Водичи који раде на старијим системима
   older_systems_subheading: 'Ово би требало радити на старим веб читачима. Да приступите свим туторијалима, инсталирајте <a href="http://browsehappy.com/" target="_blank">модеран веб читач.</a>'
   mobile_devices: Туторијали за мобилне уређаје
-  frozen_name: Code with Anna and Elsa
+  frozen_name: Програмирај са Аном и Елзом
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
   codeorg_name: Напиши свој први компјутерски програм
   codeintl_name: Напиши свој први компјутерски програм
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -582,8 +641,10 @@ sr-SP:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Лист, камен, маказе
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: Напиши свој први компјутерски програм
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artist
   codeorg_gradelevel: Ages 4-104
   codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -623,7 +684,10 @@ sr-SP:
   projguts_gradelevel: Ages 10-13
   hourofcode_gradelevel: Ages 4-104
   frozen_gradelevel: Ages 8+
+  starwars_gradelevel: Ages 6+
   playlab_gradelevel: Ages 4-104
+  infinity_gradelevel: Ages 4-104
+  artist_gradelevel: Ages 4-104
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
@@ -662,7 +726,8 @@ sr-SP:
   kodableunplugged_platformtext: Unplugged
   projguts_platformtext: Unplugged
   hourofcode_platformtext: Modern browsers, smartphones, tablets
-  frozen_platformtext: Modern browsers + tablets
+  frozen_platformtext: Модерни претраживачи + таблети
+  starwars_platformtext: Модерни претраживачи + таблети
   playlab_platformtext: Modern browsers, smartphones, tablets
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
@@ -701,9 +766,12 @@ sr-SP:
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
   kodableunplugged_shortdescription: A fun unplugged exercise
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
-  frozen_shortdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+  hourofcode_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  frozen_shortdescription: Хајде да искористимо програмирање да би се придружили Ани и Елзи у истраживању магије и лепоте леда.
+  starwars_shortdescription: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
   codeintl_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -743,7 +811,8 @@ sr-SP:
   kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily Frenzy is an introduction to programming logic for kids 5 and up. A teacher should explain the game, then students program a partner to complete a simple obstacle course. '
   projguts_longdescription: 'This "unplugged" activity helps students learn how modeling and simulation works by having a group of students play different versions of the Rock / Paper / Scissors game, and see the results as different modeling experiments.'
   hourofcode_longdescription: Placeholder for new code.org/hoc
-  frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+  frozen_longdescription: Хајде да искористимо програмирање да би се придружили Ани и Елзи у истраживању магије и лепоте леда. Креираћете пахуљице и обрасце док клижете по леду и направићете зимску чаролију коју можете поделити са својим пријатељима!
+  starwars_longdescription: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
   codeorg_beyond_name: Intro Computer Science (grades K-8)
   khan_beyond_name: Learn computer programming
@@ -933,3 +1002,11 @@ sr-SP:
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
   compatibility_https_hide_this_warning: Hide this warning
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: маши крилима
+  infinity_shortcode: inf
+  playlab_shortcode: играј
+  artist_shortcode: art

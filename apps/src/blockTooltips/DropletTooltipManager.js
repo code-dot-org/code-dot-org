@@ -82,12 +82,11 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
  * Registers blocks based on the dropletBlocks and codeFunctions passed to the constructor
  */
 DropletTooltipManager.prototype.registerBlocks = function () {
-  dropletUtils.getAllAvailableDropletBlocks(this.dropletConfig, this.codeFunctions).forEach(
+  dropletUtils.getAllAvailableDropletBlocks(
+    this.dropletConfig,
+    this.codeFunctions,
+    this.autocompletePaletteApisOnly).forEach(
     function (dropletBlockDefinition) {
-      if (dropletBlockDefinition.noAutocomplete) {
-        // Ignore blocks with noAutcomplete set:
-        return;
-      }
       if (this.autocompletePaletteApisOnly &&
           this.codeFunctions &&
           typeof this.codeFunctions[dropletBlockDefinition.func] === 'undefined') {

@@ -151,102 +151,92 @@ et:
         turtle_1_6: 'Kas mõtled välja, kuidas joonistada seda kolmnurka ja ruutu? Vihje: Joonista kolmnurk enne ja siis mõtle kui palju pead pöörama, et joonistada ruutu.'
         turtle_1_7: 'Nüüd natukene raskem ülesanne - kas oskad joonistada neid rohelisi prille. Ruudud on küljepikkusega 100 pikslit ja ruutude kaugus on 50 pikslit. Ära unusta prille roheliseks värvida!'
         turtle_1_8: 'Proovi aru saada, mis juhtub antud koodi käivitamisel (või vajuta "Käivita", et proovida). Seejärel käivita nii mitu korda, et lõpetada joonistus. Värvid muutuvad igal käivitamisel.'
-        turtle_1_9: Nuputa välja, mis numbriga asendada küsimärki, et joonistada ring.
-        turtle_1_10: 'Sa said sellega hakkama. Nüüd võid joonistada mida ise tahad. Mõned lahedad ideed: kriipsujuku, lumehelves või spiraal. Proovi kasutada uut "määra laius" plokki. Lõbutsege!'
+        turtle_1_9: Nuputa välja, mis numbriga asendada küsimärk, et joonistada ring?
+        turtle_1_10: 'Sa said sellega hakkama! Nüüd võid joonistada, mida ise tahad. Mõned lahedad ideed: kriipsujuku, lumehelves või spiraal. Proovi kasutada uut "määra laius" plokki. Laske käia!'
         turtle_4_1: 'Kas sa saad joonistada kolmnurga, (külgedega 100 pikslit) kasutades ainult kolme plokki? Vihje: kasuta "korda" plokki.'
         turtle_4_2: 'Lisa "pööra 90 kraadi" plokk kuhugi töölaual olevale programmile, et joonistada need kolmnurgad.'
         turtle_4_3: 'Okei, siin on kood mille sa kirjutasid ühe kolmnurga joonistamiseks. Kas sa saad ilusa lille joonistamiseks lisada "korda" ja "pööra" ploki?'
-        turtle_4_4: "Here's the same code from the previous puzzle, but turning only 36 degrees after drawing each triangle. How many times does this need to repeat? (Hint: after 360 degrees of turning the drawing will come full circle)"
-        turtle_4_5: "Here's the same code from the previous puzzle, but repeating the turns 36 times. How many degrees should the turns be? (Hint: after 360 degrees of turning the drawing will come full circle)"
-        turtle_4_6: Using only 3 blocks, can you draw a square with edges of 20 pixels?
-        turtle_4_7: "Here's the code for drawing the square from last puzzle. Can you repeat it to draw 10 adjacent squares like a ladder? Hint: you only need 2 more blocks."
-        turtle_4_8: "Here's the solution to the previous puzzle. Can you add just 2 more blocks to complete the drawing?"
-        turtle_4_9: "Here's the solution to the previous puzzle. How many degrees should you turn to complete the drawing? (You probably need to guess a few times)"
-        turtle_4_10: "Here's the solution to the previous puzzle. How many times should you repeat to complete the drawing?"
-        turtle_4_11: 'Try changing the numbers in the "turn" and "repeat" blocks to make different patterns. Or, experiment changing the rest of the code to draw anything you want.'
-        maze_karel_1_1: |-
-          Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting. Move me to the pile of dirt and use the "remove" block to remove it.
-        maze_karel_1_2: 'Next, move me to the hole and fill it with TWO shovelfuls of dirt, using the "fill" block.'
-        maze_karel_1_3: Move me to the pile of dirt and tell me how many shovelfuls to remove using as few blocks as possible.
-        maze_karel_1_4: 'Can you help me remove all four piles of dirt? Hint: use a repeat block if you can.'
-        maze_karel_1_5: 'Help me fill in all these holes with 5 shovelfuls of dirt. Hint: you can put a "repeat" block inside the "while" block.'
-        maze_karel_1_6: |-
-          Remove all the piles of dirt, using as few blocks as possible. The new options in the dropdown menu on the "while" block tell me if I'm standing on a pile or a hole.
-        maze_karel_1_7: "Wow, I found a really deep hole! I don't know how many shovelfuls of dirt it needs. Can you write a program that fills it until the ground is even?"
-        maze_karel_1_8: Help me fill in the hole at the end of the field, using as few blocks as possible.
-        maze_karel_1_9: 'Make me remove all these piles of dirt. Try to use as few blocks as possible. Hint: try using a "while" block.'
-        maze_karel_1_10: "I'm working late, so it's dark out, and I can't tell how large the piles are. Now I don't have all the options I used to have on the while block. Move me along the field, and if there is a pile, remove it."
-        maze_karel_1_11: |-
-          It's still dark outside. Move me along the field. If there is a pile, remove it, and if there is a hole, fill it in. Hint: use the dropdown menu of options on the "if" block.
-        turtle_2_1: "Hello. Me zombie artist. Me love drawing! Help me draw a square in a special color. Important note: you have all the same blocks but they've now been arranged in categories."
-        turtle_2_2: 'Welcome to using functions, which let you define new blocks! Try the new "draw a square" block, found in the "Functions" category, to draw a small 50x50 green square.'
-        turtle_2_3: 'Use the "repeat" block (in the "Loops" category) to draw 3 squares of size 100, each 120 degrees apart. And do it in 3 different, random colors.'
-        turtle_2_4: "Now we're going to get fancy. Change the code to draw 36 squares, 100 pixels wide, and each 10 degrees apart. Hint: you may want to use the slider to make me go faster."
-        turtle_2_5: |-
-          Draw squares with sides of 50, 60, 70, 80, and 90 pixels.  You'll need to use the "draw a square" function five times.
-        turtle_2_6: |-
-          Ok, this program will use a counter, to draw the same squares as last time. You want the square to be the same size as the counter, so use the "counter" block. Hint: It's in the Variables category.
-        turtle_2_7: |-
-          Here's a program to draw a spiral, but the blocks are disabled so they won't run. Make a new program using a "count with" block (in the Loops category) and "counter" block (in the Variables category) to draw the same spiral.
-        turtle_2_7_5: |-
-          There's a new "draw a snowman" function (in the Functions category). Draw two snowmen, of height 250 and 100.
-        turtle_2_8: |-
-          This one's a bit tricky. Use the "draw a snowman" function and the new "jump forward" block (in the Actions category). Draw 3 snowmen in different colors, 100 pixels apart.
-        turtle_2_9: 'Use a "count with" loop to draw a family of snowmen with heights of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart.'
-        turtle_2_10: "Here's some code to try experimenting with different spirals.  What happens if you change the turn amount? Or set a random color in the loop?  Draw anything you like."
-        maze_karel_2_1: 'Try using the blocks to help me remove all the piles and fill in all the holes on the ground. Try to use loops instead of using too many blocks. Hint: you can put a loop inside another loop.'
-        maze_karel_2_2: |-
-          We've defined our own block called "fill 5", which is now in the Functions category. Use it to help me fill in this hole.
-        maze_karel_2_3: |-
-          Use the new "fill 5" function block to make me fill in all the holes. You'll have to drag out the "fill 5" block out from the Functions category.
-        maze_karel_2_4: Define a new function that removes 7 shovelfuls. Then use it to write a program that helps me remove all the piles.
-        maze_karel_2_5: Create a new function that removes 6 shovelfuls from a pile, and use it to help me level out all the piles.
-        maze_karel_2_6: 'Use two new functions, "fill 8" and "remove 8", to help me level out the pile and fill in the hole.'
-        maze_karel_2_7: "There's a cow in my field! Write a new function that helps me avoid the cow and remove the pile. Put all your blocks inside the new function."
-        maze_karel_2_8: 'Use this new function, "avoid the cow and remove 1", to help me remove all the piles.'
-        maze_karel_2_9: "Ok, here's a function that removes 4 different piles of dirt in a vertical column. Try putting this function inside a loop, so that you remove all the piles of dirt using only a few new blocks."
-        maze_karel_2_10: Move me across the field, and use these two functions to help me remove all the piles and fill all the holes.
-        turtle_3_1: |-
-          This puzzle shows you how the "draw a square" and "draw a circle" functions are defined.  Defining a function doesn't run its blocks.  You have to pull out the "draw a square" block to actually draw a square.
-        turtle_3_2: 'Using the "draw a square" function as an example, create a "draw a triangle" function and use it.'
-        turtle_3_3: 'Draw triangular fences around the cats and a square fence around the cow.  Tip: test the program as you go along.'
-        turtle_3_4: 'See if you can figure out how to use "draw a square" and "draw a triangle" (and some other blocks) to draw a house around the lion.'
-        turtle_3_5: 'Now create a new "draw a house" function and use it to house two cats. Hint: create a new function using the "do something" block, and type your own text to name the block.'
-        turtle_3_6: 'Using "draw a square" as an example, add an input named "length" to "draw a triangle". Then, draw triangles in different sizes. (Hint: click the star to add an input to a function)'
-        turtle_3_7: 'Add an input named "length" to "draw a house" and build a big house for the elephant (with edges 150 pixels long)'
-        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
-        turtle_3_9: 'Can you re-create the "draw a house" function without help? Try it, and then draw a row of houses.'
+        turtle_4_4: 'Siin on sama kood, mis eelmises pusles, kuid pöördub vaid 36 kraadi pärast iga kolmnurga joonistamist. Mitu korda on vaja ülesannet korrata? (Vihje: pärast pöördumist 360 kraadi saab joonisest täisring)'
+        turtle_4_5: 'Siin on sama kood, mis eelmises pusles, kuid pööramised on korratud 36 korda. Mitu kraadi peaksid olema pöörded? (Vihje: pärast pöördumist 360 kraadi saab joonisest täisring)'
+        turtle_4_6: Kasutades vaid kolme blokki, kas sa saad joonistada ruudu, mille serva pikkus on 20 pikslit?
+        turtle_4_7: 'Siin on kood ruudu joonistamiseks viimases mõistatuses. Kas sul õnnestub seda korrata ja joonistada 10 külgnevat ruutu, nagu redel? Vihje: vajad ainult 2 täiendavat blokki.'
+        turtle_4_8: Siin on lahendus eelmisele puslele. Kas saad lisada veel vaid 2 plokki, et joonistus valmis saaks?
+        turtle_4_9: Siin on lahendus eelmisele puslele. Mitu kraadi pead pöörama, et joonistus valmis saaks? (Pead tõenöoliselt paar korda arvama)
+        turtle_4_10: Siin on lahendus eelmisele puslele. Kui mitu korda pead kordust kasutama, et joonistus ära lõpetada?
+        turtle_4_11: 'Proovi muuta numbreid "pööra" ja "korda" plokkides, et luua erinevaid mustreid. Või eksperimenteeri ülejäänud koodiga, et joonistada ükskõik mida soovid.'
+        maze_karel_1_1: 'Tere, mina olen talunik. Mul on vaja su abi, et siluda ära põld mu talus, nii et see oleks istutamiseks valmis. Liiguta mind mullahunniku juurde ja kasuta "eemalda" blokki selle eemaldamiseks.'
+        maze_karel_1_2: 'Järgmiseks liiguta mind augu juurde ja täida see KAHE labidatäie mullaga, kasutades "täida" plokki.'
+        maze_karel_1_3: Liiguta mind mullahunniku juurde ja ütle, kui mitu labidatäit eemaldada kasutades võimalikult vähe plokke.
+        maze_karel_1_4: 'Kas saad mul aidata eemaldada kõik mullahunnikud? Vihje: võimalusel kasuta korduse plokki.'
+        maze_karel_1_5: 'Aita mul täita kõik need augud 5 labidatäie mullaga. Vihje: sa võid lisada korduse ploki "tingimusel" blokki.'
+        maze_karel_1_6: 'Eemalda kõik mullahunnikud kasutades võimalikult vähe plokke. Uued võimalused "tingimusel" ploki rippmenüüs ütlevad mulle, kas ma seisan hunniku või augu kohal.'
+        maze_karel_1_7: Uskumatu, ma leidsin tõeliselt sügava augu! Ma ei tea, kui mitu labidatäit mulda selle täitmiseks vaja on. Kas sa saaksid kirjutada programmi, mis täidab augu kuni maapind on tasane?
+        maze_karel_1_8: Aita mul täita auk põllu lõpus ning kasuta nii vähe plokke kui võimalik.
+        maze_karel_1_9: 'Aita mul kogu see mustus eemaldada. Proovi kasutada võimalikult vähe blokke. Vihje: proovi kasutada blokki "korduv".'
+        maze_karel_1_10: Töötan hilja, mistõttu on väljas pime, ja ma ei tea, kui suured on kuhjad. Samuti ei ole mul kõiki valikuid, mis mul enne olid seoses korduv-blokkidega. Liiguta mind väljal ringi ja kui seal on kuhi, siis eemalda see.
+        maze_karel_1_11: 'Väljas on ikka pime. Liigu minuga väljal ringi. Kui seal on kuhi, siis eemalda see, ja kui seal on auk, siis täida see. Vihje: kasuta avanevat valikute menüüd "kui" bloki juures.'
+        turtle_2_1: 'Hei! Olen zombie-kunstnik. Armastan joonistada! Aita mul joonistada ring spetsiaalse värviga. Oluline tähelepanek: sul on kõik samad blokid, aga nad on nüüd liigitatud.'
+        turtle_2_2: 'Tere tulemast kasutama funktsioone, mille abil saad määratleda uusi blokke! Proovi uut "joonista ruut" blokki, mis on "funktsioonide" kategoorias, et joonistada väike 50 x 50 roheline ruut.'
+        turtle_2_3: 'Kasuta "korduse" blokki (asub "korduvtsüklite" kategoorias), et teha 3 ruutu suurusega 100 ja teineteisest 120 kraadi eemal. Ja tee seda kolme erineva juhuslikult valitud värviga.'
+        turtle_2_4: 'Nüüd hakkame ilustama. Muuda koodi, et joonistada 36 ruutu, mis on 100 pikslit laiad ja 10 kraadi teineteisest eemal. Vihje: võid kasutada liugurit, et ma kiiremini edasi liiguks.'
+        turtle_2_5: 'Joonista ruute, mille küljed on 50, 60, 70, 80 ja 90 pikslit. Sul tuleb kasutada "joonista ruut" funktsiooni viis korda.'
+        turtle_2_6: 'Ok, see programm kasutab loendurit, et teha samu ruute, kui viimati. Kui tahad, et ruudud oleksid samas suuruses, kui loendur, siis kasuta "loendur" blokki. Vihje: see on muutujate kategoorias.'
+        turtle_2_7: 'Siin on programm spiraali joonistamiseks, kuid blokid on blokeeritud, niiet nad ei käivitu. Tee uus programm, kasutades "loenda koos" blokki (korduvtsüklite kategoorias) ja "loendur" blokki (muutujate kategoorias) ning joonista uus spiraal.'
+        turtle_2_7_5: 'Siin on uus "joonista lumememm" funktsioon (funktsioonide kategoorias). Joonista lumememm, mille kõrgus on 250 ja 100.'
+        turtle_2_8: 'See on pisut keeruline. Kasuta "joonista lumememm" funktsiooni ja uut "hüppa edasi" blokki (tegevuste kategoorias). Joonista 3 lumememme eri värvidega ja 100 pikslit teineteisest eemal.'
+        turtle_2_9: 'Kasuta "loenda koos" korduvtsüklit ja joonista lumememmede perekond kõrgustega 110, 100, 90, 80 ja 70. Lumememmed peaksid olema teineteisest 60 pikslit eemal.'
+        turtle_2_10: Siin on mõned koodid, mis on mõeldud proovimiseks eri spiraalides. Mis juhtub, kui muuta pöörete hulka? Või seadistada juhuslik värv korduvtsüklisse? Joonista, mis sulle meeldib.
+        maze_karel_2_1: 'Proovi kasutada blokke et eemaldada kuhjad ning täita kõik augud pinnal. Proovi kasutada korduvtsükleid suure hulga blokkide asemel. Vihje: korduvtsükleid saab panna üksteise sisse.'
+        maze_karel_2_2: 'Oleme määratlenud oma bloki nimega "täida 5", mis asub nüüd funktsioonide kategoorias. Kasuta seda, et aidata mind selle augu täitmisel.'
+        maze_karel_2_3: 'Kasuta uut "täida 5" funktsiooniga blokki, et aidata mind kõikide aukude täitmisel. Sul tuleb lohistada "täida 5" blokk funktsioonide kategooriast välja.'
+        maze_karel_2_4: Määratle uus funktsioon, mis eemaldaks 7 labidatäit. Nüüd kasuta seda uue programmi kirjutamiseks, mis aitaks mul kõik kuhjad eemaldada.
+        maze_karel_2_5: Loo uus funktsioon, mis eemaldaks 6 labidatäit kuhjast ning kasuta seda, et aidata mul tasandada kõik kuhjad.
+        maze_karel_2_6: 'Kasuta kahte uut funktsiooni "täida 8" ja "eemalda 8", et aidata mul tasandada kuhi ja täita auk.'
+        maze_karel_2_7: Minu väljal on lehm! Kirjuta uus funktsioon, mis aitaks mul lehma vältida ja kuhi eemaldada. Aseta kõik blokid uue funktsiooni sisse.
+        maze_karel_2_8: 'Kasuta uut funktsiooni "väldi lehma ja eemalda 1", et aidata mind kõikide kuhjade eemaldamisel.'
+        maze_karel_2_9: Ok, siin on funktsioon, mis eemaldab 4 eri mustuse hunnikut vertikaalses tulbas. Proovi panna see funktsioon korduvtsüklisse, nõnda et sa saaksid kõik mustuse hunnikud eemaldada kasutades vaid väheseid uusi blokke.
+        maze_karel_2_10: Liigu minuga üle välja ja kasuta neid kahte funktsiooni, et aidata mul eemaldada kõik hunnikud ja täita augud.
+        turtle_3_1: 'See mõistatus näitab kuidas "joonista ruut" ja "joonista ring" funktsioonid on määratletud. Funktsiooni määratlemine ei käivita selle blokke. Sul tuleb tõmmata välja "joonista ruut" blokk, et tegelikult ruut joonistada.'
+        turtle_3_2: 'Kasuta "joonist ruut" funktsiooni näidisena ning loo "joonista kolmnurk" funktsioon ka kasuta seda.'
+        turtle_3_3: 'Joonista kolmnurksed aiad ümber kasside ja ruudukujuline aed ümber lehma. Näpunäide: testi programmi töö käigus.'
+        turtle_3_4: 'Vaata, kas sul õnnestub välja mõelda, kuidas kasutada "joonista ruutu" ja "joonista kolmnurka" (ning mõnesid teisi blokke), et joonistada lõvi ümber maja.'
+        turtle_3_5: 'Nüüd loo uus "joonista maja" funktsioon ja kasuta seda kahe kassi majutamiseks. Vihje: loo uus funktsioon kasutades "tee midagi" blokki ja trüki sisse oma tekst, et blokile nimi anda.'
+        turtle_3_6: 'Kasuta "joonista ruutu" näitena, et lisada sisend nimega "pikkus" "Joonista kolmnurk" juurde. Seejärel joonista eri suuruses kolmnurki. (Vihje: kliki tähel, et lisada sisend funktsioonile)'
+        turtle_3_7: 'Lisa sisend nimega "pikkus" "joonista maja" juurde ning ehita elevandile suur maja (mille servad on 150 pikslit pikad)'
+        turtle_3_8: 'Muuda "joonista maja" nõnda, et ma olen uue maja joonistamise järel all paremas nurgas. Kasuta muudetud funktsiooni ja joonista kolm maja.'
+        turtle_3_9: 'Kas saaksid uuesti kirjutada "joonista maja" funktsiooni ilma abita? Proovi ja seejärel joonista majade rivi.'
         turtle_3_10: Oled palju õppinud! Kasuta õpitut millegi huvitava joonistamiseks. Proovi joonistada täht, spiraal või lumehelves.
-        maze_karel_debug_seq_1: Tere tulemast koodi silumisse! Minu kood ei tööta õigesti. Kas sa leiaksid probleemi ja parandaksid selle, nii et ma saaksin oma põllu siledaks ning istutamiseks valmis?
+        maze_karel_debug_seq_1: Tere tulemast koodi silumisse! Minu kood ei tööta õigesti. Kas sa leiaksid probleemi ja parandaksid selle nii, et ma saaksin oma põllu siledaks ning istutamiseks valmis?
         maze_karel_debug_seq_2: MIs sellel programmil viga on? Kuidas sa peaksid seda parandama, et see eemaldaks selle kuhja?
-        maze_karel_debug_repeat: Paranda seda programmi nii et minu põld oleks kena ja sile.
-        maze_karel_debug_while: Kuidas peaksid sa seda programmi muutma et aidata mul täita see auk?
+        maze_karel_debug_repeat: Paranda seda programmi nii, et minu põld oleks kena ja sile.
+        maze_karel_debug_while: Kuidas peaksid sa seda programmi muutma, et aidata mul täita see auk?
         maze_karel_debug_if: Appi! Paranda seda programm nii, et minu põld oleks täiesti sile.
-        maze_karel_debug_if_else: De-bug this program so I can fill in the holes and remove all the piles.
-        maze_karel_debug_function_1: What should you change about this program to help me remove all the piles?
-        maze_karel_debug_function_2: Can you de-bug this program for me so I can make my field flat?
-        maze_karel_debug_function_3: "Edit this program so I'll remove all the piles on my field. "
-        turtle_5_1: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_2: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_3: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_4: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_5: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_6: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        maze_3_1: I need to get to that pig! Type in a couple of calls to move(); so I can get my eggs back.
-        maze_3_2: Write me a program, so I can make it all the way to the pig.
-        maze_3_3: "How should I get to the pig? Make sure I don't run into the box of TNT!"
-        maze_3_4: Argh! Write me a program that gets me around the TNT and to the pig.
-        bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
-        bounce_2: 'Attach a block to the "when right arrow" and "when left arrow" blocks. Move the paddle to reach both finish targets.'
-        bounce_3: 'Now try something similar with the "when up arrow" block. Move the paddle to the finish target at the top.'
-        bounce_4: This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle.
+        maze_karel_debug_if_else: Paranda vead sellest programmist nii, et ma saaksid täita augud ning eemaldada kõik hunnikud.
+        maze_karel_debug_function_1: Kas saaksid muuta seda programmi nii, et saaksin eemaldada kõik hunnikud?
+        maze_karel_debug_function_2: Kas saaksid parandada vead sellest programmist, et saaksin välja tasaseks teha?
+        maze_karel_debug_function_3: 'Muuda seda programmi nii, et saaksin eemaldada kõik hunnikud oma välja pealt. '
+        turtle_5_1: Proovi käivitada programm, tee muudatusi ja vaata, mis juhtub. Kas saad aru, kuidas see toimib? (Või kustuta see ning asenda see millegi hoopis erinevaga)
+        turtle_5_2: Proovi käivitada programm, tee muudatusi ja vaata, mis juhtub. Kas saad aru, kuidas see toimib? (Või kustuta see ning asenda see millegi hoopis erinevaga)
+        turtle_5_3: Proovi käivitada programm, tee muudatusi ja vaata, mis juhtub. Kas saad aru, kuidas see toimib? (Või kustuta see ning asenda see millegi hoopis erinevaga)
+        turtle_5_4: Proovi käivitada programm, tee muudatusi ja vaata, mis juhtub. Kas saad aru, kuidas see toimib? (Või kustuta see ning asenda see millegi hoopis erinevaga)
+        turtle_5_5: Proovi käivitada programm, tee muudatusi ja vaata, mis juhtub. Kas saad aru, kuidas see toimib? (Või kustuta see ning asenda see millegi hoopis erinevaga)
+        turtle_5_6: Proovi käivitada programm, tee muudatusi ja vaata, mis juhtub. Kas saad aru, kuidas see toimib? (Või kustuta see ning asenda see millegi hoopis erinevaga)
+        maze_3_1: Pean selle põrsani jõudma! Kirjuta paar käsklust, et liikuda(); nii saan oma munad tagasi.
+        maze_3_2: Kirjuta programm, mis viiks mind põrsa juurde.
+        maze_3_3: Mis teed mööda ma põrsa juurde jõuan? Veendu, et ma ei läheks TNT dünamiidi vastu!
+        maze_3_4: Oih! Kirjuta programm, mis viiks mind põrsa juurde ilma, et ma TNT dünamiiti puutuksin.
+        bounce_1: 'Lisa plokk "kui vasak nool" ploki juurde ja vajuta "Käivita". Kasuta vasakut noolt, et jõuda sihtmärgini.'
+        bounce_2: 'Lisa plokk "kui parem nool" ploki ja "kui vasak nool" juurde. Liigu nii, et jõuaksid mõlema sihtmärgini.'
+        bounce_3: 'Nüüd proovi sarnaselt "kui üleval nool" plokki. Liigu üleval oleva sihtmärgi juurde.'
+        bounce_4: Seekord pead lisama neli plokki. Liigu kõigi nelja sihtmärgi juurde, et see mõistatus ära lahendada.
         bounce_5: |-
           We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
         bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
         bounce_7: 'Attach blocks to each of the "when" blocks. Bounce the ball until it hits the finish target.'
         bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
         bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
-        bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
+        bounce_12: |-
+          Loo oma Bounce'i mäng. Võid kõiki visuaale ning reegleid muuta. Kui oled valmis, vajuta "Lõpeta" ning lase sõpradel telefoni peal mängu proovida.
         Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
         flappy_1: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
         flappy_2: |-
@@ -256,7 +246,7 @@ et:
           Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
         flappy_5: |-
           Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_6: Vaata kas sa ikka suudad punkte saada, kui paned Flappy vähemal või rohkemal määral tiibu lehvitama.
+        flappy_6: Vaata, kas sa ikka suudad punkte saada, kui paned Flappy vähemal või rohkemal määral tiibu lehvitama.
         flappy_7: 'Järgmiseks võid proovida muuta tausta, lisades veel ühe ploki "kui käib" plokile.'
         flappy_8: You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.
         flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
@@ -325,6 +315,27 @@ et:
         studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
         studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
+        studio_iceage_1: 'Manny wants to say "hello" - can you help him?'
+        studio_iceage_2: 'Diego (actor 1) and Granny (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
+        studio_iceage_3: Can you help Scrat get to the flag?
+        studio_iceage_4: Can you help Scrat (actor 1) get to Granny (actor 2) and play a sound when he gets there?
+        studio_iceage_5: 'Can you help Sid say "greetings" when it is clicked? Don’t forget to click it after you click Run'
+        studio_iceage_6: Can you help Diego move around using the up/down/right/left arrow keys to get to all the flags?
+        studio_iceage_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Sid move right and left repeatedly?'
+        studio_iceage_8: Can you add a block to score a point and a block to play a sound when Sid runs into Manny, and then move him with the arrows until you score?
+        studio_iceage_9: Set the background for this ice age and help Sid get to Granny faster by changing its speed. Then move him with the arrow keys to get to Sid and alert everyone else.
+        studio_iceage_10: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
+        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
+        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
+        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
+        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
+        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
+        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
+        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
+        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
         studio_k1_1: 'Kas oskad panna koera ütlema "tere maailm"?'
         studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
@@ -373,60 +384,60 @@ et:
         Unplug9: Relee programmeerimine
         Unplug10: Internet
         Unplug11: Kokkuvõte
-        C1_happy_maps_unplugged: '"Happy Maps"'
+        C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: Suursündmus
-        C1_getting_loopy: muutub tsükliliseks
+        C1_getting_loopy: Muutub tsükliliseks
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
         C1_bee_level_intro: 'Bee Level - Intro'
         C1_artist_intro: Artist Intro
         C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Labürint Tsüklid
-        C1_bee_loops: Mesilane Tsüklid
-        C1_maze_loops: Labürint Tsüklid
+        C1_zuck_repeat_loop: Labürint tsüklid
+        C1_bee_loops: Mesilane tsüklid
+        C1_maze_loops: Labürint tsüklid
         C1_playlab_storytelling: 'Play Lab - Create a Story'
         C1_planting_seed: Planting a Seed
         C1_building_foundation: Vundamendi ehitus
         C1_going_places_safely: Läheb asukohta turvaliselt
         C2_maze_intro: Maze Intro
         C2_artist_intro: Artist Intro
-        C2_zuck_repeat_loop: Labürint Tsüklid
-        C2_artist_loops: Kunstnik Tsüklid
-        C2_artist_debugging: Kunstnik Silumine
-        C2_bee_loops: Mesilane Tsüklid
-        C2_bee_debugging: Mesilane Silumine
-        C2_bee_conditionals: Mesilane Tingimuslaused
+        C2_zuck_repeat_loop: Labürint tsüklid
+        C2_artist_loops: Kunstnik tsüklid
+        C2_artist_debugging: 'Kunstnik - vigade silumine'
+        C2_bee_loops: Mesilane tsüklid
+        C2_bee_debugging: Mesilane vigade silumine
+        C2_bee_conditionals: Mesilane tingimuslaused
         C2_playlab_createstory: 'Play Lab - Create a Story'
         C2_graph_paper: Millimeetripaberi programmeerimine
         C2_conditionals_with_cards: Tingimuslaused
         C2_binary_bracelets: Binaarsed käevõrud
         C2_relay_programming: Relee Programmeerimine
         C2_paper_airplanes: Paper Airplanes
-        C2_digital_footprint: Teie digitaalne jalajälg
-        C2_digital_footprint_v2: Teie digitaalne jalajälg
-        C3_maze_level_4: Labürint Tsüklid
+        C2_digital_footprint: Sinu digitaalne jalajälg
+        C2_digital_footprint_v2: Sinu digitaalne jalajälg
+        C3_maze_level_4: Labürint tsüklid
         C3_artist_intro: Artist Intro
-        C3_artist_functions: Kunstink Funktsioonid
-        C3_bee_functions: Mesilane Funktsioonid
-        C3_bee_conditionals: Mesilane Tingimuslaused
-        C3_maze_conditionals: Labürint Tingimuslause
+        C3_artist_functions: Kunstink funktsioonid
+        C3_bee_functions: Mesilane funktsioonid
+        C3_bee_conditionals: Mesilane tingimuslaused
+        C3_maze_conditionals: Labürint tingimuslaused
         C3_artist_nested_loops: Nested Loops
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Mesilane Silumine
+        C3_bee_debugging: Mesilane vigade silumine
         C3_bounce: Põrkama
         C3_playlab_create_game: 'Play Lab - Create a Game'
         C3_computational_thinking: Arvutuslik mõtlemine
-        C3_dice_race: Täringu ralli
+        C3_dice_race: Täringuralli
         C3_internet: Internet
         C3_crowdsourcing: Ühistegevused
         C3_functional_suncatchers: Funktsionaalsed päikesepüüdjad
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
         C4_loops_zombie: Tsüklid
-        C4_bee_conditional: Mesilane Tingimuslaused
+        C4_bee_conditional: Mesilane tingimuslaused
         C4_variables_artist: 'Variables - Artist'
         C4_variables_playlab: 'Variables - Play Lab'
         C4_for_loops: For tsükkel
@@ -441,19 +452,25 @@ et:
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
         C4_unplugged_forloops: For tsükkel
-        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_parameters: Laulukirjutamine parameetritega
         C4_unplugged_binary: Binary
-        frozen_intro: Kooditunni sissejuhatus
-        frozen_loops: Sissejuhatus loops
+        frozen_intro: KoodiTunni sissejuhatus
+        frozen_loops: Sissejuhatus kordustele (Loops)
         frozen_functions: Funktsioonide tutvustus
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
         tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        infinity_playlab_intro: 'Mängu Labor - sissejuhatus'
-        infinity_playlab_events: 'Mängu Labor - Üritused'
-        infinity_playlab_repeat_forever: 'Mängu Labor - Korda Igavesti'
+        infinity_playlab_intro: 'Play Lab - Sissejuhatus'
+        infinity_playlab_events: 'Play Lab - Üritused'
+        infinity_playlab_repeat_forever: 'Play Lab - Korda Igavesti'
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: 'Introduction to Variables - Part 1'
+        csp_applab_variables_2: 'Introduction to Variables - Part 2'
         csp_applab_functions: Funktsioonide tutvustus
+        csp_applab_functions_parameters: Functions with Parameters
+        csp_applab_loops: Tsüklid
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
@@ -485,6 +502,21 @@ et:
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
+        starwars_typing: 'Star Wars: Building a Galaxy with Code - JavaScript'
+        starwars_events: 'Star Wars: Building a Galaxy with Code - Events'
+        starwars_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
+        starwars_blocks_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
+        starwars_blocks_events: 'Star Wars: Building a Galaxy with Code - Events'
+        starwars_blocks_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
+        mc_intro: 'Minecraft - Introduction'
+        mc_repeat: 'Minecraft - Repeat'
+        mc_if_statements: 'Minecraft - If statements'
+        mc_congrats_share: 'Minecraft - Congratulations'
+        mc_congrats_no_share: 'Minecraft - Congratulations'
+        gumball_intro: 'Gumball Hour of Code - Introduction'
+        gumball_events: 'Gumball Hour of Code - Events'
+        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'
@@ -519,7 +551,7 @@ et:
         edit_get_nectar: Use this button to edit the function and change the direction the Bee will turn to get the nectar.
         logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
         length_parameter: 'Can you update this function so it uses the "length" parameter?'
-        frozen_diamond_repeat: Kasuta kordus plokki et see kujund luua.
+        frozen_diamond_repeat: Kasuta korduse plokki, et see kujund luua.
         frozen_circle_function_in_circle_turn: Ära unusta peale igat ringi loomist keerata.
         frozen_circle_function_with_parameter_circle: 'Kasuta " loo ring" plokki ja muuda suurus.'
         frozen_snowflake_branch: 'Kasuta "joonista lumehelbe võrestik" plokki'
@@ -553,7 +585,14 @@ et:
         right_arrow_fireball: Use the right arrow to shoot fireballs
         name_function: Write the name of your function here
         Infinity_move_right_runbutton: Lisa liigutamise plokk siia
-        Infinity_move_directions_callout: Milline plokk paneb Baymaxi üles liikuma kui üles noole klahvile on vajutatud?
+        Infinity_move_directions_callout: Milline plokk paneb Baymaxi üles liikuma, kui üles noole klahvile on vajutatud?
         Infinity_move_directions_callout_arrow: Noolte abil saate juhtida
         Infinity_move_collide_callout: Mängi heli, kui sündmus juhtub.
         Infinity_repeat_callout: Aseta Liigu plokid siia sisse
+        craft_run_button_callout: 'Hit "Run" to try your program'
+        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
+        craft_callout_preplaced: "We've put some blocks here to get you started"
+        craft_inside_repeat: Repeat actions by placing blocks in here
+        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
+        craft_what_is_iron: Mine this iron!
+        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?

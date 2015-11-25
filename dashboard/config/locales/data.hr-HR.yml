@@ -99,11 +99,11 @@
         Jigsaw: Slagalica
         MazeStep: Labirint korak po korak
         Wordsearch: Traženje riječi
-        Webapp: Mrežna aplikacija
+        Webapp: Laboratorij aplikacija
         ArtistEC: Umjetnik
         TextMatch: Spajanje riječi
         StudioEC: Laboratorij igara
-        Applab: App Lab
+        Applab: Laboratorij aplikacija
         NetSim: Internetski Simulator
     trophy:
       name:
@@ -313,9 +313,9 @@
           (Savjet: klikni na zvjezicu da dodaš unos u funkciju)'
         turtle_3_7: Dodaj unos zvan "duljina" u "nacrtaj kuću" i napravi veliku kuću
           za slona (sa stranicama duljine 150 piksela)
-        turtle_3_8: Ovdje su svi blokovi iz prethodnog zadatka. Izmijeni "nacrtaj
-          kuću" tako da ja nakon crtanja nove kuće završim na njenom donjem desnom
-          kutu. Upotrujebi ovu izmijenjenu funkciju da nacrtaš tri kuće.
+        turtle_3_8: Izmijeni "nacrtaj kuću" tako da se nakon crtanja nove kuće nalazim
+          na njenom donjem desnom kutu. Iskoristi tu izmijenjenu funkciju da nacrtaš
+          tri kuće.
         turtle_3_9: Možeš li ponovno napraviti funkciju "nacrtaj kuću" bez ičije pomoći?
           Pokušaj, a zatim nacrtaj niz kuća.
         turtle_3_10: Puno si naučio! Sada to iskoristi da nacrtaš što god želiš. Pokušaj
@@ -409,8 +409,8 @@
         flappy_8: Promjenu grafičkih elemenata možeš napraviti bilo kad, ne samo kad
           igra počne. Probaj staviti NASUMIČNI ODABIR scene kad se dogodi neki drugi
           događaj, na primjer, kad prođe prepreku.
-        flappy_9: Da zakompliciramo, kad Flappy udari u prepreku ili padne na tlo,
-          umjesto kraja igre neka mu se bodovi vrate na 0.
+        flappy_9: 'Da izmijenimo pravila: napravi da se, kad udariš u prepreku, broj
+          bodova vrati na 0 umjesto da igra završi.'
         flappy_11: Napravi vlastitu Flappy igru. Možeš izmijeniti sve grafičke elemente
           i sva pravila, čak i gravitaciju. Kad budeš gotov, klikni na Kraj da omogućiš
           prijateljima da isprobaju tvoju igru na svojim mobitelima.
@@ -520,6 +520,61 @@
           pomoću tipki sa strelicama pomakni da dođe do njih i upozori ostale
         studio_playlab_10: Napravi svoju igricu. Kad si gotov, klikni na Kraj da omogućiš
           prijateljima da isprobaju tvoju igru na svojim mobitelima.
+        studio_iceage_1: Manny želi reći "Bok" - možete li mu pomoći?
+        studio_iceage_2: Diego (glumac 1) i baka (glumac 2) bi voljeli reći "bok"
+          jedan drugome. Možeš li im pomoći tako da iskoristiš blok "reći" dvaput?
+        studio_iceage_3: Možeš li pomoći Scrat da dođe do zastave?
+        studio_iceage_4: Možeš li pomoći Scratu (glumac 1) da dođe do bake (glumac
+          2) i pusti zvuk kada stigne?
+        studio_iceage_5: Možeš li pomoći Sidu da kaže "pozdrav" kada se klikne? Ne
+          zaboravi ga kliknuti nakon što klikneš Pokreni
+        studio_iceage_6: Can you help Diego move around using the up/down/right/left
+          arrow keys to get to all the flags?
+        studio_iceage_7: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to it to help Sid move right and left repeatedly?
+        studio_iceage_8: Can you add a block to score a point and a block to play
+          a sound when Sid runs into Manny, and then move him with the arrows until
+          you score?
+        studio_iceage_9: Set the background for this ice age and help Sid get to Granny
+          faster by changing its speed. Then move him with the arrow keys to get to
+          Sid and alert everyone else.
+        studio_iceage_10: Napravi svoju igricu. Kad si gotov, klikni na Kraj da omogućiš
+          prijateljima da isprobaju tvoju igru na svojim mobitelima.
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
+          him go the last 200 pixels using the "move" block.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Can you help Anton announce the start of a race
+          by saying "Ready, set, go!"? To test your program, don’t forget to click
+          Anton after you click Run!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Create your own game or story. When you're done,
+          click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Napravi svoju igricu. Kad si gotov, klikni na Kraj da
           omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
         studio_k1_1: Možeš li napraviti da ovaj pas kaže "zdravo, svijete"?
@@ -547,7 +602,7 @@
           riječ BELOW (ISPOD)
         maze_wordsearch_k_20: Ovo je test! Pokreni me u jednom smjeru, a zatim u drugom
           da slovkam riječ STORY (PRIČA)
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        applab_ec_simple: Napravi vlastitu aplikaciju koristeći blokove s alatne trake.
         turtle_ec_1_2: 'Sada nacrtaj kvadrat. NAPOMENA: koristi svoju najdražu boju
           tako da je odabereš na novom bloku "boja Olovke".'
         turtle_ec_1_10: 'Uspio si! Sad nacrtaj što god želiš. Zgodne ideje: štapićasti
@@ -579,7 +634,7 @@
         Unplug6: Uvjeti
         Unplug7: Pisanje pjesama
         Unplug8: Apstrakcija
-        Unplug9: Relay programming
+        Unplug9: Odnosno programiranje
         Unplug10: Internet
         Unplug11: Zamotavanje
         C1_happy_maps_unplugged: Vesele karte
@@ -589,7 +644,7 @@
         C1_pair_programming: Programiranje u paru
         C1_maze_intro_sequencing: Uvod u rješavanje Labirinta
         C1_maze_debugging: Ispravljanje grešaka u Labirintu
-        C1_bee_level_intro: Uvod za Pčelicu
+        C1_bee_level_intro: Pčela - Uvod
         C1_artist_intro: Uvod u Umjetnika
         C1_spelling_bee_intro: Uvod u Slovkanje
         C1_zuck_repeat_loop: 'Labirint: Petlje'
@@ -628,7 +683,7 @@
         C3_bounce: Odskok
         C3_playlab_create_game: Laboratorij igara - Napravi igricu
         C3_computational_thinking: Razmišljati poput računala
-        C3_dice_race: Dice Race
+        C3_dice_race: Utrka kockom
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Funkcionalni ukrasi
@@ -658,12 +713,18 @@
         playlab_intro: Uvod u Laboratorij igara
         playlab_events: Događaji u Laboratoriju igara
         playlab_repeat_forever: Beskonačno ponavljanje u Laboratoriju igara
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        infinity_playlab_intro: Play Lab - Introduction
+        tutorial_puzzle_challenge: Tutorijal za Izazov Slagalice
+        infinity_playlab_intro: Laboratorij igrara - Uvod
         infinity_playlab_events: Play Lab - događaji
-        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        infinity_playlab_repeat_forever: Laboratorij igara - beskonačno ponavljanje
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Uvod u funkcije
-        csp_concept_rgb: A Little Bit About Pixels
+        csp_applab_functions_parameters: Funkcije s parametrima
+        csp_applab_loops: Petlje
+        csp_applab_turtle: Turtle Programming
+        csp_concept_rgb: Malo o pikselima
         csp_pixelation_color_1: Color pixelation widget - Part 1
         csp_pixelation_color_2: Color pixelation widget - Part 2
         csp_pixelation_color_3: Color pixelation widget - Part 3
@@ -674,26 +735,43 @@
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
+        alg_1_intro: Informatika u algebri - Uvod
+        alg_2_eval_block: Informatika u algebri - Evaluacijski blokovi
+        alg_3_pemdas: Informatika u algebri - Redoslijed operacija
+        alg_4_data_types: Informatika u algebri - Tipovi podataka
+        alg_5_contracts: Informatika u algebri - Ugovori
+        alg_6_variables: Informatika u algebri - Varijable
+        alg_7_function: Informatika u algebri - Funkcije
+        alg_8_design_recipe: Informatika u algebri - Stvaranje recepta
+        alg_9_booleans: Informatika u algebri - Logičke varijable
+        alg_10_conditionals: Informatika u algebri - Uvjeti
+        alg_11_coordinate_plane: Informatika u algebri - Koordinatna ravnina
+        alg_12_biggame_variables: Informatika u algebri - Velika Igra - Varijable
+        alg_13_biggame_animation: Informatika u algebri - Velika Igra - Animacija
+        alg_14_biggame_booleans: Informatika u algebri - Velika Igra - Logičke varijable
+        alg_15_biggame_update_player: Informatika u algebri - Velika Igra - Obnavljanje
+          igrača
+        alg_16_biggame_collision_detection: Informatika u algebri - Velika Igra -
+          Detekcija sudara
+        alg_17_sambat_compound_booleans: Informatika u algebri - Složene logičke varijable
+        hoc2015_preview_blocks: Napravi vlastite blokove za igru
+        hoc2015_preview_typing: Napravi vlastitu igru tipkanja
+        hoc2015_preview_conclusion: Napravi vlastiti kraj igre
+        starwars_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
+        starwars_typing: 'Star Wars: Building a Galaxy with Code - JavaScript'
+        starwars_events: 'Star Wars: Building a Galaxy with Code - Events'
+        starwars_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
+        starwars_blocks_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
+        starwars_blocks_events: 'Star Wars: Building a Galaxy with Code - Events'
+        starwars_blocks_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
+        mc_intro: Minecraft - Introduction
+        mc_repeat: Minecraft - Repeat
+        mc_if_statements: Minecraft - If statements
+        mc_congrats_share: Minecraft - Congratulations
+        mc_congrats_no_share: Minecraft - Congratulations
+        gumball_intro: Gumball Hour of Code - Introduction
+        gumball_events: Gumball Hour of Code - Events
+        gumball_repeat: Gumball Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Dovuci blok "idi" i zakači ga ispod drugog bloka
@@ -740,7 +818,7 @@
         house_hint: U redu je ako slika još ne izgleda kao kuća. To ćemo popraviti
           u idućem zadatku.
         edit_draw_square: Koristi ovaj gumb da urediš funkciju i dodaš petlju.
-        edit_get_nectar: Koristi ovaj gumb da urediš funkciju i promijeniš smjer Pčelice
+        edit_get_nectar: Koristi ovaj gumb da urediš funkciju i promijeniš smjer Pčele
           da se vrati po nektar.
         logic_category: Otvori izbornik "Logika" i nađi blok "ako-inače".
         length_parameter: Možeš li doraditi ovu funkciju tako da koristi parametar
@@ -788,9 +866,19 @@
         arrows_move_actor: Koristi strelice za pomicanje lika
         right_arrow_fireball: Koristi desnu strelicu da bacaš vatrene kugle
         name_function: Ovdje napiši naziv svoje funkcije
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when
-          the up arrow is pressed?
+        Infinity_move_right_runbutton: Ovdje dodaj blok za kretanje
+        Infinity_move_directions_callout: Koji blok će učiniti da Baymax ide gore
+          kad se pritisne tipka sa strelicom prema gore?
         Infinity_move_directions_callout_arrow: Koristite ove strelice za upravljanje
         Infinity_move_collide_callout: Reporduciraj zvuk kada se ovaj događaj dogodi.
-        Infinity_repeat_callout: Place Move blocks inside here
+        Infinity_repeat_callout: Blokove za kretanje umetni ovdje
+        craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
+        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
+          the other block
+        craft_callout_preplaced: We've put some blocks here to get you started
+        craft_inside_repeat: Repeat actions by placing blocks in here
+        craft_callout_preplaced_house: This code will start building your house. Can
+          you finish it?
+        craft_what_is_iron: Mine this iron!
+        craft_callout_moveforward: This code will check for lava, can you add a command
+          to move forward?

@@ -66,8 +66,16 @@ function showVideoDialog(options, forceShowVideo) {
   $div.addClass('video-modal');
 
   $('.video-modal').on("remove", function () {
+    // Manually removing src to fix a continual playback bug in IE9
+    // https://github.com/code-dot-org/code-dot-org/pull/5277#issue-116253168
+    video.removeAttr('src');
     options.onClose();
     dashboard.clientState.recordVideoSeen(options.key);
+    // Raise an event that the dialog has been hidden, in case anything needs to
+    // play/respond to it.
+    var event = document.createEvent('Event');
+    event.initEvent('videoHidden', true, true);
+    document.dispatchEvent(event);
   });
 
 

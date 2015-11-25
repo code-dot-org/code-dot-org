@@ -1,14 +1,10 @@
-- categories = [{tag:"Beginner", name: I18n.t(:carousel_heading_beginners)}, {tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}, {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}, {tag:"Apps", name: I18n.t(:carousel_heading_devices)}, {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}, {tag:"MakeApps", name: I18n.t(:carousel_heading_apps_games)}, {tag: "Univ", name: I18n.t(:carousel_heading_university)}, {tag: "Web", name: I18n.t(:carousel_heading_webpages)}, {tag: "Robot", name: I18n.t(:carousel_heading_robots)}, {tag: "IDE", name: I18n.t(:carousel_heading_ide)}]
+- categories = [{tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}, {tag:"Beginner", name: I18n.t(:carousel_heading_beginners)}, {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}, {tag:"Apps", name: I18n.t(:carousel_heading_devices)}, {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}, {tag: "Univ", name: I18n.t(:carousel_heading_university)}, {tag: "Web", name: I18n.t(:carousel_heading_webpages)}, {tag: "Robot", name: I18n.t(:carousel_heading_robots)}, {tag: "IDE", name: I18n.t(:carousel_heading_ide)}]
 
 %div{style: "clear:both"}
 
 -tutorials = Tutorials.new(variation=='learn' ? :tutorials : :beyond_tutorials)
 
-#carousel-starwars{:style=>'display:none'}
-  = view :learn_carousel_special, :tag=>'starwars', :tutorials=>tutorials, :id=>'collection-starwars', :second_panel_image=>'/images/fit-520/starwars_carousel_background.jpg'
-
-#carousel-frozen{:style=>'display:none'}
-  = view :learn_carousel_special, :tag=>'frozen', :tutorials=>tutorials, :id=>'collection-frozen', :second_panel_image=>'/images/fit-520/frozen_carousel_background.jpg'
+- @variation = variation
 
 #carousel-ie8{:style=>'display:none'}
   = view :learn_carousel, :heading=>I18n.t(:older_systems), :subheading=>I18n.t(:older_systems_subheading), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8', :check_language=>true
@@ -24,20 +20,14 @@
     %button{:style=>"font-size:20px;"}
       = I18n.t(:carousel_heading_domestic)
 
-#all-tutorials{:style=>'visibility:hidden; overflow:hidden'}
+#all-tutorials{:style=>'visibility:hidden; overflow:hidden;'}
   - categories.each do |category|
     - id = "collection-" + category[:tag]
     = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
 
-%br
-%br
-
--if variation == 'learn'
-  %h1
-    %a{:href=>"http://hourofcode.com/resources/how-to"}
-      = I18n.t(:how_to_teach_hoc)
-
 -if variation == 'beyond'
+  %br
+  %br
   %a{:href=>"/educate"}
     = I18n.t(:more_resources_educators)
   %br
@@ -76,20 +66,6 @@
 
   // International
   var pegasusLocale = "#{request.locale}";
-
-  /* Disable Frozen carousel
-  // Special Frozen entry, not shown for mobile or IE8
-  if (!window.mobilecheck() && !is_ie8)
-  {
-    $('#carousel-frozen').show();
-  }
-  */
-
-  // Special Star Wars entry, not shown for IE8
-  if (!is_ie8)
-  {
-    $('#carousel-starwars').show();
-  }
 
   if (pegasusLocale.substring(0,2) == "en")
   {
@@ -167,10 +143,6 @@
   function showScratBlink(blink) {
     $(".scrat-standing").css('opacity', blink ? 0 : 1);
     $(".scrat-standing-blink").css('opacity', blink ? 1 : 0);
-
-    if (blink) {
-      ga('send', 'event', 'scrat', 'blink', {'page': "#{request.path}"});
-    }
   }
 
   function setupScratBlinking() {

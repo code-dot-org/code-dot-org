@@ -2,7 +2,7 @@ th:
   errors:
     messages:
       not_saved: 'โปรดแก้ไขข้อผิดพลาดต่อไปนี้:'
-      too_young: This content has age restrictions in place and is not available for younger students
+      too_young: เนื้อหานี้อาจไม่เหมาะสมกับกับผู้ที่มีอายุน้อยเกินไป
   activerecord:
     errors:
       messages:
@@ -23,7 +23,7 @@ th:
           future: ไม่สามารถทำได้ในอนาคต
   hello: สวัสดีชาวโลก
   welcome_back: 'ยินดีต้อนรับอีกครั้ง, % {name}'
-  submit: เสนอ
+  submit: ส่ง
   add_teacher_form:
     code:
       label: 'เพิ่มครู:'
@@ -171,15 +171,15 @@ th:
       title: โปรดยืนยัน
       "no": ไม่ใช่
       "yes": ใช่
-      msg: 'Are you sure you want to claim the %{prize_name} prize?'
-      msg_student: 'NOTE: You can only choose one type of prize.'
-      msg_publicschool: Please confirm that you are a U.S. public school teacher.
-      msg_visit_website: Visit website
+      msg: 'คุณต้องการจะรับ %{prize_name} หรือไม่'
+      msg_student: 'หมายเหตุ: คุณเลือกได้แค่อย่างเดียวเท่านั้น'
+      msg_publicschool: โปรดยืนยันว่าคุณเป็นครูโรงเรียนรัฐบาลในสหรัฐอเมริกา
+      msg_visit_website: เยี่ยมชมเว็บไซต์
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10GB of Dropbox Space
+      dropbox: พื้นที่ Dropbox 10GB
       valve: Portal 2 (PC or Mac game download)
       ea_bejeweled: Bejeweled 3 (PC game download)
       ea_fifa: FIFA Soccer 13 (PC game download)
@@ -189,8 +189,8 @@ th:
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: You have earned a prize! (U.S. students only)
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      earned: คุณได้รับรางวัล! (เฉพาะนักเรียนอเมริกา)
+      not_earned_title: จบบทฝึกซ้อม, รับรางวัล(เฉพาะนักเรียนอเมริกา)
       not_earned: 'Learn all the computer science concepts, collect all %{num_trophies} trophies, and earn real-world prizes. You can choose between 10GB of free Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer only valid to U.S. students, and only as long as supplies last.'
       teacher:
         earned: '15 or more students collected all %{num_trophies} trophies. You have won a teacher prize! (U.S. teachers only)'
@@ -221,6 +221,7 @@ th:
         playlab: Make an App
         artist: Draw Something
         calculate: Calculate Something
+        applab: Make an App
     user:
       classroom: หน้าแรกของคุณครู
       district_dashboard: District Dashboard
@@ -244,6 +245,8 @@ th:
       prize_us_only: (U.S. students only)
       prizes_link: ข้อมูลเพิ่มเติม
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Your teacher:'
       other: 'Your teachers:'
@@ -309,7 +312,7 @@ th:
       section: Section
       example: Example Solution
       example_with_number: 'Example Solution %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
+      submitted_on: 'Submitted on:'
       unsubmit: Unsubmit
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
@@ -386,7 +389,7 @@ th:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: We especially want to recognize the engineers from Google, Microsoft, Facebook, Twitter, and many others who helped create these materials.
     help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
-    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
@@ -432,6 +435,7 @@ th:
   pdf_download: Download PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
+  not_started: The student has not attempted this level.
   share_code:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: Check out my Bounce Game
@@ -473,9 +477,14 @@ th:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!

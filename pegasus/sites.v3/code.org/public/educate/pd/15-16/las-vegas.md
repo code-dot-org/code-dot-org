@@ -40,11 +40,10 @@ Breakfast and lunch will be served.
 
 **November 21st Location**
 
-Innevation Center<br/>
-3rd Floor<br/>
-Collaboration Station<br/>
+[Innevation Center<br/>
+Collaboration Station - 3rd Floor<br/>
 6795 S Edmond St<br/>
-Las Vegas, NV 89118
+Las Vegas, NV 89118](https://www.google.com/maps/place/The+Innevation+Center/@36.066623,-115.2136283,15z/data=!4m2!3m1!1s0x0:0x4f1c35e8f68b2e74)
 
 Free parking is located in front of the building. Please park in Visitor Parking.
 
@@ -85,10 +84,10 @@ Tuesday, November 17, 2015 <br/>
 
 **Location**
 
-Instructional Design and Professional Learning Division<br/>
-3950 S. Pecos-Mcleod<br/>
+[Instructional Design and Professional Learning Division<br/>
 Room 118<br/>
-Las Vegas, NV  89121
+3950 S. Pecos-Mcleod<br/>
+Las Vegas, NV  89121](https://www.google.com/maps/place/3950+Pecos-McLeod+Interconnect,+Las+Vegas,+NV+89121/@36.1177178,-115.1026406,17z/data=!3m1!4b1!4m2!3m1!1s0x80c8c529f2ba7afb:0xf580f57bb4d403b2)
 
 **What to bring**
 
@@ -105,10 +104,10 @@ Tuesday, November 17, 2015 <br/>
 
 **Location**
 
-Instructional Design and Professional Learning Division<br/>
-3950 S. Pecos-Mcleod<br/>
+[Instructional Design and Professional Learning Division<br/>
 Room 118<br/>
-Las Vegas, NV  89121
+3950 S. Pecos-Mcleod<br/>
+Las Vegas, NV  89121](https://www.google.com/maps/place/3950+Pecos-McLeod+Interconnect,+Las+Vegas,+NV+89121/@36.1177178,-115.1026406,17z/data=!3m1!4b1!4m2!3m1!1s0x80c8c529f2ba7afb:0xf580f57bb4d403b2)
 
 **What to bring**
 

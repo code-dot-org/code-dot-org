@@ -18,7 +18,7 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
 
 ## Prizes for EVERY organizer
 
-**Every** educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com, iTunes or Windows Store** as a thank-you gift!
+**Every** educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com, iTunes or Windows Store** as a thank-you gift!*
 
 <img style="float:left;" src="/images/fit-130/amazon_giftcards.png"/>
 
@@ -28,11 +28,13 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
 
 <p style="clear:both">&nbsp;</p>
 
+*While supplies last
+
 <% if @country == 'us' %>
 
 ## 51 schools will win a class-set of laptops (or $10,000 for other technology)
 
-One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners).
+Sign up for this prize is now closed. Check back to see this year's winners.
 
 <img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize1.jpg"/>
 
@@ -41,6 +43,55 @@ One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 wo
 <img styel="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize4.png"/>
 
 <p style="clear:both; height: 0px;">&nbsp;</p>
+
+<% end %>
+
+<% if @country == 'us' || @country == 'ca'  %>
+
+
+
+## 30 classrooms will win a video chat with a guest speaker
+
+Lucky classrooms will have the opportunity to talk with guest speakers who will share how computer science has impacted their lives and careers. 
+
+[col-33]
+
+![image](/images/fit-175/Kevin_Systrom.jpg)<br/>
+Kevin Systrom <br/> (co-founder and CEO of Instagram)
+
+[/col-33]
+
+[col-33]
+
+![image](/images/fit-175/Dao_Nguyen.jpg)<br/>
+Dao Nguyen <br/> (Publisher, Buzzeed)
+
+[/col-33]
+
+[col-33]
+
+![image](/images/fit-175/Aloe_Blacc.jpg)<br/>
+Aloe Blacc <br/> (Recording artist)
+
+[/col-33]
+
+<br/>
+
+[col-33]
+
+![image](/images/fit-175/Julie_Larson-Green.jpg)<br/>
+Julie Larson-Green <br/> (Chief Experience Officer, Microsoft)
+
+[/col-33]
+
+[col-33]
+
+![image](/images/fit-175/Hadi-Partovi.jpg)<br/>
+Hadi Partovi <br/> (Code.org co-founder)
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
 
 <% end %>
 
@@ -62,17 +113,12 @@ One lucky classroom will win the grand prize – a trip to San Francisco, CA for
 
 
 
-## 100 classrooms will win a programmable BB-8 droid robot by Sphero
-In honor of Hour of Code tutorial "Star Wars: Building a Galaxy with Code," 100 participating classrooms in the United States or Canada will a BB-8™ App-enabled Droid that students can program. Sign up your Hour of Code event to qualify. [Learn more about BB-8 from Sphero](http://sphero.com/starwars).
+## 100 classrooms will win programmable robots including a BB-8 droid robot by Sphero
+In honor of Hour of Code tutorial "Star Wars: Building a Galaxy with Code," 100 participating classrooms in the United States or Canada will a set of four Sphero 2.0 robots plus a BB-8™ App-enabled Droid that students can program. Sign up your Hour of Code event to qualify. [Learn more about BB-8 from Sphero](http://sphero.com/starwars) and [about Sphero education](http://sphero.com/education).
 
 <img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-220x160/bb8.png"/>
 
 <img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-200x160/bb8-girl.jpg"/>
-
-<p style="clear:both; height: 0px;">&nbsp;</p>
-
-## 100 classrooms will win a set of programmable robots by Sphero
-100 participating classrooms in the United States or Canada will win a set of Sphero 2.0 robots (each set includes four) that students can program. Sign up your Hour of Code event to qualify. [Learn more about Sphero education](http://sphero.com/education). 
 
 <img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-300x160/sphero-robot.png"/>
 
@@ -91,16 +137,16 @@ Organizatorii evenimentelor Hour of Code în România vor beneficia de un prem
 
 ## Who is eligible to receive the all organizer thank-you gift?
 
-Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank-you gift. The $10K hardware prize is limited to US residents only.
+Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is limited to US residents only.
 
 ## Is there a deadline to sign up to receive the all organizer thank-you gift?
-You must sign up **before** <%= campaign_date('start_long') %> in order to be eligible to receive the all organizer thank-you gift.
+You must sign up **before** <%= campaign_date('start_long') %> in order to be eligible to receive the all organizer thank-you gift. 
 
 ## When will I receive my thank-you gift?
 We will contact you in December after Computer Science Education Week (<%= campaign_date('full') %>) with next steps on how to redeem your choice of thank-you gift.
 
 ## Can I redeem all of the thank-you gift options? 
-No. Thank-you gifts are limited to one per organizer. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank-you gift.
+No. Thank-you gifts are limited to one per organizer while supplies last. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank-you gift.
 
 <% if @country == 'us' %>
 
@@ -122,8 +168,15 @@ Yes, in the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup
 
 <% end %>
 
+<% if @country == 'us' || @country == 'ca' %>
+
+## Video chat with a guest speaker:
+Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligible to win.
+
+<% end %>
+
 ## I’m outside the United States. Can I qualify for prizes?
-Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift. The $10K hardware prize is US only.
+Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is US only.
 
 <% end %>
 <%= view :signup_button %>

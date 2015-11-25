@@ -7,14 +7,15 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
+      "appendItem": null,
       "addOperator": null,
-      "randomNumber": null,
+      "randomNumber_min_max": null,
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null,
       "declareAssign_x_array_1_4": {
-        "block": "var list = [1,2,3];"
+        "block": "var list = [];"
       }
     },
     "edit_code": true,
@@ -38,7 +39,7 @@
     "lock_zero_param_functions": "false",
     "free_play": "true",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false",
+    "autocomplete_palette_apis_only": "true",
     "execute_palette_apis_only": "false",
     "text_mode_at_start": "true",
     "design_mode_at_start": "false",
@@ -48,12 +49,9 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Calculate the sum of three values stored in an array. (Click to see full instructions)",
-    "markdown_instructions": "# Array Values: Arithmetic\r\n\r\nYou can reference locations in arrays in arithmetic expressions, just like you might a variable.\r\n\r\n![](https://images.code.org/a7d11342d8c72b34f2268e4104e43fbd-image-1447189790574.09.32 PM.png)\r\n\r\nThe starter code **creates an empty array and adds three random values to it**. You will be adding code to the program that calculates the sum of these values.\r\n\r\n![](https://images.code.org/51b7c713ae398299a85ee8c0b9ee04f3-image-1447190702799.23.46 PM.png)\r\n# Do This\r\n\r\n* Add code to the program that **calculates the sum of these three values**\r\n* Use `console.log` to confirm that you have correctly calculated the sum of the values. Below is sample output from one run of the program.\r\n\r\n| Result |\r\n| --- |\r\n| <img src=\"https://images.code.org/a9ca48808e8e833d92b3bcdebc7b0bd4-image-1447189975738.12.31 PM.png\" style=\"width: 200px; float: right; border: solid 1px black\"> |",
-    "start_blocks": "var myNumbers = [];\r\nappendItem(myNumbers,randomNumber(1,10));\r\nappendItem(myNumbers,randomNumber(1,10));\r\nappendItem(myNumbers,randomNumber(1,10));\r\n\r\n// Add your code here\r\n\r\nconsole.log(\"My numbers: \" + myNumbers);",
-    "slider_speed": "1",
-    "encrypted_examples": [
-
-    ]
+    "markdown_instructions": "# Array Values: Arithmetic\r\n\r\nYou can reference locations in arrays in arithmetic expressions, just like you might a variable.\r\n\r\n![](https://images.code.org/a7d11342d8c72b34f2268e4104e43fbd-image-1447189790574.09.32 PM.png)\r\n\r\nThe starter code **creates an empty array and adds three random values to it**. \r\n\r\n![](https://images.code.org/51b7c713ae398299a85ee8c0b9ee04f3-image-1447190702799.23.46 PM.png)\r\n\r\nYou will be adding code to your program that calculates the sum of the values in the array.\r\n\r\n# Do This\r\n\r\n* **Add a variable** to your program to hold the sum of the array values.\r\n* Assign the value of the variable to **sum of the three array values**\r\n* Use `console.log` to confirm that you have correctly calculated the sum of the values. Below is sample output from one run of the program.\r\n\r\n![](https://images.code.org/a9ca48808e8e833d92b3bcdebc7b0bd4-image-1447189975738.12.31 PM.png)",
+    "start_blocks": "var myNumbers = [];\r\nappendItem(myNumbers,randomNumber(1,10));\r\nappendItem(myNumbers,randomNumber(1,10));\r\nappendItem(myNumbers,randomNumber(1,10));\r\n\r\n// Add code here to find the sum\r\n\r\nconsole.log(\"My numbers: \" + myNumbers);\r\n// Add code here to print the sum",
+    "slider_speed": "1"
   }
 }]]></config>
   <blocks/>

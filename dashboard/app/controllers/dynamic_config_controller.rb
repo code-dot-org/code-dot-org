@@ -15,6 +15,8 @@ class DynamicConfigController < ApplicationController
 
   def gatekeeper_show
     authorize! :read, :reports
+    Gatekeeper.refresh
+
     @gk_hsh = Gatekeeper.to_hash
     if params[:feature]
       @feature = params[:feature]
@@ -24,6 +26,8 @@ class DynamicConfigController < ApplicationController
 
   def gatekeeper_delete
     authorize! :read, :reports
+    Gatekeeper.refresh
+
     params.require(:feature)
     feature = params[:feature]
     where = JSON.load(params[:where]) or {}
@@ -37,6 +41,8 @@ class DynamicConfigController < ApplicationController
 
   def gatekeeper_set
     authorize! :read, :reports
+    Gatekeeper.refresh
+
     params.require(:feature)
     feature = params[:feature]
     where = {}

@@ -39,26 +39,18 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="create_a_circle" editable="false">
           <next>
-            <block type="controls_repeat_dropdown" id="repeat_qtip">
-              <title name="TIMES" config="3, 5, 10, 20">???</title>
-              <statement name="DO">
-                <block type="create_a_circle" editable="false">
-                  <next>
-                    <block type="jump_by_constant_dropdown">
-                      <title name="DIR">jumpForward</title>
-                      <title name="VALUE" config="50,100,150,200,300">???</title>
-                      <next>
-                        <block type="draw_turn_by_constant_dropdown">
-                          <title name="DIR">turnRight</title>
-                          <title name="VALUE" config="18,45,60,90,120,180">???</title>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
+            <block type="jump_by_constant_dropdown">
+              <title name="DIR">jumpForward</title>
+              <title name="VALUE" config="50,100,150,200,300">???</title>
+              <next>
+                <block type="draw_turn_by_constant_dropdown">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE" config="18,45,60,90,120,180">???</title>
                 </block>
-              </statement>
+              </next>
             </block>
           </next>
         </block>
@@ -103,7 +95,7 @@
     <required_blocks>
       <xml>
         <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3, 5, 10, 20">20</title>
+          <title name="TIMES" config="2, 5, 10, 20">20</title>
         </block>
         <block type="pick_one">
           <statement name="PICK">

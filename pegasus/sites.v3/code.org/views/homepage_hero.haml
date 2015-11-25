@@ -1,9 +1,13 @@
 #hero
-
   -# Generate a random set of hero images alternating between non-celeb and celeb.
   - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
+  - hero_display_time = 13 * 1000
 
-  - if rack_env != :production && request.params["preview"]
+  - if page_mode == "feature-starwars"
+    - heroes_arranged = heroes.select {|hero| hero[:param2_s] == "celeba"}
+  - elsif page_mode == "feature-mc"
+    - heroes_arranged = heroes.select {|hero| hero[:param2_s] == "celeba"}.reverse
+  - elsif rack_env != :production && request.params["preview"]
     -# on non-production, special "?preview=true" flag shows all heroes, and more quickly, for easier previewing
     - heroes_arranged = heroes
     - hero_display_time = 6 * 1000
@@ -23,12 +27,6 @@
     - if heroes_celeba.length > 0
       - heroes_celeba.shuffle!
       - heroes_arranged.unshift(heroes_celeba.first)
-    - hero_display_time = 13 * 1000
-
-    -# handy debug output:
-    -# heroes_arranged.each do |hero|
-      - puts hero[:param2_s]
-
 
   - newsbanner = DB[:cdo_homepage].where(type_s: "banner", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).first
   - if newsbanner
@@ -54,8 +52,16 @@
   #caption_container.container_responsive
     .col-66.desktop-feature{style: "position:relative;"}
 
-      -# begin temporary for hoc2015:
-      .captionarea{id: "captionarea_special;", style: "cursor: pointer",  onclick:"location.href='/starwars'", class: "homepage-caption-bottom"}
+      - # Captions for hoc 2015
+      .captionarea{id: "captionarea_mc", style: "cursor: pointer; display: none;",  onclick:"location.href='/mc'", class: "homepage-caption-bottom"}
+        %div{style: "left: 50px; top: 50px; text-align:left; padding-left:100px;"}
+          %img{src: "/images/fit-240/mc/MC_Logo_Small.png", style: "margin-top:20px"}
+          %div{style: "font-size: 18px; text-shadow: 1px 1px 1px #000000; margin-top:14px"}
+            = I18n.t(:minecraft_subtitle)
+            %br/
+            %br/
+            %br/
+      .captionarea{id: "captionarea_sw", style: "cursor: pointer; display: none;",  onclick:"location.href='/starwars'", class: "homepage-caption-bottom"}
         %div{style: "left: 50px; top: 50px; text-align:left; padding-left:100px;"}
           %img{src: "/images/fit-160/starwars_logo.png"}
           %div{style: "font-size: 18px; text-shadow: 1px 1px 1px #000000;"}
@@ -63,7 +69,6 @@
             %br/
             %br/
             %br/
-      -# end temporary
 
       - heroes_arranged.each_with_index do |entry, index|
         -# note: this gsheet display parameter unused due to IE8 fix.
@@ -92,12 +97,13 @@
 
       &nbsp;
 
-      -# Temporary for hoc2015:
       -# Maintains a large empty chunk so that the hero image remains large and visible at all browser sizes.
-      #blankspaceleftdesktop.desktop-feature{style: "cursor: pointer", onclick:"location.href='/starwars'"}
-
-      -# Original:
-      -#blankspaceleftdesktop.desktop-feature
+      - if page_mode == "feature-mc"
+        #blankspaceleftdesktop.desktop-feature{style: "cursor: pointer", onclick:"location.href='/mc'"}
+      - elsif page_mode == "feature-starwars"
+        #blankspaceleftdesktop.desktop-feature{style: "cursor: pointer", onclick:"location.href='/starwars'"}
+      - else
+        #blankspaceleftdesktop.desktop-feature
 
     #actions.col-33
       - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
@@ -136,6 +142,13 @@
 
     $("#fullwidth0").fadeTo(4000, 1);
 
+    if ("#{page_mode}" == "feature-starwars") {
+      $("#captionarea_sw").fadeTo(4000, 1);
+    }
+    else {
+      $("#captionarea_mc").fadeTo(4000, 1);
+    }
+
     showQuote(null, 0);
 
     // Use retina versions of the hero background images if on a retina display.
@@ -173,6 +186,18 @@
     $(".action").delay(4000).animate({ opacity: 1 }, { duration: 2000 });
   }
 
+  function showCaption()
+  {
+    if ($("#captionarea_sw").is(':visible') && $("#captionarea_sw").css('opacity') == 1) {
+      $("#captionarea_sw").fadeTo(4000, 0);
+      $("#captionarea_mc").fadeTo(4000, 1);
+    }
+    else {
+      $("#captionarea_sw").fadeTo(4000, 1);
+      $("#captionarea_mc").fadeTo(4000, 0);
+    }
+  }
+
   function adjustScroll(destination)
   {
     $('html, body').animate({
@@ -195,6 +220,7 @@
     currentImage = nextImage;
 
     showQuote(lastImage, currentImage);
+    showCaption();
   }
 
   $.ready()

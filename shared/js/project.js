@@ -303,6 +303,10 @@ var projects = module.exports = {
   projectChanged: function() {
     hasProjectChanged = true;
   },
+  /**
+   * @returns {string} The name of the standalone app capable of running
+   * this project as a standalone project, or null if none exists.
+   */
   getStandaloneApp: function () {
     switch (appOptions.app) {
       case 'applab':
@@ -320,10 +324,21 @@ var projects = module.exports = {
           return null;
         }
         return 'playlab';
+      default:
+        return null;
     }
   },
+  /**
+   * @returns {string} The path to the app capable of running
+   * this project as a standalone app.
+   * @throws {Error} If no standalone app exists.
+   */
   appToProjectUrl: function () {
-    return '/projects/' + projects.getStandaloneApp();
+    var app = projects.getStandaloneApp();
+    if (!app) {
+      throw new Error('This type of project cannot be run as a standalone app.');
+    }
+    return '/projects/' + app;
   },
   /**
    * Explicitly clear the HTML, circumventing safety measures which prevent it from
@@ -341,7 +356,6 @@ var projects = module.exports = {
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
   save: function(sourceAndHtml, callback, forceNewVersion) {
-
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -372,7 +386,9 @@ var projects = module.exports = {
 
     current.levelSource = sourceAndHtml.source;
     current.levelHtml = sourceAndHtml.html;
-    current.level = this.appToProjectUrl();
+    if (this.getStandaloneApp()) {
+      current.level = this.appToProjectUrl();
+    }
 
     var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
     sources.put(channelId, packSourceFile(), filename, function (err, response) {
@@ -572,6 +588,12 @@ var projects = module.exports = {
     return deferred;
   },
 
+  /**
+   * Generates the url to perform the specified action for this project.
+   * @param {string} action Action to perform.
+   * @returns {string} Url to the specified action.
+   * @throws {Error} If this type of project does not have a standalone app.
+   */
   getPathName: function (action) {
     var pathName = this.appToProjectUrl() + '/' + this.getCurrentId();
     if (action) {

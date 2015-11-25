@@ -7,14 +7,17 @@ markdown <<MARKDOWN
 
 # Background
 
-Data, including images, can be stored and manipulated in an array. An array is the perfect form for creating a photo collection that will enable the user to add new images, access individual images, and navigate through the collection. Often applications allow users to navigate around using both UI elements and keys. Offering both ways of interacting gives users choice in order to create the same behavior.
+When designing programs you will often discover new pieces of functionality you wish to add once you have completed a working prototype. Incorporating these new features will of course require writing new code, but it can also often require redesigning the parts of your program you have already written. In this lesson you will extend the "My Favorite Things" app you built in the previous lesson, continuing to practice using arrays in apps while learning how to approach the process of refactoring code.
+
+# Vocabulary
+
+* **Key event:** an event triggered by pressing or releasing a key on the keyboard
 
 # Lesson
 
-* Write a program to create an array to store images.
-* Set up an app to respond to key events.
-* Employ a variety of array processing techniques to manipulate the array. 
-
+* Introduction to key events
+* Improve the "My Favorite Things" app to store and display images
+* Refactor code in order to incorporate new functionality
   
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

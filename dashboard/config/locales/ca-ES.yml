@@ -267,6 +267,7 @@
         playlab: Fes un App
         artist: Dibuixa alguna cosa
         calculate: Calculate Something
+        applab: Fes un App
     user:
       classroom: Pàgina d'inici de mestre
       district_dashboard: District Dashboard
@@ -290,6 +291,8 @@
       prize_us_only: (només estudiants EUA)
       prizes_link: Més informació
   teacher:
+    answer: Answer
+    for_teachers_only: Només per a professors
     title:
       one: 'El teu mestre:'
       other: 'Els teus mestres:'
@@ -518,6 +521,7 @@
   pdf_download: Descarrega el PDF
   download_coming_soon: Activitat descarregable properament.
   video_coming_soon: Vídeo molt aviat!
+  not_started: The student has not attempted this level.
   share_code:
     title: Feu clic a "Executa" per veure el meu programa en acció
     bounce_og_title: Comprovi el meu joc de rebot
@@ -567,10 +571,15 @@
         nostres usuaris
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Utilitza Play Lab per crear una història o un joc protagonitzada pels
         personatges de Disney infinity.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Els estudiants van dibuixar això amb codi!
     students_made_these_with_code: Els estudiants van fer això amb codi!

@@ -81,7 +81,7 @@ zh:
           "Artist: Sequence2": 'Artist: Sequence2'
           "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": 'Artist: Nested Loops'
-          description_audience: Ages 6-18
+          description_audience: 年龄 6-18岁
           description_short: Start with Course 2 for students who can read.
         course3:
           The Maze: 迷宫
@@ -132,7 +132,7 @@ zh:
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
           Songwriting: 写歌
-          description_audience: Ages 8-18
+          description_audience: 年龄 8-18 岁
           description_short: Course 3 is a follow-up to Course 2.
         playlab:
           title: 播放实验室
@@ -159,7 +159,7 @@ zh:
           description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
           "Artist: Variables": 'Artist: Variables'
           "Bee: For Loops": 'Bee: For Loops'
-          title: 课程 4
+          title: 第4课
           "Algorithms: Tangrams": 'Algorithms: Tangrams'
           Variables: 变量
           "Play Lab: Variables": 'Play Lab: Variables'
@@ -181,8 +181,11 @@ zh:
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
-          description_audience: Ages 10-18
+          description_audience: 年龄 10-18 岁
           Super Challenge - Variables: 'Super Challenge - Variables'
+          Super Challenge - For Loops: 'Super Challenge - For Loops'
+          Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
+          Extreme Challenge - Comprehensive: 'Extreme Challenge - Comprehensive'
         Course4pre:
           title: Course 4 Prerequisite
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
@@ -224,7 +227,7 @@ zh:
           description_short: Learn Functional Programming through Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
-          "Eval: Strings and Images": Strings and Images
+          "Eval: Strings and Images": 字符串和图像
           "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
           "Eval: Writing Contracts": Writing Contracts
           "Calc: Defining Variables": Defining Variables and Substitution
@@ -320,7 +323,7 @@ zh:
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: Accelerated Intro to CS Course
-          description_audience: Ages 10-18
+          description_audience: 年龄 10-18 岁
           description: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
           description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
           Introduction to Computer Science: 计算机科学导论
@@ -352,6 +355,7 @@ zh:
           The Artist: 艺术家
           Play Lab: 播放实验室
           Play Lab 2015: Play Lab 2015
+          Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: 事件
           description: 事件
@@ -488,7 +492,7 @@ zh:
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字符串和图像
           Contracts: 合同
           Your Game - Defining Variables: 'Your Game - Defining Variables'
           Simple Function Definition: Simple Function Definition
@@ -511,7 +515,7 @@ zh:
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字符串和图像
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: 'Your Game - Animation'
@@ -649,6 +653,33 @@ zh:
           Variables Conceptorial Fodder: Variables Conceptorial Fodder
           "Variables: Create, Assign, and Read": 'Variables: Create, Assign, and Read'
           "Variables: Increment, Decrement, Display, and Scope": 'Variables: Increment, Decrement, Display, and Scope'
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistant: Introduction to Digital Assistant
+          "Improving Digital Assistant: Conditionals": 'Improving Digital Assistant: Conditionals'
+          "Improving Digital Assistant: Functions with Return": 'Improving Digital Assistant: Functions with Return'
+          "Improving Digital Assistant: Complex Conditionals": 'Improving Digital Assistant: Complex Conditionals'
+          Conditionals with Movie Bot: Conditionals with Movie Bot
+          Improving Digital Assistant with Conditionals: Improving Digital Assistant with Conditionals
+          Chained and Nested Conditionals with Movie Bot: Chained and Nested Conditionals with Movie Bot
+          Compound Conditionals with Movie Bot: Compound Conditionals with Movie Bot
+          "Practice PT: Digital Assistant": 'Practice PT: Digital Assistant'
+          Practice PT - Design a Digital Scene: 'Practice PT - Design a Digital Scene'
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          Introduction to Digital Assistant Project: Introduction to Digital Assistant Project
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: While循环
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -659,7 +690,7 @@ zh:
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
+          Strings and Images: 字符串和图像
           The Design Recipe: 设计食谱
           Next Steps: 下一步
         sciPD complex adaptive 2:
@@ -851,7 +882,7 @@ zh:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字符串和图像
           Defining Variables: Defining Variables
           Big Game - Variables: 'Big Game - Variables'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
@@ -902,7 +933,7 @@ zh:
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字符串和图像
           Writing Contracts: Writing Contracts
           Defining Variables: Defining Variables
           Defining Functions: Defining Functions
@@ -995,11 +1026,11 @@ zh:
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         hoc2015:
-          title: Hour of Code 2015
+          title: 编程一小时2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: 编程一小时
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: 编程一小时2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1008,7 +1039,7 @@ zh:
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字符串和图像
           Writing Contracts: Writing Contracts
           Defining Variables: Defining Variables
           Defining Functions: Defining Functions
@@ -1159,8 +1190,8 @@ zh:
           Frequency Analysis: Frequency Analysis
         algebraPD3a:
           title: Computer Science in Algebra PD
-          description_short: CS in Algebra blended online school year study
-          description: CS in Algebra blended online school year study
+          description_short: 'Phase 3 (Part 1): CS in Algebra blended online school year study'
+          description: 'Phase 3 (Part 2): CS in Algebra blended online school year study'
           Updates - Tweaks and Polish: 'Updates - Tweaks and Polish'
           Updates - The Big Game and Projects: 'Updates - The Big Game and Projects'
           Updates - The Design Recipe: 'Updates - The Design Recipe'
@@ -1204,9 +1235,9 @@ zh:
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
         ECSPD3-Unit3:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description_short: Academic Year Development
-          description: Academic Year Development
+          title: 'Exploring Computer Science: Unit 3'
+          description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
+          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 3 of the version 5 Exploring Computer Science curriculum.
           Welcome!: Welcome!
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
@@ -1224,10 +1255,19 @@ zh:
           "Day 20-21 HTML and CSS: Adding Enhancements to Site": 'Day 20-21 HTML and CSS: Adding Enhancements to Site'
           Day 22-25 Final Project: Day 22-25 Final Project
           "Day 15-16 HTML and CSS: Tables, Lists, Menus": 'Day 15-16 HTML and CSS: Tables, Lists, Menus'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: 'Close & Next Steps'
+          Intro to Unit 3: Intro to Unit 3
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
         ECSPD3-Unit4:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description_short: Academic Year Development
-          description: Academic Year Development
+          title: 'Exploring Computer Science: Unit 4'
+          description_short: Unit 4 of the version 5 Exploring Computer Science curriculum.
+          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 4 of the version 5 Exploring Computer Science curriculum.
           Welcome!: Welcome!
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
@@ -1250,6 +1290,13 @@ zh:
           Day 25-30 Final Project: Day 25-30 Final Project
           Unit 4 Challenge Planning: Unit 4 Challenge Planning
           Unit 4 Challenge Creation: Unit 4 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: 'Close & Next Steps'
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1300,6 +1347,7 @@ zh:
           "Data App Part 8: Visualize Data": 'Data App Part 8: Visualize Data'
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1313,8 +1361,8 @@ zh:
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
           title: Computer Science in Algebra PD
-          description_short: CS in Algebra mid year lesson support
-          description: CS in Algebra mid year lesson support
+          description_short: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
+          description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
           Teaching Support - Lessons 1-3: 'Teaching Support - Lessons 1-3'
           Teaching Support - Lessons 4-7: 'Teaching Support - Lessons 4-7'
           Teaching Support - Lessons 8-12: 'Teaching Support - Lessons 8-12'
@@ -1335,13 +1383,111 @@ zh:
         duino:
           Experimenting with Arduino stuff: Experimenting with Arduino stuff
           Basic Circuits: Basic Circuits
+          description: Testing some tools for teaching with Arduinos
+          Blinky Lights: Blinky Lights
+          Making Music: Making Music
+          JunkBot: JunkBot
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: 年龄 10-18 岁
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: 年龄 10-18 岁
           Halloween 2015: Halloween 2015
+          description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+        iceage:
+          title: Ice Age Play Lab
+          description_short: Create a story or make a game with Ice Age Play Lab!
+          description: Create a story or make a game with Ice Age Play Lab!
+          Ice Age Play Lab: Ice Age Play Lab
+        CSPPD3-Unit3:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit3temp:
+          title: 'CSP Unit 3 - Temp'
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          Key Events with Image Scroller: Key Events with Image Scroller
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: While循环
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
+        CSP-Unit3-Support:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+        gumball:
+          title: Gumball Play Lab
+          description_short: Create a story or make a game with Gumball Play Lab!
+          description: Create a story or make a game with Gumball Play Lab!
+          Gumball Play Lab: Gumball Play Lab
+        starwars:
+          title: '星球大战: 建立一个充满代码的星系'
+          description_short: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
+          description: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
+          Hour of Code 2015: 编程一小时2015
+        starwarsblocks:
+          title: '星球大战: 建立一个充满代码的星系'
+          description_short: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
+          description: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
+          Hour of Code 2015: 编程一小时2015
+        minecraft:
+          title: 我的世界
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
+        mc:
+          title: 我的世界编程一小时
+          description_short: 用代码来探索Minecraft世界。
+          description: 使用代码块来让史蒂夫和亚历克丝在Minecraft的世界中探险
+          Hour of Code 2015: 编程一小时2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          description: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Welcome!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: 总结

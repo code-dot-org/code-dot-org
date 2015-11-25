@@ -141,9 +141,9 @@ da:
           description_short: Opret en historie eller lav et spil med Play Lab!
         artist:
           title: Kunstner
-          description: Tegn seje billeder og designs med spilleren!
+          description: Tegn seje billeder og designs!
           Artist: Kunstner
-          description_short: Tegn seje billeder og designs med spilleren!
+          description_short: Tegn seje billeder og designs!
         hourofcode:
           Maze: Labyrint
           title: Hour of Code
@@ -184,7 +184,10 @@ da:
           Maze and Bee: Labyrint og bi
           Artist Binary: Kunstner binære
           description_audience: Fra 10 år (efter kursus 3)
-          Super Challenge - Variables: 'Super Challenge - Variables'
+          Super Challenge - Variables: 'Superudfordringen - variable'
+          Super Challenge - For Loops: 'Superudfordringen - For Loops'
+          Super Challenge - Functions and Parameters: 'Super Challenge - Funktioner og Parametre'
+          Extreme Challenge - Comprehensive: 'Ekstremudfordringen - den er omfattende'
         Course4pre:
           title: Kursus 4 forudsætninger
           description_short: En kort opsamling af koncepter for elever, der ikke har taget kursus 2 og 3.
@@ -321,10 +324,10 @@ da:
           Color Pixelation Examples: Color Pixelation Examples
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: Accelerated Intro to CS Course
+          title: 'Lyn-intro til Computer- og Programmeringskursus'
           description_audience: Fra 10 år (efter kursus 3)
           description: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det er sjovt at lære i alle aldre.
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          description_short: 'Dette 20-timers kursus dækker centrale begreber indenfor programmering og computerkendskab - svarende til kurserne 2-4.'
           Introduction to Computer Science: Introduktion til datalogi
           The Maze: Labyrinten
           Computational Thinking: Data-Tænkning
@@ -354,6 +357,7 @@ da:
           The Artist: Kunstneren
           Play Lab: Play Lab
           Play Lab 2015: Play Lab 2015
+          Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: Hændelser
           description: Hændelser
@@ -365,21 +369,21 @@ da:
         flappy:
           title: Flappy kode
           description: Vil du skrive dit eget spil på mindre end 10 minutter? Prøv vores Flappy kode undervisning!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Lav dit eget Flappy-spil på mindre end 10 minutter!
           Flappy Code: Flappy kode
         jigsaw:
           title: Puslespil
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: Prøv vores Puslespils-øvelse
+          description_short: Prøv vores Puslespils-øvelse
           Jigsaw: Puslespil
         step:
           title: Tip!
-          description: Step tutorial
-          description_short: Step tutorial
+          description: Trin-øvelse
+          description_short: Trin-øvelse
           Step: Tip!
         Hour of Code:
           title: Hour of Code 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description: Prøv det grundlæggende indenfor programmering med figurer fra Angry Birds og Plants vs. Zombies!
           description_short: Prøv grundlæggende programmering med masser af sjove figurer!
           Hour of Code 2013: Hour of Code 2013
         Code Studio Puzzle Challenge:
@@ -651,6 +655,33 @@ da:
           Variables Conceptorial Fodder: Variables Conceptorial Fodder
           "Variables: Create, Assign, and Read": 'Variables: Create, Assign, and Read'
           "Variables: Increment, Decrement, Display, and Scope": 'Variables: Increment, Decrement, Display, and Scope'
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistant: Introduction to Digital Assistant
+          "Improving Digital Assistant: Conditionals": 'Improving Digital Assistant: Conditionals'
+          "Improving Digital Assistant: Functions with Return": 'Improving Digital Assistant: Functions with Return'
+          "Improving Digital Assistant: Complex Conditionals": 'Improving Digital Assistant: Complex Conditionals'
+          Conditionals with Movie Bot: Conditionals with Movie Bot
+          Improving Digital Assistant with Conditionals: Improving Digital Assistant with Conditionals
+          Chained and Nested Conditionals with Movie Bot: Chained and Nested Conditionals with Movie Bot
+          Compound Conditionals with Movie Bot: Compound Conditionals with Movie Bot
+          "Practice PT: Digital Assistant": 'Practice PT: Digital Assistant'
+          Practice PT - Design a Digital Scene: 'Practice PT - Design a Digital Scene'
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          Introduction to Digital Assistant Project: Introduction to Digital Assistant Project
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: Mens løkker
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -773,8 +804,8 @@ da:
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -850,8 +881,8 @@ da:
           Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
           Evaluation Blocks: Evalueringsblokke
           Strings and Images: Strenge og billeder
           Defining Variables: Definere variabler
@@ -898,8 +929,8 @@ da:
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -923,12 +954,12 @@ da:
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: Velkommen!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: Velkommen!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Internet Simulator
@@ -952,9 +983,9 @@ da:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
+          Welcome!: Velkommen!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -998,14 +1029,14 @@ da:
           Equity PD: Equity PD
         hoc2015:
           title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          description_short: Brug Play Lab til at lave en historie eller et spil.
+          description: Brug Play Lab til at lave en historie eller et spil.
           Hour of Code: Hour of Code
           Hour of Code 2015: Hour of Code 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1021,14 +1052,14 @@ da:
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
+          Welcome!: Velkommen!
           The Design Recipe: Design opskrift
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          Welcome!: Velkommen!
           Wrap-Up: Konklusion
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1043,9 +1074,9 @@ da:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          Welcome!: Velkommen!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1061,10 +1092,10 @@ da:
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: Velkommen!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
+          description: 'Fase 2 Online: Blandet Sommerkursus'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1073,9 +1104,9 @@ da:
           Wrap-Up: Konklusion
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          Welcome!: Velkommen!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1092,9 +1123,9 @@ da:
           Wrap-up: Afslutning
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          Welcome!: Velkommen!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1161,8 +1192,8 @@ da:
           Frequency Analysis: Frequency Analysis
         algebraPD3a:
           title: Computer Science in Algebra PD
-          description_short: CS in Algebra blended online school year study
-          description: CS in Algebra blended online school year study
+          description_short: 'Phase 3 (Part 1): CS in Algebra blended online school year study'
+          description: 'Phase 3 (Part 2): CS in Algebra blended online school year study'
           Updates - Tweaks and Polish: 'Updates - Tweaks and Polish'
           Updates - The Big Game and Projects: 'Updates - The Big Game and Projects'
           Updates - The Design Recipe: 'Updates - The Design Recipe'
@@ -1183,7 +1214,7 @@ da:
           title: 'Exploring Computer Science: Unit 2'
           description_short: Unit 2 of the Exploring Computer Science curriculum
           description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: Velkommen!
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1206,10 +1237,10 @@ da:
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
         ECSPD3-Unit3:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description_short: Academic Year Development
-          description: Academic Year Development
-          Welcome!: Welcome!
+          title: 'Exploring Computer Science: Unit 3'
+          description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
+          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 3 of the version 5 Exploring Computer Science curriculum.
+          Welcome!: Velkommen!
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1226,11 +1257,20 @@ da:
           "Day 20-21 HTML and CSS: Adding Enhancements to Site": 'Day 20-21 HTML and CSS: Adding Enhancements to Site'
           Day 22-25 Final Project: Day 22-25 Final Project
           "Day 15-16 HTML and CSS: Tables, Lists, Menus": 'Day 15-16 HTML and CSS: Tables, Lists, Menus'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: 'Close & Next Steps'
+          Intro to Unit 3: Intro to Unit 3
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
         ECSPD3-Unit4:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description_short: Academic Year Development
-          description: Academic Year Development
-          Welcome!: Welcome!
+          title: 'Exploring Computer Science: Unit 4'
+          description_short: Unit 4 of the version 5 Exploring Computer Science curriculum.
+          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 4 of the version 5 Exploring Computer Science curriculum.
+          Welcome!: Velkommen!
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1252,11 +1292,18 @@ da:
           Day 25-30 Final Project: Day 25-30 Final Project
           Unit 4 Challenge Planning: Unit 4 Challenge Planning
           Unit 4 Challenge Creation: Unit 4 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: 'Close & Next Steps'
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Velkommen!
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1265,7 +1312,7 @@ da:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Velkommen!
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1302,11 +1349,12 @@ da:
           "Data App Part 8: Visualize Data": 'Data App Part 8: Visualize Data'
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Velkommen!
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
@@ -1315,8 +1363,8 @@ da:
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
           title: Computer Science in Algebra PD
-          description_short: CS in Algebra mid year lesson support
-          description: CS in Algebra mid year lesson support
+          description_short: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
+          description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
           Teaching Support - Lessons 1-3: 'Teaching Support - Lessons 1-3'
           Teaching Support - Lessons 4-7: 'Teaching Support - Lessons 4-7'
           Teaching Support - Lessons 8-12: 'Teaching Support - Lessons 8-12'
@@ -1328,7 +1376,7 @@ da:
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: Welcome!
+          Welcome!: Velkommen!
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1337,6 +1385,10 @@ da:
         duino:
           Experimenting with Arduino stuff: Experimenting with Arduino stuff
           Basic Circuits: Basic Circuits
+          description: Testing some tools for teaching with Arduinos
+          Blinky Lights: Blinky Lights
+          Making Music: Making Music
+          JunkBot: JunkBot
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
@@ -1347,3 +1399,97 @@ da:
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
           description_audience: Fra 10 år (efter kursus 3)
           Halloween 2015: Halloween 2015
+          description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+        iceage:
+          title: Ice Age Play Lab
+          description_short: Lav en historie eller et spil med Ice Age Play Lab!
+          description: Lav en historie eller et spil med Ice Age Play Lab!
+          Ice Age Play Lab: Ice Age Play Lab
+        CSPPD3-Unit3:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit3temp:
+          title: 'CSP Unit 3 - Temp'
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          Key Events with Image Scroller: Key Events with Image Scroller
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Mens løkker
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
+        CSP-Unit3-Support:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+        gumball:
+          title: Gumball Play Lab
+          description_short: Lav en historie eller et spil med Gumball Play Lab!
+          description: Lav en historie eller et spil med Gumball Play Lab!
+          Gumball Play Lab: Gumball Play Lab
+        starwars:
+          title: 'Star Wars: Byg en Galakse med Kode'
+          description_short: Lær at programmere droider, og lav dit eget Star Wars spil i en galakse langt, langt herfra.
+          description: Lær at programmere droider, og lav dit eget Star Wars spil i en galakse langt, langt herfra.
+          Hour of Code 2015: Hour of Code 2015
+        starwarsblocks:
+          title: 'Star Wars: Byg en Galakse med Kode'
+          description_short: Lær at programmere droider, og lav dit eget Star Wars spil i en galakse langt, langt herfra.
+          description: Lær at programmere droider, og lav dit eget Star Wars spil i en galakse langt, langt herfra.
+          Hour of Code 2015: Hour of Code 2015
+        minecraft:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
+        mc:
+          title: Minecraft Hour of Code
+          description_short: Udforsk en Minecraft-verden gennem kode
+          description: Brug kodeblokke til at lede Steve eller Alex gennem et eventyr i denne Minecraft verden
+          Hour of Code 2015: Hour of Code 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          description: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Velkommen!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Konklusion

@@ -1,4 +1,5 @@
 en-US:
+  hour_of_code: crwdns54655:0crwdne54655:0
   hello: crwdns3593:0crwdne3593:0
   select_language: crwdns21806:0crwdne21806:0
   en: crwdns43305:0crwdne43305:0
@@ -32,6 +33,9 @@ en-US:
   csedweek_map_search_placeholder: crwdns50324:0crwdne50324:0
   csedweek_map_search_search: crwdns50325:0crwdne50325:0
   csedweek_map_search_reset: crwdns50326:0crwdne50326:0
+  csedweek_map_legend_title: crwdns51605:0crwdne51605:0
+  csedweek_map_legend_event: crwdns51606:0crwdne51606:0
+  csedweek_map_legend_cs_tech_jam: crwdns51607:0crwdne51607:0
   cded_sign_up: crwdns50047:0crwdne50047:0
   cded_try_it: crwdns50048:0crwdne50048:0
   twentyhours_trynow: crwdns4531:0crwdne4531:0
@@ -51,6 +55,7 @@ en-US:
   thank_you_: crwdns3612:0crwdne3612:0
   congratulations: crwdns3785:0crwdne3785:0
   congratulations_on_completing_hoc: crwdns25704:0crwdne25704:0
+  congratulations_volunteer: crwdns51608:0crwdne51608:0
   course_name_accelerated: crwdns50049:0crwdne50049:0
   course_name_course1: crwdns50050:0crwdne50050:0
   course_name_course2: crwdns50051:0crwdne50051:0
@@ -109,7 +114,6 @@ en-US:
   hoc_is_here: crwdns3941:0crwdne3941:0
   just_did_hoc: crwdns3942:0crwdne3942:0
   twitter_teach_cs: crwdns35452:0crwdne35452:0
-  learn_hoc_prizes: crwdns50834:0crwdne50834:0
   learn_hoc: crwdns3953:0crwdne3953:0
   beyond_hoc: crwdns3954:0crwdne3954:0
   what_gender: crwdns3955:0crwdne3955:0
@@ -166,8 +170,15 @@ en-US:
   homepage_slot_text_course4: crwdns35460:0crwdne35460:0
   homepage_slot_text_shop: crwdns35461:0crwdne35461:0
   homepage_slot_text_flappy: crwdns35462:0crwdne35462:0
+  homepage_action_text_hoc: crwdns51609:0crwdne51609:0
+  homepage_action_text_num_served: crwdns51610:0crwdne51610:0
+  homepage_action_text_join_us: crwdns51611:0crwdne51611:0
+  homepage_action_text_sign_up: crwdns51612:0crwdne51612:0
+  homepage_action_text_try_it: crwdns51613:0crwdne51613:0
+  homepage_action_text_volunteers: crwdns51614:0crwdne51614:0
   homepage_action_text_codevideo: crwdns35463:0crwdne35463:0
   homepage_action_text_teachervideo: crwdns35727:0crwdne35727:0
+  homepage_action_text_girlvideo: crwdns51615:0crwdne51615:0
   homepage_action_text_learn: crwdns38077:0crwdne38077:0
   homepage_action_text_signpetition: crwdns35465:0crwdne35465:0
   homepage_signpetition_dropdown: crwdns35466:0crwdne35466:0
@@ -240,12 +251,34 @@ en-US:
   class_submission_level_college: crwdns5158:0crwdne5158:0
   class_submission_level_vocational: crwdns5159:0crwdne5159:0
   class_submission_languages_other: crwdns5160:0crwdne5160:0
-  volunteer_engineer_submission_title: crwdns50054:0crwdne50054:0
+  inspirational_videos_more: crwdns51616:0crwdne51616:0
+  starwars_subtitle: crwdns51617:0crwdne51617:0
+  starwars_javascript_title: crwdns54483:0crwdne54483:0
+  starwars_javascript_description: crwdns51619:0crwdne51619:0
+  starwars_javascript_specs: crwdns51620:0crwdne51620:0
+  starwars_javascript_start_button: crwdns51621:0crwdne51621:0
+  starwars_blocks_title: crwdns51622:0crwdne51622:0
+  starwars_blocks_description: crwdns51623:0crwdne51623:0
+  starwars_blocks_specs: crwdns54484:0crwdne54484:0
+  starwars_blocks_start_button: crwdns51625:0crwdne51625:0
+  starwars_watch_videos: crwdns51626:0crwdne51626:0
+  starwars_speak_languages: crwdns51627:0crwdne51627:0
+  starwars_help_translate: crwdns51628:0crwdne51628:0
+  starwars_platform_text: crwdns54656:0crwdne54656:0
+  mc_name: crwdns51629:0crwdne51629:0
+  mc_longdescription: crwdns51630:0crwdne51630:0
+  mc_shortdescription: crwdns51631:0crwdne51631:0
+  mc_gradelevel: crwdns54485:0crwdne54485:0
+  mc_platformtext: crwdns51633:0crwdne51633:0
+  mc_specs: crwdns54657:0crwdne54657:0
+  minecraft_subtitle: crwdns51634:0crwdne51634:0
+  volunteer_engineer_submission_title: crwdns54486:0crwdne54486:0
   volunteer_engineer_submission_subtitle_generic: crwdns50838:0crwdne50838:0
-  volunteer_engineer_submission_subtitle_specific: 'crwdns50839:0%{num_teachers}crwdnd50839:0%{num_volunteers}crwdne50839:0'
+  volunteer_engineer_submission_subtitle_specific: 'crwdns54487:0%{num_teachers}crwdnd54487:0%{num_volunteers}crwdne54487:0'
   volunteer_engineer_submission_intro_background: crwdns50840:0crwdne50840:0
-  volunteer_engineer_submission_intro_recruit: 'crwdns50841:0%{url}crwdne50841:0'
+  volunteer_engineer_submission_intro_recruit: crwdns54488:0crwdne54488:0
   volunteer_engineer_submission_intro_signup: crwdns50842:0crwdne50842:0
+  volunteer_engineer_submission_intro_links: 'crwdns54785:0%{learn_more}crwdnd54785:0%{volunteer_local}crwdne54785:0'
   volunteer_engineer_submission_header_shared: crwdns50057:0crwdne50057:0
   volunteer_engineer_submission_field_name: crwdns50058:0crwdne50058:0
   volunteer_engineer_submission_field_name_placeholder: crwdns50059:0crwdne50059:0
@@ -286,8 +319,20 @@ en-US:
   volunteer_engineer_submission_location_flexibility_remote: crwdns5497:0crwdne5497:0
   volunteer_engineer_submission_location_flexibility_curriculum: crwdns5498:0crwdne5498:0
   volunteer_engineer_submission_experience_unspecified: crwdns5499:0crwdne5499:0
+  volunteer_engineer_submission_experience_tech_company: crwdns51635:0crwdne51635:0
   volunteer_engineer_submission_experience_university_student_or_researcher: crwdns5500:0crwdne5500:0
   volunteer_engineer_submission_experience_software_professional: crwdns5501:0crwdne5501:0
+  volunteer_engineer_submission_distance_8: crwdns51636:0crwdne51636:0
+  volunteer_engineer_submission_distance_16: crwdns51637:0crwdne51637:0
+  volunteer_engineer_submission_distance_24: crwdns51638:0crwdne51638:0
+  volunteer_engineer_submission_distance_32: crwdns51639:0crwdne51639:0
+  volunteer_engineer_submission_num_volunteers_5: crwdns51640:0crwdne51640:0
+  volunteer_engineer_submission_num_volunteers_10: crwdns51641:0crwdne51641:0
+  volunteer_engineer_submission_num_volunteers_25: crwdns51642:0crwdne51642:0
+  volunteer_engineer_submission_num_volunteers_50: crwdns51643:0crwdne51643:0
+  volunteer_engineer_submission_type_task_onsite: crwdns51644:0crwdne51644:0
+  volunteer_engineer_submission_type_task_remote: crwdns51645:0crwdne51645:0
+  volunteer_engineer_submission_type_task_mentor: crwdns51646:0crwdne51646:0
   petition_age: crwdns7508:0crwdne7508:0
   dashboard_landing_title: crwdns7765:0crwdne7765:0
   dashboard_landing_welcome: crwdns7766:0crwdne7766:0
@@ -474,13 +519,25 @@ en-US:
   learn_more: crwdns23316:0crwdne23316:0
   learn_sign_up_description: crwdns48533:0crwdne48533:0
   learn_sign_up_button: crwdns48534:0crwdne48534:0
+  learn_videos_watch: crwdns54489:0crwdne54489:0
+  learn_videos_show: crwdns54490:0crwdne54490:0
+  learn_videos_before_hoc: crwdns54491:0crwdne54491:0
   learn_educator_resources_description: crwdns48535:0crwdne48535:0
   learn_educator_resources_button: crwdns48536:0crwdne48536:0
   learn_are_you_educator: crwdns50095:0crwdne50095:0
+  learn_find_volunteer: crwdns54786:0crwdne54786:0
+  learn_teacher_led_lesson_plans: crwdns54787:0crwdne54787:0
+  learn_how_to_hoc: crwdns54788:0crwdne54788:0
+  learn_hoc_prizes: crwdns50834:0crwdne50834:0
+  learn_inspirational_videos: crwdns54789:0crwdne54789:0
   hoc2014_try_new_tutorials: crwdns23440:0crwdne23440:0
   hoc2014_try_new_tutorial: crwdns23566:0crwdne23566:0
   hoc2014_try_scrat: crwdns23441:0crwdne23441:0
   hoc2014_try_frozen: crwdns23567:0crwdne23567:0
+  carousel_heading_codeorg: crwdns54492:0crwdne54492:0
+  carousel_heading_codeorg_any_device: crwdns54714:0crwdne54714:0
+  carousel_heading_3rd_party: crwdns54493:0crwdne54493:0
+  carousel_heading_third_party: crwdns54494:0crwdne54494:0
   carousel_heading_international: crwdns3831:0crwdne3831:0
   carousel_heading_domestic: crwdns23443:0crwdne23443:0
   carousel_heading_beginners: crwdns23317:0crwdne23317:0
@@ -494,6 +551,7 @@ en-US:
   carousel_heading_robots: crwdns23325:0crwdne23325:0
   carousel_heading_ide: crwdns23326:0crwdne23326:0
   educator_notes: crwdns23327:0crwdne23327:0
+  teach_led_lesson_plans: crwdns51647:0crwdne51647:0
   how_to_teach_hoc: crwdns27833:0crwdne27833:0
   more_resources_educators: crwdns23328:0crwdne23328:0
   beyond_submission: crwdns45367:0crwdne45367:0
@@ -506,6 +564,7 @@ en-US:
   older_systems_subheading: crwdns23334:0crwdne23334:0
   mobile_devices: crwdns23335:0crwdne23335:0
   frozen_name: crwdns23727:0crwdne23727:0
+  starwars_name: crwdns51648:0crwdne51648:0
   codeorg_name: crwdns21458:0crwdne21458:0
   codeintl_name: crwdns23747:0crwdne23747:0
   thinkersmithspanish_name: crwdns21459:0crwdne21459:0
@@ -545,6 +604,8 @@ en-US:
   projguts_name: crwdns23344:0crwdne23344:0
   hourofcode_name: crwdns25915:0crwdne25915:0
   playlab_name: crwdns26143:0crwdne26143:0
+  infinity_name: crwdns54715:0crwdne54715:0
+  artist_name: crwdns54716:0crwdne54716:0
   codeorg_gradelevel: crwdns21487:0crwdne21487:0
   codeintl_gradelevel: crwdns23748:0crwdne23748:0
   thinkersmithspanish_gradelevel: crwdns21488:0crwdne21488:0
@@ -584,7 +645,10 @@ en-US:
   projguts_gradelevel: crwdns23350:0crwdne23350:0
   hourofcode_gradelevel: crwdns25921:0crwdne25921:0
   frozen_gradelevel: crwdns23730:0crwdne23730:0
+  starwars_gradelevel: crwdns51649:0crwdne51649:0
   playlab_gradelevel: crwdns25922:0crwdne25922:0
+  infinity_gradelevel: crwdns54717:0crwdne54717:0
+  artist_gradelevel: crwdns54718:0crwdne54718:0
   codeorg_platformtext: crwdns21807:0crwdne21807:0
   codeintl_platformtext: crwdns23749:0crwdne23749:0
   thinkersmithspanish_platformtext: crwdns21808:0crwdne21808:0
@@ -624,6 +688,7 @@ en-US:
   projguts_platformtext: crwdns23360:0crwdne23360:0
   hourofcode_platformtext: crwdns25930:0crwdne25930:0
   frozen_platformtext: crwdns23732:0crwdne23732:0
+  starwars_platformtext: crwdns51650:0crwdne51650:0
   playlab_platformtext: crwdns25931:0crwdne25931:0
   codeorg_shortdescription: crwdns21545:0crwdne21545:0
   codeintl_shortdescription: crwdns23750:0crwdne23750:0
@@ -664,7 +729,10 @@ en-US:
   projguts_shortdescription: crwdns23374:0crwdne23374:0
   hourofcode_shortdescription: crwdns25937:0crwdne25937:0
   frozen_shortdescription: crwdns23735:0crwdne23735:0
+  starwars_shortdescription: crwdns51651:0crwdne51651:0
   playlab_shortdescription: crwdns26144:0crwdne26144:0
+  infinity_shortdescription: crwdns54719:0crwdne54719:0
+  artist_shortdescription: crwdns54720:0crwdne54720:0
   codeorg_longdescription: crwdns21574:0crwdne21574:0
   codeintl_longdescription: crwdns23751:0crwdne23751:0
   thinkersmithspanish_longdescription: crwdns25939:0crwdne25939:0
@@ -704,6 +772,7 @@ en-US:
   projguts_longdescription: crwdns23388:0crwdne23388:0
   hourofcode_longdescription: crwdns25946:0crwdne25946:0
   frozen_longdescription: crwdns23738:0crwdne23738:0
+  starwars_longdescription: crwdns51652:0crwdne51652:0
   playlab_longdescription: crwdns26145:0crwdne26145:0
   codeorg_beyond_name: crwdns21603:0crwdne21603:0
   khan_beyond_name: crwdns21604:0crwdne21604:0
@@ -893,3 +962,11 @@ en-US:
   compatibility_https_header: crwdns41674:0crwdne41674:0
   compatibility_https_message: 'crwdns41675:0%{https_date}crwdnd41675:0%{it_requirements_url}crwdne41675:0'
   compatibility_https_hide_this_warning: crwdns41676:0crwdne41676:0
+  starwars_shortcode: crwdns54721:0crwdne54721:0
+  mc_shortcode: crwdns54722:0crwdne54722:0
+  frozen_shortcode: crwdns54723:0crwdne54723:0
+  hourofcode_shortcode: crwdns54724:0crwdne54724:0
+  flappy_shortcode: crwdns54725:0crwdne54725:0
+  infinity_shortcode: crwdns54726:0crwdne54726:0
+  playlab_shortcode: crwdns54727:0crwdne54727:0
+  artist_shortcode: crwdns54728:0crwdne54728:0

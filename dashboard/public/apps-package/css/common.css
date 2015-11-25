@@ -44,7 +44,7 @@ html[dir='rtl'] #visualizationColumn {
   left: 0px;
   overflow-x: hidden; }
 
-#visualizationColumn.embed_hidesource {
+#visualizationColumn.centered_embed {
   margin: 0 auto; }
 
 #visualizationColumn.pin_bottom {
@@ -54,7 +54,7 @@ html[dir='rtl'] #visualizationColumn {
   #visualizationColumn.pin_bottom #belowVisualization {
     position: absolute;
     overflow: auto; }
-  #visualizationColumn.pin_bottom.embed_hidesource {
+  #visualizationColumn.pin_bottom.centered_embed {
     position: relative; }
 
 div.droplet-palette-group-header {
@@ -170,6 +170,10 @@ button.arrow:disabled {
   -webkit-touch-callout: none; }
   #soft-buttons.soft-buttons-none {
     display: none; }
+  #soft-buttons.soft-buttons-compact {
+    margin-left: 0; }
+    #soft-buttons.soft-buttons-compact button {
+      margin: 0; }
 
 .soft-buttons-1 {
   display: table-cell;
@@ -395,8 +399,6 @@ html[dir='rtl'] #codeWorkspace {
     max-width: 200px; }
   .small-footer-base.responsive {
     max-width: 200px; }
-    .small-footer-base.responsive small {
-      float: left; }
   #codeWorkspace {
     left: 200px; }
   html[dir='rtl'] #codeWorkspace {
@@ -414,7 +416,13 @@ html[dir='rtl'] #codeWorkspace {
     transform: scale(0.5); }
   .bee-counter-text {
     font-size: 32px;
-    stroke-width: 2px; } }
+    stroke-width: 2px; }
+  #soft-buttons {
+    margin-left: 0; }
+    #soft-buttons button {
+      margin: 0; }
+  .small-footer-base.responsive small {
+    float: left; } }
 
 /* Buttons */
 button, label.img-upload {
@@ -700,6 +708,22 @@ input[type="radio"] {
 #prompt2 {
   font-size: 12px;
   color: #5b6770; }
+
+.modal-content .instructionsImage {
+  height: 35px;
+  vertical-align: text-bottom; }
+
+.modal-content .instructions2 .instructionsImage {
+  height: 24px;
+  vertical-align: text-bottom; }
+
+#prompt-table .instructionsImage {
+  height: 25px;
+  vertical-align: text-bottom; }
+
+#prompt-table #prompt2 .instructionsImage {
+  height: 20px;
+  vertical-align: text-bottom; }
 
 #ani-gif-preview-wrapper {
   display: inline-block;
@@ -1099,7 +1123,7 @@ input[type="radio"] {
   .sharing div#phone-charges {
     font-size: 10px;
     margin-top: 0px;
-    color: red; }
+    color: #c00; }
 
 .run26 {
   width: 26px;
