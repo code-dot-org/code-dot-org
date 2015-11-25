@@ -129,7 +129,7 @@ class ActivitiesController < ApplicationController
     current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
 
     # Create the activity.
-     attributes = {
+    attributes = {
         user: current_user,
         level: @level,
         action: solved, # TODO I think we don't actually use this. (maybe in a report?)

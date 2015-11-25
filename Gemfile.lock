@@ -84,7 +84,6 @@ GEM
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     builder (3.2.2)
-    byebug (8.2.0)
     cancancan (1.12.0)
     capybara (2.5.0)
       mime-types (>= 1.16)
@@ -515,7 +514,6 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
-  byebug
   cancancan (~> 1.10)
   chromedriver-helper (~> 0.0.7)
   chronic (~> 0.10.2)
