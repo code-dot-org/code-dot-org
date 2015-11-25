@@ -256,7 +256,7 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'hoc?' do
     assert Script.find_by_name('flappy').hoc?
-    assert Script.find_by_name('minecraft').hoc?
+    assert Script.find_by_name('mc').hoc?
     assert Script.find_by_name('20-hour').hoc?
     assert Script.find_by_name('frozen').hoc?
     assert Script.find_by_name('playlab').hoc?
@@ -268,11 +268,11 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'minecraft?' do
     assert_not Script.find_by_name('flappy').minecraft?
-    assert Script.find_by_name('minecraft').minecraft?
+    assert Script.find_by_name('mc').minecraft?
   end
 
   test 'twenty_hour?' do
     assert Script.find_by_name('20-hour').twenty_hour?
-    assert_not Script.find_by_name('minecraft').twenty_hour?
+    assert_not Script.find_by_name('mc').twenty_hour?
   end
 end
