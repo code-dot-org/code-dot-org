@@ -125,7 +125,7 @@ dashboard.clientState.trackProgress = function(result, lines, testResult, script
 function setLevelProgress(scriptName, levelId, progress) {
   var progressMap = dashboard.clientState.allLevelsProgress();
   if (!progressMap[scriptName]) {
-    progressMap[scriptName] = {}
+    progressMap[scriptName] = {};
   }
   progressMap[scriptName][levelId] = progress;
   $.cookie('progress', JSON.stringify(progressMap), COOKIE_OPTIONS);
