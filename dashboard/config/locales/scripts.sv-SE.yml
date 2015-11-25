@@ -15,61 +15,60 @@
           'Jigsaw: Learn to drag and drop': 'Pussel: Lär dig dra och släpp'
           'Maze: Sequence': 'Labyrint: Sekvens'
           'Maze: Debugging': 'Labyrint: Felsökning'
-          'Artist 1: Intro': 'Konstnär 1: Introduktion'
+          'Artist 1: Intro': 'Konstnären 1: Introduktion'
           Artists 2: Konstnärer 2
-          Spelling Bee: Stavning
-          Spelling Bee not blockly: Stavning inte blockly
-          'Bee 1: Intro': 'Stavning 1: Introduktion'
-          'Maze 2: Loops': 'Labyrint 2: slingor'
-          'Bee 2: Loops': 'Bee 2: slingor'
-          Multi & Match: Multi & Matcha
-          K-1 Flappy: Förskoleklass-årskurs1 Flappy
+          Spelling Bee: Stavnings-bi
+          Spelling Bee not blockly: Stavnings-bi inte blockly
+          'Bee 1: Intro': 'Bi 1: Introduktion'
+          'Maze 2: Loops': 'Labyrint 2: Slingor'
+          'Bee 2: Loops': 'Bi 2: Slingor'
+          Multi & Match: Flerval & Matcha
+          K-1 Flappy: Flappy för förskoleklass - årskurs 1
           Flappy non blockly: Flappy inte blockly
           title: Kurs 1
-          Artist 2: Artist 2
+          Artist 2: Konstnären 2
           Happy Maps: Glada kartor
-          Move it, Move it: Flytta det, flytta den
+          Move it, Move it: Flytta den, flytta den
           'Real-life Algorithms: Plant a Seed': 'Verklighetsalgoritmer: Så ett frö'
           Building a Foundation: Bygga en grund
-          Getting Loopy: Bli Snurrig
+          Getting Loopy: Att bli snurrig
           The Big Event: Den stora händelsen
-          Going Places Safely: Tryggt gå till platser
-          description: Kurs 1 är utformad för att de som börjat lära sig läsa ska
-            kunna skapa datorprogram som hjälper dem att lära sig att samarbeta med
-            andra, utveckla förmågan att lösa problem och vara uthålliga vid svåra
-            uppgifter. I slutet av kursen skapar eleverna sina egna anpassade spel
-            eller berättelse som de kan dela. Rekommenderas för förskolan-årskurs
-            1.
-          'Bee: Sequence': 'Bee: sekvens'
-          'Artist: Sequence': 'Artist: sekvens'
-          'Artist: Shapes': 'Artist: former'
-          'Maze: Loops': 'Labyrint: slingor'
-          'Bee: Loops': 'Bee: slingor'
-          'Studio: Create a Story': Play Lab - skapa en berättelse
-          'Artist: Loops': Artist Loopar
-          description_audience: Åldrar 4 + (pseudo- läsare)
-          description_short: Kurs 1 är utformad för "tidiga läsare".
+          Going Places Safely: Trygg resa
+          description: Börja med Kurs 1 för dem som börjat lära sig läsa. Eleverna
+            kommer att skapa datorprogram som hjälper dem att lära sig att samarbeta
+            med andra, utveckla förmågan att lösa problem och vara uthålliga vid svåra
+            uppgifter. I slutet av kursen skapar eleverna ett eget spel eller en berättelse
+            som de kan dela med andra. Rekommenderas för förskolan-årskurs 1.
+          'Bee: Sequence': 'Bi: Sekvens'
+          'Artist: Sequence': 'Konstnären: Sekvens'
+          'Artist: Shapes': 'Konstnären: Former'
+          'Maze: Loops': 'Labyrint: Slingor'
+          'Bee: Loops': 'Bi: Slingor'
+          'Studio: Create a Story': Spel-labb - skapa en berättelse
+          'Artist: Loops': 'Konstnären: Slingor'
+          description_audience: Från 4 år (icke-läsare)
+          description_short: Börja med kurs 1 för nybörjar-läsare.
         course2:
           The Maze: Labyrinten
           Suzi: Suzi
           The Artist: Konstnären
-          Artist Debugging: Artist Felsökning
+          Artist Debugging: 'Konstnären: Felsökning'
           Bounce: Studsa
-          'Studio: Create a Story': Play Lab - skapa en berättelse
-          Artist Loops: Artist Loopar
-          Bee Conditionals: Bee Villkorssatser
+          'Studio: Create a Story': Spel-labb - skapa en berättelse
+          Artist Loops: 'Konstnären: Slingor'
+          Bee Conditionals: 'Bi: Villkor'
           Flappy: Flappy
           title: Kurs 2
-          Bee Loops: 'Bee: slingor'
-          Artist Functions: Artist Funktioner
-          The Artist Debugging: Artisten Felsöker
-          Bee Debugging: Bee felsökning
-          Bee Functions: Bee funktioner
-          Maze Loops: 'Labyrint: slingor'
+          Bee Loops: 'Bi: Slingor'
+          Artist Functions: 'Konstnären: Funktioner'
+          The Artist Debugging: 'Konstnären: Felsökning'
+          Bee Debugging: 'Biet: Felsökning'
+          Bee Functions: 'Biet: Funktioner'
+          Maze Loops: 'Labyrint: Slingor'
           Graph Paper Programming: Kalkyleringsprogrammering
-          'Real-life Algorithms: Paper Planes': 'Verkliga algoritmer: Pappersflygplan'
-          Getting Loopy: Bli Snurrig
-          Relay programming: Relä programmering
+          'Real-life Algorithms: Paper Planes': 'Algoritmer i verkliga livet: Pappersflygplan'
+          Getting Loopy: Att bli snurrig
+          Relay programming: Stafettprogrammering
           Conditionals: Villkor
           Binary Bracelets: Binära armband
           The Big Event: Den stora händelsen
@@ -79,10 +78,10 @@
             att lösa problem och utveckla interaktiva spel eller berättelser som de
             kan dela. Rekommenderas för årskurserna 2-5.
           'Maze: Sequence': 'Labyrint: Sekvens'
-          'Artist: Sequence': 'Artist: sekvens'
-          'Maze: Loops': 'Labyrint: slingor'
-          'Artist: Loops': Artist Loopar
-          'Bee: Loops': 'Bee: slingor'
+          'Artist: Sequence': 'Konstnären: Sekvens'
+          'Maze: Loops': 'Labyrint: Slingor'
+          'Artist: Loops': 'Konstnären: Slingor'
+          'Bee: Loops': 'Bi: Slingor'
           'Bee: Debugging': Bee felsökning
           'Artist: Debugging': Artist Felsökning
           'Bee: Conditionals': Bee Villkorssatser
@@ -93,17 +92,17 @@
           description_short: Kurs 2 är utformad för elever som kan läsa.
         course3:
           The Maze: Labyrinten
-          'Studio: Create a Story': Play Lab - skapa en berättelse
+          'Studio: Create a Story': Spel-labb - skapa en berättelse
           The Artist: Konstnären
           title: Kurs 3
-          Artist Functions: Artist Funktioner
+          Artist Functions: 'Konstnären: Funktioner'
           Artist For Loops: Konstnär 'för' loopar
           Artist Nested Loops: Artist Kapslade slingor/loopar
-          Bee Conditionals: Bee Villkorssatser
+          Bee Conditionals: 'Bi: Villkor'
           Bee Nested Loops: Bee Kapslade slingor/loopar
           Bee Debuggin: Bee felsökning
-          Bee Debugging: Bee felsökning
-          Bee Functions: Bee funktioner
+          Bee Debugging: 'Biet: Felsökning'
+          Bee Functions: 'Biet: Funktioner'
           Artist Functions with Params: Artist Funktioner med Parametrar
           Bounce: Studsa
           Maze Conditionals: Labyrint villkorssatser
@@ -217,8 +216,8 @@
             kurs 2 och 3.
           Course 4 Prerequisite: Kurs 4 förutsättning
           'Maze: Sequence': 'Labyrint: Sekvens'
-          'Artist: Sequence': 'Artist: sekvens'
-          'Artist: Loops': Artist Loopar
+          'Artist: Sequence': 'Konstnären: Sekvens'
+          'Artist: Loops': 'Konstnären: Slingor'
           'Bee: Conditionals': Bee Villkorssatser
           'Artist: Nested Loops': 'Artist: Kapslade slingor'
           'Farmer: While Loops': 'Bonde: ''Medan'' loopar'
@@ -463,8 +462,8 @@
             kurs 2 och 3.
           Course 4 Prerequisite: Kurs 4 förutsättning
           'Maze: Sequence': 'Labyrint: Sekvens'
-          'Artist: Sequence': 'Artist: sekvens'
-          'Artist: Loops': Artist Loopar
+          'Artist: Sequence': 'Konstnären: Sekvens'
+          'Artist: Loops': 'Konstnären: Slingor'
           'Bee: Conditionals': Bee Villkorssatser
           'Artist: Nested Loops': 'Artist: Kapslade slingor'
           'Farmer: While Loops': 'Bonde: ''Medan'' loopar'
@@ -1291,11 +1290,11 @@
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
           Happy Maps: Glada kartor
-          Move it, Move it: Flytta det, flytta den
+          Move it, Move it: Flytta den, flytta den
           'Real-life Algorithms: Plant a Seed': 'Verklighetsalgoritmer: Så ett frö'
           Graph Paper Programming: Kalkyleringsprogrammering
           Building a Foundation: Bygga en grund
-          Getting Loopy: Bli Snurrig
+          Getting Loopy: Att bli snurrig
           The Big Event: Den stora händelsen
           Binary Bracelets: Binära armband
           Songwriting: Låtskrivande
@@ -1648,3 +1647,10 @@
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Välkommen!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Sammanfattning

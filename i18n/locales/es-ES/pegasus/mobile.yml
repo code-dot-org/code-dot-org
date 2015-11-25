@@ -10,7 +10,7 @@ es-ES:
   n_have_learned_an_hoc: '<h1>Prueba una</h1><h2>Hora de Código</h2><h3># intentaron</h3>'
   anybody_can_learn: Cualquiera puede aprender.
   learn_now: Aprende Ahora
-  petition_message: Cada alumno de cada escuela debería tener la oportunidad de aprender Informática
+  petition_message: Cada alumno de cada escuela debería tener la oportunidad de aprender ciencias de la computación
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # others.'
   petition_sign_message_support: 'Si usted nos apoya, firme su nombre.  Invite a # otros.'
   petition_join_others: 'Unete a # otros'
@@ -114,7 +114,6 @@ es-ES:
   hoc_is_here: '#HourOfCode está aquí - compruébalo! @codeorg'
   just_did_hoc: 'Yo he terminado the HourofCode - Dale un vistazo! @codeorg'
   twitter_teach_cs: '¿Por qué no hay más escuelas que enseñen ciencias de la  computación? Podemos arreglar esto. http://youtu.be/nKIu9yen5nc. Visite http://code.org/ para obtener más información.'
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Más información</a> sobre los premios para educadores.'
   learn_hoc: Aprende una hora del código
   beyond_hoc: Más allá de Una Hora
   what_gender: ¿Cual es tu sexo?
@@ -294,6 +293,7 @@ es-ES:
   volunteer_engineer_submission_intro_recruit: |-
     Estos maestros le encantaría tener a alguien <span style="font-family: 'Gotham 7r', sans-serif;"> apasionado por la enseñanza de ciencia de a computación</span> que pueden ayudar en el aula, o para alguien que pueda <span style="font-family: 'Gotham 7r', sans-serif;"> inspirar </span> a sus alumnos hablando de la amplitud de posibilidades con las ciencias de la computación (que podría hacerse a través de una video conferencia). Si usted no está buscando ofrecerse de voluntario, <a href="%{url}"> aprender más</a> acerca de organizar su propio evento de Hora de Código.
   volunteer_engineer_submission_intro_signup: 'Por favor introduzca la siguiente información si usted es un estudiante de informática o profesional del software. Los campos marcados con un <span class="form-required-field">*</span> son obligatorios.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Información compartida con docentes en el mapa de voluntarios
   volunteer_engineer_submission_field_name: Nombre
   volunteer_engineer_submission_field_name_placeholder: Nombre Completo
@@ -540,6 +540,11 @@ es-ES:
   learn_educator_resources_description: Aprende como enseñar una Hour of Code
   learn_educator_resources_button: Recursos del educador
   learn_are_you_educator: '¿Es Ud. un educador? Aprenda <a href="http://hourofcode.com/resources/how-to">como a enseñar una Hora del Código</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Más información</a> sobre los premios para educadores.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Pruebe nuestros nuevos tutoriales de la Hora del Código
   hoc2014_try_new_tutorial: Prueba nuestro nuevo tutorial de la hora del código en beta
   hoc2014_try_scrat: Scrat, PvZ y Angry Birds
@@ -549,12 +554,12 @@ es-ES:
   carousel_heading_3rd_party: Tutoriales realizados por terceros
   carousel_heading_third_party: Tutoriales realizados por terceros
   carousel_heading_international: Tutoriales en tu idioma
-  carousel_heading_domestic: Tutoriales disponibles en inglés
+  carousel_heading_domestic: Guías disponibles en inglés
   carousel_heading_beginners: Tutoriales para principiantes (en inglés)
-  carousel_heading_javascript: Tutoriales que enseñan JavaScript
+  carousel_heading_javascript: Guías que enseñan JavaScript
   carousel_heading_unplugged: ¿No tienes dispositivo o Internet? Prueba informática sin conexión
-  carousel_heading_devices: Tutoriales en aplicaciones para teléfonos y tabletas
-  carousel_heading_languages: Tutoriales en otros lenguajes de programación
+  carousel_heading_devices: Aplicaciones Tutorial para teléfonos y tablets
+  carousel_heading_languages: Guías en otros lenguajes de programación
   carousel_heading_apps_games: Crea tus propias aplicaciones o juegos
   carousel_heading_university: Cursos de universidades en línea
   carousel_heading_webpages: Aprende a hacer páginas web
@@ -572,7 +577,7 @@ es-ES:
   next: Siguiente
   older_systems: Tutoriales que funcionan en sistemas más antiguos
   older_systems_subheading: 'Estos deberían funcionar sin problemas en navegadores no tan modernos. Para acceder al resto de los tutoriales vas a necesitar <a href="http://browsehappy.com/" target="_blank">actualizar tu navegador</a>.'
-  mobile_devices: Tutoriales para dispositivos móviles
+  mobile_devices: Guías para dispositivos móviles
   frozen_name: Programa con Ana y Elsa
   starwars_name: 'Star Wars: Contruyendo una Galaxia con Código'
   codeorg_name: Escribí tu primer programa

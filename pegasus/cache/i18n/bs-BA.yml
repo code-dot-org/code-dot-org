@@ -142,8 +142,6 @@
   just_did_hoc: 'Upravo sam završio #HourOfCode - provjeri! @codeorg'
   twitter_teach_cs: Zašto se računarstvo ne predaje u više škola? Mi to možemo popraviti.
     http://youtu.be/2DxWIxec6yo. Posjeti http://code.org/ da naučiš više.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Nauči više</a>o nagradama
-    za edukatore.
   learn_hoc: Nauči Hour of Code
   beyond_hoc: Više nego One Hour
   what_gender: Koji si spol?
@@ -357,6 +355,9 @@
   volunteer_engineer_submission_intro_signup: Molimo da unesete slijedeću informaciju
     ako ste student računarstva ili softverski poznavalac. Polja zabilježena sa <span
     class="form-required-field">*</span>su obavezna.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Informacija podijeljena sa nastavnicima
     na mapi volontera
   volunteer_engineer_submission_field_name: Ime
@@ -684,6 +685,16 @@
   learn_educator_resources_button: Resursi za edukatore
   learn_are_you_educator: Jesi li edukator? Nauči <a href="http://hourofcode.com/resources/how-to">
     kako predavati Sat Kodiranja</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Nauči više</a>o nagradama
+    za edukatore.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Isprobaj naše nove tutorijale Sata Kodiranja
   hoc2014_try_new_tutorial: Isprobajte naš novi tutorijal Sata Kodiranja u beta verziji
   hoc2014_try_scrat: Angry Birds, Plants vs. Zombies i Scrat
@@ -1380,14 +1391,3 @@
   infinity_shortcode: inf
   playlab_shortcode: igraj
   artist_shortcode: art
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>

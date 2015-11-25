@@ -1388,9 +1388,8 @@
         igen.
       Course 4 Artist Functions Inspiration_instruction: Klicka här för att se tips
         igen.
-      Course 4 Artist Functions inspire_instruction: |
-        Click here to see the inspiration
-        picture again.
+      Course 4 Artist Functions inspire_instruction: Klicka här för att se inspirations-bilden
+        igen.
       Course 4 Artist Inspire_instruction: "Vill du ha en andra titt på design-inspirationerna
         eller tipsen? Tryck här!\r\n\r\nAnnars kan du skapa en egen design!"
       Course 4 Artist Params 1_instruction: Låt oss redigera en funktion som ritar
@@ -1516,10 +1515,9 @@
         nektar. Den lila blomman kan ha antingen 3, 2 eller 1 nektar.
       Course 4 Bee For Loops 1_instruction: Använd en loop (upprepa) för att samla
         nektar från varje blomma.
-      Course 4 Bee For Loops 10_instruction: |
-        If your loop is counting down, the
-        increment is subtracted from your counter variable each loop. What should
-        your increment be to collect 9, then 6, and then 3 nectar?
+      Course 4 Bee For Loops 10_instruction: Om din loop räknar ner, dras ökningen
+        från din variabel i varje loop. Vad bör din ökning vara för att samla 15,
+        sen 12, sedan 9, 6, 3 nektar?
       Course 4 Bee For Loops 11_instruction: Vad är fel med denna loop? Se om du kan
         fixa det och göra så att biet samlar alla nektar.
       Course 4 Bee For Loops 2_instruction: Här är en ny typ av loop, kallas "för"
@@ -1530,77 +1528,62 @@
         nektar!
       Course 4 Bee For Loops 4_instruction: Samla alla nektar från blommorna. Finns
         det ett enklare sätt att göra detta...
-      Course 4 Bee For Loops 5_instruction: "Ah, the for loop makes this much easier!\nUsing
-        the \"counter\" variable from the for loop to loop the \"get nectar\"\nblock
-        the same number of times as the loop. Whew! That's a lot of loops.\nAll the
-        code you need it there, take a look at how it is put together then\nclick
-        on Run and see how it works. \n"
-      Course 4 Bee For Loops 6_instruction: |
-        You can also use a for loop to count
-        down. Try gathering this nectar by counting down from 5 to 1 by 1.
-      Course 4 Bee For Loops 7_instruction: |
-        Use your for loop "counter" variable
-        to control how far to move horizontally.
-      Course 4 Bee For Loops 8_instruction: |
-        Can you use the loop variable to control
-        movement and nectar collection?
-      Course 4 Bee For Loops 9_instruction: |
-        The last number in your for loop is
-        called the "increment,"  and each time the loop is run the counter variable
-        changes by the increment. Try collecting these flowers using an increment
-        of 2.
-      Course 4 Bee Loops 5 NEW_instruction: |
-        Here are three flowers. Can you find
-        the pattern of instructions that you need to repeat 3 times to collect the
-        nectar with the fewest number of blocks?
-      Course 4 Bee Loops 5a NEW_instruction: |
-        Now, use loops to help the bee collect
-        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
-        you get there, don't forget to make honey!
-      Course 4 Bee Params 1_instruction: |
-        Use the function "get 3 nectar" which
-        turns, moves to collect the nectar, and then returns to the original location.
-        Write a sequence to collect all of the nectar using "get 3 nectar."
-      Course 4 Bee Params 2_instruction: |
-        Modify the "get 3 nectar" function so
-        it makes me turn right instead of left to the flowers.
-      Course 4 Bee Params 3 (copy 1)_instruction: |
-        Now there are flowers on both
-        sides! Maybe you can use a parameter so that the same function works for flowers
-        on either side. I've added a parameter called "direction" to the function.
-        If the "direction" parameter equals 0 I should turn left, if it's 1 I should
-        turn right.
-      Course 4 Bee Params 3_instruction: "Now there are flowers on both sides! We've\nadded
-        variables called \"left\" and \"right\" for you to use, and added a\nparameter
-        called \"direction\" to \"get 3 nectar\". Edit \"get 3 nectar\"\nso that the
-        bee turns the correct direction when the variables \"left\" or\n\"right\"
-        are passed into the function.  \n"
-      Course 4 Bee Params 4 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of the flowers. Remember, 0 = left and 1 = right.
-      Course 4 Bee Params 4 - Two WhenRun_instruction: |
-        Try using your new function
-        to collect all of the flowers. Remember to use the left and right variables.
-      Course 4 Bee Params 4 backup_instruction: |
-        Wouldn't it be nice if we could
-        collect all of these nectars with the a single function? Try adding a new
-        parameter to your function called "nectars" to control the amount of nectar
-        to collect. You'll probably want to rename the function too!
-      Course 4 Bee Params 4_instruction: |
-        Try using your new function to collect
-        nectar from all of the flowers. Remember to use the left and right variables.
+      Course 4 Bee For Loops 5_instruction: 'Ah, för- loppen gör detta mycket lättare!
+        Med variabeln "räknare" från för- loopen loopar "få nektar" blocket samma
+        antal gånger som loppen. Usch! Det är en massa loopar. All kod som du behöver
+        är där, ta en titt på hur den är hopsatt och klicka sedan på kör och se hur
+        det fungerar. '
+      Course 4 Bee For Loops 6_instruction: Du kan också använda en "för loop" för
+        att räkna ner. Försök samla denna nektar genom att räkna ner från 5 till 1,
+        1 i taget.
+      Course 4 Bee For Loops 7_instruction: Använd din för-loop "räknare" variabel
+        för att styra hur långt du vill flytta horisontellt.
+      Course 4 Bee For Loops 8_instruction: Kan du använda variabeln loop för att
+        styra rörelse och insamling av nektar?
+      Course 4 Bee For Loops 9_instruction: Det sista numret i din loop kallas "ökning",
+        och varje gång loopen körs ändras 'räknare'variabeln med 'ökningen'. Försök
+        samla dessa blommor med en ökning på 2.
+      Course 4 Bee Loops 5 NEW_instruction: Här är tre blommor. Kan du hitta mönstret
+        för instruktionerna du måste upprepa 3 gånger för att samla nektar med minsta
+        antalet block?
+      Course 4 Bee Loops 5a NEW_instruction: Använd loopar för att hjälpa biet samla
+        all nektar på väg till honungskakan med så få block som möjligt.  När du kommer
+        dit, glöm inte att göra honung!
+      Course 4 Bee Params 1_instruction: Använd funktionen "få 3 nektar" som vänder
+        och flyttar för att samla nektar och sen återgår till den ursprungliga platsen.
+        Skriv en sekvens för att samla all nektar med "få 3 nektar"
+      Course 4 Bee Params 2_instruction: Ändra funktionen "få 3 nektar" så det får
+        mig att vända höger istället för vänster till blommorna.
+      Course 4 Bee Params 3 (copy 1)_instruction: Nu finns det blommor på båda sidor!
+        Kanske kan du använda en parameter så att samma funktion fungerar för blommor
+        på vardera sidan. Jag har lagt en parameter som kallas "riktning" till funktionen.
+        Om parametern "riktning" är lika med 0 bör jag sväng vänster, om det är 1
+        jag ska vända höger.
+      Course 4 Bee Params 3_instruction: 'Nu finns det blommor på båda sidor! Vi har
+        lagt till variabler kallas "vänster" och "höger" för dig att använda, och
+        lagt till en parameter som kallas "riktning" för att "få 3 nektar". Redigera
+        "få 3 nektar" så att biet vänder åt rätt håll när variablerna "vänster" eller
+        "höger" skickas till funktionen.  '
+      Course 4 Bee Params 4 (copy 1)_instruction: Försök för att samla alla blommor
+        med din nya funktion. Kom ihåg, 0 = vänster och 1 = höger.
+      Course 4 Bee Params 4 - Two WhenRun_instruction: Försök för att samla alla blommor
+        med din nya funktion. Kom ihåg att använda vänster och höger variabler.
+      Course 4 Bee Params 4 backup_instruction: Vore det inte trevligt om vi kunde
+        samla all denna nektar med en funktion? Försök att lägga till en ny parameter
+        i din funktion som kallas "nektar enheter" för att kontrollera mängden nektar
+        att samla in. Du kommer antagligen att byta namn på funktionen också!
+      Course 4 Bee Params 4_instruction: Försök för att samla nektar från alla blommor
+        med din nya funktion. Kom ihåg att använda vänster och höger variabler.
       Course 4 Bee Params 5_instruction: Låt oss börja från grunden - kan du skapa
         en ny funktion som kallas "få 5 nektar" med en riktningsparameter?
-      Course 4 Bee Params 6 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of this nectar.
+      Course 4 Bee Params 6 (copy 1)_instruction: Försök för att samla all denna nektar
+        med din nya funktion.
       Course 4 Bee Params 6_instruction: Vore det inte trevligt om vi kunde samla
         all denna nektar med en funktion? Försök att lägga till en ny parameter i
         din funktion som kallas "nektar enheter" för att kontrollera mängden nektar
         att samla in. Du kommer antagligen att byta namn på funktionen också!
-      Course 4 Bee Params 7 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of this nectar.
+      Course 4 Bee Params 7 (copy 1)_instruction: Försök för att samla all denna nektar
+        med din nya funktion.
       Course 4 Bee Params 7_instruction: Försök för att samla all denna nektar med
         din nya funktion.
       Course 4 Bee Params 8 Clone 2_instruction: Oooh, nu finns honung för att ta
@@ -2300,74 +2283,63 @@
       K-1 Maze 11_instruction: 'Spåra vägen och led mig till fåniga grisen. Undvik
         TNT annars kommer fjädrar att flyga! Tips: Han är söder om mig.'
       K-1 Maze 2_instruction: Flytta mig åt öster för att få mig till grisen!
-      K-1 Maze 3_instruction: Move me South to get me to the pig!
-      K-1 Maze 4_instruction: Move me North to get me to the pig!
+      K-1 Maze 3_instruction: Flytta mig söderut för att få mig att grisen!
+      K-1 Maze 4_instruction: Flytta mig norrut för att få mig till grisen!
       K-1 Maze 5_instruction: Flytta mig åt öster för att få mig till grisen!
-      K-1 Maze 6_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 7_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 8_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 9_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze Assessment 1_instruction: Assessment -- Get me to the pig!
-      K-1 Maze Assessment 12_instruction: Assessment Level
-      K-1 Maze Assessment 13_instruction: Assessment Level
-      K-1 Maze Assessment 2_instruction: Assessment -- Get me to the pig!
-      K-1 maze debug 1_instruction: Change the code to get me to the pig!
-      K-1 maze debug 10_instruction: |
-        Debug this level by rearranging and adding
-        blocks to get me to the pig!
-      K-1 maze debug 11_instruction: "This is a test!\r\nDebug this level by rearranging\nand
-        adding blocks to get me to the pig"
-      K-1 maze debug 2_instruction: |
-        Figure out what is missing and then add blocks
-        to get me to the pig!
-      K-1 maze debug 3_instruction: |
-        Figure out what is missing and then REMOVE blocks
-        to get me to the pig!
-      K-1 maze debug 4_instruction: |
-        Run through these blocks and fix them! I think
-        I might be going in the wrong direction.
-      K-1 maze debug 5_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 6_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 7_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 8_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 9_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 Maze debug Assessment 1_instruction: |
-        Assessment -- Debug this level by
-        rearranging and adding blocks to get me to the pig!
+      K-1 Maze 6_instruction: Flytta en väg, sedan en annan att få mig att grisen!
+      K-1 Maze 7_instruction: Flytta en väg, sedan en annan att få mig att grisen!
+      K-1 Maze 8_instruction: Flytta en väg, sedan en annan att få mig att grisen!
+      K-1 Maze 9_instruction: Flytta en väg, sedan en annan att få mig att grisen!
+      K-1 Maze Assessment 1_instruction: Bedömning--Få mig till grisen!
+      K-1 Maze Assessment 12_instruction: Bedömnings-nivå
+      K-1 Maze Assessment 13_instruction: Bedömnings-nivå
+      K-1 Maze Assessment 2_instruction: Bedömning--Få mig till grisen!
+      K-1 maze debug 1_instruction: Ändra koden för att få mig till grisen!
+      K-1 maze debug 10_instruction: Felsök denna nivå genom att ordna om och lägga
+        till block för att få mig till grisen!
+      K-1 maze debug 11_instruction: "Detta är ett test! \r Felsök denna nivå genom
+        att ordna om och lägga till block för att få mig till grisen"
+      K-1 maze debug 2_instruction: Räkna ut vad som saknas och lägg sedan till block
+        för att få mig till grisen!
+      K-1 maze debug 3_instruction: Räkna ut vad som saknas och lägg sedan till block
+        för att få mig till grisen!
+      K-1 maze debug 4_instruction: Kör genom dessa block och fixa dem! Jag tror att
+        jag går i fel riktning.
+      K-1 maze debug 5_instruction: Felsök denna nivå genom att ordna om och lägga
+        till block för att få mig till grisen!
+      K-1 maze debug 6_instruction: Felsök denna nivå genom att ordna om och lägga
+        till block för att få mig till grisen!
+      K-1 maze debug 7_instruction: Felsök denna nivå genom att ordna om och lägga
+        till block för att få mig till grisen!
+      K-1 maze debug 8_instruction: Felsök denna nivå genom att ordna om och lägga
+        till block för att få mig till grisen!
+      K-1 maze debug 9_instruction: Felsök denna nivå genom att ordna om och lägga
+        till block för att få mig till grisen!
+      K-1 Maze debug Assessment 1_instruction: Bedömning--felsök denna nivå genom
+        att ordna om och lägga till block för att få mig till grisen!
       K-1 Maze Loops 1_instruction: Få mig att grisen!
-      K-1 Maze Loops 10_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 11_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 12_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 2_instruction: Use the Repeat block to get me to the pig!
-      K-1 Maze Loops 3_instruction: Get me to the pig! Use the repeat loop.
+      K-1 Maze Loops 10_instruction: Få mig till grisen! Använda upprepa-loopen.
+      K-1 Maze Loops 11_instruction: Få mig till grisen! Använda upprepa-loopen.
+      K-1 Maze Loops 12_instruction: Få mig till grisen! Använda upprepa-loopen.
+      K-1 Maze Loops 2_instruction: Använda upprepa blocket för att få mig att komma
+        till grisen!
+      K-1 Maze Loops 3_instruction: Få mig till grisen! Använda upprepa-loopen.
       K-1 Maze Loops 4_instruction: Få mig att grisen!
-      K-1 Maze Loops 5_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 6_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 7_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 8_instruction: Get me to the pig! Use the repeat loop.
+      K-1 Maze Loops 5_instruction: Få mig till grisen! Använda upprepa-loopen.
+      K-1 Maze Loops 6_instruction: Få mig till grisen! Använda upprepa-loopen.
+      K-1 Maze Loops 7_instruction: Få mig till grisen! Använda upprepa-loopen.
+      K-1 Maze Loops 8_instruction: Få mig till grisen! Använda upprepa-loopen.
       K-1 Maze Loops 9_instruction: Få mig att grisen!
-      K-1 Maze Loops Assessment 1_instruction: |
-        Assessment -- Use loops to get me
-        to the pig!
-      K-1 Maze Loops Assessment 2_instruction: |
-        Assessment -- Use loops to get me
-        to the pig!
-      K-1 Maze Multi 14_instruction: Assessment Level
-      K-1 Maze Multi 15_instruction: Assessment Level
-      K-1 Maze Sequence Assessment 1_instruction: "This is a test!\r\nMove one way,\nthen
-        another to get me to the pig"
-      K-1 Maze Sequence Assessment 2_instruction: "This is a test!\r\nMove one way,\nthen
-        another to get me to the pig."
+      K-1 Maze Loops Assessment 1_instruction: Bedömning--Använda loopar för att få
+        mig att komma till grisen!
+      K-1 Maze Loops Assessment 2_instruction: Bedömning--Använda loopar för att få
+        mig att komma till grisen!
+      K-1 Maze Multi 14_instruction: Bedömnings-nivå
+      K-1 Maze Multi 15_instruction: Bedömnings-nivå
+      K-1 Maze Sequence Assessment 1_instruction: "Detta är ett test! \r flytta i
+        en riktning, sedan en annan att få mig till grisen"
+      K-1 Maze Sequence Assessment 2_instruction: "Detta är ett test! \r flytta i
+        en riktning, sedan i en annan att få mig till grisen."
       kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
@@ -2544,74 +2516,63 @@
       NetSim_Variant3_instruction: |
         NetSim: Variant 3: Connects groups of 2-6 students
         with a router, and explores issues in routing and DNS
-      New Artist Project_instruction: |
-        Draw something awesome! Your code is saved
-        as a project that you can return to at any time.
-      NEW Course 4 Artist Functions 1_instruction: |
-        Can you draw a square that is
-        100 pixels in length, using a repeat loop?
-      NEW Course 4 Artist Functions 10.1_instruction: |
-        Use the functions from the
-        previous puzzles to draw this pattern.
-      NEW Course 4 Artist Functions 10_instruction: |
-        Click "edit" to fill out the
-        blocks in the function definition to make a 40 pixel square.
-      NEW Course 4 Artist Functions 11_instruction: "Now we want to create a new\nfunction
-        called \"draw a line of squares\" that draws six squares all in a\nrow.  Can
-        you build this function using the \"draw a square 20\" function\nthat we've
-        already created? Note: See that we've changed the pen to be much\nthinner.
-        Click \"edit\" on the  the \"draw a square 20\" function to see how!\r\n"
-      NEW Course 4 Artist Functions 12_instruction: |
-        Use the "draw a line of squares"
-        function from the last puzzle to draw this pattern."
-      NEW Course 4 Artist Functions 13_instruction: |
-        Can you draw a star shape using
-        the "draw a line of squares" function? Hint: Edit the "draw a line of squares"
-        function so that you don't have to call it twice.  Notice, you'll have to
-        move forward a certain number of pixels and turn 144 degrees.
-      NEW Course 4 Artist Functions 14_instruction: 'Free Play time! '
+      New Artist Project_instruction: Rita något fantastiskt! Din kod sparas som ett
+        projekt som du kan återvända till när som helst.
+      NEW Course 4 Artist Functions 1_instruction: Kan du rita en fyrkant som är 100
+        bildpunkter i längd, med en upprepa-loop?
+      NEW Course 4 Artist Functions 10.1_instruction: Använd funktionerna från tidigare
+        pussel för att rita detta mönster.
+      NEW Course 4 Artist Functions 10_instruction: Klicka på "Redigera" för att fylla
+        i blocken i funktions-definitionen för att rita en 40 pixel kvadrat.
+      NEW Course 4 Artist Functions 11_instruction: "Nu vill vi skapa en ny funktion
+        som kallas \"Rita en linje av fyrkanter\" som ritar sex rutor i rad.  Kan
+        du bygga denna funktion med hjälp av \"Rita en kvadrat 20\"-funktionen som
+        vi redan har skapat? Obs: Se att vi har ändrat pennan till att vara mycket
+        tunnare. Klicka på \"Redigera\" på  \"Rita en kvadrat 20\" funktionen för
+        att se hur! \r\n"
+      NEW Course 4 Artist Functions 12_instruction: Använd funktionen "Rita en linje
+        av kvadrater" från sista pusslet för att rita detta mönster."
+      NEW Course 4 Artist Functions 13_instruction: 'Kan du rita en stjärnform med
+        funktionen "Rita en linje av kvadrater"? Tips: Redigera funktionen "Rita en
+        linje av kvadrater" så att du slipper kalla den två gånger.  Notera att du
+        måste flytta framåt ett visst antal pixlar och vända 144 grader.'
+      NEW Course 4 Artist Functions 14_instruction: 'Fri spel tid! '
       NEW Course 4 Artist Functions 2_instruction: 'Kan du rita 3 rutor 20 pixlar
         från varandra? Tips: varje ruta är 100 bildpunkter i storlek'
-      NEW Course 4 Artist Functions 3_instruction: |
-        Here is a new type of Block.
-        It is called a "Function" block. Click "edit" then fill it with the code
-        for drawing a square with 100 pixel sides. When you're done editing the function,
-        click "Close" to go back to your program.
-      NEW Course 4 Artist Functions 4_instruction: |
-        Use the "draw a square" function
-        to draw this pattern. Hint: You will have to use a "turn right by 120 degrees"
-        block after each square.
-      NEW Course 4 Artist Functions 5_instruction: |
-        How did the "draw a square"
-        block know what commands to run? Click on "edit" in the "draw a square"
-        function block. The blocks in the function editor are the definition that
-        make up "draw a square." When you're done looking around, click "Save
-        and Close" and then "Run."
-      NEW Course 4 Artist Functions 6_instruction: "Using the \"draw a square\" function\nblock,
-        can you draw this picture? Hint: each square is 20 pixels apart.\r\n"
-      NEW Course 4 Artist Functions 7_instruction: "Are you getting the hang of how\nto
-        use function blocks? Let's modify this square so that it is 200 pixels\nin
-        size. Hint: click on \"edit\" to enter the \"draw a square\" function editor.\nRemember
-        to click on \"Close\" to get out of the function editor. \n"
-      NEW Course 4 Artist Functions 8_instruction: |
-        We have created a new function
-        for you called "draw a triangle".  Can you edit the function definition
-        to draw a triangle with 100 pixel sides?
-      NEW Course 4 Artist Functions 9_instruction: |
-        Can you solve this by adding
-        only one block?
-      NEW Course 4 Artist Functions inspire_instruction: |
-        Click here to see the inspiration
-        picture again.
-      New Course 4 Artist Functions Level 4_instruction: |
-        Use the "draw a square"
-        function to draw this pattern.
-      NEW Course 4 Artist Params 1_instruction: |
-        Let's define this function to draw
-        a square with 50 pixel sides. Click "edit" to get started.
-      NEW Course 4 Artist Params 10_instruction: "Create a \"draw a hexagon\" function\nblock
-        with a length parameter. Hint: This hexagon has sides that are 100 pixels\nin
-        length. \n"
+      NEW Course 4 Artist Functions 3_instruction: Här är en ny typ av Block. Det
+        kallas ett "Funktions" block. Klicka på "Redigera" för att fylla den med kod
+        för att rita en fyrkant med 100 pixlars sidor. När du är klar med att redigera
+        funktionen, klicka på "Stäng" för att gå tillbaka till ditt program.
+      NEW Course 4 Artist Functions 4_instruction: 'Använd funktionen "Rita en fyrkant"
+        för att rita detta mönster. Tips: Du måste använda ett "vänd precis vid 120
+        grader" block efter varje kvadrat.'
+      NEW Course 4 Artist Functions 5_instruction: Hur visste "Rita en fyrkant" blocket
+        vilka kommandon det skulle köra? Klicka på "Redigera" i blocket "Rita en fyrkant"
+        funktion. Blocken i funktionens redaktör är definitionen som utgör "Rita en
+        fyrkant." När du är klar med att titta runt, klicka på "Spara och Stäng" och
+        sedan "kör"
+      NEW Course 4 Artist Functions 6_instruction: "Kan du rita denna bild genom att
+        använda \"rita en fyrkant\" -blocket? Tips: varje ruta är 120 pixlar isär.
+        \r\n"
+      NEW Course 4 Artist Functions 7_instruction: 'Får du kläm på hur man använder
+        funktionsblock? Låt oss ändra denna ruta så att den är 200 pixlar i storlek.
+        Tips: Klicka på "Redigera" för att ändra storlek på "Rita en fyrkant" funktionen.
+        Kom ihåg att klicka på "Spara och Stäng" för att komma ur funktions-editorn. '
+      NEW Course 4 Artist Functions 8_instruction: Vi har skapat en ny funktion för
+        dig kallas "Rita en triangel".  Kan du redigera funktionsdefinitionen för
+        att rita en triangel med 100 pixel sidor?
+      NEW Course 4 Artist Functions 9_instruction: Kan du lösa detta genom att lägga
+        till endast ett block?
+      NEW Course 4 Artist Functions inspire_instruction: Klicka här för att se inspirations-bilden
+        igen.
+      New Course 4 Artist Functions Level 4_instruction: Använd funktionen "Rita en
+        fyrkant" för att rita detta mönster.
+      NEW Course 4 Artist Params 1_instruction: Låt oss definiera denna funktion för
+        att rita en kvadrat med 50 pixel sidor. Klicka på "Redigera" för att komma
+        igång.
+      NEW Course 4 Artist Params 10_instruction: 'Skapa ett "Rita en hexagon" funktionsblock
+        med en längdparameter. Tips: Denna hexagon har sidor som är 100 bildpunkter
+        i längd. '
       NEW Course 4 Artist Params 11_instruction: Kan du lista ut hur man ritar denna
         form? Redigera funktionen att använda parametern "sidor".
       NEW Course 4 Artist Params 12_instruction: Kan du slutföra denna ritning? Sidorna
@@ -2675,9 +2636,8 @@
         för längd en gång, och koden använder det rätta värdet överallt? \r \r \r\n"
       NEW Course 4 Bee For Loops 1_instruction: Använd en slinga för att samla nektar
         från varje blomma.
-      NEW Course 4 Bee For Loops 10_instruction: |
-        Use your for loop "counter" variable
-        to control how far to move horizontally.
+      NEW Course 4 Bee For Loops 10_instruction: Använd din för-loop "räknare" variabel
+        för att styra hur långt du vill flytta horisontellt.
       NEW Course 4 Bee For Loops 10a_instruction: 'Redo för en utmaning?  Använd det
         du lärt dig om loopar och försöka lösa problemet. Kom ihåg: Du kan behöva
         köra din lösning flera gånger innan du listat ut alla steg.'
@@ -3281,6 +3241,9 @@
       U3 - Canvas - draw at click point_instruction: |
         Change your program so that
         dots are drawn at the location of the mouse click. (Click to see full instructions)
+      U3 - Canvas - freePlay_instruction: |
+        Write code that redraws your image using
+        a sketch effect. (Click to see full instructions)
       U3 - Canvas - introCanvas_instruction: |
         Add a canvas to your app and set it
         to be the active canvas. Then add a large dot to your canvas. (Click to see
@@ -3293,6 +3256,10 @@
         Write a function that takes the
         movement of the mouse as input and generates a line width as output. (Click
         to see full instructions)
+      U3 - Canvas - One Dot sprayPaint_instruction: |
+        Write code that redraws your
+        image using a dot whose x and y locations use `offsetX` and `offsetY` with
+        small random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -3310,8 +3277,9 @@
         Write code that redraws your image using
         a sketch effect. (Click to see full instructions)
       U3 - Canvas - sprayPaint_instruction: |
-        Write code that redraws your image using
-        a "spray paint" type effect. (Click to see full instructions)
+        Update the spray paint code so that
+        redraws your image using multiple random dots instead of one using a nested
+        for loop. (Click to see full instructions)
       U3 - Canvas - transparentDots_instruction: |
         Change the colors of your dots
         so they have a fully transparent stroke and partially transparent fill. (Click
@@ -3351,7 +3319,7 @@
         OR to display "It's the weekend!" if the user enters a weekend day at the
         prompt. (Click to see full instructions)
       U3 - Design Mode - Console Log_instruction: |
-        Update the ID names and `console.log()`
+        Update the ID names and `console.log`
         messages to match the correct button. (Click to see full instructions.)
       U3 - Design Mode - Layers and Delete_instruction: |
         Fix the layout of the bullseye
@@ -3760,7 +3728,7 @@
         called "lives" and assign it the value 3. Print it to the console. (Click
         to see full instructions)
       U3- Variables - Text Mode_instruction: |
-        1. switch to text mode and type instructions;
+        1. Switch to text mode and type instructions;
         2. drag blocks out into text mode; 3. experiment with code completion
       U3-Design Mode-ID and Event Handler_instruction: |
         Add an event handler for
@@ -3770,7 +3738,7 @@
         Using the Design Mode Events change the button
         ID and update the code to match. (Click to see detail instructions).
       U3-Design Mode-Image_instruction: |
-        Recreate the "Chaser-Game" from the last
+        Recreate the "Chaser Game" from the last
         lesson using Design Mode. (Click to see full instructions.)
       U313 drag Two Buttons_instruction: |
         Run a program with two buttons that have
@@ -3891,8 +3859,8 @@
         Add 15 fish to the image by writing drawAllFish
         with a loop. (Click to see full instructions)
       U3L07 - Free Play Loops and Random_instruction: |
-        Free Play!  Use what you learned
-        from loops and random to make your own little scene.  Have fun.
+        Free Play! Use what you learned
+        from loops and random to make your own little scene. Have fun.
       U3L07 - introSquare_instruction: |
         Use a loop to draw a square. (Click to see
         full instructions)
@@ -3948,7 +3916,7 @@
         which accept parameters to allow you to add more variation to your scene.  The
         student worksheet provides more details and guidance.
       U3L08 - fish_instruction: |
-        Add a parameter to drawFish() that changes the size
+        Add a parameter to drawFish that changes the size
         of the fish drawn. (Click to see full instructions)
       U3L08 - freePlay_instruction: |
         Keep adding to your image by making more calls
@@ -3961,21 +3929,21 @@
         of sea grass to the image. Look at, but don't change, the functions that
         create them. (Click to see full instructions)
       U3L08 - multiParamFish_instruction: |
-        Add three parameters to your drawFish()
+        Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
         colors. (Click to see full instructions)
       U3L08 - multipleLayersofParams_instruction: |
         Call drawPlusSign() to complete
         the image. (Click to see full instructions)
       U3L08 - paramsToStarfish_instruction: |
-        Add a parameter to drawStarfish() that
+        Add a parameter to drawStarfish that
         changes the size of the starfish drawn. (Click to see full instructions)
       U3L08 - randomInput_instruction: |
         Use the randomNumber() blocks to test the
         functions you designed with random input. (Click to see full instructions)
       U3L08 - seaGrass_instruction: |
-        Add a parameter to drawSeaGrass() that changes
-        the size of the piece of sea grass drawn. (Click to see full instructions)
+        Add a parameter to drawSeagrass that changes
+        the size of the piece of seagrass drawn. (Click to see full instructions)
       U3L08 - squareTwoParams_instruction: |
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
@@ -4138,8 +4106,8 @@
         they hit 'enter' in the text input, using the 'change' event. (Click to
         see full instructions)
       U3L16 - chaserApp_instruction: |
-        Create your own "Chaser App". (Click to see
-        full instructions)
+        Create your own "Chaser Game." (Click to
+        see full instructions)
       U3L16 - chooseImages_instruction: |
         Replace the image in your application with
         one of your own. (Click to see full instructions)
@@ -4202,7 +4170,7 @@
         it!  For more details see the Activity guide for this lesson.
       U3L16 - setPosition to move button_instruction: |
         Introducing the setPosition
-        command!  Replace the moveTo in the button-click event handler to use setPosition
+        command! Replace the moveTo in the button-click event handler to use setPosition
         to move the button itself to a random location when it's clicked.
       U3L16 - setPositionMoveButton_instruction: Use setPositon to moveButton
       U3L16 - setupMoveToRandom_instruction: |
@@ -4341,7 +4309,7 @@
         shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
       U3L19 - variable reassignment challenge pt2_instruction: |
         Make a prediction
-        about the ending values of a,b, and c. Then use console.log to check your
+        about the ending values of a, b, and c. Then use console.log to check your
         understanding (Click to see full instructions)
       U3L19 - variable reassignment part 1_instruction: |
         Predict the value of a and

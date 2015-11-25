@@ -1941,26 +1941,25 @@ ro:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: |
-        Daca vreti sa atingeti un vierme, nu e o idee buna.
-        Mergeti cu grija pe langa viermi si ajungeti in siguranta in casa.
-      Overworld Chop Tree_instruction: 'Lemnul este o resursa foarte importanta. Multe lucruri sunt facute din lemn. Mergeti spre copac si utilizati blocul "distruge" pentru a-l taia.'
-      Overworld Chop Trees_instruction: Trebuie să construim o casă înainte ca soarele să apună. Casele necesită foarte mult lemn. Taie toți cei 3 copaci.
-      Overworld Free Play 20x20_instruction: Felicitări! Ai finalizat toate puzzle-urile noastre! Acum minează, construiește și creează ceva unic folosind tot ce ai învățat până acum.
-      Overworld Free Play_instruction: Acest peisaj este aici pentru a te juca tu cu el. Tu alegi ce să construiești.
-      Overworld House Frame - A_instruction: Hai să ne facem propria noastră casă! Acest loc arată bine. Construiește un cadru pe blocurile de mizerie.
-      Overworld House Frame - C_instruction: Hai să ne facem propria noastră casă! Acest loc arată bine. Construiește un cadru pe blocurile de mizerie.
-      Overworld House Frame B_instruction: Un perete este terminat, haideti sa construim restul casei folosind planul tau pentru podele! Va trebui sa repeti mutarile destul de mult aici.
-      Overworld House Frame B2_instruction: Un perete este terminat, haideti sa construim restul casei folosind planul tau pentru podele! Va trebui sa repeti mutarile destul de mult aici.
-      Overworld House Frame C_instruction: Un perete este terminat, haideti sa construim restul casei folosind planul tau pentru podele! Va trebui sa repeti mutarile destul de mult aici.
-      Overworld House Frame Chosen_instruction: "Construieste restul casei din orice material doresti. Comanda 'repeta' iti va veni in ajutor."
-      Overworld House Frame_instruction: Hai să ne facem propria noastră casă! Acest loc arată bine. Construiește un cadru pe blocurile de mizerie.
-      Overworld Minecart Track_instruction: Ești din nou la suprafața cu o mulțime de resurse subterane. Acum, vom construi un drum de-a lungul traseului cu mizerie de la casa ta. Primul pas este să cureți tot de pe traseu. Urmărește traseul și taie copacii.
-      Overworld Move to Sheep_instruction: 'Adauga o a doua comanda "mergi inainte" pentru a ajunge la oi.'
-      Overworld Place Wall_instruction: "Fiecare casa incepe cu un perete. Construieste prima parte a casei asezand comenzile 'loc' si 'mergi inainte' inaunruntrul buclei repeta."
-      Overworld Plant Crops_instruction: Este bine sa planifici inainte. Planteaza culturi de ambele parti ale apei astfel incat sa nu iti fie foame mai tarziu.
-      Overworld Powered Minecart_instruction: Buna treaba! Ai adunat resurse suficiente pentru a construi o casa modesta. Acum pune o cale ferata de la capatul hartii la usa casei tale.
-      Overworld Shear Sheep_instruction: |-
-        E vremea sa tunzi oile! Foloseste comanda "forfecare' pentru a aduna lana de la oi.
+        Intalnirea unui Vierme nu este o idee buna.
+        Mergeti cu atentie pe langa ei si ajungeti in siguranta in casa.
+      Overworld Chop Tree_instruction: 'Lemnul este o resursa importanta. Se pot construi multe cu ajutorul lui. Mergeti la copac si utilizati blocul "Distrugeti" pentru a-l taia.'
+      Overworld Chop Trees_instruction: 'Trebuie sa construim o casa inainte de apus. Este necesar mult lemn. Taie toti cei trei copaci. '
+      Overworld Free Play 20x20_instruction: Felicitări! Ai finalizat toate puzzle-urile! Acum extrage, construieste si creeaza ceva unic folosind tot ceea ce ai invatat pana acum.
+      Overworld Free Play_instruction: Te poti juca cu acest peisaj. Tu alegi ce sa construiesti.
+      Overworld House Frame - A_instruction: Sa ne construim propria casa! Acest loc arata bine. Construieste un cadru pe blocurile de pamant.
+      Overworld House Frame - C_instruction: Sa ne construim propria casa! Acest loc arata bine. Construieste un cadru pe blocurile de pamant.
+      Overworld House Frame B_instruction: Un perete a fost terminat, acum sa construim restul casei urmand planurile! Va trebui sa repeti mutarile destul de mult.
+      Overworld House Frame B2_instruction: Un perete a fost terminat, acum sa construim restul casei urmand planurile! Va trebui sa repeti mutarile destul de mult.
+      Overworld House Frame C_instruction: Un perete a fost terminat, acum sa construim restul casei urmand planurile! Va trebui sa repeti mutarile destul de mult.
+      Overworld House Frame Chosen_instruction: 'Construieste restul casei din orice material doresti. Comanda "Repeta" iti va fi de ajutor.'
+      Overworld House Frame_instruction: Sa ne construim propria casa! Acest loc arata bine. Construieste un cadru pe blocurile de pamant.
+      Overworld Minecart Track_instruction: Esti din nou la suprafata cu o multime de resurse subterane. Acum, vom construi un drum de-a lungul traseului cu mizerie de la casa ta. Primul pas este sa cureti tot de pe traseu. Urmareste traseul si taie copacii.
+      Overworld Move to Sheep_instruction: 'Adauga din nou instructiunea "Mergi inainte" pentru a ajunge la oi.'
+      Overworld Place Wall_instruction: 'Fiecare casa incepe cu un perete. Construieste prima parte a casei asezand comenzile "Loc" si "Mergi inainte" in interiorul buclei "Repeta".'
+      Overworld Plant Crops_instruction: Este bine sa planifici dinainte. Planteaza culturi pe ambele parti ale apei astfel incat mai tarziu sa nu-ti fie foame.
+      Overworld Powered Minecart_instruction: Buna treaba! Ai adunat resurse suficiente pentru a construi o casa modesta. Acum dezvolta o cale ferata de la marginea hartii pana la usa casei tale.
+      Overworld Shear Sheep_instruction: 'E vremea sa tunzi oile! Foloseste comanda "Tunde" pentru a aduna lana de la oi.'
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -2391,6 +2390,9 @@ ro:
       U3 - Canvas - draw at click point_instruction: |
         Change your program so that
         dots are drawn at the location of the mouse click. (Click to see full instructions)
+      U3 - Canvas - freePlay_instruction: |
+        Write code that redraws your image using
+        a sketch effect. (Click to see full instructions)
       U3 - Canvas - introCanvas_instruction: |
         Add a canvas to your app and set it
         to be the active canvas. Then add a large dot to your canvas. (Click to see
@@ -2403,6 +2405,10 @@ ro:
         Write a function that takes the
         movement of the mouse as input and generates a line width as output. (Click
         to see full instructions)
+      U3 - Canvas - One Dot sprayPaint_instruction: |
+        Write code that redraws your
+        image using a dot whose x and y locations use `offsetX` and `offsetY` with
+        small random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -2420,8 +2426,9 @@ ro:
         Write code that redraws your image using
         a sketch effect. (Click to see full instructions)
       U3 - Canvas - sprayPaint_instruction: |
-        Write code that redraws your image using
-        a "spray paint" type effect. (Click to see full instructions)
+        Update the spray paint code so that
+        redraws your image using multiple random dots instead of one using a nested
+        for loop. (Click to see full instructions)
       U3 - Canvas - transparentDots_instruction: |
         Change the colors of your dots
         so they have a fully transparent stroke and partially transparent fill. (Click
@@ -2461,7 +2468,7 @@ ro:
         OR to display "It's the weekend!" if the user enters a weekend day at the
         prompt. (Click to see full instructions)
       U3 - Design Mode - Console Log_instruction: |
-        Update the ID names and `console.log()`
+        Update the ID names and `console.log`
         messages to match the correct button. (Click to see full instructions.)
       U3 - Design Mode - Layers and Delete_instruction: |
         Fix the layout of the bullseye
@@ -2867,7 +2874,7 @@ ro:
         called "lives" and assign it the value 3. Print it to the console. (Click
         to see full instructions)
       U3- Variables - Text Mode_instruction: |
-        1. switch to text mode and type instructions;
+        1. Switch to text mode and type instructions;
         2. drag blocks out into text mode; 3. experiment with code completion
       U3-Design Mode-ID and Event Handler_instruction: |
         Add an event handler for
@@ -2877,7 +2884,7 @@ ro:
         Using the Design Mode Events change the button
         ID and update the code to match. (Click to see detail instructions).
       U3-Design Mode-Image_instruction: |
-        Recreate the "Chaser-Game" from the last
+        Recreate the "Chaser Game" from the last
         lesson using Design Mode. (Click to see full instructions.)
       U313 drag Two Buttons_instruction: |
         Run a program with two buttons that have
@@ -2998,8 +3005,8 @@ ro:
         Add 15 fish to the image by writing drawAllFish
         with a loop. (Click to see full instructions)
       U3L07 - Free Play Loops and Random_instruction: |
-        Free Play!  Use what you learned
-        from loops and random to make your own little scene.  Have fun.
+        Free Play! Use what you learned
+        from loops and random to make your own little scene. Have fun.
       U3L07 - introSquare_instruction: |
         Use a loop to draw a square. (Click to see
         full instructions)
@@ -3056,7 +3063,7 @@ ro:
         which accept parameters to allow you to add more variation to your scene.  The
         student worksheet provides more details and guidance.
       U3L08 - fish_instruction: |
-        Add a parameter to drawFish() that changes the size
+        Add a parameter to drawFish that changes the size
         of the fish drawn. (Click to see full instructions)
       U3L08 - freePlay_instruction: |
         Keep adding to your image by making more calls
@@ -3069,21 +3076,21 @@ ro:
         of sea grass to the image. Look at, but don't change, the functions that
         create them. (Click to see full instructions)
       U3L08 - multiParamFish_instruction: |
-        Add three parameters to your drawFish()
+        Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
         colors. (Click to see full instructions)
       U3L08 - multipleLayersofParams_instruction: |
         Call drawPlusSign() to complete
         the image. (Click to see full instructions)
       U3L08 - paramsToStarfish_instruction: |
-        Add a parameter to drawStarfish() that
+        Add a parameter to drawStarfish that
         changes the size of the starfish drawn. (Click to see full instructions)
       U3L08 - randomInput_instruction: |
         Use the randomNumber() blocks to test the
         functions you designed with random input. (Click to see full instructions)
       U3L08 - seaGrass_instruction: |
-        Add a parameter to drawSeaGrass() that changes
-        the size of the piece of sea grass drawn. (Click to see full instructions)
+        Add a parameter to drawSeagrass that changes
+        the size of the piece of seagrass drawn. (Click to see full instructions)
       U3L08 - squareTwoParams_instruction: |
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
@@ -3240,8 +3247,8 @@ ro:
         they hit 'enter' in the text input, using the 'change' event. (Click to
         see full instructions)
       U3L16 - chaserApp_instruction: |
-        Create your own "Chaser App". (Click to see
-        full instructions)
+        Create your own "Chaser Game." (Click to
+        see full instructions)
       U3L16 - chooseImages_instruction: |
         Replace the image in your application with
         one of your own. (Click to see full instructions)
@@ -3306,7 +3313,7 @@ ro:
         it!  For more details see the Activity guide for this lesson.
       U3L16 - setPosition to move button_instruction: |
         Introducing the setPosition
-        command!  Replace the moveTo in the button-click event handler to use setPosition
+        command! Replace the moveTo in the button-click event handler to use setPosition
         to move the button itself to a random location when it's clicked.
       U3L16 - setPositionMoveButton_instruction: Use setPositon to moveButton
       U3L16 - setupMoveToRandom_instruction: |
@@ -3437,7 +3444,7 @@ ro:
         shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
       U3L19 - variable reassignment challenge pt2_instruction: |
         Make a prediction
-        about the ending values of a,b, and c. Then use console.log to check your
+        about the ending values of a, b, and c. Then use console.log to check your
         understanding (Click to see full instructions)
       U3L19 - variable reassignment part 1_instruction: |
         Predict the value of a and
@@ -3645,11 +3652,10 @@ ro:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
-      Underground Avoiding Lava_instruction: |-
-        Sub aceste blocuri se gaseste lava, pe care trebuie sa o acoperi inainte sa mergi inainte. O comanda "Daca" ar fi de ajutor aici. Adauga o comanda 'mergi inainte' in locul corect pentru a acoperi aceste blocuri.
-      Underground If Statements_instruction: 'Acum lucrurile devin mai dificile. Aduna 3 pietre rosii, dar fara sa cazi in lava. Foloseste o comanda "daca" pentru a acoperi lava cu gresie.'
+      Underground Avoiding Lava_instruction: 'Sub aceste blocuri se gaseste lava, pe care trebuie sa o acoperi inainte sa mergi inainte. O comanda "Daca" ar fi de ajutor aici. Adauga o comanda "mergi inainte" in locul corect pentru a acoperi aceste blocuri.'
+      Underground If Statements_instruction: 'Acum lucrurile devin mai dificile. Aduna 3 pietre rosii, dar fara sa cazi in lava. Foloseste o comanda "daca" pentru a acoperi lava cu piatra.'
       Underground Iron_instruction: A merge in lava topita este o idee rea. Plaseaza placi de gresie pentru a crea un pod, apoi aduna cel putin 2 dintre blocurile de fier.
-      Underground Mine in a Circle_instruction: "Gaseste un mod sa aduni 5 diamante si 7 pietre rosii! Incearca sa folosesti o comanda \"repeta\" pentru a intra in patrat.\r\n"
+      Underground Mine in a Circle_instruction: "Gaseste un mod sa aduni 5 diamante si 7 pietre rosii! Incearca sa folosesti o comanda \"repeta\" in interiorul altei comenzi \"repeta\" pentru a intra in patrat.\r\n"
       Underground Mining Coal_instruction: Vei gasi cele mai valoroase resurse in subteran, dar se poate face intuneric. Plaseaza cel putin 2 torte si cauta cel putin 2 carbuni.
       Underground Test Level_instruction: Colecteaza toate mineralele!
       Vigenere_instruction: Test

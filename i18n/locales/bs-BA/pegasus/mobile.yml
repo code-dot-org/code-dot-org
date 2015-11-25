@@ -114,7 +114,6 @@ bs-BA:
   hoc_is_here: '#HourOfCode je ovdje - provjeri! @codeorg'
   just_did_hoc: 'Upravo sam završio #HourOfCode - provjeri! @codeorg'
   twitter_teach_cs: Zašto se računarstvo ne predaje u više škola? Mi to možemo popraviti. http://youtu.be/2DxWIxec6yo. Posjeti http://code.org/ da naučiš više.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Nauči više</a>o nagradama za edukatore.'
   learn_hoc: Nauči Hour of Code
   beyond_hoc: Više nego One Hour
   what_gender: Koji si spol?
@@ -302,8 +301,9 @@ bs-BA:
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: Sat Kodiranja je globalni pokret da bi se isprobao jedan sat uvoda u računarstvo i koji doseže desetke miliona učenika u 180+ zemalja. Zovemo vas da se priključite tokom Edukacijske Sedmice Računarstva, Decembra 7-13.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Molimo da unesete slijedeću informaciju ako ste student računarstva ili softverski poznavalac. Polja zabilježena sa <span class="form-required-field">*</span>su obavezna.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Informacija podijeljena sa nastavnicima na mapi volontera
   volunteer_engineer_submission_field_name: Ime
   volunteer_engineer_submission_field_name_placeholder: Ime i Prezime
@@ -550,6 +550,11 @@ bs-BA:
   learn_educator_resources_description: Nauči kako da predaješ Sat Kodiranja
   learn_educator_resources_button: Resursi za edukatore
   learn_are_you_educator: 'Jesi li edukator? Nauči <a href="http://hourofcode.com/resources/how-to"> kako predavati Sat Kodiranja</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Nauči više</a>o nagradama za edukatore.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Isprobaj naše nove tutorijale Sata Kodiranja
   hoc2014_try_new_tutorial: Isprobajte naš novi tutorijal Sata Kodiranja u beta verziji
   hoc2014_try_scrat: Angry Birds, Plants vs. Zombies i Scrat

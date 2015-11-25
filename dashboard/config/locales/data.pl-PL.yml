@@ -565,27 +565,41 @@
           by ostrzec każdego.
         studio_iceage_10: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ,
           aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
-        studio_gumball_1: Anais chciałaby powiedzieć "cześć" - czy możesz jej pomóc?
-        studio_gumball_2: Darwin (aktor 1) i Gumball (aktor 2) chcieliby powiedzieć
-          do siebie "cześć". Czy mógłbyś im pomóc poprzez podwójne użycie bloku "mów"?
-        studio_gumball_3: Czy możesz pomóc Bananowi Joe dotrzeć do flagi?
-        studio_gumball_4: Czy możesz pomóc dotrzeć Gumballowi (aktor 1) do Darwina
-          (aktor 2) i otworzyć dźwięk, gdy tam dotrze?
-        studio_gumball_5: Czy mógłbyś pomóc Antoniemu powiedzieć "pozdrawiam", gdy
-          zostanie kliknięty? Nie zapomnij kliknąć na niego po uruchomieniu.
-        studio_gumball_6: Czy możesz pomóc Darwinowi poruszać się za pomocą strzałek
-          (góra, dół, lewo, prawo), by dotrzeć do wszystkich flag?
-        studio_gumball_7: Blok "zawsze powtarzaj" pozwala Ci ciągle uruchamiać kod.
-          Czy mógłbyś połączyć bloki, by pomóc Antoniemu poruszać się wielokrotnie
-          w prawo i lewo?
-        studio_gumball_8: Czy mógłbyś dodać blok, by zdobyć punkt oraz blok, który
-          odgrywa dźwięk, gdy Banan Joe wbiega w Antoniego, a następnie poruszać nim
-          strzałkami, dopóki nie dojdzie?
-        studio_gumball_9: Ustaw tło dla tej kosmicznej inwazji i pomóż Nicole dotrzeć
-          do Penny szybciej poprzez zmianę jego prędkości. Wtedy kontroluj ją strzałkami,
-          by ostrzec każdego.
-        studio_gumball_10: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ,
-          aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
+          him go the last 200 pixels using the "move" block.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Can you help Anton announce the start of a race
+          by saying "Ready, set, go!"? To test your program, don’t forget to click
+          Anton after you click Run!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Create your own game or story. When you're done,
+          click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Utwórz własną grę. Kiedy skończysz, kliknij przycisk
           Zakończ, aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
         studio_k1_1: Czy mógłbyś spowodować, aby ten pies powiedział "hello world"?
@@ -787,6 +801,9 @@
         mc_if_statements: Minecraft - instrukcje warunkowe "Jeśli"
         mc_congrats_share: Minecraft - Gratulacje
         mc_congrats_no_share: Minecraft - Gratulacje
+        gumball_intro: Gumball Hour of Code - Introduction
+        gumball_events: Gumball Hour of Code - Events
+        gumball_repeat: Gumball Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku
