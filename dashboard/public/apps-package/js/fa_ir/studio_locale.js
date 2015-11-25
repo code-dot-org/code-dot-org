@@ -906,4 +906,5 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playSoundTauntaunRandom":function(d){return "play Tauntaun random sound"},
 "playSoundMynockRandom":function(d){return "play Mynock random sound"},
 "playSoundProbotRandom":function(d){return "play Probot random sound"},
-"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"}};
+"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"},
+"setBackgroundIceberg":function(d){return "set icebergs background"}};
