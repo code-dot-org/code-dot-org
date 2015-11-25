@@ -6,7 +6,6 @@ require 'logger'
 
 puts "Loading environment..."
 require_relative '../../config/environment'
-puts "Loaded, press ^C to stop"
 
 require 'json'
 require 'pp'
@@ -59,7 +58,9 @@ class QueueProcessorManager
       puts "Usage: #{$0} CONFIG_FILE.json [UPDATE-INTERVAL]"
       exit 0
     end
-    json = File.open(ARGV[0]).read
+    config_file = ARGV[0]
+    logger.info "Reading config file #{config_file}"
+    json = File.open(config_file).read
 
     update_interval = (ARGV.size >= 2) ? ARGV[1].to_i : 10
     update_interval = 1 if update_interval < 1  # Don't update too quickly.
