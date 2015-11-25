@@ -436,7 +436,7 @@ function getSummarizedProgressForAnonymousUser (scriptName) {
       levelProgress[level].status = 'perfect';
     } else if (individualLevelProgress >= 20) {
       levelProgress[level].status = 'passed';
-    } else if (individualLevelProgress > 0) {
+    } else if (individualLevelProgress != 0) {
       levelProgress[level].status = 'attempted';
     } else {
       levelProgress[level].status = 'not attempted';
