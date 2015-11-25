@@ -139,8 +139,6 @@
   just_did_hoc: 'Ma läbisin just #HourOfCode - tšekka seda! @codeorg'
   twitter_teach_cs: Miks rohkemates koolides ei õpetata arvutiteadust? Me saame seda
     muuta. http://youtu.be/nKIu9yen5nc. Et saada rohkem infot, ülasta http://code.org/.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Loe lisa</a> auhindade
-    kohta igale õpetajale.
   learn_hoc: Õpi KoodiTunnis
   beyond_hoc: Lisaks KoodiTunnile
   what_gender: Mis soost sa oled?
@@ -349,6 +347,9 @@
   volunteer_engineer_submission_intro_signup: Palun sisesta järgnev info, kui oled
     arvutiteaduse jmt tudeng või programmeerija. Väljad märgiga <span class="form-required-field">*</span>
     on kohustuslikud.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Vabatahtlike kaardil õpetajatega jagatud
     informatsioon
   volunteer_engineer_submission_field_name: Nimi
@@ -672,6 +673,16 @@
   learn_educator_resources_button: Õpetaja materjalid
   learn_are_you_educator: Oled õpetaja? Õpi <a href="http://hourofcode.com/resources/how-to">kuidas
     õpetada KoodiTundi</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Loe lisa</a> auhindade
+    kohta igale õpetajale.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Proovi meie uusi KoodiTunni juhendeid
   hoc2014_try_new_tutorial: Proovi meie uut KoodiTunni beta õpetusvideot
   hoc2014_try_scrat: Angry Birds, PvZ ja Scrat
@@ -1352,14 +1363,3 @@
   infinity_shortcode: inf
   playlab_shortcode: mängi
   artist_shortcode: art
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
