@@ -12,7 +12,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Você é professor de ciência da computação? Veja outros
     recursos da Semana de Educação em Ciência da Computação</a>'
-  n_have_learned_an_hoc: "<h1>Experimente uma</h1><h2>Hora do Código</h2><h3># tentaram</h3>"
+  n_have_learned_an_hoc: <h1>Experimente uma</h1><h2>Hora do Código</h2><h3># tentaram</h3>
   anybody_can_learn: Qualquer pessoa pode aprender.
   learn_now: Aprenda Agora
   petition_message: Todos os alunos, em todas as escolas, devem ter a oportunidade
@@ -37,8 +37,8 @@
   hoc2014_everyone: Todos
   hoc2014_support: Apoie &#x25BE;
   hoc2014_whatishoc: O que é a Hora do Código?
-  csedweek_map_header: "# Semana de Educação em Ciência da Computação / Hora do Código
-    ao redor do mundo"
+  csedweek_map_header: '# Semana de Educação em Ciência da Computação / Hora do Código
+    ao redor do mundo'
   csedweek_map_signup: Registre seu evento
   csedweek_map_search_placeholder: Pesquisar eventos da Hora do Código
   csedweek_map_search_search: Pesquisar
@@ -68,7 +68,7 @@
     instruções se-então e algoritmos básicos.
   all_ages: Todas as idades
   beginner: Iniciante
-  n_participants: "# participantes"
+  n_participants: '# participantes'
   go: Ir
   thank_you_: Obrigado!
   congratulations: Parabéns!
@@ -152,12 +152,12 @@
   boy: Menino
   help_recruit_coders: Ajude-nos a recrutar mais programadores para a sua equipe!
   help_recruit: Ajude-nos a recrutar mais programadores!
-  lines_of_code: "<b>#</b> LINHAS DE CÓDIGO ESCRITAS ATÉ A DATA."
-  lines_of_code_alt: "<b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ESTUDANTES"
+  lines_of_code: <b>#</b> LINHAS DE CÓDIGO ESCRITAS ATÉ A DATA.
+  lines_of_code_alt: <b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ESTUDANTES
   who_has_done_hoc: 'Quem participou da #HourOfCode? @codeorg'
   hoc_leaderboards: Classificações da Hora do Código
-  students_and_lines: "%{students} estudantes têm participado da Hora do Código e
-    escreveram %{lines} linhas de programação."
+  students_and_lines: '%{students} estudantes têm participado da Hora do Código e
+    escreveram %{lines} linhas de programação.'
   start_hoc: Comece a Hora do Código agora
   contact_form_topic_press: Imprensa/mídia (entrevista ou falando de compromisso)
   stats_nina: '"Todos os dias produziram os mesmos resultados&mdash; 100% de comprometimento."
@@ -229,7 +229,7 @@
     Adam, professor
   homepage_hero_text_stat_loc: 2,5 milhões de garotas se inscreveram para aprender
     no Code Studio
-  homepage_hero_text_stat_students: "#student_count contas de aluno no Code Studio"
+  homepage_hero_text_stat_students: '#student_count contas de aluno no Code Studio'
   homepage_hero_text_stat_served: 'A hora do código: #served já experimentaram'
   homepage_slot_text_hoc: A Hour of Code
   homepage_slot_text_frozen: Frozen com Anna e Elsa
@@ -239,7 +239,7 @@
   homepage_slot_text_shop: Loja
   homepage_slot_text_flappy: Código do Flappy bird
   homepage_action_text_hoc: Uma Hora do Código para cada aluno.
-  homepage_action_text_num_served: "# served"
+  homepage_action_text_num_served: '# served'
   homepage_action_text_join_us: Participe
   homepage_action_text_sign_up: Inscreva-se
   homepage_action_text_try_it: Experimente
@@ -263,7 +263,7 @@
   homepage_slot_text_blurb_hoc: Qualquer pessoa pode aprender. Comece hoje mesmo
   homepage_slot_text_link_hoc: Tente a Hora do Código
   homepage_slot_text_link_host: Organize um evento da Hora do Código
-  homepage_slot_text_link_hocserved: "# served"
+  homepage_slot_text_link_hocserved: '# served'
   homepage_solot_text_link_volunteer: Voluntário da Hora do Código
   homepage_slot_text_title_students: Alunos
   homepage_slot_text_blurb_students: Explore todos os nossos tutoriais
@@ -356,10 +356,10 @@
   volunteer_engineer_submission_subtitle_generic: 'Um total de 100.000 professores
     vão sediar uma Hora do Código em suas salas de aula este ano, de 7 a 13 dezembro
     de 2015. Eles querem a sua ajuda! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} professores querem
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} professores querem
     voluntários apaixonados por ciências da computação para ajudar com suas Horas
     do Código neste mês de dezembro.<br>%{num_volunteers} voluntários já se inscreveram.
-    Junte-se a eles."
+    Junte-se a eles.'
   volunteer_engineer_submission_intro_background: A Hora do Código é um movimento
     global que oferece uma introdução de uma hora à ciência da computação e que atinge
     dezenas de milhões de estudantes em mais de 180 países. Participe você também
@@ -706,11 +706,11 @@
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
   dashboard_announcements: Anúncios
   dashboard_announce_view_all: Ver todos
-  dashboard_announce_hoc: "<b>9 de novembro 2015</b> - Um novo tutorial da Hora do
+  dashboard_announce_hoc: '<b>9 de novembro 2015</b> - Um novo tutorial da Hora do
     Código está disponível, trazendo o novo filme de Star Wars: O Despertar da Força.
     Trabalhe junto com Rey para guiar o novo androide, BB-8, em uma missão. Então,
     junte-se a Leia para criar e compartilhar seu próprio jogo em uma galáxia muito,
-    muito distante."
+    muito distante.'
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
@@ -1464,6 +1464,9 @@
   infinity_shortcode: inf
   playlab_shortcode: jogue
   artist_shortcode: art
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
     to help during your Hour of Code
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher

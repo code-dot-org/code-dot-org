@@ -13,7 +13,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Jesteś nauczycielem informatyki? Zobacz inne propozycje
     CSEdWeek</a>'
-  n_have_learned_an_hoc: "<h1>Wypróbuj</h1><h2>Godzinę Kodowania</h2><h3>#</h3>"
+  n_have_learned_an_hoc: <h1>Wypróbuj</h1><h2>Godzinę Kodowania</h2><h3>#</h3>
   anybody_can_learn: Każdy może się uczyć.
   learn_now: Rozpocznij naukę teraz
   petition_message: Każdy uczeń w każdej szkole powinien mieć możliwość nauki informatyki
@@ -68,7 +68,7 @@
     powtarzania, instrukcje warunkowe i podstawowe algorytmy.
   all_ages: Wszystkie grupy wiekowe
   beginner: Początkujący
-  n_participants: "# uczestników"
+  n_participants: '# uczestników'
   go: Idź
   thank_you_: Dziękujemy!
   congratulations: Gratulacje!
@@ -120,12 +120,12 @@
   beyond_an_hour: Poza Godziną Kodowania
   get_started: Start
   i_agree: Zgadzam się
-  participant_select: "-Wybierz-"
+  participant_select: -Wybierz-
   participant_student: Uczeń
   participant_parent: Rodzic
   participant_educator: Nauczyciel
   participant_engineer: Programista
-  participant_other: "Żaden z powyższych"
+  participant_other: Żaden z powyższych
   print_all: Drukuj wszystko
   print_ice_art: Drukuj swoje lodowe kompozycje
   create_art_with_zombie: lub utwórz zaawansowane kompozycje z zombie
@@ -141,7 +141,7 @@
   learn_next_level: Wypróbuj inny kurs w Code Studio
   learn_online: Wypróbuj inne kursy online
   learn_classes: Znajdź grupę w swoim otoczeniu
-  hoc_is_here: "#HourOfCode jest tutaj - Sprawdź to! @codeorg"
+  hoc_is_here: '#HourOfCode jest tutaj - Sprawdź to! @codeorg'
   just_did_hoc: 'Właśnie wykonałem #HourOfCode - Sprawdź to! @codeorg'
   twitter_teach_cs: Dlaczego tak niewiele szkół uczy informatyki? Możemy to zmienić.
     http://youtu.be/nKIu9yen5nc. Odwiedź http://code.org/, aby dowiedzieć się więcej.
@@ -155,11 +155,11 @@
   help_recruit_coders: Pomóż nam przyjąć więcej programistów do Twojego zespołu!
   help_recruit: Pomóż nam przyjąć więcej programistów!
   lines_of_code: PONAD <b># LINII KODU</b> NAPISANYCH DO TEJ PORY.
-  lines_of_code_alt: "<b>#</b>LINIE KODU NAPISANE PRZEZ UCZNIÓW"
+  lines_of_code_alt: <b>#</b>LINIE KODU NAPISANE PRZEZ UCZNIÓW
   who_has_done_hoc: 'Kto wykonał #HourOfCode? @codeorg'
   hoc_leaderboards: Panel godziny programowania (Hour of Code)
-  students_and_lines: "%{students} uczniów ukończyło godzinę programowania (Hour of
-    Code)  i napisało %{lines} linii kodu."
+  students_and_lines: '%{students} uczniów ukończyło godzinę programowania (Hour of
+    Code)  i napisało %{lines} linii kodu.'
   start_hoc: Rozpocznij teraz godzinę programowania (Hour of Code)
   contact_form_topic_press: Prasa/media (wywiad lub wypowiedź)
   stats_nina: '"Każdy dzień przynosił takie same wyniki &mdash; 100% zaangażowania."
@@ -183,7 +183,7 @@
   studiobar_donate_title: Podaruj
   studiobar_donate_body: Jedno dziecko się uczy za każdego dolara, który podarujesz
   studiobar_shop_title: Sklep
-  studiobar_shop_body: "Łam stereotypy. Noś nasze logo z dumą."
+  studiobar_shop_body: Łam stereotypy. Noś nasze logo z dumą.
   homepage_hero_text_malala: "&ldquo;Wzywam dziewczęta z wszystkich krajów do nauki
     podczas Godziny Kodowania.&rdquo; \nMalala, laureat Pokojowej Nagrody Nobla\n"
   homepage_hero_text_susan: |
@@ -197,10 +197,10 @@
     &ldquo;Nasze dzieci &mdash; w tym również dziewczęta &mdash;
     potrzebują możliwości, by uczyć się informatyki.&rdquo;
     Sheryl, COO Facebook
-  homepage_hero_text_satya: "&ldquo;Informatyka może odblokować najlepsze możliwości
-    na świecie.&rdquo; Satya, CEO firmy Microsoft"
-  homepage_hero_text_bosh: "&ldquo;Jeśli programujesz, możesz zaprogramować ścieżkę
-    swojego życia&rdquo; Chris Bosh"
+  homepage_hero_text_satya: '&ldquo;Informatyka może odblokować najlepsze możliwości
+    na świecie.&rdquo; Satya, CEO firmy Microsoft'
+  homepage_hero_text_bosh: '&ldquo;Jeśli programujesz, możesz zaprogramować ścieżkę
+    swojego życia&rdquo; Chris Bosh'
   homepage_hero_text_student1: '"Te umiejętności zmieniły moją przyszłość. Nie wspominając,
     że jest to po prostu świetna zabawa." Luna, 7 klasa'
   homepage_hero_text_student2: '"Nigdy nie widziałem moich dzieci tak podekscytowanych
@@ -217,7 +217,7 @@
   homepage_hero_text_teacher2: "&ldquo;Ten program zainteresował i zaangażował do
     \nuczestnictwa 100% moich uczniów.&rdquo;\nAdam, nauczyciel\n"
   homepage_hero_text_stat_loc: 2,5 mln dziewcząt uczy się w Code Studio
-  homepage_hero_text_stat_students: "#student_count kont uczniów w Studio Kodowania"
+  homepage_hero_text_stat_students: '#student_count kont uczniów w Studio Kodowania'
   homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
   homepage_slot_text_hoc: Godzina Kodowania
   homepage_slot_text_frozen: Kraina Lodu z Anną i Elsą
@@ -227,7 +227,7 @@
   homepage_slot_text_shop: Sklep
   homepage_slot_text_flappy: Kod Flappiego
   homepage_action_text_hoc: Godzina Kodowania dla każdego ucznia.
-  homepage_action_text_num_served: "# spróbowało"
+  homepage_action_text_num_served: '# spróbowało'
   homepage_action_text_join_us: Dołącz do nas
   homepage_action_text_sign_up: Zarejestruj się
   homepage_action_text_try_it: Wypróbuj
@@ -251,7 +251,7 @@
   homepage_slot_text_blurb_hoc: Każdy może się nauczyć . Zacznij dzisiaj
   homepage_slot_text_link_hoc: Weź udział w Godzinie Kodowania (the Hour of Code)
   homepage_slot_text_link_host: Zorganizuj Godzinę Kodowania
-  homepage_slot_text_link_hocserved: "# spróbowało"
+  homepage_slot_text_link_hocserved: '# spróbowało'
   homepage_solot_text_link_volunteer: Zostań wolontariuszem w Godzinie Kodowania
   homepage_slot_text_title_students: Uczniowie
   homepage_slot_text_blurb_students: Poznaj wszystkie nasze samouczki
@@ -344,10 +344,10 @@
   volunteer_engineer_submission_subtitle_generic: '100 000 nauczycieli będzie gościć
     Godzinę Kodowanie w swoich klasach w tym roku między 7 a 13 grudnia. Potrzebują
     Twojej pomocy! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} nauczycieli potrzebuje
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} nauczycieli potrzebuje
     ochotników-pasjonatów edukacji informatycznej do pomocy z Godziną Kodowania w
     grudniu. <br>%{num_volunteers} wolontariuszy już się zarejestrowało. Dołącz do
-    nich."
+    nich.'
   volunteer_engineer_submission_intro_background: Godzina Kodowania jest globalną
     inicjatywą godzinnego wprowadzenia do informatyki, podejmowaną przez dziesiątki
     milionów uczniów w 180+ krajach. Weź udział w tej inicjatywie podczas Tygodnia
@@ -555,11 +555,11 @@
   dashboard_sections_name: Nazwa Sekcji
   dashboard_sections_choose_secret: Jeśli chciałbyś utworzyć konta dla swoich uczniów,
     wybierz typ tajny <b>słowo</b> lub <b>obrazek</b> dla tej sekcji.
-  dashboard_sections_secret_word: "<b>słowo</b> umożliwia ustawienie każdemu uczniowi
-    tajnego słowa."
-  dashboard_sections_secret_picture: "<b>obrazek</b> umożliwia ustawienie każdemu
-    uczniowi tajnego obrazka, idealne dla młodszych uczniów, którzy nie potrafią jeszcze
-    pisać na komputerze."
+  dashboard_sections_secret_word: <b>słowo</b> umożliwia ustawienie każdemu uczniowi
+    tajnego słowa.
+  dashboard_sections_secret_picture: <b>obrazek</b> umożliwia ustawienie każdemu uczniowi
+    tajnego obrazka, idealne dla młodszych uczniów, którzy nie potrafią jeszcze pisać
+    na komputerze.
   dashboard_sections_secret_none: Jeśli chciałbyś, aby Twoi uczniowie mieli własne
     konta, włącznie z wyborem własnego hasła, to wybierz typ utajniony <b>brak</b>.
   dashboard_sections_print_secrets: Możesz następnie wydrukować arkusz z kartami zawierającymi
@@ -659,7 +659,7 @@
   dashboard_progress_completed_perfect: zakończona, doskonale
   dashboard_progress_furthest_level_attempted: próbowano najdalszy poziom
   dashboard_stage: Etap
-  dashboard_puzzle: "Łamigłówka"
+  dashboard_puzzle: Łamigłówka
   dashboard_question: Pytanie
   dashboard_response: Odpowiedź
   stats_hoc_2013_heading: 'Nieprawdopodobne statystyki z ubiegłorocznej Godziny Kodowania.
@@ -686,9 +686,9 @@
   dashboard_faq_k5: K-5 Najczęściej Zadawane Pytania
   dashboard_announcements: Ogłoszenia
   dashboard_announce_view_all: Zobacz wszystko
-  dashboard_announce_hoc: "<b>15 październik 2015</b> - Zbliża się Godzina Kodowania
+  dashboard_announce_hoc: <b>15 październik 2015</b> - Zbliża się Godzina Kodowania
     &mdash; każdy organizator otrzyma jako podziękowanie bon do Amazon.com lub Sklepu
-    Microsoft Windows. Dołącz do sal lekcyjnych na całym świecie od 7 do 13 grudnia."
+    Microsoft Windows. Dołącz do sal lekcyjnych na całym świecie od 7 do 13 grudnia.
   code_hoc_coming: Godzina Kodowania jest tutaj - 8-14 grudnia!
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej
     (CS Education Week)
@@ -1439,6 +1439,9 @@
   infinity_shortcode: inf
   playlab_shortcode: zagraj
   artist_shortcode: art
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
     to help during your Hour of Code
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
