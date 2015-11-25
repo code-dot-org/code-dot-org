@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "als er een pad is in de aangegeven richting, doe een paar acties."},
 "ifelseTooltip":function(d){return "als er een pad in de opgegeven richting is, doe je het eerste actie blok. anders, doe je de tweede actie blok."},
 "ifFlowerTooltip":function(d){return "Als er een bloem/honingraat in de opgegeven richting staat, voer dan enkele acties uit."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Wanneer er een bloem is in de aangegeven richting, voer dan een een paar acties uit."},
 "ifelseFlowerTooltip":function(d){return "Als er een bloem/bijenkorf is in de gekozen richting staat, voer je het eerste actie blok uit. Is dat niet het geval, voer dan het tweede blok met acties uit."},
 "insufficientHoney":function(d){return "Je gebruikt wel de juiste blokken, maar je moet ook de juiste hoeveelheid honing maken."},
 "insufficientNectar":function(d){return "Je gebruikt wel de juiste blokken, maar je moet ook de juiste hoeveelheid nectar verzamelen."},

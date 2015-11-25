@@ -258,6 +258,7 @@
         playlab: Make an App
         artist: Draw Something
         calculate: Calculate Something
+        applab: Make an App
     user:
       classroom: Teacher Home Page
       district_dashboard: District Dashboard
@@ -281,6 +282,8 @@
       prize_us_only: (បាន​តែ​សិស្ស​នៅ​សហរដ្ឋ​អាមេរិក​ប៉ុណ្ណោះ)
       prizes_link: ព័ត៌មាន​បន្ថែម
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: គ្រូ​របស់​អ្នក៖
       other: គ្រូ​របស់​អ្នក៖
@@ -348,7 +351,7 @@
       for %{student_name}'
     panel:
       answer_viewer: Answer Viewer
-      student: Student
+      student: សិស្ស
       viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
       section: Section
@@ -436,7 +439,7 @@
     female: Female
     none: សម្រេច​ចិត្ត​មិន​ឆ្លើយ
   user_type:
-    student: Student
+    student: សិស្ស
     teacher: Teacher
   footer:
     thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
@@ -506,6 +509,7 @@
   pdf_download: Download PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
+  not_started: The student has not attempted this level.
   share_code:
     title: ចុច 'រត់' ដើម្បី​មើល​ដំណើរការ​កម្មវិធី​របស់​ខ្ញុំ
     bounce_og_title: Check out my Bounce Game
@@ -554,9 +558,14 @@
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!

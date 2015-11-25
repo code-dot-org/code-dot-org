@@ -127,6 +127,11 @@ class Script < ActiveRecord::Base
   @@script_cache = nil
   SCRIPT_CACHE_KEY = 'script-cache'
 
+  # Caching is disabled when editing scripts and levels.
+  def self.should_cache?
+    !Rails.application.config.levelbuilder_mode
+  end
+
   def self.script_cache_to_cache
     Rails.cache.write(SCRIPT_CACHE_KEY, script_cache_from_db)
   end
@@ -150,7 +155,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.script_cache
-    return nil if Rails.application.config.levelbuilder_mode # cache disabled when building levels
+    return nil unless self.should_cache?
     @@script_cache ||=
       script_cache_from_cache || script_cache_from_db
   end
@@ -159,7 +164,7 @@ class Script < ActiveRecord::Base
   # Returns a cached map from script level id to id, or an empty map if in level_builder mode
   # which disables caching.
   def self.script_level_cache
-    return nil if Rails.application.config.levelbuilder_mode # cache disabled when building levels
+    return nil unless self.should_cache?
     @@script_level_cache ||= {}.tap do |cache|
       script_cache.values.each do |script|
         cache.merge!(script.script_levels.index_by(&:id))
@@ -172,14 +177,13 @@ class Script < ActiveRecord::Base
   # the script and we're not in level mode (for example because the script was created after
   # the cache), then an entry for the script is added to the cache.
   def self.cache_find_script_level(script_level_id)
-    levelbuilder_mode = Rails.application.config.levelbuilder_mode
-    script_level = script_level_cache[script_level_id] unless levelbuilder_mode
+    script_level = script_level_cache[script_level_id] if self.should_cache?
 
     # If the cache missed or we're in levelbuilder mode, fetch the script level from the db.
     if script_level.nil?
       script_level = ScriptLevel.find(script_level_id)
-      # Cache the script level, unless it wasn't found or we're in levelbuilder mode.
-      @@script_level_cache[script_level_id] = script_level unless !script_level || levelbuilder_mode
+      # Cache the script level, unless it wasn't found.
+      @@script_level_cache[script_level_id] = script_level if script_level && self.should_cache?
     end
     script_level
   end
@@ -198,7 +202,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.get_from_cache(id)
-    return get_without_cache(id) if Rails.application.config.levelbuilder_mode # cache disabled when building levels
+    return get_without_cache(id) unless self.should_cache?
 
     self.script_cache[id.to_s] || get_without_cache(id)
   end
@@ -296,12 +300,14 @@ class Script < ActiveRecord::Base
   end
 
   def has_banner?
-    k5_course? || %w(cspunit1 cspunit2).include?(self.name)
+    k5_course? || %w(cspunit1 cspunit2 cspunit3).include?(self.name)
   end
 
   def freeplay_links
     if name.include?('algebra')
       ['calc', 'eval']
+    elsif name.start_with?('csp')
+      ['applab']
     else
       ['playlab', 'artist']
     end

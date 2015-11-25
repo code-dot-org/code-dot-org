@@ -16,16 +16,14 @@ Scenario: Save Artist Project
   Then element "#draw-color" is a child of element "#when_run"
 
 # dashboard_db_access for sign in
+# as_student to actually perform sign-in/out before/after scenario
 # no_mobile because we don't end up with open-workspace on mobile
 # no_ie because applab is broken on IE9, and on IE10 this test crashes when we
 #   try to execute any JS after our redirect on line 42
-@dashboard_db_access @no_mobile @no_ie
+@dashboard_db_access @as_student
+@no_mobile @no_ie
 Scenario: Applab Flow
-  Given I am on "http://studio.code.org/"
-  And I am a student
-  And I am on "http://studio.code.org/users/sign_in"
-  And I reload the page
-  Then I am on "http://studio.code.org/projects/applab"
+  Given I am on "http://studio.code.org/projects/applab"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
   And I rotate to landscape
   Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"

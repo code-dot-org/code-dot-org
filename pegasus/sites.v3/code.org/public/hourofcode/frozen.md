@@ -14,6 +14,7 @@ nav: hoc_teacher_resources_nav
 ### Lesson Plans:
 
 - [Code with Anna and Elsa](/files/hoc-frozen-lp.pdf)
+- [Answer Sheet](/files/HOC_Frozen_Tutorial_Answer_Sheet.pdf)
 - OPTIONAL: [The Drawing Machine](/curriculum/misc/hocunplugged/Teacher)
 
 ### Extension Activities:

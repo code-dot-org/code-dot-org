@@ -81,7 +81,7 @@ html[dir='rtl'] #visualizationColumn {
   overflow-x: hidden;
 }
 
-#visualizationColumn.embed_hidesource {
+#visualizationColumn.centered_embed {
   margin: 0 auto;
 }
 
@@ -95,7 +95,7 @@ html[dir='rtl'] #visualizationColumn {
     overflow: auto;
   }
 
-  &.embed_hidesource {
+  &.centered_embed {
     position: relative;
   }
 }
@@ -855,7 +855,7 @@ input[type="radio"] {
 
 #prompt-table {
   .instructionsImage {
-    height: 35px;
+    height: 25px;
     vertical-align: text-bottom;
   }
   #prompt2 {

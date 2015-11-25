@@ -268,6 +268,7 @@
         playlab: Crie um aplicativo
         artist: Desenhe alguma coisa
         calculate: Calculate Something
+        applab: Crie um aplicativo
     user:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
@@ -292,6 +293,8 @@
       prize_us_only: (Somente para alunos dos EUA)
       prizes_link: Mais informação
   teacher:
+    answer: Resposta
+    for_teachers_only: Somente para professores
     title:
       one: 'Seu professor:'
       other: 'Seus professores:'
@@ -365,7 +368,7 @@
       section: Turma
       example: Solução do Exemplo
       example_with_number: Solução do Exemplo %{solution_number}
-      submitted_on: Enviado em %{date}
+      submitted_on: 'Enviado em:'
       unsubmit: Cancelar envio
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
@@ -461,10 +464,13 @@
       Facebook, Twitter e muitos outros que ajudaram a criar esses materiais.
     help_from_html_old: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram
       a criar esses materiais.
-    art_from_html: A Era do Gelo&#8482; &amp; &copy; %{current_year} 20th Century
-      Fox. Todos os direitos reservados.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year}
-      Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados
+    art_from_html: Star Wars&#8482; &amp; &copy; %{current_year} Disney e Lucasfilm.
+      Todos os direitos reservados.<br />Frozen&#8482; &amp; &copy; %{current_year}
+      Disney. Todos os direitos reservados.<br />A Era do Gelo&#8482; &amp; &copy;
+      %{current_year} 20th Century Fox. Todos os direitos reservados.<br />Angry Birds&#8482;
+      &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos
+      reservados.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic
+      Arts Inc. Todos os direitos reservados
     art_from_html_old: AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment
       Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482; &amp; &copy;
       %{current_year} Electronic Arts Inc. Todos os direitos reservados
@@ -491,7 +497,7 @@
     direction: Direção de início (em graus)
   video:
     tab: Vídeo.
-    notes: Nenhum vídeo? Mostrar notas.
+    notes: Não é possível ver o vídeo? Mostrar notas.
     notes_coming_soon: As notas deste vídeo estarão disponíveis em breve.
     autoplay_option: Vídeos com reprodução automática
     download: Baixar Vídeo
@@ -523,6 +529,7 @@
   pdf_download: Baixar PDF
   download_coming_soon: Atividade disponível para download em breve.
   video_coming_soon: Vídeo em breve!
+  not_started: O aluno ainda não praticou este nível.
   share_code:
     title: Clique em 'Executar' para ver meu programa em ação
     bounce_og_title: Veja meu jogo de Pingue-pongue
@@ -572,10 +579,15 @@
         usuários
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Laboratório infinito
       body: Use o Laboratório para criar uma história ou um jogo usando personagens
         da Disney Infinity.
+    minecraft:
+      title: Minecraft
+      body: Explore o mundo de Minecraft usando códigos.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!

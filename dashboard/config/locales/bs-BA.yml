@@ -255,6 +255,7 @@
         playlab: Napravi Aplikaciju
         artist: Nacrtaj Nešto
         calculate: Calculate Something
+        applab: Napravi Aplikaciju
     user:
       classroom: Početna Stranica za Učitelje
       district_dashboard: Nadzorna ploča za distrikte
@@ -278,6 +279,8 @@
       prize_us_only: (samo za američke učenike)
       prizes_link: više informacija
   teacher:
+    answer: Odgovor
+    for_teachers_only: Samo za učitelje
     title:
       one: 'Tvoj učitelj:'
       other: 'Tvoji učitelji:'
@@ -502,6 +505,7 @@
   pdf_download: Preuzmite PDF
   download_coming_soon: Aktivnosti koje možete preuzeti stižu uskoro.
   video_coming_soon: Video stiže uskoro!
+  not_started: Studenti nisu probali ovaj nivo.
   share_code:
     title: Klikni 'Pokreni' da vidiš kako moj program radi
     bounce_og_title: Pogledaj moju igru Odbijanja
@@ -548,10 +552,15 @@
         korisnici
     frozen:
       title: Sniježno kraljevstvo
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab (Beskonačni Laboratorij Igranja)
       body: Upotrijebi Laboratorij Igranja da bi napravio/la priču ili igru u kojoj
         igraju karakteri Disney Beskonačnost.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Učenici su nacrtali ovo kodiranjem!
     students_made_these_with_code: Učenici su nacrtali ovo kodiranjem!

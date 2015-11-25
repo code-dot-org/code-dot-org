@@ -6,13 +6,13 @@ az:
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: zəruridir
     attributes:
       user:
         name: Göstərilən adınız
         email: E-poçt
         username: istifadəçi adı
-        password: parol
+        password: Parol
         password_confirmation: Parolun təsdiqi
         current_password: Cari parol
         locale: Dil
@@ -66,12 +66,12 @@ az:
     need_unlock: Kilidaçma göstərişlərini almamisiniz?
   signup_form:
     student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    teacher_count: '%{count} müəllim artıq qeydiyyatdan keçib.'
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'Siz <a target="_blank" href="http://learn.code.org">müxtəlif mərhələ və tapmacalar</a>ı nəzərdən keçirə bilərsiniz, lakin nəticələrinizi yadda saxlamaq üçün qeydiyyatdan keçməyiniz lazım olacaq.'
     teacher_educator_guide: Təhsil işçisi üçün göstərişlərə baxın
-    teacher_pitch: Teacher sign up for Code.org
+    teacher_pitch: '"Code.org" üçün müəllim qeydiyyatı'
     teacher_title: Müəllim kimi qeydiyyatdan keçin
     student_pitch: Student sign up for Code.org
     student_title: Student sign up
@@ -96,13 +96,13 @@ az:
       Mən "Code.org" <a href='http://code.org/tos'>xidmət şərtləri</a>nə tabe olmağımı qəbul edirəm.
     additional_information: We need some additional information to continue signing you up.
   signin_form:
-    title: Have an account already? Sign in
+    title: Artıq hesabınız var? Daxil olun
     login: E-poçt və ya istifadəçi adı
     password: Parol
     remember: Məni yadda saxla
     submit: Daxil olun
   signin:
-    try_heading: Want to try coding without signing up?
+    try_heading: Qeydiyyatdan keçmədən özünüzü proqramlaşdırmada sınamaq istəyirsiniz?
     try_hoc: Try one Hour of Code first
     try_20hours: Try our 20 hour Intro to Computer Science
   signinsection:
@@ -149,7 +149,7 @@ az:
       student_disassociated:
         subject: 'Code.org notification: %{student_name} is no longer associated as your student.'
       teacher_disassociated:
-        subject: 'Code.org notification: %{teacher_name} is no longer associated as your teacher.'
+        subject: '"Code.org" bildirişi: %{teacher_name} daha müəlliminiz deyil.'
   reports:
     error:
       access_denied: Bu şəxsin statistikasına icazəniz yoxdur
@@ -223,6 +223,7 @@ az:
         playlab: Make an App
         artist: Draw Something
         calculate: Calculate Something
+        applab: Make an App
     user:
       classroom: Müəllimin ev səhifəsi
       district_dashboard: District Dashboard
@@ -246,10 +247,12 @@ az:
       prize_us_only: (Yalnız ABŞ-dan olan şagirdlər)
       prizes_link: daha ətraflı
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Müəlliminiz:'
       other: 'Müəllimləriniz:'
-    remove: (remove teacher)
+    remove: (müəllimi sil)
     confirm:
       remove: Are you sure you want to remove this teacher?
     tools: Müəllim üçün alətlər
@@ -272,7 +275,7 @@ az:
       manage: Şagirdlərə nəzarət edin
       dashboard: Go to Teacher Dashboard
       add: Şagirdləri əlavə edin
-      remove: remove student
+      remove: şagirdi sil
       confirm_remove: Are you sure you want to remove this student?
       help_reassign: To divide your class into multiple sections, select students to assign to a new section.
       help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
@@ -285,13 +288,13 @@ az:
     sections:
       add: Add section
       manage: Manage sections
-      section: Section
+      section: Bölmə
       students: Şagirdlər
-      section_code: Section Code
+      section_code: Bölmə kodu
       add_section_code: Add Students Section-Code
-      secret: Secret type
+      secret: Məxfi kodun növü
       grade: Grade
-      course: Course
+      course: Kurs
       rename: adını dəyiş
       edit: edit
       delete: delete
@@ -308,10 +311,10 @@ az:
       student: şagird
       viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
-      section: Section
+      section: Bölmə
       example: Example Solution
       example_with_number: 'Example Solution %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
+      submitted_on: 'Submitted on:'
       unsubmit: Unsubmit
   user:
     email_confirm_needed: 'E-poçt ünvanı təsdiqlənməyib:'
@@ -330,7 +333,7 @@ az:
   user_stats:
     recent_activity: Son fəaliyyət
     show_more: Daha çox göstər
-    classroom_activity: Unplugged Activity
+    classroom_activity: Sərbəst fəaliyyət
   home:
     title: Mənim nəticələrim
     description: 'Kod Studiyası "Code.org" tərəfindən hazırlanmış onlayn kursların məskənidir'
@@ -356,7 +359,7 @@ az:
     local_school: yerli məktəb
     online: onlayn
     see_details: Təfərrüatına baxın
-    view_course: View Course
+    view_course: Kursu göstər
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Elə indi sınaqdan keçirin
@@ -372,7 +375,7 @@ az:
     your_gallery: Qalereya
     no_primary_course: Try a Code Studio course
     choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    print_certificate: Sertifikatı çap edin
   share:
     title: Learn on Code Studio
     description: Anyone can learn computer science. Make games, apps and art with code.
@@ -382,13 +385,13 @@ az:
     none: Cavab verməməyə üstünlük verirəm
   user_type:
     student: şagird
-    teacher: Teacher
+    teacher: Müəllim
   footer:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: We especially want to recognize the engineers from Google, Microsoft, Facebook, Twitter, and many others who helped create these materials.
     help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
-    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Bütün hüquqları qorunur.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Bütün hüquqları qorunur.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Bütün hüquqları qorunur'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Bütün hüquqları qorunur.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Bütün hüquqları qorunur'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: Copyright
@@ -429,10 +432,11 @@ az:
   next_stage: Qurtardı! Növbəti mərhələyə keçin
   download_pdf: Dərs planını aç
   lesson_plan: Lesson Plan
-  view_lesson_plan: View Lesson Plan
+  view_lesson_plan: Dərs palnına baxın
   pdf_download: PDF faylını endir
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
+  not_started: The student has not attempted this level.
   share_code:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: Check out my Bounce Game
@@ -465,7 +469,7 @@ az:
     20-hour:
       title: Sürətləndirilmiş kurs
       body: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
-      body_short: İnformatikanın əsaslarını 2-4 nömrəli kursların sürətləndirilmiş versiyası ilə öyrənin.
+      body_short: İnformatikanın əsaslarını 2-4-cü kursların sürətləndirilmiş versiyası ilə öyrənin.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
@@ -474,9 +478,14 @@ az:
       body: İstifadəçilərimizin düzəltdiyi proqram və rəsm işlərinin qalereyasına baxın
     frozen:
       title: Buzlu ürək
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Şagirdlər bunları kod yazmaqla edib!
@@ -492,7 +501,7 @@ az:
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
-    feedback: Give Feedback
+    feedback: Rəy verin
     report_bug: Report Bug
     support: Kömək istə
     support_url: //support.code.org
@@ -578,15 +587,15 @@ az:
     completed_courses: Tamamlanmış kurslar
     all_courses: Bütün kurslar
   project:
-    projects: Projects
+    projects: Layihələr
     create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
+    create_a_project: 'Yeni bir layihə düzəlt:'
+    new: Yenisini düzəlt
     rename: Rename
     save: Save
     delete: Delete
     exit: Return to Course
-    my_projects: My Projects
+    my_projects: Mənim layihələrim
     share: Bölüşün
     share_title: Share your project
     share_copy_link: 'Copy the link:'
@@ -605,7 +614,7 @@ az:
     cancel: İmtina et
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    view_all: Layihələrimi göstər
     remix: Remix
     click_to_remix: 'Click "Remix" to spin-off your own version!'
     edit_project: Edit Project

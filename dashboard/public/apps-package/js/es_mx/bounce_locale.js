@@ -154,7 +154,7 @@ v:function(d,k){bounce_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:(k=bounce_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).bounce_locale = {
-"bounceBall":function(d){return "Rebotar pelota"},
+"bounceBall":function(d){return "rebotar la pelota"},
 "bounceBallTooltip":function(d){return "Rebotar una pelota contra un objeto."},
 "continue":function(d){return "Continuar"},
 "dirE":function(d){return "E"},

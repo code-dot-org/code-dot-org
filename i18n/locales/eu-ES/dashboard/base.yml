@@ -20,7 +20,7 @@ eu:
         gender: Generoa
         edit_header: Aldatu kontuaren xehetasunak
         error:
-          future: Ezin du izan etorkizuenean
+          future: ezin du izan etorkizunean
   hello: Kaixo mundua
   welcome_back: 'Ongi etorria berriro, %{name}'
   submit: Bidali
@@ -35,7 +35,7 @@ eu:
   appname: Code.org
   stage: Maila
   stage_number: 'Maila %{number}'
-  puzzle: Puzlea
+  puzzle: Puzzlea
   trophies: garaikurrak
   courses: Mailak
   of: -tik
@@ -67,18 +67,18 @@ eu:
   signup_form:
     student_count: '%{count} ikasleek izena eman dute.'
     teacher_count: '%{count} irakasleek izena eman dute.'
-    overview_student: 'Zure aurrerapena jarraitzeko eman ezazu izena kontu batean. Zure email helbidea batez ere saioa hasteko eta pasahitza berreskuratzeko erabiltzen da. Informazio gehiago lortzeko, ikusi gure <a href="http://code.org/privacy">Pribatutasun Araua</a>.'
-    overview_teacher: 'Irakatsi itzazu konputazio zientziak zure ikasgelan kontu batean izena emanda. <p/>Zure ikasleak gehitu eta beraien aurrerapena jarraitu ahal izango duzu.'
+    overview_student: 'Zure aurrerapena jarraitzeko ireki kontu bat. Zure email helbidea batez ere saioa hasteko eta pasahitza berreskuratzeko erabiliko dugu. Informazio gehiago lortzeko, ikusi gure <a href="http://code.org/privacy">Pribatutasun Araua</a>.'
+    overview_teacher: 'Irakatsi itzazu informatika zure ikasgelan kontu bat irekita. <p/>Zure ikasleak gehitu eta beraien aurrerapena jarraitu ahal izango duzu.'
     no_signup_message: '<a target="_blank" href="http://learn.code.org">en eszenatoki eta puzleak bilatu ditzakezu</a>, baina izen eman beharko duzu zure aurrerapenak gordetzeko.'
     teacher_educator_guide: Ikusi hezitzailearen gida
     teacher_pitch: Irakasleen sarbidea Code.org-rako
     teacher_title: Irakasle bezala sartu
     student_pitch: Ikasle bezala sartu Code.org-n
     student_title: Ikasle bezala sartu
-    school_name: Ikastetxearen izena (Hautazkoa)
+    school_name: Ikastetxearen izena (aukerakoa)
     school_address: Ikastetxearen helbidea (aukerakoa)
-    address_placeholder: Helbidea, hiria, herrialdea, postal kodea
-    gender: Generoa (Hautazkoa)
+    address_placeholder: Helbidea, hiria, herrialdea, posta kodea
+    gender: Generoa (aukerakoa)
     birthday: Urtebetetzea (aukerakoa)
     age: Adina
     user_type: Ikaslea edo irakaslea zara?
@@ -90,7 +90,7 @@ eu:
     valid_password: Pasahitza zuzena!
     invalid_password: Pasahitzak gutxienez 6 karaktere izan behar ditu
     mismatch_password: Idatzitako bi pasahitzak ez dira berdinak
-    student_terms: "Ados nago Code.org-k <a href='http://code.org/tos'> ezarrita dituen zerbitzu baldintzekin</a>. 13 urte azpikoa banaiz, Code.org-k <br/> ematen dituen zerbitzuak erabiltzeko, gurasoen edota legezko tutorearen baimena dudala egiaztatzen dut. 13 urte azpikoen e-mail helbideak gordeta dauden eran, ezingo dugu haiekin harremanetan jarri."
+    student_terms: "Ados nago Code.org-k <a href='http://code.org/tos'> ezarrita dituen zerbitzu baldintzekin</a>. 13 urte azpikoa banaiz, Code.org-k <br/> ematen dituen zerbitzuak erabiltzeko, gurasoen edota legezko tutorearen baimena dudala egiaztatzen dut. 13 urte azpikoen e-mail helbideak ezin izango ditugu haiekin harremanetan jartzeko."
     teacher_terms: "Ados nago eta onartzen ditut Code.org <a href='http://code.org/tos'> erabiltzeko baldintzak </a>."
     additional_information: Informazio gehiago behar dugu izen-ematearekin jarraitzeko.
   signin_form:
@@ -212,7 +212,7 @@ eu:
     created: '%{model} ongi sortu da.'
     updated: '%{model} ongi eguneratu da.'
     destroyed: '%{model} ongi ezabatu da.'
-    access_denied: 'Ez daukazu %{model} eredu honetarko baimenik.'
+    access_denied: 'Ez daukazu %{model} eredu honetarako baimenik.'
   nav:
     header:
       finished_hoc: Nire Kode Ordua bukatu dut
@@ -221,8 +221,9 @@ eu:
         playlab: Aplikazio bat sortu
         artist: Marraztu zerbait
         calculate: Calculate Something
+        applab: Aplikazio bat sortu
     user:
-      classroom: Teacher Home Page
+      classroom: Irakasleen sarrera orria
       district_dashboard: Hezkuntza distritua
       label: 'Kaixo %{username}'
       stats: Kode Estudioa
@@ -244,6 +245,8 @@ eu:
       prize_us_only: (AEB-ko ikasleak bakarrik)
       prizes_link: informazio gehiago
   teacher:
+    answer: Erantzuna
+    for_teachers_only: Irakasleentzat soilik
     title:
       one: 'Zure irakaslea:'
       other: 'Zure irakasleak:'
@@ -272,261 +275,268 @@ eu:
       add: Ikasleak gehitu
       remove: ikaslea ezabatu
       confirm_remove: Ziur zaude ikasle hau ezabatu nahi duzula?
-      help_reassign: To divide your class into multiple sections, select students to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: 'First, please %{add_section}'
-      for: For
-      enter: 'enter:'
+      help_reassign: Zure ikasgela hainbat sekziotan banatzeko, ikasleak aukeratu sekzio berri batean gehitzeko.
+      help_register: Zuk ikasleak banan-banan gehitzen denbora asko pasa ordez, zure ikasgela sortu dezakezu beraiei izena emateko eskatuz. Zure ikasleek beren erabiltzailea eta pasahitza aukeratu beharko dute, baina EZ dute beraien posta elektronikoa zehaztu beharrik izango. Ikasle batek bere pasahitza ahazten badu, zuk berrezarri ahal izango diozu.
+      register: Eskatu zure ikasleei beren burua erregistratzeko
+      vist: Eskatu zure ikasleei bisitatzeko
+      section_code: 'eta sartu beraien sekzio-kodea:'
+      first_please: 'Lehenengo, mesedez %{add_section}'
+      for: Honetarako
+      enter: 'sartu:'
     sections:
-      add: Add section
-      manage: Manage sections
-      section: Section
+      add: Gehitu sekzioa
+      manage: Sekzioak kudeatu
+      section: Atala
       students: Ikasleak
-      section_code: Section Code
-      add_section_code: Add Students Section-Code
-      secret: Secret type
-      grade: Grade
-      course: Course
-      rename: rename
-      edit: edit
+      section_code: Sekzio Kodea
+      add_section_code: Gehitu Ikasleen Sekzio-Kodea
+      secret: Mota sekretua
+      grade: Kalifikazioa
+      course: Ikastaroa
+      rename: berrizendatu
+      edit: editatu
       delete: ezabatu
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
-    rollup: Progress Dashboard
-    activity: Recent class activity
-    user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: '%{student_name} cannot be removed as your student because %{student_name} has not registered an e-mail address'
-    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher because you have not registered an e-mail address'
-    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
+      confirm_delete: Ziur zaude sekzio hau ezabatu nahi duzula?
+      email: Email-ez bidali
+    rollup: Aurrerapen panela
+    activity: Klasearen azkenaldiko jarduera
+    user_not_found: Ezin izan da irakasle edo ikaslea aurkitu
+    cant_remove_student_no_email: '%{student_name} ezin izan da zure ikasle moduan ezabatu %{student_name} -(e)k ez duelako posta elektroniko helbiderik erregistratu'
+    cant_remove_teacher_no_email: '%{teacher_name} ezin da ezabatu zure irakasle gisa, zuk ez duzulako email helbiderik erregistratu'
+    student_teacher_disassociated: '%{teacher_name} %{student_name}-(r)en irakasle gisa ezabatu da'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Erantzun Ikusgailua
       student: Ikaslea
-      viewing_solution: Viewing Solution
+      viewing_solution: Ikusi emaitza
       try_it_yourself: Probatu zuk zeuk
-      section: Section
-      example: Example Solution
-      example_with_number: 'Example Solution %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
-      unsubmit: Unsubmit
+      section: Atala
+      example: Emaitza adibidea
+      example_with_number: 'Emaitza adibidea %{solution_number}'
+      submitted_on: '%{date}-n bidalia'
+      unsubmit: Bidalketa ezeztatu
   user:
-    email_confirm_needed: 'Email address has not been confirmed:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
-    email_resend_confirm: Resend confirmation instructions
-    new_password_hint: "(leave blank if you don't want to change it)"
-    current_password_hint: (we need your current password to confirm your changes)
+    email_confirm_needed: 'Email helbidea ez da baieztatu:'
+    email_confirm_needed_required: '%{email} zure emaila ez da baieztatu:'
+    email_confirm_wrong_email: (Email helbide okerra?)
+    email_resend_confirm: Baieztatzeko jarraibideak birbidali
+    new_password_hint: (ez baduzu aldatu nahi, bete gabe utzi)
+    current_password_hint: (zure egungo pasahitza behar dugu aldaketak baieztatzeko)
     delete: Zure kontua ezabatu
     delete_text: Beheko botoia klikatuz gero zure kontua ezabatuko da.
-    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
-    delete_confirm: Are you sure you want to delete your account?
+    delete_text_teacher_note: 'Mesedez kontutan izan: zure kontua ezabatzeak ez ditu zure ikasleen kontuak ezabatuko.'
+    delete_confirm: Ziur zaude zure kontua ezabatu nahi duzula?
   user_level:
-    completed: Completed
-    tried: Tried
+    completed: Amaituta
+    tried: Saiatua
   user_stats:
-    recent_activity: Recent activity
-    show_more: Show more
-    classroom_activity: Unplugged Activity
+    recent_activity: Azkenaldiko jarduera
+    show_more: Gehiago erakutsi
+    classroom_activity: Lineaz kanpoko ekintza
   home:
     title: Kode Estudioa
-    description: Code Studio is home to online courses created by Code.org
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
-    signin_message: 'Already registered? %{link}'
-    student_reg_link: Student Sign Up
-    teacher_reg_link: Teacher Sign Up
-    signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
-    teacher_dashboard: See progress dashboard
-    teacher_student_count_one: 'You have %{count} student.'
-    teacher_student_count: 'You have %{count} students.'
-    teacher_averages: 'On average your students have earned %{trophy_average} out of %{trophy_max} "Concept Mastery" trophies.'
-    teacher_print_certificates: Print certificates for students who finish this course
-    teacher_read_blog: Read about news and updates to our materials at our Educator Blog
-    classroom: Your classroom
-    student_progress: Your learning progress
-    student_stats: |-
-      You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery" trophies.
-    student_left_off: 'Where you left off:'
-    student_finished: "You've completed all Code.org tutorials. Pick another class %{online_link} or at a %{local_school_link}."
-    local_school: local school
+    description: Code Studio Code.org-ek sortutako online kurtsoen hasiera da
+    lines_of_code: '%{lines_count} KODE LERRO IKASLEEK IDATZITA'
+    lines_of_code_linebreak: '%{lines_count} KODE LERRO<br/> %{students_count} MILIOI IKASLEK IDATZITA'
+    all_courses: 1, 2 eta 3 Kurtsoen laburpena
+    lesson_plans: Ikasketa plana
+    signin_message: 'Jadanik erregistratuta? %{link}'
+    student_reg_link: Ikaslearen izen ematea
+    teacher_reg_link: Irakasleen izen ematea
+    signin_directions: 'Erabili kontu bat aurrerapenen jarraipena egiteko.<br/> Irakasleok, egin klase osoaren jarraipena.'
+    teacher_dashboard: Ikusi aurrerapen panela
+    teacher_student_count_one: 'Ikasle %{count} duzu.'
+    teacher_student_count: '%{count} ikasle dituzu.'
+    teacher_averages: 'Batezbestez, zure ikasleek "kontzeptuen menperatze" %{trophy_max} trofeotatik %{trophy_average} irabazi dituzte.'
+    teacher_print_certificates: Ikastaro hau bukatu duten ikasleen ziurtagiriak inprimatu
+    teacher_read_blog: Berriak eta gure materialaren eguneraketak irakurri Hezitzaileen Blogean
+    classroom: Zure ikasgela
+    student_progress: Zure ikaskuntza aurrerapena
+    student_stats: '"Kontzeptuen menperatze" %{trophy_max} trofeotatik %{trophy_count} irabazi dituzu.'
+    student_left_off: 'Non utzi zenuen:'
+    student_finished: 'Code.org tutorial guztiak amaitu dituzu. Aukeratu beste ikasgela bat %{online_link} edo %{local_school_link}.'
+    local_school: bertako eskola
     online: online
-    see_details: See details
-    view_course: View Course
-    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
-    tryfirst: 'Or, you can try it first, and sign up later:'
+    see_details: Ikusi zehaztasunak
+    view_course: Ikusi ikastaroa
+    prize_info: 'Parte hartzeagatik sariak (soilik Estatu Batuetako eskola publikoetako irakasleak): 1000$ arteko ikasgelarako ordainsariak.'
+    tryfirst: 'Edo lehenenik probatu, eta ondoren izena eman dezakezu:'
     trynow: Saiatu orain
-    add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
-    test_videos_help: Test our new video player at your school
-    try_beta_courses: New! Try our beta courses for K-5 students
-    use_as_teacher: Use this site as a teacher
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>'
-    heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
-    heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
-    your_gallery: Gallery
-    no_primary_course: Try a Code Studio course
-    choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    add_hint_help: Mesedez lagun gaitzazu iradokizun erabilgarriak gehitzen Code.org tutorialetan
+    20hour_overview: 20 orduko ikastaro honek informatikaren eta programazioaren oinarrizko kontzeptuak aurkezten ditu. Ikastaroa 5-14 urteko ikasleentzat prestatuta dago, baina edozein adinetan ikasteko dibertigarria da.
+    test_videos_help: Probatu gure bideo irakurgailu berria zure eskolan
+    try_beta_courses: Berria! K-5 ikasleentzako beta ikastaroak proba itzazu
+    use_as_teacher: Erabili gune hau irakasle gisa
+    heading_hoc2014: '<h2>Kodearen Ordua</h2><h1>Adin guztientzat</h1>'
+    heading_elementary: '<h2>20 ikastaro ordu</h2><h1>informatikaren oinarriei buruz (adin guztiak)</h1>'
+    heading_apps: '<h2>Dibertsioa</h2><h1>Guztiontzat</h1>'
+    heading_legacy: '<h2>Gure kurtso azkarra</h2><h1>adin guztietarako</h1>'
+    your_gallery: Galeria
+    no_primary_course: Probatu Code Studioko ikastaro bat
+    choose_next_course: Probatu Code Studioko ikastaro bat azpikoetako bat aukeratuta
+    print_certificate: Inprimatu ziurtagiria
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with code.
+    title: Ezagutu Code Studio
+    description: Edonork ikasi dezake informatika. Jokoak, aplikazioak eta artea sortu kodearen bidez.
   gender:
     male: Gizona
     female: Emakumea
-    none: Prefer not to answer
+    none: Nahiago dut ez erantzun
   user_type:
     student: Ikaslea
-    teacher: Teacher
+    teacher: Irakaslea
   footer:
-    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
-    help_from_html: We especially want to recognize the engineers from Google, Microsoft, Facebook, Twitter, and many others who helped create these materials.
+    thank_you: 'Eskerrak eman gure <a href="https://code.org/about/donors">emaileei</a>, <a href="https://code.org/about/partners">kideei</a>, gure <a href="https://code.org/about/team">talde zabalari</a>, gure video zerrendari, eta gure <a href="https://code.org/about/advisors">hezkuntza aholkulariei</a> Code Studio sortzen emandako babesarekin.'
+    help_from_html: Bereziki eskertu nahi ditugu Google, Microsoft, Facebook, eta Twitter-eko ingeniariak, eta material hauek sortzen lagundu duten guztiak.
     help_from_html_old: Google, Microsoft, Facebook eta Twitterreko ingeniariek material hau sortzen lagundu dute.
-    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
-    powered_by_aws: Powered by Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
-    copyright: Copyright
-    more: More
-    feedback: Provide feedback
-    translate: Help us translate to your language
-    support: Support
+    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Eskubide guztiak babestuak.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Eskubide guztiak babestuak.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Eskubide guztiak babestuak'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Eskubide guztiak babestuak.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Eskubide guztiak babestuak'
+    powered_by_aws: Amazon Web Servicesek sostengatua
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg; CODEren logoa eta Code&reg-en ordua Code.org-ren marka bereziak dira.'
+    copyright: Egile-eskubideak
+    more: Gehiago
+    feedback: Bidali iruzkina
+    translate: Lagun gaitzazu zure hizkuntzara itzultzen
+    support: Laguntza
     support_url: http://support.code.org
-    tos_short: Terms
-    tos: Terms of Service
-    privacy: Privacy Policy
-    secure: Secure Version
-    report_abuse: Report Abuse
+    tos_short: Baldintzak
+    tos: Erabilera baldintzak
+    privacy: Pribatutasun politika
+    secure: Bertsio segurua
+    report_abuse: Erabilera okerra jakinarazi
   reference_area:
-    title: Need help?
-    subtitle: See these videos and hints
-    teacher: See the solution
-    auth_error: You are not authorized to see the solution.
-    submit: Update Artist Location
-    direction: Start Direction (in degrees)
+    title: Laguntzarik behar?
+    subtitle: Ikusi bideo eta aholku hauek
+    teacher: Ikusi soluzioa
+    auth_error: Ez zaude soluzioa ikusteko baimenduta.
+    submit: Artistaren kokapena eguneratu
+    direction: Hasierako norabidea (gradutan)
   video:
     tab: Bideoa.
-    notes: No video? Show notes.
-    notes_coming_soon: Notes for this video coming soon.
-    autoplay_option: Autoplay videos
-    download: Download Video
+    notes: Bideorik ez? Erakutsi oharrak.
+    notes_coming_soon: Bideo honen oharrak laser eskuragarri.
+    autoplay_option: Erreproduzitu bideoak automatikoki
+    download: Bideoa jaitsi
   compatability:
     working:
-      header: We are working on support for your browser.
-      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
-      hide_this_warning: Hide this warning
+      header: Zure nabigatzaileari euskarria emateko lanean ari gara.
+      message: "Code.org-ek web teknologia berriak erabiltzen ditu. Honek webgunea azkarrago erabiltzea ahalbidetzen du. Zure nabigatzaileak ez ditu beharrezko ezaugarri guztiak onartzen, eta ondorioz, webgunearen atal hau erabiltzean arazoak nabari ditzakezu. Mesedez lagundu gaitzazu <a href='%{report_issue_url}'> topatutako arazoen berri emanez</a>. <a href='%{supported_browsers_url}'>Zure nabigatzailea bertsio bateragarri batera ere eguneratu dezakezu</a>."
+      hide_this_warning: Ezkutatu ohar hau
     upgrade:
-      header: Please upgrade your browser.
-      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
-      button: Take me to the list of supported browsers
-  slow_loading: This is taking longer than usual...
-  try_reloading: Try reloading the page
-  next_stage: Finished! Continue to next stage
-  download_pdf: Open Lesson Plan
-  lesson_plan: Lesson Plan
-  view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+      header: Mesedez eguneratu zure nabigatzailea.
+      message: "Code.org-ek web teknologia berriak erabiltzen ditu. Honek webgunea azkarrago erabiltzea ahalbidetzen du. Zure nabigatzaileak ez ditu webguneko atal hau erabiltzeko beharrezko ezaugarri guztiak onartzen.<br/><br/>Jarraitzeko, instalatu gure nabigatzaile bateragarrien zerrendako nabigatzaileetariko bat. <a href='#'>Webgunea ikusten saia zaitezke</a>, baina erabilpen batzuk arazoak jasan ditzakete."
+      button: Eraman nazazu nabigatzaile bateragarrien zerrendara
+  slow_loading: Normalean baino denbora gehiago behar izaten ari da...
+  try_reloading: Saiatu webgunea eguneratzen
+  next_stage: Amaituta! Jarraitu hurrengo atalera
+  download_pdf: Ireki ikasgaiaren plana
+  lesson_plan: Ikasgaiaren plana
+  view_lesson_plan: Ikus ikasgaiaren plana
+  pdf_download: Jaitsi PDFa
+  download_coming_soon: Jarduera deskargagarria aurki.
+  video_coming_soon: Bideoa laster!
+  not_started: Ikaslea ez da saiatu maila honetan.
   share_code:
-    title: "Click 'Run' to see my program in action"
-    bounce_og_title: Check out my Bounce Game
-    flappy_og_title: Check out my Flappy Game
-    studio_og_title: Check out my Play Lab App
-    check_out_what_i_made: Check out what I made
-    og_description: I wrote the code myself with Code.org
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the text.
+    title: 'Sakatu "Hasi" nire programa martxan ikusteko'
+    bounce_og_title: Berrikusi nire errebote jokoa
+    flappy_og_title: Berrikusi nire Flappy Bird jokoa
+    studio_og_title: Berrikusi nire Jolas Laborategia aplikazioa
+    check_out_what_i_made: Ikusi egin dudana
+    og_description: Kodea nik idatzi dut Code.org bidez
+    phone_number_not_allowed: Telefono zenbaki bat dagoela dirudi. Saia zaitez testua aldatzen.
+    address_not_allowed: Helbide bat dagoela dirudi. Saia zaitez testua aldatzen.
+    email_not_allowed: Email bat dagoela dirudi. Saia zaitez testua aldatzen.
+    profanity_not_allowed: Birao bat dagoela dirudi. Saia zaitez testua aldatzen.
   builder:
-    created: You created a new script.
-    destroyed: You destroyed a script.
-    manage: Build Levels
-    view: View
-    back: Back to scripts
-    success: You successfully edited the blocks.
+    created: Script berri bat sortu duzu.
+    destroyed: Script bat ezabatu duzu.
+    manage: Mailak eraiki
+    view: Ikusi
+    back: Script-etara itzuli
+    success: Blokeak arrakastaz editatu dituzu.
     level:
-      create: Create new level
-      current: Current Levels
-      unused: Unused Levels
+      create: Maila berria sortu
+      current: Uneko mailak
+      unused: Erabili gabeko mailak
   upsell:
     hoc:
       title: Kode ordua
-      body: Try the basics of computer science. Millions have given it a shot.
+      body: Oinarrizko informatikarekin saiatu. Miliokak egin du proba.
     flappy:
       title: Flappy Code
-      body: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+      body: Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan? Saiatu Flappy Code tutoriala!
     20-hour:
-      title: Accelerated Course
-      body: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
-      body_short: Learn basic computer science in an accelerated version of courses 2-4.
+      title: Ikastaro Azeleratua
+      body: |
+        20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.
+        Gehiago ikasteko ikusi maila bereko gure ikastaroak!
+      body_short: Oinarrizko informatika ikasi 2-4 ikastaroen bertsio azeleratuen bidez.
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_new_tutorial: Probatu gure Kode Ordu berria beta bertsioan
+      try_frozen: Artista Frozeneko Anna eta Elsarekin
     gallery:
-      title: Gallery
-      body: View a gallery of app and artist images created by our users
+      title: Galeria
+      body: Begira ezazu gure erabiltzaileek sortutako app eta irudi artistikoen bilduma bat
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
-      title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      title: Infinity Jolas Laborategia
+      body: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak sortzeko
+    minecraft:
+      title: Minecraft
+      body: Esploratu Minecraft mundu bat kodearen bitartez.
   gallery:
-    students_drew_these_with_code: Students drew these with code!
-    students_made_these_with_code: Students made these with code!
-    picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
-    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
-    want_to_make_your_own: Want to make your own?
-    more: 'More &rarr;'
-    caption_by_name_age: 'by %{name}, age %{age}'
-    caption_time_ago: '%{time_ago} ago'
-    header: Gallery
-    header_playlab: Play Lab
-    header_artist: Artist
+    students_drew_these_with_code: Ikasleek hauek irudikatu dituzte kodea erabiliz!
+    students_made_these_with_code: Ikasleek hauek egin dituzte kodearekin!
+    picture_count: 'Iragan <b>%{days}</b> egunetan, ikasleek <b>%{count}</b> irudi egin dituzte konputagailu programak idatziz. Egin klik irudietan programak martxan ikusteko.'
+    activity_count: 'Iragan <b>%{days}</b> egunetan, ikasleek <b>%{count}</b> app eta irudi egin dituzte konputagailu programak idatziz. Egin klik irudietan eta pantaila-argazkietan programa bakoitza martxan ikusteko.'
+    want_to_make_your_own: Zurea egin nahi duzu?
+    more: 'Gehiago &rarr;'
+    caption_by_name_age: '%{name}, adina %{age}'
+    caption_time_ago: 'orain dela %{time_ago}'
+    header: Galeria
+    header_playlab: Jokoen Laborategia
+    header_artist: Artista
   landing:
-    prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
-    prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
-    feedback: Give Feedback
-    report_bug: Report Bug
-    support: Get Help
+    prerelease: "Kurtso hau <span class='betatext'>beta</span> bertsioa da. Horrek esan nahi du ez dela azken bertsioa eta iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo direla."
+    prerelease_hoc2014: "Tutorial hau <span class='betatext'>beta</span> bertsioa da. Iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo dira."
+    feedback: Bidali iruzkina
+    report_bug: Akatsa jakinarazi
+    support: Lortu laguntza
     support_url: //support.code.org
   multi:
-    wrong_title: Incorrect answer
-    wrong_body: "The answer you've entered is not correct.  Please try again!"
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    wrong_title: Erantzun okerra
+    wrong_body: Erantzuna ez da zuzena. Saiatu berriro!
+    correct_title: Zuzena
+    correct_body: Erantzun zuzena.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
-    wrong_title: Incorrect solution
-    wrong_body: "The solution you've entered is not correct.  Please try again!"
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    wrong_title: Soluzio okerra
+    wrong_body: Soluzioa ez da zuzena. Saiatu berriro!
+    correct_title: Zuzena
+    correct_body: Erantzun zuzena.
   contract_match:
-    wrong_title: Incorrect answer
-    badname: Your contract has the wrong name.
-    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
-    badrange: Your contract has the wrong range.
-    baddomainsize: "Your contract doesn't have the right number of items in the domain."
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
+    wrong_title: Erantzun okerra
+    badname: Kontratuak okerreko izena du.
+    badname_case: Funtzio izenek letra larriak eta xeheak bereizten dituzte. Saiatu kontratuaren izena aldatzen.
+    badrange: Kontratuak luzera okerra du.
+    baddomainsize: Kontratuak domeinuan elementu kopuru okerra du.
+    baddomainname: Zure domeinuko elementu batek edo gehiagok izen okerra dute.
+    baddomaintype: Zure domeinuko elementu bat edo gehiago mota okerrekoak dira edo ordena desegokian daude.
   text_match:
-    placeholder: Enter your answer here
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    placeholder: Idatzi hemen zure erantzuna
+    open_response_title: Eskerrik asko
+    open_response_body: Eskerrik asko zure erantzunagatik!
   dialog:
     ok: Ongi
     startover_title: Ziur al zaude berriro hasi nahi duzula?
-    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_body: Honek puzlea hasierako egoeran berrezarriko du eta gehitu edo aldatu dituzun datu guztiak berrasieratu ditu.
     startover_ok: Hasi Berriro
     startover_cancel: Ezeztatu
   time:
-    hour: 1 hour
+    hour: Ordu 1
     day: eguna
     week: astea
   data:
@@ -534,9 +544,9 @@ eu:
       name:
         20-hour:
           title: Konputazio zientzietarako K-8 Sarrera kurtsoa (15-25 ordu)
-          description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+          description: 20 orduko ikastaro honek informatikaren eta programazioaren oinarrizko kontzeptuak aurkezten ditu. Ikastaroa 5-14 urteko ikasleentzat prestatuta dago, baina edozein adinetan ikasteko dibertigarria da.
         Hour of Code:
-          title: Hour of Code 2013
+          title: Kodearen ordua 2013
           description: ""
         edit-code:
           title: Editatu kodea
@@ -545,11 +555,11 @@ eu:
           title: Gertaerak
           description: ""
         builder:
-          title: Builder
+          title: Eraikitzailea
           description: ""
         flappy:
           title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+          description: Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan? Saiatu Flappy Code tutoriala!
         jigsaw:
           title: Buruhaustea
           description: ""
@@ -557,74 +567,74 @@ eu:
           title: Pauso
           description: ""
         sample_level_builder:
-          title: Sample Level Builder
+          title: Mailak eraikitzeko adibidea
           description: ""
   age_interstitial:
     age: Zure adina
-    header: Account Information Update
-    message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
-    sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
-  zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
+    header: Kontuaren Informazioa Eguneratu
+    message: 'Gure zerbitzua eguneratzen ari gara pribatasun babes handiagoa eskaintzeko. Horretarako, erabiltzaileek adina sar dezaten behar dugu..<br/>Betiko legez, code.org-ek ez die sekula informazio hori bitartekoei alokatuko, ez salduko eta ez konpartituko.'
+    sign_out: 'Zure adina eman nahi ez baduzu <a href="%{url}">deskonektatu</a> zaitezke.'
+  zendesk_too_young_message: 'Barka, erabiltzaile gaztetxoak ezin dira konektatu jarraitzaileen lekura. <a href="http://support.code.org">support.code.org</a> webgunean nabigatu dezakezu konektatu gabe edo zure guraso zeinirakasleari esan gurekin harremanetan jartzeko.'
   progress:
-    not_started: not started
-    in_progress: in progress
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
-    furthest_level_attempted: furthest level attempted
-    assessment: assessment
+    not_started: hasi gabe
+    in_progress: bidean
+    completed_too_many_blocks: burutua, baina bloke gehiegi daude
+    completed_perfect: burutua, bikain
+    furthest_level_attempted: saiatutako maila altuena
+    assessment: ebaluazioa
   studio:
-    courses_working_on: "Courses you're working on"
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Parte hartzen ari zaren kurtsoak
+    completed_courses: Bukatutako kurtsoak
+    all_courses: Kurtso guztiak
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
+    projects: Proiektuak
+    create: Sortu proiektua
+    create_a_project: 'Sortu proiektu berria:'
     new: Berria sortu
-    rename: Rename
-    save: Save
-    delete: Delete
-    exit: Return to Course
+    rename: Aldatu izena
+    save: Gorde
+    delete: Ezabatu
+    exit: Itzuli kurtsora
     my_projects: Nire proiektuak
     share: Partekatu
     share_title: Partekatu zure proiektuak
     share_copy_link: 'Esteka kopiatu:'
     close: Itxi
-    more: More
+    more: Gehiago
     name: Izena
     updated: Eguneratua
     project_type: Proiektu mota
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
-    really_delete: Delete?
+    help_text: 'Egin klik behean <strong>Egin app bat</strong> edo <strong>Irudikatu</strong>-n Artista edo Jokoen Laborategiko proiektu berri bat egiteko! <br/>Zure proiektuetara itzuli ahal izango zara edozein unetan.'
+    need_help: Hasteko laguntzarik behar?
+    really_delete: Ezabatu?
     delete_yes: Bai
     delete_no: Ez
     saved: Gordeta
     not_saved: Gorde gabe
     cancel: Ezeztatu
     delete_confirm_title: Ziur zaude proiektu hau ezabatu nahi duzula?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    delete_confirm_text: Zure proiektua ezabatzen baduzu, Nire Proiektuak zerrendatik desagertuko da. Proiektuaren esteka konpartitzen zutenek ezingo dute gehiago proiektua ikusi.
     view_all: Ikusi Nire Proiektuak
-    remix: Remix
-    click_to_remix: 'Click "Remix" to spin-off your own version!'
-    edit_project: Edit Project
+    remix: Nahastu
+    click_to_remix: 'Klikatu "Nahastu" zure bertsioa lortzeko!'
+    edit_project: Editatu Proiektua
     abuse:
-      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
-      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
-      go_to_code_studio: Go to Code Studio
+      tos: "Proiektu honek Code.org-en <a href='http://code.org/tos'>Zerbitzuaren Baldintzak</a> hautsi ditu eta ezin da konpartitu."
+      contact_us: "Hau errorea dela badirudizu, mesedez <a href='https://code.org/contact'>harremanetan jarri.</a>"
+      go_to_code_studio: Joan Code Sudio-ra
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        intro: Code Studio-z egindako app-ak erabiliz, eduki iraingarriak, mehatxuak, cyberbulling-a, jazarpenak edo zure jabegoko edukiaren copyrighta hausten duen instantziarik aurkitu baduzu, mesedez bete beheko fitxa. Zure txostena oso serio hartuko dugu, ikertu eta beharrezko neurriak hartuko ditugu.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Mesedez, sartu email helbide bat
+          age: Mesedez, zehaztu adina
+          abuse_type: Mesedez, adierazi nola hausten dituen eduki honek Zerbitzuaren Baldintzak
+          abuse_detail: Mesedez, zehaztu erdiesten ari zaren edukia
+        abusive_url: Erdiesten ari den edukiaren URLa
         abuse_type:
-          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: 'Nola hausten ditu eduki onek %{link_start}Zerbitzuaren Baldintzak%{link_end}?'
+          harassment: Mehatxuak, cyberbulling-a, jazarpena
+          offensive: Eduki iraingarria
+          infringement: Copyright-a urratu
           other: Beste bat
-        detail: Please provide as much detail as possible regarding the content you are reporting.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        detail: Mesedez, erdiesten ari zaren edukiaren inguruko ahalik eta xehetasun gehiago eman.
+        acknowledge: 'Informazio hau bidaliz, %{link_start_privacy}Pibatutasun Politika%{link_end} eta %{link_start_tos}Zerbitzuaren Baldintzak%{link_end} adierazitako terminoetan erabiliko dela onartzen duzu'

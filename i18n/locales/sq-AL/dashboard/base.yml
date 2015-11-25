@@ -223,6 +223,7 @@ sq:
         playlab: Bëj një Aplikacion
         artist: Vizato Diçka
         calculate: Calculate Something
+        applab: Bëj një Aplikacion
     user:
       classroom: Faqja Kryesore e Mësuesit
       district_dashboard: Pulti i Qarkut
@@ -246,6 +247,8 @@ sq:
       prize_us_only: (vetëm studentët në SHBA)
       prizes_link: Më shumë informacion
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Mësuesi yt:'
       other: 'Mësuesit e tu:'
@@ -311,7 +314,7 @@ sq:
       section: Seksion
       example: Shëmbuj Zgjidhjesh
       example_with_number: 'Shëmbuj Zgjidhjesh %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
+      submitted_on: 'Submitted on:'
       unsubmit: Unsubmit
   user:
     email_confirm_needed: 'Adresa e email-it nuk është konfirmuar:'
@@ -433,6 +436,7 @@ sq:
   pdf_download: Shkarko PDF
   download_coming_soon: Së shpejti veprime me shkarkim.
   video_coming_soon: Video vjen së shpejti!
+  not_started: The student has not attempted this level.
   share_code:
     title: "Kliko 'Run' të shohësh programin tim në veprim"
     bounce_og_title: Shiko Lojën time me Përplasje
@@ -474,9 +478,14 @@ sq:
       body: Shiko një galeri imazhesh artistësh dhe aplikacionesh, të krijuar nga përdoruesit tonë
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Laboratori i Pafundmë
       body: Perdorni laboratorin e lojrave per te krijuar nje histori ose pafundesi personazhesh Disney.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Studentët vizatuan këto me kod!
     students_made_these_with_code: Studentët e bënë këtë me kod!

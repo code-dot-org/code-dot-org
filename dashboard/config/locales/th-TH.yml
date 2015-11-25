@@ -2,8 +2,7 @@
   errors:
     messages:
       not_saved: 'โปรดแก้ไขข้อผิดพลาดต่อไปนี้:'
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      too_young: เนื้อหานี้อาจไม่เหมาะสมกับกับผู้ที่มีอายุน้อยเกินไป
   activerecord:
     errors:
       messages:
@@ -24,7 +23,7 @@
           future: ไม่สามารถทำได้ในอนาคต
   hello: สวัสดีชาวโลก
   welcome_back: ยินดีต้อนรับอีกครั้ง, % {name}
-  submit: เสนอ
+  submit: ส่ง
   add_teacher_form:
     code:
       label: 'เพิ่มครู:'
@@ -179,15 +178,15 @@
       title: โปรดยืนยัน
       'no': ไม่ใช่
       'yes': ใช่
-      msg: Are you sure you want to claim the %{prize_name} prize?
-      msg_student: 'NOTE: You can only choose one type of prize.'
-      msg_publicschool: Please confirm that you are a U.S. public school teacher.
-      msg_visit_website: Visit website
+      msg: คุณต้องการจะรับ %{prize_name} หรือไม่
+      msg_student: 'หมายเหตุ: คุณเลือกได้แค่อย่างเดียวเท่านั้น'
+      msg_publicschool: โปรดยืนยันว่าคุณเป็นครูโรงเรียนรัฐบาลในสหรัฐอเมริกา
+      msg_visit_website: เยี่ยมชมเว็บไซต์
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10GB of Dropbox Space
+      dropbox: พื้นที่ Dropbox 10GB
       valve: Portal 2 (PC or Mac game download)
       ea_bejeweled: Bejeweled 3 (PC game download)
       ea_fifa: FIFA Soccer 13 (PC game download)
@@ -197,8 +196,8 @@
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: You have earned a prize! (U.S. students only)
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      earned: คุณได้รับรางวัล! (เฉพาะนักเรียนอเมริกา)
+      not_earned_title: จบบทฝึกซ้อม, รับรางวัล(เฉพาะนักเรียนอเมริกา)
       not_earned: 'Learn all the computer science concepts, collect all %{num_trophies}
         trophies, and earn real-world prizes. You can choose between 10GB of free
         Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer
@@ -252,6 +251,7 @@
         playlab: Make an App
         artist: Draw Something
         calculate: Calculate Something
+        applab: Make an App
     user:
       classroom: หน้าแรกของคุณครู
       district_dashboard: District Dashboard
@@ -275,6 +275,8 @@
       prize_us_only: (U.S. students only)
       prizes_link: ข้อมูลเพิ่มเติม
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Your teacher:'
       other: 'Your teachers:'
@@ -500,6 +502,7 @@
   pdf_download: Download PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
+  not_started: The student has not attempted this level.
   share_code:
     title: Click 'Run' to see my program in action
     bounce_og_title: Check out my Bounce Game
@@ -548,9 +551,14 @@
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!

@@ -193,27 +193,18 @@ Craft.init = function (config) {
       levelTracks,
       levelTracks.length > 1 ? 7500 : null
   );
-  if (studioApp.cdoSounds && !studioApp.cdoSounds.isAudioUnlocked()) {
-    // Would use addClickTouchEvent, but iOS9 does not let you unlock audio
-    // on touchstart, only on touchend.
-    var removeEvent = dom.addMouseUpTouchEvent(document, function () {
-      studioApp.cdoSounds.unlockAudio();
-      removeEvent();
-    });
-  }
 
   // Play music when the instructions are shown
   var playOnce = function () {
-    if (studioApp.cdoSounds && studioApp.cdoSounds.isAudioUnlocked()) {
-      document.removeEventListener('instructionsShown', playOnce);
-      document.removeEventListener('instructionsHidden', playOnce);
-
-      var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
-      var songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
-      Craft.musicController.play(songToPlayFirst);
+    document.removeEventListener('instructionsHidden', playOnce);
+    if (studioApp.cdoSounds) {
+      studioApp.cdoSounds.whenAudioUnlocked(function () {
+        var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
+        var songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
+        Craft.musicController.play(songToPlayFirst);
+      });
     }
   };
-  document.addEventListener('instructionsShown', playOnce);
   document.addEventListener('instructionsHidden', playOnce);
 
   var character = characters[Craft.getCurrentCharacter()];

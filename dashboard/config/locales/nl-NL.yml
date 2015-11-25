@@ -12,7 +12,7 @@
         name: Weergegeven naam
         email: Email
         username: gebruikersnaam
-        password: wachtwoord
+        password: Wachtwoord
         password_confirmation: Wachtwoord bevestiging
         current_password: Huidig wachtwoord
         locale: Taal
@@ -79,19 +79,19 @@
       verschillende niveaus en levels bekijken</a>, maar om je voortgang te bewaren
       moet je je aanmelden.
     teacher_educator_guide: Kijk in de lerarengids
-    teacher_pitch: Registreer als leraar voor Code.org
+    teacher_pitch: Code.org-aanmelding als leerkracht
     teacher_title: Inschrijven voor leraren
-    student_pitch: Registreer als leerling voor Code.org
+    student_pitch: Code.org-aanmelding als leerling
     student_title: Registreren als leerling
     school_name: School naam (optioneel)
     school_address: Schooladres (optioneel)
-    address_placeholder: adres, stad, staat, zip
+    address_placeholder: adres, stad, provincie, postcode
     gender: Geslacht (optioneel)
     birthday: Verjaardag (optioneel)
     age: Leeftijd
     user_type: Bent u een leerling of een leraar?
     submit: Meld je aan
-    teacher: Ben je een leraar?
+    teacher: Bent u een leraar?
     valid_username: Beschikbaar!
     invalid_username: Gebruikersnaam moet minstens 5 tekens zijn
     taken_username: Gebruikersnaam is al in gebruik
@@ -133,7 +133,7 @@
       title: Verander je wachtwoord
       new_password: Nieuw wachtwoord
       confirm_password: Bevestig je nieuwe wachtwoord
-      submit: Verander mijn wachtwoord
+      submit: Wijzig mijn wachtwoord
   welcome_email:
     subject: Doe mee met mijn klas (op Code.org)
     body: |
@@ -174,7 +174,7 @@
     provider: 'Aanbieder:'
     code: 'Code:'
     redeem_header: 'Vrijgeven:'
-    donorschoose_register: Registreer je als leraar op DonorsChoose.org
+    donorschoose_register: Meld je aan als leerkracht op DonorsChoose.org
     donorschoose_project: Een project plaatsen
     donorschoose_how_to: Hoe gebruik je jouw code
     success: Je prijs is vrijgegeven, gebruik de code hieronder.
@@ -255,7 +255,7 @@
     edit: Bewerk
     edit_model: Bewerk %{model}
     update: Bijwerken
-    destroy: Verwijderen
+    destroy: Vernietig
     back: Terug
     confirm: Weet je het zeker?
     created: '%{model} aangemaakt.'
@@ -270,6 +270,7 @@
         playlab: Maak een App
         artist: Teken iets
         calculate: Calculate Something
+        applab: Maak een App
     user:
       classroom: Leerkracht Home Page
       district_dashboard: District Ovezicht
@@ -280,10 +281,10 @@
       logout: Uitloggen
       signin: Aanmelden
       signup: Meld je aan
-      already_registered: Al geregistreerd?
+      already_registered: Al aangemeld?
     popup:
       progress_for_user: '%{name} de vooruitgang'
-      progress: Je voortgang
+      progress: Jouw voortgang
       lines: 'Totaal aantal regels code: %{lines}'
       close: SLUITEN
       mastery: Begrippen
@@ -293,6 +294,8 @@
       prize_us_only: (alleen voor leerlingen in de Verenigde Staten)
       prizes_link: Meer info
   teacher:
+    answer: Antwoord
+    for_teachers_only: Alleen Voor Leraren
     title:
       one: 'Je leraar:'
       other: 'Je leraren:'
@@ -367,8 +370,8 @@
       section: Groep
       example: Voorbeeld uitkomst
       example_with_number: Voorbeeld uitkomst getal %{solution_number}
-      submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
+      submitted_on: Ingeleverd op %{date}
+      unsubmit: Intrekken
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'
@@ -393,13 +396,13 @@
     title: Code Studio
     description: Code Studio is de basis voor online cursussen gemaakt door code.org
     lines_of_code: '%{lines_count} REGELS CODE DIE GESCHREVEN DOOR STUDENTEN'
-    lines_of_code_linebreak: '%{lines_count} REGELS CODE <br/> GESCHREVEN DOOR leerlingen%{students_count}
+    lines_of_code_linebreak: '%{lines_count} REGELS CODE<br/>GESCHREVEN DOOR %{students_count}
       MILJOEN LEERLINGEN'
     all_courses: Overzicht van cursussen 1, 2 en 3
     lesson_plans: Lesplannen
-    signin_message: Al geregistreerd? %{link}
-    student_reg_link: Registreer als leerling
-    teacher_reg_link: Registreer als leraar
+    signin_message: Al aangemeld? %{link}
+    student_reg_link: Meld je aan als leerling
+    teacher_reg_link: Meld je aan als leerkracht
     signin_directions: Gebruik een account gebruiken om je voortgang bij te houden.<br/>
       Leraren, houd je hele klas bij.
     teacher_dashboard: Ga naar voorgangsoverzicht
@@ -480,7 +483,7 @@
     tos: Gebruiksvoorwaarden
     privacy: Privacybeleid
     secure: Beveiligde versie
-    report_abuse: Report Abuse
+    report_abuse: Misbruik Melden
   reference_area:
     title: Hulp nodig?
     subtitle: Bekijk deze video's en hints
@@ -520,6 +523,7 @@
   pdf_download: PDF downloaden
   download_coming_soon: Downloadbare activiteit weldra beschikbaar.
   video_coming_soon: Video binnenkort beschikbaar!
+  not_started: De student heeft dit level niet geprobeerd.
   share_code:
     title: Klik op 'Uitvoeren' om mijn programma te draaien
     bounce_og_title: Bekijk mijn Stuiterspel
@@ -569,10 +573,15 @@
       body: Bekijk een galerij van apps en kunstwerken gemaakt door onze gebruikers
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Gebruik Play Lab om een verhaal of spel te maken met Disney Infinity figuren
         in de hoofdrol.
+    minecraft:
+      title: Minecraft
+      body: Ontdek een Minecraft-wereld met code.
   gallery:
     students_drew_these_with_code: Leerlingen wonnen deze met programmeren!
     students_made_these_with_code: Leerlingen hebben dit gemaakt met code!
@@ -730,31 +739,32 @@
     click_to_remix: Klik op 'Remix' om een spin-off voor je eigen versie te maken!
     edit_project: Edit Project
     abuse:
-      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
-        of Service</a> and cannot be shared with others.
-      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
-        us.</a>
-      go_to_code_studio: Go to Code Studio
+      tos: Van dit project is gemeld dat het Code.org's <a href='http://code.org/tos'>voorwaarden</a>
+        geschonden heeft en kan daarom niet met anderen gedeeld worden.
+      contact_us: Als je denkt dat dat een foutje was, <a href='https://code.org/contact'>neem
+        dan contact met ons op</a>
+      go_to_code_studio: Ga naar Code Studio
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: Als je aanstootgevende inhoud, bedreigingen, online pesten, intimidatie
+          of een schending van je auteursrecht bent tegengekomen tijdens het bouwen
+          van apps op Code Studio, vul dan het formulier hieronder in. We nemen je
+          bericht heel serieus, en zullen het onderzoeken en de benodigde maatregelen
+          nemen.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Vul een email-adres in
+          age: Vul een leeftijd in
+          abuse_type: Geef aan waarom deze inhoud in strijd is met de voorwaarden
+          abuse_detail: Details met betrekking tot de inhoud waarvan u melding wilt
+            maken
+        abusive_url: URL van de inhoud die wordt gemeld
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: Waarom is deze inhoud in strijd met de %{link_start}voorwaarden%{link_end}?
+          harassment: Bedreigingen, online pesten, intimidatie
+          offensive: Aanstootgevende inhoud
+          infringement: Auteursrechtinbreuk
           other: Anders
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
-        acknowledge: By submitting this information, you acknowledge it will be handled
-          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+        detail: Geef zo veel mogelijk details met betrekking tot de inhoud waarvan
+          je melding maakt.
+        acknowledge: Door het indienen van deze informatie, erkent u dat het zal worden
+          behandeld in overeenstemming met de voorwaarden van de %{link_start_privacy}Privacy
+          Policy%{link_end} en de %{link_start_tos}Terms van Service%{link_end}

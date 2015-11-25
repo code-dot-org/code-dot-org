@@ -155,7 +155,7 @@ p:function(d,k,o,l,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:(k=craft_loca
 s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).craft_locale = {
 "blockDestroyBlock":function(d){return "destroy block"},
-"blockIf":function(d){return "if"},
+"blockIf":function(d){return "agr"},
 "blockIfLavaAhead":function(d){return "if lava ahead"},
 "blockMoveForward":function(d){return "move forward"},
 "blockPlaceTorch":function(d){return "place torch"},
@@ -206,7 +206,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockTypeWater":function(d){return "water"},
 "blockTypeWool":function(d){return "wool"},
 "blockWhileXAheadAhead":function(d){return "ahead"},
-"blockWhileXAheadDo":function(d){return "do"},
+"blockWhileXAheadDo":function(d){return "کر"},
 "blockWhileXAheadWhile":function(d){return "while"},
 "generatedCodeDescription":function(d){return "By dragging and placing blocks in this puzzle, you've created a set of instructions in a computer language called Javascript. This code tells computers what to display on the screen. Everything you see and do in Minecraft also starts with lines of computer code like these."},
 "houseSelectChooseFloorPlan":function(d){return "Choose the floor plan for your house."},

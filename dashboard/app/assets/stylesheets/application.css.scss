@@ -890,7 +890,7 @@ input.header_input {
     top: 10px;
   }
 
-  &.embed_hidesource {
+  &.centered_embed {
     position: relative;
     top: 0px;
     left: auto;
@@ -1153,9 +1153,8 @@ a.download-video {
   .welcomeleft {
     float: left;
     text-align: center;
-    width: 190px;
     img {
-    padding-left: 50px;
+      padding-left: 65px;
     }
   }
 

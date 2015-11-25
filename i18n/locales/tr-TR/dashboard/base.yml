@@ -9,7 +9,7 @@ tr:
         blank: gerekli
     attributes:
       user:
-        name: Görünen isim
+        name: Görünen İsim
         email: E-posta
         username: kullanıcı adı
         password: şifre
@@ -27,8 +27,8 @@ tr:
   add_teacher_form:
     code:
       label: 'Öğretmen ekleyin:'
-      placeholder: Bölüm kodu (ABCDEF)
-    submit: Öğretmen ekle
+      placeholder: Bölüm Kodu (ABCDEF)
+    submit: Öğretmeni ekle
   add_hint_form:
     placeholder: Lütfen ipucunu buraya girin
     submit: İpucu ekle
@@ -41,7 +41,7 @@ tr:
   of: /
   more: DAHA FAZLA
   less: DAHA AZ
-  beta: Beta
+  beta: beta
   try_hoc: "Kod Saati'ni denemek için buraya tıklayın >> "
   try_k8intro: İlköğretim okullarına yönelik Bilgisayar Bilimlerine Giriş dersimizi deneyin (15-25 saat)
   k8intro: K-8 Bilişim Teknolojilerine Giriş Kursu (15-25 saat)
@@ -220,6 +220,7 @@ tr:
         playlab: Uygulama oluşturun
         artist: Bir şeyler çizin
         calculate: Calculate Something
+        applab: Uygulama oluşturun
     user:
       classroom: Öğretmen ana sayfa
       district_dashboard: Kontrol Paneli Bölgesi
@@ -243,6 +244,8 @@ tr:
       prize_us_only: (Sadece ABD öğrencileri)
       prizes_link: Daha fazla bilgi
   teacher:
+    answer: Cevap
+    for_teachers_only: Sadece Öğretmenler İçin
     title:
       one: 'Öğretmenin :'
       other: 'Öğretmeniniz:'
@@ -254,7 +257,7 @@ tr:
       section: 'Bölüm:'
       stages: 'Görüntülenecek kademe(ler):'
       show_past: 'Geçmiş öğrenci aktivitelerini göster (%{bullet_html}):'
-      levels_key: Level anahtarı
+      levels_key: Düzey anahtarı
       perfect: Tamamlandı, mükemmel
       completed: Tamamlandı, fakat çok fazla blok kullanıldı
       tried: Denendi ama tamamlanmadı
@@ -308,8 +311,8 @@ tr:
       section: Bölüm
       example: Örnek Çözüm
       example_with_number: 'Örnek Çözüm %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
-      unsubmit: Unsubmit
+      submitted_on: '%{date} tarihinde gönderildi'
+      unsubmit: Gönderme
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
@@ -401,7 +404,7 @@ tr:
     tos: Şartlar
     privacy: Gizlilik Politikası
     secure: Güvenli sürüm
-    report_abuse: Report Abuse
+    report_abuse: Hata Rapor Et
   reference_area:
     title: Yardım ister misiniz?
     subtitle: Bu videolara ve ipuçlarına bakın
@@ -433,6 +436,7 @@ tr:
   pdf_download: PDF İndir
   download_coming_soon: İndirilebilir aktivite yakında geliyor.
   video_coming_soon: Video Yakında Geliyor!
+  not_started: Öğrenciler bu bölüm için henüz giriş yapmadılar.
   share_code:
     title: "Benim programımın çalışırını görmek için, 'Çalıştır' seçeneğini tıklayın"
     bounce_og_title: Benim Bounce oyunuma göz atın
@@ -474,9 +478,14 @@ tr:
       body: Uygulamanın galerisine veya kullanıcılarımız tarafından oluşturulmuş sanatçı görsellerine göz atın
     frozen:
       title: Donmuş
+    starwars:
+      title: Star Wars
     infinity:
       title: Sınırsız oyun laboratuarı
       body: "Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın."
+    minecraft:
+      title: Minecraft
+      body: Kod aracılığıyla Minecraft dünyasını keşfedin.
   gallery:
     students_drew_these_with_code: Öğrenciler kod ile bunu çizdiler!
     students_made_these_with_code: Öğrenciler bunları kod ile yaptı!
@@ -612,24 +621,24 @@ tr:
       karıştır.
       
     click_to_remix: "Kendi sürümünüzü yaratmak için 'Remix'e basın!"
-    edit_project: Edit Project
+    edit_project: Projeyi Düzenle
     abuse:
       tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
-      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
-      go_to_code_studio: Go to Code Studio
+      contact_us: "Eğer bir hata olduğunu düşünüyorsanız, lütfen <a href='https://code.org/contact'>bizimle iletişime geçin.</a>"
+      go_to_code_studio: "Kod Stüdyosu'na git"
       report_abuse_form:
         intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
+          email: Lütfen E-posta adresinizi belirtiniz
+          age: Lütfen yaşınızı belirtiniz
           abuse_type: Please answer how this content violates the Terms of Service
           abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+        abusive_url: "Raporlamış olduğunuz içeriğin URL'si"
         abuse_type:
           question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          harassment: Tehditler, klavye delikanlılığı, zorbalık
+          offensive: Rahatsız edici içerik
+          infringement: Telif Hakkı İhlali
           other: Diğer
         detail: Please provide as much detail as possible regarding the content you are reporting.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        acknowledge: 'Bu bilgileri göndererek, %{link_start_privacy}Gizlilik Sözleşmesini%{link_end} ve %{link_start_tos}Hizmet Sözleşmesini%{link_end} kabul etmiş olursunuz'
