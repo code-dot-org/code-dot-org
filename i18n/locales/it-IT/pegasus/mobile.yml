@@ -118,7 +118,6 @@ it-IT:
   hoc_is_here: "L'Ora del Codice #HourOfCode è qua - provala! @codeorg @programmafuturo"
   just_did_hoc: 'Ho appena completato la mia prima Ora del Codice #HourOfCode - provala! @codeorg @programmafuturo'
   twitter_teach_cs: 'Perchè molte scuole non insegnano informatica? Possiamo migliorare questa situazione.  http://youtu.be/nKIu9yen5nc. Visita http://code.org/  per saperne di più.'
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Scopri</a> i premi per gli organizzatori.'
   learn_hoc: "Fai l'Ora del Codice"
   beyond_hoc: "Dopo l'Ora del Codice"
   what_gender: Di che sesso sei?
@@ -317,6 +316,7 @@ it-IT:
   volunteer_engineer_submission_intro_recruit: |-
     Questi insegnanti cercano <span style="font-family: 'Gotham 7r', sans-serif;"> appassionati di formazione informatica</span> che possano aiutare in classe, o qualcuno che possa <span style="font-family: 'Gotham 7r', sans-serif;"> ispirare</span> i loro studenti parlando delle grandi possibilità dell'informatica (che potrebbe essere fatto con una chat video). Se non siete in cerca di volontari, <a href="%{url}"> impara</a> come organizzare il tuo evento dell'Ora del Codice.
   volunteer_engineer_submission_intro_signup: 'Compila i campi sottostanti se sei uno studente di informatica o uno sviluppatore professionista. I campi contrassegnati con un <span class="form-required-field">*</span> sono obbligatori.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Informazioni condivise con gli insegnanti sulla mappa dei volontari
   volunteer_engineer_submission_field_name: Nome
   volunteer_engineer_submission_field_name_placeholder: Cognome e nome
@@ -570,6 +570,11 @@ it-IT:
   learn_educator_resources_button: Risorse per gli insegnanti
   learn_are_you_educator: |-
     Sei un insegnante? Impara <a href="http://hourofcode.com/resources/how-to"> con insegnare un'Ora del Codice</a>
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Scopri</a> i premi per gli organizzatori.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: "Prova i nuovi corsi dell'Ora del Codice"
   hoc2014_try_new_tutorial: "Prova il nuovo corso dell'Ora del Codice in versione provvisoria"
   hoc2014_try_scrat: Angry Birds, PvZ, e Scrat
@@ -581,7 +586,7 @@ it-IT:
   carousel_heading_international: Corsi nella tua lingua
   carousel_heading_domestic: Corsi disponibili in Inglese
   carousel_heading_beginners: Corsi per principianti
-  carousel_heading_javascript: Corsi che insegnano il linguaggio Javascript
+  carousel_heading_javascript: Lezioni che insegnano il linguaggio Javascript
   carousel_heading_unplugged: "Non hai Internet o dispositivi informatici? Prova l'informatica con mezzi tradizionali!"
   carousel_heading_devices: App per imparare su smartphone e tablet
   carousel_heading_languages: Corsi per imparare altri linguaggi di programmazione

@@ -450,36 +450,38 @@ ko:
         text: 여기에 여러분이 학습해야할 단계가 있습니다. 손뼉을 쳐보세요. 머리 뒤로 손을 올려보세요. 손을 허리에 두세요. 왼손을 드세요. 오른손을 드세요. 정말 간단하죠? 그렇죠? 여러분은 반복문 안에 어떤 춤의 과정을 넣어 지시사항을 단축시킬 수 있다는 것을 발견할 것입니다.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: "We actually do use loops in our dancing. The dancers are wearing computers, all in the same network. I might loop the lights through to the same dancers over and over again. In the loop I might have an iteration where I'll say you want to go loop through these six dancers over and over again and then within the loop you want to increase the speed of the light. And that's all created through loops. Loops are important in computer science because they make our work shorter and easier."
+        text: |
+          우리는 실제로 춤에서 반복을 이용합니다. 컴퓨터를 착용한 댄서들은 모두 같은 네트워크 상에 있습니다. 나는 아마도 댄서들에게 반복적으로 계속하하게 함으로써........ 할지도 모릅니다........
+          그리고 그것이 반복으로 만들어낼 수 있는 전부입니다. 반복은 컴퓨터과학에서 중요합니다. 왜냐하면 그것은 우리의 작업을 쉽고 간결하게 해 주기 때문입니다.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
-        text: "This lesson is called Happy Maps. Today we're gonna help our furry little friend Flurb get to her fruit."
+        text: 이번 학습은 행복한 지도라고 합니다. 오늘 우리는 털북숭이 작은 친구 Flurb가 과일 있는 곳에 도착하도록 도울 것입니다.
       2:
         image: notes/C1_happy_maps_unplugged_2.png
-        text: "Make your Flurb go to your fruit. To do this you'll need to figure out which way the Flurb needs to go and direct her with arrows. In order for the Flurb to get to the apple, what direction does the Flurb have to go? Line to make it go up."
+        text: 여러분의 Flurb가 과일 있는 곳까지 가도록 해 주세요. 그러기 위해 여러분은 Flurb가 가야할 길을 생각해 내야만 하고, 화살표로 지시해야 합니다. Flurb가 사과에 도착하게 하기 위해서 Flurb가 어느 방향으로 가야할까요? 선을 그려보세요.
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: To get it there you circle the direction that it has to go.
+        text: 그것을 얻기 위해 원이 움직여야 할 방향이 있다.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
-        text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."
+        text: 여러분이 풀려고 노력하는 그 지도 옆에 딱 붙어 있는 화살표를 이용하여 여러분의 알고리즘을 만들어보세요. 두번째 것은 똑같지만 그것은 아래로 내려갑니다.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
         text: 그것은 종이를 가지고 프로그래밍 하는 것과 같습니다. 그리고 그게 전부입니다.
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: "Debugging is finding and fixing problems. There are lots of ways to debug problems. One of the easiest is to move step by step until where you find where something goes wrong. Here I'm trying to do a back handspring on the beam but I keep falling off."
+        text: 디버깅은 문제를 발견하고 수정하는 것입니다. 문제를 디버깅하는 데에는 많은 방법들이 있습니다. 가장 쉬운 방법 중 하나는잘못된 것을 찾을 때 까지 단계별로 진행하는 것입니다. 여기 내가 계속 풀어보려고 시도하고 있는 빔 위의 백 핸드 스프링이 있지만 저는 계속 떨어지고 있었습니다.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: "I walked through each part step by step and realized where my mistake was. I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position and I got it. I was really glad I debugged my back handspring."
+        text: 나는 각 단계를 살펴보고 나의 실수를 깨달았습니다. 나는 나의 손을 정확한 빔 위에 놓지 않았습니다. 그래서 나는 나의 새로운 손 위치를 이용하여 빔 위의 다른 백 핸드 스프링을 시도하였고, 결국 해결하게 되었습니다. 나는 나의 백 핸드스프링 오류를 발견하고 수정하여서 정말 기뻤습니다.
       3:
         image: notes/C1_maze_debugging_3.png
-        text: "To learn about debugging, we start with a set of blocks already on the stage. You'll notice that these blocks won't get you to the goal. We need to debug the solution and fix it. What went wrong? You'll notice that you needed to keep going west one more block."
+        text: 디버깅에 대해 배우기 위해 우리는 각 단계에서 이미 블록 세트를 시작하였습니다. 우리는 이 블록들이 여러분들의 목표에 닿지 않을 것이라는 걸 알게 될 것입니다. 우리는 그것을 수정하고 디버깅 할 필요가 있습니다. 무엇이 잘못되었나요? 여러분들은 하나 이상의 블록을 서쪽으로 옮길 필요가 있다는 것을 알게 될 겁니다.
       4:
         image: notes/C1_maze_debugging_4.png
-        text: "Let's fix this by adding another west block and hitting run to see if you got it right. Yay, you got it!"
+        text: 왼쪽블록을 추가하여 이것을 고쳐보세요. 만약에 여러분이 옳게 하였다면 결과를 확인하기 위해 실행버튼을 눌러보세요. 와우! 여러분은 성공하였습니다!
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
@@ -487,48 +489,53 @@ ko:
       2:
         image: notes/C1_maze_intro_sequencing_2.png
         text: |-
-          You need to drag the blocks over from the toolbox to the workspace. Make sure it's under the "when run" block and when you think you've got the right solution, then you can click "Run" and watch the bird go to the pig.
+          여러분은 작업 영역에 있는 툴박스에서 블록을 드래그 해야 합니다. '실행하면" 버튼 아래 여러분이 생각하는 블록을 붙이고, 여러분이 정확하게 했다고 생각할 때 "실행" 버튼을 클릭하여고, 앵그리버드가 돼지를 향해 움직이는 것을 확인하세요.
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: 컴퓨터는 반복되는 명령을 만들기에 정말 좋습니다. 만약 당신이 한 줄에 여러번 같은 블록을 만들어야 한 다면 당신은 정말 지루할 것입니다. 하지만 컴퓨터는 수백만 또는 수십억의 정말 많은 똑같은 명령을 수행할 수 있고, 지루해 하지 않으며, 정말 잘 실행할 수 있습니다.
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: 예를 들어, 만약 내가 페이스북에서 행일 축하를 원하는 모든 사람에게 이메일을 보낸다면 나는 모든 사람에게 그 메일을 작성하기 위해 백년 이상이 걸릴지도 모릅니다. 하지만 단 몇줄의 코드 작성으로 나는 페이스북에서 생일 축하를 원하는 모든 사람에게 이메일을 보내는 시스템을 만들 수 있습니다.
       3:
         image: notes/C1_maze_loops_3.png
-        text: 'To get the bird to the pig in this level... rather than drag three North blocks on to the workspace, you will use the "repeat" block. Drag the "repeat" block on to the workspace and enter the number 3. Then drag the "move North" block into the "repeat" block and hit "Run" to see if you got it right. Congratulations, you got it!'
+        text: '이 레벨에서 앵그리버드가 돼지를 얻기 위해 여러분은 작업공간에서 세번의 위쪽 블록을 가져오는 대신 "반복"블록을 사용할 것입니다. 작업공간에서 "반복" 블록을 끌어오고 숫자에 3을 적어 넣으세요. 그리고 나서 "반복" 블록 안에 "위쪽" 블록을 넣고, 그것이 잘 되었는지 확인하기 위해 "실행" 버튼을 클릭해보세요. 당신이 해 냈군요!! 축하합니다!! ^^'
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
-        text: "This lesson is called move it, move it. Together we're going to write a program to get our friends from the starting with the compass rose to the smiley face goal."
+        text: 이번 레슨은 흔들흔들이라고 부릅니다. 우리는 여러분의 친구들이 나침도를 가지고 시작하여 스마일 얼굴에 도착하도록 하는 프로그램을 작성할 것입니다.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: "But the smiley is face down and only one person knows how to get there. Let's get this program started."
+        text: 하지만 스마일 얼굴은 고개를 숙이고 있고, 오직 한 사람만이 거기에 갈 방법을 알고 있습니다. 이 프로그램을 시작시켜 보세요.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: "A program is an algorithm that has been coded into something that can be run by a machine. Most of us think of a program as something that we write for a computer. Programs are really good for that but they're also helpful in other places. You can make your own game or even program a robot to do things for you."
+        text: 프로그램은 기계가 실행할 수 있는 알고리즘입니다. 많은 사람들은 프로그램을 컴퓨터에서만 이용한다고 생각합니다. 그러나, 프로그램은 컴퓨터뿐만 아니라 다른 곳에서도 유용합니다. 나만의 게임을 만들거나 로봇이 대신 일을 할 수 있게 만들 수 있습니다.
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: |-
-          My name is Jeremiah. Hi! I am seven years old. I love playing on my mom's computer but I always get permission first. "Mom, can I go on the computer? Sure honey!"
+        text: |
+          제 이름은 예레미아입니다. 안녕하세요! 저는 7살입니다. 저는 제 어머니의 컴퓨터를 가지고 노는 것을 좋아하지만 언제나 먼저 허락을 받습니다.
+          예레미아: "엄마, 컴퓨터 써도 되요?"
+          엄마: "당연하지!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: 저는 인터넷을 쓸 수 있기 때문에 제 어머니의 컴퓨터를 좋아합니다. 인터넷은 이웃 같아요. 멋있는 곳도 방문할 수 있고, 가족과 친구들에게 말 할 수 있고, 새로운 것도 많이 배울 수 있으니까요.
       3:
         image: notes/C1_going_places_safely_3.png
-        text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
+        text: 어제, 나는 우리 집 근처에 있는 동물원에 갔었습니다. 거기서 나는 아기 얼룩말을 보았습니다. 사진을 찍었고, 얼룩 무늬의 색을 바꿔보았습니다. 그리고나서 모자를 씌우고, 나의 익살스러운 동물 모음에 추가하였습니다. 멋져요! 나는 나중에 아주 먼 곳 아프리카의 케냐에 갔습니다. 거기에는 많은 얼룩말이 살고 있습니다.
       4:
         image: notes/C1_going_places_safely_4.png
-        text: |-
-          Sometimes on the Internet I talk to people I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. "Yummy, I wish the Internet had smellorama!" I can talk to different people on the Internet, like my cousin but I only talk to people I know.
+        text: '때때로 인터넷 상에서 나는 다른 도시에 사시는 할머니와 같이 내가 알고 있는 사람들과 이야기를 나눕니다. 할머니 안녕하세요! 할머니는 제 생일에 보내주실 쿠키를 만드시는 중이랍니다. "와~ 맛있겠어요. 인터넷이 smelloeama를 가졌으면 좋겠어요!" 나는 인터넷에서 내 사촌과 같은 또 다른 사람들과도 이야기할 수 있는데 오직 아는 사람하고만 이야기합니다.'
       5:
         image: notes/C1_going_places_safely_5.png
-        text: What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!
+        text: 내가 인터넷에서 가장 좋아하는 것은 재미있는 게임을 하는 것입니다. 점수 따기! 나는 또한 그림을 그리고 새로운 것을 만들고 그것을 친구들과 나누기를 좋아합니다. 신나요! 때때로 새로운 것을 배우는 웹사이트를 방문하가도 하지만 나는 항상 나에게 딱 맞는 웹사이트를 고수합니다. 와, 공룡이예요!
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
+        text: |
+          인터넷은 정말로 재미있는 곳이에요. 그러나 도로를 건널 때 처럼 인터넷을 쓸 때도 조심해야해요. 기억해야 할 룰이 3개 있어요.
+          1. 먼저 부모님에게 허락을 받아야 해요.
+          2. 아는 사람들에게만 이야기하세요.
+          3. 방문해야 될 웹사이트만 방문하세요.
       7:
         image: notes/C1_going_places_safely_7.png
         text: 와우! 정말 신나! 이제 저녁시간이에요. 나는 이제 로그 오프를 합니다. 나는 다음에 방문할 곳을 알기 위해 새로 로그인을 할때까지 기다리기 힘들어요.
@@ -588,7 +595,7 @@ ko:
         text: 컴퓨터는 명령을 반복하는 일을 굉장히 잘합니다. 사람은 같은일을 연속해 반복할때 굉장히 지루해합니다. 하지만 컴퓨터는 같은 일을 수백만 또는 수십억의 일을 지루해 하지 않으면서도 굉장히 그 일을 열심히 할 수 있습니다.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: 예를 들어, 만약 내가 페이스북에서 행일 축하를 원하는 모든 사람에게 이메일을 보낸다면 나는 모든 사람에게 그 메일을 작성하기 위해 백년 이상이 걸릴지도 모릅니다. 하지만 단 몇줄의 코드 작성으로 나는 페이스북에서 생일 축하를 원하는 모든 사람에게 이메일을 보내는 시스템을 만들 수 있습니다.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
         text: "In this example, your goal is going to be to move the bird to get the pig. Now, we're going to be able to use the repeat block in order to be able to do this very easily. You can either do this by giving the computer a move forward command five times in order to advance the bird one step each time to the pig or you can just tell the computer to move forward once, and then tell it to repeat that five times and it'll do the same thing."
@@ -640,7 +647,7 @@ ko:
     C2_conditionals_with_cards:
       1:
         image: notes/C2_conditionals_with_cards_1.png
-        text: This lesson is called conditionals with cards. Every day you make decisions based on what you see and hear.
+        text: "이 수업은 '카드를 사용한 조건'이라고 불립니다. 매일 여러분은 여러분이 보고 듣는 것에 기초하여 결정을 내립니다."
       2:
         image: notes/C2_conditionals_with_cards_2.png
         text: "I want to walk to the park but first I have to decide whether I should bring an umbrella or not. So I look out the window. If it's cloudy, I'm going to take my umbrella. Else, I'll take some sunglasses. I think I'd better take the umbrella. What I see and hear determines what I take to the park."
@@ -653,17 +660,17 @@ ko:
         text: I bet you can make up games that are even more fun with conditionals. Give it a try! Conditionals are what make computers seem smart. A computer program that includes conditionals can react to the user and change its course of action.
       5:
         image: notes/C2_conditionals_with_cards_5.png
-        text: "Think about your favorite video game. Do you earn more points for some actions than you do for others? This occurs because the computer is using conditionals. It's the way a computer makes a decision. How about, if you hit the target, you earn ten points. Else, you lose three. When you know how conditionals work, you can create all kinds of exciting games."
+        text: 여러분이 제일 좋아하는 비디오 게임을 생각해 보세요. 여러분은 다른 동작을 할 때에 비해 어떤 동작에 대해서 점수를 더 얻나요? 이것은 컴퓨터가 조건문을 사용하기 때문에 발생합니다. 이것이 컴퓨터가 결정을 내리는 방식입니다. 자, 여러분이 목표물을 맞추면 여러분은 10점을 얻습니다. 그렇지 않으면 여러분은 3점을 잃습니다. 조건문이 어떻게 동작하는지를 알 때 여러분은 모든 종류의 흥미진진한 게임을 만들 수 있습니다.
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: Here we already have some blocks out in our work space. But there is something wrong.
+        text: 우리는 작업 공간에서 이미 몇 개의 블록을 빼냈습니다. 그러나 뭔가 잘못되었습니다.
       2:
         image: notes/C2_artist_debugging_2.png
         text: "Let's debug this code by slowing down the speed and watching it as it goes through each block step by step."
       3:
         image: notes/C2_artist_debugging_3.png
-        text: "Oh, there's the problem! The cat's whiskers are 75 pixels long, not 25."
+        text: 아, 문제가 있어요! 그 고양이의 수염의 길이는 25픽셀이 아니고 75픽셀입니다.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
@@ -704,10 +711,10 @@ ko:
           This lesson is called "Graph Paper Programming" and it's all about algorithms. Today we're going to learn how to write programs that show each other how to recreate simple black and white images, using only hand drawn arrows.
       2:
         image: notes/C2_graph_paper_2.png
-        text: "An algorithm is a list of instructions for completing a task. We'll follow this set of instructions to make the bowl. Algorithms are really helpful when you need someone else to understand how to do something."
+        text: 알고리즘은 작업을 완료하기 위한 명령들을 나열한 것입니다. 우리는 그릇을 만들기 위한 이 명령 집합을 따를 것입니다. 알고리즘은 어려분이 누군가에게 무언가를 하는 방법을 이해시켜주려고 할 때 정말 도움이 됩니다.
       3:
         image: notes/C2_graph_paper_3.png
-        text: "If you're writing an algorithm for a computer, you have to break it down to little tiny steps. So finish this row and go to the next, then the next one, and you'll be done."
+        text: 만약에 컴퓨터에 대한 알고리즘을 작성한다면 여러분은 아주 작은 단계가 되도록 쪼개나가야 합니다. 그래서 한 줄을 끝내고 다음 줄로 이동하고 그리고 나서 또 다음 줄로, 그러다 보면 끝날 것입니다.
       4:
         image: notes/C2_graph_paper_4.png
         text: I use algorithms in my work. If I write down all of the steps I can recreate that same piece again, or I can teach someone else to do it. Put the glass in the kiln, fuse it together, follow the rest of the instructions to make the bowl. Algorithms give you a road map for getting something done.
@@ -1429,7 +1436,7 @@ ko:
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
       2:
         image: notes/starwars_congrats_2.JPG
         text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
@@ -1498,7 +1505,7 @@ ko:
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
       2:
         image: notes/starwars_blocks_congrats_2.JPG
         text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
@@ -1579,14 +1586,14 @@ ko:
         text: You can use if statements in your code to make Steve and Alice react to what they see in the world. For example, if there is a rock in front of them, they can turn left. Or turn right if they run into a tree.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: "In this case, we don't want to fall in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
+        text: 이런 경우에 우리는 용암에 빠지는 것을 원하지 않습니다. 용암에 관한 계획을 세우는 것은 쉽습니다. 우리는 화면에서 그것을 볼 수 있습니다. 그러나 바위 아래에 있어서 볼 수 없는 용암은 어떻게 하지요?
       5:
         image: notes/mc_if_statements_5.JPG
         text: "After we mine the stone, we'll need to check if there's any lava in that place before moving forward. If there is lava there, we want to place a stone in front of our character before we can move forward. That way we can safely move on. Time for more mining! And remember to use the if statement to watch your step."
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: 축하합니다! 여러분은 컴퓨터과학의 기초적인 블록 쌓기를 배웠습니다.
       2:
         image: notes/mc_congrats_share_2.JPG
         text: 이제 블록들을 사용해 여러분만의 작품을 만들 수 있습니다. 이제 설명과 퍼즐 풀기는 끝났습니다. 이제 여러분은 아무거나 원하는 것을 만들 수 있습니다. 선택하세요.
@@ -1595,11 +1602,11 @@ ko:
         text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: "When you're done making your creation, choose share to get a link to share with your friends. Have fun!"
+        text: 여러분이 여러분만의 창작물을 만들었다면, 여러분의 친구들과 나누기 위한 링크 공유 방법을 선택하세요. 즐거운 시간 보내세요!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: 축하합니다! 여러분은 컴퓨터과학의 기초적인 블록 쌓기를 배웠습니다.
       2:
         image: notes/mc_congrats_no_share_2.JPG
         text: 이제 블록들을 사용해 여러분만의 작품을 만들 수 있습니다. 이제 설명과 퍼즐 풀기는 끝났습니다. 이제 여러분은 아무거나 원하는 것을 만들 수 있습니다. 선택하세요.
@@ -1609,3 +1616,56 @@ ko:
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: 이제 당신이 원하는대로 만들 수 있습니다. 즐거운 시간 보내세요!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: "The white space on the right is called the work space and this is where we'll build our program."
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

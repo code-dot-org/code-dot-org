@@ -143,7 +143,7 @@ he:
         maze_2_17: 'הבלוק "אם - אז" בודק את המצב, ועושה פעולה אחת או אחרת. על מנת להביא אותי לחמניות השתדל להשתמש בבלוק החדש.'
         maze_2_18: 'עוד תרגול אחד של הבלוק "אם - אז", האם אתה יכול להצליח בנסיון הראשון?'
         maze_2_19: 'האם אתה יכול להוסיף רק 3 בלוקים על מנת לעזור לי לפתור מבוך מסובך יותר? אם תעשה זאת נכון, אני אוכל ללכת  בכל דרך מפותלת לא משנה מה אורכה.'
-        turtle_1_1: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
+        turtle_1_1: שלום אני אמן, אתה יכול לכתוב קוד כדי לגרום לי לצייר כמעט הכל. תשתמש בכמה בלוקים כדי לגרום לי לצייר על הקווים האפורים בתמונה.
         turtle_1_2: 'עכשיו צייר ריבוע. הערה: השתמש בצבע האהוב עלייך ע"י בחירתו בבלוק החדש "הגדר צבע".'
         turtle_1_3: צור ריבוע באמצעות 3 בלוקים בלבד.
         turtle_1_4: 'צייר משולש שכל אחת מהפאות שלו בצבע שונה ע"י שימוש באפשרות "צבע אקראי" שבוחר צבע שונה בכל פעם. רמז: עליך להפעיל ע"י לחיצה על המספר בבלוק הסיבוב.'
@@ -154,7 +154,7 @@ he:
         turtle_1_9: האם אתה יכול להבין מהו המספר שצריך להחליף את סימני השאלה כדי לצייר עיגול?
         turtle_1_10: 'עשית זאת! עכשיו צייר מה שאתה רוצה. כמה רעיונות כיפיים: מר קו, פתית שלג או ספירלה. כמו כן נסה את הבלוק החדש "קבע עובי". תהנה!'
         turtle_4_1: 'האם אתה יכול לצייר משולש (עם קצוות של 100 פיקסלים) בעזרת 3 בלוקים בלבד? רמז: השתמש בבלוק "חזור".'
-        turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
+        turtle_4_2: 'הוסף בלוק: "פנה ימינה ב90 מעלות" במקום כלשהו באמצע של הקוד כבר מחוץ לסביבת העבודה כדי לצייר את המשולשים האלה.'
         turtle_4_3: 'בסדר, הנה הקוד שכתבת על מנת לצייר משולש. האם אתה יכול להוסיף בלוקים של "חזור שוב" ו"סובב" על מנת לצייר פרח יפה?'
         turtle_4_4: 'הנה אותו קוד מהחידה הקודמת, אך מסובבת  ב36 מעלות אחרי ציור של כל משולש. כמה פעמים יהיה צורך לחזור? (רמז: אחרי 360 מעלות של סיבוב הציור יצור מעגל שלם)'
         turtle_4_5: 'הנה אותו קוד מהחידה הקודמת. אבל חוזרת 36 פעמים. בכמה מעלות הסיבוב אמור להיות? (רמז: אחרי 360 מעלות של סיבוב  הציור יהפוך לעיגול שלם)'
@@ -236,7 +236,7 @@ he:
         bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
         bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
         bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
-        Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
+        Custom_builder: 'גרור בלוקים מתיבת הכלים אל סביבת העבודה כדי לצייר שלב שאתה רוצה ליצור. לחץ "הרץ" כשאתה מוכן.'
         flappy_1: 'צרפו בלוק לבלוק "כאשר לוחצים" ולאחר מכן לחץ על "הפעל". לחץ או הקש על המסך כדי להעביר את פלאפי אל המטרה.'
         flappy_2: 'כעת הוספנו את הקרקע. צרפו בלוק לבלוק ה-"כאשר פוגע בקרקע". התוכנית שבניתם זקוקה ל-"סוף משחק" כאשר פלאפי מתרסק.'
         flappy_3: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
@@ -322,16 +322,17 @@ he:
         studio_iceage_8: Can you add a block to score a point and a block to play a sound when Sid runs into Manny, and then move him with the arrows until you score?
         studio_iceage_9: Set the background for this ice age and help Sid get to Granny faster by changing its speed. Then move him with the arrow keys to get to Sid and alert everyone else.
         studio_iceage_10: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_gumball_1: 'Anais wants to say "hello" - can you help her?'
-        studio_gumball_2: 'Darwin (actor 1) and Gumball (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_gumball_3: Can you help Banana Joe get to the flag?
-        studio_gumball_4: Can you help Gumball (actor 1) get to Darwin (actor 2) and play a sound when he gets there?
-        studio_gumball_5: 'Can you help Antony say "greetings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_gumball_6: Can you help Darwin move around using the up/down/right/left arrow keys to get to all the flags?
-        studio_gumball_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Antony move right and left repeatedly?'
-        studio_gumball_8: Can you add a block to score a point and a block to play a sound when Banana Joe runs into Antony, and then move him with the arrows until you score?
-        studio_gumball_9: Set the background for this space invasion and help Nicole get to Penny faster by changing its speed. Then move him with the arrow keys to get to Nicole and alert everyone else.
-        studio_gumball_10: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
+        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
+        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
+        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
+        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
+        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
+        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
+        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
+        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
         studio_k1_1: 'Can you make this dog say "hello world"?'
         studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
@@ -382,7 +383,7 @@ he:
         Unplug11: סיום
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
+        C1_bigevent_unplugged: האירוע הגדול
         C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
@@ -436,9 +437,9 @@ he:
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: 'Variables - Artist'
         C4_variables_playlab: 'Variables - Play Lab'
-        C4_for_loops: For Loops
-        C4_for_loops_bee: For Loops
-        C4_for_loops_no_bee: For Loops
+        C4_for_loops: בשביל לולאות
+        C4_for_loops_bee: בשביל לולאות
+        C4_for_loops_no_bee: בשביל לולאות
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
@@ -447,7 +448,7 @@ he:
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: For Loops
+        C4_unplugged_forloops: בשביל לולאות
         C4_unplugged_parameters: Songwriting with Parameters
         C4_unplugged_binary: Binary
         frozen_intro: Hour of Code Intro
@@ -510,6 +511,9 @@ he:
         mc_if_statements: 'Minecraft - If statements'
         mc_congrats_share: 'Minecraft - Congratulations'
         mc_congrats_no_share: 'Minecraft - Congratulations'
+        gumball_intro: 'Gumball Hour of Code - Introduction'
+        gumball_events: 'Gumball Hour of Code - Events'
+        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'

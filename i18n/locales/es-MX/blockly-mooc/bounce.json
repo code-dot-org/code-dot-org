@@ -1,5 +1,5 @@
 {
-  "bounceBall":"rebotar la pelota",
+  "bounceBall":"Rebotar pelota",
   "bounceBallTooltip":"Rebotar una pelota contra un objeto.",
   "continue":"Continuar",
   "dirE":"E",
@@ -20,7 +20,7 @@
   "incrementPlayerScoreTooltip":"Añadir uno a la puntuación actual del jugador.",
   "isWall":"¿Es esto una pared?",
   "isWallTooltip":"Devuelve verdadero si hay un muro",
-  "launchBall":"lanzar pelota nueva",
+  "launchBall":"lanzar nueva pelota",
   "launchBallTooltip":"Lanza una pelota en el juego.",
   "makeYourOwn":"Crea tu Propio Bounce Game",
   "moveDown":"Bajar",

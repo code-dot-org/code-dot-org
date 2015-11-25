@@ -1179,9 +1179,11 @@ en:
       U3 - Canvas - clickToAdd_instruction: crwdns54669:0crwdne54669:0
       U3 - Canvas - delete_instruction: crwdns54670:0crwdne54670:0
       U3 - Canvas - draw at click point_instruction: crwdns54671:0crwdne54671:0
+      U3 - Canvas - freePlay_instruction: crwdns54745:0crwdne54745:0
       U3 - Canvas - introCanvas_instruction: crwdns54672:0crwdne54672:0
       U3 - Canvas - movementFunction fix Orig_instruction: crwdns54673:0crwdne54673:0
       U3 - Canvas - movementFunction_instruction: crwdns54674:0crwdne54674:0
+      U3 - Canvas - One Dot sprayPaint_instruction: crwdns54746:0crwdne54746:0
       U3 - Canvas - redrawOriginal_instruction: crwdns54675:0crwdne54675:0
       U3 - Canvas - redrawRandom_instruction: crwdns54676:0crwdne54676:0
       U3 - Canvas - redrawRandom2_instruction: crwdns54677:0crwdne54677:0

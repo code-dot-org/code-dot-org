@@ -582,29 +582,41 @@
         studio_iceage_10: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe
           Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
           lor.
-        studio_gumball_1: Anais vrea să spună "Bună ziua" - o poţi ajuta?
-        studio_gumball_2: Darwin (actorul 1) şi Gumball (actorul 2) ar dori să-și
-          spună "Bună ziua" reciproc. Îi poți ajuta utilizând de două ori blocul "spune"?
-        studio_gumball_3: Poți să-l ajuți pe Banana Joe să ajungă la steag?
-        studio_gumball_4: Poți să-l ajuți pe Gumball (actorul 1) să ajungă la Darwin
-          (actorul 2) și să emită un sunet când ajunge acolo?
-        studio_gumball_5: Îl poți ajuta pe Antony să spună "Salutare", atunci când
-          acesta este apăsat? Nu uita să faci clic pe el după ce dai clic pe Rulează
-        studio_gumball_6: Îl poți ajuta pe Darwin să se deplaseze folosind tastele
-          cu săgeţi sus/jos/dreapta/stânga pentru a ajunge la toate steagurile?
-        studio_gumball_7: Blocul "repetă pentru totdeauna" îți permite să rulezi continuu
-          un cod. Îi poți ataşa blocuri acestuia pentru a-l ajuta pe Antony să se
-          miște la dreapta şi la stânga în mod repetat?
-        studio_gumball_8: Poţi adăuga un bloc pentru a marca un punct și un bloc pentru
-          a reda un sunet atunci când Banana Joe se lovește de Antony, urmând ca mai
-          apoi să-l muţi cu săgeţile până când marchezi scor?
-        studio_gumball_9: Setează fundalul pentru această invazie spațială şi ajut-o
-          pe Nicole să ajungă la Penny mai repede schimbându-i viteza. Apoi, mută-l
-          pe el cu tastele săgeată ca să ajungă la Nicole şi să-i alerteze pe toți
-          ceilalți.
-        studio_gumball_10: Creați-vă propriul joc. Când aţi terminat, faceţi clic
-          pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
-          lor.
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
+          him go the last 200 pixels using the "move" block.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Can you help Anton announce the start of a race
+          by saying "Ready, set, go!"? To test your program, don’t forget to click
+          Anton after you click Run!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Create your own game or story. When you're done,
+          click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Creați-vă propriul joc. Când aţi terminat, faceţi clic
           pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
           lor.
@@ -797,10 +809,13 @@
         starwars_blocks_events: 'Star Wars: Programarea unei galaxii - Evenimente'
         starwars_blocks_congrats: 'Star Wars: Programarea unei galaxii - Felicitări'
         mc_intro: Minecraft - introducere
-        mc_repeat: Minecraft - repetare
-        mc_if_statements: Minecraft - Declaratiile "Daca"
+        mc_repeat: Minecraft - Repetitii
+        mc_if_statements: Minecraft - Structuri daca
         mc_congrats_share: Minecraft - Felicitari
         mc_congrats_no_share: Minecraft - Felicitari
+        gumball_intro: Gumball Hour of Code - Introduction
+        gumball_events: Gumball Hour of Code - Events
+        gumball_repeat: Gumball Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc
@@ -914,12 +929,13 @@
           pune în mișcare
         Infinity_move_collide_callout: Emite un sunet când se produce acest eveniment.
         Infinity_repeat_callout: Plasează blocuri de mutare în interior aici
-        craft_run_button_callout: Apasă "Rulează" pentru a încerca programul tău
+        craft_run_button_callout: Apasă "Run" pentru a încerca programul tău
         craft_drag_block_callout: Trageţi un bloc "moveForward();" şi fixaţi-l sub
           alt bloc
-        craft_callout_preplaced: Am pus unele blocuri aici pentru a începe
-        craft_inside_repeat: Repetaţi acţiunile prin plasarea blocurilor aici
-        craft_callout_preplaced_house: Acest cod iti va constui casa. Il poti termina?
+        craft_callout_preplaced: Am pus cateva blocuri aici pentru a incepe
+        craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
+        craft_callout_preplaced_house: Acest cod va incepe sa construiasca casa ta.
+          Il poti termina?
         craft_what_is_iron: Extrage acest fier!
-        craft_callout_moveforward: Acest cod te va ajuta sa vezi lava, poti adauga
-          o comanda pentru a inainta?
+        craft_callout_moveforward: Acest cod va cauta dupa lava, poti adauga o comanda
+          pentru a inainta?
