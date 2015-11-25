@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, droplet, marked, digestManifest, dashboard */
+/* global Blockly, ace:true, droplet, marked, digestManifest, dashboard, addToHome */
 
 /**
  * For the most part, we depend on dashboard providing us with React as a global.
@@ -249,6 +249,14 @@ StudioApp.prototype.hasInstructionsToShow = function (config) {
 StudioApp.prototype.init = function(config) {
   if (!config) {
     config = {};
+  }
+
+  if( config.isLegacyShare & dom.isMobile() ) {
+    if( dom.isIOS() ) {
+      if (!window.navigator.standalone) {
+        addToHome.show(true);
+      }
+    }
   }
 
   this.setConfigValues_(config);
