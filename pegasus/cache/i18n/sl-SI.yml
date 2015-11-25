@@ -12,13 +12,13 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ste učitelj računalništva in informatike? Oglejte si tudi
     druge CSEdWeek vire</a>'
-  n_have_learned_an_hoc: "<h1>Poizkusi</h1><h2>Uro za kodo</h2><h3># served</h3>"
+  n_have_learned_an_hoc: <h1>Poizkusi</h1><h2>Uro za kodo</h2><h3># served</h3>
   anybody_can_learn: Vsakdo se lahko nauči.
   learn_now: Nauči se zdaj
   petition_message: Vsak učenec v vsaki šoli bi moral imeti možnost učenja računalništva
-  petition_sign_message: "Če se strinjate, podpišite se.  Pridružite se # ostalim."
-  petition_sign_message_support: "Če nas podpirate, se podpišite. Pridružite se #
-    ostalim."
+  petition_sign_message: 'Če se strinjate, podpišite se.  Pridružite se # ostalim.'
+  petition_sign_message_support: 'Če nas podpirate, se podpišite. Pridružite se #
+    ostalim.'
   petition_join_others: 'Pridruži se # ostalim'
   name: Ime
   email: Elektronska pošta
@@ -36,7 +36,7 @@
   hoc2014_everyone: Kdorkoli
   hoc2014_support: Podprite &#x25BE;
   hoc2014_whatishoc: Kaj je Ura za kodo?
-  csedweek_map_header: "# CSEdWeek / Dogodki Ura za kodo po svetu"
+  csedweek_map_header: '# CSEdWeek / Dogodki Ura za kodo po svetu'
   csedweek_map_signup: Prijavite svoj dogodek
   csedweek_map_search_placeholder: Iskanje med dogodki Ura za kodo
   csedweek_map_search_search: Išči
@@ -65,11 +65,11 @@
     ukazov in osnovnih algoritmov.
   all_ages: Vse starosti
   beginner: Začetnik
-  n_participants: "# udeležencev"
+  n_participants: '# udeležencev'
   go: Pojdi
   thank_you_: Hvala!
-  congratulations: "Čestitamo!"
-  congratulations_on_completing_hoc: "Čestitamo za dokončanje Ure za kodo"
+  congratulations: Čestitamo!
+  congratulations_on_completing_hoc: Čestitamo za dokončanje Ure za kodo
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
     help students learn an Hour of Code!'
@@ -91,8 +91,8 @@
     z  <a href='http://studio.code.org'> drugimi tečaje</a>, ali pa si oglejte druge
     možnost <a href='/learn/beyond'> učenje po Uro za kodo</a>.
   thanks_for_submitting: Hvala!
-  if_you_enjoyed: "Če ste uživali v učenju, vprašajte prijatelje, naj tudi oni preizkusijo!
-    \ Želimo, da ves svet izve."
+  if_you_enjoyed: Če ste uživali v učenju, vprašajte prijatelje, naj tudi oni preizkusijo!  Želimo,
+    da ves svet izve.
   personalize_certificate: Prilagodite vaš certifikat
   share_achievement: Deli svoj dosežek
   beyond_hour_message: Nadaljuj z našimi <a href='http://studio.code.org'> drugimi
@@ -115,7 +115,7 @@
   beyond_an_hour: Po Uri za kodo
   get_started: Začni
   i_agree: Strinjam se
-  participant_select: "-Izberite-"
+  participant_select: -Izberite-
   participant_student: Učenec
   participant_parent: Starš
   participant_educator: Učitelj
@@ -136,7 +136,7 @@
   learn_next_level: Nadaljujte na naslednjo stopnjo
   learn_online: Poskusite druge spletne tečaje
   learn_classes: Poišči lokalne tečaje
-  hoc_is_here: "#UraZaKodo je tu! @codeorg"
+  hoc_is_here: '#UraZaKodo je tu! @codeorg'
   just_did_hoc: 'Pravkar sem končal #UraZaKodo! @codeorg'
   twitter_teach_cs: "Zakaj več šol ne poučuje računalništva? To lahko spremenimo.
     \ \nhttp://youtu.be/nKIu9yen5nc. Obiščite http://code.org/ in izvedeli boste več.\n"
@@ -153,8 +153,8 @@
   lines_of_code_alt: VEČ KOT <b>#</b>  VRSTIC KODE SO NAPISALI UČENCI
   who_has_done_hoc: 'Kdo je opravil #UraZaKodo? @codeorg'
   hoc_leaderboards: Seznam vodilnih pri Uri Za Kdo
-  students_and_lines: "%{students} učencev je opravilo uro za kodo in pri tem napisalo
-    %{lines} vrstic kode."
+  students_and_lines: '%{students} učencev je opravilo uro za kodo in pri tem napisalo
+    %{lines} vrstic kode.'
   start_hoc: Začni Uro za kodo zdaj
   contact_form_topic_press: Tisk/mediji (intervju ali ustno udejstvovanje)
   stats_nina: '"Vsak dan je prinesel enake rezultate&mdash;100% angažiranost." - Nina
@@ -231,7 +231,7 @@
   homepage_slot_text_shop: trgovina
   homepage_slot_text_flappy: Program za Plahutača (Flappyja)
   homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: "# uporabnikov"
+  homepage_action_text_num_served: '# uporabnikov'
   homepage_action_text_join_us: Join us
   homepage_action_text_sign_up: Prijava
   homepage_action_text_try_it: Preizkusite
@@ -255,7 +255,7 @@
   homepage_slot_text_blurb_hoc: Vsak se lahko nauči. Začni danes
   homepage_slot_text_link_hoc: Poizkusi Uro za programiranje (Hour to Code)
   homepage_slot_text_link_host: Organiziraj Hour of Code
-  homepage_slot_text_link_hocserved: "# uporabnikov"
+  homepage_slot_text_link_hocserved: '# uporabnikov'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Učenci
   homepage_slot_text_blurb_students: Razišči vse naše vodiče
@@ -344,20 +344,20 @@
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up."
+    have signed up.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
@@ -524,13 +524,13 @@
   dashboard_action_done: Končano
   dashboard_action_required: zahtevano
   dashboard_navigation_home_page: Učiteljeva domača stran
-  dashboard_navigation_section_student_progress: "Študentski računi in napredek"
+  dashboard_navigation_section_student_progress: Študentski računi in napredek
   dashboard_navigation_section_teacher_progress: Tvoj napredek v tečaju
   dashboard_navigation_section_lesson_plans: Učni načrti in viri
   dashboard_navigation_section_community: Pomoč in Skupnosti
   dashboard_navigation_section_pd: Strokovni razvoj
   dashboard_navigation_section_speakers: Računalništvo <br/> gostujoči predavatelji
-  dashboard_navigation_all_sections: "Študentski računi in napredek"
+  dashboard_navigation_all_sections: Študentski računi in napredek
   dashboard_navigation_view_progress: Prikaz napredka
   dashboard_navigation_view_text_responses: Ogled besedilnih odgovorov
   dashboard_navigation_add_students: Dodaj učence
@@ -550,14 +550,14 @@
   dashboard_sections_table_students: Učenci
   dashboard_sections_table_code: Koda razdelka
   dashboard_sections_name: Ime razdelka
-  dashboard_sections_choose_secret: "Če bi želeli priskrbeti račune za svoje učence,
-    izberite skrivno vrsto  <b>besedo</b> ali <b>sliko</b> za ta razdelek."
-  dashboard_sections_secret_word: "<b>Beseda</b> vam omogoča, da nastavite skrivno
-    besedo za vsakega učenca."
-  dashboard_sections_secret_picture: "<b>Slika</b> vam omogoča, da nastavite skrivno
-    sliko za vsakega učenca, idealen za mlajše učence, ki še ne znajo tipkati."
-  dashboard_sections_secret_none: "Če bi želeli, da vaši učenci upravljajo svoje račune,
-    vključno z izbiro svoja gesla, izberite vrsto skrivnost <b>brez</b>."
+  dashboard_sections_choose_secret: Če bi želeli priskrbeti račune za svoje učence,
+    izberite skrivno vrsto  <b>besedo</b> ali <b>sliko</b> za ta razdelek.
+  dashboard_sections_secret_word: <b>Beseda</b> vam omogoča, da nastavite skrivno
+    besedo za vsakega učenca.
+  dashboard_sections_secret_picture: <b>Slika</b> vam omogoča, da nastavite skrivno
+    sliko za vsakega učenca, idealen za mlajše učence, ki še ne znajo tipkati.
+  dashboard_sections_secret_none: Če bi želeli, da vaši učenci upravljajo svoje račune,
+    vključno z izbiro svoja gesla, izberite vrsto skrivnost <b>brez</b>.
   dashboard_sections_print_secrets: Natisnete lahko kartice, ki vsebujejo informacije
     o računu in jih razdelite vsakemu učencu posebej.
   dashboard_sections_switch_section: 'Zamenjaj razdelek:'
@@ -573,7 +573,7 @@
   dashboard_students_age: Starost
   dashboard_students_gender: Spol
   dashboard_students_male: Moški
-  dashboard_students_female: "Ženska"
+  dashboard_students_female: Ženska
   dashboard_students_secret: Skrivni ključ
   dashboard_students_password: Geslo
   dashboard_students_username: 'Uporabniško ime: %{student_username}'
@@ -599,9 +599,9 @@
     Nov par skrivnih besed bo ustvarjen, ko se učenec prijavi. '
   dashboard_students_join_link: Povejte svojim učencem, naj si ustvarite svoje račune
     in se pridružijo vašemu razdelku na
-  dashboard_students_no_email: "Če vaši učenci nimajo e-poštnega naslova, ali bi želeli
+  dashboard_students_no_email: Če vaši učenci nimajo e-poštnega naslova, ali bi želeli
     ustvariti račune za njih, spremenite vrsto skrivnosti za ta razdelek  v <b>besedo</b>
-    ali <b>sliko</b>."
+    ali <b>sliko</b>.
   dashboard_students_print_page: Natisnite to stran
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
@@ -670,9 +670,9 @@
   dashboard_faq_k5: Pogosta vprašanja, prva petletka
   dashboard_announcements: Obvestila
   dashboard_announce_view_all: Poglej vse
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: Ura za kodo je tu - 8. do 14. december!
   code_sign_up: Prijavite se za sodelovanje med Tednom poučevanja računalništva
   learn_more: Več o tem
@@ -1056,7 +1056,7 @@
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR za nebralce
   hopscotch_beyond_name: 'Hopscotch: Programiranje na vašem iPadu'
-  pocketcode_beyond_name: "Žepno kodiranje"
+  pocketcode_beyond_name: Žepno kodiranje
   groklearning_beyond_name: Nauči se programirati v Python
   hacketyhack_beyond_name: Nauči se Ruby
   robomind_beyond_name: Programiraj virtualega robota
@@ -1371,6 +1371,9 @@
   infinity_shortcode: inf
   playlab_shortcode: igraj
   artist_shortcode: art
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
     to help during your Hour of Code
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher

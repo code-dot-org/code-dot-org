@@ -11,7 +11,7 @@
     font-weight:bold"> planlæg din Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Underviser du i programmering? Se andre CSEdWeek ressourcer</a>'
-  n_have_learned_an_hoc: "<h1>Prøv en</h1><h2>Hour of Code</h2><h3># har prøvet</h3>"
+  n_have_learned_an_hoc: <h1>Prøv en</h1><h2>Hour of Code</h2><h3># har prøvet</h3>
   anybody_can_learn: Alle kan lære.
   learn_now: Lær Nu
   petition_message: Alle elever i alle skoler burde have muligheden for at lære programmering
@@ -35,7 +35,7 @@
   hoc2014_everyone: Alle
   hoc2014_support: Støt &#x25BE;
   hoc2014_whatishoc: Hvad er "Hour of Code"?
-  csedweek_map_header: "# CSEdWeek / Hour of Code begivenheder over hele verden"
+  csedweek_map_header: '# CSEdWeek / Hour of Code begivenheder over hele verden'
   csedweek_map_signup: Tilmeld dit arrangement
   csedweek_map_search_placeholder: Søg efter Hour of Code arrangementer
   csedweek_map_search_search: Søg
@@ -65,7 +65,7 @@
     gentag-loops, hvis-så præmisser og grundlæggende algoritmer.
   all_ages: Alle aldre
   beginner: Nybegynder
-  n_participants: "# deltagere"
+  n_participants: '# deltagere'
   go: Start
   thank_you_: Tak!
   congratulations: Tillykke!
@@ -114,7 +114,7 @@
   beyond_an_hour: Lær mere når du har gennemført Hour of Code
   get_started: Start
   i_agree: Jeg er enig
-  participant_select: "- Vælg -"
+  participant_select: '- Vælg -'
   participant_student: Elev
   participant_parent: Forældre
   participant_educator: Underviser
@@ -135,7 +135,7 @@
   learn_next_level: Fortsæt til det næste niveau
   learn_online: Prøv andre online kurser
   learn_classes: Find lokale klasser
-  hoc_is_here: "#HourOfCode er her - tjek det ud! @codeorg"
+  hoc_is_here: '#HourOfCode er her - tjek det ud! @codeorg'
   just_did_hoc: 'Jeg har lige taget en #HourOfCode - tjek det ud! @codeorg'
   twitter_teach_cs: Hvorfor underviser så få skoler i programmering? Lad os hjælpe
     dem i gang. http://youtu.be/nKIu9yen5nc. Besøg http://code.org/ for at lære mere.
@@ -149,11 +149,11 @@
   help_recruit_coders: Hjælpe os med at rekruttere flere programmører til dit hold!
   help_recruit: Hjælp os med at rekruttere flere programmører!
   lines_of_code: OVER <b># LINJER KODE</b> SKREVET TIL DATO.
-  lines_of_code_alt: "<b>#</b> LINJER AF KODE SKREVET AF ELEVER"
+  lines_of_code_alt: <b>#</b> LINJER AF KODE SKREVET AF ELEVER
   who_has_done_hoc: 'Hvem har lavet #HourOfCode @codeorg'
   hoc_leaderboards: Rangelisten for Hour Of Code
-  students_and_lines: "%{students} elever har gennemført Hour of Code og skrevet %{lines}
-    linjer kode."
+  students_and_lines: '%{students} elever har gennemført Hour of Code og skrevet %{lines}
+    linjer kode.'
   start_hoc: Start Hour of Code nu
   contact_form_topic_press: Pressen/medierne (interview eller taler-arrangementer)
   stats_nina: '"Hver eneste dag gav de samme resultater&mdash; 100% engagement." -
@@ -218,8 +218,8 @@
   homepage_hero_text_teacher2: |
     &ldquo;Det fik 100% af mine elever engagerede, involverede og til at deltage.&rdquo;
     Adam, lærer
-  homepage_hero_text_stat_loc: "#loc linjer kode skrevet af elever"
-  homepage_hero_text_stat_students: "#student_count elever oprettet på Code Studio"
+  homepage_hero_text_stat_loc: '#loc linjer kode skrevet af elever'
+  homepage_hero_text_stat_students: '#student_count elever oprettet på Code Studio'
   homepage_hero_text_stat_served: 'Hour of Code: #served har prøvet'
   homepage_slot_text_hoc: Kodetimen
   homepage_slot_text_frozen: Frozen med Anna og Elsa
@@ -229,7 +229,7 @@
   homepage_slot_text_shop: Butik
   homepage_slot_text_flappy: Flappy kode
   homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: "# har prøvet"
+  homepage_action_text_num_served: '# har prøvet'
   homepage_action_text_join_us: Slut dig til os
   homepage_action_text_sign_up: Tilmeld
   homepage_action_text_try_it: Prøv det
@@ -253,7 +253,7 @@
   homepage_slot_text_blurb_hoc: Alle kan lære det. Start i dag
   homepage_slot_text_link_hoc: Prøv Hour of Code
   homepage_slot_text_link_host: Hold selv en Hour of Code
-  homepage_slot_text_link_hocserved: "# har prøvet"
+  homepage_slot_text_link_hocserved: '# har prøvet'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Studerende
   homepage_slot_text_blurb_students: Gå på opdagelse i vores øvelser
@@ -340,20 +340,20 @@
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up."
+    have signed up.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
@@ -664,9 +664,9 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: Vis alle
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: Hour of Code er her - 8.-14. december!
   code_sign_up: Tilmeld dig til at deltage i CS Education Week
   learn_more: Lær mere
@@ -691,7 +691,7 @@
   carousel_heading_international: Vejledninger på dit sprog
   carousel_heading_domestic: Tutorials på engelsk
   carousel_heading_beginners: Tutorials for begyndere
-  carousel_heading_javascript: "Øvelser, hvor du lærer Javascript"
+  carousel_heading_javascript: Øvelser, hvor du lærer Javascript
   carousel_heading_unplugged: Ingen enhed eller internettet? Prøv "unplugged" kodning
   carousel_heading_devices: Tutorial apps for mobiler og tablets
   carousel_heading_languages: Tutorials i andre programmeringssprog
@@ -704,8 +704,8 @@
   teach_led_lesson_plans: Lærerstyret Hour of Code lektions planer
   how_to_teach_hoc: Sådan undervises i Én Times Kode
   more_resources_educators: Flere ressourcer til lærere og undervisere
-  beyond_submission: "Ønsker du at indsende en tutorial til Beyond an Hour? Se kriterierne
-    og indsendelseformularen."
+  beyond_submission: Ønsker du at indsende en tutorial til Beyond an Hour? Se kriterierne
+    og indsendelseformularen.
   participants: deltagerne
   teachers_notes: Lærerens noter
   teachers_notes_hoc: 'Lærere: Læs vigtigte noter til undervisningen her'
@@ -1369,6 +1369,9 @@
   infinity_shortcode: inf
   playlab_shortcode: afspil
   artist_shortcode: art
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
     to help during your Hour of Code
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher

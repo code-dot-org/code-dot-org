@@ -128,14 +128,28 @@ class ActivitiesController < ApplicationController
 
     current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
 
-    @activity = Activity.create!(user: current_user,
-                                 level: @level,
-                                 action: solved, # TODO I think we don't actually use this. (maybe in a report?)
-                                 test_result: test_result,
-                                 attempt: params[:attempt].to_i,
-                                 lines: lines,
-                                 time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
-                                 level_source_id: @level_source.try(:id))
+    # Create the activity.
+    attributes = {
+        user: current_user,
+        level: @level,
+        action: solved, # TODO I think we don't actually use this. (maybe in a report?)
+        test_result: test_result,
+        attempt: params[:attempt].to_i,
+        lines: lines,
+        time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
+        level_source_id: @level_source.try(:id)
+    }
+    # Save the activity synchronously if the level might be saved to the gallery (for which
+    # the activity.id is required). This is true for levels auto-saved to the gallery, and for
+    # free play and "impressive" levels.
+    synchronous_save = solved &&
+        (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
+            @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
+    if synchronous_save
+      @activity = Activity.create!(attributes)
+    else
+      @activity = Activity.create_async!(attributes)
+    end
 
     if @script_level
       @new_level_completed = current_user.track_level_progress(@script_level, test_result)
