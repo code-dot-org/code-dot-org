@@ -1166,16 +1166,18 @@ function handleActorCollisionsWithCollidableList (
       continue;
     }
 
+    var distanceScaling = constants.SPRITE_COLLIDE_DISTANCE_SCALING;
+
     Studio.drawDebugRect("itemCollision",
       next.x,
       next.y,
-      skin.itemCollisionRectWidth || collidable.width,
-      skin.itemCollisionRectHeight || collidable.height);
+      distanceScaling * (skin.itemCollisionRectWidth || collidable.width),
+      distanceScaling * (skin.itemCollisionRectHeight || collidable.height));
     Studio.drawDebugRect("spriteCollision",
       xCenter,
       yCenter,
-      skin.spriteCollisionRectWidth || Studio.sprite[spriteIndex].width,
-      skin.spriteCollisionRectHeight || Studio.sprite[spriteIndex].height);
+      distanceScaling * (skin.spriteCollisionRectWidth || Studio.sprite[spriteIndex].width),
+      distanceScaling * (skin.spriteCollisionRectHeight || Studio.sprite[spriteIndex].height));
 
     if (collisionTest(
           xCenter,
@@ -1370,11 +1372,11 @@ function checkForCollisions() {
     for (j = 0; j < skin.ItemClassNames.length; j++) {
       executeCollision(i, skin.ItemClassNames[j]);
       if (level.removeItemsWhenActorCollides) {
-        Studio.executeQueue('whenGetAllCharacterClass-' + skin.ItemClassNames[j]);
+        Studio.executeQueue('whenGetAll-' + skin.ItemClassNames[j]);
       }
     }
     if (level.removeItemsWhenActorCollides) {
-      Studio.executeQueue('whenGetAllCharacters');
+      Studio.executeQueue('whenGetAllItems');
     }
   }
 }
@@ -1510,20 +1512,54 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
   var rowsOffset = Math.floor(yCenter) + 1;
   var xGrid = Math.floor(xCenter / Studio.SQUARE_SIZE);
   var iYGrid = Math.floor(yCenter / Studio.SQUARE_SIZE);
-  for (var col = Math.max(0, xGrid - colsOffset);
-       col < Math.min(Studio.COLS, xGrid + colsOffset);
-       col++) {
-    for (var row = Math.max(0, iYGrid - rowsOffset);
-         row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
-         row++) {
-      if (Studio.getWallValue(row, col)) {
-        if (overlappingTest(xCenter,
-                            (col + 0.5) * Studio.SQUARE_SIZE,
-                            Studio.SQUARE_SIZE / 2 + collidableWidth / 2,
-                            yCenter,
-                            (row + 0.5) * Studio.SQUARE_SIZE,
-                            Studio.SQUARE_SIZE / 2 + collidableHeight / 2)) {
-          return true;
+
+  var collisionRects = null;
+  if (skin.customObstacleZones &&
+      skin.customObstacleZones[Studio.background] &&
+      skin.customObstacleZones[Studio.background][Studio.wallMapRequested]) {
+    collisionRects = skin.customObstacleZones[Studio.background][Studio.wallMapRequested];
+  }
+
+  if (collisionRects) {
+    // Compare against a set of specific rectangles.
+    for (var i = 0; i < collisionRects.length; i++) {
+      var rect = collisionRects[i];
+      var rectWidth = rect.maxX-rect.minX+1;
+      var rectHeight = rect.maxY-rect.minY+1;
+      var rectCenterX = rect.minX + rectWidth/2;
+      var rectCenterY = rect.minY + rectHeight/2;
+      Studio.drawDebugRect("avatarCollision", rectCenterX, rectCenterY, rectWidth, rectHeight);
+      if (overlappingTest(xCenter,
+                          rectCenterX,
+                          rectWidth / 2 + collidableWidth / 2,
+                          yCenter,
+                          rectCenterY,
+                          rectHeight / 2 + collidableHeight / 2)) {
+        return true;
+      }
+    }
+  } else {
+    // Compare against regular wall tiles.
+    for (var col = Math.max(0, xGrid - colsOffset);
+         col < Math.min(Studio.COLS, xGrid + colsOffset);
+         col++) {
+      for (var row = Math.max(0, iYGrid - rowsOffset);
+           row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
+           row++) {
+        if (Studio.getWallValue(row, col)) {
+          Studio.drawDebugRect("avatarCollision",
+                               (col + 0.5) * Studio.SQUARE_SIZE,
+                               (row + 0.5) * Studio.SQUARE_SIZE,
+                               Studio.SQUARE_SIZE,
+                               Studio.SQUARE_SIZE);
+          if (overlappingTest(xCenter,
+                              (col + 0.5) * Studio.SQUARE_SIZE,
+                              Studio.SQUARE_SIZE / 2 + collidableWidth / 2,
+                              yCenter,
+                              (row + 0.5) * Studio.SQUARE_SIZE,
+                              Studio.SQUARE_SIZE / 2 + collidableHeight / 2)) {
+            return true;
+          }
         }
       }
     }
@@ -1792,25 +1828,16 @@ Studio.init = function(config) {
     Studio.musicController.preload();
   };
 
-  if (studioApp.cdoSounds && !studioApp.cdoSounds.isAudioUnlocked()) {
-    // Would use addClickTouchEvent, but iOS9 does not let you unlock audio
-    // on touchstart, only on touchend.
-    var removeEvent = dom.addMouseUpTouchEvent(document, function () {
-      studioApp.cdoSounds.unlockAudio();
-      removeEvent();
-    });
-  }
-
   // Play music when the instructions are shown
   var playOnce = function () {
-    if (studioApp.cdoSounds && studioApp.cdoSounds.isAudioUnlocked()) {
-      Studio.musicController.play();
-      document.removeEventListener('instructionsShown', playOnce);
-      document.removeEventListener('instructionsHidden', playOnce);
+    document.removeEventListener('instructionsShown', playOnce);
+    if (studioApp.cdoSounds) {
+      studioApp.cdoSounds.whenAudioUnlocked(function () {
+        Studio.musicController.play();
+      });
     }
   };
   document.addEventListener('instructionsShown', playOnce);
-  document.addEventListener('instructionsHidden', playOnce);
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1850,6 +1877,23 @@ Studio.init = function(config) {
     annotationList.clearRuntimeAnnotations();
   };
 
+  // Since we allow "show code" for some blockly levels with move blocks,
+  // we supply a polishCodeHook function here to make the generated code look
+  // more readable:
+  config.polishCodeHook = function (code) {
+    if (studioApp.isUsingBlockly()) {
+      var regexpMoveUpBlock = /Studio.move\('\S*', 0, 1\);/g;
+      code = code.replace(regexpMoveUpBlock, "moveUp();");
+      var regexpMoveRightBlock = /Studio.move\('\S*', 0, 2\);/g;
+      code = code.replace(regexpMoveRightBlock, "moveRight();");
+      var regexpMoveDownBlock = /Studio.move\('\S*', 0, 4\);/g;
+      code = code.replace(regexpMoveDownBlock, "moveDown();");
+      var regexpMoveLeftBlock = /Studio.move\('\S*', 0, 8\);/g;
+      code = code.replace(regexpMoveLeftBlock, "moveLeft();");
+    }
+    return code;
+  };
+
   config.twitter = twitterOptions;
 
   // for this app, show make your own button if on share page
@@ -1866,6 +1910,7 @@ Studio.init = function(config) {
   config.varsInGlobals = true;
   config.dropletConfig = dropletConfig;
   config.dropIntoAceAtLineStart = true;
+  config.showDropdownInPalette = true;
   config.unusedConfig = [];
   for (prop in skin.AutohandlerTouchItems) {
     AUTO_HANDLER_MAP[prop] =
@@ -2044,8 +2089,7 @@ Studio.reset = function(first) {
     softButtonCount++;
   }
   if (softButtonCount) {
-    var softButtonsCell = document.getElementById('soft-buttons');
-    softButtonsCell.className = 'soft-buttons-' + softButtonCount;
+    $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonCount);
   }
 
   // True if we should fail before execution, even if freeplay
@@ -2109,7 +2153,9 @@ Studio.reset = function(first) {
     timedOut: false,
     gotAllItems: false,
     removedItems: {},
-    createdItems: {}
+    createdItems: {},
+    hasSetEmotion: false,
+    hasThrownProjectile: false
   };
 
   // Reset the record of the last direction that the user moved the sprite.
@@ -2349,7 +2395,6 @@ var displayFeedback = function() {
     studioApp.displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
-      hideIcon: skin.hideIconInClearPuzzle,
       feedbackType: Studio.testResults,
       executionError: Studio.executionError,
       tryAgainText: tryAgainText,
@@ -2489,10 +2534,10 @@ var defineProcedures = function (blockType) {
 };
 
 /**
- * Looks for failures that should prevent execution.
+ * Looks for failures that should prevent execution in blockly mode.
  * @returns {boolean} True if we have a pre-execution failure
  */
-Studio.checkForPreExecutionFailure = function () {
+Studio.checkForBlocklyPreExecutionFailure = function () {
   if (studioApp.hasUnfilledFunctionalBlock()) {
     Studio.result = false;
     Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
@@ -2570,6 +2615,72 @@ Studio.checkExamples_ = function () {
   return outcome;
 };
 
+/**
+ * Looks for failures that should prevent execution in editCode mode.
+ * @returns {boolean} True if we have a pre-execution failure
+ */
+Studio.checkForEditCodePreExecutionFailure = function () {
+  var funcName = Studio.hasUnexpectedFunction_();
+  if (funcName) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EXTRA_FUNCTION_FAIL;
+    Studio.message = studioMsg.extraFunction({
+      funcName: funcName + '()'
+    });
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  funcName = Studio.hasUnexpectedLocalFunction_();
+  if (funcName) {
+    Studio.result = false;
+    Studio.testResults = TestResults.LOCAL_FUNCTION_FAIL;
+    Studio.message = studioMsg.localFunction({
+      funcName: funcName + '()'
+    });
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  return false;
+};
+
+/**
+ * @returns {string} the name of the first unexpected function found
+ */
+Studio.hasUnexpectedFunction_ = function () {
+  if (studioApp.editCode &&
+      level.preventUserDefinedFunctions &&
+      Studio.JSInterpreter) {
+    var funcNames = Studio.JSInterpreter.getGlobalFunctionNames();
+    for (var name in AUTO_HANDLER_MAP) {
+      var index = funcNames.indexOf(name);
+      if (index != -1) {
+        funcNames.splice(index, 1);
+      }
+    }
+    if (funcNames.length > 0) {
+      return funcNames[0];
+    }
+  }
+};
+
+/**
+ * @returns {string} the name of the first unexpected local function found
+ */
+Studio.hasUnexpectedLocalFunction_ = function () {
+  if (studioApp.editCode &&
+      Studio.JSInterpreter) {
+    var funcNames = Studio.JSInterpreter.getLocalFunctionNames();
+    for (var name in AUTO_HANDLER_MAP) {
+      var index = funcNames.indexOf(name);
+      if (index != -1) {
+        return name;
+      }
+    }
+  }
+};
+
 var ErrorLevel = {
   WARNING: 'WARNING',
   ERROR: 'ERROR'
@@ -2640,7 +2751,7 @@ Studio.execute = function() {
 
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
-    if (Studio.checkForPreExecutionFailure()) {
+    if (Studio.checkForBlocklyPreExecutionFailure()) {
       return Studio.onPuzzleComplete();
     }
 
@@ -2698,7 +2809,9 @@ Studio.execute = function() {
                                      'SPRITE2');
   }
 
-  Studio.playSound({ soundName: 'start' });
+  if (utils.valueOr(level.playStartSound, true)) {
+    Studio.playSound({ soundName: 'start' });
+  }
 
   studioApp.reset(false);
 
@@ -2720,6 +2833,9 @@ Studio.execute = function() {
     });
     if (!Studio.JSInterpreter.initialized()) {
         return;
+    }
+    if (Studio.checkForEditCodePreExecutionFailure()) {
+      return Studio.onPuzzleComplete();
     }
     Studio.initAutoHandlers(AUTO_HANDLER_MAP);
   } else {
@@ -2973,6 +3089,8 @@ Studio.drawDebugLine = function(className, x1, y1, x2, y2, color) {
  * Draw a timeout rectangle across the bottom of the play area.
  * It doesn't appear until halfway through the level, and briefly fades in
  * when first appearing.
+ * level.showTimeoutRect should be a valid color that can be passed to an SVG
+ * 'fill'.
  */
 Studio.drawTimeoutRect = function() {
   if (!level.showTimeoutRect || Studio.timeoutFailureTick === Infinity) {
@@ -3006,7 +3124,7 @@ Studio.drawTimeoutRect = function() {
       background.setAttribute('height', height);
       background.setAttribute('x', 0);
       background.setAttribute('y', Studio.MAZE_HEIGHT - height);
-      background.setAttribute('fill', 'rgba(255, 255, 255, 0.5)');
+      background.setAttribute('fill', level.showTimeoutRect);
       group.appendChild(background);
       svg.appendChild(group);
     }
@@ -3368,6 +3486,11 @@ Studio.animateGoals = function() {
     frameWidth = skin.goalSpriteWidth;
   }
 
+  // We want each goal animation to play at an offset so they're not all in
+  // sync.  By offsetting the frame by (goal index * 7) we ensure that each goal's
+  // animation is significantly out of sync.
+  var animationOffset = 7;
+
   for (var i = 0; i < Studio.spriteGoals_.length; i++) {
     var goal = Studio.spriteGoals_[i];
     // Keep animating the goal unless it's finished and we're not fading out.
@@ -3377,7 +3500,7 @@ Studio.animateGoals = function() {
 
       if (animate) {
         var baseX = parseInt(goalClipRect.getAttribute('x'), 10);
-        var frame = Math.floor(elapsed / frameDuration) % numFrames;
+        var frame = (i * animationOffset + Math.floor(elapsed / frameDuration)) % numFrames;
 
         goalSprite.setAttribute('x', baseX - frame * frameWidth);
       }
@@ -3626,6 +3749,7 @@ Studio.callCmd = function (cmd) {
     case 'setSpriteEmotion':
       studioApp.highlight(cmd.id);
       Studio.setSpriteEmotion(cmd.opts);
+      Studio.trackedBehavior.hasSetEmotion = true;
       break;
     case 'setSpriteSpeed':
       studioApp.highlight(cmd.id);
@@ -3702,6 +3826,7 @@ Studio.callCmd = function (cmd) {
       if (!cmd.opts.started) {
         studioApp.highlight(cmd.id);
       }
+      Studio.trackedBehavior.hasThrownProjectile = true;
       return Studio.throwProjectile(cmd.opts);
     case 'makeProjectile':
       studioApp.highlight(cmd.id);
@@ -3769,11 +3894,30 @@ Studio.playSound = function (opts) {
   }
 
   var soundVal = opts.soundName.toLowerCase().trim();
+  // Get all non-random values
+  var allValues = paramLists.getPlaySoundValues(false);
 
   if (soundVal === constants.RANDOM_VALUE) {
-    // Get all non-random values and choose one at random:
-    var allValues = paramLists.getPlaySoundValues(false);
+    // Choose a sound at random:
     soundVal = allValues[Math.floor(Math.random() * allValues.length)].toLowerCase();
+  } else {
+    var isInAllValues = function (value) {
+      return allValues.indexOf(value) != -1;
+    };
+    for (var group in skin.soundGroups) {
+      var groupData = skin.soundGroups[group];
+      if (soundVal === groupData.randomValue.toLowerCase()) {
+        // Choose a sound at random from this group (intersect sounds in this group
+        // based on the suffix range with the allValues array)
+        var groupValues = [];
+        for (var suffix = groupData.minSuffix; suffix <= groupData.maxSuffix; suffix++) {
+          groupValues.push(group + suffix);
+        }
+        groupValues.filter(isInAllValues);
+        soundVal = groupValues[Math.floor(Math.random() * groupValues.length)].toLowerCase();
+        break;
+      }
+    }
   }
 
   if (!skin.soundFiles[soundVal]) {
@@ -5178,24 +5322,43 @@ Studio.timedOut = function() {
  * Tests whether the sprite is currently at the goal sprite.
  */
 function spriteAtGoal(sprite, goal) {
-  var goalWidth = skin.goalCollisionRectWidth || Studio.MARKER_WIDTH;
-  var goalHeight = skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
+  var goalWidth = utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH);
+  var goalHeight = utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT);
+
+  var goalCollisionWidth = skin.goalCollisionRectWidth || Studio.MARKER_WIDTH;
+  var goalCollisionHeight = skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
+
+  var spriteCollisionWidth = skin.itemCollisionRectWidth || sprite.width;
+  var spriteCollisionHeight = skin.itemCollisionRectHeight || sprite.height;
+
+  var xSpriteCenter = sprite.x + sprite.width / 2;
+  var ySpriteCenter = sprite.y + sprite.height / 2;
+
+  var xFinCenter = goal.x + goalWidth / 2 + utils.valueOr(skin.goalRenderOffsetX, 0);
+  var yFinCenter = goal.y + goalHeight / 2 + utils.valueOr(skin.goalRenderOffsetY, 0);
+
+  var distanceScaling =
+    utils.valueOr(skin.finishCollideDistanceScaling, constants.FINISH_COLLIDE_DISTANCE_SCALING);
+
+  Studio.drawDebugRect("goalCollisionSprite",
+                       xSpriteCenter,
+                       ySpriteCenter,
+                       distanceScaling * spriteCollisionWidth,
+                       distanceScaling * spriteCollisionHeight);
+
+  Studio.drawDebugRect("goalCollisionGoal",
+                       xFinCenter,
+                       yFinCenter,
+                       distanceScaling * goalCollisionWidth,
+                       distanceScaling * goalCollisionHeight);
 
   var finishCollisionDistance = function (yAxis) {
-    var dim1 = yAxis ? sprite.height : sprite.width;
-    var dim2 = yAxis ? goalHeight : goalWidth;
+    var dim1 = yAxis ? spriteCollisionHeight : spriteCollisionWidth;
+    var dim2 = yAxis ? goalCollisionHeight : goalCollisionWidth;
 
-    return constants.FINISH_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+
+    return distanceScaling * (dim1 + dim2) / 2;
   };
-
-  var xSpriteCenter = sprite.x + (skin.itemCollisionRectWidth || sprite.width) / 2;
-  var ySpriteCenter = sprite.y + (skin.itemCollisionRectHeight || sprite.height) / 2;
-
-  var xFinCenter = goal.x + goalWidth / 2;
-  var yFinCenter = goal.y + goalHeight / 2;
-
-  Studio.drawDebugRect("goalCollisionSprite", xSpriteCenter, ySpriteCenter, sprite.width, sprite.height);
-  Studio.drawDebugRect("goalCollisionGoal", xFinCenter, yFinCenter, goalWidth, goalHeight);
 
   return collisionTest(xSpriteCenter,
     xFinCenter,
@@ -5360,6 +5523,14 @@ Studio.conditionSatisfied = function(required) {
     }
 
     if (valueName === 'setDroidSpeed' && tracked.hasSetDroidSpeed !== value) {
+      return false;
+    }
+
+    if (valueName === 'throwProjectile' && tracked.hasThrownProjectile !== value) {
+      return false;
+    }
+
+    if (valueName === 'setEmotion' && tracked.hasSetEmotion !== value) {
       return false;
     }
   }

@@ -31,10 +31,10 @@
     - title = t('upsell.frozen.title')
   - elsif id == 'starwars' || id == 'starwarsblocks'
     - title = t('upsell.starwars.title')
-    - url = 'https://code.org/starwars'
+    - url = CDO.code_org_url('/starwars')
   - elsif id == 'mc'
     - title = t('upsell.minecraft.title')
-    - url = 'https://code.org/mc'
+    - url = CDO.code_org_url('/mc')
   - elsif id == 'infinity'
     - title = t('upsell.infinity.title')
   - else
@@ -56,9 +56,9 @@
     .clear
     - if Script.beta? id
       .beta
-        %h3
+        %h3.betatitle
           = title
-        .betatext
+        %h3.betatext
           = t('beta')
     - else
       .heading

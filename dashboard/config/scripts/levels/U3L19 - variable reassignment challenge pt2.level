@@ -11,7 +11,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "var num = 0;\r\nnum = num+1;\r\nnum = num+1;\r\nnum = num+1;",
+    "start_blocks": "var num = 0;\r\nnum = num + 1;\r\nnum = num + 1;\r\nnum = num + 1;",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -28,7 +28,7 @@
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
-    "markdown_instructions": "# Wrapping up variables - this is not math class\r\n\r\nHopefully you now understand the gist of working with variables.  The major thing to remember is that every time you see an `=` sign it means that you are instructing the computer to set a variable to a new value.  \r\n\r\n<img src=\"https://images.code.org/4076ce6b665439a50201f3cabe978823-image-1445977815645.png\" style=\"float: right\">\r\nThe example to the right is something that definitely wouldn't make sense in math class, but you should be able to reason about it as a piece of code.  Because it's code, you can also **insert** statements to display the value of variables as they change.  You don't have to guess!\r\n\r\n# Do This:\r\n* ** Make a prediction ** \r\n\r\n As usual you should **first** look at the code given to you and reason about what it does.  You should try to predict what the value of `num` will be after all lines have executed.\r\n\r\n* ** Insert 3 `console.log()` statements**\r\n\r\n Insert <code>console.log</code> statements into the existing code to display each value of `num` immediately after it's changed. (The animation below shows how to get started.)\r\n \r\n ![](https://images.code.org/de18ca0744dbf1f35ac76e8b14658591-image-1445978393436.gif)\r\n\r\n* **Was your prediction right?**\r\n \r\n After you figure out the answer, if your prediction was off, try to understand why.  Where was your misunderstanding?\r\n\r\n",
+    "markdown_instructions": "# Wrapping Up Variables - This is Not Math Class\r\n\r\nHopefully you now understand the gist of working with variables.  The major thing to remember is that every time you see an `=` sign it means that you are instructing the computer to set a variable to a new value.  \r\n\r\n<img src=\"https://images.code.org/ecced8eb916809f66ac7d555a819c2a6-image-1447803015383.17.43.png\" style=\"float: right\">\r\nThe example to the right is something that definitely wouldn't make sense in math class, but you should be able to reason about it as a piece of code.  Because it's code, you can also **insert** statements to display the value of variables as they change.  You don't have to guess!\r\n\r\n# Do This:\r\n* ** Make a prediction.** \r\n\r\n As usual you should **first** look at the code given to you and reason about what it does.  You should try to predict what the value of `num` will be after all lines have executed.\r\n\r\n* ** Insert 3 `console.log` statements.**\r\n\r\n Insert <code>console.log</code> statements into the existing code to display each value of `num` immediately after it's changed. (The animation below shows how to get started.)\r\n \r\n ![](https://images.code.org/0e425ce1a186d49d230395032f970913-image-1447802992249.19.24 add console message.gif)\r\n \r\n* **Was your prediction right?**\r\n \r\n After you figure out the answer, if your prediction was off, try to understand why.  Where was your misunderstanding?\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",
@@ -39,7 +39,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "Make a prediction about the ending values of a,b, and c. Then use console.log to check your understanding (Click to see full instructions)",
+    "instructions": "Make a prediction about the ending values of a, b, and c. Then use console.log to check your understanding (Click to see full instructions)",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false"
   }

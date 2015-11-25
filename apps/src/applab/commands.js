@@ -6,6 +6,7 @@ var RGBColor = require('./rgbcolor.js');
 var codegen = require('../codegen');
 var keyEvent = require('./keyEvent');
 var utils = require('../utils');
+var elementLibrary = require('./designElements/library');
 
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
@@ -133,14 +134,25 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
   apiValidateType(opts, funcName, varName, id, 'string');
   if (opts[validatedTypeKey] && typeof opts[validatedDomKey] === 'undefined') {
     var element = document.getElementById(id);
-    var exists = Boolean(element && divApplab.contains(element));
-    var valid = exists == shouldExist;
+
+    var existsInApplab = Boolean(element && divApplab.contains(element));
+    var existsOutsideApplab = Boolean(element && !divApplab.contains(element));
+
+    var valid = !existsOutsideApplab && (shouldExist == existsInApplab);
+
     if (!valid) {
       var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
-      var errorString = funcName + "() " + varName +
-        " parameter refers to an id (" +id + ") which " +
-        (exists ? "already exists." : "does not exist.");
-      outputError(errorString, ErrorLevel.WARNING, line);
+      var errorString = "";
+      if (existsOutsideApplab) {
+        errorString = funcName + "() " + varName + " parameter refers to an id (" + id +
+            ") which is already in use outside of Applab. Choose a different id.";
+        throw new Error(errorString);
+      } else {
+        errorString = funcName + "() " + varName +
+            " parameter refers to an id (" + id + ") which " +
+            (existsInApplab ? "already exists." : "does not exist.");
+        outputError(errorString, ErrorLevel.WARNING, line);
+      }
     }
     opts[validatedDomKey] = valid;
   }
@@ -160,6 +172,9 @@ applabCommands.setScreen = function (opts) {
 };
 
 applabCommands.container = function (opts) {
+  if (opts.elementId) {
+    apiValidateDomIdExistence(opts, 'container', 'id', opts.elementId, false);
+  }
   var newDiv = document.createElement("div");
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
@@ -192,6 +207,7 @@ applabCommands.button = function (opts) {
 };
 
 applabCommands.image = function (opts) {
+  apiValidateDomIdExistence(opts, 'image', 'id', opts.elementId, false);
   apiValidateType(opts, 'image', 'id', opts.elementId, 'string');
   apiValidateType(opts, 'image', 'url', opts.src, 'string');
 
@@ -204,6 +220,7 @@ applabCommands.image = function (opts) {
 };
 
 applabCommands.imageUploadButton = function (opts) {
+  apiValidateDomIdExistence(opts, 'imageUploadButton', 'id', opts.elementId, false);
   // To avoid showing the ugly fileupload input element, we create a label
   // element with an img-upload class that will ensure it looks like a button
   var newLabel = document.createElement("label");
@@ -1012,10 +1029,30 @@ applabCommands.playSound = function (opts) {
 
   if (studioApp.cdoSounds) {
     var url = Applab.maybeAddAssetPathPrefix(opts.url);
-    studioApp.cdoSounds.playURL(url,
-                               {volume: 1.0,
-                                forceHTML5: true,
-                                allowHTML5Mobile: true
+    if (studioApp.cdoSounds.isPlayingURL(url)) {
+      return;
+    }
+
+    studioApp.cdoSounds.playURL(url, {
+      volume: 1.0,
+      // TODO: Re-enable forceHTML5 after Varnish 4.1 upgrade.
+      //       See Pivotal #108279582
+      //
+      //       HTML5 audio is not working for user-uploaded MP3s due to a bug in
+      //       Varnish 4.0 with certain forms of the Range request header.
+      //
+      //       By commenting this line out, we re-enable Web Audio API in App
+      //       Lab, which has the following effects:
+      //       GOOD: Web Audio should not use the Range header so it won't hit
+      //             the bug.
+      //       BAD: This disables cross-domain audio loading (hotlinking from an
+      //            App Lab app to an audio asset on another site) so it might
+      //            break some existing apps.  This should be less problematic
+      //            since we now allow students to upload and serve audio assets
+      //            from our domain via the Assets API now.
+      //
+      // forceHTML5: true,
+      allowHTML5Mobile: true
     });
   }
 };
@@ -1275,9 +1312,13 @@ applabCommands.onEvent = function (opts) {
   apiValidateType(opts, 'onEvent', 'callback', opts.func, 'function');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
-    if (domElement.tagName.toUpperCase() === 'DIV' && domElement.contentEditable && opts.eventName === 'change') {
-      // contentEditable divs don't generate a change event, so
-      // synthesize one here.
+    var elementType = elementLibrary.getElementType(domElement);
+    if ((elementType === elementLibrary.ElementType.TEXT_INPUT ||
+        elementType === elementLibrary.ElementType.TEXT_AREA ) &&
+        opts.eventName === 'change') {
+      // contentEditable divs don't generate a change event, and change events
+      // on text inputs behave differently across browsers, so synthesize a
+      // change event here.
       var callback = applabCommands.onEventFired.bind(this, opts);
       ChangeEventHandler.addChangeEventHandler(domElement, callback);
       return true;

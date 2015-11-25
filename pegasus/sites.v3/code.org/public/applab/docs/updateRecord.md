@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## updateRecord(tableName, record, callbackFunction)
+## updateRecord(table, record, callback)
 
 [/name]
 
@@ -20,7 +20,7 @@ Category: Data
 
 [short_description]
 
-Using App Lab's table data storage, updates the provided `record` in `tableName`. `record` must be uniquely identified with its id field. When the call is completed, the `callbackFunction` is called, and is passed the updated record as a parameter. Data is accessible to your app and users of your app.
+Using App Lab's table data storage, updates the provided `record` in `table`. `record` must be uniquely identified with its id field. When the call is completed, the `callback` function is called, and is passed the updated record as a parameter. Data is accessible to your app and users of your app.
 
 [/short_description]
 
@@ -119,7 +119,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-updateRecord(tableName, record, function(record){
+updateRecord(table, record, function(record){
     //callback function code goes here
   });
 ```
@@ -132,16 +132,16 @@ updateRecord(tableName, record, function(record){
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| tableName | string | Yes | The name of the table from which the records should be searched and read. |
+| table | string | Yes | The name of the table from which the records should be searched and read. |
 | record | object | Yes | To identify the record to be updated, a record object with the unique id column needs to be provided. Object syntax: An object begins with { (left brace) and ends with } (right brace). Each column name is followed by : (colon) and the name/value pairs are separated by , (comma). Values can be strings, numbers, arrays, or objects. e.g. {id: 1, column1:"a string", column2:10, column3:[1,2,3,4]} |
-| callbackFunction | function | Yes | A function that is asynchronously called when the call to updateRecord() is finished. The updated record is passed as a single parameter to this function. |
+| callback | function | Yes | A function that is asynchronously called when the call to updateRecord() is finished. The updated record is passed as a single parameter to this function. |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. When `updateRecord()` is finished executing, `callbackFunction` is automatically called with the updated record passed as a parameter.
+No return value. When `updateRecord()` is finished executing, `callback` function is automatically called with the updated record passed as a parameter.
 
 [/returns]
 

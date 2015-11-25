@@ -1,5 +1,3 @@
-- page_mode = PageMode.get(request)
-
 #audienceblocks{style: "text-align:center; margin-top:0px"}
   - blocks = DB[:cdo_homepage].where(type_s: ["block", "blockshort"], active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
   - blocks.each do |block|
@@ -7,8 +5,10 @@
     .block{style: "display: #{display}"}
       - hoc_block = block[:id_s] == "block_hoc" || block[:id_s] == "blockshort_hoc_noten"
       // if main hero is mc, then hoc block is star wars
-      - if hoc_block && page_mode == "minecraft"
+      - if hoc_block && page_mode == "feature-mc"
         - block[:image_t] = "/shared/images/courses/logo_tall_starwars_footer.jpg"
+      - elsif hoc_block && page_mode == "feature-starwars"
+        - block[:image_t] = "/shared/images/courses/logo_tall_mc.jpg"
       - block[:links] = DB[:cdo_homepage].where(type_s: "blocklink", text1_s: block[:id_s], active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
       - if block[:type_s] == "block"
         = view :homepage_quarterslot_links, entry: block

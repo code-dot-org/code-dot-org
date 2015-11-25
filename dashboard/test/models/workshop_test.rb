@@ -18,6 +18,8 @@ class WorkshopTest < ActiveSupport::TestCase
   end
 
   setup do
+    Timecop.travel Time.local(2013, 9, 1, 12, 0, 0)
+
     @old_workshop = create_workshop [[Time.now.utc - 10.days, Time.now.utc - 9.days]]
     @tomorrow_workshop = create_workshop [[Time.now.utc + 1.days, Time.now.utc + 1.days + 1.hour]]
 
@@ -36,6 +38,10 @@ class WorkshopTest < ActiveSupport::TestCase
     @workshop_in_2_weeks = create_workshop [[today_start + 2.weeks, today_end + 2.weeks]]
 
     @workshop_in_3_days = create_workshop [[today_start + 3.days, today_end + 3.days]]
+  end
+
+  teardown do
+    Timecop.return
   end
 
   test "workshops ending today" do
@@ -122,10 +128,10 @@ class WorkshopTest < ActiveSupport::TestCase
   end
 
   test "phase long name" do
-    # from ActivityConstants
+    # from WorkshopConstants
     #  PHASES = {
-    #   1 => {id: 1, short_name: 'Phase 1', long_name: 'Phase 1: Online Introduction'},
-    #   2 => {id: 2, short_name: 'Phase 2', long_name: 'Phase 2: Blended Summer Study', prerequisite_phase: 1},
+    #   1 => {id: 1, short_name: PHASE_1, long_name: 'Phase 1: Online Introduction'},
+    #   2 => {id: 2, short_name: PHASE_2, long_name: 'Phase 2: Blended Summer Study', prerequisite_phase: 1},
 
     assert_equal 'Phase 1: Online Introduction', create(:workshop, phase: 1).phase_long_name
     assert_equal 'Phase 2: Blended Summer Study', create(:workshop, phase: 2).phase_long_name
@@ -135,10 +141,10 @@ class WorkshopTest < ActiveSupport::TestCase
   end
 
   test "prerequisite phase" do
-    # from ActivityConstants
+    # from WorkshopConstants
     #  PHASES = {
-    #   1 => {id: 1, short_name: 'Phase 1', long_name: 'Phase 1: Online Introduction'},
-    #   2 => {id: 2, short_name: 'Phase 2', long_name: 'Phase 2: Blended Summer Study', prerequisite_phase: 1},
+    #   1 => {id: 1, short_name: PHASE_1, long_name: 'Phase 1: Online Introduction'},
+    #   2 => {id: 2, short_name: PHASE_2, long_name: 'Phase 2: Blended Summer Study', prerequisite_phase: 1},
 
     assert_equal nil, create(:workshop, phase: 1).prerequisite_phase
     phase1 = {id: 1, short_name: 'Phase 1', long_name: 'Phase 1: Online Introduction'}
@@ -148,4 +154,74 @@ class WorkshopTest < ActiveSupport::TestCase
     assert_equal nil, create(:workshop, phase: "????").prerequisite_phase
     assert_equal nil, create(:workshop, phase: nil).prerequisite_phase
   end
+
+  test "program_type_short_name" do
+    # from WorkshopConstants
+    #  CS_IN_S = 'CS in Science'
+    #  CS_IN_A = 'CS in Algebra'
+    #  ...
+    #  PROGRAM_TYPES = {
+    #    1 => {id: 1, short_name: CS_IN_S, long_name: 'Computer Science in Science'},
+    #    2 => {id: 2, short_name: CS_IN_A, long_name: 'Computer Science in Algebra'},
+
+    assert_equal 'CS in Science', create(:workshop, program_type: '1').program_type_short_name
+    assert_equal 'CS in Algebra', create(:workshop, program_type: '2').program_type_short_name
+
+  end
+
+  test "phase_short_name" do
+    # from WorkshopConstants
+    #  PHASE_1 = 'Phase 1'
+    #  PHASE_2 = 'Phase 2'
+    #  ...
+    #  PHASES = {
+    #    1 => {id: 1, short_name: PHASE_1, long_name: 'Phase 1: Online Introduction'},
+    #    2 => {id: 2, short_name: PHASE_2, long_name: 'Phase 2: Blended Summer Study', prerequisite_phase: 1},
+
+    assert_equal 'Phase 1', create(:workshop, phase: 1).phase_short_name
+    assert_equal 'Phase 2', create(:workshop, phase: 2).phase_short_name
+
+    assert_equal nil, create(:workshop, phase: "????").phase_long_name
+    assert_equal nil, create(:workshop, phase: nil).phase_short_name
+  end
+
+  test "exit_survey_url" do
+    # from WorkshopConstants
+    #  PROGRAM_TYPES = {
+    #    1 => {id: 1, short_name: CS_IN_S, long_name: 'Computer Science in Science'},
+    #    2 => {id: 2, short_name: CS_IN_A, long_name: 'Computer Science in Algebra'},
+    #  ...
+    #  PHASES = {
+    #    ...
+    #    2 => {id: 2, short_name: PHASE_2, long_name: 'Phase 2: Blended Summer Study', prerequisite_phase: 1},
+    #    4 => {id: 4, short_name: PHASE_3A, long_name: 'Phase 3: Part A'},
+    #  ...
+    #  EXIT_SURVEY_IDS = {
+    #    CS_IN_S => {
+    #      PHASE_2 => '1QG9eCbKJD26UNvTC0C9ZZyrp63WjzQSK5gQPP4lsZ2c',
+    #  ...
+    #    },
+    #    CS_IN_A => {
+    #      ...
+    #      PHASE_3A => '1oBYFuv1xlInKD7asJ7gR4GA1xbsdKDjG1PI4tvgdwWc',
+
+    expected_url1 = 'https://docs.google.com/a/code.org/forms/d/1QG9eCbKJD26UNvTC0C9ZZyrp63WjzQSK5gQPP4lsZ2c/viewform'
+    assert_equal expected_url1, create(:workshop, program_type: '1', phase: 2).exit_survey_url
+
+    expected_url2 = 'https://docs.google.com/a/code.org/forms/d/1oBYFuv1xlInKD7asJ7gR4GA1xbsdKDjG1PI4tvgdwWc/viewform'
+    assert_equal expected_url2, create(:workshop, program_type: '2', phase: 4).exit_survey_url
+
+    assert_nil create(:workshop, program_type: '1', phase: 1).exit_survey_url
+    assert_nil create(:workshop, program_type: '1', phase: 999).exit_survey_url
+  end
+
+  test "location and instructions can be 500 chars" do
+    string_500 = "a" * 500
+
+    workshop = Workshop.create!(name: 'name', location: string_500, instructions: string_500, program_type: '1')
+
+    assert_equal string_500, workshop.location
+    assert_equal string_500, workshop.instructions
+  end
+
 end

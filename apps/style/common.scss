@@ -81,7 +81,7 @@ html[dir='rtl'] #visualizationColumn {
   overflow-x: hidden;
 }
 
-#visualizationColumn.embed_hidesource {
+#visualizationColumn.centered_embed {
   margin: 0 auto;
 }
 
@@ -95,7 +95,7 @@ html[dir='rtl'] #visualizationColumn {
     overflow: auto;
   }
 
-  &.embed_hidesource {
+  &.centered_embed {
     position: relative;
   }
 }
@@ -250,6 +250,12 @@ button.arrow:disabled {
   -webkit-touch-callout: none;
   &.soft-buttons-none {
     display: none;
+  }
+  &.soft-buttons-compact {
+    margin-left: 0;
+    button {
+      margin: 0;
+    }
   }
 }
 .soft-buttons-1 {
@@ -480,6 +486,12 @@ html[dir='rtl'] #codeWorkspace {
   @include visualization-width(200px);
   @include bee-counter(32px, 2px);
 
+  #soft-buttons {
+    margin-left: 0;
+    button {
+      margin: 0;
+    }
+  }
   .small-footer-base.responsive {
     small {
       float: left;
@@ -825,7 +837,33 @@ input[type="radio"] {
 
 #prompt2 {
   font-size: 12px;
-  color: $charcoal;  
+  color: $charcoal;
+}
+
+.modal-content {
+  .instructionsImage {
+    height: 35px;
+    vertical-align: text-bottom;
+  }
+  .instructions2 {
+    .instructionsImage {
+      height: 24px;
+      vertical-align: text-bottom;
+    }
+  }
+}
+
+#prompt-table {
+  .instructionsImage {
+    height: 25px;
+    vertical-align: text-bottom;
+  }
+  #prompt2 {
+    .instructionsImage {
+      height: 20px;
+      vertical-align: text-bottom;
+    }
+  }
 }
 
 #ani-gif-preview-wrapper {
@@ -1327,7 +1365,7 @@ $workspace-header-button-margin: ($workspace-headers-height -
   div#phone-charges {
     font-size: 10px;
     margin-top: 0px;
-    color: red;
+    color: $red;
   }
 }
 

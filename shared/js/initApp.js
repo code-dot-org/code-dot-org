@@ -22,6 +22,8 @@ window.apps = {
 
     timing.startTiming('Puzzle', script_path, '');
 
+    var lastSavedProgram;
+
     // Sets up default options and initializes blockly
     var baseOptions = {
       containerId: 'codeApp',
@@ -48,6 +50,12 @@ window.apps = {
           // (The levelSource is already stored in the channels API.)
           delete report.program;
           delete report.image;
+        } else {
+          // Only locally cache non-channel-backed levels. Use a client-generated
+          // timestamp initially (it will be updated with a timestamp from the server
+          // if we get a response.
+          lastSavedProgram = decodeURIComponent(report.program);
+          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, +new Date(), lastSavedProgram);
         }
         report.scriptName = appOptions.scriptName;
         report.fallbackResponse = appOptions.report.fallback_response;
@@ -60,6 +68,12 @@ window.apps = {
         }
         trackEvent('Activity', 'Lines of Code', script_path, report.lines);
         sendReport(report);
+      },
+      onComplete: function (response) {
+        if (!appOptions.channel) {
+          // Update the cache timestamp with the (more accurate) value from the server.
+          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, response.timestamp, lastSavedProgram);
+        }
       },
       onResetPressed: function() {
         cancelReport();
@@ -104,6 +118,13 @@ window.apps = {
       }
     };
     $.extend(true, appOptions, baseOptions);
+
+    // Load locally cached version if it's newer than the version from the server.
+    var cachedProgram = dashboard.clientState.sourceForLevel(
+        appOptions.scriptName, appOptions.serverLevelId, appOptions.level.lastAttemptTimestamp);
+    if (cachedProgram !== undefined) {
+      appOptions.level.lastAttempt = cachedProgram;
+    }
 
     // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
     // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }

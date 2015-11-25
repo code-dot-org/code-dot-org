@@ -1,4 +1,5 @@
 "he-IL":
+  hour_of_code: שעת תיכנות
   hello: הי עולם
   select_language: אנא בחר את שפתך
   en: מדעי המחשב
@@ -26,7 +27,7 @@
     בתכנות בקורס הבא הזה.
   hoc2014_heading: הצטרפו ל <a href="http://hourofcode.com">שעה של קוד </a><br/>דצמבר
     8-14, 2014<br/>
-  hoc2014_students: Students
+  hoc2014_students: סטודנטים
   hoc2014_try: נסו זאת
   hoc2014_teachers: מורים
   hoc2014_host: ארח זאת
@@ -36,8 +37,11 @@
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_search_search: חפש
   csedweek_map_search_reset: אפס
+  csedweek_map_legend_title: מקרא
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: הירשם
   cded_try_it: נסו זאת
   twentyhours_trynow: נסה עכשיו
@@ -63,11 +67,14 @@
   thank_you_: תודה!
   congratulations: ברכות!
   congratulations_on_completing_hoc: ברכות על השלמת שעה אחת של קוד
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
   course_name_accelerated: Accelerated Course
   course_name_course1: קורס 1
   course_name_course2: קורס 2
-  course_name_course3: Course 3
-  course_name_course4: Course 4
+  course_name_course3: קורס 3
+  course_name_course4: קורס 4
   congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Try these tutorials next
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
@@ -128,8 +135,6 @@
   just_did_hoc: בדיוק עכשיו עשיתי את ה-HourOfCode# - לכו לבדוק! codeorg@
   twitter_teach_cs: מדוע אין יות ר בתי ספר המלמדים מדעי המחשב? אנחנו יכולים לתקן זאת.
     http://youtu.be/nKIu9yen5nc . בקרו ב -  http://code.org/ למידע נוסף.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: למד שעה של קוד
   beyond_hoc: מעבר לשעה אחת
   what_gender: מהו המין שלך?
@@ -201,11 +206,18 @@
   homepage_slot_text_frozen: לשבור את הקרח עם אנה ואלזה
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: כל המדריכים שלנו
-  homepage_slot_text_course4: Course 4
+  homepage_slot_text_course4: קורס 4
   homepage_slot_text_shop: חנות
   homepage_slot_text_flappy: קוד מתנופף
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: '# למדו'
+  homepage_action_text_join_us: הצטרף אלינו
+  homepage_action_text_sign_up: הירשם
+  homepage_action_text_try_it: נסו זאת
+  homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_codevideo: צפה בסרטון
   homepage_action_text_teachervideo: צפה בסרטון
+  homepage_action_text_girlvideo: Inspire a girl
   homepage_action_text_learn: התחל ללמוד
   homepage_action_text_signpetition: חתום על העצומה
   homepage_signpetition_dropdown: חתום על העצומה שלנו;
@@ -224,7 +236,7 @@
   homepage_slot_text_link_host: ארח שעה של קוד
   homepage_slot_text_link_hocserved: '# למדו'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
-  homepage_slot_text_title_students: Students
+  homepage_slot_text_title_students: סטודנטים
   homepage_slot_text_blurb_students: נסה את כל ההדרכות שלנו
   homepage_slot_text_link_codestudio: נסה את סטודיו הקוד
   homepage_slot_text_link_local: מצא כיתה מקומית
@@ -282,6 +294,31 @@
   class_submission_level_college: המכללה
   class_submission_level_vocational: מקצועית
   class_submission_languages_other: שפות אחרות
+  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
+    videos</a> by role models and celebrities
+  starwars_subtitle: לבנות את הגלקסיה באמצעות קוד
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: השתמשו בבלוקים "גרור ושחרר" ו-JavaScript.
+  starwars_javascript_specs: אנגלית בלבד | דפדפנים מודרניים | לגילאי 11 ומעלה
+  starwars_javascript_start_button: נסה כעת
+  starwars_blocks_title: בלוקים
+  starwars_blocks_description: השתמש בבלוקים ב"גרור ושחרר".
+  starwars_blocks_specs: שפות נוספות (בקרוב) | דפדפנים מודרניים | סמארטפונים, טאבלטים
+    | לגילאי 6 עד 10
+  starwars_blocks_start_button: נסו כעת
+  starwars_watch_videos: לפני שאתם מתחילים, צפו באחד מסרטוני הווידאו הללו
+  starwars_speak_languages: האם אתם דוברים שפה נוספת?
+  starwars_help_translate: עזרו לנו לתרגם
+  starwars_platform_text: דפדפנים מודרנים, סמארטפונים, טאבלטים
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_gradelevel: לגילאי 6 ומעלה
+  mc_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -293,15 +330,18 @@
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: שם
@@ -339,20 +379,19 @@
     teachers to contact you for the Hour of Code or other volunteer opportunities.
     Your email and exact address will NEVER be shared by us. But the other information
     (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
-    me for volunteer opportunities (Note: your email address won''t be shared)'
+  volunteer_engineer_submission_checkbox_contact: אני מסכים כי מורים יוכלו ליצור עימי
+    קשר לגבי אפשרויות התנדבות (כתובת הדוא"ל שלך לא תפורסם)
   volunteer_engineer_submission_submit: שלח
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: תודה על ההתנדבותך ל"שעת תיכנות". כדי להתכונן
+    לקראת "שעת תיכנות" ועל מנת לגייס מתנדבים אחרים, <a href="%{url}"> המשך לקרוא כאן.</a>
   volunteer_engineer_submission_commitment_uncertain: לא בטוח
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 שעה בשבוע
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 שעות בשבוע
   volunteer_engineer_submission_commitment_five_hrs_per_week: 3 שעות בשבוע
   volunteer_engineer_submission_commitment_now_and_then: מפעם לפעם
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: פעמיים עד שלושה בשנה
+  volunteer_engineer_submission_commitment_monthly: מספר שעות בחודש
+  volunteer_engineer_submission_commitment_weekly: מספר שעות בשבוע
   volunteer_engineer_submission_commitment_more: יותר
   volunteer_engineer_submission_location_flexibility_onsite: באתר בית ספר
   volunteer_engineer_submission_location_flexibility_remote: חונכות מרחוק (מורים או
@@ -360,9 +399,24 @@
   volunteer_engineer_submission_location_flexibility_curriculum: מוכנה לתרום פרוייקטי
     קוד פתוח תוכניות לימודים
   volunteer_engineer_submission_experience_unspecified: לא צוין
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: סטודנט
     באוניברסיטת הנוכחי (או חוקר)
   volunteer_engineer_submission_experience_software_professional: תוכנה מקצועית
+  volunteer_engineer_submission_distance_8: 8 ק"מ
+  volunteer_engineer_submission_distance_16: 16 ק"מ
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 32 ק"מ
+  volunteer_engineer_submission_num_volunteers_5: 5 מתנדבים
+  volunteer_engineer_submission_num_volunteers_10: 10 מתנדבים
+  volunteer_engineer_submission_num_volunteers_25: 25 מתנדבים
+  volunteer_engineer_submission_num_volunteers_50: 50 מתנדבים
+  volunteer_engineer_submission_type_task_onsite: אנא בקרו בכיתתי למתן עזרה טכנית
+    והשראה
+  volunteer_engineer_submission_type_task_remote: אנא הצטרפו לכיתתי באמצעות סקייפ
+    על מנת להלהיב את הילדים
+  volunteer_engineer_submission_type_task_mentor: מעוניין במנחה שידריך אותי לקראת
+    "שעת תיכנות" עם התלמידים
   petition_age: גיל
   dashboard_landing_title: דף הבית של המורה
   dashboard_landing_welcome: ברוכים הבאים לתצוגת המורה המשופרת.
@@ -395,10 +449,8 @@
   dashboard_hoc_courses: שעה של קוד לכל הגילאים
   dashboard_hoc_courses_desc: נסה את אחת מההדרכות הקצרות הללו (באורך שעה) עם התלמידים
     שלך!
-  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
-    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
-    during Computer Science Education Week.
-  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_hoc_courses_desc_and_cta: נסה את מערכי ההדרכה הקצרים (שעה) עם הסטודנטים.
+  dashboard_k5_courses: קורס באורך 20 שעות לגילאי גן חובה עד כיתה ה
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
     consists of about 20 lessons that may be implemented as one unit or over the course
@@ -406,12 +458,12 @@
     get started, we offer high quality professional development workshops around the
     U.S. free of charge. <a href="/professional-development-workshops">Find one near
     you!</a>
-  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses: קורס באורך 20 שעות לגילאי חטיבת בניים
   dashboard_middle_courses_desc: Our middle school curriculum uses computer science
     and programming within the context of middle school math and science - as a tool
     to teach math and science concepts. To register for professional development workshops,
     apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
-  dashboard_high_courses: Year-long High School Courses
+  dashboard_high_courses: קורס לאורך השנה לגילאי תיכון
   dashboard_high_courses_desc: Our high school program helps school districts offer
     full-year computer science classes by preparing existing teaching staff to offer
     this new field. To register for professional development workshops, apply for
@@ -463,11 +515,11 @@
   dashboard_sections_jumbotron_instruction: צור חלקים חדשים והוסף תלמידים אליהם. חלקים
     עוזרים לך לארגן תלמידים לקבוצות קטנות כדי שתוכל לעקוב אחרי התהליך למידה שלהם ולנהל
     את המשתמשים שלהם.
-  dashboard_sections_table_section: Section
+  dashboard_sections_table_section: סעיף
   dashboard_sections_table_secret: סוג התחברות
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: קורס
-  dashboard_sections_table_students: Students
+  dashboard_sections_table_students: סטודנטים
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: שם החלק
   dashboard_sections_choose_secret: אם ברצונך לספק חשבונות לתלמידיך, בחרו סוג הסודי
@@ -563,7 +615,7 @@
   dashboard_stage: שלב
   dashboard_puzzle: חידה
   dashboard_question: Question
-  dashboard_response: Response
+  dashboard_response: תגובה
   stats_hoc_2013_heading: 'סטטיסטיקה מדהימה מן  Hour of Code  שנה שעברה. בשבוע אחד
     בלבד:'
   stats_hoc_2013_image_alt: סטטיסטיקה של  Hour of Code 2013
@@ -582,8 +634,8 @@
     <b>תמונה, מילה, או דוא"ל</b>, תרצה לבחור עבור אזור מסויים.
   dashboard_faq: שאלות נפוצות
   dashboard_faq_k5: שאלות נפוצות למורי יסודי
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
+  dashboard_announcements: הודעות
+  dashboard_announce_view_all: הצג הכל
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -593,14 +645,31 @@
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
   learn_sign_up_button: הירשם
+  learn_videos_watch: Watch this inspirational video with your classroom
+  learn_videos_show: Show this inspirational video to your class
+  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: נסה את ההדרכות החדשות של "שעת הקוד"
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: האנגרי בירדז,צמחים נגד זומבים וראט הסנאי
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Tutorials by 3rd parties
+  carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: הדרכות בשפה שלך
   carousel_heading_domestic: הדרכות בשפה האנגלית
   carousel_heading_beginners: הדרכות למתחילים
@@ -614,6 +683,7 @@
   carousel_heading_robots: למד לתכנת בעזרת רובוטים
   carousel_heading_ide: פלטפורמות פופולריות בקרב מורים
   educator_notes: הערות מורה
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   how_to_teach_hoc: כיצד ללמד "שעה של קוד"
   more_resources_educators: משאבים נוספים עבור מורים ומחנכים
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -627,7 +697,8 @@
   older_systems_subheading: אלה צריכים לעבוד בדפדפנים ישנים יותר. כדי לגשת לכל הדרכות,
     יש לשדרג<a href="http://browsehappy.com/" target="_blank"> לדפדפן אינטרנט מודרני.</a>
   mobile_devices: הדרכות עבור התקנים ניידים
-  frozen_name: Code with Anna and Elsa
+  frozen_name: תכנתו עם אנה ואלזה
+  starwars_name: 'מלחמת הכוכבים: לבנות את הגלקסיה באמצעות קוד'
   codeorg_name: כתוב את תוכנת המחשב הראשונה שלך
   codeintl_name: כתוב את תוכנת המחשב הראשונה שלך
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -667,6 +738,8 @@
   projguts_name: אבן, נייר ומספריים
   hourofcode_name: מחזיק מקום עבור code.org/hoc חדש
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: אמן
   codeorg_gradelevel: גילאי 4-104
   codeintl_gradelevel: גילאי 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -706,7 +779,10 @@
   projguts_gradelevel: גילאי 10-13
   hourofcode_gradelevel: גילאי 4-104
   frozen_gradelevel: גילאי 8 +
+  starwars_gradelevel: לגילאי 6 ומעלה
   playlab_gradelevel: גילאי 4-104
+  infinity_gradelevel: גילאי 4-104
+  artist_gradelevel: גילאי 4-104
   codeorg_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   codeintl_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   thinkersmithspanish_platformtext: ללא חיבור
@@ -746,6 +822,7 @@
   projguts_platformtext: ללא חיבור
   hourofcode_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   frozen_platformtext: דפדפנים מודרניים + טאבלטים
+  starwars_platformtext: דפדפנים מודרניים + טאבלטים
   playlab_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   codeorg_shortdescription: למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!
   codeintl_shortdescription: למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!
@@ -790,10 +867,15 @@
   thinkersmith2_shortdescription: למד כיצד מחשבים משתמשים ב1 ו- 0 כדי לייצג מידע
   kodableunplugged_shortdescription: תרגיל כיפי שאינו מצריך חיבור
   projguts_shortdescription: נסו מודלים וסימולציות באמצעות אבן/נייר/מספריים
-  hourofcode_shortdescription: מחזיק מקום עבור code.org/hoc חדש
+  hourofcode_shortdescription: למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!
   frozen_shortdescription: בוא נשתמש בקוד כדי להצטרף לאנה ואלזה כשהן חוקרות את הקסם
     והיופי של קרח.
-  playlab_shortdescription: Create a story or make a game with Play Lab!
+  starwars_shortdescription: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
+    הפרטי שלכם בגלקסיה רחוקה, רחוקה.
+  playlab_shortdescription: ליצור סיפור או משחק עם Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: ציירו תמונות מגניבות ועיצובים עם האמן!
   codeorg_longdescription: למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור
     ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק
     צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים.
@@ -910,9 +992,10 @@
     איך מידול וסימולציה עובדים על ידי כך שקבוצת תלמידים תשחק בגרסאות שונות של המשחק
     "אבן נייר ומספריים" , ותראה את התוצאות כניסוים שונים במידול.
   hourofcode_longdescription: מחזיק מקום עבור code.org/hoc חדש
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
+  frozen_longdescription: תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי
+    שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
+  starwars_longdescription: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
+    הפרטי שלכם בגלקסיה רחוקה, רחוקה...
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
     pirates, zombies, ninjas, and many more characters move, make sounds, score points,
     and even throw fireballs!
@@ -1230,63 +1313,11 @@
     בתאריך  %{https_date}. לא תוכלו לגשת לCode.org אחרי תאריך זה.  <a href='%{it_requirements_url}'לחצו
     כאן</a>כדי ללמוד איך לאפשר שימוש בHTTPS על  Code.org.
   compatibility_https_hide_this_warning: הסתר את האזהרה הזו
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: '# served'
-  homepage_action_text_join_us: Join us
-  homepage_action_text_sign_up: Sign up
-  homepage_action_text_try_it: Try it
-  homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_girlvideo: Inspire a girl
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
-  starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
-  starwars_javascript_start_button: Try now
-  starwars_blocks_title: Blocks
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
-  starwars_blocks_start_button: Try now
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_gradelevel: Ages 4-104
-  mc_platformtext: Modern browsers, smartphones, tablets
-  minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  starwars_gradelevel: Ages 6+
-  starwars_platformtext: Modern browsers + tablets
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: נופף
+  infinity_shortcode: inf
+  playlab_shortcode: הפעל
+  artist_shortcode: art

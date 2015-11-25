@@ -1,7 +1,8 @@
 "ro-RO":
+  hour_of_code: Hour of Code
   hello: Salutare lume
   select_language: Te rugăm selectează limba ta
-  en: Informatică
+  en: Informatica
   computer_science_edweek: Săptămâna Informaticii
   csedweek_dates: 8-14 Decembrie 2014
   csedweek_banner_hoc: 'Se apropie <a href="http://hourofcode.com" style="color: white;
@@ -36,11 +37,15 @@
   hoc2014_everyone: Toată lumea
   hoc2014_support: Susține &#x25BE;
   hoc2014_whatishoc: Ce este Ora de Cod?
-  csedweek_map_header: '# CSEdWeek / Evenimente Ora de Cod în întreaga lume'
-  csedweek_map_signup: Înscrieţi-vă evenimentul
-  csedweek_map_search_placeholder: Caută evenimente Ora de Cod
+  csedweek_map_header: '# SaptamanaEducatieiInInformatica / Evenimente Ora de Cod
+    in intreaga lume'
+  csedweek_map_signup: Inscrieti-va evenimentul
+  csedweek_map_search_placeholder: Cauta evenimente Ora de Cod
   csedweek_map_search_search: Cautare
   csedweek_map_search_reset: Resetează
+  csedweek_map_legend_title: Legenda
+  csedweek_map_legend_event: Evenimentul Ora de Cod
+  csedweek_map_legend_cs_tech_jam: Blocaj CS Tech
   cded_sign_up: Inregistrează-te
   cded_try_it: Încearcă
   twentyhours_trynow: Încearcă acum
@@ -68,23 +73,27 @@
   thank_you_: Mulţumesc!
   congratulations: Felicitări!
   congratulations_on_completing_hoc: Felicitări pentru finalizarea unei Ore de Cod
+  congratulations_volunteer: 'Felicitari: acum, ca ai incercat Ora de Cod, <a href="https://code.org/volunteer">înscrie-te
+    pentru a face voluntariat intr-o clasa</a> si pentru a ajuta studentii sa invete
+    o Ora de Cod!'
   course_name_accelerated: Curs intensiv
   course_name_course1: Curs 1
   course_name_course2: Cursul 2
   course_name_course3: Cursul 3
   course_name_course4: Curs 4
   congratulations_on_completing_course: Felicitări pentru finalizarea %{course}
-  congrats_next_tutorials_title: În continuare încercati aceste tutoriale
+  congrats_next_tutorials_title: Mai departe incercati aceste tutoriale
   congrats_next_tutorials_desc: Încercați aceste tutoriale mai scurte, de 1 oră sau
     încercaţi un <a href="%{current_path}/next"> partener tutorial</a>.
   get_a_certificate_of_achievement: Obţine un certificat de realizare
-  enter_valid_age: Te rugăm selectează o vârstă validă
+  enter_valid_age: Selecteaza o varsta valida
   enter_valid_email: Te rugăm să introduci o adresă de email validă
-  get_a_certificate_message: Îți vom trimite un certificat şi informaţii despre cum
-    să <a href='/learn/beyond'> Înveți peste O Oră</a>
-  get_a_certificate_message_after: Fă clic pe certificat să-l descarci sau să-l tipărești.
-    Acum, continua cu <a href='http://studio.code.org'> alte cursuri</a> ale noastre
-    sau vezi mai multe opţiuni la <a href='/learn/beyond'> Învață mai mult de o Oră</a>.
+  get_a_certificate_message: Îti vom trimite un certificat si informatii despre cum
+    sa <a href='/learn/beyond'> Inveti peste O Ora</a>
+  get_a_certificate_message_after: Dati click pe certificat pentru a-l descarca si
+    printa. Acum, incercati <a href='http://studio.code.org'> celelalte cursuri</a>
+    ale noastre sau verificati mai multe opţiuni la <a href='/learn/beyond'> Invata
+    mai mult de o Ora</a>.
   thanks_for_submitting: Mulţumim pentru transmitere!
   if_you_enjoyed: Dacă ți-a făcut plăcere să înveți, sugerează-le și prietenilor tăi
     să încerce acest lucru. Vrem ca toată lumea să învețe.
@@ -129,16 +138,14 @@
   continue_learning_header: Continuă să înveți peste O Oră
   continue_learning_body: Există o mulţime de opţiuni.  Poţi învăța online, sau la
     o şcoală locală, sau în tabăra de vară.
-  learn_next_level: Continua cu nivelul următor
+  learn_next_level: Incearca un alt curs in Studio-ul Code
   learn_online: Încearcă alte cursuri online
   learn_classes: Găsește clase local
   hoc_is_here: '#OraDeCod este aici - Hai să vezi despre ce e vorba! @codeorg'
   just_did_hoc: 'Tocmai am făcut #OraDeCod - Hai să vezi despre ce e vorba! @codeorg'
-  twitter_teach_cs: De ce nu se predă informatica în mai multe școli? Putem repara
-    acest lucru. http://youtu.be/nKIu9yen5nc. Vizitează  http://code.org/ pentru a
-    învăța mai mult.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
+  twitter_teach_cs: De ce nu se preda informatica in mai multe scoli? Putem repara
+    acest lucru. http://youtu.be/nKIu9yen5nc. Vizitati  http://code.org/ pentru a
+    invata mai mult.
   learn_hoc: Învață o Oră de Cod
   beyond_hoc: Peste de O Oră
   what_gender: Ce gen sexual ai?
@@ -212,7 +219,8 @@
   homepage_hero_text_teacher2: |
     &ldquo;100% din elevii mei s-au înscris, implicat și participat la acest program.&rdquo;
     Adam, profesor
-  homepage_hero_text_stat_loc: '#loc linii de cod scrise de elevi'
+  homepage_hero_text_stat_loc: 2,5 milioane de fete sunt inscrise pentru a invata
+    in cadrul Code Studio
   homepage_hero_text_stat_students: '#student_count conturi de elev la Studio-ul Code'
   homepage_hero_text_stat_served: 'Ora de cod: #served servite'
   homepage_slot_text_hoc: Ora de Programare
@@ -222,14 +230,22 @@
   homepage_slot_text_course4: Curs 4
   homepage_slot_text_shop: Magazin
   homepage_slot_text_flappy: Codul Flappy
+  homepage_action_text_hoc: O ora de programare pentru fiecare elev.
+  homepage_action_text_num_served: '# servit'
+  homepage_action_text_join_us: Alatura-ni-te
+  homepage_action_text_sign_up: Inregistrează-te
+  homepage_action_text_try_it: Încearcă
+  homepage_action_text_volunteers: Cautam voluntari tehnici
   homepage_action_text_codevideo: Urmărește secvența video
   homepage_action_text_teachervideo: Urmărește secvența video
+  homepage_action_text_girlvideo: Inspira o fata
   homepage_action_text_learn: Începe învăţarea
   homepage_action_text_signpetition: Semnează petiția
   homepage_signpetition_dropdown: Sunt de acord &#x25BE;
-  homepage_diversity_pledge: Ia angajamentul diversității
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_diversity_pledge: Ia-ti angajamentul diversitatii
+  homepage_banner_text_prizes: 'Ora de cod revine, 7-13 decembrie. '
+  homepage_banner_link_prizes: 'Alatura-te celui mai mare eveniment educational din
+    istorie. '
   homepage_banner_text_main: Code.org şi College Board formează o alianţă pentru a
     îmbunătăţi diversitatea în informatică.
   homepage_banner_text_link: Află mai mult
@@ -241,7 +257,7 @@
   homepage_slot_text_link_hoc: Încearcă Ora de Cod
   homepage_slot_text_link_host: Găzduiește o Oră de Cod
   homepage_slot_text_link_hocserved: '# servit'
-  homepage_solot_text_link_volunteer: Voluntar pentru Ora de Cod
+  homepage_solot_text_link_volunteer: Voluntariaza pentru Ora de Cod
   homepage_slot_text_title_students: Elevi
   homepage_slot_text_blurb_students: Explorează toate tutorialele noastre
   homepage_slot_text_link_codestudio: Încearcă Studio-ul Code
@@ -253,7 +269,7 @@
   homepage_slot_text_link_fullcurriculum: Vezi întregul nostru curriculum
   homepage_slot_text_link_pd: Dezvoltare profesională
   homepage_slot_text_title_advocates: Avocaţi
-  homepage_slot_text_blurb_advocates: Sprijiniți-ne munca
+  homepage_slot_text_blurb_advocates: Sprijina diversitatea in computing
   homepage_slot_text_link_stats: Vezi statistici
   homepage_slot_text_link_buy: Implică-te
   homepage_slot_text_link_donate: Fă o donație
@@ -301,87 +317,139 @@
   class_submission_level_college: Facultate
   class_submission_level_vocational: Profesională
   class_submission_languages_other: Alte limbi
-  volunteer_engineer_submission_title: Voluntar pentru Ora de Cod
-  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
-    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
-    to try an hour introduction to computer science, reaching tens of millions of
-    students in 180+ countries. Please get involved during Computer Science Education
-    Week, December 7-13.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
-  volunteer_engineer_submission_intro_signup: Please enter the following information
-    if you are a computer science student or software professional. Fields marked
-    with a <span class="form-required-field">*</span> are required.
-  volunteer_engineer_submission_header_shared: Informaţii distribuite profesorilor
-    de pe harta voluntarilor
+  inspirational_videos_more: Mai multe <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">clipuri
+    inspirationale</a> cu modele consacrate si celebritati
+  starwars_subtitle: Programarea unei galaxii
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Utilizează blocuri drag-drop şi JavaScript.
+  starwars_javascript_specs: Doar Engleza | Browsere moderne | Varsta 11 +
+  starwars_javascript_start_button: Incearca acum
+  starwars_blocks_title: Blocuri
+  starwars_blocks_description: Utilizează blocuri drag-drop.
+  starwars_blocks_specs: 'Mai multe limbi (in curand) | Browser modern, smartphone,
+    tableta | Varsta: 6-10 ani'
+  starwars_blocks_start_button: Încearcă acum
+  starwars_watch_videos: Inainte sa incepi, vizioneaza unul dintre aceste videoclipuri
+    inspirationale
+  starwars_speak_languages: Vorbesti o alta limba?
+  starwars_help_translate: Ajuta-ne sa traducem
+  starwars_platform_text: Browsere web moderne, smartphone-uri, tablete
+  mc_name: Ora de Cod Minecraft
+  mc_longdescription: Utilizeaza blocuri de cod pentru a-l lua pe Steve sau Alex intr-o
+    aventura in acest univers Minecraft.
+  mc_shortdescription: Utilizeaza blocuri de cod pentru a-l lua pe Steve sau Alex
+    intr-o aventura in acest univers Minecraft.
+  mc_gradelevel: 'Varsta: peste 6 ani'
+  mc_platformtext: Browsere web moderne, smartphone-uri, tablete
+  mc_specs: 'Mai multe limbi (in curand) | Browser modern si tableta | Varsta: peste
+    6 ani'
+  minecraft_subtitle: Ora de Cod Minecraft
+  volunteer_engineer_submission_title: Inspira elevii si voluntarii pentru Ora de
+    programare.
+  volunteer_engineer_submission_subtitle_generic: '100.000 profesori vor gazdui o
+    Ora de Cod in acest an, in perioada 7-13 decembrie 2015. Ei vor ajutorul tau! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} profesorii cauta
+    voluntari pasionati de educatia stiintei calculatorului sa ajute cu Ora lor de
+    programare in decembrie.<br>%{num_volunteers} voluntarii s-au inscris. Alatura-te
+    lor.'
+  volunteer_engineer_submission_intro_background: Ora de Cod este o mişcare globala
+    pentru a testa o introducere de o ora in informatica, ajungând la zeci de milioane
+    de elevi din peste 180 de ţări. Va rugam sa va implicati în timpul Săptămânii
+    de Educației în Informatică, în perioada 7-13 decembrie.
+  volunteer_engineer_submission_intro_recruit: 'Acesti profesori ar fi incantati sa
+    aibe pe cineva <span style="font-family: ''Gotham 7r'', sans-serif;"> pasionati
+    de informatica </span> care pot ajuta in sala de clasa sau cineva care poate <span
+    style="font-family: ''Gotham7r'', sans-serif;">inspira</span> studentii vorbindu-le
+    despre nenumaratele posibilitati ale informaticii(care pot fii facute prin intermediul
+    unui video chat). Daca nu esti interesat de voluntariat, <a href="%{url}">afla
+    mai multe</a> despre organizarea proprie a Orei de programare.'
+  volunteer_engineer_submission_intro_signup: Te rugăm sa introduci următoarele informaţii,
+    dacă ești un student la automatică și calculatoare sau matematică-informatică
+    sau un profesionist în software. Câmpurile marcate cu un <span class="form-required-field">
+    *</span> sunt obligatorii.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_header_shared: Informatii distribuite profesorilor
+    pe harta voluntarilor
   volunteer_engineer_submission_field_name: Nume
   volunteer_engineer_submission_field_name_placeholder: Nume complet
   volunteer_engineer_submission_field_company: Compania (sau Universitatea)
   volunteer_engineer_submission_field_company_placeholder: Compania (sau Universitatea)
-  volunteer_engineer_submission_field_experience_level: Nivel de experienţă
-  volunteer_engineer_submission_field_location: Locaţie
-  volunteer_engineer_submission_field_location_desc: Dacă introduci adresa ta exactă,
-    nu o vom distribui public, doar vei apărea ca un ac pe hartă.
-  volunteer_engineer_submission_field_location_placeholder: Cod poştal, oraş şi stat/ţară
-    sau adresa cu strada
-  volunteer_engineer_submission_field_location_flexibility: Eu pot ajuta în timpul
-    Orei de Cod prin... (selectează toate care se aplică)
+  volunteer_engineer_submission_field_experience_level: Nivel de experienta
+  volunteer_engineer_submission_field_location: Locatie
+  volunteer_engineer_submission_field_location_desc: Locatia ta va fi utilizata pentru
+    a le permite profesorilor sa caute voluntari in apropiere si va fi afisata printr-un
+    ac pe harta. Daca esti preocupat de confidentialitate, te rugam sa folosesti adresa
+    de munca sau scoala sau doar orasul tau.
+  volunteer_engineer_submission_field_location_placeholder: Cod postal, oras si stat/tara
+    sau adresa strazii
+  volunteer_engineer_submission_field_location_flexibility: Eu pot ajuta in timpul
+    Orei de Cod prin... (selectati toate cele care se aplica)
   volunteer_engineer_submission_checkbox_after_hoc: Sunt interesat de voluntariat
-    după Ora de Cod
-  volunteer_engineer_submission_field_time_commitment: Angajament de timp după Ora
-    de Cod
-  volunteer_engineer_submission_field_linkedin: Profil LinkedIn
-  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/numele_tău
-  volunteer_engineer_submission_field_facebook: Profil de Facebook
-  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/numele_tău
+    dupa Ora de Cod
+  volunteer_engineer_submission_field_time_commitment: Angajament după Ora de Cod
+  volunteer_engineer_submission_field_linkedin: Profilul LinkedIn
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/numele_tau
+  volunteer_engineer_submission_field_facebook: Profilul de Facebook
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/numele_tau
   volunteer_engineer_submission_field_description: Descriere
-  volunteer_engineer_submission_field_description_desc: Descrie experiența ta în informatică
-    şi cum ai dori să participi ca voluntar pentru profesori pe plan local.
-  volunteer_engineer_submission_field_description_placeholder: Descrierea experienței
-    și/sau participării
-  volunteer_engineer_submission_header_private: Informaţii private şi niciodată distribuite
+  volunteer_engineer_submission_field_description_desc: Descrie experienta ta in informatica
+    si cum ti-ar placea sa participi drept voluntar pentru profesori pe plan local.
+  volunteer_engineer_submission_field_description_placeholder: Descrierea experientei
+    si/sau participarii. Daca vorbesti alta(e) limba(i) decât engleza, asigura-te
+    ca o menționezi aici.
+  volunteer_engineer_submission_header_private: Informatii private si niciodata distribuite
   volunteer_engineer_submission_field_email: Adresă de email
-  volunteer_engineer_submission_field_email_desc: Adresa ta de e-mail nu va fi niciodată
-    distribuită, dar îți vom trimite solicitări de contact din partea profesorilor.
+  volunteer_engineer_submission_field_email_desc: Adresa ta de e-mail nu va fi niciodata
+    distribuita, dar iti vom trimite solicitari din partea profesorilor.
   volunteer_engineer_submission_field_email_placeholder: Adresă de email
-  volunteer_engineer_submission_final_paragraph: Vei fi listat(ă) pe o hartă pentru
-    profesori locali ca aceștia să vă contacteze pentru Ora de Cod sau alte oportunităţi
-    de voluntariat. Adresa ta de e-mail şi adresa exactă nu vor fi distribuite de
-    noi. Dar alte informaţii (inclusiv locaţia aproximativă) vor fi vizibile public
-    profesorilor locali.
-  volunteer_engineer_submission_checkbox_contact: 'Sunt de acord să fiu contactat
-    de profesori pentru oportunităţi de voluntariat (Notă: adresa ta de e-mail nu
-    va fi distribuită)'
+  volunteer_engineer_submission_final_paragraph: Vei aparea pe o hartă pentru ca profesorii
+    locali sa te contacteze pentru Ora de Cod sau alte oportunitati de voluntariat.
+    Adresa ta de e-mail si adresa exactă nu vor fi distribuite, dar alte informatii
+    (inclusiv locatia aproximativa) vor fi vizibile pentru profesorii locali.
+  volunteer_engineer_submission_checkbox_contact: 'Sunt de acord sa fiu contactat
+    de profesori pentru oportunitati de voluntariat (Nota: adresa ta de e-mail nu
+    va fi distribuita)'
   volunteer_engineer_submission_submit: Trimite
-  volunteer_engineer_submission_thankyou: Îți mulțumim pentru trimiterea informațiilor
-    tale.
+  volunteer_engineer_submission_thankyou: Îți mulțumim pentru actvitatea de voluntariat
+    pentru Ora de Cod. În scopul pregătirii pentru Ora de Cod și recrutării de voluntari,
+    <a href="%{url}">află mai multe aici.</a>
   volunteer_engineer_submission_commitment_uncertain: Nesigur
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 oră pe săptămână
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ore pe săptămână
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 ore pe săptămână
   volunteer_engineer_submission_commitment_now_and_then: Uneori
   volunteer_engineer_submission_commitment_annually: 2 - 3 ori pe an
-  volunteer_engineer_submission_commitment_monthly: Două ore pe lună
-  volunteer_engineer_submission_commitment_weekly: Două ore pe săptămână
+  volunteer_engineer_submission_commitment_monthly: Cateva ore pe luna
+  volunteer_engineer_submission_commitment_weekly: Cateva ore pe saptamana
   volunteer_engineer_submission_commitment_more: Mai mult
-  volunteer_engineer_submission_location_flexibility_onsite: La o şcoală
-  volunteer_engineer_submission_location_flexibility_remote: Mentorat la distanță
-    (profesori sau elevi)
-  volunteer_engineer_submission_location_flexibility_curriculum: Dispus să contribuie
-    la proiecte curriculum de tip open-source
+  volunteer_engineer_submission_location_flexibility_onsite: vizitând on-site o şcoală
+    (1-2 ore într-o sală de clasă sau așezamânt școlar)
+  volunteer_engineer_submission_location_flexibility_remote: având o sesiune de Întrebări
+    și Răspunsuri la distanță (prin scurtă conferință video)
+  volunteer_engineer_submission_location_flexibility_curriculum: contribui la proiecte
+    curriculum de tip open-source
   volunteer_engineer_submission_experience_unspecified: Nespecificat
+  volunteer_engineer_submission_experience_tech_company: Non-inginer la o companie
+    de tehnologie informatica
   volunteer_engineer_submission_experience_university_student_or_researcher: Student
-    (sau în căutare)
+    la universitate de informatica
   volunteer_engineer_submission_experience_software_professional: Profesionist software
+  volunteer_engineer_submission_distance_8: 5 mile
+  volunteer_engineer_submission_distance_16: 10 mile
+  volunteer_engineer_submission_distance_24: 15 mile
+  volunteer_engineer_submission_distance_32: 20 de mile
+  volunteer_engineer_submission_num_volunteers_5: 5 voluntari
+  volunteer_engineer_submission_num_volunteers_10: 10 voluntari
+  volunteer_engineer_submission_num_volunteers_25: 25 de voluntari
+  volunteer_engineer_submission_num_volunteers_50: 50 de voluntari
+  volunteer_engineer_submission_type_task_onsite: Vreau sa-mi vizitezi clasa pentru
+    ajutor si inspiratie
+  volunteer_engineer_submission_type_task_remote: Vreau sa te alaturi clasei mele
+    pe Skype pentru a adresa copiilor cateva cuvinte de inspiraţie
+  volunteer_engineer_submission_type_task_mentor: Caut un mentor care să mă ajute
+    in pregatirea activitatii de programare cu elevii
   petition_age: Vârsta
   dashboard_landing_title: Pagina de Start a Profesorilor
   dashboard_landing_welcome: Bine aţi venit la noul şi îmbunătăţitul tablou de bord
@@ -411,7 +479,7 @@
   dashboard_landing_progress_biggest: Acesta este progresul pentru cea mai mare secţiune
     a dvs.
   dashboard_landing_view_progress: Vezi progresul pentru %{biggest_section}
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_print_progress: Imprimare progres
   dashboard_landing_available_title: Cursuri disponibile
   dashboard_landing_available_courses: Aici sunt cursurile disponibile în prezent
     pentru tine şi elevii tăi.
@@ -423,9 +491,9 @@
   dashboard_hoc_courses: Ora De Cod pentru toate vârstele
   dashboard_hoc_courses_desc: Încearcă oricare din aceste tutoriale, mai scurte de-o
     oră, cu elevii tăi!
-  dashboard_hoc_courses_desc_and_cta: Încercaţi aceste tutoriale scurte, o oră cu
-    elevii tăi. <a href="https://hourofcode.com"> Alăturaţi-vă mişcării ora de cod</a>
-    în săptămână Educaţie Computer Science.
+  dashboard_hoc_courses_desc_and_cta: Testeaza aceste videoclipuri de o ora alaturi
+    de elevi. <a href="https://hourofcode.com">Alătură-te mişcării Ora de Cod</a>
+    în cadrul Săptămânii de Educaţie în Informatică.
   dashboard_k5_courses: Cursuri de 20 de ore pentru clasele primare
   dashboard_k5_courses_desc: Aceste cursuri combină tutoriale cu ritm propriu si ghidate
     pe individ cu activități de tip "unplugged" care nu necesită folosirea calculatorului.
@@ -483,7 +551,7 @@
   dashboard_navigation_section_speakers: Informatică <br/> Invitaţi
   dashboard_navigation_all_sections: Conturile elevilor şi progresul lor
   dashboard_navigation_view_progress: Vedeți progresele
-  dashboard_navigation_view_text_responses: Vizualizare text răspunsuri
+  dashboard_navigation_view_text_responses: Vizualizare text raspunsuri
   dashboard_navigation_add_students: Adaugă elevi
   dashboard_navigation_manage_students: Gestionează elevi
   dashboard_navigation_lesson_plans_resources: Planuri de lecţie şi resurse
@@ -541,7 +609,7 @@
     din cadrul secțiunii:'
   dashboard_students_print_info: Tipărește carduri cu informațiile de logare ale elevilor
     tăi.
-  dashboard_students_secret_picture_title: Imagine secretă
+  dashboard_students_secret_picture_title: Imagine secreta
   dashboard_students_secret_picture: Această secţiune utilizează <b>imagine</b> ca
     tipul său secret.  Aceasta înseamnă că fiecare dintre studenţii tăi are o poză
     secretă folosită în loc de o parolă pentru a se conecta.  Elevii ar trebui să
@@ -632,22 +700,40 @@
   dashboard_announcements: Anunțuri
   dashboard_announce_view_all: Vizualizare toate
   dashboard_announce_hoc: <b>30 Septembrie 2015</b> - Ora de Cod 2015 se apropie!
-    Alătură-te claselor din toată lumea din cadrul celui mai mare eveniment didactic
+    Alatura-te claselor din toata lumea din cadrul celui mai mare eveniment didactic
     din istorie.
   code_hoc_coming: 'Ora de cod este aici: 8-14 decembrie!'
   code_sign_up: Înscrie-te pentru a participa la săptămâna de educație în informatică
   learn_more: Află mai mult
-  learn_sign_up_description: Înscrie-te pentru a participa la ore de cod în timpul
-    săptămânii de educaţie CS
+  learn_sign_up_description: Inscrie-te pentru a participa la ore de cod in timpul
+    saptamanii de educatie CS
   learn_sign_up_button: Inregistrează-te
-  learn_educator_resources_description: Învată cum să predai o oră de cod
+  learn_videos_watch: Vizioneaza acest film inspirational alaturi de colegii tai
+  learn_videos_show: Arata acest film inspirational clasei tale
+  learn_videos_before_hoc: Vizioneaza un film inspirational inainte de Ora de programare
+  learn_educator_resources_description: Invata cum sa predai o Ora de Cod
   learn_educator_resources_button: Resursele educatorului
-  learn_are_you_educator: Ești un educator? Învață <a href="http://hourofcode.com/resources/how-to">
-    cum să predai o Oră de Cod</a>
+  learn_are_you_educator: Esti un educator? Invata <a href="http://hourofcode.com/resources/how-to">
+    cum sa predai o Ora de Cod</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Afla mai multe</a> despre
+    premiile pentru fiecare educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Încearcă noile noastre tutoriale ale Orei de Cod
-  hoc2014_try_new_tutorial: Încearcă noul nostru tutorial Ora de cod în versiune beta
+  hoc2014_try_new_tutorial: Încearcă noul nostru tutorial Ora de programare în versiune
+    beta
   hoc2014_try_scrat: Păsări Supărate, PvZ şi Veverița Scrat
   hoc2014_try_frozen: Artist cu Anna și Elsa, din Frozen
+  carousel_heading_codeorg: Tutoriale realizate de Code.org
+  carousel_heading_codeorg_any_device: Instructiuni de Code.org (pentru toate dispozitivele)
+  carousel_heading_3rd_party: Tutoriale realizate din 3 parti
+  carousel_heading_third_party: Tutoriale realizate prin a treia parte
   carousel_heading_international: Tutoriale în limba ta
   carousel_heading_domestic: Tutoriale disponibile în limba engleză
   carousel_heading_beginners: Tutoriale pentru începători
@@ -662,9 +748,10 @@
   carousel_heading_robots: Învață să programezi cu roboți
   carousel_heading_ide: Platforme populare în rândul profesorilor
   educator_notes: Notițe pentru educatori
+  teach_led_lesson_plans: Planuri de lectie pentru Ora de cod
   how_to_teach_hoc: Cum să predai o Oră de Cod
   more_resources_educators: Mai multe resurse pentru profesori și educatori
-  beyond_submission: Vrei sa prezinți un tutorial mai lung de o oră? Verifică criteriile
+  beyond_submission: Vrei sa prezinti un tutorial mai lung de o ora? Verifica criteriile
     si formularul necesar.
   participants: participanți
   teachers_notes: Notițele profesorului
@@ -677,6 +764,7 @@
     target="_blank">browser de web modern.</a>
   mobile_devices: Tutoriale pentru dispozitive mobile
   frozen_name: Codați cu Anna și Elsa
+  starwars_name: 'Star Wars: Programarea unei galaxii'
   codeorg_name: Scrie primul tău program de calculator
   codeintl_name: Scrie primul tău program de calculator
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -707,15 +795,17 @@
   robomindnl_name: Programează un robot virtual
   flappy_name: Să facem un joc cu Flappy
   bitsbox_name: Bitsbox - creează un joc
-  makeschool_name: Construiește un joc pentru iPhone în browserul tău!
+  makeschool_name: Realizeaza un joc pentru iPhone in propriul browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: Ora de Cod aplicație-inventor
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Piatră, hârtie, foarfece
-  hourofcode_name: Substituent pentru noul code.org/hoc
+  hourofcode_name: Calapod pentru noul code.org/hoc
   playlab_name: Laborator de Joacă
+  infinity_name: Laborator de joc Infinity
+  artist_name: Artist
   codeorg_gradelevel: Vârste între 4-104 ani
   codeintl_gradelevel: Vârste între 4-104 ani
   thinkersmithspanish_gradelevel: Por todos
@@ -755,7 +845,10 @@
   projguts_gradelevel: Vârstele 10-13 ani
   hourofcode_gradelevel: Vârste între 4-104 ani
   frozen_gradelevel: Vârstă 8+
+  starwars_gradelevel: 'Varsta: peste 6 ani'
   playlab_gradelevel: Vârste între 4-104 ani
+  infinity_gradelevel: Vârste între 4-104 ani
+  artist_gradelevel: Vârste între 4-104 ani
   codeorg_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeintl_platformtext: Browsere web moderne, smartphone-uri, tablete
   thinkersmithspanish_platformtext: Unplugged
@@ -795,6 +888,7 @@
   projguts_platformtext: Unplugged
   hourofcode_platformtext: Browsere web moderne, smartphone-uri, tablete
   frozen_platformtext: Browsere moderne + tablete
+  starwars_platformtext: Browser modern + tableta
   playlab_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeorg_shortdescription: Învață să programezi cu Mark Zuckerberg și Angry Birds!
   codeintl_shortdescription: Învață să programezi cu Mark Zuckerberg și Angry Birds!
@@ -837,8 +931,8 @@
     submarin
   bitsbox_shortdescription: Scrie o serie de aplicații cu care să te joci și să le
     distribui, folosind programul JavaScript.
-  makeschool_shortdescription: Fă un joc pentru iPhone! Studiază scriind linii de
-    cod care să îți învețe monstrul să facă noi mișcări!
+  makeschool_shortdescription: Fa un joc pentru iPhone! Studiaza scriind linii de
+    cod care sa iti invete monstrul sa faca noi miscari!
   touchdevelop_shortdescription: 'Rezolvă puzzle-uri, creează jocuri şi învaţă să
     codezi, toate pe telefonul tău. '
   appinventor_shortdescription: Construiește-ți propria aplicație! (Doar pentru Android)
@@ -847,10 +941,15 @@
     reprezenta informația
   kodableunplugged_shortdescription: Un exercițiu distractiv, fără calculator
   projguts_shortdescription: Încearcă modelare şi simulare folosind piatră/hârtie/foarfece
-  hourofcode_shortdescription: Substituent pentru noul code.org/hoc
+  hourofcode_shortdescription: Învață să programezi cu Mark Zuckerberg și Angry Birds!
   frozen_shortdescription: Hai să ne folosim de cod pentru a le alătura pe Anna şi
     Elsa în explorarea magiei şi frumuseţii de gheaţă.
+  starwars_shortdescription: Invata sa programezi droizi si creeaza-ti propriul joc
+    Star Wars intr-o galaxie foarte indepartata.
   playlab_shortdescription: Creează o poveste sau fă un joc cu Laboratorul de Joacă!
+  infinity_shortdescription: Folosește Laboratorul de Joacă pentru a crea o poveste
+    sau un joc cu personaje Disney Infinity.
+  artist_shortdescription: Desenează poze şi proiecte mişto cu Artistul!
   codeorg_longdescription: "Învață conceptele de bază ale programării cu o metodă
     simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat
     ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs.
@@ -973,10 +1072,10 @@
     o serie de aplicații cu care să te joci și pe care să le distribui. Ghidări simple
     le dau chiar și celor mai mici posibilitatea de a programa în JavaScript, și cu
     cât avansezi cu atât vei ajunge mai departe.
-  makeschool_longdescription: Învață să codezi prin realizarea unui joc pentru iPhone
-    folosind un limbaj de programare nou-nouț și prietenos cu începătorii numit Swift!
-    Creează un joc de acțiune inspirat de Pok&eacute;mon și scrie un cod pentru a
-    îți învăța monstrul mișcări noi. Vei învăța cum să folosești variabile, metode
+  makeschool_longdescription: Invata sa programezi realizand un joc pentru iPhone
+    si folosind un limbaj de programare nou-nout și prietenos cu incepatorii numit
+    Swift! Creeaza un joc de actiune inspirat de Pok&eacute;mon si scrie un cod pentru
+    a-ti invata monstrul miscari noi. Vei învăța cum să folosești variabile, metode
     și obiecte pentru a-ți ajuta monstrul să câștige!
   touchdevelop_longdescription: 'Editorul prietenos atingerilor de ecran vă va ghida
     în crearea de artă pixel, rezolvarea puzzle-ului cu urs sau realizarea propriului
@@ -1003,11 +1102,13 @@
     cum funcționează modelarea și simularea prin antrenarea unui grup de elevi în
     joaca cu versiuni diferite ale jocului Piatră/Hârtie/Foarfecă, pentru ca mai apoi
     să se evidențieze rezultatele ca experimente diferite de modelare.
-  hourofcode_longdescription: Substituent pentru noul code.org/hoc
+  hourofcode_longdescription: Calapod pentru noul code.org/hoc
   frozen_longdescription: Hai să folosim programarea pentru a ne alătura Annei şi
     Elsei în timp ce explorează magia şi frumuseţea gheței. Veţi crea fulgi de zăpadă
     şi modele ca la patinaj şi veți face un paradis de iarnă, pe care apoi veți putea
     să-l distribuiți prietenilor!
+  starwars_longdescription: Invata sa programezi droizi si creeaza-ti propriul joc
+    Star Wars intr-o galaxie foarte indepartata.
   playlab_longdescription: Creează o poveste sau fă un joc cu Play Lab! Creează animale,
     pirați, zombi, ninja și mute alte mișcări pentru personaje, realizează sunete,
     acumulează puncte, și chiar aruncă mingi de foc!
@@ -1024,7 +1125,7 @@
   groklearning_beyond_name: Învață limbajul de programare Python
   hacketyhack_beyond_name: Învață Ruby
   robomind_beyond_name: Programează un robot virtual
-  makeschool_beyond_name: Construiește un joc pentru iPhone în browserul tău!
+  makeschool_beyond_name: Realizeaza un joc pentru iPhone in propriul browser!
   appinventor_beyond_name: Ora de Cod aplicație-inventor
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Învață programare cu Karel, câinele
@@ -1141,7 +1242,7 @@
   groklearning_beyond_shortdescription: Introducere de bază în programarea Python
   hacketyhack_beyond_shortdescription: Învață Ruby de la 0
   robomind_beyond_shortdescription: Scrie un cod pentru un robot virtual
-  makeschool_beyond_shortdescription: Învață să faci un joc pentru iPhone într-o oră
+  makeschool_beyond_shortdescription: Invata sa faci un joc pentru iPhone intr-o ora
   appinventor_beyond_shortdescription: Construiește-ți propria aplicație! (Doar pentru
     Android)
   touchdevelop_beyond_shortdescription: Programează aplicații de mobil direct de pe
@@ -1353,63 +1454,11 @@
     Nu vei mai putea accesa Code.org după această dată. <a href='%{it_requirements_url}'>
     click aici</a> pentru a afla cum să activezi HTTPS pentru Code.org.
   compatibility_https_hide_this_warning: Ascunde această avertizare
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: '# served'
-  homepage_action_text_join_us: Join us
-  homepage_action_text_sign_up: Sign up
-  homepage_action_text_try_it: Try it
-  homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_girlvideo: Inspire a girl
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
-  starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
-  starwars_javascript_start_button: Try now
-  starwars_blocks_title: Blocks
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
-  starwars_blocks_start_button: Try now
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_gradelevel: Ages 4-104
-  mc_platformtext: Modern browsers, smartphones, tablets
-  minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  starwars_gradelevel: Ages 6+
-  starwars_platformtext: Modern browsers + tablets
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: zboară
+  infinity_shortcode: inf
+  playlab_shortcode: joacă
+  artist_shortcode: art

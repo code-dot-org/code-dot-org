@@ -13,6 +13,25 @@
 
 = render 'funometer_percentages_by_day', :percentages_by_day => percentages_by_day
 
+.by_stage
+  %h3
+    Percentages by Stage
+  %table
+    %tr
+      - @ratings_by_stage_headers.each do |header|
+        %th
+          %span= header
+    - @ratings_by_stage.each do |stage|
+      %tr
+        %td
+          %span= stage.stage_id
+        %td
+          %span= stage.name
+        %td
+          %span= number_to_percentage(stage.percentage, precision: 2)
+        %td
+          %span= stage.cnt
+
 .by_level
   %h3
     Percentages by Level
@@ -24,7 +43,13 @@
     - @ratings_by_level.each do |level|
       %tr
         %td
-          %span= level.level_id
+          %span
+            = link_to funometer_by_script_level_path(:script_id => @script_id, :level_id => level.level_id) do
+              = level.level_id
+        %td
+          %span
+            = link_to level_url(level.level_id) do
+              = level.name
         %td
           %span= number_to_percentage(level.percentage, precision: 2)
         %td

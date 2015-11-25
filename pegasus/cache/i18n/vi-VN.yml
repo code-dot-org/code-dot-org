@@ -1,4 +1,5 @@
 "vi-VN":
+  hour_of_code: Giờ của mã
   hello: Xin chào thế giới
   select_language: Vui lòng chọn ngôn ngữ của bạn
   en: Khoa học máy tính
@@ -38,10 +39,13 @@
   hoc2014_support: Hỗ trợ nó &#x25BE;
   hoc2014_whatishoc: Giờ Mã là gì?
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_signup: Đăng ký sự kiện của bạn
+  csedweek_map_search_placeholder: Tìm kiếm sự kiện Hour of Code
+  csedweek_map_search_search: Tìm kiếm
   csedweek_map_search_reset: Thiết lập lại
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Đăng ký
   cded_try_it: Hãy thử nó
   twentyhours_trynow: Thử ngay bây giờ
@@ -70,13 +74,17 @@
   congratulations: Chúc mừng!
   congratulations_on_completing_hoc: Chúc mừng bạn đã hoàn thành khóa học Một giờ
     lập trình
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
   course_name_accelerated: Khóa học cấp tốc
   course_name_course1: Khóa học 1
   course_name_course2: Khóa học 2
   course_name_course3: Khóa học 3
   course_name_course4: Khóa học 4
-  congratulations_on_completing_course: Congratulations on completing %{course}
-  congrats_next_tutorials_title: Try these tutorials next
+  congratulations_on_completing_course: Xin chúc mừng đã hoàn thành %{course} khóa
+    học
+  congrats_next_tutorials_title: Thực hiện các hướng dẫn tiếp theo
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
   get_a_certificate_of_achievement: Lấy chứng nhận thành tích
@@ -138,8 +146,6 @@
   twitter_teach_cs: Tại sao không thêm các trường dạy khoa học máy tính? Chúng tôi
     có cải thiện điều này. http://youtu.be/nKIu9yen5nc. Truy cập vào http://code.org/
     để tìm hiểu thêm.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: Học một Giờ lập trình
   beyond_hoc: Ngoài một giờ
   what_gender: Giới tính của bạn là gì?
@@ -222,14 +228,23 @@
   homepage_slot_text_course4: Khóa học 4
   homepage_slot_text_shop: Mua sắm
   homepage_slot_text_flappy: Lập trình Flappy
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: phục vụ
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Đăng ký
+  homepage_action_text_try_it: Hãy thử nó
+  homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_codevideo: Xem video
   homepage_action_text_teachervideo: Xem video
+  homepage_action_text_girlvideo: Inspire a girl
   homepage_action_text_learn: Bắt đầu học
   homepage_action_text_signpetition: Ký vào bản kiến nghị
   homepage_signpetition_dropdown: Tôi đồng ý &#x25BE;
   homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_banner_text_prizes: The Hour of Code sắp diễn ra một lần nữa từ ngày
+    7 đến ngày 13 tháng mười hai
+  homepage_banner_link_prizes: 'Tham gia sự kiện học lập trình lớn nhất trong lịch
+    sử. '
   homepage_banner_text_main: Code.org và College Board tạo thành một liên minh để
     nâng cao sự đa dạng trong khoa học máy tính.
   homepage_banner_text_link: Tìm hiểu thêm
@@ -241,7 +256,7 @@
   homepage_slot_text_link_hoc: Học thử Hour of Code
   homepage_slot_text_link_host: Đăng cai một Giờ Lập Trình
   homepage_slot_text_link_hocserved: phục vụ
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_solot_text_link_volunteer: Tình nguyện viên cho Hour of Code
   homepage_slot_text_title_students: học viên
   homepage_slot_text_blurb_students: Khám phá tất cả các bài hướng dẫn của chúng tôi
   homepage_slot_text_link_codestudio: Thử Code Studio
@@ -300,6 +315,32 @@
   class_submission_level_college: Đại học và cao đẳng
   class_submission_level_vocational: Dạy nghề
   class_submission_languages_other: Ngôn ngữ khác
+  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
+    videos</a> by role models and celebrities
+  starwars_subtitle: Building a Galaxy With Code
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: Thử ngay bây giờ
+  starwars_blocks_title: các khối
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
+  starwars_blocks_start_button: Thử ngay bây giờ
+  starwars_watch_videos: Before you get started, watch one of these inspirational
+    videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  starwars_platform_text: Modern browsers, smartphones, tablets
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_gradelevel: Ages 4-104
+  mc_platformtext: Modern browsers, smartphones, tablets
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -311,15 +352,18 @@
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Tên
@@ -379,10 +423,25 @@
   volunteer_engineer_submission_location_flexibility_curriculum: Sẵn sàng để giúp
     đỡ đóng góp cho các dự án mã nguồn mở chương trình giảng dạy
   volunteer_engineer_submission_experience_unspecified: Không xác định
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: Đang
     là sinh viên đại học (hoặc Nghiên cứu sinh sau đại học)
   volunteer_engineer_submission_experience_software_professional: Chuyên gia phần
     mềm
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
   petition_age: Tuổi
   dashboard_landing_title: Trang chủ giáo viên
   dashboard_landing_welcome: Chào mừng bạn đến trang tổng quan mới của giáo viên.
@@ -626,15 +685,32 @@
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
   learn_sign_up_button: Đăng ký
+  learn_videos_watch: Watch this inspirational video with your classroom
+  learn_videos_show: Show this inspirational video to your class
+  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Làm thử theo hướng dẫn của chúng tôi về Giờ lập trình
   hoc2014_try_new_tutorial: Hãy thử lớp học Giờ Lập trình phiên bản beta của chúng
     tôi
   hoc2014_try_scrat: Angry Birds, PvZ, và Scrat
   hoc2014_try_frozen: Họa sĩ vẽ Anna và Elsa, từ bộ phim Frozen
+  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Tutorials by 3rd parties
+  carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Các hướng dẫn bằng ngôn ngữ của bạn
   carousel_heading_domestic: Hướng dẫn có sẵn bằng tiếng Anh
   carousel_heading_beginners: Hướng dẫn cho người mới bắt đầu
@@ -649,6 +725,7 @@
   carousel_heading_robots: Tìm hiểu để lập trình robot
   carousel_heading_ide: Nền tảng phổ biến trong số các giáo viên
   educator_notes: Ghi chú Giáo dục
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   how_to_teach_hoc: Các dạy một Giờ lập trình
   more_resources_educators: Nhiều nguồn lực dành cho giáo viên và giáo dục
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -664,6 +741,7 @@
     duyệt Web mới nhất.</a>
   mobile_devices: Hướng dẫn cho thiết bị di động
   frozen_name: Mã hóa cùng  Anna và Elsa
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
   codeorg_name: Viết chương trình máy tính đầu tiên của bạn
   codeintl_name: Viết chương trình máy tính đầu tiên của bạn
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -701,8 +779,10 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: Viết chương trình máy tính đầu tiên của bạn
   playlab_name: Phòng trò chơi
+  infinity_name: Phòng thí nghiệm Vui Chơi Bất Tận
+  artist_name: Nghệ sĩ
   codeorg_gradelevel: Ages 4-104
   codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -742,7 +822,10 @@
   projguts_gradelevel: Ages 10-13
   hourofcode_gradelevel: Ages 4-104
   frozen_gradelevel: Ages 8+
+  starwars_gradelevel: Ages 6+
   playlab_gradelevel: Ages 4-104
+  infinity_gradelevel: Ages 4-104
+  artist_gradelevel: Ages 4-104
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
@@ -782,6 +865,7 @@
   projguts_platformtext: Unplugged
   hourofcode_platformtext: Modern browsers, smartphones, tablets
   frozen_platformtext: Modern browsers + tablets
+  starwars_platformtext: Modern browsers + tablets
   playlab_platformtext: Modern browsers, smartphones, tablets
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
@@ -835,8 +919,13 @@
   hourofcode_shortdescription: Placeholder for new code.org/hoc
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
   playlab_shortdescription: Tạo ra một câu chuyện hoặc làm cho một trò chơi với phòng
     thí nghiệm trò chơi!
+  infinity_shortdescription: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện
+    hay trò chơi với các nhân vật Disney Infinity nổi tiếng.
+  artist_shortdescription: Tạo hình cá tính và thiết kế cùng các nghệ sĩ!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
@@ -971,6 +1060,8 @@
     sự kỳ diệu và vẻ đẹp của băng. Bạn sẽ tạo ra bông tuyết và các mẫu như bạn trượt
     băng  và làm cho một thế giới thần tiên mùa đông mà sau đó bạn có thể chia sẻ
     với bạn bè của bạn!
+  starwars_longdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
     pirates, zombies, ninjas, and many more characters move, make sounds, score points,
     and even throw fireballs!
@@ -1294,63 +1385,11 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Ẩn cảnh báo này
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: '# served'
-  homepage_action_text_join_us: Join us
-  homepage_action_text_sign_up: Sign up
-  homepage_action_text_try_it: Try it
-  homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_girlvideo: Inspire a girl
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
-  starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
-  starwars_javascript_start_button: Try now
-  starwars_blocks_title: Blocks
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
-  starwars_blocks_start_button: Try now
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_gradelevel: Ages 4-104
-  mc_platformtext: Modern browsers, smartphones, tablets
-  minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  starwars_gradelevel: Ages 6+
-  starwars_platformtext: Modern browsers + tablets
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: đập cánh
+  infinity_shortcode: inf
+  playlab_shortcode: Bắt đầu chơi
+  artist_shortcode: art

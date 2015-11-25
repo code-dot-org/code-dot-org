@@ -39,7 +39,8 @@ level 'CSPPD3-u3 chunk 4 checkin'
 stage 'Chunk 5 Overview' 
 level 'CSPPD3-u3 chunk 5 concepts'
 level 'CSPPD3-u3 chunk 5 resources'
-level 'CSPPD3-u3 chunk 5 checkin'
+level 'CSPPD3-u3 chunk 5 checkin-b'
+
 
 stage 'Practice Performance Task'
 level ‘CSPPD3-u3 practice PT’
@@ -47,3 +48,21 @@ level 'CSPPD3-u3 pause and reflect'
 
 stage ‘Challenge Overview’ 
 level 'CSPPD3-u3 challenge overview'
+level 'CSPPD3-u3 what is a challenge'
+level 'CSPPD3-u3 completing the challenge'
+level 'CSPPD3-u3 list of challenges'
+level 'CSPPD3-u2 expectations'
+level 'CSPPD3-u3 pick a challenge'
+
+stage 'Complete the Challenge' 
+level  'CSPPD3-u3 complete the challenge overview'
+level 'CSPPD3-u3 do the challenge'
+level 'CSPPD3-u2 create your extension'
+level 'CSPPD3-u2 reflect on challenge'
+
+stage 'Share out and Submit' 
+level  'CSPPD3-u3 share out overview'
+level 'CSPPD3-u3 post to forum'
+level 'CSPPD3-u3 submit forum link'
+level 'CSPPD3-u2 final progress check'
+level 'CSPPD3-u3 post survey'

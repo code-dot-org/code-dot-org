@@ -34,6 +34,7 @@ module LevelsHelper
       data = storage_app.get(src)
       data['name'] = "Remix: #{data['name']}"
       data['hidden'] = false
+      data['frozen'] = false
     end
 
     timestamp = Time.now
@@ -125,6 +126,8 @@ module LevelsHelper
     return @app_options unless @app_options.nil?
 
     set_channel if @level.channel_backed?
+
+    view_options server_level_id: @level.id
 
     unless params[:share]
       # Set videos and callouts.
@@ -310,7 +313,12 @@ module LevelsHelper
         callback: @callback,
     }
 
-    level_options[:lastAttempt] = @last_attempt
+    unless params[:no_last_attempt]
+      level_options[:lastAttempt] = @last_attempt
+      if @last_activity
+        level_options[:lastAttemptTimestamp] = @last_activity.updated_at.to_datetime.to_milliseconds
+      end
+    end
 
     if current_user.nil? || current_user.teachers.empty?
       # only students with teachers should be able to submit
@@ -346,7 +354,6 @@ module LevelsHelper
     embed
     share
     hide_source
-    script_level_id
     submitted
     unsubmit_url
   ))

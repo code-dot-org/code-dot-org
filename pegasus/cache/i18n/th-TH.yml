@@ -1,18 +1,19 @@
 "th-TH":
+  hour_of_code: ช่วงเวลาของ Code
   hello: สวัสดีชาวโลก
-  select_language: โปรดเลือกภาษาของคุณ
+  select_language: กรุณาเลือกภาษาของคุณ
   en: วิทยาการคอมพิวเตอร์
-  computer_science_edweek: สัปดาห์การศึกษาวิทยาศาสตร์คอมพิวเตอร์
+  computer_science_edweek: สัปดาห์การศึกษาวิทยาการคอมพิวเตอร์
   csedweek_dates: 8-14 ธันวาคม 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> กำลังจะมาถึง. บอกคุณครูของคุณ, <a href="http://hourofcode.com"
+    font-weight:bold">Hour of Code</a> กำลังจะมาถึง บอกคุณครูของคุณ <a href="http://hourofcode.com"
     style="color: white; text-decoration:underline; font-weight:bold"> เพื่อช่วยคุณวางแผนการเรียนโครงการ
     Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">คุณเป็นครูสอนวิทยาศาสตร์คอมพิวเตอร์หรือเปล่า? เรียกดูเนื้อหาจาก
+    none; font-weight: 400">คุณเป็นครูสอนวิทยาการคอมพิวเตอร์หรือเปล่า? เรียกดูเนื้อหาจาก
     CSEdWeek ได้ที่นี่</a>'
-  n_have_learned_an_hoc: <h1>ลองเรียน</h1><h2>Hour of Code</h2><h3># คน ได้เข่าร่วมแล้ว</h3>
-  anybody_can_learn: ทุกคนก็สามารถเรียนรู้ได้
+  n_have_learned_an_hoc: <h1>ลองเรียน</h1><h2>Hour of Code</h2><h3># คน ได้เริ่มเรียนไปแล้ว</h3>
+  anybody_can_learn: ทุกคนสามารถเรียนรู้ได้
   learn_now: เรียนตอนนี้
   petition_message: นักเรียนทุกคนจากทุกโรงเรียนควรมีโอกาสที่จะได้เรียนรู้วิทยาการคอมพิวเตอร์
   petition_sign_message: 'ถ้าคุณเห็นด้วย ลงชื่อของคุณได้เลย มาเข้าร่วม #'
@@ -22,15 +23,15 @@
   name: ชื่อ
   email: อีเมล
   zipcode: รหัสไปรษณีย์หรือประเทศ
-  submit: เสนอ
-  twentyhours_heading: ทดลองเรียน หลักสูตรวิทยาศาสตร์คอมพิวเตอร์เบื้องต้น
-  twentyhours_text: เสร็จสิ้นการเรียนบทแรกของ Hour of Code แล้วใช่ไหม? เรียนรู้เพิ่มเติมเกี่ยวกับหลักสูตรคอมพิวเตอร์วิทยาศาสตร์
-    และหลักการเขียนโปรแกรม (Programming Concepts) ได้ในหลักสูตรถัดไป
+  submit: ส่ง
+  twentyhours_heading: ทดลองเรียนหลักสูตรวิทยาศาสตร์คอมพิวเตอร์เบื้องต้นของเรา
+  twentyhours_text: เรียนบทแรกของ Hour of Code แล้วใช่ไหม? เรียนรู้เพิ่มเติมเกี่ยวกับหลักสูตรวิทยาการคอมพิวเตอร์
+    และหลักการเขียนโปรแกรม (Programming Concepts) ได้ในหลักสูตรต่อไปนี้
   hoc2014_heading: เข้าร่วม <a href="http://hourofcode.com">Hour of Code</a><br/>
-    ในช่วงเวลา 8 - 14 ธันวาคม 2557<br/>
+    ในวันที่ 8 - 14 ธันวาคม 2014<br/>
   hoc2014_students: Students
   hoc2014_try: ลอง
-  hoc2014_teachers: ครูผู้สอน
+  hoc2014_teachers: ครู
   hoc2014_host: เป็นเจ้าภาพ
   hoc2014_everyone: ทุกคน
   hoc2014_support: สนับสนุน &#x25BE;
@@ -38,8 +39,11 @@
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_search_search: ค้นหา
   csedweek_map_search_reset: ตั้งค่าใหม่
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: สมัครสมาชิก
   cded_try_it: ลอง
   twentyhours_trynow: ลองตอนนี้
@@ -51,7 +55,7 @@
   flappy_heading: Flappy Birthday to Code.org
   flappy_text: Code.org อายุ 1 ขวบแล้ว<br/><br/> ร่วมเฉลิมฉลองกับเรา ด้วยการสร้างเกม
     <b>Flappy</b> ในแบบของคุณเอง คิดและเขียนด้วยไอเดียของคุณ แล้วแบ่งปันให้เพื่อนๆได้ลองใช้!
-  view_english_site: ดูหน้าเว็บเป็นภาษาอังกฤษ
+  view_english_site: ดูหน้าเว็บภาษาอังกฤษ
   non_english_tutorials: โปรแกรมการสอนได้รับการแปลเป็นหลายภาษา เช่น
   write_your_first_program: เขียนโปรแกรมแรกของคุณ
   learn_cs_concepts: เรียนรู้แนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ด้วยการโปรแกรมแบบลากวาง
@@ -60,11 +64,14 @@
   all_ages: ทุกเพศทุกวัย
   beginner: ผู้เริ่มต้น
   n_participants: '# ผู้มีส่วนร่วม'
-  go: ไป
+  go: เริ่ม
   thank_you_: ขอบคุณ!
   congratulations: ขอแสดงความยินดี!
   congratulations_on_completing_hoc: ขอแสดงความยินดีในการผ่านการเรียนเขียนโปรแกรมกับ
     Hour of Code 1 หลักสูตร
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
   course_name_accelerated: Accelerated Course
   course_name_course1: คอร์ส 1
   course_name_course2: คอร์ส 2
@@ -75,7 +82,7 @@
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
   get_a_certificate_of_achievement: รับใบประกาศนียบัตร
-  enter_valid_age: Please select a valid age
+  enter_valid_age: กรุณาเลือกอายุปัจจุบันของคุณ
   enter_valid_email: กรุณาใส่อีเมลที่ถูกต้อง
   get_a_certificate_message: เราจะส่งประกาศนียบัตรและข้อมูลเกี่ยวกับ <a href='/learn/beyond'>การเรียนมากกว่า
     1 ชั่วโมง</a>
@@ -130,8 +137,6 @@
   just_did_hoc: 'ฉันเพิ่งเรียน #HourOfCode - เข้าร่วมเรียน! @codeorg'
   twitter_teach_cs: ทำไมโรงเรียนไม่หันมาสอนวิทยาการคอมพิวเตอร์ให้มากขึ้น เราสามารถแก้ไขปัญหานี้ได้
     http://youtu.be/nKIu9yen5nc เยี่ยมชม http://code.org/ เพื่อเรียนรู้เพิ่มเติม
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: เข้าร่วมเรียน Hour of Code
   beyond_hoc: เกินหนึ่งชั่วโมง
   what_gender: คุณเพศอะไร
@@ -228,8 +233,15 @@
   homepage_slot_text_course4: คอร์ส 4
   homepage_slot_text_shop: ร้านค้า
   homepage_slot_text_flappy: Flappy Code
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: '# คน เข้าร่วมแล้ว'
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: สมัครสมาชิก
+  homepage_action_text_try_it: ลอง
+  homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_codevideo: ดูวีดีโอ
   homepage_action_text_teachervideo: ดูวีดีโอ
+  homepage_action_text_girlvideo: Inspire a girl
   homepage_action_text_learn: เริ่มต้นการเรียนรู้กันเลย
   homepage_action_text_signpetition: ลงนามในคำร้อง
   homepage_signpetition_dropdown: ลงนามในคำร้อง &#x25BE;
@@ -241,7 +253,7 @@
   homepage_banner_text_link: สิ่งที่น่าเรียนรู้ยังมีอีก
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: เรียนรู้เพิ่มเติม
+  homepage_banner_privacy_link: สิ่งที่น่าเรียนรู้ยังมีอีก
   homepage_slot_text_title_hoc: ช่วงเวลาของ Code
   homepage_slot_text_blurb_hoc: ทุกคนสามารถเรียนรู้ได้ เริ่มต้นวันนี้
   homepage_slot_text_link_hoc: ลองใช้ Hour of Code สิ
@@ -306,6 +318,32 @@
   class_submission_level_college: มหาวิทยาลัย
   class_submission_level_vocational: อาชีวศึกษา
   class_submission_languages_other: ภาษาอื่น ๆ
+  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
+    videos</a> by role models and celebrities
+  starwars_subtitle: Building a Galaxy With Code
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: ลองตอนนี้
+  starwars_blocks_title: บล็อก
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
+  starwars_blocks_start_button: ลองตอนนี้
+  starwars_watch_videos: Before you get started, watch one of these inspirational
+    videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  starwars_platform_text: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_gradelevel: Ages 4-104
+  mc_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -317,23 +355,26 @@
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: ชื่อ
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
+  volunteer_engineer_submission_field_name_placeholder: ชื่อเต็ม
+  volunteer_engineer_submission_field_company: บริษัท (หรือ มหาวิทยาลัย)
+  volunteer_engineer_submission_field_company_placeholder: บริษัท (หรือ มหาวิทยาลัย)
+  volunteer_engineer_submission_field_experience_level: ระดับประสบการณ์
+  volunteer_engineer_submission_field_location: ที่อยู่
   volunteer_engineer_submission_field_location_desc: If you enter your exact address
     we won't share it, just show you as a pin on map.
   volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
@@ -346,7 +387,7 @@
     of Code
   volunteer_engineer_submission_field_linkedin: LinkedIn profile
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook: โปรไฟล์ Facebook
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: รายละเอียด
   volunteer_engineer_submission_field_description_desc: Describe your computer science
@@ -365,7 +406,7 @@
     (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
-  volunteer_engineer_submission_submit: เสนอ
+  volunteer_engineer_submission_submit: ส่ง
   volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
     of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
     more here.</a>
@@ -374,18 +415,33 @@
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ชั่วโมงต่อสัปดาห์
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 ชั่วโมงต่อสัปดาห์
   volunteer_engineer_submission_commitment_now_and_then: บางครั้ง
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: 2-3 ครั้งต่อปี
+  volunteer_engineer_submission_commitment_monthly: สองสามชั่วโมงต่อเดือน
+  volunteer_engineer_submission_commitment_weekly: สองสามชั่วโมงต่อสัปดาห์
   volunteer_engineer_submission_commitment_more: เพิ่มเติม
   volunteer_engineer_submission_location_flexibility_onsite: ปฏิบัติที่โรงเรียน
   volunteer_engineer_submission_location_flexibility_remote: ปรึกษาจากระยะไกล (ครูหรือนักเรียน)
   volunteer_engineer_submission_location_flexibility_curriculum: ยินดีที่จะช่วยสนับสนุนโครงการ
     open-source
   volunteer_engineer_submission_experience_unspecified: ไม่ได้ระบุไว้
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: นักศึกษามหาวิทยาลัย
     (หรือ นักวิจัย)
   volunteer_engineer_submission_experience_software_professional: ผู้เชี่ยวชาญด้านซอฟต์แวร์
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
   petition_age: อายุ
   dashboard_landing_title: หน้าแรกของคุณครู
   dashboard_landing_welcome: ยินดีต้อนรับสู่แดชบอร์ดรูปแบบใหม่ ของคุณครู
@@ -564,7 +620,7 @@
   dashboard_curriculum_csina: 'Computer Science in Algebra:'
   dashboard_curriculum_csins: 'Computer Science in Science:'
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_ecs: 'ทำความรู้จักกับวิทยาการคอมพิวเตอร์:'
   dashboard_grade_k: K
   dashboard_grade_other: อาชีพอื่น ๆ
   dashboard_login_word: คำ
@@ -579,8 +635,8 @@
   dashboard_progress_furthest_level_attempted: furthest level attempted
   dashboard_stage: ขั้นตอน
   dashboard_puzzle: ปริศนา
-  dashboard_question: Question
-  dashboard_response: Response
+  dashboard_question: คำถาม
+  dashboard_response: คำตอบ
   stats_hoc_2013_heading: 'สถิติที่น่าทึ่งของ Hour of Code.  ในหนึ่งสัปดาห์ '
   stats_hoc_2013_image_alt: 'สถิติจาก Hour of Code ปี 2013 '
   dashboard_teacher: ครู
@@ -598,25 +654,41 @@
     <b>รูปภาพ คำ หรืออีเมล์</b> ซึ่งคุณจะต้องเลือกใช้
   dashboard_faq: คำถามที่พบบ่อย
   dashboard_faq_k5: คำถามที่พบบ่อย ของ ประถม5 ( K-5 )
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
-  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
+  dashboard_announcements: ประกาศ
+  dashboard_announce_view_all: ดูทั้งหมด
+  dashboard_announce_hoc: <b>15 ตุลาคม 2015</b> - Hour of Code กำลังมา &mdash; ทุกคนที่เข้าร่วมจะได้รับบัตรของขวัญสำหรับซื้อสินค้าใน
+    Amazon.com หรือ Microsoft.com เป็นของขวัญขอบคุณ เข้าร่วมห้องเรียนทั่วโลกในระหว่างวันที่
+    7-13 ธันวาคม
   code_hoc_coming: นี่คือ Hour of Code - 8-14 ธันวาคม!
   code_sign_up: ลงทะเบียนเพื่อเข้าร่วมในช่วงสัปดาห์ของวิทยาการคอมพิวเตอร์
   learn_more: เรียนรู้เพิ่มเติม
-  learn_sign_up_description: Sign up to participate in the Hour of Code during CS
-    Education Week
+  learn_sign_up_description: ลงทะเบียนเพื่อเข้าร่วม Hour of Code ระหว่างสัปดาห์การศึกษา
+    CS
   learn_sign_up_button: สมัครสมาชิก
-  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_videos_watch: Watch this inspirational video with your classroom
+  learn_videos_show: Show this inspirational video to your class
+  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_educator_resources_description: เรียนรู้วิธีการสอน Hour of Code
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">เรียนรู้เพิ่มเติม</a>เกี่ยวกับรางวัลสำหรับนักศึกษาทุกคน
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: ลองเรียน Hour of Code หลักสูตรใหม่
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, และ Scrat
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Tutorials by 3rd parties
+  carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: ฝึกฝนในภาษาของคุณ
   carousel_heading_domestic: การสอนเป็นภาษาอังกฤษ
   carousel_heading_beginners: บทเรียนสำหรับผู้เริ่มต้น
@@ -631,6 +703,7 @@
   carousel_heading_robots: เรียนเขียนโปรแกรมกับหุ่นยนต์
   carousel_heading_ide: แพลตฟอร์มที่นิยมในหมู่คุณครู
   educator_notes: บันทึกของผู้สอน
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   how_to_teach_hoc: วิธีการสอน Hour of Code
   more_resources_educators: แหล่งข้อมูลเพิ่มเติมสำหรับครูและนักศึกษา
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -645,6 +718,7 @@
     href="http://browsehappy.com/" target="_blank"> เว็บเบราเซอร์ที่ทันสมัย</a> เพื่อที่จะเข้าถึงบทเรียนทั้งหมด '
   mobile_devices: บทเรียนสำหรับอุปกรณ์มือถือ
   frozen_name: Code with Anna and Elsa
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
   codeorg_name: เขียนโปรแกรมแรกของคุณ
   codeintl_name: เขียนโปรแกรมแรกของคุณ
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -684,6 +758,8 @@
   projguts_name: ค้อน กรรไกร กระดาษ เป่ายิ้งฉุบ
   hourofcode_name: พื้นที่สำหรับ code.org/hoc ใหม่
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: ศิลปิน
   codeorg_gradelevel: อายุ 4 - 104 ปี
   codeintl_gradelevel: อายุ 4 - 104 ปี
   thinkersmithspanish_gradelevel: Por todos
@@ -723,7 +799,10 @@
   projguts_gradelevel: อายุ 10-13 ปี
   hourofcode_gradelevel: อายุ 4 - 104 ปี
   frozen_gradelevel: อายุ 8 ปีขึ้นไป
+  starwars_gradelevel: Ages 6+
   playlab_gradelevel: อายุ 4 - 104 ปี
+  infinity_gradelevel: อายุ 4 - 104 ปี
+  artist_gradelevel: อายุ 4 - 104 ปี
   codeorg_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
   codeintl_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
   thinkersmithspanish_platformtext: ถอดปลั๊ก
@@ -763,6 +842,7 @@
   projguts_platformtext: ถอดปลั๊ก
   hourofcode_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
   frozen_platformtext: เบราว์เซอร์ที่ทันสมัย + แท็บเล็ต
+  starwars_platformtext: เบราว์เซอร์ที่ทันสมัย + แท็บเล็ต
   playlab_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
   codeorg_shortdescription: เรียนรู้การเขียนโค้ดกับ Mark Zuckerberg และเกม Angry Birds!
   codeintl_shortdescription: เรียนรู้การเขียนโค้ดกับ Mark Zuckerberg และเกม Angry
@@ -807,9 +887,15 @@
   thinkersmith2_shortdescription: เรียนรู้ว่าคอมพิวเตอร์ใช้เลข 1 และ 0 เพื่อแสดงข้อมูลอย่างไร
   kodableunplugged_shortdescription: กิจกรรมแบบออฟไลน์ที่สนุกสนาน
   projguts_shortdescription: สร้างแบบจำลองและลองเล่น ด้วยเกมเป่ายิ้งฉุบ
-  hourofcode_shortdescription: พื้นที่สำหรับ code.org/hoc ใหม่
+  hourofcode_shortdescription: เรียนรู้การเขียนโค้ดกับ Mark Zuckerberg และเกม Angry
+    Birds!
   frozen_shortdescription: ลองใช้โค้ด เพื่อเข้าช่วย Anna และ Elsa สำรวจความมหัศจรรย์แห่งเมืองน้ำแข็ง
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the ศิลปิน!
   codeorg_longdescription: เรียนรู้แนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ ผ่านการลากและวาง  เริ่มเข้าสู่บทเรียน
     โดย Bill Gates, Mark Zuckerberg, Angry Birds และ Plants vs. Zombies เรียนรู้เรื่อง
     Loop เงื่อนไข และอัลกอริทึมพื้นฐาน ซึ่งมีให้เรียนมากถึง 34 ภาษา
@@ -919,6 +1005,8 @@
   frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
+  starwars_longdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
     pirates, zombies, ninjas, and many more characters move, make sounds, score points,
     and even throw fireballs!
@@ -1215,68 +1303,16 @@
     3D โครงการ Alice มีเครื่องมือและวัสดุสำหรับการสอนและการเรียนเรียนรู้เกี่ยวกับ
     การคิดคำนวณ การแก้ปัญหา และการเขียนโปรแกรมสำหรับทุกเพศทุกวัย
   sphero_beyond_longdescription: ไม่ว่าคุณจะเป็นผู้สอหรือผู้ปกครอง บทเรียน SPRK จะสอนให้เด็กๆสนุกกับการเขียนโปรแกรมหุ่นยนต์ในขณะที่ฝึกทักษะในทางคณิตศาสตร์และวิทยาศาสตร์ไปพร้อมๆกัน
-  compatibility_https_header: Please enable HTTPS for Code.org.
-  compatibility_https_message: To increase security, we are switching to HTTPS on
-    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-    here</a> to learn how to enable HTTPS for Code.org.
+  compatibility_https_header: กรุณาเปิดใช้งาน HTTPS สำหรับ Code.org
+  compatibility_https_message: เพื่อเพิ่มความปลอดภัย เรากำลังจะสลับไป HTTPS ในวันที่
+    %{https_date} คุณจะไม่สามารถเข้าถึง Code.org ได้หลังจากวันนี้ <a href='%{it_requirements_url}'>คลิกที่นี่</a>เพื่อเรียนรู้วิธีการเปิดใช้งาน
+    HTTPS สำหรับ Code.org
   compatibility_https_hide_this_warning: Hide this warning
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: '# served'
-  homepage_action_text_join_us: Join us
-  homepage_action_text_sign_up: Sign up
-  homepage_action_text_try_it: Try it
-  homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_girlvideo: Inspire a girl
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
-  starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
-  starwars_javascript_start_button: Try now
-  starwars_blocks_title: Blocks
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
-  starwars_blocks_start_button: Try now
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_gradelevel: Ages 4-104
-  mc_platformtext: Modern browsers, smartphones, tablets
-  minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  starwars_gradelevel: Ages 6+
-  starwars_platformtext: Modern browsers + tablets
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: บิน
+  infinity_shortcode: inf
+  playlab_shortcode: เล่น
+  artist_shortcode: art

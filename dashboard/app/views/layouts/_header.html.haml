@@ -53,6 +53,8 @@
                 %i.fa.fa-calculator
               %a.header_status_bar.level_free_play.eval_free_play{title: t('nav.header.free_play.artist'), href: eval_project_projects_path, style: 'display: none;'}
                 %i.fa.fa-pencil
+              %a.header_status_bar.level_free_play.applab_free_play{title: t('nav.header.free_play.applab'), href: applab_project_projects_path, style: 'display: none;'}
+                %i.fa.fa-mobile
             - if params[:controller] !~ /^sessions/ and signin_button_enabled
               = render partial: 'shared/user_header_ajax'
 
@@ -61,5 +63,5 @@
 
   :javascript
     //<![CDATA[
-    dashboard.buildHeader(#{script_level.stage.summarize.to_json}, #{user_progress}, #{script_level.level_id}, #{@user.try(:id) || 'null'}, #{@section.try(:id) || 'null'})
+    dashboard.buildHeader(#{script_level.stage.summarize.to_json}, #{user_progress}, #{script_level.level_id}, #{@user.try(:id) || 'null'}, #{@section.try(:id) || 'null'}, "#{script.name}")
     //]]>

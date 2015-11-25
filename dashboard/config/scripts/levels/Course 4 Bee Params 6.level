@@ -12,7 +12,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
-    "disable_variable_editing": "true",
+    "disable_variable_editing": "false",
     "start_direction": "1",
     "step_mode": "1",
     "nectar_goal": "13",
@@ -31,7 +31,6 @@
     "disable_examples": "false",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "maze_data": null,
     "fast_get_nectar_animation": "true"
   }
 }]]></config>

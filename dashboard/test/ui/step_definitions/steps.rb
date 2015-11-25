@@ -37,6 +37,11 @@ When /^I close the dialog$/ do
   }
 end
 
+When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until { @browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';") }
+end
+
 When /^I reset the puzzle to the starting version$/ do
   steps %q{
     Then I click selector "#versions-header"
@@ -58,18 +63,18 @@ end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $(\"#{selector}\").text();").include? text }
+  wait.until { @browser.execute_script("return $(#{selector.dump}).text();").include? text }
 end
 
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $('#{selector}').is(':visible')") }
+  wait.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
 end
 
 # Required for inspecting elements within an iframe
 When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |selector, parent_selector|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $('#{selector}', $('#{parent_selector}').contents()).is(':visible')") }
+  wait.until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }
 end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
@@ -123,11 +128,11 @@ When /^I press the "([^"]*)" button$/ do |buttonText|
 end
 
 When /^I press "([^"]*)" using jQuery$/ do |selector|
-  @browser.execute_script("$('" + selector + "').click()");
+  @browser.execute_script("$(#{selector.dump}).click()");
 end
 
 When /^I press SVG selector "([^"]*)"$/ do |selector|
-  @browser.execute_script("$('" + selector + "').simulate('drag', function(){});")
+  @browser.execute_script("$(#{selector.dump}).simulate('drag', function(){});")
 end
 
 When /^I press the last button with text "([^"]*)"$/ do |name|
@@ -187,6 +192,10 @@ When /^I click selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
 end
 
+When /^I focus selector "([^"]*)"$/ do |jquery_selector|
+  @browser.execute_script("$(\"#{jquery_selector}\")[0].focus();")
+end
+
 When /^I send click events to selector "([^"]*)"$/ do |jquery_selector|
   # svg elements can only be clicked this way
   @browser.execute_script("$(\"#{jquery_selector}\").click();")
@@ -229,9 +238,23 @@ Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
   @browser.execute_script("return #{expression}")
 end
 
+Then /^mark the current level as completed on the client/ do
+  @browser.execute_script %q-$.cookie('progress', '{"hourofcode":{"' + appOptions.serverLevelId + '":100}}')-
+end
+
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
 Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
+  element_has_text(selector, expectedText)
+end
+
+Then /^I set selector "([^"]*)" text to "([^"]*)"$/ do |selector, text|
+  @browser.execute_script("$(\"#{selector}\").text(\"#{text}\");")
+end
+
+Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
+  # Add more unescaping rules here as needed.
+  expectedText.gsub!(/\\n/, "\n")
   element_has_text(selector, expectedText)
 end
 
@@ -243,6 +266,16 @@ Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
   steps %{
     Then I wait to see a ".dialog-title"
     And element ".dialog-title" has text "#{expectedText}"
+  }
+end
+
+# pixelation and other dashboard levels pull a bunch of hidden dialog elements
+# into the dom, so we have to check for the dialog more carefully.
+Then /^I wait to see a visible dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+  steps %{
+    And I wait to see ".modal-body"
+    And element ".modal-body .dialog-title" is visible
+    And element ".modal-body .dialog-title" contains text "#{expectedText}"
   }
 end
 
@@ -274,23 +307,23 @@ Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
 end
 
 Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
-  visibility = @browser.execute_script("return $('#{selector}').css('visibility')");
-  visible = @browser.execute_script("return $('#{selector}').is(':visible')") && (visibility != 'hidden');
+  visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')");
+  visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden');
   visible.should eq (negation.nil?)
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
-  @browser.execute_script("return $('#{selector}').length").should eq 0
+  @browser.execute_script("return $(#{selector.dump}).length").should eq 0
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
-  visibility = @browser.execute_script("return $('#{selector}').css('visibility')");
-  visible = @browser.execute_script("return $('#{selector}').is(':visible')") && (visibility != 'hidden');
+  visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')");
+  visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden');
   visible.should eq false
 end
 
 def has_class(selector, class_name)
-  @browser.execute_script("return $('#{selector}').hasClass('#{class_name}')")
+  @browser.execute_script("return $(#{selector.dump}).hasClass('#{class_name}')")
 end
 
 Then /^element "([^"]*)" has class "([^"]*)"$/ do |selector, class_name|
@@ -498,9 +531,17 @@ Given(/^I manually sign in as "([^"]*)"$/) do |name|
   }
 end
 
+When(/^I sign out$/) do
+  steps 'When I am on "http://studio.code.org/users/sign_out"'
+end
+
 When(/^I debug cookies$/) do
   puts "DEBUG: url=#{CGI::escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
+end
+
+When(/^I debug focus$/) do
+  puts "Focused element id: #{@browser.execute_script("return document.activeElement.id")}"
 end
 
 And(/^I ctrl-([^"]*)$/) do |key|
@@ -545,6 +586,11 @@ end
 
 When /^I disable onBeforeUnload$/ do
   @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
+end
+
+Then /^I get redirected away from "([^"]*)"$/ do |old_path|
+  wait = Selenium::WebDriver::Wait.new(timeout: 30)
+  wait.until { !/#{old_path}/.match(@browser.execute_script("return location.pathname")) }
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|

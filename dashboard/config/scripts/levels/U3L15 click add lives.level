@@ -135,7 +135,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Add lives to the clicker game that decrement by 1 when the background image is clicked (Click to see full instructions)",
-    "markdown_instructions": "# Tracking lives\r\n\r\nIn the game, the number of lives starts at 3 and decrements by 1 every time the background image is clicked. Add this functionality to your game!\r\n\r\n# Do This:\r\n- __Add your variable to keep track of lives.__\r\n- __Add a click handler for the background image.__ _ID: \"background\"_\r\n- __When the background is clicked, decrement the number of lives by 1.__\r\n\r\n<img src=\"https://images.code.org/79f1352aebb2e40c302d1900aacd31f4-image-1446138180044.gif\" style=\"width:200px;\">",
+    "markdown_instructions": "# Tracking Lives\r\n\r\nIn the game, the number of lives starts at 3 and decrements by 1 every time the background image is clicked. Add this functionality to your game!\r\n\r\n# Do This:\r\n- __Add your variable to keep track of lives.__\r\n- __Add a click handler for the background image.__ _ID: \"background\"_\r\n- __When the background is clicked, decrement the number of lives by 1.__\r\n\r\n<img src=\"https://images.code.org/79f1352aebb2e40c302d1900aacd31f4-image-1446138180044.gif\" style=\"width:200px;\">",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -164,7 +164,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "lock_zero_param_functions": "false"
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "EmG2/AkqkFRV9fvCazwDJfM/xsJC8hqKZObPTp8J9bUVViC21WfXDU6IAbqi\nMRnw\n"
   }
 }]]></config>
   <blocks/>
