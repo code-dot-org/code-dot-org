@@ -31,7 +31,7 @@ class QueueProcessorManager
       processor.start
       @processors << processor
     end
-    return metrics_map
+    metrics_map
   end
 
   # Stop all of the queue processors in parallel.
