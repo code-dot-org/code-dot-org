@@ -63,13 +63,13 @@ module ApplicationHelper
   end
 
   def level_info(user, script_level, user_levels)
-    server_result = 0
+    result = nil
     if user
       ul = user_levels[script_level.level_id]
-      server_result = ul.try(:best_result) if ul
+      result = ul.try(:best_result) if ul
+    else
+      result = client_state.level_progress(script_level)
     end
-    client_result = client_state.level_progress(script_level)
-    result = [server_result, client_result].max
     activity_css_class(result)
   end
 
