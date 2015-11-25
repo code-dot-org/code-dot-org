@@ -206,7 +206,11 @@
           Maze and Bee: Sokkelo ja mehiläinen
           Artist Binary: 'Taiteilija: binääri'
           description_audience: 10+ -vuotiaille (kurssin 3 jälkeen)
-          Super Challenge - Variables: Super Challenge - Variables
+          Super Challenge - Variables: Superhaaste - muuttujat
+          Super Challenge - For Loops: Superhaaste - For-silmukat
+          Super Challenge - Functions and Parameters: Superhaaste - Funktioita ja
+            parametreja
+          Extreme Challenge - Comprehensive: Äärimmäinen haaste - Kokonaisuus
         Course4pre:
           title: Kurssin 4 esitiedot
           description_short: Lyhyt kertaus käsitteistä oppilaille, jotka eivät ole
@@ -274,11 +278,11 @@
           'Play Lab: Collision Detection (Big Game)': 'Pelilabra: Törmäyksen tunnistaminen
             (Iso Peli)'
         infinity:
-          title: Disneyn Infinity Pelilabra
-          description_short: Tee Pelilabrassa tarina tai peli jonka pääosassa on Disneyn
-            Infinity hahmot.
-          description: Tee Pelilabrassa tarina tai peli jonka pääosassa on Disneyn
-            Infinity hahmot.
+          title: Disneyn Infinity-Pelilabra
+          description_short: Tee Pelilabrassa tarina tai peli jonka pääosassa ovat
+            Disneyn Infinity-hahmot.
+          description: Tee Pelilabrassa tarina tai peli jonka pääosassa ovat Disneyn
+            Infinity-hahmot.
           Play Lab: Pelilabra
           Infinity: Ääretön
         algebrademo:
@@ -290,7 +294,7 @@
           Algebra Demo: Algebran esittely
           Evaluation Blocks: Arviointilohkot
           Making Pictures: Kuvia tekemässä
-          Defining Variables: Määritellään muuttujat
+          Defining Variables: Muuttujien määrittely
           Defining Simple Functions: Yksinkertaisten funktioiden määrittely
           The Design Recipe: Suunnitteluresepti
         K5PD:
@@ -356,13 +360,13 @@
           Color Pixelation Examples: Color Pixelation Examples
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)
+          title: Nopeutettu tietojenkäsittelyn johdantokurssi
           description_audience: 10+ -vuotiaille (kurssin 3 jälkeen)
           description: Tämä 20 tunnin kurssi esittelee keskeiset tietotekniikan ja
             ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa,
             mutta siinä on hauskaa opittavaa kaiken ikäisille.
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
+          description_short: Tämä 20-tuntinen kurssi kattaa kursseilla 2-4 käsitellyt
+            tietojenkäsittelyn ja ohjelmoinnin ydinkäsitteet.
           Introduction to Computer Science: Johdanto tietojenkäsittelyyn
           The Maze: Sokkelo
           Computational Thinking: Automatisointiajattelu
@@ -391,7 +395,8 @@
           Applab: Applab
           The Artist: Taiteilija
           Play Lab: Pelilabra
-          Play Lab 2015: Play Lab 2015
+          Play Lab 2015: Pelilabra 2015
+          Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: Tapahtumat
           description: Tapahtumat
@@ -404,21 +409,22 @@
           title: Flappy Code
           description: Haluatko kirjoittaa oman pelin alle 10 minuutissa? Kokeile
             Flappy Code -oppituntia!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Luo oma Flappy-pelisi alle kymmenessä minuutissa!
           Flappy Code: Flappy Code
         jigsaw:
           title: Palapeli
-          description: ''
-          description_short: Try our Jigsaw tutorial
+          description: Kokeile "Palapeli"-aloitusohjettamme
+          description_short: Kokeile "Palapeli"-aloitusohjettamme
           Jigsaw: Palapeli
         step:
           title: Askel
-          description: ''
-          description_short: Step tutorial
+          description: Vaiheittainen oppitunti
+          description_short: Vaiheittainen oppitunti
           Step: Askel
         Hour of Code:
           title: Kooditunti 2013
-          description: ''
+          description: Kokeile tietojenkäsittelytieteen perusteita Angry Birds ja
+            Plants vs. Zombies -pelien hahmoilla!
           description_short: Kokeile tietojenkäsittelytieteen perusteita hauskojen
             hahmojen seurassa!
           Hour of Code 2013: Kooditunti 2013
@@ -712,6 +718,39 @@
           'Variables: Create, Assign, and Read': 'Variables: Create, Assign, and Read'
           'Variables: Increment, Decrement, Display, and Scope': 'Variables: Increment,
             Decrement, Display, and Scope'
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistant: Introduction to Digital Assistant
+          'Improving Digital Assistant: Conditionals': 'Improving Digital Assistant:
+            Conditionals'
+          'Improving Digital Assistant: Functions with Return': 'Improving Digital
+            Assistant: Functions with Return'
+          'Improving Digital Assistant: Complex Conditionals': 'Improving Digital
+            Assistant: Complex Conditionals'
+          Conditionals with Movie Bot: Conditionals with Movie Bot
+          Improving Digital Assistant with Conditionals: Improving Digital Assistant
+            with Conditionals
+          Chained and Nested Conditionals with Movie Bot: Chained and Nested Conditionals
+            with Movie Bot
+          Compound Conditionals with Movie Bot: Compound Conditionals with Movie Bot
+          'Practice PT: Digital Assistant': 'Practice PT: Digital Assistant'
+          Practice PT - Design a Digital Scene: Practice PT - Design a Digital Scene
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          Introduction to Digital Assistant Project: Introduction to Digital Assistant
+            Project
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: Niin kauan kuin -silmukat
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -844,8 +883,8 @@
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
+          description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -924,11 +963,11 @@
           Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
+          description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           Evaluation Blocks: Arviointilohkot
           Strings and Images: Merkkijonoja ja kuvia
-          Defining Variables: Määritellään muuttujat
+          Defining Variables: Muuttujien määrittely
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           The Design Recipe: Suunnitteluresepti
@@ -941,7 +980,7 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
-          Free Play: Ilmainen peli
+          Free Play: Vapaata kokeilua
         allthethings:
           Jigsaw: Palapeli
           Maze: Sokkelo
@@ -972,15 +1011,15 @@
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
+          description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Arviointilohkot
           Strings and Images: Merkkijonoja ja kuvia
           Writing Contracts: Writing Contracts
-          Defining Variables: Määritellään muuttujat
+          Defining Variables: Muuttujien määrittely
           Defining Functions: Funktioiden määrittely
           Rocket-Height: Rocket-Height
           Booleans: Totuusarvot
@@ -1030,8 +1069,8 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
+          description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           Welcome!: Tervetuloa!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -1087,21 +1126,21 @@
           Equity PD: Equity PD
         hoc2015:
           title: Kooditunti 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          description_short: Käytä Pelilabraa luodaksesi tarinan tai pelin.
+          description: Käytä Pelilabraa luodaksesi tarinan tai pelin.
           Hour of Code: Koodaustunti
           Hour of Code 2015: Kooditunti 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
+          description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Arviointilohkot
           Strings and Images: Merkkijonoja ja kuvia
           Writing Contracts: Writing Contracts
-          Defining Variables: Määritellään muuttujat
+          Defining Variables: Muuttujien määrittely
           Defining Functions: Funktioiden määrittely
           Rocket-Height: Rocket-Height
           Booleans: Totuusarvot
@@ -1116,8 +1155,8 @@
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
+          description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           Welcome!: Tervetuloa!
           Wrap-Up: Yhteenveto
           Review StarLogo Nova: Review StarLogo Nova
@@ -1133,8 +1172,8 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
+          description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           Welcome!: Tervetuloa!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1155,8 +1194,8 @@
         sciencePD2b-iZone:
           Welcome!: Tervetuloa!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
+          description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1165,8 +1204,8 @@
           Wrap-Up: Yhteenveto
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
+          description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           Welcome!: Tervetuloa!
           0: |
             Unit 1, Days 1-2
@@ -1189,8 +1228,8 @@
           Wrap-up: Yhteenveto
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
+          description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           Welcome!: Tervetuloa!
           0: |
             Unit 1, Days 1-2
@@ -1362,6 +1401,15 @@
           Day 22-25 Final Project: Day 22-25 Final Project
           'Day 15-16 HTML and CSS: Tables, Lists, Menus': 'Day 15-16 HTML and CSS:
             Tables, Lists, Menus'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
+          Intro to Unit 3: Intro to Unit 3
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
         ECSPD3-Unit4:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1390,6 +1438,13 @@
           Day 25-30 Final Project: Day 25-30 Final Project
           Unit 4 Challenge Planning: Unit 4 Challenge Planning
           Unit 4 Challenge Creation: Unit 4 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: Close & Next Steps
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1441,6 +1496,8 @@
           'Data App Part 8: Visualize Data': 'Data App Part 8: Visualize Data'
           'Data App Part 9: Reflect': 'Data App Part 9: Reflect'
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and
+            Clicker Completion
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1476,6 +1533,10 @@
         duino:
           Experimenting with Arduino stuff: Experimenting with Arduino stuff
           Basic Circuits: Basic Circuits
+          description: Testing some tools for teaching with Arduinos
+          Blinky Lights: Blinky Lights
+          Making Music: Making Music
+          JunkBot: JunkBot
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These
@@ -1488,3 +1549,107 @@
             puzzles might not be around long, so enjoy them while you can!
           description_audience: 10+ -vuotiaille (kurssin 3 jälkeen)
           Halloween 2015: Halloween 2015
+          description: Something special for those who know it exists. These puzzles
+            might not be around long, so enjoy them while you can!
+        iceage:
+          title: Ice Age Pelilabra
+          description_short: Luo tarina tai rakenna peli käyttäen Ice Age Pelilabraa!
+          description: Luo tarina tai rakenna peli käyttäen Ice Age Pelilabraa!
+          Ice Age Play Lab: Ice Age Pelilabra
+        CSPPD3-Unit3:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit3temp:
+          title: CSP Unit 3 - Temp
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          Key Events with Image Scroller: Key Events with Image Scroller
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Niin kauan kuin -silmukat
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
+        CSP-Unit3-Support:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+        gumball:
+          title: Gumball Pelilabra
+          description_short: Luo tarina tai rakenna peli käyttäen Gumball Pelilabraa!
+          description: Luo tarina tai rakenna peli käyttäen Gumball Pelilabraa!
+          Gumball Play Lab: Gumball Pelilabra
+        starwars:
+          title: 'Tähtien sota: Rakenna galaksi koodaten'
+          description_short: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
+            ikioma Tähtien Sota -pelisi.
+          description: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
+            ikioma Tähtien Sota -pelisi.
+          Hour of Code 2015: Kooditunti 2015
+        starwarsblocks:
+          title: 'Tähtien sota: Rakenna galaksi koodaten'
+          description_short: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
+            ikioma Tähtien Sota -pelisi.
+          description: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
+            ikioma Tähtien Sota -pelisi.
+          Hour of Code 2015: Kooditunti 2015
+        minecraft:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
+        mc:
+          title: Minecraft Hour of Code
+          description_short: Explore a Minecraft world through code
+          description: Use blocks of code to take Steve or Alex on an adventure through
+            this Minecraft world
+          Hour of Code 2015: Kooditunti 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Tervetuloa!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Yhteenveto

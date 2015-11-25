@@ -24,7 +24,7 @@
           future: No puede ser en el futuro
   hello: Hola mundo
   welcome_back: Bienvenido, %{name}
-  submit: Submit
+  submit: Enviar
   add_teacher_form:
     code:
       label: 'Agregar un maestro:'
@@ -269,6 +269,7 @@
         playlab: Hacer una aplicación
         artist: Dibujar algo
         calculate: Calculate Something
+        applab: Make an App
     user:
       classroom: Página de inicio del maestro
       district_dashboard: District Dashboard
@@ -293,6 +294,8 @@
       prize_us_only: (Sólo estudiantes de Estados Unidos)
       prizes_link: 'Más información '
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Tu profesor:'
       other: 'Tus maestros:'
@@ -313,7 +316,7 @@
       no_section: Ninguna sección asignada
       trophies: trofeos
     students:
-      name: Nombre
+      name: Nome
       username: nombre de usuario
       password: contraseña
       manage: Administrar los alumnos
@@ -423,7 +426,7 @@
     prize_info: 'Premio por participación (solo maestros de escuelas públicas de Estados
       Unidos): hasta 1000 dólares en material escolar.'
     tryfirst: 'O, puedes probarlo primero y registrarte más adelante:'
-    trynow: Probar ahora
+    trynow: Proba agora
     add_hint_help: Por favor ayúdenos a agregar consejos útiles a los tutoriales de
       Code.org
     20hour_overview: 'Este curso de 20 horas introduce el núcleo de la informática
@@ -523,6 +526,7 @@
   pdf_download: Descargar PDF
   download_coming_soon: Actividad descargable próximamente.
   video_coming_soon: Video próximamente!
+  not_started: The student has not attempted this level.
   share_code:
     title: Haz clic en "Ejecutar" para ver el programa en acción
     bounce_og_title: Revisa mi juego Bounce
@@ -572,9 +576,14 @@
         nuestros usuarios
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: ¡Los estudiantes dibujaron esto con código!
     students_made_these_with_code: ¡Los estudiantes hicieron éstos con código!
@@ -629,11 +638,11 @@
     open_response_body: Thanks for your response!
   dialog:
     ok: OK
-    startover_title: Are you sure you want to start over?
+    startover_title: Estás seguro de que queres empezar de novo?
     startover_body: This will reset the puzzle to its start state and reset all the
       data you've added or changed.
-    startover_ok: Start Over
-    startover_cancel: Cancel
+    startover_ok: Empezar de novo
+    startover_cancel: Cancelar
   time:
     hour: 1 hora
     day: día
@@ -709,7 +718,7 @@
     share_copy_link: 'Copy the link:'
     close: Close
     more: More
-    name: Name
+    name: Nome
     updated: Updated
     project_type: Project Type
     help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
@@ -721,7 +730,7 @@
     delete_no: 'No'
     saved: Saved
     not_saved: Not saved
-    cancel: Cancel
+    cancel: Cancelar
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your
       My Projects list. Anyone you have shared the link to will no longer be able

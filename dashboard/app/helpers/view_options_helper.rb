@@ -15,6 +15,7 @@ module ViewOptionsHelper
     is_channel_backed
     post_milestone
     puzzle_ratings_url
+    server_level_id
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

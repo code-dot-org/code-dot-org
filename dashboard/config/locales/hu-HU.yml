@@ -256,6 +256,7 @@
         playlab: Készíts egy applikációt
         artist: Rajzolj valamit
         calculate: Calculate Something
+        applab: Készíts egy applikációt
     user:
       classroom: Tanári kezdőlap
       district_dashboard: Tankerületi munkafelület
@@ -280,6 +281,8 @@
       prize_us_only: (Kizárólag U.S. Diákoknak)
       prizes_link: További információk
   teacher:
+    answer: Válasz
+    for_teachers_only: Csak tanároknak
     title:
       one: 'A tanára:'
       other: 'A tanáraid:'
@@ -353,8 +356,8 @@
       section: Szakasz
       example: Példa a megoldásra
       example_with_number: Példa a megoldásra %{solution_number}
-      submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
+      submitted_on: 'Benyújtva ekkor: %{date}'
+      unsubmit: Visszavon
   user:
     email_confirm_needed: 'Az e-mail cím nincs megerősítve:'
     email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
@@ -376,7 +379,7 @@
     classroom_activity: Offline tevékenység
   home:
     title: Kód stúdió
-    description: A Code Studio az online tanfolyamok otthona, melyet a Code.org készített
+    description: A Kód stúdió az online tanfolyamok otthona, melyet a Code.org készített
     lines_of_code: '%{lines_count} sor kódot írtak eddig a diákok'
     lines_of_code_linebreak: '%{lines_count} sor kódot<br/>írt %{students_count} MILLIÓ
       TANULÓ'
@@ -423,7 +426,7 @@
     heading_apps: <h2>Vidámság </h2><h1>Mindenkinek</h1>
     heading_legacy: <h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>
     your_gallery: Galéria
-    no_primary_course: Próbálj ki egy tanfolyamot a Code Studio-nál
+    no_primary_course: Próbálj ki egy tanfolyamot a Kód stúdióban
     choose_next_course: Próbáld ki a Kód Stúdiót, válassz egyet az alábbi tanfolyamok
       közül
     print_certificate: Igazolás kinyomtatása
@@ -467,7 +470,7 @@
     tos: Feltételek
     privacy: Adatvédelmi Elvek
     secure: Biztonságos változat
-    report_abuse: Report Abuse
+    report_abuse: Visszaélés jelentése
   reference_area:
     title: Segítségre van szükséged?
     subtitle: Nézd meg ezeket a videókat és tanácsokat
@@ -508,6 +511,7 @@
   pdf_download: Letöltés PDF-ben
   download_coming_soon: Hamarosan lesz letölthető tevékenység.
   video_coming_soon: Hamarosan lesz videó!
+  not_started: A diák nem próbálta meg ezt a szintet.
   share_code:
     title: Kattints a "Fuss"-ra, hogy lásd a programomat működés közben
     bounce_og_title: Nézd meg a Visszapattanós játékomat
@@ -556,10 +560,15 @@
       body: Nézd meg a felhasználóink által készített alkalmazás és művész kép galériát
     frozen:
       title: Jégvarázs
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity játéklabor
       body: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot a Disney
         Infinity karakterek szereplésével.
+    minecraft:
+      title: Minecraft
+      body: Fedezd fel a Minecraft világát kódokkal.
   gallery:
     students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
     students_made_these_with_code: Ezeket diákok készítették kódolással!
@@ -605,7 +614,7 @@
     badname_case: A függvények elnevezése érzékeny a kis-és nagybetűkre. Próbáld újra
       elnevezni a megkötést.
     badrange: A megkötésednek nem megfelelő a tartománya.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainsize: A szerződésben nincs megfelelő számú érték a tartományban.
     baddomainname: Egy vagy több tartományban helytelen név szerepel.
     baddomaintype: A tartomány elemek közül egy vagy több nem megfelelő típusú, vagy
       rossz sorrendben vannak.
@@ -724,25 +733,26 @@
         fel velünk a kapcsolatot.</a>
       go_to_code_studio: Menj a Kód stúdióba
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: A sértő tartalommal, fenyegetéssel, online zaklatással, visszaéléssel
+          vagy szerzői joggal kapcsolatos sérelemmel találkoztál a Kód Stúdióval készített
+          alkalmazások használata közben, kérjük, töltsd ki az alábbi űrlapot! Az
+          ügyet nagyon komolyan fogjuk venni, megfelelően ki fogjuk vizsgálni és meg
+          fogjuk tenni a szükséges lépéseket.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Kérjük, add meg az e-mail címed
+          age: Kérjük, add meg az életkorod
+          abuse_type: Kérjük, válaszold meg, hogyan sérti a tartalom a Felhasználói
+            szabályokat
+          abuse_detail: Kérjük, adj meg részleteket a jelenteni kívánt tartalomról
+        abusive_url: Jelenteni kívánt tartalom URL-je
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: Miben sérti a tartalom a %{link_start}Felhasználói szabályokat%{link_end}?
+          harassment: Fenyegetések, online zaklatás, visszaélés
+          offensive: Sértő tartalom
+          infringement: Szerzői jog megsértése
           other: Egyéb
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
-        acknowledge: By submitting this information, you acknowledge it will be handled
-          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+        detail: Kérjük, adj meg a lehető legtöbb részletet a jelenteni kívánt tartalommal
+          kapcsolatban!
+        acknowledge: Az alábbi információk megadásával tudomásul veszed, hogy azokat
+          az %{link_start_privacy}Adatvédelmi szabályzatnak%{link_end} és a %{link_start_tos}Felhasználói
+          szabályoknak%{link_end} megfelelően kezeljük

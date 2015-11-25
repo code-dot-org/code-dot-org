@@ -18,7 +18,7 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
 
 ## Prizes for EVERY organizer
 
-**Every** educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com, iTunes or Windows Store** as a thank-you gift!
+**Every** educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com, iTunes or Windows Store** as a thank-you gift!*
 
 <img style="float:left;" src="/images/fit-130/amazon_giftcards.png"/>
 
@@ -28,11 +28,13 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
 
 <p style="clear:both">&nbsp;</p>
 
+*While supplies last
+
 <% if @country == 'us' %>
 
 ## 51 schools will win a class-set of laptops (or $10,000 for other technology)
 
-One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners).
+Sign up for this prize is now closed. Check back to see this year's winners.
 
 <img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize1.jpg"/>
 
@@ -135,16 +137,16 @@ Organizatorii evenimentelor Hour of Code în România vor beneficia de un prem
 
 ## Who is eligible to receive the all organizer thank-you gift?
 
-Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank-you gift. The $10K hardware prize is limited to US residents only.
+Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is limited to US residents only.
 
 ## Is there a deadline to sign up to receive the all organizer thank-you gift?
-You must sign up **before** <%= campaign_date('start_long') %> in order to be eligible to receive the all organizer thank-you gift.
+You must sign up **before** <%= campaign_date('start_long') %> in order to be eligible to receive the all organizer thank-you gift. 
 
 ## When will I receive my thank-you gift?
 We will contact you in December after Computer Science Education Week (<%= campaign_date('full') %>) with next steps on how to redeem your choice of thank-you gift.
 
 ## Can I redeem all of the thank-you gift options? 
-No. Thank-you gifts are limited to one per organizer. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank-you gift.
+No. Thank-you gifts are limited to one per organizer while supplies last. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank-you gift.
 
 <% if @country == 'us' %>
 
@@ -174,7 +176,7 @@ Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will sele
 <% end %>
 
 ## I’m outside the United States. Can I qualify for prizes?
-Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift. The $10K hardware prize is US only.
+Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is US only.
 
 <% end %>
 <%= view :signup_button %>

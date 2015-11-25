@@ -280,7 +280,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenCollideObstacle":function(d){return "þegar rekst á hindrun"},
 "whenCollideObstacleTooltip":function(d){return "Gera aðgerðirnar hér fyrir neðan þegar Flappy rekst á hindrun."},
 "whenEnterObstacle":function(d){return "þegar gegnum hindrun"},
-"whenEnterObstacleTooltip":function(d){return "Gera aðgerðirnar hér fyrir neðan þegar Flappy kemst framhjá hindrun."},
+"whenEnterObstacleTooltip":function(d){return "Gera aðgerðirnar hér fyrir neðan þegar Flappy fer inn í hindrun."},
 "whenRunButtonClick":function(d){return "þegar leikur byrjar"},
 "whenRunButtonClickTooltip":function(d){return "Gera aðgerðirnar fyrir neðan þegar leikurinn byrjar."},
 "yes":function(d){return "Já"}};

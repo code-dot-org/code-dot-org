@@ -206,7 +206,11 @@
           Maze and Bee: Лабиринт и Пчела
           Artist Binary: 'Художник: Бинарен код'
           description_audience: Възраст 10 + (след курс 3)
-          Super Challenge - Variables: Super Challenge - Variables
+          Super Challenge - Variables: Супер предизвикателство - променливи
+          Super Challenge - For Loops: Супер предизвикателство - за циклите
+          Super Challenge - Functions and Parameters: Супер предизвикателство - функции
+            и параметри
+          Extreme Challenge - Comprehensive: Екстремно предизвикателство - подробности
         Course4pre:
           title: Курс 4 предпоставка (необходимо условие)
           description_short: Кратък курс за концепциите, предназначен за ученици,
@@ -392,6 +396,7 @@
           The Artist: Художникът
           Play Lab: Театрална лаборатория
           Play Lab 2015: Игрална лаборатория 2015
+          Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: Събития
           description: Събития
@@ -725,6 +730,39 @@
           'Variables: Create, Assign, and Read': 'Variables: Create, Assign, and Read'
           'Variables: Increment, Decrement, Display, and Scope': 'Variables: Increment,
             Decrement, Display, and Scope'
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistant: Introduction to Digital Assistant
+          'Improving Digital Assistant: Conditionals': 'Improving Digital Assistant:
+            Conditionals'
+          'Improving Digital Assistant: Functions with Return': 'Improving Digital
+            Assistant: Functions with Return'
+          'Improving Digital Assistant: Complex Conditionals': 'Improving Digital
+            Assistant: Complex Conditionals'
+          Conditionals with Movie Bot: Conditionals with Movie Bot
+          Improving Digital Assistant with Conditionals: Improving Digital Assistant
+            with Conditionals
+          Chained and Nested Conditionals with Movie Bot: Chained and Nested Conditionals
+            with Movie Bot
+          Compound Conditionals with Movie Bot: Compound Conditionals with Movie Bot
+          'Practice PT: Digital Assistant': 'Practice PT: Digital Assistant'
+          Practice PT - Design a Digital Scene: Practice PT - Design a Digital Scene
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          Introduction to Digital Assistant Project: Introduction to Digital Assistant
+            Project
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: Докато цикли
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         algebraPD3:
           title: Фаза 3 PD
           description: Научи алгебра чрез блок базирано функционално програмиране
@@ -1376,6 +1414,15 @@
           Day 22-25 Final Project: Day 22-25 Final Project
           'Day 15-16 HTML and CSS: Tables, Lists, Menus': 'Day 15-16 HTML and CSS:
             Tables, Lists, Menus'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
+          Intro to Unit 3: Intro to Unit 3
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
         ECSPD3-Unit4:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1404,6 +1451,13 @@
           Day 25-30 Final Project: Day 25-30 Final Project
           Unit 4 Challenge Planning: Unit 4 Challenge Planning
           Unit 4 Challenge Creation: Unit 4 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: Close & Next Steps
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1455,6 +1509,8 @@
           'Data App Part 8: Visualize Data': 'Data App Part 8: Visualize Data'
           'Data App Part 9: Reflect': 'Data App Part 9: Reflect'
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
+          Permanent Data Storage and Clicker Completion: 'Постоянно съхраняване на
+            данни и кликър: завършване'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1490,6 +1546,10 @@
         duino:
           Experimenting with Arduino stuff: Experimenting with Arduino stuff
           Basic Circuits: Basic Circuits
+          description: Testing some tools for teaching with Arduinos
+          Blinky Lights: Blinky Lights
+          Making Music: Making Music
+          JunkBot: JunkBot
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These
@@ -1502,3 +1562,109 @@
             puzzles might not be around long, so enjoy them while you can!
           description_audience: Възраст 10 + (след курс 3)
           Halloween 2015: Halloween 2015
+          description: Something special for those who know it exists. These puzzles
+            might not be around long, so enjoy them while you can!
+        iceage:
+          title: 'Ледена епоха: игрална лаборатория'
+          description_short: Създай история или си направи игра с Ледена епоха игрална
+            лаборатория!
+          description: Създай история или си направи игра с Ледена епоха игрална лаборатория!
+          Ice Age Play Lab: 'Ледена епоха: игрална лаборатория'
+        CSPPD3-Unit3:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit3temp:
+          title: CSP Unit 3 - Temp
+          description_short: Програмиране
+          description: Тази част въвежда фундаменталните концепции за компютърно програмиране,
+            което отключва възможността да се правят богати, интерактивни приложения.
+            Този курс използва JavaScript като език за програмиране, както и Ап лабораторията
+            като програмната среда за изграждане на приложения, но концепцията, която
+            ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
+          While Loop Basics: 'Докато цикли: основи'
+          While Loops_ Counting Flips: Докато {ru.r_ преброяване на превъртания
+          Arrays_ Intro: Arrays_ интро
+          Arrays_ Photo Album: Arrays_ фото албум
+          Images are Arrays: Изображенията са Arrays
+          Arrays and Loops_ Altering Images: Масиви и цикли_ промяна изображения
+          Arrays and Loops_ Hidden Images: Масиви и цикли_ скрити изображения
+          Key Events with Image Scroller: Key Events with Image Scroller
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Докато цикли
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
+        CSP-Unit3-Support:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+        gumball:
+          title: Гъмбъл- игрална лаборатория
+          description_short: Създай история или си направи игра с Гъмбълl игрална
+            лаборатория!
+          description: Създай история или си направи игра с Гъмбълl игрална лаборатория!
+          Gumball Play Lab: Гъмбъл- игрална лаборатория
+        starwars:
+          title: 'Междузвездни войни: Изграждане на галактика с код'
+          description_short: Научете се да програмирате дроиди и създайте своя собствена
+            Междузвездни войни игра в галактиката далече, далече.
+          description: Научете се да програмирате дроиди и създайте своя собствена
+            Междузвездни войни игра в галактиката далече, далече.
+          Hour of Code 2015: Часът на кодирането 2015
+        starwarsblocks:
+          title: 'Междузвездни войни: Изграждане на галактика с код'
+          description_short: Научете се да програмирате дроиди и създайте своя собствена
+            Междузвездни войни игра в галактиката далече, далече.
+          description: Научете се да програмирате дроиди и създайте своя собствена
+            Междузвездни войни игра в галактиката далече, далече.
+          Hour of Code 2015: Часът на кодирането 2015
+        minecraft:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
+        mc:
+          title: Minecraft Hour of Code
+          description_short: Изследвайте Minecraft света чрез код
+          description: Използвайте блокове с код, за да преведете Steve или Alex през
+            приключението в този Minecraft свят
+          Hour of Code 2015: Часът на кодирането 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Добре дошли!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Заключение

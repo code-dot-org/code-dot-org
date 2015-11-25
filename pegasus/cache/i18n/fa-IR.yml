@@ -1,4 +1,5 @@
 "fa-IR":
+  hour_of_code: ساعتی با کد
   hello: سلام دنیا
   select_language: لطفا زبان خود را انتخاب کنید
   en: علوم کامپیوتر
@@ -38,11 +39,14 @@
   hoc2014_everyone: همه
   hoc2014_support: حمایتش کن &#x25BE;
   hoc2014_whatishoc: ساعتِ کدنویسی چيست؟
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_header: '#CSEdWeek / رویداد "ساعت کدنویسی" در سرار جهان'
   csedweek_map_signup: رویدادتان را ثبت کنید
-  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_placeholder: جست و جو برای رویداد های "ساعت کدنویسی"
   csedweek_map_search_search: جستجو کن
   csedweek_map_search_reset: تنظیم مجدد
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: ثبت نام
   cded_try_it: آن را امتحان کنید
   twentyhours_trynow: هم اکنون شروع کنید
@@ -70,6 +74,9 @@
   thank_you_: با سپاس!
   congratulations: آفرین!
   congratulations_on_completing_hoc: تبریک برای کامل کردن یک ساعت کد نویسی
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
   course_name_accelerated: دوره های سریع
   course_name_course1: دوره 1
   course_name_course2: دوره 2
@@ -139,8 +146,6 @@
   twitter_teach_cs: چرا مدرسه های بیشتری علوم کامپیوتر درس نمی دهند؟ ما می توانیم
     این را اصلاح کنیم. http://youtu.be/nKIu9yen5nc. سایت  http://code.org/ را ببینید
     تا بیشتر بیاموزید.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: یک ساعت کدنویسی یاد بگیرید
   beyond_hoc: فراتر از یک ساعت
   what_gender: جنسیت شما چیست؟
@@ -230,8 +235,15 @@
   homepage_slot_text_course4: دوره 4
   homepage_slot_text_shop: فروشگاه
   homepage_slot_text_flappy: کدنویسی Flappy
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: '# تائید شده'
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: ثبت نام
+  homepage_action_text_try_it: آن را امتحان کنید
+  homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_codevideo: فیلم را تماشا کنید
   homepage_action_text_teachervideo: فیلم را تماشا کنید
+  homepage_action_text_girlvideo: Inspire a girl
   homepage_action_text_learn: یادگیری را شروع کنید
   homepage_action_text_signpetition: درخواست را امضا کنید
   homepage_signpetition_dropdown: درخواست ما را امضا کنید  &#x25BE;
@@ -243,7 +255,7 @@
   homepage_banner_text_link: بیشتر بیاموزید
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: بیشتر یاد بگیرید
+  homepage_banner_privacy_link: بیشتر بیاموزید
   homepage_slot_text_title_hoc: ساعتی با کد
   homepage_slot_text_blurb_hoc: هرکسی می تواند بیاموزد. امروز شروع کنید
   homepage_slot_text_link_hoc: ساعتِ کد نویسی را امتحان کنید
@@ -309,6 +321,32 @@
   class_submission_level_college: دانشگاه
   class_submission_level_vocational: فنی و حرفه ای
   class_submission_languages_other: زبان (های) دیگر
+  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
+    videos</a> by role models and celebrities
+  starwars_subtitle: Building a Galaxy With Code
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: هم اکنون شروع کنید
+  starwars_blocks_title: بلوک ها
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
+  starwars_blocks_start_button: هم اکنون شروع کنید
+  starwars_watch_videos: Before you get started, watch one of these inspirational
+    videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  starwars_platform_text: مرورگرهای مدرن, تلفن های هوشمند, تبلت
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_gradelevel: Ages 4-104
+  mc_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -320,15 +358,18 @@
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: نام
@@ -387,9 +428,24 @@
   volunteer_engineer_submission_location_flexibility_curriculum: علاقمند به کمک و
     مشارکت در پروژه های آموزشی منبع باز
   volunteer_engineer_submission_experience_unspecified: نامشخص
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: مشخص
     نشده
   volunteer_engineer_submission_experience_software_professional: متخصص نرم‌ افزار
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
   petition_age: سن
   dashboard_landing_title: صفحه اصلی معلم
   dashboard_landing_welcome: خوش آمدید به صفحهٔ جدید و بهبود یافته معلم  .
@@ -643,14 +699,31 @@
   learn_sign_up_description: ثبت نام برای شرکت در یک ساعت کد نویسی در طول هفته آموزشی
     علوم رایانه
   learn_sign_up_button: ثبت نام
+  learn_videos_watch: Watch this inspirational video with your classroom
+  learn_videos_show: Show this inspirational video to your class
+  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: نحوه ی آموزش کد نویسی یک ساعته را یاد بگیرید
   learn_educator_resources_button: منابع مربی
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: آموزش‌های تازه‌ی ساعتِ کدنویسی ما را امتحان کنید
   hoc2014_try_new_tutorial: ورژن بتای ساعت آموزش کد جدید ما را امتحان کنید
   hoc2014_try_scrat: پرندگان عصبانی، گیاهان علیه زامبی‌ها و اسکرات
   hoc2014_try_frozen: هنرمندی با آنا و السا, از کارتون منجمد
+  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Tutorials by 3rd parties
+  carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: آموزش به زبان شما
   carousel_heading_domestic: آموزش به زبان انگلیسی
   carousel_heading_beginners: آموزش برای مبتدیان
@@ -665,6 +738,7 @@
   carousel_heading_robots: یادگیری برنامه با ربات
   carousel_heading_ide: محیط های برنامه ریزی محبوب در میان معلمان
   educator_notes: یادداشت های آموزگار
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   how_to_teach_hoc: نحوه تدریس یک ساعت کد نویسی
   more_resources_educators: منابع بیشتر برای معلمان و آموزگاران
   beyond_submission: می خواهید یک آموزش برای فراتر از یک ساعت ثبت کنید? استاندارد
@@ -674,12 +748,13 @@
   teachers_notes_hoc: 'معلم ها: نکته های مهم آموزگار را اینجا بخوانید'
   previous: قبلی
   next: بعدي
-  older_systems: آموزش هایی که روی سیستم های قدیمی تر کار می کنند
+  older_systems: خودآموز هایی برای سیستمهای قدیمی تر
   older_systems_subheading: این ها باید روی مرورگرهای وب قدیمی تر کار کنند. برای دسترسی
     به تمام آموزش ها، به یک مرورگر وب به روز <a href="http://browsehappy.com/" target="_blank">  ارتقا
     دهید.</a>
   mobile_devices: آموزش هایی برای دستگاه های همراه
   frozen_name: کدنویسی با آنا و السا
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
   codeorg_name: اولین برنامه کامپیوتر خودت را بنویس
   codeintl_name: اولین برنامه کامپیوتر خودت را بنویس
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -719,6 +794,8 @@
   projguts_name: سنگ، کاغذ، قیچی
   hourofcode_name: جا نگهدار برای code.org/hoc جدید
   playlab_name: آزمایشگاه بازی
+  infinity_name: آزمایشگاه بازی نامحدود
+  artist_name: هنرمند
   codeorg_gradelevel: سنین 4 تا 104
   codeintl_gradelevel: سنین 4 تا 104
   thinkersmithspanish_gradelevel: Por todos
@@ -758,7 +835,10 @@
   projguts_gradelevel: سنین 10-13
   hourofcode_gradelevel: سنین 4 تا 104
   frozen_gradelevel: سنین بالای 8
+  starwars_gradelevel: Ages 6+
   playlab_gradelevel: سنین 4 تا 104
+  infinity_gradelevel: سنین 4 تا 104
+  artist_gradelevel: سنین 4 تا 104
   codeorg_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   codeintl_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   thinkersmithspanish_platformtext: آنپلاگد
@@ -799,6 +879,7 @@
   projguts_platformtext: آنپلاگد
   hourofcode_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   frozen_platformtext: مرورگرهای جدید +تبلت
+  starwars_platformtext: مرورگرهای جدید +تبلت
   playlab_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   codeorg_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!
   codeintl_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!
@@ -852,10 +933,15 @@
   kodableunplugged_shortdescription: یک تمرین بدون اتصال جالب
   projguts_shortdescription: مدل سازی و شبیه سازی  رابا استفاده از سنگ/کاغذ/قیچی امتحان
     کنید
-  hourofcode_shortdescription: جا نگهدار برای code.org/hoc جدید
+  hourofcode_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!
   frozen_shortdescription: بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو
     و زیبایی یخ را کشف می کنند استفاده کنیم.
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
   playlab_shortdescription: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: با نقاش چند عکس و طرح باحال بکش!
   codeorg_longdescription: با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر
     را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک
     زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری،
@@ -1004,6 +1090,8 @@
     آنها جادو و زیبایی یخ را مشاهده میکنند. تو با اسکی روی یخ دانه های برف و الگوهایی
     را رسم خواهی کرد و سرزمین عجایب زمستانی ای خواهی ساخت که می توانی با دوستان خود
     به اشتراک بگذاری!
+  starwars_longdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
   playlab_longdescription: با Play Lab یک داستان خلق کنید یا یک بازی بسازید! حیوانات،
     دزدان دریایی، زامبی ها، نینجا ها، و شخصیت های بسیار بیشتری را مجبور به حرکت کنید،
     صدا بسازید، امتیاز بگیرید، و حتی گلوله های آتشی پرتاب کنید!
@@ -1340,63 +1428,11 @@
     داشت. برای این که ببینید چه طور می توانید مرور امن (HTTPS) را برای Code.org فعال
     کنید <a href='%{it_requirements_url}'>اینجا کلیک کنید</a>.
   compatibility_https_hide_this_warning: مخفی کردن هشدار
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: '# served'
-  homepage_action_text_join_us: Join us
-  homepage_action_text_sign_up: Sign up
-  homepage_action_text_try_it: Try it
-  homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_girlvideo: Inspire a girl
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
-  starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
-  starwars_javascript_start_button: Try now
-  starwars_blocks_title: Blocks
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
-  starwars_blocks_start_button: Try now
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_gradelevel: Ages 4-104
-  mc_platformtext: Modern browsers, smartphones, tablets
-  minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  starwars_gradelevel: Ages 6+
-  starwars_platformtext: Modern browsers + tablets
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: پریدن
+  infinity_shortcode: inf
+  playlab_shortcode: بازی کن
+  artist_shortcode: art

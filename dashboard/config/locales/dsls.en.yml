@@ -197,11 +197,19 @@ en:
       CSPPD3-u3 chunk 4 resources: {}
       CSPPD3-u3 chunk 5 concepts: {}
       CSPPD3-u3 chunk 5 resources: {}
+      CSPPD3-u3 complete the challenge overview: {}
+      CSPPD3-u3 completing the challenge: {}
+      CSPPD3-u3 do the challenge: {}
+      CSPPD3-u3 list of challenges: {}
       CSPPD3-u3 overview: {}
       CSPPD3-u3 pause and reflect: {}
+      CSPPD3-u3 post survey: {}
+      CSPPD3-u3 post to forum: {}
       CSPPD3-u3 practice PT: {}
+      CSPPD3-u3 share out overview: {}
       CSPPD3-u3 tips for prep: {}
       CSPPD3-u3 unit 3 overview: {}
+      CSPPD3-u3 what is a challenge: {}
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
@@ -1297,8 +1305,12 @@ en:
         Phase 3 Module 4: Phase 3 Module 4
       sciPD3 thanks:
         Great Job!: Great Job!
+      sciPD33 rubric:
+        Designing a Rubric for Assessing a Model: Designing a Rubric for Assessing a Model
       sciPD3OLP32 intro:
         Introduction to Phase 2: Introduction to Phase 2
+      sciPD3OLP33 intro:
+        Introduction to Phase 3: Introduction to Phase 3
       sciPD3pre1 challenge: {}
       sciPD3pre1 intro:
         Intro to Phase 3 Online: Intro to Phase 3 Online
@@ -1992,23 +2004,23 @@ en:
         mouseup: mouseup
       U3L18 Matching:
         "'Blue' == 'blue'": "'Blue' == 'blue'"
-        Is the string Blue equal to the string blue?: Is the string Blue equal to the string blue?
-        Is the value of the variable 'blue' equal to the string blue?: Is the value of the variable 'blue' equal to the string blue?
-        Is the value of the variable 'dice' equal to 5?: Is the value of the variable 'dice' equal to 5?
-        Is the value of the variable 'dice' not equal to 5?: Is the value of the variable 'dice' not equal to 5?
-        Is x greater than 3?: Is x greater than 3?
-        Is x greater than or equal to 3?: Is x greater than or equal to 3?
-        Is x less than 3?: Is x less than 3?
-        Is x less than or equal to 3?: Is x less than or equal to 3?
-        Match the boolean expression using comparison operators to the English description: Match the boolean expression using comparison operators to the English description
+        Is the string 'Blue' equal to the string 'blue'?: Is the string 'Blue' equal to the string 'blue'?
+        Is the value of the variable blue equal to the string 'blue'?: Is the value of the variable blue equal to the string 'blue'?
+        Is the value of the variable dice equal to 5?: Is the value of the variable dice equal to 5?
+        Is the value of the variable dice not equal to 5?: Is the value of the variable dice not equal to 5?
+        Is the value of the variable x greater than 3?: Is the value of the variable x greater than 3?
+        Is the value of the variable x greater than or equal to 3?: Is the value of the variable x greater than or equal to 3?
+        Is the value of the variable x less than 3?: Is the value of the variable x less than 3?
+        Is the value of the variable x less than or equal to 3?: Is the value of the variable x less than or equal to 3?
+        Match the boolean expression using comparison operators to the English description.: Match the boolean expression using comparison operators to the English description.
         'Matching: Comparison Operators': 'Matching: Comparison Operators'
         blue == 'blue': blue == 'blue'
         dice != 5: dice != 5
         dice == 5: dice == 5
-        x&gt;3: x&gt;3
-        x&gt;=3: x&gt;=3
-        x&lt;3: x&lt;3
-        x&lt;=3: x&lt;=3
+        x &gt; 3: x &gt; 3
+        x &gt;= 3: x &gt;= 3
+        x &lt; 3: x &lt; 3
+        x &lt;= 3: x &lt;= 3
       U3L19 - MATCH what are values of abc:
         '10': '10'
         '12': '12'
@@ -2443,6 +2455,14 @@ en:
         I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
         My understanding of these lessons has not changed: My understanding of these lessons has not changed
       CSPPD3-u3 chunk 5 checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u3 chunk 5 checkin-b:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u3 chunk 5 checkin-c:
         I better understand what these lessons are about: I better understand what these lessons are about
         I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
         My understanding of these lessons has not changed: My understanding of these lessons has not changed
@@ -4278,6 +4298,8 @@ en:
       CSPPD2 share protocol: {}
       CSPPD3-u2 pick a challenge: {}
       CSPPD3-u2 submit forum link: {}
+      CSPPD3-u3 pick a challenge: {}
+      CSPPD3-u3 submit forum link: {}
       ECSPD Fence post Q1: {}
       ECSPD Handshake Q1: {}
       ECSPD Online U1D1-2 Assessment 1:
@@ -4750,7 +4772,7 @@ en:
       U3L22 Reflection:
         The Clicker Game with Permanent Data Storage: The Clicker Game with Permanent Data Storage
       U3L23 Free Response Getting Started:
-        'Getting Started: A look at Siri': 'Getting Started: A look at Siri'
+        'Getting Started: A Look at Siri': 'Getting Started: A Look at Siri'
       U3L23 Free Response Wrap Up:
         Natural Language Processing: Natural Language Processing
       U3L23 Free Response Wrap Up 2:

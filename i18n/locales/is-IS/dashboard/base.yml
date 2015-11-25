@@ -221,6 +221,7 @@ is:
         playlab: Búa til forrit
         artist: Teikna eitthvað
         calculate: Calculate Something
+        applab: Búa til forrit
     user:
       classroom: Heimasíða kennara
       district_dashboard: Stjórnborð umdæmis
@@ -244,6 +245,8 @@ is:
       prize_us_only: (aðeins bandarískir nemendur)
       prizes_link: Nánar
   teacher:
+    answer: Svar
+    for_teachers_only: Aðeins fyrir kennara
     title:
       one: 'Kennari þinn:'
       other: 'Kennarar þínir:'
@@ -431,6 +434,7 @@ is:
   pdf_download: Hala niður PDF
   download_coming_soon: Niðurhal verkefnis verður brátt tiltækt.
   video_coming_soon: Myndskeið á leiðinni!
+  not_started: Nemandinn hefur ekki reynt við þetta borð.
   share_code:
     title: 'Smelltu á "Keyra" til að prófa forritið mitt'
     bounce_og_title: Kíktu á skoppleikinn minn
@@ -472,9 +476,14 @@ is:
       body: Skoða safn forrita og mynda sem notendur okkar hafa búið til
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity leikjasmiðja
       body: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum.
+    minecraft:
+      title: Minecraft
+      body: Kannaðu Minecraft heim með kóða.
   gallery:
     students_drew_these_with_code: Nemendur teiknuðu þetta með kóða!
     students_made_these_with_code: Nemendur gerðu þetta með forritun!
@@ -621,7 +630,7 @@ is:
         abusive_url: Vefslóð (URL) efnisins sem tilkynnt er
         abuse_type:
           question: 'Á hvaða hátt brýtur þetta efni gegn %{link_start}Þjónustuskilmálunum%{link_end}?'
-          harassment: Hótar, neteinelti, áreitni
+          harassment: Hótanir, neteinelti, áreitni
           offensive: Ósæmilegt efni
           infringement: Brot á höfundarrétti
           other: Annað

@@ -217,6 +217,7 @@ vi:
         playlab: Tạo một ứng dụng
         artist: Vẽ một cái gì đó
         calculate: Calculate Something
+        applab: Tạo một ứng dụng
     user:
       classroom: Trang chủ giáo viên
       district_dashboard: khu vực điều khiển
@@ -240,6 +241,8 @@ vi:
       prize_us_only: (Chỉ sinh viên Hoa Kỳ)
       prizes_link: Thông tin thêm
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Giáo viên của bạn:'
       other: 'Giáo viên của bạn:'
@@ -305,7 +308,7 @@ vi:
       section: Học phần
       example: Example Solution
       example_with_number: 'Example Solution %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
+      submitted_on: 'Submitted on:'
       unsubmit: Unsubmit
   user:
     email_confirm_needed: 'Địa chỉ email chưa được xác nhận:'
@@ -427,6 +430,7 @@ vi:
   pdf_download: Tải phiên bản PDF
   download_coming_soon: Tải về các hoạt động sắp diễn ra.
   video_coming_soon: Video sắp tới!
+  not_started: The student has not attempted this level.
   share_code:
     title: "Nhấp vào 'Chạy' để xem chương trình của tôi trực tiếp"
     bounce_og_title: Hãy xem thử trò chơi Bounce của tôi
@@ -468,9 +472,14 @@ vi:
       body: Xem một bộ sưu tập các ứng dụng và họa sĩ thiết kế hình ảnh được tạo bởi người dùng của chúng tôi
     frozen:
       title: Bộ phim Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Phòng thí nghiệm Vui Chơi Bất Tận
       body: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện hay trò chơi với các nhân vật Disney Infinity nổi tiếng.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Các học sinh/sinh viên đã vẽ chúng bằng cách lập trình!
     students_made_these_with_code: Các học sinh/sinh viên đã tạo ra chúng bằng cách lập trình!

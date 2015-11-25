@@ -2,7 +2,7 @@
 title: Teacher led Hour of Code lesson plans - by grade and subject
 nav: educate_nav
 ---
-# Teacher Led Hour of Code Lesson Plans
+# Teacher-Led Hour of Code Lesson Plans
 
 Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans. 
 
@@ -12,10 +12,16 @@ Now that tens of thousands of educators have tried the Hour of Code, many classr
 **Ages 8 to 16. Programming, Creativity, Web-based.** Students will animate the letters of their name, initials, or favorite word using Scratch!
 
 [Scratch Hide and Seek Game](https://scratch.mit.edu/scratchr2/static/pdfs/help/Hide-and-Seek-Guide.pdf)  
-**Ages 8 to 16. Programming, Creativity, Web-based. Students will gain experience with coding as they make a hide-and-seek game.**
+**Ages 8 to 16. Programming, Creativity, Web-based.** Students will gain experience with coding as they make a hide-and-seek game.
 
 [Scratch Dance, Dance, Dance](https://scratch.mit.edu/scratchr2/static/pdfs/help/DanceGuide.pdf)  
-**Ages 8 to 16. Programming, Creativity, Web-based. Participants will create and code an animated dance scene.**
+**Ages 8 to 16. Programming, Creativity, Web-based.** Participants will create and code an animated dance scene.
+
+[ScratchJr: Can I Make a Spooky Forest?](https://pbs.app.box.com/s/y9y4htjhpupyapg8q4uuzlkbaj7nvojp/1/5208929949/42204150029/1)  
+**Ages 5-9. Art, Storytelling, Sequence, unplugged.** Students will learn more features of ScratchJr by creating a spooky forest with multiple characters!
+
+[ScratchJr: Can I Make My Characters Greet Each Other?](https://pbs.app.box.com/s/y9y4htjhpupyapg8q4uuzlkbaj7nvojp/1/5208929949/42204143525/1)  
+**Ages 5-9. Art, Storytelling, Events, unplugged.** Students will learn advanced features of the ScratchJr app when they make a dog and kitten meet each other and exchange hellos!
 
 [My Robotic Friend](https://csedweek.org/unplugged/thinkersmith)  
 **Ages 5-18. Sequence, Algorithms, Programming, unplugged.** 
@@ -39,18 +45,11 @@ Make fun take-home items that "store" students' initials using only two colors.
 **Ages 10-15. Science (Biology), unplugged.** 
 This activity builds off of the classic game of Rock/Paper/Scissors, known to most students, and relates it to a phenomenon seen in biology. 
 
-[PBS KIDS ScratchJr - Interactive Characters](https://pbs.app.box.com/s/y9y4htjhpupyapg8q4uuzlkbaj7nvojp/1/5208929949/42204143525/1)  
-**Ages 5-9. Art, Storytelling, Events, unplugged.** 
-Students create their own interactive PBS KIDS characters. 
-
-[PBS Kids ScratchJr - Animated Scenes](https://pbs.app.box.com/s/y9y4htjhpupyapg8q4uuzlkbaj7nvojp/1/5208929949/42204150029/1)  
-**Ages 5-9. Art, Storytelling, Sequence, unplugged.** Students create their own animated scenes featuring popular PBS KIDS characters. 
-
 [Kodable fuzzFamily Frenzy](https://www.kodable.com/hour-of-code/lessons)  
-**Ages 5-9. Seqence, Algorithms, Programming, web-based.** Students will learn basic programing language and use math concepts to move a “robot” forward, spin, and jump.
+**Ages 5-9. Seqence, Algorithms, Programming, unplugged.** Students will learn basic programing language and use math concepts to move a “robot” forward, spin, and jump.
 
-[High Seas](http://www.cs-first.com/clubplan/sample-activity-0)  
-**Ages 7-13. Sequence, Art, Storytelling, web-based.** Students will use Scratch to program a story about being lost at sea. 
+[Google CS First](http://cs-first.com/hocteachers)  
+**Ages 9-14 Sequence, Programming, Art, Storytelling, web-based.** Students use Scratch to code a story about being lost at sea. 
 
 [Bitsbox Coding + Math](https://bitsbox.com/hocprint.html)  
 **Ages 5-13. Programming, Math (General, Geometry), web-based.**
@@ -68,16 +67,16 @@ Students create their own interactive PBS KIDS characters.
 **Ages 8 to 16. Programming, Creativity, Web-based.** Students will animate the letters of their name, initials, or favorite word using Scratch!
 
 [Scratch Hide and Seek Game](https://scratch.mit.edu/scratchr2/static/pdfs/help/Hide-and-Seek-Guide.pdf)  
-**Ages 8 to 16. Programming, Creativity, Web-based. Students will gain experience with coding as they make a hide-and-seek game.**
+**Ages 8 to 16. Programming, Creativity, Web-based.** Students will gain experience with coding as they make a hide-and-seek game.
 
 [Scratch Dance, Dance, Dance](https://scratch.mit.edu/scratchr2/static/pdfs/help/DanceGuide.pdf)  
-**Ages 8 to 16. Programming, Creativity, Web-based. Participants will create and code an animated dance scene.**
+**Ages 8 to 16. Programming, Creativity, Web-based.** Participants will create and code an animated dance scene.
 
 [STEM Projects](https://www.tynker.com/hour-of-code/tynker-stem-teacher-guide.pdf)   
 **Ages 5-18. Programming, Science (Ecology), Science (Space), web-based.** Code and animate a Solar System simulation, an interactive ecological pyramid, a working analog clock, and more. 
 
-[Bomberbot Hour of Code Activities](www.bomberbot.com/hourofcode)   
-**Ages 5-18. Sequence, Algorithms, Programming, unplugged or web-based.** Students will learn a series of programming concepts and apply them to programming a robot. 
+[Bomberbot Hour of Code Activities](http://www.bomberbot.com/hourofcode)   
+**Ages 8-12. Sequence, Algorithms, Programming, unplugged or web-based.** Students will learn a series of programming concepts and apply them to programming a robot. 
 
 [Input and Output, Math Activity](https://app.vidcode.io/doc/unplugged-activity-math.pdf)  
 **Ages 12-16. Math (Algebra), Math (Functions), unplugged.** Connect JavaScript functions to both math and real world problems.
@@ -85,8 +84,8 @@ Students create their own interactive PBS KIDS characters.
 [Climate Science](https://app.vidcode.io/hourofcode/science-teacher-guide)  
 **Ages 12-16. Science (Climate), Science (Environment), unplugged.** Students draw a picture, and take turns giving the class steps to recreate their drawing.
 
-[High Seas](http://www.cs-first.com/clubplan/sample-activity-0)  
-**Ages 7-13. Sequence, Art, Storytelling, web-based.** Students will use Scratch to program a story about being lost at sea. 
+[Google CS First](http://cs-first.com/hocteachers)  
+**Ages 9-14 Sequence, Programming, Art, Storytelling, web-based.** Students use Scratch to code a story about being lost at sea. 
 
 [Arduino Activity](https://csedweek.org/csteacher/arduino.pdf)  
 **Ages 12-15. Programming, Arduino** 
@@ -103,14 +102,14 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 [Grace Hopper Debugging Activity](https://csedweek.org/csteacher/gracehopperdebugging.pdf)  
 **Ages 12-18. History, Language Arts, Storytelling, unplugged** Students will research Grace Hopper and learn the story of the first "bug".
 
+[Globaloria MakeQuest](http://globaloria.com/courses-services/teacher-guides/)  
+**Ages 10-18. Programming, Game Design, English, Math, Creativity, web-based.** Learn to edit and write JavaScript code to defeat the 'Evil 404,' as you explore computer science concepts like variables and functions. Lesson Plan includes subject-matter extension activities for English, Mathematics, Science, History and Arts classes.
+
 
 ## High School
 
 [STEM Projects](https://www.tynker.com/hour-of-code/tynker-stem-teacher-guide.pdf)  
 **Ages 5-18. Programming, Science (Ecology), Science (Space), web-based.** Code and animate a Solar System simulation, an interactive ecological pyramid, a working analog clock, and more.
-
-[Bomberbot Hour of Code Activities](www.bomberbot.com/hourofcode)   
-**Ages 5-18, Sequence, Algorithms, Programming, unplugged or web-based.** Students will learn a series of programming concepts and apply them to programming a robot.
 
 [CodeHS Pixel Art](https://codehs.com/hourofcode/unplugged/pixel)  
 **Ages 14-18. Art, Math (Coordinates), unplugged.** Students learn about coordinates, what pixels are, and how to create drawings by setting pixels to be different colors.
@@ -122,16 +121,19 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 **Ages 8 to 16. Programming, Creativity, Web-based.** Students will animate the letters of their name, initials, or favorite word using Scratch!
 
 [Scratch Hide and Seek Game](https://scratch.mit.edu/scratchr2/static/pdfs/help/Hide-and-Seek-Guide.pdf)  
-**Ages 8 to 16. Programming, Creativity, Web-based. Students will gain experience with coding as they make a hide-and-seek game.**
+**Ages 8 to 16. Programming, Creativity, Web-based.** Students will gain experience with coding as they make a hide-and-seek game.
 
 [Scratch Dance, Dance, Dance](https://scratch.mit.edu/scratchr2/static/pdfs/help/DanceGuide.pdf)  
-**Ages 8 to 16. Programming, Creativity, Web-based. Participants will create and code an animated dance scene.**
+**Ages 8 to 16. Programming, Creativity, Web-based.** Participants will create and code an animated dance scene.
 
 [Looking at Data with Splunk](https://www.dropbox.com/s/46ed5ilhvsam8ci/SplunkLessonPlan.pdf?dl=1)  
 **Ages 14-18. Math (data analysis), web-based.** Students will analyze the data from a theoretical game to find levels which are too easy of difficult.
 
 [Input and Output, Math Activity](https://app.vidcode.io/doc/unplugged-activity-math.pdf)   
-**Ages 12-16. Math (Algebra), Math (Functions), unplugged.** Connect JavaScript functions to both math and real world problems
+**Ages 12-16. Math (Algebra), Math (Functions), unplugged.** Connect JavaScript functions to both math and real world problems.
+
+[Vizwik Voter App](http://www.vizwik.com/hoc)  
+**Ages 13-18. Programming, App building.** Learn how to build your own mobile app (iOS and Android) to share with friends to vote on a question that is important to you.
 
 [Climate Science](https://app.vidcode.io/hourofcode/science-teacher-guide)  
 **Ages 12-16. Science (Climate), Science (Environment), unplugged.** Students draw a picture, and take turns giving the class steps to recreate their drawing.
@@ -164,6 +166,9 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 
 [Grace Hopper Debugging Activity](https://csedweek.org/csteacher/gracehopperdebugging.pdf)  
 **Ages 12-18. History, Language Arts, Storytelling, unplugged** Students will research Grace Hopper and learn the story of the first "bug".
+
+[Globaloria MakeQuest](http://globaloria.com/courses-services/teacher-guides/)  
+**Ages 10-18. Programming, Game Design, English, Math, Creativity, web-based.** Learn to edit and write JavaScript code to defeat the 'Evil 404,' as you explore computer science concepts like variables and functions. Lesson Plan includes subject-matter extension activities for English, Mathematics, Science, History and Arts classes.
 
 
 <br/><br/>

@@ -17,8 +17,8 @@
           'Maze: Debugging': 'Labyrinthe : Le débogage'
           'Artist 1: Intro': 'Artiste 1: Intro'
           Artists 2: Artistes 2
-          Spelling Bee: Dictée de lettres
-          Spelling Bee not blockly: Epeler abeille sans Blockly
+          Spelling Bee: L'abeille qui épelle
+          Spelling Bee not blockly: L'abeille qui épelle sans Blockly
           'Bee 1: Intro': 'Abeille 1: Intro'
           'Maze 2: Loops': 'Labyrinthe 2 : Les boucles'
           'Bee 2: Loops': 'Abeille 2: boucles'
@@ -42,7 +42,7 @@
             ou une histoire qu'ils pourront partager. Recommandé pour les maternelles
             moyenne-section.
           'Bee: Sequence': 'Abeille : séquence'
-          'Artist: Sequence': 'Artiste : Séquence'
+          'Artist: Sequence': 'L''Artiste : Séquence'
           'Artist: Shapes': 'L''Artiste : les Formes'
           'Maze: Loops': 'Labyrinthe : les boucles'
           'Bee: Loops': 'Abeille : Les boucles'
@@ -54,16 +54,16 @@
           The Maze: Le labyrinthe
           Suzi: Suzi
           The Artist: L'Artiste
-          Artist Debugging: Artiste et le débogage
+          Artist Debugging: L'Artiste et le débogage
           Bounce: Rebond
           'Studio: Create a Story': 'Labo: Créer une histoire'
-          Artist Loops: Artiste et boucles
+          Artist Loops: L'Artiste et boucles
           Bee Conditionals: Abeilles et instructions conditionnelles
           Flappy: Flappy
           title: Cours 2
           Bee Loops: Abeilles et boucles
           Artist Functions: 'Artiste : les fonctions'
-          The Artist Debugging: Artiste et le débogage
+          The Artist Debugging: L'Artiste et le débogage
           Bee Debugging: Abeilles et débogage
           Bee Functions: Abeilles et fonctions
           Maze Loops: Labyrinthe et boucles
@@ -80,18 +80,18 @@
             pour résoudre des problèmes et développer des jeux interactifs qu'ils
             pourront partager. Recommandé pour les CE1-CM2.
           'Maze: Sequence': 'Labyrinthe : Parcours'
-          'Artist: Sequence': 'Artiste : Séquence'
+          'Artist: Sequence': 'L''Artiste : Séquence'
           'Maze: Loops': 'Labyrinthe : les boucles'
           'Artist: Loops': 'Artiste : Les boucles'
           'Bee: Loops': 'Abeille : Les boucles'
           'Bee: Debugging': 'Abeilles : Le débogage'
           'Artist: Debugging': 'Artiste : Le débogage'
           'Bee: Conditionals': 'Abeille : les instructions conditionnelles'
-          'Artist: Sequence2': 'Artiste : Séquence2'
+          'Artist: Sequence2': 'Artiste : Parcours2'
           'Maze: Sequence2': 'Labyrinthe : Parcours2'
           'Artist: Nested Loops': 'Artiste : les boucles imbriquées'
           description_audience: 6 ans et + (lecture indispensable)
-          description_short: Cours 2 s'adresse aux élèves qui savent lire.
+          description_short: Le cours 2 s'adresse aux élèves qui savent lire.
         course3:
           The Maze: Le labyrinthe
           'Studio: Create a Story': 'Labo: Créer une histoire'
@@ -149,20 +149,20 @@
           description_short: Le cours 3 fait suite au cours 2.
         playlab:
           title: Labo
-          description: Programmer une histoire ou un jeu avec le Labo !
+          description: Programme une histoire ou un jeu avec le Labo !
           Play Lab: Labo
           description_short: Programmer une histoire ou un jeu avec le Labo !
         artist:
           title: Artiste
-          description: Dessinez des super images et schémas avec l'Artiste!
+          description: Dessine des super images et schémas avec l'Artiste!
           Artist: Artiste
           description_short: Dessinez des super images et schémas avec l'Artiste!
         hourofcode:
           Maze: Labyrinthe
           title: Heure de Code
-          description: Apprenez à programmer avec les personnages d'Angry Birds, de
-            Plantes contre Zombies et Scrat de l'age de glace!
-          description_short: Apprenez à programmer avec des personnages rigolos!
+          description: Apprends à programmer avec les personnages d'Angry Birds, de
+            Plantes contre Zombies et Scrat de l'age de glace !
+          description_short: Apprends à programmer avec des personnages rigolos !
         frozen:
           title: Code avec Anna et Elsa
           description: Utilisons le code pour rejoindre Anna et Elsa dans leur exploration
@@ -182,7 +182,7 @@
             des jeux, qu'ils pourront partager. Convient à partir du CM1 jusqu'à la
             4è.
           'Artist: Variables': 'Artiste : Les variables'
-          'Bee: For Loops': 'Abeille : Les boucles pour'
+          'Bee: For Loops': 'Abeille : Les boucles "pour"'
           title: Cours 4
           'Algorithms: Tangrams': 'Algorithme : Tangrams'
           Variables: Variables
@@ -190,9 +190,9 @@
           'Play Lab: Functions with Parameters': 'Labo : Fonctions avec paramètres'
           'Bee: Functions with Parameters': 'Abeille : Fonctions avec Paramètres'
           'Artist: For Loops': 'Artiste : Les boucles pour'
-          'Play Lab: For Loops': 'Labo : Pour les boucles'
+          'Play Lab: For Loops': 'Labo : les boucles "pour"'
           'Artist: Functions': 'Artiste : les fonctions'
-          'Unplugged: Tangrams': 'Débranché : les tangrams'
+          'Unplugged: Tangrams': 'Activité débranchée : les tangrams'
           Artist: Artiste
           Bee: Abeille
           'Unplugged: Envelope Variables': 'Activité débranchée : Enveloppe Variables'
@@ -201,13 +201,17 @@
           'Unplugged: Songwriting with Parameters': 'Activité débranchée : utiliser
             des paramètres pour écrire des chansons'
           'Artist: Functions with Parameters': 'Artiste : Fonctions avec Paramètres'
-          'Unplugged: Binary': 'Activité débranchée : les binaires'
+          'Unplugged: Binary': 'Activité débranchée : le binaire'
           Bee Binary: Abeille binaire
           Farmer Binary: Agriculteur binaire
           Maze and Bee: Labyrinthe et abeille
           Artist Binary: Artiste binaire
           description_audience: 10 ans et + (après le Cours 3)
-          Super Challenge - Variables: Super Challenge - Variables
+          Super Challenge - Variables: Super Challenge - Les variables
+          Super Challenge - For Loops: Super Challenge - Les boucles Pour
+          Super Challenge - Functions and Parameters: Super Challenge - fonctions
+            et paramètres
+          Extreme Challenge - Comprehensive: Challenge Extrême - Tout
         Course4pre:
           title: Cours 4 prérequis
           description_short: Un court rattrapage des concepts pour les élèves n'ayant
@@ -216,7 +220,7 @@
             suivi les cours 2 et 3.
           Course 4 Prerequisite: Cours 4 prérequis
           'Maze: Sequence': 'Labyrinthe : Parcours'
-          'Artist: Sequence': 'Artiste : Séquence'
+          'Artist: Sequence': 'L''Artiste : Séquence'
           'Artist: Loops': 'Artiste : Les boucles'
           'Bee: Conditionals': 'Abeille : les instructions conditionnelles'
           'Artist: Nested Loops': 'Artiste : les boucles imbriquées'
@@ -274,7 +278,7 @@
           'Play Lab: Collision Detection (Big Game)': Le grand jeu - détection de
             Collision
         infinity:
-          title: Labo
+          title: Labo Disney Infinity
           description_short: Utilisez le labo pour créer une histoire ou un jeu mettant
             en vedette les personnages de Disney Infiny.
           description: Utilisez le labo pour créer une histoire ou un jeu mettant
@@ -394,6 +398,7 @@
           The Artist: L'Artiste
           Play Lab: Labo
           Play Lab 2015: Labo 2015
+          Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: Événements
           description: Événements
@@ -411,8 +416,8 @@
           Flappy Code: Flappy l'oiseau
         jigsaw:
           title: Pièces de Puzzle
-          description: Essayer le didacticiel de Jigsaw
-          description_short: Essayer le didacticiel de Jigsaw
+          description: Essaye le didacticiel de Jigsaw
+          description_short: Essaye le didacticiel de Jigsaw
           Jigsaw: Pièces de Puzzle
         step:
           title: Étape
@@ -420,11 +425,11 @@
           description_short: Tutoriel par étapes
           Step: Étape
         Hour of Code:
-          title: Heure de code 2013
-          description: Découvre les bases de l'informatique grâce à des personnages
+          title: L'Heure de code 2013
+          description: Découvre les bases de l'informatique grâce aux personnages
             de Angry Birds et de Plants vs Zombies !
-          description_short: Apprenez à programmer avec des personnages rigolos!
-          Hour of Code 2013: Heure de code 2013
+          description_short: Apprends à programmer avec des personnages rigolos !
+          Hour of Code 2013: L'Heure de code 2013
         Code Studio Puzzle Challenge:
           title: Défi des énigmes de Code Studio
           description_short: Relevez le défi !
@@ -469,7 +474,7 @@
             suivi les cours 2 et 3.
           Course 4 Prerequisite: Cours 4 prérequis
           'Maze: Sequence': 'Labyrinthe : Parcours'
-          'Artist: Sequence': 'Artiste : Séquence'
+          'Artist: Sequence': 'L''Artiste : Séquence'
           'Artist: Loops': 'Artiste : Les boucles'
           'Bee: Conditionals': 'Abeille : les instructions conditionnelles'
           'Artist: Nested Loops': 'Artiste : les boucles imbriquées'
@@ -525,7 +530,7 @@
           'Unplugged: Video Games and Coordinate Planes': 'Activité débranchée : jeux
             vidéo et les plans de coordonnées'
           'Calc: Evaluation Blocks': 'Calc : Blocs d''évaluation'
-          'Eval: Strings and Images': 'Evaluation : Des chaînes et des Images'
+          'Eval: Strings and Images': 'Evaluation : Textes et des Images'
           'Unplugged: Contracts': 'Activité débranchée : les contrats'
           'Eval: Writing Contracts': 'Evaluation : Rédaction de contrats'
           'Calc: Defining Variables': 'Calc : Définir les variables'
@@ -723,6 +728,39 @@
           'Variables: Create, Assign, and Read': 'Variables: Create, Assign, and Read'
           'Variables: Increment, Decrement, Display, and Scope': 'Variables: Increment,
             Decrement, Display, and Scope'
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistant: Introduction to Digital Assistant
+          'Improving Digital Assistant: Conditionals': 'Improving Digital Assistant:
+            Conditionals'
+          'Improving Digital Assistant: Functions with Return': 'Improving Digital
+            Assistant: Functions with Return'
+          'Improving Digital Assistant: Complex Conditionals': 'Improving Digital
+            Assistant: Complex Conditionals'
+          Conditionals with Movie Bot: Conditionals with Movie Bot
+          Improving Digital Assistant with Conditionals: Improving Digital Assistant
+            with Conditionals
+          Chained and Nested Conditionals with Movie Bot: Chained and Nested Conditionals
+            with Movie Bot
+          Compound Conditionals with Movie Bot: Compound Conditionals with Movie Bot
+          'Practice PT: Digital Assistant': 'Practice PT: Digital Assistant'
+          Practice PT - Design a Digital Scene: Practice PT - Design a Digital Scene
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          Introduction to Digital Assistant Project: Introduction to Digital Assistant
+            Project
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: Pendant que les Boucles
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1375,6 +1413,15 @@
           Day 22-25 Final Project: Day 22-25 Final Project
           'Day 15-16 HTML and CSS: Tables, Lists, Menus': 'Day 15-16 HTML and CSS:
             Tables, Lists, Menus'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
+          Intro to Unit 3: Intro to Unit 3
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
         ECSPD3-Unit4:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1403,6 +1450,13 @@
           Day 25-30 Final Project: Day 25-30 Final Project
           Unit 4 Challenge Planning: Unit 4 Challenge Planning
           Unit 4 Challenge Creation: Unit 4 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: Close & Next Steps
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1454,6 +1508,8 @@
           'Data App Part 8: Visualize Data': 'Data App Part 8: Visualize Data'
           'Data App Part 9: Reflect': 'Data App Part 9: Reflect'
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and
+            Clicker Completion
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1489,6 +1545,10 @@
         duino:
           Experimenting with Arduino stuff: Experimenting with Arduino stuff
           Basic Circuits: Basic Circuits
+          description: Testing some tools for teaching with Arduinos
+          Blinky Lights: Blinky Lights
+          Making Music: Making Music
+          JunkBot: JunkBot
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These
@@ -1501,3 +1561,110 @@
             puzzles might not be around long, so enjoy them while you can!
           description_audience: 10 ans et + (après le Cours 3)
           Halloween 2015: Halloween 2015
+          description: Something special for those who know it exists. These puzzles
+            might not be around long, so enjoy them while you can!
+        iceage:
+          title: Labo Age de Glace
+          description_short: Crée une histoire ou fais un jeu avec le Labo Age de
+            Glace !
+          description: Crée une histoire ou fais un jeu avec le Labo Age de Glace
+            !
+          Ice Age Play Lab: Labo Age de Glace
+        CSPPD3-Unit3:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit3temp:
+          title: CSP Unit 3 - Temp
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          Key Events with Image Scroller: Key Events with Image Scroller
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Pendant que les Boucles
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
+        CSP-Unit3-Support:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+        gumball:
+          title: Labo Gumball
+          description_short: Crée une histoire ou fais un jeu avec le Labo Gumball
+            !
+          description: Crée une histoire ou fais un jeu avec le Labo Gumball !
+          Gumball Play Lab: Labo Gumball
+        starwars:
+          title: 'Star Wars : Construire une galaxie en codant'
+          description_short: Apprends à programmer des droïdes et crée ton propre
+            jeu Star Wars dans une galaxie lointaine, très lointaine.
+          description: Apprends à programmer des droïdes et crée ton propre jeu Star
+            Wars dans une galaxie lointaine, très lointaine.
+          Hour of Code 2015: Heure de Code 2015
+        starwarsblocks:
+          title: 'Star Wars : Construire une galaxie en codant'
+          description_short: Apprends à programmer des droïdes et crée ton propre
+            jeu Star Wars dans une galaxie lointaine, très lointaine.
+          description: Apprends à programmer des droïdes et crée ton propre jeu Star
+            Wars dans une galaxie lointaine, très lointaine.
+          Hour of Code 2015: Heure de Code 2015
+        minecraft:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
+        mc:
+          title: Une Heure de Code Minecraft
+          description_short: Explore un monde Minecraft avec du code
+          description: Utilise des blocs de code pour emmener Steve ou Alex dans une
+            aventure dans le monde de Minecraft
+          Hour of Code 2015: Heure de Code 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Bienvenue !
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Conclusions

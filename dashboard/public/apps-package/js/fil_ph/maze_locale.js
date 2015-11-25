@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Kung meron daanan sa tinukay na direksyon, kung gayon ay gumawa ng mga aksyon."},
 "ifelseTooltip":function(d){return "Kung meron daan sa nasabing direksyon, kung gayon ay gawin ang unang bloke ng mga aksyon. Kung hindi, gawin ang pangalawang bloke ng mga aksyon."},
 "ifFlowerTooltip":function(d){return "Kung meron bulaklak/honeycomb sa itinurong direksyon, saka gawin ang mga aksyon."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Kung may bulaklak sa nasabing direksiyon, gumawa ng kahit anong action."},
 "ifelseFlowerTooltip":function(d){return "Kung meron bulaklak/honeycomb sa itinurong direksyon, saka gawin ang unang mga block ng mga aksyon. Kung hindi, gawin ang pangalawang block ng mga aksyon."},
 "insufficientHoney":function(d){return "Ginagamit mo ang lahat ng tamang mga block, ngunit kailangan mo gumawa ng tamang dami ng honey."},
 "insufficientNectar":function(d){return "Ginagamit mo ang lahat ng tamang mga block, ngunit kailangan mo kumulekta ng tamang dami ng honey."},

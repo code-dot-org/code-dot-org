@@ -254,12 +254,13 @@
     access_denied: Немаш приступ овом %{model}.
   nav:
     header:
-      finished_hoc: Завршио сам свој Сат Програмиранја
+      finished_hoc: Завршио сам свој Сат програмирања
       sign_in_to_save: Пријави се да сачуваш напредак
       free_play:
         playlab: Make an App
         artist: Draw Something
         calculate: Calculate Something
+        applab: Make an App
     user:
       classroom: Почетна страница за учитеље
       district_dashboard: District Dashboard
@@ -283,6 +284,8 @@
       prize_us_only: (Само за ученике из САД-а)
       prizes_link: Више информација
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Твој учитељ:'
       other: 'Твоји учителји:'
@@ -479,7 +482,7 @@
     direction: Start Direction (in degrees)
   video:
     tab: Видео.
-    notes: Нема видеа? Покаћи забилјешке.
+    notes: Нема видеа? Покажи белешке.
     notes_coming_soon: Notes for this video coming soon.
     autoplay_option: Аутоматски покрени видео
     download: Преузмите видео
@@ -509,6 +512,7 @@
   pdf_download: Download PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
+  not_started: The student has not attempted this level.
   share_code:
     title: Click 'Run' to see my program in action
     bounce_og_title: Check out my Bounce Game
@@ -551,15 +555,20 @@
         2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_frozen: Уметник са Аном и Елзом из Залеђеног краљевства
     gallery:
       title: Gallery
       body: View a gallery of app and artist images created by our users
     frozen:
-      title: Frozen
+      title: Залеђено краљевство
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!

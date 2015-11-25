@@ -214,6 +214,7 @@ en:
         playlab: crwdns20075:0crwdne20075:0
         artist: crwdns20076:0crwdne20076:0
         calculate: crwdns43324:0crwdne43324:0
+        applab: crwdns54664:0crwdne54664:0
     user:
       classroom: crwdns22205:0crwdne22205:0
       district_dashboard: crwdns35951:0crwdne35951:0
@@ -237,6 +238,8 @@ en:
       prize_us_only: crwdns4072:0crwdne4072:0
       prizes_link: crwdns2970:0crwdne2970:0
   teacher:
+    answer: crwdns50991:0crwdne50991:0
+    for_teachers_only: crwdns50992:0crwdne50992:0
     title:
       one: crwdns4363:0crwdne4363:0
       other: crwdns2604:0crwdne2604:0
@@ -302,7 +305,7 @@ en:
       section: crwdns39080:0crwdne39080:0
       example: crwdns45368:0crwdne45368:0
       example_with_number: 'crwdns45369:0%{solution_number}crwdne45369:0'
-      submitted_on: 'crwdns49667:0%{date}crwdne49667:0'
+      submitted_on: crwdns49667:0crwdne49667:0
       unsubmit: crwdns49668:0crwdne49668:0
   user:
     email_confirm_needed: crwdns4342:0crwdne4342:0
@@ -378,7 +381,7 @@ en:
     thank_you: crwdns45293:0crwdne45293:0
     help_from_html: crwdns6548:0crwdne6548:0
     help_from_html_old: crwdns45345:0crwdne45345:0
-    art_from_html: 'crwdns24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdne24788:0'
+    art_from_html: 'crwdns24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdne24788:0'
     art_from_html_old: 'crwdns45346:0%{current_year}crwdnd45346:0%{current_year}crwdne45346:0'
     powered_by_aws: crwdns24789:0crwdne24789:0
     trademark: 'crwdns45294:0%{current_year}crwdne45294:0'
@@ -424,6 +427,7 @@ en:
   pdf_download: crwdns6591:0crwdne6591:0
   download_coming_soon: crwdns23291:0crwdne23291:0
   video_coming_soon: crwdns23292:0crwdne23292:0
+  not_started: crwdns50993:0crwdne50993:0
   share_code:
     title: crwdns5296:0crwdne5296:0
     bounce_og_title: crwdns4898:0crwdne4898:0
@@ -465,9 +469,14 @@ en:
       body: crwdns23627:0crwdne23627:0
     frozen:
       title: crwdns24790:0crwdne24790:0
+    starwars:
+      title: crwdns50994:0crwdne50994:0
     infinity:
       title: crwdns35937:0crwdne35937:0
       body: crwdns35938:0crwdne35938:0
+    minecraft:
+      title: crwdns51940:0crwdne51940:0
+      body: crwdns51941:0crwdne51941:0
   gallery:
     students_drew_these_with_code: crwdns5091:0crwdne5091:0
     students_made_these_with_code: crwdns20426:0crwdne20426:0

@@ -1,7 +1,8 @@
 "az-AZ":
+  hour_of_code: Kod Saatı
   hello: Salam, dünya
   select_language: Zəhmət olmazsa, dilinizi seçin
-  en: Computer Science
+  en: İnformatika
   computer_science_edweek: İnformatika təhsili həftəsi
   csedweek_dates: 8-14 dekabr 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -11,8 +12,8 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">İnformatika müəllimisiniz? İnformatika Təhsili Həftəsi
     üçün digər materiallarımızı nəzərdən keçirin</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>nəfər artıq </h3><h2>Kod Saatı</h2>nda özünü
-    sınayıb
+  n_have_learned_an_hoc: <h1>Kod Saatında</h1><h2>özünüzü sınayın</h2><h3># nəfər
+    faydalanıb</h3>
   anybody_can_learn: Hər kəs öyrənə bilər.
   learn_now: İndi öyrən
   petition_message: Hər bir məktəbdə hər bir şagirdin informatikanı öyrənmək imkanı
@@ -41,6 +42,9 @@
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
   csedweek_map_search_reset: Yenidən başla
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Qeydiyyatdan keçin
   cded_try_it: Sınaqdan keçirin
   twentyhours_trynow: Elə indi sınaqdan keçirin
@@ -67,6 +71,9 @@
   thank_you_: Sağ olun!
   congratulations: Təbriklər!
   congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
   course_name_accelerated: Sürətləndirilmiş kurs
   course_name_course1: Kurs 1
   course_name_course2: Kurs 2
@@ -120,8 +127,8 @@
   i_am_a: 'Mən kiməm:'
   never_spam: Sizə heç vaxt spam göndərmərik
   enter_country: ABŞ-dan kənardasınızsa, ölkənizi daxil edin
-  used_infrequent_updates: Only used for infrequent updates
-  privacy_practices_children: See our privacy practices for children
+  used_infrequent_updates: Ancaq nadir hallarda yeniliklər göndərmək üçün
+  privacy_practices_children: Uşaqlar üçün məxfilik qaydalarımıza baxın
   petition_thankyou: Petisiyaya qol çəkdiyinizə görə sağ olun
   continue_learning_header: Bir saatdan daha çox öyrənməyə davam edin
   continue_learning_body: Variantlar çoxdur. Ya onlayn, ya yerli bir məktəbdə və yaxud
@@ -133,8 +140,6 @@
   just_did_hoc: 'Mən elə indicə #HourOfCode Kod Saatını bitirdim - özünüz baxın! @codeorg'
   twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
     http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: Bir Kod Saatı öyrənin
   beyond_hoc: Kod Saatı bitəndən sonra
   what_gender: Cinsiniz nədir?
@@ -172,12 +177,10 @@
   studiobar_donate_body: İanə etdiyiniz hər dollara bir uşaq dərs alır
   studiobar_shop_title: Dükan
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
-  homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+  homepage_hero_text_malala: "&ldquo;Mən hər bir ölkədə qızları \nbir Kod Saatı öyrənməyə
+    çağırıram.&rdquo; \nMalala, Nobel Sülh Mükafatı laureatı\n"
+  homepage_hero_text_susan: "&ldquo;Texnologiyanı dəyişə bilirsinizsə, \ndünyanı dəyişə
+    bilərsiniz.&rdquo;\nSyuzan, \"YouTube\"da baş icraçı direktor\n"
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
@@ -216,9 +219,10 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
-  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: 2,5 milyon qız öyrənmək üçün Kod Studiyasında qeydiyyatdan
+    keçib
+  homepage_hero_text_stat_students: 'Kod Studiyasında #student_count şagird hesabı'
+  homepage_hero_text_stat_served: 'Kod Saatı: #served nəfər faydalanıb'
   homepage_slot_text_hoc: Kod Saatı
   homepage_slot_text_frozen: Anna və Elza ilə Buzlu ürək
   homepage_slot_text_teacher: Teacher Dashboard
@@ -226,44 +230,51 @@
   homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Dükan
   homepage_slot_text_flappy: Qanadlı Kod
+  homepage_action_text_hoc: Hər şagird üçün bir Kod Saatı.
+  homepage_action_text_num_served: '# nəfər faydalanıb'
+  homepage_action_text_join_us: Bizə qoşulun
+  homepage_action_text_sign_up: Qeydiyyatdan keçin
+  homepage_action_text_try_it: Sınaqdan keçirin
+  homepage_action_text_volunteers: Texniki könüllülər axtarılır
   homepage_action_text_codevideo: Videoya baxın
   homepage_action_text_teachervideo: Videoya baxın
+  homepage_action_text_girlvideo: Bir qızı həvəsləndirin
   homepage_action_text_learn: Öyrənməyə başlayın
   homepage_action_text_signpetition: Petisiyaya qol çəkin
-  homepage_signpetition_dropdown: Petisiyamıza qol çəkin &#x25BE;
-  homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve
-    diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_signpetition_dropdown: Mən razıyam &#x25BE;
+  homepage_diversity_pledge: Fərqlilik barədə öhdəlik götür
+  homepage_banner_text_prizes: 'Kod Saatı yenə gəlir, 7-13 dekabrda. '
+  homepage_banner_link_prizes: 'Tarixin ən böyük təhsil hadisəsinə qoşulun. '
+  homepage_banner_text_main: '"Code.org" və "College Board" informatikada müxtəlifliyi
+    artırmaq üçün ittifaq qurublar.'
+  homepage_banner_text_link: Daha ətraflı
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more
+  homepage_banner_privacy_link: Daha ətraflı
   homepage_slot_text_title_hoc: Kod Saatı
   homepage_slot_text_blurb_hoc: Hər kəs öyrənə bilər. Elə bu gün başlayın
   homepage_slot_text_link_hoc: Kod Saatında özünüzü sınayın
   homepage_slot_text_link_host: Bir Kod Saatı təşkil edin
-  homepage_slot_text_link_hocserved: '# served'
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_slot_text_link_hocserved: '# nəfər faydalanıb'
+  homepage_solot_text_link_volunteer: Kod Saatına könüllü kimi dəstək verin
   homepage_slot_text_title_students: Şagirdlər
   homepage_slot_text_blurb_students: Bütün dərsliklərimizi nəzərdən keçirin
   homepage_slot_text_link_codestudio: Kod Studiyasını sınaqdan keçirin
-  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_local: Yaxında bir sinif tapın
   homepage_slot_text_link_othercourses: Digər onlayn kurslar
   homepage_slot_text_title_educators: Təlimçilər
   homepage_slot_text_blurb_educators: Şagirdlərinizi öyrədin
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support diversity in computing
-  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_k5: K-5 (11-12 yaşlılar) üçün kurslar
+  homepage_slot_text_link_fullcurriculum: Tam kurikulumu nəzərdən keçirin
+  homepage_slot_text_link_pd: Peşəkar inkişaf
+  homepage_slot_text_title_advocates: Təbliğatçılar
+  homepage_slot_text_blurb_advocates: İnformatikada müxtəlifliyə dəstək verin
+  homepage_slot_text_link_stats: Statistikaya baxın
   homepage_slot_text_link_buy: İştriak edin
-  homepage_slot_text_link_donate: Make a donation
+  homepage_slot_text_link_donate: İanə verin
   homepage_header_codestudio: Kod Studiyasında şagirdlərin əl işləri
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_header_donors: '"Code.org" onu dəstəkləyənlərə təşəkkür edir'
+  homepage_donors_seall: Hamısına baxın
   homepage_donors_donate: İanə verin
   contact_form_topic_student: Mən şagirdəm
   contact_form_topic_parent: Mən valideynəm
@@ -303,6 +314,32 @@
   class_submission_level_college: College
   class_submission_level_vocational: Texbiki-peşə
   class_submission_languages_other: Digər dil(lər)
+  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
+    videos</a> by role models and celebrities
+  starwars_subtitle: Building a Galaxy With Code
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: Elə indi sınaqdan keçirin
+  starwars_blocks_title: bloklar
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
+  starwars_blocks_start_button: Elə indi sınaqdan keçirin
+  starwars_watch_videos: Before you get started, watch one of these inspirational
+    videos
+  starwars_speak_languages: Başqa bir dildə danışırsınız?
+  starwars_help_translate: Tərcümə etməkdə bizə kömək edin
+  starwars_platform_text: Modern browsers, smartphones, tablets
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_gradelevel: 6+ yaş
+  mc_platformtext: Modern browsers, smartphones, tablets
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -314,15 +351,18 @@
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Ad
@@ -381,9 +421,24 @@
   volunteer_engineer_submission_location_flexibility_curriculum: Willing to help contribute
     to open-source curriculum projects
   volunteer_engineer_submission_experience_unspecified: Unspecified
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: Current
     university student (or researcher)
   volunteer_engineer_submission_experience_software_professional: Proqramçı-mühəndis
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
   petition_age: Yaşınız
   dashboard_landing_title: Müəllimin ev səhifəsi
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
@@ -466,7 +521,7 @@
   dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Done
   dashboard_action_required: required
-  dashboard_navigation_home_page: Teacher home page
+  dashboard_navigation_home_page: Müəllimin ev səhifəsi
   dashboard_navigation_section_student_progress: Student Accounts and Progress
   dashboard_navigation_section_teacher_progress: Your Course Progress
   dashboard_navigation_section_lesson_plans: Lesson Plans and Resources
@@ -486,12 +541,12 @@
   dashboard_sections_jumbotron_instruction: Create new sections and add students to
     them. Sections help you organize students into smaller groups so you can track
     their progress and manage their accounts.
-  dashboard_sections_table_section: Section
+  dashboard_sections_table_section: Bölmə
   dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grade
-  dashboard_sections_table_course: Course
+  dashboard_sections_table_course: Kurs
   dashboard_sections_table_students: Şagirdlər
-  dashboard_sections_table_code: Section Code
+  dashboard_sections_table_code: Bölmə kodu
   dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
     students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
@@ -541,11 +596,11 @@
   dashboard_students_reset_word: 'You may reset a student''s secret words at any time
     by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
     words will be generated for that student to use when they sign in. '
-  dashboard_students_join_link: Tell your students to create their own accounts and
-    join your section at
-  dashboard_students_no_email: If your students do not have email addresses, or you
-    would like to create accounts for them, change this section's secret type to <b>word</b>
-    or <b>picture</b>.
+  dashboard_students_join_link: 'Şagirdlərinizə deyin ki, özlərinə hesab düzəltsinlər
+    və bölmənizə növbəti keçiddən qoşulsunlar:'
+  dashboard_students_no_email: Şagirdlərinizin e-poçt ünvanı yoxdursa, yaxud onların
+    hesablarını özünüz düzəltmək istəyirsinizsə, bu bölmənin məxfi kodunu <b>söz</b>
+    və ya <b>şəkil</b> növünə dəyişin.
   dashboard_students_print_page: Print this page
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
@@ -554,7 +609,7 @@
   dashboard_curriculum_middle_title: Middle School Educator Resources
   dashboard_curriculum_high_title: High School Educator Resources
   dashboard_lesson_plans: Lesson Plans
-  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_view_all_lesson_plans: Kurs 1-3 üçün tam kurikulumu endirin
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Course 3:'
@@ -595,7 +650,7 @@
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
-  dashboard_teacher: Teacher
+  dashboard_teacher: Müəllim
   dashboard_student: şagird
   dashboard_sections_email_question: Do all students have a valid email address?
   dashboard_sections_account_creation_question: Who creates the student's account?
@@ -610,28 +665,45 @@
     login types, <b>picture, word, or email</b>, you'll want to choose for a section.
   dashboard_faq: Frequently Asked Questions
   dashboard_faq_k5: K-5 Frequently Asked Questions
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
+  dashboard_announcements: Elanlar
+  dashboard_announce_view_all: Hamısına baxın
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: Kod Saatı artıq buradadır - 8-14 dekabr!
   code_sign_up: Sign up to participate during CS Education Week
-  learn_more: Learn more
+  learn_more: Elə indi sınaqdan keçirin
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
   learn_sign_up_button: Qeydiyyatdan keçin
+  learn_videos_watch: Watch this inspirational video with your classroom
+  learn_videos_show: Show this inspirational video to your class
+  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
   hoc2014_try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
+  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Tutorials by 3rd parties
+  carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Sizin dilinizdə olan dərsliklər
   carousel_heading_domestic: Tutorials available in English
-  carousel_heading_beginners: Tutorials for Beginners
+  carousel_heading_beginners: Tutorials for Grades K-8
   carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
   carousel_heading_devices: Tutorial apps for phones and tablets
@@ -642,6 +714,7 @@
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -657,6 +730,7 @@
     Web browser.</a>
   mobile_devices: Tutorials for mobile devices
   frozen_name: Anna və Elza ilə proqramlaşdır
+  starwars_name: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın'
   codeorg_name: İlk kompüter proqramınızı yazın
   codeintl_name: İlk kompüter proqramınızı yazın
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -694,8 +768,10 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: İlk kompüter proqramınızı yazın
   playlab_name: Oyun labı
+  infinity_name: Infinity Play Lab
+  artist_name: Rəssam
   codeorg_gradelevel: 4-104 yaş
   codeintl_gradelevel: 4-104 yaş
   thinkersmithspanish_gradelevel: Por todos
@@ -735,10 +811,13 @@
   projguts_gradelevel: 10-13 yaş
   hourofcode_gradelevel: 4-104 yaş
   frozen_gradelevel: 8+ yaş
+  starwars_gradelevel: 6+ yaş
   playlab_gradelevel: 4-104 yaş
+  infinity_gradelevel: 4-104 yaş
+  artist_gradelevel: 4-104 yaş
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
-  thinkersmithspanish_platformtext: Unplugged
+  thinkersmithspanish_platformtext: Sərbəst
   khan_platformtext: Müasir veb səyyahlar
   khanes_platformtext: Müasir veb səyyahlar
   khanpt_platformtext: Müasir veb səyyahlar
@@ -748,8 +827,8 @@
   tynker_platformtext: Müasir veb səyyahlar
   scratch_platformtext: Ancaq masaüstü veb səyyahlar (planşetlər yox)
   lightbot_platformtext: ALL browsers and iOS, Android, or Game Console
-  thinkersmith_platformtext: Unplugged
-  condcards_platformtext: Unuplugged
+  thinkersmith_platformtext: Sərbəst
+  condcards_platformtext: Sərbəst
   lightbotintl_platformtext: iOS, Android (or web browser)
   codehs_platformtext: Modern browsers. (Follow-on course requires  $$)
   codecademy_platformtext: Müasir veb səyyahlar. iOS, Android proqramları
@@ -770,11 +849,12 @@
   touchdevelop_platformtext: Müasir veb səyyahlar, smartfonlar, bütün cihazlar
   appinventor_platformtext: Müasir veb səyyahlar + Android
   blockly_platformtext: Yalnız müasir veb səyyahlar
-  thinkersmith2_platformtext: Unplugged
-  kodableunplugged_platformtext: Unplugged
-  projguts_platformtext: Unplugged
+  thinkersmith2_platformtext: Sərbəst
+  kodableunplugged_platformtext: Sərbəst
+  projguts_platformtext: Sərbəst
   hourofcode_platformtext: Modern browsers, smartphones, tablets
   frozen_platformtext: Müasir veb səyyahlar + planşetlər
+  starwars_platformtext: Müasir veb səyyahlar + planşetlər
   playlab_platformtext: Modern browsers, smartphones, tablets
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
@@ -790,7 +870,8 @@
   scratch_shortdescription: İnteraktiv oyunlar, əhvalat və animasiyalar düzəldin.
   lightbot_shortdescription: Program Lightbot to solve puzzles using procedures and
     loops!
-  thinkersmith_shortdescription: Unplugged tutorial for a group with no devices
+  thinkersmith_shortdescription: Heç bir avadanlığı olmayan bir qrup üçün sərbəst
+    dərslik
   condcards_shortdescription: Learn algorithms with a deck of cards
   lightbotintl_shortdescription: A game to teach coding concepts
   codehs_shortdescription: Start coding with Karel the Dog, a fun and visual intro
@@ -820,12 +901,17 @@
   appinventor_shortdescription: Make your own app! (Android-only)
   blockly_shortdescription: Download a ZIP file to learn offline
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
-  kodableunplugged_shortdescription: A fun unplugged exercise
+  kodableunplugged_shortdescription: Əyləncəli sərbəst çalışma
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
   hourofcode_shortdescription: Placeholder for new code.org/hoc
   frozen_shortdescription: Gəlin, buzun sehrini və gözəlliyini kəşf edən Anna və Elzaya
     qoşulmaq üçün proqramlaşdırmadan istifadə edək.
+  starwars_shortdescription: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
+    Ulduz Müharibələri oyunu düzəldin.
   playlab_shortdescription: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
   codeorg_longdescription: İnfromatikanın təməl anlayışlarını sürüklə-burax tipli
     proqramlaşdırma ilə öyrənin. Bu oyuna bənzər dərslikdə Bill Qeyts və Mark Tsukerberqin
     video mühazirələri, "Angry Birds" və "Plants vs. Zombies" yer alır. "Təkrar et"
@@ -960,6 +1046,8 @@
     qoşulmaq üçün proqramlaşdırmadan istifadə edək. Buz üzərində sürüşərək siz qar
     dənəcikləri və naxışlar düzəldəcək, sonradan dostlarınızla bölüşə biləcəyiniz
     bir qış möcüzəsi quracaqsınız!
+  starwars_longdescription: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
+    Ulduz Müharibələri oyunu düzəldin.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
     pirates, zombies, ninjas, and many more characters move, make sounds, score points,
     and even throw fireballs!
@@ -1283,63 +1371,11 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Bu xəbərdarlığı gizlət
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: '# served'
-  homepage_action_text_join_us: Join us
-  homepage_action_text_sign_up: Sign up
-  homepage_action_text_try_it: Try it
-  homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_girlvideo: Inspire a girl
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
-  starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
-  starwars_javascript_start_button: Try now
-  starwars_blocks_title: Blocks
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
-  starwars_blocks_start_button: Try now
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_gradelevel: Ages 4-104
-  mc_platformtext: Modern browsers, smartphones, tablets
-  minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  starwars_gradelevel: Ages 6+
-  starwars_platformtext: Modern browsers + tablets
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: qanad çal
+  infinity_shortcode: inf
+  playlab_shortcode: səsləndir
+  artist_shortcode: art

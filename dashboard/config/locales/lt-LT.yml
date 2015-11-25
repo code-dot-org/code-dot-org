@@ -2,8 +2,8 @@
   errors:
     messages:
       not_saved: 'Ištaisykite šias klaidas:'
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      too_young: Šis turinys turi amžiaus apribojimus ir yra neprieinamas jaunesniems
+        mokiniams
   activerecord:
     errors:
       messages:
@@ -246,6 +246,7 @@
         playlab: Sukurk programėlę
         artist: Nupiešk ką nors
         calculate: Calculate Something
+        applab: Sukurk programėlę
     user:
       classroom: Mokytojo namų puslapis
       district_dashboard: Prietaisų skydelis
@@ -269,6 +270,8 @@
       prize_us_only: (Tik JAV mokiniams)
       prizes_link: daugiau informacijos
   teacher:
+    answer: Atsakymas
+    for_teachers_only: Tik mokytojams
     title:
       one: 'Tavo mokytojas:'
       other: 'Tavo mokytojai:'
@@ -338,10 +341,10 @@
       viewing_solution: Peržiūrėti sprendimą
       try_it_yourself: Išmėginkite patys
       section: Grupė
-      example: Example Solution
-      example_with_number: Example Solution %{solution_number}
-      submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
+      example: Sprendimo pavyzdys
+      example_with_number: Sprendimo pavyzdys %{solution_number}
+      submitted_on: 'Pateikitas:'
+      unsubmit: Atšaukti pateikimą
   user:
     email_confirm_needed: 'El. pašto adresas nebuvo patvirtintas:'
     email_confirm_needed_required: 'Jūsų el. pašto adresas %{email} nebuvo patvirtintas:'
@@ -431,14 +434,14 @@
       patarėjams</a> už jų pagalbą kuriant Code Studio.
     help_from_html: Mes ypatingai norime padėkoti inžinieriams iš Google, Microsoft,
       Facebook, Twitter ir daugeliui kitų, kurie padėjo sukurti šias pamokėles.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
-      create these materials.
+    help_from_html_old: Šią medžiagą padėjo sukurti inžinieriai iš Google, Microsoft,
+      Facebook ir Twitter.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       Visos teisės saugomos.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Visos teisės saugomos.
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+      Entertainment Ltd. Visos teisės saugomos.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. Visos teisės saugomos
     powered_by_aws: 'Rėmėjas: Amazon Web Services'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotipas ir
       Hour of Code&reg; yra Code.org priklausantys prekės ženklai.'
@@ -448,11 +451,11 @@
     translate: Padėkite mums išversti į savo kalbą
     support: Pagalba
     support_url: http://support.code.org
-    tos_short: Terms
+    tos_short: Sąlygos
     tos: Naudojimo taisyklės
     privacy: Privatumo politika
     secure: Saugaus ryšio versija
-    report_abuse: Report Abuse
+    report_abuse: Praneškite apie piktnaudžiavimą
   reference_area:
     title: Reikia pagalbos?
     subtitle: Peržiūrėkite šiuos vaizdo įrašus bei patarimus
@@ -492,6 +495,7 @@
   pdf_download: Parsisiųsti PDF
   download_coming_soon: Jau netrukus bus galima parsisiųsti įvairias veiklas.
   video_coming_soon: Vaizdo įrašas bus jau netrukus!
+  not_started: Mokinys dar nebandė šio lygio.
   share_code:
     title: Nuspausk „Paleisti“, kad programa būtų įvykdyta
     bounce_og_title: Peržiūrėk mano Bounce žaidimą
@@ -539,10 +543,15 @@
       body: Peržiūrėkite su menininku sukurtų piešinių galeriją
     frozen:
       title: Ledo šalis
+    starwars:
+      title: Žvaigždžių karai
     infinity:
       title: Žaidimų laboratorija Infinity
       body: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje bus Disnėjaus
         Infinity personažai.
+    minecraft:
+      title: Minecraft
+      body: Tyrinėkite Minecraft pasaulį per kodą.
   gallery:
     students_drew_these_with_code: Mokiniai nupiešė juos parašę kodą!
     students_made_these_with_code: Mokinių sukurti pavyzdžiai.
@@ -695,33 +704,33 @@
     view_all: Peržiūrėti mano projektus
     remix: Remiksas
     click_to_remix: Spustelėkite „Remiksas“ ir iškraipysite savo versiją!
-    edit_project: Edit Project
+    edit_project: Redaguoti projektą
     abuse:
-      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
-        of Service</a> and cannot be shared with others.
-      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
-        us.</a>
-      go_to_code_studio: Go to Code Studio
+      tos: Šis projektas buvo praneštas, kad pažeidė Code.org <a href='http://code.org/tos'>Paslaugų
+        teikimo sąlygas</a> ir negalima juo dalintis su kitais.
+      contact_us: Jei Jūs manote, kad tai klaida, <a href='https://code.org/contact'>susisiekite
+        su mumis.</a>
+      go_to_code_studio: Eiti į Code Studio
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: Jei, naudojantis Code Studio pagamintomis programėlėmis, Jūs aptikote
+          įžeidžiantį turinį, grasinimus, patyčias, priekabiavimą ar autorinių teisių
+          pažeidimą jums priklausančiam turiniui, prašome užpildyti formą esančią
+          žemiau. Į Jūsų pranešimą mes reaguosime labai rimtai, ištirsime numatyta
+          tvarka ir imsimės atitinkamų veiksmų.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Nurodykite el. pašto adresą
+          age: Nurodykite amžių
+          abuse_type: Prašome atsakyti kaip šis turinys pažeidžia Paslaugų teikimo
+            sąlygas
+          abuse_detail: Nurodykite išsamią informacija dėl turinio, kurį Jūs panešate
+        abusive_url: Nuoroda (URL) į pranešamą turinį
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: Kaip šis turinys pažeidžia %{link_start}Paslaugų teikimo sąlygas%{link_end}?
+          harassment: Grasinimai, patyčios, priekabiavimas
+          offensive: Įžeidžiantis turinys
+          infringement: Autorinių teisių pažeidimas
           other: Kita
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
-        acknowledge: By submitting this information, you acknowledge it will be handled
-          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+        detail: Prašome nurodyti kuo daugiau informacijos dėl turinio, kurį Jūs pranešate.
+        acknowledge: Pateikdami šią informaciją Jūs sutinkate, kad ji bus naudojama
+          pagal %{link_start_privacy}Privatumo politika%{link_end} ir %{link_start_tos}Paslaugų
+          teikimo sąlygomis%{link_end}

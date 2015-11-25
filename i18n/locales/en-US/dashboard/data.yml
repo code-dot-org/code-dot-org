@@ -307,6 +307,27 @@ en:
         studio_playlab_8: crwdns24738:0crwdne24738:0
         studio_playlab_9: crwdns24739:0crwdne24739:0
         studio_playlab_10: crwdns23435:0crwdne23435:0
+        studio_iceage_1: crwdns50995:0crwdne50995:0
+        studio_iceage_2: crwdns50996:0crwdne50996:0
+        studio_iceage_3: crwdns50997:0crwdne50997:0
+        studio_iceage_4: crwdns50998:0crwdne50998:0
+        studio_iceage_5: crwdns50999:0crwdne50999:0
+        studio_iceage_6: crwdns51000:0crwdne51000:0
+        studio_iceage_7: crwdns51001:0crwdne51001:0
+        studio_iceage_8: crwdns51002:0crwdne51002:0
+        studio_iceage_9: crwdns51003:0crwdne51003:0
+        studio_iceage_10: crwdns51004:0crwdne51004:0
+        studio_gumball_hello1: crwdns54731:0crwdne54731:0
+        studio_gumball_hello2: crwdns54732:0crwdne54732:0
+        studio_gumball_move_to_flag: crwdns54733:0crwdne54733:0
+        studio_gumball_move_to_actor: crwdns54734:0crwdne54734:0
+        studio_gumball_repeat: crwdns54735:0crwdne54735:0
+        studio_gumball_click_hello: crwdns54736:0crwdne54736:0
+        studio_gumball_move_events: crwdns54737:0crwdne54737:0
+        studio_gumball_sound_and_points: crwdns54738:0crwdne54738:0
+        studio_gumball_warn_food_fight: crwdns54739:0crwdne54739:0
+        studio_gumball_join_food_fight: crwdns54740:0crwdne54740:0
+        studio_gumball_free_play: crwdns54741:0crwdne54741:0
         studio_full_sandbox: crwdns23436:0crwdne23436:0
         studio_k1_1: crwdns5375:0crwdne5375:0
         studio_k1_2: crwdns5376:0crwdne5376:0
@@ -435,7 +456,13 @@ en:
         infinity_playlab_intro: crwdns35943:0crwdne35943:0
         infinity_playlab_events: crwdns35944:0crwdne35944:0
         infinity_playlab_repeat_forever: crwdns35945:0crwdne35945:0
+        csp_applab_design: crwdns51942:0crwdne51942:0
+        csp_applab_variables_1: crwdns51015:0crwdne51015:0
+        csp_applab_variables_2: crwdns51016:0crwdne51016:0
         csp_applab_functions: crwdns49683:0crwdne49683:0
+        csp_applab_functions_parameters: crwdns51017:0crwdne51017:0
+        csp_applab_loops: crwdns51018:0crwdne51018:0
+        csp_applab_turtle: crwdns51019:0crwdne51019:0
         csp_concept_rgb: crwdns36227:0crwdne36227:0
         csp_pixelation_color_1: crwdns36228:0crwdne36228:0
         csp_pixelation_color_2: crwdns36229:0crwdne36229:0
@@ -467,6 +494,21 @@ en:
         hoc2015_preview_blocks: crwdns50648:0crwdne50648:0
         hoc2015_preview_typing: crwdns50649:0crwdne50649:0
         hoc2015_preview_conclusion: crwdns50650:0crwdne50650:0
+        starwars_intro: crwdns51020:0crwdne51020:0
+        starwars_typing: crwdns51021:0crwdne51021:0
+        starwars_events: crwdns51022:0crwdne51022:0
+        starwars_congrats: crwdns51023:0crwdne51023:0
+        starwars_blocks_intro: crwdns51024:0crwdne51024:0
+        starwars_blocks_events: crwdns51025:0crwdne51025:0
+        starwars_blocks_congrats: crwdns51026:0crwdne51026:0
+        mc_intro: crwdns51943:0crwdne51943:0
+        mc_repeat: crwdns51944:0crwdne51944:0
+        mc_if_statements: crwdns51945:0crwdne51945:0
+        mc_congrats_share: crwdns51946:0crwdne51946:0
+        mc_congrats_no_share: crwdns51947:0crwdne51947:0
+        gumball_intro: crwdns54742:0crwdne54742:0
+        gumball_events: crwdns54743:0crwdne54743:0
+        gumball_repeat: crwdns54744:0crwdne54744:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0
@@ -538,3 +580,10 @@ en:
         Infinity_move_directions_callout_arrow: crwdns36321:0crwdne36321:0
         Infinity_move_collide_callout: crwdns36220:0crwdne36220:0
         Infinity_repeat_callout: crwdns36221:0crwdne36221:0
+        craft_run_button_callout: crwdns54648:0crwdne54648:0
+        craft_drag_block_callout: crwdns54649:0crwdne54649:0
+        craft_callout_preplaced: crwdns54650:0crwdne54650:0
+        craft_inside_repeat: crwdns54651:0crwdne54651:0
+        craft_callout_preplaced_house: crwdns54652:0crwdne54652:0
+        craft_what_is_iron: crwdns54653:0crwdne54653:0
+        craft_callout_moveforward: crwdns54654:0crwdne54654:0

@@ -203,7 +203,7 @@ bs:
         turtle_3_5: 'Sada napravi novu funkciju "nacrtaj kuću" i iskoristi je da udomiš dvije mačke. Savjet: napravi novu funkciju koristeći blok "uradi nešto" i upiši vlastiti tekst da bi dao ime bloku.'
         turtle_3_6: 'Koristeći "nacrtaj kvadrat" kao primjer, dodaj unos nazvan "dužina" u funkciju "nacrtaj trokut". Potom nacrtaj trokute različitih veličina. (Savjet: klikni na zvjezdicu da dodaš unos u funkciju)'
         turtle_3_7: 'Dodaj unos zvan "dužina" u "nacrtaj kuću" i napravi veliku kuću za slona (sa stranicama dužine 150 piksela)'
-        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
+        turtle_3_8: 'Izmjeni "nacrtaj kuću" tako da budem u donjem desnom uglu nakon što nacrtam novu kuću. Iskoristite ovu izmjenjenju funkciju kako nacrtali tri kuće.'
         turtle_3_9: 'Možeš li ponovno napraviti funkciju "nacrtaj kuću" bez ičije pomoći? Pokušaj, a zatim nacrtaj niz kuća.'
         turtle_3_10: Puno si naučio/la! Sada to iskoristi da nacrtaš šta god želiš. Pokušaj nacrtati zvijezdu, spiralu ili kitnjastu pahuljicu.
         maze_karel_debug_seq_1: Dobrodošao u ispravljanje grešaka! Moj kôd ne radi ispravno. Možeš li uočiti problem i popraviti ga tako da mogu poravnati zemljište i pripremiti ga za sadnju?
@@ -311,6 +311,27 @@ bs:
         studio_playlab_8: Možeš li dodati blok za dodavanje boda i blok za puštanje zvuka kad jednorog naleti na čarobnjaka, a zatim ga pomakni pomoću tipki sa strelicama dok ne zaradiš bod?
         studio_playlab_9: Postavi pozadinu za ovu invaziju vanzemaljaca i pomozi Svemir-botu da brže stigne do njih tako da mu promijeniš brzinu. Zatim ga pomoću tipki sa strelicama pomakni da dođe do njih i upozori ostale
         studio_playlab_10: Napravi svoju igricu. Kada završiš, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
+        studio_iceage_1: 'Mnogi žele da kažu "zdravo" - možete li im pomoći?'
+        studio_iceage_2: 'Diego (glumac 1) i baka (glumac 2) bi željeli da kažu "zdravo" jedno drugom. Možete li im pomoći koristeći blok "kaži" dva puta?'
+        studio_iceage_3: Možete li pomoći Scratu/vjeverici da dođe do zastavice?
+        studio_iceage_4: Možete li pomoći Scratu (glumac 1) da dođe do bake (glumac 2) i da se čuje zvuk nakon što dođe?
+        studio_iceage_5: 'Možete li pomoći Sidu da kaže "pozdrav" kad kliknete na njega? Ne zaboravite da ga kliknete nakon pokretanja'
+        studio_iceage_6: Možete li pomoći Dijegu da se kreće uokolo koristeći tipke gore/dole/lijevo/desno kako bi pokupio sve zastavice?
+        studio_iceage_7: 'Blok "ponavljaj vječno" vam omogučava da izvršavate kod bez prekida. Možete li mu dodati blokove kako bi pomogli Sidu da se kreče neprestano udesno i ulijevo?'
+        studio_iceage_8: Možete li dodati blok da bi postigli poen i blok da se čuje zvuk kada Sid naleti na Mannija, a onda ga pomjerite strelicama dok ne postignete poen?
+        studio_iceage_9: Postavite pozadinu za ledeno doba i pomozite Sidu da dođe do bake brže, tako što podesite brzinu. A zatim ga pomjerite strelicama da dođete do Sida da bi upozorili sve.
+        studio_iceage_10: Napravi svoju igricu. Kada završiš, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
+        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
+        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
+        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
+        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
+        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
+        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
+        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
+        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_full_sandbox: Napravi svoju igricu. Kada završiš, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
         studio_k1_1: 'Možeš li učiniti da ovaj pas kaže "zdravo, svijete"?'
         studio_k1_2: Možeš li učiniti da pas nešto kaže, a poslije njega da mačka nešto kaže?
@@ -435,11 +456,17 @@ bs:
         playlab_intro: Uvod u Laboratorij Igara
         playlab_events: Događaji u Laboratoriju Igara
         playlab_repeat_forever: 'Laboratorij Igara - Beskonačno Ponavljanje '
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        infinity_playlab_intro: 'Play Lab - Introduction'
-        infinity_playlab_events: 'Play Lab - Events'
-        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        tutorial_puzzle_challenge: Upustvo za slagalicu
+        infinity_playlab_intro: 'Laboratorij igara - uvod'
+        infinity_playlab_events: 'Laboratorij igara - događaji'
+        infinity_playlab_repeat_forever: 'Laboratorij igara - ponavaljaj vječno'
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: 'Introduction to Variables - Part 1'
+        csp_applab_variables_2: 'Introduction to Variables - Part 2'
         csp_applab_functions: Uvod u Funkcije
+        csp_applab_functions_parameters: Funkcije sa Parametrima
+        csp_applab_loops: Petlje
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
@@ -471,6 +498,21 @@ bs:
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Ratovi zvijezda: Izgradite galaksiju kodom - uvod'
+        starwars_typing: 'Ratovi zvijezda: Izgradite galaksiju kodom - JavaScript'
+        starwars_events: 'Ratovi zvijezda: Izgradite galaksiju kodom - događaji'
+        starwars_congrats: 'Ratovi zvijezda - Izgradite galaksiju kodom - čestitamo'
+        starwars_blocks_intro: 'Ratovi zvijezda: Izgradite galaksiju kodom - uvod'
+        starwars_blocks_events: 'Ratovi zvijezda: Izgradite galaksiju kodom - događaji'
+        starwars_blocks_congrats: 'Ratovi zvijezda - Izgradite galaksiju kodom - čestitamo'
+        mc_intro: 'Minecraft - Introduction'
+        mc_repeat: 'Minecraft - Repeat'
+        mc_if_statements: 'Minecraft - If statements'
+        mc_congrats_share: 'Minecraft - Congratulations'
+        mc_congrats_no_share: 'Minecraft - Congratulations'
+        gumball_intro: 'Gumball Hour of Code - Introduction'
+        gumball_events: 'Gumball Hour of Code - Events'
+        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Dovuci blok "idi" i zakači ga ispod nekok drugog bloka'
@@ -536,9 +578,16 @@ bs:
         place_length_variable: Dovuci ovdje varijablu dužine da bi zamijenio upitnike
         arrows_move_actor: Koristi strelice za pomicanje lika
         right_arrow_fireball: Koristi desnu strelicu za bacanje vatrenih kugli
-        name_function: Write the name of your function here
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
-        Infinity_move_collide_callout: Play a sound when this event occurs.
-        Infinity_repeat_callout: Place Move blocks inside here
+        name_function: Unesite ime vaše funkcije ovdje
+        Infinity_move_right_runbutton: Ovdje dodajte blok za pomjeranje
+        Infinity_move_directions_callout: Koji će blok natjerati Baymaxa da se pomjeri prema gore nakon što kliknete na strelicu gore?
+        Infinity_move_directions_callout_arrow: Koristite ove strelice kako bi upravljali
+        Infinity_move_collide_callout: Oglasite zvuk nakon što se ovaj događaj desi.
+        Infinity_repeat_callout: Ovdje unutra postavite blokove za pomjeranje
+        craft_run_button_callout: 'Klikni na "Pokreni" da isprobaš svoj program'
+        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
+        craft_callout_preplaced: "We've put some blocks here to get you started"
+        craft_inside_repeat: Repeat actions by placing blocks in here
+        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
+        craft_what_is_iron: Mine this iron!
+        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?

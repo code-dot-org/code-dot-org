@@ -261,6 +261,7 @@
         playlab: Make an App
         artist: Draw Something
         calculate: Calculate Something
+        applab: Make an App
     user:
       classroom: Laman Utama Guru
       district_dashboard: District Dashboard
@@ -284,6 +285,8 @@
       prize_us_only: (Pelajar dari  A.S. sahaja)
       prizes_link: maklumat lanjut
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Guru anda:'
       other: 'Guru anda:'
@@ -510,6 +513,7 @@
   pdf_download: Download PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
+  not_started: The student has not attempted this level.
   share_code:
     title: Klik 'Mainkan' untuk lihat program saya berfungsi
     bounce_og_title: Semak permainan Lantun saya
@@ -558,9 +562,14 @@
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Pelajar telah melukis ini dengan kod!
     students_made_these_with_code: Students made these with code!

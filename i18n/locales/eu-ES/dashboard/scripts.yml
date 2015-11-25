@@ -17,195 +17,198 @@ eu:
           "Maze: Debugging": 'Labirintoa: Arazketa'
           "Artist 1: Intro": 'Artista 1: Sarrera'
           Artists 2: Artistak 2
-          Spelling Bee: Letraka esatearen txapelketa
-          Spelling Bee not blockly: Spelling Bee not blockly
+          Spelling Bee: Letraz-letra
+          Spelling Bee not blockly: Letraz-letra ez blocky
           "Bee 1: Intro": 'Erlea 1: Sarrera'
           "Maze 2: Loops": 'Labirinto 2: Begiztak'
           "Bee 2: Loops": 'Erle 2: Begiztak'
           Multi & Match: 'Multi & Match'
-          K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
+          K-1 Flappy: LH-1 Flappy
+          Flappy non blockly: Flappy ez blockly
           title: 1. Kurtsoa
           Artist 2: Artista 2
-          Happy Maps: Happy Maps
+          Happy Maps: Mapa Zoriontsuak
           Move it, Move it: Mugitu, mugitu
-          "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
-          description: Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
-          "Bee: Sequence": 'Bee: Sequence'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Shapes": 'Artist: Shapes'
+          "Real-life Algorithms: Plant a Seed": 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
+          Building a Foundation: Oinarri bat Eraikitzen
+          Getting Loopy: Iteratzen
+          The Big Event: Gertaera Handia
+          Going Places Safely: Joan segurtasunez
+          description: 'Lehenengo kurtsoa erabiltzaile berriei zuzenduta dago. Ikasleek programazioko oinarrizko kontzeptuak ulertuko dituzte, beste batrzuekin lan egiten ikasten duten bitartean.  Problemak ebazteklo gaitasunak eta lan gogorren aurrean dirautzeko gaitasuna garatzen laguntzen du. Kurtso bukaerarako, ikasleak beraien joku edo historio sortu ahal izango dute, eta elkarbanatu.'
+          "Bee: Sequence": 'Erelea: sekuentzia'
+          "Artist: Sequence": 'Artista: sekuentzia'
+          "Artist: Shapes": 'Artista: Formak'
           "Maze: Loops": 'Labirinto: Begiztak'
           "Bee: Loops": 'Erle: Begiztak'
-          "Studio: Create a Story": 'Play Lab: Create a Story'
-          "Artist: Loops": 'Artist: Loops'
+          "Studio: Create a Story": 'Joku laborategia: sortu istorioa'
+          "Artist: Loops": 'Artista: begiztak'
           description_audience: 4-6 urte
-          description_short: Start with Course 1 for early readers.
+          description_short: Hasi 1 kurtsoarekin irakurle goiztiarrekin.
         course2:
           The Maze: labirintoa
           Suzi: Suzi
           The Artist: Artista
-          Artist Debugging: Artist Debugging
+          Artist Debugging: Artistaren arazketa
           Bounce: Errebotea
-          "Studio: Create a Story": 'Play Lab: Create a Story'
-          Artist Loops: Artist Loops
-          Bee Conditionals: Bee Conditionals
+          "Studio: Create a Story": 'Joku laborategia: sortu istorioa'
+          Artist Loops: Artistaren begiztak
+          Bee Conditionals: Erlearen baldintzazkoak
           Flappy: Flappy
           title: 2. Kurtsoa
-          Bee Loops: Bee Loops
-          Artist Functions: Artist Functions
-          The Artist Debugging: The Artist Debugging
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
+          Bee Loops: Erlearen begiztak
+          Artist Functions: Artistaren funtzioak
+          The Artist Debugging: Artistaren arazketa
+          Bee Debugging: Erlearen arazketa
+          Bee Functions: Erlearen funtzioak
+          Maze Loops: Labiriontoaren begiztak
           Graph Paper Programming: Paper grafiko programazioa
-          "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: Getting Loopy
-          Relay programming: Relay programming
+          "Real-life Algorithms: Paper Planes": 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
+          Getting Loopy: Iteratzen
+          Relay programming: Erreleen programazioa
           Conditionals: Baldintzak
-          Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
-          Your Digital Footprint: Your Digital Footprint
-          description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          Binary Bracelets: Eskumuturreko binarioak
+          The Big Event: Gertaera Handia
+          Your Digital Footprint: Zure aztarna digitala
+          description: Hasi 2 kurtsoarekin irakurtzen dakiten eta programatzen esperientziarik ez duten ikasleekin. Kurtso honetan ikasleek programak sortuko dituzte problemak ebazteko eta joku interaktiboak garatu edo elkarbanatu ditzaketen istorioak sortuko dituzte. 2-5 mailetako ikasleentzako gomendatzen da.
           "Maze: Sequence": 'Labirinto: Sekuentzia'
-          "Artist: Sequence": 'Artist: Sequence'
+          "Artist: Sequence": 'Artista: sekuentzia'
           "Maze: Loops": 'Labirinto: Begiztak'
-          "Artist: Loops": 'Artist: Loops'
+          "Artist: Loops": 'Artista: begiztak'
           "Bee: Loops": 'Erle: Begiztak'
-          "Bee: Debugging": 'Bee: Debugging'
-          "Artist: Debugging": 'Artist: Debugging'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Sequence2": 'Artist: Sequence2'
-          "Maze: Sequence2": 'Maze: Sequence2'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
-          description_audience: Ages 6-18
-          description_short: Start with Course 2 for students who can read.
+          "Bee: Debugging": 'Erlea: Arazketa'
+          "Artist: Debugging": 'Artista: arazketa'
+          "Bee: Conditionals": 'Erlea: baldintzazkoak'
+          "Artist: Sequence2": 'Artista: sekuentzia2'
+          "Maze: Sequence2": 'Labirintoa: sekuentzia2'
+          "Artist: Nested Loops": 'Artista: habiatutako begiztak'
+          description_audience: 6-18 urte bitarteko adinak
+          description_short: Hasi 2 kurtosarekin irakurtzen dakiten ikasleekin.
         course3:
           The Maze: labirintoa
-          "Studio: Create a Story": 'Play Lab: Create a Story'
+          "Studio: Create a Story": 'Joku laborategia: sortu istorioa'
           The Artist: Artista
           title: 3. Kurtsoa
-          Artist Functions: Artist Functions
-          Artist For Loops: Artist For Loops
-          Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
-          Bee Nested Loops: Bee Nested Loops
-          Bee Debuggin: Bee Debuggin
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Artist Functions with Params: Artist Functions with Params
+          Artist Functions: Artistaren funtzioak
+          Artist For Loops: Artista begiztentzako
+          Artist Nested Loops: Artistaren habiatutako begiztak
+          Bee Conditionals: Erlearen baldintzazkoak
+          Bee Nested Loops: Erlearen habiatutako begiztak
+          Bee Debuggin: Erlearen arazketa
+          Bee Debugging: Erlearen arazketa
+          Bee Functions: Erlearen funtzioak
+          Artist Functions with Params: Artistaren parametrodun funtzioak
           Bounce: Errebotea
-          Maze Conditionals: Maze Conditionals
-          Artist Functions with Parameters: Artist Functions with Parameters
+          Maze Conditionals: Labirintoaren baldintzazkoak
+          Artist Functions with Parameters: Artistaren parametrodun funtzioak
           Computational Thinking: Pentsamendu konputazionala
-          Functional Suncatchers: Functional Suncatchers
-          Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
+          Functional Suncatchers: Argizulo funtzionalak
+          Songwriting Parameters: Abesti konposaketaren parametroak
+          Dice Race: Dado lasterketa
           Internet: Internet
           Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital Citizenship
-          Farmer - While Loops: 'Farmer - While Loops'
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
-          "Studio: Create a Game": 'Play Lab: Create a Game'
-          Maze: Maze
-          Artist: Artist
-          "Artist: Functions": 'Artist: Functions'
-          "Bee: Functions": 'Bee: Functions'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Maze: Conditionals": 'Maze: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
-          "Farmer: While Loops": 'Farmer: While Loops'
-          "Bee: Nested Loops": 'Bee: Nested Loops'
-          "Bee: Debugging": 'Bee: Debugging'
-          Maze2: Maze2
-          Artist2: Artist2
-          "Artist: Functions2": 'Artist: Functions2'
-          "Bee: Functions2": 'Bee: Functions2'
-          "Bee: Conditionals2": 'Bee: Conditionals2'
-          "Maze: Conditionals2": 'Maze: Conditionals2'
-          "Artist: Nested Loops2": 'Artist: Nested Loops2'
-          "Farmer: While Loops2": 'Farmer: While Loops2'
-          "Bee: Nested Loops2": 'Bee: Nested Loops2'
-          "Bee: Debugging2": 'Bee: Debugging2'
-          "Artist: Patterns": 'Artist: Patterns'
-          Songwriting: Musika lana
-          description_audience: Ages 8-18
-          description_short: Course 3 is a follow-up to Course 2.
+          Digital Citizenship: Hiritartasun digitala
+          Farmer - While Loops: 'Nekazaria - While begiztak'
+          description: Hirugarren maila, bigarren maila egin duten ikasleentzat dago dineinatuta. Ikasleak aurreko mailetan emandako irakasgailetan gehiago sakonduko dute, problema komplexuagoei erantzuna ematen gai izateko. Maila honen amaierarako, ikasleak gai izango dira isotio iteraktiboak eta jokuak sortu, eta edozeinekin partekatzeko. 4-5 urte artekoentzat gomendatua.
+          "Studio: Create a Game": 'Joku laborategia: sortu joku bat'
+          Maze: Labirintoa
+          Artist: Artista
+          "Artist: Functions": 'Artista: funtzioak'
+          "Bee: Functions": 'Elea: funtzioak'
+          "Bee: Conditionals": 'Erlea: baldintzazkoak'
+          "Maze: Conditionals": 'Labirintoa: Funtzioak'
+          "Artist: Nested Loops": 'Artista: habiatutako begiztak'
+          "Farmer: While Loops": 'Nekazaria: While begiztak'
+          "Bee: Nested Loops": 'Erlea: habiatutako begiztak'
+          "Bee: Debugging": 'Erlea: Arazketa'
+          Maze2: Labirintoa2
+          Artist2: Artista2
+          "Artist: Functions2": 'Artista: funtzioak2'
+          "Bee: Functions2": 'Elea: funtzioak2'
+          "Bee: Conditionals2": 'Erlea: Baldintzazkoak2'
+          "Maze: Conditionals2": 'Labirintoa: Baldintzazkoak2'
+          "Artist: Nested Loops2": 'Artista: habiatutako begiztak2'
+          "Farmer: While Loops2": 'Nekazaria: While begiztak'
+          "Bee: Nested Loops2": 'Erlea: habiatutako begiztak2'
+          "Bee: Debugging2": 'Erlea: Arazten2'
+          "Artist: Patterns": 'Artista: patroiak'
+          Songwriting: Musika idazten
+          description_audience: 8-18 bitarteko adina
+          description_short: 3. kurtsoa 2. kurtsoaren jarraipena da.
         playlab:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          title: Jokoen Laborategia
+          description: Sortu istorio bat edo egin ezazu jolas bat Play Labekin!
+          Play Lab: Jokoen Laborategia
+          description_short: Sortu istorio bat edo egin ezazu jolas bat Play Labekin!
         artist:
-          title: Artist
-          description: Draw cool pictures and designs with the Artist!
-          Artist: Artist
-          description_short: Draw cool pictures and designs with the Artist!
+          title: Artista
+          description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
+          Artist: Artista
+          description_short: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
         hourofcode:
-          Maze: Maze
+          Maze: Labirintoa
           title: Kode ordua
-          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description: Informatikaren oinarriak ikasi itzazu Angry Birds, Plants vs Zombies eta Ice Age-ko Scrat-ekin!
+          description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
         frozen:
-          title: Code with Anna and Elsa
-          description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
-          Artist: Artist
-          description_short: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+          title: Anna eta Elsarekin programatu
+          description: Erabil dezagun kodea Ana eta Elsa elkar daitezen izotzaren edertasuna eta magia aurkitzen duten bitartean. Elur malutak eta patroiak sortuko dituzu izotz gainean patinatzen duzun bitartean eta modu honetan zure lagunekin partekatu dezakezun neguko paisaia sortuko duzu!
+          Artist: Artista
+          description_short: Erabil dezagun kodea Ana eta Elsarekin bat egin dezagun izotz mundu magiko eta ederra esploratzeko.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
-          "Artist: Variables": 'Artist: Variables'
-          "Bee: For Loops": 'Bee: For Loops'
+          description_short: 4. kurtsoa egin ahal izateko, ikasleek 2, eta 3. kurtsoak eginda izan behar dituzte.
+          description: Laugarren ikastaroa, bigarren eta hirugarren ikastaroa egin duten ikasleentzat dago diseinatuta. Ikasleak aurreko mailetan emandako irakasgaietan gehiago sakonduko dute, arazo konplexuagoei erantzun malguagoak emateko. Maila honen amaierarako, ikasleak gai izango dira istorio interaktiboak eta jokoak sortu, eta edozeinekin partekatzeko. 4-8 urte bitartekoentzat gomendatua.
+          "Artist: Variables": 'Artista: aldagaiak'
+          "Bee: For Loops": 'Erlea: For Begiztak'
           title: 4. Kurtsoa
-          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          "Algorithms: Tangrams": 'Algoritmoak: Tangramak'
           Variables: Aldagaiak
-          "Play Lab: Variables": 'Play Lab: Variables'
-          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
-          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
-          "Artist: For Loops": 'Artist: For Loops'
-          "Play Lab: For Loops": 'Play Lab: For Loops'
-          "Artist: Functions": 'Artist: Functions'
-          "Unplugged: Tangrams": 'Unplugged: Tangrams'
-          Artist: Artist
-          Bee: Bee
-          "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
-          "Unplugged: Madlibs": 'Unplugged: Madlibs'
-          "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
-          "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
-          "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
-          "Unplugged: Binary": 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
-          description_audience: Ages 10-18
-          Super Challenge - Variables: 'Super Challenge - Variables'
+          "Play Lab: Variables": 'Jokoen Laborategia: Aldagaiak'
+          "Play Lab: Functions with Parameters": 'Jokoen Laborategia: Parametrodun Funtzioak'
+          "Bee: Functions with Parameters": 'Erlea: Funtzioak parametroekin'
+          "Artist: For Loops": 'Artista: For begizta'
+          "Play Lab: For Loops": 'Laborategia: For begiztak'
+          "Artist: Functions": 'Artista: funtzioak'
+          "Unplugged: Tangrams": 'Lineaz kanpo: tangramak'
+          Artist: Artista
+          Bee: Erlea
+          "Unplugged: Envelope Variables": 'Deskonektatua: gutun-azaleko aldagaiak'
+          "Unplugged: Madlibs": 'Deskonektauta: Madlibs'
+          "Unplugged: For Loop Fun": 'Lineaz kanpo: For begizta dibertigarriak'
+          "Unplugged: Songwriting with Parameters": 'Deskonektatua: abestiak idatzi aldagaiekin'
+          "Artist: Functions with Parameters": 'Artista: funtzioak eta aldagaiak'
+          "Unplugged: Binary": 'Desnkonektatua: binarioa'
+          Bee Binary: Erle bitarra
+          Farmer Binary: Nekazari bitarra
+          Maze and Bee: Labirintoa eta Erlea
+          Artist Binary: Artista bitarra
+          description_audience: 10-18 bitarteko adina
+          Super Challenge - Variables: 'Super erronka - Aldagaiak'
+          Super Challenge - For Loops: 'Super erronka - For begiztak'
+          Super Challenge - Functions and Parameters: 'Super erronka - funtzioak eta parametroak'
+          Extreme Challenge - Comprehensive: 'Muturreko erronka - osokoa'
         Course4pre:
-          title: Course 4 Prerequisite
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          title: 4 kurtsoko aurrebaldintza
+          description_short: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
+          description: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
+          Course 4 Prerequisite: 4 kurtsoko aurrebaldintza
           "Maze: Sequence": 'Labirinto: Sekuentzia'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
-          "Farmer: While Loops": 'Farmer: While Loops'
-          "Bee: Nested Loops": 'Bee: Nested Loops'
-          "Artist: Functions": 'Artist: Functions'
-          "Bee: Debugging": 'Bee: Debugging'
+          "Artist: Sequence": 'Artista: sekuentzia'
+          "Artist: Loops": 'Artista: begiztak'
+          "Bee: Conditionals": 'Erlea: baldintzazkoak'
+          "Artist: Nested Loops": 'Artista: habiatutako begiztak'
+          "Farmer: While Loops": 'Nekazaria: While begiztak'
+          "Bee: Nested Loops": 'Erlea: habiatutako begiztak'
+          "Artist: Functions": 'Artista: funtzioak'
+          "Bee: Debugging": 'Erlea: Arazketa'
         usability:
           Intro: Sarrera
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
+          Variables and For Loops: Aldagaiak eta for begiztak
+          Functions and Functions with Parameters: Funtzioak eta parametrodun funtzioak
           title: Usability Testing
           description_short: ""
           description: A selection of Course 4 levels for usability testing.
           Variables: Aldagaiak
-          For Loops: For Loops
+          For Loops: For begiztak
           Binary: Bitarra
         potus:
           title: special
@@ -222,15 +225,15 @@ eu:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Unplugged: Video Games and Coordinate Planes": 'Lineaz kanpo: Bideo jokoak eta koordenatuen planoak'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
-          "Eval: Strings and Images": Strings and Images
+          "Eval: Strings and Images": Karaktere-kateak eta irudiak
           "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
           "Eval: Writing Contracts": Writing Contracts
           "Calc: Defining Variables": Defining Variables and Substitution
           "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
           "Eval: Defining Functions": Composite Functions
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Unplugged: The Design Recipe": 'Lineaz kanpo: Diseinurako errezeta'
           "Play Lab: Defining Functions": Rocket Height
           "Eval: Functions": Solving Word Problems with the Design Recipe
           "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
@@ -238,24 +241,24 @@ eu:
           "Eval: Boolean Operators": Boolean Operators
           "Play Lab: Booleans": Sam the Bat
           "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
+          "Unplugged: Conditionals and Piecewise Functions": 'Lineaz kanpo: Baldintzazko eta zatikako funtzioak'
           "Eval: Conditionals": Baldintzak
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
-          title: Disney Infinity Play Lab
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
-          Play Lab: Play Lab
-          Infinity: Infinito
+          title: Disneyren Infinity Play Lab
+          description_short: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak sortzeko
+          description: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak sortzeko
+          Play Lab: Jokoen Laborategia
+          Infinity: Infinitu
         algebrademo:
           title: Algebra Demo
           description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Ebaluazio blokeak
           Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
+          Defining Variables: Aldagaiak definitzen
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: Diseinuaren errezeta
         K5PD:
@@ -286,8 +289,8 @@ eu:
           description_short: Learn about how the Internet works
           description: Learn about how the Internet works
           Internet Simulator: Internet simulagailua
-          Unit 1: Unit 1
-          Unit 2: Unit 2
+          Unit 1: Gaia 1
+          Unit 2: Gaia 2
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
@@ -319,14 +322,16 @@ eu:
           Color Pixelation Examples: Color Pixelation Examples
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: Accelerated Intro to CS Course
-          description_audience: Ages 10-18
-          description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          title: CS kurtsora sarrera azkarra
+          description_audience: 10-18 bitarteko adina
+          description: |
+            20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.
+            Gehiago ikasteko ikusi maila bereko gure ikastaroak!
+          description_short: 20 orduko ikastaro honek 2-4 kurtsotako informatikako eta programazioko oinarrizko kontzeptuak biltzen ditu.
           Introduction to Computer Science: Konputazio zientzetarako sarrera
           The Maze: labirintoa
           Computational Thinking: Pentsamendu konputazionala
-          Graph Paper Programming: Paper grafiko programazioa
+          Graph Paper Programming: Paperean marraztuz programatu
           The Artist: Artista
           Algorithms: Algoritmoak
           The Artist 2: Artista 2
@@ -338,11 +343,11 @@ eu:
           The Farmer 2: Baserritarra 2
           Abstraction: Abstrakzioa
           The Artist 4: Artista 4
-          Relay Programming: Rele programazioa
+          Relay Programming: Txandaka programatzen
           The Farmer 3: Baserritarra 3
           The Internet: Internet
           The Artist 5: Artista 5
-          Wrap-up: Ixtea
+          Wrap-up: Errepasoa
         edit-code:
           title: Editatu kodea
           description: Editatu kodea
@@ -350,8 +355,9 @@ eu:
           The Maze: labirintoa
           Applab: Applab
           The Artist: Artista
-          Play Lab: Play Lab
-          Play Lab 2015: Play Lab 2015
+          Play Lab: Jokoen Laborategia
+          Play Lab 2015: 2015 jolas laborategia
+          Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: Gertaerak
           description: Gertaerak
@@ -362,24 +368,24 @@ eu:
           Eval: Eval
         flappy:
           title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description: Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan? Saiatu Flappy Code tutoriala!
+          description_short: Idatz ezazu zure Flappy joko propioa
           Flappy Code: Flappy Code
         jigsaw:
           title: Buruhaustea
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: Proba ezazu gure buruhauste tutoriala!!!
+          description_short: Proba ezazu gure buruhauste tutoriala!!!
           Jigsaw: Buruhaustea
         step:
           title: Pauso
-          description: Step tutorial
-          description_short: Step tutorial
+          description: Pausokako tutoriala
+          description_short: Pausokako tutoriala
           Step: Pauso
         Hour of Code:
-          title: Hour of Code 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
-          description_short: Try the basics of computer science with many fun characters!
-          Hour of Code 2013: Hour of Code 2013
+          title: Kodearen ordua 2013
+          description: Murgildu konputagailu zientziaren oinarrietan Angry Birds eta Plants vs. Zombiesen pertsonaien laguntzaz!
+          description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
+          Hour of Code 2013: Kodearen ordua 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -411,19 +417,19 @@ eu:
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: Puzzles
         course4pre:
-          title: Course 4 Prerequisite
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          title: 4 kurtsoko aurrebaldintza
+          description_short: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
+          description: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
+          Course 4 Prerequisite: 4 kurtsoko aurrebaldintza
           "Maze: Sequence": 'Labirinto: Sekuentzia'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
-          "Farmer: While Loops": 'Farmer: While Loops'
-          "Bee: Nested Loops": 'Bee: Nested Loops'
-          "Artist: Functions": 'Artist: Functions'
-          "Bee: Debugging": 'Bee: Debugging'
+          "Artist: Sequence": 'Artista: sekuentzia'
+          "Artist: Loops": 'Artista: begiztak'
+          "Bee: Conditionals": 'Erlea: baldintzazkoak'
+          "Artist: Nested Loops": 'Artista: habiatutako begiztak'
+          "Farmer: While Loops": 'Nekazaria: While begiztak'
+          "Bee: Nested Loops": 'Erlea: habiatutako begiztak'
+          "Artist: Functions": 'Artista: funtzioak'
+          "Bee: Debugging": 'Erlea: Arazketa'
         cspunit1:
           title: 'CSP Unit 1 - Digital Information'
           description_short: Explore how digital information is represented and transferred
@@ -467,37 +473,37 @@ eu:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
+          "Unplugged: Video Games and Coordinate Planes": 'Lineaz kanpo: Bideo jokoak eta koordenatuen planoak'
+          "Calc: Evaluation Blocks": 'Calc: Ebaluazio Blokeak'
+          "Eval: Strings and Images": 'Eval: Kateak eta Irudiak'
+          "Unplugged: Contracts": 'Lineaz kanpo: Kontratuak'
+          "Eval: Writing Contracts": 'Eval: Kontratuak idazten'
+          "Calc: Defining Variables": 'Calc: Aldagaiak deinitzen'
+          "Play Lab: Defining Variables (Big Game)": 'Jolas Laborategia: Aldagaiak definitzen (Joko Handia)'
           "Eval: Defining Functions": 'Eval: Defining Functions'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Unplugged: The Design Recipe": 'Lineaz kanpo: Diseinurako errezeta'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           "Eval: Functions": 'Eval: Functions'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          "Play Lab: Booleans": 'Play Lab: Booleans'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Contracts: Contracts
+          "Play Lab: Animation (Big Game)": 'Jolas laborategia: Animazioak'
+          "Unplugged: Booleans": 'Lineaz kanpo: Boolearrak'
+          "Eval: Boolean Operators": 'Eval: Boolear eragileak'
+          "Play Lab: Booleans": 'Jokoen Laborategia: Boolearrak'
+          "Play Lab: Boolean (Big Game)": 'Jokoen Laborategia: Boolearra (Joko Handia)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Lineaz kanpo: Baldintzazko eta zatikako funtzioak'
+          "Eval: Conditionals": 'Eval: Baldintzak'
+          "Unplugged: Collision Detection and the Distance Formula": 'Lineaz kanpo: Talka Atzematea eta Distantzia Formula'
+          "Play Lab: Collision Detection (Big Game)": 'Jokoen Laborategia: Talka Atzematea (Joko Handia)'
+          Evaluation Blocks: Ebaluazio blokeak
+          Strings and Images: Karaktere-kateak eta irudiak
+          Contracts: Kontratuak
           Your Game - Defining Variables: 'Your Game - Defining Variables'
           Simple Function Definition: Simple Function Definition
           The Design Recipe: Diseinuaren errezeta
           Your Game - Animation: 'Your Game - Animation'
-          Booleans: Booleans
+          Booleans: Boolearrak
           Sam the Bat: Sam the Bat
           Your Game - Booleans: 'Your Game - Booleans'
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Conditionals and Piecewise Functions: Baldintzazko eta zatikako funtzioak
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Introduction to PD: Introduction to PD
@@ -510,16 +516,16 @@ eu:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Ebaluazio blokeak
+          Strings and Images: Karaktere-kateak eta irudiak
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: 'Your Game - Animation'
-          Booleans: Booleans
+          Booleans: Boolearrak
           Sam the Bat: Sam the Bat
           Your Game - Booleans: 'Your Game - Booleans'
           Luigi's Pizza: "Luigi's Pizza"
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+          "Play Lab: Collision Detection (Big Game)": 'Jokoen Laborategia: Talka Atzematea (Joko Handia)'
           Your Game - Player Movement: 'Your Game - Player Movement'
           Your Game - Collision Detection: 'Your Game - Collision Detection'
         text-compression:
@@ -649,6 +655,33 @@ eu:
           Variables Conceptorial Fodder: Variables Conceptorial Fodder
           "Variables: Create, Assign, and Read": 'Variables: Create, Assign, and Read'
           "Variables: Increment, Decrement, Display, and Scope": 'Variables: Increment, Decrement, Display, and Scope'
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistant: Introduction to Digital Assistant
+          "Improving Digital Assistant: Conditionals": 'Improving Digital Assistant: Conditionals'
+          "Improving Digital Assistant: Functions with Return": 'Improving Digital Assistant: Functions with Return'
+          "Improving Digital Assistant: Complex Conditionals": 'Improving Digital Assistant: Complex Conditionals'
+          Conditionals with Movie Bot: Conditionals with Movie Bot
+          Improving Digital Assistant with Conditionals: Improving Digital Assistant with Conditionals
+          Chained and Nested Conditionals with Movie Bot: Chained and Nested Conditionals with Movie Bot
+          Compound Conditionals with Movie Bot: Compound Conditionals with Movie Bot
+          "Practice PT: Digital Assistant": 'Practice PT: Digital Assistant'
+          Practice PT - Design a Digital Scene: 'Practice PT - Design a Digital Scene'
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          Introduction to Digital Assistant Project: Introduction to Digital Assistant Project
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: '"Bitartean" begiztak'
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -657,9 +690,9 @@ eu:
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Ebaluazio blokeak
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
+          Strings and Images: Karaktere-kateak eta irudiak
           The Design Recipe: Diseinuaren errezeta
           Next Steps: Next Steps
         sciPD complex adaptive 2:
@@ -707,7 +740,7 @@ eu:
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Ebaluazio blokeak
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -719,7 +752,7 @@ eu:
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Ebaluazio blokeak
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -771,8 +804,8 @@ eu:
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -848,16 +881,16 @@ eu:
           Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
+          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          Evaluation Blocks: Ebaluazio blokeak
+          Strings and Images: Karaktere-kateak eta irudiak
+          Defining Variables: Aldagaiak definitzen
           Big Game - Variables: 'Big Game - Variables'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           The Design Recipe: Diseinuaren errezeta
           Big Game - Animation: 'Big Game - Animation'
-          Booleans: Booleans
+          Booleans: Boolearrak
           Sam the Bat: Sam the Bat
           Big Game - Booleans: 'Big Game - Booleans'
           Luigi's Pizza: "Luigi's Pizza"
@@ -865,12 +898,12 @@ eu:
           Big GAme - Collision Detection: 'Big GAme - Collision Detection'
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: 'Big Game - Collision Detection'
-          Free Play: Free Play
+          Free Play: Joku askea
         allthethings:
           Jigsaw: Buruhaustea
-          Maze: Maze
-          Artist: Artist
-          Bee: Bee
+          Maze: Labirintoa
+          Artist: Artista
+          Bee: Erlea
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Flappy
@@ -896,19 +929,19 @@ eu:
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Ebaluazio blokeak
+          Strings and Images: Karaktere-kateak eta irudiak
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Aldagaiak definitzen
+          Defining Functions: Funtzioak definitzen
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
-          "Eval: Conditionals": 'Eval: Conditionals'
+          Booleans: Boolearrak
+          "Eval: Conditionals": 'Eval: Baldintzak'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
         cspfacilitator:
@@ -921,12 +954,12 @@ eu:
           App Lab: App laborategia
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: Ongi etorri!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: Ongi etorri!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Internet simulagailua
@@ -950,9 +983,9 @@ eu:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          Welcome!: Ongi etorri!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -961,7 +994,7 @@ eu:
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
-          Wrap-up: Ixtea
+          Wrap-up: Errepasoa
           Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
           Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
           Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and Web 2.0
@@ -995,39 +1028,39 @@ eu:
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          title: 2015 Code ordua
+          description_short: Erabili Jokoen Laborategia historia bat edo joku bat sortzeko.
+          description: Erabili Jokoen Laborategia historia bat edo joku bat sortzeko.
           Hour of Code: Kode ordua
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: 2015 Code ordua
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Ebaluazio blokeak
+          Strings and Images: Karaktere-kateak eta irudiak
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Aldagaiak definitzen
+          Defining Functions: Funtzioak definitzen
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
-          "Eval: Conditionals": 'Eval: Conditionals'
+          Booleans: Boolearrak
+          "Eval: Conditionals": 'Eval: Baldintzak'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
+          Welcome!: Ongi etorri!
           The Design Recipe: Diseinuaren errezeta
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
-          Wrap-Up: Wrap-Up
+          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          Welcome!: Ongi etorri!
+          Wrap-Up: Itxi
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1041,15 +1074,15 @@ eu:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          Welcome!: Ongi etorri!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: Itxi
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description_short: Develop equitable teaching strategies with this free, self-paced online course.
@@ -1059,21 +1092,21 @@ eu:
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: Ongi etorri!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: Itxi
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          Welcome!: Ongi etorri!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1087,12 +1120,12 @@ eu:
           Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Ixtea
+          Wrap-up: Errepasoa
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          Welcome!: Ongi etorri!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1106,7 +1139,7 @@ eu:
           Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Ixtea
+          Wrap-up: Errepasoa
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description_short: 'Blended Summer Study: 8 hour online'
@@ -1133,15 +1166,15 @@ eu:
           description_short: Short unplugged course designed for informal learning
           description: Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Happy Maps
+          Happy Maps: Mapa Zoriontsuak
           Move it, Move it: Mugitu, mugitu
-          "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
-          Graph Paper Programming: Paper grafiko programazioa
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Binary Bracelets: Binary Bracelets
-          Songwriting: Musika lana
+          "Real-life Algorithms: Plant a Seed": 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
+          Graph Paper Programming: Paperean marraztuz programatu
+          Building a Foundation: Oinarri bat Eraikitzen
+          Getting Loopy: Iteratzen
+          The Big Event: Gertaera Handia
+          Binary Bracelets: Eskumuturreko binarioak
+          Songwriting: Musika idazten
         afterschool1:
           title: Afterschool 1
           description_short: Short course designed for informal learning
@@ -1159,8 +1192,8 @@ eu:
           Frequency Analysis: Frequency Analysis
         algebraPD3a:
           title: Computer Science in Algebra PD
-          description_short: CS in Algebra blended online school year study
-          description: CS in Algebra blended online school year study
+          description_short: 'Phase 3 (Part 1): CS in Algebra blended online school year study'
+          description: 'Phase 3 (Part 2): CS in Algebra blended online school year study'
           Updates - Tweaks and Polish: 'Updates - Tweaks and Polish'
           Updates - The Big Game and Projects: 'Updates - The Big Game and Projects'
           Updates - The Design Recipe: 'Updates - The Design Recipe'
@@ -1181,7 +1214,7 @@ eu:
           title: 'Exploring Computer Science: Unit 2'
           description_short: Unit 2 of the Exploring Computer Science curriculum
           description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: Ongi etorri!
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1204,10 +1237,10 @@ eu:
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
         ECSPD3-Unit3:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description_short: Academic Year Development
-          description: Academic Year Development
-          Welcome!: Welcome!
+          title: 'Exploring Computer Science: Unit 3'
+          description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
+          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 3 of the version 5 Exploring Computer Science curriculum.
+          Welcome!: Ongi etorri!
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1224,11 +1257,20 @@ eu:
           "Day 20-21 HTML and CSS: Adding Enhancements to Site": 'Day 20-21 HTML and CSS: Adding Enhancements to Site'
           Day 22-25 Final Project: Day 22-25 Final Project
           "Day 15-16 HTML and CSS: Tables, Lists, Menus": 'Day 15-16 HTML and CSS: Tables, Lists, Menus'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: 'Close & Next Steps'
+          Intro to Unit 3: Intro to Unit 3
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
         ECSPD3-Unit4:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description_short: Academic Year Development
-          description: Academic Year Development
-          Welcome!: Welcome!
+          title: 'Exploring Computer Science: Unit 4'
+          description_short: Unit 4 of the version 5 Exploring Computer Science curriculum.
+          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 4 of the version 5 Exploring Computer Science curriculum.
+          Welcome!: Ongi etorri!
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1250,11 +1292,18 @@ eu:
           Day 25-30 Final Project: Day 25-30 Final Project
           Unit 4 Challenge Planning: Unit 4 Challenge Planning
           Unit 4 Challenge Creation: Unit 4 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: 'Close & Next Steps'
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Ongi etorri!
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1263,7 +1312,7 @@ eu:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Ongi etorri!
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1285,7 +1334,7 @@ eu:
           "Data App Part 3: Code": 'Data App Part 3: Code'
           Identifying People with Data: Identifying People with Data
           Collecting Personal Information: Collecting Personal Information
-          Privacy Policy: Privacy Policy
+          Privacy Policy: Pribatutasun politika
           "Debate: Privacy vs. Utility": 'Debate: Privacy vs. Utility'
           "Data App Part 4: App Permissions": 'Data App Part 4: App Permissions'
           "Data App Part 5: Clean Data": 'Data App Part 5: Clean Data'
@@ -1300,21 +1349,22 @@ eu:
           "Data App Part 8: Visualize Data": 'Data App Part 8: Visualize Data'
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Ongi etorri!
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: Itxi
           Thinking About Implementation: Thinking About Implementation
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
           title: Computer Science in Algebra PD
-          description_short: CS in Algebra mid year lesson support
-          description: CS in Algebra mid year lesson support
+          description_short: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
+          description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
           Teaching Support - Lessons 1-3: 'Teaching Support - Lessons 1-3'
           Teaching Support - Lessons 4-7: 'Teaching Support - Lessons 4-7'
           Teaching Support - Lessons 8-12: 'Teaching Support - Lessons 8-12'
@@ -1326,7 +1376,7 @@ eu:
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: Welcome!
+          Welcome!: Ongi etorri!
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1335,13 +1385,111 @@ eu:
         duino:
           Experimenting with Arduino stuff: Experimenting with Arduino stuff
           Basic Circuits: Basic Circuits
+          description: Testing some tools for teaching with Arduinos
+          Blinky Lights: Blinky Lights
+          Making Music: Making Music
+          JunkBot: JunkBot
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: 10-18 bitarteko adina
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: 10-18 bitarteko adina
           Halloween 2015: Halloween 2015
+          description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+        iceage:
+          title: Ice Age joku laborategia
+          description_short: Ice Age joku laborategiarekin sortu istorio bat edo egin joku bat!
+          description: Ice Age joku laborategiarekin sortu istorio bat edo egin joku bat!
+          Ice Age Play Lab: Ice Age joku laborategia
+        CSPPD3-Unit3:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit3temp:
+          title: 'CSP Unit 3 - Temp'
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          Key Events with Image Scroller: Key Events with Image Scroller
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: '"Bitartean" begiztak'
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
+        CSP-Unit3-Support:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+        gumball:
+          title: Gumball joko laborategia
+          description_short: Gumball joku laborategiarekin sortu istorio bat edo egin joku bat!
+          description: Gumball joku laborategiarekin sortu istorio bat edo egin joku bat!
+          Gumball Play Lab: Gumball joko laborategia
+        starwars:
+          title: 'Star Wars: Galaxia bat Coderekin eraikiz'
+          description_short: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
+          description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
+          Hour of Code 2015: 2015 Code ordua
+        starwarsblocks:
+          title: 'Star Wars: Galaxia bat Coderekin eraikiz'
+          description_short: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
+          description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
+          Hour of Code 2015: 2015 Code ordua
+        minecraft:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
+        mc:
+          title: Minecraft Kode Ordua
+          description_short: Esploratu Minecraft mundu bat kodearen bitartez
+          description: Erabili kode-blokeak Steve edo Alex abentura batera eramateko Minecraft mundu honetan
+          Hour of Code 2015: 2015 Code ordua
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          description: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Ongi etorri!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Itxi

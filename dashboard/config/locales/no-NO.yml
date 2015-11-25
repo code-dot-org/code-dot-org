@@ -75,7 +75,7 @@
       passord. For mer informasjon, se våre <a href="http://code.org/privacy">rettningslinjer
       for personvern</a>.
     overview_teacher: Undervis Informatikk i ditt klasserom med å registrere en konto.<p/>
-      Du vil være i stand til å legge til dine studenter og følge med på deres fremdrift.
+      Du vil være i stand til å legge til dine elever og følge med på deres fremdrift.
     no_signup_message: Du kan <a target="_blank" href="http://learn.code.org">bla
       gjennom de forskjellige nivåene og oppgavene</a>, men du må registrere deg for
       å lagre hvor langt du har nådd.
@@ -99,7 +99,7 @@
     valid_password: Gyldig passord!
     invalid_password: Passordet må bestå av minimum seks tegn
     mismatch_password: De to passordene du skrev inn samsvarer ikke
-    student_terms: Jeg godtar å være bundet av Code.org sine <a href='http://code.org/tos'>vilkår
+    student_terms: Jeg godtar å følge Code.org sine <a href='http://code.org/tos'>vilkår
       for bruk</a>. Hvis jeg er under 13 år bekrefter jeg ved å sende dette skjemaet
       at jeg har mine foresattes tillatelse til å bruke Code.org sine tjenester. <br/>For
       brukere under 13 lagres ikke epost-adresser på en måte som tillater oss å kontakte
@@ -161,8 +161,8 @@
       invite_student:
         subject: Bli med i en av klassene til %{teacher_name} på Code.org!
       student_disassociated:
-        subject: 'Melding fra Code.org: %{student_name} er ikke lenger tilknyttet
-          som din student.'
+        subject: 'Melding fra Code.org: %{elev_name} er ikke lenger tilknyttet som
+          din elev.'
       teacher_disassociated:
         subject: 'Melding fra Code.org: %{teacher_name} er ikke lenger tilknyttet
           som læreren din.'
@@ -192,7 +192,7 @@
       msg: Er du sikker på at du vil be om %{prize_name} premien?
       msg_student: 'Merk: Du kan bare velge én type premie.'
       msg_publicschool: Bekreft at du er amerikanske offentlige skolelærer.
-      msg_visit_website: Besøk webside
+      msg_visit_website: Besøk nettsiden
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
@@ -208,15 +208,15 @@
       choose: 'Velg en premie:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Du har fortjent en premie! (Kun amerikanske elever)
-      not_earned_title: Fullfør veiledningen, få premier (Kun amerikanske studenter)
+      not_earned_title: Fullfør veiledningen, få premier (Kun amerikanske elever)
       not_earned: 'Lær alle informatikkbegrepene, samle alle %{num_trophies} pokalene,
         og få ordentlige premier. Du kan velge mellom et $10 iTunes-gavekort, 10GB
         gratis lagringsplass på Dropbox, $10 i Skype-kreditt, og gratis spill nedlastinger.
         Merk: tilbudet er bare for amerikanske elever, og bare så lenge som lageret
         rekker.'
       teacher:
-        earned: 15 eller flere studenter samlet alle de %{num_trophies} pokalene.
-          Du har vunnet en lærerpremie! (Kun for lærere i USA)
+        earned: 15 eller flere elever samlet alle de %{num_trophies} pokalene. Du
+          har vunnet en lærerpremie! (Kun for lærere i USA)
         not_earned_title: Undervis klassen, tjen opp til $1000 i  <a target="_blank"
           href="http://DonorsChoose.org">DonorsChoose.org</a> kreditt (Kun amerikanske
           lærere)
@@ -233,7 +233,7 @@
         bonus:
           not_earned_title: Du kan tjene $250 i <a target="_blank" href="http://DonorsChoose.org">
             DonorsChoose.org</a> ekstra kreditt (bare for lærerer i USA)
-          earned: 7 eller flere av studentene som samlet alle %{num_trophies} trofeer
+          earned: 7 eller flere av elevene som samlet alle %{num_trophies} trofeer
             er jenter. Du har vunnet en bonuspremie! (Kun for lærere i USA)
           not_earned: Hvis mengden elever som tjener alle %{num_trophies} pokalene
             består av minst 40% jenter, er din belønning ekstra $250 i <a target="_blank"
@@ -255,12 +255,13 @@
     access_denied: Du har ikke tilgang til denne %{model}.
   nav:
     header:
-      finished_hoc: Jeg har fullført min Kodetimen
+      finished_hoc: Jeg har fullført min Kodetime
       sign_in_to_save: Logg inn for å lagre fremdrift
       free_play:
         playlab: Lag en app
         artist: Tegn noe
         calculate: Calculate Something
+        applab: Lag en app
     user:
       classroom: Lærerens startside
       district_dashboard: Distrikt skrivebord
@@ -273,7 +274,7 @@
       signup: Meld deg på
       already_registered: Allerede registrert?
     popup:
-      progress_for_user: '%{name}''s fremgang'
+      progress_for_user: '%{name} s fremgang'
       progress: Din fremdrift
       lines: 'Totalt antall linjer kode: %{lines}'
       close: LUKK
@@ -284,6 +285,8 @@
       prize_us_only: (Kun amerikanske elever)
       prizes_link: Mer info
   teacher:
+    answer: Svar
+    for_teachers_only: Kun for lærere
     title:
       one: 'Din lærer:'
       other: 'Dine lærere:'
@@ -294,12 +297,12 @@
     followers:
       section: 'Seksjon:'
       stages: 'Nivå(er) å vise:'
-      show_past: 'Vis student aktivitet (%{bullet_html}) i siste:'
+      show_past: 'Vis elev aktivitet (%{bullet_html}) i siste:'
       levels_key: Nivåer nøkkel
       perfect: Perfekt fulført
-      completed: Fulført, men brukte for mange blokker
+      completed: Fulført, men du brukte for mange blokker
       tried: Prøvde, men fulførte ikke
-      not_tried: Ikke trøtt ennå
+      not_tried: Ikke forsøkt ennå
       activity: Viser elevens aktivitet i de siste %{hours} %{plural}
       no_section: Ingen tilordnet seksjon
       trophies: pokaler
@@ -312,7 +315,7 @@
       add: Legg til elever
       remove: fjerne elev
       confirm_remove: Er du sikker på at du vil fjerne denne eleven?
-      help_reassign: For å del klassen inn i flere deler. Velg studenter skal tilordnes
+      help_reassign: For å del klassen inn i flere deler. Velg elever skal tilordnes
         en ny del.
       help_register: I steden for å bruke mye tid på å legge til individuell informasjon
         om eleven, kan du be klassen din registrere seg selv. Elevene dine vil trenge
@@ -341,15 +344,15 @@
       email: Sende e-post
     rollup: Fremdriftsoversikt
     activity: Nylig klasseaktivitet
-    user_not_found: Læreren eller studenten ble ikke funnet
-    cant_remove_student_no_email: '%{student_name} kan ikke fjernes som din student
-      fordi %{student_name} ikke har registrert en e-postadresse'
+    user_not_found: Læreren eller eleven ble ikke funnet
+    cant_remove_student_no_email: '%{elev_name} kan ikke fjernes som din elev fordi
+      %{elev_name} ikke har registrert en e-postadresse'
     cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernes som din lærer
       fordi du ikke har registrert en e-postadresse'
-    student_teacher_disassociated: '%{teacher_name} er fjernet som lærer for %{student_name}'
+    student_teacher_disassociated: '%{teacher_name} er fjernet som lærer for %{elev_name}'
     panel:
-      answer_viewer: Svar visning
-      student: student
+      answer_viewer: Visning av svaret
+      student: elev
       viewing_solution: Viser løsning
       try_it_yourself: Prøv selv
       section: Seksjon
@@ -384,9 +387,9 @@
     lines_of_code_linebreak: '%{lines_count} LINJER KODE<br/>SKREVET AV %{students_count}
       MILLIONER STUDENTER'
     all_courses: Oversikt over kurs 1, 2 og 3
-    lesson_plans: Leksjonsplaner
+    lesson_plans: Plan for øvelser
     signin_message: Allerede registrert? %{link}
-    student_reg_link: Påmelding Student
+    student_reg_link: Påmelding for elever
     teacher_reg_link: Påmelding Lærer
     signin_directions: Bruke en konto for å lagre fremgangen.<br/>Lærere, følg fremgangen
       til hele klassen.
@@ -425,7 +428,7 @@
     your_gallery: Galleri
     no_primary_course: Prøv et kurs på Code Studio
     choose_next_course: Prøv et av Code Studio kursene ved å velge nedenfor
-    print_certificate: Utskrivingssertifikat
+    print_certificate: Skriv ut diplom
   share:
     title: Lære i Code Studio
     description: Alle kan lære programmering. Lag egne spill, programmer og tegninger
@@ -435,7 +438,7 @@
     female: Kvinne
     none: Foretrekker å ikke svare
   user_type:
-    student: student
+    student: elev
     teacher: Lærer
   footer:
     thank_you: Vi takker våre <a href="https://code.org/about/donors"> sponsorer</a>,
@@ -476,7 +479,7 @@
   video:
     tab: Video.
     notes: Ingen video? Vis notater.
-    notes_coming_soon: Kommentarer for denne videoen kommer snart.
+    notes_coming_soon: Tekst til denne videoen kommer snart.
     autoplay_option: Autovisning av videoer
     download: Last ned video
   compatability:
@@ -506,6 +509,7 @@
   pdf_download: Last ned PDF
   download_coming_soon: Nedlastbare aktiviteter kommer snart.
   video_coming_soon: Video kommer snart!
+  not_started: Eleven har ikke prøvd seg på denne banen.
   share_code:
     title: Klikk "Kjør" for å se programmet mitt i aksjon
     bounce_og_title: Sjekk ut Bounce-spillet mitt
@@ -553,10 +557,15 @@
       body: Se et galleri av app- og artist-bilder laget av våre brukere
     frozen:
       title: Frost
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Spill-Lab
-      body: Bruk Spill-Lab for å lage en historie eller spill med Disney Infinity
+      body: Bruk Spill-lab for å lage en historie eller spill med Disney Infinity
         figurer.
+    minecraft:
+      title: Minecraft
+      body: Utforsk en Minecraft-verden gjennom kode.
   gallery:
     students_drew_these_with_code: Elever tegnet disse ved å kode.
     students_made_these_with_code: Elever laget disse ved å kode.
@@ -571,7 +580,7 @@
     caption_by_name_age: av %{name}, %{age} år
     caption_time_ago: '%{time_ago} siden'
     header: Galleri
-    header_playlab: Spill-Lab
+    header_playlab: Spill-lab
     header_artist: Kunstner
   landing:
     prerelease: Dette kurset er i <span class='betatext'> beta</span>.  Det betyr

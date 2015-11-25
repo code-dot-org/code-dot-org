@@ -9,7 +9,7 @@ fr:
         text: Nous allons utiliser Blockly, un langage de programmation visuel où tu déplaces des blocs pour écrire le code.
       3:
         image: notes/hoc1_3.jpg
-        text: Typiquement on écrit du code, mais Blockly est un langage visuel. Chaque bloc correspond à une ligne de code traditionel.
+        text: Généralement, on écrit le code, mais Blockly est un langage visuel. Chaque bloc correspond à une ligne de code.
       4:
         image: notes/hoc1_4.jpg
         text: "Vous allez apprendre les bases de l'informatique, des concepts utilisés partout : de la création d'applications jusqu'au contrôle du véhicule qui s'est posé sur Mars."
@@ -27,10 +27,10 @@ fr:
         text: La boîte à outils du milieu a les commandes pour les Angry Birds. Tu vas utiliser celles-ci pour construire ton code.
       9:
         image: notes/hoc1_9.jpg
-        text: Sur la droite il y a ton espace de travail où tu déposeras les blocs de la boîte à outils pour construire ton programme. Pour supprimer un bloc, déplace-le vers la poubelle du coin.
+        text: Sur la droite il y a ton espace de travail où tu déposeras les blocs de la boîte à outils pour construire ton programme. Pour supprimer un bloc, déplace-le vers la poubelle dans le coin.
       10:
         image: notes/hoc1_10.jpg
-        text: "Chaque bloc est une seule instruction. Si tu fais glisser un bloc « avancer » dans ton espace de travail et appuie sur « Exécuter le programme », l'oiseau se déplace d'une case sur le labyrinthe."
+        text: "Chaque bloc est une seule instruction. Si tu fais glisser un bloc « avancer » dans ton espace de travail et appuies sur « Exécuter le programme », l'oiseau se déplacera d'une case sur le labyrinthe."
       11:
         image: notes/hoc1_11.jpg
         text: "Pour faire plusieurs actions, vous pouvez faire glisser les blocs sur votre espace de travail et les attacher les uns aux autres. L'oiseau exécutera toutes les commandes de haut en bas."
@@ -326,7 +326,7 @@ fr:
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: "Salut, je suis Paola ! Les ordinateurs sont vraiment bons pour faire des actions répétitives. Vous pouvez compter jusqu'à 10, 20 ou 100. Mais un ordinateur peut compter jusqu'à 1 milliard ou 1 billion. Il ne s'ennuiera pas et ça ne lui prendra que quelques secondes. Que ce soit pour compter, dessiner, ou faire n'importe quoi, les ordinateurs peuvent répéter des choses des centaines, ou même des milliards de fois."
+        text: "Salut, je suis Paola ! Les ordinateurs sont vraiment bons pour faire des actions répétitives. Tu peux compter jusqu'à 10, 20 ou 100. Mais un ordinateur peut compter jusqu'à 1 milliard ou 1 billion. Il ne s'ennuiera pas et ça ne lui prendra que quelques secondes. Que ce soit pour compter, dessiner, ou faire n'importe quoi, les ordinateurs peuvent répéter des choses des centaines, ou même des milliards de fois."
       2:
         image: notes/frozen2_2.jpg
         text: "En programmation, nous appelons ceci une boucle. Une boucle est ce que l'on utilise pour répéter son code maintes et maintes fois. Pour l'épreuve suivante, ton but est d'aider Anna à créer un carré avec le bloc « Répéter »."
@@ -353,7 +353,7 @@ fr:
         text: "Une fois que tu as appris à un ordinateur comment faire une action une fois en utilisant cette suite de commandes, tu peux donner un nom à cette action pour qu'elle soit plus facile à répéter ensuite. Quand tu définis ta propre commande et lui donne un nom, on appelle ça une fonction."
       4:
         image: notes/frozen3_4.jpg
-        text: "Salut, je suis Jess. Lorsque vous programmez avec des blocs, tu vas utiliser des fonctions s'il y a un ensemble d'actions que tu souhaites utiliser plusieurs fois. Par exemple, le code que tu as écrit pour faire un carré."
+        text: "Salut, je suis Jess. Lorsque tu programmeras avec des blocs, tu pourras utiliser des fonctions au lieu de reproduire un ensemble d'actions plusieurs fois. Un exemple de fonction est le code que tu as écrit pour faire un carré."
       5:
         image: notes/frozen3_5.jpg
         text: 'Tu peux définir ceci comme une fonction "créer un carré".'
@@ -366,7 +366,7 @@ fr:
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: Nous allons crée des jeux avec le Labo. Les bons jeux ont une histoire , et chaque histoire a des acteurs. Nous allons apprendre comment faire parler, bouger et intéragir des acteurs tels que des sorcières, des extra-terrestres, et animaux. A la fin de cette leçon, tu peux créer un jeu à partir de rien et le partager avec tes amis.
+        text: Nous allons créer des jeux avec le Labo. Les bons jeux ont une histoire, et chaque histoire a des acteurs. Nous allons apprendre comment faire parler, bouger et intéragir des acteurs tels que des sorcières, des extra-terrestres, et animaux. À la fin de cette leçon, tu pourras créer un jeu à partir de rien et le partager avec tes amis.
       2:
         image: notes/playlab_intro_2.png
         text: "Votre écran se divise en trois parties. A la gauche, se trouve l'espace de jeu où le programme va s'exécuter. Les instructions pour chaque niveau sont écrites en dessous."
@@ -376,7 +376,7 @@ fr:
       4:
         image: notes/playlab_intro_4.png
         text: |-
-          Pour commencer, tu vas avoir besoin de relier tes blocs au bloc "à l'exécution". Tu peux relier plusieurs blocs ensemble en les glissant jusqu'à ce que tu voies la ligne jaune, et il s'emboiteront alors ensemble.
+          Pour commencer, tu devras relier tes blocs au bloc "lors du lancement". Tu peux relier plusieurs blocs ensemble en les glissant jusqu'à ce que tu voies la ligne jaune, et il s'emboiteront alors ensemble.
       5:
         image: notes/playlab_intro_5.png
         text: "Dans ce premier puzzle, notre acteur est un manchot et nous allons lui faire dire « Bonjour » en faisant glisser le bloc « dire », en l'accrochant au bloc « lors du lancement » , et en tapant « Bonjour ». Nous pouvons aussi faire bouger le manchot en utilisant les blocs « aller à droite » et « aller à gauche ». Une fois tes blocs en place, appuie sur « Démarrer » pour voir ce que tu as programmé."
@@ -386,7 +386,7 @@ fr:
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "À présent, nous allons apprendre une chose que tous les programmeurs de jeu utilisent. On appelle ça des événements. Un événement dit à votre programme d'écouter lorsque quelque chose se produit. Quand cette chose arrive, il effectue une action."
+        text: "À présent, nous allons apprendre une chose que tous les programmeurs de jeu utilisent. On appelle ça des événements. Un événement dit à ton programme d'écouter lorsque quelque chose se produit. Quand cette chose arrive, il effectue une action."
       2:
         image: notes/playlab_events_2.png
         text: "Quelques exemples d'évènements sont l'écoute des clics de souris, une touche fléchée, ou un effleurement de l'écran."
@@ -396,7 +396,7 @@ fr:
           Ici, nous allons faire en sorte que le robot de l'espace salue les terriens quand on clique sur lui. Nous lui dirons d'utiliser le bloc "quand tu es cliqué" et d'y attacher le bloc "dire". Quand le joueur clique sur le robot de l'espace, tout ce qui est attaché à cet évènement "quand tu es cliqué" sera exécuté. Qu'en dit ton extra-terrestre ?
       4:
         image: notes/playlab_events_4.png
-        text: 'Il y a aussi des blocs "touches fléchées". Si tu les relies à des blocs "se déplacer", tu peux commencer à déplacer tes acteurs vers le haut, le bas, la droite ou la gauche. Petit à petit, ton jeu devient plus interactif.'
+        text: 'Il y a aussi des blocs "quand flèche ...". Si tu les relies à des blocs "se déplacer", tu peux commencer à déplacer tes acteurs vers le haut, le bas, la droite ou la gauche. Petit à petit, ton jeu devient plus interactif.'
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
@@ -415,7 +415,7 @@ fr:
         text: "Ce sont des blocs de dessin. Utilisez le bon bloc pour déplacer l'artiste là où il doit se rendre pour repasser les lignes grises."
       2:
         image: notes/C1_artist_intro_2.png
-        text: "Ce sont des blocs de saut. Lorsque vous utilisez ces blocs, votre artiste se déplace sans dessiner, alors utilisez-les pour sauter jusqu'à la prochaine ligne grise."
+        text: "Ce sont des blocs de saut. Lorsque tu utilises ces blocs, ton artiste se déplace sans dessiner, alors utilise-les pour sauter jusqu'à la prochaine ligne grise."
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
@@ -430,7 +430,7 @@ fr:
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
-        text: "A loop is a repetition of activity. So going into a hive to inspect, I look at a frame and then I put it back, so I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
+        text: "Une boucle est une répétition de l'activité. Donc, aller dans une ruche et l'inspecter, regarder un cadre, puis je le remettre, donc je répète cette même activité plusieurs fois. Il existe donc une boucle autour, qui fait la même activité plusieurs fois."
       2:
         image: notes/C1_bee_loops_2.png
         text: |-
@@ -438,360 +438,369 @@ fr:
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
-        text: "This lesson is called the big event. It's all about how we can control our programs and actually change the way a program runs on the fly using events, like the push of a button or the click of a mouse."
+        text: "Cette leçon est appelé le grand événement. Il est tout au sujet de la façon dont nous pouvons contrôler nos programmes et de réellement changer la façon dont un programme fonctionne directement en utilisant les événements, comme la poussée d'un bouton ou un clic de souris."
       2:
         image: notes/C1_bigevent_unplugged_2.png
-        text: "For this lesson, you'll be controlled with a paper remote control. It's just like a real-live video game."
+        text: "Pour cette leçon, vous allez contrôler une télécommande de papier. C'est comme un jeu vidéo réelles."
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: "An event is an action  that causes something to happen. It's like when you click the button on a mouse and a webpage loads. That's an event. When you touch your screen on a tablet to scroll, that's an event also. Events are a great way of letting the user direct your program whenever they need or want to."
+        text: "Un événement est une action qui provoque quelque chose se passe. C'est comme quand vous cliquez sur le bouton sur une souris et charge une page Web. C'est un événement. Quand vous touchez votre écran sur une tablette pour faire défiler, c'est aussi un événement. Événements sont un excellent moyen de laisser l'utilisateur direct votre programme chaque fois qu'ils ont besoin ou que vous voulez."
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: 'Things happen that we all respond to. We feel hungry and we go to the fridge. We hear the mailman come and he puts our mail in the mailbox  and then we go get our mail. Those are just like the events of pushing a button or moving a joystick. They are something that happens that triggers us to do something.'
+        text: "Nous devons anticiper. Nous nous sentons affamés et nous allons dans le réfrigérateur. Nous entendons le facteur venez il met notre courrier dans la boîte aux lettres et ensuite, nous allons obtenir notre courrier. Ceux type d'action qui sont comme les événements : pousser un bouton ou déplacer un joystick. Il existe quelque chose qui se passe nous déclenche une envie de faire quelque chose."
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: |-
-          In video games, there's an event called "Update" and it happens 30 or 60 times a second. For videogame programmers that's almost more important as an event than the buttons or the joystick.
+        text: "Dans les jeux vidéo, il y a un événement appelé « Update » et il arrive 30 ou 60 fois par seconde. Pour les programmeurs de jeux vidéo c'est presque plus important comme un événement que les boutons ou le joystick."
       6:
         image: notes/C1_bigevent_unplugged_6.png
-        text: |-
-          The main event we're watching for is that "Update" tick happening. And then we check the joystick in the tick. So we say, "Oh, has somebody pushed the button this frame? Yes or no?" Without events, the player couldn't move, you couldn't jump, you wouldn't be able to control what's going on. The videogame wouldn't be able to animate anything.
+        text: |
+          L'évènement principal qu'on attend, c'est que la case de mise à jour soit cochée. Ensuite on va vérifier la manette de jeu dans la case. 
+          Donc on dit, "Est-ce que quelqu'un a poussé le bouton dans ce cadre? Oui ou non?"
+          Sans les évènements, le joueur ne pourrait pas bouger, il ne pourrait pas sauter, il ne pourrait pas contrôer ce qui se passe. Le jeu vidéo ne pourrait rien animer.
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: "In sand sculpture you've got to know that failure is part of the program. But if you persist, it's just going to get nothing but better and more exciting for you. Persistence is the name of the game. Stay with it, you'll love it."
+        text: "Dans la sculpture de sable, il faut que tu saches que l'échec fait partie du programme. Mais si tu persistes, le jeu deviendra de mieux en mieux et de plus en plus excitant pour toi. La persistance, c'est la clé de ce jeu. Accroche-toi, tu vas adorer ça."
       2:
         image: notes/C1_building_foundation_2.jpg
-        text: "This lesson is called building a foundation. In this lesson, we'll work on a task that is meant to be really difficult. You will figure out how to make a structure at least as tall as one of these cups and it's got to be strong enough to hold the weight of a book."
+        text: "Cette leçon s'appelle Comment Construire Une Fondation. Dans cette leçon, on va travailler sur une tâche qui est vraiment difficile. Tu vas devoir trouver une façon de construire une structure au moins aussi haute que l'une de ces tasses, et il faut qu'elle soit assez solide pour qu'elle puisse soutenir le poids d'un livre."
       3:
         image: notes/C1_building_foundation_3.jpg
-        text: "There might be times that our creation doesn't work out. There might be times that we get frusrated and want to give up. There might be a lot of those moments. But if we keep on trying, give it our best shot over and over again, then we're sure to get it before long."
+        text: "Il est possible que souvent ta création ne marche pas. Tu vas sûrement passer par des moments où tu te sentiras frûstré(e) et où tu voudras laisser tomber. Il y aura peut-êre beaucoup de ces moments-là. Mais si tu continue d'essayer, si tu donnes et redonnes ton meilleur effort, alors c'est sûr que tu y arriveras bientôt."
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: "Persistence is all about hanging in there when you really want to give up. If you want to create something new and different, there's going to be a lot of failures along the way."
+        text: "La persistance, c'est de s'accrocher au moment où on a vraiment envie de laisser tomber. Si tu veux créer quelque chose de nouveau et de différent, il va forcément y avoir beaucoup d'échecs sur ton chemin."
       5:
         image: notes/C1_building_foundation_5.jpg
-        text: "The trick to persistence is choosing to keep on going and learn from your failures instead of quitting because you're frustrated. Frustration actually just means there's something wonderful around the corner. So don't quit before you get to it. Wooo!"
+        text: "Pour réussir à être persistant, il faut choisir de continuer et d'apprendre par ses erreurs au lieu de laisser tomber parce qu'on se sent frustré. La frustration, en fait, ça veut dire qu'il va se passer quelque chose de fantastique au prochain tournant. Donc, ne laisse pas tomber avant d'y arriver ! Youhou !"
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: "Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work, there is something we use in both dances and in programming lightsuits. And that is loops! Loops are repeating an action over and over."
+        text: "Bonjour, je m'appelle Miral Kotb et je suis le créateur d'Illuminate. Dans mon travail, il y a quelque chose que nous utilisons pour les danses et pour les programmations de costumes. Et cette chose, c'est une boucle ! Les boucles servent àrépéter des évènements encore et encore."
       2:
         image: notes/C1_getting_loopy_2.png
-        text: "When you repeat something multiple times, like my actions to keep the hula hoop spinning, I'm performing a loop of that action. This is a loop. This is a loop. And this is a loop."
+        text: "Quand on répète quelque chose plusieurs fois, comme par exemple mes mouvements pour que le hula hoop continue de tourner, on fait ce qui s'appelle une boucle. Ceci est une boucle. Ceci est une boucle. Et ceci est une boucle."
       3:
         image: notes/C1_getting_loopy_3.png
-        text: "Today we're going to have a dance party. We'll act out loops with a new dance. The Iteration. We're going to learn about loops using a dance. You will learn a couple of easy steps and repeat them over and over to complete the dance."
+        text: "Aujourd'hui, on va faire une boum. On va créer des boucles avec une nouvelle danse: l'itération. On va en apprendre plus sur les boucles en utilisant une danse. Tu vas apprendre une paire de pas faciles, et les répéter encore et encore pour compléter la danse."
       4:
         image: notes/C1_getting_loopy_4.png
-        text: Here are the steps you need to learn. Clap your hands. Put your hands behind your head. Put your hands on your waist. Lift your left hand up. Lift your right hand up. Pretty simple, right? You will discover that you can shorten the directions by putting some dance steps in loops.
+        text: "Voici les pas que tu dois apprendre. Frappe dans tes mains. Mets tes mains derrière ta tête. Mets tes mains sur tes hanches. Lève ta main gauche. Lève ta main droite. C'est facile, non ? Tu vas découvrir que tu peux raccourcir tes instructions en mettant certains pas de danse en boucle."
       5:
         image: notes/C1_getting_loopy_5.png
-        text: "We actually do use loops in our dancing. The dancers are wearing computers, all in the same network. I might loop the lights through to the same dancers over and over again. In the loop I might have an iteration where I'll say you want to go loop through these six dancers over and over again and then within the loop you want to increase the speed of the light. And that's all created through loops. Loops are important in computer science because they make our work shorter and easier."
+        text: "On utilise vraiment des boucles dans notre danse. Les danseurs portent des ordinateurs, et ils sont tous sur le même réseau. Je pourrais mettre les lumières en boucle sur les mêmes danseurs encore et encore. Dans la boucle, je pourrais mettre une itération dans laquelle je dirais que je veux que les six danseurs passent en boucle encore et encore et ensuite, dans la boucle elle-même, je vais augmenter la vitesse de la lumière. Et tout ça se crée avec des boucles. Les boucles sont importantes dans la programmation parce qu'elles rendent notre travail plus simple et plus court."
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
-        text: "This lesson is called Happy Maps. Today we're gonna help our furry little friend Flurb get to her fruit."
+        text: "Cette leçon s'appelle Les Joyeuses Cartes. Aujourd'hui nous allons aider notre petit copain poilu, Flurb, à arriver près de ses fruits."
       2:
         image: notes/C1_happy_maps_unplugged_2.png
-        text: "Make your Flurb go to your fruit. To do this you'll need to figure out which way the Flurb needs to go and direct her with arrows. In order for the Flurb to get to the apple, what direction does the Flurb have to go? Line to make it go up."
+        text: "Fais aller ton Flurb vers tes fruits. Pour cela, tu vas devoir comprendre de quel côté le Flurb doit aller et diriger ses flèches. Pour que le Flurb arrive à la pomme, dans quelle direction doit-il aller ? Pointe-le dans la bonne direction pour qu'il monte."
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: To get it there you circle the direction that it has to go.
+        text: "Pour qu'il y aille, tu dois encercler la direction dans laquelle il doit aller."
       4:
         image: notes/C1_happy_maps_unplugged_4.png
-        text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."
+        text: "Crée ton algorithme on collant des flèches à côté de la carte que tu essaies de décoder. Le deuxième algorithme sera le même sauf qu'il descendra."
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: "It's like programming with paper. And that's it!"
+        text: "C'est comme de programmer avec du papier. Et voilà !"
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: "Debugging is finding and fixing problems. There are lots of ways to debug problems. One of the easiest is to move step by step until where you find where something goes wrong. Here I'm trying to do a back handspring on the beam but I keep falling off."
+        text: "Débugger, c'est trouver et résoudre des problèmes. Il y a beaucoup de façons de débugger des problèmes. L'une des plus simples consiste à avancer instruction par instruction jusqu'à ce que tu trouves le moment où quelque chose cloche. Ici, j'essaie de faire un salto arrière sur la poutre, mais je n'arrête pas de tomber."
       2:
         image: notes/C1_maze_debugging_2.png
-        text: "I walked through each part step by step and realized where my mistake was. I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position and I got it. I was really glad I debugged my back handspring."
+        text: "Je suis repassé sur chaque étape pas à pas et j'ai réalisé où était mon erreur. Je ne positionnais pas mes mains correctement sur la poutre. Alors j'ai essayé un autre salto arrière sur la poutre avec ma nouvelle position pour les mains et j'ai réussi. J'étais vraiment contente d'avoir débogué mon salto arrière."
       3:
         image: notes/C1_maze_debugging_3.png
-        text: "To learn about debugging, we start with a set of blocks already on the stage. You'll notice that these blocks won't get you to the goal. We need to debug the solution and fix it. What went wrong? You'll notice that you needed to keep going west one more block."
+        text: "Pour apprendre le débogage, nous commençons avec un ensemble de blocs déjà sur l'espace de travail. Tu remarqueras que ces blocs ne te permettent pas d'atteindre l'objectif. Nous avons besoin de déboguer la solution et corriger. Qu'est ce qui n'a pas fonctionné ? Tu remarqueras que devais continuer à aller vers l'Ouest d'une cas de plus."
       4:
         image: notes/C1_maze_debugging_4.png
-        text: "Let's fix this by adding another west block and hitting run to see if you got it right. Yay, you got it!"
+        text: |-
+          Nous allons résoudre ce problème en ajoutant un autre bloc à l'ouest et en appuyant sur "Démarrer" pour voir si tu as réussi. Yeah, tu l'as eu !
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle and see what directions it needs to take.
+        text: "Pour ce puzzle, vous devez amener déplacer l'oiseau jusqu'au cochon. Regardez le puzzle pour voir quel direction prendre."
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: |-
-          You need to drag the blocks over from the toolbox to the workspace. Make sure it's under the "when run" block and when you think you've got the right solution, then you can click "Run" and watch the bird go to the pig.
+        text: "Tu dois faire glisser les blocs de la boîte à outils vers l'espace de travail. Assure-toi que c'est sous le bloc « quand l'exécution commence » et lorsque tu penses que tu as la bonne solution, alors tu peux cliquez sur « Démarrer» et regarder l'oiseau aller jusqu'au cochon."
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: "Les ordinateurs sont vraiment doués pour répéter des actions. En tant que personne, tu t'ennuierais beaucoup si tu devais faire la même chose beaucoup de fois d'affilée. Mais un ordinateur peut faire la même chose des millions ou même des milliards de fois sans s'ennuyer et réussir à le faire très bien."
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: "Ainsi, par exemple, si je voulais souhaiter à tout le monde sur Facebook un joyeux anniversaire en leur envoyant un email, cela pourrait me prendre plus d'un siècle pour écrire tous ces mails à tout le monde. Mais avec seulement quelques lignes de code, je peux avoir un système pour envoyer un email à tout le monde sur Facebook pour leur souhaiter un joyeux anniversaire."
       3:
         image: notes/C1_maze_loops_3.png
-        text: 'To get the bird to the pig in this level... rather than drag three North blocks on to the workspace, you will use the "repeat" block. Drag the "repeat" block on to the workspace and enter the number 3. Then drag the "move North" block into the "repeat" block and hit "Run" to see if you got it right. Congratulations, you got it!'
+        text: "Pour que l'oiseau aille jusqu’au cochon à ce niveau... plutôt que de faire glisser trois blocs Nord vers l'espace de travail, tu utiliseras le bloc « répéter ». Fais glisser le bloc « répéter » sur l'espace de travail et entre le numéro 3. Ensuite, fais glisser le bloc « déplacer vers le Nord » dans le bloc « répéter » et cliquez sur « Démarrer» pour voir si c'est bon. Félicitations, tu as réussi !"
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
-        text: "This lesson is called move it, move it. Together we're going to write a program to get our friends from the starting with the compass rose to the smiley face goal."
+        text: "Cette leçon est appelée bouge-le, bouge-le. Ensemble, nous allons écrire un programme pour déplacer nos amis, de la rose des vents jusqu'au smiley."
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: "But the smiley is face down and only one person knows how to get there. Let's get this program started."
+        text: Mais le smiley est tête en bas et une seule personne sait comment y aller. Commençons ce programme.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: "A program is an algorithm that has been coded into something that can be run by a machine. Most of us think of a program as something that we write for a computer. Programs are really good for that but they're also helpful in other places. You can make your own game or even program a robot to do things for you."
+        text: "Un programme est un algorithme qui a été en codé de façon à pouvoir être exécuté par une machine. La plupart d'entre nous voient un programme comme quelque chose que l'on écrit pour un ordinateur. Les programmes sont parfaits pour cela, mais ils sont également utiles à d'autres endroits. Tu peux programmer ton propre jeu ou même programmer un robot qui pourra faire des choses pour toi."
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
         text: |-
-          My name is Jeremiah. Hi! I am seven years old. I love playing on my mom's computer but I always get permission first. "Mom, can I go on the computer? Sure honey!"
+          Mon nom est Jérémie. Salut ! J'ai 7 ans. J'aime jouer sur l'ordinateur de ma maman mais je demande toujours d'abord la permission. "Maman, je peux aller sur l'ordinateur ? Bien sûr mon chéri !"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: "J'aime l'ordinateur de ma maman parce que je peux aller sur internet. Internet c'est un peu comme ton voisinage. Tu peux visiter des endroits supers, parler à la famille et aux amis et tu peux apprendre plein de choses nouvelles."
       3:
         image: notes/C1_going_places_safely_3.png
-        text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
+        text: "Hier, j'ai visité un zoo près de ma maison. J'ai vu un bébé zèbre. J'ai pris une photo et j'ai changé la couleur des rayures, puis ajouté un chapeau et je l'ai ajouté à ma collection d'animaux farfelus. Génial ! Plus tard, je suis allé très très loin. J'ai visité le Kenya. C'est un pays en Afrique. Plein de zèbres y vivent."
       4:
         image: notes/C1_going_places_safely_4.png
         text: |-
-          Sometimes on the Internet I talk to people I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. "Yummy, I wish the Internet had smellorama!" I can talk to different people on the Internet, like my cousin but I only talk to people I know.
+          Parfois sur Internet, je parle à des gens que je connais, comme ma grand-mère, qui vit dans un autre état. Salut Mamie! Elle me fait des cookies qu'elle m'enverra pour mon anniversaire. "Miam, j'aimerais que l'odeur passe par Internet !". Je peux parler à beaucoup de gens par Internet, comme mon cousin, mais je ne parle qu'aux gens que je connais.
       5:
         image: notes/C1_going_places_safely_5.png
-        text: What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!
+        text: "Ce que j'aime le plus sur Internet, c'est que je peux jouer à des jeux amusants. Gagné ! J'aime aussi dessiner et créer de nouvelles choses et les partager avec mes amis. Cool ! Parfois, je visite des sites où j'apprends de nouvelles choses, mais je reste toujours sur les sites qui sont bien pour moi. Oh, des dinosaures !"
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
+        text: "Internet est un lieu très amusant. Mais comme quand tu traverse une rue dans ton quartier, tu dois être prudent en ligne. Voici trois règles à retenir. Règle numéro 1 : Demande toujours à tes parents d'abord. Règle numéro 2 : Ne parle qu'aux gens que tu connais. Règle numéro 3 : Reste aux endroits qui sont adaptés pour toi."
       7:
         image: notes/C1_going_places_safely_7.png
-        text: "Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to log on again to see where I can visit next."
+        text: "Wouah, c'était amusant ! Heure du dîner. Je me déconnecte maintenant. Je suis impatient de me reconnecter pour voir où je peux aller après."
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
-        text: "Today we're going to learn about Pair Programming. In pair programming you work as a team. Why should two people use one computer? Because two heads are better than one. In pair programming you and your partner are going to sit down together at one computer and you are both going to work on the same project."
+        text: "Aujourd'hui, nous allons en savoir plus sur la programmation en binôme. Dans la programmation en binôme, tu travailles en équipe. Pourquoi deux personnes devraient utiliser un seul ordinateur ? Parce que deux têtes valent mieux qu'une. Dans la programmation en binôme, toi et ton partenaire allez vous asseoir ensemble devant le même ordinateur et vous allez travailler sur le même projet."
       2:
         image: notes/C1_pair_programming_2.png
-        text: "In pair programming, one person is the driver and the other person is the navigator, just like driving a car. The driver sits at the computer and is the one using the keyboard and mouse or touchscreen and controlling the main actions of the computer. The other person is the navigator. The navigator helps the driver by answering the driver's questions and pointing out potential problems or mistakes."
+        text: "En pair programming, une personne est le pilote, et l'autre est le navigateur, comme dans une voiture. Le pilote est celui qui interagit avec l'ordinateur. Le navigateur l'aide en répondant à ses questions et en relevant d'éventuels problèmes ou erreurs."
       3:
         image: notes/C1_pair_programming_3.png
-        text: "Communication is key to successful pair programming. No insults, be respectful, don't be a bossy navigator, because nobody likes a backseat driver. You and your partner should always be talking. The driver can explain what she or he is doing. And the navigator can help suggest what to do next."
+        text: "La communication est la clé du succès du pair programming. Pas d'insultes, soyez respectueux et ne jouez pas au chef : personne n'aime avoir un deuxième pilote. Vous et votre pilote devez toujours vous parler. Le pilote peut expliquer ce qu'il ou elle fait, et le navigateur peut aider en suggérant quoi faire ensuite."
       4:
         image: notes/C1_pair_programming_4.png
-        text: The navigator should be thinking about the big picture and the driver focuses on the details. Both roles are important. Pair programming is all about working together as a team.
+        text: "Le copilote devrait réfléchir à la situation dans son ensemble et le chauffeur se concentre sur les détails. Les deux rôles sont importants. La programmation à deux est principalement un travail d'équipe."
     C1_planting_seed:
       1:
         image: notes/C1_planting_seed_1.png
-        text: "This lesson is called planting a seed and it's going to help us understand algorithms. Algorithms are specific instructions that explain the order in which to do something. Even everyday things like eating breakfast or brushing your teeth are algorithms that require small steps to get a job done."
+        text: "Cette leçon s'appelle planter une graine et elle va nous aider à comprendre les algorithmes. Les algorithmes sont des instructions spécifiques qui expliquent l'ordre dans lequel il faut faire quelque chose. Même certains gestes quotidiens comme manger son petit déjeuner ou se brosser les dents sont des algorithmes qui nécessitent plusieurs petites étapes afin d'aller jusqu'au bout de la tâche."
       2:
         image: notes/C1_planting_seed_2.png
-        text: "Computers can be really smart but they can only understand you if you tell them exactly what you want step by step. The great thing about algorithms is that if you follow the instructions in order, you can do something that you didn't know how to do ahead of time. It's like following a recipe."
+        text: "Les ordinateurs peuvent être très intelligents mais ils ne peuvent te comprendre que si tu leur dis exactement ce que tu veux étape par étape. Ce qui est génial avec les algorithmes c'est que si tu suis les instructions dans l'ordre, tu peux faire quelque chose que tu n'aurez pas su faire avant. C'est comme suivre une recette."
       3:
         image: notes/C1_planting_seed_3.png
-        text: "Today we're going to plant our own seeds using an algorithm. Create your own algorithm by cutting apart the pictures. Select the pictures that show steps in planting a seed and arrange those pictures in the correct order."
+        text: "Aujourd'hui nous allons planter nos propres graines à l'aide d'un algorithme. Crée ton propre algorithme en découpant les images. Sélectionne les images qui montrent les différentes étapes pour planter une graine et remets les dans le bon ordre."
       4:
         image: notes/C1_planting_seed_4.png
-        text: "Now, it's time for you to see if your algorithm works. Follow the steps in the algorithm very carefully. Are they in the correct order? Did you succeed in planting a seed by following the algorithm? It's like programming with pictures!"
+        text: "Maintenant, il est temps de voir si ton algorithme fonctionne. Suis les étapes de l'algorithme avec beaucoup d'attention. Sont-elles dans le bon ordre ? As-tu réussi à planter une graine en suivant l'algorithme ? C'est comme de la programmation avec des photos !"
       5:
         image: notes/C1_planting_seed_5.png
-        text: "When we want to make chocolate, there are many big steps to that process and each of those big steps has a set of smaller steps and there are different recipes or algorithms depending on how we want the chocolate to taste. Each step is important, even the small ones, so that without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down so that no matter who does it, the result is the same."
+        text: "Lorsque l'on fait du chocolat, il y a plusieurs étapes importantes dans le processus. Et chacune de ces grandes étapes a son lot de petites étapes. Et il y a différentes recettes, ou algorithmes, en fonction du goût que nous voulons donner au chocolat. Chaque étape est importante, même la plus petite. C'est pourquoi, si une seule étape manque, les autres ne peuvent fonctionner. Il est vraiment important de créer des algorithmes que d'autres peuvent comprendre. C'est pourquoi chaque étape doit être écrite, de façon à ce que le résultat soit le même quelque soit la personne qui le crée."
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
-        text: Time to get creative and use your coding skills to tell a story. Your story will have actors and you will be able to make these actors talk and interact with each other. Start thinking of what kind of story you want to tell.
+        text: "Il est temps de faire preuve de créativité et d'utiliser tes compétences en codage pour raconter une histoire. Ton histoire intégrera des acteurs, et tu seras en mesure de les faire parler mais aussi d'interagir entre eux. Commence à réfléchir quel type d'histoire tu veux raconter."
       2:
         image: notes/C1_playlab_storytelling_2.png
         text: |-
-          The cat's always been afraid of the dog and what if the cat figures out that the dog is trying to be nice? The "when run" block starts everything. The "move" block will move your character and the "say" block will make your character say whatever you type.
+          Le chat a toujours eu peur du chien, mais que se passerait il si le chat se rendait compte que le chien essayait juste d'être gentil ? Le bloc "quand l'exécution commence" démarre tout. Le bloc "Déplacer" fera bouger ton personnage et le bloc "Parler" lui fera dire tout ce que tu tapes.
       3:
         image: notes/C1_playlab_storytelling_3.png
-        text: 'This is the "when actors collide" block which you can link up to the other blocks.'
+        text: 'Ceci est le bloc "quand les acteurs se touchent" que tu peux connecter aux autres blocs.'
       4:
         image: notes/C1_playlab_storytelling_4.png
-        text: 'I was making the dog come over and say "Hi" but then the cat got scared so it ran away. "Ahh" If there was more time, it would have been a happy ending. The end!'
+        text: |-
+          J'ai fait venir le chien pour lui faire dire "Bonjour" mais alors le chat a eu peur et s'est enfui. "Ahh", s'il y avait eu plus de temps, cela aura été une fin heureuse. La fin!
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: This is the spelling bee level. Use the puzzle pieces to move the bee. As it moves, it will collect letters to spell words.
+        text: "Voici le niveau de l'abeille qui épelle. Utilise les pièces du puzzle pour déplacer l'abeille. Lorsqu'elle se déplace, elle récupérera les lettre pour composer un mot."
       2:
         image: notes/C1_spelling_bee_intro_2.png
-        text: "See if you can spell the word they give you in the box below the stage. But bee careful! Moving the wrong direction will add letters you don't want."
+        text: Si vous pouvez épeler ce mot, ils sera présent dans la zone au-dessous. Mais attention abeille ! Déplacer dans la mauvaise direction ajoutera des lettres que vous ne voulez pas.
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: "Les ordinateurs sont vraiment doués pour répéter des actions. En tant que personne, tu t'ennuierais beaucoup si tu devais faire la même chose beaucoup de fois d'affilée. Mais un ordinateur peut faire la même chose des millions ou même des milliards de fois sans s'ennuyer et réussir à le faire très bien."
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: "Ainsi, par exemple, si je voulais souhaiter à tout le monde sur Facebook un joyeux anniversaire en leur envoyant un email, cela pourrait me prendre plus d'un siècle pour écrire tous ces mails à tout le monde. Mais avec seulement quelques lignes de code, je peux avoir un système pour envoyer un email à tout le monde sur Facebook pour leur souhaiter un joyeux anniversaire."
       3:
         image: notes/C1_zuck_repeat_loop_3.png
-        text: "In this example, your goal is going to be to move the bird to get the pig. Now, we're going to be able to use the repeat block in order to be able to do this very easily. You can either do this by giving the computer a move forward command five times in order to advance the bird one step each time to the pig or you can just tell the computer to move forward once, and then tell it to repeat that five times and it'll do the same thing."
+        text: |-
+          Dans cet exemple, ton objectif est de déplacer l'oiseau jusqu'au cochon. Maintenant, nous allons pouvoir utiliser le bloc de répétition pour le faire très facilement. Tu peux soit donner à l'ordinateur un ordre "avancer" cinq fois afin de faire avancer l'oiseau d'une étape à chaque fois vers le cochon, ou tu peux juste demander à l'ordinateur d'avancer une seule fois, puis de lui demander de le répéter cinq fois, cela donnera le même résultat.
       4:
         image: notes/C1_zuck_repeat_loop_4.png
-        text: 'In order to do this, you drag your move forward command and then you put it inside the repeat block. And you can click on it and tell it how many times you  to repeat the block to tell it how many steps you want it to take forward.'
+        text: |-
+          Pour faire cela, tu dois déplacer la commande "avancer" et la mettre à l'intérieur du bloc répéter. Alors, tu peux cliquer dessus pour indiquer au bloc répéter de combien de pas tu veux avancer.
       5:
         image: notes/C1_zuck_repeat_loop_5.png
-        text: "One more thing is you can put as many commands as you want inside the repeat block. So in this example, you're telling it to move forward and turn left, which it'll do five times. Have fun!"
+        text: "Encore une chose, tu peux mettre autant de commandes que tu le souhaites à l'intérieur du bloc répéter. Ainsi, dans cet exemple, tu lui dit d'avancer et de tourner à gauche, ce qu'il fera cinq fois. Amuse-toi !"
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
-        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+        text: "Tu ne serais même pas qualifié pour la course si tu n'avais pas les gens qui sont compétents en informatique en raison de la quantité de données collectées par les voitures et la nécessité d'être en mesure d'avoir des gens capable d'écrire des programmes pour savoir comment continuer à être performant."
       2:
         image: notes/C2_artist_intro_2.png
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: Dans ces puzzles, tu seras un artiste qui utilise un crayon pour dessiner différentes formes. Partout où ton artiste va, elle dessine une ligne derrière elle.
       3:
         image: notes/C2_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: |-
+          Pour te déplacer sur la zone de dessin, tu vas utiliser le bloc "avancer plus". Ici le bloc "avancer plus" signifie un déplacement vers l'avant de 100 pixels. Que se passe-t-il lorsque l'on appuie sur "Démarrer" ? L'artiste avance un certaine distance et cette distance est de 100 pixels. Les pixels sont simplement de très petits carrés sur l'écran de votre ordinateur.
       4:
         image: notes/C2_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
+        text: |-
+          L'autre bloc que nous avons dans ce puzzle est "tourner à droite de 90 degrés". Et quand nous l'utilisons, cela fait tourner notre Artiste d'un certain angle. Tu peux donc jouer cet angle selon la rotation souhaitée pour l'Artiste. Il s'agit d'un virage à 90 degrés.
       5:
         image: notes/C2_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+        text: "Et il s'agit d'un virage de 120 degrés. Et n'oublie pas, tu peux modifier ces valeurs en cliquant sur les flèches à côté du nombre de pixels et de degrés. Amuses toi bien à dessiner avec ton artiste !"
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that is less than, equal to or greater than a number, THEN do something.
+        text: "Il s'agit du bloc conditionnel. Il dit que SI il y a du nectar ou du miel qui est inférieur, égal ou supérieur à un certain nombre, ALORS faire quelque chose."
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+        text: "Cela est utile lorsque nous ne savons pas combien de nectar ou miel est à obtenir, comme nous le voyons ici avec ce point d'interrogation."
       3:
         image: notes/C2_bee_conditionals_3.png
-        text: "In this example, we're going to say IF the purple flower has nectar greater than 0, get nectar. That will tell our bee to keep getting nectar as long as it's there. Ta-dah!"
+        text: "Dans cet exemple, nous allons dire SI la fleur pourpre a du nectar supérieur à 0, prendre du nectar. Ce qui dira à notre abeille de continuer à prendre du nectar tant qu'il y en a. Tadam !"
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
-        text: This is the binary bracelets lesson. We are going to code our initials on a bracelet we can wear and show all our friends!
+        text: "C'est la leçon sur les bracelets binaires. Nous allons coder nos initiales sur un bracelet que nous pourrons porter et montrer à tous nos amis !"
       2:
         image: notes/C2_binary_bracelets_2.png
-        text: Binary is a way of representing information using only two options. Sometimes people think of this as only 1s and 0s. But you can represent binary with combinations of on or off, up and down, in and out or really any set of opposites.
+        text: "Le binaire est une façon de représenter des informations à l'aide de seulement deux valeurs. Parfois les gens imaginent cela uniquement comme des 1 et des 0. Mais tu peux te représenter le binaire comme une combinaisons d ouvert ou fermé, haut ou bas, dedans ou dehors ou vraiment tout ensemble des contraires."
       3:
         image: notes/C2_binary_bracelets_3.png
-        text: "Hi, I'm Orion and I program robots here at Play-im. All computer and robot brains at their most fundamental level are little electronic gates. When the gate is open, electricity can flow through and when it's closed, electricity can't."
+        text: "Salut, je suis Orion et je programme des robots ici à Play-im. Tous les ordinateurs et cerveaux des robots sont constituées de petites portes électroniques à leur niveau le plus fondamental. Lorsque la porte est ouverte, l'électricité peut circuler, et lorsqu'elle est fermée, l'électricité ne circule pas."
       4:
         image: notes/C2_binary_bracelets_4.png
-        text: "An example of binary on the robot is the robot's eyes. The robot's eyes are LEDs and those are lights that are either on or off. It's a binary system, one or the other. We can use the lights to represent binary numbers. If we have a set of robots, we can say that the first robot is the 1s place and the second robot is the 2s place, the third robot is the 4s place and so on. That's how you represent a binary number. The robots will do it with their binary eyes and count it out for you."
+        text: "Les yeux du robot sont un exemple de binaire sur le robot. Les yeux du robot sont des LEDs et celles-ci sont des lumières qui sont soit allumées soit éteintes. C'est un système binaire, l'un ou l'autre. Nous pouvons utiliser les lumières pour représenter des nombres binaires. Si nous avons un ensemble de robots, nous pouvons dire que le premier robot est à la place 1 et le second robot est la 2, le troisième robot est la 3 et ainsi de suite. Voilà comment représenter un nombre binaire. Les robots vont le faire avec leurs yeux binaire et compter pour vous."
     C2_conditionals_with_cards:
       1:
         image: notes/C2_conditionals_with_cards_1.png
-        text: This lesson is called conditionals with cards. Every day you make decisions based on what you see and hear.
+        text: "Cette leçon s'appelle instructions conditionnelles avec les cartes. Chaque jour tu prends des décisions fondées sur ce que tu vois et entends."
       2:
         image: notes/C2_conditionals_with_cards_2.png
-        text: "I want to walk to the park but first I have to decide whether I should bring an umbrella or not. So I look out the window. If it's cloudy, I'm going to take my umbrella. Else, I'll take some sunglasses. I think I'd better take the umbrella. What I see and hear determines what I take to the park."
+        text: "Je veux marcher vers le parc, mais tout d'abord, je dois décider si je devrais prendre un parapluie ou non. Donc je regarde par la fenêtre. Si c'est nuageux, je vais prendre mon parapluie. Sinon, je vais prendre des lunettes de soleil. Je pense que je ferais mieux de prendre le parapluie. Ce que je vois et entends détermine ce que je prends pour le parc."
       3:
         image: notes/C2_conditionals_with_cards_3.png
-        text: |-
-          Conditionals are used in games too. Today we're going to practice using conditionals with a card game. In this game, the card that I draw determines what my friends are going to do. If I draw a seven, everyone claps. Else, everyone says "awww." Let's try it! "Awww" "cheers"
+        text: "Les instructions conditionnelles sont utilisées dans les jeux aussi. Aujourd'hui, nous allons nous exercer à l'utilisation d'instructions conditionnelles avec un jeu de cartes. Dans ce jeu, la carte que j'ai dessiné détermine ce que mes amis vont faire. Si je tire un sept, tout le monde applaudit. Sinon, tout le monde dit « Waouw». Essayons-le ! « Waouw» « merci»"
       4:
         image: notes/C2_conditionals_with_cards_4.png
-        text: I bet you can make up games that are even more fun with conditionals. Give it a try! Conditionals are what make computers seem smart. A computer program that includes conditionals can react to the user and change its course of action.
+        text: "Je parie que tu peux faire des jeux qui sont encore plus marrants avec les instructions conditionnelles. Fais un essai ! Les instructions conditionnelles sont ce qui donne l'impression que les ordinateurs sont intelligents. Un programme informatique qui contient des instructions conditionnelles peut réagir à l'utilisateur et modifier sa façon d'agir."
       5:
         image: notes/C2_conditionals_with_cards_5.png
-        text: "Think about your favorite video game. Do you earn more points for some actions than you do for others? This occurs because the computer is using conditionals. It's the way a computer makes a decision. How about, if you hit the target, you earn ten points. Else, you lose three. When you know how conditionals work, you can create all kinds of exciting games."
+        text: "Pensez à ton jeu vidéo préféré. Gagnes-tu plus de points pour certaines actions que tu fais pour les autres ? Cela se produit car l'ordinateur utilise des instructions conditionnelles. C'est la façon dont un ordinateur prend une décision. Que dirais-tu si, lorsque tu touches la cible, tu gagnes 10 points. Sinon, tu en perds trois. Quand on sait comment fonctionnent les instructions conditionnelles, on peut créer toutes sortes de jeux passionnants."
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: Here we already have some blocks out in our work space. But there is something wrong.
+        text: Ici nous avons déjà quelques blocs positionnés dans notre espace de travail. Mais il y a quelque chose qui cloche.
       2:
         image: notes/C2_artist_debugging_2.png
-        text: "Let's debug this code by slowing down the speed and watching it as it goes through each block step by step."
+        text: "Débogue ce code en ralentissant la vitesse et en regardant ce qu'il se passe pour chaque bloc pas à pas."
       3:
         image: notes/C2_artist_debugging_3.png
-        text: "Oh, there's the problem! The cat's whiskers are 75 pixels long, not 25."
+        text: Ah, il y a un problème ! Les moustaches du chat font 75 pixels de long, pas 25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: "As-tu déjà entendu parler de débogage de programme ? Il s'agit d'un moyen pour comprendre ce qui ne fonctionne pas. Lorsque tu débogues du code, tu identifies et supprimes les erreurs."
       2:
         image: notes/C2_bee_debugging_2.png
-        text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
+        text: |-
+          Ici, tu démarres avec quelques blocs déjà positionnés dans l'espace de travail. Nous allons utiliser le bouton "Étape" pour parcourir les blocs, pas à pas, pour voir si c'est la bonne solution et où nous devrions corriger.
       3:
         image: notes/C2_bee_debugging_3.png
-        text: "Looks like there's our problem! We need one more move forward block. The step button helps us debug our problem by identifying where the error is so we can fix it."
+        text: |-
+          On dirait que notre problème est là ! Nous avons besoin d'un bloc "avancer plus" supplémentaire. Le bouton "Étape" nous aide à déboguer notre problème en identifiant où est l'erreur et ainsi corriger.
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
-        text: "On your head you hold your hat and your smarts will tell you where you're at and to think about the zoo, and to nod hello to you and you! Use your head when you're online to keep what's yours inside your mind and to know how to be safe, how to give your life some private space! From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: Tu as un chapeau sur ta tête et ton cerveau te dira où tu es, de penser que tu es au zoo et de saluer untel et untel ! Utilise ta tête lorsque tu es connecté pour garder ce qui te concerne dans ton cerveau et pour savoir comment être en sécurité, comment faire pour garder un espace de vie privée dans ta vie ! De la tête au pied, fais une pause et réfléchis. Des pieds au nez, fais une pause et pense connecté !
       2:
         image: notes/C2_digital_footprint_2.png
-        text: "Use your heart to grow and grow, and to give yourself a healthy glow, and to make a valentine, tell someone that you'll be mine! Use your heart when you're online, feel what's right and always kind, and show your friends respect, to be fair and nice on the Internet. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: "Utilise ton cœur pour croître et grandir et pour être resplendissant et pour avoir un amour, dire à quelqu'un que vous serez sien ! Utilise ton cœur quand tu es connecté, sent ce qui est juste et toujours aimable et montre du respect à tes amis, pour être juste et agréable sur Internet. De la tête au pieds, fait une pause et réfléchis. De vos pieds jusqu'à votre nez, Des pieds au nez, fais une pause et pense connecté !"
       3:
         image: notes/C2_digital_footprint_3.png
-        text: "Use your arms to hug your pet, to keep your clothes from getting wet, and to wear your favorite sleeves and to help you fly and make believe. Use your arms when you're online, to take break and balance time and leave your tech behind and to find yourself a tree to climb. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: "Utilise tes bras pour câliner ton animal de compagnie, pour empêcher tes vêtements de se mouiller et pour porter ta chemise préférée et pour t'aider à voler et faire croire. Utilise tes bras lorsque tu es en ligne, pour prendre le temps de faire une pause et de laisser la technologie et de te trouver un arbre pour grimper. De la tête au pieds, fait une pause et réfléchis. De vos pieds jusqu'à votre nez, Des pieds au nez, fais une pause et pense connecté !"
       4:
         image: notes/C2_digital_footprint_4.png
-        text: "Use your gut to store your food, and to listen to its growling mood, to make a belly flop, and to feel the gas in soda pop. Use your gut when you're online, to know to watch for certain signs, and to let it guide the way and tell you when it's not ok. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: "Utilise ton intestin pour mettre la nourriture et pour écouter son grognement d'humeur, de faire un bruit de ventre et de sentir le gaz dans les boissons gazeuses. Utilise ton instinct quand tu es en ligne, pour savoir surveiller certains signes et laisse le te montrer le chemin et te dire quand ce n'est pas bon. De la tête au pieds, fait une pause et réfléchis. De vos pieds jusqu'à votre nez, Des pieds au nez, fais une pause et pense connecté !"
       5:
         image: notes/C2_digital_footprint_5.png
-        text: "So think with your head, and feel with your heart, balance with your arms, listen to your gut, online. Use your legs to run and kick, and to jump and bounce on a pogo stick, and to dance around the block, and to skip along in your smelly socks. Use your legs when you're online, to stand up to bullies who cross the line, and remember to stand tall, be nice to creatures great and small."
+        text: Donc pense avec ta tête et ressent avec ton coeur, équilibre avec tes bras, écoute ton instinct, en ligne. Utilisez tes jambes pour courir et lancer et pour sauter et rebondir sur un bâton sauteur, pour danser autour du bloc et à ignorer tes chaussettes qui sentent mauvais. Utilise tes jambes lorsque tu es en ligne, pour résister aux intimidateurs qui franchissent la ligne et ne pas oublier de se tenir debout, être gentil avec les créatures grandes et petites.
       6:
         image: notes/C2_digital_footprint_6.png
-        text: From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online! So think with your head, and feel with your heart, balance with your arms, listen to your gut, stand up with your legs. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!
+        text: "De la tête au pieds, fait une pause et réfléchis. De vos pieds jusqu'à votre nez, Des pieds au nez, fais une pause et pense connecté ! Alors pense avec ta tête et ressent avec ton coeur, équilibre avec tes bras, écouter ton instinct, debout avec tes jambes. De la tête au pieds, fait une pause et réfléchis. De vos pieds jusqu'à votre nez, Des pieds au nez, fais une pause et pense connecté !"
     C2_digital_footprint_v2:
       1:
         image: notes/C2_digital_footprint_v2_1.png
-        text: Everytime you go online, you leave a footprint that can be searched, copied, shared, broadcast and is permanent. What kind of digital footprint are you leaving? What kind of digital footprint do you want to leave?
+        text: "Chaque fois que tu vas sur Internet, tu laisses une trace qui peut être consultée, copiée, partagée, diffusée et qui est permanente. Quel genre d'empreinte numérique laisses-tu ? Quel genre d'empreinte numérique veux-tu laisser ?"
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
-        text: |-
-          This lesson is called "Graph Paper Programming" and it's all about algorithms. Today we're going to learn how to write programs that show each other how to recreate simple black and white images, using only hand drawn arrows.
+        text: "Cette leçon s'appelle « Programmation sur papier quadrillé » et tout tourne autour des algorithmes. Aujourd'hui, nous allons apprendre à écrire des programmes qui montrent comment recréer de simples images noir et blanc, juste en dessinant des flèches à la main."
       2:
         image: notes/C2_graph_paper_2.png
-        text: "An algorithm is a list of instructions for completing a task. We'll follow this set of instructions to make the bowl. Algorithms are really helpful when you need someone else to understand how to do something."
+        text: "Un algorithme est une liste de consignes permettant de réaliser une tâche. Nous allons suivre cet ensemble de consignes destinées à faire un bol. Les algorithmes sont vraiment utiles quand vous avez besoin que quelqu'un d'autre comprenne comment faire quelque chose."
       3:
         image: notes/C2_graph_paper_3.png
-        text: "If you're writing an algorithm for a computer, you have to break it down to little tiny steps. So finish this row and go to the next, then the next one, and you'll be done."
+        text: Si tu écris un algorithme pour un ordinateur, tu dois le découper en toutes petites étapes. Donc termine cette ligne et passe à la suivante, puis la suivante et tu as terminé.
       4:
         image: notes/C2_graph_paper_4.png
-        text: I use algorithms in my work. If I write down all of the steps I can recreate that same piece again, or I can teach someone else to do it. Put the glass in the kiln, fuse it together, follow the rest of the instructions to make the bowl. Algorithms give you a road map for getting something done.
+        text: "J'utilise des algorithmes dans mon travail. Si j'écris toutes les étapes, je peux recréer la même chose à nouveau, ou je peux enseigner à quelqu'un d'autre comment le faire. Mets le verre dans le four, fusionne le, suis le reste des instructions pour faire le bol. Les algorithmes te donnent une feuille de route pour obtenir quelque chose."
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
-        text: Here we are going to use the repeat block to help us save steps when we are programming our artist. We already have some blocks out on our stage but they are just there to get us started.
+        text: "Ici nous allons utiliser le bloc de répéter pour nous aider à économiser des étapes lorsque nous programmons notre Artiste. Il y a déjà quelques blocs sur l'espace de travail mais ils sont juste là pour démarrer."
       2:
         image: notes/C2_artist_loops_2.png
-        text: To loop those blocks four times to draw the whole square, we just drag out the repeat block and put the moveforward and turn right blocks inside the repeat block. When we hit run, the artist will repeat those steps four times to complete the square.
+        text: "Pour faire boucler 4 fois ces blocs pour dessiner le carré complet, nous devons juste choisir le bloc répéter et mettre les blocs avancer plus et tourner à l'intérieur du bloc de répéter. Lorsque l'on clique sur Démarrer, l'artiste répète ces étapes quatre fois pour compléter le carré."
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
-        text: "A loop is a repetition of activity. Going into a hive to inspect, I look at a frame, and then I put it back. I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
+        text: "Une boucle est une répétition d'activités. Pour inspecter une ruche, je regarde un cadre, puis je le remets. Je répète cette même activité plusieurs fois. Et donc je boucle en répétant la même activité plusieurs fois."
       2:
         image: notes/C2_bee_loops_2.png
-        text: "This is the repeat block. Whatever you put inside the repeat block will repeat those actions the number of times that you tell it to. For example, in this level, rather than drag out move forward and get nectar three times, we're going to just drag them out once each and repeat the action three times. That made it easy!"
+        text: "C'est le bloc répéter. Quelque soit ce que vous y mettez à l'intérieur, le bloc répéter va répéter ces actions le nombre de fois que tu lui as demandé. Par exemple, dans ce niveau, plutôt que de choisir les blocs avancer plus et prendre du nectar trois fois, on va juste les faire glisser une fois chacun et répétez l'action trois fois. Ça rend les choses plus facile !"
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
-        text: "Usually programming is all in text but we'll use Blockly which uses visual blocks that you drag and drop to write programs. Under the hood, you're still creating code. To start off, we're going to build code for a program that will help this Angry Bird move through a maze to get to the evil pigs that stole its eggs."
+        text: "Habituellement la programmation est faite en texte, mais nous allons utiliser Blockly qui utilise des blocs visuels que tu glisses et déposes pour écrire des programmes. Sous le capot, tu crées toujours du code. Pour commencer, nous allons créér du code pour un programme qui aidera Angry Bird à se déplacer dans un labyrinthe pour se rendre jusqu'aux porcs maléfiques qui ont volé ses œufs."
       2:
         image: notes/C2_maze_intro_2.png
-        text: "Blockly is split into three main parts. On the left is the bird's maze, where your program will run. The instructions for each level are written below the maze. This middle area is the toolbox and each of these blocks is a command that the bird can understand. The white space on the right is called the workspace and this is where we'll build our program."
+        text: "Blockly est divisé en trois parties principales. Sur la gauche se trouve le labyrinthe de l'oiseau, où ton programme va s'exécuter. Les consignes pour chaque puzzle sont écrites sous le labyrinthe. Cette zone centrale est la boîte à outils et chacun de ces blocs est une commande que l'oiseau peut comprendre. L'espace blanc sur la droite est appelé l'espace de travail et c'est là où nous allons construire notre programme."
       3:
         image: notes/C2_maze_intro_3.png
-        text: 'If I drag the move block to our work space and press "Run", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program.'
+        text: |-
+          Si je fais glisser le bloc "avancer plus" dans notre espace de travail et que je cliques sur "Démarrer", que se passe-t-il ? L'oiseau se déplace vers l'avant d'une case sur la grille. Et si je veux que l'oiseau fasse quelque chose après qu'il se soit déplacé d'un case vers l'avant ? Je peux ajouter un autre bloc à notre programme.
       4:
         image: notes/C2_maze_intro_4.png
         text: |-
-          I'm going to choose the "turn right" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press "Run" again,  the bird will perform the commands that are stacked from top to bottom on our work space.
+          Je vais choisir le bloc « tourner à droite » et je vais le faire glisser sous mon bloc "avancer plus" jusqu'à ce que la flèche jaune apparaisse. Puis je vais le déposer et les deux blocs vont s'emboîter. Lorsque j'appuie sur « Démarrer» à nouveau, l'oiseau va exécuter les commandes qui sont empilées de haut en bas sur notre espace de travail.
       5:
         image: notes/C2_maze_intro_5.png
-        text: "If you ever want to delete a block, just remove it from the stack and drag it to the trash can. After you've hit run, you can always hit the reset button to get the bird back to the start. Now let's get those pigs!"
+        text: |-
+          Si jamais tu veux supprimer un bloc, il te suffit de le retirer de la pile et de le glisser vers la poubelle. Après avoir cliqué sur "Démarrer", tu peux toujours cliquer sur le bouton "Réinitialiser" pour ramener l'oiseau au début. Maintenant, allons nous occuper de ces cochons !
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
-        text: This lesson is called Real Life Algorithms. Algorithms describe things that people do everyday. Cookie recipes and directions for building a birdhouse are both everyday algorithms.
+        text: |-
+          Cette leçon s'appelle "Les algorithmes dans le monde réel". Les algorithmes décrivent des choses que les gens font tous les jours. Recettes de biscuit et notices pour construire un abri à oiseaux sont tous deux des algorithmes de la vie de tous les jours.
       2:
         image: notes/C2_paper_airplanes_2.png
-        text: "Today we're gonna make, create, and test an algorithm for a paper airplane. But first, we need to break this big project into easy to follow small steps. For making a paper airplane, we need to decide what steps to take and in what order to take them."
+        text: "Aujourd'hui nous allons faire, créer et tester un algorithme pour un avion en papier. Mais tout d'abord, nous devons découper ce grand projet en petites étapes faciles à suivre. Pour faire un avion en papier, nous avons besoin de décider quelles sont les étapes à réaliser et dans quel ordre."
       3:
         image: notes/C2_paper_airplanes_3.png
-        text: "You'll create your algorithm by first cutting apart the pictures. Next, you'll select the 6 pictures that show the steps needed to make a paper airplane and arrange those pictures in the correct order. After you have everything in order, you will trade algorithms with another student team to test out the algorithm to see if the algorithm works. A well designed algorithm is super important to making the best paper airplane."
+        text: "Tu vas créer ton algorithme en en découpant les photos. Ensuite, tu vas sélectionner les 6 photos qui montrent les étapes nécessaires pour faire un avion en papier et organiser ces images dans le bon ordre. Lorsque tu as tout dans l'ordre, tu échangeras ton algorithme avec un autre élève pour tester l'algorithme pour voir s'il fonctionne. Un algorithme bien conçu est super important faire le meilleur avion de papier."
       4:
         image: notes/C2_paper_airplanes_4.png
-        text: "When we want to make chocolate, there are many big steps to that process. And each of those big steps has its own set of smaller steps. And there are different recipes, or algorithms, depending on how we want the chocolate to taste. Each step is important, even the small ones. So without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down, so no matter who does it, the result is the same."
+        text: "Lorsque l'on fait du chocolat, il y a plusieurs étapes importantes dans le processus. Et chacune de ces grandes étapes a son lot de petites étapes. Et il y a différentes recettes, ou algorithmes, en fonction du goût que nous voulons donner au chocolat. Chaque étape est importante, même la plus petite. C'est pourquoi, si une seule étape manque, les autres ne peuvent fonctionner. Il est vraiment important de créer des algorithmes que d'autres peuvent comprendre. C'est pourquoi chaque étape doit être écrite, de façon à ce que le résultat soit le même quelque soit la personne qui le crée."
     C2_playlab_createastory:
       1:
         image: notes/C2_playlab_createastory_1.png
@@ -803,111 +812,118 @@ fr:
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
-        text: "Today we're going to do relay programming. It's all about programming under pressure and debugging the mistakes that sometimes happen when you work really quickly or in teams. We'll use graph paper programming to simulate coding, and use relay races to simulate having a deadline."
+        text: "Aujourd'hui, nous allons faire de la programmation en relais. Il s'agit de programmer sous pression et de déboguer les erreurs qui se produisent parfois lorsque on travaille très rapidement ou en équipes. Nous utiliserons la programmation sur papier quadrillé pour simuler le codage, et des courses en relais pour simuler un temps limite."
       2:
         image: notes/C2_relay_programming_2.png
-        text: "In relay programming, teams will be racing to finish a graph paper program. You have to check your teammate's work, or debug it, fix it if there's a mistake, add your arrow, and run back and tag your teammate."
+        text: "Avec la programmation en relais, les équipes feront la course pour terminer un programme sur papier quadrillé. Tu devras vérifier le travail de ton coéquipier, ou le déboguer, le réparer s'il y a une erreur, ajouter ta flèche et exécuter en arrière et marquer votre coéquipier."
       3:
         image: notes/C2_relay_programming_3.png
-        text: Programmers use debugging a lot to find and fix problems in their algorithms or code. There are lots of ways to debug problems. One of the easiest is to move step by step until you find where something goes wrong, then fix it.
+        text: "Les programmeurs utilisent beaucoup le débogage pour rechercher et résoudre des problèmes dans leurs algorithmes ou leur code. Il y a beaucoup de façons de déboguer des problèmes. L'une des plus facile est d'avancer pas à pas jusqu'à ce que tu trouves où il y a un problème, puis de le corriger."
       4:
         image: notes/C2_relay_programming_4.png
-        text: "Here, I'm trying to do a back handspring, but I keep falling off. I walk through each part, step by step, and realize where my mistake was. My coach showed me I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position, and I stuck it! I was really glad I debugged my back  handspring. We figured it out! Debugging is finding and fixing problems. Nice, good job!"
+        text: "Ici, j'essaie de faire un saut arrière sur la poutre, mais je n'arrête pas de tomber. Je suis repassé sur chaque étape pas à pas et j'ai réalisé où était mon erreur. Je ne positionnais pas mes mains correctement sur la poutre. Alors j'ai essayé un autre salto arrière sur la poutre avec ma nouvelle position pour les mains et j'ai réussi. J'étais vraiment contente d'avoir débogué mon salto arrière. On a trouvé ! Déboguer, c'est trouver et résoudre des problèmes. Joli, bon travail !"
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
-        text: "One thing that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots of times in a row. But a computer can do the same thing millions or even billions of times, and not get bored and be able to carry that out really well."
+        text: "Les ordinateurs sont vraiment doués pour répéter des actions. En tant que personne, tu t'ennuierais beaucoup si tu devais faire la même chose beaucoup de fois d'affilée. Mais un ordinateur peut faire la même chose des millions ou même des milliards de fois sans s'ennuyer et réussir à le faire très bien."
       2:
         image: notes/C2_zuck_repeat_loop_2.png
-        text: "So for example if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than a century to actually write out all of those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday. So that's what loops are, and why they're valuable, and something that computers can do very well."
+        text: "Ainsi, par exemple, si je voulais souhaiter à tout le monde sur Facebook un joyeux anniversaire en leur envoyant un email, cela pourrait me prendre plus d'un siècle pour écrire tous ces mails à tout le monde. Mais avec seulement quelques lignes de code, je peux avoir un système pour envoyer un email à tout le monde sur Facebook pour leur souhaiter un joyeux anniversaire. Voilà donc ce que sont les boucles, pourquoi elles sont utiles et c'est quelque chose que les ordinateurs font très bien."
       3:
         image: notes/C2_zuck_repeat_loop_3.png
-        text: |-
-          In this example your goal is going to be to move the bird to get the pig.  Now we're gonna be able to use the "repeat" block in order to be able to do this very easily. You can either do this by giving the computer a "move forward" command five times in order to advance the bird one step each time to the pig.
+        text: "Dans cet exemple, ton but va être de déplacer l'oiseau pour attraper le cochon. Maintenant, nous allons être en mesure d'utiliser le bloc « Répéter » et donc déplacer l'oiseau très facilement. Tu peux aussi le faire en donnant à l'ordinateur la commande « avancer plus » cinq fois afin de faire avancer l'oiseau case par case vers le cochon."
       4:
         image: notes/C2_zuck_repeat_loop_4.png
-        text: 'Or you can just tell the computer to "move forward" once, and then tell it to "repeat" that 5 times, and it will do the same thing. So in order to do this you drag your "move forward" command, and then you put it inside the "repeat" block.And you can click on it and tell it how many times you want to repeat the block to tell it how many steps you want it to take forward.'
+        text: |-
+          Ou tu peux juste dire à l'ordinateur d'« avancer plus » une fois et puis lui dire de « répéter » cela 5 fois, et le résultat sera le même. Pour ce faire, tu fais glisser ta commande "avancer plus", et puis tu le mets dans le bloc « répéter ». Ensuite tu peux cliquer dessus et lui dire combien de fois tu veux répéter le bloc pour lui dire combien d'étapes tu veux le faire avancer.
       5:
         image: notes/C2_zuck_repeat_loop_5.png
         text: |-
-          Now one more thing is you can put as many commands as you want inside the "repeat" block. So in this example you're telling it to move forward and turn left, which it will do five times. All right good job and have fun!
+          Maintenant une dernière chose : tu peux mettre autant de commandes que tu le souhaites à l'intérieur du bloc « répéter ». Donc dans cet exemple, tu dis d'"avancer plus" et de tourner à gauche, ce qu'il fera cinq fois. Allez, bon travail et amuse-toi bien !
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: "One of the great things in computer programming is once you've taught a computer how to do an action, you can call that function again. You give it a name and then you can call it. That's really like extending the language."
+        text: "Une des choses géniales dans la programmation informatique est qu'une fois qu'on a appris à un ordinateur comment faire une action, vous pouvez appeler cette fonction à nouveau. Vous lui donnez un nom puis vous pouvez l'appeler. C'est vraiment comme si on pouvait agrandir le langage."
       2:
         image: notes/C3_artist_functions_2.png
-        text: "In the program we built, we learned how to draw a square by moving and turning four times. We can take that function and give it a name, draw a square, so that any time we want to do that, we simply say draw a square and it will go back and invoke that function, that code. It will get done for us. We've added that concept to our programming language."
+        text: |-
+          Dans le programme que nous avons construit, nous avons appris comment tracer un carré en se déplaçant et en tournant quatre fois. Nous pouvons créer cette fonction et lui donner un nom, comme "dessiner un carré", ainsi à chaque fois que nous voulons le faire, nous avons juste à dire "dessiner un carré", l'ordinateur va revenir en arrière pour appeler la fonction et donc son code. Il le fera pour nous. Nous avons ajouté ce concept dans notre langage de programmation.
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
-        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+        text: "Tu ne serais même pas qualifié pour la course si tu n'avais pas les gens qui sont compétents en informatique en raison de la quantité de données collectées par les voitures et la nécessité d'être en mesure d'avoir des gens capable d'écrire des programmes pour savoir comment continuer à être performant."
       2:
         image: notes/C3_artist_intro_2.png
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: Dans ces puzzles, tu seras un artiste qui utilise un crayon pour dessiner différentes formes. Partout où ton artiste va, elle dessine une ligne derrière elle.
       3:
         image: notes/C3_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: |-
+          Pour te déplacer sur la zone de dessin, tu vas utiliser le bloc "avancer plus". Ici le bloc "avancer plus" signifie un déplacement vers l'avant de 100 pixels. Que se passe-t-il lorsque l'on appuie sur "Démarrer" ? L'artiste avance un certaine distance et cette distance est de 100 pixels. Les pixels sont simplement de très petits carrés sur l'écran de votre ordinateur.
       4:
         image: notes/C3_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
+        text: |-
+          L'autre bloc que nous avons dans ce puzzle est "tourner à droite de 90 degrés". Et quand nous l'utilisons, cela fait tourner notre Artiste d'un certain angle. Tu peux donc jouer cet angle selon la rotation souhaitée pour l'Artiste. Il s'agit d'un virage à 90 degrés.
       5:
         image: notes/C3_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+        text: "Et il s'agit d'un virage de 120 degrés. Et n'oublie pas, tu peux modifier ces valeurs en cliquant sur les flèches à côté du nombre de pixels et de degrés. Amuses toi bien à dessiner avec ton artiste !"
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: "When you put a loop inside of another loop, we call that a nested loop. For example, here we're given the code already to draw one triangle with sides of length 100 pixels using the repeat times block set to three, once for each side of a triangle."
+        text: "Quand tu mets une boucle à l'intérieur d'une autre boucle, on appelle cela une boucle imbriquée. Par exemple, ici, nous avons déjà le code pour dessiner un triangle de 100 pixels de côtés en utilisant le bloc de répétition calé sur trois, une fois pour chaque côté du triangle."
       2:
         image: notes/C3_artist_nested_loops_2.png
-        text: "But we want to draw six triangles. In order to do that, we're going to take that loop and place it inside of another repeat times block. Pretty cool!"
+        text: Mais nous voulons dessiner six triangles. Pour faire cela, nous allons prendre cette boucle et la placer dans un autre bloc de répétition. Plutôt cool!
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that is less than, equal to or greater than a number, THEN do something.
+        text: "Il s'agit du bloc conditionnel. Il dit que SI il y a du nectar ou du miel qui est inférieur, égal ou supérieur à un certain nombre, ALORS faire quelque chose."
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+        text: "Cela est utile lorsque nous ne savons pas combien de nectar ou miel est à obtenir, comme nous le voyons ici avec ce point d'interrogation."
       3:
         image: notes/C3_bee_conditionals_3.png
-        text: "In this example, we're going to say IF the purple flower has nectar greater than 0, get nectar. That will tell our bee to keep getting nectar as long as it's there. Ta-dah!"
+        text: "Dans cet exemple, nous allons dire SI la fleur pourpre a du nectar supérieur à 0, prendre du nectar. Ce qui dira à notre abeille de continuer à prendre du nectar tant qu'il y en a. Tadam !"
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: "As-tu déjà entendu parler de débogage de programme ? Il s'agit d'un moyen pour comprendre ce qui ne fonctionne pas. Lorsque tu débogues du code, tu identifies et supprimes les erreurs."
       2:
         image: notes/C3_debugging_bee_2.png
-        text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
+        text: |-
+          Ici, tu démarres avec quelques blocs déjà positionnés dans l'espace de travail. Nous allons utiliser le bouton "Étape" pour parcourir les blocs, pas à pas, pour voir si c'est la bonne solution et où nous devrions corriger.
       3:
         image: notes/C3_debugging_bee_3.png
-        text: "Looks like there's our problem! We need one more move forward block. The step button helps us debug our problem by identifying where the error is so we can fix it."
+        text: |-
+          On dirait que notre problème est là ! Nous avons besoin d'un bloc "avancer plus" supplémentaire. Le bouton "Étape" nous aide à déboguer notre problème en identifiant où est l'erreur et ainsi corriger.
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
-        text: One of the most important concepts in computer science is how to define new commands, how to add your own words to a computer language. Most computer languages have only about one hundred words or commands. The art and magic is in defining your own new words out of these building blocks.
+        text: "Un des concept les plus importants en informatique est la façon de créer de nouvelle commandes, comment ajouter vos propres mots dans un langage informatique. La plupart des langages informatiques ont seulement une centaine de mots ou de commandes. L'art et la magie sont dans la définition de vos propres nouveaux mots de ces blocs de construction."
       2:
         image: notes/C3_bee_functions_2.png
-        text: "We do this all the time in sports. For example, in basketball, you start by learning how to dribble, how to do a lay-up, how to rebound. Once you've learned these really basic moves, you learn new moves and put together these building blocks, like a pick and roll or give and go. You can then go from there to do more complex plays. Once you learn that play and give it a name, everybody on the team knows how to do it."
+        text: |-
+          On fait ça tout le temps en sport. Par exemple, au basketball, tu commences par apprendre à dribbler, à faire un double-pas, à faire des rebonds. Une fois que tu as appris ces gestes de base, tu apprends de nouveaux mouvements et tu assembles ces éléments, comme pour un "pick and roll" ou un "give and go". A partir de là tu peux ensuite faire des enchaînements plus complexes. Une fois que tu as appris cet enchaînement et que tu lui donne un nom, chaque membre de l'équipe saura comment le faire.
       3:
         image: notes/C3_bee_functions_3.png
-        text: "Similarly once you've taught a computer how to do an action once using these sequences of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function. Now we're going to use functions to help the bee."
+        text: "De la même manière, une fois que tu as appris à un ordinateur comment faire une action une fois en utilisant ces successions de commandes, tu peux inventer ton propre nom pour cette action afin qu'il soit facile de la répéter plus tard. Quand tu définis ta propre commande et que tu lui donnes un nom, on appelle cela une fonction. A présent nous allons utiliser les fonctions pour aider l'abeille."
       4:
         image: notes/C3_bee_functions_4.png
-        text: "In this example, our function is called get 2 nectar, this green block right here. We know what get 2 nectar does by looking at this grey box which is the function definition. If we look inside there, the get 2 nectar is going to get nectar and then get nectar again. Always look at what's inside the grey box so that you know what these green function blocks can do."
+        text: |-
+          Dans cet exemple, notre fonction s'appelle "obtenir 2 nectars", ce bloc vert juste ici. Nous savons ce que "obtenir 2 nectars" fait en regardant cette boite grise qui est la définition de la fonction. Si on regarde à l'intérieur, "obtenir 2 nectars" consistera à obtenir un nectar et ensuite obtenir à nouveau du nectar. Il faut toujours regarder ce qu'il y a dans la boite grise pour savoir ce que ces blocs de fonction verts peuvent faire.
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: "Now we're going to use nested loops with the bee. We're given some starter code which tells the bee to move forward and get nectar three times and then turn right. Let's take that whole piece of code and nest it inside another repeat block and set to repeat three times. Done!"
+        text: "Maintenant nous allons utiliser les boucles imbriquées avec l'abeille. On nous donne un morceau de code pour démarrer, qui dit à l'abeille d'avancer, de récupérer du nectar trois fois, et ensuite de tourner à droite. Prenons ce morceau de code et mettons le dans un autre bloc répéter, et réglons le nombre de répétitions sur trois. Terminé !"
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: "You're going to be creating your very own bounce game that you'll be able to share with your friends! How cool!"
+        text: Tu vas maintenant créer ton propre jeu de casse-brique, que tu pourras partager avec tes amis. Tellement génial !
       2:
         image: notes/C3_bounce_2.png
-        text: To get started, we have to link up the paddle controls to the arrow keys on our keyboard.
+        text: Pour démarrer, nous devons lier les commandes de la palette aux touches fléchées de notre clavier.
       3:
         image: notes/C3_bounce_3.png
-        text: "We can do this by linking the when left arrow block to the move left block and the when right arrow block to the move right block. Give it a go and you'll be programming your own bounce game in no time!"
+        text: 'Nous pouvons le faire en liant le bloc "quand flèche à gauche" au bloc "déplacer vers la gauche", et le bloc "quand flèche à droite" au bloc "déplacer vers la droite". Fais un essai et tu vas programme ton propre jeu de casse-brique en moins de deux !'
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
@@ -1030,3 +1046,682 @@ fr:
       3:
         image: notes/C3_songwriting_with_parameters_3.png
         text: "In this lesson, you'll learn a silly little song called little bunny foo foo. The song has a chorus that you will sing several times over and over again. A function is a piece of code that you can call and use over and over again. It makes programming easier and more efficient so you don't have to write out the steps of your function over and over again. You can just write it once!"
+    C4_bee_conditional:
+      1:
+        image: notes/C4_bee_conditional_1.png
+        text: "This is the conditional block. It says if you're at the flower or the honeycomb, then do something. This is useful when we don't know how much honey or nectar to get as we see here with this question mark."
+      2:
+        image: notes/C4_bee_conditional_2.png
+        text: "In this example, we're going to say, if it's a flower, get all the nectar and then use another one to say, if it's a honeycomb, make honey. Ta-dah!"
+    C4_conditionals:
+      1:
+        image: notes/C4_conditionals_1.png
+        text: "We have a new block that's called the if/else block. It's a conditional statement just like the if block you've used in the puzzles before. But now there's a new part at the bottom that says else. The if/else block lets the bee make a decision between two sets of actions. If the bee is at a flower, the bee will do the set of actions you put in the first part where it says do. If the bee is not at a flower, the bee will do the set of actions you put in the slot where it says else."
+      2:
+        image: notes/C4_conditionals_2.png
+        text: "If statements are how computers are able to make decisions. Humans set up conditions for the computer that say if the computer is presented with a certain situation do this. Else, which just means otherwise, do that. The top of our if/else block says if at flower. But the top of our block could say other things, like if nectar equals 2 or if there's a path ahead, our block will behave in the same way. That if the statement at the top is true it will do the first set of actions. But if the statement at the top is false, it will do the second set of actions."
+    C4_for_loops:
+      1:
+        image: notes/C4_for_loops_1.png
+        text: "When you use a repeat block to loop your code, how does the computer know when it's repeated enough times? The repeat block is actually hiding a more sophisticated piece of code called a for loop which counts from a starting value up to an ending value by a specific increment."
+      2:
+        image: notes/C4_for_loops_2.png
+        text: For example, a repeat three block counts from 1 to 3 by 1. Every time it counts, it runs the code inside the loop. The for loop knows how many times it has run by using a counter variable which is set to the starting value at the beginning of the loop and has the increment added to it each time the loop is run. As soon as the counter variable is greater than the ending value, the loop stops running.
+      3:
+        image: notes/C4_for_loops_3.png
+        text: "The benefit of using a real for loop instead of the repeat block is that you can actually see the counter variable and use it in your loop. For example, if I have a series of flowers and the first one has one nectar, the second one has two nectars and the third one has three, I can use the for loop to tell the bee to collect 'counter' nectars each time, which would one at the first flower, two at the second and three at the third."
+      4:
+        image: notes/C4_for_loops_4.png
+        text: Also in a for loop, you can increment the counter by a number other than one each time. You can potentially count by 2s, 4s or even an amount that changes every time through.
+    C4_for_loops_bee:
+      1:
+        image: notes/C4_for_loops_bee_1.png
+        text: "When you use a repeat block to loop your code, how does the computer know when it's repeated enough times? The repeat block is actually hiding a more sophisticated piece of code called a for loop which counts from a starting value up to an ending value by a specific increment."
+      2:
+        image: notes/C4_for_loops_bee_2.png
+        text: For example, a repeat three block counts from 1 to 3 by 1. Every time it counts, it runs the code inside the loop. The for loop knows how many times it has run by using a counter variable which is set to the starting value at the beginning of the loop and has the increment added to it each time the loop is run. As soon as the counter variable is greater than the ending value, the loop stops running.
+      3:
+        image: notes/C4_for_loops_bee_3.png
+        text: "The benefit of using a real for loop instead of the repeat block is that you can actually see the counter variable and use it in your loop. For example, if I have a series of flowers and the first one has one nectar, the second one has two nectars and the third one has three, I can use the for loop to tell the bee to collect 'counter' nectars each time, which would one at the first flower, two at the second and three at the third."
+      4:
+        image: notes/C4_for_loops_bee_4.png
+        text: Also in a for loop, you can increment the counter by a number other than one each time. You can potentially count by 2s, 4s or even an amount that changes every time through.
+    C4_for_loops_no_bee:
+      1:
+        image: notes/C4_for_loops_no_bee_1.png
+        text: "When you use a repeat block to loop your code, how does the computer know when it's repeated enough times? The repeat block is actually hiding a more sophisticated piece of code called a for loop which counts from a starting value up to an ending value by a specific increment."
+      2:
+        image: notes/C4_for_loops_no_bee_2.png
+        text: For example, a repeat three block counts from 1 to 3 by 1. Every time it counts, it runs the code inside the loop. The for loop knows how many times it has run by using a counter variable which is set to the starting value at the beginning of the loop and has the increment added to it each time the loop is run. As soon as the counter variable is greater than the ending value, the loop stops running. The benefit of using a real for loop instead of the repeat block is that you can actually see the counter variable and use it in your loop.
+    C4_function_create:
+      1:
+        image: notes/C4_function_create_1.png
+        text: "Now that you've edited function blocks, it's time to create a new function block from scratch. It's really simple. You'll see the toolbox has a category called functions. If you click on this, you'll see an orange button called create a function. Clicking on this brings up the function editor that you've already used to edit existing function blocks."
+      2:
+        image: notes/C4_function_create_2.png
+        text: "Just like before, you started by naming your function, writing down a description for what the function is supposed to do. For instance, it's supposed to draw a square or draw a triangle and then drag blocks from the toolbox into the white work space below. Remember to drag these blocks inside the green wrapping block for the function."
+      3:
+        image: notes/C4_function_create_3.png
+        text: |-
+          Une fois terminé, clique sur enregistrer et quitter. Cette opération te ramène à l'espace de travail de puzzle principal. La nouvelle fonction que tu as créée apparaît comme un bloc vert dans la catégorie "fonction" de ta boîte à outils. Fais le glisser dans l'espace de travail principal et utilise-le comme n'importe quel autre bloc pour résoudre l'énigme.
+    C4_function_edit:
+      1:
+        image: notes/C4_function_edit_1.png
+        text: "Une des choses géniales dans la programmation informatique est qu'une fois qu'on a appris à un ordinateur comment faire une action, vous pouvez appeler cette fonction à nouveau. Vous lui donnez un nom puis vous pouvez l'appeler. C'est vraiment comme si on pouvait agrandir le langage."
+      2:
+        image: notes/C4_function_edit_2.png
+        text: "In the program we built, we learned how to draw a square by moving and turning four times. We can take that function and give it a name, draw a square so that any time we want to do that, we simply say draw a square and it will go back and invoke that function, that code and it will get done for us. We've added that concept to our programming language."
+      3:
+        image: notes/C4_function_edit_3.png
+        text: "In this puzzle, we have already created a draw a square function for you. You'll see it in the toolbox as a green block. What you'll need to do is write the same code you wrote before to draw a square and put it in this function. To do that, click on the edit option in the green draw a square block. This will open up the function editor. The function editor has three parts. A place where you name your function. This will appear on the green block before that function. Then write out a short description of what your function is supposed to do."
+      4:
+        image: notes/C4_function_edit_4.png
+        text: "In this case, it's supposed to draw a square. The white space below this is the work space and works just like the work space you've already been using. Drag and drop blocks from the toolbox into this work space. Remember to put the blocks that create a square inside the green wrapping block for the function. Once you're done, click on save and exit. This will take you back to the main puzzle work space. Now you can use the draw the square function block just like any other block to solve the puzzle."
+    C4_function_parameters:
+      1:
+        image: notes/C4_function_parameters_1.png
+        text: "Voila une fonction qui dessine des carrés de 50 pixels de côté. C'est bien, mais si en fait je veux dessiner un carré de 50 pixels de côté et un autre carré de 100 pixels de côté ? Nous ne devrions pas avoir a créer deux fonctions distinctes qui font presque la même chose. A la place, nous pouvons utiliser une seule fonction avec un paramètre."
+      2:
+        image: notes/C4_function_parameters_2.png
+        text: "Parameters allow us to pass values into a function that get used as variables inside the function. Let's try adding a parameter called like to this function so we can use it to create squares of different sizes. In the function editor, you can edit the name and description like before but now you can also add a parameter. Write the name of your parameter in the space and click Add Parameter. This will create a red block with the name of the parameter you just created. Now we can replace the move forward by 100 block with the parameter Length so it will move forward by Length."
+      3:
+        image: notes/C4_function_parameters_3.png
+        text: "Click save and close and drag out your new create a square block from the functions category in the toolbox. You'll notice there's an empty space next to length because the function wants to know what value the parameter Length should have. Drag a number block from the Math category and place it in this space. See how you can use the function again and again with different lengths to make squares of different sizes? Try it for yourself!"
+    C4_intro:
+      1:
+        image: notes/C4_intro_1.png
+        text: "Habituellement la programmation est faite en texte, mais nous allons utiliser Blockly qui utilise des blocs visuels que tu glisses et déposes pour écrire des programmes. Sous le capot, tu crées toujours du code. Pour commencer, nous allons créér du code pour un programme qui aidera Angry Bird à se déplacer dans un labyrinthe pour se rendre jusqu'aux porcs maléfiques qui ont volé ses œufs."
+      2:
+        image: notes/C4_intro_2.png
+        text: "Blockly est divisé en trois parties principales. Sur la gauche se trouve le labyrinthe de l'oiseau, où ton programme va s'exécuter. Les consignes pour chaque puzzle sont écrites sous le labyrinthe. Cette zone centrale est la boîte à outils et chacun de ces blocs est une commande que l'oiseau peut comprendre. L'espace blanc sur la droite est appelé l'espace de travail et c'est là où nous allons construire notre programme."
+      3:
+        image: notes/C4_intro_3.png
+        text: |-
+          Si je fais glisser le bloc "avancer plus" dans notre espace de travail et que je cliques sur "Démarrer", que se passe-t-il ? L'oiseau se déplace vers l'avant d'une case sur la grille. Et si je veux que l'oiseau fasse quelque chose après qu'il se soit déplacé d'un case vers l'avant ? Je peux ajouter un autre bloc à notre programme.
+      4:
+        image: notes/C4_intro_4.png
+        text: |-
+          I'm going to choose the "turn right" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press "run" again,  the bird will perform the commands that are stacked from top to bottom on our work space.
+      5:
+        image: notes/C4_intro_5.png
+        text: |-
+          Si jamais tu veux supprimer un bloc, il te suffit de le retirer de la pile et de le glisser vers la poubelle. Après avoir cliqué sur "Démarrer", tu peux toujours cliquer sur le bouton "Réinitialiser" pour ramener l'oiseau au début. Maintenant, allons nous occuper de ces cochons !
+    C4_math_artist:
+      1:
+        image: notes/C4_math_artist_1.png
+        text: "If I want to draw a rectangle 50 pixels tall and that is twice as wide as it is tall, how would I program the computer to do that? Well, I could tell the artist to go up fifty, turn right, and then go over 100 and move the whole thing twice. But then I'm doing the math for the computer."
+      2:
+        image: notes/C4_math_artist_2.png
+        text: Multiplying fifty by two in your head may not that hard but computers are really good at doing math so we should leave it to them whenever possible. If I just used a variable called height instead, then I could easily change height to fifty and then change my algorithm to tell the artist to go up by height, turn right and then go over by height times 2, which gives us a rectangle that is twice as wide as it is tall.
+    C4_unplugged_algorithms:
+      1:
+        image: notes/C4_unplugged_algorithms_1.png
+        text: "This lesson is called Tangram Algorithms. A tangram is a puzzle with seven pieces that can be put together to make other shapes. You'll be using an algorithm to explain to your partner how to put the puzzle together."
+      2:
+        image: notes/C4_unplugged_algorithms_2.png
+        text: An algorithm is just a of list steps that you can take to complete a task. We use them every day with things like shopping lists and recipes. If you keep an algorithm simple, there are lots of ways to interpret it and whoever performs that algorithm might not get exactly what you wanted. If you want to make sure that everyone ends up with the exact same thing, then your algorithm will need to be detailed and very specific.
+      3:
+        image: notes/C4_unplugged_algorithms_3.png
+        text: "I'm using an algorithm today to complete a painting. I wanted to try doing a painting of some wolves but I'm not the most amazing painter. Luckily for people by me, there is paint by numbers. There are forty colors and it has little letters and numbers that tell you which color to paint each section. Paint by numbers tells me exactly what color to use and where."
+      4:
+        image: notes/C4_unplugged_algorithms_4.png
+        text: "It's very specific so I'm able to follow directions and the painting will come out looking awesome. It's a great algorithm. If the instructions weren't specific enough, my wolves wouldn't look as good. When you really want something to turn out exactly the way that you planned it, it's best to be extremely precise."
+    C4_unplugged_binary:
+      1:
+        image: notes/C4_unplugged_binary_1.png
+        text: "Each team, the person who's instructing that's the person who's holding the paper, has to figure out what their off symbol is going to be and what their on symbol is going to be. In binary, it's kind of like an alphabet with two letters. Like having A and B be your entire alphabet but you've got a 0 and a 1."
+      2:
+        image: notes/C4_unplugged_binary_2.png
+        text: "The most common way you use binary is in an if statement. It's a classic thing from programming. The program runs along and it says if something is true, then do this. Or it's not true and you do something else. What if you want to do something maybe a little more complicated. Instead an if statement, you want to work with something like an image or a sound in a computer."
+      3:
+        image: notes/C4_unplugged_binary_3.png
+        text: "A computer only knows binary but an image, it's not binary, it's not ones and zeros so how do you do that? Here's an example: You have this beautiful picture. Now a picture is basically a form of information. All information can be encoded in binary one way or another, you just have to figure out how to do it."
+      4:
+        image: notes/C4_unplugged_binary_4.png
+        text: "You imagine that we're going to put a grid over this panda bear and for each square, we're going to decide whether that square is more black or more white. And then we're going to color it that way. Now each cell on the grid is either black or white and then the black squares we say those are zeros (binary digit) and the white squares are ones, the other binary digit. At the end, you're left with just a bunch of ones and zeros. That's how you represent this image in binary."
+    C4_unplugged_forloops:
+      1:
+        image: notes/C4_unplugged_forloops_1.png
+        text: "This lesson is called for loop fun. In this lesson, we'll use a number line to play a dice game. Each player will roll three times to assign a starting value, a stopping value, and our interval. During each turn, we circle our starting value, and every value that is the same number of steps forward as our interval value. We stop circling when we get to our stopping value. The person with the highest score wins!"
+      2:
+        image: notes/C4_unplugged_forloops_2.png
+        text: "For loops can come in handy a lot of places and if you were to become a meteorologist, you would use for loops all the time. Hi, I'm Becky. I work at EverPower Renewables as a wind meteorologist. I forecast wind speeds for the Columbia River Gorge area where the company owns wind farms."
+      3:
+        image: notes/C4_unplugged_forloops_3.png
+        text: "We're trying to understand how much wind is going to be there so that we know how much power is going to be outputted. We give that information to real time energy traders. They buy and sell power based on how much power we tell them is going to be there in order to make sure the power grid is balanced, your lights stay on, and that we maximize the amount of energy we get out of our farms."
+      4:
+        image: notes/C4_unplugged_forloops_4.png
+        text: "We're at the national control center for EverPower Renewables here in Portland and this is where we have information coming in from all our farms across the country. Even the highest power computers today can't simulate the atmosphere everywhere. In computer forecasting models, we have what we call a grid. Each grid point is a latitude, longitude. We have to calculate the physics and try and figure out the wind speed, temperature,  pressure, that sort of thing."
+      5:
+        image: notes/C4_unplugged_forloops_5.png
+        text: "Since these are fairly big grids and we're doing this in a lot of points we're looping over these things millions and millions of times. Everything I do I'll use for loops. Here for example is a for loop right there. When you're forecasting wind, there's so many different parameters that go into it it would be impossible for a human to sit down and do all those calculations. There's so many different aspects to what's going to be affecting what's happening to the wind that we need a computer model in order to forecast it."
+    C4_unplugged_madlibs:
+      1:
+        image: notes/C4_unplugged_madlibs_1.png
+        text: "In this lesson, we'll be playing with some fill in the blank stories. You have a template that you can fill in to create similar stories that have very amusing differences."
+      2:
+        image: notes/C4_unplugged_madlibs_2.png
+        text: "In this lesson, we also learned how to make an abstracted template from two stories that have already been created. Abstraction is the art of removing differences and details so that you can see how one solution might work for many different problems. It's very helpful in computer science because it allows us to create functions that may be useful in several different situations."
+    C4_unplugged_parameters:
+      1:
+        image: notes/C4_unplugged_parameters_1.png
+        text: "This lesson is called songwriting with parameters. We're going to be writing some songs here. Sometimes the chorus is just a little bit different each time you sing it. Do you remember Old Macdonald Had a Farm? The chorus is slightly different for each animal. And on that farm, he had a cow, e-i-e-i-o. The small change in each chorus can be shown using something we call parameters."
+      2:
+        image: notes/C4_unplugged_parameters_2.png
+        text: Sometimes a function needs a parameter. A parameter is an extra piece of information you can pass to a function to customize it for a special need. When you make ice cream sundaes with your friends, you are using a process similar to parameters in a computer program.
+      3:
+        image: notes/C4_unplugged_parameters_3.png
+        text: "The disk of vanilla ice cream might be the same for every sundae but when you ask your friends which two toppings they'd like, you could get lots of different combinations. Topping is the function name but each type of topping is a parameter. Functions and parameters work together to make great computer programs and great sundaes too."
+    C4_unplugged_variables:
+      1:
+        image: notes/C4_unplugged_variables_1.png
+        text: "This lesson is called variables in envelopes. We're going to learn how we can build sentences when we're still missing pieces of information. Most of us are already familiar with the idea of filling in a blank. We do it when we're putting our name on our homework. Sometimes there's more than one word that needs to be filled out and in that case, we give that blank a label so that we know which piece of information goes where."
+      2:
+        image: notes/C4_unplugged_variables_2.png
+        text: Variables are placeholders for pieces of information that can change. By using a variable for the missing information, we can continue working on whatever we were doing and let someone else fill in the missing information later. In software, we use variables a lot. We use variables as placeholders for name, email address, and even username. That way we can let the program know where those details will appear after the user fills them in. We use variables all the time in our work.
+      3:
+        image: notes/C4_unplugged_variables_3.png
+        text: "Any time you need to store a piece of information for later, we use a variable. Let's say we need to count the number of times the user has tweeted. Every time that user tweets, we'll add one to that number and every time the user deletes a tweet, we'll decrease that number by one. Anytime we need to know how many times that user has tweeted, we'll just look at that variable."
+    C4_variables_artist:
+      1:
+        image: notes/C4_variables_artist_1.png
+        text: A variable is a container you can store a value in. When you use that variable in an algorithm, it opens up the container and looks at the value inside. This lets you write smarter algorithms that behave differently depending on the value stored in the variable.
+      2:
+        image: notes/C4_variables_artist_2.png
+        text: "For example, if you wanted to write an algorithm to say Happy birthday, you're turning 10! to my little brother, that's great now but when I run it next year I'd want it to say, Happy birthday, you're turning 11! I could create a variable called age to store my brother's age and write my algorithm to say Happy birthday, you're turning 'age' instead. Because variable can change, every year I can update the variable 'age' to equal 'age' plus 1."
+      3:
+        image: notes/C4_variables_artist_3.png
+        text: "In this puzzle, we're going to be using a variable that will set the length of the line our artist draws. Later on in our code, the move forward block will look at that length variable to see what value you've set it to."
+    C4_variables_playlab:
+      1:
+        image: notes/C4_variables_playlab_1.png
+        text: A variable is a container that you can store a value in. When you use that variable in an algorithm, it opens up the container and looks at the value inside. This lets you write smarter algorithms that behave differently depending on the value stored in the variable.
+      2:
+        image: notes/C4_variables_playlab_2.png
+        text: "Now you're going to try playlab where you are given different games and you can change the values of variables like speed, height, score, in order to change the game. You won't have to change the algorithm of the game to change how it plays, just the variable."
+      3:
+        image: notes/C4_variables_playlab_3.png
+        text: In my work for Kindle and on X-ray for books, we apply variables in many different ways. One way that you can use a variable is to store page numbers of a book. A user can increase and decrease the size of the font on a page. Based on the font size, the number of pages in the book can change. We can adjust it by storing the number of pages in the variable.
+    infinity_playlab_events:
+      1:
+        image: notes/infinity_playlab_events_1.png
+        text: "À présent, nous allons apprendre une chose que tous les programmeurs de jeu utilisent tous les jours. On appelle ça des événements. Un événement dit à ton programme d'écouter lorsque quelque chose se produit. Quand cette chose arrive, il effectue une action. Quelques exemples d'évènements sont l'écoute des clics de souris, une touche fléchée, ou un effleurement de l'écran."
+      2:
+        image: notes/infinity_playlab_events_2.png
+        text: |-
+          Here, we're going to make Baymax move up to touch Hiro and move down to touch Rapunzel when the player uses the up/down arrow keys or the up/down buttons. We'll use the when up arrow block and attach the move actor up block to it, so when the player presses the up arrow key, everything attached to the "when up arrow" block is run. We'll do the same thing to make Baymax move down. Step by step your game is getting more interactive.
+    infinity_playlab_intro:
+      1:
+        image: notes/infinity_playlab_intro_1.png
+        text: "So what grade are you in? Second. Tenth grade. First grade. I was in eighth grade when I learned to program. I got my first computer when I was in sixth grade. What gets me excited is being able to fix people's problems. You can express yourself, you can build things from an idea."
+      2:
+        image: notes/infinity_playlab_intro_2.png
+        text: "Computer science is the basis for a lot of the things that college students and professionals will do for the next twenty or thirty years. I like programming because I like helping people. I get the opportunity to build something that's gonna make people's lives easier. I think it's the closest thing we have to a superpower. Getting started is the most important part. I'm a beginner myself and I want you to learn with me."
+      3:
+        image: notes/infinity_playlab_intro_3.png
+        text: "I'm John Vechey, I'm one of the co-founders of PopCap Games. We make games like Plants vs. Zombies, Bejeweled, and Peggle. A lot about games isn't how perfect your code is, it's not how perfect your art is, it's about how does it feel and how much fun it is. You can only get that sense by trying it, by doing it, by learning and adapting and iterating your own skills of making games."
+      4:
+        image: notes/infinity_playlab_intro_4.png
+        text: "Do you have a favorite video game? Well, we're going to take one step towards creating games just like that using Play Lab. Good games have a story and every story has actors. Actors do things like speak, move, and interact with each other. Maybe even score points based on the rules of the game. Today we'll be learning how to do all these things, one by one, with Disney's characters like Anna, Elsa, Hiro, Baymax, and Rapunzel. We'll build a game from scratch that can be shared and played on a phone."
+      5:
+        image: notes/infinity_playlab_intro_5.png
+        text: "Ton écran est divisé en trois parties principales. Sur la gauche se trouve l'espace de jeu, où le programme s'exécutera. Les consignes pour chaque niveau sont écrites sous l'espace de jeu. Cette zone centrale est la boîte à outils et chacun de ces blocs est une portion de code. L'espace blanc à droite est appelé l'espace de travail et c'est là où nous allons construire notre programme."
+      6:
+        image: notes/infinity_playlab_intro_6.png
+        text: |-
+          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow outline, and then they'll snap together. In this first puzzle, Hiro is Actor 1 and Baymax is Actor 2. We need to move Hiro to get to Baymax by dragging the "move right" block out and linking it to the "when run" block. Once you have your blocks in place, hit the "Run" button to see what you've programmed.
+      7:
+        image: notes/infinity_playlab_intro_7.png
+        text: "Get started and by the end you'll be able to create your own game with these amazing actors that can interact, score points, throw microbots, cherries, saucepans, sparkles, and ice.. and vanish each other. It's all up to you!"
+    infinity_playlab_repeat_forever:
+      1:
+        image: notes/infinity_playlab_repeat_forever_1.png
+        text: "Can you imagine if you had to repeat something forever and ever? Hopefully you'll never have to because computers are really good at repeating things. This is the repeat forever block. Anything inside this block will happen forever in the game."
+      2:
+        image: notes/infinity_playlab_repeat_forever_2.png
+        text: "So if we wanted an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block. In this next puzzle, our goal is to help Anna walk up and down continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game."
+    tutorial_puzzle_challenge:
+      1:
+        image: notes/tutorial_puzzle_challenge_1.png
+        text: "What do you want to be when you grow up Olivia? An astronaut. Do you happen to know what a computer programmer is? Yeah um no. Ummm wait what? I'm not really sure how to explain it computer programming is pretty simple. It's a set of instructions like a recipe, you have to follow them step-by-step to get the end result you want."
+      2:
+        image: notes/tutorial_puzzle_challenge_2.png
+        text: "I can change the number of pixels, the length of the line, using this dropdown. How long was it again? You can see the instructions again by looking under the run button. Here I used the move forward block and I'm going to select 100 pixels. I can delete a block by dragging it into the toolbox or the trash can. Let's put it back."
+      3:
+        image: notes/tutorial_puzzle_challenge_3.png
+        text: "Run the code by pressing run. Well that didn't work! I'll press reset and figure out what's wrong. You can try a puzzle as many times as you'd like and skip puzzles and come back to them. Just make sure to try your best and don't give up. Let's add another move forward. That still didn't work. I can place a block between other blocks."
+      4:
+        image: notes/tutorial_puzzle_challenge_4.png
+        text: "Let's take a turn block and place it in between the move forwards. Turn left 45 degrees. Let's run it again. Reset, run, awesome! Here's another puzzle. Sometimes you are given starter code to complete. Here I need to add the appropriate lengths and degrees."
+      5:
+        image: notes/tutorial_puzzle_challenge_5.png
+        text: "You may sometimes accidentally trash the starter code. What do you do then? You can press clear puzzle and start all over again. I'm going to drag this number block into the different pixel areas. Select 100 for pixels, 45 for degrees and 100 for pixels again. Awesome! Here is the Code Studio bee. I need to move the bee to each flower and get nectar."
+      6:
+        image: notes/tutorial_puzzle_challenge_6.png
+        text: "The first flower is three blocks away so I need three move forwards. 1, 2, 3. Then a get nectar, then another get nectar. Well that didn't work! I'll place another move forward between the get nectars and run it again. Yay, it works! You just learned how to use the Code Studio artist and bee puzzles. Good luck on the Code Studio puzzle challenge."
+    unplug1:
+      1:
+        image: notes/unplug1_1.png
+        text: "What do you want to be when you grow up Olivia? Umm, an astronaut! Do you happen to know what a computer programmer is? Yeahh, umm, no. Umm, what what? I'm not really sure how to explain it. Computer programming is pretty simple. It's a set of instructions, like a recipe. You have to follow them step by step to get the end result you want."
+      2:
+        image: notes/unplug1_2.png
+        text: "Computer science is a way to impact the world. It can be music videos, it can be games, detect whether or not someone is related to someone else. Find you know, people's friends. You can do all sorts of other crazy things that actually save lives. You do have to have a drive I think. It is to me like a paintbrush. I think great programming is not all that dissimilar from great art."
+      3:
+        image: notes/unplug1_3.png
+        text: When I finally learned a little bit of programming, that blank wall resolved into a bunch of doors and you open them and of course then you find behind them is another hallway filled with a bunch of doors. Programming is fun and easy. You can do anything your mind wants to do. Finally you start to open enough doors the light comes in. To me a finished program is like a structure filled with light. All the corners are illuminated. The number of people that you can touch and interact with is something the world has never seen before.
+      4:
+        image: notes/unplug1_4.png
+        text: "Our first lesson in this series is all about what computer science is, what a computer scientist does and how you can be more responsible in your use of technology. It's a very important lesson but it is a little text-heavy. At the end, you get to make your very own customized encoding using your initials. It's a fun activity and it's very empowering because binary is one of those things that feels very technical but once you understand it, it's like you speak a secret language."
+    unplug2:
+      1:
+        image: notes/unplug2_1.png
+        text: The lesson on computational thinking is intended to teach you how to take a big difficult problem and break it down into several simpler problems. The goal of this lesson is to write a set of instructions that someone can follow to draw one of the monsters included in the lesson plan.
+      2:
+        image: notes/unplug2_2.png
+        text: "Students will break into groups to write instructions and then they'll switch them with another group that will have to draw the monster. Groups will write instructions using the four steps of computational thinking: decomposition, pattern location, abstraction and algorithms."
+      3:
+        image: notes/unplug2_3.png
+        text: "First groups will decompose the task which means make a game plan. Then they'll look for patterns between all the monsters in the catalog. When they come across differences between the monsters, they'll abstract or remove those details. For instance, one monster in the catalog has vegitas eyes and another has spritem eyes. But they both have eyes so we can write a line that says the monster has blank eyes."
+      4:
+        image: notes/unplug2_4.png
+        text: "So students will be able to write a set of instructions, called an algorithm, that list the monsters' parts with blanks for what the styles should be. This is the set of instructions they'll pass to other students to recreate their very own monster."
+    unplug3:
+      1:
+        image: notes/unplug3_1.png
+        text: In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing.
+      2:
+        image: notes/unplug3_2.png
+        text: 'In this activity, the only symbols you can use are these: move one square forward, one square backward, move one square up, move one square down, change to next color, and fill in your square with color. Once we have that coded up, we can hand it off to another person who can read the code and try and recreate the picture.'
+    unplug4:
+      1:
+        image: notes/unplug4_1.png
+        text: In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing.
+      2:
+        image: notes/unplug4_2.png
+        text: "In the second half of the activity, we ask students how many different ways they can fold a piece of paper to create sixteen identical rectangles. Then you'll discuss how multiple solutions can lead to the same end result and why some solutions are better in certain situations."
+    unplug5:
+      1:
+        image: notes/unplug5_1.png
+        text: In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing.
+      2:
+        image: notes/unplug5_2.png
+        text: "In the second half of the activity, we ask students how many different ways they can fold a piece of paper to create sixteen identical rectangles. Then you'll discuss how multiple solutions can lead to the same end result and why some solutions are better in certain situations."
+    unplug6:
+      1:
+        image: notes/unplug6_1.png
+        text: "This activity is called coding with cards and it's great for any age. Like you learned with the if statements in earlier lessons,  during Blockly, if statements have a piece about them you have to evaluate to find out if it's true or false. That's the conditional and it can be used in lots of different ways."
+      2:
+        image: notes/unplug6_2.png
+        text: We take advantage of that by creating programs on paper that you run using a random draw of playing cards. You might have an if statement that says something like if the card you draw is greater than 8, you get a point. Otherwise, your opponent gets a point. You can make it as simple or as complicated as you feel comfortable.
+    unplug7:
+      1:
+        image: notes/unplug7_1.png
+        text: "You know how when you look up the lyrics for a song and they define the chorus at the very beginning and then for the rest of the song, they just refer you back to the chorus? That's how you call a function."
+      2:
+        image: notes/unplug7_2.png
+        text: "In this lesson, we define the chorus at the beginning of our song and then we sing through our song and go back and we notice that the class doesn't sing the word chorus, they automatically go up to the top where we define the chorus and sing through that. We use that as a great introduction to how to understand what a program is doing when it defines and calls a function."
+      3:
+        image: notes/unplug7_3.png
+        text: "We use familiar songs including Old Macdonald to talk about how a chorus is called over and over and how sometimes a chorus can change. When you have a song like Old Macdonald, where certain words change, that's a great place to introduce the idea of parameters. Passing certain words through so that you can send extra information to your function. Once we're sure everybody gets it, you can take your own familiar songs and break them up yourself. See if you can figure it out together."
+    unplug8:
+      1:
+        image: notes/unplug8_1.png
+        text: Our lesson on abstraction uses the familiar concept of madlibs, where you basically insert a blank in a story that can be filled with lots of different words. We take that idea, challenge kids to come up with their own words for their own stories, and really explain the concept of abstraction.
+      2:
+        image: notes/unplug8_2.png
+        text: "It's all about functions and how you can have a function, like in Old Macdonald, where you have a structure for your chorus but you have something little that changes and you abstract out that little thing that changes and you can fill it in with your own word every time through. But sometimes you have three words that change and so you fill those in with three parameters, that's still pretty helpful."
+      3:
+        image: notes/unplug8_3.png
+        text: "You can have one function that handles lots of different problems. Lots of times people will write separate functions for all those problems, not realizing there's only one little difference. If they could just find a way to handle that one little difference, they could just reuse one function over and over again, instead of having 14 different functions."
+    unplug9:
+      1:
+        image: notes/unplug9_1.png
+        text: Relay programming is an extremely fun lesson that gets across way more than computer science. Sometimes everybody is getting a little bit antsy and you want to get them up on their feet. This is a great way to add some excitement to computer science.
+      2:
+        image: notes/unplug9_2.png
+        text: You break everyone up into two groups where they stand in a line and run relay style. The first person in each group runs to the other side of the room where you have a graph paper drawing and a blank piece of paper waiting for them. They write down the first step to creating that image, run back to their line, tag the next player who goes back up to write the next step.
+      3:
+        image: notes/unplug9_3.png
+        text: "This is a great way to get across the idea of debugging, needing to proofread your own work, and needing to check the work of the people done before you. You'll quickly understand how important it is that you be careful in your coding when a whole team is depending on you."
+    unplug10:
+      1:
+        image: notes/unplug10_1.png
+        text: "This activity explains in an easy-to-understand way how the internet works. We explain all the terminology you'll need in simple terms so that students can simulate transmitting messages, like an email."
+      2:
+        image: notes/unplug10_2.png
+        text: "Students will transmit messages while pretending to be one of three transmission methods. Wireless internet, DSL or fiber optic. The students who represent wi-fi will have to wear the message they're transmitting on their head because wifi is the most likely to drop some information."
+      3:
+        image: notes/unplug10_3.png
+        text: "The students pretending to be DSL or cable will carry the message on the back of their hand, where they're slightly less likely to drop information. And the students representing fiber optic will get to carry them with both hands. This activity is a great way to understand something that many of us use every day."
+    unplug11:
+      1:
+        image: notes/unplug11_1.png
+        text: "So now it's time to step back and take a birds eye view of everything you've done in these past nineteen lessons. This is a great time to call out to students that what they've just done is a huge achievement. They've learned more over these lessons than most adults know about computer science."
+      2:
+        image: notes/unplug11_2.png
+        text: "Discuss as a class or in small groups about their favorite lessons. Once you take a look back at everything you've learned, this is where your students' creativity can shine. Split them into groups and have them create an unplugged lesson of their own. Assign each group a key concept, like functions or algorithms and have lots of craft materials on hand for them to use. Have each group present their new unplugged activity or even set aside another day to do a few of the student created activities."
+      3:
+        image: notes/unplug11_3.png
+        text: "From everyone here at Code.org, we hope you've had a TON of fun during this course. And whether your dream is to create the best new app, use programming to help cure diseases, or you just want to be a stellar problem-solver, this course was the first step in achieving those dreams."
+    starwars_intro:
+      1:
+        image: notes/starwars_intro_1.JPG
+        text: "Bonjour, je suis Kathleen Kennedy, et je suis la productrice de Star Wars : Le Réveil de la Force. Aujourd'hui, tu travailleras avec une de nos stars, BB-8. BB-8 est un droïde sphérique. Tout ce qu'il fait et tous ses mouvements sont contrôlés par un logiciel. L'informatique a un impact sur tous les secteurs, du marketing à la santé en passant par le cinéma. En fait, des centaines d'ingénieurs informaticiens ont travaillé ensemble pour faire un film comme Le Réveil de la Force."
+      2:
+        image: notes/starwars_intro_2.JPG
+        text: "Bonjour je suis Rachel Rose, je suis ingénieur R&D senior chez ILM, et je dirige l'équipe d’animation et de développement de créatures. Dans Le Réveil de la Force, je suis chargée d'aider les artistes à développer des mouvements pour les parties du personnage qui bougent et qui permettent de rendre le personnage très crédible dans une galaxie très lointaine."
+      3:
+        image: notes/starwars_intro_3.JPG
+        text: "Dans l'heure qui vient, nous allons construire notre propre jeu Star Wars. Nous t'enseignerons les concepts de base de la programmation. Habituellement la programmation est textuelle, mais nous allons utiliser ici des blocs pour écrire des programmes en les glissant et en les déposant. Sous le capot, tu crées toujours code. Après avoir vu les bases avec des blocs, nous allons basculer vers du JavaScript, un des langages de programmation les plus populaires sur le web."
+      4:
+        image: notes/starwars_intro_4.JPG
+        text: "Pour commencer, nous allons travailler avec Rey pour programmer BB-8 pour qu'il marche et ramasse toutes les pièces de ferraille. Ton écran est divisé en trois parties. Sur la gauche se trouve l'espace de jeu Star Wars, où le code s'exécutera. Les instructions pour chaque niveau sont rédigées sous l'espace de jeu."
+      5:
+        image: notes/starwars_intro_5.JPG
+        text: La zone du milieu est la boîte à outils, et chacun de ces blocs est une action que BB-8 peut comprendre.
+      6:
+        image: notes/starwars_intro_6.JPG
+        text: "L'espace blanc à droite est appelé l'espace de travail et c'est là que nous allons construire notre programme."
+      7:
+        image: notes/starwars_intro_7.JPG
+        text: "Si je fais glisser le bloc moveLeft(); dans notre espace de travail et que je clique sur Démarrer, que se passe-t-il ? BB-8 se déplace à gauche d'un bloc sur la grille."
+      8:
+        image: notes/starwars_intro_8.JPG
+        text: "Et si je veux que BB-8 fasse quelque chose après le bloc moveLeft(); ? Je peux ajouter un autre bloc à notre programme. Je vais choisir le bloc moveUp(); et je vais le glisser sous mon bloc moveLeft(); jusqu'à voir la surbrillance. Puis je le lâche et les deux blocs s'assemblent."
+      9:
+        image: notes/starwars_intro_9.JPG
+        text: "Lorsque j'appuie de nouveau sur Démarrer, BB-8 exécute les commandes qui sont empilées de haut en bas dans notre espace de travail. Si jamais tu veux supprimer un bloc, il suffit de le retirer de la pile et de le glisser dans la boîte à outils."
+      10:
+        image: notes/starwars_intro_10.JPG
+        text: Après avoir cliqué sur Démarrer, tu peux toujours cliquer le bouton Réinitialiser pour faire revenir BB-8 au début. Et maintenant, en avant!
+    starwars_typing:
+      1:
+        image: notes/starwars_typing_1.JPG
+        text: "Dans les blocs que nous utilisons se trouvent des commandes JavaScript. JavaScript est le langage de programmation plus utilisé par les développeurs professionnels de nos jours. Les blocs sont une excellente façon de commencer l'apprentissage du code et, en fait, les meilleures universités comme Harvard et Berkeley commencent à enseigner de cette façon. Mais une fois que l'on a appris les bases, les ingénieurs écrivent du code en tapant parce que cela leur permet d'aller plus vite."
+      2:
+        image: notes/starwars_typing_2.JPG
+        text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try."
+      3:
+        image: notes/starwars_typing_3.JPG
+        text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.
+      4:
+        image: notes/starwars_typing_4.JPG
+        text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
+      5:
+        image: notes/starwars_typing_5.JPG
+        text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move."
+      6:
+        image: notes/starwars_typing_6.JPG
+        text: When you make an error on the line, the editor highlights it for you so that you can try changing your text to fix it.
+      7:
+        image: notes/starwars_typing_7.JPG
+        text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
+    starwars_events:
+      1:
+        image: notes/starwars_events_1.JPG
+        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+      2:
+        image: notes/starwars_events_2.JPG
+        text: Félicitations, tu as réussi ! Tu as programmé BB-8. Maintenant, je pense que nous sommes prêts pour quelque chose de plus difficile. Allons-y. Maintenant que tu as appris les rudiments de la programmation, nous retournons dans le temps pour construire ton propre jeu, mettant en vedette R2-D2 et C3PO.
+      3:
+        image: notes/starwars_events_3.JPG
+        text: "Pour faire un jeu, nous devons en apprendre plus sur quelque chose que les développeurs de jeu utilisent tous les jours: il s'agit des événements. Les évènements disent a ton programme d’écouter ou d’attendre que quelque chose arrive, et quand ça arrive, une action est exécutée."
+      4:
+        image: notes/starwars_events_4.JPG
+        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+      5:
+        image: notes/starwars_events_5.JPG
+        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+      6:
+        image: notes/starwars_events_6.JPG
+        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down."
+      7:
+        image: notes/starwars_events_7.JPG
+        text: "To do this, we'll use a command called whenUp(). When you drag the command out of the toolbox, you'll see that it starts and ends with a curly bracket instead of a semi-colon. This gives us space to put other commands in the middle. Every command that we place inside these brackets will run when the player presses the up arrow."
+      8:
+        image: notes/starwars_events_8.JPG
+        text: "We want R2-D2 to go up so let's put a goUp(); block inside the command. And we'll do the same thing to make R2-D2 go down."
+      9:
+        image: notes/starwars_events_9.JPG
+        text: Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen. Step by step, your game is getting more interactive.
+    starwars_congrats:
+      1:
+        image: notes/starwars_congrats_1.JPG
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+      2:
+        image: notes/starwars_congrats_2.JPG
+        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+      3:
+        image: notes/starwars_congrats_3.JPG
+        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+      4:
+        image: notes/starwars_congrats_4.JPG
+        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+      5:
+        image: notes/starwars_congrats_5.JPG
+        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+    starwars_blocks_intro:
+      1:
+        image: notes/starwars_blocks_intro_1.JPG
+        text: "Bonjour, je suis Kathleen Kennedy, et je suis la productrice de Star Wars : Le Réveil de la Force. Aujourd'hui, tu travailleras avec une de nos stars, BB-8. BB-8 est un droïde sphérique. Tout ce qu'il fait et tous ses mouvements sont contrôlés par un logiciel. L'informatique a un impact sur tous les secteurs, du marketing à la santé en passant par le cinéma. En fait, des centaines d'ingénieurs informaticiens ont travaillé ensemble pour faire un film comme Le Réveil de la Force."
+      2:
+        image: notes/starwars_blocks_intro_2.JPG
+        text: "Bonjour je suis Rachel Rose, je suis ingénieur R&D senior chez ILM, et je dirige l'équipe d’animation et de développement de créatures. Dans Le Réveil de la Force, je suis chargée d'aider les artistes à développer des mouvements pour les parties du personnage qui bougent et qui permettent de rendre le personnage très crédible dans une galaxie très lointaine."
+      3:
+        image: notes/starwars_blocks_intro_3.JPG
+        text: "Dans l'heure qui vient, nous allons construire notre propre jeu Star Wars. Nous t'enseignerons les concepts de base de la programmation. Habituellement la programmation est textuelle, mais nous allons utiliser ici des blocs pour écrire des programmes en les glissant et en les déposant. Pour commencer, nous allons travailler avec Rey pour programmer BB-8 pour qu'il marche collecte toutes les pièces de ferraille."
+      4:
+        image: notes/starwars_blocks_intro_4.JPG
+        text: "Ton écran est divisé en trois parties. Sur la gauche, on trouve l'espace de jeu Star Wars où ton code va s'exécuter. Les instructions pour chaque niveau sont écrites juste en dessous de cet espace de jeu."
+      5:
+        image: notes/starwars_blocks_intro_5.JPG
+        text: La zone du milieu est la boîte à outils, et chacun de ces blocs est une action que BB-8 peut comprendre.
+      6:
+        image: notes/starwars_blocks_intro_6.JPG
+        text: "L'espace blanc à droite est appelé l'espace de travail et c'est là que nous allons construire notre programme."
+      7:
+        image: notes/starwars_blocks_intro_7.JPG
+        text: |-
+          Si je fais glisser le bloc "déplacer vers la gauche" dans notre espace de travail et que je clique sur Démarrer, que se passe-t-il ? BB-8 se déplace à gauche d'un bloc sur la grille.
+      8:
+        image: notes/starwars_blocks_intro_8.JPG
+        text: |-
+          Et si je veux que BB-8 fasse quelque chose après le bloc "déplacer vers la gauche" ? Je peux ajouter un autre bloc à notre programme. Je vais choisir le bloc "déplacer vers le haut" et je vais le glisser sous mon bloc "déplacer vers la gauche" jusqu'à voir la surbrillance. Puis je le lâche et les deux blocs s'assemblent. Lorsque j'appuie de nouveau sur Démarrer, BB-8 exécute les commandes qui sont empilées de haut en bas dans notre espace de travail.
+      9:
+        image: notes/starwars_blocks_intro_9.JPG
+        text: Si jamais tu veux supprimer un bloc, il suffit de le retirer de la pile et de le faire glisser dans la boîte à outils.
+      10:
+        image: notes/starwars_blocks_intro_10.JPG
+        text: Après avoir cliqué sur Démarrer, tu peux toujours cliquer le bouton Réinitialiser pour faire revenir BB-8 au début. Et maintenant, en avant!
+    starwars_blocks_events:
+      1:
+        image: notes/starwars_blocks_events_1.JPG
+        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+      2:
+        image: notes/starwars_blocks_events_2.JPG
+        text: Félicitations, tu as réussi ! Tu as programmé BB-8. Maintenant, je pense que nous sommes prêts pour quelque chose de plus difficile. Allons-y. Maintenant que tu as appris les rudiments de la programmation, nous retournons dans le temps pour construire ton propre jeu, mettant en vedette R2-D2 et C3PO.
+      3:
+        image: notes/starwars_blocks_events_3.JPG
+        text: "Pour faire un jeu, nous devons en apprendre plus sur quelque chose que les développeurs de jeu utilisent tous les jours: il s'agit des événements. Les évènements disent a ton programme d’écouter ou d’attendre que quelque chose arrive, et quand ça arrive, une action est exécutée."
+      4:
+        image: notes/starwars_blocks_events_4.JPG
+        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+      5:
+        image: notes/starwars_blocks_events_5.JPG
+        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+      6:
+        image: notes/starwars_blocks_events_6.JPG
+        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
+      7:
+        image: notes/starwars_blocks_events_7.JPG
+        text: Étape par étape, ton jeu devient plus interactif.
+    starwars_blocks_congrats:
+      1:
+        image: notes/starwars_blocks_congrats_1.JPG
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+      2:
+        image: notes/starwars_blocks_congrats_2.JPG
+        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+      3:
+        image: notes/starwars_blocks_congrats_3.JPG
+        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+      4:
+        image: notes/starwars_blocks_congrats_4.JPG
+        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+      5:
+        image: notes/starwars_blocks_congrats_5.JPG
+        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+    mc_intro:
+      1:
+        image: notes/mc_intro_1.JPG
+        text: "Mon nom est Jens Bergensten, mais je suis plus connu sous le nom de Jeb. Je suis le principal développeur de Minecraft, chez Mojang, ici à Stockholm. Je pense que j'avais onze ans ou peut-être douze quand j'ai commencé à programmer parce que je voulais réaliser des jeux. Un ami de mon père m'avais dit que pour faire des jeux, il fallait savoir programmer. C'est ainsi que j'ai commencé. J'aime concevoir et comprendre l'architecture des jeux. C'est ce que j'apprécie le plus dans Minecraft."
+      2:
+        image: notes/mc_intro_2.JPG
+        text: "Pendant l'heure qui vient, tu vas apprendre les bases de l'informatique en programmant les mouvements de d'Alex et Steve dans une simulation d'un morceau du monde de Minecraft."
+      3:
+        image: notes/mc_intro_3.JPG
+        text: "La programmation se fait traditionnellement avec du texte, mais aujourd'hui nous allons utiliser Blockly, un système qui utilise des blocs visuels que tu peux glisser et déposer pour écrire des programmes. Dans les coulisses de ce système, tu vas en fait créer du code Javascript."
+      4:
+        image: notes/mc_intro_4.JPG
+        text: "Les concepts que tu vas apprendre sont ceux que les programmeurs utilisent chaque jour et sont les fondations de l'informatique. Chez Mojang, nous utilisons ces mêmes concepts pour faire fonctionner Minecraft."
+      5:
+        image: notes/mc_intro_5.JPG
+        text: "Avant de démarrer, tu vas choisir un personnage. Je vais choisir Alex. Elaborons le code d'un programme qui va l'aider à se déplacer dans l'écran."
+      6:
+        image: notes/mc_intro_6.JPG
+        text: "Ton écran est divisé en 3 parties principales. A gauche se trouve la zone de jeu Minecraft où ton programme va s'exécuter. Les instructions pour chaque niveau sont inscrites en dessous."
+      7:
+        image: notes/mc_intro_7.JPG
+        text: "Cette zone centrale est la boîte à outils et chacun de ces blocs est une commande qui dirige les actions d'Alex."
+      8:
+        image: notes/mc_intro_8.JPG
+        text: "La zone blanche à droite est l'espace de travail et c'est ici que nous allons construire notre programme."
+      9:
+        image: notes/mc_intro_9.JPG
+        text: "Si tu glisses le bloc moveForward(); (avancer plus) dans l'espace de travail et que tu cliques Démarrer, que se passe-t-il ? Alex avance d'un espace sur la grille."
+      10:
+        image: notes/mc_intro_10.JPG
+        text: "Et si nous voulons faire autre chose après son déplacement d'un espace ? Nous pouvons ajouter un nouveau bloc dans notre programme. Je vais choisir le bloc turnRight(); (tourner à droite) et je vais le glisser sous le bloc moveForward(); (avancer plus) jusqu'à ce que la ligne orange apparaisse. Ensuite je vais le déposer et les deux blocs vont s'attacher. Quand on appuie sur Démarrer à nouveau, Alex va exécuter les commandes qui sont empilées de haut en bas de l'espace de travail."
+      11:
+        image: notes/mc_intro_11.JPG
+        text: Si jamais tu veux détruire un bloc, glisse le de la pile vers la boîte à outils.
+      12:
+        image: notes/mc_intro_12.JPG
+        text: |-
+          Pour annuler tes changements et revenir à la situation de départ, utilise le bouton Recommencer dans le coin en haut à droite de l'espace de travail. Autre chose : tu vois le petit triangle sur les blocs "tourner". Chaque fois que tu vois un bloc comme celui-ci, cela signifie que tu peux choisir une option (un paramètre) différent. Commençons à coder !
+    mc_repeat:
+      1:
+        image: notes/mc_repeat_1.JPG
+        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
+      2:
+        image: notes/mc_repeat_2.JPG
+        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+      3:
+        image: notes/mc_repeat_3.JPG
+        text: The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops.
+      4:
+        image: notes/mc_repeat_4.JPG
+        text: "When building Minecraft, we use repeat loops to place all the initial materials for creating a new world. That's thousands and thousands of blocks. We also use loops in little ways, for example to make Alex's feet move back and forth as she walks. Repeat loops are a powerful part of programming."
+      5:
+        image: notes/mc_repeat_5.JPG
+        text: La nuit tombe, alors dans les prochains niveaux, nous allons construire une maison pour être en sécurité. Nous allons utiliser le bloc répéter pour faire ça très facilement.
+      6:
+        image: notes/mc_repeat_6.JPG
+        text: "Pour construire le mur de notre maison, nous pouvons soit dire à Alex d'avancer(); et placer des planches quatre fois, ou nous pouvons lui dire d'avancer(); et placer une planche, ensuite prendre cette commande et utiliser le bloc répéter pour qu'elle exécute l'action plusieurs fois. Maintenant, nous allons cliquer sur le bloc répéter et lui dire combien de fois nous voulons qu'il exécute cette action. Maintenant, construisons cette maison avant que la nuit tombe ! Amuse-toi bien."
+    mc_if_statements:
+      1:
+        image: notes/mc_if_statements_1.JPG
+        text: "Maintenant, nous allons apprendre les conditions si. Les conditions si sont fondamentales pour apprendre à programmer. Elles aident l'ordinateur à prendre des décisions."
+      2:
+        image: notes/mc_if_statements_2.JPG
+        text: |-
+          Tous les ordinateurs utilisent des conditions si, y compris mon téléphone. Par exemple, lorsque je déverrouille mon téléphone, cela lance un code qui dit : "si j'entre le mot de passe correctement, alors déverrouille le téléphone" . Sinon, cela affiche un message d'erreur.
+      3:
+        image: notes/mc_if_statements_3.JPG
+        text: |-
+          Tu peux utiliser les conditions "Si" dans ton code pour que Steve et Alice réagissent à ce qu'ils voient dans le monde. Par exemple, s'il y a un caillou devant eux, ils peuvent tourner à gauche. Ou à droite si ils se cognent à un arbre.
+      4:
+        image: notes/mc_if_statements_4.JPG
+        text: "In this case, we don't want to fall in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
+      5:
+        image: notes/mc_if_statements_5.JPG
+        text: "After we mine the stone, we'll need to check if there's any lava in that place before moving forward. If there is lava there, we want to place a stone in front of our character before we can move forward. That way we can safely move on. Time for more mining! And remember to use the if statement to watch your step."
+    mc_congrats_share:
+      1:
+        image: notes/mc_congrats_share_1.JPG
+        text: "Félicitations ! Tu viens juste d'apprendre les bases de l'informatique."
+      2:
+        image: notes/mc_congrats_share_2.JPG
+        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+      3:
+        image: notes/mc_congrats_share_3.JPG
+        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+      4:
+        image: notes/mc_congrats_share_4.JPG
+        text: 'Lorsque tu as terminé ta création, sélectionne "partager" pour obtenir un lien pour partager avec tes amis. Amuse-toi !'
+    mc_congrats_no_share:
+      1:
+        image: notes/mc_congrats_no_share_1.JPG
+        text: "Félicitations ! Tu viens juste d'apprendre les bases de l'informatique."
+      2:
+        image: notes/mc_congrats_no_share_2.JPG
+        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+      3:
+        image: notes/mc_congrats_no_share_3.JPG
+        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+      4:
+        image: notes/mc_congrats_no_share_4.JPG
+        text: Maintenant tu peux construire tout ce que tu veux. Amuse-toi !
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: "La zone blanche à droite est l'espace de travail et c'est ici que nous allons construire notre programme."
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

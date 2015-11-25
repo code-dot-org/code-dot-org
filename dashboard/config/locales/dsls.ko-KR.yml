@@ -360,7 +360,7 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
           500
         Maze Multiple Choice: 미로 퍼즐 객관식
-        Which blocks work?: 어떤 블럭들이 제대로 동작할까요?
+        Which blocks work?: 어떤 블록들이 제대로 동작할까요?
       2-3 Relay Programming Multi 1:
         /script_assets/2-3_images/unplugged/relay_programming_1_a1.png: /script_assets/2-3_images/unplugged/relay_programming_1_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_1_a2.png: /script_assets/2-3_images/unplugged/relay_programming_1_a2.png
@@ -857,7 +857,7 @@
           circle to code, the correct order is
         left top right: left top right
         left, right, top: left, right, top
-        random: random(랜덤)
+        random: 랜덤 번째 위치
         top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Fred Flintstone

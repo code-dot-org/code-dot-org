@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "אם יש דרך בכיוון שנבחר, בצע מספר פעולות."},
 "ifelseTooltip":function(d){return "אם יש דרך בכיוון שנבחר, אז בצע את המקבץ הראשון של פעולות. אחרת, בצע את המקבץ השני של פעולות."},
 "ifFlowerTooltip":function(d){return "אם יש פרח/כוורת בכיוון שנבחר,  בצע פעולות מסוימות."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "אם יש פרח בכיוון המסויים, אז תעשה כמה פעולות."},
 "ifelseFlowerTooltip":function(d){return "אם יש פרח/כוורת בכיוון שנבחר, בצע את הבלוק הראשון של הפעולות. אחרת, בצע את הבלוק השני של פעולות."},
 "insufficientHoney":function(d){return "אתה משתמש בכל הבלוקים הנכונים, אבל אתה צריך לייצר את הכמות הנכונה של דבש."},
 "insufficientNectar":function(d){return "אתה משתמש בכל הבלוקים הנכונים, אבל אתה צריך לאסוף את הכמות הנכונה של צוף."},

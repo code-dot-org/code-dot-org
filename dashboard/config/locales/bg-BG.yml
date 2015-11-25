@@ -260,6 +260,7 @@
         playlab: Направи приложение
         artist: Начертай нещо
         calculate: Calculate Something
+        applab: Направи приложение
     user:
       classroom: Начална страница на учителя
       district_dashboard: Областно табло
@@ -283,6 +284,8 @@
       prize_us_only: (Само за ученици от САЩ)
       prizes_link: повече информация
   teacher:
+    answer: Oтговор
+    for_teachers_only: За учители само
     title:
       one: 'Вашият учител:'
       other: 'Вашите учители:'
@@ -511,6 +514,7 @@
   pdf_download: Изтегляне на PDF
   download_coming_soon: Очаквайте скоро възможност за сваляне.
   video_coming_soon: Очаквайте скоро видео!
+  not_started: Ученикът не е опитвал това ниво.
   share_code:
     title: Щракнете върху бутона "Старт", за да видите моята програма в действие
     bounce_og_title: Вижте моята Bounce игра
@@ -561,10 +565,15 @@
         нашите потребители
     frozen:
       title: Frozen
+    starwars:
+      title: Междузвездни войни
     infinity:
       title: Infinity Игрална лаборатория
       body: Използвайте "Игрална лаборатория", за да създадете история или игра с
         участието на героите от Дисни Инфинити.
+    minecraft:
+      title: Minecraft
+      body: Изследвайте Minecraft света чрез код.
   gallery:
     students_drew_these_with_code: Учениците начертаха това с код!
     students_made_these_with_code: Учениците правят това с код!

@@ -2,8 +2,8 @@
   errors:
     messages:
       not_saved: 'Por favor corrije los siguientes errores:'
-      too_young: Este contenido tiene restricciones de edad y no está disponible para
-        los estudiantes más jóvenes
+      too_young: Este contenido tiene restricciones de edad y no esta disponible para
+        alumnos jóvenes
   activerecord:
     errors:
       messages:
@@ -12,8 +12,8 @@
       user:
         name: Nombre a mostrar
         email: Correo electrónico
-        username: nombre de usuario
-        password: contraseña
+        username: Nombre de usuario
+        password: Contraseña
         password_confirmation: Confirmación de la contraseña
         current_password: Contraseña actual
         locale: Idioma
@@ -111,7 +111,7 @@
   signin_form:
     title: ¿Ya tienes una cuenta? Inicia sesión
     login: Correo electrónico o nombre de usuario
-    password: contraseña
+    password: Contraseña
     remember: Recordarme
     submit: Iniciar Sesión
   signin:
@@ -269,6 +269,7 @@
         playlab: Hacer una aplicación
         artist: Dibujar algo
         calculate: Calculate Something
+        applab: Hacer una aplicación
     user:
       classroom: Página de inicio del maestro
       district_dashboard: Tablero de Distrito
@@ -293,6 +294,8 @@
       prize_us_only: (Sólo estudiantes de Estados Unidos)
       prizes_link: 'Más información '
   teacher:
+    answer: Respuesta
+    for_teachers_only: Sólo para profesores
     title:
       one: 'Tu profesor:'
       other: 'Tus maestros:'
@@ -314,8 +317,8 @@
       trophies: trofeos
     students:
       name: Nombre
-      username: nombre de usuario
-      password: contraseña
+      username: Nombre de usuario
+      password: Contraseña
       manage: Administrar los alumnos
       dashboard: Ir a el panel del maestro
       add: Añadir alumnos/as
@@ -365,9 +368,9 @@
       try_it_yourself: Inténtalo tu mismo
       section: Sección
       example: Solución de ejemplo
-      example_with_number: Example Solution %{solution_number}
-      submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
+      example_with_number: Solución de ejemplo %{solution_number}
+      submitted_on: Enviado a %{date}
+      unsubmit: No enviar
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
     email_confirm_needed_required: 'Tu dirección de email %{email} no ha sido confirmada:'
@@ -389,11 +392,10 @@
     classroom_activity: Actividad fuera de línea
   home:
     title: Mi progreso
-    description: Code Studio es la página principal de los cursos en línea creados
-      por Code.org
+    description: Code studio es hogar de los cursos en linea creados por Code.org
     lines_of_code: '%{lines_count} LÍNEAS DE CÓDIGO ESCRITAS POR ESTUDIANTES'
-    lines_of_code_linebreak: '%{lines_count} LÍNEAS DE CÓDIGO<br/>ESCRITAS POR %{students_count}
-      MILLONES DE ALUMNOS'
+    lines_of_code_linebreak: '%{lines_count} Lineas de código <br/> Escrito por %{students_count}
+      Un millon de estudiantes'
     all_courses: Resumen de los cursos 1, 2 y 3
     lesson_plans: Plan de estudio
     signin_message: ¿Ya estás registrado? %{link}
@@ -420,7 +422,7 @@
     local_school: escuela local
     online: en línea
     see_details: Ver detalles
-    view_course: Ver el curso
+    view_course: Ver curso
     prize_info: 'Premio por participación (solo maestros de escuelas públicas de Estados
       Unidos): hasta 1000 dólares en material escolar.'
     tryfirst: 'O, puedes probarlo primero y registrarte más adelante:'
@@ -441,12 +443,12 @@
     heading_legacy: <h2>Nuestro curso general para</h2><h1>Todas las edades</h1>
     your_gallery: Galeria
     no_primary_course: Inénta un curso en Code Studio
-    choose_next_course: Prueba un curso de Código Studio eligiendo uno a continuación
-    print_certificate: Imprimir Certificado
+    choose_next_course: Prueba un curso de Code Studio eligiendo uno a continuación
+    print_certificate: Imprimir ceritificado
   share:
-    title: Aprender en Código Studio
-    description: Cualquier persona puede aprender informática. Crear juegos, aplicaciones
-      y arte con código.
+    title: Aprende en Code Studio
+    description: Cualquiera puede aprender informática Haz juegos aplicaciones y arte
+      con código.
   gender:
     male: Varón
     female: Mujer
@@ -455,13 +457,13 @@
     student: estudiante
     teacher: Profesor
   footer:
-    thank_you: Agradecemos a nuestros <a href="https://code.org/about/donors">donantes</a>,
-      <a href="https://code.org/about/partners">aliados</a>, nuestro <a href="https://code.org/about/team">equipo
-      extendido</a> nuestro elenco de video y nuestros <a href="https://code.org/about/advisors">asesores
-      académicos</a> por su apoyo a la creación de Codigo Studio.
+    thank_you: Agradecemos a <a href="https://code.org/about/donors"> donadores </a>,
+      <a href="https://code.org/about/partners"> compañeros</a>, nuestro <a href="https://code.org/about/team">
+      extenso equipo </a>, nuestro elenco de video, y nuestro <a href="https://code.org/about/advisors">
+      asesores académicos </a> por su apoyo al crear Code Studio.
     help_from_html: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado
       a crear este tutorial.
-    help_from_html_old: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado
+    help_from_html_old: Ingenieros de Google, Microsoft, Facebook, y Twitter ayudaron
       a crear este material.
     art_from_html: Angry Brids&trade;&&copy; 2009-2013 Rovio Entertainment Ltd. Todos
       los derechos reservados. <br/>Plantas vs. Zombies&trade;&&copy; 2013 Electronic
@@ -471,7 +473,7 @@
       &amp; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, el logotipo de CODE
-      y hora de Codigo &reg; son marcas registradas de Code.org.'
+      y hora de Código &reg; son marcas registradas de Code.org.'
     copyright: Derechos de autor
     more: Más
     feedback: Enviar comentarios
@@ -482,7 +484,7 @@
     tos: Términos
     privacy: Política de Privacidad
     secure: Versión Segura
-    report_abuse: Report Abuse
+    report_abuse: Reportar uso indebido
   reference_area:
     title: ¿Necesitas ayuda?
     subtitle: Ver estos videos y sugerencias
@@ -524,6 +526,7 @@
   pdf_download: Descargar PDF
   download_coming_soon: Actividad descargable próximamente.
   video_coming_soon: Video próximamente!
+  not_started: El alumno no ha intentado este nivel.
   share_code:
     title: Haz clic en "Ejecutar" para ver el programa en acción
     bounce_og_title: Revisa mi juego Bounce
@@ -559,11 +562,11 @@
         tutorial de Código Flappy!
     20-hour:
       title: Curso acelerado
-      body: 'Este curso de 20 horas introduce el núcleo de la informática y conceptos
-        de programación. El curso está diseñado para su uso en aulas para los grados
-        K-8, pero es divertido aprender en todas las edades.  '
-      body_short: Aprende ciencias de la computación básicas con una versión acelerada
-        de los cursos 2-4.
+      body: Este curso de 20 horas cubre los conceptos básicos de programación y ciencias
+        de la computación de los cursos 2-4. El curso está diseñado para su uso con
+        estudiantes de 10-18 años de edad. ¡Para una experiencia más completa, revisa
+        los cursos 2 a 4!
+      body_short: Aprende informatica básica en version acelerada de cursos 2-4.
     hoc2014:
       try_new_tutorial: Prueba nuestro nuevo tutorial de la hora del código en beta
       try_frozen: Artista con Anna y Elsa de "Frozen"
@@ -572,11 +575,16 @@
       body: Ver una galería de aplicaciones y de imágenes de artistas creadas por
         nuestros usuarios
     frozen:
-      title: Frozen
+      title: Congelado
+    starwars:
+      title: Guerra de las Galaxias
     infinity:
       title: Laboratorio de Juego Infinity
-      body: Utilice el laboratorio de juegos para crear una historia o juego protagonizada
+      body: Utilice el laboratorio de juegos para crear una historia o juego protagonizados
         por personajes de Disney Infinity.
+    minecraft:
+      title: Minecraft
+      body: Explora un mundo de Minecraft a través de código.
   gallery:
     students_drew_these_with_code: ¡Los estudiantes dibujaron esto con código!
     students_made_these_with_code: ¡Los estudiantes hicieron éstos con código!
@@ -632,8 +640,8 @@
   dialog:
     ok: Aceptar
     startover_title: ¿Seguro que quieres empezar de nuevo?
-    startover_body: Esto reiniciará el rompecabeza a su estado inicial y reiniciara
-      todos los datos que hayas agregado o cambiado.
+    startover_body: Esto reiniciará el rompecabezas a su estado inicial, eliminando
+      todos los bloques que hayas agregado o cambiado.
     startover_ok: Volver a empezar
     startover_cancel: Cancelar
   time:
@@ -737,27 +745,30 @@
       tos: Este proyecto ha sido denunciado por violar los <a href='http://code.org/tos'>Términos
         de Uso</a> y no puede ser compartido con otros.
       contact_us: Si cree que esto es un error, por favor <a href='https://code.org/contact'>contáctenos.</a>
-      go_to_code_studio: Ve a Code Studio
+      go_to_code_studio: Ir a Code Studio
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: Si has encontrado contenido ofensivo, amenazas, acoso cibernético,
+          intimidación, o alguna instancia de infracción de derechos de autor sobre
+          contenido de tu pertenencia al utilizar alguna aplicación construida con
+          Code Studio, por favor llena el siguiente formulario. Tomaremos tu reporte
+          seriamente, investigando y tomando las acciones adecuadas.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Por favor proporcione una direccion de correo electronico
+          age: Por favor especifique edad
+          abuse_type: Por favor responde como infringe este contenido los términos
+            del servicio
+          abuse_detail: Por favor proporciona detalles referentes al contenido que
+            estás reportando
+        abusive_url: URL del contenido que está reportando
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: ¿De que manera este contenido infringe los %{link_start}términos
+            del servicio%{link_end}?
+          harassment: Amenazas ciberacoso acoso
+          offensive: Contenido ofensivo
+          infringement: Infraccion de derechos de autor
           other: Otros
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
-        acknowledge: By submitting this information, you acknowledge it will be handled
-          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+        detail: Por favor proporciona tanta informacion sea posible con respecto al
+          contenido que está reportando.
+        acknowledge: Al enviar esta información usted sabe que se tratará de acuerdocon
+          los terminos de la %{link_start_privacy} politica de privacidad %{link_end}
+          y de los %{link_start_tos}terminos de servicio %{link_end}

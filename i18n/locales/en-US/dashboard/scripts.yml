@@ -183,6 +183,9 @@ en:
           Artist Binary: crwdns23312:0crwdne23312:0
           description_audience: crwdns24913:0crwdne24913:0
           Super Challenge - Variables: crwdns50702:0crwdne50702:0
+          Super Challenge - For Loops: crwdns51228:0crwdne51228:0
+          Super Challenge - Functions and Parameters: crwdns51229:0crwdne51229:0
+          Extreme Challenge - Comprehensive: crwdns51230:0crwdne51230:0
         Course4pre:
           title: crwdns35290:0crwdne35290:0
           description_short: crwdns22252:0crwdne22252:0
@@ -352,6 +355,7 @@ en:
           The Artist: crwdns35340:0crwdne35340:0
           Play Lab: crwdns35341:0crwdne35341:0
           Play Lab 2015: crwdns41850:0crwdne41850:0
+          Hoc2015 Blockly: crwdns51231:0crwdne51231:0
         events:
           title: crwdns35342:0crwdne35342:0
           description: crwdns35343:0crwdne35343:0
@@ -649,6 +653,33 @@ en:
           Variables Conceptorial Fodder: crwdns50705:0crwdne50705:0
           "Variables: Create, Assign, and Read": crwdns50706:0crwdne50706:0
           "Variables: Increment, Decrement, Display, and Scope": crwdns50707:0crwdne50707:0
+          User Input and Strings: crwdns51232:0crwdne51232:0
+          Introduction to Digital Assistant: crwdns51233:0crwdne51233:0
+          "Improving Digital Assistant: Conditionals": crwdns51234:0crwdne51234:0
+          "Improving Digital Assistant: Functions with Return": crwdns51235:0crwdne51235:0
+          "Improving Digital Assistant: Complex Conditionals": crwdns51236:0crwdne51236:0
+          Conditionals with Movie Bot: crwdns51237:0crwdne51237:0
+          Improving Digital Assistant with Conditionals: crwdns51238:0crwdne51238:0
+          Chained and Nested Conditionals with Movie Bot: crwdns51239:0crwdne51239:0
+          Compound Conditionals with Movie Bot: crwdns51240:0crwdne51240:0
+          "Practice PT: Digital Assistant": crwdns51241:0crwdne51241:0
+          Practice PT - Design a Digital Scene: crwdns51242:0crwdne51242:0
+          Multi-screen Apps: crwdns51243:0crwdne51243:0
+          Controlling Memory with Variables: crwdns51244:0crwdne51244:0
+          Using Variables in Apps: crwdns51245:0crwdne51245:0
+          Introduction to Digital Assistant Project: crwdns51246:0crwdne51246:0
+          Understanding Program Flow and Logic: crwdns51247:0crwdne51247:0
+          Introduction to Conditional Logic: crwdns51248:0crwdne51248:0
+          Compound Conditional Logic: crwdns51249:0crwdne51249:0
+          Digital Assistant Project: crwdns51250:0crwdne51250:0
+          While Loops: crwdns54697:0crwdne54697:0
+          Loops and Simulations: crwdns54698:0crwdne54698:0
+          Introduction to Arrays: crwdns54699:0crwdne54699:0
+          Image Scroller with Key Events: crwdns54700:0crwdne54700:0
+          Processing Arrays: crwdns54701:0crwdne54701:0
+          Functions with Return Values: crwdns54702:0crwdne54702:0
+          Canvas and Arrays in Apps: crwdns54703:0crwdne54703:0
+          "Practice PT: Create": crwdns54704:0crwdne54704:0
         algebraPD3:
           title: crwdns38396:0crwdne38396:0
           description: crwdns37980:0crwdne37980:0
@@ -1207,6 +1238,15 @@ en:
           "Day 20-21 HTML and CSS: Adding Enhancements to Site": crwdns48459:0crwdne48459:0
           Day 22-25 Final Project: crwdns48460:0crwdne48460:0
           "Day 15-16 HTML and CSS: Tables, Lists, Menus": crwdns48461:0crwdne48461:0
+          Getting Started: crwdns51251:0crwdne51251:0
+          Intro to Unit 2: crwdns51252:0crwdne51252:0
+          Unit 2 Challenge Preview: crwdns51253:0crwdne51253:0
+          Unit 2 Challenge: crwdns51254:0crwdne51254:0
+          Close & Next Steps: crwdns51255:0crwdne51255:0
+          Intro to Unit 3: crwdns51256:0crwdne51256:0
+          Unit 3 Challenge Preview: crwdns51257:0crwdne51257:0
+          Unit 3 Day-by-Day: crwdns51258:0crwdne51258:0
+          Unit 3 Challenge: crwdns51259:0crwdne51259:0
         ECSPD3-Unit4:
           title: crwdns48462:0crwdne48462:0
           description_short: crwdns48463:0crwdne48463:0
@@ -1233,6 +1273,13 @@ en:
           Day 25-30 Final Project: crwdns48484:0crwdne48484:0
           Unit 4 Challenge Planning: crwdns49766:0crwdne49766:0
           Unit 4 Challenge Creation: crwdns49767:0crwdne49767:0
+          Getting Started: crwdns51260:0crwdne51260:0
+          Intro to Unit 4: crwdns51261:0crwdne51261:0
+          Unit 4 Challenge Preview: crwdns51262:0crwdne51262:0
+          Unit 3 Day-by-Day: crwdns51263:0crwdne51263:0
+          Unit 4 Challenge: crwdns51264:0crwdne51264:0
+          Close & Next Steps: crwdns51265:0crwdne51265:0
+          Unit 4 Day-by-Day: crwdns51266:0crwdne51266:0
         ECSPD3-Unit5:
           title: crwdns48485:0crwdne48485:0
           description_short: crwdns48486:0crwdne48486:0
@@ -1280,6 +1327,7 @@ en:
           "Data App Part 8: Visualize Data": crwdns48526:0crwdne48526:0
           "Data App Part 9: Reflect": crwdns48527:0crwdne48527:0
           "Debate: Privacy vs Utility": crwdns48528:0crwdne48528:0
+          Permanent Data Storage and Clicker Completion: crwdns51267:0crwdne51267:0
         ScienceP3OLPT2:
           title: crwdns49768:0crwdne49768:0
           description_short: crwdns49769:0crwdne49769:0
@@ -1315,6 +1363,10 @@ en:
         duino:
           Experimenting with Arduino stuff: crwdns50708:0crwdne50708:0
           Basic Circuits: crwdns50709:0crwdne50709:0
+          description: crwdns51268:0crwdne51268:0
+          Blinky Lights: crwdns51269:0crwdne51269:0
+          Making Music: crwdns51270:0crwdne51270:0
+          JunkBot: crwdns54310:0crwdne54310:0
         Special Fun:
           title: crwdns50710:0crwdne50710:0
           description_short: crwdns50711:0crwdne50711:0
@@ -1325,3 +1377,97 @@ en:
           description_short: crwdns50715:0crwdne50715:0
           description_audience: crwdns50716:0crwdne50716:0
           Halloween 2015: crwdns50717:0crwdne50717:0
+          description: crwdns51271:0crwdne51271:0
+        iceage:
+          title: crwdns51272:0crwdne51272:0
+          description_short: crwdns51273:0crwdne51273:0
+          description: crwdns51274:0crwdne51274:0
+          Ice Age Play Lab: crwdns51275:0crwdne51275:0
+        CSPPD3-Unit3:
+          title: crwdns51276:0crwdne51276:0
+          description_short: crwdns51277:0crwdne51277:0
+          description: crwdns51278:0crwdne51278:0
+          Getting Started: crwdns51279:0crwdne51279:0
+          Unit 3 Overview: crwdns51280:0crwdne51280:0
+          Chunk 1 Overview: crwdns51281:0crwdne51281:0
+          Chunk 2 Overview: crwdns51282:0crwdne51282:0
+          Chunk 3 Overview: crwdns51283:0crwdne51283:0
+          Chunk 4 Overview: crwdns51284:0crwdne51284:0
+          Chunk 5 Overview: crwdns51285:0crwdne51285:0
+          Practice Performance Task: crwdns51286:0crwdne51286:0
+          Challenge Overview: crwdns51287:0crwdne51287:0
+          Complete the Challenge: crwdns54705:0crwdne54705:0
+          Share out and Submit: crwdns54706:0crwdne54706:0
+        cspunit3temp:
+          title: crwdns51288:0crwdne51288:0
+          description_short: crwdns51289:0crwdne51289:0
+          description: crwdns51290:0crwdne51290:0
+          While Loop Basics: crwdns51291:0crwdne51291:0
+          While Loops_ Counting Flips: crwdns51292:0crwdne51292:0
+          Arrays_ Intro: crwdns51293:0crwdne51293:0
+          Arrays_ Photo Album: crwdns51294:0crwdne51294:0
+          Images are Arrays: crwdns51295:0crwdne51295:0
+          Arrays and Loops_ Altering Images: crwdns51296:0crwdne51296:0
+          Arrays and Loops_ Hidden Images: crwdns51297:0crwdne51297:0
+          Key Events with Image Scroller: crwdns51298:0crwdne51298:0
+          Processing Arrays: crwdns54311:0crwdne54311:0
+          Functions with Return Values: crwdns54312:0crwdne54312:0
+          Practice Create Performance Task: crwdns54707:0crwdne54707:0
+          While Loops: crwdns54708:0crwdne54708:0
+          Loops and Simulations: crwdns54709:0crwdne54709:0
+          Introduction to Arrays: crwdns54710:0crwdne54710:0
+          Image Scroller with Key Events: crwdns54711:0crwdne54711:0
+          Canvas and Arrays in Apps: crwdns54712:0crwdne54712:0
+          "Practice PT: Create": crwdns54713:0crwdne54713:0
+        CSP-Unit3-Support:
+          title: crwdns51299:0crwdne51299:0
+          description_short: crwdns51300:0crwdne51300:0
+          description: crwdns51301:0crwdne51301:0
+          Getting Started: crwdns51302:0crwdne51302:0
+          Unit 3 Overview: crwdns51303:0crwdne51303:0
+          Chunk 1 Overview: crwdns51304:0crwdne51304:0
+          Chunk 2 Overview: crwdns51305:0crwdne51305:0
+          Chunk 3 Overview: crwdns51306:0crwdne51306:0
+          Chunk 4 Overview: crwdns51307:0crwdne51307:0
+          Chunk 5 Overview: crwdns51308:0crwdne51308:0
+          Practice Performance Task: crwdns51309:0crwdne51309:0
+          Challenge Overview: crwdns51310:0crwdne51310:0
+        gumball:
+          title: crwdns51311:0crwdne51311:0
+          description_short: crwdns51312:0crwdne51312:0
+          description: crwdns51313:0crwdne51313:0
+          Gumball Play Lab: crwdns51314:0crwdne51314:0
+        starwars:
+          title: crwdns51315:0crwdne51315:0
+          description_short: crwdns51316:0crwdne51316:0
+          description: crwdns51317:0crwdne51317:0
+          Hour of Code 2015: crwdns51318:0crwdne51318:0
+        starwarsblocks:
+          title: crwdns51319:0crwdne51319:0
+          description_short: crwdns51320:0crwdne51320:0
+          description: crwdns51321:0crwdne51321:0
+          Hour of Code 2015: crwdns51322:0crwdne51322:0
+        minecraft:
+          title: crwdns54313:0crwdne54313:0
+          description_short: crwdns54314:0crwdne54314:0
+          description: crwdns54315:0crwdne54315:0
+          Craft: crwdns54316:0crwdne54316:0
+        mc:
+          title: crwdns54317:0crwdne54317:0
+          description_short: crwdns54318:0crwdne54318:0
+          description: crwdns54319:0crwdne54319:0
+          Hour of Code 2015: crwdns54320:0crwdne54320:0
+        CSPPD3-Unit3-pt2:
+          title: crwdns54658:0crwdne54658:0
+          description_short: crwdns54659:0crwdne54659:0
+          description: crwdns54660:0crwdne54660:0
+          Challenge Overview: crwdns54661:0crwdne54661:0
+          Complete the Challenge: crwdns54662:0crwdne54662:0
+          Share out and Submit: crwdns54663:0crwdne54663:0
+        ScienceP3OLPT3:
+          title: crwdns54747:0crwdne54747:0
+          description_short: crwdns54748:0crwdne54748:0
+          description: crwdns54749:0crwdne54749:0
+          Welcome!: crwdns54750:0crwdne54750:0
+          Thinking About Implementation: crwdns54751:0crwdne54751:0
+          Wrap-Up: crwdns54752:0crwdne54752:0

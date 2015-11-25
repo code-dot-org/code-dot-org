@@ -1,4 +1,3 @@
-@import url(colpick.css);
 #divApplab, #designModeViz, .draggingParent {
   overflow: hidden;
   outline: none;
@@ -24,7 +23,7 @@
     display: inline-block; }
   #divApplab div, #designModeViz div, .draggingParent div {
     overflow: hidden; }
-  #divApplab div[contenteditable=true], #designModeViz div[contenteditable=true], .draggingParent div[contenteditable=true] {
+  #divApplab div.textArea, #designModeViz div.textArea, .draggingParent div.textArea {
     overflow: auto;
     word-wrap: break-word;
     /* needed by Firefox */
@@ -33,19 +32,19 @@
     padding: 7px 12px;
     margin: 2px;
     font-size: 14px; }
-  #divApplab input, #divApplab div[contenteditable=true], #divApplab button, #divApplab select, #divApplab img, #divApplab label, #designModeViz input, #designModeViz div[contenteditable=true], #designModeViz button, #designModeViz select, #designModeViz img, #designModeViz label, .draggingParent input, .draggingParent div[contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent img, .draggingParent label {
+  #divApplab input, #divApplab div.textArea, #divApplab button, #divApplab select, #divApplab img, #divApplab label, #designModeViz input, #designModeViz div.textArea, #designModeViz button, #designModeViz select, #designModeViz img, #designModeViz label, .draggingParent input, .draggingParent div.textArea, .draggingParent button, .draggingParent select, .draggingParent img, .draggingParent label {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     line-height: 1.2em;
     margin: 5px; }
-    #divApplab input p, #divApplab div[contenteditable=true] p, #divApplab button p, #divApplab select p, #divApplab img p, #divApplab label p, #designModeViz input p, #designModeViz div[contenteditable=true] p, #designModeViz button p, #designModeViz select p, #designModeViz img p, #designModeViz label p, .draggingParent input p, .draggingParent div[contenteditable=true] p, .draggingParent button p, .draggingParent select p, .draggingParent img p, .draggingParent label p {
+    #divApplab input p, #divApplab div.textArea p, #divApplab button p, #divApplab select p, #divApplab img p, #divApplab label p, #designModeViz input p, #designModeViz div.textArea p, #designModeViz button p, #designModeViz select p, #designModeViz img p, #designModeViz label p, .draggingParent input p, .draggingParent div.textArea p, .draggingParent button p, .draggingParent select p, .draggingParent img p, .draggingParent label p {
       line-height: inherit; }
   #divApplab .chart, #designModeViz .chart, .draggingParent .chart {
     position: absolute;
     display: block;
     overflow: hidden; }
     #divApplab .chart .loading, #designModeViz .chart .loading, .draggingParent .chart .loading {
-      background: image-url("spinner-big.gif") no-repeat center center; }
+      background: url("/blockly/media/applab/spinner-big.gif") no-repeat center center; }
   #divApplab .design-mode-hidden, #designModeViz .design-mode-hidden, .draggingParent .design-mode-hidden {
     visibility: hidden; }
 
@@ -70,7 +69,7 @@
     #divApplab.appModern button:active, #designModeViz.appModern button:active, .draggingParent button:active {
       background-image: url("/blockly/media/applab/darker.png");
       border: 0 !important; }
-  #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div[contenteditable=true], #designModeViz.appModern input[type=text], #designModeViz.appModern input:not([type]), #designModeViz.appModern div[contenteditable=true], .draggingParent input[type=text], .draggingParent input:not([type]), .draggingParent div[contenteditable=true] {
+  #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div.textArea, #designModeViz.appModern input[type=text], #designModeViz.appModern input:not([type]), #designModeViz.appModern div.textArea, .draggingParent input[type=text], .draggingParent input:not([type]), .draggingParent div.textArea {
     border: 1px solid #999;
     padding: 5px;
     /* padding clips text in text inputs in Firefox */ }
@@ -86,7 +85,7 @@
       display: none; }
     #divApplab.appModern select:hover, #designModeViz.appModern select:hover, .draggingParent select:hover {
       background: url("/blockly/media/applab/dropdown.png") no-repeat center right, url("/blockly/media/applab/brighter.png"); }
-  #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern [contenteditable=true], #designModeViz.appModern button, #designModeViz.appModern select, #designModeViz.appModern input, #designModeViz.appModern [contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent [contenteditable=true] {
+  #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern .textArea, #designModeViz.appModern button, #designModeViz.appModern select, #designModeViz.appModern input, #designModeViz.appModern .textArea, .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent .textArea {
     outline: 0; }
   #divApplab.appModern img[src=''], #designModeViz.appModern img[src=''], .draggingParent img[src=''] {
     display: none; }
@@ -257,6 +256,20 @@ div#visualizationResizeBar {
     top: 68px;
     left: 16px;
     border: 0; }
+
+#wireframeSendToPhone {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+  text-shadow: #000 -1px -1px 0; }
+  #wireframeSendToPhone, #wireframeSendToPhone .sharing label {
+    font: 12pt "Gotham 5r", sans-serif;
+    color: #8F9499; }
+  #wireframeSendToPhone i {
+    font-size: 1.5em; }
+  #wireframeSendToPhone .sharing div {
+    margin: 0; }
 
 #visualizationColumn.chromelessShare #designToggleRow, #visualizationColumn.chromelessShare #gameButtons {
   display: none; }

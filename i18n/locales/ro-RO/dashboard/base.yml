@@ -221,11 +221,12 @@ ro:
         playlab: Creează o aplicație
         artist: Desenează ceva
         calculate: Calculate Something
+        applab: Creează o aplicație
     user:
       classroom: Pagina de Start a Profesorilor
       district_dashboard: Tabel de instrumente pe zonă districtuală
       label: 'Salut %{username}'
-      stats: Studio-ul Code
+      stats: Atelierul de programare
       settings: Contul meu
       prizes: Premii
       logout: Deloghează-te
@@ -244,6 +245,8 @@ ro:
       prize_us_only: (Numai pentru studenţii din SUA)
       prizes_link: Mai multe informaţii
   teacher:
+    answer: Răspuns
+    for_teachers_only: Doar pentru profesori
     title:
       one: 'Profesorul tău:'
       other: 'Profesorii tăi:'
@@ -309,7 +312,7 @@ ro:
       section: Secţiune
       example: Exemplu soluţie
       example_with_number: 'Exemplu soluţie %{solution_number}'
-      submitted_on: 'Înregistrat la %{date}'
+      submitted_on: 'Trimis la data %{date}'
       unsubmit: Retrage
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
@@ -368,12 +371,12 @@ ro:
     heading_apps: '<h2>Distracţie pentru</h2><h1>Toată lumea</h1>'
     heading_legacy: '<h2>Cursul nostru intensiv pentru</h2><h1>Toate vârstele</h1>'
     your_gallery: Galerie
-    no_primary_course: Încearcă un curs la Studio-ul Code
-    choose_next_course: Încearcă un curs la Studio-ul Code alegând unul de mai jos
+    no_primary_course: Încearcă un curs cu Atelierul de programare
+    choose_next_course: Încearcă un curs cu Atelierul de programare alegând unul de mai jos
     print_certificate: Tipărește certificatul
   share:
-    title: Învață pe Code Studio
-    description: Oricine poate învăţa ştiinţa calculatoarelor. Face jocuri, aplicaţii şi artă cu cod.
+    title: Învață in Atelierul de programare
+    description: Oricine poate învăţa programare. Face jocuri, aplicaţii şi artă cu programare.
   gender:
     male: De sex masculin
     female: De sex feminin
@@ -382,13 +385,13 @@ ro:
     student: elev
     teacher: Profesor
   footer:
-    thank_you: 'Mulțumim la <a href="https://code.org/about/donors">donatorii</a>,<a href="https://code.org/about/partners">partenerii</a>,<a href="https://code.org/about/team">echipa extinsă</a>,producătorilor de imagine, și<a href="https://code.org/about/advisors">consilierii educaționali</a>Pentru sprijinul lor în creearea Code Studio.'
+    thank_you: 'Mulțumim la <a href="https://code.org/about/donors">donatorii</a>,<a href="https://code.org/about/partners">partenerii</a>,<a href="https://code.org/about/team">echipa extinsă</a>,producătorilor de imagine, și<a href="https://code.org/about/advisors">consilierii educaționali</a>Pentru sprijinul lor în creearea Atelierului de programare.'
     help_from_html: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat la crearea acestui tutorial.
     help_from_html_old: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat la crearea acestor materiale.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Toate Drepturile Rezervate.'
     art_from_html_old: 'Păsări nervoase &#8482; &amp; © 2009-%{current_year} Rovio Entertainment Ltd. Toate drepturile rezervate. < br / > plante vs Zombies &#8482; &amp; © %{current_year} Electronic Arts Inc Toate drepturile rezervate'
     powered_by_aws: Susținut de Amazon Web Services
-    trademark: '© Code.org, %{current_year}. Code.org®, cod logo-ul şi ora de cod ® sunt mărci comerciale ale Code.org.'
+    trademark: '&copy;Code.org, %{current_year}. Code.org&reg;, logo-ul CODE şi Hour of Code&reg; sunt mărci comerciale ale Code.org.'
     copyright: Drept de autor
     more: Mai mult
     feedback: Oferă feedback
@@ -431,6 +434,7 @@ ro:
   pdf_download: Descarcă PDF
   download_coming_soon: Activitatea se va putea descărca curând.
   video_coming_soon: Video disponibil în scurt timp!
+  not_started: Studentul nu a încercat acest nivel.
   share_code:
     title: "Fă clic pe 'Rulează' pentru a-mi vedea programul în acţiune"
     bounce_og_title: Aruncă-ți o privire asupra jocului meu Bounce
@@ -456,31 +460,36 @@ ro:
   upsell:
     hoc:
       title: Oră de Cod
-      body: Încearcă elementele de bază informaticii. Milioane de oameni au încercat.
+      body: Încearcă bazele programarii. Milioane de oameni au încercat.
     flappy:
       title: Codul Flappy
       body: Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția noastră Codul Floppy!
     20-hour:
       title: Curs intensiv
       body: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.
-      body_short: Învață informatică de bază în cadrul unei versiuni intensive ale cursurilor 2-4.
+      body_short: Învață bazele informaticii în cadrul unei versiuni intensive a cursurilor 2-4.
     hoc2014:
-      try_new_tutorial: Încearcă noul nostru tutorial Ora de cod în versiune beta
+      try_new_tutorial: Încearcă noul nostru tutorial Ora de programare în versiune beta
       try_frozen: Artist cu Anna și Elsa, din Frozen
     gallery:
       title: Galerie
       body: Vizualizează o galerie de imagini pentru aplicații și artiști, create de utilizatorii noștri
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Laborator de joc Infinity
       body: Folosește Laboratorul de Joacă pentru a crea o poveste sau un joc cu personaje Disney Infinity.
+    minecraft:
+      title: Minecraft
+      body: Exploreaza o lume Minecraft prin cod.
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
     students_made_these_with_code: Elevii au creat acestea cu secvențe de cod!
     picture_count: 'În ultimele <b>%{days}</b> zile, studenții au desenat <b>%{count}</b> imagini scriind propriile programe de calculator. Fă clic pe imagini pentru a vedea fiecare program în acțiune.'
     activity_count: 'În ultimele <b>%{days}</b> zile, elevii au creat <b>%{count}</b> aplicații şi imagini scriindu-și propriile programe pentru calculator. Fă clic pe imagini și capturi de ecran pentru a vedea fiecare program în acţiune.'
-    want_to_make_your_own: Vrei să creezi propriul tău program?
+    want_to_make_your_own: Vrei să realizezi propriul tău program?
     more: 'Mai mult &rarr;'
     caption_by_name_age: 'de %{name}, vârsta %{age}'
     caption_time_ago: 'cu %{time_ago} în urmă'
@@ -509,14 +518,14 @@ ro:
   contract_match:
     wrong_title: Răspuns incorect
     badname: Contractul tău are numele greşit.
-    badname_case: Numele funcțiilor cad sub incidența caracterelor mici sau mari folosite. Încearcă să schimbi tipul literelor folosite la scrierea numelui contractului tău.
+    badname_case: Numele funcțiilor diferentiaza caracterele mici de cele mari. Încearcă să schimbi tipul literelor folosite la scrierea numelui contractului tău.
     badrange: Contractul tău este greşit.
     baddomainsize: Contractul tău are un număr incorect de elemente în domeniu.
     baddomainname: Unul sau mai multe elemente din domeniul tău are un nume greșit.
     baddomaintype: Unul sau mai multe elemente ale domeniului tău sunt de tip greșit sau sunt în ordine greșită.
   text_match:
     placeholder: Completează răspunsul tău aici
-    open_response_title: Mulţumesc
+    open_response_title: Mulţumim
     open_response_body: Îți mulţumim pentru răspuns!
   dialog:
     ok: OK

@@ -222,6 +222,7 @@ id:
         playlab: Buat App
         artist: Gambarlah Sesuatu
         calculate: Calculate Something
+        applab: Buat App
     user:
       classroom: Beranda Guru
       district_dashboard: Wilayah Dashboard
@@ -245,6 +246,8 @@ id:
       prize_us_only: (Hanya untuk siswa dari Amerika Serikat)
       prizes_link: Info lebih lanjut
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Guru anda:'
       other: 'Guru Anda:'
@@ -390,17 +393,17 @@ id:
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Didukung oleh Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
-    copyright: Copyright
+    copyright: Hak cipta
     more: Lebih
     feedback: Berikan pendapat
     translate: Bantu menterjemahkan ke bahasa anda
     support: Dukungan
     support_url: http://support.code.org
-    tos_short: Terms
+    tos_short: Ketentuan
     tos: Syarat
     privacy: Kebijakan privasi
     secure: Versi yang aman
-    report_abuse: Report Abuse
+    report_abuse: Laporkan penyalahgunaan
   reference_area:
     title: Perlu bantuan?
     subtitle: Lihat video ini dan tips lainnya
@@ -432,6 +435,7 @@ id:
   pdf_download: Unduh PDF
   download_coming_soon: Aktivitas yang dapat diunduh segera hadir.
   video_coming_soon: Video Segera Hadir!
+  not_started: The student has not attempted this level.
   share_code:
     title: "klik 'Jalankan' untuk melihat program saya berjalan"
     bounce_og_title: Check out permainan Bouncing ku
@@ -473,9 +477,14 @@ id:
       body: Lihat galeri gambarn aplikasi dan seniman yang dibuat oleh pengguna kami
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Play Lab tak tebatas
       body: Gunakan Play Lab untuk membuat sebuah cerita atau permainan yang dibintangi karakter Disney tak terbatas.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Siswa-siswa telah menggambar ini dengan kode!
     students_made_these_with_code: Siswa membuat ini dengan kode program!
@@ -522,7 +531,7 @@ id:
   dialog:
     ok: Oke!
     startover_title: Apakah Anda yakin Anda ingin memulai dari awal?
-    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_body: Ini akan mengembalikan puzzle ke kondisi awal dan membatalkan penambahan atau perubahan data.
     startover_ok: Memulai kembali
     startover_cancel: Batal
   time:
@@ -607,11 +616,11 @@ id:
     view_all: Lihat proyek saya
     remix: Remix
     click_to_remix: "Klik 'Remix' untuk mematikan putaran versi Anda sendiri!"
-    edit_project: Edit Project
+    edit_project: Sunting Proyek
     abuse:
       tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
       contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
-      go_to_code_studio: Go to Code Studio
+      go_to_code_studio: Pergi ke Code Studio
       report_abuse_form:
         intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
         validation:

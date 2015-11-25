@@ -27,11 +27,11 @@ if (!window.dashboard) {
  *   }>
  * }}
  */
-dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId) {
+dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId, scriptName) {
   stageData = stageData || {};
   // Progress Data is only provided for signed in users. Otherwise, client gets progress data from cookie
   if (progressData === null) {
-    progressData = getSummarizedProgressForAnonymousUser();
+    progressData = getSummarizedProgressForAnonymousUser(scriptName);
   }
 
   var levelProgress = progressData.levels || {};
@@ -153,7 +153,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
         url: "/popup/stats",
         data: {
           script_id: stageData.script_id,
-          script_level_id: currentLevelId,
+          current_level_id: currentLevelId,
           user_id: userId,
           section_id: sectionId
         }, success: function (result) {
@@ -170,6 +170,45 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   function jumpToTrophies() {
     window.scrollTo(0, +$('#trophies').offset().top);
   }
+};
+
+dashboard.initSendToPhone = function(selector) {
+  var parent = $(selector);
+  var phone = parent.find('#phone');
+  var submitted = false;
+  var submitButton = parent.find('#phone-submit');
+  submitButton.attr('disabled', 'true');
+  phone.mask('(000) 000-0000', {
+    onComplete: function(){
+      if (!submitted) {
+        submitButton.removeAttr('disabled');
+      }
+    },
+    onChange: function () {
+      submitButton.attr('disabled', 'true');
+    }
+  });
+  phone.focus();
+  submitButton.click(function() {
+    var params = jQuery.param({
+      type: dashboard.project.getStandaloneApp(),
+      channel_id: dashboard.project.getCurrentId(),
+      phone: phone.val()
+    });
+    $(submitButton).val('Sending..');
+    phone.prop('readonly', true);
+    submitButton.disabled = true;
+    submitted = true;
+    jQuery.post('/sms/send', params)
+        .done(function () {
+          $(submitButton).text('Sent!');
+          trackEvent('SendToPhone', 'success');
+        })
+        .fail(function () {
+          $(submitButton).text('Error!');
+          trackEvent('SendToPhone', 'error');
+        });
+  });
 };
 
 function shareProject() {
@@ -220,42 +259,7 @@ function shareProject() {
       var sendToPhone = $('#project-share #send-to-phone');
       if (sendToPhone.is(':hidden')) {
         sendToPhone.attr('style', 'display:inline-block');
-        var phone = $("#project-share #phone");
-        var submitted = false;
-        var submitButton = $('#project-share #phone-submit');
-        submitButton.attr('disabled', 'true');
-        phone.mask('(000) 000-0000', {
-          onComplete:function(){
-            if (!submitted) {
-              submitButton.removeAttr('disabled');
-            }
-          },
-          onChange: function () {
-            submitButton.attr('disabled', 'true');
-          }
-        });
-        phone.focus();
-        submitButton.click(function() {
-          var phone = $("#project-share #phone");
-          var params = jQuery.param({
-            type: dashboard.project.getStandaloneApp(),
-            channel_id: dashboard.project.getCurrentId(),
-            phone: phone.val()
-          });
-          $(submitButton).val("Sending..");
-          phone.prop('readonly', true);
-          submitButton.disabled = true;
-          submitted = true;
-          jQuery.post('/sms/send', params)
-              .done(function () {
-                $(submitButton).text("Sent!");
-                trackEvent("SendToPhone", "success");
-              })
-              .fail(function () {
-                $(submitButton).text("Error!");
-                trackEvent("SendToPhone", "error");
-              });
-        });
+        dashboard.initSendToPhone('#project-share');
       }
     });
     $('#project-share #continue-button').click(function() {
@@ -411,19 +415,20 @@ dashboard.header.updateTimestamp = function () {
 };
 
 /**
- * Get the user progress for an anonymous user from the client side cookie
- * @return Object that is a representation of the user's individual level progress
+ * Get the user progress for an anonymous user from the client side cookie.
+ * @param {string} scriptName The script to get progress for.
+ * @return Object that is a representation of the user's individual level progress.
  */
-function getSummarizedProgressForAnonymousUser () {
+function getSummarizedProgressForAnonymousUser (scriptName) {
   var summarizedProgress = {};
   var levelProgress = {};
 
   summarizedProgress.lines = dashboard.clientState.lines();
 
-  var allLevelsProgress = dashboard.clientState.allLevelsProgress();
-  for(var level in allLevelsProgress) {
+  var scriptProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
+  for (var level in scriptProgress) {
     levelProgress[level] = {};
-    var individualLevelProgress = allLevelsProgress[level] || -1;
+    var individualLevelProgress = scriptProgress[level] || -1;
 
     if (individualLevelProgress >= 1000) {
       levelProgress[level].status = 'submitted';

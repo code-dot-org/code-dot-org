@@ -252,6 +252,7 @@
         playlab: Loo äpp
         artist: Joonista midagi
         calculate: Calculate Something
+        applab: Loo äpp
     user:
       classroom: Õpetaja kodulehekülg
       district_dashboard: Piirkondlik juhtpaneel
@@ -275,6 +276,8 @@
       prize_us_only: (Ainult USA õpilased)
       prizes_link: rohkem infot
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Sinu õpetaja:'
       other: 'Sinu õpetajad:'
@@ -505,6 +508,7 @@
   pdf_download: Lae alla PDF-fail
   download_coming_soon: Allalaaditav tegevus tuleb varsti.
   video_coming_soon: Video tuleb varsti!
+  not_started: The student has not attempted this level.
   share_code:
     title: Klikka 'Run', et programm alustaks
     bounce_og_title: Tsekka mu Põrke mängu (Bounce Game)
@@ -538,9 +542,9 @@
         Code õpetusvideot!
     20-hour:
       title: Kiirendatud kursus
-      body: This 20-hour course covers the core computer science and programming concepts
-        in courses 2-4. The course is designed for use with ages 10-18. Check out
-        courses 2-4 for a more complete experience!
+      body: See 20-tunnine kursus käsitleb peamisi arvutiteaduse ja programmeerimise
+        kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks vanuses 10-18
+        aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!
       body_short: Õppige arvutiteaduse põhitõed kiirendatud versioonis kursustel 2-4.
     hoc2014:
       try_new_tutorial: Proovi meie uut KoodiTunni beta õpetusvideot
@@ -550,10 +554,15 @@
       body: Vaata meie kasutajate poolt tehtud galeriid, kus on äpid ja pildid tegelaskujudest
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Lõpmatu Play Lab
       body: Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad Disney Infinity
         tegelased.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Õpilased joonistasid need koodi kasutades!
     students_made_these_with_code: Õpilased tegid need koodiga!

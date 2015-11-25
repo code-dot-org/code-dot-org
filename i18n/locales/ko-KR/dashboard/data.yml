@@ -77,30 +77,30 @@ ko:
         Multi: 객관식 선택 문제
         Unplug2: 컴퓨터과학적(정보과학적)사고
         Unplug3: 모눈종이 프로그래밍
-        Artist: The Artist
+        Artist: 화가
         Unplug4: 알고리즘
-        Artist2: 예술가 퍼즐 2
+        Artist2: 화가2
         Unplug5: 함수
-        Farmer: 농부 퍼즐
-        Unplug6: 조건
-        Artist3: 예술가 퍼즐 3
-        Unplug7: 노래 만들기
-        Farmer2: 농부 퍼즐 2
+        Farmer: 농부
+        Unplug6: 조건/선택
+        Artist3: 화가3
+        Unplug7: 작곡
+        Farmer2: 농부2
         Unplug8: 추상화
-        Artist4: 예술가 퍼즐 4
+        Artist4: 화가4
         Unplug9: 릴레이 프로그래밍
-        Farmer3: 농부 퍼즐 3
+        Farmer3: 농부3
         Unplug10: 인터넷
-        Artist5: 예술가 퍼즐 5
+        Artist5: 화가5
         Unplug11: 마무리
         MazeEC: 미로 퍼즐
-        Bounce: Bounce
+        Bounce: 바운스
         Flappy: 플래피 버드
-        Jigsaw: 퍼즐 맞추기
+        Jigsaw: 직소퍼즐
         MazeStep: 미로 단계별 모드
         Wordsearch: 단어 탐색
         Webapp: 앱 연구실
-        ArtistEC: The Artist
+        ArtistEC: 화가
         TextMatch: 글자 맞추기
         StudioEC: Play Lab
         Applab: 앱 연구실
@@ -112,8 +112,8 @@ ko:
         Gold: 금
     concept:
       description:
-        sequence: 순서
-        if: 조건 실행
+        sequence: 순차
+        if: 조건
         if_else: 선택
         loop_times: 반복(횟수)
         loop_until: 반복(~할 때까지)
@@ -307,6 +307,27 @@ ko:
         studio_playlab_8: 방향키를 이용해서 유니콘을 움직이고, 유니콘이 마법사에게 닿으면 점수가 올라가고 소리가 나도록 도와주세요.
         studio_playlab_9: 외계인 침략 배경으로 바꾼 다음에, 우주로봇의 이동 속도를 더 빠르게 변화시켜서 외계인 캐릭터로 이동할 수 있도록 도와주세요. 그리고, 우주로봇이 외계인 캐릭터에 닿으면 모두에게 경고를 할 수 있게 해주세요.
         studio_playlab_10: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록 할 수 있습니다.
+        studio_iceage_1: '매니는 "hello" 라고 말하고 싶어요. 매니를 도와주실 수 있나요?'
+        studio_iceage_2: '디에고(캐릭터 1) 와 그레니(캐릭터 2) 는 서로 "hello"라고 인사하고 싶습니다. "말하기" 블록을 두 번 사용해서 그들을 도와줄 수 있나요?'
+        studio_iceage_3: 스크랫이 깃발을 얻을 수 있게 도와줄 수 있나요?
+        studio_iceage_4: 스크랫(캐릭터 1) 이 그레니(캐릭터 2) 에게 도착하게 하고, 도착했을 때 소리가 나도록 도와줄 수 있나요?
+        studio_iceage_5: '시드가 클릭되었을 때 "greetings"라고 말하도록 도와줄 수 있나요? 실행 버튼을 누르고 난 이후에 시드를 클릭했을 때 입니다.'
+        studio_iceage_6: 위/아래/오른쪽/왼쪽 방향키를 이용해 디에고가 모든 깃발을 얻을 수 있게 도와줄 수 있나요?
+        studio_iceage_7: '"무한 반복(repeat forever)" 블록은 어떤 코드들을 계속해서 무한히 반복해서 실행하도록 할 수 있습니다. 시드가 왼쪽 오른쪽으로 계속 반복해서 움직일 수 있도록 블록들을 붙여주세요.'
+        studio_iceage_8: 시드가 매니한테 달려갈 때, 점수를 획득하도록 하는 블록과 소리를 재생하기 위한 블록을 추가하고 나서 점수를 얻을 때까지 방향키를 이용해 이동 시키세요.
+        studio_iceage_9: 이 아이스 에이지를 위해 배경을 설정하고, 시드가 그레니에게 더 빨리 도착할 수 있게 스피드를 변경해주세요. 그 다음에 방향키를 움직여 시드에게 도착하고 모두에게 경고하도록 이동시키세요.
+        studio_iceage_10: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록 할 수 있습니다.
+        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
+        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
+        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
+        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
+        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
+        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
+        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
+        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_full_sandbox: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록 할 수 있습니다.
         studio_k1_1: '강아지가 "hello world"라고 말하도록 할 수 있을까요?'
         studio_k1_2: 강아지가 어떤 말을 한 후에 고양이가 어떤 말을 하도로 할 수 있을까요?
@@ -418,7 +439,7 @@ ko:
         C4_function_edit: 함수 수정하기
         C4_function_create: 함수 만들기
         C4_function_parameters: 함수(값 전달)
-        C4_conditionals: 조건
+        C4_conditionals: 조건/선택
         C4_unplugged_algorithms: 탱그램 알고리즘
         C4_unplugged_madlibs: 매드 립스(Mad Libs)
         C4_unplugged_variables: 변수들 싸기(함께 넣기)
@@ -435,7 +456,13 @@ ko:
         infinity_playlab_intro: '플레이 랩 - 소개'
         infinity_playlab_events: '플레이 랩 - 이벤트'
         infinity_playlab_repeat_forever: '플레이 랩 - 무한 반복'
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: 'Introduction to Variables - Part 1'
+        csp_applab_variables_2: 'Introduction to Variables - Part 2'
         csp_applab_functions: 함수(Function) 소개
+        csp_applab_functions_parameters: 함수(값 전달)
+        csp_applab_loops: 반복
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: 픽셀에 관해서 조금
         csp_pixelation_color_1: '픽셀 색상 위젯 - 1부'
         csp_pixelation_color_2: '픽셀 색상 위젯 - 2부'
@@ -467,6 +494,21 @@ ko:
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: '스타워즈: 코드로 은하계 건설하기 - 소개'
+        starwars_typing: '스타워즈: 코드로 은하계 건설하기 - 자바스크립트'
+        starwars_events: '스타워즈: 코드로 은하계 건설하기 - 이벤트'
+        starwars_congrats: '스타워즈: 코드로 은하계 건설하기 - 축하'
+        starwars_blocks_intro: '스타워즈: 코드로 은하계 건설하기 - 소개'
+        starwars_blocks_events: '스타워즈: 코드로 은하계 건설하기 - 이벤트'
+        starwars_blocks_congrats: '스타워즈: 코드로 은하계 건설하기 - 축하'
+        mc_intro: '마인크래프트 - 소개'
+        mc_repeat: '마인크래프트 - 반복'
+        mc_if_statements: '마인크래프트 - 반복문'
+        mc_congrats_share: '마인크래프트 - 축하'
+        mc_congrats_no_share: '마인크래프트 - 축하'
+        gumball_intro: 'Gumball Hour of Code - Introduction'
+        gumball_events: 'Gumball Hour of Code - Events'
+        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'
@@ -538,3 +580,10 @@ ko:
         Infinity_move_directions_callout_arrow: 이 화살표를 이용해서 조정하세요
         Infinity_move_collide_callout: 이 이벤트가 발생하면 소리를 재생 합니다.
         Infinity_repeat_callout: "여기로 '이동 블록'을 이동 시키세요"
+        craft_run_button_callout: '만든 프로그램을 "실행하기"를 눌러 실행시켜보세요.'
+        craft_drag_block_callout: '"moveForward();" 블록을 드래그해 다른 블록의 아래에 붙이세요.'
+        craft_callout_preplaced: 여러분이 시작하기 전에 몇 개의 블록들을 붙여두었습니다.
+        craft_inside_repeat: 블록들을 여기에 놓아서 작업들을 반복시키세요.
+        craft_callout_preplaced_house: 이 코드는 여러분의 집을 짓습니다. 끝낼 수 있겠어요?
+        craft_what_is_iron: 이 철 광석을 캐내자!
+        craft_callout_moveforward: 이 코드는 용암을 체크할 것입니다. 앞으로 움직이기 위한 명령을 추가해 주실 수 있나요?

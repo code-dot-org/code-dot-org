@@ -25,7 +25,7 @@
           Artist5: Nivå 19
           Unplug11: Nivå 20
         Hour of Code:
-          desc: Hour of Code (kodetimen)
+          desc: Kodetimen
           Maze: Trinn 1
         Edit Code:
           desc: Rediger kode (beta)
@@ -102,7 +102,7 @@
         Webapp: App Lab
         ArtistEC: Kunstneren
         TextMatch: Teksttreff
-        StudioEC: Spill-Lab
+        StudioEC: Spill-lab
         Applab: App Lab
         NetSim: Internett Simulator
     trophy:
@@ -307,6 +307,27 @@
         studio_playlab_8: Kan du legge til en blokk for å få et poeng og en blokk for å spille av en lyd når enhjørningen løper på trollmannen, og så flytte han med pilene til du får et poeng?
         studio_playlab_9: Sett bakgrunnen for denne invasjonen og hjelp Rombot å komme raskere frem til romvesnene ved å endre hastigheten hans. Flytt han dermed med piltastene for å komme til Romboten og advare alle andre
         studio_playlab_10: Lag ditt eget spill. Når du er ferdig, trykk Fullør for å la vennene dine prøve spillet på sine mobiler.
+        studio_iceage_1: 'Manny ønsker å si "hei" - kan du hjelpe ham?'
+        studio_iceage_2: 'Diego (figur 1) og Granny (figur 2) ønsker å si "hei" til hverandre. Kan du hjelpe dem med å bruke "si"-brikken to ganger?'
+        studio_iceage_3: Kan du hjelpe Scrat med å komme seg bort til flagget?
+        studio_iceage_4: Kan du hjelpe Scrat (figur 1) med å komme seg bort til Granny (figur 2) og spille en lyd når han kommer seg dit?
+        studio_iceage_5: 'Kan du hjelpe Sid med å si "hallo" når han blir trykket på? Ikke glem å klikke på han etter du har trykket Kjør'
+        studio_iceage_6: Kan du hjelpe Diego med å flytte seg rundt ved å bruke piltastene opp/ned/høyre/venstre for å komme seg bort til alle flaggene?
+        studio_iceage_7: 'Brikken "gjenta for alltid" gjør sånn at du kan kjøre kode om og om igjen. Kan du sette brikker i den for å få Sid til å flytte seg høyre og venstre hele tiden?'
+        studio_iceage_8: Kan du legge til en brikke for å score et poeng og spille en lyd når Sid løper inn i Manny? Flytt han deretter med pilene helt til du scorer.
+        studio_iceage_9: Sett bakgrunnen for denne istiden og hjelp Sid komme seg til Granny raskere ved å endre hastigheten. Bruk pilene for å komme til Sid og varsle alle andre.
+        studio_iceage_10: Lag ditt eget spill. Når du er ferdig, trykk Fullør for å la vennene dine prøve spillet på sine mobiler.
+        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
+        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
+        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
+        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
+        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
+        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
+        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
+        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_full_sandbox: Lag ditt eget spill. Når du er ferdig, trykk Fullør for å la vennene dine prøve spillet på sine mobiler.
         studio_k1_1: Kan du få denne hunden til å si «hallo verden»?
         studio_k1_2: Kan du få hunden til å si noe og etterpå få katten til å si noe?
@@ -435,7 +456,13 @@
         infinity_playlab_intro: Spill-Lab – introduksjon
         infinity_playlab_events: Spill-Lab – hendelser
         infinity_playlab_repeat_forever: Spill-Lab Gjenta for alltid
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: 'Introduction to Variables - Part 1'
+        csp_applab_variables_2: 'Introduction to Variables - Part 2'
         csp_applab_functions: Introduksjon til funksjoner
+        csp_applab_functions_parameters: Funksjoner med parametre
+        csp_applab_loops: Løkker
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Litt om pixler
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
@@ -467,6 +494,21 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: Skap en galakse med kode - introduksjon'
+        starwars_typing: 'Star Wars: Skap en galakse med kode - JavaScript'
+        starwars_events: 'Star Wars: Skap en galakse med kode - Hendelser'
+        starwars_congrats: 'Star Wars: Skap en galakse med kode - Gratulerer'
+        starwars_blocks_intro: 'Star Wars: Skap en galakse med kode - introduksjon'
+        starwars_blocks_events: 'Star Wars: Skap en galakse med kode - Hendelser'
+        starwars_blocks_congrats: 'Star Wars: Skap en galakse med kode - Gratulerer'
+        mc_intro: 'Minecraft - introduksjon'
+        mc_repeat: 'Minecraft - gjenta'
+        mc_if_statements: 'Minecraft - hvis-instruksjon'
+        mc_congrats_share: 'Minecraft - gratulerer'
+        mc_congrats_no_share: 'Minecraft - gratulerer'
+        gumball_intro: 'Gumball Hour of Code - Introduction'
+        gumball_events: 'Gumball Hour of Code - Events'
+        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Dra en "flytt" blokk og fest den under den andre blokken'
@@ -538,3 +580,10 @@
         Infinity_move_directions_callout_arrow: Bruk disse pilene til å styre
         Infinity_move_collide_callout: Spill en lyd når denne hendelsen inntreffer.
         Infinity_repeat_callout: Plasser flytte blokker her
+        craft_run_button_callout: 'Trykk "Kjør" for å prøve programmet'
+        craft_drag_block_callout: 'Dra en "moveForward();" blokk og sett den under den andre blokken'
+        craft_callout_preplaced: Vi har satt sammen noen blokker for å hjelpe deg i gang
+        craft_inside_repeat: Gjenta handlinger ved å sette blokkene her inne
+        craft_callout_preplaced_house: Denne koden kommer til å starte byggingen av huset ditt. Kan du fullføre den?
+        craft_what_is_iron: Utvinn dette jernet!
+        craft_callout_moveforward: Denne koden vil se etter lava, kan du legge til en kommando for å gå fremover?
