@@ -2,6 +2,7 @@
 # A service for processing a set of SQS queues defined by a config file.
 # Usage ./process_queues QUEUE_CONFIG.JSON
 
+puts "Loading Rails environment..."
 require_relative '../../config/environment'
 
 require 'json'
@@ -48,13 +49,17 @@ class QueueProcessorManager
   end
 
   def main
-    if ARGV.size != 1
-      puts "Usage: #{$0} CONFIG_FILE.json"
+    if ARGV.size < 1
+      puts "Usage: #{$0} CONFIG_FILE.json [UPDATE-INTERVAL]"
       exit 0
     end
 
     manager = QueueProcessorManager.new
     json = File.open(ARGV[0]).read
+
+    update_interval = (ARGV.size >= 2) ? ARGV[1].to_i : 10
+    update_interval = 1 if update_interval < 1  # Don't update too quickly.
+
     metrics_map = manager.start_queue_processors(json)
 
     # Run until SIGINT is received.
@@ -77,7 +82,7 @@ class QueueProcessorManager
       metrics_map.each do |k,v|
         puts "#{k}: #{v}"
       end
-      interruptible_sleep 10
+      interruptible_sleep update_interval
     end
   end
 
