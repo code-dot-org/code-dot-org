@@ -28,7 +28,7 @@ Are you ready for the next step in Computer Science Education Week? This CSTechJ
 ## Try a week of 3D coding with AgentCubes
 Students use the online 3D tool AgentCubes, which runs on any WebGL enabled browser (i.e. Chrome) with an Internet connection, to create an epidemiology simulation. This activity takes about a week of class-time (assuming 50 minute classes with time to get settled etc, and ~30 minutes of actual work) and can bridge easily bridge to disciplines outside of CS.  There are two activities involved in this Tech-Jam: A CS Unplugged Activity and a Programming activity. The age-range for this activity is sixth grade to college students.
 
-[<button>Download Zip File</button>](http://tinyurl.com/SGDTechJam)
+[<button>Learn more</button>](http://sgd.cs.colorado.edu/wiki/CS_Ed_Week_Tech-Jam_2015:_Epidemiology_Activity)
 
 ## Try Pixel Hack by Kano
 
