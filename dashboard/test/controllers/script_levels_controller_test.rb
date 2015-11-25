@@ -461,7 +461,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show with the reset param should reset session when not logged in" do
-    client_state.set_level_progress(5, 10)
+    client_state.set_level_progress(create(:script_level), 10)
+    refute client_state.level_progress_is_empty_for_test
 
     get :reset, script_id: Script::HOC_NAME
 
@@ -487,7 +488,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "reset resets for custom scripts" do
-    client_state.set_level_progress(5, 10)
+    client_state.set_level_progress(create(:script_level), 10)
+    refute client_state.level_progress_is_empty_for_test
 
     get :reset, script_id: 'laurel'
     assert_response 200
@@ -497,7 +499,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "reset redirects for custom scripts for signed in users" do
-    client_state.set_level_progress(5, 10)
     sign_in(create(:user))
 
     get :reset, script_id: 'laurel'
