@@ -146,8 +146,6 @@
   twitter_teach_cs: De ce nu se preda informatica in mai multe scoli? Putem repara
     acest lucru. http://youtu.be/nKIu9yen5nc. Vizitati  http://code.org/ pentru a
     invata mai mult.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Afla mai multe</a> despre
-    premiile pentru fiecare educator.
   learn_hoc: Învață o Oră de Cod
   beyond_hoc: Peste de O Oră
   what_gender: Ce gen sexual ai?
@@ -369,6 +367,9 @@
     dacă ești un student la automatică și calculatoare sau matematică-informatică
     sau un profesionist în software. Câmpurile marcate cu un <span class="form-required-field">
     *</span> sunt obligatorii.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Informatii distribuite profesorilor
     pe harta voluntarilor
   volunteer_engineer_submission_field_name: Nume
@@ -714,6 +715,16 @@
   learn_educator_resources_button: Resursele educatorului
   learn_are_you_educator: Esti un educator? Invata <a href="http://hourofcode.com/resources/how-to">
     cum sa predai o Ora de Cod</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Afla mai multe</a> despre
+    premiile pentru fiecare educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Încearcă noile noastre tutoriale ale Orei de Cod
   hoc2014_try_new_tutorial: Încearcă noul nostru tutorial Ora de programare în versiune
     beta
@@ -1451,14 +1462,3 @@
   infinity_shortcode: inf
   playlab_shortcode: joacă
   artist_shortcode: art
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>

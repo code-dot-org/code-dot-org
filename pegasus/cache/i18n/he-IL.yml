@@ -27,7 +27,7 @@
     בתכנות בקורס הבא הזה.
   hoc2014_heading: הצטרפו ל <a href="http://hourofcode.com">שעה של קוד </a><br/>דצמבר
     8-14, 2014<br/>
-  hoc2014_students: Students
+  hoc2014_students: סטודנטים
   hoc2014_try: נסו זאת
   hoc2014_teachers: מורים
   hoc2014_host: ארח זאת
@@ -73,8 +73,8 @@
   course_name_accelerated: Accelerated Course
   course_name_course1: קורס 1
   course_name_course2: קורס 2
-  course_name_course3: Course 3
-  course_name_course4: Course 4
+  course_name_course3: קורס 3
+  course_name_course4: קורס 4
   congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Try these tutorials next
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
@@ -135,8 +135,6 @@
   just_did_hoc: בדיוק עכשיו עשיתי את ה-HourOfCode# - לכו לבדוק! codeorg@
   twitter_teach_cs: מדוע אין יות ר בתי ספר המלמדים מדעי המחשב? אנחנו יכולים לתקן זאת.
     http://youtu.be/nKIu9yen5nc . בקרו ב -  http://code.org/ למידע נוסף.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: למד שעה של קוד
   beyond_hoc: מעבר לשעה אחת
   what_gender: מהו המין שלך?
@@ -208,7 +206,7 @@
   homepage_slot_text_frozen: לשבור את הקרח עם אנה ואלזה
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: כל המדריכים שלנו
-  homepage_slot_text_course4: Course 4
+  homepage_slot_text_course4: קורס 4
   homepage_slot_text_shop: חנות
   homepage_slot_text_flappy: קוד מתנופף
   homepage_action_text_hoc: An Hour of Code for every student.
@@ -238,7 +236,7 @@
   homepage_slot_text_link_host: ארח שעה של קוד
   homepage_slot_text_link_hocserved: '# למדו'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
-  homepage_slot_text_title_students: Students
+  homepage_slot_text_title_students: סטודנטים
   homepage_slot_text_blurb_students: נסה את כל ההדרכות שלנו
   homepage_slot_text_link_codestudio: נסה את סטודיו הקוד
   homepage_slot_text_link_local: מצא כיתה מקומית
@@ -341,6 +339,9 @@
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: שם
@@ -514,11 +515,11 @@
   dashboard_sections_jumbotron_instruction: צור חלקים חדשים והוסף תלמידים אליהם. חלקים
     עוזרים לך לארגן תלמידים לקבוצות קטנות כדי שתוכל לעקוב אחרי התהליך למידה שלהם ולנהל
     את המשתמשים שלהם.
-  dashboard_sections_table_section: Section
+  dashboard_sections_table_section: סעיף
   dashboard_sections_table_secret: סוג התחברות
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: קורס
-  dashboard_sections_table_students: Students
+  dashboard_sections_table_students: סטודנטים
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: שם החלק
   dashboard_sections_choose_secret: אם ברצונך לספק חשבונות לתלמידיך, בחרו סוג הסודי
@@ -651,6 +652,16 @@
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: נסה את ההדרכות החדשות של "שעת הקוד"
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: האנגרי בירדז,צמחים נגד זומבים וראט הסנאי
@@ -686,7 +697,7 @@
   older_systems_subheading: אלה צריכים לעבוד בדפדפנים ישנים יותר. כדי לגשת לכל הדרכות,
     יש לשדרג<a href="http://browsehappy.com/" target="_blank"> לדפדפן אינטרנט מודרני.</a>
   mobile_devices: הדרכות עבור התקנים ניידים
-  frozen_name: Code with Anna and Elsa
+  frozen_name: תכנתו עם אנה ואלזה
   starwars_name: 'מלחמת הכוכבים: לבנות את הגלקסיה באמצעות קוד'
   codeorg_name: כתוב את תוכנת המחשב הראשונה שלך
   codeintl_name: כתוב את תוכנת המחשב הראשונה שלך
@@ -728,7 +739,7 @@
   hourofcode_name: מחזיק מקום עבור code.org/hoc חדש
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
-  artist_name: Artist
+  artist_name: אמן
   codeorg_gradelevel: גילאי 4-104
   codeintl_gradelevel: גילאי 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -861,10 +872,10 @@
     והיופי של קרח.
   starwars_shortdescription: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
     הפרטי שלכם בגלקסיה רחוקה, רחוקה.
-  playlab_shortdescription: Create a story or make a game with Play Lab!
+  playlab_shortdescription: ליצור סיפור או משחק עם Play Lab!
   infinity_shortdescription: Use Play Lab to create a story or game starring Disney
     Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
+  artist_shortdescription: ציירו תמונות מגניבות ועיצובים עם האמן!
   codeorg_longdescription: למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור
     ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק
     צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים.
@@ -981,9 +992,8 @@
     איך מידול וסימולציה עובדים על ידי כך שקבוצת תלמידים תשחק בגרסאות שונות של המשחק
     "אבן נייר ומספריים" , ותראה את התוצאות כניסוים שונים במידול.
   hourofcode_longdescription: מחזיק מקום עבור code.org/hoc חדש
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
+  frozen_longdescription: תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי
+    שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
   starwars_longdescription: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
     הפרטי שלכם בגלקסיה רחוקה, רחוקה...
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
@@ -1311,14 +1321,3 @@
   infinity_shortcode: inf
   playlab_shortcode: הפעל
   artist_shortcode: art
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
