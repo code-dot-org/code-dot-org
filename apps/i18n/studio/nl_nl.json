@@ -744,5 +744,15 @@
   "failedMultiplyCharactersTimeoutBlockly": "You need to get 20 Mouse Droids. Use the \"add a Mouse Droid\" command inside the \"when get Mouse Droid\" event to add two or more Mouse Droids every time you get one.",
   "failedMultiplyCharactersTimeoutGotSome": "Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)",
   "failedChangeSettingTimeout": "Pak drie Rebel Pilots om verder te gaan.",
-  "failedChangeSettingSettings": "Make the game your own. To pass this puzzle, you need to change your droid and set its speed."
+  "failedChangeSettingSettings": "Make the game your own. To pass this puzzle, you need to change your droid and set its speed.",
+  "extraFunction": "You have renamed a function to {funcName} but it won't work. You should use the original function name.",
+  "localFunction": "You have placed {funcName} inside another function. You should move {funcName} to a different location in your program.",
+  "playSoundR2D2Random": "play R2-D2 random sound",
+  "playSoundC3PORandom": "play C-3PO random sound",
+  "playSoundPufferPigRandom": "play Puffer Pig random sound",
+  "playSoundTauntaunRandom": "play Tauntaun random sound",
+  "playSoundMynockRandom": "play Mynock random sound",
+  "playSoundProbotRandom": "play Probot random sound",
+  "playSoundMouseDroidRandom": "play Mouse Droid random sound",
+  "setBackgroundIceberg": "set icebergs background"
 }

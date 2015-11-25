@@ -899,4 +899,14 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Devi raggiungere 20 Droidi-Topo. Usa il blocco \"aggiungi un Droide-Topo\" all'interno dell'evento \"quando raggiungi un Droide-Topo\" per aggiungere due o più Droidi-Topo ogni volta che ne raggiungi uno."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Complimenti, hai aggiunto il codice per far apparire i Droidi-Topo. Puoi passare al prossimo esercizio o provare di nuovo a prendere 20 Droidi-Topo. Più Droidi-Topo aggiungi e più sarà facile superare il livello! (Tieni premuti i tasti freccia della tastiera (o dello schermo) per muoverti più velocemente.)"},
 "failedChangeSettingTimeout":function(d){return "Raggiungi tre piloti dell'Alleanza Ribelle per superare il livello."},
-"failedChangeSettingSettings":function(d){return "Costruisci la tua versione del gioco. Per superare il livello, devi cambiare il tuo droide e impostarne la velocità."}};
+"failedChangeSettingSettings":function(d){return "Costruisci la tua versione del gioco. Per superare il livello, devi cambiare il tuo droide e impostarne la velocità."},
+"extraFunction":function(d){return "You have renamed a function to "+studio_locale.v(d,"funcName")+" but it won't work. You should use the original function name."},
+"localFunction":function(d){return "You have placed "+studio_locale.v(d,"funcName")+" inside another function. You should move "+studio_locale.v(d,"funcName")+" to a different location in your program."},
+"playSoundR2D2Random":function(d){return "play R2-D2 random sound"},
+"playSoundC3PORandom":function(d){return "play C-3PO random sound"},
+"playSoundPufferPigRandom":function(d){return "play Puffer Pig random sound"},
+"playSoundTauntaunRandom":function(d){return "play Tauntaun random sound"},
+"playSoundMynockRandom":function(d){return "play Mynock random sound"},
+"playSoundProbotRandom":function(d){return "play Probot random sound"},
+"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"},
+"setBackgroundIceberg":function(d){return "set icebergs background"}};

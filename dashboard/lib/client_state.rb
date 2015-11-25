@@ -35,19 +35,19 @@ class ClientState
 
   # Returns the progress value for the given level_id, or 0 if there
   # has been no progress.
-  # @param [Integer] level_id
+  # @param [ScriptLevel] script_level
   # return [Integer]
-  def level_progress(level_id)
+  def level_progress(script_level)
     migrate_cookies
-    progress_hash.fetch(level_id.to_s, 0)
+    progress_hash.fetch(script_level.script.name, {}).fetch(script_level.level_id.to_s, 0)
   end
 
   # Sets the progress for the given level_id for the current session.
-  # @param [Integer] level_id
-  # @param [Integer] progress
-  def set_level_progress(level_id, progress_value)
+  # @param [ScriptLevel] script_level
+  # @param [Integer] progress_value
+  def set_level_progress(script_level, progress_value)
     migrate_cookies
-    updated_progress = progress_hash.merge({level_id.to_s => progress_value})
+    updated_progress = progress_hash.deep_merge(script_level.script.name => {script_level.level_id.to_s => progress_value})
     cookies.permanent[:progress] = JSON.generate(updated_progress)
   end
 

@@ -899,4 +899,14 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "20 Egér Droidot kell szerezned. Használd az \"adj hozzá egy Egér Droid\" utasítást a \"ha elkapja az egér droidot\" eseményen belül, hogy még egy vagy két Egér Droidot hozzáadj akkor, amikor elkapsz egyet."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Gratulálok, készítettél kódot Egér Droidok készítésére. Mehetsz a következő feladványra, vagy megpróbálhatsz ismét 20 Egér Droidot elkapni. Próbáld egyszerűbbé tenni több hozzáadásával! (Tartsd lenyomva a nyilakat a billentyűzeten vagy képernyőn a gyorsabb mozgáshoz)"},
 "failedChangeSettingTimeout":function(d){return "Három Lázadót kell elkapnod a továbbjutáshoz."},
-"failedChangeSettingSettings":function(d){return "Készítsd el a saját játékod. Hogy továbbléphess ezen a feladványon, meg kell változtatnod a droidodat és beállítanod a sebességét."}};
+"failedChangeSettingSettings":function(d){return "Készítsd el a saját játékod. Hogy továbbléphess ezen a feladványon, meg kell változtatnod a droidodat és beállítanod a sebességét."},
+"extraFunction":function(d){return "You have renamed a function to "+studio_locale.v(d,"funcName")+" but it won't work. You should use the original function name."},
+"localFunction":function(d){return "You have placed "+studio_locale.v(d,"funcName")+" inside another function. You should move "+studio_locale.v(d,"funcName")+" to a different location in your program."},
+"playSoundR2D2Random":function(d){return "play R2-D2 random sound"},
+"playSoundC3PORandom":function(d){return "play C-3PO random sound"},
+"playSoundPufferPigRandom":function(d){return "play Puffer Pig random sound"},
+"playSoundTauntaunRandom":function(d){return "play Tauntaun random sound"},
+"playSoundMynockRandom":function(d){return "play Mynock random sound"},
+"playSoundProbotRandom":function(d){return "play Probot random sound"},
+"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"},
+"setBackgroundIceberg":function(d){return "set icebergs background"}};

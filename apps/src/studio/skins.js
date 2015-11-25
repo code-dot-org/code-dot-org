@@ -223,6 +223,9 @@ function loadIceAge(skin, assetUrl) {
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
+  skin.spriteHeight = 130;
+  skin.spriteWidth = 130;
+
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
   skin.ProjectileClassNames = [
@@ -276,6 +279,9 @@ function loadIceAge(skin, assetUrl) {
   skin.flower = {
     background: skin.assetUrl('background_flower.jpg'),
   };
+  skin.iceberg = {
+    background: skin.assetUrl('background_ice.jpg'),
+  };
 
   skin.avatarList = ["manny", "sid", "scrat", "diego", "granny"];
 
@@ -309,7 +315,8 @@ function loadIceAge(skin, assetUrl) {
     [msg.setBackgroundTile(), '"tile"'],
     [msg.setBackgroundLeafy(), '"leafy"'],
     [msg.setBackgroundIcy(), '"icy"'],
-    [msg.setBackgroundFlower(), '"flower"']];
+    [msg.setBackgroundFlower(), '"flower"'],
+    [msg.setBackgroundIceberg(), '"iceberg"']];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
@@ -319,6 +326,7 @@ function loadIceAge(skin, assetUrl) {
     [skin.leafy.background, '"leafy"'],
     [skin.icy.background, '"icy"'],
     [skin.flower.background, '"flower"'],
+    [skin.iceberg.background, '"iceberg"'],
     [skin.randomPurpleIcon, RANDOM_VALUE]];
 
   skin.spriteChoices = [
@@ -931,8 +939,47 @@ function loadHoc2015(skin, assetUrl) {
     'applause'
   ];
 
+  skin.soundGroups = {
+    'R2-D2sound': {
+      randomValue: 'R2-D2random',
+      minSuffix: 1,
+      maxSuffix: 9
+    },
+    'C-3POsound': {
+      randomValue: 'C-3POrandom',
+      minSuffix: 1,
+      maxSuffix: 4
+    },
+    'PufferPigSound': {
+      randomValue: 'PufferPigRandom',
+      minSuffix: 1,
+      maxSuffix: 4
+    },
+    'TauntaunSound': {
+      randomValue: 'TauntaunRandom',
+      minSuffix: 1,
+      maxSuffix: 4
+    },
+    'MynockSound': {
+      randomValue: 'MynockRandom',
+      minSuffix: 1,
+      maxSuffix: 3
+    },
+    'ProbotSound': {
+      randomValue: 'ProbotSoundRandom',
+      minSuffix: 1,
+      maxSuffix: 3
+    },
+    'MouseDroidSound': {
+      randomValue: 'MouseDroidSoundRandom',
+      minSuffix: 1,
+      maxSuffix: 3
+    }
+  };
+
   skin.soundChoices = [
     [msg.playSoundRandom(), RANDOM_VALUE],
+    [msg.playSoundR2D2Random(), 'R2-D2random'],
     [msg.playSoundR2D2Sound1(), 'R2-D2sound1'],
     [msg.playSoundR2D2Sound2(), 'R2-D2sound2'],
     [msg.playSoundR2D2Sound3(), 'R2-D2sound3'],
@@ -942,24 +989,30 @@ function loadHoc2015(skin, assetUrl) {
     [msg.playSoundR2D2Sound7(), 'R2-D2sound7'],
     [msg.playSoundR2D2Sound8(), 'R2-D2sound8'],
     [msg.playSoundR2D2Sound9(), 'R2-D2sound9'],
+    [msg.playSoundC3PORandom(), 'C-3POrandom'],
     [msg.playSoundC3POSound1(), 'C-3POsound1'],
     [msg.playSoundC3POSound2(), 'C-3POsound2'],
     [msg.playSoundC3POSound3(), 'C-3POsound3'],
     [msg.playSoundC3POSound4(), 'C-3POsound4'],
+    [msg.playSoundPufferPigRandom(), 'PufferPigRandom'],
     [msg.playSoundPufferPigSound1(), 'PufferPigSound1'],
     [msg.playSoundPufferPigSound2(), 'PufferPigSound2'],
     [msg.playSoundPufferPigSound3(), 'PufferPigSound3'],
     [msg.playSoundPufferPigSound4(), 'PufferPigSound4'],
+    [msg.playSoundTauntaunRandom(), 'TauntaunRandom'],
     [msg.playSoundTauntaunSound1(), 'TauntaunSound1'],
     [msg.playSoundTauntaunSound2(), 'TauntaunSound2'],
     [msg.playSoundTauntaunSound3(), 'TauntaunSound3'],
     [msg.playSoundTauntaunSound4(), 'TauntaunSound4'],
+    [msg.playSoundMynockRandom(), 'MynockRandom'],
     [msg.playSoundMynockSound1(), 'MynockSound1'],
     [msg.playSoundMynockSound2(), 'MynockSound2'],
     [msg.playSoundMynockSound3(), 'MynockSound3'],
+    [msg.playSoundProbotRandom(), 'ProbotRandom'],
     [msg.playSoundProbotSound1(), 'ProbotSound1'],
     [msg.playSoundProbotSound2(), 'ProbotSound2'],
     [msg.playSoundProbotSound3(), 'ProbotSound3'],
+    [msg.playSoundMouseDroidRandom(), 'MouseDroidRandom'],
     [msg.playSoundMouseDroidSound1(), 'MouseDroidSound1'],
     [msg.playSoundMouseDroidSound2(), 'MouseDroidSound2'],
     [msg.playSoundMouseDroidSound3(), 'MouseDroidSound3'],

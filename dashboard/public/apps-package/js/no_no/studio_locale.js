@@ -899,4 +899,14 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Du må få 20 musedroider. Bruk \"legg til en musedroide\"-kommandoen i \"når har fått musedroide\"-eventet for å legge til to eller flere musedroider hver gang du får tak i en."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Gratulerer, du lagt til kode for å lage musedroider. Du kan gå til neste nivå eller prøve på nytt å få 20 musedroider. Prøve å gjøre det enklere ved å legge til flere av dem! (Trykk og hold inne tastene på tastaturet (eller skjermen) for å bevege deg raskere.)"},
 "failedChangeSettingTimeout":function(d){return "Ta tre opprørspiloter for å gå videre."},
-"failedChangeSettingSettings":function(d){return "Gjøre spillet til ditt eget. For å klare denne oppgaven må du endre droiden din og angi hastigheten."}};
+"failedChangeSettingSettings":function(d){return "Gjøre spillet til ditt eget. For å klare denne oppgaven må du endre droiden din og angi hastigheten."},
+"extraFunction":function(d){return "You have renamed a function to "+studio_locale.v(d,"funcName")+" but it won't work. You should use the original function name."},
+"localFunction":function(d){return "You have placed "+studio_locale.v(d,"funcName")+" inside another function. You should move "+studio_locale.v(d,"funcName")+" to a different location in your program."},
+"playSoundR2D2Random":function(d){return "play R2-D2 random sound"},
+"playSoundC3PORandom":function(d){return "play C-3PO random sound"},
+"playSoundPufferPigRandom":function(d){return "play Puffer Pig random sound"},
+"playSoundTauntaunRandom":function(d){return "play Tauntaun random sound"},
+"playSoundMynockRandom":function(d){return "play Mynock random sound"},
+"playSoundProbotRandom":function(d){return "play Probot random sound"},
+"playSoundMouseDroidRandom":function(d){return "play Mouse Droid random sound"},
+"setBackgroundIceberg":function(d){return "set icebergs background"}};
