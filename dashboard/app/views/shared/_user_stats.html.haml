@@ -48,3 +48,9 @@
   %div{style: 'clear: both;'}
   #trophies
     = render partial: 'shared/concept_trophy_block', locals: {concept_progress: progress[:trophies], added_style: 'padding: 10px;'}
+
+- if local_assigns[:async]
+  :javascript
+    //<![CDATA[
+    populateProgress("#{script.name}")
+    //]]>
