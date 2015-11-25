@@ -76,7 +76,10 @@ module SQS
 
                 start_time_sec = Time.now.to_f
                 begin
-                  @handler.handle(messages)
+                  # Use with_connection to return the thread to pool when the operation is done.
+                  ActiveRecord::Base.connection_pool.with_connection do |conn|
+                    @handler.handle(messages)
+                  end
                   @metrics.successes.increment(batch_size)
                 rescue Exception => exception
                   @logger.warn "Failed on batch of size #{batch_size}"
