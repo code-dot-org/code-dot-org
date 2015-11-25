@@ -279,7 +279,7 @@
   map_search_reset: 'Reset'
   map_legend_title: 'Legend'
   map_legend_hoc_events: 'Hour of Code Event'
-  map_legend_cs_tech_jam: 'CS Tech Jam'
+  map_legend_cs_tech_jam: 'Special Event'
 
   meta_tag_og_title: 'The Hour of Code is coming'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
@@ -436,12 +436,12 @@
   events_nav_title: Hour of Code Events
   events_nav_all: All Events
   events_nav_whole_schools: Whole Schools
-  events_nav_special: CS Tech Jams
+  events_nav_special: Special Events
   events_nav_orgs: Organizations
   events_all_old_title: "All @year Hour of Code events"
   events_all_title: All Hour of Code events
   events_whole_school_title: Whole-school Hour of Code events
-  events_special_title: Computer Science Tech Jams
+  events_special_title: Hour of Code Special Events
   events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: event
   events: events

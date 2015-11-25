@@ -143,8 +143,6 @@
   just_did_hoc: '#HourOfCode yeni yaptım - @codeorg u kontrol edin'
   twitter_teach_cs: Neden daha çok okul bilgisayar bilimlerini öğretmiyor? Bunu biz
     çözebiliriz Daha fazla bilgi almak için http://youtu.be/nKIu9yen5nc .
-  learn_hoc_prizes: Eğiticilere sunulan ödüller hakkında <a href="https://hourofcode.com/prizes">daha
-    fazlası</a>.
   learn_hoc: Bir Saat Kodu öğrenin
   beyond_hoc: Bir saat boyunca
   what_gender: Cinsiyetiniz nedir?
@@ -363,6 +361,9 @@
   volunteer_engineer_submission_intro_signup: Bir bilgisayar bilimleri öğrencisi veya
     yazılım profesyonel iseniz lütfen aşağıdaki bilgileri girin. <span class="form-required-field">
     *</span> ile işaretlenmiş alanların doldurulması zorunludur.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Bilgiler gönüllüler haritasındaki öğretmenlerle
     paylaşıldı
   volunteer_engineer_submission_field_name: İsim
@@ -691,6 +692,16 @@
   learn_educator_resources_button: Öğretim kaynakları
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: Eğiticilere sunulan ödüller hakkında <a href="https://hourofcode.com/prizes">daha
+    fazlası</a>.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Yeni Hour of Code eğitimlerimizi deneyin
   hoc2014_try_new_tutorial: Yeni Kodlama Saati öğreticimizi beta halinde deneyin
   hoc2014_try_scrat: Angry Birds, PvZ  ve Scrat
@@ -1388,14 +1399,3 @@
   infinity_shortcode: inf
   playlab_shortcode: oynat
   artist_shortcode: art
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>

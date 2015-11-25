@@ -244,13 +244,13 @@ levels.playlab_1 = utils.extend(levels.dog_hello, {
   ]
 });
 
-levels.iceage_1 = utils.extend(levels.playlab_1, {
+levels.iceage_hello1 = utils.extend(levels.playlab_1, {
   background: 'iceberg',
-  firstSpriteIndex: 0, // manny
+  firstSpriteIndex: 1,
 });
 levels.gumball_hello1 = utils.extend(levels.playlab_1, {
   background: 'dots',
-  firstSpriteIndex: 0, // manny
+  firstSpriteIndex: 0,
 });
 
 // Can you make the dog say something and then have the cat say something afterwards?
@@ -330,13 +330,13 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 });
-levels.iceage_2 = utils.extend(levels.playlab_2, {
+levels.iceage_hello2 = utils.extend(levels.playlab_2, {
   background: 'leafy',
-  firstSpriteIndex: 3, // diego
+  firstSpriteIndex: 0,
 });
 levels.gumball_hello2 = utils.extend(levels.playlab_2, {
   background: 'dots',
-  firstSpriteIndex: 3, // diego
+  firstSpriteIndex: 3,
   defaultEmotion: Emotions.NORMAL,
 });
 
@@ -421,13 +421,13 @@ levels.playlab_3 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ]
 };
-levels.iceage_3 = utils.extend(levels.playlab_3, {
+levels.iceage_move_to_flag = utils.extend(levels.playlab_3, {
   background: 'icy',
-  firstSpriteIndex: 2, // scrat
+  firstSpriteIndex: 2,
 });
 levels.gumball_move_to_flag = utils.extend(levels.playlab_3, {
   background: 'clouds',
-  firstSpriteIndex: 2, // scrat
+  firstSpriteIndex: 2,
 });
 
 
@@ -547,9 +547,9 @@ levels.playlab_4 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 };
-levels.iceage_4 = utils.extend(levels.playlab_4, {
+levels.iceage_move_to_actor = utils.extend(levels.playlab_4, {
   background: 'icy',
-  avatarList: ['scrat', 'granny']
+  avatarList: ['diego', 'manny']
 });
 levels.gumball_move_to_actor = utils.extend(levels.playlab_4, {
   background: 'space',
@@ -606,9 +606,9 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
 });
-levels.iceage_5 = utils.extend(levels.playlab_5, {
+levels.iceage_click_hello = utils.extend(levels.playlab_5, {
   background: 'iceberg',
-  firstSpriteIndex: 1, // sid
+  firstSpriteIndex: 1,
 });
 
 levels.octopus_happy =  {
@@ -759,9 +759,9 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 });
-levels.iceage_6 = utils.extend(levels.playlab_6, {
+levels.iceage_move_events = utils.extend(levels.playlab_6, {
   background: 'tile',
-  firstSpriteIndex: 3, // diego
+  firstSpriteIndex: 2,
   goalOverride: {} // This prevents the override from original playlab from being used
 });
 
@@ -895,13 +895,13 @@ levels.playlab_7 = {
     }]
   ],
 };
-levels.iceage_7 = utils.extend(levels.playlab_7, {
+levels.iceage_repeat = utils.extend(levels.playlab_7, {
   background: 'iceberg',
-  firstSpriteIndex: 1, // sid
+  firstSpriteIndex: 4,
 });
 levels.gumball_repeat = utils.extend(levels.playlab_7, {
   background: 'graffiti',
-  firstSpriteIndex: 4, // sid
+  firstSpriteIndex: 4,
   defaultEmotion: Emotions.NORMAL,
 });
 
@@ -1125,9 +1125,9 @@ levels.playlab_8 = {
     '</next></block>'
 
 };
-levels.iceage_8 = utils.extend(levels.playlab_8, {
+levels.iceage_sound_and_points = utils.extend(levels.playlab_8, {
   background: 'icy',
-  avatarList: ['manny', 'sid']
+  avatarList: ['sid', 'granny']
 });
 levels.gumball_sound_and_points = utils.extend(levels.playlab_8, {
   background: 'wood',
@@ -1318,7 +1318,7 @@ levels.playlab_9 = {
     '</block>'
 };
 
-levels.iceage_9 = utils.extend(levels.playlab_9, {
+levels.iceage_warn_ice_age = utils.extend(levels.playlab_9, {
   background: 'flower',
   toolbox:
     tb(
@@ -1337,7 +1337,7 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
       type: 'studio_setSpriteSpeed',
       titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
   ],
-  avatarList: ['sid', 'granny'],
+  avatarList: ['sid', 'diego'],
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block>' +
     '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
@@ -1482,6 +1482,11 @@ levels.gumball_join_food_fight = {
   ]
 };
 
+levels.iceage_throw_hearts = utils.extend(levels.gumball_join_food_fight, {
+  background: 'icy',
+  avatarList: ['sid', 'granny'],
+});
+
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
 levels.sandbox =  {
   'ideal': Infinity,
@@ -1539,7 +1544,7 @@ levels.sandbox =  {
 levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
 levels.playlab_10 = utils.extend(levels.sandbox, {});
-levels.iceage_10 = utils.extend(levels.playlab_10, {});
+levels.iceage_free_play = utils.extend(levels.playlab_10, {});
 levels.gumball_free_play = utils.extend(levels.playlab_10, {});
 
 // Create your own story! Move around the cat and dog, and make them say things.
