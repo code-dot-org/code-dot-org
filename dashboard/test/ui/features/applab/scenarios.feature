@@ -77,7 +77,7 @@ Feature: App Lab Scenarios
     Then element "#debug-output" has text "text_area1: abc"
 
   @no_safari
-  @no_mobile_safari
+  @no_ios
   @no_ie9
   Scenario: Upload Image Asset
     When I press "designModeButton"
