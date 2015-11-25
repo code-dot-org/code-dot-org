@@ -42,7 +42,9 @@
   var resizeZoom;
   var scrollwheelOption = false;
   var draggableOption = false;
-  var resizeThrottleTimeout;
+  var resizeThrottleTimerId;
+  var resizeThrottleTimeoutMs = 500;
+  var maxHeightPercentage = 0.65;
 
   $(document).ready(function() {
     initializeMap();
@@ -50,8 +52,9 @@
     resizeMap();
 
     $(window).resize(function() {
-      clearTimeout(resizeThrottleTimeout);
-      resizeThrottleTimeout = setTimeout(resizeMap, 500);
+      // Throttle calling of resizeMap
+      clearTimeout(resizeThrottleTimerId);
+      resizeThrottleTimerId = setTimeout(resizeMap, resizeThrottleTimeoutMs);
     });
   });
 
@@ -130,7 +133,7 @@
     var map_center = gmap.getCenter();
 
     // Max height of map is 2/3 of screen height so user can always scroll.
-    var max_height = $(window).innerHeight() * .65; 
+    var max_height = $(window).innerHeight() * maxHeightPercentage; 
 
     var window_aspect_ratio = $(window).innerHeight() / $(window).innerWidth();
     
@@ -146,7 +149,7 @@
       map_height = max_height;
     }
 
-    $('#gmap').height(map_height);
+    $('#gmap').height(Math.round(map_height));
 
     if (map_width < 256 && map_zoom < 3) {
       map_zoom = 0;
