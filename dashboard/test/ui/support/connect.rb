@@ -98,6 +98,7 @@ Before do
     @browser = get_browser
   end
   @browser.manage.delete_all_cookies
+  @browser.execute_script 'sessionStorage.clear()'
 
   debug_cookies(@browser.manage.all_cookies) if @browser
 
