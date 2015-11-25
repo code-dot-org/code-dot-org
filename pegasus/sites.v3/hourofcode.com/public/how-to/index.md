@@ -77,6 +77,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 - “Technology doesn’t always work out the way we want.”
 - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
+**[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
 **What to do if a student finishes early?**
 

@@ -1,4 +1,5 @@
 var rowStyle = require('./rowStyle');
+var elementUtils = require('./elementUtils');
 
 var DefaultButtonPropertyRow = React.createClass({
   handleMakeDefault: function(event) {
@@ -6,6 +7,11 @@ var DefaultButtonPropertyRow = React.createClass({
   },
 
   render: function () {
+    if (elementUtils.getId(document.querySelector('#designModeViz .screen')) ===
+        this.props.screenId) {
+      return false;
+    }
+
     var buttonStyle = {
       paddingTop: '5px',
       paddingBottom: '5px',

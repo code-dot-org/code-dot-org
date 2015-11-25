@@ -2,7 +2,7 @@
 title: Teacher led Hour of Code lesson plans - by grade and subject
 nav: educate_nav
 ---
-# Teacher Led Hour of Code Lesson Plans
+# Teacher-Led Hour of Code Lesson Plans
 
 Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans. 
 
@@ -12,10 +12,10 @@ Now that tens of thousands of educators have tried the Hour of Code, many classr
 **Ages 8 to 16. Programming, Creativity, Web-based.** Students will animate the letters of their name, initials, or favorite word using Scratch!
 
 [Scratch Hide and Seek Game](https://scratch.mit.edu/scratchr2/static/pdfs/help/Hide-and-Seek-Guide.pdf)  
-**Ages 8 to 16. Programming, Creativity, Web-based. Students will gain experience with coding as they make a hide-and-seek game.**
+**Ages 8 to 16. Programming, Creativity, Web-based.** Students will gain experience with coding as they make a hide-and-seek game.
 
 [Scratch Dance, Dance, Dance](https://scratch.mit.edu/scratchr2/static/pdfs/help/DanceGuide.pdf)  
-**Ages 8 to 16. Programming, Creativity, Web-based. Participants will create and code an animated dance scene.**
+**Ages 8 to 16. Programming, Creativity, Web-based.** Participants will create and code an animated dance scene.
 
 [ScratchJr: Can I Make a Spooky Forest?](https://pbs.app.box.com/s/y9y4htjhpupyapg8q4uuzlkbaj7nvojp/1/5208929949/42204150029/1)  
 **Ages 5-9. Art, Storytelling, Sequence, unplugged.** Students will learn more features of ScratchJr by creating a spooky forest with multiple characters!
@@ -48,7 +48,7 @@ This activity builds off of the classic game of Rock/Paper/Scissors, known to mo
 [Kodable fuzzFamily Frenzy](https://www.kodable.com/hour-of-code/lessons)  
 **Ages 5-9. Seqence, Algorithms, Programming, unplugged.** Students will learn basic programing language and use math concepts to move a “robot” forward, spin, and jump.
 
-[Google CS First](www.cs-first.com/hocteachers)  
+[Google CS First](http://cs-first.com/hocteachers)  
 **Ages 9-14 Sequence, Programming, Art, Storytelling, web-based.** Students use Scratch to code a story about being lost at sea. 
 
 [Bitsbox Coding + Math](https://bitsbox.com/hocprint.html)  
@@ -67,10 +67,10 @@ This activity builds off of the classic game of Rock/Paper/Scissors, known to mo
 **Ages 8 to 16. Programming, Creativity, Web-based.** Students will animate the letters of their name, initials, or favorite word using Scratch!
 
 [Scratch Hide and Seek Game](https://scratch.mit.edu/scratchr2/static/pdfs/help/Hide-and-Seek-Guide.pdf)  
-**Ages 8 to 16. Programming, Creativity, Web-based. Students will gain experience with coding as they make a hide-and-seek game.**
+**Ages 8 to 16. Programming, Creativity, Web-based.** Students will gain experience with coding as they make a hide-and-seek game.
 
 [Scratch Dance, Dance, Dance](https://scratch.mit.edu/scratchr2/static/pdfs/help/DanceGuide.pdf)  
-**Ages 8 to 16. Programming, Creativity, Web-based. Participants will create and code an animated dance scene.**
+**Ages 8 to 16. Programming, Creativity, Web-based.** Participants will create and code an animated dance scene.
 
 [STEM Projects](https://www.tynker.com/hour-of-code/tynker-stem-teacher-guide.pdf)   
 **Ages 5-18. Programming, Science (Ecology), Science (Space), web-based.** Code and animate a Solar System simulation, an interactive ecological pyramid, a working analog clock, and more. 
@@ -84,7 +84,7 @@ This activity builds off of the classic game of Rock/Paper/Scissors, known to mo
 [Climate Science](https://app.vidcode.io/hourofcode/science-teacher-guide)  
 **Ages 12-16. Science (Climate), Science (Environment), unplugged.** Students draw a picture, and take turns giving the class steps to recreate their drawing.
 
-[Google CS First](www.cs-first.com/hocteachers)  
+[Google CS First](http://cs-first.com/hocteachers)  
 **Ages 9-14 Sequence, Programming, Art, Storytelling, web-based.** Students use Scratch to code a story about being lost at sea. 
 
 [Arduino Activity](https://csedweek.org/csteacher/arduino.pdf)  
@@ -121,10 +121,10 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 **Ages 8 to 16. Programming, Creativity, Web-based.** Students will animate the letters of their name, initials, or favorite word using Scratch!
 
 [Scratch Hide and Seek Game](https://scratch.mit.edu/scratchr2/static/pdfs/help/Hide-and-Seek-Guide.pdf)  
-**Ages 8 to 16. Programming, Creativity, Web-based. Students will gain experience with coding as they make a hide-and-seek game.**
+**Ages 8 to 16. Programming, Creativity, Web-based.** Students will gain experience with coding as they make a hide-and-seek game.
 
 [Scratch Dance, Dance, Dance](https://scratch.mit.edu/scratchr2/static/pdfs/help/DanceGuide.pdf)  
-**Ages 8 to 16. Programming, Creativity, Web-based. Participants will create and code an animated dance scene.**
+**Ages 8 to 16. Programming, Creativity, Web-based.** Participants will create and code an animated dance scene.
 
 [Looking at Data with Splunk](https://www.dropbox.com/s/46ed5ilhvsam8ci/SplunkLessonPlan.pdf?dl=1)  
 **Ages 14-18. Math (data analysis), web-based.** Students will analyze the data from a theoretical game to find levels which are too easy of difficult.

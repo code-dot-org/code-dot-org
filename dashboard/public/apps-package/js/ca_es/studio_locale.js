@@ -900,6 +900,8 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)"},
 "failedChangeSettingTimeout":function(d){return "Arriba a tres Pilots Rebels per seguir endavant."},
 "failedChangeSettingSettings":function(d){return "Fes el joc al teu gust. Per passar aquest nivell has de canviar el teu droide i la seva velocitat."},
+"extraFunction":function(d){return "You have renamed a function to "+studio_locale.v(d,"funcName")+" but it won't work. You should use the original function name."},
+"localFunction":function(d){return "You have placed "+studio_locale.v(d,"funcName")+" inside another function. You should move "+studio_locale.v(d,"funcName")+" to a different location in your program."},
 "playSoundR2D2Random":function(d){return "play R2-D2 random sound"},
 "playSoundC3PORandom":function(d){return "play C-3PO random sound"},
 "playSoundPufferPigRandom":function(d){return "play Puffer Pig random sound"},
