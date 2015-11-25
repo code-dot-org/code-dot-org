@@ -279,7 +279,7 @@ function loadIceAge(skin, assetUrl) {
   skin.flower = {
     background: skin.assetUrl('background_flower.jpg'),
   };
-  skin.ice = {
+  skin.iceberg = {
     background: skin.assetUrl('background_ice.jpg'),
   };
 
@@ -316,7 +316,7 @@ function loadIceAge(skin, assetUrl) {
     [msg.setBackgroundLeafy(), '"leafy"'],
     [msg.setBackgroundIcy(), '"icy"'],
     [msg.setBackgroundFlower(), '"flower"'],
-    [msg.setBackgroundIce(), '"ice"']];
+    [msg.setBackgroundIceberg(), '"iceberg"']];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
@@ -326,7 +326,7 @@ function loadIceAge(skin, assetUrl) {
     [skin.leafy.background, '"leafy"'],
     [skin.icy.background, '"icy"'],
     [skin.flower.background, '"flower"'],
-    [skin.ice.background, '"ice"'],
+    [skin.iceberg.background, '"iceberg"'],
     [skin.randomPurpleIcon, RANDOM_VALUE]];
 
   skin.spriteChoices = [
