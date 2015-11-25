@@ -74,16 +74,10 @@ dashboard.clientState.sourceForLevel = function (scriptName, levelId, timestamp)
  * @param {string} source
  */
 dashboard.clientState.writeSourceForLevel = function (scriptName, levelId, timestamp, source) {
-  try {
-    sessionStorage.setItem(createKey(scriptName, levelId, 'source'), JSON.stringify({
-      source: source,
-      timestamp: timestamp
-    }));
-  } catch (e) {
-    if (e.name !== "QuotaExceededError") {
-      throw e;
-    }
-  }
+  sessionStorage.safelySetItem(createKey(scriptName, levelId, 'source'), JSON.stringify({
+    source: source,
+    timestamp: timestamp
+  }));
 };
 
 /**
@@ -209,15 +203,12 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
   try {
     var elementSeen = JSON.parse(elementSeenJson);
     elementSeen[visualElementId] = true;
-    sessionStorage.setItem(visualElementType, JSON.stringify(elementSeen));
+    sessionStorage.safelySetItem(visualElementType, JSON.stringify(elementSeen));
   } catch (e) {
-    if (e.name === "QuotaExceededError") {
-      return ;
-    }
     //Something went wrong parsing the json. Blow it up and just put in the new callout
     var elementSeen = {};
     elementSeen[visualElementId] = true;
-    sessionStorage.setItem(visualElementType, JSON.stringify(elementSeen));
+    sessionStorage.safelySetItem(visualElementType, JSON.stringify(elementSeen));
   }
 }
 
@@ -246,5 +237,18 @@ function hasSeenVisualElement(visualElementType, visualElementId) {
 function createKey(scriptName, levelId, prefix) {
   return (prefix ? prefix + '_' : '') + scriptName + '_' + levelId;
 }
+
+/**
+ * Don't throw storage errors in Safari private browsing mode.
+ */
+Storage.prototype.safelySetItem = function () {
+  try {
+    this.setItem.apply(this, arguments);
+  } catch (e) {
+    if (e.name !== "QuotaExceededError") {
+      throw e;
+    }
+  }
+};
 
 })(window, $);
