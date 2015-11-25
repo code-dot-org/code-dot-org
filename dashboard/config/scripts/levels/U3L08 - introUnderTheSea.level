@@ -129,7 +129,7 @@
     "encrypted_examples": "QxlHOlEoY+tVdqAu1SEqEILYQyF/uQxfWeHDjPqJjBmURm/NXjWtYRWTuh8v\nti2W\n",
     "embed": "false",
     "instructions": "Add an extra fish, starfish, and piece of sea grass to the image. Look at, but don't change, the functions that create them. (Click to see full instructions)",
-    "markdown_instructions": "# Under the Sea!\r\n\r\nIn the next several challenges you will be working to improve **one program** that draws a simple underwater scene.  Each time you click Finish, your code will be pulled forward into the next challenge and you'll get new instructions telling you what to add.\r\n\r\n# Do this:\r\n\r\n* **Read through ** the program provided to get a basic understanding of what it does.\r\n* **Add function calls ** to the top of the program so that **two fish, two starfish, and two pieces of sea grass** appear somewhere in the scene.\r\n* **Continue ** to the next level, **where your code will be waiting for you.**\r\n\r\n![](https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35 PM.png)",
+    "markdown_instructions": "# Under the Sea!\r\n\r\nIn the next several challenges you will be working to improve **one program** that draws a simple underwater scene.  Each time you click Finish, your code will be pulled forward into the next challenge and you'll get new instructions telling you what to add.\r\n\r\n# Do This:\r\n\r\n* **Read through ** the program provided to get a basic understanding of what it does.\r\n* **Add function calls ** to the top of the program so that **two fish, two starfish, and two pieces of sea grass** appear somewhere in the scene.\r\n* **Continue ** to the next level, **where your code will be waiting for you.**\r\n\r\n![](https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -158,7 +158,9 @@
     "hide_view_data_button": "true",
     "submittable": "false",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

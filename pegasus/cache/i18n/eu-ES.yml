@@ -11,8 +11,8 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Informatika irakaslea zara? Ikusi Informatikaren Ikaskuntzaren
     Asteko (CSEdWeek) beste baliabide batzuk</a>'
-  n_have_learned_an_hoc: "<h1>Saiatu egiten</h1><h2>Kode Ordua.</h2><h3>#-k egin dute
-    jada</h3>"
+  n_have_learned_an_hoc: <h1>Saiatu egiten</h1><h2>Kode Ordua.</h2><h3>#-k egin dute
+    jada</h3>
   anybody_can_learn: Edozeinek ikasi dezake.
   learn_now: Ikasi orain
   petition_message: Edozein eskoletako edozein ikaslek konputazio zientziak ikasteko
@@ -37,8 +37,8 @@
   hoc2014_everyone: Guztiok
   hoc2014_support: Babestu &#x25BE;
   hoc2014_whatishoc: Zer da Kode Ordua?
-  csedweek_map_header: "# CSEdWeek Informatikaren Ikaskuntzaren Astea / Kode Orduaren
-    ekitaldiak munduan zehar"
+  csedweek_map_header: '# CSEdWeek Informatikaren Ikaskuntzaren Astea / Kode Orduaren
+    ekitaldiak munduan zehar'
   csedweek_map_signup: Erregistratu zure ekitaldia
   csedweek_map_search_placeholder: Bilatu Kode Orduaren ekitaldiak
   csedweek_map_search_search: Bilatu
@@ -67,7 +67,7 @@
     baldin-orduan aginduak, eta oinarrizko algoritmoak.
   all_ages: Adin guztiak
   beginner: Hasierako maila
-  n_participants: "# parte hartzaile"
+  n_participants: '# parte hartzaile'
   go: Joan
   thank_you_: Eskerrik asko!
   congratulations: Zorionak!
@@ -118,7 +118,7 @@
   beyond_an_hour: Kode ordutik harago
   get_started: Hasiera
   i_agree: Ados
-  participant_select: "- Aukeratu -"
+  participant_select: '- Aukeratu -'
   participant_student: Ikaslea
   participant_parent: Gurasoa
   participant_educator: Hezitzailea
@@ -139,7 +139,7 @@
   learn_next_level: Jarraitu hurrengo mailara
   learn_online: Probatu beste online kurtsoak
   learn_classes: Bilatu gertuko klaseak
-  hoc_is_here: "#KodeOrdua hemen dago - probatu! @codeorg"
+  hoc_is_here: '#KodeOrdua hemen dago - probatu! @codeorg'
   just_did_hoc: 'Oraintxe #KodeOrdua egin dut - Probatu! @codeorg'
   twitter_teach_cs: Zergatik ez dute ikastetxe gehiago informatika erakusten? Hau
     konpondu dezakegu. http://youtu.be/nKIu9yen5nc. Gehiago ikasteko ikusi http://code.org/.
@@ -152,12 +152,12 @@
   boy: Mutila
   help_recruit_coders: Lagundu kodegiel gehiago zure talderako biltzen!
   help_recruit: Kodegile gehaigo biltzen lagundu!
-  lines_of_code: "<b># KODE LERRO</b> BAINO GEHIAGO IDATZIAK GAUR ARTE."
-  lines_of_code_alt: "<b>#</b> KODE LERRO IKASLEEK IDATZIAK"
+  lines_of_code: <b># KODE LERRO</b> BAINO GEHIAGO IDATZIAK GAUR ARTE.
+  lines_of_code_alt: <b>#</b> KODE LERRO IKASLEEK IDATZIAK
   who_has_done_hoc: 'Zeinek egin du #KodeOrdua? @codeorg'
   hoc_leaderboards: Kode orduko buruak
-  students_and_lines: "%{students} ikaslek egin dute ordubete kode eta students have
-    done the Hour of  %{lines} kode lerro idatzi dituzte."
+  students_and_lines: '%{students} ikaslek egin dute ordubete kode eta students have
+    done the Hour of  %{lines} kode lerro idatzi dituzte.'
   start_hoc: Hasi Kode Ordua orain
   contact_form_topic_press: Prentsa / media ( elkarrizketa edo hitz konpromezua)
   stats_nina: Egunez egun emaitza berdinak lortu ziren&mdash; %100 konpromisoa." -
@@ -169,7 +169,7 @@
   studiobar_title: Ikertu <a href='http://studio.code.org'>Code Studio</a>
   studiobar_title_nolink: Code Studio miatu
   studiobar_elementary_title: Oinarrizko ikastaroak
-  studiobar_elementary_body: "&#8209;rentzako gure hiru ikastaro berriak"
+  studiobar_elementary_body: '&#8209;rentzako gure hiru ikastaro berriak'
   studiobar_hoc_title: Programatzeko ordua
   studiobar_hoc_body: Angry Birds-ekin programatzen ikasi
   studiobar_flappy_title: Flappy Code
@@ -195,18 +195,18 @@
     &ldquo;Gure txikiak &mdash; neskak barne &mdash;
     informatika ikasteko aukera behar dute.&rdquo;
     Sheryl, Facebook-eko COO-a
-  homepage_hero_text_satya: "&ldquo;Informatikak munduko aukera hoberenerak eskura
-    jartzen dizkizu.&rdquo; Satya, CEO of Microsoft"
-  homepage_hero_text_bosh: "&ldquo;Programatzen baduzu zure bizitzaren norabidea aukeratu
-    ahalko duzu.&rdquo; Chris Bosh"
-  homepage_hero_text_student1: "&ldquo;Gaitasun hauek nire etorkizuna aldatu dute.
-    Horrez gain, oso dibertigarria da.&rdquo;Luna, 7. maila"
-  homepage_hero_text_student2: "&ldquo;Ikusi gabe nengoen nire umeak horren pozik
-    ikasteagatik.&rdquo; Michael, irakaslea"
-  homepage_hero_text_student3: "&ldquo;Ezin duzu jakin programazioa gustukoa duzun
-    ala ez saiatu baino lehen.&rdquo; Jackson, 6. maila"
-  homepage_hero_text_student4: "&ldquo;Programazioari esker gauza asko egin ditzakezu.&rdquo;
-    Maya, 2. maila"
+  homepage_hero_text_satya: '&ldquo;Informatikak munduko aukera hoberenerak eskura
+    jartzen dizkizu.&rdquo; Satya, CEO of Microsoft'
+  homepage_hero_text_bosh: '&ldquo;Programatzen baduzu zure bizitzaren norabidea aukeratu
+    ahalko duzu.&rdquo; Chris Bosh'
+  homepage_hero_text_student1: '&ldquo;Gaitasun hauek nire etorkizuna aldatu dute.
+    Horrez gain, oso dibertigarria da.&rdquo;Luna, 7. maila'
+  homepage_hero_text_student2: '&ldquo;Ikusi gabe nengoen nire umeak horren pozik
+    ikasteagatik.&rdquo; Michael, irakaslea'
+  homepage_hero_text_student3: '&ldquo;Ezin duzu jakin programazioa gustukoa duzun
+    ala ez saiatu baino lehen.&rdquo; Jackson, 6. maila'
+  homepage_hero_text_student4: '&ldquo;Programazioari esker gauza asko egin ditzakezu.&rdquo;
+    Maya, 2. maila'
   homepage_hero_text_student5: "&ldquo;Programazioa ez da beste batentzat. Zuretzat
     da, hemen eta orain.&rdquo; \nGeraldo, irakasle\n"
   homepage_hero_text_teacher1: "&ldquo;Programatzeak sormena, inspirazioa eta berrikuntza
@@ -216,7 +216,7 @@
     &ldquo;Programa honek lortu zuen nire ikasleen %100 interesatuta, konprometituta eta partizipatibo egotea.&rdquo;
     Adam, irakasle
   homepage_hero_text_stat_loc: 2.5 milioi neskak eman dute izena Code Studio-n, ikasteko
-  homepage_hero_text_stat_students: "#student_count ikasle kopurua Code Studio-n"
+  homepage_hero_text_stat_students: '#student_count ikasle kopurua Code Studio-n'
   homepage_hero_text_stat_served: 'Kode Ordua: #served artatuak'
   homepage_slot_text_hoc: Programatzeko ordua
   homepage_slot_text_frozen: Frozen Anna eta Elsarekin
@@ -226,7 +226,7 @@
   homepage_slot_text_shop: Denda
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_hoc: Kode Ordu bana ikasle guztientzat.
-  homepage_action_text_num_served: "# kopurua"
+  homepage_action_text_num_served: '# kopurua'
   homepage_action_text_join_us: Elkartu gurekin
   homepage_action_text_sign_up: Eman izena
   homepage_action_text_try_it: Saiatu
@@ -250,7 +250,7 @@
   homepage_slot_text_blurb_hoc: Edonork ikasi dezake. Gaurtik hasi
   homepage_slot_text_link_hoc: Probatu Kode Ordua
   homepage_slot_text_link_host: Bultzatu ezazu "kodigoaren ordua"
-  homepage_slot_text_link_hocserved: "# kopurua"
+  homepage_slot_text_link_hocserved: '# kopurua'
   homepage_solot_text_link_volunteer: Kodearen Ordurako boluntarioa
   homepage_slot_text_title_students: Ikasleak
   homepage_slot_text_blurb_students: Aztertu gure gida-liburu guztiak
@@ -343,9 +343,9 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 irakaslek beren ikasgeletan
     Kode orduan parte hartuko dute aurten, 2015, Abe 7-13 artean. Zure laguntza behar
     dute! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} irakaslek informatika
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} irakaslek informatika
     gustuko duten boluntario gogotsuak behar dituzte Kode Orduan laguntzeko, abenduan.<br>%{num_volunteers}
-    boluntariok eman dute izena. Animatu zu ere!"
+    boluntariok eman dute izena. Animatu zu ere!'
   volunteer_engineer_submission_intro_background: Kode ordua ordubeteko informatikarako
     sarrera lortzeko mugimendu global bat da eta 180 herrialdetan baino gehiagotan
     hamarnaka milioi ikaslerengana heltzen da. Mesedez, Konputazio zientzien hezkuntza
@@ -550,11 +550,11 @@
   dashboard_sections_name: Atal izena
   dashboard_sections_choose_secret: Zure ikasleei kontuak eskaini nahi badiezu, aukeratu
     mota sekretu bat <b>hitza</b> edo <b>irudia</b> atal horrentzako.
-  dashboard_sections_secret_word: "<b> Hitza </b> uzten dizu hitz sekretu bat ezartzen
-    ikasle bakoitzarentzako."
-  dashboard_sections_secret_picture: "<b> irudia </b> ahalbidetzen dizu irudi sekretu
+  dashboard_sections_secret_word: <b> Hitza </b> uzten dizu hitz sekretu bat ezartzen
+    ikasle bakoitzarentzako.
+  dashboard_sections_secret_picture: <b> irudia </b> ahalbidetzen dizu irudi sekretu
     bat ezartzen ikasle bakoitzarentzako, egokia ikasle gazteentzaok zeintzuk oraindik
-    ezin dute teklatuarekin idatzi."
+    ezin dute teklatuarekin idatzi.
   dashboard_sections_secret_none: Ikasle bakoitzak bere kontua administratzea nahi
     baduzu, bakoitzak bere pasahitza aukeratzea adibidez, aukeratu mota sekretu bat
     <b> ezer </b> erabiliz.
@@ -674,10 +674,10 @@
   dashboard_faq_k5: K-5 askoetan galdeturiko galderak
   dashboard_announcements: Berriak
   dashboard_announce_view_all: Guztiak ikusi
-  dashboard_announce_hoc: "<b>2015eko Urriak 15 </b>- Kode Ordua iristen hari da &mdash;
+  dashboard_announce_hoc: <b>2015eko Urriak 15 </b>- Kode Ordua iristen hari da &mdash;
     antolaketa partaide guztiak opari txartel bat jasoko dute Amazon.com edo Microsoft's
     Windows Strore-en berain lanagit esker moduan. Parte hartu mundu osoko klasean
-    Abenduan 7-13 tartean."
+    Abenduan 7-13 tartean.
   code_hoc_coming: Kode-ordua iritsi da-Abenduak 8-14!
   code_sign_up: Izena eman CS Hezkuntzaren Astean parte hartzeko
   learn_more: Gehiago ikasi
@@ -1397,6 +1397,9 @@
   infinity_shortcode: inf
   playlab_shortcode: hasi
   artist_shortcode: art
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
     to help during your Hour of Code
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher

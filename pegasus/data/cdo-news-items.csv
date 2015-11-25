@@ -1,13 +1,14 @@
 heading_s,url_s,date_s,publication_s,tag_s*,site_s*
-,,,,,
-Microsoft Is Doing Something Really Smart With Minecraft,http://time.com/4116041/minecraft-hour-code-coding/,11/17/2015,TIME,news,all
-Microsoft CEO: Why Minecraft is key to getting girls involved in computer science,http://www.geekwire.com/2015/microsoft-ceo-why-minecraft-is-key-to-getting-girls-involved-in-computer-science/,11/16/2015,GeekWire,csnews,all
-Youth Coding Event Gets a Hand From Minecraft,http://mobile.nytimes.com/blogs/bits/2015/11/16/youth-coding-event-gets-a-hand-from-minecraft/?referer=http://news.google.com/,11/16/2015,New York Times,news,all
+A full week of CS professional development this summer,http://cspdweek.org,11/24/2015,CSPDWeek,csnews,csedweek.org
+See a full list of Hour of Code tutorials by third parties,https://code.org/educate/allhoc,11/24/2015,Code.org,news,csedweek.org
+Microsoft Is Doing Something Really Smart With Minecraft,http://time.com/4116041/minecraft-hour-code-coding/,11/17/2015,TIME,news,code.org
+Microsoft CEO: Why Minecraft is key to getting girls involved in computer science,http://www.geekwire.com/2015/microsoft-ceo-why-minecraft-is-key-to-getting-girls-involved-in-computer-science/,11/16/2015,GeekWire,csnews,code.org
+Youth Coding Event Gets a Hand From Minecraft,http://mobile.nytimes.com/blogs/bits/2015/11/16/youth-coding-event-gets-a-hand-from-minecraft/?referer=http://news.google.com/,11/16/2015,New York Times,news,code.org
 "Microsoft, Code.org Will Use Minecraft to Teach Kids Programming",http://www.bloomberg.com/news/articles/2015-11-16/microsoft-code-org-will-use-minecraft-to-teach-kids-programming,11/16/2015,Bloomberg,news,all
-"Microsoft and Code.org team up to bring ""Minecraft"" to the Hour of Code",https://code.org/mc-announcement,11/17/2015,Code.org,announce,all
+"Microsoft and Code.org team up to bring ""Minecraft"" to the Hour of Code",https://code.org/mc-announcement,11/17/2015,Code.org,announce,code.org
 Hour of Code to feature Star Wars: The Force Awakens,http://www.usatoday.com/story/tech/2015/11/09/codeorg-hour-of-code-star-wars-the-force-awakens-disney-lucasfilms/75304288/,11/9/2015,USA Today,news,all
-Star Wars Characters Will Now Teach Your Kids To Code,http://www.wired.com/2015/11/star-wars-characters-will-now-teach-your-kids-to-code/,11/9/2015,Wired,news,all
-"Code.org, Disney and Star Wars launch Hour of Code ""build-your-own-game"" tutorial to broaden computer science participation",http://code.org/star-wars-announcement,11/9/2015,Code.org,announce,all
+Star Wars Characters Will Now Teach Your Kids To Code,http://www.wired.com/2015/11/star-wars-characters-will-now-teach-your-kids-to-code/,11/9/2015,Wired,news,code.org
+"Code.org, Disney and Star Wars launch Hour of Code ""build-your-own-game"" tutorial to broaden computer science participation",http://code.org/star-wars-announcement,11/9/2015,Code.org,announce,code.org
 "Amazon, Apple and Microsoft will give gift cards to every Hour of Code organizer",http://blog.code.org/post/131563100773/amazon-apple-and-microsoft-will-give-gift-cards,10/20/2015,Code.org,announce,all
 Seeking volunteers for the best Hour of Code ever,http://blog.code.org/post/131231618148/the-best-hour-of-code-ever-is-coming,10/15/2015,Code.org,announce,all
 Computer science is finally included in “STEM”,http://blog.code.org/post/130358071518/computer-science-is-finally-included-in-stem,10/2/2015,Code.org,announce,all

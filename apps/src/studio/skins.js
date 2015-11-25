@@ -223,6 +223,9 @@ function loadIceAge(skin, assetUrl) {
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
+  skin.spriteHeight = 130;
+  skin.spriteWidth = 130;
+
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
   skin.ProjectileClassNames = [
@@ -276,6 +279,9 @@ function loadIceAge(skin, assetUrl) {
   skin.flower = {
     background: skin.assetUrl('background_flower.jpg'),
   };
+  skin.iceberg = {
+    background: skin.assetUrl('background_ice.jpg'),
+  };
 
   skin.avatarList = ["manny", "sid", "scrat", "diego", "granny"];
 
@@ -309,7 +315,8 @@ function loadIceAge(skin, assetUrl) {
     [msg.setBackgroundTile(), '"tile"'],
     [msg.setBackgroundLeafy(), '"leafy"'],
     [msg.setBackgroundIcy(), '"icy"'],
-    [msg.setBackgroundFlower(), '"flower"']];
+    [msg.setBackgroundFlower(), '"flower"'],
+    [msg.setBackgroundIceberg(), '"iceberg"']];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
@@ -319,6 +326,7 @@ function loadIceAge(skin, assetUrl) {
     [skin.leafy.background, '"leafy"'],
     [skin.icy.background, '"icy"'],
     [skin.flower.background, '"flower"'],
+    [skin.iceberg.background, '"iceberg"'],
     [skin.randomPurpleIcon, RANDOM_VALUE]];
 
   skin.spriteChoices = [
