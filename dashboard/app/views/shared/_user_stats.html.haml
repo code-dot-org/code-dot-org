@@ -18,7 +18,9 @@
       .games
         - stage[:levels].each do |level|
           .level
-            - status = level_progress[level[:id]].try(:[], :status) || 'not_tried'
+            - p = level_progress[level[:id]]
+            - status = p.try(:[], :status) || 'not_tried'
+            - result = p.try(:[], :result) || 0
             - if current_level_id == "#{level[:id]}"
               - puzzle_outer_class = 'puzzle_outer_current'
             - elsif level[:kind] == 'assessment'
@@ -31,7 +33,7 @@
                 - link += "?user_id=#{user.id}"
               - if @section
                 - link += "&section_id=#{@section.id}"
-              %a.level_link{href: link, class: status}
+              %a.level_link{href: link, class: status, data: {level: level[:id], result: result}}
                 - if level[:kind] == 'unplugged'
                   %span.puzzle-named
                     = level[:title]
