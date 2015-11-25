@@ -31,7 +31,7 @@ class QueueProcessorManager
       processor.start
       @processors << processor
     end
-    return metrics_map, configs
+    return metrics_map
   end
 
   # Stop all of the queue processors in parallel.
@@ -60,7 +60,7 @@ class QueueProcessorManager
     update_interval = (ARGV.size >= 2) ? ARGV[1].to_i : 10
     update_interval = 1 if update_interval < 1  # Don't update too quickly.
 
-    metrics_map, configs = manager.start_queue_processors(json)
+    metrics_map = manager.start_queue_processors(json)
 
     # Run until SIGINT is received.
     stopping = false
