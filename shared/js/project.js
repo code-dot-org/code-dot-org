@@ -235,8 +235,8 @@ var projects = module.exports = {
     }
   },
   setTitle: function(newName) {
-    if (newName) {
-      document.title = newName + ' - App Lab';
+    if (newName && appOptions.gameDisplayName) {
+      document.title = newName + ' - ' + appOptions.gameDisplayName;
     }
   },
 
