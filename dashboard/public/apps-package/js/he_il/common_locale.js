@@ -274,7 +274,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_mathMin_param0_description":function(d){return "One or more numbers to compare."},
 "dropletBlock_mathMin_signatureOverride":function(d){return "Math.min(n1, n2, ..., nX)"},
 "dropletBlock_mathRandom_description":function(d){return "מחזיר מספר אקראי הנע בין 0 (כולל) עד 1 (לא כולל)"},
-"dropletBlock_mathRandom_signatureOverride":function(d){return "Math.random()"},
+"dropletBlock_mathRandom_signatureOverride":function(d){return "בחר.אקראי()"},
 "dropletBlock_mathRound_description":function(d){return "Round to the nearest integer"},
 "dropletBlock_mathRound_param0":function(d){return "x"},
 "dropletBlock_mathRound_param0_description":function(d){return "An arbitrary number."},

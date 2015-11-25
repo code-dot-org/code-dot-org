@@ -114,7 +114,6 @@ zh-TW:
   hoc_is_here: '#HourOfCode 已經開始了，讓我們一起試試吧！ @codeorg'
   just_did_hoc: '我已經完成了 #HourOfCode - 快來看看吧！ @codeorg'
   twitter_teach_cs: 為什麼沒有更多的學校教計算機科學？我們可以解決這個問題。HTTP://youtu.be/nKIu9yen5nc。請瀏覽 http://code.org/ 了解更多。
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">知道更多</a> 關於教師的獎勵。'
   learn_hoc: 學習一小時的程式設計
   beyond_hoc: 一小時後的學習課程
   what_gender: 您的性別是？
@@ -259,7 +258,7 @@ zh-TW:
   starwars_javascript_specs: 英文 | 瀏覽器 | 11歲以上
   starwars_javascript_start_button: 快來試試
   starwars_blocks_title: 程式積木
-  starwars_blocks_description: 使用拖拉模塊
+  starwars_blocks_description: 使用拖拉區塊
   starwars_blocks_specs: 多國語言(增加中) | 瀏覽器, 智慧手機, 平板 |年齡6-10歲
   starwars_blocks_start_button: 快來試試
   starwars_watch_videos: 在開始始，先看一些激發靈感的影片
@@ -278,8 +277,9 @@ zh-TW:
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} 教師想要參與一個小時程式課程的<br>%{num_volunteers} 志工 註冊 加入他們'
   volunteer_engineer_submission_intro_background: Hour of Code是在教電腦科學的全球性的運動，在超過180個以上的國家有好幾千萬個學生響應。請在12/7-12/13的電腦科學教學週 (CSEdWeek) 一起參與。
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: '如果你是在學習電腦科學的學生或是軟體的專業人士，請輸入下列資訊。此為必填: <span class="form-required-field">*</span>'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: 在志工地圖上與老師共用的資訊
   volunteer_engineer_submission_field_name: 你的名字
   volunteer_engineer_submission_field_name_placeholder: 全名
@@ -526,6 +526,11 @@ zh-TW:
   learn_educator_resources_description: 學習如何教導一個小時的程式碼課程
   learn_educator_resources_button: 教育資源
   learn_are_you_educator: '你是教育工作者嗎？學習<a href="http://hourofcode.com/resources/how-to">如何教導一個小時的程式碼課程</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">知道更多</a> 關於教師的獎勵。'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: 試試我們新的Hour of Code活動教案
   hoc2014_try_new_tutorial: 試試全新Beta版的一小時程式碼教程
   hoc2014_try_scrat: 憤怒的小鳥，PvZ 和Scrat

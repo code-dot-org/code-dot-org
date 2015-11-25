@@ -589,31 +589,31 @@ fr:
         text: "Cette leçon s'appelle planter une graine et elle va nous aider à comprendre les algorithmes. Les algorithmes sont des instructions spécifiques qui expliquent l'ordre dans lequel il faut faire quelque chose. Même certains gestes quotidiens comme manger son petit déjeuner ou se brosser les dents sont des algorithmes qui nécessitent plusieurs petites étapes afin d'aller jusqu'au bout de la tâche."
       2:
         image: notes/C1_planting_seed_2.png
-        text: "Les ordinateurs peuvent être très intelligents mais ils ne peuvent vous comprendre que si vous leur dites exactement ce que vous voulez étape par étape. Ce qui est génial avec les algorithmes c'est que si vous suivez les instructions dans l'ordre, vous pouvez faire quelque chose que vous n'auriez pas su faire avant. C'est comme suivre une recette."
+        text: "Les ordinateurs peuvent être très intelligents mais ils ne peuvent te comprendre que si tu leur dis exactement ce que tu veux étape par étape. Ce qui est génial avec les algorithmes c'est que si tu suis les instructions dans l'ordre, tu peux faire quelque chose que tu n'aurez pas su faire avant. C'est comme suivre une recette."
       3:
         image: notes/C1_planting_seed_3.png
         text: "Aujourd'hui nous allons planter nos propres graines à l'aide d'un algorithme. Crée ton propre algorithme en découpant les images. Sélectionne les images qui montrent les différentes étapes pour planter une graine et remets les dans le bon ordre."
       4:
         image: notes/C1_planting_seed_4.png
-        text: "Maintenant, il est temps de voir si votre algorithme fonctionne. Suivez les étapes de l'algorithme avec beaucoup d'attention. Sont-ils dans le bon ordre ? Avez-vous réussi à planter une graine en suivant l'algorithme ? C'est de la programmation avec des photos !"
+        text: "Maintenant, il est temps de voir si ton algorithme fonctionne. Suis les étapes de l'algorithme avec beaucoup d'attention. Sont-elles dans le bon ordre ? As-tu réussi à planter une graine en suivant l'algorithme ? C'est comme de la programmation avec des photos !"
       5:
         image: notes/C1_planting_seed_5.png
         text: "Lorsque l'on fait du chocolat, il y a plusieurs étapes importantes dans le processus. Et chacune de ces grandes étapes a son lot de petites étapes. Et il y a différentes recettes, ou algorithmes, en fonction du goût que nous voulons donner au chocolat. Chaque étape est importante, même la plus petite. C'est pourquoi, si une seule étape manque, les autres ne peuvent fonctionner. Il est vraiment important de créer des algorithmes que d'autres peuvent comprendre. C'est pourquoi chaque étape doit être écrite, de façon à ce que le résultat soit le même quelque soit la personne qui le crée."
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
-        text: "Il est temps de faire preuve de créativité et d'utiliser vos compétence en codage pour raconter une histoire. Votre histoire intégrera des acteurs, et vous serez en mesure de les faire parler mais aussi d'interagir entre eux. Commencez à réfléchir à quelle type d'histoire vous voulez raconter."
+        text: "Il est temps de faire preuve de créativité et d'utiliser tes compétences en codage pour raconter une histoire. Ton histoire intégrera des acteurs, et tu seras en mesure de les faire parler mais aussi d'interagir entre eux. Commence à réfléchir quel type d'histoire tu veux raconter."
       2:
         image: notes/C1_playlab_storytelling_2.png
         text: |-
-          Le chat a toujours eu peur du chien, mais que se passerait il si le chat se rendait compte que le chien essayait juste d'être gentil ? Le bloc "Quand cela demarre" démarre tout. Le bloc "Déplacer" fera bouger votre personnage et le bloc "Parler" lui fera dire tout ce que vous tapez.
+          Le chat a toujours eu peur du chien, mais que se passerait il si le chat se rendait compte que le chien essayait juste d'être gentil ? Le bloc "quand l'exécution commence" démarre tout. Le bloc "Déplacer" fera bouger ton personnage et le bloc "Parler" lui fera dire tout ce que tu tapes.
       3:
         image: notes/C1_playlab_storytelling_3.png
-        text: 'Ceci est le bloc "quand les acteurs se touchent" que vous pouvez connecter aux autres blocs.'
+        text: 'Ceci est le bloc "quand les acteurs se touchent" que tu peux connecter aux autres blocs.'
       4:
         image: notes/C1_playlab_storytelling_4.png
         text: |-
-          J'ai fait venir le chien et lui faire dire "Bonjour" mais alors le chat a eu peur et s'est enfui. "Ahh", s'il y avait eu plus de temps, cela aura été une fin heureuse. La fin!
+          J'ai fait venir le chien pour lui faire dire "Bonjour" mais alors le chat a eu peur et s'est enfui. "Ahh", s'il y avait eu plus de temps, cela aura été une fin heureuse. La fin!
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
@@ -631,14 +631,14 @@ fr:
       3:
         image: notes/C1_zuck_repeat_loop_3.png
         text: |-
-          Dans cet exemple, votre objectif est de déplacer l'oiseau jusqu'au cochon. Maintenant, nous allons pouvoir utiliser le bloc de répétition pour le faire très facilement. Vous pouvez soit donner à l'ordinateur un ordre "avancer" cinq fois afin de faire avancer l'oiseau d'une étape à chaque fois vers le cochon, ou vous pouvez juste demander à l'ordinateur d'avancer une seule fois, puis de lui demander de le répéter cinq fois, cela donnera le même résultat.
+          Dans cet exemple, ton objectif est de déplacer l'oiseau jusqu'au cochon. Maintenant, nous allons pouvoir utiliser le bloc de répétition pour le faire très facilement. Tu peux soit donner à l'ordinateur un ordre "avancer" cinq fois afin de faire avancer l'oiseau d'une étape à chaque fois vers le cochon, ou tu peux juste demander à l'ordinateur d'avancer une seule fois, puis de lui demander de le répéter cinq fois, cela donnera le même résultat.
       4:
         image: notes/C1_zuck_repeat_loop_4.png
         text: |-
-          Pour faire cela, vous devez déplacer la commande "avancer" et la mettre à l'intérieur du bloc de répétition. Alors, vous pouvez cliquer dessus pour indiquer au bloc de répétition de combien de pas vous voulez avancer.
+          Pour faire cela, tu dois déplacer la commande "avancer" et la mettre à l'intérieur du bloc répéter. Alors, tu peux cliquer dessus pour indiquer au bloc répéter de combien de pas tu veux avancer.
       5:
         image: notes/C1_zuck_repeat_loop_5.png
-        text: "Encore une chose, tu peux mettre autant de commandes que tu le souhaite à l'intérieur du bloc répéter. Ainsi, dans cet exemple, tu lui dit d'avancer et de tourner à gauche, ce qu'il fera cinq fois. Amuse-toi !"
+        text: "Encore une chose, tu peux mettre autant de commandes que tu le souhaites à l'intérieur du bloc répéter. Ainsi, dans cet exemple, tu lui dit d'avancer et de tourner à gauche, ce qu'il fera cinq fois. Amuse-toi !"
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
@@ -800,7 +800,7 @@ fr:
         text: "Tu vas créer ton algorithme en en découpant les photos. Ensuite, tu vas sélectionner les 6 photos qui montrent les étapes nécessaires pour faire un avion en papier et organiser ces images dans le bon ordre. Lorsque tu as tout dans l'ordre, tu échangeras ton algorithme avec un autre élève pour tester l'algorithme pour voir s'il fonctionne. Un algorithme bien conçu est super important faire le meilleur avion de papier."
       4:
         image: notes/C2_paper_airplanes_4.png
-        text: "Quand on veut faire du chocolat, il y a plusieurs étapes importantes à ce processus. Et chacune de ces étapes importantes a son propre ensemble de petites étapes. Et il y a différentes recettes, ou algorithmes, selon le goût du chocolat que nous voulons obtenir. Chaque étape est importante, même les plus petites. Donc, une seule étape manquante, et le reste d'entre elles ne peuvent avoir lieu. Il est vraiment important de créer des algorithmes que d'autres puissent comprendre. C'est pourquoi chaque étape doit être écrite, de façon à ce que le résultat soit le même quelque soit la personne qui le fait."
+        text: "Lorsque l'on fait du chocolat, il y a plusieurs étapes importantes dans le processus. Et chacune de ces grandes étapes a son lot de petites étapes. Et il y a différentes recettes, ou algorithmes, en fonction du goût que nous voulons donner au chocolat. Chaque étape est importante, même la plus petite. C'est pourquoi, si une seule étape manque, les autres ne peuvent fonctionner. Il est vraiment important de créer des algorithmes que d'autres peuvent comprendre. C'est pourquoi chaque étape doit être écrite, de façon à ce que le résultat soit le même quelque soit la personne qui le crée."
     C2_playlab_createastory:
       1:
         image: notes/C2_playlab_createastory_1.png
@@ -869,7 +869,7 @@ fr:
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: "Quand vous mettez une boucle à l'intérieur d'une autre boucle, on appelle cela une boucle imbriquée. Par exemple, ici, nous avons déjà le code pour dessiner un triangle de 100 pixels de côtés en utilisant le bloc de répétition calé sur trois, une fois pour chaque côté du triangle."
+        text: "Quand tu mets une boucle à l'intérieur d'une autre boucle, on appelle cela une boucle imbriquée. Par exemple, ici, nous avons déjà le code pour dessiner un triangle de 100 pixels de côtés en utilisant le bloc de répétition calé sur trois, une fois pour chaque côté du triangle."
       2:
         image: notes/C3_artist_nested_loops_2.png
         text: Mais nous voulons dessiner six triangles. Pour faire cela, nous allons prendre cette boucle et la placer dans un autre bloc de répétition. Plutôt cool!
@@ -898,30 +898,32 @@ fr:
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
-        text: "Un des plus importants concept en informatique est la façon de créer de nouvelle commandes, comment ajouter vos propres mots dans un langage informatique. La plupart des langages informatiques ont seulement une centaine de mots ou de commandes. L'art et la magie sont dans la définition de vos propres nouveaux mots de ces blocs de construction."
+        text: "Un des concept les plus importants en informatique est la façon de créer de nouvelle commandes, comment ajouter vos propres mots dans un langage informatique. La plupart des langages informatiques ont seulement une centaine de mots ou de commandes. L'art et la magie sont dans la définition de vos propres nouveaux mots de ces blocs de construction."
       2:
         image: notes/C3_bee_functions_2.png
-        text: "We do this all the time in sports. For example, in basketball, you start by learning how to dribble, how to do a lay-up, how to rebound. Once you've learned these really basic moves, you learn new moves and put together these building blocks, like a pick and roll or give and go. You can then go from there to do more complex plays. Once you learn that play and give it a name, everybody on the team knows how to do it."
+        text: |-
+          On fait ça tout le temps en sport. Par exemple, au basketball, tu commences par apprendre à dribbler, à faire un double-pas, à faire des rebonds. Une fois que tu as appris ces gestes de base, tu apprends de nouveaux mouvements et tu assembles ces éléments, comme pour un "pick and roll" ou un "give and go". A partir de là tu peux ensuite faire des enchaînements plus complexes. Une fois que tu as appris cet enchaînement et que tu lui donne un nom, chaque membre de l'équipe saura comment le faire.
       3:
         image: notes/C3_bee_functions_3.png
-        text: "Similarly once you've taught a computer how to do an action once using these sequences of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function. Now we're going to use functions to help the bee."
+        text: "De la même manière, une fois que tu as appris à un ordinateur comment faire une action une fois en utilisant ces successions de commandes, tu peux inventer ton propre nom pour cette action afin qu'il soit facile de la répéter plus tard. Quand tu définis ta propre commande et que tu lui donnes un nom, on appelle cela une fonction. A présent nous allons utiliser les fonctions pour aider l'abeille."
       4:
         image: notes/C3_bee_functions_4.png
-        text: "In this example, our function is called get 2 nectar, this green block right here. We know what get 2 nectar does by looking at this grey box which is the function definition. If we look inside there, the get 2 nectar is going to get nectar and then get nectar again. Always look at what's inside the grey box so that you know what these green function blocks can do."
+        text: |-
+          Dans cet exemple, notre fonction s'appelle "obtenir 2 nectars", ce bloc vert juste ici. Nous savons ce que "obtenir 2 nectars" fait en regardant cette boite grise qui est la définition de la fonction. Si on regarde à l'intérieur, "obtenir 2 nectars" consistera à obtenir un nectar et ensuite obtenir à nouveau du nectar. Il faut toujours regarder ce qu'il y a dans la boite grise pour savoir ce que ces blocs de fonction verts peuvent faire.
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: "Now we're going to use nested loops with the bee. We're given some starter code which tells the bee to move forward and get nectar three times and then turn right. Let's take that whole piece of code and nest it inside another repeat block and set to repeat three times. Done!"
+        text: "Maintenant nous allons utiliser les boucles imbriquées avec l'abeille. On nous donne un morceau de code pour démarrer, qui dit à l'abeille d'avancer, de récupérer du nectar trois fois, et ensuite de tourner à droite. Prenons ce morceau de code et mettons le dans un autre bloc répéter, et réglons le nombre de répétitions sur trois. Terminé !"
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: "You're going to be creating your very own bounce game that you'll be able to share with your friends! How cool!"
+        text: Tu vas maintenant créer ton propre jeu de casse-brique, que tu pourras partager avec tes amis. Tellement génial !
       2:
         image: notes/C3_bounce_2.png
-        text: To get started, we have to link up the paddle controls to the arrow keys on our keyboard.
+        text: Pour démarrer, nous devons lier les commandes de la palette aux touches fléchées de notre clavier.
       3:
         image: notes/C3_bounce_3.png
-        text: "We can do this by linking the when left arrow block to the move left block and the when right arrow block to the move right block. Give it a go and you'll be programming your own bounce game in no time!"
+        text: 'Nous pouvons le faire en liant le bloc "quand flèche à gauche" au bloc "déplacer vers la gauche", et le bloc "quand flèche à droite" au bloc "déplacer vers la droite". Fais un essai et tu vas programme ton propre jeu de casse-brique en moins de deux !'
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
@@ -1118,7 +1120,7 @@ fr:
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
-        text: "Here's a function that draws a square with 50 pixel sides. That's great but what if I wanted to draw a square with sides 50 pixels and another square with sides of 100 pixels? We shouldn't have to make two separate functions that do almost the same thing. Instead, we can use one function with a parameter."
+        text: "Voila une fonction qui dessine des carrés de 50 pixels de côté. C'est bien, mais si en fait je veux dessiner un carré de 50 pixels de côté et un autre carré de 100 pixels de côté ? Nous ne devrions pas avoir a créer deux fonctions distinctes qui font presque la même chose. A la place, nous pouvons utiliser une seule fonction avec un paramètre."
       2:
         image: notes/C4_function_parameters_2.png
         text: "Parameters allow us to pass values into a function that get used as variables inside the function. Let's try adding a parameter called like to this function so we can use it to create squares of different sizes. In the function editor, you can edit the name and description like before but now you can also add a parameter. Write the name of your parameter in the space and click Add Parameter. This will create a red block with the name of the parameter you just created. Now we can replace the move forward by 100 block with the parameter Length so it will move forward by Length."
@@ -1422,12 +1424,10 @@ fr:
         text: "L'espace blanc à droite est appelé l'espace de travail et c'est là que nous allons construire notre programme."
       7:
         image: notes/starwars_intro_7.JPG
-        text: |-
-          Si je fais glisser le bloc "déplacer vers la gauche" dans notre espace de travail et que je clique sur Démarrer, que se passe-t-il ? BB-8 se déplace à gauche d'un bloc sur la grille.
+        text: "Si je fais glisser le bloc moveLeft(); dans notre espace de travail et que je clique sur Démarrer, que se passe-t-il ? BB-8 se déplace à gauche d'un bloc sur la grille."
       8:
         image: notes/starwars_intro_8.JPG
-        text: |-
-          Et si je veux que BB-8 fasse quelque chose après le bloc "déplacer vers la gauche" ? Je peux ajouter un autre bloc à notre programme. Je vais choisir le bloc "déplacer vers le haut" et je vais le glisser sous mon bloc "déplacer vers la gauche" jusqu'à voir la surbrillance. Puis je le lâche et les deux blocs s'assemblent.
+        text: "Et si je veux que BB-8 fasse quelque chose après le bloc moveLeft(); ? Je peux ajouter un autre bloc à notre programme. Je vais choisir le bloc moveUp(); et je vais le glisser sous mon bloc moveLeft(); jusqu'à voir la surbrillance. Puis je le lâche et les deux blocs s'assemblent."
       9:
         image: notes/starwars_intro_9.JPG
         text: "Lorsque j'appuie de nouveau sur Démarrer, BB-8 exécute les commandes qui sont empilées de haut en bas dans notre espace de travail. Si jamais tu veux supprimer un bloc, il suffit de le retirer de la pile et de le glisser dans la boîte à outils."
@@ -1465,7 +1465,7 @@ fr:
         text: Félicitations, tu as réussi ! Tu as programmé BB-8. Maintenant, je pense que nous sommes prêts pour quelque chose de plus difficile. Allons-y. Maintenant que tu as appris les rudiments de la programmation, nous retournons dans le temps pour construire ton propre jeu, mettant en vedette R2-D2 et C3PO.
       3:
         image: notes/starwars_events_3.JPG
-        text: "Pour faire un jeu, nous devons en apprendre plus sur quelque chose que les développeurs de jeu utilisent tous les jours: il s'agit des événement. Les évènements disent a ton programme d’écouter ou d’attendre que quelque chose arrive, et quand ça arrive, une action est exécutée."
+        text: "Pour faire un jeu, nous devons en apprendre plus sur quelque chose que les développeurs de jeu utilisent tous les jours: il s'agit des événements. Les évènements disent a ton programme d’écouter ou d’attendre que quelque chose arrive, et quand ça arrive, une action est exécutée."
       4:
         image: notes/starwars_events_4.JPG
         text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
@@ -1487,7 +1487,7 @@ fr:
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
       2:
         image: notes/starwars_congrats_2.JPG
         text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
@@ -1521,16 +1521,18 @@ fr:
         text: "L'espace blanc à droite est appelé l'espace de travail et c'est là que nous allons construire notre programme."
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8 moves left one block on the grid.
+        text: |-
+          Si je fais glisser le bloc "déplacer vers la gauche" dans notre espace de travail et que je clique sur Démarrer, que se passe-t-il ? BB-8 se déplace à gauche d'un bloc sur la grille.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together. When I press run again, BB-8 will perform the commands that are stacked top to bottom on our workspace."
+        text: |-
+          Et si je veux que BB-8 fasse quelque chose après le bloc "déplacer vers la gauche" ? Je peux ajouter un autre bloc à notre programme. Je vais choisir le bloc "déplacer vers le haut" et je vais le glisser sous mon bloc "déplacer vers la gauche" jusqu'à voir la surbrillance. Puis je le lâche et les deux blocs s'assemblent. Lorsque j'appuie de nouveau sur Démarrer, BB-8 exécute les commandes qui sont empilées de haut en bas dans notre espace de travail.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and drag it back into the toolbox.
+        text: Si jamais tu veux supprimer un bloc, il suffit de le retirer de la pile et de le faire glisser dans la boîte à outils.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: "After you hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: Après avoir cliqué sur Démarrer, tu peux toujours cliquer le bouton Réinitialiser pour faire revenir BB-8 au début. Et maintenant, en avant!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
@@ -1540,7 +1542,7 @@ fr:
         text: Félicitations, tu as réussi ! Tu as programmé BB-8. Maintenant, je pense que nous sommes prêts pour quelque chose de plus difficile. Allons-y. Maintenant que tu as appris les rudiments de la programmation, nous retournons dans le temps pour construire ton propre jeu, mettant en vedette R2-D2 et C3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: "Pour faire un jeu, nous devons en apprendre plus sur quelque chose que les développeurs de jeu utilisent tous les jours: il s'agit des événement. Les évènements disent a ton programme d’écouter ou d’attendre que quelque chose arrive, et quand ça arrive, une action est exécutée."
+        text: "Pour faire un jeu, nous devons en apprendre plus sur quelque chose que les développeurs de jeu utilisent tous les jours: il s'agit des événements. Les évènements disent a ton programme d’écouter ou d’attendre que quelque chose arrive, et quand ça arrive, une action est exécutée."
       4:
         image: notes/starwars_blocks_events_4.JPG
         text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
@@ -1552,11 +1554,11 @@ fr:
         text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Étape par étape, ton jeu devient plus interactif.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
       2:
         image: notes/starwars_blocks_congrats_2.JPG
         text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
@@ -1625,17 +1627,19 @@ fr:
         text: La nuit tombe, alors dans les prochains niveaux, nous allons construire une maison pour être en sécurité. Nous allons utiliser le bloc répéter pour faire ça très facilement.
       6:
         image: notes/mc_repeat_6.JPG
-        text: "Pour construire le mur de notre maison, nous pouvons soit dire à Alex d'avancer(); et placer des planches quatre fois, ou nous pouvons lui dire d'avancer(); et placer une planche, ensuite prendre cette commande et utiliser le bloc répéter pour qu'elle exécute l'action plusieurs fois. Maintenant, nous allons cliquer sur le bloc répéter et lui dire combien de fois nous voulons qu'elle exécute cette action. Maintenant, construisons cette maison avant que la nuit tombe ! Amuse-toi."
+        text: "Pour construire le mur de notre maison, nous pouvons soit dire à Alex d'avancer(); et placer des planches quatre fois, ou nous pouvons lui dire d'avancer(); et placer une planche, ensuite prendre cette commande et utiliser le bloc répéter pour qu'elle exécute l'action plusieurs fois. Maintenant, nous allons cliquer sur le bloc répéter et lui dire combien de fois nous voulons qu'il exécute cette action. Maintenant, construisons cette maison avant que la nuit tombe ! Amuse-toi bien."
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
         text: "Maintenant, nous allons apprendre les conditions si. Les conditions si sont fondamentales pour apprendre à programmer. Elles aident l'ordinateur à prendre des décisions."
       2:
         image: notes/mc_if_statements_2.JPG
-        text: "Tous les ordinateurs utilisent des conditions si, y compris mon téléphone. Par exemple, lorsque je déverrouille mon téléphone, cela lance un code qui vérifie si j'entre le mot de passe correctement, alors le téléphone est déverrouillé. Sinon, cela affiche un message d'erreur."
+        text: |-
+          Tous les ordinateurs utilisent des conditions si, y compris mon téléphone. Par exemple, lorsque je déverrouille mon téléphone, cela lance un code qui dit : "si j'entre le mot de passe correctement, alors déverrouille le téléphone" . Sinon, cela affiche un message d'erreur.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: "Tu peux utiliser les conditions si dans ton code pour que Steve et Alice réagissent à ce qu'ils voient dans le monde. Par exemple, s'il y a un caillou devant eux, ils peuvent tourner à gauche. Ou à droite si ils courent vers un arbre."
+        text: |-
+          Tu peux utiliser les conditions "Si" dans ton code pour que Steve et Alice réagissent à ce qu'ils voient dans le monde. Par exemple, s'il y a un caillou devant eux, ils peuvent tourner à gauche. Ou à droite si ils se cognent à un arbre.
       4:
         image: notes/mc_if_statements_4.JPG
         text: "In this case, we don't want to fall in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
@@ -1668,3 +1672,56 @@ fr:
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Maintenant tu peux construire tout ce que tu veux. Amuse-toi !
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: "La zone blanche à droite est l'espace de travail et c'est ici que nous allons construire notre programme."
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

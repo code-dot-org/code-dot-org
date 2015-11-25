@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "رفع أو خفض القلم، لبدء أو إيقاف الرسم."},
 "penUp":function(d){return "رفع القلم"},
 "reinfFeedbackMsg":function(d){return "ها هي رسمتك! بإمكانك الاستمرار في العمل عليها أو التوجه إلى اللغز التالي."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "تعيين \"alpha\""},
 "setColour":function(d){return "تعيين اللون"},
 "setPattern":function(d){return "تعيين النمط"},
 "setWidth":function(d){return "تعيين العرض"},

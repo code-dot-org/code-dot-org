@@ -1637,7 +1637,7 @@
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft Sat Kodiranja
           description_short: Explore a Minecraft world through code
           description: Use blocks of code to take Steve or Alex on an adventure through
             this Minecraft world
@@ -1649,3 +1649,10 @@
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Dobro došli!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Wrap-Up
