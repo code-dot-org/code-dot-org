@@ -175,8 +175,8 @@ module ApplicationHelper
   def script_certificate_image_url(user, script)
     certificate_image_url(
         name: user.name,
-        course: script_name,
-        course_title: data_t_suffix('script.name', script.name, "title"))
+        course: script.name,
+        course_title: data_t_suffix('script.name', script.name, 'title'))
   end
 
   def minifiable_asset_path(path)
