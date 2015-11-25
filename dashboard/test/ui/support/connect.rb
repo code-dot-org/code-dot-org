@@ -98,7 +98,6 @@ Before do
     @browser = get_browser
   end
   @browser.manage.delete_all_cookies
-  @browser.execute_script 'sessionStorage.clear()'
 
   debug_cookies(@browser.manage.all_cookies) if @browser
 
@@ -131,6 +130,7 @@ After do |scenario|
   all_passed = all_passed && scenario.passed?
   log_result all_passed
 
+  @browser.execute_script 'sessionStorage.clear()'
   @browser.quit unless @browser.nil? || slow_browser?
 end
 
