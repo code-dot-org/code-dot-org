@@ -69,8 +69,7 @@ module ApplicationHelper
       server_result = ul.try(:best_result) if ul
     end
     client_result = client_state.level_progress(script_level)
-    result = [server_result, client_result].max
-    activity_css_class(result)
+    [server_result, client_result].max
   end
 
   def show_flashes
