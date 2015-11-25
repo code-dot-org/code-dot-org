@@ -63,13 +63,10 @@ module ApplicationHelper
   end
 
   def level_info(user, script_level, user_levels)
-    server_result = 0
     if user
       ul = user_levels[script_level.level_id]
-      server_result = ul.try(:best_result) if ul
+      ul.try(:best_result) if ul
     end
-    client_result = client_state.level_progress(script_level)
-    [server_result, client_result].max
   end
 
   def show_flashes
