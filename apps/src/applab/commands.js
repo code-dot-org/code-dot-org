@@ -1029,6 +1029,10 @@ applabCommands.playSound = function (opts) {
 
   if (studioApp.cdoSounds) {
     var url = Applab.maybeAddAssetPathPrefix(opts.url);
+    if (studioApp.cdoSounds.isPlayingURL(url)) {
+      return;
+    }
+
     studioApp.cdoSounds.playURL(url, {
       volume: 1.0,
       // TODO: Re-enable forceHTML5 after Varnish 4.1 upgrade.
