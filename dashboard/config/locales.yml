@@ -286,12 +286,12 @@
 "nn": "nn-NO"
 "nn-NO":
   english: "Norwegian Nynorsk"
-  native: "Nynorsk"
+  native: "Norsk (nynorsk)"
 
 "no": "no-NO"
 "no-NO":
   english: "Norwegian"
-  native: "Norsk"
+  native: "Norsk (bokmål)"
 
 "pl": "pl-PL"
 "pl-PL":
@@ -324,6 +324,13 @@
   english: "Russian"
   native: "Русский"
   webfonts: false
+
+"si": "si-LK"
+"si-LK":
+  english: "Sinhalese"
+  native: "සිංහල"
+  webfonts: false
+  debug: true
 
 "sk": "sk-SK"
 "sk-SK":

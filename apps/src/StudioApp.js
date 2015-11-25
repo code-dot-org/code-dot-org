@@ -184,6 +184,16 @@ var StudioApp = function () {
    */
   this.share = false;
 
+  /**
+   * By default, we center our embedded levels. Can be overriden by apps.
+   */
+  this.centerEmbedded = true;
+
+  /**
+   * If set to true, we use our wireframe share (or chromeless share on mobile)
+   */
+  this.wireframeShare = false;
+
   this.onAttempt = undefined;
   this.onContinue = undefined;
   this.onResetPressed = undefined;
@@ -260,7 +270,6 @@ StudioApp.prototype.init = function(config) {
 
   if (config.share) {
     this.handleSharing_({
-      noButtonsBelowOnMobileShare: config.noButtonsBelowOnMobileShare,
       makeUrl: config.makeUrl,
       makeString: config.makeString,
       makeImage: config.makeImage,
@@ -336,8 +345,9 @@ StudioApp.prototype.init = function(config) {
     }
   }
 
-  // In embed mode, the display scales down when the width of the visualizationColumn goes below the min width
-  if(config.embed) {
+  // In embed mode, the display scales down when the width of the
+  // visualizationColumn goes below the min width
+  if(config.embed && config.centerEmbedded) {
     var resized = false;
     var resize = function() {
       var vizCol = document.getElementById('visualizationColumn');
@@ -392,9 +402,9 @@ StudioApp.prototype.init = function(config) {
       $('#prompt-icon-cell').show();
     }
     var bubble = document.getElementById('bubble');
-    dom.addClickTouchEvent(bubble, _.bind(function() {
+    bubble.addEventListener('click', function () {
       this.showInstructions_(config.level, false);
-    }, this));
+    }.bind(this));
   }
 
   var aniGifPreview = document.getElementById('ani-gif-preview');
@@ -507,7 +517,7 @@ StudioApp.prototype.substituteInstructionImages = function(htmlText) {
   if (htmlText) {
     for (var prop in this.skin.instructions2ImageSubstitutions) {
       var value = this.skin.instructions2ImageSubstitutions[prop];
-      var substitutionHtml = '<img src="' + value + '" class="instructionsImage"/>';
+      var substitutionHtml = '<span class="instructionsImageContainer"><img src="' + value + '" class="instructionsImage"/></span>';
       var re = new RegExp('\\[' + prop + '\\]', 'g');
       htmlText = htmlText.replace(re, substitutionHtml);
     }
@@ -589,27 +599,9 @@ StudioApp.prototype.handleSharing_ = function (options) {
       sliderCell.style.display = 'none';
     }
     if (belowVisualization) {
-      if (options.noButtonsBelowOnMobileShare) {
-        var visualization = document.getElementById('visualization');
-        belowVisualization.style.display = 'none';
-        visualization.style.marginBottom = '0px';
-      } else {
-        belowVisualization.style.display = 'block';
-        belowVisualization.style.marginLeft = '0px';
-        if (this.noPadding) {
-          var shareCell = document.getElementById('share-cell') ||
-              document.getElementById('right-button-cell');
-          if (shareCell) {
-            shareCell.style.marginLeft = '10px';
-            shareCell.style.marginRight = '10px';
-          }
-          var softButtons = document.getElementById('soft-buttons');
-          if (softButtons) {
-            softButtons.style.marginLeft = '10px';
-            softButtons.style.marginRight = '10px';
-          }
-        }
-      }
+      var visualization = document.getElementById('visualization');
+      belowVisualization.style.display = 'none';
+      visualization.style.marginBottom = '0px';
     }
   }
 
@@ -870,7 +862,8 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   });
 
   if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
-    renderedMarkdown = marked(level.markdownInstructions);
+    var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
+    renderedMarkdown = marked(markdownWithImages);
     scrollableSelector = '.instructions-markdown';
     instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
@@ -1411,6 +1404,8 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
  */
 StudioApp.prototype.setConfigValues_ = function (config) {
   this.share = config.share;
+  this.centerEmbedded = utils.valueOr(config.centerEmbedded, this.centerEmbedded);
+  this.wireframeShare = utils.valueOr(config.wireframeShare, this.wireframeShare);
 
   // if true, dont provide links to share on fb/twitter
   this.disableSocialShare = config.disableSocialShare;
@@ -1453,6 +1448,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
   this.skin = config.skin;
   this.showInstructions = this.showInstructions_.bind(this, config.level);
+  this.polishCodeHook = config.polishCodeHook;
 };
 
 // Overwritten by applab.
@@ -1531,9 +1527,11 @@ StudioApp.prototype.configureDom = function (config) {
     $(codeWorkspace).addClass('readonly');
   }
 
-  if (config.embed && config.hideSource) {
-    container.className = container.className + " embed_hidesource";
-    visualizationColumn.className = visualizationColumn.className + " embed_hidesource";
+  // NOTE: Can end up with embed true and hideSource false in level builder
+  // scenarios. See https://github.com/code-dot-org/code-dot-org/pull/1744
+  if (config.embed && config.hideSource && this.centerEmbedded) {
+    container.className = container.className + " centered_embed";
+    visualizationColumn.className = visualizationColumn.className + " centered_embed";
   }
 
   if (!config.embed && !config.hideSource) {
@@ -1561,7 +1559,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   document.getElementById('visualizationResizeBar').style.display = 'none';
 
   // Chrome-less share page.
-  if (this.share && options.app === 'applab') {
+  if (this.share && this.wireframeShare) {
     if (dom.isMobile()) {
       document.getElementById('visualizationColumn').className = 'chromelessShare';
     } else {
@@ -1645,6 +1643,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     modeOptions: dropletUtils.generateDropletModeOptions(config),
     palette: fullDropletPalette,
     showPaletteInTextMode: true,
+    showDropdownInPalette: config.showDropdownInPalette,
+    allowFloatingBlocks: false,
     dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
     enablePaletteAtStart: !config.readonlyWorkspace,
     textModeAtStart: config.level.textModeAtStart
@@ -2233,4 +2233,17 @@ StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
       return descendant.getVars().indexOf(varName) !== -1;
     });
   });
+};
+
+/**
+ * Polishes the generated code string before displaying it to the user. If the
+ * app provided a polishCodeHook function, it will be called.
+ * @returns {string} code string that may/may not have been modified
+ */
+StudioApp.prototype.polishGeneratedCodeString = function (code) {
+  if (this.polishCodeHook) {
+    return this.polishCodeHook(code);
+  } else {
+    return code;
+  }
 };

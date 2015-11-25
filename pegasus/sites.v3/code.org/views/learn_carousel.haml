@@ -1,21 +1,13 @@
-- page_mode = PageMode.get(request)
-
 -check_language ||= nil
 -international_layout ||= nil
 -subheading ||= nil
+-company = request.GET['company']
 -if check_language
   -items = tutorials.find_with_tag_and_language(tag, request.locale)
 -else
   -items = tutorials.find_with_tag(tag)
 -if items.count > 0
-  %h1{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
-
-  -# If minecraft mode, show starwars at the beginning of the beginner carousel
-  - if page_mode == 'minecraft' and tag == 'Beginner' and @variation == 'learn'
-    - temp_items = {}
-    - temp_items["starwars"] = {:id=>47, :code=>"starwars", :short_code=>"sw", :displayweight=>10000, :name=>"Star Wars: Building a Galaxy with Code", :orgname=>"Code.org", :contact=>nil, :url=>"https://code.org/starwars", :shortdescription=>"Learn to program droids, and create your own Star Wars game in a galaxy far, far away.", :longdescription=>"Learn to program droids, and create your own Star Wars game in a galaxy far, far away.", :platformtext=>"Modern browsers, smartphones, tablets", :gradelevel=>"Ages 4-104", :image=>"/images/starwars_carousel.jpg", :tags=>"starwars", :teachers_notes=>"/hourofcode/star-wars", :language=>nil, :languages_supported=>"ar,bg,ca,cs,da,de,en,es,el,fa,fi,fr,hr,hu,is,id,it,ja,ko,lt,nl,nn,no,pl,pt,pt-br,pt-pt,ro,ru,sl,sv,tr,uk,zh-tw,zh-cn"}
-    - temp_items.merge!(items)
-    - items = temp_items
+  %h2{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
 
   -unless subheading.nil_or_empty?
     %p=subheading
@@ -30,6 +22,7 @@
           -items.each_pair do |key, tutorial|
             -tags = tutorial[:gradelevel] + ' | ' + tutorial[:platformtext]
             -url = tutorials.launch_url_for(key,request.host_with_port)
+            -url = url + "?company=#{company}" if company
             -short_url = ('http://hourofcode.com/' + tutorial[:short_code]) unless tutorial[:short_code].nil_or_empty?
             -styling = "display:none" unless count == 0
             .slide.clear{:style=>styling}

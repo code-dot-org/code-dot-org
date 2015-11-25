@@ -186,6 +186,12 @@
   border-left-color: #fff;
 }
 
+.banner {
+  float: left;
+  width: 510px !important;
+  margin-left: 45px !important;
+}
+
 @media screen and (max-width: 319px)
 {
   .learnpage {
@@ -198,7 +204,18 @@
   }  
 }
 
-@media screen and (min-width: 320px) and (max-width: 599px) {
+@media screen and (min-width: 320px) and (max-width: 599px) { 
+  #learnCodeStudio .active > div { display:none; }
+  #learnCodeStudio .active > div:first-child { display:block; }
+
+  #learnCodeStudio {
+    max-width: 600px;
+  }
+
+  .container-fluid {
+    padding-left: 30px !important;
+  }
+
   .learnpage {
     width: 320px;
     margin: 0 auto;
@@ -236,6 +253,20 @@
 }
 
 @media screen and (min-width: 600px) /* and (max-width: 969px) */ {
+  #learnCodeStudio .active > div { display:none; }
+  #learnCodeStudio .active > div:first-child { display:block; }
+  #learnCodeStudio .active > div:first-child + div { display:block; }
+
+  #codeStudioCarousel .col-md-4 { width: 50%; }
+
+  #learnCodeStudio {
+    max-width: 600px !important;
+  }
+
+  .container-fluid {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
 
   .learnpage {
     width: 600px;
@@ -264,6 +295,19 @@
   .fullwidth-carousel .slide-shortdescription {
     width: 500px;
   }  
+
+  .multi-item-carousel .carousel-inner .active.left {
+    left: -0% !important;
+  }
+  .multi-item-carousel .carousel-inner .active.right {
+    left: 0% !important;
+  }
+  .multi-item-carousel .carousel-inner .next {
+    left: 50% !important;
+  }
+  .multi-item-carousel .carousel-inner .prev {
+    left: -50% !important;
+  }
 }
 
 /*

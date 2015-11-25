@@ -19,33 +19,34 @@ social:
   "og:video:type": ""
 ---
 
-- page_mode = PageMode.get(request)
+-# Because of partner requirements, all urls need to use mc, but our internal shortcut is "mchoc".
+-# Hoc.com has a mc.redirect to his page and the router has a check for "code.org/MC" and "hoc.com/MC"
 
 %link{href: "/css/mc.css", rel: "stylesheet"}
 
 %div{style: "clear:both"}
 
-- if page_mode == 'minecraft'
-  .mc-container
-    .img-container
-      %img.mc-img{src:"/images/fit-1940/mc/MC_Wide_Big_2_V4.jpg"}
+.mc-container
+  .img-container
+    %img.mc-img{src:"/images/fit-1940/mc/MC_Wide_Big_2_V4.jpg"}
 
 
-    .mc-tutorial{style: "left: 470px;"}
-      %h1.mc-h1 Hour of Code
-      .tutorial-box
-        .mc-tutorial-info
-          %h1.mc-h1-second-box Minecraft Hour of Code
-          %p.mc-tutorial-description Explore a Minecraft world through code.
-          %p.mc-tutorial-specs Many languages (coming soon) | Modern browsers and tablets | Ages 6+
-        %a{:href => CDO.studio_url('/s/mc/reset'), :target=>'_self'}
-          %button= I18n.t(:starwars_javascript_start_button)
+  .mc-tutorial{style: "left: 470px;"}
+    %h1.mc-h1= I18n.t(:hour_of_code)
+    .tutorial-box
+      .mc-tutorial-info
+        %h1.mc-h1-second-box= I18n.t(:mc_name)
+        %p.mc-tutorial-description= I18n.t(:mc_longdescription)
+        %p.mc-tutorial-specs= I18n.t(:mc_specs)
+      %a{:href => CDO.studio_url('/s/mc/reset'), :target=>'_self'}
+        %button= I18n.t(:starwars_javascript_start_button)
 
-  %div{style: "clear:both"}
+%div{style: "clear:both"}
 
-  .mc-videos{style: "clear: both;"}
-    %h2= I18n.t(:starwars_watch_videos)
-    =view :inspirational_videos
+%h2
+  = I18n.t(:starwars_speak_languages)
+  %a{href: "/translate/mc"}= I18n.t(:starwars_help_translate)
 
-  %span= I18n.t(:starwars_speak_languages)
-  %a{href: "/translate"}= I18n.t(:starwars_help_translate)
+.mc-videos{style: "clear: both;"}
+  %h2= I18n.t(:starwars_watch_videos)
+  =view :inspirational_videos

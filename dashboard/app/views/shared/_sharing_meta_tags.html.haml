@@ -28,12 +28,11 @@
       = tag 'meta', attr => "#{namespace}:image:width", content: meta_image_width
       = tag 'meta', attr => "#{namespace}:image:height", content: meta_image_height
 
-    - if @level.game.share_mobile_fullscreen?
-      = tag :meta, name: 'apple-mobile-web-app-capable', content: 'yes'
-      = tag :meta, name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent'
-      - if @level_source.try(:level_source_image).try(:image)
-        = tag :link, rel: 'apple-touch-icon', href: meta_image_url(level_source: @level_source, level: @level)
-      - elsif @level.game.flappy?
-        = tag :link, rel: 'apple-touch-icon', href: asset_url('flappy_icon.png')
-      - else
-        = tag :link, rel: 'apple-touch-icon', href: asset_url('logo_noalpha.png')
+    = tag :meta, name: 'apple-mobile-web-app-capable', content: 'yes'
+    = tag :meta, name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent'
+    - if @level_source.try(:level_source_image).try(:image)
+      = tag :link, rel: 'apple-touch-icon', href: meta_image_url(level_source: @level_source, level: @level)
+    - elsif @level.game.flappy?
+      = tag :link, rel: 'apple-touch-icon', href: asset_url('flappy_icon.png')
+    - else
+      = tag :link, rel: 'apple-touch-icon', href: asset_url('logo_noalpha.png')

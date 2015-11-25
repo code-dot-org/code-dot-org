@@ -89,7 +89,7 @@ speed(value);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| value | number | Yes | The speed of the app's execution in the range of (1-100)  |
+| value | number | Yes | The speed of the app's execution in the range of (0-100)  |
 
 [/parameters]
 
