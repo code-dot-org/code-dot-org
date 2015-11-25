@@ -24,18 +24,39 @@ class HocRoutesTest < Minitest::Test
       assert_redirects_from_to '/api/hour/begin/mc', CDO.code_org_url('/mc')
     end
 
-    it 'starts tutorial with png image' do
-      assert_successful_get '/api/hour/begin_mc.png'
-      assert_equal 'image/png', @pegasus.last_response['Content-Type']
-    end
-
     it 'ends tutorial' do
       assert_redirects_from_to '/api/hour/finish', CDO.code_org_url('/congrats')
     end
 
-    it 'ends given tutorial' do
+    it 'starts given tutorial with png image' do
+      assert_successful_png_get '/api/hour/begin_mc.png'
+    end
+
+    it 'ends given tutorial with png image' do
+      assert_successful_png_get '/api/hour/finish_mc.png'
+    end
+
+    it 'ends given tutorial, providing script ID to congrats page' do
       assert_redirects_from_to '/api/hour/finish/mc', CDO.code_org_url('/congrats')
       assert_includes @pegasus.last_request.url, '&s=mc'
+    end
+
+    it 'has certificate share page' do
+      cert_id = make_certificate
+      assert_successful_get CDO.code_org_url("/certificates/#{cert_id}")
+      assert_successful_get CDO.code_org_url("/printcertificate/#{cert_id}")
+
+      invalid_cert_id = 'abcdefg12345'
+      assert_not_found_get CDO.code_org_url("/certificates/#{invalid_cert_id}")
+    end
+
+    it 'serves png, jpg, jpeg certificate images, not others' do
+      cert_id = make_certificate
+      assert_successful_jpeg_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.jpg")
+      assert_successful_jpeg_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.jpeg")
+      assert_successful_png_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.png")
+
+      assert_not_found_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.bmp")
     end
 
     it 'starts and ends given tutorial, tracking company and tutorial' do
@@ -54,12 +75,13 @@ class HocRoutesTest < Minitest::Test
       assert_equal 'mc', after_start_row[:tutorial]
       assert after_start_row[:started_at]
 
-      # track tutorial end
       assert_redirects_from_to '/api/hour/finish/mc', CDO.code_org_url('/congrats')
       assert_includes @pegasus.last_request.url, '&s=mc'
       assert_includes @pegasus.last_request.url, '&co=testcompany'
 
       after_end_row = get_session_hoc_activity_entry
+      assert_equal 'testcompany', after_end_row[:company]
+      assert_equal 'mc', after_end_row[:tutorial]
       assert after_end_row[:finished_at]
     end
 
@@ -79,12 +101,8 @@ class HocRoutesTest < Minitest::Test
       assert_redirects_from_to '/api/hour/finish/mc', CDO.code_org_url('/congrats')
       after_ended_time = now_in_sequel_datetime
       after_end_row = get_session_hoc_activity_entry
+      assert_datetime_within(after_end_row[:started_at], before_began_time, after_began_time)
       assert_datetime_within(after_end_row[:finished_at], before_ended_time, after_ended_time)
-    end
-
-    it 'ends given tutorial with png image' do
-      assert_successful_get '/api/hour/finish_mc.png'
-      assert_equal 'image/png', @pegasus.last_response['Content-Type']
     end
 
     def assert_datetime_within(after_start_time, before_begin_time, after_begin_time)
@@ -112,6 +130,11 @@ class HocRoutesTest < Minitest::Test
       )
     end
 
+    def make_certificate
+      assert_redirects_from_to '/api/hour/finish/mc', CDO.code_org_url('/congrats')
+      CGI::parse(@pegasus.last_request.query_string)['i'][0]
+    end
+
     def assert_redirects_from_to(from, to)
       @pegasus.get from
       assert_equal 302, @pegasus.last_response.status
@@ -120,8 +143,26 @@ class HocRoutesTest < Minitest::Test
     end
 
     def assert_successful_get(path)
+      assert_code_on_get(200, path)
+    end
+
+    def assert_successful_png_get(path)
+      assert_code_on_get(200, path)
+      assert_equal 'image/png', @pegasus.last_response['Content-Type']
+    end
+
+    def assert_successful_jpeg_get(path)
+      assert_code_on_get(200, path)
+      assert_equal 'image/jpeg', @pegasus.last_response['Content-Type']
+    end
+
+    def assert_not_found_get(path)
+      assert_code_on_get(404, path)
+    end
+
+    def assert_code_on_get(code, path)
       @pegasus.get path
-      assert_equal 200, @pegasus.last_response.status
+      assert_equal code, @pegasus.last_response.status
     end
   end
 end
