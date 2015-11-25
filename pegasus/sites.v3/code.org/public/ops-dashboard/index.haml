@@ -615,8 +615,10 @@ title: "Ops Dashboard"
 
   controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService', 'programTypesService', 'phaseInfoService',
     function($scope, $route, $routeParams, $location, $window, segmentsService, workshopsService, cohortsService, programTypesService, phaseInfoService) {
-      $scope.workshop = workshopsService.get({id: $routeParams.id});
-      $scope.workshopSegments = segmentsService.query({id: $routeParams.id});
+      if ($routeParams.id) {
+        $scope.workshop = workshopsService.get({id: $routeParams.id});
+        $scope.workshopSegments = segmentsService.query({id: $routeParams.id});
+      }
       $scope.program_types = programTypesService;
       $scope.phases = phaseInfoService;
       $scope.cohorts = cohortsService.query();

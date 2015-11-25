@@ -253,7 +253,7 @@
   homepage_banner_privacy_link: Pour en savoir plus
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: Tout le monde peut apprendre. Commence aujourd'hui
-  homepage_slot_text_link_hoc: Essayez l'Heure de Code
+  homepage_slot_text_link_hoc: Essayer l'Heure de Code
   homepage_slot_text_link_host: Hébergez une Heure de Code
   homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: Soyez bénévole pour Une Heure de Code
@@ -329,15 +329,15 @@
   starwars_blocks_specs: Plusieurs langues (à venir) | navigateurs modernes, smartphones,
     tablettes | 6-10 ans
   starwars_blocks_start_button: Essaie maintenant
-  starwars_watch_videos: Avant de commencer, regarde une de ces vidéos inspirantes
-  starwars_speak_languages: Tu parles une autre langue ?
+  starwars_watch_videos: Avant de commencer, regarde une de ces vidéos pour t'inspirer
+  starwars_speak_languages: Vous parlez une autre langue ?
   starwars_help_translate: Aidez-nous à traduire
   starwars_platform_text: Navigateurs récents, smartphones, tablettes
   mc_name: Une Heure de Code Minecraft
-  mc_longdescription: Utilise des blocs de code pour emmener Steve ou Alex dans une
-    aventure dans le monde de Minecraft.
-  mc_shortdescription: Utilise des blocs de code pour emmener Steve ou Alex dans une
-    aventure dans le monde de Minecraft.
+  mc_longdescription: Utilise des blocs de code pour vivre une aventure dans le monde
+    de Minecraft avec Steve ou Alex.
+  mc_shortdescription: Utilise des blocs de code pour vivre une aventure dans le monde
+    de Minecraft avec Steve ou Alex.
   mc_gradelevel: 6 ans et plus
   mc_platformtext: Navigateurs modernes, smartphones, tablettes
   mc_specs: Plusieurs langues (à venir) | navigateurs modernes et tablettes | 6 ans
@@ -721,6 +721,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ, et Scrat
   hoc2014_try_frozen: Artiste avec Anna et Elsa, de La Reine des neiges
   carousel_heading_codeorg: Tutoriels par Code.org
+  carousel_heading_codeorg_any_device: Tutoriels par Code.org (pour tous supports)
   carousel_heading_3rd_party: Tutoriels par des tiers
   carousel_heading_third_party: Tutoriels par des tiers
   carousel_heading_international: Tutoriels dans votre langue
@@ -794,6 +795,8 @@
   projguts_name: Pierre, papier, ciseaux
   hourofcode_name: Espace réservé pour le nouveau code.org/hoc
   playlab_name: Labo
+  infinity_name: Infinity Play Lab
+  artist_name: Artiste
   codeorg_gradelevel: De 4 à 104 ans
   codeintl_gradelevel: De 4 à 104 ans
   thinkersmithspanish_gradelevel: Por todos
@@ -835,6 +838,8 @@
   frozen_gradelevel: 8 ans et plus
   starwars_gradelevel: 6 ans et plus
   playlab_gradelevel: De 4 à 104 ans
+  infinity_gradelevel: De 4 à 104 ans
+  artist_gradelevel: De 4 à 104 ans
   codeorg_platformtext: Navigateurs modernes, smartphones, tablettes
   codeintl_platformtext: Navigateurs modernes, smartphones, tablettes
   thinkersmithspanish_platformtext: Débranché
@@ -929,12 +934,15 @@
     et des 0 pour coder l'information
   kodableunplugged_shortdescription: Un exercice amusant sans connexion
   projguts_shortdescription: Modélise des simulations en utilisant pierre/papier/ciseaux
-  hourofcode_shortdescription: Espace réservé pour le nouveau code.org/hoc
+  hourofcode_shortdescription: Apprends à coder avec Mark Zuckerberg et Angry Birds !
   frozen_shortdescription: Aidons Anna et Elsa à explorer la magie et la beauté de
     la glace.
   starwars_shortdescription: Apprends à programmer des droïdes et crée ton propre
     jeu Star Wars dans une galaxie lointaine, très lointaine.
   playlab_shortdescription: Programme une histoire ou un jeu avec le Labo !
+  infinity_shortdescription: Utilisez le labo pour créer une histoire ou un jeu mettant
+    en vedette les personnages de Disney Infiny.
+  artist_shortdescription: Dessine des super images et schémas avec l'Artiste!
   codeorg_longdescription: Apprends les concepts de base de l'informatique avec le
     glisser-déposer. Il s'agit d'un didacticiel ludique, autogéré, mettant en vedette
     les conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs
@@ -1452,19 +1460,19 @@
     date. <a href='%{it_requirements_url}'> cliquez ici</a> pour savoir comment activer
     HTTPS pour accéder a Code.org.
   compatibility_https_hide_this_warning: Masquer cet avertissement
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  infinity_name: Infinity Play Lab
-  artist_name: Artist
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: battre des ailes
   infinity_shortcode: inf
-  playlab_shortcode: play
+  playlab_shortcode: jouer
   artist_shortcode: art
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>

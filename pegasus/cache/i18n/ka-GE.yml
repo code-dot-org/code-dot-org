@@ -701,6 +701,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ და Scrat
   hoc2014_try_frozen: ხატეთ "გაყინულის" გმირებთან, ანასა და ელზასთან ერთად
   carousel_heading_codeorg: Code.org ტუტორიალები
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: "მესამე მხარის მიერ მოწოდებული ტუტორიალები"
   carousel_heading_third_party: "მესამე მხარის მიერ მოწოდებული ტუტორიალები"
   carousel_heading_international: "ტუტორიალები მშობლიურ ენაზე"
@@ -773,6 +774,8 @@
   projguts_name: "ქვა, ქაღალდი, მაკრატელი"
   hourofcode_name: "შემავსებელი ახალი code.org/hoc-ისთვის"
   playlab_name: "თამაშების ლაბორატორია"
+  infinity_name: "თამაშების ლაბორატორია Infinity"
+  artist_name: "მხატვარი"
   codeorg_gradelevel: "ასაკი 4-104"
   codeintl_gradelevel: "ასაკი 4-104"
   thinkersmithspanish_gradelevel: Por todos
@@ -814,6 +817,8 @@
   frozen_gradelevel: "ასაკი 8+"
   starwars_gradelevel: "ასაკი 6+"
   playlab_gradelevel: "ასაკი 4-104"
+  infinity_gradelevel: "ასაკი 4-104"
+  artist_gradelevel: "ასაკი 4-104"
   codeorg_platformtext: "თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები"
   codeintl_platformtext: "თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები"
   thinkersmithspanish_platformtext: "უსადენო"
@@ -909,12 +914,17 @@
   kodableunplugged_shortdescription: "სახალისო სავარჯიშოები კომპიუტერის გარეშე"
   projguts_shortdescription: "სცადეთ მოდელირება და სიმულაცია ქვა/ქაღალდი/მაკრატლის
     გამოყენებით"
-  hourofcode_shortdescription: "შემავსებელი ახალი code.org/hoc-ისთვის"
+  hourofcode_shortdescription: "ისწავლეთ პროგრამირება მარკ ცუკერბერგთან.. და Аngry
+    Birds-თან ერთად!"
   frozen_shortdescription: "გამოიყენეთ კოდი და შეუერთდით ანასა და ელზას ყინულის მაგიის
     აღმოჩენაში."
   starwars_shortdescription: "ისწავლეთ დროიდების დაპროგრამება და შექმენით თქვენი საკუთარი
     ვარსკვლავური ომების თამაში შორეულ გალაქტიკაში."
   playlab_shortdescription: "შექმენით ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!"
+  infinity_shortdescription: "გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად
+    დისნეის Infinity-ს პერსონაჟების მონაწილეობით."
+  artist_shortdescription: "დახატეთ მაგარი სურათები და შექმენით დიზაინები მხატვართან
+    ერთად!"
   codeorg_longdescription: "ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით.
     ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი,
     Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლეთ გამეორების ციკლები,
@@ -1364,19 +1374,19 @@
     HTTPS -ზე. ამ თარიღის შემდეგ Code.org-ზე ვეღარ შემოხვალთ. <a href='%{it_requirements_url}'>დააჭირეთ
     აქ</a> და გაიგეთ, როგორ ჩართოთ HTTPS Code.org-ისთვის."
   compatibility_https_hide_this_warning: "გაფრთხილების გათიშვა"
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  infinity_name: Infinity Play Lab
-  artist_name: Artist
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: "ფრთების ქნევა"
   infinity_shortcode: inf
-  playlab_shortcode: play
+  playlab_shortcode: "თამაში"
   artist_shortcode: art
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>

@@ -413,8 +413,10 @@ level 'U3 - Canvas - redrawRandom2'
 level 'U3 - Canvas - redrawOriginal'
 level 'U3 - Canvas - movementFunction'
 level 'U3 - Canvas - movementFunction fix Orig'
+level 'U3 - Canvas - One Dot sprayPaint'
 level 'U3 - Canvas - sprayPaint'
 level 'U3 - Canvas - sketch'
+level 'U3 - Canvas - freePlay'
 
 #29
 stage 'Practice PT: Create'

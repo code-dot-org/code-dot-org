@@ -736,6 +736,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ και Scrat
   hoc2014_try_frozen: "Καλλιτέχνης με την Άννα και την Έλσα, από το Frozen"
   carousel_heading_codeorg: "Οδηγοί από το Code.org"
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: "Οδηγοί από τρίτα μέρη"
   carousel_heading_third_party: "Οδηγοί από τρίτους"
   carousel_heading_international: "Σεμινάρια στη γλώσσα σας"
@@ -808,6 +809,8 @@
   projguts_name: "Πέτρα, Ψαλίδια, Χαρτί"
   hourofcode_name: "Σύμβολο κράτησης θέσης για το νέο code.org/hoc"
   playlab_name: "Εργαστήριο Παιχνιδιού"
+  infinity_name: "αιώνιο εργαστήρι παιχνιδιού"
+  artist_name: "Καλλιτέχνης"
   codeorg_gradelevel: "Ηλικίες 4-104"
   codeintl_gradelevel: "Ηλικίες 4-104"
   thinkersmithspanish_gradelevel: "Για όλους"
@@ -849,6 +852,8 @@
   frozen_gradelevel: "Ηλικίες 8 +"
   starwars_gradelevel: "Ηλικίες 6+"
   playlab_gradelevel: "Ηλικίες 4-104"
+  infinity_gradelevel: "Ηλικίες 4-104"
+  artist_gradelevel: "Ηλικίες 4-104"
   codeorg_platformtext: "Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες"
   codeintl_platformtext: "Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες"
   thinkersmithspanish_platformtext: "Χωρίς σύνδεση"
@@ -960,6 +965,9 @@
     δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά."
   playlab_shortdescription: "Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο
     Παιχνιδιού!"
+  infinity_shortdescription: "Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία
+    ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες."
+  artist_shortdescription: "Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!"
   codeorg_longdescription: "Μάθετε τις βασικές έννοιες της Επιστήμης των Υπολογιστών
     με προγραμματισμό drag and drop. Αυτό είναι ένα παιγνιώδες, αυτοκαθοδηγούμενο
     μάθημα με πρωταγωνιστές σε βιντεοδιαλέξεις τους Bill Gates, Mark Zuckerberg, τα
@@ -1492,19 +1500,19 @@
     <a href='%{it_requirements_url}'> Κάντε κλικ εδώ</a> για να μάθετε πώς να ενεργοποιήσετε
     την HTTPS για το Code.org."
   compatibility_https_hide_this_warning: "Απόκρυψη αυτής της προειδοποίησης"
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  infinity_name: Infinity Play Lab
-  artist_name: Artist
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: "Φτερούγισε"
   infinity_shortcode: inf
-  playlab_shortcode: play
+  playlab_shortcode: "παίξε"
   artist_shortcode: art
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>

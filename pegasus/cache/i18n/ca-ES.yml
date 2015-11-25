@@ -701,6 +701,7 @@
   hoc2014_try_scrat: Ocells enutjat, Scrat i PvZ
   hoc2014_try_frozen: Amb els personatges Anna i Elsa de Frozem
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Tutorials en el teu idioma
@@ -773,6 +774,8 @@
   projguts_name: Pedra, Paper, tisora
   hourofcode_name: Contenidor per al nou code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artista
   codeorg_gradelevel: Edat 4-104
   codeintl_gradelevel: Edat 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -814,6 +817,8 @@
   frozen_gradelevel: Edat 8 +
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Edat 4-104
+  infinity_gradelevel: Edat 4-104
+  artist_gradelevel: Edat 4-104
   codeorg_platformtext: Navegadors moderns, mòbils i tablets
   codeintl_platformtext: Navegadors moderns, mòbils i tablets
   thinkersmithspanish_platformtext: Sense connexió
@@ -909,12 +914,15 @@
     informació
   kodableunplugged_shortdescription: Un divertit exercici sense connexió
   projguts_shortdescription: Prova modelatge i simulació utilitzant pedra-paper-estisores
-  hourofcode_shortdescription: Contenidor per al nou code.org/hoc
+  hourofcode_shortdescription: Aprèn a programar amb Mark Zuckerberg i Angry Birds!
   frozen_shortdescription: Anem a utilitzar el codi per unir l'Anna i l'Elsa mentre
     exploren la màgia i la bellesa del gel.
   starwars_shortdescription: Aprèn a programar droides i a crear el teu propi joc
     d'Star Wars en una galàxia molt, molt llunyana.
   playlab_shortdescription: Crea una història o fes una partida amb Play Lab!
+  infinity_shortdescription: Utilitza Play Lab per crear una història o un joc protagonitzada
+    pels personatges de Disney infinity.
+  artist_shortdescription: Dibuixar imatges estupendes i dissenys amb l'artista!
   codeorg_longdescription: Aprèn els conceptes bàsics de la Informàtica mitjançant
     la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies
     protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies.
@@ -1408,19 +1416,19 @@
     en %{https_date}.  No podràs accedir a Code.org passada aquesta data. <a href='%{it_requirements_url}'>
     feu clic aquí</a> per aprendre com permetre HTTPS per Code.org.
   compatibility_https_hide_this_warning: Amaga aquest avís
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  infinity_name: Infinity Play Lab
-  artist_name: Artist
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: aleteig
   infinity_shortcode: inf
-  playlab_shortcode: play
+  playlab_shortcode: reprodueix
   artist_shortcode: art
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>

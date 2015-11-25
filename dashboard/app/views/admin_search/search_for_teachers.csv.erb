@@ -2,7 +2,7 @@
 CSV.generate do |csv|
   csv << @headers
   @teachers.each do |teacher|
-    csv << teacher
+    csv << teacher.map{|s| s.to_s.gsub(',', ' ')}
   end
 end
 %>

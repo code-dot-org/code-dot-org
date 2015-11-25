@@ -675,6 +675,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ, และ Scrat
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: "ฝึกฝนในภาษาของคุณ"
@@ -746,6 +747,8 @@
   projguts_name: "ค้อน กรรไกร กระดาษ เป่ายิ้งฉุบ"
   hourofcode_name: "พื้นที่สำหรับ code.org/hoc ใหม่"
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: "ศิลปิน"
   codeorg_gradelevel: "อายุ 4 - 104 ปี"
   codeintl_gradelevel: "อายุ 4 - 104 ปี"
   thinkersmithspanish_gradelevel: Por todos
@@ -787,6 +790,8 @@
   frozen_gradelevel: "อายุ 8 ปีขึ้นไป"
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: "อายุ 4 - 104 ปี"
+  infinity_gradelevel: "อายุ 4 - 104 ปี"
+  artist_gradelevel: "อายุ 4 - 104 ปี"
   codeorg_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
   codeintl_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
   thinkersmithspanish_platformtext: "ถอดปลั๊ก"
@@ -872,11 +877,15 @@
   thinkersmith2_shortdescription: "เรียนรู้ว่าคอมพิวเตอร์ใช้เลข 1 และ 0 เพื่อแสดงข้อมูลอย่างไร"
   kodableunplugged_shortdescription: "กิจกรรมแบบออฟไลน์ที่สนุกสนาน"
   projguts_shortdescription: "สร้างแบบจำลองและลองเล่น ด้วยเกมเป่ายิ้งฉุบ"
-  hourofcode_shortdescription: "พื้นที่สำหรับ code.org/hoc ใหม่"
+  hourofcode_shortdescription: "เรียนรู้การเขียนโค้ดกับ Mark Zuckerberg และเกม Angry
+    Birds!"
   frozen_shortdescription: "ลองใช้โค้ด เพื่อเข้าช่วย Anna และ Elsa สำรวจความมหัศจรรย์แห่งเมืองน้ำแข็ง"
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the ศิลปิน!
   codeorg_longdescription: "เรียนรู้แนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ ผ่านการลากและวาง
     \ เริ่มเข้าสู่บทเรียน โดย Bill Gates, Mark Zuckerberg, Angry Birds และ Plants
     vs. Zombies เรียนรู้เรื่อง Loop เงื่อนไข และอัลกอริทึมพื้นฐาน ซึ่งมีให้เรียนมากถึง
@@ -1293,19 +1302,19 @@
     %{https_date} คุณจะไม่สามารถเข้าถึง Code.org ได้หลังจากวันนี้ <a href='%{it_requirements_url}'>คลิกที่นี่</a>เพื่อเรียนรู้วิธีการเปิดใช้งาน
     HTTPS สำหรับ Code.org"
   compatibility_https_hide_this_warning: Hide this warning
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  infinity_name: Infinity Play Lab
-  artist_name: Artist
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: "บิน"
   infinity_shortcode: inf
-  playlab_shortcode: play
+  playlab_shortcode: "เล่น"
   artist_shortcode: art
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
