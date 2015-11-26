@@ -10,6 +10,8 @@ log_dir = Pathname.new(File.join(pwd, '../../log/')).cleanpath
 config_dir = Pathname.new(File.join(pwd, '../../config/')).cleanpath
 config_file = "#{config_dir}/process_queues.json"
 
+argv = ARGV + ['--', config_file]
+
 options =  {
   dir_mode: :normal, # Use absolute directory paths.
   dir: config_dir, # directory where pid file will be stored
@@ -17,6 +19,7 @@ options =  {
   backtrace: true,   # Log uncaught exceptions to ‘[app_name].log’ in the pid-file directory.
   monitor: true,     # Monitor the program and restart crashed instances.
   log_output: true,  # Log the output to process_queues.output in the config directory.
+  ARGV: argv
 }
 
 if ARGV[0] == 'start'
@@ -27,6 +30,7 @@ if ARGV[0] == 'start'
   puts " * Using config #{config_file}"
   puts " * Logging to #{log_dir}/process_queues.output"
 end
+
 
 Daemons.run('process_queues', options)
 
