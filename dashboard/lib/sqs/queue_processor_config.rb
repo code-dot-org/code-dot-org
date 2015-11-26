@@ -21,7 +21,7 @@ module SQS
                    num_workers_per_processor:,
                    name: nil,
                    max_rate_proc: nil,
-                   logger: Rails.logger)
+                   logger: Logger.new(STDOUT))
       raise ArgumentError, 'num_workers_per_processor must be positive' unless num_workers_per_processor > 0
       raise ArgumentError, 'initial_max_rate must be non-negative' unless initial_max_rate >= 0
 

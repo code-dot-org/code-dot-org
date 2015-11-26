@@ -1,9 +1,14 @@
 #!/usr/bin/env ruby
-# A service for processing a set of SQS queues defined by a config file.
+# A script for processing a set of SQS queues defined by a config file.
 # Usage ./process_queues QUEUE_CONFIG.JSON
 
-require_relative '../../config/environment'
+require 'logger'
 
+puts "Booting..."
+require 'aws-sdk'
+Aws.eager_autoload!
+
+require_relative '../../config/environment'
 require 'json'
 require 'pp'
 
@@ -13,7 +18,11 @@ require 'sqs/queue_processor'
 # A manager for starting and stopping a set of queue processors based
 # on a JSON config file.
 class QueueProcessorManager
-  def initialize
+  attr_accessor :logger, :argv
+
+  def initialize(argv, logger = Logger.new(STDOUT))
+    @argv = argv
+    @logger = logger
     @processors = []
   end
 
@@ -23,7 +32,7 @@ class QueueProcessorManager
     metrics_map = {}
     configs = SQS::QueueProcessorConfig::create_configs_from_json(json)
     configs.each do |config|
-      puts "Starting queue processor for #{config.name}"
+      logger.info "Starting queue processor for #{config.name}"
       sqs_metrics = SQS::Metrics.new
       metrics_map[config.name] = sqs_metrics
       processor = SQS::QueueProcessor.new(config, sqs_metrics)
@@ -47,21 +56,25 @@ class QueueProcessorManager
     end
   end
 
-  def main
-    if ARGV.size != 1
-      puts "Usage: #{$0} CONFIG_FILE.json"
+  def run
+    if argv.size < 1
+      puts "Usage: #{$0} CONFIG_FILE.json [UPDATE-INTERVAL]"
       exit 0
     end
+    config_file = argv[0]
+    logger.info "Reading config file #{config_file}"
+    json = File.open(config_file).read
 
-    manager = QueueProcessorManager.new
-    json = File.open(ARGV[0]).read
-    metrics_map = manager.start_queue_processors(json)
+    update_interval = (argv.size >= 2) ? argv[1].to_i : 10
+    update_interval = 1 if update_interval < 1  # Don't update too quickly.
+
+    metrics_map = start_queue_processors(json)
 
     # Run until SIGINT is received.
     stopping = false
     exit_proc = Proc.new {
       puts "Shutting down, please wait..."
-      manager.stop_queue_processors unless stopping
+      stop_queue_processors unless stopping
       stopping = true
       exit
     }
@@ -72,22 +85,28 @@ class QueueProcessorManager
       exit_proc.call
     }
 
-    puts "Press ^C to stop"
+    start_time = Time.now.to_i
+
+
+    last_changed = false
+    old_metrics_json = ""
     loop do
-      metrics_map.each do |k,v|
-        puts "#{k}: #{v}"
+      # Only display the metrics map if something changed.
+      if metrics_map.to_json == old_metrics_json
+        print "."
+        last_changed = false
+      else
+        puts if !last_changed
+        last_changed = true
+        metrics_map.each do |k,v|
+          logger.info "#{k}: #{v}  time=#{Time.now.to_i - start_time}"
+        end
+        old_metrics_json = metrics_map.to_json
       end
-      interruptible_sleep 10
-    end
+      sleep update_interval
+    end # loop
   end
 
-  private
-
-  # Sleep but allow ^C to interrupt the sleep
-  def interruptible_sleep(seconds)
-    @_sleep_check, @_sleep_interrupt = IO.pipe
-    IO.select([@_sleep_check], nil, nil, seconds)
-  end
 end
 
-QueueProcessorManager.new.main
+QueueProcessorManager.new(ARGV).run
