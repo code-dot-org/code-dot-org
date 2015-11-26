@@ -66,11 +66,11 @@ Scenario: Async progress write followed by a stale read
   And I reload the page
   And I wait to see ".header_middle"
   And I wait for 2 seconds
-  And element ".header_middle a.level_link:first" has class "perfect"
+  And element ".header_middle a.level_link:last" has class "perfect"
   Then I am on "http://studio.code.org/s/hourofcode"
   And I wait to see ".user-stats-block"
   And I wait for 2 seconds
-  And element ".user-stats-block a.level_link:first" has class "perfect"
+  And element ".user-stats-block .games:first a.level_link:last" has class "perfect"
 
 @no_mobile
 Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video
