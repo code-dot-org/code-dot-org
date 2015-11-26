@@ -10,7 +10,7 @@ layout: wide
 
 %div.highlights-content
   - tag = 'highlight'
-  -DB[:cdo_news_items].where(tag_s:tag).each do |item|
+  -DB[:cdo_news_items].where(tag_s:tag).limit(100).each do |item|
     .highlight-item
       %img.higlight-img{src: "#{item[:image_url_s]}"}
       .highlight-caption
@@ -19,7 +19,7 @@ layout: wide
         = item[:heading_s]
         %br
         - if item[:link_text_s]
-          %a{href: "#{item[:url_s]}", style: "color: white;"}
+          %a.learnmore-link{href: "#{item[:url_s]}"}
             %div.learn-button= item[:link_text_s]
 
 :javascript
