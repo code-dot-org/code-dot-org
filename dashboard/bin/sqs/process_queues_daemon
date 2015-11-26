@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+4# A daemonized version of 'process_queues'
+
+require 'daemons'
+require 'pathname'
+
+pwd  = File.dirname(File.expand_path(__FILE__))
+logdir = Pathname.new(File.join(pwd, '../../log/')).cleanpath
+piddir = Pathname.new(File.join(pwd, '../../config/')).cleanpath
+
+options =  {
+  dir_mode: :normal, # Use absolute directory paths.
+  dir: File.join(pwd, '../../config/'), # directory where pid file will be stored
+  log_dir: File.join(pwd, '../../log/'), 
+  backtrace: true,   # Log uncaught exceptions to ‘[app_name].log’ in the pid-file directory.
+  monitor: true,     # Monitor the program and restart crashed instances.
+  log_output: true,  # Log the output to process_queues.output in the config directory.
+}
+
+if ARGV[0] == 'start'
+  # Make sure the required "-- CONFIG_FILE" arguments are provided.
+  config_file = nil
+  ARGV.to_a.each_with_index do |arg, i|
+    if arg == '--' && (i < ARGV.length - 1)
+      config_file = ARGV[i + 1]
+      break
+    end
+  end
+  raise "Missing required '-- CONFIG_FILE' argument" unless config_file
+  raise "#{config_file} does not exist" unless File.exists?(config_file)
+  raise "#{config_file} is not readable" unless File.readable?(config_file)
+
+  puts "* Using config #{config_file}"
+  puts "* Logging to #{logdir}/process_queues.output"
+end
+
+Daemons.run('process_queues', options)
+

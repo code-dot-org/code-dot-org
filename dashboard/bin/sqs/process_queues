@@ -1,12 +1,14 @@
 #!/usr/bin/env ruby
-# A service for processing a set of SQS queues defined by a config file.
+# A script for processing a set of SQS queues defined by a config file.
 # Usage ./process_queues QUEUE_CONFIG.JSON
 
 require 'logger'
 
-puts "Loading environment..."
-require_relative '../../config/environment'
+puts "Booting..."
+require 'aws-sdk'
+Aws.eager_autoload!
 
+require_relative '../../config/environment'
 require 'json'
 require 'pp'
 
@@ -16,11 +18,12 @@ require 'sqs/queue_processor'
 # A manager for starting and stopping a set of queue processors based
 # on a JSON config file.
 class QueueProcessorManager
-  attr_accessor :logger
+  attr_accessor :logger, :argv
 
-  def initialize(logger = Logger.new(STDOUT))
-    @processors = []
+  def initialize(argv, logger = Logger.new(STDOUT))
+    @argv = argv
     @logger = logger
+    @processors = []
   end
 
   # Starts as set of queue processors based on a config hash.
@@ -54,15 +57,15 @@ class QueueProcessorManager
   end
 
   def run
-    if ARGV.size < 1
+    if argv.size < 1
       puts "Usage: #{$0} CONFIG_FILE.json [UPDATE-INTERVAL]"
       exit 0
     end
-    config_file = ARGV[0]
+    config_file = argv[0]
     logger.info "Reading config file #{config_file}"
     json = File.open(config_file).read
 
-    update_interval = (ARGV.size >= 2) ? ARGV[1].to_i : 10
+    update_interval = (argv.size >= 2) ? argv[1].to_i : 10
     update_interval = 1 if update_interval < 1  # Don't update too quickly.
 
     metrics_map = start_queue_processors(json)
@@ -82,23 +85,23 @@ class QueueProcessorManager
       exit_proc.call
     }
 
-    time = 0
+    start_time = Time.now.to_i
+
+    old_metrics = {}
     loop do
-      metrics_map.each do |k,v|
-        logger.info "#{k}: #{v}  time=#{time}"
-        time += 1
+      # Only display the metrics map if something changed.
+      if metrics_map.to_json != old_metrics.map.to_json
+        metrics_map.each do |k,v|
+          logger.info "#{k}: #{v}  time=#{Time.now.to_i - start_time}"
+        end
+        puts
+      else
+        print "."
       end
-      interruptible_sleep update_interval
+      old_metrics_map = metrics_map
     end
   end
 
-  private
-
-  # Sleep but allow ^C to interrupt the sleep
-  def interruptible_sleep(seconds)
-    @_sleep_check, @_sleep_interrupt = IO.pipe
-    IO.select([@_sleep_check], nil, nil, seconds)
-  end
 end
 
-QueueProcessorManager.new.run
+QueueProcessorManager.new(ARGV).run
