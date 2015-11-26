@@ -2,6 +2,7 @@
 var rowStyle = require('./rowStyle');
 var elementUtils = require('./elementUtils');
 var utils = require('../../utils');
+var applabCommands = require('../commands');
 
 var LockState = {
   LOCKED: 'LOCKED',

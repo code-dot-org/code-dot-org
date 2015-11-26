@@ -908,8 +908,11 @@ applabCommands.setText = function (opts) {
  * @private
  */
 applabCommands.getElementInnerText_ = function (element) {
-  var cleanedText = element.innerHTML;
-  cleanedText = cleanedText.replace(/<div>/gi, '\n'); // Divs generate newlines
+  return applabCommands.unescapeText(element.innerHTML);
+};
+
+applabCommands.unescapeText = function(text) {
+  var cleanedText = text.replace(/<div>/gi, '\n'); // Divs generate newlines
   cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
 
   // This next step requires some explanation
@@ -935,8 +938,9 @@ applabCommands.getElementInnerText_ = function (element) {
   cleanedText = cleanedText.replace(/&gt;/gi, '>');   // Unescape >
   cleanedText = cleanedText.replace(/&lt;/gi, '<');   // Unescape <
   cleanedText = cleanedText.replace(/&amp;/gi, '&');  // Unescape & (must happen last!)
+  console.log('Cleaned text is ' + cleanedText);
   return cleanedText;
-};
+}
 
 /**
  * Attempts to emulate Chrome's version of innerText by way of innerHTML, only
@@ -947,7 +951,11 @@ applabCommands.getElementInnerText_ = function (element) {
  * @private
  */
 applabCommands.setElementInnerText_ = function (element, newText) {
-  var escapedText = newText.toString();
+  element.innerHTML = applabCommands.escapeText(newText.toString());
+};
+
+applabCommands.escapeText = function(text) {
+  var escapedText = text.toString();
   escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
   escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
   escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >
@@ -956,10 +964,12 @@ applabCommands.setElementInnerText_ = function (element, newText) {
   // Now wrap each line except the first line in a <div>,
   // replacing blank lines with <div><br><div>
   var lines = escapedText.split('\n');
-  element.innerHTML = lines[0] + lines.slice(1).map(function (line) {
-    return '<div>' + (line.length ? line : '<br>') + '</div>';
-  }).join('');
-};
+  var returnValue = lines[0] + lines.slice(1).map(function (line) {
+      return '<div>' + (line.length ? line : '<br>') + '</div>';
+    }).join('');
+
+  return returnValue;
+}
 
 applabCommands.getChecked = function (opts) {
   var divApplab = document.getElementById('divApplab');
