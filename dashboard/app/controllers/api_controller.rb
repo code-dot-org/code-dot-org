@@ -64,11 +64,6 @@ class ApiController < ApplicationController
     render json: data
   end
 
-  def user_progress
-    script = Script.get_from_cache(params[:script_name])
-    render json: summarize_user_progress(script)
-  end
-
   def section_text_responses
     load_section
     load_script
