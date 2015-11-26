@@ -87,19 +87,24 @@ class QueueProcessorManager
 
     start_time = Time.now.to_i
 
-    old_metrics = {}
+
+    last_changed = false
+    old_metrics_json = ""
     loop do
       # Only display the metrics map if something changed.
-      if metrics_map.to_json != old_metrics.map.to_json
+      if metrics_map.to_json == old_metrics_json
+        print "."
+        last_changed = false
+      else
+        puts if !last_changed
+        last_changed = true
         metrics_map.each do |k,v|
           logger.info "#{k}: #{v}  time=#{Time.now.to_i - start_time}"
         end
-        puts
-      else
-        print "."
+        old_metrics_json = metrics_map.to_json
       end
-      old_metrics_map = metrics_map
-    end
+      sleep update_interval
+    end # loop
   end
 
 end
