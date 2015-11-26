@@ -5,29 +5,22 @@ layout: wide
 
 %link{href: "/css/highlights.css", rel: "stylesheet"}
 
-- highlights = []
-- highlights << { image: '/images/highlights/example_3.jpg', caption: 'In our first year, we made it to over 100 countries worldwide. Now we are in 200 countries.'}
-- highlights << { image: '/images/highlights/example_2.jpg', caption: 'This is our first student to try an Hour of Code.'}
-- highlights << { image: '/images/highlights/example_3.jpg', caption: 'This is a story about someone who tried an hour of code and is now a software engineer and loving her job and is so happy and grateful to Code.org and everyone is happy.'}
-- highlights << { image: '/images/highlights/example_2.jpg', caption: 'In our first year, we made it to over 100 countries worldwide. Now we are in 200 countries. This is a story about someone who tried an hour of code and is now a software engineer and loving her job and is so happy and grateful to Code.org and everyone is happy. In our first year, we made it to over 100 countries.'}
-- highlights << { image: '/images/highlights/example_3.jpg', caption: 'In our first year, we made it to over 100 countries worldwide. Now we are in 200 countries.', learn_more_link: 'https://hourofcode.com', headline: 'Going worldwide'}
-
-
 %h1 Hour of Code Highlights
 %h3 Some of our favorite moments of the Hour of Code campaign.
 
 %div.highlights-content
-  - highlights.each do |item|
+  - tag = 'highlight'
+  -DB[:cdo_news_items].where(tag_s:tag).each do |item|
     .highlight-item
-      %img.higlight-img{src: "#{item[:image]}"}
+      %img.higlight-img{src: "#{item[:image_url_s]}"}
       .highlight-caption
-        - if item[:headline]
-          %h4.caption-headline= item[:headline]
-        = item[:caption]
+        - if item[:short_heading_s]
+          %h4.caption-headline= item[:short_heading_s]
+        = item[:heading_s]
         %br
-        - if item[:learn_more_link]
-          %a{href: "#{item[:learn_more_link]}", style: "color: white;"}
-            %div.learn-button Learn more
+        - if item[:link_text_s]
+          %a{href: "#{item[:url_s]}", style: "color: white;"}
+            %div.learn-button= item[:link_text_s]
 
 :javascript
   $(function() {
