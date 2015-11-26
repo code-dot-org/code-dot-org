@@ -8,7 +8,7 @@ layout: wide
 %h1 Hour of Code Highlights
 %h3 Some of our favorite moments of the Hour of Code campaign.
 
-%div.highlights-content
+.highlights-content
   - tag = 'highlight'
   -DB[:cdo_news_items].where(tag_s:tag).limit(100).each do |item|
     .highlight-item
@@ -20,7 +20,7 @@ layout: wide
         %br
         - if item[:link_text_s]
           %a.learnmore-link{href: "#{item[:url_s]}"}
-            %div.learn-button= item[:link_text_s]
+            .learn-button= item[:link_text_s]
 
 :javascript
   $(function() {
