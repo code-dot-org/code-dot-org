@@ -14,6 +14,21 @@ class ScriptLevelsController < ApplicationController
   # This is set to twice the proxy max-age because of a bug in CloudFront.
   DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
 
+  before_action :disable_session_for_cached_pages
+
+  def disable_session_for_cached_pages
+    if ScriptLevelsController.is_cachable_request?(request)
+      request.session_options[:skip] = true
+    end
+  end
+
+  # Return true if request is one that can be publicly cached.
+  def self.is_cachable_request?(request)
+    script_id = request.params[:script_id]
+    script = Script.get_from_cache(script_id) if script_id
+    script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
+  end
+
   def reset
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
