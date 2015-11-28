@@ -4,9 +4,9 @@
     {
       "name": "ActivityQueue",
       "handler_class": "Activity::AsyncHandler",
-      "queue_url": "https://sqs.us-east-1.amazonaws.com/475661607190/activities-example_dev",
+      "queue_url": "<%= CDO.activity_queue_url %>",
       "num_processors": 1,
-      "num_workers_per_processor": 10,
+      "num_workers_per_processor": 32,
       "initial_max_rate": 1000,
       "dcdo_max_rate_key": "example_dev_rate"
     }

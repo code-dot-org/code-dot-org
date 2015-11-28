@@ -521,6 +521,7 @@ DEPENDENCIES
   codemirror-rails
   colorize
   cucumber
+  daemons
   dalli
   devise
   devise_invitable (~> 1.5.2)
