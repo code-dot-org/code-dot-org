@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
-4# A daemonized version of 'process_queues'
+# A daemonized version of 'process_queues' supporting the following
+# "init-script" arguments: start, stop, restart, reload, and status.
 
 require 'daemons'
 require 'pathname'
@@ -8,7 +9,7 @@ require 'pathname'
 pwd  = File.dirname(File.expand_path(__FILE__))
 log_dir = Pathname.new(File.join(pwd, '../../log/')).cleanpath
 config_dir = Pathname.new(File.join(pwd, '../../config/')).cleanpath
-config_file = "#{config_dir}/process_queues.json"
+config_file = "#{config_dir}/queue_config.json.erb"
 
 argv = ARGV + ['--', config_file]
 
@@ -33,4 +34,3 @@ end
 
 
 Daemons.run('process_queues', options)
-
