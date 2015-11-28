@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
-4# A daemonized version of 'process_queues'
+# A daemonized version of 'process_queues' supporting the following
+# "init-script" arguments: start, stop, restart, reload, and status.
 
 require 'daemons'
 require 'pathname'
