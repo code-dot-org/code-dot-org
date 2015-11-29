@@ -14,7 +14,8 @@ pd_scripts.each do |script|
   # Get all users with any activity in the script
   users = script.users
   headers = nil
-  data = users.map do |user|
+  data = []
+  users.find_each do |user|
     row = {}
     row.merge!({
                    :'ID' => user.id,
@@ -36,7 +37,7 @@ pd_scripts.each do |script|
     end
     row.merge!({:'Script Percent Complete' => percent_complete_total(script, user).to_s})
     headers ||= row.keys
-    row.values
+    data << row.values
   end
   locals_options = {headers: headers, data: data, script: {name: script.name, id: script.id}, time: DateTime.now}
   Properties.set("pd_progress_#{script.id}", locals_options)
