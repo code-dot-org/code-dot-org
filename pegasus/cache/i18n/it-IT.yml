@@ -144,8 +144,6 @@
   twitter_teach_cs: Perchè molte scuole non insegnano informatica? Possiamo migliorare
     questa situazione.  http://youtu.be/nKIu9yen5nc. Visita http://code.org/  per
     saperne di più.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Scopri</a> i premi per
-    gli organizzatori.
   learn_hoc: Fai l'Ora del Codice
   beyond_hoc: Dopo l'Ora del Codice
   what_gender: Di che sesso sei?
@@ -376,6 +374,9 @@
   volunteer_engineer_submission_intro_signup: Compila i campi sottostanti se sei uno
     studente di informatica o uno sviluppatore professionista. I campi contrassegnati
     con un <span class="form-required-field">*</span> sono obbligatori.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Informazioni condivise con gli insegnanti
     sulla mappa dei volontari
   volunteer_engineer_submission_field_name: Nome
@@ -726,6 +727,16 @@
   learn_educator_resources_button: Risorse per gli insegnanti
   learn_are_you_educator: Sei un insegnante? Impara <a href="http://hourofcode.com/resources/how-to">
     con insegnare un'Ora del Codice</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Scopri</a> i premi per
+    gli organizzatori.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Prova i nuovi corsi dell'Ora del Codice
   hoc2014_try_new_tutorial: Prova il nuovo corso dell'Ora del Codice in versione provvisoria
   hoc2014_try_scrat: Angry Birds, PvZ, e Scrat
@@ -737,7 +748,7 @@
   carousel_heading_international: Corsi nella tua lingua
   carousel_heading_domestic: Corsi disponibili in Inglese
   carousel_heading_beginners: Corsi per principianti
-  carousel_heading_javascript: Corsi che insegnano il linguaggio Javascript
+  carousel_heading_javascript: Lezioni che insegnano il linguaggio Javascript
   carousel_heading_unplugged: Non hai Internet o dispositivi informatici? Prova l'informatica
     con mezzi tradizionali!
   carousel_heading_devices: App per imparare su smartphone e tablet
@@ -1471,14 +1482,3 @@
   infinity_shortcode: inf
   playlab_shortcode: inizia
   artist_shortcode: art
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>

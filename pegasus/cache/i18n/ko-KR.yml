@@ -131,7 +131,6 @@
   just_did_hoc: '@codeorg 에서  #HourOfCode 를 완료했습니다'
   twitter_teach_cs: 왜 더 많은 학교들이 컴퓨터과학(정보과학)을 가르치지 않을까요? 우리가 이를 해결 할 수 있습니다. http://youtu.be/nKIu9yen5nc.
     http://code.org/ 에서 더 많은 내용을 알아보세요.
-  learn_hoc_prizes: 모든 교육자들에 대한 상품에 대해<a href="https://hourofcode.com/prizes">더 살펴보세요.</a>
   learn_hoc: Hour of Code 해보기
   beyond_hoc: Hour of Code 이후 학습
   what_gender: 성별?
@@ -322,6 +321,9 @@
     가능합니다.) 자원봉사를 원하지 않으신다면, Hour of Code 행사 운영에 대해서 <a href="%{url}">더 살펴봐주세요.</a>'
   volunteer_engineer_submission_intro_signup: 컴퓨터과학/공학/교육과 대학생이거나 소프트웨어 개발자이시면 <span
     class="form-required-field">*</span> 표 있는 곳을 채워주세요.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: 자원봉사자 지도에 선생님에게 공유되는 정보
   volunteer_engineer_submission_field_name: 이름
   volunteer_engineer_submission_field_name_placeholder: 성명
@@ -612,6 +614,15 @@
   learn_educator_resources_button: 교사를 위한 자료
   learn_are_you_educator: 교육자이신가요? Hour of Code <a href="http://hourofcode.com/resources/how-to">를
     가르치는 방법</a>을 배워보세요.
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: 모든 교육자들에 대한 상품에 대해<a href="https://hourofcode.com/prizes">더 살펴보세요.</a>
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: 새로운 Hour of Code 튜토리얼을 경험해 보세요.
   hoc2014_try_new_tutorial: 새로운(beta) Hour of Code 튜토리얼 해보기
   hoc2014_try_scrat: 앵그리버드, 식물과좀비, 스크랫
@@ -1187,14 +1198,3 @@
   infinity_shortcode: inf
   playlab_shortcode: 실행
   artist_shortcode: art
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
