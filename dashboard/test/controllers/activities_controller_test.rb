@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
-require 'mocha/api'
 require 'test_helper'
 
 class ActivitiesControllerTest < ActionController::TestCase
   include Devise::TestHelpers
   include LevelsHelper
   include UsersHelper
-  include Mocha::API
 
   # A fake queue implementation that captures each message sent and sends it to the handler
   # only when requested by the test.

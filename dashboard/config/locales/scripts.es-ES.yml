@@ -1658,7 +1658,7 @@
           Craft: Craft
         mc:
           title: Hora de Código de Minecraft
-          description_short: Explora el mundo de Minecraft a través del código
+          description_short: Дослідимо світ Майнкрафту через код
           description: Use blocos de código para levar Steve ou Alex para uma aventura
             através deste mundo de Minecraft
           Hour of Code 2015: Hora del Código 2015
@@ -1669,3 +1669,10 @@
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: ¡Bienvenido!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Cierre
