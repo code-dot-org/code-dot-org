@@ -4,6 +4,7 @@
 - level_progress = progress[:levels] || {}
 - should_show_lesson_plan = user && user.teacher?
 - current_level_id = params[:current_level_id]
+- async = local_assigns[:async]
 
 .user-stats-block
   - script_summary[:stages].each do |stage|
@@ -19,8 +20,12 @@
         - stage[:levels].each do |level|
           .level
             - p = level_progress[level[:id]]
-            - status = p.try(:[], :status) || 'not_tried'
-            - result = p.try(:[], :result) || 0
+            - if async
+              - status = 'not_tried'
+              - result = 0
+            - else
+              - status = p.try(:[], :status) || 'not_tried'
+              - result = p.try(:[], :result) || 0
             - if current_level_id == "#{level[:id]}"
               - puzzle_outer_class = 'puzzle_outer_current'
             - elsif level[:kind] == 'assessment'
@@ -49,7 +54,7 @@
   #trophies
     = render partial: 'shared/concept_trophy_block', locals: {concept_progress: progress[:trophies], added_style: 'padding: 10px;'}
 
-- if local_assigns[:async]
+- if async
   :javascript
     //<![CDATA[
     populateProgress("#{script.name}")
