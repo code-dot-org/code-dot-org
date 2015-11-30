@@ -12,9 +12,9 @@ theme: none
 
   - small_certificate_image_url = "/images/fit-240/#{certificate_template_for(course)}"
   - course_name = 'Hour of Code'
-  - if course == "20-hour"
+  - if course == ScriptInfo::TWENTY_HOUR_NAME
     - course_name = "K-8 Intro to Computer Science Course"
-  - elsif course == "mc"
+  - elsif course == ScriptInfo::MINECRAFT_NAME
     - course_name = "Minecraft Hour of Code"
 
   %h1 Print a batch of certificates
@@ -44,7 +44,7 @@ theme: none
   -sponsor = request.params['sponsor']
 
   %div.hide-print
-    -if course == '20-hour'
+    -if course == ScriptInfo::TWENTY_HOUR_NAME
       %h1 K-8 Intro to Computer Science Course Certificates
     -else
       %h1 Hour of Code Certificates
