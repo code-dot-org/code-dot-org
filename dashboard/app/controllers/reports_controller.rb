@@ -34,8 +34,10 @@ SQL
     if params[:user_id].present?
       user = User.find(params[:user_id])
       authorize! :read, user
+      render file: 'shared/_user_stats', layout: false, locals: {user: user}
+    else
+      render file: 'shared/_user_stats', layout: false, locals: {user: current_user, async: true}
     end
-    render file: 'shared/_user_stats', layout: false, locals: {user: user || current_user}
   end
 
   def prizes
