@@ -97,7 +97,6 @@
 "et-EE":
   english: "Estonian"
   native: "Eesti"
-  debug: true
 
 "eu": "eu-ES"
 "eu-ES":
@@ -286,12 +285,12 @@
 "nn": "nn-NO"
 "nn-NO":
   english: "Norwegian Nynorsk"
-  native: "Nynorsk"
+  native: "Norsk (nynorsk)"
 
 "no": "no-NO"
 "no-NO":
   english: "Norwegian"
-  native: "Norsk"
+  native: "Norsk (bokmål)"
 
 "pl": "pl-PL"
 "pl-PL":

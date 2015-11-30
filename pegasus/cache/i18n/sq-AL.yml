@@ -12,11 +12,11 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">A je ti një mësues për shkencat kompjuterike? Shiko burimet
     e javes për shkencat kompjuterike</a>'
-  n_have_learned_an_hoc: "<h1>Provo</h1><h2>Orën e Kodimit</h2><h3># të shërbyer</h3>"
+  n_have_learned_an_hoc: <h1>Provo</h1><h2>Orën e Kodimit</h2><h3># të shërbyer</h3>
   anybody_can_learn: Të gjithë mund të mësojnë.
   learn_now: Meso tani
-  petition_message: "Çdo student në çdo shkollë duhet të ketë mundësinë për të mësuar
-    rreth shkencave kompjuterike"
+  petition_message: Çdo student në çdo shkollë duhet të ketë mundësinë për të mësuar
+    rreth shkencave kompjuterike
   petition_sign_message: 'Nëse jeni dakort, nënshkruani emrin tuaj. Bashkohuni me
     # të tjerët.'
   petition_sign_message_support: 'Në qoftë se ju na mbështesni, nënshkruaj emrin tënd.
@@ -37,8 +37,8 @@
   hoc2014_host: Organizo
   hoc2014_everyone: Të gjithë
   hoc2014_support: Mbështete &#x25BE;
-  hoc2014_whatishoc: "Çfarë është Ora e Kodimit?"
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  hoc2014_whatishoc: Çfarë është Ora e Kodimit?
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
@@ -50,10 +50,10 @@
   cded_try_it: Provoje
   twentyhours_trynow: Provo tani
   california_heading: Kerkoj shkollës tënde që të të mësojë shkencën kompjuterike
-  california_text: "Çdo mësues mund të ofrojë <a href='http://studio.code.org/'> kurset
+  california_text: Çdo mësues mund të ofrojë <a href='http://studio.code.org/'> kurset
     tona falas</a>. Çdo shkollë fillore mund <a href='http://code.org/educate/k5'>
     të japë mësim shkencën komjuterike</a>. Pyesni shkollat e mesme për tu <a href='http://code.org/educate/districts'>
-    bërë partnerë me ne."
+    bërë partnerë me ne.
   california_button: Mëso më shumë
   flappy_heading: Ditëlindja e Flapit te Code.org
   flappy_text: Code.org sapo mbushi një vit.<br/><br/> Festo me ne duke krijuar lojën
@@ -67,7 +67,7 @@
     fjalitë nëse-atëherë, dhe alegoritme fillestare.
   all_ages: Të gjitha moshat
   beginner: Fillestar
-  n_participants: "# pjesmarrës"
+  n_participants: '# pjesmarrës'
   go: Shkoni
   thank_you_: Faleminderit!
   congratulations: Urime!
@@ -116,7 +116,7 @@
   beyond_an_hour: Përtej një Ore Kodimi
   get_started: Fillo
   i_agree: Pranoj
-  participant_select: "- Zgjidh -"
+  participant_select: '- Zgjidh -'
   participant_student: student
   participant_parent: Prindi
   participant_educator: Mësues
@@ -137,13 +137,11 @@
   learn_next_level: Provo një kurs tjetër nga Code Studio
   learn_online: Provo kurse të tjera online
   learn_classes: Gjej klasa lokale
-  hoc_is_here: "#OraPërKodim është ketu - provoje! @codeorg"
+  hoc_is_here: '#OraPërKodim është ketu - provoje! @codeorg'
   just_did_hoc: 'Unë sapo mbarova #OrënPërKodim - provoje! @codeorg'
   twitter_teach_cs: Përse nuk mësohen shkencat kompjuterike në më shumë shkolla? Gjë
     që rregullohet http://youtu.be/nKIu9yen5nc. Vizito http://code.org/ për të mësuar
     më shumë.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: Meso Orën e Kodimit
   beyond_hoc: Përtej Orës së Kodimit
   what_gender: Cfare gjinie jeni ju?
@@ -152,11 +150,11 @@
   help_recruit_coders: Na ndihmoni të rekrutojmë më shumë kodues për skuadrën tënde!
   help_recruit: Na ndihmo te rekrutojmë më shumë kodues!
   lines_of_code: MBI <b># VIJAT E KODIT</b> SHKRUAR NE KOHE.
-  lines_of_code_alt: "<b>#</b> VIJAT E KODIMIT TE SHKRUARA NGA STUDENTET"
+  lines_of_code_alt: <b>#</b> VIJAT E KODIMIT TE SHKRUARA NGA STUDENTET
   who_has_done_hoc: 'Kush ka kryer #OrënPërKodim? @codeorg'
   hoc_leaderboards: Tabela e udheheqësve të Orës Së Kodimit
-  students_and_lines: "%{students} studente kane kryer Oren e Kodimit dhe jane shkruar
-    %{lines} rrjeshta me kode."
+  students_and_lines: '%{students} studente kane kryer Oren e Kodimit dhe jane shkruar
+    %{lines} rrjeshta me kode.'
   start_hoc: Fillo Orën e Kodimit tani
   contact_form_topic_press: Shtypi/media (intervista ose fjalime)
   stats_nina: '"Cdo ditë kisha të njëjtat rezultate&mdash; me një angazhim 100%."
@@ -219,8 +217,8 @@
   homepage_hero_text_teacher2: |
     &ldquo; Ky program i bën të gjithë nxënësit të përfshihen, të marrin pjesë dhe të angazhohen plotësisht.&rdquo;
     Adam, mësues
-  homepage_hero_text_stat_loc: "#loc rreshtat e kodimit të përgatitura nga studentët"
-  homepage_hero_text_stat_students: "#student_count llogari studentësh në Code Studio"
+  homepage_hero_text_stat_loc: '#loc rreshtat e kodimit të përgatitura nga studentët'
+  homepage_hero_text_stat_students: '#student_count llogari studentësh në Code Studio'
   homepage_hero_text_stat_served: 'Ora e Kodimit: #served dorëzuar'
   homepage_slot_text_hoc: Ora e Kodimit
   homepage_slot_text_frozen: Frozen me Anën dhe Elsën
@@ -230,7 +228,7 @@
   homepage_slot_text_shop: Bli
   homepage_slot_text_flappy: Kodi Flappy
   homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: "# e dorëzuar"
+  homepage_action_text_num_served: '# e dorëzuar'
   homepage_action_text_join_us: Join us
   homepage_action_text_sign_up: Rregjistrohu
   homepage_action_text_try_it: Provoje
@@ -251,10 +249,10 @@
     përfshijë vegla të përdorura në kursin tonë ë ri te shkollës, CS Principles.
   homepage_banner_privacy_link: Mëso më shumë
   homepage_slot_text_title_hoc: Ora e Kodimit
-  homepage_slot_text_blurb_hoc: "Çdokush mund të mësojë. Fillo sot"
+  homepage_slot_text_blurb_hoc: Çdokush mund të mësojë. Fillo sot
   homepage_slot_text_link_hoc: Provo Orën e Kodimit
   homepage_slot_text_link_host: Organizo një Orë Kodim
-  homepage_slot_text_link_hocserved: "# e dorëzuar"
+  homepage_slot_text_link_hocserved: '# e dorëzuar'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Studentët
   homepage_slot_text_blurb_students: Eksploro të gjitha tutorialet tona
@@ -344,23 +342,26 @@
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up."
+    have signed up.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Emri
@@ -684,9 +685,9 @@
   dashboard_faq_k5: Pyetje e shtruar shpesh të K-5
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: Ora e Kodimit është këtu - Dhjetor 8-14!
   code_sign_up: Rregjistrohu për të marrë pjesë në Javën Edukative për SHK
   learn_more: Mëso më Shumë
@@ -700,11 +701,22 @@
   learn_educator_resources_button: Burimet e Mësimdhënësit
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Provo tutorialet e reja të Orës së Kodimit
   hoc2014_try_new_tutorial: Provo tutorialin tonë të ri Ora e Kodimit në beta
   hoc2014_try_scrat: Angry Birds, PvZ, dhe Scrat
   hoc2014_try_frozen: Artistët me Anna dhe Elsa, nga Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Mësimet në gjuhën tuaj
@@ -777,6 +789,8 @@
   projguts_name: Guri, Letra, Gërshërët
   hourofcode_name: Vendi për new code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Laboratori i Pafundmë
+  artist_name: Artisti
   codeorg_gradelevel: Moshat 4-104
   codeintl_gradelevel: Moshat 4-104
   thinkersmithspanish_gradelevel: Për të gjithë
@@ -818,6 +832,8 @@
   frozen_gradelevel: Moshat 8+
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Moshat 4-104
+  infinity_gradelevel: Moshat 4-104
+  artist_gradelevel: Moshat 4-104
   codeorg_platformtext: Shfletuesit modern, telefonat e mençur, tabletat
   codeintl_platformtext: Browserat e kohës, smartphones, tableta
   thinkersmithspanish_platformtext: Unplugged
@@ -909,12 +925,15 @@
     informacionin
   kodableunplugged_shortdescription: Një ushtrim argëtues unplugged
   projguts_shortdescription: Përpiqu të modelosh dhe të simulosh duke përdorur gurin/letrën/gërshërët
-  hourofcode_shortdescription: Vendi për new code.org/hoc
+  hourofcode_shortdescription: Mëso të kodosh me Marc Zuckerberg dhe Angry Birds!
   frozen_shortdescription: Le të përodrim kod për të bashkuar Anën dhe Elsën ndërkohë
     që ato eksplorojnë magjinë dhe bukurinë e akullit.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: Krijo një histori ose bëj një lojë me Play Lab!
+  infinity_shortdescription: Perdorni laboratorin e lojrave per te krijuar nje histori
+    ose pafundesi personazhesh Disney.
+  artist_shortdescription: Vizato figura të hatashme dhe dizenjo me Artistin!
   codeorg_longdescription: Mëso konceptet bazë të Shkencës Kompjuterike me programimin
     drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione
     në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies.
@@ -1135,7 +1154,7 @@
   codeorg_beyond_platformtext: Shfletuesit modernë, tabletat
   khan_beyond_platformtext: Shfletuesit modern të web-it
   tynker_beyond_platformtext: Shfletuesit modern të web-it ($$ kërkohet)
-  scratch_beyond_platformtext: "Çdo shfletues"
+  scratch_beyond_platformtext: Çdo shfletues
   lightbot_beyond_platformtext: iOS, Android (ose shfletues web-i)
   codecademy_beyond_platformtext: Shfletues modern të web-it. iOS, aplikacione Android
   kodable_beyond_platformtext: iPad
@@ -1390,19 +1409,11 @@
     Pas kesaj nuk do të arrish te kësh akesë në Code.org. <a href='%{it_requirements_url}'>
     Kliko ketu </a> për të mësuar si të mundesosh HTTPS per Code.org.
   compatibility_https_hide_this_warning: Mbaj të fshehtë këtë paralajmërim
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  infinity_name: Infinity Play Lab
-  artist_name: Artist
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: përplas flatrat
   infinity_shortcode: inf
-  playlab_shortcode: play
+  playlab_shortcode: luaj
   artist_shortcode: art

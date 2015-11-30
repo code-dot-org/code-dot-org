@@ -2,7 +2,7 @@ module UsersHelper
   include ApplicationHelper
 
   # Summarize the current user's progress within a certain script.
-  def summarize_user_progress(script, user = current_user)
+  def summarize_user_progress(script, user = current_user, exclude_level_progress = false)
     user_data = {}
     uls = {}
     script_levels = script.script_levels
@@ -34,14 +34,17 @@ module UsersHelper
         linesOfCodeText: I18n.t('nav.popup.lines', lines: lines),
     )
 
-    user_data[:levels] = {}
-    script_levels.each do |sl|
-      completion_status = level_info(user, sl, uls)
-      if completion_status != 'not_tried'
-        user_data[:levels][sl.level_id] = {
-          status: completion_status
-          # More info could go in here...
-        }
+    unless exclude_level_progress
+      user_data[:levels] = {}
+      script_levels.each do |sl|
+        result = level_info(user, sl, uls)
+        completion_status = activity_css_class result
+        if completion_status != 'not_tried'
+          user_data[:levels][sl.level_id] = {
+            status: completion_status,
+            result: result
+          }
+        end
       end
     end
 
@@ -64,4 +67,13 @@ module UsersHelper
     completed.to_f / levels.count
   end
 
+  private
+
+  def level_info(user, script_level, user_levels)
+    if user
+      user_levels[script_level.level_id].try(:best_result) || 0
+    else
+      0
+    end
+  end
 end

@@ -63,18 +63,18 @@ end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $(\"#{selector}\").text();").include? text }
+  wait.until { @browser.execute_script("return $(#{selector.dump}).text();").include? text }
 end
 
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $('#{selector}').is(':visible')") }
+  wait.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
 end
 
 # Required for inspecting elements within an iframe
 When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |selector, parent_selector|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $('#{selector}', $('#{parent_selector}').contents()).is(':visible')") }
+  wait.until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }
 end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
@@ -128,11 +128,11 @@ When /^I press the "([^"]*)" button$/ do |buttonText|
 end
 
 When /^I press "([^"]*)" using jQuery$/ do |selector|
-  @browser.execute_script("$('" + selector + "').click()");
+  @browser.execute_script("$(#{selector.dump}).click()");
 end
 
 When /^I press SVG selector "([^"]*)"$/ do |selector|
-  @browser.execute_script("$('" + selector + "').simulate('drag', function(){});")
+  @browser.execute_script("$(#{selector.dump}).simulate('drag', function(){});")
 end
 
 When /^I press the last button with text "([^"]*)"$/ do |name|
@@ -238,6 +238,10 @@ Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
   @browser.execute_script("return #{expression}")
 end
 
+Then /^mark the current level as completed on the client/ do
+  @browser.execute_script %q-sessionStorage.setItem('progress', '{"hourofcode":{"' + appOptions.serverLevelId + '":100}}')-
+end
+
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
 Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
@@ -310,23 +314,23 @@ Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
 end
 
 Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
-  visibility = @browser.execute_script("return $('#{selector}').css('visibility')");
-  visible = @browser.execute_script("return $('#{selector}').is(':visible')") && (visibility != 'hidden');
+  visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')");
+  visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden');
   visible.should eq (negation.nil?)
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
-  @browser.execute_script("return $('#{selector}').length").should eq 0
+  @browser.execute_script("return $(#{selector.dump}).length").should eq 0
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
-  visibility = @browser.execute_script("return $('#{selector}').css('visibility')");
-  visible = @browser.execute_script("return $('#{selector}').is(':visible')") && (visibility != 'hidden');
+  visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')");
+  visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden');
   visible.should eq false
 end
 
 def has_class(selector, class_name)
-  @browser.execute_script("return $('#{selector}').hasClass('#{class_name}')")
+  @browser.execute_script("return $(#{selector.dump}).hasClass('#{class_name}')")
 end
 
 Then /^element "([^"]*)" has class "([^"]*)"$/ do |selector, class_name|

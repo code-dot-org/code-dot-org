@@ -61,7 +61,7 @@ ____________________________________________________
 **Example Random Thoughts** Demonstrate clearing a textInput box.
 
 ```
-// emonstrate clearing a textInput box.
+// Demonstrate clearing a textInput box.
 textInput("yourThought","");
 onEvent("yourThought", "change", function(event) {
   write(getText("yourThought"));

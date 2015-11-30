@@ -1567,7 +1567,13 @@ Applab.assetPathPrefix = "/v3/assets/";
 Applab.maybeAddAssetPathPrefix = function (filename) {
 
   if (ABSOLUTE_REGEXP.test(filename)) {
-    return MEDIA_PROXY + encodeURIComponent(filename);
+    // We want to be able to handle the case where our filename contains a
+    // space, i.e. "www.example.com/images/foo bar.png", even though this is a
+    // technically invalid URL. encodeURIComponent will replace space with %20
+    // for us, but as soon as it's decoded, we again have an invalid URL. For
+    // this reason we first replace space with %20 ourselves, such that we now
+    // have a valid URL, and then call encodeURIComponent on the result.
+    return MEDIA_PROXY + encodeURIComponent(filename.replace(' ', '%20'));
   }
 
   filename = filename || '';
@@ -1932,6 +1938,7 @@ Applab.changeScreen = function(screenId) {
 };
 
 Applab.loadDefaultScreen = function() {
-  var defaultScreen = $('#divApplab .screen').first().attr('id');
+  var defaultScreen = $('#divApplab .screen[is-default=true]').first().attr('id') ||
+    $('#divApplab .screen').first().attr('id');
   Applab.changeScreen(defaultScreen);
 };

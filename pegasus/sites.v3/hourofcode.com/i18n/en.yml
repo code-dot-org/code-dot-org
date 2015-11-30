@@ -147,7 +147,7 @@
   company_yelp: Yelp
 
   prizes_all: 'Prizes for every organizer'
-  prizes_every_organizer: 'Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you'
+  prizes_every_organizer: 'Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you, while supplies last.'
   prizes_technology: 'One public school in every US state (& Washington DC) will win $10,000 worth of technology'
   prizes_tech_chats: '# classrooms will win video chats with very special guests'
   prizes_robots: '100 classrooms will win a set of programmable robots'
@@ -183,7 +183,7 @@
 
   prizes_header: "Prizes for every educator"
   prizes_10k: "One public school in every US state (and Washington D.C.) will win $10,000 worth of technology"
-  prizes_gift_cards: "<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!"
+  prizes_gift_cards: "<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last."
 
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
@@ -279,7 +279,7 @@
   map_search_reset: 'Reset'
   map_legend_title: 'Legend'
   map_legend_hoc_events: 'Hour of Code Event'
-  map_legend_cs_tech_jam: 'CS Tech Jam'
+  map_legend_cs_tech_jam: 'Special Event'
 
   meta_tag_og_title: 'The Hour of Code is coming'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
@@ -436,12 +436,12 @@
   events_nav_title: Hour of Code Events
   events_nav_all: All Events
   events_nav_whole_schools: Whole Schools
-  events_nav_special: CS Tech Jams
+  events_nav_special: Special Events
   events_nav_orgs: Organizations
   events_all_old_title: "All @year Hour of Code events"
   events_all_title: All Hour of Code events
   events_whole_school_title: Whole-school Hour of Code events
-  events_special_title: Computer Science Tech Jams
+  events_special_title: Hour of Code Special Events
   events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: event
   events: events

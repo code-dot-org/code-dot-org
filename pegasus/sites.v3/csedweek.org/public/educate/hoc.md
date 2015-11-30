@@ -66,6 +66,7 @@ Most kids don’t know what computer science is. Here are some ideas:
 - It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
 - Check the [Hour of Code forum](http://forums.code.org/?forum=322773) to ask questions and see FAQs. 
 
+[Read these teaching tips](/files/CSTT_IntroducingCS.PDF)
 
 **What to do if a student finishes early?**
 

@@ -4,10 +4,13 @@
 }
 
 .banner {
-  width: 100%;
+  max-width: 910px;
   border-radius: 5px;
+  margin-top: 10px;
   margin-bottom: 10px;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .smalltext {
@@ -21,7 +24,7 @@
 }
 
 .courseblock-tall {
-  min-height: 370px;
+  min-height: 350px;
 }
 
 #bottomalign {
@@ -30,6 +33,12 @@
   position: absolute;
   position: relative\9;
   margin-bottom: 10px;
+}
+
+#quicklinks {
+  float: left;
+  display: inline-block;
+  width: 200px;
 }
 
 .multi-item-carousel .carousel-control.left,
@@ -104,6 +113,10 @@
     margin-bottom: 15px;
   }
 
+  #quicklinks {
+    width: 184px;
+  }
+
   .multi-item-carousel .carousel-inner .active.left {
     left: -100%;
   }
@@ -176,14 +189,15 @@
   .active > div:first-child + div { display:block; }
 
   .banner { 
-    max-width: 600px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 540px;
   }
 
   #learnCodeStudio {
     max-width: 600px;
+  }
+
+  #quicklinks {
+    width: 185px;
   }
 
   .multi-item-carousel .carousel-inner .active.left {
