@@ -511,7 +511,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     original_activity_count = Activity.count
     original_user_level_count = UserLevel.count
-    original_user_level_count = UserLevel.count
 
     expected_created_classes = async_activity_writes ? [LevelSource, LevelSourceImage] :
         [LevelSource, UserLevel, LevelSourceImage]
