@@ -111,7 +111,7 @@ AuthoredHints.prototype.display = function (promptIcon, clickTarget, callback) {
 
     promptIcon.parentNode.insertBefore(this.lightbulb, promptIcon);
 
-    dom.addClickTouchEvent(clickTarget, function () {
+    clickTarget.addEventListener('click', function () {
       var hintsToShow = this.getUnseenHints(); 
       if (hintsToShow.length > 0) {
         this.showHint_(hintsToShow[0], callback);

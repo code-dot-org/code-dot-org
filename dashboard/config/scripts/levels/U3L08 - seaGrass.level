@@ -128,8 +128,8 @@
     "edit_code": true,
     "encrypted_examples": "mw7K3bcGkm3K5WHwGn7UCO5xRFoDSN/FslZx9vRR0t+0QODGkcQveddvClvJ\nzXdk\n",
     "embed": "false",
-    "instructions": "Add a parameter to drawSeaGrass() that changes the size of the piece of sea grass drawn. (Click to see full instructions)",
-    "markdown_instructions": "# Adding parameters to functions: drawSeaGrass()\r\n\r\nTo keep adding variety to our image let's keep adding parameters to our functions. Currently the `drawSeaGrass()` function can only draw a piece of seagrass with arcs of radius 100.\r\n\r\n**Add a parameter** to the function definition for `drawSeaGrass()` that allows you to control its size. (You'll only need to change the radius of each arc.) Make sure your parameter has a **descriptive and meaningful** name.\r\n\r\n**Update your function calls** to use your new version of `drawSeaGrass()` and change the size of the sea grass in your image.\r\n\r\n![](https://images.code.org/0b7d1750101a4c81ef8d77d8668f94f2-image-1442606862829.07.30 PM.png)",
+    "instructions": "Add a parameter to drawSeagrass that changes the size of the piece of seagrass drawn. (Click to see full instructions)",
+    "markdown_instructions": "# Adding Parameters to Functions: *drawSeagrass*\r\n\r\nTo keep adding variety to our image let's keep adding parameters to our functions. Currently the `drawSeagrass` function can only draw a piece of seagrass with arcs of radius 100.\r\n\r\n**Add a parameter** to the function definition for `drawSeagrass` that allows you to control its size. (You'll only need to change the radius of each arc.) Make sure your parameter has a **descriptive and meaningful** name.\r\n\r\n**Update your function calls** to use your new version of `drawSeagrass` and change the size of the sea grass in your image.\r\n\r\n![](https://images.code.org/0b7d1750101a4c81ef8d77d8668f94f2-image-1442606862829.07.30 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -158,7 +158,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>
