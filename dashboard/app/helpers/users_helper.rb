@@ -65,4 +65,13 @@ module UsersHelper
     completed.to_f / levels.count
   end
 
+  private
+
+  def level_info(user, script_level, user_levels)
+    if user
+      user_levels[script_level.level_id].try(:best_result) || 0
+    else
+      0
+    end
+  end
 end

@@ -62,14 +62,6 @@ module ApplicationHelper
     end
   end
 
-  def level_info(user, script_level, user_levels)
-    if user
-      user_levels[script_level.level_id].try(:best_result) || 0
-    else
-      0
-    end
-  end
-
   def show_flashes
     ret = ''
     if notice.present?
