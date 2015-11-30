@@ -319,16 +319,17 @@ fi:
         studio_iceage_8: Voitko lisätä palikan lisätäksesi pisteen, ja toisen palikan soittaaksesi äänen, aina kun Sid törmää Mannyyn? Liikuta sitten Sidiä kunnes saat pisteitä.
         studio_iceage_9: Aseta jääkaudelle haluamasi tausta ja auta Sidiä saapumaan Grannyn luo vikkelämmin muuttamalla sen nopeutta. Käytä sitten nuolinäppäimiä päästäksesi perille ja hälyttääksesi kaikki muut.
         studio_iceage_10: 'Luo oma pelisi.  Kun olet valmis, napsauta Valmis, niin voit antaa ystäviesikin kokeilla tarinaasi puhelimissaan.'
-        studio_gumball_1: 'Anais haluaisi sanoa "Hei" - Voitko auttaa häntä?'
-        studio_gumball_2: 'Darwin (näyttelijä 1) ja Gumball (näyttelijä 2) haluaisivat sanoa toisilleen "Hei". Voitko auttaa heitä käyttämällä "sano"-palikkaa kahdesti?'
-        studio_gumball_3: Voitko auttaa Banana Joe:ta pääsemään lipun luo?
-        studio_gumball_4: Voitko auttaa Gumballia (näyttelijä 1) pääsemään Darwinin (näyttelijä 2) luo ja soittaa äänen kun hän on perillä?
-        studio_gumball_5: 'Voitko auttaa Antonya sanomaan terveisiä, kun sitä napsautetaan? Älä unohda klikata sitä valittuasi "Suorita".'
-        studio_gumball_6: Voitko auttaa Darwinia liikkumaan ympäriinsä nuolinäppäimillä ja saamaan kaikki liput?
-        studio_gumball_7: '"Toista ikuisesti" -palikka mahdollistaa koodin suorittamisen loputtomasti. Voitko liittää siihen palikoita saadaksesi Antonyn liikkumaan toistuvasti oikealle ja vasemmalle?'
-        studio_gumball_8: Voitko lisätä palikan lisätäksesi pisteen, ja toisen palikan soittaaksesi äänen, aina kun Banana Joe törmää Antonyyn? Liikuta sitten Joeta kunnes saat pisteitä.
-        studio_gumball_9: Aseta avaruusinvaasiolle haluamasi tausta ja auta Nicolea saapumaan Pennyn luo vikkelämmin muuttamalla sen nopeutta. Käytä sitten nuolinäppäimiä päästäksesi perille ja hälyttääksesi kaikki muut.
-        studio_gumball_10: 'Luo oma pelisi.  Kun olet valmis, napsauta Valmis, niin voit antaa ystäviesikin kokeilla tarinaasi puhelimissaan.'
+        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
+        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
+        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
+        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
+        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
+        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
+        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
+        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_full_sandbox: 'Luo oma pelisi.  Kun olet valmis, napsauta Valmis, niin voit antaa ystäviesikin kokeilla tarinaasi puhelimissaan.'
         studio_k1_1: 'Osaatko laittaa koiran sanomaan "hei maailma"?'
         studio_k1_2: Osaatko laittaa koiran sanomaan jotain ja kissan vastaamaan siihen?
@@ -507,6 +508,9 @@ fi:
         mc_if_statements: 'Minecraft - Jos-lausunnot'
         mc_congrats_share: 'Minecraft - Onnittelut'
         mc_congrats_no_share: 'Minecraft - Onnittelut'
+        gumball_intro: 'Gumball Hour of Code - Introduction'
+        gumball_events: 'Gumball Hour of Code - Events'
+        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan'

@@ -275,7 +275,7 @@
   "MATH_TRIG_HELPURL":"http:\/\/es.wikipedia.org\/wiki\/Función_trigonométrica",
   "MATH_TRIG_SIN":"seno",
   "MATH_TRIG_TAN":"tangente",
-  "MATH_TRIG_TOOLTIP_ACOS":"Devuelve el arcocoseno de un número.",
+  "MATH_TRIG_TOOLTIP_ACOS":"Devuelve el arco-coseno de un número.",
   "MATH_TRIG_TOOLTIP_ASIN":"Devuelve el arcoseno de un número.",
   "MATH_TRIG_TOOLTIP_ATAN":"Devuelve el arcotangente de un número.",
   "MATH_TRIG_TOOLTIP_COS":"Devuelve el coseno de un grado (No radián).",

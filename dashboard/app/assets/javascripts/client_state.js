@@ -4,11 +4,8 @@
 /* global dashboard */
 
 /**
- * Helper functions for accessing client state. This state is now stored
- * in client side cookies but may eventually migrate to HTML5 web
- * storage. It currently consists of level progress and the line count;
- * in the future we will add support for videos seeen, callouts, and
- * scripts accessed.
+ * Helper functions for accessing client state. This state is stored in a
+ * combination of cookies and HTML5 web storage.
  */
 (function (window, $) {
 
@@ -35,7 +32,6 @@ var MAX_LINES_TO_SAVE = 1000;
 var COOKIE_OPTIONS = {expires: dashboard.clientState.EXPIRY_DAYS, path: '/'};
 
 dashboard.clientState.reset = function() {
-  $.removeCookie('progress', {path: '/'});
   $.removeCookie('lines', {path: '/'});
   sessionStorage.clear();
 };
@@ -74,20 +70,14 @@ dashboard.clientState.sourceForLevel = function (scriptName, levelId, timestamp)
  * @param {string} source
  */
 dashboard.clientState.writeSourceForLevel = function (scriptName, levelId, timestamp, source) {
-  try {
-    sessionStorage.setItem(createKey(scriptName, levelId, 'source'), JSON.stringify({
-      source: source,
-      timestamp: timestamp
-    }));
-  } catch (e) {
-    if (e.name !== "QuotaExceededError") {
-      throw e;
-    }
-  }
+  safelySetItem(createKey(scriptName, levelId, 'source'), JSON.stringify({
+    source: source,
+    timestamp: timestamp
+  }));
 };
 
 /**
- * Returns the progress attained for the given level from the cookie.
+ * Returns the progress attained for the given level.
  * @param {string} scriptName The script name
  * @param {number} levelId The level
  * @returns {number}
@@ -116,7 +106,7 @@ dashboard.clientState.trackProgress = function(result, lines, testResult, script
 };
 
 /**
- * Sets the progress attained for the given level in the cookie
+ * Sets the progress attained for the given level
  * @param {string} scriptName The script name
  * @param {number} levelId The level
  * @param {number} progress Indicates pass, fail, perfect
@@ -128,7 +118,7 @@ function setLevelProgress(scriptName, levelId, progress) {
     progressMap[scriptName] = {};
   }
   progressMap[scriptName][levelId] = progress;
-  $.cookie('progress', JSON.stringify(progressMap), COOKIE_OPTIONS);
+  safelySetItem('progress', JSON.stringify(progressMap));
 }
 
 /**
@@ -136,11 +126,11 @@ function setLevelProgress(scriptName, levelId, progress) {
  * @return {Object<String, number>}
  */
 dashboard.clientState.allLevelsProgress = function() {
-  var progressJson = $.cookie('progress');
+  var progressJson = sessionStorage.getItem('progress');
   try {
     return progressJson ? JSON.parse(progressJson) : {};
   } catch(e) {
-    // Recover from malformed cookies.
+    // Recover from malformed data.
     return {};
   }
 };
@@ -209,15 +199,12 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
   try {
     var elementSeen = JSON.parse(elementSeenJson);
     elementSeen[visualElementId] = true;
-    sessionStorage.setItem(visualElementType, JSON.stringify(elementSeen));
+    safelySetItem(visualElementType, JSON.stringify(elementSeen));
   } catch (e) {
-    if (e.name === "QuotaExceededError") {
-      return ;
-    }
     //Something went wrong parsing the json. Blow it up and just put in the new callout
     var elementSeen = {};
     elementSeen[visualElementId] = true;
-    sessionStorage.setItem(visualElementType, JSON.stringify(elementSeen));
+    safelySetItem(visualElementType, JSON.stringify(elementSeen));
   }
 }
 
@@ -245,6 +232,19 @@ function hasSeenVisualElement(visualElementType, visualElementId) {
  */
 function createKey(scriptName, levelId, prefix) {
   return (prefix ? prefix + '_' : '') + scriptName + '_' + levelId;
+}
+
+/**
+ * Don't throw storage errors in Safari private browsing mode.
+ */
+function safelySetItem(key, value) {
+  try {
+    sessionStorage.setItem(key, value);
+  } catch (e) {
+    if (e.name !== "QuotaExceededError") {
+      throw e;
+    }
+  }
 }
 
 })(window, $);

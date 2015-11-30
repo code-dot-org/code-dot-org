@@ -5,23 +5,23 @@ class UsersHelperTest < ActionView::TestCase
 
   def test_summarize_user_progress_and_percent_complete
     script = Script.twenty_hour_script
-    sl1 = script.script_levels[1]
-    client_state.set_level_progress sl1, 100
-    sl3 = script.script_levels[3]
-    client_state.set_level_progress sl3, 20
-    client_state.add_lines 42
+    user = create :user, total_lines: 42
+    ul1 = create :user_level, user: user, best_result: 100, script: script, level: script.script_levels[1].level
+    ul3 = create :user_level, user: user, best_result: 20, script: script, level: script.script_levels[3].level
 
     assert_equal({
-                     :linesOfCode => 42,
-                     :linesOfCodeText => 'Total lines of code: 42',
-                     :levels => {sl1.level_id => {:status=>'perfect'},
-                                 sl3.level_id => {:status=>'passed'}}},
-                 summarize_user_progress(script, nil))
+      linesOfCode: 42,
+      linesOfCodeText: 'Total lines of code: 42',
+      levels: {
+        ul1.level_id => {status: 'perfect', result: 100},
+        ul3.level_id => {status: 'passed', result: 20}
+      },
+      trophies: {current: 0, of: 'of', max: 27}
+    }, summarize_user_progress(script, user))
 
     assert_equal [0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-                  0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
-                 percent_complete(script, nil)
-    assert_in_delta 0.0183, percent_complete_total(script, nil)
+      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], percent_complete(script, user)
+    assert_in_delta 0.0183, percent_complete_total(script, user)
   end
 
 end

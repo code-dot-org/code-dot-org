@@ -34,6 +34,7 @@ var ScreenProperties = React.createClass({
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'screen-image')} />
         <DefaultScreenButtonPropertyRow
+          screenId={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'is-default')}/>
       </div>);
   }
@@ -111,7 +112,6 @@ module.exports = {
     var element = document.createElement('div');
     element.setAttribute('class', 'screen');
     element.setAttribute('tabIndex', '1');
-    element.setAttribute('data-is-default', false);
     element.style.display = 'block';
     element.style.height = Applab.footerlessAppHeight + 'px';
     element.style.width = Applab.appWidth + 'px';

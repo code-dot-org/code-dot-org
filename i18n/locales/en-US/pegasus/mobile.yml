@@ -114,7 +114,6 @@ en-US:
   hoc_is_here: crwdns3941:0crwdne3941:0
   just_did_hoc: crwdns3942:0crwdne3942:0
   twitter_teach_cs: crwdns35452:0crwdne35452:0
-  learn_hoc_prizes: crwdns50834:0crwdne50834:0
   learn_hoc: crwdns3953:0crwdne3953:0
   beyond_hoc: crwdns3954:0crwdne3954:0
   what_gender: crwdns3955:0crwdne3955:0
@@ -277,8 +276,9 @@ en-US:
   volunteer_engineer_submission_subtitle_generic: crwdns50838:0crwdne50838:0
   volunteer_engineer_submission_subtitle_specific: 'crwdns54487:0%{num_teachers}crwdnd54487:0%{num_volunteers}crwdne54487:0'
   volunteer_engineer_submission_intro_background: crwdns50840:0crwdne50840:0
-  volunteer_engineer_submission_intro_recruit: 'crwdns54488:0%{url}crwdne54488:0'
+  volunteer_engineer_submission_intro_recruit: crwdns54488:0crwdne54488:0
   volunteer_engineer_submission_intro_signup: crwdns50842:0crwdne50842:0
+  volunteer_engineer_submission_intro_links: 'crwdns54785:0%{learn_more}crwdnd54785:0%{volunteer_local}crwdne54785:0'
   volunteer_engineer_submission_header_shared: crwdns50057:0crwdne50057:0
   volunteer_engineer_submission_field_name: crwdns50058:0crwdne50058:0
   volunteer_engineer_submission_field_name_placeholder: crwdns50059:0crwdne50059:0
@@ -525,6 +525,11 @@ en-US:
   learn_educator_resources_description: crwdns48535:0crwdne48535:0
   learn_educator_resources_button: crwdns48536:0crwdne48536:0
   learn_are_you_educator: crwdns50095:0crwdne50095:0
+  learn_find_volunteer: crwdns54786:0crwdne54786:0
+  learn_teacher_led_lesson_plans: crwdns54787:0crwdne54787:0
+  learn_how_to_hoc: crwdns54788:0crwdne54788:0
+  learn_hoc_prizes: crwdns50834:0crwdne50834:0
+  learn_inspirational_videos: crwdns54789:0crwdne54789:0
   hoc2014_try_new_tutorials: crwdns23440:0crwdne23440:0
   hoc2014_try_new_tutorial: crwdns23566:0crwdne23566:0
   hoc2014_try_scrat: crwdns23441:0crwdne23441:0

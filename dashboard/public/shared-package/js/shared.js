@@ -566,7 +566,7 @@ var PathPart = {
  * @property {string} name
  * @property {string} levelHtml
  * @property {string} levelSource
- * @property {boolean} hidden Doesn't show up in project list
+ * hidden // unclear when this ever gets set
  * @property {boolean} isOwner Populated by our update/create callback.
  * @property {string} updatedAt String representation of a Date. Populated by
  *   out update/create callback
@@ -733,9 +733,9 @@ var projects = module.exports = {
     }
   },
 
-  showShareRemixHeader: function() {
+  showProjectLevelHeader: function() {
     if (this.shouldUpdateHeaders()) {
-      dashboard.header.showShareRemixHeader();
+      dashboard.header.showProjectLevelHeader();
     }
   },
   setName: function(newName) {
@@ -797,11 +797,7 @@ var projects = module.exports = {
         });
         window.setInterval(this.autosave_.bind(this), AUTOSAVE_INTERVAL);
 
-        if (current.hidden) {
-          if (!this.isFrozen()) {
-            this.showShareRemixHeader();
-          }
-        } else {
+        if (!current.hidden) {
           if (current.isOwner || !parsePath().channelId) {
             this.showProjectHeader();
           } else {
@@ -1098,7 +1094,7 @@ var projects = module.exports = {
           deferred.reject();
         } else {
           fetchSource(data, function () {
-            projects.showShareRemixHeader();
+            projects.showProjectLevelHeader();
             fetchAbuseScore(function () {
               deferred.resolve();
             });

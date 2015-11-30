@@ -10,19 +10,17 @@
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100,
         but the half-finished wall is only 50. Complete the wall. \n"
       2-3 Artist 3.4_instruction: |
-        跳躍方塊並沒有用繪畫方塊移動目標，
-        請畫上虛線並同時用上跳躍跟繪畫方塊
-      2-3 Artist 3_instruction: 這頂帽子有100像數高。繪畫一個少70像數的帽子。
+        跳躍程式積木只有移動藝術家而沒有畫畫。
+        試著使用跳躍及繪畫程式積木來畫出虛線。
+      2-3 Artist 3_instruction: 這頂帽子有100像數高。畫一個高度至少為70像數的帽子。
       2-3 Artist 3new_instruction: |
-        紅帽子是100像素高，請完成繪圖
-        黑帽子矮70個像素，寬度是50像素
-      2-3 Artist 4_instruction: 替我幫這隻貓完成房子
-      2-3 Artist 5_instruction: |
-        用 "repeat times" 的方塊替代 code,
-        只以三個方塊畫出一樣的房子
+        紅帽子是100像素高。
+        請完成黑帽子的繪製，黑帽子比紅帽子矮70像素，且它的寬度是50像素。
+      2-3 Artist 4_instruction: 幫助我完成這隻貓的房子。
+      2-3 Artist 5_instruction: 使用"重複 次數"的程式積木來取代原來的程式積木，然後只用3個程式積木來畫出相同的房子。
       2-3 Artist 6_instruction: |
-        這棟房子需要屋頂！請畫出三角形。 提示：
-        全部三個邊是同樣高度的
+        這棟房子需要屋頂！請畫出三角形。
+        提示：三邊都是同樣的長度。
       2-3 Artist 7_instruction: |
         完成最後一個窗戶的右半邊。
         每個方型窗是25像素寬
@@ -657,40 +655,25 @@
         完成"檢查花朵，製造蜂密"函數內部程式積木。
         你的函數應該檢查看看花朵是否有數量為3,2或1的花蜜，
         然後將所有的花蜜收集好並往前移動開始製造花蜜。
-      4-5 Bee Conditionals Assessment 1_instruction: |
-        Assessment: This code is wrong.
-        Complete the "get nectar or make honey" function, then call it to collect
-        all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars.
-      4-5 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Can you
-        fix them?
+      4-5 Bee Conditionals Assessment 1_instruction: '評量 : 這個程式碼有些錯誤。請完成"收集花蜜及製造蜂蜜"的函數，然後呼叫它來收集所有的花蜜及蜂蜜。提醒您：紫色花多可能會有數量3,2或1的花蜜。'
+      4-5 Bee Debugging 1_instruction: 這些程式積木的錯誤讓我很頭大。你能幫我把它們修正嗎？
       4-5 Bee Debugging 10_instruction: Find the errors and fix them.
       4-5 Bee Debugging 11_instruction: Does this count correctly?
-      4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
+      4-5 Bee Debugging 2_instruction: 幫助蜜蜂收集花蜜及製造蜂蜜。
       4-5 Bee Debugging 3_instruction: Find the errors and fix them.
-      4-5 Bee Debugging 4_instruction: These blocks don't work. What's the pattern?
-      4-5 Bee Debugging 5_instruction: Something isn't right here...
-      4-5 Bee Debugging 6_instruction: |
-        The purple flower has an unknown amount of
-        nectar. Fix the blocks to get all of the nectar from the flower.
-      4-5 Bee Debugging 7_instruction: The function is missing something...
-      4-5 Bee Debugging 8_instruction: |
-        This function is fine, but it isn't used
-        properly.
-      4-5 Bee Debugging 9_instruction: Why isn't the bee making enough honey?
-      4-5 Bee Debugging Assessment 1_instruction: 'Assessment: Fix the code.'
-      4-5 Bee Nested Loops 1_instruction: Use a loop to collect all of the nectar.
-      4-5 Bee Nested Loops 2_instruction: "Collect all of the nectar from each flower.\nUse
-        a nested loop. \n"
-      4-5 Bee Nested Loops 3_instruction: |
-        Collect all of the nectar by putting the
-        starter code into a nested loop.
-      4-5 Bee Nested Loops 4_instruction: "Collect all of the nectar from each flower\nand
-        make honey at each honeycomb. Use a nested loop. \n"
-      4-5 Bee Nested Loops 5_instruction: |
-        Collect all of the nectar by creating
-        a nested loop.
-      4-5 Bee Nested Loops 6_instruction: Collect all the nectar.
+      4-5 Bee Debugging 4_instruction: 這些程式積木無法正常動作。你能幫我找出那裡有問題嗎？
+      4-5 Bee Debugging 5_instruction: 這裡有些程式積木不太正確...
+      4-5 Bee Debugging 6_instruction: 紫色花朵有著不確定數量的花蜜。修正程式積木使它可以收集花朵中所有的花蜜。
+      4-5 Bee Debugging 7_instruction: 這個函數少了一些東西...
+      4-5 Bee Debugging 8_instruction: 函數本身沒有問題，但是它沒有被適當的使用。
+      4-5 Bee Debugging 9_instruction: 為何蜜蜂沒有製造出足夠數量的蜂蜜呢？
+      4-5 Bee Debugging Assessment 1_instruction: '評量 : 修正程式碼。'
+      4-5 Bee Nested Loops 1_instruction: 使用迴圈來收集所有的花蜜。
+      4-5 Bee Nested Loops 2_instruction: 使用巢狀迴圈從每朵花中收集所有的花蜜。
+      4-5 Bee Nested Loops 3_instruction: 將起始程式碼放到巢狀迴圈中來收集的所有花蜜。
+      4-5 Bee Nested Loops 4_instruction: 使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。
+      4-5 Bee Nested Loops 5_instruction: 建立一個巢狀迴圈來收集所有的花蜜
+      4-5 Bee Nested Loops 6_instruction: 收集所有的花蜜。
       4-5 Bee Nested Loops 7_instruction: |
         Put this loop inside another loop to create
         a nested loop and collect all of the nectar from the flowers.
@@ -721,28 +704,18 @@
         Get the zombie to the sunflower, but avoid
         the chomper!
       4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
-      4-5 Maze 3 (copy 1)_instruction: Must... get... to sunflower.
-      4-5 Maze 3_instruction: Must... get... to sunflower.
-      4-5 Maze 4 (copy 1)_instruction: Try the "repeat" block to use fewer blocks...
-      4-5 Maze 4_instruction: Try the "repeat" block to use fewer blocks...
-      4-5 Maze 5 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 6 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      4-5 Maze 3 (copy 1)_instruction: 必須...到達...向日葵。
+      4-5 Maze 3_instruction: 必須...到達...向日葵。
+      4-5 Maze 4 (copy 1)_instruction: 試著使用"重覆"程式積木來減少程式積木的使用量。
+      4-5 Maze 4_instruction: 試著使用"重覆"程式積木來減少程式積木的使用量。
+      4-5 Maze 5 (copy 1)_instruction: 你有可能使用最少數量的程式積木來完成這個關卡嗎?
+      4-5 Maze 5_instruction: 你有可能使用最少數量的程式積木來完成這個關卡嗎?
+      4-5 Maze 6 (copy 1)_instruction: 你有可能使用最少數量的程式積木來完成這個關卡嗎?
+      4-5 Maze 6_instruction: 你有可能使用最少數量的程式積木來完成這個關卡嗎?
       4-5 Maze 7_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 8_instruction: |
-        Use the "repeat" block to get the zombie to the
-        sunflower. (Avoid the chompers!)
-      4-5 Maze 9_instruction: Create a loop with the "repeat until" block.
-      4-5 Maze Assessment 1_instruction: 'Assessment: Get to the sunflower.'
+      4-5 Maze 8_instruction: 使用"重複"程式積木讓疆屍到達向日葵那裡。(記得避開食人花!)
+      4-5 Maze 9_instruction: 使用 "重覆...直到" 程式積木來建立迴圈。
+      4-5 Maze Assessment 1_instruction: '評量 : 取得向日葵'
       4-5 Maze Conditionals 1_instruction: |
         Use the repeat until block to get the
         zombie to the sunflower.
@@ -1403,7 +1376,7 @@
       Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas
         to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we\nstart
         to get creative with the bits?"
-      Course 4 Artist Binary Free Play 2b_instruction: Click here to see hints.
+      Course 4 Artist Binary Free Play 2b_instruction: 按一下此處查看提示。
       Course 4 Artist Binary Free Play_instruction: |
         Free Play: Draw whatever you
         like with binary!
@@ -1898,12 +1871,8 @@
       Course 4 Maze 4_instruction: |
         Try the "repeat" block to use fewer blocks
         when solving this puzzle...
-      Course 4 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      Course 4 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      Course 4 Maze 5_instruction: 你有可能使用最少數量的程式積木來完成這個關卡嗎?
+      Course 4 Maze 6_instruction: 你有可能使用最少數量的程式積木來完成這個關卡嗎?
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
@@ -2084,23 +2053,19 @@
       Course 4 SCF 2_instruction: "Use what you learned in the previous level to\ndraw
         an image like this. Note: The code becomes more simple if you incorporate\nparameters.
         \n"
-      Course 4 SCF 3 Fail 1_instruction: Can you figure out how to...
-      Course 4 SCF 3 Fail 2_instruction: Can you figure out how to...
+      Course 4 SCF 3 Fail 1_instruction: 你能想出如何......
+      Course 4 SCF 3 Fail 2_instruction: 你能想出如何......
       Course 4 SCF 3_instruction: "Use what you learned in the previous level to\ndraw
         an image like this. Note: The code becomes more simple if you incorporate\nparameters.
         \n"
-      Course 4 SCFL 1_instruction: |
-        Solve this puzzle using the fewest number of
-        blocks possible.
+      Course 4 SCFL 1_instruction: 盡可能使用最少的程式積木來完成這個關卡。
       Course 4 SCFL 1a_instruction: |
         Can you get Skrat to his acorn using as few
         blocks as possible?
       Course 4 SCFL 1b_instruction: |
         Can you get Skrat to his acorn using as few
         blocks as possible?
-      Course 4 SCFL 2_instruction: |
-        Solve this puzzle using the fewest number of
-        blocks possible.
+      Course 4 SCFL 2_instruction: 盡可能使用最少的程式積木來完成這個關卡。
       Course 4 SCFL 3_instruction: Can you figure out how to re-create this drawing?
       Course 4 SCFL 4_instruction: Can you figure out how to re-create this drawing?
       Course 4 SCFL 5_instruction: Can you figure out how to re-create this drawing?
@@ -2114,8 +2079,8 @@
         Create a function with parameters that allows
         the artist to jump backward and forward by x pixels, and also up and down
         by y pixels (using positive and negative numbers).
-      Course 4 SCV 1_instruction: Click here to view the instructions again.
-      Course 4 SCV 2_instruction: Click here to view the instructions again.
+      Course 4 SCV 1_instruction: 若要再次查看說明，請按一下此處。
+      Course 4 SCV 2_instruction: 若要再次查看說明，請按一下此處。
       Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.\nTag
         Penguin to get 3 points.  Get 10 points to win!\r\nBut be careful, when\nCat
         and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks\nnecessary
@@ -2123,13 +2088,9 @@
         to move in all directions using the arrow keys?  How will you add\npoints
         when Dog tags Cat or Penguin?  How will you subtract points when Cat\nand
         Penguin touch?"
-      Course 4 SCV 4_instruction: |
-        Solve this puzzle with the fewest number of blocks
-        possible.
-      Course 4 SCV 5_instruction: |
-        Solve this puzzle with the fewest number of blocks
-        possible.
-      Course 4 SCV 6_instruction: Click here to view the instructions again.
+      Course 4 SCV 4_instruction: 盡可能使用最少的程式積木來完成這個關卡。
+      Course 4 SCV 5_instruction: 盡可能使用最少的程式積木來完成這個關卡。
+      Course 4 SCV 6_instruction: 若要再次查看說明，請按一下此處。
       Course 4 SCVP 1_instruction: |
         Create a function with parameters that allows
         the artist to jump backward and forward by x pixels, and also up and down
@@ -3045,16 +3006,9 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
+      Overworld Avoid Monsters_instruction: 撞上苦力怕會是一件相當遭的事情。小心的從苦力怕身邊通過並安全地抵達你的家裡。
+      Overworld Chop Tree_instruction: 木材是相當重要的資源。有許多物品都是由木材所製成。走到樹木前面使用"摧毀方塊"將它砍下。
+      Overworld Chop Trees_instruction: 我們要在太陽下山前建立一棟房子。建造房子需要許多的木材，去把那三棵樹都砍下來吧。
       Overworld Free Play 20x20_instruction: |
         Congratulations! You've completed
         all our puzzles! Now mine, build, and create something unique by using everything
@@ -3103,9 +3057,7 @@
         Great job! You’ve gathered lots of
         resources and built a modest home. Now lay rail from the edge of the map to
         the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+      Overworld Shear Sheep_instruction: 剪羊毛時間到了！使用＂修剪＂指令從兩隻羊身上收集羊毛。
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -3351,9 +3303,7 @@
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
-      scrat 16_instruction: |
-        Acorn! Acorn! Acorn! Use an "if" block to get me there
-        with the fewest number of blocks.
+      scrat 16_instruction: 橡子 ！橡子 ！橡子 ！使用"如果"以及最少的程式積木帶我到達那裡。
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
@@ -3373,33 +3323,17 @@
       scrat 19_instruction: |
         One more practice of the "if-else" block, can you
         get it right on your first try?
-      scrat 20_instruction: |
-        Can you add just 3 blocks to help me solve a more complex
-        maze? If you do it right, I can walk any curvy path no matter the length.
-        Hurry! The ice is melting!
+      scrat 20_instruction: 你可以只靠新增3個程式積木，來幫我完成一個更複雜的關卡嗎？只要你成功了，往後不管任何長度的彎曲路徑我都可以行動自如啦！快點！
+        冰正在融化！
       SpecialFrozenLevel_instruction: 您已經變成一個專業的藝術家囉！來建立一個美麗的冬天吧。
-      Standalone_Artist_1_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
-      Standalone_Artist_2_instruction: |
-        Draw this diamond with 120 and 60 degree
-        angles and 150 pixel long sides.
-      Standalone_Artist_3_instruction: |
-        Can you draw this hexagon with 100 pixel
-        sides and 60 degree turns?
-      Standalone_Artist_4_instruction: |
-        Now you've got a new block to play with,
-        the loop. This will repeat a set of commands. What happens if you loop these
-        commands 6 times?
-      Standalone_Artist_5.5_instruction: |
-        Notice how we simplified the diamond code
-        by turning it into a loop. You can loop that whole sequence 12 times to draw
-        the flower. Hint: You'll need to turn 30 degrees after your diamond loop
-        so you don't keep drawing over the same diamond.
-      Standalone_Artist_5_instruction: |
-        How many times do you need to loop this diamond
-        to draw the flower?
+      Standalone_Artist_1_instruction: 歡迎光臨藝術家！首先，讓我們試著用 "向右旋轉" 及 "向前移動" 積木，畫一個簡單的正方形吧。每邊邊長為100
+        像素。
+      Standalone_Artist_2_instruction: 用120度、60度及150 像素當做邊長，畫出這顆鑽石吧。
+      Standalone_Artist_3_instruction: 你能用邊長100像素及旋轉60度，來畫出這個六邊形嗎？
+      Standalone_Artist_4_instruction: 現在你有了一個新的程式積木可以玩囉，這個程式積木是"迴圈"，它能將一組命令重複執行。如果將這些指令重覆執行6次，會發生什麼事情呢？
+      Standalone_Artist_5.5_instruction: 請注意我們是如何簡化鑽石代碼：藉由將它變成一個迴圈。你可以將整個序列使用迴圈重複執行12
+        次來畫出一朵花。 提示：在鑽石迴圈執行後你需要旋轉 30 度，這樣你才不會畫在相同的鑽石上。
+      Standalone_Artist_5_instruction: 你需要重複循環多少次，才能將這顆鑽石畫成一朵花呢？
       Standalone_Artist_6_instruction: |
         Loop this hexagon code 6 times to create
         the design. How many degrees will you need to turn each time? Hint: divide
@@ -3418,10 +3352,8 @@
         Now go ahead and make whatever picture you'd
         like! You've even got an empty function that you can make do whatever you
         want!
-      Standalone_Artist_v2_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
+      Standalone_Artist_v2_instruction: 歡迎光臨藝術家！首先，讓我們試著用 "向右旋轉" 及 "向前移動" 積木，畫一個簡單的正方形吧。每邊邊長為100
+        像素。
       template test_instruction: what up
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi
@@ -3603,6 +3535,9 @@
       U3 - Canvas - draw at click point_instruction: |
         Change your program so that
         dots are drawn at the location of the mouse click. (Click to see full instructions)
+      U3 - Canvas - freePlay_instruction: |
+        Write code that redraws your image using
+        a sketch effect. (Click to see full instructions)
       U3 - Canvas - introCanvas_instruction: |
         Add a canvas to your app and set it
         to be the active canvas. Then add a large dot to your canvas. (Click to see
@@ -3615,6 +3550,10 @@
         Write a function that takes the
         movement of the mouse as input and generates a line width as output. (Click
         to see full instructions)
+      U3 - Canvas - One Dot sprayPaint_instruction: |
+        Write code that redraws your
+        image using a dot whose x and y locations use `offsetX` and `offsetY` with
+        small random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -3632,8 +3571,9 @@
         Write code that redraws your image using
         a sketch effect. (Click to see full instructions)
       U3 - Canvas - sprayPaint_instruction: |
-        Write code that redraws your image using
-        a "spray paint" type effect. (Click to see full instructions)
+        Update the spray paint code so that
+        redraws your image using multiple random dots instead of one using a nested
+        for loop. (Click to see full instructions)
       U3 - Canvas - transparentDots_instruction: |
         Change the colors of your dots
         so they have a fully transparent stroke and partially transparent fill. (Click
@@ -3673,7 +3613,7 @@
         OR to display "It's the weekend!" if the user enters a weekend day at the
         prompt. (Click to see full instructions)
       U3 - Design Mode - Console Log_instruction: |
-        Update the ID names and `console.log()`
+        Update the ID names and `console.log`
         messages to match the correct button. (Click to see full instructions.)
       U3 - Design Mode - Layers and Delete_instruction: |
         Fix the layout of the bullseye
@@ -4082,7 +4022,7 @@
         called "lives" and assign it the value 3. Print it to the console. (Click
         to see full instructions)
       U3- Variables - Text Mode_instruction: |
-        1. switch to text mode and type instructions;
+        1. Switch to text mode and type instructions;
         2. drag blocks out into text mode; 3. experiment with code completion
       U3-Design Mode-ID and Event Handler_instruction: |
         Add an event handler for
@@ -4092,7 +4032,7 @@
         Using the Design Mode Events change the button
         ID and update the code to match. (Click to see detail instructions).
       U3-Design Mode-Image_instruction: |
-        Recreate the "Chaser-Game" from the last
+        Recreate the "Chaser Game" from the last
         lesson using Design Mode. (Click to see full instructions.)
       U313 drag Two Buttons_instruction: |
         Run a program with two buttons that have
@@ -4213,8 +4153,8 @@
         Add 15 fish to the image by writing drawAllFish
         with a loop. (Click to see full instructions)
       U3L07 - Free Play Loops and Random_instruction: |
-        Free Play!  Use what you learned
-        from loops and random to make your own little scene.  Have fun.
+        Free Play! Use what you learned
+        from loops and random to make your own little scene. Have fun.
       U3L07 - introSquare_instruction: |
         Use a loop to draw a square. (Click to see
         full instructions)
@@ -4270,7 +4210,7 @@
         which accept parameters to allow you to add more variation to your scene.  The
         student worksheet provides more details and guidance.
       U3L08 - fish_instruction: |
-        Add a parameter to drawFish() that changes the size
+        Add a parameter to drawFish that changes the size
         of the fish drawn. (Click to see full instructions)
       U3L08 - freePlay_instruction: |
         Keep adding to your image by making more calls
@@ -4283,21 +4223,21 @@
         of sea grass to the image. Look at, but don't change, the functions that
         create them. (Click to see full instructions)
       U3L08 - multiParamFish_instruction: |
-        Add three parameters to your drawFish()
+        Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
         colors. (Click to see full instructions)
       U3L08 - multipleLayersofParams_instruction: |
         Call drawPlusSign() to complete
         the image. (Click to see full instructions)
       U3L08 - paramsToStarfish_instruction: |
-        Add a parameter to drawStarfish() that
+        Add a parameter to drawStarfish that
         changes the size of the starfish drawn. (Click to see full instructions)
       U3L08 - randomInput_instruction: |
         Use the randomNumber() blocks to test the
         functions you designed with random input. (Click to see full instructions)
       U3L08 - seaGrass_instruction: |
-        Add a parameter to drawSeaGrass() that changes
-        the size of the piece of sea grass drawn. (Click to see full instructions)
+        Add a parameter to drawSeagrass that changes
+        the size of the piece of seagrass drawn. (Click to see full instructions)
       U3L08 - squareTwoParams_instruction: |
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
@@ -4460,8 +4400,8 @@
         they hit 'enter' in the text input, using the 'change' event. (Click to
         see full instructions)
       U3L16 - chaserApp_instruction: |
-        Create your own "Chaser App". (Click to see
-        full instructions)
+        Create your own "Chaser Game." (Click to
+        see full instructions)
       U3L16 - chooseImages_instruction: |
         Replace the image in your application with
         one of your own. (Click to see full instructions)
@@ -4524,7 +4464,7 @@
         it!  For more details see the Activity guide for this lesson.
       U3L16 - setPosition to move button_instruction: |
         Introducing the setPosition
-        command!  Replace the moveTo in the button-click event handler to use setPosition
+        command! Replace the moveTo in the button-click event handler to use setPosition
         to move the button itself to a random location when it's clicked.
       U3L16 - setPositionMoveButton_instruction: Use setPositon to moveButton
       U3L16 - setupMoveToRandom_instruction: |
@@ -4663,7 +4603,7 @@
         shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
       U3L19 - variable reassignment challenge pt2_instruction: |
         Make a prediction
-        about the ending values of a,b, and c. Then use console.log to check your
+        about the ending values of a, b, and c. Then use console.log to check your
         understanding (Click to see full instructions)
       U3L19 - variable reassignment part 1_instruction: |
         Predict the value of a and
@@ -4880,25 +4820,12 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
-      Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
-      Underground If Statements_instruction: |
-        Now things are getting tricky. Mine
-        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
-        over any lava you uncover.
-      Underground Iron_instruction: |
-        Walking into molten lava is a bad idea. Place
-        cobblestone to create a bridge, then mine at least two of the iron blocks.
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7
-        redstone! Try using a repeat command inside a repeat command to walk in\na
-        square.\r\n"
+      Underground Avoiding Lava_instruction: 岩漿隱藏在某些方塊下面，在你前進之前你必需先將它覆蓋。使用"如果"指令來解決這個問題，並在合適的地方放置"向前移動"程式積木來挖掘這些方塊。
+      Underground If Statements_instruction: 現在事情越來越棘手。挖掘 3個紅石，但記得別掉進岩漿中。使用 "如果" 指令將鵝卵石放置在任何你發現的熔岩上。
+      Underground Iron_instruction: 掉到滾燙的岩漿中是一件相當糟的事情。在岩漿中放置鵝卵石來搭一座橋，然後至少挖掘兩個鐵礦來完成這個關卡。
+      Underground Mine in a Circle_instruction: "想辦法取得5個鑽石及7個紅石。試著在重複命令中放置另一個重複命令使主角在方形中移動。\r"
       Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
-      Underground Test Level_instruction: Collect all of the minerals!
+        你可以在地底下發現寶貴的資源，但地底下真的太黑了。請至少放置兩個火把同時至少挖掘兩個煤礦。
+      Underground Test Level_instruction: 收集所有的礦石!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

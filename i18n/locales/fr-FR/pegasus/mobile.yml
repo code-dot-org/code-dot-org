@@ -119,7 +119,6 @@ fr-FR:
   hoc_is_here: "#HourOfCode L'Heure de Code est là — jettes-y un œil ! @codeorg"
   just_did_hoc: "Je viens de faire l'Heure de Code #HourOfCode — jettes-y un œil ! @codeorg"
   twitter_teach_cs: "Pourquoi n'y a-t-il pas plus d'écoles qui enseignent l'informatique ? Nous pouvons résoudre cela. http://youtu.be/nKIu9yen5nc. Visitez http://code.org/ pour en savoir plus."
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes"> En savoir plus</a> sur les prix pour chaque éducateur.'
   learn_hoc: Apprendre une Heure de Code
   beyond_hoc: "Plus loin qu'Une Heure"
   what_gender: Es-tu un garçon ou une fille ?
@@ -303,6 +302,7 @@ fr-FR:
     Ces enseignants adoreraient avoir quelqu'un de <span style="font-family: 'Gotham 7r', sans-serif;">passionné par l'enseignement de l'informatique</span> qui puisse les aider en classe, ou quelqu'un qui puisse <span style="font-family: 'Gotham 7r', sans-serif;">inspirer</span> leurs élèves en leur parlant de l'ampleur des possibilités offertes par l'informatique (ce qui peut être fait en visio-conférence). Si vous ne souhaitez pas être bénévole, <a href="%{url}">apprenez plus</a> sur comment organiser votre propre événement Heure de Code.
   volunteer_engineer_submission_intro_signup: |-
     Veuillez saisir les informations suivantes si vous êtes étudiant en informatique ou développeur. Les champs marqués d'une <span class="form-required-field"> *</span> sont obligatoires.
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Informations partagées avec les enseignants sur la carte des bénévoles
   volunteer_engineer_submission_field_name: Nom
   volunteer_engineer_submission_field_name_placeholder: Nom Complet
@@ -555,6 +555,11 @@ fr-FR:
   learn_educator_resources_description: Apprends à enseigner une Heure de Code
   learn_educator_resources_button: "Ressources de l'éducateur"
   learn_are_you_educator: 'Vous êtes éducateur ? Apprendre <a href="http://hourofcode.com/resources/how-to"> à enseigner Une Heure de Code</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Trouvez un bénévole local</a> pour vous aider pendant votre Heure de Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes"> En savoir plus</a> sur les prix pour chaque éducateur.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Essaie nos nouvelles Heures de Code
   hoc2014_try_new_tutorial: Essayez notre nouveau tutoriel heure de Code en version bêta
   hoc2014_try_scrat: Angry Birds, PvZ, et Scrat
@@ -563,7 +568,7 @@ fr-FR:
   carousel_heading_codeorg_any_device: Tutoriels par Code.org (pour tous supports)
   carousel_heading_3rd_party: Tutoriels par des tiers
   carousel_heading_third_party: Tutoriels par des tiers
-  carousel_heading_international: Tutoriels dans votre langue
+  carousel_heading_international: Tutoriel dans votre langue
   carousel_heading_domestic: Tutoriels disponibles en anglais
   carousel_heading_beginners: Tutoriels pour débutants
   carousel_heading_javascript: Tutoriels sur le langage JavaScript

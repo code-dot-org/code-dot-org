@@ -164,7 +164,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockPlaceXPlace":function(d){return "plaats"},
 "blockPlantCrop":function(d){return "plant gewas"},
 "blockShear":function(d){return "schaar"},
-"blockTillSoil":function(d){return "tot bodem"},
+"blockTillSoil":function(d){return "spit bodem om"},
 "blockTurnLeft":function(d){return "Draai linksom"},
 "blockTurnRight":function(d){return "Draai rechtsom"},
 "blockTypeBedrock":function(d){return "bodemsteen"},

@@ -321,16 +321,17 @@ eu:
         studio_iceage_8: Gehitu dezakezu bloke bat puntu bat eskuratzeko eta beste bloke bat soinu bat ateratzeko Sidek Manny harrapatzen duenean? Orduan, mugi ezazu Sid gezi-teklen bidez, puntu bat lortu arte.
         studio_iceage_9: Ezarri atzealde bat izotz-aldi honetarako eta lagundu Sidi azkarrago joaten Grannyrenganaino, bere abiadura aldatuz. Orduan, mugi ezazu Sid gezi-teklen bidez Grannyrenganaino iritsi eta beste guztiei abisua emateko.
         studio_iceage_10: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
-        studio_gumball_1: 'Anaisek "kaixo" esan nahi du. Lagundu diezaiokezu?'
-        studio_gumball_2: 'Darwinek (1. aktorea) eta Gumballek (2. aktorea) "kaixo" esan nahi diote elkarri. Lagundu diezaiekezu "esan" blokea bi aldiz erabiliz?'
-        studio_gumball_3: Lagundu diezaiokezu Banana Joeri banderaraino iristen?
-        studio_gumball_4: Lagundu diezaiokezu Gumballi (1. aktorea) Darwinenganaino (2. aktorea) iristen eta soinu bat egiten hara iristean?
-        studio_gumball_5: 'Lagundu diezaiokezu Antonyri "agurrak" esaten bere gainean klik egitean? Ez ahaztu klik egin behar duzula "Hasi" sakatu ondoren'
-        studio_gumball_6: Lagundu diezaiokezu Darwini mugi dadin gora/behera/ezker/eskuin gezi-teklak erabiliz, bandera guztiak har ditzan?
-        studio_gumball_7: '"Errepikatu betiko" blokeak ahalbidetzen dizu kodea etengabe egikaritzea. Itsatsi bloke horri beste bloke batzuk Antony mugi dadin ezker-eskuin etengabe'
-        studio_gumball_8: Gehitu dezakezu bloke bat puntu bat eskuratzeko eta beste bloke bat soinu bat ateratzeko Banana Joek Antony harrapatzen duenean? Orduan, mugi ezazu Banana Joe gezien bidez, puntu bat lortu arte.
-        studio_gumball_9: Ezarri atzealde bat espazio inbasio honetarako eta lagundu Nicoleri azkarrago joaten Pennyrenganaino, bere abiadura aldatuz. Orduan, mugi ezazu Nicole gezi-teklen bidez Pennyrenganaino iritsi eta beste guztiei abisua emateko.
-        studio_gumball_10: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
+        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
+        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
+        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
+        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
+        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
+        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
+        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
+        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_full_sandbox: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
         studio_k1_1: 'Esanarazi diezaiokezu txakurrari "Kaixo mundua"?'
         studio_k1_2: Lor dezakezu txakurrak zerbait esan eta katuak erantzutea?
@@ -466,7 +467,7 @@ eu:
         csp_applab_functions_parameters: Parametrodun funtzioak
         csp_applab_loops: Itzuliak
         csp_applab_turtle: Turtle Programming
-        csp_concept_rgb: A Little Bit About Pixels
+        csp_concept_rgb: Informazio pixka bat pixelei buruz
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
         csp_pixelation_color_3: 'Color pixelation widget - Part 3'
@@ -509,6 +510,9 @@ eu:
         mc_if_statements: 'Minecraft - Baldintzapeko aginduak'
         mc_congrats_share: 'Minecraft - Zorionak'
         mc_congrats_no_share: 'Minecraft - Zorionak'
+        gumball_intro: 'Gumball Hour of Code - Introduction'
+        gumball_events: 'Gumball Hour of Code - Events'
+        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Arrastatu "mugitu" blokea eta lotu beste blokearen azpian'

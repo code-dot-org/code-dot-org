@@ -34,7 +34,7 @@ eu-ES:
   csedweek_map_signup: Erregistratu zure ekitaldia
   csedweek_map_search_placeholder: Bilatu Kode Orduaren ekitaldiak
   csedweek_map_search_search: Bilatu
-  csedweek_map_search_reset: Leheneratu
+  csedweek_map_search_reset: Berrezarri
   csedweek_map_legend_title: Legenda
   csedweek_map_legend_event: Kode Orduko ekitaldia
   csedweek_map_legend_cs_tech_jam: Informatika astea
@@ -116,7 +116,6 @@ eu-ES:
   hoc_is_here: '#KodeOrdua hemen dago - probatu! @codeorg'
   just_did_hoc: 'Oraintxe #KodeOrdua egin dut - Probatu! @codeorg'
   twitter_teach_cs: Zergatik ez dute ikastetxe gehiago informatika erakusten? Hau konpondu dezakegu. http://youtu.be/nKIu9yen5nc. Gehiago ikasteko ikusi http://code.org/.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Gehiago ikasi</a> hezitzaile bakoitzarentzat sariari buruz.'
   learn_hoc: Ikasi kode ordu bat
   beyond_hoc: Ordubetetik haratago
   what_gender: Neska ala mutila zara?
@@ -298,6 +297,7 @@ eu-ES:
   volunteer_engineer_submission_intro_recruit: |-
     Irakasle hauek nahiko lukete <span style="font-family: 'Gotham 7r', sans-serif;">informatika gustuko duen baten bat</span> eskoletan laguntzeko, edo haien ikasleak <span style="font-family: 'Gotham 7r', sans-serif;">animatu</span> ditzakeen baten bat Informatikaren aukera zabalen berri ematen (bideo konferentzia bidez izan zitekeen). Ez baduzu boluntarioren beharrik, <a href="%{url}">ikasi</a> nola antolatu zure Kode Orduaren ekitaldia.
   volunteer_engineer_submission_intro_signup: 'Mesedez, informatika ikaslea edo programatzailea bazara hurrengo informazioa bete ezazu. <span class="form-required-field">*</span> batekin dauden eremuak beharrezkoak dira.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Informazioa bolondres mapan partekatua izango da irakasleekin
   volunteer_engineer_submission_field_name: Izena
   volunteer_engineer_submission_field_name_placeholder: Izen Osoa
@@ -544,12 +544,17 @@ eu-ES:
   learn_educator_resources_description: Ikasi Hour of Code nola irakatsi
   learn_educator_resources_button: Irakaslearen baliabideak
   learn_are_you_educator: 'Irakaslea? Ikasi <a href="http://hourofcode.com/resources/how-to">nola irakatsi Kode Ordu bat</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Gehiago ikasi</a> hezitzaile bakoitzarentzat sariari buruz.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Proba itzazu gure Kode ordu tutorial berriak
   hoc2014_try_new_tutorial: Probatu gure Kode Ordu berria beta bertsioan
   hoc2014_try_scrat: Angry Birds, PvZ, eta Scrat
   hoc2014_try_frozen: Artista Frozeneko Anna eta Elsarekin
   carousel_heading_codeorg: Code.org-eko tutorialak
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_codeorg_any_device: Code.org-ren tutorialak (gailu guztietarako)
   carousel_heading_3rd_party: Beste batzuen tutorialak
   carousel_heading_third_party: Beste batzuen tutorialak
   carousel_heading_international: Tutorialak zure hizkuntzan
