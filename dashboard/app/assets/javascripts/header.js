@@ -417,10 +417,18 @@ dashboard.header.updateTimestamp = function () {
  * @return {string}
  */
 function activityCssClass(result) {
-  if (!result) return 'not_tried';
-  if (result >= 1000) return 'submitted';
-  if (result >= 30) return 'perfect';
-  if (result >= 20) return 'passed';
+  if (!result) {
+    return 'not_tried';
+  }
+  if (result >= 1000) {
+    return 'submitted';
+  }
+  if (result >= 30) {
+    return 'perfect';
+  }
+  if (result >= 20) {
+    return 'passed';
+  }
   return 'attempted';
 }
 
