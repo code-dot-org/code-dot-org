@@ -69,6 +69,10 @@ class ApiController < ApplicationController
     render json: summarize_user_progress(script)
   end
 
+  def user_progress_for_stage
+    render json: current_user.user_progress_by_stage(params[:script_name], params[:stage_index].to_i)
+  end
+
   def section_text_responses
     load_section
     load_script
