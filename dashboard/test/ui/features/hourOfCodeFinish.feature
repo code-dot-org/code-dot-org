@@ -9,6 +9,7 @@ Scenario: Completing Minecraft HoC should go to certificate page and generate a 
   Then I wait to see a dialog titled "Puzzle 14 of 14"
   And I close the dialog
   Then I wait until element "#runButton" is visible
+  Then I wait until the Minecraft game is loaded
   And I press "runButton"
   Then I wait to see a congrats dialog with title containing "Keep Playing"
   And I press the last button with text "Continue"
