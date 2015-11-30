@@ -6,7 +6,7 @@ nav: educate_nav
 
 Code.org is looking to partner with experienced computer science educators to deliver one-day, in-person workshops to local elementary school teachers to teach computer science in a format that's fun and accessible.
 
-The ideal CS Fundamentals Facilitator is an experienced computer science teacher at the elementary, middle, high school or university level with experience working with elementary school teachers and managing or hosting professional development workshops.  
+The ideal CS Fundamentals Facilitator is an enthusiastic supporter of computer science education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the curriculum area, preferably through past teaching experience. Experience mentoring teachers and managing/hosting professional development workshops a plus.  
 <br />
 
 [<button>Apply now</button>](https://docs.google.com/a/code.org/forms/d/1VURjBVOspP0H1ylwX1koYJ0YQdRxmp2JVWlWcslwosk/viewform)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/a/code.org/document/d/1Aylbn_ZNROiEUJzRVz8JsqEkEwDXElxMLrgw9fVm55U/pub)
