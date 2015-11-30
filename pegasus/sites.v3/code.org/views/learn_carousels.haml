@@ -1,4 +1,6 @@
-- categories = [{tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}, {tag:"Beginner", name: I18n.t(:carousel_heading_beginners)}, {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}, {tag:"Apps", name: I18n.t(:carousel_heading_devices)}, {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}, {tag: "Univ", name: I18n.t(:carousel_heading_university)}, {tag: "Web", name: I18n.t(:carousel_heading_webpages)}, {tag: "Robot", name: I18n.t(:carousel_heading_robots)}, {tag: "IDE", name: I18n.t(:carousel_heading_ide)}]
+- learn_categories = [{tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}, {tag:"Beginner", name: I18n.t(:carousel_heading_beginners)}, {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}, {tag:"Apps", name: I18n.t(:carousel_heading_devices)}, {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}, {tag: "Univ", name: I18n.t(:carousel_heading_university)}, {tag: "Web", name: I18n.t(:carousel_heading_webpages)}, {tag: "Robot", name: I18n.t(:carousel_heading_robots)}, {tag: "IDE", name: I18n.t(:carousel_heading_ide)}]
+
+- beyond_categories = [{tag:"Beginner", name: I18n.t(:carousel_heading_beyond_beginners)}, {tag:"JavaScript", name: I18n.t(:carousel_heading_beyond_javascript)}, {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}, {tag:"Apps", name: I18n.t(:carousel_heading_beyond_devices)}, {tag:"OtherLang", name: I18n.t(:carousel_heading_beyond_languages)}, {tag:"MakeApps", name: I18n.t(:carousel_heading_apps_games)}, {tag: "Univ", name: I18n.t(:carousel_heading_university)}, {tag: "Web", name: I18n.t(:carousel_heading_webpages)}, {tag: "Robot", name: I18n.t(:carousel_heading_robots)}, {tag: "IDE", name: I18n.t(:carousel_heading_ide)}]
 
 %div{style: "clear:both"}
 
@@ -20,12 +22,18 @@
     %button{:style=>"font-size:20px;"}
       = I18n.t(:carousel_heading_domestic)
 
-#all-tutorials{:style=>'visibility:hidden; overflow:hidden;'}
-  - categories.each do |category|
-    - id = "collection-" + category[:tag]
-    = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
+-if variation == 'learn'
+  #all-tutorials{:style=>'visibility:hidden; overflow:hidden;'}
+    - learn_categories.each do |category|
+      - id = "collection-" + category[:tag]
+      = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
 
 -if variation == 'beyond'
+  #all-tutorials{:style=>'visibility:hidden; overflow:hidden;'}
+    - beyond_categories.each do |category|
+      - id = "collection-" + category[:tag]
+      = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
+  
   %br
   %br
   %a{:href=>"/educate"}
