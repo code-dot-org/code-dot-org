@@ -50,6 +50,8 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
 
     # Take course name and convert it to a nicer full course name for the certificate
     case course
+      when nil
+        full_course_name = ''
       when 'artist'
         full_course_name = 'Artist'
       when 'course1'
