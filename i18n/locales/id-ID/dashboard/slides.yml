@@ -1353,160 +1353,160 @@ id:
         text: "From everyone here at Code.org, we hope you've had a TON of fun during this course. And whether your dream is to create the best new app, use programming to help cure diseases, or you just want to be a stellar problem-solver, this course was the first step in achieving those dreams."
     starwars_intro:
       1:
-        image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        image: catatan/starwars_pengenalan_1.JPG
+        text: Hi, Saya Kathleen Kennedy dan Saya produsen dari Star Wars, The Force Awakens. Hari ini Anda akan bekerja dengan salah satu bintang kami, BB-8. BB-8 adalah droid berbentuk bola. Segala sesuatu yang ia lakukan dan setiap gerakan yang dia buat dikendalikan oleh perangkat lunak komputer. Ilmu komputer berdampak pada setiap industri, dari pemasaran untuk perawatan kesehatan dalam film. Pada kenyataannya, ratusan insinyur komputer bekerja sama untuk membuat sebuah film seperti The Force Awakens.
       2:
-        image: notes/starwars_intro_2.JPG
-        text: "Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artists develop rigs which are the parts of the character that move that allow the character to look very believable in a galaxy far far away."
+        image: catatan/starwars_pengenalan_2.JPG
+        text: 'Hi Saya Rachel Rose, Saya adalah engineer R&D senior di ILM dan Saya memimpin tim pengembangan animasi dan ciptaan. Dalam Film The Force Awakens, saya bertanggung jawab untuk membantu para seniman mengembangkan rig yang merupakan bagian dari karakter yang bergerak yang memungkinkan karakter terlihat sangat mudah dipercaya di sebuah galaksi yang jauh.'
       3:
-        image: notes/starwars_intro_3.JPG
-        text: "In the next hour, we're going to build our own Star Wars game. We'll teach you the basic concepts of programming. Usually programming is all text but we're going to use blocks here so that we can drag and drop to write the programs. Under the hood, you're still creating code. After you try the basics with blocks, we'll switch you to JavaScript, one of the most popular programming languages on the web."
+        image: catatan/starwars_pengenalan_3.JPG
+        text: Pada jam berikutnya, kita akan membangun permainan Star Wars kita sendiri. Kami akan mengajarkan konsep-konsep dasar dalam pemrograman. Biasanya pemrograman adalah semua teks tetapi kita akan menggunakan blok di sini sehingga kita dapat melakukan drag dan drop untuk menulis program. Di balik itu, Anda masih membuat kode. Setelah mencoba dasar-dasar dengan blok, kita akan beralih ke JavaScript, salah satu bahasa pemrograman yang paling populer didalam website.
       4:
-        image: notes/starwars_intro_4.JPG
-        text: "To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts. Your screen is split into three parts. On the left is the Star Wars game space, where code will run. The instructions for each level are written below the game space."
+        image: catatan/starwars_pengenalan_4.JPG
+        text: Untuk memulai, kita akan bekerjasama dengan Rey untuk memprogram BB-8 agar berjalan untuk mengumpulkan semua bagian berkas. Layar Anda dibagi menjadi tiga bagian. Di sebelah kiri adalah Ruang Permainan Star Wars, dimana kode akan dijalankan. Petunjuk untuk setiap tingkat atau level ditulis di bawah ruang permainan.
       5:
-        image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        image: catatan/starwars_pengenalan_5.JPG
+        text: Daerah ini tengah adalah toolbox dan masing-masing blok ini adalah perintah yang dapat mengerti BB-8.
       6:
-        image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where we are going to build our program.
+        image: catatan/starwars_pengenalan_6.JPG
+        text: Ruang putih di sebelah kanan disebut ruang kerja dan ini adalah di mana kita akan membangun program kita.
       7:
-        image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what happens? BB-8 moves left one block on the grid.
+        image: catatan/starwars_pengenalan_7.JPG
+        text: Jika Saya menyeret blok moveLeft(); ke ruang kerja kita dan menekan run, apa yang terjadi? BB-8 bergerak kiri satu blok pada grid.
       8:
-        image: notes/starwars_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together."
+        image: catatan/starwars_pengenalan_8.JPG
+        text: Dan bagaimana jika saya ingin BB-8 untuk melakukan sesuatu setelah blok moveLeft();? Saya dapat menambahkan blok lain ke program kita. saya akan memilih blok moveUp(); dan saya akan menyeret nya dibawah blok moveLeft() saya; hingga cahayanya muncul. Lalu aku akan menjatuhkannya dan kedua blok akan menyatu bersama-sama.
       9:
-        image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked from top to bottom on our workspace. If you ever want to delete a block, just remove it from the stack and drag it back into the tool box.
+        image: catatan/starwars_pengenalan_9.JPG
+        text: Ketika saya menekan run lagi, BB-8 akan melakukan perintah yang disusun dari atas ke bawah pada ruang kerja kita. Jika Anda pernah ingin menghapus blok, hapus saja dari susunan dan drag atau tarik kembali ke dalam kotak alat.
       10:
-        image: notes/starwars_intro_10.JPG
-        text: "After you've hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        image: catatan/starwars_pengenalan_10.JPG
+        text: Setelah Anda bisa menekan run, Anda juga dapat menekan tombol reset untuk mengembalikan BB-8 kembali ke awal. Sekarang mari kita lakukan kebalikannya!
     starwars_typing:
       1:
-        image: notes/starwars_typing_1.JPG
-        text: "Inside the blocks we've been using are JavaScript commands. JavaScript is the most popular programming language for professional developers today. Blocks are a great way to get started learning to code and in fact, top universities like Harvard and Berkeley start teaching this way. But once we learn the basics, engineers write code by typing because it allows us to go faster."
+        image: catatan/starwars_mengetik_1.JPG
+        text: Di dalam blok kami telah menggunakanperintah JavaScript. JavaScript adalah bahasa pemrograman paling populer untuk pengembang profesional saat ini. Blok adalah cara yang bagus untuk memulai belajar koding dan pada kenyataannya, Universitas tekenal seperti Harvard dan Berkeley mulai mengajar dengan menggunakan cara ini. Tetapi setelah kita belajar dasar-dasar, engineer menulis kode dengan mengetik karena hal ini memungkinkan kita untuk melakukannya lebih cepat dan mudah.
       2:
-        image: notes/starwars_typing_2.JPG
+        image: catatan/starwars_mengetik_2.JPG
         text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try."
       3:
-        image: notes/starwars_typing_3.JPG
+        image: catatan/starwars_mengetik_3.JPG
         text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.
       4:
-        image: notes/starwars_typing_4.JPG
+        image: catatan/starwars_mengetik_4.JPG
         text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
       5:
-        image: notes/starwars_typing_5.JPG
+        image: catatan/starwars_mengetik_5.JPG
         text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move."
       6:
-        image: notes/starwars_typing_6.JPG
+        image: catatan/starwars_mengetik_6.JPG
         text: When you make an error on the line, the editor highlights it for you so that you can try changing your text to fix it.
       7:
-        image: notes/starwars_typing_7.JPG
+        image: catatan/starwars_mengetik_7.JPG
         text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
     starwars_events:
       1:
-        image: notes/starwars_events_1.JPG
+        image: catatan/starwars_kejadian_1.JPG
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
-        image: notes/starwars_events_2.JPG
+        image: catatan/starwars_kejadian_2.JPG
         text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
       3:
-        image: notes/starwars_events_3.JPG
+        image: catatan/starwars_kejadian_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
       4:
-        image: notes/starwars_events_4.JPG
+        image: catatan/starwars_kejadian_4.JPG
         text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
       5:
-        image: notes/starwars_events_5.JPG
+        image: catatan/starwars_kejadian_5.JPG
         text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
       6:
-        image: notes/starwars_events_6.JPG
+        image: catatan/starwars_kejadian_6.JPG
         text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down."
       7:
-        image: notes/starwars_events_7.JPG
+        image: catatan/starwars_kejadian_7.JPG
         text: "To do this, we'll use a command called whenUp(). When you drag the command out of the toolbox, you'll see that it starts and ends with a curly bracket instead of a semi-colon. This gives us space to put other commands in the middle. Every command that we place inside these brackets will run when the player presses the up arrow."
       8:
-        image: notes/starwars_events_8.JPG
+        image: catatan/starwars_kejadian_8.JPG
         text: "We want R2-D2 to go up so let's put a goUp(); block inside the command. And we'll do the same thing to make R2-D2 go down."
       9:
-        image: notes/starwars_events_9.JPG
+        image: catatan/starwars_kejadian_9.JPG
         text: Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen. Step by step, your game is getting more interactive.
     starwars_congrats:
       1:
-        image: notes/starwars_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        image: catatan/starwars_selamat_1.JPG
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
       2:
-        image: notes/starwars_congrats_2.JPG
+        image: catatan/starwars_selamat_2.JPG
         text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
       3:
-        image: notes/starwars_congrats_3.JPG
+        image: catatan/starwars_selamat_3.JPG
         text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
       4:
-        image: notes/starwars_congrats_4.JPG
+        image: catatan/starwars_selamat_4.JPG
         text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
       5:
-        image: notes/starwars_congrats_5.JPG
+        image: catatan/starwars_selamat_5.JPG
         text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
     starwars_blocks_intro:
       1:
-        image: notes/starwars_blocks_intro_1.JPG
+        image: catatan/starwars_pengenalan_blok_1.JPG
         text: "Hi I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
       2:
-        image: notes/starwars_blocks_intro_2.JPG
+        image: catatan/starwars_pengenalan_blok_2.JPG
         text: "Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artist develop rigs, which are the parts of the character that move that allow the character to look very believable in a galaxy far, far away."
       3:
-        image: notes/starwars_blocks_intro_3.JPG
+        image: catatan/starwars_pengenalan_blok_3.JPG
         text: "In the next hour, we're going to build our own Star Wars game that will teach you the basic concepts of programming. Usually programming is all text but we're going to use blocks here so we can drag and drop to write the programs. To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts."
       4:
-        image: notes/starwars_blocks_intro_4.JPG
+        image: catatan/starwars_pengenalan_blok_4.JPG
         text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
       5:
-        image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        image: catatan/starwars_pengenalan_blok_5.JPG
+        text: Daerah ini tengah adalah toolbox dan masing-masing blok ini adalah perintah yang dapat mengerti BB-8.
       6:
-        image: notes/starwars_blocks_intro_6.JPG
+        image: catatan/starwars_pengenalan_blok_6.JPG
         text: "The white space on the right is called the work space and this is where we're going to build our program."
       7:
-        image: notes/starwars_blocks_intro_7.JPG
+        image: catatan/starwars_pengenalan_blok_7.JPG
         text: If I drag the moveLeft(); block to our workspace, what happens? BB-8 moves left one block on the grid.
       8:
-        image: notes/starwars_blocks_intro_8.JPG
+        image: catatan/starwars_pengenalan_blok_8.JPG
         text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together. When I press run again, BB-8 will perform the commands that are stacked top to bottom on our workspace."
       9:
-        image: notes/starwars_blocks_intro_9.JPG
+        image: catatan/starwars_pengenalan_blok_9.JPG
         text: If you ever want to delete a block, just remove it from the stack and drag it back into the toolbox.
       10:
-        image: notes/starwars_blocks_intro_10.JPG
+        image: catatan/starwars_pengenalan_blok_10.JPG
         text: "After you hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
     starwars_blocks_events:
       1:
-        image: notes/starwars_blocks_events_1.JPG
+        image: catatan/starwars_kejadian_blok_1.JPG
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
-        image: notes/starwars_blocks_events_2.JPG
+        image: catatan/starwars_kejadian_blok_2.JPG
         text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
       3:
-        image: notes/starwars_blocks_events_3.JPG
+        image: catatan/starwars_kejadian_blok_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
       4:
-        image: notes/starwars_blocks_events_4.JPG
+        image: catatan/starwars_kejadian_blok_4.JPG
         text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
       5:
-        image: notes/starwars_blocks_events_5.JPG
+        image: catatan/starwars_kejadian_blok_5.JPG
         text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
       6:
-        image: notes/starwars_blocks_events_6.JPG
+        image: catatan/starwars_kejadian_blok_6.JPG
         text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
       7:
-        image: notes/starwars_blocks_events_7.JPG
+        image: catatan/starwars_kejadian_blok_7.JPG
         text: Step by step, your game is getting more interactive.
     starwars_blocks_congrats:
       1:
-        image: notes/starwars_blocks_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        image: catatan/starwars_selamat_blok_1.JPG
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
       2:
-        image: notes/starwars_blocks_congrats_2.JPG
+        image: catatan/starwars_selamat_blok_2.JPG
         text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
       3:
         image: notes/starwars_blocks_congrats_3.JPG
@@ -1615,3 +1615,56 @@ id:
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Now you can build whatever you want. Have fun!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: "The white space on the right is called the work space and this is where we'll build our program."
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

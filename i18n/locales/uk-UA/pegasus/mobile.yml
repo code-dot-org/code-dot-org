@@ -114,7 +114,6 @@ uk-UA:
   hoc_is_here: '#HourOfCode вже тут - подивіться, що там! @codeorg'
   just_did_hoc: 'Я щойно завершив #HourOfCode - подивіться, що це! @codeorg'
   twitter_teach_cs: Чому більше шкіл не викладають інформатику? Ми можемо це виправити. http://youtu.be/2DxWIxec6yo. Відвідайте http://code.org/ щоб дізнатися більше.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Дізнатися більше</a> про призи для кожного вчителя.'
   learn_hoc: Вивчати Годину Коду
   beyond_hoc: Поза Годиною коду
   what_gender: Якої ви статі?
@@ -320,6 +319,7 @@ uk-UA:
     Ці вчителі хочуть, щоб хтось, <span style="font-family: 'Gotham 7r', sans-serif;">захоплений інформатичною освітою</span> допоміг їм у класі, або <span style="font-family: 'Gotham 7r', sans-serif;">надихнув</span> їхніх учнів, розповідаючи про широкі можливості інформатики (можна через відео-чат). Якщо Ви не шукаєте волонтера, <a href="%{url}">дізнайтесь більше</a> про організацію власного заходу Години коду.
   volunteer_engineer_submission_intro_signup: |-
     Вкажіть наступну інформацію, якщо ви студент галузі комп'ютерних наук чи професійний програміст. Поля, позначені <span class="form-required-field">*</span> є обов'язковими для заповнення.
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Інформація доступна вчителям та волонтерам на карті
   volunteer_engineer_submission_field_name: Ім’я
   volunteer_engineer_submission_field_name_placeholder: "Повне ім'я"
@@ -568,11 +568,17 @@ uk-UA:
   learn_educator_resources_description: Дізнайтесь як викладати Годину коду
   learn_educator_resources_button: Ресурси для вчителів
   learn_are_you_educator: 'Ви педагог? Дізнайтеся, <a href="http://hourofcode.com/resources/how-to">як провести Годину коду</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Дізнатися більше</a> про призи для кожного вчителя.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Спробуйте наш новий підручник Години коду
   hoc2014_try_new_tutorial: Спробуйте новий підручник Години коду в бета-версії
   hoc2014_try_scrat: Angry Birds, PvZ та Scrat
   hoc2014_try_frozen: Художник з Анною та Ельзою, із Крижаного серця
   carousel_heading_codeorg: Підручники від Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Підручники від інших учасників
   carousel_heading_third_party: Підручники від інших учасників
   carousel_heading_international: Підручники вашою мовою
@@ -641,6 +647,8 @@ uk-UA:
   projguts_name: Камінь, папір, ножиці
   hourofcode_name: Бланк для нового code.org/hoc
   playlab_name: Ігрова студія
+  infinity_name: Ігрова лабораторія Infiinty
+  artist_name: Художник
   codeorg_gradelevel: Вік 4-104
   codeintl_gradelevel: Вік 4-104
   thinkersmithspanish_gradelevel: Для всіх
@@ -682,6 +690,8 @@ uk-UA:
   frozen_gradelevel: Вік 8 +
   starwars_gradelevel: Вік 6+
   playlab_gradelevel: Вік 4-104
+  infinity_gradelevel: Вік 4-104
+  artist_gradelevel: Вік 4-104
   codeorg_platformtext: Сучасні браузери, смартфони, планшети
   codeintl_platformtext: Сучасні браузери, смартфони, планшети
   thinkersmithspanish_platformtext: Безмашинні вправи
@@ -760,10 +770,12 @@ uk-UA:
   thinkersmith2_shortdescription: "Дізнайтесь, як інформація подається в комп'ютері за допомогою 0 та 1"
   kodableunplugged_shortdescription: Веселі безмашинні вправи
   projguts_shortdescription: 'Спробуйте змоделювати гру "камінь-ножиці-папір"'
-  hourofcode_shortdescription: Бланк для нового code.org/hoc
+  hourofcode_shortdescription: Вчіться програмувати з Марком Цукенбергом та Злими птахами!
   frozen_shortdescription: Вивчимо програмування, приєднавшись до Анни та Ельзи у подорожі чарівною зимовою казкою.
   starwars_shortdescription: Навчись програмувати дроїдів, створи власну гру Зоряних воєн у далекій-далекій галактиці.
   playlab_shortdescription: Складіть історію або створіть гру в Ігровій студії!
+  infinity_shortdescription: За допомогою Ігрової лабораторії створіть гру або історію за участі персонажів Діснея Infiinty.
+  artist_shortdescription: Малюйте картини та узори разом з Художником!
   codeorg_longdescription: 'Вивчайте основи програмування шляхом перетягування блоків. Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові алгоритми як цикли та умови. Перекладено 34 мовами.'
   codeintl_longdescription: 'Вивчайте основи програмування шляхом перетягування блоків. Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові алгоритми як цикли та умови. Перекладено 34 мовами.'
   thinkersmithspanish_longdescription: 'За допомогою визначеного словника робота, учні навчаться скеровувати один одного для досягнення певної мети, без попередніх домовленостей. Ця вправа навчає встановлювати відповідність між символами та діями, а також розвиває навик відлагодження. "Мої друзі-роботи" працює найкраще як групова діяльність, і містить робочі аркуші вчителя для використання у класі.'
@@ -993,3 +1005,11 @@ uk-UA:
   compatibility_https_header: Будь ласка, увімкніть HTTPS для Code.org.
   compatibility_https_message: "Для підвищення безпеки, ми перейшли до HTTPS %{https_date}. Ви не зможете отримати доступ до Code.org після цієї дати. <a href='%{it_requirements_url}'> натисніть тут</a>, щоб дізнатися, як увімкнути HTTPS для Code.org."
   compatibility_https_hide_this_warning: Сховати попередження
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: махати
+  infinity_shortcode: inf
+  playlab_shortcode: грати
+  artist_shortcode: art

@@ -61,7 +61,7 @@ ___ + ___
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| ___ | any type | Yes | The operands can be a number or a string, or the number or string returned by a function, or the numeric or string result of the evaluation of an expression. |
+| ___ | any | Yes | The operands can be a number or a string, or a variable containing a number or string, or the number or string returned by a function, or the numeric or string result of the evaluation of an expression. |
 
 [/parameters]
 

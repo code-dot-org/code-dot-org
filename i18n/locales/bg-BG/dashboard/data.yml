@@ -317,16 +317,17 @@ bg:
         studio_iceage_8: Може ли да добавите блок за добавяне на една точка и блок за звук, когато Сид връхлита върху Мани, а след това го преместете със стрелките докато спечелите точки?
         studio_iceage_9: Задайте фона за тази Ледена епоха и помогнете на Сид да стигне до Грани по-бързо чрез промяна на неговата скорост. След това го преместете със стрелките, за да предупреди всички останали.
         studio_iceage_10: Създайте своя собствена игра. Когато сте готови, щракнете върху Финал, за да споделите с приятелите си играта за телефон.
-        studio_gumball_1: 'Анаис иска да каже "Здравей" - може ли да помогнеш?'
-        studio_gumball_2: 'Дарвин (актьор 1) и Гъмбъл (актьор 2) биха искали да си кажат "здрасти" един на друг. Може ли да помогнете с два блока за диалог?'
-        studio_gumball_3: Може ли да помогнеш на Банана Джо да стигне до флага?
-        studio_gumball_4: Може ли да помогнеш на Гъмбъл (актьор 1) да отиде до Дарвин (актьор 2) и да се чуе звук, когато той стигне там?
-        studio_gumball_5: 'Може ли да помогнете на Антъни да каже "Поздравления", когато бъде щракнато върху му? Не забравяйте да щракнете върху него, след като натиснете Старт'
-        studio_gumball_6: Може ли да помогнете на Дарвин да се движи чрез клавишите със стрелки и да стигне до всички знамена?
-        studio_gumball_7: 'Блокът "повторение завинаги" ви позволява да стартирате даден код непрекъснато. Можете ли да прикачите блокове към него, за да помогнете на Антъни да се движи надясно и наляво?'
-        studio_gumball_8: Може ли да добавите блок за добавяне на една точка и блок за звук, когато Банана Джо връхлита върху Антъни, а след това го преместете го със стрелките докато спечелите точки?
-        studio_gumball_9: Задайте фон за тази извънземна инвазия и помогнете на Никол да стигне до Пени по-бързо чрез промяна на нейната скорост. След това го преместете със стрелките да стигне до Никол и да предупреди всички останали.
-        studio_gumball_10: Създайте своя собствена игра. Когато сте готови, щракнете върху Финал, за да споделите с приятелите си играта за телефон.
+        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
+        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
+        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
+        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
+        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
+        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
+        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
+        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_full_sandbox: Създайте своя собствена игра. Когато сте готови, щракнете върху Финал, за да споделите с приятелите си играта за телефон.
         studio_k1_1: 'Можете ли да накарате това куче да казва "Здравей, свят"?'
         studio_k1_2: Може ли да направите диалог между кучето и котката?
@@ -505,6 +506,9 @@ bg:
         mc_if_statements: 'Minecraft - "ако" отчети'
         mc_congrats_share: 'Minecraft - Поздравления'
         mc_congrats_no_share: 'Minecraft - Поздравления'
+        gumball_intro: 'Gumball Hour of Code - Introduction'
+        gumball_events: 'Gumball Hour of Code - Events'
+        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок
@@ -577,9 +581,9 @@ bg:
         Infinity_move_collide_callout: Издай звук, когато това събитие се случи.
         Infinity_repeat_callout: Постави блоковете за движение тук вътре
         craft_run_button_callout: 'Натиснете "Старт", за да пробвате вашата програма'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
+        craft_drag_block_callout: 'Плъзни "moveForward();" блок и го залепи под друг блок'
         craft_callout_preplaced: Ние сме поставили някои блокове тук, за да започнете
         craft_inside_repeat: Повторете действията като поставите блокове тук вътре
         craft_callout_preplaced_house: Този код ще започне изграждането на вашия дом. Можете ли да го завършите?
         craft_what_is_iron: Изкопай това желязо!
-        craft_callout_moveforward: Този код ще провери за лава, можете ли да добавите команда да се придвижим напред?
+        craft_callout_moveforward: Този код ще провери за лава, можете ли да добавите команда да вървим напред?

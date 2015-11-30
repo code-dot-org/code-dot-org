@@ -58,8 +58,8 @@
   "houseSelectEasy": "Lagano",
   "houseSelectHard": "Teško",
   "houseSelectLetsBuild": "Ajmo sagraditi kuću.",
-  "houseSelectMedium": "Medium",
-  "keepPlayingButton": "Keep Playing",
+  "houseSelectMedium": "Srednje",
+  "keepPlayingButton": "Nastaviti igrati",
   "level10FailureMessage": "Pokrij lavu da prođeš preko, onda iskopaj dva željezna bloka na drugoj strani.",
   "level11FailureMessage": "Postavi kamen ako je lava naprijed. To će ti dopustit da sigurno iskopaš ovaj red resursa.",
   "level12FailureMessage": "Be sure to mine 3 redstone blocks. This combines what you learned from building your house and using \"if\" statements to avoid falling in lava.",
@@ -82,7 +82,7 @@
   "playerSelectChooseSelectButton": "Odaberi",
   "playerSelectLetsGetStarted": "Hajde da počnemo.",
   "reinfFeedbackMsg": "You can press \"Keep Playing\" to go back to playing your game.",
-  "replayButton": "Replay",
+  "replayButton": "Ponovi",
   "selectChooseButton": "Odaberi",
   "tooManyBlocksFail": "Zagonetka {puzzleNumber} je dovršena. Čestitam! Također je moguće završiti ju sa {numBlocks, plural, jedna {jednom kockom} other {# kocki}}."
 }

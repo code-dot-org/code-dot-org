@@ -638,69 +638,73 @@
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
-        text: This lesson is called the big event. It's all about how we can control
-          our programs and actually change the way a program runs on the fly using
-          events, like the push of a button or the click of a mouse.
+        text: Diese Lektion nennt sich das große Ereignis. Es geht darum, Programme
+          im laufenden Betrieb mittels Ereignissen wie einen Tastendruck oder einen
+          Mausklick zu ändern.
       2:
         image: notes/C1_bigevent_unplugged_2.png
         text: In dieser Übung wirst du mit einer Papier-Fernbedienung gesteuert. Es
           ist so, als ob man ein Video-Spiel in echt erlebt.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: An event is an action  that causes something to happen. It's like when
-          you click the button on a mouse and a webpage loads. That's an event. When
-          you touch your screen on a tablet to scroll, that's an event also. Events
-          are a great way of letting the user direct your program whenever they need
-          or want to.
+        text: Ein Event ist eine Aktion, die etwas verursacht, zu passieren. Es ist
+          so, wie wenn du den Knopf auf einer Maus drückst und eine Website lädt.
+          Das ist ein Event. Wenn du den Bildschirm auf einem Tablet berührst, dann
+          ist das auch ein Event. Events sind ein guter Weg, dem Benutzer sein Programm
+          weiterzuleiten, wann auch immer man muss, oder will.
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: Things happen that we all respond to. We feel hungry and we go to the
-          fridge. We hear the mailman come and he puts our mail in the mailbox  and
-          then we go get our mail. Those are just like the events of pushing a button
-          or moving a joystick. They are something that happens that triggers us to
-          do something.
+        text: Dinge passieren, auf die wir alle reagieren. Sind wir hungrig, gehen
+          wir zum Kühlschrank. Hören wir den Briefträger kommen, wenn er uns Post
+          in den Briefkasten legt, dann gehen wir hin und holen unsere Post. Das sind
+          Events, genau so wie die, die passieren, wenn wir einen Knopf drücken, oder
+          einen Joystick bewegen. Events sind etwas, die uns dazu bewegen etwas zu
+          tun.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: In video games, there's an event called "Update" and it happens 30 or
-          60 times a second. For videogame programmers that's almost more important
-          as an event than the buttons or the joystick.
+        text: In Video Spielen gibt es ein Event, dass sich "Update" nennt und es
+          passiert entweder 30 oder 60 mal pro Sekunde. Für Videospiel Programmierer
+          ist das fast ein wichtigeres Event, wie die Knöpfe oder der Joystick.
       6:
         image: notes/C1_bigevent_unplugged_6.png
-        text: The main event we're watching for is that "Update" tick happening. And
-          then we check the joystick in the tick. So we say, "Oh, has somebody pushed
-          the button this frame? Yes or no?" Without events, the player couldn't move,
-          you couldn't jump, you wouldn't be able to control what's going on. The
-          videogame wouldn't be able to animate anything.
+        text: 'Das Haupt-Event das wir wünschen, dass es stattfindet, ist der "Update"
+          Tick. Und dann überprüfen wir den Joystick im Tick. Also sagen wir: "Oh,
+          hat jemand diesen Knopf in diesem Frage gedrückt? Ja, oder Nein?" Ohne Events,
+          könnte sich der Spieler nicht bewegen, man könnte nicht springen, man könnte
+          überhaupt nicht entscheiden was passiert. Das Videospiel wäre nicht in der
+          Lage, etwas zu animieren.'
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: In sand sculpture you've got to know that failure is part of the program.
-          But if you're persist, it's just going to get nothing but better and more
-          exciting for you.Persistence is the name of the game. Stay with it, you'll
-          love it.
+        text: Beim Sand Skulpturen bauen, muss man wissen, dass Fehlschlag zum Programm
+          gehört. Aber wenn du hartnäckig bleibst, dann wird es besser und spannender
+          für dich. Hartnäckigkeit ist der Name des Spiels. Bleib am Ball; Du wirst
+          es lieben.
       2:
         image: notes/C1_building_foundation_2.jpg
-        text: This lesson is called building a foundation. In this lesson, we'll work
-          on a task that is meant to be really difficult. You will figure out how
-          to make a structure at least as tall as one of these cups and it's got to
-          be strong enough to hold the weight of a book.
+        text: Diese Lektion handelt um das Gründen einer Stiftung. In dieser Lektion
+          werden wir an einer Aufgabe arbeiten, die wirklich schwierig sein soll.
+          Du wirst herausfinden, wie man eine Struktur aufbaut, die so groß ist, wie
+          eine dieser Tassen. Sie muss stark genug sein, um das Gewicht eines Buches
+          zu halten.
       3:
         image: notes/C1_building_foundation_3.jpg
-        text: There might be times that our creation doesn't work out. There might
-          be times that we get frusrated and want to give up. There might be a lot
-          of those moments. But if we keep on trying, give it our best shot over and
-          over again, then we're sure to get it before long.
+        text: Es kann sein, dass es vorkommt, dass unsere Kreation nicht funktioniert.
+          Es kann Zeiten geben, in denen wir frustriert sind und aufgeben möchten.
+          Es gibt viele dieser Momente. Aber wenn wir es weiterhin versuchen, uns
+          wirklich anzustrengen, dann können wir sicher sein, dass dieses Gefühl von
+          Frustration nicht lange anhält.
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: Persistence is all about hanging in there when you really want to give
-          up. If you want to create something new and different, there's going to
-          be a lot of failures along the way.
+        text: Bei Hartnäckigkeit geht es darum, sich reinzuhängen, auch wenn man wirklich
+          aufgeben will. Wenn man etwas neues und anderes ausprobieren möchte, dann
+          wird es sehr viele Fehlschläge auf dem Weg geben.
       5:
         image: notes/C1_building_foundation_5.jpg
-        text: The trick to persistence is choosing to keep on going and learn from
-          your failures instead of quitting because you're frustrated. Frustration
-          actually just means there's something wonderful around the corner. So don't
-          quit before you get to it. Wooo!
+        text: Der Trick für Ausdauer ist, weiterzumachen und von deinen Fehlern zu
+          lernen anstatt frustriert aufzugeben. Frustration bedeutet, dass etwas Tolles
+          gleich um die Ecke auf dich wartet. Also höre nicht auf, bevor du es erreicht
+          hast. Wooo!
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
@@ -709,9 +713,9 @@
           And that is loops! Loops are repeating an action over and over.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: When you repeat something multiple times, like my actions to keep the
-          hula hoop spinning, I'm performing a loop of that action. This is a loop.
-          This is a loop. And this is a loop.
+        text: Wenn ich mehrfach dasselbe tue - so wie ich mich bewege, um den Reifen
+          in Bewegung zu halten - dann führe ich eine Wiederholung aus. Im Programmieren
+          nennt man das eine Schleife.
       3:
         image: notes/C1_getting_loopy_3.png
         text: Today we're going to have a dance party. We'll act out loops with a
@@ -2226,11 +2230,11 @@
           build a game from scratch that can be shared and played on a phone.
       5:
         image: notes/infinity_playlab_intro_5.png
-        text: Your screen is split into three main parts. On the left is the gamespace,
-          where your program will run. The instructions for each level are written
-          below. This middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace, and this
-          is where we'll build our program.
+        text: Dein Bildschirm ist in drei Hauptbereiche geteilt. Links ist das Spielfeld,
+          wo Dein Programm laufen wird. Die Anleitung für jedes Level steht unterhalb
+          des Spielfeldes. Der mittlere Bereich ist der Werkzeugkasten, und jeder
+          der Blöcke ist ein Stück Code. Der weiße Bereich wird Arbeitsbereich genannt,
+          in dem wir unser Programm erstellen werden.
       6:
         image: notes/infinity_playlab_intro_6.png
         text: To start off, you'll need to link your blocks to the orange "when run"
@@ -2527,78 +2531,79 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+        text: 'Hi, ich bin Kathleen Kennedy und ich bin Produzentin von Star Wars:
+          Das Erwachen der Macht. Heute wirst du mit einem unserer Stars arbeiten,
+          BB-8. BB-8 ist ein kugelförmiger Droide. Alles was er macht und jede Bewegung
+          wird über Computer-Software gesteuert. Informatik verändert jede Industrie,
+          von Marketing über das Gesundheitswesen bis zum Film. Tatsächlich haben
+          über 100 Informatiker zusammen an Das Erwachen der Macht gearbeitet.'
       2:
         image: notes/starwars_intro_2.JPG
-        text: Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artists develop rigs which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far
-          far away.
+        text: Hi, ich bin Rachel Rose. Ich bin Senior Ingenieur bei ILM und ich leite
+          das Animations- und Kreaturenteam. In Das Erwachen der Macht unterstütze
+          ich das Künstlerteam, welches die Knochensysteme erstellt. Dies sind Teile
+          eines Charakters, welche sich bewegen und es der Figur erlauben glaubwürdig
+          auszusehen.
       3:
         image: notes/starwars_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game. We'll
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so that we can drag and drop to
-          write the programs. Under the hood, you're still creating code. After you
-          try the basics with blocks, we'll switch you to JavaScript, one of the most
-          popular programming languages on the web.
+        text: In der nächsten Stunde werden wir unser eigenes Star Wars Spiel erschaffen.
+          Dadurch wirst du grundlegende Konzepte der Programmierung lernen. Normalerweise
+          besteht Programmierung nur aus Text, aber wir werden Blöcke benutzen, durch
+          hin und her schieben können wir Programme schreiben. Im Hintergrund erstellst
+          du dennoch Code. Wenn du die Grundlagen beherrscht werden wir zu JavaScript
+          wechseln, eine der weit verbreitetsten Programmiersprachen im Web.
       4:
         image: notes/starwars_intro_4.JPG
-        text: To start off, we're going to work with Rey to program BB-8 to walk to
-          collect all of the scrap parts. Your screen is split into three parts. On
-          the left is the Star Wars game space, where code will run. The instructions
-          for each level are written below the game space.
+        text: Zum Start werden wir mit Rey arbeiten, um den BB-8 alle Schrottteile
+          sammeln zu lassen. Dein Bildschirm ist in drei Teile aufgeteilt. Links siehst
+          du das Star Wars Spiel. Die Befehle für jedes Level werden darunter gegeben.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: Dieses mittlere Feld ist die Toolbox und jeder Block ist ein Befehl
+          an BB-8.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
+        text: Der leere Bereich rechts wird Arbeitsbereich genannt. Dort werden wir
+          unser Programm zusammenbauen.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what
-          happens? BB-8 moves left one block on the grid.
+        text: Wenn ich einen "nach links bewegen"-Block benutze was passiert dann?
+          BB-8 wird sich ein Raster nach links bewegen.
       8:
         image: notes/starwars_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together.
+        text: Und was wenn ich etwas danach machen möchte? Ich kann weitere Blöcke
+          unserem Programm hinzufügen. Ich wähle den "nach oben bewegen"-Block und
+          ziehe diesen unter den bestehenden Block. Dann lasse ich los und beide Blöcke
+          werden sich verbinden.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked
-          from top to bottom on our workspace. If you ever want to delete a block,
-          just remove it from the stack and drag it back into the tool box.
+        text: Wenn ich "Ausführen" drücke, wird BB-8 diese Befehle der Reihe nach
+          ausführen. Wenn du einen Block löschen möchtest, ziehe ihn einfach zurück
+          in die Toolbox.
       10:
         image: notes/starwars_intro_10.JPG
-        text: After you've hit run, you can always hit the reset button to get BB-8
-          back to the start. Now let's get rolling!
+        text: Du kannst jederzeit den Zurücksetzen-Knopf benutzen, um BB-8 zurück
+          auf Start zu bringen. Nun leg los!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: Inside the blocks we've been using are JavaScript commands. JavaScript
-          is the most popular programming language for professional developers today.
-          Blocks are a great way to get started learning to code and in fact, top
-          universities like Harvard and Berkeley start teaching this way. But once
-          we learn the basics, engineers write code by typing because it allows us
-          to go faster.
+        text: 'Hinter den Blöcken, die wir verwendet haben, stehen JavaScript-Befehle.
+          JavaScript ist zur Zeit die beliebteste Programmiersprache der professionellen
+          Entwickler. Blöcke sind ein guter Anfang, um das Programmieren zu lernen,
+          und an berühmten Universitäten wie Harvard und Berkeley wird tatsächlich
+          auch so begonnen. Aber nachdem man die Grundlagen gelernt hat, werden Computerprogramme
+          häufig getippt, da dies schneller geht. '
       2:
         image: notes/starwars_typing_2.JPG
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
+        text: Wir können Hunderte von Befehlen tippen, anstatt sie erst im "Werkzeugkasten"
+          zu suchen und herauszuziehen. Weil du das Tippen gerade erst lernst, wirst
+          du vielleicht zu Beginn langsamer sein. Wir möchten dich trotzdem bitten,
+          es einmal zu versuchen.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show
-          text button on any puzzle to switch from blocks to typing code as text.
+        text: In der oberen rechten Ecke des Arbeitsbereichs kannst du in jeder Aufgabe
+          die "Zeige Quelltext"-Schaltfläche anklicken, um von Blöcken zu Quellcode
+          umzuschalten und zu tippen.
       4:
         image: notes/starwars_typing_4.JPG
         text: In the next lesson, we'll start you out in typing mode. Here you can
@@ -2615,8 +2620,9 @@
           cannot understand the code and won't be able to move.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
+        text: Wenn du in einer Zeile einen Fehler machst, dann hebt der Editor ihn
+          für dich hervor, damit du versuchen kannst, den Quelltext zu ändern und
+          den Fehler zu beheben.
       7:
         image: notes/starwars_typing_7.JPG
         text: If you get stuck, you can always start over with the start over button
@@ -2721,24 +2727,25 @@
           far away.
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game that will
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so we can drag and drop to write
-          the programs. To start off, we're going to work with Rey to program BB-8
-          to walk to collect all of the scrap parts.
+        text: 'In der nächsten Übung werden wir unser eigenes Star-Wars-Spiel erstellen.
+          Dabei wirst du die grundlegenden Konzepte des Programmierens lernen. Normalerweise
+          schreibt man Computerprogramme in Textform, aber wir werden Blöcke verwenden,
+          die wir bewegen und verbinden können, um Programme zu erstellen. Zu Beginn
+          werden wir mit Rey arbeiten, um BB-8 so zu programmieren, dass er alle der
+          Schrott-Teile einsammelt. '
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars
-          game space where code will run. The instructions for each level are written
-          below the game space.
+        text: Dein Bildschirm ist in drei Bereiche geteilt. Links ist das Star-Wars-Spielfeld,
+          in dem das Programm ablaufen wird. Die Hinweise zu jeder Aufgabe stehen
+          unter dem Spielfeld.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: Dieses mittlere Feld ist die Toolbox und jeder Block ist ein Befehl
+          an BB-8.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we're going to build our program.
+        text: Der leere Bereich auf der rechten Seite wird "Arbeitsfläche" genannt.
+          Dort werden wird unser Programm zusammenbauen.
       7:
         image: notes/starwars_blocks_intro_7.JPG
         text: If I drag the moveLeft(); block to our workspace, what happens? BB-8
@@ -2753,8 +2760,8 @@
           our workspace.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back into the toolbox.
+        text: Wenn du einen Block löschen möchtest, dann löse ihn von den übrigen
+          Blöcken und ziehe ihn zurück in den Werkzeugkasten.
       10:
         image: notes/starwars_blocks_intro_10.JPG
         text: After you hit run, you can always hit the reset button to get BB-8 back
@@ -2831,164 +2838,257 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: Mein Name ist Jens Bergensten, aber ich bin besser bekannt als Jeb.
+          Ich bin der Chefentwickler von Minecraft hier bei Mojang in Stockholm. Ich
+          denke, ich war elf oder zwölf als ich mit dem Programmieren anfing, weil
+          ich Spiele entwickeln wollte. Ein Freund meines Vaters sagte mir, dass man
+          programmieren lernen muss, um Spiele entwickeln zu können. So fing es bei
+          mir an. Ich mag es, die Architektur eines Spiels herauszufinden und zu designen.
+          Das ist es, was ich wirklich an Minecraft mag.
       2:
         image: notes/mc_intro_2.JPG
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
+        text: Während der nächsten Stunde wirst Du die Grundlagen der Informatik lernen,
+          indem Du Alex oder Steve programmierst, sich durch einen simulierten Teil
+          einer Minecraft-Welt zu bewegen.
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: Traditionelles Programmieren erfolgt in Text, aber heute nutzen wir
+          Blocky, ein System, welches grafische Bausteine nutzt, die Du zusammenfügen
+          kannst, um ein Programm zu schreiben. Im Hintergrund erzeugst Du damit JavaScript
+          Anweisungen.
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: Die Konzepte, die Du lernen wirst, benutzen Computerprogrammierer jeden
+          Tag und sind die Grundlagen der Informatik. Hier bei Mojang benutzen wir
+          dieselben Konzepte, damit Minecraft funktioniert.
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: Bevor Du beginnst, wählst Du Dir Deine Spielfigur. Ich wähle Alex. Lasst
+          uns Code für ein Programm schreiben, dass ihr hilft, sich auf dem Bildschirm
+          zu bewegen.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: Dein Bildschirm ist in drei Hauptbereiche geteilt. Links ist das Spielfeld,
+          wo Dein Programm laufen wird. Die Anleitung für jedes Level steht unterhalb
+          des Spielfeldes.
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: Der mittlere Bereich ist der Werkzeugkasten, und jeder der Blöcke ist
+          ein Befehl, der Alex Bewegungen steuert.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Der weiße Bereich wird Arbeitsbereich genannt, und hier ist es, wo wir
+          unser Programm erstellen werden.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: Wenn wir den "vorwärts bewegen" Block auf unseren Arbeitsbereich ziehen
+          und dann "Ausführen" klicken, was wird geschehen? Alex bewegt sich ein Feld
+          vor.
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: Und was ist, wenn wir etwas tun wollen, nachdem sie sich ein Feld vorwärts
+          bewegt hat? Wir können einen weiteren Block zu unserem Programm hinzufügen.
+          Ich wähle den "nach rechts drehen"-Befehl und ziehe ihn unter den "vorwärts
+          bewegen"-Block, bis die orangene Linie erscheint. Dann lasse ich ihn los
+          und die beiden Blöcke sind zusammen gefügt. Wenn wir wieder "Ausführen"
+          drücken, wird Alex die Befehle in unserem Arbeitsbereich von oben nach unten
+          nacheinander ausführen.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: Wenn Du mal einen Block löschen möchtest, ziehe ihn einfach vom Stapel
+          zurück in den Werkzeugkasten.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: 'Um Deine Änderungen rückgängig zu machen und zum Anfangszustand des
+          Levels zurück zu kehren, benutze den "Neu starten" Button in der rechten
+          oberen Ecke des Arbeitsbereichs. Noch eine Sache: Siehst Du das kleine Dreieck
+          auf dem "drehen"-Block? Immer, wenn Du dieses Dreieck siehst, bedeutet dies,
+          dass Du eine andere Option wählen kannst. Lasst uns mit dem Programmieren
+          beginnen!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: Ich bin Lydia Winters, Mojangs Marken Direktor und wir machten ein kleines
+          Spiel namens Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: Meine Lieblingsbeschäftigung in Minecraft ist es, zu erkunden. Ich liebe
+          Abenteuer in Höhlen und zu sehen, was ich finden kann. Als jemand, der kein
+          Programmierer ist, bin ich wirklich aufgeregt durch den Minecraft-Unterricht
+          zu gehen und tatsächlich einige Codierungen selbst zu lernen.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: Der letzte Level benötigte eine Menge "vorwärts bewegen"-Blöcke. Es
+          würde einfacher sein, wenn wir dem Computer einfach mitteilen könnten, den
+          "vorwärts bewegen"-Befehl vier oder fünf Mal auszuführen. Zum Glück sind
+          Computer richtig gut, Befehle mit einer "wiederholen"-Schleife zu wiederholen.
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: Beim Erstellen von Minecraft verwenden wir "Wiederhol"-Schleifen, um
+          die ersten Materialien für die Erschaffung einer neuen Welt zu platzieren.
+          Das sind tausende und abertausende von Blöcken. Wir verwenden auch Schleifen
+          für kleine Schritte, zum Beispiel um Alex's Füße vor und zurück zu bewegen,
+          wenn sie geht. Wiederhol-Schleifen sind ein leistungsfähiger Teil der Programmierung.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: Die Nacht bricht an, so dass wir in den nächsten paar Leveln ein Haus
+          bauen werden, um uns in Sicherheit zu bringen. Wir werden einen "wiederholen"-Block
+          benutzen, um dies ganz einfach hinzubekommen.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: |
+          Um eine Wand zu bauen kannst Du Alex mit einem "vorwärts bewegen"-Block() vorwärts bewegen und dort 4x einen Block verwenden um ein Brett zu verbauen.
+          Besser ist es, einen "Wiederholen"-Block verwenden zu, damit sie die Anweisung "Brett verbauen" mehr als einmal ausführt.
+          Also: Klick auf den "Wiederholen"-Block und schreib rein, wie oft sie ein Brett verbauen soll.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: Nun werden wir etwas über denn "wenn"-Befehl lernen. "Wenn"-Befehle
+          sind ein grundlegender Bestandteil des programmieren Lernens. Sie helfen
+          dem Computer, Entscheidungen zu fällen.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Alle Computer nutzen "Wenn"-Befehle, inklusive meines Telefons. Zum
+          Beispiel, wenn ich mein Telefon entsperre, wird ein Programm ausgeführt,
+          welches sagt, wenn ich das Passwort richtig eingegeben habe, entsperre das
+          Telefon. Andernfalls zeigt es eine Fehlermeldung.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: Du kannst "wenn"-Befehle in Deinem Code verwenden, um Alex und Steve
+          auf Dinge reagieren zu lassen, die sie in ihrer Welt sehen. Zum Beispiel,
+          wenn vor ihnen ein Steinblock ist, können sie nach links drehen. Oder sie
+          können nach rechts drehen, wenn sie mit einem Baum zusammenstoßen.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: In diesem Fall möchten wir nicht in die Lava fallen. Es ist einfach,
+          die Lava zu beachten. Wir können sie auf dem Bildschirm sehen. Aber was
+          ist mit der Lava, die sich unter einem Stein befindet?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: Nachdem wir den Steinblock zerstört haben, müssen wir überprüfen, ob
+          sich an dieser Stelle Lava befindet, bevor wir vorwärts gehen. Wenn sich
+          dort Lava befindet, wollen wir vor unserer Spielfigur Pflastersteine platzieren,
+          bevor wir uns vorwärts bewegen. So können wir sicher weiter gehen. Zeit,
+          weiter zu bauen! Und denke daran, den "wenn"-Befehl zu benutzen, um sicher
+          voran zu kommen.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Herzlichen Glückwunsch! Du hast gerade die Grundlagen des Computerprogrammierens
+          gelernt.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Nun kannst Du diese Blöcke nutzen, um Deine eigene Welt zu erstellen.
+          Es gibt keine weiteren Anleitungen und keine Aufgaben zu lösen. Du kannst
+          alles bauen, was Du willst. Du bestimmst.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[Schüler erzählen] Auf geht''s. Shear. Ich habe ein L aus Fackeln gemacht.
+          Ich habe ein A aus Birkenbrettern gemacht. Es hat funktioniert, es hat funktioniert.
+          Wir haben ein Haus aus Wolle gebaut!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Wenn du mit dem Erstellen deiner Kreation fertig bist wähle "Teilen",
+          um den Link mit deinen Freunden zu teilen. Viel Spaß!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Herzlichen Glückwunsch! Du hast gerade die Grundlagen des Computerprogrammierens
+          gelernt.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Nun kannst Du diese Blöcke nutzen, um Deine eigene Welt zu erstellen.
+          Es gibt keine weiteren Anleitungen und keine Aufgaben zu lösen. Du kannst
+          alles bauen, was Du willst. Du bestimmst.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[Schüler erzählen] Auf geht''s. Shear. Ich habe ein L aus Fackeln gemacht.
+          Ich habe ein A aus Birkenbrettern gemacht. Es hat funktioniert, es hat funktioniert.
+          Wir haben ein Haus aus Wolle gebaut!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Jetzt kannst du bauen was du möchtest. Viel Spaß!
+        text: Jetzt kannst du bauen, was immer du auch möchtest. Viel Spaß!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: Der weiße Bereich wird Arbeitsbereich genannt, und hier ist es, wo wir
+          unser Programm erstellen werden.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.

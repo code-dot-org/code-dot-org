@@ -337,6 +337,7 @@ en:
       4-5 While Loops Assessment 1_instruction: crwdns38653:0crwdne38653:0
       AlgPD DR Free Play_instruction: crwdns43212:0crwdne43212:0
       AllTheThings Applab - Turtle move with button_instruction: crwdns50293:0crwdne50293:0
+      allthethings_moviebot_instruction: crwdns54665:0crwdne54665:0
       allthethings_template_backed1_instruction: crwdns51027:0crwdne51027:0
       allthethings_template_backed2_instruction: crwdns51028:0crwdne51028:0
       App Lab test_instruction: crwdns45301:0crwdne45301:0
@@ -1172,6 +1173,25 @@ en:
       U3 - Arrays - lengthMinus1_instruction: crwdns51079:0crwdne51079:0
       U3 - Arrays - remove_instruction: crwdns51080:0crwdne51080:0
       U3 - Arrays - stringsInArrays_instruction: crwdns51081:0crwdne51081:0
+      U3 - Canvas - 200dots_instruction: crwdns54666:0crwdne54666:0
+      U3 - Canvas - appendToArray_instruction: crwdns54667:0crwdne54667:0
+      U3 - Canvas - changeToMouseMove_instruction: crwdns54668:0crwdne54668:0
+      U3 - Canvas - clickToAdd_instruction: crwdns54669:0crwdne54669:0
+      U3 - Canvas - delete_instruction: crwdns54670:0crwdne54670:0
+      U3 - Canvas - draw at click point_instruction: crwdns54671:0crwdne54671:0
+      U3 - Canvas - freePlay_instruction: crwdns54745:0crwdne54745:0
+      U3 - Canvas - introCanvas_instruction: crwdns54672:0crwdne54672:0
+      U3 - Canvas - movementFunction fix Orig_instruction: crwdns54673:0crwdne54673:0
+      U3 - Canvas - movementFunction_instruction: crwdns54674:0crwdne54674:0
+      U3 - Canvas - One Dot sprayPaint_instruction: crwdns54746:0crwdne54746:0
+      U3 - Canvas - redrawOriginal_instruction: crwdns54675:0crwdne54675:0
+      U3 - Canvas - redrawRandom_instruction: crwdns54676:0crwdne54676:0
+      U3 - Canvas - redrawRandom2_instruction: crwdns54677:0crwdne54677:0
+      U3 - Canvas - shiftKey_instruction: crwdns54678:0crwdne54678:0
+      U3 - Canvas - sketch_instruction: crwdns54679:0crwdne54679:0
+      U3 - Canvas - sprayPaint_instruction: crwdns54680:0crwdne54680:0
+      U3 - Canvas - transparentDots_instruction: crwdns54681:0crwdne54681:0
+      U3 - Canvas - usingOffsetXY_instruction: crwdns54682:0crwdne54682:0
       U3 - Conditional Basics - 6_instruction: crwdns51082:0crwdne51082:0
       U3 - Conditionals - Combine AND and OR_instruction: crwdns51083:0crwdne51083:0
       U3 - Conditionals - Combine AND OR and NOT_instruction: crwdns51084:0crwdne51084:0
@@ -1235,6 +1255,7 @@ en:
       U3 - Loops And Arrays - Challenge 2_instruction: crwdns51134:0crwdne51134:0
       U3 - Loops And Arrays - Counting Times_instruction: crwdns51135:0crwdne51135:0
       U3 - Loops And Arrays - Divid by 2_instruction: crwdns54290:0crwdne54290:0
+      U3 - Loops And Arrays - Find Max_instruction: crwdns54683:0crwdne54683:0
       U3 - Loops And Arrays - Find Min_instruction: crwdns51137:0crwdne51137:0
       U3 - Loops And Arrays - Functions that Return Value_instruction: crwdns51138:0crwdne51138:0
       U3 - Loops And Arrays - General Search Param_instruction: crwdns51139:0crwdne51139:0
@@ -1250,10 +1271,23 @@ en:
       U3 - Loops And Arrays - Return Value_instruction: crwdns51148:0crwdne51148:0
       U3 - Loops And Arrays - Search and Remove_instruction: crwdns51149:0crwdne51149:0
       U3 - Loops And Arrays - Search with Boolean Var_instruction: crwdns51150:0crwdne51150:0
+      U3 - Loops And Arrays - useFindMin_instruction: crwdns54684:0crwdne54684:0
       U3 - Movie Bot - Multiple If Sequences_instruction: crwdns51151:0crwdne51151:0
       U3 - Movie Bot - Nested Motivation_instruction: crwdns51152:0crwdne51152:0
       U3 - Movie Bot - toLowerCase_instruction: crwdns51153:0crwdne51153:0
       U3 - Movie Bot - When Multiple If Statements_instruction: crwdns51154:0crwdne51154:0
+      U3 - Practice Create Performance Task_instruction: crwdns54685:0crwdne54685:0
+      U3 - Return Values - constrainTurtle_instruction: crwdns54686:0crwdne54686:0
+      U3 - Return Values - debuggingConstrain_instruction: crwdns54687:0crwdne54687:0
+      U3 - Return Values - debuggingMaxVal_instruction: crwdns54688:0crwdne54688:0
+      U3 - Return Values - debuggingReturns_instruction: crwdns54689:0crwdne54689:0
+      U3 - Return Values - increase1_instruction: crwdns54690:0crwdne54690:0
+      U3 - Return Values - increase2_instruction: crwdns54691:0crwdne54691:0
+      U3 - Return Values - min1_instruction: crwdns54692:0crwdne54692:0
+      U3 - Return Values - useFindMin_instruction: crwdns54693:0crwdne54693:0
+      U3 - Return Values - useMinVal_instruction: crwdns54694:0crwdne54694:0
+      U3 - Return Values - wrapTurtle_instruction: crwdns54695:0crwdne54695:0
+      U3 - Return Values - writeMaxVal_instruction: crwdns54696:0crwdne54696:0
       U3 - Simulation - 1_instruction: crwdns51155:0crwdne51155:0
       U3 - Simulation - 2.1_instruction: crwdns51156:0crwdne51156:0
       U3 - Simulation - 2.5_instruction: crwdns51157:0crwdne51157:0

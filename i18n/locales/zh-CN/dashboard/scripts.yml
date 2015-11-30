@@ -81,7 +81,7 @@ zh:
           "Artist: Sequence2": 'Artist: Sequence2'
           "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": 'Artist: Nested Loops'
-          description_audience: Ages 6-18
+          description_audience: 年龄 6-18岁
           description_short: Start with Course 2 for students who can read.
         course3:
           The Maze: 迷宫
@@ -132,7 +132,7 @@ zh:
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
           Songwriting: 写歌
-          description_audience: Ages 8-18
+          description_audience: 年龄 8-18 岁
           description_short: Course 3 is a follow-up to Course 2.
         playlab:
           title: 播放实验室
@@ -159,7 +159,7 @@ zh:
           description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
           "Artist: Variables": 'Artist: Variables'
           "Bee: For Loops": 'Bee: For Loops'
-          title: 课程 4
+          title: 第4课
           "Algorithms: Tangrams": 'Algorithms: Tangrams'
           Variables: 变量
           "Play Lab: Variables": 'Play Lab: Variables'
@@ -181,7 +181,7 @@ zh:
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
-          description_audience: Ages 10-18
+          description_audience: 年龄 10-18 岁
           Super Challenge - Variables: 'Super Challenge - Variables'
           Super Challenge - For Loops: 'Super Challenge - For Loops'
           Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
@@ -227,7 +227,7 @@ zh:
           description_short: Learn Functional Programming through Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
-          "Eval: Strings and Images": Strings and Images
+          "Eval: Strings and Images": 字符串和图像
           "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
           "Eval: Writing Contracts": Writing Contracts
           "Calc: Defining Variables": Defining Variables and Substitution
@@ -323,7 +323,7 @@ zh:
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: Accelerated Intro to CS Course
-          description_audience: Ages 10-18
+          description_audience: 年龄 10-18 岁
           description: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
           description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
           Introduction to Computer Science: 计算机科学导论
@@ -492,7 +492,7 @@ zh:
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字符串和图像
           Contracts: 合同
           Your Game - Defining Variables: 'Your Game - Defining Variables'
           Simple Function Definition: Simple Function Definition
@@ -515,7 +515,7 @@ zh:
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字符串和图像
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: 'Your Game - Animation'
@@ -672,6 +672,14 @@ zh:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: While循环
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -682,7 +690,7 @@ zh:
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
+          Strings and Images: 字符串和图像
           The Design Recipe: 设计食谱
           Next Steps: 下一步
         sciPD complex adaptive 2:
@@ -874,7 +882,7 @@ zh:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字符串和图像
           Defining Variables: Defining Variables
           Big Game - Variables: 'Big Game - Variables'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
@@ -925,7 +933,7 @@ zh:
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字符串和图像
           Writing Contracts: Writing Contracts
           Defining Variables: Defining Variables
           Defining Functions: Defining Functions
@@ -1018,11 +1026,11 @@ zh:
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         hoc2015:
-          title: Hour of Code 2015
+          title: 编程一小时2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: 编程一小时
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: 编程一小时2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1031,7 +1039,7 @@ zh:
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字符串和图像
           Writing Contracts: Writing Contracts
           Defining Variables: Defining Variables
           Defining Functions: Defining Functions
@@ -1382,12 +1390,12 @@ zh:
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: 年龄 10-18 岁
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: 年龄 10-18 岁
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
         iceage:
@@ -1408,6 +1416,8 @@ zh:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
           description_short: Programming
@@ -1422,6 +1432,13 @@ zh:
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: While循环
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1444,22 +1461,22 @@ zh:
           title: '星球大战: 建立一个充满代码的星系'
           description_short: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
           description: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: 编程一小时2015
         starwarsblocks:
           title: '星球大战: 建立一个充满代码的星系'
           description_short: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
           description: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: 编程一小时2015
         minecraft:
-          title: Minecraft
+          title: 我的世界
           description_short: Use code to survive in a Minecraft world!
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
-          Hour of Code 2015: Hour of Code 2015
+          title: 我的世界编程一小时
+          description_short: 用代码来探索Minecraft世界。
+          description: 使用代码块来让史蒂夫和亚历克丝在Minecraft的世界中探险
+          Hour of Code 2015: 编程一小时2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
@@ -1467,3 +1484,10 @@ zh:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Welcome!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: 总结

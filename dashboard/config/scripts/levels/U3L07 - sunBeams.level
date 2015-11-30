@@ -128,7 +128,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Add 100 sunbeams to the image by writing drawAllSunbeams with a loop. (Click to see full instructions)",
-    "markdown_instructions": "# Add Sunbeams\r\n<img src=\"https://images.code.org/9e08dae8486f66422d492b8d8a6777eb-image-1443048962131.55.54 PM.png\" style=\"width: 200px; float: right\">\r\nFinally, we'll add some visual flourish by writing `drawAllSunbeams`. Note: you'll have to use the `turnTo` command to make the turtle face the same direction prior to drawing each sun beam.  \r\n\r\n# Do This\r\n\r\n* **Read** the `drawSunbeam` function to know how it works and what **parameters** it accepts.\r\n\r\n* **Add a loop** to `drawAllSunbeams` to draw about 100 sunbeams. Inside your loop:\r\n * add code to move the turtle to a random x-location at top of the image (y is 0).\r\n * `turnTo` between **165 and 175** \r\n\r\n",
+    "markdown_instructions": "# Add Sunbeams\r\n<img src=\"https://images.code.org/9e08dae8486f66422d492b8d8a6777eb-image-1443048962131.55.54 PM.png\" style=\"width: 200px; float: right\">\r\nFinally, we'll add some visual flourish by writing `drawAllSunbeams`. Note: you'll have to use the `turnTo` command to make the turtle face the same direction prior to drawing each sun beam.  \r\n\r\n# Do This:\r\n\r\n* **Read** the `drawSunbeam` function to know how it works and what **parameters** it accepts.\r\n\r\n* **Add a loop** to `drawAllSunbeams` to draw about 100 sunbeams. Inside your loop:\r\n * Add code to move the turtle to a random x-location at top of the image (y is 0).\r\n * `turnTo` between **165 and 175**.\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

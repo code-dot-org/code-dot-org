@@ -28,14 +28,14 @@ de-DE:
   hoc2014_everyone: jeder
   hoc2014_support: 'Unterstütze es &#x25BE;'
   hoc2014_whatishoc: Was ist die Hour of Code?
-  csedweek_map_header: '#CSEdWeek / Hour of Code Events auf der ganzen Welt'
-  csedweek_map_signup: Melde Dich zu deinem Event an
+  csedweek_map_header: '#CSEdWeek / Hour of Code Veranstaltungen auf der ganzen Welt'
+  csedweek_map_signup: Melde deine Veranstaltung an
   csedweek_map_search_placeholder: Suche nach Hour of Code Veranstaltungen
   csedweek_map_search_search: Suche
   csedweek_map_search_reset: Zurücksetzen
   csedweek_map_legend_title: Legende
-  csedweek_map_legend_event: Hour of Code-Veranstaltungen
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_event: Hour of Code-Veranstaltung
+  csedweek_map_legend_cs_tech_jam: Informatik Tech Jam
   cded_sign_up: Registrieren
   cded_try_it: Versuche es
   twentyhours_trynow: Probiere es jetzt aus
@@ -55,7 +55,7 @@ de-DE:
   thank_you_: Vielen Dank!
   congratulations: Herzlichen Glückwunsch!
   congratulations_on_completing_hoc: Herzlichen Glückwunsch zum Abschluss einer Hour of Code
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code, <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and help students learn an Hour of Code!'
+  congratulations_volunteer: 'Glückwunsch: Da du Hour of Code probiert hast, <a href="https://code.org/volunteer">melde dich nun an um ein Klasse zu unterstützen</a> und hilf Schülern beim Lernen einer Hour of Code!'
   course_name_accelerated: Beschleunigter Kurs
   course_name_course1: Kurs 1
   course_name_course2: Kurs 2
@@ -113,8 +113,7 @@ de-DE:
   learn_classes: Finde Kurse in deiner Nähe.
   hoc_is_here: 'Die #HourOfCode ist hier - Finde mehr heraus! @codeorg'
   just_did_hoc: 'Ich habe gerade die #HourOfCode gemacht - Finde mehr heraus! @codeorg'
-  twitter_teach_cs: Warum wird Informatik nicht an mehr Schulen unterrichtet? Wir können das ändern. http://youtu.be/nKIu9yen5nc. Besuche http://code.org/ um mehr zu erfahren.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes"> erfahren Sie mehr</a> über die Preise für jeden Tutor.'
+  twitter_teach_cs: Warum wird Informatik nicht an mehr Schulen unterrichtet? Wir können das ändern. http://youtu.be/2DxWIxec6yo. Besuche http://code.org/ um mehr zu erfahren.
   learn_hoc: Lerne die Hour of Code
   beyond_hoc: Nach der ersten Stunde
   what_gender: Welches Geschlecht bist du?
@@ -196,21 +195,21 @@ de-DE:
   homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_hoc: Hour of Code für jeden Schüler.
   homepage_action_text_num_served: '# bedient'
   homepage_action_text_join_us: Mach mit
   homepage_action_text_sign_up: Registrieren
   homepage_action_text_try_it: Versuche es
-  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_volunteers: Freiwillige Techniker gesucht
   homepage_action_text_codevideo: Sieh dir das Video an
   homepage_action_text_teachervideo: Sieh dir das Video an
-  homepage_action_text_girlvideo: Eine Mädchen inspirieren
+  homepage_action_text_girlvideo: Inspiriere ein Mädchen
   homepage_action_text_learn: Fang an zu lernen
   homepage_action_text_signpetition: Unterzeichne die Petition
   homepage_signpetition_dropdown: 'Ich stimme zu &#x25BE;'
   homepage_diversity_pledge: Unterstützen
-  homepage_banner_text_prizes: 'Die Hour of Code ist wieder vom 7. bis 13. Dezember. '
-  homepage_banner_link_prizes: 'Komm zum größten Lernevent der Geschichte. '
+  homepage_banner_text_prizes: 'Hour of Code findet wieder statt, vom 7. bis 13. Dezember. '
+  homepage_banner_link_prizes: 'Komm zum größten Lernereignis der Geschichte. '
   homepage_banner_text_main: Code.org und das Schulgremium haben eine Allianz geschlossen, um die Vielfalt in der Informatik zu verbessern.
   homepage_banner_text_link: Erfahre mehr
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -277,43 +276,44 @@ de-DE:
   class_submission_level_college: Hochschule
   class_submission_level_vocational: Berufliche
   class_submission_languages_other: Andere Sprache(n)
-  inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
-  starwars_subtitle: Building a Galaxy With Code
+  inspirational_videos_more: 'Weitere <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirierende Videos</a>, sortiert nach Rollen und Berühmtheiten'
+  starwars_subtitle: Erbaue ein Galaxie mit Code
   starwars_javascript_title: JavaScript
-  starwars_javascript_description: 'Verwenden Sie Drag & Drop Blöcke und Javascript.'
+  starwars_javascript_description: 'Verwende Drag & Drop Blöcke und Javascript.'
   starwars_javascript_specs: Nur Englisch | Moderne Browser | Alter 11 +
   starwars_javascript_start_button: Probiere es jetzt aus
   starwars_blocks_title: Bausteine
   starwars_blocks_description: 'Verwende Drag & Drop Blöcke.'
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Viele Sprachen (in Kürze) | Moderne Browser, Smartphones, Tablets | Alter 6-10
   starwars_blocks_start_button: Probiere es jetzt aus
-  starwars_watch_videos: Bevor Sie loslegen, sehen Sie eines dieser inspirierende Videos an
-  starwars_speak_languages: Sprechen eine andere Sprache?
-  starwars_help_translate: Helfen Sie beim übersetzen
+  starwars_watch_videos: Bevor du loslegst, sieh dir eines dieser inspirierende Videos an
+  starwars_speak_languages: Du sprichst eine andere Sprache?
+  starwars_help_translate: Hilf mit, bei der Übersetzung
   starwars_platform_text: Moderne Browser, Smartphones, Tablets
   mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_gradelevel: Ages 6+
+  mc_longdescription: Benutze Codeblöcke, um Steve oder Alex auf ein Abenteuer durch diese Minecraft-Welt zu schicken.
+  mc_shortdescription: Benutze Codeblöcke, um Steve oder Alex auf ein Abenteuer durch diese Minecraft-Welt zu schicken.
+  mc_gradelevel: Ab 6 Jahren
   mc_platformtext: Moderne Browser, Smartphones, Tablets
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Viele Sprachen (in Kürze) | Moderne Browser und Tablets | Alter 6 +
   minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
-  volunteer_engineer_submission_subtitle_generic: '100.000 Lehrer machen eine Hour of Code mit ihren Klassen, dieses Jahr vom 7. bis 13. Dezember 2015. Sie brauchen deine Hilfe! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
-  volunteer_engineer_submission_intro_background: Die Hour of Code ist eine globale Bewegung, für eine Stunde in die Informatik eingeführt zu werden. Millionen von Anfängern in über 180 Ländern machen mit. Bitte, mach mit bei der Computer Science Education Week vom 7. bis 13. Dezember.
+  volunteer_engineer_submission_title: Inspiriere Schüler und unterstütze Hour of Code.
+  volunteer_engineer_submission_subtitle_generic: '100.000 Lehrer führen dieses Jahr eine Hour of Code mit ihren Klassen durch, 7. bis 13. Dezember 2015. Sie brauchen deine Hilfe! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} Lehrer suchen begeisterte Unterstützer für die Informatikausbildung, für die Durchführung der Hour of Code diesen Dezember.<br>%{num_volunteers} haben sich bereits gemeldet. Schließe dich ihnen an.'
+  volunteer_engineer_submission_intro_background: Hour of Code ist eine globale Bewegung, um sich mit Informatik zu beschäftigen. Millionen von Schülern in über 180 Ländern machen mit. Bitte beteilige dich während der Informatikwoche vom 7. bis 13. Dezember.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
-  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
+    Diese Lehrer würden gerne jemanden haben der <span style="font-family: 'Gotham 7r', sans-serif;">begeistert von der Lehre Informatik ist</span> und so im Klassenzimmer aushelfen kann. Oder jemand der Schüler <span style="font-family: 'Gotham 7r', sans-serif;">inspirieren</span> kann, indem er über die Möglichkeiten der Informatik redet (auch via Videochat möglich). Wenn du nicht beabsichtigst zu helfen, <a href="%{url}">lerne mehr</a> darüber dein eigenes Hore of Code Ereignis zu planen.
+  volunteer_engineer_submission_intro_signup: 'Bitte gib die folgenden Information ein, falls du ein Informatikstudent oder professioneller Entwickler bist. Felder mit <span class="form-required-field">*</span> sind pflicht.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_header_shared: Mit Lehrern geteilte Informationen auf der Unterstützerkarte
   volunteer_engineer_submission_field_name: Name
   volunteer_engineer_submission_field_name_placeholder: Vollständiger Name
-  volunteer_engineer_submission_field_company: Organisation
-  volunteer_engineer_submission_field_company_placeholder: Organisation
+  volunteer_engineer_submission_field_company: Firma (oder Universität)
+  volunteer_engineer_submission_field_company_placeholder: Firma (oder Universität)
   volunteer_engineer_submission_field_experience_level: Erfahrungsstufe
-  volunteer_engineer_submission_field_location: Örtlichkeit
-  volunteer_engineer_submission_field_location_desc: Wenn Du Deine exakte Adresse eingibst, werden wir sie nicht teilen, nur einen Marker auf der Karte anzeigen.
-  volunteer_engineer_submission_field_location_placeholder: Postleitzahl, Stadt und Bundesland oder Straße und Hausnummer
+  volunteer_engineer_submission_field_location: Standort
+  volunteer_engineer_submission_field_location_desc: Dein Standort wird genutzt um Lehrern die Suche nach lokalen Unterstützern zu ermöglichen. Du wirst als Nadel auf der Karte markiert. Du kannst auch deine Arbeits-/Schuladresse hinterlegen oder einfach nur deinen Ort.
+  volunteer_engineer_submission_field_location_placeholder: Postleitzahl, Stadt und Bundesland oder vollständige Adresse
   volunteer_engineer_submission_field_location_flexibility: Ich kann während der Hour of Code helfen durch... (wähle zutreffende)
   volunteer_engineer_submission_checkbox_after_hoc: Ich bin daran interessiert, auch nach der Hour of Code zu helfen
   volunteer_engineer_submission_field_time_commitment: Zeiteinsatz nach der Hour of Code
@@ -322,16 +322,16 @@ de-DE:
   volunteer_engineer_submission_field_facebook: Facebook-Profil
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/Dein_Name
   volunteer_engineer_submission_field_description: Beschreibung
-  volunteer_engineer_submission_field_description_desc: Beschreibe deine Informatikkenntnisse und wie Du als Freiwilliger die Lehrer unterstützen möchtest.
-  volunteer_engineer_submission_field_description_placeholder: Berschreibung von Erfahrungen und/oder Beteiligung
-  volunteer_engineer_submission_header_private: Information kept private and never shared
+  volunteer_engineer_submission_field_description_desc: Beschreibe deine Informatikkenntnisse und wie du als Freiwilliger die Lehrer unterstützen möchtest.
+  volunteer_engineer_submission_field_description_placeholder: Beschreibung von Erfahrungen und/oder Teilnahmen. Bitte gib deine Sprachen an, die du beherrscht.
+  volunteer_engineer_submission_header_private: Informationen bleiben privat und werden niemals weitergeben
   volunteer_engineer_submission_field_email: E-Mail-Adresse
-  volunteer_engineer_submission_field_email_desc: Ihre e-Mail-Adresse wird niemals weitergegeben, aber wir schicken Ihnen Anfragen von Lehrern.
+  volunteer_engineer_submission_field_email_desc: Deine E-Mail-Adresse wird niemals weitergegeben, aber wir schicken dir Anfragen von Lehrern.
   volunteer_engineer_submission_field_email_placeholder: E-Mail-Adresse
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
+  volunteer_engineer_submission_final_paragraph: Du wirst auf einer Karte gelistet, um lokalen Lehrern die Kontaktaufnahme zu ermöglichen. Deine E-Mail-Adresse und exakte Adresse wird NIEMALS von uns weitergegeben. Alle anderen Informationen (inkl. der ungefähren Position) werden öffentlich für die Lehrer einsehbar sein.
+  volunteer_engineer_submission_checkbox_contact: 'Ich stimme zu, dass Lehrer mich kontaktieren dürfen (Bemerkung: deine E-Mail-Adresse wird nicht weitergegeben)'
   volunteer_engineer_submission_submit: Absenden
-  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn more here.</a>'
+  volunteer_engineer_submission_thankyou: 'Vielen Dank für die Unterstützung der Hour of Code. Zur Vorbereitung und Rekrutierung weiterer Freiwilliger, <a href="%{url}">schaue hier</a>.'
   volunteer_engineer_submission_commitment_uncertain: Unsicher
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 Stunde pro Woche
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 Stunden pro Woche
@@ -341,13 +341,13 @@ de-DE:
   volunteer_engineer_submission_commitment_monthly: Ein paar Stunden pro Monat
   volunteer_engineer_submission_commitment_weekly: Ein paar Stunden pro Woche
   volunteer_engineer_submission_commitment_more: Mehr
-  volunteer_engineer_submission_location_flexibility_onsite: Bei einer Schule vor Ort
-  volunteer_engineer_submission_location_flexibility_remote: Betreuung aus der Ferne (Lehrer oder Schüler)
+  volunteer_engineer_submission_location_flexibility_onsite: bei einer Schule vor Ort (1-2 Stunden im Klassenzimmer)
+  volunteer_engineer_submission_location_flexibility_remote: Teilnahme an einer Fragestunde mit Schülern via Videokonferenz
   volunteer_engineer_submission_location_flexibility_curriculum: Bereit bei Open-Source-Projekten mitzuhelfen
   volunteer_engineer_submission_experience_unspecified: Keine Angabe
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_experience_university_student_or_researcher: Universitätsstudent (oder -forscher)
-  volunteer_engineer_submission_experience_software_professional: Softwareentwickler
+  volunteer_engineer_submission_experience_tech_company: Nicht-technischer Angestellter bei einem technologischen Unternehmen
+  volunteer_engineer_submission_experience_university_student_or_researcher: Student der Informatik
+  volunteer_engineer_submission_experience_software_professional: Softwareentwickler oder technischer Spezialist
   volunteer_engineer_submission_distance_8: 5 Meilen
   volunteer_engineer_submission_distance_16: 10 Meilen
   volunteer_engineer_submission_distance_24: 15 Meilen
@@ -356,9 +356,9 @@ de-DE:
   volunteer_engineer_submission_num_volunteers_10: 10 Freiwillige
   volunteer_engineer_submission_num_volunteers_25: 25 Freiwillige
   volunteer_engineer_submission_num_volunteers_50: 50 Freiwillige
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: "I'm looking for a mentor to help prepare me for coding with my students"
+  volunteer_engineer_submission_type_task_onsite: Ich wünsche mir deinen Besuch, für technische Hilfe und Inspiration
+  volunteer_engineer_submission_type_task_remote: Ich möchte, dass Sie zu meiner Klasse skypen und ein paar inspirierende Worte zu meinen Schülern sagen
+  volunteer_engineer_submission_type_task_mentor: Ich suche einen Lehrer, der mich auf das Programmieren mit meinen Schülern vorbereitet
   petition_age: Alter
   dashboard_landing_title: Lehrer-Homepage
   dashboard_landing_welcome: Herzlich Willkommen auf dem neuen und verbesserten Lehrer-Dashboard.
@@ -479,7 +479,7 @@ de-DE:
   dashboard_students_print_page: Diese Seite drucken
   dashboard_students_url: URL
   dashboard_privacy_document_link: 'Klicken sie <a href="/privacy/student-privacy", target="_blank">hier</a> für Informationen zum Schutz der persönlichen Daten, um es auszudrucken oder mit Ihren Schülern zu teilen.'
-  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_k5_title: Grundschullehrmaterial
   dashboard_curriculum_middle_title: Mittel-/Oberschul-Lehrmaterial
   dashboard_curriculum_high_title: Gymnasial-Lehrmaterial
   dashboard_lesson_plans: Stundenpläne
@@ -539,25 +539,31 @@ de-DE:
   dashboard_faq_k5: Häufig gestellte Fragen zur Grundschule
   dashboard_announcements: Ankündigungen
   dashboard_announce_view_all: Alle anzeigen
-  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
+  dashboard_announce_hoc: '<b>9. November 2015</b> - Eine neue Hour of Code Anleitung ist erschienen, präsentiert durch den bevorstehenden Film: Star Wars: Das Erwachen der Macht. Arbeite zusammen mit Rey um den neuen Droiden, BB-8, durch seine Mission zu leiten. Dann triff Leia, um dein eigenes Spiel in einer weit, weit entfernten Galaxie zu erstellen und zu teilen.'
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
   code_sign_up: Melde dich an, um an der Woche der Informatik teilzunehmen
   learn_more: Erfahre mehr
   learn_sign_up_description: Melde dich an, um an der Hour of Code während der Informatikwoche teilzunehmen
   learn_sign_up_button: Registrieren
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Schaue dieses inspirierende Video mit deiner ganzen Klasse
+  learn_videos_show: Zeige deiner Klasse dieses inspirierende Video
+  learn_videos_before_hoc: Schau dir ein inspirierendes Video vor deiner Hour of Code an
   learn_educator_resources_description: Erfahre wie du eine Hour of Code lehrst
   learn_educator_resources_button: Lehrmaterial
-  learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
+  learn_are_you_educator: 'Sind Sie ein Lehrer ? Lernen Sie <a href="http://hourofcode.com/resources/how-to"> wie man Hour of Code</a> lehrt.'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Erfahre mehr</a> über die Preise für jeden Tutor.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Probiere unsere neuen Anleitung für die Hour of Code aus
   hoc2014_try_new_tutorial: Probiere unsere neue Testversion der Programmierstunde aus
   hoc2014_try_scrat: Angry Birds, PvZ und Scrat
   hoc2014_try_frozen: Künstler mit Anna und Elsa, aus Die Eiskönigin
   carousel_heading_codeorg: Tutorials von Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg_any_device: Tutorials von Code.org (für alle Geräte)
+  carousel_heading_3rd_party: Tutorials von Dritten
+  carousel_heading_third_party: Tutorials von Dritten
   carousel_heading_international: Anleitungen in deiner Sprache
   carousel_heading_domestic: Anleitungen auf englisch
   carousel_heading_beginners: Anleitungen für Anfänger
@@ -571,7 +577,7 @@ de-DE:
   carousel_heading_robots: Lerne, mit Robotern zu programmieren
   carousel_heading_ide: Bei Lehrern beliebte Plattformen
   educator_notes: Notizen für Tutoren
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  teach_led_lesson_plans: Hour of Code Lehranleitungen
   how_to_teach_hoc: 'Anleitung zum Unterrichten einer "Hour of Code"'
   more_resources_educators: Weitere Quellen für Lehrer und Tutoren
   beyond_submission: Du willst eine weiterführende Anleitung für Beyond an Hour einreichen? Schau dir die Kriterien und das Vorlageformular an.
@@ -584,7 +590,7 @@ de-DE:
   older_systems_subheading: 'Dies sollte auch mit älteren Web-Browsern funktionieren. Um alle Anleitungen verwenden zu können, verwende einen <a href="http://browsehappy.com/" target="_blank">modernen Web-Browser</a>'
   mobile_devices: Anleitungen für mobile Geräte
   frozen_name: Programmiere mit Anna und Elsa
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_name: 'Star Wars: Erbaue eine Galaxie mithilfe von Code'
   codeorg_name: Schreibe dein erstes Computerprogramm
   codeintl_name: Schreibe dein erstes Computerprogramm
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -615,7 +621,7 @@ de-DE:
   robomindnl_name: Programmiere einen virtuellen Roboter
   flappy_name: Erstelle ein Flappy-Spiel
   bitsbox_name: 'Bitsbox - baue ein Spiel'
-  makeschool_name: Build an iPhone game in your browser!
+  makeschool_name: Erstelle ein iPhone Spiel in deinem Browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hour of Code
   blockly_name: Blockly
@@ -624,6 +630,8 @@ de-DE:
   projguts_name: Schere, Stein, Papier
   hourofcode_name: Platzhalter für neue code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Infinity Spiele Lab
+  artist_name: Künstler
   codeorg_gradelevel: Im Alter von 4-104
   codeintl_gradelevel: Im Alter von 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -663,8 +671,10 @@ de-DE:
   projguts_gradelevel: Alter 10-13
   hourofcode_gradelevel: Im Alter von 4-104
   frozen_gradelevel: Alter 8 +
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: Ab 6 Jahren
   playlab_gradelevel: Im Alter von 4-104
+  infinity_gradelevel: Im Alter von 4-104
+  artist_gradelevel: Im Alter von 4-104
   codeorg_platformtext: Moderne Browser, Smartphones, Tablets
   codeintl_platformtext: Moderne Browser, Smartphones, Tablets
   thinkersmithspanish_platformtext: Offline
@@ -679,7 +689,7 @@ de-DE:
   lightbot_platformtext: ALLE Browser und iOS, Android oder Spielkonsolen
   thinkersmith_platformtext: Offline
   condcards_platformtext: Offline
-  lightbotintl_platformtext: iOS, Android (odr Internet-Browser)
+  lightbotintl_platformtext: iOS, Android (oder Internet-Browser)
   codehs_platformtext: Moderne Browser. (Weiterführender Kurs kostet Geld)
   codecademy_platformtext: 'Moderne Web-Browser, iOS- und Android-Apps'
   codecombat_platformtext: Moderne Web-Browser. (Weiterführender Kurs kostet Geld)
@@ -736,17 +746,19 @@ de-DE:
   robomindnl_shortdescription: Schreibe ein Programm für einen virtuellen Roboter
   flappy_shortdescription: 'Entwickle dein eigenes Spiel - Flappy Bird, Shark oder Submarine'
   bitsbox_shortdescription: Programmiere eine Serie von Apps zum spielen und teilen, indem du richtiges JavaScript benutzt.
-  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach your monster new moves!
+  makeschool_shortdescription: Entwickele ein iPhone-Spiel. Lerne in dem du Code erschaffst um deinen Monstern neue Bewegungen beizubringen!
   touchdevelop_shortdescription: Löse Rätsel, entwickle Spiele und lerne zu programmieren und das alles auf deinem Smartphone.
   appinventor_shortdescription: Erstelle deine eigene App! (nur Android)
   blockly_shortdescription: Lade eine ZIP-Datei herunter, um ohne Internet-Verbindung lernen zu können
   thinkersmith2_shortdescription: Lerne, wie Computer mit den Zahlen 1 und 0 Informationen darstellen
   kodableunplugged_shortdescription: Eine spaßige Übung ohne Computer
   projguts_shortdescription: Probiere modellieren und simulieren mit Schere/Stein/Papier
-  hourofcode_shortdescription: Platzhalter für neue code.org/hoc
+  hourofcode_shortdescription: Lerne mit Mark Zuckerberg und Angry Birds zu programmieren!
   frozen_shortdescription: Verwende Code, um Anna und Elsa bei ihrer Entdeckung der Magie und Schönheit von Eis zu begleiten.
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+  starwars_shortdescription: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
   playlab_shortdescription: Erstelle eine Geschichte oder ein Spiel mit Play Lab!
+  infinity_shortdescription: Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Charakteren zu erstellen.
+  artist_shortdescription: Zeichne coole Bilder und Designs mit dem Künstler!
   codeorg_longdescription: |
     Lerne die Grundlagen des Programmierens ganz einfach durch "Drag & Drop". Ganz spielerisch kannst Du dich selbst durch unseren Unterricht mit Videos von Bill Gates, Mark Zuckerberg, Angry Birds oder Plants vs. Zombies navigieren.
     Lerne, Schleifen zu programmieren, Bedingungen einzusetzen und einfache Algorithmen zu entwickeln. Das Programm ist in 34 Sprachen verfügbar.
@@ -780,17 +792,17 @@ de-DE:
   tynkerapp_longdescription: 'Lerne zu Programmieren, indem du spielerisch Programmierungs-Rätsel löst. Mühelos entwirfst du Spiele und Geschichten unter Verwendung von thematischen Grafiken, 10+ Spiele- Bausätzen und vielseitig verwendbaren Figuren. Eine Internetverbindung ist nicht notwendig. Du kannst auf deine Kreationen auch über das Internet zugreifen.'
   robomindnl_longdescription: 'Schüler lernen die Grundlagen der Programmierung durch die Kontrolle ihrer eigenen virtuellen Roboter. Der online-Kurs ist komplett eigenständig mit Kurzpräsentationen, Filmen, Quiz und automatische Anleitung/Tipps bei der Programmierung Übungen helfen. '
   flappy_longdescription: Verwende Drag-and-Drop Programmierung um ein eigenes Flappy Bird Spiel zu erstellen und dieses zu verändern (z.B. Flappy Shark, Flappy Santa). Lade das Spiel mit einem Klick auf dein Handy.
-  bitsbox_longdescription: 'Passe dein eigenes virtuelles Tablet an, programmiere dann eine Reihe von Apps zum Spielen und Teilen. Einfache Anleitungen machen es möglich, dass sogar junge Kinder  echtes Javascript programmieren, und je fortgeschrittener du sind, desto weiter wirst du es schaffen.'
-  makeschool_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
+  bitsbox_longdescription: Passe dein eigenes virtuelles Tablet an, programmiere dann eine Reihe von Apps zum Spielen und Teilen. Einfache Anleitungen machen es möglich, dass sogar junge Kinder echtes Javascript programmieren können. Je fortgeschrittener du bist, desto weiter wirst du es schaffen.
+  makeschool_longdescription: 'Lerne zu programmieren indem du ein iPhone-Spiel entwickelst, welches eine neue und anfängerfreundliche Programmiersprache benutzt, genannt Swift! Kreiere ein Pok&eacute;mon inspiriertes Actionspiel und schreibe Code um deinem Monster neue Bewegungen beizubringen. Du wirst lernen wie man Variablen, Methoden und Objekte benutzt um deinem Monster beim Gewinnen zu helfen!'
   touchdevelop_longdescription: 'Der touch-freundliche Editor wird dir beim Erstellen von Pixel Art, beim Lösen des Bären Rätsels oder beim Entwickeln deines eigenen FlappyBird Spiels behilflich sein. '
   appinventor_longdescription: Unterhaltsame und schnelle Video-Anleitungen führen dich durch die Entwicklung von drei einfachen Apps für dein Android-Handy oder Tablet. Ob Anfänger oder Experte, diese Hour of Code bereitet dich darauf vor deine eigenen Anwendungen zu erstellen. Stelle dir vor deine eigenen Apps mit deinen Freunden teilen zu können! Diese Kurse eignen sich für Einzelpersonen, aber auch für Lehrer mit ihren Klassen.
-  blockly_longdescription: 'Haben Sie PCs mit langsamen (oder nicht Existent)-Internet-Zugang? Downloade die Blockly Tutorials, die der Vorläufer der Code.org Tutorials wurden - eine einzelne 3MB ZIP-Datei kann auf jedem Computer geladen oder von einem Memorystick verwendet werden'
+  blockly_longdescription: Hast du PCs mit langsamen (oder ohne) Internet-Zugang? Lade dir die Blockly-Anleitungen runter, dies sind die Vorläufer der Code.org Anleitungen. Eine einzelne 3MB ZIP-Datei, diese kann auf jedem Computer geladen oder von einem Speicherstick verwendet werden
   thinkersmith2_longdescription: 'Schüler lernen etwas über darstellen und Speichern von Buchstaben in Binär, als Funktionen der ein- und ausschalten. Am Ende wird die Klasse ihre eigenen Initalien zum mitnhmen codieren.'
   kodableunplugged_longdescription: 'Zur Verwendung mit Normalpapier, die FuzzFamily Frenzy ist eine Einführung in die Programmierlogik für Kinder im Alter von 5 und höher. Ein Lehrer sollte das Spiel erklären, dann programmieren die Schüler einen Partner um einen einfachen Parcours zu vervollständigen. '
   projguts_longdescription: 'Diese "unplugged" Aktivität hilft Schülern lernen, wie die Modellierung und Simulation arbeitet, indem eine gruppe von Schülern verschiedene Versionen von Schere/Stein/Papier spielt und die Ergebnise als verschiedene Modellierungs Experimente darstellt.'
   hourofcode_longdescription: Platzhalter für neue code.org/hoc
   frozen_longdescription: 'Wir wollen mit unseren Programmen gemeinsam mit Anna und Elsa den Zauber und die Schönheit des Eises erkunden. Beim Eislaufen wirst Du Schneeflocken und Muster erschaffen - ein Winter- Wunderland, das du mit deinen Freunden teilen kannst!'
-  starwars_longdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+  starwars_longdescription: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
   playlab_longdescription: Erfinde eine Geschichte oder ein Spiel mit dem Spielelabor! Erstelle Tiere, Piraten, Zombies, Ninjas und viele andere Charakter. Erstelle Sounds, erziele Punkte und werfe sogar Feuerbälle!
   codeorg_beyond_name: Einführung in Informatik und Programmieren für Kinder zwischen 5 und 14 Jahre
   khan_beyond_name: Lerne Computer-Programmierung und Programmiersprachen
@@ -805,7 +817,7 @@ de-DE:
   groklearning_beyond_name: 'Lerne die Programmiersprache "Python"'
   hacketyhack_beyond_name: 'Lerne die Programmiersprache "Ruby"'
   robomind_beyond_name: Programmiere einen virtuellen Roboter
-  makeschool_beyond_name: Build an iPhone game in your browser!
+  makeschool_beyond_name: Erstelle ein iPhone Spiel in deinem Browser!
   appinventor_beyond_name: AppInventor Hour of Code
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Lerne mit Karel dem Hund zu Programmieren
@@ -870,14 +882,14 @@ de-DE:
   khan_beyond_platformtext: Moderne Web-Browser
   tynker_beyond_platformtext: Moderne Web-Browser (kostenpflichtig)
   scratch_beyond_platformtext: Jeder Browser
-  lightbot_beyond_platformtext: iOS, Android (odr Internet-Browser)
+  lightbot_beyond_platformtext: iOS, Android (oder Internet-Browser)
   codecademy_beyond_platformtext: 'Moderne Web-Browser, iOS- und Android-Apps'
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Mobile App
   groklearning_beyond_platformtext: Moderne Web-Browser
-  hacketyhack_beyond_platformtext: Installation der Desktop-Software
+  hacketyhack_beyond_platformtext: Desktop-Installation
   robomind_beyond_platformtext: Moderne Web-Browser, Mobile Website
   makeschool_beyond_platformtext: Moderne Web-Browser
   appinventor_beyond_platformtext: Moderne Web-Browser und Android-Apps
@@ -891,7 +903,7 @@ de-DE:
   teachingtree_beyond_platformtext: Web-basiert
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: Installation der Desktop-Software
+  kidsruby_beyond_platformtext: Desktop-Installation
   w3schools_beyond_platformtext: Moderne Web-Browser
   codeavengers_beyond_platformtext: Moderne Web-Browser
   mozilla_beyond_platformtext: Moderne Web-Browser
@@ -901,22 +913,22 @@ de-DE:
   finch_beyond_platformtext: Roboterkauf
   arduino_beyond_platformtext: Web-Browser, dann Erwerb eines Kits
   processing_beyond_platformtext: Moderne Web-Browser
-  alice_beyond_platformtext: Windows-PCs oder Mac (Software-Installation erforderlich)
+  alice_beyond_platformtext: Windows oder Mac (Installation erforderlich)
   sphero_beyond_platformtext: Roboterkauf
   codeorg_beyond_shortdescription: Lerne mit Mark Zuckerberg und Angry Birds zu programmieren!
   khan_beyond_shortdescription: Lerne Zeichnen in JavaScript
-  tynker_beyond_shortdescription: Ein Kurs für Kinder in den Klassen 4 bis 8, der Spass macht und alle einbindet
+  tynker_beyond_shortdescription: Ein spaßiger und motivierender Kurs für Kinder der Klassen 4-8
   scratch_beyond_shortdescription: Erstelle interaktive Spiele, Geschichten und Animationen.
   lightbot_beyond_shortdescription: Ein Spiel zum Erlernen von Programmier-Konzepten
   codecademy_beyond_shortdescription: Erlerne JavaScript-Programmierung, in einem Web-Browser
   kodable_beyond_shortdescription: Ein lustiges iPad-Spiel vermittelt Methoden der Programmierung
-  scratchjr_beyond_shortdescription: 'Erstelle interactive Programme und Spiele durch die Nutzung von "ScratchJr"'
+  scratchjr_beyond_shortdescription: 'Erstelle interaktive Geschichten und Spiele mit "ScratchJr". '
   hopscotch_beyond_shortdescription: Lerne visuelles Programmieren auf dem iPad
   pocketcode_beyond_shortdescription: Entwickle ein Spiel auf deinem Smartphone und teile es mit deinen Freunden!
   groklearning_beyond_shortdescription: 'Einführung in die Programmiersprache "Python"'
   hacketyhack_beyond_shortdescription: 'Lerne "Ruby" von Anfang an'
   robomind_beyond_shortdescription: Schreibe ein Programm für einen virtuellen Roboter
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
+  makeschool_beyond_shortdescription: Lerne ein iPhone-Spiel in einer Stunde zu entwickeln
   appinventor_beyond_shortdescription: Erstelle deine eigene App! (nur Android)
   touchdevelop_beyond_shortdescription: Entwickle mobile Apps direkt auf deinem Smartphone, Tablet oder Laptop
   codehs_beyond_shortdescription: Lerne JavaScript-Programmierung, in einer spaßigen, visuellen Umgebung
@@ -925,12 +937,12 @@ de-DE:
   edx_beyond_shortdescription: Der beliebteste Kurs an der Harvard Universität
   coursera_beyond_shortdescription: Beginne mit CS101
   udacity_beyond_shortdescription: Beginne mit CS101
-  teachingtree_beyond_shortdescription: 'Das gesamte Wissen Online verfügbar: Schnell und ohne Grenzen'
-  kodu_beyond_shortdescription: Entwickele eine 3-dimensionale Spielewelt
-  cargobot_beyond_shortdescription: Porgrammiere einen Roboterarm auf Deinem iPad
-  kidsruby_beyond_shortdescription: 'Lerne Programmieren mit der Programmiersprache "Ruby"'
-  w3schools_beyond_shortdescription: Lerne es, Webseiten zu entwickeln
-  codeavengers_beyond_shortdescription: Lerne es, Spiele und Webseiten zu entwickeln
+  teachingtree_beyond_shortdescription: 'Online-Wissen: Schnell und zwanglos'
+  kodu_beyond_shortdescription: Entwickele eine 3D Spielewelt
+  cargobot_beyond_shortdescription: Programmiere einen Roboterarm auf deinem iPad
+  kidsruby_beyond_shortdescription: 'Lerne Programmieren mit "Ruby"'
+  w3schools_beyond_shortdescription: Lerne Webseiten zu entwickeln
+  codeavengers_beyond_shortdescription: Lerne Spiele und Webseiten zu entwickeln
   mozilla_beyond_shortdescription: Erstelle und teile Webseiten
   codecombat_beyond_shortdescription: Spiele und lerne dabei JavaScript um zu gewinnen
   codea_beyond_shortdescription: Entwickele Apps auf Deinem iPad
@@ -953,7 +965,7 @@ de-DE:
   groklearning_beyond_longdescription: Ein Einführungskurs, in die Programmiersprache Python für Menschen mit keinerlei Programmiererfahrung. Unsere einzigartige Mischung aus einleitende Inhalte und Herausforderungen bringt Sie einem gründlichem Verständnis der Python und Programmierung selbst entgegen. Wir haben diese Inhalte für Schüler unterschiedlichen Alters ausgelegt, aus den verschiedensten Hintergründen und wir sind sicher, dass es Ihnen auch passen wird.
   hacketyhack_beyond_longdescription: 'Hackety Hack lernen Sie die absoluten Grundlagen der Programmierung von Grund auf. Keine Vorkenntnisse in der Programmierung ist erforderlich! Mit Hackety Hack lernen Sie die Programmiersprache Ruby. Ruby wird für alle Arten von Programmen, einschließlich desktop-Anwendungen und Websites verwendet. [Hinweis: Desktopinstallation erforderlich]'
   robomind_beyond_longdescription: 'Schüler lernen die Grundlagen der Programmierung durch die Kontrolle ihrer eigenen virtuellen Roboter. Der online-Kurs ist komplett eigenständig mit Kurzpräsentationen, Filmen, Quiz und automatische Anleitung/Tipps bei der Programmierung Übungen helfen. '
-  makeschool_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
+  makeschool_beyond_longdescription: 'Kennst du dich ein bisschen mit "ObjectiveC" aus? Wenn ja, kannst du bei uns lernen, ein iPhone-Spiel in einer Stunde zu entwickeln. Wir führen dich durch den Ablauf der Entwicklung, der Tests und dem Probespielen, ganz einfach im Browser. Anschließend kannst du das Spiel mit deinen Freunden auf Facebook teilen! Du brauchst keine iPhone-Programmierkenntnisse, solltest aber wissen, was Variablen, Methoden und Objekte sind.'
   appinventor_beyond_longdescription: Unterhaltsame und schnelle Video-Anleitungen führen dich durch die Entwicklung von drei einfachen Apps für dein Android-Handy oder Tablet. Ob Anfänger oder Experte, diese Hour of Code bereitet dich darauf vor deine eigenen Anwendungen zu erstellen. Stelle dir vor deine eigenen Apps mit deinen Freunden teilen zu können! Diese Kurse eignen sich für Einzelpersonen, aber auch für Lehrer mit ihren Klassen.
   touchdevelop_beyond_longdescription: TouchDevelop ermöglicht die Erstellung von Apps auf iPad, iPhone, Android, PC, Mac, Windows Phone. Mit unserem Touch-freundlich-Editor macht coding-Spaß, auch auf Ihrem Handy oder Tablet!
   codehs_beyond_longdescription: 'Lernen Sie die Grundlagen der Programmierung mit Karel dem Hund, ein Spaß, zugänglich und visuelle Einführung in die Kodierung, wo wie Befehle an einen Computer geben, es ist wie einm Hund Befehle zu erteile. Dieses Tutorial ist toll, wenn von einem Lehrer geführt, aber auch unabhängig voneinander. [Anmerkung: Bezahlung ist notwending]'
@@ -980,3 +992,11 @@ de-DE:
   compatibility_https_header: Bitte schalte HTTPS für Code.org ein.
   compatibility_https_message: "Um die Sicherheit zu erhöhen, wechseln wir am %{https_date} auf HTTPS. Danach kannst Du nicht mehr per HTTP auf Code.org zugreifen. <a href='%{it_requirements_url}'> Klicke hier</a> um zu sehen, wie man HTTPS für Code.org aktiviert."
   compatibility_https_hide_this_warning: Diese Warnung ausblenden
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: flattern
+  infinity_shortcode: inf
+  playlab_shortcode: spielen
+  artist_shortcode: art

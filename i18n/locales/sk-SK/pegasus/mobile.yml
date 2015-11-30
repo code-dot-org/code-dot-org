@@ -114,7 +114,6 @@ sk-SK:
   hoc_is_here: '#HourOfCode je tu - pozri na to! @codeorg'
   just_did_hoc: 'Prave som spravil #HourOfCode - Pozri sa na to! @codeorg'
   twitter_teach_cs: Prečo sa viac škôl nevenuje výučbe informatiky? Môžeme to napraviť. http://youtu.be/nKIu9yen5nc. Navštívte http://code.org/ a zistíte viac.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: Nauč sa Hour of Code
   beyond_hoc: Viac ako Jedna Hodina
   what_gender: Akého ste pohlavia?
@@ -313,8 +312,9 @@ sk-SK:
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: Meno
   volunteer_engineer_submission_field_name_placeholder: Celé meno
@@ -549,7 +549,7 @@ sk-SK:
   dashboard_faq_k5: Často kladené otázky – prvý stupeň
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: 'Hodina kódu je tu - 8.-14. december!'
   code_sign_up: 'Prihláste sa k účasti počas "CS Education Week"'
   learn_more: Ďalšie informácie
@@ -561,11 +561,17 @@ sk-SK:
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator, while supplies last'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Vyskúšajte naše nové návody pre Hodinu Kódu
   hoc2014_try_new_tutorial: Skúste náš nový kurz Hodina Kódu, v betaverzii
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
   hoc2014_try_frozen: Postavy s Annou a Elsou z Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Kurzy vo vašom jazyku
@@ -634,6 +640,8 @@ sk-SK:
   projguts_name: Kameň, papier, nožnice
   hourofcode_name: Obsadené miesto pre nový code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Neobmedzená Play Lab
+  artist_name: Artist
   codeorg_gradelevel: Vek 4-104
   codeintl_gradelevel: Vek 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -675,6 +683,8 @@ sk-SK:
   frozen_gradelevel: Vek 8+
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Vek 4-104
+  infinity_gradelevel: Vek 4-104
+  artist_gradelevel: Vek 4-104
   codeorg_platformtext: Moderné prehliadače, smartfóny, tablety
   codeintl_platformtext: Moderné prehliadače, smartfóny, tablety
   thinkersmithspanish_platformtext: Unplugged
@@ -753,10 +763,12 @@ sk-SK:
   thinkersmith2_shortdescription: Nauč sa, ako počítače reprezentujú informácie pomocou jednotiek a núl
   kodableunplugged_shortdescription: Zábavné cvičenie bez počítača (unplugged)
   projguts_shortdescription: Vyskúšaj modelovanie a simuláciu pomocou kameň/papier/nožnice
-  hourofcode_shortdescription: Obsadené miesto pre nový code.org/hoc
+  hourofcode_shortdescription: Nauč sa programovať s Markom Zuckerbergom a Angry Birds!
   frozen_shortdescription: S pomocou kódu sa pridajme k Anne a Elze, ktoré skúmajú kúzlo a krásu ľadu.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: 'Nauč sa základné pojmy informatiky pomocou vizuálneho "drag & drop" programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ sám. Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč sa príkazy opakovania, rozhodovania a základné algoritmy. Dostupné v 34 jazykoch.'
   codeintl_longdescription: 'Nauč sa základné pojmy informatiky pomocou vizuálneho "drag & drop" programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ sám. Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč sa príkazy opakovania, rozhodovania a základné algoritmy. Dostupné v 34 jazykoch.'
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -986,3 +998,11 @@ sk-SK:
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
   compatibility_https_hide_this_warning: Skryť toto upozornenie
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: mávni
+  infinity_shortcode: inf
+  playlab_shortcode: hrať
+  artist_shortcode: art

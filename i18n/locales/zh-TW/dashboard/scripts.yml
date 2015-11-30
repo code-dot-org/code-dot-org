@@ -161,7 +161,7 @@ zh:
           "Bee: For Loops": 蜜蜂： For 迴圈
           title: 課程 4
           "Algorithms: Tangrams": '演算法: 七巧板'
-          Variables: 變數類別
+          Variables: 變數類
           "Play Lab: Variables": '播放實驗室: 變數'
           "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
           "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
@@ -207,9 +207,9 @@ zh:
           title: 可用性測試
           description_short: ""
           description: A selection of Course 4 levels for usability testing.
-          Variables: 變數類別
+          Variables: 變數類
           For Loops: For 迴圈
-          Binary: Binary
+          Binary: 二進位
         potus:
           title: 特別
           description_short: 特別
@@ -220,7 +220,7 @@ zh:
           description_short: 特別
           description: 特別
           Special: 特別
-          Binary: Binary
+          Binary: 二進位
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -250,7 +250,7 @@ zh:
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Play Lab: 播放實驗室
-          Infinity: 無窮
+          Infinity: 無限大
         algebrademo:
           title: Algebra Demo
           description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
@@ -285,10 +285,10 @@ zh:
           "Programming Concept: Functions": 'Programming Concept: Functions'
           "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
-          title: Internet Simulator
+          title: 網路模擬器
           description_short: Learn about how the Internet works
           description: Learn about how the Internet works
-          Internet Simulator: Internet Simulator
+          Internet Simulator: 網路模擬器
           Unit 1: 單元 1
           Unit 2: 單元 2
           Sending Bits: Sending Bits
@@ -333,7 +333,7 @@ zh:
           The Artist: 藝術家
           Algorithms: 演算法
           The Artist 2: '藝術家 2 '
-          Functions: 函數類別
+          Functions: 函式類別
           The Farmer: 農夫
           Conditionals: 流程類別
           The Artist 3: '藝術家 3 '
@@ -370,10 +370,10 @@ zh:
           description_short: Write your own Flappy game in less than 10 minutes!
           Flappy Code: Flappy遊戲設計
         jigsaw:
-          title: Jigsaw
+          title: 拼圖
           description: Try our Jigsaw tutorial
           description_short: Try our Jigsaw tutorial
-          Jigsaw: Jigsaw
+          Jigsaw: 拼圖
         step:
           title: 步驟
           description: Step tutorial
@@ -592,7 +592,7 @@ zh:
           description_short: Programming
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
-          Functions: 函數類別
+          Functions: 函式類別
           Using Simple Commands: Using Simple Commands
           Creating Procedures - Part 1: 'Creating Procedures - Part 1'
           Layers of Abstraction and Programming Efficiency: Layers of Abstraction and Programming Efficiency
@@ -640,14 +640,14 @@ zh:
           Chained and Nested Conditionals: Chained and Nested Conditionals
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
           Digital Assistant Challenge: Digital Assistant Challenge
-          Creating Functions: Creating Functions
+          Creating Functions: 建立函數
           Functions and Top-Down Design: Functions and Top-Down Design
           Design a Digital Scene: Design a Digital Scene
           Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
           Introducing Design Mode: Introducing Design Mode
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
-          Variables: 變數類別
+          Variables: 變數類
           Looping and Random Numbers - Under the Sea: 'Looping and Random Numbers - Under the Sea'
           Multi-screen App: Multi-screen App
           Variables Conceptorial Fodder: Variables Conceptorial Fodder
@@ -672,6 +672,14 @@ zh:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: '"當..."迴圈'
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -890,7 +898,7 @@ zh:
           Big Game - Collision Detection: 'Big Game - Collision Detection'
           Free Play: Free Play
         allthethings:
-          Jigsaw: Jigsaw
+          Jigsaw: 拼圖
           Maze: 迷宮
           Artist: 畫家
           Bee: 蜜蜂
@@ -940,7 +948,7 @@ zh:
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
+          Internet Simulator: 網路模擬器
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
@@ -952,7 +960,7 @@ zh:
           Welcome!: Welcome!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
+          Internet Simulator: 網路模擬器
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
@@ -1408,6 +1416,8 @@ zh:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
           description_short: Programming
@@ -1422,6 +1432,13 @@ zh:
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: '"當..."迴圈'
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1457,7 +1474,7 @@ zh:
           Craft: Craft
         mc:
           title: 當個創世神的一個小時程式課程
-          description_short: Explore a Minecraft world through code
+          description_short: 透過程式碼探索創世神的世界
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
           Hour of Code 2015: Hour of Code 2015
         CSPPD3-Unit3-pt2:
@@ -1467,3 +1484,10 @@ zh:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Welcome!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: 總結

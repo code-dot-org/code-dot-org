@@ -217,11 +217,11 @@
           Maze and Bee: Λαβύρινθος και Μέλισσα
           Artist Binary: Δυαδικοί Καλλιτέχνη
           description_audience: Ηλικίες 10+ (μετά το Μάθημα 3)
-          Super Challenge - Variables: Super Challenge - Variables
-          Super Challenge - For Loops: Super Challenge - For Loops
-          Super Challenge - Functions and Parameters: Super Challenge - Functions
-            and Parameters
-          Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
+          Super Challenge - Variables: Σούπερ πρόκληση - μεταβλητές
+          Super Challenge - For Loops: Σούπερ πρόκληση - για βρόχους
+          Super Challenge - Functions and Parameters: Σούπερ πρόκληση - λειτουργίες
+            και παραμέτρους
+          Extreme Challenge - Comprehensive: Ακραία πρόκληση - ολοκληρωμένη
         Course4pre:
           title: Προαπαιτούμενα Μαθήματος 4
           description_short: Μία σύντομη περίληψη εννοιών για τους μαθητές που δεν
@@ -293,10 +293,10 @@
             Σύγκρουσης (Μεγάλο Παιχνίδι)'
         infinity:
           title: Disney Εργαστήριο Άπειρου Παιχνιδιού
-          description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο
-            Παιχνιδιού!
-          description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο
-            Παιχνιδιού!
+          description_short: Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία
+            ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
+          description: Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία ή ένα
+            παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
           Play Lab: Εργαστήριο Παιχνιδιού
           Infinity: Άπειρο
         algebrademo:
@@ -759,6 +759,14 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: Επαναλήψεις με "Όσο.."
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1580,6 +1588,8 @@
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
           description_short: Programming
@@ -1598,6 +1608,13 @@
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Επαναλήψεις με "Όσο.."
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1648,3 +1665,10 @@
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Καλώς ήρθατε!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: συνοψίζω

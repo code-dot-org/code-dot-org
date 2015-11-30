@@ -1251,7 +1251,7 @@ pt-BR:
         text: 'Os alunos vão se dividir em grupos para escrever instruções e então vão trocá-las pelas de outro grupo, que terá que desenhar o monstro. Os grupos vão escrever instruções usando as quatro etapas do pensamento computacional: decomposição, identificação de padrões, abstração e algoritmos.'
       3:
         image: notes/unplug2_3.png
-        text: Primeiro, os grupos vão dividir a tarefa, o que significa fazer um plano de jogo. Então, eles vão procurar por padrões entre todos os monstros do catálogo. Quando eles se depararem com as diferenças entre os monstros, eles vão abstrair ou remover esses detalhes. Por exemplo, um monstro do catálogo tem olhos de vegitas e outro tem olhos de spritem. Mas ambos têm olhos, então podemos escrever uma linha que diz que o monstro tem olhos em branco.
+        text: Primeiro, os grupos vão dividir a tarefa, o que significa fazer um plano de jogo. Então, eles vão procurar por padrões entre todos os monstros do catálogo. Quando eles se depararem com as diferenças entre os monstros, eles vão abstrair ou remover esses detalhes. Por exemplo, um monstro do catálogo tem olhos Ranzinza e outro tem olhos Duende. Mas ambos têm olhos, então podemos escrever uma linha que diz que o monstro tem olhos em branco.
       4:
         image: notes/unplug2_4.png
         text: Então, os alunos poderão escrever um conjunto de instruções, chamado de algoritmo, que lista as partes dos monstros que estão em branco para dizer de que estilo elas devem ser. Esse é o conjunto de instruções que eles vão passar aos outros alunos para recriar seu próprio monstro.
@@ -1332,7 +1332,7 @@ pt-BR:
         text: Discuta com a sala toda ou em grupos pequenos sobre suas lições favoritas. Quando você olhar para tudo o que aprendeu, é o momento no qual pode brilhar a criatividade de seus alunos. Divida-os em grupos e peçam para que eles criem sua própria lição offline. Atribua um conceito chave para cada grupo, como funções ou algoritmos, e dê materiais para que eles usem. Peça para que cada grupo apresente sua nova atividade ou até mesmo reserve outro dia para realizar as atividades criadas pelos alunos.
       3:
         image: notes/unplug11_3.png
-        text: De todos da Code.org, esperamos que você tenha tido uma TONELADA de diversão durante esse curso. E se seu sonho é criar o melhor novo aplicativo, usar a programação para ajudar na cura de doenças, ou se você quer ser apenas um grande solucionador de problemas, esse curso foi o primeiro passo para alcançar esses sonhos.
+        text: De todos aqui da Code.org, esperamos que você tenha tido uma TONELADA de diversão durante esse curso. E se seu sonho é criar o melhor novo aplicativo, usar a programação para ajudar na cura de doenças, ou se você quer ser apenas um grande solucionador de problemas, esse curso foi o primeiro passo para alcançar esses sonhos.
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
@@ -1502,44 +1502,44 @@ pt-BR:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: Meu nome é Jens Bergensten, mas sou mais conhecido como Jeb. Eu sou o desenvolvedor líder de Minecraft, aqui na Mojang, em Estocolmo. Eu acho que eu tinha onze ou doze anos talvez, e comecei a programar porquê eu queria fazer jogos. Um dos amigos do meu pai me disse que para fazer jogos, você precisa aprender a programar. É assim que eu comecei. Eu gosto de desenhar e descobrir a arquitetura de jogos. Isso é o que eu realmente gosto sobre Minecraft.
+        text: Meu nome é Jens Bergensten, mas sou mais conhecido como Jeb. Eu sou o desenvolvedor líder de Minecraft aqui na Mojang, em Estocolmo. Eu acho que tinha onze ou doze anos, talvez, e comecei a programar porque queria fazer jogos. Um dos amigos do meu pai me disse que para fazer jogos é preciso aprender a programar. É assim que eu comecei. Eu gosto de desenhar e descobrir a arquitetura de jogos. Isso é o que eu realmente gosto sobre Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: Durante a próxima hora, você vai aprender o básico de ciência da computação por programar Alex ou Steve para percorrer um pedaço simulado de um mundo de Minecraft.
+        text: Durante a próxima hora, você vai aprender os princípios básicos da ciência da computação, programando Alex ou Steve para que percorram um espaço simulado do mundo de Minecraft.
       3:
         image: notes/mc_intro_3.JPG
-        text: Programação tradicional é normalmente em texto, mas hoje nós vamos usar o Blockly, um sistema que utiliza blocos visuais que você pode arrastar e soltar para montar os programas. Sob o capô, você está criando código Javascript.
+        text: A programação tradicional é normalmente feita em forma de texto, mas hoje vamos usar Blockly, um sistema que utiliza blocos visuais que você pode arrastar e soltar para montar os programas. Por trás desses blocos, você está criando códigos Javascript.
       4:
         image: notes/mc_intro_4.JPG
-        text: Os conceitos que você estará aprendendo são aqueles que programadores de computador usam diariamente, e que são os fundamentos da ciência da computação. Aqui na Mojang, usamos estes mesmos conceitos para fazer funcionar o Minecraft.
+        text: Os conceitos que você vai aprender são aqueles que os programadores de computador usam diariamente, e que são a base da ciência da computação. Aqui na Mojang usamos esses mesmos conceitos para fazer o Minecraft funcionar.
       5:
         image: notes/mc_intro_5.JPG
-        text: Antes de começar, você vai escolher seu personagem. Eu vou escolher a Alex. Vamos compilar o código para um programa que vai ajudá-la a se mover pela tela.
+        text: Antes de começar, você vai escolher seu personagem. Eu vou escolher a Alex. Vamos criar o código para um programa que vai ajudá-la a se mover pela tela.
       6:
         image: notes/mc_intro_6.JPG
-        text: Sua tela é dividida em três partes principais. À esquerda está a área de jogo de Minecraft onde seu programa será executado. As instruções para cada nível são escritas abaixo.
+        text: Sua tela é dividida em três partes principais. À esquerda está a área de jogo de Minecraft onde seu programa será executado. As instruções para cada nível são apresentadas abaixo.
       7:
         image: notes/mc_intro_7.JPG
-        text: Esta área do meio é a caixa de ferramentas e cada um destes blocos é um comando que direciona as ações da Alex.
+        text: A área do meio é a caixa de ferramentas, e cada um desses blocos é um comando que direciona as ações da Alex.
       8:
         image: notes/mc_intro_8.JPG
-        text: O espaço em branco à direita é chamado o espaço de trabalho e é onde iremos construir nosso programa.
+        text: O espaço em branco à direita é chamado de área de trabalho, e é onde vamos construir nosso programa.
       9:
         image: notes/mc_intro_9.JPG
         text: Se arrastarmos o bloco moveForward(); para a nossa área de trabalho e clicarmos em executar, o que acontece? Alex se move para a frente um espaço no mapa.
       10:
         image: notes/mc_intro_10.JPG
-        text: E se quisermos fazer algo depois dela avançar um espaço? Podemos adicionar outro bloco ao nosso programa. Eu vou escolher o bloco turnRight(); e vou arrastá-lo para baixo do meu bloco moveForward(); até que essa linha laranja apareça. Então eu vou soltá-lo e os dois blocos vão se encaixar. Quando pressionarmos o botão executar novamente, Alex vai realizar os comandos empilhados de cima para baixo em nossa área de trabalho.
+        text: E se quisermos fazer algo depois de ela avançar um espaço? Podemos adicionar outro bloco ao nosso programa. Eu vou escolher o bloco turnRight(); e vou arrastá-lo para baixo do meu bloco moveForward(); até que essa linha laranja apareça. Em seguida vou soltá-lo e os dois blocos vão se encaixar. Quando pressionarmos o botão executar novamente, Alex vai realizar os comandos empilhados de cima para baixo em nossa área de trabalho.
       11:
         image: notes/mc_intro_11.JPG
         text: Se você quiser apagar um bloco, simplesmente arraste-o da pilha de volta para a caixa de ferramentas.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'Para desfazer as alterações e voltar para o estado inicial do nível, use o botão Começar do início no canto superior direito da área de trabalho. Mais uma coisa: você vê o pequeno triângulo nos blocos de virar? Toda vez que você ver esses triângulos, significa que você pode escolher uma opção diferente. Vamos começar a programar!'
+        text: 'Para desfazer as alterações e voltar para o estado inicial do nível, use o botão Começar do início no canto superior direito da área de trabalho. Mais uma coisa: você vê o pequeno triângulo nos blocos de virar? Toda vez que você vir esses triângulos, significa que você pode escolher uma opção diferente. Vamos começar a programar!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: Meu nome é Lydia Winters, diretora de marca da Mojang e fizemos um pequeno jogo chamado Minecraft.
+        text: Meu nome é Lydia Winters, diretora de marca da Mojang, e fizemos um pequeno jogo chamado Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
         text: O que eu mais gosto de fazer no Minecraft é explorar. Eu amo me aventurar nas cavernas e ver o que posso encontrar. Para alguém que não é um programador, estou realmente empolgada para ver a lição sobre Minecraft e de fato aprender um pouco sobre programação.
@@ -1548,52 +1548,105 @@ pt-BR:
         text: O último nível precisa de vários blocos moveFoward();. Seria mais fácil se pudéssemos simplesmente dizer ao computador para realizar o comando moveForward(); quatro vezes. Para nossa sorte, os computadores são muito bons em repetir comandos com os laços de repetição.
       4:
         image: notes/mc_repeat_4.JPG
-        text: Quando criamos o Minecraft, usamos laços de repetição para colocar todo o material inicial para criar um novo mundo. São milhares e milhares de blocos. Também usamos laços para coisas menores, por exemplo para fazer os pés de Alex se moverem para frente e para trás conforme ela anda. Laços de repetição são uma parte poderosa da programação.
+        text: Quando criamos o Minecraft, usamos laços de repetição para colocar todo o material inicial e criar um novo mundo. São milhares e milhares de blocos. Também usamos laços para coisas menores, por exemplo para fazer os pés de Alex se moverem para frente e para trás conforme ela anda. Laços de repetição são uma parte poderosa da programação.
       5:
         image: notes/mc_repeat_5.JPG
         text: A noite está chegando, então nos próximos níveis vamos construir uma casa segura para ficarmos. Vamos usar o bloco repita para fazer isso facilmente.
       6:
         image: notes/mc_repeat_6.JPG
-        text: Para construir uma parede da nossa casa, podemos falar para Alex para avançar com moveForward(); e colocar tábuas quatro vezes, ou podemos falar para ela avançar com moveForward(); e colocar uma tábua, então pegar esse comando e usar o bloco repita para que ela realize a ação várias vezes. Agora, vamos clicar no bloco repita e dizer a ela quantas vezes queremos que ela realize essa ação. Agora, vamos construir nossa casa antes de escurecer! Divirta-se.
+        text: Para construir uma parede da nossa casa, podemos falar para Alex avançar com moveForward(); e colocar tábuas quatro vezes, ou podemos falar para ela avançar com moveForward(); e colocar uma tábua, então pegar esse comando e usar o bloco repita para que ela realize a ação várias vezes. Agora, vamos clicar no bloco repita e dizer a ela quantas vezes queremos que ela realize essa ação. Agora, vamos construir nossa casa antes de escurecer! Divirta-se.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
         text: 'Agora, vamos aprender sobre as instruções "se". Instruções "se" são uma parte fundamental do aprendizado sobre programação. Elas ajudam o computador a tomar decisões.'
       2:
         image: notes/mc_if_statements_2.JPG
-        text: 'Todos os computadores usam instruções "se", incluindo meu telefone. Por exemplo, quando eu desbloqueio meu telefone, ele executa um código que diz que, se eu digitei a senha correta, então desbloqueie o telefone. Caso contrário, ele mostra uma mensagem de erro.'
+        text: 'Todos os computadores usam instruções "se", inclusive meu telefone. Por exemplo, quando eu desbloqueio meu telefone, ele executa um código que diz que, se eu digitei a senha correta, então desbloqueie o telefone. Caso contrário, ele mostra uma mensagem de erro.'
       3:
         image: notes/mc_if_statements_3.JPG
         text: 'Você pode usar instruções "se" em seu código para fazer Steve e Alice reagirem ao que eles veem no mundo. Por exemplo, se há uma pedra na frente deles, eles podem virar à esquerda. Ou virar à direita se eles se depararem com uma árvore.'
       4:
         image: notes/mc_if_statements_4.JPG
-        text: Nesse caso, não queremos cair na lava. É fácil planejar como evitar a lava. Podemos vê-la na tela. Mas e quanto a lava que não podemos ver por estar sob a pedra?
+        text: Nesse caso, não queremos cair na lava. É fácil planejar como evitar a lava. Podemos vê-la na tela. Mas e quanto à lava que não podemos ver por estar sob a pedra?
       5:
         image: notes/mc_if_statements_5.JPG
         text: 'Depois de minerar a pedra, precisamos verificar se há lava nesse lugar antes de avançar. Se houver lava, queremos colocar uma pedra na frente de nosso personagem antes de poder avançar. Assim podemos nos mover com segurança. Hora de minerar! E lembre-se de usar a instrução "se" para ter cuidado onde pisa.'
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Parabéns! Você aprendeu o básico da ciência de computação por blocos de comando.
+        text: Parabéns! Você aprendeu os fundamentos básicos da ciência da computação.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Agora, você pode usar esses blocos para construir sua própria criação. Não há mais instruções e desafios para resolver. Você pode construir o que quiser. Você escolhe.
+        text: Agora, você pode usar esses blocos para criar algo seu. Não há mais instruções e desafios para resolver. Você pode construir o que quiser. Você escolhe.
       3:
         image: notes/mc_congrats_share_3.JPG
         text: '[alunos falando] Isso está prestes a se tornar realidade. Tosquiar. Eu fiz um L com tochas. Fiz um A com tábuas. Funcionou, funcionou. Construímos uma casa de lã!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: Quando você tiver terminado sua criação, escolha compartilhar para obter um link para compartilhar com seus amigos. Divirta-se!
+        text: Quando terminar sua criação, escolha compartilhar para obter um link e compartilhar com seus amigos. Divirta-se!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Parabéns! Você aprendeu o básico da ciência de computação por blocos de comando.
+        text: Parabéns! Você aprendeu os fundamentos básicos da ciência da computação.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Agora, você pode usar esses blocos para construir sua própria criação. Não há mais instruções e desafios para resolver. Você pode construir o que quiser. Você escolhe.
+        text: Agora, você pode usar esses blocos para criar algo seu. Não há mais instruções e desafios para resolver. Você pode construir o que quiser. Você escolhe.
       3:
         image: notes/mc_congrats_no_share_3.JPG
         text: '[alunos falando] Isso está prestes a se tornar realidade. Tosquiar. Eu fiz um L com tochas. Fiz um A com tábuas. Funcionou, funcionou. Construímos uma casa de lã!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Agora você pode construir o que quiser. Divirta-se!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: O espaço em branco à direita é chamado de área de trabalho, e é onde vamos construir nosso programa.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

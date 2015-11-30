@@ -47,7 +47,7 @@ kk:
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
   already_started: 'Already started? Resume here >> '
   demos: 'Admin: All Demos'
-  continue: Continue
+  continue: Жалғастыру
   prize: prize
   more_info: More info
   auth:
@@ -169,8 +169,8 @@ kk:
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
       title: Please Confirm
-      "no": 'No'
-      "yes": 'Yes'
+      "no": Жоқ
+      "yes": Иә
       msg: 'Are you sure you want to claim the %{prize_name} prize?'
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
@@ -221,6 +221,7 @@ kk:
         playlab: Make an App
         artist: Draw Something
         calculate: Calculate Something
+        applab: Make an App
     user:
       classroom: Оқытушының жеке парақшасы
       district_dashboard: District Dashboard
@@ -388,7 +389,7 @@ kk:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: We especially want to recognize the engineers from Google, Microsoft, Facebook, Twitter, and many others who helped create these materials.
     help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
-    art_from_html: 'Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
@@ -529,10 +530,10 @@ kk:
     open_response_body: Thanks for your response!
   dialog:
     ok: OK
-    startover_title: Are you sure you want to start over?
+    startover_title: Сіз басынан бастауға сенімдісіз бе?
     startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
-    startover_ok: Start Over
-    startover_cancel: Cancel
+    startover_ok: Басынан бастау
+    startover_cancel: Болдырмау
   time:
     hour: 1 hour
     day: day
@@ -550,7 +551,7 @@ kk:
           title: Edit Code
           description: ""
         events:
-          title: Events
+          title: Шаралар
           description: ""
         builder:
           title: Builder
@@ -562,7 +563,7 @@ kk:
           title: Jigsaw
           description: ""
         step:
-          title: Step
+          title: Қадам
           description: ""
         sample_level_builder:
           title: Sample Level Builder
@@ -594,7 +595,7 @@ kk:
     delete: Өшіру
     exit: Return to Course
     my_projects: My Projects
-    share: Share
+    share: Бөлісу
     share_title: Share your project
     share_copy_link: 'Copy the link:'
     close: Close
@@ -605,11 +606,11 @@ kk:
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
     need_help: Need help getting started?
     really_delete: Өшіру?
-    delete_yes: 'Yes'
-    delete_no: 'No'
+    delete_yes: Иә
+    delete_no: Жоқ
     saved: Saved
     not_saved: Not saved
-    cancel: Cancel
+    cancel: Болдырмау
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects

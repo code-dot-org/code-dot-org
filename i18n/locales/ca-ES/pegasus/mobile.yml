@@ -116,7 +116,6 @@ ca-ES:
   hoc_is_here: 'La #HourOfCode és aquí - prova-ho! @codeorg'
   just_did_hoc: 'Acabo de fer la #HourOfCode - Fes-ho! @codeorg'
   twitter_teach_cs: Per què no hi ha més escoles que ensenyin informàtica? Nosaltres ho podem arreglar. http://youtu.be/nKIu9yen5nc. Visita http://code.org/ per obtenir més informació.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: Aprendre una hora del codi
   beyond_hoc: "Més enllà d'una hora"
   what_gender: Quin gènere ets?
@@ -301,8 +300,9 @@ ca-ES:
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: Nom
   volunteer_engineer_submission_field_name_placeholder: Full Name
@@ -541,7 +541,7 @@ ca-ES:
   dashboard_faq_k5: Preguntes freqüents sobre K-5
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: "L'hora del Codi és aquí - 8-14 de desembre!"
   code_sign_up: "Inscriure's a participar durant la setmana de l'educació CS"
   learn_more: Més informació
@@ -553,11 +553,17 @@ ca-ES:
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator, while supplies last'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: "Prova els nous tutorial de l'Hora del Codi"
   hoc2014_try_new_tutorial: "Provi la nova classe beta de l'Hora del Codi"
   hoc2014_try_scrat: Ocells enutjat, Scrat i PvZ
   hoc2014_try_frozen: Amb els personatges Anna i Elsa de Frozem
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Tutorials en el teu idioma
@@ -627,6 +633,8 @@ ca-ES:
   projguts_name: Pedra, Paper, tisora
   hourofcode_name: Contenidor per al nou code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artista
   codeorg_gradelevel: Edat 4-104
   codeintl_gradelevel: Edat 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -668,6 +676,8 @@ ca-ES:
   frozen_gradelevel: Edat 8 +
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Edat 4-104
+  infinity_gradelevel: Edat 4-104
+  artist_gradelevel: Edat 4-104
   codeorg_platformtext: Navegadors moderns, mòbils i tablets
   codeintl_platformtext: Navegadors moderns, mòbils i tablets
   thinkersmithspanish_platformtext: Sense connexió
@@ -746,10 +756,12 @@ ca-ES:
   thinkersmith2_shortdescription: Aprèn com els ordinadors utilitzen 1s i 0s per representar informació
   kodableunplugged_shortdescription: Un divertit exercici sense connexió
   projguts_shortdescription: Prova modelatge i simulació utilitzant pedra-paper-estisores
-  hourofcode_shortdescription: Contenidor per al nou code.org/hoc
+  hourofcode_shortdescription: Aprèn a programar amb Mark Zuckerberg i Angry Birds!
   frozen_shortdescription: "Anem a utilitzar el codi per unir l'Anna i l'Elsa mentre exploren la màgia i la bellesa del gel."
   starwars_shortdescription: "Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana."
   playlab_shortdescription: Crea una història o fes una partida amb Play Lab!
+  infinity_shortdescription: Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity.
+  artist_shortdescription: "Dibuixar imatges estupendes i dissenys amb l'artista!"
   codeorg_longdescription: Aprèn els conceptes bàsics de la Informàtica mitjançant la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Aprèn bucles, condicionals i algorismes bàsics. Disponible en 34 idiomes.
   codeintl_longdescription: Aprèn els conceptes bàsics de la Informàtica mitjançant la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Aprèn bucles, condicionals i algorismes bàsics. Disponible en 34 idiomes.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -982,3 +994,11 @@ ca-ES:
   compatibility_https_header: Si us plau accepta HTTPS per a Code.org.
   compatibility_https_message: "Per augmentar la seguretat, estem canviant a HTTPS en %{https_date}.  No podràs accedir a Code.org passada aquesta data. <a href='%{it_requirements_url}'> feu clic aquí</a> per aprendre com permetre HTTPS per Code.org."
   compatibility_https_hide_this_warning: Amaga aquest avís
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: aleteig
+  infinity_shortcode: inf
+  playlab_shortcode: reprodueix
+  artist_shortcode: art

@@ -114,7 +114,6 @@ en-US:
   hoc_is_here: crwdns3941:0crwdne3941:0
   just_did_hoc: crwdns3942:0crwdne3942:0
   twitter_teach_cs: crwdns35452:0crwdne35452:0
-  learn_hoc_prizes: crwdns50834:0crwdne50834:0
   learn_hoc: crwdns3953:0crwdne3953:0
   beyond_hoc: crwdns3954:0crwdne3954:0
   what_gender: crwdns3955:0crwdne3955:0
@@ -277,8 +276,9 @@ en-US:
   volunteer_engineer_submission_subtitle_generic: crwdns50838:0crwdne50838:0
   volunteer_engineer_submission_subtitle_specific: 'crwdns54487:0%{num_teachers}crwdnd54487:0%{num_volunteers}crwdne54487:0'
   volunteer_engineer_submission_intro_background: crwdns50840:0crwdne50840:0
-  volunteer_engineer_submission_intro_recruit: 'crwdns54488:0%{url}crwdne54488:0'
+  volunteer_engineer_submission_intro_recruit: crwdns54488:0crwdne54488:0
   volunteer_engineer_submission_intro_signup: crwdns50842:0crwdne50842:0
+  volunteer_engineer_submission_intro_links: 'crwdns54785:0%{learn_more}crwdnd54785:0%{volunteer_local}crwdne54785:0'
   volunteer_engineer_submission_header_shared: crwdns50057:0crwdne50057:0
   volunteer_engineer_submission_field_name: crwdns50058:0crwdne50058:0
   volunteer_engineer_submission_field_name_placeholder: crwdns50059:0crwdne50059:0
@@ -525,11 +525,17 @@ en-US:
   learn_educator_resources_description: crwdns48535:0crwdne48535:0
   learn_educator_resources_button: crwdns48536:0crwdne48536:0
   learn_are_you_educator: crwdns50095:0crwdne50095:0
+  learn_find_volunteer: crwdns54786:0crwdne54786:0
+  learn_teacher_led_lesson_plans: crwdns54787:0crwdne54787:0
+  learn_how_to_hoc: crwdns54788:0crwdne54788:0
+  learn_hoc_prizes: crwdns50834:0crwdne50834:0
+  learn_inspirational_videos: crwdns54789:0crwdne54789:0
   hoc2014_try_new_tutorials: crwdns23440:0crwdne23440:0
   hoc2014_try_new_tutorial: crwdns23566:0crwdne23566:0
   hoc2014_try_scrat: crwdns23441:0crwdne23441:0
   hoc2014_try_frozen: crwdns23567:0crwdne23567:0
   carousel_heading_codeorg: crwdns54492:0crwdne54492:0
+  carousel_heading_codeorg_any_device: crwdns54714:0crwdne54714:0
   carousel_heading_3rd_party: crwdns54493:0crwdne54493:0
   carousel_heading_third_party: crwdns54494:0crwdne54494:0
   carousel_heading_international: crwdns3831:0crwdne3831:0
@@ -598,6 +604,8 @@ en-US:
   projguts_name: crwdns23344:0crwdne23344:0
   hourofcode_name: crwdns25915:0crwdne25915:0
   playlab_name: crwdns26143:0crwdne26143:0
+  infinity_name: crwdns54715:0crwdne54715:0
+  artist_name: crwdns54716:0crwdne54716:0
   codeorg_gradelevel: crwdns21487:0crwdne21487:0
   codeintl_gradelevel: crwdns23748:0crwdne23748:0
   thinkersmithspanish_gradelevel: crwdns21488:0crwdne21488:0
@@ -639,6 +647,8 @@ en-US:
   frozen_gradelevel: crwdns23730:0crwdne23730:0
   starwars_gradelevel: crwdns51649:0crwdne51649:0
   playlab_gradelevel: crwdns25922:0crwdne25922:0
+  infinity_gradelevel: crwdns54717:0crwdne54717:0
+  artist_gradelevel: crwdns54718:0crwdne54718:0
   codeorg_platformtext: crwdns21807:0crwdne21807:0
   codeintl_platformtext: crwdns23749:0crwdne23749:0
   thinkersmithspanish_platformtext: crwdns21808:0crwdne21808:0
@@ -721,6 +731,8 @@ en-US:
   frozen_shortdescription: crwdns23735:0crwdne23735:0
   starwars_shortdescription: crwdns51651:0crwdne51651:0
   playlab_shortdescription: crwdns26144:0crwdne26144:0
+  infinity_shortdescription: crwdns54719:0crwdne54719:0
+  artist_shortdescription: crwdns54720:0crwdne54720:0
   codeorg_longdescription: crwdns21574:0crwdne21574:0
   codeintl_longdescription: crwdns23751:0crwdne23751:0
   thinkersmithspanish_longdescription: crwdns25939:0crwdne25939:0
@@ -950,3 +962,11 @@ en-US:
   compatibility_https_header: crwdns41674:0crwdne41674:0
   compatibility_https_message: 'crwdns41675:0%{https_date}crwdnd41675:0%{it_requirements_url}crwdne41675:0'
   compatibility_https_hide_this_warning: crwdns41676:0crwdne41676:0
+  starwars_shortcode: crwdns54721:0crwdne54721:0
+  mc_shortcode: crwdns54722:0crwdne54722:0
+  frozen_shortcode: crwdns54723:0crwdne54723:0
+  hourofcode_shortcode: crwdns54724:0crwdne54724:0
+  flappy_shortcode: crwdns54725:0crwdne54725:0
+  infinity_shortcode: crwdns54726:0crwdne54726:0
+  playlab_shortcode: crwdns54727:0crwdne54727:0
+  artist_shortcode: crwdns54728:0crwdne54728:0

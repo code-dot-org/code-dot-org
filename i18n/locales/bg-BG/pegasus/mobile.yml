@@ -114,7 +114,6 @@ bg-BG:
   hoc_is_here: '#HourOfCode е тук - вижте го! @codeorg'
   just_did_hoc: 'Преди малко завърших #HourOfCode - вижте го! @codeorg'
   twitter_teach_cs: Защо да не се преподава информатика в повече училища? Можем да поправим това. http://Youtu.be/nKIu9yen5nc. Посетете http://code.org/, за да научите повече.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes"> Научете повече</a> за наградите за всеки учител.'
   learn_hoc: 'Научете се да програмирате с "Часът на кодирането"'
   beyond_hoc: След Часа по Кодиране
   what_gender: Какъв пол сте?
@@ -260,7 +259,7 @@ bg-BG:
   starwars_javascript_start_button: Опитай сега
   starwars_blocks_title: Блокове
   starwars_blocks_description: Използвайте drag-drop блокове.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: На повече езици (Очаквайте скоро) | Съвременни браузъри, смартфони, таблетки | Възраст 6-10
   starwars_blocks_start_button: Опитай сега
   starwars_watch_videos: Преди да започнете, гледайте едно от тези вдъхновяващи видеа
   starwars_speak_languages: Говорите друг език?
@@ -271,15 +270,16 @@ bg-BG:
   mc_shortdescription: Използвайте блокове с код, за да въведете Steve или Alex в приключението чрез този Minecraft свят.
   mc_gradelevel: Възраст 6 +
   mc_platformtext: Съвременни браузъри, смартфони, таблети
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: На повече езици (Очаквайте скоро) | Съвременни браузъри и таблети | Възраст 6 +
   minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
+  volunteer_engineer_submission_title: Вдъхнови ученици и доброволци за Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100 000 учители ще бъдат домакини на Hour of Code в техния клас тази година, 7-13 декември 2015. Те искат вашата помощ! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} Учителите търсят доброволци, които са вдъхновени от образованието по компютърни науки, за да помогнат с Hour of Code през декември. <br>%{num_volunteers} доброволци са се регистрирали. Присъединете се към тях.'
   volunteer_engineer_submission_intro_background: ' Hour of Code е глобално движение, което предоставя един час въведение в компютърните науки. То достига до десетки милиони ученици в 180 + страни. Моля, включете се по време на CSEdWeek, декември 7-13.'
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    Тези учители ще се радват да има някой, <span style="font-family: 'Gotham 7r', sans-serif;"> технически спец,</span> който може да помогне в класната стая, или някой, който може да <span style="font-family: 'Gotham 7r', sans-serif;"> вдъхнови</span> учениците с разговори за многобройните възможности на компютърните науки (което може да бъде направено и чрез видео чат). Ако не желаеш да бъдеш доброволец, <a href="%{url}"> научи повече</a> за възможността сам да организираш Hour of Code събитие.
   volunteer_engineer_submission_intro_signup: 'Моля, въведете следната информация, ако сте студент, учещ компютърни науки или професионален софтуерен инжинер. Полетата, отбелязани със <span class="form-required-field"> *</span> са задължителни.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Информацията, споделена от учители на доброволческата карта
   volunteer_engineer_submission_field_name: Име
   volunteer_engineer_submission_field_name_placeholder: Пълно име
@@ -520,22 +520,28 @@ bg-BG:
   learn_more: Научете повече
   learn_sign_up_description: Регистрирайте се, за да участвате в Hour of Code по време на CS образователната седмица
   learn_sign_up_button: Регистрирайте се
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Гледайте това вдъхновяващо видео в класна стая
+  learn_videos_show: Покажи този вдъхновяващ видео клип в клас
+  learn_videos_before_hoc: Гледайте вдъхновяващо видео преди Hour of Code
   learn_educator_resources_description: Научете как да преподавате Hour of Code
   learn_educator_resources_button: Ресурси за учители
   learn_are_you_educator: 'Вие сте учител? Научете <a href="http://hourofcode.com/resources/how-to"> как да преподавате часът на кода</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes"> Научете повече</a> за наградите за всеки учител.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Опитайте нашите нови уроци за Часа на кода
   hoc2014_try_new_tutorial: Опитайте нашия нов Час на кодирането (бета версия)
   hoc2014_try_scrat: Angry Birds, PvZ и Scrat
   hoc2014_try_frozen: Художникът с Анна и Елза от Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Уроци от Code.org
+  carousel_heading_codeorg_any_device: Уроци от Code.org (за всички устройства)
+  carousel_heading_3rd_party: Уроци от трети страни
+  carousel_heading_third_party: Уроци от трети страни
   carousel_heading_international: Уроци на вашия език
   carousel_heading_domestic: Уроци на английски
-  carousel_heading_beginners: Уроци за начинаещи
+  carousel_heading_beginners: Уроци за K-8
   carousel_heading_javascript: Уроци, които преподават Javascript
   carousel_heading_unplugged: 'Нямате устройство или интернет? Опитайте "ънплъгд" уроците по компютърни науки'
   carousel_heading_devices: Образователни приложения за телефони и таблети
@@ -599,6 +605,8 @@ bg-BG:
   projguts_name: Камък, хартия, ножица
   hourofcode_name: Хранилище за нови code.org/hoc
   playlab_name: Театрална лаборатория
+  infinity_name: Infinity Игрална лаборатория
+  artist_name: Художник
   codeorg_gradelevel: Възраст 4-104
   codeintl_gradelevel: Възраст 4-104
   thinkersmithspanish_gradelevel: От всички
@@ -640,6 +648,8 @@ bg-BG:
   frozen_gradelevel: Възраст 8 +
   starwars_gradelevel: Възраст 6 +
   playlab_gradelevel: Възраст 4-104
+  infinity_gradelevel: Възраст 4-104
+  artist_gradelevel: Възраст 4-104
   codeorg_platformtext: Съвременни браузъри, смартфони, таблети
   codeintl_platformtext: Съвременни браузъри, смартфони, таблети
   thinkersmithspanish_platformtext: Ънплъгд
@@ -718,10 +728,12 @@ bg-BG:
   thinkersmith2_shortdescription: Научете как компютрите използват единици и нули за представяне на информация
   kodableunplugged_shortdescription: Забавно упражнение без компютър
   projguts_shortdescription: Опитайте моделиране и симулация, използвайки камък/ножица/хартия /
-  hourofcode_shortdescription: Хранилище за нови code.org/hoc
+  hourofcode_shortdescription: Научете се да кодирате с Марк Зукерберг и Angry Birds!
   frozen_shortdescription: 'Нека да използваме кода, за да се присъединим към Анна и Елза и заедно  опознаем  магията и красотата на леда.'
-  starwars_shortdescription: Научете се да програмирате дроиди и създайте своя собствена Междузвездни войни игра в галактиката далече, далече.
+  starwars_shortdescription: 'Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.'
   playlab_shortdescription: Създайте история или направете игра с Театрална лаборатория!
+  infinity_shortdescription: 'Използвайте "Игрална лаборатория", за да създадете история или игра с участието на героите от Дисни Инфинити.'
+  artist_shortdescription: Начертайте готини картинки и дизайни с художника!
   codeorg_longdescription: 'Научете основните понятия на компютърните науки с drag and drop програмиране. Това е като игра, самонасочващи уроци с  видео лекции от Бил Гейтс, Марк Зукерберг, Angry Birds и Plants vs. Zombies. Научете за повторенията-цикли, условията и основните алгоритми. Наличен на 34 езика.'
   codeintl_longdescription: 'Научете основните понятия на компютърните науки с drag and drop програмиране. Това е като игра, самонасочващи уроци с  видео лекции от Бил Гейтс, Марк Зукерберг, Angry Birds и Plants vs. Zombies. Научете за повторенията-цикли, условията и основните алгоритми. Наличен на 34 езика.'
   thinkersmithspanish_longdescription: Използвайки въведените вече функции, учениците ще трябва да се насочват взаимно без предварително обсъждане. Урока показва връзката между символи и действия
@@ -951,3 +963,11 @@ bg-BG:
   compatibility_https_header: Моля, активирате HTTPS за Code.org.
   compatibility_https_message: "За да увеличим сигурността, ние превключите на HTTPS  %{https_date}. Вие няма да достъпите до Code.org след тази дата. <a href='%{it_requirements_url}'> Щракнете тук</a>, за да научите как да активирате HTTPS за Code.org."
   compatibility_https_hide_this_warning: Скрий предупреждението
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: плесни с крила
+  infinity_shortcode: inf
+  playlab_shortcode: играй
+  artist_shortcode: art

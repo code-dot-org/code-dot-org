@@ -15,20 +15,20 @@ id:
           "Jigsaw: Learn to drag and drop": 'Jigsaw: Belajar untuk drag dan drop'
           "Maze: Sequence": 'Labirin: Urutan'
           "Maze: Debugging": 'Labirin: Debugging'
-          "Artist 1: Intro": 'Artis 1: Intro'
+          "Artist 1: Intro": 'Artis 1: Pengenalan'
           Artists 2: Seniman 2
-          Spelling Bee: Pengucapan Lebah
-          Spelling Bee not blockly: Pengucapan Lebah tidak diblokir
-          "Bee 1: Intro": 'Lebah 1: Intro'
-          "Maze 2: Loops": 'Labirin 2: Pengulangan'
-          "Bee 2: Loops": 'Lebah 2: Pengulangan'
-          Multi & Match: 'Multi & Pertandingan'
+          Spelling Bee: Spelling Bee
+          Spelling Bee not blockly: Spelling Bee bukan blockly
+          "Bee 1: Intro": 'Bee 1: Pengenalan'
+          "Maze 2: Loops": 'Maze 2: Perulangan'
+          "Bee 2: Loops": 'Bee 2: Perulangan'
+          Multi & Match: 'Banyak & Pertandingan'
           K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flapply bebas blok
+          Flappy non blockly: Flapply tanpa blockly
           title: Kursus 1
           Artist 2: Artis 2
-          Happy Maps: Pemetaan bahagia
-          Move it, Move it: Pindahkan, pindahkan
+          Happy Maps: Happy Maps
+          Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
           Building a Foundation: Membangun dasar
           Getting Loopy: Dapat berulang-ulang
@@ -182,10 +182,10 @@ id:
           Maze and Bee: Labirin dan Lebah
           Artist Binary: Artis Biner
           description_audience: Usia 10 + (setelah Kursus 3)
-          Super Challenge - Variables: 'Super Challenge - Variables'
-          Super Challenge - For Loops: 'Super Challenge - For Loops'
-          Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
-          Extreme Challenge - Comprehensive: 'Extreme Challenge - Comprehensive'
+          Super Challenge - Variables: 'Tantangan Super - Variabel'
+          Super Challenge - For Loops: 'Tantangan Super - For Loops'
+          Super Challenge - Functions and Parameters: 'Tantangan Super - Fungsi dan Parameter'
+          Extreme Challenge - Comprehensive: 'Tantangan Ekstrim - Komprehensif (Luas)'
         Course4pre:
           title: Kursus 4 Prasyarat
           description_short: Sbuah ringkasan rampup dari konsep bagi siswa yang belum mengambil Kursus 2 dan 3.
@@ -274,7 +274,7 @@ id:
           Ways to go beyond Courses 1, 2, and 3: Cara untuk melampaui Program 1, 2, dan 3
           K-5 Courses: kursus K-5
           Writing computer programs in Blockly: Menulis program komputer di Blockly
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Dashboard untuk Guru
           Personal Reflection: Refleksi pribadi
           Next Steps: Langkah berikutnya
           Computer Science Pedagogy: ilmu mendidik/pedagogi ilmu pengetahuan Komputer
@@ -282,7 +282,7 @@ id:
           Reflection: Reflection
           "Programming Concept: Loops": 'Programming Concept: Loops'
           "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
-          "Programming Concept: Functions": 'Programming Concept: Functions'
+          "Programming Concept: Functions": 'Konsep pemrograman: fungsi'
           "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
           title: Simulator Internet
@@ -507,7 +507,7 @@ id:
           Introduction to PD: Pengantar PD
           Course Overview: Course Overview
           Computer Science Pedagogy: ilmu mendidik/pedagogi ilmu pengetahuan Komputer
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Dashboard untuk Guru
           Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           Preparing for in-person PD: Bersiap-siap untuk di-orang PD
         algPDmiami:
@@ -672,6 +672,14 @@ id:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: Perulangan Selagi
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -679,7 +687,7 @@ id:
           Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: ilmu mendidik/pedagogi ilmu pengetahuan Komputer
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Dashboard untuk Guru
           Evaluation Blocks: Blok Evaluasi
           The Big Game: The Big Game
           Strings and Images: String dan gambar
@@ -734,7 +742,7 @@ id:
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: ilmu mendidik/pedagogi ilmu pengetahuan Komputer
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Dashboard untuk Guru
           Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           Preparing for in-person PD: Bersiap-siap untuk di-orang PD
         algebraPD-iZone:
@@ -746,7 +754,7 @@ id:
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: ilmu mendidik/pedagogi ilmu pengetahuan Komputer
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Dashboard untuk Guru
           Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           Preparing for in-person PD: Bersiap-siap untuk di-orang PD
         sciencePD-NexTech:
@@ -923,7 +931,7 @@ id:
           description_short: Mengajarkan pemrograman fungsional melalui aljabar
           Course Overview: Course Overview
           Computer Science Pedagogy: ilmu mendidik/pedagogi ilmu pengetahuan Komputer
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Dashboard untuk Guru
           Evaluation Blocks: Blok Evaluasi
           Strings and Images: String dan gambar
           Writing Contracts: Menulis kontrak
@@ -1029,7 +1037,7 @@ id:
           description_short: Mengajarkan pemrograman fungsional melalui aljabar
           Course Overview: Course Overview
           Computer Science Pedagogy: ilmu mendidik/pedagogi ilmu pengetahuan Komputer
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Dashboard untuk Guru
           Evaluation Blocks: Blok Evaluasi
           Strings and Images: String dan gambar
           Writing Contracts: Menulis kontrak
@@ -1156,8 +1164,8 @@ id:
           description_short: Short unplugged course designed for informal learning
           description: Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Pemetaan bahagia
-          Move it, Move it: Pindahkan, pindahkan
+          Happy Maps: Happy Maps
+          Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
           Graph Paper Programming: Pemrograman grafis diatas kertas
           Building a Foundation: Membangun dasar
@@ -1391,10 +1399,10 @@ id:
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
         iceage:
-          title: Ice Age Play Lab
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
-          Ice Age Play Lab: Ice Age Play Lab
+          title: Laboratorium Bermain Ice Age
+          description_short: Membuat cerita atau membuat permainan dengan laboratorium bermain Ice Age!
+          description: Membuat cerita atau membuat permainan dengan laboratorium bermain Ice Age!
+          Ice Age Play Lab: Laboratorium Bermain Ice Age
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1408,6 +1416,8 @@ id:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
           description_short: Programming
@@ -1422,6 +1432,13 @@ id:
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Perulangan Selagi
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1436,19 +1453,19 @@ id:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: Laboratorium Bermain Gumball
+          description_short: Membuat cerita atau membuat permainan dengan laboratorium bermain Gumball!
+          description: Membuat cerita atau membuat permainan dengan laboratorium bermain Gumball!
+          Gumball Play Lab: Laboratorium Bermain Gumball
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          title: 'Star Wars: Dirikan sebuah Galaksi dengan Code'
+          description_short: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
+          description: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
           Hour of Code 2015: Hour of Code 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          title: 'Star Wars: Dirikan sebuah Galaksi dengan Code'
+          description_short: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
+          description: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
           Hour of Code 2015: Hour of Code 2015
         minecraft:
           title: Minecraft
@@ -1457,8 +1474,8 @@ id:
           Craft: Craft
         mc:
           title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          description_short: Jelajahi sebuah dunia Minecraft melalui Code
+          description: Gunakan blok Code untuk mendapatkan Steve atau Alex pada petualangan melalui dunia Minecraft ini
           Hour of Code 2015: Hour of Code 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -1467,3 +1484,10 @@ id:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Selamat Datang!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Bungkus

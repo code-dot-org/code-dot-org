@@ -562,8 +562,8 @@
         studio_iceage_2: A Diego (actor 1) y abuela (actor 2) les gustaría decirse
           "Hola" mutuamente. ¿Puedes ayudarles usando el bloque "decir" dos veces?
         studio_iceage_3: ¿Puedes ayudar a Scrat a llegar a la bandera?
-        studio_iceage_4: ¿Puedes ayudar a Scrat (actor 1) llegar a Abuela (actor 2)
-          y reproducir un sonido cuando llegue?
+        studio_iceage_4: ¿Puedes ayudar a Scrat (actor 1) llegar hasta la Abuela (actor
+          2) y reproducir un sonido cuando llegue?
         studio_iceage_5: ¿Puedes ayudar a Sid a decir "Saludos" cuando se hace click
           en él? No te olvides de clickearlo después de haber clickeado "Ejecutar"
         studio_iceage_6: ¿Puedes ayudar a Diego a moverse usando las felechas arriba/abajo/derecha/izquierda
@@ -579,27 +579,41 @@
           las flechas para llegar a Sid y avisar a todo el mundo.
         studio_iceage_10: Crea tu propio juego. Cuando hayas terminado, haz clic en
           finalizar para que tus amigos prueben tu juego en sus teléfonos.
-        studio_gumball_1: Anais quiere decir "hola" - ¿Puedes ayudarla?
-        studio_gumball_2: Darwin (actor 1) y Gumball (actor 2) quieren decirse "hola"
-          mutuamente. ¿Puedes ayudarlos usando el bloque "decir" dos veces?
-        studio_gumball_3: ¿Puedes ayudar a Banana Joe a llegar a la bandera?
-        studio_gumball_4: ¿Puedes ayudar a Gumball (actor 1) a llegar hasta Darwin
-          (actor 2) y reproducir un sonido cuando llegue?
-        studio_gumball_5: ¿Puedes ayudar a que Anthony diga "saludos" cuando se le
-          clickea? No te olvides de clickearle después de haber pulsado Ejecutar
-        studio_gumball_6: ¿Puedes ayudar a Darwin a moverse usando las flechas arriba/abajo/derecha/izquierda
-          para llegar a todas las banderas?
-        studio_gumball_7: El bloque de "repetir para siempre" te permite ejecutar
-          un código continuamente. ¿Puedes conectar bloques para ayudar a Anthony
-          a moverse de derecha a izquierda repetidamente?
-        studio_gumball_8: ¿Puedes añadir un bloque para anotar un punto y un bloque
-          para reproducir un sonido cuando Banana Joy se encuentre a Anthony, y luego
-          lo mueva con las flechas hasta que anote?
-        studio_gumball_9: Establece el fondo para ésta invasión espacial y ayuda a
-          Nicole a llegar hasta Penny más rápido cambiando su velocidad. Luego muévelo
-          con las flechas para llegar a Nicole y avisar a todo el mundo.
-        studio_gumball_10: Crea tu propio juego. Cuando hayas terminado, haz clic
-          en finalizar para que tus amigos prueben tu juego en sus teléfonos.
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
+          him go the last 200 pixels using the "move" block.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Can you help Anton announce the start of a race
+          by saying "Ready, set, go!"? To test your program, don’t forget to click
+          Anton after you click Run!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Create your own game or story. When you're done,
+          click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Crea tu propio juego. Cuando hayas terminado, haz clic
           en finalizar para que tus amigos prueben tu juego en sus teléfonos.
         studio_k1_1: ¿Puedes hacer que este perro diga "Hola mundo"?
@@ -790,11 +804,14 @@
         starwars_blocks_events: 'Star Wars: Contruyendo una Galaxia con Código - Eventos'
         starwars_blocks_congrats: 'Star Wars: Construyendo una Galaxia con Código
           - Felicitaciones'
-        mc_intro: Minecraft - Introduzione
-        mc_repeat: Minecraft - Ripetizione
-        mc_if_statements: Minecraft - Istruzione "se"
-        mc_congrats_share: Minecraft - Congratulazioni
-        mc_congrats_no_share: Minecraft - Congratulazioni
+        mc_intro: Minecraft - Introducción
+        mc_repeat: Minecraft - Repetir
+        mc_if_statements: Minecraft - Instrucciones "Si"
+        mc_congrats_share: Minecraft - Felicidades
+        mc_congrats_no_share: Minecraft - Felicidades
+        gumball_intro: Gumball Hour of Code - Introduction
+        gumball_events: Gumball Hour of Code - Events
+        gumball_repeat: Gumball Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
@@ -905,12 +922,12 @@
           evento.
         Infinity_repeat_callout: Lugar para mover bloques dentro de aquí
         craft_run_button_callout: Haz clic en "Ejecutar" para probar tu programa
-        craft_drag_block_callout: Arrastra un bloque "mueveHaciaAdelante()"; y pegalo
-          por debajo de la otro bloque
-        craft_callout_preplaced: Hemos puesto algunos bloques aquí para que comiences
+        craft_drag_block_callout: Arrastra un bloque "mueveHaciaAdelante();" y pégalo
+          por debajo del otro bloque
+        craft_callout_preplaced: Hemos puesto aquí algunos bloques para que comiences
         craft_inside_repeat: Repite acciones colocando bloques aquí
-        craft_callout_preplaced_house: Questo codice inizia la costruzione della tua
-          casa. Riesci a finirla tu?
-        craft_what_is_iron: Scava il ferro!
-        craft_callout_moveforward: Questo codice controlla la lava, sai aggiungere
-          un comando per andare avanti?
+        craft_callout_preplaced_house: Este código comenzará a construir tu casa.
+          ¿Puedes terminarlo?
+        craft_what_is_iron: ¡Pica esta mina de hierro!
+        craft_callout_moveforward: Este código comprobará si hay lava, ¿puedes añadir
+          un comando para avanzar?

@@ -115,7 +115,6 @@ tr-TR:
   hoc_is_here: '#HourOfCode burada. @codeorg u kontrol edin'
   just_did_hoc: '#HourOfCode yeni yaptım - @codeorg u kontrol edin'
   twitter_teach_cs: Neden daha çok okul bilgisayar bilimlerini öğretmiyor? Bunu biz çözebiliriz Daha fazla bilgi almak için http://youtu.be/nKIu9yen5nc .
-  learn_hoc_prizes: 'Eğiticilere sunulan ödüller hakkında <a href="https://hourofcode.com/prizes">daha fazlası</a>.'
   learn_hoc: Bir Saat Kodu öğrenin
   beyond_hoc: Bir saat boyunca
   what_gender: Cinsiyetiniz nedir?
@@ -201,7 +200,7 @@ tr-TR:
   homepage_action_text_volunteers: Teknik gönüllü aranıyor.
   homepage_action_text_codevideo: Videoyu izle
   homepage_action_text_teachervideo: Videoyu izle
-  homepage_action_text_girlvideo: Inspire a girl
+  homepage_action_text_girlvideo: Bir kıza ilham kaynağı ol
   homepage_action_text_learn: Öğrenmeye başla
   homepage_action_text_signpetition: Üye dilekçesi
   homepage_signpetition_dropdown: 'Bizim üye dilekçemiz  &#x25BE;'
@@ -274,35 +273,36 @@ tr-TR:
   class_submission_level_college: Üniversite
   class_submission_level_vocational: Mesleki
   class_submission_languages_other: Diğer dil(ler)
-  inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  inspirational_videos_more: 'Rol modeller ve ünlülerden <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">ilham verici videolar</a>'
   starwars_subtitle: Kod İle Galaksi İnşa Edin
   starwars_javascript_title: JavaScript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_description: Sürükle bırak bloklar ve JavaScript kullan.
   starwars_javascript_specs: Sadece İngilizce | Modern işletim sistemleri | 11+ Yaş
   starwars_javascript_start_button: Şimdi dene
-  starwars_blocks_title: bloklar
+  starwars_blocks_title: Bloklar
   starwars_blocks_description: Sürükle-bırak blokları kullanın.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Birçok dil desteği (yakında) | Modern tarayıcılar, akıllı telefonlar, tabletler | 6-10 yaş arası
   starwars_blocks_start_button: Şimdi dene
-  starwars_watch_videos: Before you get started, watch one of these inspirational videos
+  starwars_watch_videos: Başlamadan önce bu ilham verici videolardan birini izle
   starwars_speak_languages: Farklı bir dili mi konuşuyorsunuz?
   starwars_help_translate: Çevirmemize yardım edin
   starwars_platform_text: Modern tarayıcılar, akıllı telefonlar, tabletler
   mc_name: Minecraft Kod Saati
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_gradelevel: Ages 6+
+  mc_longdescription: "Steve veya Alex'i Minecraft dünyasında bir maceraya almak için kod blokları kullan."
+  mc_shortdescription: "Steve veya Alex'i Minecraft dünyasında bir maceraya almak için kod blokları kullan."
+  mc_gradelevel: 6 yaş ve üzeri
   mc_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Birçok dil desteği (yakında) | Modern tarayıcılar, akıllı telefonlar, tabletler | 6 yaş ve üzeri
   minecraft_subtitle: Minecraft Kod Saati
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
+  volunteer_engineer_submission_title: Hour of Code etkinliği için gönüllü ol ve öğrencilere ilham kaynağı ol.
   volunteer_engineer_submission_subtitle_generic: "Bu sene 7-13 Aralık'ta 100,000 öğretmen sınıflarında `Hour of Code` etkinliğini gerçekleştirecek. Unutmayın yardımınıza ihtiyaçları var! "
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} öğretmenler Aralık ayında gerçekleşecek olan Hour of Code etkinliğinde onlara yardım edecek bilgisayar bilimlerine tutkulu gönüllüler arıyorlar. %{num_volunteers} Gönüllüler kaydoldu. Onlara katıl.'
+  volunteer_engineer_submission_intro_background: "Hour of code 180'den fazla ülkede on milyonlarca öğrenciye erişen ve bir saatliğine bilgisayar bilimleri eğitimi veren küresel bir hareket. Lütfen 7-13 Aralık tarihlerinde gerçekleşecek olan Bilgisayar Bilimleri Eğitimi Haftasına katılın."
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
-  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
+  volunteer_engineer_submission_intro_signup: 'Bir bilgisayar bilimleri öğrencisi veya yazılım profesyonel iseniz lütfen aşağıdaki bilgileri girin. <span class="form-required-field"> *</span> ile işaretlenmiş alanların doldurulması zorunludur.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_header_shared: Bilgiler gönüllüler haritasındaki öğretmenlerle paylaşıldı
   volunteer_engineer_submission_field_name: İsim
   volunteer_engineer_submission_field_name_placeholder: Tam İsim
   volunteer_engineer_submission_field_company: Şirket (veya Üniversite)
@@ -538,7 +538,7 @@ tr-TR:
   dashboard_faq_k5: K-5 Sık Sorulan Sorular
   dashboard_announcements: Bildirimler
   dashboard_announce_view_all: Tümünü Gör
-  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: 'Kod Saati burada - Aralık 8-14!'
   code_sign_up: "CS Education Week' e katılmak için kaydolun."
   learn_more: Daha Fazla Bilgi Edinin
@@ -550,11 +550,17 @@ tr-TR:
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Öğretim kaynakları
   learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: 'Eğiticilere sunulan ödüller hakkında <a href="https://hourofcode.com/prizes">daha fazlası</a>.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Yeni Hour of Code eğitimlerimizi deneyin
   hoc2014_try_new_tutorial: Yeni Kodlama Saati öğreticimizi beta halinde deneyin
   hoc2014_try_scrat: 'Angry Birds, PvZ  ve Scrat'
   hoc2014_try_frozen: "Karlar Ülkesi'nden Anna ve Elsa ile birlikte bir sanatçı"
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Kendi dilinizde eğitimler
@@ -583,7 +589,7 @@ tr-TR:
   older_systems_subheading: 'Bunların eski web tarayıcılarında çalışması gerekir. Tüm eğitimlere erişmek için, modern web tarayıcısına yükseltin <a href="http://browsehappy.com/" target="_blank"></a>'
   mobile_devices: Mobil cihazlar için eğitimler
   frozen_name: Anna ve Elsa ile kodlama yap
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_name: 'Star Wars: Kod ile bir Galaksi İnşa Et'
   codeorg_name: İlk bilgisayar programınızı yazın
   codeintl_name: İlk bilgisayar programınızı yazın
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -623,6 +629,8 @@ tr-TR:
   projguts_name: Taş,Kağıt, Makas
   hourofcode_name: Yeni code.org/hoc için placeholder
   playlab_name: Oyun Laboratuvarı
+  infinity_name: Sınırsız oyun laboratuarı
+  artist_name: Aktör
   codeorg_gradelevel: 4-104 Yaş
   codeintl_gradelevel: 4-104 Yaş
   thinkersmithspanish_gradelevel: Por todos
@@ -662,8 +670,10 @@ tr-TR:
   projguts_gradelevel: 10-13 yaş grubu
   hourofcode_gradelevel: 4-104 Yaş
   frozen_gradelevel: 8 + Yaş grubu
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: 6 yaş ve üzeri
   playlab_gradelevel: 4-104 Yaş
+  infinity_gradelevel: 4-104 Yaş
+  artist_gradelevel: 4-104 Yaş
   codeorg_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeintl_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   thinkersmithspanish_platformtext: İnternetsiz
@@ -703,7 +713,7 @@ tr-TR:
   projguts_platformtext: İnternetsiz
   hourofcode_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   frozen_platformtext: Modern tarayıcılar + Tablet
-  starwars_platformtext: Modern tarayıcılar + Tablet
+  starwars_platformtext: Modern tarayıcılar + tabletler
   playlab_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeorg_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlama öğrenin!
   codeintl_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlama öğrenin!
@@ -742,10 +752,12 @@ tr-TR:
   thinkersmith2_shortdescription: Bilgisayarın 1leri ve 0ları kullanarak bilgileri nasıl gösterdiğini öğrenin
   kodableunplugged_shortdescription: Bilgisayarsız eğlenceli bir egzersiz
   projguts_shortdescription: Taş/Kağıt/Makas kullanarak modelleme ve simulasyon deneyin
-  hourofcode_shortdescription: Yeni code.org/hoc için placeholder
+  hourofcode_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlama öğrenin!
   frozen_shortdescription: "Buzun büyüsü ve güzelliğini keşfetmek için Anna ve Elsa'ya katılıp kodlama yapalım."
   starwars_shortdescription: Droidleri programlamayı ve çok uzaklardaki galaksinizi Star Wars oyunu ile yaratmayı öğrenin.
   playlab_shortdescription: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
+  infinity_shortdescription: "Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın."
+  artist_shortdescription: Sanatçı ile harika resimler ve tasarımlar yap!
   codeorg_longdescription: Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten eğitimli oyun denebilir.
   codeintl_longdescription: Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten eğitimli oyun denebilir.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -975,3 +987,11 @@ tr-TR:
   compatibility_https_header: "Lütfen HTTPS'i etkinleştirin."
   compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
   compatibility_https_hide_this_warning: Bu uyarıyı gizle
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: kanat çırp
+  infinity_shortcode: inf
+  playlab_shortcode: oynat
+  artist_shortcode: art

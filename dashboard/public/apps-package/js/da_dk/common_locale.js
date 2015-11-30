@@ -385,7 +385,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooFewBlocksMsg":function(d){return "Du bruger alle de nødvendige typer af blokke, men prøv at bruge flere af disse typer blokke til at fuldføre dette puslespil."},
 "tooManyBlocksMsg":function(d){return "Denne opgave kan løses med <x id='START_SPAN'/><x id='END_SPAN'/> blokke."},
 "tooMuchWork":function(d){return "Du fik mig til at gøre en masse arbejde! Kunne du prøve at gentage færre gange?"},
-"toolboxHeader":function(d){return "blokke"},
+"toolboxHeader":function(d){return "Blokke"},
 "toolboxHeaderDroplet":function(d){return "Værktøjskasse"},
 "totalNumLinesOfCodeWritten":function(d){return "I alt: "+common_locale.p(d,"numLines",0,"da",{"one":"1 linje","other":common_locale.n(d,"numLines")+" linjer"})+" af kode."},
 "tryAgain":function(d){return "Prøv igen"},

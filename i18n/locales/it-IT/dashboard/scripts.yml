@@ -674,6 +674,14 @@ it:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: 'Cicli "Mentre"'
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1410,6 +1418,8 @@ it:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
           description_short: Programming
@@ -1424,6 +1434,13 @@ it:
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: 'Cicli "Mentre"'
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1444,13 +1461,13 @@ it:
           Gumball Play Lab: Laboratorio Gioco Gumball
         starwars:
           title: 'Star Wars: Costruisci una galassia con il codice'
-          description_short: Impara a programmare i droidi e crea la tua versione di Star Wars ... in una galassia molto molto lontana.
-          description: Impara a programmare i droidi e crea la tua versione di Star Wars ... in una galassia molto molto lontana.
+          description_short: Impara a programmare i droidi e crea la tua versione di Star Wars ... in una galassia lontana lontana...
+          description: Impara a programmare i droidi e crea la tua versione di Star Wars ... in una galassia lontana lontana...
           Hour of Code 2015: "L'Ora del Codice 2015"
         starwarsblocks:
           title: 'Star Wars: Costruisci una galassia con il codice'
-          description_short: Impara a programmare i droidi e crea la tua versione di Star Wars ... in una galassia molto molto lontana.
-          description: Impara a programmare i droidi e crea la tua versione di Star Wars ... in una galassia molto molto lontana.
+          description_short: Impara a programmare i droidi e crea la tua versione di Star Wars ... in una galassia lontana lontana...
+          description: Impara a programmare i droidi e crea la tua versione di Star Wars ... in una galassia lontana lontana...
           Hour of Code 2015: "L'Ora del Codice 2015"
         minecraft:
           title: Minecraft
@@ -1460,7 +1477,7 @@ it:
         mc:
           title: "Minecraft L'Ora del Codice"
           description_short: Esplora il mondo di Minecraft attraverso il codice
-          description: "Usa i blocchi di codice per vivere con Steve o Alex un'avventura nel mondo di Minecraft"
+          description: Usa i blocchi di codice per avventurarti nel mondo di Minecraft con Steve o Alex
           Hour of Code 2015: "L'Ora del Codice 2015"
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -1469,3 +1486,10 @@ it:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Benvenuto!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Conclusione

@@ -718,7 +718,7 @@ input[type="radio"] {
   vertical-align: text-bottom; }
 
 #prompt-table .instructionsImage {
-  height: 35px;
+  height: 25px;
   vertical-align: text-bottom; }
 
 #prompt-table #prompt2 .instructionsImage {
@@ -2008,9 +2008,6 @@ a.video_link {
   -webkit-border-image: url("/blockly/media/craft/Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
   -o-border-image: url("/blockly/media/craft/Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
   border-image: url("/blockly/media/craft/Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 fill stretch; }
-  .dash_modal #feedbackBlocks {
-    margin-top: 16px;
-    margin-bottom: -35px; }
   .dash_modal .modal-image {
     margin-left: -21px;
     margin-top: -100px;

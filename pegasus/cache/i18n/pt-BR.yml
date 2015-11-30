@@ -12,7 +12,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Você é professor de ciência da computação? Veja outros
     recursos da Semana de Educação em Ciência da Computação</a>'
-  n_have_learned_an_hoc: "<h1>Experimente uma</h1><h2>Hora do Código</h2><h3># tentaram</h3>"
+  n_have_learned_an_hoc: <h1>Experimente uma</h1><h2>Hora do Código</h2><h3># tentaram</h3>
   anybody_can_learn: Qualquer pessoa pode aprender.
   learn_now: Aprenda Agora
   petition_message: Todos os alunos, em todas as escolas, devem ter a oportunidade
@@ -37,8 +37,8 @@
   hoc2014_everyone: Todos
   hoc2014_support: Apoie &#x25BE;
   hoc2014_whatishoc: O que é a Hora do Código?
-  csedweek_map_header: "# Semana de Educação em Ciência da Computação / Hora do Código
-    ao redor do mundo"
+  csedweek_map_header: '# Semana de Educação em Ciência da Computação / Hora do Código
+    ao redor do mundo'
   csedweek_map_signup: Registre seu evento
   csedweek_map_search_placeholder: Pesquisar eventos da Hora do Código
   csedweek_map_search_search: Pesquisar
@@ -68,7 +68,7 @@
     instruções se-então e algoritmos básicos.
   all_ages: Todas as idades
   beginner: Iniciante
-  n_participants: "# participantes"
+  n_participants: '# participantes'
   go: Ir
   thank_you_: Obrigado!
   congratulations: Parabéns!
@@ -143,8 +143,6 @@
   twitter_teach_cs: Por que mais escolas não ensinam ciência da computação? Podemos
     dar um jeito nisso. http://youtu.be/2DxWIxec6yo. Acesse http://code.org/ para
     saber mais.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Saiba mais</a> sobre os
-    prêmios para educadores.
   learn_hoc: Aprenda programação com a Hora do Código
   beyond_hoc: Além da Hora do Código
   what_gender: Você é menino ou menina?
@@ -152,12 +150,12 @@
   boy: Menino
   help_recruit_coders: Ajude-nos a recrutar mais programadores para a sua equipe!
   help_recruit: Ajude-nos a recrutar mais programadores!
-  lines_of_code: "<b>#</b> LINHAS DE CÓDIGO ESCRITAS ATÉ A DATA."
-  lines_of_code_alt: "<b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ESTUDANTES"
+  lines_of_code: <b>#</b> LINHAS DE CÓDIGO ESCRITAS ATÉ A DATA.
+  lines_of_code_alt: <b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ESTUDANTES
   who_has_done_hoc: 'Quem participou da #HourOfCode? @codeorg'
   hoc_leaderboards: Classificações da Hora do Código
-  students_and_lines: "%{students} estudantes têm participado da Hora do Código e
-    escreveram %{lines} linhas de programação."
+  students_and_lines: '%{students} estudantes têm participado da Hora do Código e
+    escreveram %{lines} linhas de programação.'
   start_hoc: Comece a Hora do Código agora
   contact_form_topic_press: Imprensa/mídia (entrevista ou falando de compromisso)
   stats_nina: '"Todos os dias produziram os mesmos resultados&mdash; 100% de comprometimento."
@@ -229,7 +227,7 @@
     Adam, professor
   homepage_hero_text_stat_loc: 2,5 milhões de garotas se inscreveram para aprender
     no Code Studio
-  homepage_hero_text_stat_students: "#student_count contas de aluno no Code Studio"
+  homepage_hero_text_stat_students: '#student_count contas de aluno no Code Studio'
   homepage_hero_text_stat_served: 'A hora do código: #served já experimentaram'
   homepage_slot_text_hoc: A Hour of Code
   homepage_slot_text_frozen: Frozen com Anna e Elsa
@@ -239,7 +237,7 @@
   homepage_slot_text_shop: Loja
   homepage_slot_text_flappy: Código do Flappy bird
   homepage_action_text_hoc: Uma Hora do Código para cada aluno.
-  homepage_action_text_num_served: "# served"
+  homepage_action_text_num_served: '# served'
   homepage_action_text_join_us: Participe
   homepage_action_text_sign_up: Inscreva-se
   homepage_action_text_try_it: Experimente
@@ -263,7 +261,7 @@
   homepage_slot_text_blurb_hoc: Qualquer pessoa pode aprender. Comece hoje mesmo
   homepage_slot_text_link_hoc: Tente a Hora do Código
   homepage_slot_text_link_host: Organize um evento da Hora do Código
-  homepage_slot_text_link_hocserved: "# served"
+  homepage_slot_text_link_hocserved: '# served'
   homepage_solot_text_link_volunteer: Voluntário da Hora do Código
   homepage_slot_text_title_students: Alunos
   homepage_slot_text_blurb_students: Explore todos os nossos tutoriais
@@ -356,10 +354,10 @@
   volunteer_engineer_submission_subtitle_generic: 'Um total de 100.000 professores
     vão sediar uma Hora do Código em suas salas de aula este ano, de 7 a 13 dezembro
     de 2015. Eles querem a sua ajuda! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} professores querem
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} professores querem
     voluntários apaixonados por ciências da computação para ajudar com suas Horas
     do Código neste mês de dezembro.<br>%{num_volunteers} voluntários já se inscreveram.
-    Junte-se a eles."
+    Junte-se a eles.'
   volunteer_engineer_submission_intro_background: A Hora do Código é um movimento
     global que oferece uma introdução de uma hora à ciência da computação e que atinge
     dezenas de milhões de estudantes em mais de 180 países. Participe você também
@@ -374,6 +372,9 @@
   volunteer_engineer_submission_intro_signup: Forneça as seguintes informações se
     você é um estudante de ciência da computação ou um profissional de software. Os
     campos marcados com um <span class="form-required-field">*</span> são obrigatórios.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Informações compartilhadas com professores
     no mapa de voluntários
   volunteer_engineer_submission_field_name: Nome
@@ -706,11 +707,11 @@
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
   dashboard_announcements: Anúncios
   dashboard_announce_view_all: Ver todos
-  dashboard_announce_hoc: "<b>9 de novembro 2015</b> - Um novo tutorial da Hora do
+  dashboard_announce_hoc: '<b>9 de novembro 2015</b> - Um novo tutorial da Hora do
     Código está disponível, trazendo o novo filme de Star Wars: O Despertar da Força.
     Trabalhe junto com Rey para guiar o novo androide, BB-8, em uma missão. Então,
     junte-se a Leia para criar e compartilhar seu próprio jogo em uma galáxia muito,
-    muito distante."
+    muito distante.'
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
@@ -718,24 +719,35 @@
   learn_sign_up_description: Cadastre-se para participar da Hora do Código durante
     a Semana da Educação em Ciência da Computação
   learn_sign_up_button: Inscreva-se
-  learn_videos_watch: Assista a esse vídeo inspirador com sua classe
-  learn_videos_show: Mostre esse vídeo inspirador para sua classe
+  learn_videos_watch: Assista a esse vídeo inspirador com sua turma
+  learn_videos_show: Mostre esse vídeo inspirador para sua turma
   learn_videos_before_hoc: Assista a um vídeo inspirador antes de sua Hora do Código
   learn_educator_resources_description: Aprenda como ensinar uma Hora do Código
   learn_educator_resources_button: Recursos para educadores
   learn_are_you_educator: Você é um educador? Saiba <a href="http://hourofcode.com/resources/how-to">como
     ensinar uma Hora do Código</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Saiba mais</a> sobre os
+    prêmios para educadores.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Experimente nossos novos tutoriais da Hora do Código
   hoc2014_try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão
     beta
   hoc2014_try_scrat: Angry Birds, PvZ e Scrat
   hoc2014_try_frozen: O Artista com Anna e Elsa, do filme Frozen
-  carousel_heading_codeorg: Tutoriais por Code.org
-  carousel_heading_3rd_party: Tutoriais por terceiros
-  carousel_heading_third_party: Tutoriais por terceiros
+  carousel_heading_codeorg: Tutoriais da Code.org
+  carousel_heading_codeorg_any_device: Tutoriais da Code.org (para todos os dispositivos)
+  carousel_heading_3rd_party: Tutoriais de terceiros
+  carousel_heading_third_party: Tutoriais de terceiros
   carousel_heading_international: Tutoriais no seu idioma
   carousel_heading_domestic: Tutoriais disponíveis em inglês
-  carousel_heading_beginners: Tutoriais para iniciantes
+  carousel_heading_beginners: Tutoriais para alunos do Ensino Fundamental
   carousel_heading_javascript: Tutoriais que ensinam JavaScript
   carousel_heading_unplugged: Não tem dispositivos eletrônicos nem Internet? Conheça
     as atividades de ciência da computação "offline"
@@ -804,6 +816,8 @@
   projguts_name: Pedra, papel, tesoura
   hourofcode_name: Espaço reservado para um novo code.org/hoc
   playlab_name: Laboratório
+  infinity_name: Laboratório infinito
+  artist_name: Artista
   codeorg_gradelevel: De 4 a 104 anos
   codeintl_gradelevel: De 4 a 104 anos
   thinkersmithspanish_gradelevel: Todas as idades
@@ -845,6 +859,8 @@
   frozen_gradelevel: A partir de 8 anos
   starwars_gradelevel: A partir de 6 anos
   playlab_gradelevel: De 4 a 104 anos
+  infinity_gradelevel: De 4 a 104 anos
+  artist_gradelevel: De 4 a 104 anos
   codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
   codeintl_platformtext: Navegadores Web modernos, smartphones, tablets
   thinkersmithspanish_platformtext: Offline
@@ -939,12 +955,15 @@
     representar informações
   kodableunplugged_shortdescription: Um divertido exercício offline
   projguts_shortdescription: Conheça a modelagem e a simulação com pedra/papel/tesoura
-  hourofcode_shortdescription: Espaço reservado para um novo code.org/hoc
+  hourofcode_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry Birds!
   frozen_shortdescription: Use a programação para explorar a mágica e a beleza do
     gelo com Anna e Elsa.
   starwars_shortdescription: Aprenda a programar droids, e crie seu próprio jogo do
     Star Wars em uma galáxia muito, muito distante.
   playlab_shortdescription: Crie uma história ou um jogo no Laboratório!
+  infinity_shortdescription: Use o Laboratório para criar uma história ou um jogo
+    usando personagens da Disney Infinity.
+  artist_shortdescription: Faça desenhos e figuras legais com o Artista!
   codeorg_longdescription: Aprenda os conceitos básicos de Ciência da Computação com
     a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo
     e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants
@@ -1448,19 +1467,11 @@
     em %{https_date}. Você não vai poder acessar a Code.org após essa data. <a href='%{it_requirements_url}'>Clique
     aqui</a> para aprender a habilitar o HTTPS para a Code.org.
   compatibility_https_hide_this_warning: Ocultar este aviso
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  infinity_name: Infinity Play Lab
-  artist_name: Artist
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: bata asas
   infinity_shortcode: inf
-  playlab_shortcode: play
+  playlab_shortcode: jogue
   artist_shortcode: art

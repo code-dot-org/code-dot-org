@@ -672,6 +672,14 @@ es:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: Bucles While
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1408,6 +1416,8 @@ es:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
           description_short: Programming
@@ -1422,6 +1432,13 @@ es:
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Bucles While
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1441,14 +1458,14 @@ es:
           description: ¡Crear una historia o haz un juego con el laboratorio de juego de Gumball!
           Gumball Play Lab: Laboratorio de juego de Gumball
         starwars:
-          title: 'Star Wars: Contruyendo una Galaxia con Code'
-          description_short: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia, muy lejana.
-          description: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia, muy lejana.
+          title: 'Star Wars: Contruyendo una Galaxia con Código'
+          description_short: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
+          description: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
           Hour of Code 2015: Hora del Código 2015
         starwarsblocks:
-          title: 'Star Wars: Contruyendo una Galaxia con Code'
-          description_short: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia, muy lejana.
-          description: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia, muy lejana.
+          title: 'Star Wars: Contruyendo una Galaxia con Código'
+          description_short: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
+          description: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
           Hour of Code 2015: Hora del Código 2015
         minecraft:
           title: Minecraft
@@ -1456,9 +1473,9 @@ es:
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: "Minecraft L'Ora dei Codici"
-          description_short: Prófaðu Minecraft með forritun
-          description: Usa i blocchi di codice per far vivere a Steve o a Alex un avventura nel mondo di Minecraft
+          title: Hora de Código de Minecraft
+          description_short: Дослідимо світ Майнкрафту через код
+          description: Use blocos de código para levar Steve ou Alex para uma aventura através deste mundo de Minecraft
           Hour of Code 2015: Hora del Código 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -1467,3 +1484,10 @@ es:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: ¡Bienvenido!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Cierre

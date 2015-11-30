@@ -236,6 +236,7 @@
         playlab: 앱 만들기
         artist: 아무거나 그리기
         calculate: Calculate Something
+        applab: 앱 만들기
     user:
       classroom: 선생님 홈페이지
       district_dashboard: 대시보드 구역
@@ -413,9 +414,12 @@
       지원에 감사 드립니다.
     help_from_html: 구글, 마이크로소프트, 페이스북, 트위터의 컴퓨터과학자들이 이 튜토리얼을 만들었습니다.
     help_from_html_old: 구글, 마이크로 소프트, 페이스북, 트위터의 엔지니어들이 이 자료들을 만드는데 도움을 주었습니다.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. All Rights Reserved.
+    art_from_html: Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm.
+      All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney.
+      All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century
+      Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482;
+      &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved

@@ -27,14 +27,11 @@ if (!window.dashboard) {
  *   }>
  * }}
  */
-dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId) {
+dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId, scriptName) {
   stageData = stageData || {};
-  // Progress Data is only provided for signed in users. Otherwise, client gets progress data from cookie
-  if (progressData === null) {
-    progressData = getSummarizedProgressForAnonymousUser();
-  }
+  progressData = progressData || {levels: {}};
 
-  var levelProgress = progressData.levels || {};
+  var clientLevelProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
 
   $('.header_text').first().text(stageData.title);
   if (stageData.finishLink) {
@@ -56,7 +53,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   }
   var progressContainer = $('.progress_container');
   stageData.levels.forEach(function(level, index, levels) {
-    var status = (levelProgress[level.id] || {}).status || 'not_tried';
+    var status = mergedActivityCssClass((progressData.levels[level.id] || {}).result, clientLevelProgress[level.id]);
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
     var href = level.url;
     if (userId) {
@@ -153,7 +150,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
         url: "/popup/stats",
         data: {
           script_id: stageData.script_id,
-          script_level_id: currentLevelId,
+          current_level_id: currentLevelId,
           user_id: userId,
           section_id: sectionId
         }, success: function (result) {
@@ -415,34 +412,49 @@ dashboard.header.updateTimestamp = function () {
 };
 
 /**
- * Get the user progress for an anonymous user from the client side cookie
- * @return Object that is a representation of the user's individual level progress
+ * See ApplicationHelper#activity_css_class.
+ * @param result
+ * @return {string}
  */
-function getSummarizedProgressForAnonymousUser () {
-  var summarizedProgress = {};
-  var levelProgress = {};
+function activityCssClass(result) {
+  if (!result) return 'not_tried';
+  if (result >= 1000) return 'submitted';
+  if (result >= 30) return 'perfect';
+  if (result >= 20) return 'passed';
+  return 'attempted';
+}
 
-  summarizedProgress.lines = dashboard.clientState.lines();
-
-  var allLevelsProgress = dashboard.clientState.allLevelsProgress();
-  for(var level in allLevelsProgress) {
-    levelProgress[level] = {};
-    var individualLevelProgress = allLevelsProgress[level] || -1;
-
-    if (individualLevelProgress >= 1000) {
-      levelProgress[level].status = 'submitted';
-    } else if (individualLevelProgress >= 30) {
-      levelProgress[level].status = 'perfect';
-    } else if (individualLevelProgress >= 20) {
-      levelProgress[level].status = 'passed';
-    } else if (individualLevelProgress > 0) {
-      levelProgress[level].status = 'attempted';
-    } else {
-      levelProgress[level].status = 'not attempted';
-    }
+/**
+ * Returns the "best" of the two results, as defined in apps/src/constants.js.
+ * Note that there are negative results that count as an attempt, so we can't
+ * just take the maximum.
+ * @param {Number} a
+ * @param {Number} b
+ * @return {string} The result css class.
+ */
+function mergedActivityCssClass(a, b) {
+  a = a || 0;
+  b = b || 0;
+  if (a === 0) {
+    return activityCssClass(b);
   }
+  if (b === 0) {
+    return activityCssClass(a);
+  }
+  return activityCssClass(Math.max(a, b));
+}
 
-  summarizedProgress.levels = levelProgress;
+function populateProgress(scriptName) {
+  var scriptProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
 
-  return summarizedProgress;
+  // Aggregate progress from server and client
+  $.each(scriptProgress, function (level_id, result) {
+    var level_link = $('#level-' + level_id);
+    var status = mergedActivityCssClass(result, level_link.data('result'));
+
+    if (!level_link.hasClass(status)) {
+      // Clear the existing class and replace
+      level_link.attr('class', 'level_link ' + status);
+    }
+  });
 }

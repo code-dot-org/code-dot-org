@@ -672,6 +672,14 @@ en:
           Introduction to Conditional Logic: crwdns51248:0crwdne51248:0
           Compound Conditional Logic: crwdns51249:0crwdne51249:0
           Digital Assistant Project: crwdns51250:0crwdne51250:0
+          While Loops: crwdns54697:0crwdne54697:0
+          Loops and Simulations: crwdns54698:0crwdne54698:0
+          Introduction to Arrays: crwdns54699:0crwdne54699:0
+          Image Scroller with Key Events: crwdns54700:0crwdne54700:0
+          Processing Arrays: crwdns54701:0crwdne54701:0
+          Functions with Return Values: crwdns54702:0crwdne54702:0
+          Canvas and Arrays in Apps: crwdns54703:0crwdne54703:0
+          "Practice PT: Create": crwdns54704:0crwdne54704:0
         algebraPD3:
           title: crwdns38396:0crwdne38396:0
           description: crwdns37980:0crwdne37980:0
@@ -1388,6 +1396,8 @@ en:
           Chunk 5 Overview: crwdns51285:0crwdne51285:0
           Practice Performance Task: crwdns51286:0crwdne51286:0
           Challenge Overview: crwdns51287:0crwdne51287:0
+          Complete the Challenge: crwdns54705:0crwdne54705:0
+          Share out and Submit: crwdns54706:0crwdne54706:0
         cspunit3temp:
           title: crwdns51288:0crwdne51288:0
           description_short: crwdns51289:0crwdne51289:0
@@ -1402,6 +1412,13 @@ en:
           Key Events with Image Scroller: crwdns51298:0crwdne51298:0
           Processing Arrays: crwdns54311:0crwdne54311:0
           Functions with Return Values: crwdns54312:0crwdne54312:0
+          Practice Create Performance Task: crwdns54707:0crwdne54707:0
+          While Loops: crwdns54708:0crwdne54708:0
+          Loops and Simulations: crwdns54709:0crwdne54709:0
+          Introduction to Arrays: crwdns54710:0crwdne54710:0
+          Image Scroller with Key Events: crwdns54711:0crwdne54711:0
+          Canvas and Arrays in Apps: crwdns54712:0crwdne54712:0
+          "Practice PT: Create": crwdns54713:0crwdne54713:0
         CSP-Unit3-Support:
           title: crwdns51299:0crwdne51299:0
           description_short: crwdns51300:0crwdne51300:0
@@ -1447,3 +1464,10 @@ en:
           Challenge Overview: crwdns54661:0crwdne54661:0
           Complete the Challenge: crwdns54662:0crwdne54662:0
           Share out and Submit: crwdns54663:0crwdne54663:0
+        ScienceP3OLPT3:
+          title: crwdns54747:0crwdne54747:0
+          description_short: crwdns54748:0crwdne54748:0
+          description: crwdns54749:0crwdne54749:0
+          Welcome!: crwdns54750:0crwdne54750:0
+          Thinking About Implementation: crwdns54751:0crwdne54751:0
+          Wrap-Up: crwdns54752:0crwdne54752:0
