@@ -53,6 +53,7 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommended
   this.xml = this.generateXMLForBlocks_(blocksToDisplay);
 
   this.div = document.createElement('div');
+  this.div.setAttribute('id', 'feedbackBlocksContainer');
   this.html = readonly({
     app: options.app,
     assetUrl: studioApp.assetUrl,
@@ -83,6 +84,14 @@ FeedbackBlocks.prototype.show = function() {
     doc.write(this.html);
     doc.close();
   }
+};
+
+FeedbackBlocks.prototype.hideDiv = function() {
+  this.div.className += " hidden";
+};
+
+FeedbackBlocks.prototype.revealDiv = function() {
+  this.div.className = this.div.className.replace(/\hidden\b/,'');
 };
 
 /**
