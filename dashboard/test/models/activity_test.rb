@@ -1,5 +1,6 @@
 require 'test_helper'
 
+require 'async_progress_handler'
 require 'aws-sdk'
 require 'fake_sqs/test_integration'
 require 'securerandom'
@@ -82,7 +83,7 @@ class ActivityTest < ActiveSupport::TestCase
       # the time of the write.
       new_time = time + 1
       Timecop.freeze(new_time) do
-        process_pending_queue_messages(@queue_url, Activity::AsyncHandler.new)
+        process_pending_queue_messages(@queue_url, AsyncProgressHandler.new)
       end
     else
       new_time = time
