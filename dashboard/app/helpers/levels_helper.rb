@@ -427,7 +427,7 @@ module LevelsHelper
       else
         script
       end
-    elsif @level.is_project_level && data_t("game.name", @game.name)
+    elsif @level.try(:is_project_level) && data_t("game.name", @game.name)
       data_t "game.name", @game.name
     else
       @level.key
