@@ -14,7 +14,7 @@ social:
 max_age: 60
 ---
 -cert_id = params[:i]
--cert_script = params[:s]
+-cert_script = params[:s] ? Base64.urlsafe_decode64(params[:s]) : ScriptInfo::HOC_NAME
 
 -if cert_id
   -share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"
@@ -50,8 +50,8 @@ max_age: 60
     %h1=I18n.t :congratulations_on_completing_hoc
 
   -if request.locale == 'ar-SA'
-    %h2 
-      أنهيت ساعة البرمجة ! العودة إلى 
+    %h2
+      أنهيت ساعة البرمجة ! العودة إلى
       %a{:href=>"http://click-and-share.com/hour_of_code/data-capture/"} كرتون نتورك
 
   #toprow

@@ -32,6 +32,7 @@ class ScriptInfo
     # If adding a script here,
     # you must also update the Data_HocTutorials gsheet so the end of script API works
     [
+        nil,
         HOC_2013_NAME,
         HOC_NAME,
         FROZEN_NAME,

@@ -7,13 +7,13 @@ theme: none
 -if ! request.params['course'].nil? && ! request.params['course'].empty?
   -course = request.params['course']
 -else
-  -course = 'hoc'
+  -course = ScriptInfo::HOC_NAME
 
 %div.hide-print
   -case course
     -when '20-hour'
       %h1 K-8 Intro to Computer Science Course Certificates
-    -when 'hoc', 'hourofcode'
+    -when 'hourofcode'
       %h1 Hour of Code Certificates
     -when 'artist'
       %h1 Artist Certificates
@@ -31,6 +31,8 @@ theme: none
       %h1 Play Lab Certificates
     -when 'flappy'
       %h1 Flappy Bird Certificates
+    -when 'mc'
+      %h1 Minecraft Certificates
     -else
       %h1 Code.org Certificates
 

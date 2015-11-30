@@ -31,6 +31,13 @@ class CertificateImageTest < Minitest::Test
     assert_equal 'blank_certificate.png', certificate_template_for_course('course4')
   end
 
+  def test_course_fallback_titles
+    assert_equal 'Course 1', fallback_course_title_for('course1')
+    assert_equal 'Course 2', fallback_course_title_for('course2')
+    assert_equal 'Course 3', fallback_course_title_for('course3')
+    assert_equal 'Course 4', fallback_course_title_for('course4')
+  end
+
   def test_image_generation
     mc_certificate_image = create_course_certificate_image('Robot Tester', 'mc')
     assert_image mc_certificate_image, 1754, 1235, 'JPEG'
