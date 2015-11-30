@@ -59,9 +59,9 @@
               = render partial: 'shared/user_header_ajax'
 
 - if script_level
-  - user_progress = current_user == nil ? 'null' : summarize_user_progress(script_level.script, @user || current_user).to_json
+  - user_progress = current_user == nil ? 'null' : summarize_user_progress(script_level.script, @user || current_user, true).to_json
 
   :javascript
     //<![CDATA[
-    dashboard.buildHeader(#{script_level.stage.summarize.to_json}, #{user_progress}, #{script_level.level_id}, #{@user.try(:id) || 'null'}, #{@section.try(:id) || 'null'}, "#{script.name}")
+    dashboard.buildHeader(#{script_level.stage.summarize.to_json}, #{user_progress}, #{script_level.level_id}, #{@user.try(:id) || 'null'}, #{@section.try(:id) || 'null'}, "#{script.name}", #{script_level.position})
     //]]>
