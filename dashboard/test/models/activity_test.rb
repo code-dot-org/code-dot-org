@@ -1,6 +1,5 @@
 require 'test_helper'
 
-require 'async_progress_handler'
 require 'aws-sdk'
 require 'fake_sqs/test_integration'
 require 'securerandom'
