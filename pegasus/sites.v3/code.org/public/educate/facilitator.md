@@ -16,7 +16,7 @@ The ideal facilitator is an enthusiastic supporter of computer science education
 <br />
 
 **Are you a district administrator or representative?**  
-[Apply](/educate/districts) for a district partnership to prepare a Facilitator (chosen by the district) to deliver professional development to your district's teachers.
+[Apply](/educate/districts) for a district partnership to prepare a facilitator to deliver professional development to your district's teachers.
 
 [<button>District Partnership</button>](/educate/districts)
 
@@ -57,8 +57,10 @@ Participants will take part in a facilitator development program  that will cove
 ## Facilitator's commitment
 
 - Join a nationwide community of leaders and facilitators in the CS education space.
+- Complete 2-5 hours of pre-work before the Facilitation Summit.
+- Attend the 2.5 day Facilitator Summit May 20-22, 2016 (location TBD).
 - Participate in ongoing, in-person and online facilitator development.
-- Deliver the minimum professional development required for your Code.org curriculum area. **See individual program details below.**
+- Deliver the minimum professional development required for your Code.org curriculum area. **See individual programs for details.**
 - Help Code.org design the future of profesisonal learning for thousands of new CS educators across the US and beyond.
 
 ## How do you apply?
