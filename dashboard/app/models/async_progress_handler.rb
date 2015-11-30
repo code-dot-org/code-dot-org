@@ -4,7 +4,7 @@
 class AsyncProgressHandler
 
   # Returns a thread-local SQS queue for handle asynchronous user progress operations
-  # (Activity and UserLevel updates.) The queue is hread-local because the SQS client
+  # (Activity and UserLevel updates.) The queue is thread-local because the SQS client
   # is not thread-safe.
   def AsyncProgressHandler.progress_queue
     Thread.current['progress_queue'] ||=
