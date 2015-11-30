@@ -20,6 +20,7 @@ options =  {
   backtrace: true,   # Log uncaught exceptions to ‘[app_name].log’ in the pid-file directory.
   monitor: true,     # Monitor the program and restart crashed instances.
   log_output: true,  # Log the output to process_queues.output in the config directory.
+  multiple: true,    # Allow multiple instances of the queue processor on one machine.
   ARGV: argv
 }
 
@@ -32,5 +33,4 @@ if ARGV[0] == 'start'
   puts " * Logging to #{log_dir}/process_queues.output"
 end
 
-
-Daemons.run('process_queues', options)
+Daemons.run("#{pwd}/process_queues", options)
