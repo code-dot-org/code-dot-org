@@ -265,10 +265,10 @@ Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
   }
 end
 
-Then /^I wait to see a congrats dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+Then /^I wait to see a congrats dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   steps %{
     Then I wait to see a ".congrats"
-    And element ".congrats" contains text "#{expectedText}"
+    And element ".congrats" contains text "#{expected_text}"
   }
 end
 
@@ -607,7 +607,7 @@ end
 
 Then /^my query params match "(.*)"$/ do |matcher|
   wait = Selenium::WebDriver::Wait.new(timeout: 30)
-  wait.until { /#{matcher}/.match(@browser.execute_script("return location.search")) }
+  wait.until { /#{matcher}/.match(@browser.execute_script("return location.search;")) }
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
