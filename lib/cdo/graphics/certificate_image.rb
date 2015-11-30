@@ -42,7 +42,7 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
     # assuming that cert links for non-HoC / 20-hour courses will not exposed outside of
     # code paths that pass along the course title. Throw if assumption invalid, if detected,
     # re-implement course -> course_title mapping or find way to pass along
-    raise "No course title specified for #{course}." unless course_title
+    course_title ||= fallback_course_title_for(course)
 
     image = Magick::Image.read(pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file)).first
 
@@ -87,6 +87,23 @@ end
 
 def prefilled_title_course?(course)
   ScriptInfo.hoc?(course) || ScriptInfo.twenty_hour?(course)
+end
+
+def fallback_course_title_for(course)
+  case course
+    when 'artist'
+      'Artist'
+    when 'course1'
+      'Course 1'
+    when 'course2'
+      'Course 2'
+    when 'course3'
+      'Course 3'
+    when 'course4'
+      'Course 4'
+    else
+      course
+  end
 end
 
 def certificate_template_for_course(course)

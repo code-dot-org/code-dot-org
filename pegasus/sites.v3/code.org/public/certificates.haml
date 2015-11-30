@@ -3,17 +3,9 @@ Title: Print Certificates
 ---
 -personalized = (request.site == 'uk.code.org') ? 'personalised' : 'personalized'
 
--course = request.params['course'] || nil
+-course = request.params['course'] || ScriptInfo::HOC_NAME
 -course_name = course == "20-hour" ? "K-8 Intro to Computer Science Course" : "Hour of Code"
--if course == "20-hour" || course == "20-hour"
-  -small_certificate_image_url = "/images/fit-240/20hours_certificate.jpg"
--elsif course == "hoc" || course == "hourofcode" || course == nil
-  -small_certificate_image_url = "/images/fit-240/hour_of_code_certificate.jpg"
--elsif course == "mc"
-  -small_certificate_image_url = "/images/fit-240/MC_Hour_Of_Code_Certificate.jpg"
--else
-  -small_certificate_image_url = "/images/fit-240/blank_certificate.jpg"
-= course
+-small_certificate_image_url = "/images/fit-240/#{certificate_template_for_course(course)}"
 
 %h1 Print a batch of certificates
 %div.clear

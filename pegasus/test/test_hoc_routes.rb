@@ -38,7 +38,7 @@ class HocRoutesTest < Minitest::Test
 
     it 'ends given tutorial, providing script ID to congrats page' do
       assert_redirects_from_to '/api/hour/finish/mc', CDO.code_org_url('/congrats')
-      assert_includes @pegasus.last_request.url, '&s=mc'
+      assert_includes @pegasus.last_request.url, "&s=#{CGI::escape(Base64.urlsafe_encode64('mc'))}"
     end
 
     it 'has certificate share page' do
@@ -48,6 +48,13 @@ class HocRoutesTest < Minitest::Test
 
       invalid_cert_id = 'abcdefg12345'
       assert_not_found_get CDO.code_org_url("/certificates/#{invalid_cert_id}")
+    end
+
+    it 'has certificates pages for different scripts' do
+      assert_successful_get CDO.code_org_url('/certificates?course=20-hour')
+      assert_successful_get CDO.code_org_url('/certificates?course=mc')
+      assert_successful_get CDO.code_org_url('/certificates?course=course1')
+      assert_successful_get CDO.code_org_url('/certificates?course=Hour%20of%20Code')
     end
 
     it 'serves png, jpg, jpeg certificate images, not others' do
@@ -76,7 +83,7 @@ class HocRoutesTest < Minitest::Test
       assert after_start_row[:started_at]
 
       assert_redirects_from_to '/api/hour/finish/mc', CDO.code_org_url('/congrats')
-      assert_includes @pegasus.last_request.url, '&s=mc'
+      assert_includes @pegasus.last_request.url, "&s=#{CGI::escape(Base64.urlsafe_encode64('mc'))}"
       assert_includes @pegasus.last_request.url, '&co=testcompany'
 
       after_end_row = get_session_hoc_activity_entry
