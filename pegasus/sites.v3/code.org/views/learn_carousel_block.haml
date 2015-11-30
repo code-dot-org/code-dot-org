@@ -8,7 +8,7 @@
 
 .container-fluid
   .row-fluid
-    .courseblock-tall
+    .courseblock-tall{id: "miniblock-#{id}"}
       %a{href: "/api/hour/begin/#{launch_code}", target: "_blank"}
         .imgspan
           %img{src: "/shared/images/courses/logo_tall_#{id}.jpg", style: "width: 100%;"}
@@ -27,7 +27,7 @@
           %br
           %a{href: short_url, style: "font-family: 'Gotham 4r', sans-serif;", target: "_blank"}
             = short_url
-        #gobutton{style: "position: relative;"}
+        %div{id: "gobutton-#{id}", style: "position: relative;"}
           %a{href: "/api/hour/begin/#{launch_code}", target: "_blank"}
             %button{style: "float: right; margin: 15px 10px 0 0;"}= I18n.t(:go)
 
@@ -39,6 +39,7 @@
     return check; }
 
   // If mobile Star Wars block goes to blockly version
-  if (window.mobilecheck()) {
-    $('#gobutton a').attr("href", "/api/hour/begin/starwarsblocks");
+  if ("#{id}" == "starwars" && window.mobilecheck()) {
+    $('#miniblock-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
+    $('#gobutton-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
   }
