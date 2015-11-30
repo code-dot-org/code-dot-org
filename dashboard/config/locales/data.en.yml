@@ -114,6 +114,8 @@ en:
         'StudioEC': 'Play Lab'
         'Applab': 'App Lab'
         'NetSim': 'Internet Simulator'
+        'Custom': 'Artist'
+        'CustomStudio': 'Play Lab'
     trophy:
       name:
         'Bronze': 'Bronze'
