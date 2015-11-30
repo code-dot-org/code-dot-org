@@ -95,11 +95,12 @@
     valid_password: סיסמה תקינה!
     invalid_password: הסיסמא חייבת להכיל לפחות 6 תווים
     mismatch_password: שתי הסיסמאות שהזנת אינן תואמות
-    student_terms: ' ידי הגשת טופס זה שהורי הרשו לי להשתמש בשירותים Code.org. <br/>
-      עבור משתמשים מתחת לגיל 13, כתובות איי מייל אינן שמורות בצורה שתאפשר יצירת קשר
-      להם.'
-    teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
-      of service</a>.
+    student_terms: אני מסכים לשמור על התנאים של Code.org. אם אני מתחת לגיל 13, ההורים
+      שלי, או האפוטרופוס החוקי מאשר לי להשתמש בשירותים של Code.org. כתובות הדוא"ל
+      לא נשמרות בטופס באופן שמאפשר לנו ליצור באמצעותן קשר עם המשתמשים.
+    teacher_terms: |
+      אני מסכים להיות כפוף לתנאים של Code.org.
+      קישור: http://code.org/tos.
     additional_information: יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך.
   signin_form:
     title: כבר יצרת משתמש? היכנס למערכת
@@ -252,6 +253,7 @@
         playlab: צור אפליקציה
         artist: צייר משהו
         calculate: Calculate Something
+        applab: צור אפליקציה
     user:
       classroom: דף הבית של המורה
       district_dashboard: District Dashboard
@@ -275,8 +277,9 @@
       prize_us_only: (תלמידי ארצות-הברית בלבד!)
       prizes_link: מידע נוסף
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: |
+      תשובה
+    for_teachers_only: למורים בלבד
     title:
       one: 'המורה שלך :'
       other: 'המורים שלך:'
@@ -285,16 +288,16 @@
       remove: האם אתה בטוח שברצונך להסיר את המורה הזה?
     tools: כלים למורה
     followers:
-      section: 'Section:'
+      section: 'סעיף:'
       stages: 'שלב(ים) להצגה:'
       show_past: 'הצג פעילות התלמיד (%{bullet_html}) בעבר:'
       levels_key: מפתח רמות
-      perfect: Completed, perfect
+      perfect: הושלם, מושלם
       completed: הושלם, אך היה שימוש בבלוקים רבים מדי
       tried: ניסה אך לא השלים
       not_tried: טרם ניסה
       activity: Indicates student activity in the last %{hours} %{plural}
-      no_section: No assigned section
+      no_section: אין סעיף שהוקצה
       trophies: גביעי ניצחון
     students:
       name: שם
@@ -316,16 +319,16 @@
       vist: Ask your students to visit
       section_code: 'and enter their section-code:'
       first_please: First, please %{add_section}
-      for: For
-      enter: 'enter:'
+      for: בשביל
+      enter: 'הזן:'
     sections:
-      add: Add section
+      add: הוספת סעיף
       manage: נהל אגפים
-      section: Section
-      students: Students
+      section: סעיף
+      students: סטודנטים
       section_code: Section Code
       add_section_code: Add Students Section-Code
-      secret: Secret type
+      secret: סוג סודי
       grade: Grade
       course: קורס
       rename: שינוי שם
@@ -342,11 +345,11 @@
       מכיוון שלא נרשמת עם כתובת מייל'
     student_teacher_disassociated: '% {teacher_name} הוסר כמורה של % {student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: הצגת תשובה
       student: תלמיד
       viewing_solution: Viewing Solution
       try_it_yourself: נסה זאת בעצמך
-      section: Section
+      section: סעיף
       example: Example Solution
       example_with_number: Example Solution %{solution_number}
       submitted_on: Submitted on %{date}
@@ -567,7 +570,7 @@
     caption_time_ago: '%{time_ago} ago'
     header: גלריה
     header_playlab: Play Lab
-    header_artist: Artist
+    header_artist: אמן
   landing:
     prerelease: This course is in <span class='betatext'>beta</span>.  This means
       it is not the final version of the course, and is subject to revision as feedback

@@ -737,6 +737,14 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: While Loops
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1555,6 +1563,8 @@
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
           description_short: Programming
@@ -1573,6 +1583,13 @@
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: While Loops
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1593,17 +1610,17 @@
           Gumball Play Lab: Gumball Play Lab
         starwars:
           title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
+          description_short: Научите да програмирате дроиде и креирате сопствену игру
+            Ратова звезда у галаксији далеко, далеко.
+          description: Научите да програмирате дроиде и креирате сопствену игру Ратова
+            звезда у галаксији далеко, далеко.
           Hour of Code 2015: Hour of Code 2015
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
+          description_short: Научите да програмирате дроиде и креирате сопствену игру
+            Ратова звезда у галаксији далеко, далеко.
+          description: Научите да програмирате дроиде и креирате сопствену игру Ратова
+            звезда у галаксији далеко, далеко.
           Hour of Code 2015: Hour of Code 2015
         minecraft:
           title: Minecraft
@@ -1612,7 +1629,7 @@
           Craft: Craft
         mc:
           title: Minecraft sat programiranja
-          description_short: Explore a Minecraft world through code
+          description_short: Истражите Мајнкрафт свет кроз кôд
           description: Use blocks of code to take Steve or Alex on an adventure through
             this Minecraft world
           Hour of Code 2015: Hour of Code 2015
@@ -1623,3 +1640,10 @@
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Welcome!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Wrap-Up

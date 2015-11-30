@@ -116,7 +116,6 @@ is-IS:
   hoc_is_here: '#HourOfCode er hér - kíktu á það! @codeorg'
   just_did_hoc: 'Ég var að klára #HourOfCode - kíktu á það! @codeorg'
   twitter_teach_cs: Af hverju kenna ekki fleiri skólar tölvunarfræði? Við getum bætt úr því. http://youtu.be/nKIu9yen5nc. Heimsæktu http://code.org/ til að fræðast nánar.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Nánar</a> um verðlaun fyrir hvern fræðara.'
   learn_hoc: Lærðu í Klukkustund kóðunar
   beyond_hoc: Umfram Klukkustund
   what_gender: Ertu stelpa eða strákur?
@@ -311,6 +310,7 @@ is-IS:
   volunteer_engineer_submission_intro_recruit: |-
     Þessi kennarar mundu gjarnan vilja fá einhvern <span style="font-family: 'Gotham 7r', sans-serif;">með brennandi áhuga á að fræða um tölvunarfræði</span> sem getur hjálpað í skólastofunni eða einhvern sem getur <span style="font-family: 'Gotham 7r', sans-serif;">hvatt</span> nemendur þeirra með því að tala um hin fjölmörgu tækifæri í tölvunarfræði (þetta gæti farið fram í með netspjalli). Ef þú hefur ekki tök á að hjálpa til, <a href="%{url}">þá er hér nánar</a> um að skipuleggja þína eigin Klukkustund kóðunar.
   volunteer_engineer_submission_intro_signup: 'Vinsamlegast skráðu eftirfarandi upplýsingar ef þú ert tölvunarfræðinemi eða hugbúnaðarsérfræðingur. Reiti merkta með <span class="form-required-field">*</span> þarf að fylla út.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Upplýsingar sem deildar eru með kennurum á korti sjálfboðaliða
   volunteer_engineer_submission_field_name: Nafn
   volunteer_engineer_submission_field_name_placeholder: Fullt nafn
@@ -559,11 +559,17 @@ is-IS:
   learn_educator_resources_description: Lærðu að kenna Klukkustund kóðunar
   learn_educator_resources_button: Efni fyrir fræðara
   learn_are_you_educator: 'Ertu fræðari? Lærðu <a href="http://hourofcode.com/resources/how-to">hvernig á að kenna Klukkustund kóðunar</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Nánar</a> um verðlaun fyrir hvern fræðara.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Prófaðu nýja kennsluefnið fyrir Klukkustund kóðunar
   hoc2014_try_new_tutorial: Prófaðu nýjustu Klukkustund kóðunar (beta)
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
   hoc2014_try_frozen: Listamaður með Önnu og Elsu úr Frozen
   carousel_heading_codeorg: Kennsluefni Code.org
+  carousel_heading_codeorg_any_device: Kennsluefni frá Code.org (fyrir öll tæki)
   carousel_heading_3rd_party: Kennsluefni 3ja aðila
   carousel_heading_third_party: Kennsluefni þriðja aðila
   carousel_heading_international: Kennsluefni á þínu tungumáli
@@ -632,6 +638,8 @@ is-IS:
   projguts_name: Steinn, pappír, skæri
   hourofcode_name: Staðgengill fyrir nýtt code.org/hoc
   playlab_name: Leikjasmiðja
+  infinity_name: Infinity leikjasmiðja
+  artist_name: Listamaður
   codeorg_gradelevel: 4-104 ára
   codeintl_gradelevel: 4-104 ára
   thinkersmithspanish_gradelevel: Por todos
@@ -673,6 +681,8 @@ is-IS:
   frozen_gradelevel: 8+ ára
   starwars_gradelevel: Aldur 6+
   playlab_gradelevel: 4-104 ára
+  infinity_gradelevel: 4-104 ára
+  artist_gradelevel: 4-104 ára
   codeorg_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
   codeintl_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
   thinkersmithspanish_platformtext: Án tölvu
@@ -751,10 +761,12 @@ is-IS:
   thinkersmith2_shortdescription: Lærðu hvernig tölvur nota 1 og 0 til að tákna upplýsingar
   kodableunplugged_shortdescription: Skemmtilegt verkefni án tölvu
   projguts_shortdescription: Prófaðu gerð hermilíkana með stein/pappír/skærum
-  hourofcode_shortdescription: Staðgengill fyrir nýtt code.org/hoc
+  hourofcode_shortdescription: Lærðu að kóða með Mark Zuckerberg og Angry Birds!
   frozen_shortdescription: Notum kóða til að fylgja Önnu og Elsu er þær kanna töfra og fegurð íss.
   starwars_shortdescription: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
   playlab_shortdescription: Búðu til sögu eða leik með Leikjasmiðju!
+  infinity_shortdescription: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum.
+  artist_shortdescription: Teiknaðu flottar myndir og mynstur með listamanninum!
   codeorg_longdescription: Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lærðu á lykkjur, skilyrði og grunnalgrím. Tiltækt á 34 tungumálum.
   codeintl_longdescription: Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lærðu á lykkjur, skilyrði og grunnalgrím. Tiltækt á 34 tungumálum.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -984,3 +996,11 @@ is-IS:
   compatibility_https_header: Vinsamlegast virkjaðu HTTPS fyrir Code.org.
   compatibility_https_message: "Til að auka öryggi erum við að skipta yfir í HTTPS frá og með %{https_date}. Þú munt ekki geta opnað Code.org eftir það nema með HTTPS. <a href='%{it_requirements_url}'>Smelltu hér</a> til að læra að virkja HTTPS fyrir Code.org."
   compatibility_https_hide_this_warning: Fela þessa aðvörun
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: blaka
+  infinity_shortcode: inf
+  playlab_shortcode: spila
+  artist_shortcode: art

@@ -155,7 +155,7 @@ p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_lo
 s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "og"},
-"backToPreviousLevel":function(d){return "Tilbake til forrige nivå"},
+"backToPreviousLevel":function(d){return "Tilbake til førre nivå"},
 "blocklyMessage":function(d){return "Blockly"},
 "blocks":function(d){return "blokker"},
 "booleanFalse":function(d){return "usann"},
@@ -377,7 +377,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "submitYourProjectConfirm":function(d){return "Etter at du har sendt inn prosjektet kan du ikkje editere det, vil du verkeleg sende det?"},
 "unsubmit":function(d){return "Trekk tilbake"},
 "unsubmitYourProject":function(d){return "Av-publiser prosjektet ditt"},
-"unsubmitYourProjectConfirm":function(d){return "Sletting av prosjektet slettar det som er lagra. Vil du slette?"},
+"unsubmitYourProjectConfirm":function(d){return "Sletting av prosjektet slettar det som er lagra, vil du slette?"},
 "subtitle":function(d){return "eit visuelt programmeringsmiljø"},
 "syntaxErrorMsg":function(d){return "Programmet ditt inneheld ein skrivefeil. Fjern linje nummer "+common_locale.v(d,"lineNumber")+" og prøv på nytt."},
 "textVariable":function(d){return "tekst"},

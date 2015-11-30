@@ -88,7 +88,7 @@ nn:
         desc: 'Denne leksjonen introduserer programmeringen av konseptet av sløyfer (gjentatt instruksjon) gjennom en danseaktivitet. Studentene vil lære enkel koreografi, og deretter bli bedt om å gjenta den. '
         video: C1_getting_loopy
       RelayProgramming:
-        title: Programmering med relé
+        title: Programmeringsstafett
         desc: Elevene skal gjennom et stafettløp der de skal gjennom skolegården for å skrive algoritmer basert på millimeterpapirprogrammering. De har kun lov til å skrive en instruksjon om gangen og dersom det er en feil må de viske ut alt til der de gjorde feilen.
         video: C2_relay_programming
       Conditionals:

@@ -34,7 +34,7 @@ eu:
           desc: Errebotea (beta)
           Bounce: 1. etapa
         Builder Levels:
-          desc: Erabiltzaileak sortutako puzzleak (beta)
+          desc: Erabiltzaileak sortutako ariketak (beta)
           Custom: 1. etapa
         Flappy Levels:
           desc: Flappy Bird
@@ -131,13 +131,13 @@ eu:
         maze_2_5: Badago modua txerri mozolora iristeko bakarrik 2 bloke erabiliz. Aurkitu dezakezu?
         maze_2_6: Saiatu sudurluze berdea hiru bloke bakarrik erabiliz harrapatzen.
         maze_2_7: 'Lagundu txerri gaiztoa kanporatzen ahalik eta bloke gutxien erabiliz. Saiatu "errepikatu aldiz" bloke bat baino gehiago erabiltzen.'
-        maze_2_8: 'Blokeak kolore grisa duenean, ezabatu ezin duzula esan nahi du. Ebatzi puzzlea "errepikatu" blokeak 3 aldiz errepikatzen duelarik. Saiatu 3 bloke hauek "errepikatu" bloke grisaren barruan sartzen: mugitu, mugitu, biratu.'
+        maze_2_8: 'Blokeak kolore grisa duenean, ezabatu ezin duzula esan nahi du. Ebatzi ariketa "errepikatu" blokeak 3 aldiz errepikatzen duelarik. Saiatu 3 bloke hauek "errepikatu" bloke grisaren barruan sartzen: mugitu, mugitu, biratu.'
         maze_2_9: 'Ok, probatu "errepikatu arte" bloke berria- txerri nazkagarria harrapatu arte errepikatuko du.'
         maze_2_10: 'Ok, azken ariketa - ebaz dezakezu hau bakarrik 4 bloke erabiliz?'
         maze_2_11: Kaixo, pertsona. Ni Zonbia. Ni gose. Ekilorera...iritsi...behar dut... Eramango nauzu haraino 5 bloke bakarrik erabiliz?
         maze_2_12: Ok, hau antzekoa da, baina ez berdina. 5 bloketan bakarrik egin dezakezu?
         maze_2_13: 'Erabili "baldin" bloke berria noiz biratu behar dudan erabakitzen uzteko. Pista: bakarrik bloke bat gehiago behar duzu, baina ikasi nola egin behar den, hurrengoan zuk bakarrik egiteko.'
-        maze_2_14: 'Ok, hau azkeneko puzzlearen berdina da, baina "baldin" blokea eta "errepikatu" blokea elkarrekin nola erabili zenituen gogoratu behar duzu.'
+        maze_2_14: 'Ok, hau azkeneko ariketaren berdina da, baina "baldin" blokea eta "errepikatu" blokea elkarrekin nola erabili zenituen gogoratu behar duzu.'
         maze_2_15: 'Nik nahi ekilore! Erabili "baldin" blokea ni hara eramateko ahalik eta bloke gutxien erabiliz.'
         maze_2_16: 'Ok, egin dezagun berriro praktikatzeko - hau ez da oso ezberdina, baina kontuz murtxikatzaileekin!'
         maze_2_17: '"Baldin-bestela" blokeek baldintza bat begiratzen dute, gero gauza bat EDO beste egiteko. Ekilorera eramateko, probatu bloke berri hau.'
@@ -156,15 +156,15 @@ eu:
         turtle_4_1: 'Triangelu bat marraztu ahal duzu (100 pixeleko aldeekin) soilik hiru bloke erabiliz? Laguntza: erabili "errepikatu" bloke bat.'
         turtle_4_2: 'Gehitu "biratu eskuinera 90 gradu" blokea programaren erdialdean-edo, triangelu hauek marrazteko (bloke hori jada lan-eremuan dago).'
         turtle_4_3: 'Ados, hau da triangelu bakarra marrazteko idatzi duzun kodea. Gehitu ditzakezu "errepika" blokea eta "biratu" blokea, lore eder bat sortzeko?'
-        turtle_4_4: 'Hau aurreko puzzleko kode bera da, baina triangelu bakoitza marraztu ondoren soilik 36 gradu biratu da. Zenbat aldiz errepikatu behar da hau? (Argibidea: 360 gradu biratuta, zirkulu oso bat marraztuko du)'
+        turtle_4_4: 'Hau aurreko ariketako kode bera da, baina triangelu bakoitza marraztu ondoren soilik 36 gradu biratu da. Zenbat aldiz errepikatu behar da hau? (Argibidea: 360 gradu biratuta, zirkulu oso bat marraztuko du)'
         turtle_4_5: |
-          Aurreko puzzleko kode bera duzu hau, birak 36 aldiz errepikatuta. Zenbat gradu izan beharko lituzke birak?
+          Aurreko ariketako kode bera duzu hau, birak 36 aldiz errepikatuta. Zenbat gradu izan beharko lituzke birak?
           (Lagungarria: marrazkia 360º biratuz, biribil bihurtuko da)
         turtle_4_6: 3 bloke bakarrik erabiliz, 20 pixeleko aldeak dituen karratu bat marraztu dezakezu?
-        turtle_4_7: 'Hona hemen azken puzzleko karratua marrazteko kodea. Errepikatu dezakezu ondoz ondoko 10 karratu marrazteko, eskailera baten antzera? Pista: bakarrik behar dituzu 2 bloke gehiago.'
-        turtle_4_8: Hona hemen aurreko puzzlearen soluzioa. 2 bloke gehiago gehitu ditzakezu marrazkia osatzeko?
-        turtle_4_9: Hona hemen aurreko puzzlearen soluzioa. Zenbat graduko biraketa egin beharko zenuke marrazkia osatzeko? (Agian hainbat aldiz probatu beharko duzu)
-        turtle_4_10: Hona hemen aurreko puzzlearen soluzioa. Zenbat aldiz errepikatu beharko zenuke marrazkia osatzeko?
+        turtle_4_7: 'Hona hemen azken ariketako karratua marrazteko kodea. Errepikatu dezakezu ondoz ondoko 10 karratu marrazteko, eskailera baten antzera? Pista: bakarrik behar dituzu 2 bloke gehiago.'
+        turtle_4_8: Hona hemen aurreko ariketaren soluzioa. 2 bloke gehiago gehitu ditzakezu marrazkia osatzeko?
+        turtle_4_9: Hona hemen aurreko ariketaren soluzioa. Zenbat graduko biraketa egin beharko zenuke marrazkia osatzeko? (Agian hainbat aldiz probatu beharko duzu)
+        turtle_4_10: Hona hemen aurreko ariketaren soluzioa. Zenbat aldiz errepikatu beharko zenuke marrazkia osatzeko?
         turtle_4_11: 'Aldatu zenbakiak "biratu" eta "errepikatu" blokeetan txantiloi desberdinak egiteko. Edo egin esperimentuak eta aldatu kodearen gainontzekoa zuk nahi duzun zerbait marrazteko.'
         maze_karel_1_1: 'Kaixo! Baserritarra naiz. Zure laguntza behar dut baserriko lurrak berdintzeko, erein ahal izateko prest egon daitezen. Eraman nazazu lur-metara eta erabil ezazu "ezabatu" blokea hori desegiteko.'
         maze_karel_1_2: 'Orain, eraman nazazu zulora eta, "bete" blokea erabiliz, bete ezazu zuloa BI paletakada lur botaz.'
@@ -230,9 +230,9 @@ eu:
         bounce_1: 'Itsatsi bloke bat "ezkerreko gezia sakatzean" blokeari eta sakatu "Hasi". Mugitu erraketa ezkerralderako gezia erabiliz bukaerako helburura iristeko.'
         bounce_2: 'Itsatsi bloke bat "eskuineko gezia sakatzean" eta "ezkerreko gezia sakatzean" blokei. Mugitu erraketa bukaerako bi helburuetara iristeko.'
         bounce_3: 'Orain, saiatu antzeko zerbait "gorako gezia sakatzean" blokearekin. Mugitu erraketa goi parteko bukaerako helbururaino.'
-        bounce_4: Orain, lau bloke gehitu behar dituzu. Mugitu erraketa bukaerako lau helburuetaraino puzzle honi amaiera emateko.
+        bounce_4: Orain, lau bloke gehitu behar dituzu. Mugitu erraketa bukaerako lau helburuetaraino ariketa honi amaiera emateko.
         bounce_5: 'Pilota bat botako dugu erraketarantz. Itsatsi bloke bat "pilotak erraketa jotzen duenean" blokeari ziurtatzeko pilota bukaerako helburura iristen dela.'
-        bounce_6: 'Orain, bukaerako helburua goiko partean dago. Bloke batzuk gehitu behar dituzu "pilotak jotzen duenean" bi blokeetan puzzle hau ebazteko.'
+        bounce_6: 'Orain, bukaerako helburua goiko partean dago. Bloke batzuk gehitu behar dituzu "pilotak jotzen duenean" bi blokeetan ariketa hau ebazteko.'
         bounce_7: 'Itsatsi blokeak "... jotzean" eta "... sakatzean" bloke guztiei. Errebotatu pilota bukaerako helburua jotzen duen arte.'
         bounce_10: 'Orain, helburu bat dago goiko partean. Itsatsi "tantoa eman" eta "aurkariari tantoa eman" blokeak "pilota helburuan" eta "pilotak erraketa jotzen ez duenean" blokeei joko bat egiteko. Ikusi zenbat tanto lor ditzakezun zure aurkariak bi tanto lortu aurretik.'
         bounce_11: 'Orain, blokeak gehitu ditzakezu "martxan dagoenean" blokean. "bota beste pilota bat" bloke berria gehitu behar duzu toki batean baino gehiagotan. Era berean, saia zaitez eszena aldatzen, edo erraketaren eta pilotaren abiadura, eta ikusi ea zenbat tanto eskura ditzakezun zure aurkariak bi tanto eskuratu aurretik.'
@@ -271,7 +271,7 @@ eu:
         jigsaw_10: Antolatu blokeak irudia osatzeko
         jigsaw_11: Antolatu blokeak irudia osatzeko
         jigsaw_12: Antolatu blokeak irudia osatzeko
-        jigsaw_13: Konpon ezazu puzzlea!
+        jigsaw_13: Konpon ezazu ariketa!
         mazestep_1: Labirinto pausuaren deskribapena hemen
         mazestep_2: Labirinto pausuaren deskribapena hemen
         mazestep_3: Labirinto pausuaren deskribapena hemen
@@ -321,16 +321,17 @@ eu:
         studio_iceage_8: Gehitu dezakezu bloke bat puntu bat eskuratzeko eta beste bloke bat soinu bat ateratzeko Sidek Manny harrapatzen duenean? Orduan, mugi ezazu Sid gezi-teklen bidez, puntu bat lortu arte.
         studio_iceage_9: Ezarri atzealde bat izotz-aldi honetarako eta lagundu Sidi azkarrago joaten Grannyrenganaino, bere abiadura aldatuz. Orduan, mugi ezazu Sid gezi-teklen bidez Grannyrenganaino iritsi eta beste guztiei abisua emateko.
         studio_iceage_10: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
-        studio_gumball_1: 'Anaisek "kaixo" esan nahi du. Lagundu diezaiokezu?'
-        studio_gumball_2: 'Darwinek (1. aktorea) eta Gumballek (2. aktorea) "kaixo" esan nahi diote elkarri. Lagundu diezaiekezu "esan" blokea bi aldiz erabiliz?'
-        studio_gumball_3: Lagundu diezaiokezu Banana Joeri banderaraino iristen?
-        studio_gumball_4: Lagundu diezaiokezu Gumballi (1. aktorea) Darwinenganaino (2. aktorea) iristen eta soinu bat egiten hara iristean?
-        studio_gumball_5: 'Lagundu diezaiokezu Antonyri "agurrak" esaten bere gainean klik egitean? Ez ahaztu klik egin behar duzula "Hasi" sakatu ondoren'
-        studio_gumball_6: Lagundu diezaiokezu Darwini mugi dadin gora/behera/ezker/eskuin gezi-teklak erabiliz, bandera guztiak har ditzan?
-        studio_gumball_7: '"Errepikatu betiko" blokeak ahalbidetzen dizu kodea etengabe egikaritzea. Itsatsi bloke horri beste bloke batzuk Antony mugi dadin ezker-eskuin etengabe'
-        studio_gumball_8: Gehitu dezakezu bloke bat puntu bat eskuratzeko eta beste bloke bat soinu bat ateratzeko Banana Joek Antony harrapatzen duenean? Orduan, mugi ezazu Banana Joe gezien bidez, puntu bat lortu arte.
-        studio_gumball_9: Ezarri atzealde bat espazio inbasio honetarako eta lagundu Nicoleri azkarrago joaten Pennyrenganaino, bere abiadura aldatuz. Orduan, mugi ezazu Nicole gezi-teklen bidez Pennyrenganaino iritsi eta beste guztiei abisua emateko.
-        studio_gumball_10: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
+        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
+        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
+        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
+        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
+        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
+        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
+        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
+        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_full_sandbox: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
         studio_k1_1: 'Esanarazi diezaiokezu txakurrari "Kaixo mundua"?'
         studio_k1_2: Lor dezakezu txakurrak zerbait esan eta katuak erantzutea?
@@ -466,7 +467,7 @@ eu:
         csp_applab_functions_parameters: Parametrodun funtzioak
         csp_applab_loops: Itzuliak
         csp_applab_turtle: Turtle Programming
-        csp_concept_rgb: A Little Bit About Pixels
+        csp_concept_rgb: Informazio pixka bat pixelei buruz
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
         csp_pixelation_color_3: 'Color pixelation widget - Part 3'
@@ -509,6 +510,9 @@ eu:
         mc_if_statements: 'Minecraft - Baldintzapeko aginduak'
         mc_congrats_share: 'Minecraft - Zorionak'
         mc_congrats_no_share: 'Minecraft - Zorionak'
+        gumball_intro: 'Gumball Hour of Code - Introduction'
+        gumball_events: 'Gumball Hour of Code - Events'
+        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Arrastatu "mugitu" blokea eta lotu beste blokearen azpian'
@@ -530,7 +534,7 @@ eu:
         repeat_blocks_2: '(2) Mugitu "Errepikatu" blokea hona, eta bloke grisak barruan jarri'
         snowflake_dropdown: Erabili menu zabalgarri hau elur maluta ezberdinak sortzeko!
         degrees_per_side: Kalkula ezazu 360 zati alde kopurua, angelu bakoitza lortzeko, gradutan.
-        set_sides: 'Erabili bloke hau puzzlea osatzeko behar den zenbakia "aldeak" aldagaiari esleitzeko.'
+        set_sides: 'Erabili bloke hau ariketa osatzeko behar den zenbakia "aldeak" aldagaiari esleitzeko.'
         set_length: 'Erabili bloke hau "luzera"-ren balio egokia ezartzeko.'
         which_equation: Zein ekuaziok egiten du alde bakoitza motzagoa alde gehiagoko formak lortzeko?
         get_nectar: 'Erabili "nektarra lortu" bloke berria.'

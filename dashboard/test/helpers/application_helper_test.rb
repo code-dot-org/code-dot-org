@@ -108,13 +108,17 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test 'client state level progress' do
+    script = create :script, name: 'zzz'
+    sl1 = create :script_level, script: script
+    sl2 = create :script_level, script: script
+
     assert client_state.level_progress_is_empty_for_test
-    assert_equal 0, client_state.level_progress(10)
-    client_state.set_level_progress(10, 20)
-    assert_equal 20, client_state.level_progress(10)
-    client_state.set_level_progress(11, 25)
-    assert_equal 25, client_state.level_progress(11)
-    assert_equal 20, client_state.level_progress(10)
+    assert_equal 0, client_state.level_progress(sl1)
+    client_state.set_level_progress(sl1, 20)
+    assert_equal 20, client_state.level_progress(sl1)
+    client_state.set_level_progress(sl2, 25)
+    assert_equal 25, client_state.level_progress(sl2)
+    assert_equal 20, client_state.level_progress(sl1)
   end
 
   # Make sure that we correctly access and back-migrate future
@@ -126,9 +130,12 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal '37', cookies[:lines]
     assert_nil session[:lines]
 
-    session[:progress] = {1 => 100}
-    assert_equal 100, client_state.level_progress(1)
-    assert_equal '{"1":100}', cookies[:progress]
+    script = create :script, name: 'progress_test'
+    sl = create(:script_level, script: script)
+    data = {'progress_test' => {sl.level_id => 100}}
+    session[:progress] = data
+    assert_equal 100, client_state.level_progress(sl)
+    assert_equal data.to_json, cookies[:progress]
     assert_nil session[:progress]
   end
 
@@ -171,11 +178,12 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test 'client state with invalid cookie' do
+    sl = create :script_level
     cookies[:progress] = '&*%$% mangled #$#$$'
-    assert_equal 0, client_state.level_progress(10),
+    assert_equal 0, client_state.level_progress(sl),
                  'Invalid cookie should show no progress'
-    client_state.set_level_progress(10, 20)
-    assert_equal 20, client_state.level_progress(10),
+    client_state.set_level_progress(sl, 20)
+    assert_equal 20, client_state.level_progress(sl),
                  'Should be able to overwrite invalid cookie state'
   end
 

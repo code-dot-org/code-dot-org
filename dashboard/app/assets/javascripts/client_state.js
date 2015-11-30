@@ -4,11 +4,8 @@
 /* global dashboard */
 
 /**
- * Helper functions for accessing client state. This state is now stored
- * in client side cookies but may eventually migrate to HTML5 web
- * storage. It currently consists of level progress and the line count;
- * in the future we will add support for videos seeen, callouts, and
- * scripts accessed.
+ * Helper functions for accessing client state. This state is stored in a
+ * combination of cookies and HTML5 web storage.
  */
 (function (window, $) {
 
@@ -35,20 +32,59 @@ var MAX_LINES_TO_SAVE = 1000;
 var COOKIE_OPTIONS = {expires: dashboard.clientState.EXPIRY_DAYS, path: '/'};
 
 dashboard.clientState.reset = function() {
-  $.removeCookie('progress', {path: '/'});
   $.removeCookie('lines', {path: '/'});
-  localStorage.removeItem('video');
-  localStorage.removeItem('callout');
+  sessionStorage.clear();
 };
 
 /**
- * Returns the progress attained for the given level from the cookie.
- * @param {number} level The id of the level
+ * Returns the client-cached copy of the level source for the given script
+ * level, if it's newer than the given timestamp.
+ * @param {string} scriptName
+ * @param {number} levelId
+ * @param {number=} timestamp
+ * @returns {string|undefined} Cached copy of the level source, or undefined if
+ *   the cached copy is missing/stale.
+ */
+dashboard.clientState.sourceForLevel = function (scriptName, levelId, timestamp) {
+  var data = sessionStorage.getItem(createKey(scriptName, levelId, 'source'));
+  if (data) {
+    var parsed;
+    try {
+      parsed = JSON.parse(data);
+    } catch (e) {
+      return;
+    }
+    if (!timestamp || parsed.timestamp > timestamp) {
+      return parsed.source;
+    }
+  }
+};
+
+/**
+ * Cache a copy of the level source along with a timestamp. Posts to /milestone
+ * may be queued, so save the data in sessionStorage to present a consistent
+ * client view.
+ * @param {string} scriptName
+ * @param {number} levelId
+ * @param {number} timestamp
+ * @param {string} source
+ */
+dashboard.clientState.writeSourceForLevel = function (scriptName, levelId, timestamp, source) {
+  safelySetItem(createKey(scriptName, levelId, 'source'), JSON.stringify({
+    source: source,
+    timestamp: timestamp
+  }));
+};
+
+/**
+ * Returns the progress attained for the given level.
+ * @param {string} scriptName The script name
+ * @param {number} levelId The level
  * @returns {number}
  */
-dashboard.clientState.levelProgress = function(level) {
+dashboard.clientState.levelProgress = function(scriptName, levelId) {
   var progressMap = dashboard.clientState.allLevelsProgress();
-  return progressMap[String(level)] || 0;
+  return (progressMap[scriptName] || {})[levelId] || 0;
 };
 
 /**
@@ -56,27 +92,33 @@ dashboard.clientState.levelProgress = function(level) {
  * @param {boolean} result - Whether the user's solution is successful
  * @param {number} lines - Number of lines of code user wrote in this solution
  * @param {number} testResult - Indicates pass, fail, perfect
- * @param {number} scriptLevelId - Which level this is for
+ * @param {string} scriptName - Which script this is for
+ * @param {number} levelId - Which level this is for
  */
-dashboard.clientState.trackProgress = function(result, lines, testResult, scriptLevelId) {
+dashboard.clientState.trackProgress = function(result, lines, testResult, scriptName, levelId) {
   if (result && isFinite(lines)) {
     addLines(lines);
   }
 
-  if (testResult > dashboard.clientState.levelProgress(scriptLevelId)) {
-    setLevelProgress(scriptLevelId, testResult);
+  if (testResult > dashboard.clientState.levelProgress(scriptName, levelId)) {
+    setLevelProgress(scriptName, levelId, testResult);
   }
 };
 
 /**
- * Sets the progress attained for the given level in the cookie
- * @param {number} level The id of the level
+ * Sets the progress attained for the given level
+ * @param {string} scriptName The script name
+ * @param {number} levelId The level
+ * @param {number} progress Indicates pass, fail, perfect
  * @returns {number}
  */
-function setLevelProgress(level, progress) {
+function setLevelProgress(scriptName, levelId, progress) {
   var progressMap = dashboard.clientState.allLevelsProgress();
-  progressMap[String(level)] = progress;
-  $.cookie('progress', JSON.stringify(progressMap), COOKIE_OPTIONS);
+  if (!progressMap[scriptName]) {
+    progressMap[scriptName] = {};
+  }
+  progressMap[scriptName][levelId] = progress;
+  safelySetItem('progress', JSON.stringify(progressMap));
 }
 
 /**
@@ -84,11 +126,11 @@ function setLevelProgress(level, progress) {
  * @return {Object<String, number>}
  */
 dashboard.clientState.allLevelsProgress = function() {
-  var progressJson = $.cookie('progress');
+  var progressJson = sessionStorage.getItem('progress');
   try {
     return progressJson ? JSON.parse(progressJson) : {};
   } catch(e) {
-    // Recover from malformed cookies.
+    // Recover from malformed data.
     return {};
   }
 };
@@ -152,20 +194,17 @@ dashboard.clientState.recordCalloutSeen = function (calloutId) {
  * @param visualElementId
  */
 function recordVisualElementSeen(visualElementType, visualElementId) {
-  var elementSeenJson = localStorage.getItem(visualElementType) || '{}';
+  var elementSeenJson = sessionStorage.getItem(visualElementType) || '{}';
 
   try {
     var elementSeen = JSON.parse(elementSeenJson);
     elementSeen[visualElementId] = true;
-    localStorage.setItem(visualElementType, JSON.stringify(elementSeen));
+    safelySetItem(visualElementType, JSON.stringify(elementSeen));
   } catch (e) {
-    if (e.name === "QuotaExceededError") {
-      return ;
-    }
     //Something went wrong parsing the json. Blow it up and just put in the new callout
     var elementSeen = {};
     elementSeen[visualElementId] = true;
-    localStorage.setItem(visualElementType, JSON.stringify(elementSeen));
+    safelySetItem(visualElementType, JSON.stringify(elementSeen));
   }
 }
 
@@ -175,12 +214,36 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
  * @param visualElementId
  */
 function hasSeenVisualElement(visualElementType, visualElementId) {
-  var elementSeenJson = localStorage.getItem(visualElementType) || '{}';
+  var elementSeenJson = sessionStorage.getItem(visualElementType) || '{}';
   try {
     var elementSeen = JSON.parse(elementSeenJson);
     return elementSeen[visualElementId] === true;
   } catch (e) {
     return false;
+  }
+}
+
+/**
+ * Creates standardized keys for storing values in sessionStorage.
+ * @param {string} scriptName
+ * @param {number} levelId
+ * @param {string=} prefix
+ * @return {string}
+ */
+function createKey(scriptName, levelId, prefix) {
+  return (prefix ? prefix + '_' : '') + scriptName + '_' + levelId;
+}
+
+/**
+ * Don't throw storage errors in Safari private browsing mode.
+ */
+function safelySetItem(key, value) {
+  try {
+    sessionStorage.setItem(key, value);
+  } catch (e) {
+    if (e.name !== "QuotaExceededError") {
+      throw e;
+    }
   }
 }
 

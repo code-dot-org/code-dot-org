@@ -69,7 +69,7 @@
           Graph Paper Programming: Programmering på millimeterpapir
           'Real-life Algorithms: Paper Planes': 'Verkelege algoritmar: Papirfly'
           Getting Loopy: Me blir sløyfete
-          Relay programming: Programmering med relé
+          Relay programming: Programmeringsstafett
           Conditionals: Betingelser
           Binary Bracelets: Binær armbånd
           The Big Event: Den store hendinga
@@ -359,7 +359,7 @@
           Color Pixelation Examples: Color Pixelation Examples
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: 20-timers introduksjonskurs
+          title: Aksellerert intro til CS-kurs
           description_audience: Frå 10+ år (etter Kurs 3)
           description: Dette kurset på 20 timar introduserer grunnleggjande informasjonsvitskap
             og prinsipp frå programmering. Kurset er utvikla for bruk i 5. klasse
@@ -741,6 +741,14 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: Mendan-løkker
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -873,8 +881,8 @@
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Fase 2 Online: Blanda sommerstudie'
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -953,8 +961,8 @@
           Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Fase 2 Online: Blanda sommerstudie'
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
           Evaluation Blocks: Evalueringsblokker
           Strings and Images: Strenger og bilder
           Defining Variables: Definering av variablar
@@ -1001,8 +1009,8 @@
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Fase 2 Online: Blanda sommerstudie'
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1059,8 +1067,8 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Fase 2 Online: Blanda sommerstudie'
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
           Welcome!: Velkomen!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -1122,8 +1130,8 @@
           Hour of Code 2015: Kodetimen 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Fase 2 Online: Blanda sommerstudie'
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1145,8 +1153,8 @@
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: Lär ut funktionell programmering genom algebra
-          description: Lär ut funktionell programmering genom algebra
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommerstudie'
           Welcome!: Velkomen!
           Wrap-Up: Oppsummering
           Review StarLogo Nova: Review StarLogo Nova
@@ -1162,8 +1170,8 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: Lär ut funktionell programmering genom algebra
-          description: Lär ut funktionell programmering genom algebra
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommerstudie'
           Welcome!: Velkomen!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1184,8 +1192,8 @@
         sciencePD2b-iZone:
           Welcome!: Velkomen!
           title: Computer Science in Science PD Phase 2b
-          description_short: Lär ut funktionell programmering genom algebra
-          description: Lär ut funktionell programmering genom algebra
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommerstudie'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1194,8 +1202,8 @@
           Wrap-Up: Oppsummering
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: Lär ut funktionell programmering genom algebra
-          description: Lär ut funktionell programmering genom algebra
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommerstudie'
           Welcome!: Velkomen!
           0: |
             Unit 1, Days 1-2
@@ -1218,8 +1226,8 @@
           Wrap-up: Oppsummering
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: Lär ut funktionell programmering genom algebra
-          description: Lär ut funktionell programmering genom algebra
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommerstudie'
           Welcome!: Velkomen!
           0: |
             Unit 1, Days 1-2
@@ -1560,6 +1568,8 @@
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
           description_short: Programming
@@ -1578,6 +1588,13 @@
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Mendan-løkker
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1592,10 +1609,10 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Spill-lab
+          title: Gumball Spel-lab
           description_short: Lag ei historie eller eit spell ve å bruke Gumball spel-lab!
           description: Lag ei historie eller eit spell ve å bruke Gumball spel-lab!
-          Gumball Play Lab: Gumball Spill-lab
+          Gumball Play Lab: Gumball Spel-lab
         starwars:
           title: 'Star Wars: Skap ein galakse med kode'
           description_short: Lær å programmere droner og skap ditt eige Star Wars-spel
@@ -1617,9 +1634,9 @@
           Craft: Craft
         mc:
           title: Kodetimen med Minecraft
-          description_short: Utforsk en Minecraft-verden gjennom kode
-          description: Bruk kodeblokker til å ta med Steve eller Alex ut på et eventyr
-            i denne Minecraft-verdenen
+          description_short: Utforsk ei Minecraft-verd gjennom kode
+          description: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr
+            gjennom denne Minecraft-verda
           Hour of Code 2015: Kodetimen 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -1628,3 +1645,10 @@
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Velkomen!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Oppsummering

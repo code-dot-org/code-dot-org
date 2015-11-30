@@ -114,7 +114,6 @@ es-MX:
   hoc_is_here: '#HourOfCode está aquí - compruébalo! @codeorg'
   just_did_hoc: 'Yo he terminado the HourofCode - Dale un vistazo! @codeorg'
   twitter_teach_cs: '¿Por qué no hay más escuelas que enseñen ciencias de la  computación? Podemos arreglar esto. http://youtu.be/nKIu9yen5nc. Visite http://code.org/ para obtener más información.'
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Más información</a> sobre los premios para educadores.'
   learn_hoc: Aprende una hora del código
   beyond_hoc: Más allá de una hora
   what_gender: ¿Cual es tu sexo?
@@ -289,11 +288,12 @@ es-MX:
   minecraft_subtitle: Minecraft de la Hora del Código
   volunteer_engineer_submission_title: Inspirar a los estudiantes y voluntarios para la Hora del Código.
   volunteer_engineer_submission_subtitle_generic: 100.000 docentes van a realizar una Hora del Código en sus aulas este año, del 7 al 13 de Diciembre del 2015 ¡Y necesitan tu ayuda!
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} maestros quieren a voluntarios apasionados por la enseñanza de ciencias de la computación para ayudar cons su Horas de Código este Diciembre. <br>%{num_volunteers} voluntarios se han inscripto. Únete a ellos.'
   volunteer_engineer_submission_intro_background: La Hora del Código es un movimiento mundial para introducir a la Informática a decenas de millones de estudiantes en más de 180 países. Por favor únete a esta iniciativa durante la Semana de Educación en Ciencias de la Computación, del 7 al 13 de Diciembre.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    Estos maestros le encantaría tener a alguien <span style="font-family: 'Gotham 7r', sans-serif;"> apasionado por la enseñanza de ciencia de a computación</span> que pueden ayudar en el aula, o para alguien que pueda <span style="font-family: 'Gotham 7r', sans-serif;"> inspirar </span> a sus alumnos hablando de la amplitud de posibilidades con las ciencias de la computación (que podría hacerse a través de una video conferencia). Si usted no está buscando ofrecerse de voluntario, <a href="%{url}"> aprender más</a> acerca de organizar su propio evento de Hora de Código.
   volunteer_engineer_submission_intro_signup: 'Por favor introduzca la siguiente información si usted es un estudiante de informática o profesional del software. Los campos marcados con un <span class="form-required-field">*</span> son obligatorios.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Información compartida con docentes en el mapa de voluntarios
   volunteer_engineer_submission_field_name: Nombre
   volunteer_engineer_submission_field_name_placeholder: Nombre Completo
@@ -534,19 +534,25 @@ es-MX:
   learn_more: Aprenda más
   learn_sign_up_description: Regístrate para participar en la Hour of Code durante la Semana de Educación en Ciencias de la Computación
   learn_sign_up_button: Registrarse
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Mira este video inspirador con tu curso
+  learn_videos_show: Muestra este video inspirador a tus clases
+  learn_videos_before_hoc: Mira un video inspirador antes de tu Hora de Código
   learn_educator_resources_description: Aprende como enseñar una Hour of Code
   learn_educator_resources_button: Recursos del educador
   learn_are_you_educator: '¿Es Ud. un educador? Aprenda <a href="http://hourofcode.com/resources/how-to">como a enseñar una Hora del Código</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Más información</a> sobre los premios para educadores.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Pruebe nuestros nuevos tutoriales de la Hora del Código
   hoc2014_try_new_tutorial: Prueba nuestro nuevo tutorial de la hora del código en beta
   hoc2014_try_scrat: Scrat, PvZ y Angry Birds
   hoc2014_try_frozen: 'Artista con Anna y Elsa de "Frozen"'
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Tutoriales realizados por Code.org
+  carousel_heading_codeorg_any_device: Tutoriales por Code.org (para todos los dispositivos)
+  carousel_heading_3rd_party: Tutoriales realizados por terceros
+  carousel_heading_third_party: Tutoriales realizados por terceros
   carousel_heading_international: Tutoriales en tu idioma
   carousel_heading_domestic: Tutoriales disponibles en inglés
   carousel_heading_beginners: Tutoriales para principiantes (en inglés)
@@ -613,6 +619,8 @@ es-MX:
   projguts_name: Piedra, papel, tijera
   hourofcode_name: Espacio reservado para un nuevo code.org/hoc
   playlab_name: Laboratorio de Juegos
+  infinity_name: Laboratorio de Juego Infinity
+  artist_name: Artista
   codeorg_gradelevel: Edad 4-104
   codeintl_gradelevel: Edad 4-104
   thinkersmithspanish_gradelevel: Todas las edades
@@ -654,6 +662,8 @@ es-MX:
   frozen_gradelevel: Edad 8+
   starwars_gradelevel: Edades 6+
   playlab_gradelevel: Edad 4-104
+  infinity_gradelevel: Edad 4-104
+  artist_gradelevel: Edad 4-104
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeintl_platformtext: Cualquier navegador moderno, smartphone, tableta
   thinkersmithspanish_platformtext: Desconectado
@@ -732,10 +742,12 @@ es-MX:
   thinkersmith2_shortdescription: Aprenda cómo las computadoras usan unos y ceros para representar la información
   kodableunplugged_shortdescription: 'Un divertido ejercicio "desconectado"'
   projguts_shortdescription: Aprende sobre modelado y simulación con piedra, papel, o tijeras
-  hourofcode_shortdescription: Espacio reservado para un nuevo code.org/hoc
+  hourofcode_shortdescription: ¡Aprende a programar con Mark Zuckerberg y Angry Birds!
   frozen_shortdescription: Vamos a usar código para unirnos a Anna y Elsa mientras exploran la magia y la belleza del hielo.
   starwars_shortdescription: Aprende a programar robots y crea tu propio juego de Star Wars en una galaxia muy muy lejana.
   playlab_shortdescription: ¡Crea una historia o haz un juego con el Laboratorio de Juegos!
+  infinity_shortdescription: Utilice el laboratorio de juegos para crear una historia o juego protagonizados por personajes de Disney Infinity.
+  artist_shortdescription: ¡Dibuja imagenes estupendas y diseños con el Artista!
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante programación de arrastrar y soltar. Este tutorial autodirigido que se parece a un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprenda los bucles, condicionales y algoritmos básicos. Disponible en 34 idiomas.
   codeintl_longdescription: Aprende los conceptos básicos de la programación mediante programación de arrastrar y soltar. Este tutorial autodirigido que se parece a un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprenda los bucles, condicionales y algoritmos básicos. Disponible en 34 idiomas.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n c&oacute;mo guiarse para llevar a cabo tareas espec&iacute;ficas sin discutirlas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -965,3 +977,11 @@ es-MX:
   compatibility_https_header: Por favor habilitar HTTPS para Code.org.
   compatibility_https_message: "Para aumentar la seguridad, nos cambio a HTTPS en %{https_date}. Usted no podrá accede Code.org después de esta fecha. <a href='%{it_requirements_url}'> haga clic aquí</a> para aprender cómo activar HTTPS para Code.org."
   compatibility_https_hide_this_warning: Ocultar esta advertencia
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: aletear
+  infinity_shortcode: inf
+  playlab_shortcode: ejecutar
+  artist_shortcode: art

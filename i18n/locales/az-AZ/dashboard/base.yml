@@ -223,6 +223,7 @@ az:
         playlab: Make an App
         artist: Draw Something
         calculate: Calculate Something
+        applab: Make an App
     user:
       classroom: Müəllimin ev səhifəsi
       district_dashboard: District Dashboard

@@ -524,17 +524,17 @@ el:
         text: 'Κάποιες φορές στο Internet μιλάω σε ανθρώπους που γνωρίζω, όπως η γιαγιά μου που ζει σε άλλο μέρος. Γεια σου γιαγιά! Μου φτιάχνει κουλουράκια που θα μου στείλει για τα γεννέθλιά μου. "Μιαμ, θα ήθελα να μπορώ να μυρίσω στο Internet!" Μπορώ και μιλάω με διάφορους ανθρώπους στο Internet, όπως ο ξάδερφός μου αλλά μιλάω μόνο σε ανθρώπους που γνωρίζω.'
       5:
         image: notes/C1_going_places_safely_5.png
-        text: What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!
+        text: 'Αυτό που μου αρέσει περισσότερο στο interent είναι ότι έχω την ευκαιρία να παίζω διασκεδαστικά παιχνίδια. Γκόοοολ! Επίσης μου αρέσει να σχεδιάζω και να δημιουργώ νέα πράγματα και να τα μοιράζομαι με τους φίλους μου. Κουλ! Κάποιες φορές επισκέπτομαι ιστοσελίδες όπου μαθαίνω νέα πράγματα, αλλά  μένω σταθερός σε δικτυακούς τόπους που θεωρώ  ακριβώς σωστούς για μένα. Ουάου, δεινόσαυροι!'
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
+        text: 'Το Διαδίκτυο είναι ένα απίστευτα διασκεδαστικό μέρος. Όμως, ακριβώς όπως όταν διασχίζουμε ένα δρόμο στη γειτονιά μας, έτσι θα πρέπει να είμαστε προσεκτικοί όταν συνδεόμαστε απευθείας στο διαδίκτυο. Τρείς κανόνες που αξίζει να θυμάστε. Κανόνας νούμερο 1: πάντα ενημερώνουμε τους γονείς μας πρώτα. Κανόνας νούμερο 2: Μιλάμε μόνο με άτομα που γνωρίζουμε. Κανόνας νούμερο 3: Μένουμε στις τοποθεσίες που είναι σωστές για εμάς.'
       7:
         image: notes/C1_going_places_safely_7.png
-        text: "Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to log on again to see where I can visit next."
+        text: Πω πω, αυτό ήταν διασκεδαστικό! Ώρα για βραδυνό. Αποσυνδέομαι τώρα. Ανυπομονώ να ξανασυνδεθώ για να δω τι άλλο θα επισκεφτώ.
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
-        text: "Today we're going to learn about Pair Programming. In pair programming you work as a team. Why should two people use one computer? Because two heads are better than one. In pair programming you and your partner are going to sit down together at one computer and you are both going to work on the same project."
+        text: Σήμερα πρόκειται να μάθουμε για τον προγραμματισμό σε ζεύγη. Στον προγραμματισμό σε ζεύγη εργάζεστε σαν ομάδα. Γιατί πρέπει δύο άνθρωποι να χρησιμοποιούν ένα υπολογιστή; Επειδή δύο μυαλά είναι καλύτερα από ένα. Στον προγραμματισμό σε ζεύγη εσείς και ο συνεργάτης σας θα καθίσετε μαζί σε ένα υπολογιστή και θα εργαστείτε σε ένα κοινό θέμα.
       2:
         image: notes/C1_pair_programming_2.png
         text: "In pair programming, one person is the driver and the other person is the navigator, just like driving a car. The driver sits at the computer and is the one using the keyboard and mouse or touchscreen and controlling the main actions of the computer. The other person is the navigator. The navigator helps the driver by answering the driver's questions and pointing out potential problems or mistakes."
@@ -1608,3 +1608,56 @@ el:
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Now you can build whatever you want. Have fun!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: "The white space on the right is called the work space and this is where we'll build our program."
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

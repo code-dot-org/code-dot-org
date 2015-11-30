@@ -214,6 +214,7 @@ en:
         playlab: crwdns20075:0crwdne20075:0
         artist: crwdns20076:0crwdne20076:0
         calculate: crwdns43324:0crwdne43324:0
+        applab: crwdns54664:0crwdne54664:0
     user:
       classroom: crwdns22205:0crwdne22205:0
       district_dashboard: crwdns35951:0crwdne35951:0
@@ -380,7 +381,7 @@ en:
     thank_you: crwdns45293:0crwdne45293:0
     help_from_html: crwdns6548:0crwdne6548:0
     help_from_html_old: crwdns45345:0crwdne45345:0
-    art_from_html: 'crwdns24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdne24788:0'
+    art_from_html: 'crwdns24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdne24788:0'
     art_from_html_old: 'crwdns45346:0%{current_year}crwdnd45346:0%{current_year}crwdne45346:0'
     powered_by_aws: crwdns24789:0crwdne24789:0
     trademark: 'crwdns45294:0%{current_year}crwdne45294:0'

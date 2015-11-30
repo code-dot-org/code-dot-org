@@ -2,40 +2,40 @@
   errors:
     messages:
       not_saved: 'කරුණාකර පහත දෝෂ නිවැරදි කරන්න:'
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      too_young: මෙහි අන්තර්ගතය සඳහා වයස් සීමවක් ඇති අතර එය වයසින් බාල සිසුන් සඳහා
+        නොමැත
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: අවශ්‍යයි
     attributes:
       user:
-        name: Display Name
+        name: ප්‍රදර්ශක නාමය
         email: විද්‍යුත් තැපැල
         username: පරිශීලක නාමය
         password: මුර පදය
         password_confirmation: මුර පදය ස්ථිර කිරීම
-        current_password: දැන් පවත්නා මුර පදය
+        current_password: දවර්තමාන මුර පදය
         locale: භාෂාව
         age: වයස
         gender: ලිංගභේදය
-        edit_header: ගිනුමේ තොරතුරු සකසන්න
+        edit_header: "ගිනුමේ තොරතුරු \tසංස්කරණය කරන්න"
         error:
-          future: can't be in the future
+          future: අනාගතයේදී විය නොහැකිය
   hello: හේලෝ ලෝකය
-  welcome_back: නැවතත් පිළිගන්නවා, %{name}
-  submit: යොමන්න
+  welcome_back: '%{name}, ඔබව නැවතත් පිළිගන්නවා'
+  submit: යොමුකරන්න
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
-      placeholder: Section Code (ABCDEF)
+      label: 'ගුරුවරයෙක් එකතු කරන්න:'
+      placeholder: Code එකෙහි කණ්ඩය (ABCDEF)
     submit: ගුරුවරයෙක් එකතු කරන්න
   add_hint_form:
     placeholder: කරුණාකර ඔබේ ඉඟිය මෙහි ඇතුලත් කරන්න
     submit: ඉඟියක් එකතු කරන්න
   appname: Code.org
   stage: අදියර
-  stage_number: Stage %{number}
+  stage_number: අදියර %{number}
   puzzle: ප්‍රහේලිකාව
   trophies: ඵලකයන්
   courses: පාඨමාලාව
@@ -43,37 +43,39 @@
   more: වැඩි
   less: අඩු
   beta: beta
-  try_hoc: 'පැයේ කේතය උත්සහ කරන්න, මෙතන ක්ලික් කරන්න >> '
-  try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
-  k8intro: K-8 Intro to Computer Science Course (15-25 hours)
-  already_started: 'දැනටමත් පටන්ගෙනද? මෙතනින් නැවත පටන්ගන්න >> '
-  demos: 'ඇඩ්මින්: සියලු ඩෙමො වර්ග'
-  continue: ඉදිරියට යන්න
+  try_hoc: 'Hour of Code උත්සහ කරන්න, මෙතන ක්ලික් කරන්න >> '
+  try_k8intro: පරිඝණක විද්‍යා පඨමාලාව සදහා වු අපේ K-8 හැදින්වීම උත්සහකරන්න (පැය 15-25
+    ක්)
+  k8intro: K-8 පරිඝණක විද්‍යා පඨමාලාව - හැදින්වීම (පැය 15-25 ක්)
+  already_started: 'දැනටමත් ආරම්භකරාද? මෙතනින් නැවත ආරම්භකරන්න >> '
+  demos: 'Admin: සියලු ආදර්ශනය වර්ග'
+  continue: කරගෙන යන්න
   prize: ත්‍යාගය
   more_info: වැඩිදුර තොරතුරු
   auth:
-    sign_in_with: Sign in with %{provider}
-    signed_in: Signed in!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
-    already_signedup: Already signed up?
-    notyet_signedup: Haven't joined yet?
+    sign_in_with: '%{provider} සමඟ පිවිසෙන්න'
+    signed_in: පිවිසෙන්න!
+    signed_out: ඔබ <a href="%{url}">Code.org</a> වෙතින් නික්මගොස් ඇත.
+    sign_out_of: ඔබ පිවිසීම සඳහා %{provider} භාවිතාකර ඇත. %{provider} ගෙන් නික්මීම
+      සඳහා <a href="%{url}"> මෙතන ක්ලික් කරන්න </a>.
+    already_signedup: දැනටමත් ලියාපදිංචී ඇත්ද?
+    notyet_signedup: තවමත් ලියාපදිංචි නොමැතිද?
     google_oauth2: Google ගිණුම
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft ගිණුම
-    forgot_password: Forgot your password?
-    need_confirmation: Didn't receive confirmation instructions?
+    forgot_password: ඔබගේ මුරපදය අමතකද?
+    need_confirmation: තහවුරු කිරීමේ උපදෙස් තවමත් ලැබී නැත්ද?
     need_unlock: Didn't receive unlock instructions?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
-    overview_student: Sign up for an account to track your progress. Your email is
-      primarily used to allow you to log in and for password recovery. For more information,
-      see our <a href="http://code.org/privacy">Privacy Policy</a>.
-    overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to add your students and track their progress.
+    student_count: සිසුන් %{count} මේ වන විටත් ලියාපදිංචිව ඇත.
+    teacher_count: ගුරුවරුන් %{count} මේ වන විටත් ලියාපදිංචිව ඇත.
+    overview_student: ඔබගේ ප්‍රගතිය නිරීක්ෂණය සඳහා ලියාපදිංචි වන්න. ඔබේ විද්‍යුත්
+      ලිපිනය මූලිකවම ඔබේ ගිණිමුට පිවිසීමට හා මුරපදය නැවත ලබාගැනීමට යොදා ගැනේ. තවත්
+      තොරතුරු සඳහා අපගේ <a href="http://code.org/privacy">පෞද්ගලිකත්වය සඳහා වූ ප්‍රතිපත්ති</a>
+      මාලාව නිරීක්ෂණය කරන්න.
+    overview_teacher: ගිණුමක් විවෘත කොට ඔබගේ පන්තිය සඳහා පරිගණක විද්‍යාව උගන්වන්න.<p/>
+      එමගින් ඔබට සිසුන්ව එයට එක් කර ඔවුන්ගේ ප්‍රගතිය නිරීක්ෂණය කල හැක.
     no_signup_message: You can <a target="_blank" href="http://learn.code.org">browse
       the various stages and puzzles</a>, but you will need to sign up to save your
       progress.
@@ -82,20 +84,20 @@
     teacher_title: Teacher sign up
     student_pitch: Student sign up for Code.org
     student_title: Student sign up
-    school_name: School Name (optional)
-    school_address: School Address (optional)
+    school_name: පාසලේ නම (විකල්ප)
+    school_address: පාසලේ ලිපිනය (විකල්ප)
     address_placeholder: address, city, state, zip
-    gender: Gender (optional)
-    birthday: Birthday (optional)
+    gender: ස්ත්‍රී/පුරුෂ භාවය (විකල්ප)
+    birthday: උපන් දිනය (විකල්ප)
     age: වයස
-    user_type: Are you a student or teacher?
+    user_type: ඔබ සිසුවෙක් හෝ ගුරුවරයෙක් ද?
     submit: Sign up
-    teacher: Are you a teacher?
+    teacher: ඔබ ගුරුවරයෙක් ද?
     valid_username: Available!
     invalid_username: Username must be at least 5 characters
     taken_username: Username is already taken
     valid_password: Valid password!
-    invalid_password: Password must be at least 6 characters
+    invalid_password: Password එක අකුරු 6ට වැඩිවිය යුතුයි
     mismatch_password: The two passwords you entered do not match
     student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
       of service</a>. If I am under 13 years of age, I confirm by submitting this
@@ -118,13 +120,13 @@
     try_20hours: Try our 20 hour Intro to Computer Science
   signinsection:
     welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    name: ඔබේ නම තෝරන්න
+    picture: දැන් ඔබේ රහස් රූපය සොයන්න
+    words: දැන් ඔබේ රහස් වචනය සොයන්න
     login: Sign in
   password:
     reset_form:
-      title: Forgot your password?
+      title: ඔබගේ මුරපදය අමතකද?
       email: විද්‍යුත් තැපැල් ලිපිනය
       submit: Send me reset password instructions
     change_form:
@@ -133,7 +135,7 @@
       confirm_password: ඔබේ නව මුරපදය තහවුරු කරන්න
       submit: මගේ මුරපදය වෙනස් කරන්න
   welcome_email:
-    subject: Join my class (on Code.org)
+    subject: මාගේ පන්තියට එකතුවෙන්න ( Code.org එකෙන්)
     body: |
       Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
 
@@ -149,11 +151,12 @@
     error:
       signed_in: Please signout before proceeding
       username_not_found: Username %{username} not found
-      username_in_use: '%{username} is already taken, please pick another'
+      username_in_use: '%{username} යන පරිශීලක නාමය මේ වන විටත් වෙන්කරවා ඇත, වෙනත්
+        පරිශීලක නාමයක් තෝරා ගන්න'
       no_teacher: Could not find anyone signed in with '%{teacher_email_or_code}'.
         Please ask them to sign up here and then try adding them again
       section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Please enter a section code
+      blank_code: කරුණාකර Section Code එක ඇතුලත් කරන්න
       cant_join_own_section: Sorry, you can't join your own section.
     mail:
       invite_student:
@@ -166,30 +169,31 @@
           your teacher.'
   reports:
     error:
-      access_denied: You don't have access to this person's stats
+      access_denied: ඔබට මෙම පුද්ගලයාගේ සංඛ්‍යානයන් සඳහා ප්‍රවේශ විය නොහැක
   redeem_prizes:
-    title: 'Redeem Prizes: %{name}'
-    provider: 'Provider:'
-    code: 'Code:'
-    redeem_header: 'To redeem:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
-    donorschoose_project: Post a project
-    donorschoose_how_to: How to use your code
-    success: Your prize was succesfully redeemed, see code below.
-    error: Your prize could not be redeemed, please try again.
-    error_us_only: The prize offer is only valid for U.S. users.
-    error_not_earned: You have not yet earned this prize.
-    error_already_redeemed: Your prize has already been redeemed.
-    no_prizes_available: We're sorry, but we currently have no prizes available.
-    teacher_info_required: 'Teacher prizes require school name and address information:'
-    teacher_email_required: 'Teacher prizes require a confirmed email address:'
+    title: 'ත්‍යාගය මුදවා ගන්න: %{name}'
+    provider: 'සපයන්නා:'
+    code: 'කේතය:'
+    redeem_header: 'මුදවා ගැනීම සඳහා:'
+    donorschoose_register: DonorsChoose.org හි ගුරුවරයෙකු ලෙස ලියාපදිංචි වන්න
+    donorschoose_project: ව්‍යාපෘතියක් යොමු කරන්න
+    donorschoose_how_to: ඔබගේ කේතය භාවිත කරන ආකාරය
+    success: ඔබගේ ත්‍යාගය සාර්ථකව මුදවා ගන්නා ලදී, පහත කේතය බලන්න.
+    error: ඔබගේ ත්‍යාගය මුදවා ගත නොහැක, නැවත උත්සහ කරන්න.
+    error_us_only: ත්‍යාගය පිරිනමනුයේ ඇමරිකා එක්සත් ජනපද පරිශීලකයින්ට පමණි.
+    error_not_earned: ඔබ මෙම ත්‍යාගය තවම උපයාගෙන නොමැත.
+    error_already_redeemed: ඔබගේ ත්‍යාගය මේ වනවිටත් මුදවාගෙන ඇත.
+    no_prizes_available: සමාවන්න, අප සතුව මේ වනවිට ත්‍යාගයන් නොමැත.
+    teacher_info_required: 'ගුරු ත්‍යාගයන් සඳහා පාසලේ නම හා ලිපිනය අවශ්‍ය වේ:'
+    teacher_email_required: 'ගුරු ත්‍යාගයන් සඳහා සහතික කරන ලද විද්‍යුත් ලිපිනය (email)
+      අවශ්‍ය වේ:'
     confirm:
       title: කරුණාකර තහවුරු කරන්න
-      'no': 'No'
-      'yes': 'Yes'
-      msg: Are you sure you want to claim the %{prize_name} prize?
-      msg_student: 'NOTE: You can only choose one type of prize.'
-      msg_publicschool: Please confirm that you are a U.S. public school teacher.
+      'no': නැහැ
+      'yes': ඔව්
+      msg: ඔබට විශ්වාසද මෙම %{prize_name} ත්‍යාගය ඔබ ලබාගත යුතයි කියා?
+      msg_student: 'සටහන: ඔබට තෝරාගත හැකිවන්නේ එක් වර්ගයක ත්‍යාගය පමණි.'
+      msg_publicschool: කරුණාකර සහතික වන්න ඔබ ඇමෙරිකා එක්සත් ජනපද ගුරුවරයෙකු බව.
       msg_visit_website: වෙබ් අඩවියට යන්න
     providers:
       apple_itunes: $10 iTunes Gift Card
@@ -205,74 +209,75 @@
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: You have earned a prize! (U.S. students only)
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
-      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies}
-        trophies, and earn real-world prizes. You can choose between 10GB of free
-        Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer
-        only valid to U.S. students, and only as long as supplies last.'
+      earned: ඔබ ත්‍යාගයක් උපයාගෙන ඇත!(ඇමෙරිකා එක්සත් ජනපද සිසුන් පමණි)
+      not_earned_title: පාඩම් මාලාව අවසන් කර ත්‍යාගයන් උපයාගන්න.(ඇමෙරිකා එක්සත් ජනපද
+        සිසුන් පමණි)
+      not_earned: 'පරිගණක විද්‍යා සංකල්ප සියල්ල ඉගෙන ගන්න. ජය සංකේත %{num_trophies}
+        ම එකතු කරගෙන වටිනා ත්‍යාගයන් දිනා ගන්න.ඔබට 10GB ක Dropbox ධාරිතාවයක්, $10
+        ක් වටිනා Skype මුදල් සහ පරිගණක ක්‍රීඩා භාගත කර ගැනීම යන ත්‍යාගයන් අතරින් කැමති
+        ත්‍යාගයක් තෝරා ගත හැක. සටහන: ත්‍යාගයන් පිරිනැමීම වලංගු වන්නේ ඇමෙරිකා එක්සත්
+        ජනපද සිසුන් සඳහා සැපයීම අවසන් වනතුරු පමණි.'
       teacher:
-        earned: 15 or more students collected all %{num_trophies} trophies. You have
-          won a teacher prize! (U.S. teachers only)
-        not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
-          href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-          only)
-        not_earned: To reward first-time computer science teachers, you can earn up
-          to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits
-          for guiding a classroom through the K-8 intro course. To qualify, you need
-          to successfully host a classroom of at least 15 students through the entire
-          K-8 intro course, with all 15 students (or more) completing all tutorials
-          and earning all %{num_trophies} trophies. If 7 or more of the students who
-          earn all of the trophies are girls, your reward is $1,000 in <a target="_blank"
-          href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise,
-          your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-          credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-          credits can only be used by teachers in U.S. public schools.
+        earned: 15 ක් හෝ ඊට වඩා වැඩි සිසුන් සංඛ්‍යාවක් ජය සංකේත %{num_trophies} ම
+          එකතු කරගෙන ඇත. එබැවින් ඔබ ගුරු ත්‍යාගයක් දිනා ඇත. (ඇමෙරිකා එක්සත් ජනපද ගුරුවරුන්
+          සඳහා පමණි)
+        not_earned_title: පන්ති සඳහා උගන්වා <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+          වෙතින් $1,000 දක්වා වූ මුදල් පත් උපයා ගන්න. (ඇමෙරිකා එක්සත් ජනපද ගුරුවරුන්
+          සඳහා පමණි.)
+        not_earned: K-8 හඳුන්වා  දීමේ පාඨමාලාව පන්ති කාමරයෙදී  උගන්වා <a href="http://DonorsChoose.org">DonorsChoose.org</a>
+          වෙතින් $1,000 දක්වා වූ මුදල් පත් උපයා ගැනීමට පරිගණක විද්‍යා ගුරුවරුන්ට අවකාශ
+          ඇත. මේ  සඳහා  පන්ති කාමරයක අවම වශයෙන් සිසුන් 15 දෙනෙකුගේ සහභාගිත්වයෙන් K-8
+          පාඨමාලාව සම්පූර්ණයෙන්ම අවසන් කල යුතුය. එහිදී එම සිසුන් 15 හෝ (ඊට වඩා වැඩි)
+          දෙනා සියලු පාඩම් මාලා සම්පූර්ණ කර ජය සංකේත %{num_trophies} ම ලබා තිබිය යුතුය.
+          එම සිසුන්ගෙන් 7 දෙනෙකුට වඩා වැඩි ප්‍රමානයක් ගැහුණු ළමයි නම් ඔබට <a href="http://DonorsChoose.org">DonorsChoose.org</a>
+          වෙතින් $1,000 ක මුදල් පත් ත්‍යාගයක් ලැබේ. නැතහොත් ඔබට <a href="http://DonorsChoose.org">DonorsChoose.org</a>
+          වෙතින් $750 ක මුදල් පත් ත්‍යාගයක් ලැබේ. <a href="http://DonorsChoose.org">DonorsChoose.org</a>
+          වෙතින් මුදල් පත් ඇමෙරිකා එක්සත් ජනපද ගුරුවරුන් සඳහා පමණක් ලබා ගත හැක.
         bonus:
-          not_earned_title: You can still earn an additional $250 in <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-            only)
-          earned: 7 or more of the students who collected all %{num_trophies} trophies
-            are girls. You have won a bonus prize! (U.S. teachers only)
-          not_earned: If at least 7 of your students who earn all %{num_trophies}
-            trophies are girls, your reward is an additional $250 in <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be
-            used by teachers in U.S. public schools.
+          not_earned_title: ඔබට තවත් අමතර $250 ක මුදල් පත් <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+            වෙතින් උපයා ගත හැක. (ඇමෙරිකා එක්සත් ජනපද ගුරුවරුන් සඳහා පමණි.)
+          earned: ජය සංකේත %{num_trophies} ම එකතු කර ගත් සිසුන්ගෙන් සිසුන් 7 දෙනෙකු
+            හෝ ඊට වඩා වැඩි ප්‍රමානයක් ගැහුණු ළමයි නම් ඔබ ප්‍රසාද දීමනාවක් දිනා ඇත.
+            (ඇමෙරිකා එක්සත් ජනපද ගුරුවරුන් සඳහා පමණි.)
+          not_earned: අවම වශයෙන් ජය සංකේත %{num_trophies} ම එකතු කර ගත් සිසුන්ගෙන්
+            සිසුන් 7 දෙනෙකු ගැහුණු ළමයි නම් ඔබට <a href="http://DonorsChoose.org">DonorsChoose.org</a>
+            වෙතින් අමතර $250 ක ත්‍යාගයක් හිමි වේ. <a href="http://DonorsChoose.org">DonorsChoose.org</a>
+            වෙතින් මුදල් පත් ඇමෙරිකා එක්සත් ජනපද ගුරුවරුන් සඳහා පමණක් ලබා ගත හැක.
   crud:
-    new_model: New %{model}
-    show: Show
-    edit: Edit
-    edit_model: Edit %{model}
-    update: Update
-    destroy: Destroy
-    back: Back
-    confirm: Are you sure?
-    created: '%{model} was successfully created.'
-    updated: '%{model} was successfully updated.'
-    destroyed: '%{model} was successfully deleted.'
-    access_denied: You do not have access to this %{model}.
+    new_model: නව %{model}
+    show: පෙන්වන්න
+    edit: සංස්කරණය කරන්න
+    edit_model: සංස්කරණය කරන්න %{model}
+    update: යාවත්කාලීන කරන්න
+    destroy: විනාශ කරන්න
+    back: ආපසු
+    confirm: ඔබට විශ්වාස ද?
+    created: '%{model} සාර්ථකව නිර්මාණය කරන ලදී.'
+    updated: '%{model} සාර්ථකව යාවත්කාලීන කරන ලදී.'
+    destroyed: '%{model} සාර්ථකව මකා දමන ලදී.'
+    access_denied: '%{model} සඳහා ඔබට ප්‍රවේශ විය නොහැක.'
   nav:
     header:
-      finished_hoc: I've finished my Hour of Code
+      finished_hoc: මා Hour of Code අවසන් කරන ලදි
       sign_in_to_save: Sign in to save progress
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: App එකක් හදන්න
+        artist: යමක් අඳින්න
         calculate: Calculate Something
+        applab: App එකක් හදන්න
     user:
       classroom: Teacher Home Page
       district_dashboard: District Dashboard
-      label: Hi %{username}
+      label: ආයුබෝවන් %{username}
       stats: Code Studio
-      settings: My account
-      prizes: Prizes
+      settings: මාගේ ගිණුම
+      prizes: තෑගි
       logout: Sign out
       signin: Sign in
       signup: Sign up
-      already_registered: Already registered?
+      already_registered: පෙර ලියාපදිංචි වී ඇත් ද?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: '%{name} ගේ ප්‍රගතිය'
       progress: Your progress
       lines: 'Total lines of code: %{lines}'
       close: CLOSE
@@ -288,19 +293,19 @@
     title:
       one: 'Your teacher:'
       other: 'Your teachers:'
-    remove: (remove teacher)
+    remove: (ගුරුවරයා ඉවත්කරන්න)
     confirm:
       remove: Are you sure you want to remove this teacher?
     tools: Teacher Tools
     followers:
-      section: 'Section:'
+      section: 'අංශය:'
       stages: 'Stage(s) to display:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: Levels key
       perfect: Completed, perfect
       completed: Completed, but using too many blocks
       tried: Tried, but not completed
-      not_tried: Not tried yet
+      not_tried: දැනට උත්සහ කර නැත
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
       trophies: ඵලකයන්
@@ -310,7 +315,7 @@
       password: මුර පදය
       manage: Manage students
       dashboard: Go to Teacher Dashboard
-      add: Add students
+      add: ශිෂ්‍යයින් ඇතුලත්කරන්න
       remove: remove student
       confirm_remove: Are you sure you want to remove this student?
       help_reassign: To divide your class into multiple sections, select students
@@ -324,18 +329,18 @@
       vist: Ask your students to visit
       section_code: 'and enter their section-code:'
       first_please: First, please %{add_section}
-      for: For
+      for: සඳහා
       enter: 'enter:'
     sections:
-      add: Add section
+      add: අංශයක් අතුලත්කරන්න
       manage: Manage sections
-      section: Section
-      students: Students
-      section_code: Section Code
+      section: අංශය
+      students: සිසුන්
+      section_code: අංශ කේතය
       add_section_code: Add Students Section-Code
       secret: Secret type
-      grade: Grade
-      course: Course
+      grade: ශේණිය
+      course: පාඨමාලාව
       rename: rename
       edit: edit
       delete: delete
@@ -354,9 +359,9 @@
       answer_viewer: Answer Viewer
       student: ශිෂ්‍යයා
       viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
-      section: Section
-      example: Example Solution
+      try_it_yourself: ඔබ විසින්ම උත්සහකර බලන්න
+      section: අංශය
+      example: ආදර්ශ පිළිතුරු
       example_with_number: Example Solution %{solution_number}
       submitted_on: 'Submitted on:'
       unsubmit: Unsubmit
@@ -373,7 +378,7 @@
       your students'' accounts.'
     delete_confirm: Are you sure you want to delete your account?
   user_level:
-    completed: Completed
+    completed: සම්පූර්ණයි
     tried: Tried
   user_stats:
     recent_activity: Recent activity
@@ -400,7 +405,7 @@
     teacher_print_certificates: Print certificates for students who finish this course
     teacher_read_blog: Read about news and updates to our materials at our Educator
       Blog
-    classroom: Your classroom
+    classroom: ඔබගේ පන්තිය
     student_progress: Your learning progress
     student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
       trophies.
@@ -430,14 +435,14 @@
     your_gallery: Gallery
     no_primary_course: Try a Code Studio course
     choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    print_certificate: සහතිකය මුද්‍රණයකරන්න
   share:
     title: Learn on Code Studio
     description: Anyone can learn computer science. Make games, apps and art with
       code.
   gender:
-    male: Male
-    female: Female
+    male: පිරිමි
+    female: ගැහැණු
     none: Prefer not to answer
   user_type:
     student: ශිෂ්‍යයා
@@ -475,9 +480,9 @@
     secure: Secure Version
     report_abuse: Report Abuse
   reference_area:
-    title: Need help?
+    title: උදව්වක් අවශ්‍යද?
     subtitle: See these videos and hints
-    teacher: See the solution
+    teacher: උත්තරය බලන්න
     auth_error: You are not authorized to see the solution.
     submit: Update Artist Location
     direction: Start Direction (in degrees)
@@ -599,14 +604,14 @@
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
-    correct_title: Correct
+    correct_title: නිවැරදියි
     correct_body: That is the correct answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Incorrect solution
     wrong_body: The solution you've entered is not correct.  Please try again!
-    correct_title: Correct
+    correct_title: නිවැරදියි
     correct_body: That is the correct answer.
   contract_match:
     wrong_title: Incorrect answer
@@ -619,25 +624,25 @@
     baddomaintype: One or more of your domain items has the wrong type, or they are
       in the wrong order.
   text_match:
-    placeholder: Enter your answer here
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    placeholder: ඔබගේ පිළිතුර මෙතනට ඇතුල් කරන්න
+    open_response_title: ස්තූතියි
+    open_response_body: ඔබගේ ප්‍රතිචාරය සඳහා ස්තූතියි!
   dialog:
     ok: හරි
-    startover_title: Are you sure you want to start over?
+    startover_title: මුල සිට පටන් ගැනීම ඔබ තහවුරු කරනවද?
     startover_body: This will reset the puzzle to its start state and reset all the
       data you've added or changed.
-    startover_ok: Start Over
+    startover_ok: මුල සිට නැවත අරඹන්න
     startover_cancel: අවලංගු කරන්න
   time:
     hour: 1 hour
-    day: day
-    week: week
+    day: දිනය
+    week: සතිය
   data:
     script:
       name:
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
+          title: K-8 පරිඝණක විද්‍යා පඨමාලාව - හැදින්වීම (පැය 15-25 ක්)
           description: This 20-hour course introduces core computer science and programming
             concepts. The course is designed for use in classrooms for grades K-8,
             but it is fun to learn at all ages.
@@ -661,7 +666,7 @@
           title: Jigsaw
           description: ''
         step:
-          title: Step
+          title: පියවර
           description: ''
         sample_level_builder:
           title: Sample Level Builder
@@ -699,7 +704,7 @@
     delete: Delete
     exit: Return to Course
     my_projects: My Projects
-    share: Share
+    share: බෙදා ගන්න
     share_title: Share your project
     share_copy_link: 'Copy the link:'
     close: Close
@@ -712,8 +717,8 @@
       on your projects at any time.
     need_help: Need help getting started?
     really_delete: Delete?
-    delete_yes: 'Yes'
-    delete_no: 'No'
+    delete_yes: ඔව්
+    delete_no: නැහැ
     saved: Saved
     not_saved: Not saved
     cancel: අවලංගු කරන්න

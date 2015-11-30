@@ -230,6 +230,7 @@
         playlab: 构建一个应用程序
         artist: 绘画一些东西
         calculate: Calculate Something
+        applab: 构建一个应用程序
     user:
       classroom: 教师主页
       district_dashboard: 选区的仪表盘
@@ -493,13 +494,13 @@
     frozen:
       title: 冻结
     starwars:
-      title: Star Wars
+      title: 星球大战
     infinity:
       title: 无限发挥实验室
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
-      title: Minecraft
-      body: Explore a Minecraft world through code.
+      title: 我的世界
+      body: 用代码来探索Minecraft。
   gallery:
     students_drew_these_with_code: 学生使用代码画这些!
     students_made_these_with_code: 学生使用代码做这些!

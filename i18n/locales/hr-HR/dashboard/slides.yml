@@ -1352,34 +1352,36 @@ hr:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: |
+          Zdravo, ja sam Kathleen Kennedy i ja producentica sam filam "Ratova zvijezda - Sila se budi". Danas ćemo raditi s našom zvijezdom, BB-8. BB-8 je sferni droid. Sve što on radi i svaki njegov pokret je kontroliran softverom. 
+          Računalna znanost utječe na sve djelatnosti, od marketinga i zdravstva, do filma. Stotine programera radilo je zajedno da stvore film "Sila se budi".
       2:
         image: notes/starwars_intro_2.JPG
-        text: "Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artists develop rigs which are the parts of the character that move that allow the character to look very believable in a galaxy far far away."
+        text: Ja sam Rachel Rose. Ja sam starija Inženjerka istraživanja i razvoja u tvrtci ILM i vodim razvojne timove za animaciju i likove. U filmu sam zadužena da pomažem umjetnicima da oblikuju pokretne dijelove likova, a koji omogućavaju da oni izgledaju stvarno u galaksiji tako dalekoj.
       3:
         image: notes/starwars_intro_3.JPG
-        text: "In the next hour, we're going to build our own Star Wars game. We'll teach you the basic concepts of programming. Usually programming is all text but we're going to use blocks here so that we can drag and drop to write the programs. Under the hood, you're still creating code. After you try the basics with blocks, we'll switch you to JavaScript, one of the most popular programming languages on the web."
+        text: 'U slijedećem satu napravit ćemo našu igricu "Ratovi zvijezda" i naučiti osnovne koncepte programiranja. Najčešće, programiranje je tekstualno, ali mi ćemo koristiti blokove i povlačiti ih da napišemo programe. No zapravo vi i dalje stvarate kod. Nakon osnova s blokovima, preći ćemo na JavaScript, jedan od najpopularnijih jezika na svijetu.'
       4:
         image: notes/starwars_intro_4.JPG
-        text: "To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts. Your screen is split into three parts. On the left is the Star Wars game space, where code will run. The instructions for each level are written below the game space."
+        text: Na početku ćemo raditi s Ray koja će programirati BB-8 da se kreće i skuplja dijelove otpada. Vaš ekran je podijeljen na tri dijela. Lijevo je prostor za igru gdje će se kod izvršavati. Upute za svaki nivo su prikazane ispod.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: U sredini je alatna traka i svaki od ovih blokova je naredba koju BB-8 razumije.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where we are going to build our program.
+        text: Bijelo područje na desnoj strani je radna površina i to je mjesto na kojem ćemo razvijati naš program.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what happens? BB-8 moves left one block on the grid.
+        text: Ako dovučem blok idiLijevo(), što se događa? BB-8 se pomiče lijevo za jedno polje na mreži.
       8:
         image: notes/starwars_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together."
+        text: A što kad želimo da učini nešto nakon toga? Mogu dodati novi blok u program. Odabrala sam idiGore(); blok i dovukla ga ispod idiLijevo(); bloka dok se nije pojavila narančasta strelica. Tada puštam blok i njih dvoje se spajaju.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked from top to bottom on our workspace. If you ever want to delete a block, just remove it from the stack and drag it back into the tool box.
+        text: 'Kad kliknem "Pokreni" ponovo, BB-8 će izvršiti naredbe kako su poredane odozgo prema dolje. Ako želite izbrisati blok samo ga odvucite nazad u alatnu traku.'
       10:
         image: notes/starwars_intro_10.JPG
-        text: "After you've hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: 'Kad kliknete "Pokreni" uvijek možete kliknuti "Poništi" i vratiti BB-8 na početak. Krenimo!'
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
@@ -1433,7 +1435,7 @@ hr:
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
       2:
         image: notes/starwars_congrats_2.JPG
         text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
@@ -1461,7 +1463,7 @@ hr:
         text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: U sredini je alatna traka i svaki od ovih blokova je naredba koju BB-8 razumije.
       6:
         image: notes/starwars_blocks_intro_6.JPG
         text: "The white space on the right is called the work space and this is where we're going to build our program."
@@ -1502,7 +1504,7 @@ hr:
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
       2:
         image: notes/starwars_blocks_congrats_2.JPG
         text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
@@ -1518,98 +1520,157 @@ hr:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
+        text: Ja sam Jens Bergensten, ali poznatiji sam kao Jeb. Glavni sam programer Minecrafta, u Mojangu u Stockholmu. Mislim da sam imao 11 ili 12 godina, kad sam počeo programirati jer sam htio raditi igrice. Jedan prijatelj mi je rekao ako želiš raditi igrice moraš najprije naučiti programirati. I tako sam počeo. Volim dizajnirati i shvaćati strukturu arhitekture igrica. To je ono što mi se sviđa kod Minecrafta.
       2:
         image: notes/mc_intro_2.JPG
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: U slijedećem satu naučit ćete osnove računalnih znanosti programiranjem pokreta Alexe ili Stevea u simuliranom komadiću Minecraft svijeta.
       3:
         image: notes/mc_intro_3.JPG
-        text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+        text: 'Tradicionalno programiranje je tekstualno, no mi ćemo danas koristiti Blockly, sustav koji koristi blokove i koje dovlačite i spuštate kako bi napisali program. No ispod "haube" vi pišete JavaScript kod.'
       4:
         image: notes/mc_intro_4.JPG
-        text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work."
+        text: |
+          Koncepte koje ćete danas naučiti su isti koje programeri inače svakodnevno koriste i temelj su računalne znanosti. Ovdje u Mojangu koristimo iste
+          koncepte u razvoju Minecrafta.
       5:
         image: notes/mc_intro_5.JPG
-        text: "Before you start, you'll pick your character. I'm going to choose Alex. Let's build code for a program that will help her move around the screen."
+        text: Prije nego krenemo odabrat ćemo lik. Ja ću odabrati Alexu. Napišimo sad kod koji će nam pomoći da ju pomičemo po ekranu.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft playspace where your program will run. The instructions for each level are written below.
+        text: Lijevo je Minecraft prostor, u kojem će se vaš kod izvršavati. Upute za svaki nivo se nalaze ispod njega.
       7:
         image: notes/mc_intro_7.JPG
-        text: "This middle area is the toolbox and each of these blocks is a command that directs Alex's actions."
+        text: U sredini je alatna traka i svaki ovaj blok je naredba koja Alexi određuje smjer kretanja.
       8:
         image: notes/mc_intro_8.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Bijeli prostor je radna površina i to je mjesto u kojem ćemo razvijati naš program.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click run, what happens? Alex moves forward one space on the grid.
+        text: Ako dovučemo idiNaprijed(); blok u radnu površinu i kliknemo Pokreni, što se događa? Alex se pomakne za jedno polje.
       10:
         image: notes/mc_intro_10.JPG
-        text: "And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the turnRight(); block and I'll drag it underneath my moveForward(); block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+        text: A što ako želimo da učini nešto nakon što se pomakne jedno polje naprijed? Možemo dodati novi blok. Ja ću uzeti okretDesno() blok i dovući ga ispod idiNaprijed() bloka dok se ne pojavi narančasta linija. Tad ću ga pustiti i dva bloka će se spojiti. Kad ponovo kliknem Pokreni, Alex će izvršiti naredbe kako su poredane od vrha prema dolje.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back to the toolbox.
+        text: Ako želimo pobrisati blok samo ga odvučemo natrag u alatnu traku.
       12:
         image: notes/mc_intro_12.JPG
-        text: "To undo your changes and get back to how the level started, use the Start Over button in the top right corner of the workspace. One more thing: you see the little triangle on the turn blocks? Anytime you see these triangles, it means that you can pick a different option. Let's start coding!"
+        text: |
+          Da poništimo svoje izmjene i vratimo se na početno stanje nivoa, kliknemo Ispočetka gumb gore desno. I još jedna sitnica. Vidite male strelice
+          na blokovima za okret? Svaki put kad ih vidite, to znači da možete odabrati neku drugu opciju. Krenimo s programiranjem!
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
+        text: Ja sam Lydia Winters, direktor u Mojangu, u kojem smo stvorili igricu zvanu Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+        text: Najdraža stvar u Minecraftu mi je istraživanje. Volim istraživati pećine i pronalaziti stvari u njima. Kako ja nisam programerka, zbilja me zanimaju Minecraft lekcije i željela bih sama naučiti programirati.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops.
+        text: Prethodno smo trebali mnogo idiNaprijed() blokova. Lakše bi bilo reći računalu da ponovi naredbu 4 ili 5 puta. Srećom za nas, računala su dobra u ponavljanjima naredbi pomoću petlji.
       4:
         image: notes/mc_repeat_4.JPG
-        text: "When building Minecraft, we use repeat loops to place all the initial materials for creating a new world. That's thousands and thousands of blocks. We also use loops in little ways, for example to make Alex's feet move back and forth as she walks. Repeat loops are a powerful part of programming."
+        text: Kad mi gradimo u Minecraftu, koristimo petlje da postavimo početne materijale pri stvaranju novog svijeta. A to su tisuće i tisuće blokova. Također, koristimo ih i za manje stvari, npr. kad želimo da se Alex pomiče naprijed i natrag. Petlje su vrlo moćan dio programiranja.
       5:
         image: notes/mc_repeat_5.JPG
-        text: "Night is coming so in the next couple of levels, we're going to build a house to stay safe. We're going to use the repeat block to do this very easily."
+        text: Dolazi noć, i u slijedećim nivoima morat ćemo sagraditi kuću da budemo na sigurnom. Koristit ćemo petlje za ovo.
       6:
         image: notes/mc_repeat_6.JPG
-        text: "To build a wall of our house, we can either tell Alex to moveForward(); and place planks four times or we can tell her to moveForward(); and place one plank, then take this command and use the repeat block to have her perform the action multiple times. Now we'll click on the repeat block and tell her how many times we want her to perform this action. Now let's build our house before night falls! Have fun."
+        text: |
+          Za izgradnju kuće možemo reći Alex da ide naprijed i postavi daske 4 puta ili da ide naprijed i uzme tu naredbu i da ju uz pomoć "Ponovi"
+          bloka izvrši više puta. Sad ćemo kliknuti na "Ponovi" blok i reći joj koliko puta da izvrši ove radnje. A sad izgradimo kuću prije nego padne noć. Zabavite se!
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: "Now we're going to learn about if statements. If statements are a fundamental part of learning to program. They help a computer make decisions."
+        text: Sad ćemo učiti o uvjetnim naredbama. Uvjetne naredbe su osnovni dio učenja programiranja. One pomažu računalu da donosi odluke.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when I unlock my phone, it runs some code that says if I enter the password correctly, then unlock the phone. Otherwise, it shows an error message.
+        text: Sva računala ih koriste, uključujući i moj telefon. Npr. kad otključam telefon, on izvrši neke naredbe poput provjere zaporke koju sam ukucala, te ga otključa. Ako je zaporka netočna, telefon prikaže poruku o grešci.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react to what they see in the world. For example, if there is a rock in front of them, they can turn left. Or turn right if they run into a tree.
+        text: Možete korisititi uvjetne naredbe u kodu da Steve i Alex reagiraju na ono što vide. Npr. ako je stijena ispred njih, mogu se okrenuti lijevo. Ili desno ako naiđu na stablo.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: "In this case, we don't want to fall in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
+        text: U ovom slučaju, ne želimo da upadnu u lavu. Ovo je lako napraviti za lavu, jer je možemo vidjeti. No što ako je lava skrivena ispod stijene?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: "After we mine the stone, we'll need to check if there's any lava in that place before moving forward. If there is lava there, we want to place a stone in front of our character before we can move forward. That way we can safely move on. Time for more mining! And remember to use the if statement to watch your step."
+        text: Nakon što iskopamo stijenu, moramo provjeriti da li je lava ispred, prije nego krenemo dalje naprijed. Ako je tu lava, moramo pomaknuti stijenu ispred našeg lika prije nego krenemo dalje. Tako možemo sigurno ići naprijed.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Čestitamo! Naučili ste onovne razvojne blokove u računalnoj znanosti.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Sada možeš koristiti ove blokove za izgradu vlastitog programa. Više nema uputa i zagonetki za rješavanje. Možeš napraviti sve god želiš. Sam(a) odaberi.
       3:
         image: notes/mc_congrats_share_3.JPG
         text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: "When you're done making your creation, choose share to get a link to share with your friends. Have fun!"
+        text: 'Kad završiš svoj rad, odaberi "dijeli" (share) da dohvatiš poveznicu (link) koju možeš podijeliti sa svojim prijateljima. Zabavi se!'
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Čestitamo! Naučili ste onovne razvojne blokove u računalnoj znanosti.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Sada možeš koristiti ove blokove za izgradu vlastitog programa. Više nema uputa i zagonetki za rješavanje. Možeš napraviti sve god želiš. Sam(a) odaberi.
       3:
         image: notes/mc_congrats_no_share_3.JPG
         text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Sad možeš napraviti što god želiš. Zabavi se!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: Bijeli prostor je radna površina i to je mjesto u kojem ćemo razvijati naš program.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

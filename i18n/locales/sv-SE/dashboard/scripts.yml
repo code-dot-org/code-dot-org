@@ -13,68 +13,68 @@ sv:
           description_short: Bara en inofficiell testkurs.
         course1:
           "Jigsaw: Learn to drag and drop": 'Pussel: Lär dig dra och släpp'
-          "Maze: Sequence": 'Labyrint: sekvens'
+          "Maze: Sequence": 'Labyrint: Sekvens'
           "Maze: Debugging": 'Labyrint: Felsökning'
-          "Artist 1: Intro": 'Artist 1: Intro'
-          Artists 2: Artister 2
-          Spelling Bee: Spelling Bee
-          Spelling Bee not blockly: Spelling Bee inte blockly
-          "Bee 1: Intro": 'Bee 1: Intro'
-          "Maze 2: Loops": 'Labyrint 2: slingor'
-          "Bee 2: Loops": 'Bee 2: slingor'
-          Multi & Match: 'Multi & Matcha'
-          K-1 Flappy: Förskoleklass-årskurs1 Flappy
+          "Artist 1: Intro": 'Konstnären 1: Introduktion'
+          Artists 2: Konstnärer 2
+          Spelling Bee: Stavnings-bi
+          Spelling Bee not blockly: Stavnings-bi inte blockly
+          "Bee 1: Intro": 'Bi 1: Introduktion'
+          "Maze 2: Loops": 'Labyrint 2: Slingor'
+          "Bee 2: Loops": 'Bi 2: Slingor'
+          Multi & Match: 'Flerval & Matcha'
+          K-1 Flappy: 'Flappy för förskoleklass - årskurs 1'
           Flappy non blockly: Flappy inte blockly
           title: Kurs 1
-          Artist 2: Artist 2
+          Artist 2: Konstnären 2
           Happy Maps: Glada kartor
-          Move it, Move it: Flytta det, flytta den
+          Move it, Move it: Flytta den, flytta den
           "Real-life Algorithms: Plant a Seed": 'Verklighetsalgoritmer: Så ett frö'
           Building a Foundation: Bygga en grund
-          Getting Loopy: Bli Snurrig
+          Getting Loopy: Att bli snurrig
           The Big Event: Den stora händelsen
-          Going Places Safely: Tryggt gå till platser
-          description: Kurs 1 är utformad för att de som börjat lära sig läsa ska kunna skapa datorprogram som hjälper dem att lära sig att samarbeta med andra, utveckla förmågan att lösa problem och vara uthålliga vid svåra uppgifter. I slutet av kursen skapar eleverna sina egna anpassade spel eller berättelse som de kan dela. Rekommenderas för förskolan-årskurs 1.
-          "Bee: Sequence": 'Bee: sekvens'
-          "Artist: Sequence": 'Artist: sekvens'
-          "Artist: Shapes": 'Artist: former'
-          "Maze: Loops": 'Labyrint: slingor'
-          "Bee: Loops": 'Bee: slingor'
-          "Studio: Create a Story": 'Play Lab - skapa en berättelse'
-          "Artist: Loops": Artist Loopar
-          description_audience: 'Åldrar 4 + (pseudo- läsare)'
-          description_short: 'Kurs 1 är utformad för "tidiga läsare".'
+          Going Places Safely: Trygg resa
+          description: Börja med Kurs 1 för dem som börjat lära sig läsa. Eleverna kommer att skapa datorprogram som hjälper dem att lära sig att samarbeta med andra, utveckla förmågan att lösa problem och vara uthålliga vid svåra uppgifter. I slutet av kursen skapar eleverna ett eget spel eller en berättelse som de kan dela med andra. Rekommenderas för förskolan-årskurs 1.
+          "Bee: Sequence": 'Bi: Sekvens'
+          "Artist: Sequence": 'Konstnären: Sekvens'
+          "Artist: Shapes": 'Konstnären: Former'
+          "Maze: Loops": 'Labyrint: Slingor'
+          "Bee: Loops": 'Bi: Slingor'
+          "Studio: Create a Story": 'Spel-labb - skapa en berättelse'
+          "Artist: Loops": 'Konstnären: Slingor'
+          description_audience: Från 4 år (icke-läsare)
+          description_short: Börja med kurs 1 för nybörjar-läsare.
         course2:
           The Maze: Labyrinten
           Suzi: Suzi
           The Artist: Konstnären
-          Artist Debugging: Artist Felsökning
+          Artist Debugging: 'Konstnären: Felsökning'
           Bounce: Studsa
-          "Studio: Create a Story": 'Play Lab - skapa en berättelse'
-          Artist Loops: Artist Loopar
-          Bee Conditionals: Bee Villkorssatser
+          "Studio: Create a Story": 'Spel-labb - skapa en berättelse'
+          Artist Loops: 'Konstnären: Slingor'
+          Bee Conditionals: 'Bi: Villkor'
           Flappy: Flappy
           title: Kurs 2
-          Bee Loops: 'Bee: slingor'
-          Artist Functions: Artist Funktioner
-          The Artist Debugging: Artisten Felsöker
-          Bee Debugging: Bee felsökning
-          Bee Functions: Bee funktioner
-          Maze Loops: 'Labyrint: slingor'
+          Bee Loops: 'Bi: Slingor'
+          Artist Functions: 'Konstnären: Funktioner'
+          The Artist Debugging: 'Konstnären: Felsökning'
+          Bee Debugging: 'Biet: Felsökning'
+          Bee Functions: 'Biet: Funktioner'
+          Maze Loops: 'Labyrint: Slingor'
           Graph Paper Programming: Kalkyleringsprogrammering
-          "Real-life Algorithms: Paper Planes": 'Verkliga algoritmer: Pappersflygplan'
-          Getting Loopy: Bli Snurrig
-          Relay programming: Relä programmering
+          "Real-life Algorithms: Paper Planes": 'Algoritmer i verkliga livet: Pappersflygplan'
+          Getting Loopy: Att bli snurrig
+          Relay programming: Stafettprogrammering
           Conditionals: Villkor
           Binary Bracelets: Binära armband
           The Big Event: Den stora händelsen
           Your Digital Footprint: Ditt digitala fotavtryck
           description: Kurs 2 är utformad för elever som kan läsa och inte har tidigare erfarenhet av programmering. I kursen kommer eleverna skapa program för att lösa problem och utveckla interaktiva spel eller berättelser som de kan dela. Rekommenderas för årskurserna 2-5.
-          "Maze: Sequence": 'Labyrint: sekvens'
-          "Artist: Sequence": 'Artist: sekvens'
-          "Maze: Loops": 'Labyrint: slingor'
-          "Artist: Loops": Artist Loopar
-          "Bee: Loops": 'Bee: slingor'
+          "Maze: Sequence": 'Labyrint: Sekvens'
+          "Artist: Sequence": 'Konstnären: Sekvens'
+          "Maze: Loops": 'Labyrint: Slingor'
+          "Artist: Loops": 'Konstnären: Slingor'
+          "Bee: Loops": 'Bi: Slingor'
           "Bee: Debugging": Bee felsökning
           "Artist: Debugging": Artist Felsökning
           "Bee: Conditionals": Bee Villkorssatser
@@ -85,17 +85,17 @@ sv:
           description_short: Kurs 2 är utformad för elever som kan läsa.
         course3:
           The Maze: Labyrinten
-          "Studio: Create a Story": 'Play Lab - skapa en berättelse'
+          "Studio: Create a Story": 'Spel-labb - skapa en berättelse'
           The Artist: Konstnären
           title: Kurs 3
-          Artist Functions: Artist Funktioner
+          Artist Functions: 'Konstnären: Funktioner'
           Artist For Loops: "Konstnär 'för' loopar"
           Artist Nested Loops: Artist Kapslade slingor/loopar
-          Bee Conditionals: Bee Villkorssatser
+          Bee Conditionals: 'Bi: Villkor'
           Bee Nested Loops: Bee Kapslade slingor/loopar
           Bee Debuggin: Bee felsökning
-          Bee Debugging: Bee felsökning
-          Bee Functions: Bee funktioner
+          Bee Debugging: 'Biet: Felsökning'
+          Bee Functions: 'Biet: Funktioner'
           Artist Functions with Params: Artist Funktioner med Parametrar
           Bounce: Studsa
           Maze Conditionals: Labyrint villkorssatser
@@ -182,18 +182,18 @@ sv:
           Maze and Bee: Labyrint och Bee
           Artist Binary: Artist binär
           description_audience: Åldrar 10 + (efter kurs 3)
-          Super Challenge - Variables: 'Super Challenge - Variables'
-          Super Challenge - For Loops: 'Super Challenge - For Loops'
-          Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
-          Extreme Challenge - Comprehensive: 'Extreme Challenge - Comprehensive'
+          Super Challenge - Variables: 'Super utmaning - variabler'
+          Super Challenge - For Loops: 'Super utmaning - för loopar'
+          Super Challenge - Functions and Parameters: 'Super utmaning - funktioner och parametrar'
+          Extreme Challenge - Comprehensive: 'Extreme utmaning - Omfattande'
         Course4pre:
           title: Kurs 4 förutsättning
           description_short: En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.
           description: En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.
           Course 4 Prerequisite: Kurs 4 förutsättning
-          "Maze: Sequence": 'Labyrint: sekvens'
-          "Artist: Sequence": 'Artist: sekvens'
-          "Artist: Loops": Artist Loopar
+          "Maze: Sequence": 'Labyrint: Sekvens'
+          "Artist: Sequence": 'Konstnären: Sekvens'
+          "Artist: Loops": 'Konstnären: Slingor'
           "Bee: Conditionals": Bee Villkorssatser
           "Artist: Nested Loops": 'Artist: Kapslade slingor'
           "Farmer: While Loops": "Bonde: 'Medan' loopar"
@@ -325,7 +325,7 @@ sv:
           title: 20 timmars Intro kurs
           description_audience: Åldrar 10 + (efter kurs 3)
           description: Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp. Kursen är utformad för användning i klassrummet från förskoleklass till årskurs 8, men det är roligt att lära sig i alla åldrar.
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          description_short: Denna 20-timmars kurs omfattar ren dator vetenskap och programmeringsbegrepp i kurserna 2-4.
           Introduction to Computer Science: Introduktion till Datavetenskap
           The Maze: Labyrinten
           Computational Thinking: Uträkningstänkande
@@ -367,21 +367,21 @@ sv:
         flappy:
           title: Flappy kod
           description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy Code övning!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Skriv ditt eget Flappy spel på mindre än 10 minuter!
           Flappy Code: Flappy kod
         jigsaw:
           title: Pussel
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: Prova vår Jigsaw handledning
+          description_short: Prova vår Jigsaw handledning
           Jigsaw: Pussel
         step:
           title: steg
-          description: Step tutorial
-          description_short: Step tutorial
+          description: Steg handledning
+          description_short: Steg handledning
           Step: steg
         Hour of Code:
           title: Timme av Kod 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description: Prova grunderna i datavetenskap med karaktärerna från Angry Birds och Plants vs. Zombies!
           description_short: Prova grunderna i datavetenskap med många roliga figurer!
           Hour of Code 2013: Timme av Kod 2013
         Code Studio Puzzle Challenge:
@@ -419,9 +419,9 @@ sv:
           description_short: En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.
           description: En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.
           Course 4 Prerequisite: Kurs 4 förutsättning
-          "Maze: Sequence": 'Labyrint: sekvens'
-          "Artist: Sequence": 'Artist: sekvens'
-          "Artist: Loops": Artist Loopar
+          "Maze: Sequence": 'Labyrint: Sekvens'
+          "Artist: Sequence": 'Konstnären: Sekvens'
+          "Artist: Loops": 'Konstnären: Slingor'
           "Bee: Conditionals": Bee Villkorssatser
           "Artist: Nested Loops": 'Artist: Kapslade slingor'
           "Farmer: While Loops": "Bonde: 'Medan' loopar"
@@ -672,6 +672,14 @@ sv:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: "'Medan' loopar(slingor)"
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1019,8 +1027,8 @@ sv:
           Equity PD: Equity PD
         hoc2015:
           title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          description_short: Använd Play Lab för att skapa en berättelse eller spel.
+          description: Använd Play Lab för att skapa en berättelse eller spel.
           Hour of Code: Timmen med Kod
           Hour of Code 2015: Hour of Code 2015
         algebraPD2:
@@ -1157,11 +1165,11 @@ sv:
           description: Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
           Happy Maps: Glada kartor
-          Move it, Move it: Flytta det, flytta den
+          Move it, Move it: Flytta den, flytta den
           "Real-life Algorithms: Plant a Seed": 'Verklighetsalgoritmer: Så ett frö'
           Graph Paper Programming: Kalkyleringsprogrammering
           Building a Foundation: Bygga en grund
-          Getting Loopy: Bli Snurrig
+          Getting Loopy: Att bli snurrig
           The Big Event: Den stora händelsen
           Binary Bracelets: Binära armband
           Songwriting: Låtskrivande
@@ -1392,8 +1400,8 @@ sv:
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
         iceage:
           title: Ice Age Play Lab
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
+          description_short: Skapa en berättelse eller gör ett spel med Ice Age Play Lab!
+          description: Skapa en berättelse eller gör ett spel med Ice Age Play Lab!
           Ice Age Play Lab: Ice Age Play Lab
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -1408,6 +1416,8 @@ sv:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
           description_short: Programming
@@ -1422,6 +1432,13 @@ sv:
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: "'Medan' loopar(slingor)"
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1437,18 +1454,18 @@ sv:
           Challenge Overview: Challenge Overview
         gumball:
           title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
+          description_short: Skapa en berättelse eller gör ett spel med Gumball Play Lab!
+          description: Skapa en berättelse eller gör ett spel med Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
           title: 'Star Wars: Bygg en galax med kod'
-          description_short: Lär dig att programmera droids och skapa ditt egna Star Wars spel i en galax långt, långt borta.
-          description: Lär dig att programmera droids och skapa ditt egna Star Wars spel i en galax långt, långt borta.
+          description_short: Lär dig att programmera droider och skapa ditt eget Star Wars spel i en galax långt, långt borta.
+          description: Lär dig att programmera droider och skapa ditt eget Star Wars spel i en galax långt, långt borta.
           Hour of Code 2015: Hour of Code 2015
         starwarsblocks:
           title: 'Star Wars: Bygg en galax med kod'
-          description_short: Lär dig att programmera droids och skapa ditt egna Star Wars spel i en galax långt, långt borta.
-          description: Lär dig att programmera droids och skapa ditt egna Star Wars spel i en galax långt, långt borta.
+          description_short: Lär dig att programmera droider och skapa ditt eget Star Wars spel i en galax långt, långt borta.
+          description: Lär dig att programmera droider och skapa ditt eget Star Wars spel i en galax långt, långt borta.
           Hour of Code 2015: Hour of Code 2015
         minecraft:
           title: Minecraft
@@ -1467,3 +1484,10 @@ sv:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Välkommen!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Sammanfattning

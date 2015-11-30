@@ -220,6 +220,7 @@ tr:
         playlab: Uygulama oluşturun
         artist: Bir şeyler çizin
         calculate: Calculate Something
+        applab: Uygulama oluşturun
     user:
       classroom: Öğretmen ana sayfa
       district_dashboard: Kontrol Paneli Bölgesi
@@ -484,7 +485,7 @@ tr:
       body: "Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın."
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Kod aracılığıyla Minecraft dünyasını keşfedin.
   gallery:
     students_drew_these_with_code: Öğrenciler kod ile bunu çizdiler!
     students_made_these_with_code: Öğrenciler bunları kod ile yaptı!

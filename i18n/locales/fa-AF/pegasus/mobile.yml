@@ -114,7 +114,6 @@ fa-AF:
   hoc_is_here: 'زمانِ HourOfCode# رسید - امتحانش کنید! codeorg@'
   just_did_hoc: 'من HourOfCode# رو تموم کردم - امتحانش کنید! codeorg@'
   twitter_teach_cs: 'چرا مدرسه های بیشتری علوم کامپیوتر درس نمی دهند؟ ما می توانیم این را اصلاح کنیم. http://youtu.be/nKIu9yen5nc. سایت  http://code.org/ را ببینید تا بیشتر بیاموزید.'
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: یک ساعت کدنویسی یاد بگیرید
   beyond_hoc: فراتر از یک ساعت
   what_gender: جنسیت شما چیست؟
@@ -304,8 +303,9 @@ fa-AF:
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: نام
   volunteer_engineer_submission_field_name_placeholder: نام و نام خانوادگی
@@ -540,7 +540,7 @@ fa-AF:
   dashboard_faq_k5: پرسش های متداول پیش از دبستان
   dashboard_announcements: Announcements
   dashboard_announce_view_all: مشاهده همه
-  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: 'ساعت کد نویسی اینجاست - 8 تا 14 دسامبر!'
   code_sign_up: ثبت نام کنید برای شرکت کردن تو هفته ی آموزش علوم کامپیوتر
   learn_more: هم اکنون شروع کنید
@@ -552,11 +552,17 @@ fa-AF:
   learn_educator_resources_description: نحوه ی آموزش کد نویسی یک ساعته را یاد بگیرید
   learn_educator_resources_button: منابع مربی
   learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator, while supplies last'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: آموزش‌های تازه‌ی ساعتِ کدنویسی ما را امتحان کنید
   hoc2014_try_new_tutorial: ورژن بتای ساعت آموزش کد جدید ما را امتحان کنید
   hoc2014_try_scrat: پرندگان عصبانی، گیاهان علیه زامبی‌ها و اسکرات
   hoc2014_try_frozen: هنرمندی با آنا و السا, از کارتون منجمد
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: آموزش به زبان شما
@@ -581,7 +587,7 @@ fa-AF:
   teachers_notes_hoc: 'معلم ها: نکته های مهم آموزگار را اینجا بخوانید'
   previous: قبلی
   next: بعدي
-  older_systems: آموزش هایی که روی سیستم های قدیمی تر کار می کنند
+  older_systems: خودآموز هایی برای سیستمهای قدیمی تر
   older_systems_subheading: 'این ها باید روی مرورگرهای وب قدیمی تر کار کنند. برای دسترسی به تمام آموزش ها، به یک مرورگر وب به روز <a href="http://browsehappy.com/" target="_blank">  ارتقا دهید.</a>'
   mobile_devices: آموزش هایی برای دستگاه های همراه
   frozen_name: کدنویسی با آنا و السا
@@ -623,8 +629,10 @@ fa-AF:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: سنگ، کاغذ، قیچی
-  hourofcode_name: جا نگهدار برای code.org/hoc جدید
+  hourofcode_name: اولین برنامه کامپیوتر خودت را بنویس
   playlab_name: آزمایشگاه بازی
+  infinity_name: آزمایشگاه بازی نامحدود
+  artist_name: هنرمند
   codeorg_gradelevel: سنین 4 تا 104
   codeintl_gradelevel: سنین 4 تا 104
   thinkersmithspanish_gradelevel: Por todos
@@ -666,6 +674,8 @@ fa-AF:
   frozen_gradelevel: سنین بالای 8
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: سنین 4 تا 104
+  infinity_gradelevel: سنین 4 تا 104
+  artist_gradelevel: سنین 4 تا 104
   codeorg_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   codeintl_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   thinkersmithspanish_platformtext: آنپلاگد
@@ -744,10 +754,12 @@ fa-AF:
   thinkersmith2_shortdescription: 'یادبگیریم  که کامپیوتر ها چگونه از 0 ها و 1ها برای نشان دادن اطلاعات استفاده میکنند.'
   kodableunplugged_shortdescription: یک تمرین بدون اتصال جالب
   projguts_shortdescription: 'مدل سازی و شبیه سازی  رابا استفاده از سنگ/کاغذ/قیچی امتحان کنید'
-  hourofcode_shortdescription: جا نگهدار برای code.org/hoc جدید
+  hourofcode_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!
   frozen_shortdescription: بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو و زیبایی یخ را کشف می کنند استفاده کنیم.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
   playlab_shortdescription: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
+  artist_shortdescription: با نقاش چند عکس و طرح باحال بکش!
   codeorg_longdescription: با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری، شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس است.
   codeintl_longdescription: با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری، شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس است.
   thinkersmithspanish_longdescription: 'با استفاده از "واژگان رباتی" از پیش تعیین شده دانش آموزان خواهند آموخت چگونه برای انجام کارهای مشخص یکدیگر را هدایت کنند بدون این که ابتدا راجع به آن ها بحث کنند. این درس به بچه ها ارتباط بین نماد ها و کار ها را می آموزد، همان طور که مهارت خیلی با ارزش رفع عیب را می آموزد.'
@@ -977,3 +989,11 @@ fa-AF:
   compatibility_https_header: لطفا مرور امن (HTTPS) را برای code.org فعال کنید.
   compatibility_https_message: "برای افزایش امنیت سایت ما در تاریخ %{https_date} به حالت مرور امن (HTTPS) تغییر می کند. شما بعد از این تاریخ به Code.org دسترسی نخواهید داشت. برای این که ببینید چه طور می توانید مرور امن (HTTPS) را برای Code.org فعال کنید <a href='%{it_requirements_url}'>اینجا کلیک کنید</a>."
   compatibility_https_hide_this_warning: مخفی کردن هشدار
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: پریدن
+  infinity_shortcode: inf
+  playlab_shortcode: بازی کن
+  artist_shortcode: art
