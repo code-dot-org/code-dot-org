@@ -52,12 +52,12 @@ ____________________________________________________
 
 ```
 // Generate a random 1 or 2, and always win because of carefully worded messages.
-var myRandomNumber = randomNumber(1,2)
+var myRandomNumber = randomNumber(1,2);
 if(myRandomNumber == 1){
-  console.log("Heads, I win!")
+  console.log("Heads, I win!");
 }
 else {
-  console.log("Tails, you lose!")
+  console.log("Tails, you lose!");
 }
 ```
 

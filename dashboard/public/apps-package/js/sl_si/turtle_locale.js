@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Dvigne ali spusti svinčnik, da začne ali neha risati."},
 "penUp":function(d){return "nehaj risati"},
 "reinfFeedbackMsg":function(d){return "Tukaj je tvoja risba! Lahko jo dopolniš ali pa rešiš naslednjo uganko."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "nastavi prosojnost"},
 "setColour":function(d){return "izberi barvo pisala"},
 "setPattern":function(d){return "določi vzorec"},
 "setWidth":function(d){return "določi debelino pisala"},

@@ -1129,62 +1129,64 @@
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
-        text: On your head you hold your hat and your smarts will tell you where you're
-          at and to think about the zoo, and to nod hello to you and you! Use your
-          head when you're online to keep what's yours inside your mind and to know
-          how to be safe, how to give your life some private space! From your head
-          down to your toes, pause, think about it. From your feet up to your nose,
-          pause and think online!
+        text: Pe cap tu îți ții căciula și istețimea ta-ți va spune unde ești acum
+          și să te gândești la Zoo, și dai din cap salut spunând ție și ție! Folosește-ți
+          tu căpșorul când ești online să-ți păstrezi în minte ce-i al tău și să știi
+          cum să te protejezi, cum să-ți dai în viață spațiu de viață privată! Din
+          cap și până-n picioare, ia o pauză și gandește-te la asta. Din picioare
+          și până-n sus la nas, ia o pauză și gândește online!
       2:
         image: notes/C2_digital_footprint_2.png
-        text: Use your heart to grow and grow, and to give yourself a healthy glow,
-          and to make a valentine, tell someone that you'll be mine! Use your heart
-          when you're online, feel what's right and always kind, and show your friends
-          respect, to be fair and nice on the internet. From your head down to your
-          toes, pause, think about it. From your feet up to your nose, pause and think
-          online!
+        text: Foloseste-ti inima sa creasca si sa creasca, si ofera-ti o stralucire
+          sanatoasa, si creaza-ti un valentine, spune-i cuiva ca vei fi al meu! Foloseste-ti
+          inima atunci cand esti online, simte ce este corect si intotdeauna bun,
+          si arata-le respectul prietenilor tai, fii corect si dragut pe internet.
+          Din cap pana in picioare, pauza, gandeste-te la asta. De la picioare pana
+          la nas, pauza si gandeste online!
       3:
         image: notes/C2_digital_footprint_3.png
-        text: Use your arms to hug your pet, to keep your clothes from getting wet,
-          and to wear your favorite sleeves and to help you fly and make believe.
-          Use your arms when you're online, to take break and balance time and leave
-          your tech behind and to find yourself a tree to climb. From your head down
-          to your toes, pause, think about it. From your feet up to your nose, pause
-          and think online!
+        text: Foloseste-ti armele pentru a-ti imbratisa animalul, fereste-ti hainele
+          de umezeala, si poarta-ti manecile tale favorite sa te ajuta sa zbori si
+          sa crezi. Foloseste-ti bratele atunci cand esti online, pentru a lua o pauza
+          si lasa tehnologia in spate si cauta-ti un capac pentru a-l urca. Din cap
+          pana in picioare, pauza, gandeste-te la asta. De la picioare la nas, pauza
+          si gandeste online!
       4:
         image: notes/C2_digital_footprint_4.png
-        text: Use your gut to store your food, and to listen to its growling mood,
-          to make a belly flop, and to feel the gas in soda pop. Use your gut when
-          you're online, to know to watch for certain signs, and to let it guide the
-          way and tell you when it's not ok. From your head down to your toes, pause,
-          think about it. From your feet up to your nose, pause and think online!
+        text: Foloseste-ti instinctul pentru a-ti stoca mancarea si asculta-ti murmurul
+          dispozitiei, pentru a face burta chix, si sa simti gazul dintr-o doza facand
+          pop. Foloseste-ti instinctul cand esti online, sa stii sa urmaresti anumite
+          indicii, si sa te ghidezi cand ceva nu este in regula. Din cap pana in picioare,
+          pauza, gandeste-te la asta. De la picioare pana la nas, pauza si gandeste
+          online!
       5:
         image: notes/C2_digital_footprint_5.png
-        text: So think with your head, and feel with your heart, balance with your
-          arms, listen to your gut, online. Use your legs to run and kick, and to
-          jump and bounce on a pogo stick, and to dance around the block, and to skip
-          along in your smelly socks. Use your legs when you're online, to stand up
-          to bullies who cross the line, and remember to stand tall, be nice to creatures
-          great and small.
+        text: Gandeste cu capul si simte cu inima, echilibreaza-te cu bratele, asculta-ti
+          instinctul, online. Foloseste-ti picioarele pentru a alerga si lovi, si
+          sa sari si sa topai pe un bat pongo, si sa dansezi in jurul unui bloc, si
+          sa sari de-a lungul sosetelor mirositoare. Foloseste-ti picioarele atunci
+          cand esti online, pentru a-ti infrunta inamicii care trec linia, si aminteste-ti
+          sa fii inalt, sa fii dragut cu creaturile mari si mici.
       6:
         image: notes/C2_digital_footprint_6.png
-        text: From your head down to your toes, pause, think about it. From your feet
-          up to your nose, pause and think online! So think with your head, and feel
-          with your heart, balance with your arms, listen to your gut, stand up with
-          your legs. From your head down to your toes, pause, think about it. From
-          your feet up to your nose, pause and think online!
+        text: Din cap pana in picioare, pauza, gandeste-te la asta. De la picioare
+          pana la nas, pauza si gandeste online! Gandeste cu capul tau, si simte cu
+          inima ta, tine-ti echilibrul cu bratele, asculta-ti instinctul, ridica-te
+          in picioare. Din cap pana in picioare, pauza, gandeste-te la asta. De la
+          picioare pana la nas, pauza si gandeste online!
     C2_digital_footprint_v2:
       1:
         image: notes/C2_digital_footprint_v2_1.png
-        text: Everytime you go online, you leave a footprint that can be searched,
-          copied, shared, broadcast and is permanent. What kind of digital footprint
-          are you leaving? What kind of digital footprint do you want to leave?
+        text: De fiecare data cand intrii online, lasi o amprenta care poate fi cautat,
+          copiata, impartasita, difuzata si este permanenta. Tu ce fel de amprenta
+          digitala lasi? Ce fel de amprenta digitala vrei sa lasi?
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
-        text: This lesson is called "Graph Paper Programming" and it's all about algorithms.
-          Today we're going to learn how to write programs that show each other how
-          to recreate simple black and white images, using only hand drawn arrows.
+        text: Aceasta lectie este numita "Programarea graficului de hartie" si este
+          vorba despre algoritmi. Astazi vom invata cum sa scriem programe care arata
+          unul celuilalt cum sa recreezi imagini albe si negre, folosind doar sagetile
+          trase de mana.
       2:
         image: notes/C2_graph_paper_2.png
         text: Un algoritm este o listă de instrucțiuni cu scopul de a completa o sarcină.
@@ -1197,10 +1199,10 @@
           și vei fi gata.
       4:
         image: notes/C2_graph_paper_4.png
-        text: I use algorithms in my work. If I write down all of the steps I can
-          recreate that same piece again, or I can teach someone else to do it. Put
-          the glass in the kiln, fuse it together, follow the rest of the instructions
-          to make the bowl. Algorithms give you a road map for getting something done.
+        text: Eu folosesc algoritmi in munca mea. Daca scriu toti pasii, pot sa recreez
+          aceeasi piesa din nou, sau pot sa invat pe altcineva sa o faca. Pune sticla
+          in cuptor, amesteca-le impreuna, umareste celelalte instructiuni pentru
+          a face vasul. Algoritmii iti dau o harta pentru a obtine ceva de facut.
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
@@ -1216,77 +1218,80 @@
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
-        text: A loop is a repetition of activity. Going into a hive to inspect, I
-          look at a frame, and then I put it back. I repeat that same activity multiple
-          times. It's looping around, doing the same activity multiple times.
+        text: O buclă este o acțiune repetată. Merg la un stup pentru verificare,
+          mă uit la cadru și apoi îl pun înapoi. Repet aceeași activitate de mai multe
+          ori. Aceasta este bucla, a face aceeași activitate de mai multe ori.
       2:
         image: notes/C2_bee_loops_2.png
-        text: This is the repeat block. Whatever you put inside the repeat block will
-          repeat those actions the number of times that you tell it to. For example,
-          in this level, rather than drag out move forward and get nectar three times,
-          we're going to just drag them out once each and repeat the action three
-          times. That made it easy!
+        text: Acesta este blocul „repetă”. Acest bloc va repeta de numărul de ori
+          pe care îl spui orice pui în interiorul lui. de exemplu, în acest nivel
+          decât să folosim „mergi înainte” și „obține nectar” de trei ori, vom folosi
+          o singură dată fiecare dintre ele și vom repeta acțiunea de trei ori. Așa
+          este mai ușor!
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
-        text: Usually programming is all in text but we'll use Blockly which uses
-          visual blocks that you drag and drop to write programs. Under the hood,
-          you're still creating code. To start off, we're going to build code for
-          a program that will help this Angry Bird move through a maze to get to the
-          evil pigs that stole its eggs.
+        text: De obicei programarea înseamnă scrierea unui text dar noi vom folosi
+          Blockly care folosește blocuri pe care le vei trage și fixa pentru a scrie
+          programe. Așa vom crea codul. Pentru început, vom crea codul pentru un program
+          care va ajuta pasărea din Angry Birds să se miște prin labirint pentru a
+          ajunge la porcul cel rău care i-a furat ouăle.
       2:
         image: notes/C2_maze_intro_2.png
-        text: Blockly is split into three main parts. On the left is the bird's maze,
-          where your program will run. The instructions for each level are written
-          below the maze. This middle area is the toolbox and each of these blocks
-          is a command that the bird can understand. The white space on the right
-          is called the workspace and this is where we'll build our program.
+        text: Blockly este împărțit în trei zone principale. În partea stângă este
+          labirintul păsării, unde programul tău va rula. Instrucțiunile pentru fiecare
+          nivel sunt scrise mai jos de labirint. În zona din mijloc se află setul
+          de instrumente și fiecare bloc de aici este o comandă pe care pasărea poate
+          să o înțeleagă. Spațiul alb din dreapta se numește spațiul de lucru și aici
+          vom crea programul nostru.
       3:
         image: notes/C2_maze_intro_3.png
-        text: If I drag the move block to our work space and press "Run", what happens?
-          The bird moves forward one box on the grid. And what if I want the bird
-          to do something after it moves forward one box? I can add another block
-          to our program.
+        text: Daca trag de blocul muta in spatiul nostru de lucru si apas "fugi",
+          ce se intampla? Pasarea se misca inainte o caseta pe grila de start. Si
+          ce se intampla daca vreau ca pasarea sa faca altceva dupa ce se muta inainte
+          cu o caseta? Pot sa adaug un alt bloc la programul nostru.
       4:
         image: notes/C2_maze_intro_4.png
-        text: I'm going to choose the "turn right" block and I'll drag it under my
-          move block until the yellow arrow appears. Then I'll drop it and the two
-          blocks will snap together. When I press "Run" again,  the bird will perform
-          the commands that are stacked from top to bottom on our work space.
+        text: Voi alege blocul "intoarce dreapta" si il voi trage sub blocul muta
+          pana cand apare sageata galbena. Apoi il voi scapa si cele doua blocuri
+          se vor uni. Cand apas iar blocul "fugi", pasarea va efectua comenzile care
+          sunt asezate de sus in jos in spatiul nostru de lucru.
       5:
         image: notes/C2_maze_intro_5.png
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it to the trash can. After you've hit run, you can always hit the reset
-          button to get the bird back to the start. Now let's get those pigs!
+        text: Daca vreodata vrei sa stergi un bloc, doar elimina-l din asezare si
+          trage-l in cosul de gunoi. Dupa ce ai apasat fugi, intotdeauna poti lovi
+          butonul de resetare pentru a trimite pasarea inapoi la start. Acum sa prindem
+          acei porci!
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
-        text: This lesson is called Real Life Algorithms. Algorithms describe things
-          that people do everyday. Cookie recipes and directions for building a birdhouse
-          are both everyday algorithms.
+        text: Aceasta lectie se numite Algoritmii din Viata Reala. Algoritmiii descriu
+          lucruri pe care oamenii le fac zilnic. Retetele pentru prajiturele si instructiuniile
+          pentru construirea unei colivii sunt de asemenea algoritmi de zi cu zi.
       2:
         image: notes/C2_paper_airplanes_2.png
-        text: Today we're gonna make, create, and test an algorithm for a paper airplane.
-          But first, we need to break this big project into easy to follow small steps.
-          For making a paper airplane, we need to decide what steps to take and in
-          what order to take them.
+        text: Astazi vom face, vom crea si vom testa un algoritm pentru un avion de
+          hartie. Dar mai intai, avem nevoie sa spargem acest mare proiect intr-un
+          unul mai usor cu pasi mici de urmat. Pentru a crea un avion de hartie, trebuie
+          sa decidem ce pasi sa facem si in ce ordine.
       3:
         image: notes/C2_paper_airplanes_3.png
-        text: You'll create your algorithm by first cutting apart the pictures. Next,
-          you'll select the 6 pictures that show the steps needed to make a paper
-          airplane and arrange those pictures in the correct order. After you have
-          everything in order, you will trade algorithms with another student team
-          to test out the algorithm to see if the algorithm works. A well designed
-          algorithm is super important to making the best paper airplane.
+        text: Vei crea propriul tau algoritm prin taierea pozelor. Apoi, vei selecta
+          cele 6 poze care descriu pasii necesari pentru a face un avion de hartie
+          si vei aranja acele poze in ordinea corecta. Dupa ce totul este in ordine,
+          vei face shimb de algoritmi cu un elev dintr-o alta echipa pentru a testa
+          daca algoritmul functioneaza. Un algoritm bine conceput este super important
+          pentru a crea cel mai bun avion de hartie.
       4:
         image: notes/C2_paper_airplanes_4.png
-        text: When we want to make chocolate, there are many big steps to that process.
-          And each of those big steps has its own set of smaller steps. And there
-          are different recipes, or algorithms, depending on how we want the chocolate
-          to taste. Each step is important, even the small ones. So without one step,
-          the rest of them cannot be completed. Creating algorithms that others can
-          understand is really important. That's why each step has to be written down,
-          so no matter who does it, the result is the same.
+        text: Cand vrem sa facem ciocolata, sunt multi pasi mari in acel proces. Si
+          fiecare din acesti mari pasi are propriul set de pasi mai micuti. Si sunt
+          multe retete sau algoritmi, in functie de gustul pe care il dorim sa o aiba
+          ciocolata. Fiecare pas este important, chiar si cei mici. Astfel incat fara
+          un singur pas, restul nu poate fi finalizat. Crearea de algoritmi pe care
+          ceilalti o pot intelege este foarte importanta. De aceea fiecare pas trebuie
+          sa fie scris, astfel incat indiferent de cine il utilizeaza, rezultatul
+          sa fie acelasi.
     C2_playlab_createastory:
       1:
         image: notes/C2_playlab_createastory_1.png
@@ -1300,44 +1305,49 @@
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
-        text: Today we're going to do relay programming. It's all about programming
-          under pressure and debugging the mistakes that sometimes happen when you
-          work really quickly or in teams. We'll use graph paper programming to simulate
-          coding, and use relay races to simulate having a deadline.
+        text: Astazi vom relua programarea. Este vorba doar despre programare sub
+          presiune si gasirea greselilor care apar atunci cand lucrati foarte repede
+          sau in echipa. Vom folosi programarea graficului de hartie pentru a stimula
+          codificarea si vom folosi curse de releu pentru a stimula avand un termen
+          limita.
       2:
         image: notes/C2_relay_programming_2.png
-        text: In relay programming, teams will be racing to finish a graph paper program.
-          You have to check your teammate's work, or debug it, fix it if there's a
-          mistake, add your arrow, and run back and tag your teammate.
+        text: In programarea de releu, echipele se vor intrece in curse pentru a termina
+          un program al graficului de hartie. Trebuie sa verifici munca colegului
+          tau de echipa, sau sa il repari daca exista o greseala, sa adaugi propriile
+          tale sageti si intoarce-te si eticheteaza-ti colegul.
       3:
         image: notes/C2_relay_programming_3.png
-        text: Programmers use debugging a lot to find and fix problems in their algorithms
-          or code. There are lots of ways to debug problems. One of the easiest is
-          to move step by step until you find where something goes wrong, then fix
-          it.
+        text: Programatorii folosesc de multe ori depanarea pentru a gasi si repara
+          problemele care apar in algoritmi sau in codurile lor. Sunt multe metode
+          prin care poti sa depanezi probleme. Unul dintre cele mai usoare este sa
+          verifici pas cu pas pana cand vei gasi ceea ce nu merge bine, si apoi sa
+          il repari.
       4:
         image: notes/C2_relay_programming_4.png
-        text: Here, I'm trying to do a back handspring, but I keep falling off. I
-          walk through each part, step by step, and realize where my mistake was.
-          My coach showed me I wasn't putting my hands on the beam correctly. So I
-          tried another back handspring on the beam with my new hand position, and
-          I stuck it! I was really glad I debugged my back  handspring. We figured
-          it out! Debugging is finding and fixing problems. Nice, good job!
+        text: Aici, incerc sa fac un handspring inapoi, dar tot cad. Merg prin fiecare
+          parte, pas cu pas, sa imi dau seama unde era greseala mea. Antrenorul meu
+          mi-a aratat ca nu am pus corect mainile pe grinda. Asa ca am incercat un
+          alt handspring inapoi pe grinda cu noua mea pozitie a mainii, si am blocat-o!
+          Am fost foarte bucuros ca am depenat handspringul inapoi. Am rezolvat! Depanarea
+          este cautarea si rezolvarea problemelor. Bun, bine lucrat!
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
-        text: One thing that computers are really good at is repeating commands. As
-          a person, you'd get really bored if you had to do the same thing lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times, and not get bored and be able to carry that out really well.
+        text: Un lucru la care calculatoarele sunt foarte bune ar fi sa repete comenzi.
+          Ca persoana, te-ai plictisi foarte tare daca ar trebui sa faci aceleasi
+          lucru de multe ori la rand. Dar un calculator poate sa faca de un milion
+          de ori sau chiar de miliarde de ori fara sa se plictiseasca si sa poata
+          face acest lucru foarte bine.
       2:
         image: notes/C2_zuck_repeat_loop_2.png
-        text: So for example if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than a century to actually
-          write out all of those emails to everyone. But with just a few lines of
-          code, I can have a system send an email to everyone on Facebook wishing
-          them a happy birthday. So that's what loops are, and why they're valuable,
-          and something that computers can do very well.
+        text: Deci, de exemplu, daca as fi vrut sa urez la multi ani tuturor de pe
+          Facebook trimitandu-le un email, ar fi putut dura mai mult de un secol pentru
+          a scris de fapt toate acele emailuri pentru toata lumea. Doar cu cateva
+          linii de cod, pot avea un sistem de trimitere a emailurilor pentru toata
+          lumea de pe Facebook, pentru a le dori la multi ani. Deci astea sunt buclele
+          si de ce aceea sunt valoroase, si sunt lucruri pe care calculatoarele le
+          pot face foarte bine.
       3:
         image: notes/C2_zuck_repeat_loop_3.png
         text: În acest exemplu sarcina ta este să muți pasărea astfel încât să ajungă
@@ -1347,30 +1357,32 @@
           comandă.
       4:
         image: notes/C2_zuck_repeat_loop_4.png
-        text: Or you can just tell the computer to "move forward" once, and then tell
-          it to "repeat" that 5 times, and it will do the same thing. So in order
-          to do this you drag your "move forward" command, and then you put it inside
-          the "repeat" block.And you can click on it and tell it how many times you
-          want to repeat the block to tell it how many steps you want it to take forward.
+        text: Sau ii poti spune calculatorului sa "mearga inainte" o data, apoi spune-i
+          sa "repete" de 5 ori si va face acelasi lucru. In loc sa faci asta, trage
+          de comanda "muta inainte" si apoi insereaz-o in blocul "repeta". Si poti
+          face click pe ea si sa ii spui de cate ori vrei sa repete blocul pentru
+          a sti cati pasi vrei sa mearga inainte.
       5:
         image: notes/C2_zuck_repeat_loop_5.png
-        text: Now one more thing is you can put as many commands as you want inside
-          the "repeat" block. So in this example you're telling it to move forward
-          and turn left, which it will do five times. All right good job and have
-          fun!
+        text: Acum un alt lucru este ca poti pune cat de multe comenzi doresti in
+          interiorul blocului "repeta". Deci in acest exemplu tu il vei pune sa avanseze
+          si sa intoarca la stanga, care se va face de cinci ori. Toate bune acum
+          si distractie placuta!
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: Una dintre cele mai importante lucruri in programarea pe calculator
+          este ca o data ce ati invatat un computer cum sa faca o actiune, poti apela
+          la acea functie din nou. Denumeste-l si apoi poti sa il strigi. Asta se
+          aseamana cu extinderea limbii.
       2:
         image: notes/C3_artist_functions_2.png
-        text: In the program we built, we learned how to draw a square by moving and
-          turning four times. We can take that function and give it a name, draw a
-          square, so that any time we want to do that, we simply say draw a square
-          and it will go back and invoke that function, that code. It will get done
-          for us. We've added that concept to our programming language.
+        text: In programul pe care l-am construit, am invatat cum sa desenam un patrat
+          prin miscari si intoarceri de patru ori. Putem lua acea functie si sa o
+          denumim, deseneaza un pastrat, astfel incat ori de cate ori dorim sa facem
+          acel lucru, vom spune deseneaza un patrat si va reveni si va invoca acea
+          functie, acel cod. Va face acel lucru pentru noi. Am adaugat acel concept
+          in limbajul nostru de programare.
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
@@ -1404,15 +1416,15 @@
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: When you put a loop inside of another loop, we call that a nested loop.
-          For example, here we're given the code already to draw one triangle with
-          sides of length 100 pixels using the repeat times block set to three, once
-          for each side of a triangle.
+        text: Atunci cand pui o bucla in interiorul altei bucle, numim acel lucru
+          cuib de bucle. De exemplu, aici deja avem dat codul de desenare al unui
+          triunghi cu laturile de 100 de pixeli folosind blocul repeta setat la trei,
+          pentru fiecare latura a triunghiului.
       2:
         image: notes/C3_artist_nested_loops_2.png
-        text: But we want to draw six triangles. In order to do that, we're going
-          to take that loop and place it inside of another repeat times block. Pretty
-          cool!
+        text: Dar vrem sa desenam sase triunghiuri. Pentru a realiza acest lucru,
+          vom lua acea bucla si o vom pune in interiorul blocului repeta de mai multe
+          ori. Destul de cool!
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
@@ -1445,281 +1457,290 @@
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
-        text: One of the most important concepts in computer science is how to define
-          new commands, how to add your own words to a computer language. Most computer
-          languages have only about one hundred words or commands. The art and magic
-          is in defining your own new words out of these building blocks.
+        text: Unul dintre cele mai importante concepte in informatica este acela de
+          definirea de noi comenzi, cum sa adaugi propriile cuvinte la limbajul calculatorului.
+          Majoritatea limbajelor de calculator are aproximativ 100 de cuvinte sau
+          comenzi. Arta si magia tine in definirea propriilor tale noi cuvinte inafara
+          blocurilor de constructie.
       2:
         image: notes/C3_bee_functions_2.png
-        text: We do this all the time in sports. For example, in basketball, you start
-          by learning how to dribble, how to do a lay-up, how to rebound. Once you've
-          learned these really basic moves, you learn new moves and put together these
-          building blocks, like a pick and roll or give and go. You can then go from
-          there to do more complex plays. Once you learn that play and give it a name,
-          everybody on the team knows how to do it.
+        text: Noi facem asta de fiecare data in sport. De exemplu, in baschet, incepi
+          prin a invata cum sa driblezi, cum sa face un lay-up, cum sa sari. Odata
+          ce ai invatat aceste miscari de baza, inveti miscari noi pe care le pui
+          in interiorul blocurilor de constructii, cum ar fi pick and roll sau give
+          and go. De acolo poti face mai multe miscari complexe. Odata ce inveti sa
+          joci si sa il denumesti, toata lumea din echipa stie cum sa procedeze.
       3:
         image: notes/C3_bee_functions_3.png
-        text: Similarly once you've taught a computer how to do an action once using
-          these sequences of commands, you can make up your own name for that action
-          so it's easy to repeat it later. When you define your own command and give
-          it a name, that's called a function. Now we're going to use functions to
-          help the bee.
+        text: In mod similar odata ce ai invatat un calculator cum sa foloseasca o
+          actiune utilizand aceste secvente de comenzi, poti crea propiul nume pentru
+          acea actiune pentru a fi mai usor sa il repeti mai tarziu. Atunci cand definesti
+          propia comanda si ii dai un nume, devine o functie. Acum vom utiliza functiile
+          pentru a ajuta albina.
       4:
         image: notes/C3_bee_functions_4.png
-        text: In this example, our function is called get 2 nectar, this green block
-          right here. We know what get 2 nectar does by looking at this grey box which
-          is the function definition. If we look inside there, the get 2 nectar is
-          going to get nectar and then get nectar again. Always look at what's inside
-          the grey box so that you know what these green function blocks can do.
+        text: In acest exemplu, functia noastra se numeste ajunge la nectar, acest
+          bloc verde de aici. Stim ce face acea comanda ajunge la nectar doar privind
+          casetei gri care reprezinta definitia functiei. Daca ne uitam in interior,
+          functia ajunge la nectar va folosita pentru a lua nectarul, apoi sa ia din
+          nou nectar. Intotdeauna sa te uiti la ce este in interiorul casetei gri
+          pentru a sti ce fac blocurile verzi functie.
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: Now we're going to use nested loops with the bee. We're given some starter
-          code which tells the bee to move forward and get nectar three times and
-          then turn right. Let's take that whole piece of code and nest it inside
-          another repeat block and set to repeat three times. Done!
+        text: Acum vom folosi cuiburile de bucle cu albina. Ne sunt date unele coduri
+          de pornire care ii spun albinei sa avanseze si sa obtina nectar de trei
+          ori si apoi sa se intoarca la dreapta. Hai sa luam intreaga piesa de cod
+          si sa o inseram in blocul repeta si setam repetarea de trei ori. Gata!
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: You're going to be creating your very own bounce game that you'll be
-          able to share with your friends! How cool!
+        text: Vei crea propriul tau joc de sarituri pe care il vei impartasi cu prietenii
+          tai. Cat de misto!
       2:
         image: notes/C3_bounce_2.png
-        text: To get started, we have to link up the paddle controls to the arrow
-          keys on our keyboard.
+        text: Inainte de a incepe, trebuie sa unim controalele paleta la tastele cu
+          sageti de la tastatura noastra.
       3:
         image: notes/C3_bounce_3.png
-        text: We can do this by linking the when left arrow block to the move left
-          block and the when right arrow block to the move right block. Give it a
-          go and you'll be programming your own bounce game in no time!
+        text: Putem face acest lucru prin conectarea blocului cand sageata stanga
+          la blocul muta stanga si blocului cand sageata dreapta la blocul muta dreapta.
+          Incearca si vei programa propriul tau joc de sarituri in cel mai scurt timp!
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
-        text: This lesson is computational thinking. Sometimes learning a new game
-          can be tough, right? At first it might seem really confusing and sometimes,
-          there's no one there to teach you the rules, so you have to figure it out
-          on your own.
+        text: Aceasta lectie este gandirea de calcul. Cateodata, invatarea unui joc
+          nou poate fi dificila, nu? La inceput poate parea foarte confuza si uneori,
+          nu este nimeni acolo sa te invete regulile, deci va trebui sa o faci pe
+          cont propriu.
       2:
         image: notes/C3_computational_thinking_2.png
-        text: The good news is that you can get better at figuring things out on your
-          own when you know a few thinking tricks. These tricks are unique ways for
-          looking at and solving problems. In this lesson, you'll learn about four
-          tricks and practice them with your friends to figure out the rules to a
-          game.
+        text: Vestea buna este ca poti deveni mai bun in descoperirea de lucruri de
+          unul singur atunci cand stii cateva trucuri de gandire. Aceste trucuri sunt
+          moduri unice pentru rezolvarea problemelor. In aceasta lectie, vei invata
+          patru trucuri pe care le vei practica impreuna cu prietenii tai pentru a-ti
+          da seama de regulile unui joc.
       3:
         image: notes/C3_computational_thinking_3.png
-        text: When you break down a big problem into smaller pieces, you're using
-          your brain to decompose the big problem. Once we've decomposed the big problem
-          into several smaller problems, we can go on to our next trick, which is
-          called pattern match.
+        text: Cand desfaci o problema mai mare in bucati mai mici, iti folosesti creierul
+          pentru a descompune marea problema. Odata ce am descompus marea problema
+          in mai multe probleme mai mici similare, putem merge la urmatorul truc,
+          care este denumit partida model.
       4:
         image: notes/C3_computational_thinking_4.png
-        text: That's when we look for similarities between things. Once I find the
-          things that are the same, I can figure out what things are different. When
-          I remove those differences, that's called abstraction.
+        text: Asta se intampla atunci cand ne uitam dupa asemanari intre lucruri.
+          Odata ce gasesc lucrurile care sunt la fel, imi pot da seama lucrurile care
+          sunt diferite. Cand elimin acele diferente, aceasta este numita abstractie.
       5:
         image: notes/C3_computational_thinking_5.png
-        text: After I have figured out the steps to solving a problem, I can put those
-          steps in a specific order called an algorithm so that anyone can use my
-          directions to solve that problem. We're going to use these four steps to
-          figure out how to play the game with no rules. By the end of the game, you'll
-          be able to play something that looks like this!
+        text: Dupa ce mi-am dat seama de pasii pentru rezolvarea unei probleme, pot
+          pune acei pasi intr-o anumita ordine numita algoritm, astfel incat orice
+          utilizeaza directiile mele poate rezolva problema. Vom utiliza acesti patru
+          pasi pentru a ne da seama cum sa jucam acest joc fara reguli. Pana la sfarsitul
+          jocului, vei putea sa te joci ceva care este similar cu acesta!
     C3_crowdsourcing:
       1:
         image: notes/C3_crowdsourcing_1.png
-        text: This lesson is called crowdsourcing. In this lesson we'll use a deck
-          of cards to learn about how much easier some things can be to do in groups
-          instead of trying to do them all alone. So grab some friends and make something
-          awesome. Crowdsourcing is getting help from a large group of people to finish
-          something faster.
+        text: Această lecţie se numeşte crowdsourcing. În această lecţie vom utiliza
+          un pachet de cărţi pentru a învăţa despre cum unele lucruri pot fi facute
+          mult mai uşor în grupuri în loc să încerci să le faci singur. Aşa că ia-ți
+          niște prieteni şi apucă-te să faci ceva minunat. Crowdsourcing este obţinerea
+          de ajutor de la un grup mare de oameni pentru a termina ceva mai repede.
       2:
         image: notes/C3_crowdsourcing_2.png
-        text: In computer science, we use crowdsourcing all the time. Thousands of
-          amateurs and professionals link their computers together to search through
-          billions and billions of pieces of information. Looking for things like
-          the next Marsenne prime number, or even possible alien communications.
+        text: În informatică folosim crowdsourcing tot timpul. Mii de amatori şi profesionişti
+          își conectează computerele împreună pentru a căuta prin miliarde şi miliarde
+          de informaţii. Se află în căutarea unor lucruri ca următorul număr prim
+          Marsenne, sau chiar posibile comunicaţii extraterestre.
       3:
         image: notes/C3_crowdsourcing_3.png
-        text: When you see a movie, each second of the movie is 24 individual pictures,
-          we call those frames. So every one of those pictures needs to be created
-          and rendered and put all together. My team and I, we're all software developers.
-          We all work together to create a piece of software that actually creates
-          an image, creates the final image that you see on screen. That's a tool
-          that artists and other developers can use as part of their teamwork and
-          their process to be able to create the images that they want on screen.
+        text: Cand vezi un film, fiecare secunda de film este formata din 24 de imagini
+          individuale, pe care le numim cadre. Deci fiecare din acele imagini trebuie
+          sa fie create, redate si puse toate impreuna. Eu si cu echipa mea, suntem
+          toti dezvoltatori de software. Toti lucram impreuna pentru a crea o parte
+          de software care creeaza de fapt o imagine, creeaza imaginea finala pe care
+          o vezi pe ecran. Acela este un instrument pe care artistii si alti dezvoltatori
+          il pot utiliza ca o parte din echipa lor si din proces, pentru a crea imaginile
+          pe care le doresc pe ecran.
       4:
         image: notes/C3_crowdsourcing_4.png
-        text: For example, in Finding Nemo, when Crush and Squirt and all their friends
-          are flying through the East Australian Current. You're seeing images of
-          water flowing by, you're seeing the colors on the back of the turtle, you're
-          seeing the sides of the fish. All of those things are generated through
-          math and computer programs that we write, that we then give to the artist
-          and they take that to create that final image and tweak it and make it look
-          beautiful and look fun.
+        text: De exemplu, in Cautarea lui Nemo, cand Crush si Squirt si toti prietenii
+          lor zboara prin Curentul Australian de est. Tu vezi imagini cu apa care
+          curge, vezi culorile de pe spatele broastei, vezi partile pestelui. Toate
+          aceste lucruri sunt generate prin programe de matematica si informatica
+          pe care le scriem, apoi le dam artistului si formeaza imaginea finala si
+          o aranjeaza ca sa para mai frumoasa si mai distractiva.
     C3_dice_race:
       1:
         image: notes/C3_dice_race_1.png
-        text: This lesson is called dice race. Almost everyone likes to play computer
-          games. Have you ever thought about how computer programmers turn the steps
-          of a game into a program? The first step in creating computer games and
-          in solving any problem requires thinking and planning.
+        text: Aceasta lectie se numeste cursa de zaruri. Aproape tuturor le place
+          sa se joace pe calculator. Te-ai gandit vreodata despre modul in care programatorii
+          transforma pasii unui joc intr-un program? Primul pas, in creearea de jocuri
+          pe calculator si in rezolvarea oricarei probleme, necesita gandire si planificare.
       2:
         image: notes/C3_dice_race_2.png
-        text: The thinking step of problem solving produces an algorithm, which is
-          a step by step plan for solving a problem or finishing a task. In this lesson,
-          you'll create an algorithm for a dice race game. Then you'll ask your friends
-          to try out your plan to see if they can follow the steps to play the game.
-          After the programmer is sure the steps are correct, it's time to translate
-          the algorithm into a program with language that the computer can understand.
+        text: Etapa de gandire de rezolvare a problemei produce un algoritm care este
+          un plan pentru rezolvarea unei probleme sau inchierea unei sarcini, pas
+          cu pas. In aceasta lectie, vei crea un algoritm pentru o cursa cu jocuri
+          de zaruri. Apoi iti vei intreba prietenii sa incerce planul tau pentru a
+          vedea daca pot sa urmeze pasii acestui joc. Dupa ce programatorul este sigur
+          ca pasii sunt corecti, este timpul sa traduci algoritmul in program, intr-un
+          limbaj pe care calculatorul il poate intelege.
       3:
         image: notes/C3_dice_race_3.png
-        text: Almost everything we do every day requires an algorithm, a list of steps
-          you can follow to finish a task. Think about getting ready for school or
-          planning a fun day with your friends or fixing a snack. To complete any
-          of those tasks, you'll need to break it down into smaller steps and sometimes
-          the steps must be in a specific order.
+        text: Aproape tot ceea ce facem in fiecare zi necesita un algoritm, o lista
+          de pasi pe care poti sa ii urmezi pentru a finaliza o sarcina. Gandeste-te
+          la pregatirea pentru o zi de scoala sau planificarea unui zile distractive
+          alaturi de prieteni sau stabilirea unei gustari. Pentru a finaliza oricare
+          din aceste sarcini, vei avea nevoie sa o imparti in pasi mai mici si uneori,
+          pasii trebuie sa fie intr-o anumita ordine.
       4:
         image: notes/C3_dice_race_4.png
-        text: Think about making a sandwich. It doesn't matter which ingredient you
-          get out of the cabinet first. But you can't spread the peanut butter until
-          you open the jar. Computers need algorithms and programs to show them how
-          to do even simple things that we can do without thinking about it.
+        text: Gandeste-te ca iti faci un senvis. Nu conteaza ce ingredient scoti prima
+          data din cutie. Dar nu poti intinde untul de arahide pana cand nu deschizi
+          borcanul. Calculatoarele au nevoie de algoritmi si programe pentru a le
+          arata modul cum pot crea lucruri simple pe care le putem face fara sa ne
+          gandim.
       5:
         image: notes/C3_dice_race_5.png
-        text: An algorithm is the thinking behind what needs to happen while the program
-          is the actual instructions given to the computer to make it happen. An algorithm
-          has to be translated into a program before a computer can run it. Breaking
-          a task into steps called an algorithm is sometimes difficult. But like any
-          new skill, it gets easier and easier with practice.
+        text: Un algoritm este gandirea din spate care trebuie sa se intample, in
+          timp ce programul reprezinta instructiunele actuale date calculatorului
+          pentru a face sa se intample. Un algoritm trebuie sa fie tradus intr-un
+          program inainte ca un calculator sa o ruleze. Desfacerea unui sarcini in
+          pasi numiti algoritmi poate fi uneori dificil. Dar ca orice noua indemanare,
+          aceasta devine din ce in ce mai usoara cu practica.
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
-        text: While loops are pretty similar to what you do in everyday life. Imagine
-          you are washing your car, you'll keep scrubbing until it's clean. While
-          it's not clean, continue to scrub. You're evaluating these things all the
-          time.
+        text: In timp ce buclele sunt destul de similare cu ceea ce facem zilnic,
+          imaginati-va ca va spalati masina, ca vei insista sa freci pana va fi curata.
+          Daca nu este curata, continua sa freci. Mai mereu evaluezi aceste lucruri.
       2:
         image: notes/C3_farmer_while_2.png
-        text: We've got a new look to help your farmer out. It's called a while-block.
-          It's pretty simple actually. While a statement at the top is true, do something.
-          For example, while there's a pile move one hayful. Go ahead and give it
-          a try with your farmer.
+        text: Avem un nou aspect pentru a ajuta fermierul. Blocul este numit in timp
+          ce. De fapt este destul de simplu. In timp ce o declaratie din partea de
+          sus este adevarata, fa ceva. De exemplu, in timp ce exista o gramada muta
+          una plina de fan. Incearca cu fermierul tau.
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
-        text: This lesson is functional suncatchers. You'll be creating these pretty
-          suncatchers using functions. There are several steps in creating one of
-          these suncatchers. Some of the steps you have to repeat many times.
+        text: Aceasta lectie este functional suncatchers. Veti crea aceste suncatchers
+          folosind functii. Sunt mai multi pasi pentru crearea unuia din aceste suncatchers.
+          Cativa pasi trebuie sa iti repeti de mai multe ori.
       2:
         image: notes/C3_functional_suncatchers_2.png
-        text: The first step in simplifying the process of making a suncatcher is
-          figure out what we have to repeat over and over again. We can group these
-          steps into what we call a function.
+        text: Primul pas in simplificarea procesului de creare a suncatchers este
+          sa iti dai seama ca avem de repetat din nou si din nou. Putem grupa acesti
+          pasi in ceva ce noi o numim functie.
       3:
         image: notes/C3_functional_suncatchers_3.png
-        text: But there is more to creating a beautiful suncatcher than following
-          precise steps. Sometimes we want to be creative and change the color of
-          the beads we're using. We can make every suncatcher unique if we use different
-          colored beads.
+        text: Dar exista mai multe sa creezi un suncatcher frumos, decat urmadind
+          pasii precis. Uneori vream sa fim creativi si sa schimbam culoarea margelelor
+          pe care le folosim. Putem face un suncatcher foarte unic daca folosim diferite
+          margele colorate.
       4:
         image: notes/C3_functional_suncatchers_4.png
-        text: Your suncatcher will be uniquely yours when you learn to think of the
-          beads as variables which is a word that means a placeholder for information
-          that can change. Have fun creating beautiful suncatchers using functions
-          and variables!
+        text: Suncatcher-ul tau va fi unicat al tau cand inveti gandeste-te la margele
+          ca variabile care sunt un cuvant care se refera la substituent pentru informatiile
+          care se pot schimba. Distractie placuta creand frumoase suncatchers folosind
+          functii si variabile!
     C3_internet:
       1:
         image: notes/C3_internet_1.png
-        text: This lesson is all about the internet. The internet is a very busy place
-          and similar to this busy road. Messages like cars are zooming along to get
-          to their destinations. Messages move through the internet very quickly.
+        text: In aceasta lectie este vorba doar despre internet. Internetul este un
+          loc foarte aglomerat si similar cu un drum aglomerat. La fel ca masinile,
+          mesajele sunt transmise rapid pentru a ajunge la destinatie. Mesajele se
+          misca pe internet foarte repede.
       2:
         image: notes/C3_internet_2.png
-        text: Acting out how the internet works will help you understand what's happening
-          when you use the internet. You'll learn how messages get from your computer
-          to a favorite website or from a friend to an email inbox. Just like it's
-          easier to navigate busy roads when you know the roads and can read the signs,
-          traveling the internet is not so complicated when you know what goes on
-          behind the scenes.
+        text: Actionand diferit fata de cum ruleaza internetul, te vom ajuta sa intelegi
+          ce se intampla cand folosesti internetul. Vei invata cum mesajele primite
+          de la calculatorul tau la o pagina favorita sau de la un prieten la un email
+          inbox. Doar ca este mai usor drumurilor aglomerate negativ cand stii drumurile
+          si poti citi semnele, parcurgand internetul nu este asa de complicat cand
+          stii ce se intampla in spatele scenelor.
       3:
         image: notes/C3_internet_3.png
-        text: Sending messages on the internet is a little bit like sending messages
-          in the mail but with a few differences. I'm here at Google.com. The IP address
-          for this website is this number. You can think of an IP address as your
-          return address in the mail. Let's imagine that I want to send a message
-          in the mail to someone in the office down the there. Do you see URL and
-          the IP address on that door? I've written this message and hit send.
+        text: Trimiterea de mesaje pe internet este un pic similara cu trimiterea
+          de mesaje pe mail, dar cu cateva diferente. Eu sunt aici la Google.com.
+          Adresa IP a acestui site este acest numar. Te poti gandi la o adresa IP
+          ca adresa de returnare a mailului. Sa ne imaginam ca vreau sa trimit un
+          mesaj prin mail la cineva dintr-un birou de mai jos. Vezi adresa URL si
+          adresa IP pe usa? Am scris mesajul si am apasat trimite.
       4:
         image: notes/C3_internet_4.png
-        text: Unlike the Postal Service, the first thing that happens is that the
-          internet breaks the message into smaller parts so it can be sent more easily.
-          These small parts are called packets. Each packet of the message is delivered
-          to the destination one at a time. These packets are all put together in
-          the right order so that the receiver can read the message correctly. Of
-          course, there are many more things to learn about how the internet works
-          but this is a great start. You're on your way to becoming a savvy internet
-          user! Be sure to tell your family and friends what you've learned!
+        text: Spre deosebire de Serviciile Postale, primul lucru care se intampla
+          este ca internetul desface mesajele in parti mai mici pentru a fi trimis
+          mai usor. Aceste parti mici sunt numite pachete. Fiecare pachet al mesajului
+          este livrat la destinatie, unul cate unul. Aceste pachete sunt puse toate
+          impreuna in ordinea corecta astfel incat receptorul poate citi mesajul corect.
+          Desigur, sunt mult mai multe lucruri de invatat pentru a afla modul in care
+          internetul functioneaza, dar acesta este un inceput minunat. Esti pe calea
+          cea buna in a deveni un utilizator de internet priceput! Asigura-te ca vei
+          spune familiei tale si prietenilor ce ai invatat!
       5:
         image: notes/C3_internet_5.png
-        text: My name is Amanda Camp and I'm a software engineer at Google. I work
-          on a team that works on a backend server that stores profiles and contacts.
-          In my job, we think a lot about how contacts can be sent to other devices,
-          such as your phone. Most people have a lot of contacts, you might have say,
-          1000 contacts and we don't want to send all of those contacts at once to
-          your phone because it's too large of a message. Similar to the way the internet
-          breaks large messages down into packets, we use a concept called paging
-          where we might only send your phone 100 contacts at a time and let your
-          phone respond to us and ask for the next 100.
+        text: Numele meu este Amanda Camp si sunt inginer de software la Google. Sunt
+          intr-o echipa care lucreaza la un server care stocheaza profile si contacte.
+          In meseria mea, ne gandim mult cum pot fi trimise contactele la alte dispozitive,
+          cum ar fi telefonul. Majoritatea persoanelor are o multime de contacte,
+          sa spunem ca poti avea, 1000 de contacte si noi nu dorim sa trimitem dintr-o
+          data toate acele contacte pe telefonul tau pentru ca sunt prea mari pentru
+          un mesaj. Similar cu modul in care internetul separa mesajele mari in pachete,
+          noi folosim un concept numit paginare unde am putea trimite telefonului
+          tau doar 100 de contacte o data si lasa-ti telefonul sa ne raspunda si sa
+          ceara pentru urmatoarele 100.
       6:
         image: notes/C3_internet_6.png
-        text: The most exciting thing about software is the fact that it can impact
-          the entire world. I first learned to program when I was about nineteen.
-          I think I was already a sophomore or a junior in college. The first program
-          I remember writing is something that converted Celsius to Fahrenheit. I
-          like programming because I like helping people. I can write programs at
-          Google that help people all over the world and that's really mind-boggling
-          and exciting.
+        text: Cel mai interesant lucru despre software este faptul ca acesta poate
+          avea un impact in toata lumea. Prima data am invatat sa programez pe la
+          varsta de 19 ani. Cred ca eram deja in al doi-lea an de studentie sau incepator
+          in facultate. Primul program pe care mi-l amintesc a fost sa convertesc
+          Celsius in Fahrenheit. Imi place sa programez pentru ca imi place sa ajut
+          oamenii. Pot scrie programe la Google care ajuta oamenii din toata lumea
+          si asta este foarte nebunesc si interesant.
     C3_maze_conditionals:
       1:
         image: notes/C3_maze_conditionals_1.png
-        text: People make decisions everyday. For example, before you go outside,
-          you have an if statement that says if it's raining, then I need to get my
-          jacket. Computers are amazing once you decide those kinds of statements
-          that they can reliably execute those things and unbelievable speed. A computer
-          program really is a little bit of math and some if statements where the
-          decision gets made.
+        text: Oamenii iau decizii zilnic. De exemplu, inainte sa iesi afara, iti pui
+          intrebarea daca va ploua va trebui sa iti iei jacheta. Calculatoarele sunt
+          uimitoare o data ce tu te decizi ce tip de enunturi folosesti care pot fi
+          executate fiabil si incredibil de rapid. Un program de calculator foloseste
+          intradevar un pic de matematica si unele enunturi cu daca, unde decizia
+          este facuta.
       2:
         image: notes/C3_maze_conditionals_2.png
-        text: The if block helps the zombie make a decision. It checks something.
-          For example, let's use the block that says if there's a path to the left,
-          and put a turn left command inside it. We're telling the zombie to check
-          its surroundings, see if there's a path on the left and if so, make that
-          turn.
+        text: Blocul daca ajuta zombii sa ia o decizie. Se verifica ceva. De exemplu,
+          sa folosim blocul care spune ca daca este o cale spre stanga, si pune comanda
+          intoarce la stanga in interiorul ei. Il vom pune pe zombie sa verifice imprejurimile,
+          sa vada daca exista vreo cale pe stanga si daca da, sa faca intoarcerea
+          respectiva.
       3:
         image: notes/C3_maze_conditionals_3.png
-        text: Then we use the move forward block inside this repeat to get it to keep
-          moving forward as long as it just wants to go straight. Then when there's
-          a turn, the if block will tell it to make that turn to the left. You can
-          see that if we do that, if we take the turn to the left and otherwise moving
-          forward, we'll achieve our goal.
+        text: Apoi folosim blocul muta inainte in interiorul repeta pentru a primi,
+          ca sa te deplasezi inainte atata timp cat vrei sa mearga drept. Apoi cand
+          este intoarcere, blocul daca va spune sa faca acea intoarcere la stanga.
+          Poti vedea ca daca facem asta, daca ne intoarcem la stanga si altfel mergem
+          inainte, ne vom atinge obiectivul nostru.
       4:
         image: notes/C3_maze_conditionals_4.png
-        text: It's an example of using an if statement which is really a fundamental
-          concept in computer programming. One of the first things I learned was how
-          to write a program that played tic-tac-toe. I had if statements to say,
-          ok, if the other person is about to win, go ahead and block that spot. Have
-          fun learning how to use if statements, it's a key concept.
+        text: Este un exemplu de folosire al declaratiei daca, care este un adevarat
+          concept fundamental in programarea calculatoarelor. Unul din primele lucruri
+          pe care le-am invatat a fost sa scriu un program de jucat tic-tac-toe. Am
+          avut de pus declaratia daca, daca cealalta persoana este pe cale sa castige,
+          avanseaza si blocheaza acel loc. Distreaza-te invatand cum sa folosesti
+          declaratiile daca, este un concept cheie.
     C3_maze_level_4:
       1:
         image: notes/C3_maze_level_4_1.png
-        text: In this example, your goal is to get zombie to the sunflower. We could
-          use five move forward blocks or we could tell the computer to move forward
-          and repeat five times using the one repeat block.
+        text: In acest exemplu, scopul tau este sa duci zombie-ul la floarea-soarelui.
+          Mai putem folosi cinci blocuri de muta inainte sau am putea pune calculatorul
+          sa avanseze si sa repete de cinci ori folosind blocul repeta.
       2:
         image: notes/C3_maze_level_4_2.png
-        text: This saves time and makes it way easier. To use it, just put the move
-          forward block inside the repeat block. Hit run and the zombie will move
-          forward five times to the yummy sunflower.
+        text: Acest lucru economiseste timp si il face mult mai usor. Pentru a utiliza,
+          doar pune blocul merge inainte in interiorul blocului repeta. Apasa fugi
+          si zombie-ul va merge inainte de cinci ori pana la delicioasa floarea-soarelui.
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
@@ -1733,606 +1754,623 @@
     C3_songwriting_with_parameters:
       1:
         image: notes/C3_songwriting_with_parameters_1.png
-        text: This is the song writing lesson. Music is a lot like a computer program.
-          The written notes and words tell the singer exactly what to do. Some parts
-          of music are used over and over again.
+        text: Acesta este cantecul ce descrie lectia. Muzica se aseamana cu un program
+          de calculator. Notele scrise si cuvintele spun cantaretului exact ce sa
+          faca. Unele parti ale muzicii sunt folosite iar si iar.
       2:
         image: notes/C3_songwriting_with_parameters_2.png
-        text: We call this the chorus. In a computer program, the parts of the program
-          that are used over and over again are called functions. When you read song
-          lyrics and it says the word chorus, do you sing the word chorus? No, you
-          look at the top of the page to see what words make up the chorus.
+        text: Numim acest lucru cor. Intr-un program de calculator, partile programului
+          care sunt utilizate iar si iar sunt numite functii. Atunci cand citesti
+          versurile unei melodii si spune cuvantul cor, canti cuvantul cor? Nu, te
+          uiti la partea de sus a paginii ca sa vezi cuvintele care formeaza corul.
       3:
         image: notes/C3_songwriting_with_parameters_3.png
-        text: In this lesson, you'll learn a silly little song called little bunny
-          foo foo. The song has a chorus that you will sing several times over and
-          over again. A function is a piece of code that you can call and use over
-          and over again. It makes programming easier and more efficient so you don't
-          have to write out the steps of your function over and over again. You can
-          just write it once!
+        text: In aceasta lectie, vei invata un cantecel prostesc numit micul iepuras
+          foo foo. Cantecul are un cor care va canta de cateva ori iar si iar. O functie
+          este o bucata de cod pe care tu il poti apela si folosi din nou si din nou.
+          Astfel se face programarea mai usoara si mai eficienta atfel incat tu nu
+          este nevoit sa scrii pasii functiei tale iar si iar. Il poti scrie doar
+          o singura data!
     C4_bee_conditional:
       1:
         image: notes/C4_bee_conditional_1.png
-        text: This is the conditional block. It says if you're at the flower or the
-          honeycomb, then do something. This is useful when we don't know how much
-          honey or nectar to get as we see here with this question mark.
+        text: Acesta este blocul conditionat. Spuna ca daca esti la floare sau la
+          fagurele de miere, atunci fa ceva. Acesta este folositor cand nu stim cat
+          de multa miere sau nectar sa luam, dupa cum vedem aici cu acest semn de
+          intrebare.
       2:
         image: notes/C4_bee_conditional_2.png
-        text: In this example, we're going to say, if it's a flower, get all the nectar
-          and then use another one to say, if it's a honeycomb, make honey. Ta-dah!
+        text: In acest exemplu, vom spune ca, daca este o floare, luam tot nectarul
+          si apoi folosim altul sa zicem ca, daca este un fagure de miere, sa facem
+          miere. Ta-dah!
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
-        text: We have a new block that's called the if/else block. It's a conditional
-          statement just like the if block you've used in the puzzles before. But
-          now there's a new part at the bottom that says else. The if/else block lets
-          the bee make a decision between two sets of actions. If the bee is at a
-          flower, the bee will do the set of actions you put in the first part where
-          it says do. If the bee is not at a flower, the bee will do the set of actions
-          you put in the slot where it says else.
+        text: Avem un bloc nou care este numit blocul daca/ altfel. Este o declaratie
+          conditionata la fel ca la blocul daca pe care l-am folosit in puzzle-urile
+          de dinainte. Dar acum exista o parte noua in partea de jos care spune altfel.
+          Blocul daca/ altfel face albina sa ia o decizie intre cele doua seturi de
+          actiuni. Daca albina este la floare, albina va face setul de actiuni pe
+          care le-ai pus in prima parte unde scrie a face. Daca albina nu este la
+          floare, albina va face setul de reguli pe care le pui in fereastra unde
+          scrie altfel.
       2:
         image: notes/C4_conditionals_2.png
-        text: If statements are how computers are able to make decisions. Humans set
-          up conditions for the computer that say if the computer is presented with
-          a certain situation do this. Else, which just means otherwise, do that.
-          The top of our if/else block says if at flower. But the top of our block
-          could say other things, like if nectar equals 2 or if there's a path ahead,
-          our block will behave in the same way. That if the statement at the top
-          is true it will do the first set of actions. But if the statement at the
-          top is false, it will do the second set of actions.
+        text: Declaratiile daca sunt folosite atunci cand calculatorul trebuie sa
+          ia o decizie. Oamenii seteaza conditii pentru calculator care spun ca daca
+          calculatorul este prezentat intr-o anumita situatie sa faca asta. Altfel,
+          care inseama in caz contrar, sa faca celalalt lucru. Partea de sus a blocului
+          daca/altfel spuna daca la floare. Dar partea de jos a blocului poate spune
+          alte lucruri, cum ar fi, daca nectarul este egal cu 2 sau daca exista o
+          cale inainte, blocul nostru se va comporta la fel. Daca acea declaratie
+          din partea de sus este adevarata, va face primul set de actiuni, Dar daca
+          declaratia de jos este falsa, va face al doilea set de actiuni.
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: Cand folosesti blocul repeta in bucla unui cod, cum stie calculatorul
+          cand acesta e repetat indeajuns de multe ori? De fapt blocul repeta ascunde
+          o parte sofisticata a codului numita pentru bucla care numara de la o valoarea
+          de pornire pana la o una de incheieri folosind o anumita crestere.
       2:
         image: notes/C4_for_loops_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running.
+        text: De exemplu, blocul repeta de 3 ori numara de la 1 la 3 cu 1. De fiecare
+          data cand numara, ruleaza codul din interiorul buclei. Blocul pentru bucla
+          stie de cate ori a rulat acesta folosind un contor de variabile care este
+          setat la valoarea de plecare la inceputul fiecarei bucle si creste de fiecare
+          data cand bucla este pornita. De indata ce variabila din contor este mai
+          mare decat variabila de final, bucla se opreste.
       3:
         image: notes/C4_for_loops_3.png
-        text: The benefit of using a real for loop instead of the repeat block is
-          that you can actually see the counter variable and use it in your loop.
-          For example, if I have a series of flowers and the first one has one nectar,
-          the second one has two nectars and the third one has three, I can use the
-          for loop to tell the bee to collect 'counter' nectars each time, which would
-          one at the first flower, two at the second and three at the third.
+        text: Beneficiul folosirii unui bloc pentru bucla in locul blocului repeta
+          este acela ca poti vedea variabilele contorului si sa le folosesti in bucla
+          ta. De exemplu, daca am o serie de flori si prima are un singur nectar,
+          a doua are 2 nectaruri si a treia are 3 nectaruri, pot folosi bucla pentru
+          a spune albinei sa adune "contorul" nectarurilor de fiecare data, care va
+          fi unul la prima floare, doi la a doua floare si trei la a treia.
       4:
         image: notes/C4_for_loops_4.png
-        text: Also in a for loop, you can increment the counter by a number other
-          than one each time. You can potentially count by 2s, 4s or even an amount
-          that changes every time through.
+        text: De asemenea, intr-un bloc pentru bucla, poti sa incrementezi contorul
+          de la un numar altul decat 1 de fiecare data, Poti numera potential cu 2s,
+          4s sau chiar cu o suma care se schimba de fiecare data.
     C4_for_loops_bee:
       1:
         image: notes/C4_for_loops_bee_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: Cand folosesti blocul repeta in bucla unui cod, cum stie calculatorul
+          cand acesta e repetat indeajuns de multe ori? De fapt blocul repeta ascunde
+          o parte sofisticata a codului numita pentru bucla care numara de la o valoarea
+          de pornire pana la o una de incheieri folosind o anumita crestere.
       2:
         image: notes/C4_for_loops_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running.
+        text: De exemplu, blocul repeta de 3 ori numara de la 1 la 3 cu 1. De fiecare
+          data cand numara, ruleaza codul din interiorul buclei. Blocul pentru bucla
+          stie de cate ori a rulat acesta folosind un contor de variabile care este
+          setat la valoarea de plecare la inceputul fiecarei bucle si creste de fiecare
+          data cand bucla este pornita. De indata ce variabila din contor este mai
+          mare decat variabila de final, bucla se opreste.
       3:
         image: notes/C4_for_loops_bee_3.png
-        text: The benefit of using a real for loop instead of the repeat block is
-          that you can actually see the counter variable and use it in your loop.
-          For example, if I have a series of flowers and the first one has one nectar,
-          the second one has two nectars and the third one has three, I can use the
-          for loop to tell the bee to collect 'counter' nectars each time, which would
-          one at the first flower, two at the second and three at the third.
+        text: Beneficiul folosirii unui bloc pentru bucla in locul blocului repeta
+          este acela ca poti vedea variabilele contorului si sa le folosesti in bucla
+          ta. De exemplu, daca am o serie de flori si prima are un singur nectar,
+          a doua are 2 nectaruri si a treia are 3 nectaruri, pot folosi bucla pentru
+          a spune albinei sa adune "contorul" nectarurilor de fiecare data, care va
+          fi unul la prima floare, doi la a doua floare si trei la a treia.
       4:
         image: notes/C4_for_loops_bee_4.png
-        text: Also in a for loop, you can increment the counter by a number other
-          than one each time. You can potentially count by 2s, 4s or even an amount
-          that changes every time through.
+        text: De asemenea, intr-un bloc pentru bucla, poti sa incrementezi contorul
+          de la un numar altul decat 1 de fiecare data, Poti numera potential cu 2s,
+          4s sau chiar cu o suma care se schimba de fiecare data.
     C4_for_loops_no_bee:
       1:
         image: notes/C4_for_loops_no_bee_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: Cand folosesti blocul repeta in bucla unui cod, cum stie calculatorul
+          cand acesta e repetat indeajuns de multe ori? De fapt blocul repeta ascunde
+          o parte sofisticata a codului numita pentru bucla care numara de la o valoarea
+          de pornire pana la o una de incheieri folosind o anumita crestere.
       2:
         image: notes/C4_for_loops_no_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running. The benefit of using a real for loop
-          instead of the repeat block is that you can actually see the counter variable
-          and use it in your loop.
+        text: |
+          Spre exemplu, repetarea a trei blocuri se numara de la 1 la 3 de 1 ori. Mereu acesta numara, porneste codul in interiorul unui loop. Pentru loop-ul stiut de cate ori ruleaza folosind o variabila de numarare care seteaza valoarea de incepere la inceputul loop-ului are o crestere de fiecare data cand loop-ul este rulat.
+          De indata ce numararea variabilei este mai mare decat valoarea de la sfarsit, loop-ul se opreste din rulat.
+          Beneficile de folosire ale unui loop real imediat in loc de repetarea blocului este ca poti vedea variabila numarata si sa iti folosesti loop-ul.
     C4_function_create:
       1:
         image: notes/C4_function_create_1.png
-        text: Now that you've edited function blocks, it's time to create a new function
-          block from scratch. It's really simple. You'll see the toolbox has a category
-          called functions. If you click on this, you'll see an orange button called
-          create a function. Clicking on this brings up the function editor that you've
-          already used to edit existing function blocks.
+        text: Acum ca ai editat functia blocurilor, este timpul sa cream o noua functie
+          bloc de la zero. Este foarte simplu. Vei vedea ca toolbox-ul are o categorie
+          numita functii. Daca dai click pe aceasta, vei vedea un buton portocaliu
+          numit creaza o functie. Click-and pe aceasta apare editorul de functie care
+          deja il folosesti sa editezi functiile de blocuri existente.
       2:
         image: notes/C4_function_create_2.png
-        text: Just like before, you started by naming your function, writing down
-          a description for what the function is supposed to do. For instance, it's
-          supposed to draw a square or draw a triangle and then drag blocks from the
-          toolbox into the white work space below. Remember to drag these blocks inside
-          the green wrapping block for the function.
+        text: Ca inainte, incepi de la numirea functiei tale, scriiand jos o descriere
+          pentru ce este presupus sa faca functia. De exemplu, este presupus sa desenam
+          un patrat sau un triunghi si apoi sa tragem blocuri de la toolbox-ul in
+          spatiul alb. Tine minte sa tragi aceste blocuri in interiorul blocului pentru
+          functii.
       3:
         image: notes/C4_function_create_3.png
-        text: Once you're done, click on save and exit. This will take you back to
-          the main puzzle work space. The new function you created will show up as
-          a green block in the function category in your toolbox. Drag and drop this
-          into the main work space and use it like any other block to solve the puzzle.
+        text: Odata ce este gata, Apasa 'Salveaza' si 'Exit'. Aceasta mutare va va
+          duce inapoi catre puzzle-ul principal din spatiul de lucru. Functia noua
+          pe care ati creat-o va aparea ca un bloc verde in categoria functii a instrumentelor.
+          Apuca si trage-l pe acesta in spatiul principal de lucru si utilizeaza-l
+          la fel ca pe celalalte blocuri pentru a rezolva puzzle-ul.
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: Una dintre cele mai importante lucruri in programarea pe calculator
+          este ca o data ce ati invatat un computer cum sa faca o actiune, poti apela
+          la acea functie din nou. Denumeste-l si apoi poti sa il strigi. Asta se
+          aseamana cu extinderea limbii.
       2:
         image: notes/C4_function_edit_2.png
-        text: In the program we built, we learned how to draw a square by moving and
-          turning four times. We can take that function and give it a name, draw a
-          square so that any time we want to do that, we simply say draw a square
-          and it will go back and invoke that function, that code and it will get
-          done for us. We've added that concept to our programming language.
+        text: In programul pe care il construim am invatat cum sa desenem un patrat
+          mutandu-ne si intorcandu-ne de 4 ori. Putem sa luam acea functie si sa-i
+          dam un nume, deseneaza un patrat, astfel incat oricand vrem sa facem asta
+          pur si simplu zicem deseneaza un patrat si o sa apeleze functia, codul si
+          o sa o fac pentru noi. Am adaugat acest concept la limbajul de programare.
       3:
         image: notes/C4_function_edit_3.png
-        text: In this puzzle, we have already created a draw a square function for
-          you. You'll see it in the toolbox as a green block. What you'll need to
-          do is write the same code you wrote before to draw a square and put it in
-          this function. To do that, click on the edit option in the green draw a
-          square block. This will open up the function editor. The function editor
-          has three parts. A place where you name your function. This will appear
-          on the green block before that function. Then write out a short description
-          of what your function is supposed to do.
+        text: In acest puzzle, avem deja creata o functie de desenat un patrat. Il
+          vei vedea in bara de instrumente ca un bloc verde. Ceea ce trebuie sa faci
+          este sa scrii acelasi cod pe care l-ai schis inainte pentru a desena un
+          patrat si sa il introduci in aceasta functie. Pentru a face asta, apasa
+          optiunea "editeaza" din blocul deseneaza un patrat verde. Acesta va deschide
+          editorul de functii. El are trei parti. O parte unde iti denumesti functia.
+          Aceasta apare ca un bloc verde inainte de functia propriu-zisa. Apoi, scrie
+          o mica descriere despre ce ar trebui sa faca functia ta.
       4:
         image: notes/C4_function_edit_4.png
-        text: In this case, it's supposed to draw a square. The white space below
-          this is the work space and works just like the work space you've already
-          been using. Drag and drop blocks from the toolbox into this work space.
-          Remember to put the blocks that create a square inside the green wrapping
-          block for the function. Once you're done, click on save and exit. This will
-          take you back to the main puzzle work space. Now you can use the draw the
-          square function block just like any other block to solve the puzzle.
+        text: In acest caz, trebuie sa deseneze un patrat. Spatiul alb de langa este
+          spatiul de lucru si functioneaza la fel ca cel pe care l-ai mai folosit.
+          Apuca si trage blocuri din bara de intrumente catre acest spatiu de lucru.
+          Aminteste-ti sa pui blocurile ce creeaza un patrat verde intruntrul blocului
+          de functie. Odata ce ai terminat, click pe "salveaza" si exit. Aceasta manevra
+          te va aduce inapoi catre puzzle-ul principal. Acum poti utiliza functia
+          deseneaza un patrat din bloc la fel ca orice alt bloc pentru a rezolva puzzle-ul.
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
-        text: Here's a function that draws a square with 50 pixel sides. That's great
-          but what if I wanted to draw a square with sides 50 pixels and another square
-          with sides of 100 pixels? We shouldn't have to make two separate functions
-          that do almost the same thing. Instead, we can use one function with a parameter.
+        text: Aici este o functie care deseneaza un patrat cu laturi de 50 de pixeli.
+          Este minunat, dar daca as vrea sa desenez un patrat cu latura de 50 de pixeli
+          si altul cu latura de 100 de pixeli> Nu ar trebui sa facem doua functii
+          separate care fac acelasi lucru. In schimb, ar trebui sa facem o functie
+          cu un parametru.
       2:
         image: notes/C4_function_parameters_2.png
-        text: Parameters allow us to pass values into a function that get used as
-          variables inside the function. Let's try adding a parameter called like
-          to this function so we can use it to create squares of different sizes.
-          In the function editor, you can edit the name and description like before
-          but now you can also add a parameter. Write the name of your parameter in
-          the space and click Add Parameter. This will create a red block with the
-          name of the parameter you just created. Now we can replace the move forward
-          by 100 block with the parameter Length so it will move forward by Length.
+        text: Parametrii ne dau voie sa atribuim valori unei functii care se transforma
+          in variabile intruntrul functiei. Haideti sa incercam sa adaugam un parametru
+          numit ca aceasta functie pentru a-l folosi la crearea unor patrate de diferite
+          marimi. In editorul de functii, poti edita numele si descrierea ca inainte
+          dar acum poti sa adaugi si un parametru. Scrie numele parametrului tau in
+          acest spatiu si apasa "Adauga Parametru". Aceasta comanda va realiza un
+          bloc rosu cu numele parametrului pe care tocmai l-ai creat. Acum poti inlocui
+          mutarea "mergi inainte cu 100" cu parametrul lungime astfel incat va merge
+          inainte dupa lungime.
       3:
         image: notes/C4_function_parameters_3.png
-        text: Click save and close and drag out your new create a square block from
-          the functions category in the toolbox. You'll notice there's an empty space
-          next to length because the function wants to know what value the parameter
-          Length should have. Drag a number block from the Math category and place
-          it in this space. See how you can use the function again and again with
-          different lengths to make squares of different sizes? Try it for yourself!
+        text: Apasa "salveaza" si "Inchide" si trage inafara blocul tau nou ce creeaza
+          un patrat din categoria functii in bara de instrumente. Vei vedea ca este
+          un spatiu gol langa 'lungime' deoarece functia vrea sa stie ce valoare are
+          parametrul lungime. Ia un numar de bloc din categoria Matematica si pune-l
+          in acest spatiu. Vezi cum poti folosi functia din nou si din nou cu lungimi
+          diferite pentru a face patrate de diferite marimi? Incearca-l si tu!
     C4_intro:
       1:
         image: notes/C4_intro_1.png
-        text: Usually programming is all in text but we'll use Blockly which uses
-          visual blocks that you drag and drop to write programs. Under the hood,
-          you're still creating code. To start off, we're going to build code for
-          a program that will help this Angry Bird move through a maze to get to the
-          evil pigs that stole its eggs.
+        text: De obicei programarea înseamnă scrierea unui text dar noi vom folosi
+          Blockly care folosește blocuri pe care le vei trage și fixa pentru a scrie
+          programe. Așa vom crea codul. Pentru început, vom crea codul pentru un program
+          care va ajuta pasărea din Angry Birds să se miște prin labirint pentru a
+          ajunge la porcul cel rău care i-a furat ouăle.
       2:
         image: notes/C4_intro_2.png
-        text: Blockly is split into three main parts. On the left is the bird's maze,
-          where your program will run. The instructions for each level are written
-          below the maze. This middle area is the toolbox and each of these blocks
-          is a command that the bird can understand. The white space on the right
-          is called the workspace and this is where we'll build our program.
+        text: Blockly este împărțit în trei zone principale. În partea stângă este
+          labirintul păsării, unde programul tău va rula. Instrucțiunile pentru fiecare
+          nivel sunt scrise mai jos de labirint. În zona din mijloc se află setul
+          de instrumente și fiecare bloc de aici este o comandă pe care pasărea poate
+          să o înțeleagă. Spațiul alb din dreapta se numește spațiul de lucru și aici
+          vom crea programul nostru.
       3:
         image: notes/C4_intro_3.png
-        text: If I drag the move block to our work space and press "run", what happens?
-          The bird moves forward one box on the grid. And what if I want the bird
-          to do something after it moves forward one box? I can add another block
-          to our program.
+        text: Daca trag de blocul muta in spatiul nostru de lucru si apas "fugi",
+          ce se intampla? Pasarea se misca inainte o caseta pe grila de start. Si
+          ce se intampla daca vreau ca pasarea sa faca altceva dupa ce se muta inainte
+          cu o caseta? Pot sa adaug un alt bloc la programul nostru.
       4:
         image: notes/C4_intro_4.png
-        text: I'm going to choose the "turn right" block and I'll drag it under my
-          move block until the yellow arrow appears. Then I'll drop it and the two
-          blocks will snap together. When I press "run" again,  the bird will perform
-          the commands that are stacked from top to bottom on our work space.
+        text: Voi alege blocul "intoarce dreapta" si il voi trage sub blocul muta
+          pana cand apare sageata galbena. Apoi il voi scapa si cele doua blocuri
+          se vor uni. Cand apas iar "ruleaza", pasarea va efectua comenzile care sunt
+          asezate de sus in jos in spatiul nostru de lucru.
       5:
         image: notes/C4_intro_5.png
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it to the trash can. After you've hit run, you can always hit the reset
-          button to get the bird back to the start. Now let's get those pigs!
+        text: Daca vreodata vrei sa stergi un bloc, doar elimina-l din asezare si
+          trage-l in cosul de gunoi. Dupa ce ai apasat fugi, intotdeauna poti lovi
+          butonul de resetare pentru a trimite pasarea inapoi la start. Acum sa prindem
+          acei porci!
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
-        text: If I want to draw a rectangle 50 pixels tall and that is twice as wide
-          as it is tall, how would I program the computer to do that? Well, I could
-          tell the artist to go up fifty, turn right, and then go over 100 and move
-          the whole thing twice. But then I'm doing the math for the computer.
+        text: Daca vreau sa desenez un dreptunghi de 50 de pixeli inaltime si care
+          este de doua ori mai inalt, cum pot programa computerul sa fac asta? Pai,
+          i-am putea spune artistului sa mearga in sus 50, apoi sa se intoarca la
+          dreapta si apoi sa sa mearga 100 si incearca totul de 10 ori. Dar apoi realizam
+          calculele matematice pentru computer.
       2:
         image: notes/C4_math_artist_2.png
-        text: Multiplying fifty by two in your head may not that hard but computers
-          are really good at doing math so we should leave it to them whenever possible.
-          If I just used a variable called height instead, then I could easily change
-          height to fifty and then change my algorithm to tell the artist to go up
-          by height, turn right and then go over by height times 2, which gives us
-          a rectangle that is twice as wide as it is tall.
+        text: Inmultirea lui 50 cu doi poate nu este greu ca sa o realizezi in gand
+          insa computerele sunt foarte bune la matematica asa ca putem sa le lasam
+          pe ele de cate ori e posibil. Daca folosesti foar o variabila numita inaltime
+          in schimb, atunci pot sa schimb usor inaltimea cu 50 ca dupa sa schimb algoritmul
+          ca sa ii spuna artistului sa mearga in sus dupa inaltime, sa se intoarca
+          la dreapta si sa mearga de 2 ori dupa inaltime, ceea ce realizeaza un dreptunghi
+          care este de 2 ori mai lat decat este inalt.
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
-        text: This lesson is called Tangram Algorithms. A tangram is a puzzle with
-          seven pieces that can be put together to make other shapes. You'll be using
-          an algorithm to explain to your partner how to put the puzzle together.
+        text: Aceasta lectie se numeste Algorimii Tangram. Un tangram este un puzzle
+          cu sapte piese care pot fi puse impreuna pentru a forma alte forme. Vei
+          folosi un algoritm pentru a-i explica partenerului cum sa puna puzzle-ul
+          impreuna.
       2:
         image: notes/C4_unplugged_algorithms_2.png
-        text: An algorithm is just a of list steps that you can take to complete a
-          task. We use them every day with things like shopping lists and recipes.
-          If you keep an algorithm simple, there are lots of ways to interpret it
-          and whoever performs that algorithm might not get exactly what you wanted.
-          If you want to make sure that everyone ends up with the exact same thing,
-          then your algorithm will need to be detailed and very specific.
+        text: Un algoritm este doar o listă paşi care le puteţi lua pentru a finaliza
+          o activitate. Noi le folosim în fiecare zi, spre exemplu in listele de cumpărături
+          şi reţete. Dacă vă păstraţi un algoritm simplu, există o mulţime de moduri
+          de a interpreta şi oricine efectueaza acest algoritm nu ar putea obţine
+          exact ceea ce ai vrut. Dacă doriţi să vă asiguraţi că toată lumea termină
+          cu exact acelaşi lucru, atunci algoritmul dumneavoastră va trebui să fie
+          foarte specific şi detaliat.
       3:
         image: notes/C4_unplugged_algorithms_3.png
-        text: I'm using an algorithm today to complete a painting. I wanted to try
-          doing a painting of some wolves but I'm not the most amazing painter. Luckily
-          for people by me, there is paint by numbers. There are forty colors and
-          it has little letters and numbers that tell you which color to paint each
-          section. Paint by numbers tells me exactly what color to use and where.
+        text: Folosesc un algoritm astazi pentru a completa o pictura. Voiam sa incerc
+          sa pictez niste lupi dar nu am abilitati extraordinare. Din fericire pentru
+          oamenii ca mine, exista si o pictura cu numere. Sunt 40 de culori si au
+          mici litere si cifre ce iti arata cu ce culoare sa pictezi fiecare sectiune.
+          Pictura dupa numere imi spune exact ce culoare sa folosesc si unde.
       4:
         image: notes/C4_unplugged_algorithms_4.png
-        text: It's very specific so I'm able to follow directions and the painting
-          will come out looking awesome. It's a great algorithm. If the instructions
-          weren't specific enough, my wolves wouldn't look as good. When you really
-          want something to turn out exactly the way that you planned it, it's best
-          to be extremely precise.
+        text: Este foarte specific asa ca trebuie sa urmaresc instructiunile si pictura
+          va arata minunat. Este un algoritm super. Daca instructiunile nu au fost
+          destul de specifice, lupii mei nu vor arata atat de bine. Dar atunci cand
+          chiar vrei ca ceva sa fie exact asa cum ti-ai dorit, este bine sa fii extrem
+          de precis.
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
-        text: Each team, the person who's instructing that's the person who's holding
-          the paper, has to figure out what their off symbol is going to be and what
-          their on symbol is going to be. In binary, it's kind of like an alphabet
-          with two letters. Like having A and B be your entire alphabet but you've
-          got a 0 and a 1.
+        text: Fiecare echipă, persoana care este instructor este persoana care deţine
+          hârtia, trebuie să isi dea seama ce simbol off va fi şi ce lor pe simbol
+          on va fi. În binar, este un fel de alfabet cu două litere. Este la fel ca
+          A şi B cu reprezinta intreg alfabetul dar dumneavoastră aveti 0 şi 1.
       2:
         image: notes/C4_unplugged_binary_2.png
-        text: The most common way you use binary is in an if statement. It's a classic
-          thing from programming. The program runs along and it says if something
-          is true, then do this. Or it's not true and you do something else. What
-          if you want to do something maybe a little more complicated. Instead an
-          if statement, you want to work with something like an image or a sound in
-          a computer.
+        text: Cel mai comun mod de a utiliza cod binar este o functie. Este un lucru
+          clasic de programare. Programul se execută şi spune dacă ceva este adevărat,
+          apoi faci acest lucru. Sau nu este adevărat şi face altceva. Ce se întâmplă
+          dacă vrei să faci ceva poate un pic mai complicat. În locul unei declaratii,
+          doriţi să lucraţi cu ceva ca o imagine sau un sunet al calculatorului.
       3:
         image: notes/C4_unplugged_binary_3.png
-        text: 'A computer only knows binary but an image, it''s not binary, it''s
-          not ones and zeros so how do you do that? Here''s an example: You have this
-          beautiful picture. Now a picture is basically a form of information. All
-          information can be encoded in binary one way or another, you just have to
-          figure out how to do it.'
+        text: 'Un computer ştie doar cod binar insa o imagine, nu este binara, nu
+          este 1 şi 0 deci, cum faci asta? Iată un exemplu: aveţi această imagine
+          frumoasă. Acum o imagine este în esenţă o formă de informaţii. Toate informaţiile
+          pot fi codificate în binar într-un fel sau altul, trebuie doar să iti dai
+          seama cum să faci acest lucru.'
       4:
         image: notes/C4_unplugged_binary_4.png
-        text: You imagine that we're going to put a grid over this panda bear and
-          for each square, we're going to decide whether that square is more black
-          or more white. And then we're going to color it that way. Now each cell
-          on the grid is either black or white and then the black squares we say those
-          are zeros (binary digit) and the white squares are ones, the other binary
-          digit. At the end, you're left with just a bunch of ones and zeros. That's
-          how you represent this image in binary.
+        text: Imaginaţi-vă că urmeaza să punem o grilă peste acest urs panda şi pentru
+          fiecare pătrat, vom decide dacă patratul este mai mult negru sau mai mult
+          alb. Şi apoi il vom colora in acest fel. Acum, fiecare celulă din grila
+          este ori neagra ori alba și pătrate negre ne spun că sunt zero (cifra binara)
+          şi patrate albe sunt 1, alte cifre binare. La final, ramai doar cu o adunatura
+          de 1 şi 0. Il felul acesta reprezinti o imagine in cod binar.
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png
-        text: This lesson is called for loop fun. In this lesson, we'll use a number
-          line to play a dice game. Each player will roll three times to assign a
-          starting value, a stopping value, and our interval. During each turn, we
-          circle our starting value, and every value that is the same number of steps
-          forward as our interval value. We stop circling when we get to our stopping
-          value. The person with the highest score wins!
+        text: Această lecţie este numita bucla distractiva. În această lecţie, vom
+          folosi o linie de numere pentru a juca un joc cu zaruri. Fiecare jucator
+          va da cu zarul de trei ori pentru a avea o valoare de inceput, o valoare
+          de sfarsit si un interval. In timpul fiecarei reprize, rotim valoarea de
+          start si fiecare valoare reprezinta numarul de pasi inainte. Ne oprim atunci
+          cand avem valoarea de stop. Jucatorul cu cel mai mare scor castiga!
       2:
         image: notes/C4_unplugged_forloops_2.png
-        text: For loops can come in handy a lot of places and if you were to become
-          a meteorologist, you would use for loops all the time. Hi, I'm Becky. I
-          work at EverPower Renewables as a wind meteorologist. I forecast wind speeds
-          for the Columbia River Gorge area where the company owns wind farms.
+        text: Buclele "pentru" se arata la indemana in multe locuri asa ca daca devii
+          meteorolog, vei folosi buclele mereu. Buna, sunt Becky. Lucrez la EverPower
+          Renewables ca meteorolog al vanturilor. Inregistrez vitezele vantului pentru
+          Raul columbian George unde compania are fermele eoliene.
       3:
         image: notes/C4_unplugged_forloops_3.png
-        text: We're trying to understand how much wind is going to be there so that
-          we know how much power is going to be outputted. We give that information
-          to real time energy traders. They buy and sell power based on how much power
-          we tell them is going to be there in order to make sure the power grid is
-          balanced, your lights stay on, and that we maximize the amount of energy
-          we get out of our farms.
+        text: Incercam sa intelegem cat de mult vant va fi si cu ce putere va bate.
+          Dam aceste informatii catre comerciantii de energie in timp real. Ei cumpara
+          si vand energie bazata pe cata putere eoliana le spunem noi pentru a fi
+          sigur ca tin puterea in balanta, luminile voastre sunt aprinse si noi maximizam
+          aportul de energie pe care o facem cu ajutorul eolienelor.
       4:
         image: notes/C4_unplugged_forloops_4.png
-        text: We're at the national control center for EverPower Renewables here in
-          Portland and this is where we have information coming in from all our farms
-          across the country. Even the highest power computers today can't simulate
-          the atmosphere everywhere. In computer forecasting models, we have what
-          we call a grid. Each grid point is a latitude, longitude. We have to calculate
-          the physics and try and figure out the wind speed, temperature,  pressure,
-          that sort of thing.
+        text: Suntem la centrul național de control pentru EverPower Renewables aici
+          în Portland. Aici avem informatii  provenind de la toate fermele noastre
+          în întreaga ţară. Chiar şi cea mai mare putere  computerele de astazi nu
+          o pot simula atmosfera peste tot. În modele de prognoză pe  calculator,
+          avem ceea ce noi numim o grilă. Fiecare punct de grilă este o latitudine,
+          longitudine. Avem de calculat fizica şi să încercaţi sa va dati seama de
+          viteza vantului, temperatura, presiune, chestii din astea.
       5:
         image: notes/C4_unplugged_forloops_5.png
-        text: Since these are fairly big grids and we're doing this in a lot of points
-          we're looping over these things millions and millions of times. Everything
-          I do I'll use for loops. Here for example is a for loop right there. When
-          you're forecasting wind, there's so many different parameters that go into
-          it it would be impossible for a human to sit down and do all those calculations.
-          There's so many different aspects to what's going to be affecting what's
-          happening to the wind that we need a computer model in order to forecast
-          it.
+        text: Deoarece aceste grile sunt destul de mari si facem acest lucru într-o
+          mulţime de puncte noi folosing buclele le facem de milioane şi milioane
+          de ori. Tot ceea ce fac voi folosi bucle 'pentru'. Aici este de exemplu
+          de bucla. Când prognozezi vântul, există atât de mulţi parametri diferiti,
+          unde ar fi imposibil pentru un om să stea jos şi sa faca toate aceste calcule.
+          Există atât de multe aspecte diferite pentru ceea afectează ce se întâmplă
+          vantului, că avem nevoie de un model de calculator pentru a prognoza.
     C4_unplugged_madlibs:
       1:
         image: notes/C4_unplugged_madlibs_1.png
-        text: In this lesson, we'll be playing with some fill in the blank stories.
-          You have a template that you can fill in to create similar stories that
-          have very amusing differences.
+        text: In aceasta lectie, ne vom juca un joc tip completare a spatiilor libere
+          in povesti. Ai un sablon pe care trebuie sa il umplii pentru a crea povesti
+          similare dar cu diferente foarte amuzante.
       2:
         image: notes/C4_unplugged_madlibs_2.png
-        text: In this lesson, we also learned how to make an abstracted template from
-          two stories that have already been created. Abstraction is the art of removing
-          differences and details so that you can see how one solution might work
-          for many different problems. It's very helpful in computer science because
-          it allows us to create functions that may be useful in several different
-          situations.
+        text: In aceasta lectie, am invatat de asemenea cum putem face un sablon abstract
+          din 2 povesti care au fost deja create. Abstractia este arta de a elimina
+          diferentele si detaliile astfel incat poti vedea cum o solutie poate functiona
+          pentru mai multe probleme diferite. Este de ajutor in tehnologia computerelor
+          si programarea deoarece ne ajuta sa cream functii ce pot fi utilizate in
+          mai multe situatii diferite.
     C4_unplugged_parameters:
       1:
         image: notes/C4_unplugged_parameters_1.png
-        text: This lesson is called songwriting with parameters. We're going to be
-          writing some songs here. Sometimes the chorus is just a little bit different
-          each time you sing it. Do you remember Old Macdonald Had a Farm? The chorus
-          is slightly different for each animal. And on that farm, he had a cow, e-i-e-i-o.
-          The small change in each chorus can be shown using something we call parameters.
+        text: Aceasta lectie se numeste compozitia cantecelor cu parametrii. Vom scrie
+          aici cateva cantece. Cateodata refrenul este putin mai diferit decat fiecare
+          data cand il canti. Mai tineti minte Batranul McDonald avea o ferma? Refrenul
+          este cantat diferit pentru fiecare animal. Si in ferma lui avea o vaca,
+          e-i-e-i-o. Mica diferenta din fiacer refren poate fi aratat cu ceva ce noi
+          numim parametrii.
       2:
         image: notes/C4_unplugged_parameters_2.png
-        text: Sometimes a function needs a parameter. A parameter is an extra piece
-          of information you can pass to a function to customize it for a special
-          need. When you make ice cream sundaes with your friends, you are using a
-          process similar to parameters in a computer program.
+        text: Cateodata o functie are nevoie de un parametru. Un parametru este o
+          pisa de informatie extra pe care o poti pasa catre o functie pe care sa
+          o customizezi pentru o nevoie speciala. Cand faci inghetata cu prietenii
+          tai, folosesti un proces similar parametrilor dintr-un program de computer.
       3:
         image: notes/C4_unplugged_parameters_3.png
-        text: The disk of vanilla ice cream might be the same for every sundae but
-          when you ask your friends which two toppings they'd like, you could get
-          lots of different combinations. Topping is the function name but each type
-          of topping is a parameter. Functions and parameters work together to make
-          great computer programs and great sundaes too.
+        text: Discul inghetatei cu vanilie ar putea fi acelasi pentru fiecare inghetata,
+          dar atunci cand iti intrebi prietenii care dintre cele doua topping-uri
+          le-ar dori, ai putea incerca multe variante de combinatii. Topping-ul este
+          numele functiei, dar fiecare tip de topping reprezinta un paramentru. Functiile
+          si parametrii lucreaza impreuna pentru a face programele de calculator mai
+          interesante si la fel si in cazul inghetatelor.
     C4_unplugged_variables:
       1:
         image: notes/C4_unplugged_variables_1.png
-        text: This lesson is called variables in envelopes. We're going to learn how
-          we can build sentences when we're still missing pieces of information. Most
-          of us are already familiar with the idea of filling in a blank. We do it
-          when we're putting our name on our homework. Sometimes there's more than
-          one word that needs to be filled out and in that case, we give that blank
-          a label so that we know which piece of information goes where.
+        text: Aceasta lectie se numeste variabilele in plicuri. Noi vom invata cum
+          sa construim propozitii atunci cand ne lipsesc parti ale informatiei. Majoritatea
+          dintre noi sunt deja familiarizati cu ideea umplerii unui gol. Facem asta
+          atunci cand scriem numele nostru pe teme. Cateodata este nevoie de mai mult
+          de un cuvant ca sa fie casuta umpluta, si in acel caz, vom da acelui gol
+          o eticheta ca sa stim ce bucata de informatiei merge si unde.
       2:
         image: notes/C4_unplugged_variables_2.png
-        text: Variables are placeholders for pieces of information that can change.
-          By using a variable for the missing information, we can continue working
-          on whatever we were doing and let someone else fill in the missing information
-          later. In software, we use variables a lot. We use variables as placeholders
-          for name, email address, and even username. That way we can let the program
-          know where those details will appear after the user fills them in. We use
-          variables all the time in our work.
+        text: Variabilele sunt substituenți pentru piese de informaţii care se pot
+          schimba. Utilizând o variabilă pentru informațiile lipsă, putem continua
+          sa lucram si sa lăsam pe altcineva sa completeze informaţiile lipsă mai
+          târziu. În software, vom folosi variabile mult. Noi folosim variabile ca
+          substituenţi pentru numel, adresa de e-mail, şi chiar şi numele de utilizator.
+          Astfel, putem lasa programul sa ştie unde aceste detalii vor apărea după
+          ce utilizatorul le-a completat. Noi folosim variabile tot timpul în activitatea
+          noastră.
       3:
         image: notes/C4_unplugged_variables_3.png
-        text: Any time you need to store a piece of information for later, we use
-          a variable. Let's say we need to count the number of times the user has
-          tweeted. Every time that user tweets, we'll add one to that number and every
-          time the user deletes a tweet, we'll decrease that number by one. Anytime
-          we need to know how many times that user has tweeted, we'll just look at
-          that variable.
+        text: Oricând e nevoie de stocarea unei informaţii pentru mai târziu, vom
+          folosi o variabilă. Să presupunem că avem nevoie să numărăm câte tweet-uri
+          are un utilizator. De fiecare dată când utilizatorul adaugă un tweet, adăugăm
+          unu la acel număr, şi de fiecare dată când utilizatorul şterge un tweet,
+          ne vom scădea numărul cu unu. Oricand avem nevoie să ştim câte tweets are
+          un utilizator, ajunge să ne uităm la acea variabilă.
     C4_variables_artist:
       1:
         image: notes/C4_variables_artist_1.png
-        text: A variable is a container you can store a value in. When you use that
-          variable in an algorithm, it opens up the container and looks at the value
-          inside. This lets you write smarter algorithms that behave differently depending
-          on the value stored in the variable.
+        text: O variabilă este un container în care puteţi stoca o valoare. Când utilizaţi
+          această variabilă într-un algoritm, acesta deschide containerul şi se uită
+          la valoarea din interior. Acest lucru vă permite să scrieți algoritmi mai
+          inteligenți, care se comportă diferit în funcţie de valoarea stocată in
+          variabilă.
       2:
         image: notes/C4_variables_artist_2.png
-        text: For example, if you wanted to write an algorithm to say Happy birthday,
-          you're turning 10! to my little brother, that's great now but when I run
-          it next year I'd want it to say, Happy birthday, you're turning 11! I could
-          create a variable called age to store my brother's age and write my algorithm
-          to say Happy birthday, you're turning 'age' instead. Because variable can
-          change, every year I can update the variable 'age' to equal 'age' plus 1.
+        text: De exemplu, dacă vrei să scrii un algoritm care să-i spună "La mulţi
+          ani, împlinești 10!" pentru fratele meu mai mic, o să meargă bine acum,
+          dar când îl rulez la anul aş dori să spună "La mulţi ani, împlinești 11!".
+          Aş putea crea o variabilă numită vârstă pentru a stoca vârsta fratelui meu,
+          şi să scriu algoritmul meu să spună "La mulţi ani, împlinești --vârstă--!"
+          în schimb. Deoarece variabilele pot fi modificate, în fiecare an se poate
+          actualiza variabila "vârstă" la egal "vârstă" plus 1.
       3:
         image: notes/C4_variables_artist_3.png
-        text: In this puzzle, we're going to be using a variable that will set the
-          length of the line our artist draws. Later on in our code, the move forward
-          block will look at that length variable to see what value you've set it
-          to.
+        text: In acest puzzle, vom folosi o variabila care va seta lungimea liniei
+          pe care artistul nostru o deseneaza. Mai tarziu, in codul nostru, blocul
+          muta inainte va verifica lungimea variabilei pentru a vedea la ce valoarea
+          ati setat-o.
     C4_variables_playlab:
       1:
         image: notes/C4_variables_playlab_1.png
-        text: A variable is a container that you can store a value in. When you use
-          that variable in an algorithm, it opens up the container and looks at the
-          value inside. This lets you write smarter algorithms that behave differently
-          depending on the value stored in the variable.
+        text: O variabila este un container în care poți stoca o valoare. Când folosești
+          o variabila într-un algoritm, acesta deschide containerul și se uita înauntru
+          la valoare. Acest lucru îți permite sa scrii algoritmi mai inteligenți care
+          se comporta diferit în funcție de valoarea stocata în variabila.
       2:
         image: notes/C4_variables_playlab_2.png
-        text: Now you're going to try playlab where you are given different games
-          and you can change the values of variables like speed, height, score, in
-          order to change the game. You won't have to change the algorithm of the
-          game to change how it plays, just the variable.
+        text: Acum o sa intri in laboratorul de joaca unde ti se vor da diferite jocuri
+          si tu poti schimba valorile unor variabile precum viteza, inaltimea, scorul,
+          pentru a modifica jocul. Nu va fi nevoie sa modifici algoritmul jocului
+          ca sa se schimbe modul in care se joaca, doar variabilele.
       3:
         image: notes/C4_variables_playlab_3.png
-        text: In my work for Kindle and on X-ray for books, we apply variables in
-          many different ways. One way that you can use a variable is to store page
-          numbers of a book. A user can increase and decrease the size of the font
-          on a page. Based on the font size, the number of pages in the book can change.
-          We can adjust it by storing the number of pages in the variable.
+        text: In munca pentru Kindle sau pe X-ray pentru carti, am aplicat variabile
+          diverse moduri. Unul dintre modurile in care poti folosi o variabila este
+          sa stochezi numerele paginilor unei carti. Un utilizator poate creste sau
+          descreste marimea fontului intr-o pagina. Bazat pe marimea fontului, numarul
+          de pagini in carte se poate modifica. Noi putem sa ajustam acest lucru prin
+          strocarea numarului de pagini intr-o variabila.
     infinity_playlab_events:
       1:
         image: notes/infinity_playlab_events_1.png
-        text: Now we're going to learn about something that all game programmers use
-          everyday. They're called events. An event tells your program to listen for
-          when something happens. And then when it does, it performs an action. Some
-          examples of events are listening for a mouse click, an arrow button, or
-          a tap on the screen.
+        text: Acum vom invata ceva ce toti programatorii de joc folosesc in fiecare
+          zi. Ele sunt numite evenimente. Un eveniment spune programului tau sa asculte
+          atunci cand se intampla ceva. Si apoi cand o face, efectueaza o actiune.
+          Cateva exemple de evenimente sunt ascultarea click-ului de la mouse, un
+          buton sageata, sau o apasare pe ecran.
       2:
         image: notes/infinity_playlab_events_2.png
-        text: Here, we're going to make Baymax move up to touch Hiro and move down
-          to touch Rapunzel when the player uses the up/down arrow keys or the up/down
-          buttons. We'll use the when up arrow block and attach the move actor up
-          block to it, so when the player presses the up arrow key, everything attached
-          to the "when up arrow" block is run. We'll do the same thing to make Baymax
-          move down. Step by step your game is getting more interactive.
+        text: Aici, il vom face pe Baymax sa mearga in sus pentru a-l atinge pe Hiro
+          si sa mearga in jos pentru a o atinge pe Rapunzel atunci cand jucatorul
+          foloseste sagetile sus/jos sau butoanele sus/jos. Vom folosi blocul 'cand
+          sageata sus' si il vom atasa blocului personajului, astfel incat atunci
+          cand jucatorul apasa sageata sus, tot ce este atasat la blocul "Cand sageata
+          sus" va rula. Vom proceda la fel si pentru a-l face pe Baymax sa mearga
+          in jos. Pas cu pas, jocul tau incepe sa fie mai interactiv.
     infinity_playlab_intro:
       1:
         image: notes/infinity_playlab_intro_1.png
-        text: So what grade are you in? Second. Tenth grade. First grade. I was in
-          eighth grade when I learned to program. I got my first computer when I was
-          in sixth grade. What gets me excited is being able to fix people's problems.
-          You can express yourself, you can build things from an idea.
+        text: Deci în ce clasa ești? A doua? Clasa a zecea? Clasa întâi. Eram în clasa
+          a opta când am învățat sa programez. Am primit primul meu computer când
+          eram în clasa a șasea. Ce ma face entuziasmat e faptul ca pot sa repar problemele
+          altora. Poți sa te exprimi, poți construi lucruri pornind de la o ide.
       2:
         image: notes/infinity_playlab_intro_2.png
-        text: Computer science is the basis for a lot of the things that college students
-          and professionals will do for the next twenty or thirty years. I like programming
-          because I like helping people. I get the opportunity to build something
-          that's gonna make people's lives easier. I think it's the closest thing
-          we have to a superpower. Getting started is the most important part. I'm
-          a beginner myself and I want you to learn with me.
+        text: Informatica este baza pentru foarte multe lucruri pe care studentii
+          si profesionistii o sa le faca in urmatorii 20 sau 30 de ani. Imi place
+          programarea pentru ca imi place sa ajut oameni. Am oportunitatea sa construiesc
+          ceva care o sa le faca viata mai usoara oamenilor. Cred ca este aproape
+          o super-putere. Debutul este cea mai importanta parte. Si eu sunt un incepator
+          si vreau ca tu sa inveti impreuna cu mine.
       3:
         image: notes/infinity_playlab_intro_3.png
-        text: I'm John Vechey, I'm one of the co-founders of PopCap Games. We make
-          games like Plants vs. Zombies, Bejeweled, and Peggle. A lot about games
-          isn't how perfect your code is, it's not how perfect your art is, it's about
-          how does it feel and how much fun it is. You can only get that sense by
-          trying it, by doing it, by learning and adapting and iterating your own
-          skills of making games.
+        text: Eu sunt John Vechey, sunt unul din co-fondatori PopCap Games. Noi facem
+          jocuri precum Plants vs. Zombies, Bejeweled, si Peggle. Cel mai important
+          intr-un joc nu e cat de perfect e codul, nu e cat de perfecta e arta, ci
+          cum te simti si cat de distractiv este. Poti sa intelegi acest lucru doar
+          daca il incercand, il facand, invatand si adaptand si imbunatatindu-si aptitudinile
+          de a face jocuri.
       4:
         image: notes/infinity_playlab_intro_4.png
-        text: Do you have a favorite video game? Well, we're going to take one step
-          towards creating games just like that using Play Lab. Good games have a
-          story and every story has actors. Actors do things like speak, move, and
-          interact with each other. Maybe even score points based on the rules of
-          the game. Today we'll be learning how to do all these things, one by one,
-          with Disney's characters like Anna, Elsa, Hiro, Baymax, and Rapunzel. We'll
-          build a game from scratch that can be shared and played on a phone.
+        text: Ai un joc video preferat? Pai, vom incepe sa facem pasi spre realizarea
+          unor jocuri ca cele folosind Play Lab. Jocurile bune au o poveste si fiecare
+          poveste are personaje. Ele fac lucruri cum ar fi sa vorbeasca, sa se miste
+          si sa interactioneze unii cu altii. Poate chiar sa stranga puncte pe baza
+          regurilor unui joc. Astazi vom inavata cum sa facem toate aceste lucruri,
+          unul cate unul, cu personajele Disney precum Anna, Elsa, Hiro, Baymax si
+          Rapunzel. Vom construi un joc dintr-o schita ce poate fi jucata pe un telefon.
       5:
         image: notes/infinity_playlab_intro_5.png
-        text: Your screen is split into three main parts. On the left is the gamespace,
-          where your program will run. The instructions for each level are written
-          below. This middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace, and this
-          is where we'll build our program.
+        text: Ecranul tau este impartit in trei parti principale. In partea stanga
+          este spatiul de joc, in care programul tau va rula. Instructiunile pentru
+          fiecare nivel sunt scrise mai jos. Aceasta parte de mijloc este caseta de
+          instrumente si fiecare din aceste blocuri reprezinta o bucata de cod. Spatiul
+          alb din dreapta este numit spatiul de lucru si aici vom construi programul
+          nostru.
       6:
         image: notes/infinity_playlab_intro_6.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow outline, and then they'll snap together. In this first
-          puzzle, Hiro is Actor 1 and Baymax is Actor 2. We need to move Hiro to get
-          to Baymax by dragging the "move right" block out and linking it to the "when
-          run" block. Once you have your blocks in place, hit the "Run" button to
-          see what you've programmed.
+        text: Pentru a începe, veţi avea nevoie legati blocurile portocalii "atunci
+          când ruleaza". Aveţi posibilitatea să legaţi mai multe blocuri împreună
+          trăgându-le până când veţi vedea conturul galben, apoi ele se vor lipi.
+          În acest prim puzzle, Hiro este Actor 1 şi Baymax este actorul 2. Trebuie
+          sa il mutam pe Hiro pentru a ajunge la Baymax prin glisarea blocului "muta
+          dreapta" şi leagă de blocul "atunci când ruleaza". Odată ce aţi pus blocurile
+          in locul corect, apasati "ruleaza" pentru a vedea ce ati programat.
       7:
         image: notes/infinity_playlab_intro_7.png
-        text: Get started and by the end you'll be able to create your own game with
-          these amazing actors that can interact, score points, throw microbots, cherries,
-          saucepans, sparkles, and ice.. and vanish each other. It's all up to you!
+        text: Pregateste-te sa incepi si pana la sfarsit vei fi capabil sa creezi
+          propriul tau joc cu acesti minunati actori care pot interactiona, marca
+          puncte, arunca microbots, cirese, oale, paiete si gheata... si sterge unii
+          pe altii. Depinde totul de tine!
     infinity_playlab_repeat_forever:
       1:
         image: notes/infinity_playlab_repeat_forever_1.png
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you'll never have to because computers are really good at repeating things.
-          This is the repeat forever block. Anything inside this block will happen
-          forever in the game.
+        text: Poti sa iti imaginezi cum ar fi fost daca ar fi trebuit sa repeti ceva
+          pentru totdeauna? Sper ca nu vei fi nevoit deoarece calculatoarele sunt
+          foarte bune in repetarea lucrurilor. Acesta este blocul repeta pentru totdeauna.
+          Orice din interiorul acestui bloc se va intampla mereu in joc.
       2:
         image: notes/infinity_playlab_repeat_forever_2.png
-        text: So if we wanted an actor to do something repeatedly without the player
-          having to do anything, we'll put those blocks inside the repeat forever
-          block. In this next puzzle, our goal is to help Anna walk up and down continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
+        text: Deci daca as fi vrut ca un actor sa faca ceva in mod repetat, fara ca
+          jucatorul sa faca ceva, vom pune aceste blocuri in interiorul blocului repeta
+          pentru totdeauna. In puzzle-ul viitor, scopul nostru este sa o ajutam pe
+          Anna sa mearga in sus si jos in mod continuu. Invatand cum sa folosesti
+          comenzile repeta, iti vor salva mult timp mai tarziu, cand iti vei construi
+          propriul joc.
     tutorial_puzzle_challenge:
       1:
         image: notes/tutorial_puzzle_challenge_1.png
-        text: What do you want to be when you grow up Olivia? An astronaut. Do you
-          happen to know what a computer programmer is? Yeah um no. Ummm wait what?
-          I'm not really sure how to explain it computer programming is pretty simple.
-          It's a set of instructions like a recipe, you have to follow them step-by-step
-          to get the end result you want.
+        text: Ce vrei sa te faci cand vei fi mare, Olivia? Un astronaut. Stii cumva
+          din intampla ce este un programator de calculatoare? Da, um nu. Ummm stai
+          ce? Nu sunt singura cum sa explic, programarea este destul de simpla. Este
+          un set de instructiuni, ca o reteta. Trebuie sa le urmezi pas cu pas pentru
+          a ajunge la rezultatul dorit.
       2:
         image: notes/tutorial_puzzle_challenge_2.png
-        text: I can change the number of pixels, the length of the line, using this
-          dropdown. How long was it again? You can see the instructions again by looking
-          under the run button. Here I used the move forward block and I'm going to
-          select 100 pixels. I can delete a block by dragging it into the toolbox
-          or the trash can. Let's put it back.
+        text: Pot sa modific numarul de pixeli, lungimea liniei, folosind aceast dropdown.
+          Cat de lung era? Poti sa vezi instructiunile uitandu-te sub butonul "ruleaza".
+          Aici am folosit blocul de mutare inainte si urmeaza sa selectez 100 de pixeli.
+          Pot sa sterg un bloc prin i tragerea lui in caseta de instrumente sau in
+          cosul de gunoi. Hai sa il punem inapoi.
       3:
         image: notes/tutorial_puzzle_challenge_3.png
-        text: Run the code by pressing run. Well that didn't work! I'll press reset
-          and figure out what's wrong. You can try a puzzle as many times as you'd
-          like and skip puzzles and come back to them. Just make sure to try your
-          best and don't give up. Let's add another move forward. That still didn't
-          work. I can place a block between other blocks.
+        text: Ruleaza acest cod apasand executa. Ei bine, nu a mers! Voi apasa resetare
+          si voi incerca sa-mi dau seama ce este in neregula. Poti incerca un puzzle
+          ori de cate ori vrei, sa sari peste ele si sa revii inapoi la ele. Doar
+          asigura-te ca dai tot ce e mai buna si nu te lasa batut. Hai sa adaugam
+          un alt muta inainte. Asta tot nu a functionat. Pot plasa un bloc intre alte
+          blocuri.
       4:
         image: notes/tutorial_puzzle_challenge_4.png
-        text: Let's take a turn block and place it in between the move forwards. Turn
-          left 45 degrees. Let's run it again. Reset, run, awesome! Here's another
-          puzzle. Sometimes you are given starter code to complete. Here I need to
-          add the appropriate lengths and degrees.
+        text: Sa luam un bloc de viraj si sa-l asezam intre cele de mers inainte.
+          Intoarce 45 de grade. Sa-l rulam din nou. Resetare, alearga, grozav! Uite
+          inca un puzzle. Uneori primesti un cod de inceput pe care sa-l completezi.
+          Aici trebuie sa adaugi lungimile si gradele potrivite.
       5:
         image: notes/tutorial_puzzle_challenge_5.png
-        text: You may sometimes accidentally trash the starter code. What do you do
-          then? You can press clear puzzle and start all over again. I'm going to
-          drag this number block into the different pixel areas. Select 100 for pixels,
-          45 for degrees and 100 for pixels again. Awesome! Here is the Code Studio
-          bee. I need to move the bee to each flower and get nectar.
+        text: Cateodata poti sa strici din greseala codul de inceput. Ce faci atunci?
+          Poti apasa curata puzzle-ul si sa incepi de la inceput. O sa trag acest
+          blog prin mai multe zone pixel. Selecteaza 100 pentru pixeli, 45 pentru
+          grade si 100 pentru pixeli din nou. Grozav! Aici este Studioul de Coduri
+          cu albine. Trebuie sa mut albina la fiecare floare si sa obtin nectarul.
       6:
         image: notes/tutorial_puzzle_challenge_6.png
-        text: The first flower is three blocks away so I need three move forwards.
-          1, 2, 3. Then a get nectar, then another get nectar. Well that didn't work!
-          I'll place another move forward between the get nectars and run it again.
-          Yay, it works! You just learned how to use the Code Studio artist and bee
-          puzzles. Good luck on the Code Studio puzzle challenge.
+        text: Prima floare este la trei blocuri departare asa ca trebuie sa merg trei
+          spatii inainte. 1, 2, 3. Apoi iau nectarul, apoi inca odata iau nectarul.
+          Bine asta nu a mers. Plaseaza un mergi inainte intre cele doua ia nectarul
+          si ruleaza din nou. Yay, funtioneaza. Doar ce ai invatat cum sa folosesti
+          Code Studio artist si puzzle-ul cu albine. Mult noroc provocarea Code Studio
+          puzzle.
     unplug1:
       1:
         image: notes/unplug1_1.png
-        text: What do you want to be when you grow up Olivia? Umm, an astronaut! Do
-          you happen to know what a computer programmer is? Yeahh, umm, no. Umm, what
-          what? I'm not really sure how to explain it. Computer programming is pretty
-          simple. It's a set of instructions, like a recipe. You have to follow them
-          step by step to get the end result you want.
+        text: Ce vrei sa fi cand o sa cresti mare Olivia? Umm, un astronaut! Sti cumva
+          din intamplare ce este un programator? Da, umm, nu. Umm, ce ce? Nu sunt
+          sigur cum sa explic. Programarea este destul de simpla. Este un set de instructiiuni,
+          ca o reteta. Trebuie sa le urmezi pas cu pas sa ajungi la rezultatul final
+          pe care il doresti.
       2:
         image: notes/unplug1_2.png
-        text: Computer science is a way to impact the world. It can be music videos,
-          it can be games, detect whether or not someone is related to someone else.
-          Find you know, people's friends. You can do all sorts of other crazy things
-          that actually save lives. You do have to have a drive I think. It is to
-          me like a paintbrush. I think great programming is not all that dissimilar
-          from great art.
+        text: Informatica este un mod de avea impact asupra lumii. Oamenii sunt conectati,
+          fie prin videoclipuri, fie prin jocuri, meteo sau altele. Gaseste, stii,
+          prietenii oamenilor. Poti sa faci multe lucruri nebunesti care chiar sa
+          salveze vieti. Dar trebuie sa ai o motivatie, cred. Este pentru mine ca
+          o pensula de pictat. Cred ca programarea nu e chiar total altceva fata de
+          arta.
       3:
         image: notes/unplug1_3.png
-        text: When I finally learned a little bit of programming, that blank wall
-          resolved into a bunch of doors and you open them and of course then you
-          find behind them is another hallway filled with a bunch of doors. Programming
-          is fun and easy. You can do anything your mind wants to do. Finally you
-          start to open enough doors the light comes in. To me a finished program
-          is like a structure filled with light. All the corners are illuminated.
-          The number of people that you can touch and interact with is something the
-          world has never seen before.
+        text: Cand, in sfarsit, am invatat putina programare, peretele acela alb s-a
+          transformat intr-o serie de usi si le deschizi, si bineinteles, ceea ce
+          gasesti in spatele lor este un alt hol plin de usi. Programarea este usoara
+          si distractiva. Poti sa face orice vrea mintea ta sa faca. In final ajungi
+          sa deschizi destule usi ca sa se faca lumina. Pentru mine, o programare
+          finalizata e ca o structura plina de lumina. Toate colturile sunt luminate.
+          Numarul de oameni pe care ii poti atinge si cu care poti interactiona este
+          ceva ce lumea nu a mai cunoscut.
       4:
         image: notes/unplug1_4.png
         text: Our first lesson in this series is all about what computer science is,
@@ -2345,10 +2383,11 @@
     unplug2:
       1:
         image: notes/unplug2_1.png
-        text: The lesson on computational thinking is intended to teach you how to
-          take a big difficult problem and break it down into several simpler problems.
-          The goal of this lesson is to write a set of instructions that someone can
-          follow to draw one of the monsters included in the lesson plan.
+        text: Lectia de gandire computationala este destinata pentru a invata cum
+          sa faci fata unei probleme mari, dificile si cum sa o desfaci in mai multe
+          probleme simple. Scopul acestei lectie este scrierea unui set de instructiuni
+          pe care cineva il poate urma pentru a desena unul din monstrii inclusi in
+          planul lectiei.
       2:
         image: notes/unplug2_2.png
         text: 'Students will break into groups to write instructions and then they''ll
@@ -2533,9 +2572,11 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: |
-          Buna! Sunt Kathleen Kennedy - producator al Star Wars: The Force Awakens. Azi vei lucra cu unul din star-urile noastre, BB-8. BB-8 este un droid sferic. Orice face si orice miscare a sa este controlata de un program. Informatica are influenta asupra fiecatui domeniu, de la marketing
-          la sanatate si film. Sute de ingineri lucreaza impreuna pentru a face un film ca The Force Awakens.
+        text: 'Buna! Sunt Kathleen Kennedy - producator al Star Wars: The Force Awakens.
+          Azi vei lucra cu unul din star-urile noastre, BB-8. BB-8 este un droid sferic.
+          Orice face si orice miscare a sa este controlata de un program. Informatica
+          are influenta asupra fiecatui domeniu, de la marketing la sanatate si film.
+          Sute de ingineri lucreaza impreuna pentru a face un film ca The Force Awakens.'
       2:
         image: notes/starwars_intro_2.JPG
         text: Buna! Sunt Rachel Rose, inginer R&D senior la IM si coordonez echipa
@@ -2585,153 +2626,152 @@
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: Inside the blocks we've been using are JavaScript commands. JavaScript
-          is the most popular programming language for professional developers today.
-          Blocks are a great way to get started learning to code and in fact, top
-          universities like Harvard and Berkeley start teaching this way. But once
-          we learn the basics, engineers write code by typing because it allows us
-          to go faster.
+        text: In interiorul blocurilor pe care le folosim se regasesc comenzi JavaScript.
+          JavaScript este cel mai popular limbaj de programare pentru dezvoltatorii
+          profesionisti de azi. Blocurile sunt un inceput bun pentru a invata programare
+          si, de fapt, universitati de renume precum Harvard si Berkeley incep predarea
+          in acest mod. Dupa ce ai invatat conceptele de baza, ca inginer poti trece
+          la a scrie cod deoarece iti permite sa mergi mai repede.
       2:
         image: notes/starwars_typing_2.JPG
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
+        text: Putem tasta sute de comenzi fara sa le cautam in toolbox sau sa le tragem
+          in zona de script (program). Deoarece esti la inceput tastarea codului poate
+          fi mai inceata dar noi vrem sa incerci si asta.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show
-          text button on any puzzle to switch from blocks to typing code as text.
+        text: In coltul dreapta sus al spatiului de lucru, poti apasa butonul show
+          text pe orice piesa pentru a comuta intre blocuri si tastarea codului in
+          mod text.
       4:
         image: notes/starwars_typing_4.JPG
-        text: In the next lesson, we'll start you out in typing mode. Here you can
-          still drag the block from the toolbox or you can type the command name.
-          As you start to type, you'll see names of possible commands show below where
-          you're typing. Instead of typing the whole command name, you can select
-          one of these to move faster. In my job, I use this auto-complete feature
-          all the time when writing code.
+        text: In lectia urmatoare, vom incepe sa iti aratam folosirea modului text.
+          Acum mai poti inca sa tragi un bloc din toolbox sau poti sa tastezi numele
+          comenzii. Pe masura ce tastezi, vei vedea nume de posibile comenzi afisate
+          sub ceea ce tastezi tu. In loc sa tastezi integul nume al comenzii, poti
+          selecta una dintre ele pentru a merge mai repede. In meseria mea, eu folosesc
+          facilitatea de auto-completare intotdeauna cand scriu cod.
       5:
         image: notes/starwars_typing_5.JPG
-        text: When you're typing code, the computer needs you to be very precise.
-          You need to spell and capitalize the command name exactly correctly, including
-          the parentheses and the semi-colon. Even with a small typing mistake, BB-8
-          cannot understand the code and won't be able to move.
+        text: Cant tastezi cod, calculatorul iti cere sa fii foarte exact. Trebuie
+          sa scrii foarte bine si sa respecti exactitatea numelui comenzii, incluzand
+          paranteze si simbolul punct si virgula. O singura mica greseala este suficienta
+          ca BB-8 sa nu mai poata intelege codeul sa sa nu se poata deplasa.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
+        text: Cand ai o erare pe linie, editorul o evidentiaza pentru tine astfel
+          incat sa o modifici si sa corectezi greseala.
       7:
         image: notes/starwars_typing_7.JPG
-        text: If you get stuck, you can always start over with the start over button
-          and you can switch back to block mode at any time by clicking in the top-right
-          corner. Ok, let's give typing a try! And if you make mistakes, don't get
-          frustrated. It takes everybody a few tries to get it right.
+        text: Daca te incurci, intotdeauna o poti lua de la inceput cu ajutorul butonului
+          start over si te poti intoarce la modul de lucru cu blocuri in orice moment
+          apasand in coltul dreapta sus. Bine, sa incercam sa tastam! Si daca faci
+          greseli, nu trebuie sa te intimidezi. Oricui ii trebuie cateva incercari
+          pentru a invata cum se face corect.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Buna, numele meu este Charita Carter. Sunt producator la Walt Disney
+          Imagineering. Conduc echipa care produce acele experiente atractive de care
+          au parte oaspetii nostri. Cautam moduri de a dezvolta si de a gasi experiente
+          tot mai frumoase, iar tehnologia este de baza in asta.
       2:
         image: notes/starwars_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Felicitari, ai reusit! L-ai programat pe BB-8. Cred ca acum suntem pregatiti
+          pentru ceva mai greu. Sa vedem. pentru ca ai invatat bazele programarii,
+          ne vom intoarce in timp pentru a construi propriul tau joc, cu personajele
+          R2-D2 si C3PO.
       3:
         image: notes/starwars_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Pentru a face un joc trebuie sa invatam o notiune pe care programatorii
+          o folosesc zilnic: evenimentele. Acestea ii spun programului tau sa fie
+          atent si sa astepte sa se intample ceva, iar cand asta se intampla sa execute
+          o anumita actiune.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: 'Exemple de evenimente: clic pe mouse, un buton sageata sau atingere
+          pe ecran.'
       5:
         image: notes/starwars_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Vrem ca R2-D2 sa se miste in sus pentru a duce un mesaj pilotului rebel
+          si apoi sa coboare la celalalt pilot rebel. Vom folosi evenimente pentru
+          a-l misca. Atunci cand jucatorul apasa tastele up/down sau butoanele up/down.
       6:
         image: notes/starwars_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down.
+        text: Folosim blocul eveniment whenUp() si ii atasam blocul goUp(). Cand jucatorul
+          apasa tasta sageata sus, se va rula codul atasat blocului eveniment whenUp().
+          La fel procedam si pentru miscarea in jos a lui R2-D2.
       7:
         image: notes/starwars_events_7.JPG
-        text: To do this, we'll use a command called whenUp(). When you drag the command
-          out of the toolbox, you'll see that it starts and ends with a curly bracket
-          instead of a semi-colon. This gives us space to put other commands in the
-          middle. Every command that we place inside these brackets will run when
-          the player presses the up arrow.
+        text: Pentru aceasta, vom folosi o comanda numita whenUp(). Cand tragem comanda
+          din toolbox, vei vedea ca incepe si se termina cu acolada in loc de punct
+          si virgula. Intre aceste acolade avem spatiu in care putem sa plasam alte
+          comenzi. Fiecare comanda pe care o plasam intre acolade va fi executata
+          atunci cand jucatorul apasa tasta sageata sus.
       8:
         image: notes/starwars_events_8.JPG
-        text: We want R2-D2 to go up so let's put a goUp(); block inside the command.
-          And we'll do the same thing to make R2-D2 go down.
+        text: Vrem ca R2-D2 sa mearga in sus, asa ca vom pune un bloc goUp(); in interiorul
+          comenzii. Si vom face acelasi lucru pentru a-l cobora pe R2-D2.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance,
-          we can let R2-D2 react to button press events that move him around the screen.
-          Step by step, your game is getting more interactive.
+        text: |
+          In loc sa scriem tot codul pentru miscarea droidului, il facem pe R2-D2 sa
+          reactioneze la evenimente de apasare a butoanelor si sa se miste pe ecran. Pas
+          cu pas, jocul devine tot mai interactiv.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Buna, numele meu este Alice si lucrez in productie si inginerie aici
+          la Code.org si am lucrat la acest tutorial pe care il urmaresti chiar acum.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: Tocmai ai terminat ultimul nivel. Felicitari! Tocmai ai invatat tot
+          ce iti trebuie pentru a stii sa-ti faci propriul joc Star Wars. Nu mai sunt
+          alte instructiuni, nici puzzle-uri de rezolvat. Poti face propriul joc si
+          tu alegi cum sa functioneze. Inca un lucru, ai accesat noi sunete si noi
+          comenzi pentru a face chiar mai mult.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: |
+          [elevi vorbind] Noi am facut un joc in care primesti puncte cand prinzi porcusori.
+          De fiecare data cand prinzi porcusori apare storm trooper. In cele din urma,
+          ecranul e plin de porcusori si atunci cand atingi 10,000 din ei, castigi.
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[elevi vorbind] Noi am facut un joc in care nu poti sa pierzi si orice
+          omori iti aduce puncte. Pentru programul meu, am inversat tastele asa ca
+          atunci cand apesi sus, personajul va cobora si cand apesi dreapta, o va
+          lua spre stanga. Chiar este greu! Uneori ai un real avantaj, daca esti chiar
+          tu autorul jocului. Am reusit? Yay!'
       5:
         image: notes/starwars_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Cand ai terminat de creat propriul joc, alege share pentru a obtine
+          un link pe care sa il dai prietenilor sau sa il joci pe telefon. Distractie
+          placuta!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: 'Hi I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
-          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.'
+        text: 'Buna! Sunt Kathleen Kennedy - producator al Star Wars: The Force Awakens.
+          Azi vei lucra cu unul din star-urile noastre, BB-8. BB-8 este un droid sferic.
+          Orice face si orice miscare a sa este controlata de un program. Informatica
+          are influenta asupra fiecatui domeniu, de la marketing la sanatate si film.
+          Sute de ingineri lucreaza impreuna pentru a face un film ca The Force Awakens.'
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artist develop rigs, which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far,
-          far away.
+        text: Buna! Sunt Rachel Rose, inginer R&D senior la IM si coordonez echipa
+          de dezvoltare a personajelor si animatiei. In The Force Awakens, ajut la
+          dezvoltarea artistica a instalatiilor, care sunt componente ale pesonajului
+          care se misca si il fac sa arate real intr-o galaxie indepartata.
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game that will
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so we can drag and drop to write
-          the programs. To start off, we're going to work with Rey to program BB-8
-          to walk to collect all of the scrap parts.
+        text: |
+          In urmatoarea ora vom realiza propriul joc Star Wars cu care vei invata conceptele
+          de baza ale programarii. De obicei, programarea se face prin text, dar noi
+          vom folosi aici blocuri pentru a scrie programe. In spatele acestora, tu chiar creezi programe. Pentru inceput, vom lucra cu Rey pentru a-l programa pe BB-8 sa mearga si sa colecteze toate reziduurile.
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars
-          game space where code will run. The instructions for each level are written
-          below the game space.
+        text: Ecranul este impartit in trei zone. In stanga este spatiul jocului Star
+          Wars unde se va rula codul. Instructiunile pentru fiecare nivel se scriu
+          sub spatiul jocului.
       5:
         image: notes/starwars_blocks_intro_5.JPG
         text: |
@@ -2743,93 +2783,93 @@
           programul nostru.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8
-          moves left one block on the grid.
+        text: Daca aduc blocul moveLeft(); in spatiul de lucru, ce se intampla? BB-8
+          se misca spre stanga un pas pe grid.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together. When I press run
-          again, BB-8 will perform the commands that are stacked top to bottom on
-          our workspace.
+        text: Si daca vreau ca BB-8 sa mai faca altceva dupa blocul moveLeft();? Pot
+          adauga alt bloc la programul nostru. Voi alege blocul moveUp(); si il aduc
+          sub blocul meu moveLeft(); pana cand se lumineaza. Apoi ii dau drumul si
+          cele doua blocuri se vor lipi. Cand apas iar run, BB-8 va executa toate
+          comenzile stivuite din spatiul de lucru, de sus in jos.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back into the toolbox.
+        text: Daca vei vrea sa stergi un bloc, scoate-l din stiva si trage-l inapoi
+          in toolbox.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: After you hit run, you can always hit the reset button to get BB-8 back
-          to the start. Now let's get rolling!
+        text: Dupa ce ai apasat run, poti sa apesi butonul reset ca sa il aduci pe
+          BB-8 inapoi la start. Acum sa incepem!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Buna, numele meu este Charita Carter. Sunt producator la Walt Disney
+          Imagineering. Conduc echipa care produce acele experiente atractive de care
+          au parte oaspetii nostri. Cautam moduri de a dezvolta si de a gasi experiente
+          tot mai frumoase, iar tehnologia este de baza in asta.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Felicitari, ai reusit! L-ai programat pe BB-8. Cred ca acum suntem pregatiti
+          pentru ceva mai greu. Sa vedem. pentru ca ai invatat bazele programarii,
+          ne vom intoarce in timp pentru a construi propriul tau joc, cu personajele
+          R2-D2 si C3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Pentru a face un joc trebuie sa invatam o notiune pe care programatorii
+          o folosesc zilnic: evenimentele. Acestea ii spun programului tau sa fie
+          atent si sa astepte sa se intample ceva, iar cand asta se intampla sa execute
+          o anumita actiune.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: 'Exemple de evenimente: clic pe mouse, un buton sageata sau atingere
+          pe ecran.'
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Vrem ca R2-D2 sa se miste in sus pentru a duce un mesaj pilotului rebel
+          si apoi sa coboare la celalalt pilot rebel. Vom folosi evenimente pentru
+          a-l misca. Atunci cand jucatorul apasa tastele up/down sau butoanele up/down.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down. Now instead
-          of writing all the code to control our droid in advance, we can let R2-D2
-          react to button press events that move him around the screen.
+        text: Folosim blocul eveniment whenUp() si ii atasam blocul goUp(). Cand jucatorul
+          apasa tasta sageata sus, se va rula codul atasat blocului eveniment whenUp().
+          La fel procedam si pentru miscarea in jos a lui R2-D2. In loc sa scriem
+          tot codul pentru miscarea droidului, il facem pe R2-D2 sa reactioneze la
+          evenimente de apasare a butoanelor si sa se miste pe ecran.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: |
+          Pas
+          cu pas, jocul devine tot mai interactiv.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Buna, numele meu este Alice si lucrez in productie si inginerie aici
+          la Code.org si am lucrat la acest tutorial pe care il urmaresti chiar acum.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: Tocmai ai terminat ultimul nivel. Felicitari! Tocmai ai invatat tot
+          ce iti trebuie pentru a stii sa-ti faci propriul joc Star Wars. Nu mai sunt
+          alte instructiuni, nici puzzle-uri de rezolvat. Poti face propriul joc si
+          tu alegi cum sa functioneze. Inca un lucru, ai accesat noi sunete si noi
+          comenzi pentru a face chiar mai mult.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: |
+          [elevi vorbind] Noi am facut un joc in care primesti puncte cand prinzi porcusori.
+          De fiecare data cand prinzi porcusori apare storm trooper. In cele din urma,
+          ecranul e plin de porcusori si atunci cand atingi 10,000 din ei, castigi.
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[elevi vorbind] Noi am facut un joc in care nu poti sa pierzi si orice
+          omori iti aduce puncte. Pentru programul meu, am inversat tastele asa ca
+          atunci cand apesi sus, personajul va cobora si cand apesi dreapta, o va
+          lua spre stanga. Chiar este greu! Uneori ai un real avantaj, daca esti chiar
+          tu autorul jocului. Am reusit? Yay!'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Cand ai terminat de creat propriul joc, alege share pentru a obtine
+          un link pe care sa il dai prietenilor sau sa il joci pe telefon. Distractie
+          placuta!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
@@ -2852,145 +2892,233 @@
           Under the hood, you're creating Javascript code.
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: Conceptele pe care le vei invata sunt cele pe care programatorii le
+          folosesc zi de zi si care sunt fundatia tehnologiei computerului si programarii.
+          Aici la Mojang, noi folosim aceleasi concepte pentru a face Minecraft sa
+          functioneze.
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: Inainte de a incepe, iti vei alege personajul. Eu o voi alege pe Alex.
+          Haideti sa contruim un cod pentru un program ce o va ajuta sa se deplaseze
+          pe ecran.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: Ecranul este împărţit în trei părţi principale. In stanga este spatiul
+          de joaca Minecraft unde programul tau va rula. Instructiunile pentru fiecare
+          nivel sunt scrise mai jos.
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: Aceasta zona de mijloc este setul de instrumente şi fiecare dintre aceste
+          blocuri este o comandă care il face pe Alex sa actioneze.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Spaţiul alb din dreapta se numeşte pe spaţiul de lucru şi aici vom construi
+          programul nostru.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: Daca tragi blocul moveForward(); in spatiul de lucru si dupa aperi run,
+          ce se intampla? Alex se misca in fata cu un spatiu pe retea.
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: Şi dacă vrem să facem ceva, după ce ea s-a mutat înainte un singur spaţiu?
+          Putem adăuga un alt bloc la programul nostru. Am de gând să aleg blocul
+          intoarce la dreapta(); şi il voi trage sub blocul mergi inainte(); până
+          când apare această linie portocalie. Apoi o voi muta şi cele două blocuri
+          se vor lipi. Atunci când am apăsaţi 'ruleaza' din nou, Alex va efectua comenzile
+          care sunt scrise d ela inceput la sfarsit in spatiul nostru de lucru.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: Daca vrei sa stergi un bloc, atunci treage-l din gramada inapoi in setul
+          de instrumente.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: 'Pentru a anula modificarile si a reveni la nivelul de inceput, utilizeaza
+          butonul "De la inceput" de sus, coltul din dreapta. Inca un lucru: vezi
+          acel mic triunghi din blocuri? De cate ori vezi acele triunghiuri, inseamna
+          ca poti selecta o optiune diferita. Haideti sa programam!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: Eu sunt Lydia Winters, director de brand la Mojang si noi facem un mic
+          joc numit Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: Imi place sa explorez in Minecraft. Imi face sa ma aventurez in pesteri
+          si sa vad ce pot sa gasesc. Ca cineva care nu este programator, sunt foarte
+          entuziasmat ca pot sa merg prin lectia Minecraft si sa aflu sa programez
+          de unul singur.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: Acest ultim nivel foloseste multe blocuri de tipul mergi inainte ().
+          Era mai usor daca doar puteam spune computerului sa realizeze comanda mergi
+          inainte (); de 4 sau 5 ori. Din fericire pentru noi, computerele sunt foarte
+          buna la repetarea comenzilor cu bucle.
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: Cand consturim in Minecraft, folosim bucle de repetare pentru a plasa
+          materialele initiale pentru a crea o noua lume. Acestea sunt sute si sute
+          de blocuri. De asemenea, folosim buclele in moduri simple, de exemplu pentru
+          a o face pe Alex sa mearga inainte si inapoi. Repetarea buclelor este o
+          parte importanta din programare.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: Noaptea se apropie asa ca in urmatoarele nivele vom construi o casa
+          pentru a sta in siguranta. Vom folosi blocul repeta pentru a face asta foarte
+          repede.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: Pentru a construi un zid pentru casa noastra, ii putem spune lui Alex
+          sa meraga inainte (); si sa plaseze placi de 4 ori sau ii putem spune sa
+          mearga inainte (); si sa puna o placa, apoi sa luam aceasta comanda si sa
+          folosim blocul repeta pentru a o face sa repete aceasta actiune de mai multe
+          ori. Acum vom apasa pe blocul 'repeta' si ii vom spune de cate ori sa faca
+          aceasta actiune. Haideti sa ne construim casa inainte de lasarea serii!
+          Distractie placuta.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: Acum vom invata despre declaratiile de tip "Daca". Acestea reprezinta
+          o parte fundamentala a invatarii programarii. Ele ajuta un calculator sa
+          ia decizii.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Toate computerele folosesc conditi daca, chiar si telefonul. De exemplu,
+          cand imi deschid telefonul el apeleaza un cod care zice ca daca introduc
+          parola corecta, imi deschide telefonul. Altfel, imi arata un mesaj de eroare.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: Puteti folosi declaratiile "daca" in codul tau pentru a-i face pe Steve
+          si Alice sa reactioneze la ceea ce vad in lume. De exemplu, daca este o
+          piatra in fata lor, o poti lua la stanga. Sau la dreapta daca ei intra intr-un
+          copac.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: In acest caz nu vrem sa cadem in lava. Este usor sa planuiesti pentru
+          lava. Putem sa o vedem pe ecran. Dar ce facem cu lava pe care nu putem sa
+          o vedem sub roci?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: Dupa ce minam piatra, va trebui sa vedem daca este lava in acel loc
+          inainte sa inaintam. Daca este lava acolo, vrem sa pozitionam o piatra in
+          fata personajului inainte sa mergem inainte. Asa, putem inainta in siguranta.
+          E timpul sa lucram in mina in continuare! Si amintiti-va sa folositi declaratia
+          'daca' pentru a vedea pe unde calcati.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Felicitari! Tocmai ai invatat bazele programarii cu blocuri.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Acum poti sa folosesti aceste blocuri ca sa construiesti proprile creati.
+          Nu mai sunt nici intructiuni nici puzzeluri de rezolvat. Poti sa construiesti
+          ce vrei. Poti sa alegi.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: Suntem pe cale sa devenim seriosi. Foarte. Am facut un L din torte.
+          Am facut un A din scanduri de mesteacan. A functionat, a functionat. Am
+          facut o casa din lana!
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Cand ai terminat sa-ti faci creatia, apasa share ca sa primesti link-ul
+          ca sa sharuesti cu priteni tai. Distreaza-te!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Felicitari! Tocmai ai invatat bazele programarii cu blocuri.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Acum poti sa folosesti aceste blocuri ca sa construiesti proprile creati.
+          Nu mai sunt nici intructiuni nici puzzeluri de rezolvat. Poti sa construiesti
+          ce vrei. Poti sa alegi.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: Suntem pe cale sa devenim seriosi. Foarte. Am facut un L din torte.
+          Am facut un A din scanduri de mesteacan. A functionat, a functionat. Am
+          facut o casa din lana!
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Acum poti sa construiesti tot ce vrei. Distreaza-te!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: Spaţiul alb din dreapta se numeşte pe spaţiul de lucru şi aici vom construi
+          programul nostru.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.

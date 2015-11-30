@@ -2497,86 +2497,84 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+        text: Szia, Kathleen Kennedy vagyok, a Star Wars Ébredő erő producere. Ma
+          egy filmcsillagunkkal fogsz dolgozni, BB-8-tel, aki egy szférikus droid.
+          Mindent, amit csinál, és minden mozgását számítógépes szoftver irányítja.
+          A számítógép-tudomány minden iparágban jelen van a marketingtől az egészségügyön
+          át a filmig. Valójában informatikai mérnökök százai dolgoznak együtt az
+          olyan filmeken, mint az Ébredő erő.
       2:
         image: notes/starwars_intro_2.JPG
-        text: Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artists develop rigs which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far
-          far away.
+        text: Szia, Rachel Rose vagyok, vezető kutatásfejlesztő mérnök az ILM-nél
+          és én vezetem az animációs és karakterfejlesztő csapatot. Az erő ébredésében
+          én segítek a művészeknek kidolgozni a mozgó ruhákat. Ezek a karakterek szerves
+          részét képezik, és valósághűvé teszik őket a messzi-messzi galaxisban.
       3:
         image: notes/starwars_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game. We'll
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so that we can drag and drop to
-          write the programs. Under the hood, you're still creating code. After you
-          try the basics with blocks, we'll switch you to JavaScript, one of the most
-          popular programming languages on the web.
+        text: A következő egy órában a saját Star Wars játékunkat fogjuk elkészíteni.
+          Megtanítjuk neked a programozás alapvető fogalmait. A programozás általában
+          szövegesen történik, de mi vonszolható blokkokat fogunk használni a programíráshoz.
+          A felszín alatt továbbra is kód lapul. Miután a blokkokkal kapcsolatos alapokat
+          megtanultad, átváltunk JavaScriptre, az egyik népszerű webes programozási
+          nyelvre.
       4:
         image: notes/starwars_intro_4.JPG
-        text: To start off, we're going to work with Rey to program BB-8 to walk to
-          collect all of the scrap parts. Your screen is split into three parts. On
-          the left is the Star Wars game space, where code will run. The instructions
-          for each level are written below the game space.
+        text: Kezdetben Rey-jel fogsz dolgozni, aki beprogramozza BB-8-et, hogy minden
+          ócskavasat összegyűjtsön. A képernyő három részre oszlik. A bal oldal a
+          Star Wars játéktér, ahol a kód futni fog. A feladatokhoz kapcsolódó utasítások
+          a játéktér alatt vannak.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: A középső részben van az eszköztár, és benne minden blokk egy parancs,
+          amit BB-8 megért.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
+        text: A fehér terület a Munkaterület, és itt fogjuk építeni a programot.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what
-          happens? BB-8 moves left one block on the grid.
+        text: Ha a mozdulj balra blokkot a munkaterületre vonszolod, és a Futtatásra
+          kattintasz, mi fog történni? BB-8 balra mozdul egyet a rácson.
       8:
         image: notes/starwars_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together.
+        text: És mi a helyzet, ha BB-8-nek valami mást is kell csinálnia a mozdulj
+          balra blokk után? Hozzáadhatsz még egy blokkot a programhoz. Én most a mozdulj
+          fel blokkot választom, és a mozdulj balra alá vonszolom, amíg a kiemelés
+          meg nem jelenik. Ekkor elengedem, és a két blokk összekattan.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked
-          from top to bottom on our workspace. If you ever want to delete a block,
-          just remove it from the stack and drag it back into the tool box.
+        text: Ha ezután megnyomom a Futtatást, BB-8 minden a munkafelületen található
+          parancsot teljesíteni fog föntről lefelé haladó sorrendben. Ha törölni szeretnél
+          egy blokkot, csak vonszold vissza az eszköztárba.
       10:
         image: notes/starwars_intro_10.JPG
-        text: After you've hit run, you can always hit the reset button to get BB-8
-          back to the start. Now let's get rolling!
+        text: Ha már megnyomtad a futtatást, bármikor rányomhatsz a Visszaállítás
+          gombra, és újrakezdheted a munkát BB-8-tel. Nos, lássunk hozzá!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: Inside the blocks we've been using are JavaScript commands. JavaScript
-          is the most popular programming language for professional developers today.
-          Blocks are a great way to get started learning to code and in fact, top
-          universities like Harvard and Berkeley start teaching this way. But once
-          we learn the basics, engineers write code by typing because it allows us
-          to go faster.
+        text: A blokkok JavaScript parancsokat takarnak. A professzionális programozók
+          körében manapság a JavaScript a legnépszerűbb programnyelv. Blokkokkal nagyon
+          jól el lehet kezdeni tanulni a programozást, és valójában olyan vezető egyetemeken
+          is, mint a Harvard vagy a Berkeley így kezdik tanítani a programozást. De
+          miután az alapokat elsajátították, a mérnökök gépelik a kódot, mert így
+          gyorsabban haladnak.
       2:
         image: notes/starwars_typing_2.JPG
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
+        text: Több száz fajta parancsot begépelhetünk anélkül, hogy az eszköztárban
+          kellene keresgélnünk őket. A tanulás során a gépelés lassabbnak tűnik, de
+          azért érdemes megpróbálni.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show
-          text button on any puzzle to switch from blocks to typing code as text.
+        text: A munkafelület jobb fölső sarkában a Kód megjelenítésére kattintva kattinthatsz
+          a blokkokról a gépelős üzemmódba.
       4:
         image: notes/starwars_typing_4.JPG
-        text: In the next lesson, we'll start you out in typing mode. Here you can
-          still drag the block from the toolbox or you can type the command name.
-          As you start to type, you'll see names of possible commands show below where
-          you're typing. Instead of typing the whole command name, you can select
-          one of these to move faster. In my job, I use this auto-complete feature
-          all the time when writing code.
+        text: A következő leckében gépelési módban kezdünk. Még mindig behúzhatod
+          az eszköztárból a blokkot, de beírhatod a parancs nevét is. Ahogy elkezdesz
+          gépelni, látni fogod a lehetséges utasítások neveit az alatt, ahol gépelsz.
+          Hogy gyorsabban haladj, ahelyett, hogy begépelnéd a teljes utasítás nevét,
+          kiválaszthatod a felsorolásból az egyiket. Én mindig alkalmazom a munkámban
+          ezt az automatikus-kiegészítés funkciót.
       5:
         image: notes/starwars_typing_5.JPG
         text: When you're typing code, the computer needs you to be very precise.
@@ -2596,37 +2594,39 @@
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Szia, az én nevem Charita Carter. Vezető kreatív producer vagyok a Walt
+          Disney Imagineeringnél. Én vagyok felelős azokért a játékokért, amelyekkel
+          a látogatóink találkoznak. Mindig keressük a lehetőségét annak, hogy fejlődjünk
+          és emlékezetesebb élményt nyújtsunk a látogatóinknak, és a technológia alapvető
+          ebben a folyamatban.
       2:
         image: notes/starwars_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Gratulálunk, megcsináltad! Ügyesen programoztad a BB-8-et. Most itt
+          az ideje, hogy valami nehezebbe kezdjünk. Vágjunk bele! Miután a programozás
+          alapjait megtanultad, visszamegyünk az időben és a saját játékunkat fogjuk
+          elkészíteni R2-D2 és C3PO szereplésével.
       3:
         image: notes/starwars_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Hogy játékot tudjunk csinálni, meg kell ismerned egy fogalmat, amit
+          a programozók minden nap használnak: ezek az események. Az események mondják
+          a programnak hogy hallgassanak vagy várjanak addig, amíg valami nem történik,
+          és amint az a dolog megtörténik, tegyenek valamit.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Esemény például egy kattintás az egérrel, egy nyíl billentyű lenyomása
+          vagy az érintőképernyő megérintése.
       5:
         image: notes/starwars_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Most R2-D2-nak felfelé kell mozognia, hogy elvigyen egy üzenetet egy
+          lázadó pilótáknak, majd lefelé kell mozognia a másik Lázadóhoz. Eseményeket
+          fogunk használni a mozgatáshoz, amikor a játékos a föl-le billentyűket vagy
+          gombokat használja.
       6:
         image: notes/starwars_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down.
+        text: A "ha van felfelé nyíl" esemény blokkot fogjuk használni, és hozzácsatoljuk
+          a menj fel blokkot. Ha a játékos megnyomja a felfelé nyilat, akkor a "ha
+          van felfelé nyíl"-hoz kapcsolódó blokk elkezd futni. És ugyanezt fogjuk
+          csinálni, hogy R2-D2 lefelé mozogjon.
       7:
         image: notes/starwars_events_7.JPG
         text: To do this, we'll use a command called whenUp(). When you drag the command
@@ -2636,26 +2636,25 @@
           the player presses the up arrow.
       8:
         image: notes/starwars_events_8.JPG
-        text: We want R2-D2 to go up so let's put a goUp(); block inside the command.
-          And we'll do the same thing to make R2-D2 go down.
+        text: Azt akarjuk, hogy R2-D2 felfelé menjen, így tegyünk be egy menj fel
+          blokkot a parancsba. És ugyanezt fogjuk tenni, hogy R2-D2 lefelé menjen.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance,
-          we can let R2-D2 react to button press events that move him around the screen.
-          Step by step, your game is getting more interactive.
+        text: Így ahelyett, hogy a droid minden mozgását előre megterveznénk, R2-D2
+          a gombnyomásokra fog reagálni, és így fog mozogni a képernyőn. Lépésről
+          lépésre egyre interaktívabb lesz a játék.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Szia, az én nevem Alice és én vezetem a projektet és a fejlesztő csapatot
+          itt, a code.org-nál. Ezen a feladatsoron is dolgoztam, amit éppen elvégzel.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: 'Az utolsó szinten is túljutottál. Gratulálunk! Mindent megtanultál,
+          ami ahhoz szükséges, hogy elkészítsd a saját Star Wars játékodat. Nincs
+          több utasítás és megoldandó feladat. Elkészítheted a saját játékod és kitalálhatod,
+          hogy működjön. Még egy dolog: új hangok és parancsok állnak a rendelkezésedre,
+          hogy még több dolgot tudj csinálni.'
       3:
         image: notes/starwars_congrats_3.JPG
         text: '[students speaking] So we made a game basically where you get points
@@ -2691,73 +2690,71 @@
           far away.
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game that will
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so we can drag and drop to write
-          the programs. To start off, we're going to work with Rey to program BB-8
-          to walk to collect all of the scrap parts.
+        text: A következő egy órában a saját Star Wars játékunkat fogjuk elkészíteni.
+          Megtanítjuk neked a programozás alapvető fogalmait. A programozás általában
+          szövegesen történik, de mi vonszolható blokkokat fogunk használni a programíráshoz.
+          Kezdetben Rey-jel fogsz dolgozni, aki beprogramozza BB-8-et, hogy minden
+          ócskavasat összegyűjtsön.
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars
-          game space where code will run. The instructions for each level are written
-          below the game space.
+        text: A képernyő három részre oszlik. A bal oldal a Star Wars játéktér, ahol
+          a kód futni fog. A feladatokhoz kapcsolódó utasítások a játéktér alatt vannak.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: A középső részben van az eszköztár, és benne minden blokk egy parancs,
+          amit BB-8 megért.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we're going to build our program.
+        text: A fehér terület a Munkaterület, és itt fogjuk építeni a programot.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8
-          moves left one block on the grid.
+        text: Ha a mozdulj balra blokkot a munkaterületre vonszolod, és a Futtatásra
+          kattintasz, mi fog történni? BB-8 balra mozdul egyet a rácson.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together. When I press run
-          again, BB-8 will perform the commands that are stacked top to bottom on
-          our workspace.
+        text: És mi a helyzet, ha BB-8-nek valami mást is kell csinálnia a mozdulj
+          balra blokk után? Hozzáadhatsz még egy blokkot a programhoz. Én most a mozdulj
+          fel blokkot választom, és a mozdulj balra alá vonszolom, amíg a kiemelés
+          meg nem jelenik. Ekkor elengedem, és a két blokk összekattan. Ha ezután
+          megnyomom a Futtatást, BB-8 minden a munkafelületen található parancsot
+          teljesíteni fog föntről lefelé haladó sorrendben.
       9:
         image: notes/starwars_blocks_intro_9.JPG
         text: If you ever want to delete a block, just remove it from the stack and
           drag it back into the toolbox.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: After you hit run, you can always hit the reset button to get BB-8 back
-          to the start. Now let's get rolling!
+        text: Ha törölni szeretnél egy blokkot, csak vonszold vissza az eszköztárba.
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Szia, az én nevem Charita Carter. Vezető kreatív producer vagyok a Walt
+          Disney Imagineeringnél. Én vagyok felelős azokért a játékokért, amelyekkel
+          a látogatóink találkoznak. Mindig keressük a lehetőségét annak, hogy fejlődjünk
+          és emlékezetesebb élményt nyújtsunk a látogatóinknak, és a technológia alapvető
+          ebben a folyamatban.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Gratulálunk, megcsináltad! Ügyesen programoztad a BB-8-et. Most itt
+          az ideje, hogy valami nehezebbe kezdjünk. Vágjunk bele! Miután a programozás
+          alapjait megtanultad, visszamegyünk az időben és a saját játékunkat fogjuk
+          elkészíteni R2-D2 és C3PO szereplésével.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Hogy játékot tudjunk csinálni, meg kell ismerned egy fogalmat, amit
+          a programozók minden nap használnak: ezek az események. Az események mondják
+          a programnak hogy hallgassanak vagy várjanak addig, amíg valami nem történik,
+          és amint az a dolog megtörténik, tegyenek valamit.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Esemény például egy kattintás az egérrel, egy nyíl billentyű lenyomása
+          vagy az érintőképernyő megérintése.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Most R2-D2-nak felfelé kell mozognia, hogy elvigyen egy üzenetet egy
+          lázadó pilótáknak, majd lefelé kell mozognia a másik Lázadóhoz. Eseményeket
+          fogunk használni a mozgatáshoz, amikor a játékos a föl-le billentyűket vagy
+          gombokat használja.
       6:
         image: notes/starwars_blocks_events_6.JPG
         text: We use the whenUp() event block and attach the goUp() block to it. When
@@ -2771,16 +2768,15 @@
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Szia, az én nevem Alice és én vezetem a projektet és a fejlesztő csapatot
+          itt, a code.org-nál. Ezen a feladatsoron is dolgoztam, amit éppen elvégzel.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: 'Az utolsó szinten is túljutottál. Gratulálunk! Mindent megtanultál,
+          ami ahhoz szükséges, hogy elkészítsd a saját Star Wars játékodat. Nincs
+          több utasítás és megoldandó feladat. Elkészítheted a saját játékod és kitalálhatod,
+          hogy működjön. Még egy dolog: új hangok és parancsok állnak a rendelkezésedre,
+          hogy még több dolgot tudj csinálni.'
       3:
         image: notes/starwars_blocks_congrats_3.JPG
         text: '[students speaking] So we made a game basically where you get points
@@ -2801,164 +2797,243 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: Az én nevem Jens Bergensten, de a legtöbben Jebnek hívnak. A Minecraft
+          vezető fejlesztője vagyok itt a Mojangnál Stockholmban. Azt hiszem, tizenegy
+          vagy tizenkét éves voltam, amikor programozni kezdtem, mert játékokat akartam
+          készíteni. Az apukám egyik barátja mondta, hogy ha játékokat akarok csinálni,
+          akkor meg kell tanulnom programozni. Így kezdtem el. Szeretek alkotni és
+          kitalálni a játékok alapjait. Ez az, amit igazán szeretek a Minecraftban.
       2:
         image: notes/mc_intro_2.JPG
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
+        text: A következő egy órában meg fogod ismerni a számítógép-tudomány alapjait,
+          miközben Alexet vagy Steve-et vezérled, hogy a Minecraft világ egy kis szimulált
+          darabjában mozogjanak.
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: A programozás hagyományosan szövegesen történik, de ma a Blocky-t fogjuk
+          használni, egy rendszert, amiben látványos, vonszolható blokkokkal lehet
+          programokat írni. A felszín alatt JavaScript kód születik.
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: A fogalmakat, amiket meg fogsz ismerni, a számítógép programozók nap
+          mint nap használják, ezek a számítógép-tudomány alapjai. Itt a Mojangnál
+          mi arra használjuk őket, hogy a Minecraftot programozzuk.
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: Mielőtt elkezdjük, válassz egy karaktert. Én Alexet választom. Építsünk
+          egy olyan kódot, ami segít nekünk a képernyőn mozogni.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: A képernyő három fő részre van osztva. A bal oldalon látod a Minecraft
+          játékteret, ahol a program futni fog. Alatta találhatóak minden pályán az
+          utasítások.
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: A középső rész az eszköztár, és minden blokk benne egy parancs, amely
+          irányítja Alexet.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: Ha a munkafelületre húzzuk az előrelépni parancsot, és aztán a Futtatásra
+          kattintunk, mi fog történni? Alex előremozdul egy lépéssel a rácson.
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: És mi van, ha még valamit kellene csinálnia, miután előrelépett egyet?
+          Még egy blokkot hozzáadhatunk a programhoz. Én most a fordulj jobbra parancsot
+          választom, és az előrelépni blokk alá vonszolom, amíg a narancssárga csík
+          meg nem jelenik. Ekkor elengedem, és a két blokk összepattan. Ezután újra
+          megnyomhatjuk a futtatást. Alex a Munkaterületen szereplő utasításokat fentről
+          lefelé történő sorrendben fogja végrehajtani.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: Ha ki akarsz törölni egy blokkot, csak húzd vissza az eszköztárba.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: 'Ha szeretnél mindent törölni, és visszatérni a kiindulási állapothoz,
+          nyomd meg az Újrakezdés gombot a Munkaterület jobb fölső sarkában. Még egy
+          dolog: látod a kis háromszöget a fordulj blokkokon? Valahányszor ezt a háromszöget
+          látod, az azt jelenti, hogy több lehetőség közül választhatsz! Kezdjünk
+          kódolni!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: Az én nevem Lydia Winters, brand igazgató vagyok a Mojangnál, és mi
+          készítettük a kis Minecraft nevű játékot.
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: Nekem a kedvenc elfoglaltságom a Minecraftban a felfedezés. Szeretek
+          barlangokban kalandozni, és mindenfélét találni. Mivel én nem vagyok programozó,
+          izgatottam várom, hogy végigcsináljam a Minecraft feladatokat és magam is
+          tanuljak egy kis programozást.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: Az előző feladványban nagyon sokszor kellett használni az előrelépni
+          blokkot. Sokkal egyszerűbb lenne, ha megmondhatnánk a számítógépnek, hogy
+          végezze el az előrelépni parancsot négyszer vagy ötször. Szerencsére az
+          ismétlő ciklusokkal a számítógépek ezt nagyon jól tudják csinálni.
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: Amikor a Minecraftot fejlesztjük, az ismétlő ciklusokat használjuk,
+          hogy egy új világ létrehozásához szükséges összes alapanyagot elhelyezzük.
+          Ez ezer meg ezer blokkot jelent. Apróbb esetekben is használunk ciklusokat,
+          például, hogy Alex lábai mozogjanak előre-hátra, ahogy megy. Az ismétlő
+          ciklusok hatásos részei a programozásnak.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: A következő szinteken beköszönt az eset, így egy házat kell építenünk,
+          hogy biztonságban legyünk. Az ismételd blokkot fogjuk használni, így ez
+          nagyon könnyű lesz.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: Hogy a ház falát megépítsük, vagy négyszer azt mondjuk Alexnek, hogy
+          az előrelépni paranccsal menjen előre és helyezzen el egy deszkát, vagy
+          ezeket a parancsokat az ismételd blokkba tesszük, hogy többször is megismételje
+          ezeket a folyamatokat. Most rá kell kattintanunk az ismételd blokkra és
+          meg kell mondjuk, hányszor ismételje a műveleteket. Most építsük fel a házat,
+          mielőtt este lesz! Jó szórakozást!
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: Most a ha utasításról fogunk tanulni. A ha utasítás alapvető része a
+          programozás tanulásának. Ezek segítenek a számítógépnek döntéseket hozni.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Minden számítógép használ ha utasításokat, a telefonom is. Például ha
+          lezárom, fut egy olyan program, ami beenged, ha helyes jelszót adok meg.
+          Ellenkező esetben zárolja a telefont, és egy hibaüzenetet ír ki.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: Használhatsz ha feltételeket, hogy Steve és Alice reagáljon arra, amit
+          a világban tapasztal. Ha például van előttük egy szikla, akkor balra fordulhatnak.
+          Vagy jobbra fordulhatnak, ha egy fának ütköznek.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: Nem akarunk a lávába esni. Könnyű elkerülni, látjuk a képernyőn, hol
+          helyezkedik el. De mi van azzal a lávával, ami a kövek alatt van?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: Miután kibányásztuk a követ, meg kell bizonyosodnunk róla, hogy nincs
+          alatta láva, mielőtt tovább haladnánk. Ha láva van alatta, akkor egy kő
+          hidat kell a szereplőnk elé helyeznünk, mielőtt tovább tudnánk haladni.
+          Így már biztonsággal tovább mehetünk. Ideje újra bányászni! Ne feledd el
+          használni a ha blokkot, és vigyázz a lépteidre!
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Gratulálunk! Megismerted a számítógép-tudomány alapvető elemeit.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Most használhatod az összes blokkot, hogy a saját világodat megalkosd.
+          Nincsen több utasítás és megoldandó feladvány. Bármit építhetsz, amit csak
+          szeretnél. A választás a tiéd.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[tanulók beszélnek] Nagyon valódi. Birkanyírás! Fáklyákból csináltam
+          egy L betűt. Én egy A-t készítettem nyírfa deszkából. Építettünk egy házat
+          gyapjúból!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Ha elkészültél az alkotásoddal, válaszd a megosztást, hogy a link segítségével
+          meg tudd mutatni a barátaidnak. Jó szórakozást!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Gratulálunk! Megismerted a számítógép-tudomány alapvető elemeit.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Most használhatod az összes blokkot, hogy a saját világodat megalkosd.
+          Nincsen több utasítás és megoldandó feladvány. Bármit építhetsz, amit csak
+          szeretnél. A választás a tiéd.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[tanulók beszélnek] Nagyon valódi. Birkanyírás! Fáklyákból csináltam
+          egy L betűt. Én egy A-t készítettem nyírfa deszkából. Építettünk egy házat
+          gyapjúból!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Most bármit építhetsz, amit csak szeretnél! Jó szórakozást!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.

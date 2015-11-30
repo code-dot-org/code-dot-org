@@ -213,8 +213,8 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "houseSelectEasy":function(d){return "Lagano"},
 "houseSelectHard":function(d){return "Teško"},
 "houseSelectLetsBuild":function(d){return "Ajmo sagraditi kuću."},
-"houseSelectMedium":function(d){return "Medium"},
-"keepPlayingButton":function(d){return "Keep Playing"},
+"houseSelectMedium":function(d){return "Srednje"},
+"keepPlayingButton":function(d){return "Nastaviti igrati"},
 "level10FailureMessage":function(d){return "Pokrij lavu da prođeš preko, onda iskopaj dva željezna bloka na drugoj strani."},
 "level11FailureMessage":function(d){return "Postavi kamen ako je lava naprijed. To će ti dopustit da sigurno iskopaš ovaj red resursa."},
 "level12FailureMessage":function(d){return "Be sure to mine 3 redstone blocks. This combines what you learned from building your house and using \"if\" statements to avoid falling in lava."},
@@ -237,6 +237,6 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playerSelectChooseSelectButton":function(d){return "Odaberi"},
 "playerSelectLetsGetStarted":function(d){return "Hajde da počnemo."},
 "reinfFeedbackMsg":function(d){return "You can press \"Keep Playing\" to go back to playing your game."},
-"replayButton":function(d){return "Replay"},
+"replayButton":function(d){return "Ponovi"},
 "selectChooseButton":function(d){return "Odaberi"},
 "tooManyBlocksFail":function(d){return "Zagonetka "+craft_locale.v(d,"puzzleNumber")+" je dovršena. Čestitam! Također je moguće završiti ju sa "+craft_locale.p(d,"numBlocks",0,"hr",{"jedna":"jednom kockom","other":craft_locale.n(d,"numBlocks")+" kocki"})+"."}};

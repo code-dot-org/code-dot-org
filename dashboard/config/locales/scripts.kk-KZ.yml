@@ -181,7 +181,7 @@
           'Bee: For Loops': 'Bee: For Loops'
           title: Course 4
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
-          Variables: Variables
+          Variables: Айнымалылар
           'Play Lab: Variables': 'Play Lab: Variables'
           'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
@@ -230,7 +230,7 @@
           title: Usability Testing
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
-          Variables: Variables
+          Variables: Айнымалылар
           For Loops: For Loops
           Binary: Binary
         potus:
@@ -278,7 +278,7 @@
           description: Use Play Lab to create a story or game starring Disney Infinity
             characters.
           Play Lab: Play Lab
-          Infinity: Infinity
+          Infinity: Шексіздік
         algebrademo:
           title: Algebra Demo
           description_short: A handful of puzzles to demonstrate the environment and
@@ -393,9 +393,9 @@
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
-          title: Events
-          description: Events
-          description_short: Events
+          title: Шаралар
+          description: Шаралар
+          description_short: Шаралар
           Bounce: Bounce
           Studio: Studio
           Calc: Calc
@@ -412,10 +412,10 @@
           description_short: Try our Jigsaw tutorial
           Jigsaw: Jigsaw
         step:
-          title: Step
+          title: Қадам
           description: Step tutorial
           description_short: Step tutorial
-          Step: Step
+          Step: Қадам
         Hour of Code:
           title: Hour of Code 2013
           description: Try the basics of computer science with characters from Angry
@@ -710,7 +710,7 @@
           Introducing Design Mode: Introducing Design Mode
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
-          Variables: Variables
+          Variables: Айнымалылар
           Looping and Random Numbers - Under the Sea: Looping and Random Numbers -
             Under the Sea
           Multi-screen App: Multi-screen App
@@ -743,6 +743,14 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: While Loops
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1570,6 +1578,8 @@
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
           description_short: Programming
@@ -1588,6 +1598,13 @@
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: While Loops
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1638,3 +1655,10 @@
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Welcome!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Wrap-Up

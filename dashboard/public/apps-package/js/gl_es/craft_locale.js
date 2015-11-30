@@ -207,7 +207,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockTypeWool":function(d){return "wool"},
 "blockWhileXAheadAhead":function(d){return "ahead"},
 "blockWhileXAheadDo":function(d){return "do"},
-"blockWhileXAheadWhile":function(d){return "while"},
+"blockWhileXAheadWhile":function(d){return "mentras"},
 "generatedCodeDescription":function(d){return "By dragging and placing blocks in this puzzle, you've created a set of instructions in a computer language called Javascript. This code tells computers what to display on the screen. Everything you see and do in Minecraft also starts with lines of computer code like these."},
 "houseSelectChooseFloorPlan":function(d){return "Choose the floor plan for your house."},
 "houseSelectEasy":function(d){return "Easy"},

@@ -526,7 +526,7 @@ StudioApp.prototype.substituteInstructionImages = function(htmlText) {
   if (htmlText) {
     for (var prop in this.skin.instructions2ImageSubstitutions) {
       var value = this.skin.instructions2ImageSubstitutions[prop];
-      var substitutionHtml = '<img src="' + value + '" class="instructionsImage"/>';
+      var substitutionHtml = '<span class="instructionsImageContainer"><img src="' + value + '" class="instructionsImage"/></span>';
       var re = new RegExp('\\[' + prop + '\\]', 'g');
       htmlText = htmlText.replace(re, substitutionHtml);
     }
@@ -875,7 +875,8 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   });
 
   if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
-    renderedMarkdown = marked(level.markdownInstructions);
+    var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
+    renderedMarkdown = marked(markdownWithImages);
     scrollableSelector = '.instructions-markdown';
     instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
@@ -1465,6 +1466,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
   this.skin = config.skin;
   this.showInstructions = this.showInstructions_.bind(this, config.level);
+  this.polishCodeHook = config.polishCodeHook;
 };
 
 // Overwritten by applab.
@@ -2249,4 +2251,17 @@ StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
       return descendant.getVars().indexOf(varName) !== -1;
     });
   });
+};
+
+/**
+ * Polishes the generated code string before displaying it to the user. If the
+ * app provided a polishCodeHook function, it will be called.
+ * @returns {string} code string that may/may not have been modified
+ */
+StudioApp.prototype.polishGeneratedCodeString = function (code) {
+  if (this.polishCodeHook) {
+    return this.polishCodeHook(code);
+  } else {
+    return code;
+  }
 };

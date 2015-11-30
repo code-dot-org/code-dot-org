@@ -1437,7 +1437,7 @@ ru:
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
       2:
         image: notes/starwars_congrats_2.JPG
         text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
@@ -1506,7 +1506,7 @@ ru:
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
       2:
         image: notes/starwars_blocks_congrats_2.JPG
         text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
@@ -1528,50 +1528,50 @@ ru:
         text: В течение следующего часа вы научитесь основам информатики, программируя Алекс или Стива для передвижения по имитации части мира Minecraft.
       3:
         image: notes/mc_intro_3.JPG
-        text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+        text: Обычно под программированием подразумевают написание кода, но сегодня мы будем использовать язык Блокли, систему которая использует визуальные блоки, которые можно ставить и перетаскивать, чтобы написать программу. Хотя на самом деле вы будете писать код на языке Javascipt.
       4:
         image: notes/mc_intro_4.JPG
-        text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work."
+        text: Принципы, которые ты изучишь являются принципами, которые программисты используют в повседневной жизни и являются основами компьютерных наук. Мы в Mojang используем те же принципы, работая над Minecraft.
       5:
         image: notes/mc_intro_5.JPG
-        text: "Before you start, you'll pick your character. I'm going to choose Alex. Let's build code for a program that will help her move around the screen."
+        text: Перед тем как начать, выбери своего персонажа. Я выберу Алекс. Давай напишем создадим код для нашей программы, который приведет ее в движение.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft playspace where your program will run. The instructions for each level are written below.
+        text: Твой экран поделен на три части. Слева игровое пространство Minecraft, там где будет запускаться твоя программа. Инструкции можно найти ниже.
       7:
         image: notes/mc_intro_7.JPG
-        text: "This middle area is the toolbox and each of these blocks is a command that directs Alex's actions."
+        text: 'Средняя область - это панель команд и каждый из блоков является командой, которая говорит Алекс что делать.'
       8:
         image: notes/mc_intro_8.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Пространство справа называется рабочей областью и именно здесь мы будем писать программу.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click run, what happens? Alex moves forward one space on the grid.
+        text: 'Что произойдет если мы перетащим блок "идти вперед" на нашу рабочую область и нажмем кнопку пуск? Правильно. Алекс пойдет вперед на один блок.'
       10:
         image: notes/mc_intro_10.JPG
-        text: "And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the turnRight(); block and I'll drag it underneath my moveForward(); block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+        text: 'А что если мы хотим, чтобы она сделала что-нибудь после того как она пошла вперед? Мы можем добавить еще один блок в нашу программу. Я выберу блок "повернуть направо" и буду тащить его под блоком "идти вперед" пока не появится оранжевая линия. Потом я отпущу блок и два блока прилипнут друг к другу. Когда я нажму кнопку пуск снова. Алекс исполнит все команды начиная с верхней команды и заканчивая нижней на нашей рабочей области.'
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back to the toolbox.
+        text: Если ты хочешь удалить блок, просто перенеси его из рабочей области обратно в панель команд.
       12:
         image: notes/mc_intro_12.JPG
-        text: "To undo your changes and get back to how the level started, use the Start Over button in the top right corner of the workspace. One more thing: you see the little triangle on the turn blocks? Anytime you see these triangles, it means that you can pick a different option. Let's start coding!"
+        text: 'Чтобы отменить твои изменения и вернуться к тому с чего начинал, использую кнопку "Начать заново" в верхнем правом углу рабочей области. И еще одно: видишь маленький треугольничек на блок поворота? Если ты видишь такой треугольничек, это значит, что ты можешь выбрать опцию из списка. Давай кодить!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
+        text: Я Линда Уинтерс, бренд-директор Mojand и мы создаем маленькую игру под названием Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+        text: 'Мое любимое занятие в Minecraft - это исследование. Мне нравится путешествовать по пещерам в поисках чего-нибудь новенького. Не являясь программистом, мне очень интересно пройти через все занятия и на самом деле изучить программирование.'
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops.
+        text: 'На этом уровне нужно очень много блоков "иди вперед". Было бы проще, если бы могли сказать компьютеру, чтобы он выполнил команду "иди вперед" четыре или пять раз. На наше счастье компьютеры хорошие повторители, ведь они используют циклы повторения.'
       4:
         image: notes/mc_repeat_4.JPG
-        text: "When building Minecraft, we use repeat loops to place all the initial materials for creating a new world. That's thousands and thousands of blocks. We also use loops in little ways, for example to make Alex's feet move back and forth as she walks. Repeat loops are a powerful part of programming."
+        text: В процессе построения в Minecraft, мы прибегаем к использованию циклов, чтобы расставить все блоки для создания нового мира. Это тысячи и тысячи блоков. Так же мы используем циклы для простых вещей, например чтобы ноги Алекс двигались назад и вперед, когда она идёт. Циклы очень мощный инструмент программирования.
       5:
         image: notes/mc_repeat_5.JPG
-        text: "Night is coming so in the next couple of levels, we're going to build a house to stay safe. We're going to use the repeat block to do this very easily."
+        text: Приближается ночь и мы в течении нескольких уровней построить дом, чтобы остаться в живых. Мы будем использовать блоки повтора, чтобы справиться с этим быстрее.
       6:
         image: notes/mc_repeat_6.JPG
         text: "To build a wall of our house, we can either tell Alex to moveForward(); and place planks four times or we can tell her to moveForward(); and place one plank, then take this command and use the repeat block to have her perform the action multiple times. Now we'll click on the repeat block and tell her how many times we want her to perform this action. Now let's build our house before night falls! Have fun."
@@ -1590,7 +1590,7 @@ ru:
         text: "In this case, we don't want to fall in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
       5:
         image: notes/mc_if_statements_5.JPG
-        text: "After we mine the stone, we'll need to check if there's any lava in that place before moving forward. If there is lava there, we want to place a stone in front of our character before we can move forward. That way we can safely move on. Time for more mining! And remember to use the if statement to watch your step."
+        text: После того как мы добыли камень, мы должны проверить, есть ли перед нами лава, прежде чем идти дальше. Если перед нами лава, мы наверное захотим поставить каменный блок на это место прежде чем двинуться дальше. Таким образом мы можем безопасно передвигаться. Время добывать! И не забудь использовать условную конструкцию, чтобы проверять перед собой.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
@@ -1617,3 +1617,56 @@ ru:
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Теперь вы можете построить все, что хотите. Веселитесь!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: Пространство справа называется рабочей областью и именно здесь мы будем писать программу.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

@@ -153,7 +153,7 @@
           black card, you get a point."
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
+        title: האירוע הגדול
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button

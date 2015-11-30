@@ -10,7 +10,8 @@ require 'timecop'
 unless ENV['USE_REAL_SQS']
   Aws.config.update(region: 'us-east-1', access_key_id: 'fake id', secret_access_key: 'fake secret')
   $fake_sqs_service = FakeSQS::TestIntegration.new(database: ':memory:',
-                                                    sqs_endpoint: 'localhost', sqs_port: 4568)
+                                                   sqs_endpoint: 'localhost', sqs_port: 4568)
+  sleep(1) # add a sleep to fix test failures with 'RuntimeError: FakeSQS didn't start in time'
 end
 
 class ActivityTest < ActiveSupport::TestCase
@@ -81,7 +82,7 @@ class ActivityTest < ActiveSupport::TestCase
       # the time of the write.
       new_time = time + 1
       Timecop.freeze(new_time) do
-        process_pending_queue_messages(@queue_url, Activity::AsyncHandler.new)
+        process_pending_queue_messages(@queue_url, AsyncProgressHandler.new)
       end
     else
       new_time = time

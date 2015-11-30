@@ -2796,164 +2796,242 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: Jeg hedder Jens Bergensten, men er mere kendt som Jeb. Jeg er chefudvikler
+          på Minecraft her hos mojang. com. Jeg tror jeg var 11 eller måske 12, da
+          jeg startede med at programmere, fordi jeg ville lave spil. En af min fars
+          venner fortalte mig, at for at lave spil skal man lære at programmere. Så
+          det var sådan jeg fik begyndt. Jeg kan lide at designe og finde ud af hvordan
+          ting er bygget op. Det er det jeg rigtig godt kan li' ved Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
+        text: I den næste times tid skal du lære det grundlæggende i programmering,
+          ved at kode Alex eller Steve til at flytte sig rundt i et simuleret stykke
+          af en Minecraft verden.
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: 'Normalt er programmering en masse tekst, men i dag vil vi bruge Blockly:
+          et system som bruger blokke, som du kan trække og slippe, for at skrive
+          programmer. I virkeligheden skriver du JavaScript-kode.'
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: Begreberne du skal lære er de samme som programmører bruger hver eneste
+          dag, og er grundlaget for al programmering. Hos Mojang bruger vi de samme
+          begreber, for at få Minecraft til at fungere.
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: Før du begynder, skal du vælge din spiller. Jeg vælger Alex. Lad os
+          bygge noget kode, som kan flytte hende rundt på skærmen.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: Din skærm er delt op i tre områder. Til venstre er Minecraft-spilområdet,
+          hvor din kode vil køre. Der er en vejledning til hver opgave lige nedenfor.
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: I midten af skærmen er værktøjskassen, hvor hver blok er en kommando
+          som får Alex til at udføre bestemte handlinger.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Det hvide område til højre er arbejdsområdet, hvor vi opbygger vores
+          programmer.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: Hvis vi trækker en moveForward()-blok til arbejdsområdet, og så klikker
+          på "Kør", hvad sker der mon så? Alex flytter et felt frem i spilområdet.
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: Og hvis vi vil gøre mere bagefter? Så kan vi bare tilføje en blok mere
+          til vores program. Jeg vælger turnRight()-blokken og trækker den hen under
+          min moveForward()-blok indtil jeg kan se den orange markering. Så slipper
+          jeg og de to blokke hænger sammen. Når vi trykker på "Kør" igen, vil Alex
+          udføre alle kommandoerne i arbejdsområdet - fra top til bund.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: Og hvis du får brug for at slette en blok, så træk den bare tilbage
+          i værktøjskassen.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: 'Hvis du vil fortryde og starte forfra, kan du bruge "Start forfra"-knappen
+          øverst til højre i arbejdsområdet. Én ting mere: Kan du se den lille trekant
+          på "drej"-blokkene? Når du ser sådan en trekant, kan du vælge mellem flere
+          muligheder. Lad os komme i gang med at kode!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: Jeg hedder Lydia Winters - Mojangs brand director - og vi har lavet
+          et lille spil, som hedder Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: Det jeg bedst kan li' i Minecraft er at udforske. Jeg elsker at gå på
+          eventyr i huler og se hvad jeg kan finde. Som en der ikke selv er programmør,
+          synes jeg det er vildt spændende at prøve Minecraft-øvelserne og faktisk
+          lære lidt programmering selv.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: Den sidste øvelse krævede masser af "flyt fremad"-blokke. Det ville
+          være lettere hvis vi blot kunne fortælle computeren at den skullle udføre
+          "flyt fremad"-kommandoen fire eller fem gange. Heldigvis er computere rigtig
+          gode til at gentage kommandoer med "gentag"-løkker.
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: Når vi bygger i Minecraft, bruger vi "gentag"-løkker til at placere
+          alle materialerne der skaber en ny verden. Det er tusindvis af blokke. Vi
+          bruger også løkker i andre sammenhænge - for eksempel til at få Alex' fødder
+          til at bevæge sig frem og tilbage, når hun går. "Gentag"-løkker er en vigtig
+          del af programmering.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: Det er ved at blive aften, så i de næste øvelser skal vi bygge et hus,
+          som vi trygt kan overnatte i. Vi vil bruge "gentag"-blokken til at gøre
+          det meget let.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: |
+          For at bygge en væg på huset, kan vi enten bede Alex om at flytte fremad og sætte en planke fire gange, eller vi kan bede hende om at flytte fremad og sætte en planke, og så gentage denne kommando flere gange ved hjælp af "gentag"-blokken. Nu klikker vi på "gentag"-blokken og fortæller hvor mange gange vi vil ha' hende til
+          at gentage handlingen. Lad os få bygget det hus, før det bliver mørkt! God fornøjelse.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: Nu skal vi lære om "hvis"-sætninger. "Hvis"-sætninger er en fundamental
+          del af at lære at programmere. De hjælper computere med at træffe beslutninger.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Alle computere bruger "hvis"-sætninger, også min telefon. For eksempel,
+          når jeg låser min telefon op, bliver der kørt noget kode som siger, at hvis
+          jeg skriver den rigtige adgangskode, så lås telefonen op. Ellers skal den
+          vise en fejl-meddelelse.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: Du kan bruge "hvis"-sætninger i din kode for at få Steve og Alex til
+          at reagere på hvad de ser undervejs. Hvis der for eksempel er en sten foran
+          dem, kan de dreje til venstre. Eller dreje til højre, hvis de løber ind
+          i et træ.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: Her vil vi gerne undgå at de falder ned i lavaen. Det er let at undgå
+          lavaen. Vi kan se den på skærmen. Men hvad med den lava som vi ikke kan
+          se under jorden?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: Efter vi har udgravet stenen, blive vi nødt til at tjekke om der er
+          lava under før vi flytter fremad. Hvis der er lava, vil vi sætte brosten
+          før vi går videre. På den måde kan vi komme sikkert fremad. Tid til at grave
+          videre! Og husk at brug en "hvis"-sætning til at komme sikkert videre.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Tillykke! Du har lært om de grundlæggende byggeblokke i programmering.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Nu kan du bruge dem til at bygge dit eget mesterværk. Der er ikke flere
+          instruktioner og øvelser at løse. Du kan bygge lige hvad du har lyst til
+          - det er dit valg.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[elever taler] Nu bliver det rigtigt. Jeg har lavet et L ud af fakler.
+          Jeg har lavet et A af birkeplanker. Det virker, det virker. Vi har bygget
+          et hus af uld!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Når du er færdig med at bygge, kan du vælge at dele et link med dine
+          venner. God fornøjelse!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Tillykke! Du har lært om de grundlæggende byggeblokke i programmering.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Nu kan du bruge dem til at bygge dit eget mesterværk. Der er ikke flere
+          instruktioner og øvelser at løse. Du kan bygge lige hvad du har lyst til
+          - det er dit valg.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[elever taler] Nu bliver det rigtigt. Jeg har lavet et L ud af fakler.
+          Jeg har lavet et A af birkeplanker. Det virker, det virker. Vi har bygget
+          et hus af uld!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Nu kan du bygge lige hvad du vil. God fornøjelse!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: Det hvide område til højre er arbejdsområdet, hvor vi opbygger vores
+          programmer.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.

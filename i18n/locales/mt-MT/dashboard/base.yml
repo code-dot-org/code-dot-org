@@ -216,6 +216,7 @@ mt:
         playlab: Agħmel App
         artist: Pinġi Xi Ħaġa
         calculate: Calculate Something
+        applab: Agħmel App
     user:
       classroom: Teacher Home Page
       district_dashboard: Pannell tal-Kontroll Distrettwali
@@ -383,7 +384,7 @@ mt:
       Aħna jirringrazzjaw <a href="https://code.org/about/donors"> donaturi</a>, <a href="https://code.org/about/partners"> imsieħba</a>, <a href="https://code.org/about/team"> tim estiż</a>, tagħna, tal-vidjo, tagħna <a href="https://code.org/about/advisors"> konsulenti ta ' l-edukazzjoni</a> għall-appoġġ tagħhom fil-ħolqien tal-Code Studio.
     help_from_html: "Irridu speċjalment li jirrikonoxxu l-inġiniera minn Google, Microsoft, Facebook, Twitter, u ħafna oħrajn li għenu fil-holqien ta' dawn il-materjali."
     help_from_html_old: Inġiniera minn Google, Microsoft, Facebook u Twitter għenu biex jinholqu dawn il-materjali.
-    art_from_html: 'Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'

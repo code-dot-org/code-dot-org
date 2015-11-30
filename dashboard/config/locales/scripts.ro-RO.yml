@@ -51,7 +51,7 @@
           'Studio: Create a Story': 'Laboratorul de Joacă: Creează o Poveste'
           'Artist: Loops': 'Artist: Bucle'
           description_audience: Vârste 4 - 6 ani
-          description_short: Curs 1 este proiectat pentru cititori timpurii
+          description_short: Incepet Cursul 1 pentru incepatori.
         course2:
           The Maze: Labirintul
           Suzi: Suzi
@@ -94,7 +94,7 @@
           'Maze: Sequence2': 'Labirint: Secvenţă2'
           'Artist: Nested Loops': 'Artist: Bucle Adunate'
           description_audience: Vârste 6 - 18 ani
-          description_short: Curs 2 este conceput pentru elevii care pot citi
+          description_short: Cursul 2 este conceput pentru elevii care pot citi.
         course3:
           The Maze: Labirintul
           'Studio: Create a Story': 'Laboratorul de Joacă: Creează o Poveste'
@@ -211,10 +211,10 @@
           Artist Binary: Binar cu artist
           description_audience: Vârste 10 - 18 ani
           Super Challenge - Variables: Super provocare - Variabile
-          Super Challenge - For Loops: Super provocare - Bucle "pentru"
-          Super Challenge - Functions and Parameters: Super provocare - Funcţii şi
+          Super Challenge - For Loops: Super provocare - Buclele "pentru"
+          Super Challenge - Functions and Parameters: Super provocare - Functii si
             Parametri
-          Extreme Challenge - Comprehensive: Provocare extremă - Cuprinzătoare
+          Extreme Challenge - Comprehensive: Provocare extrema - Cuprinzatoare
         Course4pre:
           title: Curs 4 Condiţii prealabile
           description_short: O scurtă prezentare a conceptelor pentru elevii care
@@ -370,8 +370,8 @@
           description: Acest curs de 20 de ore prezintă concepte de bază din informatică
             şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru
             clasele K-8, dar este distractiv de învăţat la toate vârstele.
-          description_short: Acest curs de 20 de ore acoperă elementele de bază în
-            informatică și concepte de programare în cadrul cursurile 2-4.
+          description_short: Acest curs de 20 de ore acopera elementele de baza in
+            informatica si concepte de programare in cadrul cursurilor 2-4.
           Introduction to Computer Science: Introducere în Informatică
           The Maze: Labirintul
           Computational Thinking: Gândire de Calcul
@@ -414,7 +414,7 @@
           title: Codul Flappy
           description: Vrei să programezi propriul joc în mai puţin de 10 minute?
             Încearcă lecția noastră Codul Floppy!
-          description_short: Creează propriul joc Flappy în mai puțin de 10 minute!
+          description_short: Creeaza propriul joc Flappy in mai putin de 10 minute!
           Flappy Code: Codul Flappy
         jigsaw:
           title: Puzzle
@@ -747,6 +747,14 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: Repetiții While
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -879,8 +887,8 @@
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Etapa 2 online: Studiu de vară mixt'
-          description_short: 'Etapa 2 online: Studiu de vară mixt'
+          description: 'Etapa 2 online: Studiu de vara mixt'
+          description_short: 'Etapa 2 online: Studiu de vara mixt'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -959,8 +967,8 @@
           Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Etapa 2 online: Studiu de vară mixt'
-          description_short: 'Etapa 2 online: Studiu de vară mixt'
+          description: 'Etapa 2 online: Studiu de vara mixt'
+          description_short: 'Etapa 2 online: Studiu de vara mixt'
           Evaluation Blocks: Blocuri de evaluare
           Strings and Images: Șiruri și Imagini
           Defining Variables: Definirea Variabilelor
@@ -1007,8 +1015,8 @@
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Etapa 2 online: Studiu de vară mixt'
-          description_short: 'Etapa 2 online: Studiu de vară mixt'
+          description: 'Etapa 2 online: Studiu de vara mixt'
+          description_short: 'Etapa 2 online: Studiu de vara mixt'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1065,8 +1073,8 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Etapa 2 online: Studiu de vară mixt'
-          description_short: 'Etapa 2 online: Studiu de vară mixt'
+          description: 'Etapa 2 online: Studiu de vara mixt'
+          description_short: 'Etapa 2 online: Studiu de vara mixt'
           Welcome!: Bine ai venit!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -1130,8 +1138,8 @@
           Hour of Code 2015: Ora de cod 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Etapa 2 online: Studiu de vară mixt'
-          description_short: 'Etapa 2 online: Studiu de vară mixt'
+          description: 'Etapa 2 online: Studiu de vara mixt'
+          description_short: 'Etapa 2 online: Studiu de vara mixt'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1153,8 +1161,8 @@
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Etapa 2 online: Studiu de vară mixt'
-          description: 'Etapa 2 online: Studiu de vară mixt'
+          description_short: 'Etapa 2 online: Studiu de vara mixt'
+          description: 'Etapa 2 online: Studiu de vara mixt'
           Welcome!: Bine ai venit!
           Wrap-Up: Revizuire
           Review StarLogo Nova: Review StarLogo Nova
@@ -1170,8 +1178,8 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Etapa 2 online: Studiu de vară mixt'
-          description: 'Etapa 2 online: Studiu de vară mixt'
+          description_short: 'Etapa 2 online: Studiu de vara mixt'
+          description: 'Etapa 2 online: Studiu de vara mixt'
           Welcome!: Bine ai venit!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1192,8 +1200,8 @@
         sciencePD2b-iZone:
           Welcome!: Bine ai venit!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Etapa 2 online: Studiu de vară mixt'
-          description: 'Etapa 2 online: Studiu de vară mixt'
+          description_short: 'Etapa 2 online: Studiu de vara mixt'
+          description: 'Etapa 2 online: Studiu de vara mixt'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1202,8 +1210,8 @@
           Wrap-Up: Revizuire
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Etapa 2 online: Studiu de vară mixt'
-          description: 'Etapa 2 online: Studiu de vară mixt'
+          description_short: 'Etapa 2 online: Studiu de vara mixt'
+          description: 'Etapa 2 online: Studiu de vara mixt'
           Welcome!: Bine ai venit!
           0: |
             Unit 1, Days 1-2
@@ -1226,8 +1234,8 @@
           Wrap-up: Încheiere
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Etapa 2 online: Studiu de vară mixt'
-          description: 'Etapa 2 online: Studiu de vară mixt'
+          description_short: 'Etapa 2 online: Studiu de vara mixt'
+          description: 'Etapa 2 online: Studiu de vara mixt'
           Welcome!: Bine ai venit!
           0: |
             Unit 1, Days 1-2
@@ -1551,11 +1559,11 @@
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
         iceage:
-          title: Laborator de Joacă Ice Age
-          description_short: Creează o poveste sau un joc cu Laboratorul de Joacă
-            Ice Age!
-          description: Creează o poveste sau un joc cu Laboratorul de Joacă Ice Age!
-          Ice Age Play Lab: Laborator de Joacă Ice Age
+          title: Laboratorul Joaca Ice Age
+          description_short: Creeaza o poveste sau un joc cu Laboratorul Joaca Ice
+            Age!
+          description: Creeaza o poveste sau un joc cu Laboratorul Joaca Ice Age!
+          Ice Age Play Lab: Laboratorul Joaca Ice Age
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1569,6 +1577,8 @@
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
           description_short: Programming
@@ -1587,6 +1597,13 @@
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Repetiții While
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1601,11 +1618,10 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Laborator de Joacă Gumball
-          description_short: Creează o poveste sau un joc cu Laboratorul de Joacă
-            Gumball!
-          description: Creează o poveste sau un joc cu Laboratorul de Joacă Gumball!
-          Gumball Play Lab: Laborator de Joacă Gumball
+          title: Laboratorul Joaca Gumball
+          description_short: Creeaza o poveste sau un joc cu Laboratorul Joaca Gumball!
+          description: Creeaza o poveste sau un joc cu Laboratorul Joaca Gumball!
+          Gumball Play Lab: Laboratorul Joaca Gumball
         starwars:
           title: 'Star Wars: Programarea unei galaxii'
           description_short: Invata sa programezi droizi si creeaza-ti propriul joc
@@ -1627,9 +1643,9 @@
           Craft: Craft
         mc:
           title: Ora de Cod Minecraft
-          description_short: Exploreaza o lume Minecraft prin cod
-          description: Utilizează blocuri de cod pentru a-l lua pe Steve sau Alex
-            într-o aventură în aceast univers Minecraft
+          description_short: Exploreaza o lume Minecraft cu programarea
+          description: Folosim blocuri de instructiuni pentru a-l lua pe Steve sau
+            Alex într-o aventură prin aceasta lume Minecraft
           Hour of Code 2015: Ora de cod 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -1638,3 +1654,10 @@
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Bine ai venit!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Revizuire

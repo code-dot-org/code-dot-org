@@ -300,12 +300,14 @@ class Script < ActiveRecord::Base
   end
 
   def has_banner?
-    k5_course? || %w(cspunit1 cspunit2).include?(self.name)
+    k5_course? || %w(cspunit1 cspunit2 cspunit3).include?(self.name)
   end
 
   def freeplay_links
     if name.include?('algebra')
       ['calc', 'eval']
+    elsif name.start_with?('csp')
+      ['applab']
     else
       ['playlab', 'artist']
     end

@@ -114,7 +114,6 @@ bs-BA:
   hoc_is_here: '#HourOfCode je ovdje - provjeri! @codeorg'
   just_did_hoc: 'Upravo sam završio #HourOfCode - provjeri! @codeorg'
   twitter_teach_cs: Zašto se računarstvo ne predaje u više škola? Mi to možemo popraviti. http://youtu.be/2DxWIxec6yo. Posjeti http://code.org/ da naučiš više.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Nauči više</a>o nagradama za edukatore.'
   learn_hoc: Nauči Hour of Code
   beyond_hoc: Više nego One Hour
   what_gender: Koji si spol?
@@ -302,8 +301,9 @@ bs-BA:
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: Sat Kodiranja je globalni pokret da bi se isprobao jedan sat uvoda u računarstvo i koji doseže desetke miliona učenika u 180+ zemalja. Zovemo vas da se priključite tokom Edukacijske Sedmice Računarstva, Decembra 7-13.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Molimo da unesete slijedeću informaciju ako ste student računarstva ili softverski poznavalac. Polja zabilježena sa <span class="form-required-field">*</span>su obavezna.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Informacija podijeljena sa nastavnicima na mapi volontera
   volunteer_engineer_submission_field_name: Ime
   volunteer_engineer_submission_field_name_placeholder: Ime i Prezime
@@ -550,11 +550,17 @@ bs-BA:
   learn_educator_resources_description: Nauči kako da predaješ Sat Kodiranja
   learn_educator_resources_button: Resursi za edukatore
   learn_are_you_educator: 'Jesi li edukator? Nauči <a href="http://hourofcode.com/resources/how-to"> kako predavati Sat Kodiranja</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Nauči više</a>o nagradama za edukatore.'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Isprobaj naše nove tutorijale Sata Kodiranja
   hoc2014_try_new_tutorial: Isprobajte naš novi tutorijal Sata Kodiranja u beta verziji
   hoc2014_try_scrat: Angry Birds, Plants vs. Zombies i Scrat
   hoc2014_try_frozen: Budi umjetnik s Annom i Elsom iz Sniježnog kraljevstva
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Tutorijali i na tvom jeziku
@@ -623,6 +629,8 @@ bs-BA:
   projguts_name: Kamen, makaze, papir
   hourofcode_name: Prostor za novi code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab (Beskonačni Laboratorij Igranja)
+  artist_name: Umjetnik
   codeorg_gradelevel: Dob 4-104
   codeintl_gradelevel: Dob 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -664,6 +672,8 @@ bs-BA:
   frozen_gradelevel: Dob 8+
   starwars_gradelevel: Uzrast 6+
   playlab_gradelevel: Dob 4-104
+  infinity_gradelevel: Dob 4-104
+  artist_gradelevel: Dob 4-104
   codeorg_platformtext: Savremeni browser-i, mobiteli, tableti
   codeintl_platformtext: Savremeni browser-i, mobiteli, tableti
   thinkersmithspanish_platformtext: Izvanmrežno
@@ -742,10 +752,12 @@ bs-BA:
   thinkersmith2_shortdescription: Nauči kako kompjuteri koriste nule i jedinice za prikaz informacija
   kodableunplugged_shortdescription: Zabavna izvanmrežna vježba
   projguts_shortdescription: Pokušaj modelovanje i simulaciju uporabom kamen/makaze/papir
-  hourofcode_shortdescription: Prostor za novi code.org/hoc
+  hourofcode_shortdescription: Nauči programirati s Markom Zuckerbergom i Angry Birds!
   frozen_shortdescription: Hajde da se kodiranjem pridružimo Anni i Elsi dok istražuju čaroliju i ljepotu leda.
   starwars_shortdescription: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Upotrijebi Laboratorij Igranja da bi napravio/la priču ili igru u kojoj igraju karakteri Disney Beskonačnost.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: 'Nauči osnovne pojmove računarstva pomoću "povuci-i-ispusti" programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika.'
   codeintl_longdescription: 'Nauči osnovne pojmove računarstva pomoću "povuci-i-ispusti" programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika.'
   thinkersmithspanish_longdescription: 'Korištenjem ugrađenog "Robotskog Rječnika" učenici će otkriti kako navoditi jedan drugog ka izvršavanju određene zadaće bez prethodnog dogovaranja. Ova lekcija poučava djecu o nalaženju veze između simbola i akcije, kao i neprocjenjivo vrijednoj vještini ispravljanja grešaka.'
@@ -975,3 +987,11 @@ bs-BA:
   compatibility_https_header: Molimo da obezbijediš HTTPS za Code.org.
   compatibility_https_message: "Da vi se pojačala sigurnost, prebacujemo se na HTTPS na %{https_date}. Nećeš moći pristupiti Code.org nakon ovog datuma. <a href='%{it_requirements_url}'>Klikni ovdje</a> da naučiš kako omogućiti HTTPS za Code.org."
   compatibility_https_hide_this_warning: Sakrij ovo upozorenje
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: mahni krilima
+  infinity_shortcode: inf
+  playlab_shortcode: igraj
+  artist_shortcode: art

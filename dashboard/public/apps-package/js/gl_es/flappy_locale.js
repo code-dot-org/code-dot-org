@@ -154,7 +154,7 @@ v:function(d,k){flappy_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:(k=flappy_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).flappy_locale = {
-"continue":function(d){return "Continue"},
+"continue":function(d){return "Continuar"},
 "doCode":function(d){return "do"},
 "elseCode":function(d){return "else"},
 "endGame":function(d){return "end game"},
