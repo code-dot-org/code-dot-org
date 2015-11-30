@@ -227,6 +227,18 @@ var projects = module.exports = {
       dashboard.header.showProjectLevelHeader();
     }
   },
+  setName: function(newName) {
+    current = current || {};
+    if (newName) {
+      current.name = newName;
+      this.setTitle(newName);
+    }
+  },
+  setTitle: function(newName) {
+    if (newName && appOptions.gameDisplayName) {
+      document.title = newName + ' - ' + appOptions.gameDisplayName;
+    }
+  },
 
   //////////////////////////////////////////////////////////////////////
   // End of properties and callbacks.
@@ -257,9 +269,7 @@ var projects = module.exports = {
             sourceHandler.setInitialLevelSource(current.levelSource);
           }
         } else {
-          current = {
-            name: 'My Project'
-          };
+          this.setName('My Project');
         }
 
         $(window).on(events.appModeChanged, function(event, callback) {
@@ -289,9 +299,7 @@ var projects = module.exports = {
         this.showMinimalProjectHeader();
       }
     } else if (appOptions.isLegacyShare && this.getStandaloneApp()) {
-      current = {
-        name: 'Untitled Project'
-      };
+      this.setName('Untitled Project');
       this.showMinimalProjectHeader();
     }
     if (appOptions.noPadding) {
@@ -456,7 +464,7 @@ var projects = module.exports = {
    * Renames and saves the project.
    */
   rename: function(newName, callback) {
-    current.name = newName;
+    this.setName(newName);
     this.save(callback);
   },
   /**
@@ -479,7 +487,7 @@ var projects = module.exports = {
     var wrappedCallback = this.copyAssets.bind(this, srcChannel, callback);
     delete current.id;
     delete current.hidden;
-    current.name = newName;
+    this.setName(newName);
     channels.create(current, function (err, data) {
       this.updateCurrentData_(err, data, true);
       this.save(wrappedCallback);
@@ -502,9 +510,9 @@ var projects = module.exports = {
   serverSideRemix: function() {
     if (current && !current.name) {
       if (projects.appToProjectUrl() === '/projects/algebra_game') {
-        current.name = 'Big Game Template';
+        this.setName('Big Game Template');
       } else if (projects.appToProjectUrl() === '/projects/applab') {
-        current.name = 'My Project';
+        this.setName('My Project');
       }
     }
     function redirectToRemix() {
@@ -605,6 +613,7 @@ var projects = module.exports = {
 
 function fetchSource(data, callback) {
   current = data;
+  projects.setTitle(current.name);
   if (data.migratedToS3) {
     sources.fetch(current.id + '/' + SOURCE_FILE, function (err, data) {
       unpackSourceFile(data);
