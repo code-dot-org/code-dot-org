@@ -95,22 +95,13 @@ class HttpCache
             cookies: whitelisted_cookies
           },
           {
-            path: "/s/starwars/stage/1/puzzle/*",
-            headers: LANGUAGE_HEADER,
-            cookies: LANGUAGE_COOKIES
-          },
-          {
-            path: "/s/mc/stage/1/puzzle/*",
-            headers: LANGUAGE_HEADER,
-            cookies: LANGUAGE_COOKIES
-          },
-          {
-            path: "/s/frozen/stage/1/puzzle/*",
-            headers: LANGUAGE_HEADER,
-            cookies: LANGUAGE_COOKIES
-          },
-          {
-            path: "/hoc/*",
+            path: %w{
+               /s/starwars/stage/1/puzzle/*
+               /s/mc/stage/1/puzzle/*
+               /s/frozen/stage/1/puzzle/*
+               /s/gumball/stage/1/puzzle/*
+               /hoc/*
+            },
             headers: LANGUAGE_HEADER,
             cookies: LANGUAGE_COOKIES
           },
