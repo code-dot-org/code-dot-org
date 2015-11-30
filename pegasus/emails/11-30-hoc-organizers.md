@@ -3,6 +3,7 @@ from: 'Hadi Partovi <hadi_partovi@code.org>'
 subject: Your Hour of Code next week
 ---
 
+
 ## Minecraft joins the Hour of Code!
 
 [![image](https://code.org/images/mc/fit-500/mc_social.jpg)](https://code.org/mc)
