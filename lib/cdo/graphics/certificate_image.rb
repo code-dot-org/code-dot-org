@@ -50,6 +50,8 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
 
     # Take course name and convert it to a nicer full course name for the certificate
     case course
+      when nil
+        full_course_name = ''
       when 'artist'
         full_course_name = 'Artist'
       when 'course1'
@@ -58,7 +60,7 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
         full_course_name = 'Course 2'
       when 'course3'
         full_course_name = 'Course 3'
-      when 'course3'
+      when 'course4'
         full_course_name = 'Course 4'
       when 'frozen'
         full_course_name = 'Frozen'
