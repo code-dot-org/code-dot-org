@@ -90,15 +90,15 @@ end
 # 2015 this fallback mapping is only ever hit on bulk /certificates pages.
 def fallback_course_title_for(course)
   case course
-    when 'artist'
+    when ScriptInfo::ARTIST_NAME
       'Artist'
-    when 'course1'
+    when ScriptInfo::COURSE1_NAME
       'Course 1'
-    when 'course2'
+    when ScriptInfo::COURSE2_NAME
       'Course 2'
-    when 'course3'
+    when ScriptInfo::COURSE3_NAME
       'Course 3'
-    when 'course4'
+    when ScriptInfo::COURSE4_NAME
       'Course 4'
     else
       course

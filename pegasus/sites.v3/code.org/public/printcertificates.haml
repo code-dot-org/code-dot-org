@@ -11,27 +11,27 @@ theme: none
 
 %div.hide-print
   -case course
-    -when '20-hour'
+    -when ScriptInfo::TWENTY_HOUR_NAME
       %h1 K-8 Intro to Computer Science Course Certificates
-    -when 'hourofcode'
+    -when ScriptInfo::HOC_NAME
       %h1 Hour of Code Certificates
-    -when 'artist'
+    -when ScriptInfo::ARTIST_NAME
       %h1 Artist Certificates
-    -when 'course1'
+    -when ScriptInfo::COURSE1_NAME
       %h1 Course 1 Certificates
-    -when 'course2'
+    -when ScriptInfo::COURSE2_NAME
       %h1 Course 2 Certificates
-    -when 'course3'
+    -when ScriptInfo::COURSE3_NAME
       %h1 Course 3 Certificates
-    -when 'course3'
+    -when ScriptInfo::COURSE4_NAME
       %h1 Course 4 Certificates
-    -when 'frozen'
+    -when ScriptInfo::FROZEN_NAME
       %h1 Frozen Certificates
-    -when 'playlab'
+    -when ScriptInfo::PLAYLAB_NAME
       %h1 Play Lab Certificates
-    -when 'flappy'
+    -when ScriptInfo::FLAPPY_NAME
       %h1 Flappy Bird Certificates
-    -when 'mc'
+    -when ScriptInfo::MINECRAFT_NAME
       %h1 Minecraft Certificates
     -else
       %h1 Code.org Certificates
