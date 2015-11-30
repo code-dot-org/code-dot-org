@@ -445,21 +445,16 @@ function mergedActivityCssClass(a, b) {
 }
 
 function populateProgress(scriptName) {
+  // Render the progress the client knows about (from sessionStorage)
   var clientProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
+  Object.keys(clientProgress).forEach(function (levelId) {
+    $('#level-' + levelId).addClass(activityCssClass(clientProgress[levelId]));
+  });
+
   $.ajax('/api/user_progress/' + scriptName).done(function (data) {
-    if (!data || !data.levels) {
-      return;
-    }
-    var serverProgress = data.levels;
-
-    // Aggregate progress from server and client
-    var keys = Object.keys(clientProgress).concat(Object.keys(serverProgress));
-    var uniqueKeys = {};
-    keys.forEach(function (key) {
-      uniqueKeys[key] = true;
-    });
-
-    Object.keys(uniqueKeys).forEach(function (levelId) {
+    // Merge progress from server (loaded via AJAX)
+    var serverProgress = (data || {}).levels || {};
+    Object.keys(serverProgress).forEach(function (levelId) {
       var level_link = $('#level-' + levelId);
       var status = mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId].result);
 
@@ -468,9 +463,10 @@ function populateProgress(scriptName) {
         level_link.attr('class', 'level_link ' + status);
       }
     });
-
-    if (window.appOptions && appOptions.serverLevelId) {
-      $('#level-' + appOptions.serverLevelId).parent().addClass('puzzle_outer_current');
-    }
   });
+
+  // Highlight the current level
+  if (window.appOptions && appOptions.serverLevelId) {
+    $('#level-' + appOptions.serverLevelId).parent().addClass('puzzle_outer_current');
+  }
 }
