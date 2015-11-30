@@ -50,7 +50,7 @@ module SQS
       # exceptions, so this shouldn't happen.
       Thread.abort_on_exception = true
       @worker_threads = []
-      puts "Polling on #{@config.queue_url}"
+      logger.info "Polling on #{@config.queue_url}"
 
       (1..@config.num_workers_per_processor).each do |i|
         worker_thread = Thread.new do
