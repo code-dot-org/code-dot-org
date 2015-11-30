@@ -97,6 +97,7 @@ class HttpCache
           {
             path: %w{
                /s/starwars/stage/1/puzzle/*
+               /s/starwarsblocks/stage/1/puzzle/*
                /s/mc/stage/1/puzzle/*
                /s/frozen/stage/1/puzzle/*
                /s/gumball/stage/1/puzzle/*
