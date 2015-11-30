@@ -5,7 +5,7 @@ Title: Print Certificates
 
 -course = request.params['course'] || ScriptInfo::HOC_NAME
 -course_name = course == "20-hour" ? "K-8 Intro to Computer Science Course" : "Hour of Code"
--small_certificate_image_url = "/images/fit-240/#{certificate_template_for_course(course)}"
+-small_certificate_image_url = "/images/fit-240/#{certificate_template_for(course)}"
 
 %h1 Print a batch of certificates
 %div.clear

@@ -10,7 +10,7 @@ theme: none
 
   - course = request.params['course'] || ScriptInfo::HOC_NAME
 
-  - small_certificate_image_url = "/images/fit-240/#{certificate_template_for_course(course)}"
+  - small_certificate_image_url = "/images/fit-240/#{certificate_template_for(course)}"
   - course_name = 'Hour of Code'
   - if course == "20-hour"
     - course_name = "K-8 Intro to Computer Science Course"

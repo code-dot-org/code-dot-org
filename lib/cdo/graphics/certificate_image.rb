@@ -32,16 +32,13 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
   name = name.gsub(/@/,'\@')
   name = ' ' if name.empty?
 
-  template_file = certificate_template_for_course(course)
+  template_file = certificate_template_for(course)
 
   if prefilled_title_course?(course)
     # only need to fill in student name
     vertical_offset = course == '20-hour' ? -115 : -110
     image = create_certificate_image2(pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file), name, y: vertical_offset)
   else # all other courses use a certificate image where the course name is also blank
-    # assuming that cert links for non-HoC / 20-hour courses will not exposed outside of
-    # code paths that pass along the course title. Throw if assumption invalid, if detected,
-    # re-implement course -> course_title mapping or find way to pass along
     course_title ||= fallback_course_title_for(course)
 
     image = Magick::Image.read(pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file)).first
@@ -89,6 +86,8 @@ def prefilled_title_course?(course)
   ScriptInfo.hoc?(course) || ScriptInfo.twenty_hour?(course)
 end
 
+# Specify a fallback certificate title for a given non-HoC course ID. As of HoC
+# 2015 this fallback mapping is only ever hit on bulk /certificates pages.
 def fallback_course_title_for(course)
   case course
     when 'artist'
@@ -106,7 +105,7 @@ def fallback_course_title_for(course)
   end
 end
 
-def certificate_template_for_course(course)
+def certificate_template_for(course)
   if ScriptInfo.hoc?(course)
     if ScriptInfo.minecraft?(course)
       'MC_Hour_Of_Code_Certificate.jpg'
