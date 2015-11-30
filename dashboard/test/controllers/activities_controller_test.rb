@@ -511,6 +511,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     original_activity_count = Activity.count
     original_user_level_count = UserLevel.count
+    original_user_level_count = UserLevel.count
 
     expected_created_classes = async_activity_writes ? [LevelSource, LevelSourceImage] :
         [LevelSource, UserLevel, LevelSourceImage]
@@ -523,13 +524,19 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
     end
     if async_activity_writes
-      # Activity count shouldn't have changed yet.
+      # Activity count etc. shouldn't have changed yet.
       assert_equal original_activity_count, Activity.count
+      assert_nil UserLevel.where(user_id: @user, level_id: @script_level.level_id,
+                                 script_id: @script_level.script_id).first
       assert_equal original_user_level_count, UserLevel.count
+
       @fake_queue.handle_pending_messages
     end
     assert_equal original_activity_count + 1, Activity.count
     assert_equal original_user_level_count + 1, UserLevel.count
+    assert_not_nil UserLevel.where(user_id: @user, level_id: @script_level.level_id,
+                                   script_id: @script_level.script_id).first
+    assert_not_nil UserScript.where(user_id: @user, script_id: @script_level.script_id).first
 
     assert_response :success
 
