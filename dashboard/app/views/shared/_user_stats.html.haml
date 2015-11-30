@@ -1,10 +1,10 @@
 - script = @script || (user && user.primary_script) || Script.twenty_hour_script
 - script_summary = script.summarize
-- progress = summarize_user_progress(script, user) || {}
+- async = local_assigns[:async]
+- progress = summarize_user_progress(script, user, async) || {}
 - level_progress = progress[:levels] || {}
 - should_show_lesson_plan = user && user.teacher?
 - current_level_id = params[:current_level_id]
-- async = local_assigns[:async]
 
 .user-stats-block
   - script_summary[:stages].each do |stage|
