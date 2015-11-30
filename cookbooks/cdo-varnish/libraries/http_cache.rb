@@ -94,15 +94,26 @@ class HttpCache
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
-          # Turn off cookie stripping for the starwars script until we fix the bug where users are
-          # logged out after visiting this level. This must be re-enable before HOC 2015 to get
-          # the benefits of the CDN.
-          #
-          # {
-          # path: "/s/starwars/stage/1/puzzle/*",
-          # headers: LANGUAGE_HEADER,
-          # cookies: LANGUAGE_COOKIES
-          # },
+          {
+            path: "/s/starwars/stage/1/puzzle/*",
+            headers: LANGUAGE_HEADER,
+            cookies: LANGUAGE_COOKIES
+          },
+          {
+            path: "/s/mc/stage/1/puzzle/*",
+            headers: LANGUAGE_HEADER,
+            cookies: LANGUAGE_COOKIES
+          },
+          {
+            path: "/s/frozen/stage/1/puzzle/*",
+            headers: LANGUAGE_HEADER,
+            cookies: LANGUAGE_COOKIES
+          },
+          {
+            path: "/hoc/*",
+            headers: LANGUAGE_HEADER,
+            cookies: LANGUAGE_COOKIES
+          },
           {
             path: '/api/*',
             headers: LANGUAGE_HEADER,
