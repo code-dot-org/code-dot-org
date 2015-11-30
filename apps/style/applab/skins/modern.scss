@@ -45,6 +45,10 @@
     outline: 0;
   }
 
+  button, select, input, .textArea, label {
+    font-family: 'Open Sans';
+  }
+
   img[src=''] {
     display: none;
   }
