@@ -30,9 +30,6 @@ If accepted into the Code.org program the following terms will apply.
 	- Online forums for teacher questions and feedback, self-help videos
 <br/>
 <br/>
-- Provide matching funding with the district for middle school and high school teacher stipends for professional development (up to 50% of total). Code.org will not fund taxes/benefits
-<br/>
-<br/>
 - Organize all professional development activities associated with Code.org’s courses, including:
 	- Providing qualified professional development facilitators for all in-person workshops
 	- For K-5 workshops, providing local affiliates (to the best of Code.org’s ability) to prepare K-5 teachers or training a district employee to be an affiliate K-5 trainer

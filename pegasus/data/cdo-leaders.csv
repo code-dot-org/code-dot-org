@@ -2,7 +2,7 @@ name_s,url_s,description_t,role_s,kind_s
 Hadi Partovi,leadership/hadi_partovi,"Co-founder and CEO, Code.org",,director
 Maggie Johnson,leadership/maggie_johnson,"Director of Education and University Relations, Google",,director
 Robert Runcie,leadership/robert_runcie,Superintendent of Broward County Public Schools,,director
-Bobby Schnabel,leadership/bobby_schnabel,"Dean, School of Informatics and Computing, Indiana University",,director
+Bobby Schnabel,leadership/bobby_schnabel,"CEO, Association for Computing Machinery",,director
 Vandana Sikka,leadership/vandana_sikka,"Chairperson, Infosys Foundation, USA",,director
 Brad Smith,leadership/brad_smith,"President, Chief Legal Officer, Microsoft",,director
 Jeff Wilke,leadership/jeff_wilke,"Senior Vice President, Consumer Business, Amazon",,director
@@ -20,6 +20,7 @@ Ed Lazowska,http://www.cs.washington.edu/people/faculty/lazowska/,University of 
 Jane Margolis,http://gseis.ucla.edu/people/margolis/,"Senior Researcher, UCLA. Author, <a href=""http://www.amazon.com/Stuck-Shallow-End-Education-Computing/dp/0262514044"">Stuck in the Shallow End</a>",,advisor
 Nicholas Negroponte,http://en.wikipedia.org/wiki/Nicholas_Negroponte,"Chairman and founder, M.I.T. Media Lab",,advisor
 Chris Ovitz,http://www.linkedin.com/pub/christopher-ovitz/3/961/460,Co-founder of Viddy,,advisor
+Ali Partovi,https://www.linkedin.com/in/apartovi,"Co-founder, Code.org. Tech investor & entrepreneur.",,advisor
 Shervin Pishevar,http://www.shervin.com/,"Venture Advisor, Menlo Ventures. Co-CEO, Sherpa",,advisor
 Aaron Ray,http://www.linkedin.com/in/aray746,"Partner, The Collective",,advisor
 Mehran Sahami,http://robotics.stanford.edu/~sahami/bio.html,"Associate Chair, Stanford Computer Science Education",,advisor
