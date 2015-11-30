@@ -78,28 +78,23 @@ class Activity < ActiveRecord::Base
   # not pass validation. The object is only written asynchronously if the gatekeeper allows it for
   # this hostname.
   def Activity.create_async!(attributes)
+    activity = Activity.new(attributes)
+    activity.created_at = activity.updated_at = Time.now
+    activity.validate!
+    async_op = {'model' => 'Activity', 'action' => 'create', 'attributes' => activity.attributes}
     if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
-      activity = Activity.new(attributes)
-      activity.created_at = activity.updated_at = Time.now
-      activity.validate!
-      async_op = {'model' => 'Activity', 'action' => 'create', 'attributes' => activity.attributes}
-      activity_queue.enqueue(async_op.to_json)
+      progress_queue.enqueue(async_op.to_json)
     else
-      activity = Activity.create!(attributes)
-      activity.id = nil  # Clear out the id so that no code comes to depend on it.
+      Activity.handle_async_op(async_op)
     end
     activity
   end
 
-  # Handle an async message body created by create_async! (and other async operations we might add
+  # Handle an async operation created by create_async! (and other async operations we might add
   # in the future).
-  # @param [String] json A JSON-encoded asynchronous operation.
-  def Activity.handle_async_message_json(json)
-    op = JSON::parse(json)
-
-    if op['model'] != 'Activity'
-      raise "Model must be Activity, but was #{op['model']} in #{json}"
-    end
+  # @param [Hash] op A has describing the operation
+  def Activity.handle_async_op(op)
+    raise 'Model must be Activity' if op['model'] != 'Activity'
 
     case op['action']
       when 'create'
@@ -111,23 +106,8 @@ class Activity < ActiveRecord::Base
     end
   end
 
-  # Helper handler class for handling a batch of async Activity messages.
-  # The handler runs the batch of updates in a transaction to avoid the
-  # overhead of running every update in an individual transaction.
-  class AsyncHandler
-    def handle(messages)
-      Activity.transaction do
-        messages.each do |message|
-          Activity.handle_async_message_json(message.body)
-        end
-      end
-    end
-  end
-
-  # Returns a thread-local SQS queue.(Thread-local because the SQS client is not thread-safe.)
-  def Activity.activity_queue
-    Thread.current['activity_queue'] ||=
-        SQS::SQSQueue.new(Aws::SQS::Client.new, CDO.activity_queue_url)
+  def Activity.progress_queue
+    AsyncProgressHandler.progress_queue
   end
 
 end
