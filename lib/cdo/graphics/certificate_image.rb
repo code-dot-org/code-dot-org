@@ -32,6 +32,8 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
   name = name.gsub(/@/,'\@')
   name = ' ' if name.empty?
 
+  course ||= ScriptInfo::HOC_NAME
+
   template_file = certificate_template_for(course)
 
   if prefilled_title_course?(course)
