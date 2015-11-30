@@ -1,7 +1,7 @@
 ---
-title: <%= I18n.t('dashboard_landing_title') %>
 theme: angular
 angular: teacherDashboard
+title: <%= I18n.t('dashboard_landing_title').inspect %>
 ---
 - authentication_required!
 - forbidden! unless dashboard_user[:user_type] == 'teacher'

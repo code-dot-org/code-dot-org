@@ -17,8 +17,7 @@ social:
 %link{type: "text/css", href: "/css/learn-carousel.css", rel: "stylesheet"}
 %script{type: "text/javascript", src: "/js/bootstrap.min.js"}
 
-= view :learn_teacher_banner
-= view :learn_code_studio
 
-%h1.main-header= I18n.t(:carousel_heading_third_party)
+= view :learn_code_studio
 = view :learn_carousels, variation:'learn'
+= view :learn_teacher_banner

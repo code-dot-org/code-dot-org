@@ -2,7 +2,7 @@
   hour_of_code: Hour of Code
   hello: Hej verden
   select_language: Vælg dit sprog
-  en: Computer Science
+  en: Computere og programmering
   computer_science_edweek: Computer Videnskabs Uddannelses Uge
   csedweek_dates: 8.-14. december 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -11,7 +11,7 @@
     font-weight:bold"> planlæg din Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Underviser du i programmering? Se andre CSEdWeek ressourcer</a>'
-  n_have_learned_an_hoc: "<h1>Prøv en</h1><h2>Hour of Code</h2><h3># har prøvet</h3>"
+  n_have_learned_an_hoc: <h1>Prøv en</h1><h2>Hour of Code</h2><h3># har prøvet</h3>
   anybody_can_learn: Alle kan lære.
   learn_now: Lær Nu
   petition_message: Alle elever i alle skoler burde have muligheden for at lære programmering
@@ -35,12 +35,12 @@
   hoc2014_everyone: Alle
   hoc2014_support: Støt &#x25BE;
   hoc2014_whatishoc: Hvad er "Hour of Code"?
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_header: '# CSEdWeek / Hour of Code begivenheder over hele verden'
   csedweek_map_signup: Tilmeld dit arrangement
   csedweek_map_search_placeholder: Søg efter Hour of Code arrangementer
   csedweek_map_search_search: Søg
   csedweek_map_search_reset: Nulstil
-  csedweek_map_legend_title: Legend
+  csedweek_map_legend_title: Forklaring
   csedweek_map_legend_event: Hour of Code begivenhed
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Tilmeld
@@ -65,7 +65,7 @@
     gentag-loops, hvis-så præmisser og grundlæggende algoritmer.
   all_ages: Alle aldre
   beginner: Nybegynder
-  n_participants: "# deltagere"
+  n_participants: '# deltagere'
   go: Start
   thank_you_: Tak!
   congratulations: Tillykke!
@@ -79,9 +79,9 @@
   course_name_course3: Kursus 3
   course_name_course4: Kursus 4
   congratulations_on_completing_course: Congratulations on completing %{course}
-  congrats_next_tutorials_title: Try these tutorials next
-  congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
-    tutorial</a>.
+  congrats_next_tutorials_title: Prøv dissse øvelser nu
+  congrats_next_tutorials_desc: Prøv disse kortere, 1 times øvelser eller prøv en
+    <a href="%{current_path}/next">partner-øvelse</a>.
   get_a_certificate_of_achievement: Få et certifikat for gennemførelsen
   enter_valid_age: Angiv venligst en gyldig alder
   enter_valid_email: Angiv en gyldig emailadresse
@@ -114,7 +114,7 @@
   beyond_an_hour: Lær mere når du har gennemført Hour of Code
   get_started: Start
   i_agree: Jeg er enig
-  participant_select: "- Vælg -"
+  participant_select: '- Vælg -'
   participant_student: Elev
   participant_parent: Forældre
   participant_educator: Underviser
@@ -135,12 +135,10 @@
   learn_next_level: Fortsæt til det næste niveau
   learn_online: Prøv andre online kurser
   learn_classes: Find lokale klasser
-  hoc_is_here: "#HourOfCode er her - tjek det ud! @codeorg"
+  hoc_is_here: '#HourOfCode er her - tjek det ud! @codeorg'
   just_did_hoc: 'Jeg har lige taget en #HourOfCode - tjek det ud! @codeorg'
   twitter_teach_cs: Hvorfor underviser så få skoler i programmering? Lad os hjælpe
     dem i gang. http://youtu.be/nKIu9yen5nc. Besøg http://code.org/ for at lære mere.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: Lær Hour of Code
   beyond_hoc: Efter Hour of Code
   what_gender: Hvilket køn er du?
@@ -149,11 +147,11 @@
   help_recruit_coders: Hjælpe os med at rekruttere flere programmører til dit hold!
   help_recruit: Hjælp os med at rekruttere flere programmører!
   lines_of_code: OVER <b># LINJER KODE</b> SKREVET TIL DATO.
-  lines_of_code_alt: "<b>#</b> LINJER AF KODE SKREVET AF ELEVER"
+  lines_of_code_alt: <b>#</b> LINJER AF KODE SKREVET AF ELEVER
   who_has_done_hoc: 'Hvem har lavet #HourOfCode @codeorg'
   hoc_leaderboards: Rangelisten for Hour Of Code
-  students_and_lines: "%{students} elever har gennemført Hour of Code og skrevet %{lines}
-    linjer kode."
+  students_and_lines: '%{students} elever har gennemført Hour of Code og skrevet %{lines}
+    linjer kode.'
   start_hoc: Start Hour of Code nu
   contact_form_topic_press: Pressen/medierne (interview eller taler-arrangementer)
   stats_nina: '"Hver eneste dag gav de samme resultater&mdash; 100% engagement." -
@@ -218,8 +216,8 @@
   homepage_hero_text_teacher2: |
     &ldquo;Det fik 100% af mine elever engagerede, involverede og til at deltage.&rdquo;
     Adam, lærer
-  homepage_hero_text_stat_loc: "#loc linjer kode skrevet af elever"
-  homepage_hero_text_stat_students: "#student_count elever oprettet på Code Studio"
+  homepage_hero_text_stat_loc: '#loc linjer kode skrevet af elever'
+  homepage_hero_text_stat_students: '#student_count elever oprettet på Code Studio'
   homepage_hero_text_stat_served: 'Hour of Code: #served har prøvet'
   homepage_slot_text_hoc: Kodetimen
   homepage_slot_text_frozen: Frozen med Anna og Elsa
@@ -229,7 +227,7 @@
   homepage_slot_text_shop: Butik
   homepage_slot_text_flappy: Flappy kode
   homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: "# har prøvet"
+  homepage_action_text_num_served: '# har prøvet'
   homepage_action_text_join_us: Slut dig til os
   homepage_action_text_sign_up: Tilmeld
   homepage_action_text_try_it: Prøv det
@@ -253,7 +251,7 @@
   homepage_slot_text_blurb_hoc: Alle kan lære det. Start i dag
   homepage_slot_text_link_hoc: Prøv Hour of Code
   homepage_slot_text_link_host: Hold selv en Hour of Code
-  homepage_slot_text_link_hocserved: "# har prøvet"
+  homepage_slot_text_link_hocserved: '# har prøvet'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Studerende
   homepage_slot_text_blurb_students: Gå på opdagelse i vores øvelser
@@ -314,26 +312,25 @@
   class_submission_languages_other: Andre sprog
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
+  starwars_subtitle: Byg en galakse med kode
   starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_description: Brug træk-slip blokke og JavaScript.
+  starwars_javascript_specs: Kun på engelsk | Moderne browsere | Fra 11 år
   starwars_javascript_start_button: Prøv nu
-  starwars_blocks_title: blokke
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_title: Blokke
+  starwars_blocks_description: Brug træk-slip blokke.
+  starwars_blocks_specs: Mange sprog (kommer snart) | Moderne browsere, smartphones,
+    tablets | Fra 6-10 år
   starwars_blocks_start_button: Prøv nu
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
+  starwars_watch_videos: Før du går i gang, kan du se en af vores inspirationsvideoer
+  starwars_speak_languages: Taler du et andet sprog?
   starwars_help_translate: Hjælp os med at oversætte
   starwars_platform_text: Moderne browsere, smartphones, tabletter
   mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
+  mc_longdescription: Brug kodeblokke til at lede Steve eller Alex gennem et eventyr
+    i denne Minecraft-verden.
+  mc_shortdescription: Brug kodeblokke til at lede Steve eller Alex gennem et eventyr
+    i denne Minecraft-verden.
   mc_gradelevel: Alder 6+
   mc_platformtext: Moderne browsere, smartphones, tabletter
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
@@ -341,23 +338,26 @@
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up."
+    have signed up.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Navn
@@ -665,9 +665,9 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: Vis alle
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: Hour of Code er her - 8.-14. december!
   code_sign_up: Tilmeld dig til at deltage i CS Education Week
   learn_more: Lær mere
@@ -681,17 +681,28 @@
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Er du underviser? Se hvordan til <a href="http://hourofcode.com/resources/how-to">
     at undervise i Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Prøv vores nye Hour of Code tutorials
   hoc2014_try_new_tutorial: Prøv vores nye Hour of Code tutorial i beta-version
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
   hoc2014_try_frozen: Kunstner med Anna og Elsa, fra Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Vejledninger på dit sprog
   carousel_heading_domestic: Tutorials på engelsk
   carousel_heading_beginners: Tutorials for begyndere
-  carousel_heading_javascript: "Øvelser, hvor du lærer Javascript"
+  carousel_heading_javascript: Øvelser, hvor du lærer Javascript
   carousel_heading_unplugged: Ingen enhed eller internettet? Prøv "unplugged" kodning
   carousel_heading_devices: Tutorial apps for mobiler og tablets
   carousel_heading_languages: Tutorials i andre programmeringssprog
@@ -704,8 +715,8 @@
   teach_led_lesson_plans: Lærerstyret Hour of Code lektions planer
   how_to_teach_hoc: Sådan undervises i Én Times Kode
   more_resources_educators: Flere ressourcer til lærere og undervisere
-  beyond_submission: "Ønsker du at indsende en tutorial til Beyond an Hour? Se kriterierne
-    og indsendelseformularen."
+  beyond_submission: Ønsker du at indsende en tutorial til Beyond an Hour? Se kriterierne
+    og indsendelseformularen.
   participants: deltagerne
   teachers_notes: Lærerens noter
   teachers_notes_hoc: 'Lærere: Læs vigtigte noter til undervisningen her'
@@ -757,6 +768,8 @@
   projguts_name: Sten, saks, papir
   hourofcode_name: Pladsholder for nye code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Kunstner
   codeorg_gradelevel: For 4-104-årige
   codeintl_gradelevel: For 4-104-årige
   thinkersmithspanish_gradelevel: Por todos
@@ -798,6 +811,8 @@
   frozen_gradelevel: Fra 8 år
   starwars_gradelevel: Alder 6+
   playlab_gradelevel: For 4-104-årige
+  infinity_gradelevel: For 4-104-årige
+  artist_gradelevel: For 4-104-årige
   codeorg_platformtext: Moderne browsere, smartphones, tabletter
   codeintl_platformtext: Moderne browsere, smartphones, tabletter
   thinkersmithspanish_platformtext: Ikke tilsluttet
@@ -884,12 +899,15 @@
     at repræsentere information
   kodableunplugged_shortdescription: En sjov unplugged øvelse
   projguts_shortdescription: Lær modelering og simulation ved at bruge sten/saks/papir
-  hourofcode_shortdescription: Pladsholder for nye code.org/hoc
+  hourofcode_shortdescription: Lære at kode med Mark Zuckerberg og Angry Birds!
   frozen_shortdescription: Lad os bruge noget kode for at slutte os til Anna og Elsa,
     når de går på opdagelse i magien og isens skønhed.
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortdescription: Lær at programmere droider, og lav dit eget Star Wars
+    spil i en galakse langt, langt herfra.
   playlab_shortdescription: Opret en historie eller lav et spil med Play Lab!
+  infinity_shortdescription: Brug Play Lab til at skabe en historie eller et spil
+    med karakterer fra Disneys Infinity
+  artist_shortdescription: Tegn seje billeder og designs!
   codeorg_longdescription: Lær de grundlæggende begreber i computer videnskab med
     træk og slip-programmering. Dette er et spil-lignende, selvstyret opgaveforløb
     med stjernespækket video foredrag af Bill Gates, Mark Zuckerberg, Angry Birds
@@ -1028,8 +1046,8 @@
   frozen_longdescription: Lad os bruge kode til at udforske isens magi og skønhed
     sammen med Anna og Elsa. Du kan tegne snefnug og mønstre, mens du skøjter og laver
     et vinterlandskab, som du derefter kan dele med dine venner!
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_longdescription: Lær at programmere droider, og lav dit eget Star Wars
+    spil i en galakse langt, langt herfra.
   playlab_longdescription: Skab en historie eller lav et spil i Play Lab! Få dyr,
     pirater, zombier, ninjaer og mange flere figurer til at bevæge sig. Lav lyde,
     scor point og endda kaste med ildkugler!
@@ -1354,19 +1372,11 @@
     Du vil ikke kunne få adgang til Code.org efter denne dato. <a href='%{it_requirements_url}'>
     Klik her</a> for at finde ud af  hvordan du aktiverer HTTPS for Code.org
   compatibility_https_hide_this_warning: Skjul denne advarsel
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  infinity_name: Infinity Play Lab
-  artist_name: Artist
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: bask
   infinity_shortcode: inf
-  playlab_shortcode: play
+  playlab_shortcode: afspil
   artist_shortcode: art

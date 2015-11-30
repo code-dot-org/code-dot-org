@@ -12,6 +12,7 @@ module SQS
     end
 
     def enqueue(message_body)
+      Rails.logger.debug "Queueing #{message_body} to #{queue_url}"
       @sqs_client.send_message(queue_url: queue_url, message_body: message_body)
     end
   end

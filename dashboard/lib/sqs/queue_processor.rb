@@ -50,6 +50,7 @@ module SQS
       # exceptions, so this shouldn't happen.
       Thread.abort_on_exception = true
       @worker_threads = []
+      puts "Polling on #{@config.queue_url}"
 
       (1..@config.num_workers_per_processor).each do |i|
         worker_thread = Thread.new do
@@ -67,7 +68,7 @@ module SQS
           while @state == :running
             begin
               # Long-poll for messages and handle them until we're told to stop.
-              poller.poll(max_number_of_messages: 10, wait_time_seconds: 20, visibility_timeout: 5) do |sqs_messages|
+              poller.poll(max_number_of_messages: 10, wait_time_seconds: 10, visibility_timeout: 5) do |sqs_messages|
                 batch_failed = false
                 messages = sqs_messages.map {|sqs_message|
                   SQS::Message.new(sqs_message.body)
@@ -76,7 +77,10 @@ module SQS
 
                 start_time_sec = Time.now.to_f
                 begin
-                  @handler.handle(messages)
+                  # Use with_connection to return the thread to pool when the operation is done.
+                  ActiveRecord::Base.connection_pool.with_connection do |conn|
+                    @handler.handle(messages)
+                  end
                   @metrics.successes.increment(batch_size)
                 rescue Exception => exception
                   @logger.warn "Failed on batch of size #{batch_size}"
@@ -89,7 +93,6 @@ module SQS
                 # even when failures are occuring.
                 delay = rate_limiter.inter_batch_delay(
                     batch_size: batch_size, elapsed_time_sec: Time.now.to_f - start_time_sec)
-                logger.debug "Sleeping for #{delay} for batch of size #{batch_size}"
                 sleep(delay) if delay > 0
 
                 # Tell SQS to resend the batch if it failed.

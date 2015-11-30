@@ -13,11 +13,10 @@
     launch_code = "starwars"
   end
 
-%h1.main-header= I18n.t(:carousel_heading_codeorg_any_device)
 %a{href: "/api/hour/begin/mc"}
-  %img.banner{id: "banner-mc", src: "/images/mc/MC_Wide_Learn_V4.jpg", style: "display: none;"}
+  %img.banner{id: "banner-mc", src: "/images/mc/MC_Wide_Learn_s_V4.jpg", style: "display: none;"}
 %a{href: "/api/hour/begin/#{launch_code}"}
-  %img.banner{id: "banner-starwars", src: "/images/starwars_wide.jpg", style: "display: none;"}
+  %img.banner{id: "banner-starwars", src: "/images/starwars_banner.jpg", style: "display: none;"}
 
 #learnCodeStudio.container.col-md-12
   #codeStudioCarousel.carousel.slide.multi-item-carousel
@@ -47,22 +46,21 @@
         .col-md-4.col-sm-6.col-xs-12
           = view :learn_carousel_block, id: "artist"
     %a.left.carousel-control{href: "#codeStudioCarousel", "data-slide" => "prev"}
-      %i.fa.fa-2x.fa-chevron-left
+      %i.fa.fa-3x.fa-caret-left
     %a.right.carousel-control{href: "#codeStudioCarousel", "data-slide" => "next"}
-      %i.fa.fa-2x.fa-chevron-right
+      %i.fa.fa-3x.fa-caret-right
 
 .clear
-%br
 
 %script{:src=>'/js/jquery.touchSwipe.min.js'}
 :javascript
   $(document).ready()
   {
     if ("#{page_mode}" == "feature-starwars") {
-      $("#banner-starwars").fadeIn(0);
+      $("#banner-starwars").fadeIn(1000);
     }
     else {
-      $("#banner-mc").fadeIn(0);
+      $("#banner-mc").fadeIn(1000);
     }
 
     $("#codeStudioCarousel").swipe( {

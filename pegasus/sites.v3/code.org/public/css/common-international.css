@@ -186,6 +186,12 @@
   border-left-color: #fff;
 }
 
+.banner {
+  float: left;
+  width: 510px !important;
+  margin-left: 45px !important;
+}
+
 @media screen and (max-width: 319px)
 {
   .learnpage {
