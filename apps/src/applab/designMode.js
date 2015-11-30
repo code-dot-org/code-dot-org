@@ -31,10 +31,7 @@ designMode.onDesignModeVizClick = function (event) {
   event.preventDefault();
 
   var element = event.target;
-
-  console.log(element.tagName);
-  console.log(element.className);
-
+  
   if (element.id === 'designModeViz') {
     element = designMode.activeScreen();
   }
