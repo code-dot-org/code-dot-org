@@ -455,12 +455,11 @@ function populateProgress(scriptName) {
     // Merge progress from server (loaded via AJAX)
     var serverProgress = (data || {}).levels || {};
     Object.keys(serverProgress).forEach(function (levelId) {
-      var level_link = $('#level-' + levelId);
-      var status = mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId].result);
+      if (serverProgress[levelId].result !== clientProgress[levelId]) {
+        var status = mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId].result);
 
-      if (!level_link.hasClass(status)) {
         // Clear the existing class and replace
-        level_link.attr('class', 'level_link ' + status);
+        $('#level-' + levelId).attr('class', 'level_link ' + status);
       }
     });
   });
