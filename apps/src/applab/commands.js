@@ -938,7 +938,6 @@ applabCommands.unescapeText = function(text) {
   cleanedText = cleanedText.replace(/&gt;/gi, '>');   // Unescape >
   cleanedText = cleanedText.replace(/&lt;/gi, '<');   // Unescape <
   cleanedText = cleanedText.replace(/&amp;/gi, '&');  // Unescape & (must happen last!)
-  console.log('Cleaned text is ' + cleanedText);
   return cleanedText;
 }
 

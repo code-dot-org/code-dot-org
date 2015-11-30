@@ -44,9 +44,9 @@ designMode.onDesignModeVizClick = function (event) {
   } else if ($(element).is('.ui-resizable-handle')) {
     element = getInnerElement(element.parentNode);
   } else if ($(element).attr('class') === undefined) {
-    element = getInnerElement(element.parentNode);
+    element = getInnerElement(element.parentNode.parentNode);
   }
-  console.log(element.innerHTML);
+
   // give the div focus so that we can listen for keyboard events
   $("#designModeViz").focus();
   designMode.editElementProperties(element);
