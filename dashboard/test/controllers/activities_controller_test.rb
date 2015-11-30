@@ -686,8 +686,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # error and then succeeding by returning the existing userlevel
 
     user_level_finder = mock('user_level_finder')
-    new_user_level = UserLevel.new(user: @user, level: @script_level.level, script: @script_level.script)
-    user_level_finder.stubs(:first_or_initialize).returns(new_user_level)
+    user_level_finder.stubs(:first).returns(nil)
     existing_user_level = UserLevel.create(user: @user, level: @script_level.level, script: @script_level.script)
     user_level_finder.stubs(:first_or_create!).
       raises(ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry '1208682-37' for key 'index_user_levels_on_user_id_and_level_id'"))).
@@ -714,8 +713,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # simulate always throwing an exception on first_or_create (not
     # supposed to happen, but we shouldn't get stuck in a loop anyway)
     user_level_finder = mock('user_level_finder')
-    new_user_level = UserLevel.new(user: @user, level: @script_level.level, script: @script_level.script)
-    user_level_finder.stubs(:first_or_initialize).returns(new_user_level)
+    user_level_finder.stubs(:first).returns(nil)
     user_level_finder.stubs(:first_or_create!).
       raises(ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry '1208682-37' for key 'index_user_levels_on_user_id_and_level_id'")))
 
