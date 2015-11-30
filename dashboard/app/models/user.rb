@@ -772,12 +772,11 @@ SQL
   # returns whether a new level has been completed and asynchronously enqueues an operation
   # to update the level progress.
   def track_level_progress_async(script_level, new_result)
-    new_level_completed = false
     level_id = script_level.level_id
     script_id = script_level.script_id
-    user_level = UserLevel.where(user_id: self.id,
+    old_user_level = UserLevel.where(user_id: self.id,
                                  level_id: level_id,
-                                 script_id: script_id).first_or_initialize
+                                 script_id: script_id).first
 
     async_op = {'model' => 'User',
                 'action' => 'track_level_progress',
@@ -791,8 +790,8 @@ SQL
       User.handle_async_op(async_op)
     end
 
-    new_level_completed = true if !user_level.passing? && Activity.passing?(new_result) # user_level is the old result
-    new_level_completed
+    old_result = old_user_level.try(:best_result)
+    !Activity.passing?(old_result) && Activity.passing?(new_result)
   end
 
   # The synchronous handler for the track_level_progress helper.
