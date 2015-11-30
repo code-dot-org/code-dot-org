@@ -53,7 +53,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   }
   var progressContainer = $('.progress_container');
   stageData.levels.forEach(function(level, index, levels) {
-    var status = mergeProgress((progressData.levels[level.id] || {}).result, clientLevelProgress[level.id]);
+    var status = mergedActivityCssClass((progressData.levels[level.id] || {}).result, clientLevelProgress[level.id]);
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
     var href = level.url;
     if (userId) {
@@ -432,7 +432,7 @@ function activityCssClass(result) {
  * @param {Number} b
  * @return {string} The result css class.
  */
-function mergeProgress(a, b) {
+function mergedActivityCssClass(a, b) {
   a = a || 0;
   b = b || 0;
   if (a === 0) {
@@ -449,10 +449,11 @@ function populateProgress(scriptName) {
 
   // Aggregate progress from server and client
   $.each(scriptProgress, function (level_id, result) {
-    var level_link = $('[data-level=' + level_id + ']');
-    var status = mergeProgress(result, level_link.data('result'));
+    var level_link = $('#level-' + level_id);
+    var status = mergedActivityCssClass(result, level_link.data('result'));
 
     if (!level_link.hasClass(status)) {
+      // Clear the existing class and replace
       level_link.attr('class', 'level_link ' + status);
     }
   });
