@@ -26,7 +26,7 @@
             - else
               - status = p.try(:[], :status) || 'not_tried'
               - result = p.try(:[], :result) || 0
-            - if current_level_id == "#{level[:id]}"
+            - if current_level_id == "#{level[:id]}" && !async
               - puzzle_outer_class = 'puzzle_outer_current'
             - elsif level[:kind] == 'assessment'
               - puzzle_outer_class = 'puzzle_outer_assessment'

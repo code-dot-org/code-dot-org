@@ -468,5 +468,9 @@ function populateProgress(scriptName) {
         level_link.attr('class', 'level_link ' + status);
       }
     });
+
+    if (window.appOptions && appOptions.serverLevelId) {
+      $('#level-' + appOptions.serverLevelId).parent().addClass('puzzle_outer_current');
+    }
   });
 }
