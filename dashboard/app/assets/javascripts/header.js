@@ -445,16 +445,28 @@ function mergedActivityCssClass(a, b) {
 }
 
 function populateProgress(scriptName) {
-  var scriptProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
-
-  // Aggregate progress from server and client
-  $.each(scriptProgress, function (level_id, result) {
-    var level_link = $('#level-' + level_id);
-    var status = mergedActivityCssClass(result, level_link.data('result'));
-
-    if (!level_link.hasClass(status)) {
-      // Clear the existing class and replace
-      level_link.attr('class', 'level_link ' + status);
+  var clientProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
+  $.ajax('/api/user_progress/' + scriptName).done(function (data) {
+    if (!data || !data.levels) {
+      return;
     }
+    var serverProgress = data.levels;
+
+    // Aggregate progress from server and client
+    var keys = Object.keys(clientProgress).concat(Object.keys(serverProgress));
+    var uniqueKeys = {};
+    keys.forEach(function (key) {
+      uniqueKeys[key] = true;
+    });
+
+    Object.keys(uniqueKeys).forEach(function (levelId) {
+      var level_link = $('#level-' + levelId);
+      var status = mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId].result);
+
+      if (!level_link.hasClass(status)) {
+        // Clear the existing class and replace
+        level_link.attr('class', 'level_link ' + status);
+      }
+    });
   });
 }
