@@ -85,6 +85,7 @@ Check out one-hour, teacher-led lesson and activity plans designed for different
 
 <br/><br/>
 ## Other lists of resources for curriculum or PD
+- AskATeacher's [Hour of Code suggestions by grade level](http://askatechteacher.com/2015/11/09/hour-of-code-3/)
 - [LeadCS.org](http://www.leadcs.org) - a list of many resources for schools to embrace CS
 - [TeachCS](http://www.teachcs.org) - crowdfunding for teachers to attend CS PD, such as at [CSPDWeek](http://cspdweek.org), July 18-22, 2016
 

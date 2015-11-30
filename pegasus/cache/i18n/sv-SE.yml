@@ -138,8 +138,6 @@
   just_did_hoc: 'Jag har precis gjort #HourOfCode/Timme med Kod - kolla! @codeorg'
   twitter_teach_cs: Varför undervisar  inte fler skolor i datavetenskap? Vi kan ordna
     detta. http://youtu.be/nKIu9yen5nc. Besök http://code.org/ för mer information.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Lär dig mer</a> om priser
-    for varje utlärare.
   learn_hoc: Lär dig med en Timme av Kod
   beyond_hoc: Efter Timmen med Kod
   what_gender: Vilket kön har du?
@@ -345,16 +343,19 @@
     för att prova en timme introduktion till datavetenskap som når tiotals miljoner
     studenter i 180 + länder. Kom gärna med under Computer Science Education Week,
     7-13 december.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
-    computer science education</span> who can help in the classroom, or for somebody
-    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
-    students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
-    more</a> about organizing your own Hour of Code event.'
+  volunteer_engineer_submission_intro_recruit: 'Dessa lärare vill gärna ha någon <span
+    style="font-family: ''Gotham 7r'', sans-serif;"> teknisk person</span> som kan
+    hjälpa till i klassrummet, eller någon som kan <span style="font-family: ''Gotham
+    7r'', sans-serif;"> inspirera</span> eleverna genom att tala om bredden av möjligheter
+    med datavetenskap (vilket kan ske genom en videochatt). Om du inte vill ställa
+    upp som frivillig, <a href="%{url}"> lär dig mer</a> om att ordna ett eget Hour
+    of Code event.'
   volunteer_engineer_submission_intro_signup: Ange följande information om du är en
     student i datavetenskap eller programvaru professionell. Fält markerade med en
     <span class="form-required-field"> *</span> måste fyllas i.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information som delas med lärare på
     en karta som visar var frivilliga finns
   volunteer_engineer_submission_field_name: Namn
@@ -424,16 +425,16 @@
   volunteer_engineer_submission_distance_16: 10 km
   volunteer_engineer_submission_distance_24: 15 km
   volunteer_engineer_submission_distance_32: 20 km
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
+  volunteer_engineer_submission_num_volunteers_5: 5 volontärer
+  volunteer_engineer_submission_num_volunteers_10: 10 volontärer
+  volunteer_engineer_submission_num_volunteers_25: 5 volontärer
+  volunteer_engineer_submission_num_volunteers_50: 5 volontärer
+  volunteer_engineer_submission_type_task_onsite: Jag vill att du ska besöka mitt
+    klassrum för teknisk hjälp och inspiration
+  volunteer_engineer_submission_type_task_remote: Jag vill att du Skypar till mitt
+    klassrum för att säga några ord av inspiration till barnen
+  volunteer_engineer_submission_type_task_mentor: Jag söker en mentor för att förbereda
+    mig för kodning med mina elever
   petition_age: Ålder
   dashboard_landing_title: Lärare hemsida
   dashboard_landing_welcome: Välkommen till den nya och förbättrade lärarpanelen.
@@ -458,52 +459,51 @@
   dashboard_landing_progress_title: Huvudklass framsteg
   dashboard_landing_progress_biggest: Detta är framstegen för din största avdelning.
   dashboard_landing_view_progress: Visa framsteg för %{biggest_section}
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_print_progress: Skriva ut framsteg
   dashboard_landing_available_title: Tillgängliga kurser
   dashboard_landing_available_courses: Här är de kurser som finns tillgängliga just
     nu för dig och dina elever.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
-  dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
-    by our partners.</a> Learn to program with robots, make web pages, make your own
-    app, or explore other languages like C++, Ruby, or Python!
-  dashboard_hoc_courses: The Hour of Code for All Ages
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
-    students!
-  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
-    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
-    during Computer Science Education Week.
-  dashboard_k5_courses: 20-Hour Courses for K-5
-  dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
-    tutorials with "unplugged" activities that require no computer at all. Each course
-    consists of about 20 lessons that may be implemented as one unit or over the course
-    of a semester. Even kindergarten-aged pre-readers can participate. To help you
-    get started, we offer high quality professional development workshops around the
-    U.S. free of charge. <a href="/professional-development-workshops">Find one near
-    you!</a>
-  dashboard_middle_courses: 20-Hour Middle School Courses
-  dashboard_middle_courses_desc: Our middle school curriculum uses computer science
-    and programming within the context of middle school math and science - as a tool
-    to teach math and science concepts. To register for professional development workshops,
-    apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
-  dashboard_high_courses: Year-long High School Courses
-  dashboard_high_courses_desc: Our high school program helps school districts offer
-    full-year computer science classes by preparing existing teaching staff to offer
-    this new field. To register for professional development workshops, apply for
-    a <a href="/educate/districts">district-wide partnership</a> with Code.org.
+  dashboard_landing_more_tutorials: Vill se ännu fler tutorials?
+  dashboard_landing_more_tutorials_desc: Det finns fler tutorials <a href="/learn/beyond">erbjuds
+    av våra partner.</a> Lär dig att programmera med robotar, gör webbsidor, gör din
+    egen app eller utforska andra språk som C++, Ruby eller Python!
+  dashboard_hoc_courses: Timmen av koden för alla åldrar
+  dashboard_hoc_courses_desc: Prova någon av dessa kortare 1 timme tutorials med dina
+    elever!
+  dashboard_hoc_courses_desc_and_cta: Prova dessa korta, en timmes handledningar med
+    dina elever. <a href="https://hourofcode.com">Anslut dig till Hour of Code rörelsen</a>
+    under Computer Science Education Week.
+  dashboard_k5_courses: 20 timmars kurser för K-5
+  dashboard_k5_courses_desc: Dessa kurser blandar online, självinstruerande och 'i
+    egen takt' handledningar med "unplugged" aktiviteter som inte kräver någon dator
+    alls. Varje kurs består av 20 lektioner som kan genomföras som en enhet eller
+    under en termin. Även de som inte kan läsa kan delta. För att hjälpa dig att komma
+    igång, erbjuder vi högkvalitativa kompetensutvecklings-workshops runt om i Usa
+    utan kostnad. <a href="/professional-development-workshops">Hitta en nära dig!</a>
+  dashboard_middle_courses: 20 timmars Middle School kurser
+  dashboard_middle_courses_desc: Vår högstadiet läroplan använder datavetenskap och
+    programmering inom ramen för högstadiets matematik och vetenskap - som ett verktyg
+    för att lära matematiska och naturvetenskapliga begrepp. För att registrera dig
+    för kompetensutveckling workshops, ansök om ett <a href="/educate/districts">distrikt
+    hela partnerskap</a> med Code.org.
+  dashboard_high_courses: Årslånga High School kurser
+  dashboard_high_courses_desc: Våra gymnasieprogram hjälper skoldistrikt att erbjuda
+    läsårskurser i diavetenskap genom att förbereda den befintliga lärarkåren i detta
+    nya område. För att registrera för kompetensutveckling-sworkshops, ansök om ett
+    <a href="/educate/districts">distrikt hela partnerskap</a> med Code.org.
   dashboard_course_csina: Datavetenskap i Algebra
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
-    curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
-    an introduction to computer science concepts within the context of modeling and
-    simulation.
+  dashboard_course_csina_desc: Code.org samarbetar med Bootstrap för att utveckla
+    en kursplan som lär ut algebraiska och geometriska begrepp genom programmering.
+  dashboard_course_csins: Datavetenskap i vetenskap
+  dashboard_course_csins_desc: Code.org samarbetar med projektet GUTS för att ge en
+    introduktion till datorvetenskapliga begrepp inom ramen för modellering och simulering.
   dashboard_course_ecs: Utforskning av datavetenskap
-  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
-    of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
-    Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
-    course that explores the foundational ideas of computing.
+  dashboard_course_ecs_desc: 'Utforska datavetenskap är en årslång kurs bestående
+    av 6 enheter: människa-datorinteraktion, problemlösning, webbdesign, programmering,
+    Computing och dataanalys och robotteknik.'
+  dashboard_course_csp: AP ® Computer Science principer
+  dashboard_course_csp_desc: Code.org har designat en rigorös, engagerande och lättillgänglig
+    kurs som utforskar de grundläggande idéerna i computing.
   dashboard_landing_loading: Laddar...
   dashboard_action_edit: Redigera
   dashboard_action_save: Spara
@@ -526,7 +526,7 @@
   dashboard_navigation_section_speakers: Datavetenskap <br/> Gästföreläsare
   dashboard_navigation_all_sections: Elevkonton och framsteg
   dashboard_navigation_view_progress: Visa framsteg
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: Visa Text svar
   dashboard_navigation_add_students: Lägg till elever
   dashboard_navigation_manage_students: Hantera elever
   dashboard_navigation_lesson_plans_resources: Lektionsplaner och resurser
@@ -602,16 +602,16 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     Klicka här</a> för de av våra sekretess-dokument som kan delas med eller skrivas
     ut till dina elever.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
+  dashboard_curriculum_k5_title: K-5 pedagog resurser
+  dashboard_curriculum_middle_title: Middle School utbildar-resurser
+  dashboard_curriculum_high_title: High School utbildar-resurser
+  dashboard_lesson_plans: Lektionsplan
   dashboard_view_all_lesson_plans: Visa alla lektionsplaner
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
+  dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_curriculum: Läroplan
   dashboard_curriculum_overview: K-5 kursplans- översikt
   dashboard_overview: Översikt
   dashboard_sequence: Sekvens
@@ -624,10 +624,10 @@
   dashboard_puzzle_solving: 'Pussel-lösning:'
   dashboard_student_worksheet: arbetsblad elev
   dashboard_teacher_worksheet: arbetsblad lärare
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_csina: 'Datavetenskap i Algebra:'
+  dashboard_curriculum_csins: 'Datavetenskap i vetenskap:'
+  dashboard_curriculum_csp: 'AP ® Computer Science principer:'
+  dashboard_curriculum_ecs: 'Utforskning av datavetenskap:'
   dashboard_grade_k: Förskola
   dashboard_grade_other: Annat
   dashboard_login_word: Ord
@@ -642,8 +642,8 @@
   dashboard_progress_furthest_level_attempted: försökt nå bortersta nivån
   dashboard_stage: nivå
   dashboard_puzzle: Pussel
-  dashboard_question: Question
-  dashboard_response: Response
+  dashboard_question: Fråga
+  dashboard_response: Svar
   stats_hoc_2013_heading: 'Fantastiska fakta om förra årets Hour of Code. På bara
     en vecka:'
   stats_hoc_2013_image_alt: Statistik från Hour of Code 2013
@@ -662,33 +662,45 @@
     vilka av dessa login typer, <b>bild, ord, eller e-post</b>, ska du välja för en
     sektion.
   dashboard_faq: Vanliga frågor
-  dashboard_faq_k5: K-5 Frequently Asked Questions
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
-  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
+  dashboard_faq_k5: K-5 vanliga frågor
+  dashboard_announcements: Anslagstavla
+  dashboard_announce_view_all: Visa alla
+  dashboard_announce_hoc: <b>23 November 2015</b> - vill du som frivillig och som
+    brinner för datavetenskaplig utbildning hjälpa till under Hour of Code? Över 7
+    000 frivilliga finns som vill inspirera dina elever genom att besöka ditt klassrummet
+    eller videochatta på distans. Kolla in frivillig- kartan för att kontakta volontärer
+    i ditt område.
   code_hoc_coming: Kodtimmen är här – 8-14 december!
   code_sign_up: Registrera dig för att kunna delta i CS utbildnings- vecka
   learn_more: Lär dig mer
-  learn_sign_up_description: Sign up to participate in the Hour of Code during CS
-    Education Week
+  learn_sign_up_description: Registrera för att kunna delta i Hour of Code under CS
+    Utbildningsvecka
   learn_sign_up_button: Registrera dig
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
-  learn_educator_resources_description: Learn how to teach an Hour of Code
-  learn_educator_resources_button: Educator resources
-  learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
-    to teach an Hour of Code</a>
+  learn_videos_watch: Titta på denna inspirerande video med din klass
+  learn_videos_show: Visa denna inspirerande video för din klass
+  learn_videos_before_hoc: Titta på en inspirerande video innan Hour of Code
+  learn_educator_resources_description: Lär dig hur man undervisar en Hour of Code
+  learn_educator_resources_button: Pedagog resurser
+  learn_are_you_educator: Är du en lärare? Lär dig <a href="http://hourofcode.com/resources/how-to">hur
+    man undervisar en Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Lär dig mer</a> om priser
+    for varje utlärare.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Prova våra nya Hour of Code övningar
   hoc2014_try_new_tutorial: Prova vår nya Hour of Code övning i betaversion
   hoc2014_try_scrat: Angry Birds, PvZ och Scrat
   hoc2014_try_frozen: Konstnären, med Anna och Elsa från Frost
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Handledning av Code.org
+  carousel_heading_codeorg_any_device: Handledning av Code.org (för alla enheter)
+  carousel_heading_3rd_party: 'Tutorials av 3: e part'
+  carousel_heading_third_party: Handledning av tredje part
   carousel_heading_international: Övningar på ditt språk
   carousel_heading_domestic: Övningar på engelska
   carousel_heading_beginners: Övningar för nybörjare
@@ -702,11 +714,11 @@
   carousel_heading_robots: Lär dig att programmera med robotar
   carousel_heading_ide: Plattformar som är populära bland lärare
   educator_notes: Pedagog anteckningar
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  teach_led_lesson_plans: Lärarledda lektionsplaneringar
   how_to_teach_hoc: Hur man undervisar med en Timme av Kod
   more_resources_educators: Mer resurser för lärare och utbildare
-  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
-    and submission form.
+  beyond_submission: Vill du skicka en handledning för beyond an Hour? Se kriterier
+    och anmälningsblankett.
   participants: deltagare
   teachers_notes: Lärarens anteckningar
   teachers_notes_hoc: 'Lärare: Läs viktiga lärar- anteckningar här'
@@ -749,7 +761,7 @@
   robomindnl_name: Programmera en virtuell robot
   flappy_name: Gör ett Flappy spel
   bitsbox_name: Bitsbox - gör ett spel
-  makeschool_name: Build an iPhone game in your browser!
+  makeschool_name: Bygg ett iPhone spel i din webbläsare!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Timme med kod
   blockly_name: Blockly
@@ -881,8 +893,8 @@
   robomindnl_shortdescription: Skriv kod för en virtuell robot
   flappy_shortdescription: Gör ditt eget spel - Flappy Bird, Haj eller Ubåt
   bitsbox_shortdescription: Koda en rad appar att spela och dela, med riktig Javascript-kod.
-  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach
-    your monster new moves!
+  makeschool_shortdescription: Gör ett iPhone spel! Lär dig genom att skriva kod som
+    lär ditt monster nya rörelser!
   touchdevelop_shortdescription: 'Lösa pussel, skapa spel och lär kodning, allt på
     din smartphone. '
   appinventor_shortdescription: Gör din egen app! (Endast android)
@@ -1058,7 +1070,7 @@
   groklearning_beyond_name: Lär dig Python programmering
   hacketyhack_beyond_name: Lär dig Ruby
   robomind_beyond_name: Programmera en virtuell robot
-  makeschool_beyond_name: Build an iPhone game in your browser!
+  makeschool_beyond_name: Bygg ett iPhone spel i din webbläsare!
   appinventor_beyond_name: AppInventor Timme med kod
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Lär dig att kod med Karel Hund
@@ -1376,14 +1388,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spela
   artist_shortcode: art
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>

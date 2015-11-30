@@ -16,13 +16,14 @@ module SQS
       }
     end
 
-    def as_json
+    def as_json(options = nil)
       {'successes' => @successes.value, 'failures' => @failures.value}
     end
 
     def to_s
       as_json.to_json
     end
+
   end
 
   # A thread safe counter.
