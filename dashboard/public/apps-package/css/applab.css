@@ -87,8 +87,6 @@
       background: url("/blockly/media/applab/dropdown.png") no-repeat center right, url("/blockly/media/applab/brighter.png"); }
   #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern .textArea, #designModeViz.appModern button, #designModeViz.appModern select, #designModeViz.appModern input, #designModeViz.appModern .textArea, .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent .textArea {
     outline: 0; }
-  #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern .textArea, #divApplab.appModern label, #designModeViz.appModern button, #designModeViz.appModern select, #designModeViz.appModern input, #designModeViz.appModern .textArea, #designModeViz.appModern label, .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent .textArea, .draggingParent label {
-    font-family: 'Open Sans'; }
   #divApplab.appModern img[src=''], #designModeViz.appModern img[src=''], .draggingParent img[src=''] {
     display: none; }
   #divApplab.appModern .screen, #designModeViz.appModern .screen, .draggingParent .screen {
