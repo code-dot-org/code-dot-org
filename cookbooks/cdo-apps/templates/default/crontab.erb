@@ -41,12 +41,15 @@ def crontab()
   $crontab.join("\n")
 end
 
+# for multi-instance envs (ie production) there should be one daemon,
+# so cronjobs that run once per environment go here (standalone env
+# instances are all their own daemon)
 if node['cdo-apps']['daemon']
-  unless node.chef_environment == 'production'
+  unless node.chef_environment == 'production' # non-production daemons
     cronjob at:'@reboot', do:"#{deploy_dir('bin','solr-server')} > #{pegasus_dir('log','solr.log')} 2>&1"
   end
 
-  if node.chef_environment == 'staging' && node.name == 'staging'
+  if node.chef_environment == 'staging' && node.name == 'staging' # 'real' staging only
     cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
     cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'import_google_sheets')
     cronjob at:'*/2 * * * *', do:deploy_dir('bin','run_server_generate_pdfs'), notify:'dev+crontab@code.org'
@@ -56,22 +59,28 @@ if node['cdo-apps']['daemon']
     cronjob at:'*/5 * * * *', do:deploy_dir('bin','fetch-external-resources'), notify:'dev+crontab@code.org'
   end
 
-  if node.chef_environment == 'production'
+  if node.chef_environment == 'production' # production daemon
     cronjob at:'5 6 * * *', do:deploy_dir('bin', 'send_workshop_reminder_emails')
     cronjob at:'15 16 * * *', do:dashboard_dir('bin','scheduled_ops_emails')
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'index-users-in-solr')
     cronjob at:'25 7 * * *', do:deploy_dir('bin', 'update-hoc-map')
   end
 
-  # all environments
-  cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'process_forms')
+  # 'daemons' in all environments
   cronjob at:'35 * * * *', do:deploy_dir('bin', 'analyze_hoc_activity')
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'deliver_poste_messages')
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'geocode_hoc_activity')
   cronjob at:'55 8 * * *', do:deploy_dir('bin', 'cron', 'ops_data_pull')
 end
 
-cronjob at:'45 * * * *', do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
+# cronjobs that run on all instances in all environments go here:
+
+# Restart at ~02:00am PST (~ 9am UTC) as workaround for Rails 4.2 memory leak.
+# We will no longer need this as soon as we complete the Ruby 2.2 upgrade.
+# Leaving in for HOC week since we won't be pushing
+cronjob at:"#{rand(20)} 9 * * *", do:'service dashboard upgrade'
+
+cronjob at:"#{rand(60)} * * * *", do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
 %>
 #
 # node: <%= node.name %>
