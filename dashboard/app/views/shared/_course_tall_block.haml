@@ -37,6 +37,8 @@
     - url = CDO.code_org_url('/mc')
   - elsif id == 'infinity'
     - title = t('upsell.infinity.title')
+  - elsif id == 'iceage' || id == 'gumball' || id == 'playlab'
+    - url = CDO.code_org_url('/playlab')
   - else
     - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
