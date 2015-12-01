@@ -90,6 +90,8 @@ class HocRoutesTest < Minitest::Test
       assert_equal 'testcompany', after_end_row[:company]
       assert_equal 'mc', after_end_row[:tutorial]
       assert after_end_row[:finished_at]
+
+      remove_test_company 'testcompany'
     end
 
     it 'starts and ends given tutorial, tracking time' do
@@ -126,7 +128,7 @@ class HocRoutesTest < Minitest::Test
     end
 
     def with_test_company(name)
-      DB[:forms].where(kind: 'CompanyProfile').delete
+      remove_test_company(name)
       DB[:forms].insert(kind: 'CompanyProfile',
                         name: name,
                         secret: 'notasecret',
@@ -136,6 +138,10 @@ class HocRoutesTest < Minitest::Test
                         updated_ip: '0.0.0.0',
                         processed_data: '{}',
       )
+    end
+
+    def remove_test_company(name)
+      DB[:forms].where(kind: 'CompanyProfile', name: name).delete
     end
 
     def make_certificate
