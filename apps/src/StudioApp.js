@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, droplet, marked, digestManifest, dashboard, addToHome */
+/* global Blockly, ace:true, droplet, marked, digestManifest, dashboard */
 
 /**
  * For the most part, we depend on dashboard providing us with React as a global.
@@ -249,15 +249,6 @@ StudioApp.prototype.hasInstructionsToShow = function (config) {
 StudioApp.prototype.init = function(config) {
   if (!config) {
     config = {};
-  }
-
-  if (config.isLegacyShare) {
-    $("body").addClass("legacy-share-view");
-    if (dom.isIOS()) {
-      if (!window.navigator.standalone) {
-        addToHome.show(true);
-      }
-    }
   }
 
   this.setConfigValues_(config);
@@ -1588,8 +1579,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       $('body').append(wireframeSendToPhone);
     }
     document.body.style.backgroundColor = '#202B34';
-  // For share page, do not show this part.
-  } else if (!options.embed && !this.share) {
+  // For share page on mobile, do not show this part.
+  } else if (!options.embed && !(this.share && dom.isMobile())) {
     var runButton = document.getElementById('runButton');
     var buttonRow = runButton.parentElement;
     var openWorkspace = document.createElement('button');
