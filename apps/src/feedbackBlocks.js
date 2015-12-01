@@ -87,11 +87,14 @@ FeedbackBlocks.prototype.show = function() {
 };
 
 FeedbackBlocks.prototype.hideDiv = function() {
-  this.div.className += " hidden";
+  this.div.className += " hiddenIframe";
 };
 
 FeedbackBlocks.prototype.revealDiv = function() {
-  this.div.className = this.div.className.replace(/\hidden\b/,'');
+  // this regex should simply match the first FULL WORD instance of
+  // "hiddenIframe"; meaning it will ignore instances of, for example,
+  // "hiddenIframeSomethingElse"
+  this.div.className = this.div.className.replace(/\bhiddenIframe\b/,'');
 };
 
 /**
