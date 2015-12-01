@@ -13,6 +13,10 @@ function clientApi(endpoint) {
       return '/v3/' + endpoint + '/' + dashboard.project.getCurrentId() + (path ? '/' + path : '');
     },
     ajax: function (method, file, success, error, data) {
+      if (!window.dashboard) {
+        error({status: "No dashboard"});
+        return;
+      }
       var xhr = new XMLHttpRequest();
       xhr.addEventListener('load', function () {
         if (xhr.status >= 400) {
