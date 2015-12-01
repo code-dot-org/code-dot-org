@@ -83,8 +83,7 @@ class ApplicationHelperTest < ActionView::TestCase
     assert(browser.version.to_s.to_i == 34)
   end
 
-  test 'certificate images for hoc-type scripts are all hoc certificates' do
-    # old hoc, new hoc, frozen, flappy, playlab, and starwars are all the same certificate
+  test 'script_certificate_image_url helper encodes correct information' do
     user = create :user
     assert_certificate_url_encodes user, Script.get_from_cache(Script::HOC_2013_NAME)
     assert_certificate_url_encodes user, Script.get_from_cache(Script::HOC_NAME)
