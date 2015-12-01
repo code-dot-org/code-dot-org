@@ -458,15 +458,7 @@ function activityCssClass(result) {
  * @return {string} The result css class.
  */
 function mergedActivityCssClass(a, b) {
-  a = a || 0;
-  b = b || 0;
-  if (a === 0) {
-    return activityCssClass(b);
-  }
-  if (b === 0) {
-    return activityCssClass(a);
-  }
-  return activityCssClass(Math.max(a, b));
+  return activityCssClass(dashboard.clientState.mergeActivityResult(a, b));
 }
 
 function populateProgress(scriptName) {
