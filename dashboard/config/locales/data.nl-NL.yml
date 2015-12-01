@@ -426,8 +426,8 @@
         flappy_8: Je kan de vormgeving altijd veranderen, niet alleen als het spel
           start. Probeer een WILLEKEURIGE achtergrond in te stellen als er iets gebeurt,
           bijvoorbeeld als Flappy een obstakel passeert.
-        flappy_9: Probeer voor de verandering om, als je een obstakel raakt, het spel
-          niet te beëindigen maar de score weer op 0 te zetten.
+        flappy_9: Probeer voor de verandering eens de score op 0 te zetten in plaats
+          van het spel te stoppen wanneer je tegen een obstakel botst.
         flappy_11: Maak je eigen Flappy spel. Je kunt de vormgeving en de regels helemaal
           veranderen, zelfs de zwaartekracht. Druk als je klaar bent op afronden om
           je vrienden je spel te laten spelen op hun telefoons.
@@ -565,29 +565,41 @@
           de pijltoetsen om er te komen en iedereen te waarschuwen.
         studio_iceage_10: Maak je eigen spel. Wanneer je klaar bent klik op Finish
           om je vrienden toe te laten je spel te proberen op hun telefoons.
-        studio_gumball_1: Anais wil "hallo" zeggen - kan je haar helpen?
-        studio_gumball_2: Darwin (acteur 1) en Gumball (acteur 2) willen "hallo" tegen
-          elkaar zeggen. Kan je hen helpen door het "zeggen" (say) blok twee keer
-          te gebruiken?
-        studio_gumball_3: Kan je Banana Joe helpen bij de vlag te komen?
-        studio_gumball_4: Kan je Gumball (acteur 1) helpen bij Darwin (acteur 2) te
-          komen en een geluid laten afspelen als hij daar aankomt?
-        studio_gumball_5: Kan je Antony helpen om "gegroet" te zeggen wanneer er op
-          geklikt wordt? Vergeet niet om er op te klikken nadat je op de "Run" knop
-          hebt gedrukt
-        studio_gumball_6: Kan je Darwin helpen met rondlopen door de omhoog/omlaag/rechts/links
-          pijltoetsen te gebruiken en zo alle vlaggen op te pakken?
-        studio_gumball_7: Het "herhaal eindeloos" (repeat forever) blok zorgt ervoor
-          dat je code steeds door blijft gaan. Kan je daar blokken aan toevoegen zodat
-          Antony steeds weer naar rechts en links blijft bewegen?
-        studio_gumball_8: Kan je een blok toevoegen zodat je een punt scoort en een
-          blok dat een geluid afspeelt wanneer Banana Joe tegen Antony aanbeweegt,
-          en daarna Banana Joe met de pijltoetsen bewegen tot je gescoord hebt?
-        studio_gumball_9: Stel de achtergrond in voor deze ruimte-invasie en help
-          Nicole om sneller bij Penny te komen door haar snelheid te veranderen. Beweeg
-          haar daarna met de pijltoetsen om er te komen en iedereen te waarschuwen.
-        studio_gumball_10: Maak je eigen spel. Wanneer je klaar bent klik op Finish
-          om je vrienden toe te laten je spel te proberen op hun telefoons.
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
+          him go the last 200 pixels using the "move" block.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Can you help Anton announce the start of a race
+          by saying "Ready, set, go!"? To test your program, don’t forget to click
+          Anton after you click Run!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Create your own game or story. When you're done,
+          click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Maak je eigen spel. Wanneer je klaar bent klik op Finish
           om je vrienden toe te laten je spel te proberen op hun telefoons.
         studio_k1_1: Kan je deze hond "hallo wereld" laten zeggen?
@@ -779,6 +791,9 @@
         mc_if_statements: Minecraft - Als-statements
         mc_congrats_share: Minecraft - Gefeliciteerd
         mc_congrats_no_share: Minecraft - Gefeliciteerd
+        gumball_intro: Gumball Hour of Code - Introduction
+        gumball_events: Gumball Hour of Code - Events
+        gumball_repeat: Gumball Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok

@@ -256,6 +256,7 @@
         playlab: Készíts egy applikációt
         artist: Rajzolj valamit
         calculate: Calculate Something
+        applab: Készíts egy applikációt
     user:
       classroom: Tanári kezdőlap
       district_dashboard: Tankerületi munkafelület
@@ -378,7 +379,7 @@
     classroom_activity: Offline tevékenység
   home:
     title: Kód stúdió
-    description: A Code Studio az online tanfolyamok otthona, melyet a Code.org készített
+    description: A Kód stúdió az online tanfolyamok otthona, melyet a Code.org készített
     lines_of_code: '%{lines_count} sor kódot írtak eddig a diákok'
     lines_of_code_linebreak: '%{lines_count} sor kódot<br/>írt %{students_count} MILLIÓ
       TANULÓ'
@@ -425,7 +426,7 @@
     heading_apps: <h2>Vidámság </h2><h1>Mindenkinek</h1>
     heading_legacy: <h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>
     your_gallery: Galéria
-    no_primary_course: Próbálj ki egy tanfolyamot a Code Studio-nál
+    no_primary_course: Próbálj ki egy tanfolyamot a Kód stúdióban
     choose_next_course: Próbáld ki a Kód Stúdiót, válassz egyet az alábbi tanfolyamok
       közül
     print_certificate: Igazolás kinyomtatása
@@ -567,7 +568,7 @@
         Infinity karakterek szereplésével.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Fedezd fel a Minecraft világát kódokkal.
   gallery:
     students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
     students_made_these_with_code: Ezeket diákok készítették kódolással!

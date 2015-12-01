@@ -683,12 +683,6 @@ $height-to-width: 434 / 477;
   -o-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
   border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 fill stretch;
 
-  #feedbackBlocks {
-    // centers single block, update if using larger
-    margin-top: 16px;
-    margin-bottom: -35px;
-  }
-
   .modal-image {
     margin-left: -21px;
     margin-top: -100px;

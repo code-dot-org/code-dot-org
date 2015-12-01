@@ -445,7 +445,7 @@
       2:
         image: notes/frozen2_2.jpg
         text: Programazioan honi begizta deitzen diogu. Begizta bat zure kodea behin
-          eta berriz errepikatzean datza. Hurrengo puzzlean, zure helburua Anna lauki
+          eta berriz errepikatzean datza. Hurrengo ariketan, zure helburua Anna lauki
           bat sortzen laguntzea da "errepikatu" blokea erabiliz.
       3:
         image: notes/frozen2_3.jpg
@@ -453,11 +453,11 @@
           batean errepikatuko da, zuk nahi duzun beste aldiz.'
       4:
         image: notes/frozen2_4.jpg
-        text: Karratu bat marrazteko, "mugitu aurrera" eta "eskuinera biratu" blokeak
+        text: Karratu bat marrazteko, "mugitu aurrera" eta "biratu eskuinera" blokeak
           4 aldiz erabil ditzakezu. Era errazena, ordea, ordenagailuari "mugitu aurrera"
-          eta "eskuinera biratu 90 gradu" behin esatea da, eta ondoren ekintza pare
-          hay lau aldiz errepikatzeko esatea. Hori egiteko, "mugitu aurrera" eta "eskuinera
-          biratu" blokeak "errepikatu" bloke baten barruan sartu behar dituzu.
+          eta "biratu 90 gradu eskuinera" behin esatea da, eta ondoren ekintza pare
+          hay lau aldiz errepikatzeko esatea. Hori egiteko, "mugitu aurrera" eta "biratu
+          eskuinera" blokeak "errepikatu" bloke baten barruan sartu behar dituzu.
       5:
         image: notes/frozen2_5.jpg
         text: Gogoratu, "Errepikatu" blokeko zenbakia nahieran alda dezakezu, eta
@@ -492,7 +492,7 @@
         text: Orain hainbat aldiz erabilita hainbat karratu sortzeko blokea duzu.
       7:
         image: notes/frozen3_7.jpg
-        text: Figura sinple askok patroi konplexu bat sortu dezakete. Hurrengo puzzlean,
+        text: Figura sinple askok patroi konplexu bat sortu dezakete. Hurrengo ariketan,
           zirkulua egiteko egindako kodea eskuragarri duzu funtzio berri honetan,
           tamaina ezberdinetako zirkuluak marraztuko dituena. Erabili al dezakezu
           Elsak honako irudi polit eta korapilatsuak marraz dezan?
@@ -582,10 +582,10 @@
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: Erleak, zein ederrak diren!!! Ez da hala? Hurrengo puzzle andanan, zure
-          helburua erleari laguntza ematea da. Erleak loreztia eskuratu behar du loreetatik
-          eta abaraskara eraman, bertan eztia egin dezan. "Loreztia eskuratu" eta
-          "eztia egin" blokeak erabili beharko dituzu ariketa hau ebazteko.
+        text: Erleak, zein ederrak diren!!! Ez da hala? Hurrengo ariketa andanan,
+          zure helburua erleari laguntza ematea da. Erleak loreztia eskuratu behar
+          du loreetatik eta abaraskara eraman, bertan eztia egin dezan. "Loreztia
+          eskuratu" eta "eztia egin" blokeak erabili beharko dituzu ariketa hau ebazteko.
       2:
         image: notes/C1_bee_level_intro_2.png
         text: 'Lore orok lorezti kopuru ezberdina du: 1, 2, 3 edo gehiago. Badakigu
@@ -934,16 +934,16 @@
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: Konputagailuak aginduak errepikatzen oso onak dira. Pertsona izanda,
-          zu, oso segituan aspertuko zinateke zerbait behin eta berriz egin beharko
-          bazenu. Konputagailuak, ordea, gauza berdina milaka edo milioika aldiz oso
-          ondo egin dezake aspertu gabe.
+        text: Konputagailuak aginduak errepikatzen oso onak dira. Pertsona arrunta,
+          alabaina, azkar asko asper daiteke zerbait behin eta berriz egin behar duenean.
+          Konputagailuak, ordea, gauza berdina milaka edo milioika aldiz egin dezake,
+          inoiz aspertu gabe eta erabat ondo eginik.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: Adibidez, Facebook-en dauden guztiei e-mailak bidalita zoriondu nahiko
-          banie, mezu horiek guztiak idazten mende oso bat emango nuke. Pixka bat
-          programatuta, Facebook-eko pertsona guztiei zoriontzeko programa bat egin
-          dezaket.
+        text: Adibidez, Facebooken izen emanda dauden guztiak emailez zoriondu nahiko
+          banitu, mezuak idazten mende osoa emango nuke. Pixka bat programatuta, aldiz,
+          Facebooken dauden pertsona guztiak epostaz banan-bana zoriontzeko sistema
+          bidera nezake.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
         text: Adibide honetan, zure helburua txoria txerria hartzeko mugitzea da.
@@ -976,9 +976,9 @@
       3:
         image: notes/C2_artist_intro_3.png
         text: Oihalean zehar mugitzeko, "mugitu aurrera" blokea erabiliko duzu. Hemen
-          "mugitu aurrera" blokeak 100 pixel aurrera mugitzeko esaten du. "abiarazi"
-          zapaltzen dugunean, zer gertatzen da? Artista aurrera 100 pixel mugitzen
-          da. Pixelak zure ordenagailuaren pantailako karratu ñimiñoak dira.
+          "mugitu aurrera" blokeak 100 pixel aurrera mugitzeko esaten du. "hasi" zapaltzen
+          dugunean, zer gertatzen da? Artista aurrera 100 pixel mugitzen da. Pixelak
+          zure ordenagailuaren pantailako karratu ñimiñoak dira.
       4:
         image: notes/C2_artist_intro_4.png
         text: Puzle honetan dugun beste blokeak eskuinera 90ko bira egin esaten du.
@@ -1217,7 +1217,7 @@
       5:
         image: notes/C2_maze_intro_5.png
         text: Inoiz bloke bat ezabatu nahi baldin baduzu, kendu pilatik eta arrastatu
-          zakarrontzira. Behin "abiarazi" sakatu duzula, beti izango duzu aukera "berrezarri"
+          zakarrontzira. Behin "hasi" sakatu duzula, beti izango duzu aukera "berrezarri"
           botoia sakatzeko eta txoria hasierara bueltatzeko. Orain harrapa ditzagun
           txerri horiek!
     C2_paper_airplanes:
@@ -1349,9 +1349,9 @@
       3:
         image: notes/C3_artist_intro_3.png
         text: Oihalean zehar mugitzeko, "mugitu aurrera" blokea erabiliko duzu. Hemen
-          "mugitu aurrera" blokeak 100 pixel aurrera mugitzeko esaten du. "abiarazi"
-          zapaltzen dugunean, zer gertatzen da? Artista aurrera 100 pixel mugitzen
-          da. Pixelak zure ordenagailuaren pantailako karratu ñimiñoak dira.
+          "mugitu aurrera" blokeak 100 pixel aurrera mugitzeko esaten du. "hasi" zapaltzen
+          dugunean, zer gertatzen da? Artista aurrera 100 pixel mugitzen da. Pixelak
+          zure ordenagailuaren pantailako karratu ñimiñoak dira.
       4:
         image: notes/C3_artist_intro_4.png
         text: Puzle honetan dugun beste blokeak eskuinera 90ko bira egin esaten du.
@@ -1675,8 +1675,8 @@
       1:
         image: notes/C3_maze_level_4_1.png
         text: Adibide honetan, zure helburua da zonbia eramatea ekiloreraino. Erabil
-          daitezke mugitu aurrera bost bloke edo esan diezaiokegu ordenagailuari aurrera
-          mugitzeko eta bost aldiz errepikatzeko errepikatu behin blokea erabiliz.
+          daitezke "mugitu aurrera" bost bloke edo esan diezaiokegu ordenagailuari
+          aurrera mugitzeko eta bost aldiz errepikatzeko errepikatu behin blokea erabiliz.
       2:
         image: notes/C3_maze_level_4_2.png
         text: Honi esker denbora aurreztuko duzu eta gainera errazagoa da. Hau erabiltzeko,
@@ -1729,7 +1729,7 @@
       1:
         image: notes/C4_conditionals_1.png
         text: Bloke berri bat daukagu, "baldin-bestela" izena duena. Baldintzapeko
-          agindu bat da, aurreko puzzletan erabili duzun "baldin" blokearen antzekoa.
+          agindu bat da, aurreko ariketatan erabili duzun "baldin" blokearen antzekoa.
           Baina oraingo honetan, beheko aldean, badago atal berri bat "bestela" dioena.
           "Baldin-bestela" blokeari esker, erleak bi aukera desberdinen artean erabaki
           dezake zer egin. Erlea lore batean baldin badago, blokearen goiko zatian,
@@ -1887,7 +1887,7 @@
         image: notes/C4_function_parameters_2.png
         text: |
           Parametroek funtzioetan aldagai gisa erabiliko diren balioak pasatzea ahalbidetzen dute. Funtzio honi Luzera izeneko parametroa gehitzen saiatuko gara tamaina desberdineko karratuak marraztu ahal izateko. Funtzio editorean, lehen bezala funtzioaren izena eta azalpena editatu ditzakezu baina
-          parametro bat ere gehitu dezakezu. Idatzi parametroaren izena eremuan eta egin klik Gehitu Parametroa-n. Honek, sortu berri duzun parametroaren izena duen bloke gorri bat sortuko du. Orain, mugitu aurrera 100 blokea ordeztu dezakezu Luzera parametroarekin aurrera Luzera-k adierazten duen adina egin dezan.
+          parametro bat ere gehitu dezakezu. Idatzi parametroaren izena eremuan eta egin klik Gehitu Parametroa-n. Honek, sortu berri duzun parametroaren izena duen bloke gorri bat sortuko du. Orain, "mugitu aurrera 100 pixel" blokea ordeztu dezakezu Luzera parametroarekin aurrera Luzera-k adierazten duen adina egin dezan.
       3:
         image: notes/C4_function_parameters_3.png
         text: Gorde eta irten, eta arrastatu tresna-kutxako funtzioak kategorian sortu
@@ -1914,10 +1914,10 @@
           da eta bertan eraikiko dugu programa.
       3:
         image: notes/C4_intro_3.png
-        text: Mugitu blokea gure laneremura arrastatu eta "abiarazi" sakatzen badut,
-          zer gertatzen da? Txoriak gelaska bat egingo du aurrera. Eta aurrera egin
-          ondoren txoriak beste zerbait egitea nahi badut? Gure programari beste bloke
-          bat gehitu diezaioket.
+        text: Mugitu blokea gure laneremura arrastatu eta "hasi" sakatzen badut, zer
+          gertatzen da? Txoriak gelaska bat egingo du aurrera. Eta aurrera egin ondoren
+          txoriak beste zerbait egitea nahi badut? Gure programari beste bloke bat
+          gehitu diezaioket.
       4:
         image: notes/C4_intro_4.png
         text: '"biratu eskuinera" blokea aukeratuko dut eta nire mugitu blokearen
@@ -1927,7 +1927,7 @@
       5:
         image: notes/C4_intro_5.png
         text: Inoiz bloke bat ezabatu nahi baldin baduzu, kendu pilatik eta arrastatu
-          zakarrontzira. Behin "abiarazi" sakatu duzula, beti izango duzu aukera "berrezarri"
+          zakarrontzira. Behin "hasi" sakatu duzula, beti izango duzu aukera "berrezarri"
           botoia sakatzeko eta txoria hasierara bueltatzeko. Orain harrapa ditzagun
           txerri horiek!
     C4_math_artist:
@@ -2025,938 +2025,1040 @@
           eta gure haize-parkeetatik ateratzen den energia maximizatzen dugula.
       4:
         image: notes/C4_unplugged_forloops_4.png
-        text: We're at the national control center for EverPower Renewables here in
-          Portland and this is where we have information coming in from all our farms
-          across the country. Even the highest power computers today can't simulate
-          the atmosphere everywhere. In computer forecasting models, we have what
-          we call a grid. Each grid point is a latitude, longitude. We have to calculate
-          the physics and try and figure out the wind speed, temperature,  pressure,
-          that sort of thing.
+        text: Portland-en gaude, EverPower Renewables enpresako kontrol zentroan,
+          eta hona iristen da informazioa gure landetxe guztietatik. Ezta gaur eguneko
+          ordenagailurik ahaltsuenek ere ezin dute simulatu atmosfera edonon. Konputagailuetan
+          erabiltzen diren aurreikuspenetarako modeloetan, sareta deitzen duguna erabiltzen
+          da. Saretako puntu bakoitzari latitudea eta longitudea dagozkio. Fisikako
+          ekuazioak ebatzi eta saiatu behar gara kalkulatzen haizearen abiadura, tenperatura,
+          presioa, eta horrelako gauzak.
       5:
         image: notes/C4_unplugged_forloops_5.png
-        text: Since these are fairly big grids and we're doing this in a lot of points
-          we're looping over these things millions and millions of times. Everything
-          I do I'll use for loops. Here for example is a for loop right there. When
-          you're forecasting wind, there's so many different parameters that go into
-          it it would be impossible for a human to sit down and do all those calculations.
-          There's so many different aspects to what's going to be affecting what's
-          happening to the wind that we need a computer model in order to forecast
-          it.
+        text: Saretak oso handiak direnez, eta horrelako kalkuluak puntu askoren gainean
+          egiten ditugunez, ekintza hauek milioika eta milioika aldiz errepikatzen
+          ditugu. Horregatik, "for" begiztak erabiltzen ditut. Adibidez, hemen bertan
+          dago "for" begizta bat. Haizearen portaera aurreikusten ari garenean, hainbeste
+          parametro desberdin hartu behar dira kontuan, ezen pertsona batentzat ezinezkoa
+          izango bailitzateke kalkulu horiek guztiak egitea. Hainbeste dira haizearen
+          eboluzioaren gainean eragiten duten gauzak, ezen modelo bat behar dugun
+          konputagailuan erabili eta kalkulu guztiak egiteko, haizearen portaera aurreikusiko
+          badugu.
     C4_unplugged_madlibs:
       1:
         image: notes/C4_unplugged_madlibs_1.png
-        text: In this lesson, we'll be playing with some fill in the blank stories.
-          You have a template that you can fill in to create similar stories that
-          have very amusing differences.
+        text: Ikasgai honetan, "hutsuneak betetzeko" guneak dituzten istorioekin jolastuko
+          gara. Txantiloi bat daukazu zeuk betetzeko eta desberdintasun dibertigarriak
+          dituzten istorioak sor ditzakezu.
       2:
         image: notes/C4_unplugged_madlibs_2.png
-        text: In this lesson, we also learned how to make an abstracted template from
-          two stories that have already been created. Abstraction is the art of removing
-          differences and details so that you can see how one solution might work
-          for many different problems. It's very helpful in computer science because
-          it allows us to create functions that may be useful in several different
-          situations.
+        text: Ikasgai honetan, ikasi dugu nola egin abstrakzioa, aldez aurretik sortutako
+          bi istorioetatik eredu bat sortzeko. Abstrakzioa arte bat da, desberdintasunak
+          eta xehetasunak alboratuz, ikusi ahal izateko nola soluzio bat arazo desberdinentzat
+          baliagarria izan daitekeen. Oso erabilgarria da informatikan, horri esker
+          funtzioak sortu daitezkeelako, egoera desberdinetan erabili daitezkeenak.
     C4_unplugged_parameters:
       1:
         image: notes/C4_unplugged_parameters_1.png
-        text: This lesson is called songwriting with parameters. We're going to be
-          writing some songs here. Sometimes the chorus is just a little bit different
-          each time you sing it. Do you remember Old Macdonald Had a Farm? The chorus
-          is slightly different for each animal. And on that farm, he had a cow, e-i-e-i-o.
-          The small change in each chorus can be shown using something we call parameters.
+        text: Ikasgai honi deitu diogu "parametrodun abestiak idaztea". Hainbat abesti
+          idatziko ditugu. Batzuetan, abestiaren leloa pixka bat desberdina izango
+          da kantatzen duzun bakoitzean. Gogoratzen duzu "Paristik datorren artista
+          bat naiz ni" abestia? Leloa pixka bat desberdina da instrumentuaren arabera.
+          Lelo bakoitzaren aldaketa erakuts daiteke parametroak deiturikoak erabiliz.
       2:
         image: notes/C4_unplugged_parameters_2.png
-        text: Sometimes a function needs a parameter. A parameter is an extra piece
-          of information you can pass to a function to customize it for a special
-          need. When you make ice cream sundaes with your friends, you are using a
-          process similar to parameters in a computer program.
+        text: Batzuetan funtzioek parametroak behar dituzte. Parametroak funtzioei
+          pasatzeko informazio gehigarria dira, funtzioak behar berezien neurrira
+          egiteko. Lagunekin izozki-kopa bat egiten duzunean, konputagailu programa
+          batek parametroekin egiten duen antzeko prozesua erabiltzen ari zara.
       3:
         image: notes/C4_unplugged_parameters_3.png
-        text: The disk of vanilla ice cream might be the same for every sundae but
-          when you ask your friends which two toppings they'd like, you could get
-          lots of different combinations. Topping is the function name but each type
-          of topping is a parameter. Functions and parameters work together to make
-          great computer programs and great sundaes too.
+        text: Banilla bola agian berdina da izozki-kopa guztietan baina zure lagunei
+          galdetzen diezunean ze gozagarri nahi dituzten, hamaika konbinazio desberdin
+          jasoko dituzu. Gozagarri funtzioaren izena da baina gozagarri jakin bakoitza
+          parametroa da. Funtzioek eta parametroek elkarrekin egiten dute lan sekulako
+          konputagailu programak egiteko eta baita sekulako izozki-kopak ere.
     C4_unplugged_variables:
       1:
         image: notes/C4_unplugged_variables_1.png
-        text: This lesson is called variables in envelopes. We're going to learn how
-          we can build sentences when we're still missing pieces of information. Most
-          of us are already familiar with the idea of filling in a blank. We do it
-          when we're putting our name on our homework. Sometimes there's more than
-          one word that needs to be filled out and in that case, we give that blank
-          a label so that we know which piece of information goes where.
+        text: Ikasgai honek aldagaiak gutun-azaletan du izena. Informazio zatiak faltan
+          ditugula nola eraiki esaldiak ikasiko dugu. Gutako gehienek badakigu zer
+          den zuriuneak betetzea. Gure etxekolanetan gure izena jartzerakoan egiten
+          dugu. Batzuetan hitz bat baino gehiago bete behar dugu eta, kasu horretan,
+          zuriuneari etiketa bat jartzen diogu ze informazio zati dagokion jakiteko.
       2:
         image: notes/C4_unplugged_variables_2.png
-        text: Variables are placeholders for pieces of information that can change.
-          By using a variable for the missing information, we can continue working
-          on whatever we were doing and let someone else fill in the missing information
-          later. In software, we use variables a lot. We use variables as placeholders
-          for name, email address, and even username. That way we can let the program
-          know where those details will appear after the user fills them in. We use
-          variables all the time in our work.
+        text: Aldagaiak aldakorrak diren informazio zatientzako leku-markak dira.
+          Falta den informazioarentzat aldagai bat erabiliz, lanean jarrai dezakegu
+          egiten ari garen horretan eta utzi beste norbaiti falta den informazio hori
+          beranduago sartzen. Softwarean aldagaiak asko erabiltzen dira. Aldagaiak
+          izenetzako, posta helbideentzako eta baita erabiltzaileentzako leku-marka
+          moduan erabiltzen ditugu. Era honetan programari adierazten diogu xehetasun
+          horiek erabiltzaileak sartu ondoren agertuko direla. Aldagaiak etengabe
+          erabiltzen ditugu gure lanean.
       3:
         image: notes/C4_unplugged_variables_3.png
-        text: Any time you need to store a piece of information for later, we use
-          a variable. Let's say we need to count the number of times the user has
-          tweeted. Every time that user tweets, we'll add one to that number and every
-          time the user deletes a tweet, we'll decrease that number by one. Anytime
-          we need to know how many times that user has tweeted, we'll just look at
-          that variable.
+        text: Informazio zati bat gero erabiltzeko gorde behar dugun bakoitzean aldagai
+          bat erabiltzen dugu. Demagun erabiltzaileak zenbat aldiz egin duen txioka
+          zenbatu nahi dugula. Erabiltzaileak txio bat egiten duen bakoitzean aldagaia
+          inkrementatuko dugu eta, erabiltzaileak txio bat ezabatzen duenean, berriz,
+          zenbakia dekrementatuko dugu. Erabiltzaileak zenbat aldiz egin duen txioka
+          jakin nahi dugunean aldagaiari begiratuko diogu.
     C4_variables_artist:
       1:
         image: notes/C4_variables_artist_1.png
-        text: A variable is a container you can store a value in. When you use that
-          variable in an algorithm, it opens up the container and looks at the value
-          inside. This lets you write smarter algorithms that behave differently depending
-          on the value stored in the variable.
+        text: Aldagai bat balio bat gordetzeko edukiontzia da. Aldagai hori algoritmo
+          batean erabiltzen baduzu, edukiontzia ireki eta barruko balioari begiratzen
+          zaio. Honela algoritmo azkarragoak idatzi ditzakezu, aldagaian gordetako
+          balioaren araberako portaera erakutsiko dutenak.
       2:
         image: notes/C4_variables_artist_2.png
-        text: For example, if you wanted to write an algorithm to say Happy birthday,
-          you're turning 10! to my little brother, that's great now but when I run
-          it next year I'd want it to say, Happy birthday, you're turning 11! I could
-          create a variable called age to store my brother's age and write my algorithm
-          to say Happy birthday, you're turning 'age' instead. Because variable can
-          change, every year I can update the variable 'age' to equal 'age' plus 1.
+        text: Adibidez, nire anai txikiari Zorionak, 10 urte bete dituzu! esateko
+          algoritmo bat idatzi nahiko bazenu, primeran orain, baina hurrengo urtean
+          "Zorionak, 11 urte bete dituzu! esan nahiko dudanez, aldagai bat sor dezakezu
+          'adina' izenekoa nire anaiaren adina gorde eta nire algortimoa egokitu "Zorionak,
+          'adina' urte bete dituzu!" esateko. Aldagaia alda daitekeenez, urtero 'adina'
+          aldagaia eguneratu dezaket 'aldagaia' gehi 1 izateko.
       3:
         image: notes/C4_variables_artist_3.png
-        text: In this puzzle, we're going to be using a variable that will set the
-          length of the line our artist draws. Later on in our code, the move forward
-          block will look at that length variable to see what value you've set it
-          to.
+        text: Puzle honetan, gure artistak marraztuko duen lerroaren luzera ezarriko
+          duen aldagaia erabiliko dugu. Gero, gure kodean, mugitu aurrera blokeak
+          luzera aldagaiari begiratuko dio jakiteko ze balio esleitu diozun.
     C4_variables_playlab:
       1:
         image: notes/C4_variables_playlab_1.png
-        text: A variable is a container that you can store a value in. When you use
-          that variable in an algorithm, it opens up the container and looks at the
-          value inside. This lets you write smarter algorithms that behave differently
-          depending on the value stored in the variable.
+        text: Aldagai bat balio bat gordetzeko edukiontzia da. Aldagai hori algoritmo
+          batean erabiltzen duzunean, edukiontzia ireki eta barruko balioari begiratzen
+          zaio. Honela algoritmo azkarragoak idatzi ditzakezu, aldagaian gordetako
+          balioaren araberako portaera erakutsiko dutenak.
       2:
         image: notes/C4_variables_playlab_2.png
-        text: Now you're going to try playlab where you are given different games
-          and you can change the values of variables like speed, height, score, in
-          order to change the game. You won't have to change the algorithm of the
-          game to change how it plays, just the variable.
+        text: Orain PlayLab probatuko duzu. Joko desberdinak emango zaizkizu eta abiadura,
+          altuera eta puntuazioa erako aldagaiak molda ditzakezu jokoa aldatzeko.
+          Ez duzu jokoaren algoritmoa egokitu beharko jokatzeko modua aldatzeko, soilik
+          aldagaiaren balioa.
       3:
         image: notes/C4_variables_playlab_3.png
-        text: In my work for Kindle and on X-ray for books, we apply variables in
-          many different ways. One way that you can use a variable is to store page
-          numbers of a book. A user can increase and decrease the size of the font
-          on a page. Based on the font size, the number of pages in the book can change.
-          We can adjust it by storing the number of pages in the variable.
+        text: Kindle eta liburuen X-izpien inguruko lanetan aldagaiak erabiltzen ditugu
+          modu desberdin askotan. Aldagai bat erabil dezakezu adibidez liburu baten
+          orrialde zenbakiak gordetzeko. Erabiltzaileak orrialde baten letra-tamaina
+          inkrementatu edo dekrementatu dezake. Letra-tamainaren arabera liburuaren
+          orrialde kopurua alda daiteke. Doitu dezakezu aldagaian orrialde kopurua
+          gordez.
     infinity_playlab_events:
       1:
         image: notes/infinity_playlab_events_1.png
-        text: Now we're going to learn about something that all game programmers use
-          everyday. They're called events. An event tells your program to listen for
-          when something happens. And then when it does, it performs an action. Some
-          examples of events are listening for a mouse click, an arrow button, or
-          a tap on the screen.
+        text: Orain joko programatzaileek egunero erabiltzen duten zerbait ikasiko
+          dugu. Gertaerak dira hauek. Gertaera batek zerbait gertatu bitartean entzuten
+          egoteko esaten dio zure programari. Eta gertatzen denean ekintza bat exekutatzen
+          du. Adibidez, saguan klikatzea, gezidun tekla bat sakatzea edo pantailan
+          sakatzea gertaerak dira.
       2:
         image: notes/infinity_playlab_events_2.png
-        text: Here, we're going to make Baymax move up to touch Hiro and move down
-          to touch Rapunzel when the player uses the up/down arrow keys or the up/down
-          buttons. We'll use the when up arrow block and attach the move actor up
-          block to it, so when the player presses the up arrow key, everything attached
-          to the "when up arrow" block is run. We'll do the same thing to make Baymax
-          move down. Step by step your game is getting more interactive.
+        text: Hemen Baymax gora mugitu araziko dugu Hiro ikuitzeko, eta behera, Rapunzel
+          ikuitzeko jokalariak gora/behera gezidun teklak edo gora/behera botoiak
+          erabiltzen dituenean. "Gora geziarekin" blokea erabiliko dugu eta "mugitu
+          aktorea gora" blokea lotu, jokalariak gora gezia sakatzen duenean "gora
+          geziarekin" blokeari lotuta dagoen guztia exekuta dadin. Gauza bera egingo
+          dugu Baymax behera mugitzeko. Urratsez urrats zure jokoa gero eta elkarreragileago
+          bihurtzen ari da.
     infinity_playlab_intro:
       1:
         image: notes/infinity_playlab_intro_1.png
-        text: So what grade are you in? Second. Tenth grade. First grade. I was in
-          eighth grade when I learned to program. I got my first computer when I was
-          in sixth grade. What gets me excited is being able to fix people's problems.
-          You can express yourself, you can build things from an idea.
+        text: Ze mailatan zaude? bigarrenean. Hamargarrenean. Lehenengo mailan. Ni
+          zortzigarren mailan nengoen programatzen ikasi nuenean. Nire lehenengo ordenadorea
+          seigarren mailan nengoenean izan nuen. Zirrara sortzen zidan jendearen arazoak
+          konpontzeak. Ideia batean oinarrituz gauzak eraiki ditzakezu.
       2:
         image: notes/infinity_playlab_intro_2.png
-        text: Computer science is the basis for a lot of the things that college students
-          and professionals will do for the next twenty or thirty years. I like programming
-          because I like helping people. I get the opportunity to build something
-          that's gonna make people's lives easier. I think it's the closest thing
-          we have to a superpower. Getting started is the most important part. I'm
-          a beginner myself and I want you to learn with me.
+        text: Informatika unibertsitateko ikasleek eta profesionalek hurrengi hogei
+          edo hogeita hamar urteetan egingo dituzten hainbat gauzen oinarria da. Gustokoa
+          dut jendeari laguntzeak erakartzen nauelako. Jendearen bizitza erraztuko
+          duen zerbait eraikitzeko aukera daukat. Superahalmen batetik gertuen dagoen
+          gauza dela uste dut. Hastea da inportanteena. Ni neu ere hasiberria naiz
+          eta zuk nirekin batera ikastea nahi dut.
       3:
         image: notes/infinity_playlab_intro_3.png
-        text: I'm John Vechey, I'm one of the co-founders of PopCap Games. We make
-          games like Plants vs. Zombies, Bejeweled, and Peggle. A lot about games
-          isn't how perfect your code is, it's not how perfect your art is, it's about
-          how does it feel and how much fun it is. You can only get that sense by
-          trying it, by doing it, by learning and adapting and iterating your own
-          skills of making games.
+        text: John Vechey naiz, PopCap Games enpresaren sortzaileetako bat. Jokoak
+          egiten ditugu, Plants vs. Zombies, Bejeweled edo Peggle bezalakoak. Jokoetan
+          garrantzitsuena ez da kodea edo alderdi artistikoa perfektua izatea; garrantzitsuagoa
+          da erakargarria eta dibertigarria izatea. Hori lortzeko, saiatu behar zara,
+          egin behar duzu, ikasi, egokitu eta landu behar dituzu jokoak diseinatzeko
+          zure gaitasunak.
       4:
         image: notes/infinity_playlab_intro_4.png
-        text: Do you have a favorite video game? Well, we're going to take one step
-          towards creating games just like that using Play Lab. Good games have a
-          story and every story has actors. Actors do things like speak, move, and
-          interact with each other. Maybe even score points based on the rules of
-          the game. Today we'll be learning how to do all these things, one by one,
-          with Disney's characters like Anna, Elsa, Hiro, Baymax, and Rapunzel. We'll
-          build a game from scratch that can be shared and played on a phone.
+        text: 'Zein da zure bideo-joko gustukoena? Ondo. Orain pauso bat aurrera joango
+          gara eta joko horren antzekoak sortuko ditugu Jolas Laborategian. Joko onetan
+          istorio bat dago eta istorioetan aktoreak daude. Aktoreek gauza asko egiten
+          dituzte: hitz egin, mugitu, eta elkarren artean eragin. Agian, jokoaren
+          arauen arabera, puntuak eskuratu ditzakete. Gaur ikasiko dugu nola egin
+          gauza horiek, banan-banan, Disneyren pertsonaiak erabiliz: Anna, Elsa, Hiro,
+          Baymax eta Rapunzel. Eskuko telefonoan jokatu eta partekatu daitekeen joko
+          bat sortuko dugu zerotik.'
       5:
         image: notes/infinity_playlab_intro_5.png
-        text: Your screen is split into three main parts. On the left is the gamespace,
-          where your program will run. The instructions for each level are written
-          below. This middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace, and this
-          is where we'll build our program.
+        text: Zure pantaila hiru zati nagusitan banatzen da. Ezkerrean jokoeremua
+          duzu, zure programa exekutatuko den lekua. Maila bakoitzaren argibideak
+          behean daude idatzita. Erdiko gune hau tresna-kutxa da, eta hauetako bloke
+          bakoitza kode zati bat da. Eskuinean dagoen espazio zuria laneremua da,
+          eta hemen sortuko dugu gure programa.
       6:
         image: notes/infinity_playlab_intro_6.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow outline, and then they'll snap together. In this first
-          puzzle, Hiro is Actor 1 and Baymax is Actor 2. We need to move Hiro to get
-          to Baymax by dragging the "move right" block out and linking it to the "when
-          run" block. Once you have your blocks in place, hit the "Run" button to
-          see what you've programmed.
+        text: Hasteko, zure blokeak "abiaraztean" bloke laranjari lotu beharko dizkiozu.
+          Bloke mordoa lotu ditzakezu ertz horia ikusten duzun artearrastatuz eta,
+          ondoren, klaska egingo dute elkarrekin. Lehenengo puzlean Hiro 1 aktorea
+          da, eta Baymax, 2 aktorea. Hiro mugitu beharko duzu Baymax-ena joateko "eskuinera
+          mugitu" blokea arrastatuz eta "abiaraztean" blokearekin lotzeko. Zure blokeak
+          leku egokian daudenean, sakatu "Hasi" botoia ikusteko zer programatu duzun.
       7:
         image: notes/infinity_playlab_intro_7.png
-        text: Get started and by the end you'll be able to create your own game with
-          these amazing actors that can interact, score points, throw microbots, cherries,
-          saucepans, sparkles, and ice.. and vanish each other. It's all up to you!
+        text: Goazen hastera eta amaitzerako elkarreragin, puntuak zenbatu, microbotak,
+          gereziak, zartagiak, izpiak, jela etab. jaurti, eta elkar desagertarazi
+          egin dezaketen aktore zoragarri hauekin zure jokoa sortzeko gai izango zara!
     infinity_playlab_repeat_forever:
       1:
         image: notes/infinity_playlab_repeat_forever_1.png
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you'll never have to because computers are really good at repeating things.
-          This is the repeat forever block. Anything inside this block will happen
-          forever in the game.
+        text: Ikusten duzu zure burua behin eta berriro gauza bera errepikatzen? zorionez
+          ez duzu sekula hori egin beharko konputagailuak oso onak baitira gauzak
+          errepikatzen. Hau errepikatu betirako blokea duzu. Bloke honen barnean jartzen
+          duzun hori beti gertatuko da jokoan.
       2:
         image: notes/infinity_playlab_repeat_forever_2.png
-        text: So if we wanted an actor to do something repeatedly without the player
-          having to do anything, we'll put those blocks inside the repeat forever
-          block. In this next puzzle, our goal is to help Anna walk up and down continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
+        text: Orduan, aktore batek etengabe zerbait egitea nahi badugu jokalariak
+          ezer egin gabe, bloke horiek errepikatu betirako blokearen barnean jarriko
+          ditugu. Hurrengo puzle hontan helburua Anna etengabe gora eta behera mugitzea
+          da. Errepikatu komandoen funtzionamendua ulertzen baduzu, denbora luzea
+          aurreratuko duzu gero, zure jokoa garatzen duzunean.
     tutorial_puzzle_challenge:
       1:
         image: notes/tutorial_puzzle_challenge_1.png
-        text: What do you want to be when you grow up Olivia? An astronaut. Do you
-          happen to know what a computer programmer is? Yeah um no. Ummm wait what?
-          I'm not really sure how to explain it computer programming is pretty simple.
-          It's a set of instructions like a recipe, you have to follow them step-by-step
-          to get the end result you want.
+        text: Zer izan nahi duzu handitzean, Olivia? Astronauta. Ba al dakizu zer
+          den konputagailuen programatzailea izatea? Bai, tira ez. Ummm iegon, zer?
+          Ez nago ziur nola azaldu. Konputagailuak programatzea nahikoa sinplea da.
+          Errezeta baten antzera, agindu multzo bat da eta urratsez urrats jarraitu
+          behar duzu amaieran nahi duzuna lortzeko.
       2:
         image: notes/tutorial_puzzle_challenge_2.png
-        text: I can change the number of pixels, the length of the line, using this
-          dropdown. How long was it again? You can see the instructions again by looking
-          under the run button. Here I used the move forward block and I'm going to
-          select 100 pixels. I can delete a block by dragging it into the toolbox
-          or the trash can. Let's put it back.
+        text: Pixel kopurua, lerroaren luzera, alda dezaket menu zabalgarri hau erabiliz.
+          Zein zen luzera? Argibideak ikus ditzakezu berriz hasi botoiaren azpian
+          begiratuz. Hemen mugitu aurrera blokea erabili dut eta 100 pixel aukeratuko
+          du. Bloke bat ezabatu dezaket tresna-kutxara edo zaborrontzira arrastatuz.
+          Bere lekuan jarriko dugu berriz.
       3:
         image: notes/tutorial_puzzle_challenge_3.png
-        text: Run the code by pressing run. Well that didn't work! I'll press reset
-          and figure out what's wrong. You can try a puzzle as many times as you'd
-          like and skip puzzles and come back to them. Just make sure to try your
-          best and don't give up. Let's add another move forward. That still didn't
-          work. I can place a block between other blocks.
+        text: Exekutatu kodea hasi sakatuz. Ez du funtzionatu! leheneratu sakatuko
+          dut eta zer dagoen gaizki pentsatu. Puzle bat nahi adina aldiz egin dezakezu
+          eta puzleak baztertu eta berriro itzuli bertara. Ziurtatu zure onena ematen
+          duzula eta ez etxi. Gehitu dezagun beste mugitu aurrera. Oraindik ere ez
+          dabil. Bloke bat sar dezaket bi blokeen artean.
       4:
         image: notes/tutorial_puzzle_challenge_4.png
-        text: Let's take a turn block and place it in between the move forwards. Turn
-          left 45 degrees. Let's run it again. Reset, run, awesome! Here's another
-          puzzle. Sometimes you are given starter code to complete. Here I need to
-          add the appropriate lengths and degrees.
+        text: Biratu bloke bat hartu eta bi mugitu aurrera blokeen artean jarriko
+          dugu. Biratu ezkerrera 45 gradu. Programa abiaraziko dugu berriz. Leheneratu,
+          exekutatu, zoragarria! Hemen duzu beste puzle bat. Batzutan kodea emango
+          zaizu eta osatu beharko duzu. Hemen luzera eta gradu egokiak gehitu behar
+          ditut.
       5:
         image: notes/tutorial_puzzle_challenge_5.png
-        text: You may sometimes accidentally trash the starter code. What do you do
-          then? You can press clear puzzle and start all over again. I'm going to
-          drag this number block into the different pixel areas. Select 100 for pixels,
-          45 for degrees and 100 for pixels again. Awesome! Here is the Code Studio
-          bee. I need to move the bee to each flower and get nectar.
+        text: Emandako kodea nahigabe zaborrontzira ematea gerta dakizuke. Zer egin
+          orduan? sakatu Hasi berriro eta berriz hasiko zara. Zenbakizko bloke hau
+          arrastatuko dut pixel gune desberdinetan. Aukeratu 100 pixelentzat, 45 graduentzat
+          eta, berriro, 100 pixelentzat. Zoragarria! Code Studioren erlea duzu hau.
+          Erlea mugitu behar dut lore bakoitzera eta nektarra lortu.
       6:
         image: notes/tutorial_puzzle_challenge_6.png
-        text: The first flower is three blocks away so I need three move forwards.
-          1, 2, 3. Then a get nectar, then another get nectar. Well that didn't work!
-          I'll place another move forward between the get nectars and run it again.
-          Yay, it works! You just learned how to use the Code Studio artist and bee
-          puzzles. Good luck on the Code Studio puzzle challenge.
+        text: Lehenengo lorea hiru bloke harantzago dago eta beraz, hiru mugitu aurrera
+          behar ditut. 1, 2, 3. Ondoren, nektarra lortu, gero beste nektarra. Hara,
+          ez du funtzionatu! Beste mugitu aurrera bloke bat jarriko dut nektarra jasotzeko
+          bi blokeen artean eta berriro abiarazi. Code Studioren artista eta erlearen
+          puzleak ikasi berri dituzu. Zorte on Code Studio-ren puzle lehiaketarekin.
     unplug1:
       1:
         image: notes/unplug1_1.png
-        text: What do you want to be when you grow up Olivia? Umm, an astronaut! Do
-          you happen to know what a computer programmer is? Yeahh, umm, no. Umm, what
-          what? I'm not really sure how to explain it. Computer programming is pretty
-          simple. It's a set of instructions, like a recipe. You have to follow them
-          step by step to get the end result you want.
+        text: Zer izan nahi duzu handitzean, Olivia? Astronauta. Ba al dakizu zer
+          den konputagailuen programatzailea izatea? Bai, tira ez. Ummm iegon, zer?
+          Ez nago ziur nola azaldu. Konputagailuak programatzea nahikoa sinplea da.
+          Errezeta baten antzera, agindu multzo bat da eta urratsez urrats jarraitu
+          behar duzu amaieran nahi duzuna lortzeko.
       2:
         image: notes/unplug1_2.png
-        text: Computer science is a way to impact the world. It can be music videos,
-          it can be games, detect whether or not someone is related to someone else.
-          Find you know, people's friends. You can do all sorts of other crazy things
-          that actually save lives. You do have to have a drive I think. It is to
-          me like a paintbrush. I think great programming is not all that dissimilar
-          from great art.
+        text: Informatikak munduan eragina edukitzeko bidea da. Bideo musikalak izan
+          daitezke, jokoak izan daitezke, jakin norbait beste baten arbasoa den. Ezagutzen
+          duzun jendearen lagunak bilatu. Bizitzak salbatzeko hamaika gauza egin ditzakezu.
+          Helburu bat behar duzu. Niretzako pintzelaren modukoa da. Uste dut ondo
+          programatzea ez dela arte onaren oso desberdina.
       3:
         image: notes/unplug1_3.png
-        text: When I finally learned a little bit of programming, that blank wall
-          resolved into a bunch of doors and you open them and of course then you
-          find behind them is another hallway filled with a bunch of doors. Programming
-          is fun and easy. You can do anything your mind wants to do. Finally you
-          start to open enough doors the light comes in. To me a finished program
-          is like a structure filled with light. All the corners are illuminated.
-          The number of people that you can touch and interact with is something the
-          world has never seen before.
+        text: Programazioaren oinarriak ikasi nituenean, orma zuria ate mordoa bihurtu
+          zen eta ate horiek irekitzean, noski, beste ate mordoaren ataria aurkituko
+          duzu. Programatzea dibertigarria eta erraza da. Zure buruak nahi duen guztia
+          egin dezakezu. Amaieran ate nahikoak ireki eta argia ikusiko duzu. Niretzat,
+          amaitutakoprograma argiarekin betetako egitura bezalakoa da. Izkin guztietan
+          argia dago. Jendearengana iritsi eta haiekin elkarreragin dezakezu, munduan
+          sekula ikusi ez bezala.
       4:
         image: notes/unplug1_4.png
-        text: Our first lesson in this series is all about what computer science is,
-          what a computer scientist does and how you can be more responsible in your
-          use of technology. It's a very important lesson but it is a little text-heavy.
-          At the end, you get to make your very own customized encoding using your
-          initials. It's a fun activity and it's very empowering because binary is
-          one of those things that feels very technical but once you understand it,
-          it's like you speak a secret language.
+        text: Multzo honetako lehenengo ikasgaia informatikari buruzkoa da, zer egiten
+          duen informatikari batek eta nola jokatu modu arduratsuagoan teknologiarekin
+          aritzen zarenean. Oso ikasgai inportantea da baina testu aldetik, astun
+          xamarra. Amaieran, zure inizialak erabiliz zure neurrira egindako kodea
+          egiteko gai izango zara. Ekintza dibertigarria da eta oso bizigarria, bitarrak
+          oso teknikoa dirudien arren, behin ulertuz gero, hizkuntza sekretu bat hitzegitea
+          bezala baita.
     unplug2:
       1:
         image: notes/unplug2_1.png
-        text: The lesson on computational thinking is intended to teach you how to
-          take a big difficult problem and break it down into several simpler problems.
-          The goal of this lesson is to write a set of instructions that someone can
-          follow to draw one of the monsters included in the lesson plan.
+        text: Pentsamendu konputazionalari buruzko ikasgaiaren muina da nora heldu
+          problema potolo bati eta nola zatitu problema sinpleagotan. Ikasgaiaren
+          helburua ikasketa planean dagoen mamuetako bat marrazteko edonork jarraitu
+          ahal izango duen agindu multzoa idaztea da.
       2:
         image: notes/unplug2_2.png
-        text: 'Students will break into groups to write instructions and then they''ll
-          switch them with another group that will have to draw the monster. Groups
-          will write instructions using the four steps of computational thinking:
-          decomposition, pattern location, abstraction and algorithms.'
+        text: 'Ikasleak multzotan banatuko dira aginduak idazteko eta, ondoren, mamua
+          marraztu behar duen beste talde batekin trukatuko dira. Taldeek aginduak
+          idatziko dituzte pentsamendu konputazionalaren lau urratsak erabiliz: deskonposizioa,
+          patroien kokapena, abstrakzioa eta algoritmoak.'
       3:
         image: notes/unplug2_3.png
-        text: First groups will decompose the task which means make a game plan. Then
-          they'll look for patterns between all the monsters in the catalog. When
-          they come across differences between the monsters, they'll abstract or remove
-          those details. For instance, one monster in the catalog has vegitas eyes
-          and another has spritem eyes. But they both have eyes so we can write a
-          line that says the monster has blank eyes.
+        text: Lehenengo taldeen ataza deskonposatuko dute, hau da, jokoaren plana
+          egingo dute. Ondoren, katalogoko mamuen artean patroiak bilatuko dituzte.
+          Mamuen arteko desberdintasunak identifikatzean, xehetasun horiek ezabatuko
+          dituzte. Adibidez, katalogoko mamu batek Vegitas-en begiak ditu eta beste
+          batek, berriz, Spritem-en begiak. Baina biek begiak dituzte eta, beraz,
+          idatz dezakegu lerro bat zuriune batekin, mamuak begiak dituela adierazteko.
       4:
         image: notes/unplug2_4.png
-        text: So students will be able to write a set of instructions, called an algorithm,
-          that list the monsters' parts with blanks for what the styles should be.
-          This is the set of instructions they'll pass to other students to recreate
-          their very own monster.
+        text: Beraz, ikasleak kapaz izango dira agindu multzo bat idazteko, algoritmoa,
+          mamuaren atalak bete gabe utziz estiloa dena delakoa izateko. Hau izango
+          da beste ikasleei pasako zaien agindu multzoa neurriko mamua egin ahal izateko.
     unplug3:
       1:
         image: notes/unplug3_1.png
-        text: In graph paper programming, we help explain how coding works by trying
-          to help people recreate drawings using only arrows and scribbles. One person
-          is given a small drawing on graph paper and they need to go through using
-          only specific arrows and try to describe how to recreate that drawing.
+        text: Laukidun orri programazioan, jendeari kodeketak nola funtzionatzen duen
+          azaltzen diogu marrazkiak berregiten erakutsiz, geziak eta zirriborroak
+          erabiliz. Pertsona bati marrazki txiki bat ematen zaio laukidun orri batean
+          eta, gezi zehatzak erabiliz, osatu behar du eta marrazkia nola berregin
+          deskribatzen saiatu.
       2:
         image: notes/unplug3_2.png
-        text: 'In this activity, the only symbols you can use are these: move one
-          square forward, one square backward, move one square up, move one square
-          down, change to next color, and fill in your square with color. Once we
-          have that coded up, we can hand it off to another person who can read the
-          code and try and recreate the picture.'
+        text: 'Jarduera hontan erabil ditzakezun ikurrak hauek dira: mugitu lauki
+          bat aurrera, lauki bat atzera, mugitu lauki bat gora, mugitu lauki bat behera,
+          aldatu hurrengo kolorera, eta bete zure laukia kolorearekin. Hori kodetu
+          ondoren, beste bati pasa diezaiokegu eta, homek, kodea irakurriz, irudia
+          islatu.'
     unplug4:
       1:
         image: notes/unplug4_1.png
-        text: In graph paper programming, we help explain how coding works by trying
-          to help people recreate drawings using only arrows and scribbles. One person
-          is given a small drawing on graph paper and they need to go through using
-          only specific arrows and try to describe how to recreate that drawing.
+        text: Laukidun orri programazioan, jendeari kodeketak nola funtzionatzen duen
+          azaltzen diogu marrazkiak berregiten erakutsiz, geziak eta zirriborroak
+          erabiliz. Pertsona bati marrazki txiki bat ematen zaio laukidun orri batean
+          eta, gezi zehatzak erabiliz, osatu behar du eta marrazkia nola berregin
+          deskribatzen saiatu.
       2:
         image: notes/unplug4_2.png
-        text: In the second half of the activity, we ask students how many different
-          ways they can fold a piece of paper to create sixteen identical rectangles.
-          Then you'll discuss how multiple solutions can lead to the same end result
-          and why some solutions are better in certain situations.
+        text: Jardueraren bigarren zatian ikasleei galtetuko diegu zenbat modu desberdinetan
+          tolestu dezaketen paper zati bat hamasei laukizuzen berdin sortzeko. Ondoren,
+          nola soluzio anitzek emaitza bera sor dezaketen, eta zergatik soluzio batzuk
+          egokiagoak diren zenbait egoeratan eztabaida sortuko duzu.
     unplug5:
       1:
         image: notes/unplug5_1.png
-        text: In graph paper programming, we help explain how coding works by trying
-          to help people recreate drawings using only arrows and scribbles. One person
-          is given a small drawing on graph paper and they need to go through using
-          only specific arrows and try to describe how to recreate that drawing.
+        text: Laukidun orri programazioan, jendeari kodeketak nola funtzionatzen duen
+          azaltzen diogu marrazkiak berregiten erakutsiz, geziak eta zirriborroak
+          erabiliz. Pertsona bati marrazki txiki bat ematen zaio laukidun orri batean
+          eta, gezi zehatzak erabiliz, osatu behar du eta marrazkia nola berregin
+          deskribatzen saiatu.
       2:
         image: notes/unplug5_2.png
-        text: In the second half of the activity, we ask students how many different
-          ways they can fold a piece of paper to create sixteen identical rectangles.
-          Then you'll discuss how multiple solutions can lead to the same end result
-          and why some solutions are better in certain situations.
+        text: Jardueraren bigarren zatian ikasleei galtetuko diegu zenbat modu desberdinetan
+          tolestu dezaketen paper zati bat hamasei laukizuzen berdin sortzeko. Ondoren,
+          nola soluzio anitzek emaitza bera sor dezaketen, eta zergatik soluzio batzuk
+          egokiagoak diren zenbait egoeratan eztabaida sortuko duzu.
     unplug6:
       1:
         image: notes/unplug6_1.png
-        text: This activity is called coding with cards and it's great for any age.
-          Like you learned with the if statements in earlier lessons,  during Blockly,
-          if statements have a piece about them you have to evaluate to find out if
-          it's true or false. That's the conditional and it can be used in lots of
-          different ways.
+        text: Jarduera honek txartelekin kodetu du izena eta edozein adinetarako egokia
+          da. Blockly-ren ikasgaietan baldintzapeko aginduekin ikasi zenuen moduan,
+          baldintzapeko aginduek ebaluatu beharreko zati bat dute eta egia edo gezurra
+          den erabakitzeko ebaluatu beharko duzu. Hori da baldintzapekoa eta hamaika
+          modu desberdinetara erabil daiteke.
       2:
         image: notes/unplug6_2.png
-        text: We take advantage of that by creating programs on paper that you run
-          using a random draw of playing cards. You might have an if statement that
-          says something like if the card you draw is greater than 8, you get a point.
-          Otherwise, your opponent gets a point. You can make it as simple or as complicated
-          as you feel comfortable.
+        text: 'Horren abantaila hartzen dugu eta programak idazten ditugu paperaren
+          gainean, eta ausaz nahastutako karta-sorta bat erabiliz egikaritu ditzakegu.
+          Adibidez, izan daiteke "baldin" agindu bat zera dioena: ateratzen duzun
+          karta 8 baino handiagoa baldin bada, puntu bat eskuratzen duzu. Bestela,
+          zure aurkariak eskuratuko du puntua. Hori zure nahierara egokitu dezakezu,
+          sinpleaoa edo konplexuagoa eginez, zu eroso sentitzeko.'
     unplug7:
       1:
         image: notes/unplug7_1.png
-        text: You know how when you look up the lyrics for a song and they define
-          the chorus at the very beginning and then for the rest of the song, they
-          just refer you back to the chorus? That's how you call a function.
+        text: Musika partituretan ohikoa da abestiaren hasieran leloa agertzea eta
+          hortik aurrera, leloa errepikatu behar denean ez da berriro agertzen; horren
+          ordez, erreferentzia bat egiten zaio hasieran agertzen denari. Horrelaxe
+          deitzen zaio funtzio bati programa informatikoetan.
       2:
         image: notes/unplug7_2.png
-        text: In this lesson, we define the chorus at the beginning of our song and
-          then we sing through our song and go back and we notice that the class doesn't
-          sing the word chorus, they automatically go up to the top where we define
-          the chorus and sing through that. We use that as a great introduction to
-          how to understand what a program is doing when it defines and calls a function.
+        text: Ikasgai honetan, abestiaren leloa partituraren hasieran definitu dugu
+          eta orduan hasi gara kantatzen, eta partituran aurrera "leloa" hitza agertzen
+          denean, konturatu gara ikasleek ez dutela kantatzen "leloa" hitza, baizik
+          eta partituraren hasieran begiratzen dutela eta bertan agertzen dena kantatzen
+          dutela. Ideia hori erabiltzen dugu ulertzeko zer egiten duen programa batek
+          funtzio bat definitu eta deitzen dionean.
       3:
         image: notes/unplug7_3.png
-        text: We use familiar songs including Old Macdonald to talk about how a chorus
-          is called over and over and how sometimes a chorus can change. When you
-          have a song like Old Macdonald, where certain words change, that's a great
-          place to introduce the idea of parameters. Passing certain words through
-          so that you can send extra information to your function. Once we're sure
-          everybody gets it, you can take your own familiar songs and break them up
-          yourself. See if you can figure it out together.
+        text: Abesti herrikoiak erabiltzen ditugu, horien artean "Paristik datorren
+          artista bat naiz ni", ikusarazteko horrelako abestietan leloa behin eta
+          berriro errepikatzen dela, eta batzuetan leloa pixka bat aldatzen dela errepikapen
+          batetik hurrengora. Horrelakoek oso argi erakusten dute parametro kontzeptua.
+          Pasatzea hitz batzuk aurrera funtzioari informazio gehigarria helarazteko.
+          Ziur gaudenean denek harrapatu dutela, orduan gure abesti herrikoi horiek
+          moldatu ditzakegu gure nahierara.
     unplug8:
       1:
         image: notes/unplug8_1.png
-        text: Our lesson on abstraction uses the familiar concept of madlibs, where
-          you basically insert a blank in a story that can be filled with lots of
-          different words. We take that idea, challenge kids to come up with their
-          own words for their own stories, and really explain the concept of abstraction.
+        text: Abstrakzioaren inguruko ikasgaian, guztiz definituta ez dauden istorioak
+          erabiltzen ditugu. Halakoetan, istorio batean zuriguneak uzten dira, non
+          hitz desberdin asko jar daitezkeen. Ideia hori hartu, animatu haurrak nahi
+          dituzten hitzak erabiltzeko haien istorioetan, eta horrela abstrakzioaren
+          kontzeptua azaltzen dugu.
       2:
         image: notes/unplug8_2.png
-        text: It's all about functions and how you can have a function, like in Old
-          Macdonald, where you have a structure for your chorus but you have something
-          little that changes and you abstract out that little thing that changes
-          and you can fill it in with your own word every time through. But sometimes
-          you have three words that change and so you fill those in with three parameters,
-          that's still pretty helpful.
+        text: Funtzioei buruz ari gara, eta nola izan dezakegun funtzio bat, "Paristik
+          datorren artista bat naiz ni" abestian bezalaxe, non abestiaren leloak egitura
+          jakin bat duen, baina badago zerbait batetik bestera aldatzen dena, eta
+          aldatzen den horren abstrakzioa egiten dugu eta gure hitzekin bete dezakegu
+          aldatzen den hori errepikapen bakoitzean. Baina batzuetan hiru hitz dira
+          aldatzen direnak eta horiek hiru parametrorekin ordezkatu ditzakegu, eta
+          hori oso erabilgarria da.
       3:
         image: notes/unplug8_3.png
-        text: You can have one function that handles lots of different problems. Lots
-          of times people will write separate functions for all those problems, not
-          realizing there's only one little difference. If they could just find a
-          way to handle that one little difference, they could just reuse one function
-          over and over again, instead of having 14 different functions.
+        text: Funtzio bat izan dezakegu arazo desberdin askotarako baliagarria dena.
+          Askotan, jendeak funtzio desberdinak idazten ditu arazo horietarako, eta
+          ez dira konturatzen haien artean diferentzia txiki bat baino ez dagoela.
+          Diferentzia txiki hori atzemateko moduren bat topatuz gero, funtzio bera
+          berrerabil liteke behin eta berriro, 11 funtzio desberdin izan beharrean.
     unplug9:
       1:
         image: notes/unplug9_1.png
-        text: Relay programming is an extremely fun lesson that gets across way more
-          than computer science. Sometimes everybody is getting a little bit antsy
-          and you want to get them up on their feet. This is a great way to add some
-          excitement to computer science.
+        text: Txandaka programatzea oso dibertigarria izan daiteke eta informatikaz
+          gain, beste gauza batzuk ere ikas daitezke. Batzuetan, jendeak antsietatea
+          nozitzen du, urduri jartzen dira, eta zuk lasaitu nahi dituzu. Hori oso
+          bide egokia da informatika erakargarriagoa egiteko.
       2:
         image: notes/unplug9_2.png
-        text: You break everyone up into two groups where they stand in a line and
-          run relay style. The first person in each group runs to the other side of
-          the room where you have a graph paper drawing and a blank piece of paper
-          waiting for them. They write down the first step to creating that image,
-          run back to their line, tag the next player who goes back up to write the
-          next step.
+        text: Jendea bi azpitaldetan banatzen duzu eta partaideak lerro batean kokatzen
+          dira eta errelebotako moduan egiten dute korrika. Azpitalde bakoitzeko lehenengo
+          pertsonak korrika egiten du gelako beste alderaino, non sareta baten gainean
+          egindako irudi bat eta paper txuri bana dauden. Bi jokalariek paper txurian
+          idazten dute irudi hori sortzeko lehenengo urratsa, itzultzen dira haien
+          lerrora, eta lekukoa pasatzen diote hurrengo jokalariari, zeina korrika
+          joango den beste aldera hurrengo urratsa idazteko.
       3:
         image: notes/unplug9_3.png
-        text: This is a great way to get across the idea of debugging, needing to
-          proofread your own work, and needing to check the work of the people done
-          before you. You'll quickly understand how important it is that you be careful
-          in your coding when a whole team is depending on you.
+        text: Hau arazketaren ideia harrapatzeko modu aparta da, zure lana zuzentzea
+          eta zure aurretik joan direnen lana egiaztatu behar izatea. Oso azkar ulertuko
+          duzu ze garrantzitsua den kontuz idaztea zure kodea talde oso bat zure menpekoa
+          denean.
     unplug10:
       1:
         image: notes/unplug10_1.png
-        text: This activity explains in an easy-to-understand way how the internet
-          works. We explain all the terminology you'll need in simple terms so that
-          students can simulate transmitting messages, like an email.
+        text: Jarduera honek modu ulerterrazean azaltzen du nola funtzionatzen duen
+          internetek. Behar den terminologia guztia modu sinplean azaltzen dugu eta
+          horrela ikasleek mezuak pasatzea simulatu dezakete, mail batean egingo litzatekeen
+          moduan.
       2:
         image: notes/unplug10_2.png
-        text: Students will transmit messages while pretending to be one of three
-          transmission methods. Wireless internet, DSL or fiber optic. The students
-          who represent wi-fi will have to wear the message they're transmitting on
-          their head because wifi is the most likely to drop some information.
+        text: 'Ikasleek mezuak igorriko dituzte hiru igortze metodoetako bat direla
+          suposatuz: haririk gabeko internet, DSLa edo zuntz optikoa. Wi-fia ordezkatzen
+          duten ikasleek igorri behar duten mezua buruan eraman behar dute, wifia
+          delako informazioa galtzeko probabilitaterik handiena duena.'
       3:
         image: notes/unplug10_3.png
-        text: The students pretending to be DSL or cable will carry the message on
-          the back of their hand, where they're slightly less likely to drop information.
-          And the students representing fiber optic will get to carry them with both
-          hands. This activity is a great way to understand something that many of
-          us use every day.
+        text: DSLa edo haria direla suposatzen duten ikasleek mezua eramango dute
+          esku-gainean, non suposatzen den informazioa galtzeko arriskua txikiagoa
+          den. Eta zuntz optikoa ordezkatzen duten ikasleek mezuak eramango dituzte
+          bi eskuekin. Jarduera hau oso baliagarria da gutako askok egunero erabiltzen
+          dugun zerbait ulertzeko.
     unplug11:
       1:
         image: notes/unplug11_1.png
-        text: So now it's time to step back and take a birds eye view of everything
-          you've done in these past nineteen lessons. This is a great time to call
-          out to students that what they've just done is a huge achievement. They've
-          learned more over these lessons than most adults know about computer science.
+        text: Beraz, unea iritsi da atzera egin eta gainetik aztertzeko azken hemeretzi
+          ikasgaietan ikasi duzun guztia. Une aproposa da ikasleei ikusarazteko egin
+          dutena garrantzitsua dela. Ikasgai hauetan zehar pertsona heldu askok informatikari
+          buruz dakitena baino askoz gehiago ikasi dute.
       2:
         image: notes/unplug11_2.png
-        text: Discuss as a class or in small groups about their favorite lessons.
-          Once you take a look back at everything you've learned, this is where your
-          students' creativity can shine. Split them into groups and have them create
-          an unplugged lesson of their own. Assign each group a key concept, like
-          functions or algorithms and have lots of craft materials on hand for them
-          to use. Have each group present their new unplugged activity or even set
-          aside another day to do a few of the student created activities.
+        text: Eztabaidatu talde osoan edo talde txikitan adierazteko zein izan diren
+          haien ikasgairik gustukoenak. Ikasi duzun guztia errepasatzen duzunean,
+          orduan ikasleen sormena agerian gera daiteke. Bana itzazu taldetan eta utziezu
+          bere kabuz sortzen ikasgai bat. Esleitu talde bakoitzari kontzeptu garrantzitsu
+          bat, funtzio edo algoritmo bezalakoa, eta utziezu material asko eskura,
+          erabil ditzaten. Talde bakoitzak aurkez dezala sortutako jarduera eta, nahi
+          izanez gero, erreserbatu beste egun bat ikasleek sortutako jarduera horietako
+          batzuk egiteko.
       3:
         image: notes/unplug11_3.png
-        text: From everyone here at Code.org, we hope you've had a TON of fun during
-          this course. And whether your dream is to create the best new app, use programming
-          to help cure diseases, or you just want to be a stellar problem-solver,
-          this course was the first step in achieving those dreams.
+        text: Code.org-eko guztiek espero dugu PRIMERAN pasako zenuela ikastaro honetan
+          zehar. Eta zure ametsa app hoberena sortzea dela, gaisotasunak sendatzen
+          laguntzeko programak egitea dela edo, besterik gabe, problema ebazle bikaina
+          izan nahi duzula, ikastaro honekin amets horiek egi bihurtzeko lehenengo
+          urratsa eman duzu.
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+        text: Kaixo, ni Kathleen Kennedy naiz eta Star Wars-en ekoizlea naiz. Indarraren
+          Iratzarraldia. Gaur gure izar batekin arituko zara lanean, BB-8-rekin. BB-8
+          robot esferiko bat da. Egiten duen guztia eta egiten duen mugimendu bakoitza
+          konputagailu software bidez dago kontrolatuta. Informatikak industria guztietan
+          du eragina, marketinetik hasi eta osasungintza eta zinemagintzaraino. Finean,
+          ehundaka informatikarik elkarrekin egin zuten lan Indarraren Iratzarraldia
+          filma egiteko.
       2:
         image: notes/starwars_intro_2.JPG
-        text: Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artists develop rigs which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far
-          far away.
+        text: Kaixo, ni Rachel Rose naiz, Ikerkuntza eta Garapenerako senior injeniaria
+          ILM-n, eta animazio eta izakien garapenerako taldearen burua. Indarraren
+          Iratzarraldia filman nire ardura artistei pertsonaien atal mugikorrak garatzen
+          laguntzea da pertsonaiak oso sinisgarriak gerta daitezen urrun-urruneko
+          galaxia batean.
       3:
         image: notes/starwars_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game. We'll
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so that we can drag and drop to
-          write the programs. Under the hood, you're still creating code. After you
-          try the basics with blocks, we'll switch you to JavaScript, one of the most
-          popular programming languages on the web.
+        text: Hurrengo ordubetean gure Star Wars jokoa garatuko dugu. Programazioaren
+          oinarriak irakatsiko dizkizugu. Ohiko programazioa testu formatuan izaten
+          da, baina guk hemen blokeak erabiliko ditugu, arrastatu eta askatuz programak
+          idazteko. Azken finean kodea sortzen arituko zara. Oinarriak blokeen bidez
+          landu eta gero, javaScript-era aldatuko dugu, programazio lengoaia arrakastatsuenetakoa
+          amaraunean.
       4:
         image: notes/starwars_intro_4.JPG
-        text: To start off, we're going to work with Rey to program BB-8 to walk to
-          collect all of the scrap parts. Your screen is split into three parts. On
-          the left is the Star Wars game space, where code will run. The instructions
-          for each level are written below the game space.
+        text: Hasteko Rey-rekin egingo dugu lan BB-8-ri oinez ibiltarazi eta txatarra
+          guztia jaso arazteko. Zure pantaila hiru zatitan dago banatuta. Ezkerrean
+          Star Wars-en joko-eremua dago, bertan kodea exekutatuko da. Maila bakoitzaren
+          argibideak joko-eremuaren azpian daude idatzita.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: Erdiko gunea tresna-kutxa da eta hauetako bloke bakoitza BB-8-k ulertzen
+          duen komando bat da.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
+        text: Eskuineko gune zuria lan-eremua da eta bertan eraikiko dugu gure programa.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what
-          happens? BB-8 moves left one block on the grid.
+        text: mugituEzkerrera(); blokea arrastatzen badut gure laneremura eta Hasi
+          sakatu, zer gertatzen da? BB-8 ezkerrera lauki bat mugitzen da lauki-sarean.
       8:
         image: notes/starwars_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together.
+        text: Eta BB-8-k beste zerbait egitea nahi badut mugituEzkerrera(); blokearen
+          ondoren? Beste bloke bat gehitu diezaioket gure programari. mugituGora();
+          blokea aukeratuko dut eta mugituEzkerrera(); blokearen azpira arrastatuko
+          dut nabarmenduta agertzen den arte. Orduan, askatu eta bi blokeek bat egingo
+          dute.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked
-          from top to bottom on our workspace. If you ever want to delete a block,
-          just remove it from the stack and drag it back into the tool box.
+        text: Eta berriro Hasi sakatzen badut, BB-8-k gure laneremuan zerrendatuta
+          dauden aginduak exekutatuko ditu. Bloke bat ezabatu nahi baduzu, zerrendakit
+          kendu eta arrastatu berriro tresna-kutxara.
       10:
         image: notes/starwars_intro_10.JPG
-        text: After you've hit run, you can always hit the reset button to get BB-8
-          back to the start. Now let's get rolling!
+        text: Hasi sakatzen duzunean beti daukazu aukera leheneratu botoia sakatzeko
+          BB-8 berriro hasierako egoerara itzultzeko. Goazen proba egitera!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: Inside the blocks we've been using are JavaScript commands. JavaScript
-          is the most popular programming language for professional developers today.
-          Blocks are a great way to get started learning to code and in fact, top
-          universities like Harvard and Berkeley start teaching this way. But once
-          we learn the basics, engineers write code by typing because it allows us
-          to go faster.
+        text: Erabiltzen aritu garen blokeen barnean JavaScript aginduak daude. Gauregun,
+          garatzaile profesionalen artean programazio lengoaia ezagunena da JavaScript.
+          Blokeak oso egokiak dira kodetzen ikasten hasteko eta esaterako, Harvard
+          eta Berkeley unibertsitateetan modu hontan hasten dira irakasten. Baina
+          oinarriak ikasita, injeniariek kodea mekanografiatuz idazten dute arinago
+          egiten dutelako horrela.
       2:
         image: notes/starwars_typing_2.JPG
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
+        text: Ehundaka agindu idatzi ditzakegu tresna-kutxa batean bilatu gabe edo
+          arrastatu gabe. Ikasten ari zarenez hasieran mekanografiatzea motelagoa
+          gertatzen zaizu baina proba egitea nahi genuen.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show
-          text button on any puzzle to switch from blocks to typing code as text.
+        text: Zure lan-eremuk goiko ezker izkinan sakatu dezakezu Ikusi iturburua
+          botoia edozein puzletan blokeak utzi eta kodea testu moduan mekanografiatzera
+          pasatzeko.
       4:
         image: notes/starwars_typing_4.JPG
-        text: In the next lesson, we'll start you out in typing mode. Here you can
-          still drag the block from the toolbox or you can type the command name.
-          As you start to type, you'll see names of possible commands show below where
-          you're typing. Instead of typing the whole command name, you can select
-          one of these to move faster. In my job, I use this auto-complete feature
-          all the time when writing code.
+        text: Hurrengo ikasgaian, mekanografia moduaren oinarriak erakutsiko dizkizugu.
+          Oraindik tresna-kutxatik blokeak arrastatu ahal izango dituzu edo komandoaren
+          izena idatzi. Mekanografiatzen hasten zarenean, komando posible guztiak
+          ikusi ahal izango dituzu idazten ari zaren horren azpian. Komando osoaren
+          izena idatzi ordez, aukeran erakusten zaizun horietako bat aukeratu dezakezu,
+          azkarrago egiteko. Nire lanean osatze automatikorako ezaugarri hau etengabe
+          erabiltzen dut kodea idazten dudanean.
       5:
         image: notes/starwars_typing_5.JPG
-        text: When you're typing code, the computer needs you to be very precise.
-          You need to spell and capitalize the command name exactly correctly, including
-          the parentheses and the semi-colon. Even with a small typing mistake, BB-8
-          cannot understand the code and won't be able to move.
+        text: Kodea idazten ari zarenean, konputagailuak zehaztasuna eskatuko dizu.
+          Komandoa letreiatu eta lehenengo letra maiuskulaz modu egoki eta zehatzean
+          jarri beharko duzu, parentesiak eta puntu eta koma barne. Errore tipografiko
+          txiki bat egiten baduzu, BB-8-k ezingo du ulertu eta ez da mugitzeko gai
+          izango.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
+        text: Lerro batean errore bat egiten baduzu, editoreak nabarmendu egingo du
+          zuretzat aldatu eta zuzendu dezazun.
       7:
         image: notes/starwars_typing_7.JPG
-        text: If you get stuck, you can always start over with the start over button
-          and you can switch back to block mode at any time by clicking in the top-right
-          corner. Ok, let's give typing a try! And if you make mistakes, don't get
-          frustrated. It takes everybody a few tries to get it right.
+        text: Trabazen bazara, beti has zaitezke berriro Hasi berriro botoia sakatuz,
+          eta bloke modura alda dezakezu edozein momentutan goiko eskuin izkinean
+          klik eginez. Ondo da, saia gaitezen mekanografiatzen! Eta erroreak egiten
+          badituzu, ez etsi. Guztiok behar ditugu hainbat saiakera zuzen egiteko.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Kaixo, nire izena Charita Carter da. Ekoizke kreatibo seniorra naiz
+          Walt Disney Imagineering-en. Gure gonbidatuentzako atrakzioak ekoizten dituen
+          taldearen arduraduna naiz. Beti ari gara gure gonbidatuen esperientzia hobetzeko
+          moduak bilatzen eta teknologia horren muina da.
       2:
         image: notes/starwars_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Zorionak, lortu duzu! BB-8 programatu duzu. Orain prest zaude zerbait
+          zailagoa egiteko. Goazen bada. programazioaren oinarriak ikasi dituzunez,
+          atzera egingo dugu denboran zure jokoa eraikitzeko, R2-D2 eta C3PO protagonista
+          dituzula.
       3:
         image: notes/starwars_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Joko berri bat egiteko, joko programatzaileek egunero erabiltzen duten
+          gauza bat ikasi behar duzu: gertaerak dira. Gertaerek zure programari esaten
+          diote entzun edo itxaroteko zerbait gertatu bitartean, eta gertatzen denean,
+          ekintza bat exekutatzen da.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Gertaeren adibideak dira saguan klikatzeko, gezidun botoi bat sakatzeko
+          edo pantaila ikuitzeko zain egotea.
       5:
         image: notes/starwars_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: R2-D2 gora mugitu eta Rebel Pilot-arii mezu bat helaraztea egingo dugu
+          eta, ondoren, behera mugitu beste Rebel Pilot-arengana. Gertaerak erabiliko
+          ditugu mugitu arazteko. Jokalariak gora/behera gezidun teklak edo gora/behera
+          botoiak erabiltzen dituenean.
       6:
         image: notes/starwars_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down.
+        text: goraEgitean() gertaera blokea erabiltzen dugu eta eginGora() blokea
+          lotzen diogu. Erabiltzaileak gora gezia sakatzen duenean, goraEgitean()
+          blokea exekutatzen da. Gauza bera egingo dugu R2-D2 behera mugi arazteko.
       7:
         image: notes/starwars_events_7.JPG
-        text: To do this, we'll use a command called whenUp(). When you drag the command
-          out of the toolbox, you'll see that it starts and ends with a curly bracket
-          instead of a semi-colon. This gives us space to put other commands in the
-          middle. Every command that we place inside these brackets will run when
-          the player presses the up arrow.
+        text: Hau egiteko goraEgitean() komandoa erabilio dugu. Komandoa tresna-kutxatik
+          kanpo arrastatzen baduzu, ikusiko duzu giltza artean azaltzen dela eta ez
+          puntu eta komarekin. Honek lekua uzten digu erdian beste komando batzuk
+          jartzeko. Giltza horien artean kokatzen dugun komando guztiak exekutatuko
+          dira erabiltzaileak gora gezia sakatzen duenean.
       8:
         image: notes/starwars_events_8.JPG
-        text: We want R2-D2 to go up so let's put a goUp(); block inside the command.
-          And we'll do the same thing to make R2-D2 go down.
+        text: R2-D2-k gora egitea nahi dugu beraz, jar dezagun joanGora(); bloke bat
+          komandoaren barnean. Eta gauza bera egingo dugu R2-D2-k behera egiteko.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance,
-          we can let R2-D2 react to button press events that move him around the screen.
-          Step by step, your game is getting more interactive.
+        text: Horrela, gure robota kontrolatzeko kode guztia aldez aurretik idatzi
+          ordez R2-D2 pantailan zehar mugituko duten botoiak sakatzeko gertaeren aurrean
+          erreakziona dezan nahi dugu. Urratsez urrats zure jokoarekin gero eta gehiago
+          elkarreragin daiteke.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Kaixo, nire izena Alice da eta proiektu eta injeniaritza taldeak gidatzen
+          ditut hemen, Code.org-en eta une hontan jarraitzen ari zaren tutorialean
+          egin dut lan.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: Azkeneko maila lortu duzu. Zorionak! Star Wars jokoa egiteko behar duzun
+          guztia ikasi duzu. Ez dago ez argibiderik, ez ebazteko puzlerik. Zure jokoa
+          eraiki dezakezu eta aukeratu nola funtzionatuko duen. Kontu bat gehiago,
+          soinu berriak eta komando berriak desblokeatu dituzu, oraindik gehiago egin
+          ahal izateko.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[ikasleak berriketan] Joko bat egin dugu funtsean puntuak lortzeko
+          Puffer Pig-ak lortzen dituzuenean. Ordaina da Puffer Pig bat lortzen duzun
+          bakoitzean Storm Trooper bat azaltzen dela. Orain pantaila Puffer Pig-ez
+          beteta daukazu eta 10,000 ikuitu behar dituzu irabazteko.'
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[ikasleak berriketan] Joko bat egin dugu zeinetan ezin duzun galdu
+          eta akatzen duzun orok puntuak ematen dizkizun. Nire programan, gauzak aldatu
+          ditut eta gora klikatzen duzunean zure pertsonaia behera doa eta, eskuinera
+          joateko esaten diozunean, pertsonaiak ezkerrera egiten du. Benetan zaila
+          da! Batzuetan abantaila daukazu, abantaila injustua, jokoaren garatzailea
+          bazara. Lortu al dut? Bai noski!'
       5:
         image: notes/starwars_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Zure sorkuntza amaitu duzunean, aukeratu partekatu zure lagunekin partekatzeko
+          edo zure telefonoak jokatzeko esteka lortzeko. Ondo pasa!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: 'Hi I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
-          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.'
+        text: Kaixo, ni Kathleen Kennedy naiz eta Star Wars-en ekoizlea naiz. Indarraren
+          Iratzarraldia. Gaur gure izar batekin arituko zara lanean, BB-8-rekin. BB-8
+          robot esferiko bat da. Egiten duen guztia eta egiten duen mugimendu bakoitza
+          konputagailu software bidez dago kontrolatuta. Informatikak industria guztietan
+          du eragina, marketinetik hasi eta osasungintza eta zinemagintzaraino. Finean,
+          ehundaka informatikarik elkarrekin egin zuten lan Indarraren Iratzarraldia
+          filma egiteko.
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artist develop rigs, which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far,
-          far away.
+        text: Kaixo, ni Rachel Rose naiz, Ikerkuntza eta Garapenerako senior injeniaria
+          ILM-n, eta animazio eta izakien garapenerako taldearen burua. Indarraren
+          Iratzarraldia filman nire ardura artistei pertsonaien atal mugikorrak garatzen
+          laguntzea da pertsonaiak oso sinisgarriak gerta daitezen urrun-urruneko
+          galaxia batean.
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game that will
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so we can drag and drop to write
-          the programs. To start off, we're going to work with Rey to program BB-8
-          to walk to collect all of the scrap parts.
+        text: Hurrengo ordubetean gure Star Wars jokoa garatuko dugu. Programazioaren
+          oinarriak irakatsiko dizkizugu. Ohiko programazioa testu formatuan izaten
+          da, baina guk hemen blokeak erabiliko ditugu, arrastatu eta askatuz programak
+          idazteko. Hurrengo ordubetean Hasteko Rey-rekin egingo dugu lan BB-8-ri
+          oinez ibiltarazi eta txatarra guztia jaso arazteko.
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars
-          game space where code will run. The instructions for each level are written
-          below the game space.
+        text: Zure pantaila 3 zati nagusitan zatitu da. Ezkerrean programa exekutatzeko
+          Star Wars jokalekua duzu. Maila bakoitzaren instrukzioak jokalekuaren azpian
+          idatzita daude.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: Erdiko gunea tresna-kutxa da eta hauetako bloke bakoitza BB-8-k ulertzen
+          duen komando bat da.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we're going to build our program.
+        text: Eskuinean dagoen espazio zuria laneremua da eta hor eraikiko dugu gure
+          programa.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8
-          moves left one block on the grid.
+        text: mugituEzkerrera(); blokea laneremura arrastatzen badut, zer gertatzen
+          da? BB-8 lauki-sarean koadro bat mugitzen da.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together. When I press run
-          again, BB-8 will perform the commands that are stacked top to bottom on
-          our workspace.
+        text: Eta mugituEzkerrera(); blokearen ondoren BB-8-k zerbait egitea nahi
+          badut? Gure programari beste bloke bat gehi diezaioket. mugituGora(); blokea
+          aukeratuko dut eta arrastatu mugituEzkerrera(); blokearen azpira nabarmentzen
+          den arte. Ondoren, askatu eta bi blokeek bat egingo dute. Hasi sakatzen
+          dudanean, BB-8-k laneremuan dauden aginduak goitik behera exekutatuko ditu.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back into the toolbox.
+        text: Bloke bat ezabatu nahi baduzu, zerrendatik kendu eta arrastatu berriro
+          tresna-kutxara.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: After you hit run, you can always hit the reset button to get BB-8 back
-          to the start. Now let's get rolling!
+        text: Hasi sakatu ondoren, beti sakatu dezakezu leheneratu botoia BB-8 berriro
+          hasierara eramateko. Goazen proba egitera!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Kaixo, nire izena Charita Carter da. Ekoizke kreatibo seniorra naiz
+          Walt Disney Imagineering-en. Gure gonbidatuentzako atrakzioak ekoizten dituen
+          taldearen arduraduna naiz. Beti ari gara gure gonbidatuen esperientzia hobetzeko
+          moduak bilatzen eta teknologia horren muina da.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: Zorionak, lortu duzu! BB-8 programatu duzu. Orain prest zaude zerbait
+          zailagoa egiteko. Goazen bada. programazioaren oinarriak ikasi dituzunez,
+          atzera egingo dugu denboran zure jokoa eraikitzeko, R2-D2 eta C3PO protagonista
+          dituzula.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Joko berri bat egiteko, joko programatzaileek egunero erabiltzen duten
+          gauza bat ikasi behar duzu: gertaerak dira. Gertaerek zure programari esaten
+          diote entzun edo itxaroteko zerbait gertatu bitartean, eta gertatzen denean,
+          ekintza bat exekutatzen da.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Gertaeren adibideak dira saguan klikatzeko, gezidun botoi bat sakatzeko
+          edo pantaila ikuitzeko zain egotea.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: R2-D2 gora mugitu eta Rebel Pilot-arii mezu bat helaraztea egingo dugu
+          eta, ondoren, behera mugitu beste Rebel Pilot-arengana. Gertaerak erabiliko
+          ditugu mugitu arazteko. Jokalariak gora/behera gezidun teklak edo gora/behera
+          botoiak erabiltzen dituenean.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down. Now instead
-          of writing all the code to control our droid in advance, we can let R2-D2
-          react to button press events that move him around the screen.
+        text: GoraEgitean() gertaera-blokea erabili eta itsatsi horri joanGora() blokea.
+          Jokalariak gora gezidun tekla sakatzen duenean, goraEgitean() blokeari dagokion
+          kodea exekutatuko da. Eta gauza bera egingo dugu R2-D2 behera mugi dadin.
+          Oraingoan, gure robota kontrolatzeko kode guztia idatzi ordez, botoiak sakatzeko
+          gertaerekin erreakzionatzen utziko diogu R2-D2-ri pantailan zehar mugitzeko.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Urratsez urrats, zure jokoarekin gero eta gehiago elkarreragin daiteke.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Kaixo, nire izena Alice da eta proiektu eta injeniaritza taldeak gidatzen
+          ditut hemen, Code.org-en eta une hontan jarraitzen ari zaren tutorialean
+          egin dut lan.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: Azkeneko maila lortu duzu. Zorionak! Star Wars jokoa egiteko behar duzun
+          guztia ikasi duzu. Ez dago ez argibiderik, ez ebazteko puzlerik. Zure jokoa
+          eraiki dezakezu eta aukeratu nola funtzionatuko duen. Kontu bat gehiago,
+          soinu berriak eta komando berriak desblokeatu dituzu, oraindik gehiago egin
+          ahal izateko.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[ikasleak berriketan] Joko bat egin dugu funtsean puntuak lortzeko
+          Puffer Pig-ak lortzen dituzuenean. Ordaina da Puffer Pig bat lortzen duzun
+          bakoitzean Storm Trooper bat azaltzen dela. Orain pantaila Puffer Pig-ez
+          beteta daukazu eta 10,000 ikuitu behar dituzu irabazteko.'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[ikasleak berriketan] Joko bat egin dugu zeinetan ezin duzun galdu
+          eta akatzen duzun orok puntuak ematen dizkizun. Nire programan, gauzak aldatu
+          ditut eta gora klikatzen duzunean zure pertsonaia behera doa eta, eskuinera
+          joateko esaten diozunean, pertsonaiak ezkerrera egiten du. Benetan zaila
+          da! Batzuetan abantaila daukazu, abantaila injustua, jokoaren garatzailea
+          bazara. Lortu al dut? Bai noski!'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Zure sorkuntza amaitu duzunean, aukeratu partekatu zure lagunekin partekatzeko
+          edo zure telefonoak jokatzeko esteka lortzeko. Ondo pasa!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: Nire izena Jens Bergensten da baina Jeb izenarekin ezagutzen naute.
+          Minecraft-en garatzaileen burua naiz hemen, Mojang-en, Estokolmon. Hamaika
+          edo hamabi urte nituen programatzen hasi nintzenean jokoak egin nahi nituelako.
+          Nire aitaren lagun batez esan zidan jokoak egiteko programatzen ikasi behar
+          zela. Eta horrela hasi nintzen. Jokoen arkitektura pentsatzea eta diseinatzea
+          gustoko dut. Hori da Minecraft-etik gehien erakartzen nauena.
       2:
         image: notes/mc_intro_2.JPG
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
+        text: Hurrengo orduan informatikaren oinarriak ikasiko dituzu Minecraft mundu
+          simulatu batean Alex edo Steve mugitzeko programatuz.
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: Ohikoprogramazioa testu moduan egiten da baina gaur Blockly erabiliko
+          dugu, programak idazteko arrastatu eta askatu ditzakezun bloke bisualak
+          erabiltzen dituen sistema. Azken finean, javascript kodea sortzen arituko
+          zara.
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: Ikasiko dituzun kontzeptuak programatzaileek egunero erabiltzen dituztenak
+          dira eta informatikaren oinarriak dira. Hemen, Mojang-en, Minecraft martxan
+          jartzeko erabiltzen ditugun berak dira.
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: Hasi aurretik, zure pertsonaia aukeratuko duzu. Nik Alex aukeratuko
+          dut. Pantailan zehar mugituko duen programaren kodea idatziko dugu.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: Zure pantaila hiru zati nagusitan banatzen da. Ezkerrean, Minecraft-en
+          jokoeremua dago, zure programa bertan exekutatuko da. Maila bakoitzeko zehaztapenak
+          azpian daude idatzita.
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: Erdiko gunea tresna-kutxa da eta hauetako bloke bakoitza Alex-en ekintzak
+          gidatzen dituen agindu bat da.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Eskuinean duzun gune zuria laneremua da eta bertan eraikiko dugu programa.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: mugituAurrera(); blokea arrastatzen badugu laneremura eta, ondoren,
+          Hasi sakatu, zer gertatzen da? Alex-ek lauki bat aurrera egiten du lauki-sarean.
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: Eta beste zerbait eginnahi badugu aurrera lauki bat egin ondoren? Programari
+          beste bloke bat gehitu diezaiokegu. biraEskuinera(); blokea aukeratuko dut
+          eta nire mugituAurrera(); blokearen azpira arrastatuko dut lerro naranja
+          azaltzen den arte. Ondoren, askatu eta bi blokeek bat egingo dute. Berriro
+          Hasi sakatzen dugunean, Alex-ek laneremuko zerrendan dauden aginduak exekutatuko
+          ditu, goitik behera.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: Bloke bat ezabatu nahi baduzu, zerrendatik kendu eta arrastatu berriro
+          tresna-kutxara.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: Zure aldaketak desegin eta hasierako egoerara itzultzeko, erabili laneremuko
+          goiko eskuin izkinan dagoen Hasi berriro botoia. Kontu bat gehiago, ikusten
+          al dituzu biratzeko blokeetan dauden triangelu txiki horiek? Triangelu horiek
+          ikusten badituzu, aukera desberdinak dituzula esan nahi du. Hasi gaitezen
+          kodearekin!
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: Lydia Winters naiz, Mojang markako zuzendaria eta Minecraft izeneko
+          joko txiki bat egin dugu.
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: Nire zeregin gogokoena Minecraft-en esploratzea da. Kobazuloetako abenturak
+          maite ditut eta bertan zer bilatu dezakedan ikusi. Programatzaile ez naizenez,
+          Minecraft-eko ikasgaia jarraitu eta nere kabuz kodetzen ikasteko desiatzen
+          nago.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: Azkeneko mailak mugituAurrera(); bloke mordoa behar du. Errazagoa litzateke
+          konutagailuari esan ahal izatea mugituAurrera(); komandoa lau edo bost aldiz
+          exekutatzeko. Zorionez, konputagailuak oso onak dira komandoak errepikatzen
+          errepikatu begizten bidez.
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: Minecraft egiterakoan, errepikatu begiztak erabiltzen ditugu mundu berri
+          bat sortzeko hasierako materialak kokatzeko. Hori milaka eta milaka bloke
+          dira. Begiztak erabiltzen ditugu ere bai, adibidez Alex-en oinak aurrera
+          eta atzera mugitzeko bera oinez doan heinean. Errepikatu begiztak programazioaren
+          tresna oso baliozkoak dira.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: Gaua gainera datorkigu eta horregatik, datozen hurrengo mailatan salbu
+          egoteko etxea eraikiko dugu. Modu errazean egingo dugu hau errepikatu blokea
+          erabiliz.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: Gure etxearen orma eraikitzeko Alex-i mugituAurrera(); egiteko eta ohola
+          jartzeko lau aldiz estea daukagu, edo esan mugituAurrera(); egiteko eta
+          ohol bat jartzeko eta, ondoren, erabili errepikatu blokea ekintza hori hainbat
+          aldiz egikaritzeko. Errepikatu blokean egingo dugu klik eta esan zenbat
+          aldiz nahi dugun ekintza hori exekutatzea. Eraiki dezagun gure etxea gaua
+          egin aurretik! Ongi pasa.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: Orain, baldintzapeko aginduak ikasiko ditugu. Baldintzapeko aginduak
+          programatzen ikasteko oinarrizkoak dira. Konputagailuari erabakiak hartzen
+          laguntzen diote.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Konputagailu guztiek erabiltzen dituzte baldintzapeko aginduak, nire
+          telefonoak ere bai. Adibidez, nire telefonoa hartzen dudanean kode bat exekutatzen
+          du telefonoa desblokeatuko duen pasahitza zuzena sartuz gero. Kontrako kasuan,
+          errore mezu bat bistaratuko du.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: Baldintzapeko aginduak erabil ditzakezu zure kodean Steve eta Alice-ek
+          erreakziona dezaten munduan ikusten dutenaren arabera. Adibidez, harri bat
+          badute aurrean, orduan ezkerrera bira egin dezakete. Edo eskuinera, arbola
+          baten aurrean aurkitzen badira.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: Kasu hontan, ez dugu laban erori nahi. Erraza da labaren kasuan zer
+          egin planifikatzea. Pantailan ikus dezakegu. Baina zer gertatzen da harriaren
+          azpian dagoen eta ikusi ezin dezakegun labarekin?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: Harria suntsitu ondoren eta aurrera egin aurretik labarik dagoen begiratu
+          behar dugu. Laba baldin badago, harri bat jarri beharko dugu gure pertsonaiaren
+          aurrean aurrera egin aurretik. Horrela modu seguruan mugitu ahal izango
+          gara. Suntsitzeko garaia! Eta gogoratu baldintzapeko agindua erabili behar
+          duzula kontuz ibiltzeko.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Zorionak! Informatikaren oinarriak ikasi berri dituzu.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Orain bloke hauek erabili ditzakezu nahi duzuna egiteko. Ez dago argibiderik
+          eta ebazteko puzlerik. Gogoak ematen dizuna eraiki dezakezu. Aukeratu beharko
+          duzu.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[ikasleak hizketan] Erreala izan behar du. Ilea moztu. L bat egin dut
+          argi-zuziekin. A bat egin dut urki oholekin. Funtzionatu du. Funtzionatu
+          du. Lanazko etxea egin dugu!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Zure sorkuntza amaitu duzunean, aukeratu partekatu esteka bat lortu
+          eta zure lagunekin partekatzeko. Ondo pasa!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Zorionak! Informatikaren oinarriak ikasi berri dituzu.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Orain bloke hauek erabili ditzakezu nahi duzuna egiteko. Ez dago argibiderik
+          eta ebazteko puzlerik. Gogoak ematen dizuna eraiki dezakezu. Aukeratu beharko
+          duzu.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[ikasleak hizketan] Erreala izan behar du. Ilea moztu. L bat egin dut
+          argi-zuziekin. A bat egin dut urki oholekin. Funtzionatu du. Funtzionatu
+          du. Lanazko etxea egin dugu!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Orain nahi duzuna eraiki dezakezu! Gozatu!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: Eskuinean duzun gune zuria laneremua da eta bertan eraikiko dugu programa.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.

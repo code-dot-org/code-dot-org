@@ -134,7 +134,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Checking for a Question\r\n\r\nWe're going to start adding some \"intelligence\" to our Movie Bot. Since we've added `includes` it can now tell if its keywords appear anywhere in the input. As a result some inputs may be questions while others might simply be statements. **We'd like the movie bot to respond differently to questions and statements.**\r\n\r\nIn order to tell when the user is asking a question **we will be checking whether the input includes a question mark **.\r\n\r\n# Do This:\r\n\r\n* Add a separate statement to **check if the input includes a \"?\"**. \r\n* If the input includes a question mark **print \"That's a good question.\" before the answer.**\r\n* Otherwise print **\"I only answer questions.\" before the answer.**\r\n* **Test out a couple sentences with your keywords** to make sure the change worked.\r\n\r\n**Example Input --->** | **Output**\r\n---|---\r\nWhat's the best action movie? | That's a good question. The best action movie is any James Bond movie.\r\nI love comedy | I only respond to questions. The best comedy movie is The Princess Bride.\r\n<br>\r\n**Note:** Check out the flowchart below to see the logic we are trying to change.\r\n\r\n<img src=\"https://images.code.org/e32fd89b6e03b9d49c94e39e79120c03-image-1446072381510.png\" style=\"width: 100%\">\r\n\r\n<a src=\"https://images.code.org/e32fd89b6e03b9d49c94e39e79120c03-image-1446072381510.png\" target=\"_blank\">Click to open in separate window.</a>",
+    "markdown_instructions": "# Checking for a Question\r\n\r\nWe're going to start adding some \"intelligence\" to our Movie Bot. Since we've added `includes` it can now tell if its keywords appear anywhere in the input. As a result some inputs may be questions while others might simply be statements. **We'd like the movie bot to respond differently to questions and statements.**\r\n\r\nIn order to tell when the user is asking a question **we will be checking whether the input includes a question mark **.\r\n\r\n# Do This:\r\n\r\n* Add a separate statement to **check if the input includes a \"?\"**. \r\n* If the input includes a question mark **print \"That's a good question.\" before the answer.**\r\n* Otherwise print **\"I only answer questions.\" before the answer.**\r\n* **Test out a couple sentences with your keywords** to make sure the change worked.\r\n\r\n**Example Input --->** | **Output**\r\n---|---\r\nWhat's the best action movie? | That's a good question. The best action movie is any James Bond movie.\r\nI love comedy | I only respond to questions. The best comedy movie is The Princess Bride.\r\n<br>\r\n**Note:** Check out the flowchart below to see the logic we are trying to change.\r\n\r\n<img src=\"https://images.code.org/e32fd89b6e03b9d49c94e39e79120c03-image-1446072381510.png\" style=\"width: 100%\">\r\n\r\n<a href=\"https://images.code.org/e32fd89b6e03b9d49c94e39e79120c03-image-1446072381510.png\" target=\"_blank\">Open diagram in a new tab</a>",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -164,7 +164,8 @@
     "project_template_level_name": "U3 - Movie Bot - Template",
     "execute_palette_apis_only": "false",
     "instructions": "Add a separate set of if statements to check for a \"?\" in the input. (Click to see full instructions)",
-    "lock_zero_param_functions": "false"
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "83x5EXopjqV0IWawBa10nGFcFhazSOR4CYWWPCrikii5SfqRe1KowPLvY33R\n0sf+\n"
   }
 }]]></config>
   <blocks/>

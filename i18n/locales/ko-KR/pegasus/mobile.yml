@@ -114,7 +114,6 @@ ko-KR:
   hoc_is_here: '@codeorg 에서  #HourOfCode 를 살펴보세요'
   just_did_hoc: '@codeorg 에서  #HourOfCode 를 완료했습니다'
   twitter_teach_cs: 왜 더 많은 학교들이 컴퓨터과학(정보과학)을 가르치지 않을까요? 우리가 이를 해결 할 수 있습니다. http://youtu.be/nKIu9yen5nc. http://code.org/ 에서 더 많은 내용을 알아보세요.
-  learn_hoc_prizes: '모든 교육자들에 대한 상품에 대해<a href="https://hourofcode.com/prizes">더 살펴보세요.</a>'
   learn_hoc: Hour of Code 해보기
   beyond_hoc: Hour of Code 이후 학습
   what_gender: 성별?
@@ -280,6 +279,7 @@ ko-KR:
   volunteer_engineer_submission_intro_recruit: |-
     이 선생님들은 다른 분들로부터 도움 받고 싶어합니다.<span style="font-family: 'Gotham 7r', sans-serif;">컴퓨터과학(정보과학) 교육에 열정적인 전문가</span> 로써 수업을 도와주시거나, 학생들에게<span style="font-family: 'Gotham 7r', sans-serif;">꿈과 희망을 심어 주실 수 있는 분으로서,</span> 컴퓨터과학(정보과학) 으로 가능한 다양한 것들에 대해서 이야기해 주시길 원하고 있습니다.(화상 회의로도 가능합니다.) 자원봉사를 원하지 않으신다면, Hour of Code 행사 운영에 대해서 <a href="%{url}">더 살펴봐주세요.</a>
   volunteer_engineer_submission_intro_signup: '컴퓨터과학/공학/교육과 대학생이거나 소프트웨어 개발자이시면 <span class="form-required-field">*</span> 표 있는 곳을 채워주세요.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: 자원봉사자 지도에 선생님에게 공유되는 정보
   volunteer_engineer_submission_field_name: 이름
   volunteer_engineer_submission_field_name_placeholder: 성명
@@ -514,7 +514,7 @@ ko-KR:
   dashboard_faq_k5: K-5(초등학교 5학년) 자주묻는 질문들
   dashboard_announcements: 공시사항
   dashboard_announce_view_all: 모두 보기
-  dashboard_announce_hoc: '<b>2015년 11월 9일</b> - 곧 개봉할 영화 Star Wars: The Force Awakens을 소재로 만든 새로운 Hour of Code 튜토리얼이 여기 있습니다. 레이와 함께 새로운 드로이드, BB-8을 움직여 함께 임무를 수행하세요. 그리고나서 여러분이 만든 게임을 은하계멀리 멀리 공유하세요.'
+  dashboard_announce_hoc: '<b>2015년 11월 23일</b> - 곧 개봉할 영화 Star Wars: The Force Awakens을 소재로 만든 새로운 Hour of Code 튜토리얼이 여기 있습니다. 레이와 함께 새로운 드로이드, Bb-8을 움직여 함께 임무를 수행하세요. 그리고나서 여러분이 만든 게임을 은하계멀리 멀리 공유하세요.'
   code_hoc_coming: 'Hour of Code 가 여기있습니다. - 12월8일-14일!'
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   learn_more: 더 알아보기
@@ -526,16 +526,22 @@ ko-KR:
   learn_educator_resources_description: Hour of Code를 가르치는 방법 배우기
   learn_educator_resources_button: 교사를 위한 자료
   learn_are_you_educator: '교육자이신가요? Hour of Code <a href="http://hourofcode.com/resources/how-to">를 가르치는 방법</a>을 배워보세요.'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '모든 교육자들에 대한 상품에 대해<a href="https://hourofcode.com/prizes">더 살펴보세요.</a>'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: 새로운 Hour of Code 튜토리얼을 경험해 보세요.
   hoc2014_try_new_tutorial: 새로운(beta) Hour of Code 튜토리얼 해보기
   hoc2014_try_scrat: 앵그리버드, 식물과좀비, 스크랫
   hoc2014_try_frozen: 프로즌 왕국에서온 안나와 엘사와 함께하는 예술가 퍼즐
   carousel_heading_codeorg: Code.org 튜토리얼
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: 써드 파티 튜토리얼
   carousel_heading_third_party: 써드 파티 튜토리얼
   carousel_heading_international: 다른 언어로 된 튜토리얼
   carousel_heading_domestic: 영어 튜토리얼들
-  carousel_heading_beginners: 처음하는 사람들을 위한 튜토리얼
+  carousel_heading_beginners: K-8(유치원-초1) 학생들을 위한 튜토리얼
   carousel_heading_javascript: Javascript 를 교육할 수 있는 튜토리얼들
   carousel_heading_unplugged: 적당한 장비나 인터넷 연결이 없나요? 컴퓨터과학 언플러그드 활동을 해보세요.
   carousel_heading_devices: 스마트폰과 패드를 위한 튜토리얼 앱
@@ -597,8 +603,10 @@ ko-KR:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: 가위, 바위, 보
-  hourofcode_name: 새로운 code.org/hoc
+  hourofcode_name: 컴퓨터 프로그램을 직접 만들어 보세요
   playlab_name: Play Lab
+  infinity_name: 무한 Play Lab
+  artist_name: 예술가
   codeorg_gradelevel: 나이 4세-104세
   codeintl_gradelevel: 나이 4세-104세
   thinkersmithspanish_gradelevel: Por todos
@@ -640,6 +648,8 @@ ko-KR:
   frozen_gradelevel: 나이 8세이상
   starwars_gradelevel: 6세 이상
   playlab_gradelevel: 나이 4세-104세
+  infinity_gradelevel: 나이 4세-104세
+  artist_gradelevel: 나이 4세-104세
   codeorg_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   codeintl_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   thinkersmithspanish_platformtext: 언플러그드
@@ -718,10 +728,12 @@ ko-KR:
   thinkersmith2_shortdescription: 정보를 표현하기 위해 컴퓨터에서 사용하는 1/0 들의 표현을 배워보세요.
   kodableunplugged_shortdescription: 재미있는 컴퓨터과학 언플러그드 활동 예시들
   projguts_shortdescription: 가위/바위/보 를 이용해 모델링과 시뮬레이션을 경험해 보세요.
-  hourofcode_shortdescription: 새로운 code.org/hoc
+  hourofcode_shortdescription: 마크 주커버그, 앵그리버드와 함께 코드 배우기
   frozen_shortdescription: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 사용하세요.
   starwars_shortdescription: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.
   playlab_shortdescription: Play Lab을 이용해 스토리나 게임을 만드세요!
+  infinity_shortdescription: 플레이 랩을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 스토리나 게임을 만드세요
+  artist_shortdescription: 예술가를 이용해 멋진 그림과 디자인을 만들어보세요!
   codeorg_longdescription: 드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다.
   codeintl_longdescription: 드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -951,3 +963,11 @@ ko-KR:
   compatibility_https_header: Code.org가 HTTPS를 사용할 수 있도록 활성화 해주세요
   compatibility_https_message: "보안을 강화하기 위해서, %{https_date}부터 HTTPS방식으로 변경됩니다. 이 날짜 이후로는 Code.org에  들어올 수 없을 수도 있습니다. Code.org에서 HTTPS를 사용하도록 설정하는 방법은 <a href='%{it_requirements_url}'>여기</a> 를 클릭하여 알아볼 수 있습니다."
   compatibility_https_hide_this_warning: 경고창 숨기기
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: 펄럭이기
+  infinity_shortcode: inf
+  playlab_shortcode: 실행
+  artist_shortcode: art

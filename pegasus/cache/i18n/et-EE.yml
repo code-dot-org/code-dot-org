@@ -139,8 +139,6 @@
   just_did_hoc: 'Ma läbisin just #HourOfCode - tšekka seda! @codeorg'
   twitter_teach_cs: Miks rohkemates koolides ei õpetata arvutiteadust? Me saame seda
     muuta. http://youtu.be/nKIu9yen5nc. Et saada rohkem infot, ülasta http://code.org/.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Loe lisa</a> auhindade
-    kohta igale õpetajale.
   learn_hoc: Õpi KoodiTunnis
   beyond_hoc: Lisaks KoodiTunnile
   what_gender: Mis soost sa oled?
@@ -340,15 +338,18 @@
     sadade miljonite õpilasteni enam kui 180 riigis. Palun tule samuti osalema arvutiteaduse
     õppe nädala raames, mis toimub 7.-13. detsembril.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Palun sisesta järgnev info, kui oled
     arvutiteaduse jmt tudeng või programmeerija. Väljad märgiga <span class="form-required-field">*</span>
     on kohustuslikud.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Vabatahtlike kaardil õpetajatega jagatud
     informatsioon
   volunteer_engineer_submission_field_name: Nimi
@@ -672,12 +673,23 @@
   learn_educator_resources_button: Õpetaja materjalid
   learn_are_you_educator: Oled õpetaja? Õpi <a href="http://hourofcode.com/resources/how-to">kuidas
     õpetada KoodiTundi</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Loe lisa</a> auhindade
+    kohta igale õpetajale.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Proovi meie uusi KoodiTunni juhendeid
   hoc2014_try_new_tutorial: Proovi meie uut KoodiTunni beta õpetusvideot
   hoc2014_try_scrat: Angry Birds, PvZ ja Scrat
   hoc2014_try_frozen: Näitleja Anna ja Elsaga, filmist "Lumekuninganna ja Igavene
     talv"
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Juhendid sinu keeles
@@ -750,6 +762,8 @@
   projguts_name: Kivi, paber, käärid
   hourofcode_name: Koht uue code.org/hoc jaoks
   playlab_name: Play Lab
+  infinity_name: Lõpmatu Play Lab
+  artist_name: Kunstnik
   codeorg_gradelevel: Vanusele 4-104
   codeintl_gradelevel: Vanusele 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -791,6 +805,8 @@
   frozen_gradelevel: Vanusele 8+
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Vanusele 4-104
+  infinity_gradelevel: Vanusele 4-104
+  artist_gradelevel: Vanusele 4-104
   codeorg_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   codeintl_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   thinkersmithspanish_platformtext: Ilma tehnikata tegevused
@@ -882,12 +898,15 @@
   kodableunplugged_shortdescription: Lõbus avutivaba ülesanne
   projguts_shortdescription: Proovige modelleerimist ja simulatsiooni kivi/paber/käärid
     abil
-  hourofcode_shortdescription: Koht uue code.org/hoc jaoks
+  hourofcode_shortdescription: Õpi programmeerima koos Mark Zuckerbergi ja Angry Birds'iga!
   frozen_shortdescription: Programmeerigem, et ühineda Anna ja Elsaga samal ajal,
     kui nad avastavad jää võlu ja ilu.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: Loo lugu või mäng "Play Lab"iga!
+  infinity_shortdescription: Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad
+    Disney Infinity tegelased.
+  artist_shortdescription: Joonista lahedaid pilte ja kujundusi Kunstnikuga!
   codeorg_longdescription: Õpi arvutiteaduse algpõhimõtteid "sikuta ja lase lahti"
     programmeerimise amil. See mängusarnane iseõppimise videos esinevad by Bill Gates,
     Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Õpi kordusi, tingimuslauseid
@@ -1336,3 +1355,19 @@
     Pärast seda kuupäeva ei saa saa Code.org siseneda. <a href='%{it_requirements_url}'>Kliki
     siia</a>, et õppida, kuidas HTTPSi Code.org lehel kasutada.
   compatibility_https_hide_this_warning: Peida see hoiatussõnum
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: laksuta tiibu
+  infinity_shortcode: inf
+  playlab_shortcode: mängi
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

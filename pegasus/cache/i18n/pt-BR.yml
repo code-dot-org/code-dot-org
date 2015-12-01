@@ -143,8 +143,6 @@
   twitter_teach_cs: Por que mais escolas não ensinam ciência da computação? Podemos
     dar um jeito nisso. http://youtu.be/2DxWIxec6yo. Acesse http://code.org/ para
     saber mais.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Saiba mais</a> sobre os
-    prêmios para educadores.
   learn_hoc: Aprenda programação com a Hora do Código
   beyond_hoc: Além da Hora do Código
   what_gender: Você é menino ou menina?
@@ -374,6 +372,9 @@
   volunteer_engineer_submission_intro_signup: Forneça as seguintes informações se
     você é um estudante de ciência da computação ou um profissional de software. Os
     campos marcados com um <span class="form-required-field">*</span> são obrigatórios.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Informações compartilhadas com professores
     no mapa de voluntários
   volunteer_engineer_submission_field_name: Nome
@@ -718,24 +719,35 @@
   learn_sign_up_description: Cadastre-se para participar da Hora do Código durante
     a Semana da Educação em Ciência da Computação
   learn_sign_up_button: Inscreva-se
-  learn_videos_watch: Assista a esse vídeo inspirador com sua classe
-  learn_videos_show: Mostre esse vídeo inspirador para sua classe
+  learn_videos_watch: Assista a esse vídeo inspirador com sua turma
+  learn_videos_show: Mostre esse vídeo inspirador para sua turma
   learn_videos_before_hoc: Assista a um vídeo inspirador antes de sua Hora do Código
   learn_educator_resources_description: Aprenda como ensinar uma Hora do Código
   learn_educator_resources_button: Recursos para educadores
   learn_are_you_educator: Você é um educador? Saiba <a href="http://hourofcode.com/resources/how-to">como
     ensinar uma Hora do Código</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Saiba mais</a> sobre os
+    prêmios para educadores.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Experimente nossos novos tutoriais da Hora do Código
   hoc2014_try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão
     beta
   hoc2014_try_scrat: Angry Birds, PvZ e Scrat
   hoc2014_try_frozen: O Artista com Anna e Elsa, do filme Frozen
-  carousel_heading_codeorg: Tutoriais por Code.org
-  carousel_heading_3rd_party: Tutoriais por terceiros
-  carousel_heading_third_party: Tutoriais por terceiros
+  carousel_heading_codeorg: Tutoriais da Code.org
+  carousel_heading_codeorg_any_device: Tutoriais da Code.org (para todos os dispositivos)
+  carousel_heading_3rd_party: Tutoriais de terceiros
+  carousel_heading_third_party: Tutoriais de terceiros
   carousel_heading_international: Tutoriais no seu idioma
   carousel_heading_domestic: Tutoriais disponíveis em inglês
-  carousel_heading_beginners: Tutoriais para iniciantes
+  carousel_heading_beginners: Tutoriais para alunos do Ensino Fundamental
   carousel_heading_javascript: Tutoriais que ensinam JavaScript
   carousel_heading_unplugged: Não tem dispositivos eletrônicos nem Internet? Conheça
     as atividades de ciência da computação "offline"
@@ -804,6 +816,8 @@
   projguts_name: Pedra, papel, tesoura
   hourofcode_name: Espaço reservado para um novo code.org/hoc
   playlab_name: Laboratório
+  infinity_name: Laboratório infinito
+  artist_name: Artista
   codeorg_gradelevel: De 4 a 104 anos
   codeintl_gradelevel: De 4 a 104 anos
   thinkersmithspanish_gradelevel: Todas as idades
@@ -845,6 +859,8 @@
   frozen_gradelevel: A partir de 8 anos
   starwars_gradelevel: A partir de 6 anos
   playlab_gradelevel: De 4 a 104 anos
+  infinity_gradelevel: De 4 a 104 anos
+  artist_gradelevel: De 4 a 104 anos
   codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
   codeintl_platformtext: Navegadores Web modernos, smartphones, tablets
   thinkersmithspanish_platformtext: Offline
@@ -939,12 +955,15 @@
     representar informações
   kodableunplugged_shortdescription: Um divertido exercício offline
   projguts_shortdescription: Conheça a modelagem e a simulação com pedra/papel/tesoura
-  hourofcode_shortdescription: Espaço reservado para um novo code.org/hoc
+  hourofcode_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry Birds!
   frozen_shortdescription: Use a programação para explorar a mágica e a beleza do
     gelo com Anna e Elsa.
   starwars_shortdescription: Aprenda a programar droids, e crie seu próprio jogo do
     Star Wars em uma galáxia muito, muito distante.
   playlab_shortdescription: Crie uma história ou um jogo no Laboratório!
+  infinity_shortdescription: Use o Laboratório para criar uma história ou um jogo
+    usando personagens da Disney Infinity.
+  artist_shortdescription: Faça desenhos e figuras legais com o Artista!
   codeorg_longdescription: Aprenda os conceitos básicos de Ciência da Computação com
     a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo
     e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants
@@ -1448,3 +1467,19 @@
     em %{https_date}. Você não vai poder acessar a Code.org após essa data. <a href='%{it_requirements_url}'>Clique
     aqui</a> para aprender a habilitar o HTTPS para a Code.org.
   compatibility_https_hide_this_warning: Ocultar este aviso
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: bata asas
+  infinity_shortcode: inf
+  playlab_shortcode: jogue
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

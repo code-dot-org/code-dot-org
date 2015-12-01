@@ -143,8 +143,6 @@
   twitter_teach_cs: Por que mais escolas não ensinam ciência da computação? Podemos
     dar um jeito nisso. http://youtu.be/nKIu9yen5nc. Acesse http://code.org/ para
     saber mais.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: Aprende a programar numa hora com a Hora de Código
   beyond_hoc: Além da Hora de Código
   what_gender: Qual é o teu género?
@@ -332,27 +330,26 @@
   class_submission_languages_other: Outro(s) idioma(s)
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
+  starwars_subtitle: Construindo uma galáxia com código
   starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_description: Utiliza blocos de arrastar-soltar e JavaScript.
+  starwars_javascript_specs: Apenas Inglês | Navegadores modernos | Idades 11 +
   starwars_javascript_start_button: Experimentar agora
   starwars_blocks_title: Blocos
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_description: Utiliza blocos de arrastar-soltar.
+  starwars_blocks_specs: Muitas línguas (em breve) | Navegadores modernos, smartphones,
+    tablets | Idades 6-10
   starwars_blocks_start_button: Experimentar agora
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+  starwars_watch_videos: Antes de começares, vê um destes vídeos inspiradores
+  starwars_speak_languages: Falas outra língua?
+  starwars_help_translate: Ajuda-nos a traduzir
   starwars_platform_text: Navegadores modernos, smartphones e tablets
   mc_name: Hora do Código de Minecraft
   mc_longdescription: Use blocos de código para levar o Steve ou a Alex numa aventura
     por este mundo Minecraft.
   mc_shortdescription: Use blocos de código para levar o Steve ou a Alex numa aventura
     por este mundo Minecraft.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: Idades 6 +
   mc_platformtext: Navegadores modernos, smartphones e tablets
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Hora do Código de Minecraft
@@ -367,15 +364,18 @@
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Nome
@@ -713,15 +713,26 @@
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Experimente nossos novos tutoriais da Hora do Código
   hoc2014_try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão
     beta
   hoc2014_try_scrat: Angry Birds, PvZ e Scrat
   hoc2014_try_frozen: O Artista com Anna e Elsa, do filme Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
-  carousel_heading_international: Tutoriais em português
+  carousel_heading_international: Tutoriais no seu idioma
   carousel_heading_domestic: Tutoriais disponíveis em inglês
   carousel_heading_beginners: Tutoriais para iniciantes
   carousel_heading_javascript: Tutoriais que ensinam JavaScript
@@ -750,7 +761,7 @@
     target="_blank">navegador Web moderno.</a>
   mobile_devices: Tutoriais para dispositivos móveis
   frozen_name: Programa com a Anna e com a Elsa
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_name: 'Star Wars: Construir uma Galáxia com Código'
   codeorg_name: Aprende a programar e cria o teu primeiro programa
   codeintl_name: Aprende a programar e cria o teu primeiro programa
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -790,6 +801,8 @@
   projguts_name: Pedra, papel ou tesoura
   hourofcode_name: Espaço reservado para um novo code.org/hoc
   playlab_name: Laboratório
+  infinity_name: Laboratório infinito
+  artist_name: Artista
   codeorg_gradelevel: Dos 4 aos 104 anos
   codeintl_gradelevel: Dos 4 aos 104 anos
   thinkersmithspanish_gradelevel: Por todos
@@ -829,8 +842,10 @@
   projguts_gradelevel: Dos 10 aos 13 anos
   hourofcode_gradelevel: Dos 4 aos 104 anos
   frozen_gradelevel: Maiores de 8 anos
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: Idades 6 +
   playlab_gradelevel: Dos 4 aos 104 anos
+  infinity_gradelevel: Dos 4 aos 104 anos
+  artist_gradelevel: Dos 4 aos 104 anos
   codeorg_platformtext: Navegadores modernos, smartphones e tablets
   codeintl_platformtext: Navegadores modernos, smartphones e tablets
   thinkersmithspanish_platformtext: Desligado
@@ -927,12 +942,16 @@
     representar informações
   kodableunplugged_shortdescription: Um divertido exercício offline
   projguts_shortdescription: Conheça a modelagem e a simulação com pedra/papel/tesoura
-  hourofcode_shortdescription: Espaço reservado para um novo code.org/hoc
+  hourofcode_shortdescription: Aprende a programar com Mark Zuckerberg e com os Angry
+    Birds!
   frozen_shortdescription: Use a programação para explorar a mágica e a beleza do
     gelo com Anna e Elsa.
-  starwars_shortdescription: Aprenda a programar dróides, e crie o seu jogo Star Wars
+  starwars_shortdescription: Aprenda a programar dróides e crie o seu jogo Star Wars,
     numa galáxia muito, muito distante.
   playlab_shortdescription: Crie uma história ou um jogo no Laboratório!
+  infinity_shortdescription: Use o Laboratório para criar uma história ou um jogo
+    usando personagens da Disney Infinity.
+  artist_shortdescription: Faça desenhos e figuras legais com o Artista!
   codeorg_longdescription: Aprenda os conceitos básicos de Ciência da Computação com
     a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo
     e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants
@@ -1088,7 +1107,7 @@
     do gelo com a Anna e com a Elsa. Vais criar flocos de neve e padrões enquanto
     patinas no gelo, e ainda conseguirás construir a ilha encantada do inverno que
     poderás partilhar com os teus amigos!
-  starwars_longdescription: Aprenda a programar dróides, e crie o seu jogo Star Wars
+  starwars_longdescription: Aprenda a programar dróides e crie o seu jogo Star Wars,
     numa galáxia muito, muito distante.
   playlab_longdescription: Crie uma história ou faça um jogo no Laboratório! Faça
     animais, piratas, zumbis, ninjas e muitos outros personagens se moverem, fazer
@@ -1435,3 +1454,19 @@
     em %{https_date}. Você não vai poder acessar a Code.org após essa data. <a href='%{it_requirements_url}'>Clique
     aqui</a> para aprender a habilitar o HTTPS para a Code.org.
   compatibility_https_hide_this_warning: Ocultar este aviso
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: bater as assas
+  infinity_shortcode: inf
+  playlab_shortcode: jogar
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

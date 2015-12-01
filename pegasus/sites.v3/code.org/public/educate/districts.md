@@ -47,11 +47,11 @@ Here are our deadlines for Applications. Applications received earlier will rece
 
 ## Information on Curriculum and PD
 
-- Courses for grades K-5 ([Quick Overview](/files/K5onepager.pdf)/[Curriculum](/educate/k5)/[PD Model](https://docs.google.com/document/d/1OsT09Unc0K_2qLckJQWOMrUxerfb-kSuybawGAQbjEs/edit#heading=h.w2x7lc5ji6f2))
+- Courses for grades K-5 ([Quick Overview](/files/K5onepager.pdf)/[Curriculum](/educate/k5)/[PD Model](https://docs.google.com/document/d/1qMtoBjiH7WX_dC_xB54D5W5WJ3bJCnRBA8YBYltInLY/edit?usp=sharing))
 - Computer Science in Algebra ([Quick Overview](/files/CSinAlgebra_one_pager.pdf)/[Curriculum](/curriculum/algebra)/[PD Model](https://docs.google.com/document/d/1afDNY70MrWkBTQGuGoaOXBQjfIzHH1FVzKNYOIv7vMU/edit?usp=sharing))
 - Computer Science in Science ([Quick Overview](/files/CSinScience_one_pager.pdf)/[Curriculum](/curriculum/science)/[PD Model](https://docs.google.com/document/d/111v2O8rsK3iRl4ZeuZxPdwpHLkALyLjtmv7iuQmlYio/edit?usp=sharing))
 - Exploring Computer Science ([Quick Overview](/files/ECS_one_pager.pdf)/[Curriculum](http://www.exploringcs.org/curriculum)/[PD Model](https://docs.google.com/document/d/1RbP0u41DgxGL1bTcMDaxe3pc4vQ-WaxHajZ2m53Zato/edit?usp=sharing))
-- Computer Science Principles ([Quick Overview](/files/CSP_one_pager.pdf)/[Curriculum](/educate/csp)/[PD Model](https://docs.google.com/document/d/1cNoj6LOMhWTN8IBjxQaMQeZEcIN5_fiJSODq13h7jGo/edit))
+- Computer Science Principles ([Quick Overview](/files/CSP_one_pager.pdf)/[Curriculum](/educate/csp)/[PD Model](https://docs.google.com/document/d/1SSMhd4dvnl1BTlYngl4Pky0JfkFmMmalFkePVpAijgE/edit?usp=sharing))
 
 <!--
 CAMERON DOC NEEDED

@@ -946,6 +946,9 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings_moviebot_instruction: |
+        This level cloned from "U3 Digital Assistant
+        Target"
       allthethings_template_backed1_instruction: 'Backed by a template #1'
       allthethings_template_backed2_instruction: 'Backed by a template #2'
       App Lab test_instruction: teste
@@ -1434,12 +1437,12 @@
         todos os objetos são flores, então faça a verificação para coletar néctar apenas das flores.
       Course 4 Artist 1_instruction: "Ajude-me a desenhar uma caixa. (Cada linha tem\n200
         pixels de comprimento) \n"
-      Course 4 Artist 10_instruction: "Clique aqui para ver as dicas novamente!\r\n\r\nAqui\nestá
-        o código para uma forma interessante. O que acontece quando você o repete
-        várias vezes, virando a cada iteração? Perceba que as viradas nessa forma
-        somam 420 graus, o que significa que quando seu artista terminar de desenhar,
-        ele estará apontando para uma direção diferente do que quando você começou.
-        Essa nova direção é exatamente 60 graus à direita de onde você iniciou."
+      Course 4 Artist 10_instruction: "Clique aqui para ver as dicas novamente!\r\n\r\nApresentamos\naqui
+        um código para uma forma interessante. O que acontece quando você o repete
+        várias\nvezes, virando a cada iteração? Observe que as viradas nessa forma\nsomam
+        420 graus, o que significa que quando seu artista terminar de desenhar,\nele
+        estará apontando para uma direção diferente do que quando você começou. Essa
+        nova direção\né exatamente 60 graus à direita de onde você iniciou."
       Course 4 Artist 11_instruction: |
         Agora um desafio!  Temos aqui um design que
         usa apenas blocos que já foram mostrados. Você consegue descobrir como
@@ -1550,8 +1553,12 @@
         Atividade livre! Divirta-se desenhando
         o que quiser com os blocos que você aprendeu a usar
       Course 4 Artist For Loops 11_instruction: |
-        Você se lembra, em uma fase anterior,
-        quando usamos uma variável para controlar o número de lados de uma forma? Faremos a mesma coisa com a variável "contador" agora. Esse padrão começa com um triângulo e adiciona um lado de cada vez até que seja desenhado um decágono (10 lados). Cada lado deve ter 100 pixels de comprimento. Dica: 360 dividido pelo número de lados que uma forma possui é o número de graus que você precisará girar.
+        Você se lembra de quando usamos
+        uma variável para controlar o número de lados de uma forma em uma fase anterior? Faremos
+        a mesma coisa com a variável "contador" agora. Esse padrão
+        começa com um triângulo e adiciona um lado de cada vez até que seja desenhado um decágono
+        (10 lados). Cada lado deve ter 100 pixels de comprimento. Dica: 360 dividido pelo
+        número de lados que uma forma possui é o número de graus que você precisará girar.
       Course 4 Artist For Loops 11a_instruction: "Vamos juntar tudo!  Usando\nseu
         conhecimento em \"laços para\" e o \"contador\", crie este desenho no qual\ncada
         forma tem dois lados a mais que a anterior. Lembre-se de que cada lado é\n10
@@ -1566,10 +1573,11 @@
         podemos usar a variável contador para deixar os lados menores conforme a forma tem
         mais lados? Ao invés de avançar por uma quantidade definida, avance (100 /
         contador) pixels.
-      Course 4 Artist For Loops 14_instruction: Se você virar um pouco mais ou um
-        pouco menos do que você normalmente faria para uma forma, dará um efeito legal.
-        Tente usar algum código do último nível, mas virando 89 graus para criar esta
-        espiral quadrada torcida.
+      Course 4 Artist For Loops 14_instruction: |
+        Se você virar um pouco mais ou
+        um pouco menos do que normalmente faria para uma forma, você conseguirá um efeito legal. Tente
+        usar algum código do último nível, mas virando 89 graus para criar
+        esta espiral quadrada retorcida.
       Course 4 Artist For Loops 15_instruction: |
         Atividade livre: tente fazer alguns desenhos
         usando laços para. Adicionamos algumas variáveis genéricas para você
@@ -1593,8 +1601,9 @@
       Course 4 Artist For Loops 6_instruction: |
         Atividade livre: tente usar um laço "para"
         para desenhar um padrão crescente de formas com seu próprio design.
-      Course 4 Artist For Loops 6a_instruction: Faça três pequenas alterações no código
-        do último nível para conseguir isso!
+      Course 4 Artist For Loops 6a_instruction: |
+        Faça três pequenas alterações no
+        código do último nível para conseguir isso!
       Course 4 Artist For Loops 7_instruction: |
         O que acontece se você remover "Repita 3"
         desse algoritmo, mantendo os blocos "mova" e "vire" no laço
@@ -1772,13 +1781,13 @@
         5. Quanto mais lados adicionarmos a esse algoritmo, maior será o
         padrão! Observe que existe uma nova variável chamada "comprimento". Agora podemos usá-la onde há
         um bloco "avance". Para essa forma, defina a variável "comprimento" como 75.
-      Course 4 Artist Vars 13_instruction: "Quando uma forma tem muitos lados, cada
-        lado deve ser menor se você quiser que todo o padrão caiba na tela.\n\r\nVamos
-        recriar o algoritmo para este padrão incrível, mas em vez de definir manualmente
-        a variável \"comprimento\", vamos usar um bloco de matemática com a variável
+      Course 4 Artist Vars 13_instruction: "Quando uma forma tem muitos lados, cada\nlado
+        deve ser menor se você quiser que todo o padrão caiba na tela.\n\r\nVamos
+        recriar o algoritmo para este padrão incrível, mas, em vez de\ndefinir manualmente
+        a variável \"comprimento\", vamos usar um bloco de matemática com\na variável
         \"lados\" dentro para nos certificar de que cada forma se encaixe corretamente.
-        O perímetro de cada polígono é de 300 pixels.\r\nVocê precisa de algumas dicas?
-        \ Clique aqui."
+        O\nperímetro de cada polígono é de 300 pixels.\r\nPrecisa de dicas? Clique
+        aqui."
       Course 4 Artist Vars 14_instruction: "Atividade livre: Veja só! Agora seu algoritmo\nestá
         aninhado dentro de mais um laço. Experimente alterar os valores das\nsuas
         duas variáveis para desenhar padrões legais.\r\n\r\nPara conseguir mais efeito,
@@ -1807,11 +1816,12 @@
         criar esse hexágono usando a variável \"lados\".\r\n\r\nPercebe como você
         pode\nalterar apenas um valor para desenhar um triângulo, um quadrado, um
         pentágono ou um octógono?"
-      Course 4 Artist Vars 8_instruction: 'Jogo livre: Experimente com o número de
-        lados que essa forma possui. Você consegue alterar o algoritmo para que o
-        tamanho geral da forma permaneça o mesmo, independentemente do número de lados?
-        Dica: Se você dividir seu comprimento inicial pelo número de lados, o comprimento
-        de cada lado ficará menor à medida que o número de lados crescer.'
+      Course 4 Artist Vars 8_instruction: |
+        Atividade livre: Brinque com o número
+        de lados desta forma. Você consegue alterar o algoritmo para que o tamanho geral
+        da forma permaneça o mesmo, independentemente do número de lados? Dica: Se
+        você dividir seu comprimento inicial pelo número de lados, o comprimento de cada
+        lado ficará menor à medida que o número de lados crescer.
       Course 4 Artist Vars 9_instruction: |
         Modifique esse algoritmo para que ele use a variável
         "lados" ao invés de um número fixo para desenhar um triângulo. Não deixe de usar
@@ -1994,16 +2004,19 @@
         para completar o canto inferior direito.
       Course 4 EC 1a_instruction: Sem regras. Sem pistas. Só o desafio!
       Course 4 EC 1b_instruction: Sem regras. Sem pistas. Só o desafio!
-      Course 4 EC 2a_instruction: '* * Desafio Supremo: * * Sem regras. Sem pistas.
-        Só o desafio!'
-      Course 4 EC 2b_instruction: '* * Desafio Supremo: * * Sem regras. Sem pistas.
-        Só o desafio!'
-      Course 4 EC 2c_instruction: '* * Desafio Supremo: * * Sem regras. Sem pistas.
-        Só o desafio!'
-      Course 4 EC 3_instruction: 'Use o que você aprendeu no nível anterior para desenhar
-        uma imagem como esta. Nota: O código se torna mais simples se você incorporar
-        parâmetros. '
-      Course 4 EC 3a_instruction: 'Desafio Supremo: Sem regras. Sem pistas. Só o desafio!'
+      Course 4 EC 2a_instruction: |
+        **Desafio Extremo:** Sem regras. Sem pistas. Só
+        o desafio!
+      Course 4 EC 2b_instruction: |
+        **Desafio Extremo:** Sem regras. Sem pistas. Só
+        o desafio!
+      Course 4 EC 2c_instruction: |
+        **Desafio Extremo:** Sem regras. Sem pistas. Só
+        o desafio!
+      Course 4 EC 3_instruction: "Use o que você aprendeu no nível anterior para desenhar\numa
+        imagem como esta. Nota: O código se torna mais simples se você incorporar\nparâmetros.
+        \n"
+      Course 4 EC 3a_instruction: 'Desafio Extremo: Sem regras. Sem pistas. Só o desafio!'
       Course 4 Maze 1_instruction: Leve o Angry Bird até o porco!
       Course 4 Maze 2_instruction: Desvie do TNT!
       Course 4 Maze 3_instruction: 'Programe o Angry Bird para chegar até o porco. '
@@ -2046,10 +2059,11 @@
         Edite a função chamada "patrulhe" para
         adicionar um parâmetro "personagem", assim podemos chamá-la para todos os personagens
         da tela. Lembre-se, os personagens correspondem aos números 1, 2 e 3.
-      Course 4 Play Lab Params 6_instruction: Adicione outro parâmetro chamado "velocidade"
-        à função "patrulhe". Tente usar um bloco "defina velocidade" com o novo parâmetro
-        "velocidade" para ajudar o Pinguim a pegar as duas bandeiras antes que os
-        outros sprites peguem uma.
+      Course 4 Play Lab Params 6_instruction: |
+        Adicione outro parâmetro chamado "velocidade"
+        à função "patrulhe". Tente usar um bloco "defina velocidade" com o novo parâmetro "velocidade"
+        para ajudar o Pinguim a pegar as duas bandeiras antes que os outros personagens peguem
+        uma.
       Course 4 Play Lab Params 7_instruction: "Vamos nos divertir! Analise o\ncódigo
         fornecido para ver se você consegue descobrir o que cada bloco faz.  \r\n\r\nQuando
         terminar, use as\nsetas do teclado para controlar o cão e coletar todas as
@@ -2057,13 +2071,13 @@
       Course 4 Play Lab Params 8_instruction: |
         Use um bloco "quando o personagem tocar" para enviar
         o cão de volta para a parte superior esquerda SOMENTE se ele tocar em qualquer outro personagem.
-      Course 4 Play Lab Params 9_instruction: "Aqui está nosso jogo de uma fase anterior,
-        mas a maioria do código está escondido. Há uma nova função \"marcar_pontos\".\r\n\r\nEdite
-        a função para que um parâmetro \"pontos\" seja adicionado à variável \"placar_jogador\".\r\n\r\nA
-        variável \"placar_jogador\" deve aumentar cada vez que Cão marcar Gato com
-        corações, e diminuir cada vez que Gato marcar Cão com corações.\r\n\r\nNota:\nQuando
-        você terminar, clique em \"Executar\" para jogar.  Quando Cão marcar 6 pontos,
-        você irá passar para o próximo desafio. "
+      Course 4 Play Lab Params 9_instruction: "Temos aqui nosso jogo de uma fase anterior,
+        mas\na maior parte do código está oculta. Há uma nova função chamada \"marcar_pontos\".\r\n\r\nEdite\na
+        função para que um parâmetro \"pontos\" seja adicionado à variável \"pontos_do_jogador\".\n\r\n\r\nA
+        variável \"pontos_do_jogador\" deve aumentar toda vez\nque o cão marcar o
+        gato com corações e diminuir toda vez que o gato marcar o cão com corações.\r\n\r\nObservação:\nQuando
+        estiver pronto, clique em \"Executar\" para jogar. Quando o cão marcar 6 pontos,
+        você\nvai para o próximo desafio. "
       Course 4 Play Lab Vars 1_instruction: |
         Desta vez você não precisa escrever código algum, apenas
         clique em "Executar" para jogar! Nesse jogo, você é o cão que está tentando
@@ -2188,38 +2202,47 @@
         pelo menos 10 vezes antes do cão contar até 30, aumente\n\"incremento\" em
         1 unidade e comece de novo.\r\n3) Se o mago não for clicado\npelo menos 10
         vezes, o jogo acaba."
-      Course 4 SCF 1_instruction: Use as funções sugeridas para desenhar quatro linhas
-        de hexágonos. Você percebeu como nossas linhas numeradas são deslocadas para
-        a direita?
-      Course 4 SCF 1a_instruction: Você consegue descobrir como coletar todos esse
+      Course 4 SCF 1_instruction: |
+        Use as funções sugeridas para desenhar quatro
+        linhas de hexágonos. Você percebeu como nossas linhas numeradas são deslocadas para a direita?
+      Course 4 SCF 1a_instruction: |
+        Você consegue descobrir como coletar todos esse
         néctar com o menor número possível de blocos?
-      Course 4 SCF 1b_instruction: Você consegue descobrir como coletar todos esse
+      Course 4 SCF 1b_instruction: |
+        Você consegue descobrir como coletar todos esse
         néctar com o menor número possível de blocos?
-      Course 4 SCF 2_instruction: 'Use o que você aprendeu no nível anterior para
+      Course 4 SCF 2_instruction: "Use o que você aprendeu no nível anterior\npara
         desenhar uma imagem como esta. Nota: O código se torna mais simples se você
-        incorporar parâmetros. '
+        incorporar\nparâmetros. \n"
       Course 4 SCF 3 Fail 1_instruction: Você consegue descobrir como...
       Course 4 SCF 3 Fail 2_instruction: Você consegue descobrir como...
-      Course 4 SCF 3_instruction: 'Use o que você aprendeu no nível anterior para
+      Course 4 SCF 3_instruction: "Use o que você aprendeu no nível anterior\npara
         desenhar uma imagem como esta. Nota: O código se torna mais simples se você
-        incorporar parâmetros. '
-      Course 4 SCFL 1_instruction: Resolva este desafio usando o menor número possível
-        de blocos.
-      Course 4 SCFL 1a_instruction: Você consegue levar Skrat até a sua bolota usando
+        incorporar\nparâmetros. \n"
+      Course 4 SCFL 1_instruction: |
+        Resolva este desafio usando o menor número
+        possível de blocos.
+      Course 4 SCFL 1a_instruction: |
+        Você consegue levar Skrat até a sua bolota usando
         o mínimo possível de blocos?
-      Course 4 SCFL 1b_instruction: Você consegue levar Skrat até a sua bolota usando
+      Course 4 SCFL 1b_instruction: |
+        Você consegue levar Skrat até a sua bolota usando
         o mínimo possível de blocos?
-      Course 4 SCFL 2_instruction: Resolva este desafio usando o menor número possível
-        de blocos.
+      Course 4 SCFL 2_instruction: |
+        Resolva este desafio usando o menor número
+        possível de blocos.
       Course 4 SCFL 3_instruction: Você consegue descobrir como recriar este desenho?
       Course 4 SCFL 4_instruction: Você consegue descobrir como recriar este desenho?
       Course 4 SCFL 5_instruction: Você consegue descobrir como recriar este desenho?
-      Course 4 SCFL 6_instruction: Você consegue descobrir como recriar esse desenho
-        com um único ciclo?
-      Course 4 SCFL 7_instruction: O artista quer pegar umas ondas! Você consegue
+      Course 4 SCFL 6_instruction: |
+        Você consegue descobrir como recriar esse desenho
+        com um único laço?
+      Course 4 SCFL 7_instruction: |
+        O artista quer pegar umas ondas! Você consegue
         descobrir como recriar este desenho?
-      Course 4 SCFP 1_instruction: Crie uma função com parâmetros que permite ao artista
-        saltar para trás e para frente por x pixels, e também para cima e para baixo
+      Course 4 SCFP 1_instruction: |
+        Crie uma função com parâmetros que permitem
+        ao artista saltar para trás e para frente por x pixels, e também para cima e para baixo
         por y pixels (usando números positivos e negativos).
       Course 4 SCV 1_instruction: Clique aqui para ver as instruções novamente.
       Course 4 SCV 2_instruction: Clique aqui para ver as instruções novamente.
@@ -2237,8 +2260,9 @@
         Resolva este desafio com o menor número de blocos
         possível.
       Course 4 SCV 6_instruction: Clique aqui para ver as instruções novamente.
-      Course 4 SCVP 1_instruction: Crie uma função com parâmetros que permite ao artista
-        saltar para trás e para frente por x pixels, e também para cima e para baixo
+      Course 4 SCVP 1_instruction: |
+        Crie uma função com parâmetros que permitem
+        ao artista saltar para trás e para frente por x pixels, e também para cima e para baixo
         por y pixels (usando números positivos e negativos).
       Course 4 Variables Assessment_instruction: |
         Você consegue criar essa imagem usando
@@ -2527,20 +2551,22 @@
       frozen cross rotate_instruction: |
         Agora, tente repetir isso 10 vezes. Quantos graus
         você precisa virar entre cada reta?
-      frozen cross_instruction: Envolva um bloco "Repita" em torno desses comandos
-        para criar um sinal de adição. Você notou que Elsa pode se mover para a frente
-        e para trás?
-      frozen diamond mini snowflake_instruction: Você sabia que cada floco de neve
-        tem uma forma diferente? Vamos criar um novo floco de neve usando o bloco
-        "Repita" para repetir um paralelogramo 4 vezes, virando 90 graus à direita
-        entre cada paralelogramo.
+      frozen cross_instruction: |
+        Envolva um bloco "Repita" em torno desses comandos para criar
+        um sinal de adição. Você notou que Elsa pode se mover para a frente e para trás?
+      frozen diamond mini snowflake_instruction: |
+        Você sabia que cada floco de neve
+        tem uma forma diferente? Vamos criar um novo floco de neve usando o bloco "Repita"
+        para repetir um paralelogramo 4 vezes, virando 90 graus à direita entre
+        cada paralelogramo.
       frozen diamond snowflake_instruction: |
         Agora, vamos criar um novo floco de neve
         usando o bloco repita para repetir um paralelogramo 10 vezes, virando 36 graus
         à direita entre cada um.
-      frozen diamond_instruction: Use um "Repita" em torno desses blocos para criar
-        um paralelogramo. É como um retângulo mas tem ângulos diferentes. Este tem
-        ângulos de 60 graus e 120 graus em vez de todos os ângulos terem 90 graus.
+      frozen diamond_instruction: |
+        Use um bloco "Repita" em torno desses blocos para criar um paralelogramo.
+        É como um retângulo mas tem ângulos diferentes. Este tem ângulos de 60 graus
+        e 120 graus em vez de todos os ângulos terem 90 graus.
       frozen freeplay_instruction: |
         Você se tornou oficialmente um artista mestre! Crie
         um país das maravilhas de gelo.
@@ -3018,11 +3044,11 @@
       NEW Course 4 Artist Functions 12_instruction: |
         Use a função "desenhe uma linha de quadrados"
         do último desafio para desenhar esse padrão."
-      NEW Course 4 Artist Functions 13_instruction: 'Você pode desenhar uma forma
-        de estrela usando a função "desenhar uma linha de quadrados"? Dica: Edite
-        a função "desenhar uma linha de quadrados" para que você não precise chamá-la
-        duas vezes.  Observe que você terá de seguir em frente um certo número de
-        pixels e virar 144 graus.'
+      NEW Course 4 Artist Functions 13_instruction: |
+        Você consegue desenhar uma forma de estrela usando
+        a função "desenhe uma linha de quadrados"? Dica: Edite a função "desenhe uma linha de quadrados"
+        para que você não precise chamá-la duas vezes.  Observe que você terá de avançar
+        um certo número de pixels e virar 144 graus.
       NEW Course 4 Artist Functions 14_instruction: 'Atividade livre! '
       NEW Course 4 Artist Functions 2_instruction: |
         Você consegue desenhar 3 quadrados com 20 pixels de distância
@@ -3078,11 +3104,11 @@
       NEW Course 4 Artist Params 12a_instruction: |
         Esta imagem é semelhante à anterior.
         Você consegue usar um "laço para" com sua função para criar deste design?
-      NEW Course 4 Artist Params 13_instruction: "Vamos editar essa função \"desenhar
-        um polígono\". Ela já tem um parâmetro \"lados\". Agora, vamos adicionar um
-        parâmetro de \"comprimento\". \r \nDica: O perímetro de cada forma tem 200
-        pixels de comprimento. Você se lembra da equação para fazer as formas ficarem
-        do mesmo tamanho quando elas têm um número diferente de lados?"
+      NEW Course 4 Artist Params 13_instruction: "Vamos editar a função \"desenhe
+        um polígono\".\nEla já tem um parâmetro \"lados\". Agora, vamos adicionar
+        um parâmetro\n\"comprimento\". \r \nDica: O perímetro de cada forma tem 200
+        pixels de comprimento. Você\nse lembra da equação para fazer as formas ficarem
+        do mesmo tamanho quando elas têm\num número diferente de lados?"
       NEW Course 4 Artist Params 14_instruction: |
         Edite "desenhe uma borda espiral" para
         usar os parâmetros "comprimento" e "lados" e então recrie essas formas.
@@ -3192,8 +3218,8 @@
         de forma crescente, o incremento é adicionado\nà variável \"contador\" a cada
         repetição."
       NEW Course 4 Bee For Loops 8_instruction: "Você conseguiu! Qual deve ser seu
-        incremento para coletar 3, 6, 9, 12, 15 néctares?\r\nDica: quanto você precisa
-        adicionar a cada número para obter o número seguinte?"
+        incremento\npara coletar 3, 6, 9, 12, 15 néctares?\r\nDica: quanto você precisa\nadicionar
+        a cada número para obter o número seguinte?"
       NEW Course 4 Bee For Loops 9_instruction: |
         Se seu laço está fazendo contagem regressiva, o
         incremento é subtraído da sua variável contador a cada repetição. Qual deve ser
@@ -3252,49 +3278,66 @@
       Overworld Avoid Monsters_instruction: |
         Encontrar-se com um Creeper é uma má ideia.
         Passe cuidadosamente pelos Creepers e alcance a segurança da sua casa.
-      Overworld Chop Tree_instruction: Madeira é um recurso muito importante. Muitas
-        coisas são feitas a partir dela. Caminhe até à árvore e use o comando "destrua
-        bloco" para cortá-la.
-      Overworld Chop Trees_instruction: Precisamos construir uma casa antes que o
-        sol se ponha. Casas precisam de muita madeira. Corte todas as 3 árvores.
-      Overworld Free Play 20x20_instruction: Parabéns! Você completou todos os nossos
-        desafios! Agora extraia, construa e crie algo único usando tudo o que aprendeu
-        até agora.
-      Overworld Free Play_instruction: Esta paisagem é sua para brincar. Você escolhe
-        o que construir.
-      Overworld House Frame - A_instruction: Vamos fazer a nossa própria casa! Este
-        lugar parece bom. Construa uma armação sobre os blocos de terra.
-      Overworld House Frame - C_instruction: Vamos fazer a nossa própria casa! Este
-        lugar parece bom. Construa uma armação sobre os blocos de terra.
-      Overworld House Frame B_instruction: Uma parede está terminada, vamos construir
-        o resto da casa seguindo a sua planta! Você vai precisar se repetir bastante
-        aqui.
-      Overworld House Frame B2_instruction: Uma parede está terminada, vamos construir
-        o resto da casa seguindo a sua planta! Você vai precisar se repetir bastante
-        aqui.
-      Overworld House Frame C_instruction: Uma parede está terminada, vamos construir
-        o resto da casa seguindo a sua planta! Você vai precisar se repetir bastante
-        aqui.
-      Overworld House Frame Chosen_instruction: Construa o resto da sua casa com qualquer
-        material que você goste. O comando "repita" vai ser bem útil.
-      Overworld House Frame_instruction: Vamos fazer a nossa própria casa! Este lugar
-        parece bom. Construa uma armação sobre os blocos de terra.
-      Overworld Minecart Track_instruction: Você está de volta à superfície com um
-        monte de recursos subterrâneos. Agora, iremos construir uma pista ao longo
-        do caminho de terra de sua casa. O primeiro passo é limpar o caminho. Siga-o
-        e remova as árvores.
-      Overworld Move to Sheep_instruction: Adicione um segundo comando "avance" para
-        alcançar a ovelha.
-      Overworld Place Wall_instruction: Toda casa começa com uma parede. Construa
-        a primeira parte da sua casa, colocando os comandos "ponha" e "avance" dentro
-        do bloco "repita".
-      Overworld Plant Crops_instruction: É bom planejar com antecedência. Plante plantações
+      Overworld Chop Tree_instruction: |
+        Madeira é um recurso muito importante. Muitas coisas
+        são feitas a partir dela. Caminhe até a árvore e use o comando "destrua o bloco"
+        para cortá-la.
+      Overworld Chop Trees_instruction: |
+        Precisamos construir uma casa antes que o sol
+        se ponha. Casas precisam de muita madeira. Corte todas as 3 árvores.
+      Overworld Free Play 20x20_instruction: |
+        Parabéns! Você completou
+        todos os nossos desafios! Agora minere, construa e crie algo único usando tudo
+        o que aprendeu até agora.
+      Overworld Free Play_instruction: |
+        Esta paisagem é sua, brinque à vontade. Você
+        escolhe o que construir.
+      Overworld House Frame - A_instruction: |
+        Vamos fazer nossa própria casa! Este lugar
+        parece bom. Construa a fundação sobre os blocos de terra.
+      Overworld House Frame - C_instruction: |
+        Vamos fazer nossa própria casa! Este lugar
+        parece bom. Construa a fundação sobre os blocos de terra.
+      Overworld House Frame B_instruction: |
+        Uma parede está pronta, vamos construir
+        o resto da casa seguindo a sua planta! Você vai precisar repetir suas ações
+        bastante aqui.
+      Overworld House Frame B2_instruction: |
+        Uma parede está pronta, vamos construir
+        o resto da casa seguindo a sua planta! Você vai precisar repetir suas ações
+        bastante aqui.
+      Overworld House Frame C_instruction: |
+        Uma parede está pronta, vamos construir
+        o resto da casa seguindo a sua planta! Você vai precisar repetir suas ações
+        bastante aqui.
+      Overworld House Frame Chosen_instruction: |
+        Construa o resto da sua casa com
+        qualquer material que quiser. O comando "repita" vai ser bem útil.
+      Overworld House Frame_instruction: |
+        Vamos fazer nossa própria casa! Este lugar parece
+        bom. Construa a fundação sobre os blocos de terra.
+      Overworld Minecart Track_instruction: |
+        Você está de volta à superfície com um monte
+        de recursos subterrâneos. Agora, vamos construir uma pista ao longo do caminho de terra
+        de sua casa. O primeiro passo é limpar o caminho. Siga-o e
+        remova as árvores.
+      Overworld Move to Sheep_instruction: |
+        Adicione um segundo comando "avance"
+        para alcançar a ovelha.
+      Overworld Place Wall_instruction: |
+        Toda casa começa com uma parede. Construa a
+        primeira parte da sua casa, colocando os comandos "coloque" e "avance"
+        dentro do bloco "repita".
+      Overworld Plant Crops_instruction: |
+        É bom planejar com antecedência. Plante mudas
         de ambos os lados da água para que você não fique com fome mais tarde.
-      Overworld Powered Minecart_instruction: Ótimo trabalho! Você já reuniu muitos
+      Overworld Powered Minecart_instruction: |
+        Ótimo trabalho! Você já reuniu muitos
         recursos e construiu uma casa modesta. Agora ponha trilhos da borda do mapa
         até a porta da sua casa.
-      Overworld Shear Sheep_instruction: Hora da tosquia! Use o comando "tosquie"
-        para colher lã de ambas as ovelhas.
+      Overworld Shear Sheep_instruction: |
+        Hora de tosquiar! Use o comando "tosquie"
+        para coletar lã de ambas as ovelhas.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -3754,7 +3797,7 @@
         and meaningful IDs. (Click to see full instructions)
       U3 - Arrays - indexPractice_instruction: |
         Write the contents of the array to
-        the screen in order. (Click to see full instructions)
+        the screen in numerical order. (Click to see full instructions)
       U3 - Arrays - insertingItems_instruction: |
         Insert items into an array to form
         a complete sentence. (Click to see full instructions)
@@ -3777,9 +3820,78 @@
       U3 - Arrays - stringsInArrays_instruction: |
         Write a sentence word by word by
         adding strings to an array. (Click to see full instructions)
+      U3 - Canvas - 200dots_instruction: |
+        Add a loop to your program that draws 200
+        dots on your canvas. (Click to see full instructions)
+      U3 - Canvas - appendToArray_instruction: |
+        Create an array to store each event
+        parameter. Append each event parameter to this array within your event handler.
+        (Click to see full instructions)
+      U3 - Canvas - changeToMouseMove_instruction: |
+        Change your program so that dots
+        are drawn at the location of the mouse as the user moves the mouse on the
+        canvas. (Click to see full instructions)
+      U3 - Canvas - clickToAdd_instruction: |
+        Change your program so that dots are
+        added to the canvas when the user clicks on it. (Click to see full instructions)
+      U3 - Canvas - delete_instruction: |
+        Create a button that deletes the drawing
+        by clearing the canvas and removing all stored values. (Click to see full
+        instructions)
+      U3 - Canvas - draw at click point_instruction: |
+        Change your program so that
+        dots are drawn at the location of the mouse click. (Click to see full instructions)
+      U3 - Canvas - freePlay_instruction: |
+        Write code that redraws your image using
+        a sketch effect. (Click to see full instructions)
+      U3 - Canvas - introCanvas_instruction: |
+        Add a canvas to your app and set it
+        to be the active canvas. Then add a large dot to your canvas. (Click to see
+        full instructions)
+      U3 - Canvas - movementFunction fix Orig_instruction: |
+        Write a function that
+        takes the movement of the mouse as input and generates a line width as output.
+        (Click to see full instructions)
+      U3 - Canvas - movementFunction_instruction: |
+        Write a function that takes the
+        movement of the mouse as input and generates a line width as output. (Click
+        to see full instructions)
+      U3 - Canvas - One Dot sprayPaint_instruction: |
+        Write code that redraws your
+        image using a dot whose x and y locations use `offsetX` and `offsetY` with
+        small random value added. (Click to see full instructions)
+      U3 - Canvas - redrawOriginal_instruction: |
+        Write a function that processes
+        your array, redrawing the dots as they originally appeared. (Click to see
+        full instructions)
+      U3 - Canvas - redrawRandom_instruction: |
+        Set up a button and event handler
+        for the random function. (Click to see full instructions)
+      U3 - Canvas - redrawRandom2_instruction: |
+        Write a function that processes your
+        array, redrawing every dot with a random size. (Click to see full instructions)
+      U3 - Canvas - shiftKey_instruction: |
+        Add an if statement to your event handler
+        so dots are only drawn when the shift key is pressed. (Click to see full instructions)
+      U3 - Canvas - sketch_instruction: |
+        Write code that redraws your image using
+        a sketch effect. (Click to see full instructions)
+      U3 - Canvas - sprayPaint_instruction: |
+        Update the spray paint code so that
+        redraws your image using multiple random dots instead of one using a nested
+        for loop. (Click to see full instructions)
+      U3 - Canvas - transparentDots_instruction: |
+        Change the colors of your dots
+        so they have a fully transparent stroke and partially transparent fill. (Click
+        to see full instructions)
+      U3 - Canvas - usingOffsetXY_instruction: |
+        Add a console.log command inside
+        the function of your event handler. Use it to display the event parameter.
+        Click on the screen to see the contents of the event parameter (Click to see
+        full instructions)
       U3 - Conditional Basics - 6_instruction: |
         Add a setText after the if statement
-        to "Nope. Guess again" (Click to see full instructions)
+        to "Nope. Guess again." (Click to see full instructions)
       U3 - Conditionals - Combine AND and OR_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
@@ -3790,7 +3902,7 @@
         weekend and the user is under 18. (Click to see full instrucitons.
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
-        that uses AND and OR to display "Sleep in" if it's the weekend and the
+        that uses AND and OR to display "Sleep in!" if it's the weekend and the
         user is a teenager. (Click to see full instructions.
       U3 - Conditionals - intoOr_instruction: |
         Add 2 if statements that use the OR
@@ -3800,14 +3912,14 @@
         OR operator. (Click to see full instructions)
       U3 - Conditionals - Simple AND_instruction: |
         Write an if statement that uses
-        AND to display "You are a teenager" if the user enters an age between 13
+        AND to display "You are a teenager." if the user enters an age between 13
         and 19. (Click to see full instructions)
       U3 - Conditionals - Simple OR_instruction: |
         Write an if statement that uses
-        OR to display "It's the weekend" if the user enters a weekend day at the
+        OR to display "It's the weekend!" if the user enters a weekend day at the
         prompt. (Click to see full instructions)
       U3 - Design Mode - Console Log_instruction: |
-        Update the ID names and `console.log()`
+        Update the ID names and `console.log`
         messages to match the correct button. (Click to see full instructions.)
       U3 - Design Mode - Layers and Delete_instruction: |
         Fix the layout of the bullseye
@@ -3837,14 +3949,14 @@
         Add guess and score to the Dice
         Game (Click to see full instructions)
       U3 - Dice - Dropdown with Strings_instruction: |
-        Add a dropdown for difficult
+        Add a dropdown for difficulty
         level that prints the difficulty level in the console. (Click to see full
         instructions)
       U3 - Dice - If_instruction: |
-        Show different dice images for the random number
+        Show different die images for the random number
         generated. (Click to see full instructions)
       U3 - Dice - Nested_instruction: |
-        Use nested if statements to making the scoring
+        Use nested if statements to make the scoring
         different for the different game levels. (Click to see full instructions)
       U3 - High Low - Debug_instruction: |
         Debug the order of the conditionals so
@@ -3854,14 +3966,14 @@
         Add a dropdown for their guess instead
         of promptNum (Click to see full instructions)
       U3 - High Low - Else if_instruction: |
-        Add an else if statement in order to
+        Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
       U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill
         tell the user when they are right and when they are wrong. (Click to\nsee
         full instructions)\r\n"
       U3 - High Low - If_instruction: |
-        Add code to the if-statement that indicates
+        Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
@@ -3869,8 +3981,8 @@
         (Click to see full instructions)
       U3 - Keys - Buttons and Keys_instruction: |
         Have the program respond the same
-        way for both up and down arrows as it does to the up and down buttons. (Click
-        to see full instructions)
+        way for both clicking images on the screen and hitting the up and down keys
+        on the keyboard. (Click to see full instructions)
       U3 - Keys - Demo App_instruction: |
         Play with the image scroller. Press the
         left and right arrows to progress through the images.
@@ -3962,7 +4074,7 @@
         to count from 30 down to 0 by 3s. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
-        to 1! (Click to see full instructions)
+        to 1. (Click to see full instructions)
       U3 - Loops - plus and minus = operator_instruction: |
         Update the code to use
         the += operator. (Click to see full instructions)
@@ -3987,35 +4099,41 @@
       U3 - Loops And Arrays - Divid by 2_instruction: |
         Divide every value in the
         array by 2. (Click to see full instructions)
+      U3 - Loops And Arrays - Find Max_instruction: |
+        Design a function that displays
+        the smallest number in an array  (Click to see full instructions)
       U3 - Loops And Arrays - Find Min_instruction: |
-        Write a function that returns
-        the smaller of two numbers.  (Click to see full instructions)
+        Complete the 'findMinVal'
+        function to find and display the smallest value in an array  (Click to see
+        full instructions)
       U3 - Loops And Arrays - Functions that Return Value_instruction: |
-        Test out
-        the return values of the findMax function.  (Click to see full instructions)
+        Call findMin
+        within the console.log statement to calculate the minimum of two values.  (Click
+        to see full instructions)
       U3 - Loops And Arrays - General Search Param_instruction: |
-        Add a parameter
-        for the search value to make the function more general. (Click to see full
+        Add a second parameter
+        to the 'search' function for the value to search for.  (Click to see full
         instructions)
       U3 - Loops And Arrays - Intro For Loop_instruction: |
         Add a for loop with a
         console.log inside and test out the 3 pieces of the for loop. (Click to see
         full instructions)
       U3 - Loops And Arrays - Linear Search_instruction: |
-        Print true if the value
-        5 appears in the array and false when it is not a 5. (Click to see full instructions)
+        Visit every element in
+        the array and display 'true' if the value is a 5, and 'false' otherwise.
+        (Click to see full instructions)
       U3 - Loops And Arrays - Loop Array If_instruction: |
         Use an if statement to
-        only print the values in the array that are greater than 5. (Click to see
+        only display the values in the array that are greater than 5. (Click to see
         full instructions)
       U3 - Loops And Arrays - Make it a Function - add list parameter_instruction: |
         Create
         a function that takes a list parameter and prints if the list contains a 5.
         (Click to see full instructions)
       U3 - Loops And Arrays - Make it a Function_instruction: |
-        Create a function
-        that takes a list parameter and prints if the list contains a 5. (Click to
-        see full instructions)
+        Move the code that
+        searches the list for a 5 into a function called 'search'. (Click to see
+        full instructions)
       U3 - Loops And Arrays - Multiple Returns_instruction: |
         Test out the return
         values of the findMax function.  (Click to see full instructions)
@@ -4023,52 +4141,95 @@
         Use a for loop to print out
         all the values in an array. (Click to see full instructions)
       U3 - Loops And Arrays - Printing Single True_instruction: |
-        Count the number
-        of times 5 appears in an array. (Click to see full instructions)
+        Process the array
+        and display a single 'true' if the array contains a 5 or a single 'false'
+        if it does not.  (Click to see full instructions)
       U3 - Loops And Arrays - Return Index_instruction: |
         Make the search function
         return the index of the search value in the array. (Click to see full instructions)
       U3 - Loops And Arrays - Return Value_instruction: |
-        Make the search function
-        return the value of true or false.  (Click to see full instructions)
+        Use constrain in this simple
+        app to keep the turtle from driving off the screen.  (Click to see full instructions)
       U3 - Loops And Arrays - Search and Remove_instruction: |
         Search for 5 in the
         array and remove it from the array. (Click to see full instructions)
       U3 - Loops And Arrays - Search with Boolean Var_instruction: |
         Make a boolean
-        variable to keep track of if there is a 5 in the array. (Click to see full
-        instructions)
+        variable to use as a flag to keep track of whether there is a 5 in the array.
+        (Click to see full instructions)
+      U3 - Loops And Arrays - useFindMin_instruction: |
+        Call findMin within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)
       U3 - Movie Bot - Multiple If Sequences_instruction: |
         Add another set of if,
-        else if, and else statements insides the question if statement to check for
-        keywords for movies ratings (G, PG, PG-13, and R). (Click to see full instructions)
+        else if, and else statements inside the question if statement to check for
+        keywords for movie ratings (G, PG, PG-13, and R). (Click to see full instructions)
       U3 - Movie Bot - Nested Motivation_instruction: |
-        Add a seperate set of if statements
-        to check for a ? in the input. (Click to see full instructions)
+        Add a separate set of if statements
+        to check for a "?" in the input. (Click to see full instructions)
       U3 - Movie Bot - toLowerCase_instruction: |
-        Use the toLowerCase() command to
-        change all user input into lower case letters after they enter it. (Click
-        to see full instructions)
+        Use the toLowerCase command to change
+        all user input into lowercase letters after they enter it. (Click to see full
+        instructions)
       U3 - Movie Bot - When Multiple If Statements_instruction: |
-        Add an if and else
-        if statement that checks for please and thank you. (Click to see full instructions)
+        Add an if and else-if
+        statement that checks for please and thank you. (Click to see full instructions)
+      U3 - Practice Create Performance Task_instruction: |
+        Design and implement your
+        practice Create Performance Task. (Click to see full instructions)
+      U3 - Return Values - constrainTurtle_instruction: |
+        Use constrain in this simple
+        app to keep the turtle from driving off the screen.  (Click to see full instructions)
+      U3 - Return Values - debuggingConstrain_instruction: |
+        Correct the error in
+        constrain so that it correctly reports the maximum value.  (Click to see full
+        instructions)
+      U3 - Return Values - debuggingMaxVal_instruction: |
+        Correct the error in maxVal
+        so that it correctly reports the maximum value.  (Click to see full instructions)
+      U3 - Return Values - debuggingReturns_instruction: |
+        Correct the error in maxVal
+        so that it correctly reports the maximum value.  (Click to see full instructions)
+      U3 - Return Values - increase1_instruction: |
+        Call the increase function within
+        moveForward, write, and console.log.  (Click to see full instructions)
+      U3 - Return Values - increase2_instruction: |
+        Change the increase function to
+        return 3 times the input value. (Click to see full instructions)
+      U3 - Return Values - min1_instruction: |
+        Test out the return values of the findMax
+        function.  (Click to see full instructions)
+      U3 - Return Values - useFindMin_instruction: |
+        Call findMin within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)
+      U3 - Return Values - useMinVal_instruction: |
+        Call minVal within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)
+      U3 - Return Values - wrapTurtle_instruction: |
+        Write wrap in this simple app
+        to let the turtle "wrap" to the other side of the screen when it goes off.  (Click
+        to see full instructions)
+      U3 - Return Values - writeMaxVal_instruction: |
+        Write the function maxVal and
+        then use it within the console.log statement to calculate the maximum of two
+        values.  (Click to see full instructions)
       U3 - Simulation - 1_instruction: |
-        Use a while loop to "flip 10 coins" and
-        write them to the screen. (Click to see full instructions)
+        Use a while loop to "flip a coin 10 times"
+        and write the values to the screen. (Click to see full instructions)
       U3 - Simulation - 2.1_instruction: |
-        Change your looping condition to be based
-        on the number of heads flipped. (Click to see full instructions)
+        Change your looping condition so the simulation
+        runs until there are 5 heads flipped. (Click to see full instructions)
       U3 - Simulation - 2.5_instruction: |
         Run your simulation to get the full 10,000
         flips! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
         Keep track of how many heads (1s) your program
         generates and print the results to the screen. (Click to see full instructions)
-      U3 - Simulation - 3_instruction: "Add functionality that counts the length\nof
-        your streaks. (Click to see full instructions)\r\n"
+      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin
+        a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
-        Update your while loop's condition to be
-        based on the streak of heads. (Click to see full instructions)
+        Update your while loop's condition so the
+        the coin flips until there are three heads in a row. (Click to see full instructions)
       U3 - Simulation - 5_instruction: |
         Change your while loop to run until you get
         a streak of 12 heads. How many flips did it take? (Click to see full instructions)
@@ -4084,7 +4245,7 @@
         and write them to the screen. (Click to see full instructions)
       U3 - User Input - Save getText To Variable_instruction: |
         Save the age and name
-        of the user in a variable (Click to see full instructions)
+        of the user in variables (Click to see full instructions)
       U3 - User Input - Saving After Input_instruction: |
         Save the age of the user
         in a variable using getText() (Click to see full instructions)
@@ -4167,7 +4328,7 @@
         called "lives" and assign it the value 3. Print it to the console. (Click
         to see full instructions)
       U3- Variables - Text Mode_instruction: |
-        1. switch to text mode and type instructions;
+        1. Switch to text mode and type instructions;
         2. drag blocks out into text mode; 3. experiment with code completion
       U3-Design Mode-ID and Event Handler_instruction: |
         Add an event handler for
@@ -4177,7 +4338,7 @@
         Using the Design Mode Events change the button
         ID and update the code to match. (Click to see detail instructions).
       U3-Design Mode-Image_instruction: |
-        Recreate the "Chaser-Game" from the last
+        Recreate the "Chaser Game" from the last
         lesson using Design Mode. (Click to see full instructions.)
       U313 drag Two Buttons_instruction: |
         Run a program with two buttons that have
@@ -4376,7 +4537,7 @@
         which accept parameters to allow you to add more variation to your scene.  The
         student worksheet provides more details and guidance.
       U3L08 - fish_instruction: |
-        Add a parameter to drawFish() that changes the size
+        Add a parameter to drawFish that changes the size
         of the fish drawn. (Click to see full instructions)
       U3L08 - freePlay_instruction: |
         Keep adding to your image by making more calls
@@ -4389,21 +4550,21 @@
         of sea grass to the image. Look at, but don't change, the functions that
         create them. (Click to see full instructions)
       U3L08 - multiParamFish_instruction: |
-        Add three parameters to your drawFish()
+        Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
         colors. (Click to see full instructions)
       U3L08 - multipleLayersofParams_instruction: |
         Call drawPlusSign() to complete
         the image. (Click to see full instructions)
       U3L08 - paramsToStarfish_instruction: |
-        Add a parameter to drawStarfish() that
+        Add a parameter to drawStarfish that
         changes the size of the starfish drawn. (Click to see full instructions)
       U3L08 - randomInput_instruction: |
         Use the randomNumber() blocks to test the
         functions you designed with random input. (Click to see full instructions)
       U3L08 - seaGrass_instruction: |
-        Add a parameter to drawSeaGrass() that changes
-        the size of the piece of sea grass drawn. (Click to see full instructions)
+        Add a parameter to drawSeagrass that changes
+        the size of the piece of seagrass drawn. (Click to see full instructions)
       U3L08 - squareTwoParams_instruction: |
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
@@ -4574,8 +4735,8 @@
         they hit 'enter' in the text input, using the 'change' event. (Click to
         see full instructions)
       U3L16 - chaserApp_instruction: |
-        Create your own "Chaser App". (Click to see
-        full instructions)
+        Create your own "Chaser Game." (Click to
+        see full instructions)
       U3L16 - chooseImages_instruction: |
         Replace the image in your application with
         one of your own. (Click to see full instructions)
@@ -4608,8 +4769,8 @@
         resultado do último nível, então você pode copiar o código do último nível\naqui
         se você preferir. \n"
       U3L16 - intro getText_instruction: |
-        Add an Text Inputs for name and age. (Click
-        to see full instructions)
+        Add text input UI elements for name and
+        age. (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)
@@ -4623,7 +4784,7 @@
         Experiment with different event types and
         select the one that you think is best. (Click to see full instructions)
       U3L16 - outputWithTextArea_instruction: |
-        Output a message to the Text Area
+        Output a message to the 'textArea'
         (Click to see full instructions)
       U3L16 - projectTemplate_instruction: |
         Create your own "Chaser App". (Click
@@ -4663,7 +4824,7 @@
         é escrito na tela quando o botão for clicado. Então, use getText para escrever
         na tela o que o usuário digitou na caixa de texto.
       U3L16 - toUpper_instruction: |
-        Make the name of the user appear in upper case
+        Make the name of the user appear in uppercase
         (Click to see full instructions)
       U3L16 - use images_instruction: |
         Use the image command to replace the text
@@ -4678,8 +4839,8 @@
         area to have the main outline of your How-to Mad Lib (without the user's\ninput).
         (Click to see full instructions) \n"
       U3L16 Mad Lib Student Setup_instruction: |
-        Back to Mad Libs: To get started,
-        set up the two screens for your Mad Libs app (Click to show full instructions)
+        Back to Mad Lib: To get started,
+        set up the two screens for your Mad Lib app (Click to show full instructions)
       U3L16 Mad Lib toUpper_instruction: "Apply the toUpperCase and toLowerCase string\nfunctions
         to the user's text. (Click to see full instructions) \n"
       U3L17 - getAndSetKeyValue_instruction: |
@@ -4706,9 +4867,9 @@
         Run the program several times to observe
         how often setKeyValue commands arrive out of order. (Click to see full instructions)
       U3L18 comparison operators_instruction: |
-        Use `console.log` to print out the
-        different boolean expressions below to see what information they return. (Click
-        to see full instructions)
+        Use console.log to print out the different
+        boolean expressions below to see what information they return. (Click to see
+        full instructions)
       U3L18 comparison operators_for_video_instruction: |
         Use `console.log` to print
         out the different boolean expressions below to see what information they return.
@@ -4784,7 +4945,7 @@
         shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
       U3L19 - variable reassignment challenge pt2_instruction: |
         Make a prediction
-        about the ending values of a,b, and c. Then use console.log to check your
+        about the ending values of a, b, and c. Then use console.log to check your
         understanding (Click to see full instructions)
       U3L19 - variable reassignment part 1_instruction: |
         Predict the value of a and
@@ -4900,8 +5061,8 @@
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events.  Hit keys on the keyboard to see what happens.  (Click
-        to see full instructions)
+        to keypress events, and display event.key in the console.  Hit keys on the
+        keyboard to see what happens.  (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -4940,7 +5101,7 @@
         and str.toLowerCase().
       U3L26 AND operator_instruction: |
         Update the genre and rating if statements
-        to only give one movie suggestion at a time. (Click to see full instructions)
+        to give only one movie suggestion at a time. (Click to see full instructions)
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
@@ -4958,8 +5119,8 @@
         don't know about bad movies.\" \n"
       U3L26 OR operator_instruction: |
         Update the if statement to use an OR to check
-        for a '?' as well as who, what, where, when, why, in the user input. (Click
-        to see full instructions)
+        for a "?" as well as who, what, where, when, why, how in the user input.
+        (Click to see full instructions)
       U3L27 Chatbot Final_instruction: |
         Make your digital assistant awesome and when
         you are finished, ask one of your classmates to test it for you using the
@@ -5010,20 +5171,25 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
-      Underground Avoiding Lava_instruction: Há lava ocultando-se por sob alguns destes
-        blocos, que você deverá cobrir antes de dar um passo adiante. Um comando "se"
-        será uma mão-na-roda aqui. Adicione um comando "avançar" no local correto
-        para minerar estes blocos.
-      Underground If Statements_instruction: Agora as coisas estão começando a complicarem-se.
-        Minere 3 redstones, mas não caia na lava. Use um comando "if" para posicionar
-        pedregulho sobre quaisquer lavas que você descobrir.
-      Underground Iron_instruction: Cair em lava derretida é má ideia. Posicione pedregulho
-        para criar uma ponte, e então minere ao menos dois dos blocos de ferro.
-      Underground Mine in a Circle_instruction: |
-        Encontre uma forma de pegar 5 diamantes e 7 redstones! Tente usar um comando "repita" dentro de outro comando "repita" para andar em um quadrado.
-      Underground Mining Coal_instruction: Você encontrará os minérios mais valiosos
-        no subsolo, mas lá pode estar escuro. Posicione ao menos 2 tochas, e minere
-        ao menos 2 carvões.
+      Underground Avoiding Lava_instruction: |
+        Há lava escondida debaixo de alguns destes
+        blocos, e você vai precisar cobri-la antes de seguir em frente. Um comando "se"
+        vai dar jeito aqui. Adicione um comando "avance" no local correto para
+        minerar esses blocos.
+      Underground If Statements_instruction: |
+        Agora as coisas estão começando a ficar complicadas. Minere
+        3 redstones, mas não caia na lava. Use um comando "se" para colocar pedregulho
+        sobre todas as lavas que descobrir.
+      Underground Iron_instruction: |
+        Cair na lava derretida é uma má ideia. Coloque
+        pedregulho para criar uma ponte, e então minere ao menos dois dos blocos de ferro.
+      Underground Mine in a Circle_instruction: "Encontre uma forma de pegar 5 diamantes
+        e\n7 redstones! Tente usar um comando \"repita\" dentro de outro comando \"repita\"
+        para andar\nem um quadrado.\r\n"
+      Underground Mining Coal_instruction: |
+        Você encontrará os recursos mais valiosos
+        no subsolo, mas lá pode estar escuro. Posicione ao menos 2 tochas, e extraia ao menos
+        2 unidades de carvão.
       Underground Test Level_instruction: Colete todos os minerais!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Use este nível de teste para pegar xml para testes

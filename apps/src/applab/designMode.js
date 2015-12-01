@@ -9,6 +9,7 @@ var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
 var KeyCodes = require('../constants').KeyCodes;
+var constants = require('./constants');
 
 var designMode = module.exports;
 
@@ -309,6 +310,34 @@ designMode.updateProperty = function(element, name, value) {
     case 'readonly':
       element.setAttribute('contenteditable', !value);
       break;
+    case 'is-default':
+      if (value === true) {
+        // Make this one default
+        $('#designModeViz').prepend(element);
+
+        //Resort elements in the dropdown list
+        var options = $('#screenSelector option');
+        var newScreenText = constants.NEW_SCREEN;
+        var defaultScreenId = elementUtils.getId(element);
+        options.sort(function (a, b) {
+          if (a.text === defaultScreenId) {
+            return -1;
+          } else if (b.text === defaultScreenId) {
+            return 1;
+          } else if (a.text === newScreenText) {
+            return 1;
+          } else if (b.text === newScreenText) {
+            return -1;
+          } else {
+            return a.text.localeCompare(b.text);
+          }
+        });
+
+        $('#screenSelector').html(options);
+        $('#screenSelector')[0].selectedIndex = 0;
+
+      }
+      break;
     default:
       // Mark as unhandled, but give typeSpecificPropertyChange a chance to
       // handle it
@@ -415,6 +444,7 @@ designMode.serializeToLevelHtml = function () {
   if (madeUndraggable) {
     makeDraggable(designModeViz.children().children());
   }
+
   Applab.levelHtml = serialization;
 };
 
@@ -709,6 +739,22 @@ designMode.configureDragAndDrop = function () {
       if (elementType === elementLibrary.ElementType.SCREEN) {
         designMode.changeScreen(elementUtils.getId(element));
       }
+      if (elementType === elementLibrary.ElementType.IMAGE) {
+        var parent = $(element).parent();
+        // Safari has some weird bug where it doesn't end up rendering our dropped
+        // image for some reason. We get around that by moving the image to the
+        // wrong location, and then moving it back to the right location (which
+        // forces a rerender at which point safari does the right thing)
+        if (parent.width() === 0) {
+          var origLeft = parent.css('left');
+          parent.css('visibility', 'hidden');
+          parent.css('left', '0px');
+          setTimeout(function () {
+            parent.css('left', origLeft);
+            parent.css('visibility', '');
+          }, 1);
+        }
+      }
     }
   });
 };
@@ -719,8 +765,7 @@ designMode.configureDesignToggleRow = function () {
     return;
   }
 
-  var firstScreen = elementUtils.getId($('#designModeViz .screen')[0]);
-  designMode.changeScreen(firstScreen);
+  designMode.loadDefaultScreen();
 };
 
 /**
@@ -779,6 +824,7 @@ designMode.getCurrentScreenId = function() {
  */
 designMode.loadDefaultScreen = function () {
   var defaultScreen;
+
   if ($('#designModeViz .screen').length === 0) {
     defaultScreen = designMode.createScreen();
   } else {

@@ -231,27 +231,16 @@ el:
       4-5 Artist 9_instruction: Σχεδίασε το άλλο μισό ώστε το σχέδιο να είναι συμμετρικό. Τα τρίγωνα είναι ισόπλευρα και έχουν μήκος 50 εικονοστοιχείων.
       4-5 Artist Assessment 1_instruction: 'Αξιολόγηση: Χρησιμοποίησε ένα βρόχο για να σχεδιάσεις το ισόπλευρο τρίγωνο. Κάθε πλευρά έχει μήκος 300 εικονοστοιχείων.'
       4-5 Artist For Loops 1_instruction: Βάλε τα νούμερα από 1 εώς 10 μέσα στα πλατιά μπλοκς και τρέξε τον κώδικα.
-      4-5 Artist For Loops 11_instruction: |
-        Complete the "for" block so that it
-        counts 0, 20, 40, 60, 80... 200.
-      4-5 Artist For Loops 12_instruction: |
-        What happens if you reverse the "from"
-        and "to" numbers? Complete the "for" block so that it counts 200, 180,
-        160, 140, 120...0. 
-      4-5 Artist For Loops 13_instruction: |
-        This design got started without a "for"
-        loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
-        the last line length is 250 pixels.
+      4-5 Artist For Loops 11_instruction: 'Ολοκληρώστε το "για" μπλοκ ώστε να μετράει 0, 20, 40, 60, 80... 200.'
+      4-5 Artist For Loops 12_instruction: 'Τι θα συμβεί αν αντιστρέψετε τους "από" και "έως" αριθμούς; Ολοκληρώστε το "για" μπλοκ, έτσι ώστε αυτό μετράει 200, 180, 160, 140, 120... 0. '
+      4-5 Artist For Loops 13_instruction: 'Αυτή η σχεδίαση ξεκίνησε χωρίς έναν βρόχο "για" και παίρνει πάρα πολλά μπλοκ!  Χρησιμοποιήστε ένα μπλοκ "για" για να ολοκληρώσετε τη σπείρα.  Συμμβουλή: το μήκος της τελευταίας γραμμής είναι 250 pixel.'
       4-5 Artist For Loops 14_instruction: 'Κάποιος ξεκίνησε τον κώδικα, αλλά μετά διαπίστωσε ότι πρέπει να υπάρχει πιο γρήγορος τρόπος! Χρησιμοποίησε ένα "επανέλαβε" μπλοκ για να αντικαταστήσεις τα μπλοκς και ολοκλήρωσε το τριγωνικό σπιράλ. (Στοιχείο: το μήκος της τελευταίας γραμμής είναι 300 εικονοστοιχεία.)'
       4-5 Artist For Loops 15_instruction: 'Κάποιος ξεκίνησε τον κώδικα, αλλά μετά διαπίστωσε ότι πρέπει να υπάρχει πιο γρήγορος τρόπος! Χρησιμοποίησε ένα "επανέλαβε" μπλοκ για να αντικαταστήσεις τα μπλοκς και ολοκλήρωσε το εξάγωνο σπιράλ. (Στοιχείο: το μήκος της τελευταίας γραμμής είναι 200 εικονοστοιχεία.)'
       4-5 Artist For Loops 3_instruction: 'Πώς μπορούμε να μετρήσουμε από το 1 ως το 50; Επεξεργάσου το μπλοκ "επανέλαβε".'
       4-5 Artist For Loops 4_instruction: 'Ολοκλήρωσε το μπλοκ "επανέλαβε" ώστε να μετράει από το 1 ως το 10 κατά 1.'
       4-5 Artist For Loops 6_instruction: 'Σχεδίασε τετράγωνα με πλευρές 50, 60, 70, 80 και 90 εικονοστοιχείων. Θα χρειαστεί να χρησιμοποιήσεις τη συνάρτηση "σχεδίασε ένα τετράγωνο" 5 φορές.'
       4-5 Artist For Loops 7_instruction: 'Σχεδίασε τα ίδια τετράγωνα αλλά χρησιμοποίησε τον "μετρητή" μπλοκ στην εντολή "σχεδίασε ένα τετράγωνο". Στοιχείο; Βρίσκεται στην κατηγορία "Διάφορα".'
-      4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
+      4-5 Artist For Loops 8_instruction: 'Μπορείτε να ολοκληρώσετε το πρόγραμμα με την τοποθέτηση των μπλοκ μέσα σε ένα "για" μπλοκ που μετράει από 10 έως 200 ανά10αδα; Μπορείτε να βρείτε το "για" μπλοκ στην κατηγορία βρόχων.'
       4-5 Artist For Loops 9_instruction: 'Αυτοί οι κύκλοι έχουν μέγεθος 5, 10, 15, 20, 25, 30, και 35. Σχεδιάσε τους κύκλους για τον βρόχο "for".'
       4-5 Artist Free Draw 1_instruction: Ελεύθερη σχεδίαση! Σχεδίασε ότι σε εμπνέει να δημιουργήσεις.
       4-5 Artist Functions 1_instruction: 'Χρησιμοποίησε την εντολή "επανέλαβε" για να σχεδιάσεις αυτό το τρίγωνο.'
@@ -260,190 +249,75 @@ el:
       4-5 Artist Functions 11_instruction: 'Η "σχεδίασε ένα εξάγωνο" εντολή χρησιμοποιεί την "σχεδίασε ένα τρίγωνο" εντολή. Ολοκλήρωσε την εντολή του εξαγώνου. Στοιχείο: ( Ένα εξάγωνο έχει 6 πλευρές, κάθε πλευρά έχει μήκος 100 εικονοστοιχείων.)'
       4-5 Artist Functions 12_instruction: 'Ολοκλήρωσε την εντολή "σχεδίασε κύματα". Κάθε κύμα αποτελείται από το άνω και κάτω κύμα. Στοιχείο: Σχεδίασε 5 μπλε κύματα.'
       4-5 Artist Functions 13 Free play_instruction: Να μερικές εντολές για να σχεδιάσεις πλανήτες, αστέρια. πυραύλους και robots. Χρησιμοποίησέ τες για να δημιουργήσεις εικόνες που μπορείς να μοιραστείς με τους φίλους σου.
-      4-5 Artist Functions 14 Free play_instruction: |
-        Here, we've provided you with
-        several functions.  Use them any way you like inside of one or more loops
-        to make pictures that you can share with your friends. Click 'Run' to see
-        an example.
-      4-5 Artist Functions 15 Assessment_instruction: |
-        Assessment:  Use the "draw
-        a square" function to create the squares.  The squares are 50, 100, and 150
-        pixels.
-      4-5 Artist Functions 2a_instruction: |
-        Now put these blocks into a new function
-        called "draw a small triangle" and call on it.
-      4-5 Artist Functions 2b_instruction: |
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
-      4-5 Artist Functions 3_instruction: |
-        Now create the functions "draw a medium
-        triangle" and "draw a large triangle". The "draw a small triangle" function
-        is done for you. The triangles have side lengths of 50 (small), 100 (medium),
-        and 150 (large). 
-      4-5 Artist Functions 4_instruction: |
-        This new "draw a triangle" function
-        has a parameter and can do the work of all three functions before. Draw the
-        same triangles using this new function.
-      4-5 Artist Functions 5_instruction: |
-        Can you modify the "draw a triangle"
-        function into a "draw a square" function to change the drawing?
-      4-5 Artist Functions 6_instruction: |
-        Use the "draw a square" and "draw a
-        triangle functions" to draw a house. (Hint: The square's sides are 200 pixels)
-      4-5 Artist Functions 6b_instruction: |
-        Use the draw a square and triangle functions
-        along with other blocks to create a house by adding them to the 'draw a house"
-        function and calling it.
-      4-5 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        houses that are 100 pixels and 50 pixels. The two houses are separated by
-        50 pixels.
-      4-5 Artist Functions 8_instruction: |
-        The "draw a flower" function has a parameter
-        that allows you to set the stem height.  Set it to 200 and see what happens.
-      4-5 Artist Functions 9_instruction: |
-        Draw these 3 flowers. The first one's
-        height is 100 and the next flower is always 50 pixels more than the height
-        of the previous one. The flowers are also 100 pixels apart.
-      4-5 Artist Patterns 1_instruction: |
-        Can you draw this square using a loop?
-        Each side is 20 pixels long.
-      4-5 Artist Patterns 10_instruction: |
-        This code draws two rows of hexagons -
-        loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need
-        to jump back 120 pixels in your outermost loop to make sure the artist doesn't
-        draw off the screen.
-      4-5 Artist Patterns 11_instruction: |
-        How many times do you need to loop this
-        to draw a half circle? Hint: if there's 360 degrees in a circle and each
-        loop moves 3 degrees, how many times would you need to loop draw a full circle?
-      4-5 Artist Patterns 12_instruction: |
-        If you copy that loop and turn left instead
-        of right, what happens? Can you repeat that to draw this wave?
-      4-5 Artist Patterns 13_instruction: |
-        Now let's loop that whole thing four
-        times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! If looping a 3 degree turn 60 times makes a half circle,
-        which of these blocks of code will make a quarter circle for the corners?
-      4-5 Artist Patterns 2_instruction: |
-        If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add to your outer loop
-        to make sure all 15 squares line up next to each other?
-      4-5 Artist Patterns 3_instruction: |
-        Now let's go one level deeper! We've
-        nested that whole block of code into another loop, but you need to get the
-        artist back in place to draw the next line. Which of these code blocks can
-        you place at the end of the outermost loop to draw the whole grid?
-      4-5 Artist Patterns 4_instruction: |
-        This diamond has 50 pixel sides and angles
-        of 120 and 60 degrees. Use a loop to draw it.
-      4-5 Artist Patterns 5.5_instruction: |
-        How many times do you need to repeat
-        this block to draw the full grid of diamonds?
-      4-5 Artist Patterns 5_instruction: |
-        Let's repeat that to make a row of 6 diamonds.
-        Notice that we changed our diamond code to repeat 3 times instead of 2 - why
-        do you think that is?
-      4-5 Artist Patterns 6_instruction: |
-        How many times do you need to repeat this
-        block to draw the full grid of diamonds?
-      4-5 Artist Patterns 7_instruction: |
-        Let's modify the code from the last puzzle
-        to make this more complex pattern. Notice how the diamonds overlap now, try
-        changing the first "jump backwards" from 100 to 50 (half as far) - now how
-        far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
-      4-5 Artist Patterns 9.5_instruction: |
-        Let's loop this code to draw two rows
-        of hexagons. Notice how our second row is shifted to the right.
-      4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times to draw the
-        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
-        to right.
-      4-5 Artist Patterns Free Play_instruction: |
-        Free play - try your hand at making
-        a pattern of your own!
-      4-5 Bee Conditionals - FC Test_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      4-5 Artist Functions 14 Free play_instruction: 'Εδώ, σας παρέχουμε μερικές λειτουργίες. Χρησιμοποιήστε τις όπως θέλετε σε ένα ή περισσότερους βρόχους για να κάνετε ζωγραφιές που θα μοιραστείτε με τους φίλους σας. Κάντε κλικ στο "εκτέλεσε" να δείτε ένα παράδειγμα.'
+      4-5 Artist Functions 15 Assessment_instruction: 'Αξιολόγηση: Χρησιμοποιήστε τη συνάρτηση "Σχεδιάστε ένα τετράγωνο" για να δημιουργήσετε τα τετράγωνα. Τα τετράγωνα είναι 50, 100 και 150 pixels.'
+      4-5 Artist Functions 2a_instruction: 'Τώρα βάλτε αυτά τα μπλοκ σε μια νέα λειτουργία που ονομάζετε "ζωγράφισε ένα μικρό τρίγωνο" και ονόμασέ το.'
+      4-5 Artist Functions 2b_instruction: 'Τώρα, δημιουργήστε μια συνάρτηση που να ονομάζεται "σχεδίασε ένα μικρό τρίγωνο" χρησιμοποιώντας τα παρεχόμενα μπλοκ.'
+      4-5 Artist Functions 3_instruction: 'Τώρα να δημιουργήσετε τις λειτουργίες "σχεδίασε ένα μεσαίο τρίγωνο" και να "σχεδίασε ένα μεγάλο τρίγωνο". Η λειτουργία "σχεδίασε ένα μικρό τρίγωνο" έχει ήδη γίνει για σας. Τα τρίγωνα έχουν μήκη πλευρών των 50 (μικρό), 100 (μεσαία) και 150 (μεγάλο). '
+      4-5 Artist Functions 4_instruction: 'Η νέα αυτή λειτουργία "σχεδίασε ένα τρίγωνο" έχει μια παράμετρο που μπορεί να κάνει ότι και οι τρεις λειτουργίες πριν. Σχεδιάστε τα ίδια τρίγωνα χρησιμοποιώντας αυτήν τη νέα λειτουργία.'
+      4-5 Artist Functions 5_instruction: 'Μπορείτε να τροποποιήσετε τη λειτουργία "σχεδίασε ένα τρίγωνο" σε λειτουργία "Σχεδιάστε ένα τετράγωνο" για να αλλάξετε το σχέδιο;'
+      4-5 Artist Functions 6_instruction: 'Χρησιμοποιήστε τις λειτουργίες «Σχεδιάστε ένα τετράγωνο» και «σχεδιάσετε ένα τρίγωνο» για να σχεδιάσετε ένα σπίτι. (Υπόδειξη: οι πλευρές τετραγώνου είναι 200 pixels)'
+      4-5 Artist Functions 6b_instruction: 'Χρησιμοποιήστε την σχεδίαση ενός τετραγώνου και τριγώνου μαζί με άλλα μπλοκ για να δημιουργήσετε ένα σπίτικαι προσθέστε τα στη λειτουργία«σχεδιάσετε ένα σπίτι "και να τα ονομάσουμε.'
+      4-5 Artist Functions 7_instruction: 'Χρησιμοποιήστε τη συνάρτηση "σχεδιάστε ένα σπίτι", για να σχεδιάσετε σπίτια που είναι 100 pixel και 50 pixel. Τα δύο σπίτια να χωρίζονται από 50 pixel.'
+      4-5 Artist Functions 8_instruction: 'Η λειτουργία «σχεδιασμός ενός λουλουδιού» έχει μια παράμετρο που σας επιτρέπει να ορίσετε το ύψος του στελέχους.  Ορίστε το σε 200 για να δούμε τι θα συμβεί.'
+      4-5 Artist Functions 9_instruction: Σχεδιάσετε αυτά τα 3 λουλούδια. Το ύψος του πρώτου είναι 100 και το επόμενο λουλούδι είναι πάντα 50 pixel πάνω από το ύψος του προηγούμενου. Τα λουλούδια είναι επίσης 100 pixel χώρια.
+      4-5 Artist Patterns 1_instruction: Μπορείτε να σχεδιάστε αυτό το τετράγωνο χρησιμοποιώντας ένα βρόχο; Κάθε πλευρά είναι 20 pixels.
+      4-5 Artist Patterns 10_instruction: 'Αυτός ο κωδικός σχεδιάζει δύο σειρές από εξάγωνα - κάντε ένα βρόχο για το όλο θέμα 4 φορές για να σχεδιάσετε μια ολόκληρη κηρήθρα. Συμβουλή: Θα πρέπει να μεταβείτε πίσω 120 pixels στον ακραίο βρόχο για να βεβαιωθείτε ότι ο καλλιτέχνης δεν σχεδιάζει έξω από την οθόνη.'
+      4-5 Artist Patterns 11_instruction: 'Πόσες φορές χρειάζεστε να κάνετε αυτό το βρόχο για να σχεδιάσετε μισό κύκλο; Συμβουλή: αν υπάρχουν 360 μοίρες σε έναν κύκλο και κάθε βρόχος κινείται 3 μοίρες, πόσες φορές θα χρειαστεί να επαναλάβετε για έναν πλήρη κύκλο;'
+      4-5 Artist Patterns 12_instruction: Αν αντιγράψετε αυτό το βρόχο και στρίψτε αριστερά αντί για δεξιά, τι συμβαίνει; Μπορείτε να το επαναλάβετε αυτό για να σχεδιάσετε αυτό το κύμα;
+      4-5 Artist Patterns 13_instruction: Τώρα ας δημιουργήσουμε ένα βρόχο 4 φορές για να σχεδιάσουμε μια κορνίζα. Προσοχή στις γωνίες. Δεν μπορείτε απλά να στρίβετε 90 μοίρες. Αν ένας βρόχος δίνει στροφή 3 μοιρών, τότε αν επαναληφθεί 60 φορές σας δίνει μισό κύκλο. Επομένως ποιά μπλοκ κώδικα θα κάνουν ένα τέταρτο του κύκλου για τις γωνίες¨;
+      4-5 Artist Patterns 2_instruction: Εάν τοποθετήσετε το βρόχο για το τετράγωνο μέσα σε ένα άλλο βρόχο, το ονομάζουμε ένθετο βρόχο. Τι χρειάζεστε για να προσθέσετε στον εξωτερικό βρόχο σας ώστε να βεβαιωθείτε ότι όλα τα 15 τετράγωνα είναι ευθυγραμισμένα το ένα δίπλα στο άλλο;
+      4-5 Artist Patterns 3_instruction: Τώρα ας πάμε ένα επίπεδο πιο πάνω! Σας έχω ένθετα ότι ολόκληρο μπλοκ του κώδικα σε ένα άλλο βρόχο, αλλά πρέπει να πάρετε τον καλλιτέχνη πίσω στη θέση του για να ζωγραφίσει την επόμενη γραμμή. Ποια από αυτά τα μπλοκ κώδικα μπορείτε να τοποθετήσετε στο τέλος του εξωτερικού βρόχου για να σχεδιάσετε το σύνολο του δικτύου;
+      4-5 Artist Patterns 4_instruction: Το διαμάντι έχει 50 pixel πλευρές και γωνίες 120 και 60 βαθμούς. Χρησιμοποιήσετε ένΑ βρόγχο για να το ζωγραφίσετε.
+      4-5 Artist Patterns 5.5_instruction: Πόσες φορές χρειάζεστε να επαναλάβετε αυτό το μπλοκ για να σχεδιάσετε ένα πλήρες πλέγμα διαμαντιών;
+      4-5 Artist Patterns 5_instruction: 'Ας το επαναλάβουμε ότι για να κάνουμε μια σειρά από 6 διαμάντια. Παρατηρήστε ότι αλλάξαμε τον κώδικα διαμαντιού για να επαναλάβετε 3 φορές αντί για 2 - γιατί νομίζετε το κάναμε αυτό;'
+      4-5 Artist Patterns 6_instruction: Πόσες φορές χρειάζετε να επαναλάβετε αυτό το μπλοκ για να σχεδιάσετε ένα πλήρες πλέγμα διαμαντιών;
+      4-5 Artist Patterns 7_instruction: 'Ας να τροποποιήσουμε τον κώδικα από το τελευταίο παζλ για να κάνουμε αυτό το πιο πολύπλοκο μοτίβο. Παρατηρήστε πώς τα διαμάντια επικαλύπτονται τώρα, δοκιμάστε να αλλάξετε το πρώτο "άλμα προς τα πίσω" από 100 σε 50 (μισό στο μέτρο) - τώρα πόσο μακριά ο καλλιτέχνης πρέπει να πάει στο δεύτερο "άλμα προς τα πίσω";'
+      4-5 Artist Patterns 8_instruction: Χρησιμοποιήστε ένα βρόχο για να σχεδιάσετε το εξάγωνο με 40 pixel πλευρά και γωνία 60 μοιρών.
+      4-5 Artist Patterns 9.5_instruction: Ας κάνουμε έναν βρόχο για αυτόν τον κώδικα ώστε να σχεδιάσουμε 2 σειρές εξάγωνα. Προσέξτε πως η δεύτερη σειρά μετατοπίζεται δεξιά.
+      4-5 Artist Patterns 9_instruction: Τώρα επαναλάβετε εκείνον το κώδικα 3 φορές για να σχεδιάσετε ολόκληρη γραμμή. Συμβουλή, κάθε εξάγωνο έχει 80 pixels πλάτος από τα πιό μακρυνό σημείο, αριστερά προς τα δεξιά.
+      4-5 Artist Patterns Free Play_instruction: Παίξτε σχεδιάζοντας ελεύθερα σε ότι μοτίβο θέλετε!
+      4-5 Bee Conditionals - FC Test_instruction: Η μέλισσα θέλει μόνο νέκταρ αυτή τη στιγμή. Δεν είναι όλα τα αντικείμενα λουλούδια, έτσι κάντε έλεγχο κάτω από κάθε ΣΎΝΝΕΦΟ, να δει αν κρύβεται ένα λουλούδι. Αν είναι, τότε μπορείτε να συγκεντρώσετε νέκταρ.
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: |
-        The bee can't tell if this is a flower
-        or a honeycomb. Gather nectar only from flowers, but first check if it is
-        a flower or a honeycomb.
+      4-5 Bee Conditionals 1_instruction: Η μέλισσα δεν μπορεί να πει αν αυτό είναι ένα λουλούδι ή μια κηρήθρα. Συγκεντρώστε το νέκταρ από τα λουλούδια, αλλά πρώτα να ελέγξετε αν είναι ένα λουλούδι ή μια κηρήθρα.
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right now. Not
-        all objects are flowers, so check underneath EVERY CLOUD to see if it is hiding
-        a flower. If it is, then you can gather nectar.
-      4-5 Bee Conditionals 3_instruction: |
-        Now the bee just wants to make honey.
-        Check to make honey only at honeycombs.
+      4-5 Bee Conditionals 2_instruction: Η μέλισσα θέλει μόνο νέκταρ αυτή τη στιγμή. Δεν είναι όλα τα αντικείμενα λουλούδια, έτσι κάντε έλεγχο κάτω από κάθε ΣΎΝΝΕΦΟ, να δειτε αν κρύβεται ένα λουλούδι. Αν είναι, τότε μπορείτε να συγκεντρώσετε νέκταρ.
+      4-5 Bee Conditionals 3_instruction: Τώρα η μέλισσα θέλει να κάνει μέλι. Ελέξτε ώστε να κάνει μέλι μόνο σε κηρήθρες.
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 4_instruction: |
-        The unknown object is either a flower
-        or a honeycomb. Use the if/else block to collect nectar if it is a flower,
-        else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 5_instruction: |
-        There might be a flower or a honeycomb
-        under those clouds. Use the if/else block to collect nectar if there is a
-        flower, else to make honey (because there is a honeycomb).
+      4-5 Bee Conditionals 4_instruction: Το άγνωστο αντικείμενο είναι είτε ένα λουλούδι ή μια κηρήθρα. Χρησιμοποιήστε το εάν/αλλιώς μπλοκ ώστε να συλλέγουν νέκταρ, εάν είναι ένα λουλούδι, αλλιώς να κάνει το μέλι (επειδή είναι μια κηρήθρα).
+      4-5 Bee Conditionals 5_instruction: Ίσως υπάρχει ένα λουλούδι ή μια κηρήθρα κάτω από τα σύννεφα. Χρησιμοπιήστε το εάν/αλλιώς μπλοκ για να συλλέγουν νέκταρ, αν υπάρχει ένα λουλούδι, αλλιώς να κάνει το μέλι (επειδή υπάρχει μια κηρήθρα).
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: |
-        This purple flower may have either 3,
-        2, or 1 nectar. Here an if-else block is combined with another if-else block
-        to create an if, else-if, else block. Complete the solution to collect the
-        unknown amount of nectar.
-      4-5 Bee Conditionals 7_instruction: |
-        Remember that purple flowers can have
-        3, 2, or 1 nectars. Complete the "check purple flower" function and use
-        it to collect all of the nectar at the flowers.
-      4-5 Bee Conditionals 8_instruction: |
-        Write inside the function "check flower
-        make honey". Your function should check if the purple flower has 3, 2, or
-        1 nectar and collect all of the nectar. Then, move forward and make honey.
-      4-5 Bee Conditionals Assessment 1_instruction: |
-        Assessment: This code is wrong.
-        Complete the "get nectar or make honey" function, then call it to collect
-        all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars.
-      4-5 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Can you
-        fix them?
+      4-5 Bee Conditionals 6_instruction: 'Αυτό το μωβ λουλούδι μπορεί να έχει είτε 3, 2, ή 1 νέκταρ. Εδώ ένα αν/αλλιώς μπλοκ είναι σε συνδυασμό με ένα άλλο αν-αλλιώς μπλοκ να δημιουργήσει ένα αν, διαφορετικά- εάν, αλλιώς μπλοκ. Ολοκληρώστε τη λύση για τη συλλογή του άγνωστου ποσού του νέκταρ.'
+      4-5 Bee Conditionals 7_instruction: 'Θυμηθείτε ότι τα μωβ λουλούδια μπορεί να έχουν 3, 2 ή 1 νέκταρς. Ολοκληρώστε τη λειτουργία "check μωβ λουλούδι" και χρησιμοποιήστε το για να εισπράξει όλα το νέκταρ στα λουλουδια.'
+      4-5 Bee Conditionals 8_instruction: 'Γράωτε μέσα στη συνάρτηση "ελέγχω λουλούδι κάνει μέλι". Η Λειτουργία σας πρέπει να ελέγχει αν το μωβ λουλούδι έχει 3, 1 ή 2 νέκταρ και να συλλέγει όλο το νέκταρ. Στη συνέχεια, μετακινηθείτε προς τα εμπρός και κάνετε μέλι.'
+      4-5 Bee Conditionals Assessment 1_instruction: 'Αξιολόγηση: Αυτός ο κωδικός είναι λάθος. Να ολοκληρωθεί η λειτουργία "να πάρει το νέκταρ ή να κάνει μέλι" και, στη συνέχεια, ανακαλέστε τη για τη συλλογή όλου του νέκταρ και του μελιού. Θυμηθείτε ότι τα μωβ λουλούδια μπορεί να έχουν 3, 2 ή 1 νέκταρ.'
+      4-5 Bee Debugging 1_instruction: Αυτά τα μπλοκ πραγματικά με ενοχλούν. Μπορείτε να τα διορθώσετε;
       4-5 Bee Debugging 10_instruction: Βρες τα λάθη και να τα διόρθωσέ τα.
-      4-5 Bee Debugging 11_instruction: Does this count correctly?
-      4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
+      4-5 Bee Debugging 11_instruction: Αυτό μετράει σωστά;
+      4-5 Bee Debugging 2_instruction: Βοηθήστε την μέλισσα να πάρει το νέκταρ και να κάνει μέλι.
       4-5 Bee Debugging 3_instruction: Βρες τα λάθη και να τα διόρθωσέ τα.
-      4-5 Bee Debugging 4_instruction: "These blocks don't work. What's the pattern?"
-      4-5 Bee Debugging 5_instruction: "Something isn't right here..."
-      4-5 Bee Debugging 6_instruction: |
-        The purple flower has an unknown amount of
-        nectar. Fix the blocks to get all of the nectar from the flower.
-      4-5 Bee Debugging 7_instruction: The function is missing something...
-      4-5 Bee Debugging 8_instruction: |
-        This function is fine, but it isn't used
-        properly.
-      4-5 Bee Debugging 9_instruction: "Why isn't the bee making enough honey?"
-      4-5 Bee Debugging Assessment 1_instruction: 'Assessment: Fix the code.'
-      4-5 Bee Nested Loops 1_instruction: Use a loop to collect all of the nectar.
-      4-5 Bee Nested Loops 2_instruction: |
-        Collect all of the nectar from each flower.
-        Use a nested loop. 
+      4-5 Bee Debugging 4_instruction: Αυτά τα τμήματα δεν λειτουργούν. Ποιό είναι το μοτίβο;
+      4-5 Bee Debugging 5_instruction: Κάτι δεν είναι σωστό εδώ...
+      4-5 Bee Debugging 6_instruction: Το μωβ λουλούδι έχει ένα άγνωστο ποσό νέκταρ. Καθορίστε το μπλοκ για να πάρετε όλα το νέκταρ από το λουλούδι.
+      4-5 Bee Debugging 7_instruction: Εδώ κάτι λείπει...
+      4-5 Bee Debugging 8_instruction: Αυτή η λειτουργία είναι μια χαρά, αλλά δεν χρησιμοποιείται σωστά.
+      4-5 Bee Debugging 9_instruction: Γιατί η μέλισσα δεν κάνει αρκετό μέλι;
+      4-5 Bee Debugging Assessment 1_instruction: 'Αξιολόγηση: Φτιάξτε τον κώδικα.'
+      4-5 Bee Nested Loops 1_instruction: Χρησιμοποιήστε έναν βρόχο να συλλέξετε όλο το νέκταρ.
+      4-5 Bee Nested Loops 2_instruction: 'Συλλέξτε όλο το νέκταρ από κάθε λουλούδι. Χρησιμοποιήστε ένα ένθετο βρόχο. '
       4-5 Bee Nested Loops 3_instruction: |
         Collect all of the nectar by putting the
         starter code into a nested loop.
@@ -582,33 +456,20 @@ el:
       4-5 While Loops 2_instruction: |
         Move me to the pile of dirt and remove it with
         5 shovel scoops, using the 'remove' block.
-      4-5 While Loops 3_instruction: |
-        Move me to the pile and remove all of it, then
-        move to the hole and fill it completely.  Hint:  Use as few blocks as possible.
-      4-5 While Loops 4_instruction: |
-        Wow, I found a really deep hole! I don't know
-        how many shovelfuls of dirt it needs.  Can you write a program that fills
-        it until the ground is even?  Hint:  Try using the while loop this time.
-      4-5 While Loops 5_instruction: |
-        Wow, now there are two deep holes! Can you
-        write a program that fills them both until the ground is even?
-      4-5 While Loops 6_instruction: |
-        Wow, now there is a large pile of dirt! Can
-        you write a program that removes all of it so the ground is even?
-      4-5 While Loops 7_instruction: |
-        Wow, now there are three piles of dirt! Can
-        you write a program that removes each of them until the ground is even?
-      4-5 While Loops 8_instruction: |2
-         There is a really deep hole and a really large
-        pile of dirt.  How many shovelfuls of dirt need to be moved around to make
-        the ground flat?  Hint: Use the while loop for both.
-      4-5 While Loops Assessment 1_instruction: |
-        There are a lot of holes and piles.  Help
-        me to fill and remove them to make the ground flat.
+      4-5 While Loops 3_instruction: Μετακίνησέ με στη σωρό και μάζεψέ την όλη, μετά μετακίνησέ με στην τρύπα και γέμισέ την τελείως. Συμβουλή, χρησιμοποίησε όσο το δυνατό λιγότερα μπλοκ.
+      4-5 While Loops 4_instruction: 'Πω πω, βρήκα μια πραγματικά βαθιά τρύπα! Δεν ξέρω πόσα φτιάρια χώμα χρειάζεται.  Μπορείτε να γράψετε ένα πρόγραμμα που να την συμπληρώνει μέχρι το έδαφοςνα  είναι ίσιο;  Συμβουλή: Προσπαθήστε να χρησιμοποιήσετε τον "ενώ" βρόχο.'
+      4-5 While Loops 5_instruction: Πω πω, τώρα υπάρχουν δύο βαθιές τρύπες! Μπορείτε να γράψετε ένα πρόγραμμα που να τις γεμίζει τόσο μέχρι το έδαφος να είναι ισιο;
+      4-5 While Loops 6_instruction: Πω πω, τώρα υπάρχει ένα μεγάλο σωρό από βρωμιά! Μπορείτε να γράψετε ένα πρόγραμμα που να την μετακινεί, έτσι ώστε το έδαφος να είναι ίσιο;
+      4-5 While Loops 7_instruction: Πω πω, τώρα υπάρχουν τρεις σωροί από χώμα! Μπορείτε να γράψετε ένα πρόγραμμα που να καθαρίζει κάθε ένα από αυτά μέχρι το έδαφος να είναι ίσιο;
+      4-5 While Loops 8_instruction: ' Υπάρχει μια πραγματικά βαθιά τρύπα και ένας σωρός χώμα.  Πόσες φτιαριές πρέπει να μετακινηθούν τριγύρω για να κάνει το έδαφος επίπεδο;  Υπόδειξη: Χρήση του "ενώ" βρόχος και για τα δύο.'
+      4-5 While Loops Assessment 1_instruction: 'Υπάρχουν πολλές τρύπες και σωροί.  Βοήθησέ με να τους γεμίσω και να τους αφαιρέσω τους για να καταστήσω το έδαφος επίπεδο.'
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings_moviebot_instruction: |
+        This level cloned from "U3 Digital Assistant
+        Target"
       allthethings_template_backed1_instruction: 'Backed by a template #1'
       allthethings_template_backed2_instruction: 'Backed by a template #2'
       App Lab test_instruction: δοκιμή
@@ -645,19 +506,13 @@ el:
         Loop this design 6 times. How much do
         you have to turn each time you loop? (Hint: What is 360 divided by 6?)
       Artist - Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
-      Artist - Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete
-        the design.
+      Artist - Nested Loops Assessment 1_instruction: Χρησιμοποιήστε ένα ένθετο βρόχο να ολοκληρωθεί ο σχεδιασμός.
       Auto Open Function Editor_instruction: |
         You can call functions from inside
         other functions! Using your "shape" function as a base, create 3 house shapes
         each 20 pixels larger than the last starting at 50 pixels in length. Using
         a counter loop might be helpful. 
-      Bee Recommended Blocks test_instruction: |
-        Purple flowers may have either 1
-        or 0 nectar, but you don't know which one! Be careful not to collect nectar
-        from a purple flower if it doesn't have any. Check if the nectar is equal
-        to 1 by using the if block.
+      Bee Recommended Blocks test_instruction: 'Τα μωβ λουλούδια μπορεί να έχουν είτε 1 ή 0 νέκταρ, αλλά δεν γνωρίζετε ποιο από τα δύο! Προσέξτε να μην συλλέξετε νέκταρ από ένα μωβ λουλούδι, αν δεν έχει καθόλου. Ελέγξτε αν το νέκταρ είναι ίσο με 1 χρησιμοποιώντας το μπλοκ "αν".'
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -810,12 +665,8 @@ el:
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
         it!
-      Busy Bee 2_instruction: |
-        This bee has a lot of work to do! Do you notice any
-        patterns that you can use to simplify your code?
-      Busy Bee_instruction: |
-        This bee has a lot of work to do! Do you notice any
-        patterns that you can use to simplify your code?
+      Busy Bee 2_instruction: Αυτή η μέλισσα έχει πολλή δουλειά να κάνει! Παρατηρείτε οποιαδήποτε σχέδια που μπορείτε να χρησιμοποιήσετε για να απλοποιήσετε τον κωδικά σας;
+      Busy Bee_instruction: Αυτή η μέλισσα έχει πολλή δουλειά να κάνει! Παρατηρείτε οποιαδήποτε σχέδια που μπορείτε να χρησιμοποιήσετε για να απλοποιήσετε τον κωδικά σας;
       C3-Farmer While Loops 1_instruction: |
         Move me to the hole and fill it with
         two shovelfuls of dirt, using the "fill" block.
@@ -1082,140 +933,52 @@ el:
         What happens if you loop this sequence 3
         times? Don't forget to make the honey at the end!
       Course 2 Maze Loops 1_instruction: Μπορείς να με πάς στο γουρουνάκι χρησιμοποιώντας 5 μπλόκ;
-      Course 4 2_instruction: |
-        The bee only wants nectar right now. Remember, not
-        all objects are flowers, so check to gather nectar only at flowers.
+      Course 4 2_instruction: Η μέλισσα θέλει μόνο νέκταρ αυτή τη στιγμή. Θυμηθείτε, δεν είναι όλα τα αντικείμενα λουλούδια, έτσι ελέξτε για να συγκεντρώσετε το νέκταρ μόνο των λουλουδιών.
       Course 4 Artist 1_instruction: 'Βοήθησέ με να τελειώσω τη σχεδίαση του κουτιού μου. (Κάθε γραμμή είναι 200 εικονοστοιχεία) '
-      Course 4 Artist 10_instruction: "Click here to see the hints again!\r\n\r\nHere\nis the code for an interesting shape.  What happens when you repeat it multiple\ntimes, turning between each iteration?   Notice that the turns in this shape\nadd up to 420 degrees, which means that when your artist is done drawing,\nit will be facing a different direction than when you started.  That new direction\nis exactly 60 degrees to the right of where you began."
-      Course 4 Artist 11_instruction: |
-        Now for a challenge!  Here is a design that
-        uses only blocks that you have already been shown.  Can you figure out how
-        to recreate it?  Feel free to use trial and error. You are not expected to
-        get it perfect the first time.  Want to see more hints?  Click here!
-      Course 4 Artist 12_instruction: "Want a second peek at the inspiration design\nor the hints?  Click here!\r\n\r\nOtherwise, make a design all your own!"
-      Course 4 Artist 13_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can design anything you want!
-      Course 4 Artist 2_instruction: |
-        Can you loop this code to draw the greyed out
-        square?
-      Course 4 Artist 20_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can create whatever you want!
-      Course 4 Artist 3_instruction: |
-        Try to figure out what happens if you run this
-        code (or press "Run" to test it). Then, repeat it enough times to complete
-        the drawing.
-      Course 4 Artist 4_instruction: |
-        How many degrees are in a circle?  Fill in
-        the repeat block with that number to create a circle of colors.
-      Course 4 Artist 5_instruction: |
-        Draw the other half of this design so it's
-        symmetrical. The triangles are equilateral and are 50 pixels long. Hint: You
-        may have to run the code several times to figure out all of the blocks that
-        need to be added.
-      Course 4 Artist 6_instruction: |
-        Complete the code to draw these triangles.
-        Hint: There are 3 triangles within the 360 degree rotation...how many times
-        does 3 go into 360?
-      Course 4 Artist 7_instruction: |
-        Now nest this loop inside another loop to draw
-        10 triangles. This is called a nested loop. Hint: All 10 triangles complete
-        a 360 degree rotation.  
-      Course 4 Artist 8_instruction: |
-        Draw this sun by looping this whole block of
-        code multiple times.
-      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet you build it without giving you any blocks to start!\r\nHint: There are\n3 triangles within the 360 degree rotation...how many times does 3 go into\n360?"
-      Course 4 Artist 9_instruction: |
-        Loop this design 10 times and make sure to
-        turn between each shape that's drawn. Here's a hint for how much you have
-        to turn: What is 360 divided by 10?
-      Course 4 Artist Binary 1_instruction: "Here's a function that takes a binary\nstring of 1's and 0's and instructs the artist to follow them from left\nto right, top to bottom.  The artist will fill-in the squares when it sees\na 1 and ignore the square when it sees a 0. \r\n\r\nRun this code to see how\nthe artist uses binary to draw this pattern."
-      Course 4 Artist Binary 1a_instruction: "Here's a function that takes a binary\nstring of 1's and 0's and instructs the artist to follow them from left\nto right, top to bottom.  The artist will fill-in the squares when it sees\na 1 and ignore the square when it sees a 0. \r\n\r\nRun this code to see how\nthe artist uses binary to draw this pattern."
-      Course 4 Artist Binary 2_instruction: |
-        Which of these binary strings could
-        you loop 8 times to draw this image?
-      Course 4 Artist Binary 3_instruction: |
-        Can you draw this pattern by looping
-        a three digit binary string?
-      Course 4 Artist Binary 4_instruction: |
-        Each binary string represents one row
-        of this picture. Can you rearrange them so it draws a smiley face instead
-        of a frowny face?
-      Course 4 Artist Binary 5_instruction: |
-        Which 6 digit binary string, repeated
-        11 times, will draw this image?
-      Course 4 Artist Binary 6_instruction: |
-        What is the shortest binary string that
-        you can repeat to draw this image?
-      Course 4 Artist Binary 7_instruction: Finish this drawing.
-      Course 4 Artist Binary Free Play 2_instruction: |
-        Free Play: Here's a blank
-        canvas for you to draw on.  Have fun!
-      Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we\nstart to get creative with the bits?"
-      Course 4 Artist Binary Free Play 2b_instruction: Click here to see hints.
-      Course 4 Artist Binary Free Play_instruction: |
-        Free Play: Draw whatever you
-        like with binary!
-      Course 4 Artist Binary pre1_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
-      Course 4 Artist Binary ryan_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
-      Course 4 Artist For  Functions 10_instruction: |
-        Let's Step it up a little,
-        can you draw a Star shape using the "Draw a Square Line" function? Good
-        luck!
-      Course 4 Artist For  Functions 11_instruction: |
-        Let's Step it up a little,
-        can you draw a Star shape using the "Draw a Square Line" function? Good
-        luck!
-      Course 4 Artist For Loops 1_instruction: |
-        Draw this triangle that is 50 pixels
-        wide. Hint: use a repeat block.
-      Course 4 Artist For Loops 10_instruction: |
-        Free Play Time! Have fun drawing
-        whatever you like with the blocks you have learned how to use
-      Course 4 Artist For Loops 11_instruction: |
-        Remember back in a previous stage
-        when we used a variable to control the number of sides in a shape? We are
-        going to do the same thing with the "counter" variable now. This pattern
-        starts with a triangle and adds one side at a time until it draws a decagon
-        (10 sides). Each side should be 100 pixels long. Hint: 360 divided by the
-        number of sides a shape has is the number of degrees you'll need to turn.
-      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour knowledge of \"for loops\" and the \"counter\", create this drawing where\neach shape has two more sides than the last.  Make sure that each side is\n10 times as long as the number of sides in the polygon.\r\n\r\nVery little\nof the code has been provided for you."
-      Course 4 Artist For Loops 12_instruction: |
-        That looked pretty cool, but now
-        I'd like to draw each shape next to the last one. This time each side is
-        20 pixels. Use a jump block to jump forward 40 pixels after each shape. 
-      Course 4 Artist For Loops 13_instruction: |
-        Hmmm, those shapes are getting bigger
-        every time! Didn't we already solve this problem with variables? How can
-        we use the counter variable to make the sides smaller as there are more of
-        them? Instead of moving forward by a set amount, try moving forward (100 /
-        counter) pixels.
-      Course 4 Artist For Loops 14_instruction: |
-        If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try using
-        some of the code from the last level, but turning 89 degrees to create this
-        twisted square spiral.
-      Course 4 Artist For Loops 15_instruction: |
-        Free Play: Try making some drawings
-        of your own using "for loops". We've added a few useful variables for you
-        as well.
-      Course 4 Artist For Loops 2_instruction: |
-        I've put the code for drawing a
-        triangle inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure
-        you look at the code before you hit "Run".
+      Course 4 Artist 10_instruction: "Κάντε κλικ εδώ για να δείτε τις υποδείξεις και πάλι! \r \r εδώ είναι ο κώδικας για ένα ενδιαφέρον σχήμα.  Τι θα συμβεί όταν θα το επαναλάβετε πολλές φορές, κάνοντας στροφή μεταξύ κάθε επανάληψης;  Προσέξτε ότι οι στροφές σε αυτό το σχήμα προσθέτουν έως 420 μοίρες, που σημαίνει ότι όταν ο καλλιτέχνης σας τελειώσει το σχέδιο, αυτό θα εχειι μια διαφορετική κατεύθυνση από ό, τι όταν άρχισε.  Αυτή την κατεύθυνση είναι ακριβώς 60 μοίρες προς τα δεξιά από όπου αρχίσες."
+      Course 4 Artist 11_instruction: 'Τώρα για μια πρόκληση!  Εδώ είναι ένα σχέδιο που χρησιμοποιεί μόνο το μπλοκ που σας έχουν ήδη υποδειχθεί.  Μποείτε να καταλάβετε πώς να το αναδημιουργήσετε;  Νιώστε ελεύθεροι να χρησιμοποιήστε την δυνατότητα δοκιμής και λάθους. Δεν αναμένεται να ειναι τέλειο, την πρώτη φορά.  Θέλετε να δείτε περισσότερες συμβουλές;  Κάντε κλικ εδώ!'
+      Course 4 Artist 12_instruction: "Θέλετε μια δεύτερη ματιά στο σχεδιασμό έμπνευσης ή τις υποδείξεις;  Κάντε κλικ εδώ! \r \r διαφορετικά, κάνετε ένα σχέδιο όλο δικό σας!"
+      Course 4 Artist 13_instruction: 'Εξακολουθείτε να παίζετε;  Εδώ είναι ένας κενόςκαμβάς όπου μπορείτε να σχεδιάσετε οτι θέλετε!'
+      Course 4 Artist 2_instruction: Μπορεί να μπορείτε να επαναλάβετε αυτόν τον κώδικα για να ζωγραφίσετε το γκριζαρισμένο τετράγωνο;
+      Course 4 Artist 20_instruction: 'Εξακολουθείτε να παίζετε;  Εδώ είναι ένας κενός καμβάς όπου μπορείτε να δημιουργήσεις ό, τι θέλεις!'
+      Course 4 Artist 3_instruction: 'Προσπαθείστε να καταλάβετε τι συμβαίνει εάν εκτελέσετε αυτόν τον κώδικα (ή πατήστε "Εκτέλεση", για να το δοκιμάσετε). Στη συνέχεια, επαναλάβετε αρκετές φορές για να ολοκληρωθεί το σχέδιο.'
+      Course 4 Artist 4_instruction: 'Πόσες μοίρες είναι σε έναν κύκλο;  Συμπληρώστε το" επαναλάβετε" μπλοκ με αυτό τον αριθμό για να δημιουργήσετε έναν κύκλο χρωμάτων.'
+      Course 4 Artist 5_instruction: 'Ζωγραφίστε το άλλο ήμισυ αυτού του σχεδίου ώστε να είναι συμμετρικό. Τα τρίγωνα είναι Ισόπλευρο με πλευρά 50 pixel. Υπόδειξη: Ίσως χρειαστεί να εκτελέσετε τον κώδικα αρκετές φορές να καταλάβετε όλα τα μπλοκ που πρέπει να προστεθούν.'
+      Course 4 Artist 6_instruction: 'Ολοκληρώσετε τον κώδικα για να σχεδιάσετε αυτά τα τρίγωνα. Υπόδειξη: Υπάρχουν 3 τρίγωνα μέσα στην περιστροφή 360 μοιρών... Πόσες φορές χωράει το 3 στο 360;'
+      Course 4 Artist 7_instruction: 'Βάλτε αυτό το βρόχο μέσα σε ένα άλλο βρόχο για να σχεδιάσετε 10 τρίγωνα. Αυτό ονομάζεται ένθετος βρόχος. Συμβουλή: Όλα τα 10 τρίγωνα ολοκληρώνουν μια περιστροφή 360 μοιρών.  '
+      Course 4 Artist 8_instruction: Ζωγραφίστε τον ήλιο βάζοντας βρόχο με όλο το μπλοκ κώδικα πολλές φορές.
+      Course 4 Artist 8a_instruction: "Θυμάστε αυτό το σχήμα;  Τώρα θα σας επιτρέψουμε να οικοδομήσετε χωρίς να έχετε κανένα μπλοκ! \r υπόδειξη: υπάρχουν 3 τρίγωνα εντός περιστροφής 360 μοιρών... Πόσες φορές χωράει το 3 στο 360;"
+      Course 4 Artist 9_instruction: 'Κάντε Βρόχο αυτό το σχέδιο 10 φορές και σιγουρευτείτε να αλλάζετε μεταξύ κάθε σχήματος που σχεδιάζεται. Εδώ είναι μια υπόδειξη για το πόσο θα πρέπει να στρίψετε: Πόσο κάνει 360 δια 10;'
+      Course 4 Artist Binary 1_instruction: "Αυτή είναι μια λειτουργία που παίρνει μια διαδυκή σειρά από 1 και 0 και οδηγεί τον καλλιτέχνη να τα ακολουθήσει από αριστερά στα δεξιά και από πάνω προς τα κάτω. Ο καλλιτέχνης θα γεμίζει τα τετράγωνα όταν βλέπει ένα 1 και θα τα αγνοεί όταν βλέπει 0. \r\n\r\nΤρέξε τον κώδικα και δες πως ο καλλιτέχνης χρησιμοποιεί το διαδυκό σύστημα για να ζωγραφίσει το σχέδιό του."
+      Course 4 Artist Binary 1a_instruction: "Αυτή είναι μια λειτουργία που παίρνει μια διαδυκή σειρά από 1 και 0 και οδηγεί τον καλλιτέχνη να τα ακολουθήσει από αριστερά στα δεξιά και από πάνω προς τα κάτω. Ο καλλιτέχνης θα γεμίζει τα τετράγωνα όταν βλέπει ένα 1 και θα τα αγνοεί όταν βλέπει 0. \r\n\r\nΤρέξε τον κώδικα και δες πως ο καλλιτέχνης χρησιμοποιεί το διαδυκό σύστημα για να ζωγραφίσει το σχέδιό του."
+      Course 4 Artist Binary 2_instruction: Ποια από αυτές τις δυαδικές χορδές θα μπορούσε να σας κάνει βρόχο 8 φορές και να ζωγραφίσει την εικόνα αυτή;
+      Course 4 Artist Binary 3_instruction: Μπορείτε να ζωγραφίσετε το σχέδιο αυτό κάνοντας βρόχο μια σειρά από τριψήφιους δυαδικούς;
+      Course 4 Artist Binary 4_instruction: Κάθε δυαδική σειρά αντιπροσωπεύει μία γραμμή από αυτή την εικόνα. Μπορείτε να τα αναδιατάξετε και έτσι να βγάζει ένα χαμογελαστό πρόσωπο αντί για ένα σκυθρωπό;
+      Course 4 Artist Binary 5_instruction: Ποιά 6 ψηφία δυαδική συμβολοσειρά, αν επαναληφθεί 11 φορές, θα σχεδιάσει την εικόνα αυτή;
+      Course 4 Artist Binary 6_instruction: Ποιά είναι η συντομότερη δυαδική συμβολοσειρά που μπορείτε να επαναλάβετε για να σχεδιάσετε την εικόνα αυτή;
+      Course 4 Artist Binary 7_instruction: Τελειώστε αυτό το σχέδιο.
+      Course 4 Artist Binary Free Play 2_instruction: 'Ελεύθερο σχέδιο: Εδώ είναι ένας κενός καμβάς για να ζωγραφίσετε.  Να περάσετε καλά!'
+      Course 4 Artist Binary Free Play 2a_instruction: "Εδώ είναι ένας καμβάς με υψηλότερη ανάλυση για να σχεδιάσετε. 16 πίξελ επί 16 πίξελ! \r\n\r\nΔείτε τι μπορεί να συμβεί όταν γινόμαστε δημιουργικοί με τα κομμάτια;"
+      Course 4 Artist Binary Free Play 2b_instruction: Κάντε κλικ εδώ για να δείτε υποδείξεις.
+      Course 4 Artist Binary Free Play_instruction: 'Ελεύθερο σχέδιο: Σχεδιάσετε ό, τι θελετε με το δυαδικό!'
+      Course 4 Artist Binary pre1_instruction: "Το δυαδικόσύστημα είναι ένας τρόπος να παρουσιάζεις πληροφορίες χρησιμοποιώντας μόνο δυο επιλογές. Εδώ θα χρησιμοποιήσουμε την επιλογή \"κλειστό\" ( αντιπροσωπεύετε από το 0) και \"ανοικτό\" ( με το ψηφίο 1).\r\n\r\nΣας έχουμε δώσει ένα πλέγμα από πίξελ από το οποία περνάτε και κάνετε σχέδια στρίβοντας σε κάποια τετράγωνα. Μπορείτε  να βάλετε τον καλλιτέχνη να ζωγραφίσει \"01010101\" σε δυαδικό στην πρώτη σειρά;"
+      Course 4 Artist Binary ryan_instruction: "Το δυαδικόσύστημα είναι ένας τρόπος να παρουσιάζεις πληροφορίες χρησιμοποιώντας μόνο δυο επιλογές. Εδώ θα χρησιμοποιήσουμε την επιλογή \"κλειστό\" ( αντιπροσωπεύετε από το 0) και \"ανοικτό\" ( με το ψηφίο 1).\r\n\r\nΣας έχουμε δώσει ένα πλέγμα από πίξελ από το οποία περνάτε και κάνετε σχέδια στρίβοντας σε κάποια τετράγωνα. Μπορείτε  να βάλετε τον καλλιτέχνη να ζωγραφίσει \"01010101\" σε δυαδικό στην πρώτη σειρά;"
+      Course 4 Artist For  Functions 10_instruction: 'Ας προχωρήσουμε παρακάτω! Μπορείτε να ζωγραφίσετε ένα αστέρι χρησιμοποιώντας την λειτουργία "Ζωγράφισε μια τετράγωνη γραμμή"? Καλή τύχη!'
+      Course 4 Artist For  Functions 11_instruction: 'Ας προχωρήσουμε παρακάτω! Μπορείτε να ζωγραφίσετε ένα αστέρι χρησιμοποιώντας την λειτουργία "Ζωγράφισε μια τετράγωνη γραμμή"? Καλή τύχη!'
+      Course 4 Artist For Loops 1_instruction: 'Σχεδιάσετε αυτό το τρίγωνο με 50 pixels πλάτος. Hint: Χρησιμοποιείστε ένα μπλοκ επανάληψης.'
+      Course 4 Artist For Loops 10_instruction: Ελέυθερη ώρα! Ζωγραφίστε ότι θέλετε με τα μπλοκ που μάθατε
+      Course 4 Artist For Loops 11_instruction: 'Θυμάστε στο προηγούμενο στάδιο που χρησιμοποιήσαμε μια μεταβλητή για να ελέξουμε τον αριθμό των πλευρών ενός σχήματος? Τώρα θα κάνουμε το ίδιο με την μεταβλητή "counter" τώρα. Αυτό το μοτίβο αρχίζει με ένα τρίγωνο και κάθε φορά πρσθέτει μια πλευρά έως ότου γίνει ένα δεκάγωνο(10 πλευρές). Κάθε πλευρά έχει 100 πίξελ μήκος. Συμβουλή, αν διαιρέσετε το 360 με τον αριθμό των πλευρών του κάθε σχήματος, θα έχετε τον αριθμό των μοιρών της γωνίας στην οποία θα στρίψετε.'
+      Course 4 Artist For Loops 11a_instruction: "Ας ανακεφαλαιώσουμε. Χρησιμοποιώντας το \"για βρόχους\" και \"counter\" δημιουργήστε αυτήν τη ζωγραφιά όπου κάθε σχήμα θα έχει δυο παραπάνω πλευρές από το προηγούμενο. Βεβαιωθήτε πως κάθε πλευρά είναι ο αριθμός των πλευρών του πολυγώνου επί 10.\r\n\r\nσας δίνουμε πολύ λίγο κώδικα."
+      Course 4 Artist For Loops 12_instruction: 'Αυτό έδειχνε καλό αλλά τώρα θα πρέπει να ζωγραφήσουμε κάθε σχήμα δίπλα στο άλλο. Η πλευρά τους θα είναι 20 πίξελ. Χρησιμοποιήστε μπλοκ αναπήδησης μπρος κατά 40 πίξελ μετά από κάθε σχήμα. '
+      Course 4 Artist For Loops 13_instruction: Τελικά τα σχήματα ολοένα και μεγαλώνουν! Αλλά δεν έχουμε ήδη λύσει το πρόβλημα με τις μεταβλητές? Πως θα χρησιμοποιήσουμε την μεταβλητή μέτρησης για να κάνουμε τις πλευρές μικρότερες καθώς γίνονται όλο και περισσότερες? Αντί να πάμε μπρος κατά ένα δεδομένο αριθμό ας πάμε μπροστά (100/μέτρα) πίξελ.
+      Course 4 Artist For Loops 14_instruction: Αν στρίψετε λιγότερο ή περισσότερο για ένα σχήμα, το αποτέλεσμα είναι ωραιότερο. Προσπαθήστε να χρησιμοποιήσετε κάποιο κώδικα από το τελευταίο επίπεδο αλλά να στρίψετε 89 μοίρες για να δημιουργηθεί ένα μπερδεμένο τετράγωνο σπιράλ.
+      Course 4 Artist For Loops 15_instruction: 'Ελεύθερο παιχνίδι: Δοκιμάστε να κάνετε κάποια σχέδια δικά σας χρησιμοποιώντας το"για βρόχους". Έχουμε προσθέσει μερικές χρήσιμες μεταβλητές για σας επίσης.'
+      Course 4 Artist For Loops 2_instruction: 'Έχω βάλει τον κώδικα για τον σχεδιασμό ενός τριγώνου μέσα σε ένα "για" βρόχο που μετράει από 50 έως 100 ανα 10.  Σημείωση: Βεβαιωθείτε ότι ρίχνετε μια ματιά στον κώδικα προτού να χτυπήσετε "Εκτέλεση".'
       Course 4 Artist For Loops 3_instruction: |
-        Use the last puzzle as a reference
-        to complete this one.  The smallest triangle has 20 pixel sides, the largest
-        has 200 pixel sides, and each triangle is 20 pixels larger than the last.
+        Χρησιμοποιήστε το τελευταίο παζλ ως σημείο αναφοράς για να ολοκληρωθεί αυτό.  Το μικρότερο τρίγωνο έχει 20 pixel πλευρές, το μεγαλύτερο έχει 200 pixel πλευρές και κάθε τρίγωνο είναι μεγαλύτερο από το προηγούμενο κατά 20 pixel.
         
-      Course 4 Artist For Loops 4_instruction: |
-        How would you modify what you've
-        learned to draw these squares? They start at 15 pixels long, the largest is
-        300 pixels long, and each square is 15 pixels larger than the last. 
-      Course 4 Artist For Loops 5_instruction: |
-        Good job on the last puzzle! Let's
-        use that "counter" variable block again to draw this cool picture. 
+      Course 4 Artist For Loops 4_instruction: 'Πώς θα τροποποιούσατε ότι μάθατε για να ζωγραφίσετε αυτά τα τετράγωνα? Αρχίζουν με πλευρά 15 πίξελ, το μεγαλύτερο είναι 300 πίξελ και κάθε ένα 15 πίξελ μεγαλύτερο από το προηγούμενο. '
+      Course 4 Artist For Loops 5_instruction: 'Καλή δουλειά για το τελευταίο παζλ! Ας χρησιμοποιήσουμε το μπλοκ με τη μεταβλητή "αντι" και πάλι για να σχεδιάσουμε αυτή την εικόνα. '
       Course 4 Artist For Loops 6_instruction: |
         Free Play! Try using a for loop to
         draw a growing shape pattern of your own design.
@@ -2925,10 +2688,7 @@ el:
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
-      Ryan - 4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      Ryan - 4-5 Bee Conditionals 2_instruction: Η μέλισσα θέλει μόνο νέκταρ αυτή τη στιγμή. Δεν είναι όλα τα αντικείμενα λουλούδια, έτσι κάντε έλεγχο κάτω από κάθε ΣΎΝΝΕΦΟ, να δει αν κρύβεται ένα λουλούδι. Αν είναι, τότε μπορείτε να συγκεντρώσετε νέκταρ.
       Ryan Test Locked Blocks_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.
@@ -3169,7 +2929,7 @@ el:
         and meaningful IDs. (Click to see full instructions)
       U3 - Arrays - indexPractice_instruction: |
         Write the contents of the array to
-        the screen in order. (Click to see full instructions)
+        the screen in numerical order. (Click to see full instructions)
       U3 - Arrays - insertingItems_instruction: |
         Insert items into an array to form
         a complete sentence. (Click to see full instructions)
@@ -3192,9 +2952,78 @@ el:
       U3 - Arrays - stringsInArrays_instruction: |
         Write a sentence word by word by
         adding strings to an array. (Click to see full instructions)
+      U3 - Canvas - 200dots_instruction: |
+        Add a loop to your program that draws 200
+        dots on your canvas. (Click to see full instructions)
+      U3 - Canvas - appendToArray_instruction: |
+        Create an array to store each event
+        parameter. Append each event parameter to this array within your event handler.
+        (Click to see full instructions)
+      U3 - Canvas - changeToMouseMove_instruction: |
+        Change your program so that dots
+        are drawn at the location of the mouse as the user moves the mouse on the
+        canvas. (Click to see full instructions)
+      U3 - Canvas - clickToAdd_instruction: |
+        Change your program so that dots are
+        added to the canvas when the user clicks on it. (Click to see full instructions)
+      U3 - Canvas - delete_instruction: |
+        Create a button that deletes the drawing
+        by clearing the canvas and removing all stored values. (Click to see full
+        instructions)
+      U3 - Canvas - draw at click point_instruction: |
+        Change your program so that
+        dots are drawn at the location of the mouse click. (Click to see full instructions)
+      U3 - Canvas - freePlay_instruction: |
+        Write code that redraws your image using
+        a sketch effect. (Click to see full instructions)
+      U3 - Canvas - introCanvas_instruction: |
+        Add a canvas to your app and set it
+        to be the active canvas. Then add a large dot to your canvas. (Click to see
+        full instructions)
+      U3 - Canvas - movementFunction fix Orig_instruction: |
+        Write a function that
+        takes the movement of the mouse as input and generates a line width as output.
+        (Click to see full instructions)
+      U3 - Canvas - movementFunction_instruction: |
+        Write a function that takes the
+        movement of the mouse as input and generates a line width as output. (Click
+        to see full instructions)
+      U3 - Canvas - One Dot sprayPaint_instruction: |
+        Write code that redraws your
+        image using a dot whose x and y locations use `offsetX` and `offsetY` with
+        small random value added. (Click to see full instructions)
+      U3 - Canvas - redrawOriginal_instruction: |
+        Write a function that processes
+        your array, redrawing the dots as they originally appeared. (Click to see
+        full instructions)
+      U3 - Canvas - redrawRandom_instruction: |
+        Set up a button and event handler
+        for the random function. (Click to see full instructions)
+      U3 - Canvas - redrawRandom2_instruction: |
+        Write a function that processes your
+        array, redrawing every dot with a random size. (Click to see full instructions)
+      U3 - Canvas - shiftKey_instruction: |
+        Add an if statement to your event handler
+        so dots are only drawn when the shift key is pressed. (Click to see full instructions)
+      U3 - Canvas - sketch_instruction: |
+        Write code that redraws your image using
+        a sketch effect. (Click to see full instructions)
+      U3 - Canvas - sprayPaint_instruction: |
+        Update the spray paint code so that
+        redraws your image using multiple random dots instead of one using a nested
+        for loop. (Click to see full instructions)
+      U3 - Canvas - transparentDots_instruction: |
+        Change the colors of your dots
+        so they have a fully transparent stroke and partially transparent fill. (Click
+        to see full instructions)
+      U3 - Canvas - usingOffsetXY_instruction: |
+        Add a console.log command inside
+        the function of your event handler. Use it to display the event parameter.
+        Click on the screen to see the contents of the event parameter (Click to see
+        full instructions)
       U3 - Conditional Basics - 6_instruction: |
         Add a setText after the if statement
-        to "Nope. Guess again" (Click to see full instructions)
+        to "Nope. Guess again." (Click to see full instructions)
       U3 - Conditionals - Combine AND and OR_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
@@ -3205,7 +3034,7 @@ el:
         weekend and the user is under 18. (Click to see full instrucitons.
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
-        that uses AND and OR to display "Sleep in" if it's the weekend and the
+        that uses AND and OR to display "Sleep in!" if it's the weekend and the
         user is a teenager. (Click to see full instructions.
       U3 - Conditionals - intoOr_instruction: |
         Add 2 if statements that use the OR
@@ -3215,14 +3044,14 @@ el:
         OR operator. (Click to see full instructions)
       U3 - Conditionals - Simple AND_instruction: |
         Write an if statement that uses
-        AND to display "You are a teenager" if the user enters an age between 13
+        AND to display "You are a teenager." if the user enters an age between 13
         and 19. (Click to see full instructions)
       U3 - Conditionals - Simple OR_instruction: |
         Write an if statement that uses
-        OR to display "It's the weekend" if the user enters a weekend day at the
+        OR to display "It's the weekend!" if the user enters a weekend day at the
         prompt. (Click to see full instructions)
       U3 - Design Mode - Console Log_instruction: |
-        Update the ID names and `console.log()`
+        Update the ID names and `console.log`
         messages to match the correct button. (Click to see full instructions.)
       U3 - Design Mode - Layers and Delete_instruction: |
         Fix the layout of the bullseye
@@ -3252,14 +3081,14 @@ el:
         Add guess and score to the Dice
         Game (Click to see full instructions)
       U3 - Dice - Dropdown with Strings_instruction: |
-        Add a dropdown for difficult
+        Add a dropdown for difficulty
         level that prints the difficulty level in the console. (Click to see full
         instructions)
       U3 - Dice - If_instruction: |
-        Show different dice images for the random number
+        Show different die images for the random number
         generated. (Click to see full instructions)
       U3 - Dice - Nested_instruction: |
-        Use nested if statements to making the scoring
+        Use nested if statements to make the scoring
         different for the different game levels. (Click to see full instructions)
       U3 - High Low - Debug_instruction: |
         Debug the order of the conditionals so
@@ -3269,12 +3098,12 @@ el:
         Add a dropdown for their guess instead
         of promptNum (Click to see full instructions)
       U3 - High Low - Else if_instruction: |
-        Add an else if statement in order to
+        Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
       U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill tell the user when they are right and when they are wrong. (Click to\nsee full instructions)\r\n"
       U3 - High Low - If_instruction: |
-        Add code to the if-statement that indicates
+        Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
@@ -3282,8 +3111,8 @@ el:
         (Click to see full instructions)
       U3 - Keys - Buttons and Keys_instruction: |
         Have the program respond the same
-        way for both up and down arrows as it does to the up and down buttons. (Click
-        to see full instructions)
+        way for both clicking images on the screen and hitting the up and down keys
+        on the keyboard. (Click to see full instructions)
       U3 - Keys - Demo App_instruction: |
         Play with the image scroller. Press the
         left and right arrows to progress through the images.
@@ -3375,7 +3204,7 @@ el:
         to count from 30 down to 0 by 3s. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
-        to 1! (Click to see full instructions)
+        to 1. (Click to see full instructions)
       U3 - Loops - plus and minus = operator_instruction: |
         Update the code to use
         the += operator. (Click to see full instructions)
@@ -3400,35 +3229,41 @@ el:
       U3 - Loops And Arrays - Divid by 2_instruction: |
         Divide every value in the
         array by 2. (Click to see full instructions)
+      U3 - Loops And Arrays - Find Max_instruction: |
+        Design a function that displays
+        the smallest number in an array  (Click to see full instructions)
       U3 - Loops And Arrays - Find Min_instruction: |
-        Write a function that returns
-        the smaller of two numbers.  (Click to see full instructions)
+        Complete the 'findMinVal'
+        function to find and display the smallest value in an array  (Click to see
+        full instructions)
       U3 - Loops And Arrays - Functions that Return Value_instruction: |
-        Test out
-        the return values of the findMax function.  (Click to see full instructions)
+        Call findMin
+        within the console.log statement to calculate the minimum of two values.  (Click
+        to see full instructions)
       U3 - Loops And Arrays - General Search Param_instruction: |
-        Add a parameter
-        for the search value to make the function more general. (Click to see full
+        Add a second parameter
+        to the 'search' function for the value to search for.  (Click to see full
         instructions)
       U3 - Loops And Arrays - Intro For Loop_instruction: |
         Add a for loop with a
         console.log inside and test out the 3 pieces of the for loop. (Click to see
         full instructions)
       U3 - Loops And Arrays - Linear Search_instruction: |
-        Print true if the value
-        5 appears in the array and false when it is not a 5. (Click to see full instructions)
+        Visit every element in
+        the array and display 'true' if the value is a 5, and 'false' otherwise.
+        (Click to see full instructions)
       U3 - Loops And Arrays - Loop Array If_instruction: |
         Use an if statement to
-        only print the values in the array that are greater than 5. (Click to see
+        only display the values in the array that are greater than 5. (Click to see
         full instructions)
       U3 - Loops And Arrays - Make it a Function - add list parameter_instruction: |
         Create
         a function that takes a list parameter and prints if the list contains a 5.
         (Click to see full instructions)
       U3 - Loops And Arrays - Make it a Function_instruction: |
-        Create a function
-        that takes a list parameter and prints if the list contains a 5. (Click to
-        see full instructions)
+        Move the code that
+        searches the list for a 5 into a function called 'search'. (Click to see
+        full instructions)
       U3 - Loops And Arrays - Multiple Returns_instruction: |
         Test out the return
         values of the findMax function.  (Click to see full instructions)
@@ -3436,51 +3271,94 @@ el:
         Use a for loop to print out
         all the values in an array. (Click to see full instructions)
       U3 - Loops And Arrays - Printing Single True_instruction: |
-        Count the number
-        of times 5 appears in an array. (Click to see full instructions)
+        Process the array
+        and display a single 'true' if the array contains a 5 or a single 'false'
+        if it does not.  (Click to see full instructions)
       U3 - Loops And Arrays - Return Index_instruction: |
         Make the search function
         return the index of the search value in the array. (Click to see full instructions)
       U3 - Loops And Arrays - Return Value_instruction: |
-        Make the search function
-        return the value of true or false.  (Click to see full instructions)
+        Use constrain in this simple
+        app to keep the turtle from driving off the screen.  (Click to see full instructions)
       U3 - Loops And Arrays - Search and Remove_instruction: |
         Search for 5 in the
         array and remove it from the array. (Click to see full instructions)
       U3 - Loops And Arrays - Search with Boolean Var_instruction: |
         Make a boolean
-        variable to keep track of if there is a 5 in the array. (Click to see full
-        instructions)
+        variable to use as a flag to keep track of whether there is a 5 in the array.
+        (Click to see full instructions)
+      U3 - Loops And Arrays - useFindMin_instruction: |
+        Call findMin within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)
       U3 - Movie Bot - Multiple If Sequences_instruction: |
         Add another set of if,
-        else if, and else statements insides the question if statement to check for
-        keywords for movies ratings (G, PG, PG-13, and R). (Click to see full instructions)
+        else if, and else statements inside the question if statement to check for
+        keywords for movie ratings (G, PG, PG-13, and R). (Click to see full instructions)
       U3 - Movie Bot - Nested Motivation_instruction: |
-        Add a seperate set of if statements
-        to check for a ? in the input. (Click to see full instructions)
+        Add a separate set of if statements
+        to check for a "?" in the input. (Click to see full instructions)
       U3 - Movie Bot - toLowerCase_instruction: |
-        Use the toLowerCase() command to
-        change all user input into lower case letters after they enter it. (Click
-        to see full instructions)
+        Use the toLowerCase command to change
+        all user input into lowercase letters after they enter it. (Click to see full
+        instructions)
       U3 - Movie Bot - When Multiple If Statements_instruction: |
-        Add an if and else
-        if statement that checks for please and thank you. (Click to see full instructions)
+        Add an if and else-if
+        statement that checks for please and thank you. (Click to see full instructions)
+      U3 - Practice Create Performance Task_instruction: |
+        Design and implement your
+        practice Create Performance Task. (Click to see full instructions)
+      U3 - Return Values - constrainTurtle_instruction: |
+        Use constrain in this simple
+        app to keep the turtle from driving off the screen.  (Click to see full instructions)
+      U3 - Return Values - debuggingConstrain_instruction: |
+        Correct the error in
+        constrain so that it correctly reports the maximum value.  (Click to see full
+        instructions)
+      U3 - Return Values - debuggingMaxVal_instruction: |
+        Correct the error in maxVal
+        so that it correctly reports the maximum value.  (Click to see full instructions)
+      U3 - Return Values - debuggingReturns_instruction: |
+        Correct the error in maxVal
+        so that it correctly reports the maximum value.  (Click to see full instructions)
+      U3 - Return Values - increase1_instruction: |
+        Call the increase function within
+        moveForward, write, and console.log.  (Click to see full instructions)
+      U3 - Return Values - increase2_instruction: |
+        Change the increase function to
+        return 3 times the input value. (Click to see full instructions)
+      U3 - Return Values - min1_instruction: |
+        Test out the return values of the findMax
+        function.  (Click to see full instructions)
+      U3 - Return Values - useFindMin_instruction: |
+        Call findMin within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)
+      U3 - Return Values - useMinVal_instruction: |
+        Call minVal within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)
+      U3 - Return Values - wrapTurtle_instruction: |
+        Write wrap in this simple app
+        to let the turtle "wrap" to the other side of the screen when it goes off.  (Click
+        to see full instructions)
+      U3 - Return Values - writeMaxVal_instruction: |
+        Write the function maxVal and
+        then use it within the console.log statement to calculate the maximum of two
+        values.  (Click to see full instructions)
       U3 - Simulation - 1_instruction: |
-        Use a while loop to "flip 10 coins" and
-        write them to the screen. (Click to see full instructions)
+        Use a while loop to "flip a coin 10 times"
+        and write the values to the screen. (Click to see full instructions)
       U3 - Simulation - 2.1_instruction: |
-        Change your looping condition to be based
-        on the number of heads flipped. (Click to see full instructions)
+        Change your looping condition so the simulation
+        runs until there are 5 heads flipped. (Click to see full instructions)
       U3 - Simulation - 2.5_instruction: |
         Run your simulation to get the full 10,000
         flips! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
         Keep track of how many heads (1s) your program
         generates and print the results to the screen. (Click to see full instructions)
-      U3 - Simulation - 3_instruction: "Add functionality that counts the length\nof your streaks. (Click to see full instructions)\r\n"
+      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
-        Update your while loop's condition to be
-        based on the streak of heads. (Click to see full instructions)
+        Update your while loop's condition so the
+        the coin flips until there are three heads in a row. (Click to see full instructions)
       U3 - Simulation - 5_instruction: |
         Change your while loop to run until you get
         a streak of 12 heads. How many flips did it take? (Click to see full instructions)
@@ -3496,7 +3374,7 @@ el:
         and write them to the screen. (Click to see full instructions)
       U3 - User Input - Save getText To Variable_instruction: |
         Save the age and name
-        of the user in a variable (Click to see full instructions)
+        of the user in variables (Click to see full instructions)
       U3 - User Input - Saving After Input_instruction: |
         Save the age of the user
         in a variable using getText() (Click to see full instructions)
@@ -3579,7 +3457,7 @@ el:
         called "lives" and assign it the value 3. Print it to the console. (Click
         to see full instructions)
       U3- Variables - Text Mode_instruction: |
-        1. switch to text mode and type instructions;
+        1. Switch to text mode and type instructions;
         2. drag blocks out into text mode; 3. experiment with code completion
       U3-Design Mode-ID and Event Handler_instruction: |
         Add an event handler for
@@ -3589,7 +3467,7 @@ el:
         Using the Design Mode Events change the button
         ID and update the code to match. (Click to see detail instructions).
       U3-Design Mode-Image_instruction: |
-        Recreate the "Chaser-Game" from the last
+        Recreate the "Chaser Game" from the last
         lesson using Design Mode. (Click to see full instructions.)
       U313 drag Two Buttons_instruction: |
         Run a program with two buttons that have
@@ -3710,8 +3588,8 @@ el:
         Add 15 fish to the image by writing drawAllFish
         with a loop. (Click to see full instructions)
       U3L07 - Free Play Loops and Random_instruction: |
-        Free Play!  Use what you learned
-        from loops and random to make your own little scene.  Have fun.
+        Free Play! Use what you learned
+        from loops and random to make your own little scene. Have fun.
       U3L07 - introSquare_instruction: |
         Use a loop to draw a square. (Click to see
         full instructions)
@@ -3768,7 +3646,7 @@ el:
         which accept parameters to allow you to add more variation to your scene.  The
         student worksheet provides more details and guidance.
       U3L08 - fish_instruction: |
-        Add a parameter to drawFish() that changes the size
+        Add a parameter to drawFish that changes the size
         of the fish drawn. (Click to see full instructions)
       U3L08 - freePlay_instruction: |
         Keep adding to your image by making more calls
@@ -3781,21 +3659,21 @@ el:
         of sea grass to the image. Look at, but don't change, the functions that
         create them. (Click to see full instructions)
       U3L08 - multiParamFish_instruction: |
-        Add three parameters to your drawFish()
+        Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
         colors. (Click to see full instructions)
       U3L08 - multipleLayersofParams_instruction: |
         Call drawPlusSign() to complete
         the image. (Click to see full instructions)
       U3L08 - paramsToStarfish_instruction: |
-        Add a parameter to drawStarfish() that
+        Add a parameter to drawStarfish that
         changes the size of the starfish drawn. (Click to see full instructions)
       U3L08 - randomInput_instruction: |
         Use the randomNumber() blocks to test the
         functions you designed with random input. (Click to see full instructions)
       U3L08 - seaGrass_instruction: |
-        Add a parameter to drawSeaGrass() that changes
-        the size of the piece of sea grass drawn. (Click to see full instructions)
+        Add a parameter to drawSeagrass that changes
+        the size of the piece of seagrass drawn. (Click to see full instructions)
       U3L08 - squareTwoParams_instruction: |
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
@@ -3952,8 +3830,8 @@ el:
         they hit 'enter' in the text input, using the 'change' event. (Click to
         see full instructions)
       U3L16 - chaserApp_instruction: |
-        Create your own "Chaser App". (Click to see
-        full instructions)
+        Create your own "Chaser Game." (Click to
+        see full instructions)
       U3L16 - chooseImages_instruction: |
         Replace the image in your application with
         one of your own. (Click to see full instructions)
@@ -3988,8 +3866,8 @@ el:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add an Text Inputs for name and age. (Click
-        to see full instructions)
+        Add text input UI elements for name and
+        age. (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)
@@ -4003,7 +3881,7 @@ el:
         Experiment with different event types and
         select the one that you think is best. (Click to see full instructions)
       U3L16 - outputWithTextArea_instruction: |
-        Output a message to the Text Area
+        Output a message to the 'textArea'
         (Click to see full instructions)
       U3L16 - projectTemplate_instruction: |
         Create your own "Chaser App". (Click
@@ -4018,7 +3896,7 @@ el:
         it!  For more details see the Activity guide for this lesson.
       U3L16 - setPosition to move button_instruction: |
         Introducing the setPosition
-        command!  Replace the moveTo in the button-click event handler to use setPosition
+        command! Replace the moveTo in the button-click event handler to use setPosition
         to move the button itself to a random location when it's clicked.
       U3L16 - setPositionMoveButton_instruction: Use setPositon to moveButton
       U3L16 - setupMoveToRandom_instruction: |
@@ -4038,7 +3916,7 @@ el:
         Add an Text Input box for the
         name and age. (Click to see full instructions)
       U3L16 - toUpper_instruction: |
-        Make the name of the user appear in upper case
+        Make the name of the user appear in uppercase
         (Click to see full instructions)
       U3L16 - use images_instruction: |
         Use the image command to replace the text
@@ -4046,7 +3924,7 @@ el:
       U3L16 Mad Lib Clear Input_instruction: |
         Clear the user's previous text when
         the Play Again button is clicked (Click to see full instructions) 
-      U3L16 Mad Lib Demo_instruction: 'Mad Libs Demo - Try it out!'
+      U3L16 Mad Lib Demo_instruction: 'Mad Lib Demo - Try it out!'
       U3L16 Mad Lib getText_instruction: |
         Before setting the text area with your
         Mad Lib outline, get the user's text and incorporate their responses. (Click
@@ -4056,8 +3934,8 @@ el:
         text area to have the main outline of your How-to Mad Lib (without the user's
         input). (Click to see full instructions) 
       U3L16 Mad Lib Student Setup_instruction: |
-        Back to Mad Libs: To get started,
-        set up the two screens for your Mad Libs app (Click to show full instructions)
+        Back to Mad Lib: To get started,
+        set up the two screens for your Mad Lib app (Click to show full instructions)
       U3L16 Mad Lib toUpper_instruction: |
         Apply the toUpperCase and toLowerCase string
         functions to the user's text. (Click to see full instructions) 
@@ -4085,9 +3963,9 @@ el:
         Run the program several times to observe
         how often setKeyValue commands arrive out of order. (Click to see full instructions)
       U3L18 comparison operators_instruction: |
-        Use `console.log` to print out the
-        different boolean expressions below to see what information they return. (Click
-        to see full instructions)
+        Use console.log to print out the different
+        boolean expressions below to see what information they return. (Click to see
+        full instructions)
       U3L18 comparison operators_for_video_instruction: |
         Use `console.log` to print
         out the different boolean expressions below to see what information they return.
@@ -4149,7 +4027,7 @@ el:
         shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
       U3L19 - variable reassignment challenge pt2_instruction: |
         Make a prediction
-        about the ending values of a,b, and c. Then use console.log to check your
+        about the ending values of a, b, and c. Then use console.log to check your
         understanding (Click to see full instructions)
       U3L19 - variable reassignment part 1_instruction: |
         Predict the value of a and
@@ -4260,8 +4138,8 @@ el:
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events.  Hit keys on the keyboard to see what happens.  (Click
-        to see full instructions)
+        to keypress events, and display event.key in the console.  Hit keys on the
+        keyboard to see what happens.  (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -4298,7 +4176,7 @@ el:
         and str.toLowerCase().
       U3L26 AND operator_instruction: |
         Update the genre and rating if statements
-        to only give one movie suggestion at a time. (Click to see full instructions)
+        to give only one movie suggestion at a time. (Click to see full instructions)
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
@@ -4317,8 +4195,8 @@ el:
         I don't know about bad movies." 
       U3L26 OR operator_instruction: |
         Update the if statement to use an OR to check
-        for a '?' as well as who, what, where, when, why, in the user input. (Click
-        to see full instructions)
+        for a "?" as well as who, what, where, when, why, how in the user input.
+        (Click to see full instructions)
       U3L27 Chatbot Final_instruction: |
         Make your digital assistant awesome and when
         you are finished, ask one of your classmates to test it for you using the

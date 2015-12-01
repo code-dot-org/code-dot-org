@@ -421,8 +421,6 @@ GEM
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
     sequel (4.10.0)
-    session_off (0.5.1)
-      actionpack (>= 2.3)
     sexp_processor (4.6.0)
     shotgun (0.9)
       rack (>= 1.0)
@@ -523,6 +521,7 @@ DEPENDENCIES
   codemirror-rails
   colorize
   cucumber
+  daemons
   dalli
   devise
   devise_invitable (~> 1.5.2)
@@ -593,7 +592,6 @@ DEPENDENCIES
   seamless_database_pool
   selenium-webdriver (~> 2.41.0)
   sequel (~> 4.10.0)
-  session_off
   shotgun
   simplecov (~> 0.9)
   sinatra

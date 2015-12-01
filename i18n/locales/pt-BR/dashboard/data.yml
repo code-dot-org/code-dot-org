@@ -321,16 +321,17 @@ pt-BR:
         studio_iceage_8: Você pode adicionar um bloco para marcar um ponto e um bloco para reproduzir um som quando o Sid chega ao Manny, e então movê-lo com as setas até marcar um ponto?
         studio_iceage_9: Defina o plano de fundo para esta era do gelo e ajude o Sid a chegar à vovó mais rápido alterando sua velocidade. Então mova-o com as setas para chegar até a vovó e alertar todos.
         studio_iceage_10: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
-        studio_gumball_1: 'Anais quer dizer "olá" - você pode ajudá-la?'
-        studio_gumball_2: 'Darwin (personagem 1) e Gumball (personagem 2) querem dizer olá um para o outro. Você pode ajudá-los usando o bloco "diga" duas vezes?'
-        studio_gumball_3: Você pode ajudar o João Banana a chegar até a bandeira?
-        studio_gumball_4: Você pode ajudar o Gumball (personagem 1) a chegar ao Darwin (personagem 2) e reproduzir um som quando ele chegar lá?
-        studio_gumball_5: 'Você pode ajudar o Antony a dizer "saudações" quando ele for clicado? Não se esqueça de clicá-lo depois de clicar em Executar'
-        studio_gumball_6: Você pode ajudar o Darwin a se mover usando as setas para cima/para baixo/direita/esquerda para chegar a todas as bandeiras?
-        studio_gumball_7: 'O bloco "repita infinitamente" permite que você execute um código continuamente. Você pode conectar blocos a ele para ajudar o Antony a se mover para a direita e para a esquerda repetidamente?'
-        studio_gumball_8: Você pode adicionar um bloco para marcar um ponto e um bloco para reproduzir um som quando o João Banana chegar ao Antony, e então movê-lo com as setas até marcar um ponto?
-        studio_gumball_9: Defina o plano de fundo para esta invasão espacial e ajude a Nicole a chegar até a Penny mais rápido, alterando sua velocidade. Em seguida, mova-a com as setas para chegar à Nicole e alertar todos os outros.
-        studio_gumball_10: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
+        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
+        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
+        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
+        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
+        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
+        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
+        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
+        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_full_sandbox: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_k1_1: 'Você consegue fazer esse cachorro dizer "Olá, mundo"?'
         studio_k1_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer o gato dizer alguma coisa?
@@ -509,6 +510,9 @@ pt-BR:
         mc_if_statements: 'Minecraft - Instruções se'
         mc_congrats_share: 'Minecraft - Parabéns'
         mc_congrats_no_share: 'Minecraft - Parabéns'
+        gumball_intro: 'Gumball Hour of Code - Introduction'
+        gumball_events: 'Gumball Hour of Code - Events'
+        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Arraste um bloco "avance" e o encaixe embaixo do outro bloco'
@@ -581,9 +585,9 @@ pt-BR:
         Infinity_move_collide_callout: Reproduza um som quando esse evento ocorrer.
         Infinity_repeat_callout: Coloque blocos Mova aqui dentro
         craft_run_button_callout: 'Clique em "Executar" para testar seu programa'
-        craft_drag_block_callout: 'Arraste um bloco "seguirEmFrente();" e prenda-o debaixo do outro bloco'
-        craft_callout_preplaced: Pusemos alguns blocos aqui para começar
+        craft_drag_block_callout: 'Arraste um bloco "moveForward();" e prenda-o debaixo do outro bloco'
+        craft_callout_preplaced: Nós colocamos alguns blocos aqui para começar
         craft_inside_repeat: Repita ações colocando blocos aqui
         craft_callout_preplaced_house: Este código vai começar a construir a sua casa. Consegue acabá-lo?
         craft_what_is_iron: Minere esse ferro!
-        craft_callout_moveforward: Este código irá checar se há lava, você pode adicionar um comando para avançar?
+        craft_callout_moveforward: Este código vai verificar se há lava, você consegue adicionar um comando para avançar?

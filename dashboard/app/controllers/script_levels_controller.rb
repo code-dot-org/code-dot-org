@@ -5,10 +5,6 @@ class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
 
-  # Disable the session if this a cacheable request.
-  session :off, :if =>
-    Proc.new {|request| ScriptLevelsController.is_cachable_request?(request)}
-
   # Default s-maxage to use for script level pages which are configured as
   # publicly cacheable.  Used if the DCDO.public_proxy_max_age is not defined.
   DEFAULT_PUBLIC_PROXY_MAX_AGE = 3.minutes
@@ -17,6 +13,14 @@ class ScriptLevelsController < ApplicationController
   # publicly cacheable. Used if the DCDO.public_max_age is not defined.
   # This is set to twice the proxy max-age because of a bug in CloudFront.
   DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
+
+  before_action :disable_session_for_cached_pages
+
+  def disable_session_for_cached_pages
+    if ScriptLevelsController.is_cachable_request?(request)
+      request.session_options[:skip] = true
+    end
+  end
 
   # Return true if request is one that can be publicly cached.
   def self.is_cachable_request?(request)
@@ -41,7 +45,7 @@ class ScriptLevelsController < ApplicationController
       client_state.reset
       reset_session
 
-      render html: "<html><head><script>localStorage.clear(); window.location = '#{redirect_path}'</script></head><body>OK</body></html>".html_safe
+      render html: "<html><head><script>sessionStorage.clear(); window.location = '#{redirect_path}'</script></head><body>OK</body></html>".html_safe
     end
   end
 
@@ -82,7 +86,7 @@ class ScriptLevelsController < ApplicationController
 
   # Configure http caching for the given script. Caching is disabled unless the
   # Gatekeeper configuration for 'script' specifies that it is publicly
-  # cacheable, in which case the max-age and s-maxage headers are set based the
+  # cachable, in which case the max-age and s-maxage headers are set based the
   # 'public-max-age' DCDO configuration value.  Because of a bug in Amazon Cloudfront,
   # we actually set max-age to twice the value of s-maxage, to avoid Cloudfront serving
   # stale content which has to be revalidated by the client. The details of the bug are
@@ -114,7 +118,7 @@ class ScriptLevelsController < ApplicationController
   def find_next_level_for_session(script)
     script.script_levels.detect do |sl|
       sl.valid_progression_level? &&
-          (client_state.level_progress(sl.level_id) < Activity::MINIMUM_PASS_RESULT)
+          (client_state.level_progress(sl) < Activity::MINIMUM_PASS_RESULT)
     end
   end
 
@@ -145,7 +149,8 @@ class ScriptLevelsController < ApplicationController
       readonly_view_options
     elsif current_user
       # load user's previous attempt at this puzzle.
-      level_source = current_user.last_attempt(@level).try(:level_source)
+      @last_activity = current_user.last_attempt(@level)
+      level_source = @last_activity.try(:level_source)
 
       user_level = current_user.user_level_for(@script_level)
       if user_level && user_level.submitted?
@@ -200,22 +205,11 @@ class ScriptLevelsController < ApplicationController
       has_i18n: @game.has_i18n?
     )
 
-    level_view_options(
-      script_level_id: @script_level.level_id
-    )
-
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {
       success: milestone_response(script_level: @script_level, solved?: true),
       failure: milestone_response(script_level: @script_level, solved?: false)
     }
     render 'levels/show', formats: [:html]
-  end
-
-  protected
-
-  # Don't try to generate the CSRF token for forms on this page.
-  def protect_against_forgery?
-    return false
   end
 end

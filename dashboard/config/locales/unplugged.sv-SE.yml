@@ -116,7 +116,7 @@
           att flytta en figur genom en labyrint med ett enda kommando.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Flytta det, flytta den
+        title: Flytta den, flytta den
         desc: Eleverna skapar enkla algoritmer (uppsättningar av instruktioner) för
           att flytta en figur genom en labyrint med ett enda kommando.
         video: C1_moveitmoveit_unplugged
@@ -135,13 +135,13 @@
           komplicerade.
         video: C1_building_foundation
       GettingLoopy:
-        title: Bli Snurrig
+        title: Att bli snurrig
         desc: Den här lektionen introducerar konceptet av loops/slingor(upprepade
           instruktioner) genom en aktivitet med dans. Eleverna får lära sig enkel
           koreografi och sedan bli uppmanade att repetera.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relä programmering
+        title: Stafettprogrammering
         desc: Eleverna får köra en stafett där de springer en sträcka för att skriva
           en uppsättning instruktioner baserade på en bild från 'rutat papper programmering'.
           Varje elev får bara skriva en instruktion och har det blivit fel i någon
@@ -160,7 +160,7 @@
           papper och elevernas reaktion beror på vilken knapp som blivit tryckt.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Tryggt gå till platser
+        title: Trygg resa
         desc: Internet är en kraftfull men ibland farlig plats. Läraren introducerar
           säkerhet på nätet.
         video: C1_going_places_safely
@@ -170,7 +170,7 @@
           kommandon så att andra elever kan reproducera en teckning.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Verkliga algoritmer: Pappersflygplan'
+        title: 'Algoritmer i verkliga livet: Pappersflygplan'
         desc: Den här lektionen visar hur vi använder uppsättningar i vårt dagliga
           liv genom att använda exemplet att vika pappersflygplan. Den här lektionen
           fokuserar också på hur uppsättningar av instruktioner är en viktig del av

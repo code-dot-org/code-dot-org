@@ -142,8 +142,6 @@
   twitter_teach_cs: Përse nuk mësohen shkencat kompjuterike në më shumë shkolla? Gjë
     që rregullohet http://youtu.be/nKIu9yen5nc. Vizito http://code.org/ për të mësuar
     më shumë.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: Meso Orën e Kodimit
   beyond_hoc: Përtej Orës së Kodimit
   what_gender: Cfare gjinie jeni ju?
@@ -352,15 +350,18 @@
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Emri
@@ -700,11 +701,22 @@
   learn_educator_resources_button: Burimet e Mësimdhënësit
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Provo tutorialet e reja të Orës së Kodimit
   hoc2014_try_new_tutorial: Provo tutorialin tonë të ri Ora e Kodimit në beta
   hoc2014_try_scrat: Angry Birds, PvZ, dhe Scrat
   hoc2014_try_frozen: Artistët me Anna dhe Elsa, nga Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Mësimet në gjuhën tuaj
@@ -777,6 +789,8 @@
   projguts_name: Guri, Letra, Gërshërët
   hourofcode_name: Vendi për new code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Laboratori i Pafundmë
+  artist_name: Artisti
   codeorg_gradelevel: Moshat 4-104
   codeintl_gradelevel: Moshat 4-104
   thinkersmithspanish_gradelevel: Për të gjithë
@@ -818,6 +832,8 @@
   frozen_gradelevel: Moshat 8+
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Moshat 4-104
+  infinity_gradelevel: Moshat 4-104
+  artist_gradelevel: Moshat 4-104
   codeorg_platformtext: Shfletuesit modern, telefonat e mençur, tabletat
   codeintl_platformtext: Browserat e kohës, smartphones, tableta
   thinkersmithspanish_platformtext: Unplugged
@@ -909,12 +925,15 @@
     informacionin
   kodableunplugged_shortdescription: Një ushtrim argëtues unplugged
   projguts_shortdescription: Përpiqu të modelosh dhe të simulosh duke përdorur gurin/letrën/gërshërët
-  hourofcode_shortdescription: Vendi për new code.org/hoc
+  hourofcode_shortdescription: Mëso të kodosh me Marc Zuckerberg dhe Angry Birds!
   frozen_shortdescription: Le të përodrim kod për të bashkuar Anën dhe Elsën ndërkohë
     që ato eksplorojnë magjinë dhe bukurinë e akullit.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: Krijo një histori ose bëj një lojë me Play Lab!
+  infinity_shortdescription: Perdorni laboratorin e lojrave per te krijuar nje histori
+    ose pafundesi personazhesh Disney.
+  artist_shortdescription: Vizato figura të hatashme dhe dizenjo me Artistin!
   codeorg_longdescription: Mëso konceptet bazë të Shkencës Kompjuterike me programimin
     drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione
     në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies.
@@ -1390,3 +1409,19 @@
     Pas kesaj nuk do të arrish te kësh akesë në Code.org. <a href='%{it_requirements_url}'>
     Kliko ketu </a> për të mësuar si të mundesosh HTTPS per Code.org.
   compatibility_https_hide_this_warning: Mbaj të fshehtë këtë paralajmërim
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: përplas flatrat
+  infinity_shortcode: inf
+  playlab_shortcode: luaj
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

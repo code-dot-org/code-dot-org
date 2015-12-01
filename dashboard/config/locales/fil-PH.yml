@@ -1,9 +1,9 @@
 "fil":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      not_saved: 'Pakiwasto ang mga sumusunod na error:'
+      too_young: Ang nilalaman na ito ay may mga paghihigpit sa edad sa lugar at ay
+        hindi magagamit para sa mga batang mag-aaral
   activerecord:
     errors:
       messages:
@@ -55,9 +55,9 @@
   auth:
     sign_in_with: Mag sign in gamit ang %{provider}
     signed_in: Signed in!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
+    signed_out: Nag-sign out ka sa <a href="%{url}"> Code.org </a>.
+    sign_out_of: Gumamit ka ng %{provider} para mag sign-in ka. <a href="%{url}">Pindutin
+      ito</a> para ma sign out ka kay %{provider}.
     already_signedup: Naka signed up na?
     notyet_signedup: Hindi pa nakakasali?
     google_oauth2: Account sa Google
@@ -68,13 +68,15 @@
     need_confirmation: Hindi nakatanggap ng kumpirmasyon?
     need_unlock: Hindi nakatanggap kung paano mag unlock?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
-    overview_student: Sign up for an account to track your progress. Your email is
-      primarily used to allow you to log in and for password recovery. For more information,
-      see our <a href="http://code.org/privacy">Privacy Policy</a>.
-    overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to add your students and track their progress.
+    student_count: '%{count} na istudyante na sumali dito.'
+    teacher_count: '%{count} na guro na sumali dito.'
+    overview_student: Mag-sign up na para ma upang subaybayan ang iyong progreso.
+      Ang iyong email ay pangunahing ginagamit upang mag-log in at para sa pagbawi
+      ng password. Para sa karagdagang impormasyon, tingnan ang aming <a href="http://code.org/privacy">
+      Patakaran </a>.
+    overview_teacher: Turuan ng iyong istudyante sa iyong classroom gamit ng pang
+      sign-up sa isang account.<p/> Pwede mo i-add ang iyong istudyante at i-trak
+      ang kanilang progresso.
     no_signup_message: Pwede mong  <a target="_blank" href="http://learn.code.org">i-browse
       ang iba't ibang stage at mga palaisipan</a>, pero kailangan mo mag sign-up para
       ma-save ang mga nagawa.
@@ -175,8 +177,8 @@
     redeem_header: 'To redeem:'
     donorschoose_register: Register as a teacher on DonorsChoose.org
     donorschoose_project: Post a project
-    donorschoose_how_to: How to use your code
-    success: Your prize was succesfully redeemed, see code below.
+    donorschoose_how_to: Paano ba gamitin ang iyong code
+    success: Ang iyong premyo ay tagumpay na redeemed, tignan ang code sa ibaba.
     error: Your prize could not be redeemed, please try again.
     error_us_only: The prize offer is only valid for U.S. users.
     error_not_earned: You have not yet earned this prize.
@@ -263,6 +265,7 @@
         playlab: Lumikha ng App
         artist: Gumuhit ng isang bagay
         calculate: Calculate Something
+        applab: Lumikha ng App
     user:
       classroom: Home Page ng Teacher
       district_dashboard: District Dashboard

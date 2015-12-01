@@ -1451,41 +1451,41 @@ ar:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: 'مرحبا، أنا كاثلين كينيدي وأنا منتجة فلم حرب النجوم: القوة تنهض. اليوم سوف تعمل مع أحد نجومنا، ب ب8 و هو انسان الي كروي. أي شيء يفعله، و كل حركة يقوم بها، يقع التحكم بها ببرمجيات في الحاسوب.علوم الحاسوب تؤثر على كل صناعة من الصناعات، من التسويق للرعاية الصحية و الأفلام. في الواقع، مئات مهندسي الحاسوب عملوا معا لصناعة فيلم مثل "القوة تنهض".'
       2:
         image: notes/starwars_intro_2.JPG
-        text: 'مرحبا أنا وردة راشيل، أنا مهندسة خبيرة في البحث و التطوير  في شركة  ILM وأنا أقود فريق الرسوم المتحركة والمخلوقات. في "القوة تنهض"، أنا مسؤولة عن مساعدة الفنانين في تطوير المعدات التي هي الأجزاء من الإنسان الالي التي تتحرك و تشعرنا ان شكل الروبوت مقنع جداً في مجرة بعيداً جدا .'
+        text: 'مرحبا أنا راشيل روز، أنا مهندسة خبيرة في البحث و التطوير في شركة ILM وأنا أقود فريق الرسوم المتحركة والمخلوقات. في "القوة تنهض"، أنا مسؤولة عن مساعدة الفنانين في تطوير المعدات التي هي الأجزاء من الإنسان الالي التي تتحرك و تشعرنا ان شكل الروبوت مقنع جداً في مجرة بعيداً جدا.'
       3:
         image: notes/starwars_intro_3.JPG
         text: 'في الساعة القادمة، سنقوم ببناء لعبتنا الخاصة من حرب النجوم. سوف نعلمك المفاهيم الأساسية للبرمجة. عادة البرمجة نكون بشكل نصوص ولكن نحن سنستخدم  القطع التي يمكن سحبها وإسقاطها لكتابة البرامج. وراء الستار، انت لا تزال تكتب التعليمات البرمجية. بعد أن جربت الأساسيات باستعمال القطع، سوف نتحول إلى جافا سكريبت، واحد من لغات البرمجة الأكثر شعبية على شبكة الإنترنت.'
       4:
         image: notes/starwars_intro_4.JPG
-        text: "To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts. Your screen is split into three parts. On the left is the Star Wars game space, where code will run. The instructions for each level are written below the game space."
+        text: في البداية، سنعمل مع ري برنامجا يجعل ب ب -8 يمشي لجمع كافة أجزاء الخردة. يتم تقسيم الشاشة إلى ثلاثة أجزاء. على اليمين فضاء لعبة حرب النجوم، حيث سيتم تشغيل التعليمات البرمجية. تتم كتابة التعليمات الخاصة بكل لغز أسفل فضاء اللّعب.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: 'المنطقة الوسطى تحتوي صندوق الأدوات وكل واحدة من هذه المقاطع البرمجيّة هو أمر يمكن ل ب ب - 8 أن يفهمه.'
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where we are going to build our program.
+        text: المساحة البيضاء على اليمين تسمى مساحة العمل، و هو مكان إنتاج البرنامج.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what happens? BB-8 moves left one block on the grid.
+        text: إذا سحبنا المقطع تحريك إلى اليسار لمساحة العمل ثم نضغط على تشغيل، ماذا يحدث؟ ب ب 8 يتحرك لليسار بخطوة واحدة.
       8:
         image: notes/starwars_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together."
+        text: وماذا لو كنت أريد من ب ب-8 أن يفعل شيئا آخر بعد مقطع التّحرك إلى اليسار؟ يمكنني أن أضيف مقطعا آخر إلى برنامجنا. سأختار المقطع التّحرّك إلى الأعلى، وسوف اسحبها تحت مقطع التّحرك إلى اليسار حتى يظهر اللّون البرتقالي. ثم سوف أسقطها فيلتصق المقطعان معا.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked from top to bottom on our workspace. If you ever want to delete a block, just remove it from the stack and drag it back into the tool box.
+        text: عندما اضغط على تشغيل مرة أخرى، سيقوم ب ب 8 بتطبيق التعليمات مرتبة من الأعلى إلى الأسفل في مساحة العمل. إذا كنت تريد حذف مقطع، أزله من مجموعة المقاطع وأرجعه مرة أخرى إلى فضاء لأدوات.
       10:
         image: notes/starwars_intro_10.JPG
-        text: "After you've hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: بعد النقر على تشغيل، يمكنك دائماً نقر الزر إعادة تعيين لتجعل ب ب 8 يعود إلى البداية. إنطلق الآن!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: "Inside the blocks we've been using are JavaScript commands. JavaScript is the most popular programming language for professional developers today. Blocks are a great way to get started learning to code and in fact, top universities like Harvard and Berkeley start teaching this way. But once we learn the basics, engineers write code by typing because it allows us to go faster."
+        text: يوجد داخل المقاطع المستعملة أوامر جافا سكريبت. جافا سكريبت هي لغة البرمجة الأكثر شعبية للمبرمجين المحترفين اليوم. المقاطع البرمجية طريقة رائعة للبدء في تعلم البرمجة، وفي الواقع، أفضل الجامعات مثل جامعة هارفارد وبيركلي تبدء التدريس بهذه الطريقة. ولكن بعد تعلم الأساسيات، يستعمل المهندسون طريقة كتابة التعليمات البرمجية لأن ذلك أسرع.
       2:
         image: notes/starwars_typing_2.JPG
-        text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try."
+        text: يمكننا كتابة المئات من الأوامر دون الاضطرار إلى العثور عليها في فضاء الأدوات أو نقلها. لأنك في مرحلة التّعلّم الكتابة قد تكون أبطأ في البداية ولكننا نريد أن نعطيك الفرصة للتجربة.
       3:
         image: notes/starwars_typing_3.JPG
         text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.
@@ -1532,7 +1532,7 @@ ar:
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
       2:
         image: notes/starwars_congrats_2.JPG
         text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
@@ -1548,19 +1548,19 @@ ar:
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: "Hi I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: 'مرحبا، أنا كاثلين كينيدي وأنا منتجة فلم حرب النجوم: القوة تنهض. اليوم سوف تعمل مع أحد نجومنا، ب ب8 و هو انسان الي كروي. أي شيء يفعله، و كل حركة يقوم بها، يقع التحكم بها ببرمجيات في الحاسوب. علوم الحاسوب تؤثر على كل صناعة من الصناعات، من التسويق للرعاية الصحية و الأفلام. في الواقع، مئات مهندسي الحاسوب عملوا معا لصناعة فيلم مثل "القوة تنهض".'
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: "Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artist develop rigs, which are the parts of the character that move that allow the character to look very believable in a galaxy far, far away."
+        text: 'مرحبا أنا راشيل روز، أنا مهندسة خبيرة في البحث و التطوير في شركة ILM وأنا أقود فريق الرسوم المتحركة والمخلوقات. في "القوة تنهض"، أنا مسؤولة عن مساعدة الفنانين في تطوير المعدات التي هي الأجزاء من الإنسان الالي التي تتحرك و تشعرنا ان شكل الروبوت مقنع جداً في مجرة بعيداً جدا.'
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: "In the next hour, we're going to build our own Star Wars game that will teach you the basic concepts of programming. Usually programming is all text but we're going to use blocks here so we can drag and drop to write the programs. To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts."
+        text: في الساعة القادمة، سنقوم ببناء لعبتنا الخاصة من حرب النجوم. سوف نعلمك المفاهيم الأساسية للبرمجة. عادة البرمجة نكون بشكل نصوص ولكن نحن سنستخدم القطع التي يمكن سحبها وإسقاطها لكتابة البرامج. في البداية، سنعمل مع ري برنامجا يجعل ب ب -8 يمشي لجمع كافة أجزاء الخردة.
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
+        text: تنقسم الشاشة إلى 3 أجزاء أساسيين. يوجد على اليمين فضاء اللّعب بحرب النجوم، أين سيشتغل البرنامج. التعليمات لكل مستوى مكتوبة أسفله.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: 'المنطقة الوسطى تحتوي صندوق الأدوات وكل واحدة من هذه المقاطع البرمجيّة هو أمر يمكن ل ب ب - 8 أن يفهمه.'
       6:
         image: notes/starwars_blocks_intro_6.JPG
         text: "The white space on the right is called the work space and this is where we're going to build our program."
@@ -1569,13 +1569,13 @@ ar:
         text: If I drag the moveLeft(); block to our workspace, what happens? BB-8 moves left one block on the grid.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together. When I press run again, BB-8 will perform the commands that are stacked top to bottom on our workspace."
+        text: وماذا لو كنت أريد من ب ب-8 أن يفعل شيئا آخر بعد مقطع التّحرك إلى اليسار؟ يمكنني أن أضيف مقطعا آخر إلى برنامجنا. سأختار المقطع التّحرّك إلى الأعلى، وسوف اسحبها تحت مقطع التّحرك إلى اليسار حتى يظهر اللّون البرتقالي. ثم سوف أسقطها فيلتصق المقطعان معا. عندما أضغط على تشغيل مرة أخرى، سيقوم ب ب 8 بتطبيق التعليمات مرتبة من الأعلى إلى الأسفل في مساحة العمل.
       9:
         image: notes/starwars_blocks_intro_9.JPG
         text: If you ever want to delete a block, just remove it from the stack and drag it back into the toolbox.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: "After you hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: بعد النقر على تشغيل، يمكنك دائماً نقر الزر إعادة تعيين لتجعل ب ب 8 يعود إلى البداية. إنطلق الآن!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
@@ -1597,11 +1597,11 @@ ar:
         text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: رويدا رويدا، اللعبة تصبح أكثر تفاعلية.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
       2:
         image: notes/starwars_blocks_congrats_2.JPG
         text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
@@ -1617,98 +1617,155 @@ ar:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
+        text: ' إسمي Jens Bergensten و أنا معروف أكثربإسم جاب. انا رئيس المبرمجين في ماين كرافت في mojang.com. كان عمري 11 أو 12سنة عندما بدأت البرمجة لأنني أريد أن أصنع الألعاب. صديق لأبي أخبرني أنّه لتحقيق ذلك يجب  تعلّم البرمجة. بهذه الطريقة بدأت. يعجبني تصميم و معرفة  مكونات الأشياء. و هذا أكثر ما يعجبني في ماين كرافت.'
       2:
         image: notes/mc_intro_2.JPG
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: 'خلال الساعة القادمة  سنتعلّم مبادئ علوم الحاسوب ببرمجة ألكس أو ستيف على التحرّكفي جزء يحاكي عالم ماين كرافت.'
       3:
         image: notes/mc_intro_3.JPG
-        text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+        text: 'البرمجة التقليديّة تتكوّن من نصوص، ولكننا سنستعمل بلوكلي: هونظام يستعمل المقاطع البرمجيّة التي تحركها و تسقطها لكتابة البرامج,، وراء الستار، أنت تنشئ تعليمات برمجية باستعمال جافا سكريبت.'
       4:
         image: notes/mc_intro_4.JPG
-        text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work."
+        text: ' ما ستتعلّمه هو ما يقوم به المبرمجون يوميا و هي مبادئ علوم الحاسوب.  في شركتنا Mojang نستعمل نفس المبادئ لإنشاء عالم ماين كرافت.'
       5:
         image: notes/mc_intro_5.JPG
-        text: "Before you start, you'll pick your character. I'm going to choose Alex. Let's build code for a program that will help her move around the screen."
+        text: 'قبل البداية، يجب إختيار الشخصية الرئيسية. سأختار أليكس. لنقم بكتابة برنامج  تساعدها على التّحرّك حول الشاشة.'
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft playspace where your program will run. The instructions for each level are written below.
+        text: 'تنقسم الشاشة إلى 3 أجزاء أساسيين. يوجد على اليمين فضاء اللّعب بماين كرافت، أين سيشتغل البرنامج. التعليمات لكل  لغز مكتوبة أسفله.'
       7:
         image: notes/mc_intro_7.JPG
-        text: "This middle area is the toolbox and each of these blocks is a command that directs Alex's actions."
+        text: المساحة الوسطى مخصّصة للأدوات وكلّ واحد من هذه المقاطع هوأمريوجّه أعمال ألبكس.
       8:
         image: notes/mc_intro_8.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: الفضاء الأبيض على اليسار يسمى مساحة العمل أين سيتم إنتاج البرنامج.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click run, what happens? Alex moves forward one space on the grid.
+        text: 'إذا حركنا المقطع "تحريك إلى الأمام" إلى مساحة العمل. ثمّ النقرعلى على تشغيل، ماذا يحدث؟ أليكس تتحرّك خطوة على مساحة اللعب.'
       10:
         image: notes/mc_intro_10.JPG
-        text: "And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the turnRight(); block and I'll drag it underneath my moveForward(); block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+        text: |
+          ماذا إذا كنا نريد أن نفعل شيئا آخر بعد هذه الحركة؟ يمكننا إضافة مفطع برمجي آخر لبرنامجنا، سأختارالمقطع إتّجه إلى اليمين، و سأحرّكه تحت المقطع "تحريك إلى الأمام" إلى أن يظهر الخط البرتقالي. ثم سأتركه فألاحظ أن المقطعين سيلتصقان. عندما ننقر
+          على تشغيل مجددا، أليكس ستقوم بإنجازالأوامر من الأعلى إلى الأسفل.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back to the toolbox.
+        text: وإذا أردتم حذف مقطع، قم بتحويله من جديد إلى فضاء الأدوات.
       12:
         image: notes/mc_intro_12.JPG
-        text: "To undo your changes and get back to how the level started, use the Start Over button in the top right corner of the workspace. One more thing: you see the little triangle on the turn blocks? Anytime you see these triangles, it means that you can pick a different option. Let's start coding!"
+        text: 'لإلغاء التغييرات والعودة إلى مستوى بداية اللغز، إستعمل الزر البدء من جديد في الركن العلوي الأيسر من فضاء العمل. هل ترى المثلث الصغير في المقطع "اتجه"؟ كلما رأيت هذا المقطع، هذا يعني أنه يمكنك الاختيار بين مجموعة خيارات.  لنبدأ البرمجة! '
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
+        text: 'أنا "ليديا وينترز"، مديرة العلامة التجارية في Mojang و قمنا بإنجاز لعبة صغيرة تسمى ماين كرافت.'
       2:
         image: notes/mc_repeat_2.JPG
-        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+        text: الشيء المفضل لي في ماين كرافت هو الاستكشاف. أنا أحب المغامرة في الكهوف ورؤية ما يمكن أن أجد. كشخص ليس بمبرمج، أنا متحمسة لتجربة دروس ماين كرافت وأنا أتعلم حاليا القليل من البرمجة.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops.
+        text: 'في آخر لغزاحتجنا الكثيرمن المقطع "تحريك إلى الأمام". سيكون من الأسهل لو قلنا إلى الحاسوب أن يعيد هذا المقطع 4 أو 5 مرات. من حظنا، الحواسيب جيّدة في إعادة الأوامر باستعمال المقطع "تكرار".'
       4:
         image: notes/mc_repeat_4.JPG
-        text: "When building Minecraft, we use repeat loops to place all the initial materials for creating a new world. That's thousands and thousands of blocks. We also use loops in little ways, for example to make Alex's feet move back and forth as she walks. Repeat loops are a powerful part of programming."
+        text: عند بناء ماين كرافت، نستخدم التركيب تكرار لوضع جميع المواد الأولية لإنشاء عالم جديد. وهذا يشكّل الآلاف والآلاف من القطع. ونحن أيضا نستخدم التكرار قليلا، مثلا لجعل أقدام أليكس تتحرك للأمام و إلى الخلف عندما تمشي. التركيب تكرار جزء قوي في البرمجة.
       5:
         image: notes/mc_repeat_5.JPG
-        text: "Night is coming so in the next couple of levels, we're going to build a house to stay safe. We're going to use the repeat block to do this very easily."
+        text: الليل قادم في اللغزين القادمين، سنبني منزلا لنكون آمنين. سنستعمل لذلك التركيب تكرار بطريقة سهلة.
       6:
         image: notes/mc_repeat_6.JPG
-        text: "To build a wall of our house, we can either tell Alex to moveForward(); and place planks four times or we can tell her to moveForward(); and place one plank, then take this command and use the repeat block to have her perform the action multiple times. Now we'll click on the repeat block and tell her how many times we want her to perform this action. Now let's build our house before night falls! Have fun."
+        text: لبناء جدارلمنزلنا، يمكننا إما أن نقول لأليكس أن تتحرك إلى الأمام و تضع الألواح أربع مرات أو يمكن أن نقول لها أن تتقدّم للأمام و تضع لوحا واحدا، ثم نأخذ هذا الأمر ونستخدم كتلة التكرار ليتم تنفيذ الإجراء عدة مرات. والآن سنقوم بالنقر فوق كتلة التكرار وأقول لها عدد المرات التي نريد لتنفيذ هذا الإجراء. الآن دعونا نبني منزلنا قبل الليل! استمتع.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: "Now we're going to learn about if statements. If statements are a fundamental part of learning to program. They help a computer make decisions."
+        text: |
+          الآن، سنقوم بالتعرف على التركيب الشرطي إذا. هذا التركيب أساسي في تعلم البرمجة. فهو يساعد الحاسوب على أخذ
+          القرارات.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when I unlock my phone, it runs some code that says if I enter the password correctly, then unlock the phone. Otherwise, it shows an error message.
+        text: كل الحواسيب تستعمله، بما في ذلك هاتفي. مثلا، عند فتح الهاتف، فهو يشغل بعض الأوامر البرمجية التي تقول إذا أدخلت كلمة السر بطريقة صحيحة، فافتح الهاتف. و إلا ستظهر رسالة الخطأ.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react to what they see in the world. For example, if there is a rock in front of them, they can turn left. Or turn right if they run into a tree.
+        text: يمكنك إستعمال التركيب الشرطي إذا في برنامجك لتجعل ستيف وأليس يتفاعلون مع ما يشاهدونه في العالم. مثلا، إذا كان هناك حجر أمامهم ،يمكنهم الاستدارة يسارا. أو يمينا عند التوجه لشجرة.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: "In this case, we don't want to fall in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
+        text: في هذه الحالة، لا نريد السقوط في الحمم البركانية. من السهل التخطيط للحمم. يمكننا مشاهدة ذلك على الشاشة. ماذا عن الحمم التي لا نراها تحت الحجر؟
       5:
         image: notes/mc_if_statements_5.JPG
-        text: "After we mine the stone, we'll need to check if there's any lava in that place before moving forward. If there is lava there, we want to place a stone in front of our character before we can move forward. That way we can safely move on. Time for more mining! And remember to use the if statement to watch your step."
+        text: 'بعد استخراج الحجر، نحتاج للتثبت إذا كان هناك أي حمم في ذلك المكان قبل التقدم إذا كان هناك حمم، نريد وضع حجرة أمام اللاعب قبل التقدم بأمان. حان الوقت لمزيد من التنقيب. وتذكراستعمال "إذا" لمراقبة تحركاتك.'
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: تهانينا! لقد تعلمت للتو اللبنات الأساسية لعلوم الحاسوب.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: الآن يمكنك استخدام هذه المقاطع البرمجية لبناء عالمك الخاص. هنا لا يوجد مزيد من التعليمات ولا الألغاز لحلها. يمكنك إنشاء أي شيء تريده. لك أن تختار.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[الطالب يتحدّث] أنها على وشك أن تكون حقيقية. القص. لقد كتبت حرفا من المشاعل. صنعت حرف A من الألواح. إنها تعمل، إنها تعمل. قمنا ببناء منزل من الصوف!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: "When you're done making your creation, choose share to get a link to share with your friends. Have fun!"
+        text: عند الانتهاء من صناعة منتوجك، أنقر على مشاركة للحصول على رابط تشاركه مع أصدقائك. استمتع!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: تهانينا! لقد تعلمت للتو اللبنات الأساسية لعلوم الحاسوب.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: الآن يمكنك استخدام هذه المقاطع البرمجية لبناء عالمك الخاص. هنا لا يوجد مزيد من التعليمات ولا الألغاز لحلها. يمكنك إنشاء أي شيء تريده. لك أن تختار.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[الطالب يتحدّث] أنها على وشك أن تكون حقيقية. القص. لقد كتبت حرفا من المشاعل. صنعت حرف A من الألواح. إنها تعمل، إنها تعمل. قمنا ببناء منزل من الصوف!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: الآن يمكنك بناء كل ما تريد. استمتع!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: الفضاء الأبيض على اليسار يسمى مساحة العمل أين سيتم إنتاج البرنامج.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

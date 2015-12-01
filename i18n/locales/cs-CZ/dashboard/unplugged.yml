@@ -72,7 +72,7 @@ cs:
         desc: Studenti vytváří jednoduché algoritmy (sady instrukcí) pro pohyb postavy bludištěm pomocí jediného příkazu.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Přesuň to, Přesuň to
+        title: Pohyb, pohyb
         desc: Studenti vytváří jednoduché algoritmy (sady instrukcí) pro pohyb postavy bludištěm pomocí jediného příkazu.
         video: C1_moveitmoveit_unplugged
       PlantASeed:

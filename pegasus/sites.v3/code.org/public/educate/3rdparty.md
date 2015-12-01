@@ -39,12 +39,12 @@ nav: educate_nav
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|
-| [Edhesive](https://edhesive.com/) | Year-long AP Computer Science course, FREE | Online PD, community and content/technical/program support available, $2,200 per school |
 | [Beauty and Joy of Computing](http://bjc.berkeley.edu/) | Year-long CS Principles course, FREE | In-person in NYC, Berkeley, CA and North Carolina, FREE, stipends in NYC, stipends + travel elsewhere paid as available |
 | [Bootstrap](http://www.bootstrapworld.org/) | Teach algebra through video-game programming, with a 20-hr module to go alongside or inside a math class | 3-day workshops for schools and districts. Fees range |
 | [Codecademy](http://www.codecademy.com/learn?utm_campaign=reskillusa) | 6 online courses and 65 projects. FREE | Not provided |
 | [CodeHS](https://codehs.com) | Year-long Introduction to Computer Science FREE and AP Computer Science in Java. Pro version is $2000/section/year | Online PD for teaching intro computer science, 30-40 hour course, $1000/teacher |
 | [Code.org](/educate) | Exploring Computer Science intro course and Computer Science Principles, a pilot course with an AP exam coming in 2016, FREE | In-person and online workshops available to partner districts, FREE, 50% of teacher stipends covered by Code.org |
+| [Edhesive](https://edhesive.com/) | Year-long AP Computer Science course, FREE | Online PD, community and content/technical/program support available, $2,200 per school |
 | [Globaloria](http://globaloria.com/intro) | 6 game-design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
 | [Mobile CSP](http://www.mobile-csp.org/) | Year-long Computer Science Principles course, materials available online, FREE | Online, regional in-person offered in CT, MA, NH and CA (others may be available), FREE, stipends available|
 | [NMSI](http://www.nms.org/) | Year-long AP CS Principles/AP CS A course, FREE| In-person summer training + 4 days of PD throughout the year. One-on-one mentoring available to partner schools, FREE |
@@ -82,6 +82,12 @@ Build the next generation of creators using free, open-source Java courseware.
 
 ### [Teacher Led Hour of Code Lesson Plans](/teacher-led)
 Check out one-hour, teacher-led lesson and activity plans designed for different subject areas to teach the basics of computer science.
+
+<br/><br/>
+## Other lists of resources for curriculum or PD
+- AskATeacher's [Hour of Code suggestions by grade level](http://askatechteacher.com/2015/11/09/hour-of-code-3/)
+- [LeadCS.org](http://www.leadcs.org) - a list of many resources for schools to embrace CS
+- [TeachCS](http://www.teachcs.org) - crowdfunding for teachers to attend CS PD, such as at [CSPDWeek](http://cspdweek.org), July 18-22, 2016
 
 <br /><br/><br/>
 Wish your organization were listed on this page? [See the criteria](https://docs.google.com/document/d/1Q4J-mSzbrV_arujtOnIARVyIU9tc9jUog4i_1DWAD3s/pub)

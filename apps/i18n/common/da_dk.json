@@ -230,7 +230,7 @@
   "tooFewBlocksMsg": "Du bruger alle de nødvendige typer af blokke, men prøv at bruge flere af disse typer blokke til at fuldføre dette puslespil.",
   "tooManyBlocksMsg": "Denne opgave kan løses med <x id='START_SPAN'/><x id='END_SPAN'/> blokke.",
   "tooMuchWork": "Du fik mig til at gøre en masse arbejde! Kunne du prøve at gentage færre gange?",
-  "toolboxHeader": "blokke",
+  "toolboxHeader": "Blokke",
   "toolboxHeaderDroplet": "Værktøjskasse",
   "totalNumLinesOfCodeWritten": "I alt: {numLines, plural, one {1 linje} other {# linjer}} af kode.",
   "tryAgain": "Prøv igen",

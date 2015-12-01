@@ -672,6 +672,14 @@ ca:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: Bucles Mentres
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1408,6 +1416,8 @@ ca:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
           description_short: Programming
@@ -1422,6 +1432,13 @@ ca:
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Bucles Mentres
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1441,12 +1458,12 @@ ca:
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: "Star Wars: Construcció d'una galàxia amb codi"
+          title: 'Star Wars: Construint una galàxia amb codi'
           description_short: "Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana."
           description: "Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana."
           Hour of Code 2015: Hora del codi 2015
         starwarsblocks:
-          title: "Star Wars: Construcció d'una galàxia amb codi"
+          title: 'Star Wars: Construint una galàxia amb codi'
           description_short: "Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana."
           description: "Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana."
           Hour of Code 2015: Hora del codi 2015
@@ -1457,7 +1474,7 @@ ca:
           Craft: Craft
         mc:
           title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
+          description_short: Explora el món de Minecraft a través del codi
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
           Hour of Code 2015: Hora del codi 2015
         CSPPD3-Unit3-pt2:
@@ -1467,3 +1484,10 @@ ca:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Welcome!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Recapitulació

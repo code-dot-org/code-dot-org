@@ -126,7 +126,6 @@
   just_did_hoc: '我已經完成了 #HourOfCode - 快來看看吧！ @codeorg'
   twitter_teach_cs: 為什麼沒有更多的學校教計算機科學？我們可以解決這個問題。HTTP://youtu.be/nKIu9yen5nc。請瀏覽 http://code.org/
     了解更多。
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">知道更多</a> 關於教師的獎勵。
   learn_hoc: 學習一小時的程式設計
   beyond_hoc: 一小時後的學習課程
   what_gender: 您的性別是？
@@ -274,8 +273,8 @@
   starwars_javascript_description: 使用拖拉區塊及JavaScript.
   starwars_javascript_specs: 英文 | 瀏覽器 | 11歲以上
   starwars_javascript_start_button: 快來試試
-  starwars_blocks_title: 程式模塊
-  starwars_blocks_description: 使用拖拉模塊
+  starwars_blocks_title: 程式積木
+  starwars_blocks_description: 使用拖拉區塊
   starwars_blocks_specs: 多國語言(增加中) | 瀏覽器, 智慧手機, 平板 |年齡6-10歲
   starwars_blocks_start_button: 快來試試
   starwars_watch_videos: 在開始始，先看一些激發靈感的影片
@@ -297,14 +296,17 @@
   volunteer_engineer_submission_intro_background: Hour of Code是在教電腦科學的全球性的運動，在超過180個以上的國家有好幾千萬個學生響應。請在12/7-12/13的電腦科學教學週
     (CSEdWeek) 一起參與。
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: '如果你是在學習電腦科學的學生或是軟體的專業人士，請輸入下列資訊。此為必填:
     <span class="form-required-field">*</span>'
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: 在志工地圖上與老師共用的資訊
   volunteer_engineer_submission_field_name: 你的名字
   volunteer_engineer_submission_field_name_placeholder: 全名
@@ -318,7 +320,7 @@
   volunteer_engineer_submission_checkbox_after_hoc: 我對Hour of Code的志願工作有興趣
   volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
     of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_field_linkedin: LinkedIn 個人檔案
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook的個人資料
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
@@ -348,9 +350,9 @@
   volunteer_engineer_submission_commitment_three_hrs_per_week: 每星期３小時
   volunteer_engineer_submission_commitment_five_hrs_per_week: 每星期５小時
   volunteer_engineer_submission_commitment_now_and_then: 從現在開始
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: 每年2-3次
+  volunteer_engineer_submission_commitment_monthly: 每個月幾小時
+  volunteer_engineer_submission_commitment_weekly: 每週幾小時
   volunteer_engineer_submission_commitment_more: 更多
   volunteer_engineer_submission_location_flexibility_onsite: 網上學校
   volunteer_engineer_submission_location_flexibility_remote: 遠端教師或學生
@@ -366,7 +368,7 @@
   volunteer_engineer_submission_num_volunteers_5: 5 名志工
   volunteer_engineer_submission_num_volunteers_10: 10 名志工
   volunteer_engineer_submission_num_volunteers_25: 25 個志工
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 位志工
   volunteer_engineer_submission_type_task_onsite: 我希望你參觀我的教室並提供科技協助和鼓勵
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
     to say a few words of inspiration to the kids
@@ -398,13 +400,13 @@
   dashboard_landing_more_tutorials: 想看更多教程嗎?
   dashboard_landing_more_tutorials_desc: 我們的合作夥伴提供更多教程 <a href="/learn/beyond">。</a>學會用機器人程式設計，
     製造網上頁面，製造你自己的應用程式，或探討其他電腦程式設計語言如C++、Ruby或Python!
-  dashboard_hoc_courses: The Hour of Code for All Ages
+  dashboard_hoc_courses: 適合所有年齡層的一個小時程式設計課程
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
     students!
   dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
     students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
     during Computer Science Education Week.
-  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_k5_courses: K-5 的 20 小時課程
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
     consists of about 20 lessons that may be implemented as one unit or over the course
@@ -412,7 +414,7 @@
     get started, we offer high quality professional development workshops around the
     U.S. free of charge. <a href="/professional-development-workshops">Find one near
     you!</a>
-  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses: 20 小時中學課程
   dashboard_middle_courses_desc: Our middle school curriculum uses computer science
     and programming within the context of middle school math and science - as a tool
     to teach math and science concepts. To register for professional development workshops,
@@ -458,7 +460,7 @@
   dashboard_navigation_section_speakers: 電腦科學 <br/> 特邀演講者
   dashboard_navigation_all_sections: 學生戶口及進度
   dashboard_navigation_view_progress: 查看進度
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: 觀看文字回應
   dashboard_navigation_add_students: 新增學生
   dashboard_navigation_manage_students: 管理學生們
   dashboard_navigation_lesson_plans_resources: 教案和資源
@@ -505,10 +507,10 @@
   dashboard_students_reset_password: 重置密碼
   dashboard_students_share_section: 分享此課程區段的登入頁面給您的學生們：
   dashboard_students_print_info: 列印學生登入資料卡
-  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture_title: 通關圖片
   dashboard_students_secret_picture: 通關圖片
   dashboard_students_reset_picture: ' 藉由<b>顯示通關密錀</b>，與 <b>重置通關密錀</b>您可隨時重置學生通關圖片。系統將產生新的通關圖片讓他們登錄時使用。'
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: 通關密語
   dashboard_students_secret_word: 通關密語
   dashboard_students_reset_word: 藉由<b>顯示通關密語</b>，與 <b>重置通關密語</b>您可隨時重置學生通關密語。系統將產生新的通關密語讓他們登錄時使用。
   dashboard_students_join_link: 告訴您的學生建立自己的帳戶並加入您的課程區段於
@@ -518,18 +520,18 @@
   dashboard_students_url: 網址
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     按這裡</a> 是我們的隱私安全性文件，可以分享或列印給您的學生。
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
+  dashboard_curriculum_k5_title: K-5 教育資源
+  dashboard_curriculum_middle_title: 中學教育資源
+  dashboard_curriculum_high_title: 高中教育資源
+  dashboard_lesson_plans: 課程計畫
   dashboard_view_all_lesson_plans: 瀏覽所有教案
   dashboard_course1: 課程 1
   dashboard_course2: 課程 2：
   dashboard_course3: 課程 3：
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
+  dashboard_course4: '課程 4 (測試版):'
+  dashboard_curriculum: 課程
   dashboard_curriculum_overview: 學前至五年級課程概述
-  dashboard_overview: Overview
+  dashboard_overview: 概觀
   dashboard_sequence: '序列 '
   dashboard_framework: 主架構
   dashboard_standards: 標準
@@ -540,10 +542,10 @@
   dashboard_puzzle_solving: 解決謎題：
   dashboard_student_worksheet: 學生工作表
   dashboard_teacher_worksheet: 教師工作表
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_csina: '電腦科學在代數中:'
+  dashboard_curriculum_csins: '電腦科學在科學中:'
+  dashboard_curriculum_csp: 'AP ® 電腦科學原則:'
+  dashboard_curriculum_ecs: 探索電腦科學
   dashboard_grade_k: 學前
   dashboard_grade_other: 其他
   dashboard_login_word: 文字
@@ -558,8 +560,8 @@
   dashboard_progress_furthest_level_attempted: 嘗試到的最遠關卡
   dashboard_stage: 階段
   dashboard_puzzle: 關卡
-  dashboard_question: Question
-  dashboard_response: Response
+  dashboard_question: '問題 '
+  dashboard_response: 回應
   stats_hoc_2013_heading: 去年的一小時程式設計有令人難以置信的統計資料。在一個禮拜內：
   stats_hoc_2013_image_alt: 統計來自2013的Hour of Code
   dashboard_teacher: 教師
@@ -575,32 +577,38 @@
   dashboard_sections_password_account_creation: 學生建立的文字密碼
   dashboard_sections_login_type_explanation: 本表協助説明您可以選擇的課程區段登入類型，<b>通關圖片、 通關密語或電子郵件</b>。
   dashboard_faq: 常見問題集
-  dashboard_faq_k5: K-5 Frequently Asked Questions
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
-  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
+  dashboard_faq_k5: K-5 的常見問題
+  dashboard_announcements: 公告
+  dashboard_announce_view_all: 全部查看
+  dashboard_announce_hoc: <b>2015 年 11 月 9 日</b>-全新的一小時程式設計教學課程，以即將上映的電影星際大戰：原力覺醒。與雷伊一同指導新的BB-8機器人完成所有的任務。然後，在遙不可及的銀河系中，加入萊婭來建立並共享你的遊戲。
   code_hoc_coming: 代碼小時就在這裡 — — 12 月 8-14 ！
   code_sign_up: 註冊參與電腦科學教育週
   learn_more: 瞭解更多資訊
-  learn_sign_up_description: Sign up to participate in the Hour of Code during CS
-    Education Week
+  learn_sign_up_description: 在 CS 教育週期間報名參加一小時的程式碼課程
   learn_sign_up_button: 註冊帳號
   learn_videos_watch: Watch this inspirational video with your classroom
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
-  learn_educator_resources_description: Learn how to teach an Hour of Code
-  learn_educator_resources_button: Educator resources
-  learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
-    to teach an Hour of Code</a>
+  learn_educator_resources_description: 學習如何教導一個小時的程式碼課程
+  learn_educator_resources_button: 教育資源
+  learn_are_you_educator: 你是教育工作者嗎？學習<a href="http://hourofcode.com/resources/how-to">如何教導一個小時的程式碼課程</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">知道更多</a> 關於教師的獎勵。
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: 試試我們新的Hour of Code活動教案
   hoc2014_try_new_tutorial: 試試全新Beta版的一小時程式碼教程
   hoc2014_try_scrat: 憤怒的小鳥，PvZ 和Scrat
   hoc2014_try_frozen: 來自冰雪奇緣的藝術家安娜及愛紗。
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: 由 Code.org 所提供的教學課程
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: 由 協力廠商 所提供的教學課程
+  carousel_heading_third_party: 由 協力廠商 所提供的教學課程
   carousel_heading_international: 使用你語言的教程
   carousel_heading_domestic: 可用的在英語教程
   carousel_heading_beginners: 適合初學者的教程
@@ -614,7 +622,7 @@
   carousel_heading_robots: 使用機器人學習程式設計
   carousel_heading_ide: 教師們的熱門平臺
   educator_notes: 教育者注意事項
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  teach_led_lesson_plans: 一小時程式碼的教學計畫
   how_to_teach_hoc: 如何教an Hour of Code (一個小時的代碼)
   more_resources_educators: 給教師和教育工作者的更多資源
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -660,7 +668,7 @@
   robomindnl_name: 用程式設計出虛擬機器人
   flappy_name: 製作一個Flappy遊戲
   bitsbox_name: Bitsbox-製作遊戲
-  makeschool_name: Build an iPhone game in your browser!
+  makeschool_name: 用您的瀏覽器建立 iPhone 遊戲 ！
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor（App產生器） Hour of Code活動
   blockly_name: Blockly
@@ -669,6 +677,8 @@
   projguts_name: 剪刀、石頭，布
   hourofcode_name: 新的 code.org/hoc 的預留位置
   playlab_name: 播放實驗室
+  infinity_name: Infinity Play Lab
+  artist_name: 畫家
   codeorg_gradelevel: 適合年齡自 4 至104歲
   codeintl_gradelevel: 適合年齡自 4 至104歲
   thinkersmithspanish_gradelevel: Por todos
@@ -710,6 +720,8 @@
   frozen_gradelevel: 適合年齡８歲以上
   starwars_gradelevel: 年齡6歲以上
   playlab_gradelevel: 適合年齡自 4 至104歲
+  infinity_gradelevel: 適合年齡自 4 至104歲
+  artist_gradelevel: 適合年齡自 4 至104歲
   codeorg_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
   codeintl_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
   thinkersmithspanish_platformtext: 不插電的
@@ -781,18 +793,20 @@
   robomindnl_shortdescription: 為虛擬機器器人編寫程式碼
   flappy_shortdescription: 用Flappy鳥、鯊魚或潛艇設計出自己的遊戲
   bitsbox_shortdescription: 編寫一系列的Apps代碼來播放和共用，使用真正的 JavaScript 。
-  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach
-    your monster new moves!
+  makeschool_shortdescription: 設計一個 iPhone 遊戲 ！學習使用程式碼來教你的怪物移動 ！
   touchdevelop_shortdescription: 解謎，建立遊戲，和學習程式碼都在您的手機上完成。
   appinventor_shortdescription: 建立自己的應用程式 ！（只限安卓系統）
   blockly_shortdescription: 下載 ZIP 檔，以瞭解離線
   thinkersmith2_shortdescription: 瞭解電腦如何使用 0 和 1 來表示的資訊
   kodableunplugged_shortdescription: 一個有趣的拔出練習
   projguts_shortdescription: 嘗試建模與模擬使用石頭/布/剪刀
-  hourofcode_shortdescription: 新的 code.org/hoc 的預留位置
+  hourofcode_shortdescription: 與Facebook創辦人馬克 · 佐伯克及憤怒的小鳥一起學習程式碼 ！
   frozen_shortdescription: 讓我們使用程式碼加入安娜(Anna)和愛莎(Elsa)一同探索神奇而美麗的冰。
   starwars_shortdescription: 學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲
   playlab_shortdescription: 創建一個故事或做遊戲玩實驗室！
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: 和小畫家一起畫圖和設計!
   codeorg_longdescription: 學習電腦科學與阻力的基本概念，並將程式設計。這是主演視頻講座由比爾 · 蓋茨、 馬克 · 朱克伯格、 憤怒的小鳥和植物大戰僵屍的遊戲一樣，自編自導自演的教程。瞭解重複迴圈、
     條件和基本演算法。在 34 種語言中可用。
   codeintl_longdescription: 學習電腦科學與阻力的基本概念，並將程式設計。這是主演視頻講座由比爾 · 蓋茨、 馬克 · 朱克伯格、 憤怒的小鳥和植物大戰僵屍的遊戲一樣，自編自導自演的教程。瞭解重複迴圈、
@@ -868,7 +882,7 @@
   groklearning_beyond_name: 學習 Python 程式設計
   hacketyhack_beyond_name: 學習 Ruby
   robomind_beyond_name: 用程式設計出虛擬機器人
-  makeschool_beyond_name: Build an iPhone game in your browser!
+  makeschool_beyond_name: 用您的瀏覽器建立 iPhone 遊戲 ！
   appinventor_beyond_name: AppInventor（App產生器） Hour of Code活動
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: 使用Karel狗學習程式設計
@@ -979,7 +993,7 @@
   groklearning_beyond_shortdescription: 基本的 python 程式設計簡介
   hacketyhack_beyond_shortdescription: 從基礎學習Ruby
   robomind_beyond_shortdescription: 為虛擬機器器人編寫程式碼
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
+  makeschool_beyond_shortdescription: 學習在一小時內做一個 iPhone 遊戲
   appinventor_beyond_shortdescription: 建立自己的應用程式 ！（只限安卓系統）
   touchdevelop_beyond_shortdescription: 直接在您的手機、 平板電腦或筆記型電腦上的編寫App程式碼
   codehs_beyond_shortdescription: 使用一個有趣的視覺環境來學習 JavaScript 程式設計
@@ -1080,3 +1094,19 @@
   compatibility_https_message: 為了提高安全性，我們在 %{https_date} 切換到 HTTPS。你將不能在此日期後訪問 Code.org。<a
     href='%{it_requirements_url}'> 按一下此處</a> 瞭解如何對Code.org啟用 HTTPS。
   compatibility_https_hide_this_warning: 隱藏此警告
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: 拍打翅膀
+  infinity_shortcode: inf
+  playlab_shortcode: 玩
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

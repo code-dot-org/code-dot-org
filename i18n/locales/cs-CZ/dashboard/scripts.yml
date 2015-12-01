@@ -28,7 +28,7 @@ cs:
           title: Kurz 1
           Artist 2: Umělec 2
           Happy Maps: Šťastné mapy
-          Move it, Move it: Přesuň to, Přesuň to
+          Move it, Move it: Pohyb, pohyb
           "Real-life Algorithms: Plant a Seed": 'Algoritmy ze života: Zasadit semínko'
           Building a Foundation: Budování nadace
           Getting Loopy: Bláznit
@@ -672,6 +672,14 @@ cs:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: While (zatímco) cykly
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1157,7 +1165,7 @@ cs:
           description: Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
           Happy Maps: Šťastné mapy
-          Move it, Move it: Přesuň to, Přesuň to
+          Move it, Move it: Pohyb, pohyb
           "Real-life Algorithms: Plant a Seed": 'Algoritmy ze života: Zasadit semínko'
           Graph Paper Programming: Programování Na Milimetrovém Papíru
           Building a Foundation: Budování nadace
@@ -1408,6 +1416,8 @@ cs:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
           description_short: Programming
@@ -1422,6 +1432,13 @@ cs:
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: While (zatímco) cykly
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1441,12 +1458,12 @@ cs:
           description: Vytvoř příběh nebo udělej hru s Play Lab žvýkačky!
           Gumball Play Lab: Žvýkačka Play Lab
         starwars:
-          title: 'Star Wars: Budování Galaxy s kódem'
+          title: 'Hvězdné války: Budování galaxie s kódem'
           description_short: Nauč se programovat droidy a vytvořit si vlastní hru Star Wars v galaxii daleko, daleko pryč.
           description: Nauč se programovat droidy a vytvořit si vlastní hru Star Wars v galaxii daleko, daleko pryč.
           Hour of Code 2015: Hodina kódu 2013
         starwarsblocks:
-          title: 'Star Wars: Budování Galaxy s kódem'
+          title: 'Hvězdné války: Budování galaxie s kódem'
           description_short: Nauč se programovat droidy a vytvořit si vlastní hru Star Wars v galaxii daleko, daleko pryč.
           description: Nauč se programovat droidy a vytvořit si vlastní hru Star Wars v galaxii daleko, daleko pryč.
           Hour of Code 2015: Hodina kódu 2013
@@ -1458,7 +1475,7 @@ cs:
         mc:
           title: Hodina kódu Minecraftu
           description_short: Prozkoumej svět Minecraftu pomocí kódu
-          description: Používej bloky kódu, abys vzal Steva nebo Alexe na dobrodružství po Minecraft světě
+          description: Používej bloky kódu, abys vzal Steva nebo Alex na dobrodružství ve světě Minecraftu
           Hour of Code 2015: Hodina kódu 2013
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -1467,3 +1484,10 @@ cs:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Vítejte!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Rekapitulace

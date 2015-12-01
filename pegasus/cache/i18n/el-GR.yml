@@ -147,8 +147,6 @@
   twitter_teach_cs: Γιατί δεν διδάσκουν περισσότερα σχολεία Επιστήμη των Υπολογιστών;
     Αυτό μπορούμε να το διορθώσουμε.  http://youtu.be/nKIu9yen5nc. Επισκεφτείτε την
     σελίδα http://code.org/ για να μάθετε περισσότερα.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes"> Μάθετε περισσότερα</a>
-    για τα βραβεία για κάθε εκπαιδευτικό.
   learn_hoc: Μάθε μία Ώρα του Κώδικα
   beyond_hoc: Πέρα από Μία Ώρα
   what_gender: Ποιο είναι το φύλο σου;
@@ -368,6 +366,9 @@
   volunteer_engineer_submission_intro_signup: Παρακαλούμε εισάγετε τις ακόλουθες πληροφορίες,
     αν είστε φοιτητής επιστήμης υπολογιστών ή επαγγελματίας λογισμικού. Τα πεδία με
     <span class="form-required-field"> *</span> είναι υποχρεωτικά.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Οι πληροφορίες μοιράζονται με τους
     καθηγητές στο χάρτη εθελοντή
   volunteer_engineer_submission_field_name: Όνομα
@@ -727,6 +728,16 @@
   learn_educator_resources_button: Πόροι για τους επιμορφωτές
   learn_are_you_educator: Είστε επιμορφωτἠς; Μάθετε <a href="http://hourofcode.com/resources/how-to">
     πώς να διδάξετε μια Ώρα του Κώδικα</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes"> Μάθετε περισσότερα</a>
+    για τα βραβεία για κάθε εκπαιδευτικό.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Δοκιμάστε τα νέα βοηθήματα εκμάθησης για την "Ώρα του
     Κώδικα"
   hoc2014_try_new_tutorial: Δοκιμάστε μας νέο σεμινάριο για την ώρα του κώδικα σε
@@ -734,6 +745,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ και Scrat
   hoc2014_try_frozen: Καλλιτέχνης με την Άννα και την Έλσα, από το Frozen
   carousel_heading_codeorg: Οδηγοί από το Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Οδηγοί από τρίτα μέρη
   carousel_heading_third_party: Οδηγοί από τρίτους
   carousel_heading_international: Σεμινάρια στη γλώσσα σας
@@ -806,6 +818,8 @@
   projguts_name: Πέτρα, Ψαλίδια, Χαρτί
   hourofcode_name: Σύμβολο κράτησης θέσης για το νέο code.org/hoc
   playlab_name: Εργαστήριο Παιχνιδιού
+  infinity_name: αιώνιο εργαστήρι παιχνιδιού
+  artist_name: Καλλιτέχνης
   codeorg_gradelevel: Ηλικίες 4-104
   codeintl_gradelevel: Ηλικίες 4-104
   thinkersmithspanish_gradelevel: Για όλους
@@ -847,6 +861,8 @@
   frozen_gradelevel: Ηλικίες 8 +
   starwars_gradelevel: Ηλικίες 6+
   playlab_gradelevel: Ηλικίες 4-104
+  infinity_gradelevel: Ηλικίες 4-104
+  artist_gradelevel: Ηλικίες 4-104
   codeorg_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
   codeintl_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
   thinkersmithspanish_platformtext: Χωρίς σύνδεση
@@ -957,6 +973,9 @@
     δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
   playlab_shortdescription: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο
     Παιχνιδιού!
+  infinity_shortdescription: Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία
+    ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
+  artist_shortdescription: Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!
   codeorg_longdescription: Μάθετε τις βασικές έννοιες της Επιστήμης των Υπολογιστών
     με προγραμματισμό drag and drop. Αυτό είναι ένα παιγνιώδες, αυτοκαθοδηγούμενο
     μάθημα με πρωταγωνιστές σε βιντεοδιαλέξεις τους Bill Gates, Mark Zuckerberg, τα
@@ -1482,3 +1501,19 @@
     <a href='%{it_requirements_url}'> Κάντε κλικ εδώ</a> για να μάθετε πώς να ενεργοποιήσετε
     την HTTPS για το Code.org.
   compatibility_https_hide_this_warning: Απόκρυψη αυτής της προειδοποίησης
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: Φτερούγισε
+  infinity_shortcode: inf
+  playlab_shortcode: παίξε
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

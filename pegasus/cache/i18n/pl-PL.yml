@@ -45,7 +45,7 @@
   csedweek_map_search_reset: Zresetuj
   csedweek_map_legend_title: Opis
   csedweek_map_legend_event: Wydarzenie Godziny Kodowania
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_cs_tech_jam: Jam CS Tech
   cded_sign_up: Zarejestruj się
   cded_try_it: Wypróbuj
   twentyhours_trynow: Spróbuj teraz
@@ -76,7 +76,7 @@
     (One Hour of Code)
   congratulations_volunteer: |
     Gratulacje: Spróbowałeś Godzinę Kodowania,
-    <a href="https://code.org/volunteer">zarejestruj się jako wolontariusz w klasie</a> i pomóż innym studentom nauczyć się Godziny Kodowania!
+    <a href="https://code.org/volunteer">zarejestruj się jako wolontariusz w klasie</a> i pomóż uczniom nauczyć się Godziny Kodowania!
   course_name_accelerated: Przyspieszony Kurs
   course_name_course1: Kurs 1
   course_name_course2: Kurs 2
@@ -145,8 +145,6 @@
   just_did_hoc: 'Właśnie wykonałem #HourOfCode - Sprawdź to! @codeorg'
   twitter_teach_cs: Dlaczego tak niewiele szkół uczy informatyki? Możemy to zmienić.
     http://youtu.be/nKIu9yen5nc. Odwiedź http://code.org/, aby dowiedzieć się więcej.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Dowiedz się więcej</a>
-    o nagrodach dla każdego nauczyciela.
   learn_hoc: Ucz się Hour of Code
   beyond_hoc: Poza Godziną Kodowania
   what_gender: Jakiej jesteś płci?
@@ -231,7 +229,7 @@
   homepage_action_text_join_us: Dołącz do nas
   homepage_action_text_sign_up: Zarejestruj się
   homepage_action_text_try_it: Wypróbuj
-  homepage_action_text_volunteers: Techniczni wolontariusze są potrzebni!
+  homepage_action_text_volunteers: Potrzebni są wolontariusze techniczni
   homepage_action_text_codevideo: Obejrzyj wideo
   homepage_action_text_teachervideo: Obejrzyj wideo
   homepage_action_text_girlvideo: Zainspiruj dziewczynę
@@ -329,38 +327,42 @@
   starwars_speak_languages: Czy mówisz w innym języku?
   starwars_help_translate: Pomóż nam tłumaczyć
   starwars_platform_text: Nowoczesne przeglądarki, smartfony, tablety
-  mc_name: Minecraftowa Godzina Kodowania
-  mc_longdescription: Użyj bloków kodu, by dołączyć do przygody ze Steve lub Alex
-    poprzez świat Minecrafta.
-  mc_shortdescription: Użyj bloków kodu, by dołączyć do przygody ze Steve lub Alex
-    poprzez świat Minecrafta.
+  mc_name: Godzina Kodowania z Minecraft
+  mc_longdescription: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę w świecie
+    Minecrafta.
+  mc_shortdescription: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę w świecie
+    Minecrafta.
   mc_gradelevel: Wiek 6 +
   mc_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   mc_specs: Wiele języków (już wkrótce) | Nowoczesne przeglądarki i tablety | Wiek
     6 +
-  minecraft_subtitle: Minecraftowa Godzina Kodowania
-  volunteer_engineer_submission_title: Inspiruj studentów i wolontariuszy dla godziny
-    kodowania.
+  minecraft_subtitle: Godzina Kodowania z Minecraft
+  volunteer_engineer_submission_title: Inspiruj uczniów i wolontariuszy dla Godziny
+    Kodowania.
   volunteer_engineer_submission_subtitle_generic: '100 000 nauczycieli będzie gościć
     Godzinę Kodowanie w swoich klasach w tym roku między 7 a 13 grudnia. Potrzebują
     Twojej pomocy! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} nauczycieli potrzebuje
+    ochotników-pasjonatów edukacji informatycznej do pomocy z Godziną Kodowania w
+    grudniu. <br>%{num_volunteers} wolontariuszy już się zarejestrowało. Dołącz do
+    nich.'
   volunteer_engineer_submission_intro_background: Godzina Kodowania jest globalną
     inicjatywą godzinnego wprowadzenia do informatyki, podejmowaną przez dziesiątki
     milionów uczniów w 180+ krajach. Weź udział w tej inicjatywie podczas Tygodnia
     Edukacji Informatycznej w dniach 7-13 grudnia.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_recruit: 'Ci nauczyciele byliby szczęśliwi mając
+    kogoś <span style="font-family: ''Gotham 7r'', sans-serif;">, pasjonata edukacji
+    informatycznej </span>, kto mógłby pomóc w klasie, lub kogoś, kto potrafi <span
+    style="font-family: ''Gotham 7r'', sans-serif;"> zainspirować</span> ich uczniów
+    opowiadając o szerokich możliwościach informatyki (na przykład za pośrednictwem
+    wideo czatu). Jeśli nie szukasz wolontariuszy, <a href="%{url}"> dowiedzieć się
+    więcej</a> o organizacji własnej Godziny Kodowania.'
   volunteer_engineer_submission_intro_signup: Podaj następujące informacje, jeśli
     jesteś studentem informatyki lub profesjonalnym programistą. Pola oznaczone <span
     class="form-required-field"> *</span> są wymagane.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Informacje udostępniane nauczycielom
     na mapie wolontariuszy
   volunteer_engineer_submission_field_name: Imię/Nazwisko
@@ -423,7 +425,7 @@
   volunteer_engineer_submission_location_flexibility_curriculum: wspierają projekty
     dotyczące programów nauczania bazujących na otwartych zasobach
   volunteer_engineer_submission_experience_unspecified: Nieokreślony
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_experience_tech_company: Nie inżynier w firmie techologicznej
   volunteer_engineer_submission_experience_university_student_or_researcher: Student
     informatki uniwersyteckiej
   volunteer_engineer_submission_experience_software_professional: Profesjonalne oprogramowanie
@@ -438,9 +440,9 @@
   volunteer_engineer_submission_type_task_onsite: Chciałbym, abyś odwiedził moją klasę
     dla pomocy technicznej i inspiracji
   volunteer_engineer_submission_type_task_remote: Chciałbym Cię zaprosić do rozmowy
-    Skype w mojej klasie, abyś powiedział parę słów na temat inspiracji dla dzieci
+    na Skypie z moją klasą, abyś w kilku słowach zainspirował dzieci
   volunteer_engineer_submission_type_task_mentor: Poszukuję mentora, który pomógłby
-    mi przygotować się do kodowania z moimi studentami
+    mi przygotować się do kodowania z moimi uczniami
   petition_age: Wiek
   dashboard_landing_title: Domowa strona nauczyciela
   dashboard_landing_welcome: Witamy w nowym i ulepszonym panelu nauczyciela.
@@ -695,22 +697,33 @@
   learn_sign_up_description: Zarejestruj się, by uczestniczyć w Godzinie Kodowania
     w czasie Tygodnia Nauczania Informatyki
   learn_sign_up_button: Zarejestruj się
-  learn_videos_watch: Oglądnij ten film z twoją klasą
+  learn_videos_watch: Obejrzyj ten inspirujący film ze swoją klasą
   learn_videos_show: Pokaż ten inspirujący film swojej klasie
-  learn_videos_before_hoc: Obejrzyj ten inspirujący film prze twoją godziną kodowania
+  learn_videos_before_hoc: Obejrzyj ten inspirujący film przed Twoją Godziną Kodowania
   learn_educator_resources_description: Dowiedz się, jak wykorzystać Godzinę kodowania
     (the Hour of Code)
   learn_educator_resources_button: Zasoby nauczyciela
   learn_are_you_educator: Czy jesteś nauczycielem? Dowiedz się, <a href="http://hourofcode.com/resources/how-to">
     jak poprowadzić Godzinę Kodowania</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Dowiedz się więcej</a>
+    o nagrodach dla każdego nauczyciela.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Wypróbuj nasze nowe samouczki Godziny Kodowania
   hoc2014_try_new_tutorial: Wypróbuj nasz nowy samouczek Godziny Kodowania w wersji
     beta
   hoc2014_try_scrat: Angry Birds, PvZ i wiewióra
   hoc2014_try_frozen: Artysta z Anną i Elsą, z Frozen
-  carousel_heading_codeorg: Poradnik stworzone przez Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Poradniki przez strony trzecie
+  carousel_heading_codeorg: Poradnik utworzone przez Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Poradniki utworzone przez strony trzecie
+  carousel_heading_third_party: Poradniki utworzone przez strony trzecie
   carousel_heading_international: Poradniki w Twoim języku
   carousel_heading_domestic: Poradniki (samouczki) dostępne w języku angielskim
   carousel_heading_beginners: Samouczki dla początkujących
@@ -781,6 +794,8 @@
   projguts_name: Kamień, Papier, Nożyczki (Rock, Paper, Scissors)
   hourofcode_name: Symbol zastępczy dla nowego code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artysta
   codeorg_gradelevel: W wieku 4-104
   codeintl_gradelevel: W wieku 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -822,6 +837,8 @@
   frozen_gradelevel: W wieku 8+
   starwars_gradelevel: Wiek 6 +
   playlab_gradelevel: W wieku 4-104
+  infinity_gradelevel: W wieku 4-104
+  artist_gradelevel: W wieku 4-104
   codeorg_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeintl_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   thinkersmithspanish_platformtext: Odłączony (unplugged)/Bez komputera
@@ -921,12 +938,16 @@
   kodableunplugged_shortdescription: Zabawne ćwiczenie bez komputera
   projguts_shortdescription: Wypróbuj modelowanie i symulację wykorzystując kamień,
     papier, nożyce
-  hourofcode_shortdescription: Symbol zastępczy dla nowego code.org/hoc
+  hourofcode_shortdescription: Naucz się kodować (programować) z Markiem Zuckerbergiem
+    i Angry Birds!
   frozen_shortdescription: Użyjmy kodu, by przyłączyć się do Anny i Elsy zachwycających
     się magią i pięknem lodu.
   starwars_shortdescription: Dowiedz się, jak programować droidy i utwórz własną grę
     Star Wars w galaktyce daleko, daleko.
   playlab_shortdescription: Utwórz historyjkę lub grę z Play Lab!
+  infinity_shortdescription: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami
+    z Disney Infinity w rolach głównych.
+  artist_shortdescription: Rysuj fajne obrazki i wzory z Artystą!
   codeorg_longdescription: Poznaj podstawowe pojęcia informatyki programując metodą
     przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo
     Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies
@@ -1421,3 +1442,19 @@
     <a href='%{it_requirements_url}'> Kliknij tutaj</a>, aby dowiedzieć się, jak włączyć
     HTTPS dla Code.org.
   compatibility_https_hide_this_warning: Ukryj to ostrzeżenie
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: pofruń
+  infinity_shortcode: inf
+  playlab_shortcode: zagraj
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

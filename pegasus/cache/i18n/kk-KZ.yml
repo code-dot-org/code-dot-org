@@ -43,7 +43,7 @@
   csedweek_map_signup: Сіздің Код Жазу Сағатын тіркеңіз
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Іздеу
-  csedweek_map_search_reset: Reset
+  csedweek_map_search_reset: қалпына келтіру
   csedweek_map_legend_title: Аңыз
   csedweek_map_legend_event: Hour of Code Event
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
@@ -145,8 +145,6 @@
   just_did_hoc: 'Мен #HourOfCode бітірдім- көріңіз! @codeorg'
   twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
     http://youtu.be/2DxWIxec6yo. Visit http://code.org/ to learn more.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: Код жазу Сағатымен бағдарламалауды үйреніңіз
   beyond_hoc: Бірінші сағаттан кейін
   what_gender: Сіздің жынысыңыз қандай?
@@ -244,7 +242,7 @@
   homepage_banner_privacy_link: толығырақ білу
   homepage_slot_text_title_hoc: Код Жазу Сағаты
   homepage_slot_text_blurb_hoc: Барлығы үйрене алады. Бүгін бастаңыз
-  homepage_slot_text_link_hoc: Try the Hour of Code
+  homepage_slot_text_link_hoc: Код Сағатын қолданып көріңіз
   homepage_slot_text_link_host: Код Жазу Сағатын өткізу
   homepage_slot_text_link_hocserved: '# served'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
@@ -352,6 +350,9 @@
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Ақпарат еріктілер картасында мұғалімдерге
     көрінеді
   volunteer_engineer_submission_field_name: Атыңыз
@@ -504,10 +505,10 @@
   dashboard_action_edit: Edit
   dashboard_action_save: Сақтау
   dashboard_action_save_all: Барлығын сақтау
-  dashboard_action_cancel: Cancel
+  dashboard_action_cancel: Болдырмау
   dashboard_action_delete: Өшіру
-  dashboard_action_delete_yes: 'Yes'
-  dashboard_action_delete_no: 'No'
+  dashboard_action_delete_yes: Иә
+  dashboard_action_delete_no: Жоқ
   dashboard_action_confirm: Өшіру?
   dashboard_action_remove: Өшіру
   dashboard_action_remove_confirm: Өшіру?
@@ -681,12 +682,23 @@
   learn_educator_resources_button: Оқытушы материалдары
   learn_are_you_educator: Сіз оқытушысыз ба? <a href="http://hourofcode.com/resources/how-to">Код
     Жазу Сағатында қалай сабақ беру керек</a> жайында оқыңыз
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Код Жазу Сағаты үшін арналған біздің жаңа оқу құралдарымызды
     қараңыз
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, және Scrat
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Сіздің тіліңіздегі оқыту нұсқаулығы
@@ -754,12 +766,14 @@
   makeschool_name: iPhone ойының браузеріңізде жасаңыз!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Код Жазу Сағаты
-  blockly_name: Blockly
+  blockly_name: Блокты
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Тас, қайшы, қағаз
   hourofcode_name: Жаңадан тіркелушілерге code.org/hoc
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artist
   codeorg_gradelevel: Жас аралығы 4-14
   codeintl_gradelevel: Жас аралығы 4-14
   thinkersmithspanish_gradelevel: Por todos
@@ -801,6 +815,8 @@
   frozen_gradelevel: Жасы 8 +
   starwars_gradelevel: Жас аралық 6+
   playlab_gradelevel: Жас аралығы 4-14
+  infinity_gradelevel: Жас аралығы 4-14
+  artist_gradelevel: Жас аралығы 4-14
   codeorg_platformtext: Заманауи браузерлер, смартфондар, планшеттер
   codeintl_platformtext: Заманауи браузерлер, смартфондар, планшеттер
   thinkersmithspanish_platformtext: Оффлайн
@@ -896,12 +912,16 @@
   kodableunplugged_shortdescription: Компьютерсіз қызықты жаттығулар
   projguts_shortdescription: '"Тас - қайшы - қағаз" ойыны арқылы модельдеуді байқап
     көріңіз'
-  hourofcode_shortdescription: Жаңадан тіркелушілерге code.org/hoc
+  hourofcode_shortdescription: Марк Цукерберг және Angry Birds-пен бағдарламалауды
+    үйреніңіз!
   frozen_shortdescription: Анна мен Эльзаға қосылу үшін, мұздың сиқыры мен әдемілігін
     көрсететін кодты пайдаланайық.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: Информатика негіздерін drag-and-drop бағдарламасы көмегімен
     үйреніңіз. Бұл өзіндік оқу Билл Гейтс, Марк Цукерберг, Angry Birds және Plants
     vs. Zombies видеодәрістері ойынына ұқсас. Циклдерді, шартты операторлар және негізгі
@@ -1372,3 +1392,19 @@
     Code.org сайтында HTTPS-ті қосу туралы білу үшін <a href='%{it_requirements_url}'>
     осы жерге басыңыз</a>
   compatibility_https_hide_this_warning: Hide this warning
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: қанат қағу
+  infinity_shortcode: inf
+  playlab_shortcode: ойнау
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

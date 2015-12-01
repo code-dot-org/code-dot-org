@@ -1305,8 +1305,12 @@ en:
         Phase 3 Module 4: Phase 3 Module 4
       sciPD3 thanks:
         Great Job!: Great Job!
+      sciPD33 rubric:
+        Designing a Rubric for Assessing a Model: Designing a Rubric for Assessing a Model
       sciPD3OLP32 intro:
         Introduction to Phase 2: Introduction to Phase 2
+      sciPD3OLP33 intro:
+        Introduction to Phase 3: Introduction to Phase 3
       sciPD3pre1 challenge: {}
       sciPD3pre1 intro:
         Intro to Phase 3 Online: Intro to Phase 3 Online
@@ -2451,6 +2455,14 @@ en:
         I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
         My understanding of these lessons has not changed: My understanding of these lessons has not changed
       CSPPD3-u3 chunk 5 checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u3 chunk 5 checkin-b:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u3 chunk 5 checkin-c:
         I better understand what these lessons are about: I better understand what these lessons are about
         I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
         My understanding of these lessons has not changed: My understanding of these lessons has not changed
@@ -4760,7 +4772,7 @@ en:
       U3L22 Reflection:
         The Clicker Game with Permanent Data Storage: The Clicker Game with Permanent Data Storage
       U3L23 Free Response Getting Started:
-        'Getting Started: A look at Siri': 'Getting Started: A look at Siri'
+        'Getting Started: A Look at Siri': 'Getting Started: A Look at Siri'
       U3L23 Free Response Wrap Up:
         Natural Language Processing: Natural Language Processing
       U3L23 Free Response Wrap Up 2:

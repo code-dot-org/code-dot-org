@@ -144,8 +144,6 @@
   just_did_hoc: 'Es tikko izpildīju #Programmēšanas_stundu - pārbaudi! @codeorg'
   twitter_teach_cs: Kādēļ vairāk skolās nemāca datorzinības? Mēs to varam uzlabot.
     http://youtu.be/nKIu9yen5nc. Ieskaties http://code.org/ un uzzini vairāk.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: Mācies "Programmēšanas skolu"
   beyond_hoc: Pārsniedz vienu stundu
   what_gender: Kāda dzimuma pārstāvis tu esi?
@@ -368,15 +366,18 @@
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Vārds
@@ -705,12 +706,23 @@
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Izmēģini mūsu jauno "Programmēšanas stundas" pamācību
   hoc2014_try_new_tutorial: Pamēģini mūsu jauno Programmēšanas Stundas apmācību beta
     versijā
   hoc2014_try_scrat: Dusmīgie putni, Augi pret Zombijiem un Skrets
   hoc2014_try_frozen: Zīmē kopā ar Annu un Elzu no "Ledus sirds"
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Pamācības tavā valodā
@@ -782,6 +794,8 @@
   projguts_name: Akmens, Šķēres, Papīrīts
   hourofcode_name: Vietturis uz jauno code.org/hoc
   playlab_name: Spēles laboratorija
+  infinity_name: Infinity Play Lab
+  artist_name: Mākslinieks
   codeorg_gradelevel: Vecums no 4-104
   codeintl_gradelevel: Vecums no 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -823,6 +837,8 @@
   frozen_gradelevel: Vecumā no 8+
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Vecums no 4-104
+  infinity_gradelevel: Vecums no 4-104
+  artist_gradelevel: Vecums no 4-104
   codeorg_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   codeintl_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   thinkersmithspanish_platformtext: Bezsaistē
@@ -915,12 +931,16 @@
   kodableunplugged_shortdescription: Jautrs bezsaistes vingrinājums
   projguts_shortdescription: Izmēģini modelēšanu un simulāciju izmantojot "akmens,
     šķēres, papīrītis"
-  hourofcode_shortdescription: Vietturis uz jauno code.org/hoc
+  hourofcode_shortdescription: Iemācies programmēt ar Mark Zuckerberg un Dusmīgajiem
+    putniem!
   frozen_shortdescription: Kodē, lai kopā ar Annu un Elzu iepazītu ledus skaistumu
     un burvību.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: Izveidot stāstu vai spēli ar Spēles laboratoriju!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: Uzzīmēt foršus attēlus un dizainus ar Izpildītāju!
   codeorg_longdescription: Apgūsti datorzinību pamatus ar vizuālo "velc un nomet"
     programmēšanu. Tas atgādinās spēlēšanos, skatoties video lekcijas ar Bilu Geitsu,
     Marku Zuckerberg, pikatajiem putniem un augiem pret zombijiem. Mācies cikliskas
@@ -1366,3 +1386,19 @@
     no %{https_date}. Pēc šī datuma tu nevarēsi piekļūt code.org. <a href='%{it_requirements_url}'>Spied
     šeit</a> un izlasi, kā iespējot HTTPS Code.org.
   compatibility_https_hide_this_warning: Nerādīt šo brīdinājumu
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: vicināt
+  infinity_shortcode: inf
+  playlab_shortcode: spēlēt
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

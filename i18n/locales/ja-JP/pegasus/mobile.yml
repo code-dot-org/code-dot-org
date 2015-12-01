@@ -31,7 +31,7 @@ ja-JP:
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_search_search: 検索
   csedweek_map_search_reset: リセット
   csedweek_map_legend_title: Legend
   csedweek_map_legend_event: Hour of Code Event
@@ -116,7 +116,6 @@ ja-JP:
   hoc_is_here: '#HourOfCode はここです - 見つける @codeorg'
   just_did_hoc: '私は #HourOfCode に挑戦しました。あなたもやってみて！ @codeorg'
   twitter_teach_cs: なぜもっと多くの学校がコンピューターサイエンスを教えないのでしょうか？この問題を解決することができます。http://youtu.be/nKIu9yen5nc。詳細については http://code.org/を参照してください。
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: Hour of Codeを学ぶ
   beyond_hoc: 1 時間を超えて
   what_gender: 性別は？
@@ -270,7 +269,7 @@ ja-JP:
   class_submission_languages_other: その他の言語
   inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
   starwars_subtitle: スターウォーズでプログラミング
-  starwars_javascript_title: JavaScript
+  starwars_javascript_title: Java Script
   starwars_javascript_description: ブロックと、JavaScriptを使います。
   starwars_javascript_specs: 英語のみ | 最新のブラウザー | 11歳以上向け
   starwars_javascript_start_button: 今すぐ試す
@@ -294,8 +293,9 @@ ja-JP:
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: 名前
   volunteer_engineer_submission_field_name_placeholder: Full Name
@@ -530,7 +530,7 @@ ja-JP:
   dashboard_faq_k5: よくある質問（幼稚園/小学生対象コース）
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide the new droid, BB-8, through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.'
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: 'Hour of Codeはこちら - 12月8日 - 14日です！'
   code_sign_up: コンピュタサイエンス教育週間の間に参加する
   learn_more: さらに詳しく
@@ -542,11 +542,17 @@ ja-JP:
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator, while supplies last'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: 新しいHour of Codeのチュートリアルを試す
   hoc2014_try_new_tutorial: ベータ版の新しいHour of Codeのチュートリアルを試す
   hoc2014_try_scrat: アングリバード, PvZ, そしてスクラット
   hoc2014_try_frozen: 「アナと雪の女王」から、アナとエルザと一緒のアーティスト
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: あなたの言語のチュートリアル
@@ -619,6 +625,8 @@ ja-JP:
   projguts_name: グー、パー、チョキ
   hourofcode_name: 新しいcode.or/hocのプレイスホルダ
   playlab_name: プレイラボ
+  infinity_name: インフィニティ プレイ ラボ
+  artist_name: アーティスト
   codeorg_gradelevel: 4才-104才
   codeintl_gradelevel: 4才-104才
   thinkersmithspanish_gradelevel: Por todos
@@ -660,6 +668,8 @@ ja-JP:
   frozen_gradelevel: 8 才以上
   starwars_gradelevel: 6歳以上
   playlab_gradelevel: 4才-104才
+  infinity_gradelevel: 4才-104才
+  artist_gradelevel: 4才-104才
   codeorg_platformtext: 最新ブラウザ、スマート フォン、タブレット
   codeintl_platformtext: 最新ブラウザ、スマート フォン、タブレット
   thinkersmithspanish_platformtext: アンプラグド（コンピュータを使わず学ぶ方法）
@@ -744,10 +754,12 @@ ja-JP:
   thinkersmith2_shortdescription: コンピュータが情報を表現するために１秒と０秒をどう使うのか学ぶ
   kodableunplugged_shortdescription: 楽しいアンプラグド（コンピュタを使わずに学ぶ方法）での演習
   projguts_shortdescription: グー/パー/チョキを題材にモデリングとシミュレーションを試す
-  hourofcode_shortdescription: 新しいcode.or/hocのプレイスホルダ
+  hourofcode_shortdescription: マークザッカーバーグとアングリーバードと一緒にコーディングを学ぼう！
   frozen_shortdescription: コードを使って、アナとエルザと一緒に魔法と氷の美しさを探検しましょう
   starwars_shortdescription: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
   playlab_shortdescription: プレイラボでお話やゲームを作りましょう！
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
+  artist_shortdescription: アーティストでかっこいい絵やデザインを描きましょう！
   codeorg_longdescription: ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています
   codeintl_longdescription: ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています
   thinkersmithspanish_longdescription: '"ロボット語"を使用して、事前に打ち合わせすることなく、お互いに課題を解決する方法を探ります。このレッスンでは、デバッグという非常に重要なスキルと同時に、シンボルとアクションの関連について学びます。'
@@ -979,3 +991,11 @@ ja-JP:
   compatibility_https_header: HTTPS を有効にしてください
   compatibility_https_message: "Code.org では、セキュリティを強化するため、%{https_date} をもって HTTPS に切り替えます。それ以降は、HTTPS を有効にしない限り Code.org にアクセスできなくなります。HTTPS を有効にする方法については<a href='%{it_requirements_url}'>こちらをクリック</a>してください。"
   compatibility_https_hide_this_warning: この警告を非表示
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: パタパタ
+  infinity_shortcode: inf
+  playlab_shortcode: 再生する
+  artist_shortcode: art

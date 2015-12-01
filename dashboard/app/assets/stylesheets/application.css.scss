@@ -1153,9 +1153,8 @@ a.download-video {
   .welcomeleft {
     float: left;
     text-align: center;
-    width: 190px;
     img {
-    padding-left: 50px;
+      padding-left: 65px;
     }
   }
 
@@ -1932,6 +1931,10 @@ $modal-no-icon-gap: 22px;
     line-height: 25px;
     font-size: 16px;
     color: $black;
+  }
+
+  strong {
+    font-family: $gotham-bold;
   }
 }
 

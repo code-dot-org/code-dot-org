@@ -145,8 +145,6 @@
   twitter_teach_cs: Почему не во всех школах изучают информатику? Мы можем исправить
     это. http://youtu.be/nKIu9yen5nc. Посетите наш сайт http://code.org/ чтобы узнать
     больше.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Узнайте больше</a> о призах
-    для каждого педагога.
   learn_hoc: Учитесь программировать с Часом Кода
   beyond_hoc: После первого часа
   what_gender: Какого Вы пола?
@@ -317,8 +315,8 @@
   starwars_javascript_start_button: Попробуйте сейчас
   starwars_blocks_title: Блоки
   starwars_blocks_description: Используйте переносные блоки.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: Множество языков (скоро) | Современные браузеры, смартфоны,
+    планшеты | Возраст 6-10 лет
   starwars_blocks_start_button: Попробуйте сейчас
   starwars_watch_videos: Прежде чем начать, посмотрите одно их этих вдовнохвляющих
     видео
@@ -326,13 +324,13 @@
   starwars_help_translate: Помогите нам перевести
   starwars_platform_text: Современные браузеры, смартфоны, планшеты
   mc_name: Час Кода Minecraft
-  mc_longdescription: Используйте блоки кода, чтобы помочь Стиву или Алексу в их приключениях
+  mc_longdescription: Используйте блоки кода, чтобы помочь Стиву или Алексе в их приключениях
     в мире Minecraft.
-  mc_shortdescription: Используйте блоки кода, чтобы помочь Стиву или Алексу в их
+  mc_shortdescription: Используйте блоки кода, чтобы помочь Стиву или Алексе в их
     приключениях в мире Minecraft.
   mc_gradelevel: Возраст 6+
   mc_platformtext: Современные браузеры, смартфоны, планшеты
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Множество языков (скоро) | Современные браузеры и планшеты | От 6 лет
   minecraft_subtitle: Час Кода Minecraft
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100 000 учителей, собираются провести
@@ -345,15 +343,18 @@
     из более 180 стран. Пожалкйста, примите участие в "Неделе обучения информатике",
     7-13 декабря.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Пожалуйста заполните следующую информацию,
     если вы студент факультета компьютерных наук или профессиональный разработчик.
     Поля помеченные <span class="form-required-field">*</span> обязательны для заполнения.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Информация распространяемая с учителями
     на карте волонтеров
   volunteer_engineer_submission_field_name: Имя
@@ -684,20 +685,31 @@
   learn_sign_up_description: Зарегистрируйтесь, чтобы участвовать в Час Кода во время
     недели образования CS
   learn_sign_up_button: Зарегистрироваться
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Смотрите вместе с вашими учениками вдохновляющие ролики
+  learn_videos_show: Покажите это вдохновляющий видео-ролик вашему классу
+  learn_videos_before_hoc: Посмотрите это вдохновляющее видео перед Часом Кода
   learn_educator_resources_description: Узнайте, как учить в Час Кода
   learn_educator_resources_button: Педагогические ресурсы
   learn_are_you_educator: Вы педагог? Узнайте, <a href="http://hourofcode.com/resources/how-to">
     как научить Час Кода</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Узнайте больше</a> о призах
+    для каждого педагога.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Попробуйте наши новые учебные материалы для Часа Кода
   hoc2014_try_new_tutorial: Попробуй наше новое пособие "Час кода" в бета-версии
   hoc2014_try_scrat: Angry Birds, PvZ, и Scrat
   hoc2014_try_frozen: Рисуй вместе с Анной и Эльзой из "Холодного сердца"
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Уроки от Code.org
+  carousel_heading_codeorg_any_device: Уроки от Code.org (для всех устройств)
+  carousel_heading_3rd_party: Уроки от третьих лиц
+  carousel_heading_third_party: Уроки от третьих лиц
   carousel_heading_international: Обучающее руководство на Вашем языке
   carousel_heading_domestic: Учебные материалы доступны на английском языке
   carousel_heading_beginners: Учебники для начинающих
@@ -767,6 +779,8 @@
   projguts_name: Камень, ножницы, бумага
   hourofcode_name: Заполнитель для новых code.org/hoc
   playlab_name: Лаборатория игр
+  infinity_name: Лаборатория игр Infinity
+  artist_name: Художник
   codeorg_gradelevel: Возраст 4-104
   codeintl_gradelevel: Возраст 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -808,6 +822,8 @@
   frozen_gradelevel: Возраст 8 +
   starwars_gradelevel: Возраст 6+
   playlab_gradelevel: Возраст 4-104
+  infinity_gradelevel: Возраст 4-104
+  artist_gradelevel: Возраст 4-104
   codeorg_platformtext: Современные браузеры, смартфоны, планшеты
   codeintl_platformtext: Современные браузеры, смартфоны, планшеты
   thinkersmithspanish_platformtext: Офф-лайн
@@ -905,12 +921,16 @@
   kodableunplugged_shortdescription: Весёлые упражнения без компьютера
   projguts_shortdescription: Испытайте моделирование с помощью игры "Камень - ножницы
     - бумага"
-  hourofcode_shortdescription: Заполнитель для новых code.org/hoc
+  hourofcode_shortdescription: Учитесь программировать с Марком Цукербергом и Angry
+    Birds!
   frozen_shortdescription: Давайте использовать код, чтобы присоединиться к Анне и
     Эльзе, открывающим магию и красоту льда.
   starwars_shortdescription: Научись программировать дроидов и создай свою собственную
     игру по мотивам Звездных войн в далекой-далекой галактике.
   playlab_shortdescription: Создай историю или игру с Лабораторией игр!
+  infinity_shortdescription: Используйте лабораторию игр, чтобы создать историю или
+    игру с персонажами Disney Infinity.
+  artist_shortdescription: Рисуйте картины и узоры вместе с Художником!
   codeorg_longdescription: Изучайте основные понятия информатики с помощью drag-and-drop
     программирования. Это похожий на игру самоучитель с видеолекциями Билла Гейтса,
     Марка Цукерберга, Angry Birds и Plants vs. Zombies. Изучите циклы, условные операторы
@@ -1397,3 +1417,19 @@
     href='%{it_requirements_url}'> Нажмите здесь</a>, чтобы узнать как включить HTTPS
     для Code.org.
   compatibility_https_hide_this_warning: Скрыть это предупреждение
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: взмах крыльев
+  infinity_shortcode: inf
+  playlab_shortcode: играть
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages
