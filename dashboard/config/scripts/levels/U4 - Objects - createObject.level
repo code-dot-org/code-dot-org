@@ -1,9 +1,9 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-11-12T17:29:16.000Z",
+  "created_at": "2015-09-23T19:19:05.000Z",
   "level_num": "custom",
-  "user_id": 106,
+  "user_id": 155,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -39,7 +39,7 @@
       "setStrokeWidth": null,
       "setStrokeColor": null,
       "setFillColor": null,
-      "drawImage": null,
+      "drawImageURL": null,
       "getImageData": null,
       "putImageData": null,
       "clearCanvas": null,
@@ -98,7 +98,9 @@
       "equalityOperator": null,
       "inequalityOperator": null,
       "greaterThanOperator": null,
+      "greaterThanOrEqualOperator": null,
       "lessThanOperator": null,
+      "lessThanOrEqualOperator": null,
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
@@ -134,6 +136,7 @@
     },
     "edit_code": true,
     "embed": "false",
+    "start_blocks": "var myObj = { };\r\nconsole.log(myObj);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -149,24 +152,26 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "droplet_tooltips_disabled": "false",
-    "lock_zero_param_functions": "false",
     "free_play": "true",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "true",
-    "execute_palette_apis_only": "false",
+    "autocomplete_palette_apis_only": "false",
     "text_mode_at_start": "true",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "submittable": "false",
-    "hide_view_data_button": "true",
+    "hide_view_data_button": "false",
+    "encrypted_examples": [
+
+    ],
+    "instructions": "Create an object with at least 5 values including at least one string and one number. (Click to see full instructions) ",
+    "markdown_instructions": "# Creating Your Own Objects\r\n\r\n**Objects are unordered collections of name value pairs**. Like an array they can hold many pieces of information, but where arrays use a numeric index to reference specific pieces of information, objects use a descriptive name. We lose the \"ordered\" nature of our data, but we gain the ability to describe the purpose of each piece of data within a collection.\r\n\r\nConsider the event objects you just looked at. An array can just as easily store all the information they contain, but it would be difficult to determine what any of the values represent.\r\n\r\n**The syntax for creating objects of your own is shown below**\r\n\r\n* Curly braces are placed around the contents of an object `{}`\r\n* Names are separated from values with a colon `:`\r\n* Name value pairs are separated by commas `,`\r\n* Names must be strings. If they are not they will be coerced to strings, possibly creating unpredictable behavior.\r\n* **Example:** `var user = {\"userName\":\"Ada\", \"password\":\"csIsAwesome\", \"yearBorn\":1815};`\r\n\r\n# Do This\r\n\r\n**Starter code** is provided which creates an empty object and displays its value.\r\n\r\n* Modify the code **using the syntax above** to create an object of your own. Your object should contain **at least 5 pieces of information including both strings and numbers**.\r\n* **Run the program** and confirm all values in your object appear as you expected.",
+    "slider_speed": "1.0",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
     "debugger_disabled": "false",
-    "instructions": "Write code that allows a user to add their own favorite things to the list. (Click to see full instructions)",
-    "markdown_instructions": "# Adding New Items\r\n\r\nNow we want our user to be able to add items of their own to the list. As you might have guessed, this is as easy as inserting an item into our array at the current index.\r\n\r\n# Do This:\r\n\r\n* **Add an event handler** to the \"Add\" button.\r\n* **Write code** in your event handler that:\r\n\t* Uses `getText` to access the user's new item.\r\n    * Uses`insertItem` to add that item to your array at the current index.\r\n    * Calls your update function to update the screen (the new item should be displayed).\r\n* Run your program to confirm that the user **can add items to the list** and that the output displayed is correct.",
-    "slider_speed": "1",
-    "project_template_level_name": "U3 - Arrays - favThings template",
-    "encrypted_examples": "ZImGHD98p0bH5EXJExT9kyJXi4vh48ApVxmC3dG1NgJ5hETuPRfEtFOEPeFJ\n/3d/\n"
+    "project_template_level_name": "U4L02 - Objects - Template1"
   }
 }]]></config>
   <blocks/>
