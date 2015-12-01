@@ -14,7 +14,7 @@ social:
 # Partner with Code.org to bring K-12 computer science to your district
 
 
-Code.org partners with school districts across the country to suppport and expand computer science learning in schools. Partnerships include high quality [computer science curriculum](/educate/curriculum), [professional development](/educate/professional-development), online and in person supports, marketing materials, matching funds for teacher stipends, and more.
+Code.org partners with school districts across the country to suppport and expand computer science learning in schools. Partnerships include high quality [computer science curriculum](/educate/curriculum), [professional development](/educate/professional-development), online and in person supports, marketing materials, and more.
 
 ## Our Goals
 

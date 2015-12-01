@@ -146,7 +146,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   if (options.appDiv) {
     feedback.appendChild(options.appDiv);
   }
-  
+
   feedback.className += canContinue ? " win-feedback" : " failure-feedback";
 
   feedback.appendChild(
@@ -232,15 +232,9 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       // feedback block
       var genericFeedback = this.getFeedbackMessage_({message: msg.tryBlocksBelowFeedback()});
 
-      // If there are feedback blocks, temporarily remove them.
-      // Get pointers to the parent and next sibling so we can re-insert
-      // the feedback blocks into the correct location if needed.
-      var feedbackBlocksParent = null;
-      var feedbackBlocksNextSib = null;
+      // If there are feedback blocks, temporarily hide them.
       if (feedbackBlocks && feedbackBlocks.div) {
-        feedbackBlocksParent = feedbackBlocks.div.parentNode;
-        feedbackBlocksNextSib = feedbackBlocks.div.nextSibling;
-        feedbackBlocksParent.removeChild(feedbackBlocks.div);
+        feedbackBlocks.hideDiv();
       }
 
       // If the user requests the hint...
@@ -255,9 +249,8 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
         hintRequestButton.parentNode.removeChild(hintRequestButton);
 
         // Restore feedback blocks, if present.
-        if (feedbackBlocks && feedbackBlocks.div && feedbackBlocksParent) {
-          feedbackBlocksParent.insertBefore(feedbackBlocks.div, feedbackBlocksNextSib);
-          feedbackBlocks.show();
+        if (feedbackBlocks && feedbackBlocks.div) {
+          feedbackBlocks.revealDiv();
         }
 
         // Report hint request to server.
@@ -666,7 +659,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
   options.assetUrl = this.studioApp_.assetUrl;
 
   var sharingDiv = document.createElement('div');
-  sharingDiv.setAttribute('style', 'display:inline-block');
+  sharingDiv.setAttribute('id', 'sharing');
   sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
     options: options
   });
@@ -677,14 +670,14 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
       sharingInput.focus();
       sharingInput.select();
     });
-  }
 
-  var sharingShapeways = sharingDiv.querySelector('#sharing-shapeways');
-  if (sharingShapeways) {
-    dom.addClickTouchEvent(sharingShapeways, function() {
-      $('#send-to-phone').hide();
-      $('#shapeways-message').show();
-    });
+    var sharingCopyButton = sharingDiv.querySelector('#sharing-copy-button');
+    if (sharingCopyButton) {
+      dom.addClickTouchEvent(sharingCopyButton, function() {
+        sharingInput.focus();
+        sharingInput.select();
+      });
+    }
   }
 
   //  SMS-to-phone feature
@@ -693,8 +686,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
-        $('#shapeways-message').hide();
-        sendToPhone.setAttribute('style', 'display:inline-block');
+        $(sendToPhone).show();
         var phone = $(sharingDiv.querySelector("#phone"));
         var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');

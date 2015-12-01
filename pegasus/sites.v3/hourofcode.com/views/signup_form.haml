@@ -44,18 +44,6 @@
           %input#hoc-entire-school-flag{name: "entire_school_flag_b", type: "checkbox", value: "1"}/
           =hoc_s(:signup_event_entire_school_label)
 
-    - if @country == 'us'
-      .form-group
-        .checkbox
-          %label
-            %input#hoc-send-posters-flag{name: "send_posters_flag_b", type: "checkbox", value: "1"}/
-            =hoc_s(:signup_send_posters_flag_label)
-
-      .form-group{style: "display: none;"}
-        %label.control-label{for: "hoc-send-posters-address"}= hoc_s(:signup_send_posters_address_label)
-        %div
-          %textarea#hoc-send-posters-address.form-control{name: "send_posters_address_s", placeholder: hoc_s(:signup_send_posters_address_placeholder), style: "height: 5em;"}
-
     .form-group
       .checkbox
         %label
@@ -99,13 +87,6 @@
         $('#hoc-special-event-details').closest('.form-group').slideDown();
       } else {
         $('#hoc-special-event-details').closest('.form-group').slideUp();
-      }
-    });
-    $('#hoc-send-posters-flag').change(function() {
-      if($(this).is(':checked')) {
-        $('#hoc-send-posters-address').closest('.form-group').slideDown();
-      } else {
-        $('#hoc-send-posters-address').closest('.form-group').slideUp();
       }
     });
     $('#hoc-event-type').change(function() {

@@ -12,7 +12,7 @@ NOTE: Please celebrate computer science throughout the year, with highlighted ac
 
 Check out these "in a box" event ideas for community events.
 
-[<button>Learn More</button>](/educate/cstechjams)
+[<button>Learn More</button>](/educate/cstechjam)
 <hr/>
 <br/>
 
