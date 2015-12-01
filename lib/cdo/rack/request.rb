@@ -1,4 +1,5 @@
 require 'rack/request'
+require 'ipaddr'
 
 module Rack
   module CdoExtension
