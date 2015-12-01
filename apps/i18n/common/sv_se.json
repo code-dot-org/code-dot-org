@@ -241,5 +241,7 @@
   "watchVideo": "Titta på videon",
   "when": "när",
   "whenRun": "vid start",
-  "workspaceHeaderShort": "Arbetsyta: "
+  "workspaceHeaderShort": "Arbetsyta: ",
+  "copy": "Copy",
+  "sendToPhone": "Send To Phone"
 }

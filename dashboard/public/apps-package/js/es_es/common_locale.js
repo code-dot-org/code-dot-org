@@ -396,4 +396,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Mira el Video"},
 "when":function(d){return "cuando"},
 "whenRun":function(d){return "cuando se ejecuta"},
-"workspaceHeaderShort":function(d){return "Espacio de trabajo: "}};
+"workspaceHeaderShort":function(d){return "Espacio de trabajo: "},
+"copy":function(d){return "Copy"},
+"sendToPhone":function(d){return "Send To Phone"}};

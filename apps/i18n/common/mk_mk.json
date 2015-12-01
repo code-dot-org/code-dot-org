@@ -241,5 +241,7 @@
   "watchVideo": "Погледни го видеото",
   "when": "Кога",
   "whenRun": "Кога трча",
-  "workspaceHeaderShort": "Работна површина: "
+  "workspaceHeaderShort": "Работна површина: ",
+  "copy": "Copy",
+  "sendToPhone": "Send To Phone"
 }

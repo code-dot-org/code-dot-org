@@ -241,5 +241,7 @@
   "watchVideo": "Погледај видео",
   "when": "када",
   "whenRun": "када се извршава",
-  "workspaceHeaderShort": "Радни простор: "
+  "workspaceHeaderShort": "Радни простор: ",
+  "copy": "Copy",
+  "sendToPhone": "Send To Phone"
 }

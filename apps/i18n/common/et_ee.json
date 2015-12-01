@@ -241,5 +241,7 @@
   "watchVideo": "Vaata videot",
   "when": "kui",
   "whenRun": "kui jooksed",
-  "workspaceHeaderShort": "Tööruum: "
+  "workspaceHeaderShort": "Tööruum: ",
+  "copy": "Copy",
+  "sendToPhone": "Send To Phone"
 }
