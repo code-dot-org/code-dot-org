@@ -48,18 +48,20 @@ module.exports = AuthoredHints;
  * @return {AuthoredHints[]}
  */
 AuthoredHints.prototype.getUnseenHints = function () {
-  return this.hints_ ? this.hints_.filter(function (hint) {
+  var hints = this.hints_ || [];
+  return hints.filter(function (hint) {
     return hint.alreadySeen === false;
-  }) : [];
+  });
 };
 
 /**
  * @return {AuthoredHints[]}
  */
 AuthoredHints.prototype.getSeenHints = function () {
-  return this.hints_ ? this.hints_.filter(function (hint) {
+  var hints = this.hints_ || [];
+  return hints.filter(function (hint) {
     return hint.alreadySeen === true;
-  }) : [];
+  });
 };
 
 /**
