@@ -85,7 +85,6 @@ class LevelSourcesController < ApplicationController
       callouts: [],
       full_width: true,
       share_footer: true,
-      no_header: true,
       has_i18n: @game.has_i18n?,
       no_padding: browser.mobile?
     )
