@@ -130,7 +130,7 @@ class Game < ActiveRecord::Base
     app == NETSIM || app == APPLAB
   end
 
-  # True if the app takes responsability for showing footer info
+  # True if the app takes responsibility for showing footer info
   def owns_footer_for_share?
     app === APPLAB
   end

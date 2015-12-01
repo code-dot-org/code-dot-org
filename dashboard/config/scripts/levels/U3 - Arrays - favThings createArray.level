@@ -163,9 +163,10 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Create an array of words describing your favorite things. (Click to see full instructions)",
-    "markdown_instructions": "# Create Your Array and Index\r\n\r\nNow that we've dealt with our design elements we'll need to start writing the actual code of our app. This app keeps track of a list of items, so we know that **we'll need to create an array** to store them. \r\n\r\n# Do This\r\n\r\n* **Create an array** that will hold your list of favorite things.\r\n* **Add three of your own favorite things to your array**",
+    "markdown_instructions": "# Create Your Array\r\n\r\nNow that we've dealt with our design elements we'll need to start writing the actual code of our app. This app keeps track of a list of items, so we know that **we'll need to create an array** to store them. \r\n\r\n# Do This:\r\n\r\n* **Create an array** that will hold your list of favorite things.\r\n* **Add three of your own favorite things to your array.**",
     "slider_speed": "1",
-    "project_template_level_name": "U3 - Arrays - favThings template"
+    "project_template_level_name": "U3 - Arrays - favThings template",
+    "encrypted_examples": "cJiuCcOZFo5QBzy6QGkwrUnsZ4OT5Lca1DFjH1DVBv5vUMdJU3Wk9mpOgkNd\nxkCp\n"
   }
 }]]></config>
   <blocks/>

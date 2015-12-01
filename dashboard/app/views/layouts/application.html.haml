@@ -38,9 +38,13 @@
         .push
 
     - unless view_options[:no_footer]
-      - if view_options[:small_footer]
+      - if view_options[:share_footer]
+        = render partial: 'layouts/share_footer'
+      - elsif view_options[:small_footer]
         = render partial: 'layouts/small_footer'
       - else
         = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
+      = render partial: 'shared/maybe_set_hoc_secret'
+
 
     = yield :body_scripts
