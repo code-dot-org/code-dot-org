@@ -445,7 +445,7 @@ var drawMap = function () {
   victoryText.setAttribute('visibility', 'hidden');
   gameTextGroup.appendChild(victoryText);
 
-  if (dom.isMobile()) {
+  if (dom.isMobile() || dom.isWindowsTouch()) {
     var resetOverlayRect = document.createElementNS(SVG_NS, 'rect');
     resetOverlayRect.setAttribute('width', Studio.MAZE_WIDTH);
     resetOverlayRect.setAttribute('height', Studio.MAZE_HEIGHT);
@@ -457,7 +457,7 @@ var drawMap = function () {
     resetTextA.setAttribute('class', 'studio-reset-text');
     resetTextA.setAttribute('x', Studio.MAZE_WIDTH / 2);
     resetTextA.setAttribute('y', RESET_TEXT_Y_POSITION - 30);
-    resetTextA.appendChild(document.createTextNode(studioMsg.tapToPlayThen()));
+    resetTextA.appendChild(document.createTextNode(studioMsg.tapToPlay()));
     resetTextA.setAttribute('visibility', 'visible');
     overlayGroup.appendChild(resetTextA);
     var resetTextB = document.createElementNS(SVG_NS, 'text');
@@ -465,7 +465,7 @@ var drawMap = function () {
     resetTextB.setAttribute('class', 'studio-reset-text');
     resetTextB.setAttribute('x', Studio.MAZE_WIDTH / 2);
     resetTextB.setAttribute('y', RESET_TEXT_Y_POSITION);
-    resetTextB.appendChild(document.createTextNode(studioMsg.dragToMove()));
+    resetTextB.appendChild(document.createTextNode(studioMsg.swipeToMove()));
     resetTextB.setAttribute('visibility', 'visible');
     overlayGroup.appendChild(resetTextB);
     var touchDragIcon = document.createElementNS(SVG_NS, 'image');
@@ -2146,12 +2146,12 @@ Studio.reset = function(first) {
     .setAttribute('visibility', 'hidden');
   document.getElementById('victoryText')
     .setAttribute('visibility', 'hidden');
-  if (dom.isMobile()) {
+  if (dom.isMobile() || dom.isWindowsTouch()) {
     var resetTextA = document.getElementById('resetTextA');
     var resetTextB = document.getElementById('resetTextB');
     if (level.tapSvgToRunAndReset) {
-      resetTextA.textContent = studioMsg.tapToPlayThen();
-      resetTextB.textContent = studioMsg.dragToMove();
+      resetTextA.textContent = studioMsg.tapToPlay();
+      resetTextB.textContent = studioMsg.swipeToMove();
       resetTextA.setAttribute('visibility', 'visible');
       resetTextB.setAttribute('visibility', 'visible');
       $('#overlayGroup *').attr('visibility', 'visible');
