@@ -23,7 +23,7 @@
 ## Try Bootstrap's Hour of Code tutorial
 The Computer Science in Algebra course was inspired by and developed in partnership with [Bootstrap](http://www.BootstrapWorld.org). If you enjoyed CS in Algebra and you want to go further with your students, Bootstrap uses WeScheme instead of block based programming and allows you and your students to explore more complex apps, games or algebraic concepts such as recursion. If you would like to try WeScheme, or you're looking for an Hour of Code tutorial for an algebra class, we recommend this short, 1 hour tutorial designed for beginners.
 
-[<button>Try Boostrap: Intro to Programming</button>](http://www.bootstrapworld.org/materials/fall2015/tutorial/)
+[<button>Try Bootstrap: Intro to Programming</button>](http://www.bootstrapworld.org/materials/fall2015/tutorial/)
 
 <br/>
 <br/>
