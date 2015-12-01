@@ -10,7 +10,7 @@ var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
 var KeyCodes = require('../constants').KeyCodes;
 var constants = require('./constants');
-
+var applabCommands = require('./commands');
 var designMode = module.exports;
 
 var currentlyEditedElement = null;
@@ -31,6 +31,7 @@ designMode.onDesignModeVizClick = function (event) {
   event.preventDefault();
 
   var element = event.target;
+  
   if (element.id === 'designModeViz') {
     element = designMode.activeScreen();
   }
@@ -39,7 +40,10 @@ designMode.onDesignModeVizClick = function (event) {
     element = getInnerElement(element);
   } else if ($(element).is('.ui-resizable-handle')) {
     element = getInnerElement(element.parentNode);
+  } else if ($(element).attr('class') === undefined) {
+    element = getInnerElement(element.parentNode.parentNode);
   }
+
   // give the div focus so that we can listen for keyboard events
   $("#designModeViz").focus();
   designMode.editElementProperties(element);
@@ -191,7 +195,8 @@ designMode.updateProperty = function(element, name, value) {
       }
       break;
     case 'text':
-      element.textContent = value;
+      //element.textContent = value;
+      element.innerHTML = applabCommands.escapeText(value);
       break;
     case 'textColor':
       element.style.color = value;
