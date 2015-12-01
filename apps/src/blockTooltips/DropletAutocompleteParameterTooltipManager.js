@@ -165,8 +165,8 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
   }
   var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
 
-  if (currentParameterIndex >= tooltipInfo.parameterInfos.length &&
-      (tooltipInfo.parameterInfos.length > 0 || currentParameterIndex > 0)) {
+  var hasTooltipParams = tooltipInfo.parameterInfos.length > 0;
+  if ((hasTooltipParams && currentParameterIndex >= tooltipInfo.parameterInfos.length)) {
     return;
   }
 
@@ -183,7 +183,7 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
     }.bind(this));
   }
 
-  if (tooltipInfo.parameterInfos.length === 0) {
+  if (!hasTooltipParams) {
     return;
   }
 
