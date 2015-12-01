@@ -7,31 +7,31 @@ theme: none
 -if ! request.params['course'].nil? && ! request.params['course'].empty?
   -course = request.params['course']
 -else
-  -course = ScriptInfo::HOC_NAME
+  -course = ScriptConstants::HOC_NAME
 
 %div.hide-print
   -case course
-    -when ScriptInfo::TWENTY_HOUR_NAME
+    -when ScriptConstants::TWENTY_HOUR_NAME
       %h1 K-8 Intro to Computer Science Course Certificates
-    -when ScriptInfo::HOC_NAME
+    -when ScriptConstants::HOC_NAME
       %h1 Hour of Code Certificates
-    -when ScriptInfo::ARTIST_NAME
+    -when ScriptConstants::ARTIST_NAME
       %h1 Artist Certificates
-    -when ScriptInfo::COURSE1_NAME
+    -when ScriptConstants::COURSE1_NAME
       %h1 Course 1 Certificates
-    -when ScriptInfo::COURSE2_NAME
+    -when ScriptConstants::COURSE2_NAME
       %h1 Course 2 Certificates
-    -when ScriptInfo::COURSE3_NAME
+    -when ScriptConstants::COURSE3_NAME
       %h1 Course 3 Certificates
-    -when ScriptInfo::COURSE4_NAME
+    -when ScriptConstants::COURSE4_NAME
       %h1 Course 4 Certificates
-    -when ScriptInfo::FROZEN_NAME
+    -when ScriptConstants::FROZEN_NAME
       %h1 Frozen Certificates
-    -when ScriptInfo::PLAYLAB_NAME
+    -when ScriptConstants::PLAYLAB_NAME
       %h1 Play Lab Certificates
-    -when ScriptInfo::FLAPPY_NAME
+    -when ScriptConstants::FLAPPY_NAME
       %h1 Flappy Bird Certificates
-    -when ScriptInfo::MINECRAFT_NAME
+    -when ScriptConstants::MINECRAFT_NAME
       %h1 Minecraft Certificates
     -else
       %h1 Code.org Certificates

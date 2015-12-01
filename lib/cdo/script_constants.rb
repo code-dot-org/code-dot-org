@@ -2,7 +2,7 @@
 # sometimes referenced in Pegasus.
 # Used for conditional behaviors.
 
-class ScriptInfo
+module ScriptConstants
   HOC_2013_NAME = 'Hour of Code' # this is the old (2013) hour of code
   EDIT_CODE_NAME = 'edit-code'
   TWENTY_FOURTEEN_NAME = 'events'
@@ -23,11 +23,11 @@ class ScriptInfo
   COURSE3_NAME = 'course3'
   COURSE4_NAME = 'course4'
 
-  def self.twenty_hour?(name)
+  def ScriptConstants.twenty_hour?(name)
     name == TWENTY_HOUR_NAME
   end
 
-  def self.hoc?(name)
+  def ScriptConstants.hoc?(name)
     # Note that now multiple scripts can be an 'hour of code' script.
     # If adding a script here,
     # you must also update the Data_HocTutorials gsheet so the end of script API works
@@ -44,11 +44,11 @@ class ScriptInfo
     ].include? name
   end
 
-  def self.flappy?(name)
+  def ScriptConstants.flappy?(name)
     name == FLAPPY_NAME
   end
 
-  def self.minecraft?(name)
+  def ScriptConstants.minecraft?(name)
     name == MINECRAFT_NAME
   end
 end
