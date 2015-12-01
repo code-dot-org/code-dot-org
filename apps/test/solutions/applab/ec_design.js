@@ -449,6 +449,80 @@ module.exports = {
     },
 
     {
+      description: "exercise TEXTAREA element",
+      editCode: true,
+      xml: '',
+
+      runBeforeClick: function (assert) {
+        $('#designModeButton').click();
+
+        testUtils.dragToVisualization('TEXT_AREA', 0, 0);
+
+        var designModeViz = $('#designModeViz');
+        assertPropertyRowValue(0, 'id', 'text_area1', assert);
+        assertPropertyRowValue(1, 'text', '', assert);
+        assertPropertyRowValue(2, 'width (px)', 200, assert);
+        assertPropertyRowValue(3, 'height (px)', 100, assert);
+        assertPropertyRowValue(4, 'x position (px)', 0, assert);
+        assertPropertyRowValue(5, 'y position (px)', 0, assert);
+        assertPropertyRowValue(6, 'text color', '#000000', assert);
+        assertPropertyRowValue(7, 'background color', '#ffffff', assert);
+        assertPropertyRowValue(8, 'font size (px)', 14, assert);
+
+        var textArea = designModeViz.find('.textArea');
+        var manipulator = textArea.parent();
+        assert.isTrue(manipulator.hasClass('ui-draggable'), 'text area is draggable');
+        assert.isTrue(manipulator.hasClass('ui-resizable'), 'text area is resizable');
+
+        textArea = $('#propertyRowContainer textarea').first()[0];
+        ReactTestUtils.Simulate.change(textArea,
+          { target: { value: 'Text 1' } });
+
+        assert.equal($('#propertyRowContainer textarea').first().val(), 'Text 1', 'Text should be written');
+        assert.equal($('#designModeViz .textArea').length, 1, 'element should exist');
+        assert.equal($('#designModeViz .textArea').attr('id'), 'design_text_area1', 'element should be named');
+        assert.equal($('#designModeViz .textArea').first().prop('innerHTML'), 'Text 1', 'should have one line of text');
+
+        ReactTestUtils.Simulate.change(textArea,
+          { target: { value: 'Text1\nText2\nText3'}});
+
+        assert.equal($('#designModeViz .textArea').first().prop('innerHTML'),
+          'Text1<div>Text2</div><div>Text3</div>');
+
+        ReactTestUtils.Simulate.change(textArea,
+          { target: { value: 'Text1\n\nText2' } });
+
+        assert.equal($('#designModeViz .textArea').first().prop('innerHTML'),
+          'Text1<div><br></div><div>Text2</div>');
+
+        $('#design_screen1').click();
+        assertPropertyRowValue(0, 'id', 'screen1', assert);
+
+        //Clicking on the text area should bring back the text area
+        $('#designModeViz .textArea').click();
+        assertPropertyRowValue(0, 'id', 'text_area1', assert);
+
+        //Clicking on one of the divs in the text area should still bring back the text area
+        $('#design_screen1').click();
+        $('#designModeViz .textArea div').first().click();
+        assertPropertyRowValue(0, 'id', 'text_area1', assert);
+        assert.equal($('#propertyRowContainer textarea').first().val(), 'Text1\n\nText2', 'Text should be written');
+        ReactTestUtils.Simulate.change(textArea,
+          { target: { value: 'I said hey-hey-hey-hey\n\What\'s going on?' } });
+        assert.equal($('#designModeViz .textArea').first().prop('innerHTML'),
+          'I said hey-hey-hey-hey<div>What\'s going on?</div>');
+
+
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResults: undefined
+      }
+    },
+
+    {
       description: "exercise IMAGE element",
       editCode: true,
       xml: '',
