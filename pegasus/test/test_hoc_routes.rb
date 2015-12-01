@@ -21,11 +21,11 @@ class HocRoutesTest < Minitest::Test
     end
 
     it 'starts tutorial' do
-      assert_redirects_from_to '/api/hour/begin/mc', CDO.code_org_url('/mc')
+      assert_redirects_from_to '/api/hour/begin/mc', '/mc'
     end
 
     it 'ends tutorial' do
-      assert_redirects_from_to '/api/hour/finish', CDO.code_org_url('/congrats')
+      assert_redirects_from_to '/api/hour/finish', '/congrats'
     end
 
     it 'starts given tutorial with png image' do
@@ -37,7 +37,7 @@ class HocRoutesTest < Minitest::Test
     end
 
     it 'ends given tutorial, providing script ID to congrats page' do
-      assert_redirects_from_to '/api/hour/finish/mc', CDO.code_org_url('/congrats')
+      assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
       assert_includes @pegasus.last_request.url, "&s=#{CGI::escape(Base64.urlsafe_encode64('mc'))}"
     end
 
@@ -73,16 +73,16 @@ class HocRoutesTest < Minitest::Test
       assert_nil before_start_row
 
       assert_redirects_from_to '/api/hour/begin_company/testcompany',
-                               CDO.code_org_url('/learn?company=testcompany')
+                               '/learn?company=testcompany'
       assert_redirects_from_to '/api/hour/begin/mc?company=testcompany',
-                               CDO.code_org_url('/mc')
+                               '/mc'
 
       after_start_row = get_session_hoc_activity_entry
       assert_equal 'testcompany', after_start_row[:company]
       assert_equal 'mc', after_start_row[:tutorial]
       assert after_start_row[:started_at]
 
-      assert_redirects_from_to '/api/hour/finish/mc', CDO.code_org_url('/congrats')
+      assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
       assert_includes @pegasus.last_request.url, "&s=#{CGI::escape(Base64.urlsafe_encode64('mc'))}"
       assert_includes @pegasus.last_request.url, '&co=testcompany'
 
@@ -97,7 +97,7 @@ class HocRoutesTest < Minitest::Test
       assert_nil before_start_row
 
       before_began_time = now_in_sequel_datetime
-      assert_redirects_from_to '/api/hour/begin/mc', CDO.code_org_url('/mc')
+      assert_redirects_from_to '/api/hour/begin/mc', '/mc'
       after_began_time = now_in_sequel_datetime
 
       after_start_row = get_session_hoc_activity_entry
@@ -105,7 +105,7 @@ class HocRoutesTest < Minitest::Test
       assert_nil after_start_row[:finished_at]
 
       before_ended_time = now_in_sequel_datetime
-      assert_redirects_from_to '/api/hour/finish/mc', CDO.code_org_url('/congrats')
+      assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
       after_ended_time = now_in_sequel_datetime
       after_end_row = get_session_hoc_activity_entry
       assert_datetime_within(after_end_row[:started_at], before_began_time, after_began_time)
@@ -139,7 +139,7 @@ class HocRoutesTest < Minitest::Test
     end
 
     def make_certificate
-      assert_redirects_from_to '/api/hour/finish/mc', CDO.code_org_url('/congrats')
+      assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
       CGI::parse(@pegasus.last_request.query_string)['i'][0]
     end
 
