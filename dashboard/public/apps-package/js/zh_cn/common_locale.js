@@ -396,6 +396,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "观看视频"},
 "when":function(d){return "当"},
 "whenRun":function(d){return "当运行时"},
-"workspaceHeaderShort":function(d){return "工作区域"},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "工作区域"}};

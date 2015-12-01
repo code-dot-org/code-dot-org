@@ -396,6 +396,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "비디오 보기"},
 "when":function(d){return "~할 때"},
 "whenRun":function(d){return "실행하면"},
-"workspaceHeaderShort":function(d){return "작업 영역: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "작업 영역: "}};

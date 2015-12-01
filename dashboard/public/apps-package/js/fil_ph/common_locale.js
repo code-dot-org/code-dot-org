@@ -396,6 +396,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Panoorin ang Video"},
 "when":function(d){return "kelan"},
 "whenRun":function(d){return "kapag tumakbo"},
-"workspaceHeaderShort":function(d){return "Workspace: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Workspace: "}};

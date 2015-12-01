@@ -396,6 +396,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Vaata videot"},
 "when":function(d){return "kui"},
 "whenRun":function(d){return "kui jooksed"},
-"workspaceHeaderShort":function(d){return "Tööruum: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Tööruum: "}};

@@ -241,7 +241,5 @@
   "watchVideo": "Panoorin ang Video",
   "when": "kelan",
   "whenRun": "kapag tumakbo",
-  "workspaceHeaderShort": "Workspace: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Workspace: "
 }

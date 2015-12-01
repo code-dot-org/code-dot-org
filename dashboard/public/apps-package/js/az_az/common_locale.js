@@ -396,6 +396,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Videoya baxın"},
 "when":function(d){return "nə zaman"},
 "whenRun":function(d){return "icra etdikdə"},
-"workspaceHeaderShort":function(d){return "iş sahəsi: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "iş sahəsi: "}};

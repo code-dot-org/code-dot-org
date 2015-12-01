@@ -241,7 +241,5 @@
   "watchVideo": "Tonton Video",
   "when": "apabila",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Workspace: "
 }
