@@ -51,9 +51,10 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Change the code so that it prints the string 'Hi' 5 times. (Click to see full instructions)",
-    "markdown_instructions": "# Repeat Specific Number of Times\r\n\r\nInstead of writing code that makes the loop run a random number of times, we can control the while loop by changing the variable used in the boolean expression differently. Let’s try just printing a string 5 times.\r\n\r\n# Do This\r\n\r\n* **Starter Code:** Right now the code prints a string 'Hi' twice\r\n* **Change the code** so that it prints the string 'Hi' 5 times.\r\n* **Notice** how `count` is being re-assigned each time through the loop.",
-    "start_blocks": "var count = 0;\r\nwhile( count < 2 ){ \r\n  console.log(\"Hi\"); \r\n  count = count+1;\r\n}"
+    "instructions": "Change the code so that it prints the string \"Hi\" 5 times. (Click to see full instructions)",
+    "markdown_instructions": "# Repeat Specific Number of Times\r\n\r\nInstead of writing code that makes the loop run a random number of times, we can control the `while` loop by changing the variable used in the boolean expression differently. Let’s try just printing a string 5 times.\r\n\r\n# Do This:\r\n\r\n* **Starter Code:** Right now the code prints a string \"Hi\" twice.\r\n* **Change the code** so that it prints the string \"Hi\" 5 times.\r\n* **Notice** how `count` is being re-assigned each time through the loop.",
+    "start_blocks": "var count = 0;\r\nwhile (count < 2) { \r\n  console.log(\"Hi\"); \r\n  count = count + 1;\r\n}",
+    "encrypted_examples": "YfZKUbUl1obxof1+7W3kvV2h8IAwcSaIgpJP2bK6smACpog5/Xxv00GDxp9u\n6qcQ\n"
   }
 }]]></config>
   <blocks/>

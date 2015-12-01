@@ -16,6 +16,15 @@ social:
   "og:video:type": ""
 ---
 
+
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
+%script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
+
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+%link{rel: "stylesheet", type: "text/css", href: "/css/map.css"}
+
 #top{:style=>"margin-top: 40px;"}
   #video.col-63.desktop-pad-right
     = view :hocvideo, id:"r990CWYtx_o"
@@ -39,3 +48,180 @@ social:
 
 %div{:style=>'clear:both'}
 
+#hocmap{style: "height: 600px"}
+  %h2.mapheader
+    %a{:href=> "https://hourofcode.com/events"}
+      Over 150,000 Hour of Code events around the world
+    %a{:href=> "https://hourofcode.com/#join"}
+      %button.signup-button
+        Sign up your event
+
+  .row
+    .col-sm-12
+      #gmap.full-width
+      
+
+:javascript
+  var gmap;
+  var resizeZoom;
+  var scrollwheelOption = false;
+  var draggableOption = false;
+  var resizeThrottleTimerId;
+  var resizeThrottleTimeoutMs = 500;
+  var maxHeightPercentage = 0.65;
+
+  $(document).ready(function() {
+    initializeMap();
+    addGeocomplete();
+    resizeMap();
+
+    $(window).resize(function() {
+      // Throttle calling of resizeMap
+      clearTimeout(resizeThrottleTimerId);
+      resizeThrottleTimerId = setTimeout(resizeMap, resizeThrottleTimeoutMs);
+    });
+  });
+
+  function initializeMap() {
+    var mapOptions = {
+      center: new google.maps.LatLng(1.3553,103.8677),
+      zoom: 11,
+      scrollwheel: scrollwheelOption,
+      draggable: draggableOption,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    gmap = new google.maps.Map(document.getElementById("gmap"), mapOptions);
+
+    var layer = new google.maps.FusionTablesLayer({
+      query: {
+        select: 'review',
+        from: '164RLDWEyPij3-Z9O0791ta_a8RfuCdGUkWRFcnBD'
+      },
+      styles: [{
+        where: "review CONTAINS 'approved'",
+        markerOptions: {
+          iconName: "orange_stars"
+        }
+      }, {
+        where: "review DOES NOT CONTAIN 'approved'",
+        markerOptions: {
+          iconName: "measle_turquoise"
+        }
+      }],
+    });
+
+    var legend = document.createElement('div');
+    legend.id = 'inmaplegend';
+    legend.className = 'legend'
+
+    var content = [];
+    content.push('<div class="legend-title">#{I18n.t(:csedweek_map_legend_title)}</div>');
+    content.push('<div class="color red"></div>#{I18n.t(:csedweek_map_legend_event)}');
+    content.push('<br><div class="color blue"></div>#{I18n.t(:csedweek_map_legend_cs_tech_jam)}');
+    legend.innerHTML = content.join('');
+    legend.index = 1;
+
+    // gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+
+    layer.setMap(gmap);
+
+    google.maps.event.addListener(layer, 'click', function(event) {
+      enableDrag();
+      event.infoWindowHtml = event.row['organization_name'].value;
+      if (event.row['city'].value.length > 0) {
+        event.infoWindowHtml += ' (' + event.row['city'].value + ')';
+      }
+      if (event.row['review'].value == 'approved') {
+        event.infoWindowHtml += '<br>' + event.row['description'].value;
+      }
+      event.infoWindowHtml += '<br>';
+    });
+    google.maps.event.addListener(gmap, 'zoom_changed', function(event) {
+      enableDrag();
+    });
+    google.maps.event.addListener(gmap, 'click', function(event) {
+      enableDrag();
+    });
+  }
+
+  function enableDrag() {
+    scrollwheelOption = true;
+    draggableOption = true;
+
+    var map_options = {
+      scrollwheel: scrollwheelOption,
+      draggable: draggableOption
+    }
+    gmap.setOptions(map_options);
+  }
+
+  function resizeMap() {
+    var map_width = $('#gmap').width();
+    var map_zoom = gmap.getZoom();
+    var map_center = gmap.getCenter();
+
+    // Max height of map is 2/3 of screen height so user can always scroll.
+    var max_height = $(window).innerHeight() * maxHeightPercentage; 
+
+    var window_aspect_ratio = $(window).innerHeight() / $(window).innerWidth();
+    
+    if  (window_aspect_ratio < 1) {
+      // Landscape window. Use the current 1:2 ratio map size.
+      map_height = map_width / 2;
+
+      // But, make sure this size doesn't exceed our max height.
+       map_height = Math.min(map_height, max_height);
+    } 
+    else {
+      // Portrait window. Just use the max height so that it's taller and more usable.
+      map_height = max_height;
+    }
+
+    $('#gmap').height(Math.round(map_height));
+
+    if (map_width < 256 && map_zoom < 3) {
+      map_zoom = 0;
+      map_center = new google.maps.LatLng(1.3553,103.8677);
+    }
+    else if (map_width < 512 && map_zoom < 3) {
+      map_zoom = 1;
+      map_center = new google.maps.LatLng(1.3553,103.8677);
+    }
+    else if (map_zoom < 3) {
+      map_zoom = 2;
+      map_center = new google.maps.LatLng(1.3553,103.8677);
+    }
+
+    var map_options = {
+      center: map_center,
+      zoom: map_zoom,
+      minZoom: map_zoom,
+      scrollwheel: scrollwheelOption,
+      draggable: draggableOption
+    }
+
+    gmap.setOptions(map_options);
+  }
+
+  function addGeocomplete() {
+    var geocomplete_options = {
+    };
+
+    $("#geocomplete").geocomplete(geocomplete_options)
+      .bind("geocode:result", function(event, result){
+        gmap.fitBounds(result.geometry.viewport);
+      });
+
+    $("#btn-submit").click(function(){
+      $("#geocomplete").trigger("geocode");
+    });
+
+    $("#btn-reset").click(function(){
+      $('#geocomplete').val('');
+      gmap.setCenter(new google.maps.LatLng(1.3553,103.8677));
+      gmap.setZoom(2);
+      info_window.close();
+      resizeMap();
+    });
+  }
