@@ -10,16 +10,20 @@ rightbar: blank
 - pass unless form = Form2.from_row(DB[:forms].where(kind:'VolunteerEngineerSubmission2015', secret:secret).first)
 - unsubscribed = form.data['unsubscribed_s']
 
-%h1 Update email preferences
+#unsubscribe-volunteer-thanks{:style=>"display: none;"} You have successfully updated your email preferences.
 
 %form#unsubscribe-volunteer-form{role: "form", onsubmit: "event.preventDefault(); unsubscribeVolunteerList();"}
+  %h1 Update email preferences
+
   #error-message{style: 'display: none'}
-  - if unsubscribed == 'until2016'
-    %p You've unsubscribed from teacher requests this year. To update your preference, select below and click confirm.
-  - elsif unsubscribed == 'forever'
-    %p You've unsubscribed from teacher requests forever. To update your preference, select below and click confirm.
-  - else
-    %p You are currently subscribed to teacher requests. To update your preference, select below and click confirm.
+  %p
+    - if unsubscribed == 'until2016'
+      You've <strong>unsubscribed</strong> from teacher requests <strong>this year</strong>.
+    - elsif unsubscribed == 'forever'
+      You've <strong>unsubscribed</strong> from teacher requests <strong>forever</strong>.
+    - else
+      You are currently <strong>subscribed</strong> to teacher requests.
+    To update your preference, select below and click confirm.
 
   .form-group
     .radio-row
@@ -34,6 +38,6 @@ rightbar: blank
         Send me teacher requests again
 
   #volunteer-secret{style: 'display: none'}= secret
-  %button.btn-submit Confirm
+  %button.btn.btn-submit Confirm
 
-#thanks{:style=>"display: none;"} You have successfully updated your email preferences.
+= view :volunteer_engineer_form, {form: form}

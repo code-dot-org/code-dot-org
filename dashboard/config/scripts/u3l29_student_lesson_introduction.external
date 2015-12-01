@@ -4,21 +4,24 @@ css 'unplugged'
 
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 29 - Loops and Counting
+## Unit 3: Lesson 23 - Loops and Simulations
 
 # Background
 
-Collecting data, such as counting the number of heads and tails, or the longest streaks of heads and tails, from a coin-flipping experiment of thousands of trials, can be time consuming to say the least. Such statistical analysis of data is easier when done digitally with the use of loops and counters.
+We can often develop intuitions for patterns by performing real-life experiments at a small scale, but verifying our intuitions with larger experiments can prove prohibitively time-consuming, costly, or even dangerous. If we can develop a model or simulation of the phenomenon we wish to investigate, we can confirm our hypotheses much more quickly without the risks or costs associated with a real-life experiment.
+
+# Vocabulary
+
+**Simulation:** a program which replicates key features of a phenomenon in order to assist investigations of its behavior without the associated cost, time, or danger of running an experiment in real life.
 
 # Lesson
 
-* Calculate statistics from a coin flipping experiment
-.
-* Create an application to repeat the experiment 10,000 times. 
-
+* Calculate statistics from a coin flipping experiment.
+* Create a simulation to repeat this experiment for much larger inputs.
+* Create an update hypotheses based on the results of simulations.
 
 # Resources
-* Activity: <a href="https://docs.google.com/a/lsoc.org/document/d/16CdQWtS_JtyiQAFcxFeRc0LeB1lwL-ak9hIE9ehn3gY" target="_blank">
+* Activity Guide: <a href="https://docs.google.com/document/d/1xLzpruWj1foU23cVDGAcq7WoH_QCvAbSGpT-QT5tp0s/edit?usp=sharing" target="_blank">
 Flipping Coins
 </a>
 

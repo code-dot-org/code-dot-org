@@ -1,6 +1,7 @@
 partner_sites = CDO.partners.map{|x|x + '.code.org'}
 
 get '/:short_code' do |short_code|
+  short_code = 'mchoc' if short_code == 'MC'
   only_for ['code.org', 'csedweek.org', 'hourofcode.com', partner_sites].flatten
   pass if request.site == 'hourofcode.com' && ['ap', 'ca', 'co', 'gr'].include?(short_code)
   pass unless tutorial = DB[:tutorials].where(short_code: short_code).first
@@ -13,17 +14,22 @@ get '/v2/hoc/tutorial-metrics.json' do
   JSON.pretty_generate(fetch_hoc_metrics['tutorials'])
 end
 
-# Employee engagement
+# Link from Hour of Code 2014 employee engagement pages
 get '/api/hour/begin_company/:company' do |company|
-  pass unless DB[:forms].where(kind: 'CompanyProfile', name: company).first
-  pass unless tutorial = DB[:tutorials].where(code: 'codeorg').first
-  launch_tutorial(tutorial, company: company)
+  redirect "/learn?company=#{company}"
 end
 
 get '/api/hour/begin/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
   pass unless tutorial = DB[:tutorials].where(code: code).first
-  launch_tutorial(tutorial)
+
+  # set company to nil if not a valid company
+  company = request.GET['company']
+  unless company.nil?
+    company = nil unless DB[:forms].where(kind: 'CompanyProfile', name: company).first
+  end
+
+  launch_tutorial(tutorial, company: company)
 end
 
 get '/api/hour/begin_:code.png' do |code|
@@ -45,7 +51,7 @@ get '/api/hour/certificate/:filename' do |filename|
   width = width.to_i
   width = 0 unless(width > 0 && width < 1754)
 
-  image = create_course_certificate_image(row[:name].to_s.strip, 'hoc')
+  image = create_course_certificate_image(row[:name].to_s.strip, row[:tutorial])
   image.resize_to_fit!(width) unless width == 0
   image.format = extname[1..-1]
 
@@ -64,7 +70,7 @@ get '/v2/hoc/certificate/:filename' do |filename|
   pass unless extnames.include?(extname)
 
   format = extname[1..-1]
-  image = create_course_certificate_image(data['name'], data['course'], data['sponsor'])
+  image = create_course_certificate_image(data['name'], data['course'], data['sponsor'], data['course_title'])
   image.format = format
 
   content_type format.to_sym

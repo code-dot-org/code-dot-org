@@ -7,6 +7,10 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
+      "insertItem": null,
+      "appendItem": null,
+      "removeItem": null,
+      "listLength": null,
       "addOperator": null,
       "randomNumber": null,
       "declareAssign_x": null,
@@ -14,7 +18,7 @@
       "assign_x": null,
       "console.log": null,
       "declareAssign_x_array_1_4": {
-        "block": "var list = [1,2,3];"
+        "block": "var list = [];"
       }
     },
     "edit_code": true,
@@ -38,7 +42,7 @@
     "lock_zero_param_functions": "false",
     "free_play": "true",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false",
+    "autocomplete_palette_apis_only": "true",
     "execute_palette_apis_only": "false",
     "text_mode_at_start": "true",
     "design_mode_at_start": "false",
@@ -48,12 +52,10 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Use list.length - 1 to log the last item in the array to the console. (Click to see full instructions)",
-    "markdown_instructions": "# Expressions as Indexes: list.length - 1\r\n\r\nWe have been accessing information in an array by using numbers, but we can actually use **any expression that evaluates to a number as an index in our array**. The first example of this we will explore is accessing the last item in our array.\r\n\r\nArrays are **zero-indexed**, which means that the first index is 0. Therefore an array with a length of 3 will have indexes 0, 1, and 2. Notice that **the last index is 1 less than the length**. This will always be the case and so we can use this expression to access the last element in any array.\r\n\r\n![](https://images.code.org/4b9d62e451188ea00a58102110e447f6-image-1447267224677.28.31 PM.png)\r\n\r\n# Do This\r\n\r\n* **Starter code** has been provided that which creates an array of colors.\r\n* Use the syntax provided above and `console.log` to display the final item in the list.\r\n",
+    "markdown_instructions": "# Expressions as Indexes: *list.length - 1*\r\n\r\nWe have been accessing information in an array by using numbers, but we can actually use **any expression that evaluates to a number as an index in our array**. The first example of this we will explore is accessing the last item in our array.\r\n\r\nArrays are **zero-indexed**, which means that the first index is 0. Therefore an array with a length of 3 will have indexes 0, 1, and 2. Notice that **the last index is 1 less than the length**. This will always be the case, and so we can use this expression to access the last element in any array.\r\n\r\n![](https://images.code.org/4b9d62e451188ea00a58102110e447f6-image-1447267224677.28.31 PM.png)\r\n\r\n# Do This:\r\n\r\n* **Starter code** has been provided that which creates several arrays.\r\n* Use the syntax provided above and `console.log` to display the final item in each list.\r\n",
     "slider_speed": "1",
-    "encrypted_examples": [
-
-    ],
-    "start_blocks": "var colors = [\"red\",\"orange\",\"yellow\",\"green\",\"blue\",\"indigo\",\"violet\"];\r\n\r\n// Use list.length - 1 syntax to access the last element in this array and log it to the console"
+    "start_blocks": "var colors = [\"red\",\"orange\",\"yellow\",\"green\",\"blue\",\"indigo\",\"violet\"];\r\nvar numbers = [20, 40, 60, 80, 100];\r\nvar pets = [\"cat\", \"dog\", \"fish\", \"bird\"];\r\n\r\n/* Use list.length - 1 syntax to access the last \r\nelement in each array and log it to the console */",
+    "encrypted_examples": "Nmbcr8fAUy/Ref6byZMAk6gbgGGla7Cqdzh2LOmWIYlW4bJDQnn3JrDuv5Go\nu9VY\n"
   }
 }]]></config>
   <blocks/>

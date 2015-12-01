@@ -1,915 +1,1024 @@
 "el-GR":
-  hello: "Γεια σου κόσμε"
-  select_language: "Παρακαλώ επιλέξτε τη γλώσσα σας"
-  en: Computer Science
-  computer_science_edweek: "Εβδομάδα Εκπαίδευσης στην Επιστήμη Υπολογιστών"
+  hour_of_code: Ώρα του Κώδικα
+  hello: Γεια σου κόσμε
+  select_language: Παρακαλώ επιλέξτε τη γλώσσα σας
+  en: Επιστήμη των Υπολογιστών
+  computer_science_edweek: Εβδομάδα Εκπαίδευσης στην Επιστήμη Υπολογιστών
   csedweek_dates: 8-14 Δεκεμβρίου 2014
-  csedweek_banner_hoc: 'H  <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold"> Ώρα του Κώδικα</a> πλησιάζει!. Καλούμε όλους τους εκπαιδευτικούς
-    και διοργανωτές να σχεδιάσουν τη δική τους, <a href="http://hourofcode.com" style="color:
-    white; text-decoration:underline; font-weight:bold">  Ώρα του Κώδικα</a>'
+  csedweek_banner_hoc: 'H <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Ώρα του Κώδικα</a> πλησιάζει. Καλούμε όλους τους εκπαιδευτικούς
+    και διοργανωτές <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">να σχεδιάσουν τη δική τους Ώρα του Κώδικα</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Είστε καθηγητής πληροφορικής; Δείτε άλλους πόρους του
     CSEdWeek</a>'
-  n_have_learned_an_hoc: "<h1>Δοκιμάστε μια</h1><h2>Ώρα του κώδικα</h2><h3></h3>"
-  anybody_can_learn: "Οποιοσδήποτε μπορεί να μάθει."
-  learn_now: "Μάθε τώρα"
-  petition_message: "Κάθε μαθητής σε κάθε σχολείο θα πρέπει να έχει την ευκαιρία να
-    μάθει την επιστήμη των υπολογιστών"
-  petition_sign_message: "Είμαι"
-  petition_sign_message_support: "Για να μας στηρίξετε, υπογράψτε με το όνομά σας.
-    Συμμετέχετε στο #others."
-  petition_join_others: "σύνδεσε # άλλα"
-  name: "Όνομα"
-  email: "Ηλεκτρονικό ταχυδρομείο"
-  zipcode: "Ταχυδρομικός κώδικας (για κατοίκους Η.Π.Α) ή χώρα"
-  submit: "Υποβολή"
-  twentyhours_heading: "Δοκιμάστε τη εισαγωγή μας στη σειρά μαθημάτων πληροφορικής"
-  twentyhours_text: "Τελειώσατε την πρώτη σας Ώρα του Κώδικα; Μάθετε περισσότερα για
+  n_have_learned_an_hoc: <h1>Δοκιμάστε μία</h1><h2>Ώρα του Κώδικα</h2><h3># την δοκίμασαν</h3>
+  anybody_can_learn: Οποιοσδήποτε μπορεί να μάθει.
+  learn_now: Μάθε τώρα
+  petition_message: Κάθε μαθητής σε κάθε σχολείο θα πρέπει να έχει την ευκαιρία να
+    μάθει την επιστήμη των υπολογιστών
+  petition_sign_message: Είμαι
+  petition_sign_message_support: 'Αν μας υποστηρίζετε, υπογράψτε με το όνομά σας.
+    Ενωθείτε μαζί με # άλλους.'
+  petition_join_others: 'Ενωθείτε μαζί με # άλλους'
+  name: Όνομα
+  email: Ηλεκτρονικό ταχυδρομείο
+  zipcode: Ταχυδρομικός κώδικας (για κατοίκους Η.Π.Α) ή χώρα
+  submit: Υποβολή
+  twentyhours_heading: Δοκιμάστε την εισαγωγή μας στη Σειρά Μαθημάτων Επιστήμης των
+    Υπολογιστών
+  twentyhours_text: Τελειώσατε την πρώτη σας Ώρα του Κώδικα; Μάθετε περισσότερα για
     τα βασικά της επιστήμης της πληροφορικής και έννοιες προγραμματισμού στο ακόλουθο
-    μάθημα."
-  hoc2014_heading: Συμμετάσχετε στην <a href="http://hourofcode.com"> Ώρα του Κώδικα</a>
-    <br/> 8-14 Δεκεμβρίου, 2014 <br/>
-  hoc2014_students: "Μαθητές"
-  hoc2014_try: "Δοκιμάστε το"
-  hoc2014_teachers: "Δάσκαλοι"
-  hoc2014_host: "Φιλοξενήστε την"
-  hoc2014_everyone: "Όλοι"
-  hoc2014_support: "Υποστηρίξτε την &#x25BE;"
-  hoc2014_whatishoc: "Τι είναι η  Ώρα του Κώδικα;"
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
-  csedweek_map_search_reset: "Επαναφορά"
-  cded_sign_up: "Εγγραφή"
-  cded_try_it: "Δοκιμάστε το"
-  twentyhours_trynow: "Δοκιμάστε τώρα"
-  california_heading: "Ζητήστε από το σχολείο σας να διδάξει την επιστήμη της Πληροφορικής"
-  california_text: "Κάθε δάσκαλος μπορεί να προσφέρει τα <a href='http://studio.code.org/'>δωρεάν
+    μάθημα.
+  hoc2014_heading: Συμμετάσχετε στην <a href="http://hourofcode.com"> Ώρα του Κώδικα</a><br/>8-14
+    Δεκεμβρίου 2014<br/>
+  hoc2014_students: Μαθητές
+  hoc2014_try: Δοκιμάστε το
+  hoc2014_teachers: Δάσκαλοι
+  hoc2014_host: Φιλοξενήστε την
+  hoc2014_everyone: Όλοι
+  hoc2014_support: Υποστηρίξτε την &#x25BE;
+  hoc2014_whatishoc: Τι είναι η  Ώρα του Κώδικα;
+  csedweek_map_header: '# CSEdWeek / Εκδηλώσεις για την Ώρα του Κώδικα σε όλο τον
+    κόσμο'
+  csedweek_map_signup: Προσθέστε την εκδήλωσή σας
+  csedweek_map_search_placeholder: Αναζήτηση εκδηλώσεων για την Ώρα του Κώδικα
+  csedweek_map_search_search: Αναζήτηση
+  csedweek_map_search_reset: Επαναφορά
+  csedweek_map_legend_title: Υπόμνημα
+  csedweek_map_legend_event: Εκδήλωση Ώρας του Κώδικα
+  csedweek_map_legend_cs_tech_jam: Συνέδριο Τεχνικών Επιστήμης των Υπολογιστών
+  cded_sign_up: Εγγραφή
+  cded_try_it: Δοκιμάστε το
+  twentyhours_trynow: Δοκιμάστε τώρα
+  california_heading: Ζητήστε από το σχολείο σας να διδάξει την επιστήμη των υπολογιστών
+  california_text: Κάθε δάσκαλος μπορεί να προσφέρει τα <a href='http://studio.code.org/'>δωρεάν
     μαθήματά</a> μας.  Κάθε Δημοτικό σχολείο μπορεί να <a href='http://code.org/educate/k5'>
     διδάξει Πληροφορική</a>. Ζητήστε από τα Γυμνάσια να <a href = 'http://code.org/educate/districts'
-    >συνεργαστούν μαζί μας."
-  california_button: "Μάθετε περισσότερα"
-  flappy_heading: "Φτερουγισμένα Γεννέθλια στο Code.org"
-  flappy_text: "Το Code.org μόλις έγινε 1 έτους. <br/> <br/> Γιορτάστε μαζί μας φτιάχνοντας
-    το δικό σας προσαρμοσμένο <b>Flappy</b> παιχνίδι. Φτιάξτε σε κώδικα τους δικούς
-    σας κανόνες, και μοιραστείτε το με φίλους!"
-  view_english_site: "Προβολή Αγγλικής σελίδας"
-  non_english_tutorials: "Μαθήματα μεταφρασμένα σε πολλές γλώσσες:"
-  write_your_first_program: "Γράψε το πρώτο σου πρόγραμμα για υπολογιστή"
+    >συνεργαστούν μαζί μας.
+  california_button: Μάθετε περισσότερα
+  flappy_heading: Φτερουγισμένα Γεννέθλια στο Code.org
+  flappy_text: Το Code.org μόλις έγινε 1 έτους.<br/><br/> Γιορτάστε μαζί μας φτιάχνοντας
+    το δικό σας προσαρμοσμένο παιχνίδι <b>Flappy</b>. Φτιάξτε με κώδικα τους δικούς
+    σας κανόνες, και μοιραστείτε το με φίλους!
+  view_english_site: Προβολή Αγγλικής σελίδας
+  non_english_tutorials: 'Μαθήματα μεταφρασμένα σε πολλές γλώσσες:'
+  write_your_first_program: Γράψε το πρώτο σου πρόγραμμα για υπολογιστή
   learn_cs_concepts: Μάθε τις βασικές έννοιες της Επιστήμης Υπολογιστών με προγραμματισμό
     "πάρε-βάλε". Είναι ένα μάθημα σαν παιχνίδι όπου πρωταγωνιστούν βίντεο με διαλέξεις
     από τον Bill Gates, το Mark Zuckerberg, τα Angry Birds και τα Plants vs Zombies.
     Μάθε επαναλήψεις, εντολές εάν-τότε και βασικούς αλγορίθμους.
-  all_ages: "Όλων των ηλικιών"
-  beginner: "Αρχάριος"
-  n_participants: "# συμμετέχοντες"
-  go: "Πάμε"
-  thank_you_: "Ευχαριστούμε!"
-  congratulations: "Συγχαρητήρια!"
-  congratulations_on_completing_hoc: Συγχαρητήρια για τη συμπλήρωση του "Μια ώρα κώδικα"
-  course_name_accelerated: "Επιταχυνόμενη πορεία μάθησης"
-  course_name_course1: "Μάθημα 1"
-  course_name_course2: "Μάθημα 2"
-  course_name_course3: "Μάθημα 3"
-  course_name_course4: "Μάθημα 4"
-  congratulations_on_completing_course: Congratulations on completing %{course}
-  congrats_next_tutorials_title: Try these tutorials next
-  congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
-    tutorial</a>.
-  get_a_certificate_of_achievement: "Πάρε πιστοποιητικό για το επίτευγμα"
-  enter_valid_age: "Παρακαλώ επιλέξτε μια έγκυρη ηλικία"
-  enter_valid_email: "Παρακαλώ δώσε μια έγκυρη διεύθυνση email"
-  get_a_certificate_message: "Θα σας στείλουμε ένα πιστοποιητικό και πληροφορίες σχετικά
-    με το πώς να <a href='/learn/beyond'> Συνεχίστε να μαθαίνετε μετά τη Μία Ώρα</a>"
-  get_a_certificate_message_after: "Κάντε κλικ στο πιστοποιητικό να κατεβάσετε ή να
-    το τυπώσετε. Τώρα, συνεχίστε με <a href='http://studio.code.org'> άλλα μαθήματα</a>,
-    ή να δείτε περισσότερες επιλογές για να <a href='/learn/beyond'>Μάθετε μετά την
-    πρώτη Ώρα</a>."
-  thanks_for_submitting: "Ευχαριστούμε για την υποβολή!"
-  if_you_enjoyed: "Εάν απολαύσατε το μάθημα, ζητήστε από φίλους σας να δοκιμάσουν
-    και αυτοί!  Θέλουμε όλος ο κόσμος να μάθει."
-  personalize_certificate: "Προσωποποιήστε το πιστοποιητικό σας"
-  share_achievement: "Μοιραστείτε τα επιτεύγματα σας"
-  beyond_hour_message: "Συνεχίστε με <a href='http://studio.code.org'>άλλα μαθήματα</a>,
-    ή  δείτε περισσότερες επιλογές για να μάθετε <a href='/learn/beyond'> μετά τη
-    Μια  Ώρα</a>."
+  all_ages: Όλων των ηλικιών
+  beginner: Αρχάριος
+  n_participants: '# συμμετέχοντες'
+  go: Πάμε
+  thank_you_: Ευχαριστούμε!
+  congratulations: Συγχαρητήρια!
+  congratulations_on_completing_hoc: Συγχαρητήρια για τη συμπλήρωση μιας Ώρας Κώδικα
+  congratulations_volunteer: 'Συγχαρητήρια: Τώρα που έχετε δοκιμάσει την Ώρα του Κώδικα,
+    <a href="https://code.org/volunteer">εγγραφείτε για να εργαστείτε εθελοντικά σε
+    μια τάξη</a> και να βοηθήσετε μαθητές να διδαχθούν μια Ώρα Κώδικα!'
+  course_name_accelerated: Επιταχυνόμενη πορεία μάθησης
+  course_name_course1: Μάθημα 1
+  course_name_course2: Μάθημα 2
+  course_name_course3: Μάθημα 3
+  course_name_course4: Μάθημα 4
+  congratulations_on_completing_course: Συγχαρητήρια για την ολοκλήρωση του %{course}
+  congrats_next_tutorials_title: Δοκιμάστε στη συνέχεια αυτά τα σεμινάρια
+  congrats_next_tutorials_desc: Δοκιμάστε αυτά τα μικρότερα, σεμινάρια 1 ώρας ή δοκιμάστε
+    ένα <a href="%{current_path}/next">σεμινάριο συνεργάτη</a>.
+  get_a_certificate_of_achievement: Πάρε πιστοποιητικό για το επίτευγμα
+  enter_valid_age: Παρακαλώ επιλέξτε μια έγκυρη ηλικία
+  enter_valid_email: Παρακαλώ δώσε μια έγκυρη διεύθυνση email
+  get_a_certificate_message: Θα σας στείλουμε ένα πιστοποιητικό και πληροφορίες σχετικά
+    με το πώς να <a href='/learn/beyond'>Συνεχίστε να μαθαίνετε μετά τη μία Ώρα</a>
+  get_a_certificate_message_after: Κάντε κλικ στο πιστοποιητικό για να το κατεβάσετε
+    ή να το τυπώσετε. Τώρα, συνεχίστε με <a href='http://studio.code.org'>άλλα μαθήματα</a>,
+    ή δείτε περισσότερες επιλογές για να <a href='/learn/beyond'>Μάθετε μετά την μία
+    Ώρα</a>.
+  thanks_for_submitting: Ευχαριστούμε για την υποβολή!
+  if_you_enjoyed: Εάν απολαύσατε το μάθημα, ζητήστε από φίλους σας να δοκιμάσουν και
+    αυτοί!  Θέλουμε όλος ο κόσμος να μάθει.
+  personalize_certificate: Προσωποποιήστε το πιστοποιητικό σας
+  share_achievement: Μοιραστείτε τα επιτεύγματα σας
+  beyond_hour_message: Συνεχίστε με <a href='http://studio.code.org'>άλλα μαθήματα</a>,
+    ή δείτε περισσότερες επιλογές για να <a href='/learn/beyond'>Μάθετε μετά τη μια
+    Ώρα</a>.
   leaderboards_for_hoc: Πίνακες με τις ψηλότερες βαθμολογίες για το "Μια Ώρα Κώδικα".
   support_url: http://support.code.org/
-  country: "Χώρα"
-  city: "Πόλη"
-  gender: "Φύλο"
-  boys: "Αγόρια"
-  girls: "Κορίτσια"
-  give_my_hour: "Καταχωρήστε την Ώρα μου στην:"
-  girls_team: "Ομάδα των Κοριτσιών"
-  boys_team: "Η ομάδα των Αγοριών"
-  tell_the_world: "Ενημέρωσε τον κόσμο!"
-  thanks_for_voting: "Ευχαριστούμε για την ψήφο σας!"
-  share_on_facebook: "Μοιράσου το στο Facebook"
-  share_on_twitter: "Μοιράσου το στο Twitter"
-  beyond_an_hour: "Μετά από μια ώρα του κώδικα"
-  get_started: "Έναρξη"
-  i_agree: "Συμφωνώ"
-  participant_select: "-Επιλέξτε-"
-  participant_student: "φοιτητής/μαθητής"
-  participant_parent: "Γονέας"
-  participant_educator: "Εκπαιδευτικός"
-  participant_engineer: "Μηχανικός λογισμικού"
-  participant_other: "Κανένα από τα παραπάνω"
-  print_all: "Εκτύπωση όλων"
-  print_ice_art: "Εκτύπωση του έργου τέχνης σας από πάγο"
-  create_art_with_zombie: "ή δημιουργήστε εξελιγμένα έργα τέχνης με τα ζόμπι"
-  i_am_a: "Είμαι ένας/μια"
-  never_spam: "Δεν θα σας στείλουμε ποτέ ενοχλητική αλληλογραφία"
-  enter_country: "Εισάγετε τη χώρα σας αν βρίσκεστε εκτός των Ηνωμένων Πολιτειών"
-  used_infrequent_updates: "Χρησιμοποιείται μόνο για σπάνιες ενημερώσεις"
-  privacy_practices_children: "Δείτε τις πρακτικές απορρήτου που αφορούν τα παιδιά"
-  petition_thankyou: "Σας ευχαριστούμε για την συμμετοχή σας στην συλλογή υπογραφών"
-  continue_learning_header: "Συνεχίστε την εκμάθηση πέρα από τη Μία Ώρα"
-  continue_learning_body: "Υπάρχουν πολλές επιλογές.  Μπορείτε να μάθετε σε απευθείας
-    σύνδεση (on-line), ή σε ένα τοπικό σχολείο, ή σε θερινό σχολείο."
-  learn_next_level: "Συνεχίστε στο επόμενο επίπεδο"
-  learn_online: "Δοκιμάστε τα άλλα μαθήματα online"
-  learn_classes: "Βρείτε τοπικές τάξεις"
+  country: Χώρα
+  city: Πόλη
+  gender: Φύλο
+  boys: Αγόρια
+  girls: Κορίτσια
+  give_my_hour: 'Καταχωρήστε την Ώρα μου στην:'
+  girls_team: Ομάδα των Κοριτσιών
+  boys_team: Η ομάδα των Αγοριών
+  tell_the_world: Ενημέρωσε τον κόσμο!
+  thanks_for_voting: Ευχαριστούμε για την ψήφο σας!
+  share_on_facebook: Μοιράσου το στο Facebook
+  share_on_twitter: Μοιράσου το στο Twitter
+  beyond_an_hour: Πέρα από την μία Ώρα του Κώδικα
+  get_started: Έναρξη
+  i_agree: Συμφωνώ
+  participant_select: -Επιλέξτε-
+  participant_student: φοιτητής/μαθητής
+  participant_parent: Γονέας
+  participant_educator: Εκπαιδευτικός
+  participant_engineer: Μηχανικός λογισμικού
+  participant_other: Κανένα από τα παραπάνω
+  print_all: Εκτύπωση όλων
+  print_ice_art: Εκτύπωση του έργου τέχνης σας από πάγο
+  create_art_with_zombie: ή δημιουργήστε εξελιγμένα έργα τέχνης με τα ζόμπι
+  i_am_a: Είμαι ένας/μια
+  never_spam: Δεν θα σας στείλουμε ποτέ ενοχλητική αλληλογραφία
+  enter_country: Εισάγετε τη χώρα σας αν βρίσκεστε εκτός των Ηνωμένων Πολιτειών
+  used_infrequent_updates: Χρησιμοποιείται μόνο για σπάνιες ενημερώσεις
+  privacy_practices_children: Δείτε τις πρακτικές απορρήτου που αφορούν τα παιδιά
+  petition_thankyou: Σας ευχαριστούμε για την συμμετοχή σας στην συλλογή υπογραφών
+  continue_learning_header: Συνεχίστε την εκμάθηση πέρα από τη μία Ώρα
+  continue_learning_body: Υπάρχουν πολλές επιλογές.  Μπορείτε να μάθετε σε απευθείας
+    σύνδεση (on-line), ή σε ένα τοπικό σχολείο, ή σε θερινό σχολείο.
+  learn_next_level: Δοκιμάστε ένα άλλο μάθημα στο Code Studio
+  learn_online: Δοκιμάστε τα άλλα μαθήματα online
+  learn_classes: Βρείτε τάξεις κοντά σας
   hoc_is_here: H Ώρα του Κώδικα (#HourOfCode) είναι εδώ - ελέγξτε το! @codeorg
-  just_did_hoc: "Μόλις ολοκλήρωσα την Ώρα του Κώδικα (#HourOfCode) - ελέγξτε το! @codeorg"
-  twitter_teach_cs: "Γιατί δεν διδάσκουν περισσότερα σχολεία Επιστήμη των Υπολογιστών;
+  just_did_hoc: Μόλις ολοκλήρωσα την Ώρα του Κώδικα (#HourOfCode) - ελέγξτε το! @codeorg
+  twitter_teach_cs: Γιατί δεν διδάσκουν περισσότερα σχολεία Επιστήμη των Υπολογιστών;
     Αυτό μπορούμε να το διορθώσουμε.  http://youtu.be/nKIu9yen5nc. Επισκεφτείτε την
-    σελίδα http://code.org/ για να μάθετε περισσότερα."
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
-  learn_hoc: "Μάθε την Ώρα του Κώδικα"
-  beyond_hoc: "Πέρα από Μία Ώρα"
-  what_gender: "Ποιο είναι το φύλο σου;"
-  girl: "Κορίτσι"
-  boy: "Αγόρι"
-  help_recruit_coders: "Βοηθήστε μας να εντάξουμε περισσότερους προγραμματιστές στην
-    ομάδα σας!"
-  help_recruit: "Βοηθήστε μας να εντάξουμε περισσότερους προγραμματιστές!"
-  lines_of_code: "ΠΑΝΩ ΑΠΟ <b># ΓΡΑΜΜΕΣ ΚΩΔΙΚΑ</b> ΕΧΟΥΝ ΓΡΑΦΤΕΙ ΜΕΧΡΙ ΣΗΜΕΡΑ."
-  lines_of_code_alt: "<b>#</b> ΓΡΑΜΜΕΣ ΚΩΔΙΚΑ ΓΡΑΜΜΕΝΕΣ ΑΠΟ ΜΑΘΗΤΕΣ"
-  who_has_done_hoc: "Ποιος έχει ολοκληρώσει την Ώρα του Κώδικα #HourOfCode; @codeorg"
-  hoc_leaderboards: "Οι πίνακες Κατάταξης της Ώρας του Κώδικα"
-  students_and_lines: "%{students} μαθητές έχουν ολοκληρώσει την Ώρα του Κώδικα και
-    έχουν γράψει %{lines} γραμμές κώδικα."
-  start_hoc: "Ξεκινήστε την Ώρα του Κώδικα τώρα"
-  contact_form_topic_press: "Τύπος / Μέσα (συνέντευξη ή ομιλία)"
+    σελίδα http://code.org/ για να μάθετε περισσότερα.
+  learn_hoc: Μάθε μία Ώρα του Κώδικα
+  beyond_hoc: Πέρα από Μία Ώρα
+  what_gender: Ποιο είναι το φύλο σου;
+  girl: Κορίτσι
+  boy: Αγόρι
+  help_recruit_coders: Βοηθήστε μας να εντάξουμε περισσότερους προγραμματιστές στην
+    ομάδα σας!
+  help_recruit: Βοηθήστε μας να εντάξουμε περισσότερους προγραμματιστές!
+  lines_of_code: ΠΑΝΩ ΑΠΟ <b># ΓΡΑΜΜΕΣ ΚΩΔΙΚΑ</b> ΕΧΟΥΝ ΓΡΑΦΤΕΙ ΜΕΧΡΙ ΣΗΜΕΡΑ.
+  lines_of_code_alt: <b>#</b> ΓΡΑΜΜΕΣ ΚΩΔΙΚΑ ΓΡΑΜΜΕΝΕΣ ΑΠΟ ΜΑΘΗΤΕΣ
+  who_has_done_hoc: 'Ποιος έχει ολοκληρώσει την Ώρα του Κώδικα #HourOfCode; @codeorg'
+  hoc_leaderboards: Οι Πίνακες Κατάταξης της Ώρας του Κώδικα
+  students_and_lines: '%{students} μαθητές έχουν ολοκληρώσει την Ώρα του Κώδικα και
+    έχουν γράψει %{lines} γραμμές κώδικα.'
+  start_hoc: Ξεκινήστε την Ώρα του Κώδικα τώρα
+  contact_form_topic_press: Τύπος / Μέσα (συνέντευξη ή ομιλία)
   stats_nina: '"Κάθε μέρα το αποτέλεσμα ήταν το ίδιο&mdash; 100% προσύλωση." - Nina
     Nichols Peery, Teacher'
   stats_student: '"Ήξερα πως ήταν <b>μια ευκαιρία ζωής." - Mariana Alzate, Ε'' τάξη'
   stats_michael: '"Δεν έχω <b>ξαναδεί του μαθητές μου</b> τόσο ενθουσιασμένους για
     την μάθηση" - Michael Clark, Δάσκαλος'
-  studiobar_title: "Εξερευνήστε το <a href='http://studio.code.org'>Στούντιο Κώδικα</a>"
-  studiobar_title_nolink: "Εξερευνήστε το Studio κώδικα"
-  studiobar_elementary_title: "Βασικά μαθήματα"
-  studiobar_elementary_body: "Τα τρία νέα μαθήματά μας για K &#8209; 5"
-  studiobar_hoc_title: "Η Ώρα του Κώδικα"
-  studiobar_hoc_body: "Μάθετε κώδικα με τα Θυμωμένα Πουλιά"
+  studiobar_title: Εξερευνήστε το <a href='http://studio.code.org'>Στούντιο Κώδικα</a>
+  studiobar_title_nolink: Εξερευνήστε το Studio κώδικα
+  studiobar_elementary_title: Βασικά μαθήματα
+  studiobar_elementary_body: Τα τρία νέα μαθήματά μας για K &#8209; 5
+  studiobar_hoc_title: Η Ώρα του Κώδικα
+  studiobar_hoc_body: Μάθετε κώδικα με τα Θυμωμένα Πουλιά
   studiobar_flappy_title: Flappy κώδικα
-  studiobar_flappy_body: "Φτιάξτε και μοιράστε το δικό σας παιχνίδι Flappy"
-  studiobar_teacher_title: "Φτιαγμένο για εκπαιδευτικούς"
-  studiobar_teacher_body: "Εισάγετε το Στούντιο Κώδικα (Code Studio) στην τάξη σας"
-  studiobar_frozen_title: "Η Ώρα του Κώδικα"
-  studiobar_frozen_body: "Δημιουργήστε μια χειμερινή χώρα των θαυμάτων με Άννα και
-    Έλσα"
-  studiobar_donate_title: "Κάντε μια δωρεά"
-  studiobar_donate_body: "Ένα παιδί μαθαίνει για κάθε δολάριο που δίνετε"
-  studiobar_shop_title: "Κατάστημα"
-  studiobar_shop_body: "Σπάστε τα στερεότυπα. Φορέστε  το λογότυπο μας με υπερηφάνεια."
-  homepage_hero_text_malala: "&ldquo;Προκαλώ κορίτσια σε κάθε χώρα να μάθουν μία ώρα
-    του κώδικα&rdquo; Malala, νικητής του Νόμπελ ειρήνης"
-  homepage_hero_text_susan: "&ldquo;Αν μπορείτε να αλλάξετε την τεχνολογία, μπορείτε
-    να αλλάξετε τον κόσμο. &rdquo;Susan, Διευθύνων Σύμβουλος του YouTube"
-  homepage_hero_text_fistbump: " Μην παίζετε απλά με το τηλέφωνό σας, προγραμματίστε
-    το. &rdquo; Πρόεδρος Μπαράκ Ομπάμα"
-  homepage_hero_text_sheryl: "&ldquo;Τα παιδιά μας &mdash; συμπεριλαμβανομένων και
+  studiobar_flappy_body: Φτιάξτε και μοιράστε το δικό σας παιχνίδι Flappy
+  studiobar_teacher_title: Φτιαγμένο για εκπαιδευτικούς
+  studiobar_teacher_body: Παρουσιάστε το Στούντιο Κώδικα (Code Studio) στην τάξη σας
+  studiobar_frozen_title: Η Ώρα του Κώδικα
+  studiobar_frozen_body: Δημιουργήστε μια χειμερινή χώρα των θαυμάτων με Άννα και
+    Έλσα
+  studiobar_donate_title: Κάντε μια δωρεά
+  studiobar_donate_body: Ένα παιδί μαθαίνει για κάθε δολάριο που δίνετε
+  studiobar_shop_title: Κατάστημα
+  studiobar_shop_body: Σπάστε τα στερεότυπα. Φορέστε  το λογότυπο μας με υπερηφάνεια.
+  homepage_hero_text_malala: '&ldquo;Προκαλώ κορίτσια σε κάθε χώρα να μάθουν μία ώρα
+    του κώδικα&rdquo; Malala, νικητής του Νόμπελ ειρήνης'
+  homepage_hero_text_susan: '&ldquo;Αν μπορείτε να αλλάξετε την τεχνολογία, μπορείτε
+    να αλλάξετε τον κόσμο. &rdquo;Susan, Διευθύνων Σύμβουλος του YouTube'
+  homepage_hero_text_fistbump: ' Μην παίζετε απλά με το τηλέφωνό σας, προγραμματίστε
+    το. &rdquo; Πρόεδρος Μπαράκ Ομπάμα'
+  homepage_hero_text_sheryl: '&ldquo;Τα παιδιά μας &mdash; συμπεριλαμβανομένων και
     των κοριτσιών μας &mdash; χρειάζονται την ευκαιρία να μάθουν την επιστήμη των
-    υπολογιστή .&rdquo;  Sheryl, COO του Facebook"
-  homepage_hero_text_satya: "&ldquo;Η επιστήμη υπολογιστών μπορεί να ξεκλειδώσει τις
-    καλύτερες ευκαιρίες στον κόσμο.&rdquo; Satya, Διευθύνων Σύμβουλος της Microsoft"
-  homepage_hero_text_bosh: "&ldquo;Αν μπορείτε να γράψετε κώδικα, μπορείτε να επιλέξετε
-    την πορεία της ζωής σας.&rdquo; Chris Μπος"
-  homepage_hero_text_student1: "&ldquo;Αυτές οι δεξιότητες έχουν αλλάξει το μέλλον
-    μου. Για να μην αναφέρουμε ότι είναι απλώς  διασκέδαση. &rdquo; Luna, 7η τάξη"
-  homepage_hero_text_student2: "&ldquo;Δεν έχω δει ποτέ τα παιδιά μου τόσο ενθουσιασμένα
-    για μάθηση.&rdquo; Michael, δάσκαλος"
-  homepage_hero_text_student3: "&ldquo; Η Επιστήμη των υπολογιστών είναι ένα πεδίο
+    υπολογιστή .&rdquo;  Sheryl, COO του Facebook'
+  homepage_hero_text_satya: '&ldquo;Η επιστήμη των υπολογιστών μπορεί να ξεκλειδώσει
+    τις καλύτερες ευκαιρίες στον κόσμο.&rdquo; Satya, Διευθύνων Σύμβουλος της Microsoft'
+  homepage_hero_text_bosh: '&ldquo;Αν μπορείτε να γράψετε κώδικα, μπορείτε να επιλέξετε
+    την πορεία της ζωής σας.&rdquo; Κρις Μπος'
+  homepage_hero_text_student1: '&ldquo;Αυτές οι δεξιότητες έχουν αλλάξει το μέλλον
+    μου. Για να μην αναφέρουμε ότι είναι απλώς  διασκέδαση. &rdquo; Luna, 7η τάξη'
+  homepage_hero_text_student2: '&ldquo;Δεν έχω δει ποτέ τα παιδιά μου τόσο ενθουσιασμένα
+    για μάθηση.&rdquo; Michael, δάσκαλος'
+  homepage_hero_text_student3: '&ldquo; Η Επιστήμη των υπολογιστών είναι ένα πεδίο
     που δεν μπορείτε να ξέρετε αν σας αρέσει ή όχι πριν το δοκιμάσετε.&rdquo;  Jackson,
-    6η δημοτικού"
-  homepage_hero_text_student4: "&ldquo;Μπορείτε να κάνετε οτιδήποτε  θέλει το μυαλό
-    σας με τον προγραμματισμό.&rdquo; Μάγια, 2ης τάξης"
-  homepage_hero_text_student5: "&ldquo; Η Επιστήμη υπολογιστών δεν είναι για κάποιον
-    άλλο. Είναι για σας, εδώ, τώρα.&rdquo; Geraldo, δάσκαλος"
-  homepage_hero_text_teacher1: "&ldquo; Το γράψιμο κώδικα ξυπνά την δημιουργικότητα,
+    6η δημοτικού'
+  homepage_hero_text_student4: '&ldquo;Μπορείτε να κάνετε οτιδήποτε  θέλει το μυαλό
+    σας με τον προγραμματισμό.&rdquo; Μάγια, 2ης τάξης'
+  homepage_hero_text_student5: '&ldquo; Η Επιστήμη υπολογιστών δεν είναι για κάποιον
+    άλλο. Είναι για σας, εδώ, τώρα.&rdquo; Geraldo, δάσκαλος'
+  homepage_hero_text_teacher1: '&ldquo; Το γράψιμο κώδικα ξυπνά την δημιουργικότητα,
     την έμπνευση και την καινοτομία &mdash; οι οποίες είναι απαραίτητες για κάθε σταδιοδρομία.&rdquo;
-    Floresa, δάσκαλος"
-  homepage_hero_text_teacher2: "&ldquo; Αυτό το πρόγραμμα, πήρε το 100% από τους μαθητές
-    μου που ασχολούνται, συμμετέχουν. .&rdquo; Αδάμ, δάσκαλος"
-  homepage_hero_text_stat_loc: "#loc γραμμές κώδικα γραμμένες από μαθητές"
-  homepage_hero_text_stat_students: "#student_count λογαριασμοί μαθητών στο Code Studio"
-  homepage_hero_text_stat_served: "Η Ώρα του Κώδικα: #served εξυπηρετήθηκαν"
-  homepage_slot_text_hoc: "Η Ώρα του Κώδικα"
-  homepage_slot_text_frozen: "Ταινία Frozen με την Άννα και την Έλσα"
-  homepage_slot_text_teacher: "πίνακας Δασκάλου"
-  homepage_slot_text_studio: "Όλα τα σεμινάρια μας"
-  homepage_slot_text_course4: "Μάθημα 4"
-  homepage_slot_text_shop: "Κατάστημα"
+    Floresa, δάσκαλος'
+  homepage_hero_text_teacher2: '&ldquo; Αυτό το πρόγραμμα, πήρε το 100% από τους μαθητές
+    μου που ασχολούνται, συμμετέχουν. .&rdquo; Αδάμ, δάσκαλος'
+  homepage_hero_text_stat_loc: '#loc γραμμές κώδικα γραμμένες από μαθητές'
+  homepage_hero_text_stat_students: '#student_count λογαριασμοί μαθητών στο Code Studio'
+  homepage_hero_text_stat_served: 'Η Ώρα του Κώδικα: #served εξυπηρετήθηκαν'
+  homepage_slot_text_hoc: Η Ώρα του Κώδικα
+  homepage_slot_text_frozen: Ταινία Frozen με την Άννα και την Έλσα
+  homepage_slot_text_teacher: πίνακας Δασκάλου
+  homepage_slot_text_studio: Όλα τα σεμινάρια μας
+  homepage_slot_text_course4: Μάθημα 4
+  homepage_slot_text_shop: Κατάστημα
   homepage_slot_text_flappy: Flappy κώδικας
-  homepage_action_text_codevideo: "Δείτε το βίντεο"
-  homepage_action_text_teachervideo: "Δείτε το βίντεο"
-  homepage_action_text_learn: "Έναρξη εκπαίδευσης"
+  homepage_action_text_hoc: Μία Ώρα Κώδικα για κάθε μαθητή.
+  homepage_action_text_num_served: '# ΕχουνΕξυπηρετηθεί'
+  homepage_action_text_join_us: Ελάτε μαζί μας
+  homepage_action_text_sign_up: Εγγραφή
+  homepage_action_text_try_it: Δοκιμάστε το
+  homepage_action_text_volunteers: Ζητούνται εθελοντές τεχνικοί
+  homepage_action_text_codevideo: Δείτε το βίντεο
+  homepage_action_text_teachervideo: Δείτε το βίντεο
+  homepage_action_text_girlvideo: Εμπνεύστε ένα κορίτσι
+  homepage_action_text_learn: Έναρξη εκπαίδευσης
   homepage_action_text_signpetition: |
     Υπογράψτε την συλλογή υπογραφών
-  homepage_signpetition_dropdown: "Υπογράψτε την δική μας συλλογή υπογραφών &#x25BE;"
-  homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
-  homepage_banner_text_main: "Το Code.org και το Συμβούλιο Κολλεγίων σχηματίζουν μία
-    συμμαχία για τη βελτίωση της ποικιλομορφίας στην επιστήμη των υπολογιστών."
-  homepage_banner_text_link: "Μάθετε περισσότερα"
+  homepage_signpetition_dropdown: Υπογράψτε την δική μας συλλογή υπογραφών &#x25BE;
+  homepage_diversity_pledge: Ακολούθησε τη δέσμευση για πολυμορφία
+  homepage_banner_text_prizes: 'Η Ώρα του Κώδικα πλησιάζει πάλι, 7-13 Δεκεμβρίου. '
+  homepage_banner_link_prizes: 'Πάρε μέρος στη μεγαλύτερη μαθησιακή εκδήλωση στην
+    ιστορία. '
+  homepage_banner_text_main: Το Code.org και το Συμβούλιο Κολλεγίων σχηματίζουν μία
+    συμμαχία για τη βελτίωση της ποικιλομορφίας στην επιστήμη των υπολογιστών.
+  homepage_banner_text_link: Μάθετε περισσότερα
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: "Μάθετε περισσότερα"
-  homepage_slot_text_title_hoc: "Η Ώρα του Κώδικα"
-  homepage_slot_text_blurb_hoc: "Οποιοσδήποτε μπορεί να μάθει. Ξεκινήστε σήμερα"
-  homepage_slot_text_link_hoc: "Δοκίμασε την Ώρα του Κώδικα"
-  homepage_slot_text_link_host: "Φιλοξενήστε μια ώρα του κώδικα"
-  homepage_slot_text_link_hocserved: "# ΕχουνΕξυπηρετηθεί"
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
-  homepage_slot_text_title_students: "Μαθητές"
-  homepage_slot_text_blurb_students: "Διερευνήστε όλα τα σεμινάρια μας"
-  homepage_slot_text_link_codestudio: "Δοκιμάστε το Studio κώδικα"
-  homepage_slot_text_link_local: "Βρείτε μια τάξη κοντά στον τόπο σας"
-  homepage_slot_text_link_othercourses: "Άλλα online μαθήματα"
-  homepage_slot_text_title_educators: "Εκπαιδευτικοί"
-  homepage_slot_text_blurb_educators: "Διδάξτε τους μαθητές σας"
-  homepage_slot_text_link_k5: "Μαθήματα για τη βαθμίδα Κ-5"
-  homepage_slot_text_link_fullcurriculum: "Δείτε το πλήρες πρόγραμμα σπουδών μας"
-  homepage_slot_text_link_pd: "Επαγγελματική εξέλιξη"
-  homepage_slot_text_title_advocates: "Τάσσεται υπέρ της"
-  homepage_slot_text_blurb_advocates: "Στηρίξτε το έργο μας"
-  homepage_slot_text_link_stats: "Δείτε τα στατιστικά"
-  homepage_slot_text_link_buy: "Εμπλακείτε"
-  homepage_slot_text_link_donate: "Κάντε μια δωρεά"
+  homepage_banner_privacy_link: Μάθετε περισσότερα
+  homepage_slot_text_title_hoc: Η Ώρα του Κώδικα
+  homepage_slot_text_blurb_hoc: Οποιοσδήποτε μπορεί να μάθει. Ξεκινήστε σήμερα
+  homepage_slot_text_link_hoc: Δοκίμασε την Ώρα του Κώδικα
+  homepage_slot_text_link_host: Φιλοξενήστε μια ώρα του κώδικα
+  homepage_slot_text_link_hocserved: '# ΕχουνΕξυπηρετηθεί'
+  homepage_solot_text_link_volunteer: Προσφερθείτε εθελοντικά για την Ώρα του Κώδικα
+  homepage_slot_text_title_students: Μαθητές
+  homepage_slot_text_blurb_students: Διερευνήστε όλα τα σεμινάρια μας
+  homepage_slot_text_link_codestudio: Δοκιμάστε το Studio κώδικα
+  homepage_slot_text_link_local: Βρείτε μια τάξη κοντά στον τόπο σας
+  homepage_slot_text_link_othercourses: Άλλα online μαθήματα
+  homepage_slot_text_title_educators: Εκπαιδευτικοί
+  homepage_slot_text_blurb_educators: Διδάξτε τους μαθητές σας
+  homepage_slot_text_link_k5: Μαθήματα για τη βαθμίδα Κ-5
+  homepage_slot_text_link_fullcurriculum: Δείτε το πλήρες πρόγραμμα σπουδών μας
+  homepage_slot_text_link_pd: Επαγγελματική εξέλιξη
+  homepage_slot_text_title_advocates: Τάσσεται υπέρ της
+  homepage_slot_text_blurb_advocates: Στηρίξτε το έργο μας
+  homepage_slot_text_link_stats: Δείτε τα στατιστικά
+  homepage_slot_text_link_buy: Εμπλακείτε
+  homepage_slot_text_link_donate: Κάντε μια δωρεά
   homepage_header_codestudio: Studio Κώδικα δημιουργίες σπουδαστών
-  homepage_header_donors: "Το Code.org ευχαριστεί τους υποστηρικτές του"
-  homepage_donors_seall: "Εμφάνιση όλων"
-  homepage_donors_donate: "Κάντε μια δωρεά"
-  contact_form_topic_student: "Είμαι μαθητής"
-  contact_form_topic_parent: "Είμαι γονέας"
-  contact_form_topic_teacher: "Είμαι δάσκαλος/εκπαιδευτικός"
-  contact_form_topic_outside_us: "Ζω εκτός των Η.Π.Α."
-  contact_form_topic_contribution: "Φιλανθρωπική συμβολή"
-  contact_form_topic_partner: "Θα ήθελα να γίνω εταίρος"
-  contact_form_topic_other: "Άλλα"
-  contact_form_label_topic: "Θέμα"
-  contact_form_label_email: "Η διεύθυνσή email σας"
-  contact_form_label_message: "Μήνυμα"
-  contact_form_label_submit: "Αποστολή μηνύματος"
-  class_submission_in_school: "Στο σχολείο"
-  class_submission_in_school_daily_programming_course: "Καθημερινό μάθημα προγραμματισμού"
-  class_submission_in_school_ap_computer_science: "Επιστήμη των υπολογιστών AP"
-  class_submission_in_school_full_university_cs_curriculum: "Πλήρες Πανεπιστήμιο CS
-    βιογραφικό"
-  class_submission_in_school_robotics_club: Club Ρομποτικής
-  class_submission_in_school_programming_integrated_in_other_classes: "Ο προγραμματισμός
-    ενσωματωμένος σε άλλα μαθήματα (μαθηματικά, φυσική, κλπ)"
-  class_submission_in_school_summer_school_cs_program: "Πρόγραμμα πληροφορικής για
-    θερινά τμήματα"
-  class_submission_in_school_exploring_computer_science: "Εξερευνήστε την Επιστήμη
-    των Υπολογιστών"
-  class_submission_in_school_other: "Άλλα στο σχολείο"
-  class_submission_out_of_school: "Εκτός σχολείου"
-  class_submission_out_of_school_summer_camp: "Θερινή κατασκήνωση"
-  class_submission_out_of_school_afterschool_program: "Πρόγραμμα για μετά το σχολείο"
-  class_submission_out_of_school_all-day_workshop: "Ολοήμερο εργαστήρι (μέχρι 1 εβδομάδα)"
-  class_submission_out_of_school_multi-week_workshop: "Πολυ-εβδομαδιαίο εργαστήριο"
-  class_submission_out_of_school_other: "Άλλα εκτός σχολείου"
-  class_submission_online: "Σε σύνδεση"
-  class_submission_online_programming_class: "Τάξη προγραμματισμού σε σύνδεση"
-  class_submission_online_teacher_resource: "Πόροι εκπαιδευτή σε σύνδεση"
-  class_submission_online_other: "Άλλα σε σύνδεση"
-  class_submission_level_preschool: "Προσχολικά"
-  class_submission_level_elementary: "Δημοτικό"
-  class_submission_level_middle_school: "Γυμνάσιο"
-  class_submission_level_high_school: "Λύκειο"
-  class_submission_level_college: "Κολλέγιο"
-  class_submission_level_vocational: "Επαγγελματικά"
-  class_submission_languages_other: "Άλλες γλώσσες"
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
-    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up."
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
-    to try an hour introduction to computer science, reaching tens of millions of
-    students in 180+ countries. Please get involved during Computer Science Education
-    Week, December 7-13.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
-  volunteer_engineer_submission_intro_signup: Please enter the following information
-    if you are a computer science student or software professional. Fields marked
-    with a <span class="form-required-field">*</span> are required.
-  volunteer_engineer_submission_header_shared: Information shared with teachers on
-    volunteer map
-  volunteer_engineer_submission_field_name: "Όνομα"
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: If you enter your exact address
-    we won't share it, just show you as a pin on map.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
-    or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the
-    Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
-    after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
-    of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  homepage_header_donors: Το Code.org ευχαριστεί τους υποστηρικτές του
+  homepage_donors_seall: Εμφάνιση όλων
+  homepage_donors_donate: Κάντε μια δωρεά
+  contact_form_topic_student: Είμαι μαθητής
+  contact_form_topic_parent: Είμαι γονέας
+  contact_form_topic_teacher: Είμαι δάσκαλος/εκπαιδευτικός
+  contact_form_topic_outside_us: Ζω εκτός των Η.Π.Α.
+  contact_form_topic_contribution: Φιλανθρωπική συμβολή
+  contact_form_topic_partner: Θα ήθελα να συνεργαστώ
+  contact_form_topic_other: Άλλα
+  contact_form_label_topic: Θέμα
+  contact_form_label_email: Η διεύθυνση ηλεκτρονικής αλληλογραφίας σας
+  contact_form_label_message: Μήνυμα
+  contact_form_label_submit: Αποστολή Μηνύματος
+  class_submission_in_school: Στο σχολείο
+  class_submission_in_school_daily_programming_course: Καθημερινό μάθημα προγραμματισμού
+  class_submission_in_school_ap_computer_science: Προχωρημένα θέματα Επιστήμης των
+    Υπολογιστών
+  class_submission_in_school_full_university_cs_curriculum: Πλήρες Πανεπιστήμιο CS
+    βιογραφικό
+  class_submission_in_school_robotics_club: Ομάδα Ρομποτικής
+  class_submission_in_school_programming_integrated_in_other_classes: Ο προγραμματισμός
+    ενσωματωμένος σε άλλα μαθήματα (μαθηματικά, φυσική, κλπ)
+  class_submission_in_school_summer_school_cs_program: Πρόγραμμα πληροφορικής για
+    θερινά τμήματα
+  class_submission_in_school_exploring_computer_science: Εξερευνώντας την Επιστήμη
+    των Υπολογιστών
+  class_submission_in_school_other: Άλλα στο σχολείο
+  class_submission_out_of_school: Εκτός σχολείου
+  class_submission_out_of_school_summer_camp: Θερινή κατασκήνωση
+  class_submission_out_of_school_afterschool_program: Πρόγραμμα για μετά το σχολείο
+  class_submission_out_of_school_all-day_workshop: Ολοήμερο εργαστήρι (μέχρι 1 εβδομάδα)
+  class_submission_out_of_school_multi-week_workshop: Πολυ-εβδομαδιαίο εργαστήριο
+  class_submission_out_of_school_other: Άλλα εκτός σχολείου
+  class_submission_online: Σε σύνδεση
+  class_submission_online_programming_class: Τάξη προγραμματισμού σε σύνδεση
+  class_submission_online_teacher_resource: Πόροι εκπαιδευτή σε σύνδεση
+  class_submission_online_other: Άλλα σε σύνδεση
+  class_submission_level_preschool: Προσχολικά
+  class_submission_level_elementary: Δημοτικό
+  class_submission_level_middle_school: Γυμνάσιο
+  class_submission_level_high_school: Λύκειο
+  class_submission_level_college: Κολλέγιο
+  class_submission_level_vocational: Επαγγελματικά
+  class_submission_languages_other: Άλλες γλώσσες
+  inspirational_videos_more: Περισσότερα <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">βίντεο
+    παρακίνησης</a> από πρότυπα και διασημότητες
+  starwars_subtitle: Χτίζοντας έναν Γαλαξία Με Κώδικα
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Χρησιμοποιήστε μπλοκ με «σύρε και άφησε» και Javascript.
+  starwars_javascript_specs: Μόνο Αγγλικά | Σύγχρονα προγράμματα περιήγησης | Ηλικίες
+    11+
+  starwars_javascript_start_button: Δοκιμάστε τώρα
+  starwars_blocks_title: μπλοκ
+  starwars_blocks_description: Χρησιμοποιήστε μπλοκ με «σύρε και άφησε».
+  starwars_blocks_specs: Πολλές γλώσσες (προσεχώς) | Σύγχρονα προγράμματα περιήγησης,
+    έξυπνα τηλέφωνα, tablet | Ηλικίες 6-10
+  starwars_blocks_start_button: Δοκιμάστε τώρα
+  starwars_watch_videos: Πριν ξεκινήσετε, δείτε ένα βίντεο παρακίνησης
+  starwars_speak_languages: Μιλάτε άλλη γλώσσα;
+  starwars_help_translate: Βοηθήστε μας να μεταφράσουμε
+  starwars_platform_text: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
+  mc_name: Η Ώρα του Κώδικα με το Minecraft
+  mc_longdescription: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον Άλεξ
+    σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft.
+  mc_shortdescription: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον
+    Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft.
+  mc_gradelevel: Ηλικίες 6+
+  mc_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
+  mc_specs: Πολλές γλώσσες (προσεχώς) | Σύγχρονα προγράμματα περιήγησης και tablets
+    | Ηλικιών 6 +
+  minecraft_subtitle: Η Ώρα του Κώδικα με το Minecraft
+  volunteer_engineer_submission_title: Εμπνεύστε μαθητές και προσφέρετε εθελοντική
+    εργασία για την Ώρα του Κώδικα.
+  volunteer_engineer_submission_subtitle_generic: '100.000 εκπαιδευτικοί πρόκειται
+    να φιλοξενήσουν μια ώρα του κώδικα στην τάξη τους φέτος, 7-13 Δεκεμβρίου, 2015.
+    Θέλουν τη βοήθειά σας! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} δάσκαλοι ζητούν
+    εθελοντές παθιασμένους με την εκπαίδευση στην επιστήμη των υπολογιστών για να
+    τους βοηθήσουν με την Ώρα του Κώδικα αυτόν τον Δεκέμβριο.<br>%{num_volunteers}
+    εθελοντές έχουν εγγραφεί. Ελάτε μαζί τους.'
+  volunteer_engineer_submission_intro_background: Η Ώρα του Κώδικα είναι ένα παγκόσμιο
+    κίνημα για να δοκιμάσετε μια ωριαία εισαγωγή στην επιστήμη των υπολογιστών, φθάνοντας
+    τα δεκάδες εκατομμύρια μαθητών σε 180+ χώρες. Σας παρακαλούμε να λάβετε μέρος
+    κατά τη διάρκεια της Εκπαιδευτικής Εβδομάδας στην Επιστήμη των Υπολογιστών, 7-13
+    Δεκεμβρίου.
+  volunteer_engineer_submission_intro_recruit: 'Αυτοί οι δάσκαλοι θα ήθελαν πολύ να
+    έχουν κάποιον <span style="font-family: ''Gotham 7r'', sans-serif;">παθιασμένο
+    με την εκπαίδευση στην επιστήμη των υπολογιστών</span> που μπορεί να βοηθήσει
+    μέσα στην τάξη ή κάποιον που μπορεί να <span style="font-family: ''Gotham 7r'',
+    sans-serif;">εμπνεύσει</span> τους μαθητές τους μιλώντας για το εύρος των δυνατοτήτων
+    με την επιστήμη των υπολογιστών (κάτι που μπορεί να γίνει και μέσω βίντεο ομιλία).
+    Αν δε θέλετε να δηλώσετε εθελοντής, <a href="%{url}">μάθετε περισσότερα</a> για
+    τη διοργάνωση της δικής σας εκδήλωσης για την Ώρα του Κώδικα.'
+  volunteer_engineer_submission_intro_signup: Παρακαλούμε εισάγετε τις ακόλουθες πληροφορίες,
+    αν είστε φοιτητής επιστήμης υπολογιστών ή επαγγελματίας λογισμικού. Τα πεδία με
+    <span class="form-required-field"> *</span> είναι υποχρεωτικά.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_header_shared: Οι πληροφορίες μοιράζονται με τους
+    καθηγητές στο χάρτη εθελοντή
+  volunteer_engineer_submission_field_name: Όνομα
+  volunteer_engineer_submission_field_name_placeholder: Ονοματεπώνυμο
+  volunteer_engineer_submission_field_company: Εταιρεία (ή Πανεπιστήμιο)
+  volunteer_engineer_submission_field_company_placeholder: Εταιρεία (ή Πανεπιστήμιο)
+  volunteer_engineer_submission_field_experience_level: Επίπεδο εμπειρίας
+  volunteer_engineer_submission_field_location: Τοποθεσία
+  volunteer_engineer_submission_field_location_desc: Αν εισάγετε την ακριβή διεύθυνσή
+    σας δεν θα την μοιραστούμε, απλά θα σας δείξουμε ως μια καρφίτσα στο χάρτη.
+  volunteer_engineer_submission_field_location_placeholder: Ταχυδρομικός κώδικας,
+    πόλη και χώρα, ή ταχυδρομική διεύθυνση
+  volunteer_engineer_submission_field_location_flexibility: Μπορώ να βοηθήσω κατά
+    τη διάρκεια της Ώρας του Κώδικα... (επιλέξτε όλα όσα ισχύουν)
+  volunteer_engineer_submission_checkbox_after_hoc: Ενδιαφέρομαι να προσφέρω εθελοντικά
+    μετά την Ώρα του Κώδικα
+  volunteer_engineer_submission_field_time_commitment: Χρονική υποχρέωση μετά την
+    Ώρα του Κώδικα
+  volunteer_engineer_submission_field_linkedin: Προφίλ στο LinkedIn
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook: Προφίλ στο Facebook
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: "Περιγραφή"
-  volunteer_engineer_submission_field_description_desc: Describe your computer science
-    experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never
-    shared
-  volunteer_engineer_submission_field_email: "Διεύθυνση email"
-  volunteer_engineer_submission_field_email_desc: Your email address will never be
-    shared, but we'll send you requests from teachers.
-  volunteer_engineer_submission_field_email_placeholder: "Διεύθυνση email"
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
-    teachers to contact you for the Hour of Code or other volunteer opportunities.
-    Your email and exact address will NEVER be shared by us. But the other information
-    (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
-    me for volunteer opportunities (Note: your email address won''t be shared)'
-  volunteer_engineer_submission_submit: "Υποβολή"
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
-    more here.</a>
-  volunteer_engineer_submission_commitment_uncertain: "Αβέβαιο"
+  volunteer_engineer_submission_field_description: Περιγραφή
+  volunteer_engineer_submission_field_description_desc: Περιγράψτε την εμπειρία σας
+    στην επιστήμη υπολογιστών και πώς θα θέλατε να συμμετάσχετε ως εθελοντής για τοπικούς
+    εκπαιδευτικούς.
+  volunteer_engineer_submission_field_description_placeholder: Περιγραφή της εμπειρίας
+    ή/και συμμετοχής
+  volunteer_engineer_submission_header_private: Οι πληροφορίες διατηρούνται ιδιωτικές
+    και ποτέ κοινόχρηστες
+  volunteer_engineer_submission_field_email: Διεύθυνση email
+  volunteer_engineer_submission_field_email_desc: Η διεύθυνση email σας δεν πρόκειται
+    ποτέ να κοινοποιηθεί, αλλά θα σας στέλνουμε αιτήσεις από τους εκπαιδευτικούς.
+  volunteer_engineer_submission_field_email_placeholder: Διεύθυνση email
+  volunteer_engineer_submission_final_paragraph: Θα εμφανιστείτε στο χάρτη για τοπικούς
+    δασκάλους ώστε να επικοινωνήσουμε μαζί σας για την Ώρα του Κώδικα ή άλλες δυνατότητες
+    εθελοντισμού. Το email σας και η ακριβή σας διεύθυνση δεν θα κοινοποιηθούν ποτέ
+    από εμάς. Αλλά οι άλλες πληροφορίες (συμπεριλαμβανομένης της κατά προσέγγιση τοποθεσίας)
+    θα είναι δημόσια ορατοί από τοπικούς εκπαιδευτικούς.
+  volunteer_engineer_submission_checkbox_contact: 'Συμφωνώ ότι εκπαιδευτικοί μπορούν
+    να επικοινωνήσουν μαζί μου για δυνατότητες εθελοντισμού (Σημείωση: η διεύθυνση
+    email σας δεν θα γίνει κοινόχρηστη)'
+  volunteer_engineer_submission_submit: Υποβολή
+  volunteer_engineer_submission_thankyou: Σας ευχαριστούμε για τη συμμετοχή σας ως
+    εθελοντής για την Ώρα του Κώδικα. Για να ετοιμαστείτε για στην ώρα του κώδικα
+    και να στρατολογήσετε άλλους μηχανικούς, <a href="%{url}"> μάθετε περισσότερα
+    εδώ.</a>
+  volunteer_engineer_submission_commitment_uncertain: Αβέβαιο
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 ώρα την εβδομάδα
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ώρες την εβδομάδα
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 ώρες την εβδομάδα
-  volunteer_engineer_submission_commitment_now_and_then: "Κάθε λίγο και λιγάκι"
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
-  volunteer_engineer_submission_commitment_more: "Περισσότερα"
-  volunteer_engineer_submission_location_flexibility_onsite: "Στο χώρο του σχολείου"
-  volunteer_engineer_submission_location_flexibility_remote: "Καθοδήγηση από απόσταση
-    (εκπαιδευτικοί ή μαθητές)"
-  volunteer_engineer_submission_location_flexibility_curriculum: "Πρόθυμος/η να συνεισφέρει
-    σε έργα που αφορούν ανοιχτού-κώδικα προγράμματα σπουδών"
-  volunteer_engineer_submission_experience_unspecified: "Απροσδιόριστος"
-  volunteer_engineer_submission_experience_university_student_or_researcher: "Οι τωρινοί
-    φοιτητές (ή ερευνητές)"
-  volunteer_engineer_submission_experience_software_professional: "Επαγγελματικό λογισμικό"
-  petition_age: "Ηλικία"
+  volunteer_engineer_submission_commitment_now_and_then: Κάθε λίγο και λιγάκι
+  volunteer_engineer_submission_commitment_annually: 2 - 3 φορές το χρόνο
+  volunteer_engineer_submission_commitment_monthly: Μια-δυο ώρες το μήνα
+  volunteer_engineer_submission_commitment_weekly: Μια-δυο ώρες την εβδομάδα
+  volunteer_engineer_submission_commitment_more: Περισσότερα
+  volunteer_engineer_submission_location_flexibility_onsite: Στο χώρο του σχολείου
+  volunteer_engineer_submission_location_flexibility_remote: Καθοδήγηση από απόσταση
+    (εκπαιδευτικοί ή μαθητές)
+  volunteer_engineer_submission_location_flexibility_curriculum: Πρόθυμος/η να συνεισφέρει
+    σε έργα που αφορούν ανοιχτού-κώδικα προγράμματα σπουδών
+  volunteer_engineer_submission_experience_unspecified: Απροσδιόριστος
+  volunteer_engineer_submission_experience_tech_company: Μη-μηχανικός σε μια εταιρεία
+    τεχνολογίας
+  volunteer_engineer_submission_experience_university_student_or_researcher: Οι τωρινοί
+    φοιτητές (ή ερευνητές)
+  volunteer_engineer_submission_experience_software_professional: Επαγγελματικό λογισμικό
+  volunteer_engineer_submission_distance_8: 5 μίλια
+  volunteer_engineer_submission_distance_16: 10 μίλια
+  volunteer_engineer_submission_distance_24: 15 μίλια
+  volunteer_engineer_submission_distance_32: 20 μίλια
+  volunteer_engineer_submission_num_volunteers_5: 5 εθελοντές
+  volunteer_engineer_submission_num_volunteers_10: 10 εθελοντές
+  volunteer_engineer_submission_num_volunteers_25: 25 εθελοντές
+  volunteer_engineer_submission_num_volunteers_50: 50 εθελοντές
+  volunteer_engineer_submission_type_task_onsite: Θέλω να επισκεφθείτε την τάξη για
+    τεχνική βοήθεια και παρακίνηση
+  volunteer_engineer_submission_type_task_remote: Θέλω να συνδεθείτε μέσω Skype με
+    την τάξη μου για να πείτε λίγα λόγια έμπνευσης στα παιδιά
+  volunteer_engineer_submission_type_task_mentor: Ψάχνω για έναν σύμβουλο για να με
+    βοηθήσει να προετοιμαστώ για την κωδικοποίηση με τους μαθητές μου
+  petition_age: Ηλικία
   dashboard_landing_title: H Αρχική Σελίδα του Εκπαιδευτικού
-  dashboard_landing_welcome: "Καλώς ήλθατε στο νέο και βελτιωμένο πίνακα εκπαιδευτικού."
-  dashboard_landing_video: "Παρακολουθήστε αυτό το βίντεο"
-  dashboard_landing_watch_video: "για μια περιήγηση στα νέα χαρακτηριστικά και τις
-    δυνατότητες!"
-  dashboard_landing_view_as_student: "Δείτε αυτόν τον ιστότοπο ως μαθητής"
-  dashboard_landing_students_title: "Οι μαθητές σας"
-  dashboard_landing_students_manage: "Εμφανείστε και να διαχειριστείτε τους μαθητές
-    σας"
+  dashboard_landing_welcome: Καλώς ήλθατε στο νέο και βελτιωμένο πίνακα εκπαιδευτικού.
+  dashboard_landing_video: Παρακολουθήστε αυτό το βίντεο
+  dashboard_landing_watch_video: για μια περιήγηση στα νέα χαρακτηριστικά και τις
+    δυνατότητες!
+  dashboard_landing_view_as_student: Δείτε αυτόν τον ιστότοπο ως μαθητής
+  dashboard_landing_students_title: Οι μαθητές σας
+  dashboard_landing_students_manage: Εμφανείστε και να διαχειριστείτε τους μαθητές
+    σας
   dashboard_landing_news_title: K-5 εκπαιδευτικοί πόροι (μόνο στα Αγγλικά)
-  dashboard_landing_new_beta: "Νέο! Δοκιμάστε τα beta-μαθήματά μας για μαθητές K-5."
-  dashboard_landing_new_k5courses: "Νέο! Δοκιμάστε τα μαθήματά μας για μαθητές K-5."
-  dashboard_landing_useful_links: "Μερικοί άλλοι Χρήσιμοι Σύνδεσμοι (στα Αγγλικά μόνο)"
-  dashboard_landing_office_hours: "Θέστε ένα ερώτημα εσείς οι ίδιοι! Επισκεφθείτε
-    τις μηνιαίες βίντεο ώρες γραφείου."
-  dashboard_landing_print_certificates: "Εκτύπωση πιστοποιητικών για τους μαθητές
-    που ολοκληρώνουν αυτό το μάθημα"
-  dashboard_landing_educator_blog: "Διαβάστε για τα νέα και τις ενημερώσεις για του
-    υλικό μας στο blog του Παιδαγωγού"
-  dashboard_landing_smart_hints: "Παρακαλούμε βοηθήστε μας να προσθέσουμε έξυπνες
-    συμβουλές στα μαθήματα  του Code.org"
-  dashboard_landing_video_player: "Δοκιμάστε το νέο πρόγραμμα αναπαραγωγής βίντεο
-    \ στο σχολείο σας"
-  dashboard_landing_progress_title: "Κύρια κατηγορία προόδου"
-  dashboard_landing_progress_biggest: "Αυτή είναι η πρόοδος για το μεγαλύτερο τμήμα
-    σας."
-  dashboard_landing_view_progress: "Προβολή προόδου για %{biggest_section}"
-  dashboard_landing_print_progress: Print progress
-  dashboard_landing_available_title: "Διαθέσιμα μαθήματα"
-  dashboard_landing_available_courses: "Εδώ είναι τα μαθήματα που είναι διαθέσιμα
-    σήμερα για εσάς και τους μαθητές σας."
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
-  dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
-    by our partners.</a> Learn to program with robots, make web pages, make your own
-    app, or explore other languages like C++, Ruby, or Python!
-  dashboard_hoc_courses: The Hour of Code for All Ages
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
-    students!
-  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
-    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
-    during Computer Science Education Week.
-  dashboard_k5_courses: 20-Hour Courses for K-5
-  dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
-    tutorials with "unplugged" activities that require no computer at all. Each course
-    consists of about 20 lessons that may be implemented as one unit or over the course
-    of a semester. Even kindergarten-aged pre-readers can participate. To help you
-    get started, we offer high quality professional development workshops around the
-    U.S. free of charge. <a href="/professional-development-workshops">Find one near
-    you!</a>
-  dashboard_middle_courses: 20-Hour Middle School Courses
-  dashboard_middle_courses_desc: Our middle school curriculum uses computer science
-    and programming within the context of middle school math and science - as a tool
-    to teach math and science concepts. To register for professional development workshops,
-    apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
-  dashboard_high_courses: Year-long High School Courses
-  dashboard_high_courses_desc: Our high school program helps school districts offer
-    full-year computer science classes by preparing existing teaching staff to offer
-    this new field. To register for professional development workshops, apply for
-    a <a href="/educate/districts">district-wide partnership</a> with Code.org.
-  dashboard_course_csina: "Η Επιστήμη των υπολογιστών στην Άλγεβρα"
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
-    curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
-    an introduction to computer science concepts within the context of modeling and
-    simulation.
-  dashboard_course_ecs: "Εξερευνήστε την Επιστήμη των Υπολογιστών"
-  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
-    of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
-    Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
-    course that explores the foundational ideas of computing.
-  dashboard_landing_loading: "Φόρτωση..."
-  dashboard_action_edit: "Τροποποίηση"
-  dashboard_action_save: "αποθήκευση"
-  dashboard_action_save_all: "Αποθήκευση όλων"
-  dashboard_action_cancel: "Άκυρο"
-  dashboard_action_delete: "Διαγραφή"
-  dashboard_action_delete_yes: "Ναι"
-  dashboard_action_delete_no: "Όχι"
-  dashboard_action_confirm: "Διαγραφή;"
-  dashboard_action_remove: "Διαγραφή"
-  dashboard_action_remove_confirm: "Διαγραφή?"
-  dashboard_action_done: "Ολοκληρώθηκε"
-  dashboard_action_required: "απαιτείται"
-  dashboard_navigation_home_page: "Αρχική Σελίδα Εκπαιδευτή"
-  dashboard_navigation_section_student_progress: "Λογαριασμοί μαθητών και Πρόοδος"
-  dashboard_navigation_section_teacher_progress: "Πρόοδος του τμήματός σας"
-  dashboard_navigation_section_lesson_plans: "Σχέδια μαθήματος και Πόροι"
-  dashboard_navigation_section_community: "Βοήθεια και Κοινότητα"
-  dashboard_navigation_section_pd: "Επαγγελματική εξέλιξη"
-  dashboard_navigation_section_speakers: "Πληροφορική <br/> προσκεκλημένων ομιλητών"
-  dashboard_navigation_all_sections: "Λογαριασμοί μαθητών και Πρόοδος"
-  dashboard_navigation_view_progress: "Προβολή προόδου"
-  dashboard_navigation_view_text_responses: View Text Responses
-  dashboard_navigation_add_students: "Προσθήκη μαθητών"
-  dashboard_navigation_manage_students: "Διαχείριση μαθητών"
-  dashboard_navigation_lesson_plans_resources: "Σχέδια μαθήματος και Πόροι"
-  dashboard_navigation_view_stats: "Εμφάνιση στατιστικών"
-  dashboard_navigation_section: "Τμήμα: %{section_name}"
-  dashboard_navigation_student: "Μαθητής: %{student_name}"
-  dashboard_sections_new_section: "Νέα ενότητα"
-  dashboard_sections_jumbotron_instruction: "Δημιουργήστε νέες ενότητες και προσθέστε
+  dashboard_landing_new_beta: Νέο! Δοκιμάστε τα beta-μαθήματά μας για μαθητές K-5.
+  dashboard_landing_new_k5courses: Νέο! Δοκιμάστε τα μαθήματά μας για μαθητές K-5.
+  dashboard_landing_useful_links: Μερικοί άλλοι Χρήσιμοι Σύνδεσμοι (στα Αγγλικά μόνο)
+  dashboard_landing_office_hours: Θέστε ένα ερώτημα εσείς οι ίδιοι! Επισκεφθείτε τις
+    μηνιαίες βίντεο ώρες γραφείου.
+  dashboard_landing_print_certificates: Εκτύπωση πιστοποιητικών για τους μαθητές που
+    ολοκληρώνουν αυτό το μάθημα
+  dashboard_landing_educator_blog: Διαβάστε για τα νέα και τις ενημερώσεις για του
+    υλικό μας στο blog του Παιδαγωγού
+  dashboard_landing_smart_hints: Παρακαλούμε βοηθήστε μας να προσθέσουμε έξυπνες συμβουλές
+    στα μαθήματα  του Code.org
+  dashboard_landing_video_player: Δοκιμάστε το νέο πρόγραμμα αναπαραγωγής βίντεο  στο
+    σχολείο σας
+  dashboard_landing_progress_title: Κύρια κατηγορία προόδου
+  dashboard_landing_progress_biggest: Αυτή είναι η πρόοδος για το μεγαλύτερο τμήμα
+    σας.
+  dashboard_landing_view_progress: Προβολή προόδου για %{biggest_section}
+  dashboard_landing_print_progress: Πρόοδος εκτύπωσης
+  dashboard_landing_available_title: Διαθέσιμα μαθήματα
+  dashboard_landing_available_courses: Εδώ είναι τα μαθήματα που είναι διαθέσιμα σήμερα
+    για εσάς και τους μαθητές σας.
+  dashboard_landing_more_tutorials: Θέλετε να δείτε ακόμα περισσότερα σεμινάρια;
+  dashboard_landing_more_tutorials_desc: Υπάρχουν περισσότερα σεμινάρια <a href="/learn/beyond">
+    που προσφέρονται από τους συνεργάτες μας.</a> Μάθετε να προγραμματίζετε με ρομπότ,
+    να φτιάχνετε ιστοσελίδες, να φτιάχνετε τη δική σας εφαρμογή (app) ή να εξερευνήσετε
+    άλλες γλώσσες όπως C++, Ruby, ή Python!
+  dashboard_hoc_courses: Η Ώρα του Κώδικα για Όλες τις Ηλικίες
+  dashboard_hoc_courses_desc: Δοκιμάστε κάποιο από αυτά τα μικρότερα σεμινάρια 1 ώρας
+    με τους μαθητές σας!
+  dashboard_hoc_courses_desc_and_cta: Δοκιμάστε αυτά τα σύντομα, σεμινάρια μιας ώρας
+    με τους μαθητές σας. <a href="https://hourofcode.com"> Γίνετε μέλος του κινήματος
+    της Ώρας του Κώδικα</a> κατά τη διάρκεια της Εκπαιδευτικής Εβδομάδας Επιστήμης
+    Υπολογιστών.
+  dashboard_k5_courses: Μαθήματα 20 ωρών για μαθητές Δημοτικού
+  dashboard_k5_courses_desc: Αυτά τα μαθήματα συνδυάζουν ηλεκτρονικά, αυτο-καθοδηγούμενη
+    και αυτο-ρυθμιζόμενα σεμινάρια με "unplugged" δραστηριότητες που δεν απαιτούν
+    καθόλου υπολογιστή. Κάθε σειρά μαθημάτων αποτελείται από περίπου 20 μαθήματα που
+    μπορούν να υλοποιηθούν ως μία ενότητα, ή κατά τη διάρκεια ενός εξαμήνου. Ακόμα
+    και προ-αναγνώστες ηλικίας νηπιαγωγείου μπορούν να συμμετέχουν. Για να σας βοηθήσουμε
+    να ξεκινήσετε, προσφέρουμε υψηλής ποιότητας εργαστήρια επαγγελματικής ανάπτυξης
+    σε όλες τις Ηνωμένες Πολιτείες χωρίς χρέωση. <a href="/professional-development-workshops">
+    Βρείτε ένα κοντά σας!</a>
+  dashboard_middle_courses: Μαθήματα Γυμνασίου 20-Ωρών
+  dashboard_middle_courses_desc: Το πρόγραμμα σπουδών μας για το γυμνάσιο χρησιμοποιεί
+    την επιστήμη υπολογιστών και τον προγραμματισμό στο πλαίσιο των μαθηματικών και
+    θετικών επιστημών στο Γυμνάσιο - ως ένα εργαλείο για τη διδασκαλία μαθηματικών
+    και επιστημονικών εννοιών. Για να εγγραφείτε στα εργαστήρια επαγγελματικής ανάπτυξης,
+    αιτηθείτε για μια <a href="/educate/districts">εταιρική σχέση ολόκληρης περιοχής</a>
+    με την Code.org.
+  dashboard_high_courses: Ετήσια Μαθήματα Λυκείου
+  dashboard_high_courses_desc: Το πρόγραμμά μας για το Λύκειο βοηθά σχολικές περιοχές
+    να προσφέρουν ετήσια μαθήματα επιστήμης υπολογιστών προετοιμάζοντας υπάρχον διδακτικό
+    προσωπικό για να προσφέρει αυτό το νέο πεδίο. Για να εγγραφείτε στα εργαστήρια
+    επαγγελματικής ανάπτυξης, αιτηθείτε για μια <a href="/educate/districts">εταιρική
+    σχέση ολόκληρης περιοχής</a> με το Code.org.
+  dashboard_course_csina: Η Επιστήμη των υπολογιστών στην Άλγεβρα
+  dashboard_course_csina_desc: Το Code.org έχει συνεργαστεί με την Bootstrap για να
+    αναπτύξει ένα αναλυτικό πρόγραμμα το οποίο διδάσκει αλγεβρικές και γεωμετρικές
+    έννοιες μέσα από τον προγραμματισμό υπολογιστών.
+  dashboard_course_csins: Η Επιστήμη των Υπολογιστών στην Επιστήμη
+  dashboard_course_csins_desc: Το Code.org έχει συνεργαστεί με το έργο GUTS για να
+    παραδώσει μια εισαγωγή στις έννοιες της επιστήμης υπολογιστών στο πλαίσιο της
+    μοντελοποίησης και προσομοίωσης.
+  dashboard_course_ecs: Εξερευνώντας την Επιστήμη των Υπολογιστών
+  dashboard_course_ecs_desc: 'Εξερευνώντας την Επιστήμη των Υπολογιστών είναι μια
+    ετήσια σειρά μαθημάτων που αποτελείται από 6 ενότητες: Αλληλεπίδραση Ανθρώπου-Υπολογιστή,
+    Επίλυση Προβλημάτων, Σχεδιασμός Ιστοσελίδων, Προγραμματισμός, Πληροφορική και
+    Ανάλυση Δεδομένων, και Ρομποτική.'
+  dashboard_course_csp: AP® Αρχές της Επιστήμης Υπολογιστών
+  dashboard_course_csp_desc: Το Code.org έχει σχεδιάσει μια αυστηρή, ελκυστική, και
+    προσιτή σειρά μαθημάτων που διερευνά τις θεμελιώδεις ιδέες της πληροφορικής.
+  dashboard_landing_loading: Φόρτωση...
+  dashboard_action_edit: Τροποποίηση
+  dashboard_action_save: Αποθήκευση
+  dashboard_action_save_all: Αποθήκευση όλων
+  dashboard_action_cancel: Άκυρο
+  dashboard_action_delete: Διαγραφή
+  dashboard_action_delete_yes: Ναι
+  dashboard_action_delete_no: Όχι
+  dashboard_action_confirm: Διαγραφή;
+  dashboard_action_remove: Διαγραφή
+  dashboard_action_remove_confirm: Διαγραφή?
+  dashboard_action_done: Ολοκληρώθηκε
+  dashboard_action_required: απαιτείται
+  dashboard_navigation_home_page: Αρχική Σελίδα Εκπαιδευτή
+  dashboard_navigation_section_student_progress: Λογαριασμοί μαθητών και Πρόοδος
+  dashboard_navigation_section_teacher_progress: Πρόοδος του τμήματός σας
+  dashboard_navigation_section_lesson_plans: Σχέδια μαθήματος και Πόροι
+  dashboard_navigation_section_community: Βοήθεια και Κοινότητα
+  dashboard_navigation_section_pd: Επαγγελματική εξέλιξη
+  dashboard_navigation_section_speakers: Πληροφορική <br/> προσκεκλημένων ομιλητών
+  dashboard_navigation_all_sections: Λογαριασμοί μαθητών και Πρόοδος
+  dashboard_navigation_view_progress: Προβολή προόδου
+  dashboard_navigation_view_text_responses: Προβολή Αποκρίσεων Κειμένου
+  dashboard_navigation_add_students: Προσθήκη μαθητών
+  dashboard_navigation_manage_students: Διαχείριση μαθητών
+  dashboard_navigation_lesson_plans_resources: Σχέδια μαθήματος και Πόροι
+  dashboard_navigation_view_stats: Εμφάνιση στατιστικών
+  dashboard_navigation_section: 'Τμήμα: %{section_name}'
+  dashboard_navigation_student: 'Μαθητής: %{student_name}'
+  dashboard_sections_new_section: Νέα ενότητα
+  dashboard_sections_jumbotron_instruction: Δημιουργήστε νέες ενότητες και προσθέστε
     σε αυτές μαθητές. Οι ενότητες σας βοηθήσουν να οργανώσετε τους μαθητές σε μικρότερες
     ομάδες, ώστε να μπορείτε να παρακολουθείτε την πρόοδό τους και να διαχειρίζεστε
-    τους λογαριασμούς τους."
-  dashboard_sections_table_section: "Ενότητα"
-  dashboard_sections_table_secret: "Τύπος σύνδεσης"
-  dashboard_sections_table_grade: "Βαθμος"
-  dashboard_sections_table_course: "Μάθημα"
-  dashboard_sections_table_students: "Μαθητές"
-  dashboard_sections_table_code: "Κωδικός ενότητας"
-  dashboard_sections_name: "Όνομα ενότητας"
-  dashboard_sections_choose_secret: "Εάν θέλετε να παρέχετε λογαριασμούς για τους
-    μαθητές σας, επιλέξτε ένα μυστικό τύπο <b>λέξης</b> ή <b>εικόνας</b> για την ενότητα
-    αυτή."
-  dashboard_sections_secret_word: "Μια <b>λέξη</b> σας επιτρέπει να ορίσετε μια μυστική
-    λέξη για κάθε μαθητή."
-  dashboard_sections_secret_picture: "Μια <b>εικόνα</b> σας επιτρέπει να ορίσετε μια
+    τους λογαριασμούς τους.
+  dashboard_sections_table_section: Ενότητα
+  dashboard_sections_table_secret: Τύπος σύνδεσης
+  dashboard_sections_table_grade: Βαθμος
+  dashboard_sections_table_course: Μάθημα
+  dashboard_sections_table_students: Μαθητές
+  dashboard_sections_table_code: Κωδικός ενότητας
+  dashboard_sections_name: Όνομα ενότητας
+  dashboard_sections_choose_secret: Εάν θέλετε να παρέχετε λογαριασμούς για τους μαθητές
+    σας, επιλέξτε ένα μυστικό τύπο <b>λέξης</b> ή <b>εικόνας</b> για την ενότητα αυτή.
+  dashboard_sections_secret_word: Μια <b>λέξη</b> σας επιτρέπει να ορίσετε μια μυστική
+    λέξη για κάθε μαθητή.
+  dashboard_sections_secret_picture: Μια <b>εικόνα</b> σας επιτρέπει να ορίσετε μια
     μυστική εικόνα για κάθε μαθητή, ιδανικό για τους μικρότερους μαθητές, οι οποίοι
-    δεν μπορούν ακόμη να πληκτρολογήσουν."
-  dashboard_sections_secret_none: "Αν θέλετε οι μαθητές σας να διαχειρίζονται τους
+    δεν μπορούν ακόμη να πληκτρολογήσουν.
+  dashboard_sections_secret_none: Αν θέλετε οι μαθητές σας να διαχειρίζονται τους
     δικούς τους λογαριασμούς, συμπεριλαμβανομένης και της επιλογής δικών τους κωδικών,
-    επιλέξτε τον μυστικό τύπο <b>κανένας</b>."
-  dashboard_sections_print_secrets: "Στη συνέχεια μπορείτε  να εκτυπώσετε ένα φύλλο
+    επιλέξτε τον μυστικό τύπο <b>κανένας</b>.
+  dashboard_sections_print_secrets: Στη συνέχεια μπορείτε  να εκτυπώσετε ένα φύλλο
     καρτών που περιέχει τα στοιχεία του λογαριασμού που θα διανεμηθεί στους μαθητές
-    σας χωριστά."
-  dashboard_sections_switch_section: "Αλλαγή ενότητας:"
-  dashboard_students_add_student: "Προσθήκη μαθητή"
-  dashboard_students_add_students: "Προσθήκη πολλών μαθητών"
-  dashboard_students_add_multiple: "Πληκτρολογήστε ή επικολλήστε τα ονόματα των μαθητών
-    σας, ένα ανά γραμμή:"
-  dashboard_students_new_section: "Έχετε δημιουργήσει μια νέα ενότητα! Τώρα προσθέστε
+    σας χωριστά.
+  dashboard_sections_switch_section: 'Αλλαγή ενότητας:'
+  dashboard_students_add_student: Προσθήκη μαθητή
+  dashboard_students_add_students: Προσθήκη πολλών μαθητών
+  dashboard_students_add_multiple: 'Πληκτρολογήστε ή επικολλήστε τα ονόματα των μαθητών
+    σας, ένα ανά γραμμή:'
+  dashboard_students_new_section: Έχετε δημιουργήσει μια νέα ενότητα! Τώρα προσθέστε
     τους μαθητές σας, χρησιμοποιώντας τα ανωτέρω πλήκτρα <b>Προσθήκη μαθητή</b> και
-    <b>Προσθήκη πολλών μαθητών</b>."
-  dashboard_students_placeholder_name: "Όνομα μαθητή"
-  dashboard_students_name: "Όνομα"
-  dashboard_students_progress: "Πρόοδος"
-  dashboard_students_age: "Ηλικία"
-  dashboard_students_gender: "Φύλο"
-  dashboard_students_male: "Αγόρι"
-  dashboard_students_female: "Κορίτσι"
-  dashboard_students_secret: "Μυστικό"
-  dashboard_students_password: "κωδικός"
-  dashboard_students_username: "Όνομα χρήστη: %{student_username}"
+    <b>Προσθήκη πολλών μαθητών</b>.
+  dashboard_students_placeholder_name: Όνομα μαθητή
+  dashboard_students_name: Όνομα
+  dashboard_students_progress: Πρόοδος
+  dashboard_students_age: Ηλικία
+  dashboard_students_gender: Φύλο
+  dashboard_students_male: Αγόρι
+  dashboard_students_female: Κορίτσι
+  dashboard_students_secret: Μυστικό
+  dashboard_students_password: κωδικός
+  dashboard_students_username: 'Όνομα χρήστη: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_completed_levels: "Ολοκληρωμένα επίπεδα"
-  dashboard_students_total_lines: "Γραμμές κώδικα"
-  dashboard_students_show_secret: "Εμφάνιση μυστικού"
-  dashboard_students_auto_generated: "Αυτόματα δημιουργημένο"
-  dashboard_students_reset_secret: "Επαναφορά μυστικού"
-  dashboard_students_reset_password: "Επαναφορά κωδικού πρόσβασης"
-  dashboard_students_share_section: "Μοιραστείτε την σελίδα σύνδεσης αυτής της ενότητας
-    με τους μαθητές σας:"
-  dashboard_students_print_info: "Εκτυπώσετε τις κάρτες με τα στοιχεία σύνδεσης των
-    μαθητών σας."
-  dashboard_students_secret_picture_title: Secret Picture
-  dashboard_students_secret_picture: "Μυστική εικόνα"
-  dashboard_students_reset_picture: "Μπορείτε να τον επαναφέρετε τη μυστική εικόνα
+  dashboard_students_completed_levels: Ολοκληρωμένα επίπεδα
+  dashboard_students_total_lines: Γραμμές κώδικα
+  dashboard_students_show_secret: Εμφάνιση μυστικού
+  dashboard_students_auto_generated: Αυτόματα δημιουργημένο
+  dashboard_students_reset_secret: Επαναφορά μυστικού
+  dashboard_students_reset_password: Επαναφορά κωδικού πρόσβασης
+  dashboard_students_share_section: 'Μοιραστείτε την σελίδα σύνδεσης αυτής της ενότητας
+    με τους μαθητές σας:'
+  dashboard_students_print_info: Εκτυπώσετε τις κάρτες με τα στοιχεία σύνδεσης των
+    μαθητών σας.
+  dashboard_students_secret_picture_title: Μυστική Εικόνα
+  dashboard_students_secret_picture: Αυτή η ενότητα χρησιμοποιεί την <b>εικόνα</b>
+    ως τον μυστικό της τύπο.  Αυτό σημαίνει ότι κάθε ένας από τους μαθητές σας έχει
+    μια μυστική εικόνα για χρήση αντί για έναν κωδικό πρόσβασης για να εισέλθει.  Οι
+    μαθητές πρέπει να χρησιμοποιούν τη διεύθυνση εισόδου στον ιστό που δίνεται παραπάνω
+    για να εισέλθουν.
+  dashboard_students_reset_picture: Μπορείτε να τον επαναφέρετε τη μυστική εικόνα
     ενός μαθητή ανά πάσα στιγμή επιλέγοντας <b>Εμφάνιση μυστικού</b> και, στη συνέχεια,
     <b>Επαναφορά μυστικού</b>. Θα δημιουργηθεί μια νέα μυστική εικόνα γι αυτόν τον
-    μαθητή για να την χρησιμοποιήσει στη σύνδεσή του."
-  dashboard_students_secret_word_title: Secret Word
-  dashboard_students_secret_word: "Μυστική λέξη"
-  dashboard_students_reset_word: "Μπορείτε να τον επαναφέρετε τις μυστικές λέξεις
+    μαθητή για να την χρησιμοποιήσει στη σύνδεσή του.
+  dashboard_students_secret_word_title: Μυστική λέξη
+  dashboard_students_secret_word: Μυστική λέξη
+  dashboard_students_reset_word: 'Μπορείτε να τον επαναφέρετε τις μυστικές λέξεις
     ενός μαθητή ανά πάσα στιγμή επιλέγοντας <b>Εμφάνιση μυστικού</b> και, στη συνέχεια,
     <b>Επαναφορά μυστικού</b>. Θα δημιουργηθεί ένα νέο ζευγάρι των μυστικές λέξεων
-    για το μαθητή, για να τις χρησιμοποιήσει κατά την σύνδεσή του. "
-  dashboard_students_join_link: "Πείτε στους μαθητές σας να δημιουργήσουν τους δικούς
-    τους λογαριασμούς και να ενταχθούν στο τμήμα σας στο"
-  dashboard_students_no_email: "Αν οι μαθητές σας δεν έχουν διευθύνσεις ηλεκτρονικού
+    για το μαθητή, για να τις χρησιμοποιήσει κατά την σύνδεσή του. '
+  dashboard_students_join_link: Πείτε στους μαθητές σας να δημιουργήσουν τους δικούς
+    τους λογαριασμούς και να ενταχθούν στο τμήμα σας στο
+  dashboard_students_no_email: Αν οι μαθητές σας δεν έχουν διευθύνσεις ηλεκτρονικού
     ταχυδρομείου, ή αν θέλετε να δημιουργήσετε λογαριασμούς γι αυτούς, αλλάξτε τον
-    μυστικό τύπο της ενότητας σε  <b>λέξη</b> ή <b>εικόνα</b>."
-  dashboard_students_print_page: "Εκτυπώστε αυτή την σελίδα"
+    μυστικό τύπο της ενότητας σε  <b>λέξη</b> ή <b>εικόνα</b>.
+  dashboard_students_print_page: Εκτυπώστε αυτή την σελίδα
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Κλικ
     εδώ</a> για το έγγραφο δήλωσης απορρίτου, που μπορείτε να μοιράσετε ή να τυπώσετε
     για τους μαθητές σας.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
-  dashboard_view_all_lesson_plans: "Δείτε όλα τα πλάνα μαθημάτων"
-  dashboard_course1: "Μάθημα 1:"
-  dashboard_course2: "Μάθημα 2:"
-  dashboard_course3: "Μάθημα 3:"
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
-  dashboard_curriculum_overview: "Επισκόπηση προγράμματος σπουδών K-5"
-  dashboard_overview: Overview
-  dashboard_sequence: "Ακολουθία"
-  dashboard_framework: "Πλαίσιο"
-  dashboard_standards: "Πρότυπα"
-  dashboard_implementation_guide: "Οδηγός εφαρμογής"
-  dashboard_glossary: "Γλωσσάρι"
-  dashboard_classroom_strategies: "Στρατηγικές για την τάξη για τους εκπαιδευτικούς"
-  dashboard_debugging: "Αποσφαλμάτωση:"
-  dashboard_puzzle_solving: "Λύση-γρίφων:"
-  dashboard_student_worksheet: "φύλλο εργασίας μαθητή"
-  dashboard_teacher_worksheet: "φύλλο εργασία; καθηγητή"
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_k5_title: Πόροι Επιμορφωτή για το επίπεδο πρωτοβάθμιας εκπαίδευσης
+    (K-5)
+  dashboard_curriculum_middle_title: Πόροι Επιμορφωτή για το Γυμνάσιο
+  dashboard_curriculum_high_title: Πόροι Επιμορφωτή για το Λύκειο
+  dashboard_lesson_plans: Σχέδια μαθήματος
+  dashboard_view_all_lesson_plans: Δείτε όλα τα πλάνα μαθημάτων
+  dashboard_course1: 'Μάθημα 1:'
+  dashboard_course2: 'Μάθημα 2:'
+  dashboard_course3: 'Μάθημα 3:'
+  dashboard_course4: 'Μάθημα 4 (beta): '
+  dashboard_curriculum: Πρόγραμμα σπουδών
+  dashboard_curriculum_overview: Επισκόπηση προγράμματος σπουδών K-5
+  dashboard_overview: Επισκόπηση
+  dashboard_sequence: Ακολουθία
+  dashboard_framework: Πλαίσιο
+  dashboard_standards: Πρότυπα
+  dashboard_implementation_guide: Οδηγός εφαρμογής
+  dashboard_glossary: Γλωσσάρι
+  dashboard_classroom_strategies: Στρατηγικές για την τάξη για τους εκπαιδευτικούς
+  dashboard_debugging: 'Αποσφαλμάτωση:'
+  dashboard_puzzle_solving: 'Λύση-γρίφων:'
+  dashboard_student_worksheet: φύλλο εργασίας μαθητή
+  dashboard_teacher_worksheet: φύλλο εργασία; καθηγητή
+  dashboard_curriculum_csina: 'Η Επιστήμη των Υπολογιστών στην Άλγεβρα:'
+  dashboard_curriculum_csins: 'Η Επιστήμη των Υπολογιστών στην Επιστήμη:'
+  dashboard_curriculum_csp: 'AP® Αρχές της Επιστήμης Υπολογιστών:'
+  dashboard_curriculum_ecs: 'Εξερευνώντας την Επιστήμη των Υπολογιστών:'
   dashboard_grade_k: K
-  dashboard_grade_other: "Άλλα"
-  dashboard_login_word: "Λέξη"
-  dashboard_login_picture: "Εικόνα"
-  dashboard_login_none: "Ηλεκτρονικό ταχυδρομείο"
-  dashboard_new_password: "νέος κωδικός"
-  dashboard_progress_not_started: "δεν ξεκίνησε"
-  dashboard_progress_in_progress: "σε εξέλιξη"
-  dashboard_progress_not_completed: "δεν έχει ολοκληρωθεί"
-  dashboard_progress_completed_too_many_blocks: "ολοκληρώθηκε, πάρα πολλά μπλοκ"
-  dashboard_progress_completed_perfect: "ολοκληρώθηκε, τέλειο"
-  dashboard_progress_furthest_level_attempted: "τελευταίο επίπεδο επιχειρήθηκε"
-  dashboard_stage: "σκηνή"
-  dashboard_puzzle: "Παζλ"
-  dashboard_question: Question
-  dashboard_response: Response
-  stats_hoc_2013_heading: "Απίστευτα στατιστικά από την περσινή ώρα του κώδικα. Σε
-    μία εβδομάδα μόνο:"
-  stats_hoc_2013_image_alt: "Στατιστικά στοιχεία από την ώρα του κώδικα του 2013"
-  dashboard_teacher: "Καθηγητής"
-  dashboard_student: "φοιτητής/μαθητής"
-  dashboard_sections_email_question: "Έχουν όλοι οι μαθητές έγκυρη διεύθυνση ηλεκτρονικού
-    ταχυδρομείου;"
-  dashboard_sections_account_creation_question: "Ποιος δημιουργεί το λογαριασμός του
-    μαθητή;"
+  dashboard_grade_other: Άλλα
+  dashboard_login_word: Λέξη
+  dashboard_login_picture: Εικόνα
+  dashboard_login_none: Ηλεκτρονικό ταχυδρομείο
+  dashboard_new_password: νέος κωδικός
+  dashboard_progress_not_started: δεν ξεκίνησε
+  dashboard_progress_in_progress: σε εξέλιξη
+  dashboard_progress_not_completed: δεν έχει ολοκληρωθεί
+  dashboard_progress_completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
+  dashboard_progress_completed_perfect: ολοκληρώθηκε, τέλειο
+  dashboard_progress_furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε
+  dashboard_stage: σκηνή
+  dashboard_puzzle: Παζλ
+  dashboard_question: Ερώτηση
+  dashboard_response: Απάντηση
+  stats_hoc_2013_heading: 'Απίστευτα στατιστικά από την περσινή ώρα του κώδικα. Σε
+    μία εβδομάδα μόνο:'
+  stats_hoc_2013_image_alt: Στατιστικά στοιχεία από την ώρα του κώδικα του 2013
+  dashboard_teacher: Καθηγητής
+  dashboard_student: φοιτητής/μαθητής
+  dashboard_sections_email_question: Έχουν όλοι οι μαθητές έγκυρη διεύθυνση ηλεκτρονικού
+    ταχυδρομείου;
+  dashboard_sections_account_creation_question: Ποιος δημιουργεί το λογαριασμός του
+    μαθητή;
   dashboard_sections_password_question: Τι χρησιμοποιούν  οι μαθητές ως "κωδικό πρόσβασης";
-  dashboard_sections_picture_account_creation: "Εικόνα ορισμένη από το Code.org"
-  dashboard_sections_word_account_creation: "Απλή λέξη ορισμένη από το  Code.org"
-  dashboard_sections_sign_in_question: "Από που συνδέονται οι μαθητές;"
+  dashboard_sections_picture_account_creation: Εικόνα ορισμένη από το Code.org
+  dashboard_sections_word_account_creation: Απλή λέξη ορισμένη από το  Code.org
+  dashboard_sections_sign_in_question: Από που συνδέονται οι μαθητές;
   dashboard_sections_sign_in_unique: Μοναδική ιστοσελίδα που αναφέρετε στην καρτέλα
     "Διαχείριση Μαθητών"
   dashboard_sections_sign_in_main: http://code.org και κάντε κλικ στο "Σύνδεση"
-  dashboard_sections_password_account_creation: "Κωδικός που δημιουργήθηκε από τον
-    μαθητή"
-  dashboard_sections_login_type_explanation: "Ο πίνακας αυτός βοηθά στην επεξήγηση
+  dashboard_sections_password_account_creation: Κωδικός που δημιουργήθηκε από τον
+    μαθητή
+  dashboard_sections_login_type_explanation: Ο πίνακας αυτός βοηθά στην επεξήγηση
     ποιου τύπου σύνδεσης <b>εικόνα, λέξη, ή ηλεκτρονικό ταχυδρομείο</b> θα θελήσετε
-    να επιλέξετε για κάποια ενότητα."
-  dashboard_faq: "Συχνές Ερωτήσεις"
-  dashboard_faq_k5: K-5 Frequently Asked Questions
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
-  code_hoc_coming: "Η ώρα του κώδικα έφτασε  - 8-14 Δεκεμβρίου!"
-  code_sign_up: "Εγγραφείτε για να συμμετάσχετε κατά τη διάρκεια της εκπαιδευτικής
-    εβδομάδας για την Επιστήμη της Πληροφορικής"
-  learn_more: "Μάθετε περισσότερα"
-  learn_sign_up_description: Sign up to participate in the Hour of Code during CS
-    Education Week
-  learn_sign_up_button: "Εγγραφή"
-  learn_educator_resources_description: Learn how to teach an Hour of Code
-  learn_educator_resources_button: Educator resources
-  learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
-    to teach an Hour of Code</a>
+    να επιλέξετε για κάποια ενότητα.
+  dashboard_faq: Συχνές Ερωτήσεις
+  dashboard_faq_k5: Συχνές ερωτήσεις για το επίπεδο πρωτοβάθμιας εκπαίδευσης (K-5)
+  dashboard_announcements: Ανακοινώσεις
+  dashboard_announce_view_all: Προβολή όλων
+  dashboard_announce_hoc: <b>15 Οκτωβρίου 2015</b> - Η Ώρα του Κώδικα πλησιάζει &mdash;
+    κάθε συμμετέχον διοργανωτής θα λάβει μια κάρτα δώρου για το Amazon.com ή το Microsoft's
+    Windows Store ως ευχαριστήριο δώρο. Εγγραφείτε σε τάξεις σε όλο τον κόσμο κατά
+    την περίοδο 7-13 Δεκεμβρίου.
+  code_hoc_coming: Η ώρα του κώδικα έφτασε  - 8-14 Δεκεμβρίου!
+  code_sign_up: Εγγραφείτε για να συμμετάσχετε κατά τη διάρκεια της εκπαιδευτικής
+    εβδομάδας για την Επιστήμη της Πληροφορικής
+  learn_more: Μάθετε περισσότερα
+  learn_sign_up_description: Εγγραφείτε για να συμμετάσχετε στην Ώρα του Κώδικα κατά
+    τη διάρκεια της Εκπαιδευτικής Εβδομάδας στην Επιστήμη Υπολογιστών
+  learn_sign_up_button: Εγγραφή
+  learn_videos_watch: Παρακολουθήστε αυτό το εμπνευσμένο βίντεο με την τάξη σας
+  learn_videos_show: Δείξτε αυτό το εμπνευσμένο βίντεο στην τάξη σας
+  learn_videos_before_hoc: Παρακολουθήστε ένα εμπνευσμένο βίντεο πριν από τη δική
+    σας Ώρα του Κώδικα
+  learn_educator_resources_description: Μάθετε πώς να διδάξετε μια Ώρα του Κώδικα
+  learn_educator_resources_button: Πόροι για τους επιμορφωτές
+  learn_are_you_educator: Είστε επιμορφωτἠς; Μάθετε <a href="http://hourofcode.com/resources/how-to">
+    πώς να διδάξετε μια Ώρα του Κώδικα</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes"> Μάθετε περισσότερα</a>
+    για τα βραβεία για κάθε εκπαιδευτικό.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Δοκιμάστε τα νέα βοηθήματα εκμάθησης για την "Ώρα του
     Κώδικα"
-  hoc2014_try_new_tutorial: "Δοκιμάστε μας νέο σεμινάριο για την ώρα του κώδικα σε
-    δοκιμαστική μορφή"
+  hoc2014_try_new_tutorial: Δοκιμάστε μας νέο σεμινάριο για την ώρα του κώδικα σε
+    δοκιμαστική μορφή
   hoc2014_try_scrat: Angry Birds, PvZ και Scrat
-  hoc2014_try_frozen: "Καλλιτέχνης με την Άννα και την Έλσα, από το Frozen"
-  carousel_heading_international: "Σεμινάρια στη γλώσσα σας"
-  carousel_heading_domestic: "Βοηθήματα εκμάθησης που είναι διαθέσιμα στα αγγλικά"
-  carousel_heading_beginners: "Βοηθήματα εκμάθησης για αρχάριους"
-  carousel_heading_javascript: "Μαθήματα που διδάσκουν JavaScript"
-  carousel_heading_unplugged: "Δεν διαθέτετε ψηφιακή συσκευή ή πρόσβαση στο Διαδίκτυο;
-    Δοκιμάστε  την 'unplugged' Επιστήμη της Πληροφορικής"
-  carousel_heading_devices: "Εφαρμογές εκμάθησης για τηλέφωνα και tablets"
-  carousel_heading_languages: "Βοηθήματα εκμάθησης σε άλλες γλώσσες προγραμματισμού"
-  carousel_heading_apps_games: "Δημιουργήστε τις δικές σας εφαρμογές ή παιχνίδια"
-  carousel_heading_university: "Πανεπιστημιακά μαθήματα διαθέσιμα online"
-  carousel_heading_webpages: "Μάθετε να δημιουργείτε ιστοσελίδες"
-  carousel_heading_robots: "Μάθετε να προγραμματίζετε με ρομπότ"
-  carousel_heading_ide: "Δημοφιλείς ψηφιακές πλατφόρμες μεταξύ των εκπαιδευτικών"
-  educator_notes: "Σημειώσεις επιμορφωτή"
-  how_to_teach_hoc: "Πώς να διδάξετε μια ώρα του κώδικα"
-  more_resources_educators: "Περισσότεροι πόροι για τους εκπαιδευτικούς και τους επιμορφωτές"
-  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
-    and submission form.
-  participants: "συμμετέχοντες"
-  teachers_notes: "Σημειώσεις εκπαιδευτικού"
-  teachers_notes_hoc: "Δάσκαλοι: Δείτε εδώ σημαντικές σημειώσεις για εκπαιδευτικούς"
-  previous: "Προηγούμενο"
-  next: "Επόμενο"
-  older_systems: "Μαθήματα που λειτουργούν σε παλαιότερα συστήματα"
+  hoc2014_try_frozen: Καλλιτέχνης με την Άννα και την Έλσα, από το Frozen
+  carousel_heading_codeorg: Οδηγοί από το Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Οδηγοί από τρίτα μέρη
+  carousel_heading_third_party: Οδηγοί από τρίτους
+  carousel_heading_international: Σεμινάρια στη γλώσσα σας
+  carousel_heading_domestic: Βοηθήματα εκμάθησης που είναι διαθέσιμα στα αγγλικά
+  carousel_heading_beginners: Βοηθήματα εκμάθησης για αρχάριους
+  carousel_heading_javascript: Μαθήματα που διδάσκουν JavaScript
+  carousel_heading_unplugged: Δεν διαθέτετε ψηφιακή συσκευή ή πρόσβαση στο Διαδίκτυο;
+    Δοκιμάστε  την 'unplugged' Επιστήμη της Πληροφορικής
+  carousel_heading_devices: Εφαρμογές εκμάθησης για τηλέφωνα και tablets
+  carousel_heading_languages: Βοηθήματα εκμάθησης σε άλλες γλώσσες προγραμματισμού
+  carousel_heading_apps_games: Δημιουργήστε τις δικές σας εφαρμογές ή παιχνίδια
+  carousel_heading_university: Πανεπιστημιακά μαθήματα διαθέσιμα online
+  carousel_heading_webpages: Μάθετε να δημιουργείτε ιστοσελίδες
+  carousel_heading_robots: Μάθετε να προγραμματίζετε με ρομπότ
+  carousel_heading_ide: Δημοφιλείς ψηφιακές πλατφόρμες μεταξύ των εκπαιδευτικών
+  educator_notes: Σημειώσεις επιμορφωτή
+  teach_led_lesson_plans: Σχέδια Μαθήματος για την Ώρα Κώδικα από το Teacher Led
+  how_to_teach_hoc: Πώς να διδάξετε μια ώρα του κώδικα
+  more_resources_educators: Περισσότεροι πόροι για τους εκπαιδευτικούς και τους επιμορφωτές
+  beyond_submission: Θέλετε να υποβάλετε ένα σεμινάριο για την ενότητα Πέρα από μια
+    Ώρα; Δείτε τα κριτήρια και την φόρμα υποβολής.
+  participants: συμμετέχοντες
+  teachers_notes: Σημειώσεις εκπαιδευτικού
+  teachers_notes_hoc: 'Δάσκαλοι: Δείτε εδώ σημαντικές σημειώσεις για εκπαιδευτικούς'
+  previous: Προηγούμενο
+  next: Επόμενο
+  older_systems: Μαθήματα που λειτουργούν σε παλαιότερα συστήματα
   older_systems_subheading: Αυτά θα πρέπει να λειτουργούν και με παλαιότερα προγράμματα
     περιήγησης Web. Για να αποκτήσετε πρόσβαση σε όλα τα σεμινάρια, χρησιμοποιήστε
     ένα <a href="http://browsehappy.com/" target="_blank"> σύγχρονο Φυλλομετρητή.</a>
-  mobile_devices: "Μαθήματα για κινητές συσκευές"
-  frozen_name: "Γράψτε Κώδικα με την Άννα και την Έλσα"
-  codeorg_name: "Γράψε το πρώτο σου πρόγραμμα για υπολογιστή"
-  codeintl_name: "Γράψε το πρώτο σου πρόγραμμα για υπολογιστή"
-  thinkersmithspanish_name: "Οι ρομποτικοί μου φίλοι"
-  khan_name: "Μια εισαγωγή στην JavaScript"
-  khanes_name: "Μια εισαγωγή στην JavaScript"
-  khanpt_name: "Μια εισαγωγή στην JavaScript"
-  khanhe_name: "Μια εισαγωγή στην JavaScript"
-  khanfr_name: "Μια εισαγωγή στην JavaScript"
-  khanpl_name: "Μια εισαγωγή στην JavaScript"
-  tynker_name: "Χτίστε το δικό σας παιχνίδι"
-  scratch_name: "Γίνετε δημιουργικοί με την κωδικοποίηση"
+  mobile_devices: Μαθήματα για κινητές συσκευές
+  frozen_name: Γράψτε Κώδικα με την Άννα και την Έλσα
+  starwars_name: 'Πόλεμος των Άστρων: Χτίζοντας έναν Γαλαξία με Κώδικα'
+  codeorg_name: Γράψε το πρώτο σου πρόγραμμα για υπολογιστή
+  codeintl_name: Γράψε το πρώτο σου πρόγραμμα για υπολογιστή
+  thinkersmithspanish_name: Οι ρομποτικοί μου φίλοι
+  khan_name: Μια εισαγωγή στην JavaScript
+  khanes_name: Μια εισαγωγή στην JavaScript
+  khanpt_name: Μια εισαγωγή στην JavaScript
+  khanhe_name: Μια εισαγωγή στην JavaScript
+  khanfr_name: Μια εισαγωγή στην JavaScript
+  khanpl_name: Μια εισαγωγή στην JavaScript
+  tynker_name: Φτιάξτε το δικό σας παιχνίδι
+  scratch_name: Γίνετε δημιουργικοί με την κωδικοποίηση
   lightbot_name: Lightbot
-  thinkersmith_name: "Οι Ρομποτικοί φίλοι μου"
-  condcards_name: "Υποθέσεις με Κάρτες"
+  thinkersmith_name: Οι Ρομποτικοί φίλοι μου
+  condcards_name: Υποθέσεις με Κάρτες
   lightbotintl_name: Lightbot
-  codehs_name: "Μάθετε να γράφετε Κώδικα με τον Κάρελ το Σκυλί"
+  codehs_name: Μάθετε να γράφετε Κώδικα με τον Κάρελ το Σκυλί
   codecademy_name: Codecademy - Ακαδημία Κώδικα
   codecombat_name: CodeCombat - Μονομαχία Κώδικα
   codemonkey_name: CodeMonkey
-  codeavengers_name: "Φτιάξτε ένα παιχνίδι με JavaScript"
-  processing_name: "Ζωγραφίζοντας με Κώδικα"
-  robomind_name: "Προγραμματίστε ένα εικονικό ρομπότ"
-  groklearning_name: "Ελίζα ο γιατρός Chatterbot"
-  quorum_name: "Προσβάσιμος προγραμματισμός (με υποστήριξη αναγνώστη οθόνης)"
-  codespark_name: "Οι Foos (επρόσδεκτοι όσοι δε γνωρίζουν ανάγνωση)"
+  codeavengers_name: Φτιάξτε ένα παιχνίδι με JavaScript
+  processing_name: Ζωγραφίζοντας με Κώδικα
+  robomind_name: Προγραμματίστε ένα εικονικό ρομπότ
+  groklearning_name: Ελίζα ο γιατρός Chatterbot
+  quorum_name: Προσβάσιμος προγραμματισμός (με υποστήριξη αναγνώστη οθόνης)
+  codespark_name: Οι Foos (επρόσδεκτοι όσοι δε γνωρίζουν ανάγνωση)
   kodable_name: Kodable (επρόσδεκτοι όσοι δε γνωρίζουν ανάγνωση)
   tynkerapp_name: Tynker - σε ταμπλέτες
-  robomindnl_name: "Προγραμματίστε ένα εικονικό ρομπότ"
-  flappy_name: "Φτιάξτε ένα παιχνίδι Flappy"
+  robomindnl_name: Προγραμματίστε ένα εικονικό ρομπότ
+  flappy_name: Φτιάξτε ένα παιχνίδι Flappy
   bitsbox_name: Bitsbox - φτιάξτε ένα παιχνίδι
-  makeschool_name: Build an iPhone game in your browser!
+  makeschool_name: Φτιάξτε ένα παιχνίδι για iPhone στο πρόγραμμα περιήγησής σας!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Ώρα του Κώδικα
   blockly_name: Blockly
-  thinkersmith2_name: "Δυαδικές φούσκες"
+  thinkersmith2_name: Δυαδικές φούσκες
   kodableunplugged_name: fuzzFamily φρενίτιδα
-  projguts_name: "Πέτρα, Ψαλίδια, Χαρτί"
-  hourofcode_name: "Σύμβολο κράτησης θέσης για το νέο code.org/hoc"
-  playlab_name: "Εργαστήριο Παιχνιδιού"
-  codeorg_gradelevel: "Ηλικίες 4-104"
-  codeintl_gradelevel: "Ηλικίες 4-104"
-  thinkersmithspanish_gradelevel: "Για όλους"
-  khan_gradelevel: "Γυμνάσιο +"
-  khanes_gradelevel: "Γυμνάσιο +"
-  khanpt_gradelevel: "Γυμνάσιο +"
-  khanhe_gradelevel: "Γυμνάσιο +"
-  khanfr_gradelevel: "Γυμνάσιο +"
-  khanpl_gradelevel: "Γυμνάσιο +"
-  tynker_gradelevel: "Ηλικίες 5-13"
-  scratch_gradelevel: "Ηλικίες 8 +"
-  lightbot_gradelevel: "Όλων των ηλικιών"
-  thinkersmith_gradelevel: "Όλων των ηλικιών"
-  condcards_gradelevel: "Ηλικίες 8-12"
-  lightbotintl_gradelevel: "Όλων των ηλικιών"
-  codehs_gradelevel: "Λύκειο"
-  codecademy_gradelevel: "Λύκειο"
-  codecombat_gradelevel: "Γυμνάσιο +"
-  codemonkey_gradelevel: "Γυμνάσιο +"
-  codeavengers_gradelevel: "Γυμνάσιο +"
-  processing_gradelevel: "Λύκειο"
-  robomind_gradelevel: "Ηλικίες 8-13"
-  groklearning_gradelevel: "Γυμνάσιο +"
-  quorum_gradelevel: "Γυμνάσιο +"
-  codespark_gradelevel: "Δημοτικό"
-  kodable_gradelevel: "Δημοτικό"
-  tynkerapp_gradelevel: "Ηλικίες 5-13"
-  robomindnl_gradelevel: "Ηλικίες 8-13"
-  flappy_gradelevel: "Ηλικίες 4-104"
-  bitsbox_gradelevel: "Δημοτικό"
-  makeschool_gradelevel: "Λύκειο"
-  touchdevelop_gradelevel: "Λύκειο"
-  appinventor_gradelevel: "Γυμνάσιο +"
-  blockly_gradelevel: "Όλων των ηλικιών"
-  thinkersmith2_gradelevel: "Ηλικίες 8 +"
-  kodableunplugged_gradelevel: "Ηλικίες 8-13"
-  projguts_gradelevel: "Ηλικίες 10-13"
-  hourofcode_gradelevel: "Ηλικίες 4-104"
-  frozen_gradelevel: "Ηλικίες 8 +"
-  playlab_gradelevel: "Ηλικίες 4-104"
-  codeorg_platformtext: "Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες"
-  codeintl_platformtext: "Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες"
-  thinkersmithspanish_platformtext: "Χωρίς σύνδεση"
-  khan_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  khanes_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  khanpt_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  khanhe_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  khanfr_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  khanpl_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  tynker_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  scratch_platformtext: "Φυλλομετρητές μόνο για προσωπικούς υπολογιστές(όχι για τάμπλετ)"
-  lightbot_platformtext: "ΟΛΑ προγράμματα περιήγησης και iOS, Android, ή κονσόλες
-    παιχνιδιών"
-  thinkersmith_platformtext: "Χωρίς σύνδεση"
-  condcards_platformtext: "Χωρίς σύνδεση"
+  projguts_name: Πέτρα, Ψαλίδια, Χαρτί
+  hourofcode_name: Σύμβολο κράτησης θέσης για το νέο code.org/hoc
+  playlab_name: Εργαστήριο Παιχνιδιού
+  infinity_name: αιώνιο εργαστήρι παιχνιδιού
+  artist_name: Καλλιτέχνης
+  codeorg_gradelevel: Ηλικίες 4-104
+  codeintl_gradelevel: Ηλικίες 4-104
+  thinkersmithspanish_gradelevel: Για όλους
+  khan_gradelevel: Γυμνάσιο +
+  khanes_gradelevel: Γυμνάσιο +
+  khanpt_gradelevel: Γυμνάσιο +
+  khanhe_gradelevel: Γυμνάσιο +
+  khanfr_gradelevel: Γυμνάσιο +
+  khanpl_gradelevel: Γυμνάσιο +
+  tynker_gradelevel: Ηλικίες 5-13
+  scratch_gradelevel: Ηλικίες 8 +
+  lightbot_gradelevel: Όλων των ηλικιών
+  thinkersmith_gradelevel: Όλων των ηλικιών
+  condcards_gradelevel: Ηλικίες 8-12
+  lightbotintl_gradelevel: Όλων των ηλικιών
+  codehs_gradelevel: Λύκειο
+  codecademy_gradelevel: Λύκειο
+  codecombat_gradelevel: Γυμνάσιο +
+  codemonkey_gradelevel: Γυμνάσιο +
+  codeavengers_gradelevel: Γυμνάσιο +
+  processing_gradelevel: Λύκειο
+  robomind_gradelevel: Ηλικίες 8-13
+  groklearning_gradelevel: Γυμνάσιο +
+  quorum_gradelevel: Γυμνάσιο +
+  codespark_gradelevel: Δημοτικό
+  kodable_gradelevel: Δημοτικό
+  tynkerapp_gradelevel: Ηλικίες 5-13
+  robomindnl_gradelevel: Ηλικίες 8-13
+  flappy_gradelevel: Ηλικίες 4-104
+  bitsbox_gradelevel: Δημοτικό
+  makeschool_gradelevel: Λύκειο
+  touchdevelop_gradelevel: Λύκειο
+  appinventor_gradelevel: Γυμνάσιο +
+  blockly_gradelevel: Όλων των ηλικιών
+  thinkersmith2_gradelevel: Ηλικίες 8 +
+  kodableunplugged_gradelevel: Ηλικίες 8-13
+  projguts_gradelevel: Ηλικίες 10-13
+  hourofcode_gradelevel: Ηλικίες 4-104
+  frozen_gradelevel: Ηλικίες 8 +
+  starwars_gradelevel: Ηλικίες 6+
+  playlab_gradelevel: Ηλικίες 4-104
+  infinity_gradelevel: Ηλικίες 4-104
+  artist_gradelevel: Ηλικίες 4-104
+  codeorg_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
+  codeintl_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
+  thinkersmithspanish_platformtext: Χωρίς σύνδεση
+  khan_platformtext: Σύγρονα Προγράμματα περιήγησης
+  khanes_platformtext: Σύγρονα Προγράμματα περιήγησης
+  khanpt_platformtext: Σύγρονα Προγράμματα περιήγησης
+  khanhe_platformtext: Σύγρονα Προγράμματα περιήγησης
+  khanfr_platformtext: Σύγρονα Προγράμματα περιήγησης
+  khanpl_platformtext: Σύγρονα Προγράμματα περιήγησης
+  tynker_platformtext: Σύγρονα Προγράμματα περιήγησης
+  scratch_platformtext: Φυλλομετρητές μόνο για προσωπικούς υπολογιστές(όχι για τάμπλετ)
+  lightbot_platformtext: ΟΛΑ προγράμματα περιήγησης και iOS, Android, ή κονσόλες παιχνιδιών
+  thinkersmith_platformtext: Χωρίς σύνδεση
+  condcards_platformtext: Χωρίς σύνδεση
   lightbotintl_platformtext: iOS, Android (ή πρόγραμμα περιήγησης)
-  codehs_platformtext: "Σύγχρονα προγράμματα περιήγησης (browsers). (Για τα επόμενα
-    μαθήματα απαιτούνται $$)"
-  codecademy_platformtext: "Σύγχρονα προγράμματα περιήγησης. iOS, Android εφαρμογές"
-  codecombat_platformtext: "Σύγχρονοι φυλλομετρητές( Η παρακολούθηση της σειράς των
-    μαθηματων απαιτεί $$)"
-  codemonkey_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  codeavengers_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  processing_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  robomind_platformtext: "Σύγχρονα προγράμματα περιήγησης, κινητά"
-  groklearning_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  quorum_platformtext: "Σύγχρονα προγράμματα περιήγησης. Υποστηρίζονται αναγνώστες
-    οθόνης"
+  codehs_platformtext: Σύγχρονα προγράμματα περιήγησης (browsers). (Για τα επόμενα
+    μαθήματα απαιτούνται $$)
+  codecademy_platformtext: Σύγχρονα προγράμματα περιήγησης. iOS, Android εφαρμογές
+  codecombat_platformtext: Σύγχρονοι φυλλομετρητές( Η παρακολούθηση της σειράς των
+    μαθηματων απαιτεί $$)
+  codemonkey_platformtext: Σύγρονα Προγράμματα περιήγησης
+  codeavengers_platformtext: Σύγρονα Προγράμματα περιήγησης
+  processing_platformtext: Σύγρονα Προγράμματα περιήγησης
+  robomind_platformtext: Σύγχρονα προγράμματα περιήγησης, κινητά
+  groklearning_platformtext: Σύγρονα Προγράμματα περιήγησης
+  quorum_platformtext: Σύγχρονα προγράμματα περιήγησης. Υποστηρίζονται αναγνώστες
+    οθόνης
   codespark_platformtext: iOS, Android (ή πρόγραμμα περιήγησης)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android ταμπλέτες
-  robomindnl_platformtext: "Σύγχρονα προγράμματα περιήγησης, κινητά"
-  flappy_platformtext: "Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες"
-  bitsbox_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  makeschool_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  touchdevelop_platformtext: "Σύγχρονα προγράμματα περιήγησης, smartphones, όλες οι
-    συσκευές"
-  appinventor_platformtext: "Σύγχρονα προγράμματα περιήγησης + Android"
-  blockly_platformtext: "Σύγχρονα προγράμματα περιήγησης μόνο"
-  thinkersmith2_platformtext: "Χωρίς σύνδεση"
-  kodableunplugged_platformtext: "Χωρίς σύνδεση"
-  projguts_platformtext: "Χωρίς σύνδεση"
-  hourofcode_platformtext: "Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες"
-  frozen_platformtext: "Σύγχρονα προγράμματα περιήγησης + ταμπλέτες"
-  playlab_platformtext: "Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες"
-  codeorg_shortdescription: "Μάθετε να γράφετε κώδικα με τον Mark Zuckerberg και τα
-    Θυμωμένα Πουλιά!"
-  codeintl_shortdescription: "Μάθετε να γράφετε κώδικα με τον Mark Zuckerberg και
-    τα Θυμωμένα Πουλιά!"
-  thinkersmithspanish_shortdescription: "Σεμινάριο για μια ομάδα χωρίς υπολογιστές"
-  khan_shortdescription: "Μάθετε να σχεδιάζετε σε JavaScript"
-  khanes_shortdescription: "Μάθετε να σχεδιάζετε σε JavaScript"
-  khanpt_shortdescription: "Μάθετε να σχεδιάζετε σε JavaScript"
-  khanhe_shortdescription: "Μάθετε να σχεδιάζετε σε JavaScript"
-  khanfr_shortdescription: "Μάθετε να σχεδιάζετε σε JavaScript"
-  khanpl_shortdescription: "Μάθετε να σχεδιάζετε σε JavaScript"
-  tynker_shortdescription: "Μάθετε να γράφετε κώδικα λύνοντας διασκεδαστικά παζλ και
-    φτιάξτε τα δικά σας παιχνίδια για κινητά."
-  scratch_shortdescription: "Δημιουργήστε διαδραστικά παιχνίδια, ιστορίες και κινούμενα
-    σχέδια."
-  lightbot_shortdescription: "Προγραμματίστε το Lightbot για να λύσετε παζλ χρησιμοποιώντας
-    διαδικασίες και βρόχους!"
-  thinkersmith_shortdescription: "Οδηγός χωρίς σύνδεση για τμήματα χωρίς συσκευές"
-  condcards_shortdescription: "Μάθετε αλγορίθμους με μία τράπουλα"
-  lightbotintl_shortdescription: "Ένα παιχνίδι που διδάσκει έννοιες προγραμματισμού"
-  codehs_shortdescription: "Ξεκινήστε να γράφετε κώδικα με τον Karel το Σκυλί, μία
-    διασκεδαστική και οπτική εισαγωγή στον προγραμματισμό!"
-  codecademy_shortdescription: "Μάθετε προγραμματισμό JavaScript, σε ένα πρόγραμμα
-    περιήγησης"
-  codecombat_shortdescription: "Νικήστε τα ogres για να μάθετε Python ή JavaScript
-    σε αυτό το επικό παιχνίδι προγραμματισμού!"
-  codemonkey_shortdescription: "Οι μαθητές προγραμματίζουν μια μαϊμού έτσι ώστε να
-    μαζεύει μπανάνες."
-  codeavengers_shortdescription: "Μάθετε προγραμματισμό JavaScript, σε ένα πρόγραμμα
-    περιήγησης"
-  processing_shortdescription: "Μία ωριαία εισαγωγή στις γλώσσες Επεξεργασίας"
-  robomind_shortdescription: "Γράψτε κώδικα για ένα εικονικό ρομπότ"
+  robomindnl_platformtext: Σύγχρονα προγράμματα περιήγησης, κινητά
+  flappy_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
+  bitsbox_platformtext: Σύγρονα Προγράμματα περιήγησης
+  makeschool_platformtext: Σύγρονα Προγράμματα περιήγησης
+  touchdevelop_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, όλες οι
+    συσκευές
+  appinventor_platformtext: Σύγχρονα προγράμματα περιήγησης + Android
+  blockly_platformtext: Σύγχρονα προγράμματα περιήγησης μόνο
+  thinkersmith2_platformtext: Χωρίς σύνδεση
+  kodableunplugged_platformtext: Χωρίς σύνδεση
+  projguts_platformtext: Χωρίς σύνδεση
+  hourofcode_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
+  frozen_platformtext: Σύγχρονα προγράμματα περιήγησης + ταμπλέτες
+  starwars_platformtext: Σύγχρονα προγράμματα περιήγησης + ταμπλέτες
+  playlab_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
+  codeorg_shortdescription: Μάθετε να γράφετε κώδικα με τον Mark Zuckerberg και τα
+    Θυμωμένα Πουλιά!
+  codeintl_shortdescription: Μάθετε να γράφετε κώδικα με τον Mark Zuckerberg και τα
+    Θυμωμένα Πουλιά!
+  thinkersmithspanish_shortdescription: Σεμινάριο για μια ομάδα χωρίς υπολογιστές
+  khan_shortdescription: Μάθετε να σχεδιάζετε σε JavaScript
+  khanes_shortdescription: Μάθετε να σχεδιάζετε σε JavaScript
+  khanpt_shortdescription: Μάθετε να σχεδιάζετε σε JavaScript
+  khanhe_shortdescription: Μάθετε να σχεδιάζετε σε JavaScript
+  khanfr_shortdescription: Μάθετε να σχεδιάζετε σε JavaScript
+  khanpl_shortdescription: Μάθετε να σχεδιάζετε σε JavaScript
+  tynker_shortdescription: Μάθετε να γράφετε κώδικα λύνοντας διασκεδαστικά παζλ και
+    φτιάξτε τα δικά σας παιχνίδια για κινητά.
+  scratch_shortdescription: Δημιουργήστε διαδραστικά παιχνίδια, ιστορίες και κινούμενα
+    σχέδια.
+  lightbot_shortdescription: Προγραμματίστε το Lightbot για να λύσετε παζλ χρησιμοποιώντας
+    διαδικασίες και βρόχους!
+  thinkersmith_shortdescription: Οδηγός χωρίς σύνδεση για τμήματα χωρίς συσκευές
+  condcards_shortdescription: Μάθετε αλγορίθμους με μία τράπουλα
+  lightbotintl_shortdescription: Ένα παιχνίδι που διδάσκει έννοιες προγραμματισμού
+  codehs_shortdescription: Ξεκινήστε να γράφετε κώδικα με τον Karel το Σκυλί, μία
+    διασκεδαστική και οπτική εισαγωγή στον προγραμματισμό!
+  codecademy_shortdescription: Μάθετε προγραμματισμό JavaScript, σε ένα πρόγραμμα
+    περιήγησης
+  codecombat_shortdescription: Νικήστε τα ogres για να μάθετε Python ή JavaScript
+    σε αυτό το επικό παιχνίδι προγραμματισμού!
+  codemonkey_shortdescription: Οι μαθητές προγραμματίζουν μια μαϊμού έτσι ώστε να
+    μαζεύει μπανάνες.
+  codeavengers_shortdescription: Μάθετε προγραμματισμό JavaScript, σε ένα πρόγραμμα
+    περιήγησης
+  processing_shortdescription: Μία ωριαία εισαγωγή στις γλώσσες Επεξεργασίας
+  robomind_shortdescription: Γράψτε κώδικα για ένα εικονικό ρομπότ
   groklearning_shortdescription: Δίδαξε την  "Ελίζα" το chatbot  να ξεγελά  τους φίλους
     σας ώστε να νομίζουν ότι είναι άνθρωπος!
-  quorum_shortdescription: "Ακολουθήστε τη Μαίρη σε μια καθοδηγούμενη ξενάγηση  καθώς
-    μαθαίνει τη γλώσσα προγραμματισμού Quorum."
-  codespark_shortdescription: "Το Foos είναι ένα διασκεδαστικό, φιλικό προς τα παιδιά
-    παιχνίδι με το οποίο θα μάθετε πώς να προγραμματίζετε."
-  kodable_shortdescription: "Ένα διασκεδαστικό παιχνίδι για το  iPad για να μάθετε
-    έννοιες  προγραμματισμού  στον υπολογιστή"
-  tynkerapp_shortdescription: "Μάθετε να προγραμματίζετε λύνοντας διασκεδαστικούς
-    γρίφους με κώδικα. "
-  robomindnl_shortdescription: "Γράψτε κώδικα για ένα εικονικό ρομπότ"
-  flappy_shortdescription: "Δημιουργήστε  το δικό σας παιχνίδι - Το Πουλί Flappy,
-    τον Καρχαρία, ή το Υποβρύχιο"
-  bitsbox_shortdescription: "Γράψτε μια σειρά από εφαρμογές για παιγνίδι και μοίρασμα
-    χρησιμοποιώντας αληθινή JavaScript."
-  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach
-    your monster new moves!
-  touchdevelop_shortdescription: "Λύστε γρίφους, δημιουργήστε παιχνίδια και μάθετε
-    να γράφετε κώδικα στο τηλέφωνό σας. "
-  appinventor_shortdescription: "Κάντε τη δική σας εφαρμογή! (Μόνο για android)"
-  blockly_shortdescription: "Κατεβάσετε ένα αρχείο ZIP για να μάθετε τοπικά στον υπολογιστή"
-  thinkersmith2_shortdescription: "Μάθετε πώς οι υπολογιστές χρησιμοποιούν 1 και 0
-    για να αναπαριστούν πληροφορίες"
-  kodableunplugged_shortdescription: "Μια  διασκεδαστική άσκηση χωρίς τη χρήση υπολογιστή"
-  projguts_shortdescription: "Δοκιμάστε τη μοντελοποίηση και την προσομοίωση χρησιμοποιώντας
-    πέτρα/ψαλίδι/χαρτί"
-  hourofcode_shortdescription: "Σύμβολο κράτησης θέσης για το νέο code.org/hoc"
-  frozen_shortdescription: "Ας χρησιμοποιήσουμε τον Κώδικα να πάμε μαζί με την Άννα
-    και την Έλσα, καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου."
-  playlab_shortdescription: "Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο
-    Παιχνιδιού!"
-  codeorg_longdescription: "Μάθετε τις βασικές έννοιες της Επιστήμης των Υπολογιστών
+  quorum_shortdescription: Ακολουθήστε τη Μαίρη σε μια καθοδηγούμενη ξενάγηση  καθώς
+    μαθαίνει τη γλώσσα προγραμματισμού Quorum.
+  codespark_shortdescription: Το Foos είναι ένα διασκεδαστικό, φιλικό προς τα παιδιά
+    παιχνίδι με το οποίο θα μάθετε πώς να προγραμματίζετε.
+  kodable_shortdescription: Ένα διασκεδαστικό παιχνίδι για το iPad για να μάθετε έννοιες
+    προγραμματισμού υπολογιστών
+  tynkerapp_shortdescription: 'Μάθετε να προγραμματίζετε λύνοντας διασκεδαστικούς
+    γρίφους με κώδικα. '
+  robomindnl_shortdescription: Γράψτε κώδικα για ένα εικονικό ρομπότ
+  flappy_shortdescription: Δημιουργήστε  το δικό σας παιχνίδι - Το Πουλί Flappy, τον
+    Καρχαρία, ή το Υποβρύχιο
+  bitsbox_shortdescription: Γράψτε μια σειρά από εφαρμογές για παιγνίδι και μοίρασμα
+    χρησιμοποιώντας αληθινή JavaScript.
+  makeschool_shortdescription: Κάντε ένα παιχνίδι για iPhone! Μάθετε γράφοντας κώδικα
+    για να διδάξετε στο τέρας σας νέες κινήσεις!
+  touchdevelop_shortdescription: 'Λύστε γρίφους, δημιουργήστε παιχνίδια και μάθετε
+    να γράφετε κώδικα στο τηλέφωνό σας. '
+  appinventor_shortdescription: Κάντε τη δική σας εφαρμογή! (Μόνο για android)
+  blockly_shortdescription: Κατεβάσετε ένα αρχείο ZIP για να μάθετε τοπικά στον υπολογιστή
+  thinkersmith2_shortdescription: Μάθετε πώς οι υπολογιστές χρησιμοποιούν 1 και 0
+    για να αναπαριστούν πληροφορίες
+  kodableunplugged_shortdescription: Μια  διασκεδαστική άσκηση χωρίς τη χρήση υπολογιστή
+  projguts_shortdescription: Δοκιμάστε τη μοντελοποίηση και την προσομοίωση χρησιμοποιώντας
+    πέτρα/ψαλίδι/χαρτί
+  hourofcode_shortdescription: Σύμβολο κράτησης θέσης για το νέο code.org/hoc
+  frozen_shortdescription: Ας χρησιμοποιήσουμε τον Κώδικα να πάμε μαζί με την Άννα
+    και την Έλσα, καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου.
+  starwars_shortdescription: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το
+    δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
+  playlab_shortdescription: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο
+    Παιχνιδιού!
+  infinity_shortdescription: Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία
+    ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
+  artist_shortdescription: Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!
+  codeorg_longdescription: Μάθετε τις βασικές έννοιες της Επιστήμης των Υπολογιστών
     με προγραμματισμό drag and drop. Αυτό είναι ένα παιγνιώδες, αυτοκαθοδηγούμενο
     μάθημα με πρωταγωνιστές σε βιντεοδιαλέξεις τους Bill Gates, Mark Zuckerberg, τα
     Αngry Birds και τα Φυτά  εναντίον Ζόμπι. Μάθετε επαναληπτικούς βρόχους, συνθήκες
-    και βασικούς αλγορίθμους. Διαθέσιμο σε 34 γλώσσες."
-  codeintl_longdescription: "Μάθετε τις βασικές έννοιες της Επιστήμης των Υπολογιστών
+    και βασικούς αλγορίθμους. Διαθέσιμο σε 34 γλώσσες.
+  codeintl_longdescription: Μάθετε τις βασικές έννοιες της Επιστήμης των Υπολογιστών
     με προγραμματισμό drag and drop. Αυτό είναι ένα παιγνιώδες, αυτοκαθοδηγούμενο
     μάθημα με πρωταγωνιστές σε βιντεοδιαλέξεις τους Bill Gates, Mark Zuckerberg, τα
     Αngry Birds και τα Φυτά  εναντίον Ζόμπι. Μάθετε επαναληπτικούς βρόχους, συνθήκες
-    και βασικούς αλγορίθμους. Διαθέσιμο σε 34 γλώσσες."
+    και βασικούς αλγορίθμους. Διαθέσιμο σε 34 γλώσσες.
   thinkersmithspanish_longdescription: Οι μαθητές χρησιμοποιώντας ένα προκαθορισμένο
     "Λεξικό του Ρομπότ" θα ανακαλύψουν τρόπους  να  κατευθύνουν ο ένας τον άλλο ώστε
     να τελειώσουν συγκεκριμένες εργασίες για τις οποίες δεν έχουν συζητήσει προηγουμένως.  Με
     αυτό το μάθημα τα παιδιά μαθαίνουν την σύνδεση ανάμεσα στα σύμβολα και τις ενέργειες,
     όπως επίσης και την ανεκτίμητη δεξιότητα του εντοπισμού σφαλμάτων.
-  khan_longdescription: "Μάθετε τα βασικά του προγραμματισμού σε JavaScript, ενώ  δημιουργείτε
-    \ διασκεδαστικά σχέδια με τον κώδικα σας. Κάνετε το μόνοι σας ή με την τάξη σας!"
-  khanes_longdescription: "Μάθετε τα βασικά του προγραμματισμού σε JavaScript, ενώ
-    \ δημιουργείτε  διασκεδαστικά σχέδια με τον κώδικα σας. Κάνετε το μόνοι σας ή
-    με την τάξη σας!"
-  khanpt_longdescription: "Μάθετε τα βασικά του προγραμματισμού σε JavaScript, ενώ
-    \ δημιουργείτε  διασκεδαστικά σχέδια με τον κώδικα σας. Κάνετε το μόνοι σας ή
-    με την τάξη σας!"
-  khanhe_longdescription: "Μάθετε τα βασικά του προγραμματισμού σε JavaScript, ενώ
-    \ δημιουργείτε  διασκεδαστικά σχέδια με τον κώδικα σας. Κάνετε το μόνοι σας ή
-    με την τάξη σας!"
-  khanfr_longdescription: "Μάθετε τα βασικά του προγραμματισμού σε JavaScript, ενώ
-    \ δημιουργείτε  διασκεδαστικά σχέδια με τον κώδικα σας. Κάνετε το μόνοι σας ή
-    με την τάξη σας!"
-  khanpl_longdescription: "Μάθετε τα βασικά του προγραμματισμού σε JavaScript, ενώ
-    \ δημιουργείτε  διασκεδαστικά σχέδια με τον κώδικα σας. Κάνετε το μόνοι σας ή
-    με την τάξη σας!"
-  tynker_longdescription: "Χτίστε τα δικά σας παιχνίδια και μοιραστείτε τα με τους
-    φίλους σας! Λύστε διασκεδαστικά  παζλ κώδικα και μάθετε έννοιες προγραμματισμού
-    \ σε κάθε επίπεδο. Εξατομικεύστε παιχνίδια με χαρακτήρες κινουμένων σχεδίων, πολλαπλά
+  khan_longdescription: Μάθετε τα βασικά του προγραμματισμού σε JavaScript, ενώ  δημιουργείτε  διασκεδαστικά
+    σχέδια με τον κώδικα σας. Κάνετε το μόνοι σας ή με την τάξη σας!
+  khanes_longdescription: Μάθετε τα βασικά του προγραμματισμού σε JavaScript, ενώ  δημιουργείτε  διασκεδαστικά
+    σχέδια με τον κώδικα σας. Κάνετε το μόνοι σας ή με την τάξη σας!
+  khanpt_longdescription: Μάθετε τα βασικά του προγραμματισμού σε JavaScript, ενώ  δημιουργείτε  διασκεδαστικά
+    σχέδια με τον κώδικα σας. Κάνετε το μόνοι σας ή με την τάξη σας!
+  khanhe_longdescription: Μάθετε τα βασικά του προγραμματισμού σε JavaScript, ενώ  δημιουργείτε  διασκεδαστικά
+    σχέδια με τον κώδικα σας. Κάνετε το μόνοι σας ή με την τάξη σας!
+  khanfr_longdescription: Μάθετε τα βασικά του προγραμματισμού σε JavaScript, ενώ  δημιουργείτε  διασκεδαστικά
+    σχέδια με τον κώδικα σας. Κάνετε το μόνοι σας ή με την τάξη σας!
+  khanpl_longdescription: Μάθετε τα βασικά του προγραμματισμού σε JavaScript, ενώ  δημιουργείτε  διασκεδαστικά
+    σχέδια με τον κώδικα σας. Κάνετε το μόνοι σας ή με την τάξη σας!
+  tynker_longdescription: Χτίστε τα δικά σας παιχνίδια και μοιραστείτε τα με τους
+    φίλους σας! Λύστε διασκεδαστικά  παζλ κώδικα και μάθετε έννοιες προγραμματισμού  σε
+    κάθε επίπεδο. Εξατομικεύστε παιχνίδια με χαρακτήρες κινουμένων σχεδίων, πολλαπλά
     επίπεδα και πλούσια σκηνικά. Κάντε τα παιχνίδια σας ρεαλιστικά με τη χρήση φυσικής.
     Δείτε τον κώδικα ως οπτικά πλακίδια ή ως JavaScript. Παίξτε τα  παιχνίδια σας
     σε iPads και Android tablets. Πάνω από μια δεκάδα διασκεδαστικές δραστηριότητες
-    για να διαλέξετε!"
-  scratch_longdescription: "Με το Scratch, μπορείτε να δημιουργήσετε τα δικά σας αλληλεπιδραστικά
+    για να διαλέξετε!
+  scratch_longdescription: Με το Scratch, μπορείτε να δημιουργήσετε τα δικά σας αλληλεπιδραστικά
     παιχνίδια, ιστορίες, κινούμενα σχέδια &mdash; και να τα μοιραστείτε με τους φίλους
     σας. Ξεκινήσετε με το να κινήσετε  το όνομά σας, να δημιουργήσετε  μια εορταστική
-    κάρτα, ή να κάνετε ένα παιχνίδι πονγκ."
-  lightbot_longdescription: "Οδηγός Lightbot: για να ανάψουν όλα τα μπλε πλακίδια!
+    κάρτα, ή να κάνετε ένα παιχνίδι πονγκ.
+  lightbot_longdescription: 'Οδηγός Lightbot: για να ανάψουν όλα τα μπλε πλακίδια!
     Το Lightbot είναι ένα παιχνίδι γρίφων που χρησιμοποιεί προγραμματιστικούς μηχανισμούς
     παιχνιδιών για να δώσει την ευκαιρία στους παίκτες να κατανοήσουν βασικές αρχές
     του προγραμματισμού. Μάθετε πώς να δημιουργείτε ακολουθίες εντολών, να γράφετε
-    διαδικασίες και να χρησιμοποιείτε βρόχους. Ιδανικό για όλες τις ηλικίες."
+    διαδικασίες και να χρησιμοποιείτε βρόχους. Ιδανικό για όλες τις ηλικίες.'
   thinkersmith_longdescription: Χρησιμοποιώντας ένα προκαθορισμένο "Ρομποτικό Λεξικό"
     οι μαθητές θα καθοδηγηθούν στην ολοκλήρωση συγκεκριμένων διεργασιών χωρίς να τις
     συζητήσουν προηγουμένως. Αυτό το μάθημα διδάσκει στα παιδιά τη σύνδεση μεταξύ
@@ -920,429 +1029,434 @@
     αυτή την "unplugged" δραστηριότητα χρησιμοποιώντας μία στοίβα από χαρτιά. Οι μαθητές
     εκτελούν τη δραστηριότητα σε ομάδες και χρειάζονται μία στοίβα από χαρτιά ανά
     ομάδα.
-  lightbotintl_longdescription: "Μάθετε τη λογική του προγραμματισμού, ξεκινώντας
-    από υπεραπλουστευμένο προγραμματισμό, για ηλικίες 4+, σε IOS ή Android (ή σε Φυλλομετρητή
+  lightbotintl_longdescription: Μάθετε τη λογική του προγραμματισμού, ξεκινώντας από
+    υπεραπλουστευμένο προγραμματισμό, για ηλικίες 4+, σε IOS ή Android (ή σε Φυλλομετρητή
     Ιστοτόπων). Μάθετε πως να δίνετε διαδοχικές εντολές, να αναγνωρίζετε μοτίβα, να
-    χρησιμοποιείτε διαδικασίες, και να αξιοποιείτε τις επαναλήψεις!"
-  codehs_longdescription: "Δίνοντας εντολές σε έναν Η/Υ, που είναι ακριβώς η έννοια
+    χρησιμοποιείτε διαδικασίες, και να αξιοποιείτε τις επαναλήψεις!
+  codehs_longdescription: Δίνοντας εντολές σε έναν Η/Υ, που είναι ακριβώς η έννοια
     του προγραμματισμού, είναι σαν να δίνετε εντολές σε έναν σκύλο. Μάθετε πως να
     προγραμματίζετε με τον Κάρελ τον Σκύλο - μία διασκεδαστική, προσβάσιμη και οπτική
     εισαγωγή στον προγραμματισμό που μαθαίνει τις θεμελιώδεις αρχές του όπως τις εντολές
     και τις συναρτήσεις σε απολύτως αρχάριους χρήστες. Η επεξηγηματική εισαγωγή είναι
     προσανατολισμένη στους μαθητές αλλά και οι εκπαιδευτικοί μπορούν να συνδεθούν
-    για να έχουν πρόσβαση σε εκπαιδευτικά εργαλεία και στην πρόοδο των μαθητών!"
+    για να έχουν πρόσβαση σε εκπαιδευτικά εργαλεία και στην πρόοδο των μαθητών!
   codecademy_longdescription: Η Codeacademy είναι μια αλληλεπιδραστική, οδηγούμενη
     από τους μαθητές εισαγωγή στις βασικές αρχές της Πληροφορικής μέσω της Javascript
     που χρησιμοποιείται από δεκάδες εκατομμύρια μαθητών σε όλον τον κόσμο. Έχουμε
     προετοιμάσει μία ξεκούραστη εμπειρία με τίτλο "Η Ώρα του Κώδικα" που τη συνοδεύουν
     κουίζ, διαφάνειες και ένα ολοκληρωμένο project για τους μαθητές στο τέλος.
-  codecombat_longdescription: "Νικήστε τα ogres για να μάθετε Python ή JavaScript
-    σε αυτό το επικό παιχνίδι προγραμματισμού!"
-  codemonkey_longdescription: "Το CodeMonkey είναι ένα δικτυακό παιχνίδι που διδάσκει
+  codecombat_longdescription: Νικήστε τα ogres για να μάθετε Python ή JavaScript σε
+    αυτό το επικό παιχνίδι προγραμματισμού!
+  codemonkey_longdescription: 'Το CodeMonkey είναι ένα δικτυακό παιχνίδι που διδάσκει
     προγραμματισμό σε μία πραγματική γλώσσα προγραμματισμού! Οι μαθητές προγρμματίζουν
     μία μαϊμού να πιάνει μπανάνες ενώ το παιχνίδι γίνεται όλο και πιο πολύπλοκο σε
     κάθε επίπεδο. Βλέπουν το σκορ τους με κάθε λύση και το μπορούν να το μοιράζονται
-    με ένα κλικ. "
-  codeavengers_longdescription: "Φτιάξτε ένα διδιάστατο παιχνίδι για 2 παίκτες από
+    με ένα κλικ. '
+  codeavengers_longdescription: Φτιάξτε ένα διδιάστατο παιχνίδι για 2 παίκτες από
     την κορυφή μέχρι τη βάση με την Javascript με 10 μικρές δραστηριότητες. Συνεχίστε
     να μαθαίνετε κάποια βασικά στοιχεία του προγραμματισμού (μεταβλητές και δηλώσεις
     επιλογής) καθώς δημιουργείτε ένα Κουίζ για να το μοιραστείτε με τους φίλους σας.
     Κατά τη διαδρομή κερδίστε πόντους και σήματα καθώς συναγωνίζεστε για να φτάσετε
-    στην κορυφή της κατάταξης στην τάξη."
-  processing_longdescription: "Μία εισαγωγή στον προγραμματισμό στο πλαίσιο των οπτικών
+    στην κορυφή της κατάταξης στην τάξη.
+  processing_longdescription: Μία εισαγωγή στον προγραμματισμό στο πλαίσιο των οπτικών
     τεχνών χρησιμοποιώντας την γλώσσα προγραμματισμού με Διαδικασίες. Σύντομα μαθήματα
     μέσω video σας εισάγουν σε ασκήσεις προγραμματισμού που οδηγούν στην κατασκευή
-    ενός αλληλεπιδραστικού προγράμματος σχεδίασης"
-  robomind_longdescription: "Οι μαθητές διδάσκονται τα βασικά του προγραμματισμού
+    ενός αλληλεπιδραστικού προγράμματος σχεδίασης
+  robomind_longdescription: 'Οι μαθητές διδάσκονται τα βασικά του προγραμματισμού
     ελέγχοντας το δικό τους ρομπότ. Το δικτυακό μάθημα είναι πλήρες με σύντομες παρουσιάσεις,
     φιλμάκια, κουίζ και αυτοματοποιημένη καθοδήγηση/βοήθεια για την εκτέλεση των ασκήσεων
-    προγραμματισμού. "
+    προγραμματισμού. '
   groklearning_longdescription: Χρησιμοποιήστε την γλώσσα Python για να φτιάξετε ένα
     ρομπότ συνομιλίας με όνομα "Eliza" το οποίο θα λειτουργεί σαν ρομπότ ψυχοθεραπευτής.
     Θα μάθετε την Ελίζα πως να μιλάει και πως να απαντάει σωστά. Μπορεί να παραολανήσει
     τους φίλους σας και να τους κάνει να νομίζουν ότι είναι άνθρωπος και όχι υπολογιστής;
-  quorum_longdescription: "Αυτό το μάθημα είναι προσβάσιμο για άτομα με προβήματα
-    όρασης, και λειτουργει με αναγνώστες οθόνης. Ελάτε σε μία ξενάγηση με τη Mary
-    καθώς ξεκινάει να εργάζεται σε ένα εργαστήριο βιολογίας ως προγραμματίστρια και
-    μαθαίνει τη γλώσσα προγραμματισμού Quorum. Αυτό το μάθημα είναι οδηγούμενο από
-    τους μαθητές με online παραδείγματα δραστηριοτήτων."
-  codespark_longdescription: "Τα Foos είναι ένα διασκεδαστικός και φιλικός προς τα
+  quorum_longdescription: Αυτό το μάθημα είναι προσβάσιμο για άτομα με προβήματα όρασης,
+    και λειτουργει με αναγνώστες οθόνης. Ελάτε σε μία ξενάγηση με τη Mary καθώς ξεκινάει
+    να εργάζεται σε ένα εργαστήριο βιολογίας ως προγραμματίστρια και μαθαίνει τη γλώσσα
+    προγραμματισμού Quorum. Αυτό το μάθημα είναι οδηγούμενο από τους μαθητές με online
+    παραδείγματα δραστηριοτήτων.
+  codespark_longdescription: Τα Foos είναι ένα διασκεδαστικός και φιλικός προς τα
     παιδιά τρόπος να μάθουν Προγραμματισμό. Προγραμματείστε χαριτωμένους χαρακτήρες
     να λύσουν γρίφους και ζωντανέψτε έναν εικονικό κόσμο. Το παιχνίδι δεν περιέχει
-    κείμενο έτσι όλοι μπορούν να παίξουν!"
-  kodable_longdescription: "Το Kodable είναι ένα αυτόματα οδηγούμενο παιχνίδι για
-    Ipad που εισάγει τα παιδιά ηλικιών από 5 και άνω στα βασικά του προγραμματισμού.
-    Το να υπάρχει δάσκαλος ή γονιός κοντά είναι ιδανικό αν και όχι απαραίτητο."
-  tynkerapp_longdescription: "Μάθετε να προγραμματίζετε λύνοντας διασκεδαστικούς γρίφους
+    κείμενο έτσι όλοι μπορούν να παίξουν!
+  kodable_longdescription: Το Kodable είναι ένα αυτόματα οδηγούμενο παιχνίδι για Ipad
+    που εισάγει τα παιδιά ηλικιών από 5 και άνω στα βασικά του προγραμματισμού. Το
+    να υπάρχει δάσκαλος ή γονιός κοντά είναι ιδανικό αν και όχι απαραίτητο.
+  tynkerapp_longdescription: Μάθετε να προγραμματίζετε λύνοντας διασκεδαστικούς γρίφους
     με κώδικα. Φτιάξτε εύκολα ιστορίες και παιχνίδια με γραφικά διαφόρων θεμάτων,
     πάνω από 10 κιτ παιχνιδιών και προσαρμόσιμους χαρακτήρες. Δεν απαιτείται σύνδεση
-    στο διαδίκτυο. Επίσης μπορείτε να έχετε πρόσβαση στις δημιουργίες σας μέσω διαδικτύου."
-  robomindnl_longdescription: "Οι μαθητές διδάσκονται τα βασικά του προγραμματισμού
+    στο διαδίκτυο. Επίσης μπορείτε να έχετε πρόσβαση στις δημιουργίες σας μέσω διαδικτύου.
+  robomindnl_longdescription: 'Οι μαθητές διδάσκονται τα βασικά του προγραμματισμού
     ελέγχοντας το δικό τους ρομπότ. Το δικτυακό μάθημα είναι πλήρες με σύντομες παρουσιάσεις,
     φιλμάκια, κουίζ και αυτοματοποιημένη καθοδήγηση/βοήθεια για την εκτέλεση των ασκήσεων
-    προγραμματισμού. "
-  flappy_longdescription: "Χρησιμοποιήστε το ποντίκι για να προγραμματίσετε το δικό
+    προγραμματισμού. '
+  flappy_longdescription: Χρησιμοποιήστε το ποντίκι για να προγραμματίσετε το δικό
     σας παιχνίδι Flappy Bird και να το προσαρμόσετε για να μοιάζει διαφορετικό (Flappy
     Καρχαρίας, Flappy Άγιος Βασίλης, ότι να 'ναι). Προσθέστε το παιχνίδι στο τηλέφωνό
-    σας με ένα κλικ."
-  bitsbox_longdescription: "Προσαρμόστε τη δική σας εικονική ταμπλέτα και προγραμματίστε
+    σας με ένα κλικ.
+  bitsbox_longdescription: Προσαρμόστε τη δική σας εικονική ταμπλέτα και προγραμματίστε
     μία σειρά από εφαρμογές για να παίξετε και να μοιραστείτε. Απλοί οδηγοί το κάνουν
     δυνατό ακόμη και για μικρά παιδιά να προγραμματίσουν σε πραγματική Javascript
-    και όσο πιο προχωρημένος είστε τόσο θα προχωρήσετε παρακάτω."
-  makeschool_longdescription: Learn to code by making an iPhone game using a brand
-    new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
-    action game and write code to teach your monster new moves. You will learn how
-    to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: "Αυτός ο editor είναι κατάλληλος για οθόνες αφής και
+    και όσο πιο προχωρημένος είστε τόσο θα προχωρήσετε παρακάτω.
+  makeschool_longdescription: Μάθετε να προγραμματίζετε φτιάχνοντας ένα παιχνίδι για
+    το iPhone χρησιμοποιώντας τη Swift, μια ολοκαίνουργια γλώσσα προγραμματισμού κατάλληλη
+    και για αρχάριους! Δημιουργήστε ένα παιχνίδι δράσης εμπνευσμένο από τα Pokemon
+    και γράψτε κώδικα γα να μάθετε νέες κινήσεις στο τέρας σας. Θα μάθετε πως να χρησιμοποιείτε
+    μεταβλητές, μεθόδους και αντικείμενα για να βοηθήσετε το τέρας σας να νικήσει!
+  touchdevelop_longdescription: 'Αυτός ο editor είναι κατάλληλος για οθόνες αφής και
     θα σας βοηθήσει να δημιουργήσετε τέχνη με pixel, να λύσετε το γρίφο της αρκούδας
-    ή να φτιάξετε δικό σας παιχνίδι με το πουλί που πηδάει. "
-  appinventor_longdescription: "Διασκεδαστικοί, σύντομοι οδηγοί βίντεο σας οδηγούν
+    ή να φτιάξετε δικό σας παιχνίδι με το πουλί που πηδάει. '
+  appinventor_longdescription: Διασκεδαστικοί, σύντομοι οδηγοί βίντεο σας οδηγούν
     κατά την κατασκευή τριών απλών εφαρμογών για το τηλέφωνο Android ή την ταμπλέτα.
     Σχεδιασμένοι για αρχάριους και προχωρημένους, αυτή η ώρα του κώδικα θα σας ετοιμάσει
     ώστε να κατασκευάσετε τις δικές σας εφαρμογές πριν το καταλάβετε. Φανταστείτε
     να μοιράζεστε τις εφαρμογές που κατασκευάσατε με τους φίλους σας! Αυτές οι δραστηριότητες
-    είναι κατάλληλες για άτομα και εκπαιδευτικούς που διδάσκουν σε τάξεις."
-  blockly_longdescription: "Έχετε PC με αργή (ή ανύπαρκτη) σύνδεση στο Internet; Κατεβάστε
+    είναι κατάλληλες για άτομα και εκπαιδευτικούς που διδάσκουν σε τάξεις.
+  blockly_longdescription: Έχετε PC με αργή (ή ανύπαρκτη) σύνδεση στο Internet; Κατεβάστε
     τους οδηγούς του Blockly που ήταν ο πρόδρομος των οδηγών του Code.org - ένα αρχείο
     zip 3MB που μπορείτε να φορτώσετε σε οποιονδήποτε υπολογιστή ή να το τρέξετε από
-    στικ"
-  thinkersmith2_longdescription: "Οι μαθητές μαθαίνουν για την εκπροσώπευση και την
+    στικ
+  thinkersmith2_longdescription: Οι μαθητές μαθαίνουν για την εκπροσώπευση και την
     αποθήκευση γραμμάτων σε δυαδική μορφή, ως συναρτήσεις on και off. Στο τέλος, οι
     μαθητές στην τάξη κατορθώνουν να κωδικοποιήσουν τα αρχικά τους και να τα πάρουν
-    στο σπίτι μαζί τους."
-  kodableunplugged_longdescription: "Σχεδιασμένο για χρήση με απλό χαρτή, αυτό το
+    στο σπίτι μαζί τους.
+  kodableunplugged_longdescription: 'Σχεδιασμένο για χρήση με απλό χαρτή, αυτό το
     fuzzFamily Frenzy είναι μία εισαγωγή στη λογική του προγραμματισμού για παιδιά
     5 ετών και άνω. Ένας δάσκαλος θα πρέπει να εξηγήσει το παιχνίδι και οι μαθητές
-    να προγραμματίσουν το συμπαίκτη τους για να ολοκληρώσουν μία πορεία με εμπόδια. "
-  projguts_longdescription: "Αυτή η εκτός σύνδεσης δραστηριότητα βοηθά τους μαθητές
+    να προγραμματίσουν το συμπαίκτη τους για να ολοκληρώσουν μία πορεία με εμπόδια. '
+  projguts_longdescription: Αυτή η εκτός σύνδεσης δραστηριότητα βοηθά τους μαθητές
     να μάθουν πως να μοντελοποιήσουν και να εξομοιώσουν εργασίες, βάζοντας μία ομάδα
     μαθητών να παίξει διαφορετικές εκδόσεις του παιχνιδιού Πέτρα / Ψαλίδι / Χαρτί
-    και να δουν τα αποτελέσματα ως διαφορετικά πειράματα μοντελοποίησης."
-  hourofcode_longdescription: "Σύμβολο κράτησης θέσης για το νέο code.org/hoc"
-  frozen_longdescription: "Ας χρησιμοποιήσουμε τον κώδικα για να βρεθούμε μαζί με
-    την Άννα και την Έλσα καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου. Θα
-    δημιουργήσετε νιφάδες χιονιού και σχέδια όπως αυτά του πατινάζ και θα φτιάξετε
-    υπέροχα χειμωνιάτικα τοπία τα οποία μπορείτε να μοιραστείτε με τους φίλους σας!"
-  playlab_longdescription: "Δημιούργησε μια ιστορία ή φτιάξε ένα παιχνίδι με το Play
+    και να δουν τα αποτελέσματα ως διαφορετικά πειράματα μοντελοποίησης.
+  hourofcode_longdescription: Σύμβολο κράτησης θέσης για το νέο code.org/hoc
+  frozen_longdescription: Ας χρησιμοποιήσουμε τον κώδικα για να βρεθούμε μαζί με την
+    Άννα και την Έλσα καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου. Θα δημιουργήσετε
+    νιφάδες χιονιού και σχέδια όπως αυτά του πατινάζ και θα φτιάξετε υπέροχα χειμωνιάτικα
+    τοπία τα οποία μπορείτε να μοιραστείτε με τους φίλους σας!
+  starwars_longdescription: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό
+    σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
+  playlab_longdescription: Δημιούργησε μια ιστορία ή φτιάξε ένα παιχνίδι με το Play
     Lab! Κάνε ζώα, πειρατές, ζόμπι, νίτζα και πολλούς περισσότερους χαρακτήρες να
     κουνηθούν, να βγάλουν ήχους, να συγκεντρώσουν πόντους, ακόμη και να ρίξουν μπάλες
-    φωτιάς!"
-  codeorg_beyond_name: "Εισαγωγή στους υπολογιστές (τάξεις K-8)"
-  khan_beyond_name: "Μάθετε προγραμματισμό υπολογιστών"
-  tynker_beyond_name: "Μάθετε προγραμματισμό στο σπίτι"
-  scratch_beyond_name: "Γίνετε δημιουργικοί με την κωδικοποίηση"
+    φωτιάς!
+  codeorg_beyond_name: Εισαγωγή στους υπολογιστές (τάξεις K-8)
+  khan_beyond_name: Μάθετε προγραμματισμό υπολογιστών
+  tynker_beyond_name: Μάθετε προγραμματισμό στο σπίτι
+  scratch_beyond_name: Γίνετε δημιουργικοί με την κωδικοποίηση
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy - Ακαδημία Κώδικα
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR για προσχολικές ηλικίες
   hopscotch_beyond_name: 'Hopscotch: Προγραμματισμός στο Δικό σας iPad'
-  pocketcode_beyond_name: "Κώδικας Τσέπης"
-  groklearning_beyond_name: "Μάθετε να προγραμματίζετε σε Python"
-  hacketyhack_beyond_name: "Μάθετε Ruby"
-  robomind_beyond_name: "Προγραμματίστε ένα εικονικό ρομπότ"
-  makeschool_beyond_name: Build an iPhone game in your browser!
+  pocketcode_beyond_name: Κώδικας Τσέπης
+  groklearning_beyond_name: Μάθετε να προγραμματίζετε σε Python
+  hacketyhack_beyond_name: Μάθετε Ruby
+  robomind_beyond_name: Προγραμματίστε ένα εικονικό ρομπότ
+  makeschool_beyond_name: Φτιάξτε ένα παιχνίδι για iPhone στο πρόγραμμα περιήγησής
+    σας!
   appinventor_beyond_name: AppInventor Ώρα του Κώδικα
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: "Μάθετε να γράφετε Κώδικα με τον Κάρελ το Σκυλί"
-  udemy_beyond_name: "Μαθήματα Προγραμματισμού σε σύνδεση"
-  lynda_beyond_name: "Μαθήματα Προγραμματισμού σε σύνδεση"
-  edx_beyond_name: "Χάρβαρντ κατηγορία CS50"
-  coursera_beyond_name: "Στάνφορντ κατηγορία CS 101"
+  codehs_beyond_name: Μάθετε να γράφετε Κώδικα με τον Κάρελ το Σκυλί
+  udemy_beyond_name: Μαθήματα Προγραμματισμού σε σύνδεση
+  lynda_beyond_name: Μαθήματα Προγραμματισμού σε σύνδεση
+  edx_beyond_name: Χάρβαρντ κατηγορία CS50
+  coursera_beyond_name: Στάνφορντ κατηγορία CS 101
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: "Μαθήματα Πανεπιστημίων σε σύνδεση"
+  teachingtree_beyond_name: Μαθήματα Πανεπιστημίων σε σύνδεση
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
-  w3schools_beyond_name: "Μάθετε HTML"
-  codeavengers_beyond_name: "Μάθετε γράφετε Κώδικα για Ιστοσελίδες"
+  w3schools_beyond_name: Μάθετε HTML
+  codeavengers_beyond_name: Μάθετε γράφετε Κώδικα για Ιστοσελίδες
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat - Μονομαχία Κώδικα
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
   arduino_beyond_name: Arduino με Sparkfun
-  processing_beyond_name: "Προγραμματισμός με Επεξεργασία"
+  processing_beyond_name: Προγραμματισμός με Επεξεργασία
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: "Ηλικίες 4-104"
-  khan_beyond_gradelevel: "Γυμνάσιο +"
-  tynker_beyond_gradelevel: "Ηλικίες 5-13"
-  scratch_beyond_gradelevel: "Ηλικίες 8 +"
-  lightbot_beyond_gradelevel: "Όλων των ηλικιών"
-  codecademy_beyond_gradelevel: "Λύκειο"
-  kodable_beyond_gradelevel: "Δημοτικό"
-  scratchjr_beyond_gradelevel: "Δημοτικό"
-  hopscotch_beyond_gradelevel: "Γυμνάσιο +"
-  pocketcode_beyond_gradelevel: "Γυμνάσιο +"
-  groklearning_beyond_gradelevel: "Γυμνάσιο +"
-  hacketyhack_beyond_gradelevel: "Λύκειο"
-  robomind_beyond_gradelevel: "Ηλικίες 8-13"
-  makeschool_beyond_gradelevel: "Λύκειο"
-  appinventor_beyond_gradelevel: "Γυμνάσιο +"
-  touchdevelop_beyond_gradelevel: "Λύκειο"
-  codehs_beyond_gradelevel: "Λύκειο"
-  udemy_beyond_gradelevel: "Λύκειο +"
-  lynda_beyond_gradelevel: "Λύκειο +"
-  edx_beyond_gradelevel: "Πανεπιστήμιο"
-  coursera_beyond_gradelevel: "Πανεπιστήμιο"
-  udacity_beyond_gradelevel: "Πανεπιστήμιο"
-  teachingtree_beyond_gradelevel: "Πανεπιστήμιο"
-  kodu_beyond_gradelevel: "Ηλικίες 8 +"
-  cargobot_beyond_gradelevel: "Ηλικίες 8 +"
-  kidsruby_beyond_gradelevel: "Ηλικίες 12 +"
-  w3schools_beyond_gradelevel: "Ηλικίες 12 +"
-  codeavengers_beyond_gradelevel: "Γυμνάσιο +"
-  mozilla_beyond_gradelevel: "Ηλικίες 12 +"
-  codecombat_beyond_gradelevel: "Γυμνάσιο +"
-  codea_beyond_gradelevel: "Λύκειο +"
-  lego_beyond_gradelevel: "Γυμνάσιο +"
-  finch_beyond_gradelevel: "Ηλικίες 8 +"
-  arduino_beyond_gradelevel: "Λύκειο +"
-  processing_beyond_gradelevel: "Λύκειο"
-  alice_beyond_gradelevel: "Γυμνάσιο +"
-  sphero_beyond_gradelevel: "Ηλικίες 8 +"
-  codeorg_beyond_platformtext: "Σύγχρονα προγράμματα περιήγησης, ταμπλέτες"
-  khan_beyond_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  tynker_beyond_platformtext: "Σύγχρονα προγράμματα περιήγησης (απαιτείται $$)"
-  scratch_beyond_platformtext: "Οποιοδήποτε πρόγραμμα περιήγησης"
+  codeorg_beyond_gradelevel: Ηλικίες 4-104
+  khan_beyond_gradelevel: Γυμνάσιο +
+  tynker_beyond_gradelevel: Ηλικίες 5-13
+  scratch_beyond_gradelevel: Ηλικίες 8 +
+  lightbot_beyond_gradelevel: Όλων των ηλικιών
+  codecademy_beyond_gradelevel: Λύκειο
+  kodable_beyond_gradelevel: Δημοτικό
+  scratchjr_beyond_gradelevel: Δημοτικό
+  hopscotch_beyond_gradelevel: Γυμνάσιο +
+  pocketcode_beyond_gradelevel: Γυμνάσιο +
+  groklearning_beyond_gradelevel: Γυμνάσιο +
+  hacketyhack_beyond_gradelevel: Λύκειο
+  robomind_beyond_gradelevel: Ηλικίες 8-13
+  makeschool_beyond_gradelevel: Λύκειο
+  appinventor_beyond_gradelevel: Γυμνάσιο +
+  touchdevelop_beyond_gradelevel: Λύκειο
+  codehs_beyond_gradelevel: Λύκειο
+  udemy_beyond_gradelevel: Λύκειο +
+  lynda_beyond_gradelevel: Λύκειο +
+  edx_beyond_gradelevel: Πανεπιστήμιο
+  coursera_beyond_gradelevel: Πανεπιστήμιο
+  udacity_beyond_gradelevel: Πανεπιστήμιο
+  teachingtree_beyond_gradelevel: Πανεπιστήμιο
+  kodu_beyond_gradelevel: Ηλικίες 8 +
+  cargobot_beyond_gradelevel: Ηλικίες 8 +
+  kidsruby_beyond_gradelevel: Ηλικίες 12 +
+  w3schools_beyond_gradelevel: Ηλικίες 12 +
+  codeavengers_beyond_gradelevel: Γυμνάσιο +
+  mozilla_beyond_gradelevel: Ηλικίες 12 +
+  codecombat_beyond_gradelevel: Γυμνάσιο +
+  codea_beyond_gradelevel: Λύκειο +
+  lego_beyond_gradelevel: Γυμνάσιο +
+  finch_beyond_gradelevel: Ηλικίες 8 +
+  arduino_beyond_gradelevel: Λύκειο +
+  processing_beyond_gradelevel: Λύκειο
+  alice_beyond_gradelevel: Γυμνάσιο +
+  sphero_beyond_gradelevel: Ηλικίες 8 +
+  codeorg_beyond_platformtext: Σύγχρονα προγράμματα περιήγησης, ταμπλέτες
+  khan_beyond_platformtext: Σύγρονα Προγράμματα περιήγησης
+  tynker_beyond_platformtext: Σύγχρονα προγράμματα περιήγησης (απαιτείται $$)
+  scratch_beyond_platformtext: Οποιοδήποτε πρόγραμμα περιήγησης
   lightbot_beyond_platformtext: iOS, Android (ή πρόγραμμα περιήγησης)
-  codecademy_beyond_platformtext: "Σύγχρονα προγράμματα περιήγησης. iOS, Android εφαρμογές"
+  codecademy_beyond_platformtext: Σύγχρονα προγράμματα περιήγησης. iOS, Android εφαρμογές
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
-  pocketcode_beyond_platformtext: "Εφαρμογή για Κινητά"
-  groklearning_beyond_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  hacketyhack_beyond_platformtext: "Εγκατάσταση σε υπολογιστή"
-  robomind_beyond_platformtext: "Σύγχρονα προγράμματα περιήγησης, κινητά"
-  makeschool_beyond_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  appinventor_beyond_platformtext: "Σύγχρονα προγράμματα περιήγησης + Android"
-  touchdevelop_beyond_platformtext: "Σύγχρονα προγράμματα περιήγησης, smartphones,
-    όλες οι συσκευές"
-  codehs_beyond_platformtext: "Σύγχρονα προγράμματα περιήγησης (απαιτείται $$)"
-  udemy_beyond_platformtext: "Με βάση το Internet"
-  lynda_beyond_platformtext: "Με βάση το Internet (απαιτείται $$)"
-  edx_beyond_platformtext: "Σύγχρονα προγράμματα περιήγησης"
-  coursera_beyond_platformtext: "Σύγχρονα προγράμματα περιήγησης"
-  udacity_beyond_platformtext: "Σύγχρονα προγράμματα περιήγησης"
-  teachingtree_beyond_platformtext: "Με βάση το Internet"
+  pocketcode_beyond_platformtext: Εφαρμογή για Κινητά
+  groklearning_beyond_platformtext: Σύγρονα Προγράμματα περιήγησης
+  hacketyhack_beyond_platformtext: Εγκατάσταση σε υπολογιστή
+  robomind_beyond_platformtext: Σύγχρονα προγράμματα περιήγησης, κινητά
+  makeschool_beyond_platformtext: Σύγρονα Προγράμματα περιήγησης
+  appinventor_beyond_platformtext: Σύγχρονα προγράμματα περιήγησης + Android
+  touchdevelop_beyond_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones,
+    όλες οι συσκευές
+  codehs_beyond_platformtext: Σύγχρονα προγράμματα περιήγησης (απαιτείται $$)
+  udemy_beyond_platformtext: Με βάση το Internet
+  lynda_beyond_platformtext: Με βάση το Internet (απαιτείται $$)
+  edx_beyond_platformtext: Σύγχρονα προγράμματα περιήγησης
+  coursera_beyond_platformtext: Σύγχρονα προγράμματα περιήγησης
+  udacity_beyond_platformtext: Σύγχρονα προγράμματα περιήγησης
+  teachingtree_beyond_platformtext: Με βάση το Internet
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: "Εγκατάσταση σε υπολογιστή"
-  w3schools_beyond_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  codeavengers_beyond_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  mozilla_beyond_platformtext: "Σύγρονα Προγράμματα περιήγησης"
-  codecombat_beyond_platformtext: "Με βάση το Internet (Firefox, Chrome, Safari, IE9+)"
+  kidsruby_beyond_platformtext: Εγκατάσταση σε υπολογιστή
+  w3schools_beyond_platformtext: Σύγρονα Προγράμματα περιήγησης
+  codeavengers_beyond_platformtext: Σύγρονα Προγράμματα περιήγησης
+  mozilla_beyond_platformtext: Σύγρονα Προγράμματα περιήγησης
+  codecombat_beyond_platformtext: Με βάση το Internet (Firefox, Chrome, Safari, IE9+)
   codea_beyond_platformtext: iPad
-  lego_beyond_platformtext: "Αγορά Ρομπότ"
-  finch_beyond_platformtext: "Αγορά Ρομπότ"
-  arduino_beyond_platformtext: "Πρόγραμμα περιήγησης και στη συνέχεια αγορά Kit"
-  processing_beyond_platformtext: "Σύγρονα Προγράμματα περιήγησης"
+  lego_beyond_platformtext: Αγορά Ρομπότ
+  finch_beyond_platformtext: Αγορά Ρομπότ
+  arduino_beyond_platformtext: Πρόγραμμα περιήγησης και στη συνέχεια αγορά Kit
+  processing_beyond_platformtext: Σύγρονα Προγράμματα περιήγησης
   alice_beyond_platformtext: Windows ή Mac (απαιτείται εγκατάσταση)
-  sphero_beyond_platformtext: "Αγορά Ρομπότ"
-  codeorg_beyond_shortdescription: "Μάθετε να γράφετε κώδικα με τον Mark Zuckerberg
-    και τα Θυμωμένα Πουλιά!"
-  khan_beyond_shortdescription: "Μάθετε να σχεδιάζετε σε JavaScript"
-  tynker_beyond_shortdescription: "Ένα διασκεδαστικό και ενδιαφέρον μάθημα για τα
-    παιδιά Δημοτικού - Γυμνασίου"
-  scratch_beyond_shortdescription: "Δημιουργήστε διαδραστικά παιχνίδια, ιστορίες και
-    κινούμενα σχέδια."
-  lightbot_beyond_shortdescription: "Ένα παιχνίδι που διδάσκει έννοιες προγραμματισμού"
-  codecademy_beyond_shortdescription: "Μάθετε προγραμματισμό JavaScript, σε ένα πρόγραμμα
-    περιήγησης"
-  kodable_beyond_shortdescription: "Ένα διασκεδαστικό παιχνίδι για το  iPad για να
-    μάθετε έννοιες  προγραμματισμού  στον υπολογιστή"
-  scratchjr_beyond_shortdescription: "Δημιουργήστε διαδραστικές ιστορίες και παιχνίδια
-    με το ScratchJr. "
-  hopscotch_beyond_shortdescription: "Μάθετε οποτικό προγραμματισμό σε ένα iPad"
-  pocketcode_beyond_shortdescription: "Δημιουργήστε ένα παιχνίδι στο smartphone σας
-    και μοιράστε το στους φίλους σας να το δοκιμάσουν!"
-  groklearning_beyond_shortdescription: "Βασική εισαγωγή στον προγραμματισμό σε python"
-  hacketyhack_beyond_shortdescription: "Μάθετε Ruby από την αρχή"
-  robomind_beyond_shortdescription: "Γράψτε κώδικα για ένα εικονικό ρομπότ"
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
-  appinventor_beyond_shortdescription: "Κάντε τη δική σας εφαρμογή! (Μόνο για android)"
-  touchdevelop_beyond_shortdescription: "Κωδικοποίησε  εφαρμογές για κινητά απευθείας
-    στο τηλέφωνό σου, στο tablet ή στο laptop"
-  codehs_beyond_shortdescription: "Μάθετε προγραμματισμό JavaScript σε ένα διασκεδαστικό
-    οπτικό περιβάλλον"
-  udemy_beyond_shortdescription: "Δεκάδες μαθήματα προγραμματισμού σε σύνδεση"
-  lynda_beyond_shortdescription: "Δεκάδες μαθήματα προγραμματισμού σε σύνδεση"
-  edx_beyond_shortdescription: "Το πιο δημοφιλές μάθημα στο Χαρβαρντ"
-  coursera_beyond_shortdescription: "Ξεκινήστε με το CS101"
-  udacity_beyond_shortdescription: "Ξεκινήστε με το CS101"
-  teachingtree_beyond_shortdescription: "Γνώση σε Σύνδεση: Ταχεία και Χωρίς Περιορισμούς"
-  kodu_beyond_shortdescription: "Σχεδιάστε έναν κόσμο σε 3D"
-  cargobot_beyond_shortdescription: "Προγραμματίστε ένα ρομπότ στο δικό σας iPad"
-  kidsruby_beyond_shortdescription: "Μάθετε προγραμματισμό χρησιμοποιώντας την Ruby"
-  w3schools_beyond_shortdescription: "Μάθετε να φτιάχνετε ιστοχώρους"
-  codeavengers_beyond_shortdescription: "Μάθετε να γράφετε κώδικα για παιχνίδια και
-    ιστοχώρους"
-  mozilla_beyond_shortdescription: "Δημιουργήστε και μοιραστείτε ιστοσελίδες"
-  codecombat_beyond_shortdescription: "Παίξτε ένα παιχνίδι και μάθετε JavaScript για
-    να κερδίσετε"
-  codea_beyond_shortdescription: "Φτιάξτε εφαρμογές στο δικό σας iPad"
-  lego_beyond_shortdescription: "Κατασκευάστε και προγραμματίστε ένα ρομπότ"
-  finch_beyond_shortdescription: "Ένα ρομπότ για εκπαίδευση στην επιστήμη των υπολογιστών"
-  arduino_beyond_shortdescription: "Μάθετε Aduino με το Digital Sandbox της Sparkfun."
-  processing_beyond_shortdescription: "Μάθετε τις γλώσσες Επεξεργασίας"
-  alice_beyond_shortdescription: "Διδάξτε προγραμματισμό σε ένα περιβάλλον 3D"
-  sphero_beyond_shortdescription: "Τα μαθήματα SPRK προσφέρουν στα παιδιά ένα διασκεδαστικό
+  sphero_beyond_platformtext: Αγορά Ρομπότ
+  codeorg_beyond_shortdescription: Μάθετε να γράφετε κώδικα με τον Mark Zuckerberg
+    και τα Θυμωμένα Πουλιά!
+  khan_beyond_shortdescription: Μάθετε να σχεδιάζετε σε JavaScript
+  tynker_beyond_shortdescription: Ένα διασκεδαστικό και ενδιαφέρον μάθημα για τα παιδιά
+    Δημοτικού - Γυμνασίου
+  scratch_beyond_shortdescription: Δημιουργήστε διαδραστικά παιχνίδια, ιστορίες και
+    κινούμενα σχέδια.
+  lightbot_beyond_shortdescription: Ένα παιχνίδι που διδάσκει έννοιες προγραμματισμού
+  codecademy_beyond_shortdescription: Μάθετε προγραμματισμό JavaScript, σε ένα πρόγραμμα
+    περιήγησης
+  kodable_beyond_shortdescription: Ένα διασκεδαστικό παιχνίδι για το iPad για να μάθετε
+    έννοιες προγραμματισμού υπολογιστών
+  scratchjr_beyond_shortdescription: 'Δημιουργήστε διαδραστικές ιστορίες και παιχνίδια
+    με το ScratchJr. '
+  hopscotch_beyond_shortdescription: Μάθετε οποτικό προγραμματισμό σε ένα iPad
+  pocketcode_beyond_shortdescription: Δημιουργήστε ένα παιχνίδι στο smartphone σας
+    και μοιράστε το στους φίλους σας να το δοκιμάσουν!
+  groklearning_beyond_shortdescription: Βασική εισαγωγή στον προγραμματισμό σε python
+  hacketyhack_beyond_shortdescription: Μάθετε Ruby από την αρχή
+  robomind_beyond_shortdescription: Γράψτε κώδικα για ένα εικονικό ρομπότ
+  makeschool_beyond_shortdescription: Μάθετε να φτιάχνετε ένα παιχνίδι για iPhone
+    σε μία ώρα
+  appinventor_beyond_shortdescription: Κάντε τη δική σας εφαρμογή! (Μόνο για android)
+  touchdevelop_beyond_shortdescription: Κωδικοποίησε  εφαρμογές για κινητά απευθείας
+    στο τηλέφωνό σου, στο tablet ή στο laptop
+  codehs_beyond_shortdescription: Μάθετε προγραμματισμό JavaScript σε ένα διασκεδαστικό
+    οπτικό περιβάλλον
+  udemy_beyond_shortdescription: Δεκάδες μαθήματα προγραμματισμού σε σύνδεση
+  lynda_beyond_shortdescription: Δεκάδες μαθήματα προγραμματισμού σε σύνδεση
+  edx_beyond_shortdescription: Το πιο δημοφιλές μάθημα στο Χαρβαρντ
+  coursera_beyond_shortdescription: Ξεκινήστε με το CS101
+  udacity_beyond_shortdescription: Ξεκινήστε με το CS101
+  teachingtree_beyond_shortdescription: 'Γνώση σε Σύνδεση: Ταχεία και Χωρίς Περιορισμούς'
+  kodu_beyond_shortdescription: Σχεδιάστε έναν κόσμο σε 3D
+  cargobot_beyond_shortdescription: Προγραμματίστε ένα ρομπότ στο δικό σας iPad
+  kidsruby_beyond_shortdescription: Μάθετε προγραμματισμό χρησιμοποιώντας την Ruby
+  w3schools_beyond_shortdescription: Μάθετε να φτιάχνετε ιστοχώρους
+  codeavengers_beyond_shortdescription: Μάθετε να γράφετε κώδικα για παιχνίδια και
+    ιστοχώρους
+  mozilla_beyond_shortdescription: Δημιουργήστε και μοιραστείτε ιστοσελίδες
+  codecombat_beyond_shortdescription: Παίξτε ένα παιχνίδι και μάθετε JavaScript για
+    να κερδίσετε
+  codea_beyond_shortdescription: Φτιάξτε εφαρμογές στο δικό σας iPad
+  lego_beyond_shortdescription: Κατασκευάστε και προγραμματίστε ένα ρομπότ
+  finch_beyond_shortdescription: Ένα ρομπότ για εκπαίδευση στην επιστήμη των υπολογιστών
+  arduino_beyond_shortdescription: Μάθετε Aduino με το Digital Sandbox της Sparkfun.
+  processing_beyond_shortdescription: Μάθετε τις γλώσσες Επεξεργασίας
+  alice_beyond_shortdescription: Διδάξτε προγραμματισμό σε ένα περιβάλλον 3D
+  sphero_beyond_shortdescription: Τα μαθήματα SPRK προσφέρουν στα παιδιά ένα διασκεδαστικό
     υπερεντατικό μάθημα στον προγραμματισμό ρομπότ, καθώς ακονίζουν τις δεξιότητές
-    τους στα μαθηματικά και την επιστήμη."
-  codeorg_beyond_longdescription: "Μάθατε τις βασικές έννοιες της Επιστήμης των Υπολογιστών
+    τους στα μαθηματικά και την επιστήμη.
+  codeorg_beyond_longdescription: Μάθατε τις βασικές έννοιες της Επιστήμης των Υπολογιστών
     με προγραμματισμό με το ποντίκι. 3 πλήρη θέματα, καθένα από τα οποία απαρτίζεται
     από 15-20 μαθήματα, που συνδυάζουν τις εκτός σύνδεσης δραστηριότητες της τάξης
     διανθισμένες με αυτο-οδηγούμενους οδηγούς-παιχνίδια, με εμφανίσεις σε διαλέξεις
     βίντεο αστέρων όπως ο Bill Gates, ο Mark Zuckerberg, τα Angry Birds και τα Plants
     vs. Zombies. Μάθετε βρόχους επανάληψης, υποθέσεις, βασικούς αλγόριθμους, συναρτήσεις
-    και μεταβλητές."
-  khan_beyond_longdescription: "Μάθετε τα βασικά του προγραμματισμού σε JavaScript,
+    και μεταβλητές.
+  khan_beyond_longdescription: Μάθετε τα βασικά του προγραμματισμού σε JavaScript,
     ενώ  δημιουργείτε  διασκεδαστικά σχέδια με τον κώδικα σας. Κάνετε το μόνοι σας
-    ή με την τάξη σας!"
-  tynker_beyond_longdescription: "Το Tynker καθιστά διασκεδαστική και εύκολη την εκμάθηση
+    ή με την τάξη σας!
+  tynker_beyond_longdescription: Το Tynker καθιστά διασκεδαστική και εύκολη την εκμάθηση
     του προγραμματισμού. Τον κάνει οπτικό. Τα παιδιά κατασκευάζουν παιχνίδια και εφαρμογές
     για κινητά, τακτοποιώντας μπλοκ κώδικα. Αφαιρεί την ανάγκη γνώσης σύνταξης προγραμματισμού.
     Τα παιδιά μετατρέπουν ιδέες και ιστορίες με κινούμενα σχέδια και τέχνη με μαθηματικά
     αμέσως. Προωθεί την προοδευτική εκμάθηση. Καθώς τα παιδιά μαθαίνουν τις βασικές
     αρχές, το Tynker εισάγει πιο προχωρημένες έννοιες, συμπεριλαμβανομένου του προγραμματισμού
-    με σύνταξη."
-  scratch_beyond_longdescription: "Με το Scratch, μπορείτε να δημιουργήσετε τα δικά
+    με σύνταξη.
+  scratch_beyond_longdescription: Με το Scratch, μπορείτε να δημιουργήσετε τα δικά
     σας αλληλεπιδραστικά παιχνίδια, ιστορίες, κινούμενα σχέδια &mdash; και να τα μοιραστείτε
-    με τους φίλους σας. Ξεκινήσετε με το να κινήσετε  το όνομά σας, να δημιουργήσετε
-    \ μια εορταστική κάρτα, ή να κάνετε ένα παιχνίδι πονγκ."
-  lightbot_beyond_longdescription: "Μάθετε τη λογική του προγραμματισμού, ξεκινώντας
+    με τους φίλους σας. Ξεκινήσετε με το να κινήσετε  το όνομά σας, να δημιουργήσετε  μια
+    εορταστική κάρτα, ή να κάνετε ένα παιχνίδι πονγκ.
+  lightbot_beyond_longdescription: Μάθετε τη λογική του προγραμματισμού, ξεκινώντας
     από υπεραπλουστευμένο προγραμματισμό, για ηλικίες 4+, σε IOS ή Android (ή σε Φυλλομετρητή
     Ιστοτόπων). Μάθετε πως να δίνετε διαδοχικές εντολές, να αναγνωρίζετε μοτίβα, να
-    χρησιμοποιείτε διαδικασίες, και να αξιοποιείτε τις επαναλήψεις!"
+    χρησιμοποιείτε διαδικασίες, και να αξιοποιείτε τις επαναλήψεις!
   codecademy_beyond_longdescription: Η Codeacademy είναι μια αλληλεπιδραστική, οδηγούμενη
     από τους μαθητές εισαγωγή στις βασικές αρχές της Πληροφορικής μέσω της Javascript
     που χρησιμοποιείται από δεκάδες εκατομμύρια μαθητών σε όλον τον κόσμο. Έχουμε
     προετοιμάσει μία ξεκούραστη εμπειρία με τίτλο "Η Ώρα του Κώδικα" που τη συνοδεύουν
     κουίζ, διαφάνειες και ένα ολοκληρωμένο project για τους μαθητές στο τέλος.
-  kodable_beyond_longdescription: "Το Kodable είναι ένα αυτόματα οδηγούμενο παιχνίδι
+  kodable_beyond_longdescription: Το Kodable είναι ένα αυτόματα οδηγούμενο παιχνίδι
     για Ipad που εισάγει τα παιδιά ηλικιών από 5 και άνω στα βασικά του προγραμματισμού.
-    Το να υπάρχει δάσκαλος ή γονιός κοντά είναι ιδανικό αν και όχι απαραίτητο."
-  scratchjr_beyond_longdescription: "Η ScratchJr είναι μία εισαγωγική γλώσσα προγραμματισμού
+    Το να υπάρχει δάσκαλος ή γονιός κοντά είναι ιδανικό αν και όχι απαραίτητο.
+  scratchjr_beyond_longdescription: Η ScratchJr είναι μία εισαγωγική γλώσσα προγραμματισμού
     που δίνει τη δυνατότητα στα μικρά παιδιά να δημιουργήσουν τις δικές τους διαδραστικές
     ιστορίες και παιχνίδια. Τα παιδιά κλούν μεταξύ τους γραφικά προγραμματιστικά μπλοκ
-    για να κάνουν χαρακτήρες να κινούνται, να πηδούν, να χορεύουν και να τραγουδούν"
-  hopscotch_beyond_longdescription: "Οδηγός καθοδηγούμενος από μαθητές στο iPad χρησιμοποιώντας
+    για να κάνουν χαρακτήρες να κινούνται, να πηδούν, να χορεύουν και να τραγουδούν
+  hopscotch_beyond_longdescription: Οδηγός καθοδηγούμενος από μαθητές στο iPad χρησιμοποιώντας
     τη γλώσσα προγραμματισμού Hopscotch. Οι μαθητές θα κατασκευάσουν παιχνίδια και
     εφαρμογές για το δικό τους iPad στο δικό τους iPad. Οι μαθητές μπορούν να εργασθούν
-    ατομικά ή με φίλους (μέχρι 3 σε κάθε iPad)."
-  pocketcode_beyond_longdescription: "Δημιουργήστε το δικό σας παιχνίδι στο δικό σας
+    ατομικά ή με φίλους (μέχρι 3 σε κάθε iPad).
+  pocketcode_beyond_longdescription: Δημιουργήστε το δικό σας παιχνίδι στο δικό σας
     smart phone με τον Κώδικα Τσέπτης. Βοηθήστε τον αεροδύτη Steve να μοιράσει τα
     δέματά του. Μπορείτε να το μοιραστείτε με φίλους και άλλους χρήστες για να το
-    δοκιμάσουν!"
-  groklearning_beyond_longdescription: "Ένα εισαγωγικό μάθημα χρησιμοποιώντας τη γλώσσα
+    δοκιμάσουν!
+  groklearning_beyond_longdescription: Ένα εισαγωγικό μάθημα χρησιμοποιώντας τη γλώσσα
     προγραμματισμού Python για ανθρώπους χωρίς εμπειρία στον προγραμματισμό. Η μοναδική
     μας μίξη από εισαγωγικό περιεχόμενο και προκλήσεις θα σας κάνουν να κατανοήσετε
     την Python και τον προγραμματισμό. Διδάξαμε αυτό το περιεχόμενο σε μαθητές διαφόρων
     ηλικιών από διαφορετικά υπόβαθρα και είμαστε σίγουροι ότι θα ταιριάξει και με
-    εσάς."
-  hacketyhack_beyond_longdescription: "Το Hackety Hack θα σας διδάξει τα τελείως βασικά
+    εσάς.
+  hacketyhack_beyond_longdescription: 'Το Hackety Hack θα σας διδάξει τα τελείως βασικά
     του προγραμματισμού από την αρχή. Δεν απαιτείται προηγούμενη εμπειρία στον προγραμματισμό!
     Με το Hackety Hack θα μάθετε τη γλώσσα προγραμματισμού Ruby. Η Ruby χρησιμοποιείται
     για όλων των ειδών τα προγράμματα, συμπεριλαμβανομένων των εφαρμογών για υπολογιστές
-    και τις ιστοσελίδες [Σημείωση: απαιτείται εγκατάσταση σε υπολογιστή]"
-  robomind_beyond_longdescription: "Οι μαθητές μαθαίνουν τα βασικά του προγραμματισμού
+    και τις ιστοσελίδες [Σημείωση: απαιτείται εγκατάσταση σε υπολογιστή]'
+  robomind_beyond_longdescription: 'Οι μαθητές μαθαίνουν τα βασικά του προγραμματισμού
     ελέγχοντας το δικό τους εικονικό ρομπότ. Το μάθημα μέσω Internet είναι πλήρες
     με σύντομες παρουσιάσεις, ταινίες, κουίζ και αυτόματη καθοδήγηση/βοήθεια για να
-    βοηθήσει στις ασκήσεις προγραμματισμού. "
-  makeschool_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
-    game in an hour! We'll guide you through the process, to code, test, and play
-    your game entirely in the browser and then share it on Facebook for friends to
-    try! No prior iPhone development experience is required. You must understand what
-    variables, methods, and objects are.
-  appinventor_beyond_longdescription: "Διασκεδαστικοί, σύντομοι οδηγοί βίντεο σας
-    οδηγούν κατά την κατασκευή τριών απλών εφαρμογών για το τηλέφωνο Android ή την
-    ταμπλέτα. Σχεδιασμένοι για αρχάριους και προχωρημένους, αυτή η ώρα του κώδικα
-    θα σας ετοιμάσει ώστε να κατασκευάσετε τις δικές σας εφαρμογές πριν το καταλάβετε.
-    Φανταστείτε να μοιράζεστε τις εφαρμογές που κατασκευάσατε με τους φίλους σας!
-    Αυτές οι δραστηριότητες είναι κατάλληλες για άτομα και εκπαιδευτικούς που διδάσκουν
-    σε τάξεις."
-  touchdevelop_beyond_longdescription: "Το TouchDevelop σας επιτρέπει να δημιουργήσετε
+    βοηθήσει στις ασκήσεις προγραμματισμού. '
+  makeschool_beyond_longdescription: Γνωρίζετε λίγο ObjectiveC; Μάθετε να φτιάχνετε
+    ένα παιχνίδι για iPhone σε μία ώρα! Θα σας οδηγήσουμε μέσα από τη διαδικασία,
+    για να γράψετε κώδικα, να δοκιμάσετε και να παίξετε το παιχνίδι σας εξ ολοκλήρου
+    στο πρόγραμμα περιήγησης και στη συνέχεια να το μοιραστείτε το Facebook για να
+    το δοκιμάσουν οι φίλοι! Δεν απαιτείται προηγούμενη εμπειρία σε προγραμματισμό
+    σε iPhone. Πρέπει να καταλαβαίνετε τι είναι οι μεταβλητές, οι μέθοδοι και τα αντικείμενα.
+  appinventor_beyond_longdescription: Διασκεδαστικοί, σύντομοι οδηγοί βίντεο σας οδηγούν
+    κατά την κατασκευή τριών απλών εφαρμογών για το τηλέφωνο Android ή την ταμπλέτα.
+    Σχεδιασμένοι για αρχάριους και προχωρημένους, αυτή η ώρα του κώδικα θα σας ετοιμάσει
+    ώστε να κατασκευάσετε τις δικές σας εφαρμογές πριν το καταλάβετε. Φανταστείτε
+    να μοιράζεστε τις εφαρμογές που κατασκευάσατε με τους φίλους σας! Αυτές οι δραστηριότητες
+    είναι κατάλληλες για άτομα και εκπαιδευτικούς που διδάσκουν σε τάξεις.
+  touchdevelop_beyond_longdescription: Το TouchDevelop σας επιτρέπει να δημιουργήσετε
     εφαρμογές για το iPad, iPhone, Android, PC, Mac, Windows Phone. Ο φιλικός μας
     επεξεργαστής που χρησιμοποεί αφή κάνει τη συγγραφή κώδικα διασκεδαστική, ακόμη
-    και στο δικό σας τηλέφωνο ή την ταμπλέτα!"
-  codehs_beyond_longdescription: "Μάθετε τα βασικά του προγραμματισμού με τον Karel
+    και στο δικό σας τηλέφωνο ή την ταμπλέτα!
+  codehs_beyond_longdescription: 'Μάθετε τα βασικά του προγραμματισμού με τον Karel
     το Σκυλί, μία διασκεδαστική, προσβάσιμη και οπτική εισαγωγή στη συγγραφή κώδικα,
     όπου το να δίνετε εντολές σε έναν υπολογιστή είναι σα να δίνετε εντολές σε ένα
     σκυλί. Αυτό το σεμινάριο είναι εξαιρετικό αν καθοδηγείται από έναν δάσκαλο, αλλά
-    μπορεί επίσης να γίνει και ανεξάρτητα. [Σημείωση: απαιτείται πληρωμή]"
-  udemy_beyond_longdescription: "Ακόμη κι αν δεν έχετε δει ούτε γραμμή κώδικα ή αν
+    μπορεί επίσης να γίνει και ανεξάρτητα. [Σημείωση: απαιτείται πληρωμή]'
+  udemy_beyond_longdescription: 'Ακόμη κι αν δεν έχετε δει ούτε γραμμή κώδικα ή αν
     είστε επαγγελματίας προγραμματιστής, η Udemy έχει ένα σεμινάριο για εσάς, όπου
-    διδάσκουν επαγγελματίες εκπαιδευτικοί. [Σημείωση: απαιτείται πληρωμή]"
-  lynda_beyond_longdescription: "Μάθετε πως να γράφετε κώδικα, να δημιουργείτε και
+    διδάσκουν επαγγελματίες εκπαιδευτικοί. [Σημείωση: απαιτείται πληρωμή]'
+  lynda_beyond_longdescription: 'Μάθετε πως να γράφετε κώδικα, να δημιουργείτε και
     να κατασκευάζετε εφαρμογές για το Internet, από τα θεμέλια του αντικειμενοστρεφούς
     προγραμματισμού σε C και C++ έως το πώς να γράφετε κώδικα σε Java. Τα σεμινάρια
     για προγραμματιστές μπορούν να σας βοηθήσουν να αναπτύξετε και να δημιουργήσετε
     εφαρμογές για κινητά, να εργαστείτε με την PHP και τη βάση δεδομένων MySQL, να
     ξεκινήσετε με την γλώσσα στατιστικής επεξεργασίας R και πολλά ακόμη. [Σημείωση:
-    απαιτείται πληρωμή]"
-  edx_beyond_longdescription: "Το CS50x είναι η εισαγωγή του κολλεγίου Χάρβαρντ στην
+    απαιτείται πληρωμή]'
+  edx_beyond_longdescription: Το CS50x είναι η εισαγωγή του κολλεγίου Χάρβαρντ στην
     πνευματική επιχείριση της επιστήμης των υπολογιστών και την τέχνη του προγραμματισμού
     για πτυχειούχος και μη, με ή χωρίς προηγούμενη εμπειρία στον προγραμματισμό. Η
     θεματολογία συμπεριλαμβάνει αφαίρεση, αλγορίθμους, δομές δεδομένων, συμπύκνωση,
     διαχείριση πόρων, ασφάλεια, μηχανική λογισμικού και ανάπτυξη στο Internet. Οι
     γλώσσες περιλαμβάνουν C, PHP και JavaScript καθώς και SQL, CSS και HTML. Το αντίστοιχο
-    μάθημα στο κολλέγιο του Χάρβαρντ είναι το δεύτερο  σεμινάριο."
-  coursera_beyond_longdescription: "Το σεμινάριο CS 101 του Stanford διδάσκεται από
+    μάθημα στο κολλέγιο του Χάρβαρντ είναι το δεύτερο  σεμινάριο.
+  coursera_beyond_longdescription: 'Το σεμινάριο CS 101 του Stanford διδάσκεται από
     τον Nick Parlante (ΔΩΡΕΑΝ!). Το CS101 διδάσκει τις βασικές ιδέες της Επιστήμης
     των Υπολογιστών σε κοινό χωρίς προηγούμενη εμπειρία. Παίξτε και πειραματιστείτε
     με μικρά κομμάτια κώδικα για να ζωντανέψετε τη δύναμη και τα όρια των υπολογιστών.
     Το CS101 παρέχει ακόμη ένα γενικό πλαίσιο για τους υπολογιστές σήμερα: τι είναι
     ένας υπολογιστής, τι είναι το υλικό, τι είναι το λογισμικό, τι είναι το Internet.
     Δεν απαιτείται προηγούμενη εμπειρία εκτός της ικανότητας χρήσης ενός προγράμματος
-    περιήγησης."
-  udacity_beyond_longdescription: "Σε αυτό το μάθημα θα μάθετε βασικές έννοιες στην
+    περιήγησης.'
+  udacity_beyond_longdescription: Σε αυτό το μάθημα θα μάθετε βασικές έννοιες στην
     επιστήμη των υπολογιστών και να μάθετε πώς να γράψετε τα δικά σας προγράμματα
     για υπολογιστή, στο πλαίσιο της οικοδόμησης μιας δικτυακής μηχανής αναζήτησης.
     Δεν υπάρχει απαιτείται καμμία πρότερη γνώση προγραμματισμού γι αυτό το μάθημα.
     Οι αρχάριοι είναι ευπρόσδεκτοι! Στο τέλος του μαθήματος, θα έχετε μάθει βασικές
     έννοιες πληροφορικής και αρκετό προγραμματισμό για να είστε σε θέση να γράψετε
     Python προγράμματα για την επίλυση των δικών σας προβλημάτων. Αυτό το μάθημα θα
-    σας προετοιμάσει να προχωρήσετε σε ενδιάμεσο επίπεδο μαθημάτων για υπολογιστές."
-  teachingtree_beyond_longdescription: "Το TeachingTree είναι μια ανοιχτή πλατφόρμα
+    σας προετοιμάσει να προχωρήσετε σε ενδιάμεσο επίπεδο μαθημάτων για υπολογιστές.
+  teachingtree_beyond_longdescription: Το TeachingTree είναι μια ανοιχτή πλατφόρμα
     που σας επιτρέπει να οργανώνετε εκπαιδευτικό περιεχόμενο. Στόχος μας είναι για
     τους φοιτητές να έχουν πρόσβαση γρήγορα τα ακριβή αποσπάσματα που χρειάζονται
     για να μάθουν τις επιμέρους έννοιες. Ο καθένας ενθαρρύνεται να βοηθήσει με την
-    προσθήκη βίντεο ή με το μαρκάρισμα των εννοιών."
-  kodu_beyond_longdescription: "Το Kodu επιτρέπει στα παιδιά να δημιουργήσουν παιχνίδια
+    προσθήκη βίντεο ή με το μαρκάρισμα των εννοιών.
+  kodu_beyond_longdescription: Το Kodu επιτρέπει στα παιδιά να δημιουργήσουν παιχνίδια
     για το PC και το XBox, μέσω μια απλής οπτική γλώσσας προγραμματισμού. Το Kodu
     μπορεί να χρησιμοποιηθεί για να διδάξουμε τη δημιουργικότητα, την επίλυση προβλημάτων,
     την αφήγηση, καθώς επίσης και τον προγραμματισμό. Καθένας μπορεί να χρησιμοποιήσει
     το Kodu για να φτιάξει ένα παιχνίδι, μικρά παιδιά καθώς και ενήλικες χωρίς δεξιότητες
     σχεδιασμού ή προγραμματισμού. Το Kodu για PC είναι διαθέσιμο για δωρεάν λήψη.
     Το Kodu για το XBox είναι επίσης διαθέσιμο στις ΗΠΑ στην αγορά του XBox, στο κανάλι
-    Ανεξάρτητων Κατασκευαστών Παιχνιδιών για περίπου $5."
-  cargobot_beyond_longdescription: "Το Cargo-Bot είναι ένα παιχνίδι παζλ, όπου μπορείτε
+    Ανεξάρτητων Κατασκευαστών Παιχνιδιών για περίπου $5.
+  cargobot_beyond_longdescription: Το Cargo-Bot είναι ένα παιχνίδι παζλ, όπου μπορείτε
     να διδάξετε ένα ρομπότ πώς να μετακινήσει κιβώτια. Ακούγεται απλό, σωστά; Περιέχει
     36 διαβολικά έξυπνες σπαζοκεφαλιές, ανατριχιαστική μουσική και εκπληκτικά γραφικά.
     Ακόμη και μπορείτε να καταγράψετε τις λύσεις σας και να τις μοιραστείτε στο YouTube
-    για να τις δείξετε στους φίλους σας."
-  kidsruby_beyond_longdescription: "Διασκεδάστε και φτιάξτε παιχνίδια, ή ολοκληρώστε
+    για να τις δείξετε στους φίλους σας.
+  kidsruby_beyond_longdescription: 'Διασκεδάστε και φτιάξτε παιχνίδια, ή ολοκληρώστε
     γρήγορα τις σχολικές εργασίες του σπιτιού με τη Ruby! Απλά πείτε στους γονείς
     ή τους δασκάλους σας ότι μαθαίνετε προγραμματισμό σε Ruby... :) Είναι δωρεάν και
-    δουλεύει σε κάθε υπολογιστή. [Σημείωση: απαιτείται εγκατάσταση σε υπολογιστή]"
-  w3schools_beyond_longdescription: "Μάθετε να δημιουργείτε ιστοσελίδες στον υπολογιστή
+    δουλεύει σε κάθε υπολογιστή. [Σημείωση: απαιτείται εγκατάσταση σε υπολογιστή]'
+  w3schools_beyond_longdescription: Μάθετε να δημιουργείτε ιστοσελίδες στον υπολογιστή
     σας. Μάθετε τα βασικά για τον  διακομιστή σε λιγότερο από μια ημέρα. Μάθετε πώς
-    να προσθέτετε  βάσεις δεδομένων στην ιστοσελίδα σας"
-  codeavengers_beyond_longdescription: "Μάθετε πως να προγραμματίζετε παιχνίδια, εφαρμογές
+    να προσθέτετε  βάσεις δεδομένων στην ιστοσελίδα σας
+  codeavengers_beyond_longdescription: Μάθετε πως να προγραμματίζετε παιχνίδια, εφαρμογές
     και ιστοχώρους. Σχεδιασμένο από ειδικούς με τέλειο επίπεδο δυσκολίας για αρχάριους,
     εύκολες στην κατανόηση οδηγίες και εξαιρετική βοήθεια όταν την χρειάζεστε. Τα
     μαθήματά μας σε HTML, CSS και JavaScript περιλαμβάνουν προκλήσεις κώδικα και αναθεωρήσεις
-    παιχνιδιών που κάνουν την εκμάθηση διασκεδαστική για όλες τις ηλικίες."
-  mozilla_beyond_longdescription: "Το Thimble κάνει εξαιρετικά απλή τη δημιουργία
-    και το διαμοιρασμό των δικών σας ιστοσελίδων. Γράψτε και επεξεργαστείτε HTML και
-    CSS στο δικό σας πρόγραμμα περιήγησης και αυτόματα δείτε την εργασία σας. Φιλοξενήστε
+    παιχνιδιών που κάνουν την εκμάθηση διασκεδαστική για όλες τις ηλικίες.
+  mozilla_beyond_longdescription: Το Thimble κάνει εξαιρετικά απλή τη δημιουργία και
+    το διαμοιρασμό των δικών σας ιστοσελίδων. Γράψτε και επεξεργαστείτε HTML και CSS
+    στο δικό σας πρόγραμμα περιήγησης και αυτόματα δείτε την εργασία σας. Φιλοξενήστε
     και μοιράστε τα ολοκληρωμένα έργα σας με ένα μόνο κλικ. Ειδανικό για αρχάριους
-    και έμπειρους."
-  codecombat_beyond_longdescription: "Παίξτε ως Μάγος χρησιμοποιώντας κώδικα (ξόρκια)
+    και έμπειρους.
+  codecombat_beyond_longdescription: Παίξτε ως Μάγος χρησιμοποιώντας κώδικα (ξόρκια)
     για να ελέγξετε τους ήρωές σας, να περιηγηθείτε σε λαβύρινθους, να νικήσετε δράκοντες,
     να παραπλανήσετε εχθρούς και να σώσετε συμμάχους! Μάθετε JavaScript σε αυτό το
-    παιχνίδι σε HTML 5 για εντελώς αρχάριους."
-  codea_beyond_longdescription: "Το Codea για το iPad σας επιτρέπει να δημιουργήσετε
+    παιχνίδι σε HTML 5 για εντελώς αρχάριους.
+  codea_beyond_longdescription: Το Codea για το iPad σας επιτρέπει να δημιουργήσετε
     παιχνίδι ακια εξομοιώσεις &mdash; ή απλά οποιαδήποτε οπτική ιδέα έχετε. Μετατρέψτε
     τις σκέψεις σας σε διαδραστικές δημιουργίες που χρησιμοποιούν τα χαρακτηριστικά
     του iPad, όπως η πολλαπλή αφή και το επιταχυνσιόμετρο. Πιστεύουμε ότι το Codea
@@ -1350,21 +1464,21 @@
     εύκολος. Το Codea είναι σχεδιασμένο να σας επιτρέπει να αγγίξετε τον κώδικά σας.
     Θέλετε να αλλάξετε έναν αριθμό; Απλά αγγίξτε και σύρτε τον. Τι θα λέγατε για ένα
     χρώμα ή μία εικόνα; Αγγίζοντάς τα θα εμφανιστούν οπτικοί επεξεργαστές που θα σας
-    επιτρέψουν να επιλέξετε ακριβώς ό,τι θέλετε."
-  lego_beyond_longdescription: "Δημιουργία μικρών, προσαρμόσιμων και προγραμματιζόμενων
-    ρομπότ χρησιμοποιώντας κομμάτια LEGO."
-  finch_beyond_longdescription: "Το Finch είναι ένα νέο ρομπότ για την εκπαίδευση
-    της επιστήμης των υπολογιστών. Το σχέδιό του είναι αποτέλεσμα τετραετούς μελέτης
-    του εργαστηρίου Carnegie Mellon. Είναι σχεδιασμένο για να υποστηρίζει μια ελκυστική
-    εισαγωγή στην τέχνη του προγραμματισμού. Έχει υποστήριξη από πάνω από δώδεκα γλωσσες
-    προγραμματισμού και προγραμματιστικά περιβάλλοντα, συμπεριλαμβανομένων διαφόρων
-    περιβαλλόντων κατάλληλων για μαθητές από ηλικία 8 ετών. Το Finch ήταν σχεδιασμένο
-    για να επιτρέπει σε μαθητές να γράφουν πολύ διαδραστικά προγράμματα."
-  arduino_beyond_longdescription: "Το Arduino είναι μια δημοφιλής πλατφόρμα σχεδιασμένη
+    επιτρέψουν να επιλέξετε ακριβώς ό,τι θέλετε.
+  lego_beyond_longdescription: Δημιουργία μικρών, προσαρμόσιμων και προγραμματιζόμενων
+    ρομπότ χρησιμοποιώντας κομμάτια LEGO.
+  finch_beyond_longdescription: Το Finch (σπίνος) είναι ένα νέο ρομπότ για την εκπαίδευση
+    στην επιστήμη των υπολογιστών. Το σχέδιό του είναι αποτέλεσμα τετραετούς μελέτης
+    του εργαστηρίου CREATE του Carnegie Mellon. Είναι σχεδιασμένο για να υποστηρίζει
+    μια ελκυστική εισαγωγή στην τέχνη του προγραμματισμού. Έχει υποστήριξη για πάνω
+    από δώδεκα γλώσσες προγραμματισμού και προγραμματιστικά περιβάλλοντα, συμπεριλαμβανομένων
+    διαφόρων περιβαλλόντων κατάλληλων για μαθητές από 8 ετών. Το Finch σχεδιάστηκε
+    για να επιτρέπει σε μαθητές να γράφουν πλούσια διαδραστικά προγράμματα.
+  arduino_beyond_longdescription: Το Arduino είναι μια δημοφιλής πλατφόρμα σχεδιασμένη
     να επιτρέπει σε καλλιτέχνες και σχεδιαστές για να συνεργαστούν με την πραγματικούς
     αισθητήρες, LED, βομβητές και άλλα. Το Virtual Box της Sparkfun θα σας διδάξει
-    πραγματικό κώδικα για Arduino μέσω του προγράμματος περιήγησής σας."
-  processing_beyond_longdescription: "Η Processing είναι μία γλώσσα προγραμματισμού,
+    πραγματικό κώδικα για Arduino μέσω του προγράμματος περιήγησής σας.
+  processing_beyond_longdescription: Η Processing είναι μία γλώσσα προγραμματισμού,
     ένα περιβάλλον ανάπτυξης και μία κοινότητα στο Internet. Από το 2001 η Processing
     έχει προωθήσει τις γνώσεις σε προγραμματισμό με οπτικές τέχνες και την οπτική
     γνώση μέσα στην τενχολογία. Αρχικά δημιουργήθηκε για να παίξει το ρόλο ενός σημειωματάριου
@@ -1372,52 +1486,34 @@
     σε οπτικό πλαίσιο. Η Processing εξελίχθηκε σε ένα εργαλείο ανάπτυξης για επαγγελματίες.
     Σήμερα, υπάρχουν δεκάδες χιλιάδες φοιτητές, καλλιτέχνες, σχδιαστές, ερευνητές
     και χομπίστες που χρησιμοποιούν την Processing για να μάθουν προτυποποίηση και
-    παραγωγή."
-  alice_beyond_longdescription: "Χρησιμοποιώντας ένα καινοτόμο περιβάλλον προγραμματισμού
+    παραγωγή.
+  alice_beyond_longdescription: Χρησιμοποιώντας ένα καινοτόμο περιβάλλον προγραμματισμού
     για να υποστηρίξει τη δημιουργία 3D κινούμενων σχεδίων, το έργο της Alice παρέχει
     εργαλεία και υλικά για τη διδασκαλία και την εκμάθηση της υπολογιστιικής σκέψης,
     επίλυσης προβλημάτων, και προγραμματισμού η/υ σε ένα ευρύ φάσμα ηλικιών και επιπέδων
-    γνώσεων."
-  sphero_beyond_longdescription: "Είστε είστε εκπαιδευτικός είτε γονέας, τα μαθήματα
+    γνώσεων.
+  sphero_beyond_longdescription: Είστε είστε εκπαιδευτικός είτε γονέας, τα μαθήματα
     SPRK προσφέρουν στα παιδιά ένα διασκεδαστικό εντατικό μάθημα στον προγραμματισμό
-    των ρομπότ, καθώς ακονίζουν τις δεξιότητές τους στα μαθηματικά και την επιστήμη."
-  compatibility_https_header: Please enable HTTPS for Code.org.
-  compatibility_https_message: To increase security, we are switching to HTTPS on
-    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-    here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: "Απόκρυψη αυτής της προειδοποίησης"
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: "# served"
-  homepage_action_text_join_us: Join us
-  homepage_action_text_sign_up: Sign up
-  homepage_action_text_try_it: Try it
-  homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_girlvideo: Inspire a girl
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  starwars_gradelevel: Ages 6+
-  starwars_platformtext: Modern browsers + tablets
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+    των ρομπότ, καθώς ακονίζουν τις δεξιότητές τους στα μαθηματικά και την επιστήμη.
+  compatibility_https_header: Παρακαλώ ενεργοποιήστε την HTTPS για το Code.org.
+  compatibility_https_message: Για να αυξήσουμε την ασφάλεια, μεταβαίνουμε σε HTTPS
+    την %{https_date}. Δεν θα έχετε πρόσβαση στο Code.org μετά την ημερομηνία αυτή.
+    <a href='%{it_requirements_url}'> Κάντε κλικ εδώ</a> για να μάθετε πώς να ενεργοποιήσετε
+    την HTTPS για το Code.org.
+  compatibility_https_hide_this_warning: Απόκρυψη αυτής της προειδοποίησης
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: Φτερούγισε
+  infinity_shortcode: inf
+  playlab_shortcode: παίξε
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

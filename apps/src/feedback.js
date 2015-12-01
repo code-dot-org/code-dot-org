@@ -33,6 +33,7 @@ var FeedbackBlocks = require('./feedbackBlocks');
 var constants = require('./constants');
 var TestResults = constants.TestResults;
 var KeyCodes = constants.KeyCodes;
+var puzzleRatingUtils = require('./puzzleRatingUtils');
 
 /**
  * @typedef {Object} TestableBlock
@@ -82,7 +83,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var showingSharing = options.showingSharing && !hadShareFailure;
 
   var canContinue = this.canContinueToNextLevel(options.feedbackType);
-  var displayShowCode = this.studioApp_.enableShowCode && canContinue && !showingSharing;
+  var displayShowCode = this.studioApp_.enableShowCode && this.studioApp_.enableShowLinesCount && canContinue && !showingSharing;
   var feedback = document.createElement('div');
   var sharingDiv = (canContinue && showingSharing) ? this.createSharingDiv(options) : null;
   var showCode = displayShowCode ? this.getShowCodeElement_(options) : null;
@@ -146,10 +147,13 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
     feedback.appendChild(options.appDiv);
   }
 
+  feedback.className += canContinue ? " win-feedback" : " failure-feedback";
+
   feedback.appendChild(
     this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
       tryAgainText: options.tryAgainText,
+      keepPlayingText: options.keepPlayingText,
       continueText: options.continueText,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
@@ -228,15 +232,9 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       // feedback block
       var genericFeedback = this.getFeedbackMessage_({message: msg.tryBlocksBelowFeedback()});
 
-      // If there are feedback blocks, temporarily remove them.
-      // Get pointers to the parent and next sibling so we can re-insert
-      // the feedback blocks into the correct location if needed.
-      var feedbackBlocksParent = null;
-      var feedbackBlocksNextSib = null;
+      // If there are feedback blocks, temporarily hide them.
       if (feedbackBlocks && feedbackBlocks.div) {
-        feedbackBlocksParent = feedbackBlocks.div.parentNode;
-        feedbackBlocksNextSib = feedbackBlocks.div.nextSibling;
-        feedbackBlocksParent.removeChild(feedbackBlocks.div);
+        feedbackBlocks.hideDiv();
       }
 
       // If the user requests the hint...
@@ -251,9 +249,8 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
         hintRequestButton.parentNode.removeChild(hintRequestButton);
 
         // Restore feedback blocks, if present.
-        if (feedbackBlocks && feedbackBlocks.div && feedbackBlocksParent) {
-          feedbackBlocksParent.insertBefore(feedbackBlocks.div, feedbackBlocksNextSib);
-          feedbackBlocks.show();
+        if (feedbackBlocks && feedbackBlocks.div) {
+          feedbackBlocks.revealDiv();
         }
 
         // Report hint request to server.
@@ -276,27 +273,20 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
   if (continueButton) {
 
-    if (options.response && options.response.puzzle_rating_url) {
-      feedback.appendChild(this.buildPuzzleRatingButtons_());
+    if (options.response && options.response.puzzle_ratings_enabled) {
+      feedback.appendChild(puzzleRatingUtils.buildPuzzleRatingButtons());
     }
 
     dom.addClickTouchEvent(continueButton, function () {
       feedbackDialog.hide();
 
-      // Submit Puzzle Rating
-      var selectedRating = feedback.querySelector('.puzzle-rating-btn.enabled');
-      if (options.response && options.response.puzzle_rating_url && selectedRating) {
-        $.ajax({
-          url: options.response.puzzle_rating_url,
-          type: 'POST',
-          data: {
-            script_id: options.response.script_id,
-            level_id: options.response.level_id,
-            level_source_id: options.response.level_source_id,
-            rating: selectedRating.getAttribute('data-value')
-          },
+      if (options.response && options.response.puzzle_ratings_enabled) {
+        puzzleRatingUtils.cachePuzzleRating(feedback, {
+          script_id: options.response.script_id,
+          level_id: options.response.level_id
         });
       }
+
       // onContinue will fire already if there was only a continue button
       if (!onlyContinue) {
         options.onContinue();
@@ -379,27 +369,6 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
   return this.getCountableBlocks_().length;
 };
 
-FeedbackUtils.prototype.buildPuzzleRatingButtons_ = function () {
-  var buttonContainer = document.createElement('div');
-  buttonContainer.id = 'puzzleRatingButtons';
-  buttonContainer.innerHTML = require('./templates/puzzleRating.html.ejs')();
-
-  var buttons = buttonContainer.querySelectorAll('.puzzle-rating-btn');
-  var buttonClickHandler = function () {
-    for (var i = 0, button; (button = buttons[i]); i++) {
-      if (button != this) {
-        $(button).removeClass('enabled');
-      }
-    }
-    $(this).toggleClass('enabled');
-  };
-  for (var i = 0, button; (button = buttons[i]); i++) {
-    dom.addClickTouchEvent(button, buttonClickHandler);
-  }
-
-  return buttonContainer;
-};
-
 /**
  *
  */
@@ -410,6 +379,9 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
   var tryAgainText = '';
   if (options.feedbackType !== TestResults.ALL_PASS) {
     tryAgainText = utils.valueOr(options.tryAgainText, msg.tryAgain());
+  }
+  if (options.keepPlayingText) {
+    tryAgainText = options.keepPlayingText;
   }
 
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
@@ -532,7 +504,11 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
         message = msg.errorQuestionMarksInNumberField();
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
-        message = msg.numBlocksNeeded({
+          // Allow apps to override the "too many blocks" failure message
+          // Passed as a msg function to allow the parameters to be passed in.
+        var messageFunction = (options.appStrings && options.appStrings.tooManyBlocksFailMsgFunction) ||
+            msg.numBlocksNeeded;
+        message = messageFunction({
           numBlocks: this.studioApp_.IDEAL_BLOCK_NUM,
           puzzleNumber: options.level.puzzle_number || 0
         });
@@ -592,10 +568,12 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
                                     msg.nextStageTrophies(msgParams) :
                                     msg.nextLevelTrophies(msgParams);
         } else {
+          var nextLevelMsg = (options.appStrings && options.appStrings.nextLevelMsg) ||
+              msg.nextLevel(msgParams);
           message = finalLevel ? msg.finalStage(msgParams) :
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
-                                     msg.nextLevel(msgParams);
+                                     nextLevelMsg;
         }
         break;
     }
@@ -681,7 +659,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
   options.assetUrl = this.studioApp_.assetUrl;
 
   var sharingDiv = document.createElement('div');
-  sharingDiv.setAttribute('style', 'display:inline-block');
+  sharingDiv.setAttribute('id', 'sharing');
   sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
     options: options
   });
@@ -692,14 +670,14 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
       sharingInput.focus();
       sharingInput.select();
     });
-  }
 
-  var sharingShapeways = sharingDiv.querySelector('#sharing-shapeways');
-  if (sharingShapeways) {
-    dom.addClickTouchEvent(sharingShapeways, function() {
-      $('#send-to-phone').hide();
-      $('#shapeways-message').show();
-    });
+    var sharingCopyButton = sharingDiv.querySelector('#sharing-copy-button');
+    if (sharingCopyButton) {
+      dom.addClickTouchEvent(sharingCopyButton, function() {
+        sharingInput.focus();
+        sharingInput.select();
+      });
+    }
   }
 
   //  SMS-to-phone feature
@@ -708,8 +686,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
-        $('#shapeways-message').hide();
-        sendToPhone.setAttribute('style', 'display:inline-block');
+        $(sendToPhone).show();
         var phone = $(sharingDiv.querySelector("#phone"));
         var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
@@ -801,7 +778,10 @@ FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
 
   var showCodeButton = showCodeDiv.querySelector('#show-code-button');
   showCodeButton.addEventListener('click', _.bind(function () {
-    showCodeDiv.appendChild(this.getGeneratedCodeElement_());
+    var generatedCodeElement = this.getGeneratedCodeElement_({
+      generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
+    });
+    showCodeDiv.appendChild(generatedCodeElement);
     showCodeButton.style.display = 'none';
   }, this));
 
@@ -848,16 +828,24 @@ FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
 };
 
 /**
- *
+ * Generates a "show code" div with a description of what code is.
+ * @param {Object} [options] - optional
+ * @param {string} [options.generatedCodeDescription] - optional description
+ *        of code to put in place instead of the default
+ * @returns {Element}
+ * @private
  */
-FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
+FeedbackUtils.prototype.getGeneratedCodeElement_ = function(options) {
+  options = options || {};
+
   var codeInfoMsgParams = {
     berkeleyLink: "<a href='http://bjc.berkeley.edu/' target='_blank'>Berkeley</a>",
     harvardLink: "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>"
   };
 
-  var infoMessage = this.studioApp_.editCode ?  "" : msg.generatedCodeInfo(codeInfoMsgParams);
-  var code = this.getGeneratedCodeString_();
+  var infoMessage = this.getGeneratedCodeDescription(codeInfoMsgParams,
+      options.generatedCodeDescription);
+  var code = this.studioApp_.polishGeneratedCodeString(this.getGeneratedCodeString_());
 
   var codeDiv = document.createElement('div');
   codeDiv.innerHTML = require('./templates/code.html.ejs')({
@@ -869,10 +857,35 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
 };
 
 /**
- * Display the 'Show Code' modal dialog.
+ * Generates explanation of what code is.
+ * @param {Object} codeInfoMsgParams - params for generatedCodeInfo msg function
+ * @param {String} [generatedCodeDescription] - optional description to use
+ *        instead of the default
+ * @returns {string}
  */
-FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
-  var codeDiv = this.getGeneratedCodeElement_();
+FeedbackUtils.prototype.getGeneratedCodeDescription = function (codeInfoMsgParams, generatedCodeDescription) {
+  if (this.studioApp_.editCode) {
+    return '';
+  }
+
+  if (generatedCodeDescription) {
+    return generatedCodeDescription;
+  }
+
+  return msg.generatedCodeInfo(codeInfoMsgParams);
+};
+
+/**
+ * Display the 'Show Code' modal dialog.
+ * @param {Dialog} Dialog
+ * @param {Object} [appStrings] - optional app strings to override
+ * @param {string} [appStrings.generatedCodeDescription] - string
+ *        to display instead of the usual show code description
+ */
+FeedbackUtils.prototype.showGeneratedCode = function(Dialog, appStrings) {
+  var codeDiv = this.getGeneratedCodeElement_({
+    generatedCodeDescription: appStrings && appStrings.generatedCodeDescription
+  });
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({

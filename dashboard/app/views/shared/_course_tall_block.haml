@@ -25,12 +25,16 @@
   - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
 
-- elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME, Script::HOC_NAME, Script::FROZEN_NAME, Script::INFINITY_NAME, Script::STARWARS_NAME, Script::STARWARS_BLOCKS_NAME].include? id
+- elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME, Script::HOC_NAME, Script::FROZEN_NAME, Script::INFINITY_NAME, Script::STARWARS_NAME, Script::STARWARS_BLOCKS_NAME, Script::MINECRAFT_NAME].include? id
   - url = script_reset_url(id)
   - if id == 'frozen'
     - title = t('upsell.frozen.title')
   - elsif id == 'starwars' || id == 'starwarsblocks'
     - title = t('upsell.starwars.title')
+    - url = CDO.code_org_url('/starwars')
+  - elsif id == 'mc'
+    - title = t('upsell.minecraft.title')
+    - url = CDO.code_org_url('/mc')
   - elsif id == 'infinity'
     - title = t('upsell.infinity.title')
   - else
@@ -52,9 +56,9 @@
     .clear
     - if Script.beta? id
       .beta
-        %h3
+        %h3.betatitle
           = title
-        .betatext
+        %h3.betatext
           = t('beta')
     - else
       .heading

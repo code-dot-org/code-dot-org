@@ -1,10 +1,11 @@
 name 'U3L19 - variable scope explanation pt2'
 title 'U3L19 - variable scope explanation pt2'
 description 'description here'
+css 'unplugged'
 
 
 markdown <<MARKDOWN
-# Creating variables in the right place
+# Creating Variables in the Right Place
 <style>
 
 td{
@@ -18,9 +19,9 @@ td{
   <td>
     <strong>Problem: writing <code>var count</code> again</strong>
     <p>
-    The problem you encountered was caused by Line 4: <strong>var count = count+1</strong> is telling the computer to create a <em>new variable</em> called <strong>count</strong> inside the event handling function. 
+    The problem you encountered was caused by Line 4: <strong><code>var count = count + 1</code></strong> is telling the computer to create a <em>new variable</em> called <strong>count</strong> inside the event handling function. 
     <br><br>
-    So it creates a new variable, but then when trying to assign it a value it cannot compute count+1 because count doesn't have a value anymore.  We don’t want a new variable.
+    So it creates a new variable, but then when trying to assign it a value it cannot compute <code>count + 1</code> because <code>count</code> doesn't have a value anymore.  We don’t want a new variable; we want to reassign the value of the variable we already created in Line 1.
     </p>
   </td>
   <td>
@@ -34,9 +35,9 @@ td{
 </tr>
 <tr>
   <td>
-    <strong>Solution: remove <code>var</code> from line 4</strong>
+    <strong>Solution: remove <code>var</code> from Line 4</strong>
     <p>
-    Instead of trying to create a new variable inside the event handler, this code will now reference the one created at the top. Because we only created the variable once, all references to <code>count</code> refer to the same variable.
+    Instead of trying to create a new variable inside the event handler, this code will now reference the one created in Line 1. Because we only created the variable once, all references to <code>count</code> refer to the same variable.
     </p>
   </td>
   <td>
@@ -45,20 +46,21 @@ td{
 </tr>
 </table>
 
-# Where you decide to *create* variables in your code **matters**.  
+# Where You Decide to *Create* Variables in Your Code **Matters**
 
 In Javascript you have two choices: 
-1. Create a variable **outside** of any function
-2. Create a variable **inside** a function
 
-The term for this concept is called **"variable scope"** The **scope** of a variable defines which parts of your code can access and modify a variable.
+1. Create a variable **outside** of any function.
 
-# Understanding variable scope
+2. Create a variable **inside** a function.
 
-Javascript has two scopes: **global** and **local**.   Here's the difference...
+The term for this concept is **"variable scope."** The **scope** of a variable defines which parts of your code can access and modify the variable.
+
+# Understanding Variable Scope
+
+Javascript has two scopes: **global** and **local**. Here's the difference...
 
 <hr>
-
 <strong style="font-size: 20px; color: #00adbc">Local Variables</strong><br>
 <table>
 <tr>
@@ -67,10 +69,10 @@ Javascript has two scopes: **global** and **local**.   Here's the difference...
    Variables created <em>within a function</em> become <strong>local</strong> to the function. Local variables have <strong>local scope</strong>: they can <em>only</em> be accessed within the function.
   </p>
  <P>
- In the example to the right we say that <strong>age</strong> is “local to” <strong>someFunction</strong> which means that only code within <strong>someFunction</strong> can access and modify the value <strong>age</strong>. Code that’s outside this function <strong>cannot</strong> see or use the variable
+ In the example to the right we say that <strong>age</strong> is “local to” <strong>someFunction</strong> which means that only code within <strong>someFunction</strong> can access and modify the value <strong>age</strong>. Code that’s outside this function <strong>cannot</strong> see or use the variable.
  </P>
  <p>
- In fact, local variables are <em>created</em> when a function starts, and <em>destroyed</em> when the function is completed. Local variables only exist for the life of one functioncal.
+ In fact, local variables are <em>created</em> when a function starts, and <em>destroyed</em> when the function is completed. Local variables only exist for the life of one function call.
  </p>
 
   </td>
@@ -79,9 +81,9 @@ Javascript has two scopes: **global** and **local**.   Here's the difference...
   </td>
 </tr>
 </table>
+<hr>
 
 <strong style="font-size: 20px; color: #00adbc">Global Variables</strong><br>
-
 <table>
 <tr>
   <td width=400>
@@ -91,6 +93,13 @@ Javascript has two scopes: **global** and **local**.   Here's the difference...
  </p>
  <p>
  In the example to the right we say that <strong>lives</strong> is a <strong>global variable</strong>.  
+ </p>
+ <p>
+ 
+ </p>
+ <p>
+ 
+ 
  </p>
   </td>
   <td>
@@ -102,49 +111,49 @@ Javascript has two scopes: **global** and **local**.   Here's the difference...
 <hr>
 <strong style="font-size: 20px; color: #00adbc">Why Use Local Variables?</strong><br>
 
-Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.
-
 Local variables are useful temporary placeholders for data that you need to perform a computation of some kind.
 
-They are useful because often a program might have several functions that perform different but related tasks and you'd like to reuse variable names.
+Often a program might have several functions that perform different but related tasks, and you'd like to reuse variable names. Since local variables are only recognized inside their functions, variables with the same name can be reused in different functions.
 
-The best example of this is **function parameters**.  Function parameters are a form of local variable - they get created and initialized when a function is called, and they get used once while the function runs, and then destroyed.
+The best example of this is **function parameters**.  Function parameters are a form of local variable - they get created and initialized when a function is called, they get used while the function runs, and then they get destroyed when the function completes.
 
 Imagine if all we had were global variables.  Then you **could not** write this code:
 
 ![](https://images.code.org/539102916c458b6076643a7c7fd1eaa2-image-1446408316345.png)
 
-Because the **size** variable is **local** to the function, we can re-use this handy variable name.  If all variables had to be global we'd have to invent deferent variable names for every function parameter in the entire language.
-
-**Common pitfalls with local variables**
-
-The most common mistake is something you just experienced: **accidentally re-creating a variable inside a function when you intended to reference a global variable**.
-
-When you create a variable inside a function that happens to have the same name as a global variable the **local variable takes precedence** and the function will try to use the local variable first. 
+If all variables had to be global we'd have to invent different variable names for every function parameter in the entire program. But because the **size** variable is **local** to the function, we can re-use this handy parameter name.
 
 
+<br><strong style="font-size: 20px; color: #00adbc">Common Pitfalls with Local Variables</strong>
+
+* The most common mistake is something you just experienced: **accidentally re-creating a variable inside a function when you intended to reference a global variable**.
+
+* When you create a variable inside a function, and it happens to have the same name as a global variable, the **local variable takes precedence** and the function will try to use the local variable first.
+
+
+<hr>
 <strong style="font-size: 20px; color: #00adbc">Why Use Global Variables?</strong><br>
 
 Global variables are useful for keeping track of data over the lifetime of the program that's running.  
 
 If you want to keep track of some data between events, or between function calls, you want a global variable.
 
-**Where to create global variables**
+<br><strong style="font-size: 20px; color: #00adbc">Where to Create Global Variables</strong>
 
 By convention global variables are created and initialized in the **very first lines of code** in a program.  
 
-**Common pitfalls with global variables**
+<br><strong style="font-size: 20px; color: #00adbc">Common Pitfalls with Global Variables</strong>
 
-Because you can create a global variable *anywhere* in your code that is outside of a function definition, you can get yourself into trouble if you have variable declarations scattered throughout a large program.  You might accidently re-create or create a new variable for a purpose you've already made a variable for.  
+* Because you can create a global variable *anywhere* in your code that is outside of a function definition, you can get yourself into trouble if you have variable declarations scattered throughout a large program.  You might accidently re-create or create a new variable for a purpose you've already made a variable for.  
 
-**ADVICE** Stick to the convention: if you need a global variable in your program, create it and give it an initial value at the very top of your program.  Keep all global variables in a group at the top where you can look up them.
+* **ADVICE:** Stick to the convention: if you need a global variable in your program, create it and give it an initial value at the very top of your program.  Keep all global variables in a group at the top where you can look them up.
+
  
 <hr>
-
-# Moving on...
+# Moving On...
 Now let's practice a little bit more with variables.  
 
 For our programs coming up we're particularly interested in global variables since that gives us the ability to remember data like the score of a game over the life of a program.
 
-<a >Continue</a>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

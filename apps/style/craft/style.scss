@@ -1,0 +1,864 @@
+$root: '/blockly/media/craft/'; //TODO: Parameterize for asset pipeline
+
+@import '../common';
+@import 'font';
+
+$very-dark-gray: #3B3B3B;
+$below-header-background: #646464;
+$blockly-header: $very-dark-gray;
+$flyout-background: #4E4E4E;
+$footer-background: #4E4E4E;
+$footer-text–and-arrow: #969292;
+$grabber-dots: #4F4F4F;
+$main-blockspace-background: rgb(161, 161, 161);// #8B8B8B;
+$start-over-show-code-button-background: #606060;
+$start-over-show-code-text: #BFBFBF;
+$callout-fallback-border-color: $very-dark-gray;
+
+$original-background-color: #F2F2F2;
+
+@mixin mc-text-shadow {
+  text-shadow: 2px 2px #565656 !important;
+}
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+@mixin pixelated() {
+  image-rendering:optimizeSpeed;             /* Legal fallback */
+  image-rendering:-moz-crisp-edges;          /* Firefox        */
+  image-rendering:-o-crisp-edges;            /* Opera          */
+  image-rendering:-webkit-optimize-contrast; /* Safari         */
+  image-rendering:optimize-contrast;         /* CSS3 Proposed  */
+  image-rendering:crisp-edges;               /* CSS4 Proposed  */
+  image-rendering:pixelated;                 /* CSS4 Proposed  */
+  -ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
+}
+
+body {
+  background-color: $below-header-background;
+}
+
+.header-wrapper {
+  background-color: $original-background-color;
+}
+
+.workspace-header {
+  background-color: $blockly-header;
+}
+
+#headers {
+  background-color: $blockly-header !important;
+}
+
+.workspace-header-button {
+  background-color: $start-over-show-code-button-background !important;
+  color: $start-over-show-code-text;
+  border: none;
+  &:hover {
+    color: white;
+  }
+}
+
+.blocklySvg {
+  background-color: $main-blockspace-background;
+}
+
+.blocklyFlyoutBackground {
+  fill: $flyout-background !important;
+  fill-opacity: 1;
+}
+
+#bubble {
+  background-color: transparent !important;
+}
+
+.small-footer-base {
+  background-color: $footer-background;
+  color: $footer-text–and-arrow;
+  & a:hover {
+    color: white;
+  }
+}
+
+//.minecraft .modal a:hover {
+//  background: transparent;
+//}
+
+#codeApp {
+  top: 100px !important;
+
+  &.hide-source {
+    top: 0 !important;
+  }
+
+  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
+    top: 10px !important;
+  }
+
+  .loading {
+    @include pixelated();
+    background: url("#{$root}Sliced_Parts/MC_Loading_Spinner.gif") no-repeat center center;
+  }
+}
+
+#codeWorkspace.pin_bottom {
+  border: none;
+  border-top: 1px solid $blockly-header;
+}
+
+#visualizationResizeBar {
+  color: $grabber-dots;
+}
+
+#belowVisualization p {
+  color: white;
+}
+
+/* 'Look' icon */
+#look>path {
+  display: none;
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-opacity: 0.7;
+}
+
+/* Sprited icons. */
+.icon21 {
+  height: 21px;
+  width: 21px;
+  background-image: url("#{$root}icons.png");
+}
+.code {
+  background-position: -21px 0px;
+}
+.link {
+  background-position: 0px 0px;
+}
+
+#phaser-game canvas {
+  @include pixelated();
+}
+
+#phaser-game {
+  $frame-width: 434;
+  $native-game-width: 400;
+  $game-offset-x: (($frame-width - $native-game-width) / 2);
+  margin-left: $game-offset-x * 1px;
+  margin-top: 61px; // asset pixel distance from frame top to game top
+  display: inline-block;
+}
+
+#minecraft-frame {
+  //@include pixelated();
+  width: 434px;
+  height: 477px;
+  background-image: url("#{$root}Sliced_Parts/Frame_Large_Plus_Logo.png");
+  background-size: 100%;
+}
+
+#right-button-cell {
+  display: none;
+  vertical-align: top;
+  &.right-button-cell-enabled {
+    display: inline-block;
+  }
+}
+
+a.video_link {
+  color: $lighter_cyan;
+}
+
+#visualizationColumn.pin_bottom {
+  width: 100%;
+  top: -11px;
+}
+
+/**
+ * Define a handful of media-query visualization size changes, the focus being:
+ *
+ * 1. Always show enough of the blocks to play via min-width
+ * 2. Always show enough of the instructions to see there are instructions via
+ *    min-height
+ */
+
+$width-to-height: 477 / 434;
+$height-to-width: 434 / 477;
+
+@media screen and (min-height: 0px) {
+  @include visualization-width-height-original($height-to-width * 200px, 200px, 434px);
+}
+
+@media screen and (min-height: 560px) {
+  @include visualization-width-height-original($height-to-width * 277px, 277px, 434px);
+}
+
+@media screen and (min-width: 850px) and (min-height: 642px) {
+  @include visualization-width-height-original($height-to-width * 377px, 377px, 434px);
+}
+
+@media screen and (min-width: 1050px) and (min-height: 732px) {
+  @include visualization-width-height-original($height-to-width * 450px, 450px, 434px);
+}
+
+@media screen and (min-width: 1150px) and (min-height: 832px) {
+  @include visualization-width-height-original($height-to-width * 515px, 515px, 434px);
+}
+
+#visualization {
+  height: 677px !important;
+}
+
+@mixin reset-dialog {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  .x-close {
+    visibility: hidden;
+  }
+}
+
+@mixin popup-width-height($width, $height) {
+  $offsetY: -($height/2);
+  $offsetX: -($width/2);
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: $width;
+  margin: $offsetY 0 0 $offsetX;
+}
+
+#craft-popup-player-selection {
+  @include reset-dialog;
+  background-color: #3C3C3C;
+
+  @include popup-width-height(540px, 516px);
+
+  @media screen and (max-height: 630px) {
+    @include popup-width-height(540px, 400px);
+  }
+
+  border-style: solid;
+  border-width: 18px 21px 22px 19px;
+  box-shadow: none;
+  @include pixelated();
+  -moz-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
+  -webkit-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
+  -o-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
+  border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 fill stretch;
+
+  #modal-body {
+    background-color: #3C3C3C;
+  }
+
+  .modal-content.no-modal-icon {
+    margin-left: 0;
+  }
+
+  .minecraft-big-yellow-header {
+    text-shadow: 2px 2px #565656 !important;
+    color: #F4D00B;
+    line-height: 11px;
+    font-size: 30px;
+  }
+
+  #select-character-text {
+    line-height: 50px;
+    font-size: 22px;
+    color: #e7e8ea;
+  }
+
+  .minecraft-character {
+    float: left;
+    width: 150px;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    @media screen and (max-height: 630px) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    margin-top: 8px;
+  }
+
+  .character-portrait {
+    margin: 0px auto 10px auto;
+    background-size: 100% auto;
+    background-position-x: 0; // 50% for smaller screens
+    background-position-y: 0;
+    background-repeat: no-repeat;
+  }
+
+  #steve-portrait {
+    $width: 144px;
+    $height: 268px;
+    background-image: url("#{$root}Sliced_Parts/Steve_Character_Select.png");
+    width: $width;
+    height: $height;
+    margin-top: 13px; // matches bottom with Alex
+
+    @media screen and (max-height: 630px) {
+      width: $width / 2;
+      height: $height / 2;
+      margin-top: 0;
+    }
+  }
+
+  #alex-portrait {
+    $width: 136px;
+    $height: 271px;
+    background-image: url("#{$root}Sliced_Parts/Alex_Character_Select.png");
+    width: $width;
+    height: $height;
+
+    @media screen and (max-height: 630px) {
+      width: $width / 2;
+      height: $height / 2;
+    }
+  }
+
+  #choose-character-container {
+    // center content (IE8+)
+    display: table;
+    margin: 0 auto;
+
+    cursor: pointer;
+
+    @media screen and (max-height: 630px) {
+      margin-top: -18px;
+    }
+  }
+
+  #close-character-select {
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    background: url("#{$root}Sliced_Parts/X_Button.png") no-repeat center center;
+    background-size: 100% auto;
+    top: -35px;
+    right: -35px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .choose-character-button {
+    border-style: solid !important;
+    border-width: 4px 5px 6px !important;
+    @include pixelated();
+    -moz-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
+    -webkit-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
+    -o-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
+    border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 fill stretch !important;
+    @include mc-text-shadow();
+
+    color: #f1f1f1 !important;
+    font-size: 26px;
+    line-height: 26px;
+    font-family: $gotham-bold !important;
+
+    display: inline-block;
+    padding: 5px;
+  }
+
+}
+
+#craft-popup-house-selection {
+  @include reset-dialog;
+  background-color: #3C3C3C;
+
+  @include popup-width-height(654px, 510px);
+
+  @media screen and (max-height: 630px) {
+    @include popup-width-height(654px, 300px);
+  }
+
+  border-style: solid;
+  border-width: 18px 21px 22px 19px;
+  box-shadow: none;
+  @include pixelated();
+  -moz-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
+  -webkit-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
+  -o-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
+  border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 fill stretch;
+
+  #modal-body {
+    background-color: #3C3C3C;
+  }
+
+  .modal-content {
+    margin-left: 0;
+  }
+
+  .minecraft-big-yellow-header {
+    text-shadow: 2px 2px #565656 !important;
+    color: #F4D00B;
+    line-height: 11px;
+    font-size: 30px;
+  }
+
+  #select-house-text {
+    line-height: 50px;
+    font-size: 22px;
+    color: #e7e8ea;
+  }
+
+  .minecraft-house {
+    float: left;
+    width: 150px;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media screen and (max-height: 630px) {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    margin-top: 8px;
+  }
+
+  $house-outline-height: 182px;
+
+  .house-outline-container {
+    border: 3px solid white;
+    display: table;
+    $margin-above: 23px;
+    $margin-below: 16px;
+    margin: $margin-above auto $margin-below;
+    $house-outline-width: 160px;
+    width: 160px;
+    height: $house-outline-height;
+    @media screen and (max-height: 630px) {
+      width: $house-outline-width / 2;
+      $fudge-factor-to-match-bottoms: 7px;
+      height: ($house-outline-height / 2) + $fudge-factor-to-match-bottoms;
+    }
+  }
+
+  .house-photo {
+    margin: 0px auto 10px auto;
+    background-size: 100% auto;
+    background-position-x: 0; // 50% for smaller screens
+    background-position-y: 0;
+    background-repeat: no-repeat;
+  }
+
+  $extra-offset-for-shadow: 5px;
+  #house-a-picture {
+    $width: 112px;
+    $height: 111px;
+    background-image: url("#{$root}Sliced_Parts/House_Option_A_v3.png");
+    width: $width;
+    height: $height;
+    $margin-above-photo: ($house-outline-height - $height) / 2 + $extra-offset-for-shadow;
+    margin-top: $margin-above-photo;
+
+    @media screen and (max-height: 630px) {
+      width: $width / 2;
+      height: $height / 2;
+      margin-top: $margin-above-photo / 2;
+    }
+  }
+  #house-c-picture {
+    $width: 127px;
+    $height: 129px;
+    background-image: url("#{$root}Sliced_Parts/House_Option_B_v3.png");
+    width: $width;
+    height: $height;
+    $margin-above-photo: ($house-outline-height - $height) / 2 + $extra-offset-for-shadow;
+    margin-top: $margin-above-photo;
+
+    @media screen and (max-height: 630px) {
+      width: $width / 2;
+      height: $height / 2;
+      margin-top: $margin-above-photo / 2;
+    }
+  }
+  #house-b-picture {
+    $width: 98px;
+    $height: 152px;
+    background-image: url("#{$root}Sliced_Parts/House_Option_C_v3.png");
+    width: $width;
+    height: $height;
+    $margin-above-photo: ($house-outline-height - $height) / 2 + $extra-offset-for-shadow;
+    margin-top: $margin-above-photo;
+
+    @media screen and (max-height: 630px) {
+      width: $width / 2;
+      height: $height / 2;
+      margin-top: $margin-above-photo / 2;
+    }
+  }
+
+  #choose-house-container {
+    // center content (IE8+)
+    display: table;
+    margin: 0 auto;
+
+    cursor: pointer;
+
+    @media screen and (max-height: 630px) {
+      margin-top: -18px;
+    }
+  }
+
+  #close-house-select {
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    background: url("#{$root}Sliced_Parts/X_Button.png") no-repeat center center;
+    background-size: 100% auto;
+    top: -35px;
+    right: -35px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .choose-house-button {
+    border-style: solid !important;
+    border-width: 4px 5px 6px !important;
+    @include pixelated();
+    -moz-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
+    -webkit-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
+    -o-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
+    border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 fill stretch !important;
+    @include mc-text-shadow();
+
+    color: #f1f1f1 !important;
+    font-size: 26px;
+    line-height: 26px;
+    font-family: $gotham-bold !important;
+
+    display: inline-block;
+    padding: 5px;
+  }
+
+}
+
+.dash_modal button, .minecraft button {
+  border-style: solid !important;
+  border-width: 4px 5px 6px !important;
+  @include pixelated();
+  -moz-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
+  -webkit-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
+  -o-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
+  border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 fill stretch !important;
+
+
+  $run-width: 16px;
+  $reset-width: 40px;
+  $run-left-margin: 6px;
+
+  &#runButton {
+    min-width: 139px;
+    & > div {
+      margin-top: 4px;
+      font-size: 24px;
+      color: white !important;
+      text-shadow: 2px 2px #5A5A5A !important;
+      margin-left: 2px;
+      margin-right: 18px;
+    }
+    padding-top: 6px;
+    padding-bottom: 4px;
+    border-style: solid !important;
+    border-width: 3px 3px 5px 5px !important;
+    @include pixelated();
+    -moz-border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
+    -webkit-border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
+    -o-border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
+    border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 fill stretch !important;
+
+    .run26 {
+      background: url("#{$root}Sliced_Parts/MC_Run_Arrow_Icon.png") no-repeat 0 0;
+      width: $run-width;
+      height: 34px;
+      margin-left: $run-left-margin;
+      margin-right: 3px;
+      margin-top: -2px;
+      margin-bottom: -1px;
+      padding-right: 13px;
+      @include pixelated();
+    }
+
+    &:hover {
+      @include box-shadow(none);
+    }
+
+    &:active {
+      outline:none;
+      border-style: solid !important;
+      border-width: 5px 4px 3px 3px !important;
+      @include pixelated();
+      -moz-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
+      -webkit-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
+      -o-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
+      border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 fill stretch !important;
+    }
+  }
+
+  &#resetButton {
+    min-width: 139px;
+
+    & > div {
+      font-size: 24px;
+      color: white !important;
+      text-shadow: 2px 2px #5A5A5A !important;
+      margin-left: 8px;
+      padding-right: 0;
+      margin-right: 2px;
+      margin-top: 4px;
+    }
+    padding-top: 6px;
+    padding-bottom: 4px;
+    border-style: solid !important;
+    border-width: 3px 3px 5px 5px !important;
+    @include pixelated();
+    -moz-border-image: url("#{$root}Sliced_Parts/Reset_Button_Up_Slice.png") 3 3 5 5 stretch !important;
+    -webkit-border-image: url("#{$root}Sliced_Parts/Reset_Button_Up_Slice.png") 3 3 5 5 stretch !important;
+    -o-border-image: url("#{$root}Sliced_Parts/Reset_Button_Up_Slice.png") 3 3 5 5 stretch !important;
+    border-image: url("#{$root}Sliced_Parts/Reset_Button_Up_Slice.png") 3 3 5 5 fill stretch !important;
+
+    .reset26 {
+      background: url("#{$root}Sliced_Parts/MC_Reset_Arrow_Icon.png") no-repeat 0 0;
+      width: $reset-width;
+      height: 36px;
+      margin-right: 3px;
+      margin-top: -2px;
+      margin-left: -6px;
+      margin-bottom: -3px;
+      @include pixelated();
+    }
+
+    &:hover {
+      @include box-shadow(none);
+    }
+
+    &:active {
+      outline:none;
+      border-style: solid !important;
+      border-width: 5px 4px 3px 3px !important;
+      @include pixelated();
+      -moz-border-image: url("#{$root}Sliced_Parts/Reset_Button_Down_Slice.png") 5 4 3 3 stretch !important;
+      -webkit-border-image: url("#{$root}Sliced_Parts/Reset_Button_Down_Slice.png") 5 4 3 3 stretch !important;
+      -o-border-image: url("#{$root}Sliced_Parts/Reset_Button_Down_Slice.png") 5 4 3 3 stretch !important;
+      border-image: url("#{$root}Sliced_Parts/Reset_Button_Down_Slice.png") 5 4 3 3 fill stretch !important;
+    }
+  }
+
+  @include mc-text-shadow();
+
+  color: #f1f1f1 !important;
+  font-size: 26px;
+  font-family: $gotham-bold !important;
+
+  &#ok-button {
+    background-color: inherit;
+    border: inherit;
+  }
+}
+
+#prompt-icon {
+  width: 100%;
+}
+
+.dash_modal {
+  top: 80px;
+  margin-left: -340px;
+
+  background-color: $dark_charcoal;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+
+  border-style: solid;
+  border-width: 18px 21px 22px 19px;
+  @include pixelated();
+  -moz-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
+  -webkit-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
+  -o-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
+  border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 fill stretch;
+
+  .modal-image {
+    margin-left: -21px;
+    margin-top: -100px;
+    width: auto;
+  }
+
+  .x-close {
+    @include pixelated();
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    background: url("#{$root}Sliced_Parts/X_Button.png") no-repeat center center;
+    background-size: 100% auto;
+    top: -35px;
+    right: -35px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .modal-content .lines-of-code-message {
+    color: $lighter_gray;
+  }
+
+  .social-buttons a:hover {
+    background: none !important;
+    fill: white !important;
+  }
+
+  #sharing button {
+    font-size: 20px;
+    height: 40px;
+    padding: 5px;
+  }
+
+  #puzzleRatingButtons a:hover.puzzle-rating-btn {
+    background: none !important;
+    fill: white !important;
+  }
+
+  p {
+    line-height: 27px;
+    font-size: 24px;
+    color: $lightest_gray;
+
+  }
+  p.congrats {
+    margin-left: 69px;
+  }
+  .failure-feedback p.congrats {
+    margin-left: 0px;
+  }
+
+  // Video notes
+  #notes .note p {
+    color: $dark_charcoal;
+  }
+
+  // "Show Code" explanation
+  .generated-code-container .generatedCodeMessage {
+    color: $lightest_gray;
+
+    a {
+      color: $lighter_purple;
+    }
+  }
+
+  .dialog-title {
+    @include mc-text-shadow();
+    color: #F4D00B;
+  }
+
+  #feedbackButtons:after {
+    display: none;
+  }
+
+  .after-feedback-buttons {
+    clear: both;
+  }
+}
+
+// callout styling
+
+.qtip-content {
+  color: white;
+}
+
+.qtip-default {
+
+  padding: 10px;
+  border: 0;
+  border-radius: 0;
+
+  color: white;
+  border-color: transparent;
+  background-color: transparent;
+
+  .ieVersion9 &,
+  .ieVersion10 & {
+    // Force a background color for ie 10 and 11
+    background-color: rgb(88, 88, 88) !important;
+    border-radius: 8px;
+    border-color: $callout-fallback-border-color;
+    border-width: 15px;
+  }
+
+  border-style: solid;
+  border-width: 18px 21px 22px 19px;
+  box-shadow: none;
+  @include pixelated();
+  -moz-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
+  -webkit-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
+  -o-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
+  border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 fill stretch;
+}
+
+.tooltip-x-close.qtip-icon {
+  @include pixelated();
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  background: url("#{$root}Sliced_Parts/X_Button.png") no-repeat center center;
+  background-size: 100% auto;
+  top: -35px;
+  right: -35px;
+  width: 50px;
+  height: 50px;
+
+  &:hover {
+    top: -35px;
+    right: -35px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.cdo-qtips .qtip-tip {
+  background: url("#{$root}Sliced_Parts/Callout_Tail.png") no-repeat center center;
+  width: 66px !important;
+  height: 66px !important;
+
+  canvas {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@mixin translate-x-y-rotate($translateX, $translateY, $degrees) {
+  -webkit-transform: translateX($translateX) translateY($translateY) rotate($degrees);
+  -moz-transform: translateX($translateX) translateY($translateY) rotate($degrees);
+  -ms-transform: translateX($translateX) translateY($translateY) rotate($degrees);
+  -o-transform: translateX($translateX) translateY($translateY) rotate($degrees);
+  transform: translateX($translateX) translateY($translateY) rotate($degrees);
+}
+
+// Rotate and tweak positioning of tip asset to line up at different orientations
+
+.qtip-pos-lc .qtip-tip {
+  @include translate-x-y-rotate(2px, 0, -90deg);
+  margin-top: -33px !important;
+  left: -66px !important;
+}
+
+.qtip-pos-rc .qtip-tip {
+  @include translate-x-y-rotate(-5px, 0, 90deg);
+  margin-top: -33px !important;
+  right: -66px !important;
+}
+
+.qtip-pos-tc .qtip-tip {
+  @include translate-x-y-rotate(0, 1px, 0deg);
+  top: -66px !important;
+  left: 66px !important;
+}
+
+.qtip-pos-bc .qtip-tip {
+  @include translate-x-y-rotate(0, -5px, 180deg);
+  bottom: -66px !important;
+  margin-left: -33px !important;
+}

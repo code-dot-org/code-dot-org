@@ -42,7 +42,9 @@ var assetsApi = require('../clientApi').assets;
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
 var DebugArea = require('./DebugArea');
+var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
+var logToCloud = require('../logToCloud');
 
 var applabConstants = require('./constants');
 
@@ -76,7 +78,6 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var level;
 var skin;
 var copyrightStrings;
-var dropletConfigBlocks;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -321,17 +322,20 @@ function adjustAppSizeStyles(container) {
 }
 
 var drawDiv = function () {
-  var divApplab = document.getElementById('divApplab');
-  divApplab.style.width = Applab.appWidth + "px";
-  divApplab.style.height = Applab.footerlessAppHeight + "px";
-  var designModeViz = document.getElementById('designModeViz');
-  designModeViz.style.width = Applab.appWidth + "px";
-  designModeViz.style.height = Applab.footerlessAppHeight + "px";
+  ['divApplab', 'visualizationOverlay', 'designModeViz'].forEach(function (divId) {
+    var div = document.getElementById(divId);
+    div.style.width = Applab.appWidth + "px";
+    div.style.height = Applab.footerlessAppHeight + "px";
+  });
 
-  if (studioApp.share) {
+  if (shouldRenderFooter()) {
     renderFooterInSharedGame();
   }
 };
+
+function shouldRenderFooter() {
+  return studioApp.share;
+}
 
 function renderFooterInSharedGame() {
   var divApplab = document.getElementById('divApplab');
@@ -518,14 +522,8 @@ function handleExecutionError(err, lineNumber) {
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = { err: err, lineNumber: lineNumber };
 
-  // NOTE: We call onPuzzleComplete() here only when we hit syntax errors,
-  // because we can't enter the onTick loop when the interpreter didn't
-  // parse the program and instantiate properly.
-  // In the future, we may want to call it on non freeplay-levels to handle
-  // runtime errors (as part of level validation):
-  if (err instanceof SyntaxError) {
-    Applab.onPuzzleComplete();
-  }
+  // complete puzzle, which will prevent further execution
+  Applab.onPuzzleComplete();
 }
 
 Applab.getCode = function () {
@@ -667,6 +665,8 @@ Applab.init = function(config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   Applab.channelId = config.channel;
+  // inlcude channel id in any new relic actions we generate
+  logToCloud.setCustomAttribute('channelId', Applab.channelId);
   if (config.assetPathPrefix) {
     Applab.assetPathPrefix = config.assetPathPrefix;
   }
@@ -730,7 +730,10 @@ Applab.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html.ejs')(),
+      visualization: require('./visualization.html.ejs')({
+        appWidth: Applab.appWidth,
+        appHeight: Applab.footerlessAppHeight
+      }),
       controls: firstControlsRow,
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
@@ -746,7 +749,6 @@ Applab.init = function(config) {
   });
 
   config.loadAudio = function() {
-    studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
@@ -823,18 +825,8 @@ Applab.init = function(config) {
   config.makeYourOwn = false;
 
   config.varsInGlobals = true;
-  config.noButtonsBelowOnMobileShare = true;
 
-  // filter blocks to exclude anything that isn't in code functions if
-  // autocompletePaletteApisOnly is true
-  dropletConfigBlocks = dropletConfig.blocks.filter(function (block) {
-    return !(config.level.executePaletteApisOnly &&
-      config.level.codeFunctions[block.func] === undefined);
-  });
-
-  config.dropletConfig = $.extend({}, dropletConfig, {
-    blocks: dropletConfigBlocks
-  });
+  config.dropletConfig = dropletConfig;
 
   config.pinWorkspaceToBottom = true;
 
@@ -847,10 +839,18 @@ Applab.init = function(config) {
   // ensure that the viewport is set up properly for scaling it up/down
   config.mobileNoPaddingShareWidth = config.level.appWidth;
 
+  config.enableShowLinesCount = false;
+
+  // In Applab, we want our embedded levels to look the same as regular levels,
+  // just without the editor
+  config.centerEmbedded = false;
+  config.wireframeShare = true;
+
   // Applab.initMinimal();
 
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
+
   studioApp.init(config);
 
   var viz = document.getElementById('visualization');
@@ -864,7 +864,7 @@ Applab.init = function(config) {
   if (config.embed || config.hideSource) {
     // no responsive styles active in embed or hideSource mode, so set sizes:
     viz.style.width = Applab.appWidth + 'px';
-    viz.style.height = Applab.appHeight + 'px';
+    viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
     // Use offsetWidth of viz so we can include any possible border width:
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
@@ -907,6 +907,8 @@ Applab.init = function(config) {
                                      Applab.onMouseUpDebugResizeBar);
     }
   }
+
+  window.addEventListener('resize', Applab.renderVisualizationOverlay);
 
   var finishButton = document.getElementById('finishButton');
   if (finishButton) {
@@ -1081,11 +1083,14 @@ Applab.clearEventHandlersKillTickLoop = function() {
   }
 };
 
+/**
+ * @returns {boolean}
+ */
 Applab.isRunning = function () {
   // We are _always_ running in share mode.
   // TODO: (bbuchanan) Needs a better condition. Tracked in bug:
   //      https://www.pivotaltracker.com/story/show/105022102
-  return $('#resetButton').is(':visible') || studioApp.share;
+  return !!($('#resetButton').is(':visible') || studioApp.share);
 };
 
 /**
@@ -1139,6 +1144,9 @@ Applab.reset = function(first) {
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
+  $('#divApplab').toggleClass('running', Applab.isRunning());
+  $('#divApplab').toggleClass('notRunning', !Applab.isRunning());
+
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
   Applab.toggleDivApplab(!isDesigning);
   designMode.parseFromLevelHtml(newDivApplab, false);
@@ -1150,6 +1158,8 @@ Applab.reset = function(first) {
   if (level.showTurtleBeforeRun) {
     applabTurtle.turtleSetVisibility(true);
   }
+
+  Applab.renderVisualizationOverlay();
 
   // Reset goal successState:
   if (level.goal) {
@@ -1185,6 +1195,36 @@ Applab.reset = function(first) {
   Applab.Globals = {};
   Applab.executionError = null;
   Applab.JSInterpreter = null;
+};
+
+/**
+ * Manually re-render visualization SVG overlay.
+ * Should call whenever its state/props would change.
+ */
+Applab.renderVisualizationOverlay = function() {
+  var divApplab = document.getElementById('divApplab');
+  var designModeViz = document.getElementById('designModeViz');
+  var visualizationOverlay = document.getElementById('visualizationOverlay');
+  if (!divApplab || !designModeViz || !visualizationOverlay) {
+    return;
+  }
+
+  // Enable crosshair cursor for divApplab and designModeViz
+  $(divApplab).toggleClass('withCrosshair', !Applab.isRunning());
+  $(designModeViz).toggleClass('withCrosshair', true);
+
+  if (!Applab.visualizationOverlay_) {
+    Applab.visualizationOverlay_ = new VisualizationOverlay();
+  }
+
+  // Calculate current visualization scale to pass to the overlay component.
+  var unscaledWidth = parseInt(visualizationOverlay.getAttribute('width'));
+  var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
+
+  Applab.visualizationOverlay_.render(visualizationOverlay, {
+    isApplabRunning: Applab.isRunning(),
+    scale: scaledWidth / unscaledWidth
+  });
 };
 
 /**
@@ -1245,6 +1285,9 @@ Applab.runButtonClick = function() {
   }
   Applab.execute();
 
+  // Re-render overlay to update cursor rules.
+  Applab.renderVisualizationOverlay();
+
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');
   if (shareCell) {
@@ -1266,6 +1309,7 @@ var displayFeedback = function() {
       response: Applab.response,
       level: level,
       showingSharing: level.freePlay,
+      tryAgainText: applabMsg.tryAgainText(),
       feedbackImage: Applab.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
@@ -1353,7 +1397,8 @@ Applab.execute = function() {
       // Use JS interpreter on editCode levels
       Applab.JSInterpreter = new JSInterpreter({
         code: codeWhenRun,
-        blocks: dropletConfigBlocks,
+        blocks: dropletConfig.blocks,
+        blockFilter: level.executePaletteApisOnly && level.codeFunctions,
         enableEvents: true,
         studioApp: studioApp,
         shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
@@ -1505,7 +1550,8 @@ Applab.onCodeModeButton = function() {
   }
 };
 
-var HTTP_REGEXP = new RegExp('^http://');
+// starts with http or https
+var ABSOLUTE_REGEXP = new RegExp('^https?://');
 
 // Exposed for testing
 Applab.assetPathPrefix = "/v3/assets/";
@@ -1514,15 +1560,20 @@ Applab.assetPathPrefix = "/v3/assets/";
  * If the filename is relative (contains no slashes), then prepend
  * the path to the assets directory for this project to the filename.
  *
- * If the filename URL is absolute and non-https, route it through the
- * MEDIA_PROXY.
+ * If the filename URL is absolute, route it through the MEDIA_PROXY.
  * @param {string} filename
  * @returns {string}
  */
 Applab.maybeAddAssetPathPrefix = function (filename) {
 
-  if (HTTP_REGEXP.test(filename)) {
-    return MEDIA_PROXY + encodeURIComponent(filename);
+  if (ABSOLUTE_REGEXP.test(filename)) {
+    // We want to be able to handle the case where our filename contains a
+    // space, i.e. "www.example.com/images/foo bar.png", even though this is a
+    // technically invalid URL. encodeURIComponent will replace space with %20
+    // for us, but as soon as it's decoded, we again have an invalid URL. For
+    // this reason we first replace space with %20 ourselves, such that we now
+    // have a valid URL, and then call encodeURIComponent on the result.
+    return MEDIA_PROXY + encodeURIComponent(filename.replace(' ', '%20'));
   }
 
   filename = filename || '';
@@ -1816,6 +1867,7 @@ Applab.getAssetDropdown = function (typeFilter) {
     }, typeFilter);
   };
   options.push({
+    text: 'Choose...',
     display: '<span class="chooseAssetDropdownOption">Choose...</a>',
     click: handleChooseClick
   });
@@ -1886,6 +1938,7 @@ Applab.changeScreen = function(screenId) {
 };
 
 Applab.loadDefaultScreen = function() {
-  var defaultScreen = $('#divApplab .screen').first().attr('id');
+  var defaultScreen = $('#divApplab .screen[is-default=true]').first().attr('id') ||
+    $('#divApplab .screen').first().attr('id');
   Applab.changeScreen(defaultScreen);
 };

@@ -111,6 +111,7 @@ describe('Level tests', function() {
     .then(function () { return loadSource('http://localhost:8001/apps/lib/ace/src-noconflict/ext-language_tools.js'); })
     .then(function () { return loadSource('http://localhost:8001/apps/lib/droplet/droplet-full.js'); })
     .then(function () { return loadSource('http://localhost:8001/apps/lib/tooltipster/jquery.tooltipster.js'); })
+    .then(function () { return loadSource('http://localhost:8001/apps/lib/phaser/phaser.js'); })
     .then(function () {
       assert(window.droplet, 'droplet in global namespace');
       done();
@@ -123,7 +124,7 @@ describe('Level tests', function() {
         clock.tick(100); // fake 1000 ms for every real 1ms
       }
     }, 1);
-    clock = sinon.useFakeTimers();
+    clock = sinon.useFakeTimers(Date.now());
 
     testUtils.setupBlocklyFrame();
     studioApp = testUtils.getStudioAppSingleton();

@@ -1,0 +1,20 @@
+title 'Minecraft Hour of Code'
+description_short "Explore a Minecraft world through code"
+description "Use blocks of code to take Steve or Alex on an adventure through this Minecraft world"
+hidden 'false'
+
+stage 'Hour of Code 2015'
+level 'Overworld Move to Sheep'
+level 'Overworld Chop Tree'
+level 'Overworld Shear Sheep'
+level 'Overworld Chop Trees'
+level 'Overworld Place Wall'
+level 'Overworld House Frame Chosen'
+level 'Overworld Plant Crops'
+level 'Overworld Avoid Monsters'
+level 'Underground Mining Coal'
+level 'Underground Iron'
+level 'Underground Avoiding Lava'
+level 'Underground If Statements'
+level 'Overworld Powered Minecart'
+level 'Overworld Free Play 20x20'

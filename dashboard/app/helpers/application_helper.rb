@@ -62,17 +62,6 @@ module ApplicationHelper
     end
   end
 
-  def level_info(user, script_level, user_levels)
-    result = nil
-    if user
-      ul = user_levels[script_level.level_id]
-      result = ul.try(:best_result) if ul
-    else
-      result = client_state.level_progress(script_level.level_id.to_i)
-    end
-    activity_css_class(result)
-  end
-
   def show_flashes
     ret = ''
     if notice.present?
@@ -173,14 +162,10 @@ module ApplicationHelper
   end
 
   def script_certificate_image_url(user, script)
-    if script.hoc?
-      script_name = 'hoc'
-    elsif script.twenty_hour?
-      script_name = '20hours'
-    else
-      script_name = data_t_suffix('script.name', script.name, "title")
-    end
-    certificate_image_url(name: user.name, course: script_name)
+    certificate_image_url(
+        name: user.name,
+        course: script.name,
+        course_title: data_t_suffix('script.name', script.name, 'title'))
   end
 
   def minifiable_asset_path(path)
@@ -195,8 +180,7 @@ module ApplicationHelper
 
   # Check to see if we disabled signin from Gatekeeper
   def signin_button_enabled
-    return true if @script.nil?
-    !Gatekeeper.allows('public_caching_for_script', where: { script_name: @script.name })
+    Gatekeeper.allows('show_signin_button', where: { script_name: @script.try(:name) }, default: true)
   end
 
   # Check to see if the tracking pixel is enabled for this script

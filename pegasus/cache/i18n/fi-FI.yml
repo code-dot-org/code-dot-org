@@ -1,7 +1,8 @@
 "fi-FI":
+  hour_of_code: Koodaustunti
   hello: Hei maailma
   select_language: Valitse kieli
-  en: Tietokonetiede
+  en: Tietojenkäsittelytiede
   computer_science_edweek: Tietotekniikan koulutusviikko
   csedweek_dates: 8. -14. Joulukuuta 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -10,7 +11,7 @@
     font-weight:bold">suunnittele koodaustuntisi</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Oletko tietotekniikan opettaja? Katso muut CSEdWeek-materiaalit</a>'
-  n_have_learned_an_hoc: "<h1>Kokeile</h1><h2>Koodaustunti</h2><h3># palveltu</h3>"
+  n_have_learned_an_hoc: <h1>Kokeile</h1><h2>Koodaustunti</h2><h3># palveltu</h3>
   anybody_can_learn: Kuka tahansa voi oppia.
   learn_now: Opettele nyt
   petition_message: Jokaisen oppilaan jokaisessa koulussa pitää saada mahdollisuus
@@ -34,11 +35,14 @@
   hoc2014_everyone: Kaikki
   hoc2014_support: Tue &#x25BE;
   hoc2014_whatishoc: Mikä on koodaustunti?
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
   csedweek_map_search_reset: Alusta
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Luo käyttäjätunnus
   cded_try_it: Kokeile
   twentyhours_trynow: Kokeile nyt
@@ -60,12 +64,15 @@
     -lauseet ja perusalgoritmit.
   all_ages: Kaikenikäiset
   beginner: Aloittelija
-  n_participants: "# osallistujaa"
+  n_participants: '# osallistujaa'
   go: Mene
   thank_you_: Kiitos!
   congratulations: Onneksi olkoon!
   congratulations_on_completing_hoc: Onnittelut Koodaustunnin suorittamisesta
-  course_name_accelerated: Accelerated Course
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
+  course_name_accelerated: Nopeutettu kurssi
   course_name_course1: Kurssi 1
   course_name_course2: Kurssi 2
   course_name_course3: Kurssi 3
@@ -107,7 +114,7 @@
   beyond_an_hour: Koodaustunnin jälkeen
   get_started: Aloita
   i_agree: Hyväksyn
-  participant_select: "- Valitse -"
+  participant_select: '- Valitse -'
   participant_student: Oppilas
   participant_parent: Vanhempi
   participant_educator: Opettaja
@@ -128,12 +135,11 @@
   learn_next_level: Jatka seuraavalle tasolle
   learn_online: Kokeile muita kursseja verkossa
   learn_classes: Etsi paikallisia oppitunteja
-  hoc_is_here: "#Koodaustunti on täällä - Tsekkaa! @codeorg"
+  hoc_is_here: '#Koodaustunti on täällä - Tsekkaa! @codeorg'
   just_did_hoc: 'Suoritin juuri #Koodaustunti - tsekkaa tämä! @codeorg'
-  twitter_teach_cs: Miksi enemmän kouluja ei opeta tietojenkäsittelytiedettä? Voimme
-    korjata tämän. http://youtu.be/nKIu9yen5nc. Vieraile http://code.org/ ja opi lisää.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
+  twitter_teach_cs: Miksi usemmat koulut eivät opeta tietojenkäsittelytiedettä? Voimme
+    korjata tämän. http://youtu.be/2DxWIxec6yo. Vieraile osoitteessa http://code.org/
+    ja opi lisää.
   learn_hoc: Opiskele Koodaustunnilla
   beyond_hoc: Koodaustunnin jälkeen
   what_gender: Mikä on sukupuolesi?
@@ -142,11 +148,11 @@
   help_recruit_coders: Auta meitä hankkimaan lisää koodaajia joukkueeseesi!
   help_recruit: Auta meitä hankkimaan lisää koodaajia!
   lines_of_code: TÄHÄN MENNESSÄ KIRJOITETTU YLI <b># RIVIÄ KOODIA</b>.
-  lines_of_code_alt: "<b>#</b> RIVIÄ OPISKELIJOIDEN KIRJOITTAMAA KOODIA"
+  lines_of_code_alt: <b>#</b> RIVIÄ OPISKELIJOIDEN KIRJOITTAMAA KOODIA
   who_has_done_hoc: 'Kuka on suorittanut #Koodaustunti? @codeorg'
   hoc_leaderboards: Koodaustunnin pistetaulukot
-  students_and_lines: "%{students} opiskelijaa on suorittanut koodaustunnin ja kirjoittanut
-    %{lines} riviä koodia."
+  students_and_lines: '%{students} opiskelijaa on suorittanut koodaustunnin ja kirjoittanut
+    %{lines} riviä koodia.'
   start_hoc: Aloita Koodaustunti nyt
   contact_form_topic_press: Lehdistö/media (haastattelu- tai luentopyyntö)
   stats_nina: '"Joka ikinen päivä tuotti saman tuloksen &mdash; 100 % sitoutuminen."-Nina
@@ -171,8 +177,8 @@
   studiobar_donate_body: Jokaista lahjoittamaasi dollaria kohden yksi lapsi saa oppia
   studiobar_shop_title: Kauppa
   studiobar_shop_body: Murra kaavamaisia käsityksiä. Käytä meidän logoa ylpeänä.
-  homepage_hero_text_malala: "&ldquo;Haastan tytöt kaikista maista oppimaan yhden
-    koodaustunnin&rdquo;  Malala, Nobelin rauhanpalkinnon saaja"
+  homepage_hero_text_malala: '&ldquo;Haastan tytöt kaikista maista oppimaan yhden
+    koodaustunnin&rdquo;  Malala, Nobelin rauhanpalkinnon saaja'
   homepage_hero_text_susan: |
     &ldquo;Jos voit muuttaa teknologian, voit muuttaa maailman.&rdquo;
     Susan, YouTube:n toimitusjohtaja
@@ -208,8 +214,8 @@
   homepage_hero_text_teacher2: |
     &ldquo;Tämä ohjelma sai 100% opiskelijoistani sitoutuviksi, osallistuviksi ja mukaan.&rdquo;
     Adam, opettaja
-  homepage_hero_text_stat_loc: "#loc opiskelijoiden kirjoittamia koodirivejä"
-  homepage_hero_text_stat_students: "#student_count opiskelijoiden tilejä Code Studio:ssa"
+  homepage_hero_text_stat_loc: '#loc opiskelijoiden kirjoittamia koodirivejä'
+  homepage_hero_text_stat_students: '#student_count opiskelijoiden tilejä Code Studio:ssa'
   homepage_hero_text_stat_served: 'Koodaustunti: #served tarjolla'
   homepage_slot_text_hoc: Koodaustunti
   homepage_slot_text_frozen: Frozen Annan ja Elsan kanssa
@@ -218,8 +224,15 @@
   homepage_slot_text_course4: Kurssi 4
   homepage_slot_text_shop: Kauppa
   homepage_slot_text_flappy: Flappy Code
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: '# käyttäjää'
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Luo käyttäjätunnus
+  homepage_action_text_try_it: Kokeile
+  homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_codevideo: Katso video
   homepage_action_text_teachervideo: Katso video
+  homepage_action_text_girlvideo: Inspire a girl
   homepage_action_text_learn: Aloita oppiminen
   homepage_action_text_signpetition: Allekirjoita vetoomus
   homepage_signpetition_dropdown: Allekirjoita vetoomuksemme &#x25BE;
@@ -231,12 +244,12 @@
   homepage_banner_text_link: Lue lisää
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Lisätietoja
+  homepage_banner_privacy_link: Lue lisää
   homepage_slot_text_title_hoc: Koodaustunti
   homepage_slot_text_blurb_hoc: Kuka tahansa voi oppia. Aloita jo tänään
   homepage_slot_text_link_hoc: Kokeile koodaustuntia
   homepage_slot_text_link_host: Järjestä Koodaustunti
-  homepage_slot_text_link_hocserved: "# käyttäjää"
+  homepage_slot_text_link_hocserved: '# käyttäjää'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Oppilaat
   homepage_slot_text_blurb_students: Tutki kaikki oppaat
@@ -297,26 +310,55 @@
   class_submission_level_college: Yliopisto / korkeakoulu
   class_submission_level_vocational: Ammatillinen opetus
   class_submission_languages_other: Muu kieli(kielet)
+  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
+    videos</a> by role models and celebrities
+  starwars_subtitle: Kasaa koodista Galaksi
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: Kokeile nyt
+  starwars_blocks_title: lohkot
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
+  starwars_blocks_start_button: Kokeile nyt
+  starwars_watch_videos: Before you get started, watch one of these inspirational
+    videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  starwars_platform_text: Nykyaikaiset selaimet, älypuhelimet, tabletit
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_gradelevel: Ages 4-104
+  mc_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up."
+    have signed up.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Nimi
@@ -375,9 +417,24 @@
   volunteer_engineer_submission_location_flexibility_curriculum: Halukas ottamaan
     osaa avoimen lähdekoodin oppisuunnitelmaprojekteihin
   volunteer_engineer_submission_experience_unspecified: Määrittelemätön
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: Nykyinen
     yliopisto-opiskelija (tai tutkija)
   volunteer_engineer_submission_experience_software_professional: Ohjelmistoammattilainen
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
   petition_age: Ikä
   dashboard_landing_title: Opettajan päänäyttö
   dashboard_landing_welcome: Tervetuloa uuteen ja parempaan opettajan päänäyttöön.
@@ -489,11 +546,11 @@
   dashboard_sections_name: Ryhmän nimi
   dashboard_sections_choose_secret: Jos haluat antaa tunnukset oppilaillesi, valitse
     ryhmän salaisuustyypiksi joko <b>sana</b> tai <b>kuva</b>.
-  dashboard_sections_secret_word: "<b>Sana</b> antaa sinun asettaa salaisen sanan
-    jokaiselle oppilaalle."
-  dashboard_sections_secret_picture: "<b>Kuva</b> antaa sinun asettaa salaisen kuvan
+  dashboard_sections_secret_word: <b>Sana</b> antaa sinun asettaa salaisen sanan jokaiselle
+    oppilaalle.
+  dashboard_sections_secret_picture: <b>Kuva</b> antaa sinun asettaa salaisen kuvan
     jokaiselle oppilaalle, sopii erityisesti nuoremmille oppilaille, jotka eivät osaa
-    vielä kirjoittaa."
+    vielä kirjoittaa.
   dashboard_sections_secret_none: Jos haluat oppilaidesi hallinnoivan omia tunnuksiaan,
     mukaanlukien omia salasanojaan, valitse salaisuustyypiksi <b>ei mitään</b>.
   dashboard_sections_print_secrets: Voit tulostaa tunnustiedot sisältävät kortit jaettavaksi
@@ -607,23 +664,41 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+  dashboard_announce_hoc: '<b>9. Marraskuuta 2015</b> - Uusi Kooditunti-harjoitus
+    on täällä, teemanaan elokuva Star Wars: The Force Awakens. Auta Rey:tä opastamaan
+    uutta droidia, BB-8:aa, joukossa tehtäviä. Sitten, yhdessä Leian kanssa, luo ja
+    jaa oma, kaukaiseen galaksiin sijoittuva, pelisi.'
   code_hoc_coming: Koodaustunti on täällä - 8.-14. Joulukuuta!
   code_sign_up: Liity osallistuaksesi tietojenkäsittelytieteen opetusviikon aikana
   learn_more: Lisätietoja
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
   learn_sign_up_button: Luo käyttäjätunnus
+  learn_videos_watch: Watch this inspirational video with your classroom
+  learn_videos_show: Show this inspirational video to your class
+  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Kokeile uusia Koodaustunti-oppituntejamme
   hoc2014_try_new_tutorial: Betatestaa uusia Koodaustunti-kurssejamme
   hoc2014_try_scrat: Angry Birds, PvZ ja Scrat
   hoc2014_try_frozen: Taiteilija Frozenin Annan ja Elsan kanssa
+  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Tutorials by 3rd parties
+  carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Oppitunnit omalla kielelläsi
   carousel_heading_domestic: Oppitunnit englanniksi
   carousel_heading_beginners: Oppitunnit aloittelijoille
@@ -637,6 +712,7 @@
   carousel_heading_robots: Opi ohjelmoimaan robottien kanssa
   carousel_heading_ide: Opettajien keskuudessa suositut alustat
   educator_notes: Opettajan muistiinpanot
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   how_to_teach_hoc: Miten opettaa koodia tunnissa
   more_resources_educators: Lisämateriaalit opettajille ja kasvattajille
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -652,6 +728,7 @@
     verkkoselaimeen.</a>
   mobile_devices: Oppaat mobiililaitteille
   frozen_name: Koodaa Annan ja Elsan kanssa
+  starwars_name: 'Tähtien Sota: Kasaa koodista Galaksi'
   codeorg_name: Kirjoita ensimmäinen oma tietokoneohjelmasi
   codeintl_name: Kirjoita ensimmäinen oma tietokoneohjelmasi
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -691,6 +768,8 @@
   projguts_name: Kivi, sakset, paperi
   hourofcode_name: Paikkamerkki uuteen code.org/hoc
   playlab_name: Pelilabra
+  infinity_name: Infinity Pelilabra
+  artist_name: Taiteilija
   codeorg_gradelevel: 4-104-vuotiaille
   codeintl_gradelevel: 4-104-vuotiaille
   thinkersmithspanish_gradelevel: Por todos
@@ -730,7 +809,10 @@
   projguts_gradelevel: 10-13-vuotiaille
   hourofcode_gradelevel: 4-104-vuotiaille
   frozen_gradelevel: Ikä 8+
+  starwars_gradelevel: Ages 6+
   playlab_gradelevel: 4-104-vuotiaille
+  infinity_gradelevel: 4-104-vuotiaille
+  artist_gradelevel: 4-104-vuotiaille
   codeorg_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   codeintl_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   thinkersmithspanish_platformtext: Tietokoneeton tekeminen
@@ -770,6 +852,7 @@
   projguts_platformtext: Tietokoneeton tekeminen
   hourofcode_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   frozen_platformtext: Modernit selaimet ja tablettitietokoneet
+  starwars_platformtext: Modernit selaimet ja tablettitietokoneet
   playlab_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   codeorg_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
   codeintl_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
@@ -821,10 +904,15 @@
   kodableunplugged_shortdescription: Hauska tietokoneettoman tekemisen harjoitus
   projguts_shortdescription: Kokeile mallinnusta ja simulointia kivi-sakset-paperi
     -pelin avulla
-  hourofcode_shortdescription: Paikkamerkki uuteen code.org/hoc
+  hourofcode_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
   frozen_shortdescription: Liitymme Annan ja Elsan matkaan, kun he tutkivat jään taikaa
     ja kauneutta ohjelmoinnin avulla.
+  starwars_shortdescription: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
+    ikioma Tähtien Sota -pelisi.
   playlab_shortdescription: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
+  infinity_shortdescription: Tee Pelilabrassa tarina tai peli jonka pääosassa ovat
+    Disneyn Infinity-hahmot.
+  artist_shortdescription: Tee hienoja piirrustuksia ja kuvioita Taiteilijan kanssa!
   codeorg_longdescription: Opettele tietojenkäsittelytieteen perusteet rakentamalla
     tietokoneohjelmia palikoista. Tällä pelillisellä itseopiskelukurssilla johdantovideoilla
     (englanniksi, tekstit suomeksi) esiintyy Bill Gates, Mark Zuckerberg, Angry Birds
@@ -962,6 +1050,8 @@
   frozen_longdescription: Koodataan Annan ja Elsan kanssa kun he tutkivat jään kauneutta
     ja taikaa. Tässä pelissä luot lumihiutaleita ja kuvioita luistellen ja luot taianomaisen
     lumimaan, jonka voit myös jakaa ystäviesi kanssa!
+  starwars_longdescription: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
+    ikioma Tähtien Sota -pelisi.
   playlab_longdescription: Luo tarina tai tee peli PeliLabralla! Merirosvot, eläimet,
     ninjat, zombit ja monet muut hahmot liikkuvat, ääntelevät, keräävät pisteitä ja
     jopa heittävät tulipalloja!
@@ -1287,38 +1377,19 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Piilota varoitus
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: "# served"
-  homepage_action_text_join_us: Join us
-  homepage_action_text_sign_up: Sign up
-  homepage_action_text_try_it: Try it
-  homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_girlvideo: Inspire a girl
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  starwars_gradelevel: Ages 6+
-  starwars_platformtext: Modern browsers + tablets
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: räpyttele
+  infinity_shortcode: inf
+  playlab_shortcode: pelaa
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

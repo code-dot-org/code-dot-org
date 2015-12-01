@@ -5,8 +5,8 @@
 #  id           :integer          not null, primary key
 #  name         :string(255)
 #  program_type :string(255)      not null
-#  location     :string(255)
-#  instructions :string(255)
+#  location     :string(1000)
+#  instructions :string(1000)
 #  created_at   :datetime
 #  updated_at   :datetime
 #  phase        :integer
@@ -17,7 +17,7 @@
 #  index_workshops_on_program_type  (program_type)
 #
 
-require 'cdo/activity_constants'
+require 'cdo/workshop_constants'
 
 class Workshop < ActiveRecord::Base
   PROGRAM_TYPES = %w(1 2 3 4 5 6)
@@ -61,7 +61,29 @@ class Workshop < ActiveRecord::Base
   end
 
   def phase_info
-    ActivityConstants::PHASES[self.phase]
+    WorkshopConstants::PHASES[self.phase.to_i]
+  end
+
+  def program_type_info
+    WorkshopConstants::PROGRAM_TYPES[self.program_type.to_i]
+  end
+
+  def exit_survey_url
+    program_ids = WorkshopConstants::EXIT_SURVEY_IDS[program_type_short_name]
+    return nil unless program_ids
+    survey_id = program_ids[phase_short_name]
+    return nil unless survey_id
+    "https://docs.google.com/a/code.org/forms/d/#{survey_id}/viewform"
+  end
+
+  def phase_short_name
+    return nil unless phase_info
+    phase_info[:short_name]
+  end
+
+  def program_type_short_name
+    return nil unless program_type_info
+    program_type_info[:short_name]
   end
 
   def phase_long_name
@@ -71,7 +93,7 @@ class Workshop < ActiveRecord::Base
 
   def prerequisite_phase
     return nil unless phase_info
-    ActivityConstants::PHASES[phase_info[:prerequisite_phase]]
+    WorkshopConstants::PHASES[phase_info[:prerequisite_phase]]
   end
 
   def automated_email_recipients
@@ -111,4 +133,5 @@ class Workshop < ActiveRecord::Base
     send_3_day_reminders
     send_exit_surveys
   end
+
 end

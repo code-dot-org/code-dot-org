@@ -18,7 +18,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Using keyup and keydown\r\n\r\nOn the last level we played with the `keypress` event. Lets take a look at some of the other key events. \r\n\r\nYou are going to get the chance to play with `keyup` and `keydown` in this level. **Pay attention to the different values of event.key for keydown and keypress. **\r\n\r\n# Do This\r\n\r\n* Switch to the `keydown` or `keyup` event. \r\n\r\n<img src=\"https://images.code.org/fa91b1a9e3240eb65ff75b381e76ce69-image-1447213909054.gif\" style=\"width: 350px\">\r\n\r\n* Try out the event.\r\n\t* Press and hold a key\r\n    * Try the arrow keys\r\n    * Shift\r\n    * Option\r\n    * Alt\r\n    * Others",
+    "markdown_instructions": "# Using *keyup* and *keydown*\r\n\r\nOn the last level, we played with the `keypress` event. Let's take a look at some of the other key events. \r\n\r\nYou are going to get the chance to play with `keyup` and `keydown` in this level. **Pay attention to the different values of `event.key` for `keydown` and `keypress`. **\r\n\r\n# Do This:\r\n\r\n* Switch to the event type to `keydown` or `keyup`. \r\n\r\n<img src=\"https://images.code.org/fa91b1a9e3240eb65ff75b381e76ce69-image-1447213909054.gif\" style=\"width: 350px\">\r\n\r\n* Try out the event.\r\n\t* Press and hold a key\r\n    * Try the arrow keys\r\n    * Shift\r\n    * Option\r\n    * Alt\r\n    * Others",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -50,9 +50,7 @@
     "debugger_disabled": "false",
     "start_blocks": "onEvent(\"screen1\", \"keypress\", function(event){\r\n console.log('key is: '+event.key); \r\n});",
     "instructions": "Try out the keyup and keydown events to see how they are different from keypress. (Click to see full instructions)",
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "KyM18f6JZFaKgbBF8lSIu8ySp1rjH3P7mLMfVHl0FF6wcQfpQnFZAeDnZ8S7\nGwK3\n"
   }
 }]]></config>
   <blocks/>

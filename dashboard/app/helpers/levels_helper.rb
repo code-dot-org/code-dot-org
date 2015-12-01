@@ -34,6 +34,7 @@ module LevelsHelper
       data = storage_app.get(src)
       data['name'] = "Remix: #{data['name']}"
       data['hidden'] = false
+      data['frozen'] = false
     end
 
     timestamp = Time.now
@@ -126,6 +127,8 @@ module LevelsHelper
 
     set_channel if @level.channel_backed?
 
+    view_options server_level_id: @level.id
+
     unless params[:share]
       # Set videos and callouts.
       view_options(
@@ -142,6 +145,10 @@ module LevelsHelper
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
+
+    if PuzzleRating.enabled?
+      view_options(puzzle_ratings_url: puzzle_ratings_path)
+    end
 
     if @level.is_a? Blockly
       @app_options = blockly_options
@@ -164,6 +171,7 @@ module LevelsHelper
     use_droplet = app_options[:droplet]
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
+    use_phaser = @level.game == Game.craft
     use_blockly = !use_droplet && !use_netsim
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
@@ -173,6 +181,7 @@ module LevelsHelper
                use_netsim: use_netsim,
                use_blockly: use_blockly,
                use_applab: use_applab,
+               use_phaser: use_phaser,
                hide_source: hide_source,
                static_asset_base_path: app_options[:baseUrl]
            }
@@ -304,7 +313,12 @@ module LevelsHelper
         callback: @callback,
     }
 
-    level_options[:lastAttempt] = @last_attempt
+    unless params[:no_last_attempt]
+      level_options[:lastAttempt] = @last_attempt
+      if @last_activity
+        level_options[:lastAttemptTimestamp] = @last_activity.updated_at.to_datetime.to_milliseconds
+      end
+    end
 
     if current_user.nil? || current_user.teachers.empty?
       # only students with teachers should be able to submit
@@ -317,18 +331,22 @@ module LevelsHelper
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
     if @game and @game.owns_footer_for_share?
-      # TODO (brent) - these would ideally also go in _javascript_strings.html right now, but it can't
-      # deal with params
-      app_options[:copyrightStrings] = {
+      app_options[:copyrightStrings] = build_copyright_strings
+    end
+
+    app_options
+  end
+
+  def build_copyright_strings
+    # TODO (brent) - these would ideally also go in _javascript_strings.html right now, but it can't
+    # deal with params
+    {
         :thank_you => URI.escape(I18n.t('footer.thank_you')),
         :help_from_html => I18n.t('footer.help_from_html'),
         :art_from_html => URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
         :powered_by_aws => I18n.t('footer.powered_by_aws'),
         :trademark => URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
-      }
-    end
-
-    app_options
+    }
   end
 
   LevelViewOptions = Struct.new(*%i(
@@ -340,7 +358,6 @@ module LevelsHelper
     embed
     share
     hide_source
-    script_level_id
     submitted
     unsubmit_url
   ))
@@ -414,6 +431,8 @@ module LevelsHelper
       else
         script
       end
+    elsif @level.try(:is_project_level) && data_t("game.name", @game.name)
+      data_t "game.name", @game.name
     else
       @level.key
     end

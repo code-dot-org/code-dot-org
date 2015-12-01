@@ -20,10 +20,10 @@
       "arcRight": null,
       "penRGB": {
         "params": [
-          "",
-          "",
-          "",
-          ""
+          "0",
+          "0",
+          "0",
+          "1"
         ],
         "paletteParams": [
           "r",
@@ -55,7 +55,7 @@
     "app_height": "480",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "markdown_instructions": "# Transparency - Red, Green, Blue, Alpha\r\n\r\nThere is another command that lets you set the pen color called `penRGB(r,g,b,a)`.\r\n\r\n* The first 3 parameters are for values (in the range 0-255) for the red, green, and blue channels. \r\n* The 4th parameter `a` stands for \"alpha\".  The \"alpha channel\" for color lets you set the level of **opacity** as a decimal value between 0 and 1 - it is interpreted as a percentage, so 0.5 equates to 50% opaque.  For example: `penRGB(113, 102, 160, 0.5)`.\r\n\r\n**Read the Documentation:** To figure out how to use `penRGB()` go read the documentation, paying special attention to the syntax used to give a command **multiple values**.\r\n\r\n<img src=\"https://images.code.org/3247af8d88da11a042d0bd9a76b49f12-image-1441982501960.png\" style=\"height: 250px; float: left; margin: 10px\">\r\n\r\n**Draw the circles: ** \r\n\r\nUse `penRGB()` and `dot()` to draw two overlapping circles as shown in the image.\r\n\r\n",
+    "markdown_instructions": "# Transparency - Red, Green, Blue, Alpha\r\n\r\nThere is another command that lets you set the pen color called `penRGB(r,g,b,a)`.\r\n\r\n* The first 3 parameters are for values (in the range 0-255) for the red, green, and blue channels. \r\n* The 4th parameter `a` stands for \"alpha\".  The \"alpha channel\" for color lets you set the level of **opacity** as a decimal value between 0 and 1 - it is interpreted as a percentage, so 0.5 equates to 50% opaque.  For example: `penRGB(113, 102, 160, 0.5)`.\r\n\r\n# Do This:\r\n\r\n**Read the Documentation:** To figure out how to use `penRGB()` go read the documentation, paying special attention to the syntax used to give a command **multiple values**.\r\n\r\n<img src=\"https://images.code.org/3247af8d88da11a042d0bd9a76b49f12-image-1441982501960.png\" style=\"height: 250px; float: left; margin: 10px\">\r\n\r\n**Draw the circles: ** \r\n\r\nUse `penRGB()` and `dot()` to draw two overlapping circles as shown in the image.\r\n\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "text_mode_at_start": "false",

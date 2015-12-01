@@ -57,6 +57,7 @@ locales = {
   'Romanian' => 'ro-RO',
   'Russian' => 'ru-RU',
   'Serbian (Cyrillic)' => 'sr-SP',
+  'Sinhala' => 'si-LK',
   'Slovak' => 'sk-SK',
   'Slovenian' => 'sl-SI',
   'Spanish' => 'es-ES',
@@ -68,7 +69,8 @@ locales = {
   'Ukrainian' => 'uk-UA',
   'Urdu (Pakistan)' => 'ur-PK',
   'Uzbek' => 'uz-UZ',
-  'Vietnamese' => 'vi-VN'
+  'Vietnamese' => 'vi-VN',
+  'Zulu' => 'zu-ZA'
 }
 
 untranslated_apps = [

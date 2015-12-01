@@ -1,0 +1,90 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2015-10-06T22:15:36.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"houseBottomA\",\"houseBottomB\",\"houseBottomC\",\"houseBottomD\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "player_start_position": "[3, 6]",
+    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isPlayerNextTo(\"logOak\");\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "player_start_direction": "0",
+    "special_level_type": "houseBuild",
+    "instructions": "Build the rest of your house from any material you'd like. The \"repeat\" command will come in handy.",
+    "is_daytime": "true",
+    "available_blocks": "[\"planksBirch\", \"planksOak\"]",
+    "embed": "false",
+    "free_play": "false",
+    "show_popup_on_load": "houseLayoutSelection",
+    "grid_width": "10",
+    "grid_height": "10",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"craft_callout_preplaced_house\",\r\n  \"callout_text\": \"This code will start building your house. Can you finish it?\",\r\n  \"element_id\": \"[block-id=\\\"12\\\"]\",\r\n  \"on\": \"instructionsHidden\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">3</title>
+              <statement name="DO">
+                <block type="craft_moveForward">
+                  <next>
+                    <block type="craft_placeBlock">
+                      <title name="TYPE">planksBirch</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="craft_turn">
+                  <title name="DIR">right</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_moveForward"/>
+        <block type="craft_turn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_turn">
+          <title name="DIR">right</title>
+        </block>
+        <block type="craft_placeBlock">
+          <title name="TYPE">planksBirch</title>
+        </block>
+        <block type="craft_destroyBlock"/>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">3</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
+  </blocks>
+</Craft>

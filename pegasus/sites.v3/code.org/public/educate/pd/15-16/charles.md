@@ -36,10 +36,10 @@ Breakfast and lunch will be served.
 **December 5th Location**
 
 
-North Point High School
+[North Point High School
 <br/>
 Room 2322<br/>
-2500 Davis Rd<br/> Waldorf, MD 20603
+2500 Davis Rd<br/> Waldorf, MD 20603](https://www.google.com/maps/place/North+Point+High+School/@38.641421,-76.977075,15z/data=!4m2!3m1!1s0x0:0xe09e4df8de5e0883?sa=X&ved=0CG8Q_BIwCmoVChMIisaexqCYyQIVSjqICh2_Tw5f)
 
 Free parking is available in front of the building, and  in the lot near the track.
 
@@ -98,9 +98,9 @@ Breakfast and lunch will be served.
 
 **November 10th Location**
 
-Davis Middle School<br/> 
+[Davis Middle School<br/> 
 Room M106<br/>
-2495 Davis Road<br/> Waldorf, MD 20603<br/>
+2495 Davis Road<br/> Waldorf, MD 20603<br/>](https://www.google.com/maps/place/Theodore+G.+Davis+Middle+School/@38.6439309,-76.980812,17z/data=!4m7!1m4!3m3!1s0x89b7a6450a61994f:0x243a36d628a4dc38!2s2495+Davis+Rd,+Waldorf,+MD+20603!3b1!3m1!1s0x0000000000000000:0xdbec86eff9510bcb)
 
 Free parking is located in front of the building.
 
@@ -147,10 +147,10 @@ Breakfast and lunch will be served.
 
 **Location**
 
-North Point High School<br/>
+[North Point High School<br/>
 Room 2322<br/>
 2500 Davis Road<br/> 
-Waldorf, MD 20603
+Waldorf, MD 20603](https://www.google.com/maps/place/North+Point+High+School/@38.641421,-76.977075,15z/data=!4m2!3m1!1s0x0:0xe09e4df8de5e0883?sa=X&ved=0CG8Q_BIwCmoVChMIisaexqCYyQIVSjqICh2_Tw5f)
 
 Free parking is available in front of the building, and also in the lot near the track.
 
@@ -185,10 +185,10 @@ Thursday, November 12, 2015 <br/>
 
 **Location**
 
-Charles County Public Schools Central Office<br/>
+[Charles County Public Schools Central Office<br/>
 Staff Development Room<br/>
 5980 Radio Station Rd.<br/>
-La Plata MD 20646<br/>
+La Plata MD 20646<br/>](https://www.google.com/maps/place/Charles+County+Public+Schools/@38.5490763,-76.9494484,17z/data=!4m7!1m4!3m3!1s0x89b709a6d3ee22c3:0xefd796aeca6573d2!2s5980+Radio+Station+Rd,+La+Plata,+MD+20646!3b1!3m1!1s0x0000000000000000:0x1f85716d87e60113)
 
 **What to bring**
 
