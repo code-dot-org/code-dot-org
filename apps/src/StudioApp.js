@@ -251,9 +251,9 @@ StudioApp.prototype.init = function(config) {
     config = {};
   }
 
-  if( config.isLegacyShare ) {
+  if (config.isLegacyShare) {
     $("body").addClass("legacy-share-view");
-    if( dom.isIOS() ) {
+    if (dom.isIOS()) {
       if (!window.navigator.standalone) {
         addToHome.show(true);
       }
