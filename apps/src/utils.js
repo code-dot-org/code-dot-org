@@ -305,8 +305,8 @@ exports.getPegasusHost = function() {
 exports.browserSupportsCssMedia = function () {
   var styleSheets = document.styleSheets;
   for (var i = 0; i < styleSheets.length; i++) {
-    var rules = styleSheets[i].cssRules || styleSheets[i].rules;
     try {
+      var rules = styleSheets[i].cssRules || styleSheets[i].rules;
       if (rules && rules.length > 0) {
         // see if we can access media
         var media = rules[0].media;
