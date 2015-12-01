@@ -11,7 +11,7 @@ The ideal facilitator is an enthusiastic supporter of computer science education
 <br/>
 <br/>
 
-[<button>Apply now</button>](http://goo.gl/forms/Gi2DDy8aRw)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1_SA7QWZYNHWdDeCWCV4nlj4artpG-Ck50UqMpQrQqqc/edit?usp=sharing)
+[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1_SA7QWZYNHWdDeCWCV4nlj4artpG-Ck50UqMpQrQqqc/edit?usp=sharing)
 <br />
 <br />
 
@@ -76,7 +76,7 @@ All focus areas share a basic framework and approach, drawn from adult learning 
 
 Please carefully review [the criteria, requirements and commitments](google doc here) for the curriculum focus area of your choice. When you’re ready, click below to apply. 
 
-[<button>Appy now</button>](http://goo.gl/forms/Gi2DDy8aRw)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1_SA7QWZYNHWdDeCWCV4nlj4artpG-Ck50UqMpQrQqqc/edit?usp=sharing)
+[<button>Appy now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1_SA7QWZYNHWdDeCWCV4nlj4artpG-Ck50UqMpQrQqqc/edit?usp=sharing)
 
-We will review applications on a rolling basis until March 15, 2016. After that we will review applications once every 12 months. **This program is currently only operated in the US.**
+We will review applications on a rolling basis until March 15, 2016. After that we will review applications once every 12 months. **This program is currently only operated in the US.** http://goo.gl/forms/UyRgRu9rnM
 
