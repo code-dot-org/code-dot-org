@@ -40,7 +40,9 @@ designMode.onDesignModeVizClick = function (event) {
     element = getInnerElement(element);
   } else if ($(element).is('.ui-resizable-handle')) {
     element = getInnerElement(element.parentNode);
-  } else if ($(element).attr('class') === undefined) {
+  } else if ($(element).attr('class') === undefined && $(element.parentNode).is('.textArea')) {
+    // User may have clicked one of the divs of a multiline text area - in this case, the element is just a plain
+    // div with no class, and we want to use the full text area element.
     element = getInnerElement(element.parentNode.parentNode);
   }
   // give the div focus so that we can listen for keyboard events
