@@ -3,12 +3,9 @@ require 'ipaddr'
 
 module Rack
   module CdoExtension
-    def self.load_trusted_proxies
-      JSON.parse(IO.read(deploy_dir('lib/cdo/trusted_proxies.json'))).map do |proxy|
-        IPAddr.new(proxy)
-      end
+    TRUSTED_PROXIES = JSON.parse(IO.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges'].map do |proxy|
+      IPAddr.new(proxy)
     end
-    TRUSTED_PROXIES = load_trusted_proxies
 
     def trusted_proxy?(ip)
       super(ip) || TRUSTED_PROXIES.any?{|proxy| proxy === ip}
